@@ -1,0 +1,254 @@
+{
+  "schema": "triptico-grupo-freeze/v1",
+  "comunidad": "chami",
+  "grupo": 3,
+  "fecha": "2026-09-18",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "formatos": {
+    "entrada": "16:9 · 1536x1024",
+    "acto": "9:16 · 1024x1536",
+    "huella": "1:1 · 1024x1024"
+  },
+  "orden": "guerra, agua y cosmos: el oso, Erubidá y Siebidá, las jepás, la culebra de siete cabezas, Surranabe, los tres mundos",
+  "doctrina": "tres ESCENAS DISTINTAS por mito, una por formato; la huella es un EMBLEMA sobre fondo liso, no una escena (DOCTRINA-HUELLA.md), aplicada desde la primera generación",
+  "reparto_de_composicion": {
+    "peso_contrario": 2,
+    "contrapicado": 2,
+    "simetria": 4,
+    "paisaje_abierto": 2,
+    "enfrentados": 2,
+    "cenital": 3,
+    "primer_plano": 1,
+    "diagonal": 1,
+    "figura_pequena": 1
+  },
+  "maximo_esquema": 4,
+  "correcciones": [
+    {
+      "pieza": "la-mujer-y-el-oso--acto",
+      "motivo": "la corteza salió fotorrealista; se rehízo en tiras planas de papel"
+    },
+    {
+      "pieza": "el-gusano-gigante--acto",
+      "motivo": "Surranabe salió con cabeza de serpiente, ojo y lengua bífida; la ficha t13-01 lo fija como anélido de boca redonda radial, sin ojos ni lengua"
+    },
+    {
+      "pieza": "el-universo--entrada",
+      "motivo": "la franja de bajía salió como iconografía cristiana (figura central de túnica blanca con los brazos en cruz flanqueada por dos); se rehízo con tres figuras iguales, brazos caídos, ropa corriente"
+    }
+  ],
+  "registros_declarados": [
+    {
+      "mito": "la-culebra-de-las-siete-cabezas",
+      "registro": "mediación mestiza de Caldas (Bueno Rodríguez 1988)",
+      "decision": "NINGUNA figura humana en las tres láminas: el relato no nombra a nadie y no se le presta gente chamí"
+    },
+    {
+      "mito": "el-gusano-gigante",
+      "registro": "relato katío en la fuente, atribuido a chamí en el sitio",
+      "decision": "figuras SIN jagua, SIN okama y SIN chaquira: nada que las identifique como chamí"
+    }
+  ],
+  "imagenes": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chami-v1/tripticos-grupo-3",
+  "piezas": [
+    {
+      "id": "la-mujer-y-el-oso--entrada",
+      "mito": "la-mujer-y-el-oso",
+      "formato": "entrada",
+      "composicion": "peso_contrario",
+      "escena": "El oso llega al lavadero",
+      "prompt_sha256": "de0a50145712878c79168c6a7d57265dda1a5171b6226ad6e2a69e9e358bf461",
+      "prompt_file": "la-mujer-y-el-oso--entrada.prompt.txt",
+      "imagen_sha256": "23edaacd343fe1e6787d27ec5355dfc6975f2f123a28c37d72c81a8744e1049b",
+      "narrativa_sha256": "d7a20c733292913be66ba490134072ad8dcf72e4d9d3c6a9fe9ec896c7e95cb6"
+    },
+    {
+      "id": "la-mujer-y-el-oso--acto",
+      "mito": "la-mujer-y-el-oso",
+      "formato": "acto",
+      "composicion": "contrapicado",
+      "escena": "La cama de bejucos en el árbol alto",
+      "prompt_sha256": "ffd5c6c4294d50b717816a3b497e697fe7d610c47601191d7978ede59bf67f8b",
+      "prompt_file": "la-mujer-y-el-oso--acto.prompt.v2.txt",
+      "imagen_sha256": "895e3435a0f28403fb56f1eed61a5f52c75fc6f1a18b6a488be4c158ab44af4c",
+      "narrativa_sha256": "d7a20c733292913be66ba490134072ad8dcf72e4d9d3c6a9fe9ec896c7e95cb6"
+    },
+    {
+      "id": "la-mujer-y-el-oso--huella",
+      "mito": "la-mujer-y-el-oso",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: la cama vacía y el pájaro vivo",
+      "prompt_sha256": "b70be02fe9894ea3b52df2905500c48395618e877123c533164b6154de6b1353",
+      "prompt_file": "la-mujer-y-el-oso--huella.prompt.txt",
+      "imagen_sha256": "d8d77e5f85afa1122cd29dbeb7c4864527479030db500d6f0dc6ee74c991b29c",
+      "narrativa_sha256": "d7a20c733292913be66ba490134072ad8dcf72e4d9d3c6a9fe9ec896c7e95cb6"
+    },
+    {
+      "id": "la-historia-de-erubida-y-siebida--entrada",
+      "mito": "la-historia-de-erubida-y-siebida",
+      "formato": "entrada",
+      "composicion": "paisaje_abierto",
+      "escena": "El campamento de los Siebidá",
+      "prompt_sha256": "8a3dc66fc4ed000001afb32e6f084ffc23104e4cfc9348fd1a0932d6635a8863",
+      "prompt_file": "la-historia-de-erubida-y-siebida--entrada.prompt.txt",
+      "imagen_sha256": "39c3ca74ccdcbf0ce54b27e339b882ff14e0fdde95169f12a55c50bbd15934f8",
+      "narrativa_sha256": "f556c73b63854e1b6efda76366b0a9df9ef8bf2a7bb20d1fddfb8ac56b42f22d"
+    },
+    {
+      "id": "la-historia-de-erubida-y-siebida--acto",
+      "mito": "la-historia-de-erubida-y-siebida",
+      "formato": "acto",
+      "composicion": "enfrentados",
+      "escena": "El vigía disfrazado se defiende",
+      "prompt_sha256": "35cceaccc6bb8adb0cdf238d8f331c76e0f8448ab52dffabc4b7f2e2c366f2e6",
+      "prompt_file": "la-historia-de-erubida-y-siebida--acto.prompt.txt",
+      "imagen_sha256": "e9306dba8e434878c730dafbf0c7a3cdbb276b180b55e3416b38769bc9f8bad7",
+      "narrativa_sha256": "f556c73b63854e1b6efda76366b0a9df9ef8bf2a7bb20d1fddfb8ac56b42f22d"
+    },
+    {
+      "id": "la-historia-de-erubida-y-siebida--huella",
+      "mito": "la-historia-de-erubida-y-siebida",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: las lanzas quietas",
+      "prompt_sha256": "bcf93fa84df8f1cda2607c48e999baedb6795111accaeec9be0ab6512289ce80",
+      "prompt_file": "la-historia-de-erubida-y-siebida--huella.prompt.txt",
+      "imagen_sha256": "4d66cdb90ebaf253a48b72311c4a84110be8408b37b518952245d31435bb39c5",
+      "narrativa_sha256": "f556c73b63854e1b6efda76366b0a9df9ef8bf2a7bb20d1fddfb8ac56b42f22d"
+    },
+    {
+      "id": "el-origen-del-agua--entrada",
+      "mito": "el-origen-del-agua",
+      "formato": "entrada",
+      "composicion": "primer_plano",
+      "escena": "Los gusanitos en la totuma",
+      "prompt_sha256": "bc1945b3090b750e898de1d658284290c32dc01f54a4ba508ae52df316cfe932",
+      "prompt_file": "el-origen-del-agua--entrada.prompt.txt",
+      "imagen_sha256": "74b88ab24d7f7d2832e615901d8c461a3caaaa974e1654391091f5f8f087a111",
+      "narrativa_sha256": "5b82a59cf248b4b94045b61bd6ea28636e24f912dc7e1a91c8ffe5db8ed0fb20"
+    },
+    {
+      "id": "el-origen-del-agua--acto",
+      "mito": "el-origen-del-agua",
+      "formato": "acto",
+      "composicion": "peso_contrario",
+      "escena": "Los niños tocan el tambor",
+      "prompt_sha256": "2cd48aa5303be3654acea848524cfc7843514763802e8f3a80d4eea10570a1ca",
+      "prompt_file": "el-origen-del-agua--acto.prompt.txt",
+      "imagen_sha256": "9d49bef9010aa0109c816b0efebe10184ce178ec3390ce0fdb11b846adc46367",
+      "narrativa_sha256": "5b82a59cf248b4b94045b61bd6ea28636e24f912dc7e1a91c8ffe5db8ed0fb20"
+    },
+    {
+      "id": "el-origen-del-agua--huella",
+      "mito": "el-origen-del-agua",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: la jepá mochada",
+      "prompt_sha256": "cc2d08149d72557281124176ea1c36b17ecfd16e2124424a5fc791536e82a5d5",
+      "prompt_file": "el-origen-del-agua--huella.prompt.txt",
+      "imagen_sha256": "4f4dd3c8241f357f312ea4370bcc8918417c9b2899ef996f20e34019babccd69",
+      "narrativa_sha256": "5b82a59cf248b4b94045b61bd6ea28636e24f912dc7e1a91c8ffe5db8ed0fb20"
+    },
+    {
+      "id": "la-culebra-de-las-siete-cabezas--entrada",
+      "mito": "la-culebra-de-las-siete-cabezas",
+      "formato": "entrada",
+      "composicion": "paisaje_abierto",
+      "escena": "El lago de las altas cumbres",
+      "prompt_sha256": "981d47fae72c0d5d6fbca130338508c6977606156ff9bd442c502b9b58fd5349",
+      "prompt_file": "la-culebra-de-las-siete-cabezas--entrada.prompt.txt",
+      "imagen_sha256": "af8aebfae3d15202c60369afeef7f69d8d4c64a103bbfa8d8fa33effaf3cce4e",
+      "narrativa_sha256": "def3aa8edaa06533f13a77ffc2d5d76043d270df932804798f38f4aa6c4ab4e3"
+    },
+    {
+      "id": "la-culebra-de-las-siete-cabezas--acto",
+      "mito": "la-culebra-de-las-siete-cabezas",
+      "formato": "acto",
+      "composicion": "diagonal",
+      "escena": "La tierra se raja a su paso",
+      "prompt_sha256": "1923d98a0516d70348f47c25327a0e7d35a0a4cd59499551ca9ea4f9922b04be",
+      "prompt_file": "la-culebra-de-las-siete-cabezas--acto.prompt.txt",
+      "imagen_sha256": "1d60e2f73d79a9d6dd82af7c14bf2f1affa8f5eed6d499c764b93e69ca818152",
+      "narrativa_sha256": "def3aa8edaa06533f13a77ffc2d5d76043d270df932804798f38f4aa6c4ab4e3"
+    },
+    {
+      "id": "la-culebra-de-las-siete-cabezas--huella",
+      "mito": "la-culebra-de-las-siete-cabezas",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: los huesos",
+      "prompt_sha256": "9e902fb6ed930abf83966b0325599c1a2600d98fd268fcab936afdd1c333c7ea",
+      "prompt_file": "la-culebra-de-las-siete-cabezas--huella.prompt.txt",
+      "imagen_sha256": "e0604ec3de18ae2806c43166d1e61a5feec61a6c78216c1ecc113c13e33fb8ce",
+      "narrativa_sha256": "def3aa8edaa06533f13a77ffc2d5d76043d270df932804798f38f4aa6c4ab4e3"
+    },
+    {
+      "id": "el-gusano-gigante--entrada",
+      "mito": "el-gusano-gigante",
+      "formato": "entrada",
+      "composicion": "figura_pequena",
+      "escena": "Surranabe atraviesa el monte",
+      "prompt_sha256": "81347288f2d6cf5acb4897c2860273b46ffab09b49249e2d71e8b067b3e47e13",
+      "prompt_file": "el-gusano-gigante--entrada.prompt.txt",
+      "imagen_sha256": "a3d19ac443d28e09e38a593e77531ba15fb0038dbc4bd4aca075cb7057fc5e06",
+      "narrativa_sha256": "dd23ed0c5d6739bb1dc6033ff924a7b75e7464188bd7b3cfa0db307a30ac66f3"
+    },
+    {
+      "id": "el-gusano-gigante--acto",
+      "mito": "el-gusano-gigante",
+      "formato": "acto",
+      "composicion": "enfrentados",
+      "escena": "Los cuatro mellizos y Surranabe",
+      "prompt_sha256": "3a2d8fdce9f175a2550fba371ab2d24f9d4e7f7e387f640d964d493fdf1b040b",
+      "prompt_file": "el-gusano-gigante--acto.prompt.v2.txt",
+      "imagen_sha256": "4aea725659bfeeedcc4bafdaa3354203a38454e88631fda97be0403fbfe22e36",
+      "narrativa_sha256": "dd23ed0c5d6739bb1dc6033ff924a7b75e7464188bd7b3cfa0db307a30ac66f3"
+    },
+    {
+      "id": "el-gusano-gigante--huella",
+      "mito": "el-gusano-gigante",
+      "formato": "huella",
+      "composicion": "cenital",
+      "escena": "Lo que quedó: la laguna y las crías pequeñas",
+      "prompt_sha256": "08b950b4fe0d581f27e28cb8061073463e251af13dd6e562bddf492a08ab6d71",
+      "prompt_file": "el-gusano-gigante--huella.prompt.txt",
+      "imagen_sha256": "1d690c0a0a066acc6f5c13d841e4e65361e4cbae3e95385978b2f2dc00c17602",
+      "narrativa_sha256": "dd23ed0c5d6739bb1dc6033ff924a7b75e7464188bd7b3cfa0db307a30ac66f3"
+    },
+    {
+      "id": "el-universo--entrada",
+      "mito": "el-universo",
+      "formato": "entrada",
+      "composicion": "simetria",
+      "escena": "Los tres mundos",
+      "prompt_sha256": "8529d3d822317a2b3ddd23c7c6bca36fd343a6a64e91fa2f98ac2440577210eb",
+      "prompt_file": "el-universo--entrada.prompt.v2.txt",
+      "imagen_sha256": "0b79edb626d2447ff2b6ec40a641949430b56c0f570f3489f9e1e89f811dac4b",
+      "narrativa_sha256": "8b570cee811a825830e6a7419339401d4c4af347454c89d3a28ced3e7cca1fb8"
+    },
+    {
+      "id": "el-universo--acto",
+      "mito": "el-universo",
+      "formato": "acto",
+      "composicion": "contrapicado",
+      "escena": "Karagabí tumba la guadua",
+      "prompt_sha256": "08d82edaccd0d75749fa70874c0e82f76c66548cdd0108ca5049e3335bc8cb66",
+      "prompt_file": "el-universo--acto.prompt.txt",
+      "imagen_sha256": "71291325effa463d02c7946fc70b7e94a8e5ae2310f29a5465b7c5d8c1bfdb2c",
+      "narrativa_sha256": "8b570cee811a825830e6a7419339401d4c4af347454c89d3a28ced3e7cca1fb8"
+    },
+    {
+      "id": "el-universo--huella",
+      "mito": "el-universo",
+      "formato": "huella",
+      "composicion": "simetria",
+      "escena": "Lo que quedó: la guadua tumbada",
+      "prompt_sha256": "3e664e94efb0259ac066831954a5f2e4003aad6c6fd6b6a8c82b6e143a0b0069",
+      "prompt_file": "el-universo--huella.prompt.txt",
+      "imagen_sha256": "279a6ebd4b289656936ebfbcc3da122093e794e7e97b23a52290a724cf036b72",
+      "narrativa_sha256": "8b570cee811a825830e6a7419339401d4c4af347454c89d3a28ced3e7cca1fb8"
+    }
+  ]
+}

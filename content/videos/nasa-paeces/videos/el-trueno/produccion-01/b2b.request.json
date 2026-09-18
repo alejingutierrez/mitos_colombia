@@ -1,0 +1,37 @@
+{
+  "id": "b2b",
+  "created_at": "2026-09-13T13:37:22.722Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create ONE finished cinematic vertical 9:16 narrative keyframe for the Nasa–Paeces film El Trueno, ideally 864x1536. No sheet, collage, border, lettering, title, captions, watermark or logo. Use the supplied images only for their stated continuity roles, never copy their sheet layout. Same world as the approved Nasa triptych: immersive Colombian highland CUT-PAPER scenery, matte broad flat faces, internal cut edges, folded rock, overlapping planes at three distances, physical occlusion and cast shadows. Figures have simplified almost-flat paper faces, not rounded clay dolls, CGI or photographic skin. Water, clouds and mist are flat cut-paper shapes too, never cotton or smoke. Frame extends edge to edge, no display base, table, studio or diorama box. Preserve precise age, clothing, hat, material and scale of the reference identities. Do not import objects, people or actions from preceding shots unless specifically listed below. No pan-Indigenous costumes, copied sacred patterns, gold, crowns, feathers, magical beams or invented ritual. Selected narrative: Martín Kuskue's first El Trueno account via Bernal 1953; the elder appearance is a declared editorial convention retained from the approved triptych, not claimed as wording of this version.\n\nSHOT b2b — El territorio después del golpe\nFLASHBACK daylight, a NEW high distant view down the narrow paper mountain valleys following the previous throw. Landscape alone: ochre slopes, olive terraces, blue-green ridges, storm-gray clouds, one small restrained pale paper lightning cut far in the background. A break between broad cloud sheets lets a narrow area of land become readable. Violence stays entirely offscreen. No people, bodies, animals, weapon, houses, fire or aftermath props. Continuous immersive terrain, not a map. This is a spatial consequence cut, not a new supernatural event.\n\nINPUT REFERENCES IN ORDER:\n1. approved preceding keyframe b1b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n2. approved preceding keyframe b2a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n3. CANONICAL L03: Filos, linderos y alta peña\n4. CANONICAL entrada: selected triptych: P01 and C01 identities, paper landscape",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg"
+    ]
+  },
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-v1.png",
+      "sha256": "eaa7994c68bef0f044452f785c83fa2efd4600ffee367c09d30d82b47d2877ba",
+      "role": "approved preceding keyframe b1b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-v1.png",
+      "sha256": "67ab49b7db68324ed2aba84789a81467a2ba63f95ecd0c5a19905a0d1619b646",
+      "role": "approved preceding keyframe b2a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+      "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738",
+      "role": "CANONICAL L03: Filos, linderos y alta peña"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+      "role": "CANONICAL entrada: selected triptych: P01 and C01 identities, paper landscape",
+      "sha256": "fd8c955803d7f78df62ba0e01ad82e745e926fbc721989af383bdc151cdae60e"
+    }
+  ],
+  "prompt_sha256": "103f9461323928d2903d7042c61f6f65b5815e52870c5c7b1c075de814fbfa65"
+}

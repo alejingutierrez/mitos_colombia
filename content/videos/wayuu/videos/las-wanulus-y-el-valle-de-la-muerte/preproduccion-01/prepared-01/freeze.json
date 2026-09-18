@@ -1,0 +1,85 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T21:48:50.555Z",
+  "plan": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/plan.json",
+  "plan_sha256": "1da030637bdc7aad6c82b04915cee9b81be532dd1524797c3e4c76d3e2a4633f",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 20,
+    "words": 272,
+    "estimated_seconds": 160,
+    "generated": 0,
+    "pending": 20,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 17,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/prepared-01/prompts/b1a.txt",
+      "prompt_sha256": "81a8d70a54d0630678d31e4780e48c2ab1c37792eb77e1f6250e6b092db6def3",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-01/entrada.jpeg",
+          "sha256": "9c4d02af57f0cdab288aa19179c56ba2bb7ba86a6b3c65be81c320a8cb89353b",
+          "approved": true,
+          "role": "Fijar noche azul, escala territorial y dos identidades; no copiar encuadre ni huellas iluminadas."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium-corrections-05/hermano_mayor_valle__identity_sheet--canon.jpeg",
+          "sha256": "2a7ebad13fe399b799d746bde928c7ae63e9b8f579213899a39dcd174f74f094",
+          "approved": true,
+          "role": "Fijar identidad y vestuario completo del hermano mayor, no la pose de ficha."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium-corrections-04/hermano_menor_valle__identity_sheet--canon.jpeg",
+          "sha256": "d72602ac7dc4aacf19c9c59365661db1da149099da6b19f2ee7e12c8681aeadf",
+          "approved": true,
+          "role": "Fijar identidad y vestuario completo del hermano menor, no la pose de ficha."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium/valle_documentacion_pendiente__environment_model--canon.jpeg",
+          "sha256": "3bad401eb17eef25d53f8cce8121388d52ef1614c15240d1775d4033f292115d",
+          "approved": true,
+          "role": "Fijar el valle seco estratificado, sin reclamar geografía exacta ni copiar su cámara."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

@@ -1,0 +1,33 @@
+# Initial sandbox transport failures (no images produced)
+[job 2/5] failed: Connection error.
+[job 4/5] starting
+[job 3/5] failed: Connection error.
+[job 5/5] starting
+[job 1/5] failed: Connection error.
+[job 4/5] failed: Connection error.
+[job 5/5] failed: Connection error.
+
+# Independent masters, network-enabled rerun
+OPENAI_API_KEY is set.
+[job 1/5] starting
+[job 2/5] starting
+[job 3/5] starting
+[job 2/5] completed in 15.9s
+[job 4/5] starting
+[job 3/5] completed in 16.8s
+[job 5/5] starting
+[job 1/5] completed in 17.0s
+[job 5/5] completed in 15.2s
+[job 4/5] completed in 18.9s
+Wrote output/imagegen/chimila/biblia/produccion-api-01/h01-cuatro-adultos-master-v1.jpeg
+Wrote output/imagegen/chimila/biblia/produccion-api-01/a09-morrocoyo-master-v1.jpeg
+Wrote output/imagegen/chimila/biblia/produccion-api-01/p07-gran-cacica-master-v1.jpeg
+Wrote output/imagegen/chimila/biblia/produccion-api-01/u07-mochilas-algodon-fique-master-v1.jpeg
+Wrote output/imagegen/chimila/biblia/produccion-api-01/l01-monte-camino-claro-master-v1.jpeg
+
+# Dependent flood edit
+OPENAI_API_KEY is set.
+Calling Image API (edit) with 1 image(s).
+Edit completed in 19.2s.
+Wrote output/imagegen/chimila/biblia/produccion-api-01/v01-monte-inundado-v1.jpeg
+

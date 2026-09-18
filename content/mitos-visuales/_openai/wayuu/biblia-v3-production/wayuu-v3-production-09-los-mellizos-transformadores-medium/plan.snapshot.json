@@ -1,0 +1,1781 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-09-los-mellizos-transformadores-medium",
+    "myth_slug": "los-mellizos-transformadores",
+    "model_ids": [
+      "manna__identity_sheet",
+      "manna__state_sheet",
+      "sain_ma__presence_model",
+      "mannuuya__presence_model",
+      "juya__presence_model",
+      "juya__state_sheet",
+      "kalamantuunay__identity_sheet",
+      "kalamantuunay__state_sheet",
+      "hombres_tigre__group_grammar",
+      "tumajule__identity_sheet",
+      "tumajule__state_sheet",
+      "peeliyuu__identity_sheet",
+      "peeliyuu__state_sheet",
+      "aaner__identity_sheet",
+      "tinaja_manna__object_sheet",
+      "costa_mar_guajira__environment_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_for_generation"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "manna__identity_sheet",
+    "manna__state_sheet",
+    "sain_ma__presence_model",
+    "mannuuya__presence_model",
+    "juya__presence_model",
+    "juya__state_sheet",
+    "kalamantuunay__identity_sheet",
+    "kalamantuunay__state_sheet",
+    "hombres_tigre__group_grammar",
+    "tumajule__identity_sheet",
+    "tumajule__state_sheet",
+    "peeliyuu__identity_sheet",
+    "peeliyuu__state_sheet",
+    "aaner__identity_sheet",
+    "tinaja_manna__object_sheet",
+    "costa_mar_guajira__environment_model"
+  ],
+  "models": {
+    "manna__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "manna"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Manna. Funcion visual: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Manna",
+          "funcion estable: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados declarados: joven, embarazada_en_huida, memoria_de_los_mellizos"
+        ],
+        "documented_features": [
+          "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Manna. Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados autorizados: joven, embarazada_en_huida, memoria_de_los_mellizos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "manna__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "manna"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Manna. Funcion visual: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Manna",
+          "funcion estable: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados declarados: joven, embarazada_en_huida, memoria_de_los_mellizos"
+        ],
+        "documented_features": [
+          "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Manna. Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados autorizados: joven, embarazada_en_huida, memoria_de_los_mellizos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven",
+            "embarazada_en_huida",
+            "memoria_de_los_mellizos"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "sain_ma__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "sain_ma"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Progenitora Tierra de Manna."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Saiñ-Ma, Corazón de la Tierra. Funcion visual: Progenitora de Manna vinculada con la tierra.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Saiñ-Ma, Corazón de la Tierra",
+          "funcion estable: Progenitora de Manna vinculada con la tierra.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Progenitora de Manna vinculada con la tierra."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Saiñ-Ma, Corazón de la Tierra. Progenitora de Manna vinculada con la tierra.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Progenitora de Manna vinculada con la tierra.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "mannuuya__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "mannuuya"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Progenitor Rocio de Manna."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Mannuuya, Rocío de las Nieblas. Funcion visual: Progenitor o fuerza de origen de Manna.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Mannuuya, Rocío de las Nieblas",
+          "funcion estable: Progenitor o fuerza de origen de Manna.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Progenitor o fuerza de origen de Manna."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Mannuuya, Rocío de las Nieblas. Progenitor o fuerza de origen de Manna.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Progenitor o fuerza de origen de Manna.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "juya__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "juya"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Lleva lluvia y activa la tierra."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Anfitrion y maestro del dominio."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Recibe, alimenta y enseña."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Simirriúu en la genealogia de una version."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lluvia movil que conserva agencia propia."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Recibe y enseña al viajero."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Juyá. Funcion visual: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Juyá",
+          "funcion estable: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "estados declarados: lluvia, anfitrion_del_dominio"
+        ],
+        "documented_features": [
+          "Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "alias documentado: Simirriúu"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Juyá. Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "estados autorizados: lluvia, anfitrion_del_dominio",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "lluvia"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "juya__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "juya"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Lleva lluvia y activa la tierra."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Anfitrion y maestro del dominio."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Recibe, alimenta y enseña."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Simirriúu en la genealogia de una version."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lluvia movil que conserva agencia propia."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Recibe y enseña al viajero."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Juyá. Funcion visual: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Juyá",
+          "funcion estable: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "estados declarados: lluvia, anfitrion_del_dominio"
+        ],
+        "documented_features": [
+          "Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "alias documentado: Simirriúu"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Juyá. Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "estados autorizados: lluvia, anfitrion_del_dominio",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "lluvia",
+            "anfitrion_del_dominio"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kalamantuunay__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "kalamantuunay"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Oculta, cria y enfrenta a los mellizos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Kalamantuunay. Funcion visual: Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Kalamantuunay",
+          "funcion estable: Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+          "estados declarados: anfitriona, abuela_adoptiva, adversaria"
+        ],
+        "documented_features": [
+          "Anciana que oculta, cria y pretende aprovecharse de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Kalamantuunay. Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+          "estados autorizados: anfitriona, abuela_adoptiva, adversaria",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anfitriona"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kalamantuunay__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "kalamantuunay"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Oculta, cria y enfrenta a los mellizos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Kalamantuunay. Funcion visual: Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Kalamantuunay",
+          "funcion estable: Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+          "estados declarados: anfitriona, abuela_adoptiva, adversaria"
+        ],
+        "documented_features": [
+          "Anciana que oculta, cria y pretende aprovecharse de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Kalamantuunay. Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+          "estados autorizados: anfitriona, abuela_adoptiva, adversaria",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anfitriona",
+            "abuela_adoptiva",
+            "adversaria"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hombres_tigre__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "hombres_tigre"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Hijos perseguidores de la anciana."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Hombres-tigre. Funcion visual: Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Hombres-tigre",
+          "funcion estable: Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Hombres-tigre. Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tumajule__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tumajule"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Mellizo con acciones y estados propios."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Tumaju’le. Funcion visual: Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Tumaju’le",
+          "funcion estable: Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+          "estados declarados: niño, cazador, transformador, nube_en_una_version"
+        ],
+        "documented_features": [
+          "Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Tumaju’le. Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+          "estados autorizados: niño, cazador, transformador, nube_en_una_version",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tumajule__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "tumajule"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Mellizo con acciones y estados propios."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Tumaju’le. Funcion visual: Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Tumaju’le",
+          "funcion estable: Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+          "estados declarados: niño, cazador, transformador, nube_en_una_version"
+        ],
+        "documented_features": [
+          "Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Tumaju’le. Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+          "estados autorizados: niño, cazador, transformador, nube_en_una_version",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño",
+            "cazador",
+            "transformador",
+            "nube_en_una_version"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "peeliyuu__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "peeliyuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Segundo mellizo con continuidad individual."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Peeliyuu. Funcion visual: Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Peeliyuu",
+          "funcion estable: Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+          "estados declarados: niño, cazador, transformador"
+        ],
+        "documented_features": [
+          "Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Peeliyuu. Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+          "estados autorizados: niño, cazador, transformador",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "peeliyuu__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "peeliyuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Segundo mellizo con continuidad individual."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Peeliyuu. Funcion visual: Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Peeliyuu",
+          "funcion estable: Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+          "estados declarados: niño, cazador, transformador"
+        ],
+        "documented_features": [
+          "Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Peeliyuu. Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+          "estados autorizados: niño, cazador, transformador",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño",
+            "cazador",
+            "transformador"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "aaner__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "aaner"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Ave que revela el origen."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Aáner, la paloma. Funcion visual: Ave que ayuda a revelar a los mellizos la historia de Manna.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Aáner, la paloma",
+          "funcion estable: Ave que ayuda a revelar a los mellizos la historia de Manna.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Ave que ayuda a revelar a los mellizos la historia de Manna."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Aáner, la paloma. Ave que ayuda a revelar a los mellizos la historia de Manna.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Ave que ayuda a revelar a los mellizos la historia de Manna.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tinaja_manna__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "tinaja_manna"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Escondite que no logra proteger a Manna."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Tinaja donde se oculta Manna. Funcion visual: Recipiente que no logra ocultarla de los hombres-tigre.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Tinaja donde se oculta Manna",
+          "funcion estable: Recipiente que no logra ocultarla de los hombres-tigre.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Recipiente que no logra ocultarla de los hombres-tigre."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Tinaja donde se oculta Manna. Recipiente que no logra ocultarla de los hombres-tigre.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Recipiente que no logra ocultarla de los hombres-tigre.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "costa_mar_guajira__environment_model": {
+      "purpose": "environment_model",
+      "entity_refs": [
+        "costa_mar_guajira"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Borde de agua y tierra en transformacion."
+        },
+        {
+          "myth": "el-incesto",
+          "field": "mito",
+          "note": "Guarda las formas del primer episodio."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Camino sobre el mar hacia Jepira."
+        },
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Relacion con la piedra que entra al mar."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Parte del paisaje de origen."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Mar que retrocede."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Mar y morros costeros."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Paisaje de ida y regreso."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Perfil territorial continuo y reconocible, con costa, planicie, serrania o ecotono solo donde corresponda. Entidad: Costa y mar de La Guajira. Funcion visual: Borde marino, playas, piedras costeras y horizonte de la peninsula.",
+        "materials": [
+          "estratos amplios de papel fibroso",
+          "relieve plegado y prensado",
+          "agua o vegetacion localizada"
+        ],
+        "palette_logic": "Arena, sal, roca y sombra como base; azul y verde aparecen localizados, no como filtro exotizante.",
+        "scale": "Gran profundidad atmosferica construida con capas fisicas, sin borde exterior de maqueta.",
+        "continuity_markers": [
+          "nombre estable: Costa y mar de La Guajira",
+          "funcion estable: Borde marino, playas, piedras costeras y horizonte de la peninsula.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Borde marino, playas, piedras costeras y horizonte de la peninsula."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para environment_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · environment_model",
+        "primary_request": "sistema territorial y profundidad de paisaje para Costa y mar de La Guajira. Borde marino, playas, piedras costeras y horizonte de la peninsula.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Gran profundidad atmosferica construida con capas fisicas, sin borde exterior de maqueta.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos amplios de papel fibroso; relieve plegado y prensado; agua o vegetacion localizada",
+        "constraints": [
+          "Perfil territorial continuo y reconocible, con costa, planicie, serrania o ecotono solo donde corresponda.",
+          "mostrar: Borde marino, playas, piedras costeras y horizonte de la peninsula.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "environment_grammar",
+          "purpose": "sistema territorial y profundidad de paisaje",
+          "aspect": "16:9",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "manna": {
+      "name": "Manna",
+      "kind": "personaje",
+      "description": "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+      "aliases": [],
+      "states": [
+        "joven",
+        "embarazada_en_huida",
+        "memoria_de_los_mellizos"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "manna__identity_sheet",
+        "manna__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ]
+    },
+    "sain_ma": {
+      "name": "Saiñ-Ma, Corazón de la Tierra",
+      "kind": "deidad_fuerza",
+      "description": "Progenitora de Manna vinculada con la tierra.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "sain_ma__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Progenitora Tierra de Manna."
+        }
+      ]
+    },
+    "mannuuya": {
+      "name": "Mannuuya, Rocío de las Nieblas",
+      "kind": "deidad_fuerza",
+      "description": "Progenitor o fuerza de origen de Manna.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "mannuuya__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Progenitor Rocio de Manna."
+        }
+      ]
+    },
+    "juya": {
+      "name": "Juyá",
+      "kind": "deidad_fuerza",
+      "description": "Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+      "aliases": [
+        "Simirriúu"
+      ],
+      "states": [
+        "lluvia",
+        "anfitrion_del_dominio"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "juya__presence_model",
+        "juya__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "el-viaje-del-mas-alla",
+        "los-dominios-de-juya",
+        "los-mellizos-transformadores",
+        "maleiwa",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Lleva lluvia y activa la tierra."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Anfitrion y maestro del dominio."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Recibe, alimenta y enseña."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Simirriúu en la genealogia de una version."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lluvia movil que conserva agencia propia."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Recibe y enseña al viajero."
+        }
+      ]
+    },
+    "kalamantuunay": {
+      "name": "Kalamantuunay",
+      "kind": "criatura",
+      "description": "Anciana que oculta, cria y pretende aprovecharse de los mellizos.",
+      "aliases": [],
+      "states": [
+        "anfitriona",
+        "abuela_adoptiva",
+        "adversaria"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "kalamantuunay__identity_sheet",
+        "kalamantuunay__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Oculta, cria y enfrenta a los mellizos."
+        }
+      ]
+    },
+    "hombres_tigre": {
+      "name": "Hombres-tigre",
+      "kind": "colectivo",
+      "description": "Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "hombres_tigre__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Hijos perseguidores de la anciana."
+        }
+      ]
+    },
+    "tumajule": {
+      "name": "Tumaju’le",
+      "kind": "personaje",
+      "description": "Mellizo transformador que sobrevive, aprende su origen y enfrenta a sus perseguidores.",
+      "aliases": [],
+      "states": [
+        "niño",
+        "cazador",
+        "transformador",
+        "nube_en_una_version"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "tumajule__identity_sheet",
+        "tumajule__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Mellizo con acciones y estados propios."
+        }
+      ]
+    },
+    "peeliyuu": {
+      "name": "Peeliyuu",
+      "kind": "personaje",
+      "description": "Mellizo transformador con identidad propia y acciones coordinadas con Tumaju’le.",
+      "aliases": [],
+      "states": [
+        "niño",
+        "cazador",
+        "transformador"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "peeliyuu__identity_sheet",
+        "peeliyuu__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Segundo mellizo con continuidad individual."
+        }
+      ]
+    },
+    "aaner": {
+      "name": "Aáner, la paloma",
+      "kind": "animal",
+      "description": "Ave que ayuda a revelar a los mellizos la historia de Manna.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "aaner__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Ave que revela el origen."
+        }
+      ]
+    },
+    "tinaja_manna": {
+      "name": "Tinaja donde se oculta Manna",
+      "kind": "objeto",
+      "description": "Recipiente que no logra ocultarla de los hombres-tigre.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "tinaja_manna__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Escondite que no logra proteger a Manna."
+        }
+      ]
+    },
+    "costa_mar_guajira": {
+      "name": "Costa y mar de La Guajira",
+      "kind": "paisaje",
+      "description": "Borde marino, playas, piedras costeras y horizonte de la peninsula.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "environment_model"
+      ],
+      "model_refs": [
+        "costa_mar_guajira__environment_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "el-incesto",
+        "el-viaje-del-mas-alla",
+        "la-majayura-que-pierde-a-los-hombres",
+        "los-mellizos-transformadores",
+        "maleiwa",
+        "serranias-de-la-guajira",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Borde de agua y tierra en transformacion."
+        },
+        {
+          "myth": "el-incesto",
+          "field": "mito",
+          "note": "Guarda las formas del primer episodio."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Camino sobre el mar hacia Jepira."
+        },
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Relacion con la piedra que entra al mar."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Parte del paisaje de origen."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Mar que retrocede."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Mar y morros costeros."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Paisaje de ida y regreso."
+        }
+      ]
+    }
+  }
+}

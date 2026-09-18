@@ -19,6 +19,7 @@ import {
 } from "../src/lib/image-style-review-data.js";
 import { loadHomeMythsForRound } from "./generate-image-style-round.mjs";
 import { loadCraftRegenerationEntities } from "./regenerate-craft-images.mjs";
+import { MAGIC_IN_THE_ORDINARY_LINES } from "../src/lib/narrative-magic.js";
 
 const mythEntity = {
   type: "myth",
@@ -31,6 +32,19 @@ const mythEntity = {
     "Del lago sagrado, Bachue emerge con un nino y deja el origen del pueblo Muisca.",
 };
 
+test("la regla de magia cotidiana llega a mitos sin imponerla a banners o taxonomías", () => {
+  const narrative = buildCraftImagePrompt({ entity: mythEntity });
+  assert.match(narrative, /REALISMO MÁGICO EN LO COTIDIANO/);
+  assert.match(narrative, /recortes casi planos/);
+  for (const type of ["homeBanner", "community", "region", "category"]) {
+    assert.doesNotMatch(buildCraftImagePrompt({entity:{type,name:"prueba"}}), /REALISMO MÁGICO EN LO COTIDIANO/);
+  }
+  const contract = {ordinary_anchor:"puente",impossible_behavior:"su sombra conserva el tramo ausente",narrative_effect:"la pérdida permanece",agency:"la sombra persiste sola",physical_translation:"capas recortadas",visible_test:"el puente y su sombra difieren",provenance:"editorial_metaphor",temporal_role:"memory",event_ids:["perdida"]};
+  const specific = buildCraftImagePrompt({entity:mythEntity,narrativeMagic:contract});
+  assert.match(specific, /ANCLA COTIDIANA: puente/);
+  assert.equal(specific.split(MAGIC_IN_THE_ORDINARY_LINES[0]).length - 1, 1);
+});
+
 test("uses gpt-image-2 and GPT image parameters for production generation", () => {
   const params = buildImageGenerationParams({
     prompt: "Escena de prueba",
@@ -40,7 +54,7 @@ test("uses gpt-image-2 and GPT image parameters for production generation", () =
   assert.equal(IMAGE_GENERATION_MODEL, "gpt-image-2");
   assert.equal(params.model, "gpt-image-2");
   assert.equal(params.size, IMAGE_PRESETS.horizontal.size);
-  assert.equal(params.quality, "high");
+  assert.equal(params.quality, "medium");
   assert.equal(params.output_format, "jpeg");
   assert.equal(params.moderation, "low");
   assert.equal(params.n, 1);
@@ -126,6 +140,9 @@ test("studio maquette profile asks for calmer paper-diorama figures", () => {
   assert.match(prompt, /recortes o volumenes de papel/i);
   assert.match(prompt, /evitar drama facial hiperrealista/i);
   assert.match(prompt, /no como instruccion de ilustracion literal/i);
+  assert.match(prompt, /sin base, cartón crudo/i);
+  assert.match(prompt, /sin delatar el soporte/i);
+  assert.doesNotMatch(prompt, /bordes? de papel visibles/i);
 });
 
 test("presets keep horizontal, banner and vertical dimensions valid for gpt-image-2", () => {

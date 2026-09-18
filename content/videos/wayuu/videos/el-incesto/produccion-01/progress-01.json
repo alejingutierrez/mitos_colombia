@@ -1,0 +1,393 @@
+{
+  "schema": "wayuu-video-production-progress/v1",
+  "slug": "el-incesto",
+  "updated_at": "2026-09-07",
+  "status": "partial_14_of_16_two_input_moderation_rejections",
+  "plan": "content/videos/wayuu/videos/el-incesto/preproduccion-02/plan.json",
+  "freeze": "content/videos/wayuu/videos/el-incesto/preproduccion-02/prepared-01/freeze.json",
+  "script": "content/videos/wayuu/videos/el-incesto/preproduccion-01/GUION-TECNICO.md",
+  "counts": {
+    "storyboard_instants": 16,
+    "candidate_instants": 14,
+    "successful_generations": 18,
+    "superseded_outputs": 4,
+    "rejected_requests": 2,
+    "total_requests": 20,
+    "selected_final": 0
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "provider": "OpenAI API",
+    "runner": "bundled imagegen CLI generate-batch",
+    "max_attempts": 1,
+    "local_reference_uploads": 0
+  },
+  "failures": [
+    {
+      "id": "b5a",
+      "http_status": 400,
+      "code": "moderation_blocked",
+      "category": "self-harm",
+      "stage": "input",
+      "request_id": "req_4f2f220116934bcfae279bbbb27294b1"
+    },
+    {
+      "id": "b5b",
+      "http_status": 400,
+      "code": "moderation_blocked",
+      "category": "self-harm",
+      "stage": "input",
+      "request_id": "req_c97992dd2ae54f47a50ba6a4495c2413"
+    }
+  ],
+  "failure_diagnosis": "Error API concreto de moderación en entrada, no credencial, red o cuota. Las dos solicitudes comparten VO b5 que menciona suicidio; asociación observada, causa token-específica no demostrada. No reintentos de las rechazadas, ni cambio de filtro/proveedor/modelo para eludirlo. Evaluación de siguiente paso pendiente.",
+  "candidates": [
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b1b.jpeg",
+      "sha256": "725f6fc63597d568505b554edd387747e3b77a341ed603db54f1998f910abd0c",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Recortes y sombras claros; figura sentada mayor al objetivo 18%, no retrato. Sandalias simplificadas."
+      ]
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b2a.jpeg",
+      "sha256": "6be05366495db297616805fa87f27bffbfc41c9c29c8fa09353d0a5032ff5fca",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Una hoja conecta manta con roca; hay veta ocre adicional no pedida y roca de escala mayor que continuidad posterior. Revisar en conjunto."
+      ]
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b2b.jpeg",
+      "sha256": "efcf70977107db6f2ef0dccecc163687700d76b8803654314222f560c5e5d5e3",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Memoria verde entre estratos; mar recortado y ausencia humana correctos."
+      ]
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b3a.jpeg",
+      "sha256": "f3a25bf6597adba63858f6d6464fc8c73474bf381c9549c78412822997f66fd5",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Verde pasa a tono más claro; costa y roca no anatómica."
+      ]
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b3b.jpeg",
+      "sha256": "ec6d424659d7a16313c15ce4029d993c235439eb77e8f3f80b4d4e23a230f7bd",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Casa vacía de papel; geometría no idéntica a apertura."
+      ]
+    },
+    {
+      "id": "b4a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b4a.jpeg",
+      "sha256": "76053e6766c159b9a27f69dcf1af504d2a9542c38a867abf9aae2c078538f7c4",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Manta terracota cerrada y perfil plano; sin flora. Interior de manta gris más visible."
+      ]
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b4b.jpeg",
+      "sha256": "e41e5742e8c2d4650846f861fd45cc21d045c60da6591bdfd868eada03d20d7a",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Ropa masculina corta corregida; hija mantiene arete añadido y pies simplificados. Distancia ambiental, papel claro."
+      ]
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b6a.jpeg",
+      "sha256": "14f9e0dead88fc780ee7bb4594979a30700642d913f65dcc8be2f37c30c0c5c7",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Pliegue ocre integrado sin cuerpo; varias hojas curvas, magia legible."
+      ]
+    },
+    {
+      "id": "b6b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b6b.jpeg",
+      "sha256": "e084a77733afc53eca4f9ceb59d78017a3da08dce20bd09a3a1f594a596690d1",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Veta quieta; continuidad de montaña aproximada, estratos de papel."
+      ]
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b7a.jpeg",
+      "sha256": "ae988bc3b428acf069e04cb6b8ec2e5a43cd16bbafcd0e6bfc581b41f3e3726e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Pliegue verde más saturado y roca mayor; no pérdida material, revisar continuidad de escala."
+      ]
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b7b.jpeg",
+      "sha256": "edd46836ce267d9717a3fd28f8dfed5b1bce287c77abe23fab3abcc6db5affeb",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Veta diagonal y blanda integrada; no figura humana ni efecto nuevo."
+      ]
+    },
+    {
+      "id": "b8a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b8a.jpeg",
+      "sha256": "8e2ae08b4c358ce9bc881e6f6194578a672b53ffedb637779dd03b00b897866c",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Papel presente en suelo y casa, pero cubierta ondulada se aleja del techo de hojas de la segunda casa. Revisión de continuidad pendiente."
+      ]
+    },
+    {
+      "id": "b8b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b8b.jpeg",
+      "sha256": "b79aafe9fd9f93be96ecb2a6251d2114f651c29bc6bdb708415f97b9ab9bb8a5",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Cierre no anatómico, veta horizontal y hojas con aire, sin mar o plantas. Plano de pausa deliberado."
+      ]
+    },
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-corrections-01/b1a.jpeg",
+      "sha256": "3b2b8b27e2edc56ef53b729ac6b8427a13434fec8f646f9f5717726712865f2e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "qa_status": "candidate_with_notes_pending_full_sequence",
+      "notes": [
+        "Corrección03 del instante: figuras distantes, separadas; papel íntegro. Geometría de casa varía entre tomas."
+      ]
+    }
+  ],
+  "all_outputs": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-01/b1a.jpeg",
+      "sha256": "19f40bc78f8d8eaaf1df4f29c0018f57babeda95f7196431392d999104da9bfa",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-01/b4b.jpeg",
+      "sha256": "d08a7ccda3ebf3a35aade30ae701d56a83bccdc5c82244249176a9d8385364f0",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b8b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-01/b8b.jpeg",
+      "sha256": "f87dfa3c2fa5325c2e7b2b6ff5a9fa6faa87dbaaf69ec03439e1acc4ead39401",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b1a.jpeg",
+      "sha256": "1a5ab789a90e4b6915677d66346107bfdb05749337a7a6d3f68f4fd6d79beedb",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b1b.jpeg",
+      "sha256": "725f6fc63597d568505b554edd387747e3b77a341ed603db54f1998f910abd0c",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b2a.jpeg",
+      "sha256": "6be05366495db297616805fa87f27bffbfc41c9c29c8fa09353d0a5032ff5fca",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b2b.jpeg",
+      "sha256": "efcf70977107db6f2ef0dccecc163687700d76b8803654314222f560c5e5d5e3",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b3a.jpeg",
+      "sha256": "f3a25bf6597adba63858f6d6464fc8c73474bf381c9549c78412822997f66fd5",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b3b.jpeg",
+      "sha256": "ec6d424659d7a16313c15ce4029d993c235439eb77e8f3f80b4d4e23a230f7bd",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b4a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b4a.jpeg",
+      "sha256": "76053e6766c159b9a27f69dcf1af504d2a9542c38a867abf9aae2c078538f7c4",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b4b.jpeg",
+      "sha256": "e41e5742e8c2d4650846f861fd45cc21d045c60da6591bdfd868eada03d20d7a",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b6a.jpeg",
+      "sha256": "14f9e0dead88fc780ee7bb4594979a30700642d913f65dcc8be2f37c30c0c5c7",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b6b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b6b.jpeg",
+      "sha256": "e084a77733afc53eca4f9ceb59d78017a3da08dce20bd09a3a1f594a596690d1",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b7a.jpeg",
+      "sha256": "ae988bc3b428acf069e04cb6b8ec2e5a43cd16bbafcd0e6bfc581b41f3e3726e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b7b.jpeg",
+      "sha256": "edd46836ce267d9717a3fd28f8dfed5b1bce287c77abe23fab3abcc6db5affeb",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b8a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b8a.jpeg",
+      "sha256": "8e2ae08b4c358ce9bc881e6f6194578a672b53ffedb637779dd03b00b897866c",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b8b",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-preproduccion-02/b8b.jpeg",
+      "sha256": "b79aafe9fd9f93be96ecb2a6251d2114f651c29bc6bdb708415f97b9ab9bb8a5",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    },
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/el-incesto-corrections-01/b1a.jpeg",
+      "sha256": "3b2b8b27e2edc56ef53b729ac6b8427a13434fec8f646f9f5717726712865f2e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg"
+    }
+  ],
+  "style_review": {
+    "contract": "wayuu-paper-magic-v2-locked-material",
+    "method": "Inspección directa de los 18 originales en distintas versiones. Comparación de anclas inicio/medio/final; no revisión integral de secuencia cerrada, faltan b5a/b5b.",
+    "result": "Papercut conservado en candidatos; vestuario, plantas y escala corregidos en primeras anclas. Persisten notas de escala, joyería mínima y cubierta b8a."
+  },
+  "next_actions": [
+    "Diagnosticar dos rechazos sin intentar eludir salvaguardas ni mutilar el guion.",
+    "Resolver continuidad del techo b8a y evaluar escala/colores en láminas.",
+    "Completar las dos tomas faltantes de forma autorizada antes de selección final; no sustituirlas con duplicados.",
+    "Renderizar y presentar mito completo únicamente después de QA final."
+  ],
+  "animation": false,
+  "audio": false,
+  "publication": false
+}

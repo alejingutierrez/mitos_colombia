@@ -1,0 +1,292 @@
+{
+  "schema": "ette-keyframes-preproduction/v1",
+  "date": "2026-09-13",
+  "status": "storyboard_draft_no_generation",
+  "community_id": 29,
+  "myth_id": 352,
+  "myth": "el-agua",
+  "source_corpus": "content/videos/chimila/investigacion-01/corpus-snapshot-20260912.json",
+  "narrative_sha256": "4de565ae3fa4c4eb0ae1cb9e6a7579c5a60eb60b97244ca445ff7eb141ef54a8",
+  "reference_registry": [
+    {
+      "id": "P07",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-07/p07-rostro-atuendo-v1.jpeg",
+      "sha256": "3748d29dfc3c99b04ff962e1b142c5692ef1aee6bfb2a1e0efe65f3ee5f03cc5",
+      "role": "bible_master_editorial_candidate"
+    },
+    {
+      "id": "H01",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+      "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7",
+      "role": "bible_master_editorial_candidate"
+    },
+    {
+      "id": "L04",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg",
+      "sha256": "57731d548dc69fe487356e3e3450f893ea528a13a2689f4b603bcb93384f1807",
+      "role": "bible_master_editorial_candidate"
+    },
+    {
+      "id": "L07",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-06/l07-master-v1.jpeg",
+      "sha256": "dbbe191c4a347603c137483640870ad30963c5913b7082991a90fd9b71f07a8a",
+      "role": "bible_master_editorial_candidate"
+    },
+    {
+      "id": "U03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1-refined.jpeg",
+      "sha256": "c1f027e7b76a78cb7aa2417c92b001af822ad0fb5e3556f9b0c1c66b832ced5d",
+      "role": "bible_master_editorial_candidate"
+    },
+    {
+      "id": "triptico-entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg",
+      "sha256": "393e2b2c576e3b50670bce81e105c99c9e7fbf6e74daa929562a500545bcf83e",
+      "role": "approved_scene_reference"
+    },
+    {
+      "id": "triptico-acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-07/el-agua/acto-papercut-paleta-v7-refined.jpeg",
+      "sha256": "627d7ac311a1ee1abd7da56de926742fabf3da4d6bf7da970ed419220950ef5a",
+      "role": "approved_scene_reference"
+    },
+    {
+      "id": "triptico-huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-08/el-agua/huella-simbolica-v8.jpeg",
+      "sha256": "8171b9ab71d49339033583c9cb09525368f3798bf103caf84050aec1e7eb8f7a",
+      "role": "symbolic_style_only"
+    }
+  ],
+  "style": {
+    "technique": "paper_cut_only",
+    "quilling": false,
+    "palette": "muted earth, sage, cream, subdued blue",
+    "material": "visible cut paper edges, layered internal depth, real paper shadows; not painted illustration or faceted CGI",
+    "framing": "zoom out, small full figures, breathable scene; no outer tabletop or studio"
+  },
+  "api_proposal": {
+    "provider": "openai",
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "medium",
+    "aspect": "9:16",
+    "native_size_candidate": "864x1536",
+    "dimensions_require_capability_preflight": true
+  },
+  "execution": {
+    "api_calls_made": 0,
+    "generated_keyframes": 0,
+    "pilot_first": [
+      "kf01",
+      "kf02"
+    ],
+    "review_before_expansion": true,
+    "max_concurrent_myths": 3,
+    "sequential_within_each_myth": true,
+    "frame_1": "At least two same-myth bible/triptych references",
+    "frame_2": "Approved kf01 plus canonical same-myth references",
+    "frame_3_and_later": "Previous two approved keyframes plus relevant bible/triptych references; references and hashes frozen only after review",
+    "spending_authorized": false,
+    "animation_voice_music_not_started": true,
+    "moderation": "No evasion or repeated blocked prompt: review or select a genuinely different authorized narrative moment"
+  },
+  "frames": [
+    {
+      "id": "kf01",
+      "title": "Llegada a una tierra sin agua",
+      "scene": "Plano general vertical y abierto: la Gran Cacica y un pequeño grupo de adultos recorren el terreno montañoso seco. Pozos todavía ausentes; no cauce con agua ni emblemas rituales.",
+      "canonical_ref_ids": [
+        "P07",
+        "H01",
+        "L04",
+        "triptico-entrada"
+      ],
+      "previous_approved_keyframes": [],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf01-v1.jpeg"
+    },
+    {
+      "id": "kf02",
+      "title": "El trabajo común",
+      "scene": "Plano medio abierto lateral: hombres adultos excavan un pozo con útiles sencillos; la Gran Cacica organiza el trabajo desde una distancia corta. Suelo seco, sin agua ni maquinaria.",
+      "canonical_ref_ids": [
+        "P07",
+        "H01",
+        "L04",
+        "U03",
+        "triptico-entrada"
+      ],
+      "previous_approved_keyframes": [
+        "kf01"
+      ],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf02-v1.jpeg"
+    },
+    {
+      "id": "kf03",
+      "title": "La primera comprobación",
+      "scene": "Plano oblicuo hacia un pozo seco con cantos internos de papel. La Cacica despierta y pregunta; los adultos le muestran que el trabajo aún no encontró agua. Ninguno habla con labios animados.",
+      "canonical_ref_ids": [
+        "P07",
+        "H01",
+        "L04"
+      ],
+      "previous_approved_keyframes": [
+        "kf01",
+        "kf02"
+      ],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf03-v1.jpeg"
+    },
+    {
+      "id": "kf04",
+      "title": "Los pozos siguen vacíos",
+      "scene": "Otro encuadre amplio: varios pozos separados en el mismo territorio, todavía secos; los trabajadores y la Cacica comprueban por segunda vez el resultado. Sin cambio de rostro, ropa o utilería.",
+      "canonical_ref_ids": [
+        "P07",
+        "H01",
+        "L04"
+      ],
+      "previous_approved_keyframes": [
+        "kf02",
+        "kf03"
+      ],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf04-v1.jpeg"
+    },
+    {
+      "id": "kf05",
+      "title": "La visita nocturna",
+      "scene": "Plano general nocturno: la Gran Cacica sale sola y camina hacia el primer pozo. Luz azul apagada; agua todavía ausente; nadie la acompaña.",
+      "canonical_ref_ids": [
+        "P07",
+        "L04",
+        "triptico-acto"
+      ],
+      "previous_approved_keyframes": [
+        "kf03",
+        "kf04"
+      ],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf05-v1.jpeg"
+    },
+    {
+      "id": "kf06",
+      "title": "La palabra y la saliva",
+      "scene": "Plano medio amplio de la misma Cacica junto al pozo durante la noche. Llama al agua y deja caer una diminuta gota de papel en la abertura; no mostrar líquido corporal realista ni agua llenándolo instantáneamente.",
+      "canonical_ref_ids": [
+        "P07",
+        "L04",
+        "triptico-acto"
+      ],
+      "previous_approved_keyframes": [
+        "kf04",
+        "kf05"
+      ],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf06-v1.jpeg"
+    },
+    {
+      "id": "kf07",
+      "title": "Agua dulce al amanecer",
+      "scene": "Plano general de la mañana: el mismo territorio y los mismos pozos ahora contienen agua. Adultos descubren el resultado y la Gran Cacica lo señala con un gesto sobrio. Sin coronarla ni convertirla en diosa.",
+      "canonical_ref_ids": [
+        "P07",
+        "H01",
+        "L04",
+        "triptico-entrada"
+      ],
+      "previous_approved_keyframes": [
+        "kf05",
+        "kf06"
+      ],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf07-v1.jpeg"
+    },
+    {
+      "id": "kf08",
+      "title": "Lo que hizo posible el agua",
+      "scene": "Detalle abierto del agua dentro de un pozo con cantos de papel y pequeñas sombras; las manos de una persona adulta alcanzan el borde. Síntesis de trabajo común e intervención de la Cacica; no repetir literalmente la huella cuadrada ni inventar ritual.",
+      "canonical_ref_ids": [
+        "L04",
+        "triptico-huella"
+      ],
+      "previous_approved_keyframes": [
+        "kf06",
+        "kf07"
+      ],
+      "status": "storyboard_draft",
+      "motion_direction": "Minimal paper-layer movement; identity and wardrobe unchanged; no new plot event",
+      "exclusions": [
+        "no quilling",
+        "no invented glyphs or ethnic uniform",
+        "no imported Sierra caps or carnival costume",
+        "no dialogue lip-sync",
+        "no extra character or immediate miraculous fill"
+      ],
+      "output": "output/imagegen/chimila/keyframes/preproduccion-01/el-agua/kf08-v1.jpeg"
+    }
+  ],
+  "pending": [
+    "User approves pilot and API spending",
+    "Verify model support for native 9:16 dimension without cropping triptych masters",
+    "Write and freeze final per-frame prompts after the pilot direction is approved",
+    "Fit narration duration; no compulsory 90 seconds",
+    "Review cultural limits; editorial design is not documentary certification"
+  ]
+}

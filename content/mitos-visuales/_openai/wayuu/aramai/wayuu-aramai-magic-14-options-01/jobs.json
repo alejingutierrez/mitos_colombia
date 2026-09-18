@@ -1,0 +1,129 @@
+{
+  "schema": "mitos-openai-triptych-options/v1",
+  "batch_id": "wayuu-aramai-magic-14-options-01",
+  "created_at": "2026-09-06T01:53:27.520Z",
+  "provider": "OpenAI API",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "plan_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/plan.snapshot.json",
+  "plan_sha256": "55c5a6fa0b6b1a95f7d1f787d67550c46a09ae0614e0c2704b22703579f5d658",
+  "narrative_target_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+  "editorial_approval": null,
+  "production_ready": false,
+  "completed_triptych": false,
+  "jobs": [
+    {
+      "id": "01",
+      "title": "La noche que escucha",
+      "slug": "la-noche-que-escucha",
+      "prompt_sha256": "7fc7a443bc20e58d988160097577e0aabc2d3e98476b21cd61521201564e2c79",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta"
+      ],
+      "editorial_translation": "La noche habitable bajo el techo traduce la escucha no humana. Es una licencia escénica; el relato no describe un recinto estelar ni constelaciones rituales.",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/01-la-noche-que-escucha.prompt.txt",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/01-la-noche-que-escucha.jpeg",
+      "act": "entrada",
+      "size": "1536x864",
+      "aspect_ratio": "16:9",
+      "quality": "high",
+      "model": "gpt-image-2",
+      "api_method": "images.generate",
+      "refs": [],
+      "status": "prepared"
+    },
+    {
+      "id": "02",
+      "title": "El cielo se inclina a escuchar",
+      "slug": "el-cielo-se-inclina",
+      "prompt_sha256": "80db5b98f95fa96b2a77d1cfb6b6cd8313037f991e13fe2d5cf92bbc1562c891",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta"
+      ],
+      "editorial_translation": "El descenso cóncavo del cielo representa la escucha de Mareiwa sin atribuirle un cuerpo. No es un episodio literal ni una cosmología documentada.",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/02-el-cielo-se-inclina.prompt.txt",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/02-el-cielo-se-inclina.jpeg",
+      "act": "entrada",
+      "size": "1536x864",
+      "aspect_ratio": "16:9",
+      "quality": "high",
+      "model": "gpt-image-2",
+      "api_method": "images.generate",
+      "refs": [],
+      "status": "prepared"
+    },
+    {
+      "id": "03",
+      "title": "Las huellas sin caminante",
+      "slug": "las-huellas-sin-caminante",
+      "prompt_sha256": "98236603cf77c8bbdbbc32471478534becb726eb02992783a705301497681709",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta",
+        "recorrido"
+      ],
+      "editorial_translation": "Las huellas imposibles hacen visible la agencia y el recorrido de Wanurü. No fijan anatomía ni un motivo ritual; no se afirma que la fuente narre huellas que ascienden paredes.",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/03-las-huellas-sin-caminante.prompt.txt",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/03-las-huellas-sin-caminante.jpeg",
+      "act": "entrada",
+      "size": "1536x864",
+      "aspect_ratio": "16:9",
+      "quality": "high",
+      "model": "gpt-image-2",
+      "api_method": "images.generate",
+      "refs": [],
+      "status": "prepared"
+    },
+    {
+      "id": "04",
+      "title": "Wanurü entre los planos",
+      "slug": "wanuru-entre-los-planos",
+      "prompt_sha256": "6e32ccf04b3fde59dbaeaf77561fd16c42705c3440790a5ba29113c68263549e",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta",
+        "recorrido"
+      ],
+      "editorial_translation": "Es la alternativa más figurativa: diseño editorial reversible de Wanurü a partir de vacíos y planos de sombra. La fuente conserva su agencia pero no certifica esta silueta, escala ni materialización.",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/04-wanuru-entre-los-planos.prompt.txt",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/04-wanuru-entre-los-planos.jpeg",
+      "act": "entrada",
+      "size": "1536x864",
+      "aspect_ratio": "16:9",
+      "quality": "high",
+      "model": "gpt-image-2",
+      "api_method": "images.generate",
+      "refs": [],
+      "status": "prepared"
+    },
+    {
+      "id": "05",
+      "title": "El agua recuerda el futuro",
+      "slug": "el-agua-recuerda-el-futuro",
+      "prompt_sha256": "29780b7d69f973ad7308c58f926029c433a6dd433b229a92d6bfc0456baa77f0",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta"
+      ],
+      "editorial_translation": "Anticipación plástica del desenlace de la versión editorial: pérdida, silencio y responsabilidad. No añade una profecía, un sueño ni un poder adivinatorio a Arámai; la anomalía es una licencia para el espectador.",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/05-el-agua-recuerda-el-futuro.prompt.txt",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/05-el-agua-recuerda-el-futuro.jpeg",
+      "act": "entrada",
+      "size": "1536x864",
+      "aspect_ratio": "16:9",
+      "quality": "high",
+      "model": "gpt-image-2",
+      "api_method": "images.generate",
+      "refs": [],
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-19-ulepala-medium",
+    "myth_slug": "ulepala",
+    "model_ids": [
+      "ulepala__identity_sheet",
+      "ulepala__state_sheet",
+      "companera_muerta_ulepala__identity_sheet",
+      "companera_muerta_ulepala__state_sheet",
+      "madre_ulepala__identity_sheet",
+      "companeros_dote_ulepala__group_grammar",
+      "familia_viva_ulepala__group_grammar",
+      "malinot__presence_model",
+      "tigre_camino_malinot__identity_sheet",
+      "mula_ulepala__identity_sheet",
+      "rebano_dote_ulepala__group_grammar",
+      "collares_dote_ulepala__object_sheet",
+      "vivienda_ulepala__spatial_model",
+      "caballo_montura_ulepala__identity_sheet",
+      "familia_muerta_ulepala__group_grammar",
+      "cementerio_tinajas_ulepala__spatial_model",
+      "botijuela_ulepala__object_sheet",
+      "asno_enjaezado_ulepala__identity_sheet",
+      "avios_jepira_ulepala__object_sheet",
+      "caballo_blanco_nube_ulepala__identity_sheet",
+      "caballo_blanco_nube_ulepala__state_sheet",
+      "aparejos_caballo_nube_ulepala__object_sheet",
+      "caverna_submarina_ulepala__spatial_model",
+      "mansiones_jepira_ulepala__spatial_model",
+      "abuela_algodon_ulepala__identity_sheet",
+      "campo_algodon_ulepala__spatial_model",
+      "pala_algodon_ulepala__object_sheet",
+      "mariposa_blanca_ulepala__identity_sheet",
+      "cambio_vision_ulepala__phenomenon_rule",
+      "huellas_rebano_juya_ulepala__phenomenon_rule",
+      "aparicion_juya_ulepala__identity_sheet",
+      "servidores_juya_ulepala__group_grammar",
+      "estancia_juya_ulepala__spatial_model",
+      "banco_jabali_ulepala__identity_sheet",
+      "banco_jabali_ulepala__state_sheet",
+      "chinchorro_gigante_juya__object_sheet",
+      "vara_bejuco_juya__object_sheet",
+      "provision_cabrito_juya__object_sheet",
+      "armas_caceria_juya_ulepala__object_sheet",
+      "parruluwa_puercoespines_ulepala__group_grammar",
+      "parruluwa_puercoespines_ulepala__state_sheet",
+      "tunas_conejos_ulepala__group_grammar",
+      "tunas_conejos_ulepala__state_sheet",
+      "majayuras_ahuyamas_ulepala__group_grammar",
+      "majayuras_ahuyamas_ulepala__state_sheet",
+      "jovenes_venados_ulepala__group_grammar",
+      "jovenes_venados_ulepala__state_sheet",
+      "bosque_salatchi_conuco_ulepala__spatial_model",
+      "aprendizajes_juya_ulepala__phenomenon_rule",
+      "taliray_ulepala__object_sheet",
+      "amigo_ulepala__identity_sheet",
+      "mujer_amigo_ulepala__identity_sheet",
+      "aparicion_maleiwa_ulepala__identity_sheet",
+      "caballo_maleiwa_ulepala__identity_sheet",
+      "calabaza_ron_ulepala__object_sheet",
+      "fiesta_maleiwa_ulepala__spatial_model",
+      "participantes_fiesta_maleiwa__group_grammar",
+      "anciana_amiga_ulepala__identity_sheet",
+      "riquezas_oferta_maleiwa__object_sheet",
+      "riquezas_oferta_maleiwa__state_sheet",
+      "mulas_mohinas_escape_ulepala__group_grammar",
+      "lienzo_ovillo_escape_ulepala__object_sheet",
+      "ruta_sombras_regreso_ulepala__spatial_model",
+      "comunidad_interroga_ulepala__group_grammar",
+      "cardenal_ulepala__identity_sheet",
+      "cardenal_ulepala__state_sheet",
+      "secreto_ulepala__phenomenon_rule"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "ready_after_primary_research_inventory_and_design"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "participantes_fiesta_maleiwa__group_grammar"
+  ],
+  "models": {
+    "participantes_fiesta_maleiwa__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "participantes_fiesta_maleiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Personas de prestigio y artistas convocados a la fiesta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Participantes de la fiesta de Maleiwa. Funcion visual: Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Participantes de la fiesta de Maleiwa",
+          "funcion estable: Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Participantes de la fiesta de Maleiwa. Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "participantes_fiesta_maleiwa": {
+      "name": "Participantes de la fiesta de Maleiwa",
+      "kind": "colectivo",
+      "description": "Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "participantes_fiesta_maleiwa__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Personas de prestigio y artistas convocados a la fiesta."
+        }
+      ]
+    }
+  }
+}

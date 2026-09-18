@@ -1,0 +1,41 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-08b-kuriruputa-siluetas-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-08b-kuriruputa-siluetas-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección 08b en medium y desde texto del ancla de Kuriruputá: conservar la relación horizontal de cuidado, pero hacer las cuatro siluetas plenamente reversibles y sin cabello, capas, mantos, vestidos, tocados o salientes que fijen atributos humanos.",
+  "jobs": [
+    {
+      "id": "el-indio-kuriruputa__ancla--canon",
+      "model_id": "el-indio-kuriruputa__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-08b-kuriruputa-siluetas-correction-medium/prompts/el-indio-kuriruputa__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-08b-kuriruputa-siluetas-correction-medium/el-indio-kuriruputa__ancla--canon.jpeg",
+      "prompt_sha256": "a96c0b6cf3867ce626af781fbd6a2f3127fdbfcdb65560c20ae619324ec6fe18",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "safeguards": [
+        "generación desde texto; no adjuntar ni exportar imágenes locales en esta tanda",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados, heridas, cadáveres o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "figuras humanas como placeholders editoriales reversibles: caras lisas, sin fisonomía, cabello, sexo, ropa detallada, joyas, pintura, tocado o rasgo convertido en canon",
+        "corrección horizontal desde texto: una figura lisa está sentada y tres figuras lisas de igual dignidad forman alrededor una estructura estable de apoyo mediante manos abiertas; las cuatro siluetas comparten exactamente el mismo lenguaje geométrico, con cabeza circular lisa, cuello corto y contorno continuo",
+        "ninguna silueta lleva cabello, capa, manto, vestido, falda, tocado, saliente desde cabeza, cuello u hombros, sexo o anatomía detallada; sin sangre, herida visible, vendaje, arma, pose bélica, rescate espectacular, romance, sueño, tuma, curación o jerarquía"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

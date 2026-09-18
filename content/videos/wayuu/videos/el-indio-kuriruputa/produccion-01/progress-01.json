@@ -1,0 +1,114 @@
+{
+  "schema": "wayuu-video-production-progress/v1",
+  "slug": "el-indio-kuriruputa",
+  "status": "five_anchors_reviewed_three_corrections_pending",
+  "plan": "content/videos/wayuu/videos/el-indio-kuriruputa/preproduccion-02/plan.json",
+  "generated_unique_images": 5,
+  "selected_final": 0,
+  "provisional_candidates": 2,
+  "corrections_required": 3,
+  "not_yet_generated": 9,
+  "quality": "medium",
+  "size": "864x1536",
+  "model": "gpt-image-2",
+  "provider": "OpenAI official imagegen CLI",
+  "input_images": [],
+  "batch_exit_code": 0,
+  "cli_seconds": [
+    32.9,
+    34.3,
+    36.1,
+    41.2,
+    40.6
+  ],
+  "assets": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-01/b1a.jpeg",
+      "sha256": "69b8274f1630eb50e7e75be02dd48be6facfadfca3cf79ee2c31429c7ebc3cf3",
+      "bytes": 227035,
+      "reviewed": true,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "decision": "candidate_with_notes",
+      "notes": [
+        "Ganado vacuno de tres colores, rastro y protagonista completos; suelo y cuerpos inequívocamente recortados.",
+        "Se añaden rosetas vegetales y banco bajo alero. No se identifica especie ni se usa este plano para acreditar botánica; pelo algo más corto que modelo."
+      ]
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-01/b3b.jpeg",
+      "sha256": "2c36b1742c5da44e9d7f4b198fec2ec4926b3cb485f411cc157989c0a948a45e",
+      "bytes": 197527,
+      "reviewed": true,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "decision": "superseded_pending_correction",
+      "notes": [
+        "Papel y paño-camino legibles; cuatro personas, agencia de hermanas y profundidad conservadas.",
+        "Rechazada como selección: el paño se confunde con pliegues que deforman pantalón/rodilla; corregir legibilidad anatómica y apoyo de antebrazos. Mayor queda detrás, no guía delante."
+      ]
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-01/b4b.jpeg",
+      "sha256": "010693e62e8af4aa364912a137192eee98c208d83c75149da6ac1ad28a088f34",
+      "bytes": 162199,
+      "reviewed": true,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "decision": "superseded_pending_correction",
+      "notes": [
+        "Magia material legible y tuma pequeña; figuras de papel sin pérdida de estilo.",
+        "Rechazada como selección: interior acumula objetos fuera de inventario; pierna/paño y estera se confunden. Una senda sale hacia cámara en vez de conectar umbral. Corregir simplificación local y orientación."
+      ]
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-01/b6a.jpeg",
+      "sha256": "8fea53c2fbe6f8684f899bc033d866192b421983b32bccadf2468245993f1d97",
+      "bytes": 207530,
+      "reviewed": true,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "decision": "candidate_with_notes",
+      "notes": [
+        "Cinco participantes correctos; tres vacunos distintos; mediación sin ceremonia; ropa y perfiles coherentes.",
+        "Figuras mayores que objetivo23% y paño parece bajo rodilla; retener provisionalmente por plano aún ambiental y sin retrato. Banco/cuenco incidental no atribuido a rito."
+      ]
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-01/b7a.jpeg",
+      "sha256": "8b92daf201d00c7657bb43c7124094dcf79d26c3a80ea7cff8436d4c1446f30f",
+      "bytes": 205062,
+      "reviewed": true,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "decision": "superseded_pending_correction",
+      "notes": [
+        "Nueva pareja diferenciada por manta azul gris/panel arena/trenza; tres hermanas y tuma presentes.",
+        "Rechazada como selección: pareja demasiado cerca, alrededor de un tercio de altura. Corregir distancia de cámara manteniendo reparto y papel."
+      ]
+    }
+  ],
+  "next": [
+    "Generar sólo b3b b4b b7a desde preparado02",
+    "Inspeccionar originales corregidos antes de producir nueve tomas restantes",
+    "Revisar continuidad completa antes de selección final"
+  ],
+  "verification": {
+    "plan01_validation": true,
+    "reference_hash_checks": 11,
+    "prompt_locks_verified": 14,
+    "tests_passed": 20,
+    "docker_exit_code": 0
+  },
+  "no_audio_or_animated_video": true
+}

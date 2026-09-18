@@ -21,17 +21,20 @@ export const DEFAULT_VOICE = {
   name: "Alejandro",
   modelId: "eleven_multilingual_v2",
   settings: {
-    // En ElevenLabs la voz se vuelve MÁS variable cuando la estabilidad BAJA:
-    // 0,35 le deja respirar el relato en vez de leerlo plano.
-    stability: 0.35,
+    // Elegidos de oído el 2026-09-16, comparando diez configuraciones del mismo
+    // modelo sobre el mismo párrafo. En ElevenLabs la voz se vuelve MÁS
+    // variable cuando la estabilidad BAJA: 0,25 con estilo 0,45 le deja
+    // interpretar el relato en vez de leerlo plano, que es lo que se buscaba
+    // para un narrador de mitos y no para un locutor de noticias.
+    stability: 0.25,
     similarity_boost: 0.9,
-    style: 0.3,
+    style: 0.45,
     use_speaker_boost: true,
     // Medido: `multilingual_v2`, `flash_v2_5` y `turbo_v2_5` respetan `speed`
     // (la duración cambia un 40-47 % entre 0,7 y 1,2). `eleven_v3` NO: lo
     // acepta sin error y no cambia nada. Si algún día se cambia a v3, la
     // velocidad habría que ajustarla después con ffmpeg.
-    speed: 1.05,
+    speed: 1.08,
   },
 };
 

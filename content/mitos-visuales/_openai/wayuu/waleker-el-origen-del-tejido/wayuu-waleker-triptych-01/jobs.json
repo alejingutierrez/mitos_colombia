@@ -1,0 +1,226 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-waleker-triptych-01",
+  "created_at": "2026-09-07T15:24:11.336Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "waleker-el-origen-del-tejido",
+  "plan": "content/mitos-visuales/wayuu.waleker.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "bf0b4615bcf131d67778101cb8010fc1b78d4370c036166839410a0e49217d4c",
+  "narrative_target_sha256": "85c26434ccbf8d6b85fb6f1b1159d9a11b0160ad394d68209596a87aede5cf55",
+  "evidence": [
+    {
+      "id": "bible_paz",
+      "type": "previous_project_research",
+      "path": "docs/wayuu-lote-26-waleker-v3.md",
+      "supports": "Versión extensa Paz Ipuana, inventario y prendas; reaprovechamos investigación previa sin afirmar releer el libro completo hoy."
+    },
+    {
+      "id": "icanh_hilos",
+      "type": "institutional_context",
+      "url": "https://colecciones.icanh.gov.co/articulos/mujeresWayuu.php",
+      "supports": "Transmisión y distinción telar/huso frente a crochet moderno.",
+      "limits": "No fuente literal de todos los episodios ni permiso para copiar patrones."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:23:00Z",
+    "reviewed_reference_ids": [
+      "e8c5cdf22485c8d98fb6",
+      "c6964c7e83806e8fa4ce"
+    ],
+    "retained": [
+      "Hilo que sale de la boca, trabajo con telar y transmisión entre mujeres; paleta noche/tierra."
+    ],
+    "rejected": [
+      "Cara gigantesca, joyas y espirales en cabello, patrones geométricos no documentados, rosetas, figuras de sombra ajenas."
+    ],
+    "influence_by_act": {
+      "entrada": "Alejar tejedora, fijar manta índigo y continuidad real de hilo/boca/telar.",
+      "acto": "Conservar enseñanza pero hacer visible la continuidad del jirón de telaraña al tejido humano.",
+      "huella": "Un jirón tejido se abre como telaraña; objeto único sin paisaje."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "waleker__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-correction-01/waleker__identity_sheet--canon.jpeg",
+      "sha256": "c566e79698145009c4dff815686fdd1da8ddf7f2e6f6f3043568971b67174e82",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "tejido_nocturno_waleker__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-correction-01/tejido_nocturno_waleker__phenomenon_rule--canon.jpeg",
+      "sha256": "8e59ab38552734689ff195c82736f239c6d29f61a535d7af66c83c601dfac19d",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "tejedoras_herederas__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-correction-01/tejedoras_herederas__group_grammar--canon.jpeg",
+      "sha256": "94807a4d9e0a51dc1ae9d87ae19e835d7e7b7d2f7dd9e395468c1c6cf0384324",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "telar_wayuu__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium/telar_wayuu__object_sheet--canon.jpeg",
+      "sha256": "8d3d77a606fdede3f4156e752276df7039fe2bc94429437b69f1cba7a9373de6",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "jiron_telarana_waleker__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium/jiron_telarana_waleker__object_sheet--canon.jpeg",
+      "sha256": "0b217c8413961fcdda1beab9c530f582ac6f3962075e3ba04af746144367b134",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "legado_textil_waleker__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-26-waleker-el-origen-del-tejido-medium-corrections-09/legado_textil_waleker__phenomenon_rule--canon.jpeg",
+      "sha256": "64ec1ef872fea56479c4bbb846328c61ce461096b89ea6232c25ea79e5f76902",
+      "qa_status": "PASS_AFTER_CORRECTION_09"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "waleker__identity_sheet",
+        "tejido_nocturno_waleker__phenomenon_rule",
+        "tejedoras_herederas__group_grammar",
+        "telar_wayuu__object_sheet",
+        "jiron_telarana_waleker__object_sheet",
+        "legado_textil_waleker__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/waleker-el-origen-del-tejido/wayuu-waleker-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "0a2e8f974b9fc28e22c229691fc343d0b870bc4c5eb3425c23c436dcf6512e27",
+      "narrative_event_ids": [
+        "tejido_nocturno"
+      ],
+      "editorial_translation": "Núcleo del relato público; geometría material y distribución son traducción editorial, no técnica etnográfica ni diseño tradicional reproducido.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Boca, manos, telar e hilo.",
+        "impossible_behavior": "El hilo continuo nace de la boca y se vuelve tejido entre manos y telar.",
+        "narrative_effect": "El hilo tiene voz antes de convertirse en tela.",
+        "agency": "Waleker origina el don; las tejedoras humanas observan, aprenden y trabajan, no son sustituidas por magia.",
+        "physical_translation": "Tres tiras de papel conectan labio, dedos y urdimbre.",
+        "visible_test": "¿Se ve un origen en la boca y un tejido pequeño trabajado, sin retrato gigante?",
+        "event_ids": [
+          "tejido_nocturno"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "waleker__identity_sheet",
+        "tejido_nocturno_waleker__phenomenon_rule",
+        "tejedoras_herederas__group_grammar",
+        "telar_wayuu__object_sheet",
+        "jiron_telarana_waleker__object_sheet",
+        "legado_textil_waleker__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/waleker-el-origen-del-tejido/wayuu-waleker-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "51a590e490cdb5d3557b254822e8ab0bbd34f80d4ff2191f4e85d5f2a1f677d2",
+      "narrative_event_ids": [
+        "transmision"
+      ],
+      "editorial_translation": "Núcleo del relato público; geometría material y distribución son traducción editorial, no técnica etnográfica ni diseño tradicional reproducido.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Telar y aprendizaje humano.",
+        "impossible_behavior": "El jirón de telaraña se hace urdimbre que otras manos continúan.",
+        "narrative_effect": "El secreto perdido se vuelve conocimiento compartido.",
+        "agency": "Waleker origina el don; las tejedoras humanas observan, aprenden y trabajan, no son sustituidas por magia.",
+        "physical_translation": "Un solo paso continuo de malla irregular a hilos rectos y tejido bajo manos activas.",
+        "visible_test": "¿Tres mujeres trabajan y la misma malla se convierte en urdimbre, sin Waleker duplicada?",
+        "event_ids": [
+          "transmision"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "waleker__identity_sheet",
+        "tejido_nocturno_waleker__phenomenon_rule",
+        "tejedoras_herederas__group_grammar",
+        "telar_wayuu__object_sheet",
+        "jiron_telarana_waleker__object_sheet",
+        "legado_textil_waleker__phenomenon_rule"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/waleker-el-origen-del-tejido/wayuu-waleker-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "e366407bee5e0552f3ae4a456bf9da36c9e952d64aa9147a3f656e20ab7db8d7",
+      "narrative_event_ids": [
+        "despedida"
+      ],
+      "editorial_translation": "Núcleo del relato público; geometría material y distribución son traducción editorial, no técnica etnográfica ni diseño tradicional reproducido.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Jirón textil.",
+        "impossible_behavior": "La misma trama continúa como telaraña.",
+        "narrative_effect": "La ausencia también deja una trama.",
+        "agency": "Waleker origina el don; las tejedoras humanas observan, aprenden y trabajan, no son sustituidas por magia.",
+        "physical_translation": "Tiras entrecruzadas que se abren en malla irregular.",
+        "visible_test": "¿Un único jirón es a la vez tejido y telaraña?",
+        "event_ids": [
+          "despedida"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Queda una trama que otras manos pueden continuar.",
+        "carrier": "Jirón tejido-telaraña.",
+        "operation": "Abrir la misma trama sin cortarla en dos objetos.",
+        "story_connection": "Despedida de Waleker y transmisión del tejido.",
+        "visible_test": "¿Un único jirón es a la vez tejido y telaraña?"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-waleker-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

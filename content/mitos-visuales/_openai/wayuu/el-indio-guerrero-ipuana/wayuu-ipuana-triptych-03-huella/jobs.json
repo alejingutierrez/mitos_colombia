@@ -1,0 +1,174 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-ipuana-triptych-03-huella",
+  "created_at": "2026-09-06T03:41:13.222Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-indio-guerrero-ipuana",
+  "plan": "content/mitos-visuales/wayuu.ipuana.triptico.v1.2-huella.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "029b2fcec33e764ec221d0d683bc51887cf49276f3fdb4dd93062ef4fa331d7e",
+  "narrative_target_sha256": "ed372c67225e9e8b81df9eaa17e44c96d38205196ac3902a9f1ffe9491475fc1",
+  "evidence": [
+    {
+      "id": "chaves_1946_ipuana",
+      "type": "primary_source",
+      "title": "Mitos, leyendas y cuentos de la Guajira, XII: El indio Guerrero Ipuana",
+      "author": "Milcíades Chaves Ch.",
+      "year": 1946,
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "locator": "pp.320–321; índices PDF 16–17. Informante Enrique Epinayú; intérprete Roberto Iguarán.",
+      "supports": "Dos retornos del padre, desenlace definitivo y sueño desatendido del hijo que involucra majayura y cardón.",
+      "limits": "La voz del sueño, el incidente de caza y el papel del cardón difieren de la reescritura vigente. No atribuir a esta fuente literalmente una majayura que aconseja no tomar un camino, ni la mediación final. Villa Posse es reedición, no segunda versión independiente."
+    },
+    {
+      "id": "published_ipuana",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-guerrero-ipuana.json",
+      "supports": "Relato objetivo público completo: dos generaciones, súplicas familiares, advertencia y continuidad del conflicto. Los gestos de detener y la lectura de prudencia siguen esta edición.",
+      "limits": "No reescribir el registro histórico ni convertir la edición en transcripción literal; no cambiar contenido del sitio durante esta campaña visual."
+    },
+    {
+      "id": "bible_ipuana",
+      "type": "internal_visual_research",
+      "path": "editorial/wayuu/production-direction-v3.mjs",
+      "supports": "Identidad diferenciada de padre e hijo, majayura del sueño, vestuario y materialidad previamente investigados.",
+      "limits": "Fisonomía, colores y puesta en escena son decisiones de diseño reversibles; la figura onírica no es la majayura de Puró ni Pülowi."
+    },
+    {
+      "id": "clothing_wayuu",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+      "supports": "Vestuario diverso; contexto no prehispánico uniforme; evitar reducir personas al taparrabos.",
+      "limits": "Sin diseños faciales o claniles inventados."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T03:37:38.141Z",
+    "reviewed_reference_ids": [
+      "907bf4196cf208398a70",
+      "8b29dc34056bc00e126e"
+    ],
+    "retained": [
+      "Cielos azul petróleo en estratos recortados y luz dorada mate.",
+      "Ritmo de capas del territorio y presencia del cardón como señal reconocible."
+    ],
+    "rejected": [
+      "Proyectiles en cuerpos, armas disparadas y combate visible.",
+      "Adornos y vestuario no documentados; poses heroicas, rostros modelados y planos cerrados."
+    ],
+    "influence_by_act": {
+      "entrada": "Añadir cielo profundo de hojas azul petróleo y gris con sol mate y luz dorada, conservando la sombra que no sigue al padre y el plano abierto.",
+      "acto": "Retomar la arquitectura de capas y el cardón de la imagen antigua, pero dentro del sueño: advertencia y decisión, no cuerpos vulnerados.",
+      "huella": "Condensar el cardón reconocible en un único símbolo con sombras de dos arcos. No heredar escena, protagonistas ni proyectiles."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "guerrero_ipuana__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/guerrero_ipuana__identity_sheet--canon.jpeg",
+      "sha256": "984400dc8b0853635c58ffa32b48593c791798d8415ab413db8b1318a419de84",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "hijo_guerrero_ipuana__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/hijo_guerrero_ipuana__identity_sheet--canon.jpeg",
+      "sha256": "3fdea4cbbc49d2cb77e64a26fbfc75a7c5051fb4fc4ea85580b45052eaa38b63",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "majayura_sueno_ipuana__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/majayura_sueno_ipuana__identity_sheet--canon.jpeg",
+      "sha256": "23f0ccfb9372b333ad8f1aa6d22982eff1d723e6c68eb572b505d5942c204d8a",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "cardon_iguaraya__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/cardon_iguaraya__botanical_sheet--canon.jpeg",
+      "sha256": "673a1997964cdaad131c1b8fecca96ad7d3e471840225fabbf3a57c3f21128c5",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "arco_flechas__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/arco_flechas__object_sheet--canon.jpeg",
+      "sha256": "f5c9963ee2b3f620fab20e2b2cebfb80ed4b6673b20373ac840f8c08bdbc8686",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada por el usuario; QA del agente por imagen y publicación aditiva verificable, sin nuevas pausas de aprobación por mito.",
+  "requested_acts": [
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_y_sombra",
+      "canon_model_ids": [
+        "guerrero_ipuana__identity_sheet",
+        "hijo_guerrero_ipuana__identity_sheet",
+        "majayura_sueno_ipuana__identity_sheet",
+        "cardon_iguaraya__botanical_sheet",
+        "arco_flechas__object_sheet",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-guerrero-ipuana/wayuu-ipuana-triptych-03-huella/prompts/huella.prompt.txt",
+      "prompt_sha256": "c2aed4a5f28cfc2d7810120fd2f68c90261b2ed9d1c74089e725b3751c2928e5",
+      "narrative_event_ids": [
+        "no_retorno_padre",
+        "no_retorno_hijo"
+      ],
+      "editorial_translation": "El cardón que proyecta sombras de dos arcos es una síntesis gráfica propia. La fuente no narra estas sombras ni atribuye al cactus un símbolo de dos generaciones. No añadir rito funerario o propiedad botánica mágica.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Un cardón y la sombra que proyecta.",
+        "impossible_behavior": "Su sombra toma la forma de dos arcos sin dueño en lugar de repetir sus tallos.",
+        "narrative_effect": "Padre e hijo quedan vinculados por la ausencia ante una advertencia que permanece.",
+        "agency": "No hay actor humano; el símbolo no realiza un rito ni revive a nadie.",
+        "physical_translation": "Tallos plegados en papel oliva y dos láminas carbón casi planas en forma de arcos destensados.",
+        "visible_test": "Una planta física y dos sombras separadas e inequívocas de arcos, con una franja ancha de arena entre ellas; no una sola silueta compuesta.",
+        "event_ids": [
+          "no_retorno_padre",
+          "no_retorno_hijo"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "La advertencia permanece cuando ya faltan quienes podían escucharla.",
+        "carrier": "Un solo cardón pequeño, construido con tallos de hojas verde ceniza y oliva mate.",
+        "operation": "Proyecta DOS sombras claramente separadas: un arco de caza a la izquierda y otro más corto a la derecha, cada uno con su propia cuerda floja. Una amplia franja de arena queda entre ambos; nunca se superponen.",
+        "story_connection": "El cardón del sueño conserva la huella del padre y del hijo como dos arcos sin portadores. No se representa muerte, combate ni dos escenas.",
+        "visible_test": "Una única planta física y dos siluetas planas de arcos sin dueño donde debería estar su sombra vegetal."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-ipuana-triptych-03-huella/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

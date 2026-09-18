@@ -1,0 +1,129 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-indio-pushalna",
+  "title": "El indio Pushaina",
+  "created_at": "2026-09-06T14:34:32.852Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña completa autorizada por el usuario; selección del agente después de investigación e inspección visual directa.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "0168590b318aac963533e1814489c443d01bcd6e7b85d517c103f7bf5213dc79",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T10:31:56.461Z",
+    "reviewed_reference_ids": [
+      "9701031d494beb7d5e57",
+      "77b3ab809a966962ee88"
+    ],
+    "retained": [
+      "Azul profundo y ocre con planos de territorio separados; quietud y amplitud de mundo artesanal.",
+      "Recortes de papel y contraste entre figura y entorno, sin copiar la escena ecuestre."
+    ],
+    "rejected": [
+      "Jinete heroico gigante, cabello largo, tocado, pecho descubierto y arneses decorados contradicen las fichas seleccionadas.",
+      "Mar cercano, selva exuberante, luna/sol gigante y plantas en roseta usados como ornamentación indiferenciada."
+    ],
+    "influence_by_act": {
+      "entrada": "Mantener paleta y profundidad, pasar del paseo ecuestre a la transformación en gallinazo mediante sombra que se vuelve cuerpo.",
+      "acto": "Llevar el contraste azul/ocre a una habitación cotidiana: hombre pequeño que escucha y anillo revelado a través de una pared de papel.",
+      "huella": "Eliminar todo paisaje y reparto; un único plato con vacío interior imposible condensa hambre y deuda."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-02-entrada/entrada.jpeg",
+      "sha256": "596d4cb7556bce7f026c4df33450a78246cc5c5e7a0d11a8e13e83a21cf0db0d",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "93005b97b232164b3b6027944577852f1deb7b7ddf91330ea029981227905c6a",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Plano muy abierto, casa completa distante, Pushaina entero pequeño en azul/ocre y womu. Una lámina negra conecta sandalias con cola de gallinazo elevado; alas completas. Suelo de hojas superpuestas, vacío inferior para título.",
+        "limits": [
+          "Figura cerca de 12% de altura, no exactamente 10%; conexión parcialmente a la izquierda del área pedida pero sobre el área prevista para el título.",
+          "Pequeña sombra natural hacia la derecha convive con la lámina transformada hacia la izquierda; no es otro personaje.",
+          "La casa es versión espacial editorial simplificada, no restitución histórica. Detalles de ropa y especie de ave no son verificables exhaustivamente a esta escala."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/acto.jpeg",
+      "sha256": "725e016a0b78a0e1023df543058408a686124ab48d12bddfd6c0ea8c6007e4ce",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "25a8f85bd156f8856f4142ce28f31dca9d92ace97a927e58ab51bcc5ee408354",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Pushaina entero y de perfil plano escucha con brazos bajos en cuarto amplio; kemüsa azul, si'ira oscura, womu y sandalias. Capa de pared conectada por arriba se despliega y revela un anillo liso, sin rayo o gesto de poder.",
+        "limits": [
+          "Figura ocupa aproximadamente un tercio de altura, más de lo pedido, aunque domina la habitación y no es un retrato.",
+          "Paño alrededor del anillo no se distingue. Sombra pequeña bajo aro y curvatura hacen visible hueco.",
+          "No se afirma precisión del trenzado del sombrero ni exactitud etnográfica del interior."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/huella.jpeg",
+      "sha256": "806abd2004d5c105ab491c954e963a7ee7b4e17afda8cc0a7ae5ab1c4967889f",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "12449305e2722f1962e1ac994744e503d8386047ed531227063e9182377ece37",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Un solo plato ocre vacío de perfil exterior bajo contiene capas interiores descendentes a oscuridad sobre campo índigo. Objeto simbólico sin personas, paisaje, comida o altar.",
+        "limits": [
+          "Descenso e irregularidad de niveles son metáfora del hambre. No prueba un objeto cultural ni un portal narrado.",
+          "Exterior sombreado no permite medir literalmente profundidad; contradicción se comunica por relación entre borde fino e interior oscuro."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_01": 78.2,
+      "acto_01": 33.6,
+      "huella_01": 40.9,
+      "entrada_02": 75.9
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/entrada.jpeg",
+      "reason": "Ave sobredimensionada, casa próxima y conexión cerca del área de título."
+    }
+  ],
+  "published": false
+}

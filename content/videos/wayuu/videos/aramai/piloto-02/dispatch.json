@@ -1,0 +1,53 @@
+{
+  "schema": "mitos-video-pilot-dispatch/v1",
+  "created_at": "2026-09-07T17:32:03.971Z",
+  "previous_round": "piloto-01",
+  "current_round": "piloto-02",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "size": "864x1536",
+  "mode": "new_compositions_text_only",
+  "input_images": [],
+  "user_feedback": "Más presencia mágica y riqueza visual, menos minimalismo exagerado.",
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_sha256": "109feb1c1b77803403d1475d65fc0ce14d9cb2dabfd6261799467cdad183f565",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+      "session_id": 80986,
+      "status": "dispatched"
+    },
+    {
+      "id": "b1b",
+      "prompt_sha256": "3661b008c3c2632e37a6641010fc5aeacdd2d3b379ea397d19e4e4fc757dc367",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1b.jpeg",
+      "session_id": 46337,
+      "status": "dispatched"
+    },
+    {
+      "id": "b2a",
+      "prompt_sha256": "05c229e0077a50a330e5cdb4a520b80bedba1c027b06e058f7f497a6d771fbb7",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+      "session_id": 27683,
+      "status": "dispatched"
+    },
+    {
+      "id": "b2b",
+      "prompt_sha256": "c06fd8a55560e022bd04865564ddd4724fb0c7906d9dd03bc28a379166e8a5ab",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+      "session_id": 29748,
+      "status": "dispatched"
+    },
+    {
+      "id": "b3a",
+      "prompt_sha256": "549a8e0a519874b81ceda7becfba39d0256194a1ef4f315badb1ea5ed2e1a011",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+      "session_id": 72845,
+      "status": "dispatched"
+    }
+  ],
+  "counting": "Five new requested outputs. If all complete, cumulative pilot count becomes 10 distinct outputs, two interpretations of each of the same five instants; not ten final keyframes. Provider internal retries and billing not exposed.",
+  "scope": "No generation of b3b onward, animation, publication, local raster editing or overwrites."
+}
+

@@ -1,0 +1,181 @@
+{
+  "schema": "mitos-video-pilot-qa/v1",
+  "verified_at": "2026-09-07T16:21:14.342Z",
+  "checks": [
+    "frozen_plan_and_prompts_unchanged",
+    "five_files_present",
+    "five_distinct_sha256",
+    "all_jpeg_864x1536",
+    "all_references_preserved"
+  ],
+  "outputs": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1a.jpeg",
+      "sha256": "bf03f9633b09516492c633fdf867419105ff7560c51edcae17405ccc517ed78b",
+      "bytes": 162937,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "b5a0c84e5df79bf66e365cb7dbaf69dd63d0575169ec4df4026d6c1ff46d4137",
+      "quality_requested": "medium",
+      "provider": "OpenAI API",
+      "model_requested": "gpt-image-2"
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1b.jpeg",
+      "sha256": "558cda3492b6480711e87b16292fe239d50b6572e0e30fa437091c70e9570f6f",
+      "bytes": 122102,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "49dc29c44fa1ad95140cc89e62e8ac13738a4815e1b56e5f503ff14a75621f16",
+      "quality_requested": "medium",
+      "provider": "OpenAI API",
+      "model_requested": "gpt-image-2"
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2a.jpeg",
+      "sha256": "3fc4044600cfed3fb6dc01e3fd670ef28252ad43e8666637f8bd5352289c497e",
+      "bytes": 122973,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "e964f67e3aee5a80e0584363b03e07d59a3458d5b0ed07281e54a383916b0742",
+      "quality_requested": "medium",
+      "provider": "OpenAI API",
+      "model_requested": "gpt-image-2"
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2b.jpeg",
+      "sha256": "a9f401611576f45b07c56c2655ffc3bd27ccebff050419f3491cdb4364941bc9",
+      "bytes": 82649,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "0a6d608aa04d66f74a4775e690cd6d29cc0ec4eb3f57590cb157bde6418cc59f",
+      "quality_requested": "medium",
+      "provider": "OpenAI API",
+      "model_requested": "gpt-image-2"
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b3a.jpeg",
+      "sha256": "479000ef17eb2279dff8d59191c590fe03deca3b7570c33375eb67c1619afd20",
+      "bytes": 114569,
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "aa5fdcf4e0178340dd2bc80cf644ab3aef9e32aadc951653bdf22114082a4caa",
+      "quality_requested": "medium",
+      "provider": "OpenAI API",
+      "model_requested": "gpt-image-2"
+    }
+  ],
+  "status": "five_generated_and_visually_reviewed_awaiting_user_direction",
+  "user_approved": false,
+  "script": {
+    "blocks": 9,
+    "words": 169,
+    "estimated_seconds": 90,
+    "duration_measured": false
+  },
+  "counts": {
+    "cli_invocations": 5,
+    "distinct_persisted_generations": 5,
+    "selected_for_pilot_review": 5,
+    "additional_corrections": 0,
+    "iterations_per_image": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "provider_internal_retries": "not_exposed",
+    "billing": "not_measured"
+  },
+  "scope_checks": {
+    "only_first_five_generated": true,
+    "remaining_thirteen_generated": false,
+    "local_raster_generation": false,
+    "input_reference_uploads": false,
+    "triptychs_replaced": false,
+    "public_content_changed": false,
+    "video_rendered": false,
+    "audio_generated": false
+  },
+  "tests": {
+    "command": "node --test scripts/image-quality-policy.test.mjs scripts/visual-direction.test.mjs",
+    "passed": 10,
+    "failed": 0,
+    "note": "Pruebas de políticas existentes; no certifican fidelidad del piloto ni animación. Aviso preexistente MODULE_TYPELESS_PACKAGE_JSON."
+  },
+  "visual_review": {
+    "method": "Each of the five original JPEG files opened and inspected at full aspect ratio using view_image.",
+    "reviews": [
+      {
+        "id": "b1a",
+        "status": "candidate_for_user_review",
+        "observed": "Jagüey casi seco definido por tres bancos amplios de papel; agua mínima, cielo extenso y sombras internas reales. Sin borde de maqueta, props o figuras.",
+        "narrative_read": "Escasez de agua. No hay magia explícita en la apertura.",
+        "material_read": "Capas profundas y amplias, textura fina; no collage plano.",
+        "caveat": "La apertura es contemplativa y muy vacía. Hay que validar con el usuario si quiere una irrupción mágica desde el primer segundo."
+      },
+      {
+        "id": "b1b",
+        "status": "candidate_for_user_review",
+        "observed": "Mujer adulta pequeña, rostro de silueta sin modelado, shein amplio azul y cuenco, calzado oscuro. Fondo y primer plano separados.",
+        "narrative_read": "Agua medida y presencia humana; el reparto se sugiere en VO, no se muestra una entrega a otra persona.",
+        "material_read": "Figura casi plana contra terreno volumétrico; sombra y primer plano desenfocado aportan distancia.",
+        "caveat": "El rostro/ropa funcionan como síntesis de escena, no como certificación etnográfica. Forma exacta del jagüey no sirve aún como par de interpolación geométricamente bloqueado con b1a."
+      },
+      {
+        "id": "b2a",
+        "status": "candidate_for_user_review",
+        "observed": "Arámai de cuerpo completo, pequeño, pelo gris, ropa arcilla/carbon/arena y mano extendida ante techo bajo. Noche azul en ámbito diurno.",
+        "narrative_read": "Petición al ámbito invisible, sin representar a Mareiwa como persona.",
+        "material_read": "Cara plana y capas azules detrás de postes. Sombras y papel continuo sin base exterior.",
+        "caveat": "De frente, la noche puede leerse como un fondo escénico. El contraplano b2b hace más patente su profundidad; validar esa lectura con el usuario."
+      },
+      {
+        "id": "b2b",
+        "status": "candidate_for_user_review",
+        "observed": "Enorme campo índigo de planos separados, cuatro puntos lejanos, poste y techo internos. Arámai diminuto ante una abertura de día a la derecha.",
+        "narrative_read": "Interior imposible: un espacio cotidiano contiene mucha más noche de la que físicamente cabría.",
+        "material_read": "Distancia, oclusión y vacíos protagonizan; sin caras volumétricas ni exceso de adornos.",
+        "caveat": "Hay pequeña variación de valor del cabello/ropa por la iluminación y la escala. Continuidad conceptual sí; continuidad pixel-perfect no. No es todavía un par homologado para interpolar automáticamente con b2a."
+      },
+      {
+        "id": "b3a",
+        "status": "candidate_for_user_review",
+        "observed": "Una vivienda baja rectangular arcilla, aislada en claro diurno. Umbral oscuro con capas índigo que repiten la noche.",
+        "narrative_read": "Primera consecuencia fuera de la enramada. La VO vincula esta ausencia con la enfermedad; la imagen sola no explica causalidad.",
+        "material_read": "Pocas masas, pared/techo/puerta y terreno en planos reales. Sin cuerpos, caminos de contagio o criaturas.",
+        "caveat": "No indica todavía alcance colectivo; b3b existe sólo como storyboard pendiente. La sencillez de la casa es una decisión de síntesis, no un modelo histórico universal."
+      }
+    ],
+    "shared_assessment": "La reducción de props y rostros permite una silueta de papel más clara. La riqueza se concentra en sombras, escala y profundidad. Primeros dos planos cotidianos; magia contenida progresiva desde el tercero.",
+    "limits": [
+      "La aprobación creativa pertenece al usuario; estas cinco son candidatas.",
+      "Sin voz ni video, 25 segundos iniciales y 90 de total son tiempos propuestos.",
+      "No se exige magia explícita en cada plano: la progresión es deliberada y debe evaluarse.",
+      "Estos son planos consecutivos con cortes, no cinco finales intercambiables ni pares start/end pixel-perfect para generación de video.",
+      "No se declara saturación de referentes históricos, aval comunitario ni reconstrucción cultural universal."
+    ]
+  },
+  "learning_for_next_iteration": {
+    "retain_if_user_approves": [
+      "Grandes formas de papel y figuras casi planas separan materialidad de modelado facial.",
+      "Un foco por plano y pocas capas amplias ayudan a limpiar la escena sin eliminar profundidad.",
+      "Especificar qué queda cotidiano evita magia decorativa en todos los objetos.",
+      "Contraplano b2b revela la imposibilidad espacial de b2a."
+    ],
+    "avoid_concluding": "Cinco salidas sin corrección no prueban aprobación ni garantizan menor iteración futura.",
+    "next_step": "Esperar valoración de estos cinco; no producir b3b ni resto hasta que el usuario decida."
+  }
+}
+

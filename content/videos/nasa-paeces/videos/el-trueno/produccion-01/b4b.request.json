@@ -1,0 +1,37 @@
+{
+  "id": "b4b",
+  "created_at": "2026-09-13T13:43:02.080Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create ONE finished cinematic vertical 9:16 narrative keyframe for the Nasa–Paeces film El Trueno, ideally 864x1536. No sheet, collage, border, lettering, title, captions, watermark or logo. Use the supplied images only for their stated continuity roles, never copy their sheet layout. Same world as the approved Nasa triptych: immersive Colombian highland CUT-PAPER scenery, matte broad flat faces, internal cut edges, folded rock, overlapping planes at three distances, physical occlusion and cast shadows. Figures have simplified almost-flat paper faces, not rounded clay dolls, CGI or photographic skin. Water, clouds and mist are flat cut-paper shapes too, never cotton or smoke. Frame extends edge to edge, no display base, table, studio or diorama box. Preserve precise age, clothing, hat, material and scale of the reference identities. Do not import objects, people or actions from preceding shots unless specifically listed below. No pan-Indigenous costumes, copied sacred patterns, gold, crowns, feathers, magical beams or invented ritual. Selected narrative: Martín Kuskue's first El Trueno account via Bernal 1953; the elder appearance is a declared editorial convention retained from the approved triptych, not claimed as wording of this version.\n\nSHOT b4b — La subida de los cabildos\nNIGHT. Side-on low wide shot, exactly the SAME two authorities: green-shawl woman leading on the right and blue-gray ruana older man following on the left, walking left-to-right across dry ochre paper path. One plain staff each, exactly two in total. Entire feet visible planted on ground. Their silhouettes pass between a close folded rock and the confined dark lagoon in distance. No Trueno, no hats added, no torches. Humans one quarter of frame height. Use cliff occlusion and three layered distances; not a repeat of the aerial shot.\n\nINPUT REFERENCES IN ORDER:\n1. approved preceding keyframe b3b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n2. approved preceding keyframe b4a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n3. CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water\n4. CANONICAL C02: Autoridades de cabildo / cacicas",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3b-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4a-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/c02-master-v2.jpeg"
+    ]
+  },
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3b-v1.png",
+      "sha256": "65e4c4715c44b31b666ecfa128d6cbb9e50f261dfd9745bcc41d610d5c2ab06d",
+      "role": "approved preceding keyframe b3b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4a-v2.png",
+      "sha256": "9a005fecd57666fd99e98352fe68f0e1cef3430cbcf7e728899f2e12243e288f",
+      "role": "approved preceding keyframe b4a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "role": "CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water",
+      "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c02-master-v2.jpeg",
+      "sha256": "83fc70ce950b96d5f5bf31128e995d90e0aacf56e0485ed77e906609ccc0503d",
+      "role": "CANONICAL C02: Autoridades de cabildo / cacicas"
+    }
+  ],
+  "prompt_sha256": "1a722b8e43f76716a9401d16b006f4fcacefbac6f3152ac0479c04c33a1b3e19"
+}

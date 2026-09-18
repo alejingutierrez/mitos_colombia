@@ -1,0 +1,114 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:09:03.040Z",
+  "plan": "content/videos/wayuu/videos/los-mellizos-transformadores/preproduccion-01/plan.json",
+  "plan_sha256": "e0d2cfcf33662c7da9daa25231d84e8aa3e493ee763ee84cc7c707f0635e06d3",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 195,
+    "estimated_seconds": 128,
+    "generated": 3,
+    "pending": 13,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 36,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b2b",
+      "prompt_file": "content/videos/wayuu/videos/los-mellizos-transformadores/preproduccion-01/prepared-b2b-01/prompts/b2b.txt",
+      "prompt_sha256": "e074e87251bccacbf42ed2f3fa760f4db7ba1884a5448c3302e63b1e9f8d3976",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1b",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1b.jpeg",
+          "sha256": "3518136255a584ec14cfcb0c8088005a14792bf7ee3b19d66c8489fbeb2a21c0",
+          "approved": true,
+          "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b2a",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2a.jpeg",
+          "sha256": "65c3fe950555ebea850796c9c0c4ad2326dbd46b69a7c05f38623b49b9f11b71",
+          "approved": true,
+          "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+          "sha256": "0eece7173489a4db1206455980713ca33eb96a48ec5e2f7444d687b1fe79ebeb",
+          "approved": true,
+          "role": "Fijar el modelo canónico manna__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+          "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9",
+          "approved": true,
+          "role": "Fijar el modelo canónico manna__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/kalamantuunay__identity_sheet--canon.jpeg",
+          "sha256": "64fa5761a8fd0adc37989a9ba5a22264f0398ae33f21de2d8a9f763d5f32489b",
+          "approved": true,
+          "role": "Fijar el modelo canónico kalamantuunay__identity_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1a.jpeg",
+      "sha256": "5abc44132cd798e29790766ef1ccf4765ce6032f81c3c01cb2bf29d8a0d11492"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1b.jpeg",
+      "sha256": "3518136255a584ec14cfcb0c8088005a14792bf7ee3b19d66c8489fbeb2a21c0"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2a.jpeg",
+      "sha256": "65c3fe950555ebea850796c9c0c4ad2326dbd46b69a7c05f38623b49b9f11b71"
+    }
+  ],
+  "no_api_calls": true
+}

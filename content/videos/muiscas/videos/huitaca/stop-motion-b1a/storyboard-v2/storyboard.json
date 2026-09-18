@@ -1,0 +1,252 @@
+{
+  "id": "huitaca-b1a-stopmotion-storyboard-v2",
+  "status": "storyboard_for_review_not_generated",
+  "scope": "Planning only; one step within the existing first shot",
+  "generation_calls_this_version": 0,
+  "fps": 12,
+  "duration_seconds": 1,
+  "total_exposures": 12,
+  "planned_new_edits": 11,
+  "source": {
+    "path": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/keyframes/b1a.crop-9x16.jpg",
+    "sha256": "dc17ab1ee6a065e471411734354825b0038919412470a8926bfad8677953e8af",
+    "script_path": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/bloques.json",
+    "script_sha256": "0f47fe0feea86005ede1b44323d143697b55c898450bfc589d8796f7d7f5b788",
+    "line": "Después del paso del maestro llegó una mujer que caminaba de noche."
+  },
+  "action": "Huitaca brings the originally trailing foot forward and completes one deliberate step.",
+  "fixed_camera": true,
+  "frames": [
+    {
+      "index": 1,
+      "start_seconds": 0.0,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "Original b1a, unchanged.",
+      "contact_evidence": "A ahead, B trailing. Record the two original contact points.",
+      "action_prompt": "Use the original b1a photograph, unchanged.",
+      "storyboard_landmark": true,
+      "status": "existing_source"
+    },
+    {
+      "index": 2,
+      "start_seconds": 0.08333333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "Transfer weight onto A; B's heel rises slightly.",
+      "contact_evidence": "A remains planted. B's toe still touches the road.",
+      "action_prompt": "Transfer her weight onto foot A. Lift only the heel of trailing foot B a little, leaving its toes on the same road contact point. A stays planted.",
+      "storyboard_landmark": false,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-02.txt",
+      "prompt_sha256": "5ce21aca6952b9b1ccce6f768ae020276fbba4b98d22647d1164d644f044c6c6",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": null,
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 3,
+      "start_seconds": 0.16666666666666666,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B's toe releases from the road.",
+      "contact_evidence": "A supports the body; a visible gap appears under B.",
+      "action_prompt": "Lift the toes of trailing foot B off the road. A still carries her weight at the same contact point. A small visible gap must appear under B.",
+      "storyboard_landmark": false,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-03.txt",
+      "prompt_sha256": "43ce3fab045a8926eb69ff603482b3dee43077dc51c8a27eef2df4824bfd42f8",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 4,
+      "start_seconds": 0.25,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B's knee bends and begins the forward swing.",
+      "contact_evidence": "A stays planted. B is unmistakably airborne.",
+      "action_prompt": "Bend the knee of leg B and start swinging B forward, still behind the supporting leg. B is clearly airborne; A stays planted.",
+      "storyboard_landmark": true,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-04.txt",
+      "prompt_sha256": "17778a42494c0d0d7489c8ca93f664825762a0224c90179967d29e57f86e3255",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 5,
+      "start_seconds": 0.3333333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B moves forward toward the supporting leg.",
+      "contact_evidence": "A remains fixed; B has not yet passed A.",
+      "action_prompt": "Bring the raised foot B farther forward toward leg A, without yet passing A. Keep the supporting foot A fixed against the same stones.",
+      "storyboard_landmark": false,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-05.txt",
+      "prompt_sha256": "e801d76aa761b81373c8b56a0c3aa3d7f414834e146e7803be11642b227eda40",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 6,
+      "start_seconds": 0.4166666666666667,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B reaches the passing position under the pelvis.",
+      "contact_evidence": "B remains raised. Two legs remain distinguishable, with no fusion.",
+      "action_prompt": "Bring foot B into the passing position beneath her pelvis, beside the supporting leg. B stays above the road; both legs remain distinct.",
+      "storyboard_landmark": false,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-06.txt",
+      "prompt_sha256": "b194991de83c228da7e3623a9b59639aeea60caf41166a4e123e66cb73e93b48",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 7,
+      "start_seconds": 0.5,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B moves beyond A toward the camera.",
+      "contact_evidence": "B is visibly the forward-moving foot. A still supports.",
+      "action_prompt": "Advance the raised foot B beyond A toward the camera. B must now visibly pass the supporting foot in depth. A stays planted.",
+      "storyboard_landmark": true,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-07.txt",
+      "prompt_sha256": "ccd3407f7e8a00c32bf9a4e66aa4cbcaad9cc51544833d91020265842fc830fa",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 8,
+      "start_seconds": 0.5833333333333334,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B's lower leg extends, heel approaching the path.",
+      "contact_evidence": "B has not landed yet. No skating of A.",
+      "action_prompt": "Extend the lower leg B forward and lower its heel toward the road, with its toes slightly raised. B has not touched down yet. A remains at its old contact.",
+      "storyboard_landmark": false,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-08.txt",
+      "prompt_sha256": "e5b388609922dc99e2a389df5aa7ffdb0a5f355cf43b28c62916227e9e5e838c",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 9,
+      "start_seconds": 0.6666666666666666,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B's heel makes the new contact ahead of A.",
+      "contact_evidence": "Brief double support; heel contact is visible.",
+      "action_prompt": "Place the heel of B on the road ahead of A. Keep its toes slightly lifted for this contact pose. This is brief double support; the forward foot has changed.",
+      "storyboard_landmark": false,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-09.txt",
+      "prompt_sha256": "f671611abdbc91c45a83a1472c2f03a0f4c3f4e82dc4d3a76c140a8094db082f",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 10,
+      "start_seconds": 0.75,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "B's sole lowers to the road.",
+      "contact_evidence": "B is flat and ahead; A trails.",
+      "action_prompt": "Lower the sole of B fully onto the road ahead of A. A remains behind at its previous contact. B is now unmistakably the leading foot.",
+      "storyboard_landmark": true,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-10.txt",
+      "prompt_sha256": "857f78289f0601935e9e10a3cdbefa1121684fe17dd81568b26fb126a69c5a47",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 11,
+      "start_seconds": 0.8333333333333334,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "Weight moves onto B; A's heel begins to lift.",
+      "contact_evidence": "B's new contact stays fixed. A's toes still touch.",
+      "action_prompt": "Transfer her weight onto planted foot B. Raise the heel of trailing A slightly, keeping A toes in contact and the new B contact fixed.",
+      "storyboard_landmark": false,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-11.txt",
+      "prompt_sha256": "287a7e69cfa84cdac6032aba68f8fe5e6a192eba2403a620506905a2e11feb84",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    },
+    {
+      "index": 12,
+      "start_seconds": 0.9166666666666666,
+      "duration_seconds": 0.08333333333333333,
+      "beat": "Settle over B with a slight knee bend.",
+      "contact_evidence": "B is the stable leading foot; A trails. Continue walking after the shot, without starting a second swing here.",
+      "action_prompt": "Settle gently over foot B with a small bend of the supporting knee. A trails on its toes. Complete this single step without beginning a second leg swing.",
+      "storyboard_landmark": true,
+      "status": "planned_not_generated",
+      "prompt_file": "content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/prompts/frame-12.txt",
+      "prompt_sha256": "f9bf56668b32cab5a60c0f64a122b497269e9d9186dab21547ea3a3423ff5290",
+      "input_policy": {
+        "edit_target": "latest_accepted_frame",
+        "identity_and_set_reference": "original_b1a",
+        "continue_from_rejected_frame": false
+      }
+    }
+  ],
+  "generation_settings_baseline": {
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "medium",
+    "size": "auto",
+    "output_format": "png"
+  },
+  "review": {
+    "every_frame_required": true,
+    "compare_to": [
+      "latest_accepted_frame",
+      "original_b1a"
+    ],
+    "must_pass": [
+      "requested_contact_phase",
+      "stable_support_foot",
+      "identity_and_proportions",
+      "costume_and_material",
+      "camera_and_background"
+    ],
+    "on_failure": "Retain rejected candidate; retry same exposure from latest accepted frame; never propagate the rejected image."
+  },
+  "background_compositing": {
+    "status": "proposed_contingency_not_implemented",
+    "reason": "Text constraints do not guarantee identical static pixels.",
+    "region": "Fixed envelope containing both old/new silhouettes, required cloth movement and contact shadow",
+    "outside_region": "Original pixels",
+    "inside_region": "Accepted edit; inspect restored road, seams, prior silhouette removal and shadows"
+  },
+  "diagram": {
+    "kind": "schematic_pose_plan",
+    "view": "side view only to explain contact mechanics; not the shot camera",
+    "not_generated_footage": true
+  },
+  "sources_file": "sources.json"
+}

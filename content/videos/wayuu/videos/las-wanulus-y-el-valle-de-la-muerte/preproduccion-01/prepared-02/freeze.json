@@ -1,0 +1,85 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T21:51:30.127Z",
+  "plan": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/plan.json",
+  "plan_sha256": "f5ad4e5898b8ec08f8777504f9d1bb70e883697d4cd4eebf70faa92fd936df43",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 20,
+    "words": 272,
+    "estimated_seconds": 160,
+    "generated": 1,
+    "pending": 19,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 21,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1b",
+      "prompt_file": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/prepared-02/prompts/b1b.txt",
+      "prompt_sha256": "00536fe36684260d12ea438c48da8688c0f9f4f950f1f42a1a902df34b8a87cb",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1a",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1a.jpeg",
+          "sha256": "f2e284ee4e660d6204c043c5bdc7cdfbb8ee3c4d99efd51c0a91cef52f258468",
+          "approved": true,
+          "role": "Preservar identidades, vestuario, paleta nocturna y papel; prohibido copiar la vista elevada."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium-corrections-05/hermano_mayor_valle__identity_sheet--canon.jpeg",
+          "sha256": "2a7ebad13fe399b799d746bde928c7ae63e9b8f579213899a39dcd174f74f094",
+          "approved": true,
+          "role": "Fijar camisa, faja y wayuco completo del mayor en el macro."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium-corrections-04/hermano_menor_valle__identity_sheet--canon.jpeg",
+          "sha256": "d72602ac7dc4aacf19c9c59365661db1da149099da6b19f2ee7e12c8681aeadf",
+          "approved": true,
+          "role": "Fijar camisa, faja y wayuco completo del menor en el macro."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1a.jpeg",
+      "sha256": "f2e284ee4e660d6204c043c5bdc7cdfbb8ee3c4d99efd51c0a91cef52f258468"
+    }
+  ],
+  "no_api_calls": true
+}

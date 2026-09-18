@@ -1,0 +1,38 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-02d-waleker-botany-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02d-waleker-botany-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección botánica de Waleker en medium: conservar una sola araña pequeña, telar liso y materialidad de papel, y eliminar silueta de saguaro del fondo. Generación desde texto sin referencia local.",
+  "jobs": [
+    {
+      "id": "waleker-el-origen-del-tejido__ancla--canon",
+      "model_id": "waleker-el-origen-del-tejido__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02d-waleker-botany-correction-medium/prompts/waleker-el-origen-del-tejido__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02d-waleker-botany-correction-medium/waleker-el-origen-del-tejido__ancla--canon.jpeg",
+      "prompt_sha256": "df2973d804491789718d595f352bd5678a13dc9e03dbe02fbf31da0149343d70",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1536",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "safeguards": [
+        "correcciones generadas sólo desde texto, sin subir imágenes locales como referencia",
+        "todo elemento debe verse construido con papel, fibras, hilos y piezas artesanales; nunca fotografía de materiales, animales, objetos o talleres reales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "Waleker debe ser una sola araña pequeña de piezas de papel y a escala natural, posada sobre el travesaño de un telar artesanal y subordinada visualmente a un tejido liso; prohibidas arañas adicionales, escala monstruosa, kanas, marcas claniles y geometrías inventadas",
+        "si aparece cactus al fondo, sólo cardón guajiro de varios tallos columnares acanalados nacidos juntos desde la base; prohibido cualquier tronco único con brazos simétricos tipo saguaro"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

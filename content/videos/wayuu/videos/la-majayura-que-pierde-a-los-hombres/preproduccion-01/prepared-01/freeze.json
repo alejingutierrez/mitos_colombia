@@ -1,0 +1,69 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T19:29:40.111Z",
+  "plan": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/plan.json",
+  "plan_sha256": "cb3eea4c53d6db211423461b3765ab5e37ca9237e7a27cb4bba7624d79078514",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 236,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 13,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/prepared-01/prompts/b1a.txt",
+      "prompt_sha256": "d1a12a0c12f5f9dfef8ad1d1a5e3a50dfffd1b5dcd14cd41e91267491fbdd16e",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "canonical_model",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium/cueva_puro__spatial_model--canon.jpeg",
+          "sha256": "b34feb4c30b551328126c77aeaff3d4ce32e172ab8a488ea0fe0a709942008a5",
+          "approved": true,
+          "role": "Fijar estratos, abertura y escala territorial de Puró; no copiar la composición de ficha."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium/desorientacion_puro__phenomenon_rule--canon.jpeg",
+          "sha256": "4d65cf647ed601a3c6ee66268fc18b41502e52bcec4e7f0c0d90ff7d2153d321",
+          "approved": true,
+          "role": "Fijar material papercut, suelo y separación de planos; todavía no introducir el fenómeno de sombras."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

@@ -1,0 +1,1227 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-22-umarala-medium",
+    "myth_slug": "umarala",
+    "model_ids": [
+      "umarala__identity_sheet",
+      "umarala__state_sheet",
+      "tia_outsu_umarala__identity_sheet",
+      "tia_outsu_umarala__state_sheet",
+      "paciente_umarala__identity_sheet",
+      "paciente_umarala__state_sheet",
+      "jumajule_umarala__presence_model",
+      "capote_umarala__object_sheet",
+      "hombre_parashi_venado__identity_sheet",
+      "hombre_parashi_venado__state_sheet",
+      "servidor_umarala__identity_sheet",
+      "maiceo__spatial_model",
+      "jarara__spatial_model",
+      "transmision_vida_nombre_umarala__phenomenon_rule",
+      "curacion_nocturna_umarala__phenomenon_rule",
+      "partida_occidente_umarala__phenomenon_rule",
+      "jururiana__state_sheet"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "approved_ready_for_generation_after_primary_source_reaudit"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "capote_umarala__object_sheet",
+    "curacion_nocturna_umarala__phenomenon_rule",
+    "hombre_parashi_venado__state_sheet",
+    "jarara__spatial_model",
+    "jururiana__state_sheet",
+    "maiceo__spatial_model",
+    "partida_occidente_umarala__phenomenon_rule",
+    "servidor_umarala__identity_sheet",
+    "tia_outsu_umarala__identity_sheet",
+    "tia_outsu_umarala__state_sheet",
+    "transmision_vida_nombre_umarala__phenomenon_rule"
+  ],
+  "models": {
+    "capote_umarala__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "capote_umarala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Prenda heredada por indicacion de la vision."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Capote heredado de Umaralá. Funcion visual: Prenda u objeto heredado junto con la maraca, sin forma ornamental inventada.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Capote heredado de Umaralá",
+          "funcion estable: Prenda u objeto heredado junto con la maraca, sin forma ornamental inventada.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Prenda u objeto heredado junto con la maraca, sin forma ornamental inventada."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Capote heredado de Umaralá. Prenda u objeto heredado junto con la maraca, sin forma ornamental inventada.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Prenda u objeto heredado junto con la maraca, sin forma ornamental inventada.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "curacion_nocturna_umarala__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "curacion_nocturna_umarala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Tropel, canto y maraca sin testigos directos, seguidos por calma al amanecer."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Curación nocturna de Umaralá. Funcion visual: Visita que se reconoce por tropel, canto y maraca sin testigos directos; al amanecer la paciente aparece con respiracion calmada dentro de la narracion.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Curación nocturna de Umaralá",
+          "funcion estable: Visita que se reconoce por tropel, canto y maraca sin testigos directos; al amanecer la paciente aparece con respiracion calmada dentro de la narracion.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Visita que se reconoce por tropel, canto y maraca sin testigos directos; al amanecer la paciente aparece con respiracion calmada dentro de la narracion."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Curación nocturna de Umaralá. Visita que se reconoce por tropel, canto y maraca sin testigos directos; al amanecer la paciente aparece con respiracion calmada dentro de la narracion.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Visita que se reconoce por tropel, canto y maraca sin testigos directos; al amanecer la paciente aparece con respiracion calmada dentro de la narracion.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hombre_parashi_venado__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "hombre_parashi_venado"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Compañero de Parashi con ropa documentada y transformacion posterior en venado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hombre de Parashi que se vuelve venado. Funcion visual: Compañero del viaje final vestido con cuero de venado y manta de lana; vuelve a Parashi, vende objetos de maguey y puede transformarse en venado.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hombre de Parashi que se vuelve venado",
+          "funcion estable: Compañero del viaje final vestido con cuero de venado y manta de lana; vuelve a Parashi, vende objetos de maguey y puede transformarse en venado.",
+          "estados declarados: viajero_humano, artesano_de_maguey, venado"
+        ],
+        "documented_features": [
+          "Compañero del viaje final vestido con cuero de venado y manta de lana; vuelve a Parashi, vende objetos de maguey y puede transformarse en venado."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Hombre de Parashi que se vuelve venado. Compañero del viaje final vestido con cuero de venado y manta de lana; vuelve a Parashi, vende objetos de maguey y puede transformarse en venado.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Compañero del viaje final vestido con cuero de venado y manta de lana; vuelve a Parashi, vende objetos de maguey y puede transformarse en venado.",
+          "estados autorizados: viajero_humano, artesano_de_maguey, venado",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "viajero_humano",
+            "artesano_de_maguey",
+            "venado"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jarara__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "jarara"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Region de crianza, epidemia, retorno y visitas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Serranía y región de Jarara. Funcion visual: Territorio donde vive la tia, ocurre la epidemia, Umaralá recibe la orden de regresar y comienza su trabajo de visitas.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Serranía y región de Jarara",
+          "funcion estable: Territorio donde vive la tia, ocurre la epidemia, Umaralá recibe la orden de regresar y comienza su trabajo de visitas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Territorio donde vive la tia, ocurre la epidemia, Umaralá recibe la orden de regresar y comienza su trabajo de visitas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Serranía y región de Jarara. Territorio donde vive la tia, ocurre la epidemia, Umaralá recibe la orden de regresar y comienza su trabajo de visitas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Territorio donde vive la tia, ocurre la epidemia, Umaralá recibe la orden de regresar y comienza su trabajo de visitas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jururiana__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "jururiana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Anuncia, prepara, predice su muerte y deja continuidad."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Compañero de Macuira identificado despues como Jururiana."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Jururiana. Funcion visual: Figura del ciclo de lluvia que anuncia un cambio de tiempo, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento; El Piache Umaralá lo identifica además como el viajero de Macuira que vende raíces y puede llamar lluvia.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Jururiana",
+          "funcion estable: Figura del ciclo de lluvia que anuncia un cambio de tiempo, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento; El Piache Umaralá lo identifica además como el viajero de Macuira que vende raíces y puede llamar lluvia.",
+          "estados declarados: viajero_de_macuira, vendedor_de_raices, convocador_de_lluvia, anunciante, mayor"
+        ],
+        "documented_features": [
+          "Figura del ciclo de lluvia que anuncia un cambio de tiempo, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento; El Piache Umaralá lo identifica además como el viajero de Macuira que vende raíces y puede llamar lluvia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Jururiana. Figura del ciclo de lluvia que anuncia un cambio de tiempo, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento; El Piache Umaralá lo identifica además como el viajero de Macuira que vende raíces y puede llamar lluvia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Figura del ciclo de lluvia que anuncia un cambio de tiempo, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento; El Piache Umaralá lo identifica además como el viajero de Macuira que vende raíces y puede llamar lluvia.",
+          "estados autorizados: viajero_de_macuira, vendedor_de_raices, convocador_de_lluvia, anunciante, mayor",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "viajero_de_macuira",
+            "vendedor_de_raices",
+            "convocador_de_lluvia",
+            "anunciante",
+            "mayor"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "maiceo__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "maiceo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Lugar de Wojoro."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Bosque espeso, cementerio y fogatas de memoria cerca de Maiceo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Maiceo y su bosque de cementerio. Funcion visual: Toponimo cercano a la detencion de Wojoro; en Umaralá, los bosques espesos de sus alrededores contienen el cementerio al que el protagonista vuelve.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Maiceo y su bosque de cementerio",
+          "funcion estable: Toponimo cercano a la detencion de Wojoro; en Umaralá, los bosques espesos de sus alrededores contienen el cementerio al que el protagonista vuelve.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Toponimo cercano a la detencion de Wojoro; en Umaralá, los bosques espesos de sus alrededores contienen el cementerio al que el protagonista vuelve."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Maiceo y su bosque de cementerio. Toponimo cercano a la detencion de Wojoro; en Umaralá, los bosques espesos de sus alrededores contienen el cementerio al que el protagonista vuelve.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Toponimo cercano a la detencion de Wojoro; en Umaralá, los bosques espesos de sus alrededores contienen el cementerio al que el protagonista vuelve.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "partida_occidente_umarala__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "partida_occidente_umarala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Relacion final entre viajeros, cementerio, huellas, lamentos y ausencia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Partida de Umaralá hacia occidente. Funcion visual: Tres viajeros con indumentarias y mulas distintas pasan por el cementerio; el servidor sigue huellas y oye lamentos sin encontrar cuerpos.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Partida de Umaralá hacia occidente",
+          "funcion estable: Tres viajeros con indumentarias y mulas distintas pasan por el cementerio; el servidor sigue huellas y oye lamentos sin encontrar cuerpos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Tres viajeros con indumentarias y mulas distintas pasan por el cementerio; el servidor sigue huellas y oye lamentos sin encontrar cuerpos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Partida de Umaralá hacia occidente. Tres viajeros con indumentarias y mulas distintas pasan por el cementerio; el servidor sigue huellas y oye lamentos sin encontrar cuerpos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Tres viajeros con indumentarias y mulas distintas pasan por el cementerio; el servidor sigue huellas y oye lamentos sin encontrar cuerpos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "servidor_umarala__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "servidor_umarala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Servidor fiel, ayudante del entierro y testigo que sigue la partida."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Servidor fiel de Umaralá. Funcion visual: Unico servidor que sobrevive a la peste, ayuda a sepultar a la tia, visita al protagonista y presencia y sigue la partida final.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Servidor fiel de Umaralá",
+          "funcion estable: Unico servidor que sobrevive a la peste, ayuda a sepultar a la tia, visita al protagonista y presencia y sigue la partida final.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Unico servidor que sobrevive a la peste, ayuda a sepultar a la tia, visita al protagonista y presencia y sigue la partida final."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Servidor fiel de Umaralá. Unico servidor que sobrevive a la peste, ayuda a sepultar a la tia, visita al protagonista y presencia y sigue la partida final.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Unico servidor que sobrevive a la peste, ayuda a sepultar a la tia, visita al protagonista y presencia y sigue la partida final.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tia_outsu_umarala__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tia_outsu_umarala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Maestra, cuidadora, cantora, mediadora y origen de la autoridad."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Tía piache de Umaralá. Funcion visual: Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Tía piache de Umaralá",
+          "funcion estable: Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+          "estados declarados: maestra_cuidadora, cantora, entrega_sin_cuerpo_inerte, vision_maestra"
+        ],
+        "documented_features": [
+          "Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Tía piache de Umaralá. Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+          "estados autorizados: maestra_cuidadora, cantora, entrega_sin_cuerpo_inerte, vision_maestra",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "maestra_cuidadora"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tia_outsu_umarala__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "tia_outsu_umarala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Maestra, cuidadora, cantora, mediadora y origen de la autoridad."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Tía piache de Umaralá. Funcion visual: Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Tía piache de Umaralá",
+          "funcion estable: Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+          "estados declarados: maestra_cuidadora, cantora, entrega_sin_cuerpo_inerte, vision_maestra"
+        ],
+        "documented_features": [
+          "Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Tía piache de Umaralá. Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+          "estados autorizados: maestra_cuidadora, cantora, entrega_sin_cuerpo_inerte, vision_maestra",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "maestra_cuidadora",
+            "cantora",
+            "entrega_sin_cuerpo_inerte",
+            "vision_maestra"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "transmision_vida_nombre_umarala__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "transmision_vida_nombre_umarala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Relacion material que une canto, maraca, caida, levantamiento, vision y nombre nuevo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Transmisión de vida, nombre e instrumentos. Funcion visual: Regla en la que la tia coloca la maraca, cae sin mostrar cuerpo inerte y luego reaparece como vision; John Paurala se levanta y recibe el nombre Umaralá, capote, maraca y deber de cuidado.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Transmisión de vida, nombre e instrumentos",
+          "funcion estable: Regla en la que la tia coloca la maraca, cae sin mostrar cuerpo inerte y luego reaparece como vision; John Paurala se levanta y recibe el nombre Umaralá, capote, maraca y deber de cuidado.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla en la que la tia coloca la maraca, cae sin mostrar cuerpo inerte y luego reaparece como vision; John Paurala se levanta y recibe el nombre Umaralá, capote, maraca y deber de cuidado."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Transmisión de vida, nombre e instrumentos. Regla en la que la tia coloca la maraca, cae sin mostrar cuerpo inerte y luego reaparece como vision; John Paurala se levanta y recibe el nombre Umaralá, capote, maraca y deber de cuidado.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla en la que la tia coloca la maraca, cae sin mostrar cuerpo inerte y luego reaparece como vision; John Paurala se levanta y recibe el nombre Umaralá, capote, maraca y deber de cuidado.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "capote_umarala": {
+      "name": "Capote heredado de Umaralá",
+      "kind": "objeto",
+      "description": "Prenda u objeto heredado junto con la maraca, sin forma ornamental inventada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "capote_umarala__object_sheet"
+      ],
+      "legacy_model_refs": [
+        "umarala__ancla"
+      ],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Prenda heredada por indicacion de la vision."
+        }
+      ]
+    },
+    "curacion_nocturna_umarala": {
+      "name": "Curación nocturna de Umaralá",
+      "kind": "fenomeno",
+      "description": "Visita que se reconoce por tropel, canto y maraca sin testigos directos; al amanecer la paciente aparece con respiracion calmada dentro de la narracion.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "curacion_nocturna_umarala__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Tropel, canto y maraca sin testigos directos, seguidos por calma al amanecer."
+        }
+      ]
+    },
+    "hombre_parashi_venado": {
+      "name": "Hombre de Parashi que se vuelve venado",
+      "kind": "personaje",
+      "description": "Compañero del viaje final vestido con cuero de venado y manta de lana; vuelve a Parashi, vende objetos de maguey y puede transformarse en venado.",
+      "aliases": [],
+      "states": [
+        "viajero_humano",
+        "artesano_de_maguey",
+        "venado"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "hombre_parashi_venado__identity_sheet",
+        "hombre_parashi_venado__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Compañero de Parashi con ropa documentada y transformacion posterior en venado."
+        }
+      ]
+    },
+    "jarara": {
+      "name": "Serranía y región de Jarara",
+      "kind": "lugar",
+      "description": "Territorio donde vive la tia, ocurre la epidemia, Umaralá recibe la orden de regresar y comienza su trabajo de visitas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "jarara__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Region de crianza, epidemia, retorno y visitas."
+        }
+      ]
+    },
+    "jururiana": {
+      "name": "Jururiana",
+      "kind": "personaje",
+      "description": "Figura del ciclo de lluvia que anuncia un cambio de tiempo, pide reunir semillas y chivos negros, predice su muerte y deja continuidad de conocimiento; El Piache Umaralá lo identifica además como el viajero de Macuira que vende raíces y puede llamar lluvia.",
+      "aliases": [],
+      "states": [
+        "viajero_de_macuira",
+        "vendedor_de_raices",
+        "convocador_de_lluvia",
+        "anunciante",
+        "mayor"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "jururiana__identity_sheet",
+        "jururiana__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "el-indio-jururiana__ancla"
+      ],
+      "myth_refs": [
+        "el-indio-jururiana",
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-jururiana",
+          "field": "mito",
+          "note": "Anuncia, prepara, predice su muerte y deja continuidad."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Compañero de Macuira identificado despues como Jururiana."
+        }
+      ]
+    },
+    "maiceo": {
+      "name": "Maiceo y su bosque de cementerio",
+      "kind": "lugar",
+      "description": "Toponimo cercano a la detencion de Wojoro; en Umaralá, los bosques espesos de sus alrededores contienen el cementerio al que el protagonista vuelve.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "maiceo__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "serranias-de-la-guajira",
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Lugar de Wojoro."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Bosque espeso, cementerio y fogatas de memoria cerca de Maiceo."
+        }
+      ]
+    },
+    "partida_occidente_umarala": {
+      "name": "Partida de Umaralá hacia occidente",
+      "kind": "fenomeno",
+      "description": "Tres viajeros con indumentarias y mulas distintas pasan por el cementerio; el servidor sigue huellas y oye lamentos sin encontrar cuerpos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "partida_occidente_umarala__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Relacion final entre viajeros, cementerio, huellas, lamentos y ausencia."
+        }
+      ]
+    },
+    "servidor_umarala": {
+      "name": "Servidor fiel de Umaralá",
+      "kind": "personaje",
+      "description": "Unico servidor que sobrevive a la peste, ayuda a sepultar a la tia, visita al protagonista y presencia y sigue la partida final.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "servidor_umarala__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Servidor fiel, ayudante del entierro y testigo que sigue la partida."
+        }
+      ]
+    },
+    "tia_outsu_umarala": {
+      "name": "Tía piache de Umaralá",
+      "kind": "personaje",
+      "description": "Anciana maestra y cuidadora que piacha a su sobrino, invoca a Jumajule, entrega su vida y reaparece como vision para transmitir nombre, capote, maraca y camino.",
+      "aliases": [],
+      "states": [
+        "maestra_cuidadora",
+        "cantora",
+        "entrega_sin_cuerpo_inerte",
+        "vision_maestra"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "tia_outsu_umarala__identity_sheet",
+        "tia_outsu_umarala__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Maestra, cuidadora, cantora, mediadora y origen de la autoridad."
+        }
+      ]
+    },
+    "transmision_vida_nombre_umarala": {
+      "name": "Transmisión de vida, nombre e instrumentos",
+      "kind": "fenomeno",
+      "description": "Regla en la que la tia coloca la maraca, cae sin mostrar cuerpo inerte y luego reaparece como vision; John Paurala se levanta y recibe el nombre Umaralá, capote, maraca y deber de cuidado.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "transmision_vida_nombre_umarala__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Relacion material que une canto, maraca, caida, levantamiento, vision y nombre nuevo."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "references_checked": 125,
+  "user_originals_checked": 17,
+  "counts": {
+    "obtained": 125,
+    "selected": 113,
+    "context_only": 8,
+    "excluded": 4,
+    "duplicates": 0
+  },
+  "hash_mismatches": [],
+  "atlas_bytes": 29870310,
+  "atlas_sha256": "73cc8c89bed6ae067a7740ca1b065157aadf6390bdba55ed10f810f34e2339e2",
+  "generation_calls": 0,
+  "production_mutations": 0,
+  "date": "2026-09-12",
+  "community_id": 29,
+  "source_files_checked": 17,
+  "source_hash_mismatches": [],
+  "atlas_pages": 27,
+  "atlas_pages_rendered": 27,
+  "atlas_pages_visually_reviewed": 27,
+  "user_files_visually_reviewed": 17,
+  "originals_not_edited": true,
+  "known_limits": [
+    "Housing coverage is preliminary, not typology closure.",
+    "User references are archived separately with provisional provenance.",
+    "Fauna species assignments in myths remain open.",
+    "Some historical embedded photographs retain source orientation; consult the full PDF for layout and exact caption correspondence.",
+    "Licensing and cultural permissions are not cleared.",
+    "Fontconfig cache warnings occurred during render, but renderer exited successfully."
+  ],
+  "excluded_from_design": [
+    "V07-P013-I00: blank extracted graphic",
+    "V07-P014-I02: blank extracted graphic",
+    "V11-P078-I00: medical photography, not body-paint evidence",
+    "V11-P080-I00: historical montage omitted from design atlas"
+  ],
+  "commands": [
+    "node scripts/research/ette-visual-user-import.mjs",
+    "bundled Python: scripts/research/ette-visual-atlas.py",
+    "pdftoppm -png -scale-to 1200 ...",
+    "SHA-256 checks: 125 obtained images/plates + 17 user originals + 17 source captures",
+    "git diff --check -- content/videos/chimila scripts/research"
+  ],
+  "runtime_note": "Use the bundled Python path returned by load_workspace_dependencies; system Python does not include reportlab."
+}

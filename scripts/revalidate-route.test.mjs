@@ -54,6 +54,18 @@ test("publicar un tríptico purga la caché salvo que se pida lo contrario", asy
   assert.match(script, /aparecerá cuando expire el ISR/);
 });
 
+test("publicar un tríptico conserva las versiones anteriores y deja recibo", async () => {
+  const script = await read("scripts/apply-myth-triptych.mjs");
+
+  assert.match(script, /addRandomSuffix: true/);
+  assert.match(script, /INSERT INTO vertical_images/);
+  assert.doesNotMatch(script, /UPDATE vertical_images/);
+  assert.match(script, /previous_blob_urls_are_not_deleted: true/);
+  assert.match(script, /previous_vertical_database_row_is_not_updated_or_deleted: true/);
+  assert.match(script, /Ya existe el recibo .* no reemplazo una publicación anterior/);
+  assert.match(script, /sha256/);
+});
+
 /**
  * `IMAGE_PRESETS` describe el techo del pipeline viejo de OpenAI (1536 px de
  * ancho). Usar esas medidas al publicar tiraba el 43% del ancho de las piezas

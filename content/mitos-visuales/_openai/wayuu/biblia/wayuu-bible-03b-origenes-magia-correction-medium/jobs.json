@@ -1,0 +1,87 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-03b-origenes-magia-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-03b-origenes-magia-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección del lote mágico 03 en medium: Siki usa ancla material y piichipala para corregir arquitectura; Waleker se reduce a la transformación continua manos-hilo-patas sin figuras completas. Referencias sólo por necesidad de continuidad.",
+  "jobs": [
+    {
+      "id": "el-origen-del-fuego__magia--regla",
+      "model_id": "el-origen-del-fuego__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-03b-origenes-magia-correction-medium/prompts/el-origen-del-fuego__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-03b-origenes-magia-correction-medium/el-origen-del-fuego__magia--regla.jpeg",
+      "prompt_sha256": "5a88c6a3c1048fc2107aa68b70f1b65310d91c8743ca13039ba5ee3dce9323a2",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "el-origen-del-fuego__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla material Siki aprobada; conservar identidad de papel de cavidad, carbón, ceniza y brasa",
+          "path": "output/imagegen/wayuu/wayuu-bible-02c-origenes-anclas-material-correction-medium/el-origen-del-fuego__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        },
+        {
+          "role": "Imagen 2: ancla arquitectónica piichipala aprobada; conservar vivienda baja, enramada, corral, senderos y materiales; reemplaza las viviendas circulares cónicas rechazadas",
+          "path": "output/imagegen/wayuu/wayuu-foundation-04-medium-layered-depth/piichipala_arquitectura--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "ediciones con referencias generadas por este pipeline, aprobadas y necesarias para continuidad",
+        "todo elemento debe conservar materialidad visible de papel, fibras, hilos y piezas artesanales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "usar la arquitectura de la Imagen 2: vivienda baja, enramada y corral; prohibidas viviendas redondas con techo cónico o aldea africana genérica",
+        "mostrar transferencia por contacto material: una brasa de papel sale del núcleo de la Imagen 1 y se replica en tres fuegos domésticos separados; no rayo, explosión, figura humanoide ni incendio",
+        "las llamas y brasas son pliegues y fibras de papel rojo y naranja, nunca fuego real fotografiado; como máximo manos de papel, sin multitud de figuras completas"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "waleker-el-origen-del-tejido__magia--regla",
+      "model_id": "waleker-el-origen-del-tejido__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-03b-origenes-magia-correction-medium/prompts/waleker-el-origen-del-tejido__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-03b-origenes-magia-correction-medium/waleker-el-origen-del-tejido__magia--regla.jpeg",
+      "prompt_sha256": "04e388207b1c2fead23b16574ec118815039a2c564cabad73315ac0458285e5c",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "waleker-el-origen-del-tejido__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla Waleker aprobada; conservar una sola araña pequeña, telar liso, cardón correcto y materialidad de papel durante la transformación",
+          "path": "output/imagegen/wayuu/wayuu-bible-02d-waleker-botany-correction-medium/waleker-el-origen-del-tejido__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "ediciones con referencias generadas por este pipeline, aprobadas y necesarias para continuidad",
+        "todo elemento debe conservar materialidad visible de papel, fibras, hilos y piezas artesanales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "composición cercana y continua de tres fases izquierda-centro-derecha: un solo par de manos de papel cruza hilo, los dedos e hilos se reorganizan en patas, y una única araña pequeña de papel completa el gesto junto al mismo telar; prohibidas figuras humanas completas, observadores, clase de tejido o araña duplicada",
+        "tejido liso sin kanas, marcas claniles ni geometrías inventadas; cardón agrupado desde la base, nunca saguaro"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

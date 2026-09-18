@@ -1,0 +1,173 @@
+{
+  "schema": "mitos-video-pilot-qa/v2",
+  "verified_at": "2026-09-07T17:33:33.171Z",
+  "outputs": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+      "sha256": "4a9866cc87beae485ccc2466650c9b8fbe0fc602e742174f4e16c4c914ce222b",
+      "prompt_sha256": "109feb1c1b77803403d1475d65fc0ce14d9cb2dabfd6261799467cdad183f565",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "bytes": 274382,
+      "quality_requested": "medium"
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1b.jpeg",
+      "sha256": "1e9ea6b8d66b92f262233a8346ae951a4348885d725874c379866971ba5a68bc",
+      "prompt_sha256": "3661b008c3c2632e37a6641010fc5aeacdd2d3b379ea397d19e4e4fc757dc367",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "bytes": 251077,
+      "quality_requested": "medium"
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+      "sha256": "02f10330fff73ff87e839c7fabdaeffce118704f159985cd9c9330d469e540dd",
+      "prompt_sha256": "05c229e0077a50a330e5cdb4a520b80bedba1c027b06e058f7f497a6d771fbb7",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "bytes": 223748,
+      "quality_requested": "medium"
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+      "sha256": "d49d90469a570948490c0f1024cc85de07fcb047398a323c5e206c0d64923009",
+      "prompt_sha256": "c06fd8a55560e022bd04865564ddd4724fb0c7906d9dd03bc28a379166e8a5ab",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "bytes": 269757,
+      "quality_requested": "medium"
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+      "sha256": "e1463b44afc54eb4b643ff92143bf120a9559576b987921514b387425233baba",
+      "prompt_sha256": "549a8e0a519874b81ceda7becfba39d0256194a1ef4f315badb1ea5ed2e1a011",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "bytes": 266172,
+      "quality_requested": "medium"
+    }
+  ],
+  "checks": [
+    "frozen_package_unchanged",
+    "5_inspected_references_unchanged",
+    "5_prior_outputs_preserved",
+    "5_new_jpeg_864x1536",
+    "10_distinct_outputs_across_rounds"
+  ],
+  "status": "awaiting_user_review_of_richer_direction",
+  "user_approved": false,
+  "previous_round_decision": {
+    "round": "piloto-01",
+    "decision": "needs_creative_revision",
+    "user_reason": "Más presencia mágica y riqueza visual; minimalismo exagerado.",
+    "originals_preserved": true
+  },
+  "counts": {
+    "new_cli_invocations": 5,
+    "new_distinct_outputs": 5,
+    "cumulative_distinct_pilot_outputs": 10,
+    "story_instants": 5,
+    "interpretations_per_instant": 2,
+    "additional_retries_this_round": 0,
+    "billing": "not_exposed",
+    "provider_internal_retries": "not_exposed"
+  },
+  "script": {
+    "unchanged": true,
+    "words": 169,
+    "duration_seconds_estimate": 90,
+    "duration_measured": false
+  },
+  "scope": {
+    "medium_only": true,
+    "new_compositions_text_only": true,
+    "no_reference_uploads": true,
+    "no_local_raster_generation": true,
+    "no_previous_overwrite": true,
+    "no_publication": true,
+    "no_animation": true,
+    "no_generation_of_remaining_13": true
+  },
+  "visual_review": {
+    "method": "All five new original JPEGs inspected using view_image; compared with earlier pilot and selected triptych direction.",
+    "reviews": [
+      {
+        "id": "b1a",
+        "status": "candidate_with_notes",
+        "observed": "Ranchería con tres figuras, dos cabras, cardón y planos de tierra; jagüey refleja estrellas y luna bajo cielo diurno. Contraste cálido/frío dominante y capas físicas visibles.",
+        "magic_test": "PASS: noche en reflejo sin noche en cielo.",
+        "limits": [
+          "El reflejo sí conserva figuras: no pasó la subcondición de gente ausente. No presentar esa ausencia como conseguida.",
+          "Agua ocupa una parte grande del encuadre; la escasez depende de orilla seca y VO.",
+          "Aparecieron flores, adornos geométricos y detalles de vestuario no pedidos; no se convierten en canon cultural ni se certifican por la imagen."
+        ]
+      },
+      {
+        "id": "b1b",
+        "status": "candidate_with_notes",
+        "observed": "Dos mujeres de caras planas y ropa amplia intercambian una medida; cuenco con capas nocturnas y luna muy legible. Trama del techo, sombras, vegetación y vasijas aportan riqueza.",
+        "magic_test": "PASS: recipiente pequeño contiene paisaje nocturno profundo.",
+        "limits": [
+          "Recipiente más grande y mujeres más próximas de lo sugerido; conserva cuerpos arrodillados enteros, no retratos.",
+          "La tinaja, tela y bordes de ropa adquirieron geometría decorativa no solicitada. No constituye referencia etnográfica verificada."
+        ]
+      },
+      {
+        "id": "b2a",
+        "status": "candidate_with_notes",
+        "observed": "Arámai ante postes que se prolongan en distancia imposible; noche ocupa techo y terreno interior mientras afuera es de día. Mayor profundidad que el panel azul del piloto01.",
+        "magic_test": "PASS: extensión arquitectónica imposible bajo una enramada cotidiana.",
+        "limits": [
+          "Arámai ocupa aproximadamente 38–40% de la altura, por encima del objetivo de 20%; estimación visual, no medición automática. Encuadre a revisar según preferencia del usuario.",
+          "La cara sigue siendo recorte, pero tiene algo más de detalle que en piloto01. No declarar continuidad pixel-perfect."
+        ]
+      },
+      {
+        "id": "b2b",
+        "status": "candidate_with_notes",
+        "observed": "Chinchorro conectado a dos postes, vacío de personas, contiene múltiples capas de noche. Su vientre está suspendido sobre suelo y proyecta sombra. Arámai pequeño permanece al fondo en día.",
+        "magic_test": "PASS: trama ordinaria sostiene una profundidad desproporcionada; magia central y material.",
+        "limits": [
+          "Techo y suelo tienen más fragmentación de papel que la intención de formas amplias. Podría moderarse sin volver al vacío.",
+          "La vegetación de fondo incluye cactus de silueta genérica; verificar/simplificar si se elige para producción definitiva."
+        ]
+      },
+      {
+        "id": "b3a",
+        "status": "candidate_with_notes",
+        "observed": "Mujer de azul ante umbral que abre a un patio nocturno con chinchorro; segunda casa repite fenómeno a distancia sin conexión visible. Patio exterior permanece diurno.",
+        "magic_test": "PASS: paisaje profundo no cabe en vivienda; dos huellas separadas.",
+        "limits": [
+          "Cara de la mujer tiene más modelado y figura mayor que el objetivo inicial de escala.",
+          "Vasija y textil presentan patrones generados, sin atribución documental. No promover esos diseños a símbolos culturales."
+        ]
+      }
+    ],
+    "summary": "Mayor presencia mágica desde la primera toma y escenas más habitadas. No todos los detalles del prompt se obedecieron: reflejos, escala y ornamentos quedan documentados. Muestras de dirección, no activos culturalmente certificados ni aprobados para publicar.",
+    "promote_to_final": false
+  },
+  "tests": {
+    "command": "node --test scripts/image-quality-policy.test.mjs scripts/visual-direction.test.mjs",
+    "passed": 10,
+    "failed": 0,
+    "limit": "Políticas generales y verificaciones de bytes no prueban calidad artística o cultural."
+  },
+  "learning": {
+    "failure_to_correct": "El objetivo de reducir ruido se convirtió en suprimir vida cotidiana y retrasar lo imposible.",
+    "candidate_principle": "Simplicidad de siluetas + riqueza de relaciones, materia, profundidad y consecuencias.",
+    "observation": "Los fenómenos de reflejo, cuenco y trama son más identificables que rectángulos índigo aislados. Más detalle también aumentó adornos no pedidos y acercó personajes: vigilar esas dos regresiones.",
+    "next_step": "Esperar elección del usuario; ajustar exclusivamente lo elegido, sin generar el resto."
+  }
+}
+

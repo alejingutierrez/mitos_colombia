@@ -1,0 +1,91 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-07T15:46:42.062Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 3,
+  "by_act": {
+    "entrada": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-condor-triptych-01",
+      "prepared_at": "2026-09-07T15:44:15.000Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "053f4663d468fe30f24d2d3c6747a29dac8a3b4ded7c4d6879bdd2812128f8ae",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "c89b54cf0db61fce48ddd5cbce6d07b59b3dbfd248a208da21046c9bd6181e57",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-condor-triptych-01",
+      "prepared_at": "2026-09-07T15:44:15.000Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "319d0abb9582f7224258a9ec976be863e5d22f9339b203295538b1d4574bcb98",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "309e93e369c07042711290a2b5eaef96eb3c79c7dcbe6f4d6ccd033eb55961bc",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-condor-triptych-01",
+      "prepared_at": "2026-09-07T15:44:15.000Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "68cc44386bf6628251f6df1ba0222a77e26e8ebd9d876bb66f7920d7d5036fed",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "a0127231353c630ab1ecd030cd447b40925e43f9770756ef70d68d33b8c727f1",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}

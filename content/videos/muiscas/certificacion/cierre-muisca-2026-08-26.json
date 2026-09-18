@@ -1,0 +1,3043 @@
+{
+  "schema": "mitos-colombia-muisca-visual-closure-v1",
+  "generated_at": "2026-08-26T13:58:36.457Z",
+  "accepted_by_user": true,
+  "acceptance": "El usuario dio por cumplido el objetivo con el corpus efectivamente producido y aceptó cerrar sin generar las escenas de video restantes.",
+  "status": "certified",
+  "source": {
+    "git_head": "de5cdd4ac17ca9af2e3e0183b61e56ae015d8ab7",
+    "git_branch": "main",
+    "worktree_dirty": true,
+    "plan": "content/mitos-visuales/muiscas.json"
+  },
+  "scope": {
+    "myths_with_written_plan": 41,
+    "bible_declared_in_plan": 130,
+    "bible_physical_with_inherited": 151,
+    "triptych_required": 123,
+    "triptych_fulfilled": 123,
+    "video_required": 620,
+    "video_fulfilled": 536,
+    "video_not_generated_accepted": 84,
+    "unique_required_by_plan": 873,
+    "unique_fulfilled_at_closure": 789
+  },
+  "physical_inventory": {
+    "files_hashed": 1815,
+    "image_files": 1681,
+    "readable_images": 1681,
+    "invalid_images": [],
+    "checksum_file": "content/videos/muiscas/certificacion/cierre-muisca-2026-08-26.SHA256SUMS",
+    "checksum_file_sha256": "fefc32cf8f7c6989904ea1cd581dd0458d222b520fe5c9e89b370476b93faa72"
+  },
+  "bible": {
+    "manifest": "content/videos/muiscas/biblia/manifest.json",
+    "entries": 151,
+    "missing_master_or_crop": []
+  },
+  "accepted_video_omissions": [
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b1a"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b5a"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b5b"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b6b"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b7a"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b7b"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b8a"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b8b"
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "tag": "b9a"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b1b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b2a"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b2b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b3a"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b3b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b4a"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b4b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b5b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b6a"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b6b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b7a"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b7b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b8a"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b8b"
+    },
+    {
+      "slug": "campos-eliseos",
+      "tag": "b9a"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b1a"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b1b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b2b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b3a"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b3b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b4a"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b4b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b5a"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b5b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b6a"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b6b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b7b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b8a"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b8b"
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "tag": "b9a"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b1b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b2a"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b2b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b3a"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b3b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b4a"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b4b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b5a"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b5b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b6b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b7a"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b7b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b8a"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b8b"
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "tag": "b9a"
+    },
+    {
+      "slug": "popon",
+      "tag": "b1a"
+    },
+    {
+      "slug": "popon",
+      "tag": "b1b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b2b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b3a"
+    },
+    {
+      "slug": "popon",
+      "tag": "b3b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b4b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b5a"
+    },
+    {
+      "slug": "popon",
+      "tag": "b5b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b6a"
+    },
+    {
+      "slug": "popon",
+      "tag": "b6b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b7a"
+    },
+    {
+      "slug": "popon",
+      "tag": "b7b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b8b"
+    },
+    {
+      "slug": "popon",
+      "tag": "b9a"
+    },
+    {
+      "slug": "popon",
+      "tag": "b9b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b1a"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b1b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b2a"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b2b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b3b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b4a"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b4b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b5a"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b5b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b6a"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b6b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b7a"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b7b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b8b"
+    },
+    {
+      "slug": "pacanchique",
+      "tag": "b9a"
+    }
+  ],
+  "publication": {
+    "publication_id": "cierre-muisca-2026-08-26",
+    "dir": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26",
+    "receipts": [
+      {
+        "slug": "bachue",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bachue-1787439517686.jpg",
+          "vertical_image": {
+            "id": 236,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/bachue-1787439519424.jpg",
+            "updated_at": "2026-08-22T22:58:42.655Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/bachue-1787439519973.jpg"
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bachue-1787752697153-uM1OWW92RSlLGBDbRVHhJBnjibBgLQ.jpg",
+          "vertical_image": {
+            "id": 656,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/bachue-1787752698287-0XOebjYwfSz7ODaT18AfwLYquL67Ap.jpg",
+            "updated_at": "2026-08-26T13:58:19.416Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/bachue-1787752698926-LWziK06rTizLzdhbt6nPbhKty8ddQ6.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/bachue",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/bachue.json"
+      },
+      {
+        "slug": "bochica",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bochica-1787439550779.jpg",
+          "vertical_image": {
+            "id": 233,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/bochica-1787439551697.jpg",
+            "updated_at": "2026-08-22T22:59:13.049Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/bochica-1787439552342.jpg"
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/bochica-1787752279595-NDwl8lxnP6ne9Nhp8B0TeYz0SUo215.jpg",
+          "vertical_image": {
+            "id": 625,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/bochica-1787752280595-ZjihYDzstcBJVqJStLkI6k2N14SomV.jpg",
+            "updated_at": "2026-08-26T13:51:21.725Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/bochica-1787752281230-6GW2Vg1GWH2rHAB5Jvo4mjZyGm7JOd.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/bochica",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/bochica.json"
+      },
+      {
+        "slug": "campos-eliseos",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/campos-eliseos-ddc1eccc01df.jpg",
+          "vertical_image": {
+            "id": 253,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/campos-eliseos-1784813530160.jpg",
+            "updated_at": "2026-07-23T13:32:11.820Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/campos-eliseos-1787752629971-LozH0xGOYd7JGZPQsZMgl9DgxibjO1.jpg",
+          "vertical_image": {
+            "id": 651,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/campos-eliseos-1787752631875-MvCj7YQlQh6qCYUP4paaELLU5TkVmK.jpg",
+            "updated_at": "2026-08-26T13:57:12.982Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/campos-eliseos-1787752632515-S3iB8YFnhHKRpP2lsxlIEtlicKXrGM.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/campos-eliseos",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/campos-eliseos.json"
+      },
+      {
+        "slug": "chaquon",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/chaquon-69cf1b1bea44.jpg",
+          "vertical_image": {
+            "id": 272,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chaquon-1785169055703.jpg",
+            "updated_at": "2026-07-27T16:17:37.631Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/chaquon-1787752440818-NnScT1x3diFAxOeQQ23EDWqvunIs4v.jpg",
+          "vertical_image": {
+            "id": 637,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chaquon-1787752442337-WwGnqAOUb9NIDt72d3t8f63bYATPHH.jpg",
+            "updated_at": "2026-08-26T13:54:03.833Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/chaquon-1787752443325-hURDuwNy5WHaI3jhPwwVROgXUNDKnY.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/chaquon",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/chaquon.json"
+      },
+      {
+        "slug": "chia",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/chia-d5787c81fe22.jpg",
+          "vertical_image": {
+            "id": 267,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chia-1785169199679.jpg",
+            "updated_at": "2026-07-27T16:20:01.472Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/chia-1787752224999-5Slku21rV8l6QVkt9KoZKYJ872NtpP.jpg",
+          "vertical_image": {
+            "id": 621,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chia-1787752226084-EcvUIQtPDyiiYNS2gidN6AQpOVIJxA.jpg",
+            "updated_at": "2026-08-26T13:50:27.034Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/chia-1787752226595-2rn44PjJTxT4dpLSsdAfxrHuzW4vuM.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/chia",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/chia.json"
+      },
+      {
+        "slug": "chibchacum",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/chibchacum-3626b348e501.jpg",
+          "vertical_image": {
+            "id": 269,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chibchacum-1785169348347.jpg",
+            "updated_at": "2026-07-27T16:22:30.023Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/chibchacum-1787752238120-EE6WpYke8zZebDWiFFf7CcjLOT4haP.jpg",
+          "vertical_image": {
+            "id": 622,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chibchacum-1787752239729-DSc5sEY0MXYi5u2wDJGqjuzr7pmVoQ.jpg",
+            "updated_at": "2026-08-26T13:50:41.278Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/chibchacum-1787752240773-d1Uh11TnSw9qtVRY8fVVxpCARkH18W.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/chibchacum",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/chibchacum.json"
+      },
+      {
+        "slug": "chiminigagua",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/chiminigagua-73fd6d7b0b27.jpg",
+          "vertical_image": {
+            "id": 235,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chiminigagua-1784813372229.jpg",
+            "updated_at": "2026-07-23T13:29:33.490Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/chiminigagua-1787752156981-ZjbD1XbtGqxRc3P0zncXUSBzi8kIaN.jpg",
+          "vertical_image": {
+            "id": 616,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/chiminigagua-1787752158145-BpToLNN4regAYCXDnr1VEDs8BisTlT.jpg",
+            "updated_at": "2026-08-26T13:49:19.353Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/chiminigagua-1787752158864-ioN9H4FcteIDrI425uNFq6k6tQmsih.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/chiminigagua",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/chiminigagua.json"
+      },
+      {
+        "slug": "creacion-muiscas",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/creacion-muiscas-37f452a1002b.jpg",
+          "vertical_image": {
+            "id": 247,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/creacion-muiscas-1784813472752.jpg",
+            "updated_at": "2026-07-23T13:31:14.401Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/creacion-muiscas-1787752170570-9EJrzb1hosggMmkHAZN2snj4dWXNU7.jpg",
+          "vertical_image": {
+            "id": 617,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/creacion-muiscas-1787752171645-HKVh07O1rnNoAVmUdcihofm3HDnpYy.jpg",
+            "updated_at": "2026-08-26T13:49:32.620Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/creacion-muiscas-1787752172216-uwhlZWFDRV5KfYvfbUQYH3MOxITbhj.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/creacion-muiscas",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/creacion-muiscas.json"
+      },
+      {
+        "slug": "cuchavira",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/cuchavira-1785169498438.jpg",
+          "vertical_image": {
+            "id": 270,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/cuchavira-1785174066566.jpg",
+            "updated_at": "2026-07-27T17:41:08.369Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/cuchavira-1787752252465-V4qstUk1yz9Q9tJszCzFsrrXJ4ChIi.jpg",
+          "vertical_image": {
+            "id": 623,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/cuchavira-1787752253448-pwRNtWZZGeYrAbwFZE43Zg7lisPLRx.jpg",
+            "updated_at": "2026-08-26T13:50:54.961Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/cuchavira-1787752254159-LsG5PeRiadBJkX3nbg4wiaanNJpZWW.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/cuchavira",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/cuchavira.json"
+      },
+      {
+        "slug": "el-bermejo-aspira-a-ser-rey",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-bermejo-aspira-a-ser-rey-1784765914191.jpg",
+          "vertical_image": {
+            "id": 252,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-bermejo-aspira-a-ser-rey-1784813522605.jpg",
+            "updated_at": "2026-07-23T13:32:04.486Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-bermejo-aspira-a-ser-rey-1787752616779-KxakbfwAprqCAgJ8xwGkKmzxiAaQB4.jpg",
+          "vertical_image": {
+            "id": 650,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-bermejo-aspira-a-ser-rey-1787752617768-7Sg5b1uozSY8ncPrujZAYPyP3L25qR.jpg",
+            "updated_at": "2026-08-26T13:56:58.814Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-bermejo-aspira-a-ser-rey-1787752618381-gwFpfXHSGOpsvcO7s1VckIpklGQEDj.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-bermejo-aspira-a-ser-rey",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-bermejo-aspira-a-ser-rey.json"
+      },
+      {
+        "slug": "el-castigo-de-chaquen",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-castigo-de-chaquen-1784764796852.jpg",
+          "vertical_image": {
+            "id": 125,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-castigo-de-chaquen-1784812286279.jpg",
+            "updated_at": "2026-07-23T13:11:27.483Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-castigo-de-chaquen-1787752455187-rj9mXJCGAO5Ayl8UvjePyI8IA0cHDA.jpg",
+          "vertical_image": {
+            "id": 638,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-castigo-de-chaquen-1787752456463-Zt9IQ5TUVkGtE2UYytHc0Gdm167h1b.jpg",
+            "updated_at": "2026-08-26T13:54:17.657Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-castigo-de-chaquen-1787752457077-IT40i0uqioewhcPK1UT7pojlXiwYn6.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-castigo-de-chaquen",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-castigo-de-chaquen.json"
+      },
+      {
+        "slug": "el-dorado",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/el-dorado-e5e34620e90f.jpg",
+          "vertical_image": {
+            "id": 232,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-dorado-1784813331588.jpg",
+            "updated_at": "2026-07-23T13:28:52.519Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-dorado-1787752319957-NutNyLaDMjPFAafNo7rlodSvapnrjS.jpg",
+          "vertical_image": {
+            "id": 628,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-dorado-1787752321122-GVsVHmzhH1IGQ3tp86U6K2BMyzuyp2.jpg",
+            "updated_at": "2026-08-26T13:52:02.193Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-dorado-1787752321696-7qkmGLT0K7pLrwjOjt8lfXeY7yLeI2.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-dorado",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-dorado.json"
+      },
+      {
+        "slug": "el-hijo-del-sol-goranchacha",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-hijo-del-sol-goranchacha-1785169799536.jpg",
+          "vertical_image": {
+            "id": 231,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-hijo-del-sol-goranchacha-1785169926647.jpg",
+            "updated_at": "2026-07-27T16:32:08.023Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-hijo-del-sol-goranchacha-1787752644059-XJ39rFGX2S3DDyRia7qUc0TfSOhTHi.jpg",
+          "vertical_image": {
+            "id": 652,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-hijo-del-sol-goranchacha-1787752645099-ILiQ74vAqsTRFzuA9cvzA4feyLrR8e.jpg",
+            "updated_at": "2026-08-26T13:57:26.324Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-hijo-del-sol-goranchacha-1787752645800-nBaxd7vnkirnbqmxu4x7E5zzIkEglb.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-hijo-del-sol-goranchacha",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-hijo-del-sol-goranchacha.json"
+      },
+      {
+        "slug": "el-origen-del-lago-tota",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-origen-del-lago-tota-1784764763251.jpg",
+          "vertical_image": {
+            "id": 121,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-origen-del-lago-tota-1784812241264.jpg",
+            "updated_at": "2026-07-23T13:10:42.625Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-origen-del-lago-tota-1787752413466-REbybHAIUDIS8VDfFeVpqClkZLLqxe.jpg",
+          "vertical_image": {
+            "id": 635,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-origen-del-lago-tota-1787752414807-rL0grC4Z1dJDkcg77Txi7AEiUpE7zF.jpg",
+            "updated_at": "2026-08-26T13:53:35.887Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-origen-del-lago-tota-1787752415435-LWaf84TjqgmOC4KZPOEZqR1WgQhVEy.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-origen-del-lago-tota",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-origen-del-lago-tota.json"
+      },
+      {
+        "slug": "el-pozo-de-hunzahua",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-pozo-de-hunzahua-1785170079850.jpg",
+          "vertical_image": {
+            "id": 244,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-pozo-de-hunzahua-1785170229345.jpg",
+            "updated_at": "2026-07-27T16:37:10.808Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-pozo-de-hunzahua-1787752373219-fIbBnWg1TlzjPPyH9WAvqWbE3QYJfT.jpg",
+          "vertical_image": {
+            "id": 632,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-pozo-de-hunzahua-1787752374324-SJZcqybIbJ7uH08vOxbaEXdCjzGvMR.jpg",
+            "updated_at": "2026-08-26T13:52:55.413Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-pozo-de-hunzahua-1787752374892-2bDglyrPHdBqb2WKdNWdmbvbjLvNr0.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-pozo-de-hunzahua",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-pozo-de-hunzahua.json"
+      },
+      {
+        "slug": "el-primero-de-los-reyes",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-primero-de-los-reyes-1785170377613.jpg",
+          "vertical_image": {
+            "id": 240,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-primero-de-los-reyes-1785170530418.jpg",
+            "updated_at": "2026-07-27T16:42:11.779Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-primero-de-los-reyes-1787752657405-YQPUskXhDVMKuEKIogLxidVJNmT0M2.jpg",
+          "vertical_image": {
+            "id": 653,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-primero-de-los-reyes-1787752658452-P9DKsKXOXDcPNFj8CTPCMKfI3putGB.jpg",
+            "updated_at": "2026-08-26T13:57:39.477Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-primero-de-los-reyes-1787752658987-VuMDPNUx2hh8APmWBaOJEQEmECO3uC.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-primero-de-los-reyes",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-primero-de-los-reyes.json"
+      },
+      {
+        "slug": "el-sol-y-la-luna",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/el-sol-y-la-luna-842e83377a59.jpg",
+          "vertical_image": {
+            "id": 234,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-sol-y-la-luna-1784813339426.jpg",
+            "updated_at": "2026-07-23T13:29:00.307Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-sol-y-la-luna-1787752196981-NsuzZ5eb1SdenwYNl7sBXK9yvg3bUs.jpg",
+          "vertical_image": {
+            "id": 619,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-sol-y-la-luna-1787752198217-AH7eyI7VwJyjzv62YRLcEq3lB9wfNL.jpg",
+            "updated_at": "2026-08-26T13:49:59.486Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-sol-y-la-luna-1787752198914-BFrQPxBpE5tqTRmwzXKQo500y6rSO9.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-sol-y-la-luna",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-sol-y-la-luna.json"
+      },
+      {
+        "slug": "el-tequendama",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-tequendama-1787439533700.jpg",
+          "vertical_image": {
+            "id": 248,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-tequendama-1787439534675.jpg",
+            "updated_at": "2026-08-22T22:58:56.127Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-tequendama-1787439535306.jpg"
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-tequendama-1787752292890-d2DSeE5cHkQKOmhhO8DHPsth6vO0Wf.jpg",
+          "vertical_image": {
+            "id": 626,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-tequendama-1787752294042-Oi3cHYk9238E1XBGZJkBsQeeSu4HGW.jpg",
+            "updated_at": "2026-08-26T13:51:35.080Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/el-tequendama-1787752294673-PQ89Y48YpyODOs036BSq9OXp2DlSpq.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/el-tequendama",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/el-tequendama.json"
+      },
+      {
+        "slug": "en-el-principio-fue-el-maiz",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/en-el-principio-fue-el-maiz-1784765724916.jpg",
+          "vertical_image": {
+            "id": 230,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/en-el-principio-fue-el-maiz-1784813326342.jpg",
+            "updated_at": "2026-07-23T13:28:47.585Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/en-el-principio-fue-el-maiz-1787752427003-z4o2rB7m9HnrpiTWxJNokq85zH2Kde.jpg",
+          "vertical_image": {
+            "id": 636,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/en-el-principio-fue-el-maiz-1787752428236-V7SuUg3B5Trbg90o9ZbQ9wicCZRw9z.jpg",
+            "updated_at": "2026-08-26T13:53:49.709Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/en-el-principio-fue-el-maiz-1787752429178-lyZclcEZiOHLArTI9b1yD42mw61inY.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/en-el-principio-fue-el-maiz",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/en-el-principio-fue-el-maiz.json"
+      },
+      {
+        "slug": "fu-el-dios-de-la-torpeza",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/fu-el-dios-de-la-torpeza-1784765870803.jpg",
+          "vertical_image": {
+            "id": 246,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/fu-el-dios-de-la-torpeza-1784813472884.jpg",
+            "updated_at": "2026-07-23T13:31:13.721Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/fu-el-dios-de-la-torpeza-1787752550058-Jpl2sHJbZsaef4UIZqWO4uLp3610kv.jpg",
+          "vertical_image": {
+            "id": 645,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/fu-el-dios-de-la-torpeza-1787752551100-HquKt1gqNUOBVrNuxS0l5GYsBRdg2H.jpg",
+            "updated_at": "2026-08-26T13:55:52.080Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/fu-el-dios-de-la-torpeza-1787752551694-XUoxTNn0wMnYKmIu9xFaILRi2IiHCc.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/fu-el-dios-de-la-torpeza",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/fu-el-dios-de-la-torpeza.json"
+      },
+      {
+        "slug": "huitaca",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/huitaca-52dc94240432.jpg",
+          "vertical_image": {
+            "id": 250,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/huitaca-1784813515273.jpg",
+            "updated_at": "2026-07-23T13:31:56.707Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/huitaca-1787752266033-EUAfXIZzbxqZAtU82FsRmmitwxR1e3.jpg",
+          "vertical_image": {
+            "id": 624,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/huitaca-1787752267139-a2aqVMI9dwOzsfw134xe0rmUKcN3VB.jpg",
+            "updated_at": "2026-08-26T13:51:08.111Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/huitaca-1787752267624-yh0XKvHwZEd7twZEkfndcNnmvbWxvk.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/huitaca",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/huitaca.json"
+      },
+      {
+        "slug": "hunzahua",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/hunzahua-1785170986060.jpg",
+          "vertical_image": {
+            "id": 237,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/hunzahua-1785171127539.jpg",
+            "updated_at": "2026-07-27T16:52:11.449Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/hunzahua-1787752359947-CQ58B6HBtrrhOlBhTnSRLmiO5lh3pD.jpg",
+          "vertical_image": {
+            "id": 631,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/hunzahua-1787752360942-g6vmtVyzg99LlbI8Te8rdMXxa5rzI9.jpg",
+            "updated_at": "2026-08-26T13:52:42.141Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/hunzahua-1787752361633-v5TZk71fFbNxaM4Nz4eNcbkt0REYOj.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/hunzahua",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/hunzahua.json"
+      },
+      {
+        "slug": "idacanzas",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/idacanzas-1785171275486.jpg",
+          "vertical_image": {
+            "id": 256,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/idacanzas-1785171419345.jpg",
+            "updated_at": "2026-07-27T16:57:01.959Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/idacanzas-1787752399717-jtsnN6mssCzMTCcJN3waj3K5FalhOi.jpg",
+          "vertical_image": {
+            "id": 634,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/idacanzas-1787752400976-B4WSHrZ7FFbO5tbpTymPTgmjPxdXu3.jpg",
+            "updated_at": "2026-08-26T13:53:22.377Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/idacanzas-1787752401815-DrE3du3t7F8RvMiYbCcm7vjdDCEvjm.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/idacanzas",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/idacanzas.json"
+      },
+      {
+        "slug": "la-aparicion-del-hombre",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-aparicion-del-hombre-1785171562462.jpg",
+          "vertical_image": {
+            "id": 275,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-aparicion-del-hombre-1785171706802.jpg",
+            "updated_at": "2026-07-27T17:01:48.201Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-aparicion-del-hombre-1787752183718-UzlRMzMgmCOqzfpe0pu9ckSvBrRVIt.jpg",
+          "vertical_image": {
+            "id": 618,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-aparicion-del-hombre-1787752184682-39QSi9Wc4Uiw6UaTer2bigxS1XkQLe.jpg",
+            "updated_at": "2026-08-26T13:49:45.898Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-aparicion-del-hombre-1787752185382-vyihCvKC6ffav7voqXhxx802p0W4Gg.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/la-aparicion-del-hombre",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/la-aparicion-del-hombre.json"
+      },
+      {
+        "slug": "la-cacica-de-guatavita",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/la-cacica-de-guatavita-598c1718b019.jpg",
+          "vertical_image": {
+            "id": 238,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-cacica-de-guatavita-1784813381144.jpg",
+            "updated_at": "2026-07-23T13:29:41.962Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-cacica-de-guatavita-1787752333206-jztd5V3jhKDJmC2JJL9XIFZtwWjrMe.jpg",
+          "vertical_image": {
+            "id": 629,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-cacica-de-guatavita-1787752334470-xOK4nM3iqJRh40juRsR51jKZIY1oIx.jpg",
+            "updated_at": "2026-08-26T13:52:15.448Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-cacica-de-guatavita-1787752334977-g80lMaRsTVoGXAXNtJlHbNdV0TXpi1.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/la-cacica-de-guatavita",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/la-cacica-de-guatavita.json"
+      },
+      {
+        "slug": "la-competencia",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-competencia-1784765931254.jpg",
+          "vertical_image": {
+            "id": 255,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-competencia-1784813558020.jpg",
+            "updated_at": "2026-07-23T13:32:39.468Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-competencia-1787752563466-WRMyUx00POj4GIqLwTjfPcgZygASSG.jpg",
+          "vertical_image": {
+            "id": 646,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-competencia-1787752564532-GIQqQPvIlNw5JtqQx0zJi8YsITG1rY.jpg",
+            "updated_at": "2026-08-26T13:56:05.603Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-competencia-1787752565123-7LEfHGiXLzSldeodFC01K5oF6LeNqh.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/la-competencia",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/la-competencia.json"
+      },
+      {
+        "slug": "la-herencia",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-herencia-1784765870391.jpg",
+          "vertical_image": {
+            "id": 249,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-herencia-1784813497650.jpg",
+            "updated_at": "2026-07-23T13:31:38.877Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-herencia-1787752590339-AtGqTDiY8eu0MS9Z8X41N3PnmIPGFU.jpg",
+          "vertical_image": {
+            "id": 648,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-herencia-1787752591363-cyNoVvkvjPMCjcyqnbKmrduQWFl2Ru.jpg",
+            "updated_at": "2026-08-26T13:56:32.634Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-herencia-1787752592145-sAohjH8zp2o2zGQ2Zays7PJKBepsCR.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/la-herencia",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/la-herencia.json"
+      },
+      {
+        "slug": "la-historia-del-bermejo",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-historia-del-bermejo-1784765890755.jpg",
+          "vertical_image": {
+            "id": 251,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-historia-del-bermejo-1784813516630.jpg",
+            "updated_at": "2026-07-23T13:31:57.592Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-historia-del-bermejo-1787752603715-dGzA0RD6k6I9xHu5F6gZ2YbJlYKM9E.jpg",
+          "vertical_image": {
+            "id": 649,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-historia-del-bermejo-1787752604714-48i2XY3oQXyXnY5qU6B43A2RbLQHSV.jpg",
+            "updated_at": "2026-08-26T13:56:45.642Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-historia-del-bermejo-1787752605225-RoL8b2zLqzoDuKFq4s3DAFMpYLere6.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/la-historia-del-bermejo",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/la-historia-del-bermejo.json"
+      },
+      {
+        "slug": "la-madre-de-los-hombres",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-madre-de-los-hombres-1785171870212.jpg",
+          "vertical_image": {
+            "id": 245,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-madre-de-los-hombres-1785172007578.jpg",
+            "updated_at": "2026-07-27T17:06:49.196Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-madre-de-los-hombres-1787752210596-eu8rlc3hxGNsOZbDwepSzrffPJisop.jpg",
+          "vertical_image": {
+            "id": 620,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-madre-de-los-hombres-1787752211903-jdI73EuSFCc5ElCmC3wwXb0TshuocU.jpg",
+            "updated_at": "2026-08-26T13:50:13.906Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/la-madre-de-los-hombres-1787752212778-1hGWMcZueuyIJ6G1A4xxTrXVDhCPzx.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/la-madre-de-los-hombres",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/la-madre-de-los-hombres.json"
+      },
+      {
+        "slug": "los-cojines-del-zaque",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/los-cojines-del-zaque-18f10e4fb5f8.jpg",
+          "vertical_image": {
+            "id": 242,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-cojines-del-zaque-1785172140044.jpg",
+            "updated_at": "2026-07-27T17:09:03.328Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-cojines-del-zaque-1787752346599-7HWXj9P74Txpbs25jdp0hQYP19H3aH.jpg",
+          "vertical_image": {
+            "id": 630,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-cojines-del-zaque-1787752347646-VyQWJrLSMlWVr2uiSuqdPdetKZimE9.jpg",
+            "updated_at": "2026-08-26T13:52:28.913Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/los-cojines-del-zaque-1787752348397-H46dTOdhK0E6HVuovygGznF276b6rb.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/los-cojines-del-zaque",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/los-cojines-del-zaque.json"
+      },
+      {
+        "slug": "los-dioses-civilizadores",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-dioses-civilizadores-1787440872103.jpg",
+          "vertical_image": {
+            "id": 268,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-dioses-civilizadores-1787440873825.jpg",
+            "updated_at": "2026-08-22T23:21:15.165Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/los-dioses-civilizadores-1787440874470.jpg"
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-dioses-civilizadores-1787752306230-mpnbLsKBsraZnZS5ZRO7CBbkyQ5B1m.jpg",
+          "vertical_image": {
+            "id": 627,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-dioses-civilizadores-1787752307358-zj5ZmYQ1sgBSN5fu5athaDuDQWEaFI.jpg",
+            "updated_at": "2026-08-26T13:51:48.860Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/los-dioses-civilizadores-1787752308245-gsNGsj6mi8qB9nvZZU4R8TXwvl52zX.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/los-dioses-civilizadores",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/los-dioses-civilizadores.json"
+      },
+      {
+        "slug": "los-mojas",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/los-mojas-6f3dd2bc147a.jpg",
+          "vertical_image": {
+            "id": 260,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-mojas-1784813604288.jpg",
+            "updated_at": "2026-07-23T13:33:26.117Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/los-mojas-1787752510016-L09cDzfPGWE2zY2yIWs9ELYPhpj5JA.jpg",
+          "vertical_image": {
+            "id": 642,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/los-mojas-1787752511002-JigBleASeAwwQUA7feLa5zjJMfvKK3.jpg",
+            "updated_at": "2026-08-26T13:55:12.436Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/los-mojas-1787752511848-JCWDavE4cChilVtZPvmtrOIHeoZRUh.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/los-mojas",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/los-mojas.json"
+      },
+      {
+        "slug": "meicuchuca",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/meicuchuca-1784765977185.jpg",
+          "vertical_image": {
+            "id": 257,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/meicuchuca-1784813574603.jpg",
+            "updated_at": "2026-07-23T13:32:56.231Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/meicuchuca-1787752483005-J8g10npSsh2zDcTd36jCqAqEc9kzOq.jpg",
+          "vertical_image": {
+            "id": 640,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/meicuchuca-1787752484010-P1sPn8v0qfKMOE8JYtAAqWRuZF0o6U.jpg",
+            "updated_at": "2026-08-26T13:54:45.146Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/meicuchuca-1787752484618-eg5NEfBjtna3Fpir6zD2cOuRpIcMin.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/meicuchuca",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/meicuchuca.json"
+      },
+      {
+        "slug": "nemequene",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nemequene-1785172414821.jpg",
+          "vertical_image": {
+            "id": 239,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/nemequene-1785172544348.jpg",
+            "updated_at": "2026-07-27T17:15:45.505Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nemequene-1787752536598-XvPc7UuMGttc75Hytp6QLVK8tytN4j.jpg",
+          "vertical_image": {
+            "id": 644,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/nemequene-1787752537805-JgPGqtwwmcw4KkTZj8tK5JON09lDd4.jpg",
+            "updated_at": "2026-08-26T13:55:38.961Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/nemequene-1787752538467-HdCkxCrFZLENeEMc9LPjDmUlTzt3TF.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/nemequene",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/nemequene.json"
+      },
+      {
+        "slug": "nencatacoa",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nencatacoa-1784766069513.jpg",
+          "vertical_image": {
+            "id": 271,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/nencatacoa-1784813712799.jpg",
+            "updated_at": "2026-07-23T13:35:14.502Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nencatacoa-1787752496320-AbGsajvvM2SCMDD2pk57lGoiKL8tNC.jpg",
+          "vertical_image": {
+            "id": 641,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/nencatacoa-1787752497484-iStOyrda9SvyknWMBy2UycadGkI2eD.jpg",
+            "updated_at": "2026-08-26T13:54:58.920Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/nencatacoa-1787752498288-sC9y10Vb9w6FJPFVpBj7AZDt1oheOA.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/nencatacoa",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/nencatacoa.json"
+      },
+      {
+        "slug": "nompanem",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/editorial/nompanem-07d9247d9fa3.jpg",
+          "vertical_image": {
+            "id": 258,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/nompanem-1785172679544.jpg",
+            "updated_at": "2026-07-27T17:18:01.026Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nompanem-1787752523514-rA1O5lc6hbzx8E7YtidrkXfhKVNguR.jpg",
+          "vertical_image": {
+            "id": 643,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/nompanem-1787752524475-0ynb94NEqilYh538AUDBu2txqK4kvk.jpg",
+            "updated_at": "2026-08-26T13:55:25.455Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/nompanem-1787752524982-9YIoFzn1gExr1499SZF9p6AmdOXdFr.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/nompanem",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/nompanem.json"
+      },
+      {
+        "slug": "pacanchique",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/pacanchique-1784765824037.jpg",
+          "vertical_image": {
+            "id": 243,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/pacanchique-1784813429718.jpg",
+            "updated_at": "2026-07-23T13:30:30.720Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/pacanchique-1787752683963-89GtuuCDcizZVKbnhoosnnQpXleJHS.jpg",
+          "vertical_image": {
+            "id": 655,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/pacanchique-1787752685113-D2lT3FHFpm5kWffWcDTjI9FZJQXilM.jpg",
+            "updated_at": "2026-08-26T13:58:06.037Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/pacanchique-1787752685647-JuKUKFtBpch5mEYAiGcqmZjMorHzqM.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/pacanchique",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/pacanchique.json"
+      },
+      {
+        "slug": "popon",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/popon-1784765953794.jpg",
+          "vertical_image": {
+            "id": 259,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/popon-1785172810580.jpg",
+            "updated_at": "2026-07-27T17:20:12.159Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/popon-1787752670673-V0SSoUNLyTyvfEMopOXwTjUMfeUUL5.jpg",
+          "vertical_image": {
+            "id": 654,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/popon-1787752671788-Oorp9VFmh8VHNTPJaw4YDv7WeDe8Ua.jpg",
+            "updated_at": "2026-08-26T13:57:52.761Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/popon-1787752672350-Q7i5pObzEh4FKkRK8tvFxmXHcXtXKd.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/popon",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/popon.json"
+      },
+      {
+        "slug": "tomagata",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/tomagata-1785172949049.jpg",
+          "vertical_image": {
+            "id": 241,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/tomagata-1785173098369.jpg",
+            "updated_at": "2026-07-27T17:24:59.600Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/tomagata-1787752386497-8HmLwkXLwXf4vyneksqa0Tx9fiZsXO.jpg",
+          "vertical_image": {
+            "id": 633,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/tomagata-1787752387536-AVo8rk1z2TyJschfOGYsT4HVha0L8s.jpg",
+            "updated_at": "2026-08-26T13:53:08.411Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/tomagata-1787752387987-d227PyeZeZsE5osbqKqw0w5gpWkYBE.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/tomagata",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/tomagata.json"
+      },
+      {
+        "slug": "toquecha-y-toquilla",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/toquecha-y-toquilla-1784764762834.jpg",
+          "vertical_image": {
+            "id": 122,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/toquecha-y-toquilla-1785173235590.jpg",
+            "updated_at": "2026-07-27T17:27:16.993Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/toquecha-y-toquilla-1787752469040-q4G6BcBuIfEFr9a0BIJJan3v6wovNy.jpg",
+          "vertical_image": {
+            "id": 639,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/toquecha-y-toquilla-1787752470090-5Xb8SVwUxYpGUDInZ3lnyEqBf7GIU1.jpg",
+            "updated_at": "2026-08-26T13:54:31.311Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/toquecha-y-toquilla-1787752470756-MPqzzs9xUIm1BUPEYwhSEUxsREyXnu.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/toquecha-y-toquilla",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/toquecha-y-toquilla.json"
+      },
+      {
+        "slug": "veneracion-a-los-soberanos",
+        "status": "published",
+        "before": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/veneracion-a-los-soberanos-1785173377137.jpg",
+          "vertical_image": {
+            "id": 254,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/veneracion-a-los-soberanos-1785173522242.jpg",
+            "updated_at": "2026-07-27T17:32:04.557Z"
+          },
+          "square_image_url": null
+        },
+        "after": {
+          "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/veneracion-a-los-soberanos-1787752576829-AakaY5QlfSyC28XcMLyHYbIsWPzcQT.jpg",
+          "vertical_image": {
+            "id": 647,
+            "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/veneracion-a-los-soberanos-1787752578237-R1IlILEafuN010OSUqk7mCj6OuEzzP.jpg",
+            "updated_at": "2026-08-26T13:56:19.177Z"
+          },
+          "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/veneracion-a-los-soberanos-1787752578733-H1LP85II70JuXnN4cWwGxTRDRnhK9g.jpg"
+        },
+        "preservation": {
+          "blob_uploads_use_new_random_suffixes": true,
+          "previous_blob_urls_are_not_deleted": true,
+          "previous_vertical_database_row_is_not_updated_or_deleted": true
+        },
+        "revalidation": {
+          "ok": true,
+          "status": 200,
+          "paths": [
+            "/mitos/veneracion-a-los-soberanos",
+            "/mitos"
+          ]
+        },
+        "receipt": "content/videos/muiscas/publication-receipts/cierre-muisca-2026-08-26/veneracion-a-los-soberanos.json"
+      }
+    ]
+  },
+  "myths": [
+    {
+      "slug": "chiminigagua",
+      "triptych_folder": "content/videos/muiscas/mitos/chiminigagua",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/chiminigagua/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/chiminigagua/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/chiminigagua/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b6a",
+            "ref": "mitos/chiminigagua/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/chiminigagua/keyframes"
+      }
+    },
+    {
+      "slug": "creacion-muiscas",
+      "triptych_folder": "content/videos/muiscas/mitos/creacion-muiscas",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/creacion-muiscas/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/creacion-muiscas/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/creacion-muiscas/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b4b",
+            "ref": "mitos/creacion-muiscas/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/creacion-muiscas/keyframes"
+      }
+    },
+    {
+      "slug": "la-aparicion-del-hombre",
+      "triptych_folder": "content/videos/muiscas/mitos/la-aparicion-del-hombre",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/la-aparicion-del-hombre/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/la-aparicion-del-hombre/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/la-aparicion-del-hombre/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b4b",
+            "ref": "mitos/la-aparicion-del-hombre/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/la-aparicion-del-hombre/keyframes"
+      }
+    },
+    {
+      "slug": "el-sol-y-la-luna",
+      "triptych_folder": "content/videos/muiscas/mitos/el-sol-y-la-luna",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-sol-y-la-luna/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-sol-y-la-luna/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-sol-y-la-luna/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/el-sol-y-la-luna/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-sol-y-la-luna/keyframes"
+      }
+    },
+    {
+      "slug": "la-madre-de-los-hombres",
+      "triptych_folder": "content/videos/muiscas/mitos/la-madre-de-los-hombres",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/la-madre-de-los-hombres/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/la-madre-de-los-hombres/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/la-madre-de-los-hombres/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b7a",
+            "ref": "mitos/la-madre-de-los-hombres/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/la-madre-de-los-hombres/keyframes"
+      }
+    },
+    {
+      "slug": "chia",
+      "triptych_folder": "content/videos/muiscas/mitos/chia",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/chia/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/chia/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/chia/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b6a",
+            "ref": "mitos/chia/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/chia/keyframes"
+      }
+    },
+    {
+      "slug": "chibchacum",
+      "triptych_folder": "content/videos/muiscas/mitos/chibchacum",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/chibchacum/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/chibchacum/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/chibchacum/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b4a",
+            "ref": "mitos/chibchacum/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/chibchacum/keyframes"
+      }
+    },
+    {
+      "slug": "cuchavira",
+      "triptych_folder": "content/videos/muiscas/mitos/cuchavira",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/cuchavira/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/cuchavira/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/cuchavira/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b3a",
+            "ref": "mitos/cuchavira/entrada"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/cuchavira/keyframes"
+      }
+    },
+    {
+      "slug": "huitaca",
+      "triptych_folder": "content/videos/muiscas/mitos/huitaca",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/huitaca/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/huitaca/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/huitaca/huella.jpg"
+      },
+      "video": {
+        "required": 17,
+        "fulfilled": 17,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b6a",
+            "ref": "mitos/huitaca/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/huitaca/keyframes"
+      }
+    },
+    {
+      "slug": "bochica",
+      "triptych_folder": "content/videos/muiscas/mitos/bochica-maestro",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/bochica-maestro/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/bochica-maestro/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/bochica-maestro/huella.jpg"
+      },
+      "video": {
+        "required": 16,
+        "fulfilled": 16,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/bochica-maestro/entrada"
+          },
+          {
+            "tag": "b4a",
+            "ref": "mitos/bochica-maestro/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/bochica-maestro/keyframes"
+      }
+    },
+    {
+      "slug": "el-tequendama",
+      "triptych_folder": "content/videos/muiscas/mitos/bochica",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/bochica/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/bochica/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/bochica/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/el-tequendama/entrada"
+          },
+          {
+            "tag": "b7a",
+            "ref": "mitos/el-tequendama/acto"
+          },
+          {
+            "tag": "b9a",
+            "ref": "mitos/el-tequendama/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/bochica/keyframes"
+      }
+    },
+    {
+      "slug": "los-dioses-civilizadores",
+      "triptych_folder": "content/videos/muiscas/mitos/camino-de-bochica",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/camino-de-bochica/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/camino-de-bochica/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/camino-de-bochica/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/camino-de-bochica/entrada"
+          },
+          {
+            "tag": "b5a",
+            "ref": "mitos/camino-de-bochica/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/camino-de-bochica/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/los-dioses-civilizadores/keyframes"
+      }
+    },
+    {
+      "slug": "el-dorado",
+      "triptych_folder": "content/videos/muiscas/mitos/el-dorado",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-dorado/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-dorado/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-dorado/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/el-dorado/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/el-dorado/acto"
+          },
+          {
+            "tag": "b8b",
+            "ref": "mitos/el-dorado/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-dorado/keyframes"
+      }
+    },
+    {
+      "slug": "la-cacica-de-guatavita",
+      "triptych_folder": "content/videos/muiscas/mitos/la-cacica-de-guatavita",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/la-cacica-de-guatavita/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/la-cacica-de-guatavita/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/la-cacica-de-guatavita/huella.jpg"
+      },
+      "video": {
+        "required": 16,
+        "fulfilled": 16,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2b",
+            "ref": "mitos/la-cacica-de-guatavita/entrada"
+          },
+          {
+            "tag": "b8a",
+            "ref": "mitos/la-cacica-de-guatavita/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/la-cacica-de-guatavita/keyframes"
+      }
+    },
+    {
+      "slug": "los-cojines-del-zaque",
+      "triptych_folder": "content/videos/muiscas/mitos/los-cojines-del-zaque",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/los-cojines-del-zaque/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/los-cojines-del-zaque/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/los-cojines-del-zaque/huella.jpg"
+      },
+      "video": {
+        "required": 14,
+        "fulfilled": 14,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/los-cojines-del-zaque/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/los-cojines-del-zaque/acto"
+          },
+          {
+            "tag": "b8a",
+            "ref": "mitos/los-cojines-del-zaque/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/los-cojines-del-zaque/keyframes"
+      }
+    },
+    {
+      "slug": "hunzahua",
+      "triptych_folder": "content/videos/muiscas/mitos/hunzahua",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/hunzahua/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/hunzahua/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/hunzahua/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/hunzahua/entrada"
+          },
+          {
+            "tag": "b4a",
+            "ref": "mitos/hunzahua/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/hunzahua/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/hunzahua/keyframes"
+      }
+    },
+    {
+      "slug": "el-pozo-de-hunzahua",
+      "triptych_folder": "content/videos/muiscas/mitos/el-pozo-de-hunzahua",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-pozo-de-hunzahua/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-pozo-de-hunzahua/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-pozo-de-hunzahua/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/el-pozo-de-hunzahua/entrada"
+          },
+          {
+            "tag": "b5a",
+            "ref": "mitos/el-pozo-de-hunzahua/acto"
+          },
+          {
+            "tag": "b9a",
+            "ref": "mitos/el-pozo-de-hunzahua/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-pozo-de-hunzahua/keyframes"
+      }
+    },
+    {
+      "slug": "tomagata",
+      "triptych_folder": "content/videos/muiscas/mitos/tomagata",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/tomagata/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/tomagata/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/tomagata/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/tomagata/entrada"
+          },
+          {
+            "tag": "b5a",
+            "ref": "mitos/tomagata/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/tomagata/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/tomagata/keyframes"
+      }
+    },
+    {
+      "slug": "idacanzas",
+      "triptych_folder": "content/videos/muiscas/mitos/idacanzas",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/idacanzas/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/idacanzas/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/idacanzas/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/idacanzas/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/idacanzas/acto"
+          },
+          {
+            "tag": "b9a",
+            "ref": "mitos/idacanzas/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/idacanzas/keyframes"
+      }
+    },
+    {
+      "slug": "el-origen-del-lago-tota",
+      "triptych_folder": "content/videos/muiscas/mitos/el-origen-del-lago-tota",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-origen-del-lago-tota/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-origen-del-lago-tota/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-origen-del-lago-tota/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b3a",
+            "ref": "mitos/el-origen-del-lago-tota/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/el-origen-del-lago-tota/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/el-origen-del-lago-tota/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-origen-del-lago-tota/keyframes"
+      }
+    },
+    {
+      "slug": "en-el-principio-fue-el-maiz",
+      "triptych_folder": "content/videos/muiscas/mitos/en-el-principio-fue-el-maiz",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/en-el-principio-fue-el-maiz/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/en-el-principio-fue-el-maiz/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/en-el-principio-fue-el-maiz/huella.jpg"
+      },
+      "video": {
+        "required": 16,
+        "fulfilled": 16,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b5a",
+            "ref": "mitos/en-el-principio-fue-el-maiz/acto"
+          },
+          {
+            "tag": "b8b",
+            "ref": "mitos/en-el-principio-fue-el-maiz/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/en-el-principio-fue-el-maiz/keyframes"
+      }
+    },
+    {
+      "slug": "chaquon",
+      "triptych_folder": "content/videos/muiscas/mitos/chaquon",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/chaquon/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/chaquon/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/chaquon/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/chaquon/entrada"
+          },
+          {
+            "tag": "b4a",
+            "ref": "mitos/chaquon/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/chaquon/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/chaquon/keyframes"
+      }
+    },
+    {
+      "slug": "el-castigo-de-chaquen",
+      "triptych_folder": "content/videos/muiscas/mitos/el-castigo-de-chaquen",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-castigo-de-chaquen/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-castigo-de-chaquen/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-castigo-de-chaquen/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b4a",
+            "ref": "mitos/el-castigo-de-chaquen/entrada"
+          },
+          {
+            "tag": "b6b",
+            "ref": "mitos/el-castigo-de-chaquen/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/el-castigo-de-chaquen/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-castigo-de-chaquen/keyframes"
+      }
+    },
+    {
+      "slug": "toquecha-y-toquilla",
+      "triptych_folder": "content/videos/muiscas/mitos/toquecha-y-toquilla",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/toquecha-y-toquilla/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/toquecha-y-toquilla/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/toquecha-y-toquilla/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/toquecha-y-toquilla/entrada"
+          },
+          {
+            "tag": "b3b",
+            "ref": "mitos/toquecha-y-toquilla/huella"
+          },
+          {
+            "tag": "b7a",
+            "ref": "mitos/toquecha-y-toquilla/acto"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/toquecha-y-toquilla/keyframes"
+      }
+    },
+    {
+      "slug": "meicuchuca",
+      "triptych_folder": "content/videos/muiscas/mitos/meicuchuca",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/meicuchuca/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/meicuchuca/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/meicuchuca/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/meicuchuca/entrada"
+          },
+          {
+            "tag": "b7a",
+            "ref": "mitos/meicuchuca/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/meicuchuca/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/meicuchuca/keyframes"
+      }
+    },
+    {
+      "slug": "nencatacoa",
+      "triptych_folder": "content/videos/muiscas/mitos/nencatacoa",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/nencatacoa/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/nencatacoa/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/nencatacoa/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b3a",
+            "ref": "mitos/nencatacoa/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/nencatacoa/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/nencatacoa/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/nencatacoa/keyframes"
+      }
+    },
+    {
+      "slug": "los-mojas",
+      "triptych_folder": "content/videos/muiscas/mitos/los-mojas",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/los-mojas/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/los-mojas/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/los-mojas/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/los-mojas/entrada"
+          },
+          {
+            "tag": "b7a",
+            "ref": "mitos/los-mojas/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/los-mojas/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/los-mojas/keyframes"
+      }
+    },
+    {
+      "slug": "nompanem",
+      "triptych_folder": "content/videos/muiscas/mitos/nompanem",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/nompanem/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/nompanem/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/nompanem/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/nompanem/entrada"
+          },
+          {
+            "tag": "b5a",
+            "ref": "mitos/nompanem/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/nompanem/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/nompanem/keyframes"
+      }
+    },
+    {
+      "slug": "nemequene",
+      "triptych_folder": "content/videos/muiscas/mitos/nemequene",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/nemequene/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/nemequene/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/nemequene/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/nemequene/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/nemequene/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/nemequene/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/nemequene/keyframes"
+      }
+    },
+    {
+      "slug": "fu-el-dios-de-la-torpeza",
+      "triptych_folder": "content/videos/muiscas/mitos/fu-el-dios-de-la-torpeza",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/fu-el-dios-de-la-torpeza/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/fu-el-dios-de-la-torpeza/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/fu-el-dios-de-la-torpeza/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/fu-el-dios-de-la-torpeza/entrada"
+          },
+          {
+            "tag": "b5a",
+            "ref": "mitos/fu-el-dios-de-la-torpeza/acto"
+          },
+          {
+            "tag": "b8a",
+            "ref": "mitos/fu-el-dios-de-la-torpeza/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/fu-el-dios-de-la-torpeza/keyframes"
+      }
+    },
+    {
+      "slug": "la-competencia",
+      "triptych_folder": "content/videos/muiscas/mitos/la-competencia",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/la-competencia/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/la-competencia/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/la-competencia/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/la-competencia/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/la-competencia/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/la-competencia/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/la-competencia/keyframes"
+      }
+    },
+    {
+      "slug": "veneracion-a-los-soberanos",
+      "triptych_folder": "content/videos/muiscas/mitos/veneracion-a-los-soberanos",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/veneracion-a-los-soberanos/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/veneracion-a-los-soberanos/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/veneracion-a-los-soberanos/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b3a",
+            "ref": "mitos/veneracion-a-los-soberanos/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/veneracion-a-los-soberanos/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/veneracion-a-los-soberanos/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/veneracion-a-los-soberanos/keyframes"
+      }
+    },
+    {
+      "slug": "la-herencia",
+      "triptych_folder": "content/videos/muiscas/mitos/la-herencia",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/la-herencia/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/la-herencia/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/la-herencia/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/la-herencia/entrada"
+          },
+          {
+            "tag": "b7a",
+            "ref": "mitos/la-herencia/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/la-herencia/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/la-herencia/keyframes"
+      }
+    },
+    {
+      "slug": "la-historia-del-bermejo",
+      "triptych_folder": "content/videos/muiscas/mitos/la-historia-del-bermejo",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/la-historia-del-bermejo/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/la-historia-del-bermejo/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/la-historia-del-bermejo/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 15,
+        "missing": [],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/la-historia-del-bermejo/entrada"
+          },
+          {
+            "tag": "b7a",
+            "ref": "mitos/la-historia-del-bermejo/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/la-historia-del-bermejo/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/la-historia-del-bermejo/keyframes"
+      }
+    },
+    {
+      "slug": "el-bermejo-aspira-a-ser-rey",
+      "triptych_folder": "content/videos/muiscas/mitos/el-bermejo-aspira-a-ser-rey",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-bermejo-aspira-a-ser-rey/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-bermejo-aspira-a-ser-rey/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-bermejo-aspira-a-ser-rey/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 6,
+        "missing": [
+          "b1a",
+          "b5a",
+          "b5b",
+          "b6b",
+          "b7a",
+          "b7b",
+          "b8a",
+          "b8b",
+          "b9a"
+        ],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/el-bermejo-aspira-a-ser-rey/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/el-bermejo-aspira-a-ser-rey/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/el-bermejo-aspira-a-ser-rey/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-bermejo-aspira-a-ser-rey/keyframes"
+      }
+    },
+    {
+      "slug": "campos-eliseos",
+      "triptych_folder": "content/videos/muiscas/mitos/campos-eliseos",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/campos-eliseos/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/campos-eliseos/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/campos-eliseos/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 0,
+        "missing": [
+          "b1b",
+          "b2a",
+          "b2b",
+          "b3a",
+          "b3b",
+          "b4a",
+          "b4b",
+          "b5b",
+          "b6a",
+          "b6b",
+          "b7a",
+          "b7b",
+          "b8a",
+          "b8b",
+          "b9a"
+        ],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/campos-eliseos/entrada"
+          },
+          {
+            "tag": "b5a",
+            "ref": "mitos/campos-eliseos/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/campos-eliseos/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/campos-eliseos/keyframes"
+      }
+    },
+    {
+      "slug": "el-hijo-del-sol-goranchacha",
+      "triptych_folder": "content/videos/muiscas/mitos/el-hijo-del-sol-goranchacha",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-hijo-del-sol-goranchacha/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-hijo-del-sol-goranchacha/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-hijo-del-sol-goranchacha/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 0,
+        "missing": [
+          "b1a",
+          "b1b",
+          "b2b",
+          "b3a",
+          "b3b",
+          "b4a",
+          "b4b",
+          "b5a",
+          "b5b",
+          "b6a",
+          "b6b",
+          "b7b",
+          "b8a",
+          "b8b",
+          "b9a"
+        ],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/el-hijo-del-sol-goranchacha/entrada"
+          },
+          {
+            "tag": "b7a",
+            "ref": "mitos/el-hijo-del-sol-goranchacha/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/el-hijo-del-sol-goranchacha/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-hijo-del-sol-goranchacha/keyframes"
+      }
+    },
+    {
+      "slug": "el-primero-de-los-reyes",
+      "triptych_folder": "content/videos/muiscas/mitos/el-primero-de-los-reyes",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/el-primero-de-los-reyes/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/el-primero-de-los-reyes/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/el-primero-de-los-reyes/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 0,
+        "missing": [
+          "b1b",
+          "b2a",
+          "b2b",
+          "b3a",
+          "b3b",
+          "b4a",
+          "b4b",
+          "b5a",
+          "b5b",
+          "b6b",
+          "b7a",
+          "b7b",
+          "b8a",
+          "b8b",
+          "b9a"
+        ],
+        "reused": [
+          {
+            "tag": "b1a",
+            "ref": "mitos/el-primero-de-los-reyes/entrada"
+          },
+          {
+            "tag": "b6a",
+            "ref": "mitos/el-primero-de-los-reyes/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/el-primero-de-los-reyes/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/el-primero-de-los-reyes/keyframes"
+      }
+    },
+    {
+      "slug": "popon",
+      "triptych_folder": "content/videos/muiscas/mitos/popon",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/popon/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/popon/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/popon/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 0,
+        "missing": [
+          "b1a",
+          "b1b",
+          "b2b",
+          "b3a",
+          "b3b",
+          "b4b",
+          "b5a",
+          "b5b",
+          "b6a",
+          "b6b",
+          "b7a",
+          "b7b",
+          "b8b",
+          "b9a",
+          "b9b"
+        ],
+        "reused": [
+          {
+            "tag": "b2a",
+            "ref": "mitos/popon/entrada"
+          },
+          {
+            "tag": "b4a",
+            "ref": "mitos/popon/acto"
+          },
+          {
+            "tag": "b8a",
+            "ref": "mitos/popon/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/popon/keyframes"
+      }
+    },
+    {
+      "slug": "pacanchique",
+      "triptych_folder": "content/videos/muiscas/mitos/pacanchique",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/pacanchique/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/pacanchique/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/pacanchique/huella.jpg"
+      },
+      "video": {
+        "required": 15,
+        "fulfilled": 0,
+        "missing": [
+          "b1a",
+          "b1b",
+          "b2a",
+          "b2b",
+          "b3b",
+          "b4a",
+          "b4b",
+          "b5a",
+          "b5b",
+          "b6a",
+          "b6b",
+          "b7a",
+          "b7b",
+          "b8b",
+          "b9a"
+        ],
+        "reused": [
+          {
+            "tag": "b3a",
+            "ref": "mitos/pacanchique/entrada"
+          },
+          {
+            "tag": "b8a",
+            "ref": "mitos/pacanchique/acto"
+          },
+          {
+            "tag": "b9b",
+            "ref": "mitos/pacanchique/huella"
+          }
+        ],
+        "folder": "content/videos/muiscas/videos/pacanchique/keyframes"
+      }
+    },
+    {
+      "slug": "bachue",
+      "triptych_folder": "content/videos/muiscas/mitos/bachue",
+      "triptych": {
+        "entrada": "content/videos/muiscas/mitos/bachue/entrada.jpg",
+        "acto": "content/videos/muiscas/mitos/bachue/acto.jpg",
+        "huella": "content/videos/muiscas/mitos/bachue/huella.jpg"
+      },
+      "video": {
+        "required": 0,
+        "fulfilled": 0,
+        "missing": [],
+        "reused": [],
+        "folder": "content/videos/muiscas/videos/bachue/keyframes"
+      }
+    }
+  ],
+  "validation_problems": []
+}

@@ -1,0 +1,261 @@
+{
+  "schema_version": 2,
+  "community_id": 29,
+  "community": "Ette Ennaka",
+  "date": "2026-09-12",
+  "batch": "produccion-api-02",
+  "revision_of": "produccion-api-01",
+  "model": "gpt-image-2.5-sunburst",
+  "counts": {
+    "produced_distinct_units": 6,
+    "remade_distinct_units": 6,
+    "reviewed": 6,
+    "selected_editorial_candidates": 6,
+    "user_approved": 0,
+    "inventory_total": 54,
+    "remaining_unproduced": 48
+  },
+  "inventory_sha256": "f27b8eea9b77b2b0887bddbac12ed73eefc06effb4456dcf98669e5e9c20db09",
+  "snapshot_sha256": "0d71be61ef3538d2daa00949a5cdeed4fc005d82ca9abac0a71340abbcd4d758",
+  "scope_sha256": "69c9d919deb00e1df62dbac9a3c06d6dae748e4de1d2ddc1c8f2202aeface4fc",
+  "documentary_images_uploaded": 0,
+  "generated_reference_inputs_per_request": 1,
+  "paid_successful_output_requests": 8,
+  "qa_corrections": 2,
+  "transport_failures_this_revision": 0,
+  "request_seconds": {
+    "H01": [
+      17.8,
+      15.9
+    ],
+    "P07": [
+      19.6
+    ],
+    "A09": [
+      22.4
+    ],
+    "U07": [
+      17,
+      18.8
+    ],
+    "L01": [
+      20.7
+    ],
+    "V01": [
+      18.2
+    ]
+  },
+  "measured_subprocess_requests": [
+    {
+      "id": "H01",
+      "code": 0,
+      "wall_seconds": 18.03
+    },
+    {
+      "id": "P07",
+      "code": 0,
+      "wall_seconds": 19.865
+    },
+    {
+      "id": "A09",
+      "code": 0,
+      "wall_seconds": 22.631
+    },
+    {
+      "id": "U07",
+      "code": 0,
+      "wall_seconds": 17.228
+    },
+    {
+      "id": "L01",
+      "code": 0,
+      "wall_seconds": 20.86
+    },
+    {
+      "id": "H01",
+      "code": 0,
+      "wall_seconds": 16.103
+    },
+    {
+      "id": "V01",
+      "code": 0,
+      "wall_seconds": 18.39
+    },
+    {
+      "id": "U07",
+      "code": 0,
+      "wall_seconds": 18.956
+    }
+  ],
+  "concurrency_cap": 3,
+  "latency_note": "Observed CLI request times only, not maximum concurrency/rate-limit testing or billing cost evidence.",
+  "variant_parent_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+  "first_batch_files_preserved": true,
+  "entries": [
+    {
+      "unit_id": "P07",
+      "label": "Gran Cacica",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/p07-gran-cacica-master-v1.jpeg",
+      "previous_sha256": "595d21af814b140e586145e5196b20ef7a7783977a0f97fa5f16190ef39337ed",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/p07-gran-cacica-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/p07.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/p07-gran-cacica-master-v2.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Rectángulos de algodón, falda corta y cordón apoyados por archivo1946; fijación exacta de tela superior, edad y peinado siguen siendo adaptación.",
+        "Una identidad original en cinco vistas; sin copiar a la mujer del archivo ni inventar insignias de autoridad."
+      ],
+      "sha256": "62d263a33482d587e15fa5e1e84674541836acf7a13b491a3fb50a6178bc2da1",
+      "bytes": 141006,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "44084ad5e8e62fa4f56570937d8962326a6bd8c1a01d657701034acaf9ca1179",
+      "input_sha256": "595d21af814b140e586145e5196b20ef7a7783977a0f97fa5f16190ef39337ed",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "P07@produccion-api-01"
+      ]
+    },
+    {
+      "unit_id": "H01",
+      "label": "Cuatro adultos de apoyo",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/h01-cuatro-adultos-master-v1.jpeg",
+      "previous_sha256": "85ff968afc05644a2c232ed3f4251a8e6cb968be1ed197876e956e4c442739a7",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/h01.refinement.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2-refined.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Cuatro adultos de apoyo, no una familia canónica ni uniforme universal.",
+        "Dos mujeres corregidas a largo inmediatamente bajo rodillas; construcción y fijación exactas de las telas superiores son propuestas, no reproducción certificada."
+      ],
+      "sha256": "b03ddfbf86ce57d582cbb1dce65928a05883d0aadf467491806f236d6eac90f3",
+      "bytes": 112193,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "c6850bcc18f3bbd8f3ca0caca1aea0e4afafeac241fd935d69acea54498fa0c4",
+      "input_sha256": "ba0b7b3e78a62308dee39bc5184dcdd2d326da8966462d5971d25e9e23663ed2",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "H01@produccion-api-02-intermediate",
+        "H01@produccion-api-01"
+      ]
+    },
+    {
+      "unit_id": "A09",
+      "label": "Morrocoyo con caparazón",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/a09-morrocoyo-master-v1.jpeg",
+      "previous_sha256": "9a8d485fc85bf692b822613bc7029e56d5b9ad32f850a788124e1d8c97bf38f1",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/a09-morrocoyo-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/a09.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/a09-morrocoyo-master-v2.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Patrón oscuro/ocre y proporciones ajustados a las referencias de fauna; especie del mito no certificada.",
+        "Caparazón final solamente; segmentación de papel simplificada, sin transformación previa."
+      ],
+      "sha256": "fc43ab74c88cab65a1f4e7986307d7176398e29c599ad2480cbd8ab571ed02de",
+      "bytes": 201468,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "2d7e9d9d323d6a1d1536d1f7fef31e1b95a0032ddceaffa9ef59bf01aaed33a5",
+      "input_sha256": "9a8d485fc85bf692b822613bc7029e56d5b9ad32f850a788124e1d8c97bf38f1",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "A09@produccion-api-01"
+      ]
+    },
+    {
+      "unit_id": "L01",
+      "label": "Monte, camino y claro",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/l01-monte-camino-claro-master-v1.jpeg",
+      "previous_sha256": "a15b470a6d425572ae9ac66e894b2f86ba8d4be77afa9c7c4bd27bb1f2cdf130",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/l01-monte-camino-claro-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/l01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Borde de monte/regeneración ficticio de horizonte bajo; no reconstrucción cartográfica ni equivalencia de paisajes actuales con bosque histórico.",
+        "Tres encuadres con tronco inclinado, arbustos, sendero estrecho y roca pequeña como anclas; follaje aún estilizado, sin identificar especies por forma."
+      ],
+      "sha256": "3659d3a8c7bb1e23c1d680e6c1429cacc4ea37c6c88087d444972cd28e94b0bd",
+      "bytes": 449641,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "cfef2de0ef48d44a70f32982c3d211aeff23d06dc8e3c77d2bc0879b0a9cb9aa",
+      "input_sha256": "a15b470a6d425572ae9ac66e894b2f86ba8d4be77afa9c7c4bd27bb1f2cdf130",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "L01@produccion-api-01"
+      ]
+    },
+    {
+      "unit_id": "U07",
+      "label": "Mochilas: algodón y fique",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/u07-mochilas-algodon-fique-master-v1.jpeg",
+      "previous_sha256": "92e8aaf29d51216c3e437ae465ecd3bae99331adca11b45c520758bf52be4ca4",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/u07-mochilas-algodon-fique-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/u07.refinement.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/u07-mochilas-algodon-fique-master-v2-refined.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Algodón: construcción contemporánea referencial; geometría y cierre del fique aún provisionales por falta de referente directo atribuido.",
+        "Tejido fino y correas anchas; se descartó la primera revisión con aspecto de cesta enrollada.",
+        "Errata bibliográfica del prompt inicial: V02 corresponde a British Council Colombia, no Banco de la República; prompt efectivo conservado."
+      ],
+      "sha256": "e1bdfb78a6096e2a8912968a9a1eef3be7a13d06dbc057646669b2c367cf2309",
+      "bytes": 223538,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "eaff908885b40d73fecd1b94ed3d806343747e3b93a573c51be59606da3add3d",
+      "input_sha256": "e58d504c81af87f180fa62b0b2162d065d51a8a76f178cf0ebca1bd2af9f5a56",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "U07@produccion-api-02-intermediate",
+        "U07@produccion-api-01"
+      ]
+    },
+    {
+      "unit_id": "V01",
+      "label": "Monte inundado",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01/v01-monte-inundado-v1.jpeg",
+      "previous_sha256": "4881036fd279c37ef03574f7bb0ea6c56745129a079f168bb946e137420d4c1f",
+      "input_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-02/v01.prompt.txt",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/v01-monte-inundado-v2.jpeg",
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "scope_notes": [
+        "Sólo variante de L01v2 para mito350, sin fusionar cosmología579 ni otras bases aún no producidas.",
+        "Tres encuadres y anclas reconocibles; sendero/claro sumergidos. No certificación cultural o cartográfica."
+      ],
+      "sha256": "75eb8661c859627ef8b71426b2965a0809354144132bb6f18b6dbe0d1489ee4b",
+      "bytes": 363203,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "1cc2b45186275c95ecb1cc3d5c6ddf3b5560aeb4d91f127283498bcbd1c7f998",
+      "input_sha256": "3659d3a8c7bb1e23c1d680e6c1429cacc4ea37c6c88087d444972cd28e94b0bd",
+      "endpoint": "/v1/images/edits",
+      "derived_from": [
+        "L01@produccion-api-02"
+      ]
+    }
+  ]
+}

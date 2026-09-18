@@ -1,0 +1,129 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-aramai-magic-triptych-01",
+  "created_at": "2026-09-04T21:09:11.901Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "aramai",
+  "plan": "content/mitos-visuales/wayuu.tripticos.v1.json",
+  "evidence": [
+    {
+      "type": "primary_source",
+      "author": "Milcíades Chaves Ch.",
+      "title": "Mitos, leyendas y cuentos de la Guajira",
+      "publication": "Boletín de Arqueología, volumen II, número 4",
+      "year": 1946,
+      "pages": "314-315 de la paginación impresa; página 10 del PDF",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "supports": "Arámai es un hombre mayor; pide a Mareiwa enfermedades ante la falta de espacio y alimentos; Mareiwa envía pestes y a Wanurü por La Guajira; la comunidad culpa a Arámai."
+    },
+    {
+      "type": "internal_visual_research",
+      "path": "editorial/wayuu/material-culture-v3.mjs",
+      "supports": "Repertorio de indumentaria masculina completa, usos, límites y cautelas de representación."
+    }
+  ],
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "aramai__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/aramai__identity_sheet--canon.jpeg",
+      "sha256": "ec13d40a57184f34fa89e3c7d7546968134222f3cd8635d023f1c4e429fcc52a",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "mareiwa__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/mareiwa__state_sheet--estados.jpeg",
+      "sha256": "8644c37d610930c79b789b7b9cd2ac1bcb0016baa11599ffc63917ef50c2b2fb",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "wanuru__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/wanuru__presence_model--canon.jpeg",
+      "sha256": "c8406e27227a5dc245346be4465b977665190a4f5e89e12153545cb832a68f30",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "epidemia_aramai__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-01/epidemia_aramai__phenomenon_rule--canon.jpeg",
+      "sha256": "19f8905947cb9e407806da12899774c5e9ce0d3576304ef9e4ce9e92faf8d100",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "jaguey__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-01/jaguey__spatial_model--canon.jpeg",
+      "sha256": "4000944b67796537764030d9c65a5aec2e75ea0709a34b13e8bf3d07671ce9d7",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "approval_gate": "Arámai se revisa como piloto; no se produce otro tríptico Wayúu sin aprobación explícita del editor",
+  "requested_acts": [
+    "entrada",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x1024",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "peso_contrario",
+      "canon_model_ids": [
+        "aramai__identity_sheet",
+        "mareiwa__state_sheet",
+        "wanuru__presence_model",
+        "epidemia_aramai__phenomenon_rule",
+        "jaguey__spatial_model",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "b71536589eef450dc98afa10bb76e16cfd486e58fb3482a59ce1b2493fccc647",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "paisaje_abierto",
+      "canon_model_ids": [
+        "aramai__identity_sheet",
+        "mareiwa__state_sheet",
+        "wanuru__presence_model",
+        "epidemia_aramai__phenomenon_rule",
+        "jaguey__spatial_model",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "802f18eda2c92de1fb41b1db9ceac67628a677ddbc5d90253a91bcb8b37ddf1a",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

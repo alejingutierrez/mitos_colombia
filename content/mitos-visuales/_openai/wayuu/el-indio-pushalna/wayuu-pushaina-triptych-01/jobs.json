@@ -1,0 +1,248 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-pushaina-triptych-01",
+  "created_at": "2026-09-06T10:31:57.252Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-indio-pushalna",
+  "plan": "content/mitos-visuales/wayuu.pushaina.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "b729975d5f35961ada36e5aefd60a30e6fee13625ce3b930df72a42bea8d9f47",
+  "narrative_target_sha256": "0168590b318aac963533e1814489c443d01bcd6e7b85d517c103f7bf5213dc79",
+  "evidence": [
+    {
+      "id": "published_pushaina",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-pushalna.json",
+      "supports": "Texto público congelado: retorno, presencia, anillo, metamorfosis y hambre.",
+      "limits": "Presencia externa, anillo escondido por familia y rito final son ampliaciones editoriales; no atribuirlas literalmente a Chaves."
+    },
+    {
+      "id": "chaves_315_316",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "315–316, PDF 11–12",
+      "supports": "Retorno, voz sin cuerpo, comida, conocimiento del anillo y formas animales.",
+      "limits": "Transcripción mediada; no ofrece retrato ni vestuario exacto. No representar prueba sexualizada ni muertes."
+    },
+    {
+      "id": "bible_lot14",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-14-pushaina-v3.md",
+      "supports": "Identidad y cultura material diferenciada; animal, anillo, platos, arquitectura.",
+      "limits": "Colores, corte y geometría son decisiones editoriales reversibles."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T10:31:56.461Z",
+    "reviewed_reference_ids": [
+      "9701031d494beb7d5e57",
+      "77b3ab809a966962ee88"
+    ],
+    "retained": [
+      "Azul profundo y ocre con planos de territorio separados; quietud y amplitud de mundo artesanal.",
+      "Recortes de papel y contraste entre figura y entorno, sin copiar la escena ecuestre."
+    ],
+    "rejected": [
+      "Jinete heroico gigante, cabello largo, tocado, pecho descubierto y arneses decorados contradicen las fichas seleccionadas.",
+      "Mar cercano, selva exuberante, luna/sol gigante y plantas en roseta usados como ornamentación indiferenciada."
+    ],
+    "influence_by_act": {
+      "entrada": "Mantener paleta y profundidad, pasar del paseo ecuestre a la transformación en gallinazo mediante sombra que se vuelve cuerpo.",
+      "acto": "Llevar el contraste azul/ocre a una habitación cotidiana: hombre pequeño que escucha y anillo revelado a través de una pared de papel.",
+      "huella": "Eliminar todo paisaje y reparto; un único plato con vacío interior imposible condensa hambre y deuda."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "pushaina__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02/pushaina__identity_sheet--canon.jpeg",
+      "sha256": "0b0cfaf88cd9ab4d461a7fba561c20c26b7afbc0449d21ebe0f35138593955d0",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "pushaina__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02/pushaina__state_sheet--estados.jpeg",
+      "sha256": "b694e53e3d2ba7e586920d5398787b34788b1aad147001d1449f3251975063ae",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "gallinazo_pushaina__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/gallinazo_pushaina__identity_sheet--canon.jpeg",
+      "sha256": "2411cef86556da977b846f043faa6eee9100bfaa702174e06db3785e23d85dfe",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "anillo_oculto_pushaina__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/anillo_oculto_pushaina__object_sheet--canon.jpeg",
+      "sha256": "4672a2e3431cef9c175404d2fb8d15d3d44b689d3e70974d2125954a1cfe74d1",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "ofrenda_alimento_pushaina__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/ofrenda_alimento_pushaina__object_sheet--canon.jpeg",
+      "sha256": "c6b1a1e70b86f07d726c129a61a68260df657bb18666007566f197802f51f20c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "casa_grande_pushaina__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/casa_grande_pushaina__spatial_model--canon.jpeg",
+      "sha256": "dbd19756f2bce661f5b378c6be7115c1bfb71dc63f5f8a3a7a43238f2dd9e067",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "presencia_invisible_pushaina__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/presencia_invisible_pushaina__presence_model--canon.jpeg",
+      "sha256": "1c39e51243289f63bc4fdb2602d51c1beee48679d2df15a45badac8e92cd3251",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "pushaina__identity_sheet",
+        "pushaina__state_sheet",
+        "gallinazo_pushaina__identity_sheet",
+        "anillo_oculto_pushaina__object_sheet",
+        "ofrenda_alimento_pushaina__object_sheet",
+        "casa_grande_pushaina__spatial_model",
+        "presencia_invisible_pushaina__presence_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "3b09e7c6d6b2c857bc8b2cedf66be13ed75cb39a58a9c9f40e4e34c9e600df13",
+      "narrative_event_ids": [
+        "metamorfosis"
+      ],
+      "editorial_translation": "Traducción material editorial de motivos del relato; la geometría imposible no se afirma como hecho etnográfico.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Un hombre y su sombra en el patio de una casa.",
+        "impossible_behavior": "La sombra permanece unida a sus pies pero se levanta y adquiere cuerpo de gallinazo.",
+        "narrative_effect": "Hace visible la continuidad entre Pushaina y otra forma corporal sin presentar un animal acompañante.",
+        "agency": "Metamorfosis ligada a Pushaina; él no la dirige con las manos.",
+        "physical_translation": "Una sola pieza negra pasa de sombra plana a cola y ave tridimensional.",
+        "visible_test": "¿Puede seguirse una conexión desde los pies al ave elevada, con el hombre pequeño y las alas completas?",
+        "event_ids": [
+          "metamorfosis"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "pushaina__identity_sheet",
+        "pushaina__state_sheet",
+        "gallinazo_pushaina__identity_sheet",
+        "anillo_oculto_pushaina__object_sheet",
+        "ofrenda_alimento_pushaina__object_sheet",
+        "casa_grande_pushaina__spatial_model",
+        "presencia_invisible_pushaina__presence_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "25a8f85bd156f8856f4142ce28f31dca9d92ace97a927e58ab51bcc5ee408354",
+      "narrative_event_ids": [
+        "anillo",
+        "prueba_familia"
+      ],
+      "editorial_translation": "Traducción material editorial de motivos del relato; la geometría imposible no se afirma como hecho etnográfico.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Un anillo escondido y un hombre que escucha.",
+        "impossible_behavior": "Una capa opaca de pared se abre como papel para revelar lo que la mirada no alcanza.",
+        "narrative_effect": "La imagen hace visible al espectador el hallazgo, sin afirmar que Pushaina derribe la pared.",
+        "agency": "Pushaina escucha; el despliegue de pared pertenece a la narración visual, no a un gesto de control.",
+        "physical_translation": "Lámina de pared conectada por arriba con curva, aire y sombra; aro pequeño en el hueco.",
+        "visible_test": "¿La pared conserva su unión y revela un único aro, mientras el hombre pequeño escucha con brazos bajos?",
+        "event_ids": [
+          "anillo",
+          "prueba_familia"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "pushaina__identity_sheet",
+        "pushaina__state_sheet",
+        "gallinazo_pushaina__identity_sheet",
+        "anillo_oculto_pushaina__object_sheet",
+        "ofrenda_alimento_pushaina__object_sheet",
+        "casa_grande_pushaina__spatial_model",
+        "presencia_invisible_pushaina__presence_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-pushalna/wayuu-pushaina-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "12449305e2722f1962e1ac994744e503d8386047ed531227063e9182377ece37",
+      "narrative_event_ids": [
+        "hambre"
+      ],
+      "editorial_translation": "Traducción material editorial de motivos del relato; la geometría imposible no se afirma como hecho etnográfico.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Un plato que queda vacío después de alimentar una voz invisible.",
+        "impossible_behavior": "La cavidad interior desciende mucho más de lo que permite su exterior poco profundo.",
+        "narrative_effect": "Condensa hambre y obligación persistentes sin representar una ceremonia.",
+        "agency": "Síntesis editorial: no se muestra quién come ni se identifica una entidad externa.",
+        "physical_translation": "Un plato único con seis capas interiores descendentes, aire y sombra.",
+        "visible_test": "¿Se reconoce un plato vacío cuya profundidad interior no cabe en su cuerpo, sin escena añadida?",
+        "event_ids": [
+          "hambre"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "El hambre de lo invisible no se agota al vaciar un plato.",
+        "carrier": "Un único plato vacío.",
+        "operation": "Profundidad interior imposible en un recipiente exterior poco profundo.",
+        "story_connection": "La demanda de alimento y los platos vacíos del relato.",
+        "visible_test": "Un plato reconocible y vacío contiene capas que descienden más de lo físicamente posible."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

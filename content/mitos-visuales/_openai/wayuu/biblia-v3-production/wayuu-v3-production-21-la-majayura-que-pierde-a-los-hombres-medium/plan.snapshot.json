@@ -1,0 +1,856 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium",
+    "myth_slug": "la-majayura-que-pierde-a-los-hombres",
+    "model_ids": [
+      "majayura_puro__identity_sheet",
+      "majayura_puro__state_sheet",
+      "hombres_alcanzados_puro__group_grammar",
+      "cueva_puro__spatial_model",
+      "desorientacion_puro__phenomenon_rule",
+      "secreto_y_silencio_puro__phenomenon_rule",
+      "piedra_blanca_movil_puro__phenomenon_rule",
+      "papach_piedra__object_sheet"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_after_primary_source_reaudit"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "majayura_puro__identity_sheet",
+    "majayura_puro__state_sheet",
+    "hombres_alcanzados_puro__group_grammar",
+    "cueva_puro__spatial_model",
+    "desorientacion_puro__phenomenon_rule",
+    "secreto_y_silencio_puro__phenomenon_rule",
+    "piedra_blanca_movil_puro__phenomenon_rule",
+    "papach_piedra__object_sheet"
+  ],
+  "models": {
+    "majayura_puro__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "majayura_puro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Se aparece de dia o de noche, elige, desorienta y conduce hacia Puró."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Majayura de Puró. Funcion visual: Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Majayura de Puró",
+          "funcion estable: Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+          "estados declarados: aparicion_diurna, aparicion_nocturna, guia_hacia_puro"
+        ],
+        "documented_features": [
+          "Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Majayura de Puró. Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+          "estados autorizados: aparicion_diurna, aparicion_nocturna, guia_hacia_puro",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "aparicion_diurna"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "majayura_puro__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "majayura_puro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Se aparece de dia o de noche, elige, desorienta y conduce hacia Puró."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Majayura de Puró. Funcion visual: Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Majayura de Puró",
+          "funcion estable: Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+          "estados declarados: aparicion_diurna, aparicion_nocturna, guia_hacia_puro"
+        ],
+        "documented_features": [
+          "Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Majayura de Puró. Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+          "estados autorizados: aparicion_diurna, aparicion_nocturna, guia_hacia_puro",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "aparicion_diurna",
+            "aparicion_nocturna",
+            "guia_hacia_puro"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hombres_alcanzados_puro__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "hombres_alcanzados_puro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Casos anonimos y alternos de quienes la siguen, regresan o no vuelven."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Hombres a quienes se aparece la majayura. Funcion visual: Conjunto editorial de hombres Wayuu adultos sin nombre ni identidad individual fijada; la fuente describe casos posibles, no una expedicion simultanea ni un primer joven canonico.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Hombres a quienes se aparece la majayura",
+          "funcion estable: Conjunto editorial de hombres Wayuu adultos sin nombre ni identidad individual fijada; la fuente describe casos posibles, no una expedicion simultanea ni un primer joven canonico.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjunto editorial de hombres Wayuu adultos sin nombre ni identidad individual fijada; la fuente describe casos posibles, no una expedicion simultanea ni un primer joven canonico."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Hombres a quienes se aparece la majayura. Conjunto editorial de hombres Wayuu adultos sin nombre ni identidad individual fijada; la fuente describe casos posibles, no una expedicion simultanea ni un primer joven canonico.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Conjunto editorial de hombres Wayuu adultos sin nombre ni identidad individual fijada; la fuente describe casos posibles, no una expedicion simultanea ni un primer joven canonico.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "cueva_puro__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "cueva_puro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Cueva sagrada a la que ningun ser viviente debe entrar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Cueva sagrada de Puró. Funcion visual: Cueva sagrada a la que ningun ser viviente debe entrar; no se georreferencia, no se abre como destino turistico y la fuente no describe puerta, agua, tesoro ni voces.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Cueva sagrada de Puró",
+          "funcion estable: Cueva sagrada a la que ningun ser viviente debe entrar; no se georreferencia, no se abre como destino turistico y la fuente no describe puerta, agua, tesoro ni voces.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cueva sagrada a la que ningun ser viviente debe entrar; no se georreferencia, no se abre como destino turistico y la fuente no describe puerta, agua, tesoro ni voces."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Cueva sagrada de Puró. Cueva sagrada a la que ningun ser viviente debe entrar; no se georreferencia, no se abre como destino turistico y la fuente no describe puerta, agua, tesoro ni voces.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Cueva sagrada a la que ningun ser viviente debe entrar; no se georreferencia, no se abre como destino turistico y la fuente no describe puerta, agua, tesoro ni voces.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "desorientacion_puro__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "desorientacion_puro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Deshace la orientacion antes del recorrido hacia Puró."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Desorientación que conduce hacia Puró. Funcion visual: Alteracion del recorrido por la cual la distancia, la direccion y las referencias dejan de coincidir mientras la majayura guia hacia Puró.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Desorientación que conduce hacia Puró",
+          "funcion estable: Alteracion del recorrido por la cual la distancia, la direccion y las referencias dejan de coincidir mientras la majayura guia hacia Puró.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Alteracion del recorrido por la cual la distancia, la direccion y las referencias dejan de coincidir mientras la majayura guia hacia Puró."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Desorientación que conduce hacia Puró. Alteracion del recorrido por la cual la distancia, la direccion y las referencias dejan de coincidir mientras la majayura guia hacia Puró.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Alteracion del recorrido por la cual la distancia, la direccion y las referencias dejan de coincidir mientras la majayura guia hacia Puró.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "secreto_y_silencio_puro__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "secreto_y_silencio_puro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Conocimiento revelado y prohibicion de divulgarlo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Secretos de Puró y regla de silencio. Funcion visual: Conocimiento del territorio revelado a quien llega o regresa, ligado a la prohibicion de contar lo visto o hecho; no es tesoro material, escritura, libro ni simbolo.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Secretos de Puró y regla de silencio",
+          "funcion estable: Conocimiento del territorio revelado a quien llega o regresa, ligado a la prohibicion de contar lo visto o hecho; no es tesoro material, escritura, libro ni simbolo.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conocimiento del territorio revelado a quien llega o regresa, ligado a la prohibicion de contar lo visto o hecho; no es tesoro material, escritura, libro ni simbolo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Secretos de Puró y regla de silencio. Conocimiento del territorio revelado a quien llega o regresa, ligado a la prohibicion de contar lo visto o hecho; no es tesoro material, escritura, libro ni simbolo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Conocimiento del territorio revelado a quien llega o regresa, ligado a la prohibicion de contar lo visto o hecho; no es tesoro material, escritura, libro ni simbolo.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "piedra_blanca_movil_puro__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "piedra_blanca_movil_puro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Parece cercana, se aleja y entra al mar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Apariencia de piedra blanca que se aleja. Funcion visual: Apariencia semejante a una piedra blanca cercana que retrocede cuando el hombre avanza y entra al mar; no se fija como roca geologica ni como anatomia de la majayura.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Apariencia de piedra blanca que se aleja",
+          "funcion estable: Apariencia semejante a una piedra blanca cercana que retrocede cuando el hombre avanza y entra al mar; no se fija como roca geologica ni como anatomia de la majayura.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Apariencia semejante a una piedra blanca cercana que retrocede cuando el hombre avanza y entra al mar; no se fija como roca geologica ni como anatomia de la majayura."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Apariencia de piedra blanca que se aleja. Apariencia semejante a una piedra blanca cercana que retrocede cuando el hombre avanza y entra al mar; no se fija como roca geologica ni como anatomia de la majayura.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Apariencia semejante a una piedra blanca cercana que retrocede cuando el hombre avanza y entra al mar; no se fija como roca geologica ni como anatomia de la majayura.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "papach_piedra__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "papach_piedra"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Resultado petreo nombrado por la fuente, no persona sabia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Papach, piedra de Puró. Funcion visual: Piedra nombrada Papach como resultado petreo del relato; no es sabedor, personaje, estatua humana ni lugar georreferenciado.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Papach, piedra de Puró",
+          "funcion estable: Piedra nombrada Papach como resultado petreo del relato; no es sabedor, personaje, estatua humana ni lugar georreferenciado.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Piedra nombrada Papach como resultado petreo del relato; no es sabedor, personaje, estatua humana ni lugar georreferenciado."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Papach, piedra de Puró. Piedra nombrada Papach como resultado petreo del relato; no es sabedor, personaje, estatua humana ni lugar georreferenciado.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Piedra nombrada Papach como resultado petreo del relato; no es sabedor, personaje, estatua humana ni lugar georreferenciado.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "majayura_puro": {
+      "name": "Majayura de Puró",
+      "kind": "criatura",
+      "description": "Joven de apariencia humana, elegante y bien vestida, que se aparece de dia o de noche, desorienta y conduce hacia Puró; belleza y eleccion no equivalen a permiso o disponibilidad.",
+      "aliases": [],
+      "states": [
+        "aparicion_diurna",
+        "aparicion_nocturna",
+        "guia_hacia_puro"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "majayura_puro__identity_sheet",
+        "majayura_puro__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-majayura-que-pierde-a-los-hombres"
+      ],
+      "evidence": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Se aparece de dia o de noche, elige, desorienta y conduce hacia Puró."
+        }
+      ]
+    },
+    "hombres_alcanzados_puro": {
+      "name": "Hombres a quienes se aparece la majayura",
+      "kind": "colectivo",
+      "description": "Conjunto editorial de hombres Wayuu adultos sin nombre ni identidad individual fijada; la fuente describe casos posibles, no una expedicion simultanea ni un primer joven canonico.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "hombres_alcanzados_puro__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-majayura-que-pierde-a-los-hombres"
+      ],
+      "evidence": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Casos anonimos y alternos de quienes la siguen, regresan o no vuelven."
+        }
+      ]
+    },
+    "cueva_puro": {
+      "name": "Cueva sagrada de Puró",
+      "kind": "lugar",
+      "description": "Cueva sagrada a la que ningun ser viviente debe entrar; no se georreferencia, no se abre como destino turistico y la fuente no describe puerta, agua, tesoro ni voces.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "cueva_puro__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-majayura-que-pierde-a-los-hombres"
+      ],
+      "evidence": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Cueva sagrada a la que ningun ser viviente debe entrar."
+        }
+      ]
+    },
+    "desorientacion_puro": {
+      "name": "Desorientación que conduce hacia Puró",
+      "kind": "fenomeno",
+      "description": "Alteracion del recorrido por la cual la distancia, la direccion y las referencias dejan de coincidir mientras la majayura guia hacia Puró.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "desorientacion_puro__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-majayura-que-pierde-a-los-hombres"
+      ],
+      "evidence": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Deshace la orientacion antes del recorrido hacia Puró."
+        }
+      ]
+    },
+    "secreto_y_silencio_puro": {
+      "name": "Secretos de Puró y regla de silencio",
+      "kind": "fenomeno",
+      "description": "Conocimiento del territorio revelado a quien llega o regresa, ligado a la prohibicion de contar lo visto o hecho; no es tesoro material, escritura, libro ni simbolo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "secreto_y_silencio_puro__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-majayura-que-pierde-a-los-hombres"
+      ],
+      "evidence": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Conocimiento revelado y prohibicion de divulgarlo."
+        }
+      ]
+    },
+    "piedra_blanca_movil_puro": {
+      "name": "Apariencia de piedra blanca que se aleja",
+      "kind": "fenomeno",
+      "description": "Apariencia semejante a una piedra blanca cercana que retrocede cuando el hombre avanza y entra al mar; no se fija como roca geologica ni como anatomia de la majayura.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "piedra_blanca_movil_puro__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-majayura-que-pierde-a-los-hombres"
+      ],
+      "evidence": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Parece cercana, se aleja y entra al mar."
+        }
+      ]
+    },
+    "papach_piedra": {
+      "name": "Papach, piedra de Puró",
+      "kind": "objeto",
+      "description": "Piedra nombrada Papach como resultado petreo del relato; no es sabedor, personaje, estatua humana ni lugar georreferenciado.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "papach_piedra__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-majayura-que-pierde-a-los-hombres"
+      ],
+      "evidence": [
+        {
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "field": "mito",
+          "note": "Resultado petreo nombrado por la fuente, no persona sabia."
+        }
+      ]
+    }
+  }
+}

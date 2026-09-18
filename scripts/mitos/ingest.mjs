@@ -11,10 +11,11 @@
  *
  *   npm run mitos:ingest -- --comunidad muiscas --slug creacion-muiscas
  */
-import { readdir, mkdir, writeFile, rm } from "node:fs/promises";
+import { readdir, mkdir, writeFile, rm, readFile } from "node:fs/promises";
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import sharp from "sharp";
+import { IMAGE_QUALITY_POLICY, qualityForTriptychAct } from "../../src/lib/image-quality-policy.js";
 
 const args = Object.fromEntries(
   process.argv.slice(2).reduce((acc, a, i, arr) => {
@@ -48,8 +49,12 @@ function actoDe(w, h) {
 }
 
 const FORMATO = { entrada: "horizontal", acto: "vertical", huella: "cuadrada" };
-const dir = join("content/videos", comunidad, "mitos", slug);
+const dir = join("content/videos", comunidad, "mitos", mito.carpeta || slug);
 await mkdir(dir, { recursive: true });
+const manifestPath = join(dir, "manifest.json");
+const manifestPrevio = existsSync(manifestPath)
+  ? JSON.parse(await readFile(manifestPath, "utf8"))
+  : null;
 
 const encontrados = {};
 for (const f of archivos) {
@@ -63,15 +68,9 @@ for (const f of archivos) {
   }
   if (encontrados[acto]) throw new Error(`dos archivos con la misma proporción para "${acto}": ${encontrados[acto].archivo_origen} y ${f}. Deja sólo el bueno en la bandeja.`);
 
-  await sharp(buf).png().toFile(join(dir, `${slug}-${FORMATO[acto]}.png`));
-  await sharp(buf).jpeg({ quality: 92 }).toFile(join(dir, `${acto}.jpg`));
-  if (acto === "acto") {
-    await sharp(buf).resize(1080, 1920, { fit: "cover" }).jpeg({ quality: 92 })
-      .toFile(join(dir, "acto.crop-9x16.jpg"));
-  }
-
   const escena = mito.escenas[acto];
   encontrados[acto] = {
+    buf,
     acto,
     archivo: `${slug}-${FORMATO[acto]}.png`,
     archivo_origen: f,
@@ -80,18 +79,43 @@ for (const f of archivos) {
     composicion: escena?.composicion,
     refs: escena?.refs || [],
     escena: escena?.escena,
+    quality: qualityForTriptychAct(acto),
   };
-  console.log(`  ✔ ${acto.padEnd(8)} ${String(meta.width).padStart(4)}x${String(meta.height).padEnd(4)} ${escena?.composicion || "?"}   ← ${f}`);
 }
 
-const faltan = ["entrada", "acto", "huella"].filter((a) => !encontrados[a]);
+// Prevalida todas las salidas antes de escribir la primera. Se permite completar
+// un tríptico parcial, pero nunca volver a escribir un rol ya presente.
+for (const [acto, item] of Object.entries(encontrados)) {
+  const formato = FORMATO[acto];
+  const destinos = [join(dir, `${slug}-${formato}.png`), join(dir, `${acto}.jpg`)];
+  if (acto === "acto") destinos.push(join(dir, "acto.crop-9x16.jpg"));
+  if (destinos.some(existsSync) || manifestPrevio?.items?.[formato]) {
+    throw new Error(`el rol "${acto}" ya existe; la ingesta aditiva no reemplaza archivos ni manifiesto`);
+  }
+}
+
+for (const [acto, item] of Object.entries(encontrados)) {
+  await sharp(item.buf).png().toFile(join(dir, `${slug}-${FORMATO[acto]}.png`));
+  await sharp(item.buf).jpeg({ quality: 92 }).toFile(join(dir, `${acto}.jpg`));
+  if (acto === "acto") {
+    await sharp(item.buf).resize(1080, 1920, { fit: "cover" }).jpeg({ quality: 92 })
+      .toFile(join(dir, "acto.crop-9x16.jpg"));
+  }
+  console.log(`  ✔ ${acto.padEnd(8)} ${String(item.px.split("x")[0]).padStart(4)}x${item.px.split("x")[1].padEnd(4)} ${item.composicion || "?"}   ← ${item.archivo_origen}`);
+}
+
+const items = { ...(manifestPrevio?.items || {}) };
+for (const acto of ["entrada", "acto", "huella"]) {
+  if (encontrados[acto]) {
+    const { buf, ...item } = encontrados[acto];
+    items[FORMATO[acto]] = item;
+  }
+}
+const faltan = ["entrada", "acto", "huella"].filter((a) => !items[FORMATO[a]]);
 if (faltan.length) console.warn(`\n  ⚠ falta(n): ${faltan.join(", ")} — el manifiesto queda incompleto`);
 
-const items = {};
-for (const acto of ["entrada", "acto", "huella"]) {
-  if (encontrados[acto]) items[FORMATO[acto]] = encontrados[acto];
-}
-await writeFile(join(dir, "manifest.json"), JSON.stringify({
+await writeFile(manifestPath, JSON.stringify({
+  ...(manifestPrevio || {}),
   spec: `${comunidad}-mitos-triptico`,
   mito: slug,
   slug,
@@ -105,7 +129,7 @@ await writeFile(join(dir, "manifest.json"), JSON.stringify({
   generado_en: "higgsfield.ai (web, unlimited)",
   model: "gpt_image_2",
   resolution: "2k",
-  quality: "high",
+  image_quality: IMAGE_QUALITY_POLICY.triptych,
   costo_creditos: 0,
   fecha: args.fecha || new Date().toISOString().slice(0, 10),
   estrena: mito.estrena || [],
@@ -113,8 +137,10 @@ await writeFile(join(dir, "manifest.json"), JSON.stringify({
 }, null, 2) + "\n");
 
 console.log(`\n  manifiesto → ${join(dir, "manifest.json")}`);
-if (!faltan.length && !args["conservar-bandeja"]) {
+if (!faltan.length && args["vaciar-bandeja"]) {
   await rm(inbox, { recursive: true, force: true });
   console.log(`  bandeja vaciada`);
+} else if (!faltan.length) {
+  console.log(`  bandeja conservada (usa --vaciar-bandeja sólo si quieres eliminarla)`);
 }
 console.log(`\n  publicar al sitio:  npm run images:apply:triptych -- --slug ${slug} --dir ${dir}`);

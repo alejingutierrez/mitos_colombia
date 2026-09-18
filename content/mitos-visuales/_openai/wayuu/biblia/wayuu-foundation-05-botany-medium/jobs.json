@@ -1,0 +1,43 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-foundation-05-botany-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-05-botany-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección botánica posterior a QA; sólo Macuira sin cactus columnares y flora con iguaraya como fruto del cardón, en medium y con profundidad 3D interna sin soporte exterior visible.",
+  "jobs": [
+    {
+      "id": "macuira_ecotono--canon",
+      "model_id": "macuira_ecotono",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-05-botany-medium/prompts/macuira_ecotono--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-foundation-05-botany-medium/macuira_ecotono--canon.jpeg",
+      "prompt_sha256": "e471f8f34f751ce12584c7d81650bcc701963a639ceb86a38d41949533cea3a2",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "flora_sequia--canon",
+      "model_id": "flora_sequia",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-05-botany-medium/prompts/flora_sequia--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-foundation-05-botany-medium/flora_sequia--canon.jpeg",
+      "prompt_sha256": "fa7ceb0998a8ef46d429d90c29453c06a0baf2ca0b4cfe130f312eb1cef57263",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "status": "prepared"
+    }
+  ]
+}

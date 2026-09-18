@@ -1,0 +1,386 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-10-maleiwa-medium",
+    "myth_slug": "maleiwa",
+    "model_ids": [
+      "olivo_mareiwa__botanical_sheet",
+      "tormenta_nacimiento_mareiwa__phenomenon_rule",
+      "honda_piedra_mareiwa__object_sheet",
+      "pozos_salados_mareiwa__spatial_model",
+      "pava_semillera__identity_sheet",
+      "turpial_semillero__identity_sheet",
+      "paloma_semillera__identity_sheet",
+      "tuna_higo__botanical_sheet",
+      "primeros_wayuu__group_grammar",
+      "outsu_lluvia_mareiwa__group_grammar"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_for_generation"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "olivo_mareiwa__botanical_sheet",
+    "honda_piedra_mareiwa__object_sheet",
+    "primeros_wayuu__group_grammar"
+  ],
+  "models": {
+    "olivo_mareiwa__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "olivo_mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lugar vegetal de una version de nacimiento."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Olivo del nacimiento de Mareiwa. Funcion visual: Arbol resistente a la sequia presente en una variante de nacimiento.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Olivo del nacimiento de Mareiwa",
+          "funcion estable: Arbol resistente a la sequia presente en una variante de nacimiento.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Arbol resistente a la sequia presente en una variante de nacimiento."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Olivo del nacimiento de Mareiwa. Arbol resistente a la sequia presente en una variante de nacimiento.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Arbol resistente a la sequia presente en una variante de nacimiento.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "honda_piedra_mareiwa__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "honda_piedra_mareiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Retira el mar sin sustituir el cuerpo de Mareiwa."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Herramienta que retira el mar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Honda y piedra de Mareiwa. Funcion visual: Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Honda y piedra de Mareiwa",
+          "funcion estable: Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Herramientas con que el mar retrocede en versiones de Mareiwa y serranias."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Honda y piedra de Mareiwa. Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "primeros_wayuu__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "primeros_wayuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Personas diferenciadas por parentesco y territorio."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Personas y clanes organizados."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Personas reunidas en Arachí."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Primeros Wayuu. Funcion visual: Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Primeros Wayuu",
+          "funcion estable: Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Primeros Wayuu. Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "olivo_mareiwa": {
+      "name": "Olivo del nacimiento de Mareiwa",
+      "kind": "planta",
+      "description": "Arbol resistente a la sequia presente en una variante de nacimiento.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "olivo_mareiwa__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "maleiwa"
+      ],
+      "evidence": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lugar vegetal de una version de nacimiento."
+        }
+      ]
+    },
+    "honda_piedra_mareiwa": {
+      "name": "Honda y piedra de Mareiwa",
+      "kind": "objeto",
+      "description": "Herramientas con que el mar retrocede en versiones de Mareiwa y serranias.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "honda_piedra_mareiwa__object_sheet"
+      ],
+      "legacy_model_refs": [
+        "maleiwa__ancla"
+      ],
+      "myth_refs": [
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Retira el mar sin sustituir el cuerpo de Mareiwa."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Herramienta que retira el mar."
+        }
+      ]
+    },
+    "primeros_wayuu": {
+      "name": "Primeros Wayuu",
+      "kind": "colectivo",
+      "description": "Personas diferenciadas por parentesco, territorio y acuerdos en versiones de origen.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "primeros_wayuu__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Personas diferenciadas por parentesco y territorio."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Personas y clanes organizados."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Personas reunidas en Arachí."
+        }
+      ]
+    }
+  }
+}

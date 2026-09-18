@@ -1,0 +1,117 @@
+{
+  "title": "El viaje del más allá",
+  "references": [
+    {
+      "id": "a3fe5a77677e4af4166f",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-viaje-del-mas-alla-1784766736118.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/el-viaje-del-mas-alla-",
+          "pathname": "mitos/el-viaje-del-mas-alla-1784766736118.jpg",
+          "uploaded_at": "2026-07-23T00:32:17.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T16:28:58.730Z",
+        "method": "direct_view_of_browser_capture",
+        "capture": "output/playwright/wayuu-campaign/viaje-before-0.png",
+        "observed": "Pareja de espaldas de la mano sobre tierra, pozo circular con ave, mar en capas, montaña central y poblado, luna grande y estrellas.",
+        "limits": "Versión generada anterior; no autoridad cultural ni fidelidad automática al relato."
+      }
+    },
+    {
+      "id": "a9f74fcac7f86377bc46",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/el-viaje-del-mas-alla-1784910931644.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 343,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 343,
+          "updated_at": "2026-07-24T16:35:33.209Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/el-viaje-del-mas-alla-",
+          "pathname": "vertical/myth/el-viaje-del-mas-alla-1784910931644.jpg",
+          "uploaded_at": "2026-07-24T16:35:33.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T16:28:58.730Z",
+        "method": "direct_view_of_browser_capture",
+        "capture": "output/playwright/wayuu-campaign/viaje-before-1.png",
+        "observed": "Pareja caminando por tierra, pozo y alcaraván abajo, telaraña a izquierda y mar detrás; capas profundas.",
+        "limits": "Versión generada anterior; no autoridad cultural ni fidelidad automática al relato."
+      }
+    },
+    {
+      "id": "1f78a084f71a1b95f1ea",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/el-viaje-del-mas-alla-1767973308492.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/el-viaje-del-mas-alla-",
+          "pathname": "mitos/el-viaje-del-mas-alla-1767973308492.png",
+          "uploaded_at": "2026-01-10T22:17:52.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 845600
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_for_next_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T16:28:58.730Z",
+    "reviewed_reference_ids": [
+      "a3fe5a77677e4af4166f",
+      "a9f74fcac7f86377bc46"
+    ],
+    "retained": [
+      "Profundidad de mar y montañas mediante hojas separadas; índigo, ocre y luz cálida.",
+      "Prendas completas y siluetas humanas, con mayor simplificación de caras."
+    ],
+    "rejected": [
+      "Pareja caminando de la mano por tierra: omite que ella lo carga sobre el mar.",
+      "Pozo de mampostería, poblado con torre, ornamentos geométricos y estrellas decorativas no exigidos por el episodio.",
+      "Trasladar telaraña y alcaraván simultáneamente a todos los momentos."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar capas marinas y distancia; retirar pozo y pareja en tierra. Ella carga al viudo, único contacto con el agua.",
+      "acto": "Conservar sombras físicas; sustituir paseo por inversión banco/boa, sin esposa ni alcaraván.",
+      "huella": "Conservar contraste claro/índigo y profundidad. Hilo como símbolo del regreso, no pareja en paisaje."
+    }
+  }
+}

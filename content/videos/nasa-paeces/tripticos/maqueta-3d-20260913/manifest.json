@@ -1,0 +1,1064 @@
+{
+  "schema": "nasa-triptychs-paper-maquette/v1",
+  "created_at": "2026-09-13T18:41:40.832Z",
+  "expected_myths": 26,
+  "expected_images": 78,
+  "scope": [
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    453,
+    553
+  ],
+  "generation_tool": "image_gen.imagegen",
+  "exact_model": "not_exposed_by_tool",
+  "quality": "not_exposed_by_tool",
+  "publication_authorized": true,
+  "style": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+      "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+    }
+  ],
+  "myths": [
+    {
+      "id": 429,
+      "slug": "el-trueno",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/existing-six/el-trueno.json",
+      "source_selection_sha256": "6f30722a2ef2547329a6909172fb749624b26f77f737b64f05a6ee9f1377c220",
+      "narrative_target_sha256": "b614e85866570485df0e729fee0b8e885033fa2ef3f4526014143e270b0a04d2",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+          "sha256": "fd8c955803d7f78df62ba0e01ad82e745e926fbc721989af383bdc151cdae60e",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-01/prompts/el-trueno-entrada-v1.txt",
+          "prompt_sha256": "799119a8a72b33dad5593deb7754e9d90b4d9bb4963820994a6497b6c2bcb2bb",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Tres figuras plenamente vestidas; identidad del Trueno, sombrero y capa coherentes; gesto de consejo en peña, profundidad territorial y tormenta de papel. Sin combate, víctimas, etnicidad adversaria ni mezcla con inundación. Figuras algo mayores al objetivo de prompt, aceptadas por legibilidad y relación ambiental."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+          "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-01/prompts/el-trueno-acto-v2.txt",
+          "prompt_sha256": "8344f4fc7c02be36fc798e6d2dd7e09955aff207e80a921227130447d568f762",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Dos autoridades con identidad, edades y ropa coherentes con C02; exactamente dos varas simples inclinadas y dos ondas de papel. Los cuatro pies apoyados sobre orilla seca, solo puntas de varas en agua. Noche, laguna y niebla de papel; sin Trueno visible, oro, templo ni iconografía inventada. Escala de figuras mayor al objetivo del prompt, aceptada por claridad de la acción."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/huella-v1.jpeg",
+          "sha256": "3c14e86c83b4904088ed5df29e42211231a137e4fb42e27163ae66a20a3455e0",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-01/prompts/el-trueno-huella-v1.txt",
+          "prompt_sha256": "70f163c574b44c1f58476d1431ef7bcee41564bb05cc4695b1d9260e3ab8d94b",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una vara sencilla y continua entre curvas amplias de agua de papel; contraste y sombras legibles; sin personas, catálogo de objetos, paisaje literal, glifos o adorno. Es metáfora editorial, no símbolo ritual atribuido."
+        }
+      ]
+    },
+    {
+      "id": 430,
+      "slug": "la-visita-del-joven-desconocido",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/existing-six/la-visita-del-joven-desconocido.json",
+      "source_selection_sha256": "e4d29bdaf82dd69fa9361f0c5f33760b7bc9c8431b98d069c707701745180c61",
+      "narrative_target_sha256": "6d9e8da006e91538a5d0066e22275c7cc11dbbf2a9a2f06327f1083b307f4138",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-visita-del-joven-desconocido/entrada-v1.jpeg",
+          "sha256": "356b4dd65be2be036201f376f12da10a7156172b96962603dd7cdacb2971f53c",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/la-visita-del-joven-desconocido-entrada-v1.txt",
+          "prompt_sha256": "98a4bfbdd5824d3ddc9fc4973fbbfe265ccce39cb0b29d586251295d9de21fec",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos jóvenes adultos conversan, vestuario gris-verde y chal óxido coherentes; cuerpos completos sobre sendero, montañas y niebla de papel sin texto ni atribución divina."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-visita-del-joven-desconocido/acto-v1.jpeg",
+          "sha256": "51f9b41cec2ec162e3248804f3fb0959818afd676371ff074377bd14a457ce03",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/la-visita-del-joven-desconocido-acto-v1.txt",
+          "prompt_sha256": "312d04e1514d53ff2368df9d2372e8abab9aba7aad8ba54bcf38cb20d4847f4d",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Una nube oscura continua se aleja sobre cuenca casi seca y laguna distante; paisaje único sin personas, daño ni paneles, relieve y sombras de papel legibles."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-visita-del-joven-desconocido/huella-v1.jpeg",
+          "sha256": "c4921030988b274ed9c5423a4dfca9c60ba5b0de73b8a98f3e34f4da5952e48a",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/la-visita-del-joven-desconocido-huella-v1.txt",
+          "prompt_sha256": "f46697b97b56716ac393edd561bd15e297c4e793f95e329e8e81ff8220e74964",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una hamaca vacía verde-azul con dos extremos sujetos; concavidad y pliegues claros, metáfora de ausencia sin bebé, habitación ni ritual añadido."
+        }
+      ]
+    },
+    {
+      "id": 431,
+      "slug": "lliban-el-hijo-del-trueno",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/existing-six/lliban-el-hijo-del-trueno.json",
+      "source_selection_sha256": "3d514bde4f071f011f125f4a0d11ea9911f77109632e65d682b08043cc356e47",
+      "narrative_target_sha256": "7515569cd5caef1000a7dc483000643d6ffb71b9681a5a90ef18e39678f37056",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-el-hijo-del-trueno/entrada-v1.jpeg",
+          "sha256": "74557bfeef26f62d405d6924cde70564393ff61838503d5b56d9e36de6c0213e",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/lliban-el-hijo-del-trueno-entrada-v1.txt",
+          "prompt_sha256": "422bdb48a746dc81f924dd431a6f8cb7a72f9ee33ef1461a7a9eacc9b0be4ba6",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos adultos sostienen a un bebé tranquilo sobre orilla seca; un sombrero dorado sencillo, agua estratificada de papel, sin peligro, cadáveres ni escena de lactancia."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-el-hijo-del-trueno/acto-v2.jpeg",
+          "sha256": "2b3cb38fbb336a9a01e9094023165d73a1e52b3c2604dee5d565d79895e9ebc3",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/lliban-el-hijo-del-trueno-acto-v2.txt",
+          "prompt_sha256": "f5f51f825eb63de0b660cd50adf8c093d65c445fe0bd59ee6102900083ec74c8",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Corrección aceptada: exactamente dos manos conectadas a sus brazos y dos pies completos; una sola olla y culebra verde continua, Llíban calmado sin combate."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-el-hijo-del-trueno/huella-v1.jpeg",
+          "sha256": "5f04638d7cf3e14dbf4814848ceb64f26a3228baf413e499220736695e025cf1",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/lliban-el-hijo-del-trueno-huella-v1.txt",
+          "prompt_sha256": "aab3c1fd781b30b07899d0a92230a468664f49023374541c344ba6e184ed5507",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una sola culebra verde continua con cabeza cerrada y cola legible emerge de una olla pequeña; sombras y pliegues de papel, símbolo sin gente ni violencia."
+        }
+      ]
+    },
+    {
+      "id": 432,
+      "slug": "juan-chiracol",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/existing-six/juan-chiracol.json",
+      "source_selection_sha256": "3c3df680090ce16101de4b265483e4777cf9b1d487da00e9740b8609ac8764d7",
+      "narrative_target_sha256": "0e17fe8850f352e79cc60ec8b8a21772ddf5cf0821e1f26ffbbafd0d5430ef05",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/juan-chiracol/entrada-v1.jpeg",
+          "sha256": "accf104b52b2c7e72e50d5562111c582af9b0611fa427e82d81fe488a307bbe3",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/juan-chiracol-entrada-v1.txt",
+          "prompt_sha256": "5fab6a393560b2e13b207a750c4123eba2692911149cef8a92b676d482c28100",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Madre y adolescente humano junto a un felino tawny tranquilo; dos personas completas, ruana azul y chal verde, bosque profundo sin hibridación ni violencia."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/juan-chiracol/acto-v1.jpeg",
+          "sha256": "383741b683dcfeb44227cd842136ed12643db53404793fb739cbab8715356037",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/juan-chiracol-acto-v1.txt",
+          "prompt_sha256": "1c21a15e0c7aca6a0dfc98329047938c7b4816e1ccf56542350390fc71cbe099",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Juan adulto sin sombrero y con ruana azul aconseja a dos habitantes sobre tierra seca; tres cuerpos legibles, laguna remota y niebla de papel, sin Llíban ni batalla."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/juan-chiracol/huella-v1.jpeg",
+          "sha256": "5a10160d9873a98072babe8b393f8fb4cfc181fbf65e668e84ff9544cba789fc",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/juan-chiracol-huella-v1.txt",
+          "prompt_sha256": "ed62bf017929815ede6445b8601032c9ace2c0a3bac8264f28f9c3b3a8826905",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una cornisa de papel sobre agua oscura y una pequeña esquirla suspendida sintetizan vigilancia territorial; sin personas, impacto, mapa ni iconografía ritual."
+        }
+      ]
+    },
+    {
+      "id": 433,
+      "slug": "lliban-y-juan-chiracol",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/existing-six/lliban-y-juan-chiracol.json",
+      "source_selection_sha256": "b77f5f7d3d85e3e41483b48ec2af9313a25e9a90cffb1bcab72ff667987ddd34",
+      "narrative_target_sha256": "0cee6cc7e6f790d6bcd4e205464879854db6ff6e5c860c4fe35babe7a94b2ca1",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-y-juan-chiracol/entrada-v1.jpeg",
+          "sha256": "7668103b066639956cd9a3304918bbf8a679f8a02a9f208a73748b0202aa775d",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/lliban-y-juan-chiracol-entrada-v1.txt",
+          "prompt_sha256": "a1de870294d65f8802e25c3b4dd0a505fa76d4b933ef0b8aef90d82bb7db9e3e",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos autoridades adultas iguales conversan: Llíban verde con sombrero sencillo y Chiracol azul sin sombrero; cuatro manos coherentes, paisaje continuo sin batalla."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-y-juan-chiracol/acto-v1.jpeg",
+          "sha256": "bcd59cc662456d84b5ef054be4b31a9564a464f1159c64ff82e5be466c68bc69",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/lliban-y-juan-chiracol-acto-v1.txt",
+          "prompt_sha256": "16c2b275a198a9fcc1e8e909008a16d05c6051fe0751d513ef056dfa4324518f",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Dos adultos de espaldas recorren caminos distintos hacia dos lagunas separadas; identidades verde/sombrero y azul/sin sombrero coherentes. Bastón de marcha es detalle escenográfico, no insignia ritual ni dato documental."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/lliban-y-juan-chiracol/huella-v2.jpeg",
+          "sha256": "b4d43b60d94fc716ab91762b15baadb1aad51f7960dc8ae811e27ca11aed272e",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/lliban-y-juan-chiracol-huella-v2.txt",
+          "prompt_sha256": "64252a543b84aad0e426bb4e0753567946bbc72251611eecbb1b74ccc4f82318",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Macro material corregido: exactamente dos concavidades azules desiguales separadas por franja ocre continua; relieve y sombra de papel, sin paisaje literal, horizonte ni emblema."
+        }
+      ]
+    },
+    {
+      "id": 434,
+      "slug": "la-nina-que-se-volvio-serpiente",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/existing-six/la-nina-que-se-volvio-serpiente.json",
+      "source_selection_sha256": "ca15d79afb63a64ea696ddbb0dc2eed85c85d6c48e2f8ee8b202d4d3d713e168",
+      "narrative_target_sha256": "b0667c28c018a3026592aa64f71b710d5ebd474bff1546afaf7a78e83cc2cfb1",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-nina-que-se-volvio-serpiente/entrada-v1.jpeg",
+          "sha256": "f631fbd84c1370a1b5264073562552f0dd97fc77ca05418b46e85b509c24de3e",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/la-nina-que-se-volvio-serpiente-entrada-v1.txt",
+          "prompt_sha256": "c842467b63172c33337abdd2a95f76c2e7482061df0cd0003dfa7cf47ac7a084",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Niña humana completamente vestida y dos cuidadores de camino a iglesia pequeña; arroyo de papel, tres cuerpos coherentes antes de transformación, sin violencia."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-nina-que-se-volvio-serpiente/acto-v1.jpeg",
+          "sha256": "83c88106b186f9fe5556da1c8625a6632653ff380058b7190dd31ca8f3d2c223",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/la-nina-que-se-volvio-serpiente-acto-v1.txt",
+          "prompt_sha256": "6c22f759dcf5774519547577ec542f3fa9bad233020df3feab3f34c0c3fd8f3c",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Una serpiente arcoíris intacta, cabeza azul con dos orejas y cola azul, rodea iglesia pequeña; exactamente dos águilas se acercan antes del daño. No personas, heridas ni duplicación de niña."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-02/la-nina-que-se-volvio-serpiente/huella-v1.jpeg",
+          "sha256": "082970b99a943653e1f9dfa69bae65baa93ac4ccfa220a101e29770c9095432f",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-02/prompts/la-nina-que-se-volvio-serpiente-huella-v1.txt",
+          "prompt_sha256": "c43769edf5f01d7e3ee4db06f031f47c15ed5877b96e0911fa3e1fd9d6185756",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una serpiente arcoíris continua se entrelaza con un chal gris-azul de papel; cabeza con dos orejas y cola azul coherentes con la referencia. Síntesis sin humanos, iglesia, daño ni emblema ritual."
+        }
+      ]
+    },
+    {
+      "id": 435,
+      "slug": "formacion-del-rio-paez",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/next-five/formacion-del-rio-paez.json",
+      "source_selection_sha256": "0926debc47b1ac655291acb6ef96fb181f76d8f5b35b39494cfccf9a80579a0c",
+      "narrative_target_sha256": "9787defb48f1cf0e569223daedea66c7d3186533bc7f9e195444e36f5bca8499",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/entrada-v1.jpeg",
+          "sha256": "b6e642ef6a20ed9aed81c7be7d461c50e6ea6a1cb240bcdf1042d192e8b2f573",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-entrada-v1.txt",
+          "prompt_sha256": "99159b5df32e8f2987342fb0e833366e92657350821802d95b7fa79d69ef131e",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Chautéh libre y vestido bebe con un carrizo único en pantano de papel; dos manos coherentes, orilla seca, sin estado tuerto ni instrucciones o ubicación científica."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/acto-v1.jpeg",
+          "sha256": "4e0b3d9949e2e8f665bd5d81946e59e4ee715821bf352c40ce93294d2fdd2e4f",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-acto-v1.txt",
+          "prompt_sha256": "c7e209ff0ab206e9d2a0e3a986d9eb9cf8c8734a927b4f0cbd680dd55e549ac6",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Una figura de Chautéh corre sobre sendero seco con corriente serpenteante detrás; anatomía legible, ropa coherente, canyon de capas y curvas sin monstruo ni peligro representado."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/huella-v1.jpeg",
+          "sha256": "33a39d400e05b4a6bc00d53ba1e71df18ce0940cc37825fbaee918b01e84df06",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-huella-v1.txt",
+          "prompt_sha256": "447151ecb85210eb340c88d3594cada0882e8a1730900322cd202e380ea712a0",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Un carrizo único desemboca en cinta azul continua con curvas amplias; macro de papel y sombra, sin cielo, personajes, mapas ni ritual."
+        }
+      ]
+    },
+    {
+      "id": 436,
+      "slug": "chauteh",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/next-five/chauteh.json",
+      "source_selection_sha256": "8ad38b555430700f11fa8ad6c862f22d6f540f30cfb6cf53fb5c89c25ecf190a",
+      "narrative_target_sha256": "2683527c210c8e17e46784c8a790d91d440767fb1d4d8cffc74b7f6ede4472ea",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/entrada-v1.jpeg",
+          "sha256": "9ee40a22feb7f6d495dfda7b288a507e1dec06b2a1f56ae3dda1f3accbb60e7d",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-entrada-v1.txt",
+          "prompt_sha256": "51946a4fd3b59d1283e4f5a57915ae7e817ef2b37fb879b90e5a52cee80928fc",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos adultos ante un único baúl abierto y vacío; carpintero presenta y Chautéh libre inspecciona desde fuera, cuerpos y manos coherentes, sin cautivo ni lesión."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/acto-v1.jpeg",
+          "sha256": "e4e9e21416ab0629f6511c292cad79725acf1b0290a276c5b8785b736748f0a2",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-acto-v1.txt",
+          "prompt_sha256": "be42b908ce1f135c1f09042b6ad366794bea4fe186a92114ad9f064d7f871a8f",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Un solo pájaro carpintero de papel, completo y coherente, junto al tronco; sin figura humana ni transformación corporal híbrida."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/huella-v1.jpeg",
+          "sha256": "3bbcfdbffc64c19ac46d606041fba0b9f9d951fb9438c27ccdb16d23d416a215",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-huella-v1.txt",
+          "prompt_sha256": "7188106acab85229230f9b1d20a82ce9fb2c69cf0763d0a7d5507a34cded58ba",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Un baúl cerrado con exactamente dos orificios frontales oscuros; síntesis material limpia, sin ojos, cuerpo humano ni lectura de ataúd."
+        }
+      ]
+    },
+    {
+      "id": 437,
+      "slug": "el-mar",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/next-five/el-mar.json",
+      "source_selection_sha256": "c1d5bf460765303ac1b6482561be7893f18eca18f2fbc841667725122a6de316",
+      "narrative_target_sha256": "440a68b37a57c93b2eb2f5a805a015e4e6b111a40a7fb634db226cde4c276aac",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/entrada-v1.jpeg",
+          "sha256": "961cc3c2e4a6c99246105464a90a52d858cda506f20e372a8b38e1b1439b67fc",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-entrada-v1.txt",
+          "prompt_sha256": "5f8089b2785a36a4b5663bdde7b4152a994bceb804c4536c45af3abefa635c09",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos hermanos con identidad y vestuario consistentes junto al río; gestos y cuerpos coherentes, terreno seco y sin personajes adicionales."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/acto-v1.jpeg",
+          "sha256": "45c517c09538bba32410f1e76c37f075eb741dc40dbef169578f189f76859149",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-acto-v1.txt",
+          "prompt_sha256": "8c7a1d615bbdfdb607259c0046611e66302e26c1e83fde8e6b03ea2463316f66",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Dos hermanos adultos distinguibles por vestuario; Pedro señala un mar amplio desde terreno seco. Sin barcos, represas ni geografía añadida."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/huella-v1.jpeg",
+          "sha256": "9126adac9e1e9e7f871eea0fb5e20d1704cb77c7e2f6552aecca283dd729b85d",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-huella-v1.txt",
+          "prompt_sha256": "54200f349e06dc38ec80c4cf7b3a98084dc6bb09f99df19a68c9e6412db98d5a",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una corriente estrecha desemboca en un plano azul amplio; abstracción de papel sin mapa ni símbolos rituales inventados."
+        }
+      ]
+    },
+    {
+      "id": 438,
+      "slug": "piedra-alta",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/next-five/piedra-alta.json",
+      "source_selection_sha256": "00a810d689034e9ebf373ced04b3ab3c6b294b872a645c3a844980bae64c605d",
+      "narrative_target_sha256": "b3389a879cc2338f3c24777c82f698ad2abc7f35a6f4a2e41d11e0d23104eb60",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/entrada-v1.jpeg",
+          "sha256": "17c00e85aa5eb26db562259814c1ee55d0e3bdcdc231c8d2094e3240d40464bc",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-entrada-v1.txt",
+          "prompt_sha256": "99959b381e6365507e6e2c8734a6c707780b976766b539998d8125990061b785",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos hermanos dialogan sobre una explanada sin peña central; espacio claro para el acontecimiento posterior y anatomía coherente."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/acto-v1.jpeg",
+          "sha256": "88c87856ba7889bc82aa58f8f657896f5f800bd1b3adf3d71835e6f5e6415e91",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-acto-v1.txt",
+          "prompt_sha256": "5dbb182de8fa16980c8feba19fe2cedcb773b9bddebfe3680929abb14f225727",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Una sola peña muy alta domina la escena; los dos hermanos pequeños observan desde terreno seco, sin impacto ni petrificación humana."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/huella-v1.jpeg",
+          "sha256": "2be1f4c8a85a25596f42729b360471bfb819d2b1681a7b433643ad7a5e15e4e3",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-huella-v1.txt",
+          "prompt_sha256": "2d46a7c5b3a814084a923f7862ef1ab8be097b9115898a316fad98d977de1519",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una elevación de pliegues grises emerge de una superficie ocre continua; síntesis de papel sin figura humana, pedestal ni símbolos añadidos."
+        }
+      ]
+    },
+    {
+      "id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/next-five/pedro-y-tomas-dimales.json",
+      "source_selection_sha256": "46582a140607b74aa49b75f913cd011122eb17eb3a87ac8871e884bf3d7f1ba0",
+      "narrative_target_sha256": "9013307f7bf763ea348ae7419cdb4b29f324497c69858d743b75c82d3973ee69",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/entrada-v1.jpeg",
+          "sha256": "2ff3c6a9f0e85f610b9241e9401dab88fd5a6be44c92ddda6bb06ac02d7cc456",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-entrada-v1.txt",
+          "prompt_sha256": "43f1f2c8d606c75af8992e0a82a782ddd4091b0019efec0e7473f301751a40e7",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos hermanos coherentes con la biblia intercambian un único recipiente de semillas en terreno de cultivo; manos, ropa y número de personajes correctos."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/acto-v1.jpeg",
+          "sha256": "c1ddd8accebf662d096d67537c0094a61ada6c56e89a157c3a0be9c5cb59d26a",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-acto-v1.txt",
+          "prompt_sha256": "552e8847047dfb85d0cecd559046a10b7206e64382ba6bd63822064044bb6d6b",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Pedro arrodillado vuelca un recipiente de maíz hacia un único hoyo de siembra, con semillas concentradas; sin daño corporal ni anticipar el desenlace."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/huella-v1.jpeg",
+          "sha256": "7e9d9678d67b882f37a204ef3923d34df5a233cde45f55d524a536f91d188c75",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-huella-v1.txt",
+          "prompt_sha256": "01485c82b49baa15031e77365a1203d3421ac7716cf889e0f87aba42ca297d1c",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Un grupo concentrado de granos de maíz en una sola depresión de papel terroso; abstracción limpia sin plantas, personas ni iconografía ritual."
+        }
+      ]
+    },
+    {
+      "id": 440,
+      "slug": "santo-tomas",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-first-five/santo-tomas.json",
+      "source_selection_sha256": "9e28948522ff4ffc1684c693250e7ae250f3c617435b34d1ba3d845fbc520420",
+      "narrative_target_sha256": "e39e4694adf00ac991aedc70737715aa98fcb549d1d46b7269a6a2c1b4f208a6",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/entrada-v1.jpeg",
+          "sha256": "fced9e5f3061e301aea89fdec316ea74fa250dfcff2cf25bbe24f44dd1d08de2",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-entrada-v1.txt",
+          "prompt_sha256": "dd819a363ece4aef344c2d0463690714a30380a9274ae337d9aefb05841b2321",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "María y Santo Tomás adulto conservan identidades diferenciadas; diálogo sobrio con dos cuerpos completos, sin enfermedad visible ni petrificación corporal."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/acto-v1.jpeg",
+          "sha256": "a8901029bf45c1a4aa315c0fc7ac68959c838be0a65cc492bf5568e463bc2220",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-acto-v1.txt",
+          "prompt_sha256": "0cee55bf25ae54c619e93e279a072af934f2b3c535a48f79f6b362c037d1fd9a",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Una única caja cerrada color bronce contenida entre estratos de papel; sin baúl de madera, árbol tachi, cuerpo cautivo o mezcla con la variante de Lame."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/huella-v1.jpeg",
+          "sha256": "96be955bd189530df96180e6f9e487f4061f58804fc5ac8915141e7c9fdfbd5d",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-huella-v1.txt",
+          "prompt_sha256": "f5d38b006cecdaf2e35fe519b1709e51e63266c8bd99ebc186493e6d9610d215",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Caja compacta color bronce entre pliegues comprimidos; metáfora material de contención y movimiento, sin paisaje adicional ni emblema."
+        }
+      ]
+    },
+    {
+      "id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-first-five/la-casa-de-fiesta-petrificada.json",
+      "source_selection_sha256": "6a7b5537fb8fff965969a913e100da0f9fc7178adcb4ac918739a3c430287cde",
+      "narrative_target_sha256": "7fa367b1f0e09edc06e3d2c8ec9cc752f9a915149126b4b2a89c504ae1644d19",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/entrada-v1.jpeg",
+          "sha256": "af2817cbcf83f54675188787956170421b903f104ee31adc2fb66c98c532dd50",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-entrada-v1.txt",
+          "prompt_sha256": "70d3acf9edae23c32a8658203404c250c6bf7035e66b8244e7e98f09c10ebe2e",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Un niño harapiento y dos anfitriones, sin personajes adicionales; rechazo visible en el umbral y comida disponible, cuerpos y manos coherentes."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/acto-v1.jpeg",
+          "sha256": "fef200b7c30cfaacbd2d817fdfecfa4665fb989536b38a72d63779e313a3cd30",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-acto-v1.txt",
+          "prompt_sha256": "dcdccbcafaf99b2ed57c166e909ecc7584283bbc402e1745df4e8868e2e8abd0",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Casa gris de papel detenida y exactamente tres recipientes suspendidos; sin personas lesionadas, estatua anatómica ni afirmación arqueológica."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v2.jpeg",
+          "sha256": "17c52429df60fe101ff7adcd6965f0ade04cf18f895469b82edc7b20f52585be",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-huella-v2.txt",
+          "prompt_sha256": "c3d60b6cb01c17c68fd018c930b29a388f0b4e202626ca629737c67a4f2cc1a8",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Corrección aceptada: un solo cuenco gris junto a un pliegue vacío integrado en papel ocre; sin niño, asistentes, escena repetida ni marco independiente."
+        }
+      ]
+    },
+    {
+      "id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-first-five/las-piedra-de-chaikin.json",
+      "source_selection_sha256": "0697ad496cee7bd8471969c24d6419fb94c15c06422f791f7586652df8c2976a",
+      "narrative_target_sha256": "898da93de263de1eaabfabf318307dd8e60db11614d3cb947c459635b83aae05",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/entrada-v1.jpeg",
+          "sha256": "595fa25506858f6d60029ddbe73d85e14eeaf35d752a59135cb306069d5d4379",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-entrada-v1.txt",
+          "prompt_sha256": "a64b29661b8452abd734dadde09e3854fe29df06777eeda547f9c9d6397cd781",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Chautéh libre con dos ojos sanos y dos caminantes distintas; cada mujer lleva una carga de caña, tres cuerpos completos y sin agresión visible."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/acto-v1.jpeg",
+          "sha256": "1c30f08204b170fae5477d50e5948be2a68c5229dc1db20898a6542be2215db2",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-acto-v1.txt",
+          "prompt_sha256": "ed28b4a3f0e6a7f62ac8d17800ef6a5b7c68d8bb5f757f2f0b75e8879ba8d56f",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Dos piedras asimétricas de papel con carga de caña integrada, sin rostros tallados ni cuerpos en transformación; geografía tratada como aproximación."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/huella-v1.jpeg",
+          "sha256": "813602dcae507fac6ed1fd0c7125497c019d8e986cd3f9e8a5449b805fd34725",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-huella-v1.txt",
+          "prompt_sha256": "b2aa846e7d78fc91dac412eed09ea08626adb7a76b915a64c83ae55822303d0e",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Dos pliegues grises separados con repetición de cargas de caña; metáfora limpia sobre papel neutro, sin personas, mapa o emblema."
+        }
+      ]
+    },
+    {
+      "id": 443,
+      "slug": "la-madre-de-la-sal",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-first-five/la-madre-de-la-sal.json",
+      "source_selection_sha256": "e724876b3484cbbf0057891c8ff267a47402f375e18af313a35c58cddb40e883",
+      "narrative_target_sha256": "1784b9e3806006000e1472a1f91dc0dfb5452f5b826d1f634540bcdc7e6dc3e6",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/entrada-v1.jpeg",
+          "sha256": "3a5e9bd83964d45b877466e6b377445fab677634012c27e2484257c69bd7415c",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-entrada-v1.txt",
+          "prompt_sha256": "58f46c685e3c1ea8f7310ba6757fb2d7b3475bb30ed33bc0b8050d04e073eaa9",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Anciana pequeña con dos moños claros de sal, vestuario de la biblia y manos relajadas; fondo neutro de papel, sin mina, culto o don inventado."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/acto-v1.jpeg",
+          "sha256": "de5f1c8eb7c6d6af9cc68cf81d53f83a150af01f4d704d8baefc0fe5859f5103",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-acto-v1.txt",
+          "prompt_sha256": "7452f9dc92461d92eb6556226e50b49cd9eea2c96e38c28494302bdbaba317a3",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Misma anciana en perfil de reconocimiento, no una acción nueva; ropa y moños coherentes sobre pliegues claros de papel sin ubicación identificada."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/huella-v1.jpeg",
+          "sha256": "0864cf3482f2cf3d4655ee0f81d89f482ae2e1c0aa156891f399614411d01f96",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-huella-v1.txt",
+          "prompt_sha256": "519f5452bcad3c503f9adbbdc6c3ea38a9ddc7fa494b0230d8e6bdbc220bf1e1",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Dos grupos redondos claros y un cuenco pequeño de sal de papel; síntesis sin paisaje, personas, cristales fotográficos ni iconografía ritual."
+        }
+      ]
+    },
+    {
+      "id": 444,
+      "slug": "la-candela",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-first-five/la-candela.json",
+      "source_selection_sha256": "722f70c4fd93ab8b150085d0c382eeca38ef506922eed704a64d24ca8629a88c",
+      "narrative_target_sha256": "ff47fe8958be8ac8b8da12fb08446c9a8e6842443afb0fc480b0586c88673d1f",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/entrada-v1.jpeg",
+          "sha256": "e37c368f5c859d53143b3585215408b3ff3f59321b626859d15124f6f0b32274",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-entrada-v1.txt",
+          "prompt_sha256": "0bbc5f406c2ac7b323b505b59b6a9724d5f9ea051a7234a021f7372f7115382d",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Anciana y niña comparten un tizón pequeño en el umbral; dos cuerpos completos, llama de papel lejos del vestido y sin versiones fusionadas."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/acto-v1.jpeg",
+          "sha256": "9c0fecd4975dbe3a53cf12de835f3b6aed91d93379ce5e326a6e650f60ca11f0",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-acto-v1.txt",
+          "prompt_sha256": "c1206220b424f2b4ac06edbeae9681b1eee80190422eb955670fe6dbbf76de7d",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "La misma niña y dos adultos junto a una pequeña paja encendida; acceso compartido a la candela sin incendio, persecución violenta ni personajes extra."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/huella-v1.jpeg",
+          "sha256": "c8e1f950d1d630462c35787221bfdd1762a7122f47fe2e5ca26d48e0706fcb70",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-huella-v1.txt",
+          "prompt_sha256": "4a6eba11b6e569de5b4e1ac8878c264ae46c6eedf35f3ab818ecd2b6f1dd3349",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una llama de papel se reparte en tres prolongaciones sobre paja; síntesis material de fuego compartido sin personas, paisaje, instrucciones ni emblemas."
+        }
+      ]
+    },
+    {
+      "id": 445,
+      "slug": "el-armadillo-de-mina",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-second-five/el-armadillo-de-mina.json",
+      "source_selection_sha256": "15dc268cacd145682c0a997b6df0f6e06fdea8302118ba998ce6904665e0c3d0",
+      "narrative_target_sha256": "227ad796ee520a5cea075e8fed130fb4394d4becee9b68c6386ef9434bf0daf3",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-armadillo-de-mina/entrada-v1.jpeg",
+          "sha256": "8f70270308fa9baf304f0bb6d72430c8dfd4705a71a9f7072eae96419d341ab4",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-armadillo-de-mina-entrada-v1.txt",
+          "prompt_sha256": "8e1c32eff649f36eccb859109e285c32074650f4c83cbff91148911c714d2a63",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Un adulto de ruana gris observa un armadillo completo luminoso en el camino; identidad, anatomía y capas de papel coherentes, sin mina ni daño."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-armadillo-de-mina/acto-v1.jpeg",
+          "sha256": "a93805f4766c1e1835215a26cd49732351faf5fe8018f4c524c49f900d68d3a8",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-armadillo-de-mina-acto-v1.txt",
+          "prompt_sha256": "452134e9b5477687584e152acc926879bf2cff097cfa4b79bfb5033d1c533bbd",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "El mismo adulto arrodillado junto al baúl abierto observa el armadillo de papel dorado completo; pañuelo, maíz y preparación presentes sin violencia."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-armadillo-de-mina/huella-v2.jpeg",
+          "sha256": "cf2de6e84c08c4495d696639971dd9969374825b02f73d4710a20603703eb784",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-armadillo-de-mina-huella-v2.txt",
+          "prompt_sha256": "95154cb6641940f61454fb7bf63029a85690232ec3c9268759c7d98eb9d177d4",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Síntesis sin figuras: siete segmentos de papel de gris a dorado, pañuelo blanco y dos rectángulos sin texto; elimina escena repetida y personaje infantil."
+        }
+      ]
+    },
+    {
+      "id": 446,
+      "slug": "el-hombre-flaco",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-second-five/el-hombre-flaco.json",
+      "source_selection_sha256": "6da37f435ef22b34fabb0f83889f20ef013c0bc40d3450ea1401b1701638fedf",
+      "narrative_target_sha256": "95687ea70629833895325fb4bf3f4929d7c70ef69fe4248730f4dc000a4a23ff",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-flaco/entrada-v1.jpeg",
+          "sha256": "f7cfc39926ba39d0b3bd10b9e2c0bcd64d0bf6ce9faa761a98d03404d7ec155c",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-flaco-entrada-v1.txt",
+          "prompt_sha256": "80bc3012581b7137bb138b8c0b64f181b9f2aa68539009a55f86aa66811eaebf",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos adultos completos: viajero gris con una olla a la espalda y protector pálido con luz de papel; escena nocturna sin violencia ni confusión con el hombre del corazón."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-flaco/acto-v2.jpeg",
+          "sha256": "5e9391221d0c6f56355682cdeff00077e6543916242645256bb11bff67fc9656",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-flaco-acto-v2.txt",
+          "prompt_sha256": "4f18b20b684a036eeff6e94f37c1708aa2a4a032eb35826f00bb944b90450b5c",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Continuidad corregida: viajero gris de pelo descubierto con olla a la espalda y protector pálido caminan hacia casa iluminada; dos adultos completos sin sombreros."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-flaco/huella-v2.jpeg",
+          "sha256": "c8bafa4f89f216e12dbcea7a66a8b45303aafa8c9b870b77d5516a4564965bbb",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-flaco-huella-v2.txt",
+          "prompt_sha256": "9813da4fb34a87d856a32340ad32dbe24ffe849bbf9bc546e6c66fc0dbcea136",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Dos bandas materiales se apoyan bajo motivo de olla, unión ocre cálida; sin retratos, paisaje ni recuadro, síntesis distinta de las escenas."
+        }
+      ]
+    },
+    {
+      "id": 447,
+      "slug": "el-diablo-nasa-paeces",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-second-five/el-diablo-nasa-paeces.json",
+      "source_selection_sha256": "b98830b2fb67437b3ee3435fdf097cc4874e4e8527a1cbabbc4c82ad24c71ea6",
+      "narrative_target_sha256": "a19d694ca14234f47ec6884bb643d86dc8a7a95587735e0390c84d74a9bf1467",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-diablo-nasa-paeces/entrada-v1.jpeg",
+          "sha256": "e318800586dbb8424ad1245dc00843090bd2a7881c38b8b787a6fb686428df95",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-diablo-nasa-paeces-entrada-v1.txt",
+          "prompt_sha256": "126671dc4475f2c9fb0d3edde5539627f722635e3b5bf32468d2e310890bb2bb",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Exactamente dos adultos y dos caballos: jinete negro de cola corta delante y padre gris en caballo marrón detrás, sin cuernos, fuego ni anatomía híbrida."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-diablo-nasa-paeces/acto-v1.jpeg",
+          "sha256": "5a289b769469d184bab48cfd6778e1cb129fa8f637688daa6e31210d51d4c3c0",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-diablo-nasa-paeces-acto-v1.txt",
+          "prompt_sha256": "2b1fc5211b941de1460b71d59de0fa846ec4668c7023b39e5a064d3ae5a566bb",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Un padre de ruana gris y caballo marrón ante puerta cerrada junto al agua; jinete negro ausente y ninguna iconografía de infierno."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-diablo-nasa-paeces/huella-v2.jpeg",
+          "sha256": "c8ae946fff6fbe73d86a8c2bd5a46dfaa0573fe5cd46fef7ed7ea1af723e6d35",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-diablo-nasa-paeces-huella-v2.txt",
+          "prompt_sha256": "e9e857458442ee3a5c35a4d01a90e75667d65100d7ef01f1755d3d617906661c",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Umbral reducido a pliegue oscuro que interrumpe banda azul y camino ocre; abstracción sin puerta literal ni paisaje o figura diabólica."
+        }
+      ]
+    },
+    {
+      "id": 448,
+      "slug": "el-hombre-tigre",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-second-five/el-hombre-tigre.json",
+      "source_selection_sha256": "70932a0e32c5c9550a4905999817952e3290fd8d88537b809118d47e6665cb99",
+      "narrative_target_sha256": "241fd28a39c05661ea07f3a2e233ea8bbb54ac0126d7f057503c6c759e1e8cec",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-tigre/entrada-v1.jpeg",
+          "sha256": "7d1fab81f26ce4a71dfb097efe0b005ff1ca6fa5896f178619cb9ef50a981b69",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-tigre-entrada-v1.txt",
+          "prompt_sha256": "5ce493a0bbf6398d0ad954c6f459f1b4f5f6fac421654bfa275d31f41fefe1af",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Un único caminante marrón-verde con peinilla enfundada en bosque de papel; sin metales dorados, persecución ni mezcla de variantes."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-tigre/acto-v1.jpeg",
+          "sha256": "ed70a4d94f93d13feb3b3b3592749ed0568eb9d4c9ac933cc9f610c09e707c27",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-tigre-acto-v1.txt",
+          "prompt_sha256": "28a7b451ebba6d344587c5d6ba02da8372039c229524fed209008899c5ab1685",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Mismo hombre completo y un único felino pardo sin rayas asiáticas se aproximan sin daño; dos seres separados, ninguna transformación anatómica."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-tigre/huella-v2.jpeg",
+          "sha256": "368a134351f88f9b48f5e195b1442fb8776bf6e100d90eff3d199adac50ecfa3",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-tigre-huella-v2.txt",
+          "prompt_sha256": "b62698c5187864d3251fb2709410b2be566469514a26cb65f9d6bdd0539417a0",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Un recorte de huella humana y uno de pata felina sobre papel ocre, separados; sin personajes, animales completos, híbridos ni escena repetida."
+        }
+      ]
+    },
+    {
+      "id": 449,
+      "slug": "el-hombre-y-el-perro-flaco",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-second-five/el-hombre-y-el-perro-flaco.json",
+      "source_selection_sha256": "09670d80f50df8e9a314cce3de171abbb854fb0a46f8342885e7ed8eb613a767",
+      "narrative_target_sha256": "bd935da82ff6f5630caa36cb2e8931143b145693e0ac75e9485572f46243d1c5",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-y-el-perro-flaco/entrada-v1.jpeg",
+          "sha256": "af5b1ee2aa78bd247e1e527808bece89fb3101638aa0aad8c8cadb4ee78c04aa",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-y-el-perro-flaco-entrada-v1.txt",
+          "prompt_sha256": "b781a56bc92706b1f3a0c09e173cb6211a61a1dccb348f4ad2497412b3a1b51d",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Viajero gris y un perro oscuro flaco completo se encuentran antes de cualquier golpe; anatomía coherente y ausencia de armas o heridas."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-y-el-perro-flaco/acto-v1.jpeg",
+          "sha256": "c8d007fc559d06a3f408999f7c97041505194380e85dead8ebb20eec83cec1cc",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-y-el-perro-flaco-acto-v1.txt",
+          "prompt_sha256": "16f42d100e4b92ee1278a10b19038ac6d8e6e27bd1ba1d3e7f047f1e6f2edbe9",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Exactamente dos adultos: testigo gris sigue al hombre de sombrero verde; corazón pequeño plano de papel sobre ropa intacta, sin órganos anatómicos ni heridas."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-05/el-hombre-y-el-perro-flaco/huella-v1.jpeg",
+          "sha256": "76363cd92d06b904b31675d5f1a9c83ab41223e10c9249b2f2fe5efab8f372ea",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-05/prompts/el-hombre-y-el-perro-flaco-huella-v1.txt",
+          "prompt_sha256": "349eaedb51785f441091beabe944615b1079990e7c92335a228da098a8f29250",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Flores de papel aplanadas y tallos verdes sobre pliegue ocre evocan rastro al amanecer; sin violencia, retratos, paisaje o perro repetido."
+        }
+      ]
+    },
+    {
+      "id": 450,
+      "slug": "la-cabeza",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-last-five/la-cabeza.json",
+      "source_selection_sha256": "9a642eb633fb0c267fec4670924a007130d4a5b91275fef1981a59424220b491",
+      "narrative_target_sha256": "e7c8e0f7e0f140fa74065e32b581db21caf5b27bba421e044b3587dd47147857",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/entrada-v1.jpeg",
+          "sha256": "b4cf9f5662ce0b60bf3e3fbde94ace543e0d1281596f6f0f640111ab59596841",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-entrada-v1.txt",
+          "prompt_sha256": "51ff8417f7bbb9f596206743e0b9ea50b836612bc32e5d610db5586402299dcc",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Un viajero de ruana gris con bordón y una cabeza autónoma de papel con una oreja y un diente; base cerrada sin anatomía cortada o lesión."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/acto-v1.jpeg",
+          "sha256": "f52c711460cab0e4ba8261ef856daf1ff8d290667694f9c666d5512c9bb77156",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-acto-v1.txt",
+          "prompt_sha256": "efe540de007253623a46c040762bb14c117cfa7f61b0484d4b2fa6a8ffacef2c",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Viajero completo sentado y sostenido en horqueta del árbol; misma cabeza de papel espera al pie con una oreja y un diente, sin golpes ni heridas."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/huella-v1.jpeg",
+          "sha256": "5f01af6011ec202d4fd64e9763fc7c9bc08ea5d220ebf4b87c6fa14eccaecc2d",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-huella-v1.txt",
+          "prompt_sha256": "7b3c4fa3fa2dd5c5bf0b7a26d6f2e0e8f45d658ae8692c9b4abf9be8f8238615",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Recorte de gallo aislado junto a banda de tronco oscuro y pliegue claro del alba; sin cabeza retratada, paisaje completo ni anatomía."
+        }
+      ]
+    },
+    {
+      "id": 451,
+      "slug": "los-animales",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-last-five/los-animales.json",
+      "source_selection_sha256": "4cd68b444ea19f15b1968468318b9f05f98cbc839f76704bf5a9ec671a679776",
+      "narrative_target_sha256": "6e581c1ba7a7d585e1093ecaf5089b0180a487f34481e3d7dd869182229cccfc",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/entrada-v1.jpeg",
+          "sha256": "53b34026bd5bc318b0c7f45171a08db7163c594e5e096a4c7a1098ce40b65b08",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-entrada-v1.txt",
+          "prompt_sha256": "08f1f7a8102d9692dc6844732f71a8a5e9b126fd452d7d3f527334e93ab5ed9c",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Un único viajero gris escucha el camino nocturno; ninguna especie u ojos inventados y sin armas, ataque o daño."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/acto-v1.jpeg",
+          "sha256": "679f596d93c74bdef7156d9594d2f12b9985b80a070f06d7a166f1559ccc4115",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-acto-v1.txt",
+          "prompt_sha256": "c0e0b34afbbe8f03c2efbde76c32663a4ee6342147d3797145035ba55d044f44",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Una mujer adulta azul y su hija vestida verde-azul guían con bagazo encendido al viajero gris, exactamente tres personas; anatomía, suelo y papel coherentes sin criaturas visibles."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/huella-v1.jpeg",
+          "sha256": "9eff464aa5fb095216583498b46cee081b7934224d1b4e7e3506581e327c8d31",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-huella-v1.txt",
+          "prompt_sha256": "4004e1914fb434e66e866650a7eef7dcd9ddaa63b1510f710b9a93f6df92b23e",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Una brasa de bagazo abre banda clara entre pliegues índigo; sin especies, ojos brillantes, personas o paisaje inventado."
+        }
+      ]
+    },
+    {
+      "id": 452,
+      "slug": "el-dalo",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-last-five/el-dalo.json",
+      "source_selection_sha256": "0973b433a281282e3567324e282ebac666b4201230a4033b740903f8290180ad",
+      "narrative_target_sha256": "e05346f34b38c7188cd8a43fefed7d6e21d4f9af747e5e13f889efa1375603dc",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/entrada-v1.jpeg",
+          "sha256": "d9c9fcf415bf60cb51c23b44a2813c55b3237c312ae1a466dd4337e77bcc9862",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-entrada-v1.txt",
+          "prompt_sha256": "7fbccd33465247164aed4c8861aef768aba02f6a638fecd0a814eef550963219",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Un viajero gris recorre camino que se estrecha hacia vegetación y luz; adaptación del viaje relatado, sin cadáver, catedral ni cartografía del más allá."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/acto-v1.jpeg",
+          "sha256": "7e570d6a9412a994cb2d677b8bf5bd4f4295dd15b741026117dc60b4eb6a9d69",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-acto-v1.txt",
+          "prompt_sha256": "63c8fc753bb6636766dc5de9db8a4864caa3f745cf7c134b95476c486f809422",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "María de manto azul y un único bebé cubierto reciben al viajero gris; tres cuerpos con niño envuelto, sin halos, órganos, catedral ni cuerpo moribundo."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/huella-v1.jpeg",
+          "sha256": "41db028be92dc7244ceefd6c8ddd8bb2d3c8ede3b16cab1bcbf5ea51143648b4",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-huella-v1.txt",
+          "prompt_sha256": "afe45a68b973f1ae7d0ca1631726aba7b28f34ab2f048f3dd1f51b4fae719f22",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Banda clara entre hojas oscuras recortadas sintetiza tránsito y apertura; macro de papel sin humano, paisaje completo, portal religioso o mapa."
+        }
+      ]
+    },
+    {
+      "id": 453,
+      "slug": "origen-de-las-plantas",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-last-five/origen-de-las-plantas.json",
+      "source_selection_sha256": "0a8e8830910946ebd8968fa008c3453859e5a0e7c3eb03ecbb68840699d70d54",
+      "narrative_target_sha256": "6e86a5324a6da4ccdbf4b967264f87e65985f0d8b3d7813fd05048b3ad153428",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/entrada-v1.jpeg",
+          "sha256": "8d5ab37f7ef8d52399312425861560b69941d83ad711b90ae67e942213b898da",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-entrada-v1.txt",
+          "prompt_sha256": "e8c501f4a975badf793abbdbbd90d462e8c53c1adf2d7ca60b83b981b3e6908e",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "María azul ofrece semillas en mano abierta ante campesina azul oscuro de vestido completo; dos mujeres identificables y ninguna exposición corporal."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/acto-v1.jpeg",
+          "sha256": "5941124ab2c1657a4c3c00558b053c0542974262a9d50e8160dbc22826f3aad8",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-acto-v1.txt",
+          "prompt_sha256": "1a73190d0ba639c77e64d7cfa1f4d00e5670418671ab0d9073741659bd6d0bf0",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "La misma campesina arrodillada siembra semillas en suelo mientras María observa detrás; continuidad de dos mujeres, sin origen corporal explícito, serpiente o Tomás añadido."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/huella-v1.jpeg",
+          "sha256": "dd8926f5c13a4a843e1cafe1a94129caa7bdd8547c49b8448aff616fe49249d7",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-huella-v1.txt",
+          "prompt_sha256": "2da0bc6d54e6460bf54ee6ea21411b0a1621492827147a110b0ce411434a736b",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Cuatro semillas recortadas y dos brotes sobre banda ocre sintetizan origen y siembra, sin anatomía, mapas, personajes o paisaje repetido."
+        }
+      ]
+    },
+    {
+      "id": 553,
+      "slug": "juan-tama",
+      "source_selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-last-five/juan-tama.json",
+      "source_selection_sha256": "02a10730c2507f88eb463a170bdddbc3dd9da4d1d0e1db47966a4beb04a66bcc",
+      "narrative_target_sha256": "c4f12df31061ed9cd30eef2b14361f086dc05f22a72a01a3840e025293ef9c3c",
+      "selected": [
+        {
+          "act": "entrada",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/entrada-v1.jpeg",
+          "sha256": "e03b49c63a51dc943bead0f641d194c7bb67abdbf5fb024cdc894cd5e196dfc4",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-entrada-v1.txt",
+          "prompt_sha256": "e0a3498e04720696b747c654f94a5cad3a46ca04109506ab9e4a98c38d00b8b9",
+          "quality": "high",
+          "visual_function": "narrative_entry",
+          "editorial_qa": "Dos figuras mayores acompañan a un único bebé envuelto sobre libro cerrado sin texto en borde seco de una laguna; chumbe sobrio, anatomía segura, sin aguas múltiples o iconos prestados."
+        },
+        {
+          "act": "acto",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/acto-v1.jpeg",
+          "sha256": "99a939c135793f151b1a2bd89f62c90ab2807e4a16967076026f6a4d139040b1",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-acto-v1.txt",
+          "prompt_sha256": "43025bb5974bba66ac472b1c3f01aebc425ac926b14abf9c0609c85b72d26731",
+          "quality": "medium",
+          "visual_function": "second_narrative_scene",
+          "editorial_qa": "Juan Tama adulto de capa carbón y bastón conversa con dos autoridades, mujer verde y hombre azul-gris; tres cuerpos completos sin armas, enfrentamiento o retratos de personas reales."
+        },
+        {
+          "act": "huella",
+          "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/huella-v1.jpeg",
+          "sha256": "88326ccaf7aa74765ded0f59de76a20ccb113a2cbf8920916b5c010e36fae217",
+          "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-huella-v1.txt",
+          "prompt_sha256": "46b8778bee9f082a352b6eb96eb69d48dbd9612254051e30388ed45d4b99ef49",
+          "quality": "medium",
+          "visual_function": "symbolic_synthesis",
+          "editorial_qa": "Libro cerrado sin escritura sujeto con banda de papel sobria, cinta azul y bastón abstracto; motivo editorial de cuidado y memoria, sin convertirlo en emblema ritual universal."
+        }
+      ]
+    }
+  ]
+}

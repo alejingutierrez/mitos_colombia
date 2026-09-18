@@ -1,0 +1,127 @@
+{
+  "schema": "mitos-video-pilot-freeze/v2",
+  "frozen_at": "2026-09-07T17:31:17.354Z",
+  "checks": [
+    "same_5_ids",
+    "same_VO",
+    "same_narrative_hash",
+    "5_reference_hashes",
+    "5_prior_outputs_preserved",
+    "all_medium_native9x16",
+    "no_overwrite"
+  ],
+  "files": [
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/plan.json",
+      "sha256": "6643fdb0809fc61638e12a9090fa3048ac37344af38b4b8dd378c871c1ba2180"
+    },
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/reference-review.json",
+      "sha256": "cb69c6ae92f52a27708a0423bf48a60cd927590d50925e37bdf1d929ce3b7d27"
+    },
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/DIRECCION-Y-PROCESO.md",
+      "sha256": "90802e268c4a47a48b95d11e387e883873f2b71487975df16ff4d2bc8c3e506f"
+    },
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b1a.txt",
+      "sha256": "109feb1c1b77803403d1475d65fc0ce14d9cb2dabfd6261799467cdad183f565"
+    },
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b1b.txt",
+      "sha256": "3661b008c3c2632e37a6641010fc5aeacdd2d3b379ea397d19e4e4fc757dc367"
+    },
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b2a.txt",
+      "sha256": "05c229e0077a50a330e5cdb4a520b80bedba1c027b06e058f7f497a6d771fbb7"
+    },
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b2b.txt",
+      "sha256": "c06fd8a55560e022bd04865564ddd4724fb0c7906d9dd03bc28a379166e8a5ab"
+    },
+    {
+      "path": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b3a.txt",
+      "sha256": "549a8e0a519874b81ceda7becfba39d0256194a1ef4f315badb1ea5ed2e1a011"
+    }
+  ],
+  "prior_outputs": [
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1a.jpeg",
+      "sha256": "bf03f9633b09516492c633fdf867419105ff7560c51edcae17405ccc517ed78b"
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1b.jpeg",
+      "sha256": "558cda3492b6480711e87b16292fe239d50b6572e0e30fa437091c70e9570f6f"
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2a.jpeg",
+      "sha256": "3fc4044600cfed3fb6dc01e3fd670ef28252ad43e8666637f8bd5352289c497e"
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2b.jpeg",
+      "sha256": "a9f401611576f45b07c56c2655ffc3bd27ccebff050419f3491cdb4364941bc9"
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b3a.jpeg",
+      "sha256": "479000ef17eb2279dff8d59191c590fe03deca3b7570c33375eb67c1619afd20"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b1a.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared",
+      "iteration_for_this_keyframe": 2,
+      "prompt_sha256": "109feb1c1b77803403d1475d65fc0ce14d9cb2dabfd6261799467cdad183f565"
+    },
+    {
+      "id": "b1b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b1b.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1b.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared",
+      "iteration_for_this_keyframe": 2,
+      "prompt_sha256": "3661b008c3c2632e37a6641010fc5aeacdd2d3b379ea397d19e4e4fc757dc367"
+    },
+    {
+      "id": "b2a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b2a.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared",
+      "iteration_for_this_keyframe": 2,
+      "prompt_sha256": "05c229e0077a50a330e5cdb4a520b80bedba1c027b06e058f7f497a6d771fbb7"
+    },
+    {
+      "id": "b2b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b2b.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared",
+      "iteration_for_this_keyframe": 2,
+      "prompt_sha256": "c06fd8a55560e022bd04865564ddd4724fb0c7906d9dd03bc28a379166e8a5ab"
+    },
+    {
+      "id": "b3a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-02/prompts/b3a.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared",
+      "iteration_for_this_keyframe": 2,
+      "prompt_sha256": "549a8e0a519874b81ceda7becfba39d0256194a1ef4f315badb1ea5ed2e1a011"
+    }
+  ]
+}
+

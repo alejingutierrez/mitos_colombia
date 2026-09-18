@@ -1,0 +1,286 @@
+{
+  "schema": "wayuu-keyframe-selection/v1",
+  "slug": "serranias-de-la-guajira",
+  "title": "Serranías de La Guajira",
+  "status": "complete_pending_user_approval",
+  "plan": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/plan.json",
+  "script": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/GUION-TECNICO.md",
+  "research": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/INVESTIGACION.md",
+  "quality": "medium",
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2.5-sunburst",
+    "mode": "image_edit_with_two_prior_approved_keyframes_and_camera_breaks",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "total_unique_generations": 16,
+    "selected_generations": 16,
+    "superseded_generations": 0,
+    "notes": [
+      "Matriz de dieciséis familias de cámara y ruptura obligatoria de altura, eje, escala o profundidad.",
+      "Los dos keyframes previos se usan sólo como continuidad causal; los descartes no alimentan la cadena.",
+      "Revisión visual realizada sobre la secuencia completa; no equivale a certificación etnográfica."
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "version": "01",
+      "camera": "elevada oblicua desde una ladera; gran plano general territorial",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b1a.jpeg",
+      "sha256": "b18bdfcdf7fe7a634d18540a3f8bae3d7e5fc9314a2b7ce8ee016aee289866a3",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Salida de Uchi Juroteka: elevada oblicua desde una ladera; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "119d20c9386d1b94bb3614f227899f7a27a6df1a7bfce19d7dd8c5846a3948ec"
+    },
+    {
+      "id": "b1b",
+      "version": "01",
+      "camera": "lateral a la altura de manos u objeto; macro narrativo sin rostro",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b1b.jpeg",
+      "sha256": "d9b9abd746ad33ea54e2f2cf7a2c1cc5c708bed9d7c97991210bb0084739534d",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Agua y sandalias: lateral a la altura de manos u objeto; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b1b-01/prompts/b1b.txt",
+      "prompt_sha256": "1e8321d8ece45d71fe0dd8752d3ba7d1c889388998796bf9bd0c3b7ecdf46bef"
+    },
+    {
+      "id": "b2a",
+      "version": "01",
+      "camera": "contrapicado extremo desde el suelo; plano general bajo",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b2a.jpeg",
+      "sha256": "9651af8b412c0e2926088a7bc962c28594c1ac4d547912ac80bc6f3aaec9bc48",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Wojoro se detiene: contrapicado extremo desde el suelo; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b2a-01/prompts/b2a.txt",
+      "prompt_sha256": "4e35c29314bb7358efcf703717df0c14b8df5fea9f26b9be7b4368715a345dbb"
+    },
+    {
+      "id": "b2b",
+      "version": "01",
+      "camera": "cenital verdadero de 90 grados; detalle gráfico de suelo",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b2b.jpeg",
+      "sha256": "6bcb634a7031957101823c08b5351c822aa4ef1371d9ec52935d0a1af83bf3f8",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Otros puntos del camino: cenital verdadero de 90 grados; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b2b-01/prompts/b2b.txt",
+      "prompt_sha256": "4d356378b892c3631bd7662092cbbd98a34e8f88242a80bf6b932521c521a4af"
+    },
+    {
+      "id": "b3a",
+      "version": "01",
+      "camera": "lateral teleobjetivo sin cielo; plano general comprimido",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b3a.jpeg",
+      "sha256": "ad62d013391f88032dea5d86f389819a0d60e44ed4f181f8c441ed4ba3b76af8",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Itojoro sigue delante: lateral teleobjetivo sin cielo; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b3a-01/prompts/b3a.txt",
+      "prompt_sha256": "d7ea8aa958c35bb0502b61d2bf9ec415ead133f2cc714ebe7f22521eae570d13"
+    },
+    {
+      "id": "b3b",
+      "version": "01",
+      "camera": "rasante a través de una grieta o vegetación; gran plano general de fuga",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b3b.jpeg",
+      "sha256": "5aabfe55d4de7a987624b167d5d85ca2748a46187d65787f0e33eb6c8237f15e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Los Monkii llegan al mar: rasante a través de una grieta o vegetación; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b3b-01/prompts/b3b.txt",
+      "prompt_sha256": "ca73a5bf07bd35f440deb0b712c3919c37ecf292730a7d4cf522d945ee365aee"
+    },
+    {
+      "id": "b4a",
+      "version": "01",
+      "camera": "alta diagonal de 60 grados; plano conjunto arquitectónico",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b4a.jpeg",
+      "sha256": "d8f7695051c8fdee725139ae4c3772ccd7a853e7febcc5c23944f87146a0327f",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El sueño de Guarapú: alta diagonal de 60 grados; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b4a-01/prompts/b4a.txt",
+      "prompt_sha256": "1aae37a565d8c2c54bd9d317718587312c9fcb9cf3d898f522e50faa3a7ecd51"
+    },
+    {
+      "id": "b4b",
+      "version": "01",
+      "camera": "sobre el hombro con primer término dominante; plano medio ambiental",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b4b.jpeg",
+      "sha256": "bef584e9261b72e9233a8a464472c59205fdc8f835c525020579fdfcc54ffb93",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Itojoro junto a la ita: sobre el hombro con primer término dominante; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b4b-01/prompts/b4b.txt",
+      "prompt_sha256": "51f2c657e3b4c8db104ed79d6bb945bc2651b9173c4218de652e694491c8c819"
+    },
+    {
+      "id": "b5a",
+      "version": "01",
+      "camera": "subjetiva baja desde la sombra; plano general con primer término oscuro",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b5a.jpeg",
+      "sha256": "f822ab5cd9e92f0f73d6b1aa1884bab13715d5927771a26ef75bbfa9e7905d09",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Mareiwa mira la marcha: subjetiva baja desde la sombra; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b5a-01/prompts/b5a.txt",
+      "prompt_sha256": "fab81f949dedf1249e9ad374cbeb66e4b5509eb01208909bf42f277c7c595341"
+    },
+    {
+      "id": "b5b",
+      "version": "01",
+      "camera": "perfil distante con horizonte desplazado; plano general lateral",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b5b.jpeg",
+      "sha256": "9753b98997065d99f3750d6cb1208ada98322307870b9668465d13091ce361fb",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Los cuerpos dejan de ser cuerpos: perfil distante con horizonte desplazado; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b5b-01/prompts/b5b.txt",
+      "prompt_sha256": "cc962afe8d2e204c0c636e8170541a3f65a2c26e7967ed0b73ea8d59b4b7fb6b"
+    },
+    {
+      "id": "b6a",
+      "version": "01",
+      "camera": "cenital diagonal amplio; plano de consecuencia",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b6a.jpeg",
+      "sha256": "016e30c896c8836f78c196eef428cea317f21067030f2748be1d0225c56c9b0e",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Un sistema de alturas: cenital diagonal amplio; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b6a-01/prompts/b6a.txt",
+      "prompt_sha256": "587465e486420725b893f1169bd60d45de2a374d74c38226c38b1d3a3cadefd0"
+    },
+    {
+      "id": "b6b",
+      "version": "01",
+      "camera": "macro frontal de materia; primerísimo plano de objeto",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b6b.jpeg",
+      "sha256": "c77280fa6e5d9b154a4534b9ba5120d4952cf6c82a226d48c64a58eb003b36a1",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La piedra hacia Kasuto: macro frontal de materia; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b6b-01/prompts/b6b.txt",
+      "prompt_sha256": "86e696cf87c98a65d5db15fc89968a04b128dd39e375edca1ef271d8d1f8e71f"
+    },
+    {
+      "id": "b7a",
+      "version": "01",
+      "camera": "contrapicado enmarcado entre postes o rocas; plano general enmarcado",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b7a.jpeg",
+      "sha256": "ac666ce9863259d015bab11ca788d15ae3cc25d2edee0ebd31ed7be6f4a039fc",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El mar deja la tierra: contrapicado enmarcado entre postes o rocas; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b7a-01/prompts/b7a.txt",
+      "prompt_sha256": "c07bbdb5207190ff4089e9c6bb0bf6b2221e8cc1b238882e47e47c6fab2cf032"
+    },
+    {
+      "id": "b7b",
+      "version": "01",
+      "camera": "teleobjetivo profundo a través de una abertura; plano largo comprimido",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b7b.jpeg",
+      "sha256": "6ab4312c049451ad7bf41028c050f5d31d30fa5931527e9fd20efe010eec5fd1",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Aves con semillas: teleobjetivo profundo a través de una abertura; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b7b-01/prompts/b7b.txt",
+      "prompt_sha256": "c354262c7e9cf0e1de3ae6e071d6b1be9db841056ed66c313b778aa6b16f9ceb"
+    },
+    {
+      "id": "b8a",
+      "version": "01",
+      "camera": "aérea oblicua desde atrás; gran plano general de relación",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b8a.jpeg",
+      "sha256": "330e64cf913e52b30d0ba867ba5a655873b69b9be73b32b5d769b5edbc215615",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Arachí reúne la vida: aérea oblicua desde atrás; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b8a-01/prompts/b8a.txt",
+      "prompt_sha256": "820a2714a8250595835763f8884879af52e27eb96fd2bcedec3efacb82eb3db1"
+    },
+    {
+      "id": "b8b",
+      "version": "01",
+      "camera": "a ras del suelo mirando hacia la distancia; plano final de fuga",
+      "path": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b8b.jpeg",
+      "sha256": "daf7f33dbdf8f3b2b27d69eafac135a933ea8a7da81cb6d6331d0346a4f38c7b",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Viajeros que permanecen: a ras del suelo mirando hacia la distancia; composición revisada dentro de la secuencia completa."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b8b-01/prompts/b8b.txt",
+      "prompt_sha256": "e226d568a8f85935e35883da6af4831d779c8521d8f3747ec9a2b970d4442bf8"
+    }
+  ],
+  "superseded": []
+}

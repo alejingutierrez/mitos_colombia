@@ -1,0 +1,253 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-incesto": {
+      "titulo": "El incesto",
+      "canon_models": [
+        "hermana_litoral__identity_sheet",
+        "hermana_litoral__state_sheet",
+        "hija_katetamana__state_sheet",
+        "cerro_katetamana__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "published_incesto",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-incesto.json",
+          "supports": "Dos episodios distintos asociados a costa y Katetamana; pregunta editorial por cuidado y responsabilidad.",
+          "limits": "La fuga conjunta y petrificación de ambos hermanos son ampliaciones frente a Chaves. El método de muerte también difiere. No reescribir el texto durante esta campaña."
+        },
+        {
+          "id": "chaves_312",
+          "type": "primary_narrative_record",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "311–312, PDF 7–8",
+          "supports": "Transformación de hermana en piedra litoral y otro episodio asociado a Katetamana.",
+          "limits": "No afirma petrificación del hermano. No se adoptan juicios culpabilizantes ni se representan los actos dañinos."
+        },
+        {
+          "id": "pineda_katetamana",
+          "type": "primary_narrative_record",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+          "supports": "Variante de Katetamana registrada por Pineda.",
+          "limits": "Registro no equivale a aval actual de sus juicios. No se representa anatomía del cerro ni muerte."
+        },
+        {
+          "id": "bible_lot12",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-12-el-incesto-v3.md",
+          "supports": "Manta verde cerrada, womu, veta litoral; estrato ocre, cresta y collado no humanos.",
+          "limits": "Colores y geometría son contratos editoriales, no prueba arqueológica o topográfica."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "hermana_litoral__identity_sheet",
+          "decision": "Mantener manta cerrada verde, cuello crudo, womu bajo y waireñas. Aplanar cara a una sola silueta de papel, mujer pequeña en plano abierto."
+        },
+        {
+          "model_id": "hermana_litoral__state_sheet",
+          "decision": "Conectar físicamente un pliegue de la manta con la veta de roca sin desnudar ni inmovilizar un cuerpo esculpido; no díptico."
+        },
+        {
+          "model_id": "hija_katetamana__state_sheet",
+          "decision": "La vertical muestra la memoria territorial posterior: sólo estrato ocre plegado, no joven junto a precipicio, cuerpo ni prenda colgada."
+        },
+        {
+          "model_id": "cerro_katetamana__spatial_model",
+          "decision": "Conservar cresta, collado y cauces; hacer imposible la continuidad entre pliegue y estrato mediante aire real, sin cerro con anatomía humana."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-incesto",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-incesto.json",
+        "target_content_sha256": "9491938e8823d014380f75ac41188ca4ff644735a7d9dd41e147bbcf41ff9ef0",
+        "summary": "Dos episodios familiares distintos permanecen en la memoria territorial: la hermana en piedra de la costa y, en otro lugar y momento, la hija en Katetamana. No son una misma mujer ni una misma responsabilidad. Las imágenes se concentran en transformación y memoria, sin representar actos sexuales, violencia, muerte o autolesión. La costa y el cerro nunca aparecen fundidos en una misma escena.",
+        "events": [
+          {
+            "id": "hermana_litoral",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_312",
+            "action": "La hermana queda asociada a una transformación pétrea junto al mar; el destino del hermano no se fija aquí."
+          },
+          {
+            "id": "katetamana",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_312",
+            "action": "El segundo episodio vincula a la hija con el cerro Katetamana; elegimos el paisaje posterior, no la muerte."
+          },
+          {
+            "id": "memoria_distinta",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_incesto",
+            "action": "La memoria conserva dos relaciones y responsabilidades no equivalentes; el territorio no impone una moraleja única."
+          }
+        ],
+        "emotional_reading": "Dolor contenido, permanencia y preguntas por el cuidado; sin romance trágico ni espectáculo punitivo.",
+        "magic_reading": "La materia mineral retiene pliegues de una presencia humana cuando ya no puede contarse su voz.",
+        "qa_method": "H mujer pequeña vestida y continuidad manta-veta; V cerro sin cuerpos con estrato plegado físicamente imposible; S dos huellas minerales separadas, no tercera escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T09:05:03.610Z",
+        "reviewed_reference_ids": [
+          "88ace892a25f73934a2b",
+          "55e927122f96c4294e35"
+        ],
+        "retained": [
+          "Azules marinos, ocres de relieve y mar construido con tiras de papel a diferentes distancias.",
+          "Relación entre costa y cerro como memoria territorial; contornos internos y sombras palpables."
+        ],
+        "rejected": [
+          "Figuras suspendidas en el cerro y cualquier representación de autolesión.",
+          "Mujer divina gigante, joyas y coronas vegetales inventadas, vestido genérico ornamentado y cuerpos modelados.",
+          "Fusión de los dos episodios en una misma escena o doble petrificación presentada como dato de Chaves."
+        ],
+        "influence_by_act": {
+          "entrada": "Conservar amplitud marina y capas; centrar sólo a la hermana, pequeña, cuya manta verde continúa materialmente en roca litoral.",
+          "acto": "Sustituir cuerpo suspendido por cerro enteramente no anatómico: estrato ocre plegado conserva memoria sin reconstruir la muerte.",
+          "huella": "Abstraer costa y cerro en dos fragmentos minerales separados con pliegues verde y ocre; sin paisaje, personas ni emblema tradicional."
+        }
+      },
+      "material_direction": "Immersive photographed world ENTIRELY built from matte dyed CUT PAPER. Deep real three-dimensional air between large torn and folded paper terrain layers; occlusion and long directional contact shadows. No photoreal sand, cloth or rock. Human face when present is ONE almost-flat side-profile paper silhouette, nose only a cut edge, tiny eye slit, no sculpted cheek, facets, round eyeballs or Pixar proportions. Internal cut edges are visible, but NO outer cardboard support, corrugation, frame, craft box, tabletop or pedestal. Full bleed from inside the world. Mythic agency appears in impossible material continuity, not a giant divine figure or decorative glow.",
+      "paleta": "índigo marino, verde mar profundo, arena mineral, ocre rojizo apagado, luz lateral cálida sobria",
+      "continuity_contract": [
+        "Two episodes remain separate. Horizontal contains ONLY the sister at the coast; vertical contains ONLY Katetamana terrain after the second episode, NO people. Square contains only its stated symbolic objects.",
+        "Colors are editorial identity: sister sea-green, daughter muted reddish ochre. No invented clan patterns or divine emblems. No face paint in these specific approved identities, not a blanket ban for the community.",
+        "No scenes of sexual contact, pregnancy emphasized, death, self-harm, hanging, falling, punishment spectacle or romantic couple. No anatomical shapes in rocks."
+      ],
+      "avoid": [
+        "gigantes, diosa oceánica, padre o hermano añadidos, rostros en paisaje, cuerpos petrificados anatómicos",
+        "cuerdas, cuerpos suspendidos, caída, precipicio con persona, escarnio, cadáver, sexualidad, desnudez",
+        "Pixar, ilustración de caras redondas, retrato, coronas, joyas, patrones ornamentales inventados",
+        "agave, casitas decorativas, canoas, halo, portal, estrellas mágicas, partículas, letras, marco, soporte de cartón"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "hermana_litoral"
+          ],
+          "beat": "La costa comienza a guardar una presencia.",
+          "escena": "Horizontal 16:9 EXTREME WIDE coastal landscape made of layered cut paper. Camera is far back above a low dune, looking across a broad EMPTY beach toward a quiet mineral-blue sea. Low coastline and small clouds reach a low horizon, no tall mountain or buildings. At x70%, y47–59% stands ONE SMALL ADULT WAYUU WOMAN in complete calm side profile, safely on LEVEL DRY SAND well away from any drop, feet visible. Her entire height including hat is just 12% of frame. She wears one CLOSED full-length SEA-GREEN MANTA with only a small pale cream inner neckline, low wide straw-colored WOMU hat, dark flat paper hair and clay-brown WAIREÑAS sandals. Face is a single flat brown cutpaper side silhouette with a tiny eye slit, not modeled. No extra accessories. The impossible is a quiet MATERIAL TRANSFORMATION: one side fold at the still CLOSED LOWER HEM continues seamlessly into a narrow SEA-GREEN PAPER STRATUM that travels across the sand toward a low, clearly NON-HUMAN grey coastal rock at x82%,y58%. Halfway the green sheet rises a little above the sand, visibly casting a shadow through an AIR GAP, then slides horizontally INSIDE the rock's separated grey strata. Its color becomes a trapped green mineral vein there. It is the same unbroken paper material from garment fold to stone, not a detached scarf, long bridal train, beam, string or magic sparkle. Woman remains wholly dressed and steady; no body-shaped stone or second figure. Broad sea sheets, distant low coast, sparse dry paper thorn shrubs and immense quiet ochre foreground give six depth planes. Main subject and material connection remain within x65–88%, y42–65%; lower LEFT is quiet for website title, no focal object in outer 8% side margins. Soft oblique evening light, deep teal sea, no giant moon or sunset disc. Melancholy and physical wonder, not glamorous sorcery.",
+          "editorial_translation": "La transformación litoral es del registro; la continuidad de un pliegue verde hacia una veta mineral es puesta en escena editorial de la Biblia. No representa la fuga ampliada ni al hermano petrificado.",
+          "visual_question": "¿La mujer pequeña conserva manta cerrada y su pliegue se convierte sin corte en una veta de roca no humana, con aire y sombra?",
+          "light": "Luz lateral de tarde sobre arena, mar azul profundo, veta verde sin brillo propio.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una mujer vestida está en una costa llana.",
+            "impossible_behavior": "Un pliegue de su manta continúa como veta dentro de piedra.",
+            "narrative_effect": "El litoral guarda identidad sin convertirla en estatua humana.",
+            "agency": "El relato atribuye a Mareiwa la transformación; su presencia no se convierte en cuerpo o juez visible.",
+            "physical_translation": "Tira verde continua, pequeño tramo levantado con sombra y extremo entre estratos grises.",
+            "visible_test": "Se distingue origen en manta cerrada y llegada dentro de roca no anatómica.",
+            "event_ids": [
+              "hermana_litoral"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "camino_vertical",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "katetamana"
+          ],
+          "beat": "Katetamana conserva lo que la familia no supo cuidar.",
+          "escena": "Vertical 9:16 WIDE TERRITORIAL VIEW of a solitary arid Guajira hill, Katetamana interpreted through the approved visual Bible, after the human episode. NO PEOPLE at all. Full-bleed deep cutpaper terrain with one asymmetric broad ridge and a shallow saddle, mineral-grey and sand strata, three dry narrow watercourses descending toward distant lower foreground. Hill fills UPPER TWO THIRDS while quiet ground reaches bottom; atmosphere sombre blue-grey, no sea or coastal rock. The hill is ENTIRELY NON-ANATOMICAL, never a woman-shaped mountain. One thin MUTED REDDISH-OCHRE layer runs inside the grey hill from left shoulder through saddle to right ridge. At the center where the hill opens into the shallow saddle, this ochre stratum IMPOSSIBLY RETAINS THREE SOFT CLOTH-LIKE PLEATS within the stone. A short middle portion of the pleated layer lifts slightly into CLEAR EMPTY AIR above the other mineral strata, still joined at BOTH ENDS to the solid hillside, with distinct long shadow underneath. These are THREE BROAD FOLDS OF MINERAL PAPER, NOT a dress, garment, human silhouette, ribbon, rope, waterfall, bridge or ruin. They hold the material memory of a reddish ochre manta without reconstructing a body. The fold span stays small relative to mountain (about a quarter its width), subordinate to vast quiet landscape but clearly legible. All grey layers remain sharply cut with real air gaps, side-light and occlusion; sky is plain paper sheets with a few pale horizontal clouds, sparse tiny dry thorn shrubs for scale, no decorative agave, face, deity, shrine or people at summit. The impossible is preserved softness within rigid rock, not floating mountains, threat, spectacle or radiant magic.",
+          "editorial_translation": "El cerro pertenece al relato. La veta ocre y su pliegue mineral son metáfora editorial posterior: memoria de la hija sin cuerpo, prendas suspendidas, anatomía, coordenadas ni reconstrucción de su muerte.",
+          "visual_question": "¿Se ve un cerro no anatómico cuya veta ocre conserva pliegues en aire real, sin parecer una prenda o un puente?",
+          "light": "Luz lateral baja, grises y arena con estrato ocre apagado, cielo azul gris sobrio.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un cerro árido conserva estratos minerales.",
+            "impossible_behavior": "Una capa de piedra guarda pliegues blandos de tela y se separa con aire sin romper su continuidad.",
+            "narrative_effect": "La presencia de la hija persiste como memoria territorial, no como espectáculo.",
+            "agency": "El relato atribuye a Mareiwa la transformación; su presencia no se convierte en cuerpo o juez visible.",
+            "physical_translation": "Estrato ocre con tres pliegues y extremos unidos a roca gris, sombra bajo tramo elevado.",
+            "visible_test": "Cerro no humano, sin personas; pliegue mineral reconocible dentro del relieve.",
+            "event_ids": [
+              "katetamana"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "hermana_litoral",
+            "katetamana",
+            "memoria_distinta"
+          ],
+          "beat": "Dos huellas no son una sola historia.",
+          "escena": "Square 1:1 SYMBOLIC MATERIAL STILL LIFE, NOT a landscape. On a full-bleed quiet deep INDIGO matte-paper field, TWO separate small irregular MINERAL-GREY PAPER FRAGMENTS hover just above the surface, seen obliquely. They occupy the middle half of the frame with generous space, asymmetric arrangement, no matching puzzle edges. The left fragment is flatter and lower; a SEA-GREEN folded paper vein lies trapped INSIDE its grey strata, one soft wave-like fold visible between rigid edges. The right fragment is taller, farther up and slightly behind; it holds a MUTED REDDISH-OCHRE vein compressed into THREE short soft pleats inside its grey stone strata. Each mineral fragment improbably contains the softness of fabric folds, but there is NO cloth outside, no garment shape, person, anatomy or miniature scene. Their grey outside is rigid torn paper, their colored interiors tender folded paper. A generous VISIBLE INDIGO AIR GAP keeps both fragments completely apart; neither touches or completes the other, no line joins them. Low directional shadows confirm each is physically raised at a different height. Do not make symmetric halves, heart, yin-yang, rings, book, jewel, amulet, necklace, emblem or archaeological object. Two distinct memories preserved without being fused, restrained and mysteriously tangible. No horizon, sea, sky, mountain, plant, title or labels.",
+          "material_direction": "Dos fragmentos minerales de estratos grises recortados con pliegues blandos verde y ocre dentro. Campo índigo continuo; distintas alturas, aire y sombras reales. No paisaje ni símbolo tradicional.",
+          "continuity_contract": [
+            "Verde corresponde a hermana litoral; ocre a hija de Katetamana. Son dos personas y episodios distintos, no una pareja, igualdad de culpa o dos mitades que se completan.",
+            "Objeto editorial imaginado; no pieza etnográfica, marca clanil ni amuleto."
+          ],
+          "editorial_translation": "Dos fragmentos con pliegues internos son una síntesis editorial de memoria y diferencia, no objetos mencionados en la fuente.",
+          "visual_question": "¿Dos fragmentos separados guardan pliegues verde y ocre sin formar paisaje, cuerpo, corazón ni emblema?",
+          "light": "Luz lateral cálida sobre papel gris y campo índigo; colores interiores sin neón ni resplandor.",
+          "avoid": [
+            "paisaje, horizonte, mar, montaña, maqueta sobre pedestal, persona, vestido, cuerpo, cuerda",
+            "corazón, yin-yang, puzzle, dos mitades iguales, emblema, amuleto, joya",
+            "letras, partículas, halo, cartón corrugado, marco"
+          ],
+          "symbolic_contract": {
+            "thesis": "La memoria conserva dos historias distintas y no iguala responsabilidades.",
+            "carrier": "Dos fragmentos minerales separados con pliegues internos verde y ocre.",
+            "operation": "La piedra guarda una blandura imposible sin unir las huellas.",
+            "story_connection": "Hermana en costa e hija en Katetamana permanecen distintas en el relato.",
+            "visible_test": "Dos fragmentos separados por vacío azul, diferentes pliegues internos, sin escena o anatomía."
+          },
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Dos fragmentos minerales guardan vetas distintas.",
+            "impossible_behavior": "Dentro de piedra rígida sobreviven pliegues blandos de tela.",
+            "narrative_effect": "La memoria retiene presencias distintas sin fundirlas.",
+            "agency": "El relato atribuye a Mareiwa la transformación; su presencia no se convierte en cuerpo o juez visible.",
+            "physical_translation": "Fragmentos grises elevados sobre índigo, pliegue verde y pliegues ocre en su interior.",
+            "visible_test": "Diferentes interiores blandos, sin conexión ni simetría entre fragmentos.",
+            "event_ids": [
+              "hermana_litoral",
+              "katetamana",
+              "memoria_distinta"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        }
+      }
+    }
+  }
+}

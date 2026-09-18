@@ -1,0 +1,740 @@
+{
+  "status": "complete_local_production",
+  "cli_invocations": 90,
+  "successful_outputs": 89,
+  "failed_invocations": 1,
+  "new_selected": 66,
+  "intermediate_outputs_preserved": 23,
+  "retained": 3,
+  "maximum_concurrency": 3,
+  "api_model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "cost_verified": false,
+  "http_attempts_including_sdk_retries": "not instrumented; counts above are official-CLI invocations, not a billing audit",
+  "observed_successful_cli_duration_ms": {
+    "median": 36893,
+    "p95": 43109,
+    "min": 29875,
+    "max": 104753
+  },
+  "events": [
+    {
+      "event": "exit",
+      "myth_id": 346,
+      "piece": "entrada",
+      "exit_code": 0,
+      "elapsed_ms": 36448
+    },
+    {
+      "event": "exit",
+      "myth_id": 346,
+      "piece": "acto",
+      "exit_code": 1,
+      "elapsed_ms": 36933,
+      "error": "moderation_blocked_output_self-harm",
+      "request_id": "req_49e4e65d36ce412786d110f65bd8c708"
+    },
+    {
+      "event": "exit",
+      "myth_id": 346,
+      "piece": "huella",
+      "exit_code": 0,
+      "elapsed_ms": 40134
+    },
+    {
+      "event": "exit",
+      "myth_id": 347,
+      "piece": "entrada",
+      "exit_code": 0,
+      "elapsed_ms": 38956
+    },
+    {
+      "event": "exit",
+      "myth_id": 347,
+      "piece": "acto",
+      "exit_code": 0,
+      "elapsed_ms": 38789
+    },
+    {
+      "event": "exit",
+      "myth_id": 347,
+      "piece": "huella",
+      "exit_code": 0,
+      "elapsed_ms": 36636
+    },
+    {
+      "event": "exit",
+      "myth_id": 348,
+      "piece": "huella",
+      "exit_code": 0,
+      "elapsed_ms": 37552
+    },
+    {
+      "event": "exit",
+      "myth_id": 348,
+      "piece": "entrada",
+      "exit_code": 0,
+      "elapsed_ms": 39209
+    },
+    {
+      "event": "exit",
+      "myth_id": 348,
+      "piece": "acto",
+      "exit_code": 0,
+      "elapsed_ms": 39922
+    },
+    {
+      "event": "exit",
+      "myth_id": 346,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/creacion-chimila/acto-llegada-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 32781
+    },
+    {
+      "event": "exit",
+      "myth_id": 346,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/creacion-chimila/huella-simbolo-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 34812
+    },
+    {
+      "event": "exit",
+      "myth_id": 349,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/primeras-guerras/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36507
+    },
+    {
+      "event": "exit",
+      "myth_id": 349,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/primeras-guerras/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36864
+    },
+    {
+      "event": "exit",
+      "myth_id": 349,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/primeras-guerras/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37133
+    },
+    {
+      "event": "exit",
+      "myth_id": 350,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-diluvio/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36893
+    },
+    {
+      "event": "exit",
+      "myth_id": 350,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-diluvio/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37809
+    },
+    {
+      "event": "exit",
+      "myth_id": 351,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-fuego/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35635
+    },
+    {
+      "event": "exit",
+      "myth_id": 350,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-diluvio/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 40500
+    },
+    {
+      "event": "exit",
+      "myth_id": 351,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-fuego/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 39373
+    },
+    {
+      "event": "exit",
+      "myth_id": 351,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-fuego/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38579
+    },
+    {
+      "event": "exit",
+      "myth_id": 353,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36108
+    },
+    {
+      "event": "exit",
+      "myth_id": 353,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35570
+    },
+    {
+      "event": "exit",
+      "myth_id": 354,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-gran-verano/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35511
+    },
+    {
+      "event": "exit",
+      "myth_id": 353,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37381
+    },
+    {
+      "event": "exit",
+      "myth_id": 355,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-algodon/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35585
+    },
+    {
+      "event": "exit",
+      "myth_id": 354,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-gran-verano/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 39039
+    },
+    {
+      "event": "exit",
+      "myth_id": 354,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-gran-verano/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 39696
+    },
+    {
+      "event": "exit",
+      "myth_id": 355,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-algodon/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37156
+    },
+    {
+      "event": "exit",
+      "myth_id": 356,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 34738
+    },
+    {
+      "event": "exit",
+      "myth_id": 355,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-algodon/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37372
+    },
+    {
+      "event": "exit",
+      "myth_id": 356,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35302
+    },
+    {
+      "event": "exit",
+      "myth_id": 356,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36860
+    },
+    {
+      "event": "exit",
+      "myth_id": 357,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/la-mala-mujer/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36883
+    },
+    {
+      "event": "exit",
+      "myth_id": 358,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-muertos-en-el-monte/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38091
+    },
+    {
+      "event": "exit",
+      "myth_id": 357,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/la-mala-mujer/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 40618
+    },
+    {
+      "event": "exit",
+      "myth_id": 357,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/la-mala-mujer/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 47222
+    },
+    {
+      "event": "exit",
+      "myth_id": 359,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-brujos/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 34489
+    },
+    {
+      "event": "exit",
+      "myth_id": 358,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-muertos-en-el-monte/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 41489
+    },
+    {
+      "event": "exit",
+      "myth_id": 358,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-muertos-en-el-monte/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 43109
+    },
+    {
+      "event": "exit",
+      "myth_id": 359,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-brujos/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37692
+    },
+    {
+      "event": "exit",
+      "myth_id": 359,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-brujos/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37520
+    },
+    {
+      "event": "exit",
+      "myth_id": 360,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37841
+    },
+    {
+      "event": "exit",
+      "myth_id": 360,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38270
+    },
+    {
+      "event": "exit",
+      "myth_id": 360,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36188
+    },
+    {
+      "event": "exit",
+      "myth_id": 361,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36123
+    },
+    {
+      "event": "exit",
+      "myth_id": 361,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 34819
+    },
+    {
+      "event": "exit",
+      "myth_id": 362,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-animales-hablan/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37656
+    },
+    {
+      "event": "exit",
+      "myth_id": 361,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 39119
+    },
+    {
+      "event": "exit",
+      "myth_id": 362,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-animales-hablan/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37126
+    },
+    {
+      "event": "exit",
+      "myth_id": 362,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-animales-hablan/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36813
+    },
+    {
+      "event": "exit",
+      "myth_id": 363,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-monos/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 37845
+    },
+    {
+      "event": "exit",
+      "myth_id": 363,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-monos/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 34179
+    },
+    {
+      "event": "exit",
+      "myth_id": 363,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-monos/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36691
+    },
+    {
+      "event": "exit",
+      "myth_id": 364,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35613
+    },
+    {
+      "event": "exit",
+      "myth_id": 364,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38663
+    },
+    {
+      "event": "exit",
+      "myth_id": 365,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 34600
+    },
+    {
+      "event": "exit",
+      "myth_id": 364,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36105
+    },
+    {
+      "event": "exit",
+      "myth_id": 365,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35500
+    },
+    {
+      "event": "exit",
+      "myth_id": 366,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-morrocoyo/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35425
+    },
+    {
+      "event": "exit",
+      "myth_id": 365,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 40989
+    },
+    {
+      "event": "exit",
+      "myth_id": 579,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yunari-y-las-cinco-tierras/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 33876
+    },
+    {
+      "event": "exit",
+      "myth_id": 366,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-morrocoyo/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36215
+    },
+    {
+      "event": "exit",
+      "myth_id": 366,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-morrocoyo/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36634
+    },
+    {
+      "event": "exit",
+      "myth_id": 580,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yaau-numirinta-y-las-dos-mazorcas/entrada-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 33136
+    },
+    {
+      "event": "exit",
+      "myth_id": 579,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yunari-y-las-cinco-tierras/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 36751
+    },
+    {
+      "event": "exit",
+      "myth_id": 579,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yunari-y-las-cinco-tierras/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38932
+    },
+    {
+      "event": "exit",
+      "myth_id": 580,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yaau-numirinta-y-las-dos-mazorcas/acto-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35023
+    },
+    {
+      "event": "exit",
+      "myth_id": 580,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yaau-numirinta-y-las-dos-mazorcas/huella-v1.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 40192
+    },
+    {
+      "event": "exit",
+      "myth_id": 348,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-poblamiento/acto-sol-unico-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 29880
+    },
+    {
+      "event": "exit",
+      "myth_id": 349,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/primeras-guerras/huella-papel-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38368
+    },
+    {
+      "event": "exit",
+      "myth_id": 350,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-diluvio/acto-refugio-inundado-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38389
+    },
+    {
+      "event": "exit",
+      "myth_id": 353,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/acto-ceiba-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 31609
+    },
+    {
+      "event": "exit",
+      "myth_id": 353,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/huella-ceiba-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 39425
+    },
+    {
+      "event": "exit",
+      "myth_id": 354,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-gran-verano/huella-papercut-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 70829
+    },
+    {
+      "event": "exit",
+      "myth_id": 356,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/huella-ajuste-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 35376
+    },
+    {
+      "event": "exit",
+      "myth_id": 358,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-muertos-en-el-monte/entrada-casa-ordinaria-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 31432
+    },
+    {
+      "event": "exit",
+      "myth_id": 360,
+      "piece": "entrada",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/entrada-ajuste-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 29875
+    },
+    {
+      "event": "exit",
+      "myth_id": 356,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/acto-ajuste-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 104753
+    },
+    {
+      "event": "exit",
+      "myth_id": 360,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/acto-ajuste-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 34986
+    },
+    {
+      "event": "exit",
+      "myth_id": 360,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/huella-ajuste-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 38345
+    },
+    {
+      "event": "exit",
+      "myth_id": 361,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/acto-continuidad-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 31136
+    },
+    {
+      "event": "exit",
+      "myth_id": 362,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-animales-hablan/acto-sol-unico-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 33214
+    },
+    {
+      "event": "exit",
+      "myth_id": 361,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/huella-ausencias-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 39892
+    },
+    {
+      "event": "exit",
+      "myth_id": 363,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-monos/acto-aire-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 46306
+    },
+    {
+      "event": "exit",
+      "myth_id": 364,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/acto-identidad-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 32059
+    },
+    {
+      "event": "exit",
+      "myth_id": 365,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/acto-aire-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 40491
+    },
+    {
+      "event": "exit",
+      "myth_id": 366,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-morrocoyo/acto-sin-elenco-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 33155
+    },
+    {
+      "event": "exit",
+      "myth_id": 579,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yunari-y-las-cinco-tierras/huella-cinco-tierras-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 39206
+    },
+    {
+      "event": "exit",
+      "myth_id": 580,
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yaau-numirinta-y-las-dos-mazorcas/huella-papel-plano-v2.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 41980
+    },
+    {
+      "event": "exit",
+      "myth_id": 365,
+      "piece": "acto",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/acto-cola-completa-v3.jpeg",
+      "exit_code": 0,
+      "elapsed_ms": 33624
+    }
+  ],
+  "original_plan": "plan.v1.json",
+  "first_refinements": "revisions.v1.json",
+  "main_refinements": "refinement-queue.v1.json",
+  "last_refinement": "final-refinement.v1.json",
+  "published": false
+}

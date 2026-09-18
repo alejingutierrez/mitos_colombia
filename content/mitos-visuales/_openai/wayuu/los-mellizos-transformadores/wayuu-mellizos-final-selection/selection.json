@@ -1,0 +1,129 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "los-mellizos-transformadores",
+  "title": "Los mellizos transformadores",
+  "created_at": "2026-09-06T05:20:00.877Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña Wayúu completa autorizada por el usuario; QA de píxeles por agente.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "43e7c6a2dfcc83a7d4f49bcb2eb94d6117305002cfed920bbf4b05f4634d9688",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:15:06.755Z",
+    "reviewed_reference_ids": [
+      "85fb797fe6e7a35bd1fb",
+      "a9d9c6b111d2e542781c"
+    ],
+    "retained": [
+      "Profundidad del territorio en capas azul y arena; nube de papel con continuidad curva.",
+      "Dos momentos diferentes: huida y encuentro con un ave. Escala amplia del paisaje."
+    ],
+    "rejected": [
+      "Mellizos casi idénticos con el mismo traje, rostros de ilustración y figuras grandes.",
+      "Nube como mochila pegada a un niño que ya camina; omisión de rendija del rancho.",
+      "Paloma blanca monumental, plumas decorativas y camino de huellas que sustituyen el sembrado del episodio."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar nube de papel y territorio amplio; mostrar su paso real por una rendija y diferenciar al hermano que permanece corporal.",
+      "acto": "Conservar interacción con ave, pero Aáner pequeña, gris-parda, dueña del sembrado. Restituir frutos y escucha incómoda, no paloma de paz.",
+      "huella": "Conservar capas azules como memoria material de Manna; fibras que originan dos transformaciones, sin repetir escena o retratos."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-02-entrada/entrada.jpeg",
+      "sha256": "862d09db149c6663d5ede79fe9962eaea4618a33f756a939d637ef1917894955",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "4ba8d057b4bb54d5dcb07ffc6e49f47975eef3a5bc1785b628580b8ce4342b49",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Peeliyuu pequeño en camisa arcilla a la derecha; casa entera al fondo. Una nube de hojas con bandas arena/carbón atraviesa la abertura estrecha y se abre fuera. Amplio terreno de papel a la izquierda; no otro cuerpo, violencia o figura en nube.",
+        "limits": [
+          "La boca de salida es más ancha que una hendidura mínima, pero la conexión nube-pared y compresión relativa se leen.",
+          "Casa sin identificación de sitio exacto; el hermano afuera es puesta en escena."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/acto.jpeg",
+      "sha256": "e4ec2ef2e2c019f4e6cc6559bd85d73f2330d9ce7853d22f6d2523000ce84309",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "544113fc9e36ff459f26f6053b1ef5af91588533d5c43b07bbe463cad53b5fb1",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos niños distintos por talla, cabello y camisas; menor sostiene un fruto y ambos miran una paloma gris-parda pequeña. Tierra en estratos abiertos y fibra índigo visible bajo ellos. Rostros sencillos de recorte.",
+        "limits": [
+          "Figuras aproximadamente 23% de la altura frente al sexto solicitado; mantienen cuerpo completo y entorno amplio.",
+          "Paños más envolventes que la ficha. Aáner se traduce a ave según la Biblia, no se afirma especie.",
+          "Apertura de estratos e hilo son metáfora editorial de revelación, no episodio documentado."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/huella.jpeg",
+      "sha256": "7ab196fbb2a27fdf6c18adccc490e0e24025bd61c624c22a0cb07e1401185b8c",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "154376819c5487f782cb35cf0880148cf7e6cdee3ada7f814e37d2f8b2c681dc",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Fragmento índigo doblado con hueco oscuro, dos fibras divergentes terminadas en nube cruda y pliegues arcilla, brote amarillo en origen. Sin personas, paisaje, emblema o letras.",
+        "limits": [
+          "Forma vegetal estilizada, no lámina botánica.",
+          "El significado materno exige contexto del relato, propio de síntesis simbólica."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_initial": 80.7,
+      "entrada_revision": 73.9,
+      "acto": 35.4,
+      "huella": 37.1
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/entrada.jpeg",
+      "reason": "Niño y casa demasiado próximos; niño en zona que el título cubriría. La acción sí se logró y se conservó al corregir encuadre."
+    }
+  ],
+  "published": false
+}

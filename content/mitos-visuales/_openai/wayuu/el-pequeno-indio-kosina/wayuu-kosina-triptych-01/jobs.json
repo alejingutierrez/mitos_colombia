@@ -1,0 +1,258 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-kosina-triptych-01",
+  "created_at": "2026-09-06T16:04:45.313Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-pequeno-indio-kosina",
+  "plan": "content/mitos-visuales/wayuu.kosina.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "4163fd08d9827874a6a372f63c638c05ce9131541f9fc38e9ce0b235847d46fe",
+  "narrative_target_sha256": "1e64f847e4e505f07e10ddce4e1ab058445edb5bb63c9c0413a8716be14faf4d",
+  "evidence": [
+    {
+      "id": "published_kosina",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-pequeno-indio-kosina.json",
+      "supports": "Relato objetivo de huellas menguantes, caballo sin alas, reciprocidad y regreso subterráneo.",
+      "limits": "Edición pública preservada; no constituye una segunda línea histórica."
+    },
+    {
+      "id": "chaves_325_327",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "325–327, PDF índices 21–23",
+      "supports": "Huellas decrecientes, animal que cambia tamaño, faja, carreras sin silla, regalos y retorno bajo tierra.",
+      "limits": "El aliado también propone compra en la fuente, detalle suavizado en la edición pública. No se representa ese episodio. Vestuario y aspecto del protagonista no fijados."
+    },
+    {
+      "id": "bible_lot17",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-17-el-pequeno-indio-kosina-v3.md",
+      "supports": "Inventario de 29 modelos y alcance kusina_identity_unresolved.",
+      "limits": "Trajes y colores editoriales, no etnia o uniforme tradicional exactos."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T16:04:44.812Z",
+    "reviewed_reference_ids": [
+      "732145844ee6f8d036d3",
+      "2f5b2e80829e7607d8d3"
+    ],
+    "retained": [
+      "Papel recortado y relación entre ocres cálidos y cielo azul profundo.",
+      "Continuidad entre animal y territorio; crin de tiras de papel."
+    ],
+    "rejected": [
+      "Alas de Pegaso, jinete con lanza/arco en la carrera y ornamentos geométricos sin sustento.",
+      "Rostros volumétricos y personaje grande; cielos de espirales y gran disco solar.",
+      "Paisaje reducido a maqueta aislada y arquitectura no identificada por la fuente."
+    ],
+    "influence_by_act": {
+      "entrada": "Cambiar caballo alado por potro sin alas y rastro de cascos que mengua lateralmente; figuras pequeñas y distancia.",
+      "acto": "Mantener capas del terreno, convertirlas en entrada bajo tierra; no vuelo ni alas.",
+      "huella": "Conservar contraste ocre/azul; faja abierta y ausencia de caballo como síntesis del vínculo, sin jinete ni paisaje."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "kosina_joven__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/kosina_joven__identity_sheet--canon.jpeg",
+      "sha256": "8e58bd8de1f807fb01b969e2c9609668eb06a5ae1f6b2fc36c2d5639b8c4fe3c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "kosina_joven__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/kosina_joven__state_sheet--estados.jpeg",
+      "sha256": "597cfd3d5dae6f6ee741ad65ea5d3764ee0150fb2a233085333a40b7937a0c38",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "caballo_kosina__identity_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/caballo_kosina__identity_sheet--canon.jpeg",
+      "sha256": "11ff60546baea2fd10f753b8e49ab77b31d9b34d976a9847509a0025ad146e18",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "caballo_kosina__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/caballo_kosina__state_sheet--estados.jpeg",
+      "sha256": "a1cea4dcc3d52d6499dececd5bfeff267f1d93267302124d642947d9f7f1b7b9",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "faja_captura_kosina__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/faja_captura_kosina__object_sheet--canon.jpeg",
+      "sha256": "8166b3fd6b5bd2d6c08ef6b2abf2f05508502bec2a58ca480d8511c137a5b32e",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "huellas_caballo_kosina__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/huellas_caballo_kosina__phenomenon_rule--canon.jpeg",
+      "sha256": "d218496c4b35524c58db94a862f16a060493fd581d12bb9ef4906b4a5357b13a",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "abertura_subterranea_caballo__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/abertura_subterranea_caballo__spatial_model--canon.jpeg",
+      "sha256": "eb312da43e0c37b5e92748c350f3541a8e5046d042f93689dfad56c901e96ad9",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "territorio_alta_guajira__environment_model",
+        "kosina_joven__identity_sheet",
+        "kosina_joven__state_sheet",
+        "caballo_kosina__identity_sheet",
+        "caballo_kosina__state_sheet",
+        "faja_captura_kosina__object_sheet",
+        "huellas_caballo_kosina__phenomenon_rule",
+        "abertura_subterranea_caballo__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-pequeno-indio-kosina/wayuu-kosina-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "eb45ef299880d0a0f118eb9c10a27243b1398354d4a3aa508ef1cf27efd370f2",
+      "narrative_event_ids": [
+        "rastro_encogimiento"
+      ],
+      "editorial_translation": "El cambio de tamaño es narrado; alineación lateral, tamaños exagerados de las huellas y composición son traducción editorial, no topografía documental.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Rastro del caballo en el suelo.",
+        "impossible_behavior": "Las impresiones del mismo casco decrecen hasta un potro mucho menor que la primera huella.",
+        "narrative_effect": "Hacer visible el cambio de tamaño y la atención de Kosina.",
+        "agency": "El caballo actúa por sí mismo; Kosina observa y escucha, no controla un poder.",
+        "physical_translation": "Troquelados de casco de tamaño menguante sobre la misma franja de suelo, sombras internas y un solo potro.",
+        "visible_test": "¿Hay un solo potro y cuatro cascos únicos que menguan lateralmente, imposibles de explicar sólo por perspectiva?",
+        "event_ids": [
+          "rastro_encogimiento"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kosina-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "territorio_alta_guajira__environment_model",
+        "kosina_joven__identity_sheet",
+        "kosina_joven__state_sheet",
+        "caballo_kosina__identity_sheet",
+        "caballo_kosina__state_sheet",
+        "faja_captura_kosina__object_sheet",
+        "huellas_caballo_kosina__phenomenon_rule",
+        "abertura_subterranea_caballo__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-pequeno-indio-kosina/wayuu-kosina-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "d13543b1a6e4e07d354e240ab39fed96fd47e3e689f3eb39e8d5fdf1af20c087",
+      "narrative_event_ids": [
+        "regreso_subsuelo"
+      ],
+      "editorial_translation": "Retorno bajo tierra narrado; terreno abierto en capas y Kosina como testigo son puesta en escena editorial, no episodio adicional certificado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Una abertura del terreno al final del camino.",
+        "impossible_behavior": "Una pequeña abertura deja ver el caballo entero en una profundidad subterránea que el suelo normalmente oculta.",
+        "narrative_effect": "Despedida y autonomía del animal, no captura ni castigo.",
+        "agency": "El caballo actúa por sí mismo; Kosina observa y escucha, no controla un poder.",
+        "physical_translation": "Suelo de hojas continuas con abertura y estratos separados; el caballo entero se ve bajo la lámina superior.",
+        "visible_test": "¿El único caballo está entero bajo una capa de suelo continua, con Kosina afuera y sin que lo empuje?",
+        "event_ids": [
+          "regreso_subsuelo"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kosina-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "territorio_alta_guajira__environment_model",
+        "kosina_joven__identity_sheet",
+        "kosina_joven__state_sheet",
+        "caballo_kosina__identity_sheet",
+        "caballo_kosina__state_sheet",
+        "faja_captura_kosina__object_sheet",
+        "huellas_caballo_kosina__phenomenon_rule",
+        "abertura_subterranea_caballo__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-pequeno-indio-kosina/wayuu-kosina-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "8d5b8c2de06c6c3669b1c691e9d448e822430695867629c0b06d54cfdf341dcf",
+      "narrative_event_ids": [
+        "faja_vinculo",
+        "regreso_subsuelo"
+      ],
+      "editorial_translation": "Faja abierta y vacío equino son metáfora editorial; no talismán tradicional ni objeto literal de la fuente.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "La faja que vinculó a Kosina con el caballo.",
+        "impossible_behavior": "La banda contiene la ausencia del caballo pero deja abierta su salida.",
+        "narrative_effect": "Sintetiza relación, límite y despedida sin propiedad absoluta.",
+        "agency": "El caballo actúa por sí mismo; Kosina observa y escucha, no controla un poder.",
+        "physical_translation": "Faja de papel que rodea un vacío con forma de caballo, interrumpida junto al hocico para comunicar interior y exterior.",
+        "visible_test": "¿Se ve una sola faja abierta con caballo como vacío comunicado al exterior, sin escena?",
+        "event_ids": [
+          "faja_vinculo",
+          "regreso_subsuelo"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "El vínculo vale sin clausurar la libertad de quien entrega el don.",
+        "carrier": "Faja lisa y ausencia con forma de caballo.",
+        "operation": "Abrir el lazo y comunicar el vacío del animal con el exterior.",
+        "story_connection": "Faja inicial, negativa a vender y regreso autónomo bajo tierra.",
+        "visible_test": "Lazo abierto y caballo en negativo, sin ilustrar otra escena."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kosina-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

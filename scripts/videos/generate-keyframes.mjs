@@ -19,6 +19,7 @@ import OpenAI, { toFile } from "openai";
 import sharp from "sharp";
 
 import { IMAGE_STYLE_PROFILES } from "../../src/lib/image-generation.js";
+import { IMAGE_QUALITY_POLICY } from "../../src/lib/image-quality-policy.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "../..");
@@ -52,14 +53,21 @@ const force = args.includes("--force");
 const allowMissingRefs = args.includes("--allow-missing-refs");
 
 const MODEL = process.env.IMAGE_GENERATION_MODEL || "gpt-image-2";
-const QUALITY = process.env.IMAGE_GENERATION_QUALITY || "high";
+// Sólo la entrada horizontal del tríptico usa high, y este generador no crea
+// trípticos: todas sus fichas de Biblia y keyframes se producen en medium.
+const BIBLE_IMAGE_QUALITY = IMAGE_QUALITY_POLICY.bible;
+const KEYFRAME_IMAGE_QUALITY = IMAGE_QUALITY_POLICY.keyframe;
 const SIZES = { vertical: "1024x1536", square: "1024x1024", horizontal: "1536x1024" };
+
+function qualityFor(item) {
+  return item.kind === "keyframe" ? KEYFRAME_IMAGE_QUALITY : BIBLE_IMAGE_QUALITY;
+}
 
 function buildPrompt(item, spec) {
   const style = IMAGE_STYLE_PROFILES.studioPaperMaquette.lines;
   const kindHeader = {
     personaje:
-      "Ficha de personaje para una biblia visual: UNA figura (o grupo indicado) de cuerpo entero, frontal, centrada, sobre fondo mate liso color crema claro, sin escenario ni utilería extra. La figura es un recorte y volumen de papel con capas, bordes y fibras visibles.",
+      "Ficha de personaje para una biblia visual: UNA figura (o grupo indicado) de cuerpo entero, frontal, centrada, sobre fondo mate liso color crema claro que llega a los cuatro límites, sin escenario ni utilería extra. La figura conserva capas y fibras de papel, sin canto de cartón ni borde exterior del soporte.",
     paisaje:
       "Paisaje de biblia visual: un solo tableau artesanal de borde a borde, profundidad por capas de papel, sin personas.",
     prop:
@@ -73,6 +81,7 @@ function buildPrompt(item, spec) {
     "",
     "Técnica central:",
     "- Fotografía frontal de una maqueta física real de papel artesanal, no ilustración digital.",
+    "- La cámara está dentro del diorama: primer plano, plano medio y fondo quedan físicamente separados, con aire, oclusiones, cantos internos y sombras reales; no mostrar perímetro exterior, base, cartón crudo o corrugado, mesa, estudio, ciclorama, marco ni vacío fuera de la escena.",
     ...style.map((line) => `- ${line}`),
     `- ${kindHeader}`,
     "",
@@ -91,7 +100,7 @@ async function fileExists(p) {
     .catch(() => false);
 }
 
-async function callOpenAI(openai, item, prompt, refPaths) {
+async function callOpenAI(openai, item, prompt, refPaths, quality) {
   const size = SIZES[item.preset] || SIZES.vertical;
   if (!refPaths.length) {
     const params = {
@@ -99,7 +108,7 @@ async function callOpenAI(openai, item, prompt, refPaths) {
       prompt,
       n: 1,
       size,
-      quality: QUALITY,
+      quality,
       moderation: "low",
       output_format: "jpeg",
     };
@@ -116,9 +125,11 @@ async function callOpenAI(openai, item, prompt, refPaths) {
   );
   // images.edit con referencias; parámetros opcionales se degradan si la API los rechaza.
   const attempts = [
-    { model: MODEL, image: images, prompt, n: 1, size, quality: QUALITY, input_fidelity: "high", output_format: "jpeg" },
-    { model: MODEL, image: images, prompt, n: 1, size, quality: QUALITY, output_format: "jpeg" },
-    { model: MODEL, image: images, prompt, n: 1, size, quality: QUALITY },
+    // gpt-image-2 no acepta input_fidelity; no quemar una petición fallida antes
+    // de cada generación. Se conserva sólo para modelos que sí lo implementan.
+    ...(MODEL === "gpt-image-2" ? [] : [{ model: MODEL, image: images, prompt, n: 1, size, quality, input_fidelity: "high", output_format: "jpeg" }]),
+    { model: MODEL, image: images, prompt, n: 1, size, quality, output_format: "jpeg" },
+    { model: MODEL, image: images, prompt, n: 1, size, quality },
   ];
   let lastError;
   for (const params of attempts) {
@@ -195,7 +206,12 @@ async function main() {
   const manifestPath = path.join(outDir, "manifest.json");
   const manifest = (await fileExists(manifestPath))
     ? JSON.parse(await fs.readFile(manifestPath, "utf8"))
-    : { spec: spec.SPEC_NAME, model: MODEL, quality: QUALITY, items: {} };
+    : {
+        spec: spec.SPEC_NAME,
+        model: MODEL,
+        image_quality: { biblia: BIBLE_IMAGE_QUALITY, keyframes: KEYFRAME_IMAGE_QUALITY },
+        items: {},
+      };
 
   const items = spec.ITEMS.filter((i) => !only.length || only.includes(i.id));
   console.log(`[keyframes] spec=${spec.SPEC_NAME} items=${items.length} model=${MODEL} dryRun=${dryRun}`);
@@ -230,12 +246,13 @@ async function main() {
       refPaths.push(refPath);
     }
     const prompt = buildPrompt(item, spec);
+    const quality = qualityFor(item);
     if (dryRun) {
-      console.log(`\n=== ${item.id} (${item.kind}, refs: ${refPaths.length}) ===\n${prompt}\n`);
+      console.log(`\n=== ${item.id} (${item.kind}, quality: ${quality}, refs: ${refPaths.length}) ===\n${prompt}\n`);
       return "skip";
     }
-    console.log(`[keyframes] generando ${item.id} (${item.kind}, refs: ${refPaths.length})...`);
-    const buffer = await callOpenAI(openai, item, prompt, refPaths);
+    console.log(`[keyframes] generando ${item.id} (${item.kind}, quality: ${quality}, refs: ${refPaths.length})...`);
+    const buffer = await callOpenAI(openai, item, prompt, refPaths, quality);
     await fs.writeFile(outPath, buffer);
     if (item.preset === "vertical") {
       await sharp(buffer)
@@ -246,6 +263,7 @@ async function main() {
     manifest.items[item.id] = {
       kind: item.kind,
       preset: item.preset,
+      quality,
       refs: item.refs || [],
       prompt,
       generated_at: new Date().toISOString(),

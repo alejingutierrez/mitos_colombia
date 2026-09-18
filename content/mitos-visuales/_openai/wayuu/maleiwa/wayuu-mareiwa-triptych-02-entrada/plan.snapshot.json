@@ -1,0 +1,264 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "maleiwa": {
+      "titulo": "Mareiwa",
+      "canon_models": [
+        "mareiwa__presence_model",
+        "mareiwa__state_sheet",
+        "honda_piedra_mareiwa__object_sheet",
+        "pozos_salados_mareiwa__spatial_model",
+        "turpial_semillero__identity_sheet",
+        "pava_semillera__identity_sheet",
+        "tuna_higo__botanical_sheet"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_311",
+          "type": "primary_narrative_record",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "311 (PDF índice 7)",
+          "supports": "Honda, piedra, retirada del mar, pozos salados y aves que dispersan semillas.",
+          "limits": "Registro histórico mediado y con lenguaje colonial. Morva es arbusto, no paloma. No copiar ilustraciones ni iconografía."
+        },
+        {
+          "id": "published_mareiwa",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/maleiwa.json",
+          "supports": "Múltiples versiones y tarea de hacer habitable el mundo.",
+          "limits": "Mantener texto sin cambios; no fabricar biografía única ni fusionar con Creación Wayuu."
+        },
+        {
+          "id": "bible_lot10",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-10-maleiwa-v3.md",
+          "supports": "Modelos de presencia, honda, pozos, aves y plantas; registro de variantes de Pineda y Chaves.",
+          "limits": "No hay retrato canónico universal de Mareiwa. Traducción material editorial, no creencia afirmada para todos."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "mareiwa__presence_model",
+          "decision": "Retener presencia no corporal y continuidad ocre; distribuir acciones entre formatos, no repetir el panorama de ficha."
+        },
+        {
+          "model_id": "honda_piedra_mareiwa__object_sheet",
+          "decision": "H conserva herramienta inerte después del lanzamiento; S convierte metafóricamente la bolsa en suelo fértil. No se afirma que la honda tenga poderes propios."
+        },
+        {
+          "model_id": "turpial_semillero__identity_sheet",
+          "decision": "Retener negro/naranja/ala blanca, reducir escala y volumen a recortes simples. Semillas en caída son el mecanismo del relato, no cuentas colgadas del pico."
+        },
+        {
+          "model_id": "pava_semillera__identity_sheet",
+          "decision": "Pava pardo carbón, cola larga, cabeza pequeña. Vuelo en segundo plano y sin especie exacta; no rapaz ni pavo real."
+        },
+        {
+          "model_id": "pozos_salados_mareiwa__spatial_model",
+          "decision": "Tres depresiones diferentes con agua residual; sin salina industrial ni jardín."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "maleiwa",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/maleiwa.json",
+        "target_content_sha256": "e9df8208648a3b896a6628865cdb903acea0de2cfb7d72ea3a40ff94e21d6c6c",
+        "summary": "Mareiwa vuelve habitable un territorio cambiante: retira el mar y procura alimento por la dispersión de semillas. No posee una sola biografía documentada. Este tríptico selecciona consecuencias territoriales de sus acciones, sin dios humano ni mezcla con los mellizos.",
+        "events": [
+          {
+            "id": "mar_retirado",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_311",
+            "action": "Mareiwa lanza una piedra con honda y el mar retrocede; quedan pozos salados."
+          },
+          {
+            "id": "aves_semillas",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_311",
+            "action": "Pavas y turpiales dispersan semillas que dan alimento al territorio."
+          },
+          {
+            "id": "hacer_habitable",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_mareiwa",
+            "action": "Crear y transformar hacen habitable el mundo; el agua cambia y no queda fijada para siempre."
+          },
+          {
+            "id": "clanes_lluvia_variantes",
+            "provenance": "historical_core",
+            "required": false,
+            "source": "bible_lot10",
+            "action": "Nombrar clanes y propiciar lluvia son otras funciones documentadas; no se comprimen en las escenas seleccionadas."
+          }
+        ],
+        "emotional_reading": "Asombro ante un mundo recién disponible y todavía frágil.",
+        "magic_reading": "La geografía cambia materialmente; lo mínimo que cae de un ave contiene un futuro habitable.",
+        "qa_method": "H: retirada del mar deja tierra y agua residual. V: aves dispersan semillas y vegetación localizada. S: honda convertida en soporte de fertilidad, no escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T05:34:06.879Z",
+        "reviewed_reference_ids": [
+          "bb8e4c10e817c7d5c282",
+          "7e6e7790b768a2376a39"
+        ],
+        "retained": [
+          "Azul mineral, arena y curvas superpuestas con sombras reales; amplitud del territorio.",
+          "Relación entre cielo, agua y tierra como estructura de la imagen."
+        ],
+        "rejected": [
+          "Rapaz monumental, jaguar y figura humana con poncho como identidad de Mareiwa: no corresponden a los episodios elegidos ni al modelo no corporal.",
+          "Picos de apariencia nevada, casa redonda y velero; no trasladar elementos decorativos sin relación con la acción.",
+          "Repetir la misma contemplación del paisaje en horizontal y vertical."
+        ],
+        "influence_by_act": {
+          "entrada": "Recuperar bandas azul/arena y distancia, convertir la curva en retirada física del mar que revela tierra y pozos.",
+          "acto": "Cambiar ave rapaz por turpial y pava a escala natural; sus semillas activan manchas locales de vegetación.",
+          "huella": "Condensar azul, arena y curvas en la bolsa de una honda que contiene suelo y un brote; símbolo editorial sin escena."
+        }
+      },
+      "material_direction": "Immersive full-bleed world made entirely of matte dyed CUT PAPER photographed in real three-dimensional depth. Six or more physical planes separated by visible AIR, real occlusion and long cast shadows. Broad folded paper terrain, layered paper water, individually cut plant blades and bird wing pieces; no painted scenery, plastic, actual sand, stone or feathers. Camera far back and slightly raised, territory dominates. No exterior diorama edge, cardboard corrugation, tabletop, frame, base or pedestal. Mareiwa has NO human, animal or hidden anatomical form: agency is the transformation of territory. Magic must be a physical change of paper, not glow, particles or generic mystical smoke.",
+      "paleta": "azul mineral profundo, turquesa mate, crudo salino, ocre, oliva apagado y naranja de turpial; luz rasante cálida",
+      "continuity_contract": [
+        "Un pliegue ocre recorre la tierra como firma editorial no corporal de Mareiwa; nunca rostro, mano o silueta en nubes.",
+        "Costa árida y vegetación localizada de La Guajira; no bosque uniforme, picos nevados ni paisaje andino.",
+        "Sólo elementos propios de cada escena. No humanos, jaguar, rapaz, velero, vivienda, marca clanil ni doble de Juyá."
+      ],
+      "avoid": [
+        "dios humano, gigante, rostro en cielo, mano divina, halo, trono",
+        "jaguar, águila monumental, poncho, personajes de otros mitos",
+        "neón, partículas, portal, humo, catástrofe, tsunami, violencia",
+        "selva exuberante, saguaro, nieve, arquitectura ajena",
+        "ilustración plana, render plástico, textura fotográfica real, marco, cartón soporte, pedestal, letras"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "mar_retirado"
+          ],
+          "beat": "El mar se retira y la tierra conserva su memoria salada.",
+          "escena": "Horizontal 16:9 EXTREME WIDE immersive cut-paper Guajira coast at dawn. The central extraordinary action MUST dominate: a SINGLE BROAD CONTINUOUS SHEET OF TURQUOISE SEA is PEELING BACK OFF THE LAND. In upper-right middle distance its long outer edge hangs almost HORIZONTALLY in the air like a low lifted canopy of WATER, connected to the distant indigo open sea on its far side. Under this lifted blue water-sheet is a very clear wide AIR GAP with warm DRY OCHRE GROUND visible through it. The blue underside casts a long soft shadow over the land it has just uncovered. The water sheet is thin and gently curled back toward the ocean, its edge curves sideways along the coast, NOT an upright wave, no tunnel, portal, wall, splash, foam or disaster. This impossible suspended horizontal remnant of sea is visibly withdrawing and revealing land, not merely ordinary layered surf. The lifted section occupies the UPPER RIGHT third; its height above ground is about one tenth image height. Three small irregular salt-water depressions of different sizes remain on the now dry shore at different distances, white saline seams and a low ochre fold connect their terrain. Camera is far back and slightly raised. Quiet dry cream/ochre foreground fills lower LEFT half, reserved for website title; no main action here. On a small bare RIGHT ridge above the title zone rests ONE tiny inert empty sling made from twisted pale paper strips with two cords and folded pouch, together no wider than one tenth the image; ONE small pale faceted paper stone rests beside it after the unshown throw. No people, birds, mammals, houses or boats. Low dry coastal hills at upper right, pale blue sky, no snow or giant sun. Everything made from matte colored paper with six real air-separated planes, cut edges WITHIN the world and physical shadows. Full bleed immersive; no exterior base, cardboard corrugation or tabletop.",
+          "editorial_translation": "Retirada del mar y pozos salados constan en Chaves. Mar levantado como lámina horizontal que deja aire y tierra debajo es metáfora material para hacer legible la retirada, no episodio literal adicional. Honda quieta después del lanzamiento.",
+          "visual_question": "¿Una lámina de mar suspendida deja ver un gran hueco de aire y tierra seca debajo, conectada al mar distante, en vez de parecer oleaje normal?",
+          "light": "Amanecer cálido, sal cruda y capas azules sin brillo propio.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El borde entre costa y mar.",
+            "impossible_behavior": "El mar se aparta y descubre tierra habitable.",
+            "narrative_effect": "La retirada deja pozos salados como memoria.",
+            "agency": "Mareiwa transforma el territorio sin cuerpo visible; las aves conservan su acción de dispersar semillas.",
+            "physical_translation": "Una lámina azul continua suspendida casi horizontal, conectada al mar lejano, con aire, suelo ocre y sombra debajo; tres pozos residuales.",
+            "visible_test": "Ver tierra y aire debajo del mar levantado; no sólo bandas normales de playa.",
+            "event_ids": [
+              "mar_retirado"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "camino_vertical",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "aves_semillas",
+            "hacer_habitable"
+          ],
+          "beat": "Una semilla que cae abre la posibilidad de alimento.",
+          "escena": "Vertical 9:16 WIDE landscape, camera pulled back and slightly raised over sparse arid Guajira scrub, open ground in lower quarter, distant low hills and thin sea line in upper third. TWO small natural birds cross the open middle-distance sky at different depths: a turpial with black head and throat, matte ochre-orange belly, dark wing with a small white patch, slender straight beak; farther away a brown-charcoal pava with long tail, small head and slender neck. Each complete bird is SMALL, at most one ninth image height, no giant bird portrait, no eagle. Both have simple angular layered cutpaper wings, not realistic feathers or origami cranes. Three tiny dry seeds are visibly falling freely BELOW and behind the birds, separated in space, not beads threaded to beaks and no excrement shown. ONE seed near the ground is caught in an impossible moment: its little ochre seed-coat UNFOLDS into a thin low olive PAPER cactus paddle while a delicate dark root-paper filament reaches down and is already meeting the soil. Seed, opening paddle and root stay visibly connected as one growing object, no dangling plant shower. Its emergence is modest in scale but unmistakable against quiet sand. Two other small planted cactus patches at different distances show the consequence; sparse flat oval prickly-pear paddles and a few slender branching local cardon stems, never saguaro or lush jungle. A low ochre fold of ground gently opens beneath the incoming root to receive it, showing real separated paper strata. Bare dry areas remain larger than green ones. No rain cloud, giant flower, humans, tools or architecture. Warm mineral blue sky, dry cream earth, olive and orange accents. Physical air between wings, seeds, plant blades and ground, delicate shadows, full bleed.",
+          "editorial_translation": "Aves dispersoras y alimento pertenecen al relato. Semilla desplegada antes de tocar el suelo condensa visualmente el tiempo de germinación; es metáfora editorial, no afirmación botánica o episodio literal.",
+          "visual_question": "¿Aves pequeñas dejan caer semillas y una se despliega en planta conectada al suelo, en un territorio mayoritariamente árido?",
+          "light": "Tarde clara, sombras ocre, azul mineral y turpial naranja mate.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un ave deja caer una semilla.",
+            "impossible_behavior": "La semilla despliega la planta que aún guarda, mientras cae hacia la tierra.",
+            "narrative_effect": "El territorio empieza a producir alimento sin volverse selva uniforme.",
+            "agency": "Mareiwa transforma el territorio sin cuerpo visible; las aves conservan su acción de dispersar semillas.",
+            "physical_translation": "Cubierta de semilla convertida en pala de papel y raíz que conecta con estrato abierto.",
+            "visible_test": "Semilla, brote y raíz forman una misma pieza entre ave y suelo.",
+            "event_ids": [
+              "aves_semillas",
+              "hacer_habitable"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "mar_retirado",
+            "aves_semillas",
+            "hacer_habitable"
+          ],
+          "beat": "La herramienta que apartó el mar ahora contiene la posibilidad de vida.",
+          "escena": "Square 1:1 SYMBOLIC still life, not a landscape or narrative scene. On a full-bleed quiet matte mineral-blue paper field lies ONE small simple sling made entirely of pale twisted PAPER strips. Its two cords extend in different loose open curves toward opposite sides; they never close a circle or form a letter. The shallow folded oval POUCH is the focal point, only about one fifth square width, off-center just below the middle. Instead of a stone it contains a small ochre paper soil layer edged on one side with one thin white saline seam and one receding sliver of blue paper. From a single dark seed in this little soil fold emerges ONE tiny olive cactus paddle, with its root a thin dark paper fiber woven into the ochre layer. This is a single material metamorphosis: the sling's inner paper pouch unfolds into fertile earth, not an added plant pot. Beside the pouch rests ONE small pale faceted paper stone, clearly separate, inert and unadorned. Entire assembly occupies the central half of the square with generous breathing space. Low real relief: cords, folded pouch, separated ochre soil sheet and tiny upright paddle cast distinct soft shadows. No people, hands, birds, mountains, sky, horizon, water body, island map, miniature house, whole landscape, ornamental pattern, circular emblem, shrine, talisman, text or border. Quiet mysterious physical transformation, no glow.",
+          "material_direction": "Papel cortado teñido mate: cordones de tiras retorcidas, bolsa plegada que se abre en suelo ocre, hilo salino crudo, semilla y pala oliva. Fondo azul a sangre y cuatro alturas reales, sin tabla ni base.",
+          "continuity_contract": [
+            "Honda simple de dos cordones, bolsa pequeña y piedra separada, sin forma de resortera.",
+            "Ocre y sal remiten al terreno que aparece; semilla y pala a alimento. Objeto simbólico editorial, no emblema tradicional."
+          ],
+          "editorial_translation": "La honda que contiene tierra fértil no es un objeto narrado: condensa apartar agua y procurar alimento sin dibujar una tercera escena ni atribuir un amuleto a la cultura.",
+          "visual_question": "¿La bolsa de una honda se transforma en suelo con un solo brote, en lugar de contener una piedra?",
+          "light": "Azul mineral mate, crudo y ocre con oliva mínimo; luz lateral suave.",
+          "avoid": [
+            "paisaje, isla, horizonte, personas, aves, escena, diagrama",
+            "maceta añadida, árbol gigante, ramo, amuleto, mandala, letras",
+            "cuerda real, cuero real, suelo real, piedra fotográfica, pedestal, marco",
+            "halo, partículas, magia luminosa"
+          ],
+          "symbolic_contract": {
+            "thesis": "Volver habitable el mundo es abrir lugar para la vida.",
+            "carrier": "Honda de papel cuya bolsa se vuelve suelo, una semilla y piedra al lado.",
+            "operation": "La bolsa deja de guardar piedra y despliega tierra con un brote.",
+            "story_connection": "Retirada del mar y alimento distribuido por semillas.",
+            "visible_test": "Una honda pequeña contiene tierra y brote, no piedra; símbolo sin paisaje."
+          },
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una honda contiene una piedra.",
+            "impossible_behavior": "La bolsa despliega tierra capaz de recibir una semilla.",
+            "narrative_effect": "La fuerza transformadora se mide por el lugar que abre para vivir.",
+            "agency": "Mareiwa transforma el territorio sin cuerpo visible; las aves conservan su acción de dispersar semillas.",
+            "physical_translation": "Bolsa plegada continua con suelo ocre, una semilla y una pala vegetal.",
+            "visible_test": "Metamorfosis de una sola bolsa, no una maceta o paisaje en miniatura.",
+            "event_ids": [
+              "mar_retirado",
+              "aves_semillas",
+              "hacer_habitable"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        }
+      }
+    }
+  }
+}

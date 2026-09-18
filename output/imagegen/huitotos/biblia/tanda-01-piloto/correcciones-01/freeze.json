@@ -1,0 +1,70 @@
+{
+  "schema": "mitos-colombia-huitoto-pilot-corrections/v1",
+  "batch_id": "huitotos-tanda-01-correcciones-01",
+  "prepared_at": "2026-09-14T04:10:35.805533+00:00",
+  "parent_freeze_sha256": "2d0a7bf6fc31fdfe840202a63ea63347c7a6771a4a5316bcb1efffa592a81cdb",
+  "originals_preserved": true,
+  "overwrite": false,
+  "jobs": [
+    {
+      "id": "V06",
+      "reason": "El extremo de la serpiente intermedia sale del borde derecho.",
+      "input_file": "v06-master-v1.jpeg",
+      "input_sha256": "ee6ce78ae89ac0baa06895ad7f338d9cc22eca658f578c9f5ce431f4c6bea17f",
+      "prompt_file": "correcciones-01/v06-master-v2.prompt.txt",
+      "prompt_sha256": "bca4a69190bcb73fa583dec7c3e64bca88b5cae7fdd3ea5282dd73345f840f15",
+      "output_file": "v06-master-v2.jpeg",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1536x1024",
+      "endpoint": "/v1/images/edits",
+      "n": 1,
+      "status": "prepared"
+    },
+    {
+      "id": "V07",
+      "reason": "El ala derecha del águila en vuelo se corta en el borde.",
+      "input_file": "v07-master-v1.jpeg",
+      "input_sha256": "1edcf2e264cab2c7c1c4e8ff4a815a8818e82a277c8419818a9c3e14b794aea4",
+      "prompt_file": "correcciones-01/v07-master-v2.prompt.txt",
+      "prompt_sha256": "5a5380e36bf49b20b1174dbb8ad2d8c44914e2a9ef97098499ad72593ec1b4db",
+      "output_file": "v07-master-v2.jpeg",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1536x1024",
+      "endpoint": "/v1/images/edits",
+      "n": 1,
+      "status": "prepared"
+    },
+    {
+      "id": "B01",
+      "reason": "Algunas raíces se cortan en el borde inferior y la tierra parece granulada.",
+      "input_file": "b01-master-v1.jpeg",
+      "input_sha256": "76e9ffa611d509c6c74193989ba48b170b8b830f8753cff2a8c8f8df7416f6cf",
+      "prompt_file": "correcciones-01/b01-master-v2.prompt.txt",
+      "prompt_sha256": "fcd70ad57eb646d61fc2c8d6706ad159264b76be302942c271b0789714f80515",
+      "output_file": "b01-master-v2.jpeg",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1536",
+      "endpoint": "/v1/images/edits",
+      "n": 1,
+      "status": "prepared"
+    },
+    {
+      "id": "O02",
+      "reason": "El detalle del tejido recibió círculo y línea de llamada no solicitados.",
+      "input_file": "o02-master-v1.jpeg",
+      "input_sha256": "68cf9bd42f417e174d6673c5bab8f0021167663f21843430e04571cf49fd9fbc",
+      "prompt_file": "correcciones-01/o02-master-v2.prompt.txt",
+      "prompt_sha256": "47c3cd0194b2cd05f142acb62329059169239c624956e615129b9bd2a542a98c",
+      "output_file": "o02-master-v2.jpeg",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1536x1024",
+      "endpoint": "/v1/images/edits",
+      "n": 1,
+      "status": "prepared"
+    }
+  ]
+}

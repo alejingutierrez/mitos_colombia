@@ -1,0 +1,125 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "los-dos-hermanos",
+  "title": "Los dos hermanos",
+  "created_at": "2026-09-06T04:26:37.432Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autoriza producir y publicar todos los trípticos Wayúu; revisión visual directa del agente.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "70cf4335b1397da54f1328ef97c76fde97ca7bf6ab1c3ec8ab58906cb49b5a5a",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T04:16:01.991Z",
+    "reviewed_reference_ids": [
+      "e614ffa46b74111f9201",
+      "19498713504e5d18f81c"
+    ],
+    "retained": [
+      "Mujer como protagonista y presencia del rebaño; cielos nocturnos azules y arena mate.",
+      "Vegetación lateral y distancia de los planos del territorio."
+    ],
+    "rejected": [
+      "Rifle como foco amenazante, adversarios y pose de enfrentamiento.",
+      "Cambio de ropa entre imágenes, adornos y patrones no sustentados, techo cónico, caras ilustradas y encuadre cerrado."
+    ],
+    "influence_by_act": {
+      "entrada": "Retomar el azul nocturno y vegetación lateral con escala abierta, pero centrar el regreso de mula y perro y la ausencia, no el combate.",
+      "acto": "Conservar rebaño y ranchería; cambiar victoria armada por patio que se desteje entre riqueza y ausencia.",
+      "huella": "Recuperar la destreza de la arquera a través de una sola flecha de papel curvada sobre sí misma; no copiar rifle ni escena."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-02-entrada/entrada.jpeg",
+      "sha256": "5bdabc9a4c9db28cb03e3e795b3b17f6b3008e232428d3cde56f9f790cc50247",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "38d9498d46ac1364e0538aa43c475a1353aa316de602c2deb073a4493ff8ead2",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Plano general nocturno: hermana de manta azul oscura, mula descargada y perro. Mujer cercana a un sexto de altura; capas de papel del patio, vegetación y serranía. Dos hilos azules unen la cara inclinada del animal con los pies de la hermana. Sin cuerpo transportado ni camisa anticipada en la escena.",
+        "limits": [
+          "El nacimiento de los hilos en la cara de la mula es pequeño y no permite distinguir anatómicamente el lacrimal a escala de lectura; su función es llanto convertido en conexión editorial.",
+          "Las viviendas aparecen más densamente agrupadas que la ranchería mínima propuesta."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/acto.jpeg",
+      "sha256": "90e4946571b6a94a190d3773367f689ac0bc4c4d22f0421a77217a090a66f30c",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "11c1e6d10a1d3b45659bbce5997aadde6fd3a0df3f76f80cf3a6d0f3b3c9b12d",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Hermana de espaldas ante corral lleno y chinchorro vacío; camisa terracota doblada. El patio se abre en una franja azul atravesada por fibras, con capas de paisaje y nubes recortadas. La ganancia material no cierra el vacío.",
+        "limits": [
+          "Reparto de ganado distinto del conteo propuesto; no es censo histórico y se conserva la mezcla de ganado mayor y menor.",
+          "Algunas fibras cruzan la abertura, pero la franja sigue abierta; hay dos arcos apoyados en lugar del único previsto. No se usan ni hay violencia."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/huella.jpeg",
+      "sha256": "e10e3140a7d5591f5b68961376b3a85d85303682d3574b187a428cd3939b9f16",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "d59b6f4a1053623221764671ff34ea6292c806a9b02b0d117317809602a3fc64",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una flecha se curva casi en círculo hacia sus propias plumas sin alcanzarlas. Relieve y sombras físicas sobre papel azul; no hay escena, personas, paisaje ni impacto.",
+        "limits": []
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_first": 83.8,
+      "acto": 36.7,
+      "huella": 35.8,
+      "entrada_correction": 80.5
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/entrada.jpeg",
+      "reason": "Personajes demasiado grandes y suelo de textura fotográfica; camisa anticipada de otra escena. Corregida sólo la horizontal."
+    }
+  ],
+  "published": false
+}
+

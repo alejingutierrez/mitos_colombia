@@ -1,0 +1,430 @@
+{
+  "schema": "mitos-wayuu-video-pilot/v1",
+  "created_at": "2026-09-07",
+  "slug": "aramai",
+  "title": "Arámai · La noche que escucha",
+  "status": "prepared_for_five_keyframe_pilot",
+  "scope": {
+    "script_duration_seconds_target": 90,
+    "script_duration_measured": false,
+    "storyboard_keyframes": 18,
+    "keyframes_authorized_now": 5,
+    "keyframe_ids": [
+      "b1a",
+      "b1b",
+      "b2a",
+      "b2b",
+      "b3a"
+    ],
+    "remaining_keyframes_authorized": false,
+    "animation_authorized": false,
+    "audio_authorized": false,
+    "publication_authorized": false
+  },
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "cli": "/Users/alegut/.codex/skills/.system/imagegen/scripts/image_gen.py",
+    "credential": "Existing authorized OPENAI_API_KEY in ignored .env; no secret recorded"
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/aramai.json",
+    "content_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "Milcíades Chaves, 1946, VI Aramai, printed p.314 / PDF page index 10",
+    "source_read_at": "2026-09-07",
+    "historical_core": [
+      "escasez",
+      "petición de enfermedades",
+      "respuesta de Mareiwa",
+      "Wanurü recorre La Guajira",
+      "reproche de la gente"
+    ],
+    "published_editorial_expansion": [
+      "arrepentimiento y segunda petición",
+      "cuidado",
+      "cese de fiebre",
+      "reflexión final"
+    ],
+    "visual_license": "Noche contenida dentro de espacios cotidianos durante el día: recurso editorial elegido previamente, no fenómeno literal documentado ni iconografía de Mareiwa/Wanurü."
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "time_seconds": [
+        0,
+        10
+      ],
+      "voice_over": "En La Guajira, Arámai veía crecer las familias. El alimento faltaba y los jagüeyes guardaban cada vez menos agua.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "La poca agua",
+          "time_seconds": [
+            0,
+            5
+          ],
+          "visual": "Gran plano general elevado, jagüey casi seco. Una lámina mínima de agua rodeada por amplios estratos de tierra. Nadie en cuadro.",
+          "suggested_motion_not_generated": "Travelling descendente muy lento; primer borde de tierra se separa del fondo por parallax.",
+          "provenance": "literal_anchor_editorial_staging",
+          "produce_now": true
+        },
+        {
+          "id": "b1b",
+          "title": "La medida",
+          "time_seconds": [
+            5,
+            10
+          ],
+          "visual": "Plano general oblicuo alto junto al mismo jagüey. Una mujer adulta con shein azul lleva una pequeña medida de agua en cuenco liso. Gran vacío alrededor.",
+          "suggested_motion_not_generated": "Deslizamiento lateral corto entre borde cercano, figura y fondo; cuenco permanece estable.",
+          "provenance": "literal_anchor_editorial_staging",
+          "produce_now": true
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "time_seconds": [
+        10,
+        20
+      ],
+      "voice_over": "Arámai llamó a Mareiwa. No pidió alimento: pidió enfermedades para que murieran personas y hubiera espacio para quienes quedaran.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "La petición",
+          "time_seconds": [
+            10,
+            15
+          ],
+          "visual": "Arámai, pequeño y de perfil, extiende una mano ante una enramada aislada. Empieza una profundidad azul imposible bajo su techo; afuera continúa el día.",
+          "suggested_motion_not_generated": "Acercamiento contenido al vacío; figura inmóvil, sin articulación de labios.",
+          "provenance": "editorial_magic_license",
+          "produce_now": true
+        },
+        {
+          "id": "b2b",
+          "title": "La noche escucha",
+          "time_seconds": [
+            15,
+            20
+          ],
+          "visual": "Contraplano desde la enramada: Arámai pequeño en el límite de luz. Bajo un techo bajo caben estratos de una noche inmensa; no aparece Mareiwa.",
+          "suggested_motion_not_generated": "Desplazamiento lateral entre planos índigo: descubrir profundidad, no encender partículas.",
+          "provenance": "editorial_magic_license",
+          "produce_now": true
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "time_seconds": [
+        20,
+        30
+      ],
+      "voice_over": "Mareiwa atendió su petición. Wanurü recorrió La Guajira, y la enfermedad llegó a las rancherías sin distinguir entre familias.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "La primera ausencia",
+          "time_seconds": [
+            20,
+            25
+          ],
+          "visual": "Corte a una vivienda baja de pared arcilla. Su umbral contiene la misma noche; el patio permanece al sol. Sin pacientes ni cuerpos.",
+          "suggested_motion_not_generated": "Acercamiento lento al umbral; mantener fijos techo, pared y horizonte.",
+          "provenance": "editorial_magic_license",
+          "produce_now": true
+        },
+        {
+          "id": "b3b",
+          "title": "El alcance",
+          "time_seconds": [
+            25,
+            30
+          ],
+          "visual": "Dos rancherías distantes muestran umbrales oscuros separados. Ningún hilo, agua o nube las conecta.",
+          "suggested_motion_not_generated": "Panorámica corta que revela la segunda vivienda.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "time_seconds": [
+        30,
+        40
+      ],
+      "voice_over": "Los patios quedaron silenciosos. Faltaron quienes traían agua, cuidaban rebaños y contaban los nombres que sostenían a cada familia.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "El patio",
+          "time_seconds": [
+            30,
+            35
+          ],
+          "visual": "Patio sin personas, cuenco junto a una puerta. La ausencia se comprende por la voz, no por cuerpos.",
+          "suggested_motion_not_generated": "Deslizamiento bajo entre tierra, cuenco y puerta.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        },
+        {
+          "id": "b4b",
+          "title": "El chinchorro",
+          "time_seconds": [
+            35,
+            40
+          ],
+          "visual": "Chinchorro vacío con noche plegada en su concavidad; la cuerda no se corta.",
+          "suggested_motion_not_generated": "Balanceo mínimo de una sola capa colgante.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "time_seconds": [
+        40,
+        50
+      ],
+      "voice_over": "La gente culpó a Arámai. Entonces comprendió que ninguna de aquellas vidas había sobrado en la tierra que compartían.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "La responsabilidad",
+          "time_seconds": [
+            40,
+            45
+          ],
+          "visual": "Dos adultos a distancia miran a Arámai; sus cuerpos completos y pequeños dejan espacio entre ellos.",
+          "suggested_motion_not_generated": "Plano sostenido, cambio leve de distancia por cámara.",
+          "provenance": "historical_core_editorial_staging",
+          "produce_now": false
+        },
+        {
+          "id": "b5b",
+          "title": "Lo que no sobraba",
+          "time_seconds": [
+            45,
+            50
+          ],
+          "visual": "Arámai baja la mano ante el patio amplio y desocupado, sin convertirlo en villano o santo.",
+          "suggested_motion_not_generated": "Retirada de cámara, aumentando el vacío.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "time_seconds": [
+        50,
+        60
+      ],
+      "voice_over": "Volvió a llamar a Mareiwa para que todo terminara. Pero su nueva petición no pudo recoger la primera.",
+      "word_count": 18,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "La segunda petición",
+          "time_seconds": [
+            50,
+            55
+          ],
+          "visual": "Misma enramada y ropa; ambas manos bajas abiertas. La noche no retrocede.",
+          "suggested_motion_not_generated": "Acercamiento detenido antes del umbral.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        },
+        {
+          "id": "b6b",
+          "title": "La palabra no vuelve",
+          "time_seconds": [
+            55,
+            60
+          ],
+          "visual": "La enramada conserva la profundidad nocturna aunque Arámai se aleja.",
+          "suggested_motion_not_generated": "Plano fijo y separación de figura; sin letras flotantes.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "time_seconds": [
+        60,
+        70
+      ],
+      "voice_over": "Arámai llevó agua y alimentos. Acompañó a las familias, aunque ningún cuidado podía devolverles a quienes ya habían perdido.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "El cuidado",
+          "time_seconds": [
+            60,
+            65
+          ],
+          "visual": "Arámai transporta cuenco y pequeño fardo de alimentos, sin resurrecciones.",
+          "suggested_motion_not_generated": "Seguimiento lateral discreto.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        },
+        {
+          "id": "b7b",
+          "title": "Acompañar",
+          "time_seconds": [
+            65,
+            70
+          ],
+          "visual": "Entrega de agua entre dos adultos junto a una casa, no ceremonia ni tratamiento médico.",
+          "suggested_motion_not_generated": "Deslizamiento suave centrado en manos pequeñas dentro de plano amplio.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "time_seconds": [
+        70,
+        80
+      ],
+      "voice_over": "Al ceder la fiebre, regresaron los pasos entre rancherías. Persistieron la escasez y la memoria de aquella petición.",
+      "word_count": 18,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Los pasos regresan",
+          "time_seconds": [
+            70,
+            75
+          ],
+          "visual": "Dos personas vuelven a transitar, casas separadas en territorio claro.",
+          "suggested_motion_not_generated": "Plano general con parallax lento.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        },
+        {
+          "id": "b8b",
+          "title": "La memoria persiste",
+          "time_seconds": [
+            75,
+            80
+          ],
+          "visual": "Vivienda de b3a: patio con actividad mínima; persiste una franja índigo bajo el umbral.",
+          "suggested_motion_not_generated": "Acercamiento ligero a la franja; sin borrado mágico de pérdidas.",
+          "provenance": "editorial_magic_license",
+          "produce_now": false
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "time_seconds": [
+        80,
+        90
+      ],
+      "voice_over": "Arámai había pedido más espacio. El silencio le enseñó otra pregunta: cómo sostener la vida, sin decidir quién sobra.",
+      "word_count": 19,
+      "delivery": "Voz externa sobria; dejar respiración, no sincronía labial",
+      "keyframes": [
+        {
+          "id": "b9a",
+          "title": "Más espacio",
+          "time_seconds": [
+            80,
+            85
+          ],
+          "visual": "Arámai y otra persona comparten una medida de alimento en el amplio territorio.",
+          "suggested_motion_not_generated": "Alejamiento lento que conserva legible la relación.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        },
+        {
+          "id": "b9b",
+          "title": "Sostener la vida",
+          "time_seconds": [
+            85,
+            90
+          ],
+          "visual": "Cuenco sostenido por dos pares de manos pequeñas; detrás, territorio y profundidad azul. Cierre del motivo del cuidado.",
+          "suggested_motion_not_generated": "Sostener sin logotipo, frase escrita ni estallido de luz.",
+          "provenance": "published_editorial_expansion",
+          "produce_now": false
+        }
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-01/prompts/b1a.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1a.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared"
+    },
+    {
+      "id": "b1b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-01/prompts/b1b.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b1b.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared"
+    },
+    {
+      "id": "b2a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-01/prompts/b2a.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2a.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared"
+    },
+    {
+      "id": "b2b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-01/prompts/b2b.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b2b.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared"
+    },
+    {
+      "id": "b3a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/piloto-01/prompts/b3a.txt",
+      "output_file": "output/imagegen/wayuu/keyframes/aramai-piloto-01/b3a.jpeg",
+      "n": 1,
+      "quality": "medium",
+      "size": "864x1536",
+      "status": "prepared"
+    }
+  ]
+}
+

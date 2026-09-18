@@ -1,0 +1,96 @@
+{
+  "myth_id": 443,
+  "slug": "la-madre-de-la-sal",
+  "title": "La madre de la sal",
+  "variant": "Único testimonio breve: antiguos veían anciana pequeña con moños de sal. Sin fabricar viaje, petición, donación o transformación.",
+  "rules": "Anciana pequeña P13, exactamente dos moños claros. Secuencia contemplativa breve; utensilios expresan contexto editorial, no ceremonia documentada.",
+  "source": {
+    "path": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/la-madre-de-la-sal/source.snapshot.json",
+    "sha256": "6ad8ef51c33ec5cfbf48fe69a5a1d6d4d6b3eb84d64c7ad1b737d01c62891733",
+    "narrative_sha256": "e42e0831677518e9522a8b519232770f453f7860d11f2e63b95164475cb50cc1"
+  },
+  "references": {
+    "entrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/la-madre-de-la-sal/entrada-v1.png",
+      "sha256": "ba17f060a41a2fd59022e3587ec6fba604c04601e3557932f861aa9ad661e14b"
+    },
+    "acto": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/la-madre-de-la-sal/acto-v1.png",
+      "sha256": "119e7b2a474f257998e2bc24687a2ee205b85cf36375e85435d8c67a32d962fd"
+    }
+  },
+  "expected_frames": 4,
+  "estimated_seconds": 26,
+  "timing_status": "provisional_pending_recorded_voice",
+  "voice_words": 41,
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Los antiguos decían que podían verla. Era una mujer pequeña y anciana, con dos moños que parecían pelotas de sal.",
+      "word_count": 20,
+      "time_seconds": [
+        0,
+        13
+      ],
+      "shots": [
+        {
+          "id": "k01",
+          "time_seconds": [
+            0,
+            7
+          ],
+          "scene": "Medio de día: anciana pequeña de referencia de pie en entorno rural sobrio; exactamente dos moños blancos, ropa íntegra.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k02",
+          "time_seconds": [
+            7,
+            13
+          ],
+          "scene": "Detalle lateral de cabeza y hombros: ambos moños de papel claro visibles; rostro sereno sin corona, sal real ni ornamentos.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "La reconocían como madre de la sal. El relato conserva esa presencia, sin contar una disputa ni explicar de dónde venía.",
+      "word_count": 21,
+      "time_seconds": [
+        13,
+        26
+      ],
+      "shots": [
+        {
+          "id": "k03",
+          "time_seconds": [
+            13,
+            20
+          ],
+          "scene": "General: dos adultos observan a la anciana desde distancia respetuosa, sin arrodillarse ni hacer ofrendas; luz suave.",
+          "refs": [
+            "entrada",
+            "acto"
+          ]
+        },
+        {
+          "id": "k04",
+          "time_seconds": [
+            20,
+            26
+          ],
+          "scene": "Detalle final: dos formas redondas claras de cartulina y un cuenco sencillo en primer plano, anciana desenfocada detrás; imagen editorial de reconocimiento, no entrega.",
+          "refs": [
+            "entrada",
+            "acto"
+          ]
+        }
+      ]
+    }
+  ]
+}

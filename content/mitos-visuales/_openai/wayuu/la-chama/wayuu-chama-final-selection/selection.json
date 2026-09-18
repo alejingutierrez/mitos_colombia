@@ -1,0 +1,132 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "la-chama",
+  "title": "La Chama",
+  "created_at": "2026-09-06T19:09:15.208Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña de 27 mitos autorizada por el usuario; QA del agente con fuente, Biblia y memoria visual.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "93461758732b5d6028affe6246ca8342486b5e9bb310cf0976ae15a07f72a627",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T19:01:25.171Z",
+    "reviewed_reference_ids": [
+      "03b239b5132d895f4c18",
+      "fd86b4d337874421bcd6"
+    ],
+    "retained": [
+      "Estratos de roca y profundidad, contraste de ocres con azul profundo, cabello como continuidad entre apariencias.",
+      "Sensación de territorio vasto y presencia cambiante."
+    ],
+    "rejected": [
+      "Dos apariencias humanas simultáneas como si fueran dos personajes, espalda descubierta y pose de retrato de las imágenes previas.",
+      "Mar, vegetación en rosetas, luna decorativa y prendas estampadas no necesarios para el episodio.",
+      "Rostro y ojos grandes del modelo infantil: conservar conjunto verde/arena pero reducir a perfil de papel distante.",
+      "Kalamantuunay como alias de La Chama; venganza o persecución de familiares no sustentadas en el pasaje secundario revisado. No se edita el texto público."
+    ],
+    "influence_by_act": {
+      "entrada": "Recuperar territorio en capas y escala amplia; mostrar la partida con hijo y carga renovada, no dos mujeres junto al mar.",
+      "acto": "Conservar roca/cueva, sustituir retrato por acción de refugio y ocultamiento entre capas.",
+      "huella": "Sintetizar inestabilidad de forma con huevo y flor en una sola estructura de papel; sin escena ni catálogo de cinco figuras."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-02-entrada/entrada.jpeg",
+      "sha256": "072fbb196a5b8412a3713516e527637ee45c4298c5f14b4a04e09ebccb295a55",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-chama/wayuu-chama-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "c4b4331e618ace3ea433b346c9720e20683d2bad51cacbe48f7f526ed60a74be",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Madre roja, hijo verde seguro y único burro gris pequeños en un territorio muy amplio de estratos de papel. Tres mochilas lisas y tres sombras con forma de olla; zona inferior e izquierda despejadas. Sin mar, vegetación, desnudez o segunda apariencia.",
+        "limits": [
+          "Correspondencia general de tres sombras y tres bolsas; la conexión de la sombra derecha se superpone con la sombra de la mujer, no es una proyección geométrica perfecta.",
+          "Mochilas, colores, cantidad y sombra son traducción editorial; no objetos rituales ni censo del relato.",
+          "Escala reducida exige conservar contraste de sombras en la portada."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/acto.jpeg",
+      "sha256": "27d4884d79fd299766d8de1056c953b66624a9b381c50bb89fe2d4db0a3950a4",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-chama/wayuu-chama-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "95925bf2b987786859e50d749421ef9e376a2e7a309c6bc187999b6574ddb1da",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "La Chama de cabello gris largo y prenda carbón toca el borde de roca que se pliega hacia un receso con un hombre sentado vestido de arena/índigo. Láminas amplias separadas y sombras profundas; sólo dos adultos, sin violencia, familia hostil ni niño.",
+        "limits": [
+          "La mujer ocupa cerca de un cuarto de altura, mayor que objetivo pero subordinada a la cueva.",
+          "Cabello a pantorrilla en lugar de tobillo exacto y edad simplificada mediante canas; no nueva identidad cultural.",
+          "El hombre permanece parcialmente visible, no completamente oculto; pliegue de roca es metáfora protectora."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/huella.jpeg",
+      "sha256": "f7f341c7aecf74348bef48f00d67fae09778578836c4cc9c69a6fb64e1e0f61a",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-chama/wayuu-chama-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "e9b1cae80eb36fef9f82c1577e5e5f426c3bc4dc26ac6cc2c076a3b38f3c925a",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Ovoide marfil en una sola estructura de papel se abre en cinco pétalos rojo arcilla; fondo azul petróleo sin horizonte ni paisaje. Misma superficie y reverso visibles, sombras y pliegues, sin texto o figura.",
+        "limits": [
+          "Motivo mayor que 55% solicitado, conserva margen y legibilidad.",
+          "Unión huevo/flor editorial; no secuencia del mito ni símbolo tradicional documentado."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_01": 80.3,
+      "acto_01": 35.9,
+      "huella_01": 38.6,
+      "entrada_02": 77.2
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/entrada.jpeg",
+      "sha256": "1e1be0d02c3cf0348c4d65edfc1c9f596d07e9ab0c0a679b765e33a0cb1716ad",
+      "reason": "Grupo demasiado grande y sombra de olla a la izquierda con riesgo de quedar bajo el título; ver medición real de portada documentada."
+    }
+  ],
+  "published": false
+}

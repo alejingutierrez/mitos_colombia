@@ -1,0 +1,339 @@
+{
+  "mito": "chaquon",
+  "comunidad": "Muiscas",
+  "carpeta_triptico": "chaquon",
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-chaquon-v2.json",
+  "acta": "docs/videos/muiscas/actas/acta-chaquon.json",
+  "estructura": "9 bloques narrativos × 2 keyframes (bNa, bNb) = 18 escenas, todas generadas nuevas contra el guion vigente",
+  "nota_deslinde": "Chaquén NO ES UN PERSONAJE. La fuente lo define por negación: no vivía en templo ni en cerro, era la línea misma. LA IMAGEN NO LE DA CUERPO: lo que se ve son los postes, las piedras, la raya entre dos sementeras.",
+  "reemplaza": "historico/keyframes-plan-n9-20260917 (18 escenas del plan viejo de 9 bloques, ya no corresponden al guion)",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-chaquon-escenas.mjs",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  },
+  "lineas": {
+    "b1": "El año comenzaba en los linderos, cuando la lluvia ablandaba la tierra. Se levantaban postes entre sembrado y sembrado.",
+    "b2": "La raya tenía dueño y no se veía. Chaquén no vivía en templo ni en cerro: era la línea.",
+    "b3": "Quien respetaba el límite sembraba en paz; quien lo cruzaba, pleito. En la fiesta se ordenaba correr la tierra.",
+    "b4": "Salían con plumas, siguiendo los puestos. Correr la tierra era conocerla con el cuerpo y cruzarla entera, sin romperse.",
+    "b5": "En el límite, sin boca que lo dijera, se oía. «Hasta aquí la tuya; de ahí, la del vecino».",
+    "b6": "A la llegada el cacique entregaba mantas y repartía chicha. Las flautas y los fotutos contestaban a los tambores.",
+    "b7": "Se tomaban de las manos en corro, con las vasijas en medio. La plumería se ofrecía junto al límite.",
+    "b8": "Se cerraba el pacto: la fiesta se encendía porque el orden ya estaba puesto. Las danzas recorrían los términos.",
+    "b9": "Al amanecer, las vasijas vacías y la plumería dormida. La raya seguía allí, que ninguna fiesta logró borrar."
+  },
+  "keyframes": [
+    {
+      "tag": "b1a",
+      "bloque": "b1",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "sabana_linderos",
+        "poste_lindero"
+      ],
+      "desc": "La sabana de la referencia después de la lluvia, con la raya de postes cruzando las parcelas hasta el fondo. Sin personas. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "personas, animales, arcoiris, nubes fotográficas",
+      "prompt_sha256": "e8ac6f9fa9d6431c2f4d1dbce16d2e97e2e743bc517a4c599d2ee14c071171a2",
+      "image_sha256": "049aa55ba6d34ecbab12eabe26b4861e700fac0368f419992550b296a81e18fd",
+      "generated_at": "2026-09-17T13:30:39.660Z"
+    },
+    {
+      "tag": "b1b",
+      "bloque": "b1",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "piraca_labrador"
+      ],
+      "desc": "Dos hombres muiscas como el de la referencia clavan un poste igual al de la referencia en la tierra ablandada: uno lo sostiene, el otro apisona la base con una piedra. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "herramientas metálicas, esfuerzo teatral",
+      "prompt_sha256": "34e875d71c97edb3baa39738bdf8e040ddbd7201459638c4291f7b946baa6208",
+      "image_sha256": "985001688ce4d17740633f4ca759d3cd72e82b138dc2b498e83e2de40202e283",
+      "generated_at": "2026-09-17T13:30:37.972Z"
+    },
+    {
+      "tag": "b2a",
+      "bloque": "b2",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "sabana_linderos"
+      ],
+      "desc": "La raya de postes al atardecer con la luz rasante alargando cada sombra sobre los surcos. Campo vacío, aire quieto. La ausencia de gente es deliberada. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "personas, siluetas, sombras con forma humana, animales",
+      "prompt_sha256": "abfb2898abe0740d3cf627891647b2bb1683687eed3d0d45f769e9f81e8f4919",
+      "image_sha256": "9cd040db39fd62ee233f2f469a76a1ef6fa52976f8b579545592b22c458b0224",
+      "generated_at": "2026-09-17T13:30:36.345Z"
+    },
+    {
+      "tag": "b2b",
+      "bloque": "b2",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "altiplano_noche"
+      ],
+      "desc": "Contrapicado de un solo poste recortado contra el cielo; muy al fondo y pequeños, la loma de un cerro y un techo de paja. El poste es lo único nítido. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "personas, templos de piedra, altares, ídolos, ofrendas",
+      "prompt_sha256": "2490907816bbdb9a3989f5b9e9ad03ce1ebcb99cfcd2102c49786a374617232a",
+      "image_sha256": "97c2a40ef022afff24185d187ec6d98fb8d4e781359fbdddd7edef7db142713c",
+      "generated_at": "2026-09-17T13:30:33.908Z"
+    },
+    {
+      "tag": "b3a",
+      "bloque": "b3",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "piraca_labrador",
+        "poste_lindero",
+        "sabana_cultivos"
+      ],
+      "desc": "El labrador de la referencia, pequeño y de espaldas, sembrando tranquilo en su surco a dos pasos de la raya de postes, sin mirarla. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "primeros planos de rostro, dramatismo, herramientas metálicas",
+      "prompt_sha256": "acfb3670b8f8d7c55017dd884942e9a6c2df751e706b48adbae2c197361fbe64",
+      "image_sha256": "32940a926fd575c77deb1aa4c1262b06c54cd73c624fc3ac0a1b53280bed28eb",
+      "generated_at": "2026-09-17T13:31:16.987Z"
+    },
+    {
+      "tag": "b3b",
+      "bloque": "b3",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "zaque_tunja",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "El cacique de la referencia, de pie en el borde de la plaza de la referencia, con el brazo extendido hacia el campo dando la orden; gente escuchando en semicírculo a media distancia. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "tronos, coronas, gestos imperiales, multitudes arrodilladas",
+      "prompt_sha256": "f4a89ce77e763357f793821c6ca1437a18e9ba9e2e26b51918a1d0e4fa55d3f4",
+      "image_sha256": "ff7057c96e1a79c62ed40d81475eff313cd71958829cc8b0f88500ed539993c3",
+      "generated_at": "2026-09-17T13:31:18.999Z"
+    },
+    {
+      "tag": "b4a",
+      "bloque": "b4",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "camino_carrera",
+        "poste_lindero"
+      ],
+      "desc": "Vista muy abierta del territorio: los corredores de la referencia, pequeños y escalonados, avanzando junto a la raya de postes, que cruza el campo entero sin interrumpirse hasta el horizonte. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "público animando, banderas, líneas de meta, números",
+      "prompt_sha256": "ab312fde119a038e7e94ba0cad4720915600fea35699748e38c87d54eae2cbc3",
+      "image_sha256": "1df4e4f2f72553fd10987eae7f0ca8bca57bdfecaa9d2eb3dd646cf5dadd895b",
+      "generated_at": "2026-09-17T13:31:17.638Z"
+    },
+    {
+      "tag": "b4b",
+      "bloque": "b4",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "corredor_plumas",
+        "sendero_territorio"
+      ],
+      "desc": "Plano detalle a ras de suelo: dos pies descalzos de papel, como los del corredor de la referencia, entrando en el agua somera de una quebrada de piedras redondas. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "rostros, cuerpos completos, sangre, calzado",
+      "prompt_sha256": "ebd1a888cb477957354ca34963c7acc0a94de88eaebf503baebf4540f036eb91",
+      "image_sha256": "4e346ac7a21ac95bce022323aedee9681a8d1568140cd2966f7a2ebca98ae4a6",
+      "generated_at": "2026-09-17T13:31:17.152Z"
+    },
+    {
+      "tag": "b5a",
+      "bloque": "b5",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "sabana_linderos"
+      ],
+      "desc": "El límite absolutamente solo: dos postes en primer término y la raya siguiendo al fondo, sin una figura. El encuadre está construido para que la falta de presencia se note. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "personas, siluetas, rostros en la madera, formas humanas en las nubes, animales",
+      "prompt_sha256": "b7adadb5e0eab2c53c70a46009bf2e37b88ae9a69e51bb1631b1d150b2ad2476",
+      "image_sha256": "e24965d40724223098cdae7ff0a5954fe644b58db53c36e580cc8b9c1f41bf85",
+      "generated_at": "2026-09-17T13:31:57.133Z"
+    },
+    {
+      "tag": "b5b",
+      "bloque": "b5",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "lineas_tierra"
+      ],
+      "desc": "Plano cenital cerrado sobre la franja de tierra desnuda que parte el terreno en dos mitades, cada una con su labor distinta; la línea recorre el cuadro de arriba abajo. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "personas, manos, texto, símbolos, flechas",
+      "prompt_sha256": "08a504d9445cff1257b8097b1d4cab593364fb4ba899a4c71cf2ec67256f2591",
+      "image_sha256": "3a639061508da8e64ad0233a539abd9562528228a5912dda9a0ce1865609cea2",
+      "generated_at": "2026-09-17T13:31:55.196Z"
+    },
+    {
+      "tag": "b6a",
+      "bloque": "b6",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "zaque_tunja",
+        "corredor_plumas",
+        "manta_reparto"
+      ],
+      "desc": "El cacique de la referencia entrega con las dos manos una manta doblada como la de la referencia a uno de los corredores de la referencia, que la recibe también con las dos manos, ambos a la misma altura. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "arrodillarse, besar manos, público aclamando",
+      "prompt_sha256": "eeb8670d561f7fdbb8c40ea11740191d61962bcae5fef115c24f937a02695c8c",
+      "image_sha256": "73f8ef3648da94e45a536e1dabbdb1320dc8244589ce3cd98d9203e5849b1bd0",
+      "generated_at": "2026-09-17T13:31:58.246Z"
+    },
+    {
+      "tag": "b6b",
+      "bloque": "b6",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "familias_muiscas",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "Músicos muiscas como los de la referencia: dos soplan flautas largas de caña y un tercero un fotuto de caracol; al fondo, tambores de cuero y madera. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "instrumentos europeos, guitarras, trompetas de metal, partituras",
+      "prompt_sha256": "0543bcfed956166f609a1624a4505cfdb8e9b0077cbcc29c6414ce6c5bdc3e18",
+      "image_sha256": "2ca36269bc157c24e44a7420dc1a4f5342bfcf05c084abf4ddee1d85021001e8",
+      "generated_at": "2026-09-17T13:31:58.084Z"
+    },
+    {
+      "tag": "b7a",
+      "bloque": "b7",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "familias_muiscas",
+        "vasija_gacha",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "Corro de hombres y mujeres de papel como los de la referencia, tomados de las manos alrededor de tres vasijas de barro como la de la referencia puestas en el centro, vistos en picado suave. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "danza frenética, saltos, máscaras, fuego en las manos",
+      "prompt_sha256": "7773f4b40bb51d56f28f213fcbabd460cd8d823dca212ecdb776a15798dfd7af",
+      "image_sha256": "57f7978a1c36c18bcac6c86f6d62f84e8da26e867c5d0b7fdc153531a9771348",
+      "generated_at": "2026-09-17T13:32:36.408Z"
+    },
+    {
+      "tag": "b7b",
+      "bloque": "b7",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "corredor_plumas"
+      ],
+      "desc": "Dos personas de papel como la de la referencia, de espaldas y agachadas, depositando en el suelo al pie de un poste sus diademas con plumas y unos adornos. Nadie mira hacia arriba, nadie reza; el poste queda vacío. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "figura divina, rostro en el poste, luz sobrenatural, humo ritual, gestos de adoración",
+      "prompt_sha256": "5b26245ab28b6bc8cf4b254cc2663b80ce40dc1fe3d1d36a7ae7b304b6316c4d",
+      "image_sha256": "0a110ca728a4010964198f3aea7664e5c4277b36c4e58e8775a25712b9773123",
+      "generated_at": "2026-09-17T13:32:36.997Z"
+    },
+    {
+      "tag": "b8a",
+      "bloque": "b8",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "poste_lindero",
+        "plaza_fiesta_noche"
+      ],
+      "desc": "En primer término, grande, un poste de lindero y la raya perdiéndose; al fondo y pequeña, la plaza de la referencia ya encendida de fogones. El orden delante, la fiesta detrás. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "incendios, chispas grandes, multitud desbordada",
+      "prompt_sha256": "db5050c8612a4f82b6a0d2c3af73202031dab01ee5a2daf7313e7b9a82949031",
+      "image_sha256": "251fbf935710b78f94daaa28f4e89b60535d0d8dac1c0fccf580ea4031283a7e",
+      "generated_at": "2026-09-17T13:32:35.286Z"
+    },
+    {
+      "tag": "b8b",
+      "bloque": "b8",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "familias_muiscas",
+        "poste_lindero",
+        "altiplano_noche"
+      ],
+      "desc": "De noche, una fila de danzantes de papel como los de la referencia avanzando en hilera junto a la raya de postes, siguiendo el mismo trazado de los corredores. Cielo de papel perforado. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "antorchas grandes, danza descontrolada, máscaras",
+      "prompt_sha256": "2fbcf3797b317077d4835b5c2d844293fc26ba2cd2851b968521502f6466b7dc",
+      "image_sha256": "a98256a947cede25fd0d0a305d356d5e3108c188e518e08de0f64f15c8414669",
+      "generated_at": "2026-09-17T13:32:35.935Z"
+    },
+    {
+      "tag": "b9a",
+      "bloque": "b9",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "vasija_gacha",
+        "manta_vasijas"
+      ],
+      "desc": "Plano detalle del amanecer: dos vasijas de barro como la de la referencia volcadas y vacías sobre la manta de la referencia, con plumas rojas y blancas caídas al lado, mojadas de rocío. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "personas, restos de comida, suciedad excesiva",
+      "prompt_sha256": "e93fe3b3cfd004eb969b445c5a17b977f89f5326e99184e46d10f469f61781d9",
+      "image_sha256": "518262b014fac0be1072eec1953d3399059aef86337afb1b962f3b6e43b3af1f",
+      "generated_at": "2026-09-17T13:33:17.618Z"
+    },
+    {
+      "tag": "b9b",
+      "bloque": "b9",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "refs": [
+        "sabana_linderos",
+        "poste_lindero"
+      ],
+      "desc": "Cierre sin nadie: la raya completa de postes y piedras atravesando la sementera en la primera luz, igual que en el primer cuadro, intacta, con niebla baja entre los surcos. MATERIAL: todo el cuadro está hecho de papel artesanal recortado, plegado y encolado en capas, fotografiado de frente con luz pareja; se ven el canto del papel, la fibra y el pliegue en cada pieza, incluidos cielo, montañas, tierra y vegetación.",
+      "avoid_extra": "personas, huellas humanas, basura, plumas, vasijas, cualquier rastro de celebración",
+      "prompt_sha256": "636c757106c016e38c72d1d128acae3241827fba81a99ee90b678e7388b4fa57",
+      "image_sha256": "d2efae291f965ab4d5766b211067d23dd78dcb8bbd1e24dd2b0e44ee3bec027c",
+      "generated_at": "2026-09-17T13:33:14.090Z"
+    }
+  ]
+}

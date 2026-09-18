@@ -1,9 +1,22 @@
 # Dirección visual del archivo
 
+Decisión vigente del piloto Arámai: **la huella cuadrada es síntesis simbólica,
+no una tercera escena**. Ver [aprendizajes V1.6](./wayuu-tripticos-v1.6-aprendizajes.md).
+La ausencia de personajes no basta: motivo dominante + operación visual +
+sentido del relato, conservando papel y profundidad. Esto no cambia las fichas
+cuadradas de Biblia ni convierte los keyframes en símbolos.
+
 Cómo se compone, en qué época ocurre y con qué lenguaje se viste cada imagen de
 mitosdecolombia.com. Aplica igual a las imágenes del sitio y a los keyframes de
 video: las reglas viven en `src/lib/visual-direction.js`, que importan los dos
 pipelines, para que una mejora escrita una vez llegue a los dos.
+
+Actualización 2026-09-05: la elección de las opciones 1 y 5 de Arámai establece
+el proceso de [realismo mágico en lo cotidiano](./prompting-realismo-magico.md).
+La regla y el tratamiento de recortes viven en `src/lib/narrative-magic.js`.
+Se retiran como fórmulas generales el rostro facetado, el protagonismo por
+tamaño, el foco de retrato obligatorio y la huella sin personas. Cada escena
+debe ligar su anomalía visible con una acción o consecuencia del relato.
 
 ## Por qué existe este documento
 
@@ -21,8 +34,12 @@ hay que nombrarla, declararla y contarla.
 ## 1 · La técnica es frontal; la cámara, no
 
 El estilo es una maqueta física de papel artesanal fotografiada — paper cut,
-paper relief y quilling, con cortes visibles, fibras, micro-sombras y volumen
-bajo. Eso no cambia nunca: **es una pieza construida a mano, no un render.**
+paper relief y quilling, con fibras, micro-sombras y volumen bajo. Eso no cambia
+nunca: **es una pieza construida a mano, no un render.** Pero la cámara está
+dentro del mundo: no se ven el borde exterior, el cartón soporte, la base, la
+mesa ni el estudio. La escena continúa hasta los cuatro límites del encuadre,
+pero su interior mantiene primer plano, plano medio y fondo como capas físicas
+a distintas distancias, con cantos internos, aire, oclusiones y sombras.
 
 Lo que sí cambia es dónde se pone la cámara. Hasta ahora el sistema exigía
 "composición frontal y estable" en seis lugares distintos, así que pedirle
@@ -96,10 +113,12 @@ Ampliar el diccionario es trabajo de investigación, no de redacción.
 
 ## 5 · Personajes: la biblia manda
 
-Un personaje se crea una vez, como ficha de cuerpo entero sobre fondo mate, y a
-partir de ahí **se cita**: toda escena que lo incluya pasa su jpg como
-referencia. Así el rostro, la manta y los materiales no se mueven entre imágenes
-ni entre mitos.
+Un personaje se crea como ficha de identidad y a partir de ahí **se cita** en
+el expediente. La continuidad puede transportarse como contrato escrito o
+mediante referencias visuales cuando su uso esté autorizado; no se suben JPG
+automáticamente. El piloto Wayúu actual trabaja desde texto. Vestuario,
+silueta, edad y materialidad se comprueban en cada salida, sin fingir que
+nombrar la ficha garantiza igualdad de píxeles.
 
 Cuando un mito estrena personaje, ese personaje entra a `biblia/` con su entrada
 en el manifiesto. Nada de personajes de un solo uso.

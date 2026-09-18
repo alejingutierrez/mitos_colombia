@@ -1,0 +1,199 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-sed-triptych-02-hs",
+  "created_at": "2026-09-06T15:38:41.242Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "la-sed-da-los-civilizados",
+  "plan": "content/mitos-visuales/wayuu.sed.triptico.v1.1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "4c9f19174d0b58fbe29079ac9123c044d270b69359e280a1cd7946fafa641739",
+  "narrative_target_sha256": "201aebbdfc08bb25f1f5fbeab2f3ea5a57f1128a82df48e65cc1ae6f0a88bc3f",
+  "evidence": [
+    {
+      "id": "published_sed",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-sed-da-los-civilizados.json",
+      "supports": "Relato congelado, cargas, pausa, transformación y contraste entre mercancía y agua.",
+      "limits": "Búsqueda en ranchería, viajeros Wayuu, desorientación y panela petrificada son ampliaciones editoriales, no detalles literales del breve registro."
+    },
+    {
+      "id": "chaves_312",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "312, PDF índice 8",
+      "supports": "Dos comerciantes con panela se detienen por sed/cansancio en Utta cerca de Katetamana y se vuelven piedra.",
+      "limits": "No fija nombres, raza, vestuario, embalaje ni transporte. No reproducir esencialismo racial del comentario del recopilador."
+    },
+    {
+      "id": "bible_lot16",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-16-la-sed-de-los-forasteros-v3.md",
+      "supports": "Seis modelos aprobados diferenciados y límites de la fuente.",
+      "limits": "Prendas, colores y siluetas son decisiones editoriales, no retratos documentales."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T15:32:21.946Z",
+    "reviewed_reference_ids": [
+      "1b43dcc08b673fa8230a",
+      "98b01b8a5635628fe315"
+    ],
+    "retained": [
+      "Estratos de papel y contraste entre amarillos/ocres cálidos y azules fríos.",
+      "Dos figuras diferenciadas vinculadas al paisaje; quietud del desenlace."
+    ],
+    "rejected": [
+      "Figura sobrenatural femenina, rostro en árbol y espirales de viento no descritos por la fuente.",
+      "Árbol monumental tropical, vegetación exuberante, grandes discos solares y escenografía monumental.",
+      "Rostros volumétricos, estatuas genéricas y falta de la carga de panela."
+    ],
+    "influence_by_act": {
+      "entrada": "Abrir la llanura y conservar contraste cromático; dos comerciantes y sus cargas, cuyas sombras de vasija expresan sed sin añadir vasijas reales.",
+      "acto": "Pasar de estatuas bajo un árbol mágico a transformación material de ropa en terreno, con los dos comerciantes pequeños y sin agente sobrenatural visible.",
+      "huella": "Condensar ámbar y azul en una panela con vacío de gota; sin paisaje ni cuerpos."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "comerciante_alijuna_1__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01/comerciante_alijuna_1__identity_sheet--canon.jpeg",
+      "sha256": "cd96b13fc355cfc1af686ef89d880d6e705273df0803920c697c5556e82b6c0e",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "comerciante_alijuna_1__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01/comerciante_alijuna_1__state_sheet--estados.jpeg",
+      "sha256": "36dcc0d5ac989ded3b0204c27310d5da72d90bafa3f56f65ee62328de83901e5",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "comerciante_alijuna_2__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/comerciante_alijuna_2__identity_sheet--canon.jpeg",
+      "sha256": "cc9385123d6d42c46b00ca45105c0270fccb31d29af3c18f7a51078359c79da5",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "comerciante_alijuna_2__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01/comerciante_alijuna_2__state_sheet--estados.jpeg",
+      "sha256": "f63f35f7464234802cd4556bade88b6cd12dec3cf93dd605ef3c87a92d8949d0",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "carga_panela__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/carga_panela__object_sheet--canon.jpeg",
+      "sha256": "9fa441f5d929904e6a62e93c69e6b3a4a1c8e865f2435c9cf73b3263ee98e7b6",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "utta__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01/utta__spatial_model--canon.jpeg",
+      "sha256": "bbb60dd50bc9e3f775c037f8c14ee5338f3d38655a07da5df3372112d304a445",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "comerciante_alijuna_1__identity_sheet",
+        "comerciante_alijuna_1__state_sheet",
+        "comerciante_alijuna_2__identity_sheet",
+        "comerciante_alijuna_2__state_sheet",
+        "carga_panela__object_sheet",
+        "utta__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-sed-da-los-civilizados/wayuu-sed-triptych-02-hs/prompts/entrada.prompt.txt",
+      "prompt_sha256": "dbd0d20a6c0d37ece56b2a1144ad7365eed6c513df37091afe99410d19340c9e",
+      "narrative_event_ids": [
+        "carga_sed",
+        "mercancia_agua"
+      ],
+      "editorial_translation": "Metáfora material y puesta en escena editorial; no nuevo episodio literal, vestuario fechado ni símbolo ancestral.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Dos cargas de panela en una pausa del camino.",
+        "impossible_behavior": "Los bultos rectangulares proyectan sombras de vasijas redondeadas que no existen físicamente.",
+        "narrative_effect": "La mercancía no sustituye al agua que necesitan.",
+        "agency": "Los hombres descansan; nadie controla un poder. La anomalía es traducción visual del relato.",
+        "physical_translation": "Sombras recortadas oscuras unidas a cada bulto, forma de vasija distinta de la carga; suelo y horizonte a distancias reales.",
+        "visible_test": "¿Dos comerciantes de un octavo del alto, gorra sin ala circular para el segundo y sombras de vasija unidas sólo a las cargas, con mitad izquierda libre?",
+        "event_ids": [
+          "carga_sed",
+          "mercancia_agua"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-02-hs/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "comerciante_alijuna_1__identity_sheet",
+        "comerciante_alijuna_1__state_sheet",
+        "comerciante_alijuna_2__identity_sheet",
+        "comerciante_alijuna_2__state_sheet",
+        "carga_panela__object_sheet",
+        "utta__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-sed-da-los-civilizados/wayuu-sed-triptych-02-hs/prompts/huella.prompt.txt",
+      "prompt_sha256": "3c987767a62aa97970b6aa5d488a5d58ddb24be1e3377ce36b9d51ec7ff286a2",
+      "narrative_event_ids": [
+        "mercancia_agua"
+      ],
+      "editorial_translation": "Metáfora material y puesta en escena editorial; no nuevo episodio literal, vestuario fechado ni símbolo ancestral.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Una panela y la necesidad de agua.",
+        "impossible_behavior": "La materia dulce encierra una gota como ausencia vacía, no como líquido.",
+        "narrative_effect": "Condensa el límite de la mercancía frente a una necesidad vital.",
+        "agency": "Los hombres descansan; nadie controla un poder. La anomalía es traducción visual del relato.",
+        "physical_translation": "Una panela conectada con cavidad de gota pasante, estratos marrones interiores y fondo índigo visible.",
+        "visible_test": "¿Se reconoce una sola panela con gota vacía y seca, sin agua real, empaque o escena?",
+        "event_ids": [
+          "mercancia_agua"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "La riqueza dulce no contiene el agua necesaria.",
+        "carrier": "Una panela única con vacío de gota.",
+        "operation": "Sustraer la forma de aquello que la mercancía no puede ofrecer.",
+        "story_connection": "Contraste editorial del relato entre panela y agua.",
+        "visible_test": "Panela reconocible y gota inequívocamente vacía, no líquido ni tercera escena."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-sed-triptych-02-hs/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

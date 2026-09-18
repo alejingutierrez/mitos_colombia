@@ -1,0 +1,61 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-02-origenes-anclas-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02-origenes-anclas-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Segundo lote: tres anclas independientes del ciclo de orígenes en medium, sin figuras humanas y sin referencias locales de entrada: serranías y costa, núcleo material de Siki, y Waleker como araña a escala natural junto a telar sin patrones.",
+  "jobs": [
+    {
+      "id": "serranias-de-la-guajira__ancla--canon",
+      "model_id": "serranias-de-la-guajira__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02-origenes-anclas-medium/prompts/serranias-de-la-guajira__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02-origenes-anclas-medium/serranias-de-la-guajira__ancla--canon.jpeg",
+      "prompt_sha256": "b8bc64e69e9db94b2cb6e4cef6d8a65d5258cab8110bf65a40bd92ffac81476c",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "el-origen-del-fuego__ancla--canon",
+      "model_id": "el-origen-del-fuego__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02-origenes-anclas-medium/prompts/el-origen-del-fuego__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02-origenes-anclas-medium/el-origen-del-fuego__ancla--canon.jpeg",
+      "prompt_sha256": "16eeaefdb8fdc75c36a2d43e50f60982c7ba3a1ecf6fbcf33f069082f114025d",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "waleker-el-origen-del-tejido__ancla--canon",
+      "model_id": "waleker-el-origen-del-tejido__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02-origenes-anclas-medium/prompts/waleker-el-origen-del-tejido__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02-origenes-anclas-medium/waleker-el-origen-del-tejido__ancla--canon.jpeg",
+      "prompt_sha256": "b79062d1cacce3ac9807462aeb49d1d056ff1ee38b4d76444bf236c9686a83ba",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1536",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

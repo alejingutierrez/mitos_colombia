@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-13",
+  "community": "Ette Ennaka",
+  "batch": "produccion-api-05",
+  "logical_batch": 3,
+  "model": "gpt-image-2.5-sunburst",
+  "counts": {
+    "new_distinct_units": 6,
+    "previous_distinct_units": 12,
+    "total_distinct_units": 18,
+    "inventory_total": 54,
+    "remaining_unproduced": 36,
+    "new_fictional_human_identities": 5
+  },
+  "requests": {
+    "successful_generations": 3,
+    "successful_edits": 6,
+    "qa_followups": 3,
+    "max_simultaneous": 3,
+    "documentary_images_uploaded": 0,
+    "own_generated_image_inputs": 6,
+    "size": "1024x1536",
+    "output_format": "jpeg",
+    "output_compression": 92,
+    "observed_cli_seconds": {
+      "P02": [
+        33.9
+      ],
+      "H02": [
+        29.4
+      ],
+      "A08": [
+        16.8
+      ],
+      "L04": [
+        18.5,
+        17.2
+      ],
+      "U03": [
+        15.2,
+        19.8
+      ],
+      "V03": [
+        26.3,
+        null
+      ]
+    },
+    "timing_note": "CLI durations only; V03 followup output lost after completed session closed. Not a billing estimate or account concurrency limit."
+  },
+  "previous_selection": {
+    "file": "content/videos/chimila/biblia/produccion-api-04/selection.v1.json",
+    "sha256": "0b2d9db6a73193fd574ec260d53fa0d0095b8b682c58a0361f34535373dcf2c3"
+  },
+  "inventory_sha256": "f27b8eea9b77b2b0887bddbac12ed73eefc06effb4456dcf98669e5e9c20db09",
+  "snapshot_sha256": "0d71be61ef3538d2daa00949a5cdeed4fc005d82ca9abac0a71340abbcd4d758",
+  "user_approved": false,
+  "culturally_certified": false,
+  "entries": [
+    {
+      "unit_id": "P02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/p02.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2-refined.jpeg"
+      ],
+      "sha256": "2420f6fab88369e0aa76bc2941ea20619d9682dcf9bb6325e288feaa4cf18b8f",
+      "bytes": 142030,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "569436086b14dd1905be6d2cb736f9e006db2512411aaf07cd312ee32892d9ee",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/p01-papa-grande-rostro-v2-refined.jpeg",
+          "sha256": "356ada71555f11e2408e9d2781b203018c92e3a17f6afea709382930e6e66c1d"
+        }
+      ],
+      "label": "Huhun Krukroring Merana: primer hombre",
+      "category": "P",
+      "myth_ids": [
+        346,
+        355
+      ],
+      "covered_myth_ids": [
+        346,
+        355
+      ],
+      "reference_ids": [
+        "V11-P073-I00"
+      ],
+      "scope_notes": [
+        "Una identidad nueva en cinco vistas; P01 se usó sólo como referencia de estilo, no como identidad.",
+        "Primer hombre de 346 y don inicial de semillas de 355; no se identifica con Huhum ni con el anfitrión Ette posterior de 355.",
+        "Edad, rostro, peinado y franjas de tela son propuestas editoriales. Rasgos todavía estilizados; no fenotipo universal ni retrato documental."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [
+        "P01@produccion-api-04-style-only-new-identity"
+      ],
+      "endpoint": "/v1/images/edits"
+    },
+    {
+      "unit_id": "H02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/h02-padre-tres-hijos-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/h02.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg"
+      ],
+      "sha256": "8671f24a551a0cd0f3e5122ffbaba7ebad350985cd3c5f75f1be63037446d672",
+      "bytes": 121293,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "55f9d677c406684c22c2bbcd9bdfee82420368ebd17b19bee62a5947fc164c31",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+          "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7"
+        }
+      ],
+      "label": "Padre y tres hijos de la prueba",
+      "category": "H",
+      "myth_ids": [
+        356
+      ],
+      "covered_myth_ids": [
+        356
+      ],
+      "reference_ids": [
+        "V11-P073-I00"
+      ],
+      "scope_notes": [
+        "Cuatro identidades nuevas: padre y tres hijos; manos vacías, sin títulos ni insignias de autoridad.",
+        "Edades adultas propuestas para el reparto, no establecidas en el relato 356. H01 se usó sólo como referencia de estilo.",
+        "Diferenciación facial moderada; parecido familiar editorial. No certificación anatómica o cultural."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [
+        "H01@produccion-api-04-style-only-new-identities"
+      ],
+      "endpoint": "/v1/images/edits"
+    },
+    {
+      "unit_id": "A08",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/a08-caiman-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/a08.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "sha256": "11e3dabf080c17aa2be389e4b690a189f01a57a32afc740b5eeaa0718ba57ac7",
+      "bytes": 197866,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "a7917f945d9196b90c001de0e4cffb52b874215d8cf3def20cc45ca24fa6348f",
+      "inputs": [],
+      "label": "Caimán",
+      "category": "A",
+      "myth_ids": [
+        365
+      ],
+      "covered_myth_ids": [
+        365
+      ],
+      "reference_ids": [
+        "V14-IMG16",
+        "V15-IMG12",
+        "V15-IMG13"
+      ],
+      "scope_notes": [
+        "Tres estados del animal y un huevo grande del sueño narrado en 365: tierra, nado y boca abierta.",
+        "Referencias de crocodiliano sólo apoyan anatomía externa; no certifican especie del caimán del relato.",
+        "Sin interior anatómico, persona devorada o gore; piel y ojos simplificados como capas de papel."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [],
+      "endpoint": "/v1/images/generations"
+    },
+    {
+      "unit_id": "L04",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/l04.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1.jpeg"
+      ],
+      "sha256": "57731d548dc69fe487356e3e3450f893ea528a13a2689f4b603bcb93384f1807",
+      "bytes": 308243,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "a32e7af53cda9a2c47a844d4293defba10e7dda2298b683e928ce0cc87e5a475",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1.jpeg",
+          "sha256": "997e3ce6664cc5aaa1d393e1f054f442835b7217cf76352b31082f6c0e471323"
+        }
+      ],
+      "label": "Terreno montañoso y pozos",
+      "category": "L",
+      "myth_ids": [
+        352,
+        356
+      ],
+      "covered_myth_ids": [
+        352
+      ],
+      "reference_ids": [
+        "V06-P048-I00",
+        "V06-P059-I00"
+      ],
+      "scope_notes": [
+        "Cuatro cuadros: dos cámaras con tres pozos secos arriba y llenos abajo. Cantidad de tres elegida para composición, no número sagrado del relato.",
+        "QA redujo los collares de mampostería a bordes terrosos irregulares; capas internas de papel aún escalonadas.",
+        "Cubre los pozos de 352, no estaca/manantial del Palo de Agua 356. Paisaje ficticio, no cartografía."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [],
+      "endpoint": "/v1/images/edits"
+    },
+    {
+      "unit_id": "U03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/u03.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1.jpeg"
+      ],
+      "sha256": "c1f027e7b76a78cb7aa2417c92b001af822ad0fb5e3556f9b0c1c66b832ced5d",
+      "bytes": 89806,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "ad7e9d165d50435d287c067b209fd5deeb34e68154b12f31ab377f7b4e297322",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1.jpeg",
+          "sha256": "a647bc4b97fe31d351fb9b25f29a88d754477a231ecc03ef77dc5bf294ecb451"
+        }
+      ],
+      "label": "Macana y útiles de trabajo",
+      "category": "U",
+      "myth_ids": [
+        349,
+        352,
+        353,
+        356,
+        357,
+        360,
+        361
+      ],
+      "covered_myth_ids": [
+        349,
+        352,
+        353,
+        356,
+        357,
+        360,
+        361
+      ],
+      "reference_ids": [
+        "V11-P067-I00",
+        "V03-IMG01"
+      ],
+      "scope_notes": [
+        "Cinco estudios de tres prototipos: macana grande (frente/canto), pequeña (frente/canto), palo de trabajo provisional.",
+        "QA cambió hoja lanceolada por tabla ensanchada y punta corta proyectada; cantos simplificados, no planos técnicos.",
+        "Archivo1946 apoya macanas distintas de tamaño y función. Palo de excavación no confirmado para pozos o ceiba; no usarlo como hecho cultural."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [],
+      "endpoint": "/v1/images/edits"
+    },
+    {
+      "unit_id": "V03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1-refined.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-05/v03.refinement.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1.jpeg"
+      ],
+      "sha256": "a1932afd9e93f26db2969d22f417a3c0bdf676c468d5bf2d86df1e3a77a509fd",
+      "bytes": 478266,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_sha256": "d3194f52359934f423b518778555f28e359be51f3a0e33873352ddd008b3cc92",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1.jpeg",
+          "sha256": "b6e6dbc8d3fe107a86ed4527679e7e2349e779a87298de5ba4d864ca4d113676"
+        }
+      ],
+      "label": "Incendio y terreno posterior",
+      "category": "V",
+      "myth_ids": [
+        350,
+        579,
+        580
+      ],
+      "covered_myth_ids": [
+        350
+      ],
+      "reference_ids": [],
+      "scope_notes": [
+        "Cuatro cuadros: incendio arriba y terreno sin llamas abajo, derivados del espacio L01 para 350.",
+        "Tronco inclinado, roca y sendero reconocibles; cámaras/composición aproximadas, no correspondencia geométrica exacta entre estados.",
+        "No cubre casas L02, roza L05 ni cosmologías 579/580; conserva follaje seco estilizado y no representa recuperación completa."
+      ],
+      "status": "produced_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "derived_from": [
+        "L01@produccion-api-02-spatial-parent"
+      ],
+      "endpoint": "/v1/images/edits"
+    }
+  ]
+}
+

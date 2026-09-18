@@ -1,0 +1,150 @@
+{
+  "title": "Creación Wayuu",
+  "references": [
+    {
+      "id": "c6b753decbdb80c3f1a1",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/creacion-wayuu-1784766715476.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/creacion-wayuu-",
+          "pathname": "mitos/creacion-wayuu-1784766715476.jpg",
+          "uploaded_at": "2026-07-23T00:31:57.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T05:53:28.642Z",
+        "method": "browser_capture_direct_visual_review",
+        "capture": "output/playwright/wayuu-campaign/creacion-before-0.png",
+        "observed": "Primer plano de anciano modelando un muñeco, taller, casas redondas, canoa, luna y cielo estrellado en capas."
+      }
+    },
+    {
+      "id": "dd905f4f5b7860997fef",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/creacion-wayuu-1784910982498.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 346,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 346,
+          "updated_at": "2026-07-24T16:36:23.988Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/creacion-wayuu-",
+          "pathname": "vertical/myth/creacion-wayuu-1784910982498.jpg",
+          "uploaded_at": "2026-07-24T16:36:23.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T05:53:28.642Z",
+        "method": "browser_capture_direct_visual_review",
+        "capture": "output/playwright/wayuu-campaign/creacion-before-1.png",
+        "observed": "Anciano con barba y traje geométrico modela figuras de barro sobre mesa; luna, estrellas, cactus y velero."
+      }
+    },
+    {
+      "id": "7a25b803165070a2d43b",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/creacion-wayuu-1767973379187.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/creacion-wayuu-",
+          "pathname": "mitos/creacion-wayuu-1767973379187.png",
+          "uploaded_at": "2026-01-10T22:07:27.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 1017621
+    },
+    {
+      "id": "castrillon-cosmogonia-wayuu-01",
+      "location": "https://tatocastrillon.com/cosmogonia-wayuu",
+      "roles": [
+        "external_contemporary_art_reference"
+      ],
+      "author": "Tatiana Castrillón",
+      "title": "Cosmogonía Wayuu",
+      "date": null,
+      "collection": "Portafolio de la autora; concept art para Bombillo Amarillo",
+      "license": "Todos los derechos reservados; consulta e inspiración analítica, sin reutilización ni publicación del archivo",
+      "evidence": [
+        {
+          "source": "author_portfolio_browser",
+          "image_location": "https://cdn.myportfolio.com/bfd4b421c3278251398c7f65e7ce98cd/8eab57bc-7441-4909-9bef-7bf5ad820001_rw_1920.jpg?h=a0097aa092fb9c97a834f68811a1b5d3",
+          "relationship": "Cosmogonía Wayuu presentada por generaciones; variante distinta del relato compuesto del proyecto."
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T05:53:28.642Z",
+        "capture": "output/playwright/wayuu-campaign/creacion-external-castrillon.png",
+        "method": "author_page_browser_capture_direct_visual_review",
+        "observed": "Composición panorámica de tierra y mar, árboles y animales, humanos pequeños y deidades grandes; campos cálidos y fríos conectados por curvas. Se estudia escala relacional, no se copia iconografía."
+      }
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_before_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:53:28.642Z",
+    "reviewed_reference_ids": [
+      "c6b753decbdb80c3f1a1",
+      "dd905f4f5b7860997fef",
+      "castrillon-cosmogonia-wayuu-01"
+    ],
+    "retained": [
+      "Azul nocturno y arena en capas del proyecto; calidez localizada frente a territorio extenso.",
+      "De la referencia contemporánea de Castrillón: territorio entendido como relaciones entre diferentes formas de vida, con figuras pequeñas dentro de una composición amplia."
+    ],
+    "rejected": [
+      "Anciano creador gigante, barbas y traje geométrico como identidad universal de Mareiwa; enfoque cerrado de taller y muñecos de barro.",
+      "Casas redondas, canoa, velero y patrones decorativos que mezclan variantes.",
+      "No copiar de la obra externa composición, cuerpos divinos, patrones, colores exactos ni genealogía como si fueran la fuente del relato público."
+    ],
+    "influence_by_act": {
+      "entrada": "Noche azul amplia con fuegos familiares separados; curvas de luz se vuelven caminos materiales entre lugares, no taller de un creador gigante.",
+      "acto": "Restituir seis personas pequeñas y distintas dentro del territorio de origen; cavidad y barro permanecen separados.",
+      "huella": "Condensar la relación entre agua y vida latente en una semilla seca cuya sombra tiene forma de árbol; sin tercera escena."
+    }
+  },
+  "external_visual_search": {
+    "query": "\"creación wayuu\" ilustraciones Mareiwa Mma",
+    "searched_at": "2026-09-06T05:53:28.642Z",
+    "outcome": "Referencia contemporánea específica localizada e inspeccionada en portafolio de autora. No se encontró una representación histórica que pueda declararse canónica.",
+    "retrieval_notes": "Web extractor recibió 403; la página pública cargó normalmente en navegador. No se descargó la obra ni se subió a OpenAI.",
+    "limits": "Fecha de obra desconocida; copyright 2026 del sitio no se toma como fecha de creación. Versión almacenada más antigua del proyecto permanece no inspeccionada."
+  }
+}

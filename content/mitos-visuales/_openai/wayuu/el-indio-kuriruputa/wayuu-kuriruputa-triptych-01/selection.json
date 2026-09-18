@@ -1,0 +1,97 @@
+{
+  "schema": "mitos-triptych-selection/v1",
+  "myth": "el-indio-kuriruputa",
+  "title": "El indio Kuriruputá",
+  "batch_id": "wayuu-kuriruputa-triptych-01",
+  "status": "candidate_pending_user_review",
+  "created_at": "2026-09-06T03:11:08.044Z",
+  "selection_authority": "agent_visual_review_not_user_approval",
+  "publication_status": "not_published",
+  "canonical_assets_modified": false,
+  "narrative_target_sha256": "c429661b841073b2f2436a91d41d047fd05fadf25a12b2df0226192fcd239c91",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/entrada.jpeg",
+      "sha256": "eb1f7eac80b28d86b28f1838c224259a15c0274dff7c25ba5251c2a8244d1f6c",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "quality_evidence": "frozen_request_not_inferred_from_pixels",
+      "visual_function": "narrative_scene",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-kuriruputa/wayuu-kuriruputa-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "5002387a8c3ef31d7bcccb2b0e8ae22ae8834774e663ea756de9b73976caab27",
+      "generation_count": 1,
+      "review": {
+        "status": "candidate_with_observations",
+        "observed": "Cuatro adultos de papel de cuerpo entero; vestuario terracota/crudo, índigo, rojo oscuro y mostaza. Hermana mayor conduce el paño que se ensancha como camino sobre hendiduras. Distancias de terreno, cardones, casas y corral; no perímetro de maqueta ni violencia.",
+        "limitations": [
+          "Las figuras ocupan aproximadamente un cuarto de la altura, más del quinto solicitado; el territorio sigue dominando el encuadre.",
+          "El apoyo de las hermanas se lee como acompañamiento; la dificultad al caminar es sutil y el paño alrededor de la rodilla no resulta inequívoco.",
+          "La gran hendidura es puesta en escena, no geografía histórica identificada."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/acto.jpeg",
+      "sha256": "5f49b1f92d3b8669bc0ce5b97e9ede7588034314bdb686bd7fb3518364e33b2d",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "quality_evidence": "frozen_request_not_inferred_from_pixels",
+      "visual_function": "narrative_scene",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-kuriruputa/wayuu-kuriruputa-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "a33fc1bf2764f62409b6cd25ff6f322340c3349b3b233eb756e8eee19a4de2d5",
+      "generation_count": 1,
+      "review": {
+        "status": "candidate_with_observations",
+        "observed": "Cuatro adultos sentados en conversación; hombre y hermana mayor se responden. Tuma roja en estera, fibras prolongadas en sendas rojas, amplísima profundidad territorial. Personajes de papel recortado sin caras Pixar y sin efectos luminosos.",
+        "limitations": [
+          "Una senda alcanza un corral en vez de un tercer umbral doméstico; la conexión entre espacios permanece legible.",
+          "La tuma es más angulosa que el objeto de la Biblia; el rojo mate y la escala relativa se conservan.",
+          "El suelo y la sombra tienen un acabado más continuo que las capas abiertas de la horizontal; no se confunde con una caja, pero su materialidad es menos explícita en algunas zonas."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/huella.jpeg",
+      "sha256": "cc7bc5281e31122948dae5da8636807026344109f93bea29a69aa54ec607c34e",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "quality_evidence": "frozen_request_not_inferred_from_pixels",
+      "visual_function": "symbolic_synthesis",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-kuriruputa/wayuu-kuriruputa-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "e4309f59750601228ef7e75f6f791511af6e771e63903fd09bd759b2cf652116",
+      "generation_count": 1,
+      "review": {
+        "status": "candidate_with_observations",
+        "observed": "Un solo contorno rojo irregular abierto en tres masas laminadas, unido por fibras que atraviesan el vacío; sin personajes, escena, ornamento codificado o brillo. La operación simbólica y los estratos físicos se leen con claridad.",
+        "limitations": [
+          "La silueta se aproxima a un disco o canto aplanado de papel más que a una piedra gruesa.",
+          "La suspensión es ambigua: la sombra puede leerse como proximidad a una superficie; el vínculo entre fragmentos sí es visible.",
+          "Es un emblema editorial de esta historia, no una tuma ritual o tradicional certificada."
+        ]
+      }
+    }
+  ],
+  "iteration_audit": "iteration-audit.json",
+  "qa": {
+    "technical": "all_sizes_and_hashes_match",
+    "visual": "reviewed_individually",
+    "tests": {
+      "existing_suite_passed": 90,
+      "plan_preflight": "passed"
+    },
+    "editorial": "pending_user_review"
+  },
+  "lessons": [
+    "Reutilizar contratos y preguntas de QA, no el vehículo sobrenatural de otro mito.",
+    "Una acción y un prodigio material dominante por escena; la huella tiene prompt separado sin reparto heredado.",
+    "No equiparar primera generación con aprobación: estas tres imágenes son candidatas, con límites registrados."
+  ]
+}

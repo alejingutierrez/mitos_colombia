@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "produced_reviewed_candidate_pending_user_evaluation",
+  "api_model": "gpt-image-2.5-sunburst",
+  "runner": "official imagegen CLI",
+  "myth_id": 352,
+  "api_calls": 1,
+  "successful_api_outputs": 1,
+  "cli_preflight_failures": [
+    {
+      "size": "2048x1152",
+      "exit_code": 1,
+      "api_called": false,
+      "reason": "Model-specific CLI validation accepts standard sizes only."
+    }
+  ],
+  "execution": {
+    "exit_code": 0,
+    "elapsed_ms": 38481,
+    "size": "1536x1024",
+    "quality": "high",
+    "concurrency": 1
+  },
+  "output": {
+    "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/cacica-dos-hombres-v1.jpeg",
+    "sha256": "5905f9cea82174a8f8c968feecca9406ba83336dd1fc2285b574554a4a01583e",
+    "bytes": 160320,
+    "width": 1536,
+    "height": 1024,
+    "format": "jpeg",
+    "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/revision-personajes-01/cacica-dos-hombres.prompt.txt",
+    "prompt_sha256": "92b77b81ee88bd3d5449781ed66b1843857260ea318afeb355cca45ea65c56cf",
+    "inputs": [
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-07/p07-rostro-atuendo-v1.jpeg",
+        "sha256": "3748d29dfc3c99b04ff962e1b142c5692ef1aee6bfb2a1e0efe65f3ee5f03cc5"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-04/h01-cuatro-adultos-rostros-v3.jpeg",
+        "sha256": "acac3d2e043e29d524fda68afa0f068ba471463c8c7138750a5adf7d7aa581e7"
+      }
+    ]
+  },
+  "comparison": {
+    "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/comparacion-v1.png",
+    "sha256": "bd87e13fcc78f0aa03b26cf10fa2cc37c5070b065618976fafebc434f58b3d2d",
+    "width": 964,
+    "height": 1199,
+    "format": "png"
+  },
+  "documentary_images_uploaded": 0,
+  "user_approved": false,
+  "culturally_certified": false,
+  "adopted_into_bible": false,
+  "applied_to_triptych": false,
+  "published": false
+}
+

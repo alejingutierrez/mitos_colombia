@@ -1,0 +1,1117 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-indio-jaichuasay",
+  "title": "El indio Jaichuasay · La vida perseguida",
+  "version": "preproduccion-01",
+  "status": "script_storyboard_ready_not_generated",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Oliva apagado, ocre cálido y estratos gris violeta; cielo azul gris de hojas. Jaichuasay camisa oliva y beige. Territorio más arbustivo y verde que Ipuana. Transformación no exige noche azul ni destellos.",
+  "story_thesis": "El perseguidor deja de estar fuera de la vida que persigue; transformación, hospitalidad inquieta, reconocimiento y retirada sin cura definitiva añadida.",
+  "shared_scene_continuity": [
+    "Todo de hojas mate separadas, también animales, casas y suelo; no heredar el modelado realista de fichas.",
+    "No añadir personas mencionadas sólo por la voz; reparto exacto del instante manda.",
+    "Guía sin astas y Jaichuasay venado con astas simples: diferencia editorial de diseño, no especie o sexo documental.",
+    "Sólo arbustos recortados y estratos propios del territorio; maguey sólo cuando inventariado, no rosetas decorativas automáticas.",
+    "Sin ataques visibles, heridas, híbridos, diosas, joyas o rayos; no reducir riqueza de planos a vacío."
+  ],
+  "continuity_rules": [
+    "El venado inicial y Jaichuasay transformado son entidades distintas; jamás duplicar al protagonista humano y animal en una escena.",
+    "Cazadores a pie mismos en b6a,b6b,b7a,b7b; montados son otro par.",
+    "Un rastro por toma, termina en pies/patas cuando así se pide, sin continuar delante.",
+    "Casas diferentes entre rancho serrano y visitado, misma geometría en repeticiones.",
+    "Comparar b1a,b3b,b8b como anclas materiales y cada original antes de cierre."
+  ],
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jaichuasay.json",
+    "content_sha256": "f678153a5340e8286e8f32c9c664379b8dac6413a5f14e805785ca4623a17a6b",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "Chaves XI pp319–320, líneas493–514",
+    "live_verified_at": "2026-09-07",
+    "live_hash_matches": true,
+    "chosen_variant": "Fuente histórica, sin sueño, cura permanente o enseñanza posterior añadidos por sitio.",
+    "events": [
+      {
+        "id": "e1",
+        "required": true,
+        "description": "Jaichuasay hirió a un venado y siguió su rastro. El animal se internó en una serranía lejana. El cazador perdió el camino.",
+        "source": "Chaves XI pp319–320",
+        "provenance": "historical_core"
+      },
+      {
+        "id": "e2",
+        "required": true,
+        "description": "No perseguía a un venado cualquiera. Era un hombre que cambiaba de forma y transformaba a quienes lo seguían. Jaichuasay también se volvió venado.",
+        "source": "Chaves XI pp319–320",
+        "provenance": "historical_core"
+      },
+      {
+        "id": "e3",
+        "required": true,
+        "description": "En la sabana corría sobre cuatro patas. En su rancho de la serranía volvía a ser hombre. Un mismo recorrido llevaba dos maneras de habitarlo.",
+        "source": "Chaves XI pp319–320",
+        "provenance": "historical_core"
+      },
+      {
+        "id": "e4",
+        "required": true,
+        "description": "Visitaba otros ranchos con manojos de maguey. Le daban comida. Pero no encontraba tranquilidad: miraba alrededor, atento a cuanto se movía fuera de la casa.",
+        "source": "Chaves XI pp319–320",
+        "provenance": "historical_core"
+      },
+      {
+        "id": "e5",
+        "required": true,
+        "description": "Al regresar al monte, reaparecía el venado. Un día salió ante una partida de cazadores. Ni sus mejores caballos conseguían alcanzarlo.",
+        "source": "Chaves XI pp319–320",
+        "provenance": "historical_core"
+      },
+      {
+        "id": "e6",
+        "required": true,
+        "description": "Otros esperaban a pie junto a una trocha. Una flecha lo alcanzó. En ese instante, donde esperaban encontrar un venado, vieron a Jaichuasay.",
+        "source": "Chaves XI pp319–320",
+        "provenance": "historical_core"
+      },
+      {
+        "id": "e7",
+        "required": true,
+        "description": "Los hombres contaron lo ocurrido. El miedo cambió sus caminos: no volvieron a cazar en aquella serranía. El lugar seguía allí, pero ellos se apartaban.",
+        "source": "Chaves XI pp319–320",
+        "provenance": "historical_core"
+      },
+      {
+        "id": "e8",
+        "required": true,
+        "description": "El relato deja una inquietud: ¿qué sucede cuando quien persigue descubre que también puede ser perseguido?",
+        "source": "Coda editorial propia",
+        "provenance": "published_editorial_expansion"
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "jaichuasay",
+      "type": "person",
+      "desc": "Adulto de camisa oliva lisa, pantalón beige largo, sandalias oscuras y pelo negro recogido bajo. Cuerpo casi plano, rostro de perfil recortado mínimo. Sin brazaletes dorados, astas, joyas ni pintura añadida.",
+      "model_ids": [
+        "jaichuasay__identity_sheet"
+      ],
+      "design_status": "existing_reference_reinterpreted_papercut"
+    },
+    {
+      "id": "jaichuasay_venado",
+      "type": "animal",
+      "desc": "Jaichuasay transformado: venado marrón gris, vientre crema, astas pequeñas sencillas de dos ramificaciones, cuatro patas de recortes planos. No ropa, bandas doradas, cara humana ni pelaje realista.",
+      "model_ids": [
+        "jaichuasay__state_sheet"
+      ],
+      "design_status": "existing_reference_reinterpreted_papercut"
+    },
+    {
+      "id": "venado_guia",
+      "type": "animal",
+      "desc": "Venado inicial que es otro hombre transformado; sin astas, marrón ocre, orejas grandes normales, cuatro patas delgadas. Cuerpo completo casi plano de pocas hojas mate, sin heridas ni flechas incrustadas.",
+      "model_ids": [
+        "venado_guia_jaichuasay__identity_sheet"
+      ],
+      "design_status": "existing_reference_reinterpreted_papercut"
+    },
+    {
+      "id": "montados",
+      "type": "supporting_people",
+      "desc": "Exactamente dos cazadores adultos montados: uno camisa cruda/pantalón gris/cabello negro corto, otro camisa terracota/pantalón beige/cabello negro corto. Sandalias y manos normales. Sin sombreros, joyas, insignias, armas adicionales.",
+      "model_ids": [],
+      "design_status": "text_design_fixed_before_generation"
+    },
+    {
+      "id": "cazadores_pie",
+      "type": "supporting_people",
+      "desc": "Exactamente dos cazadores adultos a pie, distintos de los montados: primero camisa azul gris/pantalón crudo/pelo negro corto; segundo camisa ocre/pantalón gris/pelo negro recogido. Sandalias, manos bajas. Conservar esta pareja en reconocimiento, relato y retirada. Sin sombreros, lanza, bastón o emblemas.",
+      "model_ids": [],
+      "design_status": "text_design_fixed_before_generation"
+    },
+    {
+      "id": "caballos",
+      "type": "animal",
+      "desc": "Exactamente dos caballos ordinarios: uno castaño oscuro con crin negra, otro gris cálido con crin gris oscura; siluetas de papel plano, cuatro patas completas cada uno, sillas y riendas simples de papel. No hablan ni se transforman, sin perra o animal adicional.",
+      "model_ids": [],
+      "design_status": "text_design_fixed_before_generation"
+    },
+    {
+      "id": "anfitriona",
+      "type": "person",
+      "desc": "Una mujer adulta con manta terracota cerrada hasta tobillos, sandalias y pelo oscuro recogido. Figura plana de papel; sin joyas, pintura o símbolos. Anfitriona sin parentesco afirmado, continuidad editorial del tríptico.",
+      "model_ids": [],
+      "design_status": "text_design_fixed_before_generation"
+    },
+    {
+      "id": "maguey",
+      "type": "plant_object",
+      "desc": "Un manojo de seis hojas largas verdes grisáceas recortadas, juntas por la base con tira sencilla de papel crudo, sostenidas o apoyadas según toma. Denominación histórica sin especie botánica afirmada. Sin flores o maceta.",
+      "model_ids": [],
+      "design_status": "text_design_fixed_before_generation"
+    },
+    {
+      "id": "cuenco",
+      "type": "object",
+      "desc": "Un cuenco pequeño de piezas de papel crudo curvas superpuestas y borde fino visible, con pocas formas ocres abstractas de alimento. No cerámica lisa, vidrio ni receta o alimento específico afirmado.",
+      "model_ids": [],
+      "design_status": "text_design_fixed_before_generation"
+    },
+    {
+      "id": "arcos",
+      "type": "object",
+      "desc": "Arcos delgados marrones con cuerda fina, flechas en carcaj sencillo cuando pedido; todo de papel, ninguna arma apuntada ni flecha en vuelo. Sin metal brillante, rifles o lanzas.",
+      "model_ids": [
+        "arco_flechas__object_sheet"
+      ],
+      "design_status": "existing_reference_reinterpreted_papercut"
+    },
+    {
+      "id": "rancho_serrano",
+      "type": "place",
+      "desc": "Rancho sencillo rectangular de hojas crudas, una puerta oscura a la derecha, alero de dos postes y techo ocre bajo de piezas anchas. En media ladera con arbustos oliva, sin base exterior, cúpula o muro circular.",
+      "model_ids": [
+        "rancheria_wayuu__spatial_model"
+      ],
+      "design_status": "existing_reference_reinterpreted_papercut"
+    },
+    {
+      "id": "rancho_visitado",
+      "type": "place",
+      "desc": "Casa rectangular de papel crudo, puerta central y alero ancho con dos postes planos, techo ocre de hojas superpuestas; patio llano, banquito de papel bajo alero sólo si alguien está sentado. No madera o piso de arena realista.",
+      "model_ids": [
+        "rancheria_wayuu__spatial_model"
+      ],
+      "design_status": "existing_reference_reinterpreted_papercut"
+    },
+    {
+      "id": "territorio",
+      "type": "environment",
+      "desc": "Serranía lejana de estratos de papel gris violeta, sabana ocre y monte con arbustos de tallos planos y hojas oliva recortadas. Camino de hojas anchas, aire entre lomas. No identificar como Macuira, no ríos/niebla fotográfica o plantas ornamentales nuevas.",
+      "model_ids": [
+        "serrania_transformacion_jaichuasay__spatial_model",
+        "serrania_macuira__environment_model"
+      ],
+      "design_status": "existing_reference_reinterpreted_papercut"
+    },
+    {
+      "id": "rastros",
+      "type": "editorial_motif",
+      "desc": "Una sola secuencia de huellas recortadas: humana por suela simple, venado por dos gotas hendidas. Conexión física clara, sin rastros paralelos ni símbolos flotantes; especificar inicio y final.",
+      "model_ids": [],
+      "design_status": "text_design_fixed_before_generation"
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "jaichuasay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/jaichuasay__identity_sheet--canon.jpeg",
+      "sha256": "c07ff09d04cd75bf0cfaddada84332d6845a2221cdf43891a80d60f8d4e45555"
+    },
+    {
+      "model_id": "jaichuasay__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-02/jaichuasay__state_sheet--estados.jpeg",
+      "sha256": "31e50d5404c0511e5509c4984822e547140a8c0dd0aa59da55143e06edf9db2b"
+    },
+    {
+      "model_id": "venado_guia_jaichuasay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/venado_guia_jaichuasay__identity_sheet--canon.jpeg",
+      "sha256": "ddcad71df8983b651447ee85b3667d9152e58c8f0495c449b34a23e7f3e20fd2"
+    },
+    {
+      "model_id": "serrania_transformacion_jaichuasay__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01/serrania_transformacion_jaichuasay__spatial_model--canon.jpeg",
+      "sha256": "e8101084bf18918de1a5036b73f477498c8ac887ed1316eba94f290c9b6846c6"
+    },
+    {
+      "model_id": "serrania_macuira__environment_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01/serrania_macuira__environment_model--canon.jpeg",
+      "sha256": "32c6390bb20fbbdcd64aed77b77f0701d4df91acaf12a31a482eafd06164906b"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-03-corrections-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    },
+    {
+      "model_id": "arco_flechas__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/arco_flechas__object_sheet--canon.jpeg",
+      "sha256": "f5c9963ee2b3f620fab20e2b2cebfb80ed4b6673b20373ac840f8c08bdbc8686",
+      "qa_status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/selection.json"
+    }
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/entrada.jpeg",
+        "sha256": "8852829b42409b4a26a75126586853ae7da644403f2c48940196af0588a305f6",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-02-acto/acto.jpeg",
+        "sha256": "08a21f162b2c89672feeee0b26dea8955586893e6e4fa601f299f42401b94ff0",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jaichuasay-triptych-01/huella.jpeg",
+        "sha256": "c0acf4c7c68e976cee85d736a79cb2db79dbb17f31c658cac065226d46686692",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Siete originales de modelos y tres trípticos revisados. Identidad/ambiente no son prueba cultural ni permiso para copiar material realista.",
+      "Modelos nuevos sencillos fijados por descripción textual previa; no afirmar fichas raster adicionales generadas."
+    ]
+  },
+  "duration": {
+    "target_seconds": 112,
+    "voice_words": 181,
+    "measured": false
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Jaichuasay hirió a un venado y siguió su rastro. El animal se internó en una serranía lejana. El cazador perdió el camino.",
+      "voice_provenance": "Condensación Chaves XI; conexiones editoriales registradas en guion",
+      "word_count": 22,
+      "time_seconds": [
+        0,
+        14
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "b1a · Persecución",
+          "visual": "gran plano de serranía, Jaichuasay con arco bajo y venado inicial distante intacto; ninguna flecha en vuelo. Primer término de hojas ocres, cazador intermedio, animal y garganta al fondo. REPARTO EXACTO: 1 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            0,
+            7
+          ],
+          "entity_ids": [
+            "jaichuasay",
+            "venado_guia",
+            "arcos",
+            "territorio"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "gran general tres cuartos",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b1b",
+          "title": "b1b · Persecución",
+          "visual": "mismo venado en recodo lejano; rastro legible une camino y cazador sin encerrar el cuadro. La salida conocida queda oculta por capas de lomas, no portal mágico nuevo. REPARTO EXACTO: 1 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            7,
+            14
+          ],
+          "entity_ids": [
+            "jaichuasay",
+            "venado_guia",
+            "arcos",
+            "territorio",
+            "rastros"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "general desde detrás del cazador",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "No perseguía a un venado cualquiera. Era un hombre que cambiaba de forma y transformaba a quienes lo seguían. Jaichuasay también se volvió venado.",
+      "voice_provenance": "Condensación Chaves XI; conexiones editoriales registradas en guion",
+      "word_count": 24,
+      "time_seconds": [
+        14,
+        28
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "b2a · Cambio",
+          "visual": "venado inicial completo proyecta sombra humana conectada a sus patas; metáfora de identidad, no segundo hombre al fondo. Escala pequeña en paisaje rico. REPARTO EXACTO: 0 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            14,
+            21
+          ],
+          "entity_ids": [
+            "venado_guia",
+            "territorio"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "general lateral bajo",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas de suelo y sombra conectada",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "venado inicial y su sombra",
+            "impossible_behavior": "El venado sin astas proyecta sombra humana unida a sus patas",
+            "narrative_effect": "Hacer visible identidad alternante y memoria de la persecución",
+            "agency": "Metáfora audiovisual del cambio narrado, no deidad añadida",
+            "physical_translation": "Silueta humana plana azul oscura ligada a patas del animal",
+            "visible_test": "El venado sin astas proyecta sombra humana unida a sus patas",
+            "event_ids": [
+              "e2"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b2b",
+          "title": "b2b · Cambio",
+          "visual": "Jaichuasay en forma de venado, único animal; sus huellas de pezuña continúan un tramo de pisadas humanas. Sin híbrido, ropa colgada del animal o cazador duplicado. Venado protagonista con astas simples, no el guía sin astas. REPARTO EXACTO: 0 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            21,
+            28
+          ],
+          "entity_ids": [
+            "jaichuasay_venado",
+            "territorio",
+            "rastros"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "general alto siguiendo el rastro",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "camino y huellas",
+            "impossible_behavior": "Rastro de suelas humanas se convierte en pezuñas y termina bajo las patas del venado con astas",
+            "narrative_effect": "Hacer visible identidad alternante y memoria de la persecución",
+            "agency": "Metáfora audiovisual del cambio narrado, no deidad añadida",
+            "physical_translation": "Huellas de suela y pezuña recortadas en una sola secuencia física",
+            "visible_test": "Rastro de suelas humanas se convierte en pezuñas y termina bajo las patas del venado con astas",
+            "event_ids": [
+              "e2"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "En la sabana corría sobre cuatro patas. En su rancho de la serranía volvía a ser hombre. Un mismo recorrido llevaba dos maneras de habitarlo.",
+      "voice_provenance": "Condensación Chaves XI; conexiones editoriales registradas en guion",
+      "word_count": 25,
+      "time_seconds": [
+        28,
+        42
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "b3a · Alternancia",
+          "visual": "Jaichuasay-venado cruza sabana entre dos masas de vegetación recortada; plano bajo ambiental, no retrato animal. REPARTO EXACTO: 0 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            28,
+            35
+          ],
+          "entity_ids": [
+            "jaichuasay_venado",
+            "territorio"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "general bajo entre vegetación",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b3b",
+          "title": "b3b · Alternancia",
+          "visual": "Jaichuasay humano ante rancho serrano; un único rastro de pezuñas termina en sus talones y no continúa delante. Traducción material de la alternancia. REPARTO EXACTO: 1 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            35,
+            42
+          ],
+          "entity_ids": [
+            "jaichuasay",
+            "rancho_serrano",
+            "territorio",
+            "rastros"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "general hacia alero",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "camino y huellas",
+            "impossible_behavior": "Pezuñas terminan en talones humanos, suelo vacío delante",
+            "narrative_effect": "Hacer visible identidad alternante y memoria de la persecución",
+            "agency": "Metáfora audiovisual del cambio narrado, no deidad añadida",
+            "physical_translation": "Huellas de suela y pezuña recortadas en una sola secuencia física",
+            "visible_test": "Pezuñas terminan en talones humanos, suelo vacío delante",
+            "event_ids": [
+              "e3"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Visitaba otros ranchos con manojos de maguey. Le daban comida. Pero no encontraba tranquilidad: miraba alrededor, atento a cuanto se movía fuera de la casa.",
+      "voice_provenance": "Condensación Chaves XI; conexiones editoriales registradas en guion",
+      "word_count": 25,
+      "time_seconds": [
+        42,
+        56
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "b4a · Hospitalidad",
+          "visual": "intercambio sin ceremonia: Jaichuasay ofrece manojo de hojas; una persona anfitriona sostiene cuenco. Dos personas, manos y objetos separados. REPARTO EXACTO: 2 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            42,
+            49
+          ],
+          "entity_ids": [
+            "jaichuasay",
+            "anfitriona",
+            "maguey",
+            "cuenco",
+            "rancho_visitado",
+            "territorio"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "general lateral del intercambio",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b4b",
+          "title": "b4b · Hospitalidad",
+          "visual": "Jaichuasay humano sentado con alimento, mirada hacia salida y maguey apoyado al lado. Sin astas en cabeza ni animal fantasma. Intimidad ambiental con capas de casa, patio y monte. REPARTO EXACTO: 1 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            49,
+            56
+          ],
+          "entity_ids": [
+            "jaichuasay",
+            "maguey",
+            "cuenco",
+            "rancho_visitado",
+            "territorio"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "general desde patio hacia alero",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Al regresar al monte, reaparecía el venado. Un día salió ante una partida de cazadores. Ni sus mejores caballos conseguían alcanzarlo.",
+      "voice_provenance": "Condensación Chaves XI; conexiones editoriales registradas en guion",
+      "word_count": 21,
+      "time_seconds": [
+        56,
+        70
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "b5a · Caza",
+          "visual": "venado transformado en borde de monte, rastro humano cambia a huella hendida bajo sus patas. Una sola entidad y camino continuo. REPARTO EXACTO: 0 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            56,
+            63
+          ],
+          "entity_ids": [
+            "jaichuasay_venado",
+            "territorio",
+            "rastros"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "general lateral en borde de monte",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "camino y huellas",
+            "impossible_behavior": "Rastro de suelas humanas se convierte en pezuñas y termina bajo las patas del venado con astas",
+            "narrative_effect": "Hacer visible identidad alternante y memoria de la persecución",
+            "agency": "Metáfora audiovisual del cambio narrado, no deidad añadida",
+            "physical_translation": "Huellas de suela y pezuña recortadas en una sola secuencia física",
+            "visible_test": "Rastro de suelas humanas se convierte en pezuñas y termina bajo las patas del venado con astas",
+            "event_ids": [
+              "e5"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b5b",
+          "title": "b5b · Caza",
+          "visual": "venado muy por delante de dos caballos montados, todos enteros separados. Arcos guardados y nada apuntado; amplio plano elevado. No copiar perra ni caballo mágico de Ipuana. REPARTO EXACTO: 2 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            63,
+            70
+          ],
+          "entity_ids": [
+            "jaichuasay_venado",
+            "montados",
+            "caballos",
+            "arcos",
+            "territorio"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "gran general elevado",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Otros esperaban a pie junto a una trocha. Una flecha lo alcanzó. En ese instante, donde esperaban encontrar un venado, vieron a Jaichuasay.",
+      "voice_provenance": "Condensación Chaves XI; conexiones editoriales registradas en guion",
+      "word_count": 23,
+      "time_seconds": [
+        70,
+        84
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "b6a · Reconocimiento",
+          "visual": "dos cazadores a pie distantes esperan con arcos bajos junto a camino vacío. Corte antes del hecho, sin proyectil, caída o impacto. REPARTO EXACTO: 2 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            70,
+            77
+          ],
+          "entity_ids": [
+            "cazadores_pie",
+            "arcos",
+            "territorio"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "gran general desde camino",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b6b",
+          "title": "b6b · Reconocimiento",
+          "visual": "Jaichuasay humano íntegro de pie a distancia, dos cazadores con manos bajas; huellas de venado terminan atrás. Revelación posterior por elipsis, no curación mágica visible. REPARTO EXACTO: 3 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            77,
+            84
+          ],
+          "entity_ids": [
+            "jaichuasay",
+            "cazadores_pie",
+            "arcos",
+            "territorio",
+            "rastros"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "general desde compañeros hacia Jaichuasay",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "camino y huellas",
+            "impossible_behavior": "Pezuñas terminan en talones humanos, suelo vacío delante",
+            "narrative_effect": "Hacer visible identidad alternante y memoria de la persecución",
+            "agency": "Metáfora audiovisual del cambio narrado, no deidad añadida",
+            "physical_translation": "Huellas de suela y pezuña recortadas en una sola secuencia física",
+            "visible_test": "Pezuñas terminan en talones humanos, suelo vacío delante",
+            "event_ids": [
+              "e6"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Los hombres contaron lo ocurrido. El miedo cambió sus caminos: no volvieron a cazar en aquella serranía. El lugar seguía allí, pero ellos se apartaban.",
+      "voice_provenance": "Condensación Chaves XI; conexiones editoriales registradas en guion",
+      "word_count": 25,
+      "time_seconds": [
+        84,
+        98
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "b7a · Retirada",
+          "visual": "dos cazadores hablan con una persona en ranchería; arcos en reposo. Tres figuras completas pequeñas; evitar inventar consejo ceremonial. REPARTO EXACTO: 3 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            84,
+            91
+          ],
+          "entity_ids": [
+            "cazadores_pie",
+            "anfitriona",
+            "arcos",
+            "rancho_visitado",
+            "territorio"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "general abierto bajo alero",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b7b",
+          "title": "b7b · Retirada",
+          "visual": "dos cazadores se alejan de entrada serrana por ruta lateral. Serranía queda vacía y profunda. No reaparición de Jaichuasay o del venado. REPARTO EXACTO: 2 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            91,
+            98
+          ],
+          "entity_ids": [
+            "cazadores_pie",
+            "arcos",
+            "territorio"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "gran general desde entrada serrana",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "El relato deja una inquietud: ¿qué sucede cuando quien persigue descubre que también puede ser perseguido?",
+      "voice_provenance": "Coda editorial no tradicional",
+      "word_count": 16,
+      "time_seconds": [
+        98,
+        112
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "b8a · Coda",
+          "visual": "suelo de camino, pisadas humanas y pezuñas forman una única secuencia alternada hacia horizonte, sin personas ni símbolos flotantes. Memoria editorial, no nueva transformación. REPARTO EXACTO: 0 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            98,
+            105
+          ],
+          "entity_ids": [
+            "rastros",
+            "territorio"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "general elevado a ras de pendiente",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "reparto enumerado en plano intermedio",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "camino y huellas",
+            "impossible_behavior": "Una secuencia de huellas alterna suela humana y pezuña sin portador",
+            "narrative_effect": "Hacer visible identidad alternante y memoria de la persecución",
+            "agency": "Metáfora audiovisual del cambio narrado, no deidad añadida",
+            "physical_translation": "Huellas de suela y pezuña recortadas en una sola secuencia física",
+            "visible_test": "Una secuencia de huellas alterna suela humana y pezuña sin portador",
+            "event_ids": [
+              "e8"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b8b",
+          "title": "b8b · Coda",
+          "visual": "serranía abierta sin personas ni animales; rastro se pierde por oclusión natural detrás de una capa de loma. Final sin cura definitiva, regreso añadido o enseñanza escolar. REPARTO EXACTO: 0 personas; no otras siluetas humanas. Figuras completas pequeñas de aproximadamente20% de altura, sin primerísimos planos.",
+          "time_seconds": [
+            105,
+            112
+          ],
+          "entity_ids": [
+            "rastros",
+            "territorio"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "gran general hacia horizonte",
+          "shot_scale": "Plano ambiental abierto de figuras pequeñas y relaciones visuales ricas",
+          "depth_planes": [
+            "hojas y camino en primer término",
+            "rastro ocultándose tras loma",
+            "estratos serranos, arbustos y cielo de papel separados"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte por dirección/rastro; no morphing continuo ni extremos de clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Plano fijo o desplazamiento muy lento posterior a voz medida",
+            "allowed": "Conservar figuras y conexiones; decidir animación después",
+            "forbidden": "Sin impactos, caídas, heridas, híbridos, personas nuevas o parallax físico supuesto en JPEG",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}

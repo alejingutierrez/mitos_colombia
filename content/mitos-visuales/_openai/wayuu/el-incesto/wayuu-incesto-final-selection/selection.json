@@ -1,0 +1,135 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-incesto",
+  "title": "El incesto",
+  "created_at": "2026-09-06T09:12:37.686Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autorizó producir y publicar los 27 trípticos; selección del agente tras inspección directa de píxeles, relato y referencias.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "9491938e8823d014380f75ac41188ca4ff644735a7d9dd41e147bbcf41ff9ef0",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T09:05:03.610Z",
+    "reviewed_reference_ids": [
+      "88ace892a25f73934a2b",
+      "55e927122f96c4294e35"
+    ],
+    "retained": [
+      "Azules marinos, ocres de relieve y mar construido con tiras de papel a diferentes distancias.",
+      "Relación entre costa y cerro como memoria territorial; contornos internos y sombras palpables."
+    ],
+    "rejected": [
+      "Figuras suspendidas en el cerro y cualquier representación de autolesión.",
+      "Mujer divina gigante, joyas y coronas vegetales inventadas, vestido genérico ornamentado y cuerpos modelados.",
+      "Fusión de los dos episodios en una misma escena o doble petrificación presentada como dato de Chaves."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar amplitud marina y capas; centrar sólo a la hermana, pequeña, cuya manta verde continúa materialmente en roca litoral.",
+      "acto": "Sustituir cuerpo suspendido por cerro enteramente no anatómico: estrato ocre plegado conserva memoria sin reconstruir la muerte.",
+      "huella": "Abstraer costa y cerro en dos fragmentos minerales separados con pliegues verde y ocre; sin paisaje, personas ni emblema tradicional."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-03-entrada/entrada.jpeg",
+      "sha256": "8eb3abbb06ec9763a0d19d6d7f5e8cd240460ded54de956c99edd98807510b50",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-incesto/wayuu-incesto-triptych-03-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "2447b60f45bd6fd713610074e90e846cf262d669a646d93fd73738912642403d",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Mujer de perfil en manta cerrada verde, womu y waireñas; una única tira desde bajo trasero entra en estrato de roca izquierda. Pliegue con aire/sombra. Costa amplia sin plantas ni otros cuerpos; figura y roca lejos del área inferior izquierda.",
+        "limits": [
+          "La figura ocupa aproximadamente un cuarto de altura, más que el 13% pedido; permanece de cuerpo entero en paisaje abierto, sin retrato.",
+          "El verde es más claro y el borde crudo del cuello más texturado que en la ficha; no se afirma exactitud arqueológica.",
+          "Tira y veta son metáfora material editorial, no detalle literal de la fuente."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-01/acto.jpeg",
+      "sha256": "71db9e682000c54055fa5a82abd1e71f911fcba9eb7d79e4cae76279b90619c7",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-incesto/wayuu-incesto-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "9c08d03cf8fe5db96afe27211275e32e41711fc525b85b430a9ebf9febe1b9a6",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Cerro gris en estratos de papel, collado y cauces secos. Veta ocre rojiza forma pliegues sobre vacío sombreado, unidos a los extremos del relieve. Ninguna persona, muerte, rostro o anatomía.",
+        "limits": [
+          "La elevación del pliegue es más ancha que el cuarto de cerro solicitado; sigue siendo parte del estrato, no prenda suspendida.",
+          "Los cauces se ramifican; geometría editorial y no reconstrucción cartográfica."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-01/huella.jpeg",
+      "sha256": "d0e3ec918225716bea1bb24401a677260a30bb1356db2c012c1a8bcc7e0566ff",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-incesto/wayuu-incesto-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "fda137bf6b325ba0f76276142a4387440896837c1a5acd65fbddb292ee40d866",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Dos fragmentos grises separados por campo índigo, diferentes alturas y sombras; pliegues verde y ocre dentro de piedra. No personas, paisaje, emblema ni unión entre ambas huellas.",
+        "limits": [
+          "Ocre más dorado que rojizo de la vertical, con identidad cálida aún diferenciada del verde.",
+          "Suspensión sutil, no levitación dramática; la imposibilidad principal es la blandura preservada dentro de piedra.",
+          "Síntesis editorial, no objeto tradicional ni igualdad de responsabilidades."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 3,
+        "preparation_rounds": 3,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 82.7,
+      "acto_01": 30.1,
+      "huella_01": 38.4,
+      "entrada_02": 76.6,
+      "entrada_03": 70
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-01/entrada.jpeg",
+      "reason": "Dos tiras desconectadas; no materializa transformación continua."
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-incesto-triptych-02-entrada/entrada.jpeg",
+      "reason": "Conexión lograda, pero añade roseta vegetal excluida por contrato de esta pieza."
+    }
+  ],
+  "published": false
+}

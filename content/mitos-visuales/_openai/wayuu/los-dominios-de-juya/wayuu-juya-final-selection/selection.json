@@ -1,0 +1,118 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "los-dominios-de-juya",
+  "title": "Los dominios de Juyá",
+  "created_at": "2026-09-07T15:45:00Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña autorizada; QA por relato, Biblia y memoria.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "e7bbf6fdeb7ab39e3b8dec5dee3c9b41e46fab2f068974fe64b6297a392fda54",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:33:00Z",
+    "reviewed_reference_ids": [
+      "b2ad863900b1c7217c48",
+      "d1ea72ea6e785060204f"
+    ],
+    "retained": [
+      "Contraste seco/húmedo y capas del dominio; espacios amplios."
+    ],
+    "rejected": [
+      "Dios gigante barbado con corona, viajero de torso expuesto, rosetas, sol ornamental, ausencia de prodigio específico."
+    ],
+    "influence_by_act": {
+      "entrada": "Sustituir retrato celeste por encuentro concreto con boa-banco y viajero vestido.",
+      "acto": "Mostrar identidades vegetales mediante sombras correspondientes, no paisaje genérico fértil.",
+      "huella": "Hoja con sombra humana: identidad no agotada por apariencia, sin avatar."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/entrada.jpeg",
+      "sha256": "3ee7701f361eb0a3fe2aff6868e9c381ea00e747e4c4984afad5e17a95950301",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dominios-de-juya/wayuu-juya-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "406b386d67e497f74632d1e35ee4b5cc928f312d582e43269181d1b3cdfa3f15",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Viajero de tamaño contenido vestido de carbón y terracota, sentado en boa convertida en banco bajo; lluvia localizada al fondo y colinas de papel.",
+        "limits": [
+          "Boa toma forma muy regular de banco; se reconoce por cabeza y cuerpo continuo, no reproducción zoológica exacta.",
+          "Figura supera el octavo solicitado, pero no domina ni invade el título."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/acto.jpeg",
+      "sha256": "5c3b01924bf78bbb5d89259d90813355425bcb6f34776fc352b9a713b7c43400",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dominios-de-juya/wayuu-juya-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "9dd679c789b5d8d6f31653a58179c097a839f7423098eca9a6e3fee655c8f8ea",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos adultos y dos niños completamente vestidos, pequeños; cuatro sombras ovales rayadas de patilla conectadas a sus pies, hojas de papel en capas.",
+        "limits": [
+          "Sombras son metáfora editorial de identidad vegetal, no episodio literal de transformación por sombra.",
+          "Prendas de los seres del dominio son solución editorial; no atribución de traje tradicional de un pueblo real."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/huella.jpeg",
+      "sha256": "01c2a2927c289b5bd59f08741d7a2f07a58ff59bfa8ac7f1938f20b8b968604b",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dominios-de-juya/wayuu-juya-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "45b6eba4b05b26a073539a42471b06f9e40a2f2b4441db2a9fc0fcdb4761185f",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una hoja lobulada de papel verde proyecta una única sombra humana conectada a su tallo; fondo marfil sin escena.",
+        "limits": [
+          "Hoja simplificada, no lámina botánica diagnóstica."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 3,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 0,
+    "cli_seconds": {
+      "entrada_01": 94,
+      "acto_01": 42.1,
+      "huella_01": 53
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [],
+  "published": false
+}

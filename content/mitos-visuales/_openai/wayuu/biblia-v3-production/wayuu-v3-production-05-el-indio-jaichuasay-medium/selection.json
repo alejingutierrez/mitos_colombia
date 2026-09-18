@@ -1,0 +1,90 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "el-indio-jaichuasay",
+  "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium",
+  "status": "QA_PASS_AFTER_CORRECTION",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/el-indio-jaichuasay-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "f43a32c7cb6f5d9c0452cedcf39bcade8d5bcf0d7a65ae25b49391b1173f2e9f",
+  "batch_models": 5,
+  "selected_models": 5,
+  "approved_models_reused_for_myth": [
+    "arco_flechas__object_sheet",
+    "rancheria_wayuu__spatial_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 7,
+    "required": 7,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 47,
+    "required_models": 265,
+    "remaining_models": 218
+  },
+  "selections": {
+    "jaichuasay__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/jaichuasay__identity_sheet--canon.jpeg",
+      "sha256": "c07ff09d04cd75bf0cfaddada84332d6845a2221cdf43891a80d60f8d4e45555"
+    },
+    "jaichuasay__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-02/jaichuasay__state_sheet--estados.jpeg",
+      "sha256": "31e50d5404c0511e5509c4984822e547140a8c0dd0aa59da55143e06edf9db2b"
+    },
+    "venado_guia_jaichuasay__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/venado_guia_jaichuasay__identity_sheet--canon.jpeg",
+      "sha256": "ddcad71df8983b651447ee85b3667d9152e58c8f0495c449b34a23e7f3e20fd2"
+    },
+    "serrania_transformacion_jaichuasay__spatial_model": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01/serrania_transformacion_jaichuasay__spatial_model--canon.jpeg",
+      "sha256": "e8101084bf18918de1a5036b73f477498c8ac887ed1316eba94f290c9b6846c6"
+    },
+    "serrania_macuira__environment_model": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01/serrania_macuira__environment_model--canon.jpeg",
+      "sha256": "32c6390bb20fbbdcd64aed77b77f0701d4df91acaf12a31a482eafd06164906b"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "jaichuasay__state_sheet",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium",
+      "reason": "REJECTED_GENERIC_CIRCULAR_ARCHITECTURE_AND_LONG_SHOULDER_CLOTH",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/jaichuasay__state_sheet--estados.jpeg",
+      "sha256": "9a13b6485528cd3393451e8ee172ef680f93754695c4201d3ea9be6b2e48f074"
+    },
+    {
+      "model_id": "jaichuasay__state_sheet",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01",
+      "reason": "REJECTED_HAIR_CONTINUITY_AND_LONG_CLOTH",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium-corrections-01/jaichuasay__state_sheet--estados.jpeg",
+      "sha256": "14d92a8af75791de42a8d45cfd702d5bdcbc23454367be573938888c4067e939"
+    },
+    {
+      "model_id": "serrania_transformacion_jaichuasay__spatial_model",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium",
+      "reason": "REJECTED_PHOTOGRAPHIC_SOIL_AND_GRASS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/serrania_transformacion_jaichuasay__spatial_model--canon.jpeg",
+      "sha256": "764a632c431b8cd2d1fdc562ada70aee89bfe1cf585e7c1ee358739413b7a8da"
+    },
+    {
+      "model_id": "serrania_macuira__environment_model",
+      "batch_id": "wayuu-v3-production-05-el-indio-jaichuasay-medium",
+      "reason": "REJECTED_MONUMENTAL_MOUNTAIN_AND_WIDE_RIVER",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-05-el-indio-jaichuasay-medium/serrania_macuira__environment_model--canon.jpeg",
+      "sha256": "f577b41750d51a2161322db7fcdc5ce7648c258fd7b2486f6fb9dcedd4c4c095"
+    }
+  ]
+}

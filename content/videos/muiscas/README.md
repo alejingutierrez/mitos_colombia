@@ -1,5 +1,12 @@
 # Biblioteca muisca — assets reutilizables de video e imagen
 
+Estado de comunidad: **cierre visual certificado** para los 41 mitos del
+manifiesto aprobado. La certificación registró 123/123 piezas de tríptico, 789
+activos únicos materializados y 84 imágenes de video no generadas aceptadas; la
+verificación de publicación confirmó 41 páginas y 123 blobs nuevos. Esto no
+equivale a 41 videos terminados. Para iniciar otra comunidad, usar el
+[traspaso Muisca + Wayúu](../../../docs/videos/TRASPASO-SIGUIENTE-COMUNIDAD.md).
+
 Todo el material generado para el canal de mitos muiscas, organizado para que cada
 producción nueva parta de aquí en vez de regenerar. Estilo: `studioPaperMaquette`
 del sitio (maqueta de papel artesanal). Los prompts exactos con que se creó cada
@@ -8,6 +15,13 @@ asset están en `biblia/manifest.json` y `videos/bachue/keyframes/manifest.json`
 Documentación del proceso: `docs/videos/proceso-mitos-a-video.md` ·
 Plantillas de prompts: `docs/videos/plantillas-prompts.md` ·
 ADN del canal: `docs/videos/muiscas/channel-dna.json`
+
+Cuenta vigente desde 2026-09-03: una sola cuenta OpenAI API leída desde
+`OPENAI_API_KEY` en los `.env` locales ignorados. Las nuevas imágenes usan
+`gpt-image-2`: Biblia, keyframes y piezas vertical/cuadrada del tríptico en
+`medium`; únicamente la pieza horizontal del tríptico se produce en `high`.
+Los verticales usan máster `1024x1536` y crop `1080x1920`. Ningún
+secreto ni identificador de cuenta se guarda en esta biblioteca.
 
 ## Qué se versiona y qué no
 

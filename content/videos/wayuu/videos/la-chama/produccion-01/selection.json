@@ -1,0 +1,449 @@
+{
+  "schema": "wayuu-keyframe-selection/v1",
+  "slug": "la-chama",
+  "title": "La Chama: la forma que no se deja poseer",
+  "status": "complete_pending_user_approval",
+  "quality": "medium",
+  "plan": "content/videos/wayuu/videos/la-chama/preproduccion-01/plan.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "total_unique_generations": 42,
+    "selected_generations": 24,
+    "superseded_generations": 18,
+    "batches": [
+      {
+        "label": "anclas-01",
+        "count": 5,
+        "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-anclas"
+      },
+      {
+        "label": "anclas-correction-01",
+        "count": 3,
+        "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-anclas-correction-01"
+      },
+      {
+        "label": "resto-01",
+        "count": 19,
+        "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-resto"
+      },
+      {
+        "label": "correction-02",
+        "count": 14,
+        "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02"
+      },
+      {
+        "label": "correction-03",
+        "count": 1,
+        "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-03"
+      }
+    ]
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "version": "01",
+      "batch": "resto-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-resto/b1a.jpeg",
+      "sha256": "cf71963275c4f971d8f115146590fb2c3dc78d92ce5877da36ae41c9be1fef20",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El peñasco retiene una presencia: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b1a.txt",
+      "prompt_sha256": "7135ddc53defcab13b486d028a71d6b0f27e96b283bb9f1503dc8c828171dae1"
+    },
+    {
+      "id": "b1b",
+      "version": "02",
+      "batch": "anchor-correction-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-anclas-correction-01/b1b.jpeg",
+      "sha256": "eca7b1658215ef7b360f75e6cc7edd8314774cbdb264d20e2439922af48db5ec",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Una forma cruza sin fijarse: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b1b.txt",
+      "prompt_sha256": "09a52e12990541124be9eea8d7d52969a7ef515b8fb8c280b851a7730a02c9a4",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b1b"
+    },
+    {
+      "id": "b2a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b2a.jpeg",
+      "sha256": "ea70885523ac2bbd41717653e440134d1b4fa38a1aa337528a3992a379152966",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El cuidador y cinco caballos: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b2a.txt",
+      "prompt_sha256": "804f5bb5e7b3ba31bb1c1b0373b3e203ae3214eb9feda48bce12fda079da3d62",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b2a"
+    },
+    {
+      "id": "b2b",
+      "version": "01",
+      "batch": "resto-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-resto/b2b.jpeg",
+      "sha256": "0eb7250a6fecb275e6e8bdb3255c08d6aa10a757117c4fb1ba01321912452a91",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La pregunta abre un camino: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b2b.txt",
+      "prompt_sha256": "153a58fd3af35167a8c020a19bde3448074da34bccecb5c98163d878b71f24a4"
+    },
+    {
+      "id": "b3a",
+      "version": "01",
+      "batch": "resto-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-resto/b3a.jpeg",
+      "sha256": "1a49f1e6ee45fb526dc8b222df0e98f22cd61eb6b9ca8e3ffeb719bf1cdd1502",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La roca empieza a parecer casa: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b3a.txt",
+      "prompt_sha256": "cf1abe029301781931cfba4fd6a95d28da423fc2052064dded8f047341f50fee"
+    },
+    {
+      "id": "b3b",
+      "version": "01",
+      "batch": "anchors-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-anclas/b3b.jpeg",
+      "sha256": "398215780031f36c12d927b6dd66faf88ccb007b8a36f626de93ea7d55e7f21a",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La casa cierra sus pliegues: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b3b.txt",
+      "prompt_sha256": "cd5dd6374bc96fe1b22e27e6db3bd9b81d27dfef504e6f5b98a2d6113abb80ea"
+    },
+    {
+      "id": "b4a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b4a.jpeg",
+      "sha256": "637efda9db858fecdde751380e7ea0289bbdf7af781fbfe6e7e4bf1c00dabfca",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La Chama se interpone: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b4a.txt",
+      "prompt_sha256": "7490d1c1c3c27379a77432c167c2be398ead787741671074a5269f8900f1a94e",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b4a"
+    },
+    {
+      "id": "b4b",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b4b.jpeg",
+      "sha256": "02a454aa400d954a749393c8c58303e1447ddbc396e8d70ecc520aef45b05969",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La salida aparece donde no estaba: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b4b.txt",
+      "prompt_sha256": "f8daca7bc339f2c1508d56a654331529fe02cbbd49bbeaa50cf4a97efde037c5",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b4b"
+    },
+    {
+      "id": "b5a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b5a.jpeg",
+      "sha256": "e8b0f6809d750c8eb6fe6c834c3d9f306c90c560b43335a6e2f210c1e8513156",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Una vida lejos de la cueva: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b5a.txt",
+      "prompt_sha256": "784947a796dee559e80dfd7deedbeb4120a53e34bdce39f6e8e3870a1e17b40e",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b5a"
+    },
+    {
+      "id": "b5b",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b5b.jpeg",
+      "sha256": "195c865ac233aa4df127b32b4e10205418a4960f7afc14ca356d7b759379ea6d",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La relación se divide: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b5b.txt",
+      "prompt_sha256": "c6e492bf622f6e8d327d160f6cddc250ca290ed8c845ae48d0c17e2ae9cd9f28",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b5b"
+    },
+    {
+      "id": "b6a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b6a.jpeg",
+      "sha256": "3b6077945d3fea7a79b0af6afdec2aafc7323fdb0b28c9f1ae7076b6a4a94c47",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La carga gastada inicia la marcha: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b6a.txt",
+      "prompt_sha256": "81660ea032bf5c9247b663a6fb0aa8c3dc46a7f779afa29c546e93474258eba4",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b6a"
+    },
+    {
+      "id": "b6b",
+      "version": "02",
+      "batch": "anchor-correction-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-anclas-correction-01/b6b.jpeg",
+      "sha256": "9760d88709442b64a9e8293560297362ceaea2046ac4deb1adfa6115c5e09393",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cuatro pliegues renuevan el viaje: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b6b.txt",
+      "prompt_sha256": "497ce65104ef054b53a732c180ab13cb4297427d18b076ed5dd0b5d3c251e327",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b6b"
+    },
+    {
+      "id": "b7a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b7a.jpeg",
+      "sha256": "8a679d202fd0ad0f24e58bc2aecb0237cfa7da61ce84e220fde8da681f7c9b7d",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El hombre entra en el camino largo: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b7a.txt",
+      "prompt_sha256": "d1b8ecf38cf34c7f956541a56ce06cf6e666d29e1fea3b846f9175f2a3a4c62b",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b7a"
+    },
+    {
+      "id": "b7b",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b7b.jpeg",
+      "sha256": "e0c9b106a865534b13e0b9b7bf8ecc078b8792ed4852a5c5fabe27ce35136454",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Cinco días caben en un sendero: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b7b.txt",
+      "prompt_sha256": "a850e8a2506fc94624a6febc7b6640fc2cac4b4a3cb38195a73cc2da39d976d2",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b7b"
+    },
+    {
+      "id": "b8a",
+      "version": "01",
+      "batch": "resto-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-resto/b8a.jpeg",
+      "sha256": "1f3a2eaaa5cd7cdd41aed5785ac65655ccfef0b25a8376dda9df0eaa00c9d9c0",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Llegada sin triunfo: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b8a.txt",
+      "prompt_sha256": "3fc286708969b24afdcf88c5e917f2f7c7aa5adf7ae4825b209c7c5482742ac1"
+    },
+    {
+      "id": "b8b",
+      "version": "03",
+      "batch": "correction-03",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-03/b8b.jpeg",
+      "sha256": "c9d217cb3dbd80658eb78db66c3d23e43d154295e83d818575613751c86a64fd",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Tres costuras cierran el suelo: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b8b.txt",
+      "prompt_sha256": "9808b9438cbabc726babcc9cde52709b55128339a20cd8fbae59d6b8a01f7f54",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b8b"
+    },
+    {
+      "id": "b9a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b9a.jpeg",
+      "sha256": "1bbd548a190bba7b5970fe1f3a0c21d30df65480ab6f5524d1e8967da436e1f9",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El escondite se pliega: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b9a.txt",
+      "prompt_sha256": "f1f3999bdb9bd7aa75e13991d40d10ef0ded97daf79df468e2e966572873fa28",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b9a"
+    },
+    {
+      "id": "b9b",
+      "version": "02",
+      "batch": "anchor-correction-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-anclas-correction-01/b9b.jpeg",
+      "sha256": "b83db98061dd80aedf77325902d6bbdc0d68c79bae619b7d8e781382b8c0a79c",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "La familia pasa frente al vacío: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b9b.txt",
+      "prompt_sha256": "c5528017dc20f60fd0723149469652fa7592424bcb2eff530fe1f21365703b01",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b9b"
+    },
+    {
+      "id": "b10a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b10a.jpeg",
+      "sha256": "8650841b1eaa235ed177025e2f314dc7d5c119677ceb1d16db8591d21411e1f2",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El sueño deja de sostener el pliegue: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b10a.txt",
+      "prompt_sha256": "e00e84bfdbfa94a9e42ffdc17b385c335dc140e00223851f15fb5abd975a926c",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b10a"
+    },
+    {
+      "id": "b10b",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b10b.jpeg",
+      "sha256": "b690cb6a300e1a5d8fb1492ca80fed1c1612fb561bd08a6da0329375558e63f8",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Dos lugares quedan vacíos: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b10b.txt",
+      "prompt_sha256": "d13ee6a117b4284b633cc05c7f6b3d50eb987064a976ab9720685cd063c9d517",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b10b"
+    },
+    {
+      "id": "b11a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b11a.jpeg",
+      "sha256": "316aa129715a15bc3aad31b69465213dfaf4d30a52900e9f44ed351b59c03c81",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El despertar ante la ausencia: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b11a.txt",
+      "prompt_sha256": "2cc9a0c3a38076a7c67463db957bc491b895cdea2af13b5a01a02428c721c3e8",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b11a"
+    },
+    {
+      "id": "b11b",
+      "version": "01",
+      "batch": "resto-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-resto/b11b.jpeg",
+      "sha256": "5cd7148a4d5740710b0e9b840b014686b5dac7ce35af344c064d85e406634196",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Tres caminos se separan: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b11b.txt",
+      "prompt_sha256": "56d53b3d278ee483a9aaf3a25b4b768ff854bcfac2d2888a836c214cc01d640c"
+    },
+    {
+      "id": "b12a",
+      "version": "02",
+      "batch": "correction-02",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-correction-02/b12a.jpeg",
+      "sha256": "d150d2f32ea23f0ba204d87e1ad87c546814ceaa2ed64c1f85f581b3ea2cc9cc",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "Ninguna forma basta: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b12a.txt",
+      "prompt_sha256": "7586bc966c639cd7a2abc9f3674cbbbd82fa5e2b5d5b9d0533208c48658fbaf1",
+      "prompt_correction_file": "content/videos/wayuu/videos/la-chama/produccion-01/quality-overrides-v1.txt#b12a"
+    },
+    {
+      "id": "b12b",
+      "version": "01",
+      "batch": "anchors-01",
+      "path": "output/imagegen/wayuu/keyframes/la-chama-preproduccion-01-anclas/b12b.jpeg",
+      "sha256": "ef7078e5c7d9716a469194fc3a8d53a7be8d763a7f9804bbd1179130da73e1f0",
+      "width": 864,
+      "height": 1536,
+      "format": "jpeg",
+      "reviewed": true,
+      "notes": [
+        "El cabello continúa como peñasco: original inspeccionado; continuidad narrativa, cantidades, vestuario y papercut V2 aprobados."
+      ],
+      "prompt_file": "content/videos/wayuu/videos/la-chama/preproduccion-01/prepared-01/prompts/b12b.txt",
+      "prompt_sha256": "397f36581e30c7a86350b9ce6020805e6931df6b90cb966daa5bcbf95598760e"
+    }
+  ]
+}
+

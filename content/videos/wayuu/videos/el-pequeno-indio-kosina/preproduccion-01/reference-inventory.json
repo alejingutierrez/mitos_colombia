@@ -1,0 +1,482 @@
+{
+  "schema": "wayuu-video-reference-inventory/v1",
+  "slug": "el-pequeno-indio-kosina",
+  "status": "direct_visual_review_complete_translation_to_v2_required",
+  "source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "entities": [
+    {
+      "entity_id": "kosina_joven",
+      "role": "primary",
+      "note": "Sigue huellas, toca, corre, escucha y comparte."
+    },
+    {
+      "entity_id": "madre_kosina",
+      "role": "secondary",
+      "note": "Situa la vida inicial y recibe el cambio final."
+    },
+    {
+      "entity_id": "caballo_kosina",
+      "role": "primary",
+      "note": "Cambia de tamaño, habla y fija condiciones."
+    },
+    {
+      "entity_id": "hermano_caballo_kosina",
+      "role": "secondary",
+      "note": "Se entrega al aliado como don."
+    },
+    {
+      "entity_id": "familia_caballos_kosina",
+      "role": "secondary",
+      "note": "Madre y hermanos forman el rebaño final."
+    },
+    {
+      "entity_id": "aliado_rico_kosina",
+      "role": "secondary",
+      "note": "Reconoce parentesco y recibe un caballo."
+    },
+    {
+      "entity_id": "indigenas_ricos_camino_kosina",
+      "role": "secondary",
+      "note": "Comparten alimento durante la segunda salida de caza."
+    },
+    {
+      "entity_id": "duenos_caballos_kosina",
+      "role": "secondary",
+      "note": "Quieren comprar o destruir al caballo."
+    },
+    {
+      "entity_id": "jefe_fiesta_kosina",
+      "role": "secondary",
+      "note": "Dirige la hospitalidad de la fiesta."
+    },
+    {
+      "entity_id": "lagartijas_kosina",
+      "role": "secondary",
+      "note": "Caza menor de la vida inicial."
+    },
+    {
+      "entity_id": "burros_camino_kosina",
+      "role": "secondary",
+      "note": "Reciben el trupillo cocido descartado."
+    },
+    {
+      "entity_id": "trupillo",
+      "role": "plot_object",
+      "note": "Alimento de la etapa inicial."
+    },
+    {
+      "entity_id": "patilla",
+      "role": "plot_object",
+      "note": "Cultivo de la roza."
+    },
+    {
+      "entity_id": "ahuyama",
+      "role": "plot_object",
+      "note": "Cultivo de la roza."
+    },
+    {
+      "entity_id": "frijol_roza_kosina",
+      "role": "plot_object",
+      "note": "Cultivo pisoteado que inicia la busqueda."
+    },
+    {
+      "entity_id": "trupillo_sancochado_kosina",
+      "role": "plot_object",
+      "note": "Alimento preparado por la madre y llevado a cazar."
+    },
+    {
+      "entity_id": "arco_flechas",
+      "role": "plot_object",
+      "note": "Herramienta explicita de la caza de lagartijas."
+    },
+    {
+      "entity_id": "faja_captura_kosina",
+      "role": "plot_object",
+      "note": "Permite sujetar al caballo reducido sin atribuir una tipologia cultural no demostrada."
+    },
+    {
+      "entity_id": "manea_caballo_kosina",
+      "role": "plot_object",
+      "note": "Sujeta al caballo antes de entrar a la fiesta."
+    },
+    {
+      "entity_id": "tambor_carreras_kosina",
+      "role": "plot_object",
+      "note": "Instrumento de participacion en la fiesta."
+    },
+    {
+      "entity_id": "huellas_caballo_kosina",
+      "role": "magic_subject",
+      "note": "Menguan mientras el caballo cambia de escala."
+    },
+    {
+      "entity_id": "roza_kosina",
+      "role": "setting",
+      "note": "Parcela dañada que inicia la persecucion."
+    },
+    {
+      "entity_id": "vivienda_kosina",
+      "role": "setting",
+      "note": "Casa no descrita del protagonista y su madre."
+    },
+    {
+      "entity_id": "pista_carreras_kosina",
+      "role": "setting",
+      "note": "Lugar de reconocimiento, carrera y envidia."
+    },
+    {
+      "entity_id": "corral_caballos_kosina",
+      "role": "setting",
+      "note": "Aloja el rebaño durante el dia."
+    },
+    {
+      "entity_id": "abertura_subterranea_caballo",
+      "role": "setting",
+      "note": "Lugar del retorno del animal."
+    },
+    {
+      "entity_id": "territorio_alta_guajira",
+      "role": "setting",
+      "note": "Marco historico de caballos y cultivos."
+    }
+  ],
+  "models": [
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "entity_refs": [
+        "territorio_alta_guajira"
+      ],
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Costa, lomas estratificadas, vegetacion baja y amplios planos. Retener gama ocre/azul; no copiar costa a escenas interiores ni textura granular."
+    },
+    {
+      "model_id": "trupillo__botanical_sheet",
+      "entity_refs": [
+        "trupillo"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/trupillo__botanical_sheet--canon.jpeg",
+      "sha256": "5235c64ae58510f8a0be14484bb20cd8d10e6ba7f9c4e27f43947b5bbb959577",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Hojas pequenas compuestas y vainas alargadas; tronco y suelo demasiado realistas. Traducir ramas a tiras y follaje a recortes."
+    },
+    {
+      "model_id": "arco_flechas__object_sheet",
+      "entity_refs": [
+        "arco_flechas"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/arco_flechas__object_sheet--canon.jpeg",
+      "sha256": "f5c9963ee2b3f620fab20e2b2cebfb80ed4b6673b20373ac840f8c08bdbc8686",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Arco curvo con cuerda, flechas y estuche. Usar solo arco bajado donde corresponde, no mano suelta de ficha ni estuche agregado por rutina."
+    },
+    {
+      "model_id": "kosina_joven__identity_sheet",
+      "entity_refs": [
+        "kosina_joven"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/kosina_joven__identity_sheet--canon.jpeg",
+      "sha256": "8e58bd8de1f807fb01b969e2c9609668eb06a5ae1f6b2fc36c2d5639b8c4fe3c",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Camisa azul, faja oxido, envolvente marron, perneras claras y sandalias. Conservar identidad; rechazar modelado facial y terreno realista."
+    },
+    {
+      "model_id": "kosina_joven__state_sheet",
+      "entity_refs": [
+        "kosina_joven"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/kosina_joven__state_sheet--estados.jpeg",
+      "sha256": "597cfd3d5dae6f6ee741ad65ea5d3764ee0150fb2a233085333a40b7937a0c38",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Tres estados del mismo joven; camisa azul, envolvente marron, perneras claras. Tambor mas profundo que ficha de objeto: para video manda cilindro bajo de objeto."
+    },
+    {
+      "model_id": "madre_kosina__identity_sheet",
+      "entity_refs": [
+        "madre_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/madre_kosina__identity_sheet--canon.jpeg",
+      "sha256": "f4d0230991f91e380b774af8c079c865746338d83d2fa0653faeb430319b700f",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Blusa arena, falda azul larga, delantal y panuelo crema. Traducir a silueta plana sin volumen de piel."
+    },
+    {
+      "model_id": "caballo_kosina__identity_sheet",
+      "entity_refs": [
+        "caballo_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/caballo_kosina__identity_sheet--canon.jpeg",
+      "sha256": "11ff60546baea2fd10f753b8e49ab77b31d9b34d976a9847509a0025ad146e18",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Crema con mancha oxido sobre hombro visible, crin y cola de tiras marrones. Sin alas. Rechazar cuerpo escultorico y suelo fotografico."
+    },
+    {
+      "model_id": "caballo_kosina__state_sheet",
+      "entity_refs": [
+        "caballo_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/caballo_kosina__state_sheet--estados.jpeg",
+      "sha256": "a1cea4dcc3d52d6499dececd5bfeff267f1d93267302124d642947d9f7f1b7b9",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Estados grande, potro pequeno y vigoroso son momentos distintos del mismo animal, no tres individuos. Material del terreno no admisible para video."
+    },
+    {
+      "model_id": "hermano_caballo_kosina__identity_sheet",
+      "entity_refs": [
+        "hermano_caballo_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/hermano_caballo_kosina__identity_sheet--canon.jpeg",
+      "sha256": "194548000ca64e9d5dff05b68516ef401055499b9b73e8a8468173e5e9ecf3c4",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Pelaje ocre, crin oscura, marca clara frontal y extremos claros en patas; distinto del caballo principal. Traducir volumen a laminas."
+    },
+    {
+      "model_id": "familia_caballos_kosina__group_grammar",
+      "entity_refs": [
+        "familia_caballos_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/familia_caballos_kosina__group_grammar--canon.jpeg",
+      "sha256": "6cb7aa3495633379080d15eaf6f31121c60441ba61847fab1718ada0d5479c2e",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Diversidad cromatica gris, castano y arena, crines oscuras. Tres ejemplares de ficha no fijan numero narrativo del rebano ni identifican automaticamente la madre."
+    },
+    {
+      "model_id": "aliado_rico_kosina__identity_sheet",
+      "entity_refs": [
+        "aliado_rico_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/aliado_rico_kosina__identity_sheet--canon.jpeg",
+      "sha256": "0a1d6f42e05230eb1000519820abf438bb354e6a5800c0058192f965c63fb7f7",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Camisa crema, chaleco ciruela, pantalon azul, faja ocre y sombrero claro. Rostro facetado no sirve de ancla material."
+    },
+    {
+      "model_id": "indigenas_ricos_camino_kosina__group_grammar",
+      "entity_refs": [
+        "indigenas_ricos_camino_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/indigenas_ricos_camino_kosina__group_grammar--canon.jpeg",
+      "sha256": "7ced25ad21f7f3f2667938ba18488864ce7e989edea624d8771a76c44f01f0b2",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Tres viajeros con prendas mostaza, verde y azul/oxido. Conservar diversidad de conjuntos; no caras facetadas ni duplicar al propio Kosina."
+    },
+    {
+      "model_id": "duenos_caballos_kosina__group_grammar",
+      "entity_refs": [
+        "duenos_caballos_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/duenos_caballos_kosina__group_grammar--canon.jpeg",
+      "sha256": "c3293b2b73baf56440e78e261c832034697a1f116a1b85feef95c46db228bb4f",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Cuatro personas y dos caballos de ficha; figura de chaleco ciruela se parece al aliado. Reservar chaleco ciruela con sombrero al aliado; rivales usan otras combinaciones. Ficha no fija cantidad de carrera."
+    },
+    {
+      "model_id": "jefe_fiesta_kosina__identity_sheet",
+      "entity_refs": [
+        "jefe_fiesta_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/jefe_fiesta_kosina__identity_sheet--canon.jpeg",
+      "sha256": "ff4d8b6c312e672e96c46c065d3205b24c440db60dace07183d0636aa23e29a7",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Adulto mayor cabello gris, abrigo verde salvia, camisa crema, pantalon oxido, faja azul y sombrero. Distinto del aliado joven ciruela; aplanar cara y manos."
+    },
+    {
+      "model_id": "lagartijas_kosina__group_grammar",
+      "entity_refs": [
+        "lagartijas_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/lagartijas_kosina__group_grammar--canon.jpeg",
+      "sha256": "7f4197f4a90212607b074998edb678786b59a2420e7e192ed3b847e0bda0732f",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Cuerpos alargados gris oliva, cuatro patas, cola fina. No copiar microescamas volumetricas ni cantidad de ejemplares como dato del relato."
+    },
+    {
+      "model_id": "burros_camino_kosina__group_grammar",
+      "entity_refs": [
+        "burros_camino_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/burros_camino_kosina__group_grammar--canon.jpeg",
+      "sha256": "dfe3556261861944b42c7ea95ef3020dacb6adbc707cf975bb5c824904db71ed",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Orejas largas, hocico claro, crin corta, marron/gris/crema; contrastar con caballos. No piel peluda ni pezuña hendida."
+    },
+    {
+      "model_id": "patilla__botanical_sheet",
+      "entity_refs": [
+        "patilla"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/patilla__botanical_sheet--canon.jpeg",
+      "sha256": "199c12b131ac104832b6ac1e7359952464bcc00582c9034b3036f369cdcdfad7",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Hojas lobuladas, fruto verde a bandas, flor amarilla; rodaja roja es ficha botanica, no fruto cortado obligatorio en roza."
+    },
+    {
+      "model_id": "ahuyama__botanical_sheet",
+      "entity_refs": [
+        "ahuyama"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/ahuyama__botanical_sheet--canon.jpeg",
+      "sha256": "b8931509b237a056c88ad404fb83f0f6e7519d3431b44f3f11b7fc2ec6cc0303",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Hojas anchas, fruto acanalado verde/ocre, flores amarillas en copa. Evitar copiar acabado de fotografia de cultivo."
+    },
+    {
+      "model_id": "frijol_roza_kosina__botanical_sheet",
+      "entity_refs": [
+        "frijol_roza_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/frijol_roza_kosina__botanical_sheet--canon.jpeg",
+      "sha256": "570951bc4225ef2c8e91de2d1de026b365df384b32a8430b6c7f750d50acc30a",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Hojas en grupos, vainas alargadas, tutores; conservar forma sin semillas gigantes ni postes reales."
+    },
+    {
+      "model_id": "trupillo_sancochado_kosina__object_sheet",
+      "entity_refs": [
+        "trupillo_sancochado_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/trupillo_sancochado_kosina__object_sheet--canon.jpeg",
+      "sha256": "9ee001f059538ad96481ab83b776253a1aaf48f81087d422bacdf8dd4acfca34",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Cuenco claro con vainas pardas, cuchara aparte. No inferir receta exacta del render. Mantener cuenco ensamblado con borde delgado y alimento de recortes mates."
+    },
+    {
+      "model_id": "faja_captura_kosina__object_sheet",
+      "entity_refs": [
+        "faja_captura_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/faja_captura_kosina__object_sheet--canon.jpeg",
+      "sha256": "8166b3fd6b5bd2d6c08ef6b2abf2f05508502bec2a58ca480d8511c137a5b32e",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Banda lisa oxido en tres disposiciones, no tres bandas reales. Sin tejido clanil ni arena fotografica."
+    },
+    {
+      "model_id": "manea_caballo_kosina__object_sheet",
+      "entity_refs": [
+        "manea_caballo_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/manea_caballo_kosina__object_sheet--canon.jpeg",
+      "sha256": "c5cf660d3a7e6d5f3d3db9a7ab88498335fa8ccff66a898a5da663b3a5c48952",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Dos lazos unidos por tramo corto. Convertir fibra a tiras mate; columnas son soporte demostrativo no objeto de escena."
+    },
+    {
+      "model_id": "tambor_carreras_kosina__object_sheet",
+      "entity_refs": [
+        "tambor_carreras_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/tambor_carreras_kosina__object_sheet--canon.jpeg",
+      "sha256": "a2184dbd2ce38984a33dc0e179de0d28535c79488068d1cb145122e51f12674c",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Cilindro bajo marron con parche crema y amarres verticales, diametro cercano al doble de altura. Una unidad por escena; sin manos sueltas de ficha."
+    },
+    {
+      "model_id": "huellas_caballo_kosina__phenomenon_rule",
+      "entity_refs": [
+        "huellas_caballo_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/huellas_caballo_kosina__phenomenon_rule--canon.jpeg",
+      "sha256": "d218496c4b35524c58db94a862f16a060493fd581d12bb9ef4906b4a5357b13a",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Rechazar anatomia de huellas partidas en dos. Solo inspira secuencia menguante; video exige casco equino unico."
+    },
+    {
+      "model_id": "roza_kosina__spatial_model",
+      "entity_refs": [
+        "roza_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/roza_kosina__spatial_model--canon.jpeg",
+      "sha256": "68fe161a3f507e9afcf5b474995df05b4d6064447c3583987d82a419e2d58765",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Parcela con cultivos bajos y tutores atras. Suelo, ramas y casa lejana realistas no se trasladan; vivienda del modelo propio solo cuando inventariada."
+    },
+    {
+      "model_id": "vivienda_kosina__spatial_model",
+      "entity_refs": [
+        "vivienda_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/vivienda_kosina__spatial_model--canon.jpeg",
+      "sha256": "0c1400b11f0c353f2fd94d2803387610b5c08b6d2cc54e93d4e5461884a9bcb7",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Casa rectangular techo a dos aguas con prolongacion lateral baja, entrada oscura y cerramiento tramado. Traducir tramas a tiras espaciadas y muros a hojas, no barro o paja real."
+    },
+    {
+      "model_id": "pista_carreras_kosina__spatial_model",
+      "entity_refs": [
+        "pista_carreras_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/pista_carreras_kosina__spatial_model--canon.jpeg",
+      "sha256": "b005d97a67ab34eb23b2e9a179f4529f083555423dbc4ee64ffb64b0526683d9",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Franja de carrera, enramada lateral, pequenos postes y corrales de espera. No infraestructura deportiva moderna ni copiar todos los corrales si no entran en plano."
+    },
+    {
+      "model_id": "corral_caballos_kosina__spatial_model",
+      "entity_refs": [
+        "corral_caballos_kosina"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/corral_caballos_kosina__spatial_model--canon.jpeg",
+      "sha256": "73708359584589efafcfdef75f8e234c16f26266953a3bf4e49abbccbcecd406",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Cerramiento redondo, entrada frontal y sombras interiores. No copiar cuatro cobertizos como numero narrativo; simplificar utileria no necesaria. Casa redonda del fondo no reemplaza casa propia rectangular."
+    },
+    {
+      "model_id": "abertura_subterranea_caballo__spatial_model",
+      "entity_refs": [
+        "abertura_subterranea_caballo"
+      ],
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/abertura_subterranea_caballo__spatial_model--canon.jpeg",
+      "sha256": "eb312da43e0c37b5e92748c350f3541a8e5046d042f93689dfad56c901e96ad9",
+      "file_hash_verified": true,
+      "original_reviewed_for_video": true,
+      "review": "Capas rasgadas concentricas, tiras de raices y sendero conectado. Retener material estratificado, evitar realismo granular y paredes sin aire."
+    }
+  ],
+  "excluded_related_models": [
+    {
+      "model_id": "patilla__state_sheet",
+      "reason": "Estados producidos para El viaje del mas alla; no trasladar transformaciones de otro mito."
+    },
+    {
+      "model_id": "ahuyama__state_sheet",
+      "reason": "Estados producidos para El viaje del mas alla; no trasladar transformaciones de otro mito."
+    }
+  ],
+  "counts": {
+    "story_entities": 27,
+    "selected_existing_models": 29,
+    "hashes_verified": 29,
+    "originals_reviewed": 29,
+    "new_images": 0
+  },
+  "generation_input_images": []
+}

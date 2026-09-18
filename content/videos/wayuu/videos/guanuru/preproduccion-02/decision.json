@@ -1,0 +1,44 @@
+{
+  "schema": "wayuu-anchor-correction/v1",
+  "slug": "guanuru",
+  "version": "preproduccion-02",
+  "source_plan": "content/videos/wayuu/videos/guanuru/preproduccion-01/plan.json",
+  "source_batch": "output/imagegen/wayuu/keyframes/guanuru-preproduccion-01-anclas",
+  "status": "prepared_not_generated",
+  "preserve": [
+    "b1b",
+    "b10b"
+  ],
+  "correct": [
+    "b2a",
+    "b3a",
+    "b5b"
+  ],
+  "decisions": {
+    "b2a": [
+      "remove_agave_rosettes",
+      "remove_star_dots",
+      "preserve_butterfly_shadow_and_four_people"
+    ],
+    "b3a": [
+      "remove_star_dots",
+      "restore_exact_deceased_relative_clothing",
+      "preserve_dream_threshold"
+    ],
+    "b5b": [
+      "restore_patient_to_same_hammock",
+      "remove_agave_rosettes_and_star_dots",
+      "preserve_three_separate_nonbodied_phenomena"
+    ]
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "no_reference_uploads": true
+}
+

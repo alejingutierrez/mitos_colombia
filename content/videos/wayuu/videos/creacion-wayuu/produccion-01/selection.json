@@ -1,0 +1,190 @@
+{
+  "schema": "wayuu-video-keyframe-selection/v1",
+  "slug": "creacion-wayuu",
+  "status": "script_and_keyframes_complete_editorial_selection_with_notes",
+  "selected_at": "2026-09-07",
+  "plan": "content/videos/wayuu/videos/creacion-wayuu/preproduccion-01/plan.json",
+  "freeze": "content/videos/wayuu/videos/creacion-wayuu/preproduccion-01/prepared-01/freeze.json",
+  "quality": "medium",
+  "generation_mode": "openai_official_imagegen_cli_text_only",
+  "source_verified_live": {
+    "method": "Neon read-only myths.content SHA-256",
+    "date": "2026-09-07",
+    "matches": true,
+    "sha256": "8e39659bf2e7796d5f813cd744fdceb278176576c5d9d3c1feb76db182075b8f"
+  },
+  "counts": {
+    "storyboard_instants": 16,
+    "selected": 16,
+    "prior_pilot_generations": 0,
+    "new_base_generations": 16,
+    "new_correction_generations": 1,
+    "total_successful_generations": 17,
+    "superseded_not_deleted": 1,
+    "new_images_this_goal": 17
+  },
+  "style_review": {
+    "contract": "content/videos/wayuu/channel-dna.v2.json",
+    "anchors": [
+      "b1b",
+      "b4a",
+      "b7a"
+    ],
+    "comparison": [
+      "b1b",
+      "b4b",
+      "b6b",
+      "b7b",
+      "b8a",
+      "b8b"
+    ],
+    "method": "Direct visual inspection of all originals and start-middle-end material comparison; not automatic certification.",
+    "result": "Consistent cut-paper ground, faces, vegetation, magic and separated layers; minor prop and costume variation recorded per shot."
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b1a.jpeg",
+      "sha256": "c06eb059907c6137ff266eac2328567d4a71bd7fc7f930e7dbf79b29ba9ced65",
+      "reviewed": true,
+      "notes": [
+        "Suelo amplio de hojas superpuestas y semillas bajo un pliegue: material inequívoco. La nube ya deja ver lluvia distante, sin mojar el primer término."
+      ]
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b1b.jpeg",
+      "sha256": "a94c747eb57a4e8073cb651a3f514b25c3aa614ab5d4ee1a8219199e2ee0af27",
+      "reviewed": true,
+      "notes": [
+        "Ancla material: lluvia de tiras finas, nube estratificada y brote de hojas en la zona mojada; se compara el resto de la secuencia con este plano."
+      ]
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b2a.jpeg",
+      "sha256": "689a0cb89702e628e7386d58b4c85125037bb5efccc9eb22ebc3d8891c6d28f6",
+      "reviewed": true,
+      "notes": [
+        "Mar y costa de láminas enrolladas y recortes. La retirada del agua se lee sin personificar a Mareiwa."
+      ]
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b2b.jpeg",
+      "sha256": "c28aa0067d30f8815dd11227a86d9f2ddce1f78ac917b218c7d1e7b89a83a7be",
+      "reviewed": true,
+      "notes": [
+        "Tres aves y frutos legibles; la morfología de la pava está simplificada y no constituye ilustración zoológica certificada. Plumaje y plantas conservan recortes."
+      ]
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b3a.jpeg",
+      "sha256": "589e54779dd97ac1d06fa958c9bdd263a762402212fa1859ae98089ce97965ca",
+      "reviewed": true,
+      "notes": [
+        "Siembra por aves y anticipación vegetal legibles. Algunas siluetas vegetales bajo las semillas se leen como motivos planos más que sombras físicamente conectadas; no dar por logrado cada detalle del prompt."
+      ]
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b3b.jpeg",
+      "sha256": "96ed472aeff08ca96f752287ed725062a6ce07c3ab4fb1f48287e99d8cf77c79",
+      "reviewed": true,
+      "notes": [
+        "Cardones, tunas, frutos y aves conservan materia de papel. Follaje y aves simplificados; no convertir cada forma generada en referencia botánica o zoológica."
+      ]
+    },
+    {
+      "id": "b4a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b4a.jpeg",
+      "sha256": "4da60a9abac7c35e059ff3829b366d134073b355ea7d2949dabb629ae5a3783d",
+      "reviewed": true,
+      "notes": [
+        "Seis figuras distintas emergen de la cavidad de capas; disposición más alineada que los tres pares previstos. Plantas de abanico simplificadas. Papel mantenido en caras, suelo y cavidad."
+      ]
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b4b.jpeg",
+      "sha256": "61d6bd69dfb99c8a2f6dbb05810555fb5095973ce83e724bafd3812c05fd82dd",
+      "reviewed": true,
+      "notes": [
+        "Seis personas organizadas en pares, caras planas y vestuario por láminas. Cavidad profunda sin marco de maqueta externo. Se conserva el contraste de escalas con b4a."
+      ]
+    },
+    {
+      "id": "b5a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b5a.jpeg",
+      "sha256": "dd7a23f0d962af0e369ebbe489a3761844f47992176fc1c4ae00238ab73a8b04",
+      "reviewed": true,
+      "notes": [
+        "Seis personas y rocas sin emblemas inventados. Camino levantado materializa la apertura. Las agrupaciones cambian frente a b4b, sin que el guion asigne parentescos específicos a los pares."
+      ]
+    },
+    {
+      "id": "b5b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b5b.jpeg",
+      "sha256": "34be939c45fced887906e3892f673fe7b6852c440d2e7423225c4b4e4c7b9aa6",
+      "reviewed": true,
+      "notes": [
+        "Seis personas y tres animales pequeños; recorridos en profundidad, aunque la marcha converge visualmente hacia la derecha más que tres rumbos contrapuestos. No atribuir identidad de clan a cada pareja."
+      ]
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b6a.jpeg",
+      "sha256": "b30666c9acec3daf674fd4f73832a86d78f90e38072a02337e62bdf8b5d17ea3",
+      "reviewed": true,
+      "notes": [
+        "Dos adultos escuchándose, rostros de recorte y suelo estratificado. El cuenco tiene volumen más liso que los demás elementos; detalle a vigilar, sin pérdida general de papercut."
+      ]
+    },
+    {
+      "id": "b6b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b6b.jpeg",
+      "sha256": "e1c2f9fc10d28b503230cfa7f375b5c9914719e0e89b7d5f44cee68633ceceef",
+      "reviewed": true,
+      "notes": [
+        "Mujer violeta y niño junto a semillas; una semilla anticipa sombra de planta. Pliegues de manta, suelo, cactus y caras conservan papel. Peinado trenzado varía respecto de tomas anteriores."
+      ]
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-corrections-01/b7a.jpeg",
+      "sha256": "6c09e9de4c83fdce0f83cc739a7be27343240901729045071d8b5fca689c9569",
+      "reviewed": true,
+      "notes": [
+        "Versión corregida: camino ámbar conecta el fogón cercano con el intermedio, a través de capas nocturnas. Figuras familiares diminutas añadidas en otros hogares no se toman como nuevos personajes canónicos. Original conservado."
+      ]
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b7b.jpeg",
+      "sha256": "7db7f185c3be687d82f4621c39741601b4ff6689a1b92a13149ddf664d138663",
+      "reviewed": true,
+      "notes": [
+        "Cuatro adultos alrededor de fuego de recortes; se mantiene el mismo lenguaje material aun con luz nocturna, sin piel ni suelo fotorealistas."
+      ]
+    },
+    {
+      "id": "b8a",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b8a.jpeg",
+      "sha256": "0f6ecbac88983c1587e2fa7c57a5de7aa71ef05661e5aacbb6d68e0bd40523bd",
+      "reviewed": true,
+      "notes": [
+        "Comparado directamente con b1b: lluvia de tiras, nube plana estratificada y suelo de hojas abiertas permanecen. Semillas protegidas en primer término."
+      ]
+    },
+    {
+      "id": "b8b",
+      "path": "output/imagegen/wayuu/keyframes/creacion-wayuu-preproduccion-01/b8b.jpeg",
+      "sha256": "1d17a17af65ef9ccab21fe5b6506061b4e5f2f0fdccc2b73f7dba5d3f29ac701",
+      "reviewed": true,
+      "notes": [
+        "Cierre mantiene suelo, vegetación, ropa y caras de papel; semilla con sombra de árbol por venir. Sombrero de la mujer violeta adquiere copa más puntiaguda: desajuste de continuidad registrado, no adoptado como diseño cultural canónico."
+      ]
+    }
+  ]
+}

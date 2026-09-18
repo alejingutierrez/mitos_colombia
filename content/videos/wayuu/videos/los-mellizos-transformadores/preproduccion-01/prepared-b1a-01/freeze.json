@@ -1,0 +1,93 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:08:06.655Z",
+  "plan": "content/videos/wayuu/videos/los-mellizos-transformadores/preproduccion-01/plan.json",
+  "plan_sha256": "afeab6166661bcaeeaf48fe60150b9883c8d8d82b39ae3f60901d062810c37ee",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 195,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 19,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/los-mellizos-transformadores/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "b3ae9516fefdf599d97451003f10aace0d930041ab8c2796699cfde0e27552ae",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-02-entrada/entrada.jpeg",
+          "sha256": "862d09db149c6663d5ede79fe9962eaea4618a33f756a939d637ef1917894955",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+        },
+        {
+          "kind": "triptych",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/acto.jpeg",
+          "sha256": "e4ec2ef2e2c019f4e6cc6559bd85d73f2330d9ce7853d22f6d2523000ce84309",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__identity_sheet--canon.jpeg",
+          "sha256": "0eece7173489a4db1206455980713ca33eb96a48ec5e2f7444d687b1fe79ebeb",
+          "approved": true,
+          "role": "Fijar el modelo canónico manna__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+          "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9",
+          "approved": true,
+          "role": "Fijar el modelo canónico manna__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+          "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc",
+          "approved": true,
+          "role": "Fijar el modelo canónico costa_mar_guajira__environment_model; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

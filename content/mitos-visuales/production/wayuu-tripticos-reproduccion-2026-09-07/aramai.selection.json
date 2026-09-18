@@ -1,0 +1,58 @@
+{
+  "schema": "mitos-triptych-review-selection/v1",
+  "date": "2026-09-07",
+  "myth": "aramai",
+  "status": "candidate_for_user_review",
+  "user_approved": false,
+  "published": false,
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-02/entrada.jpeg",
+      "sha256": "87fff4b7ff18af2f267c63778dab603290fcfc3606e46a6096ea976a4c04d9b9",
+      "bytes": 252612,
+      "prompt_sha256": "a46215bdca95e0f0133a67725171626148a89eb4f4f4977985516b54379bcd39",
+      "prompt_hash_matches": true,
+      "plan_hash_matches": true,
+      "size": "1536x864",
+      "quality": "high",
+      "metadata": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-02/entrada.jpeg\n  pixelWidth: 1536\n  pixelHeight: 864\n  format: jpeg\n"
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/acto.jpeg",
+      "sha256": "56888000526273816bb257fe04125ffef82c3b5910fbcf4d3c8b96e1c268a39f",
+      "bytes": 267590,
+      "prompt_hash_matches": true,
+      "metadata": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/acto.jpeg\n  pixelWidth: 864\n  pixelHeight: 1536\n  format: jpeg\n",
+      "size": "864x1536",
+      "quality": "medium"
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/huella.jpeg",
+      "sha256": "89150475616c5bcf6a1a31afc88245a5242e15da895dd889a899968ebf119d05",
+      "bytes": 199992,
+      "prompt_hash_matches": true,
+      "metadata": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/huella.jpeg\n  pixelWidth: 1024\n  pixelHeight: 1024\n  format: jpeg\n",
+      "size": "1024x1024",
+      "quality": "medium"
+    }
+  ],
+  "iterations": {
+    "total_generations_this_reproduction": 4,
+    "selected_images": 3,
+    "retained_alternates": 1,
+    "per_act": {
+      "entrada": 2,
+      "acto": 1,
+      "huella": 1
+    },
+    "new_keyframes": 0
+  },
+  "qa": [
+    "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-17-rich-01/qa.json",
+    "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-17-rich-02/qa.json"
+  ],
+  "originals_preserved": true
+}

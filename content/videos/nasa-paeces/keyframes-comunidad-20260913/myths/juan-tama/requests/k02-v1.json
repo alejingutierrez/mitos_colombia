@@ -1,0 +1,28 @@
+{
+  "slug": "juan-tama",
+  "id": "k02",
+  "version": 1,
+  "created_at": "2026-09-13T22:16:12.543Z",
+  "plan_sha256": "0d7c0b9f42c20b9afe8abcd88443fec3d04d8dfa09caec14159c2ea1b1720aeb",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/juan-tama/prompts/k02-v1.txt",
+  "prompt_sha256": "a97501cccfb9283dc72aae8a1389b3cd4c9e0f602c28b8456d88e5d579955673",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/juan-tama/k01-v2.png",
+      "sha256": "b4a15437c146e6fd18fe96f821ab04dd4932f318b07a2b41f9de40ef67e15720",
+      "role": "Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Juan Tama de la Estrella. Frame k02.\n\nREFERENCE ROLES:\nImage 1: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 2: Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nMedio posterior: ambos se acercan al agua con postura atenta, sin niño aún ni ofrendas inventadas.\n\nVISIBLE CONTENT RULE: The exact new shot above is the complete inventory for this one image. Later events, other characters and other props of the myth are absent unless explicitly named in this shot.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Medio posterior: ambos se acercan al agua con postura atenta, sin niño aún ni ofrendas inventadas.\n\n\nSame TWO elders from previous frame, empty handed, viewed from behind walking slowly to the shore. NO BABY, swaddle, bundle or offering; no third person.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/juan-tama/k01-v2.png"
+    ]
+  }
+}

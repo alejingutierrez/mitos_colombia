@@ -1,0 +1,97 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "el-indio-guerrero-ipuana",
+  "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+  "status": "QA_PASS_AFTER_CORRECTION",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/el-indio-guerrero-ipuana-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "a5a837ce4bf5ea58a3f975082a7f269e353847a146cb0bd190c1b2df3d2e7fc5",
+  "batch_models": 6,
+  "selected_models": 6,
+  "pilot_models_for_myth": [
+    "cardon_iguaraya__botanical_sheet",
+    "rancheria_wayuu__spatial_model",
+    "territorio_alta_guajira__environment_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 9,
+    "required": 9,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 42,
+    "required_models": 265,
+    "remaining_models": 223
+  },
+  "selections": {
+    "guerrero_ipuana__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/guerrero_ipuana__identity_sheet--canon.jpeg",
+      "sha256": "984400dc8b0853635c58ffa32b48593c791798d8415ab413db8b1318a419de84"
+    },
+    "guerrero_ipuana__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/guerrero_ipuana__state_sheet--estados.jpeg",
+      "sha256": "0fae408719123121320e50c8746fb96fc2a8096a57f2c5ffc89680b657a5f35b"
+    },
+    "hijo_guerrero_ipuana__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/hijo_guerrero_ipuana__identity_sheet--canon.jpeg",
+      "sha256": "3fdea4cbbc49d2cb77e64a26fbfc75a7c5051fb4fc4ea85580b45052eaa38b63"
+    },
+    "hijo_guerrero_ipuana__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/hijo_guerrero_ipuana__state_sheet--estados.jpeg",
+      "sha256": "8c0f37beb331cb0e9255b5321d52528dba3ddec92b95e9a202ab65eaf1534a71"
+    },
+    "majayura_sueno_ipuana__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/majayura_sueno_ipuana__identity_sheet--canon.jpeg",
+      "sha256": "23f0ccfb9372b333ad8f1aa6d22982eff1d723e6c68eb572b505d5942c204d8a"
+    },
+    "arco_flechas__object_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/arco_flechas__object_sheet--canon.jpeg",
+      "sha256": "f5c9963ee2b3f620fab20e2b2cebfb80ed4b6673b20373ac840f8c08bdbc8686"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "guerrero_ipuana__identity_sheet",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+      "reason": "REJECTED_IDENTITY_CONTINUITY_SLEEVE_LENGTH",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/guerrero_ipuana__identity_sheet--canon.jpeg",
+      "sha256": "e8363a8c45c727583ea5bebb91f600e9d07ef0d2de533dab7bfd70376397c05b"
+    },
+    {
+      "model_id": "guerrero_ipuana__state_sheet",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+      "reason": "REJECTED_INVENTED_GARMENT_FLECKS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/guerrero_ipuana__state_sheet--estados.jpeg",
+      "sha256": "d9c42a0af267049e55db2c1a4f9560a3283b0b312112f3ccd4330acd6d1a68d7"
+    },
+    {
+      "model_id": "hijo_guerrero_ipuana__state_sheet",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+      "reason": "REJECTED_INVENTED_DIAGONAL_SASH",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/hijo_guerrero_ipuana__state_sheet--estados.jpeg",
+      "sha256": "29e0c5336f6d74d9111eef2a867b7c6b005033f0c6ad200daa78909973eccf90"
+    },
+    {
+      "model_id": "arco_flechas__object_sheet",
+      "batch_id": "wayuu-v3-production-04-el-indio-guerrero-ipuana-medium",
+      "reason": "REJECTED_PHOTOGRAPHIC_HAND_ROCK_AND_GROUND",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium/arco_flechas__object_sheet--canon.jpeg",
+      "sha256": "44475df0ca0902bb3e6dc1a3adff727aa570c6cfa07904aaec14c60aa40c1fbd"
+    }
+  ]
+}

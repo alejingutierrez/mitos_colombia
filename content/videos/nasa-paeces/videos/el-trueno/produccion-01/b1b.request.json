@@ -1,0 +1,31 @@
+{
+  "id": "b1b",
+  "created_at": "2026-09-13T13:35:49.557Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create ONE finished cinematic vertical 9:16 narrative keyframe for the Nasa–Paeces film El Trueno, ideally 864x1536. No sheet, collage, border, lettering, title, captions, watermark or logo. Use the supplied images only for their stated continuity roles, never copy their sheet layout. Same world as the approved Nasa triptych: immersive Colombian highland CUT-PAPER scenery, matte broad flat faces, internal cut edges, folded rock, overlapping planes at three distances, physical occlusion and cast shadows. Figures have simplified almost-flat paper faces, not rounded clay dolls, CGI or photographic skin. Water, clouds and mist are flat cut-paper shapes too, never cotton or smoke. Frame extends edge to edge, no display base, table, studio or diorama box. Preserve precise age, clothing, hat, material and scale of the reference identities. Do not import objects, people or actions from preceding shots unless specifically listed below. No pan-Indigenous costumes, copied sacred patterns, gold, crowns, feathers, magical beams or invented ritual. Selected narrative: Martín Kuskue's first El Trueno account via Bernal 1953; the elder appearance is a declared editorial convention retained from the approved triptych, not claimed as wording of this version.\n\nSHOT b1b — Dos figuras en la noche\nWIDE HIGH OBLIQUE establishing view. Exactly TWO small full-body authorities, the green-shawl woman and blue-gray ruana man from acto/C02, walk along the dry left shore path toward the small dark lagoon in middle distance. Each carries ONE plain straight staff; exactly two staffs total. Woman leads left-to-right, man follows. Their feet are on ochre paper land, the water is clearly separated to their right. The two figures are less than one sixth of frame height. Tall near rock silhouette at left foreground, path and figures midground, confined lagoon and successive ridges background. No visible Trueno.\n\nINPUT REFERENCES IN ORDER:\n1. approved preceding keyframe b1a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n2. CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water\n3. CANONICAL C02: Autoridades de cabildo / cacicas",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/c02-master-v2.jpeg"
+    ]
+  },
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-v1.png",
+      "sha256": "e5d3ed157da76299a4e1bad81a04e466c715986033de727f66c0c36d6d471b0d",
+      "role": "approved preceding keyframe b1a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "role": "CANONICAL acto: selected triptych: two C02 authorities, dry shoreline, night water",
+      "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c02-master-v2.jpeg",
+      "sha256": "83fc70ce950b96d5f5bf31128e995d90e0aacf56e0485ed77e906609ccc0503d",
+      "role": "CANONICAL C02: Autoridades de cabildo / cacicas"
+    }
+  ],
+  "prompt_sha256": "180da0c2f46a9c71b31bcfe3a30e5d0b58979e0122219d6e5fbdcef3f38d3d1b"
+}

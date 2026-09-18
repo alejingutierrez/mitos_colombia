@@ -1,0 +1,147 @@
+{
+  "schema": "biblia-tanda-freeze/v1",
+  "comunidad": "chami",
+  "biblia": "v1",
+  "tanda": "04-animales-1",
+  "capa": "2 · animales y criaturas",
+  "fecha": "2026-09-17",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "size": "1024x1536",
+  "regla_invertida_del_pelaje": "En wayuu el refuerzo de animales pedía «cada pluma, cada escama, cada mechón como recorte independiente» y produjo papel maché: hubo que rehacer la tanda. Aquí la apertura pide lo contrario desde el principio — un cuerpo peludo son DOS O TRES piezas planas grandes con el borde recortado en dientes, un ala SEIS U OCHO formas.",
+  "decision_del_guatin": {
+    "estado": "RESUELTA",
+    "era": "consult_required en la matriz de evidencia",
+    "decision": "se dibuja como GUAGUA O PACA: cuerpo bajo y macizo, hocico romo, orejas pequeñas, sin cola, y cuatro hileras longitudinales de manchas blancas",
+    "razon": "las dos fuentes lo glosan así — Reichel escribe «Coelogynis paca» y Chaves «conejo de monte» — aunque el relato lo llame guatín, que en el español de Colombia designa al ñeque",
+    "declarado_en_ficha": true
+  },
+  "firmas_de_esta_tanda": {
+    "Hímo la iguana": "el último tercio de la cola ya es una hormiga: el castigo empezó por donde se arrastra",
+    "Horchíbarí": "el brazo izquierdo ya es un montón de brea mate; es humanoide, NO reptil",
+    "la ballena": "el costado abierto como solapa y dentro un mundo en miniatura con río, árboles, gente y aves, más el corazón con forma de ahuyama. Ninguna víscera.",
+    "el otro ser acuático": "el contorno no se puede fijar: cuatro o cinco siluetas desplazadas. La fuente no dice qué era y la lámina tampoco lo decide.",
+    "el pescado grande": "lleva las líneas de jagua en la mejilla y un ojo humano: es Karagabí",
+    "la lorita": "dos trazos de jagua en la nuca. Era la mujer de Karagabí; sin dramatismo.",
+    "el pájaro carpintero": "a su lado la guadua cortada limpiamente en dos: él cortó la escalera"
+  },
+  "sin_firma": [
+    "guatín",
+    "jaguar",
+    "oso",
+    "puma",
+    "nutria"
+  ],
+  "imagenes_generadas_total": 12,
+  "imagenes_conservadas": 12,
+  "fichas": [
+    {
+      "id": "t04-01-guatin",
+      "titulo": "El guatín (la guagua)",
+      "chars": 8716,
+      "sha256": "d573877543300bdfc50910e763c7d97ef2b02c2594b623cbde534fc96168f803",
+      "prompt_sha256": "d573877543300bdfc50910e763c7d97ef2b02c2594b623cbde534fc96168f803",
+      "imagen": "t04-01-guatin-v1.png",
+      "imagen_sha256": "16c6ac01bf4be4f2982e9764d3dea798f324e8b692c70925743d7d00707e42e3"
+    },
+    {
+      "id": "t04-02-jaguar",
+      "titulo": "El jaguar",
+      "chars": 8440,
+      "sha256": "221d07bfafc578af30aedfaff257596c8e719e38b9ae3bda7d88049fc994452f",
+      "prompt_sha256": "221d07bfafc578af30aedfaff257596c8e719e38b9ae3bda7d88049fc994452f",
+      "imagen": "t04-02-jaguar-v1.png",
+      "imagen_sha256": "051bd6d55b9b44be8ff8ffad01d649588d385ab5808370bec93cd0efa071cc4f"
+    },
+    {
+      "id": "t04-03-oso",
+      "titulo": "El oso",
+      "chars": 8365,
+      "sha256": "31fcf659afdcc6688ae9605adf657e1f04d90f83c5238d04e05bbc4c20eeef75",
+      "prompt_sha256": "31fcf659afdcc6688ae9605adf657e1f04d90f83c5238d04e05bbc4c20eeef75",
+      "imagen": "t04-03-oso-v1.png",
+      "imagen_sha256": "cc6788e700c613aebff6f81a85805dd78743e9539572c5769160478597fbdb2c"
+    },
+    {
+      "id": "t04-04-puma",
+      "titulo": "El puma",
+      "chars": 8288,
+      "sha256": "f2ad1c70c600a8d77c74e63499ac83999d2d62eb4b076882d69510213eaa2c76",
+      "prompt_sha256": "f2ad1c70c600a8d77c74e63499ac83999d2d62eb4b076882d69510213eaa2c76",
+      "imagen": "t04-04-puma-v1.png",
+      "imagen_sha256": "ac99ec68f7bed915eda8d7ab91b9cc6220a742ed6ac6ac906753d122b9122ae6"
+    },
+    {
+      "id": "t04-05-nutria",
+      "titulo": "La nutria",
+      "chars": 8308,
+      "sha256": "d61fd578172ad4c12164845741d7caaecfc5b05e792451faca21d00b5497360a",
+      "prompt_sha256": "d61fd578172ad4c12164845741d7caaecfc5b05e792451faca21d00b5497360a",
+      "imagen": "t04-05-nutria-v1.png",
+      "imagen_sha256": "94c18f12b9b8922b813c9d259299b06ce8816ca55c818de7ff2f569d4914bf43"
+    },
+    {
+      "id": "t04-06-himo-iguana",
+      "titulo": "Hímo, la iguana que tenía la candela",
+      "chars": 9380,
+      "sha256": "6d6886fd1d355245c59312693f5449596b497b394ee3e00eb25e57dc2b8a1b8c",
+      "prompt_sha256": "6d6886fd1d355245c59312693f5449596b497b394ee3e00eb25e57dc2b8a1b8c",
+      "imagen": "t04-06-himo-iguana-v1.png",
+      "imagen_sha256": "a98187ecc411acd04668354af30c89b47497f49fb932cf255d41a6ba5763d28a"
+    },
+    {
+      "id": "t04-07-horchibari",
+      "titulo": "Horchíbarí, el caníbal",
+      "chars": 11077,
+      "sha256": "adc8c78192354088147faa30a8697118a18b2ae60ff91cca2c48d7d8bb64f8a1",
+      "prompt_sha256": "adc8c78192354088147faa30a8697118a18b2ae60ff91cca2c48d7d8bb64f8a1",
+      "imagen": "t04-07-horchibari-v1.png",
+      "imagen_sha256": "b851ebf30052cd7e740cd0b44e860c19c5ffb08d1d7767cf76c9184c52817e47"
+    },
+    {
+      "id": "t04-08-ballena",
+      "titulo": "La gran ballena que come gente",
+      "chars": 9538,
+      "sha256": "381a259894f4301d71ec6d81893205e9a3deb90f06b79e0a3892db381c5bdcab",
+      "prompt_sha256": "381a259894f4301d71ec6d81893205e9a3deb90f06b79e0a3892db381c5bdcab",
+      "imagen": "t04-08-ballena-v1.png",
+      "imagen_sha256": "71dd42439063873558bf7ab3edd7215ff9f3e273c35409dfa4c75871629a1ff3"
+    },
+    {
+      "id": "t04-09-ser-acuatico",
+      "titulo": "El otro ser acuático",
+      "chars": 9376,
+      "sha256": "ef87c93844a887ef6e424b2a5c4fc89564b2d97c1f7a7cc8191118b55a9f1696",
+      "prompt_sha256": "ef87c93844a887ef6e424b2a5c4fc89564b2d97c1f7a7cc8191118b55a9f1696",
+      "imagen": "t04-09-ser-acuatico-v1.png",
+      "imagen_sha256": "960df08c4fe6b719c22246c964c10a4ea5148d4d3f7b594b955ce31255fe7d86"
+    },
+    {
+      "id": "t04-10-pescado-grande",
+      "titulo": "El pescado grande que es Karagabí",
+      "chars": 9385,
+      "sha256": "acf30debdd4051f07ba743f8461a280ebddd5e9126928567046212ce084bf34c",
+      "prompt_sha256": "acf30debdd4051f07ba743f8461a280ebddd5e9126928567046212ce084bf34c",
+      "imagen": "t04-10-pescado-grande-v1.png",
+      "imagen_sha256": "102a8e41261bd19baa939448bf7f3bc6357efb0ee4bf9eea1f42dd729697e81b"
+    },
+    {
+      "id": "t04-11-lorita",
+      "titulo": "La lorita",
+      "chars": 9306,
+      "sha256": "211223b713145b634f9fcc9bb7feabe7306f634dddaa40adf708bde4c796296a",
+      "prompt_sha256": "211223b713145b634f9fcc9bb7feabe7306f634dddaa40adf708bde4c796296a",
+      "imagen": "t04-11-lorita-v1.png",
+      "imagen_sha256": "c2966f4d0127d410b4db026d18fd9163da38a6b6fe74f1c92e255d32a9f95f27"
+    },
+    {
+      "id": "t04-12-pajaro-carpintero",
+      "titulo": "El pájaro carpintero",
+      "chars": 9363,
+      "sha256": "309bcb92bcc80b78d0c7b54163ba24fcdb01f414a67e7dd5b749926c6e775ad8",
+      "prompt_sha256": "309bcb92bcc80b78d0c7b54163ba24fcdb01f414a67e7dd5b749926c6e775ad8",
+      "imagen": "t04-12-pajaro-carpintero-v1.png",
+      "imagen_sha256": "8cdbcdfa2fea6071f47b5a6ec8f399180c9b0cd548ac317032503d382103ca15"
+    }
+  ]
+}

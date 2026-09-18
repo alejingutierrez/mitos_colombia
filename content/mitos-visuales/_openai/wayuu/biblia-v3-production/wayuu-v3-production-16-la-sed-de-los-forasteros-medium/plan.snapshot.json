@@ -1,0 +1,621 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium",
+    "myth_slug": "la-sed-da-los-civilizados",
+    "model_ids": [
+      "comerciante_alijuna_1__identity_sheet",
+      "comerciante_alijuna_1__state_sheet",
+      "comerciante_alijuna_2__identity_sheet",
+      "comerciante_alijuna_2__state_sheet",
+      "carga_panela__object_sheet",
+      "utta__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "designed_ready_for_preflight"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "comerciante_alijuna_1__identity_sheet",
+    "comerciante_alijuna_1__state_sheet",
+    "comerciante_alijuna_2__identity_sheet",
+    "comerciante_alijuna_2__state_sheet",
+    "carga_panela__object_sheet",
+    "utta__spatial_model"
+  ],
+  "models": {
+    "comerciante_alijuna_1__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "comerciante_alijuna_1"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Pierde fuerza y queda como forma petrea."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Primer comerciante alijuna. Funcion visual: Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Primer comerciante alijuna",
+          "funcion estable: Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+          "estados declarados: viajero, agotado, forma_petrea"
+        ],
+        "documented_features": [
+          "Viajero con panela que pierde fuerza y queda ligado a una forma petrea."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Primer comerciante alijuna. Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+          "estados autorizados: viajero, agotado, forma_petrea",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "viajero"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "comerciante_alijuna_1__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "comerciante_alijuna_1"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Pierde fuerza y queda como forma petrea."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Primer comerciante alijuna. Funcion visual: Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Primer comerciante alijuna",
+          "funcion estable: Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+          "estados declarados: viajero, agotado, forma_petrea"
+        ],
+        "documented_features": [
+          "Viajero con panela que pierde fuerza y queda ligado a una forma petrea."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Primer comerciante alijuna. Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+          "estados autorizados: viajero, agotado, forma_petrea",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "viajero",
+            "agotado",
+            "forma_petrea"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "comerciante_alijuna_2__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "comerciante_alijuna_2"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Comparte el cansancio, la detencion y el destino petreo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Segundo comerciante alijuna. Funcion visual: Compañero que intenta ayudar y comparte el destino petreo.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Segundo comerciante alijuna",
+          "funcion estable: Compañero que intenta ayudar y comparte el destino petreo.",
+          "estados declarados: viajero, agotado, forma_petrea"
+        ],
+        "documented_features": [
+          "Compañero que intenta ayudar y comparte el destino petreo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Segundo comerciante alijuna. Compañero que intenta ayudar y comparte el destino petreo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Compañero que intenta ayudar y comparte el destino petreo.",
+          "estados autorizados: viajero, agotado, forma_petrea",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "viajero"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "comerciante_alijuna_2__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "comerciante_alijuna_2"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Comparte el cansancio, la detencion y el destino petreo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Segundo comerciante alijuna. Funcion visual: Compañero que intenta ayudar y comparte el destino petreo.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Segundo comerciante alijuna",
+          "funcion estable: Compañero que intenta ayudar y comparte el destino petreo.",
+          "estados declarados: viajero, agotado, forma_petrea"
+        ],
+        "documented_features": [
+          "Compañero que intenta ayudar y comparte el destino petreo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Segundo comerciante alijuna. Compañero que intenta ayudar y comparte el destino petreo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Compañero que intenta ayudar y comparte el destino petreo.",
+          "estados autorizados: viajero, agotado, forma_petrea",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "viajero",
+            "agotado",
+            "forma_petrea"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "carga_panela__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "carga_panela"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Mercancia que ambos iban a vender; la fuente no describe embalaje ni transporte."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Panela para la venta. Funcion visual: Mercancia que los dos comerciantes llevan a vender y que no evita la sed.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Panela para la venta",
+          "funcion estable: Mercancia que los dos comerciantes llevan a vender y que no evita la sed.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Mercancia que los dos comerciantes llevan a vender y que no evita la sed."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Panela para la venta. Mercancia que los dos comerciantes llevan a vender y que no evita la sed.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Mercancia que los dos comerciantes llevan a vender y que no evita la sed.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "utta__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "utta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Lugar donde se detienen y quedan las formas petreas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Utta. Funcion visual: Lugar cercano a Katetamana donde los dos comerciantes se detienen y quedan como formas petreas.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Utta",
+          "funcion estable: Lugar cercano a Katetamana donde los dos comerciantes se detienen y quedan como formas petreas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Lugar cercano a Katetamana donde los dos comerciantes se detienen y quedan como formas petreas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Utta. Lugar cercano a Katetamana donde los dos comerciantes se detienen y quedan como formas petreas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Lugar cercano a Katetamana donde los dos comerciantes se detienen y quedan como formas petreas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "comerciante_alijuna_1": {
+      "name": "Primer comerciante alijuna",
+      "kind": "personaje",
+      "description": "Viajero con panela que pierde fuerza y queda ligado a una forma petrea.",
+      "aliases": [],
+      "states": [
+        "viajero",
+        "agotado",
+        "forma_petrea"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "comerciante_alijuna_1__identity_sheet",
+        "comerciante_alijuna_1__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-sed-da-los-civilizados"
+      ],
+      "evidence": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Pierde fuerza y queda como forma petrea."
+        }
+      ]
+    },
+    "comerciante_alijuna_2": {
+      "name": "Segundo comerciante alijuna",
+      "kind": "personaje",
+      "description": "Compañero que intenta ayudar y comparte el destino petreo.",
+      "aliases": [],
+      "states": [
+        "viajero",
+        "agotado",
+        "forma_petrea"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "comerciante_alijuna_2__identity_sheet",
+        "comerciante_alijuna_2__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-sed-da-los-civilizados"
+      ],
+      "evidence": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Comparte el cansancio, la detencion y el destino petreo."
+        }
+      ]
+    },
+    "carga_panela": {
+      "name": "Panela para la venta",
+      "kind": "objeto",
+      "description": "Mercancia que los dos comerciantes llevan a vender y que no evita la sed.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "carga_panela__object_sheet"
+      ],
+      "legacy_model_refs": [
+        "la-sed-da-los-civilizados__ancla"
+      ],
+      "myth_refs": [
+        "la-sed-da-los-civilizados"
+      ],
+      "evidence": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Mercancia que ambos iban a vender; la fuente no describe embalaje ni transporte."
+        }
+      ]
+    },
+    "utta": {
+      "name": "Utta",
+      "kind": "lugar",
+      "description": "Lugar cercano a Katetamana donde los dos comerciantes se detienen y quedan como formas petreas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "utta__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-sed-da-los-civilizados"
+      ],
+      "evidence": [
+        {
+          "myth": "la-sed-da-los-civilizados",
+          "field": "mito",
+          "note": "Lugar donde se detienen y quedan las formas petreas."
+        }
+      ]
+    }
+  }
+}

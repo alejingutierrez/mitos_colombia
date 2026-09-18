@@ -109,26 +109,21 @@ window.hfIds=function(){
  });
  return ids;
 };
-// Con dos generaciones en vuelo el orden de llegada no es el de envío, así que
-// se captura el job_id de la respuesta de creación.
-window.__JOBS=[];
-if(!window.__spyOn){
- var f0=window.fetch;
- window.fetch=async function(){
-  var res=await f0.apply(this,arguments);
-  try{
-   var u=(typeof arguments[0]==='string'?arguments[0]:(arguments[0]&&arguments[0].url))||'';
-   var met=(arguments[1]&&arguments[1].method)||(arguments[0]&&arguments[0].method)||'GET';
-   if(met.toUpperCase()==='POST'&&/generat|job|image/i.test(u)){
-    var j=await res.clone().json().catch(function(){return null;});
-    if(j){ var ids=JSON.stringify(j).match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/g)||[];
-      if(ids.length) window.__JOBS.push({t:Date.now(), ids:ids.slice(0,3)}); }
-   }
-  }catch(e){}
-  return res;
- };
- window.__spyOn=true;
-}
+// El id que devuelve el POST de creación no coincide con el nombre del archivo
+// final. Con dos generaciones en vuelo registramos el conjunto de ids nuevo de
+// cada par; el detalle de cada asset conserva su prompt para resolver el orden
+// exacto antes de ingestar.
+window.hfNuevosIds=function(antes,desde){
+ var a={}; (antes||[]).forEach(function(x){a[x]=1;});
+ return window.hfIds().filter(function(x){
+  if(a[x]) return false;
+  if(!desde) return true;
+  var p=x.split('|'), f=p[0]||'', h=p[1]||'';
+  if(f.length!==8||h.length!==6) return false;
+  var t=new Date(+f.slice(0,4),+f.slice(4,6)-1,+f.slice(6,8),+h.slice(0,2),+h.slice(2,4),+h.slice(4,6)).getTime();
+  return t>=desde-120000;
+ });
+};
 
 // --- Composición del prompt ----------------------------------------------
 window.hfArma=function(it,o){
@@ -137,27 +132,25 @@ window.hfArma=function(it,o){
  var C=M.C;
  if(it.era&&M.E[it.era]) C=C.split(M.EB).join(M.E[it.era]);
  if(it.tipo==='ficha') return C.replace(/\\n\\n(ÉPOCA|Materiales)/,'\\n'+M.F[it.kind]+'\\n\\n$1')+"\\n\\nEscena:\\n"+texto+"\\n\\nPaleta: "+paleta+"\\n"+M.P;
- return [C,"",M.A[it.acto],"",M.K[it.comp],"","Escena:",texto,"","Paleta: "+paleta,M.P].join("\\n");
+ var esVideo=Boolean(o.sufijo);
+ var guia=esVideo
+  ? "FOTOGRAMA DE VIDEO: es un plano de continuidad, no el acto principal del tríptico. La descripción de Escena manda literalmente sobre cualquier ejemplo genérico de composición. No añadir personas, animales, objetos, fuentes de luz ni fenómenos que la Escena no nombre; si dice sin personas, sin aves, nada figurativo o vacío, respetarlo de forma absoluta."
+  : M.A[it.acto];
+ return [C,"",guia,"",M.K[it.comp],"","Escena:",texto,"","Paleta: "+paleta,M.P].join("\\n");
 };
 
 // --- La tanda -------------------------------------------------------------
 // Corre en segundo plano porque el puente de depuración corta a los 45 s.
-// Respeta la concurrencia real del bundle y NO reintenta en bucle: un fallo se
-// anota y se sigue, porque el reintento automático es justo el patrón que
-// dispara la revisión manual de Higgsfield.
-// EL UNLIMITED CORRE DE A UNA, y el rechazo NO llega como error: llega como un
-// banner ("You can generate 1 unlimited ... generation at a time") mientras la
-// tanda cree que todo va bien. Peor: el badge "Generating" aparece con retraso,
-// así que mirar sólo si hay algo en vuelo hace enviar antes de tiempo. Perdimos
-// media tanda dos veces antes de entenderlo.
-// El ciclo correcto CONFIRMA la aceptación: clic -> esperar a que aparezca el
-// badge (aceptada) o el banner (rechazada) -> esperar a que el badge
-// desaparezca -> respiro -> siguiente.
+// El bundle de imagen del Marketplace admite DOS generaciones simultáneas. No
+// es la misma modalidad que el Unlimited promocional, que puede operar con una
+// sola. El badge aparece con retraso, así que cada clic se confirma antes de
+// preparar el siguiente prompt. Se lanzan pares y no se abre el par siguiente
+// hasta que ambos terminaron.
 // La pieza pasa por varios estados antes de terminar y no siempre dice
-// "Generating": cuentan todos como en vuelo.
-window.hfEnVuelo=function(){ var m=document.body.innerText.match(/Generating|Processing|Queued/g); return m?m.length:0; };
+// "Generating": cuentan todos como en vuelo. textContent evita forzar layout.
+window.hfEnVuelo=function(){ var m=(document.body.textContent||'').match(/Generating|Processing|Queued/g); return m?m.length:0; };
 window.hfBanner=function(){
- return document.body.innerText.indexOf('unlimited video, image & audio generation at a time')>=0;
+ return /You can generate\\s+\\d+\\s+unlimited[\\s\\S]{0,120}generation[\\s\\S]{0,80}at a time/i.test(document.body.textContent||'');
 };
 // NUNCA clickear a ciegas la franja superior: ahí viven el buscador y los
 // controles de la galería. Una versión anterior lo hacía y abrió un modal que
@@ -167,9 +160,10 @@ window.hfBanner=function(){
 // que está DENTRO de él.
 window.hfCerrarBanner=function(){
  if(!window.hfBanner()) return false;
+ var re=/You can generate\\s+\\d+\\s+unlimited[\\s\\S]{0,120}generation[\\s\\S]{0,80}at a time/i;
  var nodos=[...document.querySelectorAll('div,section,aside')].filter(function(e){
-  return e.innerText && e.innerText.indexOf('unlimited video, image & audio generation at a time')>=0
-      && e.querySelectorAll('button').length<=2 && e.innerText.length<300;
+  return e.textContent && re.test(e.textContent)
+      && e.querySelectorAll('button').length<=2 && e.textContent.length<300;
  });
  if(!nodos.length) return window.hfBanner();
  var b=nodos[nodos.length-1].querySelector('button');
@@ -178,6 +172,8 @@ window.hfCerrarBanner=function(){
 };
 window.hfEnviarUno=async function(it,opts){
  opts=opts||{};
+ var max=opts.maxVuelo||2, base=window.hfEnVuelo();
+ if(base>=max) return {ok:false, motivo:'sin cupo: '+base+'/'+max+' en vuelo'};
  window.hfCerrarBanner();
  await new Promise(function(r){setTimeout(r,400);});
  await window.hfAspect(it.aspect);
@@ -190,52 +186,59 @@ window.hfEnviarUno=async function(it,opts){
  var b=document.querySelector('button[type=submit]');
  if(!b||b.innerText.trim().indexOf('Unlimited')<0) return {ok:false, motivo:'botón dice "'+(b?b.innerText.trim().replace(/\\s+/g,' '):'?')+'"', abortar:true};
  b.click();
- // La cola gratuita a veces tarda más de un minuto en mostrar el badge, así que
- // la ventana de confirmación es amplia: dar por no-arrancada una pieza que sí
- // arrancó produce duplicados, que es peor que esperar.
+ // Confirmar aceptación antes de tocar el editor para la pieza siguiente.
  for(var i=0;i<240;i++){
   await new Promise(function(r){setTimeout(r,500);});
-  if(window.hfBanner()) return {ok:false, motivo:'rechazada — otra en vuelo'};
-  if(window.hfEnVuelo()>0) break;
+  if(window.hfBanner()) return {ok:false, motivo:'rechazada — límite de concurrencia'};
+  if(window.hfEnVuelo()>base) return {ok:true,vuelo:window.hfEnVuelo()};
  }
- if(window.hfEnVuelo()===0) return {ok:false, motivo:'sin confirmación de arranque'};
+ return {ok:false, motivo:'sin confirmación de arranque'};
+};
+window.hfEsperarVacio=async function(opts){
+ opts=opts||{}; var estable=0;
  for(var j=0;j<900;j++){
+  if(window.hfEnVuelo()===0){ estable++; if(estable>=5) return true; }
+  else estable=0;
   await new Promise(function(r){setTimeout(r,1000);});
-  if(window.hfEnVuelo()===0) break;
  }
- await new Promise(function(r){setTimeout(r,opts.respiro||6000);});
- return {ok:true};
+ return false;
 };
 window.__HF=null;
 window.hfStart=function(items,opts){
  opts=opts||{};
- var S={fase:'arrancando',total:items.length,enviados:0,ok:0,fallos:[],pendientes:[],inicio:Date.now()};
+ opts.maxVuelo=Math.max(1,Math.min(2,opts.maxVuelo||2));
+ var S={fase:'arrancando',total:items.length,enviados:0,ok:0,fallos:[],pendientes:[],pares:[],inicio:Date.now()};
  window.__HF=S;
  (async function(){
   try{
-   for(var k=0;k<items.length;k++){
-    var it=items[k];
-    S.fase='('+(k+1)+'/'+items.length+') '+it.tag;
-    var r=await window.hfEnviarUno(it,opts);
-    S.enviados++;
-    if(r.ok){ S.ok++; }
-    else if(r.abortar){ S.fase='ABORTADO en '+it.tag+' · '+r.motivo; return; }
-    else {
-     // Un solo reintento, con más respiro. Nunca en bucle: el reintento
-     // automático repetido es justo lo que dispara su revisión manual.
-     S.fase='reintento · '+it.tag+' ('+r.motivo+')';
-     await new Promise(function(x){setTimeout(x,12000);});
-     var r2=await window.hfEnviarUno(it,opts);
-     if(r2.ok) S.ok++; else { S.fallos.push({tag:it.tag,motivo:r2.motivo}); S.pendientes.push(it.tag); }
+   if(window.hfEnVuelo()>0){ S.fase='ABORTADO · ya había '+window.hfEnVuelo()+' en vuelo'; return; }
+   var cola=items.map(function(it){return {it:it,intento:0};}), nPar=0;
+   while(cola.length){
+    nPar++;
+    var lote=cola.splice(0,opts.maxVuelo), antes=window.hfIds(), inicioPar=Date.now(), aceptadas=[];
+    for(var q=0;q<lote.length;q++){
+     var x=lote[q], it=x.it;
+     S.fase='par '+nPar+' · '+it.tag+' ('+(S.ok+1)+'/'+items.length+')';
+     var r=await window.hfEnviarUno(it,opts);
+     S.enviados++;
+     if(r.ok){ S.ok++; aceptadas.push(it.tag); }
+     else if(r.abortar){ S.fase='ABORTADO en '+it.tag+' · '+r.motivo; return; }
+     else if(x.intento<1){ cola.unshift({it:it,intento:x.intento+1}); }
+     else { S.fallos.push({tag:it.tag,motivo:r.motivo}); S.pendientes.push(it.tag); }
+     await new Promise(function(z){setTimeout(z,opts.pausa||6000);});
     }
+    S.fase='esperando par '+nPar+' · '+aceptadas.join(' + ');
+    if(!(await window.hfEsperarVacio(opts))){ S.fase='ABORTADO · el par '+nPar+' excedió la espera'; return; }
+    await new Promise(function(z){setTimeout(z,opts.respiro||6000);});
+    S.pares.push({n:nPar,tags:aceptadas,ids:window.hfNuevosIds(antes,inicioPar)});
    }
    S.fase='LISTO';
   }catch(e){ S.fase='ERROR: '+(e&&e.message||e); }
  })();
- return 'tanda arrancada: '+items.length+' piezas, de a una con confirmación';
+ return 'tanda arrancada: '+items.length+' piezas, en pares de hasta '+opts.maxVuelo+' con confirmación';
 };
 window.hfEstado=function(){ var S=window.__HF; if(!S) return 'sin tanda';
- return JSON.stringify({fase:S.fase,enviados:S.enviados,ok:S.ok,total:S.total,fallos:S.fallos,pendientes:S.pendientes}); };
+ return JSON.stringify({fase:S.fase,enviados:S.enviados,ok:S.ok,total:S.total,fallos:S.fallos,pendientes:S.pendientes,pares:S.pares}); };
 // La galería desmonta lo que sale de pantalla: en tandas largas hay que
 // barrerla para recoger todos los ids antes de ingestar.
 window.hfBarrerBG=function(pasos){

@@ -1,0 +1,148 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-fuego-triptych-02-entrada",
+  "created_at": "2026-09-06T15:08:15.303Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-origen-del-fuego",
+  "plan": "content/mitos-visuales/wayuu.fuego.triptico.v1.1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "2f2989e46596b6d480da25e3116640b99e7e63d81c803d43f62f39b257734b8b",
+  "narrative_target_sha256": "3f42d4dafc69dc59021c36cfb6024033597d24c0c92f96b50b0ae0db314e819e",
+  "evidence": [
+    {
+      "id": "published_fire",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-origen-del-fuego.json",
+      "supports": "Relato público congelado: Siki, distribución y fuego en madera.",
+      "limits": "Su prosa combina variantes aunque Historia las distingue. No representar robo de Junuunay a Siki ni reescribir el texto."
+    },
+    {
+      "id": "finol_fire",
+      "type": "primary_narrative_record",
+      "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+      "pages": "59–62 y 109–119",
+      "supports": "Siki descansa en chinchorro en primera versión. En segunda, Junuunay toma dos brasas de Maleiwa y Jimut esconde fuego en madera.",
+      "limits": "Versiones paralelas. Tejido y oscuridad transformados son metáforas editoriales."
+    },
+    {
+      "id": "bible_lot15",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-15-origen-del-fuego-v3.md",
+      "supports": "Identidades, objetos, prendas y separación de versiones.",
+      "limits": "Diseño de vestuario no equivale a reconstrucción histórica fechada."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T15:02:39.762Z",
+    "reviewed_reference_ids": [
+      "b5ddcbc9bfbcf35285db",
+      "ac0343457ea8c5a1943a"
+    ],
+    "retained": [
+      "Cueva de estratos con profundidad real, sombras y contraste ámbar/azul.",
+      "Fuego como centro de atención dentro del mundo material."
+    ],
+    "rejected": [
+      "Torso descubierto, cenefas inventadas, rostros volumétricos, deidad gigante barbada y aureola.",
+      "Selva densa, agaves ornamentales y planos cerrados; no copiar la misma escena en dos formatos."
+    ],
+    "influence_by_act": {
+      "entrada": "Contraste cálido/frío y estratos trasladados al chinchorro de Siki: la trama contiene fuego sin arder.",
+      "acto": "Recorrido profundo junto a gruta; personaje pequeño y dos brasas abren capas de oscuridad, sin deidad inventada.",
+      "huella": "Estratos cálidos condensados en fuego plegado dentro de madera intacta; sin cueva, personajes ni escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "siki__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-02/siki__identity_sheet--canon.jpeg",
+      "sha256": "8887ff91c3cebd2cc5b5e748a293716137ef64e439b1ed938a08d29b9d20a46c",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "siki__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/siki__state_sheet--estados.jpeg",
+      "sha256": "296ce98841452bbee925168734dfbd7de4d20457109938c8352e2a3c2b8cf72c",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "junuunay__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium-corrections-01/junuunay__identity_sheet--canon.jpeg",
+      "sha256": "c27d854a78c4fdae26b8156bc1ca484cf4781abda5c6707326d8980b8a6e42cb",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "brasas_morral_junuunay__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/brasas_morral_junuunay__object_sheet--canon.jpeg",
+      "sha256": "934aa8eb17d99d86b5a8a20c5b310e22205efea08f1c266d7e07b294dce4a5d0",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "varitas_friccion__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/varitas_friccion__object_sheet--canon.jpeg",
+      "sha256": "a94532b234b07e1d8165ed27e5ced858d31d87654fcd61adc453a99830e7023f",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "caujaro_koushot__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/caujaro_koushot__botanical_sheet--canon.jpeg",
+      "sha256": "ff876cfcddc101272ebfa3ab7599faecb22a30d38f6827b268ef28b97b651bdb",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "siki__identity_sheet",
+        "siki__state_sheet",
+        "junuunay__identity_sheet",
+        "brasas_morral_junuunay__object_sheet",
+        "varitas_friccion__object_sheet",
+        "caujaro_koushot__botanical_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-origen-del-fuego/wayuu-fuego-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "2f8ba12c7677d4698f9ef06f521737521fa9f6ce3d7a8fa30e315b2db862748e",
+      "narrative_event_ids": [
+        "siki_descansa"
+      ],
+      "editorial_translation": "Transformación material editorial, no rito ni episodio nuevo atribuido a una fuente.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "El chinchorro de Siki.",
+        "impossible_behavior": "Su trama intacta contiene una llama horizontal suspendida sin consumirse.",
+        "narrative_effect": "Revela el fuego-persona en reposo sin incendiar un cuerpo.",
+        "agency": "La anomalía es narración visual; nadie dirige poderes con sus manos.",
+        "physical_translation": "Trama clara por delante de núcleo ámbar, aire y sombra; llama sigue curva del chinchorro.",
+        "visible_test": "¿Refugio completo menor a un cuarto del ancho, Siki pequeño y llama contenida tras trama intacta, con suelo inequívoco de papel?",
+        "event_ids": [
+          "siki_descansa"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-fuego-triptych-02-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

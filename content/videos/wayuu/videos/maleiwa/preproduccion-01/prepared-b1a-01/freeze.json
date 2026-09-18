@@ -1,0 +1,77 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:14:27.571Z",
+  "plan": "content/videos/wayuu/videos/maleiwa/preproduccion-01/plan.json",
+  "plan_sha256": "a478974261ed75039af9c04f0367812ac4d1adc58fa684498dae71a9c274d841",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 185,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 16,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/maleiwa/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "7be94085360822ac534f313c9976e20c087ce681cd607d5c70ad77109bec9fae",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "maleiwa",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-02-entrada/entrada.jpeg",
+          "sha256": "93cdd7d94a365b20ce446fce1fc3a7ee888cdf74173edc79f8d11520f8ddbb89",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+        },
+        {
+          "kind": "triptych",
+          "myth": "maleiwa",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-01/acto.jpeg",
+          "sha256": "297495c7e97f39ca94b9b7e7c7fa75937e1fa21b3905c2dc546eefdeb205be95",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "maleiwa",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/olivo_mareiwa__botanical_sheet--canon.jpeg",
+          "sha256": "95a54546e46d163b2d9a307242eeabdc651c2a169335d42a0d72edf36e8dcd30",
+          "approved": true,
+          "role": "Fijar el modelo canónico olivo_mareiwa__botanical_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "myth_id": 429,
+  "slug": "el-trueno",
+  "status": "complete_editorial_pilot_pending_user_review",
+  "user_reference_upload_authorization": "autorizo, produce el primer triptico",
+  "authorized_reference_ids": [
+    "P01",
+    "C01",
+    "C02",
+    "L03",
+    "V01",
+    "U01"
+  ],
+  "selected": {
+    "entrada": "entrada-v1.jpeg",
+    "acto": "acto-v2.jpeg",
+    "huella": "huella-v1.jpeg"
+  },
+  "qa": [
+    {
+      "role": "acto",
+      "file": "acto-v2.jpeg",
+      "status": "accepted",
+      "checks": "Dos autoridades con identidad, edades y ropa coherentes con C02; exactamente dos varas simples inclinadas y dos ondas de papel. Los cuatro pies apoyados sobre orilla seca, solo puntas de varas en agua. Noche, laguna y niebla de papel; sin Trueno visible, oro, templo ni iconografía inventada. Escala de figuras mayor al objetivo del prompt, aceptada por claridad de la acción."
+    },
+    {
+      "role": "entrada",
+      "file": "entrada-v1.jpeg",
+      "status": "accepted",
+      "checks": "Tres figuras plenamente vestidas; identidad del Trueno, sombrero y capa coherentes; gesto de consejo en peña, profundidad territorial y tormenta de papel. Sin combate, víctimas, etnicidad adversaria ni mezcla con inundación. Figuras algo mayores al objetivo de prompt, aceptadas por legibilidad y relación ambiental."
+    },
+    {
+      "role": "acto",
+      "file": "acto-v1.jpeg",
+      "status": "rejected",
+      "checks": "Dos varas y continuidad del reparto/laguna correctas, pero un pie parece estar sobre el agua. Corregir apoyo sobre orilla seca; conservar candidato sin reutilizarlo como referencia futura."
+    },
+    {
+      "role": "huella",
+      "file": "huella-v1.jpeg",
+      "status": "accepted",
+      "checks": "Una vara sencilla y continua entre curvas amplias de agua de papel; contraste y sombras legibles; sin personas, catálogo de objetos, paisaje literal, glifos o adorno. Es metáfora editorial, no símbolo ritual atribuido."
+    }
+  ],
+  "execution_notes": {
+    "this_turn_completed_api_calls": 4,
+    "acto_v2_reported_api_edit_seconds": 19.7,
+    "this_turn_completed_api_calls_before_correction": 3,
+    "this_turn_local_write_collisions": 2,
+    "collisions": [
+      {
+        "role": "entrada",
+        "reported_api_edit_seconds": 38.2,
+        "local_exit": 1,
+        "reason": "Output already exists",
+        "returned_image_persisted": false
+      },
+      {
+        "role": "huella",
+        "reported_api_edit_seconds": 16.8,
+        "local_exit": 1,
+        "reason": "Output already exists",
+        "returned_image_persisted": false
+      }
+    ],
+    "acto_v1_reported_api_edit_seconds": 22,
+    "retained_existing_outputs": [
+      "entrada-v1.jpeg",
+      "huella-v1.jpeg"
+    ],
+    "retained_origin": "Archivos presentes del piloto anterior interrumpido por una denegación parcial. Inspeccionados individualmente; no se sobrescribieron. No se dispone del log exitoso original de esos dos archivos, ni se atribuyen sus bytes a las llamadas posteriores que colisionaron.",
+    "lesson": "Antes de llamar a API, comprobar existencia de cada destino y obtener estado de todas las llamadas paralelas con allSettled; no repetir destinos que puedan terminar desde una ejecución interrumpida.",
+    "cost_available": false,
+    "request_ids_available": false
+  },
+  "publication": false,
+  "keyframes": false,
+  "cultural_certification": false
+}

@@ -1,0 +1,681 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-viaje-del-mas-alla",
+  "title": "El viaje del más allá",
+  "version": "preproduccion-05-correcciones-flecha",
+  "status": "two_targeted_prop_corrections",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Índigo profundo, azul mar, arena, carbón, óxido, crema y verde oliva en papel mate. Jepira usa azules oscuros y rojo puntual de danza; el dominio de Juyá introduce lluvia azul y verdes húmedos sin abandonar la aridez. Luz lateral física, sombras entre capas, sin gradientes fotográficos.",
+  "story_thesis": "Distinguir la flecha de una lanza y mantener las manos del viudo vacías para no transferir utilería entre encuentros.",
+  "shared_scene_continuity": [
+    "Todo, incluidos personajes, lluvia, animales, casas y suelo, está construido con recortes casi planos de papel mate separados físicamente en profundidad; sombras proyectadas y aire visible entre capas.",
+    "Rostros de pocas piezas, ojo mínimo y ropa completa; sin Pixar, volumen escultórico, cabezas facetadas, fibras o fondos fotográficos.",
+    "En toda esta tanda el viudo es JOVEN: cabello negro ondulado a la nuca y barba corta negra; cero canas, pelo blanco o barba larga."
+  ],
+  "continuity_rules": [
+    "El viudo permanece joven y con manos vacías en ambos planos.",
+    "b9a: una flecha de arco delgada y claramente menor que una persona, sostenida sólo por el otro adulto.",
+    "b10a: ninguna arma u objeto en manos de ninguno; el venado existe sólo como sombra.",
+    "Conservar originales y escribir las correcciones en un destino nuevo."
+  ],
+  "duration": {
+    "voice_words": 53,
+    "target_seconds": 28,
+    "measured": false,
+    "method": "Paquete de corrección aislado: 14 segundos por plano; no sustituye la duración del guion principal."
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-viaje-del-mas-alla.json",
+    "content_sha256": "622df3cb2717f9ac9b95398d1351094121e5b354e18cb4cc48290c0330fe5101",
+    "source_url": "https://www.designisfels.net/wp-content/uploads/2021/05/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+    "source_locator": "Perrin V2 reproducida por Finol, pp. 208–220; variante separada de Ulépala.",
+    "live_hash_verified": true,
+    "events": [
+      {
+        "id": "e9",
+        "description": "Juyá le pidió buscar corzos. El viudo encontró a una persona con arco, pero ningún animal. Volvió confundido: lo que veía no coincidía con lo que buscaba.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narrativa publicada verificada y Perrin V2 en Finol, pp. 208–220; adaptación original."
+      },
+      {
+        "id": "e10",
+        "description": "Cuando buscó venados, encontró a un hombre rico. Juyá le enseñó a cazar en aquel dominio: después de caer, las figuras humanas mostraban su apariencia animal.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narrativa publicada verificada y Perrin V2 en Finol, pp. 208–220; adaptación original."
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "viudo_joven",
+      "type": "person",
+      "desc": "Hombre adulto Wayuu JOVEN, de perfil plano: cabello negro ondulado a la nuca y barba corta NEGRA, sombrero de paja, manta-capa óxido sobre prendas carbón, faja óxido y sandalias oscuras. Éste es exclusivamente el estado anterior al regreso: absolutamente ninguna cana, pelo gris o blanco, barba larga ni apariencia anciana. Rostro de pocas piezas de papel, sin modelado.",
+      "model_ids": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "viudo_viaje_mas_alla__state_sheet"
+      ]
+    },
+    {
+      "id": "esposa",
+      "type": "person",
+      "desc": "Mujer adulta opaca, nunca fantasma blanco: dos trenzas negras, manta índigo larga, pechera crema y waireñas ocre. Sólo en la danza usa manta roja contextual. Tiene agencia propia y permanece separada del viudo.",
+      "model_ids": [
+        "esposa_muerta_viaje__identity_sheet",
+        "esposa_muerta_viaje__state_sheet"
+      ]
+    },
+    {
+      "id": "familia_viva",
+      "type": "supporting_people",
+      "desc": "Madre anciana con trenza gris lateral, sombrero de paja y manta ocre; hermana adulta con dos trenzas negras, manta verde y pechera crema. Ambas completas, sobrias y distintas de la esposa.",
+      "model_ids": [
+        "madre_viudo_viaje__identity_sheet",
+        "hermana_viudo_viaje__identity_sheet"
+      ]
+    },
+    {
+      "id": "parientes_jepira",
+      "type": "supporting_people",
+      "desc": "Grupo pequeño de adultos opacos con mantas y capas completas en crema, azul, carbón y ocre. Son parientes reconocibles, no espectros blancos; el número visible es escénico, no canon.",
+      "model_ids": [
+        "parientes_muertos_jepira__group_grammar"
+      ]
+    },
+    {
+      "id": "danzantes",
+      "type": "supporting_people",
+      "desc": "Adultos en yonna con prendas rojas completas y siluetas planas; la esposa se integra sin convertirse en premio. No usar pintura facial, plumas o accesorios no necesarios para este instante.",
+      "model_ids": [
+        "danzantes_yolujaa_jepira__group_grammar"
+      ]
+    },
+    {
+      "id": "alcaravan",
+      "type": "animal",
+      "desc": "Una sola ave terrestre de cuerpo marrón y crema, bandas claras en rostro, pico corto oscuro y patas largas verde oliva. Cuerpo completo, sin anatomía fantástica.",
+      "model_ids": [
+        "alcaravan_guardian__identity_sheet"
+      ]
+    },
+    {
+      "id": "agua_recinto",
+      "type": "object",
+      "desc": "Un solo recinto bajo y circular que guarda agua azul mate; sin piscina moderna, cerca ornamental, portal ni agua fotográfica.",
+      "model_ids": [
+        "agua_yolujaa__object_sheet",
+        "recinto_agua_yolujaa__spatial_model"
+      ]
+    },
+    {
+      "id": "jepira",
+      "type": "environment",
+      "desc": "Costa de mar en capas azules, montaña oscura y asentamiento sugerido por pocas siluetas. No copiar puente recto, estanque cercado o geografía de maqueta inventada.",
+      "model_ids": [
+        "jepira__spatial_model",
+        "costa_mar_guajira__environment_model",
+        "montana_cienaga_jepira__spatial_model"
+      ]
+    },
+    {
+      "id": "hogar",
+      "type": "environment",
+      "desc": "Enramada Wayuu abierta de postes y cubierta vegetal traducidos a grandes hojas recortadas; paisaje árido y serranía en capas. Sin bordes de maqueta, barro realista ni arquitectura genérica.",
+      "model_ids": []
+    },
+    {
+      "id": "sendero",
+      "type": "environment",
+      "desc": "Bifurcación clara en Y entre capas áridas: rama izquierda hacia costa oscura, derecha hacia dominio húmedo. Una sola luna pertenece a la voz, no se dibuja como calendario.",
+      "model_ids": [
+        "sendero_bifurcado_juya__spatial_model"
+      ]
+    },
+    {
+      "id": "vaca_guia",
+      "type": "animal",
+      "desc": "Una única vaca vieja crema y gris moteado, cuernos cortos hacia arriba, orejas caídas y cola larga con mechón negro. Cuerpo completo y paso sereno.",
+      "model_ids": [
+        "vaca_guia_juya__identity_sheet"
+      ]
+    },
+    {
+      "id": "juya",
+      "type": "environment",
+      "desc": "Presencia de Juyá sin cuerpo humano fijo: nube de hojas azul carbón y franja móvil de lluvia hecha con hilos azules, capaz de recibir, señalar y ordenar el espacio. No rostro, ojos, manos ni gigante antropomorfo.",
+      "model_ids": [
+        "juya__presence_model",
+        "juya__state_sheet",
+        "dominio_juya__spatial_model"
+      ]
+    },
+    {
+      "id": "boa_banco",
+      "type": "creature",
+      "desc": "Una sola boa verde oliva enrollada en forma continua de asiento bajo; cabeza integrada en un extremo, sin segunda serpiente, patas de mueble o fragmento separado.",
+      "model_ids": [
+        "boa_banco__identity_sheet",
+        "boa_banco__state_sheet"
+      ]
+    },
+    {
+      "id": "cazador_corzo",
+      "type": "person",
+      "desc": "Adulto de camisa crema, pantalón ocre, faja carbón y sandalias; banda de corteza de cují con plumas cortas. Sostiene una flecha larga, no arco automático. Su correspondencia animal es un corzo ocre de garganta crema.",
+      "model_ids": [
+        "corzo_hombre_arco__identity_sheet",
+        "corzo_hombre_arco__state_sheet"
+      ]
+    },
+    {
+      "id": "hombre_venado",
+      "type": "person",
+      "desc": "Adulto barbado con chaqueta ocre, camisa crema, faja roja, pantalón carbón, sombrero de paja y zapatos. Su correspondencia es un venado marrón de garganta crema; sin marca roja que parezca herida.",
+      "model_ids": [
+        "venado_hombre_rico__identity_sheet",
+        "venado_hombre_rico__state_sheet"
+      ]
+    },
+    {
+      "id": "jugadores_conejos",
+      "type": "supporting_people",
+      "desc": "Grupo pequeño de adultos con ropa completa crema, azul, carbón y ocre. En el plano correspondiente aparecen conejos de papel en posiciones equivalentes; nunca humanos y conejos duplicados a la vez.",
+      "model_ids": [
+        "conejos_jugadores__group_grammar"
+      ]
+    },
+    {
+      "id": "juego_lianas",
+      "type": "object",
+      "desc": "Dos lianas verdes trenzadas usadas en un juego, mostradas sin inventar reglas, tanteador ni mecánica ceremonial.",
+      "model_ids": [
+        "juego_oulakawaa_waleeru__object_sheet"
+      ]
+    },
+    {
+      "id": "familia_patilla",
+      "type": "supporting_people",
+      "desc": "Familia de adultos completamente vestidos en verde, crema y carbón; su correspondencia es una patilla verde rayada. No niños, caras sobre frutas ni personas cortadas.",
+      "model_ids": [
+        "patilla__state_sheet",
+        "patilla__botanical_sheet"
+      ]
+    },
+    {
+      "id": "personas_ahuyama",
+      "type": "supporting_people",
+      "desc": "Tres adultos completamente vestidos en óxido, verde y crema, con siluetas amplias tratadas con dignidad; correspondencia con ahuyamas ocres entre hojas.",
+      "model_ids": [
+        "ahuyama__state_sheet",
+        "ahuyama__botanical_sheet"
+      ]
+    },
+    {
+      "id": "limite_pulowi",
+      "type": "environment",
+      "desc": "Casa-enramada rectangular de gran cubierta y una abertura oscura. Pülowi se manifiesta sólo como límite territorial y sombra interior; nada de desnudez, cuerpo expuesto, horror o sexualización.",
+      "model_ids": [
+        "pulowi__presence_model",
+        "pulowi__state_sheet",
+        "casa_enramada_pulowi__spatial_model"
+      ]
+    },
+    {
+      "id": "anciana_arana",
+      "type": "person",
+      "desc": "Anciana humana de dos trenzas blancas, manta violeta oscura, pechera óxido y calzado negro. Su condición de araña aparece como una sola sombra de ocho patas o como geometría de su manto, nunca como monstruo gigante duplicado.",
+      "model_ids": [
+        "arana_anciana_viaje__identity_sheet",
+        "arana_anciana_viaje__state_sheet"
+      ]
+    },
+    {
+      "id": "hilo_regreso",
+      "type": "object",
+      "desc": "Un ovillo claro y una única línea continua de papel trenzado que une el dominio alto con el mundo humano. Sin telaraña ornamental, múltiples anclajes o fibra fotográfica.",
+      "model_ids": [
+        "hilo_arana_regreso__object_sheet"
+      ]
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "viudo_viaje_mas_alla__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/viudo_viaje_mas_alla__identity_sheet--canon.jpeg",
+      "sha256": "74bc465196c1da6997a71a7d436bbca4f90e23591753a545d4b7d52b8383efae"
+    },
+    {
+      "model_id": "viudo_viaje_mas_alla__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/viudo_viaje_mas_alla__state_sheet--estados.jpeg",
+      "sha256": "117462a3cf635de034923f82da9ddc40c6800b3d5c619e036cc94e570e6a65e9"
+    },
+    {
+      "model_id": "esposa_muerta_viaje__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/esposa_muerta_viaje__identity_sheet--canon.jpeg",
+      "sha256": "f1fb6c80e106097eae6b544375fa85acb7322943bd177821e8c705f2eca3c390"
+    },
+    {
+      "model_id": "esposa_muerta_viaje__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/esposa_muerta_viaje__state_sheet--estados.jpeg",
+      "sha256": "a4304c598c2d2af42e520f0f65814324a70bc5e754f7a636df1c22607bb482af"
+    },
+    {
+      "model_id": "madre_viudo_viaje__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/madre_viudo_viaje__identity_sheet--canon.jpeg",
+      "sha256": "55e94d339b0ef3f4aa57116c78026cebc5d605e3a456f400dc6a48e4fb884eac"
+    },
+    {
+      "model_id": "hermana_viudo_viaje__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/hermana_viudo_viaje__identity_sheet--canon.jpeg",
+      "sha256": "148ef2e9a18448d1ad33286b4cce13d80668bb6011c1f2a4d8d5fc2d25fbb2d0"
+    },
+    {
+      "model_id": "parientes_muertos_jepira__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/parientes_muertos_jepira__group_grammar--canon.jpeg",
+      "sha256": "a3e5165191e658e9a600a8960b5960e466369dd2954164b2dd3392e2a792e6ae"
+    },
+    {
+      "model_id": "danzantes_yolujaa_jepira__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/danzantes_yolujaa_jepira__group_grammar--canon.jpeg",
+      "sha256": "c144aa0b217e3ae530dbe053f98260a1ad62d18c4e6999e215e1930e9541ea63"
+    },
+    {
+      "model_id": "yolujaa__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/yolujaa__presence_model--canon.jpeg",
+      "sha256": "c07c9179b05b2bdcd60accbf7ab00399cb80815df48cb8329004da23e7cdbcaa"
+    },
+    {
+      "model_id": "alcaravan_guardian__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/alcaravan_guardian__identity_sheet--canon.jpeg",
+      "sha256": "d956806a4ff42c720750415d10efc3263f824cacf125bb9edee866755ead5c4a"
+    },
+    {
+      "model_id": "agua_yolujaa__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/agua_yolujaa__object_sheet--canon.jpeg",
+      "sha256": "e8a3a4e9946baa38ed39e19bb68474fa9797b210bd4e0d743d742033e8e30be9"
+    },
+    {
+      "model_id": "recinto_agua_yolujaa__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/recinto_agua_yolujaa__spatial_model--canon.jpeg",
+      "sha256": "75a4e046e1d9f65fa1d17461c9aba7255eeef04a78e845bd44caa2223a0f8a4e"
+    },
+    {
+      "model_id": "puerta_autonoma_jepira__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/puerta_autonoma_jepira__spatial_model--canon.jpeg",
+      "sha256": "33196026dcd8c95718df1f96432b8243d2a0b80d0fde92f5c9f5494d1a36cb8c"
+    },
+    {
+      "model_id": "montana_cienaga_jepira__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/montana_cienaga_jepira__spatial_model--canon.jpeg",
+      "sha256": "2c0b239206b476977fa4f29d84a067181f373dc52db1976be7295a9af931e435"
+    },
+    {
+      "model_id": "caballos_muertos_jepira__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/caballos_muertos_jepira__group_grammar--canon.jpeg",
+      "sha256": "da1e4d399e5c966994f605abce58b023dc7edb67c4abb52b580565eaefe7b281"
+    },
+    {
+      "model_id": "alimentos_aparecidos_jepira__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/alimentos_aparecidos_jepira__object_sheet--canon.jpeg",
+      "sha256": "01178493ce8db9adbbb71d9fc2d943a6d7486277fe8ca6f656d2e2c67a0ef55a"
+    },
+    {
+      "model_id": "kasha_yonna_jepira__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/kasha_yonna_jepira__object_sheet--canon.jpeg",
+      "sha256": "c8a6194e08579d5b8562601cae28711e7c8d8ebf3a441d4bdc10e28867e3857f"
+    },
+    {
+      "model_id": "casas_descanso_jepira__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/casas_descanso_jepira__spatial_model--canon.jpeg",
+      "sha256": "14abee009fabc2c6f177f972fed7d4425605d6ad5698cd59ddd76d675c7c727e"
+    },
+    {
+      "model_id": "sendero_bifurcado_juya__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/sendero_bifurcado_juya__spatial_model--canon.jpeg",
+      "sha256": "e7d5b3cb65d65cfc8bb18873b083d52bd9215c9cc7a6cd06ae6374926a71e0a4"
+    },
+    {
+      "model_id": "semeruco__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/semeruco__botanical_sheet--canon.jpeg",
+      "sha256": "b93581ca3bf5ca84fbd836deb108992421a9c9877ffbfad7cfc24fa987d8ff8c"
+    },
+    {
+      "model_id": "vacas_lecheras_juya__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/vacas_lecheras_juya__group_grammar--canon.jpeg",
+      "sha256": "be45e2d87313c2a4862e700963eafbc7a70f30d93c0c38a1898eb2843cb3c299"
+    },
+    {
+      "model_id": "vaca_guia_juya__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/vaca_guia_juya__identity_sheet--canon.jpeg",
+      "sha256": "45c712f078223005eca0bee5b124c711b68aa7ed43a2f161f3ab605745b53322"
+    },
+    {
+      "model_id": "pulowi__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/pulowi__presence_model--canon.jpeg",
+      "sha256": "4d75c5a794af6612a4def02a76287078644af73951252041af58a98ce4ad66f1"
+    },
+    {
+      "model_id": "pulowi__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/pulowi__state_sheet--estados.jpeg",
+      "sha256": "a1a53364d1fb84c78d13c1da92b9e181dca8e681506f5e313865ffe1aca60df6"
+    },
+    {
+      "model_id": "casa_enramada_pulowi__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/casa_enramada_pulowi__spatial_model--canon.jpeg",
+      "sha256": "e8c7fd01519969cade31aad05d8a3c791bb6ffb1804c809688c77150f3e17b78"
+    },
+    {
+      "model_id": "botellas_juya__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/botellas_juya__object_sheet--canon.jpeg",
+      "sha256": "7422d64bc6f1d873d5515c0dc8959c0e62e9009e7998fd6beed4cb99cd0b9071"
+    },
+    {
+      "model_id": "boa_banco__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/boa_banco__identity_sheet--canon.jpeg",
+      "sha256": "0269df5d82c4fe5ecb3db99832b8497f8d0bc90c75e55cb5bd5ca9903c8d0fd6"
+    },
+    {
+      "model_id": "boa_banco__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/boa_banco__state_sheet--estados.jpeg",
+      "sha256": "30381fafb335ca9afee7797c0b005aab75ca8a20fa1c0bcf12db447446999db0"
+    },
+    {
+      "model_id": "corzo_hombre_arco__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/corzo_hombre_arco__identity_sheet--canon.jpeg",
+      "sha256": "60c663b03dc8962f2268e85606d412fe6f1264527b9d49839a29d98abbae876c"
+    },
+    {
+      "model_id": "corzo_hombre_arco__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/corzo_hombre_arco__state_sheet--estados.jpeg",
+      "sha256": "1a96ef6c3c96a5d08ee3995bb6d9cc501e9de3ad37135438ccff92ea158d3755"
+    },
+    {
+      "model_id": "venado_hombre_rico__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/venado_hombre_rico__identity_sheet--canon.jpeg",
+      "sha256": "4a0134c0a831ce2041637e35c9050c028c7305f38dc9beadae7324e20656d8dd"
+    },
+    {
+      "model_id": "venado_hombre_rico__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/venado_hombre_rico__state_sheet--estados.jpeg",
+      "sha256": "2f001a2c6b153ec71004f8487619241f5d28f6953f1d68e0cb822e3255901ef7"
+    },
+    {
+      "model_id": "conejos_jugadores__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/conejos_jugadores__group_grammar--canon.jpeg",
+      "sha256": "f95ec499b1b2905b6cd198d673dd959af93d77dba9cbc06e46416c2c7a399c9e"
+    },
+    {
+      "model_id": "juego_oulakawaa_waleeru__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/juego_oulakawaa_waleeru__object_sheet--canon.jpeg",
+      "sha256": "f5daa258a224abf086597bf99d67aecaa32b1dc6394034ffe3a40c5cb5877e0b"
+    },
+    {
+      "model_id": "patilla__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/patilla__state_sheet--estados.jpeg",
+      "sha256": "5952bc1fa982b6b037ccb1a10e1c6eb6fb7e7e03c9881e7ea60e88f78ca751dd"
+    },
+    {
+      "model_id": "ahuyama__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/ahuyama__state_sheet--estados.jpeg",
+      "sha256": "957e043c931e49610248dc39a8598faa687e2a70eb0a4e0d3a839eac58e3d5c7"
+    },
+    {
+      "model_id": "maiz_juya__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/maiz_juya__botanical_sheet--canon.jpeg",
+      "sha256": "f000e5e3ae001efd762ff83af8bcd2e13efb0e81cdf3419e778108fccbc43b93"
+    },
+    {
+      "model_id": "melon_juya__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/melon_juya__botanical_sheet--canon.jpeg",
+      "sha256": "f023b71ab003a7a8c0a28ff5f29ce643744e91387a6398c09212b6bfb21765eb"
+    },
+    {
+      "model_id": "melon_juya__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/melon_juya__state_sheet--estados.jpeg",
+      "sha256": "f02bf17877f89978563f9a6417ad249310447832d963d2f2e7516911f2e5ec47"
+    },
+    {
+      "model_id": "arana_anciana_viaje__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/arana_anciana_viaje__identity_sheet--canon.jpeg",
+      "sha256": "833b11a504138f42900b4dfd93c24cf7feedc39d6eec92e47eec7687e1aa107b"
+    },
+    {
+      "model_id": "arana_anciana_viaje__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/arana_anciana_viaje__state_sheet--estados.jpeg",
+      "sha256": "6777e30724793b01ba4385c38e529d95c8e06a48d3c9aa47751685eff7588be8"
+    },
+    {
+      "model_id": "hilo_arana_regreso__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/hilo_arana_regreso__object_sheet--canon.jpeg",
+      "sha256": "50bed7c8f9ebeea62ef16ee713c801b2ddc3568b6fde5f72c201bf8f4e68e269"
+    },
+    {
+      "model_id": "jepira__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/jepira__spatial_model--canon.jpeg",
+      "sha256": "1a51cfafc851e96e36ffb57d86bb3673ac70b782198f37abb3b4a9514ffd5949"
+    },
+    {
+      "model_id": "dominio_juya__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/dominio_juya__spatial_model--canon.jpeg",
+      "sha256": "90e4bae4114a02220296064cbc2dc012403b3d69416576f606b55837ffbb4983"
+    },
+    {
+      "model_id": "rebanos__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/rebanos__group_grammar--canon.jpeg",
+      "sha256": "aec531d1a0a63e90fdcd09aeeb981e4c35e7b78a934e620608e5b6e4b7b8ed1f"
+    },
+    {
+      "model_id": "chinchorro__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+      "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15"
+    },
+    {
+      "model_id": "cardon_iguaraya__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/cardon_iguaraya__botanical_sheet--canon.jpeg",
+      "sha256": "673a1997964cdaad131c1b8fecca96ad7d3e471840225fabbf3a57c3f21128c5"
+    },
+    {
+      "model_id": "caujaro_koushot__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-15-el-origen-del-fuego-medium/caujaro_koushot__botanical_sheet--canon.jpeg",
+      "sha256": "ff876cfcddc101272ebfa3ab7599faecb22a30d38f6827b268ef28b97b651bdb"
+    },
+    {
+      "model_id": "juya__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/juya__presence_model--canon.jpeg",
+      "sha256": "178b0b7c9fd724ef7e9168e29232aa1576d4777baaf37faa1690419cecbab9f9"
+    },
+    {
+      "model_id": "juya__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-01/juya__state_sheet--estados.jpeg",
+      "sha256": "891fa18f0e09d63edbf9d71563b50212e922b0487c523610bcbed1f22f4eb8ef"
+    },
+    {
+      "model_id": "arco_flechas__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/arco_flechas__object_sheet--canon.jpeg",
+      "sha256": "f5c9963ee2b3f620fab20e2b2cebfb80ed4b6673b20373ac840f8c08bdbc8686"
+    },
+    {
+      "model_id": "patilla__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/patilla__botanical_sheet--canon.jpeg",
+      "sha256": "199c12b131ac104832b6ac1e7359952464bcc00582c9034b3036f369cdcdfad7"
+    },
+    {
+      "model_id": "ahuyama__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium/ahuyama__botanical_sheet--canon.jpeg",
+      "sha256": "b8931509b237a056c88ad404fb83f0f6e7519d3431b44f3f11b7fc2ec6cc0303"
+    },
+    {
+      "model_id": "costa_mar_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+      "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc"
+    }
+  ],
+  "reference_review": {
+    "status": "complete",
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-02-entrada/entrada.jpeg",
+        "sha256": "8ba6da4f6a78d3217a515974ffd953e009ffc7cb58928945ecb8219fadf5d9e1",
+        "reviewed": true,
+        "role": "same_myth_direction_reference",
+        "notes": "Conservar escala ambiental, ondas de papel y pareja pequeña."
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-01/acto.jpeg",
+        "sha256": "5d8dd751cb4e308bee589db7d36afe3f518214d1c6bb9dcd2ee97744730ba0f4",
+        "reviewed": true,
+        "role": "same_myth_direction_reference",
+        "notes": "Conservar boa-banco continua y amplitud espacial; no copiar rigidez del personaje."
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-01/huella.jpeg",
+        "sha256": "a1af8b997a49d1fe94badf7ccd2bd50fe1fb62a254980b24d226fdec3c2d7c29",
+        "reviewed": true,
+        "role": "same_myth_direction_reference",
+        "notes": "Usar tensión simbólica de una continuidad que se rompe, no repetir la composición literalmente."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "id": "u01-b9a",
+      "title": "Corrección de utilería b9a",
+      "time_seconds": [
+        0,
+        14
+      ],
+      "event_ids": [
+        "e9"
+      ],
+      "voice_over": "Juyá le pidió buscar corzos. El viudo encontró a una persona con arco, pero ningún animal. Volvió confundido: lo que veía no coincidía con lo que buscaba.",
+      "voice_provenance": "Adaptación original basada en narrativa publicada y contraste Perrin V2.",
+      "word_count": 27,
+      "keyframes": [
+        {
+          "id": "b9a",
+          "time_seconds": [
+            0,
+            14
+          ],
+          "event_ids": [
+            "e9"
+          ],
+          "entity_ids": [
+            "viudo_joven",
+            "cazador_corzo",
+            "juya"
+          ],
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un viajero busca un corzo y encuentra una persona",
+            "impossible_behavior": "La sombra humana adopta forma animal sin transformar el cuerpo",
+            "narrative_effect": "La contradicción inicia el aprendizaje de otra percepción",
+            "agency": "La figura aparece; el viudo sólo observa",
+            "physical_translation": "Recortar figura humana y sombra animal ocre como capas físicamente separadas",
+            "visible_test": "Debe verse una persona y una sola sombra de corzo, no dos criaturas",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e9"
+            ]
+          },
+          "visual": "El viudo joven, con cabello negro y barba corta negra, tiene las manos vacías y encuentra a otro adulto que sostiene UNA sola FLECHA DE ARCO larga, delgada y liviana, en diagonal a la altura de la cintura: asta fina, punta pequeña y plumas de cola claramente visibles. No es lanza, jabalina, bastón ni arma del tamaño de una persona. La sombra del otro adulto sobre el suelo tiene silueta de corzo; no aparece ningún corzo físico separado.",
+          "shot_scale": "plano general medio",
+          "angle": "lateral con sombra completa",
+          "depth_planes": [
+            "hojas secas",
+            "dos adultos y sombra-corzo",
+            "dominio húmedo al fondo"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte directo al siguiente instante; conservar identidad y material, sin morphing.",
+          "motion_contract": {
+            "camera": "Parallax suave entre las capas descritas; movimiento lento y legible, sin inventar acciones.",
+            "forbidden": "No morphing, paneo que revele bordes de maqueta, partículas genéricas, movimientos de boca ni acciones fuera del instante."
+          },
+          "asset": {
+            "status": "not_generated",
+            "path": null,
+            "sha256": null,
+            "qa_notes": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "u02-b10a",
+      "title": "Corrección de utilería b10a",
+      "time_seconds": [
+        14,
+        28
+      ],
+      "event_ids": [
+        "e10"
+      ],
+      "voice_over": "Cuando buscó venados, encontró a un hombre rico. Juyá le enseñó a cazar en aquel dominio: después de caer, las figuras humanas mostraban su apariencia animal.",
+      "voice_provenance": "Adaptación original basada en narrativa publicada y contraste Perrin V2.",
+      "word_count": 26,
+      "keyframes": [
+        {
+          "id": "b10a",
+          "time_seconds": [
+            14,
+            28
+          ],
+          "event_ids": [
+            "e10"
+          ],
+          "entity_ids": [
+            "viudo_joven",
+            "hombre_venado",
+            "juya"
+          ],
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El viudo busca venados y encuentra un hombre rico",
+            "impossible_behavior": "La sombra revela una apariencia animal diferente",
+            "narrative_effect": "Juyá le enseña que cada dominio ve de otra manera",
+            "agency": "El hombre aparece; el viudo no controla su doble lectura",
+            "physical_translation": "Figura adulta plana y sombra de venado en otra hoja",
+            "visible_test": "Persona y sombra animal equivalentes, sin cuerpo híbrido",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e10"
+            ]
+          },
+          "visual": "El viudo joven, con cabello negro y barba corta negra, permanece frente a un hombre rico vestido de ocre. AMBOS tienen las manos vacías: no flecha, lanza, jabalina, bastón, arco ni arma. Sólo la sombra del hombre rico tiene forma de venado con garganta crema; no hay animal físico, híbrido, herida ni mancha roja.",
+          "shot_scale": "plano general medio",
+          "angle": "lateral amplio",
+          "depth_planes": [
+            "viudo y vegetación",
+            "hombre y sombra-venado",
+            "lluvia distante"
+          ],
+          "continuity_from": "b9a",
+          "transition_to_next": "Corte directo al siguiente instante; conservar identidad y material, sin morphing.",
+          "motion_contract": {
+            "camera": "Parallax suave entre las capas descritas; movimiento lento y legible, sin inventar acciones.",
+            "forbidden": "No morphing, paneo que revele bordes de maqueta, partículas genéricas, movimientos de boca ni acciones fuera del instante."
+          },
+          "asset": {
+            "status": "not_generated",
+            "path": null,
+            "sha256": null,
+            "qa_notes": []
+          }
+        }
+      ]
+    }
+  ]
+}
+

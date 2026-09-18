@@ -1,0 +1,69 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-foundation-02",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-02/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Inicio explícito solicitado por el usuario; únicamente cuatro anclas públicas y reversibles de la tanda wayuu-foundation-02, corregida tras QA de época y botánica.",
+  "jobs": [
+    {
+      "id": "territorio_alta_guajira--canon",
+      "model_id": "territorio_alta_guajira",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-02/prompts/territorio_alta_guajira--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-foundation-02/territorio_alta_guajira--canon.jpeg",
+      "prompt_sha256": "e4b43f5c70a2d043f74f1b49623d3b9609a64cdde7f93377602c96186bc1b2f7",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "macuira_ecotono--canon",
+      "model_id": "macuira_ecotono",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-02/prompts/macuira_ecotono--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-foundation-02/macuira_ecotono--canon.jpeg",
+      "prompt_sha256": "48c4e3f56c3172434391728e38a2fc85a7cccc9d72f6501bd4bc27f3bd2b9120",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "piichipala_arquitectura--canon",
+      "model_id": "piichipala_arquitectura",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-02/prompts/piichipala_arquitectura--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-foundation-02/piichipala_arquitectura--canon.jpeg",
+      "prompt_sha256": "0b6968917f4e66e5beb2e5a5614f43cb84a6267ff42553fb7c14e4af6de98d4d",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "flora_sequia--canon",
+      "model_id": "flora_sequia",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-02/prompts/flora_sequia--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-foundation-02/flora_sequia--canon.jpeg",
+      "prompt_sha256": "8670628a87692d1df33c162fbc5f4135e9cbe6f01b913d2e3207b1d118520cbb",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "high",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "status": "prepared"
+    }
+  ]
+}

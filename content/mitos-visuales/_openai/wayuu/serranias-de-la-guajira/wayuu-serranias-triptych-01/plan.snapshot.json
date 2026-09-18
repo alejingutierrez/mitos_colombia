@@ -1,0 +1,218 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "serranias-de-la-guajira": {
+      "titulo": "Serranías de La Guajira",
+      "canon_models": [
+        "wojoro__identity_sheet",
+        "wojoro__state_sheet",
+        "transformacion_viajeros_serranias__phenomenon_rule",
+        "retiro_mar_serranias__phenomenon_rule",
+        "honda_piedra_mareiwa__object_sheet",
+        "pozos_salados_mareiwa__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves1946",
+          "type": "primary_narrative_edition",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "310–311, informantes316",
+          "supports": "Viajeros, transformación, honda, Kasuto, mar y pozos.",
+          "limits": "Registro castellano mediado por Chaves e intérprete; no cartografía exacta."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "wojoro__state_sheet",
+          "decision": "Mostrar un solo Wojoro en transición, no estados duplicados; conservar vestuario y loma baja."
+        },
+        {
+          "model_id": "retiro_mar_serranias__phenomenon_rule",
+          "decision": "No diagrama con arcos de trayectoria; mostrar la materia del mar retirándose."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "serranias-de-la-guajira",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/serranias-de-la-guajira.json",
+        "target_content_sha256": "69d91fe70a67c033c04e199b1a16060e76a033f3454c301ffcadbb75084cfcaa",
+        "summary": "Viajeros convertidos en cerros; mar apartado; aves siembran y Mareiwa organiza clanes. El tríptico recorta las dos primeras acciones sin borrar las restantes.",
+        "events": [
+          {
+            "id": "viajeros_cerros",
+            "action": "Los caminantes quedan como cerros.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "mar_retirado",
+            "action": "Honda hasta Kasuto, mar retirado y pozos salados.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "alimentos_clanes",
+            "action": "Aves distribuyen semillas y se organizan territorios y clanes.",
+            "provenance": "historical_core",
+            "required": false
+          }
+        ],
+        "emotional_reading": "Permanecer como territorio.",
+        "magic_reading": "Cuerpo y viaje continúan en la tierra.",
+        "qa_method": "Revisión directa por función y conexión material."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-07T15:18:00Z",
+        "reviewed_reference_ids": [
+          "9a53f0a5b25c47cc62df",
+          "c501081f59be649a6ed9"
+        ],
+        "retained": [
+          "Capas de relieve y mar azul profundo; distancia territorial."
+        ],
+        "rejected": [
+          "Caras monumentales, Mareiwa genérico con tocado y estampados, mezcla de episodios, rosetas y arquitectura innecesaria."
+        ],
+        "influence_by_act": {
+          "entrada": "Trasladar profundidad a Wojoro convirtiéndose en loma baja, sin cabezas de piedra.",
+          "acto": "Mar y honda se aíslan de viajeros, animales y clanes.",
+          "huella": "Condensar caminante/relieve en una sandalia que se vuelve loma; no otra escena."
+        }
+      },
+      "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+      "paleta": "Arena y terracota, azul profundo y gris carbón; luz lateral mate, sin brillo mágico.",
+      "continuity_contract": [
+        "Papel y relieve continuo."
+      ],
+      "avoid": [
+        "Pixar, Disney, large eyes, modeled cheeks, portrait, painted illustration, photorealistic terrain",
+        "giant stone faces, moai, statues, clan glyphs, invented ornaments, ceremonial headdresses",
+        "violence, wounds, blood, dead bodies, nudity",
+        "glow, aura, glitter, lasers, spiky rosettes, agave, saguaro",
+        "outer cardboard, rectangular slab, model base, frame, table"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "viajeros_cerros"
+          ],
+          "narrative_summary": "Wojoro se detiene y queda como loma baja; elegir únicamente esta transformación de la marcha.",
+          "beat": "El camino deja de avanzar y empieza a levantar tierra.",
+          "escena": "16:9 EXTREME WIDE elevated distant view of arid Guajira valley, seven separated ochre, clay and blue-gray paper ridges. At x70%,y44% a SINGLE small seated adult man Wojoro, entire upper figure no more than 12% image height, side profile looking along empty winding track. Sand broad brim hat, plain long sand asheinpalajanaa wrap over terracotta long-sleeved kemiisa and terracotta lower wrap, charcoal siiira belt, simple waireña sandals. Tiny dark profile without modeled facial features. THE IMPOSSIBILITY: the lower folds of his sand wrap never end as cloth: exactly the SAME broad connected paper sheets spread outward from his seated knees and hem, becoming a LOW ochre hill, five contour layers that fan into the earth. The transformation is continuous from garment to land, no separate duplicate statue. Low hill and man combined only 25% width,20% height in middle-right x60–83%,y35–56%; keep full hat well within frame. Rest of landscape immense, no other people, no bird, sea, houses or statues. Quiet dark left 60% and lower 35% for two-line website title. Minimal small twig shrubs far away, no spiky rosettes or decorative plants. Cool empty paper sky, warm side light, subtle shadows between physical layers. Organic ground flows beyond all image edges, no rectangular model slab. Do not make a giant rock face or an enormous mountain shaped like a man.",
+          "editorial_translation": "Acción del relato; continuidad de pliegues y escala son traducción editorial, no monumento real ni documentación etnográfica.",
+          "visual_question": "¿Un viajero pequeño se vuelve una loma baja por continuidad material, sin estatua separada?",
+          "continuity_contract": [
+            "Wojoro se detiene y queda como loma baja; elegir únicamente esta transformación de la marcha.",
+            "Mundo entero de papel mate, sin soporte exterior."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Caminante, vestido envolvente y loma baja.",
+            "impossible_behavior": "Los pliegues de su ropa continúan físicamente como estratos del cerro.",
+            "narrative_effect": "El camino deja de avanzar y empieza a levantar tierra.",
+            "agency": "Mareiwa transforma el territorio según el relato; no un caminante controlando poderes.",
+            "physical_translation": "Capas continuas desde el dobladillo hasta el suelo.",
+            "visible_test": "¿Un viajero pequeño se vuelve una loma baja por continuidad material, sin estatua separada?",
+            "event_ids": [
+              "viajeros_cerros"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "mar_retirado"
+          ],
+          "narrative_summary": "Mareiwa lanza una piedra desde Tsitsi hasta Kasuto y el mar se aparta dejando pozos salados. Agencia fuera de cuadro, sin avatar humano.",
+          "beat": "Una piedra abre lugar para la tierra.",
+          "escena": "9:16 WIDE high oblique view of vast paper coast. Upper-middle right a SINGLE small chalk-white irregular paper stone resting at x65%,y38% on newly dry ochre land. THE IMPOSSIBILITY: attached to distant blue sea in upper third, the same vast blue water sheet has unfastened from the earth around that stone and recoils upward BACK toward the horizon like a broad bowed fan of five matte blue paper layers; open air and deep cast shadow under its raised rim, dry ground below. It is one receding curved sea front, NOT two walls forming a path and not a tsunami advancing toward camera. The white stone sits on DRY land entirely in front of that rim; no splash. Three shallow irregular salt-blue pools remain scattered across exposed ochre land in middle third, one faint white salt edge each, not glowing jewels. At left midground x23%,y45% a tiny plain fiber sling with two cords rests across a low gray ridge, no hands or people; editorial aftermath of Mareiwa's throw. Main stone, water separation, sling and pools within y28–62%; lower35% quiet continuous dark ochre ground for mobile title. Sparse distant dry shrubs only, no birds, buildings, travellers or bodies. Five foreground terrain layers, seven distant depths; no visible base, cross-section slab, table, arrows, flight-path lines, labels, sun disc or magic aura.",
+          "editorial_translation": "Acción del relato; continuidad de pliegues y escala son traducción editorial, no monumento real ni documentación etnográfica.",
+          "visual_question": "¿La piedra queda en tierra seca ante un solo mar que se recoge, con pozos salados y sin camino entre dos muros?",
+          "continuity_contract": [
+            "Mareiwa lanza una piedra desde Tsitsi hasta Kasuto y el mar se aparta dejando pozos salados. Agencia fuera de cuadro, sin avatar humano.",
+            "Mundo entero de papel mate, sin soporte exterior."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Piedra, honda, costa y pozos salados.",
+            "impossible_behavior": "La lámina de mar se despega y se recoge hacia su horizonte dejando aire encima de tierra seca.",
+            "narrative_effect": "Una piedra abre lugar para la tierra.",
+            "agency": "Mareiwa transforma el territorio según el relato; no un caminante controlando poderes.",
+            "physical_translation": "Cinco láminas azules conectadas al mar distante y sombra del borde elevado.",
+            "visible_test": "¿La piedra queda en tierra seca ante un solo mar que se recoge, con pozos salados y sin camino entre dos muros?",
+            "event_ids": [
+              "mar_retirado"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "viajeros_cerros"
+          ],
+          "narrative_summary": "Memoria del caminante que se vuelve relieve.",
+          "beat": "Caminar también puede ser quedarse.",
+          "escena": "1:1 symbolic image, ONE isolated integrated sand-colored paper SANDAL whose sole transforms into a low hill of concentric ochre cut-paper contour layers. Three-quarter top view, simple two plain crossing straps identify a waireña-inspired sandal, no logo or ornament. The heel remains a thin flat sole; toward the toe the SAME continuous sole layers slowly rise into a low asymmetric hill, no foot or person inside. Maximum hill height one quarter sandal length, not a mountain landscape inside footwear. Compact single object occupies central60%, uniform deep muted blue background, large empty margins, 4–6 separated matte paper layers and crisp cast shadows, no horizon, scenery, birds, rocks scattered, text, decorative symbol, pedestal or table.",
+          "editorial_translation": "Símbolo editorial de caminante/relieve, no objeto sagrado o emblema Wayúu existente.",
+          "visual_question": "¿Una única sandalia se vuelve relieve sin contener una escena?",
+          "continuity_contract": [
+            "Memoria del caminante que se vuelve relieve.",
+            "Mundo entero de papel mate, sin soporte exterior."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Sandalia del viaje y loma.",
+            "impossible_behavior": "Una sola suela conserva la forma de caminar y se levanta como relieve.",
+            "narrative_effect": "Caminar también puede ser quedarse.",
+            "agency": "Mareiwa transforma el territorio según el relato; no un caminante controlando poderes.",
+            "physical_translation": "La suela continua se desdobla en estratos.",
+            "visible_test": "¿Una única sandalia se vuelve relieve sin contener una escena?",
+            "event_ids": [
+              "viajeros_cerros"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+          "symbolic_contract": {
+            "thesis": "El territorio conserva los pasos que ya no avanzan.",
+            "carrier": "Sandalia-relieve única.",
+            "operation": "La suela se eleva en loma de papel.",
+            "story_connection": "Viajeros transformados en cerros.",
+            "visible_test": "¿Una única sandalia se vuelve relieve sin contener una escena?"
+          }
+        }
+      }
+    }
+  }
+}

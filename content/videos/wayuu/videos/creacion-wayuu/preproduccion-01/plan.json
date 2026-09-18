@@ -1,0 +1,1343 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "creacion-wayuu",
+  "title": "Creación Wayuu · El mundo por habitar",
+  "version": "preproduccion-01",
+  "status": "script_storyboard_ready_not_generated",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Warm ochre, pale sand and terracotta land; dry sage/olive plants; travelling mineral-blue and slate rain; pale DAY sky except first-night b7a/b7b where land is layered indigo and small hearths amber. Every color is matte dyed PAPER, no neon or photographic grading.",
+  "shared_scene_continuity": [
+    "Todo permanece hecho de hojas recortadas, no materiales naturales fotografiados. Cada plano declara su luz local; la noche sólo pertenece al bloque de primera noche.",
+    "Un mismo territorio de suelo en capas, colinas bajas, cavidad y rocas sin inscripción; no casas o objetos nuevos por arrastre de otro mito.",
+    "No dar cuerpo a presencias no humanas. Se elige salida de cavidad, nunca se mezcla con modelado en barro. No importar noche contenida en cuencos o umbrales de Arámai."
+  ],
+  "continuity_rules": [
+    "Identidades de los seis primeros Wayuu según Biblia; se llaman por roles editoriales, no nombres de ancestros inventados.",
+    "Sólo aparece el reparto declarado en cada plano. Ropa de identidad editorial, no reconstrucción arqueológica; no signos claniles o pintura ceremonial inventada.",
+    "Variar escala y cámara sin perder recortes: caras planas, suelo de hojas y props de papel en todas las tomas."
+  ],
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/creacion-wayuu.json",
+    "content_sha256": "8e39659bf2e7796d5f813cd744fdceb278176576c5d9d3c1feb76db182075b8f",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "Chaves1946 printed311/PDF7; texto de creación dentro de Serranías. Releído 2026-09-07. No trasladar el viaje y petrificación a este video.",
+    "source_read_at": "2026-09-07",
+    "source2_url": "https://ve.scielo.org/scielo.php?pid=S1315-95182009000400006&script=sci_arttext",
+    "source2_locator": "Apartado2, relación Juyá-Mma-vegetación; no trasladar danza o ritos a escenas.",
+    "nature": "Adaptación del relato compuesto público: motivos de varias líneas señalados en investigación, no versión ancestral única.",
+    "chosen_variant": "Cavidad; no barro, diluvio o canoa.",
+    "visual_license": "Pliegues que se abren, semillas con sombras futuras y luz convertida en camino son traducciones editoriales. No símbolos Wayuu tradicionales ni explicación científica.",
+    "events": [
+      {
+        "id": "encuentro",
+        "provenance": "historical_core",
+        "source": "carrasquero_finol_relation",
+        "required": true,
+        "action": "Mma, la Tierra, esperaba. Juyá cruzó el cielo con la lluvia, y el agua abrió espacio para la vida entre los pliegues secos."
+      },
+      {
+        "id": "orden",
+        "provenance": "historical_core",
+        "source": "chaves_1946_p311",
+        "required": true,
+        "action": "Mareiwa apartó el mar y llamó a las aves. Sobre la tierra que aparecía, pavas, turpiales y palomas encontraron frutos."
+      },
+      {
+        "id": "siembra",
+        "provenance": "historical_core",
+        "source": "chaves_1946_p311_and_public_composite",
+        "required": true,
+        "action": "Al volar, dispersaron semillas. Donde caían, se extendían cardones, tunas y arbustos: alimento que la península guardaría para los veranos."
+      },
+      {
+        "id": "cavidad",
+        "provenance": "historical_core",
+        "source": "chaves_1946_p311_selected_cavity_variant",
+        "required": true,
+        "action": "Después, Mareiwa hizo surgir a las primeras personas desde una gran cavidad. Salieron al territorio y recibieron la palabra para reconocerse."
+      },
+      {
+        "id": "arachi",
+        "provenance": "historical_core",
+        "source": "chaves_1946_p311",
+        "required": true,
+        "action": "Junto a las piedras de Arachí, nombró los clanes y distribuyó lugares y animales. Compartir el origen no borraba las diferencias."
+      },
+      {
+        "id": "acuerdos",
+        "provenance": "published_editorial_expansion",
+        "source": "public_creacion_composite",
+        "required": true,
+        "action": "La sequía y los desacuerdos no desaparecieron. Entre familias habría que escucharse, reparar el daño y aprender a cuidar lo compartido."
+      },
+      {
+        "id": "hogares",
+        "provenance": "published_editorial_expansion",
+        "source": "public_creacion_composite",
+        "required": true,
+        "action": "Llegó la primera noche. Cada familia encendió un fuego. Entre aquellas luces quedaban grandes distancias y caminos todavía sin huellas."
+      },
+      {
+        "id": "alternancia",
+        "provenance": "published_editorial_expansion",
+        "source": "public_creacion_composite",
+        "required": true,
+        "action": "Juyá siguió viajando. Mma reverdeció donde llovía y guardó semillas donde no. El mundo comenzaba; cada generación tendría que aprender a habitarlo."
+      }
+    ]
+  },
+  "research_status": "local_full_narrative_read_primary_passage_and_relation_rechecked_live",
+  "source_verified_live": {
+    "date": "2026-09-07",
+    "method": "Neon read-only SHA-256",
+    "matches": true
+  },
+  "duration": {
+    "target_seconds": 96,
+    "measured": false,
+    "voice_words": 168
+  },
+  "story_thesis": "El origen no entrega un mundo terminado: la vida se sostiene entre diferencias, estaciones y cuidado.",
+  "inventory": [
+    {
+      "id": "mma",
+      "type": "unseen_agent",
+      "desc": "Mma is the living EARTH, conveyed only by broad ochre cut-paper strata that receive water and hold seeds; never a female body, face, hand or goddess statue.",
+      "model_ids": [
+        "mma__presence_model"
+      ]
+    },
+    {
+      "id": "juya",
+      "type": "unseen_agent",
+      "desc": "Juyá is the travelling RAIN, represented by mineral-blue and slate cut-paper cloud layers and fine separated paper rain strips; no humanoid, face or horse.",
+      "model_ids": [
+        "juya__presence_model"
+      ]
+    },
+    {
+      "id": "mareiwa",
+      "type": "unseen_agent",
+      "desc": "Mareiwa orders territory, vegetation and social beginnings. Agency without visible body, giant hand, beard, creator statue or rays from a person.",
+      "model_ids": [
+        "mareiwa__presence_model"
+      ]
+    },
+    {
+      "id": "territorio",
+      "type": "environment",
+      "desc": "Broad dry Guajira paper terrain and low folded hills; full-bleed immersive sheets at many distances, low thorn shrubs where scene permits. No foreign desert landmarks or agave rosettes.",
+      "model_ids": [
+        "territorio_alta_guajira__environment_model"
+      ]
+    },
+    {
+      "id": "mar",
+      "type": "environment",
+      "desc": "Sea built from overlapping thin turquoise and pale blue CUT-PAPER water sheets and white paper rims, NO photoreal water.",
+      "model_ids": [
+        "costa_mar_guajira__environment_model"
+      ]
+    },
+    {
+      "id": "semillas",
+      "type": "prop",
+      "desc": "Small plain ochre seeds of folded paper, inside ground seams or below fruit-eating birds as specified; never glowing jewels, symbols or decorative particles.",
+      "model_ids": []
+    },
+    {
+      "id": "plantas",
+      "type": "plants",
+      "desc": "Vegetation chosen from the Bible: clustered narrow columnar cardons rising from base with iguaraya fruit, flat oval tuna pads and low broad trupillo branches with tiny cut leaflets. All flat paper constructions, no saguaro or rosettes.",
+      "model_ids": [
+        "cardon_iguaraya__botanical_sheet",
+        "tuna_higo__botanical_sheet",
+        "trupillo__botanical_sheet"
+      ]
+    },
+    {
+      "id": "pava",
+      "type": "animal",
+      "desc": "A small brown long-tailed guan/pava, dark head and modest beak, layered flat brown paper wings; no turkey fan, peacock or eagle.",
+      "model_ids": [
+        "pava_semillera__identity_sheet"
+      ]
+    },
+    {
+      "id": "turpial",
+      "type": "animal",
+      "desc": "Small orange-yellow and black turpial songbird with pointed beak and small white wing patch; flat feather silhouettes, no macaw.",
+      "model_ids": [
+        "turpial_semillero__identity_sheet"
+      ]
+    },
+    {
+      "id": "paloma",
+      "type": "animal",
+      "desc": "Small grey-brown dove with rounded head, short beak and compact tapered tail, flat paper wing shapes.",
+      "model_ids": [
+        "paloma_semillera__identity_sheet"
+      ]
+    },
+    {
+      "id": "cavidad",
+      "type": "environment",
+      "desc": "Low broad irregular rock cavity, thick INTERNAL torn paper strata and gently opening lower sheet. Not built portal, stone stairs, anatomical opening or clay workshop.",
+      "model_ids": [
+        "cavidad_origen__spatial_model"
+      ]
+    },
+    {
+      "id": "arachi",
+      "type": "environment",
+      "desc": "Arachí interpreted as a clearing with large uninscribed folded-paper rocks and diverging land routes. No invented clan brands, petroglyphs, altar, map or exact reconstructed archaeological site.",
+      "model_ids": [
+        "arachi__spatial_model"
+      ]
+    },
+    {
+      "id": "mujer_arcilla",
+      "type": "person",
+      "desc": "Adult Wayuu woman, long dark flat paper hair, plain closed loose ankle-length terracotta manta/Wayuushein with wide sleeves, plain cream neckline, waireña sandals. No jewelry, embroidery or face paint in this model. Almost-flat face, tiny eye.",
+      "model_ids": [
+        "primeros_wayuu__group_grammar"
+      ]
+    },
+    {
+      "id": "mujer_salvia",
+      "type": "person",
+      "desc": "Younger ADULT Wayuu woman, long dark hair, loose ankle-length sage manta with plain small cream neckline panel, clay sandals; flat paper profile, no cinched waist or ornaments.",
+      "model_ids": [
+        "primeros_wayuu__group_grammar"
+      ]
+    },
+    {
+      "id": "mujer_mayor",
+      "type": "person",
+      "desc": "Older adult Wayuu woman, charcoal-violet loose full manta and LOW WIDE circular pale-paper womu hat, charcoal sandals; small flat paper face, not wrinkled sculpture.",
+      "model_ids": [
+        "primeros_wayuu__group_grammar"
+      ]
+    },
+    {
+      "id": "hombre_adulto",
+      "type": "person",
+      "desc": "Adult Wayuu man, plain sand long-sleeve shirt covering torso, two separate narrow opaque ochre wayuco panels front/back ending above knees, charcoal si'ira sash and clay sandals, dark flat hair; no jewelry.",
+      "model_ids": [
+        "primeros_wayuu__group_grammar"
+      ]
+    },
+    {
+      "id": "hombre_mayor",
+      "type": "person",
+      "desc": "Older adult Wayuu man, long plain ivory masculine manta over opaque dark wayuco and charcoal sandals, short grey flat hair; small flat face. Not a divine creator or giant.",
+      "model_ids": [
+        "primeros_wayuu__group_grammar"
+      ]
+    },
+    {
+      "id": "nino",
+      "type": "person",
+      "desc": "Wayuu boy with natural child proportions, cream short shirt fully covering torso, TWO separate narrow opaque indigo wayuco panels front/back ending above knees, ochre sash and clay sandals, short dark cut-paper hair. Fully clothed, no nakedness or adult-sized head.",
+      "model_ids": [
+        "primeros_wayuu__group_grammar"
+      ]
+    },
+    {
+      "id": "fogon",
+      "type": "prop",
+      "desc": "Small domestic first hearth, low modest paper flames of layered amber/orange silhouettes, no photographic fire or ceremony. Each household fire separated by much terrain.",
+      "model_ids": [
+        "fogon_primero__object_sheet"
+      ]
+    },
+    {
+      "id": "cuenco",
+      "type": "prop",
+      "desc": "Plain small clay-colored bowl assembled from thin curved PAPER with visible overlapping rim, holds modest seeds or water, no ceramic rendering or decorative signs.",
+      "model_ids": []
+    },
+    {
+      "id": "animales",
+      "type": "animals",
+      "desc": "Small distant domestic animals of the territory named in the composite story; subdued paper silhouettes, no clan brand or fantasy animal.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "costa_mar_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+      "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "mareiwa__presence_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/mareiwa__presence_model--canon.jpeg",
+      "sha256": "35e2e8ffc15221a372ec3ab5aa8c08192b860b28bc97568db0d02cec62aa2576",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "juya__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/juya__presence_model--canon.jpeg",
+      "sha256": "178b0b7c9fd724ef7e9168e29232aa1576d4777baaf37faa1690419cecbab9f9",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "mma__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/mma__presence_model--canon.jpeg",
+      "sha256": "99473ea5e38e7d1a0cfe588b281524480a0d82f960e3af548755a18c2c9cf4a9",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "cardon_iguaraya__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/cardon_iguaraya__botanical_sheet--canon.jpeg",
+      "sha256": "673a1997964cdaad131c1b8fecca96ad7d3e471840225fabbf3a57c3f21128c5",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "tuna_higo__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/tuna_higo__botanical_sheet--canon.jpeg",
+      "sha256": "b072fb70bb32d03bb27d15019a73b079b9adcd5a0bc414710c198d7fa2fe7e06",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "trupillo__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/trupillo__botanical_sheet--canon.jpeg",
+      "sha256": "5235c64ae58510f8a0be14484bb20cd8d10e6ba7f9c4e27f43947b5bbb959577",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "pava_semillera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pava_semillera__identity_sheet--canon.jpeg",
+      "sha256": "8e974947d4e9336af248b90349478eacbfaeaff16fa332cd7292e76a9ca1677c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "turpial_semillero__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/turpial_semillero__identity_sheet--canon.jpeg",
+      "sha256": "720413572a8a69f519d91ae9abd4811af0dca98a88e0aa9282b0f8ce9807e06f",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "paloma_semillera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/paloma_semillera__identity_sheet--canon.jpeg",
+      "sha256": "dd070bac748de96ae970ecd0e643b5c767d2887c9d102a468393db2545a35a1c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "arachi__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-03/arachi__spatial_model--canon.jpeg",
+      "sha256": "ab8cd6084b542257307e0ca66d814033af26168992d4a6077dc275e2f16aa1f9",
+      "qa_status": "PASS_AFTER_CORRECTION_03"
+    },
+    {
+      "model_id": "primeros_wayuu__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-02/primeros_wayuu__group_grammar--canon.jpeg",
+      "sha256": "d8de2021bdc7cb22c2f271f872f442b6ec6dfa4de717c95ced8cd5c9c5c968a5",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "cavidad_origen__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/cavidad_origen__spatial_model--canon.jpeg",
+      "sha256": "0d6f9bd074cd115c959a053495a065f589c68bf9690ebf96539a58bcb7a58448",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "fogon_primero__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/fogon_primero__object_sheet--canon.jpeg",
+      "sha256": "5081475042fcd6fb56073a0c005a40775603b2e0bef8e8fd17176a178d3d5b08",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "reference_review": {
+    "date": "2026-09-07",
+    "method": "Tres trípticos del mismo mito inspeccionados directamente, más modelos de primeros Wayuu, Mma y Juyá; conservar siluetas/material, no volúmenes de caras.",
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-03-entrada/entrada.jpeg",
+        "sha256": "e025cefe6b17cee7abd219ae77fe1bb4774857000a706eb395a33d45d54eb550",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/acto.jpeg",
+        "sha256": "5574524c935184c33f004ca86180032f4d21fdc5192faad066815dcc5ca4b6c4",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/huella.jpeg",
+        "sha256": "5a244b3fd3cfddaabf5f10fb728cc01bd57091fda1473d7441c66af0a08feb91",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "time_seconds": [
+        0,
+        12
+      ],
+      "voice_over": "Mma, la Tierra, esperaba. Juyá cruzó el cielo con la lluvia, y el agua abrió espacio para la vida entre los pliegues secos.",
+      "word_count": 23,
+      "voice_provenance": "historical_core",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "encuentro"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "La tierra espera",
+          "time_seconds": [
+            0,
+            6
+          ],
+          "visual": "Low wide environmental view across an immense unfinished dry cut-paper land. Broad ochre sheets rise in shallow loose folds, tiny closed paper seeds visible only in a nearby internal seam. At far horizon one travelling slate-and-mineral-blue paper rain cloud approaches, no rain touching foreground yet. Layered pale sky, no humans or animals. Earth is active folded matter, never a body.",
+          "entity_ids": [
+            "mma",
+            "juya",
+            "territorio",
+            "semillas"
+          ],
+          "event_ids": [
+            "encuentro"
+          ],
+          "angle": "low_wide",
+          "depth_planes": [
+            "wide foreground ochre sheet edge",
+            "open internal seed seam",
+            "dryland folds",
+            "small distant cloud"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": null,
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Earth holds seeds before the rain",
+            "impossible_behavior": "One connected soil-paper layer lifts itself to shelter seeds below while the surrounding land lies dry.",
+            "narrative_effect": "Living ground keeps latent life.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "wide foreground ochre sheet edge; open internal seed seam; dryland folds; small distant cloud",
+            "visible_test": "Visible raised internal sheet with air beneath and small seeds inside, not an exposed craft base.",
+            "event_ids": [
+              "encuentro"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b1b",
+          "title": "La lluvia encuentra tierra",
+          "time_seconds": [
+            6,
+            12
+          ],
+          "visual": "Wide oblique view of a moving rain front crossing dry Guajira. Fine blue PAPER STRIPS of rain fall from layered slate paper cloud onto a small middle-distance patch. EXACTLY THERE the ochre earth opens several green-edged internal folds revealing small cut-paper shoots; dry foreground and far sides stay ochre. No lush jungle, glass liquid or humans.",
+          "entity_ids": [
+            "mma",
+            "juya",
+            "territorio",
+            "semillas",
+            "plantas"
+          ],
+          "event_ids": [
+            "encuentro"
+          ],
+          "angle": "oblique_wide",
+          "depth_planes": [
+            "dry ochre sheets",
+            "raised green-edged seam",
+            "separated paper rain strips",
+            "slate cloud and dry far hill"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Rain reaches dry earth",
+            "impossible_behavior": "A soil sheet unfolds on contact with rain and reveals stored green shoots.",
+            "narrative_effect": "Creation responds locally, not through an explosion.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "dry ochre sheets; raised green-edged seam; separated paper rain strips; slate cloud and dry far hill",
+            "visible_test": "Blue rain, newly open green folds and adjacent closed dry land all visible.",
+            "event_ids": [
+              "encuentro"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "time_seconds": [
+        12,
+        24
+      ],
+      "voice_over": "Mareiwa apartó el mar y llamó a las aves. Sobre la tierra que aparecía, pavas, turpiales y palomas encontraron frutos.",
+      "word_count": 20,
+      "voice_provenance": "historical_core",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "orden"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "El mar deja sitio",
+          "time_seconds": [
+            12,
+            18
+          ],
+          "visual": "Very wide elevated oblique view of the origin coast. Several broad thin turquoise PAPER sea layers visibly peel and roll BACK from ochre paper land into the far horizon, like receding water made of sheets. A restrained white paper water rim, newly revealed low land in middle ground. No people, sling, giant hand, boats or biblical wall of water. Ordered gradual emergence, rich curves and air-separated planes.",
+          "entity_ids": [
+            "mareiwa",
+            "mar",
+            "territorio"
+          ],
+          "event_ids": [
+            "orden"
+          ],
+          "angle": "elevated_wide",
+          "depth_planes": [
+            "low ochre shore lip",
+            "one curled turquoise retreating sheet",
+            "exposed coastal land",
+            "far layered blue sea"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Sea covering land",
+            "impossible_behavior": "The sea retracts as its paper layers roll away from the newly exposed land.",
+            "narrative_effect": "Mareiwa makes habitable territory available.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "low ochre shore lip; one curled turquoise retreating sheet; exposed coastal land; far layered blue sea",
+            "visible_test": "Retreating sea sheets and newly exposed ochre surface clearly distinct.",
+            "event_ids": [
+              "orden"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b2b",
+          "title": "Las aves comen",
+          "time_seconds": [
+            18,
+            24
+          ],
+          "visual": "Wide environmental grove of low paper shrubs with a few small dark fruits. Exactly one brown pava near ground, one orange-black turpial perched on a fine branch and one grey-brown dove lower down, all small in the scene. One bird reaches a fruit, ordinary feeding, no magic beams. Sea a tiny pale layered strip far behind. Entire vegetation made of flat cut-paper stems and leaves, no realistic foliage.",
+          "entity_ids": [
+            "pava",
+            "turpial",
+            "paloma",
+            "plantas",
+            "territorio"
+          ],
+          "event_ids": [
+            "orden"
+          ],
+          "angle": "branch_oblique",
+          "depth_planes": [
+            "close cropped flat branch",
+            "three birds at different heights",
+            "low fruiting shrubs",
+            "dry coast distance"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "time_seconds": [
+        24,
+        36
+      ],
+      "voice_over": "Al volar, dispersaron semillas. Donde caían, se extendían cardones, tunas y arbustos: alimento que la península guardaría para los veranos.",
+      "word_count": 20,
+      "voice_provenance": "historical_core",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "siembra"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Sembrar en vuelo",
+          "time_seconds": [
+            24,
+            30
+          ],
+          "visual": "Wide upward-oblique view across dry folded-paper terrain. Three small birds—a brown pava, an orange-black turpial and a grey-brown dove—fly at three different distances, not giant foreground birds. A FEW tiny ochre seeds descend below the farther birds toward ground. On the ground under them the seeds' thin indigo shadows already take the forms of clustered cardons and low branching shrubs, but actual plants there are still tiny. This editorial temporal contradiction is quiet, physical cut-paper shadows connected to seeds, no glowing particles, seed lasers, ribbons or magic bird plumage.",
+          "entity_ids": [
+            "pava",
+            "turpial",
+            "paloma",
+            "semillas",
+            "territorio",
+            "plantas"
+          ],
+          "event_ids": [
+            "siembra"
+          ],
+          "angle": "upward_oblique",
+          "depth_planes": [
+            "near ground seam",
+            "seed shadows on land",
+            "birds at separate depths",
+            "pale sky and hills"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Seeds dispersed by feeding birds",
+            "impossible_behavior": "The seeds' shadows already show the shapes of future dryland plants.",
+            "narrative_effect": "Small dispersal carries a future source of food.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "near ground seam; seed shadows on land; birds at separate depths; pale sky and hills",
+            "visible_test": "A few seeds over connected plant-shaped ground shadows while real plants remain small.",
+            "event_ids": [
+              "siembra"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b3b",
+          "title": "Alimento en el territorio",
+          "time_seconds": [
+            30,
+            36
+          ],
+          "visual": "Environmental ground-level wide view through tall narrow PAPER cardon columns rising as a group from the base, with a few small fruits; beyond, flat oval tuna pads and a low broad branching paper trupillo. Tiny pava on ground and distant turpial. Broad layered soil slopes, warm sunlight, no people. Ordinary consequence of the sowing, no new anomaly or botanical labels. The plants are not a specimen sheet but a living territory with multiple occluded distances.",
+          "entity_ids": [
+            "plantas",
+            "territorio",
+            "pava",
+            "turpial"
+          ],
+          "event_ids": [
+            "siembra"
+          ],
+          "angle": "low_through_plants",
+          "depth_planes": [
+            "cropped flat cardon cluster",
+            "small fruit and bird",
+            "tuna pads and low trupillo",
+            "far land layers"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "time_seconds": [
+        36,
+        48
+      ],
+      "voice_over": "Después, Mareiwa hizo surgir a las primeras personas desde una gran cavidad. Salieron al territorio y recibieron la palabra para reconocerse.",
+      "word_count": 21,
+      "voice_provenance": "historical_core",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "cavidad"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Se abre el umbral",
+          "time_seconds": [
+            36,
+            42
+          ],
+          "visual": "Extreme wide dawn view toward one low broad irregular natural cavity. Exactly SIX complete clothed people just outside its opening in a gently spreading group, all at most 14% frame height, not a lineup. Woman terracotta and boy slightly forward, sage woman and sand-shirt man behind, older violet-clothed woman with low broad hat and ivory-manta older man last, all visible and distinct. ONE broad lower ochre paper stratum curls up at the SIDE of their route, opening itself, never stairs or trapping bodies. No clay figures, birth anatomy, creator body or heavenly light.",
+          "entity_ids": [
+            "mujer_arcilla",
+            "mujer_salvia",
+            "mujer_mayor",
+            "hombre_adulto",
+            "hombre_mayor",
+            "nino",
+            "cavidad",
+            "territorio",
+            "mareiwa"
+          ],
+          "event_ids": [
+            "cavidad"
+          ],
+          "angle": "elevated_extreme_wide",
+          "depth_planes": [
+            "broad dry foreground sheets",
+            "six small people",
+            "sideways curling cavity stratum",
+            "low hills and pale dawn"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Rock cavity and emerging people",
+            "impossible_behavior": "The threshold opens one continuous mineral-paper layer by itself.",
+            "narrative_effect": "People begin from earth without mixing the clay variant.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "broad dry foreground sheets; six small people; sideways curling cavity stratum; low hills and pale dawn",
+            "visible_test": "Six distinct complete figures and one curling side stratum, no stairs or sculptor.",
+            "event_ids": [
+              "cavidad"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b4b",
+          "title": "Mirarse por primera vez",
+          "time_seconds": [
+            42,
+            48
+          ],
+          "visual": "Wide reverse from inside the paper cavity looking out over pale dawn land. Close ceiling edge and side stratum frame—not a decorative border—the SAME SIX complete people now outside, arranged in three loose pairs looking outward and toward one another. Terracotta woman with boy; sage woman with sand-shirt man; older violet woman in low broad hat with ivory older man. No extra people in darkness. Ordinary first recognition, no written words or glow from mouths. Keep faces tiny almost-flat profiles.",
+          "entity_ids": [
+            "mujer_arcilla",
+            "mujer_salvia",
+            "mujer_mayor",
+            "hombre_adulto",
+            "hombre_mayor",
+            "nino",
+            "cavidad",
+            "territorio"
+          ],
+          "event_ids": [
+            "cavidad"
+          ],
+          "angle": "interior_wide_reverse",
+          "depth_planes": [
+            "close layered roof stratum",
+            "side lip with air gap",
+            "three pairs on land",
+            "dawn plain"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Retirada suave desde el umbral",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "time_seconds": [
+        48,
+        60
+      ],
+      "voice_over": "Junto a las piedras de Arachí, nombró los clanes y distribuyó lugares y animales. Compartir el origen no borraba las diferencias.",
+      "word_count": 21,
+      "voice_provenance": "historical_core",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "arachi"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Nombres y destinos",
+          "time_seconds": [
+            48,
+            54
+          ],
+          "visual": "Extreme wide view of Arachí as several large folded-paper rocks around an open clearing. SAME SIX small complete people stand in three loose pairs around—not worshipping—the rocks. Four narrow ochre ground routes diverge from the clearing; one short section gently UNFOLDS from a continuous land sheet with air and shadow, an editorial image of distinct futures. NO marks, clan emblems, petroglyphs, letters, altar, god body or beams. The grey-haired man is ordinary and not centered as creator.",
+          "entity_ids": [
+            "mujer_arcilla",
+            "mujer_salvia",
+            "mujer_mayor",
+            "hombre_adulto",
+            "hombre_mayor",
+            "nino",
+            "arachi",
+            "territorio",
+            "mareiwa"
+          ],
+          "event_ids": [
+            "arachi"
+          ],
+          "angle": "elevated_clearing",
+          "depth_planes": [
+            "large cropped unmarked paper rock",
+            "six small figures",
+            "diverging paper routes",
+            "distant dry ground"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "People receive names and territories at rocks",
+            "impossible_behavior": "One of the distinct routes unfolds materially from the ground.",
+            "narrative_effect": "A common origin opens different ways to inhabit.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "large cropped unmarked paper rock; six small figures; diverging paper routes; distant dry ground",
+            "visible_test": "Unmarked rocks, separate routes and modest lifted connected route edge; no printed map.",
+            "event_ids": [
+              "arachi"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b5b",
+          "title": "No todos el mismo camino",
+          "time_seconds": [
+            54,
+            60
+          ],
+          "visual": "Wide lateral view from low paper rocks across three small family pairs walking in different directions from Arachí, with only two or three tiny domestic animals far to one side. No property marks or uniforms. Full diverse clothing stays consistent; sunlight and land ordinary, no fresh prodigy. Natural separation, not parade, not exile. Thin paper silhouettes and stacked ground planes remain legible.",
+          "entity_ids": [
+            "mujer_arcilla",
+            "mujer_salvia",
+            "mujer_mayor",
+            "hombre_adulto",
+            "hombre_mayor",
+            "nino",
+            "arachi",
+            "territorio",
+            "animales"
+          ],
+          "event_ids": [
+            "arachi"
+          ],
+          "angle": "lateral_wide",
+          "depth_planes": [
+            "near rock silhouette",
+            "nearest pair on one path",
+            "other pairs and tiny animals",
+            "dry distant folds"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "time_seconds": [
+        60,
+        72
+      ],
+      "voice_over": "La sequía y los desacuerdos no desaparecieron. Entre familias habría que escucharse, reparar el daño y aprender a cuidar lo compartido.",
+      "word_count": 21,
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "acuerdos"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "La palabra entre familias",
+          "time_seconds": [
+            60,
+            66
+          ],
+          "visual": "Wide quiet clearing beside unmarked rocks. Exactly TWO adults: the sage-clothed woman and the sand-shirt man sit at a respectful distance on simple bare paper ground facing each other; one plain small PAPER bowl lies between them. Open hands low, listening rather than accusation. No formal ritual, chief throne or comic speech bubble. Ordinary bright day, low shrubs and layered ochre terrain. No miraculous object, no night. All faces almost flat and small.",
+          "entity_ids": [
+            "mujer_salvia",
+            "hombre_adulto",
+            "arachi",
+            "territorio",
+            "cuenco"
+          ],
+          "event_ids": [
+            "acuerdos"
+          ],
+          "angle": "oblique_wide_seated",
+          "depth_planes": [
+            "thin cut shrub",
+            "plain bowl between figures",
+            "two complete seated adults",
+            "rock and hills"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b6b",
+          "title": "Cuidar algo pequeño",
+          "time_seconds": [
+            66,
+            72
+          ],
+          "visual": "Wide low environmental view beside a shallow ground seam, older violet-manta woman with LOW WIDE womu hat and boy kneel beside a few dry seeds. The woman's hand rests near—not glowing over—the seed, boy watches. ONE closed seed casts a branching future-plant-shaped cut-paper shadow across the adjacent ground, no real tree above it. Not a macro or isolated square symbol: both whole figures, paper terrain and distant shrubs remain visible. Interpretation of learning and future care, not ritual or supernatural power of elder.",
+          "entity_ids": [
+            "mujer_mayor",
+            "nino",
+            "semillas",
+            "territorio",
+            "plantas"
+          ],
+          "event_ids": [
+            "acuerdos"
+          ],
+          "angle": "low_environmental_group",
+          "depth_planes": [
+            "near seed and attached cut shadow",
+            "whole seated elder and boy",
+            "ground seam",
+            "low paper shrubs"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Seeds cared for and knowledge passed on",
+            "impossible_behavior": "One closed seed casts the shadow of a not-yet-grown plant.",
+            "narrative_effect": "Care concerns a future not yet visible.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "near seed and attached cut shadow; whole seated elder and boy; ground seam; low paper shrubs",
+            "visible_test": "Closed seed and connected branching shadow in environment, not an existing tree shadow.",
+            "event_ids": [
+              "acuerdos"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "time_seconds": [
+        72,
+        84
+      ],
+      "voice_over": "Llegó la primera noche. Cada familia encendió un fuego. Entre aquellas luces quedaban grandes distancias y caminos todavía sin huellas.",
+      "word_count": 20,
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "hogares"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Tres fuegos",
+          "time_seconds": [
+            72,
+            78
+          ],
+          "visual": "Extreme wide FIRST NIGHT over folded indigo Guajira land. Exactly THREE modest amber cut-paper hearths at very different distances; near-middle fire has ONLY terracotta woman and boy, tiny full silhouettes at 12% frame height. Other two fires far away, no other people visible. A narrow amber ground strip begins where the nearest fire lights soil and unfolds toward the second fire, one short segment raised with real AIR beneath, unfinished at the far end. Light becomes walkable paper land, not laser or loose ribbon. No houses, ceremonial objects or star confetti.",
+          "entity_ids": [
+            "mujer_arcilla",
+            "nino",
+            "fogon",
+            "territorio"
+          ],
+          "event_ids": [
+            "hogares"
+          ],
+          "angle": "elevated_night_extreme_wide",
+          "depth_planes": [
+            "broad dark paper ridge",
+            "small nearest family and hearth",
+            "part-raised amber path",
+            "two distant hearths and hills"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Separated family hearths light the night",
+            "impossible_behavior": "The light between two hearths becomes a partly unfolded material path.",
+            "narrative_effect": "Habitation begins relationships without erasing distance.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "broad dark paper ridge; small nearest family and hearth; part-raised amber path; two distant hearths and hills",
+            "visible_test": "One connected amber land strip with air gap between two remote fires.",
+            "event_ids": [
+              "hogares"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b7b",
+          "title": "La noche habitada",
+          "time_seconds": [
+            78,
+            84
+          ],
+          "visual": "Wide low reverse from beside a DIFFERENT modest fire. Exactly four small complete people: sage woman and sand-shirt man on one side, older violet woman in low wide hat and ivory older man on the other, in conversation, no ceremony. Far land shows two other tiny hearths including the earlier family site without readable people. Night sky calm deep blue with no face or celestial symbols. One paper flame is layered flat amber shapes, no real fire or smoke. Quiet lived pause after the prodigy.",
+          "entity_ids": [
+            "mujer_salvia",
+            "hombre_adulto",
+            "mujer_mayor",
+            "hombre_mayor",
+            "fogon",
+            "territorio"
+          ],
+          "event_ids": [
+            "hogares"
+          ],
+          "angle": "low_night_reverse",
+          "depth_planes": [
+            "cropped dark ground sheet",
+            "small flat fire",
+            "four distant complete people",
+            "two tiny hearths and hills"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "time_seconds": [
+        84,
+        96
+      ],
+      "voice_over": "Juyá siguió viajando. Mma reverdeció donde llovía y guardó semillas donde no. El mundo comenzaba; cada generación tendría que aprender a habitarlo.",
+      "word_count": 22,
+      "voice_provenance": "published_editorial_expansion",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa clara y sobria, pausas; no sincronía labial",
+      "event_ids": [
+        "alternancia"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "La lluvia vuelve por partes",
+          "time_seconds": [
+            84,
+            90
+          ],
+          "visual": "Very wide DAYLIGHT view of the same terrain after the first inhabited night, no night pockets or portals. A travelling slate PAPER cloud rains fine blue strips onto one distant patch, where green paper layers OPEN and become low dryland vegetation; nearest and farther unwatered land remains folded ochre with closed seeds sheltered in a small foreground internal seam. No humans, verdant jungle, worldwide flood or abundance everywhere. Real air between rainfall strips, ground folds and distant cloud.",
+          "entity_ids": [
+            "mma",
+            "juya",
+            "territorio",
+            "semillas",
+            "plantas"
+          ],
+          "event_ids": [
+            "alternancia"
+          ],
+          "angle": "elevated_weather_wide",
+          "depth_planes": [
+            "dry seed seam",
+            "unwatered broad paper folds",
+            "small unfolding green patch and rain",
+            "travelling cloud over low hills"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte por relación de materia, gesto o dirección; no interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Seasonal rain visits some places and misses others",
+            "impossible_behavior": "Only wetted land opens green internal leaves while dry ground stays folded.",
+            "narrative_effect": "Life depends on alternation, not finished universal abundance.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "dry seed seam; unwatered broad paper folds; small unfolding green patch and rain; travelling cloud over low hills",
+            "visible_test": "Wet unfolded patch and closed dry seed seam both visible.",
+            "event_ids": [
+              "alternancia"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b8b",
+          "title": "Todavía por habitar",
+          "time_seconds": [
+            90,
+            96
+          ],
+          "visual": "Wide oblique bright morning view on land near a low paper trupillo. Exactly terracotta woman and boy walk toward the distance while the older violet woman in low wide hat remains beside one closed seed near the path, all small complete figures. The small seed casts a long connected flat branching tree-shaped paper shadow although NO tree occupies that exact position; nearby real low shrub casts its own ordinary shadow separately. A blue paper cloud has moved far away. Warm ochre foreground, a few green folds farther back, unending land. Circular echo of seed waiting, not night-in-water, not symbolic studio image.",
+          "entity_ids": [
+            "mujer_arcilla",
+            "nino",
+            "mujer_mayor",
+            "territorio",
+            "semillas",
+            "plantas",
+            "juya"
+          ],
+          "event_ids": [
+            "alternancia"
+          ],
+          "angle": "oblique_departure_wide",
+          "depth_planes": [
+            "seed and future tree shadow",
+            "small elder near path",
+            "woman and child walking",
+            "green folds and departing far cloud"
+          ],
+          "shot_scale": "wide_complete_figures_small",
+          "continuity_from": "b8a",
+          "transition_to_next": "Sostener cierre sin texto final.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "A new generation walks into an unfinished land",
+            "impossible_behavior": "A closed seed still projects its future plant as shadow.",
+            "narrative_effect": "Creation continues as a possibility, not a finished possession.",
+            "agency": "La agencia sigue el relato; no atribuir control de tierra o lluvia a gestos humanos. Presencias no corporales de Mareiwa, Mma y Juyá.",
+            "physical_translation": "seed and future tree shadow; small elder near path; woman and child walking; green folds and departing far cloud",
+            "visible_test": "Small closed seed with attached future shadow and full figures in wide living terrain.",
+            "event_ids": [
+              "alternancia"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento corto lateral o avance muy leve que revele capas sin cambiar encuadre.",
+            "allowed": "Movimientos posteriores separados; no generar animación en esta fase.",
+            "forbidden": "No morphing, cambio de ropa, personas nuevas, material realista ni poderes nuevos.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ],
+  "permissions": {
+    "triptych_changes": false,
+    "image_calls_this_stage": true,
+    "animation": false,
+    "audio": false,
+    "publication": false
+  },
+  "handoff": "Generar en tandas cortas y verificar constancia papercut contra inicio; no aceptar realismo material aunque narración y profundidad funcionen. Conservar todos los intentos."
+}

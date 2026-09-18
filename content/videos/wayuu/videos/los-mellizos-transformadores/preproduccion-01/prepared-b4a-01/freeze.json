@@ -1,0 +1,132 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:10:15.004Z",
+  "plan": "content/videos/wayuu/videos/los-mellizos-transformadores/preproduccion-01/plan.json",
+  "plan_sha256": "04a65ec828acbbe5e02e3ff1c0db42edf80e8e663ca86ad31f023f7ace4f213f",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 195,
+    "estimated_seconds": 128,
+    "generated": 6,
+    "pending": 10,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 54,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b4a",
+      "prompt_file": "content/videos/wayuu/videos/los-mellizos-transformadores/preproduccion-01/prepared-b4a-01/prompts/b4a.txt",
+      "prompt_sha256": "4e2b08242f8d92a26cfea4fcf8f5a6e9590c2e2a0395154b38d0709e78ea37d1",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b3a",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3a.jpeg",
+          "sha256": "0add5f8f694931fceaaa7ed697c7c0bdcda0ee6aff5db131e5621c52ac5c7a8e",
+          "approved": true,
+          "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b3b",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3b.jpeg",
+          "sha256": "6d51d0333b73c2a173dc291b416de59594cb1c8df72e99cc34900afdb9fbe675",
+          "approved": true,
+          "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+          "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+          "approved": true,
+          "role": "Fijar el modelo canónico tumajule__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+          "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+          "approved": true,
+          "role": "Fijar el modelo canónico tumajule__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-mellizos-transformadores",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+          "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+          "approved": true,
+          "role": "Fijar el modelo canónico peeliyuu__identity_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b4a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1a.jpeg",
+      "sha256": "5abc44132cd798e29790766ef1ccf4765ce6032f81c3c01cb2bf29d8a0d11492"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b1b.jpeg",
+      "sha256": "3518136255a584ec14cfcb0c8088005a14792bf7ee3b19d66c8489fbeb2a21c0"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2a.jpeg",
+      "sha256": "65c3fe950555ebea850796c9c0c4ad2326dbd46b69a7c05f38623b49b9f11b71"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b2b.jpeg",
+      "sha256": "9bcddbebff7160c79d6754231e3f736a9464b58158f48acd9d679eccd8502772"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3a.jpeg",
+      "sha256": "0add5f8f694931fceaaa7ed697c7c0bdcda0ee6aff5db131e5621c52ac5c7a8e"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-mellizos-transformadores-preproduccion-01/b3b.jpeg",
+      "sha256": "6d51d0333b73c2a173dc291b416de59594cb1c8df72e99cc34900afdb9fbe675"
+    }
+  ],
+  "no_api_calls": true
+}

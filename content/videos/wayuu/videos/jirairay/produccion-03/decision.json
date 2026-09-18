@@ -1,0 +1,22 @@
+{
+  "schema": "wayuu-keyframe-correction/v1",
+  "slug": "jirairay",
+  "version": "produccion-03",
+  "source_batch": "output/imagegen/wayuu/keyframes/jirairay-produccion-correcciones-01",
+  "status": "generated_and_reviewed",
+  "preserve": ["b2b", "b6b", "b10a"],
+  "correct": ["b1b", "b5a"],
+  "decisions": {
+    "b1b": ["replace_all_rosette_plants_with_sparse_branching_thorn_shrubs", "keep_exact_four_people_empty_handed"],
+    "b5a": ["exactly_three_widely_spaced_chant_bands", "keep_large_air_gap_before_integrated_charcoal_floor_fold", "remove_stars"]
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "no_reference_uploads": true
+}

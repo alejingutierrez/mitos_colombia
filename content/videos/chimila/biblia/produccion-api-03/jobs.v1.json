@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "community_id": 29,
+  "community": "Ette Ennaka",
+  "batch": "produccion-api-03",
+  "logical_batch": 2,
+  "date": "2026-09-12",
+  "model": "gpt-image-2.5-sunburst",
+  "inventory_sha256": "f27b8eea9b77b2b0887bddbac12ed73eefc06effb4456dcf98669e5e9c20db09",
+  "snapshot_sha256": "0d71be61ef3538d2daa00949a5cdeed4fc005d82ca9abac0a71340abbcd4d758",
+  "scope_sha256": "69c9d919deb00e1df62dbac9a3c06d6dae748e4de1d2ddc1c8f2202aeface4fc",
+  "settings": {
+    "size": "1024x1536",
+    "quality": "medium",
+    "output_format": "jpeg",
+    "output_compression": 92,
+    "no_augment": true
+  },
+  "credential_reuse": "User already confirmed same existing local .env for bible production; never recorded or rotated",
+  "concurrency_cap": 3,
+  "plan": "Four independent generations then inspect U02 and L05; H03 uses own H01 style + U02 equipment, V02 edits reviewed L05.",
+  "documentary_images_uploaded": 0,
+  "entries": [
+    {
+      "unit_id": "P01",
+      "label": "Papá Grande",
+      "myth_ids": [
+        346,
+        347,
+        348,
+        355
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/p01-papa-grande-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/p01.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "H03",
+      "label": "Cazadores y viajeros: tres modelos",
+      "myth_ids": [
+        357,
+        358,
+        359,
+        360,
+        361,
+        363,
+        364,
+        365,
+        366
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/h03-cazadores-viajeros-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/h03.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2-refined.jpeg",
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/u02-arcos-flechas-mana-master-v1.jpeg"
+      ],
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "A02",
+      "label": "Tigre/felino",
+      "myth_ids": [
+        346,
+        359,
+        362
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/a02-felino-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/a02.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "L05",
+      "label": "Roza y tronco de reserva",
+      "myth_ids": [
+        350,
+        353,
+        354,
+        357
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/l05-roza-tronco-reserva-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/l05.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "U02",
+      "label": "Arco, flechas y caña maná",
+      "myth_ids": [
+        348,
+        349,
+        357,
+        361,
+        363,
+        364,
+        365,
+        366
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/u02-arcos-flechas-mana-master-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/u02.prompt.txt",
+      "mode": "generate",
+      "input_files": [],
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "V02",
+      "label": "Sequía prolongada",
+      "myth_ids": [
+        354,
+        359
+      ],
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/v02-roza-sequia-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/biblia/produccion-api-03/v02.prompt.txt",
+      "mode": "edit",
+      "input_files": [
+        "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/l05-roza-tronco-reserva-master-v1.jpeg"
+      ],
+      "status": "prepared",
+      "user_approved": false,
+      "culturally_certified": false
+    }
+  ]
+}

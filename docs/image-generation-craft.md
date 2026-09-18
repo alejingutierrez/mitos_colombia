@@ -2,7 +2,13 @@
 
 ## Direccion
 
-El generador usa `gpt-image-2` y prompts de fotografia frontal de piezas reales de papel artesanal. La intencion es evitar ilustracion digital plana, render 3D, animacion o encuadres oblicuos. Cada imagen debe sentirse como un tableau fisico de paper cut, paper relief y paper quilling, fotografiado en estudio y lleno de borde a borde.
+El enriquecimiento narrativo vigente está en
+[Prompting: realismo mágico en lo cotidiano](./prompting-realismo-magico.md).
+Se aplica a nuevas preparaciones; no regenera activos existentes ni cambia
+su estado editorial. Los personajes se resuelven con recortes casi planos y
+la profundidad se construye entre hojas del mundo, evitando cabezas facetadas.
+
+El generador usa `gpt-image-2` y prompts de piezas reales de papel artesanal. La intencion es evitar ilustracion digital plana y render 3D. Cada imagen debe sentirse como un tableau fisico de paper cut, paper relief y paper quilling. Primer plano, plano medio y fondo son capas a distintas distancias, con aire, oclusiones, cantos internos y sombras. La cámara entra en la escena: nunca aparecen su base, cartón soporte, borde exterior, mesa o estudio. El mundo narrativo llena el encuadre de borde a borde.
 
 ## Helper compartido
 
@@ -10,7 +16,7 @@ La configuracion vive en `src/lib/image-generation.js`:
 
 - Modelo por defecto: `gpt-image-2`.
 - Formato por defecto: `jpeg`.
-- Calidad por defecto: `high`.
+- Calidad por defecto: `medium`. Sólo la imagen horizontal del tríptico usa `high`, mediante la política específica de ese pipeline.
 - Presets:
   - `horizontal`: `1536x1024`, para mitos y taxonomias.
   - `homeBanner`: `1536x864`, para banners del home.

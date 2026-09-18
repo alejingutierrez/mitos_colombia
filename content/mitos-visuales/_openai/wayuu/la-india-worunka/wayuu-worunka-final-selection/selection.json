@@ -1,0 +1,137 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "la-india-worunka",
+  "title": "La India Worunka",
+  "created_at": "2026-09-06T19:39:19Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña de 27 mitos autorizada; QA de agente con relato, Biblia y memoria visual.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "9774ed6faf8a41db00c0496ff597e3093f69bc727491d62a5f347238b9308b6d",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T19:31:50Z",
+    "reviewed_reference_ids": [
+      "23a56ad5fcd7c1414238",
+      "4792f97e24bf81c0ce79"
+    ],
+    "retained": [
+      "Arroyo azul como continuidad territorial y profundidad por montañas superpuestas.",
+      "Contraste entre suelo ocre, azul oscuro y acentos de rojo."
+    ],
+    "rejected": [
+      "Dientes sobre ropa, piedra levantada como amenaza y gestos de violencia.",
+      "Petroglifos, estampados o símbolos no sustentados; rosetas botánicas y sol ornamental.",
+      "Personajes grandes, caras modeladas y piel ilustrada. No transformar la ficha de identidad en retrato ni copiar variantes de otras narraciones."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar arroyo y capas, pero cambiar el centro de lectura a piedra abstracta y rojo que se convierte físicamente en plumas, sin agresor.",
+      "acto": "La tierra participa en la transformación: cavidad orgánica que conserva tumas bajo plantas secas, no escena de castigo corporal.",
+      "huella": "Del repertorio de frutos y semillas tomar la relación semilla/piedra, aislada en un solo motivo; no reutilizar escena ni grabados."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-02-escenas/entrada.jpeg",
+      "sha256": "0e66315f2e601bb5de66e594f427888a53ec912120a8fefdb9fbfc8a46f44195",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-india-worunka/wayuu-worunka-triptych-02-escenas/prompts/entrada.prompt.txt",
+      "prompt_sha256": "b7b1b408cc3ebc71d08e7b9b7d8e46ffb6cbe0d1d5f615fc4ccd59ed94b5a2f1",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Tres aves de papel distintas conectadas por rojo físico a una sola piedra de estratos carbón/arena junto a arroyo azul. Paisaje amplio, sin rosetas ni otra figura humana; piedra asimétrica sin rostro o anatomía.",
+        "limits": [
+          "Conjunto más alto que 30% solicitado; mantiene posición derecha y se debe comprobar el recorte público.",
+          "El carpintero incorpora rojo en ala y zona inferior además del copete; se interpreta como transferencia editorial en curso, no ficha zoológica de especie.",
+          "La cinta del carpintero llega al cuerpo, no directamente al copete. Se conserva la relación material de rojo/piedra sin afirmar una unión geométrica exacta."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-02-escenas/acto.jpeg",
+      "sha256": "a8567c43d31f34ba08d672eccf5e932101cc4a557bf598bb97b56d25c0e7bdeb",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-india-worunka/wayuu-worunka-triptych-02-escenas/prompts/acto.prompt.txt",
+      "prompt_sha256": "fabde58433e5a1d448f8799a7e95e2b2a99793a24249b2508a5de4b8aa817417",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Seis tumas coral en dos grupos de tres sostenidas por raíces dentro de una cavidad de suelo curvo continuo. Jarro intacto, plantas secas, cauce y lluvia localizada lejana; ningún pájaro ni figura humana.",
+        "limits": [
+          "Piedras quedan aproximadamente al 58–70% de altura, más abajo que lo solicitado; verificar título móvil.",
+          "Superficie de piedras rugosa y algo naturalista, rodeada de raíces y terreno inequívocos de papel; no se usa como identificación mineral.",
+          "Nube y lluvia son mayores que tamaño distante pedido, pero no borran sequía ni convierten imagen en tormenta general."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-01/huella.jpeg",
+      "sha256": "6563858f8998b44a2fcdefc988163df0f1b24cfec1cb960fdf8e5f1b85ca0ffe",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-india-worunka/wayuu-worunka-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "16e78dfec8fb99af27a39db59594691f37d9f9910144db5407ef85becda4a807",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Un solo motivo coral de capas que se prolongan en raíces umber, sobre fondo azul oscuro uniforme. Silueta de semilla alargada, sin paisaje, rostro, ave, joya ni texto.",
+        "limits": [
+          "Forma más orgánica que pétrea: puede recordar hoja o semilla, no reproducción exacta de una tuma.",
+          "Raíz se ramifica en varias puntas; mismo motivo integrado y no varios objetos. Síntesis editorial, no símbolo tradicional."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 83.3,
+      "acto_01": 35.4,
+      "huella_01": 42.1,
+      "entrada_02": 76.6,
+      "acto_02": 43.7
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-01/entrada.jpeg",
+      "sha256": "3e4ca1e5b381cf2a0250f961666c93bcf5c583e0c254418de6a3e84a827fc1de",
+      "reason": "Escala grande y rosetas no pertinentes; riesgo de recorte del guacamayo."
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-01/acto.jpeg",
+      "sha256": "3838975e5247c50557a377f6a27054dad666d41a49789885b95a376aae77b086",
+      "reason": "Aves de otro episodio importadas desde contexto general; contamina escena de subsuelo."
+    }
+  ],
+  "published": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "wayuu-anchor-correction/v1",
+  "slug": "jirairay",
+  "version": "preproduccion-03",
+  "source_batch": "output/imagegen/wayuu/keyframes/jirairay-preproduccion-02-anclas-corrected",
+  "status": "prepared_not_generated",
+  "preserve": [],
+  "correct": ["b1a", "b3b", "b5b", "b8b", "b10b"],
+  "decisions": {
+    "b1a": ["plain_hammock_bands_without_patterns", "exact_three_relatives", "low_thorn_shrubs_only"],
+    "b3b": ["restore_exact_family_clothing", "return_fibres_without_arrowheads", "all_people_below_18_percent_height"],
+    "b5b": ["all_people_below_18_percent_height", "move_outsu_into_action_plane", "keep_small_ground_pressure_and_two_distinct_rhythms"],
+    "b8b": ["lay_wanuru_fragments_horizontally_on_ground", "restore_exact_family_clothing", "avoid_totem_or_vertical_stack"],
+    "b10b": ["exactly_four_hanging_fibres", "remove_all_decorative_clothing_borders", "plain_complete_clothing"]
+  },
+  "generation": { "model": "gpt-image-2", "quality": "medium", "size": "864x1536", "output_format": "jpeg", "mode": "text_only", "input_images": [] },
+  "no_reference_uploads": true
+}

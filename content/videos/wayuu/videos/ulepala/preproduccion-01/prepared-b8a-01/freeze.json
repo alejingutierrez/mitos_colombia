@@ -1,0 +1,180 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:32:36.342Z",
+  "plan": "content/videos/wayuu/videos/ulepala/preproduccion-01/plan.json",
+  "plan_sha256": "34646ce622898c20db3d164b57137f23e39e3737f4d2bcc3d8109aef57b83bd2",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 196,
+    "estimated_seconds": 128,
+    "generated": 14,
+    "pending": 2,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 106,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b8a",
+      "prompt_file": "content/videos/wayuu/videos/ulepala/preproduccion-01/prepared-b8a-01/prompts/b8a.txt",
+      "prompt_sha256": "c10d60190cfba404a69def7aae5cda57f959de994b5c4a5043597239ead4914d",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b7a",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b7a.jpeg",
+          "sha256": "c16a3a7c98a507a80f3185e70b08c9c7d8b0cda97fc3ebcd3044b43521201ea4",
+          "approved": true,
+          "role": "Preservar continuidad causal de b7a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b7b",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b7b.jpeg",
+          "sha256": "321c57f4e10bd8a8e8cff297e28b3f17b77c291c4286f5744612384b9655daa8",
+          "approved": true,
+          "role": "Preservar continuidad causal de b7b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+          "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+          "approved": true,
+          "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+          "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9",
+          "approved": true,
+          "role": "Fijar el modelo canónico ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ruta_sombras_regreso_ulepala__spatial_model--canon.jpeg",
+          "sha256": "a45acb8e9fbab58dc6c8dd64be380a8f2585acdf3ca0af52d370da37494eef6b",
+          "approved": true,
+          "role": "Fijar el modelo canónico ruta_sombras_regreso_ulepala__spatial_model; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b8a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b8a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.jpeg",
+      "sha256": "8dc752f8c3b861d8ef815787c7a4f9fe5a74a5d3ce7a42e12103d3b413426e9b"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1b.jpeg",
+      "sha256": "1e262f6557ac48ab172f76670e57324a600708638102674ca5f736415eb574e6"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b2a.jpeg",
+      "sha256": "f91896813d859e18a6f067d33310e864c10bab98dba9ab28d257a2875220e611"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b2b.jpeg",
+      "sha256": "50f3d550a7df79e2cd6490c94faec5b3baafc494377243ac0d8e0e355a371d97"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b3a.jpeg",
+      "sha256": "063578a64451ef69b2a6872232bf314048b68bc4a189c00eab99c2595e5084e7"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b3b.jpeg",
+      "sha256": "90ce90527658d4ffd6893d06498d6a42f76e4e9e4d5e136eda46b3b439102341"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b4a.jpeg",
+      "sha256": "6fa2b63a643664e4ffec8c1d5486f521166ba3f01172fdc9038b0647ad32ee30"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b4b.jpeg",
+      "sha256": "0fd0ec62395d03e352772b9ef1daf25394a2dd3b324d9b57fba46db0630f1123"
+    },
+    {
+      "id": "b5a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b5a.jpeg",
+      "sha256": "0d7d58add713c42519575ad87d26b66250bcc9be7199b3ab7a22c7e8af902375"
+    },
+    {
+      "id": "b5b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b5b.jpeg",
+      "sha256": "ddee3783e03487b1bd44ebfd8878b49c53f91edd8c1cba00b729dd348491e1d8"
+    },
+    {
+      "id": "b6a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b6a.jpeg",
+      "sha256": "4dd6bd4a513fc952466f28e40a889219598c28325f7d4372b96d07cee41d10f8"
+    },
+    {
+      "id": "b6b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b6b.jpeg",
+      "sha256": "6037acc5c3caa7d7c74597a2581f643a3fd8b78f54fabf22fbb06b27dbb16962"
+    },
+    {
+      "id": "b7a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b7a.jpeg",
+      "sha256": "c16a3a7c98a507a80f3185e70b08c9c7d8b0cda97fc3ebcd3044b43521201ea4"
+    },
+    {
+      "id": "b7b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b7b.jpeg",
+      "sha256": "321c57f4e10bd8a8e8cff297e28b3f17b77c291c4286f5744612384b9655daa8"
+    }
+  ],
+  "no_api_calls": true
+}

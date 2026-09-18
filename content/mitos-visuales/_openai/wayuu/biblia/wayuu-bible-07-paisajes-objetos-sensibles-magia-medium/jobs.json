@@ -1,0 +1,229 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-07-paisajes-objetos-sensibles-magia-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Lote 07 de seis reglas mágicas sensibles en medium. Cada edición usa sólo su ancla aprobada para conservar territorio u objetos: inscripciones minerales separadas, cruce a Jepira con condición de silencio, caminos que desaparecen en Puró, ausencia no figurativa en el valle, canto Jirairay como relieve que no forma cuerpo y transmisión Umaralá sin ceremonia.",
+  "jobs": [
+    {
+      "id": "el-incesto__magia--regla",
+      "model_id": "el-incesto__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/prompts/el-incesto__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/el-incesto__magia--regla.jpeg",
+      "prompt_sha256": "93bca553aee85377dd9742cd225bd6058b26fca7beb55601acc356347998cd85",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "el-incesto__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada de las dos huellas territoriales; conservar costa blanca, cerro, separación y materialidad de papel",
+          "path": "output/imagegen/wayuu/wayuu-bible-06-paisajes-objetos-sensibles-anclas-medium/el-incesto__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "conservar las dos huellas separadas de la Imagen 1 y añadir dos transformaciones no equivalentes, una por lado: a la izquierda un contorno humano neutro de papel se desarma en estratos bajos de piedra blanca litoral; a la derecha otro contorno neutro se sedimenta en el cerro",
+        "figuras completamente lisas, sin rostro, sexo, ropa, gesto, contacto o herida; ningún acto sexual, familiar o violento; las dos secuencias no se tocan, no se funden y no forman estatuas"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "el-viaje-del-mas-alla__magia--regla",
+      "model_id": "el-viaje-del-mas-alla__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/prompts/el-viaje-del-mas-alla__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/el-viaje-del-mas-alla__magia--regla.jpeg",
+      "prompt_sha256": "f2efa07402dc4fba65418b363d9e62406e7a38f2be076695892d283f44f70708",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "el-viaje-del-mas-alla__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada de Jepira; conservar costa, cabo, capas de mar, cámara y ausencia de cartografía",
+          "path": "output/imagegen/wayuu/wayuu-bible-06-paisajes-objetos-sensibles-anclas-medium/el-viaje-del-mas-alla__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "conservar Jepira de la Imagen 1 y mostrar una única pareja de siluetas sólidas de papel, sin transparencias: una figura sostiene y carga a la otra sobre capas de mar como relación físicamente imposible; un hilo liso de papel cierra suavemente la boca de la figura que regresará y se prolonga hacia la orilla",
+        "sin duplicar fases, cadáver, cuerpo herido, fantasma, alas, barca, puente, inframundo europeo, cara, ropa, sexo, patrón o brillo; el hilo expresa condición de silencio, no violencia"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "la-majayura-que-pierde-a-los-hombres__magia--regla",
+      "model_id": "la-majayura-que-pierde-a-los-hombres__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/prompts/la-majayura-que-pierde-a-los-hombres__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/la-majayura-que-pierde-a-los-hombres__magia--regla.jpeg",
+      "prompt_sha256": "db487e292d84261378614b56f02697bdc62e1e42ed1629b30a8ed89670e76aca",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "la-majayura-que-pierde-a-los-hombres__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada de Puró; conservar cueva, sendero, costa, cámara y condición no localizable",
+          "path": "output/imagegen/wayuu/wayuu-bible-06-paisajes-objetos-sensibles-anclas-medium/la-majayura-que-pierde-a-los-hombres__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "conservar la cueva de la Imagen 1; varios senderos finos y huellas de papel convergen hacia el umbral y terminan limpiamente dentro, sin mostrar personas; una sola piedra blanca de papel mineral queda afuera como consecuencia",
+        "sin majayura, mujer, hombre, cuerpo, silueta, deseo, escena sexual, cadáver, hueso, sangre, remolino, luz seductora, monstruo o cara en la cueva"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "las-wanulus-y-el-valle-de-la-muerte__magia--regla",
+      "model_id": "las-wanulus-y-el-valle-de-la-muerte__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/prompts/las-wanulus-y-el-valle-de-la-muerte__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/las-wanulus-y-el-valle-de-la-muerte__magia--regla.jpeg",
+      "prompt_sha256": "96c0bdfcdbb44ce0af88e94fcd33effa2ae772394d1aaa55aaa9e22e927929ca",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "las-wanulus-y-el-valle-de-la-muerte__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada del valle incierto; conservar capas, sendero, cámara y ausencia de criatura",
+          "path": "output/imagegen/wayuu/wayuu-bible-06-paisajes-objetos-sensibles-anclas-medium/las-wanulus-y-el-valle-de-la-muerte__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "conservar el valle de la Imagen 1 y abrir una única zona irregular no figurativa donde faltan capas de papel; sendero, plantas y bordes del relieve se desvían alrededor del hueco sin que nada emerja",
+        "el hueco no puede parecer persona, animal, serpiente, demonio, ojo, boca, portal luminoso o sombra de criatura; sin hermanos, cuerpos, sangre, huesos, aura o coordenada"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "jirairay__magia--regla",
+      "model_id": "jirairay__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/prompts/jirairay__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/jirairay__magia--regla.jpeg",
+      "prompt_sha256": "51abd64183771774b3ef46d3e7f113d73a39f0c07292930774b631d58d6a814a",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "jirairay__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla editorial aprobada de Jirairay; conservar maraca lisa, manos en reposo, cámara y papel sin patrones",
+          "path": "output/imagegen/wayuu/wayuu-bible-06-paisajes-objetos-sensibles-anclas-medium/jirairay__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "conservar maraca y manos de la Imagen 1; la maraca permanece inmóvil mientras tres ondas concéntricas de tiras de papel en relieve nacen alrededor y se detienen abruptamente antes de cerrar una figura; las manos siguen en reposo, sin gesto ceremonial",
+        "sin cuerpo, outsü, enfermo, curación visible, ceremonia, danza, fantasma, entidad, rostro, plumas, patrón, letras, notas musicales, aura o luz sobrenatural"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "umarala__magia--regla",
+      "model_id": "umarala__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/prompts/umarala__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07-paisajes-objetos-sensibles-magia-medium/umarala__magia--regla.jpeg",
+      "prompt_sha256": "8d8b5bfe318cf4c61262356b1660e52fca0bfb279fc1c3c56aa44989ad4d3ca8",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "umarala__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla editorial aprobada de Umaralá; conservar maraca lisa, capote plegado, cámara y ausencia de patrones",
+          "path": "output/imagegen/wayuu/wayuu-bible-06-paisajes-objetos-sensibles-anclas-medium/umarala__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "conservar maraca y capote de la Imagen 1 entre exactamente dos pares de manos lisas de papel: un par los entrega y otro los recibe; una senda estrecha de papel continúa detrás hacia tres puntos de cuidado abstractos, sin edificios ni personas",
+        "sin cuerpo de tía o sobrino, enfermo, ceremonia, canto visible, curación clínica, fantasma, sacrificio espectacular, levitación, texto, nombre escrito, patrón, plumas o brillo"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

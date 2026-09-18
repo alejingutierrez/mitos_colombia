@@ -1,0 +1,142 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-valle-triptych-02-huella",
+  "created_at": "2026-09-06T05:02:39.439Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "las-wanulus-y-el-valle-de-la-muerte",
+  "plan": "content/mitos-visuales/wayuu.valle.triptico.v1.1-huella.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "9c15b0fddec761ec2a4c85ac82495dd72e5882650f2e2f46f24ef645ad897e42",
+  "narrative_target_sha256": "3eee11b6d604732358d77a886820556e4fd05228ab6f38c2b14259998068fefb",
+  "evidence": [
+    {
+      "id": "published_valle",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/las-wanulus-y-el-valle-de-la-muerte.json",
+      "supports": "Travesía por sed, parcela, encuentro con serpiente, sueño, espera y cosecha parcial.",
+      "limits": "Trama sin fuente primaria localizada; consulta a mayores es intervención editorial explícita."
+    },
+    {
+      "id": "digital_circulation_2017",
+      "type": "secondary_digital_circulation",
+      "url": "https://www.goconqr.com/mapamental/8613637/mitos-y-leyendas-colombianos",
+      "supports": "Mapa escolar de Camilo Restrepo Tangarife fechado 21 abril 2017 menciona dos hermanos de Guajira que salen por escasez de agua.",
+      "limits": "No documenta la trama completa ni una fuente oral; no es referencia iconográfica atribuible del mito."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T04:59:44.726Z",
+    "reviewed_reference_ids": [
+      "a1d22e121d667b2c11ee",
+      "3cd0547f70f8fd93f0e6"
+    ],
+    "retained": [
+      "Noche azul, contraste arena y vegetación, planos de papel separados.",
+      "Escala del territorio y continuidad de una curva que conduce la mirada."
+    ],
+    "rejected": [
+      "Serpiente monumental erguida como monstruo y patrones geométricos sobre su cuerpo.",
+      "Repetir encuentro con serpiente en ambos formatos, vestuario uniforme e indeterminado, estrellas decorativas y rostros modelados."
+    ],
+    "influence_by_act": {
+      "entrada": "Noche y camino profundo; la orientación por estrellas se vuelve estrellas retenidas en huellas, sin serpiente monumental.",
+      "acto": "Curvas materiales del suelo y verde contenido se transforman en memoria del sueño alrededor de la parcela; ninguna segunda criatura.",
+      "huella": "La curva se abstrae en semillas y ausencia; símbolo de la parte de cosecha dejada sin tomar, no otra escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "hermano_mayor_valle__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium-corrections-05/hermano_mayor_valle__identity_sheet--canon.jpeg",
+      "sha256": "2a7ebad13fe399b799d746bde928c7ae63e9b8f579213899a39dcd174f74f094",
+      "qa_status": "PASS_AFTER_MATERIAL_CULTURE_RESEARCH_AND_CORRECTION_05"
+    },
+    {
+      "model_id": "hermano_menor_valle__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium-corrections-04/hermano_menor_valle__identity_sheet--canon.jpeg",
+      "sha256": "d72602ac7dc4aacf19c9c59365661db1da149099da6b19f2ee7e12c8681aeadf",
+      "qa_status": "PASS_AFTER_MATERIAL_CULTURE_RESEARCH_AND_CORRECTION_04"
+    },
+    {
+      "model_id": "serpiente_valle__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium/serpiente_valle__identity_sheet--canon.jpeg",
+      "sha256": "f4913612d0afac596b9676d3181fc8c1e81fe896793bea0b9cd679d5874c47bc",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "valle_documentacion_pendiente__environment_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium/valle_documentacion_pendiente__environment_model--canon.jpeg",
+      "sha256": "3bad401eb17eef25d53f8cce8121388d52ef1614c15240d1775d4033f292115d",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "casa_parcela_valle__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium/casa_parcela_valle__spatial_model--canon.jpeg",
+      "sha256": "c249331bcb66fef6e49dac4af62a12c1d8b112ebb1811ef731177aab193a7c8a",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "hermano_mayor_valle__identity_sheet",
+        "hermano_menor_valle__identity_sheet",
+        "serpiente_valle__identity_sheet",
+        "valle_documentacion_pendiente__environment_model",
+        "casa_parcela_valle__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/las-wanulus-y-el-valle-de-la-muerte/wayuu-valle-triptych-02-huella/prompts/huella.prompt.txt",
+      "prompt_sha256": "d4c71b43db930c7ba8c7874f66a50a4425dc6e69ed00ddb996a2f723b01dd782",
+      "narrative_event_ids": [
+        "cosecha",
+        "incertidumbre"
+      ],
+      "editorial_translation": "Espiral abierta y semillas suspendidas sintetizan cosecha no tomada e incertidumbre; no describen una ofrenda ritual ni un símbolo cultural atestiguado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Dejar parte de la cosecha sin tomar.",
+        "impossible_behavior": "Cinco semillas permanecen separadas del suelo sobre el vacío entre la cosecha.",
+        "narrative_effect": "Permanece un límite que no se puede poseer.",
+        "agency": "Los hermanos interpretan señales cuyo sentido no dominan.",
+        "physical_translation": "Cinco semillas plegadas levantadas con sombras reales junto a granos apoyados.",
+        "visible_test": "Símbolo abierto sin serpiente ni escena.",
+        "event_ids": [
+          "cosecha",
+          "incertidumbre"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Llegar no significa poseerlo todo.",
+        "carrier": "Un puñado irregular de semillas interrumpido por un vacío diagonal.",
+        "operation": "El vacío divide el puñado y cinco semillas quedan suspendidas sobre la parte no tomada.",
+        "story_connection": "Los hermanos dejan una parte de la cosecha sin tocar y no saben si una presencia los sigue.",
+        "visible_test": "Semillas con tramo vacío y cinco suspendidas, símbolo sin escenario."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-valle-triptych-02-huella/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T19:57:47.823Z",
+  "plan": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/plan.json",
+  "plan_sha256": "f331a8164d13dd70e7076744c9fde77dd47121511a67250278075d9afc707305",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 236,
+    "estimated_seconds": 128,
+    "generated": 8,
+    "pending": 8,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 43,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b5a",
+      "prompt_file": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/prepared-09/prompts/b5a.txt",
+      "prompt_sha256": "36c221b0bfef48b801e94a2a79301ab02e81ef8c8d2946f20b03c17df5d5e24f",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b4a",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b4a.jpeg",
+          "sha256": "fb5b8f80ae88e7cb846e10e5fa8babe5decedaa82bd710d43f9c2e2c450ead59",
+          "approved": true,
+          "role": "Antecedente inmediato 1: conservar sendero, territorio y materialidad; retirar las tres piedras como motivo principal."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b4b",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b4b-v3.jpeg",
+          "sha256": "79e12b35c3abc2f1362a037505ebb76e020e5080d3e50c4c8b0c6cf4d1ab82ee",
+          "approved": true,
+          "role": "Antecedente inmediato 2: conservar paleta y profundidad; no repetir cuñas de sombra incompatibles."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium-corrections-01/majayura_puro__identity_sheet--canon.jpeg",
+          "sha256": "0f2046f0937c29434ee437040b6f49507cb4841d4c7fa32af792ab973c2c926d",
+          "approved": true,
+          "role": "Reintroducir la identidad exacta de la majayura, pequeña y completa."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium-corrections-01/hombres_alcanzados_puro__group_grammar--canon.jpeg",
+          "sha256": "eef0f4d8e4ddf34a626d7ab7cd5f919d6536f38d8ee74f02131c0c5df760a4eb",
+          "approved": true,
+          "role": "Reintroducir un único hombre adulto completo, nunca el grupo de la ficha."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b5a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b5a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.jpeg",
+      "sha256": "77c639a41832148e7bd3f6d52469999483299759f7eb3be69d12488cc5e5ebab"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1b.jpeg",
+      "sha256": "96ee99a8cbd1e8850f6ac355d9b9b07e3635a983e996fc8241debb0dd9d3e972"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b2a.jpeg",
+      "sha256": "a5443b3357592c612bf27424bcc828dcd47ae6d6c4f6bb9e189929a0eacbbf1e"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b2b.jpeg",
+      "sha256": "4ee94a4326fd8d686cb813e79812c68ae2c5c8cefddce4166de495265bcccefc"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b3a.jpeg",
+      "sha256": "81322fb5e0de190876164dbc3784bd9cecd0c95e8d9311fec849b4f07c0c5e50"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b3b.jpeg",
+      "sha256": "544b4e334f3b44838bb8794e99e6e2d1276fe3879b62d37759eed140b2369651"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b4a.jpeg",
+      "sha256": "fb5b8f80ae88e7cb846e10e5fa8babe5decedaa82bd710d43f9c2e2c450ead59"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b4b-v3.jpeg",
+      "sha256": "79e12b35c3abc2f1362a037505ebb76e020e5080d3e50c4c8b0c6cf4d1ab82ee"
+    }
+  ],
+  "no_api_calls": true
+}

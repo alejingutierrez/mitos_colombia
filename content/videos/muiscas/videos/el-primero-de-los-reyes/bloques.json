@@ -1,0 +1,337 @@
+{
+  "mito": "el-primero-de-los-reyes",
+  "comunidad": "Muiscas",
+  "carpeta_triptico": "el-primero-de-los-reyes",
+  "estructura": "9 bloques narrativos × 2 keyframes (bNa, bNb) = 18 escenas; el `acto` del tríptico cubre una, quedan 17 por generar",
+  "nota_deslinde": "b1a lo cubre la `entrada` del tríptico, b6a el `acto` y b9b la `huella`. Sin cerro del amanecer y sin columnas. 17 escenas nuevas.",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  },
+  "lineas": {
+    "b1": "Un abuelo contaba a las niñas junto al río.",
+    "b2": "—Nadie nació antes que la luz. Cuando el mundo amaneció, sólo había dos hombres.",
+    "b3": "El primero hizo a los hombres de tierra amarilla y a las mujeres de tallos huecos.",
+    "b4": "Allí vivía Itaca, hija del cacique, con su hermana Huitaca.",
+    "b5": "No dio a luz un niño sino una esmeralda, verde y grande como un huevo.",
+    "b6": "Para conocer su suerte lo llevaron al río y arrojaron un copo de algodón a la corriente.",
+    "b7": "—Eso significa buena fortuna. El agua no lo quiso.",
+    "b8": "Chiguachí arrancó un copo de la cesta y lo dejó caer. El agua podía llevarlo a muchos lugares.",
+    "b9": "—¿Ninguna de nosotras será gobernante? —Una señal necesita quien la interprete."
+  },
+  "keyframes": [
+    {
+      "tag": "b1b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE, recortado a la altura de la rodilla, de exactamente dos pares —cuatro pies infantiles— descalzos colgando de una piedra de orilla con el agua corriendo debajo. No aparece ningún quinto o sexto pie, adulto, rostro ni cuerpo; los cuatro pies quedan dentro del 70% central.",
+      "refs": [
+        "chiguachi_nina",
+        "quiquitzua_nina",
+        "rio_prueba"
+      ],
+      "prompt_file": "b1b.prompt.txt",
+      "prompt_sha256": "69d06489b5cb444352aab73602fdf312354bb5f7255ff91f85b2f1f4f541c961",
+      "image_sha256": "6313756c83bd06e218d073623851fd366d4132cc4054fd12b4a15e4dfe675349",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.814Z"
+    },
+    {
+      "tag": "b2a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "figura_pequena",
+      "desc": "PLANO GENERAL MUY ABIERTO de un altiplano en penumbra azul antes de cualquier sol, con exactamente dos hombres adultos muiscas diminutos y separados. Tienen las manos vacías: no hay bastones, varas, herramientas, poblado, mujeres, niños ni terceras figuras.",
+      "refs": [
+        "rio_prueba"
+      ],
+      "prompt_file": "b2a.prompt.txt",
+      "prompt_sha256": "bd46c6ca585faed125bdd8927b074354180ec637716c13c2b2b6eee6b20fc2ec",
+      "image_sha256": "c619e64fb3e0e3079f8b7d03ebcad357ef8531f949291e5651829f97ef63e87a",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.837Z"
+    },
+    {
+      "tag": "b2b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de Chiguachí escuchando con los ojos muy abiertos, de perfil, con el reflejo del río en la cara. Sólo una niña: sin abuelo, sin segunda niña ni acompañantes.",
+      "refs": [
+        "chiguachi_nina",
+        "rio_prueba"
+      ],
+      "prompt_file": "b2b.prompt.txt",
+      "prompt_sha256": "4ea9ef3a561caf62de46084fb050ac230410789eecdf4ae79d317d7fcf287cc4",
+      "image_sha256": "89daaa9d71e542c237ede5fbc3e0f4727f2aef8e2735e6c1535bb0a9412f3bae",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.860Z"
+    },
+    {
+      "tag": "b3a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de dos pequeñas figuras artesanales no realistas sobre una piedra: un hombre de tierra amarilla húmeda y una mujer hecha de tallos huecos entrelazados. Sin herramientas, cuerpos realistas, desnudez ni objetos modernos.",
+      "refs": [
+        "figura_barro_amarillo",
+        "figura_tallos_huecos"
+      ],
+      "prompt_file": "b3a.prompt.txt",
+      "prompt_sha256": "1f3bf09842b7e523a3cb00deaa707f19559cf31fcd6d015e12064635cf6c5a56",
+      "image_sha256": "da60ea6540b2b52225df92a738dd1a7fc11e155b6102495365e13a636391d933",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.879Z"
+    },
+    {
+      "tag": "b3b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO de un abuelo modelando en el aire con las manos mientras cuenta, de perfil, sin nada entre los dedos.",
+      "refs": [
+        "abuelo_narrador",
+        "rio_prueba"
+      ],
+      "prompt_file": "b3b.prompt.txt",
+      "prompt_sha256": "949b0727e960fa69be14a2d4c51aa84035648b0f6266f49a5706fcc9e2191880",
+      "image_sha256": "fbf8f2b9f6a4b8f726314a55fba861b40a3dffc7046688154c95aa971797c708",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.902Z"
+    },
+    {
+      "tag": "b4a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL de un poblado de bohíos del altiplano visto desde el río, tranquilo y a media tarde. Sin personas ni animales: sólo agua, bohíos, huertos, paja y montaña; sin teja, iglesia ni piedra colonial.",
+      "refs": [
+        "poblado_nuevo",
+        "rio_prueba"
+      ],
+      "prompt_file": "b4a.prompt.txt",
+      "prompt_sha256": "1e739fe82174d646ba55cd15b46dad4a96cfe072de72e3da1f516e32887ee192",
+      "image_sha256": "133f9bd7213a2396041db11991c62b8ff71903f97a718762d645143286d150dd",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.923Z"
+    },
+    {
+      "tag": "b4b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO de Itaca y Huitaca, dos hermanas jóvenes adultas, caminando juntas por un sendero de perfil, sin hablarse. Son personajes nuevos de este relato: no son niñas ni se parecen a Chiguachí o Quiquitzua. Sólo bohíos bajos, tierra y paja alrededor.",
+      "refs": [],
+      "prompt_file": "b4b.prompt.txt",
+      "prompt_sha256": "1b68281d156bcd93e97654dd3d869f45c7a394be877b58b3b2cbd7f29027bf8b",
+      "image_sha256": "0caef15d99a61e669b5b27731d4c9af9df7c1f43586b4291bcea3b48d4fb10bf",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.945Z"
+    },
+    {
+      "tag": "b5a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de una esmeralda grande, verde opaca e irregular, sin talla, engaste ni metal, envuelta a medias en algodón crudo y descansando sobre pliegues de manta cruda. No hay parto ni cuerpo visible.",
+      "refs": [
+        "esmeralda_algodones",
+        "copo_algodon"
+      ],
+      "prompt_file": "b5a.prompt.txt",
+      "prompt_sha256": "84d033e768f2048d8d6eef7f1878b82d4409411bbebbbfaa00c0012bfd0d1e07",
+      "image_sha256": "abbbfd508f3c53ff4935ce1c9987b7058abfad61a1fa224be3a4ca0fc778c18b",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.966Z"
+    },
+    {
+      "tag": "b5b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de Chiguachí abriendo mucho los ojos al oír esa parte, de perfil, con la boca entreabierta. Sólo una niña: sin abuelo, sin segunda niña ni acompañantes.",
+      "refs": [
+        "chiguachi_nina",
+        "rio_prueba"
+      ],
+      "prompt_file": "b5b.prompt.txt",
+      "prompt_sha256": "f2ff7bdfd179661f25ea980738286b86d4513e38c1e38fa3824ba09fa8e430de",
+      "image_sha256": "361b3707965983a095ab6f50639db9ccca14c416af6dcd004561b358ebeb21f4",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:27.988Z"
+    },
+    {
+      "tag": "b6b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de sólo un antebrazo y una mano saliendo del agua y levantando un copo de algodón mojado pero entero, sin deshacerlo. Sin rostro, cuerpo, otros nadadores ni manos adicionales.",
+      "refs": [
+        "mitos/el-primero-de-los-reyes/acto",
+        "copo_algodon"
+      ],
+      "prompt_file": "b6b.prompt.txt",
+      "prompt_sha256": "68f1d27a101d9cdf52412701eb93958723aa69d71cb7d1775d59d477406131e8",
+      "image_sha256": "1d23ffd170534218b8e50950907fff9a611aa5b5c020c9f4c82be25732255126",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:28.008Z"
+    },
+    {
+      "tag": "b7a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO MEDIO de un grupo pequeño y escalonado en la ribera mirando un copo levantado en alto, todos de perfil y en silencio. Sin multitud frontal ni accesorios ajenos.",
+      "refs": [
+        "mitos/el-primero-de-los-reyes/acto"
+      ],
+      "prompt_file": "b7a.prompt.txt",
+      "prompt_sha256": "b5774e337ea6e0177d874fd73e5bbbcd8c854b28dd4ae9ebe173eff35c153182",
+      "image_sha256": "cff29b95def78960af28e201540a3dfa6c9a6c7be270fe1637ba451a0ed7273c",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:28.034Z"
+    },
+    {
+      "tag": "b7b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO del abuelo callándose después de decirlo, de perfil, con la mano ya bajada.",
+      "refs": [
+        "abuelo_narrador",
+        "rio_prueba"
+      ],
+      "prompt_file": "b7b.prompt.txt",
+      "prompt_sha256": "8557cfa9feec7079682afee368a99bdaa36d4e07d117b0f4cb27a4eecfa4c6da",
+      "image_sha256": "d1a28d507c3adca62b3dc2fb7eee01aadb65cd02f083a70516a32b84dc883dfb",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:28.057Z"
+    },
+    {
+      "tag": "b8a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de los dedos pequeños de Chiguachí soltando un copo de algodón sobre la corriente, ya en el aire. Sólo una mano y un copo dentro del 70% central; sin persona completa ni manos extra.",
+      "refs": [
+        "chiguachi_nina",
+        "copo_algodon"
+      ],
+      "prompt_file": "b8a.prompt.txt",
+      "prompt_sha256": "f99eafeb4ff6670a0d1df73745631a994cf7196756a853f07a94ea57ff6f6aff",
+      "image_sha256": "0a6bbdc4b123475855a50ad66278885d2fd2f6cefc0add30c9bdef7207c1773e",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:28.075Z"
+    },
+    {
+      "tag": "b8b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO MEDIO de un único copo de algodón blanco rozando una piedra en un remolino de la corriente: un solo instante, sin copos duplicados, manos, personas ni animales.",
+      "refs": [
+        "copo_algodon",
+        "rio_prueba"
+      ],
+      "prompt_file": "b8b.prompt.txt",
+      "prompt_sha256": "bb9050963c48086f7296fe4cc1e34bfa07a1613f3419c4a6b8c5db983e5be8fa",
+      "image_sha256": "c178c639b97fea3f716613ecc880a9c6b40561af889ce20d77d63523694abfdd",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:28.097Z"
+    },
+    {
+      "tag": "b9a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "enfrentados",
+      "desc": "PLANO MEDIO de exactamente dos niñas, Chiguachí y Quiquitzua, de perfil una frente a otra en la orilla, ninguna centrada: una pregunta y la otra responde. Sin adulto, tercera figura ni público.",
+      "refs": [
+        "chiguachi_nina",
+        "quiquitzua_nina",
+        "rio_prueba"
+      ],
+      "prompt_file": "b9a.prompt.txt",
+      "prompt_sha256": "91ce3d50c0a9b7ca68da141e36f61624e91ed1e2b4492a75f013eb6921a2c946",
+      "image_sha256": "d8c142f6f1021827c180db0e757066a63dc4224b91557cd2af3db2db6a28846b",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:45:37.510Z",
+      "ingested_at": "2026-09-03T16:46:28.118Z"
+    }
+  ],
+  "reusadas": [
+    {
+      "tag": "b1a",
+      "reusa": "mitos/el-primero-de-los-reyes/entrada"
+    },
+    {
+      "tag": "b6a",
+      "reusa": "mitos/el-primero-de-los-reyes/acto"
+    },
+    {
+      "tag": "b9b",
+      "reusa": "mitos/el-primero-de-los-reyes/huella"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01",
+  "parent_batch_id": "wayuu-v3-production-17-el-pequeno-indio-kosina-medium",
+  "revision": "corrections-01",
+  "myth_slug": "el-pequeno-indio-kosina",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "kosina_joven__state_sheet--estados",
+      "model_id": "kosina_joven__state_sheet",
+      "entity_id": "kosina_joven",
+      "view_id": "estados",
+      "title": "Joven kusina · caza, musica y cuidado",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/prompts/kosina_joven__state_sheet--estados.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/kosina_joven__state_sheet--estados.jpeg",
+      "prompt_sha256": "76429e970cc4dcafd568b076ce80590071df2b4d9a2ce58b75a8da54de34d231",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "abertura_subterranea_caballo__spatial_model--canon",
+      "model_id": "abertura_subterranea_caballo__spatial_model",
+      "entity_id": "abertura_subterranea_caballo",
+      "view_id": "canon",
+      "title": "Cueva subterranea de los caballos · entrada no portal",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/prompts/abertura_subterranea_caballo__spatial_model--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-17-el-pequeno-indio-kosina-medium-corrections-01/abertura_subterranea_caballo__spatial_model--canon.jpeg",
+      "prompt_sha256": "76f7bd168a6fd8bf01ae9556fdf018e9369c02ebc66911fb76eeac07eb95e6de",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

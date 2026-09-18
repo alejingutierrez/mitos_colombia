@@ -1,0 +1,77 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T19:47:29.699Z",
+  "plan": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/plan.json",
+  "plan_sha256": "5aad189ebb3830db9eb0564f3ae0499d4430576cf74288f7669a51ed9950ef85",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 236,
+    "estimated_seconds": 128,
+    "generated": 1,
+    "pending": 15,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 16,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1b",
+      "prompt_file": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/prepared-02/prompts/b1b.txt",
+      "prompt_sha256": "e59295babc2c401f58159aacd6354a2701419fa0a0f7c26c7646361b0e0bc8bd",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b1a",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.jpeg",
+          "sha256": "77c639a41832148e7bd3f6d52469999483299759f7eb3be69d12488cc5e5ebab",
+          "approved": true,
+          "role": "Conservar literalmente el territorio, la paleta y la materialidad aprobados de b1a; cambiar sólo el ángulo y la oclusión."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-21-la-majayura-que-pierde-a-los-hombres-medium/cueva_puro__spatial_model--canon.jpeg",
+          "sha256": "b34feb4c30b551328126c77aeaff3d4ce32e172ab8a488ea0fe0a709942008a5",
+          "approved": true,
+          "role": "Reafirmar que Puró es una abertura estratificada, no puerta, portal o arquitectura."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.jpeg",
+      "sha256": "77c639a41832148e7bd3f6d52469999483299759f7eb3be69d12488cc5e5ebab"
+    }
+  ],
+  "no_api_calls": true
+}

@@ -110,6 +110,7 @@ function MobileEntranceImage({ myth, className = "" }) {
     <figure className={className}>
       <ImageFrame
         src={myth.imageUrl}
+        unoptimized
         alt={`${myth.title}: la entrada del relato`}
         ratio="16 / 9"
         sizes="100vw"

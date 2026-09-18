@@ -1,0 +1,207 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-aramai-triptych-15-01",
+  "created_at": "2026-09-06T02:08:00.431Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "aramai",
+  "plan": "content/mitos-visuales/wayuu.tripticos.v1.5.json",
+  "prompt_profile": "story_first_v2_magic_in_the_ordinary",
+  "plan_sha256": "af8f7f91fd0b86f9594d0ddfd80f68f7d4c51343588a05869311607d793e0014",
+  "narrative_target_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+  "evidence": [
+    {
+      "id": "chaves_1946_aramai",
+      "type": "primary_source",
+      "title": "Mitos, leyendas y cuentos de la Guajira, VI: Aramai",
+      "author": "Milcíades Chaves Ch.",
+      "year": 1946,
+      "locator": "p. impresa 314; índice PDF 10. Procedencia oral al final de VIII, p.316.",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "supports": "Edad mayor, escasez, petición de mortandad, respuesta de Mareiwa, recorrido de Wanurú y responsabilidad atribuida a Arámai.",
+      "limits": "Registro mediado por recopilador e intérprete; no contiene retorno, petición de cese ni cuidado. No fija una anatomía para Mareiwa o Wanurú."
+    },
+    {
+      "id": "published_aramai_20260905",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+      "supports": "Texto objetivo de estas imágenes: incluye petición de cese, intento de ayudar y pérdida irreversible como desarrollo editorial.",
+      "limits": "El desarrollo editorial no se presenta como episodios documentados en Chaves."
+    },
+    {
+      "id": "paz_reverol_2017",
+      "type": "community_author_context",
+      "author": "Carmen Laura Paz Reverol",
+      "title": "Hacer los sueños. Una perspectiva wayuu",
+      "url": "https://entrediversidades.unach.mx/index.php/entrediversidades/article/view/18",
+      "supports": "Perspectiva situada sobre comunicación entre experiencias cotidianas y no humanas.",
+      "limits": "Contexto; no aporta episodios a Arámai ni permite convertirlo en un sueño. Ficha y extracto consultables; enlace de descarga HTML falló."
+    },
+    {
+      "id": "garcia_valbuena_2004",
+      "type": "ethnographic_context",
+      "title": "Cuando cambian los sueños. La cultura wayúu frente a las iglesias evangélicas",
+      "author": "Nelly García Gavidia y Carlos Valbuena",
+      "url": "https://www.humanas.unal.edu.co/colantropos/files/5114/5615/3446/garcia_wayuu.pdf",
+      "supports": "Relaciones activas entre mundos cotidianos y no humanos; documenta otras descripciones de wanülü.",
+      "limits": "Contexto de campo situado, no otra versión de Arámai. No se trasladan Pulowi, flechas, sueños ni anatomías de este texto al episodio."
+    },
+    {
+      "id": "material_culture_v3",
+      "type": "internal_visual_research",
+      "path": "editorial/wayuu/material-culture-v3.mjs",
+      "supports": "Repertorio completo de vestuario y relaciones domésticas.",
+      "limits": "Puesta en escena editorial para tiempo mítico no fechado."
+    }
+  ],
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "aramai__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/aramai__identity_sheet--canon.jpeg",
+      "sha256": "ec13d40a57184f34fa89e3c7d7546968134222f3cd8635d023f1c4e429fcc52a",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "approval_gate": "El usuario eligió las direcciones 1 y 5 y autorizó el tríptico completo del primer mito. Se presentan las tres piezas para revisión conjunta; esta autorización no publica ni habilita los demás mitos.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "peso_contrario",
+      "canon_model_ids": [
+        "aramai__identity_sheet",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "344ed49751908f99f945216aa73a64fcc699203fbbde270614d57a196119554e",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta"
+      ],
+      "editorial_translation": "La noche dentro de la enramada representa la escucha de Mareiwa como licencia plástica. No certifica apariencia, santuario, rito ni episodio astronómico tradicional. Se conserva el gesto de petición y su motivación en la escasez.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "La enramada doméstica y el reparto de pocas provisiones.",
+        "impossible_behavior": "Un techo modesto contiene una distancia nocturna imposible dentro del día.",
+        "narrative_effect": "La palabra humana encuentra escucha no humana; la petición aún no revela todo su costo.",
+        "agency": "Arámai pide; Mareiwa atiende. La noche no sale de la mano ni es controlada por ella.",
+        "physical_translation": "Estratos de papel índigo separados detrás de postes, terreno nocturno de hojas y estrellas como perforaciones retroiluminadas.",
+        "visible_test": "El patio y cielo exterior son diurnos; el interior vacío tiene cielo estelar y profundidad nocturna.",
+        "event_ids": [
+          "peticion",
+          "respuesta"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "diagonal",
+      "canon_model_ids": [
+        "aramai__identity_sheet",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "8898e4dd2f724c58b6571e4d08e9bc07c82c3a3799a492dd9c6f0784f57beb02",
+      "narrative_event_ids": [
+        "respuesta",
+        "recorrido",
+        "cese"
+      ],
+      "editorial_translation": "La noche que aparece dentro de otros umbrales prolonga la opción 1 elegida por el usuario para expresar recorrido y agencia de Wanurü, sin anatomía canónica. La petición de cese pertenece a la edición de la página. No se afirma una epidemia transmitida por portales o estrellas.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Los interiores domésticos detrás de puertas y enramadas.",
+        "impossible_behavior": "Otras casas adquieren por dentro la misma noche imposible mientras sus paredes siguen al sol.",
+        "narrative_effect": "Lo enviado recorre las rancherías aunque Arámai pida que termine; la súplica no lo domina.",
+        "agency": "El recorrido ligado a Wanurü es autónomo. Arámai está sentado, una mano en la rodilla y otra baja en petición.",
+        "physical_translation": "Puertas abiertas con postes superpuestos a varias hojas nocturnas en profundidad; sombras reales y pequeños agujeros de estrellas.",
+        "visible_test": "Más de un interior nocturno contradice su exterior diurno; no hay efecto unido a la mano de Arámai.",
+        "event_ids": [
+          "recorrido",
+          "cese"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "peso_contrario",
+      "canon_model_ids": [
+        "aramai__identity_sheet",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-15-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "b4c373e07e2cba8f249bcaf2ecf7e5a1bdf2c00f54d22824bbfdf72ccd40509d",
+      "narrative_event_ids": [
+        "reproche",
+        "cuidado"
+      ],
+      "editorial_translation": "Se adapta la opción 5 elegida: su reflejo anticipatorio pasa a ser memoria visual de ausencia en el desenlace, no predicción de nuevas muertes ni poder adivinatorio. El cuidado procede de la versión editorial; la responsabilidad, del núcleo histórico. La metáfora no afirma almas, rito ni retorno de muertos.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "El jagüey escaso, el cuenco compartido y un lugar doméstico desocupado.",
+        "impossible_behavior": "El agua guarda la ranchería nocturna sin devolver los reflejos de sus habitantes presentes.",
+        "narrative_effect": "El cuidado sostiene a quienes viven, pero no elimina la responsabilidad ni repara la pérdida.",
+        "agency": "Arámai sirve agua como trabajo cotidiano, no activa el reflejo ni realiza un rito; el vacío persiste por sí mismo.",
+        "physical_translation": "Hojas azules mates con arquitectura invertida de recortes y perforaciones mínimas de estrellas.",
+        "visible_test": "Casas invertidas reconocibles y ningún reflejo humano pese a que hay personas en la orilla.",
+        "event_ids": [
+          "cuidado",
+          "reproche"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

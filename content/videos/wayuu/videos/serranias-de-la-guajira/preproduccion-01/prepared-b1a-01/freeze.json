@@ -1,0 +1,93 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:20:29.677Z",
+  "plan": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/plan.json",
+  "plan_sha256": "a3297c1553705d5753fdcfb8a49aa272279cf877c7958662ac6ac953e98f6702",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 178,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 22,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/serranias-de-la-guajira/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "119d20c9386d1b94bb3614f227899f7a27a6df1a7bfce19d7dd8c5846a3948ec",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/entrada.jpeg",
+          "sha256": "986f87e1be60cfb02d8658ec8a1d7982fa3b8427b4ded6087eeb37da6405ccd6",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+        },
+        {
+          "kind": "triptych",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/acto.jpeg",
+          "sha256": "8df54ddfd286c03ea5e194c04c2b67de652da6003fbb7908851719bc76cc4300",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wojoro__identity_sheet--canon.jpeg",
+          "sha256": "3703e4cfcb92b706eff7bcb209ac399be94bfb3ff8cc9411ba6a5fb0f85366c4",
+          "approved": true,
+          "role": "Fijar el modelo canónico wojoro__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/epits__identity_sheet--canon.jpeg",
+          "sha256": "36c9c93765ff7751193cd5638c867443400d2cea23cbadfd2d2eb53997585685",
+          "approved": true,
+          "role": "Fijar el modelo canónico epits__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "serranias-de-la-guajira",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium-corrections-01/wososopo__identity_sheet--canon.jpeg",
+          "sha256": "bf7afe8ce1041fb4bf20b0bbf8c466b294711d1cc3bd04e31ff51bd06cc27a61",
+          "approved": true,
+          "role": "Fijar el modelo canónico wososopo__identity_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/serranias-de-la-guajira-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

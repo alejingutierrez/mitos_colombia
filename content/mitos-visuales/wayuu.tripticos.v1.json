@@ -1,0 +1,123 @@
+{
+  "schema": "mitos-colombia-triptychs/v1",
+  "status": "pilot_waiting_editorial_approval",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "generation_mode": "text_only_no_local_references",
+  "approval_gate": "Arámai se revisa como piloto; no se produce otro tríptico Wayúu sin aprobación explícita del editor",
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "aramai": {
+      "titulo": "Arámai",
+      "pilot": true,
+      "paleta": "arena blanqueada, arcilla apagada, carbón mate, ocre mineral, gris pálido, azul humo y una luz terracota contenida",
+      "evidence": [
+        {
+          "type": "primary_source",
+          "author": "Milcíades Chaves Ch.",
+          "title": "Mitos, leyendas y cuentos de la Guajira",
+          "publication": "Boletín de Arqueología, volumen II, número 4",
+          "year": 1946,
+          "pages": "314-315 de la paginación impresa; página 10 del PDF",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "supports": "Arámai es un hombre mayor; pide a Mareiwa enfermedades ante la falta de espacio y alimentos; Mareiwa envía pestes y a Wanurü por La Guajira; la comunidad culpa a Arámai."
+        },
+        {
+          "type": "internal_visual_research",
+          "path": "editorial/wayuu/material-culture-v3.mjs",
+          "supports": "Repertorio de indumentaria masculina completa, usos, límites y cautelas de representación."
+        }
+      ],
+      "source_conflicts": [
+        "La fuente primaria consultada llama a Arámai un hombre mayor; el tríptico corrige la edad demasiado joven de la ficha visual previa.",
+        "La fuente primaria no narra arrepentimiento ni cuidado posterior; esos estados de la Biblia no se usan en este tríptico piloto."
+      ],
+      "canon_models": [
+        "aramai__identity_sheet",
+        "mareiwa__state_sheet",
+        "wanuru__presence_model",
+        "epidemia_aramai__phenomenon_rule",
+        "jaguey__spatial_model",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "continuity_contract": [
+        "Arámai es el mismo hombre Wayúu mayor en entrada y acto: cuerpo delgado de proporción media, mandíbula estrecha, ceja izquierda ligeramente más alta, cabello negro corto con canas discretas y expresión preocupada, nunca malvada ni santificada.",
+        "Arámai viste un conjunto masculino completo y liso: Kemiisa arcilla de mangas largas bajo Kotin carbón amplio desde los hombros hasta debajo de las rodillas, S'ira arena secundaria y dos waireñas oscuras abiertas. Es una traducción editorial reversible para un tiempo mítico no fechado, no una reconstrucción prehispánica.",
+        "Las demás mujeres llevan Wayuushein largas, amplias y de color sólido sobre pechera y waireñas; los demás hombres usan combinaciones distintas y completas de Kemiisa con Kotin o She'ewe, faja y calzado. Nadie queda en taparrabo, torso desnudo, túnica genérica o uniforme.",
+        "No hay pintura facial: el relato no fija ocasión, material ni motivo. Tampoco kanas, marcas claniles, bordados, patrones, plumas, joyas ni tocados inventados.",
+        "Mareiwa no tiene cuerpo: sólo puede reconocerse por el mismo pliegue mineral ocre que reorganiza la materia.",
+        "Wanurü no tiene cuerpo: aparece como un grupo pequeño, asimétrico y aislado de fragmentos carbón rasgados que comprime el suelo; nunca demonio, animal, humo, líquido, franja o símbolo.",
+        "Las rancherías son sistemas dispersos con enramada abierta y vivienda baja rectilínea; nunca chozas redondas, techos cónicos, tipis ni aldea genérica.",
+        "Las tres imágenes pertenecen al mismo taller físico de paper craft 3D: fibras, pliegues, cantos internos y sombras reales; capas a distintas distancias; mundo full bleed sin perímetro, base, soporte, cartón, mesa o estudio visibles."
+      ],
+      "mythic_grammar": {
+        "ordinary_world": "La falta de alimentos tensiona una península muy poblada y lleva a Arámai a pensar la vida colectiva como un problema que cree poder reducir.",
+        "extraordinary_fact": "La petición pronunciada ante Mareiwa se vuelve peste y Wanurü recorre La Guajira.",
+        "magic_rule": "Lo pedido deja de pertenecer a quien lo pidió: alcanza rancherías separadas y ninguna voluntad humana puede escoger a quién toca.",
+        "limit_or_cost": "No mostrar contagio, enfermos ni muerte; la irreversibilidad se hace visible sólo por pérdida de tensión, luz y presencia en el territorio.",
+        "transformation": "Un territorio habitado se vuelve una extensión quebrada por ausencias y escasez.",
+        "trace": "Quedan rancherías en silencio, alimento insuficiente y la responsabilidad social adherida al nombre de Arámai.",
+        "emotional_center": "El horror moral de tratar vidas como excedentes y descubrir que una petición colectiva no admite control fino."
+      },
+      "magic_signature": {
+        "material_translation": "El pliegue ocre de Mareiwa recibe la petición; fragmentos carbón aislados presionan el suelo; en rancherías distantes el papel se afloja y pierde tensión sin ninguna línea que las conecte.",
+        "light_behavior": "La luz cálida se apaga por sectores separados, sin resplandor sobrenatural, aura ni niebla.",
+        "scale_behavior": "Arámai conserva escala humana mientras el vacío territorial y la separación entre rancherías crecen alrededor de él.",
+        "movement_behavior": "La acción avanza como respuestas materiales discontinuas en diferentes profundidades, nunca como humo, ola, camino negro o vector visible.",
+        "distinctive_elements": [
+          "pliegue mineral ocre sin cuerpo",
+          "presión carbón pequeña y aislada",
+          "tres rancherías con pérdida de tensión independiente",
+          "luces que se apagan por sectores sin conexión"
+        ],
+        "genericity_test": "Si se retiran el pliegue ocre, la presión carbón aislada y las tres rancherías que aflojan por separado, la escena se vuelve una epidemia genérica y debe rechazarse."
+      },
+      "mythic_imagination": {
+        "protected_canon": "La identidad y edad mayor de Arámai; su conjunto completo Kemiisa, Kotin, S'ira y waireñas; la diversidad de vestuario Wayúu; las enramadas y viviendas rectilíneas; la ausencia de pintura, kanas y símbolos no autorizados; Mareiwa y Wanurü sin cuerpo.",
+        "imaginative_field": "La península puede plegarse, elevarse, contener distancias incompatibles y proyectar sombras que no obedecen a su fuente; el papel, la luz y el vacío pueden responder a la petición como si el territorio escuchara.",
+        "dominant_impossible_image": "La misma tierra de La Guajira se levanta en una enorme curva suspendida y deja visibles varias profundidades en su reverso; tres rancherías separadas permanecen adheridas a esa geografía imposible mientras pierden tensión y luz.",
+        "scale_contract": "En el acto, la curvatura imposible del territorio ocupa por lo menos la mitad del cuadro y Arámai conserva escala humana pequeña pero legible; en entrada y huella el motivo se anuncia y permanece sin competir con su función narrativa.",
+        "mystical_light": "La luz terracota parece guardada dentro de los cantos del papel y se repliega hacia la tierra por sectores; ilumina desde dentro de las capas sin aura, rayos divinos ni fuente visible.",
+        "motif_arc": {
+          "entrada": "La cesta casi vacía y una curvatura apenas perceptible en el horizonte anuncian que el territorio contiene algo imposible.",
+          "acto": "El horizonte se levanta y curva sobre sí mismo; la tierra escucha la petición y contiene tres distancias simultáneas.",
+          "huella": "La gran curva ya no está en el cielo, pero su forma queda repetida en el borde de la cesta vacía y en una arruga que el suelo no recupera."
+        },
+        "wonder_test": "A primera vista debe ser imposible confundir la escena con un documental de sequía: la geografía suspendida y las distancias incompatibles se leen antes que cualquier detalle secundario.",
+        "memory_test": "Al cerrar la imagen debe permanecer una frase visual precisa: Arámai habló y la tierra entera se dobló para escuchar."
+      },
+      "character_art_treatment": {
+        "medium": "figura física de papel cortado y ensamblado, fotografiada dentro del diorama",
+        "construction": "marioneta editorial de bajo relieve: rostro construido con cinco a nueve planos geométricos recortados claramente visibles; nariz plegada angular, pómulos como piezas planas, ojos como pequeñas ranuras de papel oscuro, cabello en mechones recortados; cuello, manos, calzado y cada prenda son piezas separadas de papel artesanal superpuesto con cantos finos y micro-sombras reales",
+        "identity_method": "la edad y la identidad se leen por geometría de recortes, proporción, postura y pocos pliegues físicos, no por detalle fotográfico o pintura",
+        "reject_if": "parece ilustración digital con filtro de papel, retrato pintado, piel realista, cabeza redondeada o esculpida, muñeco plástico, arcilla, madera tallada o silueta plana impresa"
+      },
+      "escenas": {
+        "entrada": {
+          "composicion": "peso_contrario",
+          "era": "mitico_wayuu",
+          "refs": [],
+          "escena": "Plano general horizontal, cálido y activo antes de la petición. En el tercio izquierdo, Arámai —hombre Wayúu mayor con el rostro y el conjunto completo fijados en el contrato— avanza de frente en tres cuartos entre el borde bajo de un jagüey con poca agua y una enramada abierta. Arámai y las otras seis personas son INEQUÍVOCAMENTE MARIONETAS EDITORIALES FÍSICAS DE PAPEL CORTADO EN BAJO RELIEVE: rostros construidos con cinco a nueve planos mates visibles, narices plegadas, pómulos planos, ojos de papel, cabello en mechones recortados, manos articuladas simples y prendas como capas independientes. Nada de piel fotográfica, cabeza esculpida, sombreado pintado, arcilla, madera o muñeco plástico. Arámai lleva en ambas manos una cesta lisa casi vacía con unas pocas semillas opacas: el objeto narrativo es la falta de alimento, no una ofrenda. A la derecha, una piichipala dispersa está viva y ocupada por exactamente seis personas Wayúu de edades distintas en acciones cotidianas sobrias: una mujer mayor ordena semillas, una mujer adulta mueve una vasija cerrada, otra repara una estera lisa, dos hombres levantan una sombra de enramada y un niño lleva un cuenco. Todas las personas están completamente vestidas con los conjuntos diferenciados del contrato y se ven de frente o en tres cuartos, nunca de espaldas. La densidad humana y las reservas escasas explican la preocupación sin convertir a la comunidad en multitud. Lo imposible ya existe pero nadie lo señala: aunque el sol cae desde la izquierda, las seis sombras de papel azul humo se separan ligeramente de los pies de las otras personas y convergen hacia la cesta casi vacía sin tocarla; son sombras limpias, silenciosas y sin forma de cuerpo propio, no Wanurü, humo, camino o entidad. Al fondo, el horizonte de cinco estratos de papel se curva suavemente hacia abajo en la misma forma del borde de la cesta, como si la tierra entera se inclinara para escuchar una frase que aún no ha sido pronunciada. La curvatura es físicamente evidente pero no ocupa más de un tercio de la altura: anuncia el gran pliegue del acto sin adelantarlo. Viviendas bajas rectilíneas, cardones guajiros de varios tallos desde la base, senderos y serranía lejana crean por lo menos seis capas físicas con aire y sombras entre ellas. Una única luz terracota contenida recae sobre Arámai. El tercio superior derecho conserva cielo de papel limpio para título, sin vaciar la acción inferior. No aparece todavía Wanurü ni enfermedad. Full bleed sin base, cartón exterior, marco, mesa o estudio."
+        },
+        "acto": {
+          "composicion": "diagonal",
+          "era": "mitico_wayuu",
+          "refs": [],
+          "escena": "Escena vertical al crepúsculo, en otro lugar y otra luz. EXACTAMENTE UNA PERSONA HUMANA TOTAL EN TODA LA IMAGEN: Arámai. Cero testigos, familias, acompañantes, siluetas o figuras en las rancherías. Arámai ocupa el cuarto inferior y es INEQUÍVOCAMENTE UNA MARIONETA EDITORIAL FÍSICA DE PAPEL CORTADO EN BAJO RELIEVE. Su cabeza no es redonda ni esculpida: el rostro está armado con entre cinco y nueve planos mates recortados, todos distinguibles y ligeramente separados; mandíbula como silueta base, nariz como pliegue angular, dos pómulos planos, cejas de tiras finas y ojos como pequeñas ranuras oscuras sin brillo fotográfico. Cada cambio de tono corresponde a otra pieza y produce una micro-sombra real. Cabello negro y gris como ocho a doce mechones recortados superpuestos; manos como formas simples articuladas; Kemiisa arcilla, Kotin carbón amplio, S'ira y dos waireñas como capas independientes con cantos visibles. Nada de piel fotográfica, poros, arrugas realistas, cabeza modelada, pintura, sombreado suave, arcilla, madera tallada, muñeco plástico o retrato ilustrado. La edad mayor se reconoce por postura, proporción, canas de papel y tres pliegues físicos. Está de frente en tres cuartos, una mano abierta y gesto sereno ante algo que excede su cálculo. Frente a su pie aparece el pliegue mineral ocre de Mareiwa, bajo y no más alto que su tobillo: NUNCA MONOLITO, altar, losa vertical, estatua o cuerpo. A partir de ese instante, LA TIERRA MISMA DE LA GUAJIRA se curva hacia arriba y queda suspendida sobre Arámai como una enorme ola inmóvil de papel artesanal, pero no es agua, cueva, portal ni objeto: es el mismo suelo que se ha levantado, dejando aire real y sombras profundas entre su cara superior y su reverso fibroso. Esta geografía imposible ocupa más de la mitad del cuadro y forma un arco diagonal sublime. Adheridas a tres terrazas separadas de la gran curva aparecen exactamente tres rancherías deshabitadas en distancias incompatibles: una cercana, una media y una diminuta que parece estar al mismo tiempo muy lejos y sobre la cabeza de Arámai. Cada ranchería conserva vivienda baja rectilínea y enramada abierta; bajo cada una hay una arruga pálida floja y una luz terracota que se repliega hacia dentro del canto del papel, como si el territorio tragara su propia claridad. Las tres pérdidas de luz permanecen separadas y no existe vector entre ellas. WANURÜ se hace presente únicamente junto al pie de Arámai como un grupo pequeño y asimétrico de fragmentos carbón rasgados que presiona el suelo; su sombra aparece desplazada, enorme y dividida bajo las tres terrazas, sin formar cuerpo, rostro, animal, demonio, humo, líquido, franja o símbolo. El paisaje acepta lo imposible en silencio: Arámai no posa ni dramatiza. Profundidad física extrema con por lo menos siete planos escalonados, aire visible, oclusiones, parallax potencial, cantos internos iluminados y sombras reales. Full bleed sin base, cartón exterior, marco, mesa o estudio. No hay pacientes, cuerpos, cadáveres, erupciones, sangre, duelo, mascarillas, hospitales, microbios ni mecanismo médico."
+        },
+        "huella": {
+          "composicion": "paisaje_abierto",
+          "era": "mitico_wayuu",
+          "refs": [],
+          "escena": "Escena cuadrada al amanecer, sin personas. Un único motivo dominante ocupa el primer plano: la misma cesta física de papel cortado de la entrada, ahora completamente vacía sobre una estera de fibras cuya arruga pálida no puede volver a tensarse. La cesta es pequeña, lisa, cotidiana y sin patrón; sus paredes muestran tiras superpuestas, cantos irregulares y sombra real. Ocurre una sola imposibilidad monumental: aunque la luz viene del amanecer detrás de la cámara, la cesta proyecta hacia el fondo una SOMBRA ENORME en forma de península curvada que ocupa más de la mitad del cuadro y atraviesa varias profundidades sin aplanarlas. Dentro de esa sombra —como recortes claros que pertenecen al paisaje real, no como portal o imagen dentro de imagen— aparecen exactamente tres rancherías muy distantes, verticales y separadas, con enramadas y viviendas rectilíneas pero ninguna luz encendida. La sombra conserva textura de papel carbón y un borde fibroso elevado que repite la gran curva del acto; no forma persona, animal, demonio, humo, mancha líquida, carretera ni símbolo. Fuera de ella, la Alta Guajira continúa en seis capas físicas de arena, cardones de varios tallos, senderos y serranía. A un lado de la cesta queda hundido el pequeño grupo asimétrico de fragmentos carbón de Wanurü; no se conecta con la sombra ni con las rancherías. Una fina luz terracota permanece atrapada sólo bajo el borde interior de la cesta, como el último resto de claridad que el territorio recogió. La huella debe leerse primero como una paradoja mística de escala —un recipiente vacío proyecta un territorio demasiado grande— y después como alimento insuficiente, ausencia y responsabilidad irreversible. No mostrar enfermos, muerte, tumbas, cruces, abandono melodramático ni una causa epidemiológica. Profundidad 3D extrema, aire, oclusiones, parallax potencial y sombras reales entre capas. Full bleed: el mundo continúa hasta los cuatro bordes y nunca deja ver base, cartón exterior, mesa, marco o estudio."
+        }
+      }
+    }
+  }
+}

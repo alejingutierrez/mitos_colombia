@@ -5,6 +5,7 @@ import OpenAI, { toFile } from "openai";
 import sharp from "sharp";
 import { put, del } from "@vercel/blob";
 import { getTarotCardById, updateTarotCardImage } from "../../../../../lib/tarot";
+import { IMAGE_QUALITY_POLICY } from "../../../../../lib/image-quality-policy";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -276,7 +277,7 @@ async function generateImageBuffer(prompt, isRetry = false) {
       prompt: safePrompt,
       n: 1,
       size: "1024x1536",
-      quality: "high",
+      quality: IMAGE_QUALITY_POLICY.other,
       output_format: "png",
     });
 

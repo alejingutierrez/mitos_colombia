@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-13",
+  "review_method": "manual_visual_inspection_of_all_nine_outputs_and_eight_readonly_documentary_references",
+  "selected_units": [
+    {
+      "unit_id": "P02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/p02-primer-hombre-master-v1.jpeg",
+      "observations": [
+        "Una identidad nueva en cinco vistas; P01 se usó sólo como referencia de estilo, no como identidad.",
+        "Primer hombre de 346 y don inicial de semillas de 355; no se identifica con Huhum ni con el anfitrión Ette posterior de 355.",
+        "Edad, rostro, peinado y franjas de tela son propuestas editoriales. Rasgos todavía estilizados; no fenotipo universal ni retrato documental."
+      ],
+      "decision": "select_as_editorial_candidate_pending_user_review"
+    },
+    {
+      "unit_id": "H02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/h02-padre-tres-hijos-master-v1.jpeg",
+      "observations": [
+        "Cuatro identidades nuevas: padre y tres hijos; manos vacías, sin títulos ni insignias de autoridad.",
+        "Edades adultas propuestas para el reparto, no establecidas en el relato 356. H01 se usó sólo como referencia de estilo.",
+        "Diferenciación facial moderada; parecido familiar editorial. No certificación anatómica o cultural."
+      ],
+      "decision": "select_as_editorial_candidate_pending_user_review"
+    },
+    {
+      "unit_id": "A08",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/a08-caiman-master-v1.jpeg",
+      "observations": [
+        "Tres estados del animal y un huevo grande del sueño narrado en 365: tierra, nado y boca abierta.",
+        "Referencias de crocodiliano sólo apoyan anatomía externa; no certifican especie del caimán del relato.",
+        "Sin interior anatómico, persona devorada o gore; piel y ojos simplificados como capas de papel."
+      ],
+      "decision": "select_as_editorial_candidate_pending_user_review"
+    },
+    {
+      "unit_id": "L04",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg",
+      "observations": [
+        "Cuatro cuadros: dos cámaras con tres pozos secos arriba y llenos abajo. Cantidad de tres elegida para composición, no número sagrado del relato.",
+        "QA redujo los collares de mampostería a bordes terrosos irregulares; capas internas de papel aún escalonadas.",
+        "Cubre los pozos de 352, no estaca/manantial del Palo de Agua 356. Paisaje ficticio, no cartografía."
+      ],
+      "decision": "select_as_editorial_candidate_pending_user_review"
+    },
+    {
+      "unit_id": "U03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1-refined.jpeg",
+      "observations": [
+        "Cinco estudios de tres prototipos: macana grande (frente/canto), pequeña (frente/canto), palo de trabajo provisional.",
+        "QA cambió hoja lanceolada por tabla ensanchada y punta corta proyectada; cantos simplificados, no planos técnicos.",
+        "Archivo1946 apoya macanas distintas de tamaño y función. Palo de excavación no confirmado para pozos o ceiba; no usarlo como hecho cultural."
+      ],
+      "decision": "select_as_editorial_candidate_pending_user_review"
+    },
+    {
+      "unit_id": "V03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1-refined.jpeg",
+      "observations": [
+        "Cuatro cuadros: incendio arriba y terreno sin llamas abajo, derivados del espacio L01 para 350.",
+        "Tronco inclinado, roca y sendero reconocibles; cámaras/composición aproximadas, no correspondencia geométrica exacta entre estados.",
+        "No cubre casas L02, roza L05 ni cosmologías 579/580; conserva follaje seco estilizado y no representa recuperación completa."
+      ],
+      "decision": "select_as_editorial_candidate_pending_user_review"
+    }
+  ],
+  "rejected_intermediates": [
+    {
+      "unit_id": "L04",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1.jpeg",
+      "sha256": "997e3ce6664cc5aaa1d393e1f054f442835b7217cf76352b31082f6c0e471323",
+      "decision": "preserve_not_select",
+      "reason": "raised masonry-like collars"
+    },
+    {
+      "unit_id": "U03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1.jpeg",
+      "sha256": "a647bc4b97fe31d351fb9b25f29a88d754477a231ecc03ef77dc5bf294ecb451",
+      "decision": "preserve_not_select",
+      "reason": "lanceolate/spear-like blade"
+    },
+    {
+      "unit_id": "V03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/v03-incendio-terreno-posterior-l01-v1.jpeg",
+      "sha256": "b6e6dbc8d3fe107a86ed4527679e7e2349e779a87298de5ba4d864ca4d113676",
+      "decision": "preserve_not_select",
+      "reason": "three panels instead of four"
+    }
+  ],
+  "open_limits": [
+    "Cultural certification unavailable; no documentary identity copied.",
+    "L04 counts and terrain layout editorial; exact tools not documented.",
+    "V03 camera continuity approximate; not all fire variants in inventory produced.",
+    "Sunburst concurrency three observed, not proof of maximum account concurrency."
+  ]
+}
+

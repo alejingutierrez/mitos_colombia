@@ -1,0 +1,162 @@
+{
+  "myth_id": 433,
+  "slug": "lliban-y-juan-chiracol",
+  "title": "Llíban y Juan Chiracol",
+  "variant": "Relato conjunto; encuentro después de la defensa, dos destinos. No incorporar nacimientos ni combates de las fichas individuales.",
+  "rules": "Llíban occidental y Chiracol oriental distintos. Conservar respectivas ruanas/sombrero; no mapa cartográfico ni una sola laguna para ambos.",
+  "source": {
+    "path": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/lliban-y-juan-chiracol/source.snapshot.json",
+    "sha256": "5ff5bf0ab2af120c835c83792e3250148d260373e1fe37d978cffbb1b383e08c",
+    "narrative_sha256": "99d4f2d4e803b8be02af0fdfaa895ef01c90c72fa9f19a7f9117275589d5caee"
+  },
+  "references": {
+    "entrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-y-juan-chiracol/entrada-v1.png",
+      "sha256": "ec16d3c0702541b42d7789ca2fba54e65e803e425234a73ad96822fa95e4da79"
+    },
+    "acto": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-y-juan-chiracol/acto-v1.png",
+      "sha256": "cdde722dde83398dae649794fa1b6a5a68f7b9574ec0e8cd996241e5398226b4"
+    }
+  },
+  "expected_frames": 8,
+  "estimated_seconds": 44,
+  "timing_status": "provisional_pending_recorded_voice",
+  "voice_words": 67,
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Calderas tenía dos caciques. Cuando terminó el peligro, ninguno intentó quedarse con el lugar del otro.",
+      "word_count": 16,
+      "time_seconds": [
+        0,
+        11
+      ],
+      "shots": [
+        {
+          "id": "k01",
+          "time_seconds": [
+            0,
+            6
+          ],
+          "scene": "Gran general diurno: dos cordilleras delimitan un valle habitado; sin texto, fronteras dibujadas ni personajes gigantes.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k02",
+          "time_seconds": [
+            6,
+            11
+          ],
+          "scene": "General: Llíban y Juan Chiracol se aproximan desde senderos distintos para encontrarse sobre una loma seca.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Llíban estaba al occidente. Juan Chiracol, al oriente. Se encontraron para hablar del territorio que habían defendido.",
+      "word_count": 17,
+      "time_seconds": [
+        11,
+        22
+      ],
+      "shots": [
+        {
+          "id": "k03",
+          "time_seconds": [
+            11,
+            17
+          ],
+          "scene": "Medio lateral: los dos adultos hablan, Llíban conserva sombrero y Chiracol cabello descubierto; sin gestos de lucha.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k04",
+          "time_seconds": [
+            17,
+            22
+          ],
+          "scene": "Detalle de sus manos separadas señalando dos lados del paisaje; no apretón de manos ni intercambio de armas.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Después tomaron caminos diferentes. Juan fue hacia El Caspe; Llíban, hacia los linderos de Chinas.",
+      "word_count": 15,
+      "time_seconds": [
+        22,
+        32
+      ],
+      "shots": [
+        {
+          "id": "k05",
+          "time_seconds": [
+            22,
+            27
+          ],
+          "scene": "General posterior: Juan Chiracol solo desciende por una senda hacia laguna cercada por peñas.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k06",
+          "time_seconds": [
+            27,
+            32
+          ],
+          "scene": "General posterior distinto: Llíban solo cruza un filo hacia horizonte montañoso; no misma laguna replicada.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Quedaba su consejo: gobernar bien, respetar a los mayores y cuidar la tierra. Dos partidas mantenían una responsabilidad compartida.",
+      "word_count": 19,
+      "time_seconds": [
+        32,
+        44
+      ],
+      "shots": [
+        {
+          "id": "k07",
+          "time_seconds": [
+            32,
+            38
+          ],
+          "scene": "Medio: dos autoridades mayores anónimas permanecen en el lugar del encuentro, mirando los senderos vacíos; no reemplazan a los caciques.",
+          "refs": [
+            "entrada",
+            "acto"
+          ]
+        },
+        {
+          "id": "k08",
+          "time_seconds": [
+            38,
+            44
+          ],
+          "scene": "Cenital amplio final: dos senderos se separan sobre cartulina ocre, sin objetos abandonados, escritura, mapa ni límites inventados.",
+          "refs": [
+            "entrada",
+            "acto"
+          ]
+        }
+      ]
+    }
+  ]
+}

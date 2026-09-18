@@ -1,0 +1,71 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "el-indio-kuriruputa",
+  "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+  "status": "QA_PASS_AFTER_CORRECTION",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/el-indio-kuriruputa-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "ad48d0db46e57e127f212786d3f87445f6dd445168241a855594425cacafec17",
+  "batch_models": 5,
+  "selected_models": 5,
+  "pilot_models_for_myth": [
+    "hermanas_kuriruputa__group_grammar",
+    "tuma_roja__object_sheet",
+    "rancheria_wayuu__spatial_model",
+    "territorio_alta_guajira__environment_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 9,
+    "required": 9,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 36,
+    "required_models": 265,
+    "remaining_models": 229
+  },
+  "selections": {
+    "kuriruputa__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01/kuriruputa__identity_sheet--canon.jpeg",
+      "sha256": "caeb16a23fdd8d27cadb15b18deda45c6fc705b1686a35078e3a63701ca13c7c"
+    },
+    "kuriruputa__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/kuriruputa__state_sheet--estados.jpeg",
+      "sha256": "8d318bfb80cd1fd67cdb2f43b3e85b03c0d34f6bcc2f47315d6ce2ebf9b189b7"
+    },
+    "nueva_pareja_kuriruputa__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/nueva_pareja_kuriruputa__identity_sheet--canon.jpeg",
+      "sha256": "b2c5be05211a757fc26e283a0a994e8087deb76e1722056601a05a946c23a162"
+    },
+    "corral_kuriruputa__spatial_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/corral_kuriruputa__spatial_model--canon.jpeg",
+      "sha256": "97ec76786e0eb7b3dbf031c13029f1fedbd46aecd5ce4824a88c54b0af5cc94c"
+    },
+    "rebanos__group_grammar": {
+      "status": "PASS_WITH_MATERIALITY_WATCH",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/rebanos__group_grammar--canon.jpeg",
+      "sha256": "aec531d1a0a63e90fdcd09aeeb981e4c35e7b78a934e620608e5b6e4b7b8ed1f"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "kuriruputa__identity_sheet",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "reason": "REJECTED_IDENTITY_CONTINUITY_PALETTE",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/kuriruputa__identity_sheet--canon.jpeg",
+      "sha256": "76eafadf71c4c23da61de75cd5ba0fb52e29f0f3bc882c750ae917f047ea9b6a"
+    }
+  ]
+}

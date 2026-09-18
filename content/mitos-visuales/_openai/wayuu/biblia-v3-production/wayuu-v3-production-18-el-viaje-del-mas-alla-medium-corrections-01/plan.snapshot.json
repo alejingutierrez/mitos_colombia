@@ -1,0 +1,559 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-18-el-viaje-del-mas-alla-medium",
+    "myth_slug": "el-viaje-del-mas-alla",
+    "model_ids": [
+      "viudo_viaje_mas_alla__identity_sheet",
+      "viudo_viaje_mas_alla__state_sheet",
+      "esposa_muerta_viaje__identity_sheet",
+      "esposa_muerta_viaje__state_sheet",
+      "madre_viudo_viaje__identity_sheet",
+      "hermana_viudo_viaje__identity_sheet",
+      "parientes_muertos_jepira__group_grammar",
+      "danzantes_yolujaa_jepira__group_grammar",
+      "yolujaa__presence_model",
+      "alcaravan_guardian__identity_sheet",
+      "agua_yolujaa__object_sheet",
+      "recinto_agua_yolujaa__spatial_model",
+      "puerta_autonoma_jepira__spatial_model",
+      "montana_cienaga_jepira__spatial_model",
+      "caballos_muertos_jepira__group_grammar",
+      "alimentos_aparecidos_jepira__object_sheet",
+      "kasha_yonna_jepira__object_sheet",
+      "casas_descanso_jepira__spatial_model",
+      "sendero_bifurcado_juya__spatial_model",
+      "semeruco__botanical_sheet",
+      "vacas_lecheras_juya__group_grammar",
+      "vaca_guia_juya__identity_sheet",
+      "pulowi__presence_model",
+      "pulowi__state_sheet",
+      "casa_enramada_pulowi__spatial_model",
+      "botellas_juya__object_sheet",
+      "boa_banco__identity_sheet",
+      "boa_banco__state_sheet",
+      "corzo_hombre_arco__identity_sheet",
+      "corzo_hombre_arco__state_sheet",
+      "venado_hombre_rico__identity_sheet",
+      "venado_hombre_rico__state_sheet",
+      "conejos_jugadores__group_grammar",
+      "juego_oulakawaa_waleeru__object_sheet",
+      "patilla__state_sheet",
+      "ahuyama__state_sheet",
+      "maiz_juya__botanical_sheet",
+      "melon_juya__botanical_sheet",
+      "melon_juya__state_sheet",
+      "arana_anciana_viaje__identity_sheet",
+      "arana_anciana_viaje__state_sheet",
+      "hilo_arana_regreso__object_sheet",
+      "jepira__spatial_model",
+      "dominio_juya__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "research_inventory_design_complete_ready_for_generation"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "boa_banco__identity_sheet",
+    "patilla__state_sheet",
+    "melon_juya__state_sheet",
+    "vaca_guia_juya__identity_sheet"
+  ],
+  "models": {
+    "boa_banco__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "boa_banco"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Alterna la percepción de boa y banco y se enrolla al sentarse el viajero."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Alterna objeto y animal."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Alterna objeto y animal."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Banco con apariencia de boa. Funcion visual: Asiento que el visitante percibe como boa y que se enrolla cuando él se sienta; las dos lecturas conservan la misma materia y silueta.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Banco con apariencia de boa",
+          "funcion estable: Asiento que el visitante percibe como boa y que se enrolla cuando él se sienta; las dos lecturas conservan la misma materia y silueta.",
+          "estados declarados: boa_percibida, banco_revelado"
+        ],
+        "documented_features": [
+          "Asiento que el visitante percibe como boa y que se enrolla cuando él se sienta; las dos lecturas conservan la misma materia y silueta."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Banco con apariencia de boa. Asiento que el visitante percibe como boa y que se enrolla cuando él se sienta; las dos lecturas conservan la misma materia y silueta.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Asiento que el visitante percibe como boa y que se enrolla cuando él se sienta; las dos lecturas conservan la misma materia y silueta.",
+          "estados autorizados: boa_percibida, banco_revelado",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "boa_percibida"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "patilla__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "patilla"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo de la roza."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Habla y se percibe como gente de piel oscura con hijos."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Cultivo con apariencia familiar."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Fruto con apariencia humana."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Patilla. Funcion visual: Cultivo y alimento que en el dominio de Juyá habla y se percibe como un grupo familiar de piel oscura con hijos; la ficha de estado conserva personas plenamente vestidas y evita convertir color de piel en caricatura.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Patilla",
+          "funcion estable: Cultivo y alimento que en el dominio de Juyá habla y se percibe como un grupo familiar de piel oscura con hijos; la ficha de estado conserva personas plenamente vestidas y evita convertir color de piel en caricatura.",
+          "estados declarados: cultivo, fruto, familia_humana_percibida"
+        ],
+        "documented_features": [
+          "Cultivo y alimento que en el dominio de Juyá habla y se percibe como un grupo familiar de piel oscura con hijos; la ficha de estado conserva personas plenamente vestidas y evita convertir color de piel en caricatura."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Patilla. Cultivo y alimento que en el dominio de Juyá habla y se percibe como un grupo familiar de piel oscura con hijos; la ficha de estado conserva personas plenamente vestidas y evita convertir color de piel en caricatura.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Cultivo y alimento que en el dominio de Juyá habla y se percibe como un grupo familiar de piel oscura con hijos; la ficha de estado conserva personas plenamente vestidas y evita convertir color de piel en caricatura.",
+          "estados autorizados: cultivo, fruto, familia_humana_percibida",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "cultivo",
+            "fruto",
+            "familia_humana_percibida"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "melon_juya__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "melon_juya"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Se come en Jepira y se percibe como personas alijuna pequeñas en Juyá."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Melón del dominio de Juyá. Funcion visual: Melón comido en Jepira y percibido en el dominio de Juyá como personas alijuna pequeñas, siempre plenamente vestidas y sin caricatura.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Melón del dominio de Juyá",
+          "funcion estable: Melón comido en Jepira y percibido en el dominio de Juyá como personas alijuna pequeñas, siempre plenamente vestidas y sin caricatura.",
+          "estados declarados: cultivo_y_fruto, personas_alijuna_pequenas_percibidas"
+        ],
+        "documented_features": [
+          "Melón comido en Jepira y percibido en el dominio de Juyá como personas alijuna pequeñas, siempre plenamente vestidas y sin caricatura."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Melón del dominio de Juyá. Melón comido en Jepira y percibido en el dominio de Juyá como personas alijuna pequeñas, siempre plenamente vestidas y sin caricatura.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Melón comido en Jepira y percibido en el dominio de Juyá como personas alijuna pequeñas, siempre plenamente vestidas y sin caricatura.",
+          "estados autorizados: cultivo_y_fruto, personas_alijuna_pequenas_percibidas",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "cultivo_y_fruto",
+            "personas_alijuna_pequenas_percibidas"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "vaca_guia_juya__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "vaca_guia_juya"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Se queda atras y guia al viajero cuando este toma su cola."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Vaca vieja guía. Funcion visual: Vaca lechera muy vieja que se queda atrás; el viajero toma su cola y así llega a la casa de Juyá.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Vaca vieja guía",
+          "funcion estable: Vaca lechera muy vieja que se queda atrás; el viajero toma su cola y así llega a la casa de Juyá.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Vaca lechera muy vieja que se queda atrás; el viajero toma su cola y así llega a la casa de Juyá."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Vaca vieja guía. Vaca lechera muy vieja que se queda atrás; el viajero toma su cola y así llega a la casa de Juyá.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Vaca lechera muy vieja que se queda atrás; el viajero toma su cola y así llega a la casa de Juyá.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "boa_banco": {
+      "name": "Banco con apariencia de boa",
+      "kind": "criatura",
+      "description": "Asiento que el visitante percibe como boa y que se enrolla cuando él se sienta; las dos lecturas conservan la misma materia y silueta.",
+      "aliases": [],
+      "states": [
+        "boa_percibida",
+        "banco_revelado"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "boa_banco__identity_sheet",
+        "boa_banco__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-viaje-del-mas-alla",
+        "los-dominios-de-juya",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Alterna la percepción de boa y banco y se enrolla al sentarse el viajero."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Alterna objeto y animal."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Alterna objeto y animal."
+        }
+      ]
+    },
+    "patilla": {
+      "name": "Patilla",
+      "kind": "planta",
+      "description": "Cultivo y alimento que en el dominio de Juyá habla y se percibe como un grupo familiar de piel oscura con hijos; la ficha de estado conserva personas plenamente vestidas y evita convertir color de piel en caricatura.",
+      "aliases": [],
+      "states": [
+        "cultivo",
+        "fruto",
+        "familia_humana_percibida"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "patilla__botanical_sheet",
+        "patilla__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-pequeno-indio-kosina",
+        "el-viaje-del-mas-alla",
+        "los-dominios-de-juya",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Cultivo de la roza."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Habla y se percibe como gente de piel oscura con hijos."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Cultivo con apariencia familiar."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Fruto con apariencia humana."
+        }
+      ]
+    },
+    "melon_juya": {
+      "name": "Melón del dominio de Juyá",
+      "kind": "planta",
+      "description": "Melón comido en Jepira y percibido en el dominio de Juyá como personas alijuna pequeñas, siempre plenamente vestidas y sin caricatura.",
+      "aliases": [],
+      "states": [
+        "cultivo_y_fruto",
+        "personas_alijuna_pequenas_percibidas"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "melon_juya__botanical_sheet",
+        "melon_juya__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-viaje-del-mas-alla"
+      ],
+      "evidence": [
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Se come en Jepira y se percibe como personas alijuna pequeñas en Juyá."
+        }
+      ]
+    },
+    "vaca_guia_juya": {
+      "name": "Vaca vieja guía",
+      "kind": "animal",
+      "description": "Vaca lechera muy vieja que se queda atrás; el viajero toma su cola y así llega a la casa de Juyá.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "vaca_guia_juya__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-viaje-del-mas-alla"
+      ],
+      "evidence": [
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Se queda atras y guia al viajero cuando este toma su cola."
+        }
+      ]
+    }
+  }
+}

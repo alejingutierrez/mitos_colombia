@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "timezone": "America/Bogota",
+  "community_id": 29,
+  "catalog_name": "Chimila",
+  "community_name": "Ette Ennaka",
+  "region": "Caribe",
+  "status": "research_started_not_production_approved",
+  "delivery_scope": [
+    "research",
+    "production_handoff_documentation"
+  ],
+  "paid_generation_authorized": false,
+  "total_myths": 23,
+  "corpus_snapshot": "corpus-snapshot-20260912.json",
+  "snapshot_sha256": "0d71be61ef3538d2daa00949a5cdeed4fc005d82ca9abac0a71340abbcd4d758",
+  "scope_sha256": "69c9d919deb00e1df62dbac9a3c06d6dae748e4de1d2ddc1c8f2202aeface4fc",
+  "hash_algorithm": "SHA-256; scope = UTF-8 JSON.stringify(sorted myths.map(({id,slug,narrative_sha256})=>({id,slug,narrative_sha256})))",
+  "asset_pointer_baseline": {
+    "horizontal": 23,
+    "vertical": 23,
+    "square": 0,
+    "quality_audit": "not_performed",
+    "public_availability_audit": "not_performed"
+  },
+  "pilot_proposal": {
+    "myth_id": 352,
+    "status": "research_pilot_only"
+  },
+  "groups": [
+    {
+      "id": "G01",
+      "label": "Creación, astros y poblamiento",
+      "myth_ids": [
+        346,
+        347,
+        348
+      ]
+    },
+    {
+      "id": "G02",
+      "label": "Destrucción y supervivencia",
+      "myth_ids": [
+        350
+      ]
+    },
+    {
+      "id": "G03",
+      "label": "Fuego, agua, cultivo y reserva",
+      "myth_ids": [
+        351,
+        352,
+        353,
+        354,
+        355,
+        356
+      ]
+    },
+    {
+      "id": "G04",
+      "label": "Memoria de violencia y enfermedad",
+      "myth_ids": [
+        349,
+        357,
+        360,
+        361
+      ]
+    },
+    {
+      "id": "G05",
+      "label": "Muertos y transformación de brujos",
+      "myth_ids": [
+        358,
+        359
+      ]
+    },
+    {
+      "id": "G06",
+      "label": "Animales-persona y sueños",
+      "myth_ids": [
+        362,
+        363,
+        364,
+        365,
+        366
+      ]
+    },
+    {
+      "id": "G07",
+      "label": "Cosmología contemporánea, sin fusionar con 1945",
+      "myth_ids": [
+        579,
+        580
+      ]
+    }
+  ],
+  "grouping_status": "editorial_working_index_not_new_catalog_taxonomy",
+  "myths": [
+    {
+      "id": 346,
+      "slug": "creacion-chimila",
+      "title": "La creación de la tierra y los Paretare",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "ac78c9861d8ac508b13418699c2366dec525b5431f79ea840b39321efdf7a964"
+    },
+    {
+      "id": 347,
+      "slug": "sol-y-luna",
+      "title": "Sol y Luna",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "58ba480bf2f956aa95477c132a698cb3108bee2bf5da24ab0545a47121196d97"
+    },
+    {
+      "id": 348,
+      "slug": "el-poblamiento",
+      "title": "Las tres flechas del poblamiento",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "1f63226d523bde0b05cd88b35248e87dbc0ddd39054c9f5213b006bc88cf3655"
+    },
+    {
+      "id": 349,
+      "slug": "primeras-guerras",
+      "title": "Memoria de las primeras guerras",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "a019441aeec7d333921a3f0d74af6138f0699ad123decf89924155429cdc9d03"
+    },
+    {
+      "id": 350,
+      "slug": "el-diluvio",
+      "title": "El diluvio, la lechuza y el totumo",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "d8e182862a5ffab5c192a66f48fe4c9fa3ce6ca0dbb4ae40882e24cc7bfd239b"
+    },
+    {
+      "id": 351,
+      "slug": "el-fuego",
+      "title": "Huhum, el sapo que trajo el fuego",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "989ef186e2c3be2c7e25816919fbec23ca1abf0a7d64b6dff14950c3bb5e61f7"
+    },
+    {
+      "id": 352,
+      "slug": "el-agua",
+      "title": "La Gran Cacica y el origen del agua",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "4de565ae3fa4c4eb0ae1cb9e6a7579c5a60eb60b97244ca445ff7eb141ef54a8"
+    },
+    {
+      "id": 353,
+      "slug": "el-maiz",
+      "title": "La ceiba que guardaba el maíz",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "6a6efa4bf7bf6d6a4ca6558d7c2796e5ef2833f5ed963808df33ff19acbe4152"
+    },
+    {
+      "id": 354,
+      "slug": "el-gran-verano",
+      "title": "La semilla guardada durante el gran verano",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "cf5c49a0287d96b9641827fcc457ab6f1b6710147bd69f307d2f317ee5f25d14"
+    },
+    {
+      "id": 355,
+      "slug": "el-algodon",
+      "title": "La semilla de algodón compartida",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "b82bb0eb9a110335e1e6a6d7cf0af7e2be3e0b37f66c21cc581b58fcbf54b8cf"
+    },
+    {
+      "id": 356,
+      "slug": "el-palo-de-agua",
+      "title": "El palo que abrió el agua",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "06834228303049d98b8e7a4216366e2ad86b1c4efe695146c3f4225294e782e7"
+    },
+    {
+      "id": 357,
+      "slug": "la-mala-mujer",
+      "title": "La llamada «mala mujer»",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "b28711f7a91db18f932e9205ce0bbbce4585057b426d9533433cc923d01cb9fc"
+    },
+    {
+      "id": 358,
+      "slug": "los-muertos-en-el-monte",
+      "title": "La casa de los muertos en el monte",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "d6c0bd4c8fa625626ad0dc0f8d991ec8ed7aea84ff817127d00ad23260c69a82"
+    },
+    {
+      "id": 359,
+      "slug": "los-brujos",
+      "title": "Los buenos y los malos brujos",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "658293bfe396188589b392b881694a293d8b867b88fb965fb3c4a78b13918afb"
+    },
+    {
+      "id": 360,
+      "slug": "los-canibales",
+      "title": "El crimen ocultado",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "835c3be31f1722993cfbd112af7fa9c7335194710c0b94f14a8f09ffee6519b4"
+    },
+    {
+      "id": 361,
+      "slug": "el-castigo",
+      "title": "La enfermedad después de la guerra",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "e535375d681d73e380dca04d4cb07aa47832f8c99ac68dc32febde4bf778dadc"
+    },
+    {
+      "id": 362,
+      "slug": "los-animales-hablan",
+      "title": "Los animales hablan",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "46fb8fc1bbf6c94a52b94b62613247bc9ad654c98761fc3c0359bedda5ab5ab8"
+    },
+    {
+      "id": 363,
+      "slug": "los-monos",
+      "title": "El mono que devolvió la flecha",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "378907b07b203c7adb4d10f1c1983855b68af80afa4769e0c529d8758e53d47d"
+    },
+    {
+      "id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "title": "El hombre que soñó con una danta",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "d9c19d82b04de23d4ed6dd18683b6334a058f48807aaf8c85b446b27ed55a2f6"
+    },
+    {
+      "id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "title": "El hombre que soñó con un caimán",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "8f61ce31eab06cbd0bd58cab9db39099be2eac54b3c301d6d01da679b36e79e0"
+    },
+    {
+      "id": 366,
+      "slug": "el-morrocoyo",
+      "title": "El morrocoyo que antes era gente",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "1d027d8a13e6b3e695c09c68b7e2876cab16de3397c9fadd0a852e93ed0274ba"
+    },
+    {
+      "id": 579,
+      "slug": "yunari-y-las-cinco-tierras",
+      "title": "Yunari y las cinco tierras",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "4905e2bc1162f5d771ccf7f7b0aa2379454c4c4d1e2fc15a1a70bbe7e7538b00"
+    },
+    {
+      "id": 580,
+      "slug": "yaau-numirinta-y-las-dos-mazorcas",
+      "title": "Yaau, Numirinta y las dos mazorcas",
+      "category_path": "Caribe > Magdalena > Chimila",
+      "narrative_sha256": "3b694040e12ffca5517e262a4645bfe3ee4e5ebd24c7d4e482ca14f918d2fd10"
+    }
+  ]
+}

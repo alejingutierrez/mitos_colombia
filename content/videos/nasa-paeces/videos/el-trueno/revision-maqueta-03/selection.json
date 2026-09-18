@@ -1,0 +1,833 @@
+{
+  "schema": "nasa-keyframes-review-revision/v1",
+  "revision": "maqueta-03",
+  "label": "14 keyframes · secuencia completa en maqueta de papel",
+  "description": "Secuencia completa con papel cortado y plegado, volumen y sombras entre capas. Se conservan los dos planos de apertura reforzados y se reconstruyen los otros doce.",
+  "lineage_description": "La revisión completa conserva los dos planos iniciales reforzados y reconstruye los otros doce a partir de cada escena anterior, del tríptico actualizado y de los cuadros ya revisados.",
+  "footer_description": "Doce cuadros recreados en esta continuación; los dos iniciales reforzados se conservan. Todos los originales y candidatos anteriores permanecen disponibles.",
+  "scope": [
+    "b1a",
+    "b1b",
+    "b2a",
+    "b2b",
+    "b3a",
+    "b3b",
+    "b4a",
+    "b4b",
+    "b5a",
+    "b5b",
+    "b6a",
+    "b6b",
+    "b7a",
+    "b7b"
+  ],
+  "created_at": "2026-09-13T20:57:47.880Z",
+  "status": "ready_for_user_review",
+  "base_selection": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/selection.json",
+  "base_selection_sha256": "66a477d5002fd018e49e5a3fddb031d2b0b4df3468201e98ffd02dcc389bd026",
+  "selected": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+      "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T17:51:20.738Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Dedos formados por pliegues y volúmenes de papel; espesor, huecos y sombras de contacto visibles.",
+        "Chal verde separado de la manga, agua en capas levantadas y fondo con desenfoque óptico. Una mano, una vara, encuadre de apertura conservado."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-02/b1a.request.json",
+      "request_sha256": "e76531423c5168f1409bf4b30459bce15391658a1f412d601ca7f4ec365755e7",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-v1.png",
+          "sha256": "e5d3ed157da76299a4e1bad81a04e466c715986033de727f66c0c36d6d471b0d"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b1a",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-v1.png",
+        "sha256": "e5d3ed157da76299a4e1bad81a04e466c715986033de727f66c0c36d6d471b0d",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:35:46.323Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Una mano y vara continuas; vestuario verde, lago y capas de papel coherentes. Encuadre de detalle útil como apertura. Niebla conserva pequeños bordes suaves heredados; formato cercano a 9:16, original sin recortar."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b1a.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T17:51:20.753Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Dos figuras de papel de cuerpo completo, dos varas y pies sobre camino seco. Dirección de marcha conservada.",
+        "Ropa doblada en volúmenes, cantos del camino, plantas recortadas y agua superpuesta. Fondo ópticamente desenfocado y luz lateral coherentes con b1a revisado."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-02/b1b.request.json",
+      "request_sha256": "a955a7655451155ce0f9deb41e0230a9104d5f8a32e298e657944069b0b13be1",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-v1.png",
+          "sha256": "eaa7994c68bef0f044452f785c83fa2efd4600ffee367c09d30d82b47d2877ba"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b1b",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-v1.png",
+        "sha256": "eaa7994c68bef0f044452f785c83fa2efd4600ffee367c09d30d82b47d2877ba",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:36:25.019Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Dos autoridades y dos varas; dirección de marcha y pies sobre tierra legibles. Paleta y laguna continuas con b1a; contraste útil entre detalle y gran general."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b1b.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-maqueta-v3.png",
+      "sha256": "4e11447c87410a0da7131e2de3dec24fa3f5c62f842f94f1e4930c8d347d283f",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T20:58:55.076Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Un anciano y una boleadora en vuelo; gesto, sombrero y capa conservados. Capa y pantalón con pliegues volumétricos, nubes separadas y roca de cartulina facetada; desenfoque de fondo sin perder la acción."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b2a.v1.request.json",
+      "request_sha256": "56e80cf92f234bbb8f9fba9e5652b7dad7d6e83b5005db48631946ad27be9b57",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-v1.png",
+          "sha256": "67ab49b7db68324ed2aba84789a81467a2ba63f95ecd0c5a19905a0d1619b646"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/entrada-v1.png",
+          "sha256": "63f803191a0301659b8ebd3206c4d30ccc0685ddedaddc1e49dbc80e69bbdf1d"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b2a",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-v1.png",
+        "sha256": "67ab49b7db68324ed2aba84789a81467a2ba63f95ecd0c5a19905a0d1619b646",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:37:22.590Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Gesto de lanzamiento claro, una boleadora, personaje P01 reconocible; adversarios fuera de campo. Contrapicado y luz diferencian el retroceso. Relámpagos del ambiente conservados como lenguaje visual editorial."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b2a.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2b-maqueta-v3.png",
+      "sha256": "7a365a6958bbdad5367ee37dae055782410b8a6bd221fd9896d76aafdd852d24",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T20:59:53.207Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Paisaje sin personas ni armas. Nubes separadas con sombra profunda, plantas y árboles recortados de pie, relieve de laderas y cauce de papel; conserva apertura de luz, relámpago lejano y composición territorial del original."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b2b.v1.request.json",
+      "request_sha256": "faa8fd536b1a548a617685f836c30038f06a466a095ec7a634aa7c1cbd1e69dc",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2b-v1.png",
+          "sha256": "ad4b362c91b8e4c8f2f86031396bb2770fe60ad0ecb131d17ab76a4a8bea0037"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/entrada-v1.png",
+          "sha256": "63f803191a0301659b8ebd3206c4d30ccc0685ddedaddc1e49dbc80e69bbdf1d"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2a-maqueta-v3.png",
+          "sha256": "4e11447c87410a0da7131e2de3dec24fa3f5c62f842f94f1e4930c8d347d283f"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b2b",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2b-v1.png",
+        "sha256": "ad4b362c91b8e4c8f2f86031396bb2770fe60ad0ecb131d17ab76a4a8bea0037",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:38:15.122Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Territorio legible tras lanzamiento; sin personas ni objetos heredados. Una abertura de luz entre nubes aporta consecuencia visual sin representar una batalla. Escena de papel continua."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b2b.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3a-maqueta-v3-r2.png",
+      "sha256": "4a69a2e964575dcbfd3306feea4a1d51909474900b5e26576e863a637dc6e1ff",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:01:22.777Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Tres figuras correctas: Trueno con capa negra y sombrero claro, médico con una vara y mujer de chal azul; bolsas de papel y gesto de aviso conservados. Paneles de ropa volumétricos y pliegues, sombras de nubes y roca facetada; no se trasladó la boleadora a esta escena."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b3a.v2.request.json",
+      "request_sha256": "ce298126b547eac6393d42d1866a21d9960d0b2524e82a2df18aa2e7b1e96913",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3a-v1.png",
+          "sha256": "e7132656e286b7bc0c6ec00f99dca58497da45ae1dc8f8d47484e91d94112ded"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/entrada-v1.png",
+          "sha256": "63f803191a0301659b8ebd3206c4d30ccc0685ddedaddc1e49dbc80e69bbdf1d"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b2b-maqueta-v3.png",
+          "sha256": "7a365a6958bbdad5367ee37dae055782410b8a6bd221fd9896d76aafdd852d24"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b3a",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3a-v1.png",
+        "sha256": "e7132656e286b7bc0c6ec00f99dca58497da45ae1dc8f8d47484e91d94112ded",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:39:53.627Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Tres personajes correctos; una vara solo del médico, sin boleadora heredada. Aviso legible por gesto y miradas. Encuadre más cercano que tríptico; rostro y capa conservados."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b3a.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3b-maqueta-v3.png",
+      "sha256": "3a99c7bc25639a96395ab1b373bcfde1aa1ab094c3781e37b83a686c250c8234",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:02:25.043Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Un solo Trueno de espaldas camina sobre sendero seco hacia la laguna; conserva sombrero, canas y capa, sin vara o arma añadida. Camino laminado, ropa de planos plegados, rocas facetadas y sombras de maqueta; cambio a ocaso y profundidad conservados."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b3b.v1.request.json",
+      "request_sha256": "846e64ec9ef535f40e8d671c8e4b335cb25d7a78e7a67c0dce05cbbc9aa7455e",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3b-v1.png",
+          "sha256": "65e4c4715c44b31b666ecfa128d6cbb9e50f261dfd9745bcc41d610d5c2ab06d"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/entrada-v1.png",
+          "sha256": "63f803191a0301659b8ebd3206c4d30ccc0685ddedaddc1e49dbc80e69bbdf1d"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3a-maqueta-v3-r2.png",
+          "sha256": "4a69a2e964575dcbfd3306feea4a1d51909474900b5e26576e863a637dc6e1ff"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b3b",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3b-v1.png",
+        "sha256": "65e4c4715c44b31b666ecfa128d6cbb9e50f261dfd9745bcc41d610d5c2ab06d",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:40:43.863Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Retiro por sendero visible hacia laguna pequeña; P01 mantiene capa y sombrero. Sin inmersión ni transformación inventada. Ocaso editorial para transicionar hacia la visita nocturna."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b3b.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b4a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4a-maqueta-v3-r2.png",
+      "sha256": "24c222be73fe26e8efa813055d8ce194f0af526d203ab2e2f01a40420f8689d0",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:04:56.709Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Cenital completo de laguna confinada, sin cielo ni luna ni personajes. Corrección nocturna aprobada: papel índigo y roca azul gris, orilla ocre apagada y niebla plateada tenue; espesor y sombras visibles. No se propagó el candidato previo demasiado luminoso."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b4a.v2.request.json",
+      "request_sha256": "b69aba600b648a4d7567e17a199c2523f601f7493c36367b3177825d79e8f9a3",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4a-v2.png",
+          "sha256": "9a005fecd57666fd99e98352fe68f0e1cef3430cbcf7e728899f2e12243e288f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/acto-v1.png",
+          "sha256": "93ddc7c66d050b4446a0259aa425a70987e7e022df7dbd592ff6b4c9cba8a87b"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b3b-maqueta-v3.png",
+          "sha256": "3a99c7bc25639a96395ab1b373bcfde1aa1ab094c3781e37b83a686c250c8234"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b4a",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4a-v2.png",
+        "sha256": "9a005fecd57666fd99e98352fe68f0e1cef3430cbcf7e728899f2e12243e288f",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:42:50.240Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Corrección aprobada: cenital claro, laguna confinada completa, sin cielo ni luna; cambio de cámara útil. V2 sustituye V1 conservada como rechazo."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b4a.v2.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4b-maqueta-v3.png",
+      "sha256": "4ab596ad7d4ce335226636fb605579ae8cf51910a292a9f0760abe6fcc5291e1",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:06:24.122Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Dos autoridades caminan de izquierda a derecha, una vara cada una y pies sobre sendero seco. Mujer de chal verde y hombre de ruana azul gris conservan identidad. Ropa plegada, agua en láminas levantadas, plantas recortadas y primer plano desenfocado hacen legible la maqueta nocturna."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b4b.v1.request.json",
+      "request_sha256": "79f6082d8009206bbc50985f7ff07215530792fe456003491991c725fd5a7d6a",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4b-v1.png",
+          "sha256": "9fad1cef2e26b6562937c9f406ca0f37fd6c05b4fd2b4f430c5b6cf29c0ddc6a"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/acto-v1.png",
+          "sha256": "93ddc7c66d050b4446a0259aa425a70987e7e022df7dbd592ff6b4c9cba8a87b"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4a-maqueta-v3-r2.png",
+          "sha256": "24c222be73fe26e8efa813055d8ce194f0af526d203ab2e2f01a40420f8689d0"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b4b",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4b-v1.png",
+        "sha256": "9fad1cef2e26b6562937c9f406ca0f37fd6c05b4fd2b4f430c5b6cf29c0ddc6a",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:43:54.722Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Dos autoridades C02 con identidad y ropa correctas; dos varas y marcha lateral sobre tierra. Escala mayor que b1b y profundidad con roca cercana. Puntos de cielo discretos sin función simbólica."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b4b.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b5a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5a-maqueta-v3.png",
+      "sha256": "a4f3bed370ad425ee0932e125dbac76cf1e3514ac7883bd20596c0d1d288b8e5",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:07:23.637Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Dos autoridades y dos varas continuas; cuatro pies sobre tierra y dos puntos de contacto con anillos de papel, sin elementos medicinales añadidos. Manos plegadas, ropa con solapas y agua en capas físicamente levantadas; rostro, sombrero y vestuario consistentes con la caminata."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b5a.v1.request.json",
+      "request_sha256": "9c0b3d01abf9be13b66fda2495f2fe09879340301450b37879c19bdc8a1f439a",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5a-v1.png",
+          "sha256": "5fa7555c8f27b0321832099ac06347c29678bc1bcad8006e485ab83323257d42"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/acto-v1.png",
+          "sha256": "93ddc7c66d050b4446a0259aa425a70987e7e022df7dbd592ff6b4c9cba8a87b"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4b-maqueta-v3.png",
+          "sha256": "4ab596ad7d4ce335226636fb605579ae8cf51910a292a9f0760abe6fcc5291e1"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b5a",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5a-v1.png",
+        "sha256": "5fa7555c8f27b0321832099ac06347c29678bc1bcad8006e485ab83323257d42",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:44:57.714Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Acción aprobada: dos personas, cuatro pies sobre tierra, dos varas continuas y dos contactos de agua. Manos y vestuario correctos; sin medicina inventada. Plano conjunto legible."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b5a.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b5b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5b-maqueta-v3.png",
+      "sha256": "a428a0517fa5ce1cb6297634ebb8677b859ba0ea6d519a5df4705dbde2d881ab",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:08:29.356Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Detalle con dos varas continuas y dos grupos de anillos de papel. Láminas azules separadas, sombras de borde y orilla superior izquierda conservan el encuadre de retorno para el cierre. Sin manos, personajes, signos, líquidos realistas ni objetos rituales añadidos."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b5b.v1.request.json",
+      "request_sha256": "557e6c7c52c80a4a02c5f8e53caaed34b3c7ac241c35f2ae3ed784fa6f978177",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5b-v1.png",
+          "sha256": "b14a7b3b4764fa8b080755606cdffdc29ada5a48a6ded5489b35e901e3f0624b"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/acto-v1.png",
+          "sha256": "93ddc7c66d050b4446a0259aa425a70987e7e022df7dbd592ff6b4c9cba8a87b"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5a-maqueta-v3.png",
+          "sha256": "a4f3bed370ad425ee0932e125dbac76cf1e3514ac7883bd20596c0d1d288b8e5"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b5b",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5b-v1.png",
+        "sha256": "b14a7b3b4764fa8b080755606cdffdc29ada5a48a6ded5489b35e901e3f0624b",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:45:51.438Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Dos varas rectas, dos contactos y ondas de papel sin brillo mágico. El detalle conserva la orilla y cambia claramente la escala; picado cercano suficiente aunque no cenital ortogonal."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b5b.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6a-maqueta-v3.png",
+      "sha256": "00f62f25be301ad14652a0035c02b5713b85b0ea1c1bb9b676d6933344120b77",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:09:40.582Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Dos médicos C01 próximos con intercambio de mirada y gesto de pausa; hombre oliva con sombrero y una vara, mujer azul con bolsa y sin vara. Pliegues, bolsos de papel y cantos del escenario visibles; fondo cerrado sin laguna añadida, rostros planos de recortes y separación de enfoque."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b6a.v1.request.json",
+      "request_sha256": "455cad508b792ac352d102b1de8541beac1d3a1d78c27d6eda3109a03f67a1cc",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6a-v2.png",
+          "sha256": "fa46adea52f08884cd351771709805e19bd9409201a74eedc595cc8d6994d9c4"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/entrada-v1.png",
+          "sha256": "63f803191a0301659b8ebd3206c4d30ccc0685ddedaddc1e49dbc80e69bbdf1d"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5b-maqueta-v3.png",
+          "sha256": "a428a0517fa5ce1cb6297634ebb8677b859ba0ea6d519a5df4705dbde2d881ab"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b6a",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6a-v2.png",
+        "sha256": "fa46adea52f08884cd351771709805e19bd9409201a74eedc595cc8d6994d9c4",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:48:43.418Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Corrección aprobada: figuras cercanas, intercambio de mirada y gesto de pausa legibles; desaparece lago de valle incorrecto. Plano sigue de cuerpo entero, pero escala subjetiva y función humana quedan claras."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b6a.v2.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b6b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-maqueta-v3.png",
+      "sha256": "d7419655eb7de177ac4b2687f4570e4858b8b5ca2c08003c7ca11b5c2ab817cf",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:10:41.950Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Sendero vacío en ocaso, laguna alta confinada y recodo tras roca conservados; ninguna persona ni objeto abandonado. Planos de suelo escalonados, montañas plegadas, plantas independientes y agua en láminas con sombra; profundidad de maqueta sin alterar la función de ausencia."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b6b.v1.request.json",
+      "request_sha256": "5fb50347c8001ae76e0d8ccffa3588083e145bdae488db61f233605737308b8a",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-v1.png",
+          "sha256": "b2ee0e78f50a8ec5dd272872ed7a3e7cc5156d3c355cd188f0b4ca3f9ba4268c"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/acto-v1.png",
+          "sha256": "93ddc7c66d050b4446a0259aa425a70987e7e022df7dbd592ff6b4c9cba8a87b"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6a-maqueta-v3.png",
+          "sha256": "00f62f25be301ad14652a0035c02b5713b85b0ea1c1bb9b676d6933344120b77"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b6b",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-v1.png",
+        "sha256": "b2ee0e78f50a8ec5dd272872ed7a3e7cc5156d3c355cd188f0b4ca3f9ba4268c",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:54:15.265Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Sendero vacío y destino remoto; sin objetos abandonados ni barrera sobrenatural. La ausencia cambia el sentido del paisaje. Laguna vuelve a configuración alta y confinada."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b6b.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7a-maqueta-v3.png",
+      "sha256": "e353f5ff8a7d7471ed6d65c4f6ae3a98bbec330dbddc0107b85033459d1ddafc",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:11:54.433Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Laguna y orilla vacías, sin personas, varas ni apariciones. Planos de agua levantados, montañas plegadas y niebla recortada con sombra; paleta azul y ocre conservada. Profundidad de maqueta con primer plano de plantas y roca desenfocado."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b7a.v1.request.json",
+      "request_sha256": "1ec81254056c5a776649cf59619409ab923e87be817917ebafb751c85d19cc65",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7a-v1.png",
+          "sha256": "d5c39d774bd7dcd9bdd07e0e8f887d050d80b2fe808800375e5187b3d2b6c682"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-maqueta-v2.png",
+          "sha256": "adb98a31b3f5a05b3008ad6314855fe06e2614f8f8ae60af5bd6213f31d10388"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+          "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-trueno/acto-v1.png",
+          "sha256": "93ddc7c66d050b4446a0259aa425a70987e7e022df7dbd592ff6b4c9cba8a87b"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b6b-maqueta-v3.png",
+          "sha256": "d7419655eb7de177ac4b2687f4570e4858b8b5ca2c08003c7ca11b5c2ab817cf"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b7a",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7a-v1.png",
+        "sha256": "d5c39d774bd7dcd9bdd07e0e8f887d050d80b2fe808800375e5187b3d2b6c682",
+        "width": 940,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:55:17.128Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Vuelve a la orilla del acto sin autoridades ni varas abandonadas. Agua y montañas conservan paleta y papel; pausa final sin aparición añadida."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b7a.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7b-maqueta-v3-r2.png",
+      "sha256": "66535801fa4ba5e26bcb7905e266f6b8cf10f5cecb951154cef6a3e8c6b41bed",
+      "width": 941,
+      "height": 1672,
+      "format": "png",
+      "reviewed": true,
+      "reviewed_at": "2026-09-13T21:14:55.025Z",
+      "review": "editorial_not_user_approval",
+      "notes": [
+        "Cierre corregido: detalle cercano de la misma orilla superior izquierda y agua azul de b5b. Ausencia completa de personajes, varas, reflejos de varas y ondas circulares. Espesor, sombras y separación de láminas de papel coherentes; se conservó el candidato rechazado sin usarlo como referencia."
+      ],
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b7b.v2.request.json",
+      "request_sha256": "9acf4895ada4d151d6a1ea90fe452489df3585e1d71477f27febb67319b9e804",
+      "references": [
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7b-v1.png",
+          "sha256": "c798980b13b138c85ddfe911a1fc5dd77581e129569883108cf5f09ee800fd28"
+        },
+        {
+          "path": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b5b-maqueta-v3.png",
+          "sha256": "a428a0517fa5ce1cb6297634ebb8677b859ba0ea6d519a5df4705dbde2d881ab"
+        }
+      ],
+      "provider": "built_in_image_gen",
+      "exact_model": "not_exposed_by_tool",
+      "quality": "not_exposed_by_tool",
+      "supersedes": {
+        "id": "b7b",
+        "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7b-v1.png",
+        "sha256": "c798980b13b138c85ddfe911a1fc5dd77581e129569883108cf5f09ee800fd28",
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "reviewed": true,
+        "reviewed_at": "2026-09-13T13:56:16.038Z",
+        "review": "editorial_not_user_approval",
+        "notes": [
+          "Bookend aprobado: misma orilla y escala de b5b, dos varas y sus ondas desaparecidas. La nueva referencia semántica preserva composición sin repetir acción. Agua de papel mate, sin símbolos."
+        ],
+        "request_file": "content/videos/nasa-paeces/videos/el-trueno/produccion-01/b7b.request.json",
+        "provider": "built_in_image_gen",
+        "exact_model": "not_exposed_by_tool",
+        "quality": "not_exposed_by_tool"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "id": "b4a",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b4a-maqueta-v3-rejected-daylight.png",
+      "sha256": "6842f1172011cb22d292fb83e60f39a64ac3911ed98ed39cbffbc29b75cfde96",
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b4a.v1.request.json",
+      "reason": "Iluminación demasiado clara y ocre dorado para el establecimiento nocturno. Mantener composición cenital y reducir exposición con luz azul fría.",
+      "allowed_as_future_reference": false
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b7b-maqueta-v3-rejected-people.png",
+      "sha256": "c52d72f8c5045670f023b421ba8c45903f988eb1cb49fc26d2fe212f92cf069b",
+      "request_file": "content/videos/nasa-paeces/videos/el-trueno/revision-maqueta-03/b7b.v1.request.json",
+      "reason": "Arrastró personas y vista amplia desde referencias de material. Cierre requiere detalle cercano de agua vacía. Reparar con referencias únicamente de agua y orilla, sin personas.",
+      "allowed_as_future_reference": false
+    }
+  ],
+  "originals_preserved": true
+}

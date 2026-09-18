@@ -1,0 +1,144 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-mellizos-triptych-02-entrada",
+  "created_at": "2026-09-06T05:17:54.057Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "los-mellizos-transformadores",
+  "plan": "content/mitos-visuales/wayuu.mellizos.triptico.v1.1-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "7bb127c5ec1ac2e3a6ea93bfe65aa3ef35614ab52e3ba598a0679c2deed11a64",
+  "narrative_target_sha256": "43e7c6a2dfcc83a7d4f49bcb2eb94d6117305002cfed920bbf4b05f4634d9688",
+  "evidence": [
+    {
+      "id": "finol_paz",
+      "type": "primary_narrative_transcription",
+      "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+      "pages": "123–137; Aáner 133–134, nube 137; análisis de Manna vegetal 160",
+      "supports": "Versión recogida por Paz Ipuana y transcrita por Finol: dos mellizos diferenciados, dudas ante aves, nube de Tumaju’le que pasa por rendijas. Manna ligada a abrojo amarillo.",
+      "limits": "Mediación literaria de Paz Ipuana; no mezclar el reparto con los tres muchachos de la variante Perrin. El ave de nuestra biblia es una traducción zoológica de la dueña del sembrado."
+    },
+    {
+      "id": "published_mellizos",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-mellizos-transformadores.json",
+      "supports": "Relato público que articula origen, revelación, fuga y consecuencias sin reducirlo a aventura infantil.",
+      "limits": "No se cambia el texto público ni se representan sus episodios de violencia."
+    },
+    {
+      "id": "bible_lot09",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-09-mellizos-transformadores-v3.md",
+      "supports": "Vestuario de los niños, individualización, morfología de Aáner y memoria vegetal de Manna.",
+      "limits": "Los colores y cortes son decisiones editoriales reversibles, no vestuario mítico documentado literalmente."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:15:06.755Z",
+    "reviewed_reference_ids": [
+      "85fb797fe6e7a35bd1fb",
+      "a9d9c6b111d2e542781c"
+    ],
+    "retained": [
+      "Profundidad del territorio en capas azul y arena; nube de papel con continuidad curva.",
+      "Dos momentos diferentes: huida y encuentro con un ave. Escala amplia del paisaje."
+    ],
+    "rejected": [
+      "Mellizos casi idénticos con el mismo traje, rostros de ilustración y figuras grandes.",
+      "Nube como mochila pegada a un niño que ya camina; omisión de rendija del rancho.",
+      "Paloma blanca monumental, plumas decorativas y camino de huellas que sustituyen el sembrado del episodio."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar nube de papel y territorio amplio; mostrar su paso real por una rendija y diferenciar al hermano que permanece corporal.",
+      "acto": "Conservar interacción con ave, pero Aáner pequeña, gris-parda, dueña del sembrado. Restituir frutos y escucha incómoda, no paloma de paz.",
+      "huella": "Conservar capas azules como memoria material de Manna; fibras que originan dos transformaciones, sin repetir escena o retratos."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "tumajule__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__identity_sheet--canon.jpeg",
+      "sha256": "89264c83039de108b995eb7749ad3cc9a6e5e05416c7841ce7c56ac00b116d71",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "tumajule__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/tumajule__state_sheet--estados.jpeg",
+      "sha256": "f067ac27dcb2eca82514bf0d142b57365d743c565a142cb1c3ea27619dd4a200",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "peeliyuu__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/peeliyuu__identity_sheet--canon.jpeg",
+      "sha256": "d6d4a67e552f7485c727724e0e97caaf710e2ee18e3b1620b407c71785379033",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "aaner__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/aaner__identity_sheet--canon.jpeg",
+      "sha256": "9b9785ad509127d38f7056a14c9d32f9697e63dec54642890fc07d8ee09ca3b4",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "manna__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium-corrections-02/manna__state_sheet--estados.jpeg",
+      "sha256": "35b3515eceb35c478534997eb8ddd9d2a901c57127dbc9c241ccfbc6ea9c4bc9",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "tumajule__identity_sheet",
+        "tumajule__state_sheet",
+        "peeliyuu__identity_sheet",
+        "aaner__identity_sheet",
+        "manna__state_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "4ba8d057b4bb54d5dcb07ffc6e49f47975eef3a5bc1785b628580b8ce4342b49",
+      "narrative_event_ids": [
+        "nube",
+        "diferencias"
+      ],
+      "editorial_translation": "El paso en nube por rendijas consta en la versión Paz. Las capas y cintas de ropa son traducción material de la biblia. Peeliyuu esperando afuera es puesta en escena para mantener la pareja, no episodio literal adicional.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Una pared impide pasar a un cuerpo.",
+        "impossible_behavior": "Tumaju’le se convierte en nube y atraviesa una rendija.",
+        "narrative_effect": "El ingenio transforma el límite físico y mantiene la identidad del hermano.",
+        "agency": "Los mellizos actúan y aprenden; no son héroes intercambiables.",
+        "physical_translation": "Hojas de nube comprimidas dentro de una rendija y abiertas afuera, con dos cintas cromáticas de continuidad.",
+        "visible_test": "Una sola nube conectada a través de un hueco estrecho y un niño corporal fuera.",
+        "event_ids": [
+          "nube",
+          "diferencias"
+        ],
+        "provenance": "narrated_fact",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-02-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

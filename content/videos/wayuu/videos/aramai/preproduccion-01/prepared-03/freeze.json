@@ -1,0 +1,265 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-07T18:41:58.587Z",
+  "plan": "content/videos/wayuu/videos/aramai/preproduccion-01/plan.json",
+  "plan_sha256": "151db1c48d1ca00d9bbc29648cd2bc10703f63799bcfe3db9c96219eb0044ce1",
+  "style": "content/videos/wayuu/channel-dna.v1.json",
+  "style_sha256": "733ab3e293b0a0cf4aca3ef66dba6cff113cc111b71d115d5d6649fa5282f003",
+  "checks": {
+    "shots": 18,
+    "words": 169,
+    "estimated_seconds": 90,
+    "generated": 5,
+    "pending": 13,
+    "warnings": [
+      "b1a: candidato piloto con notas visuales; no aprobación final",
+      "b1b: candidato piloto con notas visuales; no aprobación final",
+      "b2a: candidato piloto con notas visuales; no aprobación final",
+      "b2b: candidato piloto con notas visuales; no aprobación final",
+      "b3a: candidato piloto con notas visuales; no aprobación final"
+    ]
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 13,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b3b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b3b.txt",
+      "prompt_sha256": "81806163d17b17f746e8ae7ef6ac1c2e904ba62b1d6fdf874423c047f9c28c9a",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b3b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b4a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b4a.txt",
+      "prompt_sha256": "b6b2d9bf9b251179928020075ee72fc652be5363525626ffca221bbed03c46a2",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b4a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b4b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b4b.txt",
+      "prompt_sha256": "eda44b00870561c2e50f0504e32f43466d3babaeccd37cf87c1ce8ee6f63e937",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b4b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b5a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b5a.txt",
+      "prompt_sha256": "112edcc2cc5aaae2b04e7d88ac2b7ae9e5d39f6fe03bec7c51c407fc6c941192",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b5a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b5b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b5b.txt",
+      "prompt_sha256": "8ce65f26aae136717ce9b32e2ecf827232cf652c4008f016678a12a9e9bb6fde",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b5b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b6a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b6a.txt",
+      "prompt_sha256": "26270be88bfb74e1d18e64393c1997686d467c945c966aca9fc60e21ab23f1a0",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b6a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b6b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b6b.txt",
+      "prompt_sha256": "ea244ff14a1ce5bd062eab81ea492c95239f868e4abb5f7fb8b0ccd2f6b9af84",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b6b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b7a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b7a.txt",
+      "prompt_sha256": "acb212b12fff981391017f9e10f15f8dc1baa0a365683122e5eac83e346fb2cc",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b7a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b7b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b7b.txt",
+      "prompt_sha256": "55ae167753f2c0274921dddb056eeaf0369ad53e8c45766bd1f0b858817e9e7d",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b7b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b8a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b8a.txt",
+      "prompt_sha256": "986d4b83d664af0e51aadb088134d4fe735853b92304b0a091989a9fd6bc8bac",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b8a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b8b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b8b.txt",
+      "prompt_sha256": "1a652daf9e58de003c57b6bff592f2a5f7cf89f25f544ae1a6f6f7920e6ed81a",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b8b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b9a",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b9a.txt",
+      "prompt_sha256": "0ca9fd97a36ccb6abf92c7ad36f9bb75a3940846c56da58fa1cd26676f9ec304",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b9a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b9b",
+      "prompt_file": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/prompts/b9b.txt",
+      "prompt_sha256": "ab50e414d54cdd146fa760adc26ed92e4b61f0a170590e4c5fda7ae729eb69cf",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b9b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+      "sha256": "4a9866cc87beae485ccc2466650c9b8fbe0fc602e742174f4e16c4c914ce222b",
+      "qa_notes": [
+        "El reflejo sí conserva figuras: no pasó la subcondición de gente ausente. No presentar esa ausencia como conseguida.",
+        "Agua ocupa una parte grande del encuadre; la escasez depende de orilla seca y VO.",
+        "Aparecieron flores, adornos geométricos y detalles de vestuario no pedidos; no se convierten en canon cultural ni se certifican por la imagen."
+      ]
+    },
+    {
+      "id": "b1b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1b.jpeg",
+      "sha256": "1e9ea6b8d66b92f262233a8346ae951a4348885d725874c379866971ba5a68bc",
+      "qa_notes": [
+        "Recipiente más grande y mujeres más próximas de lo sugerido; conserva cuerpos arrodillados enteros, no retratos.",
+        "La tinaja, tela y bordes de ropa adquirieron geometría decorativa no solicitada. No constituye referencia etnográfica verificada."
+      ]
+    },
+    {
+      "id": "b2a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+      "sha256": "02f10330fff73ff87e839c7fabdaeffce118704f159985cd9c9330d469e540dd",
+      "qa_notes": [
+        "Arámai ocupa aproximadamente 38–40% de la altura, por encima del objetivo de 20%; estimación visual, no medición automática. Encuadre a revisar según preferencia del usuario.",
+        "La cara sigue siendo recorte, pero tiene algo más de detalle que en piloto01. No declarar continuidad pixel-perfect."
+      ]
+    },
+    {
+      "id": "b2b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+      "sha256": "d49d90469a570948490c0f1024cc85de07fcb047398a323c5e206c0d64923009",
+      "qa_notes": [
+        "Techo y suelo tienen más fragmentación de papel que la intención de formas amplias. Podría moderarse sin volver al vacío.",
+        "La vegetación de fondo incluye cactus de silueta genérica; verificar/simplificar si se elige para producción definitiva."
+      ]
+    },
+    {
+      "id": "b3a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+      "sha256": "e1463b44afc54eb4b643ff92143bf120a9559576b987921514b387425233baba",
+      "qa_notes": [
+        "Cara de la mujer tiene más modelado y figura mayor que el objetivo inicial de escala.",
+        "Vasija y textil presentan patrones generados, sin atribución documental. No promover esos diseños a símbolos culturales."
+      ]
+    }
+  ],
+  "no_api_calls": true
+}

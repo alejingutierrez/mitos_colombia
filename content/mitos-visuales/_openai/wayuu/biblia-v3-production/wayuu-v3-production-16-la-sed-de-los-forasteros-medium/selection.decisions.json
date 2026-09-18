@@ -1,0 +1,30 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection-decisions/v3",
+  "reviewed_at": "2026-09-04",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/la-sed-de-los-forasteros-selected-contact-sheet.jpeg",
+  "selections": {
+    "comerciante_alijuna_1__identity_sheet": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01",
+    "comerciante_alijuna_1__state_sheet": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01",
+    "comerciante_alijuna_2__identity_sheet": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+    "comerciante_alijuna_2__state_sheet": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-qa-correction-01",
+    "carga_panela__object_sheet": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+    "utta__spatial_model": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01"
+  },
+  "rejections": [
+    {
+      "model_id": "comerciante_alijuna_1__identity_sheet",
+      "source_batch": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "reason": "REJECTED_GENERIC_DESERT_ROSETTES_AND_AGAVE_LIKE_FLORA"
+    },
+    {
+      "model_id": "comerciante_alijuna_1__state_sheet",
+      "source_batch": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "reason": "REJECTED_FINAL_STONE_BECAME_A_STACKED_CAIRN_AND_GENERIC_WESTERN_DESERT_FLORA_APPEARED"
+    },
+    {
+      "model_id": "comerciante_alijuna_2__state_sheet",
+      "source_batch": "wayuu-v3-production-16-la-sed-de-los-forasteros-medium-culture-scope-fix-01",
+      "reason": "REJECTED_FINAL_STONE_BECAME_A_MONUMENTAL_STRIPED_PYRAMID"
+    }
+  ]
+}

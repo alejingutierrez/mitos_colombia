@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "status": "prepared_for_production",
+  "community": "Nasa–Paeces",
+  "user_request": "Recuerda ir actualizando en las páginas en producción y crea 5 más",
+  "myth_ids": [
+    435,
+    436,
+    437,
+    438,
+    439
+  ],
+  "new_triptychs": 5,
+  "new_images": 15,
+  "previous_triptychs": 6,
+  "total_when_complete": 11,
+  "bible_selection": "content/videos/nasa-paeces/biblia/produccion-api-02/selection.v2.json",
+  "source_snapshot": "content/videos/nasa-paeces/biblia/research/corpus-snapshot-20260912.json",
+  "max_concurrency": 4,
+  "publication_authorized": true,
+  "keyframes": false,
+  "cultural_certification": false,
+  "jobs": [
+    {
+      "myth_id": 435,
+      "slug": "formacion-del-rio-paez",
+      "title": "Formación del río Páez",
+      "variant": "Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.",
+      "role": "entrada",
+      "label": "La sed abre el agua",
+      "refs": [
+        "P05",
+        "V05",
+        "U02"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.\n\nImage 1 P05 FREE ADULT Chautéh state with TWO functioning eyes, long untidy black hair, dark gray-green unmarked layers, brown ankle trousers and soft dark shoes; do NOT use the lower captive one-eye state. Image 2 V05 use upper marsh MATERIAL only, NOT its two-view layout. Image 3 U02 use ONLY ONE simple hollow carrizo/reed, no pot, lightning or boleadora.\nONE wide scene: a solitary thirsty Chautéh kneels at a modest highland marsh, holding a single plain short hollow reed to his mouth, its lower end touching the wet PAPER bank/pool. ONE adult and ONE reed, two coherent hands, both feet supported, fully clothed. This is the first drink before the pursuing river, no growing rays or magical deity pose. Large ochre folded ground, sparse broad reeds, quiet blue paper pool, close mountains and broad white paper mist, muted daylight. No sea, current chasing him yet, duplicated states, recipe diagram or labels.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 435,
+      "slug": "formacion-del-rio-paez",
+      "title": "Formación del río Páez",
+      "variant": "Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.",
+      "role": "acto",
+      "label": "El río aprende las vueltas",
+      "refs": [
+        "P05",
+        "V05",
+        "L02"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.\n\nImage 1 P05 FREE two-eyed Chautéh identity. Image 2 V05 use ONLY lower winding river/environment, never the two-panel layout. Image 3 L02 river paper material.\nONE vertical action scene: exactly ONE Chautéh hurries along a dry winding highland path while ONE continuous blue PAPER current follows his route behind him. Show the land route turning in broad curves and zigzags and water repeating those turns, not a cartographic aerial map. Full adult body, grounded running stride, expression of effort without drowning or injury. The head of the following current remains behind him on a lower groove, no water around his waist, no wave-monster or flood destroying houses. Immersive canyon cut strata, small plants, distant ridges. No sea, waterfall, bridge, second person or trees he is climbing. Water motion expressed by overlapping broad paper ribbon ends only.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 435,
+      "slug": "formacion-del-rio-paez",
+      "title": "Formación del río Páez",
+      "variant": "Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.",
+      "role": "huella",
+      "label": "La memoria de una curva",
+      "refs": [
+        "U02",
+        "L02"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.\n\nImage 1 U02 use ONLY ONE hollow reed/carrizo; Image 2 L02 blue/ochre paper palette only.\nSquare ABSTRACT MACRO synthesis: ONE short unadorned hollow ochre-paper reed rests at the start of ONE broad continuous winding BLUE paper ribbon, the ribbon describing two generous irregular curves over warm plain ochre-paper folds. Reed edge opens toward blue material as metaphor of thirst becoming a course. Cast shadows and empty paper space, no water photography. No figures, sky, mountains, plants, coastline, map, arrows, miniature narrative, lightning, pot or catalogue. One reed and one curved ribbon, simple yet materially rich.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 436,
+      "slug": "chauteh",
+      "title": "Chautéh",
+      "variant": "Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.",
+      "role": "entrada",
+      "label": "El regalo que parece una medida",
+      "refs": [
+        "P05",
+        "C05",
+        "U04",
+        "L06"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.\n\nImage 1 P05 FREE pre-capture two-eyed Chautéh only. Image 2 C05 use ONLY its bottom-left adult man as unnamed carpenter supporting cast: short black hair, plain gray layer and light work trousers, no hat. Image 3 U04 use ONLY ONE LARGE ordinary EMPTY wooden-brown baúl with OPEN hinged lid, never bronze box, nails or chisel. Image 4 L06 house-paper walls only; no hammock, hearth or extra pots required.\nONE wide scene in a modest rural carpentry space: exactly TWO adults stand on dry floor beside ONE open EMPTY chest large enough to fit an adult. Carpenter presents the gift with one open empty hand; Chautéh inspects its length from OUTSIDE, both full bodies visible, no one climbing inside or already confined. Broad paper-board walls and doorway toward muted highland slopes. Chest interior distinctly empty, wood-color folded PAPER not realistic grain. No coffin, burial symbols, tools aiming at anyone, eye injury, threat, extra chests, animals or ornamental treasure.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 436,
+      "slug": "chauteh",
+      "title": "Chautéh",
+      "variant": "Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.",
+      "role": "acto",
+      "label": "El carpintero cambia de trabajo",
+      "refs": [
+        "E06",
+        "L04"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.\n\nImage 1 E06 ONE ordinary woodpecker identity, black/cream broad feather pieces and small dark red crest, select its single perched state. Image 2 L04 forest material/environment.\nONE vertical second narrative scene AFTER the carpenter has become a bird: exactly ONE whole woodpecker clings naturally to ONE tall cut-paper trunk, beak touching a small plain opening in the bark-paper strata. Coherent one head, two folded wings, one tail and gripping feet; no carpenter clothes, human hands, hybrid face, additional birds, eggs or named species claim. The transformed person's continuing work is expressed by this natural pecking gesture only. Rich mountain-forest depth with broad leaf cutouts and restrained daylight; no chest, captive human, wound, tools or transformation smoke.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 436,
+      "slug": "chauteh",
+      "title": "Chautéh",
+      "variant": "Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.",
+      "role": "huella",
+      "label": "Lo cerrado deja dos miradas",
+      "refs": [
+        "U04"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.\n\nImage 1 U04 use ONLY the ordinary WOODEN-BROWN baúl identity/material, not the separate bronze box.\nSquare symbolic macro: ONE closed modest wooden-brown PAPER chest, long horizontal box and plain hinged lid, with EXACTLY TWO small dark round viewing holes cut into the front wall. Thick folded edges and deep hole shadows; the box remains empty/invisible inside, NO eyes, face, trapped body or visible person. Clean warm paper background and restrained negative space, no literal room, forest, bird, carpenter, nails, tool, key, padlock, coffin cross, bronze color, ritual emblem or text. Closedness and two openings are an editorial metaphor, not a shrine or instructional diagram.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 437,
+      "slug": "el-mar",
+      "title": "El mar",
+      "variant": "Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.",
+      "role": "entrada",
+      "label": "La prueba del río",
+      "refs": [
+        "P06",
+        "P07",
+        "L02"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.\n\nImage 1 P06 Pedro, ochre-brown plain capisayo, small plain brown cloth cap, short wavy black hair, light shirt and dark ankle trousers. Image 2 P07 Tomás Dimales, slate-blue ruana, light shirt, dark trousers and dark hair tied behind, NO hat or halo. Image 3 L02 paper river material.\nONE wide initial challenge scene in highland river terrain: exactly TWO adult brothers on dry land. Tomás in blue stands close to a modest flowing paper channel and extends an open empty hand toward the current; Pedro in brown, slightly farther along the dry path, turns to acknowledge the challenge before running ahead. Two separate full bodies, no duplication, physically grounded. River is ONE continuous broad pale/deep-blue paper ribbon between steep close folded banks. No dam, blocked water, sea yet, crown, apostle robe, cross, floating deity, staff, magic beam, labelled geography or invented prop.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 437,
+      "slug": "el-mar",
+      "title": "El mar",
+      "variant": "Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.",
+      "role": "acto",
+      "label": "Las aguas ya no tienen un borde cercano",
+      "refs": [
+        "P06",
+        "P07",
+        "L10"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.\n\nImage 1 P06 Pedro brown capisayo and small brown cap; Image 2 P07 Tomás Dimales blue ruana, tied hair and NO hat/halo; Image 3 L10 SEA material and scale only, do NOT claim its coastline or reproduce highland mountains beside the sea.\nONE vertical scene at the reunion: exactly TWO brothers stand small and full-bodied on a dry plain folded-paper shore, Pedro openly indicating the enormous expanse and Tomás looking across it. The narrow river enters an immense unbounded calm SEA made of broad overlapping deep blue paper planes reaching a low almost-empty horizon. The sea dominates the image and feels much larger than a mountain lake. No nearby highland canyon, peaks on shore, named beach, identified Pacific coast, tropical palm, boats, artificial dam, blue lightning, flood victim, extra people or literal stopping hand holding the water. Subtle paper layer direction preserves the paradox of flow within apparent stillness.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 437,
+      "slug": "el-mar",
+      "title": "El mar",
+      "variant": "Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.",
+      "role": "huella",
+      "label": "Una corriente se vuelve extensión",
+      "refs": [
+        "L02",
+        "L10"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.\n\nImage 1 L02 pale river ribbon material only; Image 2 L10 immense dark-blue sea material only.\nSquare ABSTRACT MACRO synthesis: ONE narrow pale-blue continuous folded-paper ribbon enters and opens into ONE very broad deep-blue layered-paper plane filling the lower and right frame. The small course becomes an expanse with no nearby limit. Physical layer gaps and shadows, broad warm neutral paper negative space above. No humans, coast, sky, horizon, mountains, village, boat, map, arrows, circles, infinity glyph, ritual emblem or miniature realistic landscape. Express a relationship of scale and continuity through two connected water materials, not a second geographic vista.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 438,
+      "slug": "piedra-alta",
+      "title": "Piedra Alta",
+      "variant": "Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.",
+      "role": "entrada",
+      "label": "Donde todavía no había peña",
+      "refs": [
+        "P06",
+        "P07",
+        "L03"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.\n\nImage 1 P06 Pedro brown capisayo/small brown cap; Image 2 P07 Tomás blue ruana/tied hair/no hat. Image 3 L03 ONLY mountain paper material and remote palette, NOT its foreground high crags.\nONE wide BEFORE-apparition scene: exactly TWO adult brothers walking on a BROAD FLAT ochre-paper surface at the unnamed linderos. Pedro turns and begins indicating an EMPTY flat patch; Tomás looks toward the bare place in disbelief with a single open empty hand. NO rock tower or high crag in near or mid-ground yet. Low plants and distant blue-green highland ridge planes establish context without claiming precise modern geography. Full bodies, calm conversation, coherent pointing hand, no staff, fence post, survey marker, sacred gesture, carved face or supernatural beam. Large clear empty ground gives the image a distinctive open horizontal rhythm.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 438,
+      "slug": "piedra-alta",
+      "title": "Piedra Alta",
+      "variant": "Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.",
+      "role": "acto",
+      "label": "La palabra encuentra altura",
+      "refs": [
+        "P06",
+        "P07",
+        "V06"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.\n\nImage 1 P06 Pedro brown capisayo/cap; Image 2 P07 Tomás blue ruana/tied hair/no hat. Image 3 V06 the single very high PAPER peña environmental identity.\nONE vertical scene at the appearance: ONE sharply elevated tall folded-paper PEÑA rises from the formerly flat ochre land, occupying most of the upper frame. Exactly TWO brothers small at the bottom on dry flat ground: Pedro points toward the peña and Tomás looks up. Same clothes and identities as before; full bodies supported, neither person transformed to stone. Visible stacked cut-paper rock folds at the base express sudden height WITHOUT flying debris, explosion, injury, cracks hitting people, carved human face, glow, temple, mountains emerging everywhere or artificial monument. The ordinary surrounding surface stays comparatively flat; distant ridges sparse and subdued. No third person or Chautéh.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 438,
+      "slug": "piedra-alta",
+      "title": "Piedra Alta",
+      "variant": "Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.",
+      "role": "huella",
+      "label": "Una superficie aprende a levantarse",
+      "refs": [
+        "V06",
+        "L03"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.\n\nImage 1 V06 paper-peña MATERIAL only; Image 2 L03 slate/ochre folded-paper palette only.\nSquare ABSTRACT MACRO synthesis: ONE tall angular slate-gray folded-paper shape lifts vertically from ONE continuous flat ochre sheet, its base clearly folded out of the same uninterrupted material relationship, not placed on a pedestal. Deep crease and real cast shadow express flatness becoming height. Warm plain background and generous empty paper space; no literal mountain panorama, sky, vegetation, paths, miniature people, pointing hand, stone face, carved glyph, shrine, map, typography or diagram. A single material transition, not a geological reconstruction.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "title": "Pedro y Tomás Dimales",
+      "variant": "Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.",
+      "role": "entrada",
+      "label": "La ayuda comienza con un encargo",
+      "refs": [
+        "P06",
+        "P07",
+        "L05",
+        "U07"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.\n\nImage 1 P06 Pedro brown capisayo/plain brown cap; Image 2 P07 Tomás blue ruana/tied hair/no hat. Image 3 L05 modest hillside cultivation, use maize only. Image 4 U07 use ONLY one plain shallow seed vessel and a modest group of yellow PAPER maize kernels, no potatoes or hoe.\nONE wide cooperation scene: exactly TWO brothers full-bodied beside modest maize beds on a dry hillside. Tomás offers ONE shallow plain vessel holding maize seeds; Pedro receives it with coherent hands, before the sowing error. One bowl passed BETWEEN them, not duplicate bowls. Small irregular planted rows at one side and empty ground to be sown at the other; broad paper-leaf maize plants, rich highland depth, warm restrained daylight. No moral villain caricature, halo, stone transformation, sea, peña, industrial field, Inca terraces, weapon or sacred seed pattern.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "title": "Pedro y Tomás Dimales",
+      "variant": "Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.",
+      "role": "acto",
+      "label": "Toda la semilla en un hueco",
+      "refs": [
+        "P06",
+        "U07",
+        "L05"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.\n\nImage 1 P06 Pedro only, brown capisayo/plain brown cap; Image 2 U07 ONLY yellow maize kernels and ONE shallow plain seed vessel. Image 3 L05 ochre land and maize-paper material.\nONE vertical scene: exactly ONE Pedro kneels on dry broad ochre PAPER earth and tips ONE shallow seed bowl so ALL its visible remaining yellow PAPER maize kernels fall in a small coherent stream into EXACTLY ONE planting hole. A single concentrated pile is visible inside that hole, no second depression, no distributed seed rows, potato tubers or spilled grains everywhere. Two human hands attached correctly to two arms, bowl supported naturally, whole body with separate coherent feet, modest figure not portrait. Small intact maize bed and layered highland slopes farther back, no crop cutting yet, other brother, sea, towering peña, literal magic or labels. Error shown as concentration, not suffering or racialized comedy.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "title": "Pedro y Tomás Dimales",
+      "variant": "Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.",
+      "role": "huella",
+      "label": "Lo concentrado no alcanza a repartir",
+      "refs": [
+        "U07",
+        "L05"
+      ],
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, not a pasted identity sheet. No panels, no contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, cloud, mist and atmosphere are also PAPER SHAPES. Fog is broad flat WHITE PAPER CUTOUTS, never cotton, wool tufts or realistic vapor. No photographic water, gritty soil, stone particles, exposed display base, plinth, table or disconnected diorama boards. Faces understated flat layered-paper silhouettes, never smooth CGI, clay dolls or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the state/objects named below. Preserve each approved identity, age, clothes and palette. Only specified narrative elements; no invented sacred patterns, gold crowns, headdresses, armor, caricatures, ritual instructions, maps, deity faces, shrine or emblems from other peoples. Clothing is reversible editorial adaptation, not universal Nasa uniform; places are narrative approximations, not verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No injury, blood, corpses, dismemberment, anatomical transformation spectacle, nudity, weapons or animal-human hybrid. Exactly TWO arms and TWO hands connected to wrists per visible human; full bodies and coherent feet supported on dry ground. Modest human scale in rich immersive terrain; no cropped foreground portraits. For symbolic squares: ABSTRACT MATERIAL METAPHOR, not a third narrative scenic landscape, a map, diagram, ritual seal or cultural emblem.\n\nNarrative lock: Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.\n\nImage 1 U07 use ONLY yellow paper maize kernels; Image 2 L05 matte ochre soil-paper palette only.\nSquare ABSTRACT MACRO: ONE tightly concentrated small mound of yellow maize PAPER kernels inside ONE plain ochre folded-paper depression; around it, broad EMPTY ochre sheet folds extend outward with plenty of unused space. Clearly exactly one depression and one seed group, no potato, bowl, hoe, additional holes, sprouting garden or miniature narrative. Refined paper-edge shadows and warm neutral light. No humans, hands, horizon, mountain panorama, cultivation map, arrows, sacred seed emblem, moral text or realistic soil grains. Editorial metaphor of help that does not distribute, not a ritual or farming instruction.\n",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/huella-v1.jpeg"
+    }
+  ]
+}
+

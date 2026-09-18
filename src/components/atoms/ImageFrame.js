@@ -33,6 +33,9 @@ export function ImageFrame({
   mobileSizes = "100vw",
   priority = false,
   quality = 75,
+  // Preserve an original artwork without recompressing the desktop source.
+  unoptimized = false,
+  mobileUnoptimized = false,
   // Devuelve la precarga a una imagen con art direction. Es opt-in y no
   // automático con `priority` a propósito: quien rota obras en el cliente
   // (la portada del home) monta varias capas con `priority` y precargarlas
@@ -53,6 +56,7 @@ export function ImageFrame({
         fill: true,
         sizes: mobileSizes,
         quality,
+        unoptimized: mobileUnoptimized,
       }).props
     : null;
 
@@ -75,6 +79,11 @@ export function ImageFrame({
       fill: true,
       sizes,
       quality,
+      // Sin esto la precarga apunta a /_next/image mientras el <img> pinta el
+      // máster original, y el navegador baja las dos. Pasa de verdad: la
+      // portada del mito activa `preloadArtDirection` y a la vez `unoptimized`
+      // cuando el mito trae obra propia.
+      unoptimized,
     }).props;
     ReactDOM.preload(mobileSource.src, {
       as: "image",
@@ -127,6 +136,7 @@ export function ImageFrame({
             priority={priority && !hasMobileArtDirection}
             loading={priority && hasMobileArtDirection ? "eager" : undefined}
             quality={quality}
+            unoptimized={unoptimized}
             fetchPriority={fetchPriority}
             className={cn("object-cover", imgClassName)}
           />

@@ -1,0 +1,43 @@
+{
+  "id": "b2a",
+  "created_at": "2026-09-13T13:36:32.091Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create ONE finished cinematic vertical 9:16 narrative keyframe for the Nasa–Paeces film El Trueno, ideally 864x1536. No sheet, collage, border, lettering, title, captions, watermark or logo. Use the supplied images only for their stated continuity roles, never copy their sheet layout. Same world as the approved Nasa triptych: immersive Colombian highland CUT-PAPER scenery, matte broad flat faces, internal cut edges, folded rock, overlapping planes at three distances, physical occlusion and cast shadows. Figures have simplified almost-flat paper faces, not rounded clay dolls, CGI or photographic skin. Water, clouds and mist are flat cut-paper shapes too, never cotton or smoke. Frame extends edge to edge, no display base, table, studio or diorama box. Preserve precise age, clothing, hat, material and scale of the reference identities. Do not import objects, people or actions from preceding shots unless specifically listed below. No pan-Indigenous costumes, copied sacred patterns, gold, crowns, feathers, magical beams or invented ritual. Selected narrative: Martín Kuskue's first El Trueno account via Bernal 1953; the elder appearance is a declared editorial convention retained from the approved triptych, not claimed as wording of this version.\n\nSHOT b2a — La piedra alta\nFLASHBACK in cold overcast DAYLIGHT. Low-angle wide shot of ONE elderly Trueno on the tall rocky ridge, his full body small but readable, tan broad plain hat, short gray hair, black broad cape, charcoal garments and black shoes identical to P01/entrada. His arm has just released ONE compact ordinary paper boleadora outward into empty sky, far to right, a simple small cord and weight. This is a single frozen gesture, no motion trail or duplicated limbs. No other people, no targets or bodies. Large foreground folded cliff, figure on ledge midground, storm-paper sky and distant ridges background. No staff, no serpent, no gold, no magic beam.\n\nINPUT REFERENCES IN ORDER:\n1. approved preceding keyframe b1a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n2. approved preceding keyframe b1b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props\n3. CANONICAL P01: K’pish / el Trueno\n4. CANONICAL entrada: selected triptych: P01 and C01 identities, paper landscape\n5. CANONICAL U02: Agua y trueno",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/p01-master-v2.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/biblia/produccion-api-02/u02-master-v2.jpeg"
+    ]
+  },
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1a-v1.png",
+      "sha256": "e5d3ed157da76299a4e1bad81a04e466c715986033de727f66c0c36d6d471b0d",
+      "role": "approved preceding keyframe b1a: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-v1.png",
+      "sha256": "eaa7994c68bef0f044452f785c83fa2efd4600ffee367c09d30d82b47d2877ba",
+      "role": "approved preceding keyframe b1b: material, palette, spatial continuity ONLY; do not import unlisted subjects/props"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p01-master-v2.jpeg",
+      "sha256": "feec09fd4599f2c2d8c1fc366f6d48e3df871d3447d54af37e45bfaf5b82c0b3",
+      "role": "CANONICAL P01: K’pish / el Trueno"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+      "role": "CANONICAL entrada: selected triptych: P01 and C01 identities, paper landscape",
+      "sha256": "fd8c955803d7f78df62ba0e01ad82e745e926fbc721989af383bdc151cdae60e"
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u02-master-v2.jpeg",
+      "sha256": "0293cb33dcb0ee17e5354b6a1bad1e119240383bf6f2d6d7f4206141f080d50b",
+      "role": "CANONICAL U02: Agua y trueno"
+    }
+  ],
+  "prompt_sha256": "e155fb8496ad40ed6ae1a4e73c219a88e46300b968b7e1b7995abb89b91d7386"
+}

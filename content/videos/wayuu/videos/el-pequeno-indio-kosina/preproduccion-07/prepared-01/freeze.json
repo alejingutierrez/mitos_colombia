@@ -1,0 +1,319 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-08T00:10:04.420Z",
+  "plan": "content/videos/wayuu/videos/el-pequeno-indio-kosina/preproduccion-07/plan.json",
+  "plan_sha256": "25001532390c42b751634ffbad1dd88527d15ba38b368dcc2ee7eff808a2b3c7",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "style_sha256": "da3aa36702f381654441c018622e5ccf66ea217b5a420a83093620a8758a2912",
+  "checks": {
+    "shots": 28,
+    "words": 424,
+    "estimated_seconds": 224,
+    "generated": 25,
+    "pending": 3,
+    "warnings": [
+      "b1a: candidato piloto con notas visuales; no aprobación final",
+      "b1b: candidato piloto con notas visuales; no aprobación final",
+      "b2a: candidato piloto con notas visuales; no aprobación final",
+      "b2b: candidato piloto con notas visuales; no aprobación final",
+      "b3a: candidato piloto con notas visuales; no aprobación final",
+      "b3b: candidato piloto con notas visuales; no aprobación final",
+      "b4a: candidato piloto con notas visuales; no aprobación final",
+      "b4b: candidato piloto con notas visuales; no aprobación final",
+      "b5a: candidato piloto con notas visuales; no aprobación final",
+      "b5b: candidato piloto con notas visuales; no aprobación final",
+      "b6a: candidato piloto con notas visuales; no aprobación final",
+      "b6b: candidato piloto con notas visuales; no aprobación final",
+      "b7a: candidato piloto con notas visuales; no aprobación final",
+      "b7b: candidato piloto con notas visuales; no aprobación final",
+      "b8a: candidato piloto con notas visuales; no aprobación final",
+      "b9a: candidato piloto con notas visuales; no aprobación final",
+      "b9b: candidato piloto con notas visuales; no aprobación final",
+      "b10a: candidato piloto con notas visuales; no aprobación final",
+      "b11a: candidato piloto con notas visuales; no aprobación final",
+      "b11b: candidato piloto con notas visuales; no aprobación final",
+      "b12b: candidato piloto con notas visuales; no aprobación final",
+      "b13a: candidato piloto con notas visuales; no aprobación final",
+      "b13b: candidato piloto con notas visuales; no aprobación final",
+      "b14a: candidato piloto con notas visuales; no aprobación final",
+      "b14b: candidato piloto con notas visuales; no aprobación final"
+    ]
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 56,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b8b",
+      "prompt_file": "content/videos/wayuu/videos/el-pequeno-indio-kosina/preproduccion-07/prepared-01/prompts/b8b.txt",
+      "prompt_sha256": "097517fe9fa9a70ae6073ee6f3eb163589ab87829b3eaf2ba59d054db9398f9f",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-07/b8b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b10b",
+      "prompt_file": "content/videos/wayuu/videos/el-pequeno-indio-kosina/preproduccion-07/prepared-01/prompts/b10b.txt",
+      "prompt_sha256": "4e0c4c25ba998445b6ab8cfc5d61ed5f891cc6f3f7fe5c7a54b86b0dba1ce15a",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-07/b10b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b12a",
+      "prompt_file": "content/videos/wayuu/videos/el-pequeno-indio-kosina/preproduccion-07/prepared-01/prompts/b12a.txt",
+      "prompt_sha256": "086926df578a59190c32cd737766b076371d385a8859bfd4ea38126780dd6b65",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-07/b12a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-02/b1a.jpeg",
+      "sha256": "4288e258ac089930611372cb09685e97ad46aac65b99ac23b4b6d45db62ff7e5",
+      "qa_notes": [
+        "Dos figuras de perfil plano a distancia junto a casa; encuadre mejorado, material consistente. Altura humana alrededor de 25–28%, mayor que 18% solicitado, sin retrato."
+      ]
+    },
+    {
+      "id": "b1b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b1b.jpeg",
+      "sha256": "88b31b489a4229b7aa5f0e21096f08eb82d0f0dc8d3a9cd16e2af413382cc884",
+      "qa_notes": [
+        "Cuatro personas y dos burros; intercambio en plato y cuenco separado para burro. Perfiles planos, ropa completa y capas profundas. Figuras mayores que porcentaje pedido, sin retratos."
+      ]
+    },
+    {
+      "id": "b2a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b2a.jpeg",
+      "sha256": "6b32f53151b3422c8d65ae156c0b5f2b7c0c36a13dff226739d9429491288006",
+      "qa_notes": [
+        "Tres cultivos distinguibles, rastro de casco unico y joven agachado; tallos danados legibles. Suelo de hojas, no barro; cerco y plantas en planos separados."
+      ]
+    },
+    {
+      "id": "b2b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b2b.jpeg",
+      "sha256": "9971e3b5998471622fce210ecbc73e8a97ab64cb70280c3ffca8c5b27fb937af",
+      "qa_notes": [
+        "Un joven dormido, siembra pisoteada y amanecer; no caballo ni noches duplicadas. Cabeza cerca del margen, cuerpo visible. Sol con rayos de papel es recurso escenico, no poder del joven."
+      ]
+    },
+    {
+      "id": "b3a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b3a.jpeg",
+      "sha256": "4dbcad463d099a28f00fddb6a38b3225dc639fbf9943edc4c65f943bb89517c6",
+      "qa_notes": [
+        "Rastro unico menguante y joven completo. La disminucion tambien coincide con perspectiva: se refuerza mediante VO y contraste con caballo enorme siguiente, no prueba metrica aislada."
+      ]
+    },
+    {
+      "id": "b3b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b3b.jpeg",
+      "sha256": "a6a0ca6627b09bab4708e4e712224c5eb160f8ca7f8fb2cc6749867f6221c8cd",
+      "qa_notes": [
+        "Caballo enorme junto a joven pequeno, papel plano en cuello, crin, patas y suelo. Magnitud editorial mayor que proporcion pedida; cola toca margen derecho. No alas ni potro duplicado."
+      ]
+    },
+    {
+      "id": "b4a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-01/b4a.jpeg",
+      "sha256": "4ecf234903fee8cd545fdf4a1dac784e6928b048b605b1c17417d1749b99acb8",
+      "qa_notes": [
+        "Paper material readable; horse marking displaced toward flank rather than shoulder, retained as secondary identity variation pending sequence QA. Human around 30 percent height, no portrait."
+      ]
+    },
+    {
+      "id": "b4b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b4b.jpeg",
+      "sha256": "844ffa66a801c2523ccfa6ffb2f0426133bab862edb44a344d17c989b459abac",
+      "qa_notes": [
+        "Joven guia a caballo con banda holgada y sin banda duplicada en cintura. Dos marcas oxido en vez de una: variacion secundaria de pelaje; papel y prendas completos."
+      ]
+    },
+    {
+      "id": "b5a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-06/b5a.jpeg",
+      "sha256": "119c63eccb4c30d0840bbe9ad7d1d46e29c070426d102b6e1ea49635d036b2cd",
+      "qa_notes": [
+        "Faja ausente en cintura de Kosina; banda óxido holgada junto al potro y manea limitada a patas delanteras, traseras libres. Cola y cuerpo completos. Trazado del amarre esquemático, no diagrama técnico; papel mantenido."
+      ]
+    },
+    {
+      "id": "b5b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-06/b5b.jpeg",
+      "sha256": "67b2c236bb93e264237d29f0fb726459ca674c54b7f92b038b73328a3bb1e06e",
+      "qa_notes": [
+        "Un caballo del aliado completo, dos jinetes y cuatro espectadores completos; Kosina sin faja. Encadre abierto y capas de papel legibles, rostros planos. Sombreros secundarios varían frente a tomas de oyentes."
+      ]
+    },
+    {
+      "id": "b6a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b6a.jpeg",
+      "sha256": "1b75740537fef7527962f31e05b59be5938fbf728775ace326a01a53ae377e78",
+      "qa_notes": [
+        "Seis personas: Kosina toca tambor bajo, aliado sentado y cuatro oyentes. Material de papel continuo en suelo, perfiles, prendas y techo; cintura sin faja. Tambor conserva volumen cilíndrico funcional sin cerámica."
+      ]
+    },
+    {
+      "id": "b6b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b6b.jpeg",
+      "sha256": "d715d8c4d45908e10ba6a6820156914c424becf5ad19c3ae3e308acdebdff96c",
+      "qa_notes": [
+        "Dos personas completas intercambian plato; jefe canoso con abrigo salvia, Kosina sin faja. Rostros de perfil planos y suelo laminado, sin deriva ilustrativa."
+      ]
+    },
+    {
+      "id": "b7a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b7a.jpeg",
+      "sha256": "cfc2ceeeeae06353b0ab73632236aa87f2eadb10309453a5cb9159bea28f3717",
+      "qa_notes": [
+        "Madre ofrece cuenco, Kosina de espaldas al alimento atiende potro cabizbajo; faja recuperada. Rostros planos, casa y suelo de papel. Debilidad de patas es sutil; no se representa lesión."
+      ]
+    },
+    {
+      "id": "b7b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-03/b7b.jpeg",
+      "sha256": "4be339072f88da12a7ddb64d3aa5594762cd7e894de4fca5b399a1c8a2be55e7",
+      "qa_notes": [
+        "Salto horizontal legible, jinete a pelo con manos en crin, sin alas, suelo continuo de papel. La distancia exacta no es mensurable en imagen."
+      ]
+    },
+    {
+      "id": "b8a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b8a.jpeg",
+      "sha256": "99db48267209f1c9fc55615d7dc8f27f195645aec6a2003d0f604784b3b48820",
+      "qa_notes": [
+        "Caballo erguido ante tambor y cuatro oyentes, Kosina con faja; magia expresada por cambio corporal, no partículas. Papel continuo. Oyentes laterales parcialmente fuera de cuadro como primer plano; revisar continuidad de escala del potro en secuencia."
+      ]
+    },
+    {
+      "id": "b9a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-02/b9a.jpeg",
+      "sha256": "d14003cb4c3d25311eec41315d000b9ede7dad53ed8ec2f42d90f02763fdacbf",
+      "qa_notes": [
+        "Cinco caballos y dos personas, sin corte externo; principal menor que version previa y cuatro ofrecidos legibles. Escala relativa aproximada, ropa del aliado de pantalon largo; no continuidad metrica certificada."
+      ]
+    },
+    {
+      "id": "b9b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-06/b9b.jpeg",
+      "sha256": "678d571a777826a1d908103aa078b49872c866dbb10044cded5fb8343cc2078e",
+      "qa_notes": [
+        "Caballo pequeño completo entre dos humanos, gesto de negativa tranquilo; faja y perneras conservadas. Rostros planos y capas profundas. Altura de cruz aproximada a cintura del joven, mejora continuidad."
+      ]
+    },
+    {
+      "id": "b10a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-03/b10a.jpeg",
+      "sha256": "e2ab8c9263aab6949ba67aa7255e331a83323b0052aee74914e083fb498e8e43",
+      "qa_notes": [
+        "Cinco binomios, cuatro rivales adelante y Kosina atras. Todos miran izquierda; sin riendas en principal. Envolvente marron cae sobre lomo, sin silla estructural o estribos; revisar continuidad de ropa en secuencia."
+      ]
+    },
+    {
+      "id": "b11a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b11a.jpeg",
+      "sha256": "da36ddf84a6ec8fdbaf0a72a01a86555a36c28ffa4769da36e5d7a23644402da",
+      "qa_notes": [
+        "Dos caballos diferenciados y Kosina; principal relincha y hermano emerge de depresión entre estratos. La toma muestra la llamada; agarre del hermano ocurre en b11b. Sin alas ni portal luminoso; papel legible en toda escena."
+      ]
+    },
+    {
+      "id": "b11b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b11b.jpeg",
+      "sha256": "f2db73487c72b431fc771a1fe5c81661a18c6c169fbce8e39b9ed4dd4d7d3949",
+      "qa_notes": [
+        "Entrega del hermano ocre con marca frontal y cuartillas claras, dos personas completas; principal fuera de cuadro. Siluetas planas y suelo de papel; ropa completa."
+      ]
+    },
+    {
+      "id": "b12b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b12b.jpeg",
+      "sha256": "0b41386f7252935ee567e0a92b63b7f9cddb930254608118b2f28b902cc9e5ac",
+      "qa_notes": [
+        "Kosina camina con caballo sin montar; enramada vacía distante, sin familia adelantada. Material papel completo; cola roza margen izquierdo, sin pérdida del cuerpo. Escala del caballo mayor que en carrera: revisar en secuencia."
+      ]
+    },
+    {
+      "id": "b13a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b13a.jpeg",
+      "sha256": "f9cfafa7bed7ed4216124d6035fa5143a46f22b2836799c9441588e2745f160d",
+      "qa_notes": [
+        "Kosina cierra puerta con familia dentro durante el día; encuadre muestra sector del corral, no censo completo. Madre equina gris destacada. Valla ensamblada con tiras de papel, suelo y figuras planos; sin casa añadida."
+      ]
+    },
+    {
+      "id": "b13b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-04/b13b.jpeg",
+      "sha256": "98b11f9d6ff1fb6920bf9f6879af618948ef3a2b1f55d03b611a4dd1ff8af2a5",
+      "qa_notes": [
+        "Cuatro caballos distinguibles y completos, dos personas, corral vacio en encuadre, faja oxido y prendas completas. Papercut sostenido. Variacion de puerta y escala humana anotada para montaje por cortes."
+      ]
+    },
+    {
+      "id": "b14a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-05/b14a.jpeg",
+      "sha256": "75c27fdb8a2ef676bdfdee5a3206e3cf657ba9600d87897f715e691c24b3750e",
+      "qa_notes": [
+        "Madre humana y Kosina completos observan familia fuera del corral de noche; siluetas equinas separadas y suelo azul estratificado. Papel visible también en penumbra; madre humana es decisión editorial ya documentada."
+      ]
+    },
+    {
+      "id": "b14b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-pequeno-indio-kosina-preproduccion-01/b14b.jpeg",
+      "sha256": "3da7933fe54bec7917daa0f88a286acb31c95ce6fca712c25c578d43db0bc819",
+      "qa_notes": [
+        "Full horse under continuous surface, material depth retained, no human or wings. Sequence review pending."
+      ]
+    }
+  ],
+  "no_api_calls": true
+}

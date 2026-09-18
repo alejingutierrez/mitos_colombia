@@ -1,0 +1,245 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "guanuru": {
+      "titulo": "Guanurú",
+      "canon_models": [
+        "guanuru__presence_model",
+        "familia_casa_guanuru__group_grammar",
+        "pariente_muerto_guanuru__identity_sheet",
+        "casa_desocupada_guanuru__spatial_model",
+        "mariposa_blanca_guanuru__identity_sheet"
+      ],
+      "evidence": [
+        {
+          "id": "published_guanuru",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/guanuru.json",
+          "supports": "Relato editorial objetivo y distinción explícita de géneros y nombres.",
+          "limits": "Reconstrucción contemporánea, no cuento tradicional autónomo."
+        },
+        {
+          "id": "pineda_icanh",
+          "type": "primary_ethnographic_record",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+          "pages": "Impresas 80–82, 144, 147–149; PDF 85–87, 149, 152–154",
+          "supports": "Visitas, pasos, casas desocupadas, mariposa nocturna, sueño y traducciones inestables.",
+          "limits": "Registro histórico de 1947 con categorías del autor; no jerarquía universal ni ritual actual, no relato continuo de una familia."
+        },
+        {
+          "id": "bible_lot20",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-20-guanuru-v3.md",
+          "supports": "Entidades separadas, prendas y materialidad.",
+          "limits": "Fichas editoriales generadas; no objetos ni retratos etnográficos."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "guanuru__presence_model",
+          "decision": "Conservar presencia sin cuerpo; trasladar compresión a chinchorro vacío como metáfora editorial, no anatomía."
+        },
+        {
+          "model_id": "familia_casa_guanuru__group_grammar",
+          "decision": "Seleccionar mujer de manta verde y pechera crema como soñante, no importar los cuatro familiares a cada imagen."
+        },
+        {
+          "model_id": "pariente_muerto_guanuru__identity_sheet",
+          "decision": "Conservar Kotin ocre, camisa crema, faja carbón y sandalias oscuras abiertas; cara casi plana, sin ganado."
+        },
+        {
+          "model_id": "casa_desocupada_guanuru__spatial_model",
+          "decision": "Conservar rectangularidad, columnas y puerta cerrada; todos materiales de papel, sin base."
+        },
+        {
+          "model_id": "mariposa_blanca_guanuru__identity_sheet",
+          "decision": "Conservar alas marfil y cuerpo pequeño oscuro, no asignar especie ni identidad de Guanurú. S permite pliegue imposible editorial."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "guanuru",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/guanuru.json",
+        "target_content_sha256": "543da024fcad6d8ed839c3a51b3b918201e07a3443f8fb3cbde4cd6c26de69ea",
+        "summary": "Memoria etnográfica narrada: la casa y el duelo están rodeados por presencias y nombres que no son equivalentes. La acogida y el cuidado importan más que dar un solo cuerpo o culpable a lo desconocido. Cada pieza separa presencia, sueño y síntesis de hospitalidad.",
+        "events": [
+          {
+            "id": "presencia_casa",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_guanuru",
+            "action": "La familia oye una presencia en la casa cerrada y sin huellas humanas alrededor."
+          },
+          {
+            "id": "sueno_pariente",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_guanuru",
+            "action": "Un pariente muerto aparece en un sueño sin amenazar y reclama cuidado hacia su visita."
+          },
+          {
+            "id": "visita_mariposa",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_guanuru",
+            "action": "Una mariposa blanca visita el dormitorio; se pide no dañarla, sin afirmar que sea Guanurú."
+          }
+        ],
+        "emotional_reading": "Extrañeza doméstica, reconocimiento y hospitalidad.",
+        "magic_reading": "Presencia sin cuerpo, dos tiempos dentro de un sueño y pequeña visita que abre un lugar.",
+        "qa_method": "H chinchorro vacío presionado sin cuerpo; V noche que se pliega y deja ver recuerdo diurno con adulto reconocible; S ala que abre un umbral sin escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T17:46:17.596Z",
+        "reviewed_reference_ids": [
+          "0b77fdbfdfdff55c35ed",
+          "9ec7ff71b4245f8c73bf"
+        ],
+        "retained": [
+          "Interior en penumbra frente a territorio distante; capas físicas, ocre, índigo y crema.",
+          "Visita pequeña de alas blancas como motivo doméstico."
+        ],
+        "rejected": [
+          "Collage de mantis, cráneo, algodón y mariposas como supuesto ritual único.",
+          "Cama europea como sustituto del chinchorro; enjambre, insectos gigantes y textiles geométricos no específicos.",
+          "Fijar mariposa como cuerpo de Guanurú o atribuir causalidad única a enfermedad."
+        ],
+        "influence_by_act": {
+          "entrada": "Conservar casa y profundidad; vaciar acumulación de símbolos. Una huella de peso en chinchorro vacío vuelve perceptible la presencia sin darle cuerpo.",
+          "acto": "Conservar relación interior/otra distancia; sueño con pariente opaco y contraste noche/día, no espectro ni efecto saliendo de manos.",
+          "huella": "Conservar una única mariposa blanca, aislarla como gesto de acogida mediante ala entreabierta; sin paisaje ni objetos protectores combinados."
+        }
+      },
+      "material_direction": "Immersive full-bleed world constructed ENTIRELY from matte dyed CUT PAPER. Scenery consists of broad sheets physically separated at several distances, with air gaps, occlusion and cast shadows. Characters are almost-flat side-profile cutouts with natural adult proportions, one small eye incision and nose in outline, no modeled cheekbones. Clothing consists of broad folded paper pieces, never realistic fabric or skin. Internal fine cut edges visible, NO exterior cardboard backing, stage edge, base, pedestal, tabletop, picture frame or model island. Ground and water must also be paper.",
+      "paleta": "Índigo nocturno, arcilla, ocre apagado, crema y verde trupillo; luz lateral cálida o fría según tiempo, sin neón.",
+      "continuity_contract": [
+        "Personajes de silueta casi plana, proporciones adultas, ojos mínimos y prendas completas; ninguna pintura facial sin contexto.",
+        "Reparto y objetos se describen sólo en su escena; no mezclar Guanurú, Wanurü, Yolujaa ni mariposa como identidad universal.",
+        "La narración y sus operaciones visuales son reconstrucción editorial; ningún rito ni diagnóstico actual se prescribe."
+      ],
+      "avoid": [
+        "Pixar, Disney, portrait, big eyes, molded skin, photorealistic fabric",
+        "monster, horned demon, human ghost outline, white spectral skin, glowing portal",
+        "violence, blood, sickness spectacle, exorcism, sexual imagery",
+        "mantis, skull, cotton, candles, sacred patterns, modern bed, decorative stars",
+        "cardboard backing, base, pedestal, model island, tabletop, outer frame"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "presencia_casa"
+          ],
+          "beat": "La casa parece vacía, pero algo ocupa un lugar.",
+          "escena": "16:9 EXTREME WIDE from far inside a quiet rectangular Wayuu house at blue dusk. Entire world of matte CUT PAPER. At RIGHT middle distance, x65–88%, y40–66%, ONE ochre woven-paper CHINCHORRO hangs between two thin rolled-paper posts. View slightly elevated so its interior is clearly EMPTY: no person, bundle, blanket or object. Yet its CENTER is pulled sharply DOWN into one deep rounded SEATED depression, with taut woven strips radiating toward the EMPTY indentation as if an unseen visitor had just sat. The two hammock sides farther from center remain high and slack; suspension cords taut, open air and shadow below. No humanoid outline or face in the fabric. Paper wall strips immediately behind curve slightly toward the same invisible weight, one localized material pressure, not a wind storm. Closed plain slatted door at far RIGHT background, all windows quiet, no footprints anywhere. Empty broad shadowed ochre floor occupies LEFT 60% and BOTTOM QUARTER for website title. Roof slats and wall extend beyond top/right boundaries, same ground runs underneath posts to foreground, no raised platform. Five clearly separated architectural planes recede into cool blue shadow; warm reflected side light outlines hammock rim and indentation without glow. No people, insects, skull, grave, vessels or added furnishings. Unseen occupancy is the only anomaly.",
+          "editorial_translation": "El chinchorro sometido a peso invisible traduce la presencia doméstica narrada; la fuente y el texto público no describen este hundimiento. No se identifica quién lo ocupa.",
+          "visual_question": "¿El chinchorro está inequívocamente vacío pero hundido por un peso localizado, en una casa cerrada y sin huellas?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un chinchorro doméstico vacío.",
+            "impossible_behavior": "El tejido acusa un peso que no tiene cuerpo visible.",
+            "narrative_effect": "Permite sentir una visita sin convertir lo desconocido en monstruo.",
+            "agency": "La presencia no recibe identidad; ninguna persona ejerce poder.",
+            "physical_translation": "Tiras tensas convergen en depresión vacía, con aire y sombra por debajo.",
+            "visible_test": "¿El chinchorro está inequívocamente vacío pero hundido por un peso localizado, en una casa cerrada y sin huellas?",
+            "event_ids": [
+              "presencia_casa"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "sueno_pariente"
+          ],
+          "beat": "El sueño devuelve una presencia conocida, no un enemigo.",
+          "escena": "9:16 EXTREME WIDE dream scene inside a rectangular Wayuu house at NIGHT. Camera distant and slightly elevated. At x22–58%,y47–59% a small woman sleeps horizontally in an INDIGO woven-paper chinchorro, complete body about one quarter frame width. She wears full GREEN Wayuushein over CREAM pechera; black hair in low bun, warm brown flat-paper face with eyes closed. Hammock anchored to two slim rolled-paper posts that continue beyond upper frame. Behind her at middle-upper RIGHT, the dark blue PAPER wall of the SAME house peels gently back in one broad curling fold, revealing a deeper version of the SAME room in warm DAYLIGHT, with aligned ground and identical wall posts continuing through the fold. Not a separate framed scene, rectangular window, portal or landscape: one room has TWO TIMES at two physical depths. In that warm farther plane at x59–71%,y28–43%, ONE small full-body remembered adult male relative stands calmly in profile facing LEFT toward sleeper. OCHRE full Kotin over CREAM long-sleeved Kemiisa, charcoal waist sash, dark OPEN strapped sandals, short dark gray hair, minimal flat brown face. He is fully OPAQUE, ordinary warm skin and clothing, never white or glowing. Hands relaxed, no reaching, no powers. Exactly two people, one sleeper and one dream visitor. Fold casts a real shadow on nocturnal floor, broad paper wall and roof sheets create strong separated depths. Lower 35% quiet shadowed clay floor for mobile title, no person there. No insects, skulls, other relatives, livestock or stars.",
+          "editorial_translation": "El pariente aparece en el sueño del relato editorial. Pliegue de pared y simultaneidad noche/día son puesta en escena del recuerdo; no arquitectura ritual ni portal narrado.",
+          "visual_question": "¿Una mujer duerme mientras el mismo cuarto se pliega entre noche y día para mostrar un pariente opaco, distante y tranquilo?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Dormir en casa y recordar un rostro.",
+            "impossible_behavior": "El mismo cuarto contiene dos tiempos separados por un pliegue material.",
+            "narrative_effect": "El difunto es reconocido como familiar, no como cuerpo demoníaco.",
+            "agency": "La soñante recibe el recuerdo; el pariente no ataca ni invoca efectos.",
+            "physical_translation": "Pared nocturna curvada revela cuarto diurno continuo, dos figuras pequeñas en distinta profundidad.",
+            "visible_test": "¿Una mujer duerme mientras el mismo cuarto se pliega entre noche y día para mostrar un pariente opaco, distante y tranquilo?",
+            "event_ids": [
+              "sueno_pariente"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "visita_mariposa"
+          ],
+          "beat": "Una visita pequeña merece lugar.",
+          "escena": "1:1 symbolic sculptural CUT PAPER, NOT a scene. Full-bleed muted INDIGO field, no horizon or architecture. ONE ivory-white nocturnal butterfly/moth viewed front three-quarter, asymmetric quiet wing arrangement, occupies central half of canvas. Small dark slender body, two fine antennae, four broad ivory wing sheets with subtle cut-paper veins, no eyespots. LEFT pair of wings lies almost flat over background. RIGHT upper wing stays physically attached at body's side but folds OPEN TOWARD VIEWER like a small DOOR left ajar; its turned edge reveals a narrow warm OCHRE wedge-shaped empty space beneath, deep cast shadow separating the raised white wing from blue field. The wing remains a WING, not an actual wooden door or a separate object: one simple fold transforms its gesture into hospitality. No miniature person, face or room inside the wing, no magical rays. Right lower wing remains partly folded behind, clear four-wing silhouette and empty opening. Warm cream side light, matte surfaces, spacious indigo margins. No symbols printed on wings, letters, heart, eyes, skull, hand, keyhole, other insects or landscape. Wing opening and shadow must read at thumbnail size.",
+          "editorial_translation": "El ala entreabierta condensa hospitalidad hacia la mariposa; no se atribuye al insecto una transformación literal ni se inventa un emblema cultural.",
+          "visual_question": "¿Una sola mariposa blanca abre un ala como gesto de acogida, con vacío y sombra legibles, sin escena?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una mariposa nocturna blanca que visita la casa.",
+            "impossible_behavior": "El ala adquiere el gesto de una puerta entreabierta.",
+            "narrative_effect": "Condensa la decisión de recibir antes de dañar.",
+            "agency": "Metáfora editorial de hospitalidad, no identidad fija de Guanurú.",
+            "physical_translation": "Ala marfil levantada en una bisagra de papel y vacío cálido bajo ella.",
+            "visible_test": "¿Una sola mariposa blanca abre un ala como gesto de acogida, con vacío y sombra legibles, sin escena?",
+            "event_ids": [
+              "visita_mariposa"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Four broad ivory CUT-PAPER wings and tiny dark body suspended over indigo field, one wing physically folded open with warm underlayer and cast shadow. Matte, full bleed, no support border.",
+          "continuity_contract": [
+            "Una visita pequeña, no cuerpo canónico de Guanurú.",
+            "Sin reparto, paisaje ni objetos de protección combinados."
+          ],
+          "symbolic_contract": {
+            "thesis": "Recibir una visita antes de decidir que es enemiga.",
+            "carrier": "Una mariposa blanca y su ala entreabierta.",
+            "operation": "Un ala conserva su forma pero adquiere el gesto de una puerta abierta.",
+            "story_connection": "Petición de no dañar la mariposa y cuidado de las relaciones durante el duelo.",
+            "visible_test": "Ala levantada con vacío/sombra legibles, sin persona o escena interior."
+          },
+          "avoid": [
+            "person, room, house, wooden door, scene, separate butterfly swarm, skull, mantis, cotton",
+            "heart shape, letters, logo, sacred glyph, eyespots, glow, fantasy fairy",
+            "photographic insect, cardboard base, border, tabletop"
+          ]
+        }
+      }
+    }
+  }
+}

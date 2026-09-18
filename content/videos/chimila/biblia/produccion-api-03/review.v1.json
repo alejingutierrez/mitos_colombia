@@ -1,0 +1,139 @@
+{
+  "date": "2026-09-12",
+  "batch": "produccion-api-03",
+  "review_kind": "individual editorial visual checks, not cultural certification or user approval",
+  "entries": [
+    {
+      "unit_id": "P01",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/p01-papa-grande-master-v1.jpeg",
+      "observed": {
+        "views": 5,
+        "identities": 1,
+        "gestures": [
+          "greda",
+          "semillas"
+        ],
+        "no_invented_regalia": true
+      },
+      "status": "candidate_for_user_review",
+      "limits": [
+        "Apariencia y edad son adaptación original, no descritas para Papá Grande. No equiparar con Yaau.",
+        "Tres vistas de identidad y dos gestos narrativos; telas rectangulares y cordón sin insignias rituales."
+      ],
+      "culturally_certified": false,
+      "user_approved": false
+    },
+    {
+      "unit_id": "H03",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/h03-cazadores-viajeros-bows-only-v1.jpeg",
+      "observed": {
+        "adult_male_models": 3,
+        "bows": 3,
+        "arrows": 0,
+        "empty_other_hands": true
+      },
+      "status": "candidate_for_user_review",
+      "limits": [
+        "Tres prototipos adultos, no un trío fijo para todos los relatos.",
+        "Maestro final con tres arcos y manos vacías del otro lado; flechas se insertarán desde U02. Tres intermedios conservados, no seleccionados.",
+        "Rasgos y cortes son propuestas editoriales; no retratos de archivo ni indumentaria universal."
+      ],
+      "culturally_certified": false,
+      "user_approved": false
+    },
+    {
+      "unit_id": "A02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/a02-felino-master-v1.jpeg",
+      "observed": {
+        "views": 4,
+        "normal_animal_appearance": true,
+        "species_certified": false
+      },
+      "status": "candidate_for_user_review",
+      "limits": [
+        "Anatomía y rosetas de felino como propuesta referencial, sin certificar especie del tigre narrado.",
+        "Cuatro vistas, incluida luz nocturna; sin rasgos demoníacos que resuelvan la duda del relato359."
+      ],
+      "culturally_certified": false,
+      "user_approved": false
+    },
+    {
+      "unit_id": "L05",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/l05-roza-tronco-reserva-master-v1.jpeg",
+      "observed": {
+        "panels": 3,
+        "maize_yuca_separated": true,
+        "fallen_trunk": true,
+        "no_maize_on_trunk": true
+      },
+      "status": "candidate_for_user_review",
+      "limits": [
+        "Roza ficticia de maíz y yuca; fotos contemporáneas no reconstruyen una parcela mítica exacta.",
+        "Tronco bajo de reserva distinto de ceiba; no tiene germinación de recuperación incorporada. Tres encuadres reutilizables."
+      ],
+      "culturally_certified": false,
+      "user_approved": false
+    },
+    {
+      "unit_id": "U02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/u02-arcos-flechas-mana-master-v1.jpeg",
+      "observed": {
+        "bows": 2,
+        "arrows": 6,
+        "ordinary_tip_types": 3,
+        "feather_fletching": 0,
+        "narrative_trio_separated": true
+      },
+      "status": "candidate_for_user_review",
+      "limits": [
+        "Equipo ordinario basado parcialmente en archivo1946: sección plana, puntas diferenciadas y flechas sin emplumado.",
+        "Arco iris y trío de maná separados como propuesta narrativa; botánica y medidas de maná siguen pendientes."
+      ],
+      "culturally_certified": false,
+      "user_approved": false
+    },
+    {
+      "unit_id": "V02",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/v02-roza-sequia-v1.jpeg",
+      "observed": {
+        "panels": 3,
+        "parent": "L05",
+        "anchors_recognizable": true,
+        "crops_dry": true,
+        "no_recovery_sprouts": true
+      },
+      "status": "candidate_for_user_review",
+      "limits": [
+        "Sequía narrativa del354 editada sobre L05, con tres encuadres y anclas reconocibles.",
+        "Cubre L05 solamente, no L01 ni cauce seco; no confundir con lluvia del brujo359 o cosmología579."
+      ],
+      "culturally_certified": false,
+      "user_approved": false
+    }
+  ],
+  "rejected_intermediates": [
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/h03-cazadores-viajeros-master-v1.jpeg",
+      "sha256": "30adf89c46cf0c16db021a31c370bb13c00eab93b3f844768e01b57a231dc3af",
+      "unit_id": "H03",
+      "reason": "Flechas demasiado cortas respecto de los arcos.",
+      "retained": true
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/h03-cazadores-viajeros-master-v1-refined.jpeg",
+      "sha256": "a7fc4a32fff65504fc4b163bee6dcedf873912d217193f04805ba161cbb9e561",
+      "unit_id": "H03",
+      "reason": "Puntas residuales inferiores duplicadas tras alargar flechas.",
+      "retained": true
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/h03-cazadores-viajeros-master-v1-refined2.jpeg",
+      "sha256": "d58fa0da0bbaa6d25d1ea2f00aaf8c3fa186451c6f03a66570f40fa0e0025d3e",
+      "unit_id": "H03",
+      "reason": "Puntas residuales inferiores duplicadas tras alargar flechas.",
+      "retained": true
+    }
+  ],
+  "final_H03_resolution": "Bows-only supporting prototype sheet; arrow assets remain separately in U02.",
+  "scope": "Six new units, inventory unchanged; no catalog/database/web/deployment mutation."
+}

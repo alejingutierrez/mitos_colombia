@@ -1,0 +1,1440 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-hijo-del-condor",
+  "title": "El hijo del Cóndor · Aprender la salida",
+  "version": "preproduccion-01",
+  "status": "script_storyboard_ready_not_generated",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Charcoal and slate folded-paper cave, ochre earth, dusty sage vegetation, ivory and clay garments. Pale dawn for freedom; warm indirect ochre light underground, never neon. Same matte paper material across daylight, dark chambers and dusk.",
+  "shared_scene_continuity": [
+    "Todas las superficies y seres de papel recortado, incluidas caras, animales, herramientas y suelo. Inmersión completa sin base exterior de maqueta.",
+    "La cueva alta de Juramía tiene una piedra de cierre; la de Jujía desciende por corredores abiertos. No confundir lugares ni poner al cóndor en el ciclo subterráneo.",
+    "Sólo aparece el reparto de cada toma. Rostros pequeños planos; vestuario completo de continuidad editorial. No importar lluvia germinante de Creación ni noches domésticas de Arámai."
+  ],
+  "continuity_rules": [
+    "José Juan permanece humano y adulto desde su primera aparición; el crecimiento se recuerda por sombra, no metamorfosis en ave.",
+    "Madre arcilla y trenza única; José Juan camisa marfil/pantalón arena; Jujía gris/carbón; dos peones diferenciados por túnica; mujeres no son trofeos.",
+    "Violencia y cautiverio narrados sin representar agresión, cuerpos heridos, sangre, sexualidad o ataduras sobre personas.",
+    "El cierre sigue al relato publicado, sin presentar a la hija como esposa histórica de Chaves. No hay boda ni contacto romántico."
+  ],
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-hijo-del-condor.json",
+    "content_sha256": "82d3c04ab01a5cbb8e81991d03a12aaded2ddb90ce31244d12ec669b5bc3991b",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "Chaves1946 secciónXV pp327–331/PDF23–27, José Jusayú por Roberto Iguarán; relectura2026-09-07.",
+    "source_read_at": "2026-09-07",
+    "nature": "Adaptación audiovisual de la página vigente, contrastada con su fuente histórica; no nueva edición documental ni publicación integral.",
+    "chosen_variant": "Texto público comprimido; registra diferencia del final: Chaves da unión con Jujía, página residencia junto a la hija. No representar boda ni fundirlas.",
+    "visual_license": "Sombra de infancia, piedra y senderos que se pliegan, sombras que se levantan son traducciones plásticas editoriales; no símbolos tradicionales ni episodios nuevos.",
+    "events": [
+      {
+        "id": "cautiverio",
+        "provenance": "historical_core",
+        "source": "Public mito paragraphs1–2; Chaves XV pp327–328.",
+        "required": true,
+        "action": "Juramía encerró a una joven en una cueva alta. Allí nació su hijo y creció con rapidez. La madre seguía buscando una salida."
+      },
+      {
+        "id": "fuga",
+        "provenance": "historical_core",
+        "source": "Public paragraphs2–3 and closing; Chaves XV p328. Order of crossing is staging, not new traditional detail.",
+        "required": true,
+        "action": "El muchacho observó la piedra hasta descubrir cómo abrirla. Cuando el cóndor salió, sostuvo la puerta. Su madre cruzó primero; él salió detrás."
+      },
+      {
+        "id": "trabajo",
+        "provenance": "historical_core",
+        "source": "Public paragraphs3–4; Chaves XV p328.",
+        "required": true,
+        "action": "Llegaron a una ranchería. El hijo recibió el nombre de José Juan. Trabajaron para sostenerse; después, él abrió una roza y contrató dos peones."
+      },
+      {
+        "id": "jujia",
+        "provenance": "historical_core",
+        "source": "Public paragraph4; Chaves XV p329. Attacks and injuries off screen, no mutilation imagery.",
+        "required": true,
+        "action": "Jujía apareció junto al fogón, devoró la comida y atacó a los peones. José Juan se enfrentó a ella. La siguió hasta otra cueva."
+      },
+      {
+        "id": "alianza",
+        "provenance": "historical_core",
+        "source": "Public paragraph5; Chaves XV pp329–330. Compresses repeated bargains as public version; women not prizes.",
+        "required": true,
+        "action": "Serpientes guardaban la entrada. Jujía ofreció una alianza y dejó salir a dos jóvenes alijuna. Pero los peones traicionaron a José Juan y lo abandonaron."
+      },
+      {
+        "id": "abandono",
+        "provenance": "historical_core",
+        "source": "Public paragraphs5–6; Chaves XV p330. Free standing figure plus cut rope is nonviolent ellipsis of being left tied.",
+        "required": true,
+        "action": "La soga quedó cortada. Solo entre corredores subterráneos, José Juan no encontró la salida. Jujía regresó, lo liberó y le mostró el camino de vuelta."
+      },
+      {
+        "id": "restitucion",
+        "provenance": "historical_core",
+        "source": "Public paragraph6 and editorial reflection; Chaves XV p330. Killing wholly off image; resurrection shown by nonviolent material metaphor.",
+        "required": true,
+        "action": "José Juan alcanzó a los traidores y los mató. Después les devolvió la vida. El daño no desapareció: la restitución detuvo una nueva persecución."
+      },
+      {
+        "id": "caballo",
+        "provenance": "historical_core",
+        "source": "Public paragraph7; Chaves XV pp330–331. No blows or force visible; don't import Kosina's speaking horse.",
+        "required": true,
+        "action": "Volvió donde Jujía. Faltaba una prueba: dominar un caballo difícil. José Juan sostuvo el lazo, esperó y logró montarlo. Esta vez pudo seguir adelante."
+      },
+      {
+        "id": "residencia",
+        "provenance": "published_editorial_expansion",
+        "source": "Public paragraphs8–9; published editorial expansion for final daughter relation, distinct from Chaves's Jujia ending. No marriage staged.",
+        "required": true,
+        "action": "Entró al dominio subterráneo sin ser prisionero. Allí permaneció junto a la hija de Jujía y los animales. No volvió a buscar al cóndor."
+      },
+      {
+        "id": "madre_libre",
+        "provenance": "published_editorial_expansion",
+        "source": "Public paragraphs9–11; independent maternal ending is published editorial emphasis. No extra reunion.",
+        "required": true,
+        "action": "Su madre conservó una vida propia en la ranchería. Todo había empezado al observar una puerta: un hijo encontró cómo abrirla, y los dos pudieron salir."
+      }
+    ]
+  },
+  "research_status": "full_public_snapshot_read_live_hash_verified_primary_XV_rechecked_and_existing_bible_reviewed",
+  "source_verified_live": {
+    "date": "2026-09-07",
+    "method": "Neon read-only content SHA-256",
+    "matches": true
+  },
+  "duration": {
+    "target_seconds": 140,
+    "measured": false,
+    "voice_words": 242
+  },
+  "story_thesis": "La salida compartida inaugura una autonomía que las pruebas, la violencia y la reparación vuelven más compleja, no una victoria limpia.",
+  "inventory": [
+    {
+      "id": "juramia",
+      "type": "animal",
+      "desc": "Juramía, mythical bird called condor: broad BLACK cut-paper wings with narrow ivory feather bands and ivory NECK RUFF, small bare dusky-red head, pale hooked beak; normal bird anatomy. Not white-headed eagle, giant monster, humanoid or transformed José Juan.",
+      "model_ids": [
+        "juramia__identity_sheet"
+      ]
+    },
+    {
+      "id": "madre",
+      "type": "person",
+      "desc": "José Juan's adult mother: small flat side-profile, warm brown paper face with contour-only nose, long black braid; plain clay-terracotta ankle-length Wayuu manta over ivory underlayer, simple sandals. Complete opaque clothing, no ornaments, headwear or paint. Adult, not a bride or prize.",
+      "model_ids": [
+        "madre_jose_juan__identity_sheet"
+      ]
+    },
+    {
+      "id": "jose",
+      "type": "person",
+      "desc": "José Juan: young ADULT human, short irregular black cut-paper hair, warm brown flat profile, tiny cut eye, slender ordinary adult proportions, plain ivory long-sleeved shirt and SAND ankle trousers, dark plain sandals. NO cape, wings, feathers, beard, hat, muscular torso or sculpted head.",
+      "model_ids": [
+        "jose_juan__identity_sheet"
+      ]
+    },
+    {
+      "id": "jujia",
+      "type": "person",
+      "desc": "Jujía: older adult woman with gray hair in two LOW loose sections, plain layered charcoal and dark brown ankle-length manta over sand underlayer, simple dark sandals. Flat paper side-profile with minimal line for eye; not crone caricature, young seductress, monster or witch costume. No injuries visible.",
+      "model_ids": [
+        "jujia__identity_sheet"
+      ]
+    },
+    {
+      "id": "peon_claro",
+      "type": "person",
+      "desc": "First adult hired worker: tall slim human with short black hair, full plain cream knee-length working tunic over sand trousers, simple sandals; flat paper profile. Distinguishable from Jose by long tunic, not shirt.",
+      "model_ids": [
+        "peones_jose_juan__group_grammar"
+      ]
+    },
+    {
+      "id": "peon_oscuro",
+      "type": "person",
+      "desc": "Second adult hired worker: slightly shorter stocky human with short wavy dark hair, full rust-brown knee-length tunic over brown trousers and simple sandals; flat cut-paper profile, no facial caricature.",
+      "model_ids": [
+        "peones_jose_juan__group_grammar"
+      ]
+    },
+    {
+      "id": "alijuna_azul",
+      "type": "person",
+      "desc": "Adult alijuna woman: long muted slate-blue plain dress, dark thin sash, dark hair pinned low, flat side profile. Walks independently, never carried, handed over, sexualized or posed as a trophy.",
+      "model_ids": [
+        "jovenes_alijuna_cueva__group_grammar"
+      ]
+    },
+    {
+      "id": "alijuna_arena",
+      "type": "person",
+      "desc": "Adult alijuna woman: sand plain ankle-length dress, single dark braid, no ornaments, flat cut-paper face. Distinct from the blue-dressed woman, independent posture.",
+      "model_ids": [
+        "jovenes_alijuna_cueva__group_grammar"
+      ]
+    },
+    {
+      "id": "hija",
+      "type": "person",
+      "desc": "Adult daughter of Jujía: long loose straight black cut-paper hair, plain sand ankle-length dress with CHARCOAL diagonal sash and narrow clay strip; flat side profile. Separate self-directed posture, not bridal, no romantic contact or trophy composition.",
+      "model_ids": [
+        "hija_jujia__identity_sheet"
+      ]
+    },
+    {
+      "id": "caballo",
+      "type": "animal",
+      "desc": "One ordinary dark CHESTNUT horse, black paper mane, tail and lower legs; four correct legs. Almost flat layered cut-paper silhouette with a few folded pieces, NO realistic muscles, fur or glass eyes. Plain rope bridle, no saddle ornament, wing, horn or armor.",
+      "model_ids": [
+        "caballo_prueba_jose_juan__identity_sheet"
+      ]
+    },
+    {
+      "id": "serpientes",
+      "type": "animal",
+      "desc": "Exactly TWO separate slender paper snakes guarding opposite sides of a natural cave: charcoal and muted earth brown, flat cut silhouettes and broad overlapping scales, mouths closed, bodies visible and not tangled; no giant monster, attack or wound.",
+      "model_ids": [
+        "serpientes_guardianas__group_grammar"
+      ]
+    },
+    {
+      "id": "cueva_alta",
+      "type": "place",
+      "desc": "Juramía's high cave: asymmetric charcoal/ochre stacked-paper cliffs, a SINGLE broad dark movable stone slab at its mouth, huge interior, small pale dawn seam. Not masonry, palace, frame, scenic miniature base or known named mountain.",
+      "model_ids": [
+        "cueva_juramia__spatial_model"
+      ]
+    },
+    {
+      "id": "dominio",
+      "type": "place",
+      "desc": "Jujía's subterranean domain: immense connected natural corridors of folded slate/ochre paper, traversable winding ground and distant warm opening. Distinct from Juramía's high cave: downward branching passages, no mechanical door, jewels, palace or archaeological cutaway.",
+      "model_ids": [
+        "dominio_subterraneo_jujia__spatial_model"
+      ]
+    },
+    {
+      "id": "roza",
+      "type": "place",
+      "desc": "Small worked clearing with broad cut-paper EARTH FURROWS, cut shrub stems and limited dry green leaves, irregular twig fence made of flat paper strips; no lush crop fields or real dirt. Tools only if declared.",
+      "model_ids": [
+        "roza_jose_juan__spatial_model"
+      ]
+    },
+    {
+      "id": "rancheria",
+      "type": "place",
+      "desc": "Modest dispersed ranchería: plain ochre cut-paper dwelling with dark OPEN doorway and adjacent palm-sheet shade roof, thin flat-paper posts, immense dryland around. Domestic, no ceremonial props, no detailed fabricated clan designs.",
+      "model_ids": []
+    },
+    {
+      "id": "territorio",
+      "type": "place",
+      "desc": "Guajira dryland in broad overlapping ochre matte paper sheets, muted sage cut-leaf thorn shrubs and cardon-like vertical cut silhouettes; distant layered ridges without claiming an exact geographic cave.",
+      "model_ids": []
+    },
+    {
+      "id": "costura",
+      "type": "object",
+      "desc": "Small plain ivory garment patch and a single slender thorn used for repair, represented by simple paper cutouts, not bloody, not piercing skin; mother's clothes remain complete.",
+      "model_ids": []
+    },
+    {
+      "id": "cocina",
+      "type": "object",
+      "desc": "Low hearth of folded charcoal paper stones with small amber cut-paper flame; modest terracotta-colored PAPER cooking pot and three bowls with clearly thin overlapping assembled rims, simple broad cut-paper food shapes. Not smooth ceramic or metal.",
+      "model_ids": []
+    },
+    {
+      "id": "herramientas",
+      "type": "object",
+      "desc": "Two resting agricultural hoes assembled from flat brown paper shafts and folded gray paper blades, used only as field tools; never raised as weapons.",
+      "model_ids": []
+    },
+    {
+      "id": "soga",
+      "type": "object",
+      "desc": "Plain light-beige narrow folded-paper cord. Broken upper end and loose coil can indicate abandonment; NO person tied up, neck loop, binding or violence visible.",
+      "model_ids": []
+    },
+    {
+      "id": "lazo",
+      "type": "object",
+      "desc": "Plain matte beige folded-paper rope for the horse test: held low with a loose curve, or coil on ground; no whip, blows, tight neck loop or forceful struggle.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "juramia__identity_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-01d-juramia-anatomy-medium/juramia__identity_sheet--canon.jpeg",
+      "sha256": "7de5ca152adbd975ec4b0f64caa9e1e03e28f7198d1ac50238ccf63ece24447b",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "madre_jose_juan__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/madre_jose_juan__identity_sheet--canon.jpeg",
+      "sha256": "75add682553be102bb7f7bdc5a2a7cbea7377ecd181cd35caf5edae5dd085e93",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "jose_juan__identity_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-01c-identities-medium/jose_juan__identity_sheet--canon.jpeg",
+      "sha256": "17df550b498ef8beb1d5ab195427ae9bd60618f00090cddbb490b6e154229773",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "jujia__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/jujia__identity_sheet--canon.jpeg",
+      "sha256": "8e78f7c710ce88f038220d7244da76e40ed5038b3387c3ea787f183174b2bc57",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "peones_jose_juan__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/peones_jose_juan__group_grammar--canon.jpeg",
+      "sha256": "af64e12ecb0fa81949bfad4f5c5af7fbfe9c70f1c2fda3e581a552bbe7bd5c89",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "jovenes_alijuna_cueva__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/jovenes_alijuna_cueva__group_grammar--canon.jpeg",
+      "sha256": "da62eb31c92aab7c3218e0f1c0a8beb22ccca89ccc89774a292264ccfd6d7bed",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "hija_jujia__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium-corrections-01/hija_jujia__identity_sheet--canon.jpeg",
+      "sha256": "ab99a38b42fa54d1916732209cbe6216d8bf686ab57c1f06f5fa8058b8ed0baf",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "serpientes_guardianas__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/serpientes_guardianas__group_grammar--canon.jpeg",
+      "sha256": "fa460a384ad7ab797fb8517fa0db24c4d167bdad726665e6f9924244ded2f933",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "caballo_prueba_jose_juan__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/caballo_prueba_jose_juan__identity_sheet--canon.jpeg",
+      "sha256": "8d2f89067766620700caf1c6dd516e1259a010af9906a52488a53dde668c59cd",
+      "qa_status": "PASS_WITH_MATERIALITY_WATCH"
+    },
+    {
+      "model_id": "cueva_juramia__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/cueva_juramia__spatial_model--canon.jpeg",
+      "sha256": "d6122c500e52026b50ed07c3aa082374bd5d3ee702c8946ddac2bfe83630ca4d",
+      "qa_status": "DIRECTION_CANDIDATE_PASS_WITH_MATERIALITY_WATCH"
+    },
+    {
+      "model_id": "roza_jose_juan__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium-corrections-01/roza_jose_juan__spatial_model--canon.jpeg",
+      "sha256": "690c98d2e982f959a090ea0bcc20ca8dc3c5da855c8d90f96d5d8458b945cf96",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "dominio_subterraneo_jujia__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium-corrections-01/dominio_subterraneo_jujia__spatial_model--canon.jpeg",
+      "sha256": "35eef55d1a00f29c742235067e6078d793b46c6f7b5742b773a40e1e7d29d990",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    }
+  ],
+  "reference_review": {
+    "date": "2026-09-07",
+    "method": "Inspección directa de los tres trípticos y modelos de identidades, caballo, serpientes, roza y dominio; conservar identidad pero aplanar caras, animales y material realista.",
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/entrada.jpeg",
+        "sha256": "053f4663d468fe30f24d2d3c6747a29dac8a3b4ded7c4d6879bdd2812128f8ae",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/acto.jpeg",
+        "sha256": "319d0abb9582f7224258a9ec976be863e5d22f9339b203295538b1d4574bcb98",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/huella.jpeg",
+        "sha256": "68cc44386bf6628251f6df1ba0222a77e26e8ebd9d876bb66f7920d7d5036fed",
+        "role": "same_myth_direction_reference",
+        "reviewed": true
+      }
+    ],
+    "decisions": [
+      "No copiar facetas escultóricas, tierra granular o piedra realista de fichas anteriores.",
+      "Retener lógica de puerta y descenso de trípticos, ampliar todo el ciclo narrativo sin rehacerlos.",
+      "Sin subir ninguna referencia local al generador."
+    ]
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "time_seconds": [
+        0,
+        14
+      ],
+      "voice_over": "Juramía encerró a una joven en una cueva alta. Allí nació su hijo y creció con rapidez. La madre seguía buscando una salida.",
+      "word_count": 23,
+      "voice_provenance": "Public mito paragraphs1–2; Chaves XV pp327–328.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "cautiverio"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "El guardián de la altura",
+          "time_seconds": [
+            0,
+            7
+          ],
+          "visual": "Very wide low view of huge steep paper cliffs before dawn. One small Juramía bird stands in PROFILE on a high ledge beside a CLOSED dark stone slab, bird no more than 14% image height. Pale sky seen between overlapping cliff sheets; a narrow light seam around the stone. No people, nesting, prey, capture, injury or interaction. The height and sealed path carry the confinement, not a violent action.",
+          "entity_ids": [
+            "juramia",
+            "cueva_alta",
+            "territorio"
+          ],
+          "event_ids": [
+            "cautiverio"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "foreground layered ledge",
+            "small bird and sealed slab",
+            "immense cliff",
+            "pale sky seam"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": null,
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b1b",
+          "title": "El tiempo crece dentro",
+          "time_seconds": [
+            7,
+            14
+          ],
+          "visual": "Wide interior of the same high cave, matte charcoal/ochre sheets, single pale sliver of dawn. ONLY mother sitting fully clothed at one side mending a small ivory patch with a thorn, and adult Jose standing a little away near the closed stone, both fully visible and small. Magic: Jose's SINGLE attached flat charcoal ground-shadow has a CHILD'S shorter proportions, while the actual figure is clearly adult. Only two physical people; no duplicate ages or panel montage. Shadow is a deliberate paper temporal memory, not a real child. Faces flat.",
+          "entity_ids": [
+            "madre",
+            "jose",
+            "cueva_alta",
+            "costura"
+          ],
+          "event_ids": [
+            "cautiverio"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "dark overlapping ground",
+            "mother patch and seated silhouette",
+            "adult Jose and short shadow",
+            "closed slab and daylight seam"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Adult body and its ground shadow",
+            "impossible_behavior": "The adult casts a single much shorter child-proportioned shadow.",
+            "narrative_effect": "Growth has outrun ordinary time.",
+            "agency": "Agencia correspondiente al relato; no poderes ni símbolos tradicionales nuevos. La forma de papel es traducción editorial.",
+            "physical_translation": "dark overlapping ground; mother patch and seated silhouette; adult Jose and short shadow; closed slab and daylight seam",
+            "visible_test": "A small child-shaped shadow is attached at the adult's feet; there is no second child body.",
+            "event_ids": [
+              "cautiverio"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "time_seconds": [
+        14,
+        28
+      ],
+      "voice_over": "El muchacho observó la piedra hasta descubrir cómo abrirla. Cuando el cóndor salió, sostuvo la puerta. Su madre cruzó primero; él salió detrás.",
+      "word_count": 23,
+      "voice_provenance": "Public paragraphs2–3 and closing; Chaves XV p328. Order of crossing is staging, not new traditional detail.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "fuga"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "El secreto de la piedra",
+          "time_seconds": [
+            14,
+            21
+          ],
+          "visual": "Very wide three-quarter view INSIDE the high cave. Tiny adult Jose in profile places ONE hand against the bottom SIDE of the single stone slab. Directly at that contact the slate paper strata FAN APART into a broad connected geological pleat, exposing an opening large enough to walk through and a continuous ochre path. Mother stands one pace behind ready to move, not carried. Both full bodies 15–20% image height. No bird, runes, hand rays or mechanical hinges. Tangible internal paper folds not realistic rock.",
+          "entity_ids": [
+            "jose",
+            "madre",
+            "cueva_alta"
+          ],
+          "event_ids": [
+            "fuga"
+          ],
+          "angle": "eye_level_wide",
+          "depth_planes": [
+            "dark foreground sheets",
+            "Jose hand at connected pleat",
+            "mother at clear passage",
+            "dawn exterior"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "A stone door blocks a path",
+            "impossible_behavior": "Its connected strata fan open at the discovered seam.",
+            "narrative_effect": "Observation creates a shared exit.",
+            "agency": "Agencia correspondiente al relato; no poderes ni símbolos tradicionales nuevos. La forma de papel es traducción editorial.",
+            "physical_translation": "dark foreground sheets; Jose hand at connected pleat; mother at clear passage; dawn exterior",
+            "visible_test": "Hand at the seam, folded stone and traversable daylight gap belong to one physical structure.",
+            "event_ids": [
+              "fuga"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b2b",
+          "title": "La salida compartida",
+          "time_seconds": [
+            21,
+            28
+          ],
+          "visual": "Exterior reverse wide view at dawn along cliff path. Mother walks forward at the lead, Jose one pace behind, both small complete silhouettes in their fixed clothes. Behind them the single opened stone remains to one side of the high cave. Great layered ochre valley ahead, thin paper shadows, no pursuer, condor, embrace or rescue carry. A calm decisive departure after the opening, no new magic.",
+          "entity_ids": [
+            "madre",
+            "jose",
+            "cueva_alta",
+            "territorio"
+          ],
+          "event_ids": [
+            "fuga"
+          ],
+          "angle": "eye_level_wide",
+          "depth_planes": [
+            "foreground path edge",
+            "mother and Jose walking",
+            "open cave slab",
+            "distant valley"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "time_seconds": [
+        28,
+        42
+      ],
+      "voice_over": "Llegaron a una ranchería. El hijo recibió el nombre de José Juan. Trabajaron para sostenerse; después, él abrió una roza y contrató dos peones.",
+      "word_count": 24,
+      "voice_provenance": "Public paragraphs3–4; Chaves XV p328.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "trabajo"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Una vida en la ranchería",
+          "time_seconds": [
+            28,
+            35
+          ],
+          "visual": "Wide eye-level view of a plain paper ranchería at morning. Mother stands beside the OPEN domestic doorway folding a plain ivory cloth; adult Jose walks away toward a distant clearing. Two people only, separated by a visible path, complete small bodies. Domestic roof and posts clearly made of flat paper, ground large overlapping cutouts. Do not add crowd, loom, baby, ornaments or bird. Everyday independence, not farewell grief.",
+          "entity_ids": [
+            "madre",
+            "jose",
+            "rancheria",
+            "territorio",
+            "costura"
+          ],
+          "event_ids": [
+            "trabajo"
+          ],
+          "angle": "high_oblique",
+          "depth_planes": [
+            "shade roof edge and paper post",
+            "mother by open home",
+            "Jose on path",
+            "dry distant clearing"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b3b",
+          "title": "Tres en la roza",
+          "time_seconds": [
+            35,
+            42
+          ],
+          "visual": "High oblique wide composition of a small worked clearing. Jose kneels placing a broad seedling paper leaf by a furrow, tall cream-tunic worker stands at one side and stockier rust-tunic worker at the other; exactly THREE adult men with distinct shirts/tunics. Two hoes rest on the ground, never raised. Broad soil-paper sheets form irregular parallel furrows with sparse sage shrubs at perimeter. All faces small flat profiles, not muscular farm heroes.",
+          "entity_ids": [
+            "jose",
+            "peon_claro",
+            "peon_oscuro",
+            "roza",
+            "herramientas"
+          ],
+          "event_ids": [
+            "trabajo"
+          ],
+          "angle": "high_oblique",
+          "depth_planes": [
+            "foreground paper furrow",
+            "three separated workers",
+            "plain fence and dry shrubs",
+            "layered ridge"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "time_seconds": [
+        42,
+        56
+      ],
+      "voice_over": "Jujía apareció junto al fogón, devoró la comida y atacó a los peones. José Juan se enfrentó a ella. La siguió hasta otra cueva.",
+      "word_count": 24,
+      "voice_provenance": "Public paragraph4; Chaves XV p329. Attacks and injuries off screen, no mutilation imagery.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "jujia"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "El fogón se vacía",
+          "time_seconds": [
+            42,
+            49
+          ],
+          "visual": "Wide side view of field cooking place. Older Jujia sits beside the PAPER pot with an empty thin-rim paper bowl, while ONLY the tall cream-tunic worker stands back with an empty bowl, both complete and small. Three empty bowls spread across hearth-side ground show the missing meal. No fight, grabbing, saliva or injuries; no Jose or second worker. Flame tiny amber paper shapes, pot visibly assembled from curved overlapping paper petals. Keep field context large.",
+          "entity_ids": [
+            "jujia",
+            "peon_claro",
+            "cocina",
+            "roza"
+          ],
+          "event_ids": [
+            "jujia"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "three assembled empty bowls",
+            "Jujia and field hearth",
+            "worker standing back",
+            "clearing fence"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b4b",
+          "title": "Hacia la segunda cueva",
+          "time_seconds": [
+            49,
+            56
+          ],
+          "visual": "Long lateral wide view AFTER the confrontation, no violent action. Older charcoal-clothed Jujia walking toward a LOW descending cave entrance far in the rock slope. Jose follows at a respectful distance along the connected ochre path, hands empty and lowered. Both full body, uninjured, no weapons, no chase blur. Foreground is a small abandoned cooking place at far edge, background descending paper strata; not the high condor cave.",
+          "entity_ids": [
+            "jujia",
+            "jose",
+            "dominio",
+            "cocina",
+            "territorio"
+          ],
+          "event_ids": [
+            "jujia"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "edge of deserted hearth",
+            "Jose on paper path",
+            "Jujia near low entrance",
+            "descending geology"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "time_seconds": [
+        56,
+        70
+      ],
+      "voice_over": "Serpientes guardaban la entrada. Jujía ofreció una alianza y dejó salir a dos jóvenes alijuna. Pero los peones traicionaron a José Juan y lo abandonaron.",
+      "word_count": 25,
+      "voice_provenance": "Public paragraph5; Chaves XV pp329–330. Compresses repeated bargains as public version; women not prizes.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "alianza"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Las guardianas del umbral",
+          "time_seconds": [
+            56,
+            63
+          ],
+          "visual": "Wide low oblique view of Jujia's natural cave mouth. Exactly TWO small slender paper snakes, one charcoal one brown, rest on opposite sides of the path, mouths closed, bodies each entirely visible. Farther up the path Jose stands small with EMPTY hands, pausing, not attacking or approaching a strike. Cave opens downward behind, folded layered rock and sparse paper grasses. No Jujia, women, horse, weapons, fangs or severed snakes.",
+          "entity_ids": [
+            "jose",
+            "serpientes",
+            "dominio",
+            "territorio"
+          ],
+          "event_ids": [
+            "alianza"
+          ],
+          "angle": "eye_level_wide",
+          "depth_planes": [
+            "two opposite cut-paper snake silhouettes",
+            "clear passage between them",
+            "small Jose at distance",
+            "descending cave layers"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b5b",
+          "title": "Dos salidas propias",
+          "time_seconds": [
+            63,
+            70
+          ],
+          "visual": "Very wide view across low cave approach. Two ADULT alijuna women, one slate-blue dress one sand dress, walk independently toward open daylight on distinct adjacent paths. At the cave mouth in the middle distance Jujia and Jose stand separately to the side, leaving the way unobstructed. Four people total, complete small flat silhouettes. No physical contact, delivery gesture, romantic pairing or trophy composition. Snakes absent after this cut, do not depict violence.",
+          "entity_ids": [
+            "alijuna_azul",
+            "alijuna_arena",
+            "jujia",
+            "jose",
+            "dominio",
+            "territorio"
+          ],
+          "event_ids": [
+            "alianza"
+          ],
+          "angle": "eye_level_wide",
+          "depth_planes": [
+            "paper path splitting around stone",
+            "two women moving into daylight",
+            "Jose and Jujia apart by cave",
+            "low rock slope"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "time_seconds": [
+        70,
+        84
+      ],
+      "voice_over": "La soga quedó cortada. Solo entre corredores subterráneos, José Juan no encontró la salida. Jujía regresó, lo liberó y le mostró el camino de vuelta.",
+      "word_count": 25,
+      "voice_provenance": "Public paragraphs5–6; Chaves XV p330. Free standing figure plus cut rope is nonviolent ellipsis of being left tied.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "abandono"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "La soga no llega",
+          "time_seconds": [
+            70,
+            77
+          ],
+          "visual": "Very wide downward view into a branching underground corridor, not cutaway diagram. ONE adult Jose stands freely on the lower path looking upward at a broken hanging beige paper rope whose end stops far above his reach. A short loose coil lies beside his feet, never tied to body. Immense distances between foreground ledge, dangling end, tiny man and branching chambers. No other people, corpses, weapons or bondage. Narrow high daylight opening; folds retain crisp paper edges throughout.",
+          "entity_ids": [
+            "jose",
+            "soga",
+            "dominio"
+          ],
+          "event_ids": [
+            "abandono"
+          ],
+          "angle": "high_oblique",
+          "depth_planes": [
+            "near cut-paper ledge",
+            "broken rope end suspended",
+            "Jose and loose coil far below",
+            "branching deep chambers"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b6b",
+          "title": "Jujía muestra el regreso",
+          "time_seconds": [
+            77,
+            84
+          ],
+          "visual": "Wide inside-to-outside view of dark underground passage. Jujia leads Jose toward a distant low warm opening, both small full-body side profiles. In front of Jujia a single BROAD ochre layer of the ground unrolls continuously from under her next step through folded slate strata to the daylight gap, like a geological path remembering its direction. Their feet remain supported; no floating bridge, stairway, spell gesture or rays. No rope or extra people.",
+          "entity_ids": [
+            "jujia",
+            "jose",
+            "dominio"
+          ],
+          "event_ids": [
+            "abandono"
+          ],
+          "angle": "high_oblique",
+          "depth_planes": [
+            "dark foreground ground sheet",
+            "two walking silhouettes",
+            "connected unrolled ochre path",
+            "low warm daylight gap"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "A lost subterranean path",
+            "impossible_behavior": "One connected earth sheet unfolds all the way toward an exit.",
+            "narrative_effect": "A former adversary makes return possible.",
+            "agency": "Agencia correspondiente al relato; no poderes ni símbolos tradicionales nuevos. La forma de papel es traducción editorial.",
+            "physical_translation": "dark foreground ground sheet; two walking silhouettes; connected unrolled ochre path; low warm daylight gap",
+            "visible_test": "The same broad ochre layer joins the leading foot to the opening without floating or breaking.",
+            "event_ids": [
+              "abandono"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "time_seconds": [
+        84,
+        98
+      ],
+      "voice_over": "José Juan alcanzó a los traidores y los mató. Después les devolvió la vida. El daño no desapareció: la restitución detuvo una nueva persecución.",
+      "word_count": 24,
+      "voice_provenance": "Public paragraph6 and editorial reflection; Chaves XV p330. Killing wholly off image; resurrection shown by nonviolent material metaphor.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "restitucion"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "El trabajo interrumpido",
+          "time_seconds": [
+            84,
+            91
+          ],
+          "visual": "Very wide EMPTY roza at dusk, no people at all. Two agricultural hoes lie at rest on opposite sides of an unfinished broad soil-paper furrow. Three unused thin-rim PAPER bowls by a distant cold hearth. A dwelling opening far away is empty. No blood, body, weapon damage, supernatural lighting or literal representation of killing; ordinary interruption and absence, every ground and object clearly cut paper. Quiet composition with enough landscape detail, not a blank title card.",
+          "entity_ids": [
+            "roza",
+            "herramientas",
+            "cocina",
+            "rancheria"
+          ],
+          "event_ids": [
+            "restitucion"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "resting hoe and broad soil sheet",
+            "unfinished furrows and second hoe",
+            "empty bowls and cold hearth",
+            "distant plain field shelter"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b7b",
+          "title": "Regresar no borra",
+          "time_seconds": [
+            91,
+            98
+          ],
+          "visual": "Wide dawn field composition. Exactly THREE upright living adult men: Jose in ivory shirt and sand trousers stands apart at left with hands down, tall cream-tunic worker and stockier rust-tunic worker stand separate at middle-right, all small complete profiles. One impossible material action: each worker's broad charcoal ground-shadow is visibly a thin PAPER silhouette with its upper edge peeling gently upward from the ground toward that worker's FEET, still connected at the feet, like life lifting out of absence. Their bodies remain intact fully clothed; no lying bodies, wounds, fragments, ghosts, extra silhouettes, halos, rays or celebration. A gap remains between Jose and the two men.",
+          "entity_ids": [
+            "jose",
+            "peon_claro",
+            "peon_oscuro",
+            "roza"
+          ],
+          "event_ids": [
+            "restitucion"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "slightly lifted attached paper shadows",
+            "two standing workers",
+            "Jose standing apart",
+            "clearing and dawn ridge"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Two people return to life",
+            "impossible_behavior": "Ground-shadow sheets begin to lift toward their restored living figures.",
+            "narrative_effect": "Restitution is visible without showing death or celebrating violence.",
+            "agency": "Agencia correspondiente al relato; no poderes ni símbolos tradicionales nuevos. La forma de papel es traducción editorial.",
+            "physical_translation": "slightly lifted attached paper shadows; two standing workers; Jose standing apart; clearing and dawn ridge",
+            "visible_test": "Three intact standing people; two connected partly raised shadow edges, clear distance from Jose.",
+            "event_ids": [
+              "restitucion"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "time_seconds": [
+        98,
+        112
+      ],
+      "voice_over": "Volvió donde Jujía. Faltaba una prueba: dominar un caballo difícil. José Juan sostuvo el lazo, esperó y logró montarlo. Esta vez pudo seguir adelante.",
+      "word_count": 24,
+      "voice_provenance": "Public paragraph7; Chaves XV pp330–331. No blows or force visible; don't import Kosina's speaking horse.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "caballo"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Antes de acercarse",
+          "time_seconds": [
+            98,
+            105
+          ],
+          "visual": "Very wide outdoor paper clearing beside low cave. Jose stands to the side of ONE dark chestnut horse, at safe visible distance, holding a plain beige paper rope low in a loose curve; horse stands alert four feet grounded, ears attentive, no rearing or struggle. Both entire and small, combined max25% canvas height. Full landscape has angular olive paper shrubs, broad ochre ground sheets and natural folded rock. No spectator Jujia, whip, weapon, saddle decoration or fantasy anatomy.",
+          "entity_ids": [
+            "jose",
+            "caballo",
+            "lazo",
+            "territorio",
+            "dominio"
+          ],
+          "event_ids": [
+            "caballo"
+          ],
+          "angle": "eye_level_wide",
+          "depth_planes": [
+            "foreground paper shrub",
+            "loose rope curve and Jose",
+            "horse with four legs",
+            "low cave slope"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b8b",
+          "title": "La prueba abre un paso",
+          "time_seconds": [
+            105,
+            112
+          ],
+          "visual": "Very wide view inside the beginning of a descending cave. Tiny Jose RIDES one ordinary chestnut horse calmly, both together max23% canvas height. The front hoof rests DIRECTLY on a continuous broad ochre ground layer that folds down in three connected strips, following the horse's path into a warm lower corridor. The path remains one supported geological route, not a floating magic carpet. Side-profile almost-flat horse and rider, four legs and plain slack rope bridle. No other people or animals, no combat, no sword, no wings. Every cliff and mane clearly PAPER.",
+          "entity_ids": [
+            "jose",
+            "caballo",
+            "lazo",
+            "dominio"
+          ],
+          "event_ids": [
+            "caballo"
+          ],
+          "angle": "eye_level_wide",
+          "depth_planes": [
+            "dark near cliff and cut edge",
+            "hoof touching connected ground fold",
+            "small rider and horse",
+            "deep warm descending corridor"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Horse test and passage",
+            "impossible_behavior": "An earth stratum folds downward beneath the advancing hoof.",
+            "narrative_effect": "The completed test allows access, not a conquest prize.",
+            "agency": "Agencia correspondiente al relato; no poderes ni símbolos tradicionales nuevos. La forma de papel es traducción editorial.",
+            "physical_translation": "dark near cliff and cut edge; hoof touching connected ground fold; small rider and horse; deep warm descending corridor",
+            "visible_test": "Hoof and three connected path folds meet physically, carrying the route into depth.",
+            "event_ids": [
+              "caballo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "time_seconds": [
+        112,
+        126
+      ],
+      "voice_over": "Entró al dominio subterráneo sin ser prisionero. Allí permaneció junto a la hija de Jujía y los animales. No volvió a buscar al cóndor.",
+      "word_count": 24,
+      "voice_provenance": "Public paragraphs8–9; published editorial expansion for final daughter relation, distinct from Chaves's Jujia ending. No marriage staged.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "residencia"
+      ],
+      "keyframes": [
+        {
+          "id": "b9a",
+          "title": "Habitar sin cautiverio",
+          "time_seconds": [
+            112,
+            119
+          ],
+          "visual": "Very wide interior natural chamber with TWO separate walkable routes. Jose stands on one path at mid distance and adult daughter of Jujia walks on the other further away, looking toward her own route, no eye contact or touching. One chestnut horse rests nearby Jose. All small complete cut-paper silhouettes, daughter sand dress with charcoal/clay diagonal sash and long loose hair. Huge layered charcoal and ochre cave surrounds viewer, multiple open passages, warm reflected daylight from high fissure. No Jujia, mother, throne, wedding, closed door or trophy staging.",
+          "entity_ids": [
+            "jose",
+            "hija",
+            "caballo",
+            "dominio"
+          ],
+          "event_ids": [
+            "residencia"
+          ],
+          "angle": "high_oblique",
+          "depth_planes": [
+            "dark foreground strata",
+            "Jose beside calm horse",
+            "daughter on separate route",
+            "several open chamber passages"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b8b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b9b",
+          "title": "El dominio sigue abierto",
+          "time_seconds": [
+            119,
+            126
+          ],
+          "visual": "Very wide environmental view deeper inside connected paper caves: small chestnut horse in side profile resting on a far ochre ledge, no human figures. Ground layers descend into a large natural passage and return toward another distant warm opening. Broad paper sheets, spaced depth planes and cast shadows visible throughout. Ordinary lived environment after the crossing; no additional animals, fairy lights, minerals, palace, furniture or new impossible spectacle.",
+          "entity_ids": [
+            "caballo",
+            "dominio"
+          ],
+          "event_ids": [
+            "residencia"
+          ],
+          "angle": "high_oblique",
+          "depth_planes": [
+            "close dark folded sheet",
+            "broad descending path",
+            "small horse on ledge",
+            "far warm open corridor"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b9a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "time_seconds": [
+        126,
+        140
+      ],
+      "voice_over": "Su madre conservó una vida propia en la ranchería. Todo había empezado al observar una puerta: un hijo encontró cómo abrirla, y los dos pudieron salir.",
+      "word_count": 26,
+      "voice_provenance": "Public paragraphs9–11; independent maternal ending is published editorial emphasis. No extra reunion.",
+      "timing_status": "estimated_pending_recorded_voice",
+      "delivery": "Voz externa sobria con silencios entre ciclos; sin sincronía labial.",
+      "event_ids": [
+        "madre_libre"
+      ],
+      "keyframes": [
+        {
+          "id": "b10a",
+          "title": "La vida de ella",
+          "time_seconds": [
+            126,
+            133
+          ],
+          "visual": "Wide morning domestic view of the same ranchería. ONLY mother, terracotta manta over ivory underlayer and single black braid, sits completely visible in the shade mending a plain ivory garment patch. Her home's wide open doorway leads straight onto the dryland path; the roof and every post are clearly folded PAPER not real thatch/wood. Ordinary quiet agency, no sad waiting gaze, son, baby, condor, ritual objects or loom. Scene rich in paper overlaps, shade bands, small sage shrubs and distant ridges.",
+          "entity_ids": [
+            "madre",
+            "rancheria",
+            "costura",
+            "territorio"
+          ],
+          "event_ids": [
+            "madre_libre"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "broad shade-roof cut edge",
+            "mother sewing with small patch",
+            "open door and traversable path",
+            "daylit dryland"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b9b",
+          "transition_to_next": "Corte por gesto, espacio o consecuencia; no interpolar a/b como un mismo clip.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b10b",
+          "title": "Salir por voluntad propia",
+          "time_seconds": [
+            133,
+            140
+          ],
+          "visual": "Very wide exterior of the same modest paper home at clear morning. Mother walks freely away from its OPEN doorway onto a broad layered ochre path, full body small in middle distance. The entire path remains ordinary paper sheets stretching into open dryland with delicate paper shrubs and distant ridges; no cave, bird, son, new magical prop or ceremonial symbols. Match the terracotta manta, ivory hem and one black braid. Ending emphasizes her own movement and unblocked horizon, not lonely abandonment. Almost-flat profile, cut edges and air-gap shadows still unmistakable.",
+          "entity_ids": [
+            "madre",
+            "rancheria",
+            "territorio"
+          ],
+          "event_ids": [
+            "madre_libre"
+          ],
+          "angle": "low_oblique",
+          "depth_planes": [
+            "foreground paper sheet edge",
+            "mother walking freely",
+            "open domestic doorway",
+            "unblocked horizon"
+          ],
+          "shot_scale": "wide_environment_full_figures_small",
+          "continuity_from": "b10a",
+          "transition_to_next": "Corte al siguiente episodio, permitiendo salto temporal explícito de la VO.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Avance muy leve o desplazamiento lateral corto para revelar profundidad; definir ejecución después de medir voz.",
+            "allowed": "Un gesto y movimiento ambiental mínimo en fase posterior, no se genera ahora.",
+            "forbidden": "No morphing, rostro volumétrico, cambio de vestuario, nuevos seres, violencia o pérdida de papel.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ],
+  "permissions": {
+    "triptych_changes": false,
+    "image_calls_this_stage": true,
+    "animation": false,
+    "audio": false,
+    "publication": false
+  },
+  "handoff": "Probar comienzo, centro y final con b2a, b7b y b8b. Comparar todos con contrato V2. Documentar cada generación y corregir sólo la toma afectada sin abreviar material."
+}

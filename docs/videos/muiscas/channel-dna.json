@@ -1,102 +1,297 @@
 {
-  "pueblo": "muiscas",
-  "actualizado": "2026-08-21",
-  "estilo": {
-    "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
-    "imagen_modelo": "gpt-image-2",
-    "quality": "high",
-    "fuente_prompt": "scripts/videos/specs/*.mjs (hereda src/lib/image-generation.js)",
-    "paleta": "verde frio de paramo, azul gris de laguna, ocres minerales, crema de algodon crudo, blanco de niebla"
+ "pueblo": "muiscas",
+ "actualizado": "2026-09-16",
+ "_como_leer": {
+  "vigente": "MODELO_ESTANDAR_V4, video, voz.VOZ_OFICIAL_CANAL, voz_v4, musica_v4, titulo_v4, subtitulos_v4, imagen_v5, cierre_canal, formato, alcance, y los bloques video_3b/video_4/video_5/video_6 (carril v4 por MCP, desde 2026-09-09).",
+  "historico": "video_historico, video_1, video_2, video_3, costos_reales_bachue, mvps_pendientes, ensamblaje y el resto del bloque voz describen el carril de agosto (grok + voces de casting) y NO se ejecutan hoy. Se conservan como historia; cada uno lleva su aviso dentro.",
+  "la_verdad_operativa": "docs/videos/MANUAL-DE-PRODUCCION.md. Este archivo es el ADN del canal, no el runbook: si los dos discrepan, manda el manual.",
+  "corregido": "2026-09-16 en dee51627 (.video, .voz.VOZ_OFICIAL_CANAL, .musica.cama_actual) y en la pasada de auditoría posterior (.formato, resto de .voz, .sfx, .musica, .musica_v4, estados de video_5 y video_6)."
+ },
+ "estilo": {
+  "nombre": "Maqueta de papel del sitio (studioPaperMaquette)",
+  "imagen_modelo": "gpt-image-2",
+  "quality": "high",
+  "fuente_prompt": "scripts/videos/specs/*.mjs (hereda src/lib/image-generation.js)",
+  "paleta": "verde frio de paramo, azul gris de laguna, ocres minerales, crema de algodon crudo, blanco de niebla"
+ },
+ "formato": {
+  "aspecto": "9:16",
+  "clips_nativos": "1080x1920 @ 24 fps — lo que devuelven seedance_2_5, kling3_0 y gemini_omni_flash_1_1 por el MCP (verificado con ffprobe 2026-09-16: las 18 tomas de bachue/clips-seleccion de ESTE worktree y las 17 de el-dorado/clips-v1, que NO están aquí sino en el worktree elegant-matsumoto-11a141). Los 720x1280 de grok son SÓLO las tandas de agosto: para mezclarlas con material nuevo hay que reescalarlas a 1080x1920 con lanczos, como se hizo en Bachué v7",
+  "entrega": "1080x1920 nativo; el upscale lanczos en el ensamblaje local hace falta únicamente para el material viejo de 720p"
+ },
+ "voz": {
+  "_aviso": "HISTÓRICO salvo `proveedor`, `api_key`, `prosodia` y `VOZ_OFICIAL_CANAL`. Todo lo demás de este bloque es el casting de agosto y quedó SUPERADO el 2026-09-09 por la voz clonada del usuario. Los parámetros vivos están en `voz_v4` y en MANUAL-DE-PRODUCCION.md §4. NO usar ninguna de las voces de `voces_colombianas`: sus ids ya no existen en la cuenta.",
+  "proveedor": "ElevenLabs eleven_multilingual_v2 (scripts/videos/generate-voice-el.mjs); MIGRADO desde OpenAI ash 2026-08-20",
+  "api_key": "ELEVENLABS_API_KEY en .env del repo principal (gitignored). ⚠ CONTRADICCIÓN SIN RESOLVER sobre el plan: aquí y en pipeline-v3-profesional.md dice «Creator 300k chars/mes», y PRODUCCION-END-TO-END.md dice «Pro 610k/mes» (sin número de línea a propósito: los dos documentos se están reescribiendo y las líneas se mueven). Nadie ha consultado la cuenta. Con cualquiera de los dos un video entero cuesta <1.000 caracteres, así que la cuota no es el cuello de botella",
+  "voces_colombianas_MUERTAS": {
+   "_aviso": "Ninguna sirve hoy: los ids de voz son por cuenta y estos tres se perdieron al cambiar de cuenta/plan. Se conservan para poder leer los guiones y planes de agosto.",
+   "amaf_femenina": "4kaLaTbziI05Jwh8zWad (melodica, registros fogon y mistico) — id muerto",
+   "el_faraon_masculina": "W1hAcdh0RNsPYUA7fkJh (profunda, registro epico) — id muerto",
+   "alejandro": "2HsKyIMt2fxFwsry7Nd6 — id MUERTO (ver voz_v4.nota). Era la voz de Bochica en agosto: eleven_flash_v2_5 y, desde 2026-08-21, eleven_v3. El usuario rechazó el registro de eleven_v3 («no se parece a mi voz»)"
   },
-  "formato": {
-    "aspecto": "9:16",
-    "clips_nativos": "720x1280 @ 24fps (grok)",
-    "entrega": "1080x1920 (upscale lanczos en ensamblaje local)"
+  "prosodia": "previous_text/next_text entre tomas para narracion continua",
+  "wps_real": "2,1-3,5 palabras/s con la voz oficial a speed 1.05 (medido 2026-09-16 sobre las 9 tomas de bachue/voces-v4 contra guion-bachue-v4.json: 2,08-3,17 por duración de archivo, 2,08-3,53 descontando silencios de cabeza y cola). El viejo «2,4-2,6» es de la voz de agosto y estrecha de más la ventana. La doctrina de longitud vive en el guion, no aquí: 17-19 palabras por línea",
+  "registros_guion_HISTORICO": "Veredicto de agosto: «GANADOR DEFINITIVO: fogon-visual-coloquial con voz E (Amaf)». SUPERADO el 2026-09-09 por la voz clonada del usuario (el registro de fogón se conserva; la voz E no). Ver plantillas 3a y direccion-cinematografica.md",
+  "settings_HISTORICO": "Los tres registros de agosto, para las voces muertas: fogon st.5 sty.25 sp1.0 · epico st.55 sty.3 sp.98 · mistico st.35 sty.5 sp.92. NO son los del canal: los vigentes están en voz_v4.VOZ_OFICIAL_CANAL (st .35 / sim .9 / style .3 / speaker_boost / speed 1.05)",
+  "nota_modelos_HISTORICO": "Amaf/Faraon -> eleven_multilingual_v2; Alejandro -> eleven_flash_v2_5 o eleven_v3. Ya no aplica: hoy hay una sola voz y un solo modelo",
+  "VOZ_OFICIAL_CANAL": "alejandro_narracion 9EHAKExD4lT2G6hPG74L con eleven_multilingual_v2 — la MISMA de las narraciones del sitio (DEFAULT_VOICE de src/lib/narration.js). Sustituye desde 2026-09-09 a la entrada anterior (Alejandro 2HsKyIMt… en eleven_v3), cuyos ids ya no existen."
+ },
+ "sfx": {
+  "_aviso": "NO se usan en el carril vigente: desde 2026-09-09 el ambiente viene dentro de los lechos y NINGÚN plan vivo lleva campos `sfx` (verificado 2026-09-16 en los planes de bachue v4…v7, bochica v5/v6, la-aparicion v1/v6, el-dorado v1 y huitaca v1: cero bloques con `sfx`). Los planes con SFX son SÓLO los de agosto —doce en total, contados 2026-09-16: bachue plan.json, plan-flash y plan-mvp-a…f y plan-v3.json (12 bloques con sfx cada uno), bochica plan.json y plan-flash (16) y bochica plan-v4.json (20).",
+  "modelo": "mirelo_text_to_audio (2,5 cr por 10 s)",
+  "uso": "cama de ambiente por bloque via plan.json {sfx, sfx_vol}; loop+fades los hace assemble-video.mjs. ⚠ El «ducking bajo la voz» (sidechaincompress) SÓLO existe en `mix: \"canal\"`; en `mix: \"narracion\"` —el de todos los planes vivos— no hay sidechain y el SFX entra a su `sfx_vol` crudo contra una voz normalizada a −16 LUFS, así que el 0,45 de agosto queda gritando. Si algún día vuelven los SFX en `narracion`, hay que recalibrar el volumen por oído (assemble-video.mjs:312-318 y 352-356)",
+  "biblioteca": "content/videos/muiscas/audio/sfx/ — CUATRO archivos de 10,0078 s cada uno (verificado con ffprobe 2026-09-16): sfx-laguna.mp3, sfx-fogon.mp3, sfx-cascada.mp3, sfx-lluvia.mp3. Reusables en todos los videos"
+ },
+ "musica": {
+  "obligatoria": true,
+  "proveedor": "Eleven Music (POST /v1/music, music_length_ms); MIGRADO desde sonilo 2026-08-20",
+  "cama_actual": "los LECHOS de las narraciones del sitio (narration_beds), encadenados con scripts/videos/build-lecho.mjs a la duración exacta del video; se eligen por ACTO, nunca por el léxico automático en guiones cortos",
+  "cama_anterior_sonilo": "content/videos/muiscas/audio/musica-cama.m4a (archivada)",
+  "mood": "dark-enchanted ambient: misteriosa, calma, cuerdas sostenidas suaves, arpa lejana, quena andina lejana y escasa, sin percusion, sin voces",
+  "reuso": "la cama se REUSA entre videos muiscas; regenerar solo si el mito pide otro mood",
+  "volumen_en_mezcla_HISTORICO": "0.09 — es el `music_vol` del carril viejo y el default de assemble-video.mjs:62, que SÓLO se aplica en `mix: \"canal\"`. En `mix: \"narracion\"` (todos los planes vivos) `music_vol` se IGNORA: el lecho se mide con ebur128 y se lleva a `music_lufs` −34, 18 dB por debajo de la voz (assemble-video.mjs:330-334). Ver musica_v4.mezcla"
+ },
+ "ensamblaje": {
+  "_aviso": "Descripción del carril de agosto. El script sigue siendo el mismo, pero hoy: 5 s uniformes por bloque (no 5-6 s), `mix: \"narracion\"`, lechos en vez de cama, SIN subtítulos quemados (ver subtitulos_v4) y título Asimovian por CoreText (ver titulo_v4). El montaje vigente está en MANUAL-DE-PRODUCCION.md §5.",
+  "script": "scripts/videos/assemble-video.mjs v3 (local, gratis)",
+  "estructura": "2 clips de 5-6s por bloque narrativo (grok cobra lineal: mas cortes, mismo costo); duraciones sugeridas por validate-plan.mjs --suggest; cola still 3,5s Ken Burns con solo ambiente",
+  "montaje": "corte seco DENTRO del bloque, crossfade 0,4s ENTRE bloques (auto-recortado al aire de la narracion; sin aire = corte seco), fundidos globales 0,6/0,8s, titulo de canal en bloque 1 (title/title_sub), musica resuelve con fade 4s en su final natural",
+  "subtitulos": "PNG por cue con sharp/Pango + overlay enable (ffmpeg local sin libass/drawtext); sin cues huerfanos; .srt aparte",
+  "herramientas_previas": "lint-spec.mjs (anti-nsfw, SIEMPRE antes de generar) y validate-plan.mjs (archivos + ventanas de habla)",
+  "playbook_prompts": "docs/videos/plantillas-prompts.md",
+  "entregas": "master CRF18 + social 1080p 8Mbps faststart + preview 720p <30MB"
+ },
+ "assets": {
+  "biblia_dir": "content/videos/muiscas/biblia/",
+  "videos_dir": "content/videos/muiscas/videos/bachue/",
+  "media_map": "content/videos/muiscas/videos/bachue/keyframes/media-map.json"
+ },
+ "costos_reales_bachue": {
+  "total_higgsfield_cr": 160.34,
+  "desglose": "piloto 27,4 (voces seed_audio descartadas + clips grok/kling de prueba) + produccion ~133 (18 clips grok 98s + musica 95s; nsfw/seedance no cobraron neto)",
+  "openai_usd_aprox": "~6 (31 imagenes gpt-image-2 high + ~21 tomas TTS)",
+  "balance": "1010 -> 849,66 (bachue) -> 673,51 (tras bake-off 32,5 + bochica 143,65)"
+ },
+ "video_1": {
+  "_aviso": "HISTÓRICO (agosto, carril grok). El máster vigente de Bachué es el de video_5.master_vigente. Los archivos de este bloque viven en el worktree myth-mobile-design-c8ea4f, no aquí.",
+  "slug": "bachue",
+  "final": "content/videos/muiscas/videos/bachue/bachue-final.mp4 (v3: guion fogon-visual-coloquial + Alejandro v3 + musica andina, 1:39; anteriores: bachue-v2-ash, bachue-v1)",
+  "social": "content/videos/muiscas/videos/bachue/bachue-final-social.mp4",
+  "srt": "content/videos/muiscas/videos/bachue/bachue-final.srt",
+  "plan": "content/videos/muiscas/videos/bachue/historico/plan.json",
+  "produccion": "docs/videos/muiscas/bachue-produccion.json",
+  "voz": "Alejandro (eleven_v3)"
+ },
+ "mvps_pendientes": {
+  "resuelto": "E gano; mvps a-f archivados en videos/bachue/"
+ },
+ "doctrina_direccion": "docs/videos/direccion-cinematografica.md (v1 2026-08-20: escalas alternadas, guion de luz por acto, objeto ancla+bookend, cita directa unica, checklist 8 puntos)",
+ "video_2": {
+  "_aviso": "HISTÓRICO (agosto, carril grok). El máster vigente de este relato es el de video_4 (el-tequendama-final-v6-con-cierre.mp4). Los archivos de este bloque viven en el worktree myth-mobile-design-c8ea4f.",
+  "slug": "bochica",
+  "final": "content/videos/muiscas/videos/bochica/bochica-final.mp4 (1:31)",
+  "plan": "content/videos/muiscas/videos/bochica/historico/plan.json",
+  "produccion": "docs/videos/muiscas/bochica-produccion.json",
+  "costo_higgsfield_cr": 143.65,
+  "nota": "primera corrida perfecta: 18/18 clips sin rechazos nsfw gracias al checklist; 5s uniformes por bloque",
+  "voz": "Alejandro (eleven_v3)"
+ },
+ "alcance": "Los 41 mitos muiscas deben quedar COMPLETOS con todo (fichas, tríptico, narración del sitio y video) — usuario 2026-09-09. Estado real: npm run mitos:estado -- --comunidad muiscas",
+ "video_v4": {
+  "modelo": "kling3_0 por el MCP de Higgsfield — mode pro (1080p), sound off, 5 s por keyframe, 9:16, un start_image por clip",
+  "costo": "8,75 cr por clip (get_cost verificado 2026-09-09; std = 7,5). 18 clips = 157,5 cr por video. UN intento por keyframe: piloto de 1 clip antes de la tanda",
+  "declined_preset_id": "24bae836-2c4a-48e0-89b6-49fcc0b21612 (IN THE DARK: sin declinarlo el MCP no encola; 3D RENDER = 5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82)",
+  "subida": "kf-9x16/ recortes 9:16 EXACTOS (1512x2688 q95) → media_upload (uploads[] en el orden de files[], sin filename) → PUT presignado → media_confirm; media ids en kf-9x16/higgsfield-media.json (expiran)",
+  "salida": "h264 1080x1920 24 fps 5,04 s ~13 MB por clip",
+  "prompts": "movimiento-vN.json: prefijo de estilo + cuerpo (1 acción, 1-2 secundarias, UNA cámara) + sufijo de invariantes, byte-idénticos; ~700-820 caracteres; sin @Image (eso es de la web)",
+  "runbook": "docs/videos/pipeline-v4-mcp.md",
+  "supersede": "video.modelo (grok) y video_3 web-unlimited de v3 quedan como historia/alternativa; no mezclar modelos en un mismo video"
+ },
+ "voz_v4": {
+  "VOZ_OFICIAL_CANAL": "alejandro_narracion 9EHAKExD4lT2G6hPG74L (clon profesional de la voz del usuario, cuenta actual) en eleven_multilingual_v2 st .35 / sim .9 / style .3 / speaker_boost / speed 1.05 = DEFAULT_VOICE de src/lib/narration.js — la MISMA voz de las narraciones del sitio (usuario 2026-09-09)",
+  "formato": "generate-voice-el.mjs --format wav (pcm_48000 → WAV máster)",
+  "ritmo_medido": "2,4-3,6 palabras/s con estas líneas cortas (10-15 palabras → 3,4-5,8 s de habla)",
+  "nota": "bNziytBsHtCSsgcPplG9 y 2HsKyIMt2fxFwsry7Nd6 ya no existen (ids por cuenta)"
+ },
+ "musica_v4": {
+  "fuente": "los LECHOS de las narraciones del sitio (tabla narration_beds, 40 piezas desde la cuarta tanda del 2026-09-12 —no las 24 que decía esta línea—, verificado en el commit b784d3c7 («Cuarta tanda de lechos»), cuyo catálogo va del slug 07 al 40 y cuyo mensaje declara 32 lechos antes de la tanda. ⚠ Lo que NO está re-verificado es el recuento de filas vivas de la tabla `narration_beds`: exige POSTGRES_URL. En ESTE worktree scripts/mitos/generar-lechos.mjs sólo llega al slug 32: la cuarta tanda 33-40 vive en el commit b784d3c7 de claude/elevenlabs-myth-narration-8de8a2, así que `--nuevos N` desde aquí no ve el catálogo completo), a 30 s y -24 LUFS en Blob, encadenados con scripts/videos/build-lecho.mjs como en generar-narracion.mjs (tramos iguales, acrossfade 4 s, fades 2/3 s)",
+  "eleccion": "por ACTO y a mano con --lecho (el léxico automático se dispara con una palabra en guiones de 110 palabras); lecho-vN.wav.json deja constancia",
+  "mezcla": "plan mix \"narracion\": voz -16 LUFS, lecho -34 LUFS (18 dB abajo), sin ducking, limitador -1,5 dBTP",
+  "sfx": "no se usan aparte en v4 salvo que el mito lo pida; el ambiente viene dentro de los lechos"
+ },
+ "titulo_v4": {
+  "fuente": "Asimovian (--font-display del sitio: todos los títulos). TTF OFL en content/videos/fonts/Asimovian-Regular.ttf",
+  "render": "scripts/videos/render-text.swift (CoreText, carga la fuente POR ARCHIVO; se compila al vuelo a scripts/videos/.bin/). El ensamblador compara la familia devuelta y aborta si no es la pedida",
+  "trampa": "el libvips de sharp en macOS sólo trae el backend CoreText de Pango: fontfile, FONTCONFIG_FILE y PANGOCAIRO_BACKEND=fontconfig se ignoran y toda fuente no instalada cae a Helvetica EN SILENCIO. Pasó con el woff2 de Bochica v4 y con el TTF del primer máster de la-aparicion-del-hombre (el usuario lo notó: 'se ve muy diferente la fuente'). Prueba de fuego: renderizar el mismo texto en Helvetica y comparar",
+  "placa": "como el hero del sitio: kicker 'MITOS DE COLOMBIA · MUISCAS' (HelveticaNeue-Medium 28 px, tracking 0.2em, #E4DCC8) arriba y el título en caja de frase (Asimovian 104 px ≈ 6.4rem del h1, tracking −0.03em, leading 0.96, #F5F0E6); sombra suave; title_y 280; fade 0,8 s; 0,8-5,6 s del bloque 1. Sin filete dorado"
+ },
+ "video_3": {
+  "slug": "la-aparicion-del-hombre",
+  "titulo_video": "La aparición del hombre",
+  "titulo_canon": "La aparición de los primeros seres humanos (DB id 255)",
+  "estado": "versión Kling 3.0 archivada como comparación (175 cr); no es el máster oficial",
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-la-aparicion-del-hombre-v1.json",
+  "plan": "content/videos/muiscas/videos/la-aparicion-del-hombre/plan-v1.json",
+  "movimiento": "content/videos/muiscas/videos/la-aparicion-del-hombre/movimiento-v1.json",
+  "lecho": "24-piedra-que-recuerda → 18-manos-de-barro → 04-viento-de-paramo",
+  "cierre": "placa still 4 s con la huella del tríptico (recorte 9:16)",
+  "master_con_cierre": "la-aparicion-del-hombre-final-v6-con-cierre.mp4 (plan-v6.json + lecho-v6.wav)"
+ },
+ "video_3b": {
+  "slug": "la-aparicion-del-hombre",
+  "version": "v1-seedance",
+  "estado": "✅ ENTREGADO Y APROBADO 2026-09-11 — máster oficial: content/videos/muiscas/videos/la-aparicion-del-hombre/la-aparicion-del-hombre-final-v1-seedance.mp4 (94 s, sin subtítulos, título Asimovian por CoreText). 855 cr.",
+  "modelo": "seedance_2_5 por MCP: mode omni_reference · 1080p · generate_audio false · bitrate_mode high (mismo precio) · 5 s · 9:16 · declined_preset_id IN THE DARK",
+  "costo": "45 cr por clip (get_cost) → 810 cr por video; el usuario recargó créditos para esto (saldo 4.044,5 antes de empezar)",
+  "concurrencia": "tope ~12 en vuelo: el 13.º request devuelve 429 rate_limit_reached (Kling aceptó 17)",
+  "salida": "HEVC 10-bit 1080x1920 24 fps ~25 Mb/s, 5,04 s; render ~6,5 min por clip",
+  "prompts": "movimiento-v1-seedance.json (doctrina-movimiento-v2, 8 párrafos, @Image 1)",
+  "plan": "plan-v1-seedance.json → clips-v1-seedance/",
+  "nota": "versión paralela a la de Kling para comparar; mismas voces, lecho, título y cola",
+  "leccion": "Seedance es multi-shot por diseño: un endpoint de cámara ambicioso ('ending with the hands centered') se vuelve un CORTE a primer plano en el último segundo. Escribir 'ONE continuous take, no cuts, no close-up inserts'. Movimiento más amplio y push-ins más decididos que Kling (c06, c11 terminan en primer plano); c09 y c17 (los que Kling falló) salieron bien a la primera."
+ },
+ "subtitulos_v4": "NO se queman (usuario 2026-09-09: 'no quiero subtítulos'): burn_subtitles false y write_srt false en los planes; los campos subtitle se conservan por si vuelven",
+ "MODELO_ESTANDAR_V4": "Seedance 2.5 por MCP (usuario, 2026-09-09: 'vamos con seedance como estándar'): seedance_2_5 · mode omni_reference · resolution 1080p · generate_audio false · bitrate_mode high · 5 s · 9:16 · declined_preset_id IN THE DARK · 45 cr/clip (≈855 cr por video de 18 clips + 1 regen). Prompts en formato doctrina v2 (8 párrafos, @Image 1, 'ONE continuous take'). Tope 12 en vuelo. Kling 3.0 pro (8,75 cr/clip) queda como alternativa barata, no como estándar. RATIFICADO 2026-09-12 tras el bake-off contra gemini_omni_flash_1_1 en Bachué: Seedance 18/18 a la primera contra 13/18 de Gemini, que además deriva de plano. Tope real ~10 en vuelo (no 12). DEFAULT DEL CANAL ratificado por el usuario el 2026-09-16 («por ahora vamos a dejar que el modelo de video definido como default es seedance 2.5 pro 1080»): no es un cambio de modelo, es el cierre de la duda entre modelos. Los siete campos, escritos una sola vez, viven en .video.parametros; el relato de la decisión, en .video.modelo; los defaults del modelo que no se pueden omitir, en .video.parametros_nota_defaults.",
+ "video_4": {
+  "slug": "el-tequendama",
+  "titulo_video": "El salto del Tequendama",
+  "titulo_canon": "El castigo de Chibchachum y Bochica",
+  "estado": "ENTREGADO 2026-09-11 (preview enviado; el usuario siguió al video siguiente sin pedir cambios)",
+  "master": "content/videos/muiscas/videos/bochica/el-tequendama-final-v5.mp4 (99 s, 19 clips + cola still)",
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-bochica-v5.json (texto v4 aprobado 2026-08-31, voz actual)",
+  "plan": "content/videos/muiscas/videos/bochica/plan-v5.json",
+  "movimiento": "content/videos/muiscas/videos/bochica/movimiento-v5-seedance.json (derivado del v4 auditado + candado de toma continua)",
+  "lecho": "14-tormenta-en-la-sabana → 02-tambor-ceremonial → 11-rio-que-baja (los mismos tres de la narración de el-tequendama en la web: identidad sonora entre web y video)",
+  "costo_cr": 855,
+  "resultado": "19/19 clips a la primera, CERO regeneraciones (vs 17/18 del video 1). El candado 'ONE continuous take, no cuts, no close-up inserts' aplicado desde el primer envío eliminó el defecto que costó una regeneración en el video 1.",
+  "aprendizajes": [
+   "Los prompts del v4, auditados en agosto por redactor+auditor contra la doctrina de movimiento v2, siguen siendo la mejor materia prima: derivarlos cuesta minutos y rinde 19/19.",
+   "Guion de 17-19 palabras por línea (doctrina) → 67 s de habla en 99 s = 68 % del video, contra el 44 % del video 1 con líneas de 10-15. El plan pasó de 8 avisos de aire muerto a 2.",
+   "Preset nuevo encontrado: 'DROWN IN MUSIC' f1821f84-945b-4cd1-9085-1f479db0028e (además de IN THE DARK y 3D RENDER). El recomendador varía por escena: hay que declinar el id EXACTO que devuelva cada request.",
+   "El tope real de concurrencia de Seedance es ~10, no 12: con 9-10 en vuelo el siguiente request da 429. Encolar de a 9 y reponer a medida que terminan.",
+   "REINCIDENCIA: volví a caer en el bucle zsh indexado desde 0 al subir keyframes (los 19 quedaron desplazados un puesto). Se detectó por el conteo de códigos HTTP y se re-subió con `for i in {1..N}` + `uploads[i-1]`. El patrón correcto está en el runbook §2.7."
+  ],
+  "master_con_cierre": "el-tequendama-final-v6-con-cierre.mp4 (plan-v6.json + lecho-v6.wav)"
+ },
+ "video_5": {
+  "slug": "bachue",
+  "titulo_video": "Bachué",
+  "titulo_canon": "Bachué, la madre de la humanidad",
+  "estado": "✅ ENTREGADO 2026-09-12 como bachue-final-v5-seedance.mp4 (94 s, 1080x1920 24 fps, −16,2 LUFS, pico −1,3 dBFS, sin subtítulos, título Asimovian verificado por CoreText) y luego con cierre como bachue-final-v6-con-cierre.mp4. **SUPERADO el 2026-09-16: el máster vigente es `bachue-final-v7-seleccion.mp4`** — ver `master_vigente` abajo",
+  "master_vigente": "content/videos/muiscas/videos/bachue/bachue-final-v7-seleccion.mp4 (102,46 s; md5 0c67606ef851ff2164790635a1b49241), montado el 2026-09-16 con la selección escena por escena del usuario: 9 tomas grok de agosto reescaladas de 720p + 5 Seedance + 4 Gemini. Plan plan-v7-seleccion.json, elecciones seleccion-usuario.json, tomas normalizadas en clips-seleccion/. Mismo audio que la v6 (voces-v4, lecho-v6.wav, mezcla narracion). Copias de entrega en ~/Downloads (máster, -social y -preview, 2026-09-16 10:13, byte-idénticas). ⚠ Entregado pero SIN veredicto escrito del usuario. Primer máster del canal que mezcla tandas de modelos distintos",
+  "ojo": "ESTE mito ya tenía un video v3 de 2026-08 (bachue-final.mp4, grok, voz eleven_v3). El v5 es el remake del carril v4 y lo reemplaza; el viejo queda como historia.",
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-bachue-v4.json (9 líneas de 18-19 palabras, doctrina de longitud del video 4)",
+  "plan": "content/videos/muiscas/videos/bachue/plan-v5-seedance.json → clips-v5-seedance/",
+  "movimiento": "content/videos/muiscas/videos/bachue/movimiento-v5-seedance.json (los 18 prompts escritos mirando cada keyframe, con el candado de toma continua)",
+  "lecho": "01-flauta-de-niebla → 09-telar-de-semillas → 06-laguna-de-iguaque",
+  "costo_cr": 810,
+  "resultado": "18/18 clips a la primera, CERO regeneraciones. scene_score máximo 0,085 (c10, un tilt-up, no un corte); el resto por debajo de 0,08.",
+  "version_descartada": "v4-gemini — ver video_5_gemini_descartado",
+  "master_con_cierre": "bachue-final-v6-con-cierre.mp4 (plan-v6.json + lecho-v6.wav)"
+ },
+ "video_5_gemini_descartado": {
+  "modelo": "gemini_omni_flash_1_1 por MCP — mode image-to-video · 1080p · start_image · 22,5 cr/clip · salida h264",
+  "por_que_se_probo": "el usuario pidió explícitamente probarlo en este mito (\"bachué pero usando gemini omni flash 1.1\")",
+  "hallazgo_de_catalogo": "gemini_omni y gemini_omni_flash_1_1 son modelos DISTINTOS. gemini_omni: 720p máximo y SIN start_image (por eso quedó descartado en agosto). gemini_omni_flash_1_1: 1080p y 4K, start_image vía mode image-to-video, la mitad del precio de Seedance. Yo miré el modelo equivocado dos veces y el usuario tuvo que corregirme dos veces: SIEMPRE listar el catálogo completo con models_explore antes de afirmar que un modelo no puede algo.",
+  "resultado": "13/18 a la primera, 5 regeneraciones → 517,5 cr. Rechazado por el usuario: \"no me gusta\".",
+  "defectos": [
+   "DERIVA DE PLANO (3 casos): cambia el escenario o la hora a mitad del clip — la noche estrellada se vuelve día gris, el fondo gris se vuelve lago azul con montañas nevadas, el lago se vuelve otro lago con pinos. Se mitiga con candado de plate fijo (\"background, light and hour identical to @Image 1 for all 5 seconds\") pero no desaparece.",
+   "SALIDA HORIZONTAL (1 caso): devolvió 1920x1080 pese a aspect_ratio 9:16. Lo atrapó el guardián de resolución de import-mcp-clips.mjs, no el ojo.",
+   "DESINTEGRACIÓN DE MATERIA (1 caso): la niebla se volvió bolas de algodón literales flotando sobre el agua (el mismo defecto que ya tenía kling3_0 en v3)."
+  ],
+  "veredicto": "Más barato (22,5 vs 45) pero no más barato en la práctica: 517,5 cr para un resultado rechazado contra 810 cr para uno aceptado a la primera. NO usar como estándar. Concurrencia ~10 como Seedance.",
+  "archivo": "clips-v4/ + movimiento-v4-gemini.json + plan-v4.json + bachue-final-v4-gemini.mp4 se conservan como comparación"
+ },
+ "costos_carril_v4": {
+  "video_3 la-aparicion-del-hombre": "175 cr (Kling, archivado) + 855 cr (Seedance, máster)",
+  "video_4 el-tequendama": "855 cr (Seedance, 19/19 a la primera)",
+  "video_5 bachue": "517,5 cr (Gemini, descartado) + 810 cr (Seedance, 18/18 a la primera)",
+  "balance_higgsfield": "32 cr tras El Dorado (2026-09-12). El siguiente mito necesita recarga.",
+  "cierre_de_canal": "135 cr, una sola vez para todos los videos",
+  "video_6 el-dorado": "765 cr (17 clips, sin repeticiones)"
+ },
+ "cierre_canal": {
+  "que": "Clip fijo de 8,42 s que va al FINAL DE TODOS los videos: una mano de papel sostiene un celular de papel con el SITIO REAL desplazándose, y luego una placa tipográfica sobre el páramo de papel con el wordmark y la dirección. Decisión del usuario 2026-09-12.",
+  "masters": {
+   "mudo": "content/videos/muiscas/cierre/cierre-canal-v1-mudo.mp4 — el que se pega a cada video",
+   "suelto": "content/videos/muiscas/cierre/cierre-canal-v1.mp4 — con voz y lecho, para ver y compartir",
+   "voz": "content/videos/muiscas/cierre/voces-v1/voz-cierre.wav — las dos líneas en un solo archivo"
   },
-  "video": {
-    "modelo": "grok_video (RATIFICADO 2026-08-20 tras bake-off con ledger: 1,5 cr/s es el PISO de la plataforma — kling3_0 y wan2_7 empatan el precio, seedance mini 2,5/s; ver proceso-mitos-a-video.md 5b)",
-    "alternativas_mismo_precio": {
-      "kling3_0": "std+sound_off, 7,5 cr/5s: el mas fiel en planos fijos, pero niebla se vuelve algodon literal",
-      "wan2_7": "720p, 7,5 cr/5s: push de camara fuerte, 30fps, trae audio ambiente nativo; util para 1-2 planos de vuelo"
-    },
-    "declined_preset_id": "5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82",
-    "nota_presets": "cada escena puede disparar un preset distinto (nocturna: 'IN THE DARK' 24bae836-2c4a-48e0-89b6-49fcc0b21612); declinar el id exacto que devuelva",
-    "descartados": {
-      "gemini_omni": "3 cr/s (2x grok), sin start_image",
-      "kling3_0": "2 cr/s; bueno, acepta start+end frame; segunda opcion valida",
-      "seedance_2_5": "6,5 cr/s (4,3x grok) y su filtro NSFW bloqueo 3/3 la escena madre-nino en el agua"
-    },
-    "moderacion": "el filtro reacciona a la IMAGEN de inicio con nino+agua/fuego/noche o multitudes con menores; solucion probada: re-escenificar (figuras de espaldas, lejanas o sin personas). Tope 12 jobs grok en vuelo (429 encima)."
+  "guion": "«Hay cientos de mitos como este esperándote. / Léelos completos en mitos de colombia punto com.» Sin números: el catálogo crece (hoy 596 relatos) y esto va en todos los videos.",
+  "como_se_pega": "UN bloque más en el plan del video: {type:\"motion\", clip:\"../../cierre/cierre-canal-v1-mudo.mp4\", duration:8.42, voice:\"../../cierre/voces-v1/voz-cierre.wav\"}. El lecho hay que construirlo con la duración total INCLUYENDO el cierre, así sigue sonando encima y no hay costura de audio.",
+  "reparto_de_trabajo": "El modelo hace SÓLO el mundo físico (mano, celular, papel, luz) con la CÁMARA CLAVADA; la pantalla la pone ffmpeg encima con el filtro perspective sobre el cuadrilátero medido del vidrio, y el scroll se anima sobre una captura de página completa. Ningún modelo de video dibuja una interfaz legible: en la primera tanda el relato decía «Lasos de Colombia region obseas fiemia».",
+  "el_movimiento_de_camara_va_en_post": "Ken Burns con zoompan DESPUÉS de componer la pantalla. Ojo: el filtro crop evalúa w/h una sola vez, así que un zoom escrito como crop=w=W/z(t) falla.",
+  "keyframes": "scripts/videos/specs/canal-cierre.mjs. La captura del sitio va como referencia de gpt-image-2 para que la luz y el color del vidrio sean los correctos.",
+  "regla_de_oro": "Lo que se vaya a componer encima, el keyframe lo deja DESPEJADO. El pulgar cruzando el vidrio obligó a recortarlo con un matte, y como se movía el matte unión dejaba un hueco con el texto inventado del modelo. Rehacer la imagen (centavos) sale más barato que pelear con un matte de un objeto en movimiento.",
+  "costo": "135 cr (3 clips Seedance de 45; uno descartado) + ~0,6 USD de gpt-image-2. Se produce UNA vez y se reusa.",
+  "rehacerlo": "Si cambia el diseño del sitio: node scripts/videos/capturar-sitio.mjs y reensamblar (los clips sirven, la pantalla es un compuesto). Si cambia la locución: editar el guion, regenerar voces y reensamblar. Si cambian los clips: hay que volver a medir el cuadrilátero.",
+  "runbook": "docs/videos/cierre-de-canal.md",
+  "pegado_a": "Los TRES videos entregados lo llevan (2026-09-12): bachue (plan-v6.json, 102,46 s), el-tequendama (plan-v6.json, 107,4 s) y la-aparicion-del-hombre (plan-v6.json, 102,4 s). Cada uno con su lecho-v6.wav reconstruido a la duración total. Los másters -v5/-v1-seedance sin cierre quedan como historia."
+ },
+ "imagen_v5": {
+  "modelo": "gpt-image-2.5-sunburst en calidad high (decisión del usuario 2026-09-12), reemplaza a gpt-image-2 para keyframes nuevos",
+  "por_que": "Salto real en la misma familia de papel: el crátel deja de ser una pila de tiras planas y gana profundidad, la niebla se comporta como niebla y las fibras del papel se leen. Comparación directa de la misma laguna de Guatavita en docs/videos/pipeline-v4-mcp.md.",
+  "como_se_usa": "IMAGE_GENERATION_MODEL=gpt-image-2.5-sunburst IMAGE_GENERATION_QUALITY=high node scripts/videos/generate-keyframes.mjs --spec …",
+  "compatibilidad": "Acepta los mismos parámetros que gpt-image-2 (size, quality, moderation, output_format) y también images.edit con referencias e input_fidelity high, así que la biblia visual vieja sigue sirviendo de referencia y la continuidad de personajes se mantiene.",
+  "ojo": "Registro algo más dimensional que el de los tres videos ya entregados. Para un mito nuevo no se nota; si algún día se quiere homogeneizar el catálogo habría que regenerar los keyframes viejos.",
+  "hermano": "gpt-image-2.5-flare existe en la misma cuenta y no se ha probado."
+ },
+ "video_6": {
+  "slug": "el-dorado",
+  "titulo_video": "El Dorado",
+  "titulo_canon": "El Dorado (DB, slug `el-dorado`)",
+  "estado": "⚠️ ENSAMBLADO, SIN VISTO BUENO. El máster el-dorado-final-v1.mp4 (97,46 s, cierre incluido) existe desde el 2026-09-11 21:55 y hay copia de entrega en ~/Downloads, pero NADIE registró aprobación ni rechazo y el guion no tiene campo `aprobado`. El «EN PRODUCCIÓN 2026-09-12» que decía aquí era falso en las dos mitades: ni sigue en producción ni es el 12 (los docs van en UTC; la fecha local es el 11). Manda la cola de PRODUCCION-END-TO-END.md §9, fila 4. Hay que preguntarle al usuario",
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-el-dorado-v1.json — 9 líneas de 17-19 palabras sobre el canon de la DB: la investidura en Guatavita contada como entrega, no como tesoro",
+  "keyframes": "17, con gpt-image-2.5-sunburst, spec scripts/videos/specs/muisca-eldorado-escenas.mjs; referencias de la biblia muisca que ya existía",
+  "plan": "content/videos/muiscas/videos/el-dorado/plan-v1.json — 19 bloques, 97,42 s, con placa de cola y cierre de canal",
+  "lecho": "08-lluvia-sobre-la-piedra → 15-canoa-en-el-rio → 13-manantial-que-brota: LOS MISMOS TRES de la narración de el-dorado en el sitio",
+  "costo_cr": 765,
+  "por_que_17_clips": "El saldo eran 797 cr. 17 × 45 = 765 deja 32: no alcanza para repetir ni un clip, así que todos los candados fueron desde el primer envío y los tres planos de riesgo se pilotaron primero.",
+  "piloto_de_moderacion": "c07 (resina sobre la espalda), c08 (soplo de polvo de oro) y c16 (el oro se desprende bajo el agua) se enviaron solos, 135 cr, para descubrir un bloqueo barato. Pasaron 3/3 sin rechazo y sin cortes internos. El candado que lo permite: guayuco blanco descrito en cada prompt, figura SIEMPRE de espaldas, y torso de frente y rostro prohibidos en la lista NOT.",
+  "oro_corporal": "El canon documenta el cuerpo cubierto de polvo de oro: es la excepción explícita al guardarraíl del sitio. En los prompts el oro va siempre como POLVO MATE, nunca metálico ni con destello, porque el brillo es lo que más rápido rompe el registro de papel.",
+  "concurrencia_real": "Con 7 clips en vuelo el siguiente envío ya dio 429. El tope efectivo está más cerca de 7-8 que de los ~10 documentados: conviene enviar de a 5 y reponer."
+ },
+ "_estado": "ACTUALIZADO 2026-09-16. La sección `video` de agosto (grok ratificado) quedó SUPERADA el 2026-09-09: ver `video_historico` al final. La verdad operativa de hoy vive en docs/videos/MANUAL-DE-PRODUCCION.md; este archivo sólo guarda el ADN del canal.",
+ "video_historico": {
+  "modelo": "grok_video (RATIFICADO 2026-08-20 tras bake-off con ledger: 1,5 cr/s es el PISO de la plataforma — kling3_0 y wan2_7 empatan el precio, seedance mini 2,5/s; ver proceso-mitos-a-video.md 5b)",
+  "alternativas_mismo_precio": {
+   "kling3_0": "std+sound_off, 7,5 cr/5s: el mas fiel en planos fijos, pero niebla se vuelve algodon literal",
+   "wan2_7": "720p, 7,5 cr/5s: push de camara fuerte, 30fps, trae audio ambiente nativo; util para 1-2 planos de vuelo"
   },
-  "voz": {
-    "proveedor": "ElevenLabs eleven_multilingual_v2 (scripts/videos/generate-voice-el.mjs); MIGRADO desde OpenAI ash 2026-08-20",
-    "api_key": "ELEVENLABS_API_KEY en .env del repo principal (gitignored); plan Creator 300k chars/mes",
-    "voces_colombianas": {
-      "amaf_femenina": "4kaLaTbziI05Jwh8zWad (melodica, registros fogon y mistico)",
-      "el_faraon_masculina": "W1hAcdh0RNsPYUA7fkJh (profunda, registro epico)",
-      "alejandro": "2HsKyIMt2fxFwsry7Nd6 — funciona con eleven_flash_v2_5 Y (desde 2026-08-21 tarde) con eleven_v3 (mas expresivo, ~25% mas lento, sin param speed); multilingual_v2/turbo siguen dando not_fine_tuned. Voz de Bochica."
-    },
-    "prosodia": "previous_text/next_text entre tomas para narracion continua",
-    "wps_real": "2,4-2,6 palabras/s -> 19 palabras por bloque caben holgadas",
-    "registros_guion": "GANADOR DEFINITIVO: fogon-visual-coloquial con voz E (Amaf); ver plantillas 3a y direccion-cinematografica.md",
-    "settings": "fogon st.5 sty.25 sp1.0 · epico st.55 sty.3 sp.98 · mistico st.35 sty.5 sp.92",
-    "nota_modelos": "Amaf/Faraon -> eleven_multilingual_v2; Alejandro -> eleven_flash_v2_5 o eleven_v3 (v3 mas expresivo y ~25% mas lento, sin speed)",
-    "VOZ_OFICIAL_CANAL": "Alejandro 2HsKyIMt2fxFwsry7Nd6 en eleven_v3 (decision usuario 2026-08-21; v3 NO acepta previous/next_text ni speed — el generador lo maneja solo). Ambos videos re-narrados con ella."
+  "declined_preset_id": "5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82",
+  "nota_presets": "cada escena puede disparar un preset distinto (nocturna: 'IN THE DARK' 24bae836-2c4a-48e0-89b6-49fcc0b21612); declinar el id exacto que devuelva",
+  "descartados": {
+   "gemini_omni": "3 cr/s (2x grok), sin start_image",
+   "kling3_0": "2 cr/s; bueno, acepta start+end frame; segunda opcion valida",
+   "seedance_2_5": "6,5 cr/s (4,3x grok) y su filtro NSFW bloqueo 3/3 la escena madre-nino en el agua"
   },
-  "sfx": {
-    "modelo": "mirelo_text_to_audio (2,5 cr por 10 s)",
-    "uso": "cama de ambiente por bloque via plan.json {sfx, sfx_vol~0.45}; loop+fades y ducking bajo la voz los hace assemble-video.mjs",
-    "biblioteca": "content/videos/muiscas/audio/sfx/ (sfx-laguna.mp3, sfx-fogon.mp3) (reusables en todos los videos; ampliar con viento-paramo y aldea)"
+  "moderacion": "el filtro reacciona a la IMAGEN de inicio con nino+agua/fuego/noche o multitudes con menores; solucion probada: re-escenificar (figuras de espaldas, lejanas o sin personas). Tope 12 jobs grok en vuelo (429 encima)."
+ },
+ "video": {
+  "modelo": "seedance_2_5 por el MCP de Higgsfield (ESTÁNDAR desde 2026-09-09, elegido por el usuario tras comparar los dos másters de `la-aparicion-del-hombre` hechos la misma noche). DEFAULT DEL CANAL ratificado por el usuario el 2026-09-16: «por ahora vamos a dejar que el modelo de video definido como default es seedance 2.5 pro 1080». No es un cambio de modelo, es el cierre de la duda entre modelos: lo que cambia es el rango de la decisión. Matiz de vocabulario: `pro` NO es un modo de seedance_2_5 (sus modos son t2v, omni_reference, video_edit, video_extension; `pro` es un modo de kling3_0) — «pro 1080» significa aquí la configuración completa a máxima calidad, que es exactamente la de `parametros`.",
+  "parametros": {
+   "model": "seedance_2_5",
+   "mode": "omni_reference",
+   "resolution": "1080p",
+   "generate_audio": false,
+   "bitrate_mode": "high",
+   "duration": 5,
+   "aspect_ratio": "9:16"
   },
-  "musica": {
-    "obligatoria": true,
-    "proveedor": "Eleven Music (POST /v1/music, music_length_ms); MIGRADO desde sonilo 2026-08-20",
-    "cama_actual": "content/videos/muiscas/audio/musica-cama-elevenlabs.mp3 (95s)",
-    "cama_anterior_sonilo": "content/videos/muiscas/audio/musica-cama.m4a (archivada)",
-    "mood": "dark-enchanted ambient: misteriosa, calma, cuerdas sostenidas suaves, arpa lejana, quena andina lejana y escasa, sin percusion, sin voces",
-    "reuso": "la cama se REUSA entre videos muiscas; regenerar solo si el mito pide otro mood",
-    "volumen_en_mezcla": 0.09
+  "parametros_nota_defaults": "Los defaults del propio modelo son OTROS (models_explore del 2026-09-16 contra el catálogo vivo): mode t2v · resolution 720p · bitrate_mode standard · generate_audio TRUE · duration 5. Es decir: si no escribes `resolution`, `bitrate_mode` y `generate_audio` en CADA encolado, el clip sale en 720p, con menos bitrate y con audio que el canal no quiere. Esos tres campos no se pueden omitir nunca. Rangos del catálogo: duration 4-30 s (el canal usa 5), resolution 480p/720p/1080p. `unlim` para este modelo: available false.",
+  "coste_verificado": {
+   "seedance_2_5_1080p_5s": "45 cr",
+   "seedance_2_5_720p_5s": "32,5 cr",
+   "kling3_0_pro_5s_sound_off": "8,75 cr (1,75 cr/s, lineal)",
+   "gemini_omni_flash_1_1": "22,5 cr"
   },
-  "ensamblaje": {
-    "script": "scripts/videos/assemble-video.mjs v3 (local, gratis)",
-    "estructura": "2 clips de 5-6s por bloque narrativo (grok cobra lineal: mas cortes, mismo costo); duraciones sugeridas por validate-plan.mjs --suggest; cola still 3,5s Ken Burns con solo ambiente",
-    "montaje": "corte seco DENTRO del bloque, crossfade 0,4s ENTRE bloques (auto-recortado al aire de la narracion; sin aire = corte seco), fundidos globales 0,6/0,8s, titulo de canal en bloque 1 (title/title_sub), musica resuelve con fade 4s en su final natural",
-    "subtitulos": "PNG por cue con sharp/Pango + overlay enable (ffmpeg local sin libass/drawtext); sin cues huerfanos; .srt aparte",
-    "herramientas_previas": "lint-spec.mjs (anti-nsfw, SIEMPRE antes de generar) y validate-plan.mjs (archivos + ventanas de habla)",
-    "playbook_prompts": "docs/videos/plantillas-prompts.md",
-    "entregas": "master CRF18 + social 1080p 8Mbps faststart + preview 720p <30MB"
+  "alternativas": {
+   "kling3_0": "8,75 cr/clip, 3-15 s, acepta fotograma inicial Y final (roles start_image y end_image): una vía para planos con estado final fijado. NO es el único: re-verificado contra el catálogo vivo el 2026-09-16 (models_explore model_id seedance_2_5), `seedance_2_5` acepta los roles start_image, end_image, image_references, video_references y audio_references — o sea que el default del canal también admite fotograma final. Ninguno de los videos del canal ha usado `end_image` todavía: es capacidad disponible y sin probar, no un diferenciador de Kling.",
+   "gemini_omni_flash_1_1": "DESCARTADO por el usuario 2026-09-11 («no me gusta»): 13/18 a la primera, deriva de plano y una salida horizontal pese a pedir 9:16."
   },
-  "assets": {
-    "biblia_dir": "content/videos/muiscas/biblia/",
-    "videos_dir": "content/videos/muiscas/videos/bachue/",
-    "media_map": "content/videos/muiscas/videos/bachue/keyframes/media-map.json"
-  },
-  "costos_reales_bachue": {
-    "total_higgsfield_cr": 160.34,
-    "desglose": "piloto 27,4 (voces seed_audio descartadas + clips grok/kling de prueba) + produccion ~133 (18 clips grok 98s + musica 95s; nsfw/seedance no cobraron neto)",
-    "openai_usd_aprox": "~6 (31 imagenes gpt-image-2 high + ~21 tomas TTS)",
-    "balance": "1010 -> 849,66 (bachue) -> 673,51 (tras bake-off 32,5 + bochica 143,65)"
-  },
-  "video_1": {
-    "slug": "bachue",
-    "final": "content/videos/muiscas/videos/bachue/bachue-final.mp4 (v3: guion fogon-visual-coloquial + Alejandro v3 + musica andina, 1:39; anteriores: bachue-v2-ash, bachue-v1)",
-    "social": "content/videos/muiscas/videos/bachue/bachue-final-social.mp4",
-    "srt": "content/videos/muiscas/videos/bachue/bachue-final.srt",
-    "plan": "content/videos/muiscas/videos/bachue/plan.json",
-    "produccion": "docs/videos/muiscas/bachue-produccion.json",
-    "voz": "Alejandro (eleven_v3)"
-  },
-  "mvps_pendientes": {
-    "resuelto": "E gano; mvps a-f archivados en videos/bachue/"
-  },
-  "doctrina_direccion": "docs/videos/direccion-cinematografica.md (v1 2026-08-20: escalas alternadas, guion de luz por acto, objeto ancla+bookend, cita directa unica, checklist 8 puntos)",
-  "video_2": {
-    "slug": "bochica",
-    "final": "content/videos/muiscas/videos/bochica/bochica-final.mp4 (1:31)",
-    "plan": "content/videos/muiscas/videos/bochica/plan.json",
-    "produccion": "docs/videos/muiscas/bochica-produccion.json",
-    "costo_higgsfield_cr": 143.65,
-    "nota": "primera corrida perfecta: 18/18 clips sin rechazos nsfw gracias al checklist; 5s uniformes por bloque",
-    "voz": "Alejandro (eleven_v3)"
-  }
+  "concurrencia": "tope real ~10 en vuelo; el siguiente request da 429 y no encola nada del lote",
+  "presets": "declinar el `declined_preset_id` EXACTO que devuelva cada request; el recomendador cambia por escena (IN THE DARK, DROWN IN MUSIC, 3D RENDER)",
+  "carril_sin_creditos": "stop-motion dibujado con gpt-image-2.5-sunburst (experimental, docs/videos/stopmotion-interpolacion.md): 0 créditos, ~$1,5-10 por plano según método; Huitaca v1 salió por aquí y fue RECHAZADO por el usuario",
+  "nota_mezcla_de_tandas": "desde 2026-09-16 un máster puede mezclar tandas de modelos distintos escena a escena (Bachué v7); hay que normalizar resolución, duración y fps antes de montar"
+ }
 }

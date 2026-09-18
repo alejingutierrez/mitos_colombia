@@ -1,0 +1,267 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-umarala-triptych-01",
+  "created_at": "2026-09-06T18:38:01.782Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "umarala",
+  "plan": "content/mitos-visuales/wayuu.umarala.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "2f18e8a4b0ccce6123db29cb07978310a43d8f8517be98943096abb7d3373c1c",
+  "narrative_target_sha256": "71517b0486e08baa34cdba4f1b92627ddb82b5df9022ac0db6a5dd39ba66af71",
+  "evidence": [
+    {
+      "id": "chaves_1946",
+      "type": "primary_narrative",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "321–325; PDF índices 17–21",
+      "supports": "Tía maestra, canto y maraca, herencia de instrumentos, visita nocturna y partida.",
+      "limits": "Testimonio histórico mediado por recopilador. No prueba clínica ni protocolo ritual."
+    },
+    {
+      "id": "published_umarala",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/umarala.json",
+      "supports": "Texto objetivo y centralidad de la tía en una vocación de cuidado.",
+      "limits": "Condensa la visita nocturna y atribuye imitadores al protagonista, que en Chaves corresponden a Jururiana. No se ilustra esta discrepancia ni se edita el texto."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T18:37:42.694Z",
+    "reviewed_reference_ids": [
+      "efdd2dddda49d59e8bf1",
+      "d7f5dc0ea38289e3a1f1"
+    ],
+    "retained": [
+      "Noche índigo y ocre cálido; sensación de que el paisaje participa en el canto.",
+      "Profundidad por planos superpuestos, maraca y cuidado como motivos reconocibles."
+    ],
+    "rejected": [
+      "Figura femenina gigante y espectral en el cielo, anatomía modelada, planos cerrados y vestuario geométrico de las imágenes previas.",
+      "Tratar generaciones previas como pruebas culturales; reutilizar rostro o ropa sin contraste con la Biblia.",
+      "Confundir los imitadores de Jururiana con Umaralá; se omiten sin modificar el texto público."
+    ],
+    "influence_by_act": {
+      "entrada": "La noche participa en el canto de la tía mediante capas que se levantan sobre su sobrino; maestra humana pequeña y presente, no fantasma celestial.",
+      "acto": "Retener contraste azul/ocre pero dejar a la paciente sola: huellas sin caballo visible y suelo plegado hacen audible la visita.",
+      "huella": "Maraca y capote se condensan en un solo motivo de amparo y saber heredado, sin personajes ni paisaje."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "umarala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__identity_sheet--canon.jpeg",
+      "sha256": "5f0479ac0c23d918897f2bc68d5a7e4f7db287386b33bb311578477982dbce33",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "umarala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/umarala__state_sheet--estados.jpeg",
+      "sha256": "4ecb3646117e63998ea341b98fe6ea7e1356659da4373a0e34dce06dac1f4e1b",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "tia_outsu_umarala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/tia_outsu_umarala__identity_sheet--canon.jpeg",
+      "sha256": "b5c3f1d305438a5719c47127beffad7d6d597c8b656174ada5dd1828534710c1",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "tia_outsu_umarala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/tia_outsu_umarala__state_sheet--estados.jpeg",
+      "sha256": "eac157395f3d438ae3d55db34fd91dfb9fc6672b8cf37f18f4b587ea53434e25",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "paciente_umarala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/paciente_umarala__identity_sheet--canon.jpeg",
+      "sha256": "ab71d3ccbc93fe9d0b0e1642728e6554bc013416f308503c75b769daeeb19241",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "paciente_umarala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium/paciente_umarala__state_sheet--estados.jpeg",
+      "sha256": "12f07b891a385cf69087494c8fa930e6b05e8b1bae91a2169be19e373df7b51b",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "capote_umarala__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/capote_umarala__object_sheet--canon.jpeg",
+      "sha256": "4c7fe237d564e7d55d504a193d46bc6686550f10591bc57b3549cfe9caae58cc",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "transmision_vida_nombre_umarala__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/transmision_vida_nombre_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "8e22a2a12a4be9e057017c71be9b49a82a7e78910d5c0f47fe35d2a591976ef0",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "curacion_nocturna_umarala__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-02/curacion_nocturna_umarala__phenomenon_rule--canon.jpeg",
+      "sha256": "805649658969f1a0175816af3a2c6312abc290e618de5b9b217ab02b118754c1",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "jarara__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-22-umarala-medium-corrections-01/jarara__spatial_model--canon.jpeg",
+      "sha256": "44cc2cc3e7483e0906538a956932f3bdd2611ed3a65852d6bc3f48018016566a",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "umarala__identity_sheet",
+        "umarala__state_sheet",
+        "tia_outsu_umarala__identity_sheet",
+        "tia_outsu_umarala__state_sheet",
+        "paciente_umarala__identity_sheet",
+        "paciente_umarala__state_sheet",
+        "capote_umarala__object_sheet",
+        "transmision_vida_nombre_umarala__phenomenon_rule",
+        "curacion_nocturna_umarala__phenomenon_rule",
+        "jarara__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/umarala/wayuu-umarala-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "a975cb9a55a591f85491e4930d39f9a88d7d099234321213c1e811deea687ad5",
+      "narrative_event_ids": [
+        "canto_tia"
+      ],
+      "editorial_translation": "Levantar físicamente la noche traduce el canto cuidador y la tensión sobre la vida; no es una descripción literal ni una anatomía del séyuu.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Noche sobre el chinchorro.",
+        "impossible_behavior": "La noche se levanta en capas y abre espacio alrededor del joven.",
+        "narrative_effect": "La voz de la tía sostiene el cuidado dentro de un territorio sensible.",
+        "agency": "La tía y su conocimiento heredado son centrales; la presencia se lee en efectos espaciales, no en un antagonista visible.",
+        "physical_translation": "Tres láminas inmensas de cielo curvadas con huecos y sombras sobre un chinchorro pequeño.",
+        "visible_test": "¿La tía pequeña canta junto a un único joven y la noche se levanta en capas, dejando espacio de respiración sobre el chinchorro?",
+        "event_ids": [
+          "canto_tia"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "umarala__identity_sheet",
+        "umarala__state_sheet",
+        "tia_outsu_umarala__identity_sheet",
+        "tia_outsu_umarala__state_sheet",
+        "paciente_umarala__identity_sheet",
+        "paciente_umarala__state_sheet",
+        "capote_umarala__object_sheet",
+        "transmision_vida_nombre_umarala__phenomenon_rule",
+        "curacion_nocturna_umarala__phenomenon_rule",
+        "jarara__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/umarala/wayuu-umarala-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "210ec8f2837aa9c399532478cd46a992a59bad8626cc4b94d2adc882aee3a6c2",
+      "narrative_event_ids": [
+        "visita_nocturna"
+      ],
+      "editorial_translation": "La paciente sola, el tropel y el canto corresponden a Chaves. Los pliegues y huellas hacen visible el sonido; no reconstruyen un ritual ni muestran un procedimiento o resultado médico.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Suelo junto a una paciente que descansa.",
+        "impossible_behavior": "La tierra se pliega siguiendo un tropel y un canto cuyo visitante no se ve.",
+        "narrative_effect": "La visita se reconoce por sus efectos, preservando su misterio.",
+        "agency": "La tía y su conocimiento heredado son centrales; la presencia se lee en efectos espaciales, no en un antagonista visible.",
+        "physical_translation": "Tres pliegues del suelo con sombra propia y huellas equinas, sin caballo.",
+        "visible_test": "¿Hay una sola paciente y una visita invisible reconocible por huellas equinas y tres pliegues del suelo, sin sanador ni caballo visibles?",
+        "event_ids": [
+          "visita_nocturna"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "umarala__identity_sheet",
+        "umarala__state_sheet",
+        "tia_outsu_umarala__identity_sheet",
+        "tia_outsu_umarala__state_sheet",
+        "paciente_umarala__identity_sheet",
+        "paciente_umarala__state_sheet",
+        "capote_umarala__object_sheet",
+        "transmision_vida_nombre_umarala__phenomenon_rule",
+        "curacion_nocturna_umarala__phenomenon_rule",
+        "jarara__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/umarala/wayuu-umarala-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "bacccece13eac5ae21fd2bb2bf35fa4356d7dc2763095b35a492108024379ab9",
+      "narrative_event_ids": [
+        "legado_cuidado"
+      ],
+      "editorial_translation": "Capote que sostiene la maraca y un eco que conecta sus dos lados condensan cuidado y continuidad. La forma es una metáfora editorial, no un emblema o disposición ritual documentados.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Maraca y capote heredados.",
+        "impossible_behavior": "El eco del instrumento se vuelve una unión material del abrigo.",
+        "narrative_effect": "Vuelve visible una relación de cuidado que continúa.",
+        "agency": "La tía y su conocimiento heredado son centrales; la presencia se lee en efectos espaciales, no en un antagonista visible.",
+        "physical_translation": "Una tira arena sale del instrumento y une pliegues carbón sin rayos ni figura.",
+        "visible_test": "¿Una sola maraca queda sostenida por un capote abierto y plegado, con un eco material que une sus lados, sin escena ni figura humana?",
+        "event_ids": [
+          "legado_cuidado"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Heredar un saber obliga a sostener la vida de otros.",
+        "carrier": "Maraca sostenida por el capote de la tía.",
+        "operation": "Un eco material une los lados del abrigo alrededor del instrumento.",
+        "story_connection": "La tía entrega los instrumentos que fundan la vocación de Umaralá.",
+        "visible_test": "¿Una sola maraca queda sostenida por un capote abierto y plegado, con un eco material que une sus lados, sin escena ni figura humana?"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

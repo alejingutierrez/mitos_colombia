@@ -1,0 +1,42 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-10b-hijo-condor-neutral-silhouette-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-10b-hijo-condor-neutral-silhouette-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección 10b en medium y desde texto del ancla madre–hijo del Cóndor: dos siluetas de idéntica geometría neutral, con torso rectangular y piernas separadas, sin base triangular, género, anatomía o vestuario; conservar relación, cueva y orientación hacia la salida.",
+  "jobs": [
+    {
+      "id": "el-hijo-del-condor__ancla--canon",
+      "model_id": "el-hijo-del-condor__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-10b-hijo-condor-neutral-silhouette-correction-medium/prompts/el-hijo-del-condor__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-10b-hijo-condor-neutral-silhouette-correction-medium/el-hijo-del-condor__ancla--canon.jpeg",
+      "prompt_sha256": "15469f470acb7c239cf89e0a8eaa930d74d4bd62671955cc534034905d7c773b",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "safeguards": [
+        "generación desde texto; no adjuntar ni exportar imágenes locales en esta tanda",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cautiverio gráfico, cuerpos vulnerados, heridas, cadáveres o sufrimiento",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "figuras humanas como placeholders editoriales reversibles: cabeza circular, torso rectangular, piernas rectas separadas y manos tipo mitón; sin fisonomía, cabello, sexo, anatomía, ropa, joyas, pintura o tocado",
+        "sin cactus, cardón, saguaro ni vegetación columnar en esta tanda; usar geología, plantas bajas o paisaje mineral",
+        "corrección horizontal dentro de una cueva de papel: una silueta adulta lisa y una pequeña comparten exactamente la misma geometría neutral, con cabeza circular, cuello corto, torso rectangular de lados paralelos, cintura sin estrechamiento, dos piernas rectas separadas, brazos continuos y manos tipo mitón; permanecen lado a lado orientadas hacia la abertura",
+        "ninguna silueta puede tener base triangular, falda, vestido, túnica, capa, cadera, pecho, cintura marcada, cabello, sexo, rostro o anatomía; sin cóndor, ave, plumas, alas, híbrido, jaula, cuerda, cadena, cautiverio gráfico, rescate, crecimiento, herida, oreja o restauración"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

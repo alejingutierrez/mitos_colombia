@@ -1,0 +1,340 @@
+{
+  "title": "Huitaca muisca · b1a · prueba stop motion de 1 segundo",
+  "date": "2026-09-13",
+  "status": "complete_experiment_for_user_review",
+  "fps": 12,
+  "frame_count": 12,
+  "generation_count_planned": 11,
+  "duration_seconds": 1,
+  "seed_counts_as_frame": true,
+  "model": "gpt-image-2.5-sunburst",
+  "method": "sequential Image API edits via official imagegen skill CLI; previous frame plus immutable seed reference",
+  "parameters": {
+    "quality": "medium",
+    "size": "auto",
+    "output_format": "png"
+  },
+  "source": {
+    "path": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/keyframes/b1a.crop-9x16.jpg",
+    "sha256": "dc17ab1ee6a065e471411734354825b0038919412470a8926bfad8677953e8af",
+    "keyframe": "b1a",
+    "job": "14677e62-12ff-4010-814f-8c2b7088db84",
+    "script_path": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/bloques.json",
+    "script_sha256": "0f47fe0feea86005ede1b44323d143697b55c898450bfc589d8796f7d7f5b788",
+    "line": "Después del paso del maestro llegó una mujer que caminaba de noche."
+  },
+  "frames": [
+    {
+      "index": 1,
+      "timestamp_seconds": 0.0,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "contacto inicial",
+      "file": "frames/frame-01.png",
+      "status": "source",
+      "sha256": "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb",
+      "actual_size": [
+        1080,
+        1920
+      ],
+      "delivery_file": "delivery/frame-01.png"
+    },
+    {
+      "index": 2,
+      "timestamp_seconds": 0.083333,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "absorción sobre pie derecho",
+      "file": "frames/frame-02.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-02.txt",
+      "sha256": "011c84e482fa04245d49675f3563c0305e19d63fe7b91b8321c18a0082767593",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "elapsed_seconds": 25.3,
+      "visual_review": "Same scene and person, small pose change; apparent figure enlargement and some texture regeneration. Raw model output retained for the test.",
+      "prompt_sha256": "81682e0fdac14ab05c01c4abff4d5126fc2beb298365266f605c9c57b257b32d",
+      "input_sha256": [
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "delivery_file": "delivery/frame-02.png"
+    },
+    {
+      "index": 3,
+      "timestamp_seconds": 0.166667,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "despegue del pie izquierdo",
+      "file": "frames/frame-03.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-02.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-03.txt",
+      "sha256": "680609cb3499a1242935234925cff1303dbcf0a0b0cd63ce769375516b9dec3a",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "bec0cd6924fe68604ea7e7a0fa651626041b5e95d1b7e3c1d3e949ddc6dc2f7e",
+      "input_sha256": [
+        "011c84e482fa04245d49675f3563c0305e19d63fe7b91b8321c18a0082767593",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "delivery_file": "delivery/frame-03.png",
+      "elapsed_seconds": 24.8
+    },
+    {
+      "index": 4,
+      "timestamp_seconds": 0.25,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "paso de pierna izquierda",
+      "file": "frames/frame-04.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-03.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-04.txt",
+      "sha256": "0e76c2daec171758c8a5dbedf564434b8aef21b22435969452f7104022dc7498",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "d5e084c0580a773738a487d0eaf60de8a2abaa70168228eff0b56e024b7c0ee8",
+      "input_sha256": [
+        "680609cb3499a1242935234925cff1303dbcf0a0b0cd63ce769375516b9dec3a",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 21.3,
+      "delivery_file": "delivery/frame-04.png"
+    },
+    {
+      "index": 5,
+      "timestamp_seconds": 0.333333,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "extensión izquierda",
+      "file": "frames/frame-05.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-04.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-05.txt",
+      "sha256": "6cebdbbae9867014be483ef0aff09155e9f4333caf852ad5b53e9513ff89778a",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "4b57949d882696aa89ff55ad189843391fa71975d12fba2f62eb0d5265985f05",
+      "input_sha256": [
+        "0e76c2daec171758c8a5dbedf564434b8aef21b22435969452f7104022dc7498",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 23.6,
+      "delivery_file": "delivery/frame-05.png"
+    },
+    {
+      "index": 6,
+      "timestamp_seconds": 0.416667,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "contacto izquierdo",
+      "file": "frames/frame-06.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-05.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-06.txt",
+      "sha256": "b38c080d4dc94723a67bab0b42bf7afb6291c2acacaa8c4b37b4f2f42edcd3e6",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "5377ce47b3684e5d31ea063ba9ad76199e05ac2d83ae61942010c39ebef47a61",
+      "input_sha256": [
+        "6cebdbbae9867014be483ef0aff09155e9f4333caf852ad5b53e9513ff89778a",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 21.7,
+      "delivery_file": "delivery/frame-06.png"
+    },
+    {
+      "index": 7,
+      "timestamp_seconds": 0.5,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "absorción izquierda",
+      "file": "frames/frame-07.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-06.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-07.txt",
+      "sha256": "182c94f3c5fa3ad3f46d506b592ef9eeb88b115c1890f22a9fd1347683c02a64",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "2eabf37971d992b4d6d8a281170f5df1c46fc1efc3c2c3b5d819a55f2cc0730e",
+      "input_sha256": [
+        "b38c080d4dc94723a67bab0b42bf7afb6291c2acacaa8c4b37b4f2f42edcd3e6",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 23.9,
+      "delivery_file": "delivery/frame-07.png"
+    },
+    {
+      "index": 8,
+      "timestamp_seconds": 0.583333,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "despegue derecho",
+      "file": "frames/frame-08.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-07.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-08.txt",
+      "sha256": "14e8884ce1326a453d0e14dd4360729229eb04185a1952250994671767508e22",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "72f07bbbc0a037cd21161e74411f9c4aa01a60dc036f8c49a697c2a483d6d6d7",
+      "input_sha256": [
+        "182c94f3c5fa3ad3f46d506b592ef9eeb88b115c1890f22a9fd1347683c02a64",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 27.1,
+      "delivery_file": "delivery/frame-08.png"
+    },
+    {
+      "index": 9,
+      "timestamp_seconds": 0.666667,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "paso de pierna derecha",
+      "file": "frames/frame-09.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-08.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-09.txt",
+      "sha256": "4e28ee95cf214720894815d17486554404cb60fb1a0908c5a890837e5727b5ff",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "1bafaf2614d15cf6af76a5b8417d4d241e345b103404e7ac739922f61c016cd8",
+      "input_sha256": [
+        "14e8884ce1326a453d0e14dd4360729229eb04185a1952250994671767508e22",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 24.1,
+      "delivery_file": "delivery/frame-09.png"
+    },
+    {
+      "index": 10,
+      "timestamp_seconds": 0.75,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "extensión derecha",
+      "file": "frames/frame-10.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-09.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-10.txt",
+      "sha256": "c7a3493e910810f06c238c6ed296f3d5f89cda7a9d2c101ef1d967eb18990ded",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "70748ddb89d75c2bb392a3b792663fd65c68fdadbbd03567b5bb7713ed7d0845",
+      "input_sha256": [
+        "4e28ee95cf214720894815d17486554404cb60fb1a0908c5a890837e5727b5ff",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 25.1,
+      "delivery_file": "delivery/frame-10.png"
+    },
+    {
+      "index": 11,
+      "timestamp_seconds": 0.833333,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "nuevo contacto derecho",
+      "file": "frames/frame-11.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-10.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-11.txt",
+      "sha256": "be33367ea9d673fd6daf6aae1253d8dfe24bccc98a001f33b958fa91073f9506",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "77003474cae06c691b290ee2e2aac199b82ae36e092bc256436e4956b458a3e0",
+      "input_sha256": [
+        "c7a3493e910810f06c238c6ed296f3d5f89cda7a9d2c101ef1d967eb18990ded",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 27.7,
+      "delivery_file": "delivery/frame-11.png"
+    },
+    {
+      "index": 12,
+      "timestamp_seconds": 0.916667,
+      "exposure_seconds": 0.08333333333333333,
+      "phase": "asentamiento y continuidad",
+      "file": "frames/frame-12.png",
+      "status": "generated",
+      "inputs": [
+        "frames/frame-11.png",
+        "frames/frame-01.png"
+      ],
+      "prompt_file": "prompts/frame-12.txt",
+      "sha256": "ec56f7566ebe9bd68579d64d94585b5f5438c98013b51595e76b5d0aeda57927",
+      "actual_size": [
+        941,
+        1672
+      ],
+      "prompt_sha256": "d9f4331d08b5f2cc94c56c22017e970cfe075a247ec09abbbe61aec90631184c",
+      "input_sha256": [
+        "be33367ea9d673fd6daf6aae1253d8dfe24bccc98a001f33b958fa91073f9506",
+        "ce0b788d97db477cecea8a4f16fa1abd415c4e66f7b41d5961dd47b595a7b0cb"
+      ],
+      "elapsed_seconds": 26.9,
+      "delivery_file": "delivery/frame-12.png"
+    }
+  ],
+  "generation_count_actual": 11,
+  "delivery": {
+    "video": "huitaca-b1a-12fps-1s.mp4",
+    "detail_video": "huitaca-b1a-detalle-12fps-1s.mp4",
+    "fps": 12,
+    "frames": 12,
+    "duration_seconds": 1,
+    "size": [
+      864,
+      1536
+    ],
+    "assembly": "Only spatial resizing to one canvas and encoding. No temporal interpolation, generated inbetweens, crossfades, stabilization, background replacement or scene retouching."
+  },
+  "qa": {
+    "technical": "passed",
+    "visual": "continuity_limitations_observed",
+    "notes": [
+      "The original full composition remains recognizable across the test.",
+      "The model alters ground and paper textures and slightly changes figure proportions.",
+      "Changes in legs, arms, hair and mantle are visible, but the requested exact planted-foot walking cycle is not consistently followed.",
+      "The repeated playback jump from frame 12 to frame 1 is expected for an advancing walk; the sequence is not a seamless loop."
+    ],
+    "metrics_file": "qa-metrics.json"
+  }
+}

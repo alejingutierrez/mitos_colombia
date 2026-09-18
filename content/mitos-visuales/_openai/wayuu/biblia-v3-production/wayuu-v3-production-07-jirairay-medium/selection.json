@@ -1,0 +1,77 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "jirairay",
+  "batch_id": "wayuu-v3-production-07-jirairay-medium",
+  "status": "QA_PASS_AFTER_CORRECTION",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/jirairay-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "fb0519a55ac0b3d377b05237c0303f5261d2b6892ab1af8b26533e89ab811333",
+  "batch_models": 6,
+  "selected_models": 6,
+  "approved_models_reused_for_myth": [
+    "wanuru__presence_model",
+    "wanuru__state_sheet",
+    "chinchorro__object_sheet",
+    "rancheria_wayuu__spatial_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 10,
+    "required": 10,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 60,
+    "required_models": 265,
+    "remaining_models": 205
+  },
+  "selections": {
+    "jirairay_canto__phenomenon_rule": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/jirairay_canto__phenomenon_rule--canon.jpeg",
+      "sha256": "d9f0afc0a540e9a8045a87cedd57e8633704a7b094bbc652040c7b424421fa41"
+    },
+    "outsu_jirairay__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/outsu_jirairay__identity_sheet--canon.jpeg",
+      "sha256": "3ca7447f476275e1409ed76648603282b43c0f88f829a99f742b27fd24300c60"
+    },
+    "paciente_jirairay__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium-corrections-01/paciente_jirairay__identity_sheet--canon.jpeg",
+      "sha256": "9b4636285690518cc1b51980c084e28094a736f7a1f751bc2d9da767f1c3fef9"
+    },
+    "maraca_outsu__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/maraca_outsu__object_sheet--canon.jpeg",
+      "sha256": "d6f40968f33d6f9d4e8b3cb54dfc7af10d56d688f40ff42642fdb3943cbd8e91"
+    },
+    "tabaco_ritual__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/tabaco_ritual__object_sheet--canon.jpeg",
+      "sha256": "2aef0e10346c7514a62fc071fb630d5d921fa7e991adc4a691ed64b6a2671bbd"
+    },
+    "alimentos_ceremonia__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/alimentos_ceremonia__object_sheet--canon.jpeg",
+      "sha256": "9dc51ec929aa41fc97d5cffb3a76cfe73049fbddd05b142a921c1f9c518fb576"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "paciente_jirairay__identity_sheet",
+      "batch_id": "wayuu-v3-production-07-jirairay-medium",
+      "reason": "REJECTED_UNSUPPORTED_ZIGZAG_ARCHITECTURAL_TRIM",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-07-jirairay-medium/paciente_jirairay__identity_sheet--canon.jpeg",
+      "sha256": "116f2020d253065dd7a57c5da2cb834dec4742a35eaaf878fce97cbd1e376f0e"
+    }
+  ]
+}

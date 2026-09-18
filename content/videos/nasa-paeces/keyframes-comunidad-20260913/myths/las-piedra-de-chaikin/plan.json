@@ -1,0 +1,127 @@
+{
+  "myth_id": 442,
+  "slug": "las-piedra-de-chaikin",
+  "title": "Las piedras de Chaikin",
+  "variant": "Único episodio de dos mujeres y Chautéh en Chaikin. Sin edades, parentesco, destino o discusión inventados.",
+  "rules": "Exactamente dos mujeres y luego dos piedras. Chautéh libre con dos ojos. Caña como carga, no cetros ni armas.",
+  "source": {
+    "path": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/las-piedra-de-chaikin/source.snapshot.json",
+    "sha256": "2281433e22e1143fe48caaeafbc97703a2e4544f8d6e2ffd00953551310fa245",
+    "narrative_sha256": "7903c0cd8a87de8753e09b66e0c6655f50a4a8b7becc82fec3cce9986465c2bd"
+  },
+  "references": {
+    "entrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/las-piedra-de-chaikin/entrada-v1.png",
+      "sha256": "00b29010ba52d1f0cecfdf4aa9bb882ec40d4c17be0c241de8d5f81c9613f438"
+    },
+    "acto": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/las-piedra-de-chaikin/acto-v1.png",
+      "sha256": "a5aaa849f857b6a3262f1f72187bddd39d2bb7028df7db754239f5b972c33460"
+    }
+  },
+  "expected_frames": 6,
+  "estimated_seconds": 32,
+  "timing_status": "provisional_pending_recorded_voice",
+  "voice_words": 48,
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Dos mujeres llevaban caña por Chaikin. Chautéh les pidió una parte.",
+      "word_count": 11,
+      "time_seconds": [
+        0,
+        8
+      ],
+      "shots": [
+        {
+          "id": "k01",
+          "time_seconds": [
+            0,
+            4
+          ],
+          "scene": "Detalle de carga: dos haces de caña de papel sujetos a espaldas de dos caminantes, luz de día.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k02",
+          "time_seconds": [
+            4,
+            8
+          ],
+          "scene": "General: dos mujeres adultas se acercan a Chautéh en sendero de montaña; tres personas, él tiene dos ojos sanos.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Ellas siguieron sin compartir. No se cuenta una larga discusión: bastaron la petición y la negativa.",
+      "word_count": 16,
+      "time_seconds": [
+        8,
+        19
+      ],
+      "shots": [
+        {
+          "id": "k03",
+          "time_seconds": [
+            8,
+            14
+          ],
+          "scene": "Medio: Chautéh extiende una mano vacía mientras ambas mujeres continúan sujetando sus cargas.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k04",
+          "time_seconds": [
+            14,
+            19
+          ],
+          "scene": "General lateral: las dos mujeres se alejan de izquierda a derecha; Chautéh permanece detrás, sin contacto físico.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Chautéh las convirtió en dos piedras. Allí quedaron las formas de las caminantes y el recuerdo de la caña que llevaban.",
+      "word_count": 21,
+      "time_seconds": [
+        19,
+        32
+      ],
+      "shots": [
+        {
+          "id": "k05",
+          "time_seconds": [
+            19,
+            26
+          ],
+          "scene": "General mismo sendero después: EXACTAMENTE DOS piedras verticales de papel plegado, sin mujeres ni cuerpos parcialmente petrificados.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k06",
+          "time_seconds": [
+            26,
+            32
+          ],
+          "scene": "Detalle final: las dos piedras guardan pliegues semejantes a cargas de caña; sólo roca de cartulina, sin rostros tallados ni una tercera piedra principal.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    }
+  ]
+}

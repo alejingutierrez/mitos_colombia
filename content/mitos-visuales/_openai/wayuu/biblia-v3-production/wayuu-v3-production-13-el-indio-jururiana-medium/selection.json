@@ -1,0 +1,115 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "el-indio-jururiana",
+  "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+  "status": "QA_PASS_AFTER_RESEARCH_AND_CORRECTIONS",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/el-indio-jururiana-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "2df97aa3d946cc18bdd750a34b60971c1c75f9f99e132b1e427d0f996a691e5c",
+  "batch_models": 8,
+  "selected_models": 8,
+  "approved_models_reused_for_myth": [
+    "mma__presence_model",
+    "rancheria_wayuu__spatial_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 10,
+    "required": 10,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 117,
+    "required_models": 265,
+    "remaining_models": 148
+  },
+  "selections": {
+    "jururiana__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/jururiana__identity_sheet--canon.jpeg",
+      "sha256": "14c675109b39faac46f259c25ac598f8da8e51ee4f4822f095f829c10b4d2f19"
+    },
+    "jururiana__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/jururiana__state_sheet--estados.jpeg",
+      "sha256": "25cd16f768224ee4c6fd0f0a1c41fcd04865571aad131469a35cabf3f91593d6"
+    },
+    "warir__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/warir__identity_sheet--canon.jpeg",
+      "sha256": "8dc036cbd40a3bf66d9a8bbc0109c0e49bf59d8470893c04c3c8924026792b5b"
+    },
+    "gran_lluvia_jururiana__phenomenon_rule": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/gran_lluvia_jururiana__phenomenon_rule--canon.jpeg",
+      "sha256": "aca92f558dd86e34ab0491e47c611f80d54fe5b263dc1b8038f6a5354c6c3886"
+    },
+    "reservas_semillas_jururiana__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/reservas_semillas_jururiana__object_sheet--canon.jpeg",
+      "sha256": "c827ee247cff505d15c7a102a11b15a485f0865659a739a81f6e0cdfbc9e5795"
+    },
+    "animales_oscuros_jururiana__group_grammar": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/animales_oscuros_jururiana__group_grammar--canon.jpeg",
+      "sha256": "01ca7bc27338e55c62fda47f72acdd1fbc0f98bb9d47845f38e41e0c34a5caba"
+    },
+    "patsuo__spatial_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/patsuo__spatial_model--canon.jpeg",
+      "sha256": "21ac2fa9acadbcaa0074b76122ef1fa79c1a43df3d1f6a86f7056a0200ef3040"
+    },
+    "habitacion_oscura_warir__spatial_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/habitacion_oscura_warir__spatial_model--canon.jpeg",
+      "sha256": "ea2aa3da2cd62b093769e3e114561428399db092211e6e9432063e7748acfac2"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "jururiana__identity_sheet",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "reason": "REJECTED_PAIPAI_BECAME_INVENTED_HORIZONTAL_FACE_MARKINGS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/jururiana__identity_sheet--canon.jpeg",
+      "sha256": "5d1e312b5211dcfe366688487bf905c83a909a15e92100fc5f893a60204638e8"
+    },
+    {
+      "model_id": "jururiana__state_sheet",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "reason": "REJECTED_NON_LOCAL_AGAVE_OR_ALOE_ROSETTE_IN_FOREGROUND",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/jururiana__state_sheet--estados.jpeg",
+      "sha256": "69a5446839666a5e3c31055e77bf7b3c2afc0d42c265037836dc26bb74750a81"
+    },
+    {
+      "model_id": "warir__identity_sheet",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "reason": "REJECTED_WAYUCO_READ_AS_WIDE_MULTIPANEL_SKIRT_WITH_VERTICAL_TRIM",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/warir__identity_sheet--canon.jpeg",
+      "sha256": "1f91c21011285598edd4acc514e2654c0ef19c9ebfae71dc13caad40b3985395"
+    },
+    {
+      "model_id": "gran_lluvia_jururiana__phenomenon_rule",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "reason": "REJECTED_FROZEN_FOOTPRINT_COUNT_FAILED_AND_ERASURE_TRANSITION_WAS_NOT_CLEAR_ENOUGH",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/gran_lluvia_jururiana__phenomenon_rule--canon.jpeg",
+      "sha256": "1100598740f829c810ee8df13f1a5f49599051f5e336613c7561a67709475428"
+    },
+    {
+      "model_id": "animales_oscuros_jururiana__group_grammar",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "reason": "REJECTED_SAGUARO_LIKE_BRANCHING_CACTI_IN_BACKGROUND",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/animales_oscuros_jururiana__group_grammar--canon.jpeg",
+      "sha256": "b6892e1681a78b7135e6bb344c7ceb97ee01031a9692fe2964c2aed120416b8c"
+    }
+  ]
+}

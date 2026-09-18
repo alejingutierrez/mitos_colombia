@@ -1,0 +1,120 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "inventory_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "juramia__identity_sheet"
+  ],
+  "models": {
+    "juramia__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "juramia"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Cóndor que inicia el cautiverio."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Juramía, el cóndor. Funcion visual: Ser-condor que rapta a una majayura y la retiene en una cueva.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Juramía, el cóndor",
+          "funcion estable: Ser-condor que rapta a una majayura y la retiene en una cueva.",
+          "estados declarados: condor, presencia_del_dominio"
+        ],
+        "documented_features": [
+          "Ser-condor que rapta a una majayura y la retiene en una cueva."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Juramía, el cóndor. Ser-condor que rapta a una majayura y la retiene en una cueva.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Ser-condor que rapta a una majayura y la retiene en una cueva.",
+          "estados autorizados: condor, presencia_del_dominio",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "condor"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "juramia": {
+      "name": "Juramía, el cóndor",
+      "kind": "criatura",
+      "description": "Ser-condor que rapta a una majayura y la retiene en una cueva.",
+      "aliases": [],
+      "states": [
+        "condor",
+        "presencia_del_dominio"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "juramia__identity_sheet",
+        "juramia__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-del-condor"
+      ],
+      "evidence": [
+        {
+          "myth": "el-hijo-del-condor",
+          "field": "mito",
+          "note": "Cóndor que inicia el cautiverio."
+        }
+      ]
+    }
+  }
+}

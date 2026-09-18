@@ -1,0 +1,252 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-20-guanuru-medium",
+    "myth_slug": "guanuru",
+    "model_ids": [
+      "guanuru__presence_model",
+      "yoruja__presence_model",
+      "pariente_muerto_guanuru__identity_sheet",
+      "pariente_muerto_guanuru__state_sheet",
+      "mariposa_blanca_guanuru__identity_sheet",
+      "piache_guanuru__identity_sheet",
+      "habitante_enfermo_guanuru__identity_sheet",
+      "habitante_enfermo_guanuru__state_sheet",
+      "familia_casa_guanuru__group_grammar",
+      "casa_desocupada_guanuru__spatial_model",
+      "pasos_sin_huellas_guanuru__phenomenon_rule",
+      "craneo_caballo_proteccion__object_sheet",
+      "sepultura_guanuru__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_after_primary_reaudit"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "yoruja__presence_model",
+    "pariente_muerto_guanuru__state_sheet"
+  ],
+  "models": {
+    "yoruja__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "yoruja"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Nombre de traduccion que no se fija como jerarquia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Yorujá. Funcion visual: Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Yorujá",
+          "funcion estable: Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Yorujá. Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pariente_muerto_guanuru__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "pariente_muerto_guanuru"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Aparece en sueño con rostro conocido."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Pariente muerto de la casa. Funcion visual: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Pariente muerto de la casa",
+          "funcion estable: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+          "estados declarados: muerto_recordado, aparicion_en_sueno"
+        ],
+        "documented_features": [
+          "Familiar que aparece en sueño y cuestiona el trato dado a una visita."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Pariente muerto de la casa. Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+          "estados autorizados: muerto_recordado, aparicion_en_sueno",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "muerto_recordado",
+            "aparicion_en_sueno"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "yoruja": {
+      "name": "Yorujá",
+      "kind": "criatura",
+      "description": "Nombre de traduccion variable que no debe colapsarse con Guanurú, Wanurü o yolujaa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "yoruja__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Nombre de traduccion que no se fija como jerarquia."
+        }
+      ]
+    },
+    "pariente_muerto_guanuru": {
+      "name": "Pariente muerto de la casa",
+      "kind": "personaje",
+      "description": "Familiar que aparece en sueño y cuestiona el trato dado a una visita.",
+      "aliases": [],
+      "states": [
+        "muerto_recordado",
+        "aparicion_en_sueno"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "pariente_muerto_guanuru__identity_sheet",
+        "pariente_muerto_guanuru__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guanuru"
+      ],
+      "evidence": [
+        {
+          "myth": "guanuru",
+          "field": "mito",
+          "note": "Aparece en sueño con rostro conocido."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-13",
+  "status": "produced_reviewed_editorial_candidate",
+  "community": "Ette Ennaka / Chimila",
+  "community_id": 29,
+  "myth_id": 352,
+  "title": "La Gran Cacica y el origen del agua",
+  "user_approved": false,
+  "culturally_certified": false,
+  "published": false,
+  "keyframes": 0,
+  "api_model": "gpt-image-2.5-sunburst",
+  "runner": "official imagegen CLI",
+  "new_api_calls": 2,
+  "new_outputs": 2,
+  "retained_outputs": 1,
+  "documentary_images_uploaded": 0,
+  "source_narrative_sha256": "4de565ae3fa4c4eb0ae1cb9e6a7579c5a60eb60b97244ca445ff7eb141ef54a8",
+  "cast_source": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/cacica-dos-hombres-v1.jpeg",
+  "previous_selection_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-01/el-agua.selection.v1.json",
+  "entries": [
+    {
+      "piece": "entrada",
+      "mode": "edit",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-02/el-agua/entrada-elenco-v2.jpeg",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/entrada-v1.jpeg",
+      "previous_sha256": "6906880062b4a93a2fb448d4c534b1f83def4b5f0d8ca92fb8e12dcf2cfcd698",
+      "sha256": "2f35b59106fe23566cdbceac0a931a885c506c13c9e39bc8727f43a434a91563",
+      "bytes": 340891,
+      "width": 1536,
+      "height": 1024,
+      "format": "jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-02/prompts/el-agua-entrada-elenco-v2.txt",
+      "prompt_sha256": "7c7e5663aa325f90606e12c1baaa4ca16cf7b616753e10e5b891497f0c6f400e",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/entrada-v1.jpeg",
+          "sha256": "6906880062b4a93a2fb448d4c534b1f83def4b5f0d8ca92fb8e12dcf2cfcd698"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/cacica-dos-hombres-v1.jpeg",
+          "sha256": "5905f9cea82174a8f8c968feecca9406ba83336dd1fc2285b574554a4a01583e"
+        }
+      ],
+      "new_api_call": true,
+      "model": "gpt-image-2.5-sunburst"
+    },
+    {
+      "piece": "acto",
+      "mode": "edit",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-02/el-agua/acto-elenco-v2.jpeg",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/acto-v2.jpeg",
+      "previous_sha256": "7e469f584578d6b05db5af7e3daab1ebf822d6b5f8353b85da8311d7466a1f6e",
+      "sha256": "22e37205a317318eea9040f4089a9d6ad41951683cbb51b1355ccc6d6d18e5c1",
+      "bytes": 262373,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-02/prompts/el-agua-acto-elenco-v2.txt",
+      "prompt_sha256": "e4582dcadc51ec6bda0242d291812631f6f245f309fcd765977e574cc9c38734",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/acto-v2.jpeg",
+          "sha256": "7e469f584578d6b05db5af7e3daab1ebf822d6b5f8353b85da8311d7466a1f6e"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/revision-personajes-01/cacica-dos-hombres-v1.jpeg",
+          "sha256": "5905f9cea82174a8f8c968feecca9406ba83336dd1fc2285b574554a4a01583e"
+        }
+      ],
+      "new_api_call": true,
+      "model": "gpt-image-2.5-sunburst"
+    },
+    {
+      "piece": "huella",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/huella-v1.jpeg",
+      "sha256": "87234bdfc15756d6541f54651d00419f6eee115438a99155d43cfdc7c3eab28f",
+      "bytes": 259974,
+      "width": 1024,
+      "height": 1024,
+      "format": "jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/tripticos/produccion-api-01/prompts/el-agua-huella-v1.txt",
+      "prompt_sha256": "aeedb8386acbf1482af2e1fd8154c2f06b246d53046dcf5c9671c434c5da0ba3",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/l04-terreno-pozos-secos-llenos-master-v1-refined.jpeg",
+          "sha256": "57731d548dc69fe487356e3e3450f893ea528a13a2689f4b603bcb93384f1807"
+        }
+      ],
+      "mode": "retained_unchanged",
+      "previous_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-01/el-agua/huella-v1.jpeg",
+      "previous_sha256": "87234bdfc15756d6541f54651d00419f6eee115438a99155d43cfdc7c3eab28f",
+      "new_api_call": false,
+      "model": "gpt-image-2.5-sunburst@produccion-api-01"
+    }
+  ]
+}
+

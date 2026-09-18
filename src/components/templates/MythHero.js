@@ -95,6 +95,7 @@ export function MythHero({ myth }) {
         <ImageFrame
           src={desktopSrc}
           mobileSrc={mobileSrc}
+          unoptimized={Boolean(myth.imageUrl)}
           alt={myth.title}
           ratio={null}
           priority

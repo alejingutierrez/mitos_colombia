@@ -1,0 +1,2293 @@
+{
+  "schema": "ette-all-myth-keyframe-plan/v1",
+  "date": "2026-09-13",
+  "community_id": 29,
+  "user_request": "ahora hagaos todos los keyframes de todos los mitos chimila",
+  "total_myths": 23,
+  "total_planned_keyframes": 157,
+  "preserved_keyframes": 8,
+  "new_planned_keyframes": 149,
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "medium",
+  "native_size": "1024x1536",
+  "adaptation_9_16": false,
+  "animation": false,
+  "publication": false,
+  "max_concurrent_myths": 3,
+  "within_myth_sequential_visual_gate": true,
+  "existing_myth_selection": {
+    "schema": "ette-keyframe-complete-selection/v1",
+    "myth_id": 352,
+    "myth": "el-agua",
+    "myth_title": "La Gran Cacica y el origen del agua",
+    "date": "2026-09-13",
+    "authorization": "si me gusta adelante con la producción completa",
+    "scope": "Eight keyframes of myth352 only; not all 23 myths",
+    "status": "eight_frames_produced_six_new_frames_user_review_pending",
+    "selected": [
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-01/prompts/el-agua-kf01-aire-v2.txt",
+        "sha256": "72732b1ceb389d13784f43edc6dd40b1915d47d30135e29cb1b1d09eb55ef76b",
+        "prompt_sha256": "c7976eddece8584a964297a3619e45dfcedbc6aa0eb9868a29714f1155d1c210",
+        "bytes": 324144,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "id": "kf01-aire-v2",
+        "frame_id": "kf01",
+        "revision": 2,
+        "selected": true,
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-v1.jpeg",
+            "sha256": "24b7aaeb7398c247283f8bf0b2786d392d06743f3703c6fa34f51e80567a3ba9",
+            "role": "identity-preserving zoom-out target"
+          }
+        ],
+        "duration_seconds": 22.2,
+        "provider": "openai",
+        "model": "gpt-image-2.5-sunburst",
+        "quality": "medium",
+        "mode": "edit",
+        "requested_size": "1024x1536",
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": true,
+        "culturally_certified": false,
+        "approval_message": "si me gusta adelante con la producción completa",
+        "source_batch": "produccion-api-01",
+        "title": "Llegada a una tierra sin agua"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf02-v1.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-01/prompts/el-agua-kf02-v1.txt",
+        "sha256": "91b051c48ad39759b235e267c0d12fc59bd7b599d9bcb3f85474842b4cff9564",
+        "prompt_sha256": "f4d44f26cc09fb60210a4efa2e3ce5f47eb68b6e6e94025e24ffe5c112e00c6d",
+        "bytes": 318801,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "id": "kf02-v1",
+        "frame_id": "kf02",
+        "revision": 1,
+        "selected": true,
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+            "sha256": "72732b1ceb389d13784f43edc6dd40b1915d47d30135e29cb1b1d09eb55ef76b",
+            "role": "previous visually reviewed same-myth keyframe; identities, dress, terrain and material"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-05/u03-macanas-util-excavacion-master-v1-refined.jpeg",
+            "sha256": "c1f027e7b76a78cb7aa2417c92b001af822ad0fb5e3556f9b0c1c66b832ced5d",
+            "role": "narrow digging tool only, not broad macana or weapon story"
+          }
+        ],
+        "duration_seconds": 21.8,
+        "provider": "openai",
+        "model": "gpt-image-2.5-sunburst",
+        "quality": "medium",
+        "mode": "edit",
+        "requested_size": "1024x1536",
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": true,
+        "culturally_certified": false,
+        "approval_message": "si me gusta adelante con la producción completa",
+        "source_batch": "produccion-api-01",
+        "title": "El trabajo común"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf03-v1.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-02/prompts/el-agua-kf03-v1.txt",
+        "sha256": "17ce4c2ecfab8eccd9001e779fa57dd9ef53636401b447d3942393572ffe8046",
+        "prompt_sha256": "06d7336cc8e88f660adf4929e714a52090802e6bdb0a51b31baf4e22f746fc40",
+        "bytes": 344226,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+            "sha256": "72732b1ceb389d13784f43edc6dd40b1915d47d30135e29cb1b1d09eb55ef76b",
+            "role": "previous selected keyframe; sequence order oldest first"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf02-v1.jpeg",
+            "sha256": "91b051c48ad39759b235e267c0d12fc59bd7b599d9bcb3f85474842b4cff9564",
+            "role": "previous selected keyframe; sequence order oldest first"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg",
+            "sha256": "393e2b2c576e3b50670bce81e105c99c9e7fbf6e74daa929562a500545bcf83e",
+            "role": "same-myth approved triptych supporting paper material and palette"
+          }
+        ],
+        "frame_id": "kf03",
+        "title": "La primera comprobación",
+        "id": "kf03-v1",
+        "revision": 1,
+        "source_batch": "produccion-api-02",
+        "provider": "openai",
+        "model": "gpt-image-2.5-sunburst",
+        "quality": "medium",
+        "mode": "edit",
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": false,
+        "culturally_certified": false,
+        "duration_seconds": 30.2,
+        "review_notes": "First report after rest shown by ordinary gestures; one empty completed earth well, same three roles and work stick set aside; no water or added ritual.",
+        "selected": true,
+        "requested_size": "1024x1536"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf04-v1.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-02/prompts/el-agua-kf04-v1.txt",
+        "sha256": "a4ffe6cfeb994f77d3e52a12dfbf8b828476ce88b2297fd36330d40fa69cd552",
+        "prompt_sha256": "96361635579fe1870d63f45d99d1e0ce6523765031c290a2578dd1a1d50f60ed",
+        "bytes": 368888,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf02-v1.jpeg",
+            "sha256": "91b051c48ad39759b235e267c0d12fc59bd7b599d9bcb3f85474842b4cff9564",
+            "role": "previous selected keyframe; oldest first"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf03-v1.jpeg",
+            "sha256": "17ce4c2ecfab8eccd9001e779fa57dd9ef53636401b447d3942393572ffe8046",
+            "role": "previous selected keyframe; oldest first"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg",
+            "sha256": "393e2b2c576e3b50670bce81e105c99c9e7fbf6e74daa929562a500545bcf83e",
+            "role": "same-myth approved triptych; material/palette only"
+          }
+        ],
+        "frame_id": "kf04",
+        "title": "Los pozos siguen vacíos",
+        "id": "kf04-v1",
+        "revision": 1,
+        "source_batch": "produccion-api-02",
+        "provider": "openai",
+        "model": "gpt-image-2.5-sunburst",
+        "quality": "medium",
+        "mode": "edit",
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": false,
+        "culturally_certified": false,
+        "duration_seconds": 21.9,
+        "review_notes": "Exactly three spaced dry earthen wells, same woman and two adult men and cream garments; second failed inspection, no water or new ritual.",
+        "selected": true,
+        "requested_size": "1024x1536"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf05-v1.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-02/prompts/el-agua-kf05-v1.txt",
+        "sha256": "514c8baa43d9b552cceec1eb121d2175c93cd4318fbc12e4829e79aa107aac92",
+        "prompt_sha256": "959f99aa2be6dc8d90140e40ec61d81fe7c10317c8fd1a71507aef950bad9a5a",
+        "bytes": 295031,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf03-v1.jpeg",
+            "sha256": "17ce4c2ecfab8eccd9001e779fa57dd9ef53636401b447d3942393572ffe8046",
+            "role": "previous selected keyframe; oldest first"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf04-v1.jpeg",
+            "sha256": "a4ffe6cfeb994f77d3e52a12dfbf8b828476ce88b2297fd36330d40fa69cd552",
+            "role": "previous selected keyframe; oldest first"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-07/el-agua/acto-papercut-paleta-v7-refined.jpeg",
+            "sha256": "627d7ac311a1ee1abd7da56de926742fabf3da4d6bf7da970ed419220950ef5a",
+            "role": "same-myth approved triptych; material/night palette only"
+          }
+        ],
+        "frame_id": "kf05",
+        "title": "La visita nocturna",
+        "id": "kf05-v1",
+        "revision": 1,
+        "source_batch": "produccion-api-02",
+        "provider": "openai",
+        "model": "gpt-image-2.5-sunburst",
+        "quality": "medium",
+        "mode": "edit",
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": false,
+        "culturally_certified": false,
+        "duration_seconds": 24.4,
+        "review_notes": "Same Cacica alone, upright approaching three dry wells; blue moonlit paper sky, no companions, water or intervention yet; clothing retained.",
+        "selected": true,
+        "requested_size": "1024x1536"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf06-gota-v2.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-02/prompts/el-agua-kf06-gota-v2.txt",
+        "sha256": "37f88e22766aaf26bf50f6a58b905d9c5790c1ac3cc305516bc87270d78d70c6",
+        "prompt_sha256": "f136359c4528d0ebcec727dc5d9bcbd7bc274192b63f28ae644d66247d8167a2",
+        "bytes": 263093,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "duration_seconds": 24,
+        "selected": true,
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf06-v1.jpeg",
+            "sha256": "0229075f3de2c5cd38a06f6c2a1f3aa2aab5d4f5a557702ef29265d1755827b9",
+            "role": "revision_target"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf04-v1.jpeg",
+            "sha256": "a4ffe6cfeb994f77d3e52a12dfbf8b828476ce88b2297fd36330d40fa69cd552",
+            "role": "preceding_frame"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf05-v1.jpeg",
+            "sha256": "514c8baa43d9b552cceec1eb121d2175c93cd4318fbc12e4829e79aa107aac92",
+            "role": "preceding_frame"
+          }
+        ],
+        "frame_id": "kf06",
+        "id": "kf06-gota-v2",
+        "title": "La palabra y la saliva",
+        "revision": 2,
+        "source_batch": "produccion-api-02",
+        "model": "gpt-image-2.5-sunburst",
+        "quality": "medium",
+        "mode": "edit",
+        "provider": "openai",
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": false,
+        "culturally_certified": false,
+        "review_notes": "Gota de papel visible y discreta; Cacica sola de noche y tres pozos secos; revisión focalizada conserva composición y vestuario.",
+        "requested_size": "1024x1536"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf07-v1.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-02/prompts/el-agua-kf07-v1.txt",
+        "sha256": "71d19f38a0dcdc2ab68ee9fa78e779274d6677208d98506096df8491b8835d89",
+        "prompt_sha256": "2bd3e05ad9d1c6a26acb32e9297e79a7b459f948f36ae59f65cd287273c36d25",
+        "bytes": 340231,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf05-v1.jpeg",
+            "sha256": "514c8baa43d9b552cceec1eb121d2175c93cd4318fbc12e4829e79aa107aac92",
+            "role": "preceding_frame"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf06-gota-v2.jpeg",
+            "sha256": "37f88e22766aaf26bf50f6a58b905d9c5790c1ac3cc305516bc87270d78d70c6",
+            "role": "preceding_frame"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg",
+            "sha256": "393e2b2c576e3b50670bce81e105c99c9e7fbf6e74daa929562a500545bcf83e",
+            "role": "same_myth_triptych_material_reference"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf02-v1.jpeg",
+            "sha256": "91b051c48ad39759b235e267c0d12fc59bd7b599d9bcb3f85474842b4cff9564",
+            "role": "approved_male_identity_restoration"
+          }
+        ],
+        "frame_id": "kf07",
+        "id": "kf07-v1",
+        "title": "Agua dulce al amanecer",
+        "revision": 1,
+        "source_batch": "produccion-api-02",
+        "model": "gpt-image-2.5-sunburst",
+        "provider": "openai",
+        "quality": "medium",
+        "mode": "edit",
+        "selected": true,
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": false,
+        "culturally_certified": false,
+        "duration_seconds": 23.3,
+        "review_notes": "Tres adultos en el amanecer; agua azul apagada dentro de los mismos tres pozos. Retorno de los dos hombres apoyado en kf02 aprobado; identidad aproximada, no continuidad pixel-perfect.",
+        "requested_size": "1024x1536"
+      },
+      {
+        "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf08-v1.jpeg",
+        "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-02/prompts/el-agua-kf08-v1.txt",
+        "sha256": "37e6dbfe9758975c64031ed625b9f2f177f2107e27c52cb88c47c3d697a998d6",
+        "prompt_sha256": "8670e33d0ec9a88c76404980e905045081be6fc629539ba120b0a7faff3f58a8",
+        "bytes": 298413,
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "inputs": [
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf06-gota-v2.jpeg",
+            "sha256": "37f88e22766aaf26bf50f6a58b905d9c5790c1ac3cc305516bc87270d78d70c6",
+            "role": "preceding_frame"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-02/el-agua/kf07-v1.jpeg",
+            "sha256": "71d19f38a0dcdc2ab68ee9fa78e779274d6677208d98506096df8491b8835d89",
+            "role": "preceding_frame"
+          },
+          {
+            "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-06/el-agua/entrada-aire-paleta-v6.jpeg",
+            "sha256": "393e2b2c576e3b50670bce81e105c99c9e7fbf6e74daa929562a500545bcf83e",
+            "role": "same_myth_triptych_material_reference"
+          }
+        ],
+        "frame_id": "kf08",
+        "id": "kf08-v1",
+        "title": "Lo que hizo posible el agua",
+        "revision": 1,
+        "source_batch": "produccion-api-02",
+        "model": "gpt-image-2.5-sunburst",
+        "provider": "openai",
+        "quality": "medium",
+        "mode": "edit",
+        "selected": true,
+        "status": "produced_visually_reviewed_editorial_candidate",
+        "user_approved": false,
+        "culturally_certified": false,
+        "duration_seconds": 18.6,
+        "review_notes": "Detalle intencional de mano, borde de tierra y agua en capas de papel; conserva porción de falda y pierna al margen izquierdo, desviación menor del encuadre de sólo brazo solicitado. Sin rostro ni personas adicionales.",
+        "requested_size": "1024x1536"
+      }
+    ],
+    "pending_frames": [],
+    "user_approved_frames": [
+      "kf01",
+      "kf02"
+    ],
+    "new_frames_pending_user_approval": [
+      "kf03",
+      "kf04",
+      "kf05",
+      "kf06",
+      "kf07",
+      "kf08"
+    ],
+    "delivery": {
+      "native_size": "1024x1536",
+      "native_aspect_ratio": "2:3",
+      "cropped": false,
+      "adaptation_9_16_complete": false,
+      "animation_complete": false,
+      "published": false
+    },
+    "storyboard_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/preproduccion-01/el-agua.storyboard.v1.json",
+    "cultural_certification": false
+  },
+  "myths": [
+    {
+      "id": 346,
+      "slug": "creacion-chimila",
+      "narrative_sha256": "ac78c9861d8ac508b13418699c2366dec525b5431f79ea840b39321efdf7a964",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/creacion-chimila/entrada-v1.jpeg",
+          "sha256": "c1acff19b86a51978e2b47ad9d6628a66a7de762b0f8cce4658794c737937c57"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/creacion-chimila/acto-llegada-v2.jpeg",
+          "sha256": "bc4d4a6d1ac4c709ea46e55931e24491756e47635bdb42b469a524d09c08921f"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/creacion-chimila/huella-simbolo-v2.jpeg",
+          "sha256": "8ff4e6969f125cb4ca8c6a84f5908c1a061ec1cea840d569800ff5f328a42d24"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "La creación de la tierra y los Paretare",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "La greda inicial",
+          "scene": "Papá Grande alone kneels in the uninhabited beginning, shaping one small portion of ochre clay represented by flat paper. Bare earth, no plants, crops, animals or people yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Añadir tierra",
+          "scene": "Same creator adds a second and third portion to extend the same layered earth. Wider oblique view: the land is larger, still entirely bare. No planets or maize.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La tierra vacía",
+          "scene": "A broad view of the now extensive empty earth; the same creator looks over it. No other beings or agricultural plants.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "El primer tigre",
+          "scene": "Same creator releases one large jaguar, a natural spotted flat-paper felid, onto the bare land. Only creator and jaguar. No combat.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Los primeros pueblos",
+          "scene": "Several adult humans, men and women, appear on the new land. Use the same-myth cast reference without assigning invented uniforms or emblems to the other named peoples. No fighting scene.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "La primera pareja Ette",
+          "scene": "First Ette man and companion woman stand together before Papá Grande in the upper world, separate from the land below. Exactly three adult people; their faces must match same-myth references. No maize.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "La negativa a bajar",
+          "scene": "Same first man hesitates at the upper-world edge, looking towards distant land; creator stands behind him, companion nearby. No one falling, no heroic flight or wings.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf07-v1.txt"
+        },
+        {
+          "frame_id": "kf08",
+          "title": "Llegada Paretare",
+          "scene": "Following the narrated push and descent, show the same first man alive and standing on ordinary land near San Ángel with room around him. The fall itself occurs off screen; no impact injury. No creator or new settlement imposed.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/creacion-chimila/kf08-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/creacion-chimila-kf08-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 347,
+      "slug": "sol-y-luna",
+      "narrative_sha256": "58ba480bf2f956aa95477c132a698cb3108bee2bf5da24ab0545a47121196d97",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/entrada-v1.jpeg",
+          "sha256": "a88f05cee8b48841d603d3fd288a6779e6627a58ba4075eb479ba60163128407"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/acto-v1.jpeg",
+          "sha256": "a77d357b31c080518df6c39c4fce0898354c0599285cd53d738edb26a75f1e59"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/sol-y-luna/huella-v1.jpeg",
+          "sha256": "d6e99d8e875506f15c3dc08909bfb6d9a6c997ca76f0d404b97b6887bbfd7cbd"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Sol y Luna",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Hermana Sol, hermano Luna",
+          "scene": "One younger adult female Sol and one older adult male Luna in the upper world, same-myth reference faces and garments. Distinguish their feminine/masculine identities; not a romantic pair, no cosmic dance.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "La primera hermana solar",
+          "scene": "Earlier female solar sister represented by a single softly golden paper sun rising over the western end of the landscape. A different age of light, not three suns together. No moon or modern buildings.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Días muy largos",
+          "scene": "Same first-age landscape under one sun, ordinary adults working in the land. Suggest duration by a quiet wide scene, no numbers, clocks or timeline labels.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "La segunda hermana",
+          "scene": "A single second-age sun rises behind Sierra Nevada paper ridges. No other sun, no battle or death image; distinct cooler terrain view.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La hermana actual",
+          "scene": "The present third sister is represented by one sun rising in the current eastern direction, above low foothills. No three simultaneous sisters or suns.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Noche y ausencia",
+          "scene": "Quiet night over inhabited land; one older male lunar figure or moon as in reference, sister Sol absent and resting off screen. Small adults look towards the unlit horizon with concern, no invented eclipse mechanism.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/sol-y-luna/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/sol-y-luna-kf06-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 348,
+      "slug": "el-poblamiento",
+      "narrative_sha256": "1f63226d523bde0b05cd88b35248e87dbc0ddd39054c9f5213b006bc88cf3655",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-poblamiento/entrada-v1.jpeg",
+          "sha256": "e2047ec7c34d2a1f264a9c629327ab222e8b5f7eb3055a4b6945ca641ea79926"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-poblamiento/acto-sol-unico-v2.jpeg",
+          "sha256": "99dc24a5fff34788e6b49df760d79779a600f707c08202f2db0a99dbd331a1b7"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-poblamiento/huella-v1.jpeg",
+          "sha256": "85837bfa19bd4ca7224436835d20705b1ef7fb73476bbe8e16c1a68625598e05"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Las tres flechas del poblamiento",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Sin rumbo",
+          "scene": "Small group of same-myth adult Ette on wet forested land, searching a path; water exists but no food abundance or potable-water discovery.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-poblamiento/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-poblamiento-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Arco iris y tres flechas",
+          "scene": "Papá Grande holds a broad muted rainbow-shaped flat-paper bow and exactly three separate cane arrows before choosing directions. No magic beam or modern map.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-poblamiento/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-poblamiento-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La primera señal",
+          "scene": "One cane arrow lies safely in the sabanna ground near San Ángel; a small adult group follows this first direction. No city founding or extra flying arrows.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-poblamiento/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-poblamiento-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Hacia el Cesar",
+          "scene": "Second cane arrow marks the river Cesar's wooded bank; different small adult group approaches safely on dry ground. No drinking claim.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-poblamiento/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-poblamiento-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Hacia el litoral",
+          "scene": "Third cane arrow marks coastal ground towards Cartagena; adults follow towards the distant shore. No colonial wall, modern city or ships.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-poblamiento/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-poblamiento-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Distribuidos en la tierra",
+          "scene": "Broad landscape of inland sabanna, river and distant coast with separated small adult groups, no political boundaries or map text. Three directions, no triumph ceremony.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-poblamiento/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-poblamiento-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Caña y luz nocturna",
+          "scene": "Nighttime detail of one maná cane shaft beside an adult hand, faint warm paper glint on the cane to evoke the narrated solar link. No wound, puncture, blood, second sun, magic attack or literal new event. Editorial closing detail, not invented ritual.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-poblamiento/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-poblamiento-kf07-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 349,
+      "slug": "primeras-guerras",
+      "narrative_sha256": "a019441aeec7d333921a3f0d74af6138f0699ad123decf89924155429cdc9d03",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/primeras-guerras/entrada-v1.jpeg",
+          "sha256": "2a801117b6416979da42311f0d5237fd49e132873b088a10d94f6640b894b927"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/primeras-guerras/acto-v1.jpeg",
+          "sha256": "456d67e2ea336bf743adcf1e8871e6abb2a1037fede0db9480b22a6bddb23d5f"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/primeras-guerras/huella-papel-v2.jpeg",
+          "sha256": "1ffd1c091da155b607121e803519a70d7756b20d7c75c2d5ab4db3d422932f5d"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Memoria de las primeras guerras",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Piedras de moler",
+          "scene": "Quiet forest-edge clearing with ordinary grinding stones left on the earth, no people, battlefield, temple or monument.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/primeras-guerras/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/primeras-guerras-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "El encuentro",
+          "scene": "Two small groups of adult people at some distance facing each other in the same territory; sober tension, no invented tribal uniforms, named heroes or gold wealth.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/primeras-guerras/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/primeras-guerras-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "El desplazamiento",
+          "scene": "One small adult group walks away through the forest while another remains at a distance. Expulsion is conveyed without visible assault or celebratory victory.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/primeras-guerras/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/primeras-guerras-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Otra frontera",
+          "scene": "Separate adult groups near forest paths, distant and incompatible cohabitation suggested by separation. No combat, corpses or invented geographic border.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/primeras-guerras/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/primeras-guerras-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Memoria contada",
+          "scene": "An older adult storyteller speaks quietly to two adult listeners in an ordinary settlement, recalling the conflicts. No colonizer arriving to rescue or celebrate reconciliation, no treaty.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/primeras-guerras/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/primeras-guerras-kf05-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 350,
+      "slug": "el-diluvio",
+      "narrative_sha256": "d8e182862a5ffab5c192a66f48fe4c9fa3ce6ca0dbb4ae40882e24cc7bfd239b",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-diluvio/entrada-v1.jpeg",
+          "sha256": "80e19e109a273ae713e5892c2b73156fe7ba2120460a3f3179fd012f374a028d"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-diluvio/acto-refugio-inundado-v2.jpeg",
+          "sha256": "d4cad92d9487e45fed597e5e77b44c59c0d8f8c1cfaf8004e66a0377db5101ea"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-diluvio/huella-v1.jpeg",
+          "sha256": "6df1e0160e705c712fc256d80d3fa03acb6163efdf9538684b2cef691546369f"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "El diluvio, la lechuza y el totumo",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Lluvia interminable",
+          "scene": "Wide heavy muted paper rain over forest and flooded fields, no visible victims or drowning.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "La casa subterránea",
+          "scene": "A restrained cutaway of round underground stone refuge with rooms stacked vertically; one adult family rests safely in the upper room. No pyramid or ark.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La abertura",
+          "scene": "One adult woman lifts a roof stone in the same underground upper room. Water is above the roof but not yet pouring; family stays back.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "El agua entra",
+          "scene": "A channeled sheet of blue paper water enters the roof gap, family retreats towards a lower room safely. No drowning bodies or violence.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La lechuza",
+          "scene": "After rains cease, a solitary owl near the refuge entrance in dim light, the woman transformed off screen. No simultaneous woman/owl hybrid or curse beam.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "El totumo sobreviviente",
+          "scene": "On a high hill one calabash tree holds one karau bird and one opossum, the latter hanging by its tail. Water recedes below, no other animals yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Salir del refugio",
+          "scene": "Surviving same adult family emerges from the same round refuge onto sodden land after water recession. No owl depicted as rescued human.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf07-v1.txt"
+        },
+        {
+          "frame_id": "kf08",
+          "title": "Secar con fuego",
+          "scene": "Adults start a small controlled patch of paper fire on wet ground at a distance, attempting to dry land. No threat to people or giant inferno yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf08-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf08-v1.txt"
+        },
+        {
+          "frame_id": "kf09",
+          "title": "El segundo peligro",
+          "scene": "Wind has spread paper flames across vacant woodland and ruined crop ground; human family visible only safely far away. No burning bodies or rescue battle.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf09-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf09-v1.txt"
+        },
+        {
+          "frame_id": "kf10",
+          "title": "Volver a sembrar",
+          "scene": "After fire ends, same adults replant modest shoots and rebuild an ordinary simple house on recovered ground. No instant lush paradise.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-diluvio/kf10-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-diluvio-kf10-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 351,
+      "slug": "el-fuego",
+      "narrative_sha256": "989ef186e2c3be2c7e25816919fbec23ca1abf0a7d64b6dff14950c3bb5e61f7",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-fuego/entrada-v1.jpeg",
+          "sha256": "58b4471bc16d8142608e295a4ee84abfd319f25ca4d2252d27af412271648528"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-fuego/acto-v1.jpeg",
+          "sha256": "88a29d0ea9c54c12ff9fc55bc518ea09b5036982780bb1613a29113847a17b65"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-fuego/huella-v1.jpeg",
+          "sha256": "fdd56db62a80ff2d001ff13a720bdbe735566a167ff758e80078aa9807bc98c5"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Huhum, el sapo que trajo el fuego",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Comida al sol",
+          "scene": "Adult women turn food on one large sun-warmed stone in the community. No ember, smoke or cooking pot with fire yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "La otra ribera",
+          "scene": "Night view across the Gran Río: distant enemy adults around an ordinary fire. Ette adults observe from this bank; no bridge or approach.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La decisión de Huhum",
+          "scene": "Same adult Huhum alone at this riverbank calmly prepares to cross, same face/garment from references. No crown, battle or ritual glyph.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Sapo Mamu",
+          "scene": "Huhum is now one large toad on this same bank, human form absent. No frog-human hybrid; damp brown cut-paper toad, no ember yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Cruzar el río",
+          "scene": "Same toad swims across muted blue paper river at night. No flame on back, floating boat or person.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Ante la candela",
+          "scene": "Toad beside the far-bank fire while adult diners step away in surprise. Exactly one toad, ordinary fire with one small ember accessible, no pursuit.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Volver con la brasa",
+          "scene": "Same toad swims back at night; discreet warm glow at closed mouth suggests carried ember, no fire trail on water or burning flesh.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf07-v1.txt"
+        },
+        {
+          "frame_id": "kf08",
+          "title": "Entregar el fuego",
+          "scene": "On the home bank the toad releases one small paper ember onto dry ground, adult Ette gather safely to tend it. Huhum remains toad.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf08-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf08-v1.txt"
+        },
+        {
+          "frame_id": "kf09",
+          "title": "Cuidar la candela",
+          "scene": "Night later, one adult woman adds a short wood piece to the community fire while the same toad nearby calls. No transformation back into man.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-fuego/kf09-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-fuego-kf09-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 353,
+      "slug": "el-maiz",
+      "narrative_sha256": "6a6efa4bf7bf6d6a4ca6558d7c2796e5ef2833f5ed963808df33ff19acbe4152",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/entrada-v1.jpeg",
+          "sha256": "a904aa3aabe1d1744e2b7907b71ff4cc1749de16a2ebd8c98b1737bb67bc6d1a"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/acto-ceiba-v2.jpeg",
+          "sha256": "212ed281d47b007508511e0160f6f03176cd9897bdb2ab88e720d9fe0cfac170"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-maiz/huella-ceiba-v2.jpeg",
+          "sha256": "4dbb527af2ec1160c55ef186de52574c7ea8cfe33ce34d923f3613431ee3c346"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "La ceiba que guardaba el maíz",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Antes del maíz",
+          "scene": "Adults with modest cassava and leafy foods at a forest clearing. No corn kernels available in their hands or fields yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-maiz/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-maiz-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "La tusa en lo alto",
+          "scene": "Same large ceiba with one corn cob core held high among the branches. Small workers observe from below; no person climbing.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-maiz/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-maiz-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Cortar de día",
+          "scene": "Same adults make shallow cuts at base of same huge ceiba with simple paper tools. Tree remains standing, one cob high above, no falling hazard.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-maiz/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-maiz-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "El tronco restaurado",
+          "scene": "Next morning workers return to the same ceiba and see its intact base, cuts now absent. No glowing wound-healing beam.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-maiz/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-maiz-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Otra jornada",
+          "scene": "Later dusk workers continue the cuts instead of leaving; same tree/cob/cast, no women replacing workers or new magical helper.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-maiz/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-maiz-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Medianoche y semilla",
+          "scene": "At midnight the ceiba is already down on the ground, the fall off screen. Adults safely extract seed from the cob on its branches, no falling trunk above bodies.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-maiz/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-maiz-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Sembrar lo obtenido",
+          "scene": "Next day same adults plant modest corn kernels in ordinary soil near the fallen trunk; no instantly mature cornfield or stolen Aruaco crop.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-maiz/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-maiz-kf07-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 354,
+      "slug": "el-gran-verano",
+      "narrative_sha256": "cf5c49a0287d96b9641827fcc457ab6f1b6710147bd69f307d2f317ee5f25d14",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-gran-verano/entrada-v1.jpeg",
+          "sha256": "9a5fcdb76b4816b50fb30c447e30e9132a6b931e960b85b1bd3f598957e73a1e"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-gran-verano/acto-v1.jpeg",
+          "sha256": "f80fd60d355c7d8ea1c71a294cc0c3918c7f7e5150aaf718341bf2aa3d082eeb"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-gran-verano/huella-papercut-v2.jpeg",
+          "sha256": "f210cdaa07f953c0a6051f73037bd2114f53be9696130befa24c96abebad40c7"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "La semilla guardada durante el gran verano",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Años secos",
+          "scene": "Wide dry land, empty riverbed and failed crop stalks, small adults far away; no corpses, lush harvest or flood.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-gran-verano/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-gran-verano-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Sin semilla",
+          "scene": "After the long drought, same adults inspect an empty cultivation plot with concern. Ground remains hot/dry, no rescued grain yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-gran-verano/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-gran-verano-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La mochila guardada",
+          "scene": "Same adult man opens one small fique shoulder bag and shows a little preserved corn seed to two adults. No treasure chest or magic glow.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-gran-verano/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-gran-verano-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Buscar humedad",
+          "scene": "Adults compare dry earth with one moist fallen log nearby. Keep tiny seed supply preserved in the bag, no premature sowing on hostile soil.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-gran-verano/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-gran-verano-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Sembrar en el tronco",
+          "scene": "Same adults carefully place a few seeds onto the moist fallen tree trunk, NOT directly in dry earth. No huge pile of grain.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-gran-verano/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-gran-verano-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "La cosecha recuperada",
+          "scene": "Later corn plants grow FROM THE SAME LOG and adults gather a modest successful crop. Background still recovering, no god or personal prize.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-gran-verano/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-gran-verano-kf06-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 355,
+      "slug": "el-algodon",
+      "narrative_sha256": "b82bb0eb9a110335e1e6a6d7cf0af7e2be3e0b37f66c21cc581b58fcbf54b8cf",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-algodon/entrada-v1.jpeg",
+          "sha256": "e74aee8a0bb4b657e5801f78db6f6c01ecf25dfe3af82230258b52f93744b27a"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-algodon/acto-v1.jpeg",
+          "sha256": "cc6ce054659774745c3b49a112308e87c92bdf27abc2450f1a311b9ae81d0eeb"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-algodon/huella-v1.jpeg",
+          "sha256": "4e79411fb144476da7bbb7d0175bfa1722d41b6d6346ec1e89a12fe119abe939"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "La semilla de algodón compartida",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Semilla desde el comienzo",
+          "scene": "Papá Grande gives first adult Ette man one small bag of cotton seeds in the beginning scene, same-myth references. No corn cob or spun cloth workshop.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-algodon/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-algodon-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Una visita",
+          "scene": "Later ordinary Ette adult host stands by his house as one Aruaco adult visitor approaches and asks for seed. Exactly two adults; not Papá Grande at this later stage.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-algodon/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-algodon-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La advertencia",
+          "scene": "Same host and visitor converse quietly at the house; host cautious open hand, visitor attentive. No threats enacted, murderous crowd or reconciliation banners.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-algodon/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-algodon-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Insistir y compartir",
+          "scene": "Same two adults, host places a few cotton seeds into visitor's open palm. No new gift, money or handshake treaty.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-algodon/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-algodon-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Sembrar algodón",
+          "scene": "Same visitor alone plants received seeds in a modest plot near his home. No soldiers waiting or punishment.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-algodon/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-algodon-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "El cultivo posible",
+          "scene": "Later visitor beside modest grown cotton plants with white bolls, alive and unharmed. No collective peace celebration or elaborate weaving lesson.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-algodon/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-algodon-kf06-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 356,
+      "slug": "el-palo-de-agua",
+      "narrative_sha256": "06834228303049d98b8e7a4216366e2ad86b1c4efe695146c3f4225294e782e7",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/entrada-v1.jpeg",
+          "sha256": "400e7cc416bd27715e5b1965fd10b922851f33bdb13584e4129bcf1620c2cf87"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/acto-ajuste-v2.jpeg",
+          "sha256": "f893ed9109d388fc375ef80f354cf3b48653aaa68420f6e42ddb556363f152aa"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-palo-de-agua/huella-ajuste-v2.jpeg",
+          "sha256": "4f5a6f49d8090246fce9821b46a17e71f8557826c8626af57f8b475dea7e592d"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "El palo que abrió el agua",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Cortar el palo",
+          "scene": "One same-myth father adult cuts a plain stick in forest, no children or water spring yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Clavarlo profundo",
+          "scene": "Same father pushes same plain stick vertically deep into ordinary soil at a clearing. No well, pool or magic glow.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La prueba familiar",
+          "scene": "Father calls his exactly three sons, depicted as adult young men as in approved cast, around same firmly planted stick. Exactly four people.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Primer intento",
+          "scene": "First adult son pulls at same planted stick, unsuccessfully. Father and other two adult sons watch, no laughter or water.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Segundo intento",
+          "scene": "Second distinct adult son tries same planted stick; it stays fixed, father and other two watch. No spring yet, no extra fifth person.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "El tercer hijo",
+          "scene": "Third adult son succeeds lifting the same stick from soil; opening newly exposed, first small paper water spurt emerges. All four stand safely outside opening.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "El brote",
+          "scene": "Same small ground opening now releases abundant layered paper water, third son holds lifted stick away from it, father and other two sons watch. No river formation claim or hero coronation.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-palo-de-agua/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-palo-de-agua-kf07-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 357,
+      "slug": "la-mala-mujer",
+      "narrative_sha256": "b28711f7a91db18f932e9205ce0bbbce4585057b426d9533433cc923d01cb9fc",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/la-mala-mujer/entrada-v1.jpeg",
+          "sha256": "0ffb69ad86fe04ccb1bd04c13fb8a0e59a98ad91023ce3457f3e6cd72dca5c77"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/la-mala-mujer/acto-v1.jpeg",
+          "sha256": "606b32f4de39e5bb80f8ec374cee2951f136b3839434c5a410e25b3c86e6b63d"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/la-mala-mujer/huella-v1.jpeg",
+          "sha256": "b699e488d7a9f54cd3471e3a2c9652e91f58fcce3d68e32177f9813959027f1d"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "La llamada «mala mujer»",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Anciano en casa",
+          "scene": "Same frail elderly adult father sits at home with adult wife and two adult sons. Plain clothes as reference, no festive feathers yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/la-mala-mujer/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/la-mala-mujer-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Los hijos se alejan",
+          "scene": "Two same adult sons travel through forest on a tapir hunt; bows lowered, no animal killed or ceremonial dress.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/la-mala-mujer/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/la-mala-mujer-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Trabajar enfermo",
+          "scene": "Elderly father alone labors lightly in a sunny crop clearing, weak and tired. No wife physically assaulting him.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/la-mala-mujer/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/la-mala-mujer-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "La sombra",
+          "scene": "Empty quiet shade under a tree in same clearing, the elder's death off screen. No corpse, grave, divine punishment or new event.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/la-mala-mujer/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/la-mala-mujer-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "El padre aparecido",
+          "scene": "Adult sons encounter SAME older father standing in clean forest clearing, now achiote-colored paper skin, new skirt, chest ribbon, threads at limbs, red/yellow feather crown and small macaw-tail accents as explicitly narrated. No generic carnival outfit or young replacement.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/la-mala-mujer/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/la-mala-mujer-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "La entrega",
+          "scene": "Same decorated older father gives one macana to his sons as wind paper leaves partially obscure him. No assault shown or magical energy beam.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/la-mala-mujer/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/la-mala-mujer-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Después del viento",
+          "scene": "Sons stand alone in same clearing after father's figure disappears; one carries received macana lowered. The fatal return to mother is off screen, not celebrated, not rewritten into forgiveness or justice.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/la-mala-mujer/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/la-mala-mujer-kf07-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 358,
+      "slug": "los-muertos-en-el-monte",
+      "narrative_sha256": "d6c0bd4c8fa625626ad0dc0f8d991ec8ed7aea84ff817127d00ad23260c69a82",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-muertos-en-el-monte/entrada-casa-ordinaria-v2.jpeg",
+          "sha256": "468b9f1c4000f2729db799c97f3bc526f3c97bccc941b3cd909bfe3c3b60ed02"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-muertos-en-el-monte/acto-v1.jpeg",
+          "sha256": "ff24d06ffaa689ad92ffa60604e38147e96aa933418c2ecf82ce9a5c0bb27e92"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-muertos-en-el-monte/huella-v1.jpeg",
+          "sha256": "e39e189f38a2b5d60f0f94516801888cf105d85eda616bc33a4531d32cc90f42"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "La casa de los muertos en el monte",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Elegir el claro",
+          "scene": "Small ordinary adult figures of the dead arrive at forest clearing. Opaque paper people, not glowing ghosts or skeletons.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-muertos-en-el-monte/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-muertos-en-el-monte-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Hacer una casa",
+          "scene": "Same dead adults construct one ordinary round thatched house in clearing. No portal, cemetery or occult altar.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-muertos-en-el-monte/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-muertos-en-el-monte-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "El hombre perdido",
+          "scene": "One living adult man approaches same house from forest path, no supernatural pursuer.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-muertos-en-el-monte/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-muertos-en-el-monte-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Una lengua ajena",
+          "scene": "Inside ordinary house, living visitor asks seated dead adults for the path; they quietly respond. No speech balloons or invented glyphs, no screaming.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-muertos-en-el-monte/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-muertos-en-el-monte-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Salir del límite",
+          "scene": "Same living man hurries away along forest path, house behind. Dead remain inside, no pursuit or gift.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-muertos-en-el-monte/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-muertos-en-el-monte-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Contarlo en casa",
+          "scene": "Same man speaks to two adult companions at his own ordinary home, distinct from dead's clearing. Their concern is sober; no heroic ceremony.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-muertos-en-el-monte/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-muertos-en-el-monte-kf06-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 359,
+      "slug": "los-brujos",
+      "narrative_sha256": "658293bfe396188589b392b881694a293d8b867b88fb965fb3c4a78b13918afb",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-brujos/entrada-v1.jpeg",
+          "sha256": "884d485d2dbedd948b719b29c8b2eefffe722b222284e8d2808d41b08137d11d"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-brujos/acto-v1.jpeg",
+          "sha256": "13cfa5f9225c52eba639e38d93a2ecc7b49d8cbb84cd94e07a0f89797483c1dd"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-brujos/huella-v1.jpeg",
+          "sha256": "89ea03480419ee25ae18728fed2c31cf336c8ff832420ca1dc6ed84048490d45"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Los buenos y los malos brujos",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Cuidar y llamar lluvia",
+          "scene": "One ordinary elder healer stands with two adults in modest clearing as restrained rain begins after dryness. No mystical staff, aura or extravagant costume.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-brujos/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-brujos-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "La duda del monte",
+          "scene": "One natural jaguar in dense forest, no human hybrid or explicitly demon face. It may be animal or transformed dead, identity left uncertain.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-brujos/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-brujos-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Una casa al anochecer",
+          "scene": "Three adult travelers approach same-myth round house at dusk. No visible corpse or grave inside.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-brujos/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-brujos-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "La advertencia",
+          "scene": "Two travelers signal caution while the third considers entering the same round house. No attack yet or invented elder guarding entrance.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-brujos/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-brujos-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Ignorar el aviso",
+          "scene": "One adult traveler rests inside house; his two adult companions remain clearly outside. Ordinary night, no jaguar attacking body.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-brujos/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-brujos-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "El tigre llega",
+          "scene": "Natural large jaguar approaches the outside house at night; companions at safe distance. Fatal attack remains off screen, no wrestling or graphic injury.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-brujos/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-brujos-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Huir del lugar",
+          "scene": "Two surviving companions flee through the nighttime forest leaving house far behind. No revenge battle, cure or jaguar slain.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-brujos/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-brujos-kf07-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 360,
+      "slug": "los-canibales",
+      "narrative_sha256": "835c3be31f1722993cfbd112af7fa9c7335194710c0b94f14a8f09ffee6519b4",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/entrada-ajuste-v2.jpeg",
+          "sha256": "00f9cfeb4efcb3545ed843cf88f479fcde652055cc368d7dc1d584c6a50a1a15"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/acto-ajuste-v2.jpeg",
+          "sha256": "03cfe34ae8ebde252c74cae152de9c9bc9ba201c8436fbd2b5c66e2bb4b9bcb7"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-canibales/huella-ajuste-v2.jpeg",
+          "sha256": "09ebcdecaaa3443e578f20781a1ff279722e63cec9d13fffca84f6fad8b5f330"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "El crimen ocultado",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "La reunión",
+          "scene": "Small gathering of adults at ordinary village, chicha vessel, quiet dance/food gathering. No carnival headgear or stereotyped cannibal ritual.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-canibales/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-canibales-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Regreso nocturno",
+          "scene": "Exactly two adult men leave along forest path after gathering, no corpse or food carrying.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-canibales/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-canibales-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "El encuentro",
+          "scene": "Same two men encounter one adult neighboring traveler on path, exactly three adults. Sober tension; no attack or raised club impact.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-canibales/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-canibales-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Ocultar el crimen",
+          "scene": "After narrated homicide and concealment off screen, show the same two men alone on empty forest path, no body, cooking remains, bone, gore or consumption. They are not redeemed or punished.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-canibales/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-canibales-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "El cacique no sabe",
+          "scene": "An ordinary adult cacique in village unaware of the two men's crime, same pair distant returning. No confession, court, trophy or ethnic accusation.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-canibales/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-canibales-kf05-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 361,
+      "slug": "el-castigo",
+      "narrative_sha256": "e535375d681d73e380dca04d4cb07aa47832f8c99ac68dc32febde4bf778dadc",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/entrada-v1.jpeg",
+          "sha256": "a7c2718a59419362ad677cbb358e124b1f48d65d3f570daeb440592cdffbc879"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/acto-continuidad-v2.jpeg",
+          "sha256": "7e92589acf7112ae1d98b2eded950fbd905630d58d7101850380ee1410ad2e48"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-castigo/huella-ausencias-v2.jpeg",
+          "sha256": "ee2a8239db06c2ea197085b4067208a40ad47a60cca85c5b0242ea8a3601fddb"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "La enfermedad después de la guerra",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Preparar la expedición",
+          "scene": "Small group of adult Ette prepare lowered bows and macanas in settlement; no children, attack or triumph.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-castigo/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-castigo-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Camino al Gran Río",
+          "scene": "Same adult group moves towards a broad unnamed river through forest. No claim specific modern river or weapon firing.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-castigo/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-castigo-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La palabra del cacique",
+          "scene": "Other-bank adult cacique addresses his own adult community, sober open-hand gesture; no curse beam, magical glyph or visible endangered children.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-castigo/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-castigo-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "El regreso",
+          "scene": "Ette adults return along same path after war off screen, no trophy or celebratory victory.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-castigo/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-castigo-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La enfermedad",
+          "scene": "Same village quiet after return, one sick adult reclining in ordinary house with adult companion. Deaths and child victims narrated off screen; no gore, visible dead child, symptoms invented or medical causal diagram.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-castigo/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-castigo-kf05-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 362,
+      "slug": "los-animales-hablan",
+      "narrative_sha256": "46fb8fc1bbf6c94a52b94b62613247bc9ad654c98761fc3c0359bedda5ab5ab8",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-animales-hablan/entrada-v1.jpeg",
+          "sha256": "4631d068283f8ca5e1fc078bc6cae06832f76a14623a95bbb51e3344f0f472b6"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-animales-hablan/acto-sol-unico-v2.jpeg",
+          "sha256": "2e3b82e9b3dbf2f3ccd3bfd759146583ec65abf233807cfeb5569eba5b233b08"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-animales-hablan/huella-v1.jpeg",
+          "sha256": "9d35cc29da328ff456815b63d25da106730ad2de3757d5669330cbd9c4cdc0a7"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Los animales hablan",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "La comida de la danta",
+          "scene": "One natural tapir finds leafy food beside forest path, no clothes or human mouth.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-animales-hablan/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-animales-hablan-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Llamar a las otras",
+          "scene": "Same tapir calls, two other natural tapirs approach the same food, exactly three; no speech balloons or human assembly.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-animales-hablan/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-animales-hablan-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Buenos días, monos",
+          "scene": "Two natural monkeys in paper trees at morning light respond across branches, no arrows, hunter or clothes.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-animales-hablan/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-animales-hablan-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Otras voces",
+          "scene": "A jaguar, tortoise and deer at separate natural forest positions; a few birds higher in foliage. No council circle or predation event.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-animales-hablan/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-animales-hablan-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La ardilla",
+          "scene": "One natural squirrel perched in tree, subtle alert stance, other animals not required. No invented sad exile or silence curse.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-animales-hablan/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-animales-hablan-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Gente que habla",
+          "scene": "Wide natural living forest with tapirs, monkeys, deer and birds scattered in habitats, no human disguise or gathering, no magical lost-language story.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-animales-hablan/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-animales-hablan-kf06-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 363,
+      "slug": "los-monos",
+      "narrative_sha256": "378907b07b203c7adb4d10f1c1983855b68af80afa4769e0c529d8758e53d47d",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-monos/entrada-v1.jpeg",
+          "sha256": "dd5357d341f0bbfbe8003bd911820b9f7c0bc341cb0208952c8e5fb8bf741c7b"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-monos/acto-aire-v2.jpeg",
+          "sha256": "b512c858eba9eedb2dec5fde297a1b0ae77e9754e1892c5bf8832bfbaa4a6018"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/los-monos/huella-v1.jpeg",
+          "sha256": "a0f6dd5a986a81216f6333c8f4c025358f0fc98e9b7677ea622bd3289c85bf4b"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "El mono que devolvió la flecha",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "El canto matutino",
+          "scene": "Natural monkeys travel towards a forest stream at morning, no hunters or arrows yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-monos/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-monos-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "El cazador",
+          "scene": "One adult hunter on path sees one same natural monkey in tree, bow held but not firing. No human-faced monkey.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-monos/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-monos-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La flecha fallida",
+          "scene": "One cane arrow lies on ground near unharmed monkey; adult hunter stands farther back, no arrow piercing animal.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-monos/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-monos-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Recoger la flecha",
+          "scene": "Same monkey picks up SAME single arrow while hunter moves behind tree. No extra bow or second arrow.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-monos/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-monos-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La devolución",
+          "scene": "Monkey holds same arrow ready to return it; hunter hidden behind tree at distance. Final fatal impact off screen; no gore or victorious animal pose.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/los-monos/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/los-monos-kf05-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "narrative_sha256": "d9c19d82b04de23d4ed6dd18683b6334a058f48807aaf8c85b446b27ed55a2f6",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/entrada-v1.jpeg",
+          "sha256": "a06c885a0708a8cfda640212469e5634b135796fe796c3e464ce5003f42a2ad3"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/acto-identidad-v2.jpeg",
+          "sha256": "58d5161e278d5af704e485e5c4d7073883550d0e03c94210e60f603ec34a7f0e"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/huella-v1.jpeg",
+          "sha256": "f681e78f6fbb8a59ef693ab97030c608e8f8d3fc922616a0f554efd82f39870d"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "El hombre que soñó con una danta",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Contar el sueño",
+          "scene": "One adult male dreamer tells two adult companions of a dream in ordinary settlement at dawn. No dream bubble collage.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "La danta soñada",
+          "scene": "A separately framed dream image: one natural tapir under a fallen large trunk; no wound, blood, carved flesh or human body. Mild soft paper haze distinguishes dream.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Salir a comprobar",
+          "scene": "Same male dreamer travels into forest with lowered bow, no tapir yet, same hairstyle and wrap as initial frame.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Viento en el monte",
+          "scene": "Strong paper leaves/wind around same forest, tall tree leaning; man small safely away before the fall. Fatal fall itself off screen.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La búsqueda",
+          "scene": "Two adult companions examine a fallen trunk from safe distance; no dreamer's corpse or tapir under this waking trunk. Do not merge dream animal with real human death.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "La danta encontrada",
+          "scene": "One living natural tapir in nearby forest and three separate cane arrows lowered in companions' hands or safely on ground. Subsequent killing off screen; no demon, triumphant revenge or arrow wounds.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf06-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 365,
+      "slug": "el-hombre-que-sono-con-caiman",
+      "narrative_sha256": "8f61ce31eab06cbd0bd58cab9db39099be2eac54b3c301d6d01da679b36e79e0",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/entrada-v1.jpeg",
+          "sha256": "67e8ae71abbde1ee9c59099398bf5540714154c21baf9fd770dd5fa1bc696623"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/acto-cola-completa-v3.jpeg",
+          "sha256": "08b8a642e8735052dc21ce0bfd4002d8f8993f3e91421aa67f484949a5cf3c50"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-caiman/huella-v1.jpeg",
+          "sha256": "81dcc809613dae3746cebcb52e9832de3ba1fbaa9d4dc488f40674e8e530faf3"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "El hombre que soñó con un caimán",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "El sueño y el temor",
+          "scene": "Adult male dreamer tells same adult brother about dream at home, apprehensive face, no feast or magical reward.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "El huevo soñado",
+          "scene": "Separate dream scene: one large caiman egg on sandy beach beside dreamer's ordinary adult hand. No hatchling, human egg birth or gore.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Ir a pescar",
+          "scene": "Same two adult brothers approach river beach in afternoon, lowered bows, no attack yet.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "El caimán aparece",
+          "scene": "One large natural caiman emerges near same bank as dreamer stands safely back; brother separate. Swallowing happens off screen, no jaws around person.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Oscuridad y día afuera",
+          "scene": "View of caiman alone in river at dawn; a natural monkey calls in nearby tree, person inside not shown, no transparent anatomical belly.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "La salida",
+          "scene": "Same dreamer already outside on shore beside caiman with ONE cane arrow wedged between open jaws. No wound, blood, acid, torn skin or triumphant battle pose; full animal tail visible.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Regresar enfermo",
+          "scene": "Same man returns at night to house where adults have chicha gathering; subdued weakness, no corpses, celebration of victory or invented confession.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf07-v1.txt"
+        },
+        {
+          "frame_id": "kf08",
+          "title": "Retiro en el monte",
+          "scene": "Same recovering man alone resting in forest shelter or shade, plain ordinary wrap, no new ritual instructor.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf08-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf08-v1.txt"
+        },
+        {
+          "frame_id": "kf09",
+          "title": "El silbido",
+          "scene": "Later same recovered man whistles quietly at forest edge; natural game animals approach separately, companions observe from safe distance. No magical beam or animal-human hybrid, no slaughter.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf09-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf09-v1.txt"
+        },
+        {
+          "frame_id": "kf10",
+          "title": "Aprendido del caimán",
+          "scene": "Same recovered man explains to two adult companions at forest edge with river far behind, no caiman giving classroom lesson or ceremony. Knowledge named by narration, not invented visual instruction.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-caiman/kf10-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-caiman-kf10-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 366,
+      "slug": "el-morrocoyo",
+      "narrative_sha256": "1d027d8a13e6b3e695c09c68b7e2876cab16de3397c9fadd0a852e93ed0274ba",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-morrocoyo/entrada-v1.jpeg",
+          "sha256": "1463fbf47d310c21b3dfd12a4e8a201312a72e75a9c35febe68d45deab94e7fc"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-morrocoyo/acto-sin-elenco-v2.jpeg",
+          "sha256": "656426e70f5aa1b2fe51eb01371320a2d54d867e1c08ffe110fb6b9d673718d4"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-morrocoyo/huella-v1.jpeg",
+          "sha256": "98e61fa96c334c792ebb09bdae3c25c0d9822430c48214405c8cdd2df6055b27"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "El morrocoyo que antes era gente",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Antes del caparazón",
+          "scene": "One natural ancestral tortoise-like morrocoyo without shell perched on low tree branch, long tail visible, no human clothing or human face.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-morrocoyo/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-morrocoyo-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Los dos cazadores",
+          "scene": "Two adult men notice same unshelled morrocoyo on branch; one gestures hesitation, bows lowered. No impact.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-morrocoyo/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-morrocoyo-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Aferrarse a la rama",
+          "scene": "Same morrocoyo clings to branch by long tail; single missed/aftermath arrow on ground, injury and tail cutting off screen. No wounds or chopping animal.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-morrocoyo/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-morrocoyo-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Refugio en el agua",
+          "scene": "Same unshelled morrocoyo now with shorter tail enters shallow water, hunters remain on bank at safe distance. No human corpse.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-morrocoyo/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-morrocoyo-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La mujer llega",
+          "scene": "One adult woman approaches water with ordinary vessel; morrocoyo at distance beside one lowered tiny bow/arrow per narrative. Fatal retaliation off screen, no attack aimed at body.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-morrocoyo/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-morrocoyo-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Buscar junto al agua",
+          "scene": "Two adult men search deserted bank after missing woman. No corpse, consumption, bone, punishment ceremony or invented burial.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-morrocoyo/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-morrocoyo-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Concha de corteza",
+          "scene": "Later one morrocoyo now protected by a hard bark-like layered paper SHELL beside water, short tail; no weapon, anthropomorphic clothing or food preparation.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-morrocoyo/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-morrocoyo-kf07-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 579,
+      "slug": "yunari-y-las-cinco-tierras",
+      "narrative_sha256": "4905e2bc1162f5d771ccf7f7b0aa2379454c4c4d1e2fc15a1a70bbe7e7538b00",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yunari-y-las-cinco-tierras/entrada-v1.jpeg",
+          "sha256": "8d2b294d790b56fee90e956e1352c5d8ae8ad6ed843ff42e56c7177ed1b38baa"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yunari-y-las-cinco-tierras/acto-v1.jpeg",
+          "sha256": "ed2542be4cbd4959202c76b97c28aa6f19cd9695511d37d3bb6a7ea7606a8d12"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yunari-y-las-cinco-tierras/huella-cinco-tierras-v2.jpeg",
+          "sha256": "568492164d2509d46081e451b469a6da9df6d1304ff30771f0fa5c753bca8fa0"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Yunari y las cinco tierras",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "Yunari, Tierra Madre",
+          "scene": "A broad landform in the shape suggested by the SAME elderly Yunari reference, old feminine face subtly integrated into land. Streams are veins metaphorically; no blood, planets or medical diagram.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yunari-y-las-cinco-tierras/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yunari-y-las-cinco-tierras-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Memoria de tierras anteriores",
+          "scene": "Layered empty earth strata show older land below and current landscape above; fire/water traces as muted paper bands, no science-fiction planets or numbered labels.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yunari-y-las-cinco-tierras/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yunari-y-las-cinco-tierras-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "La Tierra del Medio",
+          "scene": "Current fourth earth as inhabited continuous cut-paper landscape held above dark water/underworld layer. Small ordinary adult people, no corpse or fictional city.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yunari-y-las-cinco-tierras/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yunari-y-las-cinco-tierras-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "La quinta arriba",
+          "scene": "A separate fifth upper earth above current landscape, thick-skinned Ette Kooronda as SAME reference stylized adults. No tortoise-shell backpacks or armored warriors invented.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yunari-y-las-cinco-tierras/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yunari-y-las-cinco-tierras-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "Día y noche inversos",
+          "scene": "Fourth landscape gently sunlit while fifth upper landscape dark, using ONE sun and ONE upper moon. No five planets, starscape spacecraft or duplicate worlds beyond five.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yunari-y-las-cinco-tierras/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yunari-y-las-cinco-tierras-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Puertas y espera",
+          "scene": "Restrained paper sky gap/threshold above earth with upper-world adults waiting, no literal door hardware, wings or descending conquest army.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yunari-y-las-cinco-tierras/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yunari-y-las-cinco-tierras-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Sostener a Yunari",
+          "scene": "Ordinary Ette adults on current land near supporting paper pillars, maintaining thought and care soberly. Fifth still above, not already replacing fourth; no definitive end-date, apocalypse spectacle or invented ceremony.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yunari-y-las-cinco-tierras/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yunari-y-las-cinco-tierras-kf07-v1.txt"
+        }
+      ]
+    },
+    {
+      "id": 580,
+      "slug": "yaau-numirinta-y-las-dos-mazorcas",
+      "narrative_sha256": "3b694040e12ffca5517e262a4645bfe3ee4e5ebd24c7d4e482ca14f918d2fd10",
+      "triptic_refs": [
+        {
+          "piece": "entrada",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yaau-numirinta-y-las-dos-mazorcas/entrada-v1.jpeg",
+          "sha256": "6b4caee16c8684b8d4f49a5453fbbb33a18c91a0e680d8233dd87db456b8b3ed"
+        },
+        {
+          "piece": "acto",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yaau-numirinta-y-las-dos-mazorcas/acto-v1.jpeg",
+          "sha256": "f937b06ccb2426004508c3c33f378658d10935ba9a6e21449725cfe2daf84660"
+        },
+        {
+          "piece": "huella",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/yaau-numirinta-y-las-dos-mazorcas/huella-papel-plano-v2.jpeg",
+          "sha256": "651300ab97ecd419730f28c22dff33a8b3160e2722038f9b10340fe3fe9cbfa9"
+        }
+      ],
+      "keyframe_count_draft": null,
+      "status": "planned",
+      "storyboard": null,
+      "title": "Yaau, Numirinta y las dos mazorcas",
+      "frames": [
+        {
+          "frame_id": "kf01",
+          "title": "La laguna vacía",
+          "scene": "Quiet lagoon in San Ángel sabanna after previous land became unpeopled, no creator yet, no greda or jaguar.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yaau-numirinta-y-las-dos-mazorcas/kf01-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yaau-numirinta-y-las-dos-mazorcas-kf01-v1.txt"
+        },
+        {
+          "frame_id": "kf02",
+          "title": "Yaau y Numirinta descienden",
+          "scene": "SAME male Yaau and female Numirinta have arrived together on lagoon bank, from same-myth creator refs. No wings, astronaut clothes, freefall injury or Papá Grande.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yaau-numirinta-y-las-dos-mazorcas/kf02-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yaau-numirinta-y-las-dos-mazorcas-kf02-v1.txt"
+        },
+        {
+          "frame_id": "kf03",
+          "title": "Oriente y occidente",
+          "scene": "Same two adult creators at opposite-facing orientations: Yaau towards eastern dawn, Numirinta towards western fading light. ONE sun, no face swap or hierarchical kneeling.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yaau-numirinta-y-las-dos-mazorcas/kf03-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yaau-numirinta-y-las-dos-mazorcas-kf03-v1.txt"
+        },
+        {
+          "frame_id": "kf04",
+          "title": "Dos mazorcas cariaco",
+          "scene": "Same pair together hold exactly TWO mature cariaco corn cobs, no clay, third cob or seeds delivered in bag.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yaau-numirinta-y-las-dos-mazorcas/kf04-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yaau-numirinta-y-las-dos-mazorcas-kf04-v1.txt"
+        },
+        {
+          "frame_id": "kf05",
+          "title": "La gente nueva",
+          "scene": "Small ordinary adult Ette people now stand near same lagoon with same creator pair; two cobs no longer additional floating artifacts. Creation occurs between frames, no literal people sprouting painfully from corn.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yaau-numirinta-y-las-dos-mazorcas/kf05-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yaau-numirinta-y-las-dos-mazorcas-kf05-v1.txt"
+        },
+        {
+          "frame_id": "kf06",
+          "title": "Habitar y aprender",
+          "scene": "Same adults modestly plant, cook and work simple fibers by lagoon with both creators present at equal standing. No rigid imposed gender hierarchy or elaborate invented ceremonial lesson.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yaau-numirinta-y-las-dos-mazorcas/kf06-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yaau-numirinta-y-las-dos-mazorcas-kf06-v1.txt"
+        },
+        {
+          "frame_id": "kf07",
+          "title": "Continuidad en la laguna",
+          "scene": "Wide living sabanna and lagoon with ordinary new adult community, same two creators small nearby. No merger with five-earth catastrophe, falling first man or clay origin.",
+          "status": "pending",
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/yaau-numirinta-y-las-dos-mazorcas/kf07-v1.jpeg",
+          "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/yaau-numirinta-y-las-dos-mazorcas-kf07-v1.txt"
+        }
+      ]
+    }
+  ],
+  "narrative_matches": [
+    {
+      "id": 346,
+      "match": true
+    },
+    {
+      "id": 347,
+      "match": true
+    },
+    {
+      "id": 348,
+      "match": true
+    },
+    {
+      "id": 349,
+      "match": true
+    },
+    {
+      "id": 350,
+      "match": true
+    },
+    {
+      "id": 351,
+      "match": true
+    },
+    {
+      "id": 352,
+      "match": true
+    },
+    {
+      "id": 353,
+      "match": true
+    },
+    {
+      "id": 354,
+      "match": true
+    },
+    {
+      "id": 355,
+      "match": true
+    },
+    {
+      "id": 356,
+      "match": true
+    },
+    {
+      "id": 357,
+      "match": true
+    },
+    {
+      "id": 358,
+      "match": true
+    },
+    {
+      "id": 359,
+      "match": true
+    },
+    {
+      "id": 360,
+      "match": true
+    },
+    {
+      "id": 361,
+      "match": true
+    },
+    {
+      "id": 362,
+      "match": true
+    },
+    {
+      "id": 363,
+      "match": true
+    },
+    {
+      "id": 364,
+      "match": true
+    },
+    {
+      "id": 365,
+      "match": true
+    },
+    {
+      "id": 366,
+      "match": true
+    },
+    {
+      "id": 579,
+      "match": true
+    },
+    {
+      "id": 580,
+      "match": true
+    }
+  ],
+  "cultural_certification": false,
+  "violence": "Fatal impacts and graphic violence off screen; conclusions not rewritten."
+}

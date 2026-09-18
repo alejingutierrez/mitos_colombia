@@ -1,0 +1,33 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-11-creacion-wayuu-medium-corrections-02",
+  "parent_batch_id": "wayuu-v3-production-11-creacion-wayuu-medium",
+  "revision": "corrections-02",
+  "myth_slug": "creacion-wayuu",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "arachi__spatial_model--canon",
+      "model_id": "arachi__spatial_model",
+      "entity_id": "arachi",
+      "view_id": "canon",
+      "title": "Arachi · piedras y reparto sin marcas inventadas",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-02/prompts/arachi__spatial_model--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-02/arachi__spatial_model--canon.jpeg",
+      "prompt_sha256": "c75f1f66e1c6635d51e6fce86491bc00705f0143707eab4c8982cabbe4eaef12",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

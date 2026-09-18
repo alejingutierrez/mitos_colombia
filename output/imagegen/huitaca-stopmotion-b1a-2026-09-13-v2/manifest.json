@@ -1,0 +1,878 @@
+{
+  "title": "Huitaca b1a prueba stop motion corregida",
+  "status": "complete_pilot_for_user_review",
+  "fps": 12,
+  "frame_count_requested": 12,
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "generation_size": "1024x1024",
+  "source": {
+    "path": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/keyframes/b1a.crop-9x16.jpg",
+    "sha256": "dc17ab1ee6a065e471411734354825b0038919412470a8926bfad8677953e8af"
+  },
+  "script_line": "Después del paso del maestro llegó una mujer que caminaba de noche.",
+  "crop_xywh": [
+    350,
+    900,
+    384,
+    384
+  ],
+  "crop_scale": 2.6666666666666665,
+  "guide": "/Users/alegut/Downloads/Guia_Sunburst_Stop_Motion.docx",
+  "decisions": [
+    {
+      "section": "4, 10, 13",
+      "rule": "Use last accepted image; evaluate adjacent and master before generating descendants."
+    },
+    {
+      "section": "9",
+      "rule": "Preserve static scenery by compositing approved moving element into immutable original plate."
+    },
+    {
+      "section": "10",
+      "rule": "One deliberate walking step with concrete progression, no invented pixel-precision promise."
+    },
+    {
+      "section": "7, 11",
+      "rule": "Common coordinates; never recenter silhouettes or add optical interpolation."
+    }
+  ],
+  "requests": [
+    {
+      "id": "clean-plate",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/clean-plate-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/clean-plate.png",
+      "output_sha256": "b98af7748349750cb24a1cb564e82de22ed30f8d16de16249242e571f9e6db8f",
+      "elapsed_seconds": 40.0,
+      "status": "used_background_plate",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-02-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-02-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-02-a.png",
+      "output_sha256": "f40aa128d55cbab2aff224299dc072cff4576cff7b08a0bafd4e37bc76983afa",
+      "elapsed_seconds": 34.7,
+      "status": "rejected",
+      "rejection_reason": "Combining transparency extraction and a pose edit enlarged the body and added jewelry; source identity was not preserved. No descendants created."
+    },
+    {
+      "id": "frame-02-b",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-02-b-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-02-b.png",
+      "output_sha256": "e351ca006d7006fdd2fcd9ade41a23f92bba2d3fcd018b963afc5d73ee63891b",
+      "elapsed_seconds": 44.7,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-03-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-03-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-02.png",
+          "archived_file": "metadata/input-snapshots/crop-02.png",
+          "sha256": "a053df09f7bf7e14d85e2fee3f524a6e6c3c38461d1a586ee319a4ad6b4fa1db"
+        },
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-03-a.png",
+      "output_sha256": "95519d1ee8b08dde3bce3d522faebf8ab8cda48a55d441579cd857d1de25a9a8",
+      "elapsed_seconds": 42.3,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-04-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-04-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-03.png",
+          "archived_file": "metadata/input-snapshots/crop-03.png",
+          "sha256": "5d289fed245ef3075f6fdda8e331101c03576c668ef761130dc1d16cb6f9798e"
+        },
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-04-a.png",
+      "output_sha256": "0c8c34d9ef59b4c54442593065175099c4bb168a8dbd9426a03e104411a038bd",
+      "elapsed_seconds": 43.4,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-05-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-05-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-04.png",
+          "archived_file": "metadata/input-snapshots/crop-04.png",
+          "sha256": "5ccc60aff05a7b06a3df03619929be6b83b3e51cdfe65c9300d00f067a68bbc8"
+        },
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-05-a.png",
+      "output_sha256": "bb57edad93a157c968edff3ba5b6ab195fe2a1684e5bf17742af96eb6a87d7a1",
+      "elapsed_seconds": 44.3,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-06-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-06-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-05.png",
+          "archived_file": "metadata/input-snapshots/crop-05.png",
+          "sha256": "f54d58a9a42ed6064704c294c47875fc744bb81dab43d268ba5dafd8611962d8"
+        },
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-06-a.png",
+      "output_sha256": "239deac2cce07d96f80f7dd5141660a5e22aa60c662bfb7bf4fb158fed381fd6",
+      "elapsed_seconds": 42.2,
+      "status": "rejected",
+      "rejection_reason": "The foot returned toward its rear location instead of reaching a forward heel contact. Retry from accepted frame 05, with explicit relative position."
+    },
+    {
+      "id": "frame-06-b",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-06-b-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-05.png",
+          "archived_file": "metadata/input-snapshots/crop-05.png",
+          "sha256": "f54d58a9a42ed6064704c294c47875fc744bb81dab43d268ba5dafd8611962d8"
+        },
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-06-b.png",
+      "output_sha256": "560a40cbf95b4e2722136c662f66e21cd07d5666f0afe82c62c2ead9f277361c",
+      "elapsed_seconds": 44.2,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-07-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-07-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-06.png",
+          "archived_file": "metadata/input-snapshots/crop-06.png",
+          "sha256": "47e9745a0a03aa84183246cdf0699c20c8d356cb1759025c9a5116b1bde370c2"
+        },
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/reference/seed-crop.png",
+          "archived_file": "reference/seed-crop.png",
+          "sha256": "1250f0fe8f327102c48ccdf167e15c2685bc5204919661f4cc571454418df967"
+        }
+      ],
+      "output_file": "raw/frame-07-a.png",
+      "output_sha256": "6312ad6bfa3441551bd82a4bff7ebbe175138ce8d4cb16408237258684fa1bfd",
+      "elapsed_seconds": 42.8,
+      "status": "rejected",
+      "rejection_reason": "Heel contact shifted backward while rolling sole down. Retry only forefoot with previous accepted image as sole input, fixing heel and ankle."
+    },
+    {
+      "id": "frame-07-b",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-07-b-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-06.png",
+          "archived_file": "metadata/input-snapshots/crop-06.png",
+          "sha256": "47e9745a0a03aa84183246cdf0699c20c8d356cb1759025c9a5116b1bde370c2"
+        }
+      ],
+      "output_file": "raw/frame-07-b.png",
+      "output_sha256": "7cdaf81eb73a59e1ee7db1134ff64bb8f436bea0b652c91d0dda8b3eea01ef65",
+      "elapsed_seconds": 45.4,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-08-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-08-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-07.png",
+          "archived_file": "metadata/input-snapshots/crop-07.png",
+          "sha256": "d00cc0b8b575559bec436388dc3715113af4656f66e7b466a4f89bb79bf0d4cd"
+        }
+      ],
+      "output_file": "raw/frame-08-a.png",
+      "output_sha256": "435a6c7a56ff13c2041325069226a868aab72957bf055ad89b567b5f12c4d86b",
+      "elapsed_seconds": 46.3,
+      "status": "rejected",
+      "rejection_reason": "Turned character around and changed clothing; no descendants."
+    },
+    {
+      "id": "frame-08-b",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-08-b-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-07.png",
+          "archived_file": "metadata/input-snapshots/crop-07.png",
+          "sha256": "d00cc0b8b575559bec436388dc3715113af4656f66e7b466a4f89bb79bf0d4cd"
+        }
+      ],
+      "output_file": "raw/frame-08-b.png",
+      "output_sha256": "42412e033b576ae87fe81f7fcbbe5bb202022e74530e493e42dc72efde7fb1e5",
+      "elapsed_seconds": 41.4,
+      "status": "rejected",
+      "rejection_reason": "Moved support points; narrowed next retry to heel only."
+    },
+    {
+      "id": "frame-08-c",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-08-c-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-07.png",
+          "archived_file": "review/crop-07.png",
+          "sha256": "ea39f9377a5e2b669bb9974ab5178a39676e03c0315acb47b62672929b5cca0a"
+        }
+      ],
+      "output_file": "raw/frame-08-c.png",
+      "output_sha256": "55fdfd99ea657a1c6909c4723126dc71c4bdf60582b783a07ea8fd38bd3fe839",
+      "elapsed_seconds": 44.1,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-09-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-09-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-08.png",
+          "archived_file": "review/crop-08.png",
+          "sha256": "db84ab5b87e90ef230026e79c20ad1c659210af9886c09d318c7cd6f99321c84"
+        }
+      ],
+      "output_file": "raw/frame-09-a.png",
+      "output_sha256": "77716a85107b81496bb83fe86392ce7a13834c894c19956738dd32bd1c6e38dd",
+      "elapsed_seconds": 41.8,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-10-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-10-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-09.png",
+          "archived_file": "review/crop-09.png",
+          "sha256": "726e4f86e263e0903834003609ecd3c3d9c888c40c641d6695195c37f3c4807c"
+        }
+      ],
+      "output_file": "raw/frame-10-a.png",
+      "output_sha256": "aa2fa8af72e257441ac89c3a6d34dc4e8b24c70363df6e342b4caa02cdc787f7",
+      "elapsed_seconds": 44.3,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-11-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-11-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-10.png",
+          "archived_file": "review/crop-10.png",
+          "sha256": "9464af78949bfa472db96d045f5c86657e40905e1cac360a276b39875adcfc20"
+        }
+      ],
+      "output_file": "raw/frame-11-a.png",
+      "output_sha256": "b837b9f748d2cabccbfbed782530b769b683c83a788416656e7a38495574e658",
+      "elapsed_seconds": 42.9,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    },
+    {
+      "id": "frame-12-a",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "high",
+      "size": "1024x1024",
+      "request_record": "metadata/frame-12-a-request.json",
+      "inputs": [
+        {
+          "request_path": "output/imagegen/huitaca-stopmotion-b1a-2026-09-13-v2/review/crop-11.png",
+          "archived_file": "review/crop-11.png",
+          "sha256": "7b8c31c6fa6f3d5ae887ed024516b6750a1c22bd480842d54cf5e09622730923"
+        }
+      ],
+      "output_file": "raw/frame-12-a.png",
+      "output_sha256": "aeaa0531f35626f9e392d55dd77b8e0a0958e8d5c62112ba6b079c949f9126ee",
+      "elapsed_seconds": 44.3,
+      "status": "accepted_pose",
+      "rejection_reason": null
+    }
+  ],
+  "frames": [
+    {
+      "index": 1,
+      "file": "approved/frame-01.png",
+      "status": "source_accepted",
+      "exposure_seconds": 0.08333333333333333,
+      "sha256": "eeb4e3d3342cf7e5532fbff5eac3cd6d928c6d0b158f34b1befd6a1c948f439c",
+      "delivery_file": "delivery/frame-01.png",
+      "delivery_sha256": "eeb4e3d3342cf7e5532fbff5eac3cd6d928c6d0b158f34b1befd6a1c948f439c"
+    },
+    {
+      "index": 2,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-02.png",
+      "raw": "raw/frame-02-b.png",
+      "raw_sha256": "e351ca006d7006fdd2fcd9ade41a23f92bba2d3fcd018b963afc5d73ee63891b",
+      "sha256": "c19eb74550a63dd58e4069d4d224997e175636225fc0bf8f6b5ef1abc69c1818",
+      "prompt": "prompts/frame-02-b.txt",
+      "prompt_sha256": "e7d2c4e07eb5bb1029d884fafe5de3c751192b7f9bb97ac83c07e4aa55f6810a",
+      "request_record": "metadata/frame-02-b-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: talón del pie retrasado elevado; pie delantero apoyado; cabeza, identidad y decorado originales conservados por máscara y composición.",
+      "elapsed_seconds": 44.7,
+      "changed_pixel_bbox_xyxy": [
+        533,
+        1131,
+        564,
+        1183
+      ],
+      "changed_pixels": 1346,
+      "delivery_file": "delivery/frame-02.png",
+      "delivery_sha256": "8cdb19d2618b69713acfc1ce67928a9391f1614ea20b804ab69ccec446e2c2d0"
+    },
+    {
+      "index": 3,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-03.png",
+      "raw": "raw/frame-03-a.png",
+      "raw_sha256": "95519d1ee8b08dde3bce3d522faebf8ab8cda48a55d441579cd857d1de25a9a8",
+      "sha256": "5b046ef6040308365a6a5d684af916b9ed8f4c01aff6a1d09f20806edd7bcb92",
+      "prompt": "prompts/frame-03-a.txt",
+      "prompt_sha256": "2d4931605167131258d505169780d275877964faf6deb19e997a1078adbe731b",
+      "request_record": "metadata/frame-03-a-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: pie retrasado suspendido, rodilla flexionada y manta responde; pie contrario permanece apoyado. Referencia maestra conserva rostro y proporciones.",
+      "elapsed_seconds": 42.3,
+      "changed_pixel_bbox_xyxy": [
+        532,
+        1096,
+        574,
+        1189
+      ],
+      "changed_pixels": 3456,
+      "delivery_file": "delivery/frame-03.png",
+      "delivery_sha256": "3536600de6a76f2d9009b89be83915170d31fe90eade5ef17c437203ed1ac891"
+    },
+    {
+      "index": 4,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-04.png",
+      "raw": "raw/frame-04-a.png",
+      "raw_sha256": "0c8c34d9ef59b4c54442593065175099c4bb168a8dbd9426a03e104411a038bd",
+      "sha256": "9ce4635f607c514098dc5f185035d2c52b7ec062b62e7d343990d1428782bec8",
+      "prompt": "prompts/frame-04-a.txt",
+      "prompt_sha256": "3145b0709c1ae0a6029fad9999ce1c2d99a5261bf9437b50624c927abaf18e58",
+      "request_record": "metadata/frame-04-a-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: rodilla se abre y pie suspendido avanza; el apoyo contrario permanece; no cambia la identidad en la composición.",
+      "elapsed_seconds": 43.4,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9226,
+      "delivery_file": "delivery/frame-04.png",
+      "delivery_sha256": "9e44a3766a7019c8e407473ac7253809ed2c07977a0fdf69507af4e5bd723eac"
+    },
+    {
+      "index": 5,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-05.png",
+      "raw": "raw/frame-05-a.png",
+      "raw_sha256": "bb57edad93a157c968edff3ba5b6ab195fe2a1684e5bf17742af96eb6a87d7a1",
+      "sha256": "c73e18a741455df1b91639ecbe91c799aa7eda95f4e52c5e2533a98d8a142c7b",
+      "prompt": "prompts/frame-05-a.txt",
+      "prompt_sha256": "b9fa0ae90c4664fd1204c67810943b58b5bc0aeff6ca8d00ad042a9101738fc3",
+      "request_record": "metadata/frame-05-a-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: pie móvil sigue suspendido y cambia de orientación preparando el contacto de talón; silueta, escala y cara estables.",
+      "elapsed_seconds": 44.3,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9275,
+      "delivery_file": "delivery/frame-05.png",
+      "delivery_sha256": "e04ebbac7dda20575067ed439a9c524cad30ae7e9cd6bb724a56044c53329e5a"
+    },
+    {
+      "index": 6,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-06.png",
+      "raw": "raw/frame-06-b.png",
+      "raw_sha256": "560a40cbf95b4e2722136c662f66e21cd07d5666f0afe82c62c2ead9f277361c",
+      "sha256": "d670b6e8a267ac83a9a6654646217218d04a07135d19209ea95a9b7c08f08122",
+      "prompt": "prompts/frame-06-b.txt",
+      "prompt_sha256": "2f994624e7d576b58d83f8a0fed06593a58f0410489bfeba2dc5b48adbb30d3e",
+      "request_record": "metadata/frame-06-b-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado tras corrección: pierna móvil extendida, contacto delantero de talón con punta elevada; el otro pie conserva apoyo. Movimiento corto, sin avance grande del cuerpo.",
+      "elapsed_seconds": 44.2,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9337,
+      "delivery_file": "delivery/frame-06.png",
+      "delivery_sha256": "cf5a15813e484bea25d6e2ad623d68fd86363d2d7b0ea8cac3c79344048af4ea"
+    },
+    {
+      "index": 7,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-07.png",
+      "raw": "raw/frame-07-b.png",
+      "raw_sha256": "7cdaf81eb73a59e1ee7db1134ff64bb8f436bea0b652c91d0dda8b3eea01ef65",
+      "sha256": "aa9ff5af49814aca2d22f8fd1516ef9fa411d4fdf3f492f69dc090060c062da1",
+      "prompt": "prompts/frame-07-b.txt",
+      "prompt_sha256": "14537e8615711b8e763626d02404fd32f8b0a67eb5bcc0dd86d90dbce8bedd29",
+      "request_record": "metadata/frame-07-b-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado tras corrección: planta apoyada en el contacto delantero; talón conserva ubicación. Se retiró la referencia de pose original de esta petición para evitar reinicio, manteniendo comparación visual con la maestra.",
+      "elapsed_seconds": 45.4,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9337,
+      "delivery_file": "delivery/frame-07.png",
+      "delivery_sha256": "da356c5e63d11bded6addd1efc39d75744a55186a7f847e96f4cbfe9dcbac90c"
+    },
+    {
+      "index": 8,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-08.png",
+      "raw": "raw/frame-08-c.png",
+      "raw_sha256": "55fdfd99ea657a1c6909c4723126dc71c4bdf60582b783a07ea8fd38bd3fe839",
+      "sha256": "093a7a75a91452a2ffc876fa918e698d175d248e5fda6e68a8d6754afb390987",
+      "prompt": "prompts/frame-08-c.txt",
+      "prompt_sha256": "ea851d0c1a9dcf8960217020622c8f04197585928c9e2f5c07317764e797a56a",
+      "request_record": "metadata/frame-08-c-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: talón del segundo pie levantado, punta conserva contacto y pie contrario sigue plano. Se mantiene torso fijo. La limpieza del suelo se revisa por separado en composición.",
+      "elapsed_seconds": 44.1,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9338,
+      "delivery_file": "delivery/frame-08.png",
+      "delivery_sha256": "6e37f6a7efc3edd4bb199b60006551adde802980f422a2dd9efde038ef62dbd0"
+    },
+    {
+      "index": 9,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-09.png",
+      "raw": "raw/frame-09-a.png",
+      "raw_sha256": "77716a85107b81496bb83fe86392ce7a13834c894c19956738dd32bd1c6e38dd",
+      "sha256": "a86be23da7a4e7dd7ae50ffc5fecebacfd1bb640ee64b6df06af0232f65bd64b",
+      "prompt": "prompts/frame-09-a.txt",
+      "prompt_sha256": "4fd0f78ebca56adc1fa70145c6c196067f381f49986b092b4cb0120e441836ef",
+      "request_record": "metadata/frame-09-a-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: segundo pie inicia despegue con rodilla flexionada; el otro pie permanece apoyado. El resultado adelantó ligeramente el despegue previsto; siguiente acción se adapta a la pose observada.",
+      "elapsed_seconds": 41.8,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9338,
+      "delivery_file": "delivery/frame-09.png",
+      "delivery_sha256": "b815e8c9b83fc28046103fee9ae8f1c9aff33ab243ab0ebd837ca13add5bd559"
+    },
+    {
+      "index": 10,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-10.png",
+      "raw": "raw/frame-10-a.png",
+      "raw_sha256": "aa2fa8af72e257441ac89c3a6d34dc4e8b24c70363df6e342b4caa02cdc787f7",
+      "sha256": "e0577a43332995699915590ee07344528bf0901e6a1d6644d30a4d55e16875bc",
+      "prompt": "prompts/frame-10-a.txt",
+      "prompt_sha256": "e324d37547bf93bddd881368472af9a92ed4703a02ff1eacf13f52025843ba3c",
+      "request_record": "metadata/frame-10-a-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: rodilla del segundo pie flexionada y pie elevado; manta responde; apoyo contrario conserva punto y torso original permanece fijo.",
+      "elapsed_seconds": 44.3,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9338,
+      "delivery_file": "delivery/frame-10.png",
+      "delivery_sha256": "4237512ae52376d971c97a23c914923cacbf8f5707da1edffb7316175e14eb0b"
+    },
+    {
+      "index": 11,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-11.png",
+      "raw": "raw/frame-11-a.png",
+      "raw_sha256": "b837b9f748d2cabccbfbed782530b769b683c83a788416656e7a38495574e658",
+      "sha256": "74ed50424cbb6e7a3d9247b3ec76c2b1311b6ce9408346e14797ed7471936b30",
+      "prompt": "prompts/frame-11-a.txt",
+      "prompt_sha256": "f3342cf0b24a866fa8e56d7956514420bdf9cb1a5b17ae7ffc6c041dd8677b22",
+      "request_record": "metadata/frame-11-a-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado: segundo pie pasa hacia delante bajo la manta, sigue suspendido y el otro conserva el apoyo; el torso se mantiene fijo.",
+      "elapsed_seconds": 42.9,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9336,
+      "delivery_file": "delivery/frame-11.png",
+      "delivery_sha256": "40a0d769673319391334e0b5f58fcd5e38c20e270d869c508feb84bf63990921"
+    },
+    {
+      "index": 12,
+      "status": "accepted_after_visual_review",
+      "file": "approved/frame-12.png",
+      "raw": "raw/frame-12-a.png",
+      "raw_sha256": "aeaa0531f35626f9e392d55dd77b8e0a0958e8d5c62112ba6b079c949f9126ee",
+      "sha256": "95ba72b126dfd5125cad228a9c6ed7273cff68e436fe4d133946feaa9619c732",
+      "prompt": "prompts/frame-12-a.txt",
+      "prompt_sha256": "aa7e3a922ac8884d28c05eba9a78958c109255dba6e4aee843fc405dec7ea6a8",
+      "request_record": "metadata/frame-12-a-request.json",
+      "exposure_seconds": 0.08333333333333333,
+      "review": "Aceptado para el piloto: segundo pie se extiende y desciende a contacto casi simultáneo; el modelo adelantó el contacto respecto al estado en vuelo solicitado. Se conserva como cierre observado y se informa la limitación de marcha localizada con torso fijo.",
+      "elapsed_seconds": 44.3,
+      "changed_pixel_bbox_xyxy": [
+        498,
+        1089,
+        583,
+        1209
+      ],
+      "changed_pixels": 9337,
+      "delivery_file": "delivery/frame-12.png",
+      "delivery_sha256": "98f9e91b1e67f85ad4aab7ebe45507cf084e645781b8dfcaa33324c9af77865a"
+    }
+  ],
+  "planned_actions": {
+    "5": "Extend the lifted leg on the RIGHT side of the image a little farther forward. Its heel leads and approaches the road while its toes lift slightly. Keep it airborne, just before landing. The LEFT-side foot stays planted. Let the loose hem follow the extended knee.",
+    "6": "Lower the leading heel of the moving RIGHT-side foot onto the road, a little ahead of the LEFT-side planted foot. Its toes are still slightly raised. This is the heel-contact pose of the same slow step. Keep the upper body steady and the other foot in place.",
+    "7": "Roll the newly landed RIGHT-side foot down from heel to sole until it is flat on the road. Ease the knee as weight begins to settle onto this foot. Keep the LEFT-side foot planted and the dress hem resting naturally around both legs.",
+    "8": "Transfer her weight slightly forward over the newly planted RIGHT-side foot. Her body eases forward a very small amount without changing scale or leaning sideways, the hip settles, and the LEFT-side heel begins lifting while its toe remains on the road. Let the arms counterbalance subtly and the loose hem follow the hips.",
+    "9": "Raise the LEFT-side heel a little farther as that leg becomes the rear leg. Its toes stay at their planted point and its knee flexes. Keep the RIGHT-side foot fully grounded at its current point. The torso stays balanced over that support.",
+    "10": "Lift the toes of the LEFT-side rear foot clear of the road, bending that knee so the foot is now just airborne. Keep the RIGHT-side foot firmly planted. The nearby dress hem responds to the lifting knee.",
+    "11": "Begin swinging that lifted LEFT-side leg forward under the dress. Its bent knee passes toward the planted leg while the foot remains airborne. Keep the RIGHT-side support foot at the same ground contact. Let the hem follow without changing the garment design.",
+    "12": "Continue bringing the lifted LEFT-side foot slightly forward, beginning to open its knee. End in a clear mid-swing pose, ready for the following exposure. Keep the RIGHT-side foot planted. Maintain balance and let the loose dress settle behind the moving knee."
+  },
+  "composition_note": "Corrected crop preview composition before frame 08-c to use explicit alpha, matching the full-frame approach. Original actual API input crops are preserved in metadata/input-snapshots. Full frames 02-07 were rebuilt from the same accepted raw patches. Re-encoding changed PNG hashes; frame 02 differed by at most one color level at two edge pixels from the former one-command alpha pipeline.",
+  "generation_count_total": 17,
+  "accepted_pose_edits": 11,
+  "rejected_pose_candidates": 5,
+  "background_plates": 1,
+  "composition": "Local masked GPT Image 2.5 edits, original static upper body and scene. Final foreground mattes extracted locally with Apple Vision; only lower dress and legs composited over a fixed background repair generated once with Sunburst. No synthetic motion or interpolation added by compositing.",
+  "limitations": [
+    "Torso, arms and hair remain fixed in this localized motion pilot; it is not a finished full-body walking shot.",
+    "Forward root travel is not implemented; this is a localized stepping cycle.",
+    "Frame 12 reaches contact earlier than the originally requested mid-swing pose.",
+    "The small area initially hidden by the legs uses a generated background repair; mask edges need production finishing for a larger close-up.",
+    "The CLI records actual request parameters and completion logs but does not persist API usage or response IDs; no exact cost is claimed."
+  ],
+  "qa": {
+    "static_exclusion_xyxy": [
+      490,
+      1070,
+      590,
+      1220
+    ],
+    "frames": [
+      {
+        "frame": 1,
+        "changed_pixels": 0,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": null
+      },
+      {
+        "frame": 2,
+        "changed_pixels": 4806,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 3,
+        "changed_pixels": 4852,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 4,
+        "changed_pixels": 5039,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 5,
+        "changed_pixels": 5014,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 6,
+        "changed_pixels": 5203,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 7,
+        "changed_pixels": 5251,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 8,
+        "changed_pixels": 5256,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 9,
+        "changed_pixels": 5298,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 10,
+        "changed_pixels": 5286,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 11,
+        "changed_pixels": 5310,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      },
+      {
+        "frame": 12,
+        "changed_pixels": 5317,
+        "static_region_changed_pixels": 0,
+        "changed_bbox_xyxy": [
+          500,
+          1089,
+          574,
+          1192
+        ]
+      }
+    ],
+    "videos": [
+      {
+        "file": "huitaca-v2-12fps-1s.mp4",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "r_frame_rate": "12/1",
+            "nb_read_frames": "12"
+          }
+        ],
+        "format": {
+          "duration": "1.000000"
+        },
+        "sha256": "1422145beb12b07e227e261e8cde43a0b614e26b995bdb480aefa7102e0e9558"
+      },
+      {
+        "file": "huitaca-v2-detalle-12fps-1s.mp4",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 520,
+            "height": 640,
+            "r_frame_rate": "12/1",
+            "nb_read_frames": "12"
+          }
+        ],
+        "format": {
+          "duration": "1.000000"
+        },
+        "sha256": "0cfed4ec6445d596761739f73fdf9311a4684c21382bb356220dae3c857aa351"
+      },
+      {
+        "file": "huitaca-v2-detalle-3fps.mp4",
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 520,
+            "height": 640,
+            "r_frame_rate": "3/1",
+            "nb_read_frames": "12"
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        },
+        "sha256": "7080c645bdaa77d52320be0986a974f02deb131e8cc07e49e26223f0f5b540d8"
+      }
+    ],
+    "source_unchanged": true,
+    "distinct_delivery_frames": 12,
+    "visual_status": "localized_motion_pilot_with_documented_limitations"
+  }
+}

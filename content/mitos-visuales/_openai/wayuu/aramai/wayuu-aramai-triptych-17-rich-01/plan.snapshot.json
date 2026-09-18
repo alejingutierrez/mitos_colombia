@@ -1,0 +1,355 @@
+{
+  "schema": "mitos-colombia-triptychs/reproduction-v2",
+  "status": "first_myth_preview_prepared",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "approval_gate": "Mostrar el primer tríptico reproducido al usuario antes de extender la ejecución a los demás. No publicar esta muestra todavía.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "aramai": {
+      "titulo": "Arámai",
+      "pilot": true,
+      "canon_models": [
+        "aramai__identity_sheet",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_1946_aramai",
+          "type": "primary_source",
+          "title": "Mitos, leyendas y cuentos de la Guajira, VI: Aramai",
+          "author": "Milcíades Chaves Ch.",
+          "year": 1946,
+          "locator": "p. impresa 314; índice PDF 10. Procedencia oral al final de VIII, p.316.",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "supports": "Edad mayor, escasez, petición de mortandad, respuesta de Mareiwa, recorrido de Wanurú y responsabilidad atribuida a Arámai.",
+          "limits": "Registro mediado por recopilador e intérprete; no contiene retorno, petición de cese ni cuidado. No fija una anatomía para Mareiwa o Wanurú."
+        },
+        {
+          "id": "published_aramai_20260905",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+          "supports": "Texto objetivo de estas imágenes: incluye petición de cese, intento de ayudar y pérdida irreversible como desarrollo editorial.",
+          "limits": "El desarrollo editorial no se presenta como episodios documentados en Chaves."
+        },
+        {
+          "id": "paz_reverol_2017",
+          "type": "community_author_context",
+          "author": "Carmen Laura Paz Reverol",
+          "title": "Hacer los sueños. Una perspectiva wayuu",
+          "url": "https://entrediversidades.unach.mx/index.php/entrediversidades/article/view/18",
+          "supports": "Perspectiva situada sobre comunicación entre experiencias cotidianas y no humanas.",
+          "limits": "Contexto; no aporta episodios a Arámai ni permite convertirlo en un sueño. Ficha y extracto consultables; enlace de descarga HTML falló."
+        },
+        {
+          "id": "garcia_valbuena_2004",
+          "type": "ethnographic_context",
+          "title": "Cuando cambian los sueños. La cultura wayúu frente a las iglesias evangélicas",
+          "author": "Nelly García Gavidia y Carlos Valbuena",
+          "url": "https://www.humanas.unal.edu.co/colantropos/files/5114/5615/3446/garcia_wayuu.pdf",
+          "supports": "Relaciones activas entre mundos cotidianos y no humanos; documenta otras descripciones de wanülü.",
+          "limits": "Contexto de campo situado, no otra versión de Arámai. No se trasladan Pulowi, flechas, sueños ni anatomías de este texto al episodio."
+        },
+        {
+          "id": "material_culture_v3",
+          "type": "internal_visual_research",
+          "path": "editorial/wayuu/material-culture-v3.mjs",
+          "supports": "Repertorio completo de vestuario y relaciones domésticas.",
+          "limits": "Puesta en escena editorial para tiempo mítico no fechado."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "aramai__identity_sheet",
+          "decision": "Conservar silueta e identidad de papel y representar edad mayor; la ficha aprobada es una decisión de arte, no fuente narrativa."
+        },
+        {
+          "model_id": "wanuru__presence_model",
+          "decision": "No heredar la obligación de representar a Wanurü como pequeñas piedras carbón inmóviles. La presencia debe poder recorrer y actuar. La ausencia de anatomía descrita no implica ausencia de agencia."
+        },
+        {
+          "model_id": "mareiwa__state_sheet",
+          "decision": "No usar un pliegue ocre como objeto obligatorio a los pies de Arámai. Su escucha y decisión se ponen en escena mediante un interlocutor fuera de campo; no se declara una anatomía canónica."
+        },
+        {
+          "model_id": "epidemia_aramai__phenomenon_rule",
+          "decision": "Retirar el número obligatorio de tres rancherías y la prohibición de trayecto. Son elecciones de composición previas, no hechos del relato."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "aramai",
+        "target_snapshot": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+        "target_content_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+        "summary": "Arámai, un hombre Wayúu mayor inquieto por la escasez, pide a Mareiwa reducir la población mediante enfermedad. Mareiwa atiende la petición y Wanurü queda ligado a la mortandad que recorre La Guajira. En la versión editorial de nuestra página, Arámai vuelve a pedir que termine y después ayuda a las familias; la pérdida no se deshace. La comunidad conserva la responsabilidad de su petición.",
+        "events": [
+          {
+            "id": "escasez",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "La falta de recursos motiva una decisión humana."
+          },
+          {
+            "id": "peticion",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "Arámai pide a Mareiwa una reducción de personas mediante enfermedad."
+          },
+          {
+            "id": "respuesta",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "Mareiwa atiende la petición."
+          },
+          {
+            "id": "recorrido",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "Wanurü recorre La Guajira; conserva agencia propia."
+          },
+          {
+            "id": "reproche",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_aramai",
+            "action": "La comunidad responsabiliza a Arámai."
+          },
+          {
+            "id": "cese",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_aramai_20260905",
+            "action": "Arámai vuelve a pedir que termine lo que solicitó."
+          },
+          {
+            "id": "cuidado",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_aramai_20260905",
+            "action": "Arámai reparte agua y acompaña; la ayuda no revierte las pérdidas."
+          }
+        ],
+        "emotional_reading": "Temor a la escasez, confianza peligrosa en una petición, impotencia ante su cumplimiento, responsabilidad que persiste dentro del cuidado. No mirada de turista maravillado ni triunfo de una solución demográfica.",
+        "magic_reading": "La noche escucha bajo la enramada y se extiende a los espacios domésticos; la huella condensa el peso irreversible de la ausencia en un chinchorro vacío. Licencias plásticas editoriales, no episodios añadidos al relato.",
+        "qa_method": "Describir primero la imagen sin leer su prompt. Comparar después sujeto, verbo, destinatario y efecto con los eventos declarados. Distinguir QA técnico, narrativo, material y juicio editorial; tests verdes no aprueban imágenes."
+      },
+      "paleta": "Arcilla cálida y arena dorada, azul petróleo y turquesa en pequeñas transiciones, índigo intenso y profundo en la anomalía, oliva apagado en vegetación. Riqueza por fibras, sombras y distancias; no por dorados brillantes o ornamentos.",
+      "material_direction": "Mundo artesanal inmersivo de PAPEL RECORTADO con riqueza visual organizada: una anomalía protagonista, acción humana legible y detalles cotidianos secundarios a distintas distancias. Formas humanas sencillas, NO paisajes vacíos. Las caras son recortes casi planos, perfiles de una sola pieza con nariz en el contorno y ojo mínimo; pelo y manos de pocas piezas, ropa amplia sin modelado de rostro Pixar. Tierra continua de hojas irregulares amplias, tramas de tiras en techos y chinchorros, arbustos recortados finos y cardones en varias profundidades. Seis o más planos físicamente separados, aire, sombras, oclusión y luz sobre fibras finas. La noche imposible está construida con esos mismos materiales; no es panel pintado ni cortina pegada al fondo. Composición viva por diagonales y contrastes de escala, no por adornos inventados. El motivo mágico ocupa suficiente encuadre para leerse sin explicación. Figuras completas, pequeñas y adultas; plano ambiental abierto, no retrato. Sin cuota arbitraria de cielo vacío. Papel teñido en arcilla, arena dorada, petróleo, turquesa, índigo y oliva puntual; contraste cálido/frío. Encuadre a sangre con mundo continuo, sin cartón corrugado, mesa, base, respaldo o bordes de maqueta.",
+      "continuity_contract": [
+        "Arámai es un hombre Wayúu mayor y delgado, proporciones adultas naturales, cabeza pequeña de perfil y cabello corto gris oscuro de papel recortado. Camisa Kemiisa arcilla de mangas, manto Kotin carbón sobre los hombros sin cubrir la cabeza, faja S'ira arena y sandalias waireñas. Identidad por silueta, edad, ropa y postura; no por arrugas ni gesticulación facial. Pantalón largo holgado color arena. Cara casi plana de perfil, sin arrugas ni pómulos modelados.",
+        "Mujeres Wayúu con Wayuushein de una sola silueta AMPLIA Y SUELTA, mangas anchas, hasta los tobillos, sin cintura ceñida, color azul mineral o arcilla; cabello negro y cabeza descubierta; sandalias waireñas. Hombres con camisa de mangas, manta exterior completa, faja y sandalias. Figuras sobrias de papel, sin capuchas, velos, hábitos ni sombreros.",
+        "Rancherías dispersas, viviendas bajas rectilíneas, enramadas abiertas de postes, arena, arbustos espinosos bajos y cardones de varios tallos que nacen desde la base. No agaves, rosetas ni cactus saguaro. Puesta en escena Wayúu editorial para tiempo mítico indeterminado, no reconstrucción prehispánica.",
+        "Arámai pide a Mareiwa, quien atiende. Wanurü tiene agencia propia en lo enviado, no es poder controlado por Arámai. Las soluciones plásticas propuestas aquí no fijan apariencias tradicionales ni se trasladan a otros mitos.",
+        "Continuidad del tríptico: mismos tonos arcilla en la Kemiisa de Arámai, Kotin gris carbón abierto en hombros, faja arena y waireñas; pelo corto gris oscuro, adulto mayor sobrio. Mujeres de mantas Wayuushein azul mineral y arcilla. Casas bajas de papel arcilla, postes de tiras de papel, techo de yotojoro interpretado con tiras recortadas, cardones de tallos desde la base y arena de hojas mates."
+      ],
+      "avoid": [
+        "rostros Pixar o Disney, personaje de animación 3D, muñeco, ojos o cabezas grandes",
+        "cabeza esculpida low-poly, piel pintada, cara facetada, aerógrafo o ilustración digital con textura aplicada",
+        "primer plano, plano medio, retrato, figuras cortadas por el marco",
+        "suelo, plantas o piel fotográficos mezclados con papel; origami triangulado excesivo",
+        "base exterior, cartón corrugado, marco, mesa, borde de caja o estudio visibles",
+        "violencia gráfica, cuerpos enfermos, cadáveres, sexualización",
+        "pintura facial, kanas o símbolos culturales inventados",
+        "demonio europeo, cuernos, guadaña, calavera, capa de hechicero",
+        "rayo desde las manos, Arámai controlando energía, partículas brillantes decorativas, texto, letras, logos",
+        "adornos geométricos añadidos a tinajas o paredes; estampados narrativos inventados",
+        "agaves, cactus saguaro de brazos altos, flores naranjas de fantasía",
+        "medio encuadre vacío o paisaje de confeti; riqueza reducida a estrellas sueltas"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "peso_contrario",
+          "narrative_event_ids": [
+            "escasez",
+            "peticion",
+            "respuesta"
+          ],
+          "beat": "Una petición humana entra en una distancia que no puede medir: temor a la escasez y peligrosa confianza en ser escuchado.",
+          "escena": "Horizontal 16:9, GRAN PLANO GENERAL visto desde lejos, cámara ligeramente elevada atravesando un patio seco Wayúu. La enramada principal y Arámai se concentran a la DERECHA del centro: constituyen el foco mágico, alrededor de la mitad del ancho total, sin ocupar toda la altura. El cuarto izquierdo conserva menor contraste y detalle para eventual título editorial, pero sigue siendo territorio con profundidad, no una banda vacía ni un fondo liso. NO dibujar texto. Arámai aparece ENTERO y PEQUEÑO, alrededor de un quinto de la altura del cuadro, fuera del poste delantero izquierdo de la enramada, de perfil hacia el interior con una mano abierta en petición. Mismo hombre mayor gris/arcilla/carbón/arena. Bajo el techo BAJO, formado por tiras cálidas de papel, se abre una NOCHE INMENSAMENTE MÁS PROFUNDA que el edificio: filas de postes que se repiten a distancias imposibles, ondulaciones de terreno índigo a distintos niveles y cielo nocturno de hojas curvas físicamente separadas, estrellas diminutas perforadas en planos lejanos. La noche cruza ENTRE los postes y por debajo del techo, no una pared azul rectangular. Se ve el borde del suelo diurno junto al terreno nocturno: la contradicción es espacial, no sólo cromática. Toda la parte interior es INHABITADA, nadie recibe la petición en persona. Afuera sigue siendo de día. Más lejos, en otro patio soleado al centro-izquierda, dos pequeñas mujeres adultas de shein azul y arcilla se pasan una medida de alimento entre dos cuencos lisos y una cesta casi vacía. Tres humanos totales. Una vivienda baja, cardón de tallos desde la base, ramas recortadas y colinas bajas construyen seis distancias. En primer plano una orilla de jagüey casi seco y una estrecha lámina de agua ordinaria sitúan la escasez sin competir con la enramada. Riqueza en tramas de cubierta, sombras en suelo, bordes internos finos y gestos. Cielo sólo el espacio necesario; ni aldea atestada ni desierto de diseño vacío. Todo es papel; el prodigio domina sin agrandar al personaje.",
+          "editorial_translation": "La noche dentro de la enramada representa la escucha de Mareiwa como licencia plástica. No certifica apariencia, santuario, rito ni episodio astronómico tradicional. Se conserva el gesto de petición y su motivación en la escasez.",
+          "visual_question": "¿Hay petición hacia un interior deshabitado de profundidad nocturna imposible y escasez cotidiana alrededor? ¿Arámai es pequeño y la enramada no parece un panel plano? ¿Se siente un mundo vivo sin saturación?",
+          "light": "Sol cálido de costado sobre arcilla, arena, trama de techo y pliegues de ropa; azules petroleros e índigo profundos bajo la enramada. Pequeña luz reflejada define los cantos de cada capa interior. No teñir todo de noche ni brillo de portal.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La enramada doméstica y el reparto de pocas provisiones.",
+            "impossible_behavior": "Un techo modesto contiene una distancia nocturna imposible dentro del día.",
+            "narrative_effect": "La palabra humana encuentra escucha no humana; la petición aún no revela todo su costo.",
+            "agency": "Arámai pide; Mareiwa atiende. La noche no sale de la mano ni es controlada por ella.",
+            "physical_translation": "Postes repetidos en profundidad imposible, paisaje de hojas índigo separadas por aire bajo un techo de tiras de papel cálido, estrellas como minúsculas perforaciones; suelo continuo y sombras de oclusión.",
+            "visible_test": "El patio y cielo exterior son diurnos; el interior vacío tiene cielo estelar y profundidad nocturna.",
+            "event_ids": [
+              "peticion",
+              "respuesta"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "visual_function": "narrative_scene",
+          "title": "La noche escucha",
+          "narrative_summary": "Arámai teme la escasez y pide a Mareiwa que envíe enfermedad para reducir personas. La escucha no humana se representa sin cuerpo. Dos mujeres a distancia reparten pocas provisiones. La imagen no celebra esa petición."
+        },
+        "acto": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "diagonal",
+          "narrative_event_ids": [
+            "respuesta",
+            "recorrido",
+            "cese"
+          ],
+          "beat": "La segunda petición ya no detiene lo enviado. Arámai vuelve a pedir que termine; el daño ha alcanzado a las casas y continúa con autonomía.",
+          "escena": "Vertical 9:16 en GRAN PLANO GENERAL ligeramente elevado, cámara retirada de los personajes. El encuadre se llena de recorrido visual en profundidad: tejado bajo que cruza parcialmente una esquina alta, dos patios diurnos a diferentes distancias, dos viviendas rectilíneas y una enramada; arbustos finos y cardón multi-tallo en primer plano lateral, sin agaves. No reservar media imagen a cielo vacío. Arámai aparece pequeño y completo en la zona inferior-media, a cierta distancia de cámara, sentado de perfil sobre una estera lisa junto al poste de la enramada. Su figura sentada ocupa aproximadamente UN SEXTO de la altura, no un gran cuerpo en primer plano. Cabeza gris plana, Kemiisa arcilla, Kotin carbón sobre hombros, faja y pantalón arena, sandalias. Una mano descansa en la rodilla y otra permanece baja y abierta hacia la sombra interior, hombros vencidos: segunda petición, no hechizo. Más allá, la casa principal de arcilla al lado opuesto tiene un umbral grande y abierto que deja ver un PATIO NOCTURNO INMENSO, mucho mayor de lo que cabe en la casa. Dentro hay un chinchorro VACÍO de trama arena entre postes que retroceden, capas de terreno índigo, colinas distantes y estrellas pequeñas por detrás: arquitectura cotidiana que contiene una distancia imposible, no rectángulo azul. Las jambas, el techo y el patio exterior de la casa permanecen bajo el sol. Una segunda casa distante tiene su propio interior nocturno, separado por suelo seco y claro; ningún hilo, río, franja, nube o efecto conecta las casas o sale de las manos. Dos mujeres adultas pequeñas, una con shein azul y otra arcilla, comparten cuenco y acompañamiento en el umbral cercano; siguen vivas, enteras, sin lesiones, gestos de terror ni funeral. Tres humanos totales. Una tinaja lisa y tela plegada sin patrones complejos son los únicos objetos secundarios. La riqueza viene de distancias entre personas y hogares, tramas, oclusiones, color cálido exterior y profundidad azul interior. Ningún personaje debe acercarse a un tercio de la altura. Relieve material auténtico en grandes hojas, no caras esculpidas ni paisaje ilustrado.",
+          "editorial_translation": "La noche que aparece dentro de otros umbrales prolonga la opción 1 elegida por el usuario para expresar recorrido y agencia de Wanurü, sin anatomía canónica. La petición de cese pertenece a la edición de la página. No se afirma una epidemia transmitida por portales o estrellas.",
+          "visual_question": "¿Arámai suplica pequeño sin controlar el fenómeno? ¿Los umbrales contienen distancias nocturnas imposibles y hay cuidado cotidiano vivo alrededor, con caras de recorte y planos abiertos?",
+          "light": "Luz cálida diurna sobre patios, paredes arcilla y hojas oliva, con sombra del techo. Interiores nocturnos saturados índigo/petróleo que conservan legibilidad de capas. Nitidez ambiental sin bokeh de retrato.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los interiores domésticos detrás de puertas y enramadas.",
+            "impossible_behavior": "Otras casas adquieren por dentro la misma noche imposible mientras sus paredes siguen al sol.",
+            "narrative_effect": "Lo enviado recorre las rancherías aunque Arámai pida que termine; la súplica no lo domina.",
+            "agency": "El recorrido ligado a Wanurü es autónomo. Arámai está sentado, una mano en la rodilla y otra baja en petición.",
+            "physical_translation": "Jambas y tejados cálidos delante de patios nocturnos de varias hojas separadas y chinchorro tejido que establece escala; cada interior es independiente.",
+            "visible_test": "Más de un interior nocturno contradice su exterior diurno; no hay efecto unido a la mano de Arámai.",
+            "event_ids": [
+              "recorrido",
+              "cese"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "visual_function": "narrative_scene",
+          "title": "La noche alcanza las casas",
+          "narrative_summary": "Lo enviado alcanza otras rancherías. Arámai vuelve a pedir que termine, sin controlarlo. Dos mujeres vivas se acompañan con una medida de agua ante un espacio doméstico que ha quedado sin ocupante. Ausencia sin representación gráfica."
+        },
+        "huella": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "primer_plano_dominante",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "reproche",
+            "cuidado"
+          ],
+          "beat": "El cuidado no devuelve a quienes faltan; la ausencia pesa y la responsabilidad permanece.",
+          "symbolic_contract": {
+            "thesis": "La ausencia tiene un peso que ninguna ayuda posterior puede retirar.",
+            "carrier": "Un único chinchorro vacío, tejido de cintas finas de papel mate arena y arcilla.",
+            "operation": "Un chinchorro vacío cede por el peso de una noche entera; trama tensa y múltiples hojas nocturnas a distintas distancias hacen físicamente visible ese peso sin cuerpos.",
+            "story_connection": "Condensa la pérdida irreversible causada por la petición de Arámai y el límite de su cuidado posterior; no vuelve a representar el reparto de agua.",
+            "visible_test": "Se reconoce un chinchorro vacío y tensado que sostiene una profundidad nocturna imposible, dentro de una composición diurna y sin acción humana."
+          },
+          "escena": "Cuadrada 1:1, síntesis simbólica táctil, NO escena de ranchería. UN ÚNICO CHINCHORRO VACÍO atraviesa el cuadrado en una diagonal suave; su concavidad visible ocupa la mayor parte central, alrededor de tres cuartos del encuadre. Los haces de suspensión arena suben hacia esquinas opuestas y continúan fuera de campo, sin postes ni soportes. Cámara ligeramente oblicua y baja para apreciar el vientre suspendido y su sombra. Tejido de cintas FINAS de papel mate arena y arcilla, cruces reales, pliegues tensos, huecos y sombras entre cada cinta: riqueza artesanal, sin estampados o figuras geométricas codificadas. Aunque no contiene persona alguna, su centro cede bajo el PESO DE UNA NOCHE ENTERA. En vez de un estampado azul, el tejido sostiene una profundidad cóncava de múltiples hojas índigo, azul petróleo y pequeños bordes turquesa a distancias crecientes; parecen terreno nocturno y aire innumerable contenidos por un objeto pequeño. Algunas perforaciones estelares muy pequeñas están LEJOS entre esas capas, no encima de la trama. La tensión de las fibras, el borde interno levantado y la sombra proyectada bajo el vientre hacen visible el peso imposible. No se rompe el tejido ni aparece bulto humano; puede verse aire entre el chinchorro y las amplias hojas cálidas que forman el fondo continuo. Fondo con tres planos sutiles arena/arcilla y una sombra oblicua rica, no un vacío de estudio uniforme. Más presencia material y cromática que el símbolo anterior, pero un único motivo legible a tamaño pequeño. Sin personas, casas, vasijas, plantas, luna gigante ni escena secundaria. El fondo continúa por todos los bordes sin mesa, base ni cartón exterior.",
+          "material_direction": "Fotografía de construcción artesanal de papel cortado y tejido, colores teñidos mate, fibras finas, sombras cruzadas y capas azules físicamente separadas. Cintas estrechas, huecos visibles y contraste entre tensión dorada y profundidad índigo. El símbolo tiene abundancia de relaciones materiales dentro de una sola forma, NO acumulación de objetos. Ninguna tela fotográfica, render plástico, ilustración con textura pegada, soporte exterior o marco.",
+          "continuity_contract": [
+            "Conservar el taller de papel recortado, arena pálida, arcilla y noche índigo del tríptico ya elegido; no reutilizar su composición de ranchería ni sus acciones.",
+            "El chinchorro retoma el espacio doméstico vacío ya usado en el piloto. Su noche interior es metáfora editorial de pérdida, no rito funerario ni símbolo tradicional certificado.",
+            "No hay personajes en esta pieza concreta. No transferir contratos de vestuario ni el reparto de figuras de las escenas horizontal y vertical."
+          ],
+          "editorial_translation": "El chinchorro y la noche que pesa dentro son una síntesis plástica editorial; el relato no narra un chinchorro mágico. El vacío expresa pérdida irreversible y responsabilidad, no descanso de un muerto, alma, resurrección, amuleto ni tradición funeraria. El cuidado se conserva como vínculo semántico con la edición del sitio, no como acción representada.",
+          "visual_question": "¿Se puede leer una sola metáfora —el vacío pesa— sin tener que seguir lo que hacen personajes? ¿La noche tiene profundidad entre hojas y no es sólo un tejido estampado?",
+          "light": "Luz cálida lateral resalta la trama arena/arcilla y proyecta sombra profunda pero legible; tonos índigo y petróleo con pequeños cantos turquesa dentro de la concavidad. Estrellas remotas discretas, sin purpurina, neón ni aura.",
+          "avoid": [
+            "escena de personas",
+            "rostros o cuerpos",
+            "bulto de durmiente o cadáver",
+            "ranchería panorámica",
+            "reparto de agua",
+            "collage de episodios",
+            "postes o travesaños",
+            "luna grande o galaxia decorativa",
+            "símbolos claniles, kanas, runas o letras",
+            "calaveras, cruces o iconografía funeraria",
+            "objeto impreso o tela real",
+            "fondo de estudio o base exterior",
+            "render CGI, plastilina, ilustración digital plana"
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El chinchorro como lugar doméstico que queda sin ocupante.",
+            "impossible_behavior": "Estando vacío, se curva por el peso de una noche espacialmente profunda.",
+            "narrative_effect": "La ausencia persiste pese al cuidado; la consecuencia de la petición no se recoge.",
+            "agency": "No hay ejecutor visible ni poder humano controlando el objeto. El símbolo condensa una consecuencia, no un nuevo acto sobrenatural.",
+            "physical_translation": "Trama de cintas finas cálidas, tensión diagonal, vientre suspendido, hojas nocturnas separadas por aire y sombras, estrellas perforadas lejos; sombra sobre fondo de grandes hojas.",
+            "visible_test": "Objeto cotidiano vacío en luz diurna que sostiene noche en profundidad, sin cuerpo ni acción escénica.",
+            "event_ids": [
+              "reproche",
+              "cuidado"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "title": "El peso de la ausencia"
+        }
+      },
+      "visual_memory_review": {
+        "reviewer": "Codex · inspección directa de originales",
+        "reviewed_at": "2026-09-07",
+        "reviewed_reference_ids": [
+          "4a9866cc87beae485ccc",
+          "02f10330fff73ff87e83",
+          "d49d90469a570948490c",
+          "e1463b44afc54eb4b643",
+          "42964c2bfc4d1fb2e744",
+          "6c562c8d966918fe80ce",
+          "5dbe2b005e1b738c3213"
+        ],
+        "retained": [
+          "Papercut plano en personas, mundo profundo, vida cotidiana y magia material del piloto02.",
+          "Identidad y cadena narrativa del tríptico anterior; cuadrada simbólica."
+        ],
+        "rejected": [
+          "Minimalismo como vaciado del mundo.",
+          "Adornos no pedidos, caras modeladas, escala humana demasiado grande.",
+          "Usar el motivo nocturno de Arámai como receta literal para otros mitos."
+        ],
+        "influence_by_act": {
+          "entrada": "Profundidad imposible de enramada del b2a, riqueza de territorio del b1a y petición del tríptico anterior; interior sin personas.",
+          "acto": "Umbrales con patios profundos de b3a y segunda petición del vertical anterior, manteniendo distancia humana.",
+          "huella": "Peso y tensión física del chinchorro b2b trasladados al motivo simbólico anterior sin casas ni personas."
+        }
+      }
+    }
+  },
+  "replaces": "content/mitos-visuales/wayuu.tripticos.v1.6.json",
+  "iteration_scope": "Reproducir ahora entrada/acto/huella de Arámai con la dirección del piloto02; el alcance solicitado general son los 27 mitos Wayúu del manifiesto. Keyframes pospuestos.",
+  "user_feedback": "Ahora sí estamos en el camino correcto. Empezar re-producción de trípticos Wayúu usando esta dirección; mostrar el primer mito. Keyframes para luego.",
+  "chosen_directions": [
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+      "sha256": "4a9866cc87beae485ccc2466650c9b8fbe0fc602e742174f4e16c4c914ce222b",
+      "role": "Dirección del piloto02 respaldada por el usuario como camino creativo; no implica aprobación de cada adorno o píxel."
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+      "sha256": "02f10330fff73ff87e839c7fabdaeffce118704f159985cd9c9330d469e540dd",
+      "role": "Dirección del piloto02 respaldada por el usuario como camino creativo; no implica aprobación de cada adorno o píxel."
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+      "sha256": "d49d90469a570948490c0f1024cc85de07fcb047398a323c5e206c0d64923009",
+      "role": "Dirección del piloto02 respaldada por el usuario como camino creativo; no implica aprobación de cada adorno o píxel."
+    },
+    {
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+      "sha256": "e1463b44afc54eb4b643ff92143bf120a9559576b987921514b387425233baba",
+      "role": "Dirección del piloto02 respaldada por el usuario como camino creativo; no implica aprobación de cada adorno o píxel."
+    }
+  ],
+  "campaign_scope": "content/mitos-visuales/production/wayuu-tripticos-reproduccion-2026-09-07/scope.json",
+  "visual_memory_library": "content/mitos-visuales/production/wayuu-tripticos-reproduccion-2026-09-07/visual-memory.aramai.json"
+}

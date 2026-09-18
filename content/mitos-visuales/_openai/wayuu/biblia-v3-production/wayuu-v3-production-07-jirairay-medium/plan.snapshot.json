@@ -1,0 +1,690 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-07-jirairay-medium",
+    "myth_slug": "jirairay",
+    "model_ids": [
+      "jirairay_canto__phenomenon_rule",
+      "outsu_jirairay__identity_sheet",
+      "paciente_jirairay__identity_sheet",
+      "maraca_outsu__object_sheet",
+      "tabaco_ritual__object_sheet",
+      "alimentos_ceremonia__object_sheet"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "frozen_ready_to_generate"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "jirairay_canto__phenomenon_rule",
+    "outsu_jirairay__identity_sheet",
+    "paciente_jirairay__identity_sheet",
+    "maraca_outsu__object_sheet",
+    "tabaco_ritual__object_sheet",
+    "alimentos_ceremonia__object_sheet"
+  ],
+  "models": {
+    "jirairay_canto__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "jirairay_canto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Canto o nombre de invocacion, no entidad."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Nombre cantado dentro de la ceremonia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Jirairay, canto de invocación. Funcion visual: Nombre pronunciado y patron sonoro dirigido a Wanurü, nunca personaje autonomo.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Jirairay, canto de invocación",
+          "funcion estable: Nombre pronunciado y patron sonoro dirigido a Wanurü, nunca personaje autonomo.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Nombre pronunciado y patron sonoro dirigido a Wanurü, nunca personaje autonomo."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Jirairay, canto de invocación. Nombre pronunciado y patron sonoro dirigido a Wanurü, nunca personaje autonomo.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Nombre pronunciado y patron sonoro dirigido a Wanurü, nunca personaje autonomo.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "outsu_jirairay__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "outsu_jirairay"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Canta, escucha y negocia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Outsü de Jirairay. Funcion visual: Especialista que canta, escucha auxiliares y negocia sin convertirse en hechicera generica.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Outsü de Jirairay",
+          "funcion estable: Especialista que canta, escucha auxiliares y negocia sin convertirse en hechicera generica.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Especialista que canta, escucha auxiliares y negocia sin convertirse en hechicera generica."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Outsü de Jirairay. Especialista que canta, escucha auxiliares y negocia sin convertirse en hechicera generica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Especialista que canta, escucha auxiliares y negocia sin convertirse en hechicera generica.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "paciente_jirairay__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "paciente_jirairay"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Permanece entre fiebre, sueño y vigilia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Persona enferma de Jirairay. Funcion visual: Paciente en fiebre, sueño y vigilia durante una ceremonia reconstruida.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Persona enferma de Jirairay",
+          "funcion estable: Paciente en fiebre, sueño y vigilia durante una ceremonia reconstruida.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Paciente en fiebre, sueño y vigilia durante una ceremonia reconstruida."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Persona enferma de Jirairay. Paciente en fiebre, sueño y vigilia durante una ceremonia reconstruida.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Paciente en fiebre, sueño y vigilia durante una ceremonia reconstruida.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "maraca_outsu__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "maraca_outsu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Marca el tiempo de la ceremonia."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Instrumento heredado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Maraca de outsü. Funcion visual: Instrumento ritual liso cuya forma no se extrapola a todas las especialistas.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Maraca de outsü",
+          "funcion estable: Instrumento ritual liso cuya forma no se extrapola a todas las especialistas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Instrumento ritual liso cuya forma no se extrapola a todas las especialistas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Maraca de outsü. Instrumento ritual liso cuya forma no se extrapola a todas las especialistas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Instrumento ritual liso cuya forma no se extrapola a todas las especialistas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tabaco_ritual__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "tabaco_ritual"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Elemento registrado sin valor de instruccion."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Tabaco de la ceremonia. Funcion visual: Tabaco registrado como parte del contexto ritual, no instruccion reproducible.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Tabaco de la ceremonia",
+          "funcion estable: Tabaco registrado como parte del contexto ritual, no instruccion reproducible.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Tabaco registrado como parte del contexto ritual, no instruccion reproducible."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Tabaco de la ceremonia. Tabaco registrado como parte del contexto ritual, no instruccion reproducible.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Tabaco registrado como parte del contexto ritual, no instruccion reproducible.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "alimentos_ceremonia__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "alimentos_ceremonia"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Bienes dentro de obligaciones rituales."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Alimentos y objetos de obligación ritual. Funcion visual: Bienes pedidos dentro de la relacion entre familia, especialista y presencias.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Alimentos y objetos de obligación ritual",
+          "funcion estable: Bienes pedidos dentro de la relacion entre familia, especialista y presencias.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Bienes pedidos dentro de la relacion entre familia, especialista y presencias."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Alimentos y objetos de obligación ritual. Bienes pedidos dentro de la relacion entre familia, especialista y presencias.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Bienes pedidos dentro de la relacion entre familia, especialista y presencias.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "jirairay_canto": {
+      "name": "Jirairay, canto de invocación",
+      "kind": "fenomeno",
+      "description": "Nombre pronunciado y patron sonoro dirigido a Wanurü, nunca personaje autonomo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "jirairay_canto__phenomenon_rule"
+      ],
+      "legacy_model_refs": [
+        "jirairay__ancla",
+        "jirairay__magia"
+      ],
+      "myth_refs": [
+        "jirairay",
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Canto o nombre de invocacion, no entidad."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Nombre cantado dentro de la ceremonia."
+        }
+      ]
+    },
+    "outsu_jirairay": {
+      "name": "Outsü de Jirairay",
+      "kind": "personaje",
+      "description": "Especialista que canta, escucha auxiliares y negocia sin convertirse en hechicera generica.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "outsu_jirairay__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirairay"
+      ],
+      "evidence": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Canta, escucha y negocia."
+        }
+      ]
+    },
+    "paciente_jirairay": {
+      "name": "Persona enferma de Jirairay",
+      "kind": "personaje",
+      "description": "Paciente en fiebre, sueño y vigilia durante una ceremonia reconstruida.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "paciente_jirairay__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirairay"
+      ],
+      "evidence": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Permanece entre fiebre, sueño y vigilia."
+        }
+      ]
+    },
+    "maraca_outsu": {
+      "name": "Maraca de outsü",
+      "kind": "objeto",
+      "description": "Instrumento ritual liso cuya forma no se extrapola a todas las especialistas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "maraca_outsu__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirairay",
+        "umarala"
+      ],
+      "evidence": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Marca el tiempo de la ceremonia."
+        },
+        {
+          "myth": "umarala",
+          "field": "mito",
+          "note": "Instrumento heredado."
+        }
+      ]
+    },
+    "tabaco_ritual": {
+      "name": "Tabaco de la ceremonia",
+      "kind": "objeto",
+      "description": "Tabaco registrado como parte del contexto ritual, no instruccion reproducible.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "tabaco_ritual__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirairay"
+      ],
+      "evidence": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Elemento registrado sin valor de instruccion."
+        }
+      ]
+    },
+    "alimentos_ceremonia": {
+      "name": "Alimentos y objetos de obligación ritual",
+      "kind": "objeto",
+      "description": "Bienes pedidos dentro de la relacion entre familia, especialista y presencias.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "alimentos_ceremonia__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirairay"
+      ],
+      "evidence": [
+        {
+          "myth": "jirairay",
+          "field": "mito",
+          "note": "Bienes dentro de obligaciones rituales."
+        }
+      ]
+    }
+  }
+}

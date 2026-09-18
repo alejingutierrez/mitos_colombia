@@ -1,0 +1,142 @@
+{
+  "schema": "mitos-triptych-options-review/v1",
+  "date": "2026-09-05",
+  "batch_id": "wayuu-aramai-magic-14-options-01",
+  "status": "FIVE_OPTIONS_DELIVERED_PENDING_USER_CHOICE",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "editorial_approval": null,
+  "production_ready": false,
+  "completed_triptych": false,
+  "technical": {
+    "outputs": [
+      {
+        "id": "01",
+        "title": "La noche que escucha",
+        "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/01-la-noche-que-escucha.jpeg",
+        "output_sha256": "42964c2bfc4d1fb2e7440ff069b609e71f2d5a06fa70bca9cfe8528a8e68c28c",
+        "width": 1536,
+        "height": 864,
+        "quality_requested": "high",
+        "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/01-la-noche-que-escucha.prompt.txt",
+        "prompt_sha256": "7fc7a443bc20e58d988160097577e0aabc2d3e98476b21cd61521201564e2c79",
+        "prompt_hash_ok": true
+      },
+      {
+        "id": "02",
+        "title": "El cielo se inclina a escuchar",
+        "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/02-el-cielo-se-inclina.jpeg",
+        "output_sha256": "3e71e360abafdadabf5418b101dfefc10abb27d5d7c5cf44db7d615de01db1fd",
+        "width": 1536,
+        "height": 864,
+        "quality_requested": "high",
+        "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/02-el-cielo-se-inclina.prompt.txt",
+        "prompt_sha256": "80db5b98f95fa96b2a77d1cfb6b6cd8313037f991e13fe2d5cf92bbc1562c891",
+        "prompt_hash_ok": true
+      },
+      {
+        "id": "03",
+        "title": "Las huellas sin caminante",
+        "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/03-las-huellas-sin-caminante.jpeg",
+        "output_sha256": "2b9713e3415d40a04bbcddc52e08342817f034175178d552eb69d3178c89ad59",
+        "width": 1536,
+        "height": 864,
+        "quality_requested": "high",
+        "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/03-las-huellas-sin-caminante.prompt.txt",
+        "prompt_sha256": "98236603cf77c8bbdbbc32471478534becb726eb02992783a705301497681709",
+        "prompt_hash_ok": true
+      },
+      {
+        "id": "04",
+        "title": "Wanurü entre los planos",
+        "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/04-wanuru-entre-los-planos.jpeg",
+        "output_sha256": "bbaf7de95420a3ff430ea3a7baea72c1c2e55eeeda7cc30c5bb920a739865d4e",
+        "width": 1536,
+        "height": 864,
+        "quality_requested": "high",
+        "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/04-wanuru-entre-los-planos.prompt.txt",
+        "prompt_sha256": "6e32ccf04b3fde59dbaeaf77561fd16c42705c3440790a5ba29113c68263549e",
+        "prompt_hash_ok": true
+      },
+      {
+        "id": "05",
+        "title": "El agua recuerda el futuro",
+        "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-14-options-01/05-el-agua-recuerda-el-futuro.jpeg",
+        "output_sha256": "890d19ecc144dbc728129746643798ee9ae2b52fc1def86c94f8693ea912717d",
+        "width": 1536,
+        "height": 864,
+        "quality_requested": "high",
+        "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-magic-14-options-01/prompts/05-el-agua-recuerda-el-futuro.prompt.txt",
+        "prompt_sha256": "29780b7d69f973ad7308c58f926029c433a6dd433b229a92d6bfc0456baa77f0",
+        "prompt_hash_ok": true
+      }
+    ],
+    "plan_hash_ok": true,
+    "narrative_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+    "distinct_output_hashes": 5,
+    "tests": "4 narrative-integrity tests passed; does not certify visual quality",
+    "generation_duration_seconds": {
+      "01": 83.7,
+      "02": 77.3,
+      "03": 80,
+      "04": 83.5,
+      "05": 81.7
+    }
+  },
+  "visual_reviews": [
+    {
+      "id": "01",
+      "visible": "La enramada diurna contiene una profundidad de postes y paisaje nocturno con estrellas. Arámai de perfil abre la mano hacia el interior; dos mujeres trabajan a la derecha.",
+      "strength": "La noche es inequívoca y está dentro de un espacio cotidiano, no sólo insinuada por color.",
+      "limits": [
+        "La enramada creció hasta dominar la mitad del ancho; Arámai ronda un tercio de la altura, mayor que el 15–18% solicitado.",
+        "Aparece una tercera mujer dentro de la enramada no pedida: el diálogo puede parecer dirigido a ella y debilita la escucha indeterminada de Mareiwa.",
+        "Algunos suelos y arbustos parecen arena y ramas de maqueta más que hojas finas."
+      ]
+    },
+    {
+      "id": "02",
+      "visible": "Grandes arcos de hojas azules descienden sobre casas pequeñas. Arámai levanta una mano; dos mujeres intercambian provisiones a la derecha.",
+      "strength": "Mayor amplitud cósmica y separación clara entre estratos de cielo y mundo habitado.",
+      "limits": [
+        "La mano quedó más alta de lo solicitado y puede leerse como invocación que controla el cielo; deberá aclararse la respuesta autónoma si se elige.",
+        "El descenso también admite lectura de telón o cubierta, no sólo de voluntad que escucha.",
+        "El protagonista supera el rango del 15–18%; su altura se aproxima a una cuarta parte."
+      ]
+    },
+    {
+      "id": "03",
+      "visible": "Huellas oscuras recorren arena, ascienden por una pared aislada y continúan suspendidas en el aire. Arámai abre la mano y dos mujeres observan desde otros planos.",
+      "strength": "El recorrido imposible se identifica sin necesitar una figura de Wanurü.",
+      "limits": [
+        "La pared central aislada y el ritmo de huellas pueden dar una lectura diagramática.",
+        "Arámai vuelve a ocupar cerca de un tercio de la altura y queda en un primer término más cercano que el buscado.",
+        "La mano orientada al recorrido admite lectura de control; requiere ajuste si se escoge."
+      ]
+    },
+    {
+      "id": "04",
+      "visible": "Una figura incompleta enorme se construye con recortes índigo separados. El terreno se ve por sus vacíos; pasa entre personas pequeñas y casas. Arámai permanece aparte, con la mano baja.",
+      "strength": "Presencia sobrenatural más explícita; el corte y la distancia entre hojas construyen su cuerpo sin rostro modelado.",
+      "limits": [
+        "La presencia excede el tamaño previsto y se aproxima a un gigante; debe elegirse conscientemente esa escala.",
+        "Es una invención plástica de Wanurü, no una anatomía avalada por la fuente.",
+        "El contraste bajo puede ocultar el recorte superior en una pantalla oscura."
+      ]
+    },
+    {
+      "id": "05",
+      "visible": "Una ranchería y cuatro personas viven bajo el cielo diurno. El agua refleja las casas de noche, con luna y estrellas, y omite los cuerpos presentes en la orilla.",
+      "strength": "La anomalía temporal y la ausencia están integradas al recurso escaso del relato. Figuras enteras y lenguaje de papel conservado.",
+      "limits": [
+        "La imagen anticipa el desenlace como lectura editorial; no documenta una profecía tradicional.",
+        "La superficie de agua ocupa casi media imagen y puede parecer más abundante que el último resto de un jagüey.",
+        "Algunas prendas femeninas se estrechan hacia los tobillos y conviene mantener mayor amplitud de manta si se desarrolla."
+      ]
+    }
+  ],
+  "review_method": "Inspección directa por el agente de las cinco imágenes; tamaños relativos de figuras son estimaciones visuales. No se confunde prompt solicitado con resultado observado.",
+  "agent_preference": "02 por escala cósmica; 05 por realismo mágico cotidiano y desenlace. 04 si se prefiere una presencia sobrenatural explícita.",
+  "publication": "No images published or ingested. No other myths generated."
+}

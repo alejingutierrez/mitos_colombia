@@ -1,0 +1,239 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "la-india-worunka": {
+      "titulo": "La India Worunka",
+      "canon_models": [
+        "worunka__identity_sheet",
+        "worunka__state_sheet",
+        "sangre_toro__identity_sheet",
+        "carpintero_rojo__identity_sheet",
+        "guacamayo_rojo__identity_sheet",
+        "color_aves_worunka__phenomenon_rule",
+        "piedra_worunka__object_sheet",
+        "origen_tumas_worunka__phenomenon_rule",
+        "matas_fruto_rojo_worunka__botanical_sheet",
+        "sequia_worunka__phenomenon_rule",
+        "arroyo_worunka__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_worunka_1946",
+          "type": "primary_narrative_edition",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "PDF 8–9 (base cero), impresas 312–313; informante p.316",
+          "supports": "Piedra, color de aves, tumas y sequía en la versión de Juancito Iguarán, mediada por Roberto Iguarán y Chaves.",
+          "limits": "Edición histórica en castellano, no transcripción literal en wayuunaiki. No se toma juicio de género del investigador como doctrina cultural."
+        },
+        {
+          "id": "published_worunka",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-india-worunka.json",
+          "supports": "Relato objetivo congelado.",
+          "limits": "La edición pública hace acercarse las aves espontáneamente y explicita sangre; Chaves hace actuar a Mareiwa. Se representa transferencia material sin recrear intervención ni fluidos, y no se edita texto."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "worunka__state_sheet",
+          "decision": "Usar sólo estado pétreo en H, no tres personas simultáneas. Piedra abstracta sin cara, anatomía o estatua antropomorfa detallada."
+        },
+        {
+          "model_id": "color_aves_worunka__phenomenon_rule",
+          "decision": "Exactamente tres aves distintas. Reducir realismo del plumaje y eliminar aves extra: capas anchas de papel. Cintas se integran en plumas, no haces de luz."
+        },
+        {
+          "model_id": "sequia_worunka__phenomenon_rule",
+          "decision": "Una única escena de subsuelo bajo sequía con lluvia lejana; no cuatro estaciones separadas. Conservar seis tumas coral en dos grupos de tres, tinaja intacta y soporte oculto."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "la-india-worunka",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-india-worunka.json",
+        "target_content_sha256": "9774ed6faf8a41db00c0496ff597e3093f69bc727491d62a5f347238b9308b6d",
+        "summary": "Worunka permanece en la memoria de una piedra de arroyo. El rojo pasa de esa piedra a distintas aves. Semillas y frutos se relacionan con las tumas que quedan enterradas tras la sequía. El tríptico elige estas transformaciones sin mostrar violencia corporal ni fusionar otras variantes.",
+        "events": [
+          {
+            "id": "piedra_aves",
+            "action": "Worunka queda en piedra junto al arroyo y el color pasa a Sangre Toro, carpintero y guacamayo.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_worunka_1946"
+          },
+          {
+            "id": "tumas_subsuelo",
+            "action": "Frutos y semillas dan lugar a tumas; sequía y plantas secas dejan las piedras enterradas, con lluvia que retorna.",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_worunka_1946"
+          }
+        ],
+        "emotional_reading": "Persistencia, transformación y memoria dentro de un paisaje que guarda lo que desaparece.",
+        "magic_reading": "Piedra que entrega plumas, tierra que guarda frutos minerales y una semilla que conserva la promesa de vida.",
+        "qa_method": "H tres aves y una piedra abstracta unidos por papel rojo; V seis tumas bajo suelo continuo, sequía y lluvia lejana; S un solo motivo semilla/mineral sin escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T19:31:50Z",
+        "reviewed_reference_ids": [
+          "23a56ad5fcd7c1414238",
+          "4792f97e24bf81c0ce79"
+        ],
+        "retained": [
+          "Arroyo azul como continuidad territorial y profundidad por montañas superpuestas.",
+          "Contraste entre suelo ocre, azul oscuro y acentos de rojo."
+        ],
+        "rejected": [
+          "Dientes sobre ropa, piedra levantada como amenaza y gestos de violencia.",
+          "Petroglifos, estampados o símbolos no sustentados; rosetas botánicas y sol ornamental.",
+          "Personajes grandes, caras modeladas y piel ilustrada. No transformar la ficha de identidad en retrato ni copiar variantes de otras narraciones."
+        ],
+        "influence_by_act": {
+          "entrada": "Conservar arroyo y capas, pero cambiar el centro de lectura a piedra abstracta y rojo que se convierte físicamente en plumas, sin agresor.",
+          "acto": "La tierra participa en la transformación: cavidad orgánica que conserva tumas bajo plantas secas, no escena de castigo corporal.",
+          "huella": "Del repertorio de frutos y semillas tomar la relación semilla/piedra, aislada en un solo motivo; no reutilizar escena ni grabados."
+        }
+      },
+      "material_direction": "Immersive full-bleed world entirely built from matte dyed CUT PAPER, broad sheets with crisp internal cut edges, air gaps and cast shadows at multiple physical depths. People are almost-flat side-profile paper cutouts with natural adult proportions, one tiny eye slit, nose only in outline, no modeled cheeks. Clothes are few broad folded paper pieces. Ground, rocks, stream and sky are paper too. No outer cardboard backing, base, pedestal, tabletop, frame, model island or stage edge.",
+      "paleta": "Azul carbón, arena, ocre, verde oliva apagado y acento rojo coral mate. Luz lateral, sombras físicas; sin aura.",
+      "continuity_contract": [
+        "No se duplica Worunka como mujer y estatua: H sólo una memoria pétrea abstracta, sin rostro. V y S no contienen personas.",
+        "Piedra de estratos azul carbón/arena con una veta roja; las aves distintas conservan morfologías de Biblia simplificadas a papel.",
+        "Tumas coral-terracota sólidas e irregulares, no cuentas perforadas ni rubíes. Cantidades y pliegues son puesta en escena editorial, no datos etnográficos.",
+        "Todo el mundo de papel, paisaje a sangre con profundidades y aire; ninguna base, borde exterior de cartón o mesa."
+      ],
+      "avoid": [
+        "Pixar, Disney, large eyes, modeled human cheeks, portrait, plastic dolls, photoreal stone, photographed feathers or leaves",
+        "nudity, genital shapes, childbirth, teeth, blood, wounds, attack, body procedure, bones, weapon",
+        "giant god, face in clouds, mythical being invented, ritual idol, carved glyphs, clan signs, inscriptions",
+        "aura, glow, laser, glitter, decorative stars, rainbow, portal",
+        "saguaro, agave, aloe, yucca, pineapple, bromeliad, spiky rosettes",
+        "jewelry, diamonds, faceted gems, beads with holes, mining tools, treasure chest",
+        "outer cardboard, rectangular terrain slab, pedestal, tabletop, frame, model island"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "piedra_aves"
+          ],
+          "beat": "La piedra no está muda: el rojo de sus capas empieza a volar.",
+          "escena": "16:9 EXTREME WIDE panorama of a Macuira ravine entirely made of matte dyed cut-paper. Blue stream winds through ochre folded banks and olive, indigo mountain layers at seven physical depths. At RIGHT middle distance x68–77%,y43–54% ONE small asymmetrical low rock, only 10% image height, built from charcoal-blue and sand paper strata, with a single muted CORAL seam. Its outline vaguely recalls a seated robed presence ONLY as an abstract natural mass: NO face, limbs, breasts, idol, realistic statue or genital recess. No living human. THREE distinct birds form a compact rising diagonal above and to its right, entirely within x65–82%,y28–48%: ONE small red-body charcoal-winged tanager with short stout bill, ONE black woodpecker with red crest and white cheek stripe and straight bill, ONE larger red macaw with curved beak, long red tail and restrained blue/gold wing bands. Each bird is a near-flat paper cutout with broad feather shapes and one tiny eye; not real feathers or photoreal anatomy. THE IMPOSSIBILITY: THREE broad solid matte red paper strips physically peel out of the SAME seam inside the rock, curl through open air with cast shadows and join the red paper layers of the birds: body of tanager, crest of woodpecker, wing of macaw. Each strip ends in a feather cut; red is becoming plumage, not tying birds or flowing as liquid. No flying flock, no other creatures. Clear contrast between red connections and subdued terrain. ENTIRE GROUP of stone, all red strips and all birds together fits within only 28% image width and 30% height, well inside the middle-right safe zone, at least 18% empty margin from RIGHT EDGE. Macaw including full tail and spread wings is at most 17% image height; birds not close to camera. Entire meaningful group small, upper-right, lower 38% and LEFT 60% quiet dark ochre terrain reserved for the website's two-line title. Ground extends beyond all edges with broad organic curves, no rectangular slab, base or platform; NO VEGETATION OF ANY KIND: no shrubs, grass, rosettes, leaves, trees or cactus; no buildings, crops, ornamental sun or moon. Bare paper land and blue water only. Slanting dawn light reveals internal air gaps and casts real soft shadows. Immersive vast landscape, not a close-up of birds.",
+          "editorial_translation": "La fuente vincula piedra y rojo de aves; hacer del color una lámina física es metáfora editorial. La masa pétrea evoca a Worunka sin reconstruir anatomía ni un monumento real.",
+          "visual_question": "¿Tres aves distintas reciben rojo de una sola veta de piedra, con el conjunto lejos del título?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Piedra del arroyo y aves distintas.",
+            "impossible_behavior": "La veta mineral se levanta en láminas que se vuelven plumas.",
+            "narrative_effect": "El rojo compartido relaciona memoria de Worunka y origen de aves.",
+            "agency": "Memoria de Worunka y transformación del territorio, no sufrimiento espectacular ni aprobación de jerarquías.",
+            "physical_translation": "Tres tiras de papel mate conectadas a la veta y a capas de pluma; siete planos de paisaje.",
+            "visible_test": "¿Tres aves distintas reciben rojo de una sola veta de piedra, con el conjunto lejos del título?",
+            "event_ids": [
+              "piedra_aves"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "narrative_summary": "La piedra del arroyo conserva memoria de Worunka y entrega rojo a tres aves. Mostrar una sola escena de transferencia material, sin otra aparición humana.",
+          "continuity_contract": [
+            "No se duplica Worunka como mujer y estatua: H sólo una memoria pétrea abstracta, sin rostro. V y S no contienen personas.",
+            "Piedra de estratos azul carbón/arena con una veta roja; las aves distintas conservan morfologías de Biblia simplificadas a papel.",
+            "Todo el mundo de papel, paisaje a sangre con profundidades y aire; ninguna base, borde exterior de cartón o mesa."
+          ]
+        },
+        "acto": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "tumas_subsuelo"
+          ],
+          "beat": "Lo que dejó de crecer sobre la tierra permanece guardado en su profundidad.",
+          "escena": "ONLY TERRAIN, ROOTS, SIX STONES, DRY SHRUBS, ONE JAR AND DISTANT RAIN. Absolutely NO BIRDS OR ANIMALS anywhere, sky is otherwise empty. 9:16 immersive WIDE oblique view through a natural organic opening in cut-paper terrain, never a rectangular cutaway or display slab. In upper half, distant layered Macuira hills, a dry streambed winding toward far hills, sparse small dry broadleaf shrubs, ONE intact plain ochre rounded clay jar lying empty on its side, tiny at x70%,y31%. No people. A small distant cloud of three flat blue-gray paper layers at upper-right releases a thin localized veil of rain onto a far green slope; no magic glow, no global storm. THE IMPOSSIBILITY: the dry ground bends over a deep open earth pocket like a vast protective curved leaf. Beneath its dark overhang at x22–78%,y40–57%, roots that once fed plants still hold SIX solid CORAL-TERRACOTTA irregular small STONES in two separate groups of THREE, with a broad dark gap between the groups. Precisely six red stones, no holes, no stems or vessels; two sets of three sitting snugly among thin branching paper roots, very matte, not jewels, not luminous. Former harvest now mineral and underground. The upper soil layer is one continuous arched organic sheet connected to the hills; its lower face and the root cavity show five additional deep brown curved paper layers, open air and shadows. Strong coral against dark earth makes the six objects legible; cavity and stones only in middle third, lower 35% quiet dark curved terrain for mobile title. The same stream contour continues through surface layers, no rows of diagrams, panels, labels, arrows, exposed cardboard, square corners or floor of a model. Broad dyed-paper surfaces, clear real occlusion, full-bleed world, calm immense scale.",
+          "editorial_translation": "Tumas enterradas, sequía y lluvia proceden de la narración. Raíces que sostienen piedras y tierra envolvente son metáfora editorial, no explicación botánica o geológica. Se conserva el conteo de seis de la ficha climática como continuidad de producción.",
+          "visual_question": "¿Seis piedras coral, en dos grupos de tres, permanecen bajo un mismo pliegue de tierra seca, con lluvia sólo al fondo?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Tierra seca, raíces y piedras.",
+            "impossible_behavior": "La tierra se recoge como envoltura que conserva el antiguo fruto en forma mineral.",
+            "narrative_effect": "Permite leer tumas enterradas y retorno lejano de lluvia sin cuerpos sufrientes.",
+            "agency": "Memoria de Worunka y transformación del territorio, no sufrimiento espectacular ni aprobación de jerarquías.",
+            "physical_translation": "Un arco continuo de suelo y cavidad de raíces, seis formas sólidas coral en dos grupos separados.",
+            "visible_test": "¿Seis piedras coral, en dos grupos de tres, permanecen bajo un mismo pliegue de tierra seca, con lluvia sólo al fondo?",
+            "event_ids": [
+              "tumas_subsuelo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "narrative_summary": "Después de la sequía, las tumas permanecen enterradas bajo plantas secas; la lluvia vuelve de lejos. Esta escena trata exclusivamente de piedras, raíces, suelo y clima.",
+          "continuity_contract": [
+            "Tumas coral-terracota sólidas e irregulares, no cuentas perforadas ni rubíes. Cantidades y pliegues son puesta en escena editorial, no datos etnográficos.",
+            "Todo el mundo de papel, paisaje a sangre con profundidades y aire; ninguna base, borde exterior de cartón o mesa.",
+            "Ningún ave, animal o ser humano en esta escena; la transferencia de color pertenece sólo a horizontal."
+          ]
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "tumas_subsuelo"
+          ],
+          "beat": "Una semilla no deja de ser promesa cuando se vuelve piedra.",
+          "escena": "1:1 symbolic single isolated CUT-PAPER object on uniform deep charcoal-blue background, no landscape or horizon. ONE asymmetrical closed seed-shaped CORAL-TERRACOTTA mineral about 45% canvas height, slightly tilted, rough soft-rounded irregular contour, not a faceted gem, not a polished bead, no hole. Its lower contour extends naturally into ONE slender forked muted umber paper root, which curves gently beneath it. The entire form uses the SAME continuous layered matte paper: upper layers tightly packed like a small stone, lower layers separate into root fibers with air gaps and tiny cast shadows. One integrated seed-stone-root form, not a fruit cracked open, not multiple seeds and not a plant grown on a jewel. Root and mineral combined occupy central 60% with generous margins. Coral surface has broad shallow folded facets, organic not crystal geometry; 3–5 clear paper depths, soft side-light, no glint, no aura. No leaves, flower, bird, person, body, soil slice, mountains, pot, tree, decorative glyph, pedestal or table. A restrained impossible seed with mineral weight and living root, tactile hand-cut paper, not illustration painted onto paper.",
+          "editorial_translation": "Objeto simbólico editorial derivado del vínculo semilla/piedra: no se afirma que las tumas reales germinen ni que sea emblema tradicional.",
+          "visual_question": "¿Un único motivo semilla-mineral conserva una raíz de papel, sin paisaje, joya ni varios objetos?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Semilla y piedra tuma.",
+            "impossible_behavior": "Una sola forma conserva raíz orgánica y peso mineral.",
+            "narrative_effect": "Condensa el tránsito fruto-semilla-tuma en un símbolo, sin tercera escena.",
+            "agency": "Memoria de Worunka y transformación del territorio, no sufrimiento espectacular ni aprobación de jerarquías.",
+            "physical_translation": "Papel coral compacto que se abre por debajo en raíz umber, sombra física y fondo plano.",
+            "visible_test": "¿Un único motivo semilla-mineral conserva una raíz de papel, sin paisaje, joya ni varios objetos?",
+            "event_ids": [
+              "tumas_subsuelo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Objeto integrado de papel teñido coral y raíz umber; fondo azul carbón uniforme, profundidad por pliegues reales y sombras, sin soporte visible.",
+          "continuity_contract": [
+            "Una sola semilla mineral con raíz integrada, nunca escena o diagrama.",
+            "Tuma editorial mate y sólida sin perforaciones, brillo o identificación mineral exacta."
+          ],
+          "symbolic_contract": {
+            "thesis": "La tierra guarda la memoria de lo que alimentaba.",
+            "carrier": "Una semilla mineral con raíz de papel.",
+            "operation": "El mismo material compacto se abre en raíz.",
+            "story_connection": "Frutos y semillas que se relacionan con tumas enterradas en el mito.",
+            "visible_test": "¿Un único motivo semilla-mineral conserva una raíz de papel, sin paisaje, joya ni varios objetos?"
+          }
+        }
+      }
+    }
+  }
+}

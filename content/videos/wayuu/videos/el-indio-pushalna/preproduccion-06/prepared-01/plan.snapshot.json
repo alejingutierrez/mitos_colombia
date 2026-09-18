@@ -1,0 +1,1347 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-indio-pushalna",
+  "title": "El indio Pushaina",
+  "version": "preproduccion-06",
+  "status": "all_originals_reviewed_sequence_review_pending",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Ocre y arena del territorio, azul humo del protagonista, oliva y arcilla de hija; gallinazo carbón y ciempiés terracota. Alternar día arena, atardecer arcilla y noche índigo legible según toma; no imponer noche a toda historia.",
+  "story_thesis": "Conocer lo oculto no es dominar aquello que responde. La presencia se vuelve perceptible por relaciones de papel y ausencias, sin caricatura ni fantasma.",
+  "shared_scene_continuity": [
+    "Curva en S y piedra baja distinguen regreso del camino inicial; no añadir entidades por mencionarlas aquí.",
+    "Mantener cuerpo entero pequeño y perfiles planos, tres distancias materiales; luces cambian pero papel nunca se vuelve tierra, piel o CGI.",
+    "No incluir botella, hueso, ornamento ni personaje de otras fichas. Un anillo, un plato y un animal de cada tipo únicamente donde la toma lo pide."
+  ],
+  "continuity_rules": [
+    "paper_lock literal en todas las generaciones y correcciones; QA comparativo contra primer ancla.",
+    "Ropa completa azul/ocre y oliva/arcilla; no heredar rostro escultórico de Biblia.",
+    "Plato lleno b2a,b2b,b6a,b7b; vacío b3a; dos porciones en b8a,b8b y una en pico en b8a.",
+    "El gallinazo vuela en b5a, está posado en b8a; ciempiés sólo b5b,b8b.",
+    "VO adapta relato publicado; no elevar cierres editoriales a fuente histórica.",
+    "Tomas a/b son cortes independientes, no endpoints de interpolación."
+  ],
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-pushalna.json",
+    "content_sha256": "0168590b318aac963533e1814489c443d01bcd6e7b85d517c103f7bf5213dc79",
+    "source_url": "https://www.mitosdecolombia.com/mitos/el-indio-pushalna",
+    "source_locator": "Mito; contraste Chaves VIII pp315–316",
+    "live_hash_verified": true,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Viaje, caída y retorno inesperado",
+        "provenance": "historical_core",
+        "required": true,
+        "source": "Chaves VIII pp315–316; versión audiovisual según snapshot publicado"
+      },
+      {
+        "id": "e2",
+        "description": "Presencia acompañante exige alimento",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves."
+      },
+      {
+        "id": "e3",
+        "description": "Plato vacío y prueba familiar",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves."
+      },
+      {
+        "id": "e4",
+        "description": "Anillo localizado y fama",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves."
+      },
+      {
+        "id": "e5",
+        "description": "Asociación ambigua con gallinazo y ciempiés",
+        "provenance": "historical_core",
+        "required": true,
+        "source": "Chaves VIII pp315–316; versión audiovisual según snapshot publicado"
+      },
+      {
+        "id": "e6",
+        "description": "Cansancio, exigencia y decisión de volver",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves."
+      },
+      {
+        "id": "e7",
+        "description": "Regreso al sitio, alimento y petición",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves."
+      },
+      {
+        "id": "e8",
+        "description": "Ave, ciempiés y silencio",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves."
+      },
+      {
+        "id": "e9",
+        "description": "Regreso sin voz y límite de autoridad",
+        "provenance": "published_editorial_expansion",
+        "required": true,
+        "source": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves."
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "pushaina",
+      "type": "person",
+      "desc": "Hombre Wayuu adulto de cabello negro corto, sombrero womu color arena de copa baja y ala amplia; kemüsa AZUL HUMO de manga larga hasta justo encima de las rodillas; abertura central deja asomar dos paneles estrechos OCRE del wayuco, sujetos por una sola si'ira oscura en la cintura; waireñas marrones. Figura casi plana de perfil, ojo mínimo. Sin pinturas, joyas o armas.",
+      "model_ids": [
+        "pushaina__identity_sheet"
+      ]
+    },
+    {
+      "id": "hija",
+      "type": "person",
+      "desc": "Hija adulta de Pushaina: manta larga VERDE OLIVA hasta tobillos, pechera TERRACOTA y dos trenzas negras, waireñas arena. Recorte casi plano de perfil, sin pintura ni joyas. Cuidadora con iniciativa, no figurante arrodillada en adoración.",
+      "model_ids": [
+        "hija_pushaina__identity_sheet"
+      ]
+    },
+    {
+      "id": "familia",
+      "type": "supporting_people",
+      "desc": "Exactamente dos adultos secundarios cuando esta entidad esté convocada: mujer de manta larga terracota y una trenza; hombre de kemüsa crema hasta rodillas, dos paneles estrechos ocre y waireñas. Sin sombreros, pintura, armas ni ornamentos. Inferencia de reparto editorial, no personas históricas identificadas.",
+      "model_ids": []
+    },
+    {
+      "id": "kasap",
+      "type": "animal",
+      "desc": "Un caballo adulto castaño, crin y cola negras, cabezada simple crema y una manta lisa crema sobre el lomo; sin arnés decorativo. Patas completas, anatomía equina simplificada en recortes casi planos; no caballo de juguete modelado. No fijar lateralidad de pequeña marca blanca sólo visible en una vista de Biblia.",
+      "model_ids": [
+        "kasap__identity_sheet"
+      ]
+    },
+    {
+      "id": "voz",
+      "type": "object_or_phenomenon",
+      "desc": "Presencia audible sin cuerpo: tres finas láminas curvas azul grisáceo a distintas distancias, sin rostro, manos, ojos, silueta humana ni luz sobrenatural. Metáfora editorial del aire que escucha Pushaina, no retrato de otro ser.",
+      "model_ids": [
+        "presencia_invisible_pushaina__presence_model"
+      ]
+    },
+    {
+      "id": "gallinazo",
+      "type": "animal",
+      "desc": "Un gallinazo negro carbón, cabeza gris oscura pequeña, pico claro discretamente curvo, alas completas de recortes anchos superpuestos; proporciones naturales, no cóndor de collar blanco ni ave gigante. Sin carroña.",
+      "model_ids": [
+        "gallinazo_pushaina__identity_sheet"
+      ]
+    },
+    {
+      "id": "ciempies",
+      "type": "animal",
+      "desc": "Un ciempiés pequeño terracota segmentado, cabeza carbón con dos antenas y múltiples pares de patas ocre. Recortes planos, nunca serpiente, gusano gigante o monstruo. No representación de especie científica exacta.",
+      "model_ids": [
+        "ciempies_pushaina__identity_sheet"
+      ]
+    },
+    {
+      "id": "anillo",
+      "type": "object_or_phenomenon",
+      "desc": "UN aro liso pequeño de papel ocre apagado, sin gema, inscripción o brillo metálico. Oculto o revelado según toma. No multiplicar las tres vistas de la ficha como tres objetos.",
+      "model_ids": [
+        "anillo_oculto_pushaina__object_sheet"
+      ]
+    },
+    {
+      "id": "alimento",
+      "type": "object_or_phenomenon",
+      "desc": "UN plato bajo ocre ensamblado de finas hojas curvas y tres porciones simples crema de alimento, sin especie/receta afirmada. Estado lleno, vacío o con dos porciones fijado por toma. Nunca botellas, huesos, altar, velas ni utensilios añadidos.",
+      "model_ids": [
+        "ofrenda_alimento_pushaina__object_sheet"
+      ]
+    },
+    {
+      "id": "casa",
+      "type": "environment",
+      "desc": "Casa amplia situada: patio bajo enramada, dos volúmenes laterales y cuarto a derecha. Traducción aproximada en hojas planas terracota/arena, vigas como tiras de papel, techo en bandas recortadas, piso de hojas amplias. No textura de adobe ni madera realista. Puerta derecha y abertura izquierda conservadas.",
+      "model_ids": [
+        "casa_grande_pushaina__spatial_model"
+      ]
+    },
+    {
+      "id": "camino",
+      "type": "environment",
+      "desc": "Territorio seco de La Guajira: sendero ocre diagonal, estratos anchos de papel, arbustos espinosos bajos de siluetas planas y serranía gris arena distante; sin selva ni rosetas genéricas. Lugar de caída reconocido por una curva en S y una piedra baja gris al borde, decisión escénica no cartografía.",
+      "model_ids": [
+        "territorio_alta_guajira__environment_model",
+        "lugar_caida_pushaina__spatial_model"
+      ]
+    },
+    {
+      "id": "piedra",
+      "type": "object_or_phenomenon",
+      "desc": "Una piedra baja gris arena oval irregular, apilada de hojas horizontales con un pequeño hueco inferior. Un punto del camino, no altar, tuma o monumento. Mismo tamaño relativo a piernas humanas en retorno.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-02-remaining-categories-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    },
+    {
+      "model_id": "pushaina__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02/pushaina__identity_sheet--canon.jpeg",
+      "sha256": "0b0cfaf88cd9ab4d461a7fba561c20c26b7afbc0449d21ebe0f35138593955d0",
+      "qa_status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium-corrections-02",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "hija_pushaina__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/hija_pushaina__identity_sheet--canon.jpeg",
+      "sha256": "856d96b3d93b3d46cc7afd012a88b1ab639dc56bca1a90f01d669b4d5fa1403a",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "kasap__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/kasap__identity_sheet--canon.jpeg",
+      "sha256": "13f321f45dea06acac2f5ba7fdc11598b196859f4fa5cf4655cb1895851bddb1",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "presencia_invisible_pushaina__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/presencia_invisible_pushaina__presence_model--canon.jpeg",
+      "sha256": "1c39e51243289f63bc4fdb2602d51c1beee48679d2df15a45badac8e92cd3251",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "gallinazo_pushaina__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/gallinazo_pushaina__identity_sheet--canon.jpeg",
+      "sha256": "2411cef86556da977b846f043faa6eee9100bfaa702174e06db3785e23d85dfe",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "ciempies_pushaina__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/ciempies_pushaina__identity_sheet--canon.jpeg",
+      "sha256": "1898dad38f70a46c82c81cedfacb8f98a9cbe3a465f2c7d425f9108757ae3473",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "anillo_oculto_pushaina__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/anillo_oculto_pushaina__object_sheet--canon.jpeg",
+      "sha256": "4672a2e3431cef9c175404d2fb8d15d3d44b689d3e70974d2125954a1cfe74d1",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "ofrenda_alimento_pushaina__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/ofrenda_alimento_pushaina__object_sheet--canon.jpeg",
+      "sha256": "c6b1a1e70b86f07d726c129a61a68260df657bb18666007566f197802f51f20c",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "lugar_caida_pushaina__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/lugar_caida_pushaina__spatial_model--canon.jpeg",
+      "sha256": "3f0456ba08f47d30439c9bad7739bd53302c49f4b5cead2f6ac1d40a9a3577fa",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    },
+    {
+      "model_id": "casa_grande_pushaina__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/casa_grande_pushaina__spatial_model--canon.jpeg",
+      "sha256": "dbd19756f2bce661f5b378c6be7115c1bfb71dc63f5f8a3a7a43238f2dd9e067",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-14-el-indio-pushaina-medium/selection.json"
+    }
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-02-entrada/entrada.jpeg",
+        "sha256": "596d4cb7556bce7f026c4df33450a78246cc5c5e7a0d11a8e13e83a21cf0db0d",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/acto.jpeg",
+        "sha256": "725e016a0b78a0e1023df543058408a686124ab48d12bddfd6c0ea8c6007e4ce",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-pushaina-triptych-01/huella.jpeg",
+        "sha256": "806abd2004d5c105ab491c954e963a7ee7b4e17afda8cc0a7ae5ab1c4967889f",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tres originales del propio tríptico inspeccionados. Rescatar conexión sombra-ave, pared-hoja y vacío; no repetir escasez ambiental de H ni suelo realista de V.",
+      "Once originales de Biblia inspeccionados en esta fase. Referencias de identidad y objetos; no control final de material."
+    ]
+  },
+  "duration": {
+    "target_seconds": 144,
+    "voice_words": 271,
+    "measured": false
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Pushaina viajaba sobre Kasap cuando el caballo tropezó. Después de la caída, sus compañeros no encontraron respuesta. La familia comenzó el duelo; nadie esperaba que volviera a abrir los ojos.",
+      "voice_provenance": "Chaves VIII pp315–316; versión audiovisual según snapshot publicado",
+      "word_count": 30,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "Antes de la curva",
+          "visual": "Mañana. Kasap y Pushaina montado de perfil avanzan hacia derecha por la curva en S. Conjunto entero en tercio medio, caballo 20% altura de imagen y hombre proporcionado. Piedra baja gris en borde interior de curva. Tres franjas de suelo recortado y arbustos se cruzan a distintas distancias; serranía al fondo. Instante ANTES del tropiezo, sin caída ni heridas.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "pushaina",
+            "kasap",
+            "camino",
+            "piedra"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral elevado",
+          "shot_scale": "gran plano general",
+          "depth_planes": [
+            "Estratos anchos de suelo y arbustos planos cercanos",
+            "Acción a escala natural en sendero medio",
+            "Serranía gris arena y cielo de hojas lejanas"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte narrativo a b1b; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b1a.jpeg",
+            "sha256": "dbb55858f34fa95dde4df87b72d48ddca7f950ea3cd481591f39d9282d865539",
+            "qa_notes": [
+              "Papel claro, caballo completo, piedra y curva reconocibles. Plantas simplificadas sin identificación botánica. Sin marca blanca de pata garantizada."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b1b",
+          "title": "Una respuesta inesperada",
+          "visual": "Interior diurno amplio. Pushaina acaba de incorporarse sentado en el suelo, ojos abiertos; hija de manta oliva cerca de él con mano extendida en gesto cotidiano, dos familiares permanecen de pie al fondo. Sin paños funerarios, ceremonia o heridas. Todo cuerpo completo, ningún rostro mayor de 2% del cuadro. La puerta derecha abre sobre patio. El golpe y duelo se narran en VO, aquí sólo el regreso.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "pushaina",
+            "hija",
+            "familia",
+            "casa"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "oblicuo desde entrada",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte narrativo a b2a; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b1b.jpeg",
+            "sha256": "6c04e362564cc08040fed5a9a95522bd4d9d2b652c197b6762cce0433f89f05a",
+            "qa_notes": [
+              "Retorno y cuatro personas legibles, sin violencia ni rito. Pushaina sin sombrero en interior; dos trenzas de hija se solapan. Prendas y perfiles se mantienen."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Pero volvió, y pidió comida. Desde entonces escuchaba una voz que los demás no oían. Lo seguía incluso de noche, reclamando porciones que él tenía que dejar apartadas.",
+      "voice_provenance": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves.",
+      "word_count": 28,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "Pedir alimento",
+          "visual": "Patio a la sombra. Hija adulta sostiene UN plato lleno con tres porciones frente a Pushaina sentado junto a puerta derecha. Él levanta una mano vacía hacia el plato, no en conjuro. Dos cuerpos completos en tercio medio, casa y enramada dominan. El plato aún está en manos de ella; no duplicarlo en suelo.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "pushaina",
+            "hija",
+            "alimento",
+            "casa"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "frontal lateral",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte narrativo a b2b; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b2a.jpeg",
+            "sha256": "c3c3c41db0f7cac2e222d8c2e901ce96d613c33344455eb013b5d5af0c74003a",
+            "qa_notes": [
+              "Hija ofrece plato en manos, gesto cotidiano, papel conservado. Sólo dos porciones claramente separadas, no tres; primer alimento no debe interpolarse al plato nocturno. Figuras más grandes que objetivo."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b2b",
+          "title": "La voz nocturna",
+          "visual": "Noche índigo en cuarto. Pushaina despierto, sentado erguido junto a pared izquierda, escucha sin mover manos. UN plato con tres porciones yace lejos a derecha. Tres estrechas hojas curvas de aire se alzan sin apoyo sólo sobre ese plato; el resto del cuarto permanece inmóvil. Ninguna figura en la puerta oscura. Suelo, vigas y techo de bandas delgadas, nada de barro.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "pushaina",
+            "voz",
+            "alimento",
+            "casa"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "oblicuo a ras de umbral",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte narrativo a b3a; no morph entre estos JPEG",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El plato y el aire de una habitación cotidiana",
+            "impossible_behavior": "Hojas de aire suspendidas sobre plato sin viento general",
+            "narrative_effect": "La ausencia adquiere demanda material sin inventar cuerpo",
+            "agency": "Pushaina escucha; no emite ni controla el aire",
+            "physical_translation": "Tres hojas curvas azul gris separadas y sombra sobre suelo",
+            "visible_test": "Plato debajo, espacio entre hojas, nadie sosteniéndolas",
+            "event_ids": [
+              "e2"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b2b.jpeg",
+            "sha256": "d12009d324f8ea38ebef27009ae44cd948962a95a329834aed029cfa2ff3208d",
+            "qa_notes": [
+              "Escucha nocturna con tres hojas suspendidas. Alimento lleno, conteo de porciones no inequívoco; ojos más marcados y cielo con luna/estrellas incidentales, no efecto mágico."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Al amanecer, el alimento había desaparecido. La familia quiso comprobar qué le ocurría: escondió un anillo y le pidió encontrarlo. Pushaina no buscó con las manos. Se quedó escuchando.",
+      "voice_provenance": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves.",
+      "word_count": 29,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "El plato al amanecer",
+          "visual": "Amanecer. Hija de manta oliva y dos trenzas se detiene en umbral derecho, mirando UN plato completamente VACÍO en el centro del cuarto. Tres hojas curvas finísimas azul gris permanecen suspendidas encima del vacío a diferentes distancias; el rayo de luz normal entra por abertura izquierda y proyecta sus sombras sobre suelo de hojas. No Pushaina, comida, huesos ni botellas. Personaje entero pequeño; habitación profunda, no macro de vajilla.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "hija",
+            "voz",
+            "alimento",
+            "casa"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "picado leve desde esquina",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte narrativo a b3b; no morph entre estos JPEG",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El plato y el aire de una habitación cotidiana",
+            "impossible_behavior": "Hojas de aire suspendidas sobre plato sin viento general",
+            "narrative_effect": "La ausencia adquiere demanda material sin inventar cuerpo",
+            "agency": "Pushaina escucha; no emite ni controla el aire",
+            "physical_translation": "Tres hojas curvas azul gris separadas y sombra sobre suelo",
+            "visible_test": "Plato debajo, espacio entre hojas, nadie sosteniéndolas",
+            "event_ids": [
+              "e3"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b3a.jpeg",
+            "sha256": "4fa42f95c79876d40df594f253bdd87476b778a6374e8c5674370b7d4d55b845",
+            "qa_notes": [
+              "Papel claro, plato protagonista vacío y tres hojas de aire. Figura mayor que objetivo y pequeño recipiente incidental al fondo; no se considera parte de la demanda."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b3b",
+          "title": "Esconder la prueba",
+          "visual": "Día en cuarto amplio con puerta a derecha y abertura a izquierda. Hija adulta de manta oliva y dos trenzas sola, cuerpo entero pequeño, levanta con su mano derecha el borde inferior de UNA solapa lisa ocre pegada a la pared por ARRIBA, a altura de cintura. En la repisa interior horizontal se apoya UN ANILLO LISO MUY PEQUEÑO: banda fina de papel ocre apagado de diámetro menor al ancho de dos dedos, sin gema, saliente, nudo o joya. La solapa sigue adherida arriba como una hoja curva; mano la sostiene todavía antes de tapar el aro. Paredes, piso y techo exclusivamente de bandas de papel con aire entre capas. Pared de fondo desnuda, suelo libre de utilería: sólo mujer y aro, sin platos, vasijas, taburetes o adornos. Conservar perfil casi plano.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "hija",
+            "anillo",
+            "casa"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral desde patio",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte narrativo a b4a; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-04/b3b.jpeg",
+            "sha256": "dcf3eb0eb3cabf6fadd53b4ff30834e157af234d698493d15192d0e96cf43c49",
+            "qa_notes": [
+              "Aro liso pequeño y hoja unida arriba, hija sola. Repisa y solapa con distinta proporción respecto al hallazgo, mismo mecanismo de papel; sin gema ni vasijas."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Señaló el lugar exacto. El anillo estaba allí. Pronto llegaron otras personas a pedirle respuestas; pero aquello que parecía un don también lo ataba a una presencia que exigía alimento.",
+      "voice_provenance": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves.",
+      "word_count": 30,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Escuchar lo oculto",
+          "visual": "Cuarto de día. Pushaina entero de perfil a izquierda, brazos completamente bajos, escucha. A derecha una solapa de la pared de papel se curva HACIA ARRIBA, aún unida por su parte superior, revelando UN aro liso pequeño en repisa de la misma hoja. Solapa levantada sin tocarla. Nada sale de sus manos. Aro natural, no círculo grande luminoso. Pared, techo y suelo compuestos de bandas recortadas con aire y sombras; nada de adobe. Hombre 18% altura, cuarto domina, umbral al fondo. CORRECCIÓN: el anillo debe tener diámetro exterior menor que el ancho de DOS dedos de Pushaina; una banda MUY DELGADA, vista oblicua, reconocible por pequeño hueco oscuro, no cuenco ni brazalete. La repisa está a altura de cintura, lejos del espectador, no primer plano. Preservar el hueco mural y las manos bajas. Cara lateral de una sola silueta plana, sin relieve de pómulo.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "pushaina",
+            "anillo",
+            "casa"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "oblicuo abierto",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte narrativo a b4b; no morph entre estos JPEG",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Pliegue de la pared que guarda un aro",
+            "impossible_behavior": "La hoja de pared se abre sin contacto mientras él escucha",
+            "narrative_effect": "Lo oculto se revela al espectador sin dar un rayo al personaje",
+            "agency": "La escucha precede al hallazgo, brazos bajos",
+            "physical_translation": "Solapa adherida arriba y curva hacia fuera, aro en hoja interior",
+            "visible_test": "Conexión de solapa con pared y manos lejos del aro",
+            "event_ids": [
+              "e4"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b4a.jpeg",
+            "sha256": "53f6bc0dd77c56a19af20b30a6720cc9d39b6f9ee5bf5334c14562b3eeffe293",
+            "qa_notes": [
+              "Aro pequeño ahora reconocible, rostro casi plano, pared abre sin manos. Figura mayor que escala objetivo; solapa colgante adherida arriba funciona como licencia."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b4b",
+          "title": "Las visitas",
+          "visual": "Tarde en patio. Pushaina de pie cerca de puerta derecha escucha a dos visitantes adultos, los mismos diseños de secundarios familiares sin agregar gente. La hija observa desde la enramada izquierda. Visitantes piden respuestas con palmas bajas abiertas; nadie se arrodilla. Exactamente cuatro personas completas pequeñas. No añadir anillos, bastones, ofrendas o altares.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "pushaina",
+            "hija",
+            "familia",
+            "casa"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "lateral elevado",
+          "shot_scale": "gran plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte narrativo a b5a; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b4b.jpeg",
+            "sha256": "9fcfec103f98c9bd711fabb06218276fc9db2c04cfe093b3dd12abefe0c21765",
+            "qa_notes": [
+              "Cuatro adultos completos, sin adoración; hija al margen con agencia de testigo. Cuerpos más grandes que objetivo; rostros recortados y materiales coherentes."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "A veces, donde había estado Pushaina, aparecía un gallinazo sobre la ranchería. Otras, un ciempiés cruzaba el sitio que acababa de dejar. Nadie sabía con certeza quién tomaba esas formas.",
+      "voice_provenance": "Chaves VIII pp315–316; versión audiovisual según snapshot publicado",
+      "word_count": 30,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "La sombra toma vuelo",
+          "visual": "Tarde en patio profundo. Pushaina de perfil pequeño a derecha. Su sombra negra nace inequívocamente bajo ambas sandalias y se prolonga por el suelo hasta levantarse en una hoja estrecha que se convierte en UN gallinazo completo en vuelo bajo a izquierda. Ave de tamaño natural en el mismo plano, envergadura menor que altura de hombre. No segundo pájaro ni doble humano. Conexión continua del recorte, nunca cuerda o rayo. Casa distante ocupa tercio superior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "pushaina",
+            "gallinazo",
+            "casa"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "lateral bajo",
+          "shot_scale": "gran plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte narrativo a b5b; no morph entre estos JPEG",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Sombra de sus sandalias en el patio",
+            "impossible_behavior": "Sombra continua se despega como ave de papel",
+            "narrative_effect": "Expresar relación de metamorfosis sin fijar explicación",
+            "agency": "No gesto de control ni entidad fantasmal separada",
+            "physical_translation": "Una sola lámina negra del suelo a un gallinazo completo",
+            "visible_test": "Contacto visible en sandalias y continuidad hasta ave pequeña",
+            "event_ids": [
+              "e5"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b5a.jpeg",
+            "sha256": "0c3a016910913d98e75d734738dfaa69d47521c9da05c41738e760bd7a0a770d",
+            "qa_notes": [
+              "Sombra continua nace en sandalias y toma forma de ave. Sombra óptica secundaria distinta; utensilios incidentales en casa y faja rojiza en vez de oscura. Sin nueva entidad."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b5b",
+          "title": "Donde estuvo sentado",
+          "visual": "Patio sin personas. En el sitio vacío junto a puerta derecha, UN ciempiés terracota pequeño cruza entre dos láminas de suelo. Ambiente se ve desde altura baja, insecto en tercio inferior mide 7% del ancho y se distingue por segmentos y pares de patas. No agrandarlo a serpiente. Una sombra ambiental de la enramada divide el sitio vacío, sin silueta de persona añadida. Recortes del suelo en primer plano, insecto en segundo, casa en tercero.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "ciempies",
+            "casa"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "bajo oblicuo sin macro",
+          "shot_scale": "plano ambiental",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte narrativo a b6a; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b5b.jpeg",
+            "sha256": "49a509e9bd9458adfbb61ecd3c1002f996193a55c1648dea05e20e6dfb451e95",
+            "qa_notes": [
+              "Ciempiés pequeño reconocible y ambiente vacío. Más de 7% del ancho, pero no gigante respecto a puerta; patas finas no perfectamente planas."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Pushaina regresaba cansado. La voz pedía cada vez más. Saber lo escondido no era gobernar lo invisible. Una noche volvió a montar a Kasap y salió hacia el lugar de la caída.",
+      "voice_provenance": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves.",
+      "word_count": 32,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "El costo de escuchar",
+          "visual": "Atardecer dentro de cuarto. Pushaina sentado en perfil inclina los hombros cansado; manos descansan sobre rodillas. UN plato con tres porciones está a distancia de él a derecha. Las tres hojas de aire rodean sólo el plato, estrechando el espacio vacío sobre él, sin tocar cuerpo ni formar rostro. Composición diagonal rica de sombras de techo y suelo de capas. Figura pequeña entera, no retrato triste ni enfermedad visible. CORRECCIÓN: AMBOS pies calzados con waireñas marrones, suelas planas y dos tiras de papel por pie claramente visibles, sin pies desnudos. Preservar postura cansada, tres porciones, tres hojas de aire y material recortado.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "pushaina",
+            "voz",
+            "alimento",
+            "casa"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "lateral amplio",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte narrativo a b6b; no morph entre estos JPEG",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El plato y el aire de una habitación cotidiana",
+            "impossible_behavior": "Hojas de aire suspendidas sobre plato sin viento general",
+            "narrative_effect": "La ausencia adquiere demanda material sin inventar cuerpo",
+            "agency": "Pushaina escucha; no emite ni controla el aire",
+            "physical_translation": "Tres hojas curvas azul gris separadas y sombra sobre suelo",
+            "visible_test": "Plato debajo, espacio entre hojas, nadie sosteniéndolas",
+            "event_ids": [
+              "e6"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b6a.jpeg",
+            "sha256": "49190db2221bc01975d1c8c3c71767aebcfe912bc861d6c943c45e594fe4e5f3",
+            "qa_notes": [
+              "Sandalias corregidas, tres porciones y aire separado; postura cansada. Asiento y vasija incidental no pedidos aparecieron; no se atribuye significado cultural ni papel narrativo."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b6b",
+          "title": "Volver a Kasap",
+          "visual": "Noche legible azul humo. Pushaina ya montado en Kasap se aleja del patio hacia derecha por sendero. Caballo de perfil completo, patas y cola dentro del encuadre, manta crema sin silla ornamental; casa detrás a izquierda. El encuadre retoma escala de b1a pero luz y dirección de sombras cambian. Sin compañía ni láminas de voz en esta toma.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "pushaina",
+            "kasap",
+            "casa",
+            "camino"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "lateral abierto",
+          "shot_scale": "gran plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte narrativo a b7a; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b6b.jpeg",
+            "sha256": "ff26154970462d9f910cd1550dbe2c68714faa67d6935a871093f3bcb137ba89",
+            "qa_notes": [
+              "Jinete y caballo enteros se alejan, dirección de salida correcta, material claro. Arquitectura tiene techo más horizontal y planta simplificada."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "El caballo se detuvo en aquella curva. Pushaina sintió que allí se tocaban dos caminos. Dejó comida sobre una piedra y pidió que aquella presencia dejara de seguir a su familia.",
+      "voice_provenance": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves.",
+      "word_count": 31,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "La misma curva",
+          "visual": "Noche. Kasap quieto de perfil con Pushaina montado junto a misma curva en S y piedra gris baja, ambos pequeños en zona media. El camino normal ocre se duplica en una fina hoja índigo que permanece pegada a un borde pero asciende unos centímetros por encima del suelo, formando dos niveles que se tocan justamente junto a la piedra. No portal, cruce monumental o escalera al cielo; aire entre ambas hojas visible. Sin muertos ni espíritus. CORRECCIÓN TEMPORAL: la superficie superior de la piedra está COMPLETAMENTE VACÍA, es una sola hoja gris desnuda. La comida aún no se ha dejado: no plato, alimento, cuenco ni objeto sobre piedra o camino. Jinete permanece montado. Cielo de grandes hojas índigo sin puntos, estrellas o luna ornamental; mantener camino doble con borde elevado y contacto junto a piedra.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "pushaina",
+            "kasap",
+            "camino",
+            "piedra"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "picado amplio",
+          "shot_scale": "gran plano general",
+          "depth_planes": [
+            "Estratos anchos de suelo y arbustos planos cercanos",
+            "Acción a escala natural en sendero medio",
+            "Serranía gris arena y cielo de hojas lejanas"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte narrativo a b7b; no morph entre estos JPEG",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Camino al lugar de la caída",
+            "impossible_behavior": "Dos hojas de un mismo camino se tocan y se separan en altura",
+            "narrative_effect": "La frontera sentida adquiere una relación espacial",
+            "agency": "Pushaina se detiene; no abre un portal ni invoca almas",
+            "physical_translation": "Ocre abajo e índigo apenas elevado, unidos en un borde",
+            "visible_test": "Aire entre capas al lado de piedra, sin escalera ni luz",
+            "event_ids": [
+              "e7"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-04/b7a.jpeg",
+            "sha256": "58cf73d897a374d300b5f54abab1569b0e39e5bca90f4bf7f8917503c9fb4545",
+            "qa_notes": [
+              "Piedra vacía, jinete quieto y doble camino con aire visible. Hoja índigo más ancha/elevada que instrucción, licencia espacial legible y no líquido."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b7b",
+          "title": "Dejar la porción",
+          "visual": "Noche legible, cielo de capas índigo sin luna o estrellas decorativas. Exactamente UN humano adulto, Pushaina desmontado, y UN caballo Kasap. En tercio medio, hombre de perfil se inclina ligeramente, ambas manos bajas acaban de apoyar UN plato ocre con TRES porciones crema sobre piedra gris baja. Kasap espera detrás a izquierda con lomo VACÍO, ningún jinete encima, ningún segundo hombre al lado ni sombra humana separada. Protagonista a derecha de caballo, ambos cuerpos completos con margen. Camino ocre con fina hoja índigo que se eleva apenas junto a piedra, NO río ancho ni agua. Piedra bajo altura de rodilla, nada de altar. Todo de papel recortado, caras de una silueta. Mantener la comida en plato y ausencia total de acompañantes. CORRECCIÓN DE LOCALIZACIÓN Y ENCUADRE: paraje DESHABITADO, sólo sendero, piedra, arbustos bajos y serranía bajo cielo índigo. Fondo natural SIN casa, techo, puerta, enramada, corral ni construcción. Alejar la cámara: UN caballo entero centrado en x35%, cabezada y cola con 10% de margen libre hasta bordes; UN hombre desmontado entero en x60%, altura total 18% de la imagen, piedra pequeña en x70%. Mantener al caballo a la MISMA distancia aproximada del hombre, no pegado al borde cercano. Un plato con tres porciones, gesto bajo, ninguna otra persona. Material exacto de hojas recortadas.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "pushaina",
+            "kasap",
+            "camino",
+            "piedra",
+            "alimento"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "lateral abierto",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Estratos anchos de suelo y arbustos planos cercanos",
+            "Acción a escala natural en sendero medio",
+            "Serranía gris arena y cielo de hojas lejanas"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte narrativo a b8a; no morph entre estos JPEG",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Camino al lugar de la caída",
+            "impossible_behavior": "Dos hojas de un mismo camino se tocan y se separan en altura",
+            "narrative_effect": "La frontera sentida adquiere una relación espacial",
+            "agency": "Pushaina se detiene; no abre un portal ni invoca almas",
+            "physical_translation": "Ocre abajo e índigo apenas elevado, unidos en un borde",
+            "visible_test": "Aire entre capas al lado de piedra, sin escalera ni luz",
+            "event_ids": [
+              "e7"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-05/b7b.jpeg",
+            "sha256": "10b27710e1b5cda3bf695efd330993ae8e0a04793c63112592b06113a6464ba3",
+            "qa_notes": [
+              "Sin casa añadida ni doble protagonista; Kasap completo y plato con tres porciones. Piedra cerca de borde derecho y hoja índigo menos elevada que b7a; material de recortes sostenido."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "El viento levantó polvo. Un gallinazo bajó, tomó una porción y volvió al cielo. Bajo la piedra cruzó un ciempiés. Pushaina esperó: por primera vez, no llegó ninguna exigencia.",
+      "voice_provenance": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves.",
+      "word_count": 29,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "El gallinazo toma alimento",
+          "visual": "Noche con luz azul gris legible. UN gallinazo negro de tamaño natural acaba de apoyarse junto al plato sobre piedra baja, alas plegadas, sostiene UNA pequeña porción crema en pico. En plato quedan exactamente DOS porciones. Pushaina y Kasap esperan de perfil a distancia, completos y pequeños, sin interacción con ave. Láminas finas ocre del polvo levantado por viento cruzan a ras de suelo, no humo. No ciempiés simultáneo aún. Nada brilla, no ritual. CORRECCIÓN DE REPARTO: exactamente UN humano adulto visible, Pushaina; exactamente UN caballo; exactamente UN gallinazo. El humano y caballo esperan solos: no hija, niño, mujer, silueta adicional ni acompañante. La mención narrativa de familia no la pone en escena. No añadir luna ornamental: cielo de capas índigo. Preservar una porción en pico y dos en plato.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "pushaina",
+            "kasap",
+            "gallinazo",
+            "camino",
+            "piedra",
+            "alimento"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "oblicuo abierto cercano al suelo",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Estratos anchos de suelo y arbustos planos cercanos",
+            "Acción a escala natural en sendero medio",
+            "Serranía gris arena y cielo de hojas lejanas"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte narrativo a b8b; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-02/b8a.jpeg",
+            "sha256": "1495da5b75cd2e971cdad607d857c74825fc09241d3780ac1e1ac707242d77c6",
+            "qa_notes": [
+              "Sin hija añadida; una porción en pico y dos en plato. Material recortado sostenido. Cola del caballo llega al borde izquierdo; margen imperfecto y piedra de forma más ancha que en apertura."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b8b",
+          "title": "Bajo la piedra",
+          "visual": "Misma noche. Piedra baja gris y plato encima con DOS porciones crema, sin gallinazo ni humanos en campo. UN ciempiés pequeño se introduce en hueco inferior: cabeza bajo piedra, segmentos y patas todavía visibles afuera. Camino de papel al fondo, hojas de polvo ya reposadas. Piedra no ocupa más de cuarto inferior del cuadro, suelo en grandes capas separadas. El vacío superior es territorio articulado, no cielo negro uniforme.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "ciempies",
+            "camino",
+            "piedra",
+            "alimento"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "bajo oblicuo",
+          "shot_scale": "plano ambiental",
+          "depth_planes": [
+            "Estratos anchos de suelo y arbustos planos cercanos",
+            "Acción a escala natural en sendero medio",
+            "Serranía gris arena y cielo de hojas lejanas"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte narrativo a b9a; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-03/b8b.jpeg",
+            "sha256": "d6e1fc799668624851a2701615d1498c4a5fb458e7aee03549acbce7dc35bf7d",
+            "qa_notes": [
+              "Ciempiés atraviesa el hueco con cabeza fuera, no entrando como pedido; cumple cruce bajo piedra del relato. Plato conserva dos porciones. Hueco regular, piedra más redonda, no geometría idéntica."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "voice_over": "Regresó a la ranchería sin escuchar la voz. Aún tenía sueños y encontraba señales, pero aprendió a no convertir cada acierto en autoridad. Había vuelto de una frontera que no le pertenecía.",
+      "voice_provenance": "Snapshot publicado, sección Mito. Ampliación editorial del proyecto, no episodio certificado por Chaves.",
+      "word_count": 32,
+      "time_seconds": [
+        128,
+        144
+      ],
+      "event_ids": [
+        "e9"
+      ],
+      "keyframes": [
+        {
+          "id": "b9a",
+          "title": "Un regreso silencioso",
+          "visual": "Primer amanecer. Plano lateral amplio: a DERECHA un solo Pushaina montado en Kasap entero, el caballo mira inequívocamente a IZQUIERDA: cabeza en lado izquierdo de su cuerpo, cola en lado derecho. Camina hacia la casa situada a IZQUIERDA, siguiendo una curva baja del camino que une directamente cascos y entrada de casa. No dibujar la casa detrás del jinete ni caballo mirando al borde derecho. Casa reconocible con dos volúmenes y enramada, pequeña al fondo izquierdo. El jinete vuelve a casa, no sale otra vez. Su sombra permanece normal sobre suelo de amplias hojas recortadas. Sin hojas de voz, anillo, plato, gallinazo o ciempiés. Mantener prendas azul/ocre, womu y perfil plano; caballo con manta crema.",
+          "time_seconds": [
+            128,
+            136
+          ],
+          "entity_ids": [
+            "pushaina",
+            "kasap",
+            "camino",
+            "casa"
+          ],
+          "event_ids": [
+            "e9"
+          ],
+          "angle": "lateral elevado",
+          "shot_scale": "gran plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b8b",
+          "transition_to_next": "Corte narrativo a b9b; no morph entre estos JPEG",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-04/b9a.jpeg",
+            "sha256": "f774e77cbc53a6e14c88144ee9524700bc357349a770e0d42eff73e5f5419b5d",
+            "qa_notes": [
+              "Orientación de retorno corregida, casa a izquierda delante del caballo. Figuras y material coherentes; sol más alto que primera luz, luz de amanecer editorial."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        },
+        {
+          "id": "b9b",
+          "title": "Compartir el silencio",
+          "visual": "Amanecer cálido en patio amplio de papel. De izquierda a derecha: hija con manta oliva y dos trenzas, Pushaina con kemüsa azul humo y womu. Ambos de pie de perfil, completos, a una distancia de conversación, manos bajas; él escucha a ella sin actitud de autoridad. Personajes 17% altura, enramada y dos volúmenes separados dominan. Sombras normales asentadas sobre hojas de suelo. No plato, aura, pájaro o ciempiés. Mantener rostros de silueta plana, nunca cabezas escultóricas al cerrar la historia.",
+          "time_seconds": [
+            136,
+            144
+          ],
+          "entity_ids": [
+            "pushaina",
+            "hija",
+            "casa"
+          ],
+          "event_ids": [
+            "e9"
+          ],
+          "angle": "oblicuo amplio",
+          "shot_scale": "plano general",
+          "depth_planes": [
+            "Umbral o borde de suelo recortado cercano, sin marco exterior",
+            "Acción en zona media con siluetas completas separadas",
+            "Paredes/enramada distantes y abertura con horizonte"
+          ],
+          "continuity_from": "b9a",
+          "transition_to_next": "Cierre sostenido; no animación generada",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lateral muy lento propuesto, no ejecutado; mantener escala de encuadre",
+            "allowed": "Sombras y ligeros pliegues según plano; movimiento sólo tras diseñar capas y medir audio",
+            "forbidden": "Cambiar reparto, material, vestuario o estado de alimento; morph facial o transformar JPEG en capas inexistentes",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-pushalna-preproduccion-01/b9b.jpeg",
+            "sha256": "aa6829909f739701474ea68ca058b7fed01c4a343f78a8b01a08aab732d16b36",
+            "qa_notes": [
+              "Papel sostenido, dos perfiles completos, vestuario reconocible. Figuras mayores que objetivo; arquitectura simplificada, no restitución exacta."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_candidate_with_notes"
+        }
+      ]
+    }
+  ]
+}

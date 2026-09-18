@@ -1,0 +1,127 @@
+{
+  "myth_id": 438,
+  "slug": "piedra-alta",
+  "title": "Piedra Alta",
+  "variant": "Único episodio: diálogo, señalamiento y aparición de Piedra Alta. No sumar mar ni labores de otras entradas.",
+  "rules": "Pedro y Tomás Dimales distintos. Antes terreno llano narrativo; después exactamente UNA gran peña. No monumento tallado ni mapa exacto.",
+  "source": {
+    "path": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/piedra-alta/source.snapshot.json",
+    "sha256": "8b848b784c6c3de4669db0858f937ef64672f7e7ec0db603e92dd28a2059c562",
+    "narrative_sha256": "52c438bf61847b977cc112ea2ebd278a1383a7a20b2da581a75b69e3497d89a3"
+  },
+  "references": {
+    "entrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/piedra-alta/entrada-v1.png",
+      "sha256": "ed21c9d8654bf8cff3c54b76fb39bc6086ef49e66473dd13034b4cd95bcef77a"
+    },
+    "acto": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/piedra-alta/acto-v1.png",
+      "sha256": "228eab212943f808d5328e0c4c2dc6aba04b59d1a79b6e68297c73ee11451bdb"
+    }
+  },
+  "expected_frames": 6,
+  "estimated_seconds": 30,
+  "timing_status": "provisional_pending_recorded_voice",
+  "voice_words": 43,
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Tomás estaba seguro: allí no había peñones. Calderas todavía era un terreno plano.",
+      "word_count": 13,
+      "time_seconds": [
+        0,
+        9
+      ],
+      "shots": [
+        {
+          "id": "k01",
+          "time_seconds": [
+            0,
+            5
+          ],
+          "scene": "Gran general de día: llanura narrativa de papel con dos hermanos pequeños caminando; sin riscos altos cercanos.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k02",
+          "time_seconds": [
+            5,
+            9
+          ],
+          "scene": "Medio: Pedro ocre se detiene y mira un punto vacío; Tomás gris-azul vuelve la cabeza hacia él.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Pedro dijo que mirara. Su hermano dudó. Entonces Pedro señaló el lugar.",
+      "word_count": 12,
+      "time_seconds": [
+        9,
+        18
+      ],
+      "shots": [
+        {
+          "id": "k03",
+          "time_seconds": [
+            9,
+            14
+          ],
+          "scene": "Detalle: mano abierta de Tomás expresa duda; suelo llano desenfocado detrás, no piedra todavía.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k04",
+          "time_seconds": [
+            14,
+            18
+          ],
+          "scene": "Medio lateral: Pedro extiende un brazo y señala el terreno, Tomás sigue la dirección de su mano.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Una gran peña se levantó. Piedra Alta guardó ese instante: una palabra había cambiado lo que parecía imposible.",
+      "word_count": 18,
+      "time_seconds": [
+        18,
+        30
+      ],
+      "shots": [
+        {
+          "id": "k05",
+          "time_seconds": [
+            18,
+            24
+          ],
+          "scene": "Contrapicado revelación: UNA peña enorme de cartulina plegada domina a los dos hermanos diminutos. Sin explosión ni rayos.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k06",
+          "time_seconds": [
+            24,
+            30
+          ],
+          "scene": "Cenital oblicuo final: base de la misma única peña corta la llanura; dos huellas de sendero, sin inscripción.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    }
+  ]
+}

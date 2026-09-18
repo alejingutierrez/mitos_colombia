@@ -1,0 +1,229 @@
+{
+  "schema": "ette-myth-keyframe-selection/v1",
+  "myth_id": 364,
+  "myth": "el-hombre-que-sono-con-danta",
+  "myth_title": "El hombre que soñó con una danta",
+  "narrative_sha256": "d9c19d82b04de23d4ed6dd18683b6334a058f48807aaf8c85b446b27ed55a2f6",
+  "planned_count": 6,
+  "selected": [
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf01-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf01-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/entrada-v1.jpeg",
+          "role": "same-myth canonical triptych: materials and cast reference only, not automatic plot stage",
+          "sha256": "a06c885a0708a8cfda640212469e5634b135796fe796c3e464ce5003f42a2ad3"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/tripticos/produccion-api-09/el-hombre-que-sono-con-danta/acto-identidad-v2.jpeg",
+          "role": "same-myth secondary cast/style reference only; do not import later action or symbolic arrows/suns",
+          "sha256": "58d5161e278d5af704e485e5c4d7073883550d0e03c94210e60f603ec34a7f0e"
+        }
+      ],
+      "sha256": "7d9b8569e0a9bcadbe29d543a623766189f46f3c22fc94c553ff1ea65e14a8d8",
+      "prompt_sha256": "3d4e98c7cc8645b3601016c1ab4095586e84753c0eafb9b0de8bf82fb4a4618a",
+      "bytes": 353431,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "frame_id": "kf01",
+      "title": "Contar el sueño",
+      "id": "kf01-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "El soñador masculino de cabello oscuro ondulado habla a dos compañeros adultos, hombre y mujer, en el poblado. Sin collage del sueño; identidades establecidas para cuadros siguientes.",
+      "duration_seconds": 20
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf02-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf02-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf02-v1.jpeg",
+          "role": "target materials and natural tapir only; remove sleeping man, houses and thought-bubble entirely",
+          "sha256": "5bbad15f82f93ccd2cda035a06dc22d741c21e5e8304157177dec0a4b4f3f733"
+        }
+      ],
+      "sha256": "c4bc9374e804caba6a84b7ad9114b7c08e603789caedd73c9a20268aeaef51cb",
+      "prompt_sha256": "32f9b97e246ac8ae652bc447f4a9cb5274805f1ed20431f19a89906b12aa9661",
+      "bytes": 407760,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "frame_id": "kf02",
+      "title": "La danta soñada",
+      "id": "kf02-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Revisión del sueño: danta natural debajo del tronco caído en bosque continuo con bruma tenue. Sin soñador, burbuja, viviendas ni heridas.",
+      "duration_seconds": 24.3
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf03-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf03-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf02-v2.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "c4bc9374e804caba6a84b7ad9114b7c08e603789caedd73c9a20268aeaef51cb"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf01-v1.jpeg",
+          "role": "identity ONLY of same dreamer man and companions; dreamer goes forest ALONE, do not import companions or dream scene",
+          "sha256": "7d9b8569e0a9bcadbe29d543a623766189f46f3c22fc94c553ff1ea65e14a8d8"
+        }
+      ],
+      "sha256": "6ecbebd76ea1e8e7a286676e7d8653b0ca63a52396a46efd3a0c14ceb81a9a81",
+      "prompt_sha256": "2b3414fd65d23db9fb31ec75d85eedc1d4103de4e2566a8c4ad543187343fd17",
+      "bytes": 436715,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "frame_id": "kf03",
+      "title": "Salir a comprobar",
+      "id": "kf03-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Mismo soñador de cabello oscuro ondulado entra solo al bosque, arco bajo. Sin compañeros ni danta soñada en la realidad.",
+      "duration_seconds": 19.5
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf04-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf04-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf03-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "6ecbebd76ea1e8e7a286676e7d8653b0ca63a52396a46efd3a0c14ceb81a9a81"
+        }
+      ],
+      "sha256": "79e2360efdacfc35ee13cba9d48a11cb0c07362a0ec236d1d4cddbf002c41e0c",
+      "prompt_sha256": "00dd7fb9c9120e6bd94773b837cf7485f632ea1108b04a53c3726b423490ca0c",
+      "bytes": 451034,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "frame_id": "kf04",
+      "title": "Viento en el monte",
+      "id": "kf04-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Mismo soñador pequeño en bosque con hojas movidas por viento y árbol inclinado. Caída mortal aún fuera de campo; sin danta real.",
+      "duration_seconds": 23
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf05-v1.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf05-v1.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf04-v1.jpeg",
+          "role": "previous visually reviewed same-myth frame; preserve cast, garment and spatial continuity",
+          "sha256": "79e2360efdacfc35ee13cba9d48a11cb0c07362a0ec236d1d4cddbf002c41e0c"
+        },
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf01-v1.jpeg",
+          "role": "identity ONLY of TWO adult companions, dark short-haired man and long-haired woman on right of initial frame. Dreamer dark wavy man on left is ABSENT and death off screen. No dream tapir.",
+          "sha256": "7d9b8569e0a9bcadbe29d543a623766189f46f3c22fc94c553ff1ea65e14a8d8"
+        }
+      ],
+      "sha256": "f81f9c29a43025647763a5637bec02c7c29b622ca4fe4d82576a0c2b7b81814a",
+      "prompt_sha256": "b7248fa5ef37b9804ca96de16712aa09ddc30130997160582de0d9969a80ceb1",
+      "bytes": 430297,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "frame_id": "kf05",
+      "title": "La búsqueda",
+      "id": "kf05-v1",
+      "revision": 1,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Los dos compañeros establecidos, hombre y mujer, examinan tronco caído. Soñador ausente, sin cadáver ni danta debajo del tronco real.",
+      "duration_seconds": 21.4
+    },
+    {
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf06-v2.jpeg",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/chimila/keyframes/produccion-api-03/prompts/el-hombre-que-sono-con-danta-kf06-v2.txt",
+      "inputs": [
+        {
+          "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-03/el-hombre-que-sono-con-danta/kf06-v1.jpeg",
+          "role": "exact target preserve two companions, tapir, terrain and material; add missing third arrow only",
+          "sha256": "a0fc69ab2430f687a0b993c96543f051e310f2d0f94495eb16e46f2b8e967f13"
+        }
+      ],
+      "sha256": "945303b99a5faeddada2a4fcb9ef59bc2b256be57911e53eab73190a467ef332",
+      "prompt_sha256": "c37191e7d32dfe3e50bf15645c7e1649ba5b693a239ecb1b681a98fb6e068131",
+      "bytes": 442856,
+      "width": 1024,
+      "height": 1536,
+      "format": "jpeg",
+      "myth_id": 364,
+      "slug": "el-hombre-que-sono-con-danta",
+      "frame_id": "kf06",
+      "title": "La danta encontrada",
+      "id": "kf06-v2",
+      "revision": 2,
+      "provider": "openai",
+      "model": "gpt-image-2.5-sunburst",
+      "quality": "medium",
+      "mode": "edit",
+      "selected": true,
+      "status": "produced_visually_reviewed_editorial_candidate",
+      "user_approved": false,
+      "culturally_certified": false,
+      "review_notes": "Tres flechas completas contables, dos bajas en manos y tercera en suelo; danta viva a distancia. Soñador ausente, muerte y posterior caza fuera de campo.",
+      "duration_seconds": 22.6
+    }
+  ],
+  "remaining": [],
+  "status": "produced_all_frames_user_review_pending",
+  "native_size": "1024x1536",
+  "adaptation_9_16": false,
+  "animation": false,
+  "publication": false
+}

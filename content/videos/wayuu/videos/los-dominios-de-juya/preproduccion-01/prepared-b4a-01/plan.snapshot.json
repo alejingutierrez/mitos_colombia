@@ -1,0 +1,1391 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "version": "preproduccion-01",
+  "slug": "los-dominios-de-juya",
+  "title": "Los dominios de Juyá",
+  "status": "ready_for_sunburst_16_keyframes",
+  "duration": {
+    "target_seconds": 128,
+    "voice_words": 182,
+    "measured": false
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-dominios-de-juya.json",
+    "content_sha256": "e7bbf6fdeb7ab39e3b8dec5dee3c9b41e46fab2f068974fe64b6297a392fda54",
+    "source_url": null,
+    "source_locator": "Relato público y expediente editorial existentes. Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+    "live_hash_verified": false,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Después de cruzar Jepira, un viajero tomó el camino equivocado. Caminó durante una luna hasta llegar al dominio de Juyá, la lluvia.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      },
+      {
+        "id": "e2",
+        "description": "Juyá lo recibió como pariente. El visitante temió al asiento que parecía animal, pero al sentarse descubrió que podía sostenerlo sin hacerle daño.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      },
+      {
+        "id": "e3",
+        "description": "Una sola tajada de patilla bastó para saciarlo. Allí la abundancia no obedecía las medidas que el viajero conocía.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      },
+      {
+        "id": "e4",
+        "description": "Cuando Juyá pidió un corzo, el viajero sólo vio a un hombre con arco y corona vegetal. Debía aprender que las apariencias cambiaban entre dominios.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      },
+      {
+        "id": "e5",
+        "description": "También vio jóvenes elegantes, jugadores y familias donde Juyá reconocía venados, conejos y frutos. La transformación no justificaba tratar personas reales como presas.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      },
+      {
+        "id": "e6",
+        "description": "El aprendizaje resultaba inquietante: para obtener alimento debía herir figuras primero humanas. El relato cambia categorías, pero no concede una licencia moral ilimitada.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      },
+      {
+        "id": "e7",
+        "description": "Juyá le enseñó caza, pastoreo, lazos, tejidos e instrumentos. La abundancia requería prácticas y Pülowi marcaba aquello que no podía tomarse sin límite.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      },
+      {
+        "id": "e8",
+        "description": "Al regresar, las cosas recuperaron su apariencia habitual. El viajero ya no pudo creer que una forma visible agotara la identidad de un ser.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+      }
+    ]
+  },
+  "story_thesis": "Cruzar al dominio de Juyá obliga a reconocer que la apariencia no agota la identidad ni concede derecho ilimitado sobre otros seres.",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "palette": "Azul lluvia, verde húmedo mate, ocre de estancia, carbón profundo, rojo contenido y crema de frutos; sin neón, sangre ni brillo divino.",
+  "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "allowed_models": [
+      "gpt-image-2.5-sunburst",
+      "gpt-image-2.5-flare",
+      "gpt-image-2"
+    ],
+    "fast_iteration_model": "gpt-image-2.5-flare",
+    "legacy_fallback_model": "gpt-image-2",
+    "one_model_per_myth": true,
+    "record_exact_model_and_snapshot": true,
+    "quality": "medium",
+    "size": "864x1536",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "mode": "image_edit_with_prior_keyframes",
+    "input_images": "declared_per_keyframe_and_frozen_with_sha256"
+  },
+  "shared_scene_continuity": [
+    "Todo visible está construido con hojas mate recortadas, cantos internos, aire y sombras físicas; nunca suelo realista ni personajes modelados.",
+    "Las referencias fijan identidad, vestuario, paleta y materia, pero jamás autorizan copiar su cámara o distribución.",
+    "No repetir en keyframes adyacentes altura, escala, horizonte ni ubicación de sujetos; cada bloque cambia al menos dos variables.",
+    "Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+    "Violencia, enfermedad, duelo y transformación se muestran sin sangre, heridas, cadáveres expuestos, sexualización o triunfo espectacular."
+  ],
+  "continuity_rules": [
+    "Usar exactamente el reparto inventariado por toma y conservar identidades desde los modelos aprobados.",
+    "Desde el tercer frame, los dos antecedentes aprobados inmediatos entran primero y en orden.",
+    "Macros sólo para manos, objetos, fibras, huellas o materia; nunca para rostros.",
+    "Un descarte no alimenta ningún frame posterior; toda corrección obliga a rehacer sus descendientes si cambiaron los antecedentes.",
+    "Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente."
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/entrada.jpeg",
+        "sha256": "3ee7701f361eb0a3fe2aff6868e9c381ea00e747e4c4984afad5e17a95950301",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/acto.jpeg",
+        "sha256": "5c3b01924bf78bbb5d89259d90813355425bcb6f34776fc352b9a713b7c43400",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/huella.jpeg",
+        "sha256": "01c2a2927c289b5bd59f08741d7a2f07a58ff59bfa8ac7f1938f20b8b968604b",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tríptico final y modelos de Biblia V3 reutilizados con sus hashes de selección.",
+      "Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "La composición se rediseña para video y variedad de cámara; no replica los trípticos."
+    ]
+  },
+  "canonical_models": [
+    {
+      "model_id": "ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+      "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8"
+    },
+    {
+      "model_id": "aparicion_juya_ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/aparicion_juya_ulepala__identity_sheet--canon.jpeg",
+      "sha256": "4ab65867691d2a7a4d43ee99d80caaf779d9b6f29c737b1dd84e727278abf8e1"
+    },
+    {
+      "model_id": "estancia_juya_ulepala__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+      "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112"
+    },
+    {
+      "model_id": "banco_jabali_ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-02/banco_jabali_ulepala__state_sheet--estados.jpeg",
+      "sha256": "534eb74a8c93636af7db0dbc620a976647c90efa53806c194db45ce4fe0f4e4b"
+    },
+    {
+      "model_id": "armas_caceria_juya_ulepala__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/armas_caceria_juya_ulepala__object_sheet--canon.jpeg",
+      "sha256": "482e875940dcfcf54c269734ee54d3d4bf2e7e9d0ea093e68c262516c1af2374"
+    },
+    {
+      "model_id": "tunas_conejos_ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/tunas_conejos_ulepala__state_sheet--estados.jpeg",
+      "sha256": "90bf56cd89845233a51b5b406570504516793594ee05a0a1e055600fee71cc59"
+    },
+    {
+      "model_id": "majayuras_ahuyamas_ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/majayuras_ahuyamas_ulepala__state_sheet--estados.jpeg",
+      "sha256": "75ea20b09f573c7f12f97294d836b1ae7dc0a72138054ab2288ad44f275dbc6a"
+    },
+    {
+      "model_id": "jovenes_venados_ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/jovenes_venados_ulepala__state_sheet--estados.jpeg",
+      "sha256": "8d03f2f16146658d461431ac680e33a45d891b19addd8125e5fd78a12d10026f"
+    },
+    {
+      "model_id": "aprendizajes_juya_ulepala__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/aprendizajes_juya_ulepala__phenomenon_rule--canon.jpeg",
+      "sha256": "b95a7087daa45b45f04ddfb4e4004352d274c601ff486d90bbaedb0d25f29e98"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "viajero",
+      "type": "person",
+      "desc": "Un viajero adulto de la versión enfocada, vestido de forma completa y sobria; identidad guiada por la ficha de Ulépala sin fabricar un tercer testigo.",
+      "model_ids": [
+        "ulepala__identity_sheet"
+      ]
+    },
+    {
+      "id": "juya",
+      "type": "person",
+      "desc": "Juyá como anfitrión y lluvia con agencia, figura adulta de papel guiada por su modelo; no rey occidental ni dios con corona.",
+      "model_ids": [
+        "aparicion_juya_ulepala__identity_sheet"
+      ]
+    },
+    {
+      "id": "dominio",
+      "type": "setting",
+      "desc": "Estancia húmeda y descomunal de Juyá, con senderos, cultivos y corrales de papel; abundancia con límites.",
+      "model_ids": [
+        "estancia_juya_ulepala__spatial_model"
+      ]
+    },
+    {
+      "id": "banco",
+      "type": "object",
+      "desc": "Un asiento cuya apariencia animal cambia según la versión; sin ataque ni monstruo.",
+      "model_ids": [
+        "banco_jabali_ulepala__state_sheet"
+      ]
+    },
+    {
+      "id": "frutos",
+      "type": "object",
+      "desc": "Patilla y auyama de papel, abundantes pero concretas; una tajada basta sin banquete ostentoso.",
+      "model_ids": [
+        "majayuras_ahuyamas_ulepala__state_sheet"
+      ]
+    },
+    {
+      "id": "presas",
+      "type": "animal",
+      "desc": "Corzo, venado y conejos vistos primero como personas; transformaciones no gráficas y sin impacto visible.",
+      "model_ids": [
+        "tunas_conejos_ulepala__state_sheet",
+        "jovenes_venados_ulepala__state_sheet"
+      ]
+    },
+    {
+      "id": "armas",
+      "type": "object",
+      "desc": "Arco y flechas de caza entregados para el aprendizaje; nunca apuntados al espectador ni usados con sangre.",
+      "model_ids": [
+        "armas_caceria_juya_ulepala__object_sheet"
+      ]
+    },
+    {
+      "id": "pulowi",
+      "type": "magic_subject",
+      "desc": "Límite territorial de Pülowi como ausencia o umbral material, sin cuerpo inventado ni demonización.",
+      "model_ids": []
+    },
+    {
+      "id": "oficios",
+      "type": "object",
+      "desc": "Lazos, fibras, tejido e instrumentos como prácticas aprendidas, no tesoro instantáneo.",
+      "model_ids": [
+        "aprendizajes_juya_ulepala__phenomenon_rule"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Después de cruzar Jepira, un viajero tomó el camino equivocado. Caminó durante una luna hasta llegar al dominio de Juyá, la lluvia.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 22,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "Camino equivocado",
+          "visual": "El viajero, muy pequeño, cruza una ruta diagonal que se separa de Jepira hacia un territorio húmedo desconocido. COMPOSICIÓN OBLIGATORIA: elevada oblicua desde una ladera, gran plano general territorial; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "viajero",
+            "dominio"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "elevada oblicua desde una ladera",
+          "shot_scale": "gran plano general territorial",
+          "depth_planes": [
+            "papel cercano",
+            "sujetos pequeños",
+            "sendero diagonal",
+            "territorio medio",
+            "cielo recortado"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con elevada oblicua desde una ladera.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1a.jpeg",
+            "sha256": "0cc99eacd99b5fce74b6b9eb4ea12ae0d4155a15f55aa1d509246b712c5634b8"
+          },
+          "generation_inputs": [
+            {
+              "kind": "triptych",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/entrada.jpeg",
+              "sha256": "3ee7701f361eb0a3fe2aff6868e9c381ea00e747e4c4984afad5e17a95950301",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+            },
+            {
+              "kind": "triptych",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-juya-triptych-01/acto.jpeg",
+              "sha256": "5c3b01924bf78bbb5d89259d90813355425bcb6f34776fc352b9a713b7c43400",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+              "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112",
+              "approved": true,
+              "role": "Fijar el modelo canónico estancia_juya_ulepala__spatial_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b1b",
+          "title": "Una luna de camino",
+          "visual": "Detalle de sandalias gastadas y una pequeña reserva de agua junto a una sombra de luna recortada; ningún rostro. COMPOSICIÓN OBLIGATORIA: lateral a la altura de manos u objeto, macro narrativo sin rostro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "viajero",
+            "dominio"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral a la altura de manos u objeto",
+          "shot_scale": "macro narrativo sin rostro",
+          "depth_planes": [
+            "borde cercano",
+            "manos u objeto",
+            "ropa parcial",
+            "suelo medio",
+            "fondo desenfocado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral a la altura de manos u objeto.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1b.jpeg",
+            "sha256": "21cbd5027b3be004f044d0423abdbca790f3c932f9f5de786e36db774df048d1"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1a.jpeg",
+              "sha256": "0cc99eacd99b5fce74b6b9eb4ea12ae0d4155a15f55aa1d509246b712c5634b8",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+              "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112",
+              "approved": true,
+              "role": "Fijar el modelo canónico estancia_juya_ulepala__spatial_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Juyá lo recibió como pariente. El visitante temió al asiento que parecía animal, pero al sentarse descubrió que podía sostenerlo sin hacerle daño.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 23,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "Juyá recibe al visitante",
+          "visual": "Juyá espera al fondo de la estancia y señala un lugar; el viajero entra pequeño desde abajo. COMPOSICIÓN OBLIGATORIA: contrapicado extremo desde el suelo, plano general bajo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "viajero",
+            "juya",
+            "dominio"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "contrapicado extremo desde el suelo",
+          "shot_scale": "plano general bajo",
+          "depth_planes": [
+            "materia rasante",
+            "pies o base",
+            "cuerpos completos",
+            "relieve",
+            "cielo amplio"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado extremo desde el suelo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2a.jpeg",
+            "sha256": "800dcfeb0a3c25248edd7646b3d032a0cea78c7cfcfea6f71cbcdfa33370984a"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1a.jpeg",
+              "sha256": "0cc99eacd99b5fce74b6b9eb4ea12ae0d4155a15f55aa1d509246b712c5634b8",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1b.jpeg",
+              "sha256": "21cbd5027b3be004f044d0423abdbca790f3c932f9f5de786e36db774df048d1",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/aparicion_juya_ulepala__identity_sheet--canon.jpeg",
+              "sha256": "4ab65867691d2a7a4d43ee99d80caaf779d9b6f29c737b1dd84e727278abf8e1",
+              "approved": true,
+              "role": "Fijar el modelo canónico aparicion_juya_ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+              "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112",
+              "approved": true,
+              "role": "Fijar el modelo canónico estancia_juya_ulepala__spatial_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b2b",
+          "title": "El asiento cambia de sentido",
+          "visual": "Vista cenital del asiento: un extremo conserva curva animal y el otro se lee como banco estable; no ataque. COMPOSICIÓN OBLIGATORIA: cenital verdadero de 90 grados, detalle gráfico de suelo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "viajero",
+            "banco",
+            "dominio"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "cenital verdadero de 90 grados",
+          "shot_scale": "detalle gráfico de suelo",
+          "depth_planes": [
+            "borde superior",
+            "acción central",
+            "huellas u objetos",
+            "sombras planas",
+            "estratos inferiores"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El asiento cambia de sentido.",
+            "impossible_behavior": "Vista cenital del asiento: un extremo conserva curva animal y el otro se lee como banco estable; no ataque.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e2.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e2"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital verdadero de 90 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2b.jpeg",
+            "sha256": "1f98af008613e6e914531669d0074345c783312dfc963950643966a6859d51eb"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b1b.jpeg",
+              "sha256": "21cbd5027b3be004f044d0423abdbca790f3c932f9f5de786e36db774df048d1",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2a.jpeg",
+              "sha256": "800dcfeb0a3c25248edd7646b3d032a0cea78c7cfcfea6f71cbcdfa33370984a",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-02/banco_jabali_ulepala__state_sheet--estados.jpeg",
+              "sha256": "534eb74a8c93636af7db0dbc620a976647c90efa53806c194db45ce4fe0f4e4b",
+              "approved": true,
+              "role": "Fijar el modelo canónico banco_jabali_ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+              "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112",
+              "approved": true,
+              "role": "Fijar el modelo canónico estancia_juya_ulepala__spatial_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Una sola tajada de patilla bastó para saciarlo. Allí la abundancia no obedecía las medidas que el viajero conocía.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 19,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Una tajada basta",
+          "visual": "Juyá ofrece una única tajada de patilla; ambos adultos quedan separados por la mesa baja, sin banquete. COMPOSICIÓN OBLIGATORIA: lateral teleobjetivo sin cielo, plano general comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "viajero",
+            "juya",
+            "frutos",
+            "dominio"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral teleobjetivo sin cielo",
+          "shot_scale": "plano general comprimido",
+          "depth_planes": [
+            "franja cercana",
+            "sujeto uno",
+            "acción media",
+            "sujeto dos",
+            "bandas comprimidas"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral teleobjetivo sin cielo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b3a.jpeg",
+            "sha256": "434d0a82b610f29f3487e44f550675137302bc551a853cf012e72a4f40c4cf77"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2a.jpeg",
+              "sha256": "800dcfeb0a3c25248edd7646b3d032a0cea78c7cfcfea6f71cbcdfa33370984a",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2b.jpeg",
+              "sha256": "1f98af008613e6e914531669d0074345c783312dfc963950643966a6859d51eb",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/aparicion_juya_ulepala__identity_sheet--canon.jpeg",
+              "sha256": "4ab65867691d2a7a4d43ee99d80caaf779d9b6f29c737b1dd84e727278abf8e1",
+              "approved": true,
+              "role": "Fijar el modelo canónico aparicion_juya_ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/majayuras_ahuyamas_ulepala__state_sheet--estados.jpeg",
+              "sha256": "75ea20b09f573c7f12f97294d836b1ae7dc0a72138054ab2288ad44f275dbc6a",
+              "approved": true,
+              "role": "Fijar el modelo canónico majayuras_ahuyamas_ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b3b",
+          "title": "La medida imposible",
+          "visual": "La tajada pequeña ocupa primer término y el viajero satisfecho queda muy lejos; escala alterada sin gigantismo. COMPOSICIÓN OBLIGATORIA: rasante a través de una grieta o vegetación, gran plano general de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "viajero",
+            "frutos",
+            "dominio"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "rasante a través de una grieta o vegetación",
+          "shot_scale": "gran plano general de fuga",
+          "depth_planes": [
+            "recorte extremo",
+            "vacío cercano",
+            "acción distante",
+            "territorio",
+            "franja de salida"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en La medida imposible.",
+            "impossible_behavior": "La tajada pequeña ocupa primer término y el viajero satisfecho queda muy lejos; escala alterada sin gigantismo.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e3.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e3"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con rasante a través de una grieta o vegetación.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b3b.jpeg",
+            "sha256": "8707e9c3f21fe21521c05ed7023b0728d4a3aca0dddce74a499ef2b52eb8ebbc"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b2b.jpeg",
+              "sha256": "1f98af008613e6e914531669d0074345c783312dfc963950643966a6859d51eb",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b3a.jpeg",
+              "sha256": "434d0a82b610f29f3487e44f550675137302bc551a853cf012e72a4f40c4cf77",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/majayuras_ahuyamas_ulepala__state_sheet--estados.jpeg",
+              "sha256": "75ea20b09f573c7f12f97294d836b1ae7dc0a72138054ab2288ad44f275dbc6a",
+              "approved": true,
+              "role": "Fijar el modelo canónico majayuras_ahuyamas_ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+              "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112",
+              "approved": true,
+              "role": "Fijar el modelo canónico estancia_juya_ulepala__spatial_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Cuando Juyá pidió un corzo, el viajero sólo vio a un hombre con arco y corona vegetal. Debía aprender que las apariencias cambiaban entre dominios.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 25,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "El hombre que era corzo",
+          "visual": "El viajero observa desde arriba a una figura adulta con arco y corona vegetal en un claro; aún no ve animal. COMPOSICIÓN OBLIGATORIA: alta diagonal de 60 grados, plano conjunto arquitectónico; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "viajero",
+            "presas",
+            "armas",
+            "dominio"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "alta diagonal de 60 grados",
+          "shot_scale": "plano conjunto arquitectónico",
+          "depth_planes": [
+            "trama cercana",
+            "acción uno",
+            "estructura central",
+            "acción dos",
+            "horizonte mínimo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con alta diagonal de 60 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b3a.jpeg",
+              "sha256": "434d0a82b610f29f3487e44f550675137302bc551a853cf012e72a4f40c4cf77",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3b",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu/keyframes/los-dominios-de-juya-preproduccion-01/b3b.jpeg",
+              "sha256": "8707e9c3f21fe21521c05ed7023b0728d4a3aca0dddce74a499ef2b52eb8ebbc",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/tunas_conejos_ulepala__state_sheet--estados.jpeg",
+              "sha256": "90bf56cd89845233a51b5b406570504516793594ee05a0a1e055600fee71cc59",
+              "approved": true,
+              "role": "Fijar el modelo canónico tunas_conejos_ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dominios-de-juya",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/jovenes_venados_ulepala__state_sheet--estados.jpeg",
+              "sha256": "8d03f2f16146658d461431ac680e33a45d891b19addd8125e5fd78a12d10026f",
+              "approved": true,
+              "role": "Fijar el modelo canónico jovenes_venados_ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b4b",
+          "title": "Juyá corrige la mirada",
+          "visual": "Sobre el hombro de Juyá, la silueta humana y la sombra de un corzo se superponen sin impacto ni herida. COMPOSICIÓN OBLIGATORIA: sobre el hombro con primer término dominante, plano medio ambiental; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "viajero",
+            "juya",
+            "presas",
+            "armas"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "sobre el hombro con primer término dominante",
+          "shot_scale": "plano medio ambiental",
+          "depth_planes": [
+            "hombro o marco",
+            "gesto",
+            "objeto o sujeto central",
+            "fondo activo",
+            "territorio"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Juyá corrige la mirada.",
+            "impossible_behavior": "Sobre el hombro de Juyá, la silueta humana y la sombra de un corzo se superponen sin impacto ni herida.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e4.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e4"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con sobre el hombro con primer término dominante.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "También vio jóvenes elegantes, jugadores y familias donde Juyá reconocía venados, conejos y frutos. La transformación no justificaba tratar personas reales como presas.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 23,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "El rico y el venado",
+          "visual": "Desde la sombra, un hombre de ropa completa cruza mientras su reflejo de papel adopta forma de venado. COMPOSICIÓN OBLIGATORIA: subjetiva baja desde la sombra, plano general con primer término oscuro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "viajero",
+            "presas",
+            "dominio"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "subjetiva baja desde la sombra",
+          "shot_scale": "plano general con primer término oscuro",
+          "depth_planes": [
+            "sombra cercana",
+            "señal",
+            "acción media",
+            "figuras",
+            "arquitectura o paisaje"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El rico y el venado.",
+            "impossible_behavior": "Desde la sombra, un hombre de ropa completa cruza mientras su reflejo de papel adopta forma de venado.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e5.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e5"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con subjetiva baja desde la sombra.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b5b",
+          "title": "El juego y los conejos",
+          "visual": "Jugadores distantes entre lianas; pequeñas sombras de conejo aparecen separadas en el suelo, sin reemplazo gráfico brusco. COMPOSICIÓN OBLIGATORIA: perfil distante con horizonte desplazado, plano general lateral; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "viajero",
+            "presas",
+            "dominio"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "perfil distante con horizonte desplazado",
+          "shot_scale": "plano general lateral",
+          "depth_planes": [
+            "materia cercana",
+            "sujeto lateral",
+            "acción",
+            "segundo sujeto",
+            "horizonte alto"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El juego y los conejos.",
+            "impossible_behavior": "Jugadores distantes entre lianas; pequeñas sombras de conejo aparecen separadas en el suelo, sin reemplazo gráfico brusco.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e5.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e5"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con perfil distante con horizonte desplazado.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "El aprendizaje resultaba inquietante: para obtener alimento debía herir figuras primero humanas. El relato cambia categorías, pero no concede una licencia moral ilimitada.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 23,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Familias y cultivos",
+          "visual": "Desde arriba, figuras humanas rodean patillas y auyamas cuyos contornos comparten sólo partes de sus siluetas. COMPOSICIÓN OBLIGATORIA: cenital diagonal amplio, plano de consecuencia; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "viajero",
+            "frutos",
+            "dominio"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "cenital diagonal amplio",
+          "shot_scale": "plano de consecuencia",
+          "depth_planes": [
+            "sombra",
+            "objeto central",
+            "figuras parciales",
+            "trama territorial",
+            "borde de salida"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Familias y cultivos.",
+            "impossible_behavior": "Desde arriba, figuras humanas rodean patillas y auyamas cuyos contornos comparten sólo partes de sus siluetas.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital diagonal amplio.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b6b",
+          "title": "La flecha se detiene",
+          "visual": "Macro de una flecha suspendida antes de salir del arco; la mano del viajero duda, sin blanco humano visible. COMPOSICIÓN OBLIGATORIA: macro frontal de materia, primerísimo plano de objeto; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "viajero",
+            "armas"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "macro frontal de materia",
+          "shot_scale": "primerísimo plano de objeto",
+          "depth_planes": [
+            "fibra cercana",
+            "objeto",
+            "cambio material",
+            "sombra interna",
+            "fondo abstracto"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con macro frontal de materia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Juyá le enseñó caza, pastoreo, lazos, tejidos e instrumentos. La abundancia requería prácticas y Pülowi marcaba aquello que no podía tomarse sin límite.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 23,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Aprender prácticas",
+          "visual": "A través de postes, el viajero practica un lazo mientras fibras e instrumentos reposan separados; Juyá observa lejos. COMPOSICIÓN OBLIGATORIA: contrapicado enmarcado entre postes o rocas, plano general enmarcado; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "viajero",
+            "juya",
+            "oficios",
+            "dominio"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "contrapicado enmarcado entre postes o rocas",
+          "shot_scale": "plano general enmarcado",
+          "depth_planes": [
+            "marco cercano",
+            "umbral",
+            "sujetos pequeños",
+            "acción",
+            "paisaje estrecho"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado enmarcado entre postes o rocas.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b7b",
+          "title": "El límite de Pülowi",
+          "visual": "Una abertura profunda conduce a una franja oscura que corta el sendero; el viajero se detiene antes del umbral. COMPOSICIÓN OBLIGATORIA: teleobjetivo profundo a través de una abertura, plano largo comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "viajero",
+            "pulowi",
+            "dominio"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "teleobjetivo profundo a través de una abertura",
+          "shot_scale": "plano largo comprimido",
+          "depth_planes": [
+            "abertura cercana",
+            "vacío",
+            "acción lejana",
+            "capas medias",
+            "fondo comprimido"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El límite de Pülowi.",
+            "impossible_behavior": "Una abertura profunda conduce a una franja oscura que corta el sendero; el viajero se detiene antes del umbral.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e7.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e7"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con teleobjetivo profundo a través de una abertura.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Al regresar, las cosas recuperaron su apariencia habitual. El viajero ya no pudo creer que una forma visible agotara la identidad de un ser.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Esta ficha es un episodio focal de Ulépala y El viaje del más allá, no una tercera versión independiente.",
+      "word_count": 24,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Regreso al mundo humano",
+          "visual": "El viajero sale del territorio húmedo hacia la península seca; objetos y animales recuperan proporciones ordinarias. COMPOSICIÓN OBLIGATORIA: aérea oblicua desde atrás, gran plano general de relación; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "viajero",
+            "dominio",
+            "presas",
+            "frutos"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "aérea oblicua desde atrás",
+          "shot_scale": "gran plano general de relación",
+          "depth_planes": [
+            "estructura cercana",
+            "sujetos",
+            "trayectoria",
+            "territorio amplio",
+            "cielo mínimo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con aérea oblicua desde atrás.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b8b",
+          "title": "La forma no basta",
+          "visual": "El viajero se aleja por el sendero; una sola sombra animal queda desfasada de su silueta como memoria editorial. COMPOSICIÓN OBLIGATORIA: a ras del suelo mirando hacia la distancia, plano final de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "viajero",
+            "dominio",
+            "presas"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "a ras del suelo mirando hacia la distancia",
+          "shot_scale": "plano final de fuga",
+          "depth_planes": [
+            "materia muy cercana",
+            "sendero",
+            "figuras pequeñas",
+            "paisaje",
+            "horizonte"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en La forma no basta.",
+            "impossible_behavior": "El viajero se aleja por el sendero; una sola sombra animal queda desfasada de su silueta como memoria editorial.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con a ras del suelo mirando hacia la distancia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    }
+  ]
+}

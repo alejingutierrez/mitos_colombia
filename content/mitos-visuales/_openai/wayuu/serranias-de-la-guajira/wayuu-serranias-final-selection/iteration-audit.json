@@ -1,0 +1,91 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-07T15:19:24.443Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 3,
+  "by_act": {
+    "entrada": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-serranias-triptych-01",
+      "prepared_at": "2026-09-07T15:16:58.568Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "986f87e1be60cfb02d8658ec8a1d7982fa3b8427b4ded6087eeb37da6405ccd6",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "ebe3e001591a1075972d9ac70b0739776b51e5d7e35a9fb05cb43a41357f475d",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-serranias-triptych-01",
+      "prepared_at": "2026-09-07T15:16:58.568Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "8df54ddfd286c03ea5e194c04c2b67de652da6003fbb7908851719bc76cc4300",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "1c3cd8b27b579fbe326f03dcc8625692cea55cde91ea8dd56b07d7f48fe692ec",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-serranias-triptych-01",
+      "prepared_at": "2026-09-07T15:16:58.568Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "18b221fc0c2752ad7f84feef1910bd03714c5d0bef39f1cede41a2b4c1d562eb",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "697d1d730469421f5aea31c4d9c02e5ddce7005d3f1012ebb0de3bf0a0f76f38",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}

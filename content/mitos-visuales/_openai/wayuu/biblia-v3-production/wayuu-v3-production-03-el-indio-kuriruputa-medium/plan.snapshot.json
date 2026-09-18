@@ -1,0 +1,579 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+    "myth_slug": "el-indio-kuriruputa",
+    "model_ids": [
+      "kuriruputa__identity_sheet",
+      "kuriruputa__state_sheet",
+      "nueva_pareja_kuriruputa__identity_sheet",
+      "corral_kuriruputa__spatial_model",
+      "rebanos__group_grammar"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "frozen_ready_to_generate"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "kuriruputa__identity_sheet",
+    "kuriruputa__state_sheet",
+    "nueva_pareja_kuriruputa__identity_sheet",
+    "corral_kuriruputa__spatial_model",
+    "rebanos__group_grammar"
+  ],
+  "models": {
+    "kuriruputa__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "kuriruputa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Pasa de perseguidor a herido y mediador."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Kuriruputá. Funcion visual: Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Kuriruputá",
+          "funcion estable: Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+          "estados declarados: perseguidor, herido, mediador"
+        ],
+        "documented_features": [
+          "Ganadero historico herido que depende de sus hermanas y reconstruye alianzas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Kuriruputá. Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+          "estados autorizados: perseguidor, herido, mediador",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "perseguidor"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kuriruputa__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "kuriruputa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Pasa de perseguidor a herido y mediador."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Kuriruputá. Funcion visual: Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Kuriruputá",
+          "funcion estable: Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+          "estados declarados: perseguidor, herido, mediador"
+        ],
+        "documented_features": [
+          "Ganadero historico herido que depende de sus hermanas y reconstruye alianzas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Kuriruputá. Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+          "estados autorizados: perseguidor, herido, mediador",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "perseguidor",
+            "herido",
+            "mediador"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "nueva_pareja_kuriruputa__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "nueva_pareja_kuriruputa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Alianza posterior que no es premio."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Nueva pareja de Kuriruputá. Funcion visual: Figura de una alianza posterior que no debe tratarse como premio.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Nueva pareja de Kuriruputá",
+          "funcion estable: Figura de una alianza posterior que no debe tratarse como premio.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Figura de una alianza posterior que no debe tratarse como premio."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Nueva pareja de Kuriruputá. Figura de una alianza posterior que no debe tratarse como premio.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Figura de una alianza posterior que no debe tratarse como premio.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "corral_kuriruputa__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "corral_kuriruputa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Lugar de huellas y perdida."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada. Entidad: Corral de Kuriruputá. Funcion visual: Corral ganadero y huellas que inician la persecucion.",
+        "materials": [
+          "yotojoro, madera, paja y barro cuando estan documentados",
+          "capas estructurales separadas",
+          "suelo fibroso continuo"
+        ],
+        "palette_logic": "Materiales mates de arena, madera y barro; sin patrones decorativos inventados.",
+        "scale": "Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "continuity_markers": [
+          "nombre estable: Corral de Kuriruputá",
+          "funcion estable: Corral ganadero y huellas que inician la persecucion.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Corral ganadero y huellas que inician la persecucion."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Corral de Kuriruputá. Corral ganadero y huellas que inician la persecucion.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala habitable demostrada por vanos, sombra y relaciones espaciales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "yotojoro, madera, paja y barro cuando estan documentados; capas estructurales separadas; suelo fibroso continuo",
+        "constraints": [
+          "Sistema constructivo legible por estructura, cubierta, cerramiento, vacios y relacion con senderos; no casa decorativa aislada.",
+          "mostrar: Corral ganadero y huellas que inician la persecucion.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "rebanos__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "rebanos"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Riqueza ganadera y detonante del conflicto."
+        },
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Riqueza final que se comparte."
+        },
+        {
+          "myth": "los-dos-hermanos",
+          "field": "mito",
+          "note": "Ganado robado y recuperado."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Animales y pertenencias distribuidos."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Animales distribuidos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Rebaños y ganado. Funcion visual: Conjuntos de cabras, vacunos o animales domesticos cuya especie depende del relato.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Rebaños y ganado",
+          "funcion estable: Conjuntos de cabras, vacunos o animales domesticos cuya especie depende del relato.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjuntos de cabras, vacunos o animales domesticos cuya especie depende del relato."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Rebaños y ganado. Conjuntos de cabras, vacunos o animales domesticos cuya especie depende del relato.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Conjuntos de cabras, vacunos o animales domesticos cuya especie depende del relato.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "kuriruputa": {
+      "name": "Kuriruputá",
+      "kind": "personaje",
+      "description": "Ganadero historico herido que depende de sus hermanas y reconstruye alianzas.",
+      "aliases": [],
+      "states": [
+        "perseguidor",
+        "herido",
+        "mediador"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "kuriruputa__identity_sheet",
+        "kuriruputa__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-kuriruputa"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Pasa de perseguidor a herido y mediador."
+        }
+      ]
+    },
+    "nueva_pareja_kuriruputa": {
+      "name": "Nueva pareja de Kuriruputá",
+      "kind": "personaje",
+      "description": "Figura de una alianza posterior que no debe tratarse como premio.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "nueva_pareja_kuriruputa__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-kuriruputa"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Alianza posterior que no es premio."
+        }
+      ]
+    },
+    "corral_kuriruputa": {
+      "name": "Corral de Kuriruputá",
+      "kind": "arquitectura",
+      "description": "Corral ganadero y huellas que inician la persecucion.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "corral_kuriruputa__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-kuriruputa"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Lugar de huellas y perdida."
+        }
+      ]
+    },
+    "rebanos": {
+      "name": "Rebaños y ganado",
+      "kind": "animal",
+      "description": "Conjuntos de cabras, vacunos o animales domesticos cuya especie depende del relato.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "rebanos__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-indio-kuriruputa",
+        "el-pequeno-indio-kosina",
+        "los-dos-hermanos",
+        "maleiwa",
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-kuriruputa",
+          "field": "mito",
+          "note": "Riqueza ganadera y detonante del conflicto."
+        },
+        {
+          "myth": "el-pequeno-indio-kosina",
+          "field": "mito",
+          "note": "Riqueza final que se comparte."
+        },
+        {
+          "myth": "los-dos-hermanos",
+          "field": "mito",
+          "note": "Ganado robado y recuperado."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Animales y pertenencias distribuidos."
+        },
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Animales distribuidos."
+        }
+      ]
+    }
+  }
+}

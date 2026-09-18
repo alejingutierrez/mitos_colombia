@@ -1,53 +1,81 @@
-# AGENTS Guide
+# Guía para agentes
 
-## Vision del proyecto
-Crear un sitio web moderno de contenidos que recopile todos los mitos de Colombia. Debe sentirse actual, elegante y facil de explorar, con un enfoque editorial tipo blog. El sitio debe estar optimizado para SEO, con navegacion intuitiva y performance alta.
+**Lee primero [`ESTADO.md`](ESTADO.md).** Dice dónde está cada cosa y en qué
+punto va cada comunidad. Este archivo sólo cubre cómo trabajar aquí.
 
-## Alcance inicial (fase 0)
-- El repo esta vacio; se debe iniciar el proyecto desde cero.
-- Definir la estructura base, componentes, estilos y librerias.
-- Preparar una arquitectura que luego integre datos desde un Excel con los mitos.
+## Qué es el proyecto
 
-## Encargo para agentes de IA
-- Proponer y construir la estructura del proyecto (carpetas, rutas, layouts).
-- Diseñar el header, navegacion por categorias y pagina de listado de mitos.
-- Definir un sistema de diseno moderno: tipografia, paleta, espaciado, sombras.
-- Implementar animaciones sutiles y modernas (page load, hover, reveal).
-- Garantizar SEO (metadatos, estructura semantica, Open Graph).
-- Proponer librerias actuales (ej: Tailwind, libs de animacion, UI).
+Catálogo web de mitos de Colombia —Next.js 15, en producción en
+www.mitosdecolombia.com— y el taller que produce su material visual: biblias
+visuales por comunidad, trípticos por mito, keyframes, guiones y narración.
 
-## Direccion visual
-- Estilo: moderno, limpio, editorial; inspirado en glass design sin excesos.
-- Colores: referencia sutil a Colombia (verde selva, azul rios, dorados tierra), sin usar la bandera literal.
-- Contenido: tarjetas y layouts tipo revista, con jerarquia clara.
-- Ilustraciones futuras: estilo paperquilling / paper cut.
+El sitio ya existe y está desplegado. No lo inicies de cero.
 
-## Estructura de contenidos
-- Navegacion por categorias (region, tipo de mito, tematica).
-- Busqueda y filtros simples.
-- Pagina individual con lectura comoda (TOC, metadata, relacionados).
+## Cómo está partido el repo
 
-## Integraciones futuras
-- OpenAI para enriquecer contenido y generar imagenes.
-- Pipeline para importar mitos desde Excel.
+| carpeta | qué es |
+|---|---|
+| `src/` | la app Next.js |
+| `content/` | **la fuente** del material: planes, prompts, guiones, selecciones, manifiestos |
+| `output/` | **la salida**: los jpeg y png que emite la tanda. Ignorado por git, se regenera |
+| `docs/` | doctrina y bitácora de producción |
+| `editorial/` | los generadores de biblia y dirección visual por comunidad |
+| `scripts/` | el pipeline: emisión de tandas, preflight, ingesta, preproducción de video |
+| `public/` | lo que sirve la app |
 
-## Entregables esperados
-- Layout base y paginas principales (home, categorias, detalle).
-- Componentes reutilizables (cards, badges, breadcrumbs, nav).
-- Tokens de diseno (variables, escalas tipograficas, colores).
-- Documentacion breve de decisiones tecnicas y de diseno.
+La regla que gobierna qué entra a git está escrita en
+`content/videos/.gitignore` y vale para todo el repo: **se versiona el
+conocimiento, no los rushes.** Si perderlo obliga a volver a gastar créditos o
+rompe la continuidad visual, va a git. Si se rehace sin costo desde lo que sí
+está versionado, no.
 
-## Flujo Docker
-- Despues de cada ajuste relevante, recrear el contenedor con `docker-compose up -d --build`.
+## Reglas de producción
 
-## Vercel + Neon (operacion)
-- No se guardan secretos en el repo. Usa `.env` local (ignorado) o variables en Vercel.
-- Configura `POSTGRES_URL` (Neon) y opcionalmente `POSTGRES_URL_NON_POOLING`.
-- **`npm run db:import:pg` NO es rutina: es un seed DESTRUCTIVO de arranque.** Vacía y reconstruye `myths`, `regions`, `communities`, `tags`, `myth_tags` y `myth_keywords` desde `docs/mitos_seo_actualizados.xlsx` (una foto de enero de 2026, con menos mitos que la base viva) y, por CASCADE, borra tambien los dossiers editoriales (`editorial_myths` + sus tags, keywords y notas de investigacion) y los comentarios. Ademas `vertical_images` y `tarot_cards` guardan ids sin llave foranea: sobreviven al borrado y quedan huerfanas (reasociables por `entity_slug` / `myth_slug`). No hay vuelta atras salvo restaurar un backup.
-  - Para ver que se destruiria, sin tocar nada: `source .env && DESTRUCTIVE_IMPORT_DRY_RUN=yes npm run db:import:pg` (solo lecturas; imprime las tablas y sus filas reales).
-  - Para ejecutarlo de verdad hay que confirmarlo a mano; el script se niega por defecto y exige la segunda bandera cuando el destino no es local: `source .env && CONFIRM_DESTRUCTIVE_IMPORT=yes CONFIRM_PRODUCTION_WIPE=yes npm run db:import:pg`. Saca backup verificado antes.
-  - Para actualizar contenido en produccion NO uses este script: edita por el admin o escribe una migracion puntual.
-- Para Vercel CLI, usa `VERCEL_TOKEN` en tu shell y el archivo `.vercel/project.json` para linkear el proyecto.
+- **Los 41 muiscas completos, con las cuatro capas.** El alcance nunca es una
+  muestra: es el corpus entero de la comunidad.
+- **Todo en paralelo.** En Higgsfield por MCP se encola la tanda completa, no
+  pieza por pieza.
+- **Nunca sobrescribir un `freeze.json`.** Cada preparación va a una carpeta
+  `prepared-NN` nueva. El freeze es lo que permite reproducir una pieza.
+- **La biblia manda.** Ninguna imagen se genera sin contrastarla contra la
+  biblia visual de su comunidad.
+- **Puerta metodológica V2**: obligatoria antes de abrir una comunidad nueva.
+  Está en `docs/mitos-produccion-imagenes.md`.
+
+## Dirección visual
+
+Editorial y minimalista. Manrope y Inter, verde selva `#1c5c3f`, iconos de
+línea. Las ilustraciones son paper cut y quilling. Referencia sutil a Colombia
+—verde selva, azul ríos, dorados tierra— nunca la bandera literal.
+
+## Operación
+
+```bash
+npm run dev                  # el sitio en local
+npm run mitos:estado         # en qué va la producción de imágenes
+npm run mitos:tanda          # emitir una tanda
+npm run mitos:test:biblia    # pruebas del pipeline visual
+```
+
+- **Despliegue por Git.** `vercel --prod` sube el disco, no `main`, y puede
+  revertir lo que la integración ya publicó.
+- **Secretos fuera del repo.** `.env` local o variables en Vercel. `POSTGRES_URL`
+  contra Neon.
+- **`npm run db:import:pg` NO es rutina: es un seed DESTRUCTIVO de arranque.**
+  Vacía y reconstruye `myths`, `regions`, `communities`, `tags`, `myth_tags` y
+  `myth_keywords` desde `docs/mitos_seo_actualizados.xlsx` —una foto de enero de
+  2026, con menos mitos que la base viva— y por CASCADE borra también los
+  dossiers editoriales y los comentarios. `vertical_images` y `tarot_cards`
+  guardan ids sin llave foránea: sobreviven y quedan huérfanas. No hay vuelta
+  atrás salvo restaurar un backup.
+  - Ver qué se destruiría, sin tocar nada:
+    `source .env && DESTRUCTIVE_IMPORT_DRY_RUN=yes npm run db:import:pg`
+  - Ejecutarlo de verdad exige confirmarlo a mano; el script se niega por
+    defecto: `source .env && CONFIRM_DESTRUCTIVE_IMPORT=yes CONFIRM_PRODUCTION_WIPE=yes npm run db:import:pg`
+  - Para actualizar contenido en producción NO uses este script: edita por el
+    admin o escribe una migración puntual.
+- **`git` en esta máquina**: `/usr/bin/git` exige aceptar la licencia de Xcode.
+  Mientras no se acepte, usa `/Library/Developer/CommandLineTools/usr/bin/git`.
 
 ## Seguridad y secretos
 - Nunca versionar `.claude/settings.local.json`: guarda los permisos de una maquina concreta y es donde mas facil se cuela un token. Ya esta en `.gitignore`; `.claude/launch.json` si se versiona porque solo declara el puerto de dev.
@@ -62,3 +90,11 @@ git diff --cached -U0 | grep -nEi 'token=|api[_-]?key|secret|password|AKIA|sk-|v
 ```
 
 - Si un secreto ya llego a un commit: primero rotarlo o revocarlo (el valor publicado ya no es confiable) y despues limpiar la historia. El orden inverso no sirve de nada.
+
+## Qué no hacer
+
+- No empezar el proyecto de cero: existe y está en producción.
+- No commitear `output/`, `tmp/` ni `.mp4`.
+- No sobrescribir un freeze ni una carpeta `prepared-NN` existente.
+- No borrar `artifacts/` ni ramas sin fusionar sin preguntar: hay trabajo vivo
+  en 55 ramas fuera de `main`.

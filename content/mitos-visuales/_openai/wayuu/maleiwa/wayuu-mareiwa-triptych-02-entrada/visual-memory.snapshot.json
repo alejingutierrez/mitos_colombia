@@ -1,0 +1,121 @@
+{
+  "title": "Mareiwa",
+  "references": [
+    {
+      "id": "bb8e4c10e817c7d5c282",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/maleiwa-1784766688593.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/maleiwa-",
+          "pathname": "mitos/maleiwa-1784766688593.jpg",
+          "uploaded_at": "2026-07-23T00:31:31.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T05:34:06.879Z",
+        "method": "browser_capture_direct_visual_review",
+        "capture": "output/playwright/wayuu-campaign/mareiwa-before-0.png",
+        "observed": "Figura humana en primer plano, casa redonda, felino, velero y rapaz sobre montañas claras; curvas y relieve de papel."
+      }
+    },
+    {
+      "id": "7e6e7790b768a2376a39",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/maleiwa-1784910923746.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 341,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 341,
+          "updated_at": "2026-07-24T16:35:24.745Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/maleiwa-",
+          "pathname": "vertical/myth/maleiwa-1784910923746.jpg",
+          "uploaded_at": "2026-07-24T16:35:25.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "inspection": {
+        "reviewed_at": "2026-09-06T05:34:06.879Z",
+        "method": "browser_capture_direct_visual_review",
+        "capture": "output/playwright/wayuu-campaign/mareiwa-before-1.png",
+        "observed": "Figura con poncho y sombrero, felino, rapaz, cactus y paisaje azul en capas."
+      }
+    },
+    {
+      "id": "f061c46290c4ee9e5c9e",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/maleiwa-1767973111983.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/maleiwa-",
+          "pathname": "mitos/maleiwa-1767973111983.png",
+          "uploaded_at": "2026-01-10T22:50:46.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 983568
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_before_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:34:06.879Z",
+    "reviewed_reference_ids": [
+      "bb8e4c10e817c7d5c282",
+      "7e6e7790b768a2376a39"
+    ],
+    "retained": [
+      "Azul mineral, arena y curvas superpuestas con sombras reales; amplitud del territorio.",
+      "Relación entre cielo, agua y tierra como estructura de la imagen."
+    ],
+    "rejected": [
+      "Rapaz monumental, jaguar y figura humana con poncho como identidad de Mareiwa: no corresponden a los episodios elegidos ni al modelo no corporal.",
+      "Picos de apariencia nevada, casa redonda y velero; no trasladar elementos decorativos sin relación con la acción.",
+      "Repetir la misma contemplación del paisaje en horizontal y vertical."
+    ],
+    "influence_by_act": {
+      "entrada": "Recuperar bandas azul/arena y distancia, convertir la curva en retirada física del mar que revela tierra y pozos.",
+      "acto": "Cambiar ave rapaz por turpial y pava a escala natural; sus semillas activan manchas locales de vegetación.",
+      "huella": "Condensar azul, arena y curvas en la bolsa de una honda que contiene suelo y un brote; símbolo editorial sin escena."
+    }
+  },
+  "external_visual_search": {
+    "searched_at": "2026-09-06T05:34:06.879Z",
+    "query": "Mareiwa Maleiwa Guajira ilustración honda mar",
+    "outcome": "No se adopta referencia histórica externa. Resultados mayormente imágenes del propio proyecto (varias de otros mitos), mapa contemporáneo y arte territorial sin este episodio.",
+    "limits": "No afirmar saturación ni atribuir autoridad cultural a imágenes de buscador. La tercera versión almacenada sigue sin inspección."
+  }
+}

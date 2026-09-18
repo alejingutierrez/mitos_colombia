@@ -1,0 +1,139 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "ulepala",
+  "title": "Ulépala",
+  "created_at": "2026-09-06T17:06:40.623Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña completa autorizada por el usuario; selección del agente tras contraste de fuente y revisión visual.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "d0ee7ef1040f93122f86d2b1aa4e69b40b4464d6d37be036e8c756cb7674199b",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T17:00:30.275Z",
+    "reviewed_reference_ids": [
+      "5a06d296a1deb2ac4679",
+      "060442eeec694224f2f7"
+    ],
+    "retained": [
+      "Estratos de montañas y niebla, índigo y ocre; papel con sombras físicas.",
+      "Cardenal rojo como motivo propio del desenlace."
+    ],
+    "rejected": [
+      "Abrazo central que reduce el arco a romance y resta agencia a la compañera.",
+      "Mujer blanca translúcida, torsos descubiertos, barco y mariposas mezclados con episodios ajenos a cada escena.",
+      "Máscara negra extensa y pico rojo del cardenal: ajustar a la referencia regional, no copiar literalmente la ficha."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar profundidad de estratos, alejar pareja y sustituir abrazo por travesía subterránea guiada por ella.",
+      "acto": "Conservar terreno en capas; retirar pareja romántica y mostrar percepción de mujeres-auyamas mediante sombras anticipatorias.",
+      "huella": "Aislar ave roja y corazón como una sola operación simbólica; sin paisaje ni collage del viaje."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-03-entrada/entrada.jpeg",
+      "sha256": "7c43b577bfd2a529f1942610679eb9b1f2ea630a6a06b469e9168d505da4eed5",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/ulepala/wayuu-ulepala-triptych-03-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "05809545a92bcfb54403e5706a35b0cad0f49a16a7a5a80138d4768d89214713",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Pareja pequeña a la derecha camina por una caverna profunda bajo estratos de mar. Ella va delante con manta vino y abrigo azul; él lleva pañuelo arena y prendas completas. Tela azul enlaza ambos y sostiene el gesto de guía. Mundo de papel con aire, sombras y amplio campo oscuro izquierdo.",
+        "limits": [
+          "Figuras de alrededor de un quinto de altura, menores que H1 pero no los 125 píxeles pedidos.",
+          "Contacto de manos queda parcialmente confundido con borde de tela; no se afirma un agarre anatómico inequívoco.",
+          "El abrigo compartido se expresa por continuidad azul; el color, la vista simultánea mar/cueva y la luz son editoriales."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-02-acto/acto.jpeg",
+      "sha256": "5ee538c9de77da2f95e2e8ccfa02a2117978e35cfa417890e3c47acc2bae7d46",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/ulepala/wayuu-ulepala-triptych-02-acto/prompts/acto.prompt.txt",
+      "prompt_sha256": "b817b07adda1eb5f8255285165858b8eccb72b78c8cfc36527d30d6bc91f4a32",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Ul épala pequeño a la izquierda observa a dos mujeres sentadas conversando, completas y alejadas de bordes. Cada una tiene sombra oscura continua que acaba en auyama con hoja; sombra del hombre sigue humana. Terreno y colinas en papel con profundidad.",
+        "limits": [
+          "Hojas verdes se extienden por bordes de mantas en vez de quedar sólo en solapas; traducción vegetal editorial, no patrón sagrado.",
+          "Sombras alargadas son anticipación editorial; no metamorfosis literal ni transformación sin conflicto.",
+          "Las auyamas-sombra llegan más abajo que la zona prevista; comprobar lectura de portada móvil."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-01/huella.jpeg",
+      "sha256": "7862b122a99ba44e4d45a4757fcb67e206980ab333ae425055e04a3b85d58f9e",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/ulepala/wayuu-ulepala-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "ac765cc4a118487794e7f2ee88d5ec60e22d7a84d9e38fed129d3d9e7822ac2c",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Un ave roja de pocas láminas, pico gris y mentón oscuro pequeño; hueco de corazón en pecho con solapa doblada hacia ala. Papel separado del campo azul, sin paisaje.",
+        "limits": [
+          "Silueta de corazón es reconocible y cercana al signo editorial habitual; no se atribuye como emblema tradicional.",
+          "Ave más grande que la mitad pedida, conserva margen y función simbólica; no ilustración zoológica."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 84.7,
+      "acto_01": 36.9,
+      "huella_01": 37.8,
+      "acto_02": 33.3,
+      "entrada_03": 84.9
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-01/entrada.jpeg",
+      "sha256": "8ef26c0e6d47a3ebba14dc9cf18372145b55d252f71d2283fcec8d89d07282ac",
+      "reason": "Mayor escala y gesto ambiguo de abrigo; borde ornamental no deseado."
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-01/acto.jpeg",
+      "sha256": "59ee0aefa1c802abe247103a9e00363c739169d8766116f967cc62428b347316",
+      "reason": "Observador muy grande y mujer próxima al borde derecho."
+    }
+  ],
+  "published": false
+}

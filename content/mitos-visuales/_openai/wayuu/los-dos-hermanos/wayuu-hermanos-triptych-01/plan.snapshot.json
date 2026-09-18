@@ -1,0 +1,289 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "los-dos-hermanos": {
+      "titulo": "Los dos hermanos",
+      "canon_models": [
+        "hermana_arquera__identity_sheet",
+        "hermano_arquera__identity_sheet",
+        "perro_hermanos__identity_sheet",
+        "mula_hermanos__identity_sheet",
+        "chinchorro__object_sheet",
+        "rebanos__group_grammar",
+        "arco_flechas__object_sheet",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_1946_hermanos",
+          "type": "primary_source",
+          "title": "Mitos, leyendas y cuentos de la Guajira, X: Los dos Hermanos",
+          "author": "Milcíades Chaves Ch.",
+          "year": 1946,
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "locator": "pp.317–319, índices PDF 13–15. Informante Ana Isolina Ipuana; intérprete Ana Ofelia Ortíz.",
+          "supports": "Hermana hábil, pérdida del hermano, retorno por animales, represalia y riqueza final.",
+          "limits": "La fuente usa armas de fuego y contiene violencia que no se ilustra; la edición objetivo usa arco y desarrolla el costo de la venganza. No afirmar que el diálogo final procede literalmente de 1946."
+        },
+        {
+          "id": "published_hermanos",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-dos-hermanos.json",
+          "supports": "Objetivo visual congelado: hermana arquera, lealtad animal, ausencia irreparable y conflicto que continúa.",
+          "limits": "El diálogo y lectura ética final son expansiones editoriales. No se cambia el texto publicado."
+        },
+        {
+          "id": "bible_hermanos",
+          "type": "internal_visual_research",
+          "path": "editorial/wayuu/production-direction-v3.mjs",
+          "supports": "Identidades de hermana, hermano, perro y mula; estados de ausencia por objetos; materialidad y vestuario.",
+          "limits": "No importar clones de fichas de estados ni sus rostros modelados."
+        },
+        {
+          "id": "clothing",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+          "supports": "Prendas de silueta completa y mantas amplias; diversidad de vestuario.",
+          "limits": "No añadir adornos ni pintura facial sin persona, ocasión y fuente."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "hermana_arquera__identity_sheet",
+          "decision": "Mantener prenda larga azul carbón, interior crudo y trenza al hombro izquierdo. Convertir cara modelada en recorte plano de perfil mínimo."
+        },
+        {
+          "model_id": "hermano_arquera__state_sheet",
+          "decision": "La ausencia se expresa con camisa terracota doblada, no cuerpo. No mostrar al hermano como fantasma ni regresar vivo."
+        },
+        {
+          "model_id": "mula_hermanos__identity_sheet",
+          "decision": "Albarda vacía: el cuerpo del hermano queda deliberadamente fuera de campo. El regreso se condensa en el llanto del animal, no se afirma que volviera sin transportar al hermano."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "los-dos-hermanos",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-dos-hermanos.json",
+        "target_content_sha256": "70cf4335b1397da54f1328ef97c76fde97ca7bf6ab1c3ec8ab58906cb49b5a5a",
+        "summary": "Una hermana y un hermano comparten la práctica del arco. Tras la muerte del hermano durante la persecución del ganado, el perro y la mula regresan. La hermana emprende una represalia y vuelve con riqueza, pero no recupera a su hermano y el conflicto continúa. Ilustrar sólo reconocimiento de ausencia y consecuencias, nunca violencia, victoria celebrada o un regreso del hermano vivo.",
+        "events": [
+          {
+            "id": "destreza",
+            "provenance": "historical_core",
+            "required": false,
+            "source": "chaves_1946_hermanos",
+            "action": "La habilidad de la hermana precede al conflicto, no es un poder súbito."
+          },
+          {
+            "id": "retorno_animales",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_hermanos",
+            "action": "Mula y perro devuelven al hermano; la imagen elide todo cuerpo y condensa la noticia en su llegada."
+          },
+          {
+            "id": "duelo",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_hermanos",
+            "action": "La hermana comprende la pérdida y actúa a partir de ella."
+          },
+          {
+            "id": "represalia",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_hermanos",
+            "action": "La represalia excede la recuperación de animales; representar sólo su consecuencia."
+          },
+          {
+            "id": "riqueza",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_1946_hermanos",
+            "action": "La hermana regresa con animales y bienes."
+          },
+          {
+            "id": "ausencia_no_reparada",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_hermanos",
+            "action": "La riqueza no restaura al hermano y el conflicto precisa otra respuesta."
+          }
+        ],
+        "emotional_reading": "Lealtad y pérdida antes que victoria. La hermana conserva agencia y destreza sin que su capacidad vuelva justa toda represalia.",
+        "magic_reading": "Las lágrimas del animal continúan sobre el suelo, el patio se desteje ante la riqueza obtenida y una flecha se curva hacia su propia pluma. Cada operación pertenece a la materia del mundo y a la pérdida; no se atribuye como símbolo tradicional.",
+        "qa_method": "Ver sin prompt: mula y perro de regreso ante la hermana, riqueza separada de la ausencia, flecha que vuelve sobre sí. Figuras de recorte casi plano, escenarios con aire y sin violencia."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T04:16:01.991Z",
+        "reviewed_reference_ids": [
+          "e614ffa46b74111f9201",
+          "19498713504e5d18f81c"
+        ],
+        "retained": [
+          "Mujer como protagonista y presencia del rebaño; cielos nocturnos azules y arena mate.",
+          "Vegetación lateral y distancia de los planos del territorio."
+        ],
+        "rejected": [
+          "Rifle como foco amenazante, adversarios y pose de enfrentamiento.",
+          "Cambio de ropa entre imágenes, adornos y patrones no sustentados, techo cónico, caras ilustradas y encuadre cerrado."
+        ],
+        "influence_by_act": {
+          "entrada": "Retomar el azul nocturno y vegetación lateral con escala abierta, pero centrar el regreso de mula y perro y la ausencia, no el combate.",
+          "acto": "Conservar rebaño y ranchería; cambiar victoria armada por patio que se desteje entre riqueza y ausencia.",
+          "huella": "Recuperar la destreza de la arquera a través de una sola flecha de papel curvada sobre sí misma; no copiar rifle ni escena."
+        }
+      },
+      "material_direction": "Fotografía de un mundo artesanal hecho ENTERAMENTE de papel recortado teñido mate. Personajes humanos CASI PLANOS: perfil en una pieza, nariz sólo como contorno, ojo mínimo, cabello como pocas hojas y trenza sencilla, manos como siluetas. Prendas amplias en dos o tres hojas, sin caras modeladas ni facetadas. Animales de silueta natural y capas finas, nunca juguetes. El volumen pertenece al espacio: seis planos a diferentes distancias, aire real, oclusiones y sombras de contacto entre terreno, vegetación, viviendas, cielo y prodigio. Todo es papel, no piel, roca ni ramas fotográficas. Gran plano general, cuerpos enteros y pequeños de hasta 20% de la altura en escenas. Mundo inmersivo a sangre: sin cartón corrugado, base exterior, mesa, marco, caja ni soporte visible. Magia tangible sin partículas, portales ni brillo añadido.",
+      "paleta": "azul carbón y añil nocturno, arena, verde seco, crudo, arcilla; luz lunar pálida en horizontal y tarde ocre en vertical",
+      "continuity_contract": [
+        "Hermana: una sola mujer Wayúu adulta de prenda larga AZUL CARBÓN, muy amplia de hombros a tobillos sobre interior crudo visible, mangas amplias y estrecho puño terracota izquierdo, sandalias arcilla. Trenza negra baja por delante de hombro izquierdo. Perfil mínimo sin modelado, no pelo suelto, ropa verde ni armadura. No lleva armas en las escenas; el arco queda apoyado.",
+        "Hermano ausente: nunca cuerpo, doble, fantasma o silueta humana en chinchorro. Su camisa lisa terracota aparece doblada sólo en la vertical; no tiene forma de cuerpo ni bulto.",
+        "Mula sólo horizontal: adulta marrón ceniza, orejas largas, crin corta, albarda cruda simple vacía y dos cinchas lisas; cuatro patas completas. No caballo o burro pequeño.",
+        "Perro sólo horizontal: mediano esbelto, arena y carbón con pequeño pecho crudo, orejas asimétricas y cola baja. No lobo, collar, lágrimas humanas ni hocico sonriente.",
+        "Casas Wayúu bajas rectangulares y enramadas abiertas de techo de fibras casi plano; matorral seco, cardones de tallos desde la base y serranías bajas no georreferenciadas. No chozas cónicas, tipi, lago amplio ni vegetación tropical uniforme.",
+        "Sin combate, adversarios, armas apuntadas, heridas, cuerpos caídos, carga mortuoria, funeral explícito, símbolos claniles, joyería o pintura inventada. La mujer es capaz y responsable de su acción, no heroína monumental."
+      ],
+      "avoid": [
+        "Pixar, ojos grandes, cara ilustrada, CGI, rostro facetado",
+        "primer plano, busto, personaje gigante o cuerpos recortados",
+        "victoria celebrada, armas en uso, enemigos, cuerpos, sangre o lesión",
+        "ropa que cambia de color, pelo suelto, adornos y patrones inventados",
+        "fantasma, alma, ángel, portal, chispas o halo",
+        "piel realista, terreno fotográfico, maqueta con base, cartón exterior",
+        "letras, logo, firma, paneles o collage"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "retorno_animales",
+            "duelo"
+          ],
+          "beat": "Los animales traen una noticia que la hermana comprende antes de que alguien hable.",
+          "escena": "Horizontal 16:9, gran plano general nocturno en ranchería Wayúu abierta al camino. A un lado del tercio inferior, la hermana de prenda azul carbón y trenza negra está inmóvil, de cuerpo entero, ante una enramada de postes delgados y techo bajo casi plano. Sus manos están bajas y abiertas. A unos pasos, una mula marrón ceniza de albarda cruda VACÍA acaba de detenerse; el perro esbelto arena y carbón está a su lado, orientado hacia la mujer. UNA mujer, UNA mula y UN perro; no hay hermano, cuerpo ni bulto. Del ojo visible de la mula caen DOS LÁGRIMAS hechas de estrechas hojas de papel azul gris pálido. Lo imposible: al tocar la arena no se absorben, sino que continúan como dos riachuelos FINÍSIMOS elevados apenas unos milímetros sobre el suelo, que recorren juntos los pocos pasos hasta los pies de la hermana y allí TERMINAN. El origen en el ojo y el final en sus sandalias deben verse; no son riendas ni cuerda de la albarda. Una gota sigue suspendida junto al hocico, las dos líneas claras reposan sobre arena y proyectan sombra fina. No forman río grande ni iluminan: son llanto vuelto materia de papel. Detrás queda mucho camino vacío hacia lomas bajas, cardones y matorral en seis planos, cielo añil profundo de capas grandes y luna pálida pequeña. Figuras pequeñas, máximo 20% de altura, horizonte amplio. Luz lunar serena suficiente para leer ropas y animales; no terror, batalla o gesto humano en la mula. No ganado en esta escena.",
+          "editorial_translation": "El regreso de los animales y el reconocimiento de la pérdida se condensan sin mostrar el cuerpo transportado. Las lágrimas que atraviesan el patio son licencia plástica del llanto; no río, rito o mecanismo literal tradicional.",
+          "visual_question": "¿Se reconoce a la hermana recibiendo mula y perro, con dos trazos finos de llanto que conectan el ojo animal y sus pies, sin confundirlos con riendas ni mostrar cuerpo?",
+          "light": "Noche añil legible, luz lunar cruda, líneas de llanto azul gris claro sin brillo, arena ocre pálida.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Llegada de mula y perro a casa.",
+            "impossible_behavior": "El llanto de la mula no desaparece: recorre el suelo y se detiene en los pies de la hermana.",
+            "narrative_effect": "La noticia une al animal leal y la hermana antes de una palabra.",
+            "agency": "La mula vuelve, la hermana reconoce la pérdida; nadie controla el llanto.",
+            "physical_translation": "Tiras finísimas mate desde el ojo hasta arena y sandalias, con sombras físicas.",
+            "visible_test": "Origen en ojo visible, dos trazos sin bifurcar y final junto a pies.",
+            "event_ids": [
+              "retorno_animales",
+              "duelo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_wayuu",
+          "refs": [],
+          "composicion": "camino_vertical",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "represalia",
+            "riqueza",
+            "ausencia_no_reparada"
+          ],
+          "beat": "La hermana ha vuelto con ganado, pero la riqueza no recompone la casa.",
+          "escena": "Vertical 9:16 en gran plano general, una sola ranchería a última hora de la tarde. A un lado del tercio medio hay un corral rectangular de estacas con un pequeño rebaño recuperado: cuatro cabras y dos vacas, tranquilas y de tamaño natural, contando seis animales como reparto editorial no censo histórico. Cerca del corral, UNA sola mujer adulta de prenda azul carbón amplia y trenza negra observa la enramada al otro lado del patio, con manos abiertas, cansancio sobrio y nada de triunfo. En la enramada hay UN chinchorro de tejido crudo VACÍO entre postes; junto a él, sobre banco bajo, la camisa terracota del hermano está cuidadosamente DOBLADA, pequeña y sin forma humana. Arco destensado apoyado contra un poste. Lo imposible: EL SUELO DEL PATIO SE ESTÁ DESTEJIENDO entre el corral lleno y el chinchorro vacío. Las hojas anchas que construyen la arena se deshilachan en decenas de tiras muy finas crudas y ocres que se separan y suspenden ligeramente entre ambos lados, dejando una franja VACÍA estrecha y profunda de papel añil. Las tiras se estiran desde la orilla del corral hacia la casa pero sus extremos NO ALCANZAN el otro borde. No puente terminado: una brecha doméstica que los bienes no cierran. La mujer está en terreno FIRME, no cae, no pisa la brecha ni sostiene hilos; los animales también permanecen seguros. El resto del paisaje conserva su suelo normal: sólo el patio se desteje, no un terremoto, falla continental o abismo monumental. Desde primer plano de cardones y arena, la mirada sube a corral, patio, enramada y muchas distancias de serranía baja y cielo de hojas ocre/azul. Figura humana de máximo 20% de altura. Sin hermano vivo, perro, mula, familiares adicionales, enemigos, cadáver, armas en uso ni ganado muerto.",
+          "editorial_translation": "El retorno con riqueza procede del núcleo; su incapacidad de reparar y la necesidad de detener el conflicto corresponden a la lectura editorial. Patio deshecho, camisa y chinchorro vacío son elipsis visuales, no hechos o rito certificados.",
+          "visual_question": "¿El corral lleno y el chinchorro vacío quedan separados por un patio de papel que no logra volver a unirse? ¿No parece victoria ni desastre natural?",
+          "light": "Tarde ocre sobre arena y prendas; sombras añil entre las tiras del patio, cielo azul gris, nada de fuego o humo.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Volver a una casa con los animales recuperados.",
+            "impossible_behavior": "El patio se desteje y sus tiras no alcanzan a unir riqueza y ausencia.",
+            "narrative_effect": "Los bienes no reparan la pérdida ni cierran el conflicto.",
+            "agency": "La hermana vuelve, pero no puede recomponer la ausencia con lo obtenido.",
+            "physical_translation": "Tiras de suelo desgarradas que se separan con aire; brecha doméstica localizada.",
+            "visible_test": "Corral lleno de un lado, chinchorro vacío del otro, extremos separados y mujer segura.",
+            "event_ids": [
+              "represalia",
+              "riqueza",
+              "ausencia_no_reparada"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "represalia",
+            "ausencia_no_reparada"
+          ],
+          "beat": "La represalia vuelve hacia su propio origen.",
+          "escena": "Cuadrada 1:1, un único motivo simbólico sobre fondo amplio de papel añil y arena, sin escena. UNA FLECHA ARTESANAL DE PAPEL MATE se ha curvado hasta formar un círculo casi completo, pero NO se cierra. Un extremo tiene punta triangular corta color carbón; el otro, tres pequeñas plumas crudas recortadas y atadas con hilo mate. La punta, tras recorrer la curva, termina orientada hacia su PROPIA PLUMA, separada de ella por un espacio claramente visible de unos cuatro centímetros. No atraviesa ni rompe la pluma, no apunta a personas. El asta curva es una sola tira delgada de papel ocre, continua y fácil de seguir desde plumas hasta punta, sin segunda flecha, doble punta, cuerda de arco ni símbolos gráficos. Una parte se levanta ligeramente por encima del fondo, proyectando sombra real; la flecha es objeto imposible tangible, no icono impreso de reciclaje. Ocupa 60% del ancho, mucho vacío alrededor y dentro. Dos o tres hojas de fondo a diferentes distancias en tonos añil y arena, sin horizonte ni paisaje. No manos, personas, animales, armas de fuego, heridas, sangre, texto o trofeos.",
+          "material_direction": "Fotografía de objeto artesanal de papel: asta curva de tira ocre, punta recortada carbón y plumas de hojas crudas. Materia delgada mate y espacios entre planos, sombra física nítida; fondo inmersivo a sangre sin pedestal, mesa, marco o cartón corrugado.",
+          "continuity_contract": [
+            "Una sola flecha vinculada a la arquera de la edición pública; no arma en acción ni escena de victoria.",
+            "El círculo incompleto es metáfora editorial de represalia, no emblema tradicional Wayúu, símbolo clanil o glifo.",
+            "Plumas sólo en el objeto técnico, nunca tocado o adorno humano."
+          ],
+          "symbolic_contract": {
+            "thesis": "La represalia puede volver sobre quien la inicia sin reparar la pérdida.",
+            "carrier": "Una sola flecha que se curva hacia su propia pluma.",
+            "operation": "El objeto deja de avanzar y casi alcanza su origen; el espacio entre punta y pluma mantiene abierta la posibilidad de detenerse.",
+            "story_connection": "Condensa la persecución que excede su objetivo y la ausencia que la riqueza no repara.",
+            "visible_test": "Un asta continua, una punta y una cola emplumada enfrentadas con separación; no icono de dos flechas."
+          },
+          "editorial_translation": "El círculo de la flecha traduce la lectura ética de la edición; no afirma que un proyectil se curvara literalmente ni que sea un símbolo tradicional.",
+          "visual_question": "¿Se sigue una sola flecha hasta descubrir que su punta casi toca su propia pluma, con vacío entre ambas?",
+          "light": "Ocre y crudo sobre añil profundo, luz lateral cálida que muestra papel y separaciones, sin brillo.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una flecha de la práctica de la arquera.",
+            "impossible_behavior": "Se curva en círculo hasta apuntar a su propia pluma.",
+            "narrative_effect": "La acción vuelve hacia el origen sin recomponer lo perdido.",
+            "agency": "Metáfora del resultado, no superpoder de puntería.",
+            "physical_translation": "Asta única curvada de papel, punta y pluma distintas, separadas por aire.",
+            "visible_test": "Una sola flecha continua y una abertura entre extremos.",
+            "event_ids": [
+              "represalia",
+              "ausencia_no_reparada"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "avoid": [
+            "persona, animal, escena, territorio, casa o duelo literal",
+            "segunda flecha, dos puntas, icono de reciclaje o símbolo infinito",
+            "arco, arma de fuego, impacto, herida o violencia",
+            "glifo, texto, patrón cultural inventado",
+            "cartón, soporte, base, pedestal, marco, vector digital plano"
+          ]
+        }
+      }
+    }
+  }
+}

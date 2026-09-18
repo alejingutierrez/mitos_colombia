@@ -1,0 +1,170 @@
+{
+  "closed_at": "2026-09-13T23:40:44.140Z",
+  "status": "ready_for_user_review",
+  "scope": [
+    {
+      "id": 429,
+      "slug": "el-trueno",
+      "frames": 14
+    },
+    {
+      "id": 430,
+      "slug": "la-visita-del-joven-desconocido",
+      "frames": 12
+    },
+    {
+      "id": 431,
+      "slug": "lliban-el-hijo-del-trueno",
+      "frames": 12
+    },
+    {
+      "id": 432,
+      "slug": "juan-chiracol",
+      "frames": 12
+    },
+    {
+      "id": 433,
+      "slug": "lliban-y-juan-chiracol",
+      "frames": 8
+    },
+    {
+      "id": 434,
+      "slug": "la-nina-que-se-volvio-serpiente",
+      "frames": 14
+    },
+    {
+      "id": 435,
+      "slug": "formacion-del-rio-paez",
+      "frames": 12
+    },
+    {
+      "id": 436,
+      "slug": "chauteh",
+      "frames": 12
+    },
+    {
+      "id": 437,
+      "slug": "el-mar",
+      "frames": 8
+    },
+    {
+      "id": 438,
+      "slug": "piedra-alta",
+      "frames": 6
+    },
+    {
+      "id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "frames": 10
+    },
+    {
+      "id": 440,
+      "slug": "santo-tomas",
+      "frames": 10
+    },
+    {
+      "id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "frames": 10
+    },
+    {
+      "id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "frames": 6
+    },
+    {
+      "id": 443,
+      "slug": "la-madre-de-la-sal",
+      "frames": 4
+    },
+    {
+      "id": 444,
+      "slug": "la-candela",
+      "frames": 12
+    },
+    {
+      "id": 445,
+      "slug": "el-armadillo-de-mina",
+      "frames": 10
+    },
+    {
+      "id": 446,
+      "slug": "el-hombre-flaco",
+      "frames": 10
+    },
+    {
+      "id": 447,
+      "slug": "el-diablo-nasa-paeces",
+      "frames": 10
+    },
+    {
+      "id": 448,
+      "slug": "el-hombre-tigre",
+      "frames": 10
+    },
+    {
+      "id": 449,
+      "slug": "el-hombre-y-el-perro-flaco",
+      "frames": 10
+    },
+    {
+      "id": 450,
+      "slug": "la-cabeza",
+      "frames": 12
+    },
+    {
+      "id": 451,
+      "slug": "los-animales",
+      "frames": 12
+    },
+    {
+      "id": 452,
+      "slug": "el-dalo",
+      "frames": 12
+    },
+    {
+      "id": 453,
+      "slug": "origen-de-las-plantas",
+      "frames": 8
+    },
+    {
+      "id": 553,
+      "slug": "juan-tama",
+      "frames": 14
+    }
+  ],
+  "selected": 270,
+  "new": 256,
+  "retained": 14,
+  "rejected_candidates_preserved": 24,
+  "sequence_reviews": 26,
+  "style": "maqueta 3D de papel cortado y plegado",
+  "provider": "image_gen.imagegen",
+  "model": "not_exposed_by_tool",
+  "source_and_plans_unchanged": true,
+  "local_gallery": "http://127.0.0.1:8897/comunidad-nasa/",
+  "http_validation": "PASS",
+  "browser_validation": "PASS",
+  "combined_package": {
+    "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/nasa-26-mitos-270-keyframes.zip",
+    "sha256": "4350dd5f2bf2996eff3857b01f31a574a30cd13e016dc1d26786262a6a41c654",
+    "bytes": 600714869,
+    "frames": 270,
+    "archive_crc_verified": true
+  },
+  "individual_packages": 26,
+  "docker": {
+    "command": "docker-compose up -d --build",
+    "result": "success",
+    "service": "mitos_colombia-web-1",
+    "http_port": 3003,
+    "http_status": 200
+  },
+  "voice": false,
+  "animation": false,
+  "final_video": false,
+  "notes": [
+    "Tiempos provisionales hasta grabar voz.",
+    "Nota de continuidad de luna decorativa en el-hombre-y-el-perro-flaco registrada en sequence-qa.json."
+  ]
+}

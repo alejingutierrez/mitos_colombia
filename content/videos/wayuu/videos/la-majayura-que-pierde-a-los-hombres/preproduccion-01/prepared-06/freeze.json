@@ -1,0 +1,102 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T19:52:53.687Z",
+  "plan": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/plan.json",
+  "plan_sha256": "8ba5ddf076a0088f3b54fa8625f95e28098e22b32de7655978346a8f5da985d6",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "665cac6e3cd24ce51bee1196ddd9c89f32a6845a0424580778059170967b1984",
+  "checks": {
+    "shots": 16,
+    "words": 236,
+    "estimated_seconds": 128,
+    "generated": 5,
+    "pending": 11,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 31,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b3b",
+      "prompt_file": "content/videos/wayuu/videos/la-majayura-que-pierde-a-los-hombres/preproduccion-01/prepared-06/prompts/b3b.txt",
+      "prompt_sha256": "f3e9f3aee79a16fe51d98e53d2b6115057b6ada6752901d2822442f7ebed68c5",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b2b",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b2b.jpeg",
+          "sha256": "4ee94a4326fd8d686cb813e79812c68ae2c5c8cefddce4166de495265bcccefc",
+          "approved": true,
+          "role": "Antecedente inmediato 1: preservar identidad, vestuario y gramática del territorio."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b3a",
+          "myth": "la-majayura-que-pierde-a-los-hombres",
+          "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b3a.jpeg",
+          "sha256": "81322fb5e0de190876164dbc3784bd9cecd0c95e8d9311fec849b4f07c0c5e50",
+          "approved": true,
+          "role": "Antecedente inmediato 2: mantener exactamente las dos identidades y conjuntos; cambiar sólo a pose de marcha y hacer visible el sendero entre ambos."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b3b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b3b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1a.jpeg",
+      "sha256": "77c639a41832148e7bd3f6d52469999483299759f7eb3be69d12488cc5e5ebab"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b1b.jpeg",
+      "sha256": "96ee99a8cbd1e8850f6ac355d9b9b07e3635a983e996fc8241debb0dd9d3e972"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b2a.jpeg",
+      "sha256": "a5443b3357592c612bf27424bcc828dcd47ae6d6c4f6bb9e189929a0eacbbf1e"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b2b.jpeg",
+      "sha256": "4ee94a4326fd8d686cb813e79812c68ae2c5c8cefddce4166de495265bcccefc"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/la-majayura-que-pierde-a-los-hombres-preproduccion-01/b3a.jpeg",
+      "sha256": "81322fb5e0de190876164dbc3784bd9cecd0c95e8d9311fec849b4f07c0c5e50"
+    }
+  ],
+  "no_api_calls": true
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "mitos-colombia-triptych-selection/v1",
+  "community": "Wayúu",
+  "myth": "aramai",
+  "title": "Arámai",
+  "style_revision": "mystic_cut_paper_v1.1",
+  "status": "qa_pass_waiting_editorial_approval",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "generation_mode": "text_only_no_local_references",
+  "editorial_approval": null,
+  "supersedes": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-pilot-01/selection.json",
+  "review_contact_sheet": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-triptych-01/triptych-review.jpeg",
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-triptych-01/entrada.jpeg",
+      "batch_id": "wayuu-aramai-magic-triptych-01",
+      "size": "1536x1024",
+      "quality": "high",
+      "sha256": "8a17a8a3523c5cd86d3b02058f9b41839e5694fc6aef3ef59da47fdc1a5e42cf",
+      "qa_status": "PASS"
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-calibration-02/acto.jpeg",
+      "batch_id": "wayuu-aramai-magic-calibration-02",
+      "size": "1024x1536",
+      "quality": "medium",
+      "sha256": "cd2753512b567790e551bab2e660cd725b2cf60cf25359610dde4b137d456455",
+      "qa_status": "PASS_AFTER_CALIBRATION_02"
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-triptych-01/huella.jpeg",
+      "batch_id": "wayuu-aramai-magic-triptych-01",
+      "size": "1024x1024",
+      "quality": "medium",
+      "sha256": "ecf640cf75f8a9f20e3df746bd750f5e0894ac30e6ebbed97969624521ba0f3b",
+      "qa_status": "PASS"
+    }
+  ],
+  "rejected": [
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-aramai-magic-calibration-01/acto.jpeg",
+      "batch_id": "wayuu-aramai-magic-calibration-01",
+      "size": "1024x1536",
+      "quality": "medium",
+      "sha256": "6b91c908ba5b8d1a8a4ad7c0a80f02ae3e24c4779840ed97656fbb31995531db",
+      "qa_status": "REJECTED_REPLACED",
+      "reasons": [
+        "la geografía imposible y la escala mística sí funcionaban",
+        "el rostro y las manos de Arámai todavía parecían modelados o ilustrados en vez de ensamblados con recortes visibles",
+        "no superó la puerta obligatoria de materialidad del personaje"
+      ]
+    }
+  ],
+  "next_gate": "El editor revisa las tres piezas seleccionadas juntas. No se prepara ni genera el siguiente tríptico Wayúu hasta recibir aprobación explícita de esta revisión mística de papel cortado."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "wayuu-camera-variation-selection/v1",
+  "slug": "la-sed-da-los-civilizados",
+  "title": "La sed de los forasteros",
+  "status": "approved_current_canonical_camera_v2",
+  "user_decision": "2026-09-09: esta es la versión que por ahora queda",
+  "previous_selection_preserved": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-01/selection.json",
+  "camera_design": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/CAMERA-REDESIGN.md",
+  "plan": "content/videos/wayuu/videos/la-sed-da-los-civilizados/preproduccion-01/plan.json",
+  "quality": "medium",
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2.5-sunburst",
+    "mode": "image_edit_with_camera_breaks_and_prior_story_memory",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "unique_images": 18,
+    "candidate_images": 16,
+    "superseded_images": 2,
+    "cost": null,
+    "notes": [
+      "Las referencias anteriores preservan identidad, vestuario, paleta, materialidad y estado narrativo; cada prompt prohíbe copiar su composición.",
+      "La versión V1 se conserva como historial y esta V2 es la selección vigente aprobada por el usuario."
+    ]
+  },
+  "candidates": [
+    { "id": "b1a", "version": "camera-v2-01", "camera": "elevada oblicua", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b1a.jpeg", "sha256": "8495de439bdbb72586cb78af82715b62ad6493f1b1b1707e8f3f7ab9ef35b3df", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b1a.txt", "prompt_sha256": "97803f072d665a6028bb6f3f9f6b3ef7751b39cd9c87548e2e4736e943e06aff" },
+    { "id": "b1b", "version": "camera-v2-01", "camera": "lateral a la cintura sin horizonte", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b1b.jpeg", "sha256": "ef345664a158706e80dd35fda406deef726735302be8947c3c43f54b8dbc29f6", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b1b.txt", "prompt_sha256": "f190e9f35601afa2a896c21c9493c521dcea79da453d1d7e29eff9584489b675" },
+    { "id": "b2a", "version": "camera-v2-01", "camera": "cenital 90 grados", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b2a.jpeg", "sha256": "41e3ca95bd4413ff37db523b9744f0ef1807b89cf934c34e127ebcf1d7b62102", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b2a.txt", "prompt_sha256": "cbd4e6c50f2a7f163c8321a89efacae1c7fe005c7bcc79ef2a4627a096f2f99d" },
+    { "id": "b2b", "version": "camera-v2-01", "camera": "detalle rasante de objetos", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b2b.jpeg", "sha256": "665b6628b1d8d4a993cbe4420e2564193abeb2e8ee2e5caa94ece18b7758bbff", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b2b.txt", "prompt_sha256": "89e8216102429c507e525b50f91fbfb859d42d28ee6c4fc8dd8dda270466feb5" },
+    { "id": "b3a", "version": "camera-v2-01", "camera": "frontal con profundidad escalonada", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b3a.jpeg", "sha256": "28642423971af024cfb799e4845876d964f96f6c4de7fabc2847245c63aff62f", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b3a.txt", "prompt_sha256": "127b9487e4a5eb4ade151a05fbde94880d27243a8e81b3b33deb766fccdb5b8a" },
+    { "id": "b3b", "version": "camera-v2-01", "camera": "suelo extremo con sombras", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b3b.jpeg", "sha256": "026595c118dcd3755a680de8431b451a8afd81080075186990c1ae796e3cb3ae", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b3b.txt", "prompt_sha256": "c697b64f5888b4b9db293f2a8be4eb8a751685182a3987d9c7bb6f5a8756963f" },
+    { "id": "b4a", "version": "camera-v2-01", "camera": "sobre el hombro", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b4a.jpeg", "sha256": "822f9f40055ec6e5c0371f8d5fc35a3e60157bd886a618d825e834f2724076a6", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b4a.txt", "prompt_sha256": "50353f6b20484ed132da9618ba89be5f99237a363008c8258576166a3d76a812" },
+    { "id": "b4b", "version": "camera-v2-02", "camera": "perfil comprimido", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b4b-v2.jpeg", "sha256": "4d86cae7978479ecb3f98b8df6d1533c974cfd735ef009ed1f002940266b8d1c", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b4b-v2.txt", "prompt_sha256": "be1b458d693665a3b8c8c9862f9a487608b5b53c2d073d3b19948f77def0fb06" },
+    { "id": "b5a", "version": "camera-v2-01", "camera": "macro cenital de contacto", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b5a.jpeg", "sha256": "cacb8ac4d5b8927808607abb23db1569658e587a617de626562ed1bf13ae830b", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b5a.txt", "prompt_sha256": "fec47dd88c12d1ac3f08f83f918f7c689e65786671d0d8f004fcd43471cc7dba" },
+    { "id": "b5b", "version": "camera-v2-01", "camera": "cenital diagonal", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b5b.jpeg", "sha256": "4ddbe98b51d8c71deb9ac90974e1a279e562cc335c77fdafb9f74f8bdd2a9fbc", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b5b.txt", "prompt_sha256": "db6c78e0acddeeffb3a6ee8d379c4182af8bc0ada34b7b0ed0df75c2b8a11366" },
+    { "id": "b6a", "version": "camera-v2-01", "camera": "contrapicado entre bases", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b6a.jpeg", "sha256": "1e23ea34bc6457e5b58bb58f2e5f44afe9ab6bbd470effbb89f6f8bad3b9f0c3", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b6a.txt", "prompt_sha256": "555f83b1a6d23eff5d78792453cbf0f5769c986e0fd4305f888daa34db8abadc" },
+    { "id": "b6b", "version": "camera-v2-01", "camera": "vista lejana entre capas", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b6b.jpeg", "sha256": "3bfe27bf4fa4bfc7ce52ff471252d4114e6b79b4fb3cf8188f539b4643f3c12b", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b6b.txt", "prompt_sha256": "a9be56883244935b27f4edc6670e36b051782d0cb4334b2e2261e3f5348d3371" },
+    { "id": "b7a", "version": "camera-v2-01", "camera": "tele lateral sin cielo", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b7a.jpeg", "sha256": "73e6d3d946f940dbac3ed530456ff068fc342f1630bad6360140bf07166da120", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b7a.txt", "prompt_sha256": "1b4c0a0a1613c164d419a7697622ec62dc30c05b4110981992371ae2ef1526d9" },
+    { "id": "b7b", "version": "camera-v2-01", "camera": "cenital gráfico de cuatro objetos", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b7b.jpeg", "sha256": "f7aae683090600f92ad95c814efc3bb15e4db007d44309c16c64d6c67863926a", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b7b.txt", "prompt_sha256": "d202e37d069f37126b7da6977cd39ca94b81c590891e4101a1e861ddfa4c4e05" },
+    { "id": "b8a", "version": "camera-v2-01", "camera": "macro frontal", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b8a.jpeg", "sha256": "f9e61fa226dedc0dca98efbe70db39576381e988c9613ba05c003814c2a1a44e", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b8a.txt", "prompt_sha256": "d4060bdf68f3f95191ab356a9d61be60cd5d7e2044e834ca0e5f91dd69d0769b" },
+    { "id": "b8b", "version": "camera-v2-02", "camera": "rasante entre piedras", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b8b-v2.jpeg", "sha256": "d98e54f1ac0c41ffa20d6fc5d683c64ed9a31f99ccd9ceaf5cde87c6f5aa43b6", "width": 864, "height": 1536, "format": "jpeg", "reviewed": true, "prompt_file": "content/videos/wayuu/videos/la-sed-da-los-civilizados/produccion-camera-v2/prompts/b8b-v2.txt", "prompt_sha256": "69c298942a782997ff9a12cbe19d9923960a279204c072b6adbfff10ad2bfc72" }
+  ],
+  "superseded": [
+    { "id": "b4b", "version": "camera-v2-01", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b4b.jpeg", "sha256": "ee6b9c3f3675339815217847c0c54bc0746073795b044828f1ae3056ed916452", "reason": "Deriva de vestuario del segundo comerciante; no alimentó la corrección." },
+    { "id": "b8b", "version": "camera-v2-01", "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/b8b.jpeg", "sha256": "f9db74b75b008624115e094efb4526ff97cdb355769e534991b5d1d8efb25af1", "reason": "Introdujo vegetación tipo nopal/cactus; se conservó pero no alimentó la corrección." }
+  ],
+  "review_assets": {
+    "contact_sheet": { "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/contact-sheet-v2.jpeg", "sha256": "655b76ad91ecc337fed22f753096bbc25a8e446fdf5d5c89de6dcbadf55e30dc" },
+    "comparison_v1_v2": { "path": "output/imagegen/wayuu/keyframes/la-sed-da-los-civilizados-camera-v2/comparison-v1-v2.jpeg", "sha256": "4d877bed2cd7fca103c5c3f3c5331861969c649bff674da969d9087fe0c9d36b" }
+  },
+  "animation": false,
+  "audio": false,
+  "published": false
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "date": "2026-09-12",
+  "review_type": "source-informed editorial visual inspection; not user approval or cultural certification",
+  "entries": [
+    {
+      "unit_id": "P07",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/p07-gran-cacica-master-v2.jpeg",
+      "status": "candidate_for_user_review",
+      "editorial_visual_checks": {
+        "observed_views": 5,
+        "distinct_identities": 1,
+        "changed": [
+          "Pelo recto a hombros",
+          "Panel superior rectangular en lugar de cruce diagonal",
+          "Falda bajo rodilla, cordón y franja recta"
+        ],
+        "limits": [
+          "Fijación del panel y rostro/edad no documentados para Cacica"
+        ]
+      },
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "H01",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2-refined.jpeg",
+      "status": "candidate_for_user_review",
+      "editorial_visual_checks": {
+        "observed_figures": 4,
+        "adults": 4,
+        "men": 2,
+        "women": 2,
+        "changed": [
+          "Variación de torso masculino documentada como referencia",
+          "Telas superiores rectangulares, cordones y franjas discretas",
+          "Largos de ambas faldas corregidos en segundo pase"
+        ],
+        "limits": [
+          "Prototipos originales; variación no prueba distribución de roles reales"
+        ]
+      },
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "A09",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/a09-morrocoyo-master-v2.jpeg",
+      "status": "candidate_for_user_review",
+      "editorial_visual_checks": {
+        "observed_views": 4,
+        "changed": [
+          "Caparazón oscuro y centros ocres",
+          "Cabeza proporcionalmente menor y patas terrestres",
+          "Retirada de tejas de corteza salientes"
+        ],
+        "limits": [
+          "Proporciones todavía estilizadas; no validación taxonómica del relato"
+        ]
+      },
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "L01",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/l01-monte-camino-claro-master-v2.jpeg",
+      "status": "candidate_for_user_review",
+      "editorial_visual_checks": {
+        "observed_panels": 3,
+        "changed": [
+          "Vegetación asimétrica con gramíneas y hojas alargadas/ovales",
+          "Sendero más estrecho y roca menor",
+          "Gradiente entre monte cerrado y claro con horizonte bajo"
+        ],
+        "limits": [
+          "Follaje simplificado, sin identificación botánica ni reconstrucción de un sitio concreto"
+        ]
+      },
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "U07",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/u07-mochilas-algodon-fique-master-v2-refined.jpeg",
+      "status": "candidate_for_user_review",
+      "editorial_visual_checks": {
+        "observed_views": 6,
+        "material_families": 2,
+        "changed": [
+          "Tejido cerrado visible en lugar de superficie de cuero",
+          "Base redonda, correa ancha y boca sin pliegues de cuero",
+          "Retirados gruesos rollos de cesta mediante segundo pase"
+        ],
+        "limits": [
+          "Diseño de fique provisional; detalle de tejido sigue simplificado en papel",
+          "V02 editor correcto British Council; errata conservada y aclarada"
+        ]
+      },
+      "user_approved": false,
+      "culturally_certified": false
+    },
+    {
+      "unit_id": "V01",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/v01-monte-inundado-v2.jpeg",
+      "status": "candidate_for_user_review",
+      "editorial_visual_checks": {
+        "observed_panels": 3,
+        "parent": "L01v2",
+        "changed": [
+          "Agua sobre sendero y claro en los tres encuadres",
+          "Troncos, arbustos y roca ancla preservados reconociblemente",
+          "Luz gris y lluvia sin personajes/arquitectura extra"
+        ],
+        "limits": [
+          "Continuidad revisada visualmente, no registro píxel-exacto de geometría tridimensional"
+        ]
+      },
+      "user_approved": false,
+      "culturally_certified": false
+    }
+  ],
+  "rejected_intermediate_candidates": [
+    {
+      "unit_id": "H01",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/h01-cuatro-adultos-master-v2.jpeg",
+      "reason": "Faldas de mujeres a media pantorrilla, más largas que la corrección pedida.",
+      "retained": true
+    },
+    {
+      "unit_id": "U07",
+      "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-02/u07-mochilas-algodon-fique-master-v2.jpeg",
+      "reason": "Tejido convertido en rollos gruesos de cesta rígida.",
+      "retained": true
+    }
+  ],
+  "scope_notes": [
+    "Las mismas seis unidades siguen ocupando seis posiciones del inventario54.",
+    "No se modificó el catálogo, la base de datos, la web ni el despliegue.",
+    "Los retratos/fotografías documentales no se subieron ni clonaron."
+  ]
+}

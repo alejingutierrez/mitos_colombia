@@ -1,0 +1,50 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-02",
+  "parent_batch_id": "wayuu-v3-production-20-guanuru-medium",
+  "revision": "corrections-02",
+  "myth_slug": "guanuru",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "yoruja__presence_model--canon",
+      "model_id": "yoruja__presence_model",
+      "entity_id": "yoruja",
+      "view_id": "canon",
+      "title": "Yoruja · continuidad territorial de los muertos",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-02/prompts/yoruja__presence_model--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-02/yoruja__presence_model--canon.jpeg",
+      "prompt_sha256": "ebebf9d7f0e70d7a165804e295a8d8d6142b883a1d75511507b25b3e8a12ec64",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "pariente_muerto_guanuru__state_sheet--estados",
+      "model_id": "pariente_muerto_guanuru__state_sheet",
+      "entity_id": "pariente_muerto_guanuru",
+      "view_id": "estados",
+      "title": "Pariente muerto · recuerdo y sueño",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-02/prompts/pariente_muerto_guanuru__state_sheet--estados.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-02/pariente_muerto_guanuru__state_sheet--estados.jpeg",
+      "prompt_sha256": "3e875c91b3c63cb8f35611c6d3927e6133783dd5d8c6c7e572757f245ad6d1d4",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

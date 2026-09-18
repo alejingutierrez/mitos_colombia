@@ -1,0 +1,39 @@
+{
+  "schema": "ette-keyframe-pilot-review/v1",
+  "myth_id": 352,
+  "status": "two_frames_visually_reviewed_editorial_candidates",
+  "user_approval_pending": true,
+  "culturally_certified": false,
+  "frames": [
+    {
+      "id": "kf01",
+      "selected_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf01-aire-v2.jpeg",
+      "passed": [
+        "Exactly one adult woman and two adult men; full bodies inside frame",
+        "No wells or water before excavation",
+        "Air increased by targeted zoom-out with first render retained",
+        "Cut-paper material, soft palette and no quilling or imported regalia"
+      ],
+      "limits": [
+        "Arrival is visualized as the group pausing and looking across the dry terrain, not a literal moving walk",
+        "Facial and costume designs are fictional editorial choices; no ethnic phenotype certification"
+      ]
+    },
+    {
+      "id": "kf02",
+      "selected_file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/keyframes/produccion-api-01/el-agua/kf02-v1.jpeg",
+      "passed": [
+        "Same three roles, matching hair, cream garments and terrain from selected kf01",
+        "One dry shallow excavation; one man works the narrow stick and another clears soil",
+        "Cacica directs calmly; no deity transformation or new ritual",
+        "Full figures inside the frame, layer shadows, quiet palette and no quilling"
+      ],
+      "limits": [
+        "Camera is somewhat closer to make the working action readable",
+        "Identity and spatial continuity visually approximate, not pixel-identical physical sets"
+      ]
+    }
+  ],
+  "next_gate": "User reviews kf01/kf02 before generating kf03-kf08",
+  "delivery": "1024x1536 native 2:3 masters. 9:16 adaptation not made; CLI flexible dimensions unavailable for selected model. No automatic crop, padding or stretch."
+}

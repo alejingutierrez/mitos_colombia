@@ -1,0 +1,1 @@
+Superado por prepared-03 antes de cualquier generación. La lectura de los prompts detectó una descripción global del jagüey que limitaba la noche a anticipación aunque el cierre requiere memoria. Se aisló temporalidad por plano, se retiró vestuario masculino de la ficha de mujeres y se exige paleta propia por mito. Cero imágenes generadas con este paquete.

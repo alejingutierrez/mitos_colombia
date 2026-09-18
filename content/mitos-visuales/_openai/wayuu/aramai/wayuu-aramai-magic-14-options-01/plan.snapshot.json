@@ -1,0 +1,370 @@
+{
+  "schema": "mitos-triptych-option-study/v1",
+  "date": "2026-09-05",
+  "batch_id": "wayuu-aramai-magic-14-options-01",
+  "status": "prepared_pending_generation_and_editorial_choice",
+  "user_request": "me gusta, pero siento que se pierde el realismo magico, la magia el relato, quiero que me muestres 5 opciones para yo escoger, aunquye vamos por buen camino",
+  "liked_material_reference": "output/imagegen/wayuu/triptychs/wayuu-aramai-art-13-wide-01/entrada.jpeg",
+  "reference_usage": "Inspección local de estilo; no se adjunta a la API. Cinco composiciones nuevas desde texto.",
+  "scope": "Cinco opciones de entrada horizontal para escoger lenguaje mágico. No son cinco trípticos ni autorizan otros mitos.",
+  "quality": "high",
+  "size": "1536x864",
+  "base_plan": {
+    "schema": "mitos-colombia-triptychs/v1.3",
+    "status": "material_language_liked_magic_revision",
+    "comunidad": "Wayúu",
+    "region": "Caribe",
+    "prompt_profile": "story_first_v1",
+    "generation_mode": "text_only_no_local_references",
+    "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+    "approval_gate": "Iteración autorizada de Arámai; la aprobación del resto sigue pendiente del resultado del piloto.",
+    "output_sizes": {
+      "entrada": "1536x864",
+      "acto": "864x1536",
+      "huella": "1024x1024"
+    },
+    "quality_policy": {
+      "entrada": "high",
+      "acto": "medium",
+      "huella": "medium"
+    },
+    "mitos": {
+      "aramai": {
+        "titulo": "Arámai",
+        "pilot": true,
+        "canon_models": [
+          "aramai__identity_sheet",
+          "rancheria_wayuu__spatial_model",
+          "territorio_alta_guajira__environment_model"
+        ],
+        "evidence": [
+          {
+            "id": "chaves_1946_aramai",
+            "type": "primary_source",
+            "title": "Mitos, leyendas y cuentos de la Guajira, VI: Aramai",
+            "author": "Milcíades Chaves Ch.",
+            "year": 1946,
+            "locator": "p. impresa 314; índice PDF 10. Procedencia oral al final de VIII, p.316.",
+            "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+            "supports": "Edad mayor, escasez, petición de mortandad, respuesta de Mareiwa, recorrido de Wanurú y responsabilidad atribuida a Arámai.",
+            "limits": "Registro mediado por recopilador e intérprete; no contiene retorno, petición de cese ni cuidado. No fija una anatomía para Mareiwa o Wanurú."
+          },
+          {
+            "id": "published_aramai_20260905",
+            "type": "project_narrative",
+            "path": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+            "supports": "Texto objetivo de estas imágenes: incluye petición de cese, intento de ayudar y pérdida irreversible como desarrollo editorial.",
+            "limits": "El desarrollo editorial no se presenta como episodios documentados en Chaves."
+          },
+          {
+            "id": "paz_reverol_2017",
+            "type": "community_author_context",
+            "author": "Carmen Laura Paz Reverol",
+            "title": "Hacer los sueños. Una perspectiva wayuu",
+            "url": "https://entrediversidades.unach.mx/index.php/entrediversidades/article/view/18",
+            "supports": "Perspectiva situada sobre comunicación entre experiencias cotidianas y no humanas.",
+            "limits": "Contexto; no aporta episodios a Arámai ni permite convertirlo en un sueño. Ficha y extracto consultables; enlace de descarga HTML falló."
+          },
+          {
+            "id": "garcia_valbuena_2004",
+            "type": "ethnographic_context",
+            "title": "Cuando cambian los sueños. La cultura wayúu frente a las iglesias evangélicas",
+            "author": "Nelly García Gavidia y Carlos Valbuena",
+            "url": "https://www.humanas.unal.edu.co/colantropos/files/5114/5615/3446/garcia_wayuu.pdf",
+            "supports": "Relaciones activas entre mundos cotidianos y no humanos; documenta otras descripciones de wanülü.",
+            "limits": "Contexto de campo situado, no otra versión de Arámai. No se trasladan Pulowi, flechas, sueños ni anatomías de este texto al episodio."
+          },
+          {
+            "id": "material_culture_v3",
+            "type": "internal_visual_research",
+            "path": "editorial/wayuu/material-culture-v3.mjs",
+            "supports": "Repertorio completo de vestuario y relaciones domésticas.",
+            "limits": "Puesta en escena editorial para tiempo mítico no fechado."
+          }
+        ],
+        "bible_overrides": [
+          {
+            "model_id": "aramai__identity_sheet",
+            "decision": "Conservar silueta e identidad de papel y representar edad mayor; la ficha aprobada es una decisión de arte, no fuente narrativa."
+          },
+          {
+            "model_id": "wanuru__presence_model",
+            "decision": "No heredar la obligación de representar a Wanurü como pequeñas piedras carbón inmóviles. La presencia debe poder recorrer y actuar. La ausencia de anatomía descrita no implica ausencia de agencia."
+          },
+          {
+            "model_id": "mareiwa__state_sheet",
+            "decision": "No usar un pliegue ocre como objeto obligatorio a los pies de Arámai. Su escucha y decisión se ponen en escena mediante un interlocutor fuera de campo; no se declara una anatomía canónica."
+          },
+          {
+            "model_id": "epidemia_aramai__phenomenon_rule",
+            "decision": "Retirar el número obligatorio de tres rancherías y la prohibición de trayecto. Son elecciones de composición previas, no hechos del relato."
+          }
+        ],
+        "narrative_contract": {
+          "target_slug": "aramai",
+          "target_snapshot": "content/mitos-visuales/research/aramai-narrative-2026-09-05.json",
+          "target_content_sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d",
+          "summary": "Arámai, un hombre Wayúu mayor inquieto por la escasez, pide a Mareiwa reducir la población mediante enfermedad. Mareiwa atiende la petición y Wanurü queda ligado a la mortandad que recorre La Guajira. En la versión editorial de nuestra página, Arámai vuelve a pedir que termine y después ayuda a las familias; la pérdida no se deshace. La comunidad conserva la responsabilidad de su petición.",
+          "events": [
+            {
+              "id": "escasez",
+              "provenance": "historical_core",
+              "required": true,
+              "source": "chaves_1946_aramai",
+              "action": "La falta de recursos motiva una decisión humana."
+            },
+            {
+              "id": "peticion",
+              "provenance": "historical_core",
+              "required": true,
+              "source": "chaves_1946_aramai",
+              "action": "Arámai pide a Mareiwa una reducción de personas mediante enfermedad."
+            },
+            {
+              "id": "respuesta",
+              "provenance": "historical_core",
+              "required": true,
+              "source": "chaves_1946_aramai",
+              "action": "Mareiwa atiende la petición."
+            },
+            {
+              "id": "recorrido",
+              "provenance": "historical_core",
+              "required": true,
+              "source": "chaves_1946_aramai",
+              "action": "Wanurü recorre La Guajira; conserva agencia propia."
+            },
+            {
+              "id": "reproche",
+              "provenance": "historical_core",
+              "required": true,
+              "source": "chaves_1946_aramai",
+              "action": "La comunidad responsabiliza a Arámai."
+            },
+            {
+              "id": "cese",
+              "provenance": "published_editorial_expansion",
+              "required": true,
+              "source": "published_aramai_20260905",
+              "action": "Arámai vuelve a pedir que termine lo que solicitó."
+            },
+            {
+              "id": "cuidado",
+              "provenance": "published_editorial_expansion",
+              "required": true,
+              "source": "published_aramai_20260905",
+              "action": "Arámai reparte agua y acompaña; la ayuda no revierte las pérdidas."
+            }
+          ],
+          "emotional_reading": "Temor a la escasez, confianza peligrosa en una petición, impotencia ante su cumplimiento, responsabilidad que persiste dentro del cuidado. No mirada de turista maravillado ni triunfo de una solución demográfica.",
+          "magic_reading": "Una palabra humana alcanza una voluntad no humana y sus efectos adquieren autonomía dentro del mundo doméstico. La maravilla inquieta porque altera vínculos, no porque el escenario sea colosal.",
+          "qa_method": "Describir primero la imagen sin leer su prompt. Comparar después sujeto, verbo, destinatario y efecto con los eventos declarados. Distinguir QA técnico, narrativo, material y juicio editorial; tests verdes no aprueban imágenes."
+        },
+        "paleta": "arena pálida, arcilla roja, índigo profundo, azules de papel teñido y pequeños acentos cálidos en el vestuario",
+        "material_direction": "Fotografía de una obra artesanal de papel recortado y teñido, mundo inmersivo a sangre y profundidad real entre hojas separadas por aire. Personas pequeñas, enteras, de proporciones adultas y recortadas casi planas: cada rostro es una silueta de perfil, nariz en el contorno, ojo mínimo, cabello de una pieza. Prendas de dos o tres hojas amplias y pocos dobleces. Ninguna cara modelada, tallada ni facetada. Fondo, suelo, vegetación, arquitectura, cielo y prodigio hechos del mismo papel; fibras, cantos internos finos, oclusiones y sombras físicas. Entre seis y ocho distancias espaciales reconocibles, sin base, respaldo, borde de caja ni cartón exterior visibles. Plano general amplio, cámara lejana, figuras humanas de alrededor del 15 al 18% de la altura total; sin personajes grandes delante de cámara. Nitidez de los planos, sin desenfoque de retrato.",
+        "continuity_contract": [
+          "Arámai es un hombre Wayúu mayor y delgado, proporciones adultas naturales, cabeza pequeña de perfil y cabello corto gris oscuro de papel recortado. Camisa Kemiisa arcilla de mangas, manto Kotin carbón sobre los hombros sin cubrir la cabeza, faja S'ira arena y sandalias waireñas. Identidad por silueta, edad, ropa y postura; no por arrugas ni gesticulación facial.",
+          "Mujeres Wayúu con Wayuushein de una sola silueta AMPLIA Y SUELTA, mangas anchas, hasta los tobillos, sin cintura ceñida, color azul mineral o arcilla; cabello negro y cabeza descubierta; sandalias waireñas. Hombres con camisa de mangas, manta exterior completa, faja y sandalias. Figuras sobrias de papel, sin capuchas, velos, hábitos ni sombreros.",
+          "Rancherías dispersas, viviendas bajas rectilíneas, enramadas abiertas de postes, arena, arbustos espinosos bajos y cardones de varios tallos que nacen desde la base. No agaves, rosetas ni cactus saguaro. Puesta en escena Wayúu editorial para tiempo mítico indeterminado, no reconstrucción prehispánica.",
+          "Arámai pide a Mareiwa, quien atiende. Wanurü tiene agencia propia en lo enviado, no es poder controlado por Arámai. Las soluciones plásticas propuestas aquí no fijan apariencias tradicionales ni se trasladan a otros mitos."
+        ],
+        "avoid": [
+          "rostros Pixar o Disney, personaje de animación 3D, muñeco, ojos o cabezas grandes",
+          "cabeza esculpida low-poly, piel pintada, cara facetada, aerógrafo o ilustración digital con textura aplicada",
+          "primer plano, plano medio, retrato, figuras cortadas por el marco",
+          "suelo, plantas o piel fotográficos mezclados con papel; origami triangulado excesivo",
+          "base exterior, cartón corrugado, marco, mesa, borde de caja o estudio visibles",
+          "violencia gráfica, cuerpos enfermos, cadáveres, sexualización",
+          "pintura facial, kanas o símbolos culturales inventados",
+          "demonio europeo, cuernos, guadaña, calavera, capa de hechicero",
+          "rayo desde las manos, Arámai controlando energía, partículas brillantes decorativas, texto, letras, logos"
+        ],
+        "escenas": {
+          "entrada": {
+            "composicion": "peso_contrario",
+            "era": "mitico_wayuu",
+            "refs": [],
+            "narrative_event_ids": [
+              "escasez",
+              "peticion",
+              "respuesta"
+            ],
+            "beat": "La primera petición de Arámai a Mareiwa. Estudio de plano general y figuras de papel, aún no aprobación de la solución final del relato.",
+            "escena": "Horizontal 16:9, GRAN PLANO GENERAL. La cámara está lejos, al otro lado de un patio abierto y extenso. El paisaje y el cielo ocupan la mayor parte de la imagen. Personas pequeñas, enteras, distribuidas entre planos intermedios; ninguna persona supera el 16% de la altura total. En el tercio izquierdo intermedio, Arámai está de pie, de perfil, al borde de una enramada baja y abierta; dirige una mano apenas abierta hacia el espacio vacío bajo el techo a su derecha, como quien habla con un interlocutor invisible. Su postura es contenida y adulta, sin teatralidad facial. No mira al espectador. Dos mujeres con mantas Wayuushein azules y arcilla reparten las últimas provisiones entre pequeños cuencos en otro patio, lejos a la derecha. Una cesta casi vacía es secundaria. Rancherías bajas dispersas, enramadas de postes y cardones delimitan distancias habitables de La Guajira. El primer término contiene sólo arena y vegetación lateral baja recortadas, sin personas ni grandes objetos. La sombra bajo la enramada de Arámai contiene una noche azul profunda a pleno día: la oscuridad continúa a través de varios planos como un espacio de otra hora, aunque el techo y el patio exterior reciben la misma luz cálida. La petición parece encontrar escucha dentro de ese vacío. Es un cambio imposible de luz integrado al lugar, no un cuerpo, una silueta caminante, una cinta ni un portal. Montar ocho distancias claras: recortes laterales bajos, patio abierto, Arámai y postes, espacio azul interior, segundo patio habitado, casas distantes, cardones y colinas bajas, cielo hecho con estratos de papel. Separar estas hojas con aire real y sombras rasantes. Composición asimétrica, amplia y silenciosa; figuras resueltas con recortes planos mínimos.",
+            "editorial_translation": "El lugar que contiene otra hora es una hipótesis de iluminación para la escucha de Mareiwa; no se atribuye al testimonio histórico como episodio, símbolo o apariencia tradicional. Este estudio evalúa primero lenguaje material y distancia de cámara.",
+            "visual_question": "¿Las personas se leen como recortes delgados casi planos de proporciones adultas, en un mundo amplio con profundidad entre hojas? ¿Arámai está pidiendo hacia un destinatario, no posando? La valoración de la magia sigue abierta.",
+            "light": "Luz rasante cálida que haga visibles las sombras físicas entre hojas; arena pálida, arcilla, azules minerales e índigo. Una sola anomalía de noche profunda dentro de la sombra de la enramada. Sin brillo de piel, bokeh ni iluminación de personaje 3D."
+          },
+          "acto": {
+            "composicion": "diagonal",
+            "era": "mitico_wayuu",
+            "refs": [],
+            "narrative_event_ids": [
+              "respuesta",
+              "recorrido",
+              "cese"
+            ],
+            "beat": "Arámai ha vuelto a pedir que termine. Lo que fue enviado ya recorre las casas y no se deja detener. Intimidad, angustia contenida y presencia sagrada activa.",
+            "escena": "Vertical 9:16 en gran plano general. Arámai pequeño, de cuerpo completo, sentado bajo una enramada en el tercio inferior izquierdo, dirige una palma abierta baja hacia su interlocutor fuera de campo en petición de cese. El patio y varias rancherías se prolongan al fondo. Una vecina pequeña está detenida junto a una puerta lejana. La penumbra que contiene otra hora ya ha cruzado el patio y alcanza otros umbrales, independientemente de la mano de Arámai. Personas de papel casi plano, todas menores al 16% de la altura total; su relación espacial lleva la emoción. No repetir la silueta de señalética ni la cinta de las versiones descartadas. Esta solución narrativa es provisional y no se produce antes de evaluar la entrada.",
+            "editorial_translation": "La sombra autónoma de paso humano es una hipótesis gráfica reversible para hacer legible la agencia y el recorrido de Wanurü; no fija una apariencia canónica ni traslada flechas o parentesco con Pulowi desde otras fuentes. La súplica de cese y la postura sentada traducen la versión editorial de la página.",
+            "visual_question": "Pendiente tras calibrar la entrada: ¿se entiende súplica y agencia independiente en plano abierto, sin retrato, señalética ni control mágico?",
+            "light": "Luz diurna cálida y penumbra índigo en las distancias. Rostros pequeños planos sin modelado, sombras de capas físicas."
+          },
+          "huella": {
+            "composicion": "peso_contrario",
+            "era": "mitico_wayuu",
+            "refs": [],
+            "narrative_event_ids": [
+              "reproche",
+              "cuidado"
+            ],
+            "beat": "Arámai ayuda a una familia mientras continúa siendo responsable. Cuidado concreto y ausencia imposible de reparar; sin absolución inventada.",
+            "escena": "Cuadrado en plano general distante de dos patios conectados de una ranchería. A la izquierda, Arámai pequeño y de cuerpo completo reparte agua a una mujer; una mujer mayor más atrás observa con reproche. A la derecha se distingue un chinchorro vacío y una sombra de ocupación sin cuerpo, separados de las sombras reales de las personas. Ninguna figura supera el 16% de la altura total. El espacio abierto entre quienes cuidan y el lugar de la pérdida lleva el peso emocional. Figuras recortadas casi planas y ocho planos espaciales separados por aire. La metáfora del chinchorro se mantiene provisional; no producir esta pieza antes de evaluar el lenguaje de la entrada.",
+            "editorial_translation": "El cuidado pertenece al desarrollo editorial de la página; el reproche al núcleo histórico. Chinchorro y sombra de una ocupación ausente son una metáfora visual de memoria y pérdida, no afirmación de un alma, rito o regreso del muerto.",
+            "visual_question": "Pendiente tras calibrar la entrada: ¿cuidado, responsabilidad y ausencia sobreviven al plano amplio y a la simplificación material de las figuras?",
+            "light": "Tarde cálida y sombras índigo; nitidez espacial, sin luz de retrato ni modelado de piel."
+          }
+        }
+      }
+    },
+    "replaces": "content/mitos-visuales/wayuu.tripticos.v1.2.json",
+    "iteration_scope": "Cinco alternativas de la entrada horizontal de Arámai solicitadas por el usuario; ninguna implica aprobar el tríptico completo.",
+    "user_feedback": "ninguna me gusta, el estilo de caras e ilustración es muy pixar, los planos están muy cerrados, aun no me gusta el punto al que estamos llegando"
+  },
+  "options": [
+    {
+      "id": "01",
+      "slug": "la-noche-que-escucha",
+      "title": "La noche que escucha",
+      "magic_mechanism": "Dos horas del mundo coexisten dentro de una misma enramada.",
+      "editorial_translation": "La noche habitable bajo el techo traduce la escucha no humana. Es una licencia escénica; el relato no describe un recinto estelar ni constelaciones rituales.",
+      "visual_question": "¿Se reconoce inequívocamente una noche profunda bajo un techo a pleno día, y no simplemente una pared azul o una sombra ordinaria?",
+      "escena": "GRAN PLANO GENERAL horizontal 16:9 de una ranchería Wayúu en un día cálido. Arámai, anciano de papel plano, cuerpo entero y pequeño, está apartado en un borde del patio y habla con una mano apenas abierta hacia el interior de una enramada abierta; sus pies se mantienen fuera de ella. Dentro de la enramada OCURRE LA NOCHE: varios estratos de cielo índigo retroceden a una distancia imposible bajo ese techo modesto, llenos de pequeños agujeros de estrellas recortados y retroiluminados. El mismo suelo de arena continúa debajo del techo y, sin escalón, se vuelve un terreno nocturno que se pierde lejos; los postes cruzan por delante de esas capas celestes para demostrar profundidad, no un mural ni un telón plano. Afuera siguen el sol, cardones, colinas y pequeñas casas de papel crema. La enramada es ordinaria por fuera y contiene una profundidad nocturna inmensa por dentro, sin aro de portal ni umbral luminoso. A distancia en el otro lado del patio, dos mujeres en mantas amplias reparten unas pocas provisiones entre cuencos, inmersas en su tarea. La petición encuentra escucha en esa noche que ha llegado hasta la vida cotidiana. La enramada y Arámai juntos no ocupan más de un tercio del ancho; conservar paisaje amplio, cielo diurno y espacios abiertos entre hojas.",
+      "scene": {
+        "composicion": "peso_contrario",
+        "era": "mitico_wayuu",
+        "refs": [],
+        "narrative_event_ids": [
+          "escasez",
+          "peticion",
+          "respuesta"
+        ],
+        "beat": "Arámai llama a Mareiwa por temor a la escasez. Su petición está siendo atendida: la cotidianidad de la ranchería y una voluntad no humana empiezan a tocarse. Emoción de asombro inquietante, nunca triunfo de eliminar vidas.",
+        "light": "Arena pálida, arcilla roja, azules minerales e índigo profundo; luz rasante que revele fibras, separación y sombras reales entre piezas. La anomalía pertenece a las hojas del mundo, no a efectos digitales añadidos.",
+        "editorial_translation": "La noche habitable bajo el techo traduce la escucha no humana. Es una licencia escénica; el relato no describe un recinto estelar ni constelaciones rituales.",
+        "visual_question": "¿Se reconoce inequívocamente una noche profunda bajo un techo a pleno día, y no simplemente una pared azul o una sombra ordinaria?",
+        "escena": "GRAN PLANO GENERAL horizontal 16:9 de una ranchería Wayúu en un día cálido. Arámai, anciano de papel plano, cuerpo entero y pequeño, está apartado en un borde del patio y habla con una mano apenas abierta hacia el interior de una enramada abierta; sus pies se mantienen fuera de ella. Dentro de la enramada OCURRE LA NOCHE: varios estratos de cielo índigo retroceden a una distancia imposible bajo ese techo modesto, llenos de pequeños agujeros de estrellas recortados y retroiluminados. El mismo suelo de arena continúa debajo del techo y, sin escalón, se vuelve un terreno nocturno que se pierde lejos; los postes cruzan por delante de esas capas celestes para demostrar profundidad, no un mural ni un telón plano. Afuera siguen el sol, cardones, colinas y pequeñas casas de papel crema. La enramada es ordinaria por fuera y contiene una profundidad nocturna inmensa por dentro, sin aro de portal ni umbral luminoso. A distancia en el otro lado del patio, dos mujeres en mantas amplias reparten unas pocas provisiones entre cuencos, inmersas en su tarea. La petición encuentra escucha en esa noche que ha llegado hasta la vida cotidiana. La enramada y Arámai juntos no ocupan más de un tercio del ancho; conservar paisaje amplio, cielo diurno y espacios abiertos entre hojas."
+      }
+    },
+    {
+      "id": "02",
+      "slug": "el-cielo-se-inclina",
+      "title": "El cielo se inclina a escuchar",
+      "magic_mechanism": "La distancia entre cielo y tierra se modifica para responder al llamado.",
+      "editorial_translation": "El descenso cóncavo del cielo representa la escucha de Mareiwa sin atribuirle un cuerpo. No es un episodio literal ni una cosmología documentada.",
+      "visual_question": "¿El cielo parece acercarse activamente a quien llama, en relación con el gesto humano, y no ser sólo nubes decorativas o una montaña plegada?",
+      "escena": "GRAN PLANO GENERAL horizontal 16:9, una extensión habitada de La Guajira hecha de papel. Arámai, muy pequeño y entero en el tercio inferior, se ha apartado del patio para llamar con una palma abierta hacia el espacio sobre el horizonte. La magia está en el CIELO QUE SE INCLINA PARA ESCUCHARLO: cinco enormes láminas curvas de papel azul, crema e índigo, que arriba eran estratos del cielo, se arquean lentamente hacia abajo y penetran entre los planos de las casas hasta quedar cerca de la altura de los techos. Forman un espacio cóncavo abierto orientado a Arámai, como una escucha sin rostro; no son una oreja literal, una cabeza ni un dios humano. Se ve aire entre cada lámina, y las hojas celestes proyectan sombras sobre una enramada pequeña y el camino. El paisaje permanece horizontal y firme, sin alzarse ni doblarse. Las hojas no salen de la mano del anciano; él dirige una petición, no conduce fuerzas. Dos mujeres con Wayuushein amplias continúan repartiendo pocos alimentos en un segundo patio, pequeñas bajo ese acercamiento imposible. El cielo ocupa la mitad superior, pero el prodigio cruza físicamente hacia la vida doméstica. Luz cálida en viviendas y ropa; una profundidad índigo escucha entre hojas. Misterio solemne e intimidad humana a escala de paisaje. Todo recortado, sin remolinos digitales ni portal circular.",
+      "scene": {
+        "composicion": "peso_contrario",
+        "era": "mitico_wayuu",
+        "refs": [],
+        "narrative_event_ids": [
+          "escasez",
+          "peticion",
+          "respuesta"
+        ],
+        "beat": "Arámai llama a Mareiwa por temor a la escasez. Su petición está siendo atendida: la cotidianidad de la ranchería y una voluntad no humana empiezan a tocarse. Emoción de asombro inquietante, nunca triunfo de eliminar vidas.",
+        "light": "Arena pálida, arcilla roja, azules minerales e índigo profundo; luz rasante que revele fibras, separación y sombras reales entre piezas. La anomalía pertenece a las hojas del mundo, no a efectos digitales añadidos.",
+        "editorial_translation": "El descenso cóncavo del cielo representa la escucha de Mareiwa sin atribuirle un cuerpo. No es un episodio literal ni una cosmología documentada.",
+        "visual_question": "¿El cielo parece acercarse activamente a quien llama, en relación con el gesto humano, y no ser sólo nubes decorativas o una montaña plegada?",
+        "escena": "GRAN PLANO GENERAL horizontal 16:9, una extensión habitada de La Guajira hecha de papel. Arámai, muy pequeño y entero en el tercio inferior, se ha apartado del patio para llamar con una palma abierta hacia el espacio sobre el horizonte. La magia está en el CIELO QUE SE INCLINA PARA ESCUCHARLO: cinco enormes láminas curvas de papel azul, crema e índigo, que arriba eran estratos del cielo, se arquean lentamente hacia abajo y penetran entre los planos de las casas hasta quedar cerca de la altura de los techos. Forman un espacio cóncavo abierto orientado a Arámai, como una escucha sin rostro; no son una oreja literal, una cabeza ni un dios humano. Se ve aire entre cada lámina, y las hojas celestes proyectan sombras sobre una enramada pequeña y el camino. El paisaje permanece horizontal y firme, sin alzarse ni doblarse. Las hojas no salen de la mano del anciano; él dirige una petición, no conduce fuerzas. Dos mujeres con Wayuushein amplias continúan repartiendo pocos alimentos en un segundo patio, pequeñas bajo ese acercamiento imposible. El cielo ocupa la mitad superior, pero el prodigio cruza físicamente hacia la vida doméstica. Luz cálida en viviendas y ropa; una profundidad índigo escucha entre hojas. Misterio solemne e intimidad humana a escala de paisaje. Todo recortado, sin remolinos digitales ni portal circular."
+      }
+    },
+    {
+      "id": "03",
+      "slug": "las-huellas-sin-caminante",
+      "title": "Las huellas sin caminante",
+      "magic_mechanism": "Un recorrido sin cuerpo atraviesa el suelo, los muros y el aire.",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta",
+        "recorrido"
+      ],
+      "editorial_translation": "Las huellas imposibles hacen visible la agencia y el recorrido de Wanurü. No fijan anatomía ni un motivo ritual; no se afirma que la fuente narre huellas que ascienden paredes.",
+      "visual_question": "¿Las huellas se vuelven físicamente imposibles y avanzan solas hacia las casas, sin parecer un sendero dibujado ni salir de la mano de Arámai?",
+      "escena": "GRAN PLANO GENERAL horizontal 16:9, patio extenso y rancherías Wayúu dispersas. Arámai entero y pequeño aparece de perfil al borde de una enramada distante, palma abierta en petición hacia una penumbra fuera del campo; su sombra corta ordinaria permanece junto a sus pies. Lejos de su mano empieza el recorrido autónomo de Wanurü: una serie de HUELLAS PROFUNDAS SIN CAMINANTE, oscuras como recortes que dejan ver la noche debajo de la arena. Recorren en diagonal varios planos del patio. Su anomalía es inequívoca: continúan sobre la superficie VERTICAL de una pared clara, suben por ella y después quedan suspendidas sobre un espacio abierto entre esa pared y la enramada siguiente, como cavidades de pisadas que caminan sobre aire. Mostrar cinco o seis pisadas imposibles en ese tramo, con las hojas de papel separadas y pequeñas sombras que revelan espesor; las demás marcas del recorrido están en suelo. Nadie tiene pies cerca de las huellas elevadas. No hay figura fantasma, cuerpo invisible delineado ni monstruo. Una mujer de manta azul amplia se ha detenido junto a su recipiente al advertir lo que pasa; otra mantiene sus pocas provisiones en otro patio. Arámai no sigue las huellas ni las ordena. La voluntad enviada ha tomado su propio camino entre las casas. Mantener una escena amplia, luminosa y habitada; silencio inquietante. Huellas orgánicas en profundidad, no iconos pintados, flechas ni puntos de un mapa.",
+      "scene": {
+        "composicion": "peso_contrario",
+        "era": "mitico_wayuu",
+        "refs": [],
+        "narrative_event_ids": [
+          "escasez",
+          "peticion",
+          "respuesta",
+          "recorrido"
+        ],
+        "beat": "Arámai llama a Mareiwa por temor a la escasez. Su petición está siendo atendida: la cotidianidad de la ranchería y una voluntad no humana empiezan a tocarse. Emoción de asombro inquietante, nunca triunfo de eliminar vidas.",
+        "light": "Arena pálida, arcilla roja, azules minerales e índigo profundo; luz rasante que revele fibras, separación y sombras reales entre piezas. La anomalía pertenece a las hojas del mundo, no a efectos digitales añadidos.",
+        "editorial_translation": "Las huellas imposibles hacen visible la agencia y el recorrido de Wanurü. No fijan anatomía ni un motivo ritual; no se afirma que la fuente narre huellas que ascienden paredes.",
+        "visual_question": "¿Las huellas se vuelven físicamente imposibles y avanzan solas hacia las casas, sin parecer un sendero dibujado ni salir de la mano de Arámai?",
+        "escena": "GRAN PLANO GENERAL horizontal 16:9, patio extenso y rancherías Wayúu dispersas. Arámai entero y pequeño aparece de perfil al borde de una enramada distante, palma abierta en petición hacia una penumbra fuera del campo; su sombra corta ordinaria permanece junto a sus pies. Lejos de su mano empieza el recorrido autónomo de Wanurü: una serie de HUELLAS PROFUNDAS SIN CAMINANTE, oscuras como recortes que dejan ver la noche debajo de la arena. Recorren en diagonal varios planos del patio. Su anomalía es inequívoca: continúan sobre la superficie VERTICAL de una pared clara, suben por ella y después quedan suspendidas sobre un espacio abierto entre esa pared y la enramada siguiente, como cavidades de pisadas que caminan sobre aire. Mostrar cinco o seis pisadas imposibles en ese tramo, con las hojas de papel separadas y pequeñas sombras que revelan espesor; las demás marcas del recorrido están en suelo. Nadie tiene pies cerca de las huellas elevadas. No hay figura fantasma, cuerpo invisible delineado ni monstruo. Una mujer de manta azul amplia se ha detenido junto a su recipiente al advertir lo que pasa; otra mantiene sus pocas provisiones en otro patio. Arámai no sigue las huellas ni las ordena. La voluntad enviada ha tomado su propio camino entre las casas. Mantener una escena amplia, luminosa y habitada; silencio inquietante. Huellas orgánicas en profundidad, no iconos pintados, flechas ni puntos de un mapa."
+      }
+    },
+    {
+      "id": "04",
+      "slug": "wanuru-entre-los-planos",
+      "title": "Wanurü entre los planos",
+      "magic_mechanism": "La presencia se constituye entre estratos de paisaje nocturno y atraviesa la ranchería.",
+      "narrative_event_ids": [
+        "escasez",
+        "peticion",
+        "respuesta",
+        "recorrido"
+      ],
+      "editorial_translation": "Es la alternativa más figurativa: diseño editorial reversible de Wanurü a partir de vacíos y planos de sombra. La fuente conserva su agencia pero no certifica esta silueta, escala ni materialización.",
+      "visual_question": "¿La presencia adquiere volumen y movimiento propios sin parecer un muñeco, señal de peatón, persona con sábana ni demonio europeo?",
+      "escena": "GRAN PLANO GENERAL horizontal 16:9 de arena, pequeñas rancherías, cardones y colinas de papel. Arámai, anciano humano pequeño de perfil y cuerpo completo, acaba de pedir a Mareiwa desde un lugar apartado al lado de una enramada. Su mano permanece abierta y baja, sin apuntar. En otro plano, separado de él por un patio iluminado, WANURÜ ESTÁ PASANDO CON VOLUNTAD PROPIA hacia los umbrales de las viviendas. Su presencia sólo llega a construirse entre las hojas del mundo: seis recortes grandes de penumbra carbón e índigo, a distancias reales unos de otros, se superponen hasta insinuar un torso inclinado y un paso largo, de tamaño cercano al doble de un adulto. Los bordes son irregulares y abiertos, el paisaje se ve entre ellos, y fragmentos de la noche profunda aparecen donde deberían estar las facciones. No hay un contorno humano completo, piel, ropa, cara, ojos ni manos. Cada lámina aislada parece parte del paisaje nocturno; juntas hacen sentir que ALGO lo está atravesando. Una pierna se insinúa más adelante que la otra por oclusión, nunca como pictograma. Las sombras físicas de estas hojas caen sobre arena clara y un poste cercano. Dos personas Wayúu pequeñas, completamente vestidas, se han detenido en sus patios con sus recipientes. Sólo una presencia sobrenatural. No nadie enfermo ni muerto. Paleta mineral luminosa alrededor de la presencia oscura; profundidad y agencia en la separación entre recortes, sin humo, trapo flotante, capa, túnica o contorno de fantasma.",
+      "scene": {
+        "composicion": "peso_contrario",
+        "era": "mitico_wayuu",
+        "refs": [],
+        "narrative_event_ids": [
+          "escasez",
+          "peticion",
+          "respuesta",
+          "recorrido"
+        ],
+        "beat": "Arámai llama a Mareiwa por temor a la escasez. Su petición está siendo atendida: la cotidianidad de la ranchería y una voluntad no humana empiezan a tocarse. Emoción de asombro inquietante, nunca triunfo de eliminar vidas.",
+        "light": "Arena pálida, arcilla roja, azules minerales e índigo profundo; luz rasante que revele fibras, separación y sombras reales entre piezas. La anomalía pertenece a las hojas del mundo, no a efectos digitales añadidos.",
+        "editorial_translation": "Es la alternativa más figurativa: diseño editorial reversible de Wanurü a partir de vacíos y planos de sombra. La fuente conserva su agencia pero no certifica esta silueta, escala ni materialización.",
+        "visual_question": "¿La presencia adquiere volumen y movimiento propios sin parecer un muñeco, señal de peatón, persona con sábana ni demonio europeo?",
+        "escena": "GRAN PLANO GENERAL horizontal 16:9 de arena, pequeñas rancherías, cardones y colinas de papel. Arámai, anciano humano pequeño de perfil y cuerpo completo, acaba de pedir a Mareiwa desde un lugar apartado al lado de una enramada. Su mano permanece abierta y baja, sin apuntar. En otro plano, separado de él por un patio iluminado, WANURÜ ESTÁ PASANDO CON VOLUNTAD PROPIA hacia los umbrales de las viviendas. Su presencia sólo llega a construirse entre las hojas del mundo: seis recortes grandes de penumbra carbón e índigo, a distancias reales unos de otros, se superponen hasta insinuar un torso inclinado y un paso largo, de tamaño cercano al doble de un adulto. Los bordes son irregulares y abiertos, el paisaje se ve entre ellos, y fragmentos de la noche profunda aparecen donde deberían estar las facciones. No hay un contorno humano completo, piel, ropa, cara, ojos ni manos. Cada lámina aislada parece parte del paisaje nocturno; juntas hacen sentir que ALGO lo está atravesando. Una pierna se insinúa más adelante que la otra por oclusión, nunca como pictograma. Las sombras físicas de estas hojas caen sobre arena clara y un poste cercano. Dos personas Wayúu pequeñas, completamente vestidas, se han detenido en sus patios con sus recipientes. Sólo una presencia sobrenatural. No nadie enfermo ni muerto. Paleta mineral luminosa alrededor de la presencia oscura; profundidad y agencia en la separación entre recortes, sin humo, trapo flotante, capa, túnica o contorno de fantasma."
+      }
+    },
+    {
+      "id": "05",
+      "slug": "el-agua-recuerda-el-futuro",
+      "title": "El agua recuerda el futuro",
+      "magic_mechanism": "El agua refleja la pérdida venidera mientras la comunidad sigue viva sobre ella.",
+      "editorial_translation": "Anticipación plástica del desenlace de la versión editorial: pérdida, silencio y responsabilidad. No añade una profecía, un sueño ni un poder adivinatorio a Arámai; la anomalía es una licencia para el espectador.",
+      "visual_question": "¿El reflejo difiere de manera legible del mundo habitado que debería reflejar, y expresa pérdida futura sin representar resurrección?",
+      "escena": "GRAN PLANO GENERAL horizontal 16:9 ligeramente elevado, una ranchería Wayúu junto a la última lámina de agua en la hondonada ancha y seca de un jagüey. Mucha orilla árida, agua baja y escasa; no un oasis abundante. Arámai pequeño y entero, de perfil sobre una orilla, dirige una palma abierta hacia el vacío al llamar a Mareiwa. Sobre la otra orilla dos mujeres en mantas Wayuushein amplias y un hombre completamente vestido reparten agua y las últimas provisiones entre recipientes. Hay casas bajas, una enramada con chinchorro y cardones al fondo, todo recortado en papel. LA SUPERFICIE DEL AGUA MUESTRA EL DESENLACE QUE TODAVÍA NO HA LLEGADO: refleja con claridad invertida esas mismas casas, postes y cardones, pero bajo un cielo nocturno y sin reflejar a NINGUNA de las personas vivas que están claramente sobre la orilla. En la enramada reflejada, el chinchorro queda solo y vacío; las casas reflejadas permanecen silenciosas. Encima del agua, es pleno día y la vida cotidiana continúa. Un mismo lugar presente y ausente se toca en la orilla. La zona de agua ocupa aproximadamente el tercio inferior del encuadre para que la contradicción sea legible en el plano abierto. Construir también el agua con hojas azules finas y formas invertidas recortadas, sin efecto de agua CGI ni espejo perfectamente pulido. Ningún cadáver, alma, figura resucitada, portal o texto. La petición humana es pequeña y su consecuencia futura ya cabe dentro del mundo doméstico.",
+      "scene": {
+        "composicion": "peso_contrario",
+        "era": "mitico_wayuu",
+        "refs": [],
+        "narrative_event_ids": [
+          "escasez",
+          "peticion",
+          "respuesta"
+        ],
+        "beat": "Arámai llama a Mareiwa por temor a la escasez. Su petición está siendo atendida: la cotidianidad de la ranchería y una voluntad no humana empiezan a tocarse. Emoción de asombro inquietante, nunca triunfo de eliminar vidas.",
+        "light": "Arena pálida, arcilla roja, azules minerales e índigo profundo; luz rasante que revele fibras, separación y sombras reales entre piezas. La anomalía pertenece a las hojas del mundo, no a efectos digitales añadidos.",
+        "editorial_translation": "Anticipación plástica del desenlace de la versión editorial: pérdida, silencio y responsabilidad. No añade una profecía, un sueño ni un poder adivinatorio a Arámai; la anomalía es una licencia para el espectador.",
+        "visual_question": "¿El reflejo difiere de manera legible del mundo habitado que debería reflejar, y expresa pérdida futura sin representar resurrección?",
+        "escena": "GRAN PLANO GENERAL horizontal 16:9 ligeramente elevado, una ranchería Wayúu junto a la última lámina de agua en la hondonada ancha y seca de un jagüey. Mucha orilla árida, agua baja y escasa; no un oasis abundante. Arámai pequeño y entero, de perfil sobre una orilla, dirige una palma abierta hacia el vacío al llamar a Mareiwa. Sobre la otra orilla dos mujeres en mantas Wayuushein amplias y un hombre completamente vestido reparten agua y las últimas provisiones entre recipientes. Hay casas bajas, una enramada con chinchorro y cardones al fondo, todo recortado en papel. LA SUPERFICIE DEL AGUA MUESTRA EL DESENLACE QUE TODAVÍA NO HA LLEGADO: refleja con claridad invertida esas mismas casas, postes y cardones, pero bajo un cielo nocturno y sin reflejar a NINGUNA de las personas vivas que están claramente sobre la orilla. En la enramada reflejada, el chinchorro queda solo y vacío; las casas reflejadas permanecen silenciosas. Encima del agua, es pleno día y la vida cotidiana continúa. Un mismo lugar presente y ausente se toca en la orilla. La zona de agua ocupa aproximadamente el tercio inferior del encuadre para que la contradicción sea legible en el plano abierto. Construir también el agua con hojas azules finas y formas invertidas recortadas, sin efecto de agua CGI ni espejo perfectamente pulido. Ningún cadáver, alma, figura resucitada, portal o texto. La petición humana es pequeña y su consecuencia futura ya cabe dentro del mundo doméstico."
+      }
+    }
+  ]
+}

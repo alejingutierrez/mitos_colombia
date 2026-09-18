@@ -1,0 +1,3275 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-15-el-origen-del-fuego-medium",
+    "myth_slug": "el-origen-del-fuego",
+    "model_ids": [
+      "siki__identity_sheet",
+      "siki__state_sheet",
+      "mujer_siki__identity_sheet",
+      "mujer_siki__state_sheet",
+      "suegra_siki__identity_sheet",
+      "suegra_siki__state_sheet",
+      "senores_wunaapu__group_grammar",
+      "senores_wunaapu__state_sheet",
+      "mouwa_fuego__identity_sheet",
+      "jamu_hambre__presence_model",
+      "pala_maravillosa_siki__object_sheet",
+      "huerta_siki__spatial_model",
+      "cultivos_huerta_siki__object_sheet",
+      "junuunay__identity_sheet",
+      "junuunay__state_sheet",
+      "kenaa_fuego__identity_sheet",
+      "kenaa_fuego__state_sheet",
+      "jimut_cigarron__identity_sheet",
+      "serumaa_sikiyuu__identity_sheet",
+      "serumaa_sikiyuu__state_sheet",
+      "humanidad_sin_fuego__group_grammar",
+      "gruta_fuego_maleiwa__spatial_model",
+      "brasas_morral_junuunay__object_sheet",
+      "noche_revela_kenaa__phenomenon_rule",
+      "caujaro_koushot__botanical_sheet",
+      "kasemashi__identity_sheet",
+      "kasemashi__state_sheet",
+      "maleiwa_viejo_fuego__identity_sheet",
+      "flecha_meteoro_awaalas__phenomenon_rule",
+      "piedras_puloi_fuego__spatial_model",
+      "maayui_ulapiuy__group_grammar",
+      "varitas_friccion__object_sheet"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "designed_ready_for_preflight"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "siki__identity_sheet",
+    "siki__state_sheet",
+    "mujer_siki__identity_sheet",
+    "mujer_siki__state_sheet",
+    "suegra_siki__identity_sheet",
+    "suegra_siki__state_sheet",
+    "senores_wunaapu__group_grammar",
+    "senores_wunaapu__state_sheet",
+    "mouwa_fuego__identity_sheet",
+    "jamu_hambre__presence_model",
+    "pala_maravillosa_siki__object_sheet",
+    "huerta_siki__spatial_model",
+    "cultivos_huerta_siki__object_sheet",
+    "junuunay__identity_sheet",
+    "junuunay__state_sheet",
+    "kenaa_fuego__identity_sheet",
+    "kenaa_fuego__state_sheet",
+    "jimut_cigarron__identity_sheet",
+    "serumaa_sikiyuu__identity_sheet",
+    "serumaa_sikiyuu__state_sheet",
+    "humanidad_sin_fuego__group_grammar",
+    "gruta_fuego_maleiwa__spatial_model",
+    "brasas_morral_junuunay__object_sheet",
+    "noche_revela_kenaa__phenomenon_rule",
+    "caujaro_koushot__botanical_sheet",
+    "kasemashi__identity_sheet",
+    "kasemashi__state_sheet",
+    "maleiwa_viejo_fuego__identity_sheet",
+    "flecha_meteoro_awaalas__phenomenon_rule",
+    "piedras_puloi_fuego__spatial_model",
+    "maayui_ulapiuy__group_grammar",
+    "varitas_friccion__object_sheet"
+  ],
+  "models": {
+    "siki__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Protagonista-fuego de la primera version: pasa del chinchorro a la huerta y al Caujaro."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Siki o Makutulain, el Fuego. Funcion visual: Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Siki o Makutulain, el Fuego",
+          "funcion estable: Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+          "estados declarados: joven_en_chinchorro, cultivador_con_fuego, refugiado_en_caujaro"
+        ],
+        "documented_features": [
+          "Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+          "alias documentado: Ski",
+          "alias documentado: Makutulain"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Siki o Makutulain, el Fuego. Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+          "estados autorizados: joven_en_chinchorro, cultivador_con_fuego, refugiado_en_caujaro",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven_en_chinchorro"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "siki__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Protagonista-fuego de la primera version: pasa del chinchorro a la huerta y al Caujaro."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Siki o Makutulain, el Fuego. Funcion visual: Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Siki o Makutulain, el Fuego",
+          "funcion estable: Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+          "estados declarados: joven_en_chinchorro, cultivador_con_fuego, refugiado_en_caujaro"
+        ],
+        "documented_features": [
+          "Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+          "alias documentado: Ski",
+          "alias documentado: Makutulain"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Siki o Makutulain, el Fuego. Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+          "estados autorizados: joven_en_chinchorro, cultivador_con_fuego, refugiado_en_caujaro",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven_en_chinchorro",
+            "cultivador_con_fuego",
+            "refugiado_en_caujaro"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "mujer_siki__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "mujer_siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Maajua sostiene a la familia, aporta semillas y termina como perdiz bola."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Maajua, mujer de Siki. Funcion visual: Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Maajua, mujer de Siki",
+          "funcion estable: Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+          "estados declarados: mujer_y_madre, perdiz_bola"
+        ],
+        "documented_features": [
+          "Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+          "alias documentado: Mujer de Siki"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Maajua, mujer de Siki. Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+          "estados autorizados: mujer_y_madre, perdiz_bola",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "mujer_y_madre"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "mujer_siki__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "mujer_siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Maajua sostiene a la familia, aporta semillas y termina como perdiz bola."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Maajua, mujer de Siki. Funcion visual: Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Maajua, mujer de Siki",
+          "funcion estable: Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+          "estados declarados: mujer_y_madre, perdiz_bola"
+        ],
+        "documented_features": [
+          "Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+          "alias documentado: Mujer de Siki"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Maajua, mujer de Siki. Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+          "estados autorizados: mujer_y_madre, perdiz_bola",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "mujer_y_madre",
+            "perdiz_bola"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "suegra_siki__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "suegra_siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Mujer mayor que se pierde en la huerta y termina como Yoto."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Suegra de Siki. Funcion visual: Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Suegra de Siki",
+          "funcion estable: Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+          "estados declarados: mujer_mayor, yoto"
+        ],
+        "documented_features": [
+          "Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Suegra de Siki. Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+          "estados autorizados: mujer_mayor, yoto",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "mujer_mayor"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "suegra_siki__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "suegra_siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Mujer mayor que se pierde en la huerta y termina como Yoto."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Suegra de Siki. Funcion visual: Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Suegra de Siki",
+          "funcion estable: Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+          "estados declarados: mujer_mayor, yoto"
+        ],
+        "documented_features": [
+          "Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Suegra de Siki. Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+          "estados autorizados: mujer_mayor, yoto",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "mujer_mayor",
+            "yoto"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "senores_wunaapu__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "senores_wunaapu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Hermanos trabajadores de Maajua que terminan como diversos animales del monte."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Señores de Wuna'apü. Funcion visual: Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Señores de Wuna'apü",
+          "funcion estable: Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+          "estados declarados: trabajadores_humanos, animales_del_monte"
+        ],
+        "documented_features": [
+          "Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Señores de Wuna'apü. Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+          "estados autorizados: trabajadores_humanos, animales_del_monte",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "trabajadores_humanos"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "senores_wunaapu__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "senores_wunaapu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Hermanos trabajadores de Maajua que terminan como diversos animales del monte."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Señores de Wuna'apü. Funcion visual: Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Señores de Wuna'apü",
+          "funcion estable: Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+          "estados declarados: trabajadores_humanos, animales_del_monte"
+        ],
+        "documented_features": [
+          "Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Señores de Wuna'apü. Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+          "estados autorizados: trabajadores_humanos, animales_del_monte",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "trabajadores_humanos",
+            "animales_del_monte"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "mouwa_fuego__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "mouwa_fuego"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Joven cuya relacion tentativa con una paloma se mantiene incierta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Mouwa. Funcion visual: Joven de identidad abierta que provoca la retirada de Siki; Finol la relaciona tentativamente con una paloma, sin cerrar esa identificacion como hecho.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Mouwa",
+          "funcion estable: Joven de identidad abierta que provoca la retirada de Siki; Finol la relaciona tentativamente con una paloma, sin cerrar esa identificacion como hecho.",
+          "estados declarados: joven_identidad_abierta"
+        ],
+        "documented_features": [
+          "Joven de identidad abierta que provoca la retirada de Siki; Finol la relaciona tentativamente con una paloma, sin cerrar esa identificacion como hecho."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Mouwa. Joven de identidad abierta que provoca la retirada de Siki; Finol la relaciona tentativamente con una paloma, sin cerrar esa identificacion como hecho.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven de identidad abierta que provoca la retirada de Siki; Finol la relaciona tentativamente con una paloma, sin cerrar esa identificacion como hecho.",
+          "estados autorizados: joven_identidad_abierta",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven_identidad_abierta"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jamu_hambre__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "jamu_hambre"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Fuerza del Hambre que precipita el refugio de Siki en los arboles."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Jamu, el Hambre. Funcion visual: Fuerza personificada de aspecto terrible cuya llegada obliga a Siki a refugiarse en los arboles; no se fija anatomia monstruosa.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Jamu, el Hambre",
+          "funcion estable: Fuerza personificada de aspecto terrible cuya llegada obliga a Siki a refugiarse en los arboles; no se fija anatomia monstruosa.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Fuerza personificada de aspecto terrible cuya llegada obliga a Siki a refugiarse en los arboles; no se fija anatomia monstruosa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Jamu, el Hambre. Fuerza personificada de aspecto terrible cuya llegada obliga a Siki a refugiarse en los arboles; no se fija anatomia monstruosa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Fuerza personificada de aspecto terrible cuya llegada obliga a Siki a refugiarse en los arboles; no se fija anatomia monstruosa.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pala_maravillosa_siki__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "pala_maravillosa_siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Instrumento con que Siki abre la gran huerta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Pala maravillosa de Siki. Funcion visual: Pala que levanta polvo semejante al humo mientras Siki abre una huerta enorme, sin convertirla en arma o reliquia.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Pala maravillosa de Siki",
+          "funcion estable: Pala que levanta polvo semejante al humo mientras Siki abre una huerta enorme, sin convertirla en arma o reliquia.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Pala que levanta polvo semejante al humo mientras Siki abre una huerta enorme, sin convertirla en arma o reliquia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Pala maravillosa de Siki. Pala que levanta polvo semejante al humo mientras Siki abre una huerta enorme, sin convertirla en arma o reliquia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Pala que levanta polvo semejante al humo mientras Siki abre una huerta enorme, sin convertirla en arma o reliquia.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "huerta_siki__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "huerta_siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Espacio de abundancia y transformaciones de la primera version."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Gran huerta de Siki. Funcion visual: Roza desmesurada que pasa del terreno despejado a una abundancia de cultivos capaz de desorientar a quien la recorre.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Gran huerta de Siki",
+          "funcion estable: Roza desmesurada que pasa del terreno despejado a una abundancia de cultivos capaz de desorientar a quien la recorre.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Roza desmesurada que pasa del terreno despejado a una abundancia de cultivos capaz de desorientar a quien la recorre."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Gran huerta de Siki. Roza desmesurada que pasa del terreno despejado a una abundancia de cultivos capaz de desorientar a quien la recorre.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Roza desmesurada que pasa del terreno despejado a una abundancia de cultivos capaz de desorientar a quien la recorre.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "cultivos_huerta_siki__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "cultivos_huerta_siki"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Semillas y cosechas nombradas, no abundancia generica."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Semillas y cultivos de la huerta. Funcion visual: Conjunto de semillas y cosechas nombradas en la primera version: maiz, frijoles, millo, melones, patilla, papaya, calabaza, ahuyama y quinchoncho, sin volverlas cornucopia generica.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Semillas y cultivos de la huerta",
+          "funcion estable: Conjunto de semillas y cosechas nombradas en la primera version: maiz, frijoles, millo, melones, patilla, papaya, calabaza, ahuyama y quinchoncho, sin volverlas cornucopia generica.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjunto de semillas y cosechas nombradas en la primera version: maiz, frijoles, millo, melones, patilla, papaya, calabaza, ahuyama y quinchoncho, sin volverlas cornucopia generica."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Semillas y cultivos de la huerta. Conjunto de semillas y cosechas nombradas en la primera version: maiz, frijoles, millo, melones, patilla, papaya, calabaza, ahuyama y quinchoncho, sin volverlas cornucopia generica.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Conjunto de semillas y cosechas nombradas en la primera version: maiz, frijoles, millo, melones, patilla, papaya, calabaza, ahuyama y quinchoncho, sin volverlas cornucopia generica.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "junuunay__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "junuunay"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Toma exactamente dos brasas y termina como escarabajo en la segunda version."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Junuunay. Funcion visual: Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Junuunay",
+          "funcion estable: Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+          "estados declarados: joven_que_toma_las_brasas, escarabajo"
+        ],
+        "documented_features": [
+          "Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Junuunay. Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+          "estados autorizados: joven_que_toma_las_brasas, escarabajo",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven_que_toma_las_brasas"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "junuunay__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "junuunay"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Toma exactamente dos brasas y termina como escarabajo en la segunda version."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Junuunay. Funcion visual: Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Junuunay",
+          "funcion estable: Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+          "estados declarados: joven_que_toma_las_brasas, escarabajo"
+        ],
+        "documented_features": [
+          "Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Junuunay. Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+          "estados autorizados: joven_que_toma_las_brasas, escarabajo",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven_que_toma_las_brasas",
+            "escarabajo"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kenaa_fuego__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "kenaa_fuego"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Joven cazador transformado en cocuyo nocturno."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Kenáa. Funcion visual: Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Kenáa",
+          "funcion estable: Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+          "estados declarados: joven_cazador, cocuyo"
+        ],
+        "documented_features": [
+          "Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Kenáa. Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+          "estados autorizados: joven_cazador, cocuyo",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven_cazador"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kenaa_fuego__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "kenaa_fuego"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Joven cazador transformado en cocuyo nocturno."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Kenáa. Funcion visual: Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Kenáa",
+          "funcion estable: Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+          "estados declarados: joven_cazador, cocuyo"
+        ],
+        "documented_features": [
+          "Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Kenáa. Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+          "estados autorizados: joven_cazador, cocuyo",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven_cazador",
+            "cocuyo"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "jimut_cigarron__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "jimut_cigarron"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Insecto que introduce y multiplica la brasa en las maderas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Jimut, el Cigarrón. Funcion visual: Insecto que recibe una brasa, la introduce en el Caujaro y otras maderas y hace posible multiplicar el fuego; no se humaniza.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Jimut, el Cigarrón",
+          "funcion estable: Insecto que recibe una brasa, la introduce en el Caujaro y otras maderas y hace posible multiplicar el fuego; no se humaniza.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Insecto que recibe una brasa, la introduce en el Caujaro y otras maderas y hace posible multiplicar el fuego; no se humaniza.",
+          "alias documentado: Cigarrón"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Jimut, el Cigarrón. Insecto que recibe una brasa, la introduce en el Caujaro y otras maderas y hace posible multiplicar el fuego; no se humaniza.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Insecto que recibe una brasa, la introduce en el Caujaro y otras maderas y hace posible multiplicar el fuego; no se humaniza.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "serumaa_sikiyuu__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "serumaa_sikiyuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Niño que señala las maderas y termina como Sikiyuu."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Serumáa o Sikiyuu. Funcion visual: Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Serumáa o Sikiyuu",
+          "funcion estable: Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+          "estados declarados: niño, ave_sikiyuu"
+        ],
+        "documented_features": [
+          "Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+          "alias documentado: Sikiyuu"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Serumáa o Sikiyuu. Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+          "estados autorizados: niño, ave_sikiyuu",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "serumaa_sikiyuu__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "serumaa_sikiyuu"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Niño que señala las maderas y termina como Sikiyuu."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Serumáa o Sikiyuu. Funcion visual: Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Serumáa o Sikiyuu",
+          "funcion estable: Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+          "estados declarados: niño, ave_sikiyuu"
+        ],
+        "documented_features": [
+          "Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+          "alias documentado: Sikiyuu"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Serumáa o Sikiyuu. Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+          "estados autorizados: niño, ave_sikiyuu",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño",
+            "ave_sikiyuu"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "humanidad_sin_fuego__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "humanidad_sin_fuego"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Hace legibles las condiciones anteriores a la distribucion."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Primeras personas sin fuego. Funcion visual: Personas que comen alimentos crudos o secados al sol y habitan troncos, cuevas, agujeros o ranchos sin calor ni luz nocturna.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Primeras personas sin fuego",
+          "funcion estable: Personas que comen alimentos crudos o secados al sol y habitan troncos, cuevas, agujeros o ranchos sin calor ni luz nocturna.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Personas que comen alimentos crudos o secados al sol y habitan troncos, cuevas, agujeros o ranchos sin calor ni luz nocturna."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Primeras personas sin fuego. Personas que comen alimentos crudos o secados al sol y habitan troncos, cuevas, agujeros o ranchos sin calor ni luz nocturna.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Personas que comen alimentos crudos o secados al sol y habitan troncos, cuevas, agujeros o ranchos sin calor ni luz nocturna.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "gruta_fuego_maleiwa__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "gruta_fuego_maleiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Lugar de las piedras encendidas guardadas por Maleiwa."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Gruta del fuego de Maleiwa. Funcion visual: Cueva donde Maleiwa conserva piedras encendidas y vigila el fuego antes de que Junuunay tome dos brasas.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Gruta del fuego de Maleiwa",
+          "funcion estable: Cueva donde Maleiwa conserva piedras encendidas y vigila el fuego antes de que Junuunay tome dos brasas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cueva donde Maleiwa conserva piedras encendidas y vigila el fuego antes de que Junuunay tome dos brasas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Gruta del fuego de Maleiwa. Cueva donde Maleiwa conserva piedras encendidas y vigila el fuego antes de que Junuunay tome dos brasas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Cueva donde Maleiwa conserva piedras encendidas y vigila el fuego antes de que Junuunay tome dos brasas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "brasas_morral_junuunay__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "brasas_morral_junuunay"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Dos brasas y un morral pequeño, sin fuego generico."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Dos brasas y morral de Junuunay. Funcion visual: Exactamente dos brasas ocultas en un morral pequeño; una pasa a Kenáa y otra a Jimut.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Dos brasas y morral de Junuunay",
+          "funcion estable: Exactamente dos brasas ocultas en un morral pequeño; una pasa a Kenáa y otra a Jimut.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Exactamente dos brasas ocultas en un morral pequeño; una pasa a Kenáa y otra a Jimut."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Dos brasas y morral de Junuunay. Exactamente dos brasas ocultas en un morral pequeño; una pasa a Kenáa y otra a Jimut.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Exactamente dos brasas ocultas en un morral pequeño; una pasa a Kenáa y otra a Jimut.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "noche_revela_kenaa__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "noche_revela_kenaa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "La noche vuelve visible al cocuyo que el Sol ocultaba."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: La Noche que revela a Kenáa. Funcion visual: Oscuridad nocturna que vuelve visible el brillo de Kenáa después de que el Sol lo oculta durante el día; no es una diosa antropomorfa.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: La Noche que revela a Kenáa",
+          "funcion estable: Oscuridad nocturna que vuelve visible el brillo de Kenáa después de que el Sol lo oculta durante el día; no es una diosa antropomorfa.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Oscuridad nocturna que vuelve visible el brillo de Kenáa después de que el Sol lo oculta durante el día; no es una diosa antropomorfa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para La Noche que revela a Kenáa. Oscuridad nocturna que vuelve visible el brillo de Kenáa después de que el Sol lo oculta durante el día; no es una diosa antropomorfa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Oscuridad nocturna que vuelve visible el brillo de Kenáa después de que el Sol lo oculta durante el día; no es una diosa antropomorfa.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "caujaro_koushot__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "caujaro_koushot"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Arbol y madera central para conservar y producir el fuego."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Caujaro o Koushot. Funcion visual: Arbol identificado en fuentes secundarias como Cordia alba y nombrado en el mito como una de las maderas que guardan y liberan el fuego por friccion.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Caujaro o Koushot",
+          "funcion estable: Arbol identificado en fuentes secundarias como Cordia alba y nombrado en el mito como una de las maderas que guardan y liberan el fuego por friccion.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Arbol identificado en fuentes secundarias como Cordia alba y nombrado en el mito como una de las maderas que guardan y liberan el fuego por friccion.",
+          "alias documentado: Caujaro",
+          "alias documentado: Koushot"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Caujaro o Koushot. Arbol identificado en fuentes secundarias como Cordia alba y nombrado en el mito como una de las maderas que guardan y liberan el fuego por friccion.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Arbol identificado en fuentes secundarias como Cordia alba y nombrado en el mito como una de las maderas que guardan y liberan el fuego por friccion.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kasemashi__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "kasemashi"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Niño y fuego mineral de la tercera version."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Kasemashi. Funcion visual: Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Kasemashi",
+          "funcion estable: Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+          "estados declarados: niño_con_arco, fuego_en_las_piedras"
+        ],
+        "documented_features": [
+          "Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Kasemashi. Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+          "estados autorizados: niño_con_arco, fuego_en_las_piedras",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño_con_arco"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "kasemashi__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "kasemashi"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Niño y fuego mineral de la tercera version."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Kasemashi. Funcion visual: Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Kasemashi",
+          "funcion estable: Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+          "estados declarados: niño_con_arco, fuego_en_las_piedras"
+        ],
+        "documented_features": [
+          "Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Kasemashi. Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+          "estados autorizados: niño_con_arco, fuego_en_las_piedras",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "niño_con_arco",
+            "fuego_en_las_piedras"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "maleiwa_viejo_fuego__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "maleiwa_viejo_fuego"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Apariencia de viejo mendicante propia de esa version."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Maleiwa como viejo mendicante. Funcion visual: Apariencia humana de viejo mendicante que pide el arco de Kasemashi en la tercera version, sin convertir pobreza o edad en caricatura.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Maleiwa como viejo mendicante",
+          "funcion estable: Apariencia humana de viejo mendicante que pide el arco de Kasemashi en la tercera version, sin convertir pobreza o edad en caricatura.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Apariencia humana de viejo mendicante que pide el arco de Kasemashi en la tercera version, sin convertir pobreza o edad en caricatura."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Maleiwa como viejo mendicante. Apariencia humana de viejo mendicante que pide el arco de Kasemashi en la tercera version, sin convertir pobreza o edad en caricatura.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Apariencia humana de viejo mendicante que pide el arco de Kasemashi en la tercera version, sin convertir pobreza o edad en caricatura.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "flecha_meteoro_awaalas__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "flecha_meteoro_awaalas"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Flecha convertida en estela incandescente."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Flecha-meteoro Awa'alas. Funcion visual: Flecha desviada hacia el cielo que oscurece el Sol y se vuelve una estela incandescente hacia un pantano o mar distante.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Flecha-meteoro Awa'alas",
+          "funcion estable: Flecha desviada hacia el cielo que oscurece el Sol y se vuelve una estela incandescente hacia un pantano o mar distante.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Flecha desviada hacia el cielo que oscurece el Sol y se vuelve una estela incandescente hacia un pantano o mar distante.",
+          "alias documentado: Awa'alas"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Flecha-meteoro Awa'alas. Flecha desviada hacia el cielo que oscurece el Sol y se vuelve una estela incandescente hacia un pantano o mar distante.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Flecha desviada hacia el cielo que oscurece el Sol y se vuelve una estela incandescente hacia un pantano o mar distante.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "piedras_puloi_fuego__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "piedras_puloi_fuego"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Simala y Lapuna contienen el fuego de Kasemashi."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Piedras de Pülowi: Simala y Lapuna. Funcion visual: Conjunto mineral de la tercera version donde el fuego de Kasemashi permanece encerrado, con piedra blanca Simala y piedra negra Lapuna diferenciadas sin portal fantastico.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Piedras de Pülowi: Simala y Lapuna",
+          "funcion estable: Conjunto mineral de la tercera version donde el fuego de Kasemashi permanece encerrado, con piedra blanca Simala y piedra negra Lapuna diferenciadas sin portal fantastico.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjunto mineral de la tercera version donde el fuego de Kasemashi permanece encerrado, con piedra blanca Simala y piedra negra Lapuna diferenciadas sin portal fantastico."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Piedras de Pülowi: Simala y Lapuna. Conjunto mineral de la tercera version donde el fuego de Kasemashi permanece encerrado, con piedra blanca Simala y piedra negra Lapuna diferenciadas sin portal fantastico.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Conjunto mineral de la tercera version donde el fuego de Kasemashi permanece encerrado, con piedra blanca Simala y piedra negra Lapuna diferenciadas sin portal fantastico.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "maayui_ulapiuy__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "maayui_ulapiuy"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Pareja que libera el fuego sin fusionarse con otros mellizos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Ma'ayüi y Ulapiuy. Funcion visual: Pareja de transformadores que libera el fuego de Kasemashi de las piedras; se conserva con sus nombres propios sin equipararla automaticamente a otros mellizos del corpus.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Ma'ayüi y Ulapiuy",
+          "funcion estable: Pareja de transformadores que libera el fuego de Kasemashi de las piedras; se conserva con sus nombres propios sin equipararla automaticamente a otros mellizos del corpus.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Pareja de transformadores que libera el fuego de Kasemashi de las piedras; se conserva con sus nombres propios sin equipararla automaticamente a otros mellizos del corpus."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Ma'ayüi y Ulapiuy. Pareja de transformadores que libera el fuego de Kasemashi de las piedras; se conserva con sus nombres propios sin equipararla automaticamente a otros mellizos del corpus.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Pareja de transformadores que libera el fuego de Kasemashi de las piedras; se conserva con sus nombres propios sin equipararla automaticamente a otros mellizos del corpus.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "varitas_friccion__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "varitas_friccion"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Tecnologia material de dos maderas, sin hoja instructiva."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Varitas para producir fuego. Funcion visual: Dos piezas de Caujaro u otras maderas donde el fuego permanece disponible por perforacion o friccion, sin presentarlas como manual de supervivencia.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Varitas para producir fuego",
+          "funcion estable: Dos piezas de Caujaro u otras maderas donde el fuego permanece disponible por perforacion o friccion, sin presentarlas como manual de supervivencia.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Dos piezas de Caujaro u otras maderas donde el fuego permanece disponible por perforacion o friccion, sin presentarlas como manual de supervivencia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Varitas para producir fuego. Dos piezas de Caujaro u otras maderas donde el fuego permanece disponible por perforacion o friccion, sin presentarlas como manual de supervivencia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Dos piezas de Caujaro u otras maderas donde el fuego permanece disponible por perforacion o friccion, sin presentarlas como manual de supervivencia.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "siki": {
+      "name": "Siki o Makutulain, el Fuego",
+      "kind": "personaje",
+      "description": "Joven que en la primera version oculta su capacidad de quemar, abre una gran huerta y termina refugiado como energia disponible en ciertas maderas.",
+      "aliases": [
+        "Ski",
+        "Makutulain"
+      ],
+      "states": [
+        "joven_en_chinchorro",
+        "cultivador_con_fuego",
+        "refugiado_en_caujaro"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "siki__identity_sheet",
+        "siki__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Protagonista-fuego de la primera version: pasa del chinchorro a la huerta y al Caujaro."
+        }
+      ]
+    },
+    "mujer_siki": {
+      "name": "Maajua, mujer de Siki",
+      "kind": "personaje",
+      "description": "Mujer que sostiene a su familia, entrega semillas para la gran huerta y termina transformada en perdiz bola.",
+      "aliases": [
+        "Mujer de Siki"
+      ],
+      "states": [
+        "mujer_y_madre",
+        "perdiz_bola"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "mujer_siki__identity_sheet",
+        "mujer_siki__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Maajua sostiene a la familia, aporta semillas y termina como perdiz bola."
+        }
+      ]
+    },
+    "suegra_siki": {
+      "name": "Suegra de Siki",
+      "kind": "personaje",
+      "description": "Mujer mayor que participa en el conflicto familiar, se pierde en la huerta y termina transformada en Yoto, ave de actividad crepuscular.",
+      "aliases": [],
+      "states": [
+        "mujer_mayor",
+        "yoto"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "suegra_siki__identity_sheet",
+        "suegra_siki__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Mujer mayor que se pierde en la huerta y termina como Yoto."
+        }
+      ]
+    },
+    "senores_wunaapu": {
+      "name": "Señores de Wuna'apü",
+      "kind": "colectivo",
+      "description": "Hermanos de Maajua: agricultores, cazadores, tejedores, artistas y recolectores que luego aparecen como diversos animales del monte.",
+      "aliases": [],
+      "states": [
+        "trabajadores_humanos",
+        "animales_del_monte"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "senores_wunaapu__group_grammar",
+        "senores_wunaapu__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Hermanos trabajadores de Maajua que terminan como diversos animales del monte."
+        }
+      ]
+    },
+    "mouwa_fuego": {
+      "name": "Mouwa",
+      "kind": "personaje",
+      "description": "Joven de identidad abierta que provoca la retirada de Siki; Finol la relaciona tentativamente con una paloma, sin cerrar esa identificacion como hecho.",
+      "aliases": [],
+      "states": [
+        "joven_identidad_abierta"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "mouwa_fuego__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Joven cuya relacion tentativa con una paloma se mantiene incierta."
+        }
+      ]
+    },
+    "jamu_hambre": {
+      "name": "Jamu, el Hambre",
+      "kind": "deidad_fuerza",
+      "description": "Fuerza personificada de aspecto terrible cuya llegada obliga a Siki a refugiarse en los arboles; no se fija anatomia monstruosa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "jamu_hambre__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Fuerza del Hambre que precipita el refugio de Siki en los arboles."
+        }
+      ]
+    },
+    "pala_maravillosa_siki": {
+      "name": "Pala maravillosa de Siki",
+      "kind": "objeto",
+      "description": "Pala que levanta polvo semejante al humo mientras Siki abre una huerta enorme, sin convertirla en arma o reliquia.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "pala_maravillosa_siki__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Instrumento con que Siki abre la gran huerta."
+        }
+      ]
+    },
+    "huerta_siki": {
+      "name": "Gran huerta de Siki",
+      "kind": "lugar",
+      "description": "Roza desmesurada que pasa del terreno despejado a una abundancia de cultivos capaz de desorientar a quien la recorre.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "huerta_siki__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Espacio de abundancia y transformaciones de la primera version."
+        }
+      ]
+    },
+    "cultivos_huerta_siki": {
+      "name": "Semillas y cultivos de la huerta",
+      "kind": "objeto",
+      "description": "Conjunto de semillas y cosechas nombradas en la primera version: maiz, frijoles, millo, melones, patilla, papaya, calabaza, ahuyama y quinchoncho, sin volverlas cornucopia generica.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "cultivos_huerta_siki__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Semillas y cosechas nombradas, no abundancia generica."
+        }
+      ]
+    },
+    "junuunay": {
+      "name": "Junuunay",
+      "kind": "personaje",
+      "description": "Joven de la segunda version que obtiene dos brasas de la gruta de Maleiwa, las distribuye y termina transformado en escarabajo estercolero.",
+      "aliases": [],
+      "states": [
+        "joven_que_toma_las_brasas",
+        "escarabajo"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "junuunay__identity_sheet",
+        "junuunay__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Toma exactamente dos brasas y termina como escarabajo en la segunda version."
+        }
+      ]
+    },
+    "kenaa_fuego": {
+      "name": "Kenáa",
+      "kind": "personaje",
+      "description": "Joven cazador que recibe una brasa de Junuunay, es ocultado por el Sol, revelado por la Noche y transformado en cocuyo nocturno.",
+      "aliases": [],
+      "states": [
+        "joven_cazador",
+        "cocuyo"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "kenaa_fuego__identity_sheet",
+        "kenaa_fuego__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Joven cazador transformado en cocuyo nocturno."
+        }
+      ]
+    },
+    "jimut_cigarron": {
+      "name": "Jimut, el Cigarrón",
+      "kind": "animal",
+      "description": "Insecto que recibe una brasa, la introduce en el Caujaro y otras maderas y hace posible multiplicar el fuego; no se humaniza.",
+      "aliases": [
+        "Cigarrón"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "jimut_cigarron__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Insecto que introduce y multiplica la brasa en las maderas."
+        }
+      ]
+    },
+    "serumaa_sikiyuu": {
+      "name": "Serumáa o Sikiyuu",
+      "kind": "personaje",
+      "description": "Niño que señala las maderas donde Jimut guardó la brasa y luego es transformado en el ave Sikiyuu.",
+      "aliases": [
+        "Sikiyuu"
+      ],
+      "states": [
+        "niño",
+        "ave_sikiyuu"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "serumaa_sikiyuu__identity_sheet",
+        "serumaa_sikiyuu__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Niño que señala las maderas y termina como Sikiyuu."
+        }
+      ]
+    },
+    "humanidad_sin_fuego": {
+      "name": "Primeras personas sin fuego",
+      "kind": "colectivo",
+      "description": "Personas que comen alimentos crudos o secados al sol y habitan troncos, cuevas, agujeros o ranchos sin calor ni luz nocturna.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "humanidad_sin_fuego__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Hace legibles las condiciones anteriores a la distribucion."
+        }
+      ]
+    },
+    "gruta_fuego_maleiwa": {
+      "name": "Gruta del fuego de Maleiwa",
+      "kind": "lugar",
+      "description": "Cueva donde Maleiwa conserva piedras encendidas y vigila el fuego antes de que Junuunay tome dos brasas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "gruta_fuego_maleiwa__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Lugar de las piedras encendidas guardadas por Maleiwa."
+        }
+      ]
+    },
+    "brasas_morral_junuunay": {
+      "name": "Dos brasas y morral de Junuunay",
+      "kind": "objeto",
+      "description": "Exactamente dos brasas ocultas en un morral pequeño; una pasa a Kenáa y otra a Jimut.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "brasas_morral_junuunay__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Dos brasas y un morral pequeño, sin fuego generico."
+        }
+      ]
+    },
+    "noche_revela_kenaa": {
+      "name": "La Noche que revela a Kenáa",
+      "kind": "fenomeno",
+      "description": "Oscuridad nocturna que vuelve visible el brillo de Kenáa después de que el Sol lo oculta durante el día; no es una diosa antropomorfa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "noche_revela_kenaa__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "La noche vuelve visible al cocuyo que el Sol ocultaba."
+        }
+      ]
+    },
+    "caujaro_koushot": {
+      "name": "Caujaro o Koushot",
+      "kind": "planta",
+      "description": "Arbol identificado en fuentes secundarias como Cordia alba y nombrado en el mito como una de las maderas que guardan y liberan el fuego por friccion.",
+      "aliases": [
+        "Caujaro",
+        "Koushot"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "caujaro_koushot__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Arbol y madera central para conservar y producir el fuego."
+        }
+      ]
+    },
+    "kasemashi": {
+      "name": "Kasemashi",
+      "kind": "personaje",
+      "description": "Niño vivaz de la tercera version cuya flecha se vuelve meteoro y que termina como fuego encerrado en las piedras de Pülowi.",
+      "aliases": [],
+      "states": [
+        "niño_con_arco",
+        "fuego_en_las_piedras"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "kasemashi__identity_sheet",
+        "kasemashi__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Niño y fuego mineral de la tercera version."
+        }
+      ]
+    },
+    "maleiwa_viejo_fuego": {
+      "name": "Maleiwa como viejo mendicante",
+      "kind": "personaje",
+      "description": "Apariencia humana de viejo mendicante que pide el arco de Kasemashi en la tercera version, sin convertir pobreza o edad en caricatura.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "maleiwa_viejo_fuego__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Apariencia de viejo mendicante propia de esa version."
+        }
+      ]
+    },
+    "flecha_meteoro_awaalas": {
+      "name": "Flecha-meteoro Awa'alas",
+      "kind": "fenomeno",
+      "description": "Flecha desviada hacia el cielo que oscurece el Sol y se vuelve una estela incandescente hacia un pantano o mar distante.",
+      "aliases": [
+        "Awa'alas"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "flecha_meteoro_awaalas__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Flecha convertida en estela incandescente."
+        }
+      ]
+    },
+    "piedras_puloi_fuego": {
+      "name": "Piedras de Pülowi: Simala y Lapuna",
+      "kind": "lugar",
+      "description": "Conjunto mineral de la tercera version donde el fuego de Kasemashi permanece encerrado, con piedra blanca Simala y piedra negra Lapuna diferenciadas sin portal fantastico.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "piedras_puloi_fuego__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Simala y Lapuna contienen el fuego de Kasemashi."
+        }
+      ]
+    },
+    "maayui_ulapiuy": {
+      "name": "Ma'ayüi y Ulapiuy",
+      "kind": "colectivo",
+      "description": "Pareja de transformadores que libera el fuego de Kasemashi de las piedras; se conserva con sus nombres propios sin equipararla automaticamente a otros mellizos del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "maayui_ulapiuy__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Pareja que libera el fuego sin fusionarse con otros mellizos."
+        }
+      ]
+    },
+    "varitas_friccion": {
+      "name": "Varitas para producir fuego",
+      "kind": "objeto",
+      "description": "Dos piezas de Caujaro u otras maderas donde el fuego permanece disponible por perforacion o friccion, sin presentarlas como manual de supervivencia.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "varitas_friccion__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-fuego",
+          "field": "mito",
+          "note": "Tecnologia material de dos maderas, sin hoja instructiva."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+Ette Ennaka / Chimila — production-api-06 — 2026-09-13
+Model: gpt-image-2.5-sunburst; official unmodified bundled Image CLI.
+Maximum simultaneous requests: 3. Documentary image uploads: 0.
+Initial plan: 36 new masters; previous selected: 18; final selected: 54.
+Wave1: 24 independent generate calls; 23 persisted; A05 output moderation_blocked HTTP400, category self-harm, req_a27df230b424423fb494725fe78a82f0.
+Wave2: 16 calls; 10 human style edits, 1 benign A05 anatomy clarification retry, 5 targeted QA edits; all persisted.
+Wave3: 3 edits; V04 identity from H04, V06 identity from A09, P04 youthful adult Sol; all persisted.
+Additional QA: V06 upper two fictional ancient bodies changed to smooth shell-free torsos; bottom final A09 shell retained; persisted and reviewed.
+Total: 44 calls, 43 successful image outputs (24 generates / 19 edits), 7 QA refinements, 1 moderation retry.
+All36 new selected images individually visually inspected; all6 category sheets and overview inspected. No original overwritten.
+All54 selections JPEG1024x1536; file/prompt/input hashes verified; six frozen baselines, 18 prior selections and four read documentary references verified intact.
+No credential values in artifacts; ignored local environment credential reused, not altered. Actual billed cost not verified.
+Cultural gates retained. A04 silhouette only, no diagnostic taxon. Human identities fictional; no universal phenotype.
+No catalogue/DB/public-site edits, deployment, triptychs or keyframes in this run.
+Detailed success/failure metadata: jobs.v2.json. Selection hashes/lineage: selection.complete.v1.json.
+Final integrity result: passed; checked local markdown links: 222.

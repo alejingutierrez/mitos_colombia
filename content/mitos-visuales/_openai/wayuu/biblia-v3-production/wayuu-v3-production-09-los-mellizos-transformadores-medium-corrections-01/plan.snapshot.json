@@ -1,0 +1,502 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-09-los-mellizos-transformadores-medium",
+    "myth_slug": "los-mellizos-transformadores",
+    "model_ids": [
+      "manna__identity_sheet",
+      "manna__state_sheet",
+      "sain_ma__presence_model",
+      "mannuuya__presence_model",
+      "juya__presence_model",
+      "juya__state_sheet",
+      "kalamantuunay__identity_sheet",
+      "kalamantuunay__state_sheet",
+      "hombres_tigre__group_grammar",
+      "tumajule__identity_sheet",
+      "tumajule__state_sheet",
+      "peeliyuu__identity_sheet",
+      "peeliyuu__state_sheet",
+      "aaner__identity_sheet",
+      "tinaja_manna__object_sheet",
+      "costa_mar_guajira__environment_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_for_generation"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "manna__identity_sheet",
+    "manna__state_sheet",
+    "juya__state_sheet",
+    "hombres_tigre__group_grammar"
+  ],
+  "models": {
+    "manna__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "manna"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Manna. Funcion visual: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Manna",
+          "funcion estable: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados declarados: joven, embarazada_en_huida, memoria_de_los_mellizos"
+        ],
+        "documented_features": [
+          "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Manna. Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados autorizados: joven, embarazada_en_huida, memoria_de_los_mellizos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "manna__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "manna"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Manna. Funcion visual: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Manna",
+          "funcion estable: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados declarados: joven, embarazada_en_huida, memoria_de_los_mellizos"
+        ],
+        "documented_features": [
+          "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Manna. Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados autorizados: joven, embarazada_en_huida, memoria_de_los_mellizos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven",
+            "embarazada_en_huida",
+            "memoria_de_los_mellizos"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "juya__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "juya"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Lleva lluvia y activa la tierra."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Anfitrion y maestro del dominio."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Recibe, alimenta y enseña."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Simirriúu en la genealogia de una version."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lluvia movil que conserva agencia propia."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Recibe y enseña al viajero."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella. Entidad: Juyá. Funcion visual: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+        "materials": [
+          "papel territorial fibroso",
+          "capas de agua, suelo, aire o sombra segun evidencia",
+          "uniones fisicas visibles dentro del mundo"
+        ],
+        "palette_logic": "Color gobernado por la accion documentada de la fuerza; sin halo, aura, ojos luminosos o codigo religioso externo.",
+        "scale": "Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "continuity_markers": [
+          "nombre estable: Juyá",
+          "funcion estable: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "estados declarados: lluvia, anfitrion_del_dominio"
+        ],
+        "documented_features": [
+          "Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "alias documentado: Simirriúu"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Juyá. Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala relacional: puede atravesar varios planos sin convertirse en gigante antropomorfo.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel territorial fibroso; capas de agua, suelo, aire o sombra segun evidencia; uniones fisicas visibles dentro del mundo",
+        "constraints": [
+          "No fijar cuerpo humano. La presencia se reconoce por una relacion irrepetible entre territorio, materia, clima, objeto, ausencia y huella.",
+          "mostrar: Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+          "estados autorizados: lluvia, anfitrion_del_dominio",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "lluvia",
+            "anfitrion_del_dominio"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hombres_tigre__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "hombres_tigre"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Hijos perseguidores de la anciana."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Hombres-tigre. Funcion visual: Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Hombres-tigre",
+          "funcion estable: Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Hombres-tigre. Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "manna": {
+      "name": "Manna",
+      "kind": "personaje",
+      "description": "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+      "aliases": [],
+      "states": [
+        "joven",
+        "embarazada_en_huida",
+        "memoria_de_los_mellizos"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "manna__identity_sheet",
+        "manna__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ]
+    },
+    "juya": {
+      "name": "Juyá",
+      "kind": "deidad_fuerza",
+      "description": "Lluvia movil, pariente y señor de un dominio de apariencias cambiantes.",
+      "aliases": [
+        "Simirriúu"
+      ],
+      "states": [
+        "lluvia",
+        "anfitrion_del_dominio"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "juya__presence_model",
+        "juya__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-wayuu",
+        "el-viaje-del-mas-alla",
+        "los-dominios-de-juya",
+        "los-mellizos-transformadores",
+        "maleiwa",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-wayuu",
+          "field": "mito",
+          "note": "Lleva lluvia y activa la tierra."
+        },
+        {
+          "myth": "el-viaje-del-mas-alla",
+          "field": "mito",
+          "note": "Anfitrion y maestro del dominio."
+        },
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Recibe, alimenta y enseña."
+        },
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Simirriúu en la genealogia de una version."
+        },
+        {
+          "myth": "maleiwa",
+          "field": "mito",
+          "note": "Lluvia movil que conserva agencia propia."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Recibe y enseña al viajero."
+        }
+      ]
+    },
+    "hombres_tigre": {
+      "name": "Hombres-tigre",
+      "kind": "colectivo",
+      "description": "Hijos de Kalamantuunay que perciben, devoran y persiguen; no monstruos genericos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "hombres_tigre__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Hijos perseguidores de la anciana."
+        }
+      ]
+    }
+  }
+}

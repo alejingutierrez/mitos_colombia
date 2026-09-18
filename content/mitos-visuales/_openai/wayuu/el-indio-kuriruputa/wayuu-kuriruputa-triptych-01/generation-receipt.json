@@ -1,0 +1,46 @@
+{
+  "schema": "mitos-image-generation-receipt/v1",
+  "batch_id": "wayuu-kuriruputa-triptych-01",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "executor": "official_imagegen_skill_cli",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "generation_mode": "text_only_no_local_references",
+  "requested_images": 3,
+  "completed_images": 3,
+  "attempts_per_job": 1,
+  "automatic_retries_allowed": 0,
+  "concurrency": 3,
+  "output_format": "jpeg",
+  "no_augment": true,
+  "cli_exit_code": 0,
+  "cli_reported_seconds": {
+    "entrada": 89.4,
+    "acto": 36.5,
+    "huella": 38.1
+  },
+  "request_id": null,
+  "token_usage": null,
+  "cost": null,
+  "limits": "El CLI no expuso identificadores, tokens o costo. Los tiempos corresponden al log observado, no a facturación. La auditoría cuenta archivos únicos producidos, no aprobaciones.",
+  "artifacts": [
+    {
+      "act": "entrada",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/entrada.jpeg",
+      "sha256": "eb1f7eac80b28d86b28f1838c224259a15c0274dff7c25ba5251c2a8244d1f6c",
+      "prompt_sha256": "5002387a8c3ef31d7bcccb2b0e8ae22ae8834774e663ea756de9b73976caab27"
+    },
+    {
+      "act": "acto",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/acto.jpeg",
+      "sha256": "5f49b1f92d3b8669bc0ce5b97e9ede7588034314bdb686bd7fb3518364e33b2d",
+      "prompt_sha256": "a33fc1bf2764f62409b6cd25ff6f322340c3349b3b233eb756e8eee19a4de2d5"
+    },
+    {
+      "act": "huella",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/huella.jpeg",
+      "sha256": "cc7bc5281e31122948dae5da8636807026344109f93bea29a69aa54ec607c34e",
+      "prompt_sha256": "e4309f59750601228ef7e75f6f791511af6e771e63903fd09bd759b2cf652116"
+    }
+  ]
+}

@@ -1,0 +1,852 @@
+{
+  "id": "huitaca-b1a-2s-v2",
+  "status": "in_progress",
+  "duration_seconds": 2,
+  "fps": 12,
+  "planned_exposures": 24,
+  "planned_new_frames": 23,
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "size": "1024x1536",
+  "output_format": "png",
+  "source": {
+    "path": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/keyframes/b1a.crop-9x16.jpg",
+    "sha256": "dc17ab1ee6a065e471411734354825b0038919412470a8926bfad8677953e8af",
+    "script_path": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/bloques.json",
+    "script_sha256": "0f47fe0feea86005ede1b44323d143697b55c898450bfc589d8796f7d7f5b788",
+    "line": "Después del paso del maestro llegó una mujer que caminaba de noche."
+  },
+  "storyboard_source": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/muiscas/videos/huitaca/stop-motion-b1a/storyboard-v2/storyboard.json",
+  "storyboard_source_sha256": "46f6672daf9f592ab9d53b1722ddb999fbf9e47263fac39a82776f060006f777",
+  "action": "Two deliberate alternating steps: B in the first second, A in the second.",
+  "method": "Sequential reviewed unmasked GPT edits of a fixed enlarged crop at high quality; accepted local region recomposited over the original using a fixed feathered mask. No temporal interpolation or repeated frames.",
+  "crop_xywh": [
+    408,
+    896,
+    256,
+    384
+  ],
+  "working_crop_size": [
+    1024,
+    1536
+  ],
+  "edit_mask": "edit-mask.png",
+  "composite_mask": "composite-mask.png",
+  "frames": [
+    {
+      "index": 1,
+      "start_seconds": 0.0,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "Original b1a, unchanged.",
+      "action": "Use the original b1a photograph, unchanged.",
+      "status": "accepted_source",
+      "frame_file": "frames/frame-01.png",
+      "accepted_crop": "accepted-crops/frame-01.png",
+      "phase_es": "Keyframe original"
+    },
+    {
+      "index": 2,
+      "start_seconds": 0.08333333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "Transfer weight onto A; B's heel rises slightly.",
+      "action": "Transfer her weight onto foot A. Lift only the heel of trailing foot B a little, leaving its toes on the same road contact point. A stays planted.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-02.png",
+      "accepted_crop": "accepted-crops/frame-02.png",
+      "prompt_file": "prompts/frame-02-a02.txt",
+      "prompt_sha256": "6b5aa6f57c1f6fa2824759778f771e736b9b15bd9c874fefaddf228165c9c1ee",
+      "candidate": "candidates/frame-02-a02.png",
+      "candidate_sha256": "12903f31ffd410127662a5ec98755d088d1da865536d320ed3c04a9873b045ee",
+      "frame_sha256": "d9ca51a379a44b02183b05da99ba7454bc11aad65ee5789c257b634215371079",
+      "accepted_crop_sha256": "c93d8d548613ac3efec6ea994239877e59439e3611824dc05fefae2a092c1697",
+      "review_note": "Identity, scale, mantle and head preserved. A remains at original contact; B heel and ankle lift slightly. Accepted after rejecting the reconstructed a01 candidate.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-01.png",
+          "sha256": "52fb689372531792d09f5dcb6a0a258bb974211def6aa7246f4e8903131c814d"
+        }
+      ],
+      "phase_es": "Peso sobre A; sube el talón de B"
+    },
+    {
+      "index": 3,
+      "start_seconds": 0.16666666666666666,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B's toe releases from the road.",
+      "action": "Lift the toes of trailing foot B off the road. A still carries her weight at the same contact point. A small visible gap must appear under B.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-03.png",
+      "accepted_crop": "accepted-crops/frame-03.png",
+      "prompt_file": "prompts/frame-03.txt",
+      "prompt_sha256": "cda1ed11eb9550bb83ffc1c6b1c7d7a63c2c853a1b055fbb3f44ab89036ac64c",
+      "candidate": "candidates/frame-03-a01.png",
+      "candidate_sha256": "fa535fd460bc23c22dd157e6d0ea22fe02e01c85351f680143e804d6ed96a43d",
+      "frame_sha256": "9f6a17394b5aa8bcbf75e9984971b7c26ead8eb4076066908b3360e6b1ee4feb",
+      "accepted_crop_sha256": "3e9e5e2d984a3520f3cd9c311f5add3df5fcb9f8d09585842fecfcaa719d18ff",
+      "review_note": "B toes now clear the road; A remains planted. Face, garment and body scale remain consistent with the anchor.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-02.png",
+          "sha256": "c93d8d548613ac3efec6ea994239877e59439e3611824dc05fefae2a092c1697"
+        },
+        {
+          "path": "accepted-crops/frame-01.png",
+          "sha256": "52fb689372531792d09f5dcb6a0a258bb974211def6aa7246f4e8903131c814d"
+        }
+      ],
+      "phase_es": "Despegue de B"
+    },
+    {
+      "index": 4,
+      "start_seconds": 0.25,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B's knee bends and begins the forward swing.",
+      "action": "Bend the knee of leg B and start swinging B forward, still behind the supporting leg. B is clearly airborne; A stays planted.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-04.png",
+      "accepted_crop": "accepted-crops/frame-04.png",
+      "prompt_file": "prompts/frame-04.txt",
+      "prompt_sha256": "587922f417fa14066af75d59352963b1b25bd2be92bb842671d5053cc6c53378",
+      "candidate": "candidates/frame-04-a01.png",
+      "candidate_sha256": "08939b131fdeb71318ec4a685609c899a8b80f20c7968afeda968cb25e37076a",
+      "frame_sha256": "b743a7b864efcb087d92fd59eefc009376304cb74816e4ce37a3bc5893980d1d",
+      "accepted_crop_sha256": "d80360ad3b5fedaa135dc5615334fd8b80ae6749d13cb2f4f5a6a254136bddcc",
+      "review_note": "B knee bends and foot is clearly airborne behind A. A contact, face, head size and mantle identity are preserved.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-03.png",
+          "sha256": "3e9e5e2d984a3520f3cd9c311f5add3df5fcb9f8d09585842fecfcaa719d18ff"
+        },
+        {
+          "path": "accepted-crops/frame-01.png",
+          "sha256": "52fb689372531792d09f5dcb6a0a258bb974211def6aa7246f4e8903131c814d"
+        }
+      ],
+      "phase_es": "Flexión de B"
+    },
+    {
+      "index": 5,
+      "start_seconds": 0.3333333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B moves forward toward the supporting leg.",
+      "action": "Bring the raised foot B farther forward toward leg A, without yet passing A. Keep the supporting foot A fixed against the same stones.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-05.png",
+      "accepted_crop": "accepted-crops/frame-05.png",
+      "prompt_file": "prompts/frame-05-a02.txt",
+      "prompt_sha256": "01c81ef4ab93e5a062b007eeff2af6dc82a2aa1e45e2c7f5d594754b995ac906",
+      "candidate": "candidates/frame-05-a02.png",
+      "candidate_sha256": "89fdadfa9586590701a7730f2217a4de24882228f47d9ca10418e961ac3d5663",
+      "frame_sha256": "c48d777120aa7211b9fe77a57400af95e7474f1112c2cf88d72d3192c826cef2",
+      "accepted_crop_sha256": "6a7672b15554b0ebb7b34adfdb486498a7c3d14aa3ca6b97f4ac50ced6334081",
+      "review_note": "Retry keeps B airborne and advances it toward the supporting leg without an early landing. A contact and original identity remain stable.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-04.png",
+          "sha256": "d80360ad3b5fedaa135dc5615334fd8b80ae6749d13cb2f4f5a6a254136bddcc"
+        },
+        {
+          "path": "accepted-crops/frame-01.png",
+          "sha256": "52fb689372531792d09f5dcb6a0a258bb974211def6aa7246f4e8903131c814d"
+        }
+      ],
+      "phase_es": "Avance de B"
+    },
+    {
+      "index": 6,
+      "start_seconds": 0.4166666666666667,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B reaches the passing position under the pelvis.",
+      "action": "Bring foot B into the passing position beneath her pelvis, beside the supporting leg. B stays above the road; both legs remain distinct.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-06.png",
+      "accepted_crop": "accepted-crops/frame-06.png",
+      "prompt_file": "prompts/frame-06.txt",
+      "prompt_sha256": "62215ee0de07fb60c18519cca883f5ac72576a0494ce77e51d8961fd09993bf6",
+      "pose_guide_head_y": 285,
+      "candidate": "candidates/frame-06-a01.png",
+      "candidate_sha256": "dd66f3bb1ab93a12d077b0a74feca34ab763912781699d26e8916d24b19b8997",
+      "frame_sha256": "2bb4540cfaa3d8371c06a3518e076283ea78e76dad26aa493503512e4b45f325",
+      "accepted_crop_sha256": "a25ea72af264204eef4566ae3244003d62170498b253102eb1fde09a6cc1bcf9",
+      "review_note": "B is raised beside the support leg under the pelvis; A stays planted. Minor arm and mantle response, stable face and proportions.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-05.png",
+          "sha256": "6a7672b15554b0ebb7b34adfdb486498a7c3d14aa3ca6b97f4ac50ced6334081"
+        },
+        {
+          "path": "accepted-crops/frame-01.png",
+          "sha256": "52fb689372531792d09f5dcb6a0a258bb974211def6aa7246f4e8903131c814d"
+        }
+      ],
+      "phase_es": "B pasa junto al apoyo"
+    },
+    {
+      "index": 7,
+      "start_seconds": 0.5,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B moves beyond A toward the camera.",
+      "action": "Advance the raised foot B beyond A toward the camera. B must now visibly pass the supporting foot in depth. A stays planted.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-07.png",
+      "accepted_crop": "accepted-crops/frame-07.png",
+      "prompt_file": "prompts/frame-07.txt",
+      "prompt_sha256": "d4bcbef59a2535068784073099521437e540755aaf277f8b1e7eced08c0c137e",
+      "pose_guide_head_y": 294,
+      "candidate": "candidates/frame-07-a01.png",
+      "candidate_sha256": "1d5c8b0c8e673416dcf7cc5916a8c95faecae64d81f7a1902e0f032cfaf74a25",
+      "frame_sha256": "006429fa78f9b11b774b2e8343761c9199f5a4e9860563bf1fb2435b7a910ed6",
+      "accepted_crop_sha256": "711eedb1b09c3a2bed914dbe0a59e9a99617da76f99173e8e8149d63fec47b70",
+      "review_note": "B swings forward with a raised sole oriented toward landing, instead of repeating the hanging rear-foot pose. A remains planted; face and body scale consistent.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-06.png",
+          "sha256": "a25ea72af264204eef4566ae3244003d62170498b253102eb1fde09a6cc1bcf9"
+        },
+        {
+          "path": "accepted-crops/frame-01.png",
+          "sha256": "52fb689372531792d09f5dcb6a0a258bb974211def6aa7246f4e8903131c814d"
+        }
+      ],
+      "phase_es": "B supera a A"
+    },
+    {
+      "index": 8,
+      "start_seconds": 0.5833333333333334,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B's lower leg extends, heel approaching the path.",
+      "action": "Extend the lower leg B forward and lower its heel toward the road, with its toes slightly raised. B has not touched down yet. A remains at its old contact.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-08.png",
+      "accepted_crop": "accepted-crops/frame-08.png",
+      "prompt_file": "prompts/frame-08.txt",
+      "prompt_sha256": "d1768c79be432bb8050f58111b19eaecde3489ce7393207ddbf7bab3b90341ad",
+      "pose_guide_head_y": 303,
+      "candidate": "candidates/frame-08-a01.png",
+      "candidate_sha256": "f8393ed314658edb1f2ef5f054cfa5b4c846becdfd7ce9ac45fd5645949fc7c1",
+      "frame_sha256": "a4e1fe6f257e55aeed8e9f9837b717eb8d268c45460b5b1ff6d08090a32fe206",
+      "accepted_crop_sha256": "0ac7783d31985aacd5c9746d0f3ac5a1b5737ba32427956688d8b92d7f1cecef",
+      "review_note": "B extends toward the camera with toes raised and sole visible before heel landing. A remains planted. Identity and mantle remain recognizable; numerical guide is approximate.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-07.png",
+          "sha256": "711eedb1b09c3a2bed914dbe0a59e9a99617da76f99173e8e8149d63fec47b70"
+        },
+        {
+          "path": "accepted-crops/frame-01.png",
+          "sha256": "52fb689372531792d09f5dcb6a0a258bb974211def6aa7246f4e8903131c814d"
+        }
+      ],
+      "phase_es": "Extensión de B"
+    },
+    {
+      "index": 9,
+      "start_seconds": 0.6666666666666666,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B's heel makes the new contact ahead of A.",
+      "action": "Place the heel of B on the road ahead of A. Keep its toes slightly lifted for this contact pose. This is brief double support; the forward foot has changed.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-09.png",
+      "accepted_crop": "accepted-crops/frame-09.png",
+      "prompt_file": "prompts/frame-09-a03.txt",
+      "prompt_sha256": "fafc69c2a6cb4d1675d8d87aa43dfc1e99283f4308ed7c2913e4cdf71a0f7c94",
+      "pose_guide_head_y": 316,
+      "generation_inputs_override": [
+        "accepted-crops/frame-08.png"
+      ],
+      "candidate": "candidates/frame-09-a03.png",
+      "candidate_sha256": "655866ef3da05045d13b1aed54940bbd3fa5af298320cb8f8587d412681f73f8",
+      "frame_sha256": "fe97c21514301f0d600fff244c05a66154060a4cb5d05b959df7a20e48b68fa8",
+      "accepted_crop_sha256": "382b3d1010c3733edce2ee1b9f62438bac541a5a9061c5825262454c8394f257",
+      "review_note": "B heel now lands visibly ahead and lower in the image than planted A, with toes lifted. Some mantle folds change; face, gaze and figure scale remain consistent.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-08.png",
+          "sha256": "0ac7783d31985aacd5c9746d0f3ac5a1b5737ba32427956688d8b92d7f1cecef"
+        }
+      ],
+      "phase_es": "Contacto de B"
+    },
+    {
+      "index": 10,
+      "start_seconds": 0.75,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "B's sole lowers to the road.",
+      "action": "Lower the sole of B fully onto the road ahead of A. A remains behind at its previous contact. B is now unmistakably the leading foot.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-10.png",
+      "accepted_crop": "accepted-crops/frame-10.png",
+      "prompt_file": "prompts/frame-10.txt",
+      "prompt_sha256": "004550cc7c30908809a5dd780e87189396d00ba1809bb1b6d27d4be98a73c93b",
+      "pose_guide_head_y": 325,
+      "generation_inputs_override": [
+        "accepted-crops/frame-09.png"
+      ],
+      "phase_es": "Planta de B",
+      "candidate": "candidates/frame-10-a01.png",
+      "candidate_sha256": "5b87a4b99db8bccd3cfb749d63db6de53ff401a89cd9a0ffe47539aa438a7854",
+      "frame_sha256": "7e035271ca54a173d93d566e58c9127c69bc12918e63419f17f9fe78da08992d",
+      "accepted_crop_sha256": "639cb99b4672236988753765672737da4a737f7b8fb42d5fa199735a074d026b",
+      "review_note": "B sole is now flat on the road ahead of A, with visible heel-to-sole transition. Face and scale stable; mantle folds show modest variation.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-09.png",
+          "sha256": "382b3d1010c3733edce2ee1b9f62438bac541a5a9061c5825262454c8394f257"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "start_seconds": 0.8333333333333334,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "Weight moves onto B; A's heel begins to lift.",
+      "action": "Transfer her weight onto planted foot B. Raise the heel of trailing A slightly, keeping A toes in contact and the new B contact fixed.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-11.png",
+      "accepted_crop": "accepted-crops/frame-11.png",
+      "prompt_file": "prompts/frame-11.txt",
+      "prompt_sha256": "dd7ba9dff61cd13d9a7ae322c872416df482cf101dbf480e8f7b45cfb4f03b33",
+      "pose_guide_head_y": 330,
+      "generation_inputs_override": [
+        "accepted-crops/frame-10.png"
+      ],
+      "phase_es": "Peso sobre B",
+      "candidate": "candidates/frame-11-a01.png",
+      "candidate_sha256": "3538f72cefd27c097a4e485c1b277645d6f575be167fcbb63979b11050c11f1b",
+      "frame_sha256": "f214140df69c526f449752bf4be5949cff08049076e9a9e3ee8c820fdf43d555",
+      "accepted_crop_sha256": "02a49e305eb4c044bcc9f6c75ee1d930b5bd9ea6e1509bbbed856056ada60fd8",
+      "review_note": "B stays planted ahead while A heel rises behind; a small weight transfer is visible. Some cloth texture and local color variation remain for final review.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-10.png",
+          "sha256": "639cb99b4672236988753765672737da4a737f7b8fb42d5fa199735a074d026b"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "start_seconds": 0.9166666666666666,
+      "duration_seconds": 0.08333333333333333,
+      "step": 1,
+      "phase": "Settle over B with a slight knee bend.",
+      "action": "Settle gently over foot B with a small bend of the supporting knee. A trails on its toes. Complete this single step without beginning a second leg swing.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-12.png",
+      "accepted_crop": "accepted-crops/frame-12.png",
+      "prompt_file": "prompts/frame-12.txt",
+      "prompt_sha256": "382f72692462d30bf2fc34f60f409540e020a841510db4bbdf03c20803aebace",
+      "pose_guide_head_y": 330,
+      "generation_inputs_override": [
+        "accepted-crops/frame-11.png"
+      ],
+      "phase_es": "Asentamiento sobre B",
+      "candidate": "candidates/frame-12-a01.png",
+      "candidate_sha256": "70fc7fa735a793d6689f5382ae8b664be321f85fc6c8412891ef6b87eb937d1d",
+      "frame_sha256": "a7c01d868bf538f7c66d1aa57cb21a0d2b2df0a8e7376d49e2463c0af71eb039",
+      "accepted_crop_sha256": "5e6f0a616787ce4dcc8515bb3dd15a8690732466b1b7d869ab884b5c039b7261",
+      "review_note": "Subtle settling over planted B, with A still trailing and heel released. The pause is small; cloth shading changes more than torso position.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-11.png",
+          "sha256": "02a49e305eb4c044bcc9f6c75ee1d930b5bd9ea6e1509bbbed856056ada60fd8"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "start_seconds": 1.0,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Apoyo sobre B",
+      "action": "Keep foot B planted in front. Continue transferring weight over B and raise the trailing A heel a little farther; A toes still touch the old contact point.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-13.png",
+      "accepted_crop": "accepted-crops/frame-13.png",
+      "prompt_file": "prompts/frame-13.txt",
+      "prompt_sha256": "96aeaa2efe37475869e57fbefec8c7719f4be58dd3bef2c55588940f76982338",
+      "pose_guide_head_y": 334,
+      "generation_inputs_override": [
+        "accepted-crops/frame-12.png"
+      ],
+      "candidate": "candidates/frame-13-a01.png",
+      "candidate_sha256": "f6a2b19e0efd197469b44e858f70579919aa162cca9f656b0588e67d6ffe1663",
+      "frame_sha256": "4dcf6539503faa9354abaa5f86635e42892509656c5556124ed30f0f8b480942",
+      "accepted_crop_sha256": "49a921e249cd80326af6de1ea42f5ddce306a08b726e326ce767d07579094584",
+      "review_note": "B remains the forward support. A lifts slightly farther behind, approaching toe release; gaze tilts subtly upward and will be checked in the final sequence.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-12.png",
+          "sha256": "5e6f0a616787ce4dcc8515bb3dd15a8690732466b1b7d869ab884b5c039b7261"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "start_seconds": 1.0833333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Despegue de A",
+      "action": "Lift the trailing foot A toes off the road. B remains planted at its new front contact point. A is now visibly airborne behind B.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-14.png",
+      "accepted_crop": "accepted-crops/frame-14.png",
+      "prompt_file": "prompts/frame-14.txt",
+      "prompt_sha256": "e78bbb873f26059341acd5be9ff08915d17a5f2b4a8101eb6429fd324baed429",
+      "pose_guide_head_y": 338,
+      "generation_inputs_override": [
+        "accepted-crops/frame-13.png"
+      ],
+      "candidate": "candidates/frame-14-a01.png",
+      "candidate_sha256": "83b31e7c85597fd94371588aa1293aec5f7b51f61eb9f412f2900ae892df1e0d",
+      "frame_sha256": "966db8e20ce73080b5c18807814229d96422513a5d9fb10f4c79df2d09a29a3f",
+      "accepted_crop_sha256": "233402be85b394925852e4f358902270c321ccd87aea15498617bb1ddd76200f",
+      "review_note": "A toes are clearly off the road with a visible gap, while B sole holds its forward contact. Face remains recognizable, with slight expression drift.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-13.png",
+          "sha256": "49a921e249cd80326af6de1ea42f5ddce306a08b726e326ce767d07579094584"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "start_seconds": 1.1666666666666667,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Flexión de A",
+      "action": "Bend the knee of trailing leg A and begin swinging A forward. B continues supporting her at the same ground contact.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-15.png",
+      "accepted_crop": "accepted-crops/frame-15.png",
+      "prompt_file": "prompts/frame-15.txt",
+      "prompt_sha256": "9a31a0ef9cdf3a64aee4296dd43fc03736356562acdffb61d328aff695a38078",
+      "pose_guide_head_y": 342,
+      "generation_inputs_override": [
+        "accepted-crops/frame-14.png"
+      ],
+      "candidate": "candidates/frame-15-a01.png",
+      "candidate_sha256": "2fb2c30e942e4d5573b14986f14303295bd576f3db5a144d0e20c64cc22bd6dc",
+      "frame_sha256": "49e8e79e01f374d7531e509ffca559326958da0ac12075f806244c522c68bad7",
+      "accepted_crop_sha256": "8784293a2ebc264830c2322f0243c9511e94e94ced395c67e247e50880b3e1b8",
+      "review_note": "A knee visibly bends and its airborne foot rises, with B staying planted. The lifted hem responds to the knee without extra limbs.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-14.png",
+          "sha256": "233402be85b394925852e4f358902270c321ccd87aea15498617bb1ddd76200f"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "start_seconds": 1.25,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Avance de A",
+      "action": "Move the raised A foot forward toward the supporting leg B. Keep A behind B for this exposure; keep B planted.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-16.png",
+      "accepted_crop": "accepted-crops/frame-16.png",
+      "prompt_file": "prompts/frame-16.txt",
+      "prompt_sha256": "71308ef0ef90a9b0353f191db98cd0034c983ffda17d4af0a75941b3aec32b0d",
+      "pose_guide_head_y": 347,
+      "generation_inputs_override": [
+        "accepted-crops/frame-15.png"
+      ],
+      "candidate": "candidates/frame-16-a01.png",
+      "candidate_sha256": "3394e0260d252fce302b2021701b65a1bd5cb821b95349911010b688f6660043",
+      "frame_sha256": "30d3d3f4ca4f1f28a86d0bd645fdd72e499797e6986abaa450cfda6b54cba41f",
+      "accepted_crop_sha256": "df187346cb81dbb51137eff7e71b3d2099edc0270f60459c1df66e99b0ce0a7a",
+      "review_note": "A moves forward and slightly downward while remaining airborne; B contact is stable. Knee and hem shift together. The foot height differs from the approximate pose guide.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-15.png",
+          "sha256": "8784293a2ebc264830c2322f0243c9511e94e94ced395c67e247e50880b3e1b8"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "start_seconds": 1.3333333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "A se acerca al apoyo",
+      "action": "Bring the raised A ankle closer to B under the pelvis, with a small knee bend. Keep the two legs separate and B fixed to the road.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-17.png",
+      "accepted_crop": "accepted-crops/frame-17.png",
+      "prompt_file": "prompts/frame-17.txt",
+      "prompt_sha256": "4f1b79e06fb67e5583f887c870274d205890142ee2f16b7dab0f29e0ec498401",
+      "pose_guide_head_y": 352,
+      "generation_inputs_override": [
+        "accepted-crops/frame-16.png"
+      ],
+      "candidate": "candidates/frame-17-a01.png",
+      "candidate_sha256": "6991e8e8728d9c9df64f5ef66f5e7e035c5a8b47702f12cda0fbace4708fa614",
+      "frame_sha256": "a4eb956b91e3e39e841ff5f32fbc90ba28be357bf632ce9b84bac889fb869426",
+      "accepted_crop_sha256": "94a1ce7b1146d10792b1c2f578cba74ae432e66bf9acec1df2213cb64c90cfce",
+      "review_note": "A advances closer to the supporting leg, its toes still above the road. B stays flat; body translation is smaller than the planned guide.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-16.png",
+          "sha256": "df187346cb81dbb51137eff7e71b3d2099edc0270f60459c1df66e99b0ce0a7a"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "start_seconds": 1.4166666666666667,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Paso de A junto a B",
+      "action": "Bring foot A into the passing position beside planted B, toes clear of the road. The supporting foot B does not slide.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-18.png",
+      "accepted_crop": "accepted-crops/frame-18.png",
+      "prompt_file": "prompts/frame-18.txt",
+      "prompt_sha256": "e4c34c8219f78631cbb832a461d4adb31eaa61efe3a00388721492e7d3400902",
+      "pose_guide_head_y": 360,
+      "generation_inputs_override": [
+        "accepted-crops/frame-17.png"
+      ],
+      "candidate": "candidates/frame-18-a01.png",
+      "candidate_sha256": "0349a49b09aa4e478c14ff63191e167ee6cc2ca3ebfdd913cd812b92abc386b8",
+      "frame_sha256": "afb178d6265845d4c6226dc68c7a578676b126f042264e75b41631b78be22bcd",
+      "accepted_crop_sha256": "b6f2a2b842f2d684c3f38c719c4f9bfe72a74d66008bbde37c4ba94e8d6e02be",
+      "review_note": "A reaches the passing phase beside B with its lower leg extended and foot still airborne. Support remains B. Hair and cloth show small regenerated-detail changes.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-17.png",
+          "sha256": "94a1ce7b1146d10792b1c2f578cba74ae432e66bf9acec1df2213cb64c90cfce"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "start_seconds": 1.5,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "A supera a B",
+      "action": "Swing foot A beyond B toward the camera. A must visibly pass B in depth. Keep B at its contact point.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-19.png",
+      "accepted_crop": "accepted-crops/frame-19.png",
+      "prompt_file": "prompts/frame-19.txt",
+      "prompt_sha256": "aea76f228698861ad1b1995574e0110f505257bf731544d35d5842122a2e9f1f",
+      "pose_guide_head_y": 368,
+      "generation_inputs_override": [
+        "accepted-crops/frame-18.png"
+      ],
+      "candidate": "candidates/frame-19-a01.png",
+      "candidate_sha256": "e997edb4ee560eacef1c09caef261758de5de991c4f22590bb73c65cd5d02f45",
+      "frame_sha256": "9ef99ea3af03d040b646419dad6a47ecdcff6dfca1525dba57d9e425252e6b07",
+      "accepted_crop_sha256": "e5d9e36fac657c6e90d4efe2e67d3fd6a4599b03e53a4c864d459880ff9ef2e5",
+      "review_note": "A swings toward the camera with its sole turning forward and toes raised, beside the stationary B contact. It is approaching the forward landing rather than fully planted.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-18.png",
+          "sha256": "b6f2a2b842f2d684c3f38c719c4f9bfe72a74d66008bbde37c4ba94e8d6e02be"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "start_seconds": 1.5833333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Extensión de A",
+      "action": "Extend the lower leg A forward and lower its heel toward the road ahead of B. A has not landed yet; B still supports her.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-20.png",
+      "accepted_crop": "accepted-crops/frame-20.png",
+      "prompt_file": "prompts/frame-20.txt",
+      "prompt_sha256": "fa5f8f97f0b014dcab69471623e2359726b56a3e6e84b83e19436c1d6a7bd955",
+      "pose_guide_head_y": 376,
+      "generation_inputs_override": [
+        "accepted-crops/frame-19.png"
+      ],
+      "candidate": "candidates/frame-20-a01.png",
+      "candidate_sha256": "93bcd8ed4f53273bd534f8ce4a467fd232a762907f64109de472367ca41ee2c5",
+      "frame_sha256": "8d170a2bf58ad83810addeb866331521401132f5a38d51c99e987d574ab1b9c1",
+      "accepted_crop_sha256": "01574c643eb2a87e7510a1e26cf7eff3480ce492282574ff23f4306d222e945d",
+      "review_note": "A extends beyond B with raised toes and a small remaining gap beneath the heel. B remains the support. Forward displacement is modest rather than the full numerical guide.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-19.png",
+          "sha256": "e5d9e36fac657c6e90d4efe2e67d3fd6a4599b03e53a4c864d459880ff9ef2e5"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "start_seconds": 1.6666666666666667,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Contacto de A",
+      "action": "Place the A heel on the path ahead of B. Keep A toes slightly raised at first contact. Both legs are now in brief double support.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-21.png",
+      "accepted_crop": "accepted-crops/frame-21.png",
+      "prompt_file": "prompts/frame-21.txt",
+      "prompt_sha256": "742c62e55120688fd92b2d2f70a59a3ba621a50ec06faa85bf1631960aaf54fd",
+      "pose_guide_head_y": 382,
+      "generation_inputs_override": [
+        "accepted-crops/frame-20.png"
+      ],
+      "candidate": "candidates/frame-21-a01.png",
+      "candidate_sha256": "a3e750a2690a977663fc78b4999fc41ab29401b102c612c5f4af0d5ccbfc8056",
+      "frame_sha256": "6a0d11468480084f93c48d5163086793ec3dad872e097b0c646ed1b6464db4b7",
+      "accepted_crop_sha256": "939c8dc4f95629f6b9237cbb19ca9d056ae00664b8b50e127ff30943f12fc06b",
+      "review_note": "A heel reaches a new contact in front of B while its toes remain lifted. B retains rear support. The stride is small; original facial identity will be held during final composition.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-20.png",
+          "sha256": "01574c643eb2a87e7510a1e26cf7eff3480ce492282574ff23f4306d222e945d"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "start_seconds": 1.75,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Planta de A",
+      "action": "Lower the A sole fully to the road ahead of B. A is now the leading foot and B trails. Preserve both identities and the same path.",
+      "status": "accepted_for_test",
+      "frame_file": "frames/frame-22.png",
+      "accepted_crop": "accepted-crops/frame-22.png",
+      "prompt_file": "prompts/frame-22.txt",
+      "prompt_sha256": "8be3bf1c85d7ebd451fa10d06afed587b240e2d234217057423d0baa03d49197",
+      "pose_guide_head_y": 387,
+      "generation_inputs_override": [
+        "accepted-crops/frame-21.png"
+      ],
+      "candidate": "candidates/frame-22-a01.png",
+      "candidate_sha256": "3f07b8cbad34a3b4cfd964a4a958c3c199ea121a10a513f630c01b53a882916d",
+      "frame_sha256": "d1596583a8ab63f66655fe744eb1077580fe5e68cbb95ddade949532a08f5ad8",
+      "accepted_crop_sha256": "b9c6e9bad159c638cb4764820e342c58b8c3eccb9241b7c928e478b5d0dceb8e",
+      "review_note": "A sole is clearly flat in front of B, completing the second heel-to-sole transition. B is behind and beginning to release weight.",
+      "inputs": [
+        {
+          "path": "accepted-crops/frame-21.png",
+          "sha256": "939c8dc4f95629f6b9237cbb19ca9d056ae00664b8b50e127ff30943f12fc06b"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "start_seconds": 1.8333333333333333,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Peso sobre A",
+      "action": "Transfer weight onto planted A. Raise the trailing B heel gently while B toes still touch the old contact point. A stays fixed.",
+      "status": "planned",
+      "frame_file": "frames/frame-23.png",
+      "accepted_crop": "accepted-crops/frame-23.png",
+      "prompt_file": "prompts/frame-23.txt",
+      "prompt_sha256": "702fc59839ad1fb3eb5ec135e3258a7ecf89c3500f7b0c8144909834b0022a05",
+      "pose_guide_head_y": 390,
+      "generation_inputs_override": [
+        "accepted-crops/frame-22.png"
+      ]
+    },
+    {
+      "index": 24,
+      "start_seconds": 1.9166666666666667,
+      "duration_seconds": 0.08333333333333333,
+      "step": 2,
+      "phase": "Asentamiento final",
+      "action": "Settle over planted A with a slight knee bend and restrained arm counterbalance. B trails on its toes. Finish the second step, ready to keep walking.",
+      "status": "planned",
+      "frame_file": "frames/frame-24.png",
+      "accepted_crop": "accepted-crops/frame-24.png",
+      "prompt_file": "prompts/frame-24.txt",
+      "prompt_sha256": "b557f59361c4dd62c374d32f693ff99e9abfeab2d531e02c331b5dbb6660c293",
+      "pose_guide_head_y": 390,
+      "generation_inputs_override": [
+        "accepted-crops/frame-23.png"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "frame": 2,
+      "candidate": "candidates/frame-02-a01.png",
+      "decision": "rejected",
+      "quality": "medium",
+      "mask_used": true,
+      "reason": "Large figure enlargement, different face and garment border; fails source identity and scale. Not used as an input."
+    },
+    {
+      "frame": 2,
+      "candidate": "candidates/frame-02-a02.png",
+      "decision": "accepted_for_test",
+      "reason": "Identity, scale, mantle and head preserved. A remains at original contact; B heel and ankle lift slightly. Accepted after rejecting the reconstructed a01 candidate."
+    },
+    {
+      "frame": 3,
+      "candidate": "candidates/frame-03-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B toes now clear the road; A remains planted. Face, garment and body scale remain consistent with the anchor."
+    },
+    {
+      "frame": 4,
+      "candidate": "candidates/frame-04-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B knee bends and foot is clearly airborne behind A. A contact, face, head size and mantle identity are preserved."
+    },
+    {
+      "frame": 5,
+      "candidate": "candidates/frame-05-a01.png",
+      "decision": "rejected",
+      "reason": "B lowered too early and the airborne swing was not unambiguous. Retry from accepted frame 04."
+    },
+    {
+      "frame": 5,
+      "candidate": "candidates/frame-05-a02.png",
+      "decision": "accepted_for_test",
+      "reason": "Retry keeps B airborne and advances it toward the supporting leg without an early landing. A contact and original identity remain stable."
+    },
+    {
+      "frame": 6,
+      "candidate": "candidates/frame-06-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B is raised beside the support leg under the pelvis; A stays planted. Minor arm and mantle response, stable face and proportions."
+    },
+    {
+      "frame": 7,
+      "candidate": "candidates/frame-07-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B swings forward with a raised sole oriented toward landing, instead of repeating the hanging rear-foot pose. A remains planted; face and body scale consistent."
+    },
+    {
+      "frame": 8,
+      "candidate": "candidates/frame-08-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B extends toward the camera with toes raised and sole visible before heel landing. A remains planted. Identity and mantle remain recognizable; numerical guide is approximate."
+    },
+    {
+      "frame": 9,
+      "candidate": "candidates/frame-09-a01.png",
+      "decision": "rejected",
+      "reason": "The attempted heel contact remained behind the support foot; no clear new forward contact."
+    },
+    {
+      "frame": 9,
+      "candidate": "candidates/frame-09-a02.png",
+      "decision": "rejected",
+      "reason": "Still no visible forward heel contact; foot remained near its previous hovering position."
+    },
+    {
+      "frame": 9,
+      "candidate": "candidates/frame-09-a03.png",
+      "decision": "accepted_for_test",
+      "reason": "B heel now lands visibly ahead and lower in the image than planted A, with toes lifted. Some mantle folds change; face, gaze and figure scale remain consistent."
+    },
+    {
+      "frame": 10,
+      "candidate": "candidates/frame-10-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B sole is now flat on the road ahead of A, with visible heel-to-sole transition. Face and scale stable; mantle folds show modest variation."
+    },
+    {
+      "frame": 11,
+      "candidate": "candidates/frame-11-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B stays planted ahead while A heel rises behind; a small weight transfer is visible. Some cloth texture and local color variation remain for final review."
+    },
+    {
+      "frame": 12,
+      "candidate": "candidates/frame-12-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "Subtle settling over planted B, with A still trailing and heel released. The pause is small; cloth shading changes more than torso position."
+    },
+    {
+      "frame": 13,
+      "candidate": "candidates/frame-13-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "B remains the forward support. A lifts slightly farther behind, approaching toe release; gaze tilts subtly upward and will be checked in the final sequence."
+    },
+    {
+      "frame": 14,
+      "candidate": "candidates/frame-14-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A toes are clearly off the road with a visible gap, while B sole holds its forward contact. Face remains recognizable, with slight expression drift."
+    },
+    {
+      "frame": 15,
+      "candidate": "candidates/frame-15-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A knee visibly bends and its airborne foot rises, with B staying planted. The lifted hem responds to the knee without extra limbs."
+    },
+    {
+      "frame": 16,
+      "candidate": "candidates/frame-16-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A moves forward and slightly downward while remaining airborne; B contact is stable. Knee and hem shift together. The foot height differs from the approximate pose guide."
+    },
+    {
+      "frame": 17,
+      "candidate": "candidates/frame-17-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A advances closer to the supporting leg, its toes still above the road. B stays flat; body translation is smaller than the planned guide."
+    },
+    {
+      "frame": 18,
+      "candidate": "candidates/frame-18-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A reaches the passing phase beside B with its lower leg extended and foot still airborne. Support remains B. Hair and cloth show small regenerated-detail changes."
+    },
+    {
+      "frame": 19,
+      "candidate": "candidates/frame-19-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A swings toward the camera with its sole turning forward and toes raised, beside the stationary B contact. It is approaching the forward landing rather than fully planted."
+    },
+    {
+      "frame": 20,
+      "candidate": "candidates/frame-20-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A extends beyond B with raised toes and a small remaining gap beneath the heel. B remains the support. Forward displacement is modest rather than the full numerical guide."
+    },
+    {
+      "frame": 21,
+      "candidate": "candidates/frame-21-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A heel reaches a new contact in front of B while its toes remain lifted. B retains rear support. The stride is small; original facial identity will be held during final composition."
+    },
+    {
+      "frame": 22,
+      "candidate": "candidates/frame-22-a01.png",
+      "decision": "accepted_for_test",
+      "reason": "A sole is clearly flat in front of B, completing the second heel-to-sole transition. B is behind and beginning to release weight."
+    }
+  ],
+  "quality_experiment": {
+    "frame": 2,
+    "attempt": 2,
+    "changes": [
+      "Remove generation mask that caused full character reconstruction",
+      "Shorten to one visible heel movement",
+      "Set quality high"
+    ],
+    "reason": "Attempt 1 rejected; local edit method revised before continuing."
+  },
+  "generation_mask_used_for_accepted_frames": false,
+  "adaptations": [
+    {
+      "frame": 9,
+      "change": "Single previous accepted image after two rejected two-reference attempts. The original is kept as an external visual review reference instead of a generation input from this point, to avoid resetting the leg pose."
+    }
+  ]
+}

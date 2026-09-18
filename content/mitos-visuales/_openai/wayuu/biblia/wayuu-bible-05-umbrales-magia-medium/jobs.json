@@ -1,0 +1,118 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-05-umbrales-magia-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-05-umbrales-magia-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Lote 05 de reglas mágicas en medium. Cada modelo edita únicamente su ancla aprobada porque la continuidad material es parte de la regla: indicios de Guanurú, petrificación junto a la misma carga y piezas reversibles dentro del mismo dominio de Juyá.",
+  "jobs": [
+    {
+      "id": "guanuru__magia--regla",
+      "model_id": "guanuru__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-05-umbrales-magia-medium/prompts/guanuru__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-05-umbrales-magia-medium/guanuru__magia--regla.jpeg",
+      "prompt_sha256": "a3b0df1df0af5a4f47a6f211bd5f00fc465cca459d3bed9a4c91ab5d54d5bc97",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "guanuru__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada de la casa vacía; conservar arquitectura de tubos y tiras de papel, cámara, territorio y objetos lisos",
+          "path": "output/imagegen/wayuu/wayuu-bible-04b-umbrales-anclas-correction-medium/guanuru__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "conservar la casa exacta de la Imagen 1 y añadir sólo tres indicios pequeños y diferenciados: una manta de dormir con una segunda capa desplazada que sugiere sueño; una única mariposa de papel mate cerca de la entrada; un cuenco movido que deja visible su contorno de polvo",
+        "ningún cuerpo, figura, rostro, fantasma, silueta, monstruo, humo o equivalencia entre mariposa, sueño y Guanurú; los indicios permanecen separados y la casa sigue siendo protagonista"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "la-sed-da-los-civilizados__magia--regla",
+      "model_id": "la-sed-da-los-civilizados__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-05-umbrales-magia-medium/prompts/la-sed-da-los-civilizados__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-05-umbrales-magia-medium/la-sed-da-los-civilizados__magia--regla.jpeg",
+      "prompt_sha256": "f0b2c5f552a0ce0b1b97b90a60447867e24eb1247e749fa08b1477d4dd8e7694",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "la-sed-da-los-civilizados__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada de la carga; conservar exactamente bloques de panela, ataduras, sacos lisos, recipientes vacíos y materialidad de papel",
+          "path": "output/imagegen/wayuu/wayuu-bible-04b-umbrales-anclas-correction-medium/la-sed-da-los-civilizados__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "conservar la carga exacta de la Imagen 1 junto a dos viajeros de papel sobrios y sin rasgos faciales; mostrar una progresión horizontal única de pasos flexibles a postura detenida y volúmenes minerales de papel estratificado",
+        "la panela permanece marrón, flexible y claramente separada mientras los viajeros pierden flexibilidad; sin cadáveres, dolor gráfico, maldición racial, estatua heroica, aura, polvo mágico o luz sobrenatural"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "los-dominios-de-juya__magia--regla",
+      "model_id": "los-dominios-de-juya__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-05-umbrales-magia-medium/prompts/los-dominios-de-juya__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-05-umbrales-magia-medium/los-dominios-de-juya__magia--regla.jpeg",
+      "prompt_sha256": "f1ea4c121b5f59631393f5f0adab322f6c8e82161297218dd6203d739dd019ca",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "los-dominios-de-juya__ancla:canon"
+      ],
+      "input_references": [
+        {
+          "role": "Imagen 1: ancla aprobada del dominio; conservar los tres intervalos de papel, recorrido, agua y serranías sin añadir arquitectura",
+          "path": "output/imagegen/wayuu/wayuu-bible-04b-umbrales-anclas-correction-medium/los-dominios-de-juya__ancla--canon.jpeg",
+          "status": "DIRECTION_CANDIDATE_PASS"
+        }
+      ],
+      "safeguards": [
+        "edición con una referencia generada por este pipeline, aprobada y necesaria para continuidad entre ancla y regla mágica",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "conservar el dominio exacto de la Imagen 1 e insertar tres piezas articuladas de papel con bisagra visible: banco que al girar revela boa completa; planta que al girar revela figura humana sobria; presa animal que al girar revela figura humana sobria",
+        "cada pieza muestra anverso y reverso sin híbrido simultáneo; Juyá permanece fuera de cuadro y enseña mediante el orden espacial; sin arquitectura, mapa, palacio, ojos luminosos, aura o anatomía divina"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

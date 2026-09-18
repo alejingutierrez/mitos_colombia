@@ -1,0 +1,93 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:26:56.632Z",
+  "plan": "content/videos/wayuu/videos/ulepala/preproduccion-01/plan.json",
+  "plan_sha256": "1c64173703378d4a1e9d85a3487cf6caf70378b3efcd1e1e348f7b8646295c89",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 196,
+    "estimated_seconds": 128,
+    "generated": 0,
+    "pending": 16,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 23,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1a",
+      "prompt_file": "content/videos/wayuu/videos/ulepala/preproduccion-01/prepared-b1a-01/prompts/b1a.txt",
+      "prompt_sha256": "f24cb9cfe91f61cd19464145de1ae603308421a28f19c2ebd8f6255edc4ef991",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "triptych",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-03-entrada/entrada.jpeg",
+          "sha256": "7c43b577bfd2a529f1942610679eb9b1f2ea630a6a06b469e9168d505da4eed5",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+        },
+        {
+          "kind": "triptych",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-02-acto/acto.jpeg",
+          "sha256": "5ee538c9de77da2f95e2e8ccfa02a2117978e35cfa417890e3c47acc2bae7d46",
+          "approved": true,
+          "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+          "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+          "approved": true,
+          "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+          "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9",
+          "approved": true,
+          "role": "Fijar el modelo canónico ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "ulepala",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/companera_muerta_ulepala__identity_sheet--canon.jpeg",
+          "sha256": "79ddfb2485bdfba0e2fc8cee0ed16848749af798930f70cd33bdcd71ed7f02b0",
+          "approved": true,
+          "role": "Fijar el modelo canónico companera_muerta_ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

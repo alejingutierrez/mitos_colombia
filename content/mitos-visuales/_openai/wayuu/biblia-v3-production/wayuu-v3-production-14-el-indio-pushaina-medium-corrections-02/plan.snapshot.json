@@ -1,0 +1,238 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-14-el-indio-pushaina-medium",
+    "myth_slug": "el-indio-pushalna",
+    "model_ids": [
+      "pushaina__identity_sheet",
+      "pushaina__state_sheet",
+      "hija_pushaina__identity_sheet",
+      "kasap__identity_sheet",
+      "presencia_invisible_pushaina__presence_model",
+      "culebra_pushaina__identity_sheet",
+      "zorro_pushaina__identity_sheet",
+      "mapurito_pushaina__identity_sheet",
+      "gallinazo_pushaina__identity_sheet",
+      "ciempies_pushaina__identity_sheet",
+      "anillo_oculto_pushaina__object_sheet",
+      "ofrenda_alimento_pushaina__object_sheet",
+      "lugar_caida_pushaina__spatial_model",
+      "casa_grande_pushaina__spatial_model",
+      "cementerios_pushaina__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "design_ready"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "pushaina__identity_sheet",
+    "pushaina__state_sheet"
+  ],
+  "models": {
+    "pushaina__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Jinete que muere, retorna, habla sin cuerpo visible y declara formas animales."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Pushaina. Funcion visual: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Pushaina",
+          "funcion estable: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados declarados: jinete, retornado_visible, voz_invisible, formas_animales"
+        ],
+        "documented_features": [
+          "Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "alias documentado: Pushiana",
+          "alias documentado: Pushalna"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Pushaina. Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados autorizados: jinete, retornado_visible, voz_invisible, formas_animales",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "jinete"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "pushaina__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "pushaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Jinete que muere, retorna, habla sin cuerpo visible y declara formas animales."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Pushaina. Funcion visual: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Pushaina",
+          "funcion estable: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados declarados: jinete, retornado_visible, voz_invisible, formas_animales"
+        ],
+        "documented_features": [
+          "Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "alias documentado: Pushiana",
+          "alias documentado: Pushalna"
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Pushaina. Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+          "estados autorizados: jinete, retornado_visible, voz_invisible, formas_animales",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "historico_wayuu_segun_relato",
+          "states": [
+            "jinete",
+            "retornado_visible",
+            "voz_invisible",
+            "formas_animales"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "pushaina": {
+      "name": "Pushaina",
+      "kind": "personaje",
+      "description": "Jinete que muere en una caida desde Kasap, vuelve, permanece visible o como voz y declara varias formas animales.",
+      "aliases": [
+        "Pushiana",
+        "Pushalna"
+      ],
+      "states": [
+        "jinete",
+        "retornado_visible",
+        "voz_invisible",
+        "formas_animales"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "pushaina__identity_sheet",
+        "pushaina__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "el-indio-pushalna__ancla"
+      ],
+      "myth_refs": [
+        "el-indio-pushalna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-indio-pushalna",
+          "field": "mito",
+          "note": "Jinete que muere, retorna, habla sin cuerpo visible y declara formas animales."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1513 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "version": "preproduccion-01",
+  "slug": "los-dos-hermanos",
+  "title": "Los dos hermanos",
+  "status": "ready_for_sunburst_16_keyframes",
+  "duration": {
+    "target_seconds": 128,
+    "voice_words": 191,
+    "measured": false
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-dos-hermanos.json",
+    "content_sha256": "70cf4335b1397da54f1328ef97c76fde97ca7bf6ab1c3ec8ab58906cb49b5a5a",
+    "source_url": null,
+    "source_locator": "Relato público y expediente editorial existentes. La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+    "live_hash_verified": false,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Una hermana y un hermano practicaban con arco. Ella acertaba con mayor frecuencia, aunque en público algunos preferían elogiarlo a él.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      },
+      {
+        "id": "e2",
+        "description": "Un grupo robó parte del rebaño. El hermano salió a perseguirlo y pidió a su hermana quedarse para proteger la casa.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      },
+      {
+        "id": "e3",
+        "description": "Al anochecer regresaron el perro y la mula. El joven no caminaba con ellos: la mula llevaba su cuerpo de vuelta a la familia.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      },
+      {
+        "id": "e4",
+        "description": "La hermana preparó sus armas y siguió las huellas. Su puntería le permitió recuperar animales, pero el dolor amplió la persecución más allá de los responsables inmediatos.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      },
+      {
+        "id": "e5",
+        "description": "No mostramos las muertes. La flecha, las sombras y el ganado que vuelve bastan para señalar una represalia que creció sin reparar la pérdida.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      },
+      {
+        "id": "e6",
+        "description": "En la ranchería recibieron al hermano y prepararon el duelo. Algunos admiraron a la arquera; otros vieron nuevas deudas junto a los bienes recuperados.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      },
+      {
+        "id": "e7",
+        "description": "El perro permaneció cerca del chinchorro y la mula descansó. Su lealtad sostuvo la memoria mientras parientes de ambos lados tuvieron que hablar.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      },
+      {
+        "id": "e8",
+        "description": "La hermana fue la mejor arquera y defendió la memoria de su hermano. Su victoria, sin embargo, no lo devolvió ni cerró por sí sola el conflicto.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+      }
+    ]
+  },
+  "story_thesis": "La destreza de la hermana no vuelve justa toda represalia ni puede devolver la vida perdida.",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "palette": "Azul noche, terracota, crudo, carbón y verde seco; ámbar sólo en el velorio, sin rojo de sangre ni victoria dorada.",
+  "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "allowed_models": [
+      "gpt-image-2.5-sunburst",
+      "gpt-image-2.5-flare",
+      "gpt-image-2"
+    ],
+    "fast_iteration_model": "gpt-image-2.5-flare",
+    "legacy_fallback_model": "gpt-image-2",
+    "one_model_per_myth": true,
+    "record_exact_model_and_snapshot": true,
+    "quality": "medium",
+    "size": "864x1536",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "mode": "image_edit_with_prior_keyframes",
+    "input_images": "declared_per_keyframe_and_frozen_with_sha256"
+  },
+  "shared_scene_continuity": [
+    "Todo visible está construido con hojas mate recortadas, cantos internos, aire y sombras físicas; nunca suelo realista ni personajes modelados.",
+    "Las referencias fijan identidad, vestuario, paleta y materia, pero jamás autorizan copiar su cámara o distribución.",
+    "No repetir en keyframes adyacentes altura, escala, horizonte ni ubicación de sujetos; cada bloque cambia al menos dos variables.",
+    "La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+    "Violencia, enfermedad, duelo y transformación se muestran sin sangre, heridas, cadáveres expuestos, sexualización o triunfo espectacular."
+  ],
+  "continuity_rules": [
+    "Usar exactamente el reparto inventariado por toma y conservar identidades desde los modelos aprobados.",
+    "Desde el tercer frame, los dos antecedentes aprobados inmediatos entran primero y en orden.",
+    "Macros sólo para manos, objetos, fibras, huellas o materia; nunca para rostros.",
+    "Un descarte no alimenta ningún frame posterior; toda corrección obliga a rehacer sus descendientes si cambiaron los antecedentes.",
+    "La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente."
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-02-entrada/entrada.jpeg",
+        "sha256": "5bdabc9a4c9db28cb03e3e795b3b17f6b3008e232428d3cde56f9f790cc50247",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/acto.jpeg",
+        "sha256": "90e4946571b6a94a190d3773367f689ac0bc4c4d22f0421a77217a090a66f30c",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/huella.jpeg",
+        "sha256": "e10e3140a7d5591f5b68961376b3a85d85303682d3574b187a428cd3939b9f16",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tríptico final y modelos de Biblia V3 reutilizados con sus hashes de selección.",
+      "La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "La composición se rediseña para video y variedad de cámara; no replica los trípticos."
+    ]
+  },
+  "canonical_models": [
+    {
+      "model_id": "hermana_arquera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+      "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db"
+    },
+    {
+      "model_id": "hermana_arquera__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+      "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d"
+    },
+    {
+      "model_id": "hermano_arquera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__identity_sheet--canon.jpeg",
+      "sha256": "195e3144586c3cc2c0177cd62d3f78235560aacac02b08a3cfd9a60cbd6a3498"
+    },
+    {
+      "model_id": "perro_hermanos__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/perro_hermanos__identity_sheet--canon.jpeg",
+      "sha256": "6d0c490f2551d73e66a35e060293617a3e33e57d500900e56620cd4fd1ade25e"
+    },
+    {
+      "model_id": "mula_hermanos__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium-corrections-01/mula_hermanos__identity_sheet--canon.jpeg",
+      "sha256": "56293da02a393a52c476bc579a524e83f50875ac996650bb20bd501f92955451"
+    },
+    {
+      "model_id": "chinchorro__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+      "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "hermana",
+      "type": "person",
+      "desc": "Hermana adulta, arquera precisa, ropa completa según modelo y postura digna; no guerrera fantástica.",
+      "model_ids": [
+        "hermana_arquera__identity_sheet",
+        "hermana_arquera__state_sheet"
+      ]
+    },
+    {
+      "id": "hermano",
+      "type": "person",
+      "desc": "Hermano adulto de la arquera, vestido según modelo; vivo sólo antes de la elipsis y cubierto durante el duelo.",
+      "model_ids": [
+        "hermano_arquera__identity_sheet"
+      ]
+    },
+    {
+      "id": "arco",
+      "type": "object",
+      "desc": "Arco y flechas sencillos de caza y práctica; nunca sangre, impacto o pose celebratoria.",
+      "model_ids": []
+    },
+    {
+      "id": "rebano",
+      "type": "animal",
+      "desc": "Rebaño mixto de animales domésticos como bien familiar y motivo del conflicto; conteo no censal.",
+      "model_ids": []
+    },
+    {
+      "id": "ladrones",
+      "type": "supporting_people",
+      "desc": "Grupo distante de adultos con ropa completa, sin rasgos étnicos inventados ni muerte visible.",
+      "model_ids": []
+    },
+    {
+      "id": "perro",
+      "type": "animal",
+      "desc": "Perro doméstico leal que regresa y permanece durante el duelo.",
+      "model_ids": [
+        "perro_hermanos__identity_sheet"
+      ]
+    },
+    {
+      "id": "mula",
+      "type": "animal",
+      "desc": "Mula que devuelve el cuerpo cubierto, sin carga gráfica.",
+      "model_ids": [
+        "mula_hermanos__identity_sheet"
+      ]
+    },
+    {
+      "id": "rancheria",
+      "type": "setting",
+      "desc": "Patio familiar y viviendas sencillas de papel, corral y sendero; no fortaleza.",
+      "model_ids": []
+    },
+    {
+      "id": "chinchorro",
+      "type": "object",
+      "desc": "Chinchorro del duelo con cuerpo completamente cubierto o vacío según el plano.",
+      "model_ids": [
+        "chinchorro__object_sheet"
+      ]
+    },
+    {
+      "id": "familias",
+      "type": "supporting_people",
+      "desc": "Dos pequeños grupos familiares frente a frente con espacio para palabra y reparación; sin ceremonia inventada.",
+      "model_ids": []
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Una hermana y un hermano practicaban con arco. Ella acertaba con mayor frecuencia, aunque en público algunos preferían elogiarlo a él.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 21,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "La mejor puntería",
+          "visual": "Los dos hermanos practican separados ante un blanco lejano; la flecha de ella ocupa el centro exacto. COMPOSICIÓN OBLIGATORIA: elevada oblicua desde una ladera, gran plano general territorial; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "hermana",
+            "hermano",
+            "arco",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "elevada oblicua desde una ladera",
+          "shot_scale": "gran plano general territorial",
+          "depth_planes": [
+            "papel cercano",
+            "sujetos pequeños",
+            "sendero diagonal",
+            "territorio medio",
+            "cielo recortado"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con elevada oblicua desde una ladera.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1a.jpeg",
+            "sha256": "2d0139d14bb47ad96b591ebd025b03ca064d337991dbbb7816231ad316313eb2"
+          },
+          "generation_inputs": [
+            {
+              "kind": "triptych",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-02-entrada/entrada.jpeg",
+              "sha256": "5bdabc9a4c9db28cb03e3e795b3b17f6b3008e232428d3cde56f9f790cc50247",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+            },
+            {
+              "kind": "triptych",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/acto.jpeg",
+              "sha256": "90e4946571b6a94a190d3773367f689ac0bc4c4d22f0421a77217a090a66f30c",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__identity_sheet--canon.jpeg",
+              "sha256": "195e3144586c3cc2c0177cd62d3f78235560aacac02b08a3cfd9a60cbd6a3498",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermano_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b1b",
+          "title": "La flecha en el blanco",
+          "visual": "Macro lateral del blanco y dos flechas: la de la hermana centrada, la otra ligeramente apartada; sólo manos parciales. COMPOSICIÓN OBLIGATORIA: lateral a la altura de manos u objeto, macro narrativo sin rostro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "hermana",
+            "hermano",
+            "arco"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral a la altura de manos u objeto",
+          "shot_scale": "macro narrativo sin rostro",
+          "depth_planes": [
+            "borde cercano",
+            "manos u objeto",
+            "ropa parcial",
+            "suelo medio",
+            "fondo desenfocado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral a la altura de manos u objeto.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1b.jpeg",
+            "sha256": "fc589f8b5c9ae238121b99f95ff8304e4c1e82d86294f486f318416a7b18a136"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1a.jpeg",
+              "sha256": "2d0139d14bb47ad96b591ebd025b03ca064d337991dbbb7816231ad316313eb2",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__identity_sheet--canon.jpeg",
+              "sha256": "195e3144586c3cc2c0177cd62d3f78235560aacac02b08a3cfd9a60cbd6a3498",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermano_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Un grupo robó parte del rebaño. El hermano salió a perseguirlo y pidió a su hermana quedarse para proteger la casa.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 21,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "El robo del rebaño",
+          "visual": "Desde el suelo, animales cruzan el horizonte guiados por figuras adultas muy distantes; la casa queda atrás. COMPOSICIÓN OBLIGATORIA: contrapicado extremo desde el suelo, plano general bajo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "rebano",
+            "ladrones",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "contrapicado extremo desde el suelo",
+          "shot_scale": "plano general bajo",
+          "depth_planes": [
+            "materia rasante",
+            "pies o base",
+            "cuerpos completos",
+            "relieve",
+            "cielo amplio"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado extremo desde el suelo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2a.jpeg",
+            "sha256": "9f282d5a5893d8ce6526aff398987fa55e29b375ba8345bd31ff03bf4c4e7cc9"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1a.jpeg",
+              "sha256": "2d0139d14bb47ad96b591ebd025b03ca064d337991dbbb7816231ad316313eb2",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1b.jpeg",
+              "sha256": "fc589f8b5c9ae238121b99f95ff8304e4c1e82d86294f486f318416a7b18a136",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            }
+          ]
+        },
+        {
+          "id": "b2b",
+          "title": "El hermano parte",
+          "visual": "Cenital del sendero: huellas del rebaño salen y las sandalias del hermano las siguen; la hermana queda en el umbral. COMPOSICIÓN OBLIGATORIA: cenital verdadero de 90 grados, detalle gráfico de suelo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "hermana",
+            "hermano",
+            "rebano",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "cenital verdadero de 90 grados",
+          "shot_scale": "detalle gráfico de suelo",
+          "depth_planes": [
+            "borde superior",
+            "acción central",
+            "huellas u objetos",
+            "sombras planas",
+            "estratos inferiores"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital verdadero de 90 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2b.jpeg",
+            "sha256": "4c9347ee9985a3954c1d2783fa17caf5b39e43f20f504be95fb211d0349e1f8a"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1b.jpeg",
+              "sha256": "fc589f8b5c9ae238121b99f95ff8304e4c1e82d86294f486f318416a7b18a136",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2a.jpeg",
+              "sha256": "9f282d5a5893d8ce6526aff398987fa55e29b375ba8345bd31ff03bf4c4e7cc9",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__identity_sheet--canon.jpeg",
+              "sha256": "195e3144586c3cc2c0177cd62d3f78235560aacac02b08a3cfd9a60cbd6a3498",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermano_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Al anochecer regresaron el perro y la mula. El joven no caminaba con ellos: la mula llevaba su cuerpo de vuelta a la familia.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 24,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Regresan sin él",
+          "visual": "La mula y el perro entran de noche; una carga completamente cubierta descansa sobre la mula, sin anatomía visible. COMPOSICIÓN OBLIGATORIA: lateral teleobjetivo sin cielo, plano general comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "hermana",
+            "perro",
+            "mula",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral teleobjetivo sin cielo",
+          "shot_scale": "plano general comprimido",
+          "depth_planes": [
+            "franja cercana",
+            "sujeto uno",
+            "acción media",
+            "sujeto dos",
+            "bandas comprimidas"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral teleobjetivo sin cielo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3a.jpeg",
+            "sha256": "c7ca078762a0fb1d80bfd77cdcb0a241cb94036c9375a43461f4a788af7ebc6e"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2a.jpeg",
+              "sha256": "9f282d5a5893d8ce6526aff398987fa55e29b375ba8345bd31ff03bf4c4e7cc9",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2b.jpeg",
+              "sha256": "4c9347ee9985a3954c1d2783fa17caf5b39e43f20f504be95fb211d0349e1f8a",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/perro_hermanos__identity_sheet--canon.jpeg",
+              "sha256": "6d0c490f2551d73e66a35e060293617a3e33e57d500900e56620cd4fd1ade25e",
+              "approved": true,
+              "role": "Fijar el modelo canónico perro_hermanos__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b3b",
+          "title": "La ausencia se entiende",
+          "visual": "A ras del suelo, la hermana ve las sandalias del hermano junto al sendero; mula y perro quedan muy lejos. COMPOSICIÓN OBLIGATORIA: rasante a través de una grieta o vegetación, gran plano general de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "hermana",
+            "perro",
+            "mula",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "rasante a través de una grieta o vegetación",
+          "shot_scale": "gran plano general de fuga",
+          "depth_planes": [
+            "recorte extremo",
+            "vacío cercano",
+            "acción distante",
+            "territorio",
+            "franja de salida"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con rasante a través de una grieta o vegetación.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3b.jpeg",
+            "sha256": "cdb4c52d076017a69dc07ba4749ea76f472db37e960d6d3b0a431718f6d33f75"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2b.jpeg",
+              "sha256": "4c9347ee9985a3954c1d2783fa17caf5b39e43f20f504be95fb211d0349e1f8a",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3a.jpeg",
+              "sha256": "c7ca078762a0fb1d80bfd77cdcb0a241cb94036c9375a43461f4a788af7ebc6e",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/perro_hermanos__identity_sheet--canon.jpeg",
+              "sha256": "6d0c490f2551d73e66a35e060293617a3e33e57d500900e56620cd4fd1ade25e",
+              "approved": true,
+              "role": "Fijar el modelo canónico perro_hermanos__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "La hermana preparó sus armas y siguió las huellas. Su puntería le permitió recuperar animales, pero el dolor amplió la persecución más allá de los responsables inmediatos.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 27,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Seguir las huellas",
+          "visual": "Vista alta diagonal de la hermana tomando arco y carcaj mientras las huellas se alejan en zigzag. COMPOSICIÓN OBLIGATORIA: alta diagonal de 60 grados, plano conjunto arquitectónico; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "hermana",
+            "arco",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "alta diagonal de 60 grados",
+          "shot_scale": "plano conjunto arquitectónico",
+          "depth_planes": [
+            "trama cercana",
+            "acción uno",
+            "estructura central",
+            "acción dos",
+            "horizonte mínimo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con alta diagonal de 60 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4a.jpeg",
+            "sha256": "adad551a249ace5ef18c8131bfb4abb5d0eab975b38ed7fcae02b2ca6e1729e7"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3a.jpeg",
+              "sha256": "c7ca078762a0fb1d80bfd77cdcb0a241cb94036c9375a43461f4a788af7ebc6e",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3b.jpeg",
+              "sha256": "cdb4c52d076017a69dc07ba4749ea76f472db37e960d6d3b0a431718f6d33f75",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b4b",
+          "title": "Esperar antes de actuar",
+          "visual": "Sobre el hombro de la hermana, el campamento distante aparece entre rocas; nadie herido, ninguna flecha lanzada. COMPOSICIÓN OBLIGATORIA: sobre el hombro con primer término dominante, plano medio ambiental; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "hermana",
+            "arco",
+            "ladrones"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "sobre el hombro con primer término dominante",
+          "shot_scale": "plano medio ambiental",
+          "depth_planes": [
+            "hombro o marco",
+            "gesto",
+            "objeto o sujeto central",
+            "fondo activo",
+            "territorio"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con sobre el hombro con primer término dominante.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4b.jpeg",
+            "sha256": "96bcf0d7cb0406d649d20b84bd86e45e0a7afc3264f103e3dc3f8fce99b1c047"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3b.jpeg",
+              "sha256": "cdb4c52d076017a69dc07ba4749ea76f472db37e960d6d3b0a431718f6d33f75",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4a.jpeg",
+              "sha256": "adad551a249ace5ef18c8131bfb4abb5d0eab975b38ed7fcae02b2ca6e1729e7",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "No mostramos las muertes. La flecha, las sombras y el ganado que vuelve bastan para señalar una represalia que creció sin reparar la pérdida.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 24,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "La puntería desde la sombra",
+          "visual": "Subjetiva baja detrás de hojas: una única flecha sale hacia fuera de cuadro; los adultos quedan como siluetas lejanas. COMPOSICIÓN OBLIGATORIA: subjetiva baja desde la sombra, plano general con primer término oscuro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "hermana",
+            "arco",
+            "ladrones"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "subjetiva baja desde la sombra",
+          "shot_scale": "plano general con primer término oscuro",
+          "depth_planes": [
+            "sombra cercana",
+            "señal",
+            "acción media",
+            "figuras",
+            "arquitectura o paisaje"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con subjetiva baja desde la sombra.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5a.jpeg",
+            "sha256": "c77a925e0b7908edccfc7f0f7c8148103e71cd19f3af3bc80ea18e1344847db3"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4a.jpeg",
+              "sha256": "adad551a249ace5ef18c8131bfb4abb5d0eab975b38ed7fcae02b2ca6e1729e7",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4b.jpeg",
+              "sha256": "96bcf0d7cb0406d649d20b84bd86e45e0a7afc3264f103e3dc3f8fce99b1c047",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b5b",
+          "title": "El ganado vuelve",
+          "visual": "Perfil distante: la hermana guía el rebaño recuperado mientras el sendero enemigo queda vacío al fondo. COMPOSICIÓN OBLIGATORIA: perfil distante con horizonte desplazado, plano general lateral; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "hermana",
+            "rebano"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "perfil distante con horizonte desplazado",
+          "shot_scale": "plano general lateral",
+          "depth_planes": [
+            "materia cercana",
+            "sujeto lateral",
+            "acción",
+            "segundo sujeto",
+            "horizonte alto"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con perfil distante con horizonte desplazado.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5b.jpeg",
+            "sha256": "d91f780824d955a307d2224abb9598924024f3d92b7337c9b1b40744daef5370"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4b.jpeg",
+              "sha256": "96bcf0d7cb0406d649d20b84bd86e45e0a7afc3264f103e3dc3f8fce99b1c047",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5a.jpeg",
+              "sha256": "c77a925e0b7908edccfc7f0f7c8148103e71cd19f3af3bc80ea18e1344847db3",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "En la ranchería recibieron al hermano y prepararon el duelo. Algunos admiraron a la arquera; otros vieron nuevas deudas junto a los bienes recuperados.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 24,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Riqueza y ausencia",
+          "visual": "Cenital diagonal del patio: animales y bienes ocupan un lado; el chinchorro cubierto queda aislado en el otro. COMPOSICIÓN OBLIGATORIA: cenital diagonal amplio, plano de consecuencia; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "hermana",
+            "rebano",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "cenital diagonal amplio",
+          "shot_scale": "plano de consecuencia",
+          "depth_planes": [
+            "sombra",
+            "objeto central",
+            "figuras parciales",
+            "trama territorial",
+            "borde de salida"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital diagonal amplio.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6a.jpeg",
+            "sha256": "d50d629bfeb542768eed2d77d899bfe8c14bd9ab6e7b458f5d9f65b168a310eb"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5a.jpeg",
+              "sha256": "c77a925e0b7908edccfc7f0f7c8148103e71cd19f3af3bc80ea18e1344847db3",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5b.jpeg",
+              "sha256": "d91f780824d955a307d2224abb9598924024f3d92b7337c9b1b40744daef5370",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+              "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15",
+              "approved": true,
+              "role": "Fijar el modelo canónico chinchorro__object_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b6b",
+          "title": "La flecha se curva",
+          "visual": "Macro de una flecha de papel cuya punta gira hacia sus propias plumas, metáfora editorial de la represalia. COMPOSICIÓN OBLIGATORIA: macro frontal de materia, primerísimo plano de objeto; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "arco"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "macro frontal de materia",
+          "shot_scale": "primerísimo plano de objeto",
+          "depth_planes": [
+            "fibra cercana",
+            "objeto",
+            "cambio material",
+            "sombra interna",
+            "fondo abstracto"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en La flecha se curva.",
+            "impossible_behavior": "Macro de una flecha de papel cuya punta gira hacia sus propias plumas, metáfora editorial de la represalia.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con macro frontal de materia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6b.jpeg",
+            "sha256": "e95e1639b4191304f98e265a7d0e11d77f54043690229f2da052b49ea3df28da"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b5b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5b.jpeg",
+              "sha256": "d91f780824d955a307d2224abb9598924024f3d92b7337c9b1b40744daef5370",
+              "approved": true,
+              "role": "Preservar continuidad causal de b5b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b6a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6a.jpeg",
+              "sha256": "d50d629bfeb542768eed2d77d899bfe8c14bd9ab6e7b458f5d9f65b168a310eb",
+              "approved": true,
+              "role": "Preservar continuidad causal de b6a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "El perro permaneció cerca del chinchorro y la mula descansó. Su lealtad sostuvo la memoria mientras parientes de ambos lados tuvieron que hablar.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 23,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "El duelo",
+          "visual": "Entre postes, la familia se reúne lejos alrededor del chinchorro cubierto; la hermana permanece separada. COMPOSICIÓN OBLIGATORIA: contrapicado enmarcado entre postes o rocas, plano general enmarcado; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "hermana",
+            "chinchorro",
+            "familias",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "contrapicado enmarcado entre postes o rocas",
+          "shot_scale": "plano general enmarcado",
+          "depth_planes": [
+            "marco cercano",
+            "umbral",
+            "sujetos pequeños",
+            "acción",
+            "paisaje estrecho"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado enmarcado entre postes o rocas.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b6a",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6a.jpeg",
+              "sha256": "d50d629bfeb542768eed2d77d899bfe8c14bd9ab6e7b458f5d9f65b168a310eb",
+              "approved": true,
+              "role": "Preservar continuidad causal de b6a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b6b",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6b.jpeg",
+              "sha256": "e95e1639b4191304f98e265a7d0e11d77f54043690229f2da052b49ea3df28da",
+              "approved": true,
+              "role": "Preservar continuidad causal de b6b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+              "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+              "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d",
+              "approved": true,
+              "role": "Fijar el modelo canónico hermana_arquera__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "los-dos-hermanos",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+              "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15",
+              "approved": true,
+              "role": "Fijar el modelo canónico chinchorro__object_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b7b",
+          "title": "Perro y mula permanecen",
+          "visual": "A través del umbral, perro y mula descansan junto al patio vacío; el chinchorro queda al fondo. COMPOSICIÓN OBLIGATORIA: teleobjetivo profundo a través de una abertura, plano largo comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "perro",
+            "mula",
+            "chinchorro",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "teleobjetivo profundo a través de una abertura",
+          "shot_scale": "plano largo comprimido",
+          "depth_planes": [
+            "abertura cercana",
+            "vacío",
+            "acción lejana",
+            "capas medias",
+            "fondo comprimido"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con teleobjetivo profundo a través de una abertura.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "La hermana fue la mejor arquera y defendió la memoria de su hermano. Su victoria, sin embargo, no lo devolvió ni cerró por sí sola el conflicto.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; La violencia se mantiene fuera de campo; la mediación final es una señal editorial y no inserta un palabrero no presente en la fuente.",
+      "word_count": 27,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Hablar entre familias",
+          "visual": "Dos grupos pequeños se enfrentan sin armas, separados por una franja vacía; la hermana está a un costado. COMPOSICIÓN OBLIGATORIA: aérea oblicua desde atrás, gran plano general de relación; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "hermana",
+            "familias",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "aérea oblicua desde atrás",
+          "shot_scale": "gran plano general de relación",
+          "depth_planes": [
+            "estructura cercana",
+            "sujetos",
+            "trayectoria",
+            "territorio amplio",
+            "cielo mínimo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con aérea oblicua desde atrás.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b8b",
+          "title": "Dos verdades",
+          "visual": "La hermana se aleja del corral; su arco baja hacia el suelo y la sombra de la flecha curva permanece detrás. COMPOSICIÓN OBLIGATORIA: a ras del suelo mirando hacia la distancia, plano final de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "hermana",
+            "arco",
+            "rebano",
+            "rancheria"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "a ras del suelo mirando hacia la distancia",
+          "shot_scale": "plano final de fuga",
+          "depth_planes": [
+            "materia muy cercana",
+            "sendero",
+            "figuras pequeñas",
+            "paisaje",
+            "horizonte"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Dos verdades.",
+            "impossible_behavior": "La hermana se aleja del corral; su arco baja hacia el suelo y la sombra de la flecha curva permanece detrás.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con a ras del suelo mirando hacia la distancia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "mitos-triptych-iteration-audit/v1",
+  "audited_at": "2026-09-06T05:19:24.631Z",
+  "package_root": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores",
+  "scope": "Artefactos locales referidos por jobs.json, deduplicados por SHA-256; no mide llamadas fallidas sin imagen ni facturación de API.",
+  "unique_images": 4,
+  "by_act": {
+    "entrada": {
+      "unique_images": 2,
+      "preparation_rounds": 2,
+      "requested_alternatives": 0
+    },
+    "acto": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    },
+    "huella": {
+      "unique_images": 1,
+      "preparation_rounds": 1,
+      "requested_alternatives": 0
+    }
+  },
+  "prepared_without_output": 0,
+  "duplicates": 0,
+  "rows": [
+    {
+      "batch_id": "wayuu-mellizos-triptych-01",
+      "prepared_at": "2026-09-06T05:15:07.220Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "aaef9d3395dc386609178588752fd4871431797e882167c827e057ca2cefb4f2",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "81be2016246b4863b2f16ec9adfd9fbc10fb29fe9d6765a755b40079d6a6b9a5",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-mellizos-triptych-01",
+      "prepared_at": "2026-09-06T05:15:07.220Z",
+      "act": "acto",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/acto.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/prompts/acto.prompt.txt",
+      "requested_size": "864x1536",
+      "requested_quality": "medium",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "e4ec2ef2e2c019f4e6cc6559bd85d73f2330d9ce7853d22f6d2523000ce84309",
+      "duplicate_of": null,
+      "width": 864,
+      "height": 1536,
+      "size_matches_request": true,
+      "prompt_sha256": "544113fc9e36ff459f26f6053b1ef5af91588533d5c43b07bbe463cad53b5fb1",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-mellizos-triptych-01",
+      "prepared_at": "2026-09-06T05:15:07.220Z",
+      "act": "huella",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-01/huella.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-01/prompts/huella.prompt.txt",
+      "requested_size": "1024x1024",
+      "requested_quality": "medium",
+      "visual_function": "symbolic_synthesis",
+      "status": "unique_generated_artifact",
+      "sha256": "7ab196fbb2a27fdf6c18adccc490e0e24025bd61c624c22a0cb07e1401185b8c",
+      "duplicate_of": null,
+      "width": 1024,
+      "height": 1024,
+      "size_matches_request": true,
+      "prompt_sha256": "154376819c5487f782cb35cf0880148cf7e6cdee3ada7f814e37d2f8b2c681dc",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    },
+    {
+      "batch_id": "wayuu-mellizos-triptych-02-entrada",
+      "prepared_at": "2026-09-06T05:17:54.057Z",
+      "act": "entrada",
+      "purpose": "generation_or_revision",
+      "manifest": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-02-entrada/jobs.json",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-mellizos-triptych-02-entrada/entrada.jpeg",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-mellizos-transformadores/wayuu-mellizos-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "requested_size": "1536x864",
+      "requested_quality": "high",
+      "visual_function": "narrative_scene",
+      "status": "unique_generated_artifact",
+      "sha256": "862d09db149c6663d5ede79fe9962eaea4618a33f756a939d637ef1917894955",
+      "duplicate_of": null,
+      "width": 1536,
+      "height": 864,
+      "size_matches_request": true,
+      "prompt_sha256": "4ba8d057b4bb54d5dcb07ffc6e49f47975eef3a5bc1785b628580b8ce4342b49",
+      "prompt_hash_matches_manifest": true,
+      "prompt_integrity": "exact_bytes"
+    }
+  ]
+}

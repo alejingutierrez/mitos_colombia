@@ -1,0 +1,247 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-pequeno-indio-kosina": {
+      "titulo": "El pequeño indio Kosina",
+      "canon_models": [
+        "territorio_alta_guajira__environment_model",
+        "kosina_joven__identity_sheet",
+        "kosina_joven__state_sheet",
+        "caballo_kosina__identity_sheet",
+        "caballo_kosina__state_sheet",
+        "faja_captura_kosina__object_sheet",
+        "huellas_caballo_kosina__phenomenon_rule",
+        "abertura_subterranea_caballo__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "published_kosina",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-pequeno-indio-kosina.json",
+          "supports": "Relato objetivo de huellas menguantes, caballo sin alas, reciprocidad y regreso subterráneo.",
+          "limits": "Edición pública preservada; no constituye una segunda línea histórica."
+        },
+        {
+          "id": "chaves_325_327",
+          "type": "primary_narrative_record",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "325–327, PDF índices 21–23",
+          "supports": "Huellas decrecientes, animal que cambia tamaño, faja, carreras sin silla, regalos y retorno bajo tierra.",
+          "limits": "El aliado también propone compra en la fuente, detalle suavizado en la edición pública. No se representa ese episodio. Vestuario y aspecto del protagonista no fijados."
+        },
+        {
+          "id": "bible_lot17",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-17-el-pequeno-indio-kosina-v3.md",
+          "supports": "Inventario de 29 modelos y alcance kusina_identity_unresolved.",
+          "limits": "Trajes y colores editoriales, no etnia o uniforme tradicional exactos."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "huellas_caballo_kosina__phenomenon_rule",
+          "decision": "La ficha parece mostrar huellas partidas. Usar cascos equinos únicos y redondeados, sin línea divisoria; no copiar este error."
+        },
+        {
+          "model_id": "kosina_joven__identity_sheet",
+          "decision": "Conservar prendas completas y colores; simplificar cara fotográfica a perfil plano mínimo."
+        },
+        {
+          "model_id": "caballo_kosina__state_sheet",
+          "decision": "Estados de un mismo animal, no tres caballos simultáneos. Conservar crema, mancha óxido de hombro y crin marrón; retirar fondo fotográfico."
+        },
+        {
+          "model_id": "territorio_alta_guajira__environment_model",
+          "decision": "Usar planos áridos y profundidad, sin obligar costa, mapa exacto ni vegetación de otra escena."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-pequeno-indio-kosina",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-pequeno-indio-kosina.json",
+        "target_content_sha256": "1e64f847e4e505f07e10ddce4e1ab058445edb5bb63c9c0413a8716be14faf4d",
+        "summary": "Kosina sigue huellas cada vez menores y encuentra un caballo que encoge. Su relación se fortalece al escucharlo, negarse a venderlo y compartir sus dones. El caballo regresa bajo tierra. No tiene alas. Las imágenes eligen encuentro, despedida y síntesis del vínculo; no reúnen todos los episodios en una escena.",
+        "events": [
+          {
+            "id": "rastro_encogimiento",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_325_327",
+            "action": "Las huellas menguan y el caballo grande se vuelve potro."
+          },
+          {
+            "id": "faja_vinculo",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_325_327",
+            "action": "Kosina usa su faja para sujetar al caballo; más tarde no lo vende y comparte animales."
+          },
+          {
+            "id": "regreso_subsuelo",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_325_327",
+            "action": "Tras entregar el rebaño, el caballo entra en una cueva bajo tierra."
+          }
+        ],
+        "emotional_reading": "Asombro atento y despedida sin apropiación total.",
+        "magic_reading": "Escala que cambia y suelo que guarda otra vida, no decoraciones sobrenaturales.",
+        "qa_method": "H rastro del mismo caballo menguante legible en un plano lateral; V caballo entero dentro del subsuelo; S símbolo abierto sin escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T16:04:44.812Z",
+        "reviewed_reference_ids": [
+          "732145844ee6f8d036d3",
+          "2f5b2e80829e7607d8d3"
+        ],
+        "retained": [
+          "Papel recortado y relación entre ocres cálidos y cielo azul profundo.",
+          "Continuidad entre animal y territorio; crin de tiras de papel."
+        ],
+        "rejected": [
+          "Alas de Pegaso, jinete con lanza/arco en la carrera y ornamentos geométricos sin sustento.",
+          "Rostros volumétricos y personaje grande; cielos de espirales y gran disco solar.",
+          "Paisaje reducido a maqueta aislada y arquitectura no identificada por la fuente."
+        ],
+        "influence_by_act": {
+          "entrada": "Cambiar caballo alado por potro sin alas y rastro de cascos que mengua lateralmente; figuras pequeñas y distancia.",
+          "acto": "Mantener capas del terreno, convertirlas en entrada bajo tierra; no vuelo ni alas.",
+          "huella": "Conservar contraste ocre/azul; faja abierta y ausencia de caballo como síntesis del vínculo, sin jinete ni paisaje."
+        }
+      },
+      "material_direction": "Photographed immersive world built ENTIRELY from matte dyed CUT PAPER sheets. Broad ground sheets, distant hills and sky at physically separated depths with air, overlaps and real cast shadows. Paper fibers and cut edges visible inside the world, NO external cardboard support, backing, plinth, model island, frame, tabletop or stage edge. Characters are almost flat side-profile cutouts, tiny incised eye and nose in outline, natural proportions; clothing a few broad folded sheets, no modeled cheekbones or animated eyes. Animals made of a few cream paper planes with cut-strip mane, no furry realism. Full bleed.",
+      "paleta": "ocre tierra y óxido, crema cálida, azul profundo y azul humo; luz lateral mate y silencio",
+      "continuity_contract": [
+        "Kosina is one short-statured young man with natural adolescent/young adult proportions, brown flat-profile paper face, short wavy black cut-paper hair. His identity is not assigned to a specific ethnic group by invented anatomy.",
+        "Kosina wears a plain long-sleeved indigo shirt, broad brown knee-length wrap over beige calf coverings, plain rust sash and dark strapped sandals. Complete garments, no feathers, facial painting, jewelry or invented clan signs. Clothing is editorial continuity, not a claim about exact historical costume.",
+        "The principal horse is wingless and cream, with ONE irregular rust patch on its visible shoulder, brown strip-paper mane and tail, dark single unsplit hooves; no saddle, bridle, horn or jewelry. Only one physical horse appears in each narrative image.",
+        "Props or people belonging to another episode must not be imported. Kosina does not conjure, pull open the earth or force the horse into a cave."
+      ],
+      "avoid": [
+        "Pixar face, giant head, portrait, muscular figurine, glass eyes, rendered skin",
+        "Pegasus, wings, horn, feather headdress, loincloth, bare chest, face paint, glyphs",
+        "saddle, bridle, whip, spear, arrow, injury, carcass, bound legs, distressed animal",
+        "giant sun disc, decorative wind curls, glowing aura, stars as filler",
+        "photographic soil or vegetation, cardboard base, display stand, picture frame"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "rastro_encogimiento"
+          ],
+          "beat": "Encontrar algo que se vuelve pequeño sin perder su poder.",
+          "escena": "HORIZONTAL 1536x864, VERY DISTANT SLIGHTLY ELEVATED CAMERA. Treat this as landscape architecture scale, NOT an illustration of a boy with a pony. The ENTIRE STORY occupies ONE SMALL CLUSTER inside the RIGHT THIRD: x60–87%, y40–60%. Leave the LEFT 58% COMPLETELY EMPTY plain ochre cut-paper ground and the BOTTOM 32% equally empty. No hoofprint or figure in those empty zones. Exactly ONE fully clothed young Kosina is ONLY about 100 PIXELS TALL (one eighth of image), complete feet to hair, standing at x72%, y40–52%. ONE tiny cream foal, rusty shoulder patch, brown mane, height 60 PIXELS, is at x84%, y46–53%; no tack or wings. He looks down toward the foal without gesture. On one lateral same-depth band at y56%, a SHORT trail of FOUR single solid rounded HORSE HOOF impressions shrinks steeply left-to-right: widths about 130, 65, 32 and 15 pixels at x63%, x73%, x79%, x83%. The largest hoofprint is bigger than the whole foal but is next to it on the same plane, not in foreground. NO print extends left of x58%. Trail ends immediately behind the foal hooves. Whole horse, whole youth and ALL four prints are inside the small right-third cluster. Footprints are recessed solid single-hoof cutouts with small interior shadows, no cleft, no central dividing strip, no printed icons. Major distance between camera and story, quiet expansive ochre plain; just three or four broad blue-gray PAPER hill silhouettes on distant horizon, and pale matte sky. All matter is fibrous cut-paper, ground is broad continuous sheets without photographic grain or sand. No scenic prop in foreground, no trees, buildings or furniture. Do not enlarge figures to reveal faces: character identity resides in indigo shirt, brown knee wrap, beige calf coverings, rust sash and black sandals, with tiny flat paper profile. Avoid portrait and toy closeup.",
+          "editorial_translation": "El cambio de tamaño es narrado; alineación lateral, tamaños exagerados de las huellas y composición son traducción editorial, no topografía documental.",
+          "visual_question": "¿Hay un solo potro y cuatro cascos únicos que menguan lateralmente, imposibles de explicar sólo por perspectiva?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Rastro del caballo en el suelo.",
+            "impossible_behavior": "Las impresiones del mismo casco decrecen hasta un potro mucho menor que la primera huella.",
+            "narrative_effect": "Hacer visible el cambio de tamaño y la atención de Kosina.",
+            "agency": "El caballo actúa por sí mismo; Kosina observa y escucha, no controla un poder.",
+            "physical_translation": "Troquelados de casco de tamaño menguante sobre la misma franja de suelo, sombras internas y un solo potro.",
+            "visible_test": "¿Hay un solo potro y cuatro cascos únicos que menguan lateralmente, imposibles de explicar sólo por perspectiva?",
+            "event_ids": [
+              "rastro_encogimiento"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "regreso_subsuelo"
+          ],
+          "beat": "El don permanece; quien lo dio conserva su camino.",
+          "escena": "9:16 WIDE VERTICAL, quiet dusk. View a continuous dry paper hillside from a distant oblique side angle. UPPER HALF contains low horizon and a tiny complete Kosina standing still at x30%, y26–40%, hands down, looking toward the opening at right. BELOW him the earth reveals its hidden depth: ONE broad ochre ground sheet bends slightly upward into a low arch at x55–80%, y43%, remains continuously attached to hillside on both sides, and exposes a deep INDIGO underground passage made of several dark paper strata. ONE complete small cream horse, rusty shoulder patch and brown mane, walks DOWN a continuous gently sloping paper path into that passage, ALL FOUR LEGS, head and tail visible at x45–73%, y45–59%, physically BELOW the top ground layer. It is inside the earth, not on top of the hill and not flying. The opening is only a small gap on surface but the paper strata reveal a spacious hidden interior. Kosina does not touch or lift the ground. No reins, tether, saddle, extra animal or herd. This is a poetic view into the ground, not a framed cross-section diagram: terrain continues full bleed in all directions with NO rectangular cutaway base. Plain calm ground in LOWER THIRD for mobile title. Layers of terracotta, charcoal and indigo get darker inward; a subdued cream reflection lights horse sufficiently to read its four-legged silhouette, no magical spotlight, no stars or ornate roots.",
+          "editorial_translation": "Retorno bajo tierra narrado; terreno abierto en capas y Kosina como testigo son puesta en escena editorial, no episodio adicional certificado.",
+          "visual_question": "¿El único caballo está entero bajo una capa de suelo continua, con Kosina afuera y sin que lo empuje?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una abertura del terreno al final del camino.",
+            "impossible_behavior": "Una pequeña abertura deja ver el caballo entero en una profundidad subterránea que el suelo normalmente oculta.",
+            "narrative_effect": "Despedida y autonomía del animal, no captura ni castigo.",
+            "agency": "El caballo actúa por sí mismo; Kosina observa y escucha, no controla un poder.",
+            "physical_translation": "Suelo de hojas continuas con abertura y estratos separados; el caballo entero se ve bajo la lámina superior.",
+            "visible_test": "¿El único caballo está entero bajo una capa de suelo continua, con Kosina afuera y sin que lo empuje?",
+            "event_ids": [
+              "regreso_subsuelo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "faja_vinculo",
+            "regreso_subsuelo"
+          ],
+          "beat": "Conservar la relación sin cerrar su salida.",
+          "escena": "Square 1:1 SYMBOLIC PAPER OBJECT, no scene. Full-bleed muted deep indigo matte field. ONE wide plain RUST-RED sash forms a broad loose loop lying obliquely, like an untied band, with two clearly separated blunt ends at the RIGHT. Within the band is an unmistakable EMPTY SIDE-PROFILE HORSE SILHOUETTE cut out of the rust paper: long horse face pointing right, two ears, neck, back, belly, four slim legs and a tail; the deep blue background is visible THROUGH it, no white horse pasted on top. A short OPEN GAP in the band at the horse muzzle connects this horse-shaped inner void directly to the surrounding blue field: the loop does NOT close. This single cut-paper band is the only object, approximately 62% canvas width, ample margins. Two or three layered rust paper edges with small real shadows show physical depth. Plain fibrous paper surface, no embroidery, no traditional motifs, no texture of leather belt, buckle, rope or branding. No literal animal, person, landscape, cave, hoof trail, star or lettering. The focus is one open bond and a horse-shaped absence, not an emblem printed flat.",
+          "editorial_translation": "Faja abierta y vacío equino son metáfora editorial; no talismán tradicional ni objeto literal de la fuente.",
+          "visual_question": "¿Se ve una sola faja abierta con caballo como vacío comunicado al exterior, sin escena?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La faja que vinculó a Kosina con el caballo.",
+            "impossible_behavior": "La banda contiene la ausencia del caballo pero deja abierta su salida.",
+            "narrative_effect": "Sintetiza relación, límite y despedida sin propiedad absoluta.",
+            "agency": "El caballo actúa por sí mismo; Kosina observa y escucha, no controla un poder.",
+            "physical_translation": "Faja de papel que rodea un vacío con forma de caballo, interrumpida junto al hocico para comunicar interior y exterior.",
+            "visible_test": "¿Se ve una sola faja abierta con caballo como vacío comunicado al exterior, sin escena?",
+            "event_ids": [
+              "faja_vinculo",
+              "regreso_subsuelo"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Sculptural matte CUT PAPER with separate internal edges, tiny cast shadows and real empty cutout; indigo full bleed, no outer support.",
+          "continuity_contract": [
+            "One plain rust sash, open at one side, horse-shaped empty space; no cast or costume imported from scenes.",
+            "Editorial symbol, not attributed as a Wayuu sacred design or archaeological object."
+          ],
+          "symbolic_contract": {
+            "thesis": "El vínculo vale sin clausurar la libertad de quien entrega el don.",
+            "carrier": "Faja lisa y ausencia con forma de caballo.",
+            "operation": "Abrir el lazo y comunicar el vacío del animal con el exterior.",
+            "story_connection": "Faja inicial, negativa a vender y regreso autónomo bajo tierra.",
+            "visible_test": "Lazo abierto y caballo en negativo, sin ilustrar otra escena."
+          },
+          "avoid": [
+            "closed ring, printed logo, white pasted horse, literal animal, landscape, people",
+            "buckles, leather belt, branding, sacred motifs, embroidery",
+            "cardboard base, pedestal, frame, tabletop, watermark"
+          ]
+        }
+      }
+    }
+  }
+}

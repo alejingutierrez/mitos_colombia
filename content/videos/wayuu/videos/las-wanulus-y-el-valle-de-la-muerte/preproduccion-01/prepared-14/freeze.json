@@ -1,0 +1,166 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T21:57:45.439Z",
+  "plan": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/plan.json",
+  "plan_sha256": "9cdf4dd9c17d487c4af7b3e5379f19d79d20a48fc57330958d3d81d750749e47",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 20,
+    "words": 272,
+    "estimated_seconds": 160,
+    "generated": 13,
+    "pending": 7,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 75,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b7b",
+      "prompt_file": "content/videos/wayuu/videos/las-wanulus-y-el-valle-de-la-muerte/preproduccion-01/prepared-14/prompts/b7b.txt",
+      "prompt_sha256": "05a2ccaa6f02bb878a8725b766ad36684bcd18785f1923ff0b67b06cf23fc006",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b6b",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b6b.jpeg",
+          "sha256": "f8dd95989c780f1b78eda5f79d5c53b44302435f9bac84e1f7eb15e618791a37",
+          "approved": true,
+          "role": "Preservar continuidad de b6b: identidades, vestuario, paleta y material; prohibido copiar su cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b7a",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b7a.jpeg",
+          "sha256": "e21e95c0a70b16587478cba02095187ed10712631ce30001cfc75670a224d7a3",
+          "approved": true,
+          "role": "Preservar continuidad de b7a: identidades, vestuario, paleta y material; prohibido copiar su cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium/casa_parcela_valle__spatial_model--canon.jpeg",
+          "sha256": "c249331bcb66fef6e49dac4af62a12c1d8b112ebb1811ef731177aab193a7c8a",
+          "approved": true,
+          "role": "Fijar el modelo canónico casa_parcela_valle__spatial_model; no copiar la composición de la ficha."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "las-wanulus-y-el-valle-de-la-muerte",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-08-las-wanulus-y-el-valle-de-la-muerte-medium/rifle_valle__object_sheet--canon.jpeg",
+          "sha256": "72e86f059ffd516cc6a3a43c9e534ade5b6cd6d2651bf22bc6eeece1c17f015c",
+          "approved": true,
+          "role": "Fijar el modelo canónico rifle_valle__object_sheet; no copiar la composición de la ficha."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b7b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b7b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1a.jpeg",
+      "sha256": "f2e284ee4e660d6204c043c5bdc7cdfbb8ee3c4d99efd51c0a91cef52f258468"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b1b.jpeg",
+      "sha256": "bb5f2d120cf26eb481879563d9ca2ab08f0a501581a9a69cd238a61aa570f750"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b2a.jpeg",
+      "sha256": "fbd90c847fe33c26f3855218e6fe997856edeeb46a6fb24f0ce793cc6898f38e"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b2b.jpeg",
+      "sha256": "760ede45aadab3f9ab4da33b8c5704771190d85c5be10a5f9da2bc026ae760c3"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b3a.jpeg",
+      "sha256": "28a0fa35f98d35056d281f3c7527558a292523c90eddc4e64b3beb714e9e35d6"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b3b.jpeg",
+      "sha256": "5184548532c7f91350b87ede06228b9c6173e4bf65d759e897652084ca4ab74e"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b4a.jpeg",
+      "sha256": "2006dc7e6253b5a3d2de46f58a68cc5b49e636c3d9ec0dcbcaf42b396e7152df"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b4b.jpeg",
+      "sha256": "581bbcbafd0d024d821c728a1ff34cef6ddd1ccd0cbffbdb559c1a70000c44a8"
+    },
+    {
+      "id": "b5a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b5a.jpeg",
+      "sha256": "499b3effeb8058703e99754f17d6578421fc060a3be49425929c8ff1d0240325"
+    },
+    {
+      "id": "b5b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b5b.jpeg",
+      "sha256": "cddc26d1941e2a9c91613b26bee9763d2be49f54105ea3ec22de07019d0666c9"
+    },
+    {
+      "id": "b6a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b6a.jpeg",
+      "sha256": "254d9d17f5fe4fea461c44b631ec9bdb22ffaa508e63d7f2d5ddc7ff9a830e77"
+    },
+    {
+      "id": "b6b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b6b.jpeg",
+      "sha256": "f8dd95989c780f1b78eda5f79d5c53b44302435f9bac84e1f7eb15e618791a37"
+    },
+    {
+      "id": "b7a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/las-wanulus-y-el-valle-de-la-muerte-preproduccion-01/b7a.jpeg",
+      "sha256": "e21e95c0a70b16587478cba02095187ed10712631ce30001cfc75670a224d7a3"
+    }
+  ],
+  "no_api_calls": true
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-02c-origenes-anclas-material-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02c-origenes-anclas-material-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Segunda corrección textual del lote 02 en medium: separar salvaguardas por modelo y recuperar materialidad inequívoca de maqueta de papel en Siki y Waleker. Sin referencias locales de entrada.",
+  "jobs": [
+    {
+      "id": "el-origen-del-fuego__ancla--canon",
+      "model_id": "el-origen-del-fuego__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02c-origenes-anclas-material-correction-medium/prompts/el-origen-del-fuego__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02c-origenes-anclas-material-correction-medium/el-origen-del-fuego__ancla--canon.jpeg",
+      "prompt_sha256": "bba7d03a03e62079a26cb9ed8ac83c745bcfc1710472938eaa6e9c3e3cd003a5",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "safeguards": [
+        "correcciones generadas sólo desde texto, sin subir imágenes locales como referencia",
+        "todo elemento debe verse construido con papel, fibras, hilos y piezas artesanales; nunca fotografía de materiales, animales, objetos o talleres reales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "Siki debe ser el único objeto dominante: cavidad de papel barro, rollos de papel negro como madera carbonizada, fibras grises como ceniza y una brasa contenida de papel rojo plegado que ocupan al menos la mitad del cuadro; sin paisaje, vivienda, figura humana, antorcha o incendio"
+      ],
+      "status": "prepared"
+    },
+    {
+      "id": "waleker-el-origen-del-tejido__ancla--canon",
+      "model_id": "waleker-el-origen-del-tejido__ancla",
+      "view_id": "canon",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-02c-origenes-anclas-material-correction-medium/prompts/waleker-el-origen-del-tejido__ancla--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-02c-origenes-anclas-material-correction-medium/waleker-el-origen-del-tejido__ancla--canon.jpeg",
+      "prompt_sha256": "73cd157abb0de6c8360188540a84f921b2baceb7aef130bb6f7218506afc0fd4",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1536",
+      "output_format": "jpeg",
+      "references": [],
+      "input_references": [],
+      "safeguards": [
+        "correcciones generadas sólo desde texto, sin subir imágenes locales como referencia",
+        "todo elemento debe verse construido con papel, fibras, hilos y piezas artesanales; nunca fotografía de materiales, animales, objetos o talleres reales",
+        "sin violencia o sexualidad explícitas",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "Waleker debe ser una sola araña pequeña de piezas de papel y a escala natural, posada sobre el travesaño de un telar artesanal y subordinada visualmente a un tejido liso; prohibidas arañas adicionales, escala monstruosa, kanas, marcas claniles y geometrías inventadas"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

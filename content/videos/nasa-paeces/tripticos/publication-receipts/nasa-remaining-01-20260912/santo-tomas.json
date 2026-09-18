@@ -1,0 +1,119 @@
+{
+  "schema": "mitos-colombia-triptych-publication-v1",
+  "publication_id": "nasa-remaining-01-20260912",
+  "status": "published",
+  "started_at": "2026-09-13T02:17:50.911Z",
+  "myth": {
+    "id": 440,
+    "title": "Santo Tomás",
+    "slug": "santo-tomas"
+  },
+  "local": {
+    "horizontal": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/entrada-v1.jpeg",
+      "bytes": 367525,
+      "sha256": "fced9e5f3061e301aea89fdec316ea74fa250dfcff2cf25bbe24f44dd1d08de2",
+      "source": {
+        "width": 1536,
+        "height": 1024
+      },
+      "published": {
+        "width": 1536,
+        "height": 1024
+      }
+    },
+    "vertical": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/acto-v1.jpeg",
+      "bytes": 356166,
+      "sha256": "a8901029bf45c1a4aa315c0fc7ac68959c838be0a65cc492bf5568e463bc2220",
+      "source": {
+        "width": 1024,
+        "height": 1536
+      },
+      "published": {
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    "cuadrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/huella-v1.jpeg",
+      "bytes": 206229,
+      "sha256": "96be955bd189530df96180e6f9e487f4061f58804fc5ac8915141e7c9fdfbd5d",
+      "source": {
+        "width": 1024,
+        "height": 1024
+      },
+      "published": {
+        "width": 1024,
+        "height": 1024
+      }
+    }
+  },
+  "selection": "content/videos/nasa-paeces/tripticos/publication-selection/remaining-first-five/santo-tomas.json",
+  "narrative_target_sha256": "e39e4694adf00ac991aedc70737715aa98fcb549d1d46b7269a6a2c1b4f208a6",
+  "preserve_original_bytes": true,
+  "before": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/santo-tomas-1784767694753.jpg",
+    "vertical_image": {
+      "id": 459,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/santo-tomas-1784912330817.jpg",
+      "updated_at": "2026-07-24T16:58:53.254Z"
+    },
+    "square_image_url": null,
+    "updated_at": "2026-07-28T02:38:48.379Z",
+    "image_prompt_horizontal": null,
+    "image_prompt_vertical": null,
+    "image_prompt_square": null
+  },
+  "preservation": {
+    "blob_uploads_use_new_random_suffixes": true,
+    "previous_blob_urls_are_not_deleted": true,
+    "previous_vertical_database_row_is_not_updated_or_deleted": true
+  },
+  "uploads": {
+    "horizontal": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/santo-tomas-1789265870914-tro2L0K3PpFsnvbC9az11GTanDhxTk.jpg",
+      "sha256": "fced9e5f3061e301aea89fdec316ea74fa250dfcff2cf25bbe24f44dd1d08de2",
+      "bytes": 367525,
+      "width": 1536,
+      "height": 1024
+    },
+    "vertical": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/santo-tomas-1789265871551-OyA2iQiUTe4wBdygavt4f4udSdoMOk.jpg",
+      "sha256": "a8901029bf45c1a4aa315c0fc7ac68959c838be0a65cc492bf5568e463bc2220",
+      "bytes": 356166,
+      "width": 1024,
+      "height": 1536
+    },
+    "cuadrada": {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/santo-tomas-1789265871780-rSgRA1iQIKdLfACF4E1Bo6rEqQ0wZR.jpg",
+      "sha256": "96be955bd189530df96180e6f9e487f4061f58804fc5ac8915141e7c9fdfbd5d",
+      "bytes": 206229,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "remote_history_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/triptych-history/santo-tomas/nasa-remaining-01-20260912-C67sIT6gGISfnPLGI4qbVCd3RoLJK7.json",
+  "vertical_version_inserted": {
+    "action": "creada",
+    "id": 697
+  },
+  "completed_at": "2026-09-13T02:17:53.323Z",
+  "after": {
+    "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/santo-tomas-1789265870914-tro2L0K3PpFsnvbC9az11GTanDhxTk.jpg",
+    "vertical_image": {
+      "id": 697,
+      "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/santo-tomas-1789265871551-OyA2iQiUTe4wBdygavt4f4udSdoMOk.jpg",
+      "updated_at": "2026-09-13T02:17:52.262Z"
+    },
+    "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/santo-tomas-1789265871780-rSgRA1iQIKdLfACF4E1Bo6rEqQ0wZR.jpg"
+  },
+  "revalidation": {
+    "ok": true,
+    "status": 200,
+    "paths": [
+      "/mitos/santo-tomas",
+      "/mitos"
+    ]
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-09-los-mellizos-transformadores-medium",
+    "myth_slug": "los-mellizos-transformadores",
+    "model_ids": [
+      "manna__identity_sheet",
+      "manna__state_sheet",
+      "sain_ma__presence_model",
+      "mannuuya__presence_model",
+      "juya__presence_model",
+      "juya__state_sheet",
+      "kalamantuunay__identity_sheet",
+      "kalamantuunay__state_sheet",
+      "hombres_tigre__group_grammar",
+      "tumajule__identity_sheet",
+      "tumajule__state_sheet",
+      "peeliyuu__identity_sheet",
+      "peeliyuu__state_sheet",
+      "aaner__identity_sheet",
+      "tinaja_manna__object_sheet",
+      "costa_mar_guajira__environment_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_for_generation"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "manna__identity_sheet",
+    "manna__state_sheet"
+  ],
+  "models": {
+    "manna__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "manna"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Manna. Funcion visual: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Manna",
+          "funcion estable: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados declarados: joven, embarazada_en_huida, memoria_de_los_mellizos"
+        ],
+        "documented_features": [
+          "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Manna. Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados autorizados: joven, embarazada_en_huida, memoria_de_los_mellizos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "manna__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "manna"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Manna. Funcion visual: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Manna",
+          "funcion estable: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados declarados: joven, embarazada_en_huida, memoria_de_los_mellizos"
+        ],
+        "documented_features": [
+          "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Manna. Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+          "estados autorizados: joven, embarazada_en_huida, memoria_de_los_mellizos",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "joven",
+            "embarazada_en_huida",
+            "memoria_de_los_mellizos"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "manna": {
+      "name": "Manna",
+      "kind": "personaje",
+      "description": "Hija de Tierra y Rocio que huye embarazada y cuya muerte inicia el ciclo de los mellizos.",
+      "aliases": [],
+      "states": [
+        "joven",
+        "embarazada_en_huida",
+        "memoria_de_los_mellizos"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "manna__identity_sheet",
+        "manna__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-mellizos-transformadores"
+      ],
+      "evidence": [
+        {
+          "myth": "los-mellizos-transformadores",
+          "field": "mito",
+          "note": "Madre cuya huida y muerte inician el ciclo."
+        }
+      ]
+    }
+  }
+}

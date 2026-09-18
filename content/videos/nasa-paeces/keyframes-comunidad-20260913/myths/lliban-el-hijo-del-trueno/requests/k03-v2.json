@@ -1,0 +1,28 @@
+{
+  "slug": "lliban-el-hijo-del-trueno",
+  "id": "k03",
+  "version": 2,
+  "created_at": "2026-09-13T21:54:44.346Z",
+  "plan_sha256": "92bccb669e4a088efb0ca46eaccd4937d2facd6687858d98bb9e7c5cb30d9a43",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/lliban-el-hijo-del-trueno/prompts/k03-v2.txt",
+  "prompt_sha256": "c433f681627efc4c1ffc3256a020a53e87c3019be6d9e3b3e17c31370927e439",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-el-hijo-del-trueno/entrada-v1.png",
+      "sha256": "c924d225e32cfda62d3d471c7dcb12071cbde5d0c9a86f595901212f3082394e",
+      "role": "Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Llíban, el hijo del Trueno. Frame k03.\n\nREFERENCE ROLES:\nImage 1: Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nGran general noche: quebrada crecida entre montañas plegadas, dos médicos en orilla firme, sin niño flotante.\n\nNARRATIVE CONTINUITY: Llíban P02 separado de Tama y Trueno. Niño cubierto; adulto según acto. Una culebra verde continua, sin alas ni patas. Combate fuera de campo.\nSelected account: Primera narración de la creciente, el niño y la culebra-boleadora. No añadir la huerta ni mandatos de otras variantes.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Gran general noche: quebrada crecida entre montañas plegadas, dos médicos en orilla firme, sin niño flotante.\nCAMERA LOCK: EXTREME WIDE ESTABLISHING SHOT. Environment occupies at least 85% of the image; any requested people are small, at most 15% of image height. Do not make a full-body portrait.\nWhenever the scene explicitly calls for the servant/helper, he is a DISTINCT young adult: bare head with short straight black hair, plain OCHRE-BROWN short ruana, gray trousers, no white shoulder bag. NEVER give the helper Lliban's brimmed hat, sage-green ruana and ivory bag. Lliban retains exactly those reference features. Only show the helper if named in the shot. This reversible editorial costume distinction prevents mistaken identity. When the shot explicitly names doctors (medicos), show ONLY the two doctors from entrada: both wear muted green ruanas, one a plain golden-yellow hat, the other a gray brimmed hat. This is before Lliban grows up. The ochre-clothed bareheaded helper is ABSENT from birth scenes. Lliban is only a wrapped baby when explicitly requested.\nTHIS IS BEFORE LLIBAN'S BIRTH. Exactly TWO DOCTORS on dry shore far from camera: both muted green ruanas, one golden-yellow brimmed hat, one gray brimmed hat, as in entrada. No bareheaded ochre helper. No adult Lliban. No baby yet. Stormy swollen stream. They are tiny figures in the landscape. All rain, lightning and water are paper cutouts.",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-el-hijo-del-trueno/entrada-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png"
+    ]
+  }
+}

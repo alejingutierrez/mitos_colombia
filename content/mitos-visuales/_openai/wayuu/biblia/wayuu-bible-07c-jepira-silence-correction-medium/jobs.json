@@ -1,0 +1,44 @@
+{
+  "schema": "mitos-colombia-biblia-batch/v1",
+  "batch_id": "wayuu-bible-07c-jepira-silence-correction-medium",
+  "asset_type": "bible",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "plan": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07c-jepira-silence-correction-medium/plan.snapshot.json",
+  "prepared_at": "2026-09-03",
+  "generation_scope": "Corrección 07c de Jepira en medium y desde texto: la tira de silencio pertenece exclusivamente a la figura reclinada y cargada; la figura vertical sólo carga. Sin género, ropa, atadura, arquitectura o imagen local adjunta.",
+  "jobs": [
+    {
+      "id": "el-viaje-del-mas-alla__magia--regla",
+      "model_id": "el-viaje-del-mas-alla__magia",
+      "view_id": "regla",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-bible-07c-jepira-silence-correction-medium/prompts/el-viaje-del-mas-alla__magia--regla.prompt.txt",
+      "output_file": "output/imagegen/wayuu/wayuu-bible-07c-jepira-silence-correction-medium/el-viaje-del-mas-alla__magia--regla.jpeg",
+      "prompt_sha256": "73e121007468b3bde1e4858817ee1a5930cf64bfb38c4be56122e77b46057341",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "references": [
+        "el-viaje-del-mas-alla__ancla:canon"
+      ],
+      "input_references": [],
+      "safeguards": [
+        "generación correctiva desde texto; no adjuntar ni exportar imágenes locales en esta tanda",
+        "todo elemento está construido con papel cortado, plegado, enrollado o prensado y fibras artesanales; mostrar pliegues, cantos internos, uniones, aire y sombras físicas",
+        "sin violencia o sexualidad explícitas, desnudez, cuerpos vulnerados o sufrimiento gráfico",
+        "sin borde exterior, base, cartón, mesa ni estudio visibles; la escena continúa hasta los cuatro límites",
+        "profundidad 3D por capas físicas a distintas distancias, aire, oclusiones, cantos internos y sombras reales; nunca collage plano",
+        "sin aura, chispas, runas, ojos luminosos o humo místico genérico",
+        "sin patrones, kanas, marcas claniles, texto, etiquetas o símbolos decorativos inventados",
+        "ningún lugar se presenta como coordenada exacta, acceso turístico o reconstrucción total",
+        "paisaje marino de papel con capas de costa y cabo lejano, sin casa o asentamiento; una única pareja de siluetas sólidas, lisas e idénticamente anónimas cruza a pie sobre el agua: la figura vertical carga en brazos a la segunda figura reclinada",
+        "sólo la figura reclinada cargada tiene una tira fina: nace suelta desde sus labios cerrados y continúa por el aire hasta la orilla; la figura vertical que carga no tiene hilo en cara, boca o cuerpo",
+        "ambas siluetas sin rostro, cabello, ropa, sexo, edad, transparencia o heridas; la tira no atraviesa boca, ata, envuelve ni toca cuello o cuerpo y expresa silencio, nunca gag o coerción"
+      ],
+      "status": "prepared"
+    }
+  ]
+}

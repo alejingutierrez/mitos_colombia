@@ -1,0 +1,244 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-07T21:22:26.331Z",
+  "plan": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/plan.json",
+  "plan_sha256": "b1c5236901849ecde99958dd06bfb9f76491a4fe918a6a8659a979ee4f0c6fd3",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "style_sha256": "da3aa36702f381654441c018622e5ccf66ea217b5a420a83093620a8758a2912",
+  "checks": {
+    "shots": 16,
+    "words": 197,
+    "estimated_seconds": 112,
+    "generated": 3,
+    "pending": 13,
+    "warnings": [
+      "b1a: candidato piloto con notas visuales; no aprobación final",
+      "b4a: candidato piloto con notas visuales; no aprobación final",
+      "b7b: candidato piloto con notas visuales; no aprobación final"
+    ]
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 14,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b1b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b1b.txt",
+      "prompt_sha256": "ce8a218d9877afe775a4e493e364d34d8f692a3cfff3df1dde82837a1e369964",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b1b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b2a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b2a.txt",
+      "prompt_sha256": "85ee1e8c35b949d1099da9e2e349805c57da10e0b1131421187979e78c323067",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b2a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b2b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b2b.txt",
+      "prompt_sha256": "e912953c11927976852b5dd789b9d5b078e01c1a09582131b319c908ecc6b338",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b2b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b3a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b3a.txt",
+      "prompt_sha256": "38cad47b8acfa07203617f9db7a84657384ebcc5ba51e0c96f3cda6e7fb36721",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b3a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b3b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b3b.txt",
+      "prompt_sha256": "a53779af50e4b56064addd2acca49c9ec50c938ed0306987c2420c2d7768c2eb",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b3b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b4b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b4b.txt",
+      "prompt_sha256": "fb9676a117a348a37b9d2553c4a9a463c42cb78e43fe7e612b2516318474316d",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b4b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b5a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b5a.txt",
+      "prompt_sha256": "1fdab9b4f1f337ffb13c137b3029b82aac2318b580dc9cb72e800d011fb64c97",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b5a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b5b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b5b.txt",
+      "prompt_sha256": "8d0177367c00d501fc7bf69ba90a5d536303abf99ffc9af22ac1e7258c83f6e0",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b5b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b6a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b6a.txt",
+      "prompt_sha256": "656d745c5be4e014c90cacf8498fb2b6b9e358902e5d2774cd9b6e827f64e81c",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b6a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b6b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b6b.txt",
+      "prompt_sha256": "4fdbb1b143ef53718913beb7c27e93dc99c705af7ae530d484af78e9fe352995",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b6b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b7a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b7a.txt",
+      "prompt_sha256": "c2933721490a752eca735a900e29e82289704d638c1a2f3260b82335cbab8220",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b7a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b8a",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b8a.txt",
+      "prompt_sha256": "89798ca61cbef229242c33d4a9d32b72ae33b0d9a090bcd06300c6a6dfd2e8ee",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b8a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b8b",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-jururiana/preproduccion-03/prepared-01/prompts/b8b.txt",
+      "prompt_sha256": "5e5946fbe914c0afea0ee241d53e8eb3ec75fa24909021353a861807c3b70bd2",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b8b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b1a.jpeg",
+      "sha256": "26f2c731dd85a5e1115b0d68381556f59c69dd2b8ac9d7d3804ec42c78d0e878",
+      "qa_notes": [
+        "Apertura más abierta, personaje completo fuera del primer plano, sombrero junto a estera, sin rosetas.",
+        "Rastro se atenúa por distancia y lluvia; no afirmar borrado perfecto de todas las impresiones.",
+        "Reclinado ocupa algo más del ancho solicitado; aceptable como candidato por dominio ambiental."
+      ]
+    },
+    {
+      "id": "b4a",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b4a.jpeg",
+      "sha256": "4c00c64ac141e9b5cda4d16511113968e3ee24183748136aa0f199214f339686",
+      "qa_notes": [
+        "Sombrero y Kotin largo recuperados, sin rosetas ni dedos en huellas; papel y profundidad sostenidos.",
+        "La senda pasa delante del mayor en vez de terminar exactamente junto a talones. Figura algo mayor que 18%; permanece ambiental."
+      ]
+    },
+    {
+      "id": "b7b",
+      "status": "existing_pilot_candidate_not_final",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b7b.jpeg",
+      "sha256": "fa4393c72b7fc12c045d2354df50c1e4289927d5a470255365d0fec1e72ab49c",
+      "qa_notes": [
+        "Una puerta, día seco, sombrero, suelo de hoja continua ondulada y perfiles planos.",
+        "Mayor se arrodilla también; conservarlo para continuidad de esta toma, postura de escucha compatible. Camisa de Warir se ve de manga corta; fijar ese detalle en tomas contiguas antes de despacho.",
+        "Onda discreta, sin grieta ni luz propia; no afirmar que la imagen animada ya exista."
+      ]
+    }
+  ],
+  "no_api_calls": true
+}

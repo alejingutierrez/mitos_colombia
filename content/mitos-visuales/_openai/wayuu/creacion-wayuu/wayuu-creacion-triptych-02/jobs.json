@@ -1,0 +1,250 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-creacion-triptych-02",
+  "created_at": "2026-09-06T05:54:24.368Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "creacion-wayuu",
+  "plan": "content/mitos-visuales/wayuu.creacion.triptico.v1.1-reparto.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "3db63e79c5d7af874d77b79fd11e28f51288982ad0120ce6039bf90ededb673d",
+  "narrative_target_sha256": "8e39659bf2e7796d5f813cd744fdceb278176576c5d9d3c1feb76db182075b8f",
+  "evidence": [
+    {
+      "id": "published_creacion",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/creacion-wayuu.json",
+      "supports": "Relato compuesto con primera noche familiar, salida de cavidad y semillas que esperan agua.",
+      "limits": "Síntesis editorial explícita, no una versión antigua única. No cambiar texto público."
+    },
+    {
+      "id": "chaves_311",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "311; PDF índice 7",
+      "supports": "Personas creadas en gran cueva o pozo y organización territorial.",
+      "limits": "No dice que esos seis individuos o prendas sean una escena histórica; no mezclar con barro."
+    },
+    {
+      "id": "carrasquero_finol",
+      "type": "published_research",
+      "url": "https://ve.scielo.org/scielo.php?pid=S1315-95182009000400006&script=sci_arttext",
+      "supports": "Relación de Juyá y Mma con generación de vida vegetal.",
+      "limits": "Se consulta esa relación, no se reconstruye yonna ni se trasladan signos o rituales al origen."
+    },
+    {
+      "id": "bible_lot11",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-11-creacion-wayuu-v3.md",
+      "supports": "Presencias no corporales, cavidad, fogones y modelos compartidos de primeros Wayuu.",
+      "limits": "Modelos de objetos no obligan a excluir humanos en una escena del relato; conservar distinción de versiones."
+    },
+    {
+      "id": "castrillon_visual",
+      "type": "external_contemporary_visual_reference",
+      "url": "https://tatocastrillon.com/cosmogonia-wayuu",
+      "supports": "Inspiración compositiva: cosmogonía como territorio relacional, amplitud y distintas escalas.",
+      "limits": "No prueba nuestra versión ni se copia diseño. Todos los derechos reservados; no se adjunta imagen a generador."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:53:28.642Z",
+    "reviewed_reference_ids": [
+      "c6b753decbdb80c3f1a1",
+      "dd905f4f5b7860997fef",
+      "castrillon-cosmogonia-wayuu-01"
+    ],
+    "retained": [
+      "Azul nocturno y arena en capas del proyecto; calidez localizada frente a territorio extenso.",
+      "De la referencia contemporánea de Castrillón: territorio entendido como relaciones entre diferentes formas de vida, con figuras pequeñas dentro de una composición amplia."
+    ],
+    "rejected": [
+      "Anciano creador gigante, barbas y traje geométrico como identidad universal de Mareiwa; enfoque cerrado de taller y muñecos de barro.",
+      "Casas redondas, canoa, velero y patrones decorativos que mezclan variantes.",
+      "No copiar de la obra externa composición, cuerpos divinos, patrones, colores exactos ni genealogía como si fueran la fuente del relato público."
+    ],
+    "influence_by_act": {
+      "entrada": "Noche azul amplia con fuegos familiares separados; curvas de luz se vuelven caminos materiales entre lugares, no taller de un creador gigante.",
+      "acto": "Restituir seis personas pequeñas y distintas dentro del territorio de origen; cavidad y barro permanecen separados.",
+      "huella": "Condensar la relación entre agua y vida latente en una semilla seca cuya sombra tiene forma de árbol; sin tercera escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "mma__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/mma__presence_model--canon.jpeg",
+      "sha256": "99473ea5e38e7d1a0cfe588b281524480a0d82f960e3af548755a18c2c9cf4a9",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "juya__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/juya__presence_model--canon.jpeg",
+      "sha256": "178b0b7c9fd724ef7e9168e29232aa1576d4777baaf37faa1690419cecbab9f9",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "primeros_wayuu__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-02/primeros_wayuu__group_grammar--canon.jpeg",
+      "sha256": "d8de2021bdc7cb22c2f271f872f442b6ec6dfa4de717c95ced8cd5c9c5c968a5",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "cavidad_origen__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/cavidad_origen__spatial_model--canon.jpeg",
+      "sha256": "0d6f9bd074cd115c959a053495a065f589c68bf9690ebf96539a58bcb7a58448",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "fogon_primero__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/fogon_primero__object_sheet--canon.jpeg",
+      "sha256": "5081475042fcd6fb56073a0c005a40775603b2e0bef8e8fd17176a178d3d5b08",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "mma__presence_model",
+        "juya__presence_model",
+        "primeros_wayuu__group_grammar",
+        "cavidad_origen__spatial_model",
+        "fogon_primero__object_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/creacion-wayuu/wayuu-creacion-triptych-02/prompts/entrada.prompt.txt",
+      "prompt_sha256": "965b617324b3266bf13e46a8277f355562aaab2d0220617ecb78f7e73cfb8ef9",
+      "narrative_event_ids": [
+        "noche_familias",
+        "vida_espera"
+      ],
+      "editorial_translation": "Los fuegos separados son un episodio editorial del texto público. Su luz que se despliega como camino material traduce vínculos y mundo inacabado; no se atribuye a una fuente ancestral ni a un rito.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Familias distantes encienden fuegos al comenzar la noche.",
+        "impossible_behavior": "La luz de un hogar se despliega como un tramo material de camino hacia otro.",
+        "narrative_effect": "Habitar abre relaciones; el mundo no está terminado.",
+        "agency": "El origen no depende de un dios humano visible; las personas comienzan a habitar y relacionarse en un territorio vivo.",
+        "physical_translation": "Una franja ámbar nace del suelo iluminado, se levanta con aire y sombra y vuelve a tocar tierra cerca de otra lumbre.",
+        "visible_test": "Camino único conectado a dos lugares, sección levantada visible y mucho territorio vacío.",
+        "event_ids": [
+          "noche_familias",
+          "vida_espera"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "camino_vertical",
+      "canon_model_ids": [
+        "mma__presence_model",
+        "juya__presence_model",
+        "primeros_wayuu__group_grammar",
+        "cavidad_origen__spatial_model",
+        "fogon_primero__object_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/creacion-wayuu/wayuu-creacion-triptych-02/prompts/acto.prompt.txt",
+      "prompt_sha256": "73a84b710d25f92732417a9d610ca376dc8b9b02e534e5f2f1e9c7e6c274709d",
+      "narrative_event_ids": [
+        "origen_cavidad",
+        "salida_cavidad"
+      ],
+      "editorial_translation": "Cavidad se apoya en Chaves; salida se formula en relato público. Estrato que se abre solo es traducción editorial del origen terrestre. Las seis figuras y prendas proceden de la Biblia, no una reconstrucción literal.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Un umbral rocoso separa interior y territorio.",
+        "impossible_behavior": "Una capa mineral se abre por sí misma para dejar salir a las primeras personas.",
+        "narrative_effect": "El origen sigue vinculado a la tierra sin representar cuerpos modelados.",
+        "agency": "El origen no depende de un dios humano visible; las personas comienzan a habitar y relacionarse en un territorio vivo.",
+        "physical_translation": "Estrato ocre continuo con la cavidad, levantado al costado y apoyado bajo el paso.",
+        "visible_test": "Seis figuras enteras y pequeñas junto a una capa abierta, sin escalera ni taller.",
+        "event_ids": [
+          "origen_cavidad",
+          "salida_cavidad"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "mma__presence_model",
+        "juya__presence_model",
+        "primeros_wayuu__group_grammar",
+        "cavidad_origen__spatial_model",
+        "fogon_primero__object_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/creacion-wayuu/wayuu-creacion-triptych-02/prompts/huella.prompt.txt",
+      "prompt_sha256": "3496dffa99b6f4edcbe0372125d84db2657716f18508674d8803f3d60daf6b02",
+      "narrative_event_ids": [
+        "mma_juya",
+        "vida_espera"
+      ],
+      "editorial_translation": "Semilla y agua derivan de la relación generativa del relato; sombra en forma de árbol es metáfora de vida latente, no objeto narrado o explicación botánica.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Una semilla permanece seca mientras espera agua.",
+        "impossible_behavior": "Su sombra ya tiene la forma del árbol futuro.",
+        "narrative_effect": "El mundo conserva posibilidades que no se actualizan de una sola vez.",
+        "agency": "El origen no depende de un dios humano visible; las personas comienzan a habitar y relacionarse en un territorio vivo.",
+        "physical_translation": "Sombra índigo recortada conectada a semilla, gota azul separada por aire.",
+        "visible_test": "Semilla pequeña sin brote con sombra grande de árbol, no un árbol plantado.",
+        "event_ids": [
+          "mma_juya",
+          "vida_espera"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "anticipation"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "La vida puede esperar dentro de lo pequeño; la creación necesita tiempo y agua.",
+        "carrier": "Semilla seca, gota que todavía no llega y sombra de un árbol ausente.",
+        "operation": "La semilla proyecta su futuro vegetal antes de germinar.",
+        "story_connection": "Mma conserva semillas y Juyá vuelve de forma intermitente.",
+        "visible_test": "Sombra arbórea conectada a semilla cerrada; no árbol real y gota aún separada."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-02/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

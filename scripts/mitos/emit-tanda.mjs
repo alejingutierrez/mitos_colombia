@@ -31,7 +31,7 @@ const bibliaDir = join("content/videos", comunidad, "biblia");
 const KIND = { personajes: "personaje", paisajes: "paisaje", props: "prop" };
 // El orden de producción es por mito, pero las fichas que NO llevan referencia
 // no dependen de nada previo: se pueden encolar todas juntas y de varios mitos,
-// que es lo único que aprovecha bien una cola de 2,5 min por imagen. Salen en
+// que es lo único que aprovecha bien una cola de 5-8 min por par. Salen en
 // orden de personaje → paisaje → prop, que sigue siendo el orden de la doctrina.
 const ORDEN_KIND = { personaje: 0, paisaje: 1, prop: 2 };
 const ASP = { entrada: "16:9", acto: "9:16", huella: "1:1" };
@@ -62,14 +62,30 @@ if (paso === "biblia-libre") {
     items.push({ tag: nombre, tipo: "ficha", kind: f.kind, aspect: f.aspect, texto: f.desc, paleta: f.paleta || mito.paleta });
   }
 } else if (paso === "triptico") {
-  const dir = join("content/videos", comunidad, "mitos", slug);
+  const dir = join("content/videos", comunidad, "mitos", mito.carpeta || slug);
   for (const [acto, e] of Object.entries(mito.escenas || {})) {
     if (existsSync(join(dir, `${acto}.jpg`))) continue;
     (e.refs || []).forEach((r) => refs.add(r));
     items.push({ tag: acto, tipo: "escena", acto, comp: e.composicion, aspect: ASP[acto], texto: e.escena, paleta: mito.paleta });
   }
 } else if (paso === "video") {
-  const kfDir = join("content/videos", comunidad, "videos", slug, "keyframes");
+  // Algunos mitos comparten un nombre histórico de carpeta (por ejemplo,
+  // `bochica` ya pertenece al video de Tequendama). `carpeta_video` mantiene
+  // separadas esas secuencias sin alterar la carpeta canónica del tríptico.
+  const kfDir = join("content/videos", comunidad, "videos", mito.carpeta_video || slug, "keyframes");
+  // El video no estrena canon: hereda las fichas propias del mito, cualquier
+  // ficha anterior que el tríptico haya pedido explícitamente y las tres
+  // imágenes ya aprobadas del tríptico. Mantener esta lista en el emisor evita
+  // que una referencia quede sólo en la documentación o en la memoria del
+  // operador.
+  Object.keys(mito.biblia || {}).forEach((r) => refs.add(r));
+  for (const escena of Object.values(mito.escenas || {})) {
+    (escena.refs || []).forEach((r) => refs.add(r));
+  }
+  for (const acto of ["entrada", "acto", "huella"]) {
+    const ref = `mitos/${mito.carpeta || slug}/${acto}`;
+    if (existsSync(join("content/videos", comunidad, `${ref}.jpg`))) refs.add(ref);
+  }
   for (const [n, bloque] of Object.entries(mito.video?.bloques || {})) {
     for (const cual of ["a", "b"]) {
       const e = bloque[cual];
@@ -93,7 +109,7 @@ if (paso === "biblia-libre") {
 if (args.formato === "refs") {
   console.log([...refs].join("\n"));
 } else {
-  console.error(`# ${slug} · ${paso} · ${items.length} piezas` + (refs.size ? ` · referencias: ${[...refs].join(", ")}` : ""));
+  console.error(`# ${slug || comunidad} · ${paso} · ${items.length} piezas` + (refs.size ? ` · referencias: ${[...refs].join(", ")}` : ""));
   // La paleta y el sufijo son idénticos en toda la tanda: se izan a opciones en
   // vez de repetirse por pieza. Con 17 escenas ya recorta la mitad del payload,
   // y el corpus entero son ~13.000 piezas.
@@ -111,6 +127,6 @@ if (args.formato === "refs") {
     if (sufijo && o.texto.endsWith(sufijo)) o.texto = o.texto.slice(0, -sufijo.length);
     return o;
   });
-  const opts = { pausa: Number(args.pausa || 5000), maxVuelo: Number(args.maxVuelo || 1), ...(paleta ? { paleta } : {}), sufijo };
+  const opts = { pausa: Number(args.pausa || 6000), maxVuelo: Number(args.maxVuelo || 2), ...(paleta ? { paleta } : {}), sufijo };
   console.log(`window.hfStart(${JSON.stringify(compactos)},${JSON.stringify(opts)})`);
 }

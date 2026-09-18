@@ -1,0 +1,376 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-25-serranias-de-la-guajira-medium",
+    "myth_slug": "serranias-de-la-guajira",
+    "model_ids": [
+      "wojoro__identity_sheet",
+      "wojoro__state_sheet",
+      "epits__identity_sheet",
+      "epits__state_sheet",
+      "wososopo__identity_sheet",
+      "wososopo__state_sheet",
+      "juyouira__identity_sheet",
+      "juyouira__state_sheet",
+      "tsitsi__identity_sheet",
+      "tsitsi__state_sheet",
+      "itojoro__identity_sheet",
+      "itojoro__state_sheet",
+      "guarapu__identity_sheet",
+      "guarapu__state_sheet",
+      "companero_anonimo_serranias__identity_sheet",
+      "companero_anonimo_serranias__state_sheet",
+      "monkii__group_grammar",
+      "transformacion_viajeros_serranias__phenomenon_rule",
+      "retiro_mar_serranias__phenomenon_rule",
+      "morva_serranias__botanical_sheet",
+      "dispersion_semillas_aves_serranias__phenomenon_rule",
+      "maschura_serranias__botanical_sheet",
+      "sangre_toro_planta_serranias__botanical_sheet",
+      "sojoo_serranias__botanical_sheet",
+      "ita_totumo_serranias__botanical_sheet",
+      "organizacion_vida_serranias__phenomenon_rule",
+      "uchi_juroteka__spatial_model",
+      "akuwa__spatial_model",
+      "kasuto__spatial_model"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "prepared_after_complete_primary_reaudit",
+    "selection_manifest": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-25-serranias-de-la-guajira-medium/selection.json",
+    "contact_sheet": "output/imagegen/wayuu-v3-production/serranias-de-la-guajira-batch25-selected-contact-sheet.jpeg"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "wojoro__state_sheet",
+    "maschura_serranias__botanical_sheet",
+    "organizacion_vida_serranias__phenomenon_rule"
+  ],
+  "models": {
+    "wojoro__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "wojoro"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Viajero y altura de Maiceo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Wojoro. Funcion visual: Viajero de pies heridos que queda asociado con una altura.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Wojoro",
+          "funcion estable: Viajero de pies heridos que queda asociado con una altura.",
+          "estados declarados: viajero, cerro"
+        ],
+        "documented_features": [
+          "Viajero de pies heridos que queda asociado con una altura."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Wojoro. Viajero de pies heridos que queda asociado con una altura.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Viajero de pies heridos que queda asociado con una altura.",
+          "estados autorizados: viajero, cerro",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "viajero",
+            "cerro"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "maschura_serranias__botanical_sheet": {
+      "purpose": "botanical_sheet",
+      "entity_refs": [
+        "maschura_serranias"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Planta nombrada cuya especie queda abierta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica. Entidad: Maschura. Funcion visual: Planta nombrada en la lista de semillas dispersadas; la transcripción no permite fijar especie o morfología exactas.",
+        "materials": [
+          "papel recortado y plegado por organo vegetal",
+          "fibras visibles",
+          "volumen por capas y separacion real"
+        ],
+        "palette_logic": "Verdes, ocres y frutos localizados según especie y estado, sin saturacion tropical uniforme.",
+        "scale": "Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "continuity_markers": [
+          "nombre estable: Maschura",
+          "funcion estable: Planta nombrada en la lista de semillas dispersadas; la transcripción no permite fijar especie o morfología exactas.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Planta nombrada en la lista de semillas dispersadas; la transcripción no permite fijar especie o morfología exactas."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para botanical_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · botanical_sheet",
+        "primary_request": "morfologia vegetal sin flora generica para Maschura. Planta nombrada en la lista de semillas dispersadas; la transcripción no permite fijar especie o morfología exactas.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura y extension legibles frente a suelo, vivienda o figura secundaria.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel recortado y plegado por organo vegetal; fibras visibles; volumen por capas y separacion real",
+        "constraints": [
+          "Morfologia botanica especifica en tallos, hojas, fruto y crecimiento; prohibida la sustitucion por cactus saguaro o flora desertica generica.",
+          "mostrar: Planta nombrada en la lista de semillas dispersadas; la transcripción no permite fijar especie o morfología exactas.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_botanical",
+          "purpose": "morfologia vegetal sin flora generica",
+          "aspect": "1:1",
+          "era": "territorial_documentado_no_fecha_unica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "organizacion_vida_serranias__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "organizacion_vida_serranias"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Creación, diferenciación y distribución sin jerarquía ni propiedad corporal."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Organización de la vida wayuu. Funcion visual: Regla de creación de personas, diferenciación de clanes, asignación de pares animales, territorios y compañeras, sin marcas inventadas ni gestos de propiedad.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Organización de la vida wayuu",
+          "funcion estable: Regla de creación de personas, diferenciación de clanes, asignación de pares animales, territorios y compañeras, sin marcas inventadas ni gestos de propiedad.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla de creación de personas, diferenciación de clanes, asignación de pares animales, territorios y compañeras, sin marcas inventadas ni gestos de propiedad."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Organización de la vida wayuu. Regla de creación de personas, diferenciación de clanes, asignación de pares animales, territorios y compañeras, sin marcas inventadas ni gestos de propiedad.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla de creación de personas, diferenciación de clanes, asignación de pares animales, territorios y compañeras, sin marcas inventadas ni gestos de propiedad.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "wojoro": {
+      "name": "Wojoro",
+      "kind": "personaje",
+      "description": "Viajero de pies heridos que queda asociado con una altura.",
+      "aliases": [],
+      "states": [
+        "viajero",
+        "cerro"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "wojoro__identity_sheet",
+        "wojoro__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Viajero y altura de Maiceo."
+        }
+      ]
+    },
+    "maschura_serranias": {
+      "name": "Maschura",
+      "kind": "planta",
+      "description": "Planta nombrada en la lista de semillas dispersadas; la transcripción no permite fijar especie o morfología exactas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "botanical_sheet"
+      ],
+      "model_refs": [
+        "maschura_serranias__botanical_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Planta nombrada cuya especie queda abierta."
+        }
+      ]
+    },
+    "organizacion_vida_serranias": {
+      "name": "Organización de la vida wayuu",
+      "kind": "fenomeno",
+      "description": "Regla de creación de personas, diferenciación de clanes, asignación de pares animales, territorios y compañeras, sin marcas inventadas ni gestos de propiedad.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "organizacion_vida_serranias__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "serranias-de-la-guajira"
+      ],
+      "evidence": [
+        {
+          "myth": "serranias-de-la-guajira",
+          "field": "mito",
+          "note": "Creación, diferenciación y distribución sin jerarquía ni propiedad corporal."
+        }
+      ]
+    }
+  }
+}

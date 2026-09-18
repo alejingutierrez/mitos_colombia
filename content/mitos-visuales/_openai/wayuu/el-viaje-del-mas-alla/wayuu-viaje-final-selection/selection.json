@@ -1,0 +1,131 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-viaje-del-mas-alla",
+  "title": "El viaje del más allá",
+  "created_at": "2026-09-06T16:35:51.362Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña completa autorizada por el usuario; selección del agente tras investigación e inspección directa.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "622df3cb2717f9ac9b95398d1351094121e5b354e18cb4cc48290c0330fe5101",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T16:28:58.730Z",
+    "reviewed_reference_ids": [
+      "a3fe5a77677e4af4166f",
+      "a9f74fcac7f86377bc46"
+    ],
+    "retained": [
+      "Profundidad de mar y montañas mediante hojas separadas; índigo, ocre y luz cálida.",
+      "Prendas completas y siluetas humanas, con mayor simplificación de caras."
+    ],
+    "rejected": [
+      "Pareja caminando de la mano por tierra: omite que ella lo carga sobre el mar.",
+      "Pozo de mampostería, poblado con torre, ornamentos geométricos y estrellas decorativas no exigidos por el episodio.",
+      "Trasladar telaraña y alcaraván simultáneamente a todos los momentos."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar capas marinas y distancia; retirar pozo y pareja en tierra. Ella carga al viudo, único contacto con el agua.",
+      "acto": "Conservar sombras físicas; sustituir paseo por inversión banco/boa, sin esposa ni alcaraván.",
+      "huella": "Conservar contraste claro/índigo y profundidad. Hilo como símbolo del regreso, no pareja en paisaje."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-02-entrada/entrada.jpeg",
+      "sha256": "8ba6da4f6a78d3217a515974ffd953e009ffc7cb58928945ecb8219fadf5d9e1",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-viaje-del-mas-alla/wayuu-viaje-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "d1898eb719ee3f3d59dbb83d144ab10e9fa70785ba4b3c9bea360bc61299deee",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Una pareja pequeña a la derecha: mujer índigo carga al hombre ocre con sombrero; pie de ella toca mar, piernas de él cuelgan. Amplio mar de capas y sombras, costa distante, sin puente ni orilla bajo los pies.",
+        "limits": [
+          "Grupo aproximado a un octavo del alto; no se afirma obediencia exacta a 140 píxeles.",
+          "Perfiles mínimos y vestuario simplificado por distancia; el aspecto y la hora son puesta en escena editorial."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-01/acto.jpeg",
+      "sha256": "5d8dd751cb4e308bee589db7d36afe3f518214d1c6bb9dcd2ee97744730ba0f4",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-viaje-del-mas-alla/wayuu-viaje-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "24eb487fd5cc1f4036fc320e567fb01170bb27d667aaaaa818e0938a9ad5bfe4",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Un viudo de prendas completas sentado sobre un banco verde cuyo asiento, espiras bajas y cabeza constituyen una forma de papel continua. Dos pies libres en suelo, no ataque. Cubierta y postes prolongados fuera de cuadro; paisaje profundo.",
+        "limits": [
+          "La figura es mayor que el quinto solicitado pero conserva plano abierto y suelo inferior libre.",
+          "El gesto se lee reservado más que asustado. Juyá permanece fuera de campo; no se inventa identidad humana desde sus modelos de lluvia."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-01/huella.jpeg",
+      "sha256": "a1af8b997a49d1fe94badf7ccd2bd50fe1fb62a254980b24d226fdec3c2d7c29",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-viaje-del-mas-alla/wayuu-viaje-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "7d9e93600a47fc0366bc4ae8f6530b94975728886f6434911e7b3f1e2c764ae3",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Tira crema retorcida de papel interrumpida en el centro; sombra oscura sigue entre los extremos. Sin escena, texto, figura ni ornamento. Fibra, torsión y sombra dan profundidad.",
+        "limits": [
+          "El hilo entra y sale por los bordes en lugar de quedar completo con márgenes; refuerza recorrido sin base exterior.",
+          "La continuidad de sombra es fina y menos evidente a tamaño pequeño: verificar en página.",
+          "Rotura/sombra son metáfora editorial, no suceso literal ni emblema cultural."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_01": 78.1,
+      "acto_01": 32.6,
+      "huella_01": 43.8,
+      "entrada_02": 73.1
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-01/entrada.jpeg",
+      "sha256": "7f35433af4e54f00a93acd1e889fa49433bc4d486d946d463040ea61a9fb8b25",
+      "reason": "La pareja ocupa aproximadamente la mitad del alto; corregido sólo el encuadre para recuperar plano distante."
+    }
+  ],
+  "published": false
+}

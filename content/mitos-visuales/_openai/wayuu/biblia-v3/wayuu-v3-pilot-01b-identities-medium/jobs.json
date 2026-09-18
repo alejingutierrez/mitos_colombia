@@ -1,0 +1,47 @@
+{
+  "schema": "mitos-colombia-biblia-pilot/v3",
+  "batch_id": "wayuu-v3-pilot-01b-identities-medium",
+  "asset_type": "bible_pilot",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "jose_juan__identity_sheet--canon",
+      "model_id": "jose_juan__identity_sheet",
+      "entity_id": "jose_juan",
+      "view_id": "canon",
+      "title": "José Juan · identidad joven",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3/wayuu-v3-pilot-01b-identities-medium/prompts/jose_juan__identity_sheet--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3/wayuu-v3-pilot-01b-identities-medium/jose_juan__identity_sheet--canon.jpeg",
+      "prompt_sha256": "8cf538cca643e344681705c1369bbcbedbbb0f792f8915cd32a5003c2555ffa9",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "juramia__identity_sheet--canon",
+      "model_id": "juramia__identity_sheet",
+      "entity_id": "juramia",
+      "view_id": "canon",
+      "title": "Juramía · identidad de cóndor",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3/wayuu-v3-pilot-01b-identities-medium/prompts/juramia__identity_sheet--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3/wayuu-v3-pilot-01b-identities-medium/juramia__identity_sheet--canon.jpeg",
+      "prompt_sha256": "68d654d9bd28b55dbbebea93e453cb005405c05220adf6d570a56d734b4152c1",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

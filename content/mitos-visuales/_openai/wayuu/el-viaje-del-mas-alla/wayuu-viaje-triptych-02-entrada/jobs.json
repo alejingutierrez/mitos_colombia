@@ -1,0 +1,149 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-viaje-triptych-02-entrada",
+  "created_at": "2026-09-06T16:33:25.878Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-viaje-del-mas-alla",
+  "plan": "content/mitos-visuales/wayuu.viaje.triptico.v1.1-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "5aa7160af939e697223fec18b4930fb5ea714156ce0e581873f4102b7b19fb7e",
+  "narrative_target_sha256": "622df3cb2717f9ac9b95398d1351094121e5b354e18cb4cc48290c0330fe5101",
+  "evidence": [
+    {
+      "id": "published_viaje",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-viaje-del-mas-alla.json",
+      "supports": "Versión pública objetivo conservada.",
+      "limits": "Edición del proyecto, no segunda fuente histórica."
+    },
+    {
+      "id": "perrin_finol",
+      "type": "primary_narrative_record",
+      "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+      "pages": "208–220; versión Perrin V2",
+      "supports": "Carga sobre el mar; banco que se enrolla; descenso guiado por Araña y condición de silencio.",
+      "limits": "Transcripción mediada reproducida por Finol; no confundir con Ulépala V1. No establece colores exactos ni iconografía visual."
+    },
+    {
+      "id": "bible_lot18",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-18-el-viaje-del-mas-alla-v3.md",
+      "supports": "Inventario por relato y prendas completas; modelos aceptados.",
+      "limits": "Fichas generadas como continuidad editorial; no prueba histórica."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T16:28:58.730Z",
+    "reviewed_reference_ids": [
+      "a3fe5a77677e4af4166f",
+      "a9f74fcac7f86377bc46"
+    ],
+    "retained": [
+      "Profundidad de mar y montañas mediante hojas separadas; índigo, ocre y luz cálida.",
+      "Prendas completas y siluetas humanas, con mayor simplificación de caras."
+    ],
+    "rejected": [
+      "Pareja caminando de la mano por tierra: omite que ella lo carga sobre el mar.",
+      "Pozo de mampostería, poblado con torre, ornamentos geométricos y estrellas decorativas no exigidos por el episodio.",
+      "Trasladar telaraña y alcaraván simultáneamente a todos los momentos."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar capas marinas y distancia; retirar pozo y pareja en tierra. Ella carga al viudo, único contacto con el agua.",
+      "acto": "Conservar sombras físicas; sustituir paseo por inversión banco/boa, sin esposa ni alcaraván.",
+      "huella": "Conservar contraste claro/índigo y profundidad. Hilo como símbolo del regreso, no pareja en paisaje."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "viudo_viaje_mas_alla__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/viudo_viaje_mas_alla__identity_sheet--canon.jpeg",
+      "sha256": "74bc465196c1da6997a71a7d436bbca4f90e23591753a545d4b7d52b8383efae",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "esposa_muerta_viaje__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/esposa_muerta_viaje__identity_sheet--canon.jpeg",
+      "sha256": "f1fb6c80e106097eae6b544375fa85acb7322943bd177821e8c705f2eca3c390",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "costa_mar_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/costa_mar_guajira__environment_model--canon.jpeg",
+      "sha256": "0f6d686bc3c825bdeb6e1b120277d64edca91fb06f2257c677d87f9cfdbaa6dc",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "jepira__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/jepira__spatial_model--canon.jpeg",
+      "sha256": "1a51cfafc851e96e36ffb57d86bb3673ac70b782198f37abb3b4a9514ffd5949",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "boa_banco__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium-corrections-01/boa_banco__identity_sheet--canon.jpeg",
+      "sha256": "0269df5d82c4fe5ecb3db99832b8497f8d0bc90c75e55cb5bd5ca9903c8d0fd6",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "hilo_arana_regreso__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/hilo_arana_regreso__object_sheet--canon.jpeg",
+      "sha256": "50bed7c8f9ebeea62ef16ee713c801b2ddc3568b6fde5f72c201bf8f4e68e269",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "esposa_muerta_viaje__identity_sheet",
+        "costa_mar_guajira__environment_model",
+        "jepira__spatial_model",
+        "boa_banco__identity_sheet",
+        "hilo_arana_regreso__object_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-viaje-del-mas-alla/wayuu-viaje-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "d1898eb719ee3f3d59dbb83d144ab10e9fa70785ba4b3c9bea360bc61299deee",
+      "narrative_event_ids": [
+        "esposa_carga_mar"
+      ],
+      "editorial_translation": "Carga y cruce narrados. Composición lateral, luz de alba y ola como hoja son decisiones editoriales, no geografía exacta. Corrección 02: alejar cámara y reducir la pareja; preservar agencia, postura y mar de papel.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Cargar a alguien y dar un paso.",
+        "impossible_behavior": "El mar sostiene a la esposa que lleva al viudo.",
+        "narrative_effect": "Cuidado activo que abre el tránsito sin devolverla a la vida.",
+        "agency": "La esposa guía y carga; él depende de ella, no la rescata.",
+        "physical_translation": "Perfil de dos recortes conectados por manos y rodillas; sandalia de ella toca una hoja azul del oleaje.",
+        "visible_test": "¿Ella sostiene al hombre sobre la espalda y su pie pisa agua sin puente, mientras los pies de él cuelgan?",
+        "event_ids": [
+          "esposa_carga_mar"
+        ],
+        "provenance": "narrated_fact",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-viaje-triptych-02-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "title": "La Chama",
+  "references": [
+    {
+      "id": "03b239b5132d895f4c18",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-chama-1784766864163.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/la-chama-",
+          "pathname": "mitos/la-chama-1784766864163.jpg",
+          "uploaded_at": "2026-07-23T00:34:26.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review": {
+        "observed": "Horizontal: anciana de cabello blanco junto a cueva y joven de vestido beige decorado junto al mar; figuras distintas simultáneas, luna y vegetación.",
+        "screenshot": "output/playwright/wayuu-campaign/chama-before-1.png",
+        "limits": "Imagen propia previa: inspiración compositiva, no autoridad cultural ni aprobación de todos sus detalles."
+      }
+    },
+    {
+      "id": "fd86b4d337874421bcd6",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-chama-1784911167209.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 363,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 363,
+          "updated_at": "2026-07-24T16:39:28.615Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/la-chama-",
+          "pathname": "vertical/myth/la-chama-1784911167209.jpg",
+          "uploaded_at": "2026-07-24T16:39:28.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review": {
+        "observed": "Vertical: anciana blanca con bastón y joven sentada de espalda descubierta junto al agua, montañas y mar; encuadre corporal cercano.",
+        "screenshot": "output/playwright/wayuu-campaign/chama-before-0.png",
+        "limits": "Imagen propia previa: inspiración compositiva, no autoridad cultural ni aprobación de todos sus detalles."
+      }
+    },
+    {
+      "id": "174488fa4897d7673a10",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-chama-1767975760448.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/la-chama-",
+          "pathname": "mitos/la-chama-1767975760448.png",
+          "uploaded_at": "2026-01-10T22:35:30.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 1038075
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_for_next_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T19:01:25.171Z",
+    "reviewed_reference_ids": [
+      "03b239b5132d895f4c18",
+      "fd86b4d337874421bcd6"
+    ],
+    "retained": [
+      "Estratos de roca y profundidad, contraste de ocres con azul profundo, cabello como continuidad entre apariencias.",
+      "Sensación de territorio vasto y presencia cambiante."
+    ],
+    "rejected": [
+      "Dos apariencias humanas simultáneas como si fueran dos personajes, espalda descubierta y pose de retrato de las imágenes previas.",
+      "Mar, vegetación en rosetas, luna decorativa y prendas estampadas no necesarios para el episodio.",
+      "Rostro y ojos grandes del modelo infantil: conservar conjunto verde/arena pero reducir a perfil de papel distante.",
+      "Kalamantuunay como alias de La Chama; venganza o persecución de familiares no sustentadas en el pasaje secundario revisado. No se edita el texto público."
+    ],
+    "influence_by_act": {
+      "entrada": "Recuperar territorio en capas y escala amplia; mostrar la partida con hijo y carga renovada, no dos mujeres junto al mar.",
+      "acto": "Conservar roca/cueva, sustituir retrato por acción de refugio y ocultamiento entre capas.",
+      "huella": "Sintetizar inestabilidad de forma con huevo y flor en una sola estructura de papel; sin escena ni catálogo de cinco figuras."
+    }
+  },
+  "external_research": {
+    "searched_at": "2026-09-06T19:01:25.171Z",
+    "queries": [
+      "\"La Chama\" \"Pineda\" ilustración",
+      "\"La chama, un mito guajiro\" pdf"
+    ],
+    "outcome": "No se localizó obra artística externa atribuible al mito en la búsqueda acotada. Catálogo BDB y Colombia Aprende corroboran bibliografía; enlace al facsímil no entregó documento legible y web devolvió cache miss. Se contrastó el pasaje de la compilación de Villa Posse, no una fuente oral independiente.",
+    "exhaustive": false,
+    "source_urls": [
+      "https://www.bibliotecadigitaldebogota.gov.co/resources/2910662/",
+      "https://catalogoenlinea.bibliotecanacional.gov.co/client/es_ES/search/asset/161873",
+      "https://studylib.es/doc/8316192/mitos-y-leyendas"
+    ]
+  }
+}

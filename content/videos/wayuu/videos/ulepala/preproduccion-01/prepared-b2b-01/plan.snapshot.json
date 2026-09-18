@@ -1,0 +1,1314 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "version": "preproduccion-01",
+  "slug": "ulepala",
+  "title": "Ulépala",
+  "status": "ready_for_sunburst_16_keyframes",
+  "duration": {
+    "target_seconds": 128,
+    "voice_words": 196,
+    "measured": false
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/ulepala.json",
+    "content_sha256": "d0ee7ef1040f93122f86d2b1aa4e69b40b4464d6d37be036e8c756cb7674199b",
+    "source_url": null,
+    "source_locator": "Relato público y expediente editorial existentes. El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+    "live_hash_verified": false,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Ulépala se llevó a una joven y partió con seis compañeros para reunir la dote. Durante su ausencia, la muchacha murió.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      },
+      {
+        "id": "e2",
+        "description": "Al volver la encontró convertida en yolujaa. Intentó retenerla, pero ella ya pertenecía al mundo de los muertos y pidió viajar hacia Jepira.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      },
+      {
+        "id": "e3",
+        "description": "La familia muerta recibió al visitante. Ulépala insistió en recuperar la relación; su compañera se negó porque la muerte había cambiado su cuerpo y sus posibilidades.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      },
+      {
+        "id": "e4",
+        "description": "Una abuela le propuso trabajar en un sembrado de algodón. Allí comenzó a comprender que las cosas del otro mundo no conservaban siempre su apariencia conocida.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      },
+      {
+        "id": "e5",
+        "description": "Después llegó al dominio de Juyá. Veía personas donde Juyá reconocía venados, conejos y frutos, y tuvo que aprender prácticas y límites.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      },
+      {
+        "id": "e6",
+        "description": "Pülowi marcaba aquello que no podía tomarse. Una anciana araña ayudó a Ulépala a regresar y le exigió guardar silencio durante dos ciclos de lluvia.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      },
+      {
+        "id": "e7",
+        "description": "En casa, un amigo y su mujer insistieron hasta que habló. Antes de terminar, una flecha de Mareiwa cerró el relato; no mostramos el impacto ni los cuerpos.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      },
+      {
+        "id": "e8",
+        "description": "Juyá pidió el corazón de su protegido y éste se volvió cardenal rojo. El canto del ave quedó asociado con la proximidad de las lluvias.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+      }
+    ]
+  },
+  "story_thesis": "Atravesar la muerte transforma relaciones y permisos; ni el viaje ni el aprendizaje conceden derecho sobre quien ya cambió.",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "palette": "Azul Jepira, blanco nube, algodón crudo, verde Juyá, carbón de caverna y rojo cardenal; sin erotización, sangre o paraíso dorado.",
+  "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "allowed_models": [
+      "gpt-image-2.5-sunburst",
+      "gpt-image-2.5-flare",
+      "gpt-image-2"
+    ],
+    "fast_iteration_model": "gpt-image-2.5-flare",
+    "legacy_fallback_model": "gpt-image-2",
+    "one_model_per_myth": true,
+    "record_exact_model_and_snapshot": true,
+    "quality": "medium",
+    "size": "864x1536",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "mode": "image_edit_with_prior_keyframes",
+    "input_images": "declared_per_keyframe_and_frozen_with_sha256"
+  },
+  "shared_scene_continuity": [
+    "Todo visible está construido con hojas mate recortadas, cantos internos, aire y sombras físicas; nunca suelo realista ni personajes modelados.",
+    "Las referencias fijan identidad, vestuario, paleta y materia, pero jamás autorizan copiar su cámara o distribución.",
+    "No repetir en keyframes adyacentes altura, escala, horizonte ni ubicación de sujetos; cada bloque cambia al menos dos variables.",
+    "El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+    "Violencia, enfermedad, duelo y transformación se muestran sin sangre, heridas, cadáveres expuestos, sexualización o triunfo espectacular."
+  ],
+  "continuity_rules": [
+    "Usar exactamente el reparto inventariado por toma y conservar identidades desde los modelos aprobados.",
+    "Desde el tercer frame, los dos antecedentes aprobados inmediatos entran primero y en orden.",
+    "Macros sólo para manos, objetos, fibras, huellas o materia; nunca para rostros.",
+    "Un descarte no alimenta ningún frame posterior; toda corrección obliga a rehacer sus descendientes si cambiaron los antecedentes.",
+    "El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin."
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-03-entrada/entrada.jpeg",
+        "sha256": "7c43b577bfd2a529f1942610679eb9b1f2ea630a6a06b469e9168d505da4eed5",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-02-acto/acto.jpeg",
+        "sha256": "5ee538c9de77da2f95e2e8ccfa02a2117978e35cfa417890e3c47acc2bae7d46",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-01/huella.jpeg",
+        "sha256": "7862b122a99ba44e4d45a4757fcb67e206980ab333ae425055e04a3b85d58f9e",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tríptico final y modelos de Biblia V3 reutilizados con sus hashes de selección.",
+      "El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "La composición se rediseña para video y variedad de cámara; no replica los trípticos."
+    ]
+  },
+  "canonical_models": [
+    {
+      "model_id": "ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+      "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8"
+    },
+    {
+      "model_id": "ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+      "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9"
+    },
+    {
+      "model_id": "companera_muerta_ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/companera_muerta_ulepala__identity_sheet--canon.jpeg",
+      "sha256": "79ddfb2485bdfba0e2fc8cee0ed16848749af798930f70cd33bdcd71ed7f02b0"
+    },
+    {
+      "model_id": "companera_muerta_ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/companera_muerta_ulepala__state_sheet--estados.jpeg",
+      "sha256": "c2caf8582877f20fa61fa92feb3cc51c5b934460723ee76beec450af4d884e9c"
+    },
+    {
+      "model_id": "companeros_dote_ulepala__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/companeros_dote_ulepala__group_grammar--canon.jpeg",
+      "sha256": "dd369323093c2b84e1f606af367c0837e8201f96277a815d46ce15c932af615b"
+    },
+    {
+      "model_id": "familia_muerta_ulepala__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/familia_muerta_ulepala__group_grammar--canon.jpeg",
+      "sha256": "d4ab436855a6045153916d3f16c559edd7c02bb194077b2dbe3c7b820e764cea"
+    },
+    {
+      "model_id": "caballo_blanco_nube_ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/caballo_blanco_nube_ulepala__state_sheet--estados.jpeg",
+      "sha256": "a00dabeee716e2a774cea4e99d058f05ac199ba06c0034567bce548bcea664de"
+    },
+    {
+      "model_id": "mansiones_jepira_ulepala__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/mansiones_jepira_ulepala__spatial_model--canon.jpeg",
+      "sha256": "8fb79e26810af54f5e9ebb7778b9eeda2867108744c2f9cf1f3211286e450065"
+    },
+    {
+      "model_id": "campo_algodon_ulepala__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/campo_algodon_ulepala__spatial_model--canon.jpeg",
+      "sha256": "d96d06c7cff007096124b8ea0433d507d9e627429c010aeea3c6853e7cfa13ac"
+    },
+    {
+      "model_id": "aparicion_juya_ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/aparicion_juya_ulepala__identity_sheet--canon.jpeg",
+      "sha256": "4ab65867691d2a7a4d43ee99d80caaf779d9b6f29c737b1dd84e727278abf8e1"
+    },
+    {
+      "model_id": "estancia_juya_ulepala__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/estancia_juya_ulepala__spatial_model--canon.jpeg",
+      "sha256": "0a6d7696f319ddf33da49408d42e4af14529614df163078ba450db4b993fb112"
+    },
+    {
+      "model_id": "anciana_amiga_ulepala__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/anciana_amiga_ulepala__identity_sheet--canon.jpeg",
+      "sha256": "a8ebb3d3e902faf03b3d749b3f50bf188a1db255de2d5118740aa36f3667a5c2"
+    },
+    {
+      "model_id": "ruta_sombras_regreso_ulepala__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ruta_sombras_regreso_ulepala__spatial_model--canon.jpeg",
+      "sha256": "a45acb8e9fbab58dc6c8dd64be380a8f2585acdf3ca0af52d370da37494eef6b"
+    },
+    {
+      "model_id": "cardenal_ulepala__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/cardenal_ulepala__state_sheet--estados.jpeg",
+      "sha256": "37b39fe012109c80b7829a30952d556b2700ba6ad82b76f601175d3f44da7c51"
+    },
+    {
+      "model_id": "secreto_ulepala__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/secreto_ulepala__phenomenon_rule--canon.jpeg",
+      "sha256": "41932e4bc872925cb4f11f2bb3499fddcbf3d35b5c07ecc08bda1ade9ae561e5"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "ulepala",
+      "type": "person",
+      "desc": "Ulépala adulto en estados de pretendiente, viajero, aprendiz y retornado; ropa completa según modelos.",
+      "model_ids": [
+        "ulepala__identity_sheet",
+        "ulepala__state_sheet"
+      ]
+    },
+    {
+      "id": "companera",
+      "type": "person",
+      "desc": "Compañera adulta con agencia propia, luego yolujaa; vestuario completo, distancia corporal y negativa visibles.",
+      "model_ids": [
+        "companera_muerta_ulepala__identity_sheet",
+        "companera_muerta_ulepala__state_sheet"
+      ]
+    },
+    {
+      "id": "companeros",
+      "type": "supporting_people",
+      "desc": "Seis compañeros adultos exactos para reunir la dote; no escolta armada.",
+      "model_ids": [
+        "companeros_dote_ulepala__group_grammar"
+      ]
+    },
+    {
+      "id": "jepira",
+      "type": "setting",
+      "desc": "Jepira de colinas azules, mar, caverna y residencias de muertos; no paraíso cristiano.",
+      "model_ids": [
+        "mansiones_jepira_ulepala__spatial_model"
+      ]
+    },
+    {
+      "id": "familia_muerta",
+      "type": "supporting_people",
+      "desc": "Parientes muertos de la compañera como adultos vestidos y sobrios, sin horror.",
+      "model_ids": [
+        "familia_muerta_ulepala__group_grammar"
+      ]
+    },
+    {
+      "id": "algodon",
+      "type": "setting",
+      "desc": "Sembrado de algodón donde Ulépala trabaja y aprende otras apariencias.",
+      "model_ids": [
+        "campo_algodon_ulepala__spatial_model"
+      ]
+    },
+    {
+      "id": "juya",
+      "type": "person",
+      "desc": "Juyá como anfitrión adulto y lluvia, no rey con corona.",
+      "model_ids": [
+        "aparicion_juya_ulepala__identity_sheet"
+      ]
+    },
+    {
+      "id": "dominio",
+      "type": "setting",
+      "desc": "Estancia de Juyá con cultivos, senderos y abundancia condicionada.",
+      "model_ids": [
+        "estancia_juya_ulepala__spatial_model"
+      ]
+    },
+    {
+      "id": "anciana",
+      "type": "person",
+      "desc": "Anciana araña protectora de esta versión, diferenciada de Waleker.",
+      "model_ids": [
+        "anciana_amiga_ulepala__identity_sheet"
+      ]
+    },
+    {
+      "id": "regreso",
+      "type": "magic_subject",
+      "desc": "Ruta de sombras y secreto de dos lluvias; no persecución monstruosa.",
+      "model_ids": [
+        "ruta_sombras_regreso_ulepala__spatial_model",
+        "secreto_ulepala__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "cardenal",
+      "type": "animal",
+      "desc": "Cardenal rojo surgido del corazón por transformación no anatómica, sin extracción ni sangre.",
+      "model_ids": [
+        "cardenal_ulepala__state_sheet"
+      ]
+    },
+    {
+      "id": "caballo",
+      "type": "animal",
+      "desc": "Corcel blanco semejante a nube que lleva la pareja hacia Jepira y se disuelve sin daño.",
+      "model_ids": [
+        "caballo_blanco_nube_ulepala__state_sheet"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Ulépala se llevó a una joven y partió con seis compañeros para reunir la dote. Durante su ausencia, la muchacha murió.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 21,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "Partir por la dote",
+          "visual": "Ulépala sale con exactamente seis compañeros por un sendero; la joven permanece separada en el umbral. COMPOSICIÓN OBLIGATORIA: elevada oblicua desde una ladera, gran plano general territorial; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companera",
+            "companeros"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "elevada oblicua desde una ladera",
+          "shot_scale": "gran plano general territorial",
+          "depth_planes": [
+            "papel cercano",
+            "sujetos pequeños",
+            "sendero diagonal",
+            "territorio medio",
+            "cielo recortado"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con elevada oblicua desde una ladera.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.jpeg",
+            "sha256": "8dc752f8c3b861d8ef815787c7a4f9fe5a74a5d3ce7a42e12103d3b413426e9b"
+          },
+          "generation_inputs": [
+            {
+              "kind": "triptych",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-03-entrada/entrada.jpeg",
+              "sha256": "7c43b577bfd2a529f1942610679eb9b1f2ea630a6a06b469e9168d505da4eed5",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+            },
+            {
+              "kind": "triptych",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-ulepala-triptych-02-acto/acto.jpeg",
+              "sha256": "5ee538c9de77da2f95e2e8ccfa02a2117978e35cfa417890e3c47acc2bae7d46",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+              "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/companera_muerta_ulepala__identity_sheet--canon.jpeg",
+              "sha256": "79ddfb2485bdfba0e2fc8cee0ed16848749af798930f70cd33bdcd71ed7f02b0",
+              "approved": true,
+              "role": "Fijar el modelo canónico companera_muerta_ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b1b",
+          "title": "Bienes reunidos",
+          "visual": "Macro lateral de fibras, collares y cuerdas de animales sobre una estera; siete pares de manos no aparecen, sólo dos gestos. COMPOSICIÓN OBLIGATORIA: lateral a la altura de manos u objeto, macro narrativo sin rostro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companeros"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral a la altura de manos u objeto",
+          "shot_scale": "macro narrativo sin rostro",
+          "depth_planes": [
+            "borde cercano",
+            "manos u objeto",
+            "ropa parcial",
+            "suelo medio",
+            "fondo desenfocado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral a la altura de manos u objeto.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1b.jpeg",
+            "sha256": "1e262f6557ac48ab172f76670e57324a600708638102674ca5f736415eb574e6"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.jpeg",
+              "sha256": "8dc752f8c3b861d8ef815787c7a4f9fe5a74a5d3ce7a42e12103d3b413426e9b",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+              "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/companeros_dote_ulepala__group_grammar--canon.jpeg",
+              "sha256": "dd369323093c2b84e1f606af367c0837e8201f96277a815d46ce15c932af615b",
+              "approved": true,
+              "role": "Fijar el modelo canónico companeros_dote_ulepala__group_grammar; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Al volver la encontró convertida en yolujaa. Intentó retenerla, pero ella ya pertenecía al mundo de los muertos y pidió viajar hacia Jepira.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 23,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "El regreso cambia la casa",
+          "visual": "Ulépala vuelve desde el suelo hacia una vivienda silenciosa; una silueta tenue espera lejos en el umbral. COMPOSICIÓN OBLIGATORIA: contrapicado extremo desde el suelo, plano general bajo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companera"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "contrapicado extremo desde el suelo",
+          "shot_scale": "plano general bajo",
+          "depth_planes": [
+            "materia rasante",
+            "pies o base",
+            "cuerpos completos",
+            "relieve",
+            "cielo amplio"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El regreso cambia la casa.",
+            "impossible_behavior": "Ulépala vuelve desde el suelo hacia una vivienda silenciosa; una silueta tenue espera lejos en el umbral.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e2.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e2"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado extremo desde el suelo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b2a.jpeg",
+            "sha256": "f91896813d859e18a6f067d33310e864c10bab98dba9ab28d257a2875220e611"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1a.jpeg",
+              "sha256": "8dc752f8c3b861d8ef815787c7a4f9fe5a74a5d3ce7a42e12103d3b413426e9b",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1b.jpeg",
+              "sha256": "1e262f6557ac48ab172f76670e57324a600708638102674ca5f736415eb574e6",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+              "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/companera_muerta_ulepala__identity_sheet--canon.jpeg",
+              "sha256": "79ddfb2485bdfba0e2fc8cee0ed16848749af798930f70cd33bdcd71ed7f02b0",
+              "approved": true,
+              "role": "Fijar el modelo canónico companera_muerta_ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b2b",
+          "title": "Ella ya es yolujaa",
+          "visual": "Cenital de dos sombras que no llegan a tocarse: una humana y otra desfasada junto a la compañera. COMPOSICIÓN OBLIGATORIA: cenital verdadero de 90 grados, detalle gráfico de suelo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companera"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "cenital verdadero de 90 grados",
+          "shot_scale": "detalle gráfico de suelo",
+          "depth_planes": [
+            "borde superior",
+            "acción central",
+            "huellas u objetos",
+            "sombras planas",
+            "estratos inferiores"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Ella ya es yolujaa.",
+            "impossible_behavior": "Cenital de dos sombras que no llegan a tocarse: una humana y otra desfasada junto a la compañera.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e2.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e2"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital verdadero de 90 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b1b.jpeg",
+              "sha256": "1e262f6557ac48ab172f76670e57324a600708638102674ca5f736415eb574e6",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu/keyframes/ulepala-preproduccion-01/b2a.jpeg",
+              "sha256": "f91896813d859e18a6f067d33310e864c10bab98dba9ab28d257a2875220e611",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/ulepala__identity_sheet--canon.jpeg",
+              "sha256": "48a7443957a878d8d28d8db46941488f9b738857b35b4c67ca1ecdb0563ce4a8",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium/ulepala__state_sheet--estados.jpeg",
+              "sha256": "4ad8d1fbbe50d382d71e91c89c97b3227b4e3c83b9de60b9cd8e67c97fd018b9",
+              "approved": true,
+              "role": "Fijar el modelo canónico ulepala__state_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "ulepala",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-19-ulepala-medium-corrections-01/companera_muerta_ulepala__identity_sheet--canon.jpeg",
+              "sha256": "79ddfb2485bdfba0e2fc8cee0ed16848749af798930f70cd33bdcd71ed7f02b0",
+              "approved": true,
+              "role": "Fijar el modelo canónico companera_muerta_ulepala__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "La familia muerta recibió al visitante. Ulépala insistió en recuperar la relación; su compañera se negó porque la muerte había cambiado su cuerpo y sus posibilidades.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 26,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Camino a Jepira",
+          "visual": "Perfil teleobjetivo de la pareja montada en el corcel blanco, con distancia clara entre sus cuerpos. COMPOSICIÓN OBLIGATORIA: lateral teleobjetivo sin cielo, plano general comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companera",
+            "caballo",
+            "jepira"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral teleobjetivo sin cielo",
+          "shot_scale": "plano general comprimido",
+          "depth_planes": [
+            "franja cercana",
+            "sujeto uno",
+            "acción media",
+            "sujeto dos",
+            "bandas comprimidas"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral teleobjetivo sin cielo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b3b",
+          "title": "El caballo se vuelve nube",
+          "visual": "A ras de una caverna, el corcel se desarma en hojas blancas mientras ambos viajeros siguen completos a pie. COMPOSICIÓN OBLIGATORIA: rasante a través de una grieta o vegetación, gran plano general de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companera",
+            "caballo",
+            "jepira"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "rasante a través de una grieta o vegetación",
+          "shot_scale": "gran plano general de fuga",
+          "depth_planes": [
+            "recorte extremo",
+            "vacío cercano",
+            "acción distante",
+            "territorio",
+            "franja de salida"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El caballo se vuelve nube.",
+            "impossible_behavior": "A ras de una caverna, el corcel se desarma en hojas blancas mientras ambos viajeros siguen completos a pie.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e3.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e3"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con rasante a través de una grieta o vegetación.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Una abuela le propuso trabajar en un sembrado de algodón. Allí comenzó a comprender que las cosas del otro mundo no conservaban siempre su apariencia conocida.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 26,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "La familia de los muertos",
+          "visual": "Vista alta de parientes recibiendo a la compañera; Ulépala ocupa un borde y no domina la reunión. COMPOSICIÓN OBLIGATORIA: alta diagonal de 60 grados, plano conjunto arquitectónico; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companera",
+            "familia_muerta",
+            "jepira"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "alta diagonal de 60 grados",
+          "shot_scale": "plano conjunto arquitectónico",
+          "depth_planes": [
+            "trama cercana",
+            "acción uno",
+            "estructura central",
+            "acción dos",
+            "horizonte mínimo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con alta diagonal de 60 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b4b",
+          "title": "La negativa",
+          "visual": "Sobre el hombro de la compañera, su mano abierta mantiene distancia; Ulépala permanece sentado lejos junto a un chinchorro. COMPOSICIÓN OBLIGATORIA: sobre el hombro con primer término dominante, plano medio ambiental; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "ulepala",
+            "companera",
+            "jepira"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "sobre el hombro con primer término dominante",
+          "shot_scale": "plano medio ambiental",
+          "depth_planes": [
+            "hombro o marco",
+            "gesto",
+            "objeto o sujeto central",
+            "fondo activo",
+            "territorio"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con sobre el hombro con primer término dominante.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Después llegó al dominio de Juyá. Veía personas donde Juyá reconocía venados, conejos y frutos, y tuvo que aprender prácticas y límites.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 22,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Trabajar el algodón",
+          "visual": "Desde la sombra de plantas, Ulépala deshierba entre surcos blancos mientras una abuela señala la tarea. COMPOSICIÓN OBLIGATORIA: subjetiva baja desde la sombra, plano general con primer término oscuro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "ulepala",
+            "algodon",
+            "familia_muerta"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "subjetiva baja desde la sombra",
+          "shot_scale": "plano general con primer término oscuro",
+          "depth_planes": [
+            "sombra cercana",
+            "señal",
+            "acción media",
+            "figuras",
+            "arquitectura o paisaje"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con subjetiva baja desde la sombra.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b5b",
+          "title": "Llegar al dominio de Juyá",
+          "visual": "Perfil distante: Juyá recibe a Ulépala frente a cultivos y corrales de escala inusual. COMPOSICIÓN OBLIGATORIA: perfil distante con horizonte desplazado, plano general lateral; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "ulepala",
+            "juya",
+            "dominio"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "perfil distante con horizonte desplazado",
+          "shot_scale": "plano general lateral",
+          "depth_planes": [
+            "materia cercana",
+            "sujeto lateral",
+            "acción",
+            "segundo sujeto",
+            "horizonte alto"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con perfil distante con horizonte desplazado.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Pülowi marcaba aquello que no podía tomarse. Una anciana araña ayudó a Ulépala a regresar y le exigió guardar silencio durante dos ciclos de lluvia.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 25,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Aprender otras apariencias",
+          "visual": "Cenital diagonal: sombras de venado y conejo se separan de figuras humanas, sin flecha ni impacto. COMPOSICIÓN OBLIGATORIA: cenital diagonal amplio, plano de consecuencia; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "ulepala",
+            "juya",
+            "dominio"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "cenital diagonal amplio",
+          "shot_scale": "plano de consecuencia",
+          "depth_planes": [
+            "sombra",
+            "objeto central",
+            "figuras parciales",
+            "trama territorial",
+            "borde de salida"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Aprender otras apariencias.",
+            "impossible_behavior": "Cenital diagonal: sombras de venado y conejo se separan de figuras humanas, sin flecha ni impacto.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital diagonal amplio.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b6b",
+          "title": "El límite",
+          "visual": "Macro de una fibra tensada como frontera delante del pie de Ulépala; el sendero húmedo continúa más allá. COMPOSICIÓN OBLIGATORIA: macro frontal de materia, primerísimo plano de objeto; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "ulepala",
+            "dominio",
+            "regreso"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "macro frontal de materia",
+          "shot_scale": "primerísimo plano de objeto",
+          "depth_planes": [
+            "fibra cercana",
+            "objeto",
+            "cambio material",
+            "sombra interna",
+            "fondo abstracto"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El límite.",
+            "impossible_behavior": "Macro de una fibra tensada como frontera delante del pie de Ulépala; el sendero húmedo continúa más allá.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con macro frontal de materia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "En casa, un amigo y su mujer insistieron hasta que habló. Antes de terminar, una flecha de Mareiwa cerró el relato; no mostramos el impacto ni los cuerpos.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 28,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "La anciana del regreso",
+          "visual": "Entre postes, la anciana entrega un ovillo a Ulépala y señala una ruta oscura; no se transforma en Waleker. COMPOSICIÓN OBLIGATORIA: contrapicado enmarcado entre postes o rocas, plano general enmarcado; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "ulepala",
+            "anciana",
+            "regreso"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "contrapicado enmarcado entre postes o rocas",
+          "shot_scale": "plano general enmarcado",
+          "depth_planes": [
+            "marco cercano",
+            "umbral",
+            "sujetos pequeños",
+            "acción",
+            "paisaje estrecho"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado enmarcado entre postes o rocas.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b7b",
+          "title": "Dos ciclos de lluvia",
+          "visual": "A través de la puerta, Ulépala calla mientras dos bandas de lluvia pasan en planos sucesivos sobre el patio. COMPOSICIÓN OBLIGATORIA: teleobjetivo profundo a través de una abertura, plano largo comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "ulepala",
+            "regreso"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "teleobjetivo profundo a través de una abertura",
+          "shot_scale": "plano largo comprimido",
+          "depth_planes": [
+            "abertura cercana",
+            "vacío",
+            "acción lejana",
+            "capas medias",
+            "fondo comprimido"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Dos ciclos de lluvia.",
+            "impossible_behavior": "A través de la puerta, Ulépala calla mientras dos bandas de lluvia pasan en planos sucesivos sobre el patio.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e7.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e7"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con teleobjetivo profundo a través de una abertura.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Juyá pidió el corazón de su protegido y éste se volvió cardenal rojo. El canto del ave quedó asociado con la proximidad de las lluvias.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; El guion conserva la agencia de la compañera y no romantiza rapto, insistencia ni violencia; distingue las versiones de Paz Ipuana y Perrin.",
+      "word_count": 25,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "La palabra interrumpida",
+          "visual": "Vista aérea: Ulépala habla ante dos adultos; una sombra de flecha cruza fuera de los cuerpos, sin impacto. COMPOSICIÓN OBLIGATORIA: aérea oblicua desde atrás, gran plano general de relación; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "ulepala",
+            "regreso"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "aérea oblicua desde atrás",
+          "shot_scale": "gran plano general de relación",
+          "depth_planes": [
+            "estructura cercana",
+            "sujetos",
+            "trayectoria",
+            "territorio amplio",
+            "cielo mínimo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con aérea oblicua desde atrás.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b8b",
+          "title": "El corazón se vuelve canto",
+          "visual": "Un pliegue rojo no anatómico sale de un círculo de fibras y adopta forma de cardenal que vuela hacia lluvia distante. COMPOSICIÓN OBLIGATORIA: a ras del suelo mirando hacia la distancia, plano final de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "cardenal",
+            "juya",
+            "regreso"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "a ras del suelo mirando hacia la distancia",
+          "shot_scale": "plano final de fuga",
+          "depth_planes": [
+            "materia muy cercana",
+            "sendero",
+            "figuras pequeñas",
+            "paisaje",
+            "horizonte"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El corazón se vuelve canto.",
+            "impossible_behavior": "Un pliegue rojo no anatómico sale de un círculo de fibras y adopta forma de cardenal que vuela hacia lluvia distante.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con a ras del suelo mirando hacia la distancia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    }
+  ]
+}

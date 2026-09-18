@@ -1,0 +1,253 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "ulepala": {
+      "titulo": "Ulépala",
+      "canon_models": [
+        "ulepala__identity_sheet",
+        "companera_muerta_ulepala__identity_sheet",
+        "caverna_submarina_ulepala__spatial_model",
+        "majayuras_ahuyamas_ulepala__group_grammar",
+        "cardenal_ulepala__identity_sheet"
+      ],
+      "evidence": [
+        {
+          "id": "published_ulepala",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/ulepala.json",
+          "supports": "Versión pública objetivo conservada; aprendizaje y desenlace.",
+          "limits": "Edición interna, no fuente histórica independiente."
+        },
+        {
+          "id": "paz_finol",
+          "type": "primary_narrative_record",
+          "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+          "pages": "177–207, especialmente 183, 193–194 y 207",
+          "supports": "Caverna bajo el mar, abrigo de la compañera, mujeres de solapas verdes y corazón convertido en cardenal.",
+          "limits": "Versión Paz Ipuana mediada por Finol. Caverna desarrolla el viaje resumido en la página; no importar cruce sobre el agua de Perrin."
+        },
+        {
+          "id": "bible_lot19",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-19-ulepala-v3.md",
+          "supports": "Modelos de identidad y prendas completas.",
+          "limits": "Modelos generados, no iconografía histórica."
+        },
+        {
+          "id": "ebird_cardinal",
+          "type": "natural_history_reference",
+          "url": "https://ebird.org/species/vercar1",
+          "supports": "Cardenal regional: rojo, cresta puntiaguda, pico gris, negro pequeño en mentón.",
+          "limits": "Referencia naturalista textual, no imagen histórica del mito ni prueba sobre cada forma de Iisho."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "ulepala__identity_sheet",
+          "decision": "Conservar Kotin azul, camisa crema, faja roja, prenda inferior carbón y pañuelo arena; aplanar cara."
+        },
+        {
+          "model_id": "companera_muerta_ulepala__identity_sheet",
+          "decision": "Conservar manta vino, pechera crema, abrigo índigo y trenzas. No fantasma blanco ni rostro modelado."
+        },
+        {
+          "model_id": "caverna_submarina_ulepala__spatial_model",
+          "decision": "Conservar profundidad abovedada; convertir agua, suelo y piedras fotográficas en hojas amplias."
+        },
+        {
+          "model_id": "majayuras_ahuyamas_ulepala__group_grammar",
+          "decision": "Conservar mantas cálidas y solapas verdes; reducir a dos adultas, no cabezas volumétricas, no frutos gigantes independientes."
+        },
+        {
+          "model_id": "cardenal_ulepala__identity_sheet",
+          "decision": "Conservar rojo/cresta. Sustituir pico rojo y máscara norteamericana por pico gris y mentón oscuro pequeño según eBird; forma simbólica no ficha zoológica."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "ulepala",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/ulepala.json",
+        "target_content_sha256": "d0ee7ef1040f93122f86d2b1aa4e69b40b4464d6d37be036e8c756cb7674199b",
+        "summary": "Ulépala atraviesa dominios donde las relaciones y las apariencias cambian. No adquiere derechos sobre quienes lo reciben. Cada pieza separa un momento de tránsito, aprendizaje o memoria, sin reunir todo el viaje en una escena.",
+        "events": [
+          {
+            "id": "caverna_abrigo",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "paz_finol",
+            "action": "La compañera guía de la mano y abriga a Ulépala en una caverna fría que cruza bajo el mar."
+          },
+          {
+            "id": "mujeres_auyamas",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "paz_finol",
+            "action": "Ulépala busca auyamas y encuentra mujeres de mantas con solapas verdes; más tarde revela su apariencia vegetal mediante violencia que no representamos."
+          },
+          {
+            "id": "corazon_cardenal",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "paz_finol",
+            "action": "Su corazón se convierte en cardenal que anuncia las lluvias."
+          }
+        ],
+        "emotional_reading": "Cuidado sin posesión, desconcierto ante otras apariencias y vida que permanece como anuncio.",
+        "magic_reading": "El mar se cruza por debajo; una conversación tiene identidad vegetal; el corazón continúa como ave.",
+        "qa_method": "H pareja pequeña bajo mar; V sombras vegetales conectadas a mujeres intactas; S ave-corazón sin escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T17:00:30.275Z",
+        "reviewed_reference_ids": [
+          "5a06d296a1deb2ac4679",
+          "060442eeec694224f2f7"
+        ],
+        "retained": [
+          "Estratos de montañas y niebla, índigo y ocre; papel con sombras físicas.",
+          "Cardenal rojo como motivo propio del desenlace."
+        ],
+        "rejected": [
+          "Abrazo central que reduce el arco a romance y resta agencia a la compañera.",
+          "Mujer blanca translúcida, torsos descubiertos, barco y mariposas mezclados con episodios ajenos a cada escena.",
+          "Máscara negra extensa y pico rojo del cardenal: ajustar a la referencia regional, no copiar literalmente la ficha."
+        ],
+        "influence_by_act": {
+          "entrada": "Conservar profundidad de estratos, alejar pareja y sustituir abrazo por travesía subterránea guiada por ella.",
+          "acto": "Conservar terreno en capas; retirar pareja romántica y mostrar percepción de mujeres-auyamas mediante sombras anticipatorias.",
+          "huella": "Aislar ave roja y corazón como una sola operación simbólica; sin paisaje ni collage del viaje."
+        }
+      },
+      "material_direction": "Immersive full-bleed world constructed ENTIRELY from matte dyed CUT PAPER. Scenery consists of broad sheets physically separated at several distances, with air gaps, occlusion and cast shadows. Characters are almost-flat side-profile cutouts with natural adult proportions, one small eye incision and nose in outline, no modeled cheekbones. Clothing consists of broad folded paper pieces, never realistic fabric or skin. Internal fine cut edges visible, NO exterior cardboard backing, stage edge, base, pedestal, tabletop, picture frame or model island. Ground and water must also be paper.",
+      "paleta": "Índigo, azul petróleo y ocre apagado; vino tinto y rojo bermellón como acentos específicos, crema y verde hoja. Papel mate y luz lateral, no resplandor.",
+      "continuity_contract": [
+        "Ulépala adulto marrón con cabello negro y pañuelo arena, Kotin azul índigo hasta debajo de rodillas sobre camisa crema de mangas, prenda inferior carbón, faja roja y sandalias oscuras. Recorte plano, perfil mínimo.",
+        "Cada orientación conserva sólo su propio reparto y episodio; no importar objetos de otras piezas.",
+        "Colores y puesta en escena son continuidad editorial, no uniformes históricos o códigos de clan."
+      ],
+      "avoid": [
+        "Pixar, Disney, big cartoon eyes, sculpted face, photorealistic skin, close-up",
+        "bare torso, loincloth-only costume, invented sacred glyphs, feather crown",
+        "blood, wounds, corpse, sexual action, attack, neck injury, weapons",
+        "white ghost, magic portal, decorative moon, stars, butterfly, boat",
+        "cardboard base, outer frame, pedestal, diorama island, real sand or water"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "caverna_abrigo"
+          ],
+          "beat": "Ella conoce el paso; él necesita su cuidado.",
+          "escena": "16:9 EXTREME WIDE distant slightly elevated SIDE VIEW. Vast cold cave passing UNDER an entire sea. Couple very small, each at most 125 PIXELS TALL on this 864-pixel-high canvas; place them at x73–82%, y58–73%. No human in foreground or center. Woman in front faces RIGHT and gently leads man behind: her LEFT hand reaches BACK and visibly HOLDS his right HAND between them, not a cloth edge. An INDIGO outer mantle remains over HER shoulders and extends loosely BACK over HIS shoulders as a shared cover. Under it her plain long WINE-RED manta, cream pechera and black braids visible; man blue Kotin, cream sleeves, sand tied headcloth, charcoal lower garment, red sash and dark sandals. NO embroidered borders or gold decorative symbols. Small brown faces are almost flat silhouette profiles with no cheek planes. Dry walking ground continues across full lower image. Enormous gray-blue and muted ochre rock vaults as six to eight broad separated paper sheets recede to far-right distance. ABOVE them at top quarter, broad teal paper wave strata show the sea continuing across entire canvas, visibly ABOVE roof of passage. Cold small matte paper drops under cave vault at right. LEFT 65% and BOTTOM QUARTER quiet dark rock and ground with no people for website text. The magical relationship is crossing a whole sea beneath its weight while she shelters him. Blue sea, rock and ground all broad matte cut paper, physically separated layers casting shadows, no printed texture, no real water or sand. Internal cut edges but no outer cardboard, stage base, floating island or diagram frame. Maintain cave-under-sea composition, make people more distant and enforce handholding plus shared mantle. No bird, butterfly, horse, boat, stars or ghost.",
+          "editorial_translation": "La caverna y el abrigo están narrados. Ver simultáneamente mar y paso subterráneo es una traducción espacial editorial, no un plano geográfico.",
+          "visual_question": "¿La pareja es pequeña y camina bajo el mar, con ella guiando y compartiendo abrigo?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Caminar acompañado y abrigarse.",
+            "impossible_behavior": "Una caverna permite atravesar por debajo la extensión del mar.",
+            "narrative_effect": "Cruzar a otro dominio depende del cuidado y conocimiento de ella.",
+            "agency": "Ella guía y abriga; él la sigue.",
+            "physical_translation": "Bóvedas separadas bajo láminas marinas, pareja mínima unida por mano y abrigo.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "visible_test": "¿La pareja es pequeña y camina bajo el mar, con ella guiando y compartiendo abrigo?",
+            "event_ids": [
+              "caverna_abrigo"
+            ]
+          }
+        },
+        "acto": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "mujeres_auyamas"
+          ],
+          "beat": "Busca un cultivo y encuentra una conversación que todavía no comprende.",
+          "escena": "9:16 WIDE VERTICAL slightly elevated view beyond a low arid hill at Juyá's domain. Three small full-body adult flat cut-paper figures in MIDDLE THIRD: Ulepala stands LEFT x20–32%, y34–52%, hands relaxed empty at sides, watching from a respectful distance; TWO women seated RIGHT x53–80%, y36–49%, talking only to each other. Women wear broad ankle-length mantas, one muted orange and one warm ochre, each with LARGE GREEN leaf-shaped lapels, black hair and flat side profiles. Their real bodies remain entirely HUMAN and intact. From the ground-contacting hem of EACH seated woman extends ONE dark green SHADOW toward lower-left, connected continuously at that hem, but each shadow silhouette is an unmistakable squat ribbed AUYAMA with short curved STEM and single broad LEAF instead of a human silhouette. Two connected vegetable shadows, no separate physical pumpkins, no floating plants. Ulepala has a NORMAL slender human shadow. Shadows occupy middle x36–75%, y49–63%; below y67% keep broad quiet warm ochre terrain for mobile title. Paper hills rise in several separated planes above group, sparse low green shrubs. No building or sea. Upper side light consistent for all shadows. Shadows made from dark paper sheets just beneath ground layer, visibly material yet quietly impossible. Women not interacting with man; no touch, violence, arrows or anatomy. Human height under one fifth of frame; landscape dominates.",
+          "editorial_translation": "Conversación y apariencia vegetal proceden del relato. Las sombras de auyama anticipan editorialmente una transformación posterior; no se afirma que la fuente describa esas sombras o una metamorfosis pacífica.",
+          "visual_question": "¿Dos mujeres intactas proyectan sombras de auyama conectadas a sus mantas, mientras Ulépala observa sin tocarlas?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Dos mujeres conversando sentadas.",
+            "impossible_behavior": "Sus sombras revelan frutos en vez de cuerpos humanos.",
+            "narrative_effect": "Expresa la percepción incompleta del visitante sin escenificar violencia.",
+            "agency": "Ellas conversan autónomas; Ulépala no produce la anomalía.",
+            "physical_translation": "Dos siluetas vegetales oscuras nacen en sendos dobladillos; hojas verdes de las prendas repiten las hojas del fruto.",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation",
+            "visible_test": "¿Dos mujeres intactas proyectan sombras de auyama conectadas a sus mantas, mientras Ulépala observa sin tocarlas?",
+            "event_ids": [
+              "mujeres_auyamas"
+            ]
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "corazon_cardenal"
+          ],
+          "beat": "El corazón permanece como anuncio de vida.",
+          "escena": "1:1 SYMBOLIC CUT-PAPER relief, no scene or horizon. A SINGLE asymmetrical vermilion RED BIRD silhouette in side profile faces upper-right, made of only four or five broad matte folded paper shapes, raised at different shallow distances over full-bleed DEEP INDIGO field. Long tapered tail down-left, sharp narrow upright crest, short thick GRAY beak, tiny dark eye incision and only small charcoal CHIN mark, NO black face mask. Bird occupies central half of canvas, no branch or feet supporting it. At the CENTER OF ITS BREAST is one clearly legible HEART-SHAPED EMPTY opening, indigo visible through it, NOT a separate red heart pasted on the bird. The cut-out red heart-shaped piece remains attached along ONE edge of the opening and folds outward into the bird's raised wing: heart and wing share ONE continuous red paper sheet. One material becomes another, visible fold and shadow prove continuity. Heart opening roughly one sixth of total image height, slightly irregular handmade lobes, not logo-perfect; no anatomical heart, veins, blood, body or romantic decoration. Generous empty field all around; lateral soft light reveals shadow under wing and between broad tail feathers. No landscape, clouds, drops, musical notes, text, logo, hand or extra birds.",
+          "editorial_translation": "El corazón convertido en cardenal es narrado; hueco de corazón y ala plegada son síntesis editorial no anatómica. No se presenta como emblema tradicional.",
+          "visual_question": "¿Un único ave roja contiene un vacío de corazón cuyo recorte se vuelve ala, sin paisaje ni órgano anatómico?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El corazón de Ulépala y el cardenal del desenlace.",
+            "impossible_behavior": "La misma pieza de papel pasa de corazón a ala.",
+            "narrative_effect": "Condensa la permanencia de la vida en el ave que anuncia lluvia.",
+            "agency": "Transformación del desenlace; no poder controlado por Ulépala.",
+            "physical_translation": "Vacío de corazón en pecho de ave, solapa del mismo recorte levantada como ala.",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory",
+            "visible_test": "¿Un único ave roja contiene un vacío de corazón cuyo recorte se vuelve ala, sin paisaje ni órgano anatómico?",
+            "event_ids": [
+              "corazon_cardenal"
+            ]
+          },
+          "material_direction": "Broad MATTE CUT-PAPER sheets, asymmetrical sculptural relief, visible air and shadows between red folded wing, body and indigo background. No exterior support.",
+          "continuity_contract": [
+            "Sólo ave y corazón como forma compartida; sin reparto humano.",
+            "Pico gris y pequeña marca oscura en mentón, no máscara negra norteamericana.",
+            "Síntesis editorial, no emblema indígena histórico."
+          ],
+          "symbolic_contract": {
+            "thesis": "El corazón cambia de forma y permanece como anuncio de vida.",
+            "carrier": "Un solo ave roja y el vacío de corazón en su pecho.",
+            "operation": "El recorte del corazón se pliega como ala sin desprenderse.",
+            "story_connection": "Corazón transformado en cardenal que anuncia las lluvias.",
+            "visible_test": "Un hueco de corazón en el ave y su propia solapa convertida en ala; sin escena."
+          },
+          "avoid": [
+            "scene, horizon, branch, people, separate heart, anatomical organ, blood, cute romantic icon, logo",
+            "black facial mask, red beak, photographic feathers, realistic animal rendering",
+            "cardboard base, frame, tabletop, stars, letters, musical notes"
+          ]
+        }
+      }
+    }
+  }
+}

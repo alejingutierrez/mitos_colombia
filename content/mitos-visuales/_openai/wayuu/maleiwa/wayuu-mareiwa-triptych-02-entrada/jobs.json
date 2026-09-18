@@ -1,0 +1,156 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-mareiwa-triptych-02-entrada",
+  "created_at": "2026-09-06T05:36:54.569Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "maleiwa",
+  "plan": "content/mitos-visuales/wayuu.mareiwa.triptico.v1.1-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "53d1b461258814e475c4cc26a5926ecbe323bf774ed5aeb73b61de46298a46e5",
+  "narrative_target_sha256": "e9df8208648a3b896a6628865cdb903acea0de2cfb7d72ea3a40ff94e21d6c6c",
+  "evidence": [
+    {
+      "id": "chaves_311",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "311 (PDF índice 7)",
+      "supports": "Honda, piedra, retirada del mar, pozos salados y aves que dispersan semillas.",
+      "limits": "Registro histórico mediado y con lenguaje colonial. Morva es arbusto, no paloma. No copiar ilustraciones ni iconografía."
+    },
+    {
+      "id": "published_mareiwa",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/maleiwa.json",
+      "supports": "Múltiples versiones y tarea de hacer habitable el mundo.",
+      "limits": "Mantener texto sin cambios; no fabricar biografía única ni fusionar con Creación Wayuu."
+    },
+    {
+      "id": "bible_lot10",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-10-maleiwa-v3.md",
+      "supports": "Modelos de presencia, honda, pozos, aves y plantas; registro de variantes de Pineda y Chaves.",
+      "limits": "No hay retrato canónico universal de Mareiwa. Traducción material editorial, no creencia afirmada para todos."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:34:06.879Z",
+    "reviewed_reference_ids": [
+      "bb8e4c10e817c7d5c282",
+      "7e6e7790b768a2376a39"
+    ],
+    "retained": [
+      "Azul mineral, arena y curvas superpuestas con sombras reales; amplitud del territorio.",
+      "Relación entre cielo, agua y tierra como estructura de la imagen."
+    ],
+    "rejected": [
+      "Rapaz monumental, jaguar y figura humana con poncho como identidad de Mareiwa: no corresponden a los episodios elegidos ni al modelo no corporal.",
+      "Picos de apariencia nevada, casa redonda y velero; no trasladar elementos decorativos sin relación con la acción.",
+      "Repetir la misma contemplación del paisaje en horizontal y vertical."
+    ],
+    "influence_by_act": {
+      "entrada": "Recuperar bandas azul/arena y distancia, convertir la curva en retirada física del mar que revela tierra y pozos.",
+      "acto": "Cambiar ave rapaz por turpial y pava a escala natural; sus semillas activan manchas locales de vegetación.",
+      "huella": "Condensar azul, arena y curvas en la bolsa de una honda que contiene suelo y un brote; símbolo editorial sin escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "mareiwa__presence_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/mareiwa__presence_model--canon.jpeg",
+      "sha256": "35e2e8ffc15221a372ec3ab5aa8c08192b860b28bc97568db0d02cec62aa2576",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "mareiwa__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/mareiwa__state_sheet--estados.jpeg",
+      "sha256": "8644c37d610930c79b789b7b9cd2ac1bcb0016baa11599ffc63917ef50c2b2fb",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "honda_piedra_mareiwa__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/honda_piedra_mareiwa__object_sheet--canon.jpeg",
+      "sha256": "a86cb0407234f008e029451ca15ea2e06355781e34f15fd591045f5c73bb6bec",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "pozos_salados_mareiwa__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pozos_salados_mareiwa__spatial_model--canon.jpeg",
+      "sha256": "2467aa28cb581aece0bba74ce2a6155bf0c40728839ed625fd3dbe9ea85d2574",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "turpial_semillero__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/turpial_semillero__identity_sheet--canon.jpeg",
+      "sha256": "720413572a8a69f519d91ae9abd4811af0dca98a88e0aa9282b0f8ce9807e06f",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "pava_semillera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pava_semillera__identity_sheet--canon.jpeg",
+      "sha256": "8e974947d4e9336af248b90349478eacbfaeaff16fa332cd7292e76a9ca1677c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "tuna_higo__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/tuna_higo__botanical_sheet--canon.jpeg",
+      "sha256": "b072fb70bb32d03bb27d15019a73b079b9adcd5a0bc414710c198d7fa2fe7e06",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "mareiwa__presence_model",
+        "mareiwa__state_sheet",
+        "honda_piedra_mareiwa__object_sheet",
+        "pozos_salados_mareiwa__spatial_model",
+        "turpial_semillero__identity_sheet",
+        "pava_semillera__identity_sheet",
+        "tuna_higo__botanical_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/maleiwa/wayuu-mareiwa-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "cedab07c128b848d989658a860f4bdda62b587ff09b235ed01bf663c3b121ffa",
+      "narrative_event_ids": [
+        "mar_retirado"
+      ],
+      "editorial_translation": "Retirada del mar y pozos salados constan en Chaves. Mar levantado como lámina horizontal que deja aire y tierra debajo es metáfora material para hacer legible la retirada, no episodio literal adicional. Honda quieta después del lanzamiento.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "El borde entre costa y mar.",
+        "impossible_behavior": "El mar se aparta y descubre tierra habitable.",
+        "narrative_effect": "La retirada deja pozos salados como memoria.",
+        "agency": "Mareiwa transforma el territorio sin cuerpo visible; las aves conservan su acción de dispersar semillas.",
+        "physical_translation": "Una lámina azul continua suspendida casi horizontal, conectada al mar lejano, con aire, suelo ocre y sombra debajo; tres pozos residuales.",
+        "visible_test": "Ver tierra y aire debajo del mar levantado; no sólo bandas normales de playa.",
+        "event_ids": [
+          "mar_retirado"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-02-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

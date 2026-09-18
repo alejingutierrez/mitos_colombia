@@ -5,10 +5,10 @@
   "declined_preset_id": "5a77643c-b6cc-4efd-bdc6-ab8ff48dfa82",
   "aspecto": "9:16",
   "duracion_clips": "18 clips × 5 s = 90 s de metraje ≈ 135 cr (validate-plan confirmó pares 5+5 con voz E)",
-  "voz": { "proveedor": "ElevenLabs", "voz": "Amaf (E, la tía)", "guion": "docs/videos/muiscas/mvp-guiones/guion-bochica.json", "estado": "GENERADAS en content/videos/muiscas/videos/bochica/voces/" },
+  "voz": { "proveedor": "ElevenLabs", "voz": "Amaf (E, la tía)", "guion": "docs/videos/muiscas/mvp-guiones/historico/guion-bochica.json", "estado": "GENERADAS en content/videos/muiscas/videos/bochica/voces/" },
   "musica": "content/videos/muiscas/audio/musica-muisca-andina.mp3 (reuso)",
   "sfx_nuevos": "sfx-lluvia.mp3 y sfx-cascada.mp3 GENERADOS en la biblioteca",
-  "plan": "content/videos/muiscas/videos/bochica/plan.json (xfades, título, mapa sonoro completo)",
+  "plan": "content/videos/muiscas/videos/bochica/historico/plan.json (xfades, título, mapa sonoro completo)",
   "pasos_restantes": [
     "1. node scripts/videos/generate-keyframes.mjs --spec scripts/videos/specs/muiscas-biblia-bochica.mjs --concurrency 4",
     "2. QC de bochica_anciano (¿rasgos andinos? ¿nada europeo?) y salto_tequendama",

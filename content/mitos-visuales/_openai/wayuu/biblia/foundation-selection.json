@@ -1,0 +1,51 @@
+{
+  "schema": "mitos-colombia-biblia-foundation-selection/v1",
+  "community": "Wayúu",
+  "reviewed_at": "2026-09-03",
+  "status": "direction_candidates_not_ingested",
+  "provider": "OpenAI API",
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "selected": [
+    {
+      "model_id": "territorio_alta_guajira",
+      "path": "output/imagegen/wayuu/wayuu-foundation-04-medium-layered-depth/territorio_alta_guajira--canon.jpeg",
+      "prompt_package": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-04-medium-layered-depth",
+      "dimensions": "1536x1024",
+      "sha256": "d07130056cdc6bc61d657c6d64adb1ad4d5aa75aff729d4f017a0c19436eaa80",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "piichipala_arquitectura",
+      "path": "output/imagegen/wayuu/wayuu-foundation-04-medium-layered-depth/piichipala_arquitectura--canon.jpeg",
+      "prompt_package": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-04-medium-layered-depth",
+      "dimensions": "1536x1024",
+      "sha256": "549963b379d73a647a5080640c3c8efc6113e0d0502b16b947206f4b65584d49",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "macuira_ecotono",
+      "path": "output/imagegen/wayuu/wayuu-foundation-05-botany-medium/macuira_ecotono--canon.jpeg",
+      "prompt_package": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-05-botany-medium",
+      "dimensions": "1536x1024",
+      "sha256": "7f23e8356229814de6dc1d6bcf90cc94c1065d221c7b30914bd644046283b105",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "flora_sequia",
+      "path": "output/imagegen/wayuu/wayuu-foundation-07-flora-text-only-medium/flora_sequia--canon.jpeg",
+      "prompt_package": "content/mitos-visuales/_openai/wayuu/biblia/wayuu-foundation-07-flora-text-only-medium",
+      "dimensions": "1536x1024",
+      "sha256": "864213fdacf5b360e0155c903841d274aec2da30ac3ffdaed815f4424f06b114",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "publication": {
+    "ingested": false,
+    "published": false,
+    "canonical": false,
+    "reason": "El usuario está revisando las muestras; la selección es reversible y aún no autoriza canon ni publicación."
+  }
+}

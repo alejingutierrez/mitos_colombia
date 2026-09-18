@@ -1,0 +1,219 @@
+{
+  "schema": "wayuu-video-keyframe-selection/v1",
+  "slug": "el-indio-guerrero-ipuana",
+  "status": "script_and_keyframes_complete_editorial_selection_with_notes",
+  "selected_at": "2026-09-07",
+  "plan": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/preproduccion-02/plan.json",
+  "freeze": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/preproduccion-02/prepared-01/freeze.json",
+  "quality": "medium",
+  "generation_mode": "openai_official_imagegen_cli_text_only",
+  "counts": {
+    "storyboard_instants": 18,
+    "selected": 18,
+    "new_base_generations": 18,
+    "new_correction_generations": 6,
+    "total_successful_generations": 24,
+    "superseded_not_deleted": 6,
+    "additional_bible_generations": 4,
+    "new_images_this_goal": 28
+  },
+  "style_review": {
+    "contract": "content/videos/wayuu/channel-dna.v2.json",
+    "anchors": [
+      "b1a",
+      "b5b",
+      "b9b"
+    ],
+    "method": "Inspección directa de los18 originales y de las tres láminas completas de secuencia, comparando inicio, sueño/cacería y cierre.",
+    "result": "Papercut sostenido: hojas, sombras entre planos, figuras y animales recortados hasta cierre. Variaciones de escala, peinado, utilería doméstica y geometría de casa documentadas por toma. Selección editorial, no aprobación final del usuario ni continuidad física para morphing."
+  },
+  "corrections": [
+    {
+      "id": "b1a",
+      "reason": "First anchor had oversized figure and unlisted rosettes; second plan constrains count and vegetation."
+    },
+    {
+      "id": "b5b",
+      "reason": "Anchor01 added rosettes; anchor02 shadow looked like giant hand; correction selected.",
+      "prompt": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/produccion-01/corrections-01/b5b.txt"
+    },
+    {
+      "id": "b9b",
+      "reason": "First anchor added third warrior; second plan restricts to two family members."
+    },
+    {
+      "id": "b5a",
+      "reason": "Corrección: únicamente hijo dormido y cielo abstracto estratificado, sin mujer coronada inventada. Papel de persona, chinchorro, techo y paisaje.",
+      "prompt": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/produccion-01/corrections-01/b5a.txt"
+    },
+    {
+      "id": "b7b",
+      "reason": "Corrección: compañeros con manos vacías mirando cardón. Se eliminó lanza; también desaparecieron sombreros/bolsas del plano anterior. Diferencia de vestuario secundaria registrada, no plano continuo.",
+      "prompt": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/produccion-01/corrections-01/b7b.txt"
+    }
+  ],
+  "selected": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b1a.jpeg",
+      "sha256": "b73a3ee824850f390299841a20c6124607484faf5da3d4369e0ffa20da82bde0",
+      "reviewed": true,
+      "notes": [
+        "Cinco figuras, arco bajo y espacio de conflicto sin combate. Papel en todos los planos. Padre mayor que el objetivo aproximado del20%; sin retrato cerrado."
+      ]
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b1b.jpeg",
+      "sha256": "4af97846dc9b0039bb302268544800cecf68f201e34fae71c34539f7e05a160b",
+      "reviewed": true,
+      "notes": [
+        "Padre vivo y dos familiares; casa y suelo de láminas. Recipientes domésticos secundarios añadidos, sin nueva acción ritual. Solicitud completada en636.3s sin relanzamiento manual."
+      ]
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b2a.jpeg",
+      "sha256": "7130996f1a0d5b30d99597df021aaa2b68a79a270240b4af5a6e76e84fbb79e3",
+      "reviewed": true,
+      "notes": [
+        "Padre de pie y sombra azul plana en chinchorro, no un segundo cuerpo. Tres personas. Sombra editorial para retorno."
+      ]
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b2b.jpeg",
+      "sha256": "f6dcab49a0f3601baabe93db5ef39ec5052a2d90a88dcae6e5086aa7274aa23a",
+      "reviewed": true,
+      "notes": [
+        "Padre camina y tira azul se separa del suelo; dos familiares. Sombra abstracta más que silueta completa, apta para corte, no morphing literal."
+      ]
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b3a.jpeg",
+      "sha256": "582258b17f0d154f8bee0faf224edf968f8ff94cd08ebc4fa9c5f0d915bf20d9",
+      "reviewed": true,
+      "notes": [
+        "Padre se aleja con arco sin amenaza visible; camino, cardones y serranía de hojas. Longitud de pantalón y peinado varían levemente."
+      ]
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b3b.jpeg",
+      "sha256": "3c764c6107674ed0dae8468982ced25dce6b5e07346e3702ecdd16f18d77beb3",
+      "reviewed": true,
+      "notes": [
+        "Camino vacío y sombra ordinaria del cardón. Elipsis, sin cuerpos ni una resurrección adicional. Contorno de la ruta cambia: resolver por corte."
+      ]
+    },
+    {
+      "id": "b4a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b4a.jpeg",
+      "sha256": "ba82ade9917684e8dbeccf84d25c0e734565614d18a137840b790e94add262cb",
+      "reviewed": true,
+      "notes": [
+        "Hijo y botella ámbar de papel ante casa; cinta breve de voz. Peinado del hijo más suelto que b4b; conservar identidad por camisa cruda y cuello terracota."
+      ]
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b4b.jpeg",
+      "sha256": "cdc698e6cb6c32b8fa207a110b37821630c602cf167333eef850ff26f1824988",
+      "reviewed": true,
+      "notes": [
+        "Cinta de papel nace del cuello de botella y apunta al caballo. No cara en botella ni consumo. El caballo no es quien habla. Material claro en animales y objetos."
+      ]
+    },
+    {
+      "id": "b5a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-corrections-01/b5a.jpeg",
+      "sha256": "a814138435ea3a84678a7031763f7f8285df5d512192a307cd188b3191b87053",
+      "reviewed": true,
+      "notes": [
+        "Corrección: únicamente hijo dormido y cielo abstracto estratificado, sin mujer coronada inventada. Papel de persona, chinchorro, techo y paisaje."
+      ]
+    },
+    {
+      "id": "b5b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-corrections-01/b5b.jpeg",
+      "sha256": "cf908e871e403bbdcaaaab8042d605b7ade0e6d9aa4e884f2b3b0b2ae9d14f8c",
+      "reviewed": true,
+      "notes": [
+        "Corrección: dos adultos y sombra de tres tallos en tiras bajas paralelas, sin mano gigante. Levantamiento editorial visible por aire debajo; mujer no emite rayos."
+      ]
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b6a.jpeg",
+      "sha256": "27cfcbd102e3c88b2e5a8e82442b4480de9e6f3ca448bafbae747c153202111b",
+      "reviewed": true,
+      "notes": [
+        "Hijo sobre caballo castaño y perra pequeña sobre grupa; cuatro extremidades del caballo legibles. Siluetas ensambladas de papel, sin pelaje realista."
+      ]
+    },
+    {
+      "id": "b6b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b6b.jpeg",
+      "sha256": "e0e36b336888f96a657e7b94de17705fd9dcbb8deb6d0c5b18b064563e00ba25",
+      "reviewed": true,
+      "notes": [
+        "Venado delante, hijo montado distante y perra en suelo siguiendo: variación de posición entre cortes, no metamorfosis. Cauce de papel, sin choque ni proyectiles."
+      ]
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b7a.jpeg",
+      "sha256": "879900900a7364110174b95e06c5419036249e58587681c61e1d516d6a9dccb4",
+      "reviewed": true,
+      "notes": [
+        "Caballo vivo sin jinete y dos compañeros. Sombreros y bolsas secundarios añadidos aquí, no modelos identitarios; no continuidad literal con toma siguiente."
+      ]
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-corrections-01/b7b.jpeg",
+      "sha256": "717aacfe409e40d5ff97e256db17bef094ba2b55bc6610f8374965af52e16995",
+      "reviewed": true,
+      "notes": [
+        "Corrección: compañeros con manos vacías mirando cardón. Se eliminó lanza; también desaparecieron sombreros/bolsas del plano anterior. Diferencia de vestuario secundaria registrada, no plano continuo."
+      ]
+    },
+    {
+      "id": "b8a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b8a.jpeg",
+      "sha256": "2ac5fdaf3b0fedcad39dbc9cc8cee67a1c85ea88dc6070a34476265b5135c93b",
+      "reviewed": true,
+      "notes": [
+        "Cardón y camino vacíos, ningún cuerpo o rito añadido. Construcción vegetal de hojas verticales y fondo estratificado."
+      ]
+    },
+    {
+      "id": "b8b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b8b.jpeg",
+      "sha256": "c02fe09643884994355b74af1acb7fb11f1b797091053fd74c86531711e966e4",
+      "reviewed": true,
+      "notes": [
+        "Dos familiares sentados, arcos guardados; no padre o hijo reaparecido. Recortes en caras, ropa, suelo y techo; casa varía geométricamente entre tomas."
+      ]
+    },
+    {
+      "id": "b9a",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b9a.jpeg",
+      "sha256": "b5c86e0a301f1614bf4624ecc671b6b6cad1766402ccec84b3b71c8f112d1e6f",
+      "reviewed": true,
+      "notes": [
+        "Dos arcos inmóviles y dos sombras alargadas desfasadas sobre patio. Metáfora editorial de ausencia, no nuevo episodio tradicional. Mantiene papel hasta el final."
+      ]
+    },
+    {
+      "id": "b9b",
+      "path": "output/imagegen/wayuu/keyframes/el-indio-guerrero-ipuana-preproduccion-02/b9b.jpeg",
+      "sha256": "17d0a293c9395567c41168c03ec18c6ae44530734bc5b02580fa59a88d4ebcd7",
+      "reviewed": true,
+      "notes": [
+        "Dos familiares pequeños frente a casa, bifurcación en primer término. Sin tercer guerrero ni mediador. Plano final amplio, papel y profundidad sostenidos."
+      ]
+    }
+  ]
+}

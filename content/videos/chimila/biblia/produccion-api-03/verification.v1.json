@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-12",
+  "community_id": 29,
+  "batch": "produccion-api-03",
+  "checks": {
+    "six_new_distinct_ids": true,
+    "one_each_category": true,
+    "twelve_total_distinct_ids": true,
+    "all_selected_sha_match": true,
+    "prompt_sha_match": true,
+    "input_sha_match": true,
+    "all_jpeg_1024_1536": true,
+    "first_originals_preserved": true,
+    "api02_selected_preserved": true,
+    "inventory_frozen": true,
+    "corpus_frozen": true,
+    "documentary_reference_sha_match": true,
+    "variant_is_new_L05": true,
+    "intermediates_preserved": true,
+    "zero_documentary_uploads": true,
+    "not_culturally_certified": true,
+    "no_secret_key_patterns": true
+  },
+  "counts": {
+    "new_units": 6,
+    "total_distinct_units": 12,
+    "inventory": 54,
+    "remaining": 42,
+    "successful_requests": 9,
+    "generations": 4,
+    "edits": 5,
+    "qa_correction_requests": 3,
+    "retained_H03_intermediates": 3
+  },
+  "contact": {
+    "file": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-03/review-contact-sheet-v1.png",
+    "sha256": "9e9d0ba99acb63e91eb774e432854715e1556931bb965f60f6808def78881040",
+    "width": 1264,
+    "height": 1328,
+    "visually_reviewed": true,
+    "labels_in_derivative_only": true
+  },
+  "manual_visual_checks": {
+    "all_six_inspected": true,
+    "H03_three_adults_three_bows_zero_arrows": true,
+    "U02_two_bows_six_arrows_without_fletching": true,
+    "L05_V02_three_matching_panels": true
+  },
+  "scope": {
+    "local_bible_only": true,
+    "catalog_database_web_deployment_changed": false,
+    "community_certification": false,
+    "maximum_account_concurrency_tested": false,
+    "concurrency_cap": 3
+  },
+  "limits": [
+    "H03 arrows intentionally separated into U02 after artifacts; don't count failed QA intermediates as new units.",
+    "Papa Grande appearance, felino species, mana botany and exact field geometry remain editorial/provisional."
+  ]
+}

@@ -60,5 +60,8 @@ CREATE TABLE IF NOT EXISTS narration_beds (
   seam_step_db DOUBLE PRECISION,
   prompt TEXT,
   characters JSONB,
+  -- Mundo sonoro: clave de `src/lib/narration-worlds.js`. La selección de lecho
+  -- filtra por aquí para no poner música de un pueblo bajo el relato de otro.
+  world TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

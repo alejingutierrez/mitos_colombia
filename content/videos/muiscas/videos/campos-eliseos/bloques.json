@@ -1,0 +1,328 @@
+{
+  "mito": "campos-eliseos",
+  "comunidad": "Muiscas",
+  "carpeta_triptico": "campos-eliseos",
+  "estructura": "9 bloques narrativos × 2 keyframes (bNa, bNb) = 18 escenas; el `acto` del tríptico cubre una, quedan 17 por generar",
+  "nota_deslinde": "b1a lo cubre la `entrada` del tríptico, b5a el `acto` y b9b la `huella`. Sin iconografía funeraria europea en ninguna escena. 17 escenas nuevas.",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  },
+  "lineas": {
+    "b1": "Al morir, una tejedora abrió los ojos al pie de un barranco tenebroso.",
+    "b2": "El sendero bajaba entre tierras amarillas y negras. A veces apenas cabía un pie.",
+    "b3": "No supo cuánto duró el descenso. Al final encontró un río.",
+    "b4": "Sobre una piedra esperaba una araña, y de su cuerpo salían miles de hilos.",
+    "b5": "—Los de tu tierra no me matan. Me guardan para que nadie falte en el paso.",
+    "b6": "Bajo la balsa, el río llevaba reflejos de quienes habían cruzado antes.",
+    "b7": "Ningún hilo trabaja solo: cada uno recibía fuerza de los demás.",
+    "b8": "Había caminos, viviendas y campos preparados. La luz venía de un sol nuevo, bajo y tibio.",
+    "b9": "Vio la trama que su vida había dejado entre otras vidas."
+  },
+  "keyframes": [
+    {
+      "tag": "b1b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de unas manos anchas de tejedora abriéndose y cerrándose en el aire, con los dedos marcados por el hilo y nada entre ellos.",
+      "refs": [
+        "tejedora_alma"
+      ],
+      "prompt_file": "b1b.prompt.txt",
+      "prompt_sha256": "7f6a505f16c821e9facc20ba598f91daf25ce54b21e615c065662c3fe81d8824",
+      "image_sha256": "812a408cc26e71632aeafd887c3020b0fb7301bfb147289e60ffb8d9bd6fd630",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.162Z"
+    },
+    {
+      "tag": "b2a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL del sendero angosto pegado a la pared del barranco, estrechándose hasta el ancho de un pie. Sin figuras humanas, sin animales, sin bastones ni carga: sólo el paso y la caída.",
+      "refs": [
+        "barranco_tenebroso"
+      ],
+      "prompt_file": "b2a.prompt.txt",
+      "prompt_sha256": "d3d6f26f9ad00bf05408b577b5f41bddc56e3f11f9a7aa533a66ceb364b5fe29",
+      "image_sha256": "7666b94665f78d7978a01b02dd495e01bf47323bf21fc86ab5c175c7e8c2c756",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.187Z"
+    },
+    {
+      "tag": "b2b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de un pie descalzo apoyándose de canto en un tramo de sendero que apenas lo sostiene.",
+      "refs": [
+        "mitos/campos-eliseos/entrada"
+      ],
+      "prompt_file": "b2b.prompt.txt",
+      "prompt_sha256": "a03b8bbfbcfedae4acadc3489caa39428e79e23b5636983c2240e70eb9d7ff38",
+      "image_sha256": "64ec7762ab1badb28d3c65b634cc8fbc1ac538027d83df3091fa6b7152a968b1",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.208Z"
+    },
+    {
+      "tag": "b3a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL de la salida del barranco abriéndose a una ribera de piedra y tierra negra, con agua ancha y oscura más allá. Sin figuras humanas, sin animales, sin vara, bulto ni herramienta: el umbral es el paisaje.",
+      "refs": [
+        "barranco_tenebroso",
+        "rio_de_las_almas"
+      ],
+      "prompt_file": "b3a.prompt.txt",
+      "prompt_sha256": "18a4222cd3b2081e094bd9702f49285f15d87b17b5b52c9405f5c00a96731fd9",
+      "image_sha256": "3405bea7b29d653931119ad2417ea0b96e21ef381927a9aa1f68bded31d8aa4a",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.232Z"
+    },
+    {
+      "tag": "b3b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL del río tan ancho que la otra orilla apenas se adivina, sin personas, sin animales, sin puente, sin canoa y sin objetos en la orilla.",
+      "refs": [
+        "rio_de_las_almas"
+      ],
+      "prompt_file": "b3b.prompt.txt",
+      "prompt_sha256": "d794a299000c96e40d88c5833ede83dfa18bd7d44df8c55a1d6dc6945f038bec",
+      "image_sha256": "1649a4b290d237a73672beba20c7ce752f56dfba9d04dfbc17ad054d72c3b87f",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.255Z"
+    },
+    {
+      "tag": "b4a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de una araña de papel posada en una piedra, con un hilo fino saliendo desde su abdomen artesanal y uniéndose a una trama tendida sobre el agua.",
+      "refs": [
+        "balsa_arana"
+      ],
+      "prompt_file": "b4a.prompt.txt",
+      "prompt_sha256": "2cd93f24437e48ecafe005984ebb74c8a99012940a98499196dd8cdf2b4979a0",
+      "image_sha256": "200ed5a2e6fb620455489f5d2aaa578e381b3e5140792419784cb43859ed273b",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.275Z"
+    },
+    {
+      "tag": "b4b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO MEDIO de la trama de hilos plateados tendida de orilla a orilla, vista al ras del agua. Sin figuras humanas, sin animales, sin barcas, sin vara ni objetos en las orillas: sólo agua, hilos y distancia.",
+      "refs": [
+        "rio_de_las_almas"
+      ],
+      "prompt_file": "b4b.prompt.txt",
+      "prompt_sha256": "f6597abe369ba15b1ddf0b02fc8c9ccfa836ef752b8738a2307a3442adcfbec7",
+      "image_sha256": "bcacd1f3c2a04567f87dedb48d4e7262df63598c3e6aa641399ebe8b45062df9",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.294Z"
+    },
+    {
+      "tag": "b5b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de un pie apoyándose sobre una red de hilos que cede y vuelve a tensarse, sin romperse.",
+      "refs": [
+        "mitos/campos-eliseos/acto"
+      ],
+      "prompt_file": "b5b.prompt.txt",
+      "prompt_sha256": "6afdf25dd8436403ee75f054922e5eabf9757b390beb70ac7cc15afdd04e1129",
+      "image_sha256": "905fde3ae921e7f156a1ffc92ca501bb7f051ba93f15a6951fbd254f2ca3e358",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.316Z"
+    },
+    {
+      "tag": "b6a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "cenital",
+      "desc": "PLANO CENITAL del agua oscura bajo la trama, con siluetas tenues de personas reflejadas y pasando lentamente.",
+      "refs": [
+        "rio_de_las_almas"
+      ],
+      "prompt_file": "b6a.prompt.txt",
+      "prompt_sha256": "90edf9ebeb59b4a370b6375d135a65754a0254c7ce0f995e3b27494f9429d6fa",
+      "image_sha256": "696c0e83eeceff09b7f27e6ceca2d10f3f8b313cd55aac99483260b9d5793a97",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.341Z"
+    },
+    {
+      "tag": "b6b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de una cara mirando hacia abajo el agua, de perfil, con la trama plateada entre ella y el río.",
+      "refs": [
+        "mitos/campos-eliseos/acto"
+      ],
+      "prompt_file": "b6b.prompt.txt",
+      "prompt_sha256": "4f2b31c87b2b70547841d97991bb67daafb6d74acd0365c08d0491806144c560",
+      "image_sha256": "b8e06610785009e0d31557646cacce254a3b2faa52e395fba26df9928eb7a4b8",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.363Z"
+    },
+    {
+      "tag": "b7a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de un nudo donde se cruzan cinco hilos plateados, tensándose todos a la vez cuando uno recibe peso.",
+      "refs": [
+        "balsa_arana"
+      ],
+      "prompt_file": "b7a.prompt.txt",
+      "prompt_sha256": "74b3edcb0623c7828a74b7f009096260c376da9a05facd5ee255de528d082414",
+      "image_sha256": "08ba48d19302808d3f06531dedbfeba1ad8dc8dc7e535a37b44a2be5338a16ec",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.381Z"
+    },
+    {
+      "tag": "b7b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO GENERAL de la balsa llegando a la otra orilla, con la trama aflojándose detrás de ella.",
+      "refs": [
+        "mitos/campos-eliseos/acto"
+      ],
+      "prompt_file": "b7b.prompt.txt",
+      "prompt_sha256": "fdb0c02c90866ef733a9c366d824eefba95e5df067419caa43e927dbd678571a",
+      "image_sha256": "6d18365e460205a7f813e60a7eb964ab3d9761b836246bc9cdffc40c6fd8092d",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.404Z"
+    },
+    {
+      "tag": "b8a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "paisaje_abierto",
+      "desc": "PLANO GENERAL de un territorio parecido al altiplano pero con la neblina baja y un sol tibio a ras del horizonte, con caminos y sembrados. Sin figuras humanas, sin animales, sin bastones ni carga: el territorio es la llegada.",
+      "refs": [
+        "mitos/campos-eliseos/huella"
+      ],
+      "prompt_file": "b8a.prompt.txt",
+      "prompt_sha256": "1a176621c48df75ec37ed34165fe337782c7653b349532e0f4f8b42320e18b9d",
+      "image_sha256": "d0ad5a1b4a31b0b6afa6a5cabc0e51d9f69865db1c0d98cdd4293a7e66065b8b",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.426Z"
+    },
+    {
+      "tag": "b8b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO MEDIO de un grupo de gente entregando semillas a una recién llegada y señalándole una parcela con sus términos.",
+      "refs": [
+        "tejedora_alma",
+        "mitos/campos-eliseos/huella"
+      ],
+      "prompt_file": "b8b.prompt.txt",
+      "prompt_sha256": "e1eae790e464fae582516830efa28b1c453ef30eefde5dd128a05c710bff4bfd",
+      "image_sha256": "47a67ef14345361c07142a6ccb3b25d0229f1f00f90f2e637478144d14aed0d6",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.446Z"
+    },
+    {
+      "tag": "b9a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO de una mujer de perfil mirando hacia atrás sin ver ni río ni barranco, sólo campo abierto y neblina.",
+      "refs": [
+        "tejedora_alma",
+        "mitos/campos-eliseos/huella"
+      ],
+      "prompt_file": "b9a.prompt.txt",
+      "prompt_sha256": "e0e3bfe1448ed1c23c5fdcf0bfb70e633e67b53fb46ee3f546a83541d262b226",
+      "image_sha256": "aade0063fa3088e7b43b26026f3479e4ae4fec5c2aba19b4d67bdfb6ddb9a19d",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T16:15:32.631Z",
+      "ingested_at": "2026-09-03T16:15:50.467Z"
+    }
+  ],
+  "reusadas": [
+    {
+      "tag": "b1a",
+      "reusa": "mitos/campos-eliseos/entrada"
+    },
+    {
+      "tag": "b5a",
+      "reusa": "mitos/campos-eliseos/acto"
+    },
+    {
+      "tag": "b9b",
+      "reusa": "mitos/campos-eliseos/huella"
+    }
+  ]
+}

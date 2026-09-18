@@ -1,0 +1,736 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "status": "complete_editorial_selection_ready_for_authorized_publication",
+  "community": "Nasa–Paeces",
+  "new_triptychs": 5,
+  "new_selected_images": 15,
+  "total_triptychs_with_previous": 16,
+  "total_selected_images_with_previous": 48,
+  "corpus_digest": "967750618150fd26c0087402136d9a0a3c615ffdc8d201612c02155a4fd49533",
+  "source_snapshot": "content/videos/nasa-paeces/biblia/research/corpus-snapshot-20260912.json",
+  "source_snapshot_sha256": "5911cfcdcf89dc4f1e71d30999d3adfae0d75f152667645cba2d680d93711477",
+  "previous_selections": [
+    "content/videos/nasa-paeces/tripticos/produccion-api-01/el-trueno.selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-02/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-03/selection.v1.json"
+  ],
+  "myths": [
+    {
+      "myth_id": 440,
+      "slug": "santo-tomas",
+      "title": "Santo Tomás",
+      "narrative_sha256": "3ca09874b5a7ce02e4e8ef76837010a9ac8ad08e58a26d53b6433dfddb050f58",
+      "variant": "Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "title": "La casa de fiesta petrificada",
+      "narrative_sha256": "da4018d5686b03468416b4878605c72166b2f50d8ff7cea4b1b4fb1bf4f608ed",
+      "variant": "Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v2.jpeg"
+      ]
+    },
+    {
+      "myth_id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "title": "Las piedras de Chaikin",
+      "narrative_sha256": "7903c0cd8a87de8753e09b66e0c6655f50a4a8b7becc82fec3cce9986465c2bd",
+      "variant": "Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 443,
+      "slug": "la-madre-de-la-sal",
+      "title": "La madre de la sal",
+      "narrative_sha256": "e42e0831677518e9522a8b519232770f453f7860d11f2e63b95164475cb50cc1",
+      "variant": "Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 444,
+      "slug": "la-candela",
+      "title": "La candela",
+      "narrative_sha256": "ea0266050f8dbb89dff467606505d19c0cac2672e86b23a78afef53f9166e30e",
+      "variant": "Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/huella-v1.jpeg"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "myth_id": 440,
+      "slug": "santo-tomas",
+      "title": "Santo Tomás",
+      "variant": "Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/entrada-v1.jpeg",
+      "sha256": "fced9e5f3061e301aea89fdec316ea74fa250dfcff2cf25bbe24f44dd1d08de2",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-entrada-v1.txt",
+      "prompt_sha256": "dd819a363ece4aef344c2d0463690714a30380a9274ae337d9aefb05841b2321",
+      "references": [
+        {
+          "unit_id": "P08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p08-master-v2.jpeg",
+          "sha256": "3aef5842005c6dc5a4577790aafad1e11d04def06d0700d238892e8fa373a39e"
+        },
+        {
+          "unit_id": "P09",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p09-master-v2.jpeg",
+          "sha256": "0c8c2be7371f4db1850aa41a6b3694a50743bfb5618f80114c71c6a81adb4ed9"
+        },
+        {
+          "unit_id": "L03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+          "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738"
+        }
+      ],
+      "qa": "María y Santo Tomás adulto conservan identidades diferenciadas; diálogo sobrio con dos cuerpos completos, sin enfermedad visible ni petrificación corporal.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 440,
+      "slug": "santo-tomas",
+      "title": "Santo Tomás",
+      "variant": "Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/acto-v1.jpeg",
+      "sha256": "a8901029bf45c1a4aa315c0fc7ac68959c838be0a65cc492bf5568e463bc2220",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-acto-v1.txt",
+      "prompt_sha256": "0cee55bf25ae54c619e93e279a072af934f2b3c535a48f79f6b362c037d1fd9a",
+      "references": [
+        {
+          "unit_id": "U04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u04-master-v2.jpeg",
+          "sha256": "fc2a125841d689a243f8dcdfbee65c916218bb5404d297d529f874e7fb7b99e0"
+        },
+        {
+          "unit_id": "L03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+          "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738"
+        }
+      ],
+      "qa": "Una única caja cerrada color bronce contenida entre estratos de papel; sin baúl de madera, árbol tachi, cuerpo cautivo o mezcla con la variante de Lame.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 440,
+      "slug": "santo-tomas",
+      "title": "Santo Tomás",
+      "variant": "Núcleo de María y el encierro en cajones de bronce; no fusionar con la captura en Lame y el árbol tachi.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/huella-v1.jpeg",
+      "sha256": "96be955bd189530df96180e6f9e487f4061f58804fc5ac8915141e7c9fdfbd5d",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/santo-tomas-huella-v1.txt",
+      "prompt_sha256": "f5d38b006cecdaf2e35fe519b1709e51e63266c8bd99ebc186493e6d9610d215",
+      "references": [
+        {
+          "unit_id": "U04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u04-master-v2.jpeg",
+          "sha256": "fc2a125841d689a243f8dcdfbee65c916218bb5404d297d529f874e7fb7b99e0"
+        }
+      ],
+      "qa": "Caja compacta color bronce entre pliegues comprimidos; metáfora material de contención y movimiento, sin paisaje adicional ni emblema.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "title": "La casa de fiesta petrificada",
+      "variant": "Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/entrada-v1.jpeg",
+      "sha256": "af2817cbcf83f54675188787956170421b903f104ee31adc2fb66c98c532dd50",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-entrada-v1.txt",
+      "prompt_sha256": "70d3acf9edae23c32a8658203404c250c6bf7035e66b8244e7e98f09c10ebe2e",
+      "references": [
+        {
+          "unit_id": "P08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p08-master-v2.jpeg",
+          "sha256": "3aef5842005c6dc5a4577790aafad1e11d04def06d0700d238892e8fa373a39e"
+        },
+        {
+          "unit_id": "C04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c04-master-v2.jpeg",
+          "sha256": "d401ec12652af5545f4ce33481eb7fd35c2c41d783d9f2fc9ce8b4564b843772"
+        },
+        {
+          "unit_id": "L06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l06-master-v3.jpeg",
+          "sha256": "11cee3988ebf5026b8a6d7e87b801f119377ef4cc336ad8f152dad4f751fadfc"
+        },
+        {
+          "unit_id": "U10",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u10-master-v2.jpeg",
+          "sha256": "d3fde50eb242709f9822cc6bd59d1cee587b6ca12ae24e3fba4b150de842be9b"
+        }
+      ],
+      "qa": "Un niño harapiento y dos anfitriones, sin personajes adicionales; rechazo visible en el umbral y comida disponible, cuerpos y manos coherentes.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "title": "La casa de fiesta petrificada",
+      "variant": "Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/acto-v1.jpeg",
+      "sha256": "fef200b7c30cfaacbd2d817fdfecfa4665fb989536b38a72d63779e313a3cd30",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-acto-v1.txt",
+      "prompt_sha256": "dcdccbcafaf99b2ed57c166e909ecc7584283bbc402e1745df4e8868e2e8abd0",
+      "references": [
+        {
+          "unit_id": "V08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v08-master-v3.jpeg",
+          "sha256": "62ecf6fe83c7829b3a27f2b5645c969ec2041c074918a6d6172e0c946a50ec38"
+        }
+      ],
+      "qa": "Casa gris de papel detenida y exactamente tres recipientes suspendidos; sin personas lesionadas, estatua anatómica ni afirmación arqueológica.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 441,
+      "slug": "la-casa-de-fiesta-petrificada",
+      "title": "La casa de fiesta petrificada",
+      "variant": "Episodio de Uikuet: niño harapiento pide comida; elegir el rechazo previo y la casa ya detenida, sin espectáculo corporal.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v2.jpeg",
+      "sha256": "17c52429df60fe101ff7adcd6965f0ade04cf18f895469b82edc7b20f52585be",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-casa-de-fiesta-petrificada-huella-v2.txt",
+      "prompt_sha256": "c3d60b6cb01c17c68fd018c930b29a388f0b4e202626ca629737c67a4f2cc1a8",
+      "references": [
+        {
+          "unit_id": "U10",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u10-master-v2.jpeg",
+          "sha256": "d3fde50eb242709f9822cc6bd59d1cee587b6ca12ae24e3fba4b150de842be9b"
+        },
+        {
+          "unit_id": "V08",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v08-master-v3.jpeg",
+          "sha256": "62ecf6fe83c7829b3a27f2b5645c969ec2041c074918a6d6172e0c946a50ec38"
+        }
+      ],
+      "qa": "Corrección aceptada: un solo cuenco gris junto a un pliegue vacío integrado en papel ocre; sin niño, asistentes, escena repetida ni marco independiente.",
+      "retained_predecessors": [
+        {
+          "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v1.jpeg",
+          "reason": "Rechazada: la imagen repite una escena con niño y asistentes e introduce un marco independiente; no cumple la huella abstracta solicitada.",
+          "allowed_as_future_reference": false
+        }
+      ]
+    },
+    {
+      "myth_id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "title": "Las piedras de Chaikin",
+      "variant": "Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/entrada-v1.jpeg",
+      "sha256": "595fa25506858f6d60029ddbe73d85e14eeaf35d752a59135cb306069d5d4379",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-entrada-v1.txt",
+      "prompt_sha256": "a64b29661b8452abd734dadde09e3854fe29df06777eeda547f9c9d6397cd781",
+      "references": [
+        {
+          "unit_id": "P05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p05-master-v3.jpeg",
+          "sha256": "0f73d9b55a684aa80429c09b44e8b60c62996772bab75b2683eb8f1b9be5653e"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "U05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u05-master-v2.jpeg",
+          "sha256": "a6a4e21fbea99e4147e30fb4fe2cb99f9b9e29fe5eb67edd14f40b6733240373"
+        },
+        {
+          "unit_id": "L03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+          "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738"
+        }
+      ],
+      "qa": "Chautéh libre con dos ojos sanos y dos caminantes distintas; cada mujer lleva una carga de caña, tres cuerpos completos y sin agresión visible.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "title": "Las piedras de Chaikin",
+      "variant": "Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/acto-v1.jpeg",
+      "sha256": "1c30f08204b170fae5477d50e5948be2a68c5229dc1db20898a6542be2215db2",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-acto-v1.txt",
+      "prompt_sha256": "ed28b4a3f0e6a7f62ac8d17800ef6a5b7c68d8bb5f757f2f0b75e8879ba8d56f",
+      "references": [
+        {
+          "unit_id": "V07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v07-master-v3.jpeg",
+          "sha256": "34ab393f53bc9396caca59d950e261e8dd058e0adc75f9865c9e50cf8a0d2486"
+        },
+        {
+          "unit_id": "U05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u05-master-v2.jpeg",
+          "sha256": "a6a4e21fbea99e4147e30fb4fe2cb99f9b9e29fe5eb67edd14f40b6733240373"
+        }
+      ],
+      "qa": "Dos piedras asimétricas de papel con carga de caña integrada, sin rostros tallados ni cuerpos en transformación; geografía tratada como aproximación.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 442,
+      "slug": "las-piedra-de-chaikin",
+      "title": "Las piedras de Chaikin",
+      "variant": "Dos caminantes con caña y Chautéh libre; no mezclar las piedras de Chaikin con Piedra Alta ni Uikuet.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/huella-v1.jpeg",
+      "sha256": "813602dcae507fac6ed1fd0c7125497c019d8e986cd3f9e8a5449b805fd34725",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/las-piedra-de-chaikin-huella-v1.txt",
+      "prompt_sha256": "b2aa846e7d78fc91dac412eed09ea08626adb7a76b915a64c83ae55822303d0e",
+      "references": [
+        {
+          "unit_id": "U05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u05-master-v2.jpeg",
+          "sha256": "a6a4e21fbea99e4147e30fb4fe2cb99f9b9e29fe5eb67edd14f40b6733240373"
+        },
+        {
+          "unit_id": "V07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v07-master-v3.jpeg",
+          "sha256": "34ab393f53bc9396caca59d950e261e8dd058e0adc75f9865c9e50cf8a0d2486"
+        }
+      ],
+      "qa": "Dos pliegues grises separados con repetición de cargas de caña; metáfora limpia sobre papel neutro, sin personas, mapa o emblema.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 443,
+      "slug": "la-madre-de-la-sal",
+      "title": "La madre de la sal",
+      "variant": "Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/entrada-v1.jpeg",
+      "sha256": "3a5e9bd83964d45b877466e6b377445fab677634012c27e2484257c69bd7415c",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-entrada-v1.txt",
+      "prompt_sha256": "58f46c685e3c1ea8f7310ba6757fb2d7b3475bb30ed33bc0b8050d04e073eaa9",
+      "references": [
+        {
+          "unit_id": "P13",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p13-master-v2.jpeg",
+          "sha256": "2d1d93df8dfacdb16e01b48a56c579175cf5addb309062ed79a514835a64a8c9"
+        }
+      ],
+      "qa": "Anciana pequeña con dos moños claros de sal, vestuario de la biblia y manos relajadas; fondo neutro de papel, sin mina, culto o don inventado.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 443,
+      "slug": "la-madre-de-la-sal",
+      "title": "La madre de la sal",
+      "variant": "Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/acto-v1.jpeg",
+      "sha256": "de5f1c8eb7c6d6af9cc68cf81d53f83a150af01f4d704d8baefc0fe5859f5103",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-acto-v1.txt",
+      "prompt_sha256": "7452f9dc92461d92eb6556226e50b49cd9eea2c96e38c28494302bdbaba317a3",
+      "references": [
+        {
+          "unit_id": "P13",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p13-master-v2.jpeg",
+          "sha256": "2d1d93df8dfacdb16e01b48a56c579175cf5addb309062ed79a514835a64a8c9"
+        },
+        {
+          "unit_id": "U05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u05-master-v2.jpeg",
+          "sha256": "a6a4e21fbea99e4147e30fb4fe2cb99f9b9e29fe5eb67edd14f40b6733240373"
+        }
+      ],
+      "qa": "Misma anciana en perfil de reconocimiento, no una acción nueva; ropa y moños coherentes sobre pliegues claros de papel sin ubicación identificada.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 443,
+      "slug": "la-madre-de-la-sal",
+      "title": "La madre de la sal",
+      "variant": "Fragmento de reconocimiento de la anciana con moños de sal. No inventar un viaje, don material escenificado, mina o santuario.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/huella-v1.jpeg",
+      "sha256": "0864cf3482f2cf3d4655ee0f81d89f482ae2e1c0aa156891f399614411d01f96",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-madre-de-la-sal-huella-v1.txt",
+      "prompt_sha256": "519f5452bcad3c503f9adbbdc6c3ea38a9ddc7fa494b0230d8e6bdbc220bf1e1",
+      "references": [
+        {
+          "unit_id": "U05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u05-master-v2.jpeg",
+          "sha256": "a6a4e21fbea99e4147e30fb4fe2cb99f9b9e29fe5eb67edd14f40b6733240373"
+        }
+      ],
+      "qa": "Dos grupos redondos claros y un cuenco pequeño de sal de papel; síntesis sin paisaje, personas, cristales fotográficos ni iconografía ritual.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 444,
+      "slug": "la-candela",
+      "title": "La candela",
+      "variant": "Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.",
+      "role": "entrada",
+      "label": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/entrada-v1.jpeg",
+      "sha256": "e37c368f5c859d53143b3585215408b3ff3f59321b626859d15124f6f0b32274",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-entrada-v1.txt",
+      "prompt_sha256": "0bbc5f406c2ac7b323b505b59b6a9724d5f9ea051a7234a021f7372f7115382d",
+      "references": [
+        {
+          "unit_id": "P14",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p14-master-v2.jpeg",
+          "sha256": "91cf1b4d6fb22b08b32dbdea5f44a7d5189a589b1bb31eb0fe61e69baa6510f8"
+        },
+        {
+          "unit_id": "C04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c04-master-v2.jpeg",
+          "sha256": "d401ec12652af5545f4ce33481eb7fd35c2c41d783d9f2fc9ce8b4564b843772"
+        },
+        {
+          "unit_id": "U06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u06-master-v2.jpeg",
+          "sha256": "63c64d20488b4082d7565ee1c617210be217ec3eece5d1a6ac33ddb9b718dd3e"
+        },
+        {
+          "unit_id": "L06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l06-master-v3.jpeg",
+          "sha256": "11cee3988ebf5026b8a6d7e87b801f119377ef4cc336ad8f152dad4f751fadfc"
+        }
+      ],
+      "qa": "Anciana y niña comparten un tizón pequeño en el umbral; dos cuerpos completos, llama de papel lejos del vestido y sin versiones fusionadas.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 444,
+      "slug": "la-candela",
+      "title": "La candela",
+      "variant": "Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.",
+      "role": "acto",
+      "label": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/acto-v1.jpeg",
+      "sha256": "9c0fecd4975dbe3a53cf12de835f3b6aed91d93379ce5e326a6e650f60ca11f0",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-acto-v1.txt",
+      "prompt_sha256": "c1206220b424f2b4ac06edbeae9681b1eee80190422eb955670fe6dbbf76de7d",
+      "references": [
+        {
+          "unit_id": "C04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c04-master-v2.jpeg",
+          "sha256": "d401ec12652af5545f4ce33481eb7fd35c2c41d783d9f2fc9ce8b4564b843772"
+        },
+        {
+          "unit_id": "U06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u06-master-v2.jpeg",
+          "sha256": "63c64d20488b4082d7565ee1c617210be217ec3eece5d1a6ac33ddb9b718dd3e"
+        },
+        {
+          "unit_id": "L07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l07-master-v3.jpeg",
+          "sha256": "17aea6afcbf14cc85be734f747737b13b5e1779b46b88ad13f4e2a1914fb30e0"
+        }
+      ],
+      "qa": "La misma niña y dos adultos junto a una pequeña paja encendida; acceso compartido a la candela sin incendio, persecución violenta ni personajes extra.",
+      "retained_predecessors": []
+    },
+    {
+      "myth_id": 444,
+      "slug": "la-candela",
+      "title": "La candela",
+      "variant": "Versión de la niña y la anciana: tomar el tizón y compartir desde la paja en Ipikué. No mezclar María, río, Pijao ni misioneros.",
+      "role": "huella",
+      "label": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/huella-v1.jpeg",
+      "sha256": "c8e1f950d1d630462c35787221bfdd1762a7122f47fe2e5ca26d48e0706fcb70",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-04/prompts/la-candela-huella-v1.txt",
+      "prompt_sha256": "4a6eba11b6e569de5b4e1ac8878c264ae46c6eedf35f3ab818ecd2b6f1dd3349",
+      "references": [
+        {
+          "unit_id": "U06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u06-master-v2.jpeg",
+          "sha256": "63c64d20488b4082d7565ee1c617210be217ec3eece5d1a6ac33ddb9b718dd3e"
+        }
+      ],
+      "qa": "Una llama de papel se reparte en tres prolongaciones sobre paja; síntesis material de fuego compartido sin personas, paisaje, instrucciones ni emblemas.",
+      "retained_predecessors": []
+    }
+  ],
+  "execution": [
+    {
+      "myth_id": 440,
+      "role": "acto",
+      "session_id": 23263,
+      "version": 1,
+      "chunk_id": "504e1c",
+      "wall_time_seconds": 1.018696375,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 19.3s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 440,
+      "role": "entrada",
+      "session_id": 43322,
+      "version": 1,
+      "chunk_id": "59e05d",
+      "wall_time_seconds": 0.000001125,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 39.3s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 440,
+      "role": "huella",
+      "session_id": 72066,
+      "version": 1,
+      "chunk_id": "bbb2e6",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 15.8s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/santo-tomas/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "acto",
+      "session_id": 37573,
+      "version": 1,
+      "chunk_id": "d91b55",
+      "wall_time_seconds": 1.67e-7,
+      "exit_code": 0,
+      "original_token_count": 44,
+      "output": "Edit completed in 23.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "entrada",
+      "session_id": 1268,
+      "version": 1,
+      "chunk_id": "a1817d",
+      "wall_time_seconds": 0.655604417,
+      "exit_code": 1,
+      "original_token_count": 58,
+      "output": "Edit completed in 36.3s.\nError: Output already exists: /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/entrada-v1.jpeg (use --force to overwrite)\n"
+    },
+    {
+      "myth_id": 442,
+      "role": "entrada",
+      "session_id": 34974,
+      "version": 1,
+      "chunk_id": "2ca885",
+      "wall_time_seconds": 8.34e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 34.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 442,
+      "role": "huella",
+      "session_id": 84529,
+      "version": 1,
+      "chunk_id": "5b266e",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 20.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "huella",
+      "session_id": 39682,
+      "version": 1,
+      "chunk_id": "5356da",
+      "wall_time_seconds": 1.25e-7,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 22.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 442,
+      "role": "acto",
+      "session_id": 21896,
+      "version": 1,
+      "chunk_id": "3fe280",
+      "wall_time_seconds": 4.17e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 23.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/las-piedra-de-chaikin/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 443,
+      "role": "acto",
+      "session_id": 2624,
+      "version": 1,
+      "chunk_id": "bc3220",
+      "wall_time_seconds": 0.000001,
+      "exit_code": 0,
+      "original_token_count": 41,
+      "output": "Edit completed in 18.5s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 443,
+      "role": "huella",
+      "session_id": 95359,
+      "version": 1,
+      "chunk_id": "939575",
+      "wall_time_seconds": 6.25e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 15.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 443,
+      "role": "entrada",
+      "session_id": 86124,
+      "version": 1,
+      "chunk_id": "df68a1",
+      "wall_time_seconds": 0.000001083,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 29.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-madre-de-la-sal/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 444,
+      "role": "entrada",
+      "session_id": 18009,
+      "version": 1,
+      "chunk_id": "28655f",
+      "wall_time_seconds": 2.91e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 33.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 441,
+      "role": "huella",
+      "version": 2,
+      "session_id": 8525,
+      "chunk_id": "aa7640",
+      "wall_time_seconds": 8.3e-8,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "Edit completed in 18.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-casa-de-fiesta-petrificada/huella-v2.jpeg\n"
+    },
+    {
+      "myth_id": 444,
+      "role": "acto",
+      "version": 1,
+      "session_id": 8408,
+      "chunk_id": "b6d91b",
+      "wall_time_seconds": 1.66e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 24.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 444,
+      "role": "huella",
+      "version": 1,
+      "session_id": 74795,
+      "chunk_id": "d5f913",
+      "wall_time_seconds": 4.444482792,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 19.2s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-04/la-candela/huella-v1.jpeg\n"
+    }
+  ],
+  "max_concurrency_requested": 4,
+  "publication_authorized": true,
+  "publication": false,
+  "keyframes": false,
+  "cultural_certification": false
+}

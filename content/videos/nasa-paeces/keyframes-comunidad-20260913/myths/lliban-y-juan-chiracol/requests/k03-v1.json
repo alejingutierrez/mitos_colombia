@@ -1,0 +1,40 @@
+{
+  "slug": "lliban-y-juan-chiracol",
+  "id": "k03",
+  "version": 1,
+  "created_at": "2026-09-13T21:39:47.145Z",
+  "plan_sha256": "7de75784813dac9deec04797881daa0d87ecaab9921aa9e3b6b5a5fa3a229645",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/lliban-y-juan-chiracol/prompts/k03-v1.txt",
+  "prompt_sha256": "d16f4fef42ab1e6865a05a9173b24d191224fd435430dff3549980828f213f93",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-y-juan-chiracol/entrada-v1.png",
+      "sha256": "ec16d3c0702541b42d7789ca2fba54e65e803e425234a73ad96822fa95e4da79",
+      "role": "Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/lliban-y-juan-chiracol/k01-v1.png",
+      "sha256": "6d4f03bd4e8f69640f568a8e17e8d2bedf5e66adbbd91dba4475d55fbc137efc",
+      "role": "Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/lliban-y-juan-chiracol/k02-v1.png",
+      "sha256": "5b80359c8144e6bd302a116c90f30cebc2435cb7d43295328e4b9ebe046446ff",
+      "role": "Keyframe anterior k02: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Llíban y Juan Chiracol. Frame k03.\n\nREFERENCE ROLES:\nImage 1: Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\nImage 3: Keyframe anterior k01: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\nImage 4: Keyframe anterior k02: continuidad de identidades y lugares que coincidan, nunca importar acción u objetos ausentes en el nuevo plano.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nMedio lateral: los dos adultos hablan, Llíban conserva sombrero y Chiracol cabello descubierto; sin gestos de lucha.\n\nNARRATIVE CONTINUITY: Llíban occidental y Chiracol oriental distintos. Conservar respectivas ruanas/sombrero; no mapa cartográfico ni una sola laguna para ambos.\nSelected account: Relato conjunto; encuentro después de la defensa, dos destinos. No incorporar nacimientos ni combates de las fichas individuales.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Medio lateral: los dos adultos hablan, Llíban conserva sombrero y Chiracol cabello descubierto; sin gestos de lucha.\n\n",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/lliban-y-juan-chiracol/entrada-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/lliban-y-juan-chiracol/k01-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/comunidad-nasa/lliban-y-juan-chiracol/k02-v1.png"
+    ]
+  }
+}

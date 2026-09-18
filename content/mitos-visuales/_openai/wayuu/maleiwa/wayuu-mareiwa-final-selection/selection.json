@@ -1,0 +1,128 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "maleiwa",
+  "title": "Mareiwa",
+  "created_at": "2026-09-06T05:39:18.139Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Usuario autorizó producir y publicar los 27 trípticos; selección de agente tras inspección de píxeles, relato y Biblia.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "e9df8208648a3b896a6628865cdb903acea0de2cfb7d72ea3a40ff94e21d6c6c",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:34:06.879Z",
+    "reviewed_reference_ids": [
+      "bb8e4c10e817c7d5c282",
+      "7e6e7790b768a2376a39"
+    ],
+    "retained": [
+      "Azul mineral, arena y curvas superpuestas con sombras reales; amplitud del territorio.",
+      "Relación entre cielo, agua y tierra como estructura de la imagen."
+    ],
+    "rejected": [
+      "Rapaz monumental, jaguar y figura humana con poncho como identidad de Mareiwa: no corresponden a los episodios elegidos ni al modelo no corporal.",
+      "Picos de apariencia nevada, casa redonda y velero; no trasladar elementos decorativos sin relación con la acción.",
+      "Repetir la misma contemplación del paisaje en horizontal y vertical."
+    ],
+    "influence_by_act": {
+      "entrada": "Recuperar bandas azul/arena y distancia, convertir la curva en retirada física del mar que revela tierra y pozos.",
+      "acto": "Cambiar ave rapaz por turpial y pava a escala natural; sus semillas activan manchas locales de vegetación.",
+      "huella": "Condensar azul, arena y curvas en la bolsa de una honda que contiene suelo y un brote; símbolo editorial sin escena."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-02-entrada/entrada.jpeg",
+      "sha256": "93cdd7d94a365b20ce446fce1fc3a7ee888cdf74173edc79f8d11520f8ddbb89",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/maleiwa/wayuu-mareiwa-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "cedab07c128b848d989658a860f4bdda62b587ff09b235ed01bf663c3b121ffa",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Lámina azul suspendida y conectada al mar, hueco de aire y sombra sobre tierra expuesta, tres pozos salados y honda con piedra a derecha. Plano abierto y área inferior izquierda tranquila.",
+        "limits": [
+          "Honda más grande y baja que la geometría pedida, pero subordinada al territorio y fuera del texto lateral izquierdo; comprobar portada.",
+          "La lámina levantada es metáfora material de la retirada, no morfología histórica afirmada."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-01/acto.jpeg",
+      "sha256": "297495c7e97f39ca94b9b7e7c7fa75937e1fa21b3905c2dc546eefdeb205be95",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/maleiwa/wayuu-mareiwa-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "ac5190082d924d898a70d9d531183fa587471a18d36b55ca27e3193561245e7c",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Turpial negro/naranja/blanco y pava parda de cola larga en vuelo a distinta distancia; semillas separadas, cubierta abierta sobre pala vegetal, raíz conectada a estratos del suelo, vegetación discontinua.",
+        "limits": [
+          "Pava distante simplificada; no se afirma especie exacta.",
+          "La semilla y el brote se amplían por perspectiva y condensan germinación; no es una explicación botánica literal."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-01/huella.jpeg",
+      "sha256": "3800e09d6d90bb34c03d907662dee69934acdafbc0d1fc83e007d8c7985b13ef",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/maleiwa/wayuu-mareiwa-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "aca111e17472289e5410cbbfb59b0b7ac02109f3910dbb2e82eeaf2174c3dcf8",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Honda de dos tiras abiertas, bolsa desplegada en ocre con borde salino y azul, semilla y pala oliva conectada a raíz; piedra separada sobre campo azul. Símbolo sin horizonte, personas o escena.",
+        "limits": [
+          "Bolsa ocupa más área que el quinto solicitado; mantiene aire alrededor y lectura simbólica.",
+          "Objeto metafórico editorial, no reliquia ni emblema cultural."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_01": 80.5,
+      "acto_01": 32.7,
+      "huella_01": 37.6,
+      "entrada_02": 72.1
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-01/entrada.jpeg",
+      "reason": "El mar en bandas se leía como oleaje normal; la transformación no resultaba inequívoca."
+    }
+  ],
+  "published": false
+}

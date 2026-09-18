@@ -1,0 +1,273 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-hermanos-triptych-01",
+  "created_at": "2026-09-06T04:16:02.575Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "los-dos-hermanos",
+  "plan": "content/mitos-visuales/wayuu.hermanos.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "200ab9938fb62c09c9fa3b7467a222788ec4b50e612f8d4ca7729ddb8438e02e",
+  "narrative_target_sha256": "70cf4335b1397da54f1328ef97c76fde97ca7bf6ab1c3ec8ab58906cb49b5a5a",
+  "evidence": [
+    {
+      "id": "chaves_1946_hermanos",
+      "type": "primary_source",
+      "title": "Mitos, leyendas y cuentos de la Guajira, X: Los dos Hermanos",
+      "author": "Milcíades Chaves Ch.",
+      "year": 1946,
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "locator": "pp.317–319, índices PDF 13–15. Informante Ana Isolina Ipuana; intérprete Ana Ofelia Ortíz.",
+      "supports": "Hermana hábil, pérdida del hermano, retorno por animales, represalia y riqueza final.",
+      "limits": "La fuente usa armas de fuego y contiene violencia que no se ilustra; la edición objetivo usa arco y desarrolla el costo de la venganza. No afirmar que el diálogo final procede literalmente de 1946."
+    },
+    {
+      "id": "published_hermanos",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-dos-hermanos.json",
+      "supports": "Objetivo visual congelado: hermana arquera, lealtad animal, ausencia irreparable y conflicto que continúa.",
+      "limits": "El diálogo y lectura ética final son expansiones editoriales. No se cambia el texto publicado."
+    },
+    {
+      "id": "bible_hermanos",
+      "type": "internal_visual_research",
+      "path": "editorial/wayuu/production-direction-v3.mjs",
+      "supports": "Identidades de hermana, hermano, perro y mula; estados de ausencia por objetos; materialidad y vestuario.",
+      "limits": "No importar clones de fichas de estados ni sus rostros modelados."
+    },
+    {
+      "id": "clothing",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+      "supports": "Prendas de silueta completa y mantas amplias; diversidad de vestuario.",
+      "limits": "No añadir adornos ni pintura facial sin persona, ocasión y fuente."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T04:16:01.991Z",
+    "reviewed_reference_ids": [
+      "e614ffa46b74111f9201",
+      "19498713504e5d18f81c"
+    ],
+    "retained": [
+      "Mujer como protagonista y presencia del rebaño; cielos nocturnos azules y arena mate.",
+      "Vegetación lateral y distancia de los planos del territorio."
+    ],
+    "rejected": [
+      "Rifle como foco amenazante, adversarios y pose de enfrentamiento.",
+      "Cambio de ropa entre imágenes, adornos y patrones no sustentados, techo cónico, caras ilustradas y encuadre cerrado."
+    ],
+    "influence_by_act": {
+      "entrada": "Retomar el azul nocturno y vegetación lateral con escala abierta, pero centrar el regreso de mula y perro y la ausencia, no el combate.",
+      "acto": "Conservar rebaño y ranchería; cambiar victoria armada por patio que se desteje entre riqueza y ausencia.",
+      "huella": "Recuperar la destreza de la arquera a través de una sola flecha de papel curvada sobre sí misma; no copiar rifle ni escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "hermana_arquera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+      "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "hermano_arquera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__identity_sheet--canon.jpeg",
+      "sha256": "195e3144586c3cc2c0177cd62d3f78235560aacac02b08a3cfd9a60cbd6a3498",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "perro_hermanos__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/perro_hermanos__identity_sheet--canon.jpeg",
+      "sha256": "6d0c490f2551d73e66a35e060293617a3e33e57d500900e56620cd4fd1ade25e",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "mula_hermanos__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium-corrections-01/mula_hermanos__identity_sheet--canon.jpeg",
+      "sha256": "56293da02a393a52c476bc579a524e83f50875ac996650bb20bd501f92955451",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "chinchorro__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+      "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "rebanos__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/rebanos__group_grammar--canon.jpeg",
+      "sha256": "aec531d1a0a63e90fdcd09aeeb981e4c35e7b78a934e620608e5b6e4b7b8ed1f",
+      "qa_status": "PASS_WITH_MATERIALITY_WATCH"
+    },
+    {
+      "model_id": "arco_flechas__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-04-el-indio-guerrero-ipuana-medium-corrections-01/arco_flechas__object_sheet--canon.jpeg",
+      "sha256": "f5c9963ee2b3f620fab20e2b2cebfb80ed4b6673b20373ac840f8c08bdbc8686",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "hermana_arquera__identity_sheet",
+        "hermano_arquera__identity_sheet",
+        "perro_hermanos__identity_sheet",
+        "mula_hermanos__identity_sheet",
+        "chinchorro__object_sheet",
+        "rebanos__group_grammar",
+        "arco_flechas__object_sheet",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "843116afa08a79479901e7dcf4a090285205ba9b61204a3e1ee9795824698076",
+      "narrative_event_ids": [
+        "retorno_animales",
+        "duelo"
+      ],
+      "editorial_translation": "El regreso de los animales y el reconocimiento de la pérdida se condensan sin mostrar el cuerpo transportado. Las lágrimas que atraviesan el patio son licencia plástica del llanto; no río, rito o mecanismo literal tradicional.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Llegada de mula y perro a casa.",
+        "impossible_behavior": "El llanto de la mula no desaparece: recorre el suelo y se detiene en los pies de la hermana.",
+        "narrative_effect": "La noticia une al animal leal y la hermana antes de una palabra.",
+        "agency": "La mula vuelve, la hermana reconoce la pérdida; nadie controla el llanto.",
+        "physical_translation": "Tiras finísimas mate desde el ojo hasta arena y sandalias, con sombras físicas.",
+        "visible_test": "Origen en ojo visible, dos trazos sin bifurcar y final junto a pies.",
+        "event_ids": [
+          "retorno_animales",
+          "duelo"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "camino_vertical",
+      "canon_model_ids": [
+        "hermana_arquera__identity_sheet",
+        "hermano_arquera__identity_sheet",
+        "perro_hermanos__identity_sheet",
+        "mula_hermanos__identity_sheet",
+        "chinchorro__object_sheet",
+        "rebanos__group_grammar",
+        "arco_flechas__object_sheet",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "11c1e6d10a1d3b45659bbce5997aadde6fd3a0df3f76f80cf3a6d0f3b3c9b12d",
+      "narrative_event_ids": [
+        "represalia",
+        "riqueza",
+        "ausencia_no_reparada"
+      ],
+      "editorial_translation": "El retorno con riqueza procede del núcleo; su incapacidad de reparar y la necesidad de detener el conflicto corresponden a la lectura editorial. Patio deshecho, camisa y chinchorro vacío son elipsis visuales, no hechos o rito certificados.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Volver a una casa con los animales recuperados.",
+        "impossible_behavior": "El patio se desteje y sus tiras no alcanzan a unir riqueza y ausencia.",
+        "narrative_effect": "Los bienes no reparan la pérdida ni cierran el conflicto.",
+        "agency": "La hermana vuelve, pero no puede recomponer la ausencia con lo obtenido.",
+        "physical_translation": "Tiras de suelo desgarradas que se separan con aire; brecha doméstica localizada.",
+        "visible_test": "Corral lleno de un lado, chinchorro vacío del otro, extremos separados y mujer segura.",
+        "event_ids": [
+          "represalia",
+          "riqueza",
+          "ausencia_no_reparada"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "hermana_arquera__identity_sheet",
+        "hermano_arquera__identity_sheet",
+        "perro_hermanos__identity_sheet",
+        "mula_hermanos__identity_sheet",
+        "chinchorro__object_sheet",
+        "rebanos__group_grammar",
+        "arco_flechas__object_sheet",
+        "rancheria_wayuu__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/los-dos-hermanos/wayuu-hermanos-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "d59b6f4a1053623221764671ff34ea6292c806a9b02b0d117317809602a3fc64",
+      "narrative_event_ids": [
+        "represalia",
+        "ausencia_no_reparada"
+      ],
+      "editorial_translation": "El círculo de la flecha traduce la lectura ética de la edición; no afirma que un proyectil se curvara literalmente ni que sea un símbolo tradicional.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Una flecha de la práctica de la arquera.",
+        "impossible_behavior": "Se curva en círculo hasta apuntar a su propia pluma.",
+        "narrative_effect": "La acción vuelve hacia el origen sin recomponer lo perdido.",
+        "agency": "Metáfora del resultado, no superpoder de puntería.",
+        "physical_translation": "Asta única curvada de papel, punta y pluma distintas, separadas por aire.",
+        "visible_test": "Una sola flecha continua y una abertura entre extremos.",
+        "event_ids": [
+          "represalia",
+          "ausencia_no_reparada"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "La represalia puede volver sobre quien la inicia sin reparar la pérdida.",
+        "carrier": "Una sola flecha que se curva hacia su propia pluma.",
+        "operation": "El objeto deja de avanzar y casi alcanza su origen; el espacio entre punta y pluma mantiene abierta la posibilidad de detenerse.",
+        "story_connection": "Condensa la persecución que excede su objetivo y la ausencia que la riqueza no repara.",
+        "visible_test": "Un asta continua, una punta y una cola emplumada enfrentadas con separación; no icono de dos flechas."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-hermanos-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

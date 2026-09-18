@@ -1,5 +1,32 @@
 # Proceso: de mito a video narrado (90 s)
 
+> ## ⚠ HISTÓRICO — CARRIL v2 (agosto de 2026), SUPERADO ENTERO
+>
+> Este documento es el MVP de agosto: **clips con `grok_video`**, **narración con OpenAI TTS
+> `gpt-4o-mini-tts`** (`generate-voice.mjs`), **música "ducked"** y **capa de SFX por
+> bloque**. De eso **no queda nada vigente**:
+>
+> | Lo que dice este doc | Lo vigente desde el 9-sep-2026 |
+> |---|---|
+> | Video con `grok_video` (1,5 cr/s) | **Seedance 2.5** a 1080p por MCP, 45 cr/clip de 5 s (manual §3.1, §7.1) |
+> | Voz con OpenAI TTS "ash", ~2,0 pal/s | **ElevenLabs `alejandro_narracion`** (`9EHAKExD4lT2G6hPG74L`, `eleven_multilingual_v2`), 2,3-3,5 pal/s medidas (manual §4.1; el ritmo, en §2.2 y en §4 de aquí abajo) |
+> | Música cama de 95 s, ducking, `music_vol 0.09` | **Lechos de `narration_beds`** (`build-lecho.mjs`) y perfil `mix: "narracion"`: voz −16 LUFS, lecho −34, **sin ducking** (ley 9, manual §4.3) |
+> | SFX por bloque a `sfx_vol` 0,4-0,45 | **Cero campos `sfx`** en todos los planes vivos (manual §4.4) |
+> | Subtítulos quemados + `.srt` | `burn_subtitles: false`, `write_srt: false` (ley 10) |
+>
+> **El carril vigente está entero en `docs/videos/MANUAL-DE-PRODUCCION.md`.** Lo que sigue
+> valiendo de aquí es lo editorial y lo aprendido a golpes: los **principios** (§2), los
+> **mecanismos de consistencia** (§3), el **checklist anti-moderación** (§5b) y el
+> **patrón de moderación por imagen de inicio** (§6) — eso sobrevivió a los tres carriles.
+> Los avisos ⚠ de abajo marcan las líneas que harían usar la voz o la mezcla equivocadas.
+
+> Cierre de ciclos (9 de septiembre de 2026): Muisca y Wayúu están terminadas
+> dentro de sus alcances aprobados, que no son equivalentes. El procedimiento para
+> abrir una tercera comunidad, sus decisiones obligatorias y los aprendizajes de
+> ambos cierres están en [`TRASPASO-SIGUIENTE-COMUNIDAD.md`](TRASPASO-SIGUIENTE-COMUNIDAD.md).
+
+> Actualización Wayúu (9 de septiembre de 2026): el flujo específico vigente está en `content/videos/wayuu/ANDAMIAJE-VIDEOS.md`; el progreso humano en `content/videos/wayuu/PRODUCCION-ACTIVA.md` y el estado estructurado en `content/videos/wayuu/campaign.v1.json`. Usa keyframes nativos 864×1536, `medium`. Desde La majayura de Puró ya no usa continuidad sólo textual: cada fotograma desde el tercero recibe al menos los dos keyframes aprobados inmediatamente anteriores del mismo mito. La política visual/modelos está en `content/videos/wayuu/channel-dna.v3.json`. No hereda automáticamente proveedores, precios históricos, referencias muiscas, duración rígida ni reglas de elusión de moderación. Los precios y estados de proveedores indicados más abajo son registros históricos, no cotizaciones vigentes.
+
 Proceso repetible para transformar los mitos del catálogo en videos narrados de ~1:30
 en 9:16. El objetivo no es un video suelto: es una **línea de producción consistente**
 donde cada pueblo tiene una biblia visual reutilizable y cada video nuevo cuesta menos
@@ -11,7 +38,7 @@ Primer piloto: **Bachué** (muiscas). Ver `docs/videos/muiscas/`.
 
 ## 1. Arquitectura (v2 — 2026-08-19)
 
-Decisión de costos: las **imágenes se generan con OpenAI** (cuenta propia, estilo
+Decisión vigente: las **imágenes se generan con la única cuenta OpenAI API local** (`OPENAI_API_KEY`, estilo
 `studioPaperMaquette` del sitio) y Higgsfield se usa solo para lo que OpenAI no hace:
 **animar keyframes, narrar y componer la música**. El ensamblaje es **local con ffmpeg**
 (gratis, versionado en el repo).
@@ -19,13 +46,20 @@ Decisión de costos: las **imágenes se generan con OpenAI** (cuenta propia, est
 | Fase | Qué pasa | Herramienta | Costo |
 |---|---|---|---|
 | A · Guion | 9 bloques × 1 línea de VO (20–23 palabras es) + storyboard + through-line | Claude (repo) | 0 |
-| B · Biblia + keyframes | Personajes/paisajes/props con cadena de identidad (`images.edit` con referencias); keyframes de escena por bloque | OpenAI `gpt-image-2` vía `scripts/videos/generate-keyframes.mjs` | ~USD 0,2/imagen (cuenta OpenAI) |
+| B · Biblia + keyframes | Personajes/paisajes/props con cadena de identidad (`images.edit` con referencias); keyframes de escena por bloque | Modelo OpenAI fijado en el DNA de campaña; Wayúu V3 prefiere `gpt-image-2.5-sunburst`, keyframes `medium`; paquete e ingesta trazables | Facturación API OpenAI |
 | C · Bloques motion | Image-to-video desde el keyframe (start_image) | Higgsfield: `grok_video` (1,5 cr/s) o `kling3_0` (2 cr/s, acepta start+end frame) | 15 cr por clip de 10 s (grok) |
 | D · Bloques stills | Keyframe + movimiento de cámara (Ken Burns/parallax) local | ffmpeg local | 0 |
-| E · Narración | 1 toma por bloque, misma voz siempre | OpenAI TTS `gpt-4o-mini-tts` vía `scripts/videos/generate-voice.mjs` | ~USD 0,02/video (cuenta OpenAI) |
+| E · Narración | 1 toma por bloque, misma voz siempre | ⚠ **MUERTO** — OpenAI TTS `gpt-4o-mini-tts` vía `scripts/videos/generate-voice.mjs`. Hoy: ElevenLabs con `generate-voice-el.mjs --format wav` (manual §4.1) | ~USD 0,02/video (cuenta OpenAI) |
 | F · Música | Cama instrumental misteriosa-calma a duración exacta — **SIEMPRE lleva música** (decisión 2026-08-19) | Higgsfield: `sonilo_music` | ~5,6 cr/90 s |
-| G · Ensamblaje | Concat, voz por bloque, música ducked, subtítulos | ffmpeg local (script del repo) | 0 |
+| G · Ensamblaje | Concat, voz por bloque, ⚠ música ducked, subtítulos — **las dos cosas derogadas**: hoy `mix: "narracion"` sin ducking y sin subtítulos (leyes 9 y 10) | ffmpeg local (script del repo) | 0 |
 | H · Publicación | Reels/TikTok/Shorts + embed | — | 0 |
+
+Política de calidad única: Biblia y keyframes `medium`; en el tríptico, sólo
+la entrada horizontal 16:9 usa `high`, mientras el acto vertical y la huella
+cuadrada usan `medium`. La orientación sola no eleva calidad. Todas las escenas
+son inmersivas de borde a borde, sin mostrar borde exterior de la maqueta,
+cartón, base, mesa ni estudio. El interior conserva profundidad 3D real: capas
+a distintas distancias con aire, oclusiones, cantos internos y sombras.
 
 Costos unitarios verificados el 2026-08-19 (preflight `get_cost`, sin gastar):
 imagen Higgsfield 3 cr (no se usa) · gemini_omni 30 cr/10 s (no se usa) ·
@@ -43,6 +77,9 @@ narración continua 90 s 10,2 cr · música 90 s 5,63 cr.
 
 (La voz salió de Higgsfield: seed_audio sonaba mal en español — se reemplazó por OpenAI
 TTS con instrucciones de narrador, costo despreciable en la cuenta OpenAI.)
+⚠ **Segunda sustitución, no anotada aquí**: el 9-sep-2026 OpenAI TTS quedó atrás y la voz
+del canal pasó a ser la **voz clonada del usuario en ElevenLabs**, la misma que narra el
+sitio. `generate-voice.mjs` sigue en el repo pero no se usa (manual §4.1).
 
 Más ~USD 3–5 por video en OpenAI (biblia se paga una sola vez por pueblo).
 Recomendado: **híbrido** — motion en los momentos mágicos (en Bachué: la emergencia
@@ -67,6 +104,13 @@ del agua y la transformación en serpientes), stills rítmicos en el resto.
 - **Cadena de identidad (OpenAI):** un personaje que envejece o cambia de escena se
   genera con `images.edit` pasando su ficha como referencia ("LA MISMA persona…").
   Los keyframes de escena reciben paisaje + personajes + props como referencias.
+- **Memoria secuencial Wayúu V3:** desde el tercer fotograma, cada nueva imagen recibe
+  además los dos keyframes aprobados inmediatamente anteriores del mismo mito. El
+  primero arranca con al menos dos referentes de Biblia/tríptico y el segundo con el
+  primero más un referente canónico. Se congelan orden, rol, ruta y SHA-256. Esto obliga
+  a producir causalmente y evita que cada cuadro reinvente rostros, vestuario, paleta,
+  densidad y tratamiento de papel. Las referencias no autorizan copiar utilería o
+  acciones ausentes del nuevo plano.
 - **Keyframe → clip:** el video se genera desde el keyframe aprobado (`start_image`),
   no desde texto. El clip no puede desviarse mucho de un primer frame correcto.
 - **Manifest reproducible:** `content/videos/<spec>/manifest.json` guarda cada prompt
@@ -81,6 +125,14 @@ del agua y la transformación en serpientes), stills rítmicos en el resto.
 - Bloques de ~10 s; **20–23 palabras por línea en español** (medido: ~2,15 palabras/s
   en registro de leyenda; re-medir si cambia la voz). La ventana de audio manda: línea
   que no cabe se reescribe, jamás se acelera (`atempo` prohibido).
+  ⚠ La voz **sí cambió** (dos veces) y nadie re-midió aquí: la doctrina vigente es de
+  **9 bloques de 17-19 palabras** con la voz de ElevenLabs a `speed 1.05`, cuyo ritmo medido
+  va de **2,28 a 3,53 pal/s** sobre las nueve tomas de `bachue/voces-v4` (re-medido el
+  16-sep: palabras del guion ÷ fin de habla por `silencedetect` a −40 dB), y de 2,4 a 3,6
+  en La aparición (manual §2.2). ⚠ El **2,08** que da el manual §2.2 como mínimo sale de
+  dividir por la duración COMPLETA del WAV, con el silencio de cola dentro; con el mismo
+  denominador el máximo baja a 3,17. Lo único de esta línea que sigue intacto es
+  la prohibición de `atempo` (ley 3).
 - Variar tamaño y ángulo de plano en cada corte; máximo 2 bloques seguidos por paisaje;
   ningún plano estático >2,5 s en bloques motion.
 - Personajes nunca hablan en pantalla (gestos sí); narrador externo siempre.
@@ -96,13 +148,18 @@ del agua y la transformación en serpientes), stills rítmicos en el resto.
 1. [ ] Releer la ficha editorial del mito (`editorial/<pueblo>/myths/<slug>.mjs`),
        en especial `researchNotes` (qué está documentado, qué es licencia).
 2. [ ] Guion de 9 bloques + storyboard + through-line (`docs/videos/<pueblo>/<slug>-guion.md`).
-3. [ ] Actualizar biblia/spec si hay personajes o paisajes nuevos; correr
-       `node scripts/videos/generate-keyframes.mjs --spec scripts/videos/specs/<spec>.mjs`.
+3. [ ] Actualizar biblia/plan si hay personajes o paisajes nuevos; declarar las
+       refs por keyframe y preparar con `npm run mitos:prepare:keyframes:openai`.
 4. [ ] Revisar keyframes ANTES de animar (consistencia de personajes, estilo, exclusiones).
 5. [ ] Elegir bloques motion vs. stills; subir keyframes a Higgsfield (`media_upload`);
        generar clips (batch) con el modelo bloqueado en el DNA.
 6. [ ] Narración por bloque (misma voz del DNA), medir duraciones; música a duración exacta.
-7. [ ] Ensamblaje local (ffmpeg): concat + voz + música ducked + subtítulos por bloque.
+       ⚠ Hoy: `generate-voice-el.mjs --format wav` (el `--format` **no** es el default) y el
+       lecho con `build-lecho.mjs --duration <total, cierre incluido>` — manual §4.1 y §4.2.
+7. [ ] Ensamblaje local (ffmpeg): concat + voz + ~~música ducked~~ + ~~subtítulos por bloque~~.
+       ⚠ Sin ducking y sin subtítulos: `mix: "narracion"`, `burn_subtitles: false`,
+       `write_srt: false`. Y todo video cierra con el bloque de cierre de canal de 8,42 s
+       (ley 5, `cierre-de-canal.md`).
 8. [ ] QC: consistencia visual contra la biblia, sync de audio, sin texto en pantalla.
 9. [ ] Actualizar `channel-dna.json` + apuntar aprendizajes (§6). Publicar.
 
@@ -127,7 +184,13 @@ del agua y la transformación en serpientes), stills rítmicos en el resto.
 ### Capa de ambiente (SFX) — el salto audiovisual
 - `mirelo_text_to_audio` (2,5 cr/10 s): camas de ambiente por escena ("gentle lake water lapping…", "hearth fire crackling…"), sin música en el prompt.
 - `assemble-video.mjs` soporta `sfx`/`sfx_vol` por bloque: loop al largo del bloque, fades 0,4/0,5 s, mezclado con la música en un solo bus que se agacha bajo la voz.
+  ⚠ Ese bus que «se agacha bajo la voz» es el `sidechaincompress` del modo `mix: "canal"`.
+  En el modo vigente `mix: "narracion"` **no hay sidechain**: la separación es fija
+  (voz −16 LUFS / lecho −34).
 - Volumen que funcionó: `sfx_vol 0.4-0.45` con música 0.09.
+  ⚠ **Capa abandonada.** Ningún plan del carril vigente lleva campos `sfx`, y `music_vol
+  0.09` es el volumen del carril viejo. La biblioteca de SFX tiene hoy cuatro archivos
+  (laguna, fogón, cascada, lluvia) y no se usa en producción (manual §4.4).
 - Demo A/B: `content/videos/muiscas/pruebas/demo-sfx-pipeline.mp4`.
 - Camas iniciales de la biblioteca: `bakeoff/sfx-laguna.mp3`, `bakeoff/sfx-fogon.mp3`.
 
@@ -220,3 +283,9 @@ Regla general: los re-encuadres "seguros" (espaldas, distancia, sin personas) su
   Bachué quedó en 1:42 (el mito respira; "un minuto y medio" es el orden, no una jaula).
 - 2026-08-20 · Entregas: máster CRF18 (~186MB) + social 1080p 8Mbps faststart (~84MB) +
   preview 720p (<30MB para compartir en chat).
+  ⚠ **Esos tamaños NO son especificación**: son los de Bachué v1 (20 ago). El peso depende
+  del contenido y de la duración. Medido sobre `bachue-final-v7-seleccion.mp4` (102,458333 s,
+  16-sep-2026): máster **147.780.167 B**, social **96.946.829 B**, preview **12.710.364 B**.
+  Lo único que es especificación son los **parámetros**: máster h264 CRF 18 + AAC 192k;
+  social `-b:v 8M -maxrate 8M -bufsize 16M` + `+faststart`; preview `scale=720:1280` CRF 28
+  + `+faststart`. Comandos exactos en `MANUAL-DE-PRODUCCION.md` §5.8.

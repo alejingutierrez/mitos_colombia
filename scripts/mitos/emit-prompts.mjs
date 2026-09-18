@@ -14,6 +14,7 @@
  */
 import { readFileSync } from "node:fs";
 import { buildPrompt, ACTOS } from "./art-direction.mjs";
+import { qualityForTriptychAct } from "../../src/lib/image-quality-policy.js";
 
 const args = Object.fromEntries(
   process.argv.slice(2).reduce((acc, a, i, arr) => {
@@ -28,7 +29,9 @@ const ids = JSON.parse(readFileSync(`${plan.biblia}/higgsfield-ids.json`, "utf8"
 
 const slugs = String(args.slug || Object.keys(plan.mitos).join(",")).split(",").filter(Boolean);
 const RESOLUTION = args.resolution || "2k";
-const QUALITY = args.quality || "high";
+if (args.quality) {
+  throw new Error("--quality ya no es global: entrada=high, acto=medium y huella=medium según la política del tríptico");
+}
 
 const requests = [];
 let index = Number(args.desde || 0);
@@ -53,7 +56,7 @@ for (const slug of slugs) {
       params: {
         model: "gpt_image_2",
         resolution: RESOLUTION,
-        quality: QUALITY,
+        quality: qualityForTriptychAct(acto),
         aspect_ratio: ACTOS[acto].aspect_ratio,
         ...(medias.length ? { medias } : {}),
         prompt: buildPrompt({
@@ -63,6 +66,7 @@ for (const slug of slugs) {
           composicion: escena.composicion,
           escena: escena.escena,
           paleta: mito.paleta,
+          narrativeMagic: escena.magic_in_the_ordinary,
         }),
       },
     });
@@ -89,7 +93,7 @@ if (args.formato === "paquete") {
     writeFileSync(`${dir}/LEEME.md`, [
       `# ${mito.titulo} · ${slug}`,
       ``,
-      `**Modelo:** GPT Image 2 · **Resolución:** 2K · **Calidad:** high · **Unlimited ON**`,
+      `**Modelo:** GPT Image 2 · **Resolución:** 2K · **Calidad:** entrada horizontal high; acto vertical y huella cuadrada medium · **Unlimited ON**`,
       ``,
       `**Arco:** ${mito.arco}`,
       mito.deslinde_nota ? `\n**Ojo con el deslinde:** ${mito.deslinde_nota}` : "",
@@ -103,7 +107,7 @@ if (args.formato === "paquete") {
           ? r._refs.map((n) => `\`content/videos/${comunidad}/biblia/${n}.jpg\``).join(" · ")
           : "_ninguna — esta escena se genera sólo con texto_";
         return [
-          `### ${orden.indexOf(acto) + 1}. ${acto} · ${r.params.aspect_ratio} · composición «${r._composicion}»`,
+          `### ${orden.indexOf(acto) + 1}. ${acto} · ${r.params.aspect_ratio} · calidad ${r.params.quality} · composición «${r._composicion}»`,
           ``,
           `- **Prompt:** \`${acto}.txt\``,
           `- **Adjuntar como referencia:** ${refs}`,

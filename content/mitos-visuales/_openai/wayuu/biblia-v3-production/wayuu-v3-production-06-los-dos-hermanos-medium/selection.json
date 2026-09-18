@@ -1,0 +1,83 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "los-dos-hermanos",
+  "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+  "status": "QA_PASS_AFTER_CORRECTION",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/los-dos-hermanos-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "0fcfd3e41bbbcba5086ef37f17d98f2419fe831d84117c2f3dfaaf7e4ab6ed64",
+  "batch_models": 7,
+  "selected_models": 7,
+  "approved_models_reused_for_myth": [
+    "arco_flechas__object_sheet",
+    "rebanos__group_grammar",
+    "rancheria_wayuu__spatial_model",
+    "territorio_alta_guajira__environment_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 11,
+    "required": 11,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 54,
+    "required_models": 265,
+    "remaining_models": 211
+  },
+  "selections": {
+    "hermana_arquera__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__identity_sheet--canon.jpeg",
+      "sha256": "8269d19945532c1bd44bc22eab5f7c89deee2945794ff7fe2643a628ef6916db"
+    },
+    "hermana_arquera__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermana_arquera__state_sheet--estados.jpeg",
+      "sha256": "b4a452c9414aef4074d7afc9e05611ded814a75f350158f13a03558a0b24866d"
+    },
+    "hermano_arquera__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__identity_sheet--canon.jpeg",
+      "sha256": "195e3144586c3cc2c0177cd62d3f78235560aacac02b08a3cfd9a60cbd6a3498"
+    },
+    "hermano_arquera__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/hermano_arquera__state_sheet--estados.jpeg",
+      "sha256": "fd5e91e94b89046227901ae05ee1828114e46945b6a91d48db36394133951800"
+    },
+    "perro_hermanos__identity_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/perro_hermanos__identity_sheet--canon.jpeg",
+      "sha256": "6d0c490f2551d73e66a35e060293617a3e33e57d500900e56620cd4fd1ade25e"
+    },
+    "mula_hermanos__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium-corrections-01/mula_hermanos__identity_sheet--canon.jpeg",
+      "sha256": "56293da02a393a52c476bc579a524e83f50875ac996650bb20bd501f92955451"
+    },
+    "chinchorro__object_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+      "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "mula_hermanos__identity_sheet",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "reason": "REJECTED_GENERIC_CIRCULAR_CONICAL_ARCHITECTURE",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/mula_hermanos__identity_sheet--canon.jpeg",
+      "sha256": "1cab1ae7b34298d63dfa2450f5fa1483054c21078f6eddf1c00b34d319c63b61"
+    }
+  ]
+}

@@ -1,0 +1,1537 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "guanuru",
+  "title": "Guanurú: la casa que todavía escucha",
+  "version": "preproduccion-01",
+  "status": "script_ready_pending_anchor_production",
+  "duration": {
+    "target_seconds": 160,
+    "voice_words": 328,
+    "measured": false
+  },
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "palette": "Warm sand, pale ochre, muted clay, smoky blue and deep indigo paper. Night uses muted blue-grey separated layers; remembered daylight is soft cream, never gold. White is reserved for the small butterfly and one simple compress. Charcoal appears only as low pressure, clothing or cast shadow. No glow, glitter, neon, photographic darkness or generic magical particles.",
+  "story_thesis": "Lo desconocido no se vuelve más verdadero por recibir un solo nombre: cuidar, escuchar y mantener separadas las presencias es una forma de prudencia ante el duelo.",
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/guanuru.json",
+    "content_sha256": "543da024fcad6d8ed839c3a51b3b918201e07a3443f8fb3cbde4cd6c26de69ea",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/248/272/1634?inline=1",
+    "source_locator": "Pineda Giraldo, Aspectos de la magia en la Guajira, pp. 78–86, 101–102 y 144–149 según expediente; reconstrucción editorial publicada.",
+    "live_hash_verified": true,
+    "events": [
+      {
+        "id": "regreso",
+        "description": "La familia vuelve a la casa cerrada y oye pasos sin cuerpo ni huellas.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado, reconstrucción editorial; Pineda Giraldo pp. 78–86 y 144–149 según expediente local."
+      },
+      {
+        "id": "mariposa",
+        "description": "Una mariposa blanca entra junto al chinchorro y una persona impide que la dañen.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado; motivo de mariposas nocturnas documentado en Pineda Giraldo según expediente."
+      },
+      {
+        "id": "sueno",
+        "description": "El pariente muerto aparece calmado en un sueño y cuestiona la recepción violenta.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado; aparición con rostro conocido y sueño reunidos editorialmente desde motivos documentados."
+      },
+      {
+        "id": "enfermedad",
+        "description": "Al día siguiente un habitante enferma y la familia llama a una piache.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado; enfermedad y mediación de piache basadas en registros etnográficos citados."
+      },
+      {
+        "id": "distincion",
+        "description": "La piache escucha y separa Wanurü, Yolujaa y Guanurú sin fijar una jerarquía demoníaca.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Pineda Giraldo pp. 78–86, 101–102 y 144–149 según lectura documentada en docs/wayuu-lote-20-guanuru-v3.md."
+      },
+      {
+        "id": "cuidado",
+        "description": "La familia limpia la casa, visita a parientes y completa el cuidado de la sepultura.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado, reconstrucción editorial de obligaciones con casa y muertos."
+      },
+      {
+        "id": "proteccion",
+        "description": "Colocan junto a la entrada un cráneo de caballo como señal de casa atendida, no como arma espiritual.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Registro histórico de objeto asociado a animales domésticos y cráneos de caballo; alcance acotado en expediente."
+      },
+      {
+        "id": "recuperacion",
+        "description": "La fiebre cede gradualmente y la mariposa no regresa; no se atribuye causalidad única.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Relato publicado, cierre editorial explícitamente incierto."
+      },
+      {
+        "id": "nombres",
+        "description": "Al contar el episodio, los nombres y traducciones cambian sin coincidir.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Variación terminológica y problemas de traducción documentados por Pineda Giraldo y expediente local."
+      },
+      {
+        "id": "regla",
+        "description": "La familia conserva la prudencia ante lo que llega durante el duelo y rechaza una explicación única.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "Síntesis ética de la reconstrucción editorial publicada."
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "familia_tres",
+      "type": "supporting_people",
+      "desc": "THREE adult Wayuu relatives, always the same three: older woman in full ankle-length CHARCOAL Wayuushein with broad OCHRE shoulder yoke and black low bun; adult woman in full ankle-length MUTED SAGE manta with broad CREAM shoulder panel and black low bun; older man in full CREAM long shirt over RUST ankle-length trousers, short grey hair. Dark waireña-style sandals. Natural restrained gestures, nearly flat cut-paper profiles, no paint, no jewelry, no props unless requested. Together with the patient they form exactly four inhabitants.",
+      "model_ids": [
+        "familia_casa_guanuru__group_grammar"
+      ]
+    },
+    {
+      "id": "habitante_sano",
+      "type": "person",
+      "desc": "THE SAME adult Wayuu man before illness: round adult face rendered as a flat paper profile, short black hair, full SMOKY BLUE long shirt over CLAY ankle-length trousers, narrow OCHRE belt and dark sandals. Upright, alert, empty hands. Never fever cloth, duplicate, grey hair, faceted head or child proportions.",
+      "model_ids": [
+        "habitante_enfermo_guanuru__identity_sheet",
+        "habitante_enfermo_guanuru__state_sheet"
+      ]
+    },
+    {
+      "id": "habitante_fiebre",
+      "type": "person",
+      "desc": "THE SAME adult Wayuu man only during fever: short black hair, full SMOKY BLUE long shirt over CLAY ankle-length trousers, narrow OCHRE belt, dark sandals; reclined in the hammock or on one low mat with ONE small plain cream compress at forehead. Eyes tired, no wound, sweat, horror, ageing or duplicate healthy self.",
+      "model_ids": [
+        "habitante_enfermo_guanuru__identity_sheet",
+        "habitante_enfermo_guanuru__state_sheet"
+      ]
+    },
+    {
+      "id": "habitante_recuperado",
+      "type": "person",
+      "desc": "THE SAME adult Wayuu man after fever: short black hair, full SMOKY BLUE long shirt over CLAY ankle-length trousers, narrow OCHRE belt and dark sandals. Seated or standing steadily, no compress, no duplicate sick self, no miraculous glow.",
+      "model_ids": [
+        "habitante_enfermo_guanuru__identity_sheet",
+        "habitante_enfermo_guanuru__state_sheet"
+      ]
+    },
+    {
+      "id": "pariente_sueno",
+      "type": "person",
+      "desc": "ONE deceased adult male relative as remembered in dream, visibly human and calm: full OCHRE long shirt, CREAM ankle-length trousers, DARK SAND sash, dark sandals, short black hair. Same normal opaque flat-paper body in every dream shot; no transparency, halo, white robe, skull, wounds, grey hair or ghost anatomy.",
+      "model_ids": [
+        "pariente_muerto_guanuru__identity_sheet",
+        "pariente_muerto_guanuru__state_sheet"
+      ]
+    },
+    {
+      "id": "piache",
+      "type": "person",
+      "desc": "ONE older adult Wayuu woman, long full INDIGO Wayuushein to ankles over a narrow RUST-OCHRE underlayer, grey-thread twin braids, dark waireña-style sandals. Empty hands; attentive posture. No face paint, staff, feathers, necklace, smoke, altar or invented ritual instrument.",
+      "model_ids": [
+        "piache_guanuru__identity_sheet"
+      ]
+    },
+    {
+      "id": "mariposa_blanca",
+      "type": "animal",
+      "desc": "ONE small white butterfly, recognizable natural four-wing silhouette simplified into four thin matte white paper cutouts and a tiny dark paper body. Palm-sized relative to a person, never giant, orange, glowing, skeletal, human-faced or fused with another entity.",
+      "model_ids": [
+        "mariposa_blanca_guanuru__identity_sheet"
+      ]
+    },
+    {
+      "id": "guanuru_presencia",
+      "type": "object_or_phenomenon",
+      "desc": "No body and no creature. Guanurú is shown ONLY as a localized inward compression of several ordinary domestic paper layers toward one empty point, while objects remain recognizable. No face, silhouette, limbs, eyes, footprints, black monster, glow or butterfly anatomy.",
+      "model_ids": [
+        "guanuru__presence_model"
+      ]
+    },
+    {
+      "id": "wanuru_presencia",
+      "type": "object_or_phenomenon",
+      "desc": "No body and no creature. Wanurü is visualized only as a low matte CHARCOAL paper depression or heat-like pressure near the sick man's mat, associated with illness and death but never touching him, never becoming smoke, claws, shadow-person or autonomous demon.",
+      "model_ids": [
+        "wanuru__presence_model",
+        "wanuru__state_sheet"
+      ]
+    },
+    {
+      "id": "yolujaa_presencia",
+      "type": "object_or_phenomenon",
+      "desc": "No autonomous body. Yolujaa is represented only by the calm deceased relative appearing inside a separated dream plane or by a shadow continuity joining exactly the remembered person, hammock and cared-for grave. Never reuse the silhouette body or footprints visible in the old model.",
+      "model_ids": [
+        "yolujaa__presence_model",
+        "yoruja__presence_model"
+      ]
+    },
+    {
+      "id": "casa",
+      "type": "environment",
+      "desc": "Same Wayuu dwelling and shaded work area: broad thin SAND, OCHRE and muted brown paper wall sheets, narrow strip-paper roof, straight flat paper posts, one door and a side sleeping space. Interior floor and exterior terrain are wide layered paper planes with air gaps. No photoreal mud, wood, straw, cardboard box, visible model base or frame.",
+      "model_ids": [
+        "casa_desocupada_guanuru__spatial_model",
+        "rancheria_wayuu__spatial_model"
+      ]
+    },
+    {
+      "id": "chinchorro",
+      "type": "object_or_phenomenon",
+      "desc": "ONE broad suspended chinchorro made as layered matte paper bands in dark indigo, clay and cream, hanging between two flat paper posts. It remains the same object; no woven fiber realism, ropes, duplicate hammock or modern bed.",
+      "model_ids": [
+        "chinchorro__object_sheet"
+      ]
+    },
+    {
+      "id": "pasos_sin_huellas",
+      "type": "object_or_phenomenon",
+      "desc": "A sequential response of THREE ordinary objects only: one floor sheet softly compresses, one hanging curtain strip shifts, one small paper vessel trembles. No footprints, feet, body, human shadow, glow, dust, motion lines or monster.",
+      "model_ids": [
+        "pasos_sin_huellas_guanuru__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "sepultura",
+      "type": "environment",
+      "desc": "ONE low cared-for burial mound built from broad thin ochre paper contours with a modest ring of flat paper stones and one small plant cutting. No cross, tombstone, corpse, bones, skull, open grave, monumental altar or rocky photoreal terrain.",
+      "model_ids": [
+        "sepultura_guanuru__spatial_model"
+      ]
+    },
+    {
+      "id": "craneo_caballo",
+      "type": "object_or_phenomenon",
+      "desc": "ONE clean postcontact horse skull represented as a single coherent layered matte cream-paper object, human-hand-sized to torso-sized and tied beside the entrance. Inert marker of an attended house, never glowing, floating, attacking, prehistoric, sacrificial or an instruction for present practice.",
+      "model_ids": [
+        "craneo_caballo_proteccion__object_sheet"
+      ]
+    },
+    {
+      "id": "alimento_familiar",
+      "type": "object_or_phenomenon",
+      "desc": "Two modest shallow paper bowls with ordinary food and one folded sand-paper bundle carried to living relatives. No altar, offering to a spirit, feast, branded package or symbolic pattern.",
+      "model_ids": []
+    },
+    {
+      "id": "utensilios_limpieza",
+      "type": "object_or_phenomenon",
+      "desc": "One simple dry-fibre broom translated into thin paper strips, one folded cream paper cloth and one small vessel. Household care only; no ritual wand, smoke, chemicals, text or modern plastic.",
+      "model_ids": []
+    },
+    {
+      "id": "territorio",
+      "type": "environment",
+      "desc": "Dry low Guajira plain around the ranchería: broad warm-sand and pale-ochre paper ground sheets, sparse flat thorn shrubs and a few distant low rust ridges. No high mountains, ocean, agave rosettes, lush forest, cracked photographic soil or generic desert dunes.",
+      "model_ids": [
+        "rancheria_wayuu__spatial_model"
+      ]
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "guanuru__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium/guanuru__presence_model--canon.jpeg",
+      "sha256": "2575b551d2b703dff69dd5c53ee53753672e12f15aa39c4adf756489e60ca93e",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "yoruja__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-02/yoruja__presence_model--canon.jpeg",
+      "sha256": "8fb32e469bbf9e0eff63e55f05a92c407f0e5d6b1a9f87e82269fde65c6e64cc",
+      "qa_status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-02",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "pariente_muerto_guanuru__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/pariente_muerto_guanuru__identity_sheet--canon.jpeg",
+      "sha256": "a98daab625aed0385a7dfd543c39543cc6f8329ec6a52bec5482d24739cfc008",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "pariente_muerto_guanuru__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-02/pariente_muerto_guanuru__state_sheet--estados.jpeg",
+      "sha256": "89992ff9f4e22efe75a300870c1f2706b54fb362e945aeeb64aa53284bcfb82c",
+      "qa_status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-02",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "mariposa_blanca_guanuru__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/mariposa_blanca_guanuru__identity_sheet--canon.jpeg",
+      "sha256": "27920574eb61d789d3acb73d30654f8174a9c7f0dc0c39c077b70af255c1e62a",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "piache_guanuru__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium/piache_guanuru__identity_sheet--canon.jpeg",
+      "sha256": "a6f1a55538c9e134476a6f30ee840f7d61672059f896eb35e422724c8d8d5a9c",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "habitante_enfermo_guanuru__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium/habitante_enfermo_guanuru__identity_sheet--canon.jpeg",
+      "sha256": "dfd91e96607fcca4b8d9366ec6f1f7b7968c2293af2e22ec5f0acbd7336fc9d9",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "habitante_enfermo_guanuru__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/habitante_enfermo_guanuru__state_sheet--estados.jpeg",
+      "sha256": "1168d4ab246aee26ee9d472fc074135ea5b9aed066f27bc2151273705f2d7015",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "familia_casa_guanuru__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/familia_casa_guanuru__group_grammar--canon.jpeg",
+      "sha256": "88146d9c252a20c224855d3e2722021fd0694a73823dffd8407655453c22d2c7",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "casa_desocupada_guanuru__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/casa_desocupada_guanuru__spatial_model--canon.jpeg",
+      "sha256": "d3a4c25900cd31332a8dee4879184ff9973b8826c4f66ce99ad3e087f6290f6b",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "pasos_sin_huellas_guanuru__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium/pasos_sin_huellas_guanuru__phenomenon_rule--canon.jpeg",
+      "sha256": "2f3d19d3183aca087dddb8303733319eba98eaf4de9bc298a468b03fc678172d",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "craneo_caballo_proteccion__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/craneo_caballo_proteccion__object_sheet--canon.jpeg",
+      "sha256": "00a0d0f36fd69969857c3beca95b92d6dc94ea71c83f6ed810e3d0ff964b4d12",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "sepultura_guanuru__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-20-guanuru-medium-corrections-01/sepultura_guanuru__spatial_model--canon.jpeg",
+      "sha256": "ff31c41a07ed592f1d9be8dcfaadacfed465be9d63606f62c0dcbeded1d43e51",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-20-guanuru-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "wanuru__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/wanuru__presence_model--canon.jpeg",
+      "sha256": "c8406e27227a5dc245346be4465b977665190a4f5e89e12153545cb832a68f30",
+      "qa_status": "PASS_REUSED",
+      "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-02",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "wanuru__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium/wanuru__state_sheet--estados.jpeg",
+      "sha256": "3396142c7ff0487ffd3261e40a6001c7842b96a86a637ab90351167ed0738a19",
+      "qa_status": "PASS_REUSED",
+      "batch_id": "wayuu-v3-production-02-aramai-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "yolujaa__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-18-el-viaje-del-mas-alla-medium/yolujaa__presence_model--canon.jpeg",
+      "sha256": "c07c9179b05b2bdcd60accbf7ab00399cb80815df48cb8329004da23e7cdbcaa",
+      "qa_status": "PASS_REUSED_WITH_BODY_AND_FOOTPRINTS_VETO",
+      "batch_id": "wayuu-v3-production-18-el-viaje-del-mas-alla-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "chinchorro__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+      "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15",
+      "qa_status": "PASS_REUSED",
+      "batch_id": "wayuu-v3-production-06-los-dos-hermanos-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-03-corrections-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-20-guanuru-medium/selection.json"
+    }
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-02-entrada/entrada.jpeg",
+        "sha256": "f3088570a8c698d3589bdcfa8a810c149f9cfb86376e7918f71531a5c8df907d",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-01/acto.jpeg",
+        "sha256": "5d0c856ac545af9c13f4a411a8afabc726242d8f73b49a6d1d3d2aff7766c556",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-01/huella.jpeg",
+        "sha256": "3f483b7b3b0b42ba550cdd81fd18c4ea5715d5caa1c087278db048747596717d",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Dieciocho modelos canónicos y tres trípticos fueron inventariados; los originales relevantes se revisaron visualmente.",
+      "Las fichas fijan identidades, vestuario, escala y relaciones, pero NO su acabado fotográfico, faceteado ni terreno granular.",
+      "El modelo reutilizado de Yolujaa contiene silueta corporal y huellas: ambas quedan explícitamente vetadas; sólo se conserva la idea de relación entre muerto recordado, sueño y lugar.",
+      "El cráneo de caballo es un marcador histórico postcontacto y objeto inerte; no se presenta como ritual actual, arma espiritual ni instrucción.",
+      "No se sube ninguna referencia al proveedor: generación exclusivamente desde texto."
+    ]
+  },
+  "continuity_rules": [
+    "El paciente es una sola persona y cada toma usa exactamente un estado exclusivo: sano, fiebre o recuperado. Nunca combinar estados ni duplicarlo.",
+    "El pariente muerto es una persona humana recordada, completamente opaca y con el mismo atuendo; nunca convertirlo en Guanurú, Wanurü, mariposa o monstruo.",
+    "Guanurú, Wanurü y Yolujaa permanecen material y espacialmente separados; no crear jerarquía, anatomía compartida ni un demonio compuesto.",
+    "La mariposa blanca es un animal pequeño. Puede funcionar como señal incompleta, nunca como anatomía certificada de una presencia.",
+    "Las tres personas de familia más el paciente suman exactamente cuatro habitantes; conservar ropa y edad en toda la secuencia.",
+    "La piache mantiene manos vacías, vestuario completo y escucha como acción central; no inventar parafernalia, pintura facial ni poderes visuales.",
+    "El cráneo de caballo sólo aparece desde b8a; la recuperación es gradual y no prueba causalidad.",
+    "Ningún plano muestra violencia, sexualidad, cadáveres, huesos humanos, heridas, posesión, terror corporal o tratamiento médico."
+  ],
+  "shared_scene_continuity": [
+    "ALL PEOPLE are nearly FLAT cut-paper silhouettes with natural adult proportions, contour-profile noses, tiny cut eyes and NO faceted, sculpted, doll-like or Pixar heads.",
+    "Full adult figures remain complete inside frame and usually 12–25% of image height. Compose rich environmental depth with foreground, action plane, architecture and distant territory; never default to portrait close-ups.",
+    "EVERY visible surface belongs to the papercut world: broad thin matte paper sheets, crisp cut edges, narrow physical air gaps and real cast shadows BETWEEN layers. No photoreal soil, skin, wood, fiber, stone, bone or straw.",
+    "Depth comes from flat planes held at different distances, never thick folded cardboard sculptures. No visible diorama base, external frame, raw cardboard edge, corrugated board, glue, studio table or miniature-box presentation.",
+    "Only listed entities may appear. Traditional clothing is complete and varied; no loincloth-only styling, generic tribal costume, invented face paint or fantasy jewelry.",
+    "Magic is story-specific physical behavior of domestic paper, memory and spatial separation. No generic sparkles, glowing dust, constellations, portals, halos, smoke creatures or mystical UI symbols."
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Después de una muerte, la familia dejó la casa por un tiempo. Al volver, halló la puerta cerrada y el patio intacto. Sin embargo, algo parecía caminar adentro sin mostrar cuerpo ni huellas.",
+      "voice_provenance": "Reconstrucción editorial publicada: regreso a casa desocupada y pasos interiores; no se presenta como transcripción autónoma.",
+      "word_count": 33,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "regreso"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "La casa que quedó esperando",
+          "visual": "WIDE late-afternoon exterior. The SAME four inhabitants return as three relatives plus the healthy adult man, all complete and small, stopping several steps from the closed door. The attended grave lies far to one side as a low shape, not emphasized. The house occupies the middle ground with deep layers visible through the shaded work area. No butterfly, skull, piache or ghost.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_sano",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "regreso"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Amplias hojas de terreno y dos arbustos bajos",
+            "Cuatro familiares completos frente al umbral cerrado",
+            "Casa de papel en capas y crestas bajas"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b1b",
+          "title": "Pasos sin nadie",
+          "visual": "WIDE interior cutaway from the doorway; NO PEOPLE. The closed door remains at rear. Three distinct ordinary responses form a readable diagonal: foreground floor sheet compressed once, middle curtain strip displaced, rear small paper vessel tilting with a double paper shadow. Empty air connects them but contains no figure. Rich domestic depth, hammock visible at side but untouched.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "casa",
+            "chinchorro",
+            "pasos_sin_huellas"
+          ],
+          "event_ids": [
+            "regreso"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Hoja de piso comprimida en primer término",
+            "Cortina desplazada y chinchorro lateral",
+            "Recipiente inclinado ante puerta cerrada"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una casa cerrada con piso, cortina y recipiente",
+            "impossible_behavior": "Tres objetos cotidianos responden en secuencia a pasos sin cuerpo",
+            "narrative_effect": "La ausencia adquiere peso sin convertirse en monstruo",
+            "agency": "La presencia altera la casa; ninguna persona la controla",
+            "physical_translation": "Separar piso, cortina y recipiente en tres planos de papel con pequeñas desviaciones físicas",
+            "visible_test": "Deben leerse tres respuestas sucesivas y cero pies, huellas, sombras humanas o cuerpos",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "regreso"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Esa noche entró una mariposa blanca. Voló cerca del chinchorro y se posó sin miedo. Un hombre levantó la mano para apartarla; la mujer mayor detuvo el gesto antes de que pudiera dañarla.",
+      "voice_provenance": "Relato publicado: mariposa junto al chinchorro y prudencia ante una visita pequeña.",
+      "word_count": 33,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "mariposa"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "La visita diminuta",
+          "visual": "WIDE night interior with layered moonlight entering through paper slits. ONE small white butterfly lands on the upper edge of the dark indigo-clay-cream hammock. The four inhabitants remain small at different depths, watching from a respectful distance; the healthy man is closest but still two steps away. The butterfly casts one delicate enlarged wing-shaped shadow across TWO separated wall sheets, not a human shadow and not a doorway.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_sano",
+            "mariposa_blanca",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "mariposa"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Poste y borde del chinchorro delante",
+            "Mariposa pequeña con cuatro familiares detrás",
+            "Dos hojas murales y luz nocturna separada"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una mariposa blanca posada junto al chinchorro",
+            "impossible_behavior": "Su pequeña sombra atraviesa dos hojas de pared físicamente separadas sin aumentar el insecto",
+            "narrative_effect": "La casa convierte una llegada mínima en una pregunta sobre el duelo",
+            "agency": "La mariposa entra; la familia sólo decide cómo recibirla",
+            "physical_translation": "Recortar una mariposa diminuta y prolongar únicamente su sombra alada sobre dos planos murales",
+            "visible_test": "Insecto pequeño y sombra alada amplia deben coexistir sin cuerpo humano, halo o transformación",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "mariposa"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b2b",
+          "title": "La mano que se detiene",
+          "visual": "Same wide interior seconds later. The healthy adult man stands with one empty hand raised but stopped well before the butterfly. The older charcoal-and-ochre woman gently lowers his wrist with one hand; the other two relatives watch. Butterfly remains intact on hammock edge. No touching the insect, no fear caricature, no aura and no additional phenomenon.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_sano",
+            "mariposa_blanca",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "mariposa"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Una franja de pared y poste delante",
+            "Gestos contenidos entre hombre y mujer mayor",
+            "Mariposa, chinchorro y cuarto profundo"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "En el sueño apareció el pariente muerto. No era una sombra ni amenazaba: tenía el rostro conocido, la misma ropa y una pregunta serena. ¿Por qué habían recibido la visita con violencia?",
+      "voice_provenance": "Relato publicado: sueño con pariente reconocible y pregunta; diálogo resumido, no cita de informante.",
+      "word_count": 32,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "sueno"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "El cuarto abre un segundo umbral",
+          "visual": "WIDE dream interior. The sick-to-be man is still healthy and reclines fully clothed in the SAME hammock at left, eyes closed. Across the room, three broad wall sheets lift apart like a quiet second threshold, revealing the ONE deceased relative standing calm and fully opaque in middle distance. No other family, butterfly, grave or black presence. Relative and sleeper stay spatially separate.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "habitante_sano",
+            "pariente_sueno",
+            "yolujaa_presencia",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "sueno"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Borde del chinchorro y piso nocturno",
+            "Durmiente completo en un lateral",
+            "Tres hojas abiertas con pariente completo al fondo"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un hombre duerme en el chinchorro de su casa",
+            "impossible_behavior": "Las capas interiores se separan y alojan al pariente muerto como presencia humana reconocible",
+            "narrative_effect": "El sueño devuelve una relación, no una criatura anónima",
+            "agency": "El pariente se presenta y pregunta; el durmiente no dirige la aparición",
+            "physical_translation": "Abrir tres hojas de pared como planos profundos y colocar al pariente opaco en el último",
+            "visible_test": "Debe verse un solo durmiente y un solo pariente humano, sin transparencia, halo, pies sueltos o espectro",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "sueno"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b3b",
+          "title": "Una pregunta sin amenaza",
+          "visual": "Reverse wide angle from behind the deceased relative, whose full ochre-and-cream silhouette remains at one side. The sleeper is visible small in the hammock beyond. Between them, one wall sheet bends into a shallow question-like curve WITHOUT forming punctuation or written symbol; warm remembered daylight touches only the far paper edge. No speech bubble, text, butterfly or horror.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "habitante_sano",
+            "pariente_sueno",
+            "yolujaa_presencia",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "sueno"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Espalda plana del pariente en primer plano lateral",
+            "Hoja curva suspendida en el cuarto",
+            "Durmiente y chinchorro al fondo"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Dos parientes separados por el sueño",
+            "impossible_behavior": "Una hoja de la casa se curva entre ellos como distancia que escucha, sin escribir signo alguno",
+            "narrative_effect": "La visita reclama trato y memoria sin amenazar",
+            "agency": "El muerto formula la pregunta; el soñante sólo recibe",
+            "physical_translation": "Doblar una sola hoja mural en arco suspendido con sombra, sin iconografía",
+            "visible_test": "La relación entre ambos debe dominar y la curva no puede parecer letra, boca o portal fantástico",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "sueno"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Al amanecer, uno de los habitantes enfermó. La fiebre no explicó por sí sola lo ocurrido. La familia lo cuidó y llamó a una piache para escuchar antes de nombrar lo que había pasado.",
+      "voice_provenance": "Relato publicado: enfermedad posterior, cuidado familiar y llamado a piache; evita causalidad médica o espiritual cerrada.",
+      "word_count": 34,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "enfermedad"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "La fiebre llega",
+          "visual": "WIDE dry-morning interior. ONLY the fever-state adult man reclines in the hammock with one small cream compress; the three relatives arrange water and shade around him without crowding. His same blue shirt and clay trousers remain visible. No healthy duplicate, recovered duplicate, piache, butterfly, spirit, skull or dramatic smoke.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "enfermedad"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Vasija y hojas de piso en primer término",
+            "Tres familiares cuidando alrededor del chinchorro",
+            "Enfermo único y pared ventilada al fondo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b4b",
+          "title": "Llegar para escuchar",
+          "visual": "WIDE afternoon threshold. The older piache arrives alone in full indigo Wayuushein, empty hands, while the three relatives make space. Through the open interior the SAME fever-state man remains visible in hammock, complete and small. No ritual props, face paint, smoke, butterflies or supernatural figure.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "piache",
+            "chinchorro",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "enfermedad"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Camino de hojas y sombra de techo",
+            "Piache ante tres familiares",
+            "Enfermo en chinchorro dentro de casa"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "La piache cantó y escuchó. Luego separó nombres que el castellano había confundido: Wanurü, ligado a enfermedad y muerte; Yolujaa, cercano a muertos recientes y sueños; Guanurú, presencia dañina menor o intermediaria.",
+      "voice_provenance": "Núcleo etnográfico según Pineda Giraldo y síntesis publicada; no construye jerarquía fija ni equivalencias absolutas.",
+      "word_count": 32,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "distincion"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Escuchar la casa y al enfermo",
+          "visual": "WIDE deep interior at dusk. The piache sits upright on a plain low paper mat, empty hands and mouth gently open in song; the fever-state man lies in hammock behind her and three relatives sit separated in a crescent. The house shows many clear paper planes. No symbols, instruments, bowls-as-ritual-objects, text or visible entities yet.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "piache",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "distincion"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Estera y borde de piso delante",
+            "Piache y tres familiares en semicírculo",
+            "Enfermo y capas de pared al fondo"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b5b",
+          "title": "Tres nombres que no se funden",
+          "visual": "WIDE same interior transformed by careful listening, with people still small and calm. THREE separate non-bodied behaviors occupy distinct zones: near the fever-state man a low charcoal paper depression; around one EMPTY corner domestic strips compress inward; inside a far lifted wall layer the calm deceased relative appears as a remembered human. The piache sits between zones without touching or commanding them. No labels, diagram panels, demon bodies, footprints, beams or auras.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "piache",
+            "pariente_sueno",
+            "guanuru_presencia",
+            "wanuru_presencia",
+            "yolujaa_presencia",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "distincion"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Depresión mate y borde de estera delante",
+            "Piache, familia y compresión doméstica en medio",
+            "Plano elevado de memoria con pariente al fondo"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una piache escucha a una familia junto a un enfermo",
+            "impossible_behavior": "Tres comportamientos materiales diferentes permanecen separados dentro de la misma casa",
+            "narrative_effect": "La imagen impide reducir Wanurü, Yolujaa y Guanurú a un solo demonio",
+            "agency": "La piache distingue; no domina ni materializa las presencias",
+            "physical_translation": "Asignar una zona de papel a cada relación: depresión baja, compresión doméstica y plano de memoria con pariente",
+            "visible_test": "Deben verse tres fenómenos incompatibles que no se tocan ni forman criatura o infografía",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "distincion"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "La piache no dijo que la mariposa fuera Guanurú. La trató como una señal incompleta y preguntó qué obligación con los muertos, con la casa o con los parientes vivos seguía pendiente.",
+      "voice_provenance": "Relato publicado: no identifica mariposa y entidad; pregunta por obligaciones como articulación editorial.",
+      "word_count": 32,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "distincion",
+        "cuidado"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "No convertir la señal en cuerpo",
+          "visual": "WIDE morning interior. The piache points with an open EMPTY palm toward the now-empty hammock edge where the butterfly had rested; the three relatives and fever-state man watch. A small clean white wing-shaped PAPER GAP remains between two wall layers, explicitly an absence, while the Guanurú compression stays far in a different empty corner. No actual butterfly, no equation, no symbols or text.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "piache",
+            "guanuru_presencia",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "distincion"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Hueco blanco entre capas delante",
+            "Familia y piache en el espacio central",
+            "Compresión vacía en rincón opuesto"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La familia recuerda el lugar donde se posó una mariposa",
+            "impossible_behavior": "Una ausencia blanca y una compresión doméstica permanecen físicamente separadas",
+            "narrative_effect": "La imagen rechaza afirmar que la mariposa era Guanurú",
+            "agency": "La piache señala la diferencia; nadie obtiene certeza",
+            "physical_translation": "Dejar un hueco blanco junto al chinchorro y comprimir otras capas en el rincón opuesto",
+            "visible_test": "Hueco y compresión deben verse distintos, distantes y sin conexión gráfica",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory",
+            "event_ids": [
+              "distincion"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b6b",
+          "title": "Tres obligaciones concretas",
+          "visual": "WIDE environmental composition spanning house and yard. The older woman sweeps the threshold, adult woman prepares two food bowls, older man looks toward the grave path, while the fever-state man remains resting inside. Piache observes without leading a ritual. Three ordinary routes of care are visible through depth, not glowing paths. No ghost, butterfly or skull yet.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "piache",
+            "casa",
+            "chinchorro",
+            "sepultura",
+            "alimento_familiar",
+            "utensilios_limpieza",
+            "territorio"
+          ],
+          "event_ids": [
+            "cuidado"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Utensilios y umbral en primer término",
+            "Familia repartida en acciones domésticas",
+            "Sendero hacia sepultura y territorio"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "La respuesta fue cuidar. Limpiaron el lugar, llevaron alimento a sus parientes y terminaron de atender la sepultura. Ninguno de esos gestos fue presentado como una fórmula segura contra una entidad.",
+      "voice_provenance": "Relato publicado: acciones de cuidado y negativa a presentarlas como mecanismo infalible.",
+      "word_count": 31,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "cuidado"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "La casa vuelve a tener manos",
+          "visual": "WIDE bright-morning house scene, visually rich but orderly. The three relatives perform separate household tasks with broom, cloth, vessel and food bowls; the fever-state man sits supported at the shaded edge of the hammock, not recovered yet. Broad paper layers now lie open with clean air gaps. No piache, butterfly, entities, glow or ritual staging.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "casa",
+            "chinchorro",
+            "alimento_familiar",
+            "utensilios_limpieza"
+          ],
+          "event_ids": [
+            "cuidado"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Broom strips, cloth and bowls in foreground",
+            "Four inhabitants in distinct care actions",
+            "Ventilated wall and roof layers behind"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b7b",
+          "title": "La sepultura atendida",
+          "visual": "WIDE low oblique view at late afternoon. All four inhabitants appear small and complete around the ONE low cared-for grave: the fever-state man is seated steadily but retains the small cream compress; relatives straighten the stone ring and place one plant cutting. Two food bowls continue toward living relatives on a separate path and are NOT placed on the grave. No corpse, bones, cross, ghost, altar or supernatural effect.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "sepultura",
+            "alimento_familiar",
+            "territorio"
+          ],
+          "event_ids": [
+            "cuidado"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Hojas de terreno y camino de alimento delante",
+            "Sepultura baja con cuatro familiares",
+            "Ranchería y crestas cálidas distantes"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Junto a la entrada colocaron un objeto asociado con animales domésticos. Algunos registros mencionan un cráneo de caballo. No era un arma que destruyera espíritus: marcaba que la casa estaba atendida.",
+      "voice_provenance": "Registro etnográfico y versión publicada; el cráneo se presenta como práctica histórica postcontacto, no instrucción actual ni poder autónomo.",
+      "word_count": 31,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "proteccion"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Un objeto histórico en el umbral",
+          "visual": "WIDE side view of the entrance. The older man ties ONE clean layered cream-paper horse skull to a side post at chest height while the two women hold the cord and the fever-state man watches seated inside. Object is inert and modest, never central altar. Full house depth visible. No piache, butterfly, glow, blood, other bones or animal body.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "craneo_caballo",
+            "casa"
+          ],
+          "event_ids": [
+            "proteccion"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Poste y cordón de papel delante",
+            "Familia colocando un solo cráneo inerte",
+            "Interior cuidado y chinchorro al fondo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b8b",
+          "title": "La casa atendida",
+          "visual": "WIDE exterior at dusk after the object is placed. The four inhabitants sit and work across porch and yard; the horse skull remains a small inert marker beside the door. As ordinary activity returns, roof, wall and ground sheets gently unfold AWAY from the former empty compression point, creating breathable depth without glow. No entity destroyed, no butterfly and no triumph pose.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_fiebre",
+            "craneo_caballo",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "proteccion"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Hojas de patio abiertas delante",
+            "Cuatro habitantes y cráneo pequeño en el umbral",
+            "Techo y paredes desplegados en profundidad"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una familia ocupa y cuida de nuevo su casa",
+            "impossible_behavior": "Las capas domésticas se despliegan hacia afuera desde el rincón antes comprimido",
+            "narrative_effect": "El cuidado cambia la relación con el lugar sin probar qué gesto causó el cambio",
+            "agency": "La familia atiende; el objeto permanece inerte y no vence a nadie",
+            "physical_translation": "Separar progresivamente hojas de techo, pared y suelo con sombras de aire",
+            "visible_test": "La casa debe verse más abierta mientras el cráneo permanece pequeño, opaco e inmóvil",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "proteccion"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "voice_over": "La fiebre cedió con el paso de los días. Nadie pudo asegurar si ayudó el sueño, la escucha, el cuidado o el tiempo. La mariposa blanca no volvió a entrar en la casa.",
+      "voice_provenance": "Relato publicado: recuperación gradual, ausencia de causalidad decidible y no retorno de la mariposa.",
+      "word_count": 33,
+      "time_seconds": [
+        128,
+        144
+      ],
+      "event_ids": [
+        "recuperacion"
+      ],
+      "keyframes": [
+        {
+          "id": "b9a",
+          "title": "Volver poco a poco",
+          "visual": "WIDE morning interior several days later. ONLY the recovered-state man sits upright at the hammock edge without compress, same blue shirt and clay trousers; three relatives share ordinary work nearby. A band of morning light advances across successive floor sheets, showing passing days without clocks or symbols. No sick duplicate, piache, butterfly, entity or skull emphasis.",
+          "time_seconds": [
+            128,
+            136
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_recuperado",
+            "chinchorro",
+            "casa"
+          ],
+          "event_ids": [
+            "recuperacion"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Tres hojas de piso con luz progresiva",
+            "Recuperado único y familiares trabajando",
+            "Pared ventilada y cielo pálido al fondo"
+          ],
+          "continuity_from": "b8b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b9b",
+          "title": "La entrada permanece abierta",
+          "visual": "WIDE evening threshold from inside toward yard. The recovered man and three relatives sit in a loose complete group beyond the hammock, with the door open and horse skull still small at side post. Empty air occupies the exact place where the butterfly once flew; no butterfly-shaped shadow, no returning insect, no presence or victory sign.",
+          "time_seconds": [
+            136,
+            144
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_recuperado",
+            "craneo_caballo",
+            "chinchorro",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "recuperacion"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Hammock edge and empty flight space before camera",
+            "Four relatives beyond the threshold",
+            "Open yard and low paper ridges"
+          ],
+          "continuity_from": "b9a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "voice_over": "Cuando contaron lo sucedido, los nombres cambiaban y las traducciones no coincidían. La familia conservó una regla más humilde: durante el duelo, no apresurarse a destruir lo que llega ni explicar toda enfermedad con una sola presencia.",
+      "voice_provenance": "Relato publicado: variación terminológica, prudencia y cierre editorial; no teología cerrada.",
+      "word_count": 37,
+      "time_seconds": [
+        144,
+        160
+      ],
+      "event_ids": [
+        "nombres",
+        "regla"
+      ],
+      "keyframes": [
+        {
+          "id": "b10a",
+          "title": "Los nombres cambian al pasar de boca en boca",
+          "visual": "WIDE night gathering outside the same attended house. Four inhabitants sit in a circle telling the story; the recovered man is one of them. Behind the speakers, THREE separate cast shadows from house objects travel across successive wall sheets but refuse to overlap: a low rounded pressure, one human-profile memory, and a tight inward fold. No text, glyphs, labels, monster, footprints or butterfly.",
+          "time_seconds": [
+            144,
+            152
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_recuperado",
+            "guanuru_presencia",
+            "wanuru_presencia",
+            "yolujaa_presencia",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "nombres"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Borde circular de esteras delante",
+            "Cuatro narradores completos alrededor de luz tenue",
+            "Tres sombras separadas sobre pared estratificada"
+          ],
+          "continuity_from": "b9b",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una familia vuelve a contar un episodio difícil de nombrar",
+            "impossible_behavior": "Tres sombras materiales cambian de posición entre narradores pero nunca se funden",
+            "narrative_effect": "La variación oral preserva diferencias y límites de traducción",
+            "agency": "Quienes narran cambian las palabras; ninguna presencia se deja fijar",
+            "physical_translation": "Desplazar tres sombras incompatibles sobre hojas murales sucesivas sin formar iconos",
+            "visible_test": "El espectador debe percibir tres relaciones separadas y cero rótulos o criatura total",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory",
+            "event_ids": [
+              "nombres"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": false,
+          "qa_status": "not_generated"
+        },
+        {
+          "id": "b10b",
+          "title": "La prudencia queda en la casa",
+          "visual": "VERY WIDE dawn closing view. The recovered man and three relatives move through ordinary morning tasks around the open, attended house; the low cared-for grave remains distant and the small horse skull stays inert by the doorway. A single tiny white butterfly passes OUTSIDE high above the far thorn shrubs and does not enter. Three house sheets lift independently in the breeze, keeping visible air between them. No apparition, halo, threat or certainty.",
+          "time_seconds": [
+            152,
+            160
+          ],
+          "entity_ids": [
+            "familia_tres",
+            "habitante_recuperado",
+            "mariposa_blanca",
+            "craneo_caballo",
+            "casa",
+            "sepultura",
+            "territorio"
+          ],
+          "event_ids": [
+            "regla"
+          ],
+          "angle": "cámara oblicua ambiental a distancia humana; horizonte respirable y relaciones espaciales legibles",
+          "shot_scale": "plano general o conjunto amplio; figuras completas pequeñas, nunca retrato ni macro",
+          "depth_planes": [
+            "Hojas de patio y tareas matinales delante",
+            "Casa abierta con familia y cráneo pequeño",
+            "Mariposa mínima, arbustos y sepultura lejana"
+          ],
+          "continuity_from": "b10a",
+          "transition_to_next": "Corte por continuidad espacial o cambio de tiempo; no morph ni interpolación automática.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una familia continúa la vida cotidiana después del duelo y la fiebre",
+            "impossible_behavior": "Tres capas de la casa respiran por separado mientras una mariposa pasa afuera sin cruzar el umbral",
+            "narrative_effect": "La regla final es prudencia ante lo incierto, no dominio sobre ello",
+            "agency": "La familia cuida; el viento y la mariposa siguen su curso sin obedecer",
+            "physical_translation": "Levantar tres hojas domésticas con espacios de aire distintos y mantener el insecto mínimo fuera",
+            "visible_test": "Debe verse vida cotidiana, casa abierta y mariposa exterior sin regreso, captura o identificación",
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present",
+            "event_ids": [
+              "regla"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir después de aprobar los originales.",
+            "allowed": "Paralaje sólo entre planos realmente separados en una etapa posterior; microgestos que no cambien identidad, ropa ni utilería.",
+            "forbidden": "Morph de cuerpos, caras, vestuario, objetos o arquitectura; añadir reparto; convertir sombras en criaturas; tratar el JPEG como capas editables.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "not_generated"
+        }
+      ]
+    }
+  ]
+}
+

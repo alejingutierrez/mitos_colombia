@@ -62,6 +62,7 @@ import {
   wordTimingsFromAlignment,
 } from "../../src/lib/narration.js";
 import { chooseBedsForStory } from "../../src/lib/narration-character.js";
+import { WORLDS, isBorrowedWorld, worldForCommunity } from "../../src/lib/narration-worlds.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, "..", "..");
@@ -201,7 +202,7 @@ async function renderAudio(pcm, duration, beds) {
  * usados, un mito de agua podría quedarse sin ningún lecho de agua entre los
  * candidatos y el tema se perdería justo cuando más importa.
  */
-async function pickBeds(cuantos, forzado, story, slug) {
+async function pickBeds(cuantos, forzado, story, slug, mundo) {
   if (forzado) {
     const pedidos = forzado.split(",").map((x) => x.trim()).filter(Boolean);
     const r = await sql.query(
@@ -211,13 +212,19 @@ async function pickBeds(cuantos, forzado, story, slug) {
     // Se respeta el orden que pidió quien ejecuta, no el que devuelva la base.
     return pedidos.map((sl) => r.rows.find((x) => x.slug === sl)).filter(Boolean);
   }
-  const r = await sql.query(`
-    SELECT b.slug, b.title, b.audio_url, b.characters,
-           (SELECT count(*) FROM myth_narrations n
-             WHERE n.bed_slugs @> to_jsonb(b.slug)) AS usos
-    FROM narration_beds b
-    ORDER BY usos ASC, b.slug ASC
-  `);
+  // Sólo los lechos del mundo sonoro del mito: a un relato wayúu no se le pone
+  // debajo una quebrada andina ni una piedra de moler maíz.
+  const r = await sql.query(
+    `
+      SELECT b.slug, b.title, b.audio_url, b.characters,
+             (SELECT count(*) FROM myth_narrations n
+               WHERE n.bed_slugs @> to_jsonb(b.slug)) AS usos
+      FROM narration_beds b
+      WHERE b.world = $1
+      ORDER BY usos ASC, b.slug ASC
+    `,
+    [mundo]
+  );
   // El slug como semilla: mismo mito, mismos lechos siempre; mitos distintos
   // con el mismo perfil temático, repartos distintos.
   return chooseBedsForStory(story, r.rows, cuantos, slug);
@@ -300,9 +307,16 @@ async function narrateMyth(myth, dirLechos) {
   // cerrado antes de gastar la petición: si ya existe ese audio, no se genera.
   const duracionEstimada = text.length / 14.5;
   const cuantosLechos = bedCountForDuration(duracionEstimada);
+  const mundo = worldForCommunity(myth.comunidad);
   const beds = sinLecho
     ? []
-    : await fetchBeds(await pickBeds(cuantosLechos, lechoForzado, parts.story, myth.slug), dirLechos);
+    : await fetchBeds(await pickBeds(cuantosLechos, lechoForzado, parts.story, myth.slug, mundo), dirLechos);
+  if (!sinLecho && isBorrowedWorld(myth.comunidad)) {
+    console.log(
+      `  ! ${label}: «${myth.comunidad}» no tiene mundo sonoro propio; se le presta «${WORLDS[mundo].label}». ` +
+        `Añádelo en narration-worlds.js si desentona.`
+    );
+  }
   if (!sinLecho && !beds.length) {
     console.log(`  ! ${label}: no hay lechos en el catálogo, se narra sin música`);
   }
@@ -398,11 +412,17 @@ async function main() {
   // (el LIMIT, y el filtro de "sólo los que faltan") y los fragmentos anidados
   // de `@vercel/postgres` no se componen.
   const targets = slug
-    ? await sql.query("SELECT id, slug, title, mito FROM myths WHERE slug = $1", [slug])
+    ? await sql.query(
+        `SELECT m.id, m.slug, m.title, m.mito, c.name AS comunidad
+         FROM myths m LEFT JOIN communities c ON c.id = m.community_id
+         WHERE m.slug = $1`,
+        [slug]
+      )
     : await sql.query(
         `
-          SELECT m.id, m.slug, m.title, m.mito
+          SELECT m.id, m.slug, m.title, m.mito, c.name AS comunidad
           FROM myths m
+          LEFT JOIN communities c ON c.id = m.community_id
           LEFT JOIN myth_narrations n
             ON n.myth_slug = m.slug AND n.voice_id = $1
           WHERE m.mito IS NOT NULL AND length(trim(m.mito)) > 0

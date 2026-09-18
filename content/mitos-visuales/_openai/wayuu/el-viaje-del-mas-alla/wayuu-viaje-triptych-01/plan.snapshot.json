@@ -1,0 +1,255 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-viaje-del-mas-alla": {
+      "titulo": "El viaje del más allá",
+      "canon_models": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "esposa_muerta_viaje__identity_sheet",
+        "costa_mar_guajira__environment_model",
+        "jepira__spatial_model",
+        "boa_banco__identity_sheet",
+        "hilo_arana_regreso__object_sheet"
+      ],
+      "evidence": [
+        {
+          "id": "published_viaje",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-viaje-del-mas-alla.json",
+          "supports": "Versión pública objetivo conservada.",
+          "limits": "Edición del proyecto, no segunda fuente histórica."
+        },
+        {
+          "id": "perrin_finol",
+          "type": "primary_narrative_record",
+          "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+          "pages": "208–220; versión Perrin V2",
+          "supports": "Carga sobre el mar; banco que se enrolla; descenso guiado por Araña y condición de silencio.",
+          "limits": "Transcripción mediada reproducida por Finol; no confundir con Ulépala V1. No establece colores exactos ni iconografía visual."
+        },
+        {
+          "id": "bible_lot18",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-18-el-viaje-del-mas-alla-v3.md",
+          "supports": "Inventario por relato y prendas completas; modelos aceptados.",
+          "limits": "Fichas generadas como continuidad editorial; no prueba histórica."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "viudo_viaje_mas_alla__identity_sheet",
+          "decision": "Conservar Kotin ocre rojizo amplio, prenda interior carbón, faja y sombrero claro; convertir rostro fotográfico en recorte mínimo."
+        },
+        {
+          "model_id": "esposa_muerta_viaje__identity_sheet",
+          "decision": "Conservar manta índigo larga, pechera crema y trenzas oscuras. Humana opaca activa; no cara de animación ni pintura de yonna."
+        },
+        {
+          "model_id": "jepira__spatial_model",
+          "decision": "Conservar montañas y estratos; excluir puente y pozo del cruce marino. No mapa exacto."
+        },
+        {
+          "model_id": "boa_banco__identity_sheet",
+          "decision": "Una sola forma híbrida continua, no serpiente añadida a banco separado. No copiar vegetación selvática."
+        },
+        {
+          "model_id": "hilo_arana_regreso__object_sheet",
+          "decision": "Excluir hitos y ovillo de suelo. Rotura y sombra continua son metáfora editorial, no hecho literal."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-viaje-del-mas-alla",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-viaje-del-mas-alla.json",
+        "target_content_sha256": "622df3cb2717f9ac9b95398d1351094121e5b354e18cb4cc48290c0330fe5101",
+        "summary": "Un viudo atraviesa dominios cuya realidad no obedece a la de los vivos. Quienes lo guían conservan la agencia. Las piezas separan tránsito, cambio de percepción y memoria del regreso; no reunir episodios ni convertir el viaje en rescate de su esposa.",
+        "events": [
+          {
+            "id": "esposa_carga_mar",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "perrin_finol",
+            "action": "La esposa carga al viudo sobre su espalda y avanza sobre el mar hacia Jepira."
+          },
+          {
+            "id": "banco_boa",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "perrin_finol",
+            "action": "En el dominio de Juyá el viudo se sienta en un banco que percibe como boa; éste se enrolla."
+          },
+          {
+            "id": "hilo_regreso",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "perrin_finol",
+            "action": "Araña desciende con el viudo soltando su hilo y lo devuelve cerca de su casa."
+          },
+          {
+            "id": "condicion_silencio",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "perrin_finol",
+            "action": "Guardar silencio permite continuar vivo; después de contar su viaje el hombre muere."
+          }
+        ],
+        "emotional_reading": "Cuidado y extrañeza, hospitalidad inquietante y fragilidad de la permanencia.",
+        "magic_reading": "Caminar sobre agua cargando a otro; materia cotidiana con vida; memoria de un retorno imposible.",
+        "qa_method": "H carga sobre mar sin puente; V único banco/boa sostiene al viudo; S hilo interrumpido y sombra continua."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T16:28:58.730Z",
+        "reviewed_reference_ids": [
+          "a3fe5a77677e4af4166f",
+          "a9f74fcac7f86377bc46"
+        ],
+        "retained": [
+          "Profundidad de mar y montañas mediante hojas separadas; índigo, ocre y luz cálida.",
+          "Prendas completas y siluetas humanas, con mayor simplificación de caras."
+        ],
+        "rejected": [
+          "Pareja caminando de la mano por tierra: omite que ella lo carga sobre el mar.",
+          "Pozo de mampostería, poblado con torre, ornamentos geométricos y estrellas decorativas no exigidos por el episodio.",
+          "Trasladar telaraña y alcaraván simultáneamente a todos los momentos."
+        ],
+        "influence_by_act": {
+          "entrada": "Conservar capas marinas y distancia; retirar pozo y pareja en tierra. Ella carga al viudo, único contacto con el agua.",
+          "acto": "Conservar sombras físicas; sustituir paseo por inversión banco/boa, sin esposa ni alcaraván.",
+          "huella": "Conservar contraste claro/índigo y profundidad. Hilo como símbolo del regreso, no pareja en paisaje."
+        }
+      },
+      "material_direction": "Immersive full-bleed world constructed ENTIRELY from matte dyed CUT PAPER. Scenery consists of broad sheets physically separated at several distances, with air gaps, occlusion and cast shadows. Characters are almost-flat side-profile cutouts with natural adult proportions, one small eye incision and nose in outline, no modeled cheekbones. Clothing consists of broad folded paper pieces, never realistic fabric or skin. Internal fine cut edges visible, NO exterior cardboard backing, stage edge, base, pedestal, tabletop, picture frame or model island. Ground and water must also be paper.",
+      "paleta": "Índigo profundo, azul petróleo, ocre cálido y crema; luz rasante tenue y sombras reales entre planos, sin brillo sobrenatural.",
+      "continuity_contract": [
+        "El viudo es un adulto de piel marrón, cabello negro corto ondulado y barba corta mínima en recorte. Usa Kotin amplio ocre rojizo sobre prenda carbón hasta media pantorrilla, faja rojiza, Wom claro de ala circular y waireñas oscuras. Rostro de pocas piezas planas, no retrato.",
+        "No importar personajes, animales u objetos de otra orientación. Cada imagen narra solamente el momento de su escena.",
+        "Colores como continuidad editorial, no uniforme histórico universal o símbolo de clan."
+      ],
+      "avoid": [
+        "Pixar face, oversized head, cartoon eyes, sculpted skin, portrait framing",
+        "bare chest, loincloth-only outfit, feather headdress, clan glyphs or ceremonial face paint",
+        "violent attack, blood, biting, nudity, sexual action, corpse, horror",
+        "European ghost, halo, magic portal, decorative stars, giant moon",
+        "cardboard support, base, frame, pedestal, model island, real sand or water"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "esposa_carga_mar"
+          ],
+          "beat": "Ella abre el camino y sostiene a quien todavía vive.",
+          "escena": "16:9 EXTREME WIDE from a distant slightly elevated SIDE camera, vast open sea at dawn. Empty low-contrast dark teal water occupies LEFT 55% and BOTTOM 30%, reserved for website title. At RIGHT middle distance the ONLY TWO small human figures form one clear PIGGYBACK pair entirely within x66–83%, y32–56%; group height about ONE FIFTH of frame. Woman faces RIGHT and WALKS DIRECTLY ON TOP OF THE SEA while carrying the adult man ON HER BACK. Her body leans gently forward, BOTH arms reach behind supporting his bent thighs, his arms rest over her shoulders, his head higher and behind hers. Her forward sandal visibly TOUCHES a blue WATER wave-sheet with a small contact ripple; her other foot lifts for a step. HIS feet hang behind and NEVER touch water. Woman wears full-length plain INDIGO Wayuushein over CREAM pechera, two long black braids, warm brown opaque flat-paper face, ochre waireñas. Man's RUST Kotin and pale broad-brimmed hat distinguish him. A narrow warm side-light separates her blue dress from sea, no halo. Broad curved teal and indigo wave sheets overlap across full width, air and shadows between them, quiet near pair, deep shadowed layers in foreground. A narrow wake trails from her FOOT, not a solid walkway. Low arid coastal mountains of Jepira very far on right horizon. No foreground shore, island, bridge, plank, boat, rock or path under the pair. Not standing side by side, not holding hands, not floating above water. No pelican or wings. Impossible supported step is sole wonder; immense quiet water around them, no stars or celestial disc.",
+          "editorial_translation": "Carga y cruce narrados. Composición lateral, luz de alba y ola como hoja son decisiones editoriales, no geografía exacta.",
+          "visual_question": "¿Ella sostiene al hombre sobre la espalda y su pie pisa agua sin puente, mientras los pies de él cuelgan?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Cargar a alguien y dar un paso.",
+            "impossible_behavior": "El mar sostiene a la esposa que lleva al viudo.",
+            "narrative_effect": "Cuidado activo que abre el tránsito sin devolverla a la vida.",
+            "agency": "La esposa guía y carga; él depende de ella, no la rescata.",
+            "physical_translation": "Perfil de dos recortes conectados por manos y rodillas; sandalia de ella toca una hoja azul del oleaje.",
+            "visible_test": "¿Ella sostiene al hombre sobre la espalda y su pie pisa agua sin puente, mientras los pies de él cuelgan?",
+            "event_ids": [
+              "esposa_carga_mar"
+            ],
+            "provenance": "narrated_fact",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "historico_contacto_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "banco_boa"
+          ],
+          "beat": "Sentarse exige admitir que el mundo tiene otra apariencia.",
+          "escena": "9:16 WIDE VERTICAL view deep inside the shaded open shelter at Juyá's domain. ONE small complete adult viudo sits cautiously on ONE low olive-green bench at x43–67%, y34–53%; whole seated body about one fifth of frame height. Bench IS a single continuous coiled BOA: the broad flattened wooden-looking seat curls seamlessly into two low green coils underneath; at LEFT FRONT edge the SAME continuous strip ends in a blunt closed-mouth snake head looking back toward his sandal. No separate chair above snake: one continuous paper creature-furniture hybrid, low supports folded from SAME green body. Small incised eye, no fangs or tongue. Man leans slightly away, BOTH feet unbound on ochre floor, hands near knees; boa supports him but never wraps around his body. Seat and curling edge visible around his hips. Pale hat, rust full Kotin, dark undergarment and sandals remain complete. Sparse brown cut-paper posts and broad slatted roof sheets extend OUTSIDE upper/right edges. One continuous ground under feet, posts and foreground, no isolated base. Distant ochre terrain and blue-gray hills beyond shelter at different physical depths. Foreground LOWER 35% stays quiet ochre paper in shade for mobile title. Cool left reflected light reveals olive coils and human profile; amber light outside. Juyá is the off-frame host, not an extra invented humanoid, cloud-face or sky hand. No wife, spider, sea, hunting, fruit or other animal. A banal seat bends alive without spectacle.",
+          "editorial_translation": "Banco que se enrolla narrado; refugio, anfitrión fuera de campo y forma precisa de hibridación son puesta en escena editorial.",
+          "visual_question": "¿Un solo banco y boa continuo sostiene al viudo, sin serpiente separada ni ataque?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un banco ofrecido al visitante.",
+            "impossible_behavior": "La misma materia del asiento se enrolla viva como boa.",
+            "narrative_effect": "La hospitalidad cambia la percepción de lo cotidiano.",
+            "agency": "El banco actúa; el visitante se sienta con cautela, no domina una serpiente.",
+            "physical_translation": "Una tira verde continua forma asiento, espiras bajas y cabeza.",
+            "visible_test": "¿Un solo banco y boa continuo sostiene al viudo, sin serpiente separada ni ataque?",
+            "event_ids": [
+              "banco_boa"
+            ],
+            "provenance": "narrated_fact",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "hilo_regreso",
+            "condicion_silencio"
+          ],
+          "beat": "El camino queda en la memoria aunque su continuidad se pierda.",
+          "escena": "1:1 symbolic CUT-PAPER object, NOT a scene. Full-bleed matte muted indigo field, no horizon. ONE thin but clearly legible warm IVORY strand of narrow twisted PAPER strips descends from x40%,y15% in a gently bending diagonal to x58%,y82%. Suspended slightly above field, ONE BREAK at center: two tapered frayed ivory ends face each other across a clean dark gap about 5% canvas height. Lower segment hangs in same direction and alignment, no coil, loop or knot. Beneath it a slightly offset darker blue cut-paper SHADOW runs as ONE UNBROKEN LINE, visibly continuing ACROSS the gap where ivory is missing. At gap there is dark shadow but NO ivory material, connector, sparkle or bridge. Subtle side light and separated paper strata make strand and impossible continuous shadow tangible, not printed graphic. Shape occupies central third of width, generous quiet field around it; strand about 1.5% frame width so break remains readable small. Exactly one interrupted strand and its single continuous shadow. No ball of yarn, spider, woman, man, landscape, hand, lips, bird, text, letter, logo, sacred pattern or border.",
+          "editorial_translation": "Rotura y sombra continua son metáfora editorial de regreso frágil y memoria. La fuente no dice que el hilo se rompa ni lo presenta como emblema tradicional.",
+          "visual_question": "¿Hay un único hilo claro interrumpido cuya sombra continúa a través del vacío, sin escena?",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El hilo que permite volver.",
+            "impossible_behavior": "El hilo está interrumpido pero su sombra conserva el recorrido completo.",
+            "narrative_effect": "El regreso no garantiza permanencia; el viaje deja memoria.",
+            "agency": "Síntesis editorial de ayuda recibida y límite; nadie corta un hilo en la fuente.",
+            "physical_translation": "Dos tramos alineados de tira crema retorcida y una sola sombra continua debajo, con vacío entre extremos.",
+            "visible_test": "¿Hay un único hilo claro interrumpido cuya sombra continúa a través del vacío, sin escena?",
+            "event_ids": [
+              "hilo_regreso",
+              "condicion_silencio"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Matte sculptural CUT PAPER, thin twisted ivory strip raised over indigo field and a darker paper shadow below. Physical depth, full bleed, no outer support.",
+          "continuity_contract": [
+            "Un hilo del regreso y su sombra; no importar reparto o paisajes.",
+            "Metáfora editorial, no signo sagrado o pieza histórica Wayuu."
+          ],
+          "symbolic_contract": {
+            "thesis": "Volver no significa conservar para siempre el camino de la vida.",
+            "carrier": "Hilo del regreso y persistencia de su sombra.",
+            "operation": "Interrumpir materia y conservar continuidad de sombra.",
+            "story_connection": "Ayuda de Araña y condición de silencio que el viudo rompe.",
+            "visible_test": "Hilo crema roto, sombra íntegra cruzando hueco; ningún episodio escenificado."
+          },
+          "avoid": [
+            "people, animals, scenery, yarn ball, loop, knot, lips, letters, logo, sacred glyphs",
+            "glowing bridge, ivory connector across gap, stars, glitter",
+            "real cotton rope, cardboard base, frame, tabletop"
+          ]
+        }
+      }
+    }
+  }
+}

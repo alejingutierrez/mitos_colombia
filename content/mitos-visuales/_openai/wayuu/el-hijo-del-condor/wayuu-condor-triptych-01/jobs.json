@@ -1,0 +1,211 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-condor-triptych-01",
+  "created_at": "2026-09-07T15:44:15.000Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-hijo-del-condor",
+  "plan": "content/mitos-visuales/wayuu.condor.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "b0d46a8fa8c492aa7c9405ef4a0d2b8ef1146100d3712032c4ab3997d9cffe56",
+  "narrative_target_sha256": "82d3c04ab01a5cbb8e81991d03a12aaded2ddb90ce31244d12ec669b5bc3991b",
+  "evidence": [
+    {
+      "id": "chaves_xv",
+      "type": "historical_narrative",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "supports": "Sección XV pp327–331: puerta observada, fuga, caballo y descenso; informante José Jusayú, intérprete Roberto Iguarán.",
+      "limits": "La versión pública comprime y cambia la relación final respecto de Chaves; no se ilustra pareja final ni se cambia el texto."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:46:00Z",
+    "reviewed_reference_ids": [
+      "ff6068e7165f72dbd552",
+      "0573a69c653ee72cd8b2"
+    ],
+    "retained": [
+      "Profundidad rocosa, caballo castaño y paleta noche/tierra."
+    ],
+    "rejected": [
+      "Collage de caballo, ave, serpientes y cueva; emblemas, rosetas, caballo atacando y héroe con capa estampada; ave de cabeza blanca."
+    ],
+    "influence_by_act": {
+      "entrada": "Reemplazar catálogo por salida de madre e hijo con puerta de roca como acción.",
+      "acto": "Conservar caballo, aislado en el cruce subterráneo sin combate ni serpientes.",
+      "huella": "Una piedra que abre camino; ningún ave ni caballo separado."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "jose_juan__identity_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-01c-identities-medium/jose_juan__identity_sheet--canon.jpeg",
+      "sha256": "17df550b498ef8beb1d5ab195427ae9bd60618f00090cddbb490b6e154229773",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "madre_jose_juan__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/madre_jose_juan__identity_sheet--canon.jpeg",
+      "sha256": "75add682553be102bb7f7bdc5a2a7cbea7377ecd181cd35caf5edae5dd085e93",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "cueva_juramia__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/cueva_juramia__spatial_model--canon.jpeg",
+      "sha256": "d6122c500e52026b50ed07c3aa082374bd5d3ee702c8946ddac2bfe83630ca4d",
+      "qa_status": "DIRECTION_CANDIDATE_PASS_WITH_MATERIALITY_WATCH"
+    },
+    {
+      "model_id": "caballo_prueba_jose_juan__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium/caballo_prueba_jose_juan__identity_sheet--canon.jpeg",
+      "sha256": "8d2f89067766620700caf1c6dd516e1259a010af9906a52488a53dde668c59cd",
+      "qa_status": "PASS_WITH_MATERIALITY_WATCH"
+    },
+    {
+      "model_id": "dominio_subterraneo_jujia__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-01-el-hijo-del-condor-medium-corrections-01/dominio_subterraneo_jujia__spatial_model--canon.jpeg",
+      "sha256": "35eef55d1a00f29c742235067e6078d793b46c6f7b5742b773a40e1e7d29d990",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "jose_juan__identity_sheet",
+        "madre_jose_juan__identity_sheet",
+        "cueva_juramia__spatial_model",
+        "caballo_prueba_jose_juan__identity_sheet",
+        "dominio_subterraneo_jujia__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "c89b54cf0db61fce48ddd5cbce6d07b59b3dbfd248a208da21046c9bd6181e57",
+      "narrative_event_ids": [
+        "fuga"
+      ],
+      "editorial_translation": "Plegar piedra y camino es licencia de materia para el secreto/acceso del relato; no hecho literal añadido ni signo cultural documentado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Puerta de roca observada.",
+        "impossible_behavior": "La piedra se abre en estratos plegables al contacto de la mano.",
+        "narrative_effect": "Lo que parecía pared aprende a dejar pasar.",
+        "agency": "Madre camina con decisión propia; José Juan observa y abre posibilidades, no héroe conquistador.",
+        "physical_translation": "Láminas conectadas del cierre separan un paso.",
+        "visible_test": "Acción material conectada legible sin aura ni adornos.",
+        "event_ids": [
+          "fuga"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "jose_juan__identity_sheet",
+        "madre_jose_juan__identity_sheet",
+        "cueva_juramia__spatial_model",
+        "caballo_prueba_jose_juan__identity_sheet",
+        "dominio_subterraneo_jujia__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "309e93e369c07042711290a2b5eaef96eb3c79c7dcbe6f4d6ccd033eb55961bc",
+      "narrative_event_ids": [
+        "caballo_cruce"
+      ],
+      "editorial_translation": "Plegar piedra y camino es licencia de materia para el secreto/acceso del relato; no hecho literal añadido ni signo cultural documentado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Caballo y sendero subterráneo.",
+        "impossible_behavior": "El sendero se pliega bajo el paso hacia un nuevo dominio.",
+        "narrative_effect": "La prueba no entrega un trofeo: abre un camino.",
+        "agency": "Madre camina con decisión propia; José Juan observa y abre posibilidades, no héroe conquistador.",
+        "physical_translation": "Estratos conectados descienden desde casco a umbral natural.",
+        "visible_test": "Acción material conectada legible sin aura ni adornos.",
+        "event_ids": [
+          "caballo_cruce"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "jose_juan__identity_sheet",
+        "madre_jose_juan__identity_sheet",
+        "cueva_juramia__spatial_model",
+        "caballo_prueba_jose_juan__identity_sheet",
+        "dominio_subterraneo_jujia__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-hijo-del-condor/wayuu-condor-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "a0127231353c630ab1ecd030cd447b40925e43f9770756ef70d68d33b8c727f1",
+      "narrative_event_ids": [
+        "fuga"
+      ],
+      "editorial_translation": "Plegar piedra y camino es licencia de materia para el secreto/acceso del relato; no hecho literal añadido ni signo cultural documentado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Piedra de cierre.",
+        "impossible_behavior": "Su interior se prolonga en camino compartido.",
+        "narrative_effect": "Una piedra deja de ser límite.",
+        "agency": "Madre camina con decisión propia; José Juan observa y abre posibilidades, no héroe conquistador.",
+        "physical_translation": "Una misma lámina ocre sale de la hendidura y bifurca suavemente.",
+        "visible_test": "Acción material conectada legible sin aura ni adornos.",
+        "event_ids": [
+          "fuga"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Lo cerrado puede convertirse en salida compartida.",
+        "carrier": "Piedra-camino.",
+        "operation": "Prolongar el estrato interior hacia fuera.",
+        "story_connection": "Secreto de la puerta y salida materno-filial.",
+        "visible_test": "Objeto único transformado, no escena miniatura."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-condor-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

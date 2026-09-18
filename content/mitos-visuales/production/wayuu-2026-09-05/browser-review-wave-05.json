@@ -1,0 +1,48 @@
+{
+  "schema": "wayuu-triptych-browser-review/v1",
+  "reviewed_at": "2026-09-06T04:48:48.560Z",
+  "reviewer": "agent_direct_browser_and_screenshot_review",
+  "scope": "Sólo Jirairay, ola 05; no acredita los 21 pendientes.",
+  "status": "passed_with_notes",
+  "viewports": [
+    1440,
+    390
+  ],
+  "console": {
+    "errors": 0,
+    "warnings": 2,
+    "notes": "Dos advertencias de CSS precargado no utilizado inmediatamente."
+  },
+  "notes": [
+    "La plantilla usa horizontal en portada de escritorio y vertical en móvil; la horizontal aparece dentro del relato móvil.",
+    "El largo título de escritorio se superpone parcialmente al chinchorro y la figura del paciente. El archivo original y la horizontal interior móvil están completos. Es una limitación de la plantilla existente, no se modificó su diseño en esta campaña de imágenes."
+  ],
+  "myths": [
+    {
+      "slug": "jirairay",
+      "url": "https://www.mitosdecolombia.com/mitos/jirairay",
+      "publication_receipt": "content/mitos-visuales/production/wayuu-2026-09-05/publication-receipts/wayuu-wave-05/jirairay.json",
+      "rendered_formats": [
+        "horizontal",
+        "vertical",
+        "cuadrada"
+      ],
+      "images_loaded": true,
+      "horizontal_overflow": false,
+      "captured_screenshots": [
+        "output/playwright/wayuu-campaign/jirairay-1440-0.png",
+        "output/playwright/wayuu-campaign/jirairay-1440-1.png",
+        "output/playwright/wayuu-campaign/jirairay-1440-2.png",
+        "output/playwright/wayuu-campaign/jirairay-390-0.png",
+        "output/playwright/wayuu-campaign/jirairay-390-1.png",
+        "output/playwright/wayuu-campaign/jirairay-390-2.png"
+      ],
+      "representative_screenshots_inspected": [
+        "output/playwright/wayuu-campaign/jirairay-1440-0.png",
+        "output/playwright/wayuu-campaign/jirairay-390-0.png",
+        "output/playwright/wayuu-campaign/jirairay-1440-2.png"
+      ],
+      "review": "Capas nocturnas y canto visibles en escritorio con superposición parcial de título; cuidado y tira suspendida se leen en móvil. El símbolo conserva instrumento y sombra plegada a tamaño pequeño."
+    }
+  ]
+}

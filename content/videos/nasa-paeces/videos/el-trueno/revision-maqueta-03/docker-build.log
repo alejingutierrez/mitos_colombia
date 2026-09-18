@@ -1,0 +1,59 @@
+ Image mitos_colombia-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 565B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 602B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:20-alpine
+#3 DONE 0.6s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 185B done
+#4 DONE 0.0s
+
+#5 [base 1/6] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#5 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 41.79MB 0.6s done
+#6 DONE 0.6s
+
+#7 [base 3/6] RUN apk add --no-cache python3 make g++
+#7 CACHED
+
+#8 [base 4/6] COPY package*.json ./
+#8 CACHED
+
+#9 [base 2/6] WORKDIR /app
+#9 CACHED
+
+#10 [base 5/6] RUN npm install
+#10 CACHED
+
+#11 [base 6/6] COPY . .
+#11 DONE 8.7s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 61.8s done
+#12 exporting manifest sha256:2bb921082e6f2257dd9910afcb209a56ae13109fe438dba014dfd83d80cfee4d
+#12 exporting manifest sha256:2bb921082e6f2257dd9910afcb209a56ae13109fe438dba014dfd83d80cfee4d done
+#12 exporting config sha256:a717095b9bf018687d7972afa44e8d36acca0195dc3411a7c87e72c6a826e91a done
+#12 exporting attestation manifest sha256:81741ff76caa15b59e0951098398d6c2cf16cd5deff56b52e48a724f0f316b39 done
+#12 exporting manifest list sha256:148b2214e0c1816939395b09b9fb8b501eaccbcf8b1f3073595da130add60025 done
+#12 naming to docker.io/library/mitos_colombia-web:latest done
+#12 unpacking to docker.io/library/mitos_colombia-web:latest
+#12 unpacking to docker.io/library/mitos_colombia-web:latest 14.6s done
+#12 DONE 76.5s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ Image mitos_colombia-web Built 
+ Container mitos_colombia-web-1 Recreate 
+ Container mitos_colombia-web-1 Recreated 
+ Container mitos_colombia-web-1 Starting 
+ Container mitos_colombia-web-1 Started 

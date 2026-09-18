@@ -1,0 +1,649 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-19-ulepala-medium",
+    "myth_slug": "ulepala",
+    "model_ids": [
+      "ulepala__identity_sheet",
+      "ulepala__state_sheet",
+      "companera_muerta_ulepala__identity_sheet",
+      "companera_muerta_ulepala__state_sheet",
+      "madre_ulepala__identity_sheet",
+      "companeros_dote_ulepala__group_grammar",
+      "familia_viva_ulepala__group_grammar",
+      "malinot__presence_model",
+      "tigre_camino_malinot__identity_sheet",
+      "mula_ulepala__identity_sheet",
+      "rebano_dote_ulepala__group_grammar",
+      "collares_dote_ulepala__object_sheet",
+      "vivienda_ulepala__spatial_model",
+      "caballo_montura_ulepala__identity_sheet",
+      "familia_muerta_ulepala__group_grammar",
+      "cementerio_tinajas_ulepala__spatial_model",
+      "botijuela_ulepala__object_sheet",
+      "asno_enjaezado_ulepala__identity_sheet",
+      "avios_jepira_ulepala__object_sheet",
+      "caballo_blanco_nube_ulepala__identity_sheet",
+      "caballo_blanco_nube_ulepala__state_sheet",
+      "aparejos_caballo_nube_ulepala__object_sheet",
+      "caverna_submarina_ulepala__spatial_model",
+      "mansiones_jepira_ulepala__spatial_model",
+      "abuela_algodon_ulepala__identity_sheet",
+      "campo_algodon_ulepala__spatial_model",
+      "pala_algodon_ulepala__object_sheet",
+      "mariposa_blanca_ulepala__identity_sheet",
+      "cambio_vision_ulepala__phenomenon_rule",
+      "huellas_rebano_juya_ulepala__phenomenon_rule",
+      "aparicion_juya_ulepala__identity_sheet",
+      "servidores_juya_ulepala__group_grammar",
+      "estancia_juya_ulepala__spatial_model",
+      "banco_jabali_ulepala__identity_sheet",
+      "banco_jabali_ulepala__state_sheet",
+      "chinchorro_gigante_juya__object_sheet",
+      "vara_bejuco_juya__object_sheet",
+      "provision_cabrito_juya__object_sheet",
+      "armas_caceria_juya_ulepala__object_sheet",
+      "parruluwa_puercoespines_ulepala__group_grammar",
+      "parruluwa_puercoespines_ulepala__state_sheet",
+      "tunas_conejos_ulepala__group_grammar",
+      "tunas_conejos_ulepala__state_sheet",
+      "majayuras_ahuyamas_ulepala__group_grammar",
+      "majayuras_ahuyamas_ulepala__state_sheet",
+      "jovenes_venados_ulepala__group_grammar",
+      "jovenes_venados_ulepala__state_sheet",
+      "bosque_salatchi_conuco_ulepala__spatial_model",
+      "aprendizajes_juya_ulepala__phenomenon_rule",
+      "taliray_ulepala__object_sheet",
+      "amigo_ulepala__identity_sheet",
+      "mujer_amigo_ulepala__identity_sheet",
+      "aparicion_maleiwa_ulepala__identity_sheet",
+      "caballo_maleiwa_ulepala__identity_sheet",
+      "calabaza_ron_ulepala__object_sheet",
+      "fiesta_maleiwa_ulepala__spatial_model",
+      "participantes_fiesta_maleiwa__group_grammar",
+      "anciana_amiga_ulepala__identity_sheet",
+      "riquezas_oferta_maleiwa__object_sheet",
+      "riquezas_oferta_maleiwa__state_sheet",
+      "mulas_mohinas_escape_ulepala__group_grammar",
+      "lienzo_ovillo_escape_ulepala__object_sheet",
+      "ruta_sombras_regreso_ulepala__spatial_model",
+      "comunidad_interroga_ulepala__group_grammar",
+      "cardenal_ulepala__identity_sheet",
+      "cardenal_ulepala__state_sheet",
+      "secreto_ulepala__phenomenon_rule"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "ready_after_primary_research_inventory_and_design"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "banco_jabali_ulepala__state_sheet",
+    "provision_cabrito_juya__object_sheet",
+    "tunas_conejos_ulepala__group_grammar",
+    "participantes_fiesta_maleiwa__group_grammar",
+    "comunidad_interroga_ulepala__group_grammar"
+  ],
+  "models": {
+    "banco_jabali_ulepala__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "banco_jabali_ulepala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Banco que se transforma en jabalí en la versión de Ulépala."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Banco que se convierte en jabalí; no es la boa-banco de Perrin."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: Banco que se vuelve jabalí. Funcion visual: Banco de madera que, al sentarse Ulépala, se transforma en un jabalí enorme; pertenece a la versión de Sibotta Sapuana/Paz Ipuana y no se confunde con la boa-banco de Perrin.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: Banco que se vuelve jabalí",
+          "funcion estable: Banco de madera que, al sentarse Ulépala, se transforma en un jabalí enorme; pertenece a la versión de Sibotta Sapuana/Paz Ipuana y no se confunde con la boa-banco de Perrin.",
+          "estados declarados: banco_de_madera, jabali_enorme"
+        ],
+        "documented_features": [
+          "Banco de madera que, al sentarse Ulépala, se transforma en un jabalí enorme; pertenece a la versión de Sibotta Sapuana/Paz Ipuana y no se confunde con la boa-banco de Perrin."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Banco que se vuelve jabalí. Banco de madera que, al sentarse Ulépala, se transforma en un jabalí enorme; pertenece a la versión de Sibotta Sapuana/Paz Ipuana y no se confunde con la boa-banco de Perrin.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Banco de madera que, al sentarse Ulépala, se transforma en un jabalí enorme; pertenece a la versión de Sibotta Sapuana/Paz Ipuana y no se confunde con la boa-banco de Perrin.",
+          "estados autorizados: banco_de_madera, jabali_enorme",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "banco_de_madera",
+            "jabali_enorme"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "provision_cabrito_juya__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "provision_cabrito_juya"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Alimento administrado durante diez días sin imaginería gráfica."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Provisión de cabrito de Juyá. Funcion visual: Alimento que dura diez días junto con yuca y batata; se representa cocido y contenido, sin sacrificio, sangre, vísceras ni anatomía explícita.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Provisión de cabrito de Juyá",
+          "funcion estable: Alimento que dura diez días junto con yuca y batata; se representa cocido y contenido, sin sacrificio, sangre, vísceras ni anatomía explícita.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Alimento que dura diez días junto con yuca y batata; se representa cocido y contenido, sin sacrificio, sangre, vísceras ni anatomía explícita."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Provisión de cabrito de Juyá. Alimento que dura diez días junto con yuca y batata; se representa cocido y contenido, sin sacrificio, sangre, vísceras ni anatomía explícita.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Alimento que dura diez días junto con yuca y batata; se representa cocido y contenido, sin sacrificio, sangre, vísceras ni anatomía explícita.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tunas_conejos_ulepala__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "tunas_conejos_ulepala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Tunas que corresponden a conejos en la versión de Ulépala."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Tunas orejonas y conejos de grandes orejas como una familia de estados."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Tunas y conejos de Juyá. Funcion visual: Tunas orejonas que se revelan como conejos de grandes orejas; no son los jugadores-conejo de la versión de Perrin.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Tunas y conejos de Juyá",
+          "funcion estable: Tunas orejonas que se revelan como conejos de grandes orejas; no son los jugadores-conejo de la versión de Perrin.",
+          "estados declarados: tunas_orejonas, conejos_de_orejas_grandes"
+        ],
+        "documented_features": [
+          "Tunas orejonas que se revelan como conejos de grandes orejas; no son los jugadores-conejo de la versión de Perrin."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Tunas y conejos de Juyá. Tunas orejonas que se revelan como conejos de grandes orejas; no son los jugadores-conejo de la versión de Perrin.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Tunas orejonas que se revelan como conejos de grandes orejas; no son los jugadores-conejo de la versión de Perrin.",
+          "estados autorizados: tunas_orejonas, conejos_de_orejas_grandes",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "tunas_orejonas"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "participantes_fiesta_maleiwa__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "participantes_fiesta_maleiwa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Personas de prestigio y artistas convocados a la fiesta."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Participantes de la fiesta de Maleiwa. Funcion visual: Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Participantes de la fiesta de Maleiwa",
+          "funcion estable: Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Participantes de la fiesta de Maleiwa. Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "comunidad_interroga_ulepala__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "comunidad_interroga_ulepala"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Diversidad de edades y relaciones que presiona al retornado."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Comunidad que interroga a Ulépala. Funcion visual: Amigos, parientes, antiguos servidores, niños, jóvenes y mayores que buscan conocer la ausencia; conserva diversidad de edad y relación sin multitud uniforme.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Comunidad que interroga a Ulépala",
+          "funcion estable: Amigos, parientes, antiguos servidores, niños, jóvenes y mayores que buscan conocer la ausencia; conserva diversidad de edad y relación sin multitud uniforme.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Amigos, parientes, antiguos servidores, niños, jóvenes y mayores que buscan conocer la ausencia; conserva diversidad de edad y relación sin multitud uniforme."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Comunidad que interroga a Ulépala. Amigos, parientes, antiguos servidores, niños, jóvenes y mayores que buscan conocer la ausencia; conserva diversidad de edad y relación sin multitud uniforme.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Amigos, parientes, antiguos servidores, niños, jóvenes y mayores que buscan conocer la ausencia; conserva diversidad de edad y relación sin multitud uniforme.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "banco_jabali_ulepala": {
+      "name": "Banco que se vuelve jabalí",
+      "kind": "criatura",
+      "description": "Banco de madera que, al sentarse Ulépala, se transforma en un jabalí enorme; pertenece a la versión de Sibotta Sapuana/Paz Ipuana y no se confunde con la boa-banco de Perrin.",
+      "aliases": [],
+      "states": [
+        "banco_de_madera",
+        "jabali_enorme"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "banco_jabali_ulepala__identity_sheet",
+        "banco_jabali_ulepala__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-dominios-de-juya",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Banco que se transforma en jabalí en la versión de Ulépala."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Banco que se convierte en jabalí; no es la boa-banco de Perrin."
+        }
+      ]
+    },
+    "provision_cabrito_juya": {
+      "name": "Provisión de cabrito de Juyá",
+      "kind": "objeto",
+      "description": "Alimento que dura diez días junto con yuca y batata; se representa cocido y contenido, sin sacrificio, sangre, vísceras ni anatomía explícita.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "provision_cabrito_juya__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Alimento administrado durante diez días sin imaginería gráfica."
+        }
+      ]
+    },
+    "tunas_conejos_ulepala": {
+      "name": "Tunas y conejos de Juyá",
+      "kind": "fenomeno",
+      "description": "Tunas orejonas que se revelan como conejos de grandes orejas; no son los jugadores-conejo de la versión de Perrin.",
+      "aliases": [],
+      "states": [
+        "tunas_orejonas",
+        "conejos_de_orejas_grandes"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "tunas_conejos_ulepala__group_grammar",
+        "tunas_conejos_ulepala__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-dominios-de-juya",
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "los-dominios-de-juya",
+          "field": "mito",
+          "note": "Tunas que corresponden a conejos en la versión de Ulépala."
+        },
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Tunas orejonas y conejos de grandes orejas como una familia de estados."
+        }
+      ]
+    },
+    "participantes_fiesta_maleiwa": {
+      "name": "Participantes de la fiesta de Maleiwa",
+      "kind": "colectivo",
+      "description": "Personas de prestigio, majayuras, músicos, bailadores, cantores y cuentistas convocados para la fiesta; no se inventan número, clan ni uniforme.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "participantes_fiesta_maleiwa__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Personas de prestigio y artistas convocados a la fiesta."
+        }
+      ]
+    },
+    "comunidad_interroga_ulepala": {
+      "name": "Comunidad que interroga a Ulépala",
+      "kind": "colectivo",
+      "description": "Amigos, parientes, antiguos servidores, niños, jóvenes y mayores que buscan conocer la ausencia; conserva diversidad de edad y relación sin multitud uniforme.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "comunidad_interroga_ulepala__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "ulepala"
+      ],
+      "evidence": [
+        {
+          "myth": "ulepala",
+          "field": "mito",
+          "note": "Diversidad de edades y relaciones que presiona al retornado."
+        }
+      ]
+    }
+  }
+}

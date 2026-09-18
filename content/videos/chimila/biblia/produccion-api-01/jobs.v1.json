@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "community_id": 29,
+  "date": "2026-09-12",
+  "batch": "produccion-api-01",
+  "authorization": "User requested first six-sheet batch, one per category, and explicitly confirmed reuse of existing .env API key.",
+  "model": "gpt-image-2.5-sunburst",
+  "execution": "bundled imagegen CLI API mode; no custom SDK runner",
+  "concurrency": 3,
+  "scope": {
+    "master_sheets": 6,
+    "unit_ids": [
+      "P07",
+      "H01",
+      "A09",
+      "L01",
+      "U07",
+      "V01"
+    ],
+    "inventory_total": 54
+  },
+  "quality": "medium",
+  "size": "1024x1536",
+  "output_format": "jpeg",
+  "output_compression": 92,
+  "destination": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/chimila/biblia/produccion-api-01",
+  "reference_policy": "Documentary images inspected locally for partial morphology/material observations; none uploaded to the API, no real face cloned. Only generated and reviewed L01 is used as an API edit input.",
+  "limitations": [
+    "P07 age, hairstyle and precise clothing cut are fictional adaptation, not certified historical facts.",
+    "H01 clothing is sober fictional adaptation, not a uniform or specific family; four adults, no children.",
+    "A09 species unresolved; general morrocoy form only.",
+    "U07 fique construction is a provisional model, not a documented specific weave.",
+    "V01 first plate inherits L01 only, not unproduced L02/L05/L07."
+  ],
+  "jobs": [
+    {
+      "unit_id": "P07",
+      "endpoint": "/v1/images/generations",
+      "out": "p07-gran-cacica-master-v1.jpeg",
+      "prompt_file": "p07.prompt.txt",
+      "status": "produced_reviewed_editorial_candidate"
+    },
+    {
+      "unit_id": "H01",
+      "endpoint": "/v1/images/generations",
+      "out": "h01-cuatro-adultos-master-v1.jpeg",
+      "prompt_file": "h01.prompt.txt",
+      "status": "produced_reviewed_editorial_candidate"
+    },
+    {
+      "unit_id": "A09",
+      "endpoint": "/v1/images/generations",
+      "out": "a09-morrocoyo-master-v1.jpeg",
+      "prompt_file": "a09.prompt.txt",
+      "status": "produced_reviewed_editorial_candidate"
+    },
+    {
+      "unit_id": "L01",
+      "endpoint": "/v1/images/generations",
+      "out": "l01-monte-camino-claro-master-v1.jpeg",
+      "prompt_file": "l01.prompt.txt",
+      "status": "produced_reviewed_editorial_candidate"
+    },
+    {
+      "unit_id": "U07",
+      "endpoint": "/v1/images/generations",
+      "out": "u07-mochilas-algodon-fique-master-v1.jpeg",
+      "prompt_file": "u07.prompt.txt",
+      "status": "produced_reviewed_editorial_candidate"
+    },
+    {
+      "unit_id": "V01",
+      "endpoint": "/v1/images/edits",
+      "out": "v01-monte-inundado-v1.jpeg",
+      "prompt_file": "v01.prompt.txt",
+      "input_unit_ids": [
+        "L01"
+      ],
+      "status": "produced_reviewed_editorial_candidate"
+    }
+  ],
+  "generated_count": 6,
+  "reviewed_count": 6,
+  "published_count": 0,
+  "generated_reference_inputs": 1,
+  "status": "first_batch_produced_reviewed_pending_user_feedback"
+}

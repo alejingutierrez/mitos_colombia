@@ -1,0 +1,1161 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-indio-kuriruputa",
+  "title": "Kuriruputá y las manos que lo sostienen",
+  "version": "preproduccion-05",
+  "status": "all_originals_reviewed_pending_sequence_review",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Ochre and warm sand paper ground, muted terracotta shirt, mustard/burgundy/indigo sisters, a small deep rust-red tuma. DRY daylight except explicitly designated indoor dream, whose shadows are muted blue-grey. Blue is never an instruction to add rain. No gold, glow or glitter.",
+  "story_thesis": "La fuerza que permite volver no es la de un hombre solo: rescatar, escuchar y reconstruir también cambian una historia.",
+  "shared_scene_continuity": [
+    "ALL CHARACTERS are nearly FLAT paper silhouettes with contour-profile noses, tiny cut eyes, and NO faceted/sculpted heads.",
+    "Full figures in middle distance, normally 18–25% image height; foreground is paper landscape, never a face or cropped body.",
+    "Only entities listed for this shot may appear. Historical clothing continuity, no clan symbols or facial patterns.",
+    "All ground is broad THIN overlapping paper sheets with narrow air gaps and shadows, never cracked soil. Sparse plants only thin cut-paper thorn tree silhouettes and columnar cardon if present.",
+    "A cream cloth-path and rust-red stone-paths are audiovisual metaphors, NOT traditional symbols or literal documented miracles. Keep air between layers to the final shot."
+  ],
+  "continuity_rules": [
+    "No regenerar Arámai ni trípticos.",
+    "Camisa terracota de manga larga, pantalón crudo hasta tobillo, cabello negro a nuca, sandalias oscuras en Kuriruputá.",
+    "Tres hermanas como reparto de arte: mayor mostaza/cabello gris; adulta burdeos/negro largo; adulta índigo/negro largo. Mantas hasta tobillos, sin estampados.",
+    "Paño limpio rodea rodilla izquierda DESDE rescate hasta mediación: lado editorial, no dato histórico. Sin lesión visible ni sangre.",
+    "Nueva pareja adulta manta azul gris con paneles arena y trenza negra lateral, distinta de hermana índigo; voz propia en cierre, no premio ni objeto entregado.",
+    "Las reses son ganado vacuno, no sustituir por chivos del modelo compartido. Tres vacas distintas visibles cuando el plano requiere ganado: crema, parda y arena.",
+    "El sueño se distingue por espacio interior y capas suspendidas; no afirmar que el objeto real cura o da órdenes.",
+    "Tomas separadas por cortes; no solicitar morph ni asumir capas editables dentro de JPEG."
+  ],
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-kuriruputa.json",
+    "content_sha256": "c429661b841073b2f2436a91d41d047fd05fadf25a12b2df0226192fcd239c91",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "IX pp316–317, PDF12–13; adaptación del relato editorial publicado. Ver INVESTIGACION.md.",
+    "live_hash_verified": true,
+    "events": [
+      {
+        "id": "perdida",
+        "description": "Pérdida de ganado y decisión de seguir el rastro.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Chaves IX pp316–317; diferencias en INVESTIGACION.md"
+      },
+      {
+        "id": "herida",
+        "description": "Encuentro violento y caída; representado por elipsis y consecuencia sin daño visible.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Chaves IX pp316–317; diferencias en INVESTIGACION.md"
+      },
+      {
+        "id": "rescate",
+        "description": "Hermanas organizan defensa, sostienen y llevan al hermano a casa.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Chaves IX pp316–317; diferencias en INVESTIGACION.md"
+      },
+      {
+        "id": "sueno",
+        "description": "Sueño con tuma durante recuperación; interpretación de alianza según versión publicada.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Chaves IX pp316–317; diferencias en INVESTIGACION.md"
+      },
+      {
+        "id": "deliberacion",
+        "description": "Hermanas y hermano interpretan juntos la visión.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-kuriruputa.json"
+      },
+      {
+        "id": "mediacion",
+        "description": "Se discuten animales, daños y responsabilidades sin solución total inmediata.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-kuriruputa.json"
+      },
+      {
+        "id": "union",
+        "description": "Nueva unión y continuidad familiar, con agencia de la pareja según lectura publicada.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-kuriruputa.json"
+      },
+      {
+        "id": "memoria",
+        "description": "Reconocer a hermanas y recordar la historia sin glorificar invencibilidad.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-kuriruputa.json"
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "kuriruputa",
+      "type": "person",
+      "desc": "ADULT WAYUU MAN, short nape-length black hair, plain TERRACOTTA LONG-SLEEVE SHIRT, full ankle-length CREAM TROUSERS, dark sandals, no hat, no necklace. Almost-flat profile cut from thin paper, NO facial volume. Clean left-knee cloth ONLY when scene explicitly requests it.",
+      "model_ids": [
+        "kuriruputa__identity_sheet"
+      ]
+    },
+    {
+      "id": "hermanas",
+      "type": "supporting_people",
+      "desc": "THREE adult sisters with full ankle-length loose plain MANTAS and dark sandals: elderly woman MUSTARD with long GREY hair, middle adult BURGUNDY with long BLACK hair, adult INDIGO with long BLACK hair. Hair is hair-shaped flat cut paper, not a veil. No paint or ornaments. Separate silhouettes with clear gestures, almost-flat paper profiles.",
+      "model_ids": [
+        "hermanas_kuriruputa__group_grammar"
+      ]
+    },
+    {
+      "id": "pareja",
+      "type": "person",
+      "desc": "ADULT WOMAN, long opaque BLUE-GREY ankle-length manta with broad SAND side panels, black SIDE BRAID over shoulder, dark sandals. Nearly flat cut-paper profile. Distinct from dark-indigo sister. Active equal participant, no bridal veil, jewelry, ceremony or object-exchange.",
+      "model_ids": [
+        "nueva_pareja_kuriruputa__identity_sheet"
+      ]
+    },
+    {
+      "id": "pariente",
+      "type": "person",
+      "desc": "ONE adult male relative: plain long-sleeve SAND shirt, full CHARCOAL trousers, short black hair and dark sandals, flat paper profile. No hat, weapon, staff, facial paint or ceremonial insignia. Editorial supporting character, not named historical person.",
+      "model_ids": []
+    },
+    {
+      "id": "interlocutora",
+      "type": "person",
+      "desc": "ONE adult woman from the other household, long plain OLIVE ankle-length manta, black low bun and dark sandals, flat paper profile. No staff, ritual garments, necklace or clan signs. Editorial interlocutor, not certified palabrero.",
+      "model_ids": []
+    },
+    {
+      "id": "adversarios",
+      "type": "supporting_people",
+      "desc": "THREE anonymous distant adult silhouettes, complete sand/grey shirts and charcoal full trousers; small flat profiles without caricature, face paint, ethnicity markers or demon traits. Represent only the particular adversaries of this story; no individual from another myth reused.",
+      "model_ids": []
+    },
+    {
+      "id": "ganado",
+      "type": "animal",
+      "desc": "THREE distinct full cattle silhouettes: one cream, one chestnut-brown, one sand. Broad almost-flat cut-paper bodies, simple short horns, thin legs, complete hooves and tails, no fur or folded faceted sculpture. Each on a separate depth offset, space around each; no goats, sheep or horses.",
+      "model_ids": [
+        "rebanos__group_grammar"
+      ]
+    },
+    {
+      "id": "territorio",
+      "type": "environment",
+      "desc": "Dry low Guajira plain, gentle ochre paper ridges far away. Wide overlapping flat paper-ground sheets; sparse thin-cut thorn-tree silhouettes and occasional straight columnar cardon. No high jagged mountains, ocean or agave rosettes automatically inherited.",
+      "model_ids": [
+        "territorio_alta_guajira__environment_model"
+      ]
+    },
+    {
+      "id": "corral",
+      "type": "environment",
+      "desc": "Same simple rectangular cattle enclosure, thin flat vertical paper stakes and two narrow horizontal paper rails, plain side gate. Open gate only when requested. All structures thin paper, not round wood. No ornamental design or writing.",
+      "model_ids": [
+        "corral_kuriruputa__spatial_model"
+      ]
+    },
+    {
+      "id": "casa",
+      "type": "environment",
+      "desc": "Same low simple dwelling: muted ochre thin-paper walls, low sloping sand strip-paper roof, one doorway and adjacent shaded open work area. Paper posts, no stone/wood realism, no miniature box exterior. Interior floor continues into landscape.",
+      "model_ids": [
+        "rancheria_wayuu__spatial_model"
+      ]
+    },
+    {
+      "id": "pano",
+      "type": "object_or_phenomenon",
+      "desc": "ONE long plain CREAM PAPER CLOTH, soft broad bends between thin sheets, no embroidery, red stains or rope. A small separate clean cream strip around protagonist LEFT KNEE over trousers in rescue/recovery; no wound. In specified magical shot only, long cloth extends into a path; never a corpse shroud.",
+      "model_ids": []
+    },
+    {
+      "id": "tuma",
+      "type": "object_or_phenomenon",
+      "desc": "ONE small PALM-SIZED irregular rounded deep RUST-RED TUMA, assembled from a few thin matte red paper contours; NOT a huge rock, faceted ruby, ornament, heart, amulet, glowing crystal or levitating face. Never in anyone's mouth. Strips extend from it ONLY in explicitly magical scene.",
+      "model_ids": [
+        "tuma_roja__object_sheet"
+      ]
+    },
+    {
+      "id": "estera",
+      "type": "object_or_phenomenon",
+      "desc": "ONE plain rectangular sand paper mat resting flush on ground, not raised bench or pedestal; no symbols. Only for sitting or reclining.",
+      "model_ids": []
+    },
+    {
+      "id": "armas",
+      "type": "object_or_phenomenon",
+      "desc": "Historical long rifles rendered as small simple flat dark PAPER silhouettes, carried LOW muzzle toward ground, no firing, aiming at people, shells, blast, blood or handling instruction. Present only in defense aftermath shot; no combat pictured.",
+      "model_ids": []
+    },
+    {
+      "id": "rastro",
+      "type": "object_or_phenomenon",
+      "desc": "Small paired hoof impressions as flat shadow-shaped paper cutouts leading away from corral; never blood trails, text or iconographic code.",
+      "model_ids": []
+    },
+    {
+      "id": "sendas",
+      "type": "object_or_phenomenon",
+      "desc": "Two or three narrow rust-red PAPER PATHS physically unfolding from layers of a small red stone, hovering slightly above ground with shadows and returning toward distinct household thresholds. Broad quiet curves, not rays, roots, strings around bodies or traditional motifs.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-02-remaining-categories-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-03-corrections-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    },
+    {
+      "model_id": "tuma_roja__object_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/tuma_roja__object_sheet--canon.jpeg",
+      "sha256": "a82d5d5935a40390e3eab031633a0807333606ffde150658c7113cf33332123e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-02-remaining-categories-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    },
+    {
+      "model_id": "rebanos__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/rebanos__group_grammar--canon.jpeg",
+      "sha256": "aec531d1a0a63e90fdcd09aeeb981e4c35e7b78a934e620608e5b6e4b7b8ed1f",
+      "qa_status": "PASS_WITH_MATERIALITY_WATCH",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/selection.json"
+    },
+    {
+      "model_id": "kuriruputa__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01/kuriruputa__identity_sheet--canon.jpeg",
+      "sha256": "caeb16a23fdd8d27cadb15b18deda45c6fc705b1686a35078e3a63701ca13c7c",
+      "qa_status": "PASS_AFTER_CORRECTION",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/selection.json"
+    },
+    {
+      "model_id": "hermanas_kuriruputa__group_grammar",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/hermanas_kuriruputa__group_grammar--canon.jpeg",
+      "sha256": "ef5ee1b8e7cca2872e713db63df5834e576ddc12dbd965812b057fbed1ed3776",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-02-remaining-categories-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    },
+    {
+      "model_id": "nueva_pareja_kuriruputa__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/nueva_pareja_kuriruputa__identity_sheet--canon.jpeg",
+      "sha256": "b2c5be05211a757fc26e283a0a994e8087deb76e1722056601a05a946c23a162",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/selection.json"
+    },
+    {
+      "model_id": "corral_kuriruputa__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/corral_kuriruputa__spatial_model--canon.jpeg",
+      "sha256": "97ec76786e0eb7b3dbf031c13029f1fedbd46aecd5ce4824a88c54b0af5cc94c",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-03-el-indio-kuriruputa-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/selection.json"
+    }
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/entrada.jpeg",
+        "sha256": "eb1f7eac80b28d86b28f1838c224259a15c0274dff7c25ba5251c2a8244d1f6c",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/acto.jpeg",
+        "sha256": "5f49b1f92d3b8669bc0ce5b97e9ede7588034314bdb686bd7fb3518364e33b2d",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/huella.jpeg",
+        "sha256": "cc7bc5281e31122948dae5da8636807026344109f93bea29a69aa54ec607c34e",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Ocho modelos y tres trípticos inspeccionados directamente en este turno; hashes verificados por preparador.",
+      "Conservar identidad, ropa, paleta y relaciones del tríptico. No heredar terreno granular, caras facetadas, madera ni volumen de animales de Biblia.",
+      "La ficha grupal de rebaños incluye caprinos; el episodio pide vacunos, se explicita selección de especie antes de producir.",
+      "No subir originales al proveedor: investigación visual solamente.",
+      "Tres hermanas, lado del paño y reparto de mediación son decisiones de continuidad, no reconstrucciones históricas certificadas."
+    ]
+  },
+  "duration": {
+    "target_seconds": 112,
+    "voice_words": 204,
+    "measured": false
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Una mañana, Kuriruputá encontró huellas junto al corral. Faltaban animales. Sus hermanas le pidieron prudencia, pero él reunió a sus parientes y salió a buscar lo perdido.",
+      "voice_provenance": "Versión publicada: mañana y parientes; no trasladar literalmente la cronología nocturna del registro histórico.",
+      "word_count": 27,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "perdida"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "El hueco que deja el ganado",
+          "visual": "WIDE elevated oblique view at DRY morning. Kuriruputa stands small beside open corral side gate in middle distance, looking DOWN at hoof trail leaving enclosure. Three cattle remain spaced in the enclosure beyond him. Near foreground broad layered paper ground and one rail edge; rear low plain and house. No sisters, no cloth, no tuma. All bodies full inside margins.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "ganado",
+            "corral",
+            "casa",
+            "territorio",
+            "rastro"
+          ],
+          "event_ids": [
+            "perdida"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Riel fino y hojas delante",
+            "Protagonista junto al rastro y portón",
+            "Ganado separado y casa al fondo"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de cambio de punto de vista, no extremos de interpolación.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-01/b1a.jpeg",
+            "sha256": "69b8274f1630eb50e7e75be02dd48be6facfadfca3cf79ee2c31429c7ebc3cf3",
+            "qa_notes": [
+              "Ganado vacuno de tres colores, rastro y protagonista completos; suelo y cuerpos inequívocamente recortados.",
+              "Se añaden rosetas vegetales y banco bajo alero. No se identifica especie ni se usa este plano para acreditar botánica; pelo algo más corto que modelo."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b1b",
+          "title": "Escuchar antes de partir",
+          "visual": "WIDE environmental view on dry path outside same dwelling. Three sisters stand near doorway, oldest mustard sister extends open hand in a restrained caution gesture. Kuriruputa and one sand-shirt male relative walk a short distance away toward right ridge, looking back. Five COMPLETE SMALL figures in middle distance, no foreground body. No weapons, cattle, stone or bandage.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "hermanas",
+            "pariente",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "perdida"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Senda de hojas abiertas",
+            "Dos hombres que se separan de tres hermanas",
+            "Umbral y cresta baja"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte con elipsis de tiempo al siguiente bloque; no morph.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b1b.jpeg",
+            "sha256": "e1f135173188556ac6f01e4a08df5c3df4f54485a423db15f89b5321be77567d",
+            "qa_notes": [
+              "Reparto de cinco, salida de los dos hombres y llamada de prudencia legibles; papel recortado con profundidad.",
+              "El gesto de advertencia pasa a la hermana índigo, no a la mayor; el VO no fija quién habla. Figuras mayores que objetivo pero completas y ambientales."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "El encuentro terminó en combate. Kuriruputá cayó herido y sus compañeros retrocedieron. Sus hermanas salieron a buscarlo. Cuando llegaron, fueron ellas quienes sostuvieron la defensa y consiguieron el regreso.",
+      "voice_provenance": "Elipsis no gráfica del conflicto y rescate; secuencia de compañeros según relato publicado. No representar disparos ni lesiones.",
+      "word_count": 29,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "herida",
+        "rescate"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "Después del encuentro",
+          "visual": "VERY WIDE dry plain after an OFFSCREEN conflict. Kuriruputa sits upright resting against a LOW folded-paper ground ridge in middle distance, whole body visible, fully clothed and conscious. Relative walks back toward distant house, turning head toward him. Empty space separates them. NO visible injury, blood, weapons, fallen body or enemy. No cloth yet.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "pariente",
+            "territorio",
+            "casa"
+          ],
+          "event_ids": [
+            "herida"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Estratos finos y sombra",
+            "Hombre sentado y pariente que retrocede",
+            "Casa distante"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de cambio de punto de vista, no extremos de interpolación.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b2a.jpeg",
+            "sha256": "fb702250ad7234e9eba5eb495734e40ab7849a5ae0b361fbc41de7e56924ac89",
+            "qa_notes": [
+              "Consecuencia no gráfica: protagonista consciente en suelo y pariente alejándose; capas de tierra y vegetación de papel.",
+              "La casa parece más cercana que en el encargo. No afirmar distancia histórica ni herida visible."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b2b",
+          "title": "Las hermanas cambian el rumbo",
+          "visual": "VERY WIDE side view of DEFENSE AFTERMATH without violence. Three sisters in middle distance stand firmly across path, each carries a SMALL FLAT RIFLE LOW and pointing at ground, not at anyone. Three very small anonymous adversaries retreat AWAY far beyond a low ridge; wide empty physical distance. No firing, fighting, wounds or protagonist. Paper silhouettes clear, no heroic closeup.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "hermanas",
+            "adversarios",
+            "armas",
+            "territorio"
+          ],
+          "event_ids": [
+            "rescate"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Hojas ocres a distintas alturas",
+            "Tres hermanas con armas bajas",
+            "Tres siluetas alejándose detrás de cresta"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte con elipsis de tiempo al siguiente bloque; no morph.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b2b.jpeg",
+            "sha256": "b3636b663c8e74ee34f11b38924ab3af68012d0fe127e1fed38b1124641db96d",
+            "qa_notes": [
+              "Tres hermanas diferenciadas con rifles bajos y tres adversarios alejándose; sin violencia visible ni caricatura.",
+              "Escala de mayor superior al objetivo, pero escena completa ambiental y capas de papel claras."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Lo llevaron de vuelta entre varias manos. La casa que parecía sostenerse en su fuerza seguía en pie gracias a ellas. Kuriruputá necesitaba cuidado, no otra victoria.",
+      "voice_provenance": "Rescate como núcleo; paño-camino y casa sostenida como licencia audiovisual, no milagro documentado.",
+      "word_count": 27,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "rescate"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "Volver acompañado",
+          "visual": "WIDE oblique approach to house. Kuriruputa walks carefully in middle distance, clean cream strip around LEFT KNEE over trousers. Burgundy and indigo sisters on either side visibly support his forearms; mustard older sister walks ahead holding one end of long cream cloth trailing loosely, NOT a rope. Four full figures each under25%height. Dry ground, no rifles, no wounds.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "hermanas",
+            "pano",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "rescate"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Suelo continuo de hojas",
+            "Dos hermanas sostienen al hermano; mayor guía",
+            "Casa cercana y alero"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de cambio de punto de vista, no extremos de interpolación.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b3a.jpeg",
+            "sha256": "cc0e12ea6e37b02b87a4526885a8720c1e750a7d74bf9d8fe5240e2ecf414bc2",
+            "qa_notes": [
+              "Regreso de cuatro figuras, mano de hermana burdeos en espalda del protagonista y paño limpio legible sobre pantalón; papel consistente.",
+              "No reproduce sostén de dos antebrazos: índigo queda detrás de burdeos. Conservar como acompañamiento visible, no afirmar apoyo bilateral. Paño bajo rodilla y mano del protagonista toca paño largo."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b3b",
+          "title": "El paño se vuelve camino",
+          "visual": "EXTREME WIDE PAPER LANDSCAPE, four SMALL full figures on a cream cloth-path toward house on RIGHT. Precise LEFT-TO-RIGHT order: (1) ONE black-haired woman wearing dark INDIGO ankle-length manta; (2) Kuriruputa wearing TERRACOTTA SHIRT and TWO straight CREAM TROUSER LEGS, tiny clean band around left knee; (3) ONE black-haired woman wearing BURGUNDY ankle-length manta; (4) ONE grey-haired ELDER woman wearing MUSTARD ankle-length manta, ahead closest to house, holding cream path edge. THERE IS EXACTLY ONE MUSTARD WOMAN and exactly ONE INDIGO WOMAN. The indigo and burgundy women gently support the MAN BETWEEN THEM by his forearms, not a chain of people holding hands. All four are distinct almost-flat paper profiles and under22%frameheight. Cream cloth extends visibly from elder's hand into gently suspended pathway across narrow shallow air gaps toward house. Foreground only broad thin ochre paper ground sheets with cast shadows; sparse low flat thorn silhouettes, no large cactus or rosettes. No additional people, no realistic materials, no folded anatomical limbs, no large loose knee cloth. Camera looks across landscape, not portrait.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "hermanas",
+            "pano",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "rescate"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Solapas de tierra con aire",
+            "Cuatro figuras sobre tramo del paño",
+            "Paño-camino llega al umbral"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte con elipsis de tiempo al siguiente bloque; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "El paño usado para ayudar al regreso.",
+            "impossible_behavior": "El paño continúa como camino suspendido hasta casa.",
+            "narrative_effect": "El sostén familiar hace físicamente posible el regreso.",
+            "agency": "Hermanas sostienen y guían; él depende de ayuda.",
+            "physical_translation": "Una cinta ancha de papel crudo sobre vacíos bajos, con sombras.",
+            "visible_test": "Continuidad visible entre paño sostenido y camino hacia umbral.",
+            "event_ids": [
+              "rescate"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-03/b3b.jpeg",
+            "sha256": "c8ab280ca2b662b1da2ddc22b28556279072c1fcd28c53c98a3b1025ecab0ea9",
+            "qa_notes": [
+              "Corregido reparto: una hermana índigo, una burdeos y una mayor mostaza; cuatro figuras pequeñas y camino-paño sostenido, capas conservadas.",
+              "Apoyo se lee como acompañamiento con contacto en espalda/manos más que sostén de ambos antebrazos. Paño de rodilla poco visible; no afirmar cumplimiento exacto. Se conserva por función de regreso mágico, con rescate corporal en b3a."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Durante la recuperación soñó con una tuma roja. La visión abría otra posibilidad: continuar la casa sin prolongar la guerra. Al despertar, no guardó el sueño para sí.",
+      "voice_provenance": "Sueño con tuma es núcleo; mensaje reformulado y compartir visión corresponden a publicación. No ingestión de objetos ni afirmación de cura.",
+      "word_count": 28,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "sueno"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Una piedra en el sueño",
+          "visual": "WIDE empty thin-PAPER INTERIOR at NIGHT, viewed from far upper corner. Kuriruputa lies asleep fully clothed on a small flat sand mat in middle-left, entire body inside frame. Clean narrow cloth at left knee, distinct straight trouser silhouettes. JUST BESIDE MAT floats ONE PALM-SIZED IRREGULAR OVAL shape assembled from THREE FLAT MATTE RUST-RED PAPER CONTOURS. It looks like a small smooth organic PEBBLE SILHOUETTE, no facets, no polygon crystal, no hole, no bowl, NO RED LIGHT cast on surroundings. Two narrow matte rust-red strips are physically CONTIGUOUS WITH THE STONE LAYERS and curve toward two distant doorways beyond one open doorway upper-right, casting quiet shadows. Both strips go AWAY FROM CAMERA. ONLY these objects in room: mat, sleeping man, small tuma and two strips. Empty paper walls, NO containers, shelf, table, bag, plant, post hiding stone, glow or aura. Foreground layered PAPER floor and partial ceiling strips; cool blue-grey shadow, moonlight not glowing object. Rich physical depth, flat face, no scenic miniature exterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "pano",
+            "estera",
+            "tuma",
+            "sendas",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "sueno"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Alero y hojas azul gris interior",
+            "Hombre dormido y pequeña tuma",
+            "Dos sendas suspendidas hacia umbral"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de cambio de punto de vista, no extremos de interpolación.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La pequeña tuma del sueño y del recuerdo.",
+            "impossible_behavior": "Sus capas se prolongan en sendas que conectan umbrales.",
+            "narrative_effect": "La alianza se vuelve posibilidad espacial compartida, no orden ni premio.",
+            "agency": "Personas interpretan y eligen; ningún personaje emite poderes.",
+            "physical_translation": "Tiras delgadas rojo óxido con aire entre capas y sombra en suelo.",
+            "visible_test": "Pequeña piedra conectada materialmente a dos o tres caminos, sin efectos luminosos.",
+            "event_ids": [
+              "sueno"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-04/b4a.jpeg",
+            "sha256": "e783d9240143422f0c6b8b53743bd206285798bdd5489c6bcf9246991dd892be",
+            "qa_notes": [
+              "Tuma corregida a silueta pequeña mate y laminada sin brillo; dos sendas conectadas y durmiente completo, noche en papel.",
+              "El objeto se aplana como disco irregular y aparecen dos huecos en pared; rutas salen al territorio sin casas legibles. No afirmar mineralismo exacto ni suspensión inequívoca."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b4b",
+          "title": "Al otro lado de la visión",
+          "visual": "VERY WIDE EMPTY PAPER INTERIOR viewed from FAR back corner. ONLY furnishings: ONE plain rectangular SAND MAT FLUSH ON FLOOR, on which Kuriruputa is asleep in middle-left distance, complete body narrower than30% image width. His trousers form TWO STRAIGHT FLAT CREAM LEG SILHOUETTES, narrow clean band flush around LEFT KNEE, no ties hanging. One SMALL irregular rounded rust-red paper tuma beside mat. EXACTLY TWO narrow rust-red strips unfold from stone toward the SINGLE doorway at upper-right, BOTH continuing to separate distant household thresholds. NO path comes toward camera. Foreground only broad thin overlapping paper floor sheets; walls empty; no shelves, pots, bowls, bags, chairs, tables, cushions or pillars blocking body. Cool muted interior shadows and dry daylight beyond signal dream, no glow. Clear AIR GAPS under lifted strips, no realistic soil.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "pano",
+            "estera",
+            "tuma",
+            "sendas",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "sueno"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Suelo de hojas sin utilería adicional",
+            "Durmiente completo sobre única estera y pequeña tuma",
+            "Dos sendas suspendidas hacia umbrales exteriores"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte con elipsis de tiempo al siguiente bloque; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La pequeña tuma del sueño y del recuerdo.",
+            "impossible_behavior": "Sus capas se prolongan en sendas que conectan umbrales.",
+            "narrative_effect": "La alianza se vuelve posibilidad espacial compartida, no orden ni premio.",
+            "agency": "Personas interpretan y eligen; ningún personaje emite poderes.",
+            "physical_translation": "Tiras delgadas rojo óxido con aire entre capas y sombra en suelo.",
+            "visible_test": "Pequeña piedra conectada materialmente a dos o tres caminos, sin efectos luminosos.",
+            "event_ids": [
+              "sueno"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b4b.jpeg",
+            "sha256": "cfaa88881452447d72e021000100d219af468cd949bd180ffcac1b6f4de51801",
+            "qa_notes": [
+              "Interior despejado, tuma pequeña y dos sendas legibles; figura completa, papel consistente.",
+              "Pose cambia respecto al primer sueño y fondo exterior diurno: resolver por corte, no interpolación ni equivalencia literal del tiempo soñado."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Sus hermanas lo escucharon y discutieron con él qué significaba aquella alianza. La piedra no decidía por nadie. Para seguir adelante, hacía falta escuchar también a quienes habían hecho posible su regreso.",
+      "voice_provenance": "Deliberación familiar es desarrollo editorial del relato vigente. No voz histórica literal.",
+      "word_count": 32,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "deliberacion"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "El sueño se cuenta",
+          "visual": "WIDE dry DAYLIGHT under open shade beside same house. Four small seated full-body figures around ground mat: Kuriruputa terracotta/cream with left-knee strip, three sisters mustard/burgundy/indigo. Small rust-red tuma sits ON mat between them. Kuriruputa gestures open hand, older sister listens while burgundy sister turns to indigo sister. Paper ground visible around all sides. No magic paths in this shot, no altar or raised platform.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "hermanas",
+            "pano",
+            "estera",
+            "tuma",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "deliberacion"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Sombra de alero sobre hojas",
+            "Cuatro figuras completas escuchando",
+            "Corredor visual hacia llano"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de cambio de punto de vista, no extremos de interpolación.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b5a.jpeg",
+            "sha256": "7c96798e4e632143e7bbc5d711aa39c78aa589f5a65cf80a478af3d07d38d291",
+            "qa_notes": [
+              "Cuatro personajes reconocibles, ropa completa y conversación con tuma pequeña; suelo y gestos conservan papel.",
+              "La tuma tiene pliegue central parecido a concavidad y no reproduce exactamente el contorno de la ficha. Personas más grandes que objetivo aunque enteras; no inferir recipiente o uso ritual."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b5b",
+          "title": "Una respuesta entre varias voces",
+          "visual": "VERY WIDE elevated side view under open shade next to plain house. Four small complete nearly-flat paper figures sit around sand mat in middle distance: Kuriruputa terracotta shirt and cream trousers with clean knee band, grey-haired MUSTARD sister speaking, BURGUNDY and INDIGO sisters listening. Small irregular rounded matte rust-red paper tuma on FAR UPPER EDGE OF MAT. EXACTLY TWO thin red paper paths emerge DIRECTLY FROM ITS BACK EDGE and go AWAY FROM CAMERA through a CLEAR EMPTY CENTRAL CORRIDOR between people toward TWO distant house doorways. Each path must be continuously traceable from stone to its own doorway: no disconnected sections, no strip toward camera, no stone hidden by bodies. Foreground lower third only thin ochre floor sheets, no people or plants there. No shelf, utensils, bowl, tables or extra stone. Head/face silhouettes remain flat, air gaps and shadows under red strips. No glow, jewelry or ceremony.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "hermanas",
+            "pano",
+            "estera",
+            "tuma",
+            "sendas",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "deliberacion"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Láminas del patio",
+            "Cuatro personas y pequeña piedra",
+            "Dos sendas hacia casas separadas"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte con elipsis de tiempo al siguiente bloque; no morph.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La pequeña tuma del sueño y del recuerdo.",
+            "impossible_behavior": "Sus capas se prolongan en sendas que conectan umbrales.",
+            "narrative_effect": "La alianza se vuelve posibilidad espacial compartida, no orden ni premio.",
+            "agency": "Personas interpretan y eligen; ningún personaje emite poderes.",
+            "physical_translation": "Tiras delgadas rojo óxido con aire entre capas y sombra en suelo.",
+            "visible_test": "Pequeña piedra conectada materialmente a dos o tres caminos, sin efectos luminosos.",
+            "event_ids": [
+              "deliberacion"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-04/b5b.jpeg",
+            "sha256": "800142e97cfc825620a4551a2ea15a0835ca1041c1ec5f1aa9d0fc958ddaddb1",
+            "qa_notes": [
+              "Conexión continua de tuma con dos umbrales ahora visible; cuatro personajes diferenciados, mayor habla y protagonista escucha; papercut mantenido.",
+              "Dos tiras también continúan hacia cámara contra encargo, pero no sustituyen el vínculo comprobable con los umbrales. Registrar cuatro brazos de camino, no dos exactos."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Kuriruputá buscó mediación. Hablaron de animales, daños y responsabilidades. No todo quedó resuelto de una vez; aun así, el rebaño dejó de ser motivo de ataques inmediatos.",
+      "voice_provenance": "Desarrollo de la versión publicada. Interlocutora editorial sin atribuir rol de palabrero ni reproducir protocolo.",
+      "word_count": 27,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "mediacion"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "Hablar de lo que falta",
+          "visual": "WIDE dry daytime courtyard between same house and corral. Kuriruputa stands with older mustard sister; burgundy and indigo sisters stand slightly behind, separate. ONE olive-manta woman with black low bun faces them, open hand mid-discussion. Five full figures under23%height. Three cattle in separate positions in background enclosure. Knee cloth remains, no rifles, stone, papers, counting tokens, staff or ceremony.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "hermanas",
+            "interlocutora",
+            "ganado",
+            "corral",
+            "casa",
+            "territorio",
+            "pano"
+          ],
+          "event_ids": [
+            "mediacion"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Suelo abierto y sombras",
+            "Cinco interlocutores separados",
+            "Tres vacas en corral y vivienda"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de cambio de punto de vista, no extremos de interpolación.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-01/b6a.jpeg",
+            "sha256": "8fea53c2fbe6f8684f899bc033d866192b421983b32bccadf2468245993f1d97",
+            "qa_notes": [
+              "Cinco participantes correctos; tres vacunos distintos; mediación sin ceremonia; ropa y perfiles coherentes.",
+              "Figuras mayores que objetivo23% y paño parece bajo rodilla; retener provisionalmente por plano aún ambiental y sin retrato. Banco/cuenco incidental no atribuido a rito."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b6b",
+          "title": "El corral vuelve a abrirse",
+          "visual": "WIDE view from outside corral, cattle walking calmly INSIDE through open gate: three complete distinct silhouettes cream, brown, sand, at separate depths with visible hooves. Kuriruputa and sand-shirt relative hold gate clear on one side, SMALL full figures, no ropes on necks. Clean left knee cloth still present. House and thin paper thorn-tree silhouettes behind. No celebration, magic, currency or property-transfer ritual.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "pariente",
+            "ganado",
+            "corral",
+            "casa",
+            "territorio",
+            "pano"
+          ],
+          "event_ids": [
+            "mediacion"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Hoja del camino y sombra de portón",
+            "Dos hombres pequeños junto al acceso",
+            "Tres vacas enteras separadas hacia interior"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte con elipsis de tiempo al siguiente bloque; no morph.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b6b.jpeg",
+            "sha256": "ff645200b680901126390d6115daef5bc9fb253ba81b44e3f889e0bccbd11dd9",
+            "qa_notes": [
+              "Tres vacunos enteros y diferenciados, dos hombres junto al portón; paso al corral legible y sin ceremonia.",
+              "Paño queda algo bajo rodilla y varía el alero; no certificar exactitud anatómica o arquitectónica entre cortes."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Con el tiempo formó una nueva unión. La tuma quedó como recuerdo, no como premio. Y sus hermanas conservaron su lugar en la historia: sin ellas, no habría habido regreso ni casa que continuar.",
+      "voice_provenance": "Unión, recuerdo y reconocimiento según lectura publicada. Participación igualitaria visible de la pareja es puesta en escena editorial; no ceremonia histórica.",
+      "word_count": 34,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "union",
+        "memoria"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Una casa que continúa",
+          "visual": "EXTREME WIDE view from FAR courtyard, camera at least twice usual distance. The ENTIRE FIVE PERSON GROUP fits within central HALF of frame width and between45% and68% frame height. No person exceeds22% frame height. Foreground LOWER THIRD exclusively thin layered paper earth and cast roof shadows, NOT people or plants. Middle distance: Kuriruputa without knee cloth listens to adult partner with BLUE-GREY ankle-length manta, SAND side panels and SIDE BRAID; she gestures toward work shade. Three sisters stand slightly behind, all visible and separated: grey-haired mustard, black-haired burgundy, black-haired indigo. House doorway and shade span behind them; small irregular red tuma on ground mat just inside threshold. No furniture, utensils, jewelry, veil or ceremony. Upper distance dry low paper ridges. Same nearly flat contour faces and distinct air-shadow layers throughout, no sculpted heads.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "pareja",
+            "hermanas",
+            "tuma",
+            "estera",
+            "casa",
+            "territorio"
+          ],
+          "event_ids": [
+            "union"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Hojas del patio y sombra de techo",
+            "Pareja con iniciativa y tres hermanas visibles",
+            "Umbral con piedra pequeña sobre estera"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de cambio de punto de vista, no extremos de interpolación.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b7a.jpeg",
+            "sha256": "204ccf7d0f53397ddd1d5ac236325a80fa0745041926d2d2ca026133193a38c5",
+            "qa_notes": [
+              "Cinco personas diferenciadas; encuadre abierto y tuma sobre estera; papercut preservado.",
+              "Distribución casi lineal, sin ceremonia. Variación de pequeñas plantas de fondo no se usa para identificar especies."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b7b",
+          "title": "Lo que permanece unido",
+          "visual": "EXTREME WIDE closing view toward same house and corral in warm DRY late afternoon. Five SMALL full figures in middle distance: partner blue-grey manta and side braid stands with Kuriruputa; three sisters mustard/burgundy/indigo converse beside them, no kneeling tribute. No knee bandage. Three full cattle visible beyond in enclosure. From palm-sized tuma on ground mat near doorway, three narrow rust-red paper paths spread gently toward connected thresholds and corral, hovering only a little with clear shadows. Main image is rich layered ground, shade, figures and paths; no giant stone, podium, frame or realistic sunset clouds.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "kuriruputa",
+            "pareja",
+            "hermanas",
+            "ganado",
+            "tuma",
+            "estera",
+            "sendas",
+            "casa",
+            "corral",
+            "territorio"
+          ],
+          "event_ids": [
+            "memoria"
+          ],
+          "angle": "oblicuo ambiental a distancia; conservar profundidad y figuras completas",
+          "shot_scale": "plano general amplio; no retrato ni macro",
+          "depth_planes": [
+            "Suelo papercut y sendas con aire",
+            "Cinco personas enteras junto al umbral",
+            "Corral, reses y umbrales conectados"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Cierre a negro posterior, no generado.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "La pequeña tuma del sueño y del recuerdo.",
+            "impossible_behavior": "Sus capas se prolongan en sendas que conectan umbrales.",
+            "narrative_effect": "La alianza se vuelve posibilidad espacial compartida, no orden ni premio.",
+            "agency": "Personas interpretan y eligen; ningún personaje emite poderes.",
+            "physical_translation": "Tiras delgadas rojo óxido con aire entre capas y sombra en suelo.",
+            "visible_test": "Pequeña piedra conectada materialmente a dos o tres caminos, sin efectos luminosos.",
+            "event_ids": [
+              "memoria"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Movimiento lento opcional por definir tras aprobar originales.",
+            "allowed": "Paralaje sólo con capas realmente separadas en etapa posterior; gestos pequeños sin cambio de identidad.",
+            "forbidden": "Morph de caras, ropa, suelo o piedra; inventar objetos; interpolar a/b automáticamente; tratar JPEG como capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-kuriruputa-preproduccion-02/b7b.jpeg",
+            "sha256": "5a36982d0e7823730c818b723be1b8d92eda6a83a59831b46c9e5ce649b34fce",
+            "qa_notes": [
+              "Cinco personajes y tres vacunos; cierre familiar con tuma pequeña y caminos de papel, rostros planos hasta final.",
+              "Las sendas salen también fuera de campo y el vínculo con el corral queda parcialmente oculto por figuras. Pequeños utensilios incidentales no se atribuyen a un rito."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    }
+  ]
+}

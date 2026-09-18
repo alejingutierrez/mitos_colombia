@@ -1,0 +1,50 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-02",
+  "parent_batch_id": "wayuu-v3-production-12-el-incesto-medium",
+  "revision": "corrections-02",
+  "myth_slug": "el-incesto",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "hermana_litoral__state_sheet--estados",
+      "model_id": "hermana_litoral__state_sheet",
+      "entity_id": "hermana_litoral",
+      "view_id": "estados",
+      "title": "Hermana del litoral · de presencia humana a memoria petrea",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/prompts/hermana_litoral__state_sheet--estados.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/hermana_litoral__state_sheet--estados.jpeg",
+      "prompt_sha256": "e7867d847e2a42210ff65038a0efe89ee9aefa21abc90a2cd60183498be1c82f",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "hermano_litoral__state_sheet--estados",
+      "model_id": "hermano_litoral__state_sheet",
+      "entity_id": "hermano_litoral",
+      "view_id": "estados",
+      "title": "Hermano del litoral · continuidad no resuelta",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/prompts/hermano_litoral__state_sheet--estados.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/hermano_litoral__state_sheet--estados.jpeg",
+      "prompt_sha256": "8ca974d3dd91d27815b74ba66842cd13eec4beeed4925fbde85c190362e75b05",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

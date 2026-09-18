@@ -1,0 +1,276 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-worunka-triptych-01",
+  "created_at": "2026-09-06T19:32:00.620Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "la-india-worunka",
+  "plan": "content/mitos-visuales/wayuu.worunka.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "a56d12cbf405f7c650da0f2376cda3d4b988d807b002189bba5d4745d4b37748",
+  "narrative_target_sha256": "9774ed6faf8a41db00c0496ff597e3093f69bc727491d62a5f347238b9308b6d",
+  "evidence": [
+    {
+      "id": "chaves_worunka_1946",
+      "type": "primary_narrative_edition",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "PDF 8–9 (base cero), impresas 312–313; informante p.316",
+      "supports": "Piedra, color de aves, tumas y sequía en la versión de Juancito Iguarán, mediada por Roberto Iguarán y Chaves.",
+      "limits": "Edición histórica en castellano, no transcripción literal en wayuunaiki. No se toma juicio de género del investigador como doctrina cultural."
+    },
+    {
+      "id": "published_worunka",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-india-worunka.json",
+      "supports": "Relato objetivo congelado.",
+      "limits": "La edición pública hace acercarse las aves espontáneamente y explicita sangre; Chaves hace actuar a Mareiwa. Se representa transferencia material sin recrear intervención ni fluidos, y no se edita texto."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T19:31:50Z",
+    "reviewed_reference_ids": [
+      "23a56ad5fcd7c1414238",
+      "4792f97e24bf81c0ce79"
+    ],
+    "retained": [
+      "Arroyo azul como continuidad territorial y profundidad por montañas superpuestas.",
+      "Contraste entre suelo ocre, azul oscuro y acentos de rojo."
+    ],
+    "rejected": [
+      "Dientes sobre ropa, piedra levantada como amenaza y gestos de violencia.",
+      "Petroglifos, estampados o símbolos no sustentados; rosetas botánicas y sol ornamental.",
+      "Personajes grandes, caras modeladas y piel ilustrada. No transformar la ficha de identidad en retrato ni copiar variantes de otras narraciones."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar arroyo y capas, pero cambiar el centro de lectura a piedra abstracta y rojo que se convierte físicamente en plumas, sin agresor.",
+      "acto": "La tierra participa en la transformación: cavidad orgánica que conserva tumas bajo plantas secas, no escena de castigo corporal.",
+      "huella": "Del repertorio de frutos y semillas tomar la relación semilla/piedra, aislada en un solo motivo; no reutilizar escena ni grabados."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "worunka__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/worunka__identity_sheet--canon.jpeg",
+      "sha256": "151ab78f1b758c2636704251c60fce58344201ebd702f9f85010ae8aa98ca66c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "worunka__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/worunka__state_sheet--estados.jpeg",
+      "sha256": "6d57d3399ef95a2cfb6110a287396f3e37b55f5e959ca8da2df933a36059bc4b",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "sangre_toro__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/sangre_toro__identity_sheet--canon.jpeg",
+      "sha256": "0366abb18e7d2efbb1f1c50e7526f908fd586b4940e38d2b261ead399974b384",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "carpintero_rojo__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/carpintero_rojo__identity_sheet--canon.jpeg",
+      "sha256": "13408295e1a6cfa2f8ed7562169bd4490e1e1e4000308c5f7cb56821ab07cc90",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "guacamayo_rojo__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/guacamayo_rojo__identity_sheet--canon.jpeg",
+      "sha256": "b01336706c59a60f7128d1e0f83974d3510f539ae69b8dc7ff20a5161180bcea",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "color_aves_worunka__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/color_aves_worunka__phenomenon_rule--canon.jpeg",
+      "sha256": "b86c06e6040d5d5150a9e977b0dee8e05ad589dd8ba3e46c815c83613a300fa0",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "piedra_worunka__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/piedra_worunka__object_sheet--canon.jpeg",
+      "sha256": "d9d86d3e4f639fba827638d639cfdc02ce929b46cb8bfdb63a3d5b1012979d0e",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "origen_tumas_worunka__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/origen_tumas_worunka__phenomenon_rule--canon.jpeg",
+      "sha256": "ddca6d5c76ae9180d3b1e2ac29efd51cf3d58d9c091bd4d49f24d1cafad9fb4e",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "matas_fruto_rojo_worunka__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/matas_fruto_rojo_worunka__botanical_sheet--canon.jpeg",
+      "sha256": "964246b135caed600fa468c55548eae16009625d99ca95de453a1f28df2ee616",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "sequia_worunka__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium-corrections-05/sequia_worunka__phenomenon_rule--canon.jpeg",
+      "sha256": "d2da526f64aefc265d8257056f78fcd014915a432c44c03c50a3ed6f2ca4194a",
+      "qa_status": "PASS_AFTER_CORRECTION_05"
+    },
+    {
+      "model_id": "arroyo_worunka__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-24-la-india-worunka-medium/arroyo_worunka__spatial_model--canon.jpeg",
+      "sha256": "7baf6785a9de67f36bec0c1ea0657edfb59a250281072d2221a38fca4d843983",
+      "qa_status": "PASS"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "worunka__identity_sheet",
+        "worunka__state_sheet",
+        "sangre_toro__identity_sheet",
+        "carpintero_rojo__identity_sheet",
+        "guacamayo_rojo__identity_sheet",
+        "color_aves_worunka__phenomenon_rule",
+        "piedra_worunka__object_sheet",
+        "origen_tumas_worunka__phenomenon_rule",
+        "matas_fruto_rojo_worunka__botanical_sheet",
+        "sequia_worunka__phenomenon_rule",
+        "arroyo_worunka__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-india-worunka/wayuu-worunka-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "33056db9264ca2314033fcc9a8fd8df63b06cf3945648cd74a4e583fc979c4ef",
+      "narrative_event_ids": [
+        "piedra_aves"
+      ],
+      "editorial_translation": "La fuente vincula piedra y rojo de aves; hacer del color una lámina física es metáfora editorial. La masa pétrea evoca a Worunka sin reconstruir anatomía ni un monumento real.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Piedra del arroyo y aves distintas.",
+        "impossible_behavior": "La veta mineral se levanta en láminas que se vuelven plumas.",
+        "narrative_effect": "El rojo compartido relaciona memoria de Worunka y origen de aves.",
+        "agency": "Memoria de Worunka y transformación del territorio, no sufrimiento espectacular ni aprobación de jerarquías.",
+        "physical_translation": "Tres tiras de papel mate conectadas a la veta y a capas de pluma; siete planos de paisaje.",
+        "visible_test": "¿Tres aves distintas reciben rojo de una sola veta de piedra, con el conjunto lejos del título?",
+        "event_ids": [
+          "piedra_aves"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "worunka__identity_sheet",
+        "worunka__state_sheet",
+        "sangre_toro__identity_sheet",
+        "carpintero_rojo__identity_sheet",
+        "guacamayo_rojo__identity_sheet",
+        "color_aves_worunka__phenomenon_rule",
+        "piedra_worunka__object_sheet",
+        "origen_tumas_worunka__phenomenon_rule",
+        "matas_fruto_rojo_worunka__botanical_sheet",
+        "sequia_worunka__phenomenon_rule",
+        "arroyo_worunka__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-india-worunka/wayuu-worunka-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "378b49bda61f6709a9fa7d12c62d8f64186977d5e9255a5f6879e4c144f36ee2",
+      "narrative_event_ids": [
+        "tumas_subsuelo"
+      ],
+      "editorial_translation": "Tumas enterradas, sequía y lluvia proceden de la narración. Raíces que sostienen piedras y tierra envolvente son metáfora editorial, no explicación botánica o geológica. Se conserva el conteo de seis de la ficha climática como continuidad de producción.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Tierra seca, raíces y piedras.",
+        "impossible_behavior": "La tierra se recoge como envoltura que conserva el antiguo fruto en forma mineral.",
+        "narrative_effect": "Permite leer tumas enterradas y retorno lejano de lluvia sin cuerpos sufrientes.",
+        "agency": "Memoria de Worunka y transformación del territorio, no sufrimiento espectacular ni aprobación de jerarquías.",
+        "physical_translation": "Un arco continuo de suelo y cavidad de raíces, seis formas sólidas coral en dos grupos separados.",
+        "visible_test": "¿Seis piedras coral, en dos grupos de tres, permanecen bajo un mismo pliegue de tierra seca, con lluvia sólo al fondo?",
+        "event_ids": [
+          "tumas_subsuelo"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "simbolo_central",
+      "canon_model_ids": [
+        "worunka__identity_sheet",
+        "worunka__state_sheet",
+        "sangre_toro__identity_sheet",
+        "carpintero_rojo__identity_sheet",
+        "guacamayo_rojo__identity_sheet",
+        "color_aves_worunka__phenomenon_rule",
+        "piedra_worunka__object_sheet",
+        "origen_tumas_worunka__phenomenon_rule",
+        "matas_fruto_rojo_worunka__botanical_sheet",
+        "sequia_worunka__phenomenon_rule",
+        "arroyo_worunka__spatial_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/la-india-worunka/wayuu-worunka-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "16e78dfec8fb99af27a39db59594691f37d9f9910144db5407ef85becda4a807",
+      "narrative_event_ids": [
+        "tumas_subsuelo"
+      ],
+      "editorial_translation": "Objeto simbólico editorial derivado del vínculo semilla/piedra: no se afirma que las tumas reales germinen ni que sea emblema tradicional.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Semilla y piedra tuma.",
+        "impossible_behavior": "Una sola forma conserva raíz orgánica y peso mineral.",
+        "narrative_effect": "Condensa el tránsito fruto-semilla-tuma en un símbolo, sin tercera escena.",
+        "agency": "Memoria de Worunka y transformación del territorio, no sufrimiento espectacular ni aprobación de jerarquías.",
+        "physical_translation": "Papel coral compacto que se abre por debajo en raíz umber, sombra física y fondo plano.",
+        "visible_test": "¿Un único motivo semilla-mineral conserva una raíz de papel, sin paisaje, joya ni varios objetos?",
+        "event_ids": [
+          "tumas_subsuelo"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "memory"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "La tierra guarda la memoria de lo que alimentaba.",
+        "carrier": "Una semilla mineral con raíz de papel.",
+        "operation": "El mismo material compacto se abre en raíz.",
+        "story_connection": "Frutos y semillas que se relacionan con tumas enterradas en el mito.",
+        "visible_test": "¿Un único motivo semilla-mineral conserva una raíz de papel, sin paisaje, joya ni varios objetos?"
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-worunka-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "mitos-image-dispatch/v1",
+  "date": "2026-09-07",
+  "model": "gpt-image-2",
+  "mechanism": "official imagegen CLI, text-only images.generate",
+  "credential": "existing authorized ignored .env; no credential value persisted",
+  "local_reference_uploads": 0,
+  "jobs": [
+    {
+      "act": "entrada",
+      "size": "1536x864",
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-17-rich-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "9f4ec5de7d30f0c7763c48e3605f5f9efe5b69cccb167f3b761f2a16b689a016",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/entrada.jpeg",
+      "session_id": 33481,
+      "status": "dispatched"
+    },
+    {
+      "act": "acto",
+      "size": "864x1536",
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-17-rich-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "98f94dc8f7cc6df2dfdfc19f3dd59c30c81519ffde9aa4a5a4a7f294205ecc96",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/acto.jpeg",
+      "session_id": 23656,
+      "status": "dispatched"
+    },
+    {
+      "act": "huella",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-triptych-17-rich-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "5710457ee4bef89a64c19925d65266e3dd9357b0da705381f5ba9a6e9cf64ce5",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-17-rich-01/huella.jpeg",
+      "session_id": 47840,
+      "status": "dispatched"
+    }
+  ]
+}

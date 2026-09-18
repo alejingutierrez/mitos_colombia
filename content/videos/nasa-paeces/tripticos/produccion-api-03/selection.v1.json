@@ -1,0 +1,731 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "status": "five_triptychs_complete_editorial_selection_ready_for_authorized_publication",
+  "community": "Nasa–Paeces",
+  "new_triptychs": 5,
+  "new_selected_images": 15,
+  "total_triptychs_with_previous": 11,
+  "total_selected_images_with_previous": 33,
+  "corpus_digest": "967750618150fd26c0087402136d9a0a3c615ffdc8d201612c02155a4fd49533",
+  "source_snapshot": "content/videos/nasa-paeces/biblia/research/corpus-snapshot-20260912.json",
+  "source_snapshot_sha256": "5911cfcdcf89dc4f1e71d30999d3adfae0d75f152667645cba2d680d93711477",
+  "previous_selections": [
+    "content/videos/nasa-paeces/tripticos/produccion-api-01/el-trueno.selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-02/selection.v1.json"
+  ],
+  "myths": [
+    {
+      "myth_id": 435,
+      "slug": "formacion-del-rio-paez",
+      "title": "Formación del río Páez",
+      "narrative_sha256": "cb17491979fe3440d0d95d09627d6ca21247a47186c7ef650c5cb27103419232",
+      "variant": "Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 436,
+      "slug": "chauteh",
+      "title": "Chautéh",
+      "narrative_sha256": "9d2a3c629b4aaeba1b0fcdff29aedfd8d92872acef4bdba5e3aafb6bc0cfc58e",
+      "variant": "Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 437,
+      "slug": "el-mar",
+      "title": "El mar",
+      "narrative_sha256": "057e8a2affe5ca0e8d1b7b8043070c3368aa95fb5f9bfaec3305cf41f6f7e574",
+      "variant": "Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 438,
+      "slug": "piedra-alta",
+      "title": "Piedra Alta",
+      "narrative_sha256": "52c438bf61847b977cc112ea2ebd278a1383a7a20b2da581a75b69e3497d89a3",
+      "variant": "Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/huella-v1.jpeg"
+      ]
+    },
+    {
+      "myth_id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "title": "Pedro y Tomás Dimales",
+      "narrative_sha256": "17ba61bc6346df88a3063109fcee13711a7a3a045dbc07f877f82bb91e2665fe",
+      "variant": "Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.",
+      "assets": [
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/entrada-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/acto-v1.jpeg",
+        "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/huella-v1.jpeg"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "myth_id": 435,
+      "slug": "formacion-del-rio-paez",
+      "title": "Formación del río Páez",
+      "variant": "Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.",
+      "role": "entrada",
+      "label": "La sed abre el agua",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/entrada-v1.jpeg",
+      "sha256": "b6e642ef6a20ed9aed81c7be7d461c50e6ea6a1cb240bcdf1042d192e8b2f573",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-entrada-v1.txt",
+      "prompt_sha256": "99159b5df32e8f2987342fb0e833366e92657350821802d95b7fa79d69ef131e",
+      "references": [
+        {
+          "unit_id": "P05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p05-master-v3.jpeg",
+          "sha256": "0f73d9b55a684aa80429c09b44e8b60c62996772bab75b2683eb8f1b9be5653e"
+        },
+        {
+          "unit_id": "V05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v05-master-v3.jpeg",
+          "sha256": "28edd4bbff924abf7a6caabab9cb9fa1295abd4a350dd8f20daef6c15d695095"
+        },
+        {
+          "unit_id": "U02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u02-master-v2.jpeg",
+          "sha256": "0293cb33dcb0ee17e5354b6a1bad1e119240383bf6f2d6d7f4206141f080d50b"
+        }
+      ],
+      "qa": "Chautéh libre y vestido bebe con un carrizo único en pantano de papel; dos manos coherentes, orilla seca, sin estado tuerto ni instrucciones o ubicación científica."
+    },
+    {
+      "myth_id": 435,
+      "slug": "formacion-del-rio-paez",
+      "title": "Formación del río Páez",
+      "variant": "Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.",
+      "role": "acto",
+      "label": "El río aprende las vueltas",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/acto-v1.jpeg",
+      "sha256": "4e0b3d9949e2e8f665bd5d81946e59e4ee715821bf352c40ce93294d2fdd2e4f",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-acto-v1.txt",
+      "prompt_sha256": "c7e209ff0ab206e9d2a0e3a986d9eb9cf8c8734a927b4f0cbd680dd55e549ac6",
+      "references": [
+        {
+          "unit_id": "P05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p05-master-v3.jpeg",
+          "sha256": "0f73d9b55a684aa80429c09b44e8b60c62996772bab75b2683eb8f1b9be5653e"
+        },
+        {
+          "unit_id": "V05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v05-master-v3.jpeg",
+          "sha256": "28edd4bbff924abf7a6caabab9cb9fa1295abd4a350dd8f20daef6c15d695095"
+        },
+        {
+          "unit_id": "L02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l02-master-v2.jpeg",
+          "sha256": "c466119c43dc9b5815bb4f94cb3546a06f30804fca6814e7e40f4319c41cc838"
+        }
+      ],
+      "qa": "Una figura de Chautéh corre sobre sendero seco con corriente serpenteante detrás; anatomía legible, ropa coherente, canyon de capas y curvas sin monstruo ni peligro representado."
+    },
+    {
+      "myth_id": 435,
+      "slug": "formacion-del-rio-paez",
+      "title": "Formación del río Páez",
+      "variant": "Victoriano Piñakué, episodio de sed, pantano, carrizo y agua que sigue sus curvas. No situar el nacimiento en un punto exacto ni convertir la acción en creación deliberada o explicación científica.",
+      "role": "huella",
+      "label": "La memoria de una curva",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/huella-v1.jpeg",
+      "sha256": "33a39d400e05b4a6bc00d53ba1e71df18ce0940cc37825fbaee918b01e84df06",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/formacion-del-rio-paez-huella-v1.txt",
+      "prompt_sha256": "447151ecb85210eb340c88d3594cada0882e8a1730900322cd202e380ea712a0",
+      "references": [
+        {
+          "unit_id": "U02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u02-master-v2.jpeg",
+          "sha256": "0293cb33dcb0ee17e5354b6a1bad1e119240383bf6f2d6d7f4206141f080d50b"
+        },
+        {
+          "unit_id": "L02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l02-master-v2.jpeg",
+          "sha256": "c466119c43dc9b5815bb4f94cb3546a06f30804fca6814e7e40f4319c41cc838"
+        }
+      ],
+      "qa": "Un carrizo único desemboca en cinta azul continua con curvas amplias; macro de papel y sombra, sin cielo, personajes, mapas ni ritual."
+    },
+    {
+      "myth_id": 436,
+      "slug": "chauteh",
+      "title": "Chautéh",
+      "variant": "Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.",
+      "role": "entrada",
+      "label": "El regalo que parece una medida",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/entrada-v1.jpeg",
+      "sha256": "9ee40a22feb7f6d495dfda7b288a507e1dec06b2a1f56ae3dda1f3accbb60e7d",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-entrada-v1.txt",
+      "prompt_sha256": "51946a4fd3b59d1283e4f5a57915ae7e817ef2b37fb879b90e5a52cee80928fc",
+      "references": [
+        {
+          "unit_id": "P05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p05-master-v3.jpeg",
+          "sha256": "0f73d9b55a684aa80429c09b44e8b60c62996772bab75b2683eb8f1b9be5653e"
+        },
+        {
+          "unit_id": "C05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c05-master-v2.jpeg",
+          "sha256": "f2f408eb35b12b88d22ade21f955477a3f5afa9e5a60453d90467cdc6c649c11"
+        },
+        {
+          "unit_id": "U04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u04-master-v2.jpeg",
+          "sha256": "fc2a125841d689a243f8dcdfbee65c916218bb5404d297d529f874e7fb7b99e0"
+        },
+        {
+          "unit_id": "L06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l06-master-v3.jpeg",
+          "sha256": "11cee3988ebf5026b8a6d7e87b801f119377ef4cc336ad8f152dad4f751fadfc"
+        }
+      ],
+      "qa": "Dos adultos ante un único baúl abierto y vacío; carpintero presenta y Chautéh libre inspecciona desde fuera, cuerpos y manos coherentes, sin cautivo ni lesión."
+    },
+    {
+      "myth_id": 436,
+      "slug": "chauteh",
+      "title": "Chautéh",
+      "variant": "Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.",
+      "role": "acto",
+      "label": "El carpintero cambia de trabajo",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/acto-v1.jpeg",
+      "sha256": "e4e9e21416ab0629f6511c292cad79725acf1b0290a276c5b8785b736748f0a2",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-acto-v1.txt",
+      "prompt_sha256": "be42b908ce1f135c1f09042b6ad366794bea4fe186a92114ad9f064d7f871a8f",
+      "references": [
+        {
+          "unit_id": "E06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/e06-master-v2.jpeg",
+          "sha256": "7402b2e5670685284cc6f3e20b54801ecd78999555263947c60ec9f0ccb47b70"
+        },
+        {
+          "unit_id": "L04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l04-master-v2.jpeg",
+          "sha256": "bf20ef46ce52b9ec0872a8a41619ceb9494ca35553c32a4910db79474600a9ce"
+        }
+      ],
+      "qa": "Un solo pájaro carpintero de papel, completo y coherente, junto al tronco; sin figura humana ni transformación corporal híbrida."
+    },
+    {
+      "myth_id": 436,
+      "slug": "chauteh",
+      "title": "Chautéh",
+      "variant": "Victoriano Piñakué, episodio del baúl y transformación del carpintero. Elegir el regalo antes del encierro y el ave posterior; omitir representación de la lesión sin alterar el desenlace. No mezclar la caja de bronce de Santo Tomás ni Chaikin.",
+      "role": "huella",
+      "label": "Lo cerrado deja dos miradas",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/huella-v1.jpeg",
+      "sha256": "3bbcfdbffc64c19ac46d606041fba0b9f9d951fb9438c27ccdb16d23d416a215",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/chauteh-huella-v1.txt",
+      "prompt_sha256": "7188106acab85229230f9b1d20a82ce9fb2c69cf0763d0a7d5507a34cded58ba",
+      "references": [
+        {
+          "unit_id": "U04",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u04-master-v2.jpeg",
+          "sha256": "fc2a125841d689a243f8dcdfbee65c916218bb5404d297d529f874e7fb7b99e0"
+        }
+      ],
+      "qa": "Un baúl cerrado con exactamente dos orificios frontales oscuros; síntesis material limpia, sin ojos, cuerpo humano ni lectura de ataúd."
+    },
+    {
+      "myth_id": 437,
+      "slug": "el-mar",
+      "title": "El mar",
+      "variant": "Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.",
+      "role": "entrada",
+      "label": "La prueba del río",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/entrada-v1.jpeg",
+      "sha256": "961cc3c2e4a6c99246105464a90a52d858cda506f20e372a8b38e1b1439b67fc",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-entrada-v1.txt",
+      "prompt_sha256": "5f8089b2785a36a4b5663bdde7b4152a994bceb804c4536c45af3abefa635c09",
+      "references": [
+        {
+          "unit_id": "P06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p06-master-v2.jpeg",
+          "sha256": "e3a3538709c65f0f0d5ca1675d65d9b503c2c9a664926393c82e5d2307fcdac9"
+        },
+        {
+          "unit_id": "P07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p07-master-v2.jpeg",
+          "sha256": "0e423a541fefd8f2b40c276eeb2b0e727bb1ca2ab60356584d11413a24ec6eb1"
+        },
+        {
+          "unit_id": "L02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l02-master-v2.jpeg",
+          "sha256": "c466119c43dc9b5815bb4f94cb3546a06f30804fca6814e7e40f4319c41cc838"
+        }
+      ],
+      "qa": "Dos hermanos con identidad y vestuario consistentes junto al río; gestos y cuerpos coherentes, terreno seco y sin personajes adicionales."
+    },
+    {
+      "myth_id": 437,
+      "slug": "el-mar",
+      "title": "El mar",
+      "variant": "Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.",
+      "role": "acto",
+      "label": "Las aguas ya no tienen un borde cercano",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/acto-v1.jpeg",
+      "sha256": "45c517c09538bba32410f1e76c37f075eb741dc40dbef169578f189f76859149",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-acto-v1.txt",
+      "prompt_sha256": "8c7a1d615bbdfdb607259c0046611e66302e26c1e83fde8e6b03ea2463316f66",
+      "references": [
+        {
+          "unit_id": "P06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p06-master-v2.jpeg",
+          "sha256": "e3a3538709c65f0f0d5ca1675d65d9b503c2c9a664926393c82e5d2307fcdac9"
+        },
+        {
+          "unit_id": "P07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p07-master-v2.jpeg",
+          "sha256": "0e423a541fefd8f2b40c276eeb2b0e727bb1ca2ab60356584d11413a24ec6eb1"
+        },
+        {
+          "unit_id": "L10",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l10-master-v2.jpeg",
+          "sha256": "26a8dc6832a71275be98d5f173beb7ec15de4b931f11212cb7374f3a470574ac"
+        }
+      ],
+      "qa": "Dos hermanos adultos distinguibles por vestuario; Pedro señala un mar amplio desde terreno seco. Sin barcos, represas ni geografía añadida."
+    },
+    {
+      "myth_id": 437,
+      "slug": "el-mar",
+      "title": "El mar",
+      "variant": "Vicente Puchi, prueba entre Tomás y Pedro: río liberado y aguas reunidas en el mar. No importar Piedra Alta o faenas de Guillermo Guagás, ni ubicar una costa junto a Calderas. Tomás Dimales se mantiene como identidad editorial distinta del apóstol.",
+      "role": "huella",
+      "label": "Una corriente se vuelve extensión",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/huella-v1.jpeg",
+      "sha256": "9126adac9e1e9e7f871eea0fb5e20d1704cb77c7e2f6552aecca283dd729b85d",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/el-mar-huella-v1.txt",
+      "prompt_sha256": "54200f349e06dc38ec80c4cf7b3a98084dc6bb09f99df19a68c9e6412db98d5a",
+      "references": [
+        {
+          "unit_id": "L02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l02-master-v2.jpeg",
+          "sha256": "c466119c43dc9b5815bb4f94cb3546a06f30804fca6814e7e40f4319c41cc838"
+        },
+        {
+          "unit_id": "L10",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l10-master-v2.jpeg",
+          "sha256": "26a8dc6832a71275be98d5f173beb7ec15de4b931f11212cb7374f3a470574ac"
+        }
+      ],
+      "qa": "Una corriente estrecha desemboca en un plano azul amplio; abstracción de papel sin mapa ni símbolos rituales inventados."
+    },
+    {
+      "myth_id": 438,
+      "slug": "piedra-alta",
+      "title": "Piedra Alta",
+      "variant": "Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.",
+      "role": "entrada",
+      "label": "Donde todavía no había peña",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/entrada-v1.jpeg",
+      "sha256": "17c00e85aa5eb26db562259814c1ee55d0e3bdcdc231c8d2094e3240d40464bc",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-entrada-v1.txt",
+      "prompt_sha256": "99959b381e6365507e6e2c8734a6c707780b976766b539998d8125990061b785",
+      "references": [
+        {
+          "unit_id": "P06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p06-master-v2.jpeg",
+          "sha256": "e3a3538709c65f0f0d5ca1675d65d9b503c2c9a664926393c82e5d2307fcdac9"
+        },
+        {
+          "unit_id": "P07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p07-master-v2.jpeg",
+          "sha256": "0e423a541fefd8f2b40c276eeb2b0e727bb1ca2ab60356584d11413a24ec6eb1"
+        },
+        {
+          "unit_id": "L03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+          "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738"
+        }
+      ],
+      "qa": "Dos hermanos dialogan sobre una explanada sin peña central; espacio claro para el acontecimiento posterior y anatomía coherente."
+    },
+    {
+      "myth_id": 438,
+      "slug": "piedra-alta",
+      "title": "Piedra Alta",
+      "variant": "Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.",
+      "role": "acto",
+      "label": "La palabra encuentra altura",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/acto-v1.jpeg",
+      "sha256": "88c87856ba7889bc82aa58f8f657896f5f800bd1b3adf3d71835e6f5e6415e91",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-acto-v1.txt",
+      "prompt_sha256": "5dbb182de8fa16980c8feba19fe2cedcb773b9bddebfe3680929abb14f225727",
+      "references": [
+        {
+          "unit_id": "P06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p06-master-v2.jpeg",
+          "sha256": "e3a3538709c65f0f0d5ca1675d65d9b503c2c9a664926393c82e5d2307fcdac9"
+        },
+        {
+          "unit_id": "P07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p07-master-v2.jpeg",
+          "sha256": "0e423a541fefd8f2b40c276eeb2b0e727bb1ca2ab60356584d11413a24ec6eb1"
+        },
+        {
+          "unit_id": "V06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v06-master-v2.jpeg",
+          "sha256": "5d773c41847c1f3468d9c677ffeefc49d8d324f5b8871b261f90e66be47f146b"
+        }
+      ],
+      "qa": "Una sola peña muy alta domina la escena; los dos hermanos pequeños observan desde terreno seco, sin impacto ni petrificación humana."
+    },
+    {
+      "myth_id": 438,
+      "slug": "piedra-alta",
+      "title": "Piedra Alta",
+      "variant": "Vicente Puchi, diálogo, señalamiento y aparición de una peña en Calderas antes plana. No atribuirla a Chautéh, identificar una roca moderna ni importar petrificaciones humanas.",
+      "role": "huella",
+      "label": "Una superficie aprende a levantarse",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/huella-v1.jpeg",
+      "sha256": "2be1f4c8a85a25596f42729b360471bfb819d2b1681a7b433643ad7a5e15e4e3",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/piedra-alta-huella-v1.txt",
+      "prompt_sha256": "2d46a7c5b3a814084a923f7862ef1ab8be097b9115898a316fad98d977de1519",
+      "references": [
+        {
+          "unit_id": "V06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v06-master-v2.jpeg",
+          "sha256": "5d773c41847c1f3468d9c677ffeefc49d8d324f5b8871b261f90e66be47f146b"
+        },
+        {
+          "unit_id": "L03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+          "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738"
+        }
+      ],
+      "qa": "Una elevación de pliegues grises emerge de una superficie ocre continua; síntesis de papel sin figura humana, pedestal ni símbolos añadidos."
+    },
+    {
+      "myth_id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "title": "Pedro y Tomás Dimales",
+      "variant": "Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.",
+      "role": "entrada",
+      "label": "La ayuda comienza con un encargo",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/entrada-v1.jpeg",
+      "sha256": "2ff3c6a9f0e85f610b9241e9401dab88fd5a6be44c92ddda6bb06ac02d7cc456",
+      "width": 1536,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-entrada-v1.txt",
+      "prompt_sha256": "43f1f2c8d606c75af8992e0a82a782ddd4091b0019efec0e7473f301751a40e7",
+      "references": [
+        {
+          "unit_id": "P06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p06-master-v2.jpeg",
+          "sha256": "e3a3538709c65f0f0d5ca1675d65d9b503c2c9a664926393c82e5d2307fcdac9"
+        },
+        {
+          "unit_id": "P07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p07-master-v2.jpeg",
+          "sha256": "0e423a541fefd8f2b40c276eeb2b0e727bb1ca2ab60356584d11413a24ec6eb1"
+        },
+        {
+          "unit_id": "L05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l05-master-v3.jpeg",
+          "sha256": "16f855818c0fa6e277327d66f61226612c4f9a29568d59ddc7b83af83ee13bac"
+        },
+        {
+          "unit_id": "U07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u07-master-v2.jpeg",
+          "sha256": "cec3b081dcd91fa203fb1e5d43afb6a17ba06d34f22893f7ee8117db12df3b70"
+        }
+      ],
+      "qa": "Dos hermanos coherentes con la biblia intercambian un único recipiente de semillas en terreno de cultivo; manos, ropa y número de personajes correctos."
+    },
+    {
+      "myth_id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "title": "Pedro y Tomás Dimales",
+      "variant": "Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.",
+      "role": "acto",
+      "label": "Toda la semilla en un hueco",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/acto-v1.jpeg",
+      "sha256": "c1ddd8accebf662d096d67537c0094a61ada6c56e89a157c3a0be9c5cb59d26a",
+      "width": 1024,
+      "height": 1536,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-acto-v1.txt",
+      "prompt_sha256": "552e8847047dfb85d0cecd559046a10b7206e64382ba6bd63822064044bb6d6b",
+      "references": [
+        {
+          "unit_id": "P06",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p06-master-v2.jpeg",
+          "sha256": "e3a3538709c65f0f0d5ca1675d65d9b503c2c9a664926393c82e5d2307fcdac9"
+        },
+        {
+          "unit_id": "U07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u07-master-v2.jpeg",
+          "sha256": "cec3b081dcd91fa203fb1e5d43afb6a17ba06d34f22893f7ee8117db12df3b70"
+        },
+        {
+          "unit_id": "L05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l05-master-v3.jpeg",
+          "sha256": "16f855818c0fa6e277327d66f61226612c4f9a29568d59ddc7b83af83ee13bac"
+        }
+      ],
+      "qa": "Pedro arrodillado vuelca un recipiente de maíz hacia un único hoyo de siembra, con semillas concentradas; sin daño corporal ni anticipar el desenlace."
+    },
+    {
+      "myth_id": 439,
+      "slug": "pedro-y-tomas-dimales",
+      "title": "Pedro y Tomás Dimales",
+      "variant": "Guillermo Guagás, ayuda en la labranza: encargo y toda la semilla en un solo hueco. No mezclar el mar/Piedra Alta de Vicente Puchi ni imponer hermanos absolutamente bueno y malo.",
+      "role": "huella",
+      "label": "Lo concentrado no alcanza a repartir",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/huella-v1.jpeg",
+      "sha256": "7e9d9678d67b882f37a204ef3923d34df5a233cde45f55d524a536f91d188c75",
+      "width": 1024,
+      "height": 1024,
+      "model_requested": "gpt-image-2.5-sunburst",
+      "quality_requested": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-03/prompts/pedro-y-tomas-dimales-huella-v1.txt",
+      "prompt_sha256": "01485c82b49baa15031e77365a1203d3421ac7716cf889e0f87aba42ca297d1c",
+      "references": [
+        {
+          "unit_id": "U07",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u07-master-v2.jpeg",
+          "sha256": "cec3b081dcd91fa203fb1e5d43afb6a17ba06d34f22893f7ee8117db12df3b70"
+        },
+        {
+          "unit_id": "L05",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l05-master-v3.jpeg",
+          "sha256": "16f855818c0fa6e277327d66f61226612c4f9a29568d59ddc7b83af83ee13bac"
+        }
+      ],
+      "qa": "Un grupo concentrado de granos de maíz en una sola depresión de papel terroso; abstracción limpia sin plantas, personas ni iconografía ritual."
+    }
+  ],
+  "execution": [
+    {
+      "myth_id": 435,
+      "role": "huella",
+      "version": 1,
+      "chunk_id": "96b184",
+      "wall_time_seconds": 0.000001,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 18.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 436,
+      "role": "entrada",
+      "version": 1,
+      "chunk_id": "768326",
+      "wall_time_seconds": 3.75e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 31.7s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 435,
+      "role": "acto",
+      "version": 1,
+      "chunk_id": "d43cca",
+      "wall_time_seconds": 8.34e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 27.1s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 435,
+      "role": "entrada",
+      "version": 1,
+      "chunk_id": "16ff60",
+      "wall_time_seconds": 1.159425666,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 36.1s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/formacion-del-rio-paez/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 436,
+      "role": "huella",
+      "version": 1,
+      "chunk_id": "ef6f14",
+      "wall_time_seconds": 4.58e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 17.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 436,
+      "role": "acto",
+      "version": 1,
+      "chunk_id": "b02c8d",
+      "wall_time_seconds": 2.08e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 21.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/chauteh/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 437,
+      "role": "acto",
+      "version": 1,
+      "chunk_id": "311ea7",
+      "wall_time_seconds": 3.33e-7,
+      "exit_code": 0,
+      "original_token_count": 38,
+      "output": "Edit completed in 20.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 438,
+      "role": "entrada",
+      "session_id": 48356,
+      "version": 1,
+      "chunk_id": "d0a601",
+      "wall_time_seconds": 0.000002,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 36.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 437,
+      "role": "huella",
+      "session_id": 37878,
+      "version": 1,
+      "chunk_id": "9ec9ee",
+      "wall_time_seconds": 8.33e-7,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 18.0s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 438,
+      "role": "acto",
+      "session_id": 88098,
+      "version": 1,
+      "chunk_id": "f42182",
+      "wall_time_seconds": 5.42e-7,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 17.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/acto-v1.jpeg\n"
+    },
+    {
+      "myth_id": 437,
+      "role": "entrada",
+      "session_id": 43838,
+      "version": 1,
+      "chunk_id": "480583",
+      "wall_time_seconds": 0.000002042,
+      "exit_code": 0,
+      "original_token_count": 39,
+      "output": "Edit completed in 35.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/el-mar/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 438,
+      "role": "huella",
+      "session_id": 98005,
+      "version": 1,
+      "chunk_id": "0e7bd6",
+      "wall_time_seconds": 0.000001042,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "Edit completed in 17.9s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/piedra-alta/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 439,
+      "role": "huella",
+      "session_id": 7808,
+      "version": 1,
+      "chunk_id": "9c4977",
+      "wall_time_seconds": 2.91e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 17.6s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/huella-v1.jpeg\n"
+    },
+    {
+      "myth_id": 439,
+      "role": "entrada",
+      "session_id": 47094,
+      "version": 1,
+      "chunk_id": "a49a78",
+      "wall_time_seconds": 1.25e-7,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "Edit completed in 41.4s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/entrada-v1.jpeg\n"
+    },
+    {
+      "myth_id": 439,
+      "role": "acto",
+      "session_id": 23094,
+      "version": 1,
+      "chunk_id": "b2329f",
+      "wall_time_seconds": 1.67e-7,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "Edit completed in 19.8s.\nWrote /Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-03/pedro-y-tomas-dimales/acto-v1.jpeg\n"
+    }
+  ],
+  "max_concurrency_requested": 4,
+  "publication_authorized": true,
+  "publication": false,
+  "keyframes": false,
+  "cultural_certification": false
+}

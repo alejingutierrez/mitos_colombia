@@ -1,0 +1,50 @@
+{
+  "schema": "mitos-colombia-biblia-production/v3",
+  "batch_id": "wayuu-v3-production-02-aramai-medium-corrections-02",
+  "parent_batch_id": "wayuu-v3-production-02-aramai-medium",
+  "revision": "corrections-02",
+  "myth_slug": "aramai",
+  "asset_type": "bible_model",
+  "plan": "content/mitos-visuales/wayuu.v3.json",
+  "prepared_at": "2026-09-03",
+  "quality": "medium",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "generation_mode": "text_only_no_local_references",
+  "jobs": [
+    {
+      "id": "aramai__identity_sheet--canon",
+      "model_id": "aramai__identity_sheet",
+      "entity_id": "aramai",
+      "view_id": "canon",
+      "title": "Arámai · identidad",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/prompts/aramai__identity_sheet--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/aramai__identity_sheet--canon.jpeg",
+      "prompt_sha256": "6cb6231b2a979ef43766ddbba23e4dec09df36de829de1ecbc329ebe1fa5a4fe",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1024x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    },
+    {
+      "id": "wanuru__presence_model--canon",
+      "model_id": "wanuru__presence_model",
+      "entity_id": "wanuru",
+      "view_id": "canon",
+      "title": "Wanurü · presencia sin demonio ni cuerpo",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/prompts/wanuru__presence_model--canon.prompt.txt",
+      "output_file": "output/imagegen/wayuu-v3-production/wayuu-v3-production-02-aramai-medium-corrections-02/wanuru__presence_model--canon.jpeg",
+      "prompt_sha256": "8945590c86246912d44c1f775b3bcc954a2d2d862f142ddff7319e298feaf81b",
+      "provider": "OpenAI API",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "1536x1024",
+      "output_format": "jpeg",
+      "input_references": [],
+      "status": "prepared"
+    }
+  ]
+}

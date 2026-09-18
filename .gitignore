@@ -12,6 +12,7 @@ node_modules
 .claude/worktrees/
 
 artifacts/
+# (la regla de output/ vive más abajo, con su excepción medida)
 .env
 .env.*
 !.env.example
@@ -31,7 +32,6 @@ myths.db
 # Artefactos de ejecución de Playwright: logs de consola y capturas de prueba.
 # Las capturas de referencia de las plantillas viven en public/design-system/.
 .playwright-cli/
-output/playwright/
 
 # Volcados crudos de la investigación de keywords: los regeneran los scripts
 # de scripts/ads/. Sí se versionan los análisis (.md) y los payloads de
@@ -48,3 +48,65 @@ public/motifs/carousel/v1/
 
 # Payloads regenerables de las tandas de Higgsfield (se reemiten con mitos:tanda)
 scripts/tmp/
+
+# Binarios de salida de los pipelines de imagen y video: 4,9 GB de jpeg y png
+# que la tanda vuelve a emitir.
+#
+# Excepción medida: dentro de output/ vive también conocimiento que NO se
+# regenera —los freeze.json, que son el contrato exacto con el que se produjo
+# cada pieza y sin los cuales no se puede reproducir; los manifest.json; los
+# requests-*.jsonl y las actas en .md—. Son 18,7 MB contra 4,9 GB. Ignorarlos
+# con el resto fue un error del 2026-09-16 que dejó 41 freezes fuera de git,
+# incluido el que la directiva de dirección huitoto cita como referencia.
+output/**
+!output/**/
+!output/**/freeze*.json
+!output/**/manifest.json
+!output/**/requests*.jsonl
+!output/**/*.md
+
+# Área de trabajo de una sesión: descargas, PDFs intermedios, payloads.
+tmp/
+
+# Worktrees de Claude Code: copias completas del repo. El trabajo vive en
+# la rama de cada uno, no en la copia.
+.claude/worktrees/
+
+# Todo .claude/ salvo launch.json y skills/: settings.local.json y sus respaldos
+# guardan los permisos de una máquina concreta y es donde más fácil se cuela un
+# token. Los skills, en cambio, son proceso del repo y se versionan.
+.claude/*
+!.claude/launch.json
+!.claude/skills/
+
+# Listas temporales del montador de stop-motion (las regenera montar.mjs)
+content/videos/**/.concat-*.txt
+
+# Salidas derivadas del laboratorio de stop-motion: los fotogramas estabilizados
+# se rehacen gratis desde los generados (`estabilizar.mjs`), así que se versiona
+# el plató y la zona de acción —que explican el resultado— pero no las 33 copias.
+content/videos/muiscas/lab-stopmotion/*/*-estab/f*.jpg
+content/videos/muiscas/lab-stopmotion/*/tmp-est/
+content/videos/muiscas/lab-stopmotion/*/compuesto*/f*.jpg
+content/videos/muiscas/lab-stopmotion/*/hoja-alineada/
+# Los recortes con alfa del laboratorio de stop-motion pesan 4 MB cada uno (PNG
+# RGBA a 1088x1920) y se rehacen por $0,48: se versiona lo compuesto, que es lo
+# que explica el resultado, no el material crudo.
+content/videos/muiscas/lab-stopmotion/*/recortes-*/
+content/videos/muiscas/lab-stopmotion/*/hoja-recorte/
+content/videos/muiscas/lab-stopmotion/*/tiras/
+content/videos/muiscas/lab-stopmotion/*/individual/
+content/videos/muiscas/lab-stopmotion/*/plancha/tira-*.png
+scripts/videos/.bin/
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/recortes/
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/hoja-recortes.png
+content/videos/muiscas/videos/huitaca/v2/reel/.*
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/fondo/alineado/
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/fondo/crudo/
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/flipbook/redibujos/
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/flipbook/.exposicion.txt
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/flipbook*/redibujos*/
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/flipbook*/.exposicion.txt
+content/videos/muiscas/videos/huitaca/v2/planos-out/*/flipbook*/frames/
+content/videos/muiscas/comparador/
+content/videos/muiscas/inventario-mp4.json

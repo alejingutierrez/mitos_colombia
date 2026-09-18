@@ -1,0 +1,250 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-indio-pushalna": {
+      "titulo": "El indio Pushaina",
+      "canon_models": [
+        "pushaina__identity_sheet",
+        "pushaina__state_sheet",
+        "gallinazo_pushaina__identity_sheet",
+        "anillo_oculto_pushaina__object_sheet",
+        "ofrenda_alimento_pushaina__object_sheet",
+        "casa_grande_pushaina__spatial_model",
+        "presencia_invisible_pushaina__presence_model"
+      ],
+      "evidence": [
+        {
+          "id": "published_pushaina",
+          "type": "project_narrative",
+          "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-pushalna.json",
+          "supports": "Texto público congelado: retorno, presencia, anillo, metamorfosis y hambre.",
+          "limits": "Presencia externa, anillo escondido por familia y rito final son ampliaciones editoriales; no atribuirlas literalmente a Chaves."
+        },
+        {
+          "id": "chaves_315_316",
+          "type": "primary_narrative_record",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "pages": "315–316, PDF 11–12",
+          "supports": "Retorno, voz sin cuerpo, comida, conocimiento del anillo y formas animales.",
+          "limits": "Transcripción mediada; no ofrece retrato ni vestuario exacto. No representar prueba sexualizada ni muertes."
+        },
+        {
+          "id": "bible_lot14",
+          "type": "internal_visual_research",
+          "path": "docs/wayuu-lote-14-pushaina-v3.md",
+          "supports": "Identidad y cultura material diferenciada; animal, anillo, platos, arquitectura.",
+          "limits": "Colores, corte y geometría son decisiones editoriales reversibles."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "pushaina__identity_sheet",
+          "decision": "Conservar conjunto completo, pelo negro corto y womu; aplanar rostro a silueta, sin cara facetada del modelo."
+        },
+        {
+          "model_id": "pushaina__state_sheet",
+          "decision": "Elegir sólo gallinazo, no reunir los cinco animales en una escena. Sombra convertida en ave es metáfora editorial, no episodio añadido."
+        },
+        {
+          "model_id": "anillo_oculto_pushaina__object_sheet",
+          "decision": "Un único anillo liso, no tres vistas simultáneas ni gema. La lámina de pared revelada es recurso visual, no poder telequinético."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-indio-pushalna",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-pushalna.json",
+        "target_content_sha256": "0168590b318aac963533e1814489c443d01bcd6e7b85d517c103f7bf5213dc79",
+        "summary": "Tras un retorno extraordinario, Pushaina está ligado a formas animales, conocimiento de lo oculto y una demanda de alimento. Estas tres piezas expresan transformación, descubrimiento y hambre; no muestran caída, muerte, prueba sexualizada ni ceremonia final. No se dibuja una entidad externa ni se afirma que domine sus dones.",
+        "events": [
+          {
+            "id": "metamorfosis",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_315_316",
+            "action": "Pushaina se transforma en gallinazo."
+          },
+          {
+            "id": "anillo",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_315_316",
+            "action": "Conoce el paradero de un anillo."
+          },
+          {
+            "id": "hambre",
+            "provenance": "historical_core",
+            "required": true,
+            "source": "chaves_315_316",
+            "action": "Una voz sin cuerpo exige alimentos y deja platos vacíos."
+          },
+          {
+            "id": "prueba_familia",
+            "provenance": "published_editorial_expansion",
+            "required": true,
+            "source": "published_pushaina",
+            "action": "El relato público pone a la familia a esconder un anillo; Pushaina escucha y lo localiza."
+          }
+        ],
+        "emotional_reading": "Asombro contenido y dependencia; no superhéroe ni triunfo del adivino.",
+        "magic_reading": "Cambiar de cuerpo no extingue el hambre; conocer una ausencia no equivale a dominarla.",
+        "qa_method": "H conexión física de sombra y ave; V hombre pequeño sin lanzar poder y anillo visible detrás de pared; S un único plato simbólico, no una tercera escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-06T10:31:56.461Z",
+        "reviewed_reference_ids": [
+          "9701031d494beb7d5e57",
+          "77b3ab809a966962ee88"
+        ],
+        "retained": [
+          "Azul profundo y ocre con planos de territorio separados; quietud y amplitud de mundo artesanal.",
+          "Recortes de papel y contraste entre figura y entorno, sin copiar la escena ecuestre."
+        ],
+        "rejected": [
+          "Jinete heroico gigante, cabello largo, tocado, pecho descubierto y arneses decorados contradicen las fichas seleccionadas.",
+          "Mar cercano, selva exuberante, luna/sol gigante y plantas en roseta usados como ornamentación indiferenciada."
+        ],
+        "influence_by_act": {
+          "entrada": "Mantener paleta y profundidad, pasar del paseo ecuestre a la transformación en gallinazo mediante sombra que se vuelve cuerpo.",
+          "acto": "Llevar el contraste azul/ocre a una habitación cotidiana: hombre pequeño que escucha y anillo revelado a través de una pared de papel.",
+          "huella": "Eliminar todo paisaje y reparto; un único plato con vacío interior imposible condensa hambre y deuda."
+        }
+      },
+      "material_direction": "Immersive photographed world ENTIRELY made from matte dyed CUT PAPER. Large terrain sheets and architecture assembled at real different distances with visible air, occlusion and cast shadows; no flat collage, real sand, wood or cloth. Human faces are ONE almost-flat brown side-profile silhouette, nose only cut outline, tiny eye slit; no modeled cheeks, faceted heads, glass eyeballs or Pixar expressions. Clothing assembled from few broad flat folded sheets. Small complete humans subordinate to their surroundings, not portrait. Full bleed inside the world, no outer cardboard support, box, tabletop, base, pedestal or frame. Magic is a specific physical relationship, never glows, sparkles or decorative symbols.",
+      "paleta": "azul humo kemüsa, índigo nocturno, ocre arcilla, carbón gallinazo, dorado mate del anillo; luz oblicua contenida",
+      "continuity_contract": [
+        "Pushaina is an adult Wayuu man with short curly BLACK hair, a low wide straw-colored WOMU hat, smoke-BLUE full-sleeve KEMÜSA ending just above knees, two narrow opaque OCHRE WAYUCO panels front and rear held by ONE plain dark SI'IRA at waist, brown WAIREÑAS sandals. No trousers, thigh bands, wrap skirt, jewelry, facial paint, staff or decorated headdress.",
+        "Entire face is ONE almost-flat brown side-profile cutout with tiny eye incision and nose cut into its perimeter. NO sculpted cheeks, faceted head, cartoon eyes or photoreal skin.",
+        "Follow only the objects and actors assigned to each orientation; never add a horse or all five animals just because they occur elsewhere in this myth."
+      ],
+      "avoid": [
+        "Pixar, giant portrait, bare-chested rider, long hair, sculpted face, glass eyes",
+        "ritual headdress, clan patterns, staff, maraca, jewelry on person, magic gestures",
+        "corpse, violence, sacrifice, sexualized test, death scene, ritual release",
+        "supernatural companion figure, phantom person, portal, aura, sparkles, glyphs",
+        "lush jungle, sea, giant moon, rosette plants, cactus arms, cardboard base, box, table edge, frame"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "metamorfosis"
+          ],
+          "beat": "El cuerpo ya no termina donde acaba su sombra.",
+          "escena": "HORIZONTAL 16:9. Prioritize GEOMETRY before details: an extremely distant elevated camera, looking across an enormous matte ochre CUTPAPER courtyard. The entire one-room house is SMALL and fully visible within x73–94%, y28–50% (only one fifth image width); no cropped roof or wall at the right edge. ONE tiny adult man stands at x71%, from y41% to y51%, ONLY TEN PERCENT IMAGE HEIGHT (about 85 pixels tall). A living BLACK VULTURE is taking flight to his LEFT at x60%,y35–43%; full wingspan ONLY TEN PERCENT image width (about 150 pixels), natural small animal scale relative to man, never a giant eagle. A single narrow charcoal paper strip starts directly under his sandals at x71%,y51%, lies flat on ground toward x65%,y50%, then curves upward to join the TAIL of the complete vulture at x62%,y43%. This is HIS SHADOW physically lifting into an animal, not a leash held in hands. Continuous connected strip: feet → flat shadow on floor → lifted taper → tail; the bird's entire body and both wings are lifted off ground with visible air. All this action stays strictly ABOVE y53% and RIGHT of x55%, so lower-left website title does not cover the man, animal or connecting strip. Bottom 45% is completely empty broad overlapping OCHRE EARTH PAPER SHEETS with three long subtle internal paper edges across foreground, visible layer offsets, NOT photographed sand, real gravel or a plain CG texture. ONE tiny complete Pushaina wears the smoke-blue full-sleeve kemüsa just above knees, narrow ochre panels and dark waist sash, wide low straw womu, short black curly hair and brown sandals. Face one FLAT brown side-profile silhouette with tiny eye incision. Hands relaxed at sides, no pointing or holding. The small house consists of thin PAPER posts, paper bahareque panels and pale tan paper roof strips, no real timber or straw. ONE vulture of charcoal feather cutouts, small bare dark head, hooked beak, short tail and broad black wings; no eagle crest or decorative pattern. Large quiet indigo dusk sky, flat arid far horizon with two tiny low thorn silhouettes. Natural low side light shows air, paper edges and shadows; no moon, stars, sun disc, greenery, horse, objects or extra people. Full bleed inside immense paper world; no outside model support, table, box, base or frame. The human stays clothed and complete; only shadow transforms. Do not zoom in to detail the man or bird.",
+          "editorial_translation": "Traducción material editorial de motivos del relato; la geometría imposible no se afirma como hecho etnográfico.",
+          "visual_question": "¿Puede seguirse una conexión desde los pies al ave elevada, con el hombre pequeño y las alas completas?",
+          "light": "Luz oblicua natural, sombras claras y color mate, sin fuente de luz sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un hombre y su sombra en el patio de una casa.",
+            "impossible_behavior": "La sombra permanece unida a sus pies pero se levanta y adquiere cuerpo de gallinazo.",
+            "narrative_effect": "Hace visible la continuidad entre Pushaina y otra forma corporal sin presentar un animal acompañante.",
+            "agency": "Metamorfosis ligada a Pushaina; él no la dirige con las manos.",
+            "physical_translation": "Una sola pieza negra pasa de sombra plana a cola y ave tridimensional.",
+            "visible_test": "¿Puede seguirse una conexión desde los pies al ave elevada, con el hombre pequeño y las alas completas?",
+            "event_ids": [
+              "metamorfosis"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "anillo",
+            "prueba_familia"
+          ],
+          "beat": "Encontrar lo que está oculto sin mirar.",
+          "escena": "9:16 WIDE interior, camera far back in a large dim Wayuu earthen room, high plain rafters and continuous broad ochre paper floor. At x28%,y38–59%, ONE SMALL complete adult Pushaina stands in profile, eyes closed as a tiny incision, head slightly inclined listening. Same smoke-blue full-sleeve kemüsa above knees, narrow ochre front and rear panels and one dark waist sash underneath, womu hat and brown sandals. Arms hang loosely; NO pointing, raised fingers, touching wall or holding ring. Full figure less than 23% image height; all feet visible, lower third empty floor for mobile title. Opposite him at x66%,y45%, a tiny SINGLE PLAIN matte gold-colored finger ring lies tucked into a fold of plain sand-colored paper cloth on a low earthen ledge behind an opaque CLAY-BROWN WALL. This is not a giant ring: diameter roughly the width of two fingers. Impossible reveal: an unbroken upper sheet of the clay-paper wall gently PEELS OUTWARD into one broad shallow curl toward camera, revealing a darker layer beneath and the concealed ring. The curl stays attached at its upper edge, with a visible air gap and cast shadow; no window frame or conventional opening. It reveals only this small hidden compartment, not another world. Curl about 25% image width, visible ring in center lit by ordinary side daylight from door outside frame. Nothing flies from man's hands. No beam between man and ring. House remains mundane and structurally intact apart from this editorial unfolding of hidden knowledge. No other person, bird, food, bottle, horse, map, glyph or spirit. Upper rafters and walls occupy generous space; visible paper layers, nearly flat profile face. Dusk blue ambient light, warm reflected light on the tiny ring, no intrinsic glow.",
+          "editorial_translation": "Traducción material editorial de motivos del relato; la geometría imposible no se afirma como hecho etnográfico.",
+          "visual_question": "¿La pared conserva su unión y revela un único aro, mientras el hombre pequeño escucha con brazos bajos?",
+          "light": "Luz oblicua natural, sombras claras y color mate, sin fuente de luz sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un anillo escondido y un hombre que escucha.",
+            "impossible_behavior": "Una capa opaca de pared se abre como papel para revelar lo que la mirada no alcanza.",
+            "narrative_effect": "La imagen hace visible al espectador el hallazgo, sin afirmar que Pushaina derribe la pared.",
+            "agency": "Pushaina escucha; el despliegue de pared pertenece a la narración visual, no a un gesto de control.",
+            "physical_translation": "Lámina de pared conectada por arriba con curva, aire y sombra; aro pequeño en el hueco.",
+            "visible_test": "¿La pared conserva su unión y revela un único aro, mientras el hombre pequeño escucha con brazos bajos?",
+            "event_ids": [
+              "anillo",
+              "prueba_familia"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "sintesis_editorial",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "hambre"
+          ],
+          "beat": "El hambre sigue teniendo profundidad cuando el plato está vacío.",
+          "escena": "Square 1:1 SYMBOLIC STILL LIFE, one object only, no room or scene. Full-bleed deep midnight INDIGO matte paper field. ONE shallow plain OCHRE EARTHEN PLATE translated into folded cutpaper, seen obliquely from above; oval rim roughly 55% frame width at center. No ornate border. The plate is visibly EMPTY, yet its interior drops impossibly far down through six irregular ochre-to-charcoal PAPER LEVELS, each smaller and lower, with clear air and cast shadows between them, ending in a small completely dark off-center void. Its outer body remains shallow and intact: the depth inside cannot fit inside its thin exterior. Not a stack of bowls, not rings floating above, not a portal or tunnel through landscape, not a top-down target. One asymmetrical descending hollow contained within an ordinary empty dish, hunger without a visible eater. Warm grazing light shows paper thickness along the upper rim while inner strata darken. No food, person, animal, bones, hand, face, table, pedestal, house, landscape, star, moon, lettering or sacred symbol. Large quiet blue negative space surrounds the dish. Sculptural paper depth and extremely restrained composition.",
+          "editorial_translation": "Traducción material editorial de motivos del relato; la geometría imposible no se afirma como hecho etnográfico.",
+          "visual_question": "¿Se reconoce un plato vacío cuya profundidad interior no cabe en su cuerpo, sin escena añadida?",
+          "light": "Luz oblicua natural, sombras claras y color mate, sin fuente de luz sobrenatural.",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Un plato que queda vacío después de alimentar una voz invisible.",
+            "impossible_behavior": "La cavidad interior desciende mucho más de lo que permite su exterior poco profundo.",
+            "narrative_effect": "Condensa hambre y obligación persistentes sin representar una ceremonia.",
+            "agency": "Síntesis editorial: no se muestra quién come ni se identifica una entidad externa.",
+            "physical_translation": "Un plato único con seis capas interiores descendentes, aire y sombra.",
+            "visible_test": "¿Se reconoce un plato vacío cuya profundidad interior no cabe en su cuerpo, sin escena añadida?",
+            "event_ids": [
+              "hambre"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "material_direction": "Sculptural matte CUT PAPER still life. Actual separated layers, occlusion and cast shadows. Immersive full bleed; no cardboard support, frame, studio equipment or outer model base.",
+          "continuity_contract": [
+            "Only one plain empty ochre plate on an indigo field; no scene cast or accessories.",
+            "Impossible inner depth is an editorial metaphor, not an ancestral artifact or ritual."
+          ],
+          "symbolic_contract": {
+            "thesis": "El hambre de lo invisible no se agota al vaciar un plato.",
+            "carrier": "Un único plato vacío.",
+            "operation": "Profundidad interior imposible en un recipiente exterior poco profundo.",
+            "story_connection": "La demanda de alimento y los platos vacíos del relato.",
+            "visible_test": "Un plato reconocible y vacío contiene capas que descienden más de lo físicamente posible."
+          },
+          "avoid": [
+            "third narrative scene, person, room, table, landscape, food, bones, spirit face",
+            "portal, mandala, target, concentric floating rings, glyph, letters, logo",
+            "stack of bowls, ordinary flat plate, cardboard base, frame"
+          ]
+        }
+      }
+    }
+  }
+}

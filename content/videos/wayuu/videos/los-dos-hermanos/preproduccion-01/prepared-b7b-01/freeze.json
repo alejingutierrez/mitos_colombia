@@ -1,0 +1,174 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T23:06:28.439Z",
+  "plan": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/plan.json",
+  "plan_sha256": "d56dd615471815b0f39ee2041f91e675d9d5dbf013d5fbd394b9bdb078483349",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "style_sha256": "20f876f10840d4e643f034ccc131ed184bbb7ee5d023a1d2d3c82899fcc93b8a",
+  "checks": {
+    "shots": 16,
+    "words": 191,
+    "estimated_seconds": 128,
+    "generated": 13,
+    "pending": 3,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 81,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b7b",
+      "prompt_file": "content/videos/wayuu/videos/los-dos-hermanos/preproduccion-01/prepared-b7b-01/prompts/b7b.txt",
+      "prompt_sha256": "b9fbf47ff1d7eae9d2490452af96c93b0ac5f65ee11a90a3814875a5bf938c5b",
+      "model": "gpt-image-2.5-sunburst",
+      "allowed_models": [
+        "gpt-image-2.5-sunburst",
+        "gpt-image-2.5-flare",
+        "gpt-image-2"
+      ],
+      "fast_iteration_model": "gpt-image-2.5-flare",
+      "legacy_fallback_model": "gpt-image-2",
+      "one_model_per_myth": true,
+      "record_exact_model_and_snapshot": true,
+      "quality": "medium",
+      "size": "864x1536",
+      "api_request_size": "1024x1536",
+      "delivery_size": "864x1536",
+      "delivery_transform": "center_crop_864x1536",
+      "output_format": "jpeg",
+      "mode": "image_edit_with_prior_keyframes",
+      "input_images": [
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b6b",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6b.jpeg",
+          "sha256": "e95e1639b4191304f98e265a7d0e11d77f54043690229f2da052b49ea3df28da",
+          "approved": true,
+          "role": "Preservar continuidad causal de b6b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "prior_keyframe",
+          "frame_id": "b7a",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b7a.jpeg",
+          "sha256": "94571fc3f53d74be61f73e2b42aa91ed215df299195855dc0f334660c1f2abc9",
+          "approved": true,
+          "role": "Preservar continuidad causal de b7a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/perro_hermanos__identity_sheet--canon.jpeg",
+          "sha256": "6d0c490f2551d73e66a35e060293617a3e33e57d500900e56620cd4fd1ade25e",
+          "approved": true,
+          "role": "Fijar el modelo canónico perro_hermanos__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium-corrections-01/mula_hermanos__identity_sheet--canon.jpeg",
+          "sha256": "56293da02a393a52c476bc579a524e83f50875ac996650bb20bd501f92955451",
+          "approved": true,
+          "role": "Fijar el modelo canónico mula_hermanos__identity_sheet; preservar identidad y material sin copiar la composición."
+        },
+        {
+          "kind": "canonical_model",
+          "myth": "los-dos-hermanos",
+          "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-06-los-dos-hermanos-medium/chinchorro__object_sheet--canon.jpeg",
+          "sha256": "29a9ee12acd56ae11fde72343c34ac2b52521571cf60faa53aae2954de4b1b15",
+          "approved": true,
+          "role": "Fijar el modelo canónico chinchorro__object_sheet; preservar identidad y material sin copiar la composición."
+        }
+      ],
+      "api_method": "images.edit",
+      "source_output": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b7b.sunburst-master.jpeg",
+      "output": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b7b.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [
+    {
+      "id": "b1a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1a.jpeg",
+      "sha256": "2d0139d14bb47ad96b591ebd025b03ca064d337991dbbb7816231ad316313eb2"
+    },
+    {
+      "id": "b1b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b1b.jpeg",
+      "sha256": "fc589f8b5c9ae238121b99f95ff8304e4c1e82d86294f486f318416a7b18a136"
+    },
+    {
+      "id": "b2a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2a.jpeg",
+      "sha256": "9f282d5a5893d8ce6526aff398987fa55e29b375ba8345bd31ff03bf4c4e7cc9"
+    },
+    {
+      "id": "b2b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b2b.jpeg",
+      "sha256": "4c9347ee9985a3954c1d2783fa17caf5b39e43f20f504be95fb211d0349e1f8a"
+    },
+    {
+      "id": "b3a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3a.jpeg",
+      "sha256": "c7ca078762a0fb1d80bfd77cdcb0a241cb94036c9375a43461f4a788af7ebc6e"
+    },
+    {
+      "id": "b3b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b3b.jpeg",
+      "sha256": "cdb4c52d076017a69dc07ba4749ea76f472db37e960d6d3b0a431718f6d33f75"
+    },
+    {
+      "id": "b4a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4a.jpeg",
+      "sha256": "adad551a249ace5ef18c8131bfb4abb5d0eab975b38ed7fcae02b2ca6e1729e7"
+    },
+    {
+      "id": "b4b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b4b.jpeg",
+      "sha256": "96bcf0d7cb0406d649d20b84bd86e45e0a7afc3264f103e3dc3f8fce99b1c047"
+    },
+    {
+      "id": "b5a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5a.jpeg",
+      "sha256": "c77a925e0b7908edccfc7f0f7c8148103e71cd19f3af3bc80ea18e1344847db3"
+    },
+    {
+      "id": "b5b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b5b.jpeg",
+      "sha256": "d91f780824d955a307d2224abb9598924024f3d92b7337c9b1b40744daef5370"
+    },
+    {
+      "id": "b6a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6a.jpeg",
+      "sha256": "d50d629bfeb542768eed2d77d899bfe8c14bd9ab6e7b458f5d9f65b168a310eb"
+    },
+    {
+      "id": "b6b",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b6b.jpeg",
+      "sha256": "e95e1639b4191304f98e265a7d0e11d77f54043690229f2da052b49ea3df28da"
+    },
+    {
+      "id": "b7a",
+      "status": "approved_keyframe",
+      "path": "output/imagegen/wayuu/keyframes/los-dos-hermanos-preproduccion-01/b7a.jpeg",
+      "sha256": "94571fc3f53d74be61f73e2b42aa91ed215df299195855dc0f334660c1f2abc9"
+    }
+  ],
+  "no_api_calls": true
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "guanuru",
+  "title": "Guanurú",
+  "created_at": "2026-09-06T17:56:25.460Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña completa autorizada por el usuario; selección del agente tras contraste del relato, memoria visual y QA directa.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "543da024fcad6d8ed839c3a51b3b918201e07a3443f8fb3cbde4cd6c26de69ea",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T17:46:17.596Z",
+    "reviewed_reference_ids": [
+      "0b77fdbfdfdff55c35ed",
+      "9ec7ff71b4245f8c73bf"
+    ],
+    "retained": [
+      "Interior en penumbra frente a territorio distante; capas físicas, ocre, índigo y crema.",
+      "Visita pequeña de alas blancas como motivo doméstico."
+    ],
+    "rejected": [
+      "Collage de mantis, cráneo, algodón y mariposas como supuesto ritual único.",
+      "Cama europea como sustituto del chinchorro; enjambre, insectos gigantes y textiles geométricos no específicos.",
+      "Fijar mariposa como cuerpo de Guanurú o atribuir causalidad única a enfermedad."
+    ],
+    "influence_by_act": {
+      "entrada": "Conservar casa y profundidad; vaciar acumulación de símbolos. Una huella de peso en chinchorro vacío vuelve perceptible la presencia sin darle cuerpo.",
+      "acto": "Conservar relación interior/otra distancia; sueño con pariente opaco y contraste noche/día, no espectro ni efecto saliendo de manos.",
+      "huella": "Conservar una única mariposa blanca, aislarla como gesto de acogida mediante ala entreabierta; sin paisaje ni objetos protectores combinados."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-02-entrada/entrada.jpeg",
+      "sha256": "f3088570a8c698d3589bdcfa8a810c149f9cfb86376e7918f71531a5c8df907d",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/guanuru/wayuu-guanuru-triptych-02-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "25fbd9d38bffae710a4fc909d0819365fc79eb43915a95dd4bf5f50da77d4101",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Chinchorro vacío casi horizontal, con embudo localizado que desciende hacia tres láminas de suelo levantadas. Queda un estrecho vacío entre ambas puntas; casa de papel a sangre, planos separados, zona izquierda despejada.",
+        "limits": [
+          "La separación entre puntas es pequeña; verificar a escala pública antes de cerrar.",
+          "El pliegue del suelo y el hundimiento son metáforas editoriales, no un episodio literal ni anatomía de Guanurú."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-01/acto.jpeg",
+      "sha256": "5d0c856ac545af9c13f4a411a8afabc726242d8f73b49a6d1d3d2aff7766c556",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/guanuru/wayuu-guanuru-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "4d17735a625fc0f0fa26b729ac1c3dcd75d05928d7e663932f4602d4b7062c38",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Mujer de manta verde y pechera crema recostada en chinchorro índigo. Gran hoja nocturna se abre hacia un cuarto cálido con pariente de prendas ocres y crema, opaco y tranquilo. Dos figuras de rostro plano, profundidades físicas y suelo inferior libre.",
+        "limits": [
+          "El pariente ocupa cerca de un quinto de altura, más que el objetivo inicial; sigue a distancia, sin primer plano.",
+          "La soñante está semirreclinada; el sueño se comunica con reposo y pliegue temporal, no con una gestualidad enfática.",
+          "Textura del suelo más rugosa que las láminas de pared; sin base de maqueta ni soporte exterior."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-01/huella.jpeg",
+      "sha256": "3f483b7b3b0b42ba550cdd81fd18c4ea5715d5caa1c087278db048747596717d",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/guanuru/wayuu-guanuru-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "3be44b182d235cea03adadb57872c36748cb9d50bd9aed9bee7a55f434316c74",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una mariposa blanca de cuatro alas de papel sobre índigo. Ala superior derecha levantada deja cuña cálida y sombra profunda; no paisaje, personajes ni objetos adicionales.",
+        "limits": [
+          "Motivo mayor que la mitad del lienzo pedida, conserva márgenes y lectura simbólica.",
+          "El ala abierta es metáfora editorial de acogida, no símbolo cultural certificado ni cuerpo de Guanurú."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 4,
+    "by_act": {
+      "entrada": {
+        "unique_images": 2,
+        "preparation_rounds": 2,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 1,
+    "cli_seconds": {
+      "entrada_01": 78.9,
+      "acto_01": 35.8,
+      "huella_01": 45.1,
+      "entrada_02": 75.7
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-guanuru-triptych-01/entrada.jpeg",
+      "sha256": "7898ff183083821d80ca2bc7a41ec43a8a852807bb537927eab8a859fe15dd26",
+      "reason": "La caída del chinchorro parece normal; no hay anomalía material suficiente."
+    }
+  ],
+  "published": false
+}

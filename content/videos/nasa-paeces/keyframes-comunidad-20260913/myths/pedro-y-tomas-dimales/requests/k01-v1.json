@@ -1,0 +1,28 @@
+{
+  "slug": "pedro-y-tomas-dimales",
+  "id": "k01",
+  "version": 1,
+  "created_at": "2026-09-13T21:39:47.310Z",
+  "plan_sha256": "bd9e7cdc730c1bc9ca7b72569c2b11d5b39358ae47681c36d369d03e85f5921b",
+  "prompt_file": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/pedro-y-tomas-dimales/prompts/k01-v1.txt",
+  "prompt_sha256": "fe04c130533011d2fa1d90426b9f882d60da094cc51255f2d95be5743c27b5c4",
+  "references": [
+    {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/pedro-y-tomas-dimales/entrada-v1.png",
+      "sha256": "cc15d46f0b0571298b019eed1e86521cd2416b4e15b897558740501eed7c8f97",
+      "role": "Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición."
+    },
+    {
+      "path": "output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png",
+      "sha256": "d7dc5d106daadbd61b032ae0b3bb0139806f2b49c82ad2e937157f84478e3f7f",
+      "role": "SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna."
+    }
+  ],
+  "request": {
+    "prompt": "Use case: illustration-story. Produce ONE portrait 9:16 cinematic KEYFRAME, a real-looking miniature built ENTIRELY from CUT AND FOLDED PAPER, photographed from INSIDE the set. Myth: Pedro y Tomás Dimales. Frame k01.\n\nREFERENCE ROLES:\nImage 1: Tríptico entrada: identidades, vestuario y escenario de ESTE mito; NO copia de composición.\nImage 2: SOLO material físico de papel: no transferir personas, ropa, varas, laguna ni iluminación nocturna.\n\nEXACT NEW SHOT, render only this moment, not an entire story or multi-panel sheet:\nDetalle cenital: un único hoyo recibe muchos granos de papel desde manos de Pedro; alrededor tierra sin sembrar.\n\nNARRATIVE CONTINUITY: Pedro ocre robusto, Tomás gris-azul esbelto. No caricatura del trabajador ni cambio de identidad con la oscilación Santo Tomás.\nSelected account: Entrada de labores agrícolas y petrificación fallida. Tomás mantiene identidad Dimales; no importar pruebas del mar y Piedra Alta.\n\nPHYSICAL MATERIAL IS MANDATORY: separately cut, thick matte cardstock planes; deep air gaps and actual cast contact shadows; lifted edges, paper tabs, crisp folds and visibly attached garment panels. People are handmade folded-paper puppets with flat cut face planes, folded limbs and layered hands, never rounded dolls or illustrated skin. Rocks are angular folded cardstock, plants individual cut leaves bent from stems. Water is broad overlapping blue cardstock sheets, mist and clouds suspended paper cutouts. No painted textures pretending to be relief.\nCINEMATOGRAPHY: obey the shot's exact camera and time of day. Foreground paper edge/leaf/rock creates depth without hiding the main action; focal plane on action, optical miniature depth of field in near/far layers. Maintain identities, ages and clothes from the SAME myth references. Borderless immersive scene, no box, plinth, table, studio or collage. Frame extends edge to edge. Do NOT carry background objects from a previous scene into a new location.\nNo text, lettering, logo, watermark, symbols, sacred patterns, pan-Indigenous headdresses, golden jewelry, invented ritual, extra people or props. No brushwork, drawing outlines, flat illustration, realistic fabric/skin/liquid, plastic, clay or smooth CGI. Exactly ONE finished vertical 9:16 image. This is a new composition, not a crop of the reference.\n\nFINAL COMPOSITION OVERRIDE: Character names in continuity rules are NOT a cast list. Show ONLY the people/animals explicitly requested in THIS single shot. Do not add any reference person, animal, lake or staff just because it appears in a reference. Render precisely: Detalle cenital: un único hoyo recibe muchos granos de papel desde manos de Pedro; alrededor tierra sin sembrar.\n\n",
+    "referenced_image_paths": [
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/pedro-y-tomas-dimales/entrada-v1.png",
+      "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/keyframes/el-trueno-produccion-01/b1b-maqueta-v2.png"
+    ]
+  }
+}

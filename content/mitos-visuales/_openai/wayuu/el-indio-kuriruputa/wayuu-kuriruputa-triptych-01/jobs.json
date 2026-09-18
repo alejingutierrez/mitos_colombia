@@ -1,0 +1,239 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-kuriruputa-triptych-01",
+  "created_at": "2026-09-06T03:07:11.648Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "el-indio-kuriruputa",
+  "plan": "content/mitos-visuales/wayuu.kuriruputa.triptico.v1.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "9808b1092ca3fac39e673e83cc792c139c51a8361be17837a0a5a6df7c2631fc",
+  "narrative_target_sha256": "c429661b841073b2f2436a91d41d047fd05fadf25a12b2df0226192fcd239c91",
+  "evidence": [
+    {
+      "id": "chaves_1946_kuriruputa",
+      "type": "primary_source",
+      "title": "Mitos, leyendas y cuentos de la Guajira, IX: El Indio Kuriruputá",
+      "author": "Milcíades Chaves Ch.",
+      "year": 1946,
+      "locator": "pp. impresas 316–317; índices PDF 12–13. Atribución a Ana Isolina Ipuana e intérprete Ana Ofelia Ortíz al cierre del bloque IX–X, p.319; no confundir con Juancito Iguarán, atribuido a los cuentos anteriores.",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "supports": "Pérdida de ganado, rescate por hermanas con paño largo, herida en una pierna, recuperación y sueño con tuma. Memoria histórica, no cosmogonía.",
+      "limits": "Una versión narrativa completa identificada. Villa Posse es una compilación dependiente, no evidencia independiente. La deliberación y mediación de la página son desarrollo editorial. Texto del PDF consultado; capturas de páginas devolvieron Cache miss."
+    },
+    {
+      "id": "published_kuriruputa_20260905",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/research/kuriruputa-narrative-2026-09-05.json",
+      "supports": "Relato objetivo vigente: hermanas rescatan, escuchan el sueño y deliberan; posterior mediación y continuidad familiar.",
+      "limits": "La reformulación de la alianza y el énfasis deliberativo no se atribuyen literalmente al registro de 1946."
+    },
+    {
+      "id": "unesco_wayuu_normative_context",
+      "type": "institutional_context",
+      "title": "Wayuu normative system, applied by the Pütchipü’üi (palabrero)",
+      "url": "https://ich.unesco.org/en/RL/wayuu-normative-system-applied-by-the-putchipu-ui-palabrero-00435",
+      "supports": "Contexto de reparación, compensación, diálogo y relaciones entre clanes matrilineales.",
+      "limits": "No demuestra un protocolo histórico particular para Kuriruputá. No añadir un palabrero, insignia, ceremonia o collar a la escena por esta fuente."
+    },
+    {
+      "id": "material_culture_v3",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-indumentaria-y-pintura-v3.md",
+      "supports": "Vestuario diverso y contexto histórico; mantas amplias femeninas, camisa y pantalones masculinos del modelo aprobado.",
+      "limits": "Investigación material previa del proyecto. No inventar diseños codificados de pintura facial ni asignarles significados."
+    }
+  ],
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "kuriruputa__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium-corrections-01/kuriruputa__identity_sheet--canon.jpeg",
+      "sha256": "caeb16a23fdd8d27cadb15b18deda45c6fc705b1686a35078e3a63701ca13c7c",
+      "qa_status": "PASS_AFTER_CORRECTION"
+    },
+    {
+      "model_id": "hermanas_kuriruputa__group_grammar",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/hermanas_kuriruputa__group_grammar--canon.jpeg",
+      "sha256": "ef5ee1b8e7cca2872e713db63df5834e576ddc12dbd965812b057fbed1ed3776",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "tuma_roja__object_sheet",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/tuma_roja__object_sheet--canon.jpeg",
+      "sha256": "a82d5d5935a40390e3eab031633a0807333606ffde150658c7113cf33332123e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "corral_kuriruputa__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/corral_kuriruputa__spatial_model--canon.jpeg",
+      "sha256": "97ec76786e0eb7b3dbf031c13029f1fedbd46aecd5ce4824a88c54b0af5cc94c",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "rebanos__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-03-el-indio-kuriruputa-medium/rebanos__group_grammar--canon.jpeg",
+      "sha256": "aec531d1a0a63e90fdcd09aeeb981e4c35e7b78a934e620608e5b6e4b7b8ed1f",
+      "qa_status": "PASS_WITH_MATERIALITY_WATCH"
+    },
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    },
+    {
+      "model_id": "territorio_alta_guajira__environment_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-02-remaining-categories-medium/territorio_alta_guajira__environment_model--canon.jpeg",
+      "sha256": "61165dcf1259b472dda699a7ec9311f91b927f0b63f91063ce18b9b71cda7f5e",
+      "qa_status": "DIRECTION_CANDIDATE_PASS"
+    }
+  ],
+  "approval_gate": "El usuario autoriza producir el siguiente mito Wayúu con lo aprendido. Se crean estas tres piezas para revisión; no autoriza publicación ni lotes de otros mitos.",
+  "requested_acts": [
+    "entrada",
+    "acto",
+    "huella"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "diagonal",
+      "canon_model_ids": [
+        "kuriruputa__identity_sheet",
+        "hermanas_kuriruputa__group_grammar",
+        "tuma_roja__object_sheet",
+        "corral_kuriruputa__spatial_model",
+        "rebanos__group_grammar",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-kuriruputa/wayuu-kuriruputa-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "5002387a8c3ef31d7bcccb2b0e8ae22ae8834774e663ea756de9b73976caab27",
+      "narrative_event_ids": [
+        "rescate"
+      ],
+      "editorial_translation": "Rescate y paño largo pertenecen al núcleo de 1946. El paño que se convierte en camino es una metáfora editorial de la agencia y el sostén de las hermanas; no se afirma que ellas hicieran flotar el camino en la tradición. El número de tres hermanas procede de la Biblia de arte, no de un recuento documentado.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "El paño largo del rescate y el camino de regreso.",
+        "impossible_behavior": "El mismo paño se ensancha y continúa como camino suspendido entre estratos de terreno.",
+        "narrative_effect": "Quien parecía sostener su riqueza por sí solo necesita un camino sostenido por sus hermanas.",
+        "agency": "Las hermanas rescatan, sostienen y guían; el hombre no hace magia.",
+        "physical_translation": "Cinta de papel mate con pliegues, torsiones y sombras separada del suelo; territorio de hojas a varias distancias.",
+        "visible_test": "Se reconoce el paño sostenido por la hermana y su continuidad física hasta un camino demasiado largo para ser una tela normal.",
+        "event_ids": [
+          "rescate"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/entrada.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "acto",
+      "aspect_ratio": "9:16",
+      "size": "864x1536",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "profundidad_vertical",
+      "canon_model_ids": [
+        "kuriruputa__identity_sheet",
+        "hermanas_kuriruputa__group_grammar",
+        "tuma_roja__object_sheet",
+        "corral_kuriruputa__spatial_model",
+        "rebanos__group_grammar",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-kuriruputa/wayuu-kuriruputa-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "a33fc1bf2764f62409b6cd25ff6f322340c3349b3b233eb756e8eee19a4de2d5",
+      "narrative_event_ids": [
+        "sueno",
+        "deliberacion",
+        "mediacion"
+      ],
+      "editorial_translation": "El sueño con tuma pertenece a 1946. Compartirlo, deliberar y orientar la mediación sigue el relato editorial vigente. Las fibras que enlazan umbrales son una traducción visual de vínculos y posibilidades; no un mapa étnico, una ceremonia, un protocolo de compensación o un poder atribuido a la piedra.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "La pequeña tuma del sueño, una estera y una conversación familiar.",
+        "impossible_behavior": "Los estratos de la piedra continúan en fibras que cosen distancias entre espacios domésticos.",
+        "narrative_effect": "La interpretación abre conexiones y posibilidades de reparación que la fuerza individual no pudo asegurar.",
+        "agency": "Las hermanas participan en interpretar; Kuriruputá escucha y cuenta. La piedra no emite órdenes visibles ni rayos.",
+        "physical_translation": "Fibras y sendas de papel rojo mate que prolongan la piedra y levantan pliegues del suelo con sombras físicas.",
+        "visible_test": "Conversación de cuatro adultos diminutos y continuidad de piedra, fibras y caminos entre varios umbrales diurnos.",
+        "event_ids": [
+          "sueno",
+          "deliberacion",
+          "mediacion"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/acto.jpeg",
+      "status": "prepared"
+    },
+    {
+      "act": "huella",
+      "aspect_ratio": "1:1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "api_method": "images.generate",
+      "composition": "motivo_unico",
+      "canon_model_ids": [
+        "kuriruputa__identity_sheet",
+        "hermanas_kuriruputa__group_grammar",
+        "tuma_roja__object_sheet",
+        "corral_kuriruputa__spatial_model",
+        "rebanos__group_grammar",
+        "rancheria_wayuu__spatial_model",
+        "territorio_alta_guajira__environment_model"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-indio-kuriruputa/wayuu-kuriruputa-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "e4309f59750601228ef7e75f6f791511af6e771e63903fd09bd759b2cf652116",
+      "narrative_event_ids": [
+        "continuidad"
+      ],
+      "editorial_translation": "La tuma fracturada sostenida por fibras es una invención plástica para esta imagen. El relato no dice que la piedra se rompa, se repare o levite. No presentar esta imagen como amuleto, símbolo ritual, propiedad mineralógica o diseño tradicional Wayúu.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "La tuma roja valiosa.",
+        "impossible_behavior": "La piedra abierta mantiene su unidad suspendida gracias a fibras surgidas de sus propias capas.",
+        "narrative_effect": "La continuidad depende de relaciones que sostienen lo que una sola fuerza no mantiene.",
+        "agency": "El vínculo sostiene; ninguna persona domina la piedra y no se muestra un rito.",
+        "physical_translation": "Tres fragmentos laminados de papel rojo mate, grietas con aire y fibras tensadas entre los estratos.",
+        "visible_test": "Una sola silueta de piedra dividida, pero unida por una trama de fibras visibles, sin escena alrededor.",
+        "event_ids": [
+          "continuidad"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "symbolic_synthesis",
+      "symbolic_contract": {
+        "thesis": "Lo valioso permanece unido por vínculos, no por su dureza ni por su dueño.",
+        "carrier": "Una sola tuma rojo óxido construida en estratos finos de papel mate.",
+        "operation": "La piedra está abierta en tres fragmentos apenas separados; fibras continuas de sus propios estratos atraviesan las grietas y mantienen su silueta suspendida.",
+        "story_connection": "Condensa la dependencia de Kuriruputá respecto de sus hermanas y la continuidad sostenida entre personas en el relato editorial. No vuelve a mostrar el rescate ni la conversación.",
+        "visible_test": "Una piedra roja de contorno orgánico sigue siendo una sola forma aunque está abierta; lo único que la une son fibras visibles que cruzan el vacío."
+      },
+      "output": "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/huella.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "wayuu-video-bible-additions-selection/v1",
+  "slug": "el-indio-guerrero-ipuana",
+  "status": "editorial_selection_not_user_approval",
+  "selected_at": "2026-09-07",
+  "generation": {
+    "provider": "OpenAI API",
+    "runner": "bundled imagegen CLI",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "1024x1024",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "successful_generations": 4,
+    "requests": 4,
+    "rejections": 0,
+    "corrections": 0
+  },
+  "selected": [
+    {
+      "model_id": "caballo_hijo_ipuana__identity_sheet",
+      "path": "output/imagegen/wayuu/bible-additions/ipuana-01/caballo_hijo_ipuana.jpeg",
+      "sha256": "42042fc7840f5e1546cbcb6603d586906d5a6687ee61dc912f747c6916ff88b0",
+      "width": 1024,
+      "height": 1024,
+      "format": "jpeg",
+      "quality": "medium",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/biblia-adicional-01/prompts/caballo_hijo_ipuana.txt",
+      "prompt_sha256": "243ded934a271ccea37543dc0b106139196228b9a78c9b85c9be0926f0cf3211",
+      "qa_status": "PASS_WITH_EDITORIAL_NOTES",
+      "reviewed": true,
+      "notes": [
+        "Caballo castaño, crin negra, cuatro patas y aparejo sencillo de hojas. Color/aparejo editoriales, no reconstrucción histórica."
+      ]
+    },
+    {
+      "model_id": "perra_cazadora_ipuana__identity_sheet",
+      "path": "output/imagegen/wayuu/bible-additions/ipuana-01/perra_cazadora_ipuana.jpeg",
+      "sha256": "51febffa530387e4fd404d629972c2a6d5324d325b01553c3db3dcc5c65800f5",
+      "width": 1024,
+      "height": 1024,
+      "format": "jpeg",
+      "quality": "medium",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/biblia-adicional-01/prompts/perra_cazadora_ipuana.txt",
+      "prompt_sha256": "29bf00a6c37938f2814cd7f40770c85d4650a3486afc8f56cb271df5bba09b6d",
+      "qa_status": "PASS_WITH_EDITORIAL_NOTES",
+      "reviewed": true,
+      "notes": [
+        "Perra pequeña gris marrón, silueta de pocas piezas, cuatro patas. Orejas más puntiagudas; no raza certificada."
+      ]
+    },
+    {
+      "model_id": "venado_caceria_ipuana__identity_sheet",
+      "path": "output/imagegen/wayuu/bible-additions/ipuana-01/venado_caceria_ipuana.jpeg",
+      "sha256": "31b5fa2189b75f78c67600f58d2fb5fa6821e5bd53f6b1d01526411444707a6a",
+      "width": 1024,
+      "height": 1024,
+      "format": "jpeg",
+      "quality": "medium",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/biblia-adicional-01/prompts/venado_caceria_ipuana.txt",
+      "prompt_sha256": "296ab01f1b150cd47621234c129d27c96d105d8b36d46b80a4fceccf0a1fe438",
+      "qa_status": "PASS_WITH_EDITORIAL_NOTES",
+      "reviewed": true,
+      "notes": [
+        "Venado ocre sin cornamenta, silueta plana; sexo/especie no afirmados. No entidad transformista."
+      ]
+    },
+    {
+      "model_id": "botella_parlante_ipuana__identity_sheet",
+      "path": "output/imagegen/wayuu/bible-additions/ipuana-01/botella_parlante_ipuana.jpeg",
+      "sha256": "095e7697dbe19bf542e34e5b11322b2fcc1299447dd9c9490e3d5a54c3f32ac7",
+      "width": 1024,
+      "height": 1024,
+      "format": "jpeg",
+      "quality": "medium",
+      "prompt_file": "content/videos/wayuu/videos/el-indio-guerrero-ipuana/biblia-adicional-01/prompts/botella_parlante_ipuana.txt",
+      "prompt_sha256": "b288fa08c48afd5b79b4857589501ff3c4d7c4fb9bbc08d0e798bcb2392162b6",
+      "qa_status": "PASS_WITH_EDITORIAL_NOTES",
+      "reviewed": true,
+      "notes": [
+        "Botella ámbar de papel mate y una cinta ocre conectada al cuello; aro superior algo volumétrico pero delgado y ensamblado, sin vidrio. Voz es metáfora."
+      ]
+    }
+  ],
+  "limits": "Modelos de identidad y material para preparar escenas; no son keyframes ni certificación cultural. No se reemplaza la Biblia global existente."
+}

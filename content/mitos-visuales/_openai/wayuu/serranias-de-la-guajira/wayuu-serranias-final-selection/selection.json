@@ -1,0 +1,119 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "serranias-de-la-guajira",
+  "title": "Serranías de La Guajira",
+  "created_at": "2026-09-07T15:22:00Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña autorizada; QA por relato, Biblia y memoria.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "69d91fe70a67c033c04e199b1a16060e76a033f3454c301ffcadbb75084cfcaa",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-07T15:18:00Z",
+    "reviewed_reference_ids": [
+      "9a53f0a5b25c47cc62df",
+      "c501081f59be649a6ed9"
+    ],
+    "retained": [
+      "Capas de relieve y mar azul profundo; distancia territorial."
+    ],
+    "rejected": [
+      "Caras monumentales, Mareiwa genérico con tocado y estampados, mezcla de episodios, rosetas y arquitectura innecesaria."
+    ],
+    "influence_by_act": {
+      "entrada": "Trasladar profundidad a Wojoro convirtiéndose en loma baja, sin cabezas de piedra.",
+      "acto": "Mar y honda se aíslan de viajeros, animales y clanes.",
+      "huella": "Condensar caminante/relieve en una sandalia que se vuelve loma; no otra escena."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/entrada.jpeg",
+      "sha256": "986f87e1be60cfb02d8658ec8a1d7982fa3b8427b4ded6087eeb37da6405ccd6",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "ebe3e001591a1075972d9ac70b0739776b51e5d7e35a9fb05cb43a41357f475d",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Un solo viajero pequeño sentado a la derecha, vestido arena/terracota que se prolonga en capas de loma; valle profundo sin rostros pétreos.",
+        "limits": [
+          "Loma se extiende hasta borde derecho; continuidad orgánica del terreno, no soporte.",
+          "Rostro pequeño conserva algo de volumen; no ojos grandes ni estética Pixar."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/acto.jpeg",
+      "sha256": "8df54ddfd286c03ea5e194c04c2b67de652da6003fbb7908851719bc76cc4300",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "1c3cd8b27b579fbe326f03dcc8625692cea55cde91ea8dd56b07d7f48fe692ec",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Una lámina de mar azul se recoge con aire y sombra bajo su borde; piedra blanca, tres pozos y honda en tierra expuesta.",
+        "limits": [
+          "Honda y agua de pozos más naturalistas que las grandes láminas; conjunto de papel inequívoco.",
+          "Puesta en escena de honda en reposo, no ilustración literal del instante del lanzamiento."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-serranias-triptych-01/huella.jpeg",
+      "sha256": "18b221fc0c2752ad7f84feef1910bd03714c5d0bef39f1cede41a2b4c1d562eb",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/serranias-de-la-guajira/wayuu-serranias-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "697d1d730469421f5aea31c4d9c02e5ddce7005d3f1012ebb0de3bf0a0f76f38",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una sandalia ocre cuya suela se eleva en contornos de loma, fondo azul uniforme, sin paisaje.",
+        "limits": [
+          "Dos tiras no cruzadas: sandalia simbólica genérica, no reproducción técnica de una waireña.",
+          "No se atribuye como objeto tradicional existente."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 3,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 0,
+    "cli_seconds": {
+      "entrada_01": 85.5,
+      "acto_01": 33.3,
+      "huella_01": 47.7
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [],
+  "published": false
+}

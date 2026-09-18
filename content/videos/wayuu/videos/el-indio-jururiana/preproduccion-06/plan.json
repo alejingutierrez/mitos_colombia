@@ -1,0 +1,1236 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "slug": "el-indio-jururiana",
+  "title": "Jururiana y la gran lluvia",
+  "version": "preproduccion-06",
+  "status": "ready_for_material_anchor_generation",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "palette": "Patsuo: ocre y arena mate, carbón en Kotin y nubes, índigo mineral en lluvia; terracota en familia, paño arena rojiza e índigo de Warir. Luz natural matinal, gris de aguacero e interior oscuro legible sin brillo propio.",
+  "story_thesis": "Escuchar una advertencia cobra sentido al preparar y compartir; el conocimiento continúa entre generaciones y territorio.",
+  "shared_scene_continuity": [
+    "Todo el mundo es papel recortado mate con aire entre capas. No textura pegada sobre suelo o cuerpos realistas.",
+    "Paisaje costero bajo aproximado; no agaves en roseta, selva, enormes montañas o desierto de dunas monumentales.",
+    "Sólo aparecen las entidades asignadas a la toma. No incluir personas por nombrarse en voz fuera de ese instante.",
+    "No bastones, joyas, coronas, símbolos claniles inventados, Mma antropomorfa ni utilería de Umaralá.",
+    "La lluvia no es un poder de las manos de Jururiana. La ondulación del suelo no es grieta ni terremoto.",
+    "Weather is ONLY what the shot states. Rain is forbidden in shots without the lluvia entity; named palette colors never authorize storm clouds.",
+    "DO NOT ADD ROSETTE PLANTS, AGAVE, ALOE, SAGUARO. Pure low sheets without plants are allowed when plant identity is uncertain.",
+    "The elder's long charcoal wrap extends to MID-CALF and he wears his broad low hat whenever awake."
+  ],
+  "continuity_rules": [
+    "No alterar Arámai o trípticos.",
+    "Comparar anclas b1a b4a b7b y después todos los originales; papercut literal se mantiene en cada corrección.",
+    "Revisar cada paquete y reparto, sombrero se retira únicamente al dormir.",
+    "La coda b8b es puesta en escena editorial nueva para continuidad del cuidado, no un episodio adicional atribuido a Chaves.",
+    "Versión03 mantiene b1a/b4a/b7b revisados de versión02. Warir usa manga hasta codo en todas las tomas; mayor baja a escuchar arrodillado desde b6b y permanece así en b7a/b7b.",
+    "Version04 corrige nueve tomas tras QA directa: paquetes planos, reparto completo, paño al hombro, amplitud, terreno sin pedestales. Siete candidatos se preservan. Las anclas del primer piloto no cubrían familia/paquetes/animales: en próximos mitos revisar también esa combinación antes de despacho amplio."
+  ],
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json",
+    "content_sha256": "f20ab5c6a73667df8cfaf3d9c81ec163dfd5573b1efde6255c273d6530d3eb63",
+    "source_url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+    "source_locator": "VII pp314–315; versión editorial publicada elegida, diferencias en INVESTIGACION.md",
+    "live_hash_verified": true,
+    "events": [
+      {
+        "id": "sueno",
+        "description": "Jururiana sueña lluvia y reúne familia.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json"
+      },
+      {
+        "id": "reservas",
+        "description": "Reunir semillas y chivos negros.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Chaves VII pp314–315; investigación local INVESTIGACION.md"
+      },
+      {
+        "id": "preparacion",
+        "description": "Familia prepara resguardo y traslado antes de lluvia.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json"
+      },
+      {
+        "id": "rastro",
+        "description": "Chubasco borra huellas de Jururiana.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Chaves VII pp314–315; investigación local INVESTIGACION.md"
+      },
+      {
+        "id": "crisis",
+        "description": "Lluvia prolongada, aislamiento y pérdidas.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json"
+      },
+      {
+        "id": "reparto",
+        "description": "Compartir recursos después de la crisis.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json"
+      },
+      {
+        "id": "cuarto",
+        "description": "Abuelo y nieto juntos en prueba oscura según relato publicado.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json"
+      },
+      {
+        "id": "mma",
+        "description": "Warir reconoce Tierra-abuela como fuente de conocimiento.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Chaves VII pp314–315; investigación local INVESTIGACION.md"
+      },
+      {
+        "id": "continuidad",
+        "description": "Warir observa y consulta; memoria del cuidado tras muerte del mayor.",
+        "required": true,
+        "provenance": "published_editorial_expansion",
+        "source": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-indio-jururiana.json"
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "id": "jururiana",
+      "type": "person",
+      "desc": "ELDERLY WAYUU MAN with short grey hair and a LOW WIDE-BRIM SAND-COLORED WOMU HAT made of flat paper: ALWAYS worn except the sleeping shot where it rests beside his mat. His LONG CHARCOAL KOTIN is a single plain wrap covering shoulders, CLOSED CHEST, waist and legs down to MID-CALF with a narrow ochre reverse edge, NOT a short poncho. Below it only a narrow strip of opaque sand lower garment and clay sash, dark sandals. Uniform sienna solar face coverage without patterns. Almost flat side-profile cut-paper silhouette, not sculpted head or volumetric limbs. No staff or jewelry.",
+      "model_ids": [
+        "jururiana__identity_sheet"
+      ]
+    },
+    {
+      "id": "warir",
+      "type": "person",
+      "desc": "YOUNG ADULT WAYUU MAN, short black hair, FULL OPAQUE INDIGO SHIRT with elbow-length SHORT SLEEVES, charcoal opaque narrow wayuco, ochre si'ira sash, plain muted RED-SAND ASHEINPALAJANAA shoulder cloth and sandals. No facial paint, symbols or jewelry. Almost-flat cut-paper profile with minimal eye slit, not sculpted face. Sleeve length is a documented visual continuity choice from reviewed b7b, not a historical assertion.",
+      "model_ids": [
+        "warir__identity_sheet"
+      ]
+    },
+    {
+      "id": "familia",
+      "type": "supporting_people",
+      "desc": "Exactly TWO adult family members, consistent throughout: woman with BLACK HAIR IN A LOW BUN, long plain TERRACOTTA MANTA down to ankles and dark sandals; man with SHORT BLACK HAIR, elbow-sleeved SAND shirt, CHARCOAL trousers and dark sandals. Nearly flat cut-paper profiles. No jewelry, facial paint, staff, hat, clan patterns or new people. Number and color are editorial continuity, not historic portraits.",
+      "model_ids": []
+    },
+    {
+      "id": "chivos",
+      "type": "animal",
+      "desc": "Cinco chivos negros completos de tamaños distintos; siluetas y cuernos recortados, sin pelo realista. Pueden quedar fuera de campo, no multiplicarse sin razón entre tomas continuas.",
+      "model_ids": [
+        "animales_oscuros_jururiana__group_grammar"
+      ]
+    },
+    {
+      "id": "semillas",
+      "type": "object_or_phenomenon",
+      "desc": "THREE SMALL FLAT OCHRE FOLDED SEED PACKETS, rectangular envelopes without handles, strings or label. One partly unfolded shows tiny anonymous seed cutouts during work and sharing, all three closed during carrying. No shopping bag, sack, basket, chest or box. Seeds not identified botanically.",
+      "model_ids": [
+        "reservas_semillas_jururiana__object_sheet"
+      ]
+    },
+    {
+      "id": "patsuo",
+      "type": "environment",
+      "desc": "Approximate low coastal plain near Patsuo, distant thin PAPER sea horizon, ochre broad ground sheets with air gaps. Only sparse COLUMNAR CARDON stems and small flat-cut thorn-tree silhouettes IF specified; NO agave, aloe, rosette plants, branched saguaro cactus, high mountains or real sand.",
+      "model_ids": [
+        "patsuo__spatial_model"
+      ]
+    },
+    {
+      "id": "vivienda",
+      "type": "environment",
+      "desc": "Misma vivienda sencilla en escenas domésticas; techo y estructura traducidos a papel, sin madera ni barro realista. Recipientes no requeridos se omiten.",
+      "model_ids": [
+        "rancheria_wayuu__spatial_model"
+      ]
+    },
+    {
+      "id": "cuarto",
+      "type": "environment",
+      "desc": "ONE dim simple rectangular room, a SINGLE narrow lateral doorway with subdued dry daylight, opaque layered paper walls and beam strips, large continuous paper earth floor. No other doorway, furniture, altar, rain, ocean view, symbols, wood texture or real mud. It is a later dry day, not the storm episode.",
+      "model_ids": [
+        "habitacion_oscura_warir__spatial_model"
+      ]
+    },
+    {
+      "id": "descanso",
+      "type": "object_or_phenomenon",
+      "desc": "Mayor recostado sobre estera lisa en el interior durante el sueño; sombrero a su lado, vuelve a llevarlo al despertar. No chinchorro heredado de Arámai.",
+      "model_ids": []
+    },
+    {
+      "id": "lluvia",
+      "type": "object_or_phenomenon",
+      "desc": "Cortinas de tiras índigo/gris a distintas distancias. Sueño anticipatorio y aguacero real se distinguen por corte y voz; no simultaneidad literal.",
+      "model_ids": [
+        "gran_lluvia_jururiana__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "rastro",
+      "type": "object_or_phenomenon",
+      "desc": "Un único sendero de impresiones pequeñas de sandalias. Pasa de marcado a tenue y a suelo liso bajo las tiras, sin bifurcaciones mágicas.",
+      "model_ids": []
+    },
+    {
+      "id": "agua",
+      "type": "object_or_phenomenon",
+      "desc": "Láminas azules anchas que ocupan cauces locales; sin salpicaduras fotográficas ni océano arrasando todo.",
+      "model_ids": []
+    },
+    {
+      "id": "tierra_mma",
+      "type": "object_or_phenomenon",
+      "desc": "Mismo suelo del cuarto; ondulación transversal suave de una hoja sin romperla. Sin antropomorfismo, rayos ni luz propia.",
+      "model_ids": []
+    }
+  ],
+  "canonical_models": [
+    {
+      "model_id": "rancheria_wayuu__spatial_model",
+      "path": "output/imagegen/wayuu-v3/wayuu-v3-pilot-03-corrections-medium/rancheria_wayuu__spatial_model--canon.jpeg",
+      "sha256": "273831e777e2bf8615f5640f626204fac4b96ea268e55d4215f991d2a6012464",
+      "qa_status": "DIRECTION_CANDIDATE_PASS",
+      "batch_id": "wayuu-v3-pilot-03-corrections-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3/pilot-selection.json"
+    },
+    {
+      "model_id": "jururiana__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/jururiana__identity_sheet--canon.jpeg",
+      "sha256": "14c675109b39faac46f259c25ac598f8da8e51ee4f4822f095f829c10b4d2f19",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json"
+    },
+    {
+      "model_id": "warir__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/warir__identity_sheet--canon.jpeg",
+      "sha256": "8dc036cbd40a3bf66d9a8bbc0109c0e49bf59d8470893c04c3c8924026792b5b",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json"
+    },
+    {
+      "model_id": "gran_lluvia_jururiana__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/gran_lluvia_jururiana__phenomenon_rule--canon.jpeg",
+      "sha256": "aca92f558dd86e34ab0491e47c611f80d54fe5b263dc1b8038f6a5354c6c3886",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json"
+    },
+    {
+      "model_id": "reservas_semillas_jururiana__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/reservas_semillas_jururiana__object_sheet--canon.jpeg",
+      "sha256": "c827ee247cff505d15c7a102a11b15a485f0865659a739a81f6e0cdfbc9e5795",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json"
+    },
+    {
+      "model_id": "animales_oscuros_jururiana__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01/animales_oscuros_jururiana__group_grammar--canon.jpeg",
+      "sha256": "01ca7bc27338e55c62fda47f72acdd1fbc0f98bb9d47845f38e41e0c34a5caba",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json"
+    },
+    {
+      "model_id": "patsuo__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/patsuo__spatial_model--canon.jpeg",
+      "sha256": "21ac2fa9acadbcaa0074b76122ef1fa79c1a43df3d1f6a86f7056a0200ef3040",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json"
+    },
+    {
+      "model_id": "habitacion_oscura_warir__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/habitacion_oscura_warir__spatial_model--canon.jpeg",
+      "sha256": "ea2aa3da2cd62b093769e3e114561428399db092211e6e9432063e7748acfac2",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-13-el-indio-jururiana-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-13-el-indio-jururiana-medium/selection.json"
+    }
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-02-escenas/entrada.jpeg",
+        "sha256": "1f3e8fe28f0e9fcc1d22058d8c9ae64748eea21ae66ad672cfa304bc56412ae9",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-02-escenas/acto.jpeg",
+        "sha256": "d67a6752ebb6c150576d4e11db6492d2ad7db7836159d97a4d25ef6655a70b57",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-jururiana-triptych-01/huella.jpeg",
+        "sha256": "2f4ec60bc79725d347f3aff4cdd3bba4f7467573b42740fa722835cb7d272bc2",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Ocho modelos originales y tres trípticos revisados directamente. Identidades vistas en turno previo; resto en este corte.",
+      "Conservar conjuntos de prendas, paleta y relaciones mágicas; no heredar suelo granular, dedos modelados, testas volumétricas o maderas de los modelos.",
+      "Tríptico horizontal posee demasiado vacío para un video: ahora enriquecer mediante relaciones espaciales y trabajo humano sin gigantes.",
+      "No subir estos originales al proveedor; referencias de investigación solamente.",
+      "Primera tanda b1a/b4a/b7b rechazada: encuadre cercano, rosetas, pérdida de sombrero y Kotin largo, lluvia fuera de episodio. Versión02 fija explícitamente invariantes en inglés y estado atmosférico por entidad, preservando paper_lock íntegro."
+    ]
+  },
+  "duration": {
+    "target_seconds": 112,
+    "voice_words": 197,
+    "measured": false
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Cerca de Patsuo, Jururiana soñó que el agua borraba los caminos. Al despertar, el cielo seguía limpio. Pero él ya estaba reuniendo a su familia.",
+      "voice_provenance": "sueño y reunión familiar, ampliación publicada. La visión fuera del umbral es puesta en escena metafórica, no lluvia simultánea al despertar.",
+      "word_count": 25,
+      "time_seconds": [
+        0,
+        14
+      ],
+      "event_ids": [
+        "sueno"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "· Antes de que cambie el cielo · a",
+          "visual": "VERY WIDE interior from a far elevated corner. Elder asleep on a SMALL plain woven-paper mat in the MIDDLE DISTANCE below the LEFT wall, complete reclining body no wider than 30% of frame. His low wide hat rests alongside. Broad thin dark paper floor and layered roof occupy foreground, NOT his body. Through a broad opening across upper-right space, a dream of one winding sandal trail loses its impressions as long blue paper rain strips touch it. Dream exterior is low coastal ochre paper terrain, NO PLANTS. Full bleed inside dwelling, no external dollhouse walls or visible miniature base. Cutpaper almost-flat face, long charcoal wrap covering chest and legs. Only one elder and one instant.",
+          "time_seconds": [
+            0,
+            7
+          ],
+          "entity_ids": [
+            "jururiana",
+            "vivienda",
+            "descanso",
+            "patsuo",
+            "lluvia",
+            "rastro"
+          ],
+          "event_ids": [
+            "sueno"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Alero y suelo interior de hojas con aire",
+            "Mayor recostado sobre estera",
+            "Umbral hacia senda y cortinas del sueño"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una senda costera de impresiones pequeñas de sandalias.",
+            "impossible_behavior": "La lluvia se hace tiras físicas que alisan las impresiones en la hoja de terreno.",
+            "narrative_effect": "Hace visible la desaparición del camino anunciada.",
+            "agency": "Lluvia actúa sin órdenes gestuales del mayor.",
+            "physical_translation": "Cortinas finas de papel a distancias diferentes, rastro claro-tenue-ausente.",
+            "visible_test": "La única senda se puede seguir hasta desaparecer bajo las tiras, sin rutas paralelas.",
+            "event_ids": [
+              "sueno"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "anticipation"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b1a.jpeg",
+            "sha256": "26f2c731dd85a5e1115b0d68381556f59c69dd2b8ac9d7d3804ec42c78d0e878",
+            "qa_notes": [
+              "Apertura más abierta, personaje completo fuera del primer plano, sombrero junto a estera, sin rosetas.",
+              "Rastro se atenúa por distancia y lluvia; no afirmar borrado perfecto de todas las impresiones.",
+              "Reclinado ocupa algo más del ancho solicitado; aceptable como candidato por dominio ambiental."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b1b",
+          "title": "· Antes de que cambie el cielo · b",
+          "visual": "EXTREME WIDE clear dry morning near the SAME plain low coastal dwelling. Three SMALL FULL figures in the middle distance, under 22% frame height: elder in long closed charcoal Kotin and broad low hat points DOWN toward THREE FLAT OCHRE ENVELOPE-SHAPED seed packets; woman in plain terracotta ankle-length manta with black low bun and man in sand shirt/charcoal trousers stand listening, all fully inside central 60% of frame. One packet slightly open reveals tiny seeds. Door behind elder, small plain mat just visible inside. Foreground ONLY overlapping ochre PAPER GROUND SHEETS with shadows, NO plants. Distant thin blue sea, clear pale paper sky, no rain or mountains. No sacks, handles, bowls or furniture.",
+          "time_seconds": [
+            7,
+            14
+          ],
+          "entity_ids": [
+            "jururiana",
+            "familia",
+            "vivienda",
+            "descanso",
+            "semillas",
+            "patsuo"
+          ],
+          "event_ids": [
+            "sueno"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Hojas secas superpuestas delante",
+            "Mayor y dos familiares junto a puerta",
+            "Planicie costera bajo cielo despejado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte con elipsis al siguiente bloque, no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-04/b1b.jpeg",
+            "sha256": "cfa685006538188b52a14a7ca062dd67cd907a85e415f78407b771eb7b7440e2",
+            "qa_notes": [
+              "Reparto completo, Kotin y sombrero, paquetes planos y terreno sin rosetas; material y distancia mejorados.",
+              "Se ven cuatro paquetes en vez de los tres fijados. Diferencia de cantidad editorial registrada, no fiel cumplimiento de ese número; semillas y acción de preparar permanecen claras. No se usa como conteo histórico."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Les pidió guardar semillas y reunir los animales oscuros. Unos lo escucharon; otros miraron aquella mañana sin nubes. Jururiana empezó a preparar lo necesario.",
+      "voice_provenance": "recursos como núcleo histórico; reacciones y preparación doméstica publicadas. Tres paquetes, dos familiares y cinco chivos son diseño de continuidad.",
+      "word_count": 24,
+      "time_seconds": [
+        14,
+        28
+      ],
+      "event_ids": [
+        "reservas",
+        "preparacion"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "· Lo que se prepara · a",
+          "visual": "EXTREME WIDE lateral view beneath a broad paper-sheet alero. ALL THREE small complete people and THREE small flat ochre envelope-shaped seed packets contained in central 60% width, no body touches a picture edge. Woman with low bun and terracotta manta folds one packet, man in sand shirt/charcoal trousers places tiny anonymous paper seeds into another, elder with broad hat and long closed charcoal wrap points down at the dry ground beneath the roof, not horizon. THIRD packet lies closed beside the working pair. Foreground layered plain ochre ground, no plants. Background SAME simple dwelling, low flat coastal horizon, not cliffs. ONLY packets, no handles, basket, sack, box or extra accessories.",
+          "time_seconds": [
+            14,
+            21
+          ],
+          "entity_ids": [
+            "jururiana",
+            "familia",
+            "vivienda",
+            "semillas"
+          ],
+          "event_ids": [
+            "reservas",
+            "preparacion"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Borde del alero recortado delante",
+            "Manos, paquetes y figuras casi planas",
+            "Pared de hojas separadas"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-04/b2a.jpeg",
+            "sha256": "059c91e1063096bb6b40c09faf1669c9b2f6bdf730d4f43d5901bbb48b96f64a",
+            "qa_notes": [
+              "Tres paquetes sin asas, familia completa trabajando, rosetas eliminadas, sombrero y Kotin presentes.",
+              "Encuadre aún más cercano que 22%, pero ninguna persona se corta. Manta abierta en brazos al trabajar; no cambio a traje ceremonial."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b2b",
+          "title": "· Lo que se prepara · b",
+          "visual": "Wide elevated view across a low coastal plain, a SMALL traveling group in the central middle ground. EXACTLY FIVE complete black paper goats, laid out in TWO CLEAR DEPTH ROWS: front row TWO small kids separated by open ground; rear row THREE larger adult goats, none hidden behind a person or another goat. Each animal has its own visible head, body, four legs, and space around its silhouette. Leave broad margins so no animal touches frame. Jururiana at left with LOW BROAD SAND HAT and LONG CLOSED CHARCOAL KOTIN; woman in terracotta ankle manta and low black hair bun at right, man short hair sand shirt charcoal trousers beside her. Woman holds TWO THIN FLAT OCHRE ENVELOPES one in each hand, man holds ONE identical FLAT ENVELOPE. Envelopes thin as paper, diagonal flap seam visible, NOT stacks, boxes, bags or books. Elder hands empty. ALL people no taller than20% of image. Overlapping ochre paper terrain fills foreground with dimensional internal edges and air shadows. Narrow dark-blue PAPER sea horizon distant, a few tiny thorn-tree silhouettes only behind horizonward path. Plain dry pale sky. Everything has tactile paper-cut construction and cinematic depth. No foreground giant, rope, staff, rosette or cropped animal.",
+          "time_seconds": [
+            21,
+            28
+          ],
+          "entity_ids": [
+            "jururiana",
+            "familia",
+            "chivos",
+            "semillas",
+            "patsuo"
+          ],
+          "event_ids": [
+            "reservas",
+            "preparacion"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Terreno ocre de hojas anchas",
+            "Chivos y mayor en perfiles separados",
+            "Familia y horizonte marino"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte con elipsis al siguiente bloque, no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b2b.jpeg",
+            "sha256": "a715a4d9d8ec59062d947ebe90f07a9ae9083866fe568a25ef4de69ee2e223d2",
+            "qa_notes": [
+              "Cinco chivos completos separados en dos distancias, paquetes planos, vestuario y perfiles recortados.",
+              "Grupo detenido en lugar de caminando; compatible con reunión de recursos. Patas parcialmente superpuestas en algún animal; no afirmar conteo anatómico perfecto."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Revisaron el techo y llevaron las reservas a un lugar alto. Después llegaron las nubes desde el mar. Todavía quedaba un camino seco para regresar.",
+      "voice_provenance": "preparación y traslado publicados; camino de regreso enlaza el motivo del rastro sin afirmar una nueva cita histórica.",
+      "word_count": 25,
+      "time_seconds": [
+        28,
+        42
+      ],
+      "event_ids": [
+        "preparacion"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "· Buscar resguardo · a",
+          "visual": "WIDE HIGH OBLIQUE papercut coastal scene: small plain dwelling at middle-left, gentle ochre slope to right and distant thin paper sea. Man with short black hair, SAND SHIRT and CHARCOAL trousers stands ON GROUND and touches roof edge with one raised hand. No hat on this younger man. Woman with low black bun and plain TERRACOTTA ankle-length manta walks toward the dwelling holding THREE THIN FLAT OCHRE ENVELOPES FANNED IN ONE HAND; the three flat rectangles spread sideways like a fan so their separate TRIANGULAR FLAP SEAMS are visible. Other hand supports their bottom edges. Each envelope only as thick as a sheet: NO stacking vertically, NO boxes, cubes, books or sacks. Do NOT draw depth sides on these packets. They are simple seed envelopes, not letters with writing. Farther up the gentle slope, small elder with LOW WIDE SAND HAT and LONG CLOSED CHARCOAL KOTIN walks with FIVE complete small black goats, all safely within x50–88% width, nowhere near picture edge. Three adult goats and two kids. Foreground broad empty layered PAPER EARTH SHEETS and air shadows; no plants or exterior miniature base. Low grey paper clouds gather above distant flat sea. People no taller than22% frame, action readable, almost-flat paper figures. No tools, bench, crate, rosette or text.",
+          "time_seconds": [
+            28,
+            35
+          ],
+          "entity_ids": [
+            "jururiana",
+            "familia",
+            "chivos",
+            "semillas",
+            "vivienda",
+            "patsuo"
+          ],
+          "event_ids": [
+            "preparacion"
+          ],
+          "angle": "mirada alta oblicua ambiental",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Terreno bajo alero cercano",
+            "Familia, techo y recursos a media distancia",
+            "Mayor y chivos en loma baja al fondo"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "produce_now": true,
+          "qa_status": "previous_generation_rejected_targeted_correction"
+        },
+        {
+          "id": "b3b",
+          "title": "· Buscar resguardo · b",
+          "visual": "plano general profundo. Un solo rastro conecta al mayor que vuelve hacia la vivienda con el sendero anterior. Nubes superpuestas sobre mar lejano; primeras cortinas en distancia, aún sin alcanzar sus sandalias. Paquetes ya resguardados, no reaparecen en sus manos. Figuras completas y pequeñas, de 15 a 22% de altura cuando estén de pie; ninguno ocupa el primer plano. Material de rostros y extremidades casi plano como siluetas recortadas, incluso en interiores. Un solo instante, no varias etapas simultáneas.",
+          "time_seconds": [
+            35,
+            42
+          ],
+          "entity_ids": [
+            "jururiana",
+            "patsuo",
+            "rastro",
+            "lluvia",
+            "vivienda"
+          ],
+          "event_ids": [
+            "preparacion"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Sendero en hojas ocre delante",
+            "Mayor regresando junto a vivienda",
+            "Nubes y tiras de lluvia lejos sobre mar"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte con elipsis al siguiente bloque, no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b3b.jpeg",
+            "sha256": "0ba299584837d3a3b74ba8de5978d5266df8fbf1a6b48c282028d37af0ab0699",
+            "qa_notes": [
+              "Mayor completo con sombrero y Kotin largo, lluvia distante, rastro y terreno de hojas.",
+              "Sendero se prolonga por delante del mayor; plantas pequeñas se leen genéricas y no permiten identificación botánica. No tomar como ficha de vegetación.",
+              "Vivienda y paisaje aproximados, no reconstrucción precisa."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "El chubasco borró sus huellas. La lluvia siguió cayendo; los cauces se llenaron y algunas rancherías quedaron aisladas. Tras el agua llegaron enfermedad y pérdida.",
+      "voice_provenance": "borrado del rastro histórico; prolongación, aislamiento y enfermedad de la versión editorial. Traducción material del borrado: licencia visual explícita.",
+      "word_count": 25,
+      "time_seconds": [
+        42,
+        56
+      ],
+      "event_ids": [
+        "rastro",
+        "crisis"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "· El camino desaparece · a",
+          "visual": "EXTREME WIDE low coastal paper plain with NO PLANTS in this frame. One SMALL elderly Jururiana in MIDDLE DISTANCE right third, full standing height at most 18% of image, WEARING his low broad sand paper hat and LONG closed CHARCOAL KOTIN from shoulders to MID-CALF. No short poncho, bare head or large lower skirt. A SINGLE path of SMALL SANDAL SOLE impressions WITHOUT TOES begins near his heels and leads leftward under several physical thin blue rain-strip curtains. Under the strips the one trail fades from clear to faint to ABSENT because tips smooth a broad matte paper sheet. Foreground is overlapping ground sheets with air shadows, not new figures or props. Clouds cut broad overlapping paper shapes, narrow paper sea horizon. Elder watches, arms down, cannot command rain.",
+          "time_seconds": [
+            42,
+            49
+          ],
+          "entity_ids": [
+            "jururiana",
+            "patsuo",
+            "rastro",
+            "lluvia"
+          ],
+          "event_ids": [
+            "rastro"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Hojas de terreno ocre con borde interno",
+            "Rastro que se atenúa al tocar lluvia de tiras",
+            "Mayor pequeño y horizonte costero"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Una senda costera de impresiones pequeñas de sandalias.",
+            "impossible_behavior": "La lluvia se hace tiras físicas que alisan las impresiones en la hoja de terreno.",
+            "narrative_effect": "Hace visible la desaparición del camino anunciada.",
+            "agency": "Lluvia actúa sin órdenes gestuales del mayor.",
+            "physical_translation": "Cortinas finas de papel a distancias diferentes, rastro claro-tenue-ausente.",
+            "visible_test": "La única senda se puede seguir hasta desaparecer bajo las tiras, sin rutas paralelas.",
+            "event_ids": [
+              "rastro"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b4a.jpeg",
+            "sha256": "4c00c64ac141e9b5cda4d16511113968e3ee24183748136aa0f199214f339686",
+            "qa_notes": [
+              "Sombrero y Kotin largo recuperados, sin rosetas ni dedos en huellas; papel y profundidad sostenidos.",
+              "La senda pasa delante del mayor en vez de terminar exactamente junto a talones. Figura algo mayor que 18%; permanece ambiental."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b4b",
+          "title": "· El camino desaparece · b",
+          "visual": "EXTREME WIDE elevated view from a dry shelter onto a LOW LOCAL COASTAL FLOOD. Wide blue PAPER SHEETS fill a few winding local channels between low ochre paper islands and three distant small dwellings, not global sea catastrophe. Near middle-left beneath shelter stand THREE SMALL complete people: elder with broad low hat and long charcoal wrap, woman low bun terracotta manta, man sand shirt charcoal trousers. THREE FLAT CLOSED OCHRE seed packets on dry ground at their feet. FIVE small full black goats gathered on dry middle-ground to their right, all well inside margins and no foreground animal. Figures at most20% frame. Sparse rain consists of thin matte blue paper strips at separated distances beneath layered clouds. Foreground ONLY dry overlapping earth sheets. NO bowl, bench, furniture, plants or cropped bodies. No visible illness or injury.",
+          "time_seconds": [
+            49,
+            56
+          ],
+          "entity_ids": [
+            "jururiana",
+            "familia",
+            "vivienda",
+            "semillas",
+            "chivos",
+            "patsuo",
+            "agua",
+            "lluvia"
+          ],
+          "event_ids": [
+            "crisis"
+          ],
+          "angle": "mirada alta oblicua ambiental",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Borde seco de alero y paquetes",
+            "Familia y animales en resguardo",
+            "Cauces de hojas azules y viviendas aisladas"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte con elipsis al siguiente bloque, no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b4b.jpeg",
+            "sha256": "615a0ccdc7b0e9b12b82ac186222eaf09c5d418527b311569e6b7f6bc3eb123f",
+            "qa_notes": [
+              "Cinco chivos completos, tres paquetes planos, familiares y mayor en resguardo, inundación localizada en capas de papel.",
+              "Personas algo más grandes que porcentaje solicitado; todas completas y ambiente dominante."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Las reservas permitieron esperar. Cuando pudieron salir, Jururiana compartió semillas y animales con quienes lo habían perdido todo. No celebró haber tenido razón.",
+      "voice_provenance": "reparto como desarrollo editorial publicado, no norma económica general atribuida a la comunidad.",
+      "word_count": 23,
+      "time_seconds": [
+        56,
+        70
+      ],
+      "event_ids": [
+        "reparto"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "· Abrir las reservas · a",
+          "visual": "WIDE environmental view beneath SAME paper-sheet dwelling alero on a DRY day after the rain. Three small FULL figures no taller than22% frame, well inside central area: elder seated ON GROUND, broad low hat worn and long charcoal wrap covering body, UNFOLDS one SMALL FLAT OCHRE RECTANGULAR seed packet so tiny paper seed cutouts are visible. TWO matching closed flat packets on ground beside him. Woman with BLACK LOW BUN in terracotta manta and man SHORT BLACK HAIR in sand shirt and charcoal trousers sit on ground listening. Near foreground layered ochre and muted indigo earth paper, dry matte not fluid. Low flat distant sea horizon. Absolutely no plants in this composition. No loose long hair, bag handles, bowl, seat, bench or rain.",
+          "time_seconds": [
+            56,
+            63
+          ],
+          "entity_ids": [
+            "jururiana",
+            "familia",
+            "vivienda",
+            "semillas",
+            "patsuo"
+          ],
+          "event_ids": [
+            "reparto"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Amplia hoja de terreno húmedo mate",
+            "Mayor, paquete abierto y familiares",
+            "Techo y pared de vivienda"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b5a.jpeg",
+            "sha256": "0b11fb88e3bc2124e21d6d3b73daa2b8cedbe5212eea46d422300be9d4d6b459",
+            "qa_notes": [
+              "Mayor abre paquete con semillas visibles, otros dos cerrados, familiares de peinados coherentes sentados en suelo; papel sin rosetas.",
+              "Color de pared adquiere índigo y vestuario forma pliegues curvos; no son telas realistas ni nuevo episodio."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_sequence"
+        },
+        {
+          "id": "b5b",
+          "title": "· Abrir las reservas · b",
+          "visual": "WIDE lateral shot on a CLEAR DRY day outside SAME small paper dwelling, dry blue-grey pale sky without rain strips. Complete SMALL elder in broad low hat and long charcoal wrap hands ONE OPEN FLAT OCHRE SEED ENVELOPE to the woman with BLACK LOW BUN in long terracotta manta. Her two hands meet the small packet; seeds visible, no bowl or bag. Sand-shirted short-black-haired man in charcoal trousers stands beside ONE FULL BLACK GOAT that calmly passes toward him, hands relaxed with NO stick, rope or staff. FOUR other goats small and complete in distant middle ground. Group occupies central60% width and bodies under22% frame height. Two closed matching seed envelopes remain near dwelling. Foreground only broad overlapping PAPER terrain. No close portrait, plants or rain.",
+          "time_seconds": [
+            63,
+            70
+          ],
+          "entity_ids": [
+            "jururiana",
+            "familia",
+            "semillas",
+            "chivos",
+            "vivienda",
+            "patsuo"
+          ],
+          "event_ids": [
+            "reparto"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Suelo de láminas ocre delante",
+            "Paquete entre manos, mayor y familiares",
+            "Grupo de chivos y vivienda"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte con elipsis al siguiente bloque, no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b5b.jpeg",
+            "sha256": "f26d5faf197c9b313c3461c2add2d6455e7f152d21fdb0c448228418883264a1",
+            "qa_notes": [
+              "Reparto de paquete a la mujer, chivo junto al hombre, no vara/cuerda ni lluvia añadida; sombras y recortes.",
+              "Sólo cuatro chivos visibles, no los cinco solicitados. Se admite grupo parcialmente fuera de campo por corte, no contabilizar como desaparición narrativa.",
+              "Cantidad de semillas y tono cambian a escala pequeña, especie no afirmada."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Tiempo después, llevó a su nieto Warir a una habitación oscura. Quería saber cómo comprendía las señales. Allí no había horizonte ni huellas que seguir.",
+      "voice_provenance": "combinación de prueba, nieto y presencia del abuelo según versión publicada; no resolución histórica del sujeto ambiguo.",
+      "word_count": 25,
+      "time_seconds": [
+        70,
+        84
+      ],
+      "event_ids": [
+        "cuarto"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "· Sin horizonte · a",
+          "visual": "VERY WIDE view into ONE dim plain rectangular paper room through ONE narrow lateral doorway on a LATER DRY DAY. Two SMALL FULL men entering in middle distance, no taller than22% frame: young adult WARIR ahead wears elbow-length INDIGO SHIRT, narrow opaque charcoal lower garment, ochre waist sash AND a separate plain muted RED-SAND CLOTH lying OVER HIS LEFT SHOULDER and draping down his BACK. The red cloth MUST visibly cross the shoulder, NEVER hang solely from waist. Elder behind wears LOW BROAD SAND HAT and LONG CLOSED CHARCOAL KOTIN to mid-calf. Both complete flat profiles. Foreground broad paper earth sheets and roof planes dominate depth. No rain, sea view, other doorway, object or furniture. Dry doorway light dim, room not luminous.",
+          "time_seconds": [
+            70,
+            77
+          ],
+          "entity_ids": [
+            "jururiana",
+            "warir",
+            "cuarto"
+          ],
+          "event_ids": [
+            "cuarto"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Puerta de varias hojas espaciadas",
+            "Warir entrando y abuelo detrás",
+            "Pared oscura a distancia"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b6a.jpeg",
+            "sha256": "a399343fc75046f0c8a727f2a1e4569594523cc960cf0251d0220aded111c61c",
+            "qa_notes": [
+              "Paño rojo-arena vuelve al hombro de Warir; ropa e identidad del mayor conservadas, entrada seca sin utilería.",
+              "El borde de puerta ocluye parte del mayor, no figura cortada por el marco exterior. La casa domina."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_sequence"
+        },
+        {
+          "id": "b6b",
+          "title": "· Sin horizonte · b",
+          "visual": "contraplano abierto interior. Warir se arrodilla y aproxima las manos al suelo continuo; mayor cerca de puerta, apartado. Tres distancias reales de techo, cuerpos y pared, oscuridad legible sin foco sobrenatural. Figuras completas y pequeñas, de 15 a 22% de altura cuando estén de pie; ninguno ocupa el primer plano. Material de rostros y extremidades casi plano como siluetas recortadas, incluso en interiores. Un solo instante, no varias etapas simultáneas. CONTINUIDAD: elder also KNEELS upright near the single doorway, wearing his low wide hat and long closed charcoal wrap, arms low, watching Warir. Warir's indigo shirt sleeves end at the elbows. No extra figures or doorway. ONE continuous ground sheet, no stacked waves.",
+          "time_seconds": [
+            77,
+            84
+          ],
+          "entity_ids": [
+            "jururiana",
+            "warir",
+            "cuarto",
+            "tierra_mma"
+          ],
+          "event_ids": [
+            "cuarto"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Suelo liso continuo de hojas delante",
+            "Warir arrodillado con manos aproximándose",
+            "Abuelo apartado y puerta lateral"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte con elipsis al siguiente bloque, no morph automático.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b6b.jpeg",
+            "sha256": "0afd5d79df0328462659b1e92e147db197c5776a5efe75e1961c2b99fff211a6",
+            "qa_notes": [
+              "Ambos arrodillados, palmas aún aproximándose, sombrero y paño de hombro presentes, suelo continuo y perfiles de papel.",
+              "Toma previa a la onda; no exige fenómeno añadido. El ángulo coloca puerta a izquierda y será contraplanado en b7b."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Warir puso las manos sobre el suelo. Dijo que Mma, la abuela Tierra, guardaba lo ocurrido y lo que se aproxima. Jururiana escuchó, satisfecho.",
+      "voice_provenance": "relación Tierra-abuela histórica; diálogo y disposición publicados. Ondulación de papel, metáfora editorial de relación, no poder ceremonial certificado.",
+      "word_count": 24,
+      "time_seconds": [
+        84,
+        98
+      ],
+      "event_ids": [
+        "cuarto",
+        "mma"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "· La tierra bajo las manos · a",
+          "visual": "plano ambiental oblicuo. Palmas apoyadas, no flotantes. Una amplia hoja del suelo se ondula transversalmente desde el contacto; pared y techo permanecen firmes. Perfil plano del joven, sin cabeza esculpida ni primer plano de manos. Figuras completas y pequeñas, de 15 a 22% de altura cuando estén de pie; ninguno ocupa el primer plano. Material de rostros y extremidades casi plano como siluetas recortadas, incluso en interiores. Un solo instante, no varias etapas simultáneas. CONTINUIDAD: elder also KNEELS upright near the single doorway, wearing his low wide hat and long closed charcoal wrap, arms low, watching Warir. Warir's indigo shirt sleeves end at the elbows. No extra figures or doorway. ONE continuous ground sheet, no stacked waves.",
+          "time_seconds": [
+            84,
+            91
+          ],
+          "entity_ids": [
+            "jururiana",
+            "warir",
+            "cuarto",
+            "tierra_mma"
+          ],
+          "event_ids": [
+            "cuarto",
+            "mma"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Borde interno de hoja continua ondulada",
+            "Palmas de Warir apoyadas sin grieta",
+            "Mayor y pared de hojas a distancia"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Warir apoya las palmas en el suelo del cuarto.",
+            "impossible_behavior": "Una hoja continua de tierra se ondula suavemente desde el contacto hacia el espacio común.",
+            "narrative_effect": "Hace visible el vínculo entre conocimiento, parentesco y tierra.",
+            "agency": "Tierra responde como relación; Warir no lanza poderes.",
+            "physical_translation": "Ondulación transversal de una hoja de suelo sin romperla, con hueco de aire sombreado.",
+            "visible_test": "Ambas palmas tocan la hoja, la onda ocupa el espacio entre personas y no forma grieta.",
+            "event_ids": [
+              "cuarto",
+              "mma"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b7a.jpeg",
+            "sha256": "11e051c9558bf609778c732081753ac47123a4d45f2e26ac552ebe07c22ecc75",
+            "qa_notes": [
+              "Palmas apoyadas, mayor arrodillado, ondulación de una hoja de suelo, sombra con aire y cabezas planas.",
+              "Dos curvaturas suaves en la misma hoja; sin lectura de grieta. Campo más cercano que porcentaje solicitado, ambos completos."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b7b",
+          "title": "· La tierra bajo las manos · b",
+          "visual": "WIDE INTERIOR from the far corner of ONE dark rectangular room on a LATER DRY DAY. One SINGLE NARROW DOORWAY near far right, no other opening, sky, sea or rain visible. Two SMALL complete paper figures in middle distance, each no taller than 22% of picture: Warir kneels at left wearing full indigo shirt and muted red-sand shoulder cloth; his two palms touch ONE continuous unbroken ochre floor sheet. At right the elder listens, arms low, wearing LOW WIDE-BRIM SAND HAT and LONG CHARCOAL KOTIN CLOSED from shoulders to MID-CALF, not a short cape. ONE broad soft TRANSVERSE BEND in the continuous floor sheet extends from Warir's palms ACROSS toward the empty space between the two people, one air shadow, not overlapping separated waves or a crack. Roof strips, walls and foreground ground sheets create strong depth around the small figures; faces nearly-flat cut profiles. No magical light, new object, rain or extra person.",
+          "time_seconds": [
+            91,
+            98
+          ],
+          "entity_ids": [
+            "jururiana",
+            "warir",
+            "cuarto",
+            "tierra_mma"
+          ],
+          "event_ids": [
+            "cuarto",
+            "mma"
+          ],
+          "angle": "oblicuo desde rincón opuesto, mantener posición relativa del abuelo y puerta",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Una hoja transversal del suelo elevada suavemente",
+            "Warir y espacio común alcanzado por la onda",
+            "Abuelo y puerta lateral"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte con elipsis al siguiente bloque, no morph automático.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Warir apoya las palmas en el suelo del cuarto.",
+            "impossible_behavior": "Una hoja continua de tierra se ondula suavemente desde el contacto hacia el espacio común.",
+            "narrative_effect": "Hace visible el vínculo entre conocimiento, parentesco y tierra.",
+            "agency": "Tierra responde como relación; Warir no lanza poderes.",
+            "physical_translation": "Ondulación transversal de una hoja de suelo sin romperla, con hueco de aire sombreado.",
+            "visible_test": "Ambas palmas tocan la hoja, la onda ocupa el espacio entre personas y no forma grieta.",
+            "event_ids": [
+              "cuarto",
+              "mma"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          },
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-02/b7b.jpeg",
+            "sha256": "fa4393c72b7fc12c045d2354df50c1e4289927d5a470255365d0fec1e72ab49c",
+            "qa_notes": [
+              "Una puerta, día seco, sombrero, suelo de hoja continua ondulada y perfiles planos.",
+              "Mayor se arrodilla también; conservarlo para continuidad de esta toma, postura de escucha compatible. Camisa de Warir se ve de manga corta; fijar ese detalle en tomas contiguas antes de despacho.",
+              "Onda discreta, sin grieta ni luz propia; no afirmar que la imagen animada ya exista."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Warir salió a observar el viento, los animales y la humedad. Consultaba con su familia. Cuando Jururiana murió, aquella manera de escuchar y cuidar siguió viva.",
+      "voice_provenance": "observación, consulta y muerte del mayor presentes en versión publicada; acto final de compartir por Warir es coda audiovisual editorial, no episodio documental nuevo.",
+      "word_count": 26,
+      "time_seconds": [
+        98,
+        112
+      ],
+      "event_ids": [
+        "continuidad"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "· El conocimiento continúa · a",
+          "visual": "Warir sale al exterior tras la prueba, con idéntica ropa. Observa las hojas recortadas del trupillo inclinadas por viento; dos familiares a distancia. Sin repetir lluvia imposible o hacer germinar reservas por magia. Figuras completas y pequeñas, de 15 a 22% de altura cuando estén de pie; ninguno ocupa el primer plano. Material de rostros y extremidades casi plano como siluetas recortadas, incluso en interiores. Un solo instante, no varias etapas simultáneas.",
+          "time_seconds": [
+            98,
+            105
+          ],
+          "entity_ids": [
+            "warir",
+            "familia",
+            "vivienda",
+            "patsuo"
+          ],
+          "event_ids": [
+            "continuidad"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Hojas del trupillo recortadas delante",
+            "Warir saliendo de casa",
+            "Dos familiares y planicie costera"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de continuidad de acción y materiales.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-03/b8a.jpeg",
+            "sha256": "d9db32608c3a279a8183fcf05611fb9d14f5cc058986387ae73bb1b2a0d56c3d",
+            "qa_notes": [
+              "Warir con paño sobre hombro, sale a mirar hojas inclinadas; familiares distantes.",
+              "Figura más grande de lo pedido, pero vista desde atrás y subordinada a casa y paisaje, no retrato.",
+              "Familiar masculino lleva sombrero no fijado previamente; accesorio cotidiano sin significado ritual. No fingir identidad histórica exacta.",
+              "Recortes azules en cielo evocan viento; no son prueba de poder mágico nuevo."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_full_sequence"
+        },
+        {
+          "id": "b8b",
+          "title": "· El conocimiento continúa · b",
+          "visual": "WIDE final environmental shot under same simple low paper alero on warm DRY afternoon. THREE SMALL full adults entirely inside central60% width, all on ONE continuous thin paper EARTH FLOOR at ground level: Warir in indigo elbow sleeves with plain muted red-sand cloth OVER SHOULDER, narrow charcoal lower garment, ochre sash and sandals hands ONE SMALL FLAT OCHRE seed packet to woman BLACK LOW BUN, long plain terracotta manta. Sand-shirted short-black-haired man in charcoal trousers sits alongside her ON THE GROUND. TWO matching flat closed packets nearby. FIVE black goats small and complete in far middle distance. Foreground ONLY overlapping thin ochre ground sheets with subtle air shadows, no raised veranda, pedestal, thick cut block, cardboard slab, bench, seat, plants or border. Keep shoulder cloth plain WITHOUT FRINGE. Elder absent, no ghost. Distant thin blue paper sea horizon, soft warm light and dry sky.",
+          "time_seconds": [
+            105,
+            112
+          ],
+          "entity_ids": [
+            "warir",
+            "familia",
+            "semillas",
+            "chivos",
+            "vivienda",
+            "patsuo"
+          ],
+          "event_ids": [
+            "continuidad"
+          ],
+          "angle": "lateral oblicuo ambiental a distancia",
+          "shot_scale": "plano general amplio, figuras subordinadas al espacio",
+          "depth_planes": [
+            "Hojas de suelo ocre separadas delante",
+            "Warir entregando semillas a familiares",
+            "Chivos pequeños y alero al fondo"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Cierre con pausa antes de negro, edición aún no ejecutada.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Desplazamiento lento opcional por definir; no animación generada.",
+            "allowed": "Paralaje sutil sólo si futuras capas se separan correctamente; mantener identidades, proporciones y causalidad.",
+            "forbidden": "Morph de rostro, nuevos objetos, zoom a retrato, cambio de papel a materia realista, asumir que el JPEG ya posee capas separadas.",
+            "execution": "not_selected_not_generated"
+          },
+          "asset": {
+            "status": "existing_pilot_candidate_not_final",
+            "path": "output/imagegen/wayuu/keyframes/el-indio-jururiana-preproduccion-05/b8b.jpeg",
+            "sha256": "a4501b073e9e7e35507930c8a613c728bbb136c7daf1edc00a55d4a0332665c0",
+            "qa_notes": [
+              "Coda con paquete plano, familiares sentados en suelo continuo sin bancos/pedestal, Warir con paño de hombro sin flecos.",
+              "Cuatro chivos visibles en vez de cinco; no todos tienen que permanecer en campo después de la elipsis. Plano cálido algo mayor que escala solicitada, sin retrato.",
+              "No hay fantasma del mayor ni afirmación de ceremonia."
+            ]
+          },
+          "produce_now": false,
+          "qa_status": "original_reviewed_pending_sequence"
+        }
+      ]
+    }
+  ]
+}

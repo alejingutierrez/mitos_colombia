@@ -1,0 +1,137 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "el-origen-del-fuego",
+  "title": "El origen del fuego",
+  "created_at": "2026-09-06T15:14:03.417Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña completa autorizada por el usuario; selección del agente tras investigación e inspección directa de originales.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "3f42d4dafc69dc59021c36cfb6024033597d24c0c92f96b50b0ae0db314e819e",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T15:02:39.762Z",
+    "reviewed_reference_ids": [
+      "b5ddcbc9bfbcf35285db",
+      "ac0343457ea8c5a1943a"
+    ],
+    "retained": [
+      "Cueva de estratos con profundidad real, sombras y contraste ámbar/azul.",
+      "Fuego como centro de atención dentro del mundo material."
+    ],
+    "rejected": [
+      "Torso descubierto, cenefas inventadas, rostros volumétricos, deidad gigante barbada y aureola.",
+      "Selva densa, agaves ornamentales y planos cerrados; no copiar la misma escena en dos formatos."
+    ],
+    "influence_by_act": {
+      "entrada": "Contraste cálido/frío y estratos trasladados al chinchorro de Siki: la trama contiene fuego sin arder.",
+      "acto": "Recorrido profundo junto a gruta; personaje pequeño y dos brasas abren capas de oscuridad, sin deidad inventada.",
+      "huella": "Estratos cálidos condensados en fuego plegado dentro de madera intacta; sin cueva, personajes ni escena."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-fuego-triptych-03-entrada/entrada.jpeg",
+      "sha256": "4b5c7034163fb2b64395e8502eccd1e87bfb2e81733a4d4d6508b4ef08784ee8",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-origen-del-fuego/wayuu-fuego-triptych-03-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "fb8b724add6e226b6d0e217ef0be9d7e269c7ef043b9bf5c87c7611e279bbb9d",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Siki descansa en chinchorro junto a pared que continúa fuera de cuadro; fuego cálido contenido bajo trama intacta. Suelo de láminas continuas sin plataforma, horizonte abierto y mitad izquierda libre. Sombrero, prenda cruda y panel ocre visibles; cara de perfil simplificada.",
+        "limits": [
+          "La trama y la postura recostada ocultan parcialmente las prendas inferiores; no se infiere reconstrucción histórica exacta.",
+          "La llama dentro del chinchorro es metáfora editorial del fuego-persona, no episodio literal.",
+          "La arquitectura ocupa más que el porcentaje solicitado, pero la acción queda lejos del área del título y se mantiene el plano abierto."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-fuego-triptych-01/acto.jpeg",
+      "sha256": "6764d81887c329d9859e2eecdd730c7814b031ca5c791b8cc49bbc85255e80b0",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-origen-del-fuego/wayuu-fuego-triptych-01/prompts/acto.prompt.txt",
+      "prompt_sha256": "52b16a450ef764e953112b7e131316305545d6cfeebc15fd125be9bcc07dcca0",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Junuunay completo junto a gruta; paño liso, camisa azul, capa arena, faja y calzado. Dos brasas rojas separadas en un continente tan pequeño como un morral. Dos planos índigo levantados descubren camino ámbar, con aire y sombras; rostro casi plano.",
+        "limits": [
+          "Morral con boca ancha facetada: forma editorial, no réplica etnográfica.",
+          "Apertura material de noche es metáfora; no portal ni poder gestual.",
+          "Figura ronda un cuarto del alto, sin ocupar el tercio inferior destinado al título."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-fuego-triptych-01/huella.jpeg",
+      "sha256": "11c2cba2aa7a70c3febf41f7a20720653654e02a912801e8f52392d263d969f0",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/el-origen-del-fuego/wayuu-fuego-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "69c41073f3071cd07eb1099b43e576d81f4440d48c96940dd0df35986e0136f3",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Dos piezas de madera separadas sobre índigo; una veta contiene forma de llama roja y ámbar plegada. Corteza intacta, capas y sombra; sin escena ni aparato de fricción.",
+        "limits": [
+          "La forma de llama dentro de veta es síntesis editorial; no objeto ritual documentado."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 3,
+        "preparation_rounds": 3,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 97,
+      "acto_01": 48,
+      "huella_01": 47.6,
+      "entrada_02": 80.8,
+      "entrada_03": 77.3
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-fuego-triptych-01/entrada.jpeg",
+      "sha256": "3be3f6e838fbea16f33581ec9ff6142070023666ac8e6f21757b4ece29527b17",
+      "reason": "Escala demasiado cerrada y suelo poco inequívoco de papel."
+    },
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-fuego-triptych-02-entrada/entrada.jpeg",
+      "sha256": "5f5e6930b755a22beeaacf09e0272b213e7b2c133dc09a09fdb6a5c1059dae84",
+      "reason": "Plataforma de maqueta bajo refugio."
+    }
+  ],
+  "published": false
+}

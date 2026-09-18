@@ -1,0 +1,43 @@
+{
+  "schema": "wayuu-video-additional-bible-selection/v1",
+  "slug": "el-origen-del-fuego",
+  "status": "editorial_identity_selected_with_notes",
+  "scope": "video_variant_v2_only_not_community_canon",
+  "generation": {
+    "provider": "OpenAI API",
+    "tool": "official_imagegen_cli",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": [],
+    "unique_images": 1,
+    "selected_images": 1,
+    "superseded_images": 0,
+    "cli_seconds": 33.2,
+    "cost": null,
+    "http_attempts": null
+  },
+  "selected": [
+    {
+      "model_id": "maleiwa_guardian_fuego_v2__identity_sheet",
+      "path": "output/imagegen/wayuu/keyframes/el-origen-del-fuego-biblia-01/guardian.jpeg",
+      "sha256": "f45a41ce28c6215d593465b1341fdb9865ecdc638ab03ed1ad16175ff3c6a19c",
+      "prompt_file": "content/videos/wayuu/videos/el-origen-del-fuego/biblia-adicional-01/guardian-v1.prompt.txt",
+      "prompt_sha256": "b17bf64151c0a3e7f68a83fb6f76be81a0dfb22da96231c560dd99d16c9cd2a0",
+      "reviewed": true,
+      "notes": [
+        "Rostro de perfil recortado, cuerpo plano, camisa crema y faja roja lisas, sin emblemas.",
+        "Suelo de hojas grandes y gruta de estratos con sombras; sin marco ni base exterior.",
+        "Figura ocupa más de la mitad prevista: aceptable en hoja de identidad, no copiar escala a keyframes ambientales.",
+        "Cabello con marca gris lateral, sin barba ni tocado. Prendas hasta zona de rodilla con pieza inferior oscura visible.",
+        "Diseño editorial, no retrato documentado de Maleiwa ni aprobación comunitaria."
+      ]
+    }
+  ],
+  "superseded": [],
+  "keyframes": 0,
+  "published": false
+}
+

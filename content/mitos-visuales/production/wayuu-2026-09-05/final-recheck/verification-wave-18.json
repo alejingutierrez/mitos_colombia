@@ -1,0 +1,111 @@
+{
+  "schema": "mitos-colombia-triptych-publication-verification-v1",
+  "verified_at": "2026-09-07T15:47:12.523Z",
+  "publication_id": "wayuu-wave-18",
+  "site": "https://www.mitosdecolombia.com",
+  "status": "passed",
+  "summary": {
+    "receipts": 1,
+    "database_rows_matching": 1,
+    "vertical_histories_preserved": 1,
+    "new_blobs_online": 3,
+    "previous_blobs_online": 2,
+    "public_pages_matching": 1,
+    "remote_histories_matching": 1
+  },
+  "database": [
+    {
+      "slug": "guanuru",
+      "ok": true,
+      "narrative_preserved": true,
+      "current": {
+        "id": 341,
+        "slug": "guanuru",
+        "image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/guanuru-1788717439015-8oA8m6RHkNYrSMWiTzSRBR3kkNs8XM.jpg",
+        "square_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/guanuru-1788717440483-05wxK1JSgGKAxC6uxDRw3aRnZJUlOk.jpg",
+        "vertical_id": 675,
+        "vertical_image_url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/guanuru-1788717440104-RAeSY4SUiVuOffe3IjP59AiKqoJuhc.jpg"
+      }
+    }
+  ],
+  "vertical_history": [
+    {
+      "slug": "guanuru",
+      "previous_preserved": true,
+      "published_preserved": true,
+      "previous_id": 360,
+      "published_id": 675
+    }
+  ],
+  "new_images": [
+    {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/guanuru-1788717439015-8oA8m6RHkNYrSMWiTzSRBR3kkNs8XM.jpg",
+      "ok": true,
+      "sha256": "f3088570a8c698d3589bdcfa8a810c149f9cfb86376e7918f71531a5c8df907d",
+      "expected_sha256": "f3088570a8c698d3589bdcfa8a810c149f9cfb86376e7918f71531a5c8df907d",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "content_length": 142094
+    },
+    {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/guanuru-1788717440104-RAeSY4SUiVuOffe3IjP59AiKqoJuhc.jpg",
+      "ok": true,
+      "sha256": "5d0c856ac545af9c13f4a411a8afabc726242d8f73b49a6d1d3d2aff7766c556",
+      "expected_sha256": "5d0c856ac545af9c13f4a411a8afabc726242d8f73b49a6d1d3d2aff7766c556",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "content_length": 136223
+    },
+    {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/square/myth/guanuru-1788717440483-05wxK1JSgGKAxC6uxDRw3aRnZJUlOk.jpg",
+      "ok": true,
+      "sha256": "3f483b7b3b0b42ba550cdd81fd18c4ea5715d5caa1c087278db048747596717d",
+      "expected_sha256": "3f483b7b3b0b42ba550cdd81fd18c4ea5715d5caa1c087278db048747596717d",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "content_length": 93420
+    }
+  ],
+  "previous_images": [
+    {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/guanuru-1784766845426.jpg",
+      "ok": true,
+      "sha256": null,
+      "expected_sha256": null,
+      "status": 200,
+      "content_type": "image/jpeg",
+      "content_length": 252750
+    },
+    {
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/guanuru-1784911150684.jpg",
+      "ok": true,
+      "sha256": null,
+      "expected_sha256": null,
+      "status": 200,
+      "content_type": "image/jpeg",
+      "content_length": 381986
+    }
+  ],
+  "pages": [
+    {
+      "slug": "guanuru",
+      "url": "https://www.mitosdecolombia.com/mitos/guanuru",
+      "ok": true,
+      "status": 200,
+      "html_bytes": 214525,
+      "expected_image_basenames_present": {
+        "guanuru-1788717439015-8oA8m6RHkNYrSMWiTzSRBR3kkNs8XM.jpg": true,
+        "guanuru-1788717440104-RAeSY4SUiVuOffe3IjP59AiKqoJuhc.jpg": true,
+        "guanuru-1788717440483-05wxK1JSgGKAxC6uxDRw3aRnZJUlOk.jpg": true
+      }
+    }
+  ],
+  "archives": [
+    {
+      "slug": "guanuru",
+      "url": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/triptych-history/guanuru/wayuu-wave-18-2lx6f80X5pXRRR1A5014dHKyDCfNNB.json",
+      "ok": true
+    }
+  ],
+  "failures": []
+}

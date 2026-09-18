@@ -1,0 +1,81 @@
+{
+  "schema": "wayuu-video-freeze/v1",
+  "created_at": "2026-09-09T01:50:59.658Z",
+  "plan": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/plan.json",
+  "plan_sha256": "d2e868af738dcb6f0c4d211470a571e4d710fe2726e9ec9c9f51a373ecbaf8df",
+  "style": "content/videos/wayuu/channel-dna.v2.json",
+  "style_sha256": "da3aa36702f381654441c018622e5ccf66ea217b5a420a83093620a8758a2912",
+  "checks": {
+    "shots": 4,
+    "words": 83,
+    "estimated_seconds": 42,
+    "generated": 0,
+    "pending": 4,
+    "warnings": []
+  },
+  "files": {
+    "narrative_snapshot_verified": true,
+    "reference_checks": 17,
+    "public_freshness": "not_checked_by_offline_preparer"
+  },
+  "jobs": [
+    {
+      "id": "b8b",
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/prepared-01/prompts/b8b.txt",
+      "prompt_sha256": "5750a9bfff2259ae691745f701dbf48510683ede71062e7596a30bcbfd693eae",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-02-correcciones-anclas/b8b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b12a",
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/prepared-01/prompts/b12a.txt",
+      "prompt_sha256": "6c9be55e7f86f82f600d6d7be6c76abce35ce9ba465e5a6833951cf23de83985",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-02-correcciones-anclas/b12a.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b12b",
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/prepared-01/prompts/b12b.txt",
+      "prompt_sha256": "b7802c4eaf87dd7cc1a9fcc3c93ef4000534b7c4dccffebc33dc72bc14557c04",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-02-correcciones-anclas/b12b.jpeg",
+      "status": "prepared_not_generated"
+    },
+    {
+      "id": "b18a",
+      "prompt_file": "content/videos/wayuu/videos/el-viaje-del-mas-alla/preproduccion-02/prepared-01/prompts/b18a.txt",
+      "prompt_sha256": "2bc525665c0be336ba2805273ecc2b01d979b5dee44efce0658ea18d7867a342",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "size": "864x1536",
+      "output_format": "jpeg",
+      "mode": "text_only",
+      "input_images": [],
+      "api_method": "images.generate",
+      "output": "output/imagegen/wayuu/keyframes/el-viaje-del-mas-alla-preproduccion-02-correcciones-anclas/b18a.jpeg",
+      "status": "prepared_not_generated"
+    }
+  ],
+  "prior_candidates": [],
+  "no_api_calls": true
+}

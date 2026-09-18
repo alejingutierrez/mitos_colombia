@@ -1,0 +1,1356 @@
+{
+  "schema": "wayuu-video-preproduction/v1",
+  "version": "preproduccion-01",
+  "slug": "maleiwa",
+  "title": "Mareiwa",
+  "status": "ready_for_sunburst_16_keyframes",
+  "duration": {
+    "target_seconds": 128,
+    "voice_words": 185,
+    "measured": false
+  },
+  "narrative": {
+    "snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/maleiwa.json",
+    "content_sha256": "e9df8208648a3b896a6628865cdb903acea0de2cfb7d72ea3a40ff94e21d6c6c",
+    "source_url": null,
+    "source_locator": "Relato público y expediente editorial existentes. Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+    "live_hash_verified": false,
+    "events": [
+      {
+        "id": "e1",
+        "description": "Mareiwa no aparece siempre del mismo modo. Unas versiones lo sitúan bajo un olivo resistente; otras relacionan su llegada con una tormenta.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      },
+      {
+        "id": "e2",
+        "description": "También se cuenta que encontró la península cubierta por el mar. Subió a una altura, tensó la honda y lanzó una piedra.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      },
+      {
+        "id": "e3",
+        "description": "El agua retrocedió. La tierra apareció entre serranías y en los huecos quedaron pozos salados, memoria material de la antigua extensión del mar.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      },
+      {
+        "id": "e4",
+        "description": "Todavía faltaba alimento. Mareiwa reunió a las aves y les pidió volar lejos, comer frutos y regresar sobre la nueva tierra.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      },
+      {
+        "id": "e5",
+        "description": "Pavas, turpiales y palomas dispersaron semillas. Nacieron cardones, tunas e iguarayas en manchas, esperando la lluvia en vez de cubrir toda la península.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      },
+      {
+        "id": "e6",
+        "description": "Mareiwa reunió después a los primeros Wayuu. Entregó animales y territorios y ordenó relaciones entre grupos, sin que esta imagen invente marcas claniles.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      },
+      {
+        "id": "e7",
+        "description": "Llegaron sequías. Los piaches cantaron por lluvia y las nubes se formaron sobre las serranías. El agua tocó primero los cerros y despertó las plantas.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      },
+      {
+        "id": "e8",
+        "description": "Juyá siguió su viaje y el verano volvió. Lo constante no era una figura inmóvil, sino la tarea de hacer habitable un mundo de agua intermitente.",
+        "required": true,
+        "provenance": "historical_core",
+        "source": "Narración pública congelada y expediente editorial del mito; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+      }
+    ]
+  },
+  "story_thesis": "Mareiwa vuelve habitable una península de agua intermitente mediante transformación, dispersión y acuerdos, no como creador inmóvil.",
+  "style": "content/videos/wayuu/channel-dna.v3.json",
+  "palette": "Azul mar y tormenta, carbón de serranía, arena clara, verde cardón, amarillo turpial y blanco lluvia; sin oro divino ni bandera literal.",
+  "generation": {
+    "model": "gpt-image-2.5-sunburst",
+    "allowed_models": [
+      "gpt-image-2.5-sunburst",
+      "gpt-image-2.5-flare",
+      "gpt-image-2"
+    ],
+    "fast_iteration_model": "gpt-image-2.5-flare",
+    "legacy_fallback_model": "gpt-image-2",
+    "one_model_per_myth": true,
+    "record_exact_model_and_snapshot": true,
+    "quality": "medium",
+    "size": "864x1536",
+    "api_request_size": "1024x1536",
+    "delivery_size": "864x1536",
+    "delivery_transform": "center_crop_864x1536",
+    "output_format": "jpeg",
+    "mode": "image_edit_with_prior_keyframes",
+    "input_images": "declared_per_keyframe_and_frozen_with_sha256"
+  },
+  "shared_scene_continuity": [
+    "Todo visible está construido con hojas mate recortadas, cantos internos, aire y sombras físicas; nunca suelo realista ni personajes modelados.",
+    "Las referencias fijan identidad, vestuario, paleta y materia, pero jamás autorizan copiar su cámara o distribución.",
+    "No repetir en keyframes adyacentes altura, escala, horizonte ni ubicación de sujetos; cada bloque cambia al menos dos variables.",
+    "Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+    "Violencia, enfermedad, duelo y transformación se muestran sin sangre, heridas, cadáveres expuestos, sexualización o triunfo espectacular."
+  ],
+  "continuity_rules": [
+    "Usar exactamente el reparto inventariado por toma y conservar identidades desde los modelos aprobados.",
+    "Desde el tercer frame, los dos antecedentes aprobados inmediatos entran primero y en orden.",
+    "Macros sólo para manos, objetos, fibras, huellas o materia; nunca para rostros.",
+    "Un descarte no alimenta ningún frame posterior; toda corrección obliga a rehacer sus descendientes si cambiaron los antecedentes.",
+    "Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única."
+  ],
+  "reference_review": {
+    "sources": [
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-02-entrada/entrada.jpeg",
+        "sha256": "93cdd7d94a365b20ce446fce1fc3a7ee888cdf74173edc79f8d11520f8ddbb89",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-01/acto.jpeg",
+        "sha256": "297495c7e97f39ca94b9b7e7c7fa75937e1fa21b3905c2dc546eefdeb205be95",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      },
+      {
+        "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-01/huella.jpeg",
+        "sha256": "3800e09d6d90bb34c03d907662dee69934acdafbc0d1fc83e007d8c7985b13ef",
+        "reviewed": true,
+        "role": "same_myth_direction_reference"
+      }
+    ],
+    "notes": [
+      "Tríptico final y modelos de Biblia V3 reutilizados con sus hashes de selección.",
+      "Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "La composición se rediseña para video y variedad de cámara; no replica los trípticos."
+    ]
+  },
+  "canonical_models": [
+    {
+      "model_id": "olivo_mareiwa__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/olivo_mareiwa__botanical_sheet--canon.jpeg",
+      "sha256": "95a54546e46d163b2d9a307242eeabdc651c2a169335d42a0d72edf36e8dcd30"
+    },
+    {
+      "model_id": "tormenta_nacimiento_mareiwa__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/tormenta_nacimiento_mareiwa__phenomenon_rule--canon.jpeg",
+      "sha256": "ec0b26ff34f17371e9cd28e0657ae4ffac9a6de8239ab068684f511b9a9193fa"
+    },
+    {
+      "model_id": "honda_piedra_mareiwa__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/honda_piedra_mareiwa__object_sheet--canon.jpeg",
+      "sha256": "a86cb0407234f008e029451ca15ea2e06355781e34f15fd591045f5c73bb6bec"
+    },
+    {
+      "model_id": "pozos_salados_mareiwa__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pozos_salados_mareiwa__spatial_model--canon.jpeg",
+      "sha256": "2467aa28cb581aece0bba74ce2a6155bf0c40728839ed625fd3dbe9ea85d2574"
+    },
+    {
+      "model_id": "pava_semillera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pava_semillera__identity_sheet--canon.jpeg",
+      "sha256": "8e974947d4e9336af248b90349478eacbfaeaff16fa332cd7292e76a9ca1677c"
+    },
+    {
+      "model_id": "turpial_semillero__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/turpial_semillero__identity_sheet--canon.jpeg",
+      "sha256": "720413572a8a69f519d91ae9abd4811af0dca98a88e0aa9282b0f8ce9807e06f"
+    },
+    {
+      "model_id": "paloma_semillera__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/paloma_semillera__identity_sheet--canon.jpeg",
+      "sha256": "dd070bac748de96ae970ecd0e643b5c767d2887c9d102a468393db2545a35a1c"
+    },
+    {
+      "model_id": "tuna_higo__botanical_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/tuna_higo__botanical_sheet--canon.jpeg",
+      "sha256": "b072fb70bb32d03bb27d15019a73b079b9adcd5a0bc414710c198d7fa2fe7e06"
+    },
+    {
+      "model_id": "primeros_wayuu__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-02/primeros_wayuu__group_grammar--canon.jpeg",
+      "sha256": "d8de2021bdc7cb22c2f271f872f442b6ec6dfa4de717c95ced8cd5c9c5c968a5"
+    },
+    {
+      "model_id": "outsu_lluvia_mareiwa__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/outsu_lluvia_mareiwa__group_grammar--canon.jpeg",
+      "sha256": "0ca8ed7594ba3d071962b74691791570c1d5515b51020bc04c00a6f6dc28d7cb"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "mareiwa",
+      "type": "person",
+      "desc": "Mareiwa como figura adulta cambiante guiada por los trípticos; ropa completa, sin corona, halo o anatomía gigantesca.",
+      "model_ids": []
+    },
+    {
+      "id": "olivo",
+      "type": "plant",
+      "desc": "Olivo resistente de una versión de nacimiento, plano y botánicamente sobrio.",
+      "model_ids": [
+        "olivo_mareiwa__botanical_sheet"
+      ]
+    },
+    {
+      "id": "tormenta",
+      "type": "magic_subject",
+      "desc": "Tormenta de otra versión de llegada; hojas de nube y lluvia, no rayos heroicos.",
+      "model_ids": [
+        "tormenta_nacimiento_mareiwa__phenomenon_rule"
+      ]
+    },
+    {
+      "id": "mar",
+      "type": "setting",
+      "desc": "Península parcialmente cubierta por mar de capas azules; costa y serranías reconocibles sin mapa literal.",
+      "model_ids": []
+    },
+    {
+      "id": "honda",
+      "type": "object",
+      "desc": "Honda y una piedra de papel usadas para retirar el mar; no arma contra seres vivos.",
+      "model_ids": [
+        "honda_piedra_mareiwa__object_sheet"
+      ]
+    },
+    {
+      "id": "pozos",
+      "type": "setting",
+      "desc": "Pozos salados dejados por el mar retirado, sin convertirlos en abundancia dulce.",
+      "model_ids": [
+        "pozos_salados_mareiwa__spatial_model"
+      ]
+    },
+    {
+      "id": "aves",
+      "type": "animal",
+      "desc": "Pava, turpial y paloma sembradoras diferenciadas y naturales.",
+      "model_ids": [
+        "pava_semillera__identity_sheet",
+        "turpial_semillero__identity_sheet",
+        "paloma_semillera__identity_sheet"
+      ]
+    },
+    {
+      "id": "plantas",
+      "type": "plant",
+      "desc": "Cardones, tunas e iguarayas en manchas contenidas, no selva.",
+      "model_ids": [
+        "tuna_higo__botanical_sheet"
+      ]
+    },
+    {
+      "id": "primeros",
+      "type": "supporting_people",
+      "desc": "Primeros Wayuu como grupo de adultos y familias con ropa completa; sin marcas claniles inventadas.",
+      "model_ids": [
+        "primeros_wayuu__group_grammar"
+      ]
+    },
+    {
+      "id": "piaches",
+      "type": "supporting_people",
+      "desc": "Especialistas rituales adultos que llaman la lluvia en grupo sobrio; sin espectáculo ceremonial.",
+      "model_ids": [
+        "outsu_lluvia_mareiwa__group_grammar"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Mareiwa no aparece siempre del mismo modo. Unas versiones lo sitúan bajo un olivo resistente; otras relacionan su llegada con una tormenta.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 22,
+      "time_seconds": [
+        0,
+        16
+      ],
+      "event_ids": [
+        "e1"
+      ],
+      "keyframes": [
+        {
+          "id": "b1a",
+          "title": "Bajo el olivo",
+          "visual": "Mareiwa aparece pequeño bajo un olivo que conserva hojas durante el verano; esta es una variante, no la única escena de origen. COMPOSICIÓN OBLIGATORIA: elevada oblicua desde una ladera, gran plano general territorial; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            0,
+            8
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "olivo"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "elevada oblicua desde una ladera",
+          "shot_scale": "gran plano general territorial",
+          "depth_planes": [
+            "papel cercano",
+            "sujetos pequeños",
+            "sendero diagonal",
+            "territorio medio",
+            "cielo recortado"
+          ],
+          "continuity_from": null,
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con elevada oblicua desde una ladera.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1a.jpeg",
+            "sha256": "37ad4338b549f06d86c1c26a87c7f38d62719b6b77f989410ea29e09e7d32c20"
+          },
+          "generation_inputs": [
+            {
+              "kind": "triptych",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-02-entrada/entrada.jpeg",
+              "sha256": "93cdd7d94a365b20ce446fce1fc3a7ee888cdf74173edc79f8d11520f8ddbb89",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 1; prohibido copiar su composición."
+            },
+            {
+              "kind": "triptych",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/triptychs/wayuu-mareiwa-triptych-01/acto.jpeg",
+              "sha256": "297495c7e97f39ca94b9b7e7c7fa75937e1fa21b3905c2dc546eefdeb205be95",
+              "approved": true,
+              "role": "Fijar identidad, paleta y material del mito desde la referencia 2; prohibido copiar su composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/olivo_mareiwa__botanical_sheet--canon.jpeg",
+              "sha256": "95a54546e46d163b2d9a307242eeabdc651c2a169335d42a0d72edf36e8dcd30",
+              "approved": true,
+              "role": "Fijar el modelo canónico olivo_mareiwa__botanical_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b1b",
+          "title": "La versión de la tormenta",
+          "visual": "Macro de lluvia de papel sobre una huella que comienza bajo nubes; Mareiwa no aparece dos veces. COMPOSICIÓN OBLIGATORIA: lateral a la altura de manos u objeto, macro narrativo sin rostro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            8,
+            16
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "tormenta"
+          ],
+          "event_ids": [
+            "e1"
+          ],
+          "angle": "lateral a la altura de manos u objeto",
+          "shot_scale": "macro narrativo sin rostro",
+          "depth_planes": [
+            "borde cercano",
+            "manos u objeto",
+            "ropa parcial",
+            "suelo medio",
+            "fondo desenfocado"
+          ],
+          "continuity_from": "b1a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en La versión de la tormenta.",
+            "impossible_behavior": "Macro de lluvia de papel sobre una huella que comienza bajo nubes; Mareiwa no aparece dos veces.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e1.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e1"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral a la altura de manos u objeto.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1b.jpeg",
+            "sha256": "5a63399f878c10c45e51f37e450f9a8eb1c46be3bb8eb5586eb3056a4a152bb2"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1a.jpeg",
+              "sha256": "37ad4338b549f06d86c1c26a87c7f38d62719b6b77f989410ea29e09e7d32c20",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/tormenta_nacimiento_mareiwa__phenomenon_rule--canon.jpeg",
+              "sha256": "ec0b26ff34f17371e9cd28e0657ae4ffac9a6de8239ab068684f511b9a9193fa",
+              "approved": true,
+              "role": "Fijar el modelo canónico tormenta_nacimiento_mareiwa__phenomenon_rule; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "También se cuenta que encontró la península cubierta por el mar. Subió a una altura, tensó la honda y lanzó una piedra.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 22,
+      "time_seconds": [
+        16,
+        32
+      ],
+      "event_ids": [
+        "e2"
+      ],
+      "keyframes": [
+        {
+          "id": "b2a",
+          "title": "La península cubierta",
+          "visual": "Desde el suelo de un cerro, Mareiwa contempla agua extendida entre picos apenas visibles. COMPOSICIÓN OBLIGATORIA: contrapicado extremo desde el suelo, plano general bajo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            16,
+            24
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "mar"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "contrapicado extremo desde el suelo",
+          "shot_scale": "plano general bajo",
+          "depth_planes": [
+            "materia rasante",
+            "pies o base",
+            "cuerpos completos",
+            "relieve",
+            "cielo amplio"
+          ],
+          "continuity_from": "b1b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado extremo desde el suelo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2a.jpeg",
+            "sha256": "9ddd672642f9b2154eb8ef74e10ea4e90800072ebdd16e05e669e4a107375066"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1a.jpeg",
+              "sha256": "37ad4338b549f06d86c1c26a87c7f38d62719b6b77f989410ea29e09e7d32c20",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1b.jpeg",
+              "sha256": "5a63399f878c10c45e51f37e450f9a8eb1c46be3bb8eb5586eb3056a4a152bb2",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            }
+          ]
+        },
+        {
+          "id": "b2b",
+          "title": "Una piedra en la honda",
+          "visual": "Cenital de manos adultas tensando la honda con una única piedra; el mar ocupa bordes opuestos. COMPOSICIÓN OBLIGATORIA: cenital verdadero de 90 grados, detalle gráfico de suelo; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            24,
+            32
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "honda",
+            "mar"
+          ],
+          "event_ids": [
+            "e2"
+          ],
+          "angle": "cenital verdadero de 90 grados",
+          "shot_scale": "detalle gráfico de suelo",
+          "depth_planes": [
+            "borde superior",
+            "acción central",
+            "huellas u objetos",
+            "sombras planas",
+            "estratos inferiores"
+          ],
+          "continuity_from": "b2a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital verdadero de 90 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2b.jpeg",
+            "sha256": "f856ab0f71545467aaf44a5b09eae20eb9122745c08a83453888a8b57e3e0ae3"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b1b",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b1b.jpeg",
+              "sha256": "5a63399f878c10c45e51f37e450f9a8eb1c46be3bb8eb5586eb3056a4a152bb2",
+              "approved": true,
+              "role": "Preservar continuidad causal de b1b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2a.jpeg",
+              "sha256": "9ddd672642f9b2154eb8ef74e10ea4e90800072ebdd16e05e669e4a107375066",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/honda_piedra_mareiwa__object_sheet--canon.jpeg",
+              "sha256": "a86cb0407234f008e029451ca15ea2e06355781e34f15fd591045f5c73bb6bec",
+              "approved": true,
+              "role": "Fijar el modelo canónico honda_piedra_mareiwa__object_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "El agua retrocedió. La tierra apareció entre serranías y en los huecos quedaron pozos salados, memoria material de la antigua extensión del mar.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 23,
+      "time_seconds": [
+        32,
+        48
+      ],
+      "event_ids": [
+        "e3"
+      ],
+      "keyframes": [
+        {
+          "id": "b3a",
+          "title": "El lanzamiento",
+          "visual": "Perfil teleobjetivo de Mareiwa en la cima; la piedra cruza un cielo estrecho y nadie está en su trayectoria. COMPOSICIÓN OBLIGATORIA: lateral teleobjetivo sin cielo, plano general comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            32,
+            40
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "honda",
+            "mar"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "lateral teleobjetivo sin cielo",
+          "shot_scale": "plano general comprimido",
+          "depth_planes": [
+            "franja cercana",
+            "sujeto uno",
+            "acción media",
+            "sujeto dos",
+            "bandas comprimidas"
+          ],
+          "continuity_from": "b2b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con lateral teleobjetivo sin cielo.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3a.jpeg",
+            "sha256": "a853c453f63ea0cfe409550eedd5236beb091f9c01e581433f4989fc2f5ac2df"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2a.jpeg",
+              "sha256": "9ddd672642f9b2154eb8ef74e10ea4e90800072ebdd16e05e669e4a107375066",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2b.jpeg",
+              "sha256": "f856ab0f71545467aaf44a5b09eae20eb9122745c08a83453888a8b57e3e0ae3",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-01/honda_piedra_mareiwa__object_sheet--canon.jpeg",
+              "sha256": "a86cb0407234f008e029451ca15ea2e06355781e34f15fd591045f5c73bb6bec",
+              "approved": true,
+              "role": "Fijar el modelo canónico honda_piedra_mareiwa__object_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b3b",
+          "title": "El mar retrocede",
+          "visual": "A ras del relieve, bandas de agua se pliegan hacia el horizonte y dejan tierra seca detrás. COMPOSICIÓN OBLIGATORIA: rasante a través de una grieta o vegetación, gran plano general de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            40,
+            48
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "mar",
+            "pozos"
+          ],
+          "event_ids": [
+            "e3"
+          ],
+          "angle": "rasante a través de una grieta o vegetación",
+          "shot_scale": "gran plano general de fuga",
+          "depth_planes": [
+            "recorte extremo",
+            "vacío cercano",
+            "acción distante",
+            "territorio",
+            "franja de salida"
+          ],
+          "continuity_from": "b3a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en El mar retrocede.",
+            "impossible_behavior": "A ras del relieve, bandas de agua se pliegan hacia el horizonte y dejan tierra seca detrás.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e3.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e3"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con rasante a través de una grieta o vegetación.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3b.jpeg",
+            "sha256": "eadec208c54c61875da4710d2bf2628860716fda7f3b619b42f5a19092682b22"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b2b",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b2b.jpeg",
+              "sha256": "f856ab0f71545467aaf44a5b09eae20eb9122745c08a83453888a8b57e3e0ae3",
+              "approved": true,
+              "role": "Preservar continuidad causal de b2b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3a.jpeg",
+              "sha256": "a853c453f63ea0cfe409550eedd5236beb091f9c01e581433f4989fc2f5ac2df",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pozos_salados_mareiwa__spatial_model--canon.jpeg",
+              "sha256": "2467aa28cb581aece0bba74ce2a6155bf0c40728839ed625fd3dbe9ea85d2574",
+              "approved": true,
+              "role": "Fijar el modelo canónico pozos_salados_mareiwa__spatial_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Todavía faltaba alimento. Mareiwa reunió a las aves y les pidió volar lejos, comer frutos y regresar sobre la nueva tierra.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 21,
+      "time_seconds": [
+        48,
+        64
+      ],
+      "event_ids": [
+        "e4"
+      ],
+      "keyframes": [
+        {
+          "id": "b4a",
+          "title": "Pozos de memoria",
+          "visual": "Vista alta diagonal de varios pozos salados separados sobre la tierra nueva; Mareiwa queda diminuto arriba. COMPOSICIÓN OBLIGATORIA: alta diagonal de 60 grados, plano conjunto arquitectónico; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            48,
+            56
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "pozos",
+            "mar"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "alta diagonal de 60 grados",
+          "shot_scale": "plano conjunto arquitectónico",
+          "depth_planes": [
+            "trama cercana",
+            "acción uno",
+            "estructura central",
+            "acción dos",
+            "horizonte mínimo"
+          ],
+          "continuity_from": "b3b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con alta diagonal de 60 grados.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4a.jpeg",
+            "sha256": "b2d84d1656d1714d42128bcfcf5690145d591e1ca3c44c814488e129485dfc20"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3a.jpeg",
+              "sha256": "a853c453f63ea0cfe409550eedd5236beb091f9c01e581433f4989fc2f5ac2df",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3b",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3b.jpeg",
+              "sha256": "eadec208c54c61875da4710d2bf2628860716fda7f3b619b42f5a19092682b22",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pozos_salados_mareiwa__spatial_model--canon.jpeg",
+              "sha256": "2467aa28cb581aece0bba74ce2a6155bf0c40728839ed625fd3dbe9ea85d2574",
+              "approved": true,
+              "role": "Fijar el modelo canónico pozos_salados_mareiwa__spatial_model; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b4b",
+          "title": "Reunir a las aves",
+          "visual": "Sobre el hombro de Mareiwa, pava, turpial y paloma ocupan ramas distintas y miran hacia la península. COMPOSICIÓN OBLIGATORIA: sobre el hombro con primer término dominante, plano medio ambiental; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            56,
+            64
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "aves",
+            "plantas"
+          ],
+          "event_ids": [
+            "e4"
+          ],
+          "angle": "sobre el hombro con primer término dominante",
+          "shot_scale": "plano medio ambiental",
+          "depth_planes": [
+            "hombro o marco",
+            "gesto",
+            "objeto o sujeto central",
+            "fondo activo",
+            "territorio"
+          ],
+          "continuity_from": "b4a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con sobre el hombro con primer término dominante.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "approved_keyframe",
+            "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4b.jpeg",
+            "sha256": "860348110910d1601ff4a68ea9cdfb0d94ba8d6317b5c844f097ec5f8f8529b1"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b3b",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b3b.jpeg",
+              "sha256": "eadec208c54c61875da4710d2bf2628860716fda7f3b619b42f5a19092682b22",
+              "approved": true,
+              "role": "Preservar continuidad causal de b3b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4a.jpeg",
+              "sha256": "b2d84d1656d1714d42128bcfcf5690145d591e1ca3c44c814488e129485dfc20",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pava_semillera__identity_sheet--canon.jpeg",
+              "sha256": "8e974947d4e9336af248b90349478eacbfaeaff16fa332cd7292e76a9ca1677c",
+              "approved": true,
+              "role": "Fijar el modelo canónico pava_semillera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/turpial_semillero__identity_sheet--canon.jpeg",
+              "sha256": "720413572a8a69f519d91ae9abd4811af0dca98a88e0aa9282b0f8ce9807e06f",
+              "approved": true,
+              "role": "Fijar el modelo canónico turpial_semillero__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/paloma_semillera__identity_sheet--canon.jpeg",
+              "sha256": "dd070bac748de96ae970ecd0e643b5c767d2887c9d102a468393db2545a35a1c",
+              "approved": true,
+              "role": "Fijar el modelo canónico paloma_semillera__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Pavas, turpiales y palomas dispersaron semillas. Nacieron cardones, tunas e iguarayas en manchas, esperando la lluvia en vez de cubrir toda la península.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 23,
+      "time_seconds": [
+        64,
+        80
+      ],
+      "event_ids": [
+        "e5"
+      ],
+      "keyframes": [
+        {
+          "id": "b5a",
+          "title": "Volar lejos",
+          "visual": "Subjetiva baja bajo una bandada: las tres especies cruzan capas de cielo con semillas pequeñas en el pico. COMPOSICIÓN OBLIGATORIA: subjetiva baja desde la sombra, plano general con primer término oscuro; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            64,
+            72
+          ],
+          "entity_ids": [
+            "aves",
+            "plantas",
+            "mar"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "subjetiva baja desde la sombra",
+          "shot_scale": "plano general con primer término oscuro",
+          "depth_planes": [
+            "sombra cercana",
+            "señal",
+            "acción media",
+            "figuras",
+            "arquitectura o paisaje"
+          ],
+          "continuity_from": "b4b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con subjetiva baja desde la sombra.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": [
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4a",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4a.jpeg",
+              "sha256": "b2d84d1656d1714d42128bcfcf5690145d591e1ca3c44c814488e129485dfc20",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4a: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "prior_keyframe",
+              "frame_id": "b4b",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu/keyframes/maleiwa-preproduccion-01/b4b.jpeg",
+              "sha256": "860348110910d1601ff4a68ea9cdfb0d94ba8d6317b5c844f097ec5f8f8529b1",
+              "approved": true,
+              "role": "Preservar continuidad causal de b4b: identidades, vestuario, paleta y material; prohibido repetir cámara o distribución."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/pava_semillera__identity_sheet--canon.jpeg",
+              "sha256": "8e974947d4e9336af248b90349478eacbfaeaff16fa332cd7292e76a9ca1677c",
+              "approved": true,
+              "role": "Fijar el modelo canónico pava_semillera__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/turpial_semillero__identity_sheet--canon.jpeg",
+              "sha256": "720413572a8a69f519d91ae9abd4811af0dca98a88e0aa9282b0f8ce9807e06f",
+              "approved": true,
+              "role": "Fijar el modelo canónico turpial_semillero__identity_sheet; preservar identidad y material sin copiar la composición."
+            },
+            {
+              "kind": "canonical_model",
+              "myth": "maleiwa",
+              "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium/paloma_semillera__identity_sheet--canon.jpeg",
+              "sha256": "dd070bac748de96ae970ecd0e643b5c767d2887c9d102a468393db2545a35a1c",
+              "approved": true,
+              "role": "Fijar el modelo canónico paloma_semillera__identity_sheet; preservar identidad y material sin copiar la composición."
+            }
+          ]
+        },
+        {
+          "id": "b5b",
+          "title": "Caen las semillas",
+          "visual": "Perfil distante de semillas que descienden y primeros brotes que aparecen en puntos separados. COMPOSICIÓN OBLIGATORIA: perfil distante con horizonte desplazado, plano general lateral; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            72,
+            80
+          ],
+          "entity_ids": [
+            "aves",
+            "plantas"
+          ],
+          "event_ids": [
+            "e5"
+          ],
+          "angle": "perfil distante con horizonte desplazado",
+          "shot_scale": "plano general lateral",
+          "depth_planes": [
+            "materia cercana",
+            "sujeto lateral",
+            "acción",
+            "segundo sujeto",
+            "horizonte alto"
+          ],
+          "continuity_from": "b5a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Caen las semillas.",
+            "impossible_behavior": "Perfil distante de semillas que descienden y primeros brotes que aparecen en puntos separados.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e5.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e5"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con perfil distante con horizonte desplazado.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "voice_over": "Mareiwa reunió después a los primeros Wayuu. Entregó animales y territorios y ordenó relaciones entre grupos, sin que esta imagen invente marcas claniles.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 23,
+      "time_seconds": [
+        80,
+        96
+      ],
+      "event_ids": [
+        "e6"
+      ],
+      "keyframes": [
+        {
+          "id": "b6a",
+          "title": "La península reverdece por manchas",
+          "visual": "Cenital diagonal de cardones, tunas e iguarayas distribuidos en islas verdes sobre terreno mayormente seco. COMPOSICIÓN OBLIGATORIA: cenital diagonal amplio, plano de consecuencia; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            80,
+            88
+          ],
+          "entity_ids": [
+            "plantas",
+            "mar",
+            "pozos"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "cenital diagonal amplio",
+          "shot_scale": "plano de consecuencia",
+          "depth_planes": [
+            "sombra",
+            "objeto central",
+            "figuras parciales",
+            "trama territorial",
+            "borde de salida"
+          ],
+          "continuity_from": "b5b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en La península reverdece por manchas.",
+            "impossible_behavior": "Cenital diagonal de cardones, tunas e iguarayas distribuidos en islas verdes sobre terreno mayormente seco.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e6.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e6"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con cenital diagonal amplio.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b6b",
+          "title": "Un fruto resistente",
+          "visual": "Macro frontal de una iguaraya de papel entre espinas planas; gotas escasas permanecen entre hojas. COMPOSICIÓN OBLIGATORIA: macro frontal de materia, primerísimo plano de objeto; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            88,
+            96
+          ],
+          "entity_ids": [
+            "plantas"
+          ],
+          "event_ids": [
+            "e6"
+          ],
+          "angle": "macro frontal de materia",
+          "shot_scale": "primerísimo plano de objeto",
+          "depth_planes": [
+            "fibra cercana",
+            "objeto",
+            "cambio material",
+            "sombra interna",
+            "fondo abstracto"
+          ],
+          "continuity_from": "b6a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con macro frontal de materia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "voice_over": "Llegaron sequías. Los piaches cantaron por lluvia y las nubes se formaron sobre las serranías. El agua tocó primero los cerros y despertó las plantas.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 25,
+      "time_seconds": [
+        96,
+        112
+      ],
+      "event_ids": [
+        "e7"
+      ],
+      "keyframes": [
+        {
+          "id": "b7a",
+          "title": "Reunir a los primeros Wayuu",
+          "visual": "Entre piedras, Mareiwa recibe a grupos familiares pequeños con animales separados; no hay signos pintados. COMPOSICIÓN OBLIGATORIA: contrapicado enmarcado entre postes o rocas, plano general enmarcado; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            96,
+            104
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "primeros"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "contrapicado enmarcado entre postes o rocas",
+          "shot_scale": "plano general enmarcado",
+          "depth_planes": [
+            "marco cercano",
+            "umbral",
+            "sujetos pequeños",
+            "acción",
+            "paisaje estrecho"
+          ],
+          "continuity_from": "b6b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con contrapicado enmarcado entre postes o rocas.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b7b",
+          "title": "Territorios y relaciones",
+          "visual": "A través de dos rocas, familias y rebaños se distribuyen por senderos distintos sin fronteras dibujadas. COMPOSICIÓN OBLIGATORIA: teleobjetivo profundo a través de una abertura, plano largo comprimido; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            104,
+            112
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "primeros"
+          ],
+          "event_ids": [
+            "e7"
+          ],
+          "angle": "teleobjetivo profundo a través de una abertura",
+          "shot_scale": "plano largo comprimido",
+          "depth_planes": [
+            "abertura cercana",
+            "vacío",
+            "acción lejana",
+            "capas medias",
+            "fondo comprimido"
+          ],
+          "continuity_from": "b7a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "ordinary_consequence",
+          "magic_in_the_ordinary": null,
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con teleobjetivo profundo a través de una abertura.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "voice_over": "Juyá siguió su viaje y el verano volvió. Lo constante no era una figura inmóvil, sino la tarea de hacer habitable un mundo de agua intermitente.",
+      "voice_provenance": "Síntesis audiovisual fiel a la narración congelada; Las versiones de nacimiento y creación permanecen como variantes y no se funden en una biografía única.",
+      "word_count": 26,
+      "time_seconds": [
+        112,
+        128
+      ],
+      "event_ids": [
+        "e8"
+      ],
+      "keyframes": [
+        {
+          "id": "b8a",
+          "title": "Llamar la lluvia",
+          "visual": "Vista aérea oblicua: especialistas cantan pequeños en un patio mientras nubes se reúnen sobre serranías lejanas. COMPOSICIÓN OBLIGATORIA: aérea oblicua desde atrás, gran plano general de relación; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            112,
+            120
+          ],
+          "entity_ids": [
+            "piaches",
+            "tormenta",
+            "plantas"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "aérea oblicua desde atrás",
+          "shot_scale": "gran plano general de relación",
+          "depth_planes": [
+            "estructura cercana",
+            "sujetos",
+            "trayectoria",
+            "territorio amplio",
+            "cielo mínimo"
+          ],
+          "continuity_from": "b7b",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Llamar la lluvia.",
+            "impossible_behavior": "Vista aérea oblicua: especialistas cantan pequeños en un patio mientras nubes se reúnen sobre serranías lejanas.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con aérea oblicua desde atrás.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        },
+        {
+          "id": "b8b",
+          "title": "Agua que llega y se va",
+          "visual": "Desde el suelo, lluvia toca cerros y una franja verde despierta; Mareiwa queda como silueta distante, no dueño inmóvil. COMPOSICIÓN OBLIGATORIA: a ras del suelo mirando hacia la distancia, plano final de fuga; no copiar la altura, horizonte ni distribución del keyframe anterior.",
+          "time_seconds": [
+            120,
+            128
+          ],
+          "entity_ids": [
+            "mareiwa",
+            "tormenta",
+            "plantas",
+            "pozos"
+          ],
+          "event_ids": [
+            "e8"
+          ],
+          "angle": "a ras del suelo mirando hacia la distancia",
+          "shot_scale": "plano final de fuga",
+          "depth_planes": [
+            "materia muy cercana",
+            "sendero",
+            "figuras pequeñas",
+            "paisaje",
+            "horizonte"
+          ],
+          "continuity_from": "b8a",
+          "transition_to_next": "Corte de eje, altura y escala hacia el siguiente instante.",
+          "scene_role": "visible_magic",
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Los elementos cotidianos inventariados en Agua que llega y se va.",
+            "impossible_behavior": "Desde el suelo, lluvia toca cerros y una franja verde despierta; Mareiwa queda como silueta distante, no dueño inmóvil.",
+            "narrative_effect": "Hace visible el cambio de relación narrado en el evento e8.",
+            "agency": "La transformación pertenece al relato o a su traducción editorial; las personas no la controlan como superpoder.",
+            "physical_translation": "Hojas mate separadas cambian de silueta, posición o continuidad mediante pliegues y vacíos; sin partículas CGI.",
+            "visible_test": "La contradicción material debe entenderse en una sola imagen sin texto ni duplicación de personajes.",
+            "provenance": "narrated_fact",
+            "temporal_role": "present",
+            "event_ids": [
+              "e8"
+            ]
+          },
+          "motion_contract": {
+            "camera": "Movimiento mínimo compatible con a ras del suelo mirando hacia la distancia.",
+            "allowed": "Sólo el gesto o cambio material descrito en este instante.",
+            "forbidden": "Repetir la composición anterior, añadir reparto, texto, sangre, ceremonia o utilería no inventariada."
+          },
+          "asset": {
+            "status": "not_generated"
+          },
+          "generation_inputs": []
+        }
+      ]
+    }
+  ]
+}

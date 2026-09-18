@@ -1,0 +1,23 @@
+{
+  "schema": "wayuu-video-generation-batch/v1",
+  "slug": "jirairay",
+  "batch": "produccion-correcciones-01",
+  "status": "generated_and_reviewed",
+  "decision": "content/videos/wayuu/videos/jirairay/produccion-02/decision.json",
+  "generation": {
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "size": "864x1536",
+    "output_format": "jpeg",
+    "mode": "text_only",
+    "input_images": []
+  },
+  "jobs": [
+    {"id": "b1b", "prompt": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b1b.txt"},
+    {"id": "b2b", "prompt": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b2b.txt"},
+    {"id": "b5a", "prompt": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b5a.txt"},
+    {"id": "b6b", "prompt": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b6b.txt"},
+    {"id": "b10a", "prompt": "content/videos/wayuu/videos/jirairay/produccion-02/prompts/b10a.txt"}
+  ],
+  "no_reference_uploads": true
+}

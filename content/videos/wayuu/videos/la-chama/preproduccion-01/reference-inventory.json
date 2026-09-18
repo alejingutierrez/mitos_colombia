@@ -1,0 +1,196 @@
+{
+  "schema": "wayuu-video-reference-inventory/v1",
+  "slug": "la-chama",
+  "status": "frozen_for_preproduction_01",
+  "narrative": {
+    "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/la-chama.json",
+    "sha256": "93461758732b5d6028affe6246ca8342486b5e9bb310cf0976ae15a07f72a627",
+    "live_hash_verified": true
+  },
+  "primary_sources": [
+    {
+      "title": "La chama, un mito guajiro",
+      "author": "Roberto Pineda Giraldo",
+      "publication": "Revista de Folklore 2, diciembre de 1947, pp. 113-126",
+      "url": "https://www.bibliotecadigitaldebogota.gov.co/resources/2910662/",
+      "role": "primary_record_and_open_facsimile"
+    },
+    {
+      "title": "La chama, un mito guajiro",
+      "url": "https://redaprende.colombiaaprende.edu.co/metadatos/recurso/la-chama-un-mito-guajiro/",
+      "role": "independent_bibliographic_corroboration"
+    },
+    {
+      "title": "Mitos y leyendas",
+      "url": "https://biblio.flacsoandes.edu.ec/catalog/resGet.php?resId=44622",
+      "role": "searchable_secondary_reproduction_for_final_passage"
+    }
+  ],
+  "cultural_guardrails": [
+    "Kalamantuunay no se trata como alias de La Chama.",
+    "El hombre sigue a La Chama durante cinco días y noches.",
+    "La Chama, Pülowi y la majayura de Puró no se fusionan.",
+    "No se inventa pintura facial, rango, tocado, patrón kanaas ni ritual.",
+    "La violencia y el daño al niño quedan fuera de imagen.",
+    "La mención histórica de cabellos no se convierte en receta, extracción ni eficacia médica."
+  ],
+  "canonical_models": [
+    {
+      "model_id": "la_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/la_chama__identity_sheet--canon.jpeg",
+      "sha256": "5d062a7dce3b1ab2e4f356f42e1be6bde8d943e3dd385764a15aa99bd14c568b",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "la_chama__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/la_chama__state_sheet--estados.jpeg",
+      "sha256": "4ce99c75c63fd6606706e1434442efeba9acfc159478ce4fe0630408de3ff61f",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "hombre_caballos_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/hombre_caballos_chama__identity_sheet--canon.jpeg",
+      "sha256": "89b2563166373f38e44ab0c158659ecbe024ce7632600de263e8bcbe914d7c3c",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "hombre_caballos_chama__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/hombre_caballos_chama__state_sheet--estados.jpeg",
+      "sha256": "e138db3858ffe125b5321f3de359d24dd6f719e899122a7b4b84af38fe6f30eb",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "hijo_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/hijo_chama__identity_sheet--canon.jpeg",
+      "sha256": "e1ea5f32d62dbeb56c617f04d23a96ee082e6db5e697f7fe6c98236006359933",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "companera_chama__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/companera_chama__presence_model--canon.jpeg",
+      "sha256": "b51c31fc589d479d012363227de7ad579ddc4b96a0cc27f7f742b8001f9947fd",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "familia_chama__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/familia_chama__group_grammar--canon.jpeg",
+      "sha256": "beed96bbe778e96ddccfcc20f8d19e4b1ae73c2a119fbc3d1b8a8166e67356aa",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "burro_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/burro_chama__identity_sheet--canon.jpeg",
+      "sha256": "a82e8ae2d31c65a1a4cec92b1d1dbc451302c0f0e7a75bd6e791e817fb7e029f",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "burro_chama__state_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/burro_chama__state_sheet--estados.jpeg",
+      "sha256": "d54d70376361ba31e2534a84b3e1b5b80709f094049620812c0c4681e910a0de",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "caballos_hombre_chama__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/caballos_hombre_chama__group_grammar--canon.jpeg",
+      "sha256": "3c5e8799123051352c5f2dd4f4a03162d0046c8df6a6928c15a379a9e4829787",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "ollas_mochilas_chama__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/ollas_mochilas_chama__object_sheet--canon.jpeg",
+      "sha256": "965db38eb9da4694ea7e6b3c3ef9467a71646c01a358ee251f65a138fc2478b0",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "esterilla_chama__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/esterilla_chama__object_sheet--canon.jpeg",
+      "sha256": "b85f89b3489d290ee29ed2a7866e20f7b772301ebc1afebfc2e0e068d386dc6f",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "manta_roja_chama__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/manta_roja_chama__object_sheet--canon.jpeg",
+      "sha256": "f956da6e4ca44c77e5eeb1113993c88a08550d2e11c4ae000355886fc1571848",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "cueva_casa_chama__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/cueva_casa_chama__spatial_model--canon.jpeg",
+      "sha256": "b348640b302cd76978a9134afc43e054e53fd31ad3c695676587d44b22021270",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "nueva_pareja_hombre_chama__identity_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/nueva_pareja_hombre_chama__identity_sheet--canon.jpeg",
+      "sha256": "2e3d3073d18d5b23187ec67bfb3daeb99f87cc982369e01bbef5a5f6b3a765c1",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "metamorfosis_chama__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium/metamorfosis_chama__phenomenon_rule--canon.jpeg",
+      "sha256": "aec88214d1c57d0ab5b33d584fa2f3028e741cd2e8eaaae778af547a2dc05bd6",
+      "qa_status": "PASS",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    },
+    {
+      "model_id": "transformacion_carga_chama__phenomenon_rule",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-23-la-chama-medium-corrections-01/transformacion_carga_chama__phenomenon_rule--canon.jpeg",
+      "sha256": "d80c3ec6e1819bdf829452bdd326072e647e8bbd76fb99bb39b1c432b2d13876",
+      "qa_status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-23-la-chama-medium-corrections-01",
+      "selection_source": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json"
+    }
+  ],
+  "triptych_references": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-02-entrada/entrada.jpeg",
+      "sha256": "072fbb196a5b8412a3713516e527637ee45c4298c5f14b4a04e09ebccb295a55",
+      "reviewed": true,
+      "role": "same_myth_direction_reference"
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/acto.jpeg",
+      "sha256": "27d4884d79fd299766d8de1056c953b66624a9b381c50bb89fe2d4db0a3950a4",
+      "reviewed": true,
+      "role": "same_myth_direction_reference"
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-chama-triptych-01/huella.jpeg",
+      "sha256": "f7f341c7aecf74348bef48f00d67fae09778578836c4cc9c69a6fb64e1e0f61a",
+      "reviewed": true,
+      "role": "same_myth_direction_reference"
+    }
+  ]
+}
+

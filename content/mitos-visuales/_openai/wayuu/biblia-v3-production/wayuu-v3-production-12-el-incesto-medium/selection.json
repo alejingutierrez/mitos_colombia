@@ -1,0 +1,138 @@
+{
+  "schema": "mitos-colombia-biblia-production-selection/v3",
+  "community": "Wayúu",
+  "myth_slug": "el-incesto",
+  "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+  "status": "QA_PASS_AFTER_RESEARCH_AND_CORRECTIONS",
+  "reviewed_at": "2026-09-03",
+  "quality": "medium",
+  "generation_mode": "text_only_no_local_references",
+  "contact_sheet": "output/imagegen/wayuu-v3-production/el-incesto-selected-contact-sheet.jpeg",
+  "contact_sheet_sha256": "7ecc1519d5398daf5ed08df29b8e1f2236a0e2c35a007a60b6c6ecac95d96caa",
+  "batch_models": 8,
+  "selected_models": 8,
+  "approved_models_reused_for_myth": [
+    "mareiwa__presence_model",
+    "mareiwa__state_sheet",
+    "costa_mar_guajira__environment_model",
+    "territorio_alta_guajira__environment_model"
+  ],
+  "myth_model_coverage": {
+    "selected": 12,
+    "required": 12,
+    "remaining": 0
+  },
+  "bible_progress_after_batch": {
+    "selected_models": 109,
+    "required_models": 265,
+    "remaining_models": 156
+  },
+  "selections": {
+    "hermana_litoral__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hermana_litoral__identity_sheet--canon.jpeg",
+      "sha256": "97142510cb983ba1e7c605bed4ce5ef112195f75dd081aecd5276ec37dc948f4"
+    },
+    "hermana_litoral__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/hermana_litoral__state_sheet--estados.jpeg",
+      "sha256": "97d74a23f307b0997982bb56e25b7cd6f30a36bbac5e8c6bfc0d5b325fb70bda"
+    },
+    "hermano_litoral__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hermano_litoral__identity_sheet--canon.jpeg",
+      "sha256": "ee22fa0e79489cee991d0b7d13baeb315d165e0dc743339eba35ee7c50ccbdc9"
+    },
+    "hermano_litoral__state_sheet": {
+      "status": "PASS_AFTER_CORRECTION_02",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-02",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-02/hermano_litoral__state_sheet--estados.jpeg",
+      "sha256": "a0ca0fbfe09e9b8678c81dd231a8bcf47a4cdd3033a12390de1f6b3429d4cc7c"
+    },
+    "padre_katetamana__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/padre_katetamana__identity_sheet--canon.jpeg",
+      "sha256": "85f7148cf393ca6e7de7aa3a720f3c5b951f930064fa9a56743939a804ed9868"
+    },
+    "hija_katetamana__identity_sheet": {
+      "status": "PASS_AFTER_CORRECTION_01",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-01",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hija_katetamana__identity_sheet--canon.jpeg",
+      "sha256": "9ff524860c5d45c628a6713732009c45e556aaeca1d0512cf2ab3159710fe807"
+    },
+    "hija_katetamana__state_sheet": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hija_katetamana__state_sheet--estados.jpeg",
+      "sha256": "27b0fd3df630174c57e1fdb90e0eb9507dee18112d1ea0ded21d5f43ab913d7b"
+    },
+    "cerro_katetamana__spatial_model": {
+      "status": "PASS",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/cerro_katetamana__spatial_model--canon.jpeg",
+      "sha256": "118b88a4076fb674f751a3de9360fa6902bf2ada7fb7d40d4597de51a7c9ed40"
+    }
+  },
+  "rejections": [
+    {
+      "model_id": "hermana_litoral__identity_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "reason": "REJECTED_MANTA_READ_AS_OPEN_FRONT_COAT_INSTEAD_OF_CLOSED_WAYUU_GARMENT",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hermana_litoral__identity_sheet--canon.jpeg",
+      "sha256": "a5e6f8b0970376a99326b9e9b262ef8cd2db328267038e3944979e23997c8b77"
+    },
+    {
+      "model_id": "hermana_litoral__state_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "reason": "REJECTED_IDENTITY_CONTINUITY_LOST_WOMU_AND_ADDED_UNDOCUMENTED_WAIST_SASH",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hermana_litoral__state_sheet--estados.jpeg",
+      "sha256": "2c495c1237792d687572964f0ec3fd280ee7f1a2fc05b09b44cb9a5ad2aafd74"
+    },
+    {
+      "model_id": "hermano_litoral__identity_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "reason": "REJECTED_WAYUCO_BECAME_WIDE_SKIRTLIKE_MULTI_PANEL_GARMENT",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hermano_litoral__identity_sheet--canon.jpeg",
+      "sha256": "20a06a7faa2258a7aa7bdac6516d5212175fb6aefa4d1aba15c16d94a9f22593"
+    },
+    {
+      "model_id": "hermano_litoral__state_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "reason": "REJECTED_SKIRTLIKE_WAYUCO_AND_NON_LOCAL_DESERT_VEGETATION",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hermano_litoral__state_sheet--estados.jpeg",
+      "sha256": "d0afcc5d3b72c8f8279a88e8544822b94fe4b387e9b40770c133e6324360619c"
+    },
+    {
+      "model_id": "padre_katetamana__identity_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "reason": "REJECTED_WAYUCO_BECAME_CULOTTE_OR_CONTINUOUS_SHORTS",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/padre_katetamana__identity_sheet--canon.jpeg",
+      "sha256": "85a88a5b60515a0658ba102a15401aa769f237da621aa8d0cf12d49c135b71ce"
+    },
+    {
+      "model_id": "hija_katetamana__identity_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium",
+      "reason": "REJECTED_NON_LOCAL_AGAVE_OR_ALOE_ROSETTES_IN_TERRITORY",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium/hija_katetamana__identity_sheet--canon.jpeg",
+      "sha256": "a761264e4708cda292803cdc14bfe786ac913599df23cc36276794402b2cbf6d"
+    },
+    {
+      "model_id": "hermana_litoral__state_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-01",
+      "reason": "REJECTED_MANTA_AND_WOMU_FIXED_BUT_AGAVE_ROSETTES_INTRODUCED",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hermana_litoral__state_sheet--estados.jpeg",
+      "sha256": "0ab05a93d19319309cb5e2cb887fbc8b734511c3b7a39c718954fdd11a276ae0"
+    },
+    {
+      "model_id": "hermano_litoral__state_sheet",
+      "batch_id": "wayuu-v3-production-12-el-incesto-medium-corrections-01",
+      "reason": "REJECTED_AGAVE_ROSETTES_AND_UNDOCUMENTED_GOLD_VERTICAL_TRIM_ON_WAYUCO",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-12-el-incesto-medium-corrections-01/hermano_litoral__state_sheet--estados.jpeg",
+      "sha256": "cfcfb57a929c7fc96ae787a1a04426fbc19ed33ca6181d0d612ab25c95c05695"
+    }
+  ]
+}

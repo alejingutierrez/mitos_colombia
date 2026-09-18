@@ -1,0 +1,261 @@
+{
+  "mito": "el-bermejo-aspira-a-ser-rey",
+  "comunidad": "Muiscas",
+  "carpeta_triptico": "el-bermejo-aspira-a-ser-rey",
+  "estructura": "9 bloques narrativos × 2 keyframes (bNa, bNb) = 18 escenas; el `acto` del tríptico cubre una, quedan 17 por generar",
+  "nota_deslinde": "b2a lo cubre la `entrada` del tríptico, b6a el `acto` y b9b la `huella`. Sin tronco y sin ayuno. 18 escenas totales: 15 nuevas y 3 reutilizadas.",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "quality": "medium",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  },
+  "lineas": {
+    "b1": "Cuando murió el zaque de Hunsa, el Bermejo recordó lo que había costado quedarse.",
+    "b2": "El nuevo zaque sería elegido entre hombres de Tobaza y Firavitoba.",
+    "b3": "—También pertenezco a esta tierra. —Pertenecer no significa que toda función te corresponda.",
+    "b4": "Visitó al cacique de Pesca y prometió tierras, mantas y alianzas.",
+    "b5": "Algunos recibieron los regalos sin comprometerse. Otros los devolvieron.",
+    "b6": "—No votaré por ti. La regla no cambia porque un candidato se considere excepcional.",
+    "b7": "—Las reglas también pueden ser injustas. —Entonces convoca a discutirlas.",
+    "b8": "Sintió que las personas alrededor ya habían escogido un lado.",
+    "b9": "Confundió la vergüenza con una amenaza."
+  },
+  "keyframes": [
+    {
+      "tag": "b1a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "simetria",
+      "desc": "PLANO GENERAL de un cercado en duelo, con las puertas cerradas con mantas y la gente reunida en silencio en el patio.",
+      "refs": [
+        "mitos/el-bermejo-aspira-a-ser-rey/entrada"
+      ],
+      "prompt_file": "b1a.prompt.txt",
+      "prompt_sha256": "ddfb3b34e2221027d34cb81c3e1d252b75ccf547a3c5f5fee03083a029e1e00c",
+      "image_sha256": "a85de318f828a9e1212b9f0945b1d345e5cef843c6a6fa3d5e50235813f505b5",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:44.933Z"
+    },
+    {
+      "tag": "b1b",
+      "job": "c71ae187-a5c6-4948-a1bf-a3b05137b1ed",
+      "px": "1520x2688",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de dos hombros con una cicatriz vieja de carga, vistos desde atrás y sin cara en cuadro."
+    },
+    {
+      "tag": "b2b",
+      "job": "5665711a-3c00-4065-9c7a-f24463e756d6",
+      "px": "1520x2688",
+      "comp": "simetria",
+      "desc": "PLANO MEDIO de un corro cerrado de electores hablando entre sí, todos de perfil y de espaldas al resto de la explanada."
+    },
+    {
+      "tag": "b3a",
+      "job": "d9fa6c19-0214-4dba-abe7-70562459e074",
+      "px": "1520x2688",
+      "comp": "enfrentados",
+      "desc": "PLANO MEDIO de dos compañeros discutiendo aparte, uno a cada lado del cuadro, con el aire tenso entre ellos."
+    },
+    {
+      "tag": "b3b",
+      "job": "e09a341c-9c71-419f-a7d6-7da5ec2b7d61",
+      "px": "1520x2688",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de una cara girándose para no seguir escuchando, de perfil."
+    },
+    {
+      "tag": "b4a",
+      "job": "2dc72baa-b21a-449f-9038-4730b24acb6e",
+      "px": "1520x2688",
+      "comp": "enfrentados",
+      "desc": "PLANO MEDIO de dos hombres hablando en el interior de una casa con mantas y un canasto entre ellos, ninguno centrado."
+    },
+    {
+      "tag": "b4b",
+      "job": "b0dff1ad-30e6-4b0a-8afb-0bcba33fd432",
+      "px": "1520x2688",
+      "comp": "primer_plano",
+      "desc": "PLANO DETALLE de unas manos empujando una manta doblada hacia el otro lado de una estera, ofreciéndola."
+    },
+    {
+      "tag": "b5a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "primer_plano",
+      "desc": "PLANO MEDIO de unas manos aceptando un presente sin decir nada, con la cara fuera de cuadro.",
+      "refs": [
+        "videos/el-bermejo-aspira-a-ser-rey/keyframes/b4b",
+        "regalos_devueltos"
+      ],
+      "prompt_file": "b5a.prompt.txt",
+      "prompt_sha256": "23868ccd6addde28b2eab80e51a38faf5ed08d6a47f37b112376b9bbfe2f2ec7",
+      "image_sha256": "b473ac37f87f12c7e6b0b4983c4de772566ae5c7d79b6082252790f12819cbf8",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:44.955Z"
+    },
+    {
+      "tag": "b5b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "figura_pequena",
+      "desc": "PLANO MEDIO de un mensajero volviendo por un camino con el mismo bulto que llevó, de perfil.",
+      "refs": [
+        "regalos_devueltos",
+        "mitos/el-bermejo-aspira-a-ser-rey/entrada"
+      ],
+      "prompt_file": "b5b.prompt.txt",
+      "prompt_sha256": "2e6d3af95396e17325324882ff8074c02d551e905ea0c5813d0d6173ecba9883",
+      "image_sha256": "f7857089203e0fe2a6535e59d38feebeec7cc0a02c71fd45a6554410aef3d778",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:44.978Z"
+    },
+    {
+      "tag": "b6b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "diagonal",
+      "desc": "PLANO MEDIO de los testigos de pie en semicírculo, todos en silencio y ninguno interviniendo, escalonados en tres planos.",
+      "refs": [
+        "gameza_cacique",
+        "mitos/el-bermejo-aspira-a-ser-rey/acto"
+      ],
+      "prompt_file": "b6b.prompt.txt",
+      "prompt_sha256": "c4c58423f1216c955db77e7477987afeecc9a69403e36eebf70dbb4ef20639c5",
+      "image_sha256": "430e3434816dff39de9a4d425d6581547e04eb723536e5df4ae45c9cf3e2701b",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:45.001Z"
+    },
+    {
+      "tag": "b7a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de una cara joven discutiendo con calor, de perfil, con la mano abierta.",
+      "refs": [
+        "bermejo_forastero",
+        "mitos/el-bermejo-aspira-a-ser-rey/acto"
+      ],
+      "prompt_file": "b7a.prompt.txt",
+      "prompt_sha256": "c11483029c0213901befa675ff09bb06c150a1f5e30b19d821ad31797e47effb",
+      "image_sha256": "f2537d7f2712139093209b53ebf2c39c59f61c74f3fbbb5b52e57faea935d847",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:45.020Z"
+    },
+    {
+      "tag": "b7b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de una cara mayor respondiendo sin subir la voz, de perfil, con las manos quietas.",
+      "refs": [
+        "gameza_cacique",
+        "mitos/el-bermejo-aspira-a-ser-rey/acto"
+      ],
+      "prompt_file": "b7b.prompt.txt",
+      "prompt_sha256": "469114e893b0c394b57fd628cdec46163a823d2d72adbdf72591e2059977ccb0",
+      "image_sha256": "25cb5a468a79073df19e596723113fefa78ae23abbb5db0e96e6230851a0a3fc",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:45.042Z"
+    },
+    {
+      "tag": "b8a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO GENERAL de una explanada donde la gente se ha ido agrupando hacia un lado, dejando a una figura sola en el otro.",
+      "refs": [
+        "bermejo_forastero",
+        "mitos/el-bermejo-aspira-a-ser-rey/entrada"
+      ],
+      "prompt_file": "b8a.prompt.txt",
+      "prompt_sha256": "fef1a1403275a0ff78b724d9378883a244e013350a7d78eb4e994a29b554915e",
+      "image_sha256": "ab27013bb9ce566866b5e2e90fa7f377f904f5e7a3c94c3926db2616fbde5501",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:45.063Z"
+    },
+    {
+      "tag": "b8b",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "peso_contrario",
+      "desc": "PLANO MEDIO CORTO de una cara con la vergüenza endureciéndose en otra cosa, de perfil, sin gesto teatral.",
+      "refs": [
+        "bermejo_forastero",
+        "mitos/el-bermejo-aspira-a-ser-rey/acto"
+      ],
+      "prompt_file": "b8b.prompt.txt",
+      "prompt_sha256": "1ddd17daa4061e6dc02aa54506ad452976b719dd0043a3e2d8415c089d705333",
+      "image_sha256": "cbf1e837954394d6de1167a581592bb5d042552af5f8ddf70a2bf45d6c3bb47c",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:45.083Z"
+    },
+    {
+      "tag": "b9a",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "source_px": "1024x1536",
+      "output_px": "1080x1920",
+      "comp": "figura_pequena",
+      "desc": "PLANO GENERAL de una figura alejándose sola por un camino entre poblados al atardecer, de perfil, sin nadie acompañándola.",
+      "refs": [
+        "bermejo_forastero",
+        "mitos/el-bermejo-aspira-a-ser-rey/entrada"
+      ],
+      "prompt_file": "b9a.prompt.txt",
+      "prompt_sha256": "b9017c28bbadf71aa606e447545b24022a05710480a2f482f1ce02a490f10030",
+      "image_sha256": "c71b7540e3e3c8694bcfc5ec5f984f795986c0358f33dbd0118bfcb420879112",
+      "account_source": "OPENAI_API_KEY from ignored .env",
+      "package_prepared_at": "2026-09-03T15:58:38.590Z",
+      "ingested_at": "2026-09-03T15:58:45.104Z"
+    }
+  ],
+  "reusadas": [
+    {
+      "tag": "b2a",
+      "reusa": "mitos/el-bermejo-aspira-a-ser-rey/entrada"
+    },
+    {
+      "tag": "b6a",
+      "reusa": "mitos/el-bermejo-aspira-a-ser-rey/acto"
+    },
+    {
+      "tag": "b9b",
+      "reusa": "mitos/el-bermejo-aspira-a-ser-rey/huella"
+    }
+  ]
+}

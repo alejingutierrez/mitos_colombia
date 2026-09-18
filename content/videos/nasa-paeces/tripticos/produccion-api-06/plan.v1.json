@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "community": "Nasa–Paeces",
+  "status": "prepared_for_production",
+  "myth_ids": [
+    450,
+    451,
+    452,
+    453,
+    553
+  ],
+  "new_triptychs": 5,
+  "new_images": 15,
+  "total_when_complete": 26,
+  "bible_selection": "content/videos/nasa-paeces/biblia/produccion-api-02/selection.v2.json",
+  "source_snapshot": "content/videos/nasa-paeces/biblia/research/corpus-snapshot-20260912.json",
+  "previous_selections": [
+    "content/videos/nasa-paeces/tripticos/produccion-api-01/el-trueno.selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-02/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-03/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-04/selection.v1.json",
+    "content/videos/nasa-paeces/tripticos/produccion-api-05/selection.v1.json"
+  ],
+  "max_concurrency": 4,
+  "publication_authorized": true,
+  "jobs": [
+    {
+      "myth_id": 450,
+      "slug": "la-cabeza",
+      "title": "La cabeza",
+      "variant": "Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "E01",
+        "C05",
+        "U08",
+        "L08"
+      ],
+      "scene": "Exactly ONE adult traveler selected C05 lower-left bareheaded gray-ruana/light-trousers man sits safely on a low plain paper stone beside a mountain path, holding ONE ordinary walking bordón U08. He sees exactly ONE autonomous ANIMATED PAPER HEAD E01 nearby, with EXACTLY ONE visible ear and EXACTLY ONE isolated small triangular tooth, NOT a row of teeth. Head has a fully closed rounded paper underside, no exposed neck, wound, blood, body or relation to a corpse. Encounter BEFORE any strike; no weapons, fear caricature, extra heads, spiritual cult or severed anatomy. Indigo forest-road paper layers, restrained expression.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.\n\nImage 1: E01 supporting reference; select only the named state.\nImage 2: C05 supporting reference; select only the named state.\nImage 3: U08 supporting reference; select only the named state.\nImage 4: L08 supporting reference; select only the named state.\nExactly ONE adult traveler selected C05 lower-left bareheaded gray-ruana/light-trousers man sits safely on a low plain paper stone beside a mountain path, holding ONE ordinary walking bordón U08. He sees exactly ONE autonomous ANIMATED PAPER HEAD E01 nearby, with EXACTLY ONE visible ear and EXACTLY ONE isolated small triangular tooth, NOT a row of teeth. Head has a fully closed rounded paper underside, no exposed neck, wound, blood, body or relation to a corpse. Encounter BEFORE any strike; no weapons, fear caricature, extra heads, spiritual cult or severed anatomy. Indigo forest-road paper layers, restrained expression.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 450,
+      "slug": "la-cabeza",
+      "title": "La cabeza",
+      "variant": "Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "E01",
+        "C05",
+        "L04"
+      ],
+      "scene": "Exactly ONE adult gray-ruana bareheaded C05 traveler sits securely in the supported fork of ONE very tall paper tree, whole body visible at small scale, with ordinary coherent limbs, no fall or injury. At the foot of the tree waits EXACTLY ONE same autonomous animated PAPER HEAD E01, closed rounded paper base, ONE visible ear and ONE isolated triangular tooth, not a severed head or biological wound. No impact, hitting trunk, blood, snarling teeth, extra heads, body, hanging person or hybrid animal. Pale dawn paper enters the upper forest edges and interrupts the night, broad layered-paper leaves and ground.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.\n\nImage 1: E01 supporting reference; select only the named state.\nImage 2: C05 supporting reference; select only the named state.\nImage 3: L04 supporting reference; select only the named state.\nExactly ONE adult gray-ruana bareheaded C05 traveler sits securely in the supported fork of ONE very tall paper tree, whole body visible at small scale, with ordinary coherent limbs, no fall or injury. At the foot of the tree waits EXACTLY ONE same autonomous animated PAPER HEAD E01, closed rounded paper base, ONE visible ear and ONE isolated triangular tooth, not a severed head or biological wound. No impact, hitting trunk, blood, snarling teeth, extra heads, body, hanging person or hybrid animal. Pale dawn paper enters the upper forest edges and interrupts the night, broad layered-paper leaves and ground.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 450,
+      "slug": "la-cabeza",
+      "title": "La cabeza",
+      "variant": "Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "E07",
+        "L04"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: ONE small plain rooster-shaped ochre/red paper silhouette selected from E07 upper-right motif rests against a pale dawn-colored fold beside ONE tall dark trunk-like paper strip. No head, traveler, forest panorama, map, ritual, sunrise diagram, typography or emblem; modest material trace of the call that ends pursuit.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Cabeza autónoma con una oreja y un diente, encuentro previo al golpe y refugio en árbol antes del amanecer; sin gore.\n\nImage 1: E07 supporting reference; select only the named state.\nImage 2: L04 supporting reference; select only the named state.\nSquare ABSTRACT MATERIAL METAPHOR: ONE small plain rooster-shaped ochre/red paper silhouette selected from E07 upper-right motif rests against a pale dawn-colored fold beside ONE tall dark trunk-like paper strip. No head, traveler, forest panorama, map, ritual, sunrise diagram, typography or emblem; modest material trace of the call that ends pursuit.\n\nSYNTHESIS PRIORITY: supporting sheets contain figurative states that MUST NOT be copied. Use ONLY the specific small abstract SHAPES described above. Close-up material composition on cream/ochre flat paper background. ZERO HUMAN BODIES OR FACES, ZERO full animal bodies, ZERO landscapes, mountain horizons, plants as scenery, villages or nested panels. Isolated rooster cutout, paw/footprint cutout, pot shape, band, seed/shoot motif or book ONLY IF explicitly requested in the square description. NEVER reproduce a reference sheet character. This square is NOT another story scene.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/la-cabeza-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/la-cabeza/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 451,
+      "slug": "los-animales",
+      "title": "Los animales",
+      "variant": "Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "C05",
+        "L08"
+      ],
+      "scene": "Exactly ONE full-body adult traveler selected C05 lower-left bareheaded gray-ruana/light-trousers man pauses on an indigo mountain path. Broad leaf-paper pieces rustle at the two sides of the path, indicated by a few displaced overlapping paper layers ONLY; no visible animal bodies, dog, pig, cat, monster silhouette, extra traveler, eyes fixed to a species, bullet, shooting action or exposed weapon. His empty hands are down and body coherent, feet supported on dry path. Navigable rich night scene; uncertainty is in unseen movement, not a factual creature portrait.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.\n\nImage 1: C05 supporting reference; select only the named state.\nImage 2: L08 supporting reference; select only the named state.\nExactly ONE full-body adult traveler selected C05 lower-left bareheaded gray-ruana/light-trousers man pauses on an indigo mountain path. Broad leaf-paper pieces rustle at the two sides of the path, indicated by a few displaced overlapping paper layers ONLY; no visible animal bodies, dog, pig, cat, monster silhouette, extra traveler, eyes fixed to a species, bullet, shooting action or exposed weapon. His empty hands are down and body coherent, feet supported on dry path. Navigable rich night scene; uncertainty is in unseen movement, not a factual creature portrait.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 451,
+      "slug": "los-animales",
+      "title": "Los animales",
+      "variant": "Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "C03",
+        "C04",
+        "C05",
+        "U06",
+        "L08"
+      ],
+      "scene": "Exactly THREE full-body people return safely along a dry mountain path: ONE mature caregiver woman selected C03 second-from-left blue-shawl view walks ahead holding ONE small dry BAGASSE bundle U06 with restrained flat orange-paper ember, away from clothing; ONE fully clothed young girl selected C04 lower-middle green dress/cream shawl walks beside her; ONE gray-ruana bareheaded C05 adult traveler walks behind after rescue. No one trapped, falling or injured. No visible animal bodies, eyes, monsters, weapons, huge fire or burned people. Broad paper night opens into a modest warm path-light; caregiver and daughter lead, man follows.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.\n\nImage 1: C03 supporting reference; select only the named state.\nImage 2: C04 supporting reference; select only the named state.\nImage 3: C05 supporting reference; select only the named state.\nImage 4: U06 supporting reference; select only the named state.\nImage 5: L08 supporting reference; select only the named state.\nExactly THREE full-body people return safely along a dry mountain path: ONE mature caregiver woman selected C03 second-from-left blue-shawl view walks ahead holding ONE small dry BAGASSE bundle U06 with restrained flat orange-paper ember, away from clothing; ONE fully clothed young girl selected C04 lower-middle green dress/cream shawl walks beside her; ONE gray-ruana bareheaded C05 adult traveler walks behind after rescue. No one trapped, falling or injured. No visible animal bodies, eyes, monsters, weapons, huge fire or burned people. Broad paper night opens into a modest warm path-light; caregiver and daughter lead, man follows.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 451,
+      "slug": "los-animales",
+      "title": "Los animales",
+      "variant": "Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U06",
+        "L08"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: one small dry bagasse-paper bundle with a modest flat orange ember creates a narrow pale path-shaped paper strip through two dark indigo folded sheets. Invisible presences remain unpictured: ZERO bodies, eyes, pawprints, creatures, people, landscape, crosses, species label, magic seal or fire-making instructions.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Presencias nocturnas invisibles, rescate por pariente y su hija con bagazo encendido; no fijar especies ni confundir percepción del hombre con visión compartida.\n\nImage 1: U06 supporting reference; select only the named state.\nImage 2: L08 supporting reference; select only the named state.\nSquare ABSTRACT MATERIAL METAPHOR: one small dry bagasse-paper bundle with a modest flat orange ember creates a narrow pale path-shaped paper strip through two dark indigo folded sheets. Invisible presences remain unpictured: ZERO bodies, eyes, pawprints, creatures, people, landscape, crosses, species label, magic seal or fire-making instructions.\n\nSYNTHESIS PRIORITY: supporting sheets contain figurative states that MUST NOT be copied. Use ONLY the specific small abstract SHAPES described above. Close-up material composition on cream/ochre flat paper background. ZERO HUMAN BODIES OR FACES, ZERO full animal bodies, ZERO landscapes, mountain horizons, plants as scenery, villages or nested panels. Isolated rooster cutout, paw/footprint cutout, pot shape, band, seed/shoot motif or book ONLY IF explicitly requested in the square description. NEVER reproduce a reference sheet character. This square is NOT another story scene.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/los-animales-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/los-animales/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 452,
+      "slug": "el-dalo",
+      "title": "El dalo",
+      "variant": "Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "C05",
+        "L09"
+      ],
+      "scene": "Exactly ONE adult traveler selected C05 lower-left bareheaded gray-ruana/light-trousers man walks at small scale into a very broad pale PAPER plain with forest at its entrance. ONE initially open path progressively narrows under broad green cut-paper vegetation toward a distant restrained luminous house-like destination. A narrator's individual vision, NOT universal Nasa theology. No corpse, bedbound dying body, floating soul copy, angel wings, staircase to heaven, crosses, saint halo, horse, black rider, demon, diagram or cartographic symbols. Whole human body coherent on dry path.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.\n\nImage 1: C05 supporting reference; select only the named state.\nImage 2: L09 supporting reference; select only the named state.\nExactly ONE adult traveler selected C05 lower-left bareheaded gray-ruana/light-trousers man walks at small scale into a very broad pale PAPER plain with forest at its entrance. ONE initially open path progressively narrows under broad green cut-paper vegetation toward a distant restrained luminous house-like destination. A narrator's individual vision, NOT universal Nasa theology. No corpse, bedbound dying body, floating soul copy, angel wings, staircase to heaven, crosses, saint halo, horse, black rider, demon, diagram or cartographic symbols. Whole human body coherent on dry path.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 452,
+      "slug": "el-dalo",
+      "title": "El dalo",
+      "variant": "Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "P09",
+        "C05",
+        "L09"
+      ],
+      "scene": "Exactly TWO adults and ONE fully covered INFANT: María P09 in blue mantle and full cream garment holds the wrapped infant in the specifically narrated maternal state; ONE gray-ruana bareheaded C05 adult traveler listens at a small threshold-like space made of broad pale paper folds before the modest luminous destination. Restrained welcome, gentle paper light between layers; María does NOT expose body or give seeds. No gold crown, halos, theological map, angels, ornate cathedral palace, horses, black rider, hooks, demon, extra babies, corpse or impossible hands. Vertical whole modest human bodies with coherent dry footing, no famous religious painting copy.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.\n\nImage 1: P09 supporting reference; select only the named state.\nImage 2: C05 supporting reference; select only the named state.\nImage 3: L09 supporting reference; select only the named state.\nExactly TWO adults and ONE fully covered INFANT: María P09 in blue mantle and full cream garment holds the wrapped infant in the specifically narrated maternal state; ONE gray-ruana bareheaded C05 adult traveler listens at a small threshold-like space made of broad pale paper folds before the modest luminous destination. Restrained welcome, gentle paper light between layers; María does NOT expose body or give seeds. No gold crown, halos, theological map, angels, ornate cathedral palace, horses, black rider, hooks, demon, extra babies, corpse or impossible hands. Vertical whole modest human bodies with coherent dry footing, no famous religious painting copy.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 452,
+      "slug": "el-dalo",
+      "title": "El dalo",
+      "variant": "Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "L09"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: one narrow pale paper path-like strip weaves through dense overlapping green leaf-paper folds and reaches a broad bright cream opening. Passage, difficulty and testimony expressed with material alone; no people, child, saint, theological map, angel, palace panorama, cross, flame, horse, stairs or ritual emblem.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Testimonio individual de una experiencia cercana a la muerte: senda que se cierra y María con Niño. No mapa doctrinal Nasa ni diablo-jinete.\n\nImage 1: L09 supporting reference; select only the named state.\nSquare ABSTRACT MATERIAL METAPHOR: one narrow pale paper path-like strip weaves through dense overlapping green leaf-paper folds and reaches a broad bright cream opening. Passage, difficulty and testimony expressed with material alone; no people, child, saint, theological map, angel, palace panorama, cross, flame, horse, stairs or ritual emblem.\n\nSYNTHESIS PRIORITY: supporting sheets contain figurative states that MUST NOT be copied. Use ONLY the specific small abstract SHAPES described above. Close-up material composition on cream/ochre flat paper background. ZERO HUMAN BODIES OR FACES, ZERO full animal bodies, ZERO landscapes, mountain horizons, plants as scenery, villages or nested panels. Isolated rooster cutout, paw/footprint cutout, pot shape, band, seed/shoot motif or book ONLY IF explicitly requested in the square description. NEVER reproduce a reference sheet character. This square is NOT another story scene.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/el-dalo-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/el-dalo/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 453,
+      "slug": "origen-de-las-plantas",
+      "title": "Origen de las plantas",
+      "variant": "María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "P09",
+        "C05",
+        "U07",
+        "L05"
+      ],
+      "scene": "Exactly TWO full-body adult women at a modest cultivated hillside edge: María P09 in blue mantle/full cream garment offers a few matte paper seeds from ONE cupped hand held naturally in front of her FULLY COVERED waist; ONE female farmer selected C05 upper-left blue/dark skirt receives them in her cupped hands. Preserve separate faces and clothing. Seeds do NOT emerge visibly through skin or garment, no exposed womb, nudity, baby, saint halo, snakes, Santo Tomás, royal crown, ceremonial pose or extra fingers. Modest future garden rows and broad matte paper earth.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.\n\nImage 1: P09 supporting reference; select only the named state.\nImage 2: C05 supporting reference; select only the named state.\nImage 3: U07 supporting reference; select only the named state.\nImage 4: L05 supporting reference; select only the named state.\nExactly TWO full-body adult women at a modest cultivated hillside edge: María P09 in blue mantle/full cream garment offers a few matte paper seeds from ONE cupped hand held naturally in front of her FULLY COVERED waist; ONE female farmer selected C05 upper-left blue/dark skirt receives them in her cupped hands. Preserve separate faces and clothing. Seeds do NOT emerge visibly through skin or garment, no exposed womb, nudity, baby, saint halo, snakes, Santo Tomás, royal crown, ceremonial pose or extra fingers. Modest future garden rows and broad matte paper earth.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 453,
+      "slug": "origen-de-las-plantas",
+      "title": "Origen de las plantas",
+      "variant": "María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "P09",
+        "C05",
+        "U07",
+        "L05"
+      ],
+      "scene": "Exactly TWO same adult women in a small modest hillside garden: ONE blue/dark-skirt farmer selected C05 upper-left kneels on dry earth, carefully distributing a few seeds across THREE well-spaced small planting depressions; María P09 adult blue mantle/full cream garment stands quietly a short distance behind observing with hands relaxed. Keep ordinary healthy hands, no seed-stream from body, infant, snakes, male Tomás, halos, giant Inca terraces, ceremonial ritual, architectural shrine, exposed blade or flooded ground. Vertical scene of care AFTER receiving seeds, crops and soil broad flat paper pieces.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.\n\nImage 1: P09 supporting reference; select only the named state.\nImage 2: C05 supporting reference; select only the named state.\nImage 3: U07 supporting reference; select only the named state.\nImage 4: L05 supporting reference; select only the named state.\nExactly TWO same adult women in a small modest hillside garden: ONE blue/dark-skirt farmer selected C05 upper-left kneels on dry earth, carefully distributing a few seeds across THREE well-spaced small planting depressions; María P09 adult blue mantle/full cream garment stands quietly a short distance behind observing with hands relaxed. Keep ordinary healthy hands, no seed-stream from body, infant, snakes, male Tomás, halos, giant Inca terraces, ceremonial ritual, architectural shrine, exposed blade or flooded ground. Vertical scene of care AFTER receiving seeds, crops and soil broad flat paper pieces.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 453,
+      "slug": "origen-de-las-plantas",
+      "title": "Origen de las plantas",
+      "variant": "María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U07"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: a few different plain seed-paper shapes pass along one subtle ochre fold into two restrained small green shoot-paper forms, with generous neutral cream space. Heredity and continuing cultivation, not literal womb, hand, person, garden panorama, taxonomy chart, sacred geometry, snake, arrow diagram or cultural emblem.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: María entrega semillas como herencia; semillas sostenidas en manos sobre cuerpo cubierto. No asegurar la dudosa creación de culebras por Santo Tomás.\n\nImage 1: U07 supporting reference; select only the named state.\nSquare ABSTRACT MATERIAL METAPHOR: a few different plain seed-paper shapes pass along one subtle ochre fold into two restrained small green shoot-paper forms, with generous neutral cream space. Heredity and continuing cultivation, not literal womb, hand, person, garden panorama, taxonomy chart, sacred geometry, snake, arrow diagram or cultural emblem.\n\nSYNTHESIS PRIORITY: supporting sheets contain figurative states that MUST NOT be copied. Use ONLY the specific small abstract SHAPES described above. Close-up material composition on cream/ochre flat paper background. ZERO HUMAN BODIES OR FACES, ZERO full animal bodies, ZERO landscapes, mountain horizons, plants as scenery, villages or nested panels. Isolated rooster cutout, paw/footprint cutout, pot shape, band, seed/shoot motif or book ONLY IF explicitly requested in the square description. NEVER reproduce a reference sheet character. This square is NOT another story scene.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/origen-de-las-plantas-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/origen-de-las-plantas/huella-v1.jpeg"
+    },
+    {
+      "myth_id": 553,
+      "slug": "juan-tama",
+      "title": "Juan Tama de la Estrella",
+      "variant": "Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.",
+      "role": "entrada",
+      "label": "entrada",
+      "refs": [
+        "P04",
+        "C01",
+        "U03",
+        "L01"
+      ],
+      "scene": "Exactly TWO adult/elder sabedores selected C01 upper-left gray-haired plain-hat man and upper-right blue/gray-clothed man stand on the safe dry edge of ONE small highland lagoon AFTER retrieving exactly ONE fully wrapped INFANT Juan Tama selected P04 lower states. ONE caregiver holds the infant securely with natural two arms. Infant body is entirely covered by plain blanket and a LONG NARROW simple protective chumbe band U03 with only restrained ordinary stripes, not sacred glyphs; ONE closed plain title book rests safely beneath the bundle as narrated, ZERO writing, crest or seal. No drowning, lightning strike on people, death, nursing scene, giant baby, halo, cartoon star face, crown, battle or extra infants. Water and storm-cloud remnants are broad flat paper ribbons; restrained night/dawn atmosphere.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1536x1024",
+      "quality": "high",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.\n\nImage 1: P04 supporting reference; select only the named state.\nImage 2: C01 supporting reference; select only the named state.\nImage 3: U03 supporting reference; select only the named state.\nImage 4: L01 supporting reference; select only the named state.\nExactly TWO adult/elder sabedores selected C01 upper-left gray-haired plain-hat man and upper-right blue/gray-clothed man stand on the safe dry edge of ONE small highland lagoon AFTER retrieving exactly ONE fully wrapped INFANT Juan Tama selected P04 lower states. ONE caregiver holds the infant securely with natural two arms. Infant body is entirely covered by plain blanket and a LONG NARROW simple protective chumbe band U03 with only restrained ordinary stripes, not sacred glyphs; ONE closed plain title book rests safely beneath the bundle as narrated, ZERO writing, crest or seal. No drowning, lightning strike on people, death, nursing scene, giant baby, halo, cartoon star face, crown, battle or extra infants. Water and storm-cloud remnants are broad flat paper ribbons; restrained night/dawn atmosphere.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-entrada-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/entrada-v1.jpeg"
+    },
+    {
+      "myth_id": 553,
+      "slug": "juan-tama",
+      "title": "Juan Tama de la Estrella",
+      "variant": "Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.",
+      "role": "acto",
+      "label": "acto",
+      "refs": [
+        "P04",
+        "C02",
+        "U01",
+        "L03"
+      ],
+      "scene": "Exactly THREE full-body adults on a dry highland ridgeline: ONE adult Juan Tama P04 with shoulder-length black hair, charcoal capisayo, plain light shirt/ankle trousers, modest bag and ONE plain dark chonta staff addresses TWO ordinary authority listeners selected C02 upper-left green-clothed woman and upper-right blue-gray-clothed man with restrained everyday layers. Calm territorial orientation through a quiet open-hand gesture, not a battlefield or performance ritual. No adversaries, ethnic portraits, flags, maps, written titles, gold crowns, snake, armored warriors, new religion, giant holy face, extra hands or infant copy. Modest immersive close highland paper ridges, dry coherent footing.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1536",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.\n\nImage 1: P04 supporting reference; select only the named state.\nImage 2: C02 supporting reference; select only the named state.\nImage 3: U01 supporting reference; select only the named state.\nImage 4: L03 supporting reference; select only the named state.\nExactly THREE full-body adults on a dry highland ridgeline: ONE adult Juan Tama P04 with shoulder-length black hair, charcoal capisayo, plain light shirt/ankle trousers, modest bag and ONE plain dark chonta staff addresses TWO ordinary authority listeners selected C02 upper-left green-clothed woman and upper-right blue-gray-clothed man with restrained everyday layers. Calm territorial orientation through a quiet open-hand gesture, not a battlefield or performance ritual. No adversaries, ethnic portraits, flags, maps, written titles, gold crowns, snake, armored warriors, new religion, giant holy face, extra hands or infant copy. Modest immersive close highland paper ridges, dry coherent footing.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-acto-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/acto-v1.jpeg"
+    },
+    {
+      "myth_id": 553,
+      "slug": "juan-tama",
+      "title": "Juan Tama de la Estrella",
+      "variant": "Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.",
+      "role": "huella",
+      "label": "huella",
+      "refs": [
+        "U03",
+        "U01",
+        "L01"
+      ],
+      "scene": "Square ABSTRACT MATERIAL METAPHOR: ONE narrow protective chumbe-paper band gently wraps a plain CLOSED dark book with ZERO text or seal, beside ONE subtle broad blue water-paper ribbon and ONE plain dark staff-shaped strip. Narrow ordinary stripes only, no sacred patterns, star emblem, theological diagram, map, infant, portrait, shrine, crown or scenic lagoon panorama. Paper memory, water and territorial responsibility, not a new universal icon.",
+      "model": "gpt-image-2.5-sunburst",
+      "size": "1024x1024",
+      "quality": "medium",
+      "prompt": "Use case: illustration-story. Produce ONE new finished edge-to-edge illustration, NOT a pasted identity sheet. No panels, contact sheet, border or catalogue.\nMATERIAL LOCK: matte cut-paper Colombian highland craft, broad flat cut shapes, visible paper edges, folded strata, cast shadows BETWEEN layers. Water, mist and cloud are also broad flat PAPER SHAPES, never photographic water, cotton, wool or realistic vapor. Earth and stones are broad paper sheets, not gritty particles. No display base, plinth, table frame, clay dolls, shiny CGI or realistic skin.\nInput images are supporting identity, prop and material references, NOT targets to paste. Select ONLY the named state/objects. Preserve approved identity, age, hair, clothing and palette. Clothing and staging are reversible editorial adaptations, not a universal Nasa uniform or verified reconstruction.\nZERO text, letters, titles, captions, labels, watermark or logos. No invented sacred patterns, crowns, headdresses, armor, ritual instructions, maps, shrines, deity faces or emblems from other peoples. No blood, injury, corpses, exposed organs, anatomical transformation spectacle, nudity, violence or animal-human hybrids. Exactly TWO arms and TWO hands connected to wrists per visible human; coherent body and feet supported on dry ground. Symbolic square must be an ABSTRACT MATERIAL METAPHOR, not a third scenic landscape or cultural emblem.\n\nNarrative lock: Nacimiento acuático protegido con chumbe y libro de títulos en la versión incluida; adulto orienta comunidades. No fundir lagunas o adversarios ni fabricar escritura o emblemas.\n\nImage 1: U03 supporting reference; select only the named state.\nImage 2: U01 supporting reference; select only the named state.\nImage 3: L01 supporting reference; select only the named state.\nSquare ABSTRACT MATERIAL METAPHOR: ONE narrow protective chumbe-paper band gently wraps a plain CLOSED dark book with ZERO text or seal, beside ONE subtle broad blue water-paper ribbon and ONE plain dark staff-shaped strip. Narrow ordinary stripes only, no sacred patterns, star emblem, theological diagram, map, infant, portrait, shrine, crown or scenic lagoon panorama. Paper memory, water and territorial responsibility, not a new universal icon.\n\nSYNTHESIS PRIORITY: supporting sheets contain figurative states that MUST NOT be copied. Use ONLY the specific small abstract SHAPES described above. Close-up material composition on cream/ochre flat paper background. ZERO HUMAN BODIES OR FACES, ZERO full animal bodies, ZERO landscapes, mountain horizons, plants as scenery, villages or nested panels. Isolated rooster cutout, paw/footprint cutout, pot shape, band, seed/shoot motif or book ONLY IF explicitly requested in the square description. NEVER reproduce a reference sheet character. This square is NOT another story scene.\n",
+      "prompt_file": "/Users/alegut/MyApps/Personal/mitos_colombia/content/videos/nasa-paeces/tripticos/produccion-api-06/prompts/juan-tama-huella-v1.txt",
+      "out": "/Users/alegut/MyApps/Personal/mitos_colombia/output/imagegen/nasa-paeces/tripticos/produccion-api-06/juan-tama/huella-v1.jpeg"
+    }
+  ],
+  "prompt_refinement_before_api": "Se refuerzan seis huellas aún no generadas para evitar copia de estados figurativos; referencias, corpus e identidad sin cambios."
+}

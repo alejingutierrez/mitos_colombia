@@ -1,0 +1,159 @@
+{
+  "schema": "mitos-openai-triptych/v1",
+  "batch_id": "wayuu-creacion-triptych-03-entrada",
+  "created_at": "2026-09-06T05:57:36.669Z",
+  "account_source": "OPENAI_API_KEY from ignored .env",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "community": "wayuu",
+  "myth": "creacion-wayuu",
+  "plan": "content/mitos-visuales/wayuu.creacion.triptico.v1.2-entrada.json",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "plan_sha256": "60e96a53420bf8eb7b546aaf3330e79e21325e164fc3b26de50d7f5ca8fcf339",
+  "narrative_target_sha256": "8e39659bf2e7796d5f813cd744fdceb278176576c5d9d3c1feb76db182075b8f",
+  "evidence": [
+    {
+      "id": "published_creacion",
+      "type": "project_narrative",
+      "path": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/creacion-wayuu.json",
+      "supports": "Relato compuesto con primera noche familiar, salida de cavidad y semillas que esperan agua.",
+      "limits": "Síntesis editorial explícita, no una versión antigua única. No cambiar texto público."
+    },
+    {
+      "id": "chaves_311",
+      "type": "primary_narrative_record",
+      "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+      "pages": "311; PDF índice 7",
+      "supports": "Personas creadas en gran cueva o pozo y organización territorial.",
+      "limits": "No dice que esos seis individuos o prendas sean una escena histórica; no mezclar con barro."
+    },
+    {
+      "id": "carrasquero_finol",
+      "type": "published_research",
+      "url": "https://ve.scielo.org/scielo.php?pid=S1315-95182009000400006&script=sci_arttext",
+      "supports": "Relación de Juyá y Mma con generación de vida vegetal.",
+      "limits": "Se consulta esa relación, no se reconstruye yonna ni se trasladan signos o rituales al origen."
+    },
+    {
+      "id": "bible_lot11",
+      "type": "internal_visual_research",
+      "path": "docs/wayuu-lote-11-creacion-wayuu-v3.md",
+      "supports": "Presencias no corporales, cavidad, fogones y modelos compartidos de primeros Wayuu.",
+      "limits": "Modelos de objetos no obligan a excluir humanos en una escena del relato; conservar distinción de versiones."
+    },
+    {
+      "id": "castrillon_visual",
+      "type": "external_contemporary_visual_reference",
+      "url": "https://tatocastrillon.com/cosmogonia-wayuu",
+      "supports": "Inspiración compositiva: cosmogonía como territorio relacional, amplitud y distintas escalas.",
+      "limits": "No prueba nuestra versión ni se copia diseño. Todos los derechos reservados; no se adjunta imagen a generador."
+    }
+  ],
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T05:53:28.642Z",
+    "reviewed_reference_ids": [
+      "c6b753decbdb80c3f1a1",
+      "dd905f4f5b7860997fef",
+      "castrillon-cosmogonia-wayuu-01"
+    ],
+    "retained": [
+      "Azul nocturno y arena en capas del proyecto; calidez localizada frente a territorio extenso.",
+      "De la referencia contemporánea de Castrillón: territorio entendido como relaciones entre diferentes formas de vida, con figuras pequeñas dentro de una composición amplia."
+    ],
+    "rejected": [
+      "Anciano creador gigante, barbas y traje geométrico como identidad universal de Mareiwa; enfoque cerrado de taller y muñecos de barro.",
+      "Casas redondas, canoa, velero y patrones decorativos que mezclan variantes.",
+      "No copiar de la obra externa composición, cuerpos divinos, patrones, colores exactos ni genealogía como si fueran la fuente del relato público."
+    ],
+    "influence_by_act": {
+      "entrada": "Noche azul amplia con fuegos familiares separados; curvas de luz se vuelven caminos materiales entre lugares, no taller de un creador gigante.",
+      "acto": "Restituir seis personas pequeñas y distintas dentro del territorio de origen; cavidad y barro permanecen separados.",
+      "huella": "Condensar la relación entre agua y vida latente en una semilla seca cuya sombra tiene forma de árbol; sin tercera escena."
+    }
+  },
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "canonical_models": [
+    {
+      "model_id": "mma__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium/mma__presence_model--canon.jpeg",
+      "sha256": "99473ea5e38e7d1a0cfe588b281524480a0d82f960e3af548755a18c2c9cf4a9",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "juya__presence_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-09-los-mellizos-transformadores-medium/juya__presence_model--canon.jpeg",
+      "sha256": "178b0b7c9fd724ef7e9168e29232aa1576d4777baaf37faa1690419cecbab9f9",
+      "qa_status": "PASS"
+    },
+    {
+      "model_id": "primeros_wayuu__group_grammar",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-10-maleiwa-medium-corrections-02/primeros_wayuu__group_grammar--canon.jpeg",
+      "sha256": "d8de2021bdc7cb22c2f271f872f442b6ec6dfa4de717c95ced8cd5c9c5c968a5",
+      "qa_status": "PASS_AFTER_CORRECTION_02"
+    },
+    {
+      "model_id": "cavidad_origen__spatial_model",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/cavidad_origen__spatial_model--canon.jpeg",
+      "sha256": "0d6f9bd074cd115c959a053495a065f589c68bf9690ebf96539a58bcb7a58448",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    },
+    {
+      "model_id": "fogon_primero__object_sheet",
+      "path": "output/imagegen/wayuu-v3-production/wayuu-v3-production-11-creacion-wayuu-medium-corrections-01/fogon_primero__object_sheet--canon.jpeg",
+      "sha256": "5081475042fcd6fb56073a0c005a40775603b2e0bef8e8fd17176a178d3d5b08",
+      "qa_status": "PASS_AFTER_CORRECTION_01"
+    }
+  ],
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "requested_acts": [
+    "entrada"
+  ],
+  "generation_mode": "text_only_no_local_references",
+  "framing": "immersive_full_bleed",
+  "surface_finish": "layered_depth_no_exposed_support",
+  "jobs": [
+    {
+      "act": "entrada",
+      "aspect_ratio": "16:9",
+      "size": "1536x864",
+      "quality": "high",
+      "api_method": "images.generate",
+      "composition": "profundidad_abierta",
+      "canon_model_ids": [
+        "mma__presence_model",
+        "juya__presence_model",
+        "primeros_wayuu__group_grammar",
+        "cavidad_origen__spatial_model",
+        "fogon_primero__object_sheet"
+      ],
+      "refs": [],
+      "ref_paths": [],
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/creacion-wayuu/wayuu-creacion-triptych-03-entrada/prompts/entrada.prompt.txt",
+      "prompt_sha256": "456d136018eb1928506416f4112287cb1b35ce3864180c8a661c37c406b9b7b1",
+      "narrative_event_ids": [
+        "noche_familias",
+        "vida_espera"
+      ],
+      "editorial_translation": "Los fuegos separados son un episodio editorial del texto público. Su luz que se despliega como camino material traduce vínculos y mundo inacabado; no se atribuye a una fuente ancestral ni a un rito.",
+      "magic_in_the_ordinary": {
+        "ordinary_anchor": "Familias distantes encienden fuegos al comenzar la noche.",
+        "impossible_behavior": "La luz de un hogar se despliega como un tramo material de camino hacia otro.",
+        "narrative_effect": "Habitar abre relaciones; el mundo no está terminado.",
+        "agency": "El origen no depende de un dios humano visible; las personas comienzan a habitar y relacionarse en un territorio vivo.",
+        "physical_translation": "Una franja ámbar nace del suelo iluminado, se levanta con aire y sombra y vuelve a tocar tierra cerca de otra lumbre.",
+        "visible_test": "Camino único conectado a dos lugares, sección levantada visible y mucho territorio vacío.",
+        "event_ids": [
+          "noche_familias",
+          "vida_espera"
+        ],
+        "provenance": "editorial_metaphor",
+        "temporal_role": "present"
+      },
+      "visual_function": "narrative_scene",
+      "output": "output/imagegen/wayuu/triptychs/wayuu-creacion-triptych-03-entrada/entrada.jpeg",
+      "status": "prepared"
+    }
+  ]
+}

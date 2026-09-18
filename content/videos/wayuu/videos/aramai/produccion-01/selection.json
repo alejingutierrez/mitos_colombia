@@ -1,0 +1,232 @@
+{
+  "schema": "wayuu-video-keyframe-selection/v1",
+  "slug": "aramai",
+  "status": "script_and_keyframes_complete_editorial_selection_with_notes",
+  "selected_at": "2026-09-07",
+  "plan": "content/videos/wayuu/videos/aramai/preproduccion-01/plan.json",
+  "freeze": "content/videos/wayuu/videos/aramai/preproduccion-01/prepared-03/freeze.json",
+  "quality": "medium",
+  "generation_mode": "openai_official_imagegen_cli_text_only",
+  "source_verified_live": {
+    "method": "Neon read-only myths.content SHA-256",
+    "date": "2026-09-07",
+    "matches": true,
+    "sha256": "a949509df6e51454154a33e3e11979dc5a236ea8065cc1af1aa3d2eba5a0db1d"
+  },
+  "counts": {
+    "storyboard_instants": 18,
+    "selected": 18,
+    "prior_pilot_generations": 10,
+    "new_base_generations": 13,
+    "new_correction_generations": 5,
+    "total_successful_generations": 28,
+    "superseded_not_deleted": 10,
+    "new_images_this_goal": 18
+  },
+  "selected": [
+    {
+      "id": "b1a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1a.jpeg",
+      "sha256": "4a9866cc87beae485ccc2466650c9b8fbe0fc602e742174f4e16c4c914ce222b",
+      "reviewed": true,
+      "notes": [
+        "El reflejo sí conserva figuras: no pasó la subcondición de gente ausente. No presentar esa ausencia como conseguida.",
+        "Agua ocupa una parte grande del encuadre; la escasez depende de orilla seca y VO.",
+        "Aparecieron flores, adornos geométricos y detalles de vestuario no pedidos; no se convierten en canon cultural ni se certifican por la imagen."
+      ]
+    },
+    {
+      "id": "b1b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b1b.jpeg",
+      "sha256": "1e9ea6b8d66b92f262233a8346ae951a4348885d725874c379866971ba5a68bc",
+      "reviewed": true,
+      "notes": [
+        "Recipiente más grande y mujeres más próximas de lo sugerido; conserva cuerpos arrodillados enteros, no retratos.",
+        "La tinaja, tela y bordes de ropa adquirieron geometría decorativa no solicitada. No constituye referencia etnográfica verificada."
+      ]
+    },
+    {
+      "id": "b2a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2a.jpeg",
+      "sha256": "02f10330fff73ff87e839c7fabdaeffce118704f159985cd9c9330d469e540dd",
+      "reviewed": true,
+      "notes": [
+        "Arámai ocupa aproximadamente 38–40% de la altura, por encima del objetivo de 20%; estimación visual, no medición automática. Encuadre a revisar según preferencia del usuario.",
+        "La cara sigue siendo recorte, pero tiene algo más de detalle que en piloto01. No declarar continuidad pixel-perfect."
+      ]
+    },
+    {
+      "id": "b2b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b2b.jpeg",
+      "sha256": "d49d90469a570948490c0f1024cc85de07fcb047398a323c5e206c0d64923009",
+      "reviewed": true,
+      "notes": [
+        "Techo y suelo tienen más fragmentación de papel que la intención de formas amplias. Podría moderarse sin volver al vacío.",
+        "La vegetación de fondo incluye cactus de silueta genérica; verificar/simplificar si se elige para producción definitiva."
+      ]
+    },
+    {
+      "id": "b3a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-piloto-02/b3a.jpeg",
+      "sha256": "e1463b44afc54eb4b643ff92143bf120a9559576b987921514b387425233baba",
+      "reviewed": true,
+      "notes": [
+        "Cara de la mujer tiene más modelado y figura mayor que el objetivo inicial de escala.",
+        "Vasija y textil presentan patrones generados, sin atribución documental. No promover esos diseños a símbolos culturales."
+      ]
+    },
+    {
+      "id": "b3b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b3b.jpeg",
+      "sha256": "5a87fbe23275e8dd796f5a5d00027c8be448fcdde0ac37e46d11f8f4fbfc5d32",
+      "reviewed": true,
+      "notes": [
+        "Dos casas con noche independiente; dos mujeres pequeñas y separadas, papel y profundidad legibles. Se retiene. Las lunas son metáfora plástica, no signo tradicional."
+      ]
+    },
+    {
+      "id": "b4a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-production-corrections-01/b4a.jpeg",
+      "sha256": "297162ab87548a50d4aac7cbfbdb4b5cb13795a69d3337f1f917e308bb246804",
+      "reviewed": true,
+      "notes": [
+        "Versión corregida: vasos y paredes lisos, sin personas ni prodigio; mantiene vacío relacional. Suelo más texturado y menos estratificado que otros planos, aceptado como variación material."
+      ]
+    },
+    {
+      "id": "b4b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-production-corrections-01/b4b.jpeg",
+      "sha256": "b476f00f8c515c621a6007545793b682950e1dfe45460c1c01b7d101b3a6a985",
+      "reviewed": true,
+      "notes": [
+        "Corregido: horizonte nocturno con capas dentro del chinchorro y exterior de día. Aire bajo el tejido, sin bulto humano."
+      ]
+    },
+    {
+      "id": "b5a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-production-corrections-01/b5a.jpeg",
+      "sha256": "c24095bfa828c61e3d789a42d25e9a9c8e0358f98ba6a01688677514877f11b9",
+      "reviewed": true,
+      "notes": [
+        "Corregido: Arámai de escala adulta comparable a mujeres, figuras recortadas, reproche sin gesticulación. Piernas amplias quedan próximas en la silueta; no usar como ficha de vestuario."
+      ]
+    },
+    {
+      "id": "b5b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b5b.jpeg",
+      "sha256": "a1f6ae027459a82ad4cc031804f87e59161a6747aa995f9ac51fc2845a5c8988",
+      "reviewed": true,
+      "notes": [
+        "Gesto y dos cuencos resuelven ausencia. Cielo azul más oscuro que planos vecinos; conservar como pausa de luz baja, no como nueva noche sobrenatural. Cabello algo modelado, rostro pequeño de perfil."
+      ]
+    },
+    {
+      "id": "b6a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b6a.jpeg",
+      "sha256": "bd4ae7e82d070b100dfac512cfa9025d601607d031b1cf7295d2186fec3cced4",
+      "reviewed": true,
+      "notes": [
+        "Petición legible con interior profundo autónomo y patio diurno. Cabeza y manos tienen algo más de volumen; no primer plano. Cuenco desplazado respecto de otras tomas, continuidad por motivo y no raccord exacto."
+      ]
+    },
+    {
+      "id": "b6b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b6b.jpeg",
+      "sha256": "f10dc73e414505a2f11c012a0b9f2896a3901ea99b2ac8a3ed1cc102ebc877a0",
+      "reviewed": true,
+      "notes": [
+        "Contraplano respeta separación día/noche y hombre que se aleja sin dominar el fenómeno. Capeado cambia pliegues, no identidad."
+      ]
+    },
+    {
+      "id": "b7a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b7a.jpeg",
+      "sha256": "1d65a14590df03d09638ff972794ec7906d49bcdeab1c8818f554623baadb651",
+      "reviewed": true,
+      "notes": [
+        "Agua llevada hacia una familia, casa con memoria nocturna. Se conserva con notas: cactus lateral de brazos altos más genérico que el cardón indicado y pequeña luz interior no pedida. No atribuir rito ni significado a esa luz; no usar esta imagen como referencia botánica."
+      ]
+    },
+    {
+      "id": "b7b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-production-corrections-02/b7b.jpeg",
+      "sha256": "555abd876c01c13672e53ef50454dde2454208a0fb88cd593ce3d8acc3a66f00",
+      "reviewed": true,
+      "notes": [
+        "Versión corregida: exterior de día, acción de acompañar, tres adultos y vacío interior. Rostros simplificados con algún trazo ilustrado; no anatomía escultórica."
+      ]
+    },
+    {
+      "id": "b8a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b8a.jpeg",
+      "sha256": "7ffaa467a3813cb5748a30c3463d95cfbd4df7057f001f06da9aa01431ccce3d",
+      "reviewed": true,
+      "notes": [
+        "Dos trayectos distintos y rebaño distante; orilla seca visible, actividad sin abundancia nueva. Profundidad por capas y sombras."
+      ]
+    },
+    {
+      "id": "b8b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b8b.jpeg",
+      "sha256": "467ababdc89714c21d0b8de9cc3c37a5eb16675324c3a439942a65ceb5674808",
+      "reviewed": true,
+      "notes": [
+        "Acto cotidiano y chinchorro vacío; índigo retirado al interior. Aparece actividad con recipiente al fondo; puesta en escena secundaria, no nuevo evento mitológico."
+      ]
+    },
+    {
+      "id": "b9a",
+      "path": "output/imagegen/wayuu/keyframes/aramai-production-corrections-02/b9a.jpeg",
+      "sha256": "ba55b056fbf7c69d2175f9d97f9cca32da95bef52828f6f6443242414c4460cf",
+      "reviewed": true,
+      "notes": [
+        "Versión corregida: agua escasa, reparto modesto y noche sólo dentro de enramada distante. Figura masculina pequeña, capa oculta parte de camisa; continuidad por silueta."
+      ]
+    },
+    {
+      "id": "b9b",
+      "path": "output/imagegen/wayuu/keyframes/aramai-preproduccion-01/b9b.jpeg",
+      "sha256": "7494572d9bd4ae51e1c259d0aba821d96155f5bf1dacf317cd1c27091bfa8c1e",
+      "reviewed": true,
+      "notes": [
+        "Cierre circular: compartir agua, reflejo nocturno bajo cielo diurno. Escala del jagüey grande como el piloto de apertura; escasez sostenida por orilla y relato, no volumen medido."
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "id": "b4a",
+      "reason": "Eliminar plantas en roseta y ornamentos inventados; reforzar material de papel."
+    },
+    {
+      "id": "b4b",
+      "reason": "Profundidad imposible sólo dentro del chinchorro; no llenar con fragmentos ni volver nocturno el cielo."
+    },
+    {
+      "id": "b5a",
+      "reason": "Arámai adulto de estatura comparable a las mujeres, día exterior y ropa lisa."
+    },
+    {
+      "id": "b7b",
+      "reason": "Exterior diurno para preservar contraste interior; recuperar escala adulta y quitar plantas en roseta."
+    },
+    {
+      "id": "b9a",
+      "reason": "La noche debe persistir dentro de enramada y no teñir todo el cielo; cierre sin abundancia milagrosa."
+    }
+  ],
+  "sequence_qa": {
+    "all_originals_directly_viewed": true,
+    "narrative_coverage": "9 bloques: escasez, petición, recorrido, pérdida, reproche, nueva petición, cuidado, recuperación y cierre",
+    "accepted_variations": [
+      "Escala y pliegues de vestuario no son raccord exacto.",
+      "Algunos detalles de plantas, tramas y objetos son aproximaciones del generador, anotadas por plano.",
+      "Se mantiene el piloto elegido como dirección, sin convertir sus adornos en modelos culturales."
+    ],
+    "user_final_approval": false,
+    "cultural_certification": false,
+    "animation": false,
+    "recorded_voice": false,
+    "publication": false
+  }
+}

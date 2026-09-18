@@ -1,0 +1,193 @@
+{
+  "myth_id": 441,
+  "slug": "la-casa-de-fiesta-petrificada",
+  "title": "La casa de fiesta petrificada",
+  "variant": "Único núcleo de Uikuet: niño pide comida, negativa, casa petrificada y revelación de Santo Tomás.",
+  "rules": "Niño plenamente vestido, luego adulto P08. Tres ollas suspendidas en estado petrificado. No fuga de asistentes ni rescate inventado.",
+  "source": {
+    "path": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/la-casa-de-fiesta-petrificada/source.snapshot.json",
+    "sha256": "aad4ee557f17e99a7a84487ff643853779182ed5128bad7f8ad12b5c41c59854",
+    "narrative_sha256": "da4018d5686b03468416b4878605c72166b2f50d8ff7cea4b1b4fb1bf4f608ed"
+  },
+  "references": {
+    "entrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/la-casa-de-fiesta-petrificada/entrada-v1.png",
+      "sha256": "6f1b9877dfc19af04873d9d49424746b2a4f0e375d45fd142f3c94c8f73a2bb7"
+    },
+    "acto": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/la-casa-de-fiesta-petrificada/acto-v1.png",
+      "sha256": "175fcd9fb13d2cf8c45f1fb84f7f63c9cceb1687dc68cccb8d2a846310adef64"
+    }
+  },
+  "expected_frames": 10,
+  "estimated_seconds": 57,
+  "timing_status": "provisional_pending_recorded_voice",
+  "voice_words": 87,
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Había comida y la casa estaba llena. Pero el niño que llegó a pedir no encontró lugar en la fiesta.",
+      "word_count": 20,
+      "time_seconds": [
+        0,
+        13
+      ],
+      "shots": [
+        {
+          "id": "k01",
+          "time_seconds": [
+            0,
+            7
+          ],
+          "scene": "Detalle cálido: tres ollas y cuencos de comida de papel sobre mesa de fiesta rural.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k02",
+          "time_seconds": [
+            7,
+            13
+          ],
+          "scene": "General interior: niño harapiento en umbral, varios adultos dentro, distancia clara entre abundancia y quien pide.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Pidió que le dieran algo. Una mujer protestó: ya había demasiada gente para atenderlo también a él.",
+      "word_count": 17,
+      "time_seconds": [
+        13,
+        24
+      ],
+      "shots": [
+        {
+          "id": "k03",
+          "time_seconds": [
+            13,
+            19
+          ],
+          "scene": "Medio: niño tiende sus manos vacías, plenamente vestido, sin llanto exagerado.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k04",
+          "time_seconds": [
+            19,
+            24
+          ],
+          "scene": "Contraplano: mujer mayor junto a mesa rechaza con gesto contenido; invitados continúan dentro, nadie caricaturizado.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "El niño salió. Desde afuera dijo que veía piedra. En ese momento, la casa quedó detenida.",
+      "word_count": 16,
+      "time_seconds": [
+        24,
+        35
+      ],
+      "shots": [
+        {
+          "id": "k05",
+          "time_seconds": [
+            24,
+            30
+          ],
+          "scene": "General posterior: niño sale al patio y vuelve la cabeza hacia puerta; interior aún de papel cálido.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k06",
+          "time_seconds": [
+            30,
+            35
+          ],
+          "scene": "Gran general mismo edificio ahora petrificado, cartulina gris plegada, sin explosión ni caída de muros.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "También la fiesta y las personas se volvieron piedra. El pequeño creció: era Santo Tomás.",
+      "word_count": 15,
+      "time_seconds": [
+        35,
+        45
+      ],
+      "shots": [
+        {
+          "id": "k07",
+          "time_seconds": [
+            35,
+            40
+          ],
+          "scene": "Detalle interior petrificado: exactamente TRES ollas suspendidas de piedra de papel, sombras físicas, sin cuerpos mutilados.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k08",
+          "time_seconds": [
+            40,
+            45
+          ],
+          "scene": "Medio exterior: Santo Tomás adulto harapiento en lugar del niño, una identidad única, sin niño simultáneo ni transición híbrida.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "voice_over": "Decían que las ollas todavía podían verse, como si siguieran cayendo. La casa conservaba el instante de la negativa.",
+      "word_count": 19,
+      "time_seconds": [
+        45,
+        57
+      ],
+      "shots": [
+        {
+          "id": "k09",
+          "time_seconds": [
+            45,
+            51
+          ],
+          "scene": "General: casa de piedra silenciosa entre laderas, nadie dentro en movimiento.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k10",
+          "time_seconds": [
+            51,
+            57
+          ],
+          "scene": "Detalle final: borde de UNA de las tres ollas petrificadas, las otras dos detrás; enlace con abundancia de apertura.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    }
+  ]
+}

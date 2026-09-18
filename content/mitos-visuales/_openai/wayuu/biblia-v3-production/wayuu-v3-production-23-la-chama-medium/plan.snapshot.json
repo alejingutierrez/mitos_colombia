@@ -1,0 +1,1786 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "batch": {
+    "id": "wayuu-v3-production-23-la-chama-medium",
+    "myth_slug": "la-chama",
+    "model_ids": [
+      "la_chama__identity_sheet",
+      "la_chama__state_sheet",
+      "hombre_caballos_chama__identity_sheet",
+      "hombre_caballos_chama__state_sheet",
+      "hijo_chama__identity_sheet",
+      "companera_chama__presence_model",
+      "familia_chama__group_grammar",
+      "burro_chama__identity_sheet",
+      "burro_chama__state_sheet",
+      "caballos_hombre_chama__group_grammar",
+      "ollas_mochilas_chama__object_sheet",
+      "esterilla_chama__object_sheet",
+      "manta_roja_chama__object_sheet",
+      "cueva_casa_chama__spatial_model",
+      "nueva_pareja_hombre_chama__identity_sheet",
+      "metamorfosis_chama__phenomenon_rule",
+      "transformacion_carga_chama__phenomenon_rule"
+    ],
+    "quality": "medium",
+    "framing": "immersive_full_bleed",
+    "surface_finish": "layered_depth_no_exposed_support",
+    "generation_mode": "text_only_no_local_references",
+    "status": "inventory_and_design_frozen_ready_for_generation",
+    "selection_manifest": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/wayuu-v3-production-23-la-chama-medium/selection.json",
+    "contact_sheet": "output/imagegen/wayuu-v3-production/la-chama-batch23-selected-contact-sheet.jpeg"
+  },
+  "inventory_approved_at": "2026-09-03",
+  "pilot_approved_at": "2026-09-03",
+  "source_snapshot_sha256": "6b5b1c5ebdb2524a7524b065d96c6d33ad6f5694db239a0d722ded8485f435f5",
+  "model_ids": [
+    "la_chama__identity_sheet",
+    "la_chama__state_sheet",
+    "hombre_caballos_chama__identity_sheet",
+    "hombre_caballos_chama__state_sheet",
+    "hijo_chama__identity_sheet",
+    "companera_chama__presence_model",
+    "familia_chama__group_grammar",
+    "burro_chama__identity_sheet",
+    "burro_chama__state_sheet",
+    "caballos_hombre_chama__group_grammar",
+    "ollas_mochilas_chama__object_sheet",
+    "esterilla_chama__object_sheet",
+    "manta_roja_chama__object_sheet",
+    "cueva_casa_chama__spatial_model",
+    "nueva_pareja_hombre_chama__identity_sheet",
+    "metamorfosis_chama__phenomenon_rule",
+    "transformacion_carga_chama__phenomenon_rule"
+  ],
+  "models": {
+    "la_chama__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "la_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y al hijo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: La Chama. Funcion visual: Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: La Chama",
+          "funcion estable: Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+          "estados declarados: anciana_humana, majayura, tigre_jaguar, huevo, flor_no_especificada"
+        ],
+        "documented_features": [
+          "Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para La Chama. Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+          "estados autorizados: anciana_humana, majayura, tigre_jaguar, huevo, flor_no_especificada",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anciana_humana"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "la_chama__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "la_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y al hijo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada. Entidad: La Chama. Funcion visual: Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+        "materials": [
+          "papel mate estratificado",
+          "fibras y pliegues con volumen fisico",
+          "superficies propias del estado narrativo"
+        ],
+        "palette_logic": "Contraste suficiente para continuidad, restringido a materiales y acciones del relato.",
+        "scale": "Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "continuity_markers": [
+          "nombre estable: La Chama",
+          "funcion estable: Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+          "estados declarados: anciana_humana, majayura, tigre_jaguar, huevo, flor_no_especificada"
+        ],
+        "documented_features": [
+          "Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para La Chama. Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala declarada frente a una referencia material; evitar monstruosidad generica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate estratificado; fibras y pliegues con volumen fisico; superficies propias del estado narrativo",
+        "constraints": [
+          "Silueta singular derivada de la accion y los estados documentados; si la forma no esta descrita, usar presencia y huella en vez de anatomia inventada.",
+          "mostrar: Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+          "estados autorizados: anciana_humana, majayura, tigre_jaguar, huevo, flor_no_especificada",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "anciana_humana",
+            "majayura",
+            "tigre_jaguar",
+            "huevo",
+            "flor_no_especificada"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hombre_caballos_chama__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "hombre_caballos_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Cuida caballos, entra, forma familia, toma otra pareja, persigue y vuelve como huesped protegido."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hombre cuidador de caballos. Funcion visual: Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hombre cuidador de caballos",
+          "funcion estable: Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+          "estados declarados: cuidador_de_caballos, compañero_de_la_chama, perseguidor_a_caballo, caminante_con_pies_lastimados, huesped_protegido"
+        ],
+        "documented_features": [
+          "Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Hombre cuidador de caballos. Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+          "estados autorizados: cuidador_de_caballos, compañero_de_la_chama, perseguidor_a_caballo, caminante_con_pies_lastimados, huesped_protegido",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "cuidador_de_caballos"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hombre_caballos_chama__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "hombre_caballos_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Cuida caballos, entra, forma familia, toma otra pareja, persigue y vuelve como huesped protegido."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hombre cuidador de caballos. Funcion visual: Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hombre cuidador de caballos",
+          "funcion estable: Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+          "estados declarados: cuidador_de_caballos, compañero_de_la_chama, perseguidor_a_caballo, caminante_con_pies_lastimados, huesped_protegido"
+        ],
+        "documented_features": [
+          "Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Hombre cuidador de caballos. Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+          "estados autorizados: cuidador_de_caballos, compañero_de_la_chama, perseguidor_a_caballo, caminante_con_pies_lastimados, huesped_protegido",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "cuidador_de_caballos",
+            "compañero_de_la_chama",
+            "perseguidor_a_caballo",
+            "caminante_con_pies_lastimados",
+            "huesped_protegido"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hijo_chama__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "hijo_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Viaja con su madre y pide que esperen al padre."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Hijo de La Chama. Funcion visual: Niño que viaja con su madre, pide detenerse por su padre y permanece bajo su cuidado; el desenlace violento se registra pero no se representa.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Hijo de La Chama",
+          "funcion estable: Niño que viaja con su madre, pide detenerse por su padre y permanece bajo su cuidado; el desenlace violento se registra pero no se representa.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Niño que viaja con su madre, pide detenerse por su padre y permanece bajo su cuidado; el desenlace violento se registra pero no se representa."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Hijo de La Chama. Niño que viaja con su madre, pide detenerse por su padre y permanece bajo su cuidado; el desenlace violento se registra pero no se representa.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Niño que viaja con su madre, pide detenerse por su padre y permanece bajo su cuidado; el desenlace violento se registra pero no se representa.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "companera_chama__presence_model": {
+      "purpose": "presence_model",
+      "entity_refs": [
+        "companera_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Acude al llamado de La Chama antes del trayecto entre peñascos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Compañera de La Chama. Funcion visual: Figura femenina a la que La Chama llama antes de conducir al hombre entre formaciones rocosas; la fuente no aporta nombre ni rasgos individuales.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Compañera de La Chama",
+          "funcion estable: Figura femenina a la que La Chama llama antes de conducir al hombre entre formaciones rocosas; la fuente no aporta nombre ni rasgos individuales.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Figura femenina a la que La Chama llama antes de conducir al hombre entre formaciones rocosas; la fuente no aporta nombre ni rasgos individuales."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para presence_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · presence_model",
+        "primary_request": "accion y huella sin inventar anatomia para Compañera de La Chama. Figura femenina a la que La Chama llama antes de conducir al hombre entre formaciones rocosas; la fuente no aporta nombre ni rasgos individuales.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Figura femenina a la que La Chama llama antes de conducir al hombre entre formaciones rocosas; la fuente no aporta nombre ni rasgos individuales.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "presence_grammar",
+          "purpose": "accion y huella sin inventar anatomia",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "familia_chama__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "familia_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Parientes de la misma especie que habitan la cueva-casa."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico. Entidad: Familia de La Chama. Funcion visual: Parientes de la misma especie que habitan la cueva-casa; su hostilidad se expresa solo por distancia, cierre espacial y postura, nunca por violencia explicita.",
+        "materials": [
+          "figuras de papel individualizadas",
+          "planos separados",
+          "objetos relacionales solo si estan documentados"
+        ],
+        "palette_logic": "Familia cromatica compartida con variaciones internas; sin uniformes o emblemas inventados.",
+        "scale": "Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "continuity_markers": [
+          "nombre estable: Familia de La Chama",
+          "funcion estable: Parientes de la misma especie que habitan la cueva-casa; su hostilidad se expresa solo por distancia, cierre espacial y postura, nunca por violencia explicita.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Parientes de la misma especie que habitan la cueva-casa; su hostilidad se expresa solo por distancia, cierre espacial y postura, nunca por violencia explicita."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Familia de La Chama. Parientes de la misma especie que habitan la cueva-casa; su hostilidad se expresa solo por distancia, cierre espacial y postura, nunca por violencia explicita.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Numero y separacion suficientes para entender el grupo sin llenar la imagen de extras.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "figuras de papel individualizadas; planos separados; objetos relacionales solo si estan documentados",
+        "constraints": [
+          "Conjunto legible como relacion, no multitud de clones: variacion de escala, postura y distancia sin convertir el grupo en tipo etnico generico.",
+          "mostrar: Parientes de la misma especie que habitan la cueva-casa; su hostilidad se expresa solo por distancia, cierre espacial y postura, nunca por violencia explicita.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "burro_chama__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "burro_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "El mismo animal pasa de deteriorado a gordo y lustroso."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Burro de La Chama. Funcion visual: El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Burro de La Chama",
+          "funcion estable: El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+          "estados declarados: deteriorado, gordo_y_lustroso"
+        ],
+        "documented_features": [
+          "El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Burro de La Chama. El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+          "estados autorizados: deteriorado, gordo_y_lustroso",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "deteriorado"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "burro_chama__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "burro_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "El mismo animal pasa de deteriorado a gordo y lustroso."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Burro de La Chama. Funcion visual: El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Burro de La Chama",
+          "funcion estable: El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+          "estados declarados: deteriorado, gordo_y_lustroso"
+        ],
+        "documented_features": [
+          "El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para state_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · state_sheet",
+        "primary_request": "continuidad entre estados sin adelantar un keyframe para Burro de La Chama. El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+          "estados autorizados: deteriorado, gordo_y_lustroso",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "estados",
+          "view_type": "state_sequence",
+          "purpose": "continuidad entre estados sin adelantar un keyframe",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "deteriorado",
+            "gordo_y_lustroso"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "caballos_hombre_chama__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "caballos_hombre_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Riqueza cuidada y montura agotada durante la persecucion."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada. Entidad: Caballos del hombre. Funcion visual: Conjunto de caballos atendidos con cuidado por el hombre; uno sostiene la persecucion de cinco dias y noches hasta quedar exhausto.",
+        "materials": [
+          "capas de papel recortado para anatomia",
+          "fibras finas para pelaje o pluma cuando corresponda",
+          "cantos internos y articulaciones fisicas"
+        ],
+        "palette_logic": "Color natural o explicitamente narrado; no usar brillo magico para señalar importancia.",
+        "scale": "Escala zoologica verificable frente al entorno y los personajes.",
+        "continuity_markers": [
+          "nombre estable: Caballos del hombre",
+          "funcion estable: Conjunto de caballos atendidos con cuidado por el hombre; uno sostiene la persecucion de cinco dias y noches hasta quedar exhausto.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjunto de caballos atendidos con cuidado por el hombre; uno sostiene la persecucion de cinco dias y noches hasta quedar exhausto."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para group_grammar",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · group_grammar",
+        "primary_request": "numero, relaciones, escala y variacion interna para Caballos del hombre. Conjunto de caballos atendidos con cuidado por el hombre; uno sostiene la persecucion de cinco dias y noches hasta quedar exhausto.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala zoologica verificable frente al entorno y los personajes.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "capas de papel recortado para anatomia; fibras finas para pelaje o pluma cuando corresponda; cantos internos y articulaciones fisicas",
+        "constraints": [
+          "Morfologia zoologica reconocible, cuerpo completo cuando es individuo y variacion controlada cuando es grupo; sin hibridacion no documentada.",
+          "mostrar: Conjunto de caballos atendidos con cuidado por el hombre; uno sostiene la persecucion de cinco dias y noches hasta quedar exhausto.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_grammar",
+          "purpose": "numero, relaciones, escala y variacion interna",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "ollas_mochilas_chama__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "ollas_mochilas_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Las ollas ennegrecidas y quebradas aparecen como mochilas hermosas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Ollas ennegrecidas y mochilas transformadas. Funcion visual: Carga domestica de ollas ennegrecidas y quebradas que, durante la salida, aparece convertida en hermosas mochilas sin fijar patron, kana o tecnica exacta.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Ollas ennegrecidas y mochilas transformadas",
+          "funcion estable: Carga domestica de ollas ennegrecidas y quebradas que, durante la salida, aparece convertida en hermosas mochilas sin fijar patron, kana o tecnica exacta.",
+          "estados declarados: ollas_ennegrecidas_y_quebradas, mochilas_nuevas_sin_patron"
+        ],
+        "documented_features": [
+          "Carga domestica de ollas ennegrecidas y quebradas que, durante la salida, aparece convertida en hermosas mochilas sin fijar patron, kana o tecnica exacta."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Ollas ennegrecidas y mochilas transformadas. Carga domestica de ollas ennegrecidas y quebradas que, durante la salida, aparece convertida en hermosas mochilas sin fijar patron, kana o tecnica exacta.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: Carga domestica de ollas ennegrecidas y quebradas que, durante la salida, aparece convertida en hermosas mochilas sin fijar patron, kana o tecnica exacta.",
+          "estados autorizados: ollas_ennegrecidas_y_quebradas, mochilas_nuevas_sin_patron",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "ollas_ennegrecidas_y_quebradas"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "esterilla_chama__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "esterilla_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "La esterilla vieja aparece nueva durante la marcha."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Esterilla de La Chama. Funcion visual: La misma esterilla pasa de vieja y fea a nueva y hermosa, sin convertirse en alfombra ornamental o reliquia.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Esterilla de La Chama",
+          "funcion estable: La misma esterilla pasa de vieja y fea a nueva y hermosa, sin convertirse en alfombra ornamental o reliquia.",
+          "estados declarados: vieja_y_deformada, nueva_y_firme"
+        ],
+        "documented_features": [
+          "La misma esterilla pasa de vieja y fea a nueva y hermosa, sin convertirse en alfombra ornamental o reliquia."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Esterilla de La Chama. La misma esterilla pasa de vieja y fea a nueva y hermosa, sin convertirse en alfombra ornamental o reliquia.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: La misma esterilla pasa de vieja y fea a nueva y hermosa, sin convertirse en alfombra ornamental o reliquia.",
+          "estados autorizados: vieja_y_deformada, nueva_y_firme",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "vieja_y_deformada"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "manta_roja_chama__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "manta_roja_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "La manta sucia y rota aparece como manta roja nueva."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica. Entidad: Manta roja transformada. Funcion visual: La manta sucia y rota de la partida se vuelve una manta roja nueva asociada en la fuente con mujeres ricas; se mantiene lisa y sin patron inventado.",
+        "materials": [
+          "papel, fibra, madera o mineral traducidos a paper craft",
+          "uniones y desgaste fisico",
+          "sombras proyectadas coherentes"
+        ],
+        "palette_logic": "Color propio del material y el estado; sin ornamentacion cultural no respaldada.",
+        "scale": "Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "continuity_markers": [
+          "nombre estable: Manta roja transformada",
+          "funcion estable: La manta sucia y rota de la partida se vuelve una manta roja nueva asociada en la fuente con mujeres ricas; se mantiene lisa y sin patron inventado.",
+          "estados declarados: sucia_y_rota, roja_nueva"
+        ],
+        "documented_features": [
+          "La manta sucia y rota de la partida se vuelve una manta roja nueva asociada en la fuente con mujeres ricas; se mantiene lisa y sin patron inventado."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para object_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · object_sheet",
+        "primary_request": "forma, escala, material y uso legibles para Manta roja transformada. La manta sucia y rota de la partida se vuelve una manta roja nueva asociada en la fuente con mujeres ricas; se mantiene lisa y sin patron inventado.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala demostrable mediante mano, suelo o arquitectura sin texto ni regla grafica.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel, fibra, madera o mineral traducidos a paper craft; uniones y desgaste fisico; sombras proyectadas coherentes",
+        "constraints": [
+          "Contorno, volumen, piezas y modo de uso claramente separables; evitar convertir utileria cotidiana en reliquia mistica.",
+          "mostrar: La manta sucia y rota de la partida se vuelve una manta roja nueva asociada en la fuente con mujeres ricas; se mantiene lisa y sin patron inventado.",
+          "estados autorizados: sucia_y_rota, roja_nueva",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_object",
+          "purpose": "forma, escala, material y uso legibles",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "sucia_y_rota"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "cueva_casa_chama__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "cueva_casa_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Casa entre peñascos con sala, cuarto, chinchorro y circulacion familiar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada. Entidad: Cueva-casa de La Chama. Funcion visual: Conjunto entre peñascos con paso de entrada, sala, cuarto, chinchorro y circulacion domestica; no se presenta como arquitectura Wayuu universal.",
+        "materials": [
+          "estratos de papel y suelo prensado",
+          "elementos materiales citados por el relato",
+          "aire y oclusiones entre planos"
+        ],
+        "palette_logic": "Paleta territorial modulada por funcion, clima y estado narrativo.",
+        "scale": "Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "continuity_markers": [
+          "nombre estable: Cueva-casa de La Chama",
+          "funcion estable: Conjunto entre peñascos con paso de entrada, sala, cuarto, chinchorro y circulacion domestica; no se presenta como arquitectura Wayuu universal.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Conjunto entre peñascos con paso de entrada, sala, cuarto, chinchorro y circulacion domestica; no se presenta como arquitectura Wayuu universal."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para spatial_model",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · spatial_model",
+        "primary_request": "relaciones espaciales, entradas, planos y escala para Cueva-casa de La Chama. Conjunto entre peñascos con paso de entrada, sala, cuarto, chinchorro y circulacion domestica; no se presenta como arquitectura Wayuu universal.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Profundidad recorrible con primer plano, plano medio y fondo a distancias reales.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "estratos de papel y suelo prensado; elementos materiales citados por el relato; aire y oclusiones entre planos",
+        "constraints": [
+          "Umbral y organizacion espacial propios del relato; la geografia incierta se mantiene aproximada y nunca se publica como coordenada.",
+          "mostrar: Conjunto entre peñascos con paso de entrada, sala, cuarto, chinchorro y circulacion domestica; no se presenta como arquitectura Wayuu universal.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_grammar",
+          "purpose": "relaciones espaciales, entradas, planos y escala",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "nueva_pareja_hombre_chama__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "nueva_pareja_hombre_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Ve a madre e hijo junto a la casimba y avisa al hombre."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos. Entidad: Nueva pareja del hombre. Funcion visual: Mujer adulta que encuentra a La Chama y al hijo junto a una casimba y avisa al hombre; no se convierte en antagonista moral.",
+        "materials": [
+          "papel mate de fibra visible",
+          "capas prensadas para cuerpo y vestuario",
+          "hilo solo cuando el relato lo exige"
+        ],
+        "palette_logic": "Arena, barro, carbon y fibras naturales; un acento propio de la entidad puede repetirse, sin patrones kanas o marcas claniles inventadas.",
+        "scale": "Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "continuity_markers": [
+          "nombre estable: Nueva pareja del hombre",
+          "funcion estable: Mujer adulta que encuentra a La Chama y al hijo junto a una casimba y avisa al hombre; no se convierte en antagonista moral.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Mujer adulta que encuentra a La Chama y al hijo junto a una casimba y avisa al hombre; no se convierte en antagonista moral."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para identity_sheet",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · identity_sheet",
+        "primary_request": "identidad corporal completa y legible para Nueva pareja del hombre. Mujer adulta que encuentra a La Chama y al hijo junto a una casimba y avisa al hombre; no se convierte en antagonista moral.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana coherente con animales, puertas, chinchorros y paisaje; cuerpo completo sin heroicidad monumental.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel mate de fibra visible; capas prensadas para cuerpo y vestuario; hilo solo cuando el relato lo exige",
+        "constraints": [
+          "Figura humana individual de cuerpo completo, proporcion estable y gesto narrativo sobrio; debe diferenciarse por edad, porte, funcion y marcadores materiales, no por estereotipos.",
+          "mostrar: Mujer adulta que encuentra a La Chama y al hijo junto a una casimba y avisa al hombre; no se convierte en antagonista moral.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "metamorfosis_chama__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "metamorfosis_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Relaciona cinco formas completas sin fijar anatomia intermedia."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Metamorfosis corporal de La Chama. Funcion visual: Regla reversible que conserva una continuidad material entre cinco formas completas y separadas, sin hibridos, humo o anatomia intermedia inventada.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Metamorfosis corporal de La Chama",
+          "funcion estable: Regla reversible que conserva una continuidad material entre cinco formas completas y separadas, sin hibridos, humo o anatomia intermedia inventada.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Regla reversible que conserva una continuidad material entre cinco formas completas y separadas, sin hibridos, humo o anatomia intermedia inventada."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Metamorfosis corporal de La Chama. Regla reversible que conserva una continuidad material entre cinco formas completas y separadas, sin hibridos, humo o anatomia intermedia inventada.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Regla reversible que conserva una continuidad material entre cinco formas completas y separadas, sin hibridos, humo o anatomia intermedia inventada.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "transformacion_carga_chama__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "transformacion_carga_chama"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Sincroniza los cuatro cambios materiales de la partida."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas. Entidad: Transformación de la carga de La Chama. Funcion visual: Cambio sincronizado del burro, las ollas, la esterilla y la manta durante la marcha, legible por capas y sustitucion material sin resplandor.",
+        "materials": [
+          "papel y fibras que cambian de tension, humedad, luz o posicion",
+          "capas causales separadas",
+          "huella fisica persistente"
+        ],
+        "palette_logic": "El cambio cromatico nace de la materia afectada, nunca de un resplandor sobrenatural por defecto.",
+        "scale": "Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "continuity_markers": [
+          "nombre estable: Transformación de la carga de La Chama",
+          "funcion estable: Cambio sincronizado del burro, las ollas, la esterilla y la manta durante la marcha, legible por capas y sustitucion material sin resplandor.",
+          "estados declarados: canonico"
+        ],
+        "documented_features": [
+          "Cambio sincronizado del burro, las ollas, la esterilla y la manta durante la marcha, legible por capas y sustitucion material sin resplandor."
+        ],
+        "editorial_features": [
+          "traduccion editorial reversible para phenomenon_rule",
+          "paper craft fotografiado como maqueta 3D inmersiva con capas a distintas distancias",
+          "sin presentar fisonomia, ornamento o simbolo inventado como hecho cultural"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Wayuu V3 · phenomenon_rule",
+        "primary_request": "entrada, accion, limite y huella del fenomeno para Transformación de la carga de La Chama. Cambio sincronizado del burro, las ollas, la esterilla y la manta durante la marcha, legible por capas y sustitucion material sin resplandor.",
+        "style_medium": "maqueta artesanal inmersiva de paper craft 3D fotografiada, no ilustracion plana",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Escala definida por aquello que transforma, desde objeto hasta territorio.",
+        "lighting_mood": "luz natural lateral suave, sombras fisicas entre capas, atmósfera sobria y maravillosa segun la accion",
+        "materials_textures": "papel y fibras que cambian de tension, humedad, luz o posicion; capas causales separadas; huella fisica persistente",
+        "constraints": [
+          "Secuencia material de causa, accion, limite y huella; debe entenderse sin texto, aura o particulas magicas genericas.",
+          "mostrar: Cambio sincronizado del burro, las ollas, la esterilla y la manta durante la marcha, legible por capas y sustitucion material sin resplandor.",
+          "estados autorizados: canonico",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
+          "generacion desde texto; no usar imagen local de referencia en el piloto inicial"
+        ],
+        "avoid": [
+          "borde exterior, carton soporte, base, mesa, estudio o marco visibles",
+          "collage plano, ilustracion 2D o recortes pegados sin distancia fisica",
+          "aura, chispas, runas, ojos luminosos o humo mistico generico",
+          "tocados panindigenas, atrapasuenos, simbolos navajo o fantasia sahariana",
+          "kanas, marcas claniles o patrones textiles inventados",
+          "texto, etiquetas, letras, flechas graficas, watermark o firma",
+          "violencia o sexualidad explicitas, desnudez o cuerpos vulnerados"
+        ]
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_grammar",
+          "purpose": "entrada, accion, limite y huella del fenomeno",
+          "aspect": "16:9",
+          "era": "mitico_wayuu_no_reconstruccion_prehispanica",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
+  "entities": {
+    "la_chama": {
+      "name": "La Chama",
+      "kind": "criatura",
+      "description": "Ser femenino de apariencia humana que alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y a su hijo aun frente a su propia familia.",
+      "aliases": [],
+      "states": [
+        "anciana_humana",
+        "majayura",
+        "tigre_jaguar",
+        "huevo",
+        "flor_no_especificada"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "la_chama__identity_sheet",
+        "la_chama__state_sheet"
+      ],
+      "legacy_model_refs": [
+        "la-chama__ancla"
+      ],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Alterna entre anciana, majayura, tigre o jaguar, huevo y flor; protege al hombre y al hijo."
+        }
+      ]
+    },
+    "hombre_caballos_chama": {
+      "name": "Hombre cuidador de caballos",
+      "kind": "personaje",
+      "description": "Hombre acomodado que cuida sus caballos, entra a la cueva-casa, forma familia con La Chama, toma otra pareja y luego persigue a la madre y al hijo hasta agotar su montura.",
+      "aliases": [],
+      "states": [
+        "cuidador_de_caballos",
+        "compañero_de_la_chama",
+        "perseguidor_a_caballo",
+        "caminante_con_pies_lastimados",
+        "huesped_protegido"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "hombre_caballos_chama__identity_sheet",
+        "hombre_caballos_chama__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Cuida caballos, entra, forma familia, toma otra pareja, persigue y vuelve como huesped protegido."
+        }
+      ]
+    },
+    "hijo_chama": {
+      "name": "Hijo de La Chama",
+      "kind": "personaje",
+      "description": "Niño que viaja con su madre, pide detenerse por su padre y permanece bajo su cuidado; el desenlace violento se registra pero no se representa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "hijo_chama__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Viaja con su madre y pide que esperen al padre."
+        }
+      ]
+    },
+    "companera_chama": {
+      "name": "Compañera de La Chama",
+      "kind": "personaje",
+      "description": "Figura femenina a la que La Chama llama antes de conducir al hombre entre formaciones rocosas; la fuente no aporta nombre ni rasgos individuales.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "presence_model"
+      ],
+      "model_refs": [
+        "companera_chama__presence_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Acude al llamado de La Chama antes del trayecto entre peñascos."
+        }
+      ]
+    },
+    "familia_chama": {
+      "name": "Familia de La Chama",
+      "kind": "colectivo",
+      "description": "Parientes de la misma especie que habitan la cueva-casa; su hostilidad se expresa solo por distancia, cierre espacial y postura, nunca por violencia explicita.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "familia_chama__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Parientes de la misma especie que habitan la cueva-casa."
+        }
+      ]
+    },
+    "burro_chama": {
+      "name": "Burro de La Chama",
+      "kind": "animal",
+      "description": "El mismo burro pasa de una apariencia muy deteriorada a otra gorda y lustrosa durante la marcha.",
+      "aliases": [],
+      "states": [
+        "deteriorado",
+        "gordo_y_lustroso"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "burro_chama__identity_sheet",
+        "burro_chama__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "El mismo animal pasa de deteriorado a gordo y lustroso."
+        }
+      ]
+    },
+    "caballos_hombre_chama": {
+      "name": "Caballos del hombre",
+      "kind": "animal",
+      "description": "Conjunto de caballos atendidos con cuidado por el hombre; uno sostiene la persecucion de cinco dias y noches hasta quedar exhausto.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "caballos_hombre_chama__group_grammar"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Riqueza cuidada y montura agotada durante la persecucion."
+        }
+      ]
+    },
+    "ollas_mochilas_chama": {
+      "name": "Ollas ennegrecidas y mochilas transformadas",
+      "kind": "objeto",
+      "description": "Carga domestica de ollas ennegrecidas y quebradas que, durante la salida, aparece convertida en hermosas mochilas sin fijar patron, kana o tecnica exacta.",
+      "aliases": [],
+      "states": [
+        "ollas_ennegrecidas_y_quebradas",
+        "mochilas_nuevas_sin_patron"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "ollas_mochilas_chama__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Las ollas ennegrecidas y quebradas aparecen como mochilas hermosas."
+        }
+      ]
+    },
+    "esterilla_chama": {
+      "name": "Esterilla de La Chama",
+      "kind": "objeto",
+      "description": "La misma esterilla pasa de vieja y fea a nueva y hermosa, sin convertirse en alfombra ornamental o reliquia.",
+      "aliases": [],
+      "states": [
+        "vieja_y_deformada",
+        "nueva_y_firme"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "esterilla_chama__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "La esterilla vieja aparece nueva durante la marcha."
+        }
+      ]
+    },
+    "manta_roja_chama": {
+      "name": "Manta roja transformada",
+      "kind": "objeto",
+      "description": "La manta sucia y rota de la partida se vuelve una manta roja nueva asociada en la fuente con mujeres ricas; se mantiene lisa y sin patron inventado.",
+      "aliases": [],
+      "states": [
+        "sucia_y_rota",
+        "roja_nueva"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "manta_roja_chama__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "La manta sucia y rota aparece como manta roja nueva."
+        }
+      ]
+    },
+    "cueva_casa_chama": {
+      "name": "Cueva-casa de La Chama",
+      "kind": "lugar",
+      "description": "Conjunto entre peñascos con paso de entrada, sala, cuarto, chinchorro y circulacion domestica; no se presenta como arquitectura Wayuu universal.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "cueva_casa_chama__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Casa entre peñascos con sala, cuarto, chinchorro y circulacion familiar."
+        }
+      ]
+    },
+    "nueva_pareja_hombre_chama": {
+      "name": "Nueva pareja del hombre",
+      "kind": "personaje",
+      "description": "Mujer adulta que encuentra a La Chama y al hijo junto a una casimba y avisa al hombre; no se convierte en antagonista moral.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "nueva_pareja_hombre_chama__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Ve a madre e hijo junto a la casimba y avisa al hombre."
+        }
+      ]
+    },
+    "metamorfosis_chama": {
+      "name": "Metamorfosis corporal de La Chama",
+      "kind": "fenomeno",
+      "description": "Regla reversible que conserva una continuidad material entre cinco formas completas y separadas, sin hibridos, humo o anatomia intermedia inventada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "metamorfosis_chama__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Relaciona cinco formas completas sin fijar anatomia intermedia."
+        }
+      ]
+    },
+    "transformacion_carga_chama": {
+      "name": "Transformación de la carga de La Chama",
+      "kind": "fenomeno",
+      "description": "Cambio sincronizado del burro, las ollas, la esterilla y la manta durante la marcha, legible por capas y sustitucion material sin resplandor.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "transformacion_carga_chama__phenomenon_rule"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-chama"
+      ],
+      "evidence": [
+        {
+          "myth": "la-chama",
+          "field": "mito",
+          "note": "Sincroniza los cuatro cambios materiales de la partida."
+        }
+      ]
+    }
+  }
+}

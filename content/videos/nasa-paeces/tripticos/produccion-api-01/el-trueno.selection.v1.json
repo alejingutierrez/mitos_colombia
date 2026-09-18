@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "status": "complete_editorial_pilot_pending_user_review",
+  "community": "Nasa–Paeces",
+  "myth_id": 429,
+  "slug": "el-trueno",
+  "title": "El Trueno",
+  "variant": "Martín Kuskue; primera entrada de El Trueno, no se funde con variantes de inundación.",
+  "narrative_sha256": "ac26af1e85d6e2a1a4832f6af23d8f9e92ed874c61d51efe8f572250b3d0c3a3",
+  "source_snapshot": "content/videos/nasa-paeces/biblia/research/corpus-snapshot-20260912.json",
+  "source_snapshot_sha256": "5911cfcdcf89dc4f1e71d30999d3adfae0d75f152667645cba2d680d93711477",
+  "model_requested": "gpt-image-2.5-sunburst",
+  "selected_count": 3,
+  "records": [
+    {
+      "role": "entrada",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/entrada-v1.jpeg",
+      "sha256": "fd8c955803d7f78df62ba0e01ad82e745e926fbc721989af383bdc151cdae60e",
+      "width": 1536,
+      "height": 1024,
+      "requested_model": "gpt-image-2.5-sunburst",
+      "planned_quality": "high",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-01/prompts/el-trueno-entrada-v1.txt",
+      "prompt_sha256": "799119a8a72b33dad5593deb7754e9d90b4d9bb4963820994a6497b6c2bcb2bb",
+      "references": [
+        {
+          "unit_id": "P01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/p01-master-v2.jpeg",
+          "sha256": "feec09fd4599f2c2d8c1fc366f6d48e3df871d3447d54af37e45bfaf5b82c0b3"
+        },
+        {
+          "unit_id": "C01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c01-master-v2.jpeg",
+          "sha256": "b51c579a194d2d1e43eca669032307e214ad7f5dfd14ba511799991ca1bf6d2a"
+        },
+        {
+          "unit_id": "L03",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/l03-master-v2.jpeg",
+          "sha256": "6060d7eebec26229864f08c8d00dc549e7628d9ef867cc97f3da88fdeea59738"
+        }
+      ],
+      "qa": "Tres figuras plenamente vestidas; identidad del Trueno, sombrero y capa coherentes; gesto de consejo en peña, profundidad territorial y tormenta de papel. Sin combate, víctimas, etnicidad adversaria ni mezcla con inundación. Figuras algo mayores al objetivo de prompt, aceptadas por legibilidad y relación ambiental.",
+      "execution_origin": "retained_earlier_pilot_candidate_original_success_log_unavailable"
+    },
+    {
+      "role": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v2.jpeg",
+      "sha256": "6cc688227c38155c1c1b233315a4997f0e2d9e2324719e8804d4f08d9cf98c60",
+      "width": 1024,
+      "height": 1536,
+      "requested_model": "gpt-image-2.5-sunburst",
+      "planned_quality": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-01/prompts/el-trueno-acto-v2.txt",
+      "prompt_sha256": "8344f4fc7c02be36fc798e6d2dd7e09955aff207e80a921227130447d568f762",
+      "references": [
+        {
+          "unit_id": "C02",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/c02-master-v2.jpeg",
+          "sha256": "83fc70ce950b96d5f5bf31128e995d90e0aacf56e0485ed77e906609ccc0503d"
+        },
+        {
+          "unit_id": "U01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u01-master-v3.jpeg",
+          "sha256": "48b101e67253c20d4754307d7b784b1fd6f9b5b80d0eb285e15e41db33c467f5"
+        },
+        {
+          "unit_id": "V01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v01-master-v3.jpeg",
+          "sha256": "4fc78dd2981514ac5a4b238cf7e40c15169d30adfee2d99dd61c99d2f906b157"
+        }
+      ],
+      "qa": "Dos autoridades con identidad, edades y ropa coherentes con C02; exactamente dos varas simples inclinadas y dos ondas de papel. Los cuatro pies apoyados sobre orilla seca, solo puntas de varas en agua. Noche, laguna y niebla de papel; sin Trueno visible, oro, templo ni iconografía inventada. Escala de figuras mayor al objetivo del prompt, aceptada por claridad de la acción.",
+      "execution_origin": "successful_current_call_acto_v2"
+    },
+    {
+      "role": "huella",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/huella-v1.jpeg",
+      "sha256": "3c14e86c83b4904088ed5df29e42211231a137e4fb42e27163ae66a20a3455e0",
+      "width": 1024,
+      "height": 1024,
+      "requested_model": "gpt-image-2.5-sunburst",
+      "planned_quality": "medium",
+      "prompt_file": "content/videos/nasa-paeces/tripticos/produccion-api-01/prompts/el-trueno-huella-v1.txt",
+      "prompt_sha256": "70f163c574b44c1f58476d1431ef7bcee41564bb05cc4695b1d9260e3ab8d94b",
+      "references": [
+        {
+          "unit_id": "U01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/u01-master-v3.jpeg",
+          "sha256": "48b101e67253c20d4754307d7b784b1fd6f9b5b80d0eb285e15e41db33c467f5"
+        },
+        {
+          "unit_id": "V01",
+          "file": "output/imagegen/nasa-paeces/biblia/produccion-api-02/v01-master-v3.jpeg",
+          "sha256": "4fc78dd2981514ac5a4b238cf7e40c15169d30adfee2d99dd61c99d2f906b157"
+        }
+      ],
+      "qa": "Una vara sencilla y continua entre curvas amplias de agua de papel; contraste y sombras legibles; sin personas, catálogo de objetos, paisaje literal, glifos o adorno. Es metáfora editorial, no símbolo ritual atribuido.",
+      "execution_origin": "retained_earlier_pilot_candidate_original_success_log_unavailable"
+    }
+  ],
+  "rejected": [
+    {
+      "role": "acto",
+      "file": "output/imagegen/nasa-paeces/tripticos/produccion-api-01/el-trueno/acto-v1.jpeg",
+      "status": "rejected",
+      "checks": "Dos varas y continuidad del reparto/laguna correctas, pero un pie parece estar sobre el agua. Corregir apoyo sobre orilla seca; conservar candidato sin reutilizarlo como referencia futura.",
+      "sha256": "bc0d1c4ab0125b999c0c754474c7f859774c02e07aaec98f7798af4d124a883a",
+      "allowed_as_future_reference": false
+    }
+  ],
+  "execution_notes": {
+    "this_turn_completed_api_calls": 4,
+    "acto_v2_reported_api_edit_seconds": 19.7,
+    "this_turn_completed_api_calls_before_correction": 3,
+    "this_turn_local_write_collisions": 2,
+    "collisions": [
+      {
+        "role": "entrada",
+        "reported_api_edit_seconds": 38.2,
+        "local_exit": 1,
+        "reason": "Output already exists",
+        "returned_image_persisted": false
+      },
+      {
+        "role": "huella",
+        "reported_api_edit_seconds": 16.8,
+        "local_exit": 1,
+        "reason": "Output already exists",
+        "returned_image_persisted": false
+      }
+    ],
+    "acto_v1_reported_api_edit_seconds": 22,
+    "retained_existing_outputs": [
+      "entrada-v1.jpeg",
+      "huella-v1.jpeg"
+    ],
+    "retained_origin": "Archivos presentes del piloto anterior interrumpido por una denegación parcial. Inspeccionados individualmente; no se sobrescribieron. No se dispone del log exitoso original de esos dos archivos, ni se atribuyen sus bytes a las llamadas posteriores que colisionaron.",
+    "lesson": "Antes de llamar a API, comprobar existencia de cada destino y obtener estado de todas las llamadas paralelas con allSettled; no repetir destinos que puedan terminar desde una ejecución interrumpida.",
+    "cost_available": false,
+    "request_ids_available": false
+  },
+  "generation_mode": "official_cli_multi_reference_api_edit",
+  "publication": false,
+  "cultural_certification": false,
+  "keyframes": false,
+  "campaign_status": "1_of_26_triptychs_produced_not_full_campaign_completion"
+}

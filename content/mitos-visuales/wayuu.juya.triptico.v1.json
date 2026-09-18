@@ -1,0 +1,217 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "los-dominios-de-juya": {
+      "titulo": "Los dominios de Juyá",
+      "canon_models": [
+        "viudo_viaje_mas_alla__identity_sheet",
+        "boa_banco__identity_sheet",
+        "dominio_juya__spatial_model",
+        "patilla__botanical_sheet",
+        "patilla__state_sheet"
+      ],
+      "evidence": [
+        {
+          "id": "finol_perrin",
+          "type": "primary_transcription_in_analysis",
+          "url": "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+          "pages": "213–217 y contraste231",
+          "supports": "Boa-banco, tajada de patilla, seres vegetales y límite Pulowi.",
+          "limits": "Transcripción/comparación Paz Ipuana y Perrin; elegir boa Perrin y no mezclar banco jabalí."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "viudo_viaje_mas_alla__identity_sheet",
+          "decision": "Conservar ropa, no realismo fotográfico ni tamaño retrato."
+        },
+        {
+          "model_id": "patilla__state_sheet",
+          "decision": "Familia pequeña con sombras vegetales, no tres estados simultáneos ni fruto como cuerpo."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "los-dominios-de-juya",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/los-dominios-de-juya.json",
+        "target_content_sha256": "e7bbf6fdeb7ab39e3b8dec5dee3c9b41e46fab2f068974fe64b6297a392fda54",
+        "summary": "Episodio focal del ciclo, no tercer testimonio independiente: asiento boa y otras apariencias en dominio de lluvia.",
+        "events": [
+          {
+            "id": "boa_banco",
+            "action": "Asiento que es boa sostiene al viajero.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "patillas_personas",
+            "action": "Patillas hablan y aparecen como personas con hijos.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "caza_limite",
+            "action": "Aprendizajes de caza y límite de Pulowi.",
+            "provenance": "historical_core",
+            "required": false
+          }
+        ],
+        "emotional_reading": "Extrañeza, hospitalidad y reconocimiento de otros seres.",
+        "magic_reading": "Forma y función no coinciden; otra perspectiva.",
+        "qa_method": "Conexión única boa/banco y sombras/propietarios; sin daño."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-07T15:33:00Z",
+        "reviewed_reference_ids": [
+          "b2ad863900b1c7217c48",
+          "d1ea72ea6e785060204f"
+        ],
+        "retained": [
+          "Contraste seco/húmedo y capas del dominio; espacios amplios."
+        ],
+        "rejected": [
+          "Dios gigante barbado con corona, viajero de torso expuesto, rosetas, sol ornamental, ausencia de prodigio específico."
+        ],
+        "influence_by_act": {
+          "entrada": "Sustituir retrato celeste por encuentro concreto con boa-banco y viajero vestido.",
+          "acto": "Mostrar identidades vegetales mediante sombras correspondientes, no paisaje genérico fértil.",
+          "huella": "Hoja con sombra humana: identidad no agotada por apariencia, sin avatar."
+        }
+      },
+      "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+      "paleta": "Verde salvia y carbón, terracota, gris lluvia; luz difusa lateral, sin aura.",
+      "continuity_contract": [
+        "Papel mate."
+      ],
+      "avoid": [
+        "Pixar, giant heads, modeled cheeks, photorealistic humans, giant god in clouds, bearded sky god, crown",
+        "blood, weapons, wounds, attack, eating humans, naked bodies, grotesque fruit bodies",
+        "ornaments, clan glyphs, ceremonial uniform, decorative sun, aura, glitter",
+        "agave, saguaro, spiky rosettes, photographic mud or grass",
+        "outer cardboard, model base, tabletop, pedestal, frame"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "boa_banco"
+          ],
+          "narrative_summary": "En la versión de Perrin, el viajero se sienta en el banco que es boa; no banco-jabalí de Ulépala.",
+          "beat": "Aquello que causa miedo puede sostenerlo sin herirlo.",
+          "escena": "16:9 EXTREME WIDE camera thirty meters away across broad green-gray paper courtyard of Juyá, open-sided enramada on RIGHT only. TINY solitary seated male visitor in side profile at x72%,y44%, total figure including hat no more than ONE EIGHTH image height. Dark short wavy hair, short beard as one dark paper cut, sand broad brim hat, long terracotta Asheinpalajanaa wrap over charcoal long-sleeved kemiisa and full charcoal lower kotin, plain sienna siiira and dark waireñas. No weapons or other people. He sits naturally, feet touching floor, on ONE compact low BANK which is also a thick charcoal-green BOA: single unbroken oval coiled body forms flat stable seat, three folded supports integral below, short broad head subtly at left end of seat, mouth CLOSED, no fangs, no loose tail. Under him, one end of the seat visibly curves upward as a snake while the same material under his hips stays as horizontal bench. Not a person wrapped by snake, not serpent throne, no backrest. Figure and stool together fit x65–82%,y34–56%, small distant relationship. Five dark wet-green paper land curves, gray-blue hills and soft localized paper rain in far right background imply Juyá's presence outside frame. No face or body in clouds. LEFT60% and lower35% quiet dark sage terrain for title. Entire scene cut paper including smooth overlapped floor, no granular mud or photographic grass, sparse broadleaf shrubs only. Roof continues through right edge, no platform or detached building.",
+          "editorial_translation": "Traducción editorial por pliegues y sombras de una percepción narrada; no taxonomía natural ni derecho sobre personas.",
+          "visual_question": "¿Un viajero pequeño se sienta en una sola boa-banco sin ataque, sin dios gigante?",
+          "continuity_contract": [
+            "En la versión de Perrin, el viajero se sienta en el banco que es boa; no banco-jabalí de Ulépala.",
+            "Mundo de papel a sangre y figuras pequeñas, sin cuerpo celeste."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Asiento y boa.",
+            "impossible_behavior": "Un solo objeto se enrolla como boa y sostiene como banco.",
+            "narrative_effect": "Aquello que causa miedo puede sostenerlo sin herirlo.",
+            "agency": "Los seres del dominio de Juyá tienen otra identidad; el viajero recibe y aprende, no controla la transformación.",
+            "physical_translation": "Misma materia de papel, pliegues continuos y sombras físicas vinculadas.",
+            "visible_test": "¿Un viajero pequeño se sienta en una sola boa-banco sin ataque, sin dios gigante?",
+            "event_ids": [
+              "boa_banco"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "patillas_personas"
+          ],
+          "narrative_summary": "En el dominio de Juyá las patillas hablan y aparecen como personas con sus hijos. Sólo la percepción vegetal, no cosecha ni daño.",
+          "beat": "El cultivo devuelve una presencia que no esperábamos.",
+          "escena": "9:16 EXTREME WIDE elevated view into an open green paper garden, camera twenty meters distant. EXACTLY FOUR SMALL human-presenting beings, two adults and two children, calm together in middle third x32–66%,y32–53%. Adults max16% frame height, children max10%; very dark brown matte paper skin, minimal flat profiles, no caricature. One adult long muted green tunic and full green lower wrap with ivory sash, other long charcoal tunic and full charcoal trousers with ivory sash; children ivory long-sleeved shirts and full muted green trousers or wraps, all sandals. These are plant-beings, clothing editorial non-specific, no traditional ethnic uniform or symbols. THE IMPOSSIBILITY: instead of human shadows, each of the FOUR figures casts exactly ONE oval WATERMELON-SHAPED paper shadow beginning at its own feet, projecting down-left on open pale green ground. Four shadows with three subtle green stripe-shaped gaps each and one tiny vine-tail, clearly all attached to the four owners, no normal human shadows. Do not place real fruits beside them or build bodies from fruits. One sparse low lobed watermelon vine follows the ground behind, leaves all flat cut paper with clear lobes. No traveller, creator, baskets, knives, arrows or food preparation. Main group and entire four shadows confined y28–62%; lower35% quiet dark sage broad paper terrain for mobile title. Five land layers and distant rainy blue hills, immense air, no ornamental sky, no spiky plants, no photography or stage.",
+          "editorial_translation": "Traducción editorial por pliegues y sombras de una percepción narrada; no taxonomía natural ni derecho sobre personas.",
+          "visual_question": "¿Cuatro figuras completas tienen cuatro sombras de patilla conectadas a sus pies, sin violencia?",
+          "continuity_contract": [
+            "En el dominio de Juyá las patillas hablan y aparecen como personas con sus hijos. Sólo la percepción vegetal, no cosecha ni daño.",
+            "Mundo de papel a sangre y figuras pequeñas, sin cuerpo celeste."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Cultivo y familia percibida.",
+            "impossible_behavior": "Las personas conservan sombras de patillas.",
+            "narrative_effect": "El cultivo devuelve una presencia que no esperábamos.",
+            "agency": "Los seres del dominio de Juyá tienen otra identidad; el viajero recibe y aprende, no controla la transformación.",
+            "physical_translation": "Misma materia de papel, pliegues continuos y sombras físicas vinculadas.",
+            "visible_test": "¿Cuatro figuras completas tienen cuatro sombras de patilla conectadas a sus pies, sin violencia?",
+            "event_ids": [
+              "patillas_personas"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "patillas_personas"
+          ],
+          "narrative_summary": "Una forma visible no agota la identidad de un ser.",
+          "beat": "Lo que vemos no termina en su contorno.",
+          "escena": "1:1 symbolic isolated single deep olive lobed WATERMELON LEAF made of three folded matte paper layers, with thin curved attached stem. Uniform warm ivory paper background, no landscape or horizon. The small leaf occupies upper-middle40% of canvas. THE IMPOSSIBILITY: its ONE connected cast shadow extends from the stem contact point down-right, but the shadow is the flat silhouette of ONE standing fully robed human, small head, long garment, no face, no fingers or marks. Shadow made of dark sage flat paper, starts exactly at the leaf's stem, no gap, no separate real person. Leaf and human-shaped shadow together central60%, generous margins, soft real contact shadow beneath paper layers. One leaf, one impossible shadow, not an eye logo, no fruit, no bowl, no pedestal, no caption.",
+          "editorial_translation": "Traducción editorial por pliegues y sombras de una percepción narrada; no taxonomía natural ni derecho sobre personas.",
+          "visual_question": "¿Una única hoja proyecta una sombra humana conectada, sin escena?",
+          "continuity_contract": [
+            "Una hoja y su sombra, no persona real ni paisaje.",
+            "Licencia simbólica editorial, no emblema Wayúu."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Hoja y sombra.",
+            "impossible_behavior": "Una hoja tiene sombra humana.",
+            "narrative_effect": "Lo que vemos no termina en su contorno.",
+            "agency": "Los seres del dominio de Juyá tienen otra identidad; el viajero recibe y aprende, no controla la transformación.",
+            "physical_translation": "Misma materia de papel, pliegues continuos y sombras físicas vinculadas.",
+            "visible_test": "¿Una única hoja proyecta una sombra humana conectada, sin escena?",
+            "event_ids": [
+              "patillas_personas"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+          "symbolic_contract": {
+            "thesis": "Ningún contorno contiene toda una identidad.",
+            "carrier": "Hoja con sombra humana.",
+            "operation": "Contradecir la sombra manteniendo conexión con el objeto.",
+            "story_connection": "Personas y vegetales cambian de apariencia en el dominio de Juyá.",
+            "visible_test": "¿Una única hoja proyecta una sombra humana conectada, sin escena?"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "mitos-triptych-selection/v2",
+  "myth": "umarala",
+  "title": "Umaralá",
+  "created_at": "2026-09-06T18:45:25.880Z",
+  "status": "approved_for_publication_under_campaign_authorization",
+  "approval_basis": "Campaña de 27 mitos autorizada por el usuario; QA del agente con fuente, Biblia y memoria visual.",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "narrative_target_sha256": "71517b0486e08baa34cdba4f1b92627ddb82b5df9022ac0db6a5dd39ba66af71",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "visual_memory_review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T18:37:42.694Z",
+    "reviewed_reference_ids": [
+      "efdd2dddda49d59e8bf1",
+      "d7f5dc0ea38289e3a1f1"
+    ],
+    "retained": [
+      "Noche índigo y ocre cálido; sensación de que el paisaje participa en el canto.",
+      "Profundidad por planos superpuestos, maraca y cuidado como motivos reconocibles."
+    ],
+    "rejected": [
+      "Figura femenina gigante y espectral en el cielo, anatomía modelada, planos cerrados y vestuario geométrico de las imágenes previas.",
+      "Tratar generaciones previas como pruebas culturales; reutilizar rostro o ropa sin contraste con la Biblia.",
+      "Confundir los imitadores de Jururiana con Umaralá; se omiten sin modificar el texto público."
+    ],
+    "influence_by_act": {
+      "entrada": "La noche participa en el canto de la tía mediante capas que se levantan sobre su sobrino; maestra humana pequeña y presente, no fantasma celestial.",
+      "acto": "Retener contraste azul/ocre pero dejar a la paciente sola: huellas sin caballo visible y suelo plegado hacen audible la visita.",
+      "huella": "Maraca y capote se condensan en un solo motivo de amparo y saber heredado, sin personajes ni paisaje."
+    }
+  },
+  "selected": [
+    {
+      "act": "entrada",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/entrada.jpeg",
+      "sha256": "43bfe843b61e36da318e4c1198332ddab4ab385d90ccef6542bd1b75f56c4f50",
+      "width": 1536,
+      "height": 864,
+      "quality": "high",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/umarala/wayuu-umarala-triptych-01/prompts/entrada.prompt.txt",
+      "prompt_sha256": "a975cb9a55a591f85491e4930d39f9a88d7d099234321213c1e811deea687ad5",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Dos personas en territorio amplio: tía ciruela y capote carbón cantando con maraca frente al joven índigo/crudo en chinchorro. Noche y terreno de láminas, tres grandes curvas celestes y abertura cálida que replica suspensión. No figura espiritual ni cuerpo fallecido.",
+        "limits": [
+          "Tía de aproximadamente un cuarto de altura, mayor que el 12% solicitado pero sin primer plano ni rostro protagonista.",
+          "El capote aparece largo por detrás; conserva prenda separada y función, no calco dimensional del modelo.",
+          "Abertura celeste es metáfora editorial; no una aparición documentada."
+        ]
+      }
+    },
+    {
+      "act": "acto",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-03-acto/acto.jpeg",
+      "sha256": "d23e5fba8be2b7a49a4fc9d40f3203ee0db88932018bea53e9962c7b924d5bc9",
+      "width": 864,
+      "height": 1536,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/umarala/wayuu-umarala-triptych-03-acto/prompts/acto.prompt.txt",
+      "prompt_sha256": "ad5b1934434f9bb76d48fa14b557ae6391cdd374fdf1792703998697b8f3ca5a",
+      "visual_function": "narrative_scene",
+      "review": {
+        "observed": "Una paciente oliva en chinchorro, dos botellas oscuras cerradas, huellas únicas en U hacia la profundidad sin caballo ni sanador visible. Tres ondulaciones amplias de suelo de papel con sombras; terreno continúa fuera del cuadro y entre rocas, sin tableros rectangulares. Planos de montañas índigo y alba tenue.",
+        "limits": [
+          "Paciente y chinchorro mayores que escala objetivo, pero subordinados al paisaje; un extremo del chinchorro llega al borde derecho.",
+          "El borde de la pechera incorpora pequeños detalles no solicitados: no se toman como patrón cultural ni se incorporan al canon.",
+          "Los relieves son una visualización editorial del canto; las huellas no constituyen reconstrucción arqueológica.",
+          "Vegetación secundaria estilizada no debe usarse como ficha botánica."
+        ]
+      }
+    },
+    {
+      "act": "huella",
+      "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/huella.jpeg",
+      "sha256": "f26b68ff36f01bba162dd4885e0053fc719e8ba4dddba3913af1b9cf56c88d78",
+      "width": 1024,
+      "height": 1024,
+      "quality": "medium",
+      "prompt_file": "content/mitos-visuales/_openai/wayuu/umarala/wayuu-umarala-triptych-01/prompts/huella.prompt.txt",
+      "prompt_sha256": "bacccece13eac5ae21fd2bb2bf35fa4356d7dc2763095b35a492108024379ab9",
+      "visual_function": "symbolic_synthesis",
+      "review": {
+        "observed": "Una maraca ocre faceteada, capote carbón abierto con pliegues y tira arena que conecta ambos lados. Fondo ciruela, sombras físicas, sin personas, paisaje, base o texto.",
+        "limits": [
+          "Prenda orientada frontalmente en vez de recogida horizontal; lectura protectora y materialidad permanecen.",
+          "Composición simbólica editorial, no emblema ni disposición ritual Wayúu."
+        ]
+      }
+    }
+  ],
+  "generation": {
+    "provider": "OpenAI API",
+    "model": "gpt-image-2",
+    "mode": "text_only_no_local_references",
+    "unique_images": 5,
+    "by_act": {
+      "entrada": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      },
+      "acto": {
+        "unique_images": 3,
+        "preparation_rounds": 3,
+        "requested_alternatives": 0
+      },
+      "huella": {
+        "unique_images": 1,
+        "preparation_rounds": 1,
+        "requested_alternatives": 0
+      }
+    },
+    "corrections": 2,
+    "cli_seconds": {
+      "entrada_01": 74.4,
+      "acto_01": 37,
+      "huella_01": 42.3,
+      "acto_02": 32.1,
+      "acto_03": 32.8
+    },
+    "cost": null,
+    "request_ids": null
+  },
+  "excluded": [
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-01/acto.jpeg",
+      "sha256": "54a349fd2b403d3d375ad8f917f505535e056e6dbfd2510dfd184e86127613da",
+      "reason": "Láminas rectangulares de cartón expuestas; dos elevaciones y escala excesiva."
+    },
+    {
+      "path": "output/imagegen/wayuu/triptychs/wayuu-umarala-triptych-02-acto/acto.jpeg",
+      "sha256": "be1660cc212f7e09e3c2e5ffd394966873f33469e19beb147e7cacf895e03686",
+      "reason": "Huellas de dos mitades sugieren pezuña partida; no corresponden al tropel equino."
+    }
+  ],
+  "published": false
+}

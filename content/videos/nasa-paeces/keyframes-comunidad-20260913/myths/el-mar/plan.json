@@ -1,0 +1,160 @@
+{
+  "myth_id": 437,
+  "slug": "el-mar",
+  "title": "El mar",
+  "variant": "Única prueba del río y el mar. Tomás Dimales es continuidad visual; oscilación Santo Tomás al final se registra sin cambiar de cuerpo.",
+  "rules": "Pedro ocre robusto; Tomás gris-azul esbelto. No tercera persona ni ubicación costera junto a Calderas. Agua siempre papel.",
+  "source": {
+    "path": "content/videos/nasa-paeces/keyframes-comunidad-20260913/myths/el-mar/source.snapshot.json",
+    "sha256": "b9a9494fdf3901b7d78d1b462732476b5fe2512b1bd17337a15569924bd5a65d",
+    "narrative_sha256": "057e8a2affe5ca0e8d1b7b8043070c3368aa95fb5f9bfaec3305cf41f6f7e574"
+  },
+  "references": {
+    "entrada": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-mar/entrada-v1.png",
+      "sha256": "ae10db3f0d081c26fb57fef2fc4b0f9e5208322bf505db6fd9fa85e1aef9e283"
+    },
+    "acto": {
+      "path": "output/imagegen/nasa-paeces/tripticos/maqueta-3d-20260913/el-mar/acto-v1.png",
+      "sha256": "c63b98917025f028c3a9f236b147d312046398d8b3450659d7946dbb829fb7f6"
+    }
+  },
+  "expected_frames": 8,
+  "estimated_seconds": 48,
+  "timing_status": "provisional_pending_recorded_voice",
+  "voice_words": 73,
+  "blocks": [
+    {
+      "id": "b1",
+      "voice_over": "Uno haría salir un río. El otro debía detenerlo. Pedro aceptó la prueba que le propuso su hermano Tomás.",
+      "word_count": 19,
+      "time_seconds": [
+        0,
+        12
+      ],
+      "shots": [
+        {
+          "id": "k01",
+          "time_seconds": [
+            0,
+            6
+          ],
+          "scene": "Medio diurno: los dos hermanos hablan al comienzo de una corriente pequeña, separados y sin armas.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k02",
+          "time_seconds": [
+            6,
+            12
+          ],
+          "scene": "Detalle: mano de Tomás indica nacimiento del agua mientras Pedro prepara la marcha; ruanas distintas.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "voice_over": "Pedro corrió para adelantarse. Tomás soltó el agua y esperó hasta recibir la señal.",
+      "word_count": 14,
+      "time_seconds": [
+        12,
+        22
+      ],
+      "shots": [
+        {
+          "id": "k03",
+          "time_seconds": [
+            12,
+            17
+          ],
+          "scene": "General lateral: Pedro corre de izquierda a derecha por camino seco, corriente detrás a distancia.",
+          "refs": [
+            "entrada"
+          ]
+        },
+        {
+          "id": "k04",
+          "time_seconds": [
+            17,
+            22
+          ],
+          "scene": "Gran general: Tomás solo junto al cauce que se aleja entre montañas; no señal escrita ni magia añadida.",
+          "refs": [
+            "entrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "voice_over": "Cuando Pedro anunció que lo había logrado, Tomás fue a comprobarlo. Frente a ellos se extendía el mar.",
+      "word_count": 18,
+      "time_seconds": [
+        22,
+        34
+      ],
+      "shots": [
+        {
+          "id": "k05",
+          "time_seconds": [
+            22,
+            28
+          ],
+          "scene": "General posterior: Tomás cruza último terreno hacia horizonte amplio; cambio de lugar, sin pueblo de Calderas en la costa.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k06",
+          "time_seconds": [
+            28,
+            34
+          ],
+          "scene": "Gran general de revelación: Pedro y Tomás pequeños ante enorme extensión azul de papel sin orilla opuesta; cielo sobrio.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "voice_over": "Pedro le pidió mirar bien: allí había reunido las aguas. La carrera de un hermano terminaba donde la mirada ya no alcanzaba.",
+      "word_count": 22,
+      "time_seconds": [
+        34,
+        48
+      ],
+      "shots": [
+        {
+          "id": "k07",
+          "time_seconds": [
+            34,
+            41
+          ],
+          "scene": "Medio posterior: Pedro señala horizonte marino, Tomás observa en silencio.",
+          "refs": [
+            "acto"
+          ]
+        },
+        {
+          "id": "k08",
+          "time_seconds": [
+            41,
+            48
+          ],
+          "scene": "Detalle final de agua: cauce estrecho llega a capas azules inmensas, sin represa construida ni palabras.",
+          "refs": [
+            "acto"
+          ]
+        }
+      ]
+    }
+  ]
+}

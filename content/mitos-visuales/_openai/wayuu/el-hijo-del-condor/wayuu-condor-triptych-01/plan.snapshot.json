@@ -1,0 +1,220 @@
+{
+  "schema": "mitos-colombia-triptychs/v1.6",
+  "status": "production_and_publication_authorized",
+  "comunidad": "Wayúu",
+  "region": "Caribe",
+  "prompt_profile": "story_first_v3_symbolic_huella",
+  "generation_mode": "text_only_no_local_references",
+  "bible_selection": "content/mitos-visuales/_openai/wayuu/biblia-v3-production/accepted-selection.json",
+  "campaign_scope": "content/mitos-visuales/production/wayuu-2026-09-05/scope.json",
+  "visual_memory_library": "content/mitos-visuales/wayuu.visual-memory.v1.json",
+  "approval_gate": "Campaña completa autorizada; QA por orientación y publicación aditiva sin borrar versiones.",
+  "output_sizes": {
+    "entrada": "1536x864",
+    "acto": "864x1536",
+    "huella": "1024x1024"
+  },
+  "quality_policy": {
+    "entrada": "high",
+    "acto": "medium",
+    "huella": "medium"
+  },
+  "mitos": {
+    "el-hijo-del-condor": {
+      "titulo": "El hijo del Cóndor",
+      "canon_models": [
+        "jose_juan__identity_sheet",
+        "madre_jose_juan__identity_sheet",
+        "cueva_juramia__spatial_model",
+        "caballo_prueba_jose_juan__identity_sheet",
+        "dominio_subterraneo_jujia__spatial_model"
+      ],
+      "evidence": [
+        {
+          "id": "chaves_xv",
+          "type": "historical_narrative",
+          "url": "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/243/266/1579?inline=1",
+          "supports": "Sección XV pp327–331: puerta observada, fuga, caballo y descenso; informante José Jusayú, intérprete Roberto Iguarán.",
+          "limits": "La versión pública comprime y cambia la relación final respecto de Chaves; no se ilustra pareja final ni se cambia el texto."
+        }
+      ],
+      "bible_overrides": [
+        {
+          "model_id": "jose_juan__identity_sheet",
+          "decision": "Conservar cabello corto, crudo/arena, ropa completa; alejar y aplanar cara, no héroe musculoso."
+        },
+        {
+          "model_id": "madre_jose_juan__identity_sheet",
+          "decision": "Manta arcilla opaca sobre base cruda durante salida; continuidad editorial protectora, no reconstrucción literal de corteza/traje deteriorado."
+        },
+        {
+          "model_id": "dominio_subterraneo_jujia__spatial_model",
+          "decision": "Geología natural inmersiva; plegamiento de ruta como metáfora de acceso, no palacio ni corte de maqueta."
+        }
+      ],
+      "narrative_contract": {
+        "target_slug": "el-hijo-del-condor",
+        "target_snapshot": "content/mitos-visuales/production/wayuu-2026-09-05/narratives/el-hijo-del-condor.json",
+        "target_content_sha256": "82d3c04ab01a5cbb8e81991d03a12aaded2ddb90ce31244d12ec669b5bc3991b",
+        "summary": "La observación abre una salida compartida; pruebas posteriores permiten cruzar otro dominio.",
+        "events": [
+          {
+            "id": "fuga",
+            "action": "José Juan aprende puerta y ayuda a salir a su madre.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "caballo_cruce",
+            "action": "Superada prueba del caballo, cruza al dominio subterráneo.",
+            "provenance": "historical_core",
+            "required": true
+          },
+          {
+            "id": "violencias",
+            "action": "Cautiverio, enfrentamientos, traición y reparación en relato, fuera del recorte visual.",
+            "provenance": "historical_core",
+            "required": false
+          }
+        ],
+        "emotional_reading": "De encierro a movimiento compartido, luego a autonomía.",
+        "magic_reading": "El secreto vuelve transitable la roca; la prueba vuelve camino el umbral.",
+        "qa_method": "Madre con agencia, hijo humano, un episodio por orientación; símbolo no otra escena."
+      },
+      "visual_memory_review": {
+        "reviewer": "agent_direct_visual_review",
+        "reviewed_at": "2026-09-07T15:46:00Z",
+        "reviewed_reference_ids": [
+          "ff6068e7165f72dbd552",
+          "0573a69c653ee72cd8b2"
+        ],
+        "retained": [
+          "Profundidad rocosa, caballo castaño y paleta noche/tierra."
+        ],
+        "rejected": [
+          "Collage de caballo, ave, serpientes y cueva; emblemas, rosetas, caballo atacando y héroe con capa estampada; ave de cabeza blanca."
+        ],
+        "influence_by_act": {
+          "entrada": "Reemplazar catálogo por salida de madre e hijo con puerta de roca como acción.",
+          "acto": "Conservar caballo, aislado en el cruce subterráneo sin combate ni serpientes.",
+          "huella": "Una piedra que abre camino; ningún ave ni caballo separado."
+        }
+      },
+      "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+      "paleta": "Roca carbón y ocre, marfil, arcilla; luz de amanecer y cobre tenue.",
+      "continuity_contract": [
+        "Papel mate por capas internas."
+      ],
+      "avoid": [
+        "Pixar, Disney, portrait, big eyes, realistic skin, muscular hero",
+        "violence, blood, weapons, captive woman, abuse, sexualization",
+        "feathers on humans, winged human, bird-man, giant bird, white-headed eagle",
+        "invented textile emblems, clan glyphs, magical runes, crowns, rosettes, glitter",
+        "outer cardboard base, miniature island, tabletop, frame, cross-section cutaway"
+      ],
+      "escenas": {
+        "entrada": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "fuga"
+          ],
+          "narrative_summary": "José Juan ya joven encuentra el secreto de la puerta y sale junto a su madre; no está Juramía.",
+          "beat": "Lo que parecía pared aprende a dejar pasar.",
+          "escena": "16:9 EXTREME WIDE view FROM DEEP INSIDE a vast asymmetric cave toward a small dawn opening at upper RIGHT x65–88%,y25–57%. ONLY TWO TINY almost-flat side-profile paper humans each at most ONE EIGHTH canvas height, no closer than this. Young adult Jose Juan with short irregular black paper hair, complete plain ivory long-sleeved shirt, sand trousers, simple dark sandals. His mother adult wearing opaque full-length muted CLAY Wayuushein mantle over ivory pechera and lower layer, single low black braid, fully covered. Both walk outward toward light, mother takes her own step slightly ahead; Jose behind touches the side of the opening with ONE palm. THE IMPOSSIBILITY: the enormous dark stratified rock slab that sealed this opening separates at that palm contact and UNFOLDS upward and sideways like five broad thick pages of matte stone-colored PAPER. Individual strata bend and separate with air and shadows while remaining one connected slab, revealing a walkable sunlit passage at their feet. No mechanical hinge, metal door, building, stairs, glyph or blast; natural geology becomes yielding material. Vast uninterrupted shadowed rock and path fill left60% and bottom35% as quiet title field. Seven depths, broad smooth torn sheets of charcoal, ochre and ivory, not granular sand or photographic rock. No bird, horse, other person, ropes, weapons, chains, vegetation, cloud swirls or giant moon.",
+          "editorial_translation": "Plegar piedra y camino es licencia de materia para el secreto/acceso del relato; no hecho literal añadido ni signo cultural documentado.",
+          "visual_question": "¿Dos personas pequeñas salen y el gesto abre estratos?",
+          "continuity_contract": [
+            "José Juan ya joven encuentra el secreto de la puerta y sale junto a su madre; no está Juramía.",
+            "Rostros mínimos, prendas completas lisas; no convertir al hijo en ave."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Puerta de roca observada.",
+            "impossible_behavior": "La piedra se abre en estratos plegables al contacto de la mano.",
+            "narrative_effect": "Lo que parecía pared aprende a dejar pasar.",
+            "agency": "Madre camina con decisión propia; José Juan observa y abre posibilidades, no héroe conquistador.",
+            "physical_translation": "Láminas conectadas del cierre separan un paso.",
+            "visible_test": "Acción material conectada legible sin aura ni adornos.",
+            "event_ids": [
+              "fuga"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "acto": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "profundidad_abierta",
+          "visual_function": "narrative_scene",
+          "narrative_event_ids": [
+            "caballo_cruce"
+          ],
+          "narrative_summary": "José Juan supera la prueba del caballo y entra al dominio subterráneo sin ser prisionero. No se muestra lucha ni pareja final.",
+          "beat": "La prueba no entrega un trofeo: abre un camino.",
+          "escena": "9:16 VERY WIDE view from INSIDE a tall irregular natural cave. Small Jose Juan, short black hair, ivory plain long-sleeved shirt and sand trousers, fully clothed, rides one natural dark CHESTNUT horse with black mane and lower legs calmly DOWN a curving earth path at x40–65%,y35–54%. Entire rider and horse together occupy at most20% canvas height, tiny rider face near silhouette with one small eye slit. Four coherent horse legs, normal anatomy, calm walking, thin slack plain bridle, no whip, weapon, fantasy tack, wings or attacking pose. THE IMPOSSIBILITY: the ordinary path directly beneath the leading hoof separates into THREE broad connected matte ochre paper strata, folding DOWNWARD through a narrow natural slit, visibly carrying the same path into a deep lower passage. A continuous traversable descent, not stairs or ribbon floating into sky; the hoof meets the fold, no detached magical platform. The high rock wall ahead bends open along this descending route like a soft geological pleat, revealing a distant warm natural chamber rather than a doorway or palace. Left and right cliff walls surround the viewer full bleed, multiple asymmetric depths and contact shadows. Upper third immense rock void, lower35% dark quiet rock/sand-paper for mobile title. No other people, mother, Jujia, snakes, condor, buildings, furniture, lanterns, glowing crystals, runes or cave cross-section. Entire ground, horse and all geology visibly broad-cut folded matte paper, no realistic sand or fur.",
+          "editorial_translation": "Plegar piedra y camino es licencia de materia para el secreto/acceso del relato; no hecho literal añadido ni signo cultural documentado.",
+          "visual_question": "¿Un caballo natural y jinete pequeño cruzan por la misma ruta que se pliega?",
+          "continuity_contract": [
+            "José Juan supera la prueba del caballo y entra al dominio subterráneo sin ser prisionero. No se muestra lucha ni pareja final.",
+            "Rostros mínimos, prendas completas lisas; no convertir al hijo en ave."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Caballo y sendero subterráneo.",
+            "impossible_behavior": "El sendero se pliega bajo el paso hacia un nuevo dominio.",
+            "narrative_effect": "La prueba no entrega un trofeo: abre un camino.",
+            "agency": "Madre camina con decisión propia; José Juan observa y abre posibilidades, no héroe conquistador.",
+            "physical_translation": "Estratos conectados descienden desde casco a umbral natural.",
+            "visible_test": "Acción material conectada legible sin aura ni adornos.",
+            "event_ids": [
+              "caballo_cruce"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "present"
+          }
+        },
+        "huella": {
+          "era": "tiempo_mitico_wayuu",
+          "refs": [],
+          "composicion": "simbolo_central",
+          "visual_function": "symbolic_synthesis",
+          "narrative_event_ids": [
+            "fuga"
+          ],
+          "narrative_summary": "El saber que abre la piedra deja una salida compartida.",
+          "beat": "Una piedra deja de ser límite.",
+          "escena": "1:1 ONE SINGLE compact irregular slate-gray PAPER STONE against uniform warm ivory background, occupying central50% with generous empty margins. The stone consists of five thick matte charcoal and ochre stacked folded paper strata. A narrow vertical natural seam opens in its middle, and the SAME thin ochre inner stratum comes forward through that seam, uncurls gently and becomes a short broad walkable PATH that divides once into two understated rounded tips. One physically connected stone-to-path object, not two separate props, no landscape, tiny people, footsteps, hand, bird, feather, horse, glyph, key, lock, arch, doorway frame, scenery or pedestal. Side light reveals air gaps between folded internal layers and a single soft cast shadow. The stone cannot merely be cracked rubble: clearly show a formerly internal layer becoming an open way. Shape not a book, not a stage, no rectangular cardboard support.",
+          "editorial_translation": "Plegar piedra y camino es licencia de materia para el secreto/acceso del relato; no hecho literal añadido ni signo cultural documentado.",
+          "visual_question": "¿Un objeto piedra se convierte en camino sin otra escena?",
+          "continuity_contract": [
+            "El saber que abre la piedra deja una salida compartida.",
+            "Objeto único sin seres ni paisaje."
+          ],
+          "magic_in_the_ordinary": {
+            "ordinary_anchor": "Piedra de cierre.",
+            "impossible_behavior": "Su interior se prolonga en camino compartido.",
+            "narrative_effect": "Una piedra deja de ser límite.",
+            "agency": "Madre camina con decisión propia; José Juan observa y abre posibilidades, no héroe conquistador.",
+            "physical_translation": "Una misma lámina ocre sale de la hendidura y bifurca suavemente.",
+            "visible_test": "Acción material conectada legible sin aura ni adornos.",
+            "event_ids": [
+              "fuga"
+            ],
+            "provenance": "editorial_metaphor",
+            "temporal_role": "memory"
+          },
+          "material_direction": "Immersive full-bleed CUT-PAPER world: matte dyed broad sheets, internal cut edges, separated physical depths, occlusion and cast shadows. Almost-flat human side-profile cutouts, natural adult proportions, tiny eye slit and nose only in silhouette, clothes of broad folded sheets. No painted illustration, Pixar faces, outer cardboard, base, tabletop, pedestal, frame or model island.",
+          "symbolic_contract": {
+            "thesis": "Lo cerrado puede convertirse en salida compartida.",
+            "carrier": "Piedra-camino.",
+            "operation": "Prolongar el estrato interior hacia fuera.",
+            "story_connection": "Secreto de la puerta y salida materno-filial.",
+            "visible_test": "Objeto único transformado, no escena miniatura."
+          }
+        }
+      }
+    }
+  }
+}

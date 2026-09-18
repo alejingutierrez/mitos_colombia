@@ -1,0 +1,119 @@
+{
+  "title": "Umaralá",
+  "references": [
+    {
+      "id": "efdd2dddda49d59e8bf1",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/umarala-1784766858801.jpg",
+      "roles": [
+        "current_public",
+        "public_at_campaign_start",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "myths.image_url",
+          "format": "horizontal"
+        },
+        {
+          "source": "content/mitos-visuales/production/wayuu-2026-09-05/database-before.json",
+          "field": "image_url"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/umarala-",
+          "pathname": "mitos/umarala-1784766858801.jpg",
+          "uploaded_at": "2026-07-23T00:34:20.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review": {
+        "observed": "Horizontal: cuidador en primer plano junto a paciente; figura femenina espectral gigante en cielo, luna, plantas y prendas decoradas; capas paisajísticas.",
+        "screenshot": "output/playwright/wayuu-campaign/umarala-before-1.png",
+        "limits": "Generación previa, no evidencia de indumentaria o entidades."
+      }
+    },
+    {
+      "id": "d7f5dc0ea38289e3a1f1",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/umarala-1784911153687.jpg",
+      "roles": [
+        "current_public",
+        "database_version",
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "vertical_images",
+          "row_id": 361,
+          "format": "vertical"
+        },
+        {
+          "source": "vertical_images",
+          "row_id": 361,
+          "updated_at": "2026-07-24T16:39:14.534Z"
+        },
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "vertical/myth/umarala-",
+          "pathname": "vertical/myth/umarala-1784911153687.jpg",
+          "uploaded_at": "2026-07-24T16:39:14.000Z"
+        }
+      ],
+      "visual_review": "inspected",
+      "cultural_authority": "none_from_image_alone",
+      "review": {
+        "observed": "Vertical: primer plano del cuidado con maraca, gran mujer azul celeste, abundantes estrellas, relieve anatómico y ropa geométrica.",
+        "screenshot": "output/playwright/wayuu-campaign/umarala-before-0.png",
+        "limits": "Captura móvil del archivo público; imagen anterior no canon."
+      }
+    },
+    {
+      "id": "ffd1129025872c1ed419",
+      "location": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/umarala-1767975705979.png",
+      "roles": [
+        "stored_version_candidate"
+      ],
+      "evidence": [
+        {
+          "source": "Vercel Blob scoped prefix",
+          "prefix": "mitos/umarala-",
+          "pathname": "mitos/umarala-1767975705979.png",
+          "uploaded_at": "2026-01-10T22:54:36.000Z"
+        }
+      ],
+      "visual_review": "not_yet_inspected",
+      "cultural_authority": "none_from_image_alone",
+      "bytes": 1042447
+    }
+  ],
+  "discovery_failures": [],
+  "review_status": "reviewed_for_next_prompt",
+  "review": {
+    "reviewer": "agent_direct_visual_review",
+    "reviewed_at": "2026-09-06T18:37:42.694Z",
+    "reviewed_reference_ids": [
+      "efdd2dddda49d59e8bf1",
+      "d7f5dc0ea38289e3a1f1"
+    ],
+    "retained": [
+      "Noche índigo y ocre cálido; sensación de que el paisaje participa en el canto.",
+      "Profundidad por planos superpuestos, maraca y cuidado como motivos reconocibles."
+    ],
+    "rejected": [
+      "Figura femenina gigante y espectral en el cielo, anatomía modelada, planos cerrados y vestuario geométrico de las imágenes previas.",
+      "Tratar generaciones previas como pruebas culturales; reutilizar rostro o ropa sin contraste con la Biblia.",
+      "Confundir los imitadores de Jururiana con Umaralá; se omiten sin modificar el texto público."
+    ],
+    "influence_by_act": {
+      "entrada": "La noche participa en el canto de la tía mediante capas que se levantan sobre su sobrino; maestra humana pequeña y presente, no fantasma celestial.",
+      "acto": "Retener contraste azul/ocre pero dejar a la paciente sola: huellas sin caballo visible y suelo plegado hacen audible la visita.",
+      "huella": "Maraca y capote se condensan en un solo motivo de amparo y saber heredado, sin personajes ni paisaje."
+    }
+  },
+  "external_research": {
+    "searched_at": "2026-09-06T18:37:42.694Z",
+    "query": "\"Umaralá\" pintura ilustración",
+    "outcome": "No se identificó una representación externa atribuible al mito en esta búsqueda acotada. Resultados sobre lugar homónimo en India se excluyen. Sí se recuperaron fuentes narrativas ICANH.",
+    "exhaustive": false
+  }
+}

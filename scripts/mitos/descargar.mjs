@@ -13,6 +13,7 @@
  *     --ids "20260823|072548|ab7c...,20260823|073010|cd12..."
  */
 import { mkdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 
 const args = Object.fromEntries(
@@ -25,12 +26,27 @@ const args = Object.fromEntries(
 const USER = args.user || "user_3H5pyS3mWMYbD5GWsIvBNlM1R3F";
 const CDN = args.cdn || "https://d8j0ntlcm91z4.cloudfront.net";
 const destino = args.destino || join("content/mitos-visuales/_inbox", args.slug);
-await mkdir(destino, { recursive: true });
 
 const ids = String(args.ids).split(",").map((s) => s.trim()).filter(Boolean);
-for (const id of ids) {
+const descargas = ids.map((id) => {
   const [fecha, hora, job] = id.split("|");
+  if (!fecha || !hora || !job) throw new Error(`id de Higgsfield inválido: ${id}`);
   const nombre = `hf_${fecha}_${hora}_${job}.png`;
+  return { job, nombre };
+});
+
+if (new Set(descargas.map(({ nombre }) => nombre)).size !== descargas.length) {
+  throw new Error("el lote contiene identificadores repetidos");
+}
+for (const { nombre } of descargas) {
+  const salida = join(destino, nombre);
+  if (existsSync(salida)) {
+    throw new Error(`la descarga aditiva no reemplaza archivos: ${salida}`);
+  }
+}
+
+await mkdir(destino, { recursive: true });
+for (const { job, nombre } of descargas) {
   const res = await fetch(`${CDN}/${USER}/${nombre}`);
   if (!res.ok) {
     console.error(`  ✗ ${job.slice(0, 8)} — HTTP ${res.status}`);
