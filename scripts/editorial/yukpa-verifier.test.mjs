@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("el verificador Yukpa declara el estado pendiente antes de sincronizar", () => {
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
+
+test("el verificador Yukpa declara el estado pendiente antes de sincronizar", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/verify-yukpa-review.mjs"],
@@ -25,7 +27,7 @@ test("el verificador Yukpa declara el estado pendiente antes de sincronizar", ()
   assert.equal(output.imageProvenance.status, "pending");
 });
 
-test("el modo estricto impide afirmar cierre antes de imágenes y sync", () => {
+test("el modo estricto impide afirmar cierre antes de imágenes y sync", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/verify-yukpa-review.mjs", "--strict"],

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
 const expected = new Set([
   "moe-e-ipi",
   "origen-de-la-luna",
@@ -12,7 +13,7 @@ const expected = new Set([
   "origen-del-sol",
 ]);
 
-test("el verificador reporta siete transferencias e imágenes pendientes", () => {
+test("el verificador reporta siete transferencias e imágenes pendientes", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/verify-ticuna-residual-review.mjs"],
@@ -29,7 +30,7 @@ test("el verificador reporta siete transferencias e imágenes pendientes", () =>
   assert.equal(output.imageProvenance.status, "pending");
 });
 
-test("el modo estricto impide afirmar cierre antes de imágenes y sync", () => {
+test("el modo estricto impide afirmar cierre antes de imágenes y sync", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(
     process.execPath,
     ["scripts/editorial/verify-ticuna-residual-review.mjs", "--strict"],

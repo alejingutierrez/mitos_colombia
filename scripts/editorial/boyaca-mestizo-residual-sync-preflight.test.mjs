@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
-test("la sincronización prepara una actualización sin altas ni bajas", () => {
+import { skipWithoutPostgres } from "../lib/test-postgres.mjs";
+
+test("la sincronización prepara una actualización sin altas ni bajas", { skip: skipWithoutPostgres }, () => {
   const result = spawnSync(process.execPath, ["scripts/editorial/sync-boyaca-mestizo-residual-review.mjs"], { cwd: process.cwd(), encoding: "utf8" });
   assert.equal(result.status, 0, result.stderr);
   const output = JSON.parse(result.stdout);

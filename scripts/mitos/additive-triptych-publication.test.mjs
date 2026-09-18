@@ -2,6 +2,19 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { promoteTriptych, readTriptychSelection } from '../apply-myth-triptych.mjs';
 
+import { skipWithoutArtifacts } from "../lib/test-artifacts.mjs";
+
+// Las dos selecciones reales reparten sus tres formatos entre varias carpetas
+// —la cuadrada de aramai se rehízo aparte y la selección la supersede—, así que
+// se comprueban los ficheros que esas selecciones nombran, no una carpeta.
+const SIN_ARTEFACTOS = skipWithoutArtifacts(
+  "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/entrada.jpeg",
+  "output/imagegen/wayuu/triptychs/wayuu-aramai-triptych-15-selected/acto.jpeg",
+  "output/imagegen/wayuu/triptychs/wayuu-aramai-symbolic-16-01/huella.jpeg",
+  "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/entrada.jpeg",
+  "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/acto.jpeg",
+  "output/imagegen/wayuu/triptychs/wayuu-kuriruputa-triptych-01/huella.jpeg",
+);
 const myth={id:1,updated_at:'2026-09-05T00:00:00Z',slug:'test',title:'Test'};
 function mock({changed=false,failInsert=false,vertical=7}={}) {
   const calls=[];
@@ -33,7 +46,7 @@ test('cambio concurrente de vertical aborta antes de escribir',async()=>{
   const client=mock({vertical:9}); await assert.rejects(promoteTriptych(input(client)),/vertical cambió/);
   assert.ok(!client.calls.some(q=>q.startsWith('UPDATE')));
 });
-test('las selecciones reales preservan hashes, formatos y prompt simbólico',async()=>{
+test('las selecciones reales preservan hashes, formatos y prompt simbólico', { skip: SIN_ARTEFACTOS },async()=>{
   for(const [slug,file] of [
     ['aramai','content/mitos-visuales/_openai/wayuu/aramai/wayuu-aramai-symbolic-16-01/selection.json'],
     ['el-indio-kuriruputa','content/mitos-visuales/_openai/wayuu/el-indio-kuriruputa/wayuu-kuriruputa-triptych-01/selection.json'],

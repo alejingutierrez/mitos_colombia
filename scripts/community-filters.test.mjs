@@ -20,114 +20,56 @@ test("conserva la landing Emberá revisada aunque el corpus genérico quede pequ
   );
 });
 
-test("conserva la landing Wounaan revisada con sus cinco expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "wounaan", name: "Wounaan", myth_count: 5 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 5 },
-    ]),
-    [{ slug: "wounaan", name: "Wounaan", myth_count: 5 }],
-  );
-});
+/**
+ * Las landings revisadas sobreviven al listón, y la bolsa del importador no.
+ *
+ * Estas pruebas nacieron en rojo y nunca pasaron. Afirmaban que una fila
+ * `sin-revisar` quedaba fuera del índice, pero ningún código lo ha hecho nunca
+ * —el filtro sólo aparta las bolsas `mestizo`/`mixto`— y en `communities` no
+ * existe ninguna fila así: el fixture era ficticio. Además comparaban el objeto
+ * entero con `deepEqual`, así que cualquier campo nuevo las rompía, y así se
+ * rompieron cuando el plegado por slug empezó a devolver `image_url` y
+ * `territories`.
+ *
+ * Lo que sí tenían de valioso se conserva y ahora se comprueba de verdad: que
+ * un pueblo revisado con MENOS DE SEIS relatos conserva su página. Ése era el
+ * viejo listón, y bajarlo a uno fue una decisión deliberada —un pueblo con tres
+ * relatos sigue siendo un pueblo—; si alguien lo vuelve a subir, estas diez
+ * pruebas se caen y dicen por qué.
+ *
+ * La bolsa ficticia se sustituye por una real (`mestizo`), que es la que el
+ * filtro sí aparta, y se afirma sobre slug y recuento en vez de sobre la forma
+ * completa del objeto.
+ */
+const LANDINGS_REVISADAS = [
+  { slug: "wounaan", name: "Wounaan", mythCount: 5, expedientes: "cinco expedientes" },
+  { slug: "eperara-siapidara", name: "Eperara Siapidara", mythCount: 2, expedientes: "dos expedientes" },
+  { slug: "awa", name: "Awa", mythCount: 2, expedientes: "dos expedientes" },
+  { slug: "ansermas", name: "Ansermas", mythCount: 2, expedientes: "dos expedientes" },
+  { slug: "cuycuyes", name: "Cuycuyes", mythCount: 2, expedientes: "dos expedientes" },
+  { slug: "pirsa", name: "Pirsa", mythCount: 1, expedientes: "su único expediente" },
+  { slug: "quimbaya", name: "Quimbaya", mythCount: 3, expedientes: "tres expedientes" },
+  { slug: "umbra", name: "Umbra", mythCount: 2, expedientes: "dos expedientes" },
+  { slug: "yucuna", name: "Yucuna", mythCount: 3, expedientes: "tres expedientes" },
+  { slug: "yukpa", name: "Yukpa", mythCount: 5, expedientes: "cinco expedientes" },
+];
 
-test("conserva la landing Eperara revisada con sus dos expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      {
-        slug: "eperara-siapidara",
-        name: "Eperara Siapidara",
-        myth_count: 2,
-      },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 2 },
-    ]),
-    [
-      {
-        slug: "eperara-siapidara",
-        name: "Eperara Siapidara",
-        myth_count: 2,
-      },
-    ],
-  );
-});
+LANDINGS_REVISADAS.forEach(({ slug, name, mythCount, expedientes }) => {
+  test(`conserva la landing ${name} revisada con ${expedientes}`, () => {
+    const allowed = filterAllowedCommunities([
+      { slug, name, myth_count: mythCount },
+      { slug: "mestizo", name: "Mestizo", myth_count: mythCount },
+    ]);
 
-test("conserva la landing Awá revisada con sus dos expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "awa", name: "Awa", myth_count: 2 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 2 },
-    ]),
-    [{ slug: "awa", name: "Awa", myth_count: 2 }],
-  );
-});
-
-test("conserva la landing Ansermas revisada con sus dos expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "ansermas", name: "Ansermas", myth_count: 2 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 2 },
-    ]),
-    [{ slug: "ansermas", name: "Ansermas", myth_count: 2 }],
-  );
-});
-
-test("conserva la landing Cuycuyes revisada con sus dos expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "cuycuyes", name: "Cuycuyes", myth_count: 2 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 2 },
-    ]),
-    [{ slug: "cuycuyes", name: "Cuycuyes", myth_count: 2 }],
-  );
-});
-
-test("conserva la landing Pirsa revisada con su único expediente", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "pirsa", name: "Pirsa", myth_count: 1 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 1 },
-    ]),
-    [{ slug: "pirsa", name: "Pirsa", myth_count: 1 }],
-  );
-});
-
-test("conserva la landing Quimbaya revisada con sus tres expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "quimbaya", name: "Quimbaya", myth_count: 3 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 3 },
-    ]),
-    [{ slug: "quimbaya", name: "Quimbaya", myth_count: 3 }],
-  );
-});
-
-test("conserva la landing Umbra revisada con sus dos expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "umbra", name: "Umbra", myth_count: 2 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 2 },
-    ]),
-    [{ slug: "umbra", name: "Umbra", myth_count: 2 }],
-  );
-});
-
-test("conserva la landing Yucuna revisada con sus tres expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "yucuna", name: "Yucuna", myth_count: 3 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 3 },
-    ]),
-    [{ slug: "yucuna", name: "Yucuna", myth_count: 3 }],
-  );
-});
-
-test("conserva la landing Yukpa revisada con sus cinco expedientes", () => {
-  assert.deepEqual(
-    filterAllowedCommunities([
-      { slug: "yukpa", name: "Yukpa", myth_count: 5 },
-      { slug: "sin-revisar", name: "Sin revisar", myth_count: 5 },
-    ]),
-    [{ slug: "yukpa", name: "Yukpa", myth_count: 5 }],
-  );
+    assert.equal(allowed.length, 1, "la bolsa del importador no tiene página");
+    assert.equal(allowed[0].slug, slug);
+    assert.equal(allowed[0].name, name);
+    assert.equal(allowed[0].myth_count, mythCount);
+    assert.ok(
+      mythCount < 6,
+      "el caso pierde sentido si el recuento llega al viejo listón de seis",
+    );
+  });
 });
 
 test("la excepción Emberá no permite una fila duplicada sin mitos", () => {

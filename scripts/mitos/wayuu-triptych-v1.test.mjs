@@ -5,6 +5,11 @@ import { resolve } from "node:path";
 
 import { qualityForTriptychAct } from "../../src/lib/image-quality-policy.js";
 
+import { skipWithoutArtifacts } from "../lib/test-artifacts.mjs";
+
+const SIN_ARTEFACTOS = skipWithoutArtifacts(
+  "output/imagegen/wayuu-v3-production",
+);
 const root = resolve(import.meta.dirname, "../..");
 const plan = JSON.parse(readFileSync(resolve(root, "content/mitos-visuales/wayuu.tripticos.v1.json"), "utf8"));
 const selection = JSON.parse(readFileSync(resolve(root, plan.bible_selection), "utf8"));
@@ -29,7 +34,7 @@ test("el piloto respeta high/medium/medium y no usa imágenes locales", () => {
   }
 });
 
-test("todos los modelos canónicos declarados están seleccionados y presentes", () => {
+test("todos los modelos canónicos declarados están seleccionados y presentes", { skip: SIN_ARTEFACTOS }, () => {
   const selected = new Map(selection.selected.map((item) => [item.model_id, item]));
   for (const modelId of myth.canon_models) {
     const item = selected.get(modelId);
