@@ -337,14 +337,14 @@ export const ITEMS = armar([
 
   // b15 — «Aquí estoy yo, mátenme a mí». Dispararon y no le pegaban. (CITA)
   escp("b15a", [ref("la_hermana"), ref("hombre_de_parashi"), ref("llanura_cardonal")], {
-    comun: `Sol alto. SE PLANTÓ ANTE ELLOS. LA CITA es lo que la pone en el centro del relato: aquí estoy yo, mátenme a mí. ${HM}, de pie y sola delante de todos. Objeto ancla: ella plantada.`,
+    comun: `Sol alto. SE PLANTÓ ANTE ELLOS Y SE OFRECIÓ EN LUGAR DE SU HERMANO: se adelanta ella, habla de pie y sin miedo, y eso es lo que la pone en el centro del relato. ${HM}, de pie y sola delante de todos. Objeto ancla: ella plantada.`,
     camara: {
       a: "PLANO GENERAL de los hombres en el claro, parándose todos a la vez al ver algo fuera de cuadro.",
       b: "la cámara ha GIRADO 180 grados y ha avanzado: PLANO MEDIO de ella de pie, sola, con el fusil bajado y la cara tranquila, terminando la frase.",
     },
     ini: "en el claro, los hombres se paran todos a la vez al ver algo fuera de cuadro.",
     fin: "al girar aparece ella de pie, sola, con el fusil bajado y la cara tranquila, terminando la frase.",
-  }, "pose heroica, capa, camara lenta, resplandor, western, musculatura"),
+  }, "pose heroica, capa, camara lenta, resplandor, western, musculatura, apuntar a la cara, ejecucion, ruego, suplica"),
   escp("b15b", [ref("la_hermana"), ref("armas"), ref("llanura_cardonal")], {
     comun: `Sol alto. SE BURLARON, DISPARARON Y LAS BALAS NO PEGABAN: se cuenta con EL POLVO QUE SALTA A SU ALREDEDOR, nunca con destellos ni escudos. Objeto ancla: los impactos en la arena.`,
     camara: {
