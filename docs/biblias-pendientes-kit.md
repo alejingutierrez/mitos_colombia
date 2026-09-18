@@ -223,6 +223,19 @@ node scripts/mitos/build-biblia-models-v3.mjs --plan content/mitos-visuales/<id>
 `lighting`, `era`, `materials_base`, `palette_rules` (**máximo cuatro**) y
 `prohibitions` (**máximo ocho**).
 
+### Dos técnicas, dos productos: el deslinde que hay que saber
+
+En el repo conviven dos frases de técnica opuestas, y **no se contradicen: gobiernan cosas distintas**. Confundirlas ya costó láminas retiradas.
+
+| producto | técnica | dónde está la regla |
+|---|---|---|
+| **la pareja de imágenes de la página del mito**, en el sitio | ilustración digital **2D** full paper cut y quilling — «nunca fotografía, objeto físico, maqueta, diorama, CGI ni render 3D» | el bloque `IMÁGENES:` de `editorial/<com>/build-editorial-myth.mjs`, en 58 de los 68 módulos |
+| **la biblia, los trípticos y los keyframes** | paper craft fotografiado como **maqueta 3D inmersiva**, con capas físicas a distintas distancias | `docs/biblia-visual-v3.md` §6 y los 797 prompts ya emitidos |
+
+Decidido por el editor el 2026-09-18: **las biblias nuevas van en maqueta 3D fotografiada**, como wayúu, muiscas, chamí y huitoto.
+
+La prueba de que el deslinde es real y de que se vigila: a dos mitos quillacingas **se les retiraron las imágenes por parecer maquetas fotografiadas**. Eran imágenes de sitio, y bajo la regla del sitio estaban mal. La misma imagen, en la biblia, habría estado bien.
+
 ### Las tres trampas de técnica que ya se pagaron
 
 1. **La técnica abre y cierra el prompt.** La tanda 01 wayúu salió
