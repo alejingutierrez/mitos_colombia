@@ -14,15 +14,20 @@ rehacerlo** con la doctrina v4.
 |---|---:|---:|---:|---|---:|---:|---|
 | **Muiscas** | 41 | 41 | 85 | 151 fichas · **instalada** | **41** | **1.852** | ✅ **aprobado** |
 | **Wayúu** | 27 | 27 | 54 | 237 fichas V4 · **instalada** | **27** | **1.652** | ✅ **aprobado** |
-| Nasa – Páez | 26 | 26 | 36 | **60/60 · cerrada** | 0 | 0 | ⛔ rehacer keyframes |
+| Nasa – Páez | 26 | 26 | 36 | **60/60 · instalada** | 0 | 0 | 🟡 lista para specs |
 | Ette Ennaka (Chimila) | 23 | 23 | 62 | 51 de 54 · casi cerrada | 0 | 0 | ⛔ rehacer keyframes |
 | Huitoto / Murui-Muina | 21 | 18 | 18 | **196/196 · cerrada** | 0 | 0 | ⛔ rehacer keyframes |
 | Chamí | 14 primarios | 0 | 0 | **118 fichas · V1 cerrada** | 0 | 0 | ⛔ falta lo editorial |
 
 **Ninguna comunidad está esperando biblia.** Las cuatro pendientes ya la tienen
-cerrada o casi. Lo que falta en todas es **instalarla como referencias**
+cerrada o casi. Lo que falta es **instalarla como referencias**
 (`content/videos/<com>/biblia/*.jpg`, que es lo que leen los specs) y escribir
 los specs v4.
+
+**Nasa ya está instalada** (2026-09-18, 60 fichas,
+`scripts/videos/instalar-biblia-nasa.mjs`): es la siguiente por la que seguir, y
+lo que le toca es directamente escribir specs. Faltan por instalar Huitoto,
+Chimila y Chamí.
 
 Totales aprobados: **3.504 cuadros · 68 mitos · ~147 min de video** a razón de
 10 s por bloque de guion.
@@ -109,15 +114,25 @@ El orden no es negociable: **sin acta no hay guion, y sin biblia no hay spec.**
   `output/imagegen/nasa-paeces/biblia/produccion-api-02/` (84 `.jpeg`);
   inventario en `inventory.v2.json`, linaje y rechazos en `selection.v2.json`
   (60 aceptaciones, 16 rechazos).
-- ❌ **La biblia no está instalada como refs**: no hay
-  `content/videos/nasa-paeces/biblia/*.jpg`.
+- ✅ **Instalada como refs el 2026-09-18**: 60 fichas en
+  `content/videos/nasa-paeces/biblia/*.jpg`, 1024×1536, con el mapa
+  unidad↔ref en `MAPA-REFS.md`. En un spec se citan como
+  `nasa-paeces/biblia/<id>`. El instalador
+  (`scripts/videos/instalar-biblia-nasa.mjs`) lee el maestro **aceptado** de
+  `selection.v2.json` y verifica sha256 — no elige por versión más alta, porque
+  en el directorio conviven rechazos (`e01` tiene v2, v3 y v4; sólo entró la v4).
 - ⚠️ Lo que hay en `output/imagegen/nasa-paeces/keyframes/` son **~600 imágenes
   de una sola tanda** (`el-trueno-produccion-01`), que por dentro cubre 29
   mitos. Metodología anterior: **no sirve**.
 
 **Falta:** normalizar el inventario al formato V4 (con `sensibilidad` y
-`nota_visual` por entidad), instalar la biblia como refs, escribir 26 specs,
-generar ~1.700 cuadros.
+`nota_visual` por entidad), escribir 26 specs, generar ~1.700 cuadros.
+
+⚠️ **Al escribir los specs, ojo con los paisajes.** De las 60 fichas, 10 son
+paisajes maestros y 8 variaciones, y muchas son vistas de montaña verde-azul
+que se parecen entre sí (`paramo_laguna`, `filos_y_pena`, `chaikin`,
+`vichaguau`, `el_caspe`, `calderas_santa_rosa`, `rio_canon`, `rio_paez`).
+Conviene apoyarse en el objeto ancla de cada escena y no sólo en el paisaje.
 
 ### Ette Ennaka / Chimila (23 mitos)
 - ✅ 23 actas en `docs/videos/ette-ennaka/actas/`.
