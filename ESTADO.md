@@ -44,6 +44,24 @@ tocar nada:
 | **doctrina** | `docs/mitos-produccion-imagenes.md` (runbook de imagen) · `docs/videos/proceso-mitos-a-video.md` y `docs/videos/TRASPASO-SIGUIENTE-COMUNIDAD.md` (runbook de video) |
 | **bitácora** | `docs/wayuu-*.md` — 55 documentos de por qué cada imagen wayuu se ve como se ve |
 
+## Texto y fuentes: enriquecimiento editorial
+
+Proceso en [`docs/spec-reescritura-y-fuentes.md`](docs/spec-reescritura-y-fuentes.md)
+y skill `enriquecimiento-mitos`; kit en `scripts/editorial/enriquecimiento/`
+(`npm run mitos:enriquecer:*`). **El módulo de `editorial/<comunidad>/` es la
+verdad; Neon es lo publicado.** Un `UPDATE` suelto contra Neon es deriva.
+
+| comunidad | Fase A (texto) | Fase B (fuentes) | módulo = Neon |
+|---|---|---|---|
+| **wayuu** | reescrita entera sobre el primario el 2026-09-17 (matrices y dudas en `content/editorial/wayuu/reescritura-2026-09-17/`) | completa, reconciliada y con búsqueda profunda en los 27 (2026-09-17): 8–16 fuentes/mito, promedio 13,2 | sí, verificado en vivo |
+| **muiscas** | completa | completa en Neon (2026-09-16); proceso editorial cerrado por el editor | **no**: pendiente técnico de llevar las fuentes de Neon a los módulos, sin reabrir la edición |
+| **nasa** | reescrita entera sobre el primario el 2026-09-17 (matrices y dudas en `content/editorial/nasa/reescritura-2026-09-17/`) | completa 2026-09-17: 9–13 fuentes/mito, promedio 10,5 | sí, verificado en vivo |
+| **chimila (Ette Ennaka)** | reescrita entera sobre el primario de 1945 el 2026-09-17: se desmontó la plantilla que daba tres párrafos idénticos de Historia, Versiones y Similitudes a las 23 fichas (registro en `content/editorial/chimila/`) | completa 2026-09-17: de 7 URLs entre las 23 a 30 obras y 6–12 fuentes/mito, promedio 8,2 | sí, verificado en vivo en las 23 rutas |
+| **huitoto (Murui-Muina)** | reescrita entera sobre los primarios el 2026-09-17: se desmontó la plantilla compartida y el párrafo de descargo que el constructor pegaba dentro de los 22 Relatos; tres fichas se habían publicado desde el índice de un libro, sin su texto (registro en `content/editorial/huitoto/`) | completa 2026-09-17: de 10 obras entre las 21 a 67 y 6–12 fuentes/mito, promedio 9,3; dos URLs rotas en producción reemplazadas y cuatro errores bibliográficos corregidos | sí, verificado en vivo en las 21 rutas |
+| **chamí (emberá chamí)** | reescrita entera sobre los dos primarios el 2026-09-18: se desmontaron las plantillas con huecos y se sacó el aparato crítico de trece Relatos (registro en `content/editorial/chami/`) | completa 2026-09-18: de 15 obras entre las 22 a 56 y 7–12 fuentes/mito, promedio 9,7; cinco errores de atribución corregidos contra el registro de origen | sí, verificado en vivo en las 22 rutas |
+| **katío (embera eyabida)** | reescrita entera sobre los tres primarios el 2026-09-18: las oraciones repetidas entre fichas bajaron del **43 % al 3 %** (registro en `content/editorial/katio/`) | completa 2026-09-18: de 17 obras entre las 21 a 43 y 6–12 fuentes/mito; corregidas la atribución de Dabeiba, la autoría del texto de 1929 y el desenlace de Costé | sí, verificado en vivo en las 19 rutas |
+| resto (34 comunidades, 254 mitos) | completa | pendiente | — |
+
 ## Lo que está desordenado y ya está decidido arreglar
 
 Auditado el 2026-09-16, pendiente de ejecutar:
