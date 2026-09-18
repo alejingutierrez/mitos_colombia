@@ -117,18 +117,25 @@ que ya pasó por el pipeline de imágenes: reescribe `image_url` desde
 1. `auditar` desde módulos (o desde Neon si la comunidad no tiene módulos:
    entonces el primer paso de Fase B es **escribir los módulos** a partir
    del respaldo de `exportar`).
-2. Leer el informe en `content/editorial/<comunidad>/auditoria-fuentes-<fecha>.json`.
+2. **Comprobar que la fuente narrativa contenga texto, no sólo que responda
+   200.** En andoque, once de catorce fichas declaraban como `narrativeSource`
+   la portada de Google Books del libro del que salían, y el propio módulo lo
+   admitía: «el índice y los fragmentos consultables confirman los once títulos
+   heredados». Una portada de catálogo, una ficha de Open Library o un registro
+   de metadatos responden 200 y no sostienen nada. Abrir la URL de la fuente
+   narrativa de cada mito y ver si ahí está el relato.
+3. Leer el informe en `content/editorial/<comunidad>/auditoria-fuentes-<fecha>.json`.
    Bloqueos: mito con <5 fuentes, URL caída o que redirige a portada, URL
    con punto final, **fuente comparativa (Ovidio, Popol Vuh, Hesíodo) en
    un mito cuyas Similitudes no nombran ese paralelo**. Avisos: <8 fuentes,
    dominio débil, `http`, misma obra en varias URLs, misma URL con fichas
    bibliográficas distintas, restringida (403/captcha: comprobar a mano).
-3. Búsqueda profunda **por mito**, con agentes en paralelo, uno por mito o
+4. Búsqueda profunda **por mito**, con agentes en paralelo, uno por mito o
    por grupos de 4-6. El brief lleva relato, historia, versiones y las URLs
    ya citadas. Criterio: la fuente trata DIRECTAMENTE el mito, el personaje
    o el lugar; cada URL se abre y se confirma que habla de eso; se declara
    `AGOTADO` en vez de rellenar. Meta 4-8 nuevas por mito.
-4. Consolidar en el módulo con `consolidar-fuentes.mjs` (verifica URLs, casa
+5. Consolidar en el módulo con `consolidar-fuentes.mjs` (verifica URLs, casa
    por URL con el pool, crea claves o reutiliza con resumen propio; dry-run y
    `--apply`). Antes de pasarle los JSON, curarlos a mano: quitar blogs, prensa
    y fichas sin texto, y canonizar URLs. Reglas:
@@ -150,9 +157,9 @@ que ya pasó por el pipeline de imágenes: reescribe `image_url` desde
    - fuente caída: se reemplaza por una equivalente **verificada** (la ONIC
      rehízo su sitio en 2026: sus perfiles de pueblos ya no existen) o se
      retira; nunca se deja.
-5. `auditar` de nuevo hasta cero bloqueos; `node --test` del corpus.
-6. `fuentes` dry-run → `--apply --confirm` → `revalidar` → `verificar --vivo`.
-7. Registrar en `docs/spec-reescritura-y-fuentes.md` §4 y en `ESTADO.md`.
+6. `auditar` de nuevo hasta cero bloqueos; `node --test` del corpus.
+7. `fuentes` dry-run → `--apply --confirm` → `revalidar` → `verificar --vivo`.
+8. Registrar en `docs/spec-reescritura-y-fuentes.md` §4 y en `ESTADO.md`.
 
 ## Lo que nunca se hace
 
