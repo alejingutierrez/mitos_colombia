@@ -28,9 +28,14 @@ export const PURPOSE_BY_KIND = {
   deidad_fuerza: ["identity_sheet", "state_sheet"],
   criatura: ["identity_sheet", "state_sheet"],
   animal: ["identity_sheet", "state_sheet"],
-  colectivo: ["group_grammar"],
+  // La V3 admite un segundo modelo «segun necesidad explicita» para el
+  // colectivo y «segun ciclo documentado» para la planta. Tenerlos con una
+  // sola ficha obligo a katios a resolver barro/piedra y arbol/tronco como dos
+  // registros de la misma lamina: era un limite de este script, no una
+  // decision.
+  colectivo: ["group_grammar", "state_sheet"],
   objeto: ["object_sheet"],
-  planta: ["botanical_sheet"],
+  planta: ["botanical_sheet", "state_sheet"],
   arquitectura: ["spatial_model"],
   lugar: ["spatial_model"],
   paisaje: ["environment_model"],

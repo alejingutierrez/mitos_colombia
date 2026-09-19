@@ -765,6 +765,16 @@
           "entity_id": "cantos_formulas_y_procedimientos_chamanicos",
           "role": "magic_subject",
           "note": "No aparecen en el relato; los registro para que el límite quede escrito antes de diseñar y no después."
+        },
+        {
+          "entity_id": "hoja_semillas_nikak_1",
+          "role": "plot_object",
+          "note": "Primera hoja de cinco semillas. Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura, no huir con las manos vacías."
+        },
+        {
+          "entity_id": "hoja_semillas_nikak_2",
+          "role": "plot_object",
+          "note": "Segunda hoja de cinco piezas: las cuatro semillas restantes más el canasto que las carga. La yuca dulce y la amarga deben leerse distintas."
         }
       ]
     }
@@ -1584,8 +1594,8 @@
         }
       ],
       "census_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales. El censo la agrupaba en `hoja_semillas_nikak_1`, que no es una entidad del plan v3; la cobertura pasa a `familias_nikak`, cuya gramática de grupo se definió con canastos y semillas. Si el editor quiere recuperar la hoja de semillas como lámina propia, se separa sin tocar nada más."
+      "covered_by": "hoja_semillas_nikak_1",
+      "coverage_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales."
     },
     "semilla_tabaco": {
       "name": "Semilla de tabaco",
@@ -1612,8 +1622,8 @@
         }
       ],
       "census_note": "Nombrada en la lista de semillas cargadas en canastos.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias."
+      "covered_by": "hoja_semillas_nikak_1",
+      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos."
     },
     "semilla_cana": {
       "name": "Semilla de caña",
@@ -1640,8 +1650,8 @@
         }
       ],
       "census_note": "Nombrada en la lista de semillas cargadas en canastos.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias."
+      "covered_by": "hoja_semillas_nikak_1",
+      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos."
     },
     "totumo": {
       "name": "Totumo",
@@ -1668,8 +1678,8 @@
         }
       ],
       "census_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y con su nombre Nɨkak, muji, que es el totumo grande."
+      "covered_by": "hoja_semillas_nikak_1",
+      "coverage_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto."
     },
     "platano": {
       "name": "Plátano",
@@ -1696,8 +1706,8 @@
         }
       ],
       "census_note": "Nombrado en la lista de semillas cargadas en canastos.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias."
+      "covered_by": "hoja_semillas_nikak_1",
+      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos."
     },
     "yuca_dulce": {
       "name": "Yuca dulce",
@@ -1724,8 +1734,8 @@
         }
       ],
       "census_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y tiene que leerse distinta de la amarga."
+      "covered_by": "hoja_semillas_nikak_2",
+      "coverage_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir."
     },
     "yuca_amarga": {
       "name": "Yuca amarga",
@@ -1752,8 +1762,8 @@
         }
       ],
       "census_note": "Distinta de la dulce en el propio texto.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Distinta de la dulce en el propio texto. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y tiene que leerse distinta de la dulce."
+      "covered_by": "hoja_semillas_nikak_2",
+      "coverage_note": "Distinta de la dulce en el propio texto."
     },
     "maiz": {
       "name": "Maíz",
@@ -1780,8 +1790,8 @@
         }
       ],
       "census_note": "Nombrado en la lista de semillas cargadas en canastos.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y su hoja seca es además el combustible del único fuego del corpus."
+      "covered_by": "hoja_semillas_nikak_2",
+      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos."
     },
     "name": {
       "name": "Ñame",
@@ -1808,8 +1818,8 @@
         }
       ],
       "census_note": "Cierra la lista de nueve cultivos traídos desde bak.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Cierra la lista de nueve cultivos traídos desde bak. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, con su nombre Nɨkak, mamo."
+      "covered_by": "hoja_semillas_nikak_2",
+      "coverage_note": "Cierra la lista de nueve cultivos traídos desde bak."
     },
     "canastos": {
       "name": "Canastos de carga",
@@ -1846,8 +1856,8 @@
         }
       ],
       "census_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
-      "covered_by": "familias_nikak",
-      "coverage_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3. Es la única manufactura del relato y va en la gramática de grupo, que es donde se ve cómo se carga y quién lo carga."
+      "covered_by": "hoja_semillas_nikak_2",
+      "coverage_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas."
     },
     "perseguidores_de_bak": {
       "name": "Los seres que perseguían a los Nɨkak en bak",
@@ -2013,6 +2023,76 @@
       ],
       "census_note": "No aparecen en el relato; los registro para que el límite quede escrito antes de diseñar y no después.",
       "exclusion_reason": "do_not_visualize: el canon declara que sólo resume material publicado y que no reproduce cantos, fórmulas, procedimientos chamánicos ni localizaciones operativas"
+    },
+    "hoja_semillas_nikak_1": {
+      "name": "hoja semillas nikak 1",
+      "kind": "planta",
+      "description": "Primera hoja de cinco semillas. Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura, no huir con las manos vacías.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Primera hoja de cinco semillas. Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura, no huir con las manos vacías."
+        }
+      ],
+      "census_note": "Primera hoja de cinco semillas. Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura, no huir con las manos vacías.",
+      "groups": [
+        "semilla_chontaduro",
+        "semilla_tabaco",
+        "semilla_cana",
+        "totumo",
+        "platano"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_semillas_nikak_2": {
+      "name": "hoja semillas nikak 2",
+      "kind": "planta",
+      "description": "Segunda hoja de cinco piezas: las cuatro semillas restantes más el canasto que las carga. La yuca dulce y la amarga deben leerse distintas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Segunda hoja de cinco piezas: las cuatro semillas restantes más el canasto que las carga. La yuca dulce y la amarga deben leerse distintas."
+        }
+      ],
+      "census_note": "Segunda hoja de cinco piezas: las cuatro semillas restantes más el canasto que las carga. La yuca dulce y la amarga deben leerse distintas.",
+      "groups": [
+        "yuca_dulce",
+        "yuca_amarga",
+        "maiz",
+        "name",
+        "canastos"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {

@@ -10904,9 +10904,9 @@
       "exclusion_reason": "Legado de la rebelion liberal llanera invocado como explicacion; solo Enrique habla, y su cuerpo lo cubre la comunidad llanera."
     },
     "hoja_utileria_armas_y_faenas": {
-      "name": "Hoja de utilería: armas y faenas",
+      "name": "hoja utileria armas y faenas",
       "kind": "objeto",
-      "description": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado (censo, sheet_groups).",
+      "description": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado.",
       "aliases": [],
       "states": [
         "canonico"
@@ -10932,10 +10932,20 @@
         {
           "myth": "el-brujo-de-la-costa-del-pauto",
           "field": "content",
-          "note": "Hoja de agrupación: cubre dinamita_con_mecha, machete_llanero, armas_de_fuego_del_llano, hacha, zurriago. Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado (censo, sheet_groups)."
+          "note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado."
+        },
+        {
+          "myth": "el-tirapiedra",
+          "field": "content",
+          "note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado."
+        },
+        {
+          "myth": "la-bola-de-fuego",
+          "field": "content",
+          "note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado."
         }
       ],
-      "census_note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado (censo, sheet_groups).",
+      "census_note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado.",
       "design": {
         "silhouette": "Cinco piezas de faena y de violencia alineadas sobre una tabla y vistas casi en planta, a escala de mano y sin ninguna en uso: cartucho de dinamita con mecha, machete, revólver, hacha y zurriago enrollado, cada una separada de la siguiente por un hueco igual: es una hoja de inventario y no una escena.",
         "materials": [
@@ -10963,12 +10973,19 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "groups": [
+        "dinamita_con_mecha",
+        "machete_llanero",
+        "armas_de_fuego_del_llano",
+        "hacha",
+        "zurriago"
+      ]
     },
     "hoja_utileria_fiesta_y_casa": {
-      "name": "Hoja de utilería: fiesta y casa",
+      "name": "hoja utileria fiesta y casa",
       "kind": "objeto",
-      "description": "Utilería de parranda y de vivienda. Aquí queda registrado que el corpus no tiene arpa ni cuatro (censo, sheet_groups).",
+      "description": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro.",
       "aliases": [],
       "states": [
         "canonico"
@@ -10998,10 +11015,20 @@
         {
           "myth": "amanecer-llanero",
           "field": "content",
-          "note": "Hoja de agrupación: cubre instrumentos_del_joropo, chinchorro_y_hamaca, aguardiente_y_guarapo, corona_de_plumas_y_tunica, cuerdas_para_atar_ninos. Utilería de parranda y de vivienda. Aquí queda registrado que el corpus no tiene arpa ni cuatro (censo, sheet_groups)."
+          "note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro."
+        },
+        {
+          "myth": "el-brujo-de-la-costa-del-pauto",
+          "field": "content",
+          "note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro."
+        },
+        {
+          "myth": "el-dominguez",
+          "field": "content",
+          "note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro."
         }
       ],
-      "census_note": "Utilería de parranda y de vivienda. Aquí queda registrado que el corpus no tiene arpa ni cuatro (censo, sheet_groups).",
+      "census_note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro.",
       "design": {
         "silhouette": "Cinco piezas de parranda y de vivienda colgadas o apoyadas contra un muro de bahareque: tiple y maracas, chinchorro plegado, botella y totuma, corona de plumas con túnica doblada, y un rollo de cuerda: la hoja se compone en vertical, colgando, y es la única de utilería que no está sobre una tabla.",
         "materials": [
@@ -11031,12 +11058,19 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "groups": [
+        "instrumentos_del_joropo",
+        "chinchorro_y_hamaca",
+        "aguardiente_y_guarapo",
+        "corona_de_plumas_y_tunica",
+        "cuerdas_para_atar_ninos"
+      ]
     },
     "hoja_utileria_comercio_y_monte": {
-      "name": "Hoja de utilería: comercio y monte",
+      "name": "hoja utileria comercio y monte",
       "kind": "objeto",
-      "description": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno (censo, sheet_groups).",
+      "description": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno.",
       "aliases": [],
       "states": [
         "canonico"
@@ -11061,10 +11095,20 @@
         {
           "myth": "el-llano-cobra-sus-deudas",
           "field": "content",
-          "note": "Hoja de agrupación: cubre semillas_de_pinon, sarrapia_cueros_y_plumas, mechitos_de_cera_de_abejas, detector_de_minas, brasero_del_curandero. Objetos de comercio, monte y cura que aparecen una sola vez cada uno (censo, sheet_groups)."
+          "note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno."
+        },
+        {
+          "myth": "el-tesoro-de-caribare",
+          "field": "content",
+          "note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno."
+        },
+        {
+          "myth": "la-culebra-cascabel",
+          "field": "content",
+          "note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno."
         }
       ],
-      "census_note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno (censo, sheet_groups).",
+      "census_note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno.",
       "design": {
         "silhouette": "Cinco piezas de comercio, monte y cura repartidas sobre un costal abierto: un puñado de semillas, un fardo atado de sarrapia con cueros y plumas, dos mechitos de cera de abejas, un detector de minas con su plato y su vara, y un brasero de barro humeando: es la única hoja de utilería del corpus donde algo está encendido, y la única que mezcla tres estratos de época en un mismo cuadro.",
         "materials": [
@@ -11093,12 +11137,19 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "groups": [
+        "semillas_de_pinon",
+        "sarrapia_cueros_y_plumas",
+        "mechitos_de_cera_de_abejas",
+        "detector_de_minas",
+        "brasero_del_curandero"
+      ]
     },
     "hoja_reparto_de_hato": {
-      "name": "Hoja de reparto: hato republicano",
+      "name": "hoja reparto de hato",
       "kind": "colectivo",
-      "description": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patrón, señora de casa grande, vaquero, joven y muchacha—, creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo físico en el texto.",
+      "description": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto.",
       "aliases": [],
       "states": [
         "canonico"
@@ -11125,10 +11176,20 @@
         {
           "myth": "amanecer-llanero",
           "field": "content",
-          "note": "Hoja de agrupación: cubre don_antonio_heredia, dona_juana, felipe_el_loco, david_gamboa, maria_de_los_angeles, rosa_linda, carlos, victoria, casanari. Hoja de reparto del estrato republicano de hato, con cinco variantes —patrón, señora de casa grande, vaquero, joven y muchacha—, creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo físico en el texto."
+          "note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto."
+        },
+        {
+          "myth": "el-toro-negro-patorreal",
+          "field": "content",
+          "note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto."
+        },
+        {
+          "myth": "la-bola-de-fuego",
+          "field": "content",
+          "note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto."
         }
       ],
-      "census_note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patrón, señora de casa grande, vaquero, joven y muchacha—, creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo físico en el texto.",
+      "census_note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto.",
       "design": {
         "silhouette": "Cinco figuras de pie en fila frontal y equidistante sobre una franja de suelo vacía, sin escena y sin fondo, de izquierda a derecha patrón, señora de casa grande, vaquero, joven y muchacha, cada una con un solo objeto en la mano que dice su oficio: es una hoja de casting y por eso es la única lámina del corpus con figuras alineadas y mirando al frente.",
         "materials": [
@@ -11159,12 +11220,23 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "groups": [
+        "casanari",
+        "rosa_linda",
+        "david_gamboa",
+        "maria_de_los_angeles",
+        "don_antonio_heredia",
+        "dona_juana",
+        "felipe_el_loco",
+        "carlos",
+        "victoria"
+      ]
     },
     "hoja_reparto_del_piedemonte": {
-      "name": "Hoja de reparto: piedemonte moderno",
+      "name": "hoja reparto del piedemonte",
       "kind": "colectivo",
-      "description": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—, creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa. El narrador viajero, que el §5.3 ponía aquí, se resuelve en la gramática de comunidad por aparecer en los dos estratos.",
+      "description": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos.",
       "aliases": [],
       "states": [
         "canonico"
@@ -11188,10 +11260,20 @@
         {
           "myth": "el-brujo-de-la-costa-del-pauto",
           "field": "content",
-          "note": "Hoja de agrupación: cubre don_tarsicio, abelardo_piriachi, don_agapito. Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—, creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa. El narrador viajero, que el §5.3 ponía aquí, se resuelve en la gramática de comunidad por aparecer en los dos estratos."
+          "note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos."
+        },
+        {
+          "myth": "el-domador-de-brujas",
+          "field": "content",
+          "note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos."
+        },
+        {
+          "myth": "los-tres-luceros",
+          "field": "content",
+          "note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos."
         }
       ],
-      "census_note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—, creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa. El narrador viajero, que el §5.3 ponía aquí, se resuelve en la gramática de comunidad por aparecer en los dos estratos.",
+      "census_note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos.",
       "design": {
         "silhouette": "Tres figuras sobre suelo vacío que no comparten altura —visitante de ciudad de pie con camisa metida y zapato cerrado, curandero en cuclillas con un manojo de raíces, hombre de camino encorvado con la linterna encendida—: se distingue de la hoja de hato en que allí las cinco figuras están alineadas y aquí ninguna está a la misma altura que otra.",
         "materials": [
@@ -11223,7 +11305,12 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "groups": [
+        "don_agapito",
+        "abelardo_piriachi",
+        "don_tarsicio"
+      ]
     }
   },
   "models": {
@@ -17236,7 +17323,17 @@
         {
           "myth": "el-brujo-de-la-costa-del-pauto",
           "field": "content",
-          "note": "Hoja de agrupación: cubre dinamita_con_mecha, machete_llanero, armas_de_fuego_del_llano, hacha, zurriago. Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado (censo, sheet_groups)."
+          "note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado."
+        },
+        {
+          "myth": "el-tirapiedra",
+          "field": "content",
+          "note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado."
+        },
+        {
+          "myth": "la-bola-de-fuego",
+          "field": "content",
+          "note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado."
         }
       ],
       "design_contract": {
@@ -17269,7 +17366,7 @@
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Orinoquia llanera V1 - object_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del jinete o del que camina por la sabana. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
-        "primary_request": "hechura, escala y uso del objeto para Hoja de utilería: armas y faenas. Cinco piezas de faena y de violencia alineadas sobre una tabla y vistas casi en planta, a escala de mano y sin ninguna en uso: cartucho de dinamita con mecha, machete, revólver, hacha y zurriago enrollado, cada una separada de la siguiente por un hueco igual: es una hoja de inventario y no una escena.",
+        "primary_request": "hechura, escala y uso del objeto para hoja utileria armas y faenas. Cinco piezas de faena y de violencia alineadas sobre una tabla y vistas casi en planta, a escala de mano y sin ninguna en uso: cartucho de dinamita con mecha, machete, revólver, hacha y zurriago enrollado, cada una separada de la siguiente por un hueco igual: es una hoja de inventario y no una escena.",
         "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel pajizo rubio para la sabana de verano, papel verde húmedo para la de agua alta, papel gris ceniza para la quemada, papel barro para el camino embarrado del piedemonte, papel encalado blanco roto para el muro de bahareque, papel cuero curtido para apero y silla. Capas escalonadas en profundidad que construyen el horizonte por planos superpuestos y no por perspectiva atmosférica pintada; en el llano, muchas capas muy bajas y muy anchas.",
         "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Todas a escala de mano y con la misma altura de cámara, de modo que se puedan comparar entre sí; la tabla da el suelo común y no hay ninguna figura humana.",
         "lighting_mood": "La luz fecha la escena y sólo hay cuatro, nunca mezcladas en un mismo cuadro. Sol alto de sabana abierta, sin obstáculo, que aplana el horizonte y acorta la sombra: la luz por defecto del estrato de hato. Vela, mechito de cera y brasero: un solo foco cálido, bajo y muy corto de alcance, para el estrato colonial y el interior del rancho. Lámpara de petróleo y luz caliente de cantina, con halo, para el sitio de parrando y el cafeteadero. Y linterna y faro de campero, única luz fría del corpus, exclusiva de las cinco páginas del piedemonte moderno. Fuera de eso sólo hay luna —plenilunio, menguante y luna roja— y lo que el propio relato enciende: la esfera de fuego, los tres luceros, la sombra de plenilunio del jesuita.",
@@ -17277,7 +17374,7 @@
         "era": "Tres estratos que no comparten cuadro. Colonial de misión, hasta 1767: viviendas de bahareque y palma, iglesia de maderos con cubierta de paja, el pueblo como un puñado de casas y no como una villa —San José de Cravo se funda en 1649 con diecinueve hombres y sus familias—, sotana, ganado suelto; la tapia pisada y la teja de barro son tardías y de edificio de Estado, desde 1788. Republicano de hato, del XIX a mediados del XX: caballo de silla con lazo, corral con botalón y majada, garabato y mandador, dril, pantalón arremangado hasta la rodilla, pie descalzo, sombrero de fieltro pelo e' guama, alpargata de suela de cuero, faja ancha, tiple y maracas, vapor en el Meta y plumas de garza y sarrapia bajando al Orinoco. Moderno del piedemonte, 1982-1985: campero, carretera con abismo y barro, linterna, detector de minas, digitopuntura. Y un solo objeto que atraviesa los tres sin cambiar: la cruz de madera sobre la tumba.",
         "constraints": [
           "Cinco piezas de faena y de violencia alineadas sobre una tabla y vistas casi en planta, a escala de mano y sin ninguna en uso: cartucho de dinamita con mecha, machete, revólver, hacha y zurriago enrollado, cada una separada de la siguiente por un hueco igual: es una hoja de inventario y no una escena.",
-          "mostrar: Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado (censo, sheet_groups).",
+          "mostrar: Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado.",
           "documentado: El censo agrupa cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado: dinamita con mecha, machete llanero, armas de fuego del llano, hacha y zurriago (censo, `sheet_groups`).",
           "documentado: El machete va «arrastrado contra la tierra mientras David maldice», y ésa es la contra llanera de la Bola de Fuego, en lugar del rezo (censo y dossier §6.3).",
           "documentado: La dinamita es «vestigio de cuando los llaneros pescaban con explosivos»; el revólver es el de Agapito, más «la exquisita pistola calibre 25 y la escopeta que Saúl no encuentra»; el hacha es con la que Candelaria mata a Esteban y la que Rosendo carga por el camino (censo).",
@@ -17323,7 +17420,17 @@
         {
           "myth": "amanecer-llanero",
           "field": "content",
-          "note": "Hoja de agrupación: cubre instrumentos_del_joropo, chinchorro_y_hamaca, aguardiente_y_guarapo, corona_de_plumas_y_tunica, cuerdas_para_atar_ninos. Utilería de parranda y de vivienda. Aquí queda registrado que el corpus no tiene arpa ni cuatro (censo, sheet_groups)."
+          "note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro."
+        },
+        {
+          "myth": "el-brujo-de-la-costa-del-pauto",
+          "field": "content",
+          "note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro."
+        },
+        {
+          "myth": "el-dominguez",
+          "field": "content",
+          "note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro."
         }
       ],
       "design_contract": {
@@ -17358,7 +17465,7 @@
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Orinoquia llanera V1 - object_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del jinete o del que camina por la sabana. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
-        "primary_request": "hechura, escala y uso del objeto para Hoja de utilería: fiesta y casa. Cinco piezas de parranda y de vivienda colgadas o apoyadas contra un muro de bahareque: tiple y maracas, chinchorro plegado, botella y totuma, corona de plumas con túnica doblada, y un rollo de cuerda: la hoja se compone en vertical, colgando, y es la única de utilería que no está sobre una tabla.",
+        "primary_request": "hechura, escala y uso del objeto para hoja utileria fiesta y casa. Cinco piezas de parranda y de vivienda colgadas o apoyadas contra un muro de bahareque: tiple y maracas, chinchorro plegado, botella y totuma, corona de plumas con túnica doblada, y un rollo de cuerda: la hoja se compone en vertical, colgando, y es la única de utilería que no está sobre una tabla.",
         "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel pajizo rubio para la sabana de verano, papel verde húmedo para la de agua alta, papel gris ceniza para la quemada, papel barro para el camino embarrado del piedemonte, papel encalado blanco roto para el muro de bahareque, papel cuero curtido para apero y silla. Capas escalonadas en profundidad que construyen el horizonte por planos superpuestos y no por perspectiva atmosférica pintada; en el llano, muchas capas muy bajas y muy anchas.",
         "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Todas colgando o apoyadas a la altura de la mano contra un paño de bahareque, a la misma distancia de cámara; el tiple da la escala de todo lo demás.",
         "lighting_mood": "La luz fecha la escena y sólo hay cuatro, nunca mezcladas en un mismo cuadro. Sol alto de sabana abierta, sin obstáculo, que aplana el horizonte y acorta la sombra: la luz por defecto del estrato de hato. Vela, mechito de cera y brasero: un solo foco cálido, bajo y muy corto de alcance, para el estrato colonial y el interior del rancho. Lámpara de petróleo y luz caliente de cantina, con halo, para el sitio de parrando y el cafeteadero. Y linterna y faro de campero, única luz fría del corpus, exclusiva de las cinco páginas del piedemonte moderno. Fuera de eso sólo hay luna —plenilunio, menguante y luna roja— y lo que el propio relato enciende: la esfera de fuego, los tres luceros, la sombra de plenilunio del jesuita.",
@@ -17366,7 +17473,7 @@
         "era": "Tres estratos que no comparten cuadro. Colonial de misión, hasta 1767: viviendas de bahareque y palma, iglesia de maderos con cubierta de paja, el pueblo como un puñado de casas y no como una villa —San José de Cravo se funda en 1649 con diecinueve hombres y sus familias—, sotana, ganado suelto; la tapia pisada y la teja de barro son tardías y de edificio de Estado, desde 1788. Republicano de hato, del XIX a mediados del XX: caballo de silla con lazo, corral con botalón y majada, garabato y mandador, dril, pantalón arremangado hasta la rodilla, pie descalzo, sombrero de fieltro pelo e' guama, alpargata de suela de cuero, faja ancha, tiple y maracas, vapor en el Meta y plumas de garza y sarrapia bajando al Orinoco. Moderno del piedemonte, 1982-1985: campero, carretera con abismo y barro, linterna, detector de minas, digitopuntura. Y un solo objeto que atraviesa los tres sin cambiar: la cruz de madera sobre la tumba.",
         "constraints": [
           "Cinco piezas de parranda y de vivienda colgadas o apoyadas contra un muro de bahareque: tiple y maracas, chinchorro plegado, botella y totuma, corona de plumas con túnica doblada, y un rollo de cuerda: la hoja se compone en vertical, colgando, y es la única de utilería que no está sobre una tabla.",
-          "mostrar: Utilería de parranda y de vivienda. Aquí queda registrado que el corpus no tiene arpa ni cuatro (censo, sheet_groups).",
+          "mostrar: Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro.",
           "documentado: El censo agrupa cinco objetos de parranda y vivienda y deja anotado que «en todo el corpus no aparecen ni arpa ni cuatro. La música llanera de estas páginas es tiple, maracas y coplas» (censo, `sheet_groups`).",
           "documentado: La cronología lo respalda: el conjunto casanareño del XIX era de bandolas y guitarro, y el tiple y el requinto sólo se cambian por el arpa y el cuatro «hasta mediados del siglo XX»; hasta 1965 había tan pocos arpistas en Colombia que se traían de Venezuela (dossier §1.2).",
           "documentado: La prueba documental negativa: en la descripción que Ramón Guerra Azuola hizo en 1855 de los músicos de Macuco se mencionan «tiples y carrascas» y no se menciona arpa (dossier §1.2).",
@@ -17413,7 +17520,17 @@
         {
           "myth": "el-llano-cobra-sus-deudas",
           "field": "content",
-          "note": "Hoja de agrupación: cubre semillas_de_pinon, sarrapia_cueros_y_plumas, mechitos_de_cera_de_abejas, detector_de_minas, brasero_del_curandero. Objetos de comercio, monte y cura que aparecen una sola vez cada uno (censo, sheet_groups)."
+          "note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno."
+        },
+        {
+          "myth": "el-tesoro-de-caribare",
+          "field": "content",
+          "note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno."
+        },
+        {
+          "myth": "la-culebra-cascabel",
+          "field": "content",
+          "note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno."
         }
       ],
       "design_contract": {
@@ -17447,7 +17564,7 @@
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Orinoquia llanera V1 - object_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del jinete o del que camina por la sabana. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
-        "primary_request": "hechura, escala y uso del objeto para Hoja de utilería: comercio y monte. Cinco piezas de comercio, monte y cura repartidas sobre un costal abierto: un puñado de semillas, un fardo atado de sarrapia con cueros y plumas, dos mechitos de cera de abejas, un detector de minas con su plato y su vara, y un brasero de barro humeando: es la única hoja de utilería del corpus donde algo está encendido, y la única que mezcla tres estratos de época en un mismo cuadro.",
+        "primary_request": "hechura, escala y uso del objeto para hoja utileria comercio y monte. Cinco piezas de comercio, monte y cura repartidas sobre un costal abierto: un puñado de semillas, un fardo atado de sarrapia con cueros y plumas, dos mechitos de cera de abejas, un detector de minas con su plato y su vara, y un brasero de barro humeando: es la única hoja de utilería del corpus donde algo está encendido, y la única que mezcla tres estratos de época en un mismo cuadro.",
         "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel pajizo rubio para la sabana de verano, papel verde húmedo para la de agua alta, papel gris ceniza para la quemada, papel barro para el camino embarrado del piedemonte, papel encalado blanco roto para el muro de bahareque, papel cuero curtido para apero y silla. Capas escalonadas en profundidad que construyen el horizonte por planos superpuestos y no por perspectiva atmosférica pintada; en el llano, muchas capas muy bajas y muy anchas.",
         "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Vista casi en planta desde la altura de quien se agacha; el detector, que es la pieza más larga, marca la diagonal y da la medida a las demás.",
         "lighting_mood": "La luz fecha la escena y sólo hay cuatro, nunca mezcladas en un mismo cuadro. Sol alto de sabana abierta, sin obstáculo, que aplana el horizonte y acorta la sombra: la luz por defecto del estrato de hato. Vela, mechito de cera y brasero: un solo foco cálido, bajo y muy corto de alcance, para el estrato colonial y el interior del rancho. Lámpara de petróleo y luz caliente de cantina, con halo, para el sitio de parrando y el cafeteadero. Y linterna y faro de campero, única luz fría del corpus, exclusiva de las cinco páginas del piedemonte moderno. Fuera de eso sólo hay luna —plenilunio, menguante y luna roja— y lo que el propio relato enciende: la esfera de fuego, los tres luceros, la sombra de plenilunio del jesuita.",
@@ -17455,7 +17572,7 @@
         "era": "Tres estratos que no comparten cuadro. Colonial de misión, hasta 1767: viviendas de bahareque y palma, iglesia de maderos con cubierta de paja, el pueblo como un puñado de casas y no como una villa —San José de Cravo se funda en 1649 con diecinueve hombres y sus familias—, sotana, ganado suelto; la tapia pisada y la teja de barro son tardías y de edificio de Estado, desde 1788. Republicano de hato, del XIX a mediados del XX: caballo de silla con lazo, corral con botalón y majada, garabato y mandador, dril, pantalón arremangado hasta la rodilla, pie descalzo, sombrero de fieltro pelo e' guama, alpargata de suela de cuero, faja ancha, tiple y maracas, vapor en el Meta y plumas de garza y sarrapia bajando al Orinoco. Moderno del piedemonte, 1982-1985: campero, carretera con abismo y barro, linterna, detector de minas, digitopuntura. Y un solo objeto que atraviesa los tres sin cambiar: la cruz de madera sobre la tumba.",
         "constraints": [
           "Cinco piezas de comercio, monte y cura repartidas sobre un costal abierto: un puñado de semillas, un fardo atado de sarrapia con cueros y plumas, dos mechitos de cera de abejas, un detector de minas con su plato y su vara, y un brasero de barro humeando: es la única hoja de utilería del corpus donde algo está encendido, y la única que mezcla tres estratos de época en un mismo cuadro.",
-          "mostrar: Objetos de comercio, monte y cura que aparecen una sola vez cada uno (censo, sheet_groups).",
+          "mostrar: Objetos de comercio, monte y cura que aparecen una sola vez cada uno.",
           "documentado: El censo agrupa cinco objetos de comercio, monte y cura que aparecen una sola vez cada uno: semillas de piñón, sarrapia con cueros y plumas, mechitos de cera de abejas, detector de minas y brasero del curandero (censo, `sheet_groups`).",
           "documentado: Por el Meta y el Orinoco bajaban caucho, quina, plumas de garza y sarrapia; Orocué exportó en su auge de 1890 a 1930 cueros de becerro, de res, de venado y de tigre, plumas de garza, arroz, bálsamo de copaiba, caucho y sarrapia (dossier §2.4).",
           "documentado: Los mechitos de cera «salvan a las dos familias chiricoas: alumbraban a Dios», y el detector de minas «chirriando como serpiente despierta encuentra la voz del tesoro en 1944» (censo).",
@@ -17502,7 +17619,17 @@
         {
           "myth": "amanecer-llanero",
           "field": "content",
-          "note": "Hoja de agrupación: cubre don_antonio_heredia, dona_juana, felipe_el_loco, david_gamboa, maria_de_los_angeles, rosa_linda, carlos, victoria, casanari. Hoja de reparto del estrato republicano de hato, con cinco variantes —patrón, señora de casa grande, vaquero, joven y muchacha—, creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo físico en el texto."
+          "note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto."
+        },
+        {
+          "myth": "el-toro-negro-patorreal",
+          "field": "content",
+          "note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto."
+        },
+        {
+          "myth": "la-bola-de-fuego",
+          "field": "content",
+          "note": "Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto."
         }
       ],
       "design_contract": {
@@ -17538,7 +17665,7 @@
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Orinoquia llanera V1 - group_grammar",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del jinete o del que camina por la sabana. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
-        "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Hoja de reparto: hato republicano. Cinco figuras de pie en fila frontal y equidistante sobre una franja de suelo vacía, sin escena y sin fondo, de izquierda a derecha patrón, señora de casa grande, vaquero, joven y muchacha, cada una con un solo objeto en la mano que dice su oficio: es una hoja de casting y por eso es la única lámina del corpus con figuras alineadas y mirando al frente.",
+        "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para hoja reparto de hato. Cinco figuras de pie en fila frontal y equidistante sobre una franja de suelo vacía, sin escena y sin fondo, de izquierda a derecha patrón, señora de casa grande, vaquero, joven y muchacha, cada una con un solo objeto en la mano que dice su oficio: es una hoja de casting y por eso es la única lámina del corpus con figuras alineadas y mirando al frente.",
         "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel pajizo rubio para la sabana de verano, papel verde húmedo para la de agua alta, papel gris ceniza para la quemada, papel barro para el camino embarrado del piedemonte, papel encalado blanco roto para el muro de bahareque, papel cuero curtido para apero y silla. Capas escalonadas en profundidad que construyen el horizonte por planos superpuestos y no por perspectiva atmosférica pintada; en el llano, muchas capas muy bajas y muy anchas.",
         "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Las cinco a la misma altura de línea de suelo y a la misma distancia de cámara, de cuerpo entero, ocupando cuatro quintos de la altura del encuadre. La comparación entre ellas es lo único que la lámina mide.",
         "lighting_mood": "La luz fecha la escena y sólo hay cuatro, nunca mezcladas en un mismo cuadro. Sol alto de sabana abierta, sin obstáculo, que aplana el horizonte y acorta la sombra: la luz por defecto del estrato de hato. Vela, mechito de cera y brasero: un solo foco cálido, bajo y muy corto de alcance, para el estrato colonial y el interior del rancho. Lámpara de petróleo y luz caliente de cantina, con halo, para el sitio de parrando y el cafeteadero. Y linterna y faro de campero, única luz fría del corpus, exclusiva de las cinco páginas del piedemonte moderno. Fuera de eso sólo hay luna —plenilunio, menguante y luna roja— y lo que el propio relato enciende: la esfera de fuego, los tres luceros, la sombra de plenilunio del jesuita.",
@@ -17546,7 +17673,7 @@
         "era": "Tres estratos que no comparten cuadro. Colonial de misión, hasta 1767: viviendas de bahareque y palma, iglesia de maderos con cubierta de paja, el pueblo como un puñado de casas y no como una villa —San José de Cravo se funda en 1649 con diecinueve hombres y sus familias—, sotana, ganado suelto; la tapia pisada y la teja de barro son tardías y de edificio de Estado, desde 1788. Republicano de hato, del XIX a mediados del XX: caballo de silla con lazo, corral con botalón y majada, garabato y mandador, dril, pantalón arremangado hasta la rodilla, pie descalzo, sombrero de fieltro pelo e' guama, alpargata de suela de cuero, faja ancha, tiple y maracas, vapor en el Meta y plumas de garza y sarrapia bajando al Orinoco. Moderno del piedemonte, 1982-1985: campero, carretera con abismo y barro, linterna, detector de minas, digitopuntura. Y un solo objeto que atraviesa los tres sin cambiar: la cruz de madera sobre la tumba.",
         "constraints": [
           "Cinco figuras de pie en fila frontal y equidistante sobre una franja de suelo vacía, sin escena y sin fondo, de izquierda a derecha patrón, señora de casa grande, vaquero, joven y muchacha, cada una con un solo objeto en la mano que dice su oficio: es una hoja de casting y por eso es la única lámina del corpus con figuras alineadas y mirando al frente.",
-          "mostrar: Hoja de reparto del estrato republicano de hato, con cinco variantes —patrón, señora de casa grande, vaquero, joven y muchacha—, creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo físico en el texto.",
+          "mostrar: Hoja de reparto del estrato republicano de hato, con cinco variantes —patron, senora de casa grande, vaquero, joven y muchacha—. Creada en la etapa de inventario para absorber a los nueve personajes que el dossier §5.3 colapsa por no tener un solo rasgo fisico en el texto.",
           "documentado: Reparto de hato, estrato republicano. Variantes: patrón, señora de casa grande, vaquero, joven y muchacha. Absorbe a don Antonio Heredia, doña Juana, don Felipe, David Gamboa, María de los Ángeles, Rosa Linda, Carlos, Victoria y Casanari (dossier §5.3).",
           "documentado: «Trece de los veintitrés no tienen ni un rasgo físico»: don Antonio Heredia sólo «poseía el mayor hato del lugar»; doña Juana es «la esposa de Don Antonio»; David Gamboa es «un experimentado vaquero de Todos los Santos», un oficio y no un cuerpo; Carlos y Victoria sólo traen las edades de tres y ocho años; don Felipe, Casanari y Rosa Linda traen conducta, edad o linaje y ningún cuerpo (dossier §5.1).",
           "documentado: El vestuario republicano está fechado en 1943 y en la cita de mediados del XIX (dossier §1.3), y la acuarela de Manuel María Paz de 1856 gobierna cuerpo, postura y apero de la faena (dossier §1.4).",
@@ -17593,7 +17720,17 @@
         {
           "myth": "el-brujo-de-la-costa-del-pauto",
           "field": "content",
-          "note": "Hoja de agrupación: cubre don_tarsicio, abelardo_piriachi, don_agapito. Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—, creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa. El narrador viajero, que el §5.3 ponía aquí, se resuelve en la gramática de comunidad por aparecer en los dos estratos."
+          "note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos."
+        },
+        {
+          "myth": "el-domador-de-brujas",
+          "field": "content",
+          "note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos."
+        },
+        {
+          "myth": "los-tres-luceros",
+          "field": "content",
+          "note": "Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos."
         }
       ],
       "design_contract": {
@@ -17630,7 +17767,7 @@
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Orinoquia llanera V1 - group_grammar",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del jinete o del que camina por la sabana. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
-        "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Hoja de reparto: piedemonte moderno. Tres figuras sobre suelo vacío que no comparten altura —visitante de ciudad de pie con camisa metida y zapato cerrado, curandero en cuclillas con un manojo de raíces, hombre de camino encorvado con la linterna encendida—: se distingue de la hoja de hato en que allí las cinco figuras están alineadas y aquí ninguna está a la misma altura que otra.",
+        "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para hoja reparto del piedemonte. Tres figuras sobre suelo vacío que no comparten altura —visitante de ciudad de pie con camisa metida y zapato cerrado, curandero en cuclillas con un manojo de raíces, hombre de camino encorvado con la linterna encendida—: se distingue de la hoja de hato en que allí las cinco figuras están alineadas y aquí ninguna está a la misma altura que otra.",
         "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel pajizo rubio para la sabana de verano, papel verde húmedo para la de agua alta, papel gris ceniza para la quemada, papel barro para el camino embarrado del piedemonte, papel encalado blanco roto para el muro de bahareque, papel cuero curtido para apero y silla. Capas escalonadas en profundidad que construyen el horizonte por planos superpuestos y no por perspectiva atmosférica pintada; en el llano, muchas capas muy bajas y muy anchas.",
         "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Las tres sobre la misma línea de suelo pero en tres alturas distintas —de pie, en cuclillas y encorvado—, a la misma distancia de cámara; la diferencia de altura es la que impide que la hoja se lea igual que la de hato.",
         "lighting_mood": "La luz fecha la escena y sólo hay cuatro, nunca mezcladas en un mismo cuadro. Sol alto de sabana abierta, sin obstáculo, que aplana el horizonte y acorta la sombra: la luz por defecto del estrato de hato. Vela, mechito de cera y brasero: un solo foco cálido, bajo y muy corto de alcance, para el estrato colonial y el interior del rancho. Lámpara de petróleo y luz caliente de cantina, con halo, para el sitio de parrando y el cafeteadero. Y linterna y faro de campero, única luz fría del corpus, exclusiva de las cinco páginas del piedemonte moderno. Fuera de eso sólo hay luna —plenilunio, menguante y luna roja— y lo que el propio relato enciende: la esfera de fuego, los tres luceros, la sombra de plenilunio del jesuita.",
@@ -17638,7 +17775,7 @@
         "era": "Tres estratos que no comparten cuadro. Colonial de misión, hasta 1767: viviendas de bahareque y palma, iglesia de maderos con cubierta de paja, el pueblo como un puñado de casas y no como una villa —San José de Cravo se funda en 1649 con diecinueve hombres y sus familias—, sotana, ganado suelto; la tapia pisada y la teja de barro son tardías y de edificio de Estado, desde 1788. Republicano de hato, del XIX a mediados del XX: caballo de silla con lazo, corral con botalón y majada, garabato y mandador, dril, pantalón arremangado hasta la rodilla, pie descalzo, sombrero de fieltro pelo e' guama, alpargata de suela de cuero, faja ancha, tiple y maracas, vapor en el Meta y plumas de garza y sarrapia bajando al Orinoco. Moderno del piedemonte, 1982-1985: campero, carretera con abismo y barro, linterna, detector de minas, digitopuntura. Y un solo objeto que atraviesa los tres sin cambiar: la cruz de madera sobre la tumba.",
         "constraints": [
           "Tres figuras sobre suelo vacío que no comparten altura —visitante de ciudad de pie con camisa metida y zapato cerrado, curandero en cuclillas con un manojo de raíces, hombre de camino encorvado con la linterna encendida—: se distingue de la hoja de hato en que allí las cinco figuras están alineadas y aquí ninguna está a la misma altura que otra.",
-          "mostrar: Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—, creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa. El narrador viajero, que el §5.3 ponía aquí, se resuelve en la gramática de comunidad por aparecer en los dos estratos.",
+          "mostrar: Hoja de reparto del estrato moderno del piedemonte, 1982-1985, con tres variantes —visitante de ciudad, curandero y hombre de camino—. Creada en la etapa de inventario para absorber a los personajes que el dossier §5.3 colapsa; el narrador viajero no entra aqui porque aparece en los dos estratos.",
           "documentado: Reparto del piedemonte, 1982-1985. Variantes: visitante de ciudad, curandero y hombre de camino (dossier §5.3).",
           "documentado: De los absorbidos, el texto sólo da conducta: don Tarsicio es «un hombre con el magnetismo de un río» que «cargaba en su espalda las historias de Europa», y Abelardo Piriachi «con gestos toscos desmentía el halo mágico» (dossier §5.1).",
           "documentado: El estrato moderno del piedemonte trae campero, carretera con abismo y barro, linterna, detector de minas y digitopuntura, y nada del estrato colonial (dossier §1.1).",

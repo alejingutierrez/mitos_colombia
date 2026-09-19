@@ -894,6 +894,11 @@
           "entity_id": "ayawa_makuna",
           "role": "magic_subject",
           "note": "Es la mezcla más fácil de cometer en el Apaporis, porque el episodio se parece casi línea por línea. Lo registro como excluido para que quede escrito antes de diseñar."
+        },
+        {
+          "entity_id": "hoja_utileria_ufaina",
+          "role": "plot_object",
+          "note": "Cinco piezas menores en una hoja. Dos de ellas, la caja y la esfera, son recipientes prohibidos que el menor abre antes de tiempo: comparten regla y conviene diseñarlas juntas para que se lean como pareja."
         }
       ]
     }
@@ -2259,8 +2264,8 @@
         }
       ],
       "census_note": "Objeto menor con un beat grande: el abuelo advierte que sólo se abra al llegar, Kayafikí afloja los amarres y las hojas escapan al monte. El episodio se cuenta por la maloca, no por la caja.",
-      "covered_by": "el_abuelo_dueno_de_las_hojas",
-      "coverage_note": "Objeto menor con un beat grande: el abuelo advierte que sólo se abra al llegar, Kayafikí afloja los amarres y las hojas escapan al monte. El episodio se cuenta por la maloca, no por la caja. El censo la agrupaba en `hoja_utileria_ufaina`, que no es una entidad del plan v3; pasa a la ficha del abuelo, que es quien entrega los dos recipientes prohibidos con su advertencia, y allí se diseña en pareja con la esfera negra, como pidió el censo."
+      "covered_by": "hoja_utileria_ufaina",
+      "coverage_note": "Objeto menor con un beat grande: el abuelo advierte que sólo se abra al llegar, Kayafikí afloja los amarres y las hojas escapan al monte. El episodio se cuenta por la maloca, no por la caja."
     },
     "esfera_negra": {
       "name": "La pequeña esfera negra de la noche",
@@ -2297,8 +2302,8 @@
         }
       ],
       "census_note": "Gemela estructural de la caja: recipiente pequeño, misma advertencia, misma desobediencia. Es el continente; la ficha del episodio es la noche que sale de él.",
-      "covered_by": "el_abuelo_dueno_de_las_hojas",
-      "coverage_note": "Gemela estructural de la caja: recipiente pequeño, misma advertencia, misma desobediencia. Es el continente; la ficha del episodio es la noche que sale de él. Antes en `hoja_utileria_ufaina`, que no existe como entidad v3. Va con la caja en la ficha del abuelo: son gemelas estructurales —mismo recipiente prohibido, misma advertencia, misma desobediencia a mitad de camino— y el censo pidió diseñarlas juntas."
+      "covered_by": "hoja_utileria_ufaina",
+      "coverage_note": "Gemela estructural de la caja: recipiente pequeño, misma advertencia, misma desobediencia. Es el continente; la ficha del episodio es la noche que sale de él."
     },
     "astillas": {
       "name": "Las astillas del árbol",
@@ -2335,8 +2340,8 @@
         }
       ],
       "census_note": "Se reponen cada noche en el tronco hasta que Kayafikí las arroja al lago. Su forma va en la hoja de utilería y su transformación en la ficha de peces.",
-      "covered_by": "peces",
-      "coverage_note": "Se reponen cada noche en el tronco hasta que Kayafikí las arroja al lago. Su forma va en la hoja de utilería y su transformación en la ficha de peces. Antes en `hoja_utileria_ufaina`, que no existe como entidad v3. Pasa a la ficha de peces porque el censo ya exigía que astilla y pez aparecieran en una misma lámina: es la segunda procedencia de los peces."
+      "covered_by": "hoja_utileria_ufaina",
+      "coverage_note": "Se reponen cada noche en el tronco hasta que Kayafikí las arroja al lago. Su forma va en la hoja de utilería y su transformación en la ficha de peces."
     },
     "hojas_de_milpesos": {
       "name": "Las hojas de milpesos de la cubierta",
@@ -2373,8 +2378,8 @@
         }
       ],
       "census_note": "Material de techado que se pide al abuelo, se transporta en la caja, escapa al monte y alcanza sólo para media maloca. Va como pieza de utilería atada, no como ficha botánica: la palma que sí se ficha es la bombona.",
-      "covered_by": "primera_maloca",
-      "coverage_note": "Material de techado que se pide al abuelo, se transporta en la caja, escapa al monte y alcanza sólo para media maloca. Va como pieza de utilería atada, no como ficha botánica: la palma que sí se ficha es la bombona. Antes en `hoja_utileria_ufaina`, que no existe como entidad v3. Pasa a la ficha de la primera maloca, que es donde se distinguen las tres hojas del relato: milpesos para el rancho, bombona para el segundo intento y caraná de empajar para el techo definitivo."
+      "covered_by": "hoja_utileria_ufaina",
+      "coverage_note": "Material de techado que se pide al abuelo, se transporta en la caja, escapa al monte y alcanza sólo para media maloca. Va como pieza de utilería atada, no como ficha botánica: la palma que sí se ficha es la bombona."
     },
     "soporte_del_deposito": {
       "name": "El soporte del depósito que se derriba",
@@ -2416,8 +2421,8 @@
         }
       ],
       "census_note": "Pieza menor pero es lo que se rompe para liberar el agua; sin ella el tercer episodio no tiene gesto.",
-      "covered_by": "cuatro_depositos_de_agua",
-      "coverage_note": "Pieza menor pero es lo que se rompe para liberar el agua; sin ella el tercer episodio no tiene gesto. Antes en `hoja_utileria_ufaina`, que no existe como entidad v3, y la ficha de los depósitos ya declaraba que incluye el soporte que se derriba."
+      "covered_by": "hoja_utileria_ufaina",
+      "coverage_note": "Pieza menor pero es lo que se rompe para liberar el agua; sin ella el tercer episodio no tiene gesto."
     },
     "yurupari": {
       "name": "El Yuruparí",
@@ -2595,6 +2600,41 @@
       ],
       "census_note": "Es la mezcla más fácil de cometer en el Apaporis, porque el episodio se parece casi línea por línea. Lo registro como excluido para que quede escrito antes de diseñar.",
       "exclusion_reason": "paralelo regional de otro pueblo: la etnografía Makuna documenta a los Ayawa derribando un árbol del que salen aguas y peces, y la propia fuente advierte que no es una variante incorporable ni una fuente para vestir o ritualizar estas imágenes"
+    },
+    "hoja_utileria_ufaina": {
+      "name": "hoja utileria ufaina",
+      "kind": "objeto",
+      "description": "Cinco piezas menores en una hoja. Dos de ellas, la caja y la esfera, son recipientes prohibidos que el menor abre antes de tiempo: comparten regla y conviene diseñarlas juntas para que se lean como pareja.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-ufaina"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "Cinco piezas menores en una hoja. Dos de ellas, la caja y la esfera, son recipientes prohibidos que el menor abre antes de tiempo: comparten regla y conviene diseñarlas juntas para que se lean como pareja."
+        }
+      ],
+      "census_note": "Cinco piezas menores en una hoja. Dos de ellas, la caja y la esfera, son recipientes prohibidos que el menor abre antes de tiempo: comparten regla y conviene diseñarlas juntas para que se lean como pareja.",
+      "groups": [
+        "caja_de_hojas_amarrada",
+        "esfera_negra",
+        "astillas",
+        "hojas_de_milpesos",
+        "soporte_del_deposito"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {
