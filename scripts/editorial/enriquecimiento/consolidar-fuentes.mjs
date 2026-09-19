@@ -11,9 +11,17 @@
  * añade al final de `sourceKeys` del módulo `editorial/<c>/myths/<slug>.mjs`.
  * Dry-run por defecto: imprime el plan y no escribe. Con --apply escribe el pool y
  * los módulos; después toca correr auditar → test → aplicar-fuentes.
- * Sólo cubre la disposición `myths/<slug>.mjs` + `sources.mjs` con `sourceKeys`, y
- * los resúmenes por mito ({ key, summary, limitation }) exigen que el `pick…Sources`
- * de la comunidad acepte objetos, como ya hace el de wayuu.
+ *
+ * Con --reemplazar, la lista propuesta **sustituye** a la que el mito tenía en
+ * vez de añadirse al final. Es el modo que necesita una comunidad cuyo reparto
+ * venía en bloque —la misma lista para todas sus fichas—: ahí lo que hay no es
+ * un punto de partida al que sumar, sino lo que hay que tirar. Sin la bandera
+ * se conserva el comportamiento de siempre, que es sumar.
+ *
+ * Cubre las tres disposiciones: `myths/<slug>.mjs`, uno o varios
+ * `definitions*.mjs`, y `records.mjs`. Los resúmenes por mito
+ * ({ key, summary, limitation }) exigen que el `pick…Sources` de la comunidad
+ * acepte objetos; `abrir-modulo.mjs` deja así a las que no lo hacían.
  */
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -112,7 +120,7 @@ for (const { slug, source, file } of proposals) {
   if (h && !h.ok && !h.restricted && h.verdict !== "SIN_RESPUESTA") { rejected.push({ slug, url, razon: `URL ${h.verdict} (${h.status ?? h.error})` }); continue; }
   const flags = sourceFlags({ ...source, url }, record).filter((f) => f !== "HTTP_SIN_TLS");
   if (flags.some((f) => f.startsWith("COMPARATIVA_SIN_PARALELO"))) { rejected.push({ slug, url, razon: flags.join(",") }); continue; }
-  if (allSources(record).some((s) => normalizeUrl(s.url) === norm)) { rejected.push({ slug, url, razon: "el mito ya la cita" }); continue; }
+  if (!options.reemplazar && allSources(record).some((s) => normalizeUrl(s.url) === norm)) { rejected.push({ slug, url, razon: "el mito ya la cita" }); continue; }
   let key = poolByUrl.get(norm);
   let isNew = false;
   if (!key) {
@@ -134,7 +142,11 @@ for (const { slug, source, file } of proposals) {
 }
 
 console.log(`Consolidación · ${communitySlug} · ${proposals.length} propuestas · ${[...plan.values()].reduce((n, e) => n + e.length, 0)} aceptadas · ${additions.size} obras nuevas en el pool · ${rejected.filter((r) => !r.razon.startsWith("AVISO")).length} rechazadas`);
-console.table([...plan.entries()].map(([slug, entries]) => ({ slug, antes: allSources(modules.get(slug)).length, nuevas: entries.length, despues: allSources(modules.get(slug)).length + entries.length })));
+console.table([...plan.entries()].map(([slug, entries]) => {
+  const antes = allSources(modules.get(slug)).length;
+  return { slug, antes, propuestas: entries.length, despues: options.reemplazar ? entries.length : antes + entries.length };
+}));
+if (options.reemplazar) console.log("Modo reemplazo: la lista propuesta sustituye a la que el mito tenía.");
 for (const r of rejected) console.log(`  ${r.razon.startsWith("AVISO") ? "·" : "✗"} ${r.slug}: ${r.razon} — ${r.url}`);
 if (!options.apply) { console.log("\nDry-run. Añade --apply para escribir el pool y los módulos."); process.exit(0); }
 
@@ -172,6 +184,16 @@ if (hasDefinitions && !hasMythFiles) {
         )
         .join("\n");
     const yaDeclara = /\n    sourceKeys: \[/.test(bloque);
+    if (yaDeclara && options.reemplazar) {
+      // La lista vieja era el reparto en bloque: se va entera y en su lugar
+      // queda la que el mito usó de verdad, en el orden en que la propuso.
+      const inicio = src.indexOf("\n    sourceKeys: [\n", at.index);
+      const fin = src.indexOf("\n    ],\n", inicio);
+      if (inicio < 0 || fin < 0) throw new Error(`${slug}: no puedo delimitar su sourceKeys`);
+      sources.set(file, src.slice(0, inicio) + `\n    sourceKeys: [\n${render(entries)}` + src.slice(fin));
+      touched.add(file);
+      continue;
+    }
     if (yaDeclara) {
       // El mito ya trae su lista: las nuevas claves se añaden al final de ella,
       // sin tocar las que ya estaban ni su orden.
@@ -188,7 +210,7 @@ if (hasDefinitions && !hasMythFiles) {
       touched.add(file);
       continue;
     }
-    const keys = [...currentKeys(modules.get(slug)), ...entries];
+    const keys = options.reemplazar ? entries : [...currentKeys(modules.get(slug)), ...entries];
     const insert = `${at[0]}    sourceKeys: [\n${render(keys)}\n    ],\n`;
     sources.set(file, src.slice(0, at.index) + insert + src.slice(at.index + at[0].length));
     touched.add(file);
@@ -204,8 +226,15 @@ for (const [slug, entries] of plan) {
   let src = await fs.readFile(file, "utf8");
   const match = src.match(/  sourceKeys: \[[\s\S]*?\n  \],\n/);
   const code = entries.map((e) => (typeof e === "string" ? `    ${js(e)},` : `    {\n      key: ${js(e.key)},\n${e.summary ? `      summary:\n        ${js(e.summary)},\n` : ""}${e.limitation ? `      limitation:\n        ${js(e.limitation)},\n` : ""}    },`)).join("\n");
-  if (match) {
+  if (match && options.reemplazar) {
+    // La lista vieja era el reparto en bloque: se va entera.
+    src = src.replace(match[0], `  sourceKeys: [\n${code}\n  ],\n`);
+  } else if (match) {
     src = src.replace(match[0], match[0].replace(/\n  \],\n$/, `\n${code}\n  ],\n`));
+  } else if (options.reemplazar) {
+    const anchor = src.match(/\n  tags: \[/) || src.match(/\n  researchNotes:/);
+    if (!anchor) throw new Error(`${slug}: no encuentro dónde insertar sourceKeys`);
+    src = src.slice(0, anchor.index) + `\n  sourceKeys: [\n${code}\n  ],` + src.slice(anchor.index);
   } else {
     // Comunidades cuyo define aplica una lista por defecto (nasa): el módulo no
     // declara sourceKeys, así que se crea con las claves por defecto más las nuevas.
