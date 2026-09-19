@@ -1210,6 +1210,12 @@
           "role": "plot_object",
           "note": "Verificado por conteo: «dopa» aparece 0 veces en el canon, «yopo» 6 y «kapi» 3. Las escenas se montan como reunión y como efecto, sin parafernalia. ASIMETRÍA DELIBERADA con U’wa, donde el yopo sí tiene ficha porque no está en su lista sensible y su canon autoriza expresamente la escena.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_camino_y_engano",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1351,6 +1357,18 @@
           "role": "magic_subject",
           "note": "Verificado en el campo mito del relato 5.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_camino_y_engano",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_cuidado_y_curacion",
+          "role": "plot_object",
+          "note": "Los cuatro objetos con que el áinawi permite que la mujer se cure, más la savia que devuelve la vista a los hermanos. ADVERTENCIA: ninguno se describe en detalle en el canon; la hoja los fija como objetos genéricos y nunca como un ejemplar real de vestido o tejido Sikuani.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1473,6 +1491,12 @@
           "entity_id": "derribo_del_arbol_kaliwirnae",
           "role": "magic_subject",
           "note": "Verificado literalmente en mito y versiones del relato 6. Es la exclusión más fácil de violar: la escena del árbol cayendo es la imagen más atractiva del ciclo y NO existe en esta página.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_camino_y_engano",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1863,6 +1887,12 @@
           "entity_id": "expansiones_heredadas_de_kawiri_monae_y_la_mujer_sarnosa",
           "role": "magic_subject",
           "note": "Verificado literalmente en los campos mito de los relatos 7 y 10. Son las imágenes que un ilustrador reconstruiría por inercia si solo leyera los títulos.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_cuidado_y_curacion",
+          "role": "plot_object",
+          "note": "Los cuatro objetos con que el áinawi permite que la mujer se cure, más la savia que devuelve la vista a los hermanos. ADVERTENCIA: ninguno se describe en detalle en el canon; la hoja los fija como objetos genéricos y nunca como un ejemplar real de vestido o tejido Sikuani.",
           "role_derivada": "por categoria"
         }
       ]
@@ -5103,6 +5133,94 @@
       ],
       "census_note": "Verificado literalmente en los campos mito de los relatos 7 y 10. Son las imágenes que un ilustrador reconstruiría por inercia si solo leyera los títulos.",
       "exclusion_reason": "El canon retira expresamente ambas expansiones: «La fuente no desarrolla una guerra entre pueblos ni describe a los Kawiri Monae como almas que comen emociones» y «La versión heredada había añadido ceremonias de sanación, consejos comunitarios y un romance idealizado. Aquí se retiran»."
+    },
+    "hoja_utileria_camino_y_engano": {
+      "name": "hoja utileria camino y engano",
+      "kind": "objeto",
+      "description": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "historia-de-un-viejo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "historia-de-un-tigre"
+      ],
+      "evidence": [
+        {
+          "myth": "historia-de-un-viejo",
+          "field": "mito",
+          "note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6."
+        },
+        {
+          "myth": "kaliwirnae-el-arbol-de-los-alimentos",
+          "field": "mito",
+          "note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6."
+        },
+        {
+          "myth": "historia-de-un-tigre",
+          "field": "mito",
+          "note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6."
+        }
+      ],
+      "census_note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6.",
+      "groups": [
+        "granos_de_maiz",
+        "platano_frito",
+        "palo_de_los_hermanos",
+        "tizones_encendidos",
+        "lancetas_de_intercambio"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_cuidado_y_curacion": {
+      "name": "hoja utileria cuidado y curacion",
+      "kind": "objeto",
+      "description": "Los cuatro objetos con que el áinawi permite que la mujer se cure, más la savia que devuelve la vista a los hermanos. ADVERTENCIA: ninguno se describe en detalle en el canon; la hoja los fija como objetos genéricos y nunca como un ejemplar real de vestido o tejido Sikuani.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-sarnosa",
+        "historia-de-un-viejo"
+      ],
+      "evidence": [
+        {
+          "myth": "la-mujer-sarnosa",
+          "field": "mito",
+          "note": "Los cuatro objetos con que el áinawi permite que la mujer se cure, más la savia que devuelve la vista a los hermanos. ADVERTENCIA: ninguno se describe en detalle en el canon; la hoja los fija como objetos genéricos y nunca como un ejemplar real de vestido o tejido Sikuani."
+        },
+        {
+          "myth": "historia-de-un-viejo",
+          "field": "mito",
+          "note": "Los cuatro objetos con que el áinawi permite que la mujer se cure, más la savia que devuelve la vista a los hermanos. ADVERTENCIA: ninguno se describe en detalle en el canon; la hoja los fija como objetos genéricos y nunca como un ejemplar real de vestido o tejido Sikuani."
+        }
+      ],
+      "census_note": "Los cuatro objetos con que el áinawi permite que la mujer se cure, más la savia que devuelve la vista a los hermanos. ADVERTENCIA: ninguno se describe en detalle en el canon; la hoja los fija como objetos genéricos y nunca como un ejemplar real de vestido o tejido Sikuani.",
+      "groups": [
+        "jabon",
+        "vestido_de_la_mujer",
+        "perfume",
+        "peine",
+        "savia_que_devuelve_la_vista"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

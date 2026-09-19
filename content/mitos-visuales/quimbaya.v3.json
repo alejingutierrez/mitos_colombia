@@ -1064,6 +1064,12 @@
           "role": "setting",
           "note": "El imagePromptHorizontal lo prohíbe por nombre («río naciendo»).",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_quimbaya",
+          "role": "plot_object",
+          "note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1261,6 +1267,12 @@
           "entity_id": "caballos_y_frenos_del_plan",
           "role": "plot_object",
           "note": "Verificado en el cuarto párrafo del mito. Tampoco hay españoles en escena: el canon los excluye de la ilustración.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_quimbaya",
+          "role": "plot_object",
+          "note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real.",
           "role_derivada": "por categoria"
         }
       ]
@@ -2659,6 +2671,48 @@
       ],
       "census_note": "Verificado en el cuarto párrafo del mito. Tampoco hay españoles en escena: el canon los excluye de la ilustración.",
       "exclusion_reason": "Se mencionan pero nunca se ven: forman parte de un plan que no llega a ejecutarse —retirar los frenos, esperar el silbo—, y el doctrinero interrumpe antes del día señalado."
+    },
+    "hoja_utileria_quimbaya": {
+      "name": "hoja utileria quimbaya",
+      "kind": "objeto",
+      "description": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "batatabati",
+        "nabsacadas-la-estrella-caida"
+      ],
+      "evidence": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real."
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real."
+        }
+      ],
+      "census_note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real.",
+      "groups": [
+        "tiraderas",
+        "varas",
+        "dos_tambores",
+        "vasijas_de_bebida_de_maiz",
+        "masato_y_bollos_de_maiz",
+        "maiz"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

@@ -1149,6 +1149,12 @@
           "role": "secondary",
           "note": "Verificado en universe.mjs: son personajes históricos de la resistencia a la conquista que las fuentes conservan como acontecimiento, sin narración mítica autónoma que justifique página. Ni cuerpo, ni escena, ni relato: no hay nada que fichar sin inventarlo.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_cuycuyes",
+          "role": "plot_object",
+          "note": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1337,6 +1343,12 @@
           "entity_id": "ubicacion-verificable-de-la-cueva",
           "role": "setting",
           "note": "Verificado: el canon dice que las coordenadas conservan el entorno aproximado de Aguadas, que no señalan una cueva verificable y que la ruta «no es una ubicación arqueológica ni una invitación a buscar guacas». Una ilustración de un accidente reconocible funcionaría como mapa de guaquería. El paisaje se produce evocador y genérico, nunca localizable.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_cuycuyes",
+          "role": "plot_object",
+          "note": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa.",
           "role_derivada": "por categoria"
         }
       ]
@@ -3010,6 +3022,45 @@
       ],
       "census_note": "Verificado: el canon dice que las coordenadas conservan el entorno aproximado de Aguadas, que no señalan una cueva verificable y que la ruta «no es una ubicación arqueológica ni una invitación a buscar guacas». Una ilustración de un accidente reconocible funcionaría como mapa de guaquería. El paisaje se produce evocador y genérico, nunca localizable.",
       "exclusion_reason": "consult_required"
+    },
+    "hoja_utileria_cuycuyes": {
+      "name": "hoja utileria cuycuyes",
+      "kind": "objeto",
+      "description": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa."
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa."
+        }
+      ],
+      "census_note": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa.",
+      "groups": [
+        "resinas",
+        "mantas-plegadas",
+        "sombreros-de-cana"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

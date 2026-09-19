@@ -188,10 +188,53 @@ export function construir({ plan, censo, research }) {
     plan.entities[e.id] = entidad;
   }
 
+  // Una hoja de agrupacion **es una ficha**: el censo la cuenta como lamina y
+  // las entidades menores la declaran en su `covered_by`. Tirarlas dejaba 309
+  // `covered_by` colgando en 30 planes y borraba 94 laminas del inventario.
+  for (const grupo of censo.sheet_groups || []) {
+    const cubiertas = (grupo.covers || []).map((id) => plan.entities[id]).filter(Boolean);
+    const mitos = [...new Set(cubiertas.flatMap((e) => e.myth_refs || []))];
+    plan.entities[grupo.id] = {
+      name: grupo.id.replace(/_/g, " "),
+      kind: grupo.kind?.split(" ")[0] || "objeto",
+      description: grupo.note || `Hoja que agrupa ${cubiertas.length} piezas menores.`,
+      aliases: [],
+      states: ["canonico"],
+      evidence_basis: "documented",
+      sensitivity: "public",
+      visual_status: "required",
+      model_requirements: [],
+      model_refs: [],
+      legacy_model_refs: [],
+      myth_refs: mitos,
+      evidence: mitos.slice(0, 3).map((slug) => ({
+        myth: slug,
+        field: campoRelato,
+        note: grupo.note || "Piezas menores agrupadas en una sola hoja.",
+      })),
+      census_note: grupo.note || null,
+      groups: grupo.covers || [],
+      design: null,
+      states_declared: [],
+    };
+    pendientes.design.push(grupo.id);
+  }
+
   // Los refs se arman al reves: desde la entidad hacia el mito, para que la
   // relacion quede validada en las dos direcciones sin poder mentir.
   const porMito = new Map();
-  for (const e of censo.entities) {
+  const conGrupos = [
+    ...censo.entities,
+    ...(censo.sheet_groups || []).map((g) => ({
+      id: g.id,
+      kind: plan.entities[g.id].kind,
+      myths: plan.entities[g.id].myth_refs,
+      note: plan.entities[g.id].description,
+      sheets: g.sheets || 1,
+      name: plan.entities[g.id].name,
+    })),
+  ];
+  for (const e of conGrupos) {
     for (const slug of new Set(e.myths || [])) {
       if (!porMito.has(slug)) porMito.set(slug, []);
       porMito.get(slug).push(e);

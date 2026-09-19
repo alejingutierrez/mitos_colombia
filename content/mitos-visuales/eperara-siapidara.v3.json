@@ -933,6 +933,12 @@
           "role": "plot_object",
           "note": "El oro es además un imán de estereotipo; el módulo prohíbe oro en las ilustraciones de este frente.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_eperara",
+          "role": "plot_object",
+          "note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1025,6 +1031,12 @@
           "entity_id": "joven_ambicioso_y_el_estero_de_mangle",
           "role": "secondary",
           "note": "Sobrevive sólo en el slug. Ojo al producir: el título de la URL sigue diciendo «palabra de mangle» y puede arrastrar al ilustrador hacia el manglar y el machete en vez del árbol del agua y la minga.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_eperara",
+          "role": "plot_object",
+          "note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1998,6 +2010,46 @@
       ],
       "census_note": "Sobrevive sólo en el slug. Ojo al producir: el título de la URL sigue diciendo «palabra de mangle» y puede arrastrar al ilustrador hacia el manglar y el machete en vez del árbol del agua y la minga.",
       "exclusion_reason": "invención editorial retirada: la trama anterior de esa URL era una construcción nueva reconocida en su propio expediente y fue reemplazada por el núcleo tradicional"
+    },
+    "hoja_utileria_eperara": {
+      "name": "hoja utileria eperara",
+      "kind": "objeto",
+      "description": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas."
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas."
+        }
+      ],
+      "census_note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas.",
+      "groups": [
+        "rejo_de_yare",
+        "fibras_de_palma",
+        "hachas_de_la_minga",
+        "jugo_de_granadilla"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

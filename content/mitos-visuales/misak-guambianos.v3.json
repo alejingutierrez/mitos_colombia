@@ -1101,6 +1101,18 @@
           "role": "plot_object",
           "note": "Lo que los Pishau conocieron y enseñaron a trabajar. El relato los enumera sin describirlos ni ponerlos en escena: atrezo que la hoja resuelve con materialidad y escala.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_misak_casa",
+          "role": "plot_object",
+          "note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_misak_paramo",
+          "role": "plot_object",
+          "note": "Cuatro conjuntos menores del páramo y la disputa de los rayos: el mejicano donde se clava la vara, los alimentos de tierra fría y caliente, el mate de oro y los bienes del territorio. Van juntos porque comparten escala de mano y porque todos son atrezo de argumento, nunca de acción.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1236,6 +1248,12 @@
           "role": "plot_object",
           "note": "Las que la anciana guarda consigo tras cerrar varias puertas. Objeto menor, pero hay que fijar su forma y época porque son el signo del encierro.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_misak_casa",
+          "role": "plot_object",
+          "note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1310,6 +1328,12 @@
           "entity_id": "fogon",
           "role": "plot_object",
           "note": "Quienes oyen el ladrido «prefieren quedarse cerca del fuego». Objeto menor doméstico que reaparece como punto de reunión.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_misak_casa",
+          "role": "plot_object",
+          "note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1415,6 +1439,12 @@
           "entity_id": "mate_lleno_de_oro",
           "role": "plot_object",
           "note": "Lo que el viejo ofrece a cambio de su vara y la comunidad rechaza hasta que promete moderarse. Objeto menor de una sola escena.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_misak_paramo",
+          "role": "plot_object",
+          "note": "Cuatro conjuntos menores del páramo y la disputa de los rayos: el mejicano donde se clava la vara, los alimentos de tierra fría y caliente, el mate de oro y los bienes del territorio. Van juntos porque comparten escala de mano y porque todos son atrezo de argumento, nunca de acción.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1661,6 +1691,12 @@
           "entity_id": "semillas_de_siembra",
           "role": "plot_object",
           "note": "«Cada semilla guarda lo recibido y lo devuelve convertido en alimento», y las semillas están en la promesa de retorno. Objeto menor sin escena propia.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_misak_casa",
+          "role": "plot_object",
+          "note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios.",
           "role_derivada": "por categoria"
         }
       ]
@@ -4507,6 +4543,94 @@
       "census_note": "Lo que los Pishau conocieron y enseñaron a trabajar. El relato los enumera sin describirlos ni ponerlos en escena: atrezo que la hoja resuelve con materialidad y escala.",
       "covered_by": "hoja_utileria_misak_paramo",
       "coverage_note": "Lo que los Pishau conocieron y enseñaron a trabajar. El relato los enumera sin describirlos ni ponerlos en escena: atrezo que la hoja resuelve con materialidad y escala."
+    },
+    "hoja_utileria_misak_casa": {
+      "name": "hoja utileria misak casa",
+      "kind": "objeto",
+      "description": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-nino-serpiente",
+        "el-pajaro-que-se-come-las-almas",
+        "creacion-misak-guambianos",
+        "la-mama-grande"
+      ],
+      "evidence": [
+        {
+          "myth": "el-nino-serpiente",
+          "field": "mito",
+          "note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios."
+        },
+        {
+          "myth": "el-pajaro-que-se-come-las-almas",
+          "field": "mito",
+          "note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios."
+        },
+        {
+          "myth": "creacion-misak-guambianos",
+          "field": "mito",
+          "note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios."
+        }
+      ],
+      "census_note": "Cinco objetos menores del interior misak: hamaca, llaves, fogón, madejas de lana en bruto y semillas. Una hoja fija escala, material y paleta comunes. Prohibición explícita heredada de la exclusión por sensibilidad: aquí entra la lana sin tejer y el gesto de hilar, nunca una prenda terminada con los colores propios.",
+      "groups": [
+        "hamaca",
+        "llaves_de_la_anciana",
+        "fogon",
+        "madejas_de_lana",
+        "semillas_de_siembra"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_misak_paramo": {
+      "name": "hoja utileria misak paramo",
+      "kind": "objeto",
+      "description": "Cuatro conjuntos menores del páramo y la disputa de los rayos: el mejicano donde se clava la vara, los alimentos de tierra fría y caliente, el mate de oro y los bienes del territorio. Van juntos porque comparten escala de mano y porque todos son atrezo de argumento, nunca de acción.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-viejo-tempestad",
+        "creacion-misak-guambianos"
+      ],
+      "evidence": [
+        {
+          "myth": "el-viejo-tempestad",
+          "field": "mito",
+          "note": "Cuatro conjuntos menores del páramo y la disputa de los rayos: el mejicano donde se clava la vara, los alimentos de tierra fría y caliente, el mate de oro y los bienes del territorio. Van juntos porque comparten escala de mano y porque todos son atrezo de argumento, nunca de acción."
+        },
+        {
+          "myth": "creacion-misak-guambianos",
+          "field": "mito",
+          "note": "Cuatro conjuntos menores del páramo y la disputa de los rayos: el mejicano donde se clava la vara, los alimentos de tierra fría y caliente, el mate de oro y los bienes del territorio. Van juntos porque comparten escala de mano y porque todos son atrezo de argumento, nunca de acción."
+        }
+      ],
+      "census_note": "Cuatro conjuntos menores del páramo y la disputa de los rayos: el mejicano donde se clava la vara, los alimentos de tierra fría y caliente, el mate de oro y los bienes del territorio. Van juntos porque comparten escala de mano y porque todos son atrezo de argumento, nunca de acción.",
+      "groups": [
+        "mejicano_verde",
+        "alimentos_de_tierra_fria_y_caliente",
+        "mate_lleno_de_oro",
+        "bienes_del_territorio_pishau"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

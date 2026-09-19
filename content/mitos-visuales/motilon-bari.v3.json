@@ -1356,6 +1356,12 @@
           "role": "plot_object",
           "note": "Donde el joven se tiende para morir después de narrar, y otro de los oficios enseñados. Objeto menor de alta recurrencia; la hoja de utilería debe fijarlo bien porque aparecerá en casi toda escena de bohío.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_bari_viaje",
+          "role": "plot_object",
+          "note": "Utilería del viaje y de la estación de los muertos: los cinco objetos menores que cargan los muertos, que Taigda Chigbana entrega y que reciben al joven de vuelta en el bohío. Una sola hoja fija material, escala y acabado para que no se inventen en cada escena.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1613,6 +1619,12 @@
           "entity_id": "calabazo",
           "role": "plot_object",
           "note": "Recipiente que sustituye a la vasija en una variante; objeto menor con forma documentada.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_bari_domestica",
+          "role": "plot_object",
+          "note": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1932,6 +1944,18 @@
           "role": "plot_object",
           "note": "El relato enumera los oficios (pescar, cazar) sin describir instrumentos; la hoja de utilería resuelve formas documentadas mínimas en vez de abrir fichas por oficio.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_bari_viaje",
+          "role": "plot_object",
+          "note": "Utilería del viaje y de la estación de los muertos: los cinco objetos menores que cargan los muertos, que Taigda Chigbana entrega y que reciben al joven de vuelta en el bohío. Una sola hoja fija material, escala y acabado para que no se inventen en cada escena.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_bari_domestica",
+          "role": "plot_object",
+          "note": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -2072,6 +2096,12 @@
           "entity_id": "lena-y-fogon",
           "role": "plot_object",
           "note": "La leña reunida para la quema y el fuego que los Saimadoyi enseñan a preparar. El prompt pide «un fogón simbólico», nunca la pira con cuerpo. Objeto menor.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_bari_domestica",
+          "role": "plot_object",
+          "note": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos.",
           "role_derivada": "por categoria"
         }
       ]
@@ -5180,6 +5210,94 @@
       "census_note": "El relato enumera los oficios (pescar, cazar) sin describir instrumentos; la hoja de utilería resuelve formas documentadas mínimas en vez de abrir fichas por oficio.",
       "covered_by": "hoja_utileria_bari_domestica",
       "coverage_note": "El relato enumera los oficios (pescar, cazar) sin describir instrumentos; la hoja de utilería resuelve formas documentadas mínimas en vez de abrir fichas por oficio."
+    },
+    "hoja_utileria_bari_viaje": {
+      "name": "hoja utileria bari viaje",
+      "kind": "objeto",
+      "description": "Utilería del viaje y de la estación de los muertos: los cinco objetos menores que cargan los muertos, que Taigda Chigbana entrega y que reciben al joven de vuelta en el bohío. Una sola hoja fija material, escala y acabado para que no se inventen en cada escena.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "evidence": [
+        {
+          "myth": "caminar-liviano-hacia-el-mas-alla",
+          "field": "mito",
+          "note": "Utilería del viaje y de la estación de los muertos: los cinco objetos menores que cargan los muertos, que Taigda Chigbana entrega y que reciben al joven de vuelta en el bohío. Una sola hoja fija material, escala y acabado para que no se inventen en cada escena."
+        },
+        {
+          "myth": "sabaseba-y-los-hijos-de-la-pina",
+          "field": "mito",
+          "note": "Utilería del viaje y de la estación de los muertos: los cinco objetos menores que cargan los muertos, que Taigda Chigbana entrega y que reciben al joven de vuelta en el bohío. Una sola hoja fija material, escala y acabado para que no se inventen en cada escena."
+        }
+      ],
+      "census_note": "Utilería del viaje y de la estación de los muertos: los cinco objetos menores que cargan los muertos, que Taigda Chigbana entrega y que reciben al joven de vuelta en el bohío. Una sola hoja fija material, escala y acabado para que no se inventen en cada escena.",
+      "groups": [
+        "topocho",
+        "arco-y-flechas",
+        "canabrava",
+        "canasto",
+        "chinchorro"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_bari_domestica": {
+      "name": "hoja utileria bari domestica",
+      "kind": "objeto",
+      "description": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-gran-arbol-que-hizo-los-rios",
+        "sibabio-y-las-cenizas-del-mundo",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "evidence": [
+        {
+          "myth": "el-gran-arbol-que-hizo-los-rios",
+          "field": "mito",
+          "note": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos."
+        },
+        {
+          "myth": "sibabio-y-las-cenizas-del-mundo",
+          "field": "mito",
+          "note": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos."
+        },
+        {
+          "myth": "sabaseba-y-los-hijos-de-la-pina",
+          "field": "mito",
+          "note": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos."
+        }
+      ],
+      "census_note": "Utilería doméstica del agua, el fuego y los oficios: los cinco objetos menores de «El gran árbol», «Sabaseba» y «Sibabió» que ninguna escena describe con detalle y que el modelo inventaría si no se fijan juntos.",
+      "groups": [
+        "bejucos-de-agua",
+        "vasija-de-barro",
+        "calabazo",
+        "lena-y-fogon",
+        "herramientas-de-pesca-y-caza"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

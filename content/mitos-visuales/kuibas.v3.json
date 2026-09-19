@@ -917,6 +917,12 @@
           "role": "secondary",
           "note": "Se registra para dejar constancia de que el ciclo es mucho más grande que estas dos páginas y de que el censo no lo cubre ni finge cubrirlo. Verificado en historia y versiones de ambos relatos.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_kuiba",
+          "role": "plot_object",
+          "note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1051,6 +1057,12 @@
           "entity_id": "ciclos_no_consultados_del_indice",
           "role": "secondary",
           "note": "Se registra para dejar constancia de que el ciclo es mucho más grande que estas dos páginas y de que el censo no lo cubre ni finge cubrirlo. Verificado en historia y versiones de ambos relatos.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_kuiba",
+          "role": "plot_object",
+          "note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da.",
           "role_derivada": "por categoria"
         }
       ]
@@ -2288,6 +2300,47 @@
       ],
       "census_note": "Se registra para dejar constancia de que el ciclo es mucho más grande que estas dos páginas y de que el censo no lo cubre ni finge cubrirlo. Verificado en historia y versiones de ambos relatos.",
       "exclusion_reason": "Sin evidencia: el índice de Wilbert y Simoneau registra 177 relatos, al menos ocho entradas de inundación y varias creaciones de Namon o Namun, pero sólo se dispone de títulos. El canon prohíbe expresamente reconstruir escenas a partir de un título."
+    },
+    "hoja_utileria_kuiba": {
+      "name": "hoja utileria kuiba",
+      "kind": "objeto",
+      "description": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-kuibas",
+          "field": "mito",
+          "note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da."
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da."
+        }
+      ],
+      "census_note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da.",
+      "groups": [
+        "mangos",
+        "arcos_y_flechas",
+        "sime",
+        "jojomo",
+        "gusanos"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

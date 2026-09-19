@@ -991,6 +991,12 @@
           "role": "setting",
           "note": "Tramos nombrados de la misma ruta de agua; variantes de la ficha de paisaje fluvial, no cinco fichas.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_desana",
+          "role": "plot_object",
+          "note": "Única hoja de utilería del corpus: el banco de cuarzo blanco, el bastón que alza Yebá Gõãmü y la semilla de tabaco de la formación de la tierra. El corpus Desana es excepcionalmente pobre en objetos menores porque casi todo lo material —el umarí, el recipiente, la paxiúba, las plantas— es el asunto mismo de un relato y ya tiene ficha. La hoja debe mantener las formas lisas y sin diseño ceremonial atribuido.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -4609,6 +4615,39 @@
       ],
       "census_note": "El relato afirma que hubo pruebas pero no dice ninguna. Convertirlas en escena obligaría a inventar el contenido de un episodio que la fuente deja cerrado.",
       "exclusion_reason": "sin evidencia visual"
+    },
+    "hoja_utileria_desana": {
+      "name": "hoja utileria desana",
+      "kind": "objeto",
+      "description": "Única hoja de utilería del corpus: el banco de cuarzo blanco, el bastón que alza Yebá Gõãmü y la semilla de tabaco de la formación de la tierra. El corpus Desana es excepcionalmente pobre en objetos menores porque casi todo lo material —el umarí, el recipiente, la paxiúba, las plantas— es el asunto mismo de un relato y ya tiene ficha. La hoja debe mantener las formas lisas y sin diseño ceremonial atribuido.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-desana"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-desana",
+          "field": "mito",
+          "note": "Única hoja de utilería del corpus: el banco de cuarzo blanco, el bastón que alza Yebá Gõãmü y la semilla de tabaco de la formación de la tierra. El corpus Desana es excepcionalmente pobre en objetos menores porque casi todo lo material —el umarí, el recipiente, la paxiúba, las plantas— es el asunto mismo de un relato y ya tiene ficha. La hoja debe mantener las formas lisas y sin diseño ceremonial atribuido."
+        }
+      ],
+      "census_note": "Única hoja de utilería del corpus: el banco de cuarzo blanco, el bastón que alza Yebá Gõãmü y la semilla de tabaco de la formación de la tierra. El corpus Desana es excepcionalmente pobre en objetos menores porque casi todo lo material —el umarí, el recipiente, la paxiúba, las plantas— es el asunto mismo de un relato y ya tiene ficha. La hoja debe mantener las formas lisas y sin diseño ceremonial atribuido.",
+      "groups": [
+        "banco_de_cuarzo",
+        "baston_ceremonial",
+        "semilla_de_tabaco"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

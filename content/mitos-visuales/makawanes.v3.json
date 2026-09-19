@@ -983,6 +983,12 @@
           "role": "plot_object",
           "note": "Verificado en el tercer y cuarto párrafo del mito. Los dientes de oro que sí existen son los del araguato y están embebidos en su ficha.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_makaguan",
+          "role": "plot_object",
+          "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1105,6 +1111,12 @@
           "entity_id": "persona_difunta_acompanada",
           "role": "secondary",
           "note": "Verificado en el segundo párrafo de la leyenda. La vela y el agua sí se producen, y con ellas basta para evocar la práctica sin poner un cuerpo.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_makaguan",
+          "role": "plot_object",
+          "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1258,6 +1270,12 @@
           "entity_id": "ceremonia_para_recibir_a_wiri",
           "role": "magic_subject",
           "note": "Verificado en el penúltimo párrafo del mito y en la nota de investigación («RITUAL: no se inventan pasos ceremoniales»).",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_makaguan",
+          "role": "plot_object",
+          "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés.",
           "role_derivada": "por categoria"
         }
       ]
@@ -3002,6 +3020,55 @@
       ],
       "census_note": "Verificado en el tercer y cuarto párrafo del mito. Los dientes de oro que sí existen son los del araguato y están embebidos en su ficha.",
       "exclusion_reason": "Se menciona pero nunca se ve: era la recompensa condicional —«si soportaba el dolor, recibiría una dentadura de oro»— y el venado gritó en la última muela, de modo que nunca llega a existir en el relato."
+    },
+    "hoja_utileria_makaguan": {
+      "name": "hoja utileria makaguan",
+      "kind": "objeto",
+      "description": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés."
+        },
+        {
+          "myth": "la-gran-inundacion",
+          "field": "mito",
+          "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés."
+        }
+      ],
+      "census_note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés.",
+      "groups": [
+        "gran_trompeta",
+        "capuzas_de_macana",
+        "platano_de_monte_y_caracoles",
+        "vino_de_palma",
+        "vela_de_cera_de_abeja",
+        "agua_para_acompanar_al_muerto",
+        "machete"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

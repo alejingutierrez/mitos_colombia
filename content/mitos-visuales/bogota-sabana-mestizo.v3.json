@@ -1639,6 +1639,12 @@
           "role": "secondary",
           "note": "Ficharla obligaría a inventar una cuadrilla que el relato deja en la conversación pública.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_papeles_y_pruebas",
+          "role": "plot_object",
+          "note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1746,6 +1752,12 @@
           "role": "secondary",
           "note": "La noche entra al Palacio; el relato se queda en la calle y en la cárcel.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_papeles_y_pruebas",
+          "role": "plot_object",
+          "note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1816,6 +1828,12 @@
           "entity_id": "libro_cerrado_de_arias",
           "role": "plot_object",
           "note": "Objeto menor que sostiene en la portada.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_calle_y_oficio",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1899,6 +1917,12 @@
           "entity_id": "comparaciones_externas_bogota",
           "role": "magic_subject",
           "note": "Criterio uniforme del censo: la comparación no entra al inventario.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_calle_y_oficio",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos.",
           "role_derivada": "por categoria"
         }
       ]
@@ -2090,6 +2114,12 @@
           "role": "setting",
           "note": "Sólo marca el tiempo que pasa entre el hallazgo y el regreso.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_devocion_y_tesoro",
+          "role": "plot_object",
+          "note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -2172,6 +2202,12 @@
           "entity_id": "bruja_del_cortijo",
           "role": "secondary",
           "note": "«Compartir la palabra bruja no convierte las dos historias en una sola mujer».",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_papeles_y_pruebas",
+          "role": "plot_object",
+          "note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina.",
           "role_derivada": "por categoria"
         }
       ]
@@ -2268,6 +2304,12 @@
           "role": "magic_subject",
           "note": "Criterio uniforme del censo: la comparación no entra al inventario.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_devocion_y_tesoro",
+          "role": "plot_object",
+          "note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -2356,6 +2398,12 @@
           "entity_id": "bandera_liberal",
           "role": "plot_object",
           "note": "Objeto menor de la escena de plaza.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_calle_y_oficio",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos.",
           "role_derivada": "por categoria"
         }
       ]
@@ -2677,6 +2725,12 @@
           "role": "magic_subject",
           "note": "Criterio uniforme del censo: la comparación no entra al inventario.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_devocion_y_tesoro",
+          "role": "plot_object",
+          "note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -2783,6 +2837,12 @@
           "entity_id": "aljibe",
           "role": "setting",
           "note": "«Recordar un aljibe, una injusticia, un vestido o una calle».",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_calle_y_oficio",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos.",
           "role_derivada": "por categoria"
         }
       ]
@@ -7148,6 +7208,145 @@
       ],
       "census_note": "Criterio uniforme del censo: la comparación no entra al inventario.",
       "exclusion_reason": "Aparecen sólo en la sección «Similitudes» como comparación explícita, nunca como escena del relato."
+    },
+    "hoja_utileria_calle_y_oficio": {
+      "name": "hoja utileria calle y oficio",
+      "kind": "objeto",
+      "description": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-mono-de-la-pila",
+        "el-loco-arias",
+        "la-loca-margarita",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "evidence": [
+        {
+          "myth": "el-mono-de-la-pila",
+          "field": "content",
+          "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos."
+        },
+        {
+          "myth": "el-loco-arias",
+          "field": "content",
+          "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos."
+        },
+        {
+          "myth": "la-loca-margarita",
+          "field": "content",
+          "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos."
+        }
+      ],
+      "census_note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos.",
+      "groups": [
+        "cantaro_de_agua",
+        "totuma_de_chicha",
+        "libro_cerrado_de_arias",
+        "bandera_liberal",
+        "placa_de_calle_antigua"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_papeles_y_pruebas": {
+      "name": "hoja utileria papeles y pruebas",
+      "kind": "objeto",
+      "description": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "la-bruja-del-tranvia"
+      ],
+      "evidence": [
+        {
+          "myth": "el-enigmatico-abogado",
+          "field": "content",
+          "note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina."
+        },
+        {
+          "myth": "el-hombre-del-farol",
+          "field": "content",
+          "note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina."
+        },
+        {
+          "myth": "la-bruja-del-tranvia",
+          "field": "content",
+          "note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina."
+        }
+      ],
+      "census_note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina.",
+      "groups": [
+        "hojas_de_la_defensa",
+        "decreto_de_libertad",
+        "carta_mecanografiada_y_expediente",
+        "craneo_en_vitrina"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_devocion_y_tesoro": {
+      "name": "hoja utileria devocion y tesoro",
+      "kind": "objeto",
+      "description": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-leyenda-del-santuario-de-monserrate",
+        "el-venado-de-oro",
+        "los-esqueletos-caminantes"
+      ],
+      "evidence": [
+        {
+          "myth": "la-leyenda-del-santuario-de-monserrate",
+          "field": "content",
+          "note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos."
+        },
+        {
+          "myth": "el-venado-de-oro",
+          "field": "content",
+          "note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos."
+        },
+        {
+          "myth": "los-esqueletos-caminantes",
+          "field": "content",
+          "note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos."
+        }
+      ],
+      "census_note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos.",
+      "groups": [
+        "velas_flores_y_exvotos",
+        "espada_de_diego",
+        "objetos_de_riqueza_y_trabajo"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

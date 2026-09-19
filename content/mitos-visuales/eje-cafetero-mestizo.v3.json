@@ -1216,6 +1216,12 @@
           "role": "magic_subject",
           "note": "Criterio uniforme del censo, igual que en Bogotá: la comparación no entra al inventario.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_animas_y_conquista",
+          "role": "plot_object",
+          "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1310,6 +1316,12 @@
           "entity_id": "atacantes_presentados_como_pijaos",
           "role": "secondary",
           "note": "DECISIÓN QUE MÁS COSTÓ. La portada de la página los deja fuera de cuadro a propósito («antes del combate»). Si el editor quiere representarlos, no sale de este relato: exige investigación material propia y es otro encargo, no este censo.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_animas_y_conquista",
+          "role": "plot_object",
+          "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1448,6 +1460,12 @@
           "role": "magic_subject",
           "note": "Verificado: sólo «invocó a la Virgen del Carmen».",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_arriero_caldense",
+          "role": "plot_object",
+          "note": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1536,6 +1554,12 @@
           "entity_id": "comparaciones_externas_caldas",
           "role": "magic_subject",
           "note": "Criterio uniforme del censo, igual que en Bogotá: la comparación no entra al inventario.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_animas_y_conquista",
+          "role": "plot_object",
+          "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1929,6 +1953,12 @@
           "role": "secondary",
           "note": "Igual que Robledo.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_arriero_caldense",
+          "role": "plot_object",
+          "note": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -2059,6 +2089,12 @@
           "entity_id": "brujas_volantonas",
           "role": "secondary",
           "note": "Verificado en «Versiones».",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_brujeria_de_clementina",
+          "role": "plot_object",
+          "note": "Cinco objetos menores que hacen de la casa un archivo de la fama; el baúl con fotografías va aparte porque es el objeto del relato.",
           "role_derivada": "por categoria"
         }
       ]
@@ -5580,6 +5616,129 @@
       ],
       "census_note": "Criterio uniforme del censo, igual que en Bogotá: la comparación no entra al inventario.",
       "exclusion_reason": "Aparecen sólo en la sección «Similitudes» como comparación explícita, nunca como escena."
+    },
+    "hoja_utileria_arriero_caldense": {
+      "name": "hoja utileria arriero caldense",
+      "kind": "objeto",
+      "description": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-aserrador",
+        "in-illo-tempore"
+      ],
+      "evidence": [
+        {
+          "myth": "el-aserrador",
+          "field": "content",
+          "note": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza."
+        },
+        {
+          "myth": "in-illo-tempore",
+          "field": "content",
+          "note": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza."
+        }
+      ],
+      "census_note": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza.",
+      "groups": [
+        "sombrero_de_ala",
+        "machete",
+        "carriel",
+        "ruana",
+        "farol_de_vela"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_brujeria_de_clementina": {
+      "name": "hoja utileria brujeria de clementina",
+      "kind": "objeto",
+      "description": "Cinco objetos menores que hacen de la casa un archivo de la fama; el baúl con fotografías va aparte porque es el objeto del relato.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "las-brujas"
+      ],
+      "evidence": [
+        {
+          "myth": "las-brujas",
+          "field": "content",
+          "note": "Cinco objetos menores que hacen de la casa un archivo de la fama; el baúl con fotografías va aparte porque es el objeto del relato."
+        }
+      ],
+      "census_note": "Cinco objetos menores que hacen de la casa un archivo de la fama; el baúl con fotografías va aparte porque es el objeto del relato.",
+      "groups": [
+        "velas_de_clementina",
+        "aguas_perfumadas",
+        "ramas_de_clementina",
+        "escobas",
+        "papeles_con_formulas"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_animas_y_conquista": {
+      "name": "hoja utileria animas y conquista",
+      "kind": "objeto",
+      "description": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas",
+        "el-cacique-cumanday",
+        "de-frente-al-sol"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "content",
+          "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592."
+        },
+        {
+          "myth": "el-cacique-cumanday",
+          "field": "content",
+          "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592."
+        },
+        {
+          "myth": "de-frente-al-sol",
+          "field": "content",
+          "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592."
+        }
+      ],
+      "census_note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592.",
+      "groups": [
+        "tijeras_de_costura",
+        "cirios_de_la_procesion",
+        "totuma_de_guarapo",
+        "atado_de_hierbas",
+        "armas_de_los_defensores"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

@@ -1225,6 +1225,12 @@
           "role": "magic_subject",
           "note": "Verificado en el sexto párrafo del mito. La consecuencia visible es el hermano que queda solo, y eso sí se produce desde la ficha de los dos hermanos.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_awa",
+          "role": "plot_object",
+          "note": "Cuatro piezas menores, todas del segundo relato: el alimento pequeño, el puente que es una raíz, la hoja del regreso y el grano del pago. El primer relato no aporta ningún objeto de mano, así que no hay más que agrupar. La hoja depende de la regla de escala de Maza Su y debe mostrar cada pieza en los dos tamaños.",
+          "role_derivada": "por categoria"
         }
       ]
     }
@@ -2875,6 +2881,40 @@
       ],
       "census_note": "Verificado en el sexto párrafo del mito. La consecuencia visible es el hermano que queda solo, y eso sí se produce desde la ficha de los dos hermanos.",
       "exclusion_reason": "Se narra pero nunca se ve: ocurre dentro de la peña, donde el relato no entra —«El hombre insistió y entró en la peña. Allí no pudo respirar y murió»—. No hay una sola línea de descripción del interior ni del cuerpo."
+    },
+    "hoja_utileria_awa": {
+      "name": "hoja utileria awa",
+      "kind": "objeto",
+      "description": "Cuatro piezas menores, todas del segundo relato: el alimento pequeño, el puente que es una raíz, la hoja del regreso y el grano del pago. El primer relato no aporta ningún objeto de mano, así que no hay más que agrupar. La hoja depende de la regla de escala de Maza Su y debe mostrar cada pieza en los dos tamaños.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "guagaja"
+      ],
+      "evidence": [
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "Cuatro piezas menores, todas del segundo relato: el alimento pequeño, el puente que es una raíz, la hoja del regreso y el grano del pago. El primer relato no aporta ningún objeto de mano, así que no hay más que agrupar. La hoja depende de la regla de escala de Maza Su y debe mostrar cada pieza en los dos tamaños."
+        }
+      ],
+      "census_note": "Cuatro piezas menores, todas del segundo relato: el alimento pequeño, el puente que es una raíz, la hoja del regreso y el grano del pago. El primer relato no aporta ningún objeto de mano, así que no hay más que agrupar. La hoja depende de la regla de escala de Maza Su y debe mostrar cada pieza en los dos tamaños.",
+      "groups": [
+        "chiro_y_maiz_diminutos",
+        "raiz_de_rascadera",
+        "hoja_de_bijao",
+        "quintal_de_maiz"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

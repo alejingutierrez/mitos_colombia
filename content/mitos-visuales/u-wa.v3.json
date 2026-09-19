@@ -1052,6 +1052,12 @@
           "role": "secondary",
           "note": "Verificado literalmente. Por eso el oso no lleva estado extra: solo existe su ficha de identidad viva.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_caza_y_camino",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1754,6 +1760,18 @@
           "role": "plot_object",
           "note": "Verificado: única aparición del término en todo el corpus U’wa.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_casa_y_alimento",
+          "role": "plot_object",
+          "note": "Cinco objetos menores domésticos de los relatos 8 y 11.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_intercambio_y_contacto",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1858,6 +1876,12 @@
           "entity_id": "mochila_y_tejidos_de_carga",
           "role": "plot_object",
           "note": "La madre carga plátanos, los viajeros llevan mochilas cargadas y las rutas mueven tejidos. ADVERTENCIA: la hoja fija el objeto genérico; nunca un diseño real de tejido U’wa.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_caza_y_camino",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa.",
           "role_derivada": "por categoria"
         }
       ]
@@ -2042,6 +2066,18 @@
           "role": "secondary",
           "note": "Verificado literalmente en historia y research_notes del relato 10.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_caza_y_camino",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_intercambio_y_contacto",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -2158,6 +2194,24 @@
           "entity_id": "espada_de_sirbetuna",
           "role": "plot_object",
           "note": "Elemento de contacto que el canon conserva a propósito, sin fabricar falsa antigüedad prehispánica.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_caza_y_camino",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_casa_y_alimento",
+          "role": "plot_object",
+          "note": "Cinco objetos menores domésticos de los relatos 8 y 11.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_intercambio_y_contacto",
+          "role": "plot_object",
+          "note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica.",
           "role_derivada": "por categoria"
         }
       ]
@@ -6070,6 +6124,142 @@
       ],
       "census_note": "Verificado: única aparición del término en todo el corpus U’wa.",
       "exclusion_reason": "Se nombra una sola vez en la lista de lo que lleva Kusbasha («cuchillo, yopo y ebará») y el canon no lo define ni lo describe en ningún campo; darle forma sería inventarlo."
+    },
+    "hoja_utileria_caza_y_camino": {
+      "name": "hoja utileria caza y camino",
+      "kind": "objeto",
+      "description": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-oso-y-el-hombre-uwa",
+        "monoa-el-hijo-de-la-montana",
+        "yanoa-y-sirbetuna",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "evidence": [
+        {
+          "myth": "el-oso-y-el-hombre-uwa",
+          "field": "mito",
+          "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa."
+        },
+        {
+          "myth": "monoa-el-hijo-de-la-montana",
+          "field": "mito",
+          "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa."
+        },
+        {
+          "myth": "yanoa-y-sirbetuna",
+          "field": "mito",
+          "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa."
+        }
+      ],
+      "census_note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa.",
+      "groups": [
+        "trampa_de_palos",
+        "flechas_uwa",
+        "lanza_de_monoa",
+        "soga_uwa",
+        "mochila_y_tejidos_de_carga"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_casa_y_alimento": {
+      "name": "hoja utileria casa y alimento",
+      "kind": "objeto",
+      "description": "Cinco objetos menores domésticos de los relatos 8 y 11.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "lisha-la-madre-del-agua",
+        "yanoa-y-sirbetuna"
+      ],
+      "evidence": [
+        {
+          "myth": "lisha-la-madre-del-agua",
+          "field": "mito",
+          "note": "Cinco objetos menores domésticos de los relatos 8 y 11."
+        },
+        {
+          "myth": "yanoa-y-sirbetuna",
+          "field": "mito",
+          "note": "Cinco objetos menores domésticos de los relatos 8 y 11."
+        }
+      ],
+      "census_note": "Cinco objetos menores domésticos de los relatos 8 y 11.",
+      "groups": [
+        "cuchillo_de_kusbasha",
+        "olla_de_sirbetuna",
+        "chicha_de_maiz_en_totuma",
+        "fuego_y_tizon",
+        "sal_para_las_reses"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_intercambio_y_contacto": {
+      "name": "hoja utileria intercambio y contacto",
+      "kind": "objeto",
+      "description": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monoa-el-hijo-de-la-montana",
+        "yanoa-y-sirbetuna",
+        "lisha-la-madre-del-agua"
+      ],
+      "evidence": [
+        {
+          "myth": "monoa-el-hijo-de-la-montana",
+          "field": "mito",
+          "note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica."
+        },
+        {
+          "myth": "yanoa-y-sirbetuna",
+          "field": "mito",
+          "note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica."
+        },
+        {
+          "myth": "lisha-la-madre-del-agua",
+          "field": "mito",
+          "note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica."
+        }
+      ],
+      "census_note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica.",
+      "groups": [
+        "otoba",
+        "cal_para_el_ayo",
+        "espada_de_sirbetuna",
+        "vestido_de_kusbasha",
+        "alimento_purificado_del_camino"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

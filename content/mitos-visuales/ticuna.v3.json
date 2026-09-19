@@ -1409,6 +1409,12 @@
           "role": "plot_object",
           "note": "Con ella se pesca a la gente Tikuna y está en el prompt vertical, pero es un objeto menor de una escena: vive en la hoja de utilería con forma documentada.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_ticuna_pesca",
+          "role": "plot_object",
+          "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1586,6 +1592,18 @@
           "role": "plot_object",
           "note": "Las mazorcas que parecen intactas y los tres granos con que Moru llena tres tinajas. Objeto menor del que depende el malentendido.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_ticuna_pesca",
+          "role": "plot_object",
+          "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_ticuna_domestica",
+          "role": "plot_object",
+          "note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1738,6 +1756,18 @@
           "entity_id": "hilo-asociado-con-la-wocha",
           "role": "plot_object",
           "note": "El joven pide recuperarlo antes de abrir la chagra nueva. La paráfrasis es deliberadamente vaga y la hoja de utilería debe dejarlo así de sobrio, sin inventarle uso ritual.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_ticuna_pesca",
+          "role": "plot_object",
+          "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_ticuna_domestica",
+          "role": "plot_object",
+          "note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1910,6 +1940,12 @@
           "role": "plot_object",
           "note": "Lo que el hombre pide al llegar con el envoltorio. Objeto menor.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_ticuna_pesca",
+          "role": "plot_object",
+          "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -2050,6 +2086,12 @@
           "entity_id": "chambira",
           "role": "plot_object",
           "note": "Se seca al sol para tejidos y cierra el relato ligando el astro al trabajo cotidiano. Está en el prompt vertical. Material menor, pero debe tener forma documentada y no pasar por otra fibra.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_ticuna_domestica",
+          "role": "plot_object",
+          "note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada.",
           "role_derivada": "por categoria"
         }
       ]
@@ -5286,6 +5328,101 @@
       "census_note": "El joven pide recuperarlo antes de abrir la chagra nueva. La paráfrasis es deliberadamente vaga y la hoja de utilería debe dejarlo así de sobrio, sin inventarle uso ritual.",
       "covered_by": "hoja_utileria_ticuna_domestica",
       "coverage_note": "El joven pide recuperarlo antes de abrir la chagra nueva. La paráfrasis es deliberadamente vaga y la hoja de utilería debe dejarlo así de sobrio, sin inventarle uso ritual."
+    },
+    "hoja_utileria_ticuna_pesca": {
+      "name": "hoja utileria ticuna pesca",
+      "kind": "objeto",
+      "description": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna",
+        "origen-de-la-luna-tikuna"
+      ],
+      "evidence": [
+        {
+          "myth": "el-combate-del-sueno-y-la-palabra",
+          "field": "mito",
+          "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado."
+        },
+        {
+          "myth": "la-canoa-de-moe",
+          "field": "mito",
+          "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado."
+        },
+        {
+          "myth": "origen-del-friaje-tikuna",
+          "field": "mito",
+          "note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado."
+        }
+      ],
+      "census_note": "Utilería del río, la canoa y la pesca: cinco objetos menores que ninguna escena describe y que el modelo inventaría distinto cada vez. Una hoja fija material, escala y acabado.",
+      "groups": [
+        "yuca-carnada",
+        "vara-percutora-de-la-canoa",
+        "varas-largas-para-asar",
+        "herramientas-de-talla-de-moe",
+        "hamaca"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_ticuna_domestica": {
+      "name": "hoja utileria ticuna domestica",
+      "kind": "objeto",
+      "description": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-sol-tikuna",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna"
+      ],
+      "evidence": [
+        {
+          "myth": "origen-del-sol-tikuna",
+          "field": "mito",
+          "note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada."
+        },
+        {
+          "myth": "la-canoa-de-moe",
+          "field": "mito",
+          "note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada."
+        },
+        {
+          "myth": "origen-de-la-luna-tikuna",
+          "field": "mito",
+          "note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada."
+        }
+      ],
+      "census_note": "Utilería de la casa y la chagra: los cinco objetos menores del Sol, la canoa de Moe y la Luna. Incluye la fibra de chambira, que cierra un relato y no puede quedar sin forma documentada.",
+      "groups": [
+        "olla-de-barro-rota",
+        "totuma",
+        "chambira",
+        "maiz-y-mazorcas",
+        "hilo-asociado-con-la-wocha"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

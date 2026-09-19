@@ -818,6 +818,12 @@
           "role": "secondary",
           "note": "Verificado: la página «no borra esas capas, pero tampoco las presenta como la esencia eterna del relato. Las registra en Historia y concentra la narración» en el núcleo. Los prompts aprobados lo prohíben expresamente: «sin mapa, banderas, armas, uniformes ni iconografía colonial».",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_tucano_1",
+          "role": "plot_object",
+          "note": "Los cuatro bienes enumerados que se reciben en las casas de surgimiento —recipientes, tejidos, adornos y semillas— más el diente que Yepá Huáke le quita a la serpiente. Todos son objetos menores sin descripción en la fuente; la hoja debe resolverlos como formas neutras, sin tocados panindígenas ni instrumentos rituales inventados, según ordenan los prompts aprobados del corpus.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1232,6 +1238,12 @@
           "role": "magic_subject",
           "note": "El relato no muestra la subida: cuando Yúpuri Baúro vuelve a buscarlo, «Yepá Huáke ya ha subido». Lo que queda es una ausencia, que se narra por el temor y la continuidad de los grupos, no por una imagen propia.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_tucano_2",
+          "role": "plot_object",
+          "note": "Segunda hoja, con un solo objeto real restante: el recipiente de bebida con el que Yepá Huáke recibe el nuevo ciclo. Se mantiene aparte de la primera porque su registro es doméstico y no de intercambio, y porque conviene aislarla para que el editor pueda recortarla si decide que un solo objeto no justifica una hoja. Es la ficha más prescindible del censo Tucano.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1330,6 +1342,12 @@
           "entity_id": "corte_animal_y_danta_reina",
           "role": "secondary",
           "note": "Verificado: «El episodio no presenta a la danta como reina, ni describe una corte animal, una hegemonía política o un mono que recibe el silbato. Esos elementos pertenecían a la segunda ficha heredada». El prompt aprobado lo prohíbe: «sin caricatura, tribunal, corona ni jerarquía humana».",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_tucano_1",
+          "role": "plot_object",
+          "note": "Los cuatro bienes enumerados que se reciben en las casas de surgimiento —recipientes, tejidos, adornos y semillas— más el diente que Yepá Huáke le quita a la serpiente. Todos son objetos menores sin descripción en la fuente; la hoja debe resolverlos como formas neutras, sin tocados panindígenas ni instrumentos rituales inventados, según ordenan los prompts aprobados del corpus.",
           "role_derivada": "por categoria"
         }
       ]
@@ -3597,6 +3615,78 @@
       ],
       "census_note": "El relato no muestra la subida: cuando Yúpuri Baúro vuelve a buscarlo, «Yepá Huáke ya ha subido». Lo que queda es una ausencia, que se narra por el temor y la continuidad de los grupos, no por una imagen propia.",
       "exclusion_reason": "sin cuerpo visual"
+    },
+    "hoja_utileria_tucano_1": {
+      "name": "hoja utileria tucano 1",
+      "kind": "objeto",
+      "description": "Los cuatro bienes enumerados que se reciben en las casas de surgimiento —recipientes, tejidos, adornos y semillas— más el diente que Yepá Huáke le quita a la serpiente. Todos son objetos menores sin descripción en la fuente; la hoja debe resolverlos como formas neutras, sin tocados panindígenas ni instrumentos rituales inventados, según ordenan los prompts aprobados del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-hombre",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "evidence": [
+        {
+          "myth": "el-origen-del-hombre",
+          "field": "mito",
+          "note": "Los cuatro bienes enumerados que se reciben en las casas de surgimiento —recipientes, tejidos, adornos y semillas— más el diente que Yepá Huáke le quita a la serpiente. Todos son objetos menores sin descripción en la fuente; la hoja debe resolverlos como formas neutras, sin tocados panindígenas ni instrumentos rituales inventados, según ordenan los prompts aprobados del corpus."
+        },
+        {
+          "myth": "yepa-castiaga-a-los-animales",
+          "field": "mito",
+          "note": "Los cuatro bienes enumerados que se reciben en las casas de surgimiento —recipientes, tejidos, adornos y semillas— más el diente que Yepá Huáke le quita a la serpiente. Todos son objetos menores sin descripción en la fuente; la hoja debe resolverlos como formas neutras, sin tocados panindígenas ni instrumentos rituales inventados, según ordenan los prompts aprobados del corpus."
+        }
+      ],
+      "census_note": "Los cuatro bienes enumerados que se reciben en las casas de surgimiento —recipientes, tejidos, adornos y semillas— más el diente que Yepá Huáke le quita a la serpiente. Todos son objetos menores sin descripción en la fuente; la hoja debe resolverlos como formas neutras, sin tocados panindígenas ni instrumentos rituales inventados, según ordenan los prompts aprobados del corpus.",
+      "groups": [
+        "recipientes_de_la_canoa",
+        "tejidos_de_la_canoa",
+        "adornos_de_la_canoa",
+        "semillas_de_la_canoa",
+        "diente_de_la_serpiente"
+      ],
+      "design": null,
+      "states_declared": []
+    },
+    "hoja_utileria_tucano_2": {
+      "name": "hoja utileria tucano 2",
+      "kind": "objeto",
+      "description": "Segunda hoja, con un solo objeto real restante: el recipiente de bebida con el que Yepá Huáke recibe el nuevo ciclo. Se mantiene aparte de la primera porque su registro es doméstico y no de intercambio, y porque conviene aislarla para que el editor pueda recortarla si decide que un solo objeto no justifica una hoja. Es la ficha más prescindible del censo Tucano.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yepa-abandona-la-tierra"
+      ],
+      "evidence": [
+        {
+          "myth": "yepa-abandona-la-tierra",
+          "field": "mito",
+          "note": "Segunda hoja, con un solo objeto real restante: el recipiente de bebida con el que Yepá Huáke recibe el nuevo ciclo. Se mantiene aparte de la primera porque su registro es doméstico y no de intercambio, y porque conviene aislarla para que el editor pueda recortarla si decide que un solo objeto no justifica una hoja. Es la ficha más prescindible del censo Tucano."
+        }
+      ],
+      "census_note": "Segunda hoja, con un solo objeto real restante: el recipiente de bebida con el que Yepá Huáke recibe el nuevo ciclo. Se mantiene aparte de la primera porque su registro es doméstico y no de intercambio, y porque conviene aislarla para que el editor pueda recortarla si decide que un solo objeto no justifica una hoja. Es la ficha más prescindible del censo Tucano.",
+      "groups": [
+        "bebida_de_recepcion"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

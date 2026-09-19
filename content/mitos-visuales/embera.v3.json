@@ -733,6 +733,12 @@
           "role": "magic_subject",
           "note": "No se borran del relato, se dejan fuera de la imagen. La tensión se resuelve con distancia, vigilancia y niebla, no con la escena.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_embera",
+          "role": "plot_object",
+          "note": "Cinco objetos menores en una hoja: es la cultura material completa del relato, herramientas de río y de monte. Nada ceremonial, nada de oro.",
+          "role_derivada": "por categoria"
         }
       ]
     }
@@ -1710,6 +1716,41 @@
       ],
       "census_note": "No se borran del relato, se dejan fuera de la imagen. La tensión se resuelve con distancia, vigilancia y niebla, no con la escena.",
       "exclusion_reason": "do_not_visualize: la adaptación redujo deliberadamente el detalle explícito y el módulo prohíbe violencia explícita en las dos escenas, aunque el peligro siga siendo motor de la fuga"
+    },
+    "hoja_utileria_embera": {
+      "name": "hoja utileria embera",
+      "kind": "objeto",
+      "description": "Cinco objetos menores en una hoja: es la cultura material completa del relato, herramientas de río y de monte. Nada ceremonial, nada de oro.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "Cinco objetos menores en una hoja: es la cultura material completa del relato, herramientas de río y de monte. Nada ceremonial, nada de oro."
+        }
+      ],
+      "census_note": "Cinco objetos menores en una hoja: es la cultura material completa del relato, herramientas de río y de monte. Nada ceremonial, nada de oro.",
+      "groups": [
+        "canaletes",
+        "hachas",
+        "machetes",
+        "arco_y_flechas",
+        "bodoquera"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},

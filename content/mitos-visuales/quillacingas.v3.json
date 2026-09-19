@@ -1373,6 +1373,12 @@
           "role": "plot_object",
           "note": "Lo que la mujer de la posada presta a la viajera al verla desarreglada, junto con el pilche. Objeto menor de una sola escena, pero con material nombrado que la hoja debe fijar.",
           "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_quillacinga",
+          "role": "plot_object",
+          "note": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia.",
+          "role_derivada": "por categoria"
         }
       ]
     },
@@ -1573,6 +1579,12 @@
           "entity_id": "tulpa",
           "role": "plot_object",
           "note": "Frente a ella Aurelio cuenta lo que pasó con el pueblo. Objeto menor doméstico, nombrado con su término local, que la hoja debe resolver sin convertirlo en fogón genérico.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_quillacinga",
+          "role": "plot_object",
+          "note": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia.",
           "role_derivada": "por categoria"
         }
       ]
@@ -1870,6 +1882,12 @@
           "entity_id": "sal_y_carne_prohibidas",
           "role": "plot_object",
           "note": "Las pruebas documentadas de la sirena: durante un tiempo puede prohibir la sal o la carne. Son los únicos elementos materiales de esa página y sólo pueden mostrarse como alimentos apartados. La edición advierte que no se conviertan en una dieta permanente ni universal.",
+          "role_derivada": "por categoria"
+        },
+        {
+          "entity_id": "hoja_utileria_quillacinga",
+          "role": "plot_object",
+          "note": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia.",
           "role_derivada": "por categoria"
         }
       ]
@@ -4603,6 +4621,53 @@
       "census_note": "Las pruebas documentadas de la sirena: durante un tiempo puede prohibir la sal o la carne. Son los únicos elementos materiales de esa página y sólo pueden mostrarse como alimentos apartados. La edición advierte que no se conviertan en una dieta permanente ni universal.",
       "covered_by": "hoja_utileria_quillacinga",
       "coverage_note": "Las pruebas documentadas de la sirena: durante un tiempo puede prohibir la sal o la carne. Son los únicos elementos materiales de esa página y sólo pueden mostrarse como alimentos apartados. La edición advierte que no se conviertan en una dieta permanente ni universal."
+    },
+    "hoja_utileria_quillacinga": {
+      "name": "hoja utileria quillacinga",
+      "kind": "objeto",
+      "description": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "sirena-de-la-laguna-de-la-cocha"
+      ],
+      "evidence": [
+        {
+          "myth": "cualanquizan",
+          "field": "mito",
+          "note": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia."
+        },
+        {
+          "myth": "el-llamado-de-inti",
+          "field": "mito",
+          "note": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia."
+        },
+        {
+          "myth": "sirena-de-la-laguna-de-la-cocha",
+          "field": "mito",
+          "note": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia."
+        }
+      ],
+      "census_note": "Cinco objetos menores del altiplano nariñense que no conducen acción: el peine de cacho, los instrumentos que acompañan el despertar, los motilones, la tulpa y los alimentos apartados por la prueba de la sirena. Una hoja fija escala, material y paleta comunes. No incluye el pilche ni el pincullo, que resuelven sus relatos y tienen ficha propia.",
+      "groups": [
+        "peine_de_cacho",
+        "instrumentos_que_despiertan",
+        "motilones",
+        "tulpa",
+        "sal_y_carne_prohibidas"
+      ],
+      "design": null,
+      "states_declared": []
     }
   },
   "models": {},
