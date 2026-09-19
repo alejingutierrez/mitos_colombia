@@ -25,6 +25,8 @@ const ACTAS = "content/mitos-visuales/actas";
 const PAPELES = ["entrada", "acto", "huella"];
 const ENCUADRES = ["16:9", "9:16", "1:1"];
 
+const hasText = (x) => typeof x === "string" && Boolean(x.trim());
+
 const norm = (s) => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
   .replace(/[^a-z0-9ñ ]/g, " ").replace(/\s+/g, " ").trim();
 
@@ -75,6 +77,16 @@ export function revisarActa(acta, { canon, plan }) {
 
   if (!Array.isArray(acta.deslindes) || !acta.deslindes.length) add("sin deslindes declarados");
   if (!Array.isArray(acta.descartes)) add("sin lista de descartes (vacia es valida, ausente no)");
+
+  // Una pagina que el plan declara no ilustrable se lee, se reduce a nudos y no
+  // produce lamina: `esperanza-en-el-oriente` no es un relato sino una
+  // hipotesis comparativa de 1956 cuyas cinco figuras pertenecen a tradiciones
+  // propias. La valvula estaba en el linter de biblia y faltaba aqui.
+  const noIlustrable = hasText(plan?.myths?.[acta.mito]?.not_illustrated);
+  if (noIlustrable) {
+    if ((acta.escenas || []).length) add("declarada no ilustrable y aun asi trae escenas");
+    return { ok: !errs.length, errs, avisos };
+  }
 
   const escenas = acta.escenas || [];
   if (escenas.length < 3) add(`${escenas.length} escenas: la doctrina entrada-acto-huella pide al menos tres`);
