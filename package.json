@@ -66,7 +66,8 @@
     "instagram:v10:compose": "node scripts/instagram/compose-v10.mjs",
     "instagram:v10:render": "node scripts/instagram/render-v10.mjs",
     "instagram:v10:plan": "node scripts/instagram/plan-carousel.mjs --guion v10",
-    "instagram:v10:qa:guion": "node scripts/instagram/qa-guion.mjs"
+    "instagram:v10:qa:guion": "node scripts/instagram/qa-guion.mjs",
+    "mitos:enriquecer:diagnostico": "node scripts/editorial/enriquecimiento/diagnostico.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1095.0",
