@@ -72,7 +72,11 @@ async function main() {
   let escritos = 0, saltados = 0;
   for (const id of corpus) {
     const plan = JSON.parse(readFileSync(join(PLANES, `${id}.v3.json`), "utf8"));
-    const slugs = Object.keys(plan.myths || {});
+    // `--only` para los corpus heredados: huitoto tiene 18 actas del carril de
+    // video y solo cuatro relatos sin ninguna, y no tiene sentido sembrar
+    // esqueletos que nadie va a llenar.
+    const filtro = typeof args.only === "string" ? new Set(String(args.only).split(",").map((x) => x.trim())) : null;
+    const slugs = Object.keys(plan.myths || {}).filter((s) => !filtro || filtro.has(s));
     const { rows } = await client.query("SELECT slug, title, mito, content FROM myths WHERE slug = ANY($1)", [slugs]);
     const porSlug = Object.fromEntries(rows.map((r) => [r.slug, r]));
 

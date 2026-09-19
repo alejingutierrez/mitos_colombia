@@ -1,0 +1,3875 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "status": "research",
+  "generation_locked": true,
+  "community": "Huitoto / Murui-Muina",
+  "community_slug": "huitotos",
+  "region": "Amazonía",
+  "corpus": {
+    "frozen": true,
+    "frozen_at": "2026-09-19",
+    "source": "Neon, comunidad exacta Huitoto / Murui-Muina (communities.slug = huitotos)",
+    "grouping": "comunidad",
+    "myth_slugs": [
+      "creacion-huitotos",
+      "de-como-se-crio-yarocomena",
+      "diijoma",
+      "el-diluvio-y-las-hazanas-de-buinaima",
+      "el-origen-de-la-coca",
+      "el-origen-del-maguare",
+      "en-el-principio-fueron-los-yorias-a-la-sombra-de-la-ortiga",
+      "jadomacurino-guyataiba",
+      "jirayauma",
+      "jitoma-y-fiboi",
+      "jobiya-jitoma",
+      "juma",
+      "kanifaido",
+      "konago",
+      "kugi-y-nokuerai",
+      "monairue-jitoma-y-nofida-jitoma",
+      "nofi-zazime",
+      "nofideno-la-madre",
+      "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+      "unamarai-padre-de-yaje",
+      "uuiki-el-padre",
+      "yarokamena"
+    ]
+  },
+  "source_snapshot": {
+    "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+    "retrieved_at": "2026-09-19",
+    "record_count": 22,
+    "fields": [
+      "mito",
+      "historia",
+      "versiones",
+      "research_notes"
+    ],
+    "sha256": "2005fcdecf0cad6e215452f53f949fcffd6c97075bad29a416cde7d3e864ff47",
+    "max_source_updated_at": "2026-09-17T22:10:18.964Z"
+  },
+  "research": {
+    "sources": [],
+    "dossier": null,
+    "evidence_matrix": null,
+    "cultural_review": null
+  },
+  "inventory": {
+    "status": "heredado",
+    "frozen": true,
+    "method": "Traduccion de la biblia cerrada antes del carril V3. Las decisiones son las que esa biblia tomo; no se reabren aqui.",
+    "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
+    "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
+    "heredado_de": "output/imagegen/huitotos/biblia/cierre-2026-09-14/freeze.v11.json"
+  },
+  "myths": {
+    "creacion-huitotos": {
+      "title": "Jutíñamúi modela el universo",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "de-como-se-crio-yarocomena": {
+      "title": "De cómo se crió Yarocomena",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "v13_kitobeni_aspecto_transformado",
+          "role": "primary",
+          "note": "Ficha V13 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p25_kitobeni_aspecto_inicial",
+          "role": "secondary",
+          "note": "Ficha P25 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h07_buina_uruki_gente_de_renacuajos",
+          "role": "secondary",
+          "note": "Ficha H07 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l11_yarokamena_arbol_formidable",
+          "role": "secondary",
+          "note": "Ficha L11 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p36_yarokaigiro_gusano_formidable",
+          "role": "secondary",
+          "note": "Ficha P36 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o10_adornos_estados_situados",
+          "role": "secondary",
+          "note": "Ficha O10 de la biblia cerrada."
+        }
+      ]
+    },
+    "diijoma": {
+      "title": "Dïïjoma, hombre-serpiente y águila",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "o10_adornos_estados_situados",
+          "role": "primary",
+          "note": "Ficha O10 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "el-diluvio-y-las-hazanas-de-buinaima": {
+      "title": "El diluvio y el origen de los bailes",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p15_jerofaikono",
+          "role": "primary",
+          "note": "Ficha P15 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p16_buinaino_companera_de_abundancia",
+          "role": "secondary",
+          "note": "Ficha P16 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a05_picaflor_portador_del_fuego",
+          "role": "secondary",
+          "note": "Ficha A05 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a06_sapo_forma_animal",
+          "role": "secondary",
+          "note": "Ficha A06 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b05_achiote",
+          "role": "secondary",
+          "note": "Ficha B05 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b06_aji",
+          "role": "secondary",
+          "note": "Ficha B06 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a23_paujil_colorado_antecedente_del_diluvio",
+          "role": "secondary",
+          "note": "Ficha A23 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v10_jerofaikono_cambio_animal",
+          "role": "secondary",
+          "note": "Ficha V10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a28_cusumbos_visitantes_indisciplinados",
+          "role": "secondary",
+          "note": "Ficha A28 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h03_retorno_humanidad_estado_mojado_y_frio",
+          "role": "secondary",
+          "note": "Ficha H03-retorno de la biblia cerrada."
+        },
+        {
+          "entity_id": "v27_menizai_buinaino_tortuga_acuatica",
+          "role": "secondary",
+          "note": "Ficha V27 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b12_helecho_emblema_situado_del_baile",
+          "role": "secondary",
+          "note": "Ficha B12 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v28_jerofaikono_apariencia_de_buinaino",
+          "role": "secondary",
+          "note": "Ficha V28 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p14_buinaima",
+          "role": "secondary",
+          "note": "Ficha P14 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a07_tortuga_contraste_de_dos_ciclos",
+          "role": "secondary",
+          "note": "Ficha A07 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h13_ameogisa_y_la_hija_del_guardian_del_fuego",
+          "role": "secondary",
+          "note": "Ficha H13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o16_batea_tiesto_y_abanico",
+          "role": "secondary",
+          "note": "Ficha O16 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "el-origen-de-la-coca": {
+      "title": "Buinaiño y el origen de la coca",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p17_buinaino_nina_de_la_coca",
+          "role": "primary",
+          "note": "Ficha P17 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p14_buinaima",
+          "role": "secondary",
+          "note": "Ficha P14 de la biblia cerrada."
+        }
+      ]
+    },
+    "el-origen-del-maguare": {
+      "title": "Yiida Buinama y el origen del maguaré",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p18_yiida_buinaima_presencia_humana",
+          "role": "primary",
+          "note": "Ficha P18 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "a25_gavilan_y_pez_y_okameri_y_edobedirima",
+          "role": "secondary",
+          "note": "Ficha A25 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b11_moniya_amena_arbol_de_abundancia",
+          "role": "secondary",
+          "note": "Ficha B11 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p37_monayakono_companera_de_yiida",
+          "role": "secondary",
+          "note": "Ficha P37 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h08_familia_de_yiida_eje_del_intercambio",
+          "role": "secondary",
+          "note": "Ficha H08 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h09_kuioyeni_e_imigi_buinaima",
+          "role": "secondary",
+          "note": "Ficha H09 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v11_yiida_devolucion_y_maguare",
+          "role": "secondary",
+          "note": "Ficha V11 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a29_cerrillo_intercambio_de_la_maloca",
+          "role": "secondary",
+          "note": "Ficha A29 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h04_gente_acuatica_modelo_comparativo_muinane",
+          "role": "secondary",
+          "note": "Ficha H04 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l10_umbral_entre_agua_y_maloca",
+          "role": "secondary",
+          "note": "Ficha L10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o14_cernidor_balai_y_matafrio",
+          "role": "secondary",
+          "note": "Ficha O14 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o16_batea_tiesto_y_abanico",
+          "role": "secondary",
+          "note": "Ficha O16 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a24_hormigas_pequenos_agentes",
+          "role": "secondary",
+          "note": "Ficha A24 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b13_cumare_chambira_fibra",
+          "role": "secondary",
+          "note": "Ficha B13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "en-el-principio-fueron-los-yorias-a-la-sombra-de-la-ortiga": {
+      "title": "En el principio fueron los Yoria",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "jadomacurino-guyataiba": {
+      "title": "Jadomacuriño y Guyataiba",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p33_guyataiba_presencia_relacional",
+          "role": "primary",
+          "note": "Ficha P33 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p34_jidobe_presencia_de_gente",
+          "role": "secondary",
+          "note": "Ficha P34 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p32_jadomacurino",
+          "role": "secondary",
+          "note": "Ficha P32 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b08_milpes",
+          "role": "secondary",
+          "note": "Ficha B08 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v19_jadomacurino_oso_hormiguero",
+          "role": "secondary",
+          "note": "Ficha V19 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "jirayauma": {
+      "title": "Jirayauma y la Mujer-Jaguar",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p01_jirayauma",
+          "role": "primary",
+          "note": "Ficha P01 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p02_mujer_jaguar_madre",
+          "role": "secondary",
+          "note": "Ficha P02 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p03_hija_de_la_mujer_jaguar",
+          "role": "secondary",
+          "note": "Ficha P03 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a01_caiman_cruce_de_jirayauma",
+          "role": "secondary",
+          "note": "Ficha A01 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a02_cangrejo_bejucos_y_chontaduro",
+          "role": "secondary",
+          "note": "Ficha A02 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o04_banco_de_contar_historias",
+          "role": "secondary",
+          "note": "Ficha O04 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v01_esposa_de_jirayauma_jaguar",
+          "role": "secondary",
+          "note": "Ficha V01 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v30_mujer_jaguar_aspecto_felino_de_la_madre",
+          "role": "secondary",
+          "note": "Ficha V30 de la biblia cerrada."
+        }
+      ]
+    },
+    "jitoma-y-fiboi": {
+      "title": "Jitoma y Fïboi: el Sol y la Luna",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p07_jitoma_agricultor",
+          "role": "primary",
+          "note": "Ficha P07 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p08_fiboi",
+          "role": "secondary",
+          "note": "Ficha P08 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v02_jitoma_agricultor_presencia_solar",
+          "role": "secondary",
+          "note": "Ficha V02 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v03_fiboi_presencia_lunar",
+          "role": "secondary",
+          "note": "Ficha V03 de la biblia cerrada."
+        }
+      ]
+    },
+    "jobiya-jitoma": {
+      "title": "Jitoma y Nokaido, la contienda del Sol y el Tucán",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p09_monaya_jitoma_jobiya",
+          "role": "primary",
+          "note": "Ficha P09 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p10_nokaido_aspecto_humano",
+          "role": "secondary",
+          "note": "Ficha P10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v04_jobiya_muchacho_enfermo",
+          "role": "secondary",
+          "note": "Ficha V04 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v05_nokaido_tucan",
+          "role": "secondary",
+          "note": "Ficha V05 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v29_gaimo_relacion_con_mico_nocturno",
+          "role": "secondary",
+          "note": "Ficha V29 de la biblia cerrada."
+        }
+      ]
+    },
+    "juma": {
+      "title": "Juma y el raudal de Jidïma",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p27_juma_anciano",
+          "role": "primary",
+          "note": "Ficha P27 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "o08_abei_igi_capa_de_juma",
+          "role": "secondary",
+          "note": "Ficha O08 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l09_raudal_de_jidima",
+          "role": "secondary",
+          "note": "Ficha L09 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r07_petrificacion_y_corriente",
+          "role": "secondary",
+          "note": "Ficha R07 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h11_aimaidorai_y_jurasefii",
+          "role": "secondary",
+          "note": "Ficha H11 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h12_ezi_ninairai_y_mujer_de_la_quebrada",
+          "role": "secondary",
+          "note": "Ficha H12 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v14_juma_joven",
+          "role": "secondary",
+          "note": "Ficha V14 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v15_juma_mujer",
+          "role": "secondary",
+          "note": "Ficha V15 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v16_juma_nino",
+          "role": "secondary",
+          "note": "Ficha V16 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v20_jidima_comunidad_y_rocas",
+          "role": "secondary",
+          "note": "Ficha V20 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a30_palomas_apariencia_de_los_jovenes_de_juma",
+          "role": "secondary",
+          "note": "Ficha A30 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o14_cernidor_balai_y_matafrio",
+          "role": "secondary",
+          "note": "Ficha O14 de la biblia cerrada."
+        }
+      ]
+    },
+    "kanifaido": {
+      "title": "Kanifaido y los peligros del deseo",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p28_kanifaido",
+          "role": "primary",
+          "note": "Ficha P28 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "h05_gente_ianipoma_rescatadores",
+          "role": "secondary",
+          "note": "Ficha H05 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v17_kanifaido_restos_y_reparacion",
+          "role": "secondary",
+          "note": "Ficha V17 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o10_adornos_estados_situados",
+          "role": "secondary",
+          "note": "Ficha O10 de la biblia cerrada."
+        }
+      ]
+    },
+    "konago": {
+      "title": "Konago y la derrota de la gente jaguar",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p35_konago_lagartija_de_maloca",
+          "role": "primary",
+          "note": "Ficha P35 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "a10_venado_colorado",
+          "role": "secondary",
+          "note": "Ficha A10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a11_nonocueno_perico_ligero_pequeno",
+          "role": "secondary",
+          "note": "Ficha A11 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h06_gente_jaguar_de_konago",
+          "role": "secondary",
+          "note": "Ficha H06 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a07_tortuga_contraste_de_dos_ciclos",
+          "role": "secondary",
+          "note": "Ficha A07 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a14_jicoizoroma_lagartija_pequena",
+          "role": "secondary",
+          "note": "Ficha A14 de la biblia cerrada."
+        }
+      ]
+    },
+    "kugi-y-nokuerai": {
+      "title": "Kugï y Nokuerai: patos y muchachas perdidas",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p30_kanimani_personificacion_del_rio",
+          "role": "primary",
+          "note": "Ficha P30 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p29_rikono",
+          "role": "secondary",
+          "note": "Ficha P29 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a13_kugi_y_nokuerai_patos_viajeros",
+          "role": "secondary",
+          "note": "Ficha A13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o12_hacha_perseguidora_instrumento",
+          "role": "secondary",
+          "note": "Ficha O12 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o13_canoa_y_remo_viaje",
+          "role": "secondary",
+          "note": "Ficha O13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h10_noifereirai_y_aracudano_anfitriones",
+          "role": "secondary",
+          "note": "Ficha H10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p38_neimuada_tio_y_apariencia_suplantada",
+          "role": "secondary",
+          "note": "Ficha P38 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p39_unuyo_jiruiraiyo_boa_distinta",
+          "role": "secondary",
+          "note": "Ficha P39 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p40_moifenirai_presencia_de_gente",
+          "role": "secondary",
+          "note": "Ficha P40 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v18_rikono_lora",
+          "role": "secondary",
+          "note": "Ficha V18 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h14_criatura_de_joyareno_edad_de_lactante",
+          "role": "secondary",
+          "note": "Ficha H14 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h04_gente_acuatica_modelo_comparativo_muinane",
+          "role": "secondary",
+          "note": "Ficha H04 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l10_umbral_entre_agua_y_maloca",
+          "role": "secondary",
+          "note": "Ficha L10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a14_jicoizoroma_lagartija_pequena",
+          "role": "secondary",
+          "note": "Ficha A14 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a15_guara_chagra_y_familia",
+          "role": "secondary",
+          "note": "Ficha A15 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a21_giboki_cucarron_y_gente",
+          "role": "secondary",
+          "note": "Ficha A21 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a24_hormigas_pequenos_agentes",
+          "role": "secondary",
+          "note": "Ficha A24 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b13_cumare_chambira_fibra",
+          "role": "secondary",
+          "note": "Ficha B13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o10_adornos_estados_situados",
+          "role": "secondary",
+          "note": "Ficha O10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "monairue-jitoma-y-nofida-jitoma": {
+      "title": "Monairue Jitoma y Nofïda Jitoma",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p19_monairue_jitoma",
+          "role": "primary",
+          "note": "Ficha P19 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p22_gaimo_presencia_de_gente",
+          "role": "secondary",
+          "note": "Ficha P22 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a20_etono_y_carpintero_pequeno",
+          "role": "secondary",
+          "note": "Ficha A20 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a26_pirarucu_variante_de_monairue",
+          "role": "secondary",
+          "note": "Ficha A26 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p41_yore_jobai_culebrita_del_sueno",
+          "role": "secondary",
+          "note": "Ficha P41 de la biblia cerrada."
+        },
+        {
+          "entity_id": "o15_variador_vara_de_pescar",
+          "role": "secondary",
+          "note": "Ficha O15 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p20_nofida_nopida_jitoma",
+          "role": "secondary",
+          "note": "Ficha P20 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p21_fizido_iaijenima",
+          "role": "secondary",
+          "note": "Ficha P21 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p23_ameori_ameore_dueno_del_rayo",
+          "role": "secondary",
+          "note": "Ficha P23 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p24_duena_del_sueno_culebrita",
+          "role": "secondary",
+          "note": "Ficha P24 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r06_rayo_espejo_y_mazo",
+          "role": "secondary",
+          "note": "Ficha R06 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v12_fizido_huevo_y_restitucion",
+          "role": "secondary",
+          "note": "Ficha V12 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a27_aves_guardianas_cacambra_y_pajaro_ardita",
+          "role": "secondary",
+          "note": "Ficha A27 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h13_ameogisa_y_la_hija_del_guardian_del_fuego",
+          "role": "secondary",
+          "note": "Ficha H13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v29_gaimo_relacion_con_mico_nocturno",
+          "role": "secondary",
+          "note": "Ficha V29 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l12_morada_de_giboki_plumas_hojas",
+          "role": "secondary",
+          "note": "Ficha L12 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l13_nopidaiko_maloca_de_algodon",
+          "role": "secondary",
+          "note": "Ficha L13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p36_yarokaigiro_gusano_formidable",
+          "role": "secondary",
+          "note": "Ficha P36 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r04_sueno_y_suspension",
+          "role": "secondary",
+          "note": "Ficha R04 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a15_guara_chagra_y_familia",
+          "role": "secondary",
+          "note": "Ficha A15 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a21_giboki_cucarron_y_gente",
+          "role": "secondary",
+          "note": "Ficha A21 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a24_hormigas_pequenos_agentes",
+          "role": "secondary",
+          "note": "Ficha A24 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b13_cumare_chambira_fibra",
+          "role": "secondary",
+          "note": "Ficha B13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "nofi-zazime": {
+      "title": "Nofïzazima y la reconstrucción del cuerpo",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p13_nofizazima",
+          "role": "primary",
+          "note": "Ficha P13 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "a03_faido_pajaro_mochilero",
+          "role": "secondary",
+          "note": "Ficha A03 de la biblia cerrada."
+        },
+        {
+          "entity_id": "b10_ortiga_nofizazima",
+          "role": "secondary",
+          "note": "Ficha B10 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l07_cielo_de_la_hamaca",
+          "role": "secondary",
+          "note": "Ficha L07 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v08_nofizazima_cuerpo_seco",
+          "role": "secondary",
+          "note": "Ficha V08 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v09_nofizazima_reconstruccion",
+          "role": "secondary",
+          "note": "Ficha V09 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v26_familia_de_nofizazima_aves_y_ortiga",
+          "role": "secondary",
+          "note": "Ficha V26 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r04_sueno_y_suspension",
+          "role": "secondary",
+          "note": "Ficha R04 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "nofideno-la-madre": {
+      "title": "Nofïdeño, la Madre que sostiene la tierra",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "r02_sosten_y_cuidado_de_la_tierra",
+          "role": "primary",
+          "note": "Ficha R02 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        }
+      ]
+    },
+    "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre": {
+      "title": "Peleas entre el sobrino Conejo y el tío Tigre",
+      "category_path": "Amazonía > Caquetá y Putumayo",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "unamarai-padre-de-yaje": {
+      "title": "Unámarai, padre de Yajé",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "uuiki-el-padre": {
+      "title": "El rafue Uuikï, corazón del Padre",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "p05_hombre_de_yuca",
+          "role": "primary",
+          "note": "Ficha P05 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "p06_hombre_de_frutas",
+          "role": "secondary",
+          "note": "Ficha P06 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r01_palabra_corazon_y_obra",
+          "role": "secondary",
+          "note": "Ficha R01 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    },
+    "yarokamena": {
+      "title": "Yarokamena, el árbol y el gusano formidable",
+      "category_path": "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "a16_danta_cabeza_del_gusano",
+          "role": "primary",
+          "note": "Ficha A16 de la biblia cerrada.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "a17_vaca_marina_cola_del_gusano",
+          "role": "secondary",
+          "note": "Ficha A17 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a18_temblon_mazo_en_el_agua",
+          "role": "secondary",
+          "note": "Ficha A18 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a19_raya_espejo_en_el_agua",
+          "role": "secondary",
+          "note": "Ficha A19 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a22_ardilla_raton_y_chucha",
+          "role": "secondary",
+          "note": "Ficha A22 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p20_nofida_nopida_jitoma",
+          "role": "secondary",
+          "note": "Ficha P20 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p21_fizido_iaijenima",
+          "role": "secondary",
+          "note": "Ficha P21 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p23_ameori_ameore_dueno_del_rayo",
+          "role": "secondary",
+          "note": "Ficha P23 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p25_kitobeni_aspecto_inicial",
+          "role": "secondary",
+          "note": "Ficha P25 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p24_duena_del_sueno_culebrita",
+          "role": "secondary",
+          "note": "Ficha P24 de la biblia cerrada."
+        },
+        {
+          "entity_id": "h07_buina_uruki_gente_de_renacuajos",
+          "role": "secondary",
+          "note": "Ficha H07 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l11_yarokamena_arbol_formidable",
+          "role": "secondary",
+          "note": "Ficha L11 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r06_rayo_espejo_y_mazo",
+          "role": "secondary",
+          "note": "Ficha R06 de la biblia cerrada."
+        },
+        {
+          "entity_id": "v12_fizido_huevo_y_restitucion",
+          "role": "secondary",
+          "note": "Ficha V12 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a27_aves_guardianas_cacambra_y_pajaro_ardita",
+          "role": "secondary",
+          "note": "Ficha A27 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l12_morada_de_giboki_plumas_hojas",
+          "role": "secondary",
+          "note": "Ficha L12 de la biblia cerrada."
+        },
+        {
+          "entity_id": "l13_nopidaiko_maloca_de_algodon",
+          "role": "secondary",
+          "note": "Ficha L13 de la biblia cerrada."
+        },
+        {
+          "entity_id": "p36_yarokaigiro_gusano_formidable",
+          "role": "secondary",
+          "note": "Ficha P36 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r04_sueno_y_suspension",
+          "role": "secondary",
+          "note": "Ficha R04 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a15_guara_chagra_y_familia",
+          "role": "secondary",
+          "note": "Ficha A15 de la biblia cerrada."
+        },
+        {
+          "entity_id": "a21_giboki_cucarron_y_gente",
+          "role": "secondary",
+          "note": "Ficha A21 de la biblia cerrada."
+        },
+        {
+          "entity_id": "r05_metamorfosis_relaciones_concretas",
+          "role": "secondary",
+          "note": "Ficha R05 de la biblia cerrada."
+        }
+      ]
+    }
+  },
+  "entities": {
+    "p01_jirayauma": {
+      "name": "Jirayauma",
+      "kind": "personaje",
+      "description": "Jirayauma",
+      "aliases": [
+        "P01"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P01",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "p05_hombre_de_yuca": {
+      "name": "Hombre de yuca",
+      "kind": "personaje",
+      "description": "Hombre de yuca",
+      "aliases": [
+        "P05"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P05",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "uuiki-el-padre"
+      ],
+      "evidence": []
+    },
+    "p06_hombre_de_frutas": {
+      "name": "Hombre de frutas",
+      "kind": "personaje",
+      "description": "Hombre de frutas",
+      "aliases": [
+        "P06"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P06",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "uuiki-el-padre"
+      ],
+      "evidence": []
+    },
+    "p07_jitoma_agricultor": {
+      "name": "Jitoma agricultor",
+      "kind": "personaje",
+      "description": "Jitoma agricultor",
+      "aliases": [
+        "P07"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P07",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jitoma-y-fiboi"
+      ],
+      "evidence": []
+    },
+    "p08_fiboi": {
+      "name": "Fïboi",
+      "kind": "personaje",
+      "description": "Fïboi",
+      "aliases": [
+        "P08"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P08",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jitoma-y-fiboi"
+      ],
+      "evidence": []
+    },
+    "p09_monaya_jitoma_jobiya": {
+      "name": "Monaya Jitoma / Jobiya",
+      "kind": "personaje",
+      "description": "Monaya Jitoma / Jobiya",
+      "aliases": [
+        "P09"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P09",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jobiya-jitoma"
+      ],
+      "evidence": []
+    },
+    "p10_nokaido_aspecto_humano": {
+      "name": "Nokaido · aspecto humano",
+      "kind": "personaje",
+      "description": "Nokaido · aspecto humano",
+      "aliases": [
+        "P10"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P10",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jobiya-jitoma"
+      ],
+      "evidence": []
+    },
+    "p13_nofizazima": {
+      "name": "Nofïzazima",
+      "kind": "personaje",
+      "description": "Nofïzazima",
+      "aliases": [
+        "P13"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P13",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime"
+      ],
+      "evidence": []
+    },
+    "p14_buinaima": {
+      "name": "Buinaima",
+      "kind": "personaje",
+      "description": "Buinaima",
+      "aliases": [
+        "P14"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P14",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima",
+        "el-origen-de-la-coca"
+      ],
+      "evidence": []
+    },
+    "p18_yiida_buinaima_presencia_humana": {
+      "name": "Yiida Buinaima · presencia humana",
+      "kind": "personaje",
+      "description": "Yiida Buinaima · presencia humana",
+      "aliases": [
+        "P18"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P18",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "p19_monairue_jitoma": {
+      "name": "Monairue Jitoma",
+      "kind": "personaje",
+      "description": "Monairue Jitoma",
+      "aliases": [
+        "P19"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P19",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma"
+      ],
+      "evidence": []
+    },
+    "p20_nofida_nopida_jitoma": {
+      "name": "Nofïda / Nopïda Jitoma",
+      "kind": "personaje",
+      "description": "Nofïda / Nopïda Jitoma",
+      "aliases": [
+        "P20"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P20",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "p21_fizido_iaijenima": {
+      "name": "Fïzido / Iaijenima",
+      "kind": "personaje",
+      "description": "Fïzido / Iaijenima",
+      "aliases": [
+        "P21"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P21",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "p22_gaimo_presencia_de_gente": {
+      "name": "Gaimo · presencia de gente",
+      "kind": "personaje",
+      "description": "Gaimo · presencia de gente",
+      "aliases": [
+        "P22"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P22",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma"
+      ],
+      "evidence": []
+    },
+    "p23_ameori_ameore_dueno_del_rayo": {
+      "name": "Améori / Améore · dueño del rayo",
+      "kind": "personaje",
+      "description": "Améori / Améore · dueño del rayo",
+      "aliases": [
+        "P23"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P23",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "p25_kitobeni_aspecto_inicial": {
+      "name": "Kïtobeni · aspecto inicial",
+      "kind": "personaje",
+      "description": "Kïtobeni · aspecto inicial",
+      "aliases": [
+        "P25"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P25",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena",
+        "de-como-se-crio-yarocomena"
+      ],
+      "evidence": []
+    },
+    "p27_juma_anciano": {
+      "name": "Juma · anciano",
+      "kind": "personaje",
+      "description": "Juma · anciano",
+      "aliases": [
+        "P27"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P27",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "p28_kanifaido": {
+      "name": "Kanifaido",
+      "kind": "personaje",
+      "description": "Kanifaido",
+      "aliases": [
+        "P28"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P28",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kanifaido"
+      ],
+      "evidence": []
+    },
+    "p30_kanimani_personificacion_del_rio": {
+      "name": "Kanimani · personificación del río",
+      "kind": "personaje",
+      "description": "Kanimani · personificación del río",
+      "aliases": [
+        "P30"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P30",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "p33_guyataiba_presencia_relacional": {
+      "name": "Guyataiba · presencia relacional",
+      "kind": "personaje",
+      "description": "Guyataiba · presencia relacional",
+      "aliases": [
+        "P33"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P33",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jadomacurino-guyataiba"
+      ],
+      "evidence": []
+    },
+    "p34_jidobe_presencia_de_gente": {
+      "name": "Jidobe · presencia de gente",
+      "kind": "personaje",
+      "description": "Jidobe · presencia de gente",
+      "aliases": [
+        "P34"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P34",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jadomacurino-guyataiba"
+      ],
+      "evidence": []
+    },
+    "p02_mujer_jaguar_madre": {
+      "name": "Mujer-Jaguar · madre",
+      "kind": "personaje",
+      "description": "Mujer-Jaguar · madre",
+      "aliases": [
+        "P02"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P02",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "p03_hija_de_la_mujer_jaguar": {
+      "name": "Hija de la Mujer-Jaguar",
+      "kind": "personaje",
+      "description": "Hija de la Mujer-Jaguar",
+      "aliases": [
+        "P03"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P03",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "p15_jerofaikono": {
+      "name": "Jérofaikoño",
+      "kind": "personaje",
+      "description": "Jérofaikoño",
+      "aliases": [
+        "P15"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P15",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "p16_buinaino_companera_de_abundancia": {
+      "name": "Buinaiño · compañera de abundancia",
+      "kind": "personaje",
+      "description": "Buinaiño · compañera de abundancia",
+      "aliases": [
+        "P16"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P16",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "p29_rikono": {
+      "name": "Rikoño",
+      "kind": "personaje",
+      "description": "Rikoño",
+      "aliases": [
+        "P29"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P29",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "p32_jadomacurino": {
+      "name": "Jadomacuriño",
+      "kind": "personaje",
+      "description": "Jadomacuriño",
+      "aliases": [
+        "P32"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P32",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jadomacurino-guyataiba"
+      ],
+      "evidence": []
+    },
+    "p17_buinaino_nina_de_la_coca": {
+      "name": "Buinaiño · niña de la coca",
+      "kind": "personaje",
+      "description": "Buinaiño · niña de la coca",
+      "aliases": [
+        "P17"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P17",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-de-la-coca"
+      ],
+      "evidence": []
+    },
+    "p24_duena_del_sueno_culebrita": {
+      "name": "Dueña del sueño · culebrita",
+      "kind": "personaje",
+      "description": "Dueña del sueño · culebrita",
+      "aliases": [
+        "P24"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P24",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "p35_konago_lagartija_de_maloca": {
+      "name": "Konago · lagartija de maloca",
+      "kind": "personaje",
+      "description": "Konago · lagartija de maloca",
+      "aliases": [
+        "P35"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P35",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "konago"
+      ],
+      "evidence": []
+    },
+    "p36_yarokaigiro_gusano_formidable": {
+      "name": "Yarokaigïro · gusano formidable",
+      "kind": "personaje",
+      "description": "Yarokaigïro · gusano formidable",
+      "aliases": [
+        "P36"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P36",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena",
+        "de-como-se-crio-yarocomena"
+      ],
+      "evidence": []
+    },
+    "a01_caiman_cruce_de_jirayauma": {
+      "name": "Caimán · cruce de Jirayauma",
+      "kind": "personaje",
+      "description": "Caimán · cruce de Jirayauma",
+      "aliases": [
+        "A01"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A01",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "a02_cangrejo_bejucos_y_chontaduro": {
+      "name": "Cangrejo · bejucos y chontaduro",
+      "kind": "personaje",
+      "description": "Cangrejo · bejucos y chontaduro",
+      "aliases": [
+        "A02"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A02",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "a03_faido_pajaro_mochilero": {
+      "name": "Faido · pájaro mochilero",
+      "kind": "personaje",
+      "description": "Faido · pájaro mochilero",
+      "aliases": [
+        "A03"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A03",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime"
+      ],
+      "evidence": []
+    },
+    "a05_picaflor_portador_del_fuego": {
+      "name": "Picaflor · portador del fuego",
+      "kind": "personaje",
+      "description": "Picaflor · portador del fuego",
+      "aliases": [
+        "A05"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A05",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "a06_sapo_forma_animal": {
+      "name": "Sapo · forma animal",
+      "kind": "personaje",
+      "description": "Sapo · forma animal",
+      "aliases": [
+        "A06"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A06",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "a07_tortuga_contraste_de_dos_ciclos": {
+      "name": "Tortuga · contraste de dos ciclos",
+      "kind": "personaje",
+      "description": "Tortuga · contraste de dos ciclos",
+      "aliases": [
+        "A07"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A07",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima",
+        "konago"
+      ],
+      "evidence": []
+    },
+    "a10_venado_colorado": {
+      "name": "Venado colorado",
+      "kind": "personaje",
+      "description": "Venado colorado",
+      "aliases": [
+        "A10"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A10",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "konago"
+      ],
+      "evidence": []
+    },
+    "a11_nonocueno_perico_ligero_pequeno": {
+      "name": "Nonocueño · perico ligero pequeño",
+      "kind": "personaje",
+      "description": "Nonocueño · perico ligero pequeño",
+      "aliases": [
+        "A11"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A11",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "konago"
+      ],
+      "evidence": []
+    },
+    "h04_gente_acuatica_modelo_comparativo_muinane": {
+      "name": "Gente acuática · modelo comparativo Muinane",
+      "kind": "personaje",
+      "description": "Gente acuática · modelo comparativo Muinane",
+      "aliases": [
+        "H04"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H04",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare",
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "h05_gente_ianipoma_rescatadores": {
+      "name": "Gente ïanipoma · rescatadores",
+      "kind": "personaje",
+      "description": "Gente ïanipoma · rescatadores",
+      "aliases": [
+        "H05"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H05",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kanifaido"
+      ],
+      "evidence": []
+    },
+    "h06_gente_jaguar_de_konago": {
+      "name": "Gente jaguar de Konago",
+      "kind": "personaje",
+      "description": "Gente jaguar de Konago",
+      "aliases": [
+        "H06"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H06",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "konago"
+      ],
+      "evidence": []
+    },
+    "h07_buina_uruki_gente_de_renacuajos": {
+      "name": "Buina Urukï · gente de renacuajos",
+      "kind": "personaje",
+      "description": "Buina Urukï · gente de renacuajos",
+      "aliases": [
+        "H07"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H07",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "de-como-se-crio-yarocomena",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "b05_achiote": {
+      "name": "Achiote",
+      "kind": "personaje",
+      "description": "Achiote",
+      "aliases": [
+        "B05"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "B05",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "b06_aji": {
+      "name": "Ají",
+      "kind": "personaje",
+      "description": "Ají",
+      "aliases": [
+        "B06"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "B06",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "b08_milpes": {
+      "name": "Milpés",
+      "kind": "personaje",
+      "description": "Milpés",
+      "aliases": [
+        "B08"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "B08",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jadomacurino-guyataiba"
+      ],
+      "evidence": []
+    },
+    "b10_ortiga_nofizazima": {
+      "name": "Ortiga · Nofïzazima",
+      "kind": "personaje",
+      "description": "Ortiga · Nofïzazima",
+      "aliases": [
+        "B10"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "B10",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime"
+      ],
+      "evidence": []
+    },
+    "o04_banco_de_contar_historias": {
+      "name": "Banco de contar historias",
+      "kind": "personaje",
+      "description": "Banco de contar historias",
+      "aliases": [
+        "O04"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O04",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "o08_abei_igi_capa_de_juma": {
+      "name": "Abeï ïgï · capa de Juma",
+      "kind": "personaje",
+      "description": "Abeï ïgï · capa de Juma",
+      "aliases": [
+        "O08"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O08",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "o10_adornos_estados_situados": {
+      "name": "Adornos · estados situados",
+      "kind": "personaje",
+      "description": "Adornos · estados situados",
+      "aliases": [
+        "O10"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O10",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "diijoma",
+        "kanifaido",
+        "kugi-y-nokuerai",
+        "de-como-se-crio-yarocomena"
+      ],
+      "evidence": []
+    },
+    "l07_cielo_de_la_hamaca": {
+      "name": "Cielo de la hamaca",
+      "kind": "personaje",
+      "description": "Cielo de la hamaca",
+      "aliases": [
+        "L07"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "L07",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime"
+      ],
+      "evidence": []
+    },
+    "l09_raudal_de_jidima": {
+      "name": "Raudal de Jidïma",
+      "kind": "personaje",
+      "description": "Raudal de Jidïma",
+      "aliases": [
+        "L09"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "L09",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "l10_umbral_entre_agua_y_maloca": {
+      "name": "Umbral entre agua y maloca",
+      "kind": "personaje",
+      "description": "Umbral entre agua y maloca",
+      "aliases": [
+        "L10"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "L10",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare",
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "l11_yarokamena_arbol_formidable": {
+      "name": "Yarokamena · árbol formidable",
+      "kind": "personaje",
+      "description": "Yarokamena · árbol formidable",
+      "aliases": [
+        "L11"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "L11",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena",
+        "de-como-se-crio-yarocomena"
+      ],
+      "evidence": []
+    },
+    "r01_palabra_corazon_y_obra": {
+      "name": "Palabra, corazón y obra",
+      "kind": "personaje",
+      "description": "Palabra, corazón y obra",
+      "aliases": [
+        "R01"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "R01",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "uuiki-el-padre"
+      ],
+      "evidence": []
+    },
+    "r02_sosten_y_cuidado_de_la_tierra": {
+      "name": "Sostén y cuidado de la tierra",
+      "kind": "personaje",
+      "description": "Sostén y cuidado de la tierra",
+      "aliases": [
+        "R02"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "R02",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofideno-la-madre"
+      ],
+      "evidence": []
+    },
+    "r04_sueno_y_suspension": {
+      "name": "Sueño y suspensión",
+      "kind": "personaje",
+      "description": "Sueño y suspensión",
+      "aliases": [
+        "R04"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "R04",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime",
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "r05_metamorfosis_relaciones_concretas": {
+      "name": "Metamorfosis · relaciones concretas",
+      "kind": "personaje",
+      "description": "Metamorfosis · relaciones concretas",
+      "aliases": [
+        "R05"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "R05",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "uuiki-el-padre",
+        "diijoma",
+        "nofi-zazime",
+        "el-diluvio-y-las-hazanas-de-buinaima",
+        "el-origen-del-maguare",
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena",
+        "kugi-y-nokuerai",
+        "jadomacurino-guyataiba"
+      ],
+      "evidence": []
+    },
+    "r06_rayo_espejo_y_mazo": {
+      "name": "Rayo, espejo y mazo",
+      "kind": "personaje",
+      "description": "Rayo, espejo y mazo",
+      "aliases": [
+        "R06"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "R06",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "r07_petrificacion_y_corriente": {
+      "name": "Petrificación y corriente",
+      "kind": "personaje",
+      "description": "Petrificación y corriente",
+      "aliases": [
+        "R07"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "R07",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "a13_kugi_y_nokuerai_patos_viajeros": {
+      "name": "Kugï y Nokuerai · patos viajeros",
+      "kind": "personaje",
+      "description": "Kugï y Nokuerai · patos viajeros",
+      "aliases": [
+        "A13"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A13",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "a14_jicoizoroma_lagartija_pequena": {
+      "name": "Jicoizoroma · lagartija pequeña",
+      "kind": "personaje",
+      "description": "Jicoizoroma · lagartija pequeña",
+      "aliases": [
+        "A14"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A14",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai",
+        "konago"
+      ],
+      "evidence": []
+    },
+    "a15_guara_chagra_y_familia": {
+      "name": "Guara · chagra y familia",
+      "kind": "personaje",
+      "description": "Guara · chagra y familia",
+      "aliases": [
+        "A15"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A15",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena",
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "a16_danta_cabeza_del_gusano": {
+      "name": "Danta · cabeza del gusano",
+      "kind": "personaje",
+      "description": "Danta · cabeza del gusano",
+      "aliases": [
+        "A16"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A16",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "a17_vaca_marina_cola_del_gusano": {
+      "name": "Vaca marina · cola del gusano",
+      "kind": "personaje",
+      "description": "Vaca marina · cola del gusano",
+      "aliases": [
+        "A17"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A17",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "a18_temblon_mazo_en_el_agua": {
+      "name": "Temblón · mazo en el agua",
+      "kind": "personaje",
+      "description": "Temblón · mazo en el agua",
+      "aliases": [
+        "A18"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A18",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "a19_raya_espejo_en_el_agua": {
+      "name": "Raya · espejo en el agua",
+      "kind": "personaje",
+      "description": "Raya · espejo en el agua",
+      "aliases": [
+        "A19"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A19",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "a20_etono_y_carpintero_pequeno": {
+      "name": "Etoño y carpintero pequeño",
+      "kind": "personaje",
+      "description": "Etoño y carpintero pequeño",
+      "aliases": [
+        "A20"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A20",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma"
+      ],
+      "evidence": []
+    },
+    "a21_giboki_cucarron_y_gente": {
+      "name": "Gïbokï · cucarrón y gente",
+      "kind": "personaje",
+      "description": "Gïbokï · cucarrón y gente",
+      "aliases": [
+        "A21"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A21",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena",
+        "monairue-jitoma-y-nofida-jitoma",
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "a22_ardilla_raton_y_chucha": {
+      "name": "Ardilla, Ratón y Chucha",
+      "kind": "personaje",
+      "description": "Ardilla, Ratón y Chucha",
+      "aliases": [
+        "A22"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A22",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "a23_paujil_colorado_antecedente_del_diluvio": {
+      "name": "Paujil colorado · antecedente del diluvio",
+      "kind": "personaje",
+      "description": "Paujil colorado · antecedente del diluvio",
+      "aliases": [
+        "A23"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A23",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "a24_hormigas_pequenos_agentes": {
+      "name": "Hormigas · pequeños agentes",
+      "kind": "personaje",
+      "description": "Hormigas · pequeños agentes",
+      "aliases": [
+        "A24"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A24",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare",
+        "monairue-jitoma-y-nofida-jitoma",
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "a25_gavilan_y_pez_y_okameri_y_edobedirima": {
+      "name": "Gavilán y pez · Y okámeri y Edobedïrima",
+      "kind": "personaje",
+      "description": "Gavilán y pez · Y okámeri y Edobedïrima",
+      "aliases": [
+        "A25"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A25",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "o12_hacha_perseguidora_instrumento": {
+      "name": "Hacha perseguidora · instrumento",
+      "kind": "personaje",
+      "description": "Hacha perseguidora · instrumento",
+      "aliases": [
+        "O12"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O12",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "o13_canoa_y_remo_viaje": {
+      "name": "Canoa y remo · viaje",
+      "kind": "personaje",
+      "description": "Canoa y remo · viaje",
+      "aliases": [
+        "O13"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O13",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "o14_cernidor_balai_y_matafrio": {
+      "name": "Cernidor, balai y matafrío",
+      "kind": "personaje",
+      "description": "Cernidor, balai y matafrío",
+      "aliases": [
+        "O14"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O14",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare",
+        "juma"
+      ],
+      "evidence": []
+    },
+    "b11_moniya_amena_arbol_de_abundancia": {
+      "name": "Moniya Amena · árbol de abundancia",
+      "kind": "personaje",
+      "description": "Moniya Amena · árbol de abundancia",
+      "aliases": [
+        "B11"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "B11",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "p37_monayakono_companera_de_yiida": {
+      "name": "Monayakono · compañera de Yiida",
+      "kind": "personaje",
+      "description": "Monayakono · compañera de Yiida",
+      "aliases": [
+        "P37"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P37",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "h08_familia_de_yiida_eje_del_intercambio": {
+      "name": "Familia de Yiida · eje del intercambio",
+      "kind": "personaje",
+      "description": "Familia de Yiida · eje del intercambio",
+      "aliases": [
+        "H08"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H08",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "h09_kuioyeni_e_imigi_buinaima": {
+      "name": "Kuióyeni e Ïmïgï Buinaima",
+      "kind": "personaje",
+      "description": "Kuióyeni e Ïmïgï Buinaima",
+      "aliases": [
+        "H09"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H09",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "h10_noifereirai_y_aracudano_anfitriones": {
+      "name": "Noifereiraï y Aracudaño · anfitriones",
+      "kind": "personaje",
+      "description": "Noifereiraï y Aracudaño · anfitriones",
+      "aliases": [
+        "H10"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H10",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "p38_neimuada_tio_y_apariencia_suplantada": {
+      "name": "Neimuada · tío y apariencia suplantada",
+      "kind": "personaje",
+      "description": "Neimuada · tío y apariencia suplantada",
+      "aliases": [
+        "P38"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P38",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "p39_unuyo_jiruiraiyo_boa_distinta": {
+      "name": "Unuyo / Jiruiraiyo · boa distinta",
+      "kind": "personaje",
+      "description": "Unuyo / Jiruiraiyo · boa distinta",
+      "aliases": [
+        "P39"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P39",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "p40_moifenirai_presencia_de_gente": {
+      "name": "Moifenirai · presencia de gente",
+      "kind": "personaje",
+      "description": "Moifenirai · presencia de gente",
+      "aliases": [
+        "P40"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P40",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "h11_aimaidorai_y_jurasefii": {
+      "name": "Aïmaïdoraï y Jurasefïi",
+      "kind": "personaje",
+      "description": "Aïmaïdoraï y Jurasefïi",
+      "aliases": [
+        "H11"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H11",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "h12_ezi_ninairai_y_mujer_de_la_quebrada": {
+      "name": "Ezi Ninairaï y mujer de la quebrada",
+      "kind": "personaje",
+      "description": "Ezi Ninairaï y mujer de la quebrada",
+      "aliases": [
+        "H12"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H12",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "v01_esposa_de_jirayauma_jaguar": {
+      "name": "Esposa de Jirayauma: jaguar",
+      "kind": "personaje",
+      "description": "Esposa de Jirayauma: jaguar",
+      "aliases": [
+        "V01"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V01",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "v02_jitoma_agricultor_presencia_solar": {
+      "name": "Jitoma agricultor: presencia solar",
+      "kind": "personaje",
+      "description": "Jitoma agricultor: presencia solar",
+      "aliases": [
+        "V02"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V02",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jitoma-y-fiboi"
+      ],
+      "evidence": []
+    },
+    "v03_fiboi_presencia_lunar": {
+      "name": "Fïboi: presencia lunar",
+      "kind": "personaje",
+      "description": "Fïboi: presencia lunar",
+      "aliases": [
+        "V03"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V03",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jitoma-y-fiboi"
+      ],
+      "evidence": []
+    },
+    "v04_jobiya_muchacho_enfermo": {
+      "name": "Jobiya: muchacho enfermo",
+      "kind": "personaje",
+      "description": "Jobiya: muchacho enfermo",
+      "aliases": [
+        "V04"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V04",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jobiya-jitoma"
+      ],
+      "evidence": []
+    },
+    "v05_nokaido_tucan": {
+      "name": "Nokaido: tucán",
+      "kind": "personaje",
+      "description": "Nokaido: tucán",
+      "aliases": [
+        "V05"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V05",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jobiya-jitoma"
+      ],
+      "evidence": []
+    },
+    "v08_nofizazima_cuerpo_seco": {
+      "name": "Nofïzazima: cuerpo seco",
+      "kind": "personaje",
+      "description": "Nofïzazima: cuerpo seco",
+      "aliases": [
+        "V08"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V08",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime"
+      ],
+      "evidence": []
+    },
+    "v09_nofizazima_reconstruccion": {
+      "name": "Nofïzazima: reconstrucción",
+      "kind": "personaje",
+      "description": "Nofïzazima: reconstrucción",
+      "aliases": [
+        "V09"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V09",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime"
+      ],
+      "evidence": []
+    },
+    "v10_jerofaikono_cambio_animal": {
+      "name": "Jérofaikoño: cambio animal",
+      "kind": "personaje",
+      "description": "Jérofaikoño: cambio animal",
+      "aliases": [
+        "V10"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V10",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "v11_yiida_devolucion_y_maguare": {
+      "name": "Yiida: devolución y maguaré",
+      "kind": "personaje",
+      "description": "Yiida: devolución y maguaré",
+      "aliases": [
+        "V11"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V11",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "v12_fizido_huevo_y_restitucion": {
+      "name": "Fïzido: huevo y restitución",
+      "kind": "personaje",
+      "description": "Fïzido: huevo y restitución",
+      "aliases": [
+        "V12"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V12",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "v13_kitobeni_aspecto_transformado": {
+      "name": "Kïtobeni: aspecto transformado",
+      "kind": "personaje",
+      "description": "Kïtobeni: aspecto transformado",
+      "aliases": [
+        "V13"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V13",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "de-como-se-crio-yarocomena"
+      ],
+      "evidence": []
+    },
+    "v14_juma_joven": {
+      "name": "Juma: joven",
+      "kind": "personaje",
+      "description": "Juma: joven",
+      "aliases": [
+        "V14"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V14",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "v15_juma_mujer": {
+      "name": "Juma: mujer",
+      "kind": "personaje",
+      "description": "Juma: mujer",
+      "aliases": [
+        "V15"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V15",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "v16_juma_nino": {
+      "name": "Juma: niño",
+      "kind": "personaje",
+      "description": "Juma: niño",
+      "aliases": [
+        "V16"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V16",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "v17_kanifaido_restos_y_reparacion": {
+      "name": "Kanifaido: restos y reparación",
+      "kind": "personaje",
+      "description": "Kanifaido: restos y reparación",
+      "aliases": [
+        "V17"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V17",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kanifaido"
+      ],
+      "evidence": []
+    },
+    "v18_rikono_lora": {
+      "name": "Rikoño: lora",
+      "kind": "personaje",
+      "description": "Rikoño: lora",
+      "aliases": [
+        "V18"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V18",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "v19_jadomacurino_oso_hormiguero": {
+      "name": "Jadomacuriño: oso hormiguero",
+      "kind": "personaje",
+      "description": "Jadomacuriño: oso hormiguero",
+      "aliases": [
+        "V19"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V19",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jadomacurino-guyataiba"
+      ],
+      "evidence": []
+    },
+    "v20_jidima_comunidad_y_rocas": {
+      "name": "Jidïma: comunidad y rocas",
+      "kind": "personaje",
+      "description": "Jidïma: comunidad y rocas",
+      "aliases": [
+        "V20"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V20",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    },
+    "a26_pirarucu_variante_de_monairue": {
+      "name": "Pirarucú · variante de Monairue",
+      "kind": "personaje",
+      "description": "Pirarucú · variante de Monairue",
+      "aliases": [
+        "A26"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A26",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma"
+      ],
+      "evidence": []
+    },
+    "a27_aves_guardianas_cacambra_y_pajaro_ardita": {
+      "name": "Aves guardianas · cacambra y pájaro ardita",
+      "kind": "personaje",
+      "description": "Aves guardianas · cacambra y pájaro ardita",
+      "aliases": [
+        "A27"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A27",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "a28_cusumbos_visitantes_indisciplinados": {
+      "name": "Cusumbos · visitantes indisciplinados",
+      "kind": "personaje",
+      "description": "Cusumbos · visitantes indisciplinados",
+      "aliases": [
+        "A28"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A28",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "h13_ameogisa_y_la_hija_del_guardian_del_fuego": {
+      "name": "Ameogisa y la hija del guardián del fuego",
+      "kind": "personaje",
+      "description": "Ameogisa y la hija del guardián del fuego",
+      "aliases": [
+        "H13"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H13",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "p41_yore_jobai_culebrita_del_sueno": {
+      "name": "Yore Jobai · culebrita del sueño",
+      "kind": "personaje",
+      "description": "Yore Jobai · culebrita del sueño",
+      "aliases": [
+        "P41"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "P41",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma"
+      ],
+      "evidence": []
+    },
+    "o15_variador_vara_de_pescar": {
+      "name": "Variador / vara de pescar",
+      "kind": "personaje",
+      "description": "Variador / vara de pescar",
+      "aliases": [
+        "O15"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O15",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma"
+      ],
+      "evidence": []
+    },
+    "o16_batea_tiesto_y_abanico": {
+      "name": "Batea, tiesto y abanico",
+      "kind": "personaje",
+      "description": "Batea, tiesto y abanico",
+      "aliases": [
+        "O16"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "O16",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima",
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "h03_retorno_humanidad_estado_mojado_y_frio": {
+      "name": "Humanidad · estado mojado y frío",
+      "kind": "personaje",
+      "description": "Humanidad · estado mojado y frío",
+      "aliases": [
+        "H03-retorno"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H03-retorno",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "v26_familia_de_nofizazima_aves_y_ortiga": {
+      "name": "Familia de Nofïzazima · aves y ortiga",
+      "kind": "personaje",
+      "description": "Familia de Nofïzazima · aves y ortiga",
+      "aliases": [
+        "V26"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V26",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "nofi-zazime"
+      ],
+      "evidence": []
+    },
+    "v27_menizai_buinaino_tortuga_acuatica": {
+      "name": "Menizaï Buinaiño · tortuga acuática",
+      "kind": "personaje",
+      "description": "Menizaï Buinaiño · tortuga acuática",
+      "aliases": [
+        "V27"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V27",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "b12_helecho_emblema_situado_del_baile": {
+      "name": "Helecho · emblema situado del baile",
+      "kind": "personaje",
+      "description": "Helecho · emblema situado del baile",
+      "aliases": [
+        "B12"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "B12",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "b13_cumare_chambira_fibra": {
+      "name": "Cumare / chambira · fibra",
+      "kind": "personaje",
+      "description": "Cumare / chambira · fibra",
+      "aliases": [
+        "B13"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "B13",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare",
+        "monairue-jitoma-y-nofida-jitoma",
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "v29_gaimo_relacion_con_mico_nocturno": {
+      "name": "Gaimo · relación con mico nocturno",
+      "kind": "personaje",
+      "description": "Gaimo · relación con mico nocturno",
+      "aliases": [
+        "V29"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V29",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jobiya-jitoma",
+        "monairue-jitoma-y-nofida-jitoma"
+      ],
+      "evidence": []
+    },
+    "v30_mujer_jaguar_aspecto_felino_de_la_madre": {
+      "name": "Mujer-Jaguar · aspecto felino de la madre",
+      "kind": "personaje",
+      "description": "Mujer-Jaguar · aspecto felino de la madre",
+      "aliases": [
+        "V30"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V30",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "jirayauma"
+      ],
+      "evidence": []
+    },
+    "a29_cerrillo_intercambio_de_la_maloca": {
+      "name": "Cerrillo · intercambio de la maloca",
+      "kind": "personaje",
+      "description": "Cerrillo · intercambio de la maloca",
+      "aliases": [
+        "A29"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A29",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-origen-del-maguare"
+      ],
+      "evidence": []
+    },
+    "l12_morada_de_giboki_plumas_hojas": {
+      "name": "Morada de Gïbokï · plumas / hojas",
+      "kind": "personaje",
+      "description": "Morada de Gïbokï · plumas / hojas",
+      "aliases": [
+        "L12"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "L12",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "l13_nopidaiko_maloca_de_algodon": {
+      "name": "Nopïdaiko · maloca de algodón",
+      "kind": "personaje",
+      "description": "Nopïdaiko · maloca de algodón",
+      "aliases": [
+        "L13"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "L13",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "monairue-jitoma-y-nofida-jitoma",
+        "yarokamena"
+      ],
+      "evidence": []
+    },
+    "v28_jerofaikono_apariencia_de_buinaino": {
+      "name": "Jérofaikoño · apariencia de Buinaiño",
+      "kind": "personaje",
+      "description": "Jérofaikoño · apariencia de Buinaiño",
+      "aliases": [
+        "V28"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "V28",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-diluvio-y-las-hazanas-de-buinaima"
+      ],
+      "evidence": []
+    },
+    "h14_criatura_de_joyareno_edad_de_lactante": {
+      "name": "Criatura de Joyareño · edad de lactante",
+      "kind": "personaje",
+      "description": "Criatura de Joyareño · edad de lactante",
+      "aliases": [
+        "H14"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "H14",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "kugi-y-nokuerai"
+      ],
+      "evidence": []
+    },
+    "a30_palomas_apariencia_de_los_jovenes_de_juma": {
+      "name": "Palomas · apariencia de los jóvenes de Juma",
+      "kind": "personaje",
+      "description": "Palomas · apariencia de los jóvenes de Juma",
+      "aliases": [
+        "A30"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "ficha_heredada": "A30",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "juma"
+      ],
+      "evidence": []
+    }
+  },
+  "models": {},
+  "pilot": null,
+  "generation_batch": null,
+  "completion": null
+}
