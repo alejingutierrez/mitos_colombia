@@ -8,12 +8,166 @@
   "canon_field": "mito",
   "canon_sha256": "4dcd2dccbc18debc310cc46bcd8724688ed34c638baa36fe09717dbdfe785460",
   "canon_chars": 700,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "La primera mujer tiene dos nombres y un marido nombrado",
+      "evidencia": "Magri Regina, que en lengua de indios se llama Luitsama, es mujer de Seraira"
+    },
+    {
+      "id": "n02",
+      "nudo": "Los dos son el principio de lo vivo",
+      "evidencia": "Los dos son los primeros seres vivientes"
+    },
+    {
+      "id": "n03",
+      "nudo": "Ella es la primera mujer y tiene cargo",
+      "evidencia": "ella es la primera mujer, la Reina Madre"
+    },
+    {
+      "id": "n04",
+      "nudo": "Las semillas no nacen aquí: llegan de otra parte y llegan dentro de una mochila",
+      "evidencia": "Ella trajo de otra parte del mundo toda clase de semillas en una mochila"
+    },
+    {
+      "id": "n05",
+      "nudo": "Son cinco y están nombradas una por una",
+      "evidencia": "maíz, fríjol, malanga, ñame y papa"
+    },
+    {
+      "id": "n06",
+      "nudo": "La entrega es a un hijo que vive en un sitio con nombre",
+      "evidencia": "Se las entregó a su hijo, que vive en Takina de San Miguel"
+    },
+    {
+      "id": "n07",
+      "nudo": "El hijo no muere: se vuelve piedra blanca",
+      "evidencia": "Ese hijo no se murió, sino que se volvió piedra de blanco"
+    },
+    {
+      "id": "n08",
+      "nudo": "El guardián tiene nombre y su rasgo es no perderse",
+      "evidencia": "Se llama Niwalui, y no se pierde nunca"
+    },
+    {
+      "id": "n09",
+      "nudo": "El acceso a él está restringido a los mamas y pasa por la Casa Ceremonial",
+      "evidencia": "Solamente los Mamas de la Casa Ceremonial, la que llaman Kansa María, se ponen en comunicación con él"
+    },
+    {
+      "id": "n10",
+      "nudo": "Él es el sembrador de todas las semillas",
+      "evidencia": "Él fue quien sembró todas las semillas"
+    },
+    {
+      "id": "n11",
+      "nudo": "Su virtud es que no se pierde ninguna",
+      "evidencia": "No perdió ninguna de ellas"
+    },
+    {
+      "id": "n12",
+      "nudo": "La cadena sigue: lo entregado se hereda para ser cultivado",
+      "evidencia": "se las dejó a su hijo, para que las cultivara y tuviera alimento para él y para los suyos"
+    }
+  ],
+  "deslindes": [
+    "Fríjol, ñame y papa no tienen ficha propia: las cubre `maiz`, que en esta biblia es la ficha portadora de las semillas del relato. Las cinco se ven juntas cuando la mochila se abre, y ninguna se dibuja como especie con lámina aparte, porque el corpus las nombra en una sola línea y en un solo puñado.",
+    "La mochila entra por forma y nunca por dibujo. El tejido identifica linaje y, según el propio plan de manejo kogui, el tamaño y la forma de las mochilas es de lo que distingue a un pueblo de otro: se dibuja el volumen, la boca y la correa, no la trama.",
+    "El nuhué aparece siempre por fuera. El interior está excluido con fuente —a mujeres y niños les está del todo prohibida la entrada—, así que la comunicación de los mamas con Niwalui se compone en el exterior de la casa, frente a la puerta baja, nunca dentro.",
+    "«Piedra de blanco» no es mármol ni monumento. El blanco kogui es lo que todavía no tiene marca, y la piedra de Niwalui es blanca por eso: superficie sin veta, sin pulir y sin inscripción; cualquier grano noble la convertiría en lápida y el relato dice justo lo contrario, que no se murió.",
+    "Takina y San Miguel son lugares vivos y se nombran, no se reconstruyen: van dentro de `poblado_kogui` y ninguna escena los dibuja como un caserío de otra época ni los identifica con rótulo."
+  ],
+  "descartes": [
+    {
+      "que": "El interior de la Casa Ceremonial",
+      "razon": "Excluido con fuente en el dossier. El nudo n09 se sostiene desde afuera: los mamas frente a la casa bastan para decir que sólo ellos entran."
+    },
+    {
+      "que": "El dibujo tejido de la mochila",
+      "razon": "`do_not_visualize`: el diseño identifica linaje. Se dibuja la forma."
+    },
+    {
+      "que": "El hijo del hijo con cuerpo propio",
+      "razon": "El canon cierra con «se las dejó a su hijo» y no lo describe ni lo nombra. La herencia se compone como semilla dejada en el surco, no como una tercera figura inventada."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Doce nudos y una sola trayectoria: las semillas pasan de mano en mano y en cada mano cambia de estado quien las tiene —mujer, piedra, sembrador, heredero—. Ocho bloques le dan un cuadro a cada cambio de estado y ninguno a la repetición; estirarlo más obligaría a inventar un viaje que el relato resuelve en tres palabras, «de otra parte».",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04"
+      ],
+      "momento": "Magri Regina llega con la mochila todavía cerrada y Seraira a su lado: los dos primeros, de pie, antes de que nada se entregue.",
+      "composicion": "Plano general apaisado, cámara a la altura del pecho. Los dos cuerpos enteros y juntos en el tercio izquierdo, ella medio paso por delante de él, con la mochila colgada del hombro y la mano encima de la boca cerrada. El tercio derecho es la ladera vacía por donde vienen, y la vacía de lejanía dice «de otra parte del mundo». Las dos figuras ocupan más de un tercio del alto del cuadro.",
+      "entity_refs": [
+        "gran_madre",
+        "seraira",
+        "mochila",
+        "sierra_nevada"
+      ],
+      "no_mostrar": [
+        "dibujo tejido de la mochila",
+        "semillas visibles antes de que la mochila se abra"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n05",
+        "n06",
+        "n07",
+        "n08"
+      ],
+      "momento": "La mochila se abre arriba y el hijo endurece abajo: recibe las semillas y en el mismo gesto se vuelve piedra.",
+      "composicion": "Vertical apilado. Arriba, la boca de la mochila volcada y las cinco semillas cayendo por el eje, contadas y distinguibles unas de otras. En medio, las manos de Niwalui abiertas para recibirlas. Abajo, las piernas y el torso del mismo Niwalui ya cambiados en piedra blanca, con el límite entre carne y piedra subiendo por el cuerpo a la misma velocidad a la que caen las semillas. El vertical existe para que lo que baja y lo que sube se crucen en la cintura de la figura.",
+      "entity_refs": [
+        "niwalui",
+        "gran_madre",
+        "mochila",
+        "maiz",
+        "malanga",
+        "poblado_kogui"
+      ],
+      "no_mostrar": [
+        "dibujo tejido de la mochila",
+        "piedra pulida o con inscripción"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n09",
+        "n10",
+        "n11",
+        "n12"
+      ],
+      "momento": "Queda la piedra blanca en medio de lo sembrado, y sólo los mamas frente a la casa pueden hablarle.",
+      "composicion": "Cuadrada, encuadre alto y cerrado. En el centro, la piedra blanca de Niwalui sembrada en la roza, con las matas nacidas alrededor en anillo y ni un claro sin sembrar, que es la manera de decir que no perdió ninguna. En el borde superior, pequeño y recortado, el exterior del nuhué con dos mamas de pie delante de la puerta, sin entrar. En el primer plano bajo, unas semillas sueltas en el surco: lo que queda para el hijo siguiente.",
+      "entity_refs": [
+        "niwalui",
+        "colectivo_mamas",
+        "nuhue_kansa_maria",
+        "maiz",
+        "roza"
+      ],
+      "no_mostrar": [
+        "interior del nuhué",
+        "máscara u objeto ceremonial",
+        "el hijo heredero como figura"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "gran_madre",

@@ -8,12 +8,207 @@
   "canon_field": "content",
   "canon_sha256": "a1e95ad586fc98a8690c88bcd80b3afc53ade9e750393c5dcfb53d94078354ce",
   "canon_chars": 8198,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "Las ánimas de aquí y las de allá no hacen lo mismo, y el relato lo dice antes de empezar",
+      "evidencia": "En las montañas de Santander, sin embargo, el aire era otra cosa; allí las ánimas danzaban igual que el rocío en las hojas, con travesura y alegría"
+    },
+    {
+      "id": "n02",
+      "nudo": "El primer castigado es un buen trabajador con una sola falta, y la falta es semanal",
+      "evidencia": "la historia de Laurián, un buen trabajador de campo que, aunque diligente en su labor, se dejaba tentar semana tras semana por el guarapo"
+    },
+    {
+      "id": "n03",
+      "nudo": "Vuelve de noche, cargado y por el mismo camino de siempre",
+      "evidencia": "Cargado con el peso de las compras y una mona que guiaba sus saludos, Laurián emprendió el sinuoso regreso a casa"
+    },
+    {
+      "id": "n04",
+      "nudo": "Ve la procesión y lo primero que hace es esconderse",
+      "evidencia": "Huía Laurián convertido en figura temblorosa, escondido tras el fiador de su propio miedo"
+    },
+    {
+      "id": "n05",
+      "nudo": "Lo delata el olfato de un ánima, no la vista",
+      "evidencia": "¡Hiede a carne humana!"
+    },
+    {
+      "id": "n06",
+      "nudo": "El castigo es aéreo y es una broma: lo vuelan",
+      "evidencia": "Se elevó el hombrecillo por los aires, volateado por las ánimas al son del viento"
+    },
+    {
+      "id": "n07",
+      "nudo": "Amanece en la copa de un árbol y sale curado de la bebida",
+      "evidencia": "lo encontraron aterrizado en lo alto de un frondoso gualanday"
+    },
+    {
+      "id": "n08",
+      "nudo": "La segunda castigada trabaja en día de guarda, y ése es todo su delito",
+      "evidencia": "En un domingo de meditación y de costuras urgentes"
+    },
+    {
+      "id": "n09",
+      "nudo": "Las ánimas llegan cantando y vestidas de mortaja",
+      "evidencia": "Las ánimas surgieron de entre los árboles, envueltas en sus mortajas blancas como espuma del río cuando se enoja"
+    },
+    {
+      "id": "n10",
+      "nudo": "Una de ellas tiene nombre y pide un favor concreto",
+      "evidencia": "la difunta Jovita, revoltosa y enredada en sus propios sudarios, rogaba a Ulogia por el alivio de su larga mortaja"
+    },
+    {
+      "id": "n11",
+      "nudo": "Ulogia la ayuda con la herramienta de su oficio y se queda corta",
+      "evidencia": "Ulogia, tijera en mano, liberó a Jovita del embrollo de telas. Mas la destreza de Ulogia no fue suficiente"
+    },
+    {
+      "id": "n12",
+      "nudo": "El pago es un golpe con un hueso y una cicatriz que enseña la lección",
+      "evidencia": "lanzó la canilla-cirio hacia la comadre, dejándole una cicatriz en la frente como recordatorio"
+    }
+  ],
+  "deslindes": [
+    "Esta página no es caldense y su territorio está en el propio canon: «En las montañas de Santander». El módulo la reubica en Rionegro y Girón, y Girón es OTRA biblioteca visual —casco virreinal de 1631, calle empedrada estrecha de andén angosto, muro blanco encalado, portones marrón muy oscuro o negro y teja de arcilla—. Si el cuento de ánimas se ilustra con la paleta del Eje Cafetero, está mal: no comparte ni un tono con el resto del cubo.",
+    "Los dos episodios NO se funden y por eso esta acta lleva dos actos y dos huellas en vez de uno de cada. Laurián y Ñuá Ulogia son dos primarias, dos delitos distintos —la bebida y el trabajo en domingo— y dos castigos distintos; lo único que comparten son las ánimas. Ninguna lámina los pone en el mismo cuadro.",
+    "La procesión de ánimas de este corpus NO es el Ánima Sola y no hereda nada de la estampa católica de la mujer entre llamas: el dossier nacional lo dice expresamente. Se produce entera aquí, con cirios, camino rural y disciplina de conducta doméstica, y ninguna figura arde.",
+    "El cirio no es adorno: la cofradía de las ánimas de Girón está documentada desde 1636 y el Señor de los Milagros hace su procesión «con cirios». Y es el mismo objeto que el relato convierte en hueso. La canilla-cirio se sugiere como objeto en la mano de Jovita y NUNCA como despojo reconocible.",
+    "Jovita no se dibuja con descomposición, ni rostro cadavérico, ni herida: la mortaja es su ficha entera. Su rasgo es que la mortaja le sobra y la enreda, y que después de cortada le deja las piernas descubiertas; el canon le da «vacías cuencas» y eso se resuelve como sombra dentro de la tela, no como calavera.",
+    "El gualanday, las tiendas del camino y la mesa de costura con su ventana no tienen ficha propia: van dentro de `camino_de_montana_caldense` y de `casa_de_bahareque`. Y ahí está la incomodidad que hay que declarar: la casa que este relato necesita es gironesa —muro blanco encalado, portón oscuro, teja de arcilla— y la única ficha de casa disponible es la de bahareque con corredor del occidente caldense, que además es inferencia de época. Se usa la ficha y se le impone la paleta gironesa."
+  ],
+  "descartes": [
+    {
+      "que": "El Señor de los Milagros de Girón",
+      "razon": "Está `excluded`. Sostiene históricamente el cirio de la procesión —indulgencia plenaria de Pío IX en 1870, romería desde 1883— pero no aparece en el relato: lo que aparece es el cirio, y el cirio sí se compone."
+    },
+    {
+      "que": "El mercado de los lunes",
+      "razon": "Está `excluded` y el relato sólo lo supone: Laurián vuelve «cargado con el peso de las compras» y de dónde viene la carga no lo dice."
+    },
+    {
+      "que": "Mariejesús Cañas y el Ánima Sola de la versión caldense",
+      "razon": "Pertenecen a la sección histórica de la página, que compara Caldas con Santander; el relato que se ilustra es el santandereano, y el Ánima Sola está en el lote de comparaciones excluidas."
+    },
+    {
+      "que": "Hades y los fantasmas chinos",
+      "razon": "Es comentario del compilador en la sección de similitudes."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Doce nudos repartidos en dos escarmientos que no se tocan, seis cada uno, con un marco de una línea que los explica a los dos. El relato no gana nada por juntarlos y pierde todo si se mezclan, así que la duración tiene que dar dos veces lo mismo: presentación, falta, castigo y cura. Ocho bloques es lo justo para que cada episodio tenga cuatro y ninguno quede resumido en dos.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03"
+      ],
+      "momento": "Laurián sale de las últimas tiendas del camino, cargado y alegre, con la luna ya alta sobre la sierra.",
+      "composicion": "Plano general horizontal de camino de montaña, cámara a la altura del pecho. Laurián entero en el tercio izquierdo, andando de tres cuartos, con el bulto de las compras al hombro y el paso torcido; es la única figura del cuadro. A su espalda y cortada por el borde, la esquina de una tienda del camino con la puerta entornada y una luz corta de vela dentro: muro blanco encalado, portón marrón muy oscuro, teja de arcilla. Delante, el camino subiendo entre el monte bajo una luna clara. Ningún tono del occidente caldense: ni bahareque a la vista, ni balcón de color, ni cafetal.",
+      "entity_refs": [
+        "laurian",
+        "camino_de_montana_caldense",
+        "casa_de_bahareque"
+      ],
+      "no_mostrar": [
+        "cafetal, guadual, beneficiadero ni sombrero aguadeño",
+        "paleta del Eje Cafetero: aquí el muro es blanco encalado",
+        "las ánimas todavía"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n04",
+        "n05",
+        "n06"
+      ],
+      "momento": "Un ánima levanta la cara y lo huele; en el mismo eje, Laurián ya va subiendo.",
+      "composicion": "Vertical de tres franjas sobre el eje del camino. Abajo, el suelo del camino con el bulto de las compras caído y abierto. En medio, la procesión de ánimas cruzando de lado a lado, mortajas blancas y cirios encendidos a la altura del pecho, y una de ellas girada hacia arriba con la cara alzada y olfateando. Arriba, Laurián en el aire, de costado y con los brazos abiertos, más alto que las copas y todavía subiendo, sin nadie que lo sostenga. El vertical existe para que el olfato suba desde la fila y el hombre siga subiendo por encima de ella.",
+      "entity_refs": [
+        "procesion_de_animas",
+        "laurian",
+        "camino_de_montana_caldense",
+        "hoja_utileria_animas_y_conquista"
+      ],
+      "no_mostrar": [
+        "llamas sobre ninguna figura: esto no es el Ánima Sola",
+        "manos que lo agarren: lo vuelan sin tocarlo",
+        "rostro descompuesto en las ánimas"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n08",
+        "n09",
+        "n10"
+      ],
+      "momento": "Domingo de noche: Ulogia cose junto a la ventana y desde el cacaotal sube el rezo con Jovita enredada dentro.",
+      "composicion": "Vertical de tres franjas sobre el eje de la ventana. Abajo, la mesa de costura con la tela extendida y las manos de Ulogia todavía sobre ella, y la ventana abierta encima. En medio, ya fuera, las ánimas saliendo de entre los árboles del cacaotal en fila, mortajas blancas y cirios, cantando. Arriba, separada de la fila y más cerca del vano, Jovita: la mortaja le sobra por todos lados y se le enreda en los pies, y el brazo sale de la tela tendido hacia la ventana. Muro blanco encalado y teja de arcilla. El vertical existe para que el rezo baje del cacaotal hasta la mesa y la petición suba hasta el vano.",
+      "entity_refs": [
+        "nua_ulogia",
+        "jovita_la_difunta",
+        "procesion_de_animas",
+        "casa_de_bahareque",
+        "hoja_utileria_animas_y_conquista"
+      ],
+      "no_mostrar": [
+        "rostro cadavérico, descomposición ni hueso a la vista",
+        "llamas",
+        "bahareque, balcón de color ni teja de barro caldense"
+      ]
+    },
+    {
+      "id": "e4",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n07"
+      ],
+      "momento": "Amanece y el hombre sigue arriba: lo que queda del castigo es que no se baja solo.",
+      "composicion": "Cuadrada y en contrapicado fuerte sobre la copa de un gualanday. Entre las ramas altas y cortado por las hojas, el bulto de las compras enganchado y volcado, con una botella vacía colgando del asa y goteando; en la horqueta de al lado, la huella de un cuerpo aplastando el follaje. Ninguna figura completa y ningún ánima. Abajo, muy lejos y desenfocado, el camino vacío.",
+      "entity_refs": [
+        "camino_de_montana_caldense",
+        "laurian"
+      ],
+      "no_mostrar": [
+        "figura humana entera",
+        "ánimas",
+        "cuerpo caído en el suelo"
+      ]
+    },
+    {
+      "id": "e5",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n11",
+        "n12"
+      ],
+      "momento": "Sobre la mesa de costura quedaron las tijeras, el retal que sobraba y lo que le tiraron a la cara.",
+      "composicion": "Cuadrada y en picado corto sobre la mesa de costura, con la primera luz entrando por la ventana. En el centro, las tijeras abiertas y, junto a ellas, una tira larga de tela blanca cortada y todavía enrollada. En el borde inferior y caída en el suelo de la casa, una pieza pálida y alargada, apenas legible y envuelta a medias en la misma tela blanca: podría ser un cirio. Ninguna figura. El muro es blanco encalado y el suelo de ladrillo.",
+      "entity_refs": [
+        "hoja_utileria_animas_y_conquista",
+        "casa_de_bahareque",
+        "jovita_la_difunta"
+      ],
+      "no_mostrar": [
+        "hueso reconocible como despojo humano",
+        "sangre ni herida",
+        "figura humana o ánima"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "laurian",

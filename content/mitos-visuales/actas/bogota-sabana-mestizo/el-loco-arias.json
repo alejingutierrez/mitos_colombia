@@ -8,12 +8,199 @@
   "canon_field": "content",
   "canon_sha256": "63f688b0a01c6e974fef3a1c072ed3cb29434fbd1d21a41228097f8af2b4c531",
   "canon_chars": 6060,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "El personaje tiene nombre propio y apodo público, y el apodo se lo pone el pueblo",
+      "evidencia": "habitaba Eduardo Arias Jiménez, o \"El Loco Arias\" como le llamaba el pueblo"
+    },
+    {
+      "id": "n02",
+      "nudo": "Viene de casa conocida: no es un desamparado",
+      "evidencia": "Hijo de don Bruno Arias, alcalde por mandato de las estrellas más que por la voluntad de los hombres, y de la gentil Paulina Jiménez"
+    },
+    {
+      "id": "n03",
+      "nudo": "Lo que lo distingue desde joven es la mirada",
+      "evidencia": "Desde joven, su mirada reflejaba una profundidad abisal"
+    },
+    {
+      "id": "n04",
+      "nudo": "Su oficio es hablar, todo el día y en la calle",
+      "evidencia": "pasaba sus días envuelto en un torbellino de palabras y sabiduría"
+    },
+    {
+      "id": "n05",
+      "nudo": "Recita a Homero de memoria",
+      "evidencia": "recitaba con una elocuencia deslumbrante los discursos de Homero"
+    },
+    {
+      "id": "n06",
+      "nudo": "Y a Cicerón",
+      "evidencia": "Con fervor repetía las Catilinarias de Cicerón"
+    },
+    {
+      "id": "n07",
+      "nudo": "Y arengas militares y políticas de dos continentes",
+      "evidencia": "revivía las arengas de Napoleón ante las pirámides o el sencillo pero inmortal Mensaje de Bolívar"
+    },
+    {
+      "id": "n08",
+      "nudo": "No sólo habla: se disfraza del personaje y camina así por la ciudad",
+      "evidencia": "Ataviado como el mago Merlín, caminaba por las calles de Bogotá"
+    },
+    {
+      "id": "n09",
+      "nudo": "El repertorio incluye maestros de Oriente",
+      "evidencia": "la melodiosa voz del propio Buda o las enseñanzas de Confucio parecían retumbar en las plazas"
+    },
+    {
+      "id": "n10",
+      "nudo": "La calle se le junta y forma público",
+      "evidencia": "Los bogotanos, hechizados, se reunían a su alrededor en una cascada de cabezas, rostros y manos"
+    },
+    {
+      "id": "n11",
+      "nudo": "También predica parábolas del evangelio",
+      "evidencia": "Hablaba de las parábolas sagradas, del hijo pródigo y del buen samaritano"
+    },
+    {
+      "id": "n12",
+      "nudo": "La voz se le gasta de usarla",
+      "evidencia": "cuando su voz, de tan usada, se quebraba por un momento"
+    },
+    {
+      "id": "n13",
+      "nudo": "Lo que pide para seguir es chicha, y con un gesto",
+      "evidencia": "Eduardo hacía un gesto con la mano que era premonitorio de oídas inmemoriales y pedía el elixir inmortal, esa sencilla chicha"
+    },
+    {
+      "id": "n14",
+      "nudo": "El público calla por respeto y no por miedo",
+      "evidencia": "El pueblo observaba en silencio reverente, casi temeroso de romper el hechizo"
+    },
+    {
+      "id": "n15",
+      "nudo": "Él mismo explica su estado como posesión de lo que ha leído",
+      "evidencia": "decía estar poseído por los misterios que había desentrañado"
+    },
+    {
+      "id": "n16",
+      "nudo": "Es una biblioteca que camina: el saber va en el cuerpo, no en el estante",
+      "evidencia": "Era una biblioteca deambulante, un compendio de sabiduría"
+    },
+    {
+      "id": "n17",
+      "nudo": "Se aparta de la política a propósito",
+      "evidencia": "no acostumbraba a prestar atención a la política que consideraba una maraña que atrapaba a las almas"
+    },
+    {
+      "id": "n18",
+      "nudo": "Lo que queda de él es la esquina, y la esquina se acuerda",
+      "evidencia": "cada esquina de la ciudad recordara el susurro de sus palabras"
+    }
+  ],
+  "deslindes": [
+    "Arias es de hacia 1870 y la Loca Margarita llega a Bogotá en 1902: son dos generaciones y NO coinciden en la calle. Ninguna lámina de este corpus puede ponerlos en la misma esquina, y la separación se lee en el alumbrado antes que en la ropa: la esquina de Arias es la de los veinte faroles de petróleo del tramo 1868-1883, con el sereno todavía en la calle; la de Margarita es ya la del tranvía eléctrico y la bombilla.",
+    "La página lo fecha «en la Bogotá de finales del siglo XIX» y la investigación lo fecha hacia 1870. Es un desfase de la página que se declara aquí y se resuelve por la luz: el tramo elegido es el del petróleo, que es el único compatible con las dos fechas.",
+    "No lee: recita. Por eso `libro_cerrado_de_arias` es exactamente eso, un libro cerrado, y en ninguna escena aparece un libro abierto ni un papel. Si hay texto a la vista, el nudo n16 —la biblioteca que camina— se rompe.",
+    "El disfraz es prenda añadida, no traje de teatro. El canon nombra a Merlín, a Buda y a Confucio pero no describe ni una sola pieza de ropa: se resuelve con una capa o una tela echada encima del vestuario de la época, y nunca con un mago completo de fantasía, que sería inventar lo que el relato calla.",
+    "La chicha no se convierte en cáliz. El relato hace la comparación en palabras —«elixir inmortal»— y la lámina no la ejecuta: es una totuma, y va dentro de `hoja_utileria_calle_y_oficio`.",
+    "«Loco» es apodo de otra época y no es rasgo dibujable: no hay gesto desencajado, ropa rota ni caricatura en ninguna de las tres láminas. El público tampoco tiene ficha propia y va dentro de `colectivo_vecinos_artesanos_santafe`."
+  ],
+  "descartes": [
+    {
+      "que": "La crítica a los partidos y a las élites",
+      "razon": "La versión larga la trae, pero el propio canon dice que él apartaba la política de su oficio. No hay nada que componer que no sea añadirle una bandera que el relato le niega."
+    },
+    {
+      "que": "Merlín, Buda y Confucio como figuras representadas",
+      "razon": "El relato dice que Arias se ataviaba y que su voz «parecía» ser la de ellos. Dibujar a los personajes en vez de al hombre disfrazado convertiría una escena de calle en una alegoría."
+    },
+    {
+      "que": "La comparación con Diógenes y los sabios taoístas",
+      "razon": "Es comentario del compilador en la sección de similitudes, no suceso del relato."
+    }
+  ],
+  "N_propuesto": 9,
+  "razon_N": "Dieciocho nudos sin un solo acontecimiento: no hay muerte, ni condena, ni aparición. Lo que el relato tiene es un repertorio que crece —Homero, Cicerón, Napoleón, Bolívar, Merlín, Buda, Confucio, las parábolas— y una multitud que se va formando alrededor. Nueve bloques son los que permiten que el corro engorde a la vista; con menos el repertorio se vuelve lista y con más la esquina se queda quieta.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07"
+      ],
+      "momento": "Arias empieza a hablar en la esquina y todavía no se ha parado nadie: el hombre entero, antes del corro.",
+      "composicion": "Plano general horizontal de esquina comercial, cámara a la altura del pecho. Arias entero y de tres cuartos en el tercio izquierdo, de pie sobre el poyo de una tienda, con el brazo levantado en mitad de una frase y la boca abierta; su vestuario es el de un hombre de casa conocida de mediados de siglo, con una tela echada encima que no llega a ser disfraz. A la derecha, la calle empedrada siguiendo hacia el fondo y dos o tres vecinos apenas girando la cabeza. El farol de petróleo colgado de su ménsula en la esquina, apagado porque es de día.",
+      "entity_refs": [
+        "eduardo_arias",
+        "colectivo_vecinos_artesanos_santafe",
+        "calle_bogotana"
+      ],
+      "no_mostrar": [
+        "libro abierto ni papel con texto",
+        "Margarita ni nada del siglo XX: ni riel, ni bombilla, ni poste",
+        "mago de fantasía"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15"
+      ],
+      "momento": "La voz baja desde el poyo y la totuma sube desde la multitud: el intercambio que sostiene la función.",
+      "composicion": "Vertical de tres franjas sobre el mismo eje. Arriba, Arias en el poyo con la tela sobre los hombros, la cabeza echada atrás y la mano abierta pidiendo; el libro cerrado bajo el brazo. En medio, el brazo de un vecino que se levanta desde la masa alzando la totuma de chicha hacia él. Abajo y ocupando todo el borde inferior, la cascada de cabezas de espaldas y en escorzo, quietas. El vertical existe para que la palabra baje y la totuma suba por la misma columna.",
+      "entity_refs": [
+        "eduardo_arias",
+        "colectivo_vecinos_artesanos_santafe",
+        "hoja_utileria_calle_y_oficio",
+        "calle_bogotana"
+      ],
+      "no_mostrar": [
+        "cáliz, copa ni vaso de vidrio: es totuma",
+        "libro abierto",
+        "rostro desencajado o ropa rota"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n16",
+        "n17",
+        "n18"
+      ],
+      "momento": "Se acabó la función y la esquina vuelve a ser una esquina, con lo poco que él dejaba encima de la piedra.",
+      "composicion": "Cuadrada y cerrada sobre el poyo de la tienda al anochecer, con la luz corta y amarilla del farol de petróleo entrando por arriba. La totuma vacía y volcada, y junto a ella el libro cerrado con el canto hacia el espectador, sin título legible. El empedrado alrededor, húmedo. Ninguna figura y ningún público.",
+      "entity_refs": [
+        "hoja_utileria_calle_y_oficio",
+        "calle_bogotana"
+      ],
+      "no_mostrar": [
+        "figura humana",
+        "libro abierto ni texto legible",
+        "luz eléctrica o de arco"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "eduardo_arias",

@@ -8,12 +8,203 @@
   "canon_field": "content",
   "canon_sha256": "55e852cc39f3c97d22d588c2eb0fd4f450ae8fd05f63683a6a0d322c75adee81",
   "canon_chars": 6994,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "El tranvía empieza siendo de tracción animal y con cochero",
+      "evidencia": "Tirados por mulas en un principio, estos carricoches tenían cochero"
+    },
+    {
+      "id": "n02",
+      "nudo": "El eléctrico lo sustituye y trae su propia tripulación de oficio",
+      "evidencia": "los tranvías eléctricos se adueñaron de la capital. Cada uno tenía su chofer, su revisor manteniendo el orden y su cobrador"
+    },
+    {
+      "id": "n03",
+      "nudo": "Sobre ese sistema aparece un hombre al que la ciudad entera apoda",
+      "evidencia": "Antonín, conocido por todos como \"El Bobo del Tranvía\""
+    },
+    {
+      "id": "n04",
+      "nudo": "Lo que lo hace visible no es el tamaño sino el color de la ropa",
+      "evidencia": "Se ataviaba con gorra roja, camisa verde, correa negra, pantalón amarillo y botas azules"
+    },
+    {
+      "id": "n05",
+      "nudo": "Lleva encima los instrumentos del oficio que nadie le dio",
+      "evidencia": "En una mano llevaba una señal de \"Pare\", en la otra una de \"Siga\", y de su cuello pendía un pito"
+    },
+    {
+      "id": "n06",
+      "nudo": "El apodo no significa falta de juicio: otros le dan un cargo",
+      "evidencia": "los universitarios de entonces le habían honrado como \"Comandante en Jefe de Circulación\""
+    },
+    {
+      "id": "n07",
+      "nudo": "Ejerce el mando sobre todos por igual y la calle se lo acepta",
+      "evidencia": "amonestando, corregía o aconsejaba a peatones, pasajeros y conductores con igual derecho"
+    },
+    {
+      "id": "n08",
+      "nudo": "La ciudad es su casa: el oficio y el domicilio son la misma cosa",
+      "evidencia": "Para él, la urbe era su hogar, su dominio"
+    },
+    {
+      "id": "n09",
+      "nudo": "Acompaña a su hermana a la escuela como una tarea diaria",
+      "evidencia": "A menudo la acompañaba a escuela, un cerrojo de amor sellando su labor diaria"
+    },
+    {
+      "id": "n10",
+      "nudo": "Ella lo compra con bizcochos para que no se suba al vagón con ella",
+      "evidencia": "persuadía a su hermano para que gastara su dinero en bizcochos, asegurándose de que no subiera al tranvía con ella"
+    },
+    {
+      "id": "n11",
+      "nudo": "Él acepta el trato y corre al lado del vagón: la escolta se hace a pie",
+      "evidencia": "Antonín corría siempre detrás, sus pasos acompasados al ritmo del vagón"
+    },
+    {
+      "id": "n12",
+      "nudo": "La hermana se va con un pretendiente",
+      "evidencia": "la hermana se dejó llevar por el canto de amor de un galante pretendiente y, como un pájaro que concede el cielo a sus alas, escapó con él"
+    },
+    {
+      "id": "n13",
+      "nudo": "La pérdida lo rompe",
+      "evidencia": "La pérdida destrozó el corazón de Antonín"
+    },
+    {
+      "id": "n14",
+      "nudo": "Deja de escoltar y empieza a vagar, con la atención fuera de la calle",
+      "evidencia": "vagaba por las calles de la ciudad, su mente perdida entre nubes"
+    },
+    {
+      "id": "n15",
+      "nudo": "Aun así la gente lo respeta y no lo compadece",
+      "evidencia": "la gente le observaba con el respeto que se tributa a los héroes invisibles"
+    },
+    {
+      "id": "n16",
+      "nudo": "Lo mata la misma máquina cuyo tráfico dirigía",
+      "evidencia": "Mientras vagaba, sumido en sus sueños, un tranvía lo atropelló"
+    },
+    {
+      "id": "n17",
+      "nudo": "Se lo llevan fuera de la ciudad que era su dominio",
+      "evidencia": "Lo trasladaron al hospital psiquiátrico de Sibaté"
+    },
+    {
+      "id": "n18",
+      "nudo": "Muere esperando una visita que no llega",
+      "evidencia": "Antonín aguardó la visita de su hermana"
+    }
+  ],
+  "deslindes": [
+    "El relato cruza dos alumbrados y por tanto dos épocas: empieza con mulas y cochero a finales del XIX y termina con eléctricos. Entre 1910 y los veinte los dos conviven sobre los mismos rieles, así que una lámina puede tener mula y otra eléctrico sin contradecirse, pero ninguna mezcla dos alumbrados dentro del mismo cuadro.",
+    "El tranvía de este corpus no muere en 1948 sino el 30 de junio de 1951: ninguna de estas tres láminas puede leerse como el final del sistema, porque la muerte que el relato cuenta es la de un hombre y no la del tranvía.",
+    "El color del vagón no está documentado en ninguna fuente. El tranvía se compone por volumen, ventanas y rieles, nunca por librea ni por casta de color, y el único dato cromático del sistema —el techo plateado de las «Lorencitas»— es de 1936 y no de esta escena.",
+    "«Bobo» y «Comandante en Jefe de Circulación» son apodos de otra época y no son rasgos dibujables. Antonín se compone con la lista de prendas que el canon le da y con las dos señales; no hay caricatura de discapacidad en ninguna lámina.",
+    "La hermana no tiene ficha propia: va dentro de `colectivo_transeuntes_siglo_xx`. La lámina no le inventa el atributo de belleza sobrenatural que el relato le atribuye, porque eso la convertiría en una figura distinta del colectivo que la cubre."
+  ],
+  "descartes": [
+    {
+      "que": "El hospital psiquiátrico de Sibaté como escenario",
+      "razon": "Está `excluded` en el censo y no hay ficha de lugar que lo sostenga. El traslado y la espera se componen como ausencia en la esquina que él ocupaba, que es donde el relato lo tenía."
+    },
+    {
+      "que": "El pretendiente de la hermana como figura",
+      "razon": "Está `excluded`. La fuga se muestra desde el andén: ella sube y el vagón arranca; quién la espera al otro lado no lo dice el relato ni lo necesita la lámina."
+    },
+    {
+      "que": "El tranvía celestial y el tráfico de los dioses del cierre",
+      "razon": "Es figura retórica del narrador, no suceso del relato. Dibujarla convertiría una muerte documentada en apoteosis."
+    },
+    {
+      "que": "El cuerpo atropellado",
+      "razon": "El corpus no muestra cadáveres. El atropello se compone por la relación de alturas entre el vagón y el hombre, y no por la herida."
+    }
+  ],
+  "N_propuesto": 9,
+  "razon_N": "Dieciocho nudos, pero once de ellos son un solo estado que se repite todos los días —la ropa, las señales, el pito, la escolta a pie— y sólo siete son sucesos. Nueve bloques bastan para que la rutina se instale lo suficiente como para que romperla duela, y para que el atropello y la espera no se atropellen entre sí al final.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08"
+      ],
+      "momento": "Antonín en plena faena, dirigiendo un cruce que nadie le encargó, con el vagón detenido porque él lo detuvo.",
+      "composicion": "Plano general de calle a la altura del pecho. Antonín ocupa el tercio central de cuerpo entero, brazos abiertos con Pare en una mano y Siga en la otra, el pito colgando; su ropa es la única saturación del cuadro contra la cal sucia y la piedra mojada. A la izquierda el morro del vagón detenido, cortado por el borde; a la derecha los transeúntes parados esperando su permiso. No es paisaje urbano: la figura manda y la ciudad obedece.",
+      "entity_refs": [
+        "antonin",
+        "colectivo_transeuntes_siglo_xx",
+        "tranvia_bogotano",
+        "calle_bogotana"
+      ],
+      "no_mostrar": [
+        "gesto o rasgo que caricaturice discapacidad",
+        "librea o color de casta en el vagón",
+        "dos alumbrados en el mismo cuadro"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "momento": "El mismo eje en el que ella sube es el eje en el que él cae: el vagón se lleva a la hermana arriba y devuelve el golpe abajo.",
+      "composicion": "Vertical apilado en tres franjas sobre el mismo riel. Arriba, la plataforma del vagón y la figura de la hermana subiendo de espaldas, disuelta ya en el colectivo de pasajeros. En medio, Antonín a media carrera junto al estribo, todavía con las dos señales en las manos. Abajo, el mismo hombre en el suelo entre los rieles y la masa del vagón entrando por el borde inferior, resuelta por volumen y sombra. El vertical existe para que la partida suba y el cuerpo baje sin cambiar de carril.",
+      "entity_refs": [
+        "antonin",
+        "colectivo_transeuntes_siglo_xx",
+        "tranvia_bogotano",
+        "calle_bogotana"
+      ],
+      "no_mostrar": [
+        "sangre ni herida",
+        "el pretendiente",
+        "rostro de la hermana en primer plano: el relato no se lo da"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n17",
+        "n18"
+      ],
+      "momento": "La esquina sigue siendo un cruce y ya no tiene quien lo mande; la visita que él espera es la que no llega aquí.",
+      "composicion": "Cuadrada y baja, cerrada sobre el empedrado entre los dos rieles. Las señales de Pare y Siga caídas de canto y el pito junto a ellas, mojados, sin mano que los sostenga. Al fondo y desenfocado por la niebla, el vagón alejándose cortado por el borde superior, y ninguna figura humana en todo el cuadro. La ausencia es el sujeto.",
+      "entity_refs": [
+        "calle_bogotana",
+        "tranvia_bogotano"
+      ],
+      "no_mostrar": [
+        "Sibaté, sala de hospital o cama",
+        "cualquier figura humana",
+        "el pito o las señales sostenidos por alguien"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "antonin",

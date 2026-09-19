@@ -118,4 +118,9 @@ async function main() {
   console.log(`  en ${resolve(ACTAS)}`);
 }
 
-main().catch((e) => { console.error(e.message); process.exitCode = 1; });
+// Con guarda: el linter importa `stripHtml` de aqui, y sin ella cada pasada
+// del linter ejecutaba el congelador —una consulta a Neon de mas y, con
+// `--force`, la reescritura de los esqueletos que estaba verificando.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((e) => { console.error(e.message); process.exitCode = 1; });
+}

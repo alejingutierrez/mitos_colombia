@@ -8,12 +8,147 @@
   "canon_field": "mito",
   "canon_sha256": "704253caebf62d594314be14e20ecbbc4adf5f6d412df84facb7da00c82bc418",
   "canon_chars": 468,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "La enfermedad no anda suelta: tiene madre y tiene domicilio",
+      "evidencia": "La madre de las enfermedades vive en Palomino"
+    },
+    {
+      "id": "n02",
+      "nudo": "Tiene nombre y una filiación incompleta a propósito",
+      "evidencia": "Se llama Hiwihá, y solamente tiene mamá: no tiene papá"
+    },
+    {
+      "id": "n03",
+      "nudo": "Su llegada coincide con el reparto del mundo",
+      "evidencia": "Cuando Hiwihá vino a este mundo, la tierra se repartió en varias partes"
+    },
+    {
+      "id": "n04",
+      "nudo": "El primero en recibir es gente, y el relato lo subraya",
+      "evidencia": "Primero le dieron una parte a Alwawiku, que es gente"
+    },
+    {
+      "id": "n05",
+      "nudo": "A Sintana le toca entero el sitio donde vive la enfermedad",
+      "evidencia": "A Sintana le dieron todo Palomino"
+    },
+    {
+      "id": "n06",
+      "nudo": "El tercero recibe el lugar donde ya vivía",
+      "evidencia": "A Dukinawi, que vive en San Miguel, le dieron la parte de San Miguel"
+    },
+    {
+      "id": "n07",
+      "nudo": "El cuarto recibe por acompañar, no por vivir allí",
+      "evidencia": "a Hatleja, que lo acompaña, la otra parte"
+    },
+    {
+      "id": "n08",
+      "nudo": "Los cuatro que reparten la tierra son hermanos y tienen una madre nombrada",
+      "evidencia": "La madre de estos cuatro indios se llama Mulkokókwi"
+    },
+    {
+      "id": "n09",
+      "nudo": "El reparto pasó, pero la enfermedad no se movió de ahí",
+      "evidencia": "Hiwihá todavía vive en Palomino"
+    }
+  ],
+  "deslindes": [
+    "Mulkokókwi es la madre de los cuatro que reciben tierra, no la madre de Hiwihá. El canon dice que Hiwihá «solamente tiene mamá» y no la nombra en ninguna línea, y dos frases después nombra a otra madre para otros hijos. Fundirlas sería darle a la enfermedad una genealogía que el relato le niega: en la lámina, la madre de Hiwihá no aparece y su ausencia es la forma de decir que no tiene nombre.",
+    "Cuatro de los cinco nombrados —Alwawiku, Dukinawi, Hatleja y Mulkokókwi— no tienen ficha propia: los cubre `colectivo_padres_madres_antiguos`. La escena del reparto tiene que distinguirlos por lo que reciben y por el sitio en que están, nunca por atributo o insignia inventada, porque el corpus no les da ninguna.",
+    "Sintana es el único de los cuatro con ficha propia, y eso es un accidente de la biblia, no una jerarquía del relato. En el reparto no puede quedar más grande, más adelantado ni mejor vestido que los otros tres: el canon le da más tierra, no más rango.",
+    "El reparto no se dibuja como mapa. Los sitios sagrados y la Línea Negra se pueden nombrar y no se pueden cartografiar, así que las partes se componen como cuerpos de pie cada uno en su suelo, con la frontera resuelta por cambio de materia del terreno y nunca por línea trazada, rótulo ni vista cenital de territorio.",
+    "Hiwihá es la madre de las enfermedades y no una enferma. No lleva llaga, ni palidez, ni gesto de dolor: lo que la hace ella es estar entera y quieta en el mismo sitio antes, durante y después del reparto."
+  ],
+  "descartes": [
+    {
+      "que": "Enfermos, llagas y agonía",
+      "razon": "El canon no describe ni un solo cuerpo enfermo: describe dónde vive quien los manda. Dibujar el síntoma sería ilustrar lo que el relato deliberadamente no cuenta."
+    },
+    {
+      "que": "La madre de Hiwihá",
+      "razon": "El relato afirma que existe y no la nombra. Componerla obligaría a inventarle cuerpo a la única figura que el texto guarda en blanco."
+    },
+    {
+      "que": "Palomino, San Miguel y Takina como caseríos reconocibles",
+      "razon": "Son lugares vivos del siglo XX que el corpus nombra. Van dentro de `poblado_kogui` y se resuelven por terreno y quebrada, sin arquitectura de época ajena ni rótulo."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Nueve nudos, y siete son un reparto que ocurre de una vez: no hay conflicto, hay una lista. Lo que sostiene el largo no es la acción sino la simultaneidad —el mundo se divide justo cuando llega la enfermedad—, y ocho bloques son lo mínimo para que las cuatro entregas se vean una por una sin que ninguna quede como nota al pie de otra.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02"
+      ],
+      "momento": "Hiwihá está en Palomino y está sola: la escena la presenta entera antes de que el mundo se reparta.",
+      "composicion": "Plano general apaisado, cámara a la altura de los ojos. Hiwihá de cuerpo entero, quieta, ocupando el tercio central y casi la mitad del alto del cuadro, de frente y sin gesto. A su derecha, el sitio vacío donde estaría un segundo cuerpo: el aire que queda es lo único que dice que hay una madre y no hay padre. Detrás, la quebrada y la ladera de Palomino, bajas y sin figura, para que nada compita con ella.",
+      "entity_refs": [
+        "hiwiha",
+        "poblado_kogui",
+        "quebrada_y_rio",
+        "sierra_nevada"
+      ],
+      "no_mostrar": [
+        "la madre de Hiwihá",
+        "llagas, palidez o gesto de dolor",
+        "cualquier padre"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08"
+      ],
+      "momento": "Hiwihá viene al mundo por arriba y la tierra se parte por abajo: el reparto entero pasa en la misma columna.",
+      "composicion": "Vertical de cuatro escalones. Arriba del todo, Hiwihá llegando, pequeña y a contraluz, con la silueta ya completa. Debajo, en escalones sucesivos que bajan por el eje, los cuatro que reciben, cada uno de pie en su propio suelo y con su parte detrás: Alwawiku el primero y el más alto, Sintana con toda la ladera de Palomino a la espalda, Dukinawi con el terreno de San Miguel, y Hatleja al pie, más pegado a Dukinawi que a los demás porque su parte le toca por acompañarlo. Los cuatro tienen el mismo tamaño y el mismo vestido. En el margen inferior, sentada y de espaldas, Mulkokókwi, de la que sólo se ve que es una y que los cuatro salen de ella. Baja la que llega y suben las partes de tierra por el mismo eje.",
+      "entity_refs": [
+        "hiwiha",
+        "sintana",
+        "colectivo_padres_madres_antiguos",
+        "poblado_kogui",
+        "sierra_nevada"
+      ],
+      "no_mostrar": [
+        "mapa, línea de frontera trazada o vista cenital de territorio",
+        "insignia o atributo que distinga a uno de los cuatro",
+        "Sintana más grande o mejor vestido que los otros tres"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n09"
+      ],
+      "momento": "Repartido el mundo, la enfermedad sigue exactamente donde estaba.",
+      "composicion": "Cuadrada y cerrada sobre el mismo terreno de la primera escena, con el mismo encuadre y la misma luz, de modo que la comparación sea inmediata. Hiwihá al centro, en idéntica postura, ni un paso movida; lo único que ha cambiado alrededor es que el suelo tiene ahora los cortes del reparto y que no hay nadie más en el cuadro. La repetición del plano es el contenido: todo se dividió y ella no se movió.",
+      "entity_refs": [
+        "hiwiha",
+        "poblado_kogui",
+        "quebrada_y_rio"
+      ],
+      "no_mostrar": [
+        "enfermos o síntomas",
+        "los cuatro hermanos",
+        "rótulo de lugar"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "hiwiha",

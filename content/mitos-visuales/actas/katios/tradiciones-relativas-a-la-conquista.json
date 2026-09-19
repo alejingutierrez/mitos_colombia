@@ -8,12 +8,248 @@
   "canon_field": "mito",
   "canon_sha256": "a8ad3f6ac203bc0529c46ba07cc307baaf47d067672251d880c5b37f1f2da9b1",
   "canon_chars": 1972,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "Hay dos reyes del otro lado del mar",
+      "evidencia": "Hace mucho tiempo, allá muy lejos, en otra tierra, más allá del mar, vivían dos reyes blancos, rey y reina"
+    },
+    {
+      "id": "n02",
+      "nudo": "Y dos de este lado",
+      "evidencia": "De este lado del mar vivían también dos reyes indios, rey y reina"
+    },
+    {
+      "id": "n03",
+      "nudo": "Y lo que tienen está contado: cuatro casas de oro",
+      "evidencia": "Estos tenían muchas riquezas, y entre ellas cuatro casas de oro, adornadas todas de oro"
+    },
+    {
+      "id": "n04",
+      "nudo": "La expedición sale con un pretexto amable",
+      "evidencia": "Los reyes blancos lo supieron y arreglaron una expedición para arreglar amigablemente con los reyes indios la partición de esas riquezas"
+    },
+    {
+      "id": "n05",
+      "nudo": "La negativa abre la guerra",
+      "evidencia": "El rey indio se negó, y se entabló la lucha"
+    },
+    {
+      "id": "n06",
+      "nudo": "No pierden por cobardes sino por armamento",
+      "evidencia": "Los indios eran valientes, pero fueron vencidos por la superioridad de las armas extranjeras"
+    },
+    {
+      "id": "n07",
+      "nudo": "Al rey lo decapitan y a la reina la toman viva",
+      "evidencia": "Los soldados blancos le cortaron la cabeza al rey indio y tomaron cautiva a la reina"
+    },
+    {
+      "id": "n08",
+      "nudo": "El ejército se parte en dos y una mitad va a rendir cuentas con las pruebas",
+      "evidencia": "luego se partieron: la mitad fue a dar cuenta al rey blanco y a presentarle la cabeza del rey indio y la viuda cautiva"
+    },
+    {
+      "id": "n09",
+      "nudo": "La otra se queda por el botín",
+      "evidencia": "la otra mitad se quedó con el propósito de apoderarse de los tesoros"
+    },
+    {
+      "id": "n10",
+      "nudo": "El que mandó la expedición se indigna con los suyos",
+      "evidencia": "El rey blanco, al oír las noticias de sus soldados y ver la cabeza del rey indio y a la reina cautiva, se indignó contra ellos"
+    },
+    {
+      "id": "n11",
+      "nudo": "Y el consuelo que ofrece es un asiento",
+      "evidencia": "hizo que la cautiva se sentara en su presencia, como para consolarla"
+    },
+    {
+      "id": "n12",
+      "nudo": "Que no consuela",
+      "evidencia": "Pero ella lloraba mucho"
+    },
+    {
+      "id": "n13",
+      "nudo": "Y aun así manda una segunda expedición por lo mismo",
+      "evidencia": "Entonces envió otra expedición con nuevas órdenes de traer riquezas"
+    },
+    {
+      "id": "n14",
+      "nudo": "Los primeros ya habían escondido todo de los segundos",
+      "evidencia": "Cuando esa segunda expedición llegó, los soldados de la primera, los que se habían quedado, tenían ocultos todos los tesoros"
+    },
+    {
+      "id": "n15",
+      "nudo": "Y el relato deja el oro donde está",
+      "evidencia": "Y aún permanecen ocultos"
+    },
+    {
+      "id": "n16",
+      "nudo": "El segundo fragmento tiene fecha y tiene nombre",
+      "evidencia": "En tiempo de la venida de los españoles había un jefe indio de extraordinario valor y destreza militar, llamado Ambeu"
+    },
+    {
+      "id": "n17",
+      "nudo": "Su virtud es rehacerse: pierde y vuelve a formar tropa",
+      "evidencia": "Este luchó valerosamente por salvar a su gente de los españoles, y aunque su gente fuese vencida, formaba tropas nuevas y hacía resistencia otra vez"
+    },
+    {
+      "id": "n18",
+      "nudo": "Y no lo dejan en paz",
+      "evidencia": "Los españoles lo perseguían sin descanso"
+    },
+    {
+      "id": "n19",
+      "nudo": "Las balas no pueden con él",
+      "evidencia": "A fuerza de balas no habían podido matarlo"
+    },
+    {
+      "id": "n20",
+      "nudo": "Así que cambian de método y el método es un agujero",
+      "evidencia": "hicieron un hoyo profundo y lo cubrieron de ramas"
+    },
+    {
+      "id": "n21",
+      "nudo": "Y cae corriendo, sin saberlo",
+      "evidencia": "En un combate él corrió por ahí, ignorando el peligro, y se fue a lo profundo"
+    },
+    {
+      "id": "n22",
+      "nudo": "Y lo matan desde el borde, con lo que hay",
+      "evidencia": "Los españoles se acercaron a tirarle flechas y piedras hasta que murió"
+    },
+    {
+      "id": "n23",
+      "nudo": "Y la resistencia tenía continuidad familiar",
+      "evidencia": "Corpus y Umucumia eran sus hijos y ayudantes, valerosos como él"
+    }
+  ],
+  "deslindes": [
+    "Ésta es la única página del corpus que pertenece al estrato de la conquista, y por eso es la única donde entran europeos, armas de fuego y las cuatro casas de oro. La regla vale en los dos sentidos: aquí sí hay soldados, reyes blancos y fusil, y en ninguna otra de las diecinueve páginas puede aparecer ni uno; y al revés, la geometría de fundación no se le aplica al bando europeo. Si este estrato se contagia, el corpus entero queda fechado mal.",
+    "Las armas de fuego españolas, las piedras arrojadizas y el hoyo cubierto de ramas no tienen ficha propia: los tres van dentro de `hoja_utileria_guerra`. Que el hoyo, que es lo que de verdad mata a Ambeu, sea una pieza menor de una hoja y no un objeto con ficha propia encaja con el relato: a Ambeu no lo mata un arma, lo mata un agujero, y las balas expresamente no pudieron.",
+    "Los reyes indios van sin regalía dorada: ni corona, ni cetro, ni trono. La orden es del propio expediente y aquí es fácil de cumplir sin perder nada, porque lo que los hace reyes en el texto es que tienen cuatro casas de oro y que el otro rey manda una expedición a negociar con ellos. El rango se compone por lo que poseen y por con quién tratan.",
+    "El oro de este relato devora, como en todo el corpus: las cuatro casas desatan la expedición, cuestan una cabeza y una cautiva, y al final siguen ocultas. No puede haber botín a la vista en ninguna escena y el cierre tiene que dejar el oro donde el canon lo deja, que es enterrado y sin dueño.",
+    "La cabeza del rey indio va dentro de `cabezas-trofeo`, que es la misma ficha de las cabezas de cunas que cuelgan del bohío del Capitán y se mueven solas. Son dos usos opuestos del mismo objeto —allí una máquina de alarma, aquí una prueba que se presenta en una corte— y esta lámina no la puede hacer actuar: va envuelta, quieta y sin rostro.",
+    "Corpus y Umucumia no tienen ficha propia: los cubre `ambeu`. El canon les da el nombre, el parentesco y una sola palabra, «valerosos», y nada más; se componen como dos cuerpos junto a él, del mismo porte y sin rasgo que los individualice.",
+    "La invulnerabilidad de Ambeu se compone por acumulación y no por aura: disparos que no hacen efecto, humo de pólvora alrededor y él en pie. Ni escudo, ni resplandor, ni nada que lo saque del mundo físico del relato, porque lo que hace grande al personaje es precisamente que al final cae en un hoyo como cualquiera."
+  ],
+  "descartes": [
+    {
+      "que": "Corona, cetro y trono para los reyes indios",
+      "razon": "Las research_notes ordenan retirar los estereotipos de regalía dorada. El rango se compone por las cuatro casas de oro."
+    },
+    {
+      "que": "El botín a la vista",
+      "razon": "El canon cierra diciendo que los tesoros aún permanecen ocultos. Enseñar oro amontonado contradiría el nudo n15."
+    },
+    {
+      "que": "La decapitación como escena",
+      "razon": "El canon la dice en media línea. Se compone la cabeza envuelta y presentada, no el corte."
+    },
+    {
+      "que": "Los burumiáes",
+      "razon": "Tienen ficha y el plan los asocia a esta página, pero el canon de este relato no los nombra. Componerlos sería añadir al relato."
+    },
+    {
+      "que": "Las carautas",
+      "razon": "Entidad excluida del corpus."
+    }
+  ],
+  "N_propuesto": 12,
+  "razon_N": "Veintitrés nudos y dos derrotas distintas: una por armamento y otra por engaño, con un mismo resultado que no es la muerte sino la desaparición —el oro se esconde, el jefe se hunde—. Doce bloques son los que permiten que las dos caídas se cuenten enteras y que el segundo fragmento no quede como apéndice: es el que da un nombre propio y unos hijos a lo que el primero cuenta en abstracto.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05"
+      ],
+      "momento": "Los enviados llegan de este lado del mar y el rey indio, delante de sus cuatro casas de oro, dice que no.",
+      "composicion": "Plano general apaisado con la playa cruzando el tercio inferior. En el tercio izquierdo, los reyes indios de cuerpo entero, de pie, sin corona, sin cetro y sin trono: gente de este territorio con su gramática de vestuario. Detrás de ellos y ocupando el fondo del tercio central, las cuatro casas de oro, redondas y de cubierta cónica, con la materia de oro mate cubriéndolas enteras: la riqueza es arquitectura, no joya. En el tercio derecho, los soldados blancos recién desembarcados, en formación y con sus armas de fuego a la vista, y detrás el mar. La frontera entre los dos mundos pasa por el centro del cuadro y no se cruza todavía.",
+      "entity_refs": [
+        "reyes-indios",
+        "soldados-blancos",
+        "casa-de-oro",
+        "oro",
+        "mar-y-playa",
+        "hoja_utileria_guerra"
+      ],
+      "no_mostrar": [
+        "corona, cetro o trono",
+        "oro como joya o botín suelto",
+        "caballos"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13"
+      ],
+      "momento": "Una mitad sube a rendir cuentas con la cabeza y la cautiva; la otra se queda abajo, cavando.",
+      "composicion": "Vertical partido por una línea de mar. En el tercio inferior, la playa después de la lucha: los soldados que se quedan, de espaldas, escarbando en el suelo junto a las casas de oro, y a su lado los primeros hoyos abiertos. En el centro, la travesía, reducida a una franja de agua. En los dos tercios superiores, la corte del rey blanco: él de pie e indignado, los soldados de la primera mitad en fila delante, un bulto envuelto y quieto sostenido en alto —la cabeza, sin rostro y sin corte visible— y, sentada en una silla puesta a propósito, la reina cautiva llorando, con todo el cuerpo vuelto hacia el borde del cuadro y no hacia él. El vertical hace subir la prueba y bajar la orden de la segunda expedición por el mismo eje.",
+      "entity_refs": [
+        "soldados-blancos",
+        "reyes-blancos",
+        "reyes-indios",
+        "cabezas-trofeo",
+        "casa-de-oro",
+        "mar-y-playa"
+      ],
+      "no_mostrar": [
+        "la decapitación",
+        "la cabeza desenvuelta o con rostro",
+        "oro amontonado a la vista",
+        "corona en los reyes indios"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21",
+        "n22",
+        "n23"
+      ],
+      "momento": "El oro sigue enterrado donde nadie lo encuentra, y el jefe que las balas no mataban está en el fondo de un hoyo.",
+      "composicion": "Cuadrada, cámara alta y cenital sobre el suelo del monte. En el centro del cuadro, el hoyo profundo con las ramas de la tapa reventadas hacia dentro, y en el fondo, pequeño y de cuerpo entero, Ambeu, todavía en pie; alrededor del borde y asomados, los soldados con las piedras en la mano y las flechas ya tiradas, más el humo de los disparos que no sirvieron flotando por encima. En una esquina del cuadrado, apartados y de pie, Corpus y Umucumia, dos cuerpos del mismo porte que el suyo y sin rasgo propio, mirando el hoyo. En otra esquina, el suelo removido y vuelto a tapar de los tesoros: tierra y nada más, sin un solo destello de oro en todo el cuadro.",
+      "entity_refs": [
+        "ambeu",
+        "soldados-blancos",
+        "hoja_utileria_guerra",
+        "gente-embera-katio",
+        "oro"
+      ],
+      "no_mostrar": [
+        "oro visible",
+        "aura, escudo o resplandor de invulnerabilidad",
+        "heridas en detalle",
+        "caballos"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "ambeu",

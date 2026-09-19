@@ -8,12 +8,208 @@
   "canon_field": "content",
   "canon_sha256": "b8a93ce638b75ce48650f41ef90987ac405e085369a6f93d2c9ae292a692341a",
   "canon_chars": 6597,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "Es un rumor con nombre, no una aparición vista por todos",
+      "evidencia": "Era el rumor de un ser mítico, una figura que habitaba entre sombras y leyendas, conocido como \"El Patón\""
+    },
+    {
+      "id": "n02",
+      "nudo": "Lo que deja no es miedo sino marca física",
+      "evidencia": "Su andar, pesado y firme como el latido de la tierra, dejaba una huella imborrable"
+    },
+    {
+      "id": "n03",
+      "nudo": "Y el daño es agrícola: pisa lo sembrado",
+      "evidencia": "un rastro tangible en los campos donde sus pies colosales pisoteaban las cosechas"
+    },
+    {
+      "id": "n04",
+      "nudo": "La gente del lugar no cree la versión de afuera",
+      "evidencia": "las gentes del lugar, que conocían bien el susurro del bosque y el suspiro de las montañas, se mantenían escépticas"
+    },
+    {
+      "id": "n05",
+      "nudo": "Su existencia se prueba sólo por las huellas",
+      "evidencia": "una presencia singular, invisible salvo por las huellas imborrables de sus pies descomunales"
+    },
+    {
+      "id": "n06",
+      "nudo": "Y es anterior a la gente que lo cuenta",
+      "evidencia": "había caminado estas tierras mucho antes que los hombres"
+    },
+    {
+      "id": "n07",
+      "nudo": "Los que no le temen deciden actuar",
+      "evidencia": "Aquellos que no temían al mito decidieron enfrentar a \"El Patón\""
+    },
+    {
+      "id": "n08",
+      "nudo": "La primera respuesta es una trampa de lazo",
+      "evidencia": "Pusieron trampas, lazos colgantes que suspiraban al ser pisados"
+    },
+    {
+      "id": "n09",
+      "nudo": "La trampa falla porque él no la entiende como trampa",
+      "evidencia": "con la ingenuidad de un niño gigante, jugaba con las sogas, balanceándose de un lado a otro"
+    },
+    {
+      "id": "n10",
+      "nudo": "Se divierte solo",
+      "evidencia": "riendo con una risa que solo él escuchaba"
+    },
+    {
+      "id": "n11",
+      "nudo": "La segunda respuesta es la emboscada",
+      "evidencia": "ya hartos de la destrucción constante, los campesinos decidieron confrontarlo directamente"
+    },
+    {
+      "id": "n12",
+      "nudo": "Van armados y esperan escondidos",
+      "evidencia": "Armados de garrotes, aguardaron en silencio, ocultos tras una roca madre"
+    },
+    {
+      "id": "n13",
+      "nudo": "Y salen decididos, no asustados",
+      "evidencia": "ya no era el miedo sino la convicción lo que los empujó hacia adelante"
+    },
+    {
+      "id": "n14",
+      "nudo": "Lo que encuentran no es lo que buscaban",
+      "evidencia": "no era un ser colosal y despiadado, sino una figura humana, abatida por el propio peso de su existencia"
+    },
+    {
+      "id": "n15",
+      "nudo": "Y lo que lo delata es la postura y la mirada",
+      "evidencia": "Sus ojos reflejaban un fulgor triste, y su postura agazapada contra un árbol mostraba más miedo que malicia"
+    },
+    {
+      "id": "n16",
+      "nudo": "Bajan las armas",
+      "evidencia": "los hombres guardaron sus armas"
+    },
+    {
+      "id": "n17",
+      "nudo": "El acuerdo es sin palabras",
+      "evidencia": "sin palabra alguna, pactaron una tregua con el ser que antes temían"
+    },
+    {
+      "id": "n18",
+      "nudo": "Y el final no es su muerte sino que siga caminando",
+      "evidencia": "vigilan las montañas con la esperanza de que el gigante siga caminando"
+    }
+  ],
+  "deslindes": [
+    "El Patón existe sobre todo para impedir una deriva: es un hombre de proporciones humanas salvo por unos pies desmesurados que le obligan a apoyarse en ramas. NO es criptozoología, no es peludo y no es una fiera. El módulo retira el Sasquatch, los tres ecologistas desmembrados y el profesor, y con ellos se va la mitad periodística del canon.",
+    "La prueba de su paso es la huella y nunca el cadáver. Los tres ecologistas desmembrados son la capa de 1986 que la revisión sacó, y en este corpus no hay resto humano en ninguna lámina: lo que el Patón deja en el suelo es una pisada y un surco aplastado.",
+    "El censo le asignó la ficha del arriero y el canon no nombra a ninguno. Quienes ponen la trampa y salen con los garrotes son campesinos, y van dentro de `gente_del_occidente_antioqueno`; el arriero no entra en ninguna de las tres láminas.",
+    "La trampa y los garrotes no tienen ficha propia: van los dos dentro de `hoja_utileria_finca_y_camino`. Y son herramienta de finca, no armas de caza: garrote de palo y lazo de cabuya, lo que hay en una casa.",
+    "El desenlace es una tregua y hay que componerla como tal. El gigante no huye, no es vencido y no muere: la última lámina no puede tener ni triunfo ni derrota, porque el relato dice expresamente que lo que la gente espera es que siga caminando.",
+    "Registro del suroeste húmedo: verde oscuro desaturado, árboles altos y suelo blando que retiene la huella. El pardo seco del cañón del Cauca no sirve aquí, porque en tierra reseca la huella —que es la prueba entera del relato— no se marcaría."
+  ],
+  "descartes": [
+    {
+      "que": "El Sasquatch, los tres ecologistas desmembrados y el periódico El Sátrapa",
+      "razon": "Están `excluded`. Son la capa periodística de 1986 que convierte a un hombre torpe en criptozoología, y además traen cuerpos desmembrados que este corpus no muestra."
+    },
+    {
+      "que": "El profesor Armando Bulla y Elías Pérez",
+      "razon": "Están `excluded`. Son los dos testigos de la versión sensacionalista y su presencia obligaría a componer la escena del crimen que la revisión retiró."
+    },
+    {
+      "que": "El arriero",
+      "razon": "El canon no lo nombra. Los que actúan son campesinos y van dentro de la ficha de gente del occidente."
+    },
+    {
+      "que": "La risa como sonido representado",
+      "razon": "El canon dice que sólo él la escucha. Ponerla en la lámina como signo la volvería audible para los campesinos, que es lo contrario de lo que el texto dice."
+    },
+    {
+      "que": "El Yeti",
+      "razon": "Es comentario del compilador en la sección de similitudes."
+    }
+  ],
+  "N_propuesto": 9,
+  "razon_N": "Dieciocho nudos y una curva emocional entera: el relato empieza en el terror y acaba en la lástima, y lo que lo hace funcionar es que el giro llegue tarde. Doce nudos construyen a un monstruo por acumulación de huellas y de destrozos, y seis lo desmontan en un solo encuentro. Nueve bloques dejan seis para la acumulación y tres para el giro, que es la proporción que impide que el lector adivine antes de tiempo que no hay monstruo.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06"
+      ],
+      "momento": "El Patón cruzando la ladera al amanecer, apoyándose en una rama, con el sembrado ya aplastado detrás de él.",
+      "composicion": "Plano general horizontal a la altura de la cintura de un hombre. El Patón entero en el tercio derecho, de perfil y en movimiento: proporciones humanas de arriba abajo salvo los pies, desmesurados y hundidos en la tierra blanda, y una rama larga en la mano derecha como apoyo. En el tercio izquierdo y en primer término, dos surcos de la sementera aplastados en línea, con las matas partidas y la huella marcada entre ellas. Al fondo, la loma en verde oscuro desaturado con la niebla baja entre los árboles altos. Ni pelo, ni garra, ni colmillo.",
+      "entity_refs": [
+        "el_paton",
+        "sementera_antioquena",
+        "paisaje_loma_y_camino_de_herradura"
+      ],
+      "no_mostrar": [
+        "pelaje, garras o rasgos de fiera",
+        "cadáver, resto humano ni sangre",
+        "pardo seco del cañón"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17"
+      ],
+      "momento": "Los garrotes bajan y el lazo sube colgado de la rama: en el mismo eje, el que iban a matar está encogido contra el árbol.",
+      "composicion": "Vertical de tres franjas sobre el tronco de un árbol. Arriba, la rama de la que cuelga el lazo de cabuya, todavía balanceándose y sin nada dentro. En medio y ocupando la mitad del alto, el Patón agazapado contra el tronco, encogido, con los pies enormes recogidos bajo el cuerpo y la mirada baja: es más pequeño que su propia leyenda y ocupa menos sitio que el árbol. Abajo y entrando desde el borde inferior, tres campesinos enteros saliendo de detrás de una roca con los garrotes ya descendidos a la altura de la cadera, uno de ellos con el brazo bajando el arma. El vertical existe para que el lazo quede colgando arriba, inútil, y las armas bajen abajo sin llegar a usarse.",
+      "entity_refs": [
+        "el_paton",
+        "gente_del_occidente_antioqueno",
+        "hoja_utileria_finca_y_camino",
+        "paisaje_loma_y_camino_de_herradura"
+      ],
+      "no_mostrar": [
+        "golpe, herida ni forcejeo",
+        "el Patón atrapado en el lazo",
+        "arma de fuego"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n18"
+      ],
+      "momento": "Al día siguiente sólo queda la huella, y que siga apareciendo es la buena noticia.",
+      "composicion": "Cuadrada y en picado corto sobre el suelo blando de la ladera. En el centro, una sola huella de pie descalzo enorme, nítida, con el agua de la niebla ya empozada dentro; a su lado, la marca del extremo de la rama de apoyo, más pequeña y redonda. Entrando por el borde superior, dos matas de la sementera enderezadas y atadas con cabuya, es decir reparadas y no arrancadas. Al fondo, la niebla cerrando la ladera. Ninguna figura y ningún garrote.",
+      "entity_refs": [
+        "paisaje_loma_y_camino_de_herradura",
+        "sementera_antioquena",
+        "hoja_utileria_finca_y_camino"
+      ],
+      "no_mostrar": [
+        "figura humana o del Patón",
+        "trampa armada",
+        "destrozo nuevo: el sembrado está reparado"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "el_paton",

@@ -8,12 +8,201 @@
   "canon_field": "content",
   "canon_sha256": "2b928e84a002138b172e45d6a6d69fa5d3a270384567f58d305ed817dc210f74",
   "canon_chars": 8176,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "Todo arranca con un transporte de ganado de lidia por la ciudad",
+      "evidencia": "un camión, resguardado por la indiferente bruma capitalina, se abría camino cargando con tigres disfrazados de toros"
+    },
+    {
+      "id": "n02",
+      "nudo": "De dónde vienen los animales es cosa que nadie acuerda",
+      "evidencia": "algunos decían que de España, otros del sur de Francia"
+    },
+    {
+      "id": "n03",
+      "nudo": "La causa del desastre es minúscula y mecánica: una piedra",
+      "evidencia": "Un bache casi imperceptible despidió una roca que rebotó como un susurro contra la frágil mecánica del camión, quebrando el eje de transmisión"
+    },
+    {
+      "id": "n04",
+      "nudo": "Se sueltan varios, no uno",
+      "evidencia": "liberando a varios toros en un caos de mugidos y cascos resonantes"
+    },
+    {
+      "id": "n05",
+      "nudo": "Uno se separa y entra hacia el centro",
+      "evidencia": "se desprendió del tumulto, como si un destino particular lo atrajera hacia el bullicioso corazón de la ciudad"
+    },
+    {
+      "id": "n06",
+      "nudo": "Ni su color se puede fijar: las versiones no coinciden",
+      "evidencia": "Su piel, un tapiz de detalles imposibles de acordar"
+    },
+    {
+      "id": "n07",
+      "nudo": "El escenario deja de ser la calle y pasa a ser un edificio de oficinas",
+      "evidencia": "fue el Edificio Bachué quien se convirtió en testigo silencioso de aquel suceso"
+    },
+    {
+      "id": "n08",
+      "nudo": "Nadie abre la puerta del ascensor: el relato se niega a explicarlo",
+      "evidencia": "Las puertas del ascensor fueron abiertas por una mano invisible"
+    },
+    {
+      "id": "n09",
+      "nudo": "La víctima es un trabajador que salía de su turno",
+      "evidencia": "un simple trabajador que culminaba su faena diaria, se topó cara a cara con la devastadora majestuosidad del animal"
+    },
+    {
+      "id": "n10",
+      "nudo": "La embestida ocurre en un cubo que no cabe al animal",
+      "evidencia": "la embestida fue una coreografía de fuerza y miedo"
+    },
+    {
+      "id": "n11",
+      "nudo": "El golpe rompe a la vez un cuerpo y la verosimilitud de la ciudad",
+      "evidencia": "rompió no solo un cuerpo, sino las líneas de una realidad ya de por sí quebradiza"
+    },
+    {
+      "id": "n12",
+      "nudo": "El animal se va por donde entró",
+      "evidencia": "Tras el impacto, aquel toro salió del edificio"
+    },
+    {
+      "id": "n13",
+      "nudo": "Detrás de él va el pánico, que es lo que de verdad se propaga",
+      "evidencia": "Lo persiguió el pánico tangible de la perplejidad bogotana"
+    },
+    {
+      "id": "n14",
+      "nudo": "La ciudad entera lo acusa recibo por el oído",
+      "evidencia": "cientos de perros ladraban como heraldos, las campanas resonaban con un tañido tan violento como el de la época colonial azotada por la tempestad, y las reses en el matadero mugían"
+    },
+    {
+      "id": "n15",
+      "nudo": "Lo capturan esa misma noche y la historia se acaba ahí",
+      "evidencia": "esfumado tras la valiente captura emprendida finalmente por aquellos que se atrevieron"
+    },
+    {
+      "id": "n16",
+      "nudo": "No queda una sola prueba porque las fotos no llegaron a existir",
+      "evidencia": "Las fotos, que jamás llegaron a desarrollarse, conservaron el enigma"
+    },
+    {
+      "id": "n17",
+      "nudo": "Sin prueba, la ciudad lo convierte en otra cosa",
+      "evidencia": "los bogotanos confesaban con reverencia que vieron en aquel toro la reencarnación del Minotauro"
+    },
+    {
+      "id": "n18",
+      "nudo": "Y eso es lo que sobrevive: no el animal sino el relato",
+      "evidencia": "la leyenda del toro que había extraviado su carne en las luces de Bogotá seguía vivaz"
+    }
+  ],
+  "deslindes": [
+    "El censo le asignó a este relato la ficha del tranvía y el canon no lo nombra ni una sola vez. Además la fecha lo impide: el tranvía de Bogotá murió el 30 de junio de 1951 y el suceso es de los sesenta en una versión y de los ochenta en la lectura del expediente. La ficha no entra en ninguna lámina y el desajuste se declara aquí en vez de resolverse metiendo un vagón que no existe.",
+    "Es una res asustada y no un monstruo. El Minotauro, los tigres, el torero y el cardenal quedan `excluded`, y también la casta exacta: el propio canon dice que los detalles de la piel son «imposibles de acordar», así que el pelaje se resuelve por valor y no por marca. Lo que hace terrible a la escena es la desproporción entre el volumen del animal y un cubo que no lo cabe.",
+    "El laberinto del relato es el edificio, no una criatura. El nudo n17 se compone con la arquitectura —los vanos repetidos del vestíbulo, el fondo que no se acaba— y jamás con un cuerpo mitad hombre mitad toro, que es exactamente lo que la revisión retiró.",
+    "«Una mano invisible» es una negativa a explicar y no un personaje. En la lámina las puertas están abiertas y no hay nadie junto al botón: la falta de causa es el sujeto y rellenarla con un operario la destruye.",
+    "Los edificios rivales —Bachué, Lara, Tequendama, Colpatria— no tienen ficha propia: van dentro de `vestibulo_y_ascensor`, y el camión de ganado va dentro de `calle_bogotana`. Ninguna de las dos cosas se compone como pieza suelta."
+  ],
+  "descartes": [
+    {
+      "que": "El tranvía",
+      "razon": "No aparece en el canon y es imposible por fecha: el sistema se cerró en 1951 y este suceso es posterior. Es un error de asignación del censo, no una elección de composición."
+    },
+    {
+      "que": "El Minotauro, los tigres disfrazados, el torero y el cardenal",
+      "razon": "Están `excluded`. Son la capa mitificadora que la revisión retiró para que quedara la res."
+    },
+    {
+      "que": "El cuerpo del trabajador",
+      "razon": "El corpus no muestra cadáveres. La embestida se compone por la geometría —el animal ocupando un vano que no lo cabe— y se corta antes del impacto."
+    },
+    {
+      "que": "La casta y el color exactos del animal",
+      "razon": "El canon los declara indecidibles. Fijar uno sería elegir por él."
+    }
+  ],
+  "N_propuesto": 9,
+  "razon_N": "Dieciocho nudos y una duración real de pocos minutos: el relato es un accidente y su eco. Siete nudos son mecánica encadenada —piedra, eje, fuga, entrada, puerta, embestida, salida— que no admite pausa, y seis son la ciudad reaccionando después. Nueve bloques mantienen la cadena sin cortarla y dejan tres para el eco, que es donde el relato se vuelve leyenda y por tanto no se puede despachar en uno.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06"
+      ],
+      "momento": "El camión atravesado en la calzada y la res ya fuera, parada en mitad de la calle, mirando hacia el centro.",
+      "composicion": "Plano general horizontal a la altura del morro del animal. En el tercio izquierdo y cortado por el borde, el camión de ganado de través con la caja abierta y la rueda subida al bordillo. En el centro y de perfil completo, la res: cuerpo entero, cabeza baja, cuello tenso, las cuatro patas asentadas sobre el asfalto mojado. En el tercio derecho y muy al fondo, transeúntes deteniéndose bajo la luz eléctrica plana de la calle. La piel se resuelve por valor, sin mancha ni casta legible.",
+      "entity_refs": [
+        "la_res_toro",
+        "calle_bogotana",
+        "colectivo_transeuntes_siglo_xx"
+      ],
+      "no_mostrar": [
+        "tranvía, riel, trole ni poste de tranvía",
+        "torero, cardenal ni disfraz",
+        "marca de casta o divisa en el animal"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12"
+      ],
+      "momento": "La cabina llega abajo y el animal entra: el indicador baja y el volumen sube por el mismo hueco.",
+      "composicion": "Vertical de tres franjas en el eje del hueco del ascensor. Arriba, la esfera del indicador de planta con la aguja bajando y el dintel de latón del vano. En medio, las puertas ya abiertas y, saliendo de la cabina, el trabajador con la cartera en la mano y el cuerpo girado por la sorpresa, pequeño contra el marco. Abajo, entrando por el borde inferior y llenando todo el ancho, la masa de la res encajada entre las dos jambas, más ancha que el vano, con la cabeza baja. El vertical existe para que la cabina baje y el animal suba dentro de la misma columna de arquitectura.",
+      "entity_refs": [
+        "la_res_toro",
+        "vestibulo_y_ascensor",
+        "colectivo_transeuntes_siglo_xx"
+      ],
+      "no_mostrar": [
+        "el impacto, la herida ni el cuerpo caído",
+        "nadie junto al botón del ascensor",
+        "criatura mitad hombre mitad toro"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n13",
+        "n14",
+        "n15",
+        "n16",
+        "n17",
+        "n18"
+      ],
+      "momento": "El vestíbulo a la mañana siguiente: no hay animal, no hay cuerpo, no hay foto, y el edificio se repite hacia dentro como si no acabara.",
+      "composicion": "Cuadrada y frontal sobre el vestíbulo vacío. En primer término, el suelo pulido con las medias lunas de los cascos marcadas en línea, entrando desde el borde inferior y saliendo por la derecha hacia la puerta de la calle. Al fondo, el hueco del ascensor con las puertas trabadas a medio abrir, y a los lados los vanos y espejos del vestíbulo repitiéndose en una sucesión que no cierra: el laberinto es la arquitectura. Ninguna figura, ningún animal. Tras el vidrio de la calle, la ciudad ya normal.",
+      "entity_refs": [
+        "vestibulo_y_ascensor",
+        "calle_bogotana"
+      ],
+      "no_mostrar": [
+        "figura humana o animal",
+        "Minotauro ni ninguna criatura",
+        "sangre o resto"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "colectivo_transeuntes_siglo_xx",

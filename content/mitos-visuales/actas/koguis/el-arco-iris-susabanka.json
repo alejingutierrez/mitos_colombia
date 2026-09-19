@@ -8,12 +8,164 @@
   "canon_field": "mito",
   "canon_sha256": "39e8d58d05932905029cfcf5256d4818c0fd837efe73f5b853e851d61c015fb0",
   "canon_chars": 536,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "El arco iris no es un fenómeno: es alguien con nombre",
+      "evidencia": "Susabanka es el arco iris"
+    },
+    {
+      "id": "n02",
+      "nudo": "Es hijo del Sol",
+      "evidencia": "Nació de Mama, que es el Sol"
+    },
+    {
+      "id": "n03",
+      "nudo": "No muere: termina en piedra",
+      "evidencia": "no se murió sino que se hizo piedra"
+    },
+    {
+      "id": "n04",
+      "nudo": "El hambre del padre es lo que lo pone en movimiento",
+      "evidencia": "Cuando el Sol tiene hambre lo manda a pedir comida"
+    },
+    {
+      "id": "n05",
+      "nudo": "Lo que cobra es comida de roza",
+      "evidencia": "A Susabanka le gusta comer plátano, yuca y malanga"
+    },
+    {
+      "id": "n06",
+      "nudo": "Y también come mujeres: el cobro incluye gente",
+      "evidencia": "y también mujeres"
+    },
+    {
+      "id": "n07",
+      "nudo": "Comer y engendrar son en él el mismo acto",
+      "evidencia": "les hace hijos y ellas dan a luz de él"
+    },
+    {
+      "id": "n08",
+      "nudo": "No actúa por su cuenta: es mandado",
+      "evidencia": "Obedece los mandatos del Sol"
+    },
+    {
+      "id": "n09",
+      "nudo": "El Sol no va solo por el cielo",
+      "evidencia": "El Sol camina con la menguante y lleva también una estrella"
+    },
+    {
+      "id": "n10",
+      "nudo": "Arriba hay una casa del Sol con mujeres e hijos",
+      "evidencia": "Tiene muchas mujeres allá arriba, y de muchas de ellas tiene hijos"
+    },
+    {
+      "id": "n11",
+      "nudo": "La enfermedad tiene remitente y es el mismo padre",
+      "evidencia": "El Sol manda las enfermedades"
+    },
+    {
+      "id": "n12",
+      "nudo": "La muerte de la gente es la comida del Sol: el relato cierra en su boca",
+      "evidencia": "Los indios se mueren y entonces se los come. El Sol come gente"
+    }
+  ],
+  "deslindes": [
+    "Susabanka es cuerpo y no banda de color. Si la lámina lo resuelve como arco pintado en el cielo se pierde al personaje que come, engendra y obedece; el arco tiene que ser la forma de una figura que está de pie sobre la Sierra, no un efecto de luz detrás de ella.",
+    "«No se murió sino que se hizo piedra» no es una tumba ni una lápida: es el mismo cuerpo en su estado final. La piedra de la huella tiene que conservar la curva del arco, de modo que se lea continuidad y no sustitución.",
+    "La menguante y la estrella no tienen ficha propia: las cubre `luna`, y es la única compañía celeste con lámina que el corpus da. El canon dice además que el Sol «tiene muchas mujeres allá arriba», y la escena no inventa un cortejo de figuras femeninas para ilustrarlo: la multiplicidad se lee en el séquito de luna y estrella y en nada más.",
+    "El azul es en este corpus el color del Norte, del mar, del frío y de la enfermedad, y la única cosa azul del mundo kogui es la piedra que vuelve tigre a un hombre. Un arco iris pintado con su azul de manual metería aquí un color agente que este relato no autoriza: el arco de Susabanka se resuelve por materia y por luz, no por espectro completo.",
+    "«El Sol come gente» y «también mujeres» son el mismo verbo y ninguno se dibuja. La antropofagia se nombra en el relato y se sostiene en la lámina por la orden y por la ausencia: el plato vacío, el sitio donde estaba alguien."
+  ],
+  "descartes": [
+    {
+      "que": "Námaku en escena",
+      "razon": "El canon lo trae sólo como término de comparación —«es casi como Námaku»—, es decir como remisión a otro relato del corpus. Componerlo aquí le daría un papel que en este mito no tiene."
+    },
+    {
+      "que": "El acto de devorar y el acto sexual",
+      "razon": "El corpus los deja fuera por sensibilidad en todo el carril kogui, y aquí el canon los dice de pasada en media línea. Se nombran y no se dibujan."
+    },
+    {
+      "que": "Los enfermos y los muertos",
+      "razon": "El nudo n11 se sostiene con quien manda la enfermedad, no con quien la padece. Ninguna lámina pone llagas ni agonía."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Doce nudos que no son una cadena de sucesos sino un retrato en dos cuerpos: el hijo que baja y el padre que manda, y los dos comen. El relato no tiene giro, tiene acumulación, y ocho bloques bastan para que la acumulación se sienta sin que la falta de desenlace quede a la vista.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n09",
+        "n10"
+      ],
+      "momento": "Susabanka entra sobre la Sierra y arriba, en el mismo aire, va su padre con la menguante y la estrella.",
+      "composicion": "Plano general apaisado. Susabanka de cuerpo entero en el tercio izquierdo, cerca del suelo, con la curva del arco resuelta en el propio cuerpo —hombros, espalda y brazo forman el arco— y no dibujada detrás. En la franja alta derecha, el Sol caminando, y pegados a él la luna menguante y una sola estrella. El cielo ocupa dos tercios, pero la figura de abajo es lo que se lee primero.",
+      "entity_refs": [
+        "susabanka",
+        "sol_mama",
+        "luna",
+        "sierra_nevada"
+      ],
+      "no_mostrar": [
+        "arco iris como banda de siete colores",
+        "mujeres del Sol"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n04",
+        "n05",
+        "n06",
+        "n07",
+        "n08"
+      ],
+      "momento": "El padre tiene hambre arriba y el hijo cobra abajo: la orden baja y la comida sube.",
+      "composicion": "Vertical estricto. En el borde superior, sólo la mano y el gesto del Sol mandando, sin cuerpo entero. En el centro, Susabanka de espaldas al padre, recibiendo: plátano, yuca y malanga apilados contra su pecho, y el cuerpo doblado hacia lo que se lleva. En el borde inferior, el suelo de la roza y un sitio vacío entre las matas, con la comida arrancada, que es todo lo que la lámina dice del cobro en gente. La columna hace bajar la orden y subir el alimento por el mismo eje.",
+      "entity_refs": [
+        "susabanka",
+        "sol_mama",
+        "platano",
+        "yuca",
+        "malanga",
+        "sierra_nevada"
+      ],
+      "no_mostrar": [
+        "ningún acto de devorar",
+        "ningún acto sexual",
+        "ninguna mujer en poder de Susabanka"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n03",
+        "n11",
+        "n12"
+      ],
+      "momento": "Queda la piedra en que se hizo el hijo, y encima el padre que sigue comiendo.",
+      "composicion": "Cuadrada y cerrada sobre el suelo. Al centro, la piedra: un bloque que todavía tiene la curva del arco y su misma materia, de modo que se reconozca el cuerpo que se fue. Arriba, ocupando la franja alta, el Sol con la boca del encuadre entera para él, y el aire entre la piedra y el Sol atravesado por la línea de lo que baja: la enfermedad, resuelta como caída de luz y no como figura. No hay gente en el cuadro, y ésa es la frase.",
+      "entity_refs": [
+        "susabanka",
+        "sol_mama",
+        "sierra_nevada"
+      ],
+      "no_mostrar": [
+        "cuerpos devorados",
+        "enfermos, llagas o agonía"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "sol_mama",
