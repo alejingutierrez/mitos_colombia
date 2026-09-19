@@ -85,6 +85,25 @@ const DESIGN_FIELDS = [
   "documented_features",
   "editorial_features",
 ];
+/**
+ * Los cuatro campos editoriales son el contrato por defecto y no se tocan.
+ *
+ * Pero 218 de las 240 paginas del corpus mestizo **no tienen fila editorial**:
+ * su relato vive en `content` y no hay `historia`, `versiones` ni
+ * `research_notes` que leer. Exigirselas obligaria a declarar que se leyo algo
+ * que no existe, que es peor que no leerlo.
+ *
+ * Un plan puede entonces declarar su propio juego de campos, y al hacerlo
+ * **queda obligado a explicar por que** en `corpus.fields_note`. La excepcion
+ * es visible en el plan, no escondida en el validador.
+ */
+const CANON_FIELDS = ["mito", "historia", "versiones", "research_notes"];
+
+function requiredFields(plan) {
+  const declared = plan?.corpus?.required_fields;
+  return Array.isArray(declared) && declared.length ? declared : CANON_FIELDS;
+}
+
 const EXTRACTION_PASSES = [
   "named_entities",
   "unnamed_roles",
@@ -137,6 +156,17 @@ function validateResearch(plan, report) {
   if (missing.length) add(report, "errors", "myths", `faltan mitos del corpus: ${missing.join(", ")}`);
   if (extra.length) add(report, "errors", "myths", `hay mitos fuera del corpus: ${extra.join(", ")}`);
 
+  if (Array.isArray(corpus.required_fields) && corpus.required_fields.length) {
+    if (!hasText(corpus.fields_note)) {
+      add(report, "errors", "corpus.fields_note", "un corpus que cambia los campos exigidos debe decir por que");
+    }
+    const unknown = corpus.required_fields.filter((field) => ![...CANON_FIELDS, "content"].includes(field));
+    if (unknown.length) add(report, "errors", "corpus.required_fields", `campos desconocidos: ${unknown.join(", ")}`);
+    if (!corpus.required_fields.includes("mito") && !corpus.required_fields.includes("content")) {
+      add(report, "errors", "corpus.required_fields", "hay que leer el relato: mito o content");
+    }
+  }
+
   const source = plan.source_snapshot;
   if (!isObject(source)) {
     add(report, "errors", "source_snapshot", "falta la huella del corpus editorial leido");
@@ -147,7 +177,7 @@ function validateResearch(plan, report) {
       add(report, "errors", "source_snapshot.record_count", "debe coincidir con el corpus congelado");
     }
     const fields = requireList(report, source.fields, "source_snapshot.fields");
-    for (const field of ["mito", "historia", "versiones", "research_notes"]) {
+    for (const field of requiredFields(plan)) {
       if (!fields.includes(field)) add(report, "errors", "source_snapshot.fields", `falta leer ${field}`);
     }
   }
@@ -217,7 +247,7 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
       add(report, "errors", `myths.${slug}.extraction`, "falta la bitacora de extraccion de entidades");
     } else {
       const fields = requireList(report, extraction.reviewed_fields, `myths.${slug}.extraction.reviewed_fields`);
-      for (const field of ["mito", "historia", "versiones", "research_notes"]) {
+      for (const field of requiredFields(plan)) {
         if (!fields.includes(field)) add(report, "errors", `myths.${slug}.extraction.reviewed_fields`, `falta revisar ${field}`);
       }
       const passes = requireList(report, extraction.passes, `myths.${slug}.extraction.passes`);
@@ -288,7 +318,7 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
         continue;
       }
       if (!declaredMyths.includes(item.myth)) add(report, "errors", `${path}.evidence[${index}].myth`, "debe pertenecer a myth_refs");
-      if (!["mito", "historia", "versiones", "research_notes"].includes(item.field)) {
+      if (![...CANON_FIELDS, "content"].includes(item.field)) {
         add(report, "errors", `${path}.evidence[${index}].field`, "campo de corpus invalido");
       }
       requireText(report, item.note, `${path}.evidence[${index}].note`);

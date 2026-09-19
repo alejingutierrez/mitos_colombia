@@ -796,3 +796,46 @@ test("toda figura humana o humanizada del lote activo supera la compuerta", () =
     assert.deepEqual(errors, [], errors.join("\n"));
   }
 });
+
+// 218 de las 240 paginas del corpus mestizo no tienen fila editorial: su
+// relato vive en `content`. Exigirles los cuatro campos obligaria a declarar
+// que se leyo algo que no existe.
+test("un corpus de paginas puede declarar sus propios campos, y queda obligado a explicarlo", () => {
+  const plan = fixture();
+  plan.corpus.required_fields = ["content"];
+  plan.corpus.fields_note =
+    "Paginas sin fila editorial: el relato vive en content y no hay historia, versiones ni research_notes.";
+  plan.source_snapshot.fields = ["content"];
+  plan.myths["hijo-del-condor"].extraction.reviewed_fields = ["content"];
+
+  const ok = validateBibleV3(plan, { stage: "inventory" });
+  assert.deepEqual(ok.errors, [], ok.errors.map((error) => `${error.path}: ${error.message}`).join("\n"));
+});
+
+test("cambiar los campos exigidos sin explicar por que es un error", () => {
+  const plan = fixture();
+  plan.corpus.required_fields = ["content"];
+  plan.source_snapshot.fields = ["content"];
+  plan.myths["hijo-del-condor"].extraction.reviewed_fields = ["content"];
+
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(report.errors.some((error) => error.path === "corpus.fields_note"));
+});
+
+test("un corpus no puede declarar que no leyo el relato", () => {
+  const plan = fixture();
+  plan.corpus.required_fields = ["historia"];
+  plan.corpus.fields_note = "Excusa cualquiera.";
+  plan.source_snapshot.fields = ["historia"];
+  plan.myths["hijo-del-condor"].extraction.reviewed_fields = ["historia"];
+
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(report.errors.some((error) => error.message.includes("mito o content")));
+});
+
+test("el contrato por defecto sigue exigiendo los cuatro campos", () => {
+  const plan = fixture();
+  plan.source_snapshot.fields = ["mito", "historia"];
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(report.errors.some((error) => error.message.includes("falta leer versiones")));
+});

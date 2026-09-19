@@ -25,6 +25,8 @@ import { dirname, resolve } from "node:path";
 import pg from "pg";
 
 const FIELDS = ["mito", "historia", "versiones", "research_notes"];
+/** El relato de una pagina sin fila editorial vive aqui y en ningun otro sitio. */
+const PAGE_FIELDS = ["content", "mito", "historia", "versiones", "research_notes"];
 const SCHEMA = "mitos-colombia-biblia-visual/v3";
 const FIELD_SEPARATOR = "\n@@campo@@\n";
 const RECORD_SEPARATOR = "\n@@mito@@\n";
@@ -77,13 +79,13 @@ async function main() {
 
   const { rows } = await client.query(
     `SELECT m.slug, m.title, m.category_path, co.name AS community_name, co.slug AS community_slug,
-            m.mito, em.historia, em.versiones, em.research_notes,
+            m.mito, m.content, em.historia, em.versiones, em.research_notes,
             em.sources_json, em.key_sources_json,
             em.updated_at AS editorial_updated_at, m.updated_at
        FROM myths m
        LEFT JOIN communities co ON co.id = m.community_id
        LEFT JOIN editorial_myths em ON em.source_myth_id = m.id
-      WHERE ${where} AND m.mito IS NOT NULL AND length(trim(m.mito)) > 0
+      WHERE ${where}${args.pages ? "" : " AND m.mito IS NOT NULL AND length(trim(m.mito)) > 0"}
       ORDER BY m.slug`,
     [param],
   );
@@ -101,8 +103,12 @@ async function main() {
 
   // La huella cubre exactamente lo que se leyo: los cuatro campos, por slug
   // ordenado. Cualquier reescritura editorial la mueve y el inventario caduca.
+  // Un corpus de paginas se congela sobre lo que de verdad tiene. 218 de las
+  // 240 paginas mestizas no tienen fila editorial: pedirles los cuatro campos
+  // obligaria a declarar que se leyo algo que no existe.
+  const fields = args.pages ? PAGE_FIELDS : FIELDS;
   const canonical = rows
-    .map((row) => [row.slug, ...FIELDS.map((field) => String(row[field] ?? ""))].join(FIELD_SEPARATOR))
+    .map((row) => [row.slug, ...fields.map((field) => String(row[field] ?? ""))].join(FIELD_SEPARATOR))
     .join(RECORD_SEPARATOR);
   const sha256 = createHash("sha256").update(canonical, "utf8").digest("hex");
 
@@ -130,12 +136,18 @@ async function main() {
         : `Neon, comunidad exacta ${label} (communities.slug = ${param})`,
       grouping: bySlugs ? "epoca_y_territorio" : "comunidad",
       myth_slugs: rows.map((row) => row.slug),
+      ...(args.pages
+        ? {
+            required_fields: ["content"],
+            fields_note: `Corpus de paginas: ${rows.filter((row) => row.mito && row.mito.trim()).length} de ${rows.length} tienen canon en \`mito\`; el resto no tiene fila editorial y su relato vive solo en \`content\`. Se exige leer el relato, y los cuatro campos editoriales alli donde existen.`,
+          }
+        : {}),
     },
     source_snapshot: {
-      source: "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      source: "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
       retrieved_at: retrievedAt,
       record_count: rows.length,
-      fields: FIELDS,
+      fields,
       sha256,
       max_source_updated_at: maxUpdated || null,
     },
@@ -152,7 +164,13 @@ async function main() {
     myths: Object.fromEntries(
       rows.map((row) => [
         row.slug,
-        { title: row.title, category_path: row.category_path, extraction: null, entity_refs: [] },
+        {
+          title: row.title,
+          category_path: row.category_path,
+          canon: Boolean(row.mito && row.mito.trim()),
+          extraction: null,
+          entity_refs: [],
+        },
       ]),
     ),
     entities: {},
@@ -190,7 +208,7 @@ async function main() {
   }
 
   const chars = rows.reduce(
-    (total, row) => total + FIELDS.reduce((sum, field) => sum + String(row[field] ?? "").length, 0),
+    (total, row) => total + fields.reduce((sum, field) => sum + String(row[field] ?? "").length, 0),
     0,
   );
   console.log(`corpus congelado - ${id}`);
