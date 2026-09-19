@@ -155,7 +155,12 @@ export function construir({ plan, censo, research }) {
       kind: e.kind,
       description: e.note || e.name,
       aliases: [],
-      states: (e.states || []).length ? e.states : ["canonico"],
+      // El censo llama `states` a **los estados extra que cuestan lamina**;
+      // la V3 llama `states` a **todos**, y el primero es la vista canonica.
+      // Mapear uno sobre otro etiquetaba la hoja de identidad con el estado
+      // transformado: 196 entidades en 38 corpus. El canonico va siempre
+      // delante y no se pierde ninguno.
+      states: ["canonico", ...(e.states || []).filter((s) => s !== "canonico")],
       evidence_basis: BASIS_V2_A_V3[baseV2] || "uncertain",
       sensitivity: SENSIBILIDAD_V2_A_V3[sensV2] || "public",
       visual_status: e.decision,
@@ -251,6 +256,13 @@ function main() {
     const planPath = resolve(join(PLANES, `${id}.v3.json`));
     if (!existsSync(planPath)) {
       console.error(`SIN PLAN  ${id}`);
+      continue;
+    }
+    // Rehacer un plan ya escrito borraria el trabajo de quien lo escribio.
+    const previo = leer(planPath);
+    const escrito = Object.values(previo.entities || {}).some((e) => e.design);
+    if ((escrito || previo.inventory?.frozen) && !args.force) {
+      console.log(`${id.padEnd(28)} YA ESCRITO — no se toca (usa --force para rehacerlo)`);
       continue;
     }
     const { plan, pendientes } = construir({

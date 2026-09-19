@@ -592,8 +592,8 @@
     "dossier": "docs/investigacion/nukak-maku.md"
   },
   "inventory": {
-    "status": "derived_pending_authoring",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -601,7 +601,9 @@
       "censo": "content/mitos-visuales/censo-2026-09-18/nukak-maku.json",
       "research": "content/mitos-visuales/research-2026-09-18/nukak-maku.json"
     },
-    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano."
+    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
+    "approved_by": "Propietario editorial del proyecto",
+    "approved_at": "2026-09-19"
   },
   "myths": {
     "creacion-nukak-maku": {
@@ -624,172 +626,145 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "agent_reviewed",
+        "review_status": "editorial_approved",
         "reviewed_at": "2026-09-19",
-        "note": null
+        "note": "Lo que separó esta lectura fue que el relato casi no describe cuerpos y en cambio describe una obra: la fuente de Embe da el emplazamiento del hueco —una playa junto a la laguna Kein inbe', antes de la confluencia— su profundidad de tres o cuatro metros y la resina resbalosa de la boca, mientras que de Machoroko sólo dice que es una mujer y que escarba con uñas de oso hormiguero; por eso la extracción cargó las fichas de lugar y de fenómeno y dejó las de figura apoyadas en dos datos, y por eso la pasada de estados sólo cobró los dos de Aukurɨbo, que son las únicas siluetas que el texto cambia."
       },
       "entity_refs": [
         {
           "entity_id": "machoroko",
-          "role": "magic_subject",
-          "note": "Conduce el acto central: oye el ruido de abajo, lo busca y abre el paso entre bak y yê. Su único rasgo físico documentado son las uñas de oso hormiguero con que escarba, y su hoja debe resolver esa ambigüedad sin convertirlo en un híbrido.",
-          "role_derivada": "por categoria"
+          "role": "primary",
+          "note": "Conduce el acto central: oye el ruido de abajo, lo busca y abre el paso entre bak y yê. Su único rasgo físico documentado son las uñas de oso hormiguero con que escarba, y su hoja debe resolver esa ambigüedad sin convertirlo en un híbrido."
         },
         {
           "entity_id": "aukuribo",
-          "role": "primary",
-          "note": "Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada.",
-          "role_derivada": "candidata, confirmar"
+          "role": "secondary",
+          "note": "Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada."
         },
         {
           "entity_id": "familias_nikak",
           "role": "secondary",
-          "note": "Protagonista colectivo real del relato: se ocultan, preparan la entrada, salen en pequeños grupos, descansan juntos, se separan y siembran. Una sola gramática de grupo, con canastos y semillas, que también cubre a los mayores que guían y a la Gente Tucán.",
-          "role_derivada": "por categoria"
+          "note": "Protagonista colectivo real del relato: se ocultan, preparan la entrada, salen en pequeños grupos, descansan juntos, se separan y siembran. Una sola gramática de grupo, con canastos y semillas, que también cubre a los mayores que guían y a la Gente Tucán."
         },
         {
           "entity_id": "bak",
           "role": "setting",
-          "note": "Escenario del primer acto y no intercambiable con la selva de arriba: el relato dice que allí se movían, sembraban y cuidaban semillas «de una manera semejante» a la vida posterior. Esa semejanza con diferencia es el encargo de diseño; parte de los que salieron regresan allí.",
-          "role_derivada": "por categoria"
+          "note": "Escenario del primer acto y no intercambiable con la selva de arriba: el relato dice que allí se movían, sembraban y cuidaban semillas «de una manera semejante» a la vida posterior. Esa semejanza con diferencia es el encargo de diseño; parte de los que salieron regresan allí."
         },
         {
           "entity_id": "paso_entre_bak_y_ye",
           "role": "magic_subject",
-          "note": "Regla visual de los mundos en capas y de su abertura: es el acto por el que se cuenta el relato y gobierna la composición horizontal aprobada. Debe incluir que la entrada se preparó para dificultar el paso a los perseguidores.",
-          "role_derivada": "por categoria"
+          "note": "Regla visual de los mundos en capas y de su abertura: es el acto por el que se cuenta el relato y gobierna la composición horizontal aprobada. Debe incluir que la entrada se preparó para dificultar el paso a los perseguidores."
         },
         {
           "entity_id": "ye_selva_y_confluencia",
           "role": "setting",
-          "note": "Modelo de entorno de este mundo, anclado en la confluencia Guaviare-Inírida donde descansan y se separan. La composición de dos ríos que divergen es el corazón del relato; caños, lagunas y sectores donde se detienen son variantes del mismo modelo. Coordenada aproximada, nunca el lugar exacto del nacimiento.",
-          "role_derivada": "por categoria"
+          "note": "Modelo de entorno de este mundo, anclado en la confluencia Guaviare-Inírida donde descansan y se separan. La composición de dos ríos que divergen es el corazón del relato; caños, lagunas y sectores donde se detienen son variantes del mismo modelo. Coordenada aproximada, nunca el lugar exacto del nacimiento."
         },
         {
           "entity_id": "gente_tucan",
           "role": "secondary",
-          "note": "Abre camino y orienta el avance, pero el relato no le da un solo rasgo propio. Se resuelve como marcador de grupo dentro de la gramática de las familias; darle lámina propia empujaría a inventar hombres-pájaro, que es exactamente lo que no se puede hacer.",
-          "role_derivada": "por categoria"
+          "note": "Abre camino y orienta el avance, pero el relato no le da un solo rasgo propio. Se resuelve como marcador de grupo dentro de la gramática de las familias; darle lámina propia empujaría a inventar hombres-pájaro, que es exactamente lo que no se puede hacer."
         },
         {
           "entity_id": "mayores_que_guian",
           "role": "secondary",
-          "note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual.",
-          "role_derivada": "por categoria"
+          "note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual."
         },
         {
           "entity_id": "unas_de_oso_hormiguero",
           "role": "plot_object",
-          "note": "El texto no aclara si son sus propias uñas o una herramienta, y el oso hormiguero nunca aparece como animal. Va en la hoja de Machoroko con la ambigüedad declarada, no como ficha de animal.",
-          "role_derivada": "por categoria"
+          "note": "El texto no aclara si son sus propias uñas o una herramienta, y el oso hormiguero nunca aparece como animal. Va en la hoja de Machoroko con la ambigüedad declarada, no como ficha de animal."
         },
         {
           "entity_id": "oruga",
           "role": "secondary",
-          "note": "Primera forma de Aukurɨbo, no una especie del relato.",
-          "role_derivada": "por categoria"
+          "note": "Primera forma de Aukurɨbo, no una especie del relato."
         },
         {
           "entity_id": "mariposa",
           "role": "secondary",
-          "note": "Segunda forma de Aukurɨbo, la que le permite regresar a bak con parte de su familia.",
-          "role_derivada": "por categoria"
+          "note": "Segunda forma de Aukurɨbo, la que le permite regresar a bak con parte de su familia."
         },
         {
           "entity_id": "canos_lagunas_y_sectores",
           "role": "setting",
-          "note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar.",
-          "role_derivada": "por categoria"
+          "note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar."
         },
         {
           "entity_id": "semilla_chontaduro",
           "role": "plot_object",
-          "note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales.",
-          "role_derivada": "por categoria"
+          "note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales."
         },
         {
           "entity_id": "semilla_tabaco",
           "role": "plot_object",
-          "note": "Nombrada en la lista de semillas cargadas en canastos.",
-          "role_derivada": "por categoria"
+          "note": "Nombrada en la lista de semillas cargadas en canastos."
         },
         {
           "entity_id": "semilla_cana",
           "role": "plot_object",
-          "note": "Nombrada en la lista de semillas cargadas en canastos.",
-          "role_derivada": "por categoria"
+          "note": "Nombrada en la lista de semillas cargadas en canastos."
         },
         {
           "entity_id": "totumo",
           "role": "plot_object",
-          "note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
-          "role_derivada": "por categoria"
+          "note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto."
         },
         {
           "entity_id": "platano",
           "role": "plot_object",
-          "note": "Nombrado en la lista de semillas cargadas en canastos.",
-          "role_derivada": "por categoria"
+          "note": "Nombrado en la lista de semillas cargadas en canastos."
         },
         {
           "entity_id": "yuca_dulce",
           "role": "plot_object",
-          "note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir.",
-          "role_derivada": "por categoria"
+          "note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir."
         },
         {
           "entity_id": "yuca_amarga",
           "role": "plot_object",
-          "note": "Distinta de la dulce en el propio texto.",
-          "role_derivada": "por categoria"
+          "note": "Distinta de la dulce en el propio texto."
         },
         {
           "entity_id": "maiz",
           "role": "plot_object",
-          "note": "Nombrado en la lista de semillas cargadas en canastos.",
-          "role_derivada": "por categoria"
+          "note": "Nombrado en la lista de semillas cargadas en canastos."
         },
         {
           "entity_id": "name",
           "role": "plot_object",
-          "note": "Cierra la lista de nueve cultivos traídos desde bak.",
-          "role_derivada": "por categoria"
+          "note": "Cierra la lista de nueve cultivos traídos desde bak."
         },
         {
           "entity_id": "canastos",
           "role": "plot_object",
-          "note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
-          "role_derivada": "por categoria"
+          "note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas."
         },
         {
           "entity_id": "perseguidores_de_bak",
           "role": "secondary",
-          "note": "Verificado contra el texto. Conducen la acción, pero eso no basta si no hay nada que dibujar: si un keyframe los necesita, se resuelven como amenaza fuera de campo.",
-          "role_derivada": "por categoria"
+          "note": "Verificado contra el texto. Conducen la acción, pero eso no basta si no hay nada que dibujar: si un keyframe los necesita, se resuelven como amenaza fuera de campo."
         },
         {
           "entity_id": "idn_kamni_y_el_rio_de_leche",
           "role": "magic_subject",
-          "note": "Es la trampa central de esta comunidad, y es exactamente la falta de mezclar iconografía de un pueblo en otro. Las dos imágenes heredadas ilustraban esta versión equivocada y fueron reemplazadas.",
-          "role_derivada": "por categoria"
+          "note": "Es la trampa central de esta comunidad, y es exactamente la falta de mezclar iconografía de un pueblo en otro. Las dos imágenes heredadas ilustraban esta versión equivocada y fueron reemplazadas."
         },
         {
           "entity_id": "mauro",
           "role": "magic_subject",
-          "note": "Séptima pasada. Sirve para separar Nɨkak de Kakua, no para producir imagen.",
-          "role_derivada": "por categoria"
+          "note": "Séptima pasada. Sirve para separar Nɨkak de Kakua, no para producir imagen."
         },
         {
           "entity_id": "otros_pobladores_y_la_violencia_del_contacto",
           "role": "secondary",
-          "note": "El cierre del mito es memoria de desplazamiento contemporáneo (contacto oficial 1988, epidemias). Se narra, no se ilustra.",
-          "role_derivada": "por categoria"
+          "note": "El cierre del mito es memoria de desplazamiento contemporáneo (contacto oficial 1988, epidemias). Se narra, no se ilustra."
         },
         {
           "entity_id": "cantos_formulas_y_procedimientos_chamanicos",
           "role": "magic_subject",
-          "note": "No aparecen en el relato; los registro para que el límite quede escrito antes de diseñar y no después.",
-          "role_derivada": "por categoria"
+          "note": "No aparecen en el relato; los registro para que el límite quede escrito antes de diseñar y no después."
         }
       ]
     }
@@ -806,8 +781,12 @@
       "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "machoroko__identity_sheet"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "creacion-nukak-maku"
@@ -845,7 +824,40 @@
         }
       ],
       "census_note": "Conduce el acto central: oye el ruido de abajo, lo busca y abre el paso entre bak y yê. Su único rasgo físico documentado son las uñas de oso hormiguero con que escarba, y su hoja debe resolver esa ambigüedad sin convertirlo en un híbrido.",
-      "design": null,
+      "design": {
+        "silhouette": "Mujer sola, de rodillas sobre la arena mojada de una playa de río, con el torso girado hacia un hoyo que todavía no atraviesa nada y los dos brazos hundidos hasta el codo: las manos rematan en uñas largas y curvas de oso palmero y son lo único de ella que no es humano. Es la única figura de esta biblia que trabaja el suelo con las manos y la única que aparece sin canasto.",
+        "materials": [
+          "arena y barro de playa de río amontonados en una media luna alrededor del hoyo, con la veta húmeda más oscura que la seca",
+          "uñas de oso palmero, largas, curvas y de un solo tono córneo, recortadas como piezas aparte y superpuestas a la mano",
+          "achiote rojo en la cara, plano y sin ningún diseño"
+        ],
+        "palette": "Todo el tono de la ficha lo pone el suelo: arena clara arriba, barro oscuro en lo removido, y sobre eso el único rojo del corpus en la cara. Las uñas se separan de la mano por valor, no por color, para que no se lean como guante ni como herramienta atada.",
+        "scale": "Figura adulta de cuerpo entero a escala humana, medida contra el hoyo: el hueco terminado tiene tres o cuatro metros de profundidad, de modo que la lámina de identidad la muestra en el comienzo del trabajo, cuando el hoyo todavía le llega a la rodilla, y la escala del pozo acabado se resuelve en la ficha del paso.",
+        "continuity": [
+          "las uñas largas y curvas en las dos manos, siempre visibles y siempre del mismo tono córneo",
+          "es mujer y se lee como mujer adulta en todas las apariciones, sin marca de vejez",
+          "cabeza y cejas rapadas, plano curvo continuo sin costura",
+          "no lleva canasto en ninguna lámina: no viene de bak",
+          "el rojo de la cara es una mancha plana sin dibujo, idéntica en todas las láminas"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "Machoroko es una mujer: la fuente lo dice sin ambigüedad —«Machoroko, una mujer que estaba en yê ‘nuestro mundo', oyó esa algarabía»— y el canon había perdido el dato (Mahecha 2024, narración de Embe).",
+          "Está en yê, el mundo de arriba, y llega al hueco desde este lado: no sale de bak con los demás.",
+          "Escarba con uñas de oso hormiguero; el texto no aclara si son suyas o una herramienta y el oso hormiguero nunca aparece como animal en el relato, así que la ambigüedad se declara y no se resuelve a favor del híbrido.",
+          "Oso hormiguero en lengua Nɨkak es ʔub o ~peudide y corresponde a Myrmecophaga tridactyla, el oso palmero: ésa es la forma de uña que se usa, y sólo la uña.",
+          "Cava en una playa de río junto a la laguna Kein inbe', que está antes de la confluencia del Guaviare y el Inírida, hasta tres o cuatro metros de profundidad.",
+          "El rojo del achiote en la cara y la cabeza rapada están documentados para el cuerpo Nɨkak fuera del relato —«ellos necesitan la pintura para reconocer la gente», y los mayores señalan que «los nükak ya no se están cortando el pelo»—, y por eso son existencia documentada y nunca diseño."
+        ],
+        "editorial": [
+          "Su cuerpo, su edad y su estatura no están descritos en ninguna fuente: se resuelve como mujer adulta sin marca de vejez, y la decisión es reversible.",
+          "El número de uñas por mano se fija en tres por el nombre de la especie, Myrmecophaga tridactyla; la fuente no cuenta uñas.",
+          "Se la dibuja de rodillas y no de pie: el texto dice que escarbó, no en qué postura. Es la postura que hace legible el trabajo del suelo sin volverla una criatura que excava.",
+          "La cabeza rapada y el rojo de la cara vienen de 1988 y después, no del relato: se aplican como forma genérica y se retiran si una autoridad Nɨkak lo pide.",
+          "No se le pone ningún atuendo ni adorno: el relato no le da ninguno y la biblia no inventa aretes concretos, que son piezas reales."
+        ],
+        "states_to_model": []
+      },
       "states_declared": []
     },
     "aukuribo": {
@@ -854,14 +866,21 @@
       "description": "Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada.",
       "aliases": [],
       "states": [
+        "canonico",
         "oruga",
         "mariposa"
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "aukuribo__identity_sheet",
+        "aukuribo__state_sheet"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "creacion-nukak-maku"
@@ -899,7 +918,42 @@
         }
       ],
       "census_note": "Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada.",
-      "design": null,
+      "design": {
+        "silhouette": "Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
+        "materials": [
+          "hoja de maíz seca ardiendo con llama baja, mucho humo enrollado y casi ninguna brasa",
+          "cuerpo de pocos planos grandes de papel, con la curva del encogimiento resuelta en un solo canto",
+          "para el estado oruga, un cuerpo segmentado de pocas piezas plenas y anilladas, sin pelo pieza por pieza",
+          "para el estado mariposa, dos alas de una sola pieza plana cada una, con el borde recortado en dientes"
+        ],
+        "palette": "El único punto cálido del corpus está en esta ficha y es el fogón: la llama y el humo se leen contra un cuerpo de tono tierra apagado. Ni la oruga ni la mariposa llevan color inventado: se resuelven en la misma familia tierra del canasto y la semilla, para que el cambio se vea en la forma y no en el tono.",
+        "scale": "Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
+        "continuity": [
+          "es el único viejo de la biblia y se lee como viejo en las tres apariciones",
+          "el fogón de hoja de maíz aparece siempre con él y nunca con nadie más: es la única llama del corpus",
+          "la mariposa conserva el tono tierra de la oruga, para que se lea como la misma criatura y no como dos animales",
+          "en ninguna de las tres láminas camina: está sentado, arrastrándose o volando"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "«El primero que salió por el hueco fue Aukurɨbo [gente de árbol], un viejo que era un jefe verdadero de los Nɨkak»: es la única figura del corpus con edad declarada y con rango declarado.",
+          "Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
+          "Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
+          "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
+          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura."
+        ],
+        "editorial": [
+          "La oruga y la mariposa no tienen especie en ninguna fuente: se resuelven por la función —la forma que ya no puede caminar y la forma que puede volver abajo— y no por una especie amazónica elegida, que sería inventarla.",
+          "La vejez se marca por postura y por proporción, no por arrugas ni por pelo blanco: el rostro es un óvalo plano de un solo tono y no admite modelado.",
+          "El fogón se dibuja delante de él y no debajo: el texto no dice dónde estaba.",
+          "El achiote de la cara y la cabeza rapada se le aplican por la misma regla que al colectivo, como existencia documentada fuera del relato y nunca como diseño; son reversibles.",
+          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal."
+        ],
+        "states_to_model": [
+          "oruga",
+          "mariposa"
+        ]
+      },
       "states_declared": [
         "oruga",
         "mariposa"
@@ -916,8 +970,12 @@
       "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [
+        "familias_nikak__group_grammar"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "creacion-nukak-maku"
@@ -955,7 +1013,44 @@
         }
       ],
       "census_note": "Protagonista colectivo real del relato: se ocultan, preparan la entrada, salen en pequeños grupos, descansan juntos, se separan y siembran. Una sola gramática de grupo, con canastos y semillas, que también cubre a los mayores que guían y a la Gente Tucán.",
-      "design": null,
+      "design": {
+        "silhouette": "Grupos pequeños que caminan en fila y separados entre sí, cada persona con un canasto grande de bejuco a la espalda sostenido por la frente y lleno hasta la boca de semillas: el grupo se lee por el peso que carga y por los huecos que deja entre un grupo y otro, nunca como una multitud compacta.",
+        "materials": [
+          "canasto grande de bejuco yaré, tiras entrecruzadas reales de papel, de carga y no de adorno, uno por persona adulta",
+          "las nueve semillas propias como piezas pequeñas y plenas de un solo tono, distinguibles entre sí: chontaduro, tabaco, caña, muji —el totumo grande—, plátano, yuca dulce, yuca amarga, maíz y mamo —el ñame—",
+          "yuca dulce y yuca amarga con dos siluetas de raíz distintas dentro del mismo canasto",
+          "achiote rojo plano en la cara y cabeza y cejas rapadas como un solo plano curvo"
+        ],
+        "palette": "La hoja entera se sostiene en bejuco y semilla: tierra media para los canastos, tonos plenos y separados para las nueve semillas, y el rojo de la cara como único acento. Ninguna ropa aporta color, porque no hay ropa que el relato nombre.",
+        "scale": "Gramática de grupo a cuerpo entero: tres a cinco personas por grupo y dos o tres grupos en el encuadre, con aire real entre ellos. El canasto ocupa del hombro a la cadera y las semillas se ven por la boca abierta del canasto; ninguna figura llega al primer plano lo bastante como para pedir un rostro individual.",
+        "continuity": [
+          "todos los adultos llevan canasto y nadie lleva otra cosa: ni canoa, ni remo, ni machete, ni hacha, ni escopeta",
+          "van a pie en todas las láminas, también cuando el agua está en el cuadro",
+          "los grupos se leen como grupos separados con nombre propio, no como una masa",
+          "cabeza y cejas rapadas y el rojo plano en la cara, iguales en todas las figuras y sin ningún diseño",
+          "las nueve semillas son siempre las mismas nueve y la yuca dulce nunca se confunde con la amarga"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "«Ellos ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y es la primera línea de esta ficha.",
+          "Salieron «con muchos canastos grandes hechos con el propio bejuco yaré»; existe un segundo canasto, tejido de hoja de palma de milpeso en el sitio de la cacería, que no es el de este relato.",
+          "Las nueve semillas están listadas por el narrador —chontaduro, tabaco, caña, muji ‘totumo grande', plátano, yuca dulce y amarga, maíz y mamo ‘ñame'— y son propias, «no eran de los kawéni'».",
+          "Se desplazan a pie: «subieron caminando en un solo grupo» y «desplazándose a pie»; son un pueblo interfluvial y la canoa aparece una sola vez en el expediente, y es un juguete de balso de los niños.",
+          "Se separan por decisión y no por desgracia: «Nosotros mejor nos quedamos acá, dizque dijeron así. Se enamoraron de ese cañito».",
+          "Los grupos tienen nombre —Wayari muno, Mipa muno, Taka yudn muno, Meu muno, Juu o Dɨi muno, Koro' a muno— y los mayores que guían tienen nombre propio y parentesco vivo: son personas con nombre, no una multitud.",
+          "La Gente Tucán, Wɨkɨ i mena, son los Tsáse, un pueblo emparentado sin un solo rasgo descrito: entran como marcador de grupo dentro de esta gramática y jamás como hombres-pájaro.",
+          "La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo."
+        ],
+        "editorial": [
+          "No se localizó ninguna imagen ni descripción de un canasto de bejuco yaré Nɨkak: la trama, la boca y el modo de cargarlo son decisión reversible, tomada como forma genérica de canasto de carga con banda de frente.",
+          "El número de personas por grupo y el número de grupos en el encuadre son decisión de composición: la fuente dice «pequeños grupos» y no da cifra.",
+          "No se les dibuja ningún atuendo, adorno ni arete concreto: los aretes están documentados como lo que hace a un Nɨkak verdadero, pero ninguna pieza real se reproduce.",
+          "La edad y el sexo de las figuras se reparten como grupo doméstico —hombres, mujeres y niños— porque el relato habla de familias; ninguna figura individual está descrita.",
+          "El baile baap se menciona en la fuente y aquí sólo autoriza componer el descanso y la reunión: no se reconstruye la coreografía, ni el atuendo, ni los instrumentos.",
+          "La forma de cada semilla se resuelve por la especie botánica común y no por un ejemplar documentado Nɨkak, que no existe en el expediente."
+        ],
+        "states_to_model": []
+      },
       "states_declared": []
     },
     "bak": {
@@ -969,8 +1064,12 @@
       "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "model_refs": [
+        "bak__spatial_model"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "creacion-nukak-maku"
@@ -1008,7 +1107,41 @@
         }
       ],
       "census_note": "Escenario del primer acto y no intercambiable con la selva de arriba: el relato dice que allí se movían, sembraban y cuidaban semillas «de una manera semejante» a la vida posterior. Esa semejanza con diferencia es el encargo de diseño; parte de los que salieron regresan allí.",
-      "design": null,
+      "design": {
+        "silhouette": "Otro bosque, no una caverna: suelo sembrado en claros pequeños, con la misma luz alta y difusa que el mundo de arriba, y en un extremo un rincón entre raíces donde caben unos pocos cuerpos agachados. Lo que lo distingue de yê no es la oscuridad, es que el cielo de este bosque es una tapa de tierra y que arriba, en un solo punto, hay un agujero de claridad.",
+        "materials": [
+          "techo de tierra y raíz visto desde abajo, resuelto como capas de papel granulado que cierran el cuadro por arriba",
+          "huertos pequeños en claros, con semilla sembrada y plantas jóvenes",
+          "rincón de refugio entre raíces gruesas, sin muro, sin puerta y sin techo construido",
+          "la boca del hueco vista desde abajo como el único plano claro del cuadro"
+        ],
+        "palette": "Bak comparte exactamente la paleta de yê —verde apagado de interfluvio, tierra, bejuco y semilla— y ésa es la afirmación de la ficha: la diferencia entre los dos mundos no es de tono ni de luz. El único contraste es la columna de claridad que baja por el hueco.",
+        "scale": "Modelo de lugar con figura humana de referencia: el rincón admite tres o cuatro cuerpos agachados y no más, y la boca del hueco se lee a tres o cuatro metros por encima de las cabezas. El encuadre llega a los cuatro límites y el techo de tierra cierra el cuadro por arriba, que es lo que impide leerlo como selva de superficie.",
+        "continuity": [
+          "misma luz y misma paleta que yê: nunca se oscurece para significar inframundo",
+          "el techo de tierra cierra siempre el cuadro por arriba, y es lo único que lo distingue de la selva de arriba",
+          "el rincón es un refugio entre raíces, jamás una casa, una maloca ni un campamento",
+          "hay huertos y semillas en todas las láminas de bak: allí ya se sembraba",
+          "los perseguidores no aparecen nunca, ni de espaldas, ni en sombra"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "Bak no es un inframundo oscuro: allí se vivía «con una forma de vida similar a la contemporánea», con nomadismo y horticultura, de modo que se dibuja como otro bosque habitable con huertos y semillas.",
+          "«Abajo del hueco había un rincón donde los abuelos se escondían para protegerse. Ellos iban para ese rincón, se escondían y regresaban»: es lo único construido del mundo de abajo, y es un refugio y no una casa.",
+          "Salir de bak no fue ser creado: los Nɨkak ya existían, ya sembraban y ya tenían familias y jefes. La imagen que el corpus autoriza es una mudanza con canastos, no una cosmogonía.",
+          "La diferencia con yê es que allí los perseguían: los kawéni' yore están descritos en la fuente —cara pintada, sin ropa, sin escopetas, con flechas— y aun así no se ilustran, porque kawéni' es la palabra Nɨkak para los que no son Nɨkak y este proyecto no dibuja a un pueblo vecino como caníbal.",
+          "La boca del hueco es el único punto por donde la luz de arriba baja hacia bak, y se lee como columna de claridad sin volumetría.",
+          "Parte de los que salieron regresan a bak: Aukurɨbo vuelve en forma de mariposa con parte de su familia."
+        ],
+        "editorial": [
+          "El techo de tierra como cierre superior del encuadre es una decisión de composición reversible: la fuente dice que bak es el mundo de abajo, no describe su cielo.",
+          "La forma del rincón —raíces gruesas, sin muro y sin techo construido— es editorial: la fuente sólo dice «un rincón».",
+          "El tamaño y la disposición de los huertos son decisión de composición: la fuente dice horticultura, no da extensión ni trazado.",
+          "El cierre del relato —los kawéni', las escopetas, el desplazamiento del siglo XX— se narra y no se dibuja en ninguna lámina de esta ficha ni de ninguna otra.",
+          "Mahecha y Franky 2013, que era la referencia con la descripción de los tres mundos, no se pudo leer: esta ficha descansa sólo en la narración de Embe y es, por eso, la más revisable del corpus junto con la de Machoroko."
+        ],
+        "states_to_model": []
+      },
       "states_declared": []
     },
     "paso_entre_bak_y_ye": {
@@ -1022,8 +1155,12 @@
       "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
+      "model_requirements": [
+        "phenomenon_rule"
+      ],
+      "model_refs": [
+        "paso_entre_bak_y_ye__phenomenon_rule"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "creacion-nukak-maku"
@@ -1061,7 +1198,41 @@
         }
       ],
       "census_note": "Regla visual de los mundos en capas y de su abertura: es el acto por el que se cuenta el relato y gobierna la composición horizontal aprobada. Debe incluir que la entrada se preparó para dificultar el paso a los perseguidores.",
-      "design": null,
+      "design": {
+        "silhouette": "Un pozo abierto a mano en una playa de río, con el brocal de barro untado y brillante de resina y la pared del pozo bajando tres o cuatro metros hasta abrirse en otro bosque: la regla es que los dos mundos comparten la misma luz y que el hueco es la única costura entre ellos, un tubo de claridad que atraviesa la tierra.",
+        "materials": [
+          "arena y barro de playa amontonados alrededor de la boca, con la costra seca por fuera y la veta húmeda por dentro",
+          "resina resbalosa untada en la boca del hueco, enrollada en quilling donde chorrea y brillante sólo ahí",
+          "pared de tierra excavada, en capas de papel granulado que marcan la profundidad por escalones y no por degradado",
+          "columna de claridad que baja por el pozo, resuelta como plano de papel claro y nunca como rayo volumétrico"
+        ],
+        "palette": "Dos mundos con la misma paleta y una sola diferencia de valor: el interior del pozo es el único lugar del corpus donde la arena clara y el barro oscuro se tocan de canto. La resina no lleva color propio: se lee por el brillo, que es el único brillo autorizado en una biblia enteramente mate.",
+        "scale": "La regla se muestra en fases y con figura humana de referencia en cada una: la playa con el hoyo empezado a la rodilla, el pozo terminado de tres o cuatro metros con una persona de pie en el fondo, y la boca untada vista desde arriba. La proporción entre el pozo y el cuerpo es el dato, y por eso ninguna fase se compone sin cuerpo.",
+        "continuity": [
+          "el hueco está en una playa junto a la laguna Kein inbe', antes de la confluencia, y nunca en la confluencia: son dos sitios y dos láminas",
+          "tres o cuatro metros de profundidad, siempre medidos contra un cuerpo humano",
+          "la boca siempre untada y brillante, y ése es el único brillo del corpus",
+          "bak y yê conservan la misma luz a los dos lados del pozo",
+          "la entrada se lee como defensa y nunca como trampa mortal: nadie cae, nadie se hiere"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "Corrección al censo, que anclaba el hueco «en la confluencia»: la fuente lo sitúa en una playa por el lado de Kein inbe', «una laguna cercana a la unión de los ríos Wayari ‘Guaviare' y Mipa ‘Inírida'», y Mahecha la ubica antes de la confluencia. El hueco y la confluencia son dos sitios distintos y dos láminas distintas.",
+          "«Luego de cavar tres o cuatro metros de profundidad, abrió un hueco que comunicó a bak con yê»: la escala existe y está dicha en metros.",
+          "«En la entrada del hueco, los Nɨkak echaron una resina resbalosa para que los kawéni' yore se rodaran y no pudieran subir y salir. Era una defensa para que no los persiguieran tanto.» El canon decía sólo «prepararon la entrada»; es resina y es dibujable.",
+          "Quien lo abre es Machoroko, una mujer que estaba en yê, y lo hace con uñas de oso hormiguero.",
+          "La boca del hueco es el único punto de todo el corpus donde la luz de arriba entra hacia abajo.",
+          "Los mundos son dos y están en capas —bak abajo, yê arriba—, y el relato no da un tercero dibujable."
+        ],
+        "editorial": [
+          "El brocal de barro de playa amontonado alrededor de la boca es una propuesta del dossier, no un dato: la fuente dice que se untó la entrada, no que hubiera brocal. Reversible.",
+          "El número de fases de la regla —hoyo empezado, pozo terminado, boca untada— es decisión editorial de legibilidad: la fuente narra una secuencia, no una serie de vistas.",
+          "La pared del pozo se resuelve en escalones de capa y no en degradado porque la técnica es de papel; no hay ninguna descripción de cómo era la pared.",
+          "Se decide no dibujar a nadie subiendo ni bajando por el pozo en la lámina de regla: las figuras que lo cruzan son asunto de la gramática de grupo, no de esta ficha.",
+          "El brillo de la resina es la única excepción a la regla de que todo el material es mate; se declara aquí para que no se extienda a ninguna otra lámina."
+        ],
+        "states_to_model": []
+      },
       "states_declared": []
     },
     "ye_selva_y_confluencia": {
@@ -1075,8 +1246,12 @@
       "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
+      "model_requirements": [
+        "environment_model"
+      ],
+      "model_refs": [
+        "ye_selva_y_confluencia__environment_model"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "creacion-nukak-maku"
@@ -1114,7 +1289,41 @@
         }
       ],
       "census_note": "Modelo de entorno de este mundo, anclado en la confluencia Guaviare-Inírida donde descansan y se separan. La composición de dos ríos que divergen es el corazón del relato; caños, lagunas y sectores donde se detienen son variantes del mismo modelo. Coordenada aproximada, nunca el lugar exacto del nacimiento.",
-      "design": null,
+      "design": {
+        "silhouette": "Dos ríos que se juntan y vuelven a abrirse vistos desde la orilla y a la altura de quien camina, con la selva de tierra firme del interfluvio cerrando las dos márgenes y una lengua de playa en el vértice: el mundo de arriba se reconoce porque el agua se bifurca y porque no hay una sola embarcación en ella.",
+        "materials": [
+          "agua de dos ríos con corriente visible que divergen, en planos translúcidos superpuestos y nunca azules",
+          "playa de arena clara en el vértice, y a un lado el espejo quieto de una laguna sin corriente",
+          "selva de tierra firme de interfluvio: hoja de palma y hoja ancha de sotobosque en capas escalonadas",
+          "caños menores y sectores de orilla como variantes del mismo modelo, sin rótulo y sin perfil reconocible"
+        ],
+        "palette": "Verde apagado de interfluvio arriba, pardo de agua abajo, arena clara en el único punto alto de valor. Es la misma paleta de bak, y ésa es la afirmación: los dos mundos no se distinguen por el color.",
+        "scale": "Entorno hasta los cuatro límites, con la cámara a la altura de quien camina por la orilla y no a vista de pájaro: la divergencia de los dos cauces tiene que leerse desde el suelo, porque una vista aérea la convertiría en mapa y esta biblia no da lugares localizables. Grupos humanos pequeños en la orilla dan la escala.",
+        "continuity": [
+          "dos cauces que divergen, siempre, y siempre vistos desde la orilla",
+          "ni una canoa, ni un remo, ni una embarcación en ninguna lámina",
+          "la laguna quieta y la playa del hueco son otro sitio y no se componen en el mismo cuadro que la confluencia",
+          "ningún perfil de río, laguna o caño reconocible, ningún rótulo y ningún mapa",
+          "misma luz alta y difusa de interior de bosque húmedo que en bak, sin disco solar"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "El nacimiento Nɨkak se ubica debajo de la confluencia del Guaviare y el Inírida, antes de desembocar en el Orinoco; el Kakua, al noreste, en el Isana o el Aiarí. Son dos geografías separadas por cientos de kilómetros y esta lámina es la del bajo Guaviare.",
+          "En la confluencia «descansaron y bailaron un baile baap»: hubo descanso y reunión, y allí se separaron los grupos.",
+          "La laguna del hueco y la confluencia son dos sitios distintos, y el censo los ancló en uno.",
+          "Los Nɨkak son interfluviales y se desplazan a pie: ninguna lámina de esta biblia lleva canoa, remo ni embarcación.",
+          "Los caños, lagunas y sectores donde se detienen recibieron nombre —Kein inbe', Joo'ni inbe', Ñupe inbe', Wana' a muj— y existen en la fuente, pero el territorio está bajo presión y una lámina no puede ser una guía: no se rotulan, no se mapean y no se dibujan con perfil reconocible.",
+          "La luz es de interior de bosque húmedo, alta y difusa, sin disco solar y sin rayos volumétricos."
+        ],
+        "editorial": [
+          "El ángulo desde la orilla y a la altura del cuerpo es decisión editorial, tomada precisamente para cumplir la salvaguarda de la coordenada: la fuente no describe punto de vista.",
+          "La anchura relativa de los dos cauces y la forma de la lengua de playa son composición, no dato.",
+          "Las especies de palma y de hoja del sotobosque se resuelven como vegetación genérica de interfluvio: el relato no nombra una sola planta que no sea semilla de cultivo.",
+          "El descanso y la reunión se pueden componer, pero el baile baap no: ni coreografía, ni atuendo, ni instrumento. Si una autoridad Nɨkak autoriza insinuarlo, se añade; hoy no está.",
+          "La separación de los grupos se compone como deliberación —figuras vueltas unas hacia otras— y no como éxodo: nadie huyendo y nadie llorando."
+        ],
+        "states_to_model": []
+      },
       "states_declared": []
     },
     "gente_tucan": {
@@ -1375,8 +1584,8 @@
         }
       ],
       "census_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales.",
-      "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales. El censo la agrupaba en `hoja_semillas_nikak_1`, que no es una entidad del plan v3; la cobertura pasa a `familias_nikak`, cuya gramática de grupo se definió con canastos y semillas. Si el editor quiere recuperar la hoja de semillas como lámina propia, se separa sin tocar nada más."
     },
     "semilla_tabaco": {
       "name": "Semilla de tabaco",
@@ -1403,8 +1612,8 @@
         }
       ],
       "census_note": "Nombrada en la lista de semillas cargadas en canastos.",
-      "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias."
     },
     "semilla_cana": {
       "name": "Semilla de caña",
@@ -1431,8 +1640,8 @@
         }
       ],
       "census_note": "Nombrada en la lista de semillas cargadas en canastos.",
-      "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias."
     },
     "totumo": {
       "name": "Totumo",
@@ -1459,8 +1668,8 @@
         }
       ],
       "census_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
-      "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y con su nombre Nɨkak, muji, que es el totumo grande."
     },
     "platano": {
       "name": "Plátano",
@@ -1487,8 +1696,8 @@
         }
       ],
       "census_note": "Nombrado en la lista de semillas cargadas en canastos.",
-      "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_1`, que no existe como entidad v3: la carga la gramática de grupo de las familias."
     },
     "yuca_dulce": {
       "name": "Yuca dulce",
@@ -1515,8 +1724,8 @@
         }
       ],
       "census_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir.",
-      "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir."
+      "covered_by": "familias_nikak",
+      "coverage_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y tiene que leerse distinta de la amarga."
     },
     "yuca_amarga": {
       "name": "Yuca amarga",
@@ -1543,8 +1752,8 @@
         }
       ],
       "census_note": "Distinta de la dulce en el propio texto.",
-      "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Distinta de la dulce en el propio texto."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Distinta de la dulce en el propio texto. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y tiene que leerse distinta de la dulce."
     },
     "maiz": {
       "name": "Maíz",
@@ -1571,8 +1780,8 @@
         }
       ],
       "census_note": "Nombrado en la lista de semillas cargadas en canastos.",
-      "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, y su hoja seca es además el combustible del único fuego del corpus."
     },
     "name": {
       "name": "Ñame",
@@ -1599,8 +1808,8 @@
         }
       ],
       "census_note": "Cierra la lista de nueve cultivos traídos desde bak.",
-      "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Cierra la lista de nueve cultivos traídos desde bak."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Cierra la lista de nueve cultivos traídos desde bak. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3: la carga la gramática de grupo de las familias, con su nombre Nɨkak, mamo."
     },
     "canastos": {
       "name": "Canastos de carga",
@@ -1637,8 +1846,8 @@
         }
       ],
       "census_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
-      "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas."
+      "covered_by": "familias_nikak",
+      "coverage_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas. Antes en `hoja_semillas_nikak_2`, que no existe como entidad v3. Es la única manufactura del relato y va en la gramática de grupo, que es donde se ve cómo se carga y quién lo carga."
     },
     "perseguidores_de_bak": {
       "name": "Los seres que perseguían a los Nɨkak en bak",
@@ -1806,7 +2015,888 @@
       "exclusion_reason": "do_not_visualize: el canon declara que sólo resume material publicado y que no reproduce cantos, fórmulas, procedimientos chamánicos ni localizaciones operativas"
     }
   },
-  "models": {},
+  "models": {
+    "machoroko__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "machoroko"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Nɨkak y Kakua hablan lenguas estrechamente emparentadas pero sitúan su nacimiento en lugares distintos y nombran héroes distintos: Mauro es Nɨkak, Idn Kamni es Kakua. Es el deslinde que decide todo el corpus y va escrito en cada ficha, no en una nota al pie."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Idn Kamni, la saliva, la tierra y el Río de Leche —los raudales de Kat-tsa-pa, al noreste, en la región del Isana o el Aiarí— son Kakua y no entran a ninguna lámina, ni de fondo: es el error que este repositorio ya cometió una vez y que esta biblia existe para impedir que se repita."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Machoroko es una mujer. La fuente lo dice sin ambigüedad —«Machoroko, una mujer que estaba en yê ‘nuestro mundo', oyó esa algarabía»— y el canon perdió el dato: quien abre el paso entre los dos mundos es una mujer, y la ficha se rehace sobre eso."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "El hueco se cava en una playa de río junto a la laguna Kein inbe', que está antes de la confluencia del Guaviare y el Inírida, y tiene tres o cuatro metros de profundidad. El emplazamiento y la escala existen y el censo no los tenía."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Lo que un Nɨkak lleva está dicho por ellos mismos en una sola frase: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas», frente a las escopetas, machetes y hachas de los blancos y a las canoas y ornamentos de danza de los ribereños. Una sola línea fija el inventario de las manos y cierra las tres tentaciones del ilustrador."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "La pintura y los aretes son lo que hace a una persona Nɨkak y lo dicen ellos: «para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente». La pintura no es adorno, es reconocimiento, y va con el corte de pelo —cabeza y cejas rapadas— que los mayores señalan como práctica que se está perdiendo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer sola, de rodillas sobre la arena mojada de una playa de río, con el torso girado hacia un hoyo que todavía no atraviesa nada y los dos brazos hundidos hasta el codo: las manos rematan en uñas largas y curvas de oso palmero y son lo único de ella que no es humano. Es la única figura de esta biblia que trabaja el suelo con las manos y la única que aparece sin canasto.",
+        "materials": [
+          "arena y barro de playa de río amontonados en una media luna alrededor del hoyo, con la veta húmeda más oscura que la seca",
+          "uñas de oso palmero, largas, curvas y de un solo tono córneo, recortadas como piezas aparte y superpuestas a la mano",
+          "achiote rojo en la cara, plano y sin ningún diseño"
+        ],
+        "palette_logic": "Todo el tono de la ficha lo pone el suelo: arena clara arriba, barro oscuro en lo removido, y sobre eso el único rojo del corpus en la cara. Las uñas se separan de la mano por valor, no por color, para que no se lean como guante ni como herramienta atada.",
+        "scale": "Figura adulta de cuerpo entero a escala humana, medida contra el hoyo: el hueco terminado tiene tres o cuatro metros de profundidad, de modo que la lámina de identidad la muestra en el comienzo del trabajo, cuando el hoyo todavía le llega a la rodilla, y la escala del pozo acabado se resuelve en la ficha del paso.",
+        "continuity_markers": [
+          "las uñas largas y curvas en las dos manos, siempre visibles y siempre del mismo tono córneo",
+          "es mujer y se lee como mujer adulta en todas las apariciones, sin marca de vejez",
+          "cabeza y cejas rapadas, plano curvo continuo sin costura",
+          "no lleva canasto en ninguna lámina: no viene de bak",
+          "el rojo de la cara es una mancha plana sin dibujo, idéntica en todas las láminas"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "Machoroko es una mujer: la fuente lo dice sin ambigüedad —«Machoroko, una mujer que estaba en yê ‘nuestro mundo', oyó esa algarabía»— y el canon había perdido el dato (Mahecha 2024, narración de Embe).",
+          "Está en yê, el mundo de arriba, y llega al hueco desde este lado: no sale de bak con los demás.",
+          "Escarba con uñas de oso hormiguero; el texto no aclara si son suyas o una herramienta y el oso hormiguero nunca aparece como animal en el relato, así que la ambigüedad se declara y no se resuelve a favor del híbrido.",
+          "Oso hormiguero en lengua Nɨkak es ʔub o ~peudide y corresponde a Myrmecophaga tridactyla, el oso palmero: ésa es la forma de uña que se usa, y sólo la uña.",
+          "Cava en una playa de río junto a la laguna Kein inbe', que está antes de la confluencia del Guaviare y el Inírida, hasta tres o cuatro metros de profundidad.",
+          "El rojo del achiote en la cara y la cabeza rapada están documentados para el cuerpo Nɨkak fuera del relato —«ellos necesitan la pintura para reconocer la gente», y los mayores señalan que «los nükak ya no se están cortando el pelo»—, y por eso son existencia documentada y nunca diseño."
+        ],
+        "editorial_features": [
+          "Su cuerpo, su edad y su estatura no están descritos en ninguna fuente: se resuelve como mujer adulta sin marca de vejez, y la decisión es reversible.",
+          "El número de uñas por mano se fija en tres por el nombre de la especie, Myrmecophaga tridactyla; la fuente no cuenta uñas.",
+          "Se la dibuja de rodillas y no de pie: el texto dice que escarbó, no en qué postura. Es la postura que hace legible el trabajo del suelo sin volverla una criatura que excava.",
+          "La cabeza rapada y el rojo de la cara vienen de 1988 y después, no del relato: se aplican como forma genérica y se retiran si una autoridad Nɨkak lo pide.",
+          "No se le pone ningún atuendo ni adorno: el relato no le da ninguno y la biblia no inventa aretes concretos, que son piezas reales."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "identidad corporal completa y legible para Machoroko. Mujer sola, de rodillas sobre la arena mojada de una playa de río, con el torso girado hacia un hoyo que todavía no atraviesa nada y los dos brazos hundidos hasta el codo: las manos rematan en uñas largas y curvas de oso palmero y son lo único de ella que no es humano. Es la única figura de esta biblia que trabaja el suelo con las manos y la única que aparece sin canasto.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Figura adulta de cuerpo entero a escala humana, medida contra el hoyo: el hueco terminado tiene tres o cuatro metros de profundidad, de modo que la lámina de identidad la muestra en el comienzo del trabajo, cuando el hoyo todavía le llega a la rodilla, y la escala del pozo acabado se resuelve en la ficha del paso.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "bejuco yaré trenzado del canasto grande de carga, único objeto manufacturado del relato; arena y barro de playa de río, y la boca del hueco untada de resina; semilla entera y plena: chontaduro, tabaco, caña, muji, plátano, yuca dulce, yuca amarga, maíz y mamo; hoja de maíz seca del fogón, y humo; hoja de palma y hoja ancha del sotobosque en capas; agua de dos ríos que divergen, y el espejo quieto de una laguna; achiote rojo sobre la piel, sin ningún diseño; fibra de moriche de hamaca y brazalete, como forma genérica y nunca como pieza real; arena y barro de playa de río amontonados en una media luna alrededor del hoyo, con la veta húmeda más oscura que la seca; uñas de oso palmero, largas, curvas y de un solo tono córneo, recortadas como piezas aparte y superpuestas a la mano; achiote rojo en la cara, plano y sin ningún diseño",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "Mujer sola, de rodillas sobre la arena mojada de una playa de río, con el torso girado hacia un hoyo que todavía no atraviesa nada y los dos brazos hundidos hasta el codo: las manos rematan en uñas largas y curvas de oso palmero y son lo único de ella que no es humano. Es la única figura de esta biblia que trabaja el suelo con las manos y la única que aparece sin canasto.",
+          "mostrar: Conduce el acto central: oye el ruido de abajo, lo busca y abre el paso entre bak y yê. Su único rasgo físico documentado son las uñas de oso hormiguero con que escarba, y su hoja debe resolver esa ambigüedad sin convertirlo en un híbrido.",
+          "documentado: Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "documentado: Machoroko es una mujer: la fuente lo dice sin ambigüedad —«Machoroko, una mujer que estaba en yê ‘nuestro mundo', oyó esa algarabía»— y el canon había perdido el dato (Mahecha 2024, narración de Embe).",
+          "documentado: Está en yê, el mundo de arriba, y llega al hueco desde este lado: no sale de bak con los demás.",
+          "documentado: Escarba con uñas de oso hormiguero; el texto no aclara si son suyas o una herramienta y el oso hormiguero nunca aparece como animal en el relato, así que la ambigüedad se declara y no se resuelve a favor del híbrido.",
+          "documentado: Oso hormiguero en lengua Nɨkak es ʔub o ~peudide y corresponde a Myrmecophaga tridactyla, el oso palmero: ésa es la forma de uña que se usa, y sólo la uña.",
+          "documentado: Cava en una playa de río junto a la laguna Kein inbe', que está antes de la confluencia del Guaviare y el Inírida, hasta tres o cuatro metros de profundidad.",
+          "documentado: El rojo del achiote en la cara y la cabeza rapada están documentados para el cuerpo Nɨkak fuera del relato —«ellos necesitan la pintura para reconocer la gente», y los mayores señalan que «los nükak ya no se están cortando el pelo»—, y por eso son existencia documentada y nunca diseño.",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "aukuribo__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "aukuribo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Nɨkak y Kakua hablan lenguas estrechamente emparentadas pero sitúan su nacimiento en lugares distintos y nombran héroes distintos: Mauro es Nɨkak, Idn Kamni es Kakua. Es el deslinde que decide todo el corpus y va escrito en cada ficha, no en una nota al pie."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Lo que un Nɨkak lleva está dicho por ellos mismos en una sola frase: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas», frente a las escopetas, machetes y hachas de los blancos y a las canoas y ornamentos de danza de los ribereños. Una sola línea fija el inventario de las manos y cierra las tres tentaciones del ilustrador."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano, lo monstruoso o lo primitivo. Va como primera línea de la ficha del colectivo."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Aukurɨbo es «un viejo que era un jefe verdadero», se queda descansando cerca del hueco, siente frío y trata de calentarse en un fogón prendido con hojas de maíz; sin fuerza para caminar se transforma en oruga y luego en mariposa y vuelve a bak con parte de su familia. Una hoja de identidad y una de estados, y el fogón de hoja es la única llama del corpus."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "La pintura y los aretes son lo que hace a una persona Nɨkak y lo dicen ellos: «para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente». La pintura no es adorno, es reconocimiento, y va con el corte de pelo —cabeza y cejas rapadas— que los mayores señalan como práctica que se está perdiendo."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Hay dos tintes y no tienen el mismo estatuto: el achiote (Bixa orellana) y el eoro (Arrabidea chica) son sustancias constitutivas del cuerpo humano, pero el eoro es además sustancia de uso chamanístico y ritual entregada por los takueyi. Se usa la existencia del rojo en la cara y jamás un diseño concreto, y nunca un motivo de eoro."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
+        "materials": [
+          "hoja de maíz seca ardiendo con llama baja, mucho humo enrollado y casi ninguna brasa",
+          "cuerpo de pocos planos grandes de papel, con la curva del encogimiento resuelta en un solo canto",
+          "para el estado oruga, un cuerpo segmentado de pocas piezas plenas y anilladas, sin pelo pieza por pieza",
+          "para el estado mariposa, dos alas de una sola pieza plana cada una, con el borde recortado en dientes"
+        ],
+        "palette_logic": "El único punto cálido del corpus está en esta ficha y es el fogón: la llama y el humo se leen contra un cuerpo de tono tierra apagado. Ni la oruga ni la mariposa llevan color inventado: se resuelven en la misma familia tierra del canasto y la semilla, para que el cambio se vea en la forma y no en el tono.",
+        "scale": "Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
+        "continuity_markers": [
+          "es el único viejo de la biblia y se lee como viejo en las tres apariciones",
+          "el fogón de hoja de maíz aparece siempre con él y nunca con nadie más: es la única llama del corpus",
+          "la mariposa conserva el tono tierra de la oruga, para que se lea como la misma criatura y no como dos animales",
+          "en ninguna de las tres láminas camina: está sentado, arrastrándose o volando"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "«El primero que salió por el hueco fue Aukurɨbo [gente de árbol], un viejo que era un jefe verdadero de los Nɨkak»: es la única figura del corpus con edad declarada y con rango declarado.",
+          "Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
+          "Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
+          "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
+          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura."
+        ],
+        "editorial_features": [
+          "La oruga y la mariposa no tienen especie en ninguna fuente: se resuelven por la función —la forma que ya no puede caminar y la forma que puede volver abajo— y no por una especie amazónica elegida, que sería inventarla.",
+          "La vejez se marca por postura y por proporción, no por arrugas ni por pelo blanco: el rostro es un óvalo plano de un solo tono y no admite modelado.",
+          "El fogón se dibuja delante de él y no debajo: el texto no dice dónde estaba.",
+          "El achiote de la cara y la cabeza rapada se le aplican por la misma regla que al colectivo, como existencia documentada fuera del relato y nunca como diseño; son reversibles.",
+          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "identidad corporal completa y legible para Aukurɨbo, la Gente de Árbol. Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "bejuco yaré trenzado del canasto grande de carga, único objeto manufacturado del relato; arena y barro de playa de río, y la boca del hueco untada de resina; semilla entera y plena: chontaduro, tabaco, caña, muji, plátano, yuca dulce, yuca amarga, maíz y mamo; hoja de maíz seca del fogón, y humo; hoja de palma y hoja ancha del sotobosque en capas; agua de dos ríos que divergen, y el espejo quieto de una laguna; achiote rojo sobre la piel, sin ningún diseño; fibra de moriche de hamaca y brazalete, como forma genérica y nunca como pieza real; hoja de maíz seca ardiendo con llama baja, mucho humo enrollado y casi ninguna brasa; cuerpo de pocos planos grandes de papel, con la curva del encogimiento resuelta en un solo canto; para el estado oruga, un cuerpo segmentado de pocas piezas plenas y anilladas, sin pelo pieza por pieza; para el estado mariposa, dos alas de una sola pieza plana cada una, con el borde recortado en dientes",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
+          "mostrar: Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada.",
+          "documentado: Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "documentado: «El primero que salió por el hueco fue Aukurɨbo [gente de árbol], un viejo que era un jefe verdadero de los Nɨkak»: es la única figura del corpus con edad declarada y con rango declarado.",
+          "documentado: Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
+          "documentado: Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
+          "documentado: Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
+          "documentado: Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura.",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "aukuribo__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "aukuribo"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Nɨkak y Kakua hablan lenguas estrechamente emparentadas pero sitúan su nacimiento en lugares distintos y nombran héroes distintos: Mauro es Nɨkak, Idn Kamni es Kakua. Es el deslinde que decide todo el corpus y va escrito en cada ficha, no en una nota al pie."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Lo que un Nɨkak lleva está dicho por ellos mismos en una sola frase: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas», frente a las escopetas, machetes y hachas de los blancos y a las canoas y ornamentos de danza de los ribereños. Una sola línea fija el inventario de las manos y cierra las tres tentaciones del ilustrador."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano, lo monstruoso o lo primitivo. Va como primera línea de la ficha del colectivo."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Aukurɨbo es «un viejo que era un jefe verdadero», se queda descansando cerca del hueco, siente frío y trata de calentarse en un fogón prendido con hojas de maíz; sin fuerza para caminar se transforma en oruga y luego en mariposa y vuelve a bak con parte de su familia. Una hoja de identidad y una de estados, y el fogón de hoja es la única llama del corpus."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "La pintura y los aretes son lo que hace a una persona Nɨkak y lo dicen ellos: «para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente». La pintura no es adorno, es reconocimiento, y va con el corte de pelo —cabeza y cejas rapadas— que los mayores señalan como práctica que se está perdiendo."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Hay dos tintes y no tienen el mismo estatuto: el achiote (Bixa orellana) y el eoro (Arrabidea chica) son sustancias constitutivas del cuerpo humano, pero el eoro es además sustancia de uso chamanístico y ritual entregada por los takueyi. Se usa la existencia del rojo en la cara y jamás un diseño concreto, y nunca un motivo de eoro."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
+        "materials": [
+          "hoja de maíz seca ardiendo con llama baja, mucho humo enrollado y casi ninguna brasa",
+          "cuerpo de pocos planos grandes de papel, con la curva del encogimiento resuelta en un solo canto",
+          "para el estado oruga, un cuerpo segmentado de pocas piezas plenas y anilladas, sin pelo pieza por pieza",
+          "para el estado mariposa, dos alas de una sola pieza plana cada una, con el borde recortado en dientes"
+        ],
+        "palette_logic": "El único punto cálido del corpus está en esta ficha y es el fogón: la llama y el humo se leen contra un cuerpo de tono tierra apagado. Ni la oruga ni la mariposa llevan color inventado: se resuelven en la misma familia tierra del canasto y la semilla, para que el cambio se vea en la forma y no en el tono.",
+        "scale": "Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
+        "continuity_markers": [
+          "es el único viejo de la biblia y se lee como viejo en las tres apariciones",
+          "el fogón de hoja de maíz aparece siempre con él y nunca con nadie más: es la única llama del corpus",
+          "la mariposa conserva el tono tierra de la oruga, para que se lea como la misma criatura y no como dos animales",
+          "en ninguna de las tres láminas camina: está sentado, arrastrándose o volando"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "«El primero que salió por el hueco fue Aukurɨbo [gente de árbol], un viejo que era un jefe verdadero de los Nɨkak»: es la única figura del corpus con edad declarada y con rango declarado.",
+          "Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
+          "Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
+          "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
+          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura."
+        ],
+        "editorial_features": [
+          "La oruga y la mariposa no tienen especie en ninguna fuente: se resuelven por la función —la forma que ya no puede caminar y la forma que puede volver abajo— y no por una especie amazónica elegida, que sería inventarla.",
+          "La vejez se marca por postura y por proporción, no por arrugas ni por pelo blanco: el rostro es un óvalo plano de un solo tono y no admite modelado.",
+          "El fogón se dibuja delante de él y no debajo: el texto no dice dónde estaba.",
+          "El achiote de la cara y la cabeza rapada se le aplican por la misma regla que al colectivo, como existencia documentada fuera del relato y nunca como diseño; son reversibles.",
+          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - state_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "el cambio de estado sin perder la identidad para Aukurɨbo, la Gente de Árbol. Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "bejuco yaré trenzado del canasto grande de carga, único objeto manufacturado del relato; arena y barro de playa de río, y la boca del hueco untada de resina; semilla entera y plena: chontaduro, tabaco, caña, muji, plátano, yuca dulce, yuca amarga, maíz y mamo; hoja de maíz seca del fogón, y humo; hoja de palma y hoja ancha del sotobosque en capas; agua de dos ríos que divergen, y el espejo quieto de una laguna; achiote rojo sobre la piel, sin ningún diseño; fibra de moriche de hamaca y brazalete, como forma genérica y nunca como pieza real; hoja de maíz seca ardiendo con llama baja, mucho humo enrollado y casi ninguna brasa; cuerpo de pocos planos grandes de papel, con la curva del encogimiento resuelta en un solo canto; para el estado oruga, un cuerpo segmentado de pocas piezas plenas y anilladas, sin pelo pieza por pieza; para el estado mariposa, dos alas de una sola pieza plana cada una, con el borde recortado en dientes",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
+          "mostrar: Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada.",
+          "documentado: Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "documentado: «El primero que salió por el hueco fue Aukurɨbo [gente de árbol], un viejo que era un jefe verdadero de los Nɨkak»: es la única figura del corpus con edad declarada y con rango declarado.",
+          "documentado: Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
+          "documentado: Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
+          "documentado: Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
+          "documentado: Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura.",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "estado_oruga",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: oruga",
+          "aspect": "1:1",
+          "states": [
+            "oruga"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        },
+        {
+          "id": "estado_mariposa",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: mariposa",
+          "aspect": "1:1",
+          "states": [
+            "mariposa"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        }
+      ]
+    },
+    "familias_nikak__group_grammar": {
+      "purpose": "group_grammar",
+      "entity_refs": [
+        "familias_nikak"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Nɨkak y Kakua hablan lenguas estrechamente emparentadas pero sitúan su nacimiento en lugares distintos y nombran héroes distintos: Mauro es Nɨkak, Idn Kamni es Kakua. Es el deslinde que decide todo el corpus y va escrito en cada ficha, no en una nota al pie."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "En bak hay un rincón donde los abuelos se escondían y regresaban una y otra vez huyendo: es lo único construido del mundo de abajo y es un refugio, no una casa."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Lo que un Nɨkak lleva está dicho por ellos mismos en una sola frase: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas», frente a las escopetas, machetes y hachas de los blancos y a las canoas y ornamentos de danza de los ribereños. Una sola línea fija el inventario de las manos y cierra las tres tentaciones del ilustrador."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los Nɨkak se desplazan a pie: «subieron caminando en un solo grupo» y «desplazándose a pie» hasta el territorio actual; son un pueblo interfluvial y no ribereño; y en el Plan de Salvaguardia la canoa aparece una sola vez, como juguete de balso de los niños, junto al avión y la pistola de juguete. Ninguna lámina de esta biblia lleva canoa, remo ni embarcación."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los canastos del relato son «canastos grandes hechos con el propio bejuco yaré», y existe un segundo tipo que no es el del mito: el canasto tejido de hoja de palma de milpeso, hecho en el mismo sitio de la cacería. Son dos objetos distintos y la hoja de semillas lleva el primero."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Las nueve semillas traídas de bak son propias y no de los kawéni', y dos llevan nombre Nɨkak en la fuente: muji es el totumo y es grande, y mamo es el ñame. El relato distingue además la yuca dulce de la amarga, y las dos hojas de semillas deben mostrarlas distintas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Grupos pequeños que caminan en fila y separados entre sí, cada persona con un canasto grande de bejuco a la espalda sostenido por la frente y lleno hasta la boca de semillas: el grupo se lee por el peso que carga y por los huecos que deja entre un grupo y otro, nunca como una multitud compacta.",
+        "materials": [
+          "canasto grande de bejuco yaré, tiras entrecruzadas reales de papel, de carga y no de adorno, uno por persona adulta",
+          "las nueve semillas propias como piezas pequeñas y plenas de un solo tono, distinguibles entre sí: chontaduro, tabaco, caña, muji —el totumo grande—, plátano, yuca dulce, yuca amarga, maíz y mamo —el ñame—",
+          "yuca dulce y yuca amarga con dos siluetas de raíz distintas dentro del mismo canasto",
+          "achiote rojo plano en la cara y cabeza y cejas rapadas como un solo plano curvo"
+        ],
+        "palette_logic": "La hoja entera se sostiene en bejuco y semilla: tierra media para los canastos, tonos plenos y separados para las nueve semillas, y el rojo de la cara como único acento. Ninguna ropa aporta color, porque no hay ropa que el relato nombre.",
+        "scale": "Gramática de grupo a cuerpo entero: tres a cinco personas por grupo y dos o tres grupos en el encuadre, con aire real entre ellos. El canasto ocupa del hombro a la cadera y las semillas se ven por la boca abierta del canasto; ninguna figura llega al primer plano lo bastante como para pedir un rostro individual.",
+        "continuity_markers": [
+          "todos los adultos llevan canasto y nadie lleva otra cosa: ni canoa, ni remo, ni machete, ni hacha, ni escopeta",
+          "van a pie en todas las láminas, también cuando el agua está en el cuadro",
+          "los grupos se leen como grupos separados con nombre propio, no como una masa",
+          "cabeza y cejas rapadas y el rojo plano en la cara, iguales en todas las figuras y sin ningún diseño",
+          "las nueve semillas son siempre las mismas nueve y la yuca dulce nunca se confunde con la amarga"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "«Ellos ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y es la primera línea de esta ficha.",
+          "Salieron «con muchos canastos grandes hechos con el propio bejuco yaré»; existe un segundo canasto, tejido de hoja de palma de milpeso en el sitio de la cacería, que no es el de este relato.",
+          "Las nueve semillas están listadas por el narrador —chontaduro, tabaco, caña, muji ‘totumo grande', plátano, yuca dulce y amarga, maíz y mamo ‘ñame'— y son propias, «no eran de los kawéni'».",
+          "Se desplazan a pie: «subieron caminando en un solo grupo» y «desplazándose a pie»; son un pueblo interfluvial y la canoa aparece una sola vez en el expediente, y es un juguete de balso de los niños.",
+          "Se separan por decisión y no por desgracia: «Nosotros mejor nos quedamos acá, dizque dijeron así. Se enamoraron de ese cañito».",
+          "Los grupos tienen nombre —Wayari muno, Mipa muno, Taka yudn muno, Meu muno, Juu o Dɨi muno, Koro' a muno— y los mayores que guían tienen nombre propio y parentesco vivo: son personas con nombre, no una multitud.",
+          "La Gente Tucán, Wɨkɨ i mena, son los Tsáse, un pueblo emparentado sin un solo rasgo descrito: entran como marcador de grupo dentro de esta gramática y jamás como hombres-pájaro.",
+          "La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo."
+        ],
+        "editorial_features": [
+          "No se localizó ninguna imagen ni descripción de un canasto de bejuco yaré Nɨkak: la trama, la boca y el modo de cargarlo son decisión reversible, tomada como forma genérica de canasto de carga con banda de frente.",
+          "El número de personas por grupo y el número de grupos en el encuadre son decisión de composición: la fuente dice «pequeños grupos» y no da cifra.",
+          "No se les dibuja ningún atuendo, adorno ni arete concreto: los aretes están documentados como lo que hace a un Nɨkak verdadero, pero ninguna pieza real se reproduce.",
+          "La edad y el sexo de las figuras se reparten como grupo doméstico —hombres, mujeres y niños— porque el relato habla de familias; ninguna figura individual está descrita.",
+          "El baile baap se menciona en la fuente y aquí sólo autoriza componer el descanso y la reunión: no se reconstruye la coreografía, ni el atuendo, ni los instrumentos.",
+          "La forma de cada semilla se resuelve por la especie botánica común y no por un ejemplar documentado Nɨkak, que no existe en el expediente."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - group_grammar",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Familias y grupos Nɨkak en migración. Grupos pequeños que caminan en fila y separados entre sí, cada persona con un canasto grande de bejuco a la espalda sostenido por la frente y lleno hasta la boca de semillas: el grupo se lee por el peso que carga y por los huecos que deja entre un grupo y otro, nunca como una multitud compacta.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Gramática de grupo a cuerpo entero: tres a cinco personas por grupo y dos o tres grupos en el encuadre, con aire real entre ellos. El canasto ocupa del hombro a la cadera y las semillas se ven por la boca abierta del canasto; ninguna figura llega al primer plano lo bastante como para pedir un rostro individual.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "bejuco yaré trenzado del canasto grande de carga, único objeto manufacturado del relato; arena y barro de playa de río, y la boca del hueco untada de resina; semilla entera y plena: chontaduro, tabaco, caña, muji, plátano, yuca dulce, yuca amarga, maíz y mamo; hoja de maíz seca del fogón, y humo; hoja de palma y hoja ancha del sotobosque en capas; agua de dos ríos que divergen, y el espejo quieto de una laguna; achiote rojo sobre la piel, sin ningún diseño; fibra de moriche de hamaca y brazalete, como forma genérica y nunca como pieza real; canasto grande de bejuco yaré, tiras entrecruzadas reales de papel, de carga y no de adorno, uno por persona adulta; las nueve semillas propias como piezas pequeñas y plenas de un solo tono, distinguibles entre sí: chontaduro, tabaco, caña, muji —el totumo grande—, plátano, yuca dulce, yuca amarga, maíz y mamo —el ñame—; yuca dulce y yuca amarga con dos siluetas de raíz distintas dentro del mismo canasto; achiote rojo plano en la cara y cabeza y cejas rapadas como un solo plano curvo",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "Grupos pequeños que caminan en fila y separados entre sí, cada persona con un canasto grande de bejuco a la espalda sostenido por la frente y lleno hasta la boca de semillas: el grupo se lee por el peso que carga y por los huecos que deja entre un grupo y otro, nunca como una multitud compacta.",
+          "mostrar: Protagonista colectivo real del relato: se ocultan, preparan la entrada, salen en pequeños grupos, descansan juntos, se separan y siembran. Una sola gramática de grupo, con canastos y semillas, que también cubre a los mayores que guían y a la Gente Tucán.",
+          "documentado: Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "documentado: «Ellos ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y es la primera línea de esta ficha.",
+          "documentado: Salieron «con muchos canastos grandes hechos con el propio bejuco yaré»; existe un segundo canasto, tejido de hoja de palma de milpeso en el sitio de la cacería, que no es el de este relato.",
+          "documentado: Las nueve semillas están listadas por el narrador —chontaduro, tabaco, caña, muji ‘totumo grande', plátano, yuca dulce y amarga, maíz y mamo ‘ñame'— y son propias, «no eran de los kawéni'».",
+          "documentado: Se desplazan a pie: «subieron caminando en un solo grupo» y «desplazándose a pie»; son un pueblo interfluvial y la canoa aparece una sola vez en el expediente, y es un juguete de balso de los niños.",
+          "documentado: Se separan por decisión y no por desgracia: «Nosotros mejor nos quedamos acá, dizque dijeron así. Se enamoraron de ese cañito».",
+          "documentado: Los grupos tienen nombre —Wayari muno, Mipa muno, Taka yudn muno, Meu muno, Juu o Dɨi muno, Koro' a muno— y los mayores que guían tienen nombre propio y parentesco vivo: son personas con nombre, no una multitud.",
+          "documentado: La Gente Tucán, Wɨkɨ i mena, son los Tsáse, un pueblo emparentado sin un solo rasgo descrito: entran como marcador de grupo dentro de esta gramática y jamás como hombres-pájaro.",
+          "documentado: La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo.",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "group_arrangement",
+          "purpose": "gramatica del grupo: cuantos, como se ordenan, que los hace uno",
+          "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "bak__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "bak"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Nɨkak y Kakua hablan lenguas estrechamente emparentadas pero sitúan su nacimiento en lugares distintos y nombran héroes distintos: Mauro es Nɨkak, Idn Kamni es Kakua. Es el deslinde que decide todo el corpus y va escrito en cada ficha, no en una nota al pie."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "En bak hay un rincón donde los abuelos se escondían y regresaban una y otra vez huyendo: es lo único construido del mundo de abajo y es un refugio, no una casa."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Salir de bak no fue ser creado: los Nɨkak ya existían, ya sembraban y ya tenían familias y jefes, y cargaron sus semillas. La imagen que el corpus autoriza no es una cosmogonía sino una mudanza con canastos."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Bak no es un inframundo oscuro: allí se vivía «con una forma de vida similar a la contemporánea», con nomadismo y horticultura. Se dibuja como otro bosque habitable con huertos y semillas, y la diferencia con yê no es de luz sino de que allí los perseguían."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los kawéni' yore sí están descritos —«se pintaban la cara y no tenían ropa ni escopetas» y perseguían a los Nɨkak «con flechas para comérselos»—, de modo que la exclusión del censo era correcta pero estaba mal fundada: no se excluyen por falta de datos sino porque kawéni' es la palabra Nɨkak para los que no son Nɨkak, y este proyecto no dibuja a un pueblo vecino como caníbal. Amenaza fuera de campo."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "El corpus no nombra un solo color y su única fauna nombrada son semillas: lo que da es profundidad y apertura —bak abajo, yê arriba, un hueco entre los dos, una playa, una laguna, dos ríos que divergen—. La luz es de interior de bosque húmedo, alta y difusa, con dos únicas excepciones: la boca del hueco, por donde la luz de arriba entra hacia abajo, y el fogón de hojas de maíz."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Otro bosque, no una caverna: suelo sembrado en claros pequeños, con la misma luz alta y difusa que el mundo de arriba, y en un extremo un rincón entre raíces donde caben unos pocos cuerpos agachados. Lo que lo distingue de yê no es la oscuridad, es que el cielo de este bosque es una tapa de tierra y que arriba, en un solo punto, hay un agujero de claridad.",
+        "materials": [
+          "techo de tierra y raíz visto desde abajo, resuelto como capas de papel granulado que cierran el cuadro por arriba",
+          "huertos pequeños en claros, con semilla sembrada y plantas jóvenes",
+          "rincón de refugio entre raíces gruesas, sin muro, sin puerta y sin techo construido",
+          "la boca del hueco vista desde abajo como el único plano claro del cuadro"
+        ],
+        "palette_logic": "Bak comparte exactamente la paleta de yê —verde apagado de interfluvio, tierra, bejuco y semilla— y ésa es la afirmación de la ficha: la diferencia entre los dos mundos no es de tono ni de luz. El único contraste es la columna de claridad que baja por el hueco.",
+        "scale": "Modelo de lugar con figura humana de referencia: el rincón admite tres o cuatro cuerpos agachados y no más, y la boca del hueco se lee a tres o cuatro metros por encima de las cabezas. El encuadre llega a los cuatro límites y el techo de tierra cierra el cuadro por arriba, que es lo que impide leerlo como selva de superficie.",
+        "continuity_markers": [
+          "misma luz y misma paleta que yê: nunca se oscurece para significar inframundo",
+          "el techo de tierra cierra siempre el cuadro por arriba, y es lo único que lo distingue de la selva de arriba",
+          "el rincón es un refugio entre raíces, jamás una casa, una maloca ni un campamento",
+          "hay huertos y semillas en todas las láminas de bak: allí ya se sembraba",
+          "los perseguidores no aparecen nunca, ni de espaldas, ni en sombra"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "Bak no es un inframundo oscuro: allí se vivía «con una forma de vida similar a la contemporánea», con nomadismo y horticultura, de modo que se dibuja como otro bosque habitable con huertos y semillas.",
+          "«Abajo del hueco había un rincón donde los abuelos se escondían para protegerse. Ellos iban para ese rincón, se escondían y regresaban»: es lo único construido del mundo de abajo, y es un refugio y no una casa.",
+          "Salir de bak no fue ser creado: los Nɨkak ya existían, ya sembraban y ya tenían familias y jefes. La imagen que el corpus autoriza es una mudanza con canastos, no una cosmogonía.",
+          "La diferencia con yê es que allí los perseguían: los kawéni' yore están descritos en la fuente —cara pintada, sin ropa, sin escopetas, con flechas— y aun así no se ilustran, porque kawéni' es la palabra Nɨkak para los que no son Nɨkak y este proyecto no dibuja a un pueblo vecino como caníbal.",
+          "La boca del hueco es el único punto por donde la luz de arriba baja hacia bak, y se lee como columna de claridad sin volumetría.",
+          "Parte de los que salieron regresan a bak: Aukurɨbo vuelve en forma de mariposa con parte de su familia."
+        ],
+        "editorial_features": [
+          "El techo de tierra como cierre superior del encuadre es una decisión de composición reversible: la fuente dice que bak es el mundo de abajo, no describe su cielo.",
+          "La forma del rincón —raíces gruesas, sin muro y sin techo construido— es editorial: la fuente sólo dice «un rincón».",
+          "El tamaño y la disposición de los huertos son decisión de composición: la fuente dice horticultura, no da extensión ni trazado.",
+          "El cierre del relato —los kawéni', las escopetas, el desplazamiento del siglo XX— se narra y no se dibuja en ninguna lámina de esta ficha ni de ninguna otra.",
+          "Mahecha y Franky 2013, que era la referencia con la descripción de los tres mundos, no se pudo leer: esta ficha descansa sólo en la narración de Embe y es, por eso, la más revisable del corpus junto con la de Machoroko."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - spatial_model",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "planta, materiales y relacion con el cuerpo que la habita para Bak, el mundo de abajo. Otro bosque, no una caverna: suelo sembrado en claros pequeños, con la misma luz alta y difusa que el mundo de arriba, y en un extremo un rincón entre raíces donde caben unos pocos cuerpos agachados. Lo que lo distingue de yê no es la oscuridad, es que el cielo de este bosque es una tapa de tierra y que arriba, en un solo punto, hay un agujero de claridad.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Modelo de lugar con figura humana de referencia: el rincón admite tres o cuatro cuerpos agachados y no más, y la boca del hueco se lee a tres o cuatro metros por encima de las cabezas. El encuadre llega a los cuatro límites y el techo de tierra cierra el cuadro por arriba, que es lo que impide leerlo como selva de superficie.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "bejuco yaré trenzado del canasto grande de carga, único objeto manufacturado del relato; arena y barro de playa de río, y la boca del hueco untada de resina; semilla entera y plena: chontaduro, tabaco, caña, muji, plátano, yuca dulce, yuca amarga, maíz y mamo; hoja de maíz seca del fogón, y humo; hoja de palma y hoja ancha del sotobosque en capas; agua de dos ríos que divergen, y el espejo quieto de una laguna; achiote rojo sobre la piel, sin ningún diseño; fibra de moriche de hamaca y brazalete, como forma genérica y nunca como pieza real; techo de tierra y raíz visto desde abajo, resuelto como capas de papel granulado que cierran el cuadro por arriba; huertos pequeños en claros, con semilla sembrada y plantas jóvenes; rincón de refugio entre raíces gruesas, sin muro, sin puerta y sin techo construido; la boca del hueco vista desde abajo como el único plano claro del cuadro",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "Otro bosque, no una caverna: suelo sembrado en claros pequeños, con la misma luz alta y difusa que el mundo de arriba, y en un extremo un rincón entre raíces donde caben unos pocos cuerpos agachados. Lo que lo distingue de yê no es la oscuridad, es que el cielo de este bosque es una tapa de tierra y que arriba, en un solo punto, hay un agujero de claridad.",
+          "mostrar: Escenario del primer acto y no intercambiable con la selva de arriba: el relato dice que allí se movían, sembraban y cuidaban semillas «de una manera semejante» a la vida posterior. Esa semejanza con diferencia es el encargo de diseño; parte de los que salieron regresan allí.",
+          "documentado: Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "documentado: Bak no es un inframundo oscuro: allí se vivía «con una forma de vida similar a la contemporánea», con nomadismo y horticultura, de modo que se dibuja como otro bosque habitable con huertos y semillas.",
+          "documentado: «Abajo del hueco había un rincón donde los abuelos se escondían para protegerse. Ellos iban para ese rincón, se escondían y regresaban»: es lo único construido del mundo de abajo, y es un refugio y no una casa.",
+          "documentado: Salir de bak no fue ser creado: los Nɨkak ya existían, ya sembraban y ya tenían familias y jefes. La imagen que el corpus autoriza es una mudanza con canastos, no una cosmogonía.",
+          "documentado: La diferencia con yê es que allí los perseguían: los kawéni' yore están descritos en la fuente —cara pintada, sin ropa, sin escopetas, con flechas— y aun así no se ilustran, porque kawéni' es la palabra Nɨkak para los que no son Nɨkak y este proyecto no dibuja a un pueblo vecino como caníbal.",
+          "documentado: La boca del hueco es el único punto por donde la luz de arriba baja hacia bak, y se lee como columna de claridad sin volumetría.",
+          "documentado: Parte de los que salieron regresan a bak: Aukurɨbo vuelve en forma de mariposa con parte de su familia.",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_establishing",
+          "purpose": "planta, materiales y relacion con el cuerpo que la habita",
+          "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "paso_entre_bak_y_ye__phenomenon_rule": {
+      "purpose": "phenomenon_rule",
+      "entity_refs": [
+        "paso_entre_bak_y_ye"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Nɨkak y Kakua hablan lenguas estrechamente emparentadas pero sitúan su nacimiento en lugares distintos y nombran héroes distintos: Mauro es Nɨkak, Idn Kamni es Kakua. Es el deslinde que decide todo el corpus y va escrito en cada ficha, no en una nota al pie."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Idn Kamni, la saliva, la tierra y el Río de Leche —los raudales de Kat-tsa-pa, al noreste, en la región del Isana o el Aiarí— son Kakua y no entran a ninguna lámina, ni de fondo: es el error que este repositorio ya cometió una vez y que esta biblia existe para impedir que se repita."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Machoroko es una mujer. La fuente lo dice sin ambigüedad —«Machoroko, una mujer que estaba en yê ‘nuestro mundo', oyó esa algarabía»— y el canon perdió el dato: quien abre el paso entre los dos mundos es una mujer, y la ficha se rehace sobre eso."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "El hueco se cava en una playa de río junto a la laguna Kein inbe', que está antes de la confluencia del Guaviare y el Inírida, y tiene tres o cuatro metros de profundidad. El emplazamiento y la escala existen y el censo no los tenía."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "La laguna del hueco y la confluencia donde descansan y se separan son dos sitios distintos, y el censo los ancló en uno: son dos láminas y no una geografía."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "La entrada del hueco se untó con resina resbalosa para que los perseguidores rodaran y no pudieran subir: es la única obra defensiva del relato y es dibujable como un brocal de barro de playa con la boca untada y brillante. El canon decía sólo «prepararon la entrada»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Un pozo abierto a mano en una playa de río, con el brocal de barro untado y brillante de resina y la pared del pozo bajando tres o cuatro metros hasta abrirse en otro bosque: la regla es que los dos mundos comparten la misma luz y que el hueco es la única costura entre ellos, un tubo de claridad que atraviesa la tierra.",
+        "materials": [
+          "arena y barro de playa amontonados alrededor de la boca, con la costra seca por fuera y la veta húmeda por dentro",
+          "resina resbalosa untada en la boca del hueco, enrollada en quilling donde chorrea y brillante sólo ahí",
+          "pared de tierra excavada, en capas de papel granulado que marcan la profundidad por escalones y no por degradado",
+          "columna de claridad que baja por el pozo, resuelta como plano de papel claro y nunca como rayo volumétrico"
+        ],
+        "palette_logic": "Dos mundos con la misma paleta y una sola diferencia de valor: el interior del pozo es el único lugar del corpus donde la arena clara y el barro oscuro se tocan de canto. La resina no lleva color propio: se lee por el brillo, que es el único brillo autorizado en una biblia enteramente mate.",
+        "scale": "La regla se muestra en fases y con figura humana de referencia en cada una: la playa con el hoyo empezado a la rodilla, el pozo terminado de tres o cuatro metros con una persona de pie en el fondo, y la boca untada vista desde arriba. La proporción entre el pozo y el cuerpo es el dato, y por eso ninguna fase se compone sin cuerpo.",
+        "continuity_markers": [
+          "el hueco está en una playa junto a la laguna Kein inbe', antes de la confluencia, y nunca en la confluencia: son dos sitios y dos láminas",
+          "tres o cuatro metros de profundidad, siempre medidos contra un cuerpo humano",
+          "la boca siempre untada y brillante, y ése es el único brillo del corpus",
+          "bak y yê conservan la misma luz a los dos lados del pozo",
+          "la entrada se lee como defensa y nunca como trampa mortal: nadie cae, nadie se hiere"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "Corrección al censo, que anclaba el hueco «en la confluencia»: la fuente lo sitúa en una playa por el lado de Kein inbe', «una laguna cercana a la unión de los ríos Wayari ‘Guaviare' y Mipa ‘Inírida'», y Mahecha la ubica antes de la confluencia. El hueco y la confluencia son dos sitios distintos y dos láminas distintas.",
+          "«Luego de cavar tres o cuatro metros de profundidad, abrió un hueco que comunicó a bak con yê»: la escala existe y está dicha en metros.",
+          "«En la entrada del hueco, los Nɨkak echaron una resina resbalosa para que los kawéni' yore se rodaran y no pudieran subir y salir. Era una defensa para que no los persiguieran tanto.» El canon decía sólo «prepararon la entrada»; es resina y es dibujable.",
+          "Quien lo abre es Machoroko, una mujer que estaba en yê, y lo hace con uñas de oso hormiguero.",
+          "La boca del hueco es el único punto de todo el corpus donde la luz de arriba entra hacia abajo.",
+          "Los mundos son dos y están en capas —bak abajo, yê arriba—, y el relato no da un tercero dibujable."
+        ],
+        "editorial_features": [
+          "El brocal de barro de playa amontonado alrededor de la boca es una propuesta del dossier, no un dato: la fuente dice que se untó la entrada, no que hubiera brocal. Reversible.",
+          "El número de fases de la regla —hoyo empezado, pozo terminado, boca untada— es decisión editorial de legibilidad: la fuente narra una secuencia, no una serie de vistas.",
+          "La pared del pozo se resuelve en escalones de capa y no en degradado porque la técnica es de papel; no hay ninguna descripción de cómo era la pared.",
+          "Se decide no dibujar a nadie subiendo ni bajando por el pozo en la lámina de regla: las figuras que lo cruzan son asunto de la gramática de grupo, no de esta ficha.",
+          "El brillo de la resina es la única excepción a la regla de que todo el material es mate; se declara aquí para que no se extienda a ninguna otra lámina."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - phenomenon_rule",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "la regla del prodigio en fases legibles para El paso abierto entre bak y yê. Un pozo abierto a mano en una playa de río, con el brocal de barro untado y brillante de resina y la pared del pozo bajando tres o cuatro metros hasta abrirse en otro bosque: la regla es que los dos mundos comparten la misma luz y que el hueco es la única costura entre ellos, un tubo de claridad que atraviesa la tierra.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; La regla se muestra en fases y con figura humana de referencia en cada una: la playa con el hoyo empezado a la rodilla, el pozo terminado de tres o cuatro metros con una persona de pie en el fondo, y la boca untada vista desde arriba. La proporción entre el pozo y el cuerpo es el dato, y por eso ninguna fase se compone sin cuerpo.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "bejuco yaré trenzado del canasto grande de carga, único objeto manufacturado del relato; arena y barro de playa de río, y la boca del hueco untada de resina; semilla entera y plena: chontaduro, tabaco, caña, muji, plátano, yuca dulce, yuca amarga, maíz y mamo; hoja de maíz seca del fogón, y humo; hoja de palma y hoja ancha del sotobosque en capas; agua de dos ríos que divergen, y el espejo quieto de una laguna; achiote rojo sobre la piel, sin ningún diseño; fibra de moriche de hamaca y brazalete, como forma genérica y nunca como pieza real; arena y barro de playa amontonados alrededor de la boca, con la costra seca por fuera y la veta húmeda por dentro; resina resbalosa untada en la boca del hueco, enrollada en quilling donde chorrea y brillante sólo ahí; pared de tierra excavada, en capas de papel granulado que marcan la profundidad por escalones y no por degradado; columna de claridad que baja por el pozo, resuelta como plano de papel claro y nunca como rayo volumétrico",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "Un pozo abierto a mano en una playa de río, con el brocal de barro untado y brillante de resina y la pared del pozo bajando tres o cuatro metros hasta abrirse en otro bosque: la regla es que los dos mundos comparten la misma luz y que el hueco es la única costura entre ellos, un tubo de claridad que atraviesa la tierra.",
+          "mostrar: Regla visual de los mundos en capas y de su abertura: es el acto por el que se cuenta el relato y gobierna la composición horizontal aprobada. Debe incluir que la entrada se preparó para dificultar el paso a los perseguidores.",
+          "documentado: Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "documentado: Corrección al censo, que anclaba el hueco «en la confluencia»: la fuente lo sitúa en una playa por el lado de Kein inbe', «una laguna cercana a la unión de los ríos Wayari ‘Guaviare' y Mipa ‘Inírida'», y Mahecha la ubica antes de la confluencia. El hueco y la confluencia son dos sitios distintos y dos láminas distintas.",
+          "documentado: «Luego de cavar tres o cuatro metros de profundidad, abrió un hueco que comunicó a bak con yê»: la escala existe y está dicha en metros.",
+          "documentado: «En la entrada del hueco, los Nɨkak echaron una resina resbalosa para que los kawéni' yore se rodaran y no pudieran subir y salir. Era una defensa para que no los persiguieran tanto.» El canon decía sólo «prepararon la entrada»; es resina y es dibujable.",
+          "documentado: Quien lo abre es Machoroko, una mujer que estaba en yê, y lo hace con uñas de oso hormiguero.",
+          "documentado: La boca del hueco es el único punto de todo el corpus donde la luz de arriba entra hacia abajo.",
+          "documentado: Los mundos son dos y están en capas —bak abajo, yê arriba—, y el relato no da un tercero dibujable.",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "phenomenon_phases",
+          "purpose": "la regla del prodigio en fases legibles",
+          "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "ye_selva_y_confluencia__environment_model": {
+      "purpose": "environment_model",
+      "entity_refs": [
+        "ye_selva_y_confluencia"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Nɨkak y Kakua hablan lenguas estrechamente emparentadas pero sitúan su nacimiento en lugares distintos y nombran héroes distintos: Mauro es Nɨkak, Idn Kamni es Kakua. Es el deslinde que decide todo el corpus y va escrito en cada ficha, no en una nota al pie."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Idn Kamni, la saliva, la tierra y el Río de Leche —los raudales de Kat-tsa-pa, al noreste, en la región del Isana o el Aiarí— son Kakua y no entran a ninguna lámina, ni de fondo: es el error que este repositorio ya cometió una vez y que esta biblia existe para impedir que se repita."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "El hueco se cava en una playa de río junto a la laguna Kein inbe', que está antes de la confluencia del Guaviare y el Inírida, y tiene tres o cuatro metros de profundidad. El emplazamiento y la escala existen y el censo no los tenía."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "La laguna del hueco y la confluencia donde descansan y se separan son dos sitios distintos, y el censo los ancló en uno: son dos láminas y no una geografía."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los Nɨkak se desplazan a pie: «subieron caminando en un solo grupo» y «desplazándose a pie» hasta el territorio actual; son un pueblo interfluvial y no ribereño; y en el Plan de Salvaguardia la canoa aparece una sola vez, como juguete de balso de los niños, junto al avión y la pistola de juguete. Ninguna lámina de esta biblia lleva canoa, remo ni embarcación."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "En la confluencia del Guaviare y el Inírida no sólo descansaron: «descansaron y bailaron un baile baap». El baap es una práctica viva cuyas últimas ocasiones el Plan de Salvaguardia registra por asentamiento, de modo que se puede componer el descanso y la reunión, y no se reconstruye la coreografía, el atuendo ni los instrumentos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Dos ríos que se juntan y vuelven a abrirse vistos desde la orilla y a la altura de quien camina, con la selva de tierra firme del interfluvio cerrando las dos márgenes y una lengua de playa en el vértice: el mundo de arriba se reconoce porque el agua se bifurca y porque no hay una sola embarcación en ella.",
+        "materials": [
+          "agua de dos ríos con corriente visible que divergen, en planos translúcidos superpuestos y nunca azules",
+          "playa de arena clara en el vértice, y a un lado el espejo quieto de una laguna sin corriente",
+          "selva de tierra firme de interfluvio: hoja de palma y hoja ancha de sotobosque en capas escalonadas",
+          "caños menores y sectores de orilla como variantes del mismo modelo, sin rótulo y sin perfil reconocible"
+        ],
+        "palette_logic": "Verde apagado de interfluvio arriba, pardo de agua abajo, arena clara en el único punto alto de valor. Es la misma paleta de bak, y ésa es la afirmación: los dos mundos no se distinguen por el color.",
+        "scale": "Entorno hasta los cuatro límites, con la cámara a la altura de quien camina por la orilla y no a vista de pájaro: la divergencia de los dos cauces tiene que leerse desde el suelo, porque una vista aérea la convertiría en mapa y esta biblia no da lugares localizables. Grupos humanos pequeños en la orilla dan la escala.",
+        "continuity_markers": [
+          "dos cauces que divergen, siempre, y siempre vistos desde la orilla",
+          "ni una canoa, ni un remo, ni una embarcación en ninguna lámina",
+          "la laguna quieta y la playa del hueco son otro sitio y no se componen en el mismo cuadro que la confluencia",
+          "ningún perfil de río, laguna o caño reconocible, ningún rótulo y ningún mapa",
+          "misma luz alta y difusa de interior de bosque húmedo que en bak, sin disco solar"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "El nacimiento Nɨkak se ubica debajo de la confluencia del Guaviare y el Inírida, antes de desembocar en el Orinoco; el Kakua, al noreste, en el Isana o el Aiarí. Son dos geografías separadas por cientos de kilómetros y esta lámina es la del bajo Guaviare.",
+          "En la confluencia «descansaron y bailaron un baile baap»: hubo descanso y reunión, y allí se separaron los grupos.",
+          "La laguna del hueco y la confluencia son dos sitios distintos, y el censo los ancló en uno.",
+          "Los Nɨkak son interfluviales y se desplazan a pie: ninguna lámina de esta biblia lleva canoa, remo ni embarcación.",
+          "Los caños, lagunas y sectores donde se detienen recibieron nombre —Kein inbe', Joo'ni inbe', Ñupe inbe', Wana' a muj— y existen en la fuente, pero el territorio está bajo presión y una lámina no puede ser una guía: no se rotulan, no se mapean y no se dibujan con perfil reconocible.",
+          "La luz es de interior de bosque húmedo, alta y difusa, sin disco solar y sin rayos volumétricos."
+        ],
+        "editorial_features": [
+          "El ángulo desde la orilla y a la altura del cuerpo es decisión editorial, tomada precisamente para cumplir la salvaguarda de la coordenada: la fuente no describe punto de vista.",
+          "La anchura relativa de los dos cauces y la forma de la lengua de playa son composición, no dato.",
+          "Las especies de palma y de hoja del sotobosque se resuelven como vegetación genérica de interfluvio: el relato no nombra una sola planta que no sea semilla de cultivo.",
+          "El descanso y la reunión se pueden componer, pero el baile baap no: ni coreografía, ni atuendo, ni instrumento. Si una autoridad Nɨkak autoriza insinuarlo, se añade; hoy no está.",
+          "La separación de los grupos se compone como deliberación —figuras vueltas unas hacia otras— y no como éxodo: nadie huyendo y nadie llorando."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - environment_model",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "el mundo hasta los cuatro limites, con su hora y su clima para Yê: selva del Guaviare y la confluencia de los dos ríos. Dos ríos que se juntan y vuelven a abrirse vistos desde la orilla y a la altura de quien camina, con la selva de tierra firme del interfluvio cerrando las dos márgenes y una lengua de playa en el vértice: el mundo de arriba se reconoce porque el agua se bifurca y porque no hay una sola embarcación en ella.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Entorno hasta los cuatro límites, con la cámara a la altura de quien camina por la orilla y no a vista de pájaro: la divergencia de los dos cauces tiene que leerse desde el suelo, porque una vista aérea la convertiría en mapa y esta biblia no da lugares localizables. Grupos humanos pequeños en la orilla dan la escala.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "bejuco yaré trenzado del canasto grande de carga, único objeto manufacturado del relato; arena y barro de playa de río, y la boca del hueco untada de resina; semilla entera y plena: chontaduro, tabaco, caña, muji, plátano, yuca dulce, yuca amarga, maíz y mamo; hoja de maíz seca del fogón, y humo; hoja de palma y hoja ancha del sotobosque en capas; agua de dos ríos que divergen, y el espejo quieto de una laguna; achiote rojo sobre la piel, sin ningún diseño; fibra de moriche de hamaca y brazalete, como forma genérica y nunca como pieza real; agua de dos ríos con corriente visible que divergen, en planos translúcidos superpuestos y nunca azules; playa de arena clara en el vértice, y a un lado el espejo quieto de una laguna sin corriente; selva de tierra firme de interfluvio: hoja de palma y hoja ancha de sotobosque en capas escalonadas; caños menores y sectores de orilla como variantes del mismo modelo, sin rótulo y sin perfil reconocible",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "Dos ríos que se juntan y vuelven a abrirse vistos desde la orilla y a la altura de quien camina, con la selva de tierra firme del interfluvio cerrando las dos márgenes y una lengua de playa en el vértice: el mundo de arriba se reconoce porque el agua se bifurca y porque no hay una sola embarcación en ella.",
+          "mostrar: Modelo de entorno de este mundo, anclado en la confluencia Guaviare-Inírida donde descansan y se separan. La composición de dos ríos que divergen es el corazón del relato; caños, lagunas y sectores donde se detienen son variantes del mismo modelo. Coordenada aproximada, nunca el lugar exacto del nacimiento.",
+          "documentado: Deslinde escrito en la ficha, no al pie: este corpus es Nɨkak. Mauro es el héroe Nɨkak e Idn Kamni el Kakua; el Río de Leche y los raudales de Kat-tsa-pa, en el Isana o el Aiarí, son Kakua y no entran a esta lámina ni de fondo (Mahecha 2024).",
+          "documentado: El nacimiento Nɨkak se ubica debajo de la confluencia del Guaviare y el Inírida, antes de desembocar en el Orinoco; el Kakua, al noreste, en el Isana o el Aiarí. Son dos geografías separadas por cientos de kilómetros y esta lámina es la del bajo Guaviare.",
+          "documentado: En la confluencia «descansaron y bailaron un baile baap»: hubo descanso y reunión, y allí se separaron los grupos.",
+          "documentado: La laguna del hueco y la confluencia son dos sitios distintos, y el censo los ancló en uno.",
+          "documentado: Los Nɨkak son interfluviales y se desplazan a pie: ninguna lámina de esta biblia lleva canoa, remo ni embarcación.",
+          "documentado: Los caños, lagunas y sectores donde se detienen recibieron nombre —Kein inbe', Joo'ni inbe', Ñupe inbe', Wana' a muj— y existen en la fuente, pero el territorio está bajo presión y una lámina no puede ser una guía: no se rotulan, no se mapean y no se dibujan con perfil reconocible.",
+          "documentado: La luz es de interior de bosque húmedo, alta y difusa, sin disco solar y sin rayos volumétricos.",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "environment_establishing",
+          "purpose": "el mundo hasta los cuatro limites, con su hora y su clima",
+          "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    }
+  },
   "pilot": null,
   "generation_batch": null,
   "completion": null,
