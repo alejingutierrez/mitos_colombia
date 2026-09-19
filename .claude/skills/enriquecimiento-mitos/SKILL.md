@@ -130,12 +130,22 @@ que ya pasó por el pipeline de imágenes: reescribe `image_url` desde
    un mito cuyas Similitudes no nombran ese paralelo**. Avisos: <8 fuentes,
    dominio débil, `http`, misma obra en varias URLs, misma URL con fichas
    bibliográficas distintas, restringida (403/captcha: comprobar a mano).
-4. Búsqueda profunda **por mito**, con agentes en paralelo, uno por mito o
+4. **Cuidado con la circularidad: el sitio se cita a sí mismo.** Al buscar
+   «Méneri-Ya» y «Warimi» —dos nombres propios de la ficha barasana de la
+   luna—, `mitosdecolombia.com` sale **tercero en Bing**, por encima de los
+   catálogos de la obra que supuestamente la sostiene, y el buscador devuelve
+   el texto del sitio como si fuera un hallazgo. Con la grafía exacta de la
+   ficha no hay ningún otro resultado en la web indexada. Regla: **si un
+   resultado reproduce el texto del sitio, no es una fuente**; se descarta y se
+   dice. Y si los nombres propios de una ficha no aparecen en ninguna parte
+   salvo en ella misma, esa ficha no está corroborada, por más plausible que
+   suene.
+5. Búsqueda profunda **por mito**, con agentes en paralelo, uno por mito o
    por grupos de 4-6. El brief lleva relato, historia, versiones y las URLs
    ya citadas. Criterio: la fuente trata DIRECTAMENTE el mito, el personaje
    o el lugar; cada URL se abre y se confirma que habla de eso; se declara
    `AGOTADO` en vez de rellenar. Meta 4-8 nuevas por mito.
-5. Consolidar en el módulo con `consolidar-fuentes.mjs` (verifica URLs, casa
+6. Consolidar en el módulo con `consolidar-fuentes.mjs` (verifica URLs, casa
    por URL con el pool, crea claves o reutiliza con resumen propio; dry-run y
    `--apply`). Antes de pasarle los JSON, curarlos a mano: quitar blogs, prensa
    y fichas sin texto, y canonizar URLs. Reglas:
@@ -157,9 +167,9 @@ que ya pasó por el pipeline de imágenes: reescribe `image_url` desde
    - fuente caída: se reemplaza por una equivalente **verificada** (la ONIC
      rehízo su sitio en 2026: sus perfiles de pueblos ya no existen) o se
      retira; nunca se deja.
-6. `auditar` de nuevo hasta cero bloqueos; `node --test` del corpus.
-7. `fuentes` dry-run → `--apply --confirm` → `revalidar` → `verificar --vivo`.
-8. Registrar en `docs/spec-reescritura-y-fuentes.md` §4 y en `ESTADO.md`.
+7. `auditar` de nuevo hasta cero bloqueos; `node --test` del corpus.
+8. `fuentes` dry-run → `--apply --confirm` → `revalidar` → `verificar --vivo`.
+9. Registrar en `docs/spec-reescritura-y-fuentes.md` §4 y en `ESTADO.md`.
 
 ## Lo que nunca se hace
 
