@@ -147,7 +147,9 @@ Fecha de corte: **17 de septiembre de 2026**. Base: Neon (producción).
 | U'wa | 11 | Completa | Pendiente | — | — |
 | Sikuani | 10 | Completa | Pendiente | — | — |
 | Otras (23 comunidades) | 72 | Completa | Pendiente | — | — |
-| **Total** | **407** | **Completa en 407** | **203 con Fase B en Neon; 188 reescritos sobre el primario y verificados en vivo (wayúu, nasa, chimila, huitoto, chamí, katío, kogui, andoque, panán)** | | |
+| **Total** | **596** | **Completa en 596** | **378 con expediente y fuentes en Neon; 188 reescritos sobre el primario y verificados en vivo (wayúu, nasa, chimila, huitoto, chamí, katío, kogui, andoque, panán)** | | |
+
+> **El denominador de esta tabla estaba mal.** Decía 407 mitos, y el sitio tiene **596** —contados el 2026-09-19 sobre `myths`, con 596 slugs distintos y ninguno despublicado—. La cifra vieja se venía arrastrando y se propagó a los cierres de varias comunidades. Lo que no cambia es el numerador: nueve comunidades cerradas y 188 fichas reescritas sobre sus primarios y verificadas en vivo. Lo que cambia es cuánto falta.
 
 ## 6. Verificación y controles de calidad
 
