@@ -31,25 +31,61 @@ if (!options.modulos) throw new Error("Falta --modulos=a,b");
 const apply = Boolean(options.apply);
 
 function abrirConstructor(src) {
-  if (src.includes("input.historia ??")) return { src, hecho: "ya estaba" };
-  const viejo = /  const historia = `\$\{input\.historyCore\}\\n\\n\$\{sharedHistory\}`;\n  const versiones = `\$\{input\.versionCore\}\\n\\n\$\{sharedVersions\}`;\n  const similitudes = `\$\{input\.similarityCore\}\\n\\n\$\{sharedSimilarities\}`;\n/;
-  if (!viejo.test(src)) return { src, hecho: "no reconozco la composición" };
-  const nuevo =
-    "  // Las fichas reescritas entregan el campo entero. `historyCore` y los tres\n" +
-    "  // bloques compartidos son el camino viejo: daban un párrafo propio y el\n" +
-    "  // resto idéntico para toda la comunidad, que es la razón de que todas\n" +
-    "  // midieran lo mismo y se leyeran igual.\n" +
-    "  const historia = input.historia ?? `${input.historyCore}\\n\\n${sharedHistory}`;\n" +
-    "  const versiones = input.versiones ?? `${input.versionCore}\\n\\n${sharedVersions}`;\n" +
-    "  const similitudes =\n    input.similitudes ?? `${input.similarityCore}\\n\\n${sharedSimilarities}`;\n";
-  let out = src.replace(viejo, nuevo);
+  const yaEstaba = src.includes("input.historia ??");
+  let out = src;
+  let cambios = 0;
+
+  // `const historia = `${input.historyCore}\n\n${…}`;` donde `…` puede ser un
+  // identificador o una expresión de varias líneas. Se conserva entera como
+  // camino viejo y se antepone el campo escrito.
+  const reCampo = (nombre, core) =>
+    new RegExp(
+      String.raw`  const ${nombre} = (\x60\$\{input\.${core}\}\\n\\n\$\{[\s\S]*?\}\x60);\n`,
+    );
+  for (const [nombre, core] of [
+    ["historia", "historyCore"],
+    ["versiones", "versionCore"],
+    ["similitudes", "similarityCore"],
+  ]) {
+    const re = reCampo(nombre, core);
+    const m = out.match(re);
+    if (!m) continue;
+    out = out.replace(re, `  const ${nombre} = input.${nombre} ?? ${m[1]};\n`);
+    cambios += 1;
+  }
+
+  // Cuando `similitudes` no se compone y entra directo desde `similarityCore`,
+  // el bloque compartido no está ahí, pero el campo sigue sin poder escribirse
+  // entero: hay que dejar pasar `input.similitudes`.
+  if (/\n    similitudes: input\.similarityCore,\n/.test(out)) {
+    out = out.replace(
+      /\n    similitudes: input\.similarityCore,\n/,
+      "\n    similitudes: input.similitudes ?? input.similarityCore,\n",
+    );
+    cambios += 1;
+  }
+
   if (!out.includes("input.relatoCorto")) {
+    const antes = out;
     out = out.replace(
       /(\n    mito: input\.mito,\n)/,
       "$1    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),\n",
     );
+    if (out !== antes) cambios += 1;
   }
-  return { src: out, hecho: "abierto" };
+
+  if (!cambios) return { src, hecho: yaEstaba ? "ya estaba" : "no reconozco la composición" };
+
+  // La nota va una sola vez, arriba del constructor.
+  if (!out.includes("El camino viejo daba un párrafo propio")) {
+    out = out.replace(
+      /(export function build\w+EditorialMyth\(input\) \{\n)/,
+      "// Las fichas reescritas entregan el campo entero; si no lo traen, se compone\n" +
+        "// como antes. El camino viejo daba un párrafo propio y el resto idéntico para\n" +
+        "// toda la comunidad: por eso todas medían lo mismo y se leían igual.\n$1",
+    );
+  }
+  return { src: out, hecho: `abierto (${cambios})` };
 }
 
 // Tres formas de reparto conviven en los módulos:
