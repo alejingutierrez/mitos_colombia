@@ -17,6 +17,15 @@ function myth({ title, summary, tags, mito, ...definition }) {
 export const desanaDefinitions = [
   myth({
     slug: "creacion-desana",
+    sourceKeys: [
+      "lanaLana1995",
+      "diakuruKisibi1996",
+      "galvao2004",
+      "desanaTexts1989",
+      "amazonianCosmos1971",
+      "ribeiro1994",
+      "bruzzi1994",
+    ],
     title: "Yebá Buró y la Canoa de Transformación",
     summary:
       "Yebá Buró crea el universo, el Sol y la Canoa de Transformación que conduce a la futura humanidad por los ríos.",
@@ -64,6 +73,15 @@ Reichel-Dolmatoff registró del lado colombiano que hasta las variedades de yuca
   }),
   myth({
     slug: "el-origen-de-la-noche-desana",
+    sourceKeys: [
+      "lanaLana1995",
+      "diakuruKisibi1996",
+      "galvao2004",
+      "desanaTexts1989",
+      "bruzzi1994",
+      "amazonianCosmos1971",
+      "beksta1988",
+    ],
     title: "Ñami y el origen de la noche",
     summary:
       "Los Desana viajan hasta Ñami para obtener la noche, pero abren antes de tiempo el recipiente que guardaba la oscuridad.",
@@ -109,6 +127,15 @@ El anfitrión que se quita la piel de viejo y aparece joven, y el hermano menor 
   }),
   myth({
     slug: "guelamun-ye-el-nieto-del-trueno",
+    sourceKeys: [
+      "lanaLana1995",
+      "galvao2004",
+      "diakuruKisibi1996",
+      "amazonianCosmos1971",
+      "desanaTexts1989",
+      "geografiaChamanistica",
+      "ribeiro1994",
+    ],
     title: "Guramüye y el primer cataclismo",
     summary:
       "Guramüye vuelve para una iniciación, retiene a quienes rompen el ayuno y su muerte desata el primer gran incendio.",
@@ -158,6 +185,15 @@ El anclaje material es local y verificable en el texto: las señales que, según
   }),
   myth({
     slug: "nuguye-y-sepiro-fuego-y-creciente",
+    sourceKeys: [
+      "lanaLana1995",
+      "diakuruKisibi1996",
+      "galvao2004",
+      "desanaTexts1989",
+      "geografiaChamanistica",
+      "bruzzi1994",
+      "amazonianCosmos1971",
+    ],
     title: "Nügüye y Sëpïrõ: fuego y creciente",
     summary:
       "Nügüye provoca el segundo incendio y Sëpïrõ desborda las aguas; dos cataclismos completan la renovación del mundo.",
@@ -203,6 +239,15 @@ Reichel-Dolmatoff anotó que las grandes inundaciones son corrientes a lo largo 
   }),
   myth({
     slug: "yurupari",
+    sourceKeys: [
+      "lanaLana1995",
+      "diakuruKisibi1996",
+      "galvao2004",
+      "amazonianCosmos1971",
+      "desanaTexts1989",
+      "beksta1988",
+      "bruzzi1994",
+    ],
     title: "El robo de las flautas sagradas",
     summary:
       "Las hijas de Abe encuentran primero las flautas surgidas de la paxiúba y alteran la distribución de tareas en la maloca.",
@@ -248,6 +293,15 @@ El anclaje que no se repite es la piedra. Las hijas de Abe dejan escrita su vers
   }),
   myth({
     slug: "el-origen-de-la-mandioca-desana",
+    sourceKeys: [
+      "lanaLana1995",
+      "diakuruKisibi1996",
+      "galvao2004",
+      "ribeiro1994",
+      "desanaTexts1989",
+      "amazonianCosmos1971",
+      "dantes2019",
+    ],
     title: "Baaribo y el origen de la mandioca",
     summary:
       "Baaribo guarda plantas alimenticias en su cuerpo, abre una chagra y entrega la mandioca a una nueva generación.",
@@ -291,6 +345,15 @@ Reichel-Dolmatoff documentó del lado colombiano que las variedades de yuca brav
   }),
   myth({
     slug: "gainpaya-y-el-origen-del-chontaduro",
+    sourceKeys: [
+      "lanaLana1995",
+      "diakuruKisibi1996",
+      "galvao2004",
+      "ribeiro1994",
+      "bruzzi1994",
+      "amazonianCosmos1971",
+      "geografiaChamanistica",
+    ],
     title: "Gãïpayã y el origen del chontaduro",
     summary:
       "Gãïpayã supera pruebas bajo el agua y lleva hasta la tierra una semilla de la palma que reunía cuatro chontaduros.",
@@ -338,6 +401,15 @@ La palma única que da cuatro frutos distintos es la parte que más se sostiene 
   }),
   myth({
     slug: "agamahsapu-y-el-tiempo-del-umari",
+    sourceKeys: [
+      "lanaLana1995",
+      "diakuruKisibi1996",
+      "galvao2004",
+      "ribeiro1994",
+      "desanaTexts1989",
+      "geografiaChamanistica",
+      "beksta1988",
+    ],
     title: "Ãgãmahsãpu y el tiempo del umarí",
     summary:
       "Ãgãmahsãpu, padre de las aves, recorre casas de transformación y vincula sus cantos con el umarí y la abundancia venidera.",

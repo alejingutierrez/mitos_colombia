@@ -1,27 +1,26 @@
 import { buildDesanaEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickDesanaSources } from "./sources.mjs";
 
-const allContextKeys = [
-  "dantes",
-  "isaPeople",
-  "museu",
-  "wariBook",
-  "googleBook",
-  "terminology",
+// Reparto por defecto. Un mito que declare su propio `sourceKeys` lo sustituye
+// entero: antes las ocho fichas compartían esta lista.
+const repartoPorDefecto = [
+  "lanaLana1995",
+  "diakuruKisibi1996",
+  "galvao2004",
+  "amazonianCosmos1971",
+  "desanaTexts1989",
+  "bruzzi1994",
+  "ribeiro1994",
 ];
 
 export function defineDesanaMyth({
-  narrativeSource = "primaryBook",
-  contextSources = allContextKeys,
+  sourceKeys = repartoPorDefecto,
   seoTitle,
   seoDescription,
   focusKeywords,
   ...input
 }) {
-  const selectedSources = pickDesanaSources(
-    narrativeSource,
-    ...contextSources,
-  );
+  const selectedSources = pickDesanaSources(...sourceKeys);
   // Antes exigía exactamente 7: el reparto en bloque escrito como
   // aserción. Lo que importa es que haya fuentes suficientes.
   if (selectedSources.length < 5) {
