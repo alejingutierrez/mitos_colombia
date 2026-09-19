@@ -839,3 +839,56 @@ test("el contrato por defecto sigue exigiendo los cuatro campos", () => {
   const report = validateBibleV3(plan, { stage: "inventory" });
   assert.ok(report.errors.some((error) => error.message.includes("falta leer versiones")));
 });
+
+test("un relato cuya unica primaria no llega a lamina queda bloqueado", () => {
+  // El constructor proponia primarias por rareza —la figura que aparece en menos
+  // mitos— y una entidad excluida es rarisima justamente porque no se produce.
+  // Cayo en la trampa 29 veces, y `bolivar-cartagena-mestizo` paso la compuerta
+  // `design` con ocho relatos cuya unica primaria era una persona embebida.
+  const plan = fixture();
+  const refs = plan.myths["hijo-del-condor"].entity_refs;
+  for (const ref of refs) if (ref.role === "primary") plan.entities[ref.entity_id].visual_status = "embedded";
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((error) => /ninguna primaria llega a lamina/.test(error.message)));
+});
+
+test("una primaria excluida con razon convive con otra que si se dibuja", () => {
+  // Wayuu registra el viajero compuesto de «Los dominios de Juya» como primaria
+  // y lo excluye para no falsear una tercera identidad, junto a Juya, que si
+  // tiene lamina. Eso es el contrato funcionando: lo detectado se anota aunque
+  // no se dibuje, y la regla mira el relato entero y no cada ref por separado.
+  const plan = fixture();
+  plan.entities.madre.visual_status = "embedded";
+  plan.entities.madre.covered_by = "hijo";
+  plan.entities.madre.coverage_note = "Se resuelve dentro del modelo indicado.";
+  plan.entities.madre.model_requirements = [];
+  plan.entities.madre.model_refs = [];
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(!report.errors.some((error) => /ninguna primaria llega a lamina/.test(error.message)));
+});
+
+test("una pagina que no debe ilustrarse lo declara en vez de dejar la primaria colgando", () => {
+  // `esperanza-en-el-oriente` no es un relato sino una hipotesis comparativa de
+  // 1956, y sus cinco entidades estan excluidas con razon propia. Una pagina que
+  // no produce lamina es un resultado legitimo; lo que no se puede es callarlo.
+  const plan = fixture();
+  for (const ref of plan.myths["hijo-del-condor"].entity_refs) {
+    if (ref.role === "primary") plan.entities[ref.entity_id].visual_status = "embedded";
+  }
+  plan.myths["hijo-del-condor"].not_illustrated = "La pagina se lee y se registra, pero sus figuras pertenecen a tradiciones propias que ficharlas aqui borraria.";
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(!report.errors.some((error) => /ninguna primaria llega a lamina/.test(error.message)));
+});
+
+test("un rol que el script propuso y nadie reviso bloquea la compuerta de diseno", () => {
+  // `role_derivada` es la marca temporal del constructor. Mientras siga puesta,
+  // nadie leyo ese rol contra el relato — y el rol es la unica parte del
+  // inventario que no se deriva de la categoria.
+  const plan = fixture();
+  plan.myths["hijo-del-condor"].entity_refs[0].role_derivada = "candidata, confirmar";
+  assert.ok(validateBibleV3(plan, { stage: "inventory" }).errors.every((error) => !/role_derivada/.test(error.message)));
+  const report = validateBibleV3(plan, { stage: "design" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((error) => /nunca revisado/.test(error.message)));
+});

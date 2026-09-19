@@ -272,6 +272,22 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
     if (duplicates.length) add(report, "errors", `myths.${slug}.entity_refs`, `entidades repetidas: ${unique(duplicates).join(", ")}`);
     if (!refs.some((ref) => ref?.role === "primary")) {
       add(report, "errors", `myths.${slug}.entity_refs`, "cada mito necesita al menos una entidad primaria");
+    } else if (!refs.some((ref) => ref?.role === "primary"
+        && plan.entities?.[ref.entity_id]?.visual_status === "required")
+        && !hasText(myth?.not_illustrated)) {
+      // Una primaria puede estar `excluded` con razon —Wayuu registra el viajero
+      // compuesto de «Los dominios de Juya» y lo excluye para no falsear una
+      // tercera identidad— y eso es el contrato funcionando: lo detectado se
+      // anota aunque no se dibuje. Lo que no puede pasar es que **todas** lo
+      // esten, porque entonces la figura que ese relato aporta y no hereda no
+      // llega a ninguna lamina. El constructor proponia candidatas por rareza
+      // —aparecer en pocos mitos— y una entidad excluida es rarisima justamente
+      // porque no se va a producir, asi que caia en la trampa sistematicamente.
+      const donde = refs.filter((ref) => ref?.role === "primary")
+        .map((ref) => `${ref.entity_id} (${plan.entities?.[ref.entity_id]?.visual_status || "sin estado"})`);
+      add(report, "errors", `myths.${slug}.entity_refs`,
+        `ninguna primaria llega a lamina: ${donde.join(", ")}`
+        + " - si la pagina no debe ilustrarse, dilo en myths.<slug>.not_illustrated");
     }
     for (const [index, ref] of refs.entries()) {
       const path = `myths.${slug}.entity_refs[${index}]`;
@@ -286,6 +302,13 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
         actualMythsByEntity.get(ref.entity_id).push(slug);
       }
       if (!MYTH_ENTITY_ROLES_V3.includes(ref.role)) add(report, "errors", `${path}.role`, `rol invalido: ${ref.role || "vacio"}`);
+      // Marca temporal del constructor. Mientras siga puesta significa que nadie
+      // leyo ese rol contra el relato, y el rol es la unica parte del inventario
+      // que no se puede derivar de la categoria.
+      if (requireFrozen && ref.role_derivada) {
+        add(report, "errors", `${path}.role_derivada`,
+          `rol propuesto por el script y nunca revisado: ${ref.role_derivada}`);
+      }
       requireText(report, ref.note, `${path}.note`);
     }
   }
