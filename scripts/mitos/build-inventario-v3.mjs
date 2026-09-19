@@ -192,7 +192,13 @@ export function construir({ plan, censo, research }) {
   // las entidades menores la declaran en su `covered_by`. Tirarlas dejaba 309
   // `covered_by` colgando en 30 planes y borraba 94 laminas del inventario.
   for (const grupo of censo.sheet_groups || []) {
-    const cubiertas = (grupo.covers || []).map((id) => plan.entities[id]).filter(Boolean);
+    // La busqueda va **al reves**: quien declara `covered_by` apuntando a la
+    // hoja. El campo `covers` del censo a veces trae texto libre en vez de
+    // ids, y confiar en el dejaba hojas sin un solo mito ni evidencia, que es
+    // justo lo que el validador rechaza.
+    const porCovers = (grupo.covers || []).map((id) => plan.entities[id]).filter(Boolean);
+    const porVuelta = Object.values(plan.entities).filter((e) => e.covered_by === grupo.id);
+    const cubiertas = porVuelta.length ? porVuelta : porCovers;
     const mitos = [...new Set(cubiertas.flatMap((e) => e.myth_refs || []))];
     plan.entities[grupo.id] = {
       name: grupo.id.replace(/_/g, " "),

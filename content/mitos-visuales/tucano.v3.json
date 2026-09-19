@@ -596,7 +596,23 @@
       "censo": "content/mitos-visuales/censo-2026-09-18/tucano.json",
       "research": "content/mitos-visuales/research-2026-09-18/tucano.json"
     },
-    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano."
+    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
+    "declared_absences": [
+      {
+        "entity_id": "relatos_de_flautas_y_ceremonias_sagradas",
+        "name": "Las flautas y los instrumentos ceremoniales del corpus Fulop",
+        "kind": "objeto",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      },
+      {
+        "entity_id": "episodios_sexuales_de_miriapura_turikaro",
+        "name": "Los episodios sexuales del ciclo de Miriápura Turíkaro",
+        "kind": "fenomeno",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      }
+    ]
   },
   "myths": {
     "cuando-la-danta-perdio-su-hegemonia": {
@@ -3342,25 +3358,6 @@
       "covered_by": "hoja_utileria_tucano_2",
       "coverage_note": "Yepá Huáke espera con bebida para recibir el nuevo ciclo. Objeto menor; la hoja debe resolver el recipiente sin convertirlo en parafernalia ceremonial ni sugerir preparación."
     },
-    "relatos_de_flautas_y_ceremonias_sagradas": {
-      "name": "Las flautas y los instrumentos ceremoniales del corpus Fulop",
-      "kind": "objeto",
-      "description": "Declarado en editorial/tucano/universe.mjs como narrativa de contexto: «Las fuentes publicadas incluyen conocimiento ritual que no es necesario reproducir», y la decisión restrictedMaterial ordena «omit-operational-sacred-flute». Es el yuruparí del lado Tucano: existe en la bibliografía, no en ninguna de las siete páginas y no se dibuja.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Declarado en editorial/tucano/universe.mjs como narrativa de contexto: «Las fuentes publicadas incluyen conocimiento ritual que no es necesario reproducir», y la decisión restrictedMaterial ordena «omit-operational-sacred-flute». Es el yuruparí del lado Tucano: existe en la bibliografía, no en ninguna de las siete páginas y no se dibuja.",
-      "exclusion_reason": "do_not_visualize"
-    },
     "objetos_de_uso_restringido_del_reparto": {
       "name": "Los objetos de uso restringido del reparto del sueño",
       "kind": "objeto",
@@ -3495,25 +3492,6 @@
       ],
       "census_note": "Verificado: «La transcripción histórica añade restricciones sobre quién podía entrar a la huerta y en qué momentos. Esta edición no las presenta como instrucciones universales actuales». El prompt vertical aprobado remata: «sin reproducir instrucciones rituales ni roles estereotipados».",
       "exclusion_reason": "la página declara que no las presenta"
-    },
-    "episodios_sexuales_de_miriapura_turikaro": {
-      "name": "Los episodios sexuales del ciclo de Miriápura Turíkaro",
-      "kind": "fenomeno",
-      "description": "Declarado contexto-only en universe.mjs: «no se convierten en página autónoma ni en material visual por su carácter sensible y explícito». No aparecen en ninguna de las siete páginas.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Declarado contexto-only en universe.mjs: «no se convierten en página autónoma ni en material visual por su carácter sensible y explícito». No aparecen en ninguna de las siete páginas.",
-      "exclusion_reason": "consult_required"
     },
     "miriapura_turikaro": {
       "name": "Miriápura Turíkaro",

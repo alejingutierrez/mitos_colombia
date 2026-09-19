@@ -1067,7 +1067,16 @@
       "censo": "content/mitos-visuales/censo-2026-09-18/choco-afro.json",
       "research": "content/mitos-visuales/research-2026-09-18/choco-afro.json"
     },
-    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano."
+    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
+    "declared_absences": [
+      {
+        "entity_id": "hoja_utileria_altar_y_monte",
+        "name": "hoja utileria altar y monte",
+        "kind": "objeto",
+        "was": "required",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      }
+    ]
   },
   "myths": {
     "anansi": {
@@ -2999,37 +3008,6 @@
       "exclusion_reason": "sin evidencia visual: se menciona una vez, de pasada, y nunca se ve",
       "evidence_basis_mix": [
         "documented_core"
-      ]
-    },
-    "hoja_utileria_altar_y_monte": {
-      "name": "hoja utileria altar y monte",
-      "kind": "objeto",
-      "description": "Cinco objetos menores que ninguna ficha mayor absorbe y que aparecen repartidos entre Anansi (copón, cáliz, hostias, vino), Kijimba (cinco velas, flores, vaso de agua) y La Yesca (sal y hojas amargas). Van en una sola hoja de utilería porque son props de mano, no escenarios.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "inferred",
-      "sensitivity": "public",
-      "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Cinco objetos menores que ninguna ficha mayor absorbe y que aparecen repartidos entre Anansi (copón, cáliz, hostias, vino), Kijimba (cinco velas, flores, vaso de agua) y La Yesca (sal y hojas amargas). Van en una sola hoja de utilería porque son props de mano, no escenarios.",
-      "groups": [
-        "copón y cáliz consagrados",
-        "hostias y vino de misa",
-        "cinco velas y flores de altar",
-        "vaso de agua del Atrato como espejo",
-        "sal y hojas amargas del desamarre"
-      ],
-      "design": null,
-      "states_declared": [],
-      "evidence_basis_mix": [
-        "documented_core",
-        "academic_hypothesis"
       ]
     }
   },

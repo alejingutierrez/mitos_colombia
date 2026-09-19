@@ -739,7 +739,16 @@
       "censo": "content/mitos-visuales/censo-2026-09-18/desana.json",
       "research": "content/mitos-visuales/research-2026-09-18/desana.json"
     },
-    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano."
+    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
+    "declared_absences": [
+      {
+        "entity_id": "buhtari_goamu",
+        "name": "Buhtari Gõãmü",
+        "kind": "personaje",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      }
+    ]
   },
   "myths": {
     "agamahsapu-y-el-tiempo-del-umari": {
@@ -4598,25 +4607,6 @@
         }
       ],
       "census_note": "La ficha declara que «no reproduce escenas íntimas que no son necesarias para seguir el origen de los cultivos» y research_notes confirma que adapta el capítulo «sin explotar sus escenas íntimas». Material sensible fuera del alcance visual.",
-      "exclusion_reason": "consult_required"
-    },
-    "buhtari_goamu": {
-      "name": "Buhtari Gõãmü",
-      "kind": "personaje",
-      "description": "Aparece sólo en el comentario editorial compartido (campo versiones), nunca en un relato: «Las tres historias de Buhtari Gõãmü contienen escenas sexuales y relaciones cuyo sentido se perdería al sanitizarlas». No hay página que ilustrar y el material es sensible.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Aparece sólo en el comentario editorial compartido (campo versiones), nunca en un relato: «Las tres historias de Buhtari Gõãmü contienen escenas sexuales y relaciones cuyo sentido se perdería al sanitizarlas». No hay página que ilustrar y el material es sensible.",
       "exclusion_reason": "consult_required"
     },
     "diroa": {

@@ -1104,7 +1104,23 @@
       "censo": "content/mitos-visuales/censo-2026-09-18/antioquia-occidente-mixto.json",
       "research": "content/mitos-visuales/research-2026-09-18/antioquia-occidente-mixto.json"
     },
-    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano."
+    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
+    "declared_absences": [
+      {
+        "entity_id": "nutibara",
+        "name": "Nutibara",
+        "kind": "personaje",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      },
+      {
+        "entity_id": "tarasca_antioquena",
+        "name": "La Tarasca en Antioquia y Caldas",
+        "kind": "criatura",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      }
+    ]
   },
   "myths": {
     "dobaida": {
@@ -6705,50 +6721,6 @@
       ],
       "census_note": "Se menciona pero nunca se ve.",
       "exclusion_reason": "Se nombra como origen del regreso ('quienes habían ido al mercado regresaban por los caminos de Liborina, Olaya…') y la escena planificada empieza ya en la curva, bajo la lluvia.",
-      "evidence_basis_mix": [
-        "editorial_interpretation"
-      ]
-    },
-    "nutibara": {
-      "name": "Nutibara",
-      "kind": "personaje",
-      "description": "Lo dejo declarado porque el encargo lo nombra como parte de la memoria del occidente antioqueño: no está en este corpus. La memoria indígena-histórica que sí aparece es sólo la del bajo Atrato (Dobaida, Cueva, Dabeiba), en las dos páginas canon.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "documented",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Lo dejo declarado porque el encargo lo nombra como parte de la memoria del occidente antioqueño: no está en este corpus. La memoria indígena-histórica que sí aparece es sólo la del bajo Atrato (Dobaida, Cueva, Dabeiba), en las dos páginas canon.",
-      "exclusion_reason": "Cero menciones en las catorce páginas, ni en el volcado ni en el canon restaurado.",
-      "evidence_basis_mix": [
-        "documented_core"
-      ]
-    },
-    "tarasca_antioquena": {
-      "name": "La Tarasca en Antioquia y Caldas",
-      "kind": "criatura",
-      "description": "Su ficha canónica sale del corpus Tolima y Huila, donde sí está descrita. Aquí se declara para que no se produzca dos veces.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "editorial_interpretation",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Su ficha canónica sale del corpus Tolima y Huila, donde sí está descrita. Aquí se declara para que no se produzca dos veces.",
-      "exclusion_reason": "No tiene página en este corpus; se nombra su circulación antioqueña sólo desde la página tolimense de La Tarasca.",
       "evidence_basis_mix": [
         "editorial_interpretation"
       ]

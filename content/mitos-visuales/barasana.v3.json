@@ -783,7 +783,51 @@
       "censo": "content/mitos-visuales/censo-2026-09-18/barasana.json",
       "research": "content/mitos-visuales/research-2026-09-18/barasana.json"
     },
-    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano."
+    "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
+    "declared_absences": [
+      {
+        "entity_id": "conjunto_truenos_con_yurupari",
+        "name": "El conjunto «los Truenos con Yuruparí»",
+        "kind": "colectivo",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      },
+      {
+        "entity_id": "anaconda_he",
+        "name": "El conjunto Anaconda He",
+        "kind": "criatura",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      },
+      {
+        "entity_id": "romi_kumu",
+        "name": "Romi Kumu",
+        "kind": "deidad_fuerza",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      },
+      {
+        "entity_id": "ayawa",
+        "name": "Ayawa",
+        "kind": "deidad_fuerza",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      },
+      {
+        "entity_id": "anaconda_palo_de_yuca",
+        "name": "El conjunto Anaconda Palo-de-Yuca",
+        "kind": "criatura",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      },
+      {
+        "entity_id": "conjunto_yeba",
+        "name": "El conjunto Yeba de la monografía",
+        "kind": "criatura",
+        "was": "excluded",
+        "reason": "Ninguna pagina del corpus la cita. No se le inventa un mito: se retira del inventario y la ausencia queda declarada."
+      }
+    ]
   },
   "myths": {
     "el-origen-de-la-gente-de-los-frutales-silvestres": {
@@ -4670,120 +4714,6 @@
       ],
       "census_note": "El Plan de Vida de 2025 lo confirma como «un sistema vivo para cuidar territorio y vida». Es un sistema de conocimiento en uso, no una entidad del relato; representarlo lo convertiría en objeto.",
       "exclusion_reason": "consult_required"
-    },
-    "conjunto_truenos_con_yurupari": {
-      "name": "El conjunto «los Truenos con Yuruparí»",
-      "kind": "colectivo",
-      "description": "Uno de los ocho conjuntos que la monografía de 1979 organiza y que el campo versiones deja explícitamente fuera por enlazarse «con conocimientos ceremoniales que no corresponde convertir en una serie de resúmenes operativos». No está narrado en ninguna de las seis páginas.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Uno de los ocho conjuntos que la monografía de 1979 organiza y que el campo versiones deja explícitamente fuera por enlazarse «con conocimientos ceremoniales que no corresponde convertir en una serie de resúmenes operativos». No está narrado en ninguna de las seis páginas.",
-      "exclusion_reason": "do_not_visualize"
-    },
-    "anaconda_he": {
-      "name": "El conjunto Anaconda He",
-      "kind": "criatura",
-      "description": "Otro de los ocho conjuntos no publicados como ficha. «He» remite al ámbito de Yuruparí, así que se suma a la materia restringida además de no estar narrado.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Otro de los ocho conjuntos no publicados como ficha. «He» remite al ámbito de Yuruparí, así que se suma a la materia restringida además de no estar narrado.",
-      "exclusion_reason": "do_not_visualize"
-    },
-    "romi_kumu": {
-      "name": "Romi Kumu",
-      "kind": "deidad_fuerza",
-      "description": "Figura en la lista de los ocho conjuntos de Hugh-Jones que el campo versiones enumera, sin ninguna acción en el corpus congelado. Fichar por la lista sería inventar el relato.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Figura en la lista de los ocho conjuntos de Hugh-Jones que el campo versiones enumera, sin ninguna acción en el corpus congelado. Fichar por la lista sería inventar el relato.",
-      "exclusion_reason": "se menciona pero nunca se narra"
-    },
-    "ayawa": {
-      "name": "Ayawa",
-      "kind": "deidad_fuerza",
-      "description": "Mismo caso que Romi Kumu: nombrado en la enumeración bibliográfica de conjuntos, ausente de las seis páginas.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Mismo caso que Romi Kumu: nombrado en la enumeración bibliográfica de conjuntos, ausente de las seis páginas.",
-      "exclusion_reason": "se menciona pero nunca se narra"
-    },
-    "anaconda_palo_de_yuca": {
-      "name": "El conjunto Anaconda Palo-de-Yuca",
-      "kind": "criatura",
-      "description": "Conjunto de la misma lista, sin narración en el corpus. No confundir con la Anaconda Yeba, que sí tiene relato y ficha.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "Conjunto de la misma lista, sin narración en el corpus. No confundir con la Anaconda Yeba, que sí tiene relato y ficha.",
-      "exclusion_reason": "se menciona pero nunca se narra"
-    },
-    "conjunto_yeba": {
-      "name": "El conjunto Yeba de la monografía",
-      "kind": "criatura",
-      "description": "La monografía lista «Yeba» como uno de los ocho conjuntos, distinto de la Anaconda Yeba de la Cuerda de Leche. Se registra para que el parecido de nombre no produzca una ficha duplicada ni una fusión indebida.",
-      "aliases": [],
-      "states": [
-        "canonico"
-      ],
-      "evidence_basis": "uncertain",
-      "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
-      "legacy_model_refs": [],
-      "myth_refs": [],
-      "evidence": [],
-      "census_note": "La monografía lista «Yeba» como uno de los ocho conjuntos, distinto de la Anaconda Yeba de la Cuerda de Leche. Se registra para que el parecido de nombre no produzca una ficha duplicada ni una fusión indebida.",
-      "exclusion_reason": "se menciona pero nunca se narra"
     },
     "ave_sanada_por_kahe_sawari": {
       "name": "El ave atrapada que Kahe Sawari sana",
