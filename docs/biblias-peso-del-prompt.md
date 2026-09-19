@@ -112,29 +112,69 @@ instrucción— diciendo qué estrato se le dejó o que no hubo dominante.
 
 Seis pruebas en `scripts/mitos/build-biblia-models-v3.test.mjs`.
 
-## Lo que queda, y es la decisión siguiente
+## La sonda contestó la pregunta, y la respuesta es que el peso no era el problema
 
-**6.221 no alcanza.** Casi la mitad de las láminas siguen por encima de la que
-salió fotorrealista. Y lo que queda ya no es duplicación: es contenido que los
-agentes escribieron a propósito.
+Ocho láminas generadas el 2026-09-19 (`sonda-peso-01`): seis adversas entre
+8.248 y 9.513 caracteres ensamblados —una por cada manera distinta en que la
+técnica se ha roto antes— y dos controles en 4.174 y 4.219.
 
-| campo | chars | qué es |
+**La técnica aguantó en las ocho, incluida la de 9.513.** Cantos de corte a la
+vista, capas con sombra física, quilling sólo donde algo enrolla de verdad, y
+la trampa del pelaje resuelta: la crin y la cola de la mula de Bogotá son pocas
+piezas planas grandes con el borde en dientes, no mechón por mechón.
+
+Eso reencuadra el umbral. Los 6.341 que salieron fotorrealistas se midieron con
+**diez reglas de color y veinte prohibiciones compitiendo con la técnica**.
+Estos planes van capados en cuatro y ocho, y desde el recorte la técnica abre
+como un solo bloque. **El umbral no era el número: era la competencia.** No hay
+motivo para seguir podando `documented`, que es lo que distingue esta biblia de
+una ilustración inventada.
+
+## Lo que la sonda rompió, que valía más que el ahorro
+
+**El recorte 1 está revertido.** Estrechar `era` al estrato de cada ficha
+ahorraba 142 caracteres y podía borrar un deslinde:
+
+- **`choco-afro` no enumera épocas.** Su `era` dice «Entra: …» y «No entra: …».
+  El parser leyó esas dos etiquetas como estratos, se quedó con la lista de
+  inclusión y tiró casi toda la de prohibiciones — incluido **«ningún elemento
+  emberá ni wounaan»**, que el dossier llama prohibición total y no graduada.
+- **`cuycuyes` declara dos capas** y sólo una encajaba en el patrón de
+  etiqueta: la otra mide 48 caracteres y el límite eran 45. No se estrechó, el
+  modelo recibió las dos épocas **y dibujó las dos en el mismo cuadro** —
+  cuerpos de contacto a la izquierda, arriero con mula a la derecha—, que es
+  exactamente lo que ese dossier prohíbe.
+
+Un estrechado seguro tendría que conservar intacta toda frase de prohibición, y
+en katíos las prohibiciones son la mitad de cada estrato: no ahorraría nada.
+**Detectar mal sale tan caro como recortar mal.**
+
+## Y un defecto que la sonda destapó de camino
+
+Siete corpus —awá, eperara, sikuani, kuiba, makaguán, u'wa y yukpa— llevaban en
+`style_medium` la cadena **idéntica** «Ilustración editorial 2D full paper cut y
+paper quilling de acabado gráfico plano», contra su propio `technique`, que es
+de maqueta. Es la técnica **del sitio** —las imágenes de las páginas de mito sí
+son 2D— filtrada dentro de la biblia, que es 3D: la trampa de los dos
+productos, siete veces.
+
+No es la disputa de canon de Caldas: sus dossiers no la mencionan, y la cadena
+es la misma palabra por palabra. Retirada, con el valor y el motivo guardados
+en `visual_system.style_medium_retired`. Y queda una guarda con pruebas
+(`tecnicaSeContradice`) que **no pliega** un `style_medium` que contradiga la
+técnica, para que nadie vuelva a poner «tridimensional inmersiva» y «2D de
+acabado plano» en frases contiguas dentro del bloque que abre y manda. El
+primer detector daba tres falsos positivos por leer «nunca ilustración plana»
+—una prohibición— como una afirmación 2D.
+
+## Dónde quedó
+
+| | antes | ahora |
 |---|---|---|
-| `constraints` | 1.631 | los rasgos documentados con su fuente, más las ≤4 reglas de paleta |
-| `avoid` | 987 | las ≤8 prohibiciones, ya en su tope |
-| `technique_first` | 837 | técnica + medio, deliberadamente juntos |
-| `technique_close` | 633 | cara, cuerpo y pelaje: no repite la apertura, la completa |
-| `era` | 564 | ya estrechado |
-| `lighting_mood` | 548 | la luz del corpus |
+| media | 7.561 | **6.354** (−16%) |
+| por encima de 6.341 | 1.303 (76%) | 956 (56%) |
 
-La técnica ocupa 1.470 chars, el 24% del prompt, y es deliberado. El único lever
-grande que queda es **podar `documented` dentro de `constraints`**, que sí pierde:
-son los rasgos atestiguados, que es justo lo que distingue esta biblia de una
-ilustración inventada.
-
-**Dos caminos, y el segundo es más barato de comprobar que de discutir:** o se
-poda `documented` a los N rasgos que cambian la forma —dejando el resto en
-`design_contract`, donde ya está—, o **se lleva al piloto tal como está**. Doce
-láminas dicen si 6.221 con la técnica concentrada al frente y las reglas ya
-capadas en 4 y 8 se sostiene en papel. El umbral de 6.341 se midió con diez
-reglas de color y veinte prohibiciones compitiendo; esa condición ya no se da.
+Y ese 56% ya no es una alarma, porque la sonda enseñó que a 9.513 la técnica se
+sostiene. Lo que queda por hacer con el prompt es nada; lo que queda es el
+piloto por corpus, que es de otro tipo: lo aprueba el propietario editorial
+mirando láminas.

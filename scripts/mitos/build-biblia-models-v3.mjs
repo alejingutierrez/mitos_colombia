@@ -90,79 +90,49 @@ export function requirementsFor(entity) {
   return stateful && modelStates.length ? [base, stateful] : [base];
 }
 
-/** Palabras vacias que no distinguen un estrato de otro. */
-const VACIAS = new Set("para pero como mas muy este esta estos estas cada solo sola sino desde hasta entre sobre bajo ante tras todo toda todos todas otro otra otros otras cuando donde porque aunque sino mismo misma nunca siempre".split(" "));
-
-const palabras = (texto) => String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-  .replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 3 && !VACIAS.has(w));
-
 /**
- * Parte `plan.visual_system.era` en preambulo y estratos etiquetados.
+ * **El recorte de epoca esta revertido, y la sonda es por que.**
  *
- * Un estrato abre frase y cierra en dos puntos: «Fundacion (la mayoria del
- * corpus):», «B, 1603:», «Republicano del XIX, que es el grueso:». Lo que va
- * antes del primero es preambulo y **se conserva siempre**, porque ahi vive la
- * regla que ordena los estratos («tres estratos que no se mezclan», «el objeto
- * que decide es el alumbrado»).
+ * `era` se estrechaba al estrato en que vive cada ficha. Ahorraba 142
+ * caracteres de media y podia borrar un deslinde: en `choco-afro` el campo no
+ * enumera epocas sino «Entra: ...» y «No entra: ...», el parser leyo esas dos
+ * etiquetas como estratos, se quedo con la lista de inclusion y tiro casi toda
+ * la de prohibiciones — incluido «ningun elemento embera ni wounaan», que el
+ * dossier llama prohibicion total y no graduada.
+ *
+ * Un estrechado seguro tendria que conservar intacta toda frase de
+ * prohibicion, y entonces no ahorra nada: en katios las prohibiciones son la
+ * mitad de cada estrato. El ahorro no paga el riesgo, asi que `era` viaja
+ * entera.
+ *
+ * La otra mitad del fallo tambien queda escrita: `cuycuyes` declara dos capas
+ * y solo una encajaba en el patron de etiqueta, asi que no se estrecho y el
+ * modelo recibio las dos epocas — y dibujo las dos en el mismo cuadro, que es
+ * justo lo que ese dossier prohibe. Detectar mal es tan caro como recortar mal.
  */
-export function splitEra(era) {
-  const texto = String(era || "").trim();
-  const re = /(?:^|(?<=[.;])\s+)([A-ZÁÉÍÓÚÑ][^.;:]{1,45}):\s+/g;
-  const marcas = [...texto.matchAll(re)];
-  if (marcas.length < 2) return { preamble: texto, strata: [] };
-  const preamble = texto.slice(0, marcas[0].index).trim();
-  const strata = marcas.map((m, i) => ({
-    label: m[1].trim(),
-    text: texto.slice(m.index, i + 1 < marcas.length ? marcas[i + 1].index : texto.length).trim(),
-  }));
-  return { preamble, strata };
+
+const TECNICA_3D = /maqueta|tridimensional|\b3d\b|diorama|volum|sombra f[ií]sica|profundidad f[ií]sica/i;
+const TECNICA_2D = /\b2d\b|acabado gr[aá]fico plano|ilustraci[oó]n plana|gr[aá]fico plano|plano sin volumen/i;
+/** «nunca ilustracion plana» PIDE la maqueta: no la contradice. */
+const NEGACION = /\b(nunca|jam[aá]s|sin|ni|no|evitar|prohibid\w*|lejos de)\s*$/i;
+
+/** Quita los tramos negados antes de buscar la contradiccion. */
+function afirmaciones(texto) {
+  const t = String(texto || "");
+  let out = "";
+  for (const m of t.matchAll(new RegExp(TECNICA_2D.source, "gi"))) {
+    const antes = t.slice(Math.max(0, m.index - 40), m.index).replace(/[^\p{L}\s]/gu, " ");
+    if (!NEGACION.test(antes.trimEnd())) out += ` ${m[0]}`;
+  }
+  return out;
 }
 
-/**
- * Una frase de prohibicion absoluta vale para toda la biblia aunque este
- * escrita dentro del ultimo estrato. Santander cierra con «La crinolina de aros
- * no existe antes de 1856 y no entra en la escena de 1828», y esa regla no
- * puede desaparecer porque la ficha viva en el estrato colonial.
- *
- * Exige frase entera: las prohibiciones de estrato van como inciso —«sin metal
- * forjado, sin moneda, sin plata»— y esas si son propias de su capa.
- */
-const PROHIBICION_ABSOLUTA = /(?:^|(?<=[.;])\s*)[^.;]*\b(?:no existe|no entra|no puede|no hay|nunca|jam[aá]s|prohibid)\b[^.;]*[.;]/gi;
-
-/**
- * **Recorte 1.** `era` enumeraba los tres estratos del corpus en las 103
- * laminas de katios cuando a cada ficha le aplica **uno**. Se estrecha al
- * estrato en que esa ficha vive, medido contra lo que el agente escribio en su
- * `design`. Conservador por diseño: si ningun estrato gana con claridad, se
- * devuelven todos. La defensa contra el anacronismo no se negocia por ahorrar.
- */
-export function narrowEra(era, entity) {
-  const { preamble, strata } = splitEra(era);
-  if (!strata.length) return { text: String(era || "") || null, basis: null };
-
-  const d = entity.design || {};
-  const firma = new Set(palabras([d.silhouette, d.palette, d.scale, ...(d.materials || []),
-    ...(d.continuity || []), ...(d.documented || []), entity.description].join(" ")));
-
-  const puntuados = strata.map((s) => {
-    const suyas = new Set(palabras(s.text));
-    let comunes = 0;
-    for (const w of suyas) if (firma.has(w)) comunes += 1;
-    return { ...s, score: comunes / Math.sqrt(suyas.size || 1) };
-  }).sort((a, b) => b.score - a.score);
-
-  const [mejor, segundo] = puntuados;
-  if (!mejor.score || (segundo && mejor.score < segundo.score * 1.3)) {
-    return { text: String(era || ""), basis: "sin estrato dominante: se conservan todos" };
-  }
-
-  // Las prohibiciones absolutas de los estratos descartados viajan igual.
-  const descartadas = strata.filter((s) => s.label !== mejor.label)
-    .flatMap((s) => s.text.match(PROHIBICION_ABSOLUTA) || [])
-    .map((f) => f.trim()).filter(Boolean);
-
-  const text = [preamble, mejor.text, ...descartadas].filter(Boolean).join(" ").trim();
-  return { text, basis: mejor.label };
+export function tecnicaSeContradice(technique, styleMedium) {
+  if (!technique || !styleMedium) return false;
+  const sm2 = afirmaciones(styleMedium);
+  const t2 = afirmaciones(technique);
+  return (TECNICA_3D.test(technique) && Boolean(sm2.trim()))
+    || (Boolean(t2.trim()) && TECNICA_3D.test(styleMedium));
 }
 
 /** Las citas sostienen la ficha; no dirigen el pincel. Siguen en `design_contract`. */
@@ -181,18 +151,19 @@ const CITA = /^((?:corpus|dossier|canon|m[oó]dulo|fuente)\b[^:]{0,40}|[^:]{0,60
 function buildPromptSpec({ plan, entity, purpose, view }) {
   const vs = plan.visual_system || {};
   const technique = vs.technique || "";
-  const era = narrowEra(vs.era, entity);
+  const choca = tecnicaSeContradice(technique, vs.style_medium);
   return {
     use_case: "stylized-concept",
     asset_type: `Biblia visual ${plan.community} V1 - ${purpose}`,
-    technique_first: [technique, vs.style_medium].filter(Boolean).join(" "),
+    technique_first: choca ? technique : [technique, vs.style_medium].filter(Boolean).join(" "),
+    ...(choca ? { style_medium: vs.style_medium } : {}),
     primary_request: `${view.purpose} para ${entity.name}. ${entity.design.silhouette}`,
     composition_framing: `${view.aspect}; mundo full bleed hasta los cuatro limites; ${entity.design.scale}`,
     lighting_mood: vs.lighting || "luz natural lateral suave, sombras fisicas entre capas",
     // La lista de materiales del corpus se repetia identica en cada lamina, y el
     // agente escribio la de su entidad **contra** ella: repetirla es ruido.
     materials_textures: (entity.design.materials || []).join("; "),
-    era: era.text || null,
+    era: vs.era || null,
     constraints: [
       // La silueta ya viaja entera en `primary_request`, y `entity.description`
       // es campo de inventario —lo que la figura hace en todo el corpus—, no de
@@ -272,10 +243,6 @@ export function buildModels(plan) {
         design_status: "ready_for_pilot_review",
         evidence_refs: entity.evidence || [],
         design_contract,
-        // Fuera de `prompt_spec` a proposito: es rastro de auditoria, no
-        // instruccion, y no debe pesar en el prompt. Dice que estrato de epoca
-        // se le dejo a esta ficha y por que, para poder revisar el recorte.
-        era_basis: narrowEra(plan.visual_system?.era, entity).basis,
         prompt_spec: buildPromptSpec({ plan, entity, purpose, view: VIEW_BY_PURPOSE[purpose] }),
         views,
       };
