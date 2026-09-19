@@ -115,6 +115,30 @@ export const emberaSources = {
     limitation:
       "La coordenada representa la confluencia cartográfica, no el alto exacto donde la narración sitúa las casas Burumia.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  dogiramaBurumia19842: source({
+    title: "Los Burumia, relato 19 del capítulo «Historias de guerra», en Zrõarã Nẽburã: historia de los antiguos. Literatura oral emberá",
+    author: "Odilia Dogiramá, narradora; Mauricio Pardo, recopilación; Centro Jorge Eliécer Gaitán, Bogotá",
+    year: 1984,
+    type: "colección de narraciones recogidas en campo",
+    url: "https://pueblosoriginarios.com/textos/embera/burumia.html",
+    summary:
+      "Publica la narración de Odilia Dogiramá, prima de Floresmiro Dogiramá, recogida en el Alto Baudó: los Burumiá en un alto sobre la quebrada Usagará que cae al río Bojayá, el chiquero y la mata de primitivo cuyas frutas al rajarse marcan la hora de matar al cautivo, la vieja y los dos niños criados entre ellos, la guerra librada por error contra los Cuna por gente reunida del Atrato, Lloró, Dubasa, Pató y Munguidó, la fuga en la champa más grande con un perro, el silbido del pájaro buchelé, el explorador convertido en murciélago que cuenta las casas y olvida una, y la huida de los sobrevivientes por la cabecera del Bojayá hasta el río Valle.",
+    limitation:
+      "El libro de 1984 no está digitalizado en un repositorio institucional y este texto es una transcripción en línea que conserva capítulo, número de relato y narradora, pero no se cotejó contra el impreso. Es una narración y no una crónica: no prueba que los hechos ocurrieran, ni que «Burumiá» designe un pueblo históricamente identificable. La edición castellana usa «cholos» para nombrar a los emberá.",
+  }),
+  chMitos1945: source({
+    title: "Mitos, tradiciones y cuentos de los indios Chamí",
+    author: "Milcíades Chaves Ch., en Boletín de Arqueología, volumen I, tomo II, Servicio Arqueológico Nacional",
+    year: 1945,
+    type: "colección etnográfica primaria",
+    url: "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/235/257/1568",
+    summary:
+      "Aporta el hallazgo que reencuadra la ficha: en la nota comparativa al relato Bibidigomia cita al padre Rochereau, recogido entre los Katío, donde «un bibidi cogió de prisioneros a dos burumías y los volvieron eunucos para que engordaran», uno escapa, reúne un ejército de burumías, y una vieja Bibidi indignada por su ración ayuda a que los burumías triunfen. Mismo armazón que el relato de Odilia Dogiramá —dos prisioneros, engorde, una anciana que colabora, fuga y aniquilación del poblado— con los papeles invertidos. Trae además «La india Pixaawina», con captura, castración, engorde, una viejita que ayuda a escapar y la huida río abajo sobre un balso.",
+    limitation:
+      "Los relatos Bibidigomia y Pixaawina los narró Rafael Bailarín, indio katío casado con una mujer chamí, que dijo haberlos aprendido de su abuela: son de otro subgrupo emberá, de otro narrador y de otra región —vereda Corozal, Río Frío, Valle del Cauca— y no pueden fundirse con el relato del Alto Baudó. La cita de Rochereau se leyó aquí de segunda mano; el original no se localizó.",
+  }),
 };
 
 export const defaultEmberaSourceKeys = [

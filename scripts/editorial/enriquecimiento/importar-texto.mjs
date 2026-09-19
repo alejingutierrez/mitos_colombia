@@ -124,7 +124,10 @@ async function poolByUrl() {
 
 // Localiza el bloque de un slug: la llamada de definición que lo envuelve, se
 // llame `myth({`, `defineChamiMyth({` o como sea. Se busca hacia atrás la
-// apertura más cercana con esa forma, y hacia adelante su cierre.
+// apertura más cercana con esa forma, y hacia adelante su cierre. Hay
+// comunidades —barí— cuyas fichas no van envueltas en ninguna llamada: son
+// objetos sueltos dentro de un array, así que abren con `  {` y cierran con
+// `  },`. Se admiten las dos formas y el cierre se elige según la apertura.
 function blockRange(src, slug) {
   const at = src.indexOf(`\n    slug: ${JSON.stringify(slug)},\n`);
   if (at < 0) throw new Error(`${slug}: no encuentro su bloque`);
@@ -132,12 +135,13 @@ function blockRange(src, slug) {
   // campo del bloque, ese salto es a la vez el cierre de la línea de apertura,
   // y dejarlo fuera hacía invisible la apertura del primer mito del archivo.
   const antes = src.slice(0, at + 1);
-  const aperturas = [...antes.matchAll(/\n  [A-Za-z_$][\w$]*\(\{\n/g)];
+  const aperturas = [...antes.matchAll(/\n  (?:[A-Za-z_$][\w$]*\(\{|\{)\n/g)];
   const ultima = aperturas[aperturas.length - 1];
   if (!ultima) throw new Error(`${slug}: no encuentro la apertura de su bloque`);
-  const end = src.indexOf("\n  }),\n", at);
+  const cierre = ultima[0].includes("(") ? "\n  }),\n" : "\n  },\n";
+  const end = src.indexOf(cierre, at);
   if (end < 0) throw new Error(`${slug}: bloque sin cierre`);
-  return [ultima.index, end + "\n  }),\n".length];
+  return [ultima.index, end + cierre.length];
 }
 
 if (usesDefinitions) {

@@ -133,14 +133,62 @@ La diferencia importa. Aquí la serpiente no es castigo ni monstruo: es el padre
     ],
     tags: ["amor", "niño", "transformación", "agua"],
     sourceKeys: [
-      "ninoSerpiente",
-      "literaturaMisak",
-      "namuyMisagIcanh",
-      "bibliografiaGuambia",
-      "solarteCatalogo",
-      "narrativaInfantil",
-      "puebloMisakIcanh",
-      "resguardoGuambia",
+      {
+        key: "uribeGuambianos2001",
+        summary:
+          "Fuente del relato. Publica «La historia de la laguna de Tenebío», tal como la dijo un maestro en un taller en el Núcleo Escolar: el hombre con dientes de oro, los collares de oro, la culebra que quita al niño del seno y se chupa la leche, la prohibición de sacarlo de la cuna y mecerla con un palo, la nube roja sobre el cerro, la serpiente que se mete por los huecos de las tulpas, la laguna nacida de la lluvia y el llanto, la raíz de árbol que sangra al partirla y los hijos de Sierpi con picos de oro. Publica además la segunda versión, la del maestro Miguel Antonio Cuchillo, de Bujíos, a la antropóloga Reineira Argüello.",
+        limitation:
+          "No nombra al maestro que narró la primera versión ni fecha el taller. Escribe la laguna como Tenebío y el cerro como Penebío en la misma página, sin resolver la forma correcta. El marco del artículo es el oro, lo que pudo favorecer la selección de estas dos versiones sobre otras.",
+      },
+      {
+        key: "uribeEntre2002",
+        summary:
+          "Reproduce las dos mismas versiones de la laguna y las encuadra en la serie de historias que relacionan el rayo, el oro, el fuego de la cocina y el agua. Es donde se explicita que Sierpi es pi usri, la madre del agua, y que algunos mayores dicen que es el mismo aroiris, Kosrompoto.",
+        limitation:
+          "El texto es prácticamente idéntico al del Boletín Museo del Oro y no añade narradores ni fecha; la ubicación exacta de la laguna sigue sin precisarse y la doble grafía Tenebío / Penebío se mantiene.",
+      },
+      {
+        key: "vivasAntes2010",
+        summary:
+          "Fija el relato como pieza literaria misak dentro de la sección «Otras narrativas» y aporta la lectura comparativa: la laguna andante como motivo compartido con nasa y pijaos, la extinción de una laguna como sinónimo de infertilidad porque las lagunas son madres, y los paralelos coloniales muiscas de Meicuchuca, el cacique con amante serpiente, y de Hunzahua.",
+        limitation:
+          "Toma el texto de Vasco sin volver a la fuente oral. La transcripción dice primero «les nació una hija» y luego sigue hablando de «el niño», y las anotaciones comparativas son del compilador, no de narradores misak.",
+      },
+      {
+        key: "hijosArcoiris",
+        summary:
+          "Da el contexto sin el cual el relato no se entiende: las tulpas y el fogón como centro de la casa, el régimen de lagunas bravas del páramo, la enfermedad que se contagia donde cae el rayo y la noción de sombra —pantsik, mosik— que explica por qué los hijos de Sierpi matan a quien los ve agarrándole la sombra.",
+        limitation:
+          "El libro no incluye esta historia de la laguna: aporta el marco de creencias, no el relato, y ese marco procede de mayores de veredas distintas de la del maestro que narró Tenebío.",
+      },
+      {
+        key: "bibliografiaGuambia",
+        summary:
+          "Documenta la otra cadena de transmisión, la que produjo el texto que circulaba antes: registra que Solarte Lindo presentó seis mitos guambianos, entre ellos «El niño serpiente», «sin precisar la fuente, reelaborados en forma de cuentos por el autor y puestos en boca de un narrador ficticio: don Zabulón Banderas», con editorial, ciudad, año, páginas e ISBN.",
+        limitation:
+          "Es una ficha bibliográfica con resumen, no el texto de Solarte: permite fechar y atribuir esa cadena, pero no cotejar frase por frase qué añadió el autor. El archivo digital no fecha la compilación y el año se toma de la referencia que ya usaba el módulo.",
+      },
+      {
+        key: "literaturaMisak",
+        summary:
+          "Rastrea la procedencia del relato dentro de la antología del Ministerio de Cultura y lo clasifica: matrimonio sobrenatural y desgracia que sigue a la ruptura de un precepto, con la serpiente bajo la figura del hombre con dientes de oro. Confirma que la fuente es Vasco y no una recopilación escolar.",
+        limitation:
+          "Es un trabajo de grado de sociología que analiza una antología, no el corpus oral: no trabajó en Guambía ni consultó narradores, y su acceso al relato es de tercera mano.",
+      },
+      {
+        key: "puebloMisakIcanh",
+        summary:
+          "Sirve para situar la acción: nombre propio misak, lengua nam trik y el resguardo de Guambía, en Silvia, como el territorio de páramos y lagunas donde la fuente ubica el cerro de Tenebío.",
+        limitation:
+          "Ficha de museo de pocas líneas, sin fecha de publicación ni bibliografía. No menciona la laguna ni el relato, y no contiene material narrativo.",
+      },
+      {
+        key: "leyOrigenMisak",
+        summary:
+          "Aporta la terminología propia con que la ficha nombra el hogar y los seres: namui wam como lengua, el nakchak y el fogón como centro de la casa por donde escapa la serpiente, y la pareja pishimisak–kallim que enmarca la idea de madre del agua.",
+        limitation:
+          "Documento escrito casi todo en namtrik y organizado en tablas de ideogramas; no contiene el relato ni menciona la laguna, y sus traducciones al castellano son literales y muy breves.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: en una loma húmeda de Guambía, el niño se transforma en serpiente junto a la hamaca mientras el agua nacida de su madre comienza a llenar el valle; casa sobria, helechos y montañas en capas planas, sin símbolos inventados, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -211,15 +259,62 @@ Esa última diferencia es la decisiva. En el relato misak la cacería no cierra 
     ],
     tags: ["almas", "pájaro", "moralidad", "consecuencias"],
     sourceKeys: [
-      "namuyMisagIcanh",
-      "pajaroAlmas",
-      "bibliografiaGuambia",
-      "solarteCatalogo",
-      "narrativaInfantil",
-      "rappaport2024",
-      "puebloMisakIcanh",
-      "papiroAni",
-      "hesiodoKeres",
+      {
+        key: "hijosArcoiris",
+        summary:
+          "Fuente del relato. El capítulo «Seres de la muerte» describe a Yemwasro, ave con forma de águila que chilla de noche y procede del árbol de páramo yemkuasro; a Kuawera, «en figura como de un perro, pero que viene por el aire, latiendo en la media noche»; al búho que espanta la sombra fuera del cuerpo; y a Kuanmusik, el chiflador, con figura de gente, que silba para lanzarlos contra el mosik hasta acorralarlo contra un monte alto o una peña, picarlo y tragárselo, de donde viene la fórmula mirayen pinan. Aporta además las tres candelillas —Paponak, Pulopikonak y Kuaykmusiknak—, la kosapik verde del que agoniza y la mariposa Pirrero.",
+        limitation:
+          "El capítulo es una exposición del sistema de sombras, no un relato con trama: enumera seres y funciones sin narrador identificado para cada uno. El PDF disponible es la segunda edición, de 2015, y la nomenclatura de los pantsik varía de párrafo a párrafo.",
+      },
+      {
+        key: "bibliografiaGuambia",
+        summary:
+          "Fija el origen del título con el que este mito circula. Registra que «El Pájaro que se come las almas» es uno de los seis relatos que Fernando Solarte Lindo publicó en 1980, con editorial, páginas e ISBN, «sin precisar la fuente, reelaborados en forma de cuentos por el autor y puestos en boca de un narrador ficticio: don Zabulón Banderas». Los otros cinco títulos son, uno por uno, los demás slugs misak del sitio.",
+        limitation:
+          "Resume el libro de Solarte pero no lo reproduce: permite fechar y atribuir la reelaboración, no cotejar qué elementos son suyos. El archivo digital no fecha la compilación.",
+      },
+      {
+        key: "uribeGuambianos2001",
+        summary:
+          "Documenta otro devorador de sombras del mismo corpus: los hijos de Sierpi, calabazos y animales con picos de oro que aparecen en la laguna trasladada arriba de Siberia y «agarran la sombra de quienes los ven, y al poco tiempo se mueren».",
+        limitation:
+          "La mención es un inciso dentro del relato de la laguna de Tenebío: no describe a estos seres, no los relaciona con los de la muerte y el artículo está organizado alrededor del oro.",
+      },
+      {
+        key: "uribeEntre2002",
+        summary:
+          "Reitera el pasaje de los hijos de Sierpi con picos de oro y sitúa el conjunto dentro de la relación entre rayo, oro, fogón y agua, lo que permite leer a los cazadores de sombra como parte de un mismo sistema y no como criaturas sueltas.",
+        limitation:
+          "Repite casi literalmente el texto del Boletín Museo del Oro y no vuelve sobre los seres de la muerte; el libro subordina los relatos a una argumentación sobre método y lucha política.",
+      },
+      {
+        key: "namuyMisagIcanh",
+        summary:
+          "Es la obra a la que el módulo atribuía el nombre Kcrey, a través de una entrada de índice sobre un espíritu de persona y un ave mágica. Queda registrada como la referencia que habría que cotejar en papel para sostener o retirar ese nombre del título.",
+        limitation:
+          "Solo pudo consultarse por su ficha editorial del ICANH, correspondiente a la edición crítica de 2019: el índice publicado en esa página no incluye la entrada, el libro de 1949 no está en acceso abierto y el nombre Kcrey no pudo verificarse en ninguna fuente consultable.",
+      },
+      {
+        key: "rappaport2024",
+        summary:
+          "Explica por qué el libro de 1949 no puede citarse como transcripción: Hernández de Alba redujo los relatos de Tumiñá a un solo género de expresión, los recortó a dos páginas, elevó el lenguaje por encima de la voz del narrador e insertó marcos autorales. Es el criterio con que esta ficha trata cualquier atribución a esa obra, incluida la del nombre del ave.",
+        limitation:
+          "El artículo no trata este relato ni menciona ningún ave devoradora de almas: aporta el criterio filológico sobre la fuente de 1949, no contenido sobre el mito.",
+      },
+      {
+        key: "puebloMisakIcanh",
+        summary:
+          "Fija el nombre propio misak, la lengua nam trik y el resguardo de Guambía, marco mínimo para nombrar a los seres del relato sin recurrir al exónimo.",
+        limitation:
+          "Ficha de museo de pocas líneas, sin fecha de publicación ni bibliografía; no contiene material narrativo ni menciona el sistema de sombras.",
+      },
+      {
+        key: "hesiodoKeres",
+        summary:
+          "Término de comparación: las Keres son figuras aladas y oscuras que rondan a los caídos y disputan a los moribundos, lo que permite contrastar el vuelo y la espera junto al que se va con lo que en el relato misak es específico, el ladrido, el silbato del chiflador y el regreso anual de la sombra a comer las ofrendas.",
+        limitation:
+          "Fuente literaria griega arcaica, de atribución discutida dentro del propio corpus hesiódico y sin relación histórica con los Andes; sirve para contrastar motivos, nunca para completar el relato.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: Kcrey, enorme ave nocturna de pico dentado y garras, cruza un cañón arbolado de Guambía siguiendo pequeñas almas luminosas sobre el río; luna, hondonadas y vegetación en capas planas, sin gore, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -295,14 +390,69 @@ Fuera del Cauca, Zeus hace tronar y lanza el rayo en el canto VIII de la Ilíada
     ],
     tags: ["Palayg", "trueno", "naturaleza", "transformación"],
     sourceKeys: [
-      "hijosArcoiris",
-      "namuyMisagIcanh",
-      "rappaport2024",
-      "bibliografiaGuambia",
-      "solarteCatalogo",
-      "puebloMisakIcanh",
-      "lagunaPiendamo",
-      "homeroZeus",
+      {
+        key: "hijosArcoiris",
+        summary:
+          "Fuente del relato, con cinco narradores nombrados: el profesor Miguel Antonio Cuchillo T., de boca de un mayor, para el robo de la vara entre hermanos; Jacinta y Bárbara Muelas, exterrajeras del Chimán, para la pelea por los alimentos, la lengua arrancada y la minga que clava el bastón en un mejicano verde; el exgobernador Segundo Tunubalá y Cruz Tunubalá, de Cacique, para las versiones en que el ladrón es un trabajador; y el mayor Julián Cantero, de San Fernando, al profesor Miguel Antonio Tombé Tumiñá, para páramo y aguacero con espadas. Trae el nakporotsik o vara de candela, la nube como caballo blanco, los tres rayos de cada hermano, la enfermedad del piru y el kel como único remedio.",
+        limitation:
+          "El capítulo yuxtapone versiones de veredas distintas sin jerarquizarlas ni fecharlas, y el mayor que narró a Cuchillo no está nombrado. El relato publicado combina dos de esas versiones, cosa que la fuente no hace. El PDF disponible es la segunda edición, de 2015.",
+      },
+      {
+        key: "uribeGuambianos2001",
+        summary:
+          "Aporta la clave que liga el rayo con el oro y el maíz: Purayatun, la casa de Srekollimisak, significa «cerro de la casa del maíz», y de ahí la conjetura de que el oro sea el maíz aún no entregado por Pishimisak a la gente. Describe también la sresruk o piedra de la lluvia, con una variante de páramo, de Kosrokollimisak, y otra de aguacero, de Srekollimisak.",
+        limitation:
+          "La conjetura sobre el oro como maíz es del antropólogo, que advierte expresamente que sus análisis no comprometen a los taitas del Comité de Historia. El artículo fue encargado por el Museo del Oro y prioriza ese hilo sobre el resto del ciclo.",
+      },
+      {
+        key: "uribeEntre2002",
+        summary:
+          "Sitúa a los dos rayos dentro de la lectura larga del trabajo de Vasco en Guambía y repite el material sobre las piedras de lluvia y las casas de Srekollimisak en los cerros altos, que es la base de la explicación sobre por qué el aguacero se fue cuando se quemó el monte.",
+        limitation:
+          "Los pasajes sobre los rayos aparecen como citas dentro de una argumentación metodológica y política; el libro no añade narradores nuevos para este relato.",
+      },
+      {
+        key: "vivasAntes2010",
+        summary:
+          "Publica el ciclo como literatura misak en cuatro piezas separadas —«Dos hermanos ya muy mayores», «La pelea de Srekөllik con Kөsrөkөllik», «La vara de Srepalei» y «El robo de la vara»—, lo que confirma que la tradición se transmite en episodios distintos y no como un relato único.",
+        limitation:
+          "Toma los cuatro textos del libro del Comité de Historia sin volver a los narradores, y los acompaña de notas interpretativas del compilador que no son voz misak.",
+      },
+      {
+        key: "bibliografiaGuambia",
+        summary:
+          "Documenta la cadena tardía: «El viejo Tempestad» es uno de los seis relatos que Solarte Lindo publicó en 1980 sin indicar fuente y en boca del narrador ficticio don Zabulón Banderas, y de ahí viene la figura de Palayg como anciano único que salta de nube en nube. Registra además el cuaderno «Srekollimisak. Historia del señor aguacero» (ICANH, 1994), de los mismos autores del libro de 1998.",
+        limitation:
+          "Es una bibliografía con resúmenes: no reproduce ni el texto de Solarte ni el cuaderno de 1994, que no se localizó en acceso abierto. El archivo digital no fecha la compilación.",
+      },
+      {
+        key: "literaturaMisak",
+        summary:
+          "Confirma la procedencia de los cuatro episodios del ciclo dentro de la antología del Ministerio de Cultura y los adjudica al libro de 1998 del Comité de Historia, caracterizando esa obra como trabajo colectivo del cabildo con mayores, gobernadores y exterrajeros.",
+        limitation:
+          "Trabajo de grado que analiza una antología, no el corpus oral: no trabajó en Guambía, no consultó a los narradores y no discute las diferencias entre las versiones del ciclo.",
+      },
+      {
+        key: "namuyMisagIcanh",
+        summary:
+          "Es la obra a la que se atribuye una entrada sobre el rayo, palayg, término que esta ficha conserva solo como designación del rayo y no como nombre propio del anciano único de la reelaboración literaria.",
+        limitation:
+          "Solo pudo consultarse por su ficha editorial del ICANH; el libro de 1949 no está en acceso abierto y la entrada sobre el rayo no pudo verificarse en el índice publicado.",
+      },
+      {
+        key: "puebloMisakIcanh",
+        summary:
+          "Fija nombre propio, lengua nam trik y territorio —el resguardo de Guambía en Silvia, con los páramos de Las Delicias y el Pisno—, que es el escenario alto y bajo entre el que se reparten los dos rayos.",
+        limitation:
+          "Ficha de museo de pocas líneas, sin fecha de publicación ni bibliografía, sin contenido narrativo.",
+      },
+      {
+        key: "homeroZeus",
+        summary:
+          "Término de comparación: Zeus truena y lanza el rayo como signo de soberanía sobre los demás dioses, lo que permite medir por contraste a un rayo que envejece, se enferma, necesita una laguna y una peña firme, puede ser desarmado por su hermano o por una minga y termina negociando su devolución.",
+        limitation:
+          "Fuente literaria griega arcaica sin relación histórica con los Andes; sirve para contrastar motivos, no para explicar ni completar el relato.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: Srekollimisak, anciano rayo del aguacero, sostiene un bastón con fuego sobre una laguna mientras Kosrokollimisak llega con viento frío desde el páramo; rayos blancos y azules, cultivos altos y nubes en capas planas, sin Zeus ni Thor, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -372,14 +522,69 @@ Fuera del Cauca, Eolo guarda los vientos en el canto X de la Odisea y se los ent
     ],
     tags: ["Tombé", "viento", "naturaleza", "transformación"],
     sourceKeys: [
-      "hijosArcoiris",
-      "namuyMisagIcanh",
-      "rappaport2024",
-      "bibliografiaGuambia",
-      "solarteCatalogo",
-      "narrativaInfantil",
-      "puebloMisakIcanh",
-      "homeroEolo",
+      {
+        key: "hijosArcoiris",
+        summary:
+          "Fuente del relato, con narradores y recopiladora nombrados: los mayores María Jesusita Yalanda, Floro Cuchillo y Antonio Aranda se lo contaron a la profesora Clemencia Morales Tombé. Trae la pareja que limpia el rastrojo, la quema, la cueva, el reparto de caminos entre Padre Viento y los Vientos Hijos, la esposa convertida en remolino y la relación entre el choque de vientos hermanos y el rayo. Incluye la segunda memoria, la de la ruana de nube que el padre sacude por el ruedo, y la discusión etimológica: tumpi como el agua del cerro de arriba y tumpe como mata de hojas anchas que al moverse suena como el viento.",
+        limitation:
+          "La segunda memoria se atribuye solo a «algunos mayores», sin nombres. La propia fuente deja abierta la grafía y no decide entre Tombe, Tumpe y Tumpi. El PDF disponible es la segunda edición, de 2015.",
+      },
+      {
+        key: "tunubalaSegundo2009",
+        summary:
+          "Registra a Tumpe como nombre de linaje y no solo de fenómeno: lo enumera entre los shurmera, los mayores de quienes desciende la gente, junto a Piendamú, Calambás, Tesha de la Estrella, Karamaya, Manuela y Dominga.",
+        limitation:
+          "Documento de planeación política: da la lista sin relato ni explicación, y no aclara si ese Tumpe es el mismo personaje del relato del viento o un homónimo.",
+      },
+      {
+        key: "vivasAntes2010",
+        summary:
+          "Publica «Piunɵ», de Bárbara Muelas, donde figura Isik Tumpe dentro de la serie de nombres que el Pishimisak fue poniendo «de dos en dos», lo que refuerza la lectura del viento como parentesco y no como fuerza suelta.",
+        limitation:
+          "La mención es una línea dentro de una lista de nombres. El texto se reproduce fuera de su libro de origen y va acompañado de notas del compilador que no son voz misak.",
+      },
+      {
+        key: "bibliografiaGuambia",
+        summary:
+          "Documenta la cadena tardía: «El Viento y sus hijos» es uno de los seis relatos que Solarte Lindo publicó en 1980, sin indicar la fuente y en boca del narrador ficticio don Zabulón Banderas, con editorial, páginas e ISBN.",
+        limitation:
+          "Resume el libro sin reproducirlo: permite fechar y atribuir la reelaboración, no cotejar qué añadió el autor. El archivo digital no fecha la compilación.",
+      },
+      {
+        key: "literaturaMisak",
+        summary:
+          "Confirma la procedencia del corpus misak antologado y la naturaleza colectiva del libro de 1998, que es donde está la versión atribuida a los tres mayores, frente a las reescrituras de circulación escolar.",
+        limitation:
+          "Trabajo de grado sobre una antología, no sobre la tradición oral: no incluye este relato entre los analizados y no discute las variantes del viento.",
+      },
+      {
+        key: "namuyMisagIcanh",
+        summary:
+          "Obra de referencia de la primera capa escrita sobre Guambía, a la que se atribuye una entrada sobre el viento; queda como la fuente que habría que cotejar en papel para fechar la memoria de los zamarros.",
+        limitation:
+          "Solo pudo consultarse por su ficha editorial del ICANH; el libro de 1949 no está en acceso abierto y la entrada sobre el viento no pudo verificarse en el índice publicado.",
+      },
+      {
+        key: "leyOrigenMisak",
+        summary:
+          "Aporta la base lingüística para tratar la grafía del nombre: registra namui wam como lengua propia y el sistema de ideogramas y correspondencias con que la Misak Universidad está fijando la escritura, que es el marco en el que se decide entre Tombe, Tumpe y Tumpi.",
+        limitation:
+          "Está escrito casi todo en namtrik y organizado en tablas; no contiene el relato del viento ni discute este nombre en particular.",
+      },
+      {
+        key: "puebloMisakIcanh",
+        summary:
+          "Fija nombre propio, lengua nam trik y el resguardo de Guambía con sus páramos, que es el escenario alto por donde sopla el Padre Viento frente a las guaicadas por donde ventean los hijos.",
+        limitation:
+          "Ficha de museo de pocas líneas, sin fecha de publicación, sin bibliografía y sin contenido narrativo.",
+      },
+      {
+        key: "homeroEolo",
+        summary:
+          "Término de comparación: Eolo guarda los vientos y se los entrega a Odiseo encerrados en un odre, lo que permite contrastar una autoridad que aprisiona fuerzas del aire con una familia en la que padre, madre e hijos tienen cada uno un camino propio y permanente por el páramo, las lomas y las guaicadas.",
+        limitation:
+          "Fuente literaria griega sin relación histórica con los Andes; sirve para contrastar motivos, no para completar el relato.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: Tumpe como padre viento cruza las cumbres del páramo mientras sus hijos, corrientes más pequeñas, recorren lomas y guaicadas cerca de una comunidad Misak; la esposa aparece como remolino, aire y montañas en capas planas, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -453,14 +658,69 @@ La comparación con una diosa guerrera no aclara nada aquí. Lo propio de esta h
     ],
     tags: ["Mama Manuela", "cultura", "protección", "transformación"],
     sourceKeys: [
-      "rappaport2024",
-      "mamaManuelaArtesanias",
-      "namuyMisagIcanh",
-      "leyOrigenMisak",
-      "hijosArcoiris",
-      "literaturaMisak",
-      "puebloMisakIcanh",
-      "territorioGuambia",
+      {
+        key: "rappaport2024",
+        summary:
+          "Reconstruye la genealogía del relato a partir del archivo del Instituto Etnológico de la Universidad del Cauca: Cayetana, tía de Francisco Tumiñá Pillimué, se lo contó en namtrik y ella lo había oído de su abuelo Domingo Tombé; Tumiñá volvió de su vereda el 19 de agosto de 1947 con dibujos y un texto en castellano sobre doña Manuela Caramaya. Resume el original —el espionaje a los pijaos, su transformación en frailejones, el bautizo forzado de los dos hijos, la entrada en la peña y las salidas para dar de comer a los cuyes— y describe el dibujo de Tumiñá, con el ramo de lechero, la piedra, los animales pequeños y la peña enorme. Documenta lo que Hernández de Alba sobrepuso: dos capítulos, orden invertido y la fórmula «la Maga protectora».",
+        limitation:
+          "Todo lo que se sabe del manuscrito llega a través del artículo: los originales (BLAA, ms. 1924 y ms. 1323) no están digitalizados y no fue posible cotejar el texto de Cayetana ni las variantes que el archivo conserva.",
+      },
+      {
+        key: "vivasAntes2010",
+        summary:
+          "Publica «Piunɵ / Los hijos del agua», de Bárbara Muelas, la versión misak escrita que contradice a la anterior: Mama Manela Karamaya no es una autoridad antigua sino uno de los dos hijos del agua sacados del río con rejo junto a Mutauta Kasik; Pishimisak les pone los nombres y a ella le da tres porque conocía más y pensaba mejor; él se convierte en agua al ser apresado y deja un ojo de agua en Nuyapalɵ; ella enseña a trabajar en grande, a sembrar el agua por primera vez y también el trigo, y entra por la puerta que tenía construida en la peña anunciando que se va al kansrɵ porque su casa es la laguna.",
+        limitation:
+          "Es una antología: el texto se reproduce fuera de su libro de origen, «La fuerza de la gente» (2005) del taita Lorenzo Muelas, y las notas comparativas que lo acompañan son del compilador y no de la autora.",
+      },
+      {
+        key: "tunubalaSegundo2009",
+        summary:
+          "Da la lista oficial del cabildo y contradice el nombre compuesto: Mama Caramaya, Mama Manuela, Mama Dominga y Tata Siro figuran como cuatro primeras autoridades misak distintas, sabios «que orientaban la unidad, defendían el espacio o territorio grande donde vivían y trabajaban en común las tierras y las artes», con la autoridad delegada por Pishimisak a través del cacique mayor Payan.",
+        limitation:
+          "Documento de planeación política: enumera sin narrar, no cita narradores ni explica en qué se apoya la lista, y no aborda la relación entre Caramaya y Manuela ni la contradicción con el nombre compuesto.",
+      },
+      {
+        key: "mamaManuelaArtesanias",
+        summary:
+          "Documenta la vigencia contemporánea de la figura entre las tejedoras: la llaman Mama Manuela o Cacica Manela, le atribuyen la enseñanza del isik kup, el hilado de madejas de lana, y del cultivo, y sitúan su retiro en el cerro Nuyapalo, hoy vereda San Fernando, con el anuncio de que un día volverían sus hijos, semillas y animales.",
+        limitation:
+          "Es una nota de divulgación institucional publicada por el mes de las madres, sin trabajo de campo propio: reelabora el Segundo plan de vida y dos tesis universitarias, y transcribe «Tata Siro» marcando ella misma la duda con un «(SIC)».",
+      },
+      {
+        key: "hijosArcoiris",
+        summary:
+          "Aporta el sustrato territorial y un dato de contraste: registra a mama Dominga, en la visión de los sueños, como la figura en que aparece Pishimisak, mujer de Kallim, distinta de la autoridad humana del mismo nombre; y documenta que Camaya sigue siendo apellido vivo en Guambía, al incluir a Manuela Camaya, de San Pedro, entre las mayoras que dieron su voz al Comité de Historia.",
+        limitation:
+          "El libro no narra la historia de Mama Manuela: aporta contexto y homonimias, y no permite decidir si la mama Dominga de los sueños y la de la lista de autoridades son la misma.",
+      },
+      {
+        key: "namuyMisagIcanh",
+        summary:
+          "Es la obra donde el relato se publicó por primera vez, en 1949, partido en dos capítulos por Hernández de Alba y acompañado de los dibujos de Francisco Tumiñá Pillimué.",
+        limitation:
+          "Solo pudo consultarse por su ficha editorial del ICANH, correspondiente a la edición crítica de 2019: el texto de 1949 no está en acceso abierto y no fue posible cotejar directamente los dos capítulos ni las láminas.",
+      },
+      {
+        key: "bibliografiaGuambia",
+        summary:
+          "Aporta una atribución que compite con la de Rappaport: describe el libro de 1949 diciendo que los textos que acompañan los dibujos se basan en relatos recopilados por Tumiñá con su abuela, no con su tía Cayetana. Registra además que «La Mama grande» es uno de los seis relatos reelaborados por Solarte Lindo en 1980 con narrador ficticio.",
+        limitation:
+          "Son fichas bibliográficas con resumen: no reproducen ni el libro de 1949 ni el de Solarte, y la discrepancia entre la abuela y la tía queda sin resolver. El archivo digital no fecha la compilación.",
+      },
+      {
+        key: "literaturaMisak",
+        summary:
+          "Identifica y describe el relato de Bárbara Muelas dentro de la antología y precisa su origen —el libro «La fuerza de la gente» (2005), del taita Lorenzo Muelas— y su alcance: el paso de Mama Manuela Karamaya y su compañero por el territorio y su tránsito a las lagunas anunciando el retorno y pidiendo que su enseñanza se cumpla.",
+        limitation:
+          "Trabajo de grado de sociología sobre una antología: no consultó el libro de 2005 en su contexto ni trabajó con narradores, y transcribe el nombre del compañero como «Matauta Kasik» frente al «Mutauta Kasik» de la antología.",
+      },
+      {
+        key: "puebloMisakIcanh",
+        summary:
+          "Fija el nombre propio misak, la lengua nam trik y el resguardo de Guambía, en Silvia, que es el territorio que la protagonista defiende y donde está el cerro de Nuyapalo.",
+        limitation:
+          "Ficha de museo de pocas líneas, sin fecha de publicación ni bibliografía; no menciona a Mama Manuela ni a las autoridades antiguas.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: Mama Manuela Caramaya sobre una piedra con un ramo de lechero protege casas de paja y cultivos de Guambía mientras dos guerreros se transforman en frailejones; paisaje de páramo en capas planas, sin honda gigante, lluvia de oro ni animales sagrados, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -532,15 +792,69 @@ Fuera del Cauca, Ovidio cuenta cómo Deucalión y Pirra sobreviven a la inundaci
     ],
     tags: ["Pedro", "diluvio", "renovación", "magia"],
     sourceKeys: [
-      "namuyMisagIcanh",
-      "rappaport2024",
-      "literaturaMisak",
-      "bibliografiaGuambia",
-      "solarteCatalogo",
-      "narrativaInfantil",
-      "puebloMisakIcanh",
-      "genesisDiluvio",
-      "ovidioDiluvio",
+      {
+        key: "vivasAntes2010",
+        summary:
+          "Publica el texto íntegro de «La tierra era bien plana», que es el relato entero: la tierra plana como una mesa, Pedro Urdinales que hace inundar todito con el agua, la gente y los animales subidos al plano, el peso que arranca la loma y la loma que viene a dar a un punto lejano. Documenta además cómo entró el personaje —es el mismo Pedro Arrimales de la literatura pijao, incorporado como héroe astuto y burlón que a menudo presenta los rasgos del colonizador engañoso, tradición indígena con influencia popular española— y publica el segundo Pedro misak, la «Historia de Pedro Ordimales con el arco iris», donde pierde la apuesta y se convierte en flauta para poder bajar.",
+        limitation:
+          "No vuelve a la fuente oral: toma el fragmento del diluvio de Hugo Portela (2000), que a su vez lo toma del libro de 1949, y el relato del arco iris de Agredo y Marulanda (1998). Las notas sobre el origen del personaje son interpretación del compilador, no voz misak.",
+      },
+      {
+        key: "rappaport2024",
+        summary:
+          "Fecha el registro: entre el 1.º y el 16 de julio de 1947, en Popayán, John Howland Rowe y Francisco Tumiñá Pillimué cerraron su primera tanda de entrevistas con varios relatos sobre el embaucador Pedro de Urdimales, lo que sitúa al personaje dentro del repertorio misak dictado por un investigador nombrado por su propio cabildo. Aporta también el criterio para tratar el libro de 1949, cuyos textos Hernández de Alba redujo, recortó y reescribió.",
+        limitation:
+          "Menciona los relatos de Pedro sin reproducir ninguno; los apuntes de Rowe conservados en la Biblioteca Luis Ángel Arango no están digitalizados y no se pudo saber cuántos eran ni de qué trataban.",
+      },
+      {
+        key: "namuyMisagIcanh",
+        summary:
+          "Es la obra de la que procede el fragmento: «La tierra era bien plana» se atribuye a Hernández de Alba y Tumiñá, y de ahí lo cita Portela y después la antología del Ministerio de Cultura.",
+        limitation:
+          "Solo pudo consultarse por su ficha editorial del ICANH; el texto de 1949 no está en acceso abierto, no fue posible cotejar la transcripción y la obra no indica quién narró el fragmento.",
+      },
+      {
+        key: "literaturaMisak",
+        summary:
+          "Reconstruye la cadena de transmisión: «La tierra era bien plana» está citado por Portela (2000) pero su autoría corresponde a Hernández y Tumiñá, y lo clasifica como mito de inversión cósmica y fragmento picaresco. Describe también la «Historia de Pedro de Ordimales con el arco iris», atribuida a Agredo y Marulanda, como combate sobrenatural y paso al intramundo.",
+        limitation:
+          "Trabajo de grado que analiza una antología, no el corpus oral: su acceso al fragmento es de tercera mano y data el libro de Hernández y Tumiñá en 1965, siguiendo la edición que consultó Portela.",
+      },
+      {
+        key: "bibliografiaGuambia",
+        summary:
+          "Documenta la cadena tardía: «Pedro: el mago travieso» es el primero de los seis relatos que Solarte Lindo publicó en 1980, «sin precisar la fuente, reelaborados en forma de cuentos por el autor y puestos en boca de un narrador ficticio: don Zabulón Banderas», de donde vienen el tambor que hace de arca, las parejas de animales y los temblores provocados desde la tumba.",
+        limitation:
+          "Resume el libro sin reproducirlo: permite atribuir y fechar la ampliación, no cotejarla frase por frase. El archivo digital no fecha la compilación.",
+      },
+      {
+        key: "hijosArcoiris",
+        summary:
+          "Aporta el contraste interno que la ficha necesita: el derrumbe que en el corpus misak es pirran uno, «parir el agua», y que trae a los primeros habitantes, frente a una inundación que no trae a nadie y solo desplaza a los que ya estaban. Documenta también que las guaicadas y las peñas actuales se explican por el paso del agua sobre lo que antes era pura montaña.",
+        limitation:
+          "El libro no incluye ningún relato de Pedro de Urdimales: aporta el término de comparación interno, no el mito, y el PDF disponible es la segunda edición, de 2015.",
+      },
+      {
+        key: "uribeGuambianos2001",
+        summary:
+          "Documenta el otro accidente del terreno que se desplaza en el corpus misak: la laguna de Tenebío, que tras secarse «se fue arriba de Siberia, en el sitio que llaman La Laguna», paralelo directo de la loma que viaja.",
+        limitation:
+          "La mención está dentro del relato de la laguna y allí no se relaciona con Pedro ni con la inundación; el artículo está organizado alrededor del oro.",
+      },
+      {
+        key: "puebloMisakIcanh",
+        summary:
+          "Fija el nombre propio misak y el resguardo de Guambía, en Silvia, cuyo relieve de lomas y hondonadas es precisamente lo que el relato explica.",
+        limitation:
+          "Ficha de museo de pocas líneas, sin fecha de publicación ni bibliografía y sin contenido narrativo.",
+      },
+      {
+        key: "ovidioDiluvio",
+        summary:
+          "Término de comparación: Deucalión y Pirra sobreviven a la inundación enviada por Zeus y recrean la humanidad arrojando piedras, lo que permite señalar que en Guambía nadie es elegido ni se salva por virtud y que el resultado no es una humanidad nueva sino un paisaje nuevo.",
+        limitation:
+          "Fuente literaria grecolatina sin relación histórica con los Andes; sirve para contrastar el motivo del diluvio, no para explicar el relato misak.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: Pedro de Urdimales observa cómo una inundación cubre la antigua planicie de Guambía y una loma cargada de personas y animales se desprende y viaja sobre el agua; relieve andino en capas planas, sin arca, tambor salvador ni parejas ordenadas, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",

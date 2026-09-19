@@ -126,10 +126,24 @@ test("corrige la cosmogonía heredada y distingue los núcleos añadidos", () =>
   }
   assert.match(bees.content, /Rukwa/i);
   assert.match(bees.content, /Kanwar[aá]/i);
-  assert.match(bees.content, /Rayria/i);
+  // «Rayria» era un topónimo mal transcrito: en Osborn la palabra es raiya,
+  // «riqueza», y Raiya nombra a la vez un lago y una deidad femenina del mundo
+  // amarillo. La ficha usa ahora la forma de la fuente.
+  assert.match(bees.content, /\braiya\b/i);
+  assert.doesNotMatch(bees.content, /Rayria/i);
+  // Y restituye la mitad del mito que faltaba: el segundo grupo de abejas,
+  // las engañadas en el lago rojo, y el segundo guía.
+  assert.match(bees.content, /Rúwahama/);
   assert.match(kubashoa.content, /tabaco/i);
   assert.doesNotMatch(kubashoa.mito, /Kusbasha/i);
-  assert.match(kubashoa.versiones, /Kusbasha es quien enfrenta a Lisha/i);
+  // Antes se exigía una frase literal sobre la variante «Kusbasha». La
+  // reescritura vuelve a la forma que usa la narración de Minsaka y pone en
+  // Versiones lo que de verdad hay que declarar: que el mismo libro se
+  // contradice sobre quiénes son los Tiga, y que el nombre está documentado en
+  // Norte de Santander y no en el corpus del Cocuy que levantó Osborn.
+  assert.match(kubashoa.versiones, /Tiga/);
+  assert.match(kubashoa.versiones, /glosario/i);
+  assert.match(kubashoa.versiones, /Osborn/);
 });
 
 test("la landing usa U’wa como nombre público y explica el alcance", () => {

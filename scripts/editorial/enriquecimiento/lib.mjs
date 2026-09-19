@@ -268,6 +268,20 @@ export function validateRecord(record, { texto = true, fuentes = true } = {}) {
   return errors;
 }
 
+const sinTildes = (v) => String(v || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+/**
+ * ¿Similitudes nombra la obra comparativa concreta? Se mira el apellido del
+ * autor y las palabras largas del título —«Metamorfosis», «Deucalión»,
+ * «Odisea»—, que es como se cita un paralelo cuando se cita de verdad.
+ */
+function mencionaLaObra(source, similitudes) {
+  const texto = sinTildes(similitudes);
+  const autor = sinTildes(source?.author).split(/[;,(]/)[0].split(/\s+/).filter((w) => w.length > 3);
+  const titulo = sinTildes(source?.title).split(/[^a-z0-9]+/).filter((w) => w.length > 5);
+  return [...autor, ...titulo].some((w) => texto.includes(w));
+}
+
 /** Señales de relevancia de una fuente dentro de un mito. Devuelve etiquetas (vacío = limpia). */
 export function sourceFlags(source, record) {
   const flags = [];
@@ -275,7 +289,15 @@ export function sourceFlags(source, record) {
   if (/\.$/.test(url)) flags.push("URL_TERMINA_EN_PUNTO");
   if (/^http:\/\//.test(url)) flags.push("HTTP_SIN_TLS");
   for (const rule of COMPARATIVE_HOSTS) {
-    if (rule.host.test(url) && !rule.mentions.test(String(record?.similitudes || ""))) flags.push(`COMPARATIVA_SIN_PARALELO_EN_SIMILITUDES:${rule.label}`);
+    // La regla del dominio nombra un paralelo representativo, pero un mismo
+    // repositorio sirve a muchos: Perseus publica a Hesíodo, a Homero y a
+    // Ovidio. Lo que hay que exigir es que Similitudes nombre **este**
+    // paralelo, así que primero se busca al autor y a las palabras del título
+    // de la propia fuente; la lista del dominio queda como red de seguridad.
+    if (!rule.host.test(url)) continue;
+    const similitudes = String(record?.similitudes || "");
+    if (rule.mentions.test(similitudes) || mencionaLaObra(source, similitudes)) continue;
+    flags.push(`COMPARATIVA_SIN_PARALELO_EN_SIMILITUDES:${rule.label}`);
   }
   if (WEAK_HOSTS.some((h) => h.test(url))) flags.push("DOMINIO_DEBIL");
   if (String(source?.type || "").toLowerCase().includes("wikipedia")) flags.push("DOMINIO_DEBIL");

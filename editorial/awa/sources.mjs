@@ -86,6 +86,41 @@ export const awaSources = {
     summary:
       "Aproximación etnográfica que registra un ciclo relacionado: cazadores, el dueño de los armadillos Kuesmasú y una hormiga arriera que ayuda a salir del mundo de abajo.",
   },
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  aCIESNATachi2005: {
+    title: "Tachi Ode T'tadama: Retomemos nuestro camino. Plan de Vida del Pueblo Eperara Siapidaara",
+    author: "Asociación de Cabildos Indígenas Eperara Siapidaara de Nariño (ACIESNA)",
+    year: 2005,
+    type: "plan de vida de una asociación de cabildos",
+    url: "https://centrodocumental.corape.org.ec/wp-content/uploads/2022/01/documento-149-retomemos-nuestro-camino.pdf",
+    summary:
+      "Sostiene el paralelo declarado en la capa de similitudes: Tachi Akhore siembra una palma de werre o chontaduro, la tumba, raja el tronco en estacas puntiagudas y las clava en hilera sobre la playa de Pizarro; a medianoche, con un rejo de yaré y cuatro golpes, las llama y se levantan convertidas en personas. Permite comparar dos maneras vecinas de hacer que materia vegetal del territorio se vuelva gente.",
+    limitation:
+      "Es una fuente del pueblo Eperara Siapidaara, no del pueblo Awá: son pueblos y lenguas distintos y la obra se cita aquí únicamente como término de comparación declarado. La semejanza de operación no implica préstamo, contacto ni origen común, y nada de este documento describe el relato awá.",
+  },
+  aCIESNAresolucion2020: {
+    title: "La resolución de conflictos en el pueblo Eperara Siapidaara",
+    author: "Asociación de Cabildos Indígenas Eperara Siapidaara de Nariño (ACIESNA), para el Ministerio de Justicia y del Derecho",
+    year: 2020,
+    type: "documento institucional sobre justicia propia",
+    url: "https://www.minjusticia.gov.co/programas-co/fortalecimiento-etnico/Documents/banco-2020/17.%20ENTREGABLE%20C.%20DOCUMENTO%20GENERAL%20RESOLUCION%20DE%20CONFLICTOS%20PUEBLO%20EPERARA%20SIAPIDAARA.pdf",
+    summary:
+      "Sostiene uno de los dos paralelos documentados de la capa de similitudes: en la cosmogonía eperara siapidaara el tercer mundo, el de abajo, es el de los «Antau Aramoora Euka», el espacio de los tápanos, definidos expresamente como seres sin ano. Permite mostrar que dos pueblos vecinos del Pacífico sur nombran a los habitantes del mundo inferior por lo que les falta.",
+    limitation:
+      "Es una fuente del pueblo Eperara Siapidaara, no del pueblo Awá: son pueblos y lenguas distintos, y se cita aquí sólo como término de comparación declarado. Además es un documento sobre justicia propia elaborado para un ministerio, no una etnografía ni una edición de relatos, y el mito de Biripoto al que remite no se reproduce en él.",
+  },
+  aEpera2010: {
+    title: "Los Épera Siapidara en Ecuador: proceso de visibilización",
+    author: "Eulalia Carrasco A.",
+    year: 2010,
+    type: "artículo de revista universitaria con testimonios orales",
+    url: "https://cuadernosdeantropologia-puce.edu.ec/index.php/antropologia/article/download/96/80/",
+    summary:
+      "Corrobora desde el Ecuador la misma cosmogonía de tres mundos citando a ACIESNA, ACIESCA y OZBESCAC (1997), con los «tápanos (seres sin ano, mito del Biripoto)» debajo del mundo de arriba, y recoge de Belarmino Chitipúa, en enero de 2003, el relato del hombre que quedó preñado en la pierna y del que nace Biripoto.",
+    limitation:
+      "Es una fuente del pueblo Épera Siapidara del lado ecuatoriano, no del pueblo Awá, y se cita sólo como término de comparación declarado. La cosmogonía que reproduce no es un registro propio de la autora sino una cita de documentos organizativos colombianos de 1997.",
+  },
 };
 
 /**

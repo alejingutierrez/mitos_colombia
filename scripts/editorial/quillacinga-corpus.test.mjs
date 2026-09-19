@@ -87,11 +87,21 @@ test("la dirección visual exige ilustración full paper cut 2D", () => {
 test("las dos URLs heredadas retiran sus adscripciones falsas", () => {
   const cocha = records.find(({ slug }) => slug === "cualanquizan");
   assert.equal(cocha.title, "Creación de La Cocha: el pilche y la laguna");
-  assert.match(cocha.historia, /Cualanquizán es una tradición.+Pasto/s);
+  // Antes se comprobaba que la Historia explicara de sí misma qué clase de
+  // tradición es. Eso era aparato editorial dentro de la página. Ahora se
+  // exige el registro: quién narró, dónde y cuándo se publicó.
+  assert.match(cocha.historia, /Refugio del Sol/);
+  assert.match(cocha.historia, /El Encano/);
+  assert.match(cocha.historia, /taita/i);
+  assert.match(cocha.historia, /\b20\d\d\b/);
   assert.doesNotMatch(cocha.mito, /Bartolomé/i);
 
   const inti = records.find(({ slug }) => slug === "el-llamado-de-inti");
-  assert.match(inti.historia, /cosmogonía original/i);
+  // «El llamado de Inti» es una obra contemporánea con autores conocidos, y la
+  // Historia lo dice nombrándolos en vez de calificarla.
+  assert.match(inti.historia, /Juanete Comunicaciones/);
+  assert.match(inti.historia, /\b2017\b/);
+  assert.match(inti.historia, /Guaguas Quilla/);
   assert.match(inti.mito, /Quinde/);
   assert.match(inti.mito, /pincullo/);
   assert.doesNotMatch(inti.mito, /Churo vivo|vena luminosa|iluminar sin humillar/i);

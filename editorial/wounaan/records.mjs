@@ -63,12 +63,50 @@ Comparar sirve para leer motivos. No prueba préstamo, no reduce el relato a una
     ],
     tags: ["creación", "origen", "cosmogonía", "río"],
     sourceKeys: [
-      "cnmhCuriche",
-      "minAmbienteTerritorio",
-      "camawaPlan",
-      "minCulturaProfile",
-      "gobiernoMayor",
-      "onicWounaan",
+      {
+        key: "cnmhCuriche",
+        summary:
+          "Publica la historieta de la creación narrada por Urelia y su esposo Salomón, del río Curiche en Juradó: Maach Aai forma la tierra, las montañas, el mar, el sol y la luna, crea la playa Baaur Do Mos —playa del río Sábalo o Baudó— y allí a su hijo Ewandam, que le pide que cree a la gente; los Wounaan nacen como muñecos de barro, desde esa fecha reconocen a Ewandam como padre y quedan en el tercero de los mundos creados.",
+        limitation:
+          "Es una memoria situada en un resguardo de Juradó y no una versión única para todo el pueblo Wounaan. Además la doble página no es coherente consigo misma: la columna en woun meu glosa a Maach Aai como Ẽwandam mientras la española separa padre e hijo y escribe Ewadam y Edawan en viñetas contiguas. Mariano Membache, de la misma comunidad, sitúa el origen del mundo en la cuenca del San Juan y no en el Baudó.",
+      },
+      {
+        key: "minCulturaProfile",
+        summary:
+          "Resume el ciclo en una línea: Ewandama es el héroe cultural que creó el mundo y a la gente del río Baudó, y describe el marco de transmisión en que los mayores heredan a las siguientes generaciones costumbres, creencias y normas mediante relatos y consejos.",
+        limitation:
+          "Comprime al padre y al hijo en una sola figura, atribuye el dato al Consejo Superior de la Judicatura y no nombra narrador, localidad ni fecha de recolección. Sirve como contexto y no como testimonio.",
+      },
+      {
+        key: "simaoAspectos2016",
+        summary:
+          "Cierra el relato del ñame con la frase que fecha la creación desde dentro de la propia tradición: cuando Ewandam nos creó no había ñame, lo que sitúa el nacimiento de la gente antes de la llegada de los cultivos que hoy la sostienen.",
+        limitation:
+          "Es un artículo de psicología cultural sobre otro mito y otra comunidad —Puerto Pizario, Wounaan Nonam del bajo San Juan— y su texto pasó del woun meu al español y de ahí al portugués. Aquí se usa sólo por esa frase de cronología interna.",
+      },
+      "upuaMorfosintaxis2012",
+      "frenchResena2021",
+      {
+        key: "salmoralNuevas1962",
+        summary:
+          "Confirma la ocupación waunana de la cuenca baja del San Juan y del litoral entre las bocas del Baudó y del San Juan, la franja de costa y río que el relato de la creación presupone, a partir de una visita a Noanamá en la que el pueblo se había congregado para una fiesta religiosa.",
+        limitation:
+          "El propio autor declara que el viaje tuvo finalidad más lingüística que antropológica y que sus notas complementan de manera informal el trabajo de Reichel-Dolmatoff de 1960. El facsímil que sirve la revista es un escaneo sin capa de texto y no pudo leerse línea por línea.",
+      },
+      {
+        key: "rojasescalera1986",
+        summary:
+          "Ofrece el contraste vecino que mide qué es propio de esta creación: entre los emberá del alto Baudó las figuras de los tiempos primordiales, Karagabí y Tutruicá, quedan confinadas al origen, no reciben ruego y no se les atribuyen acontecimientos posteriores, mientras a Ewandam se le sigue rogando en las rogativas wounaan.",
+        limitation:
+          "Es una fuente emberá, pueblo distinto del wounaan y de otra lengua, con trabajo de campo en el alto Baudó entre 1980 y 1983. No describe ninguna versión wounaan y sólo se usa como paralelo marcado.",
+      },
+      {
+        key: "gobiernoMayor",
+        summary:
+          "Ubica a las comunidades wounaan en las cuencas del San Juan, el Baudó y Curiche, los mismos ríos que nombran tanto el relato de la creación como la comunidad que lo publica.",
+        limitation:
+          "Es un perfil panorámico de organización: no fija versiones, no nombra narradores y no aporta fechas de recolección.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, sin fotografía: Maach Aai y Ewandam junto a una playa del río Baudó donde pequeñas figuras humanas de barro comienzan a levantarse; río, arena, selva, sol y luna en capas planas de papel recortado, bordes visibles y tiras enrolladas; sin pruebas con chonta o balso, sin tocados panindígenas, sin texto, sin maqueta física, diorama, CGI ni render 3D.",
@@ -142,12 +180,44 @@ Dentro de esta colección, el vínculo más estrecho es con Madre Ñame. Las dos
     ],
     tags: ["origen", "creación", "trabajo", "mar"],
     sourceKeys: [
-      "weguerCelso",
-      "cesteria2026",
-      "camawaPlan",
-      "minAmbienteTerritorio",
-      "minCulturaProfile",
-      "gobiernoMayor",
+      "colombiaorigen",
+      {
+        key: "cesteria2026",
+        summary:
+          "Aporta la materia del relato y su continuidad: la palma es Astrocaryum standleyanum, la fibra sale del cogollo y se corta sin derribar la planta, se cuece y se fija con limón y sal, y se teje en rollo con aguja capotera hasta formar el cántaro de boca ancha; remite además el mito de Ewandam y Dosat a una publicación de 2001 del Ministerio de Desarrollo Económico y Artesanías de Colombia y registra la llegada de las primeras familias wounaan a Bogotá desde 1997.",
+        limitation:
+          "Es un referencial de certificación de oficio y no una fuente narrativa: repite el mito en dos frases y sin narrador. Afirma que el tejido en rollo se practica por generaciones, sin discutir la fecha documentada de la técnica que dio fama al cántaro.",
+      },
+      "bernalBotswanan2013",
+      {
+        key: "minCulturaProfile",
+        summary:
+          "Sostiene el lugar del tejido en la vida wounaan —cestos tan densos que pueden transportar líquidos, técnica transmitida de generación en generación— y sitúa el intercambio de excedentes en Docordó y Buenaventura, en la misma cuenca del San Juan donde enseña el narrador del relato.",
+        limitation:
+          "No menciona a Dosat ni la competencia de las plantas: el adversario aparece sólo en las fuentes ligadas al oficio artesanal, nunca en los perfiles institucionales.",
+      },
+      {
+        key: "cnmhCuriche",
+        summary:
+          "Encadena este episodio con el anterior: la creación de los Wounaan como muñecos de barro en la playa del Baudó ocurre antes de que Ewandam hable con sus hijos sobre el trabajo, que es justamente donde arranca el relato del weguer.",
+        limitation:
+          "La memoria de Curiche no registra la competencia con Dosat, ni la prueba de la sal, ni la creación de la palma. Se usa sólo para el encadenamiento con la creación de la gente.",
+      },
+      {
+        key: "rojasescalera1986",
+        summary:
+          "Da el paralelo regional del origen de los cultígenos: entre los emberá del alto Baudó, Karagabí y Tutruicá ocupan los tiempos primordiales asociados a un mundo de arriba y otro de abajo, y en la mitología emberá recogida en el Chamí el maíz y el chontaduro se consiguen en el cielo.",
+        limitation:
+          "Es emberá, pueblo y lengua distintos del wounaan. El chontaduro aparece en ambas tradiciones por caminos que no deben cruzarse: allí llega por traslado entre mundos, aquí por una competencia entre dos hacedores.",
+      },
+      {
+        key: "gobiernoMayor",
+        summary:
+          "Ubica a las comunidades wounaan en el San Juan y el resto del Chocó, el territorio de la palma de wérregue y de la escuela donde enseña el narrador del relato.",
+        limitation:
+          "Perfil panorámico de organización: no recoge relatos ni indica su procedencia.",
+      },
+      "simaoAspectos2016",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, sin fotografía: Ewandam y Dosat en lados opuestos de un paisaje del Bajo San Juan con chontaduro, palma espinosa de wérregue y el encuentro del río con el mar; una pequeña cuchara de sal se vuelve ondas blancas de papel; al fondo manos Wounaan tejen fibras en espiral, sin presentar el tejido como maligno, sin texto, sin maqueta física, diorama, CGI ni render 3D.",
@@ -215,12 +285,62 @@ Dentro de la colección, esta página se lee junto a «El sueño que convoca la 
     ],
     tags: ["ritual", "sueños", "espíritu", "comunicación"],
     sourceKeys: [
-      "barcaArtesanias",
-      "cnmhCuriche",
-      "camawaPlan",
-      "minCulturaProfile",
-      "gobiernoMayor",
-      "onicWounaan",
+      {
+        key: "colombiaColombia2016",
+        summary:
+          "Describe el objeto entero: una barca tallada en madera de balso, con una tripulación de figuras llamadas páchaidáma que representan personas y animales protectores, pintada con negro extraído de la jagua y rojo de achiote sobre el blanco de la madera, y destinada a enfrentar el infortunio, la enfermedad y la muerte mediando con los espíritus llamados jais. Es la fuente que acredita las dos tintas del título heredado.",
+        limitation:
+          "Es una nota institucional publicada el 12 de septiembre de 2016 sin tallador, comunidad, río ni año de la pieza, y aplica vocabulario emberá —jaibaná, jai— a un objeto que presenta como wounaan. Es la única fuente abierta que nombra los páchaidáma, grafía que no pudo confirmarse en ninguna obra lingüística sobre woun meu.",
+      },
+      {
+        key: "cnmhCuriche",
+        summary:
+          "Documenta la otra barca: una pequeña embarcación de madera colgada en el centro de la vivienda ceremonial Dichardí, que la mujer que lidera la rogativa golpea con dos percutores mientras las demás mujeres la rodean y cuatro hombres tocan flautas o carrizos; la comunidad la llama también canoa o chingo porque su toque servía para avisar a distancia de un animal peligroso. Define benkhuun como la palabra en woun meu para quien sana con plantas y espíritus, y señala jaibaná como el término homónimo entre comunidades emberá.",
+        limitation:
+          "Describe una práctica colectiva en Juradó y no el objeto de iniciación del que habla la nota institucional; no se puede deducir que sean la misma pieza. La propia cartilla contiene además una tercera posición sobre el oficio: Mariano Membache afirma que entre el benkhuun, el jaibaná y las plantas no hay diferencia, son uno.",
+      },
+      {
+        key: "minCulturaProfile",
+        summary:
+          "Aporta el puente entre la embarcación y el ruego: nombra «canoíta» entre las tres rogativas principales del pueblo Wounaan, junto con «aguacerito» y «Karichipari», y registra la pintura corporal con jagua aplicada con un palillo en forma de tenedor durante esas ceremonias y en la pubertad de las mujeres.",
+        limitation:
+          "No describe la pieza, no dice dónde ni cuándo se recogió el dato de las tres rogativas, y enumera a Bên'kunn y Jaibanás como dos oficios distintos dentro del propio pueblo Wounaan, en desacuerdo con la cartilla de Curiche y con la nota de Artesanías.",
+      },
+      {
+        key: "uribeplata2001",
+        summary:
+          "Sitúa las tintas de la barca dentro de un repertorio ritual mayor: describe cuerpos cubiertos con diseños hechos con jugo de jagua antes de una curación y coronas de chaquiras sobre la cabeza del especialista, junto con el uso del adorno en las ceremonias del Chocó.",
+        limitation:
+          "Trata a embera y waunaan en conjunto a lo largo de todo el artículo, y la curación que detalla fue presenciada en el río Majecito, en Panamá, en una comunidad emberá. No describe la barca ni sus figuras.",
+      },
+      {
+        key: "guerreromedicina2016",
+        summary:
+          "Muestra en qué condiciones se conserva hoy un objeto como esta barca: documenta qué le ocurre al oficio de sanar cuando las familias wounaan pierden el territorio, las plantas y los materiales de los que depende.",
+        limitation:
+          "Se ocupa del desplazamiento hacia la ciudad y de la medicina tradicional; no menciona la talla en balso, las figuras protectoras ni el uso ritual de la embarcación.",
+      },
+      {
+        key: "rojasescalera1986",
+        summary:
+          "Describe el plano en el que trabaja la barca: un mundo intermedio poblado de espíritus de atribuciones restringidas —unos causan enfermedades, otros las curan, otros sirven para adivinar— con los que la gente trata a través del especialista y no de las figuras creadoras.",
+        limitation:
+          "Es emberá, pueblo distinto del wounaan. El vocabulario de jai y jaibaná pertenece a esa tradición y no debe trasladarse al objeto wounaan sin dejar la marca.",
+      },
+      {
+        key: "salmoralNuevas1962",
+        summary:
+          "Registra que en 1962 los waunana del bajo San Juan se congregaban en Noanamá para una fiesta religiosa, el antecedente documental más antiguo localizable en abierto para las ceremonias en que suena esta barca.",
+        limitation:
+          "Notas informales de finalidad sobre todo lingüística, sin descripción detallada del rito, y el facsímil de la Revista Colombiana de Antropología es un escaneo sin capa de texto que no pudo leerse línea por línea.",
+      },
+      {
+        key: "gobiernoMayor",
+        summary:
+          "Ubica al pueblo entre el Chocó y el Valle del Cauca, en las cuencas del San Juan, el Baudó y Curiche, donde se documentan tanto la barca tallada como la rogativa que la percute.",
+        limitation:
+          "Perfil panorámico de organización: no describe objetos rituales ni prácticas locales.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, sin fotografía: interior de una vivienda Wounaan junto al río, una pequeña barca ritual tallada en balso y suspendida con figuras protectoras humanas y animales; una lideresa se aproxima con dos percutores y la comunidad forma un círculo, capas planas de papel recortado, sin escena de dos tintas, sin exotización, sin texto, sin maqueta física, diorama, CGI ni render 3D.",
@@ -294,12 +414,32 @@ Dentro de la colección, esta página completa a «La barca de los espíritus».
     ],
     tags: ["sueños", "ritual", "comunidad", "memoria"],
     sourceKeys: [
-      "cnmhCuriche",
-      "camawaPlan",
-      "barcaArtesanias",
-      "minCulturaProfile",
-      "gobiernoMayor",
-      "onicWounaan",
+      {
+        key: "cnmhCuriche",
+        summary:
+          "Conserva el testimonio de Esmeralda Carpio sobre la rogativa: los antepasados comunicaban por sueños a los hombres de la comunidad los motivos para reunirse —expulsar un espíritu, pedir una cosecha abundante, impedir que la violencia llegara al territorio—, la ceremonia podía durar varios días en la vivienda ceremonial llamada Dichardí, las mujeres eran las encargadas de rogar y una de ellas golpeaba con dos percutores la pequeña barca colgada en el centro mientras cuatro hombres acompañaban con flautas o carrizos de distintos tamaños, alternando el ruego con momentos de reflexión sobre los sueños. En la columna en woun meu la fórmula es Ẽwandamag jewaa, que el español de la misma página traduce como rogar a Dios. Registra también la pérdida de la casa, los instrumentos y los materiales del carrizo por el desplazamiento, y que hoy la rogativa se hace en casa de Mariano Membache.",
+        limitation:
+          "Es la memoria de un resguardo de Juradó y no describe ninguna rogativa concreta ni el contenido de ningún sueño; tampoco pone nombre a la ceremonia, que aparece sin título en su relato. El desplazamiento forzado interrumpió la práctica, de modo que lo descrito es en parte recuerdo de antes de los años noventa.",
+      },
+      {
+        key: "minCulturaProfile",
+        summary:
+          "Nombra lo que la memoria de Curiche deja sin nombrar: la religiosidad wounaan se conoce como Maach Hi, las rogativas se hacen por medio de cantos y bailes a Ewandam y las principales son «canoíta», «aguacerito» y «Karichipari», convocadas para librarse de enfermedades, escasez de alimentos, inundaciones y plagas; añade la tambora y el phipha, flauta dulce que tocan los hombres mayores, y las danzas del guatín, el canario, el tigrecito y la mariposa.",
+        limitation:
+          "No cita fuente primaria, narrador ni localidad para ninguno de esos nombres, y su lista de danzas no coincide con la de Curiche, que menciona la mariposa, la garza, el gallinazo y el guatín.",
+      },
+      "colombiaColombia2016",
+      "salmoralNuevas1962",
+      "guerreromedicina2016",
+      "rojasescalera1986",
+      "uribeplata2001",
+      {
+        key: "gobiernoMayor",
+        summary:
+          "Ubica a Santa Marta de Curiche entre las cuencas wounaan del Chocó, junto al San Juan y al Baudó, donde se realiza la ceremonia.",
+        limitation:
+          "Perfil panorámico de organización, sin ceremonias, sin testimonios y sin fechas.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, sin fotografía: en Santa Marta de Curiche un sueño de antepasados se representa como ondas abstractas sobre un río nocturno; dentro de una vivienda ceremonial, mujeres se preparan alrededor de una pequeña barca suspendida y cuatro músicos sostienen flautas, sin bastón mágico literal, sin monstruo identificado, sin texto, sin maqueta física, diorama, CGI ni render 3D.",
@@ -376,12 +516,62 @@ Dentro de esta colección, Madre Ñame se lee junto a la creación del wérregue
     ],
     tags: ["origen", "agricultura", "semillas", "familia"],
     sourceKeys: [
-      "madreName2016",
-      "madreNameEducation",
-      "mdpiStorywork",
-      "minCulturaProfile",
-      "gobiernoMayor",
-      "onicWounaan",
+      {
+        key: "simaoAspectos2016",
+        summary:
+          "Publica el texto íntegro del mito narrado en woun meu por Juan Perdiz, líder comunitario de Puerto Pizario reconocido por su gente como quien sabe contar la historia que da identidad al pueblo, grabado en 2005 durante un proceso de recuperación de prácticas culturales ligado a los hogares comunitarios del ICBF: la vieja que llega por detrás de la casa con el cargador de ñames, la olla de barro, el arjiu donde echa los ñames pelados, las muertes por la garganta, la lanza tirada a la espalda que suena zau, el entierro río abajo, el bejuco que brota meses después con las hojas marchitas, los ñames blancos y rojos que hallan las mujeres al cavar, el reparto de matas entre las familias y el cierre —cuando Ewandam nos creó no había ñame—. Incluye además una segunda versión, más corta, que una madre comunitaria narró a una niña en 2014.",
+        limitation:
+          "El texto disponible pasó del woun meu al español y de ahí al portugués, y los propios autores advierten que esa doble traducción plantea problemas que su artículo no discute. El marco es la psicología cultural y no la etnografía, y el documento de trabajo de Sánchez y Málaga de 2005, donde se registró originalmente la narración, no está publicado en abierto. El artículo nombra a la niña que conversa con la madre comunitaria; ese nombre no se reproduce en la ficha.",
+      },
+      {
+        key: "minCulturaProfile",
+        summary:
+          "Sitúa el alimento y el territorio: enumera entre los cultivos principales wounaan la papa china, la yuca, la piña, el banano, el plátano, el maíz y el lulo, e indica que los excedentes se intercambian en Docordó y Buenaventura, la misma zona del bajo San Juan donde está Puerto Pizario.",
+        limitation:
+          "No menciona el ñame ni el relato de Madre Ñame en ningún punto: sirve como contexto agrícola y territorial, no como fuente narrativa.",
+      },
+      {
+        key: "upuaMorfosintaxis2012",
+        summary:
+          "Describe el woun meu, la lengua en que Juan Perdiz decidió narrar porque, dijo, es la que entienden los niños de la comunidad, y documenta que se trata de una sola lengua a ambos lados de la frontera con variación entre tierras altas y tierras bajas.",
+        limitation:
+          "Analiza una historia tradicional distinta, narrada por Diego Upúa en el Darién panameño, y su objeto es gramatical: no discute Madre Ñame ni la comunidad nonam del San Juan.",
+      },
+      {
+        key: "guerreromedicina2016",
+        summary:
+          "Documenta el desplazamiento de familias wounaan desde el Chocó y el Valle del Cauca a partir de 2003 y la ruptura con el territorio y sus plantas, el marco contemporáneo del resguardo donde se recogió el relato y donde las madres comunitarias volvieron a contarlo en 2014.",
+        limitation:
+          "Trata de medicina tradicional y de la vida urbana de las familias desplazadas; no menciona el ñame ni este mito.",
+      },
+      {
+        key: "bernalBotswanan2013",
+        summary:
+          "Sitúa geográficamente al pueblo nonam: describe los asentamientos wounaan del bajo San Juan y de los ríos Docampadó, Togoromá y Pichimá, entre Chocó y Valle del Cauca, que es la cuenca de Puerto Pizario.",
+        limitation:
+          "Es un estudio sobre cestería y manejo de palmas, sin relatos, sin narradores y centrado en otra región del mismo río.",
+      },
+      {
+        key: "cnmhCuriche",
+        summary:
+          "Permite contrastar el cierre del relato con el ciclo de la creación: en la memoria de Curiche los Wounaan nacen como muñecos de barro por petición de Ewandam, y el mito del ñame afirma que en ese momento la raíz todavía no existía.",
+        limitation:
+          "Es una memoria de Juradó, de otra cuenca y de otra comunidad; no registra Madre Ñame ni la denominación wounaan nonam.",
+      },
+      {
+        key: "rojasescalera1986",
+        summary:
+          "Aporta el paralelo documentado sobre el origen de los cultígenos en la región: en la mitología emberá del Chamí el maíz y el chontaduro se consiguen en el mundo de arriba, y en otras variantes un personaje trae semillas desde el mundo de abajo.",
+        limitation:
+          "Es emberá, pueblo distinto del wounaan: allí el cultivo llega por traslado entre mundos y no por una sepultura, de modo que el paralelo sirve para contrastar y no para completar.",
+      },
+      {
+        key: "gobiernoMayor",
+        summary:
+          "Ubica a las comunidades wounaan del San Juan entre el Chocó y el Valle del Cauca, donde está el resguardo de Puerto Pizario.",
+        limitation:
+          "Perfil panorámico de organización: no recoge relatos ni indica su procedencia.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, sin fotografía: en una vivienda Wounaan Nonam de Puerto Pizario junto al río, una anciana llega con varios ñames mientras una familia observa con cautela; fogón, enredaderas y selva del Pacífico construidos íntegramente con capas planas de papel recortado, bordes visibles y quilling, tensión serena, sin representar muerte, arma o daño infantil, sin texto, sin maqueta física, diorama, CGI ni render 3D.",

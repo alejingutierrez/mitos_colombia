@@ -153,7 +153,12 @@ if (!options.apply) { console.log("\nDry-run. Añade --apply para escribir el po
 let poolSrc = await fs.readFile(poolPath, "utf8");
 const closing = poolSrc.lastIndexOf("\n};");
 if (closing < 0) throw new Error("No encuentro el cierre del pool");
-const poolCode = [...additions.entries()].map(([k, o]) => `  ${k}: source({\n    title: ${js(o.title)},\n    author: ${js(o.author)},\n${o.year ? `    year: ${o.year},\n` : ""}    type: ${js(o.type)},\n    url: ${js(o.url)},\n    summary:\n      ${js(o.summary)},\n    limitation:\n      ${js(o.limitation)},\n  }),`).join("\n");
+// No todos los pools envuelven sus entradas en un `source({ … })`: unos pocos
+// —misak— son objetos literales sueltos. Escribir la llamada ahí rompe el
+// módulo con «source is not defined», así que se mira antes qué usa el archivo.
+const envuelve = /\bfunction source\s*\(/.test(poolSrc) || /\bconst source\s*=/.test(poolSrc);
+const [abre, cierra] = envuelve ? ["source({", "}),"] : ["{", "},"];
+const poolCode = [...additions.entries()].map(([k, o]) => `  ${k}: ${abre}\n    title: ${js(o.title)},\n    author: ${js(o.author)},\n${o.year ? `    year: ${o.year},\n` : ""}    type: ${js(o.type)},\n    url: ${js(o.url)},\n    summary:\n      ${js(o.summary)},\n    limitation:\n      ${js(o.limitation)},\n  ${cierra}`).join("\n");
 if (additions.size) poolSrc = `${poolSrc.slice(0, closing)}\n\n  // ——— Búsqueda profunda ${new Date().toISOString().slice(0, 10)} ———\n${poolCode}${poolSrc.slice(closing)}`;
 await fs.writeFile(poolPath, poolSrc, "utf8");
 if (hasDefinitions && !hasMythFiles) {

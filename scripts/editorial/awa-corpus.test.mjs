@@ -31,13 +31,32 @@ test("los dos expedientes cumplen la metodología editorial", () => {
     );
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 6);
-    assert.equal(
-      new Set([...record.keySources, ...record.sources].map(({ url }) => url))
-        .size,
-      6,
-    );
+    // Antes esta prueba exigía exactamente seis fuentes en las dos fichas. Ese
+    // número era el reparto en bloque escrito como aserción: las dos recibían
+    // la misma lista. Lo que hay que sostener es el mínimo, que no haya URLs
+    // repetidas dentro de una ficha y que cada relato apoye en dominios
+    // distintos.
+    const fuentes = [...record.keySources, ...record.sources];
+    assert.ok(fuentes.length >= 5, `${record.slug}: ${fuentes.length} fuentes`);
+    assert.equal(new Set(fuentes.map(({ url }) => url)).size, fuentes.length);
+    const dominios = new Set(fuentes.map(({ url }) => new URL(url).host));
+    assert.ok(dominios.size >= 3, `${record.slug}: ${dominios.size} dominios`);
+    // Ninguna portada de catálogo: responden 200 y no sostienen un relato.
+    for (const { url } of fuentes) {
+      assert.doesNotMatch(
+        url,
+        /books\.google\.|openlibrary\.org|worldcat\.org|\.blogspot\.|scribd\.com|academia\.edu|wikipedia\.org/i,
+        `${record.slug}: fuente de catálogo ${url}`,
+      );
+    }
+    // Y la ficha tiene que decir quién recogió el relato y cuándo.
+    assert.match(record.historia, /\b(19|20)\d\d\b/, `${record.slug}: su historia no fecha el registro`);
   }
+  // Los dos repartos no pueden ser el mismo: cada relato tiene su bibliografía.
+  const [a, b] = records.map((r) =>
+    [...r.keySources, ...r.sources].map(({ url }) => url).sort().join("|"),
+  );
+  assert.notEqual(a, b, "las dos fichas citan exactamente las mismas obras");
 });
 
 test("cada página tiene horizontal y vertical públicas y distintas", () => {
@@ -76,14 +95,28 @@ test("las dos tramas editoriales inventadas quedan sustituidas", () => {
   );
   const world = records.find(({ slug }) => slug === "guagaja");
   assert.equal(origin.title, "La Barbacha: origen del Inkal Awá");
-  assert.match(origin.historia, /pieza editorial contemporánea/i);
+  assert.equal(world.title, "El mundo de abajo: los hermanos y el armadillo");
+  // Antes se comprobaba que la Historia dijera de sí misma que era «una pieza
+  // editorial contemporánea» o que «no había encontrado una fuente primaria».
+  // Esas declaraciones ya no van en el texto publicado: la constancia vive en
+  // el dossier. Lo que la página sí tiene que hacer es nombrar a quien recogió
+  // el relato, con su comunidad y su fecha.
+  assert.match(origin.historia, /Arcos/);
+  assert.match(origin.historia, /Chimbagal|Barbacoas/);
+  assert.match(origin.historia, /\b2014\b/);
+  assert.match(world.historia, /Arcos|Sinsajoa|Botero/);
+  assert.match(world.historia, /\b(19|20)\d\d\b/);
+  // Y el Relato no puede arrastrar lo que ninguna fuente sostenía.
   assert.doesNotMatch(origin.mito, /humedad primordial|guardianes/i);
-  assert.equal(
-    world.title,
-    "El mundo de abajo: los hermanos y el armadillo",
-  );
-  assert.match(world.historia, /no había encontrado una fuente primaria/i);
-  assert.doesNotMatch(world.mito, /Nampí|serpiente|Guagaja/i);
+  assert.doesNotMatch(world.mito, /Nampí|Guagaja/i);
+  // El aparato de investigación se queda fuera del Relato, en las dos.
+  for (const record of [origin, world]) {
+    assert.doesNotMatch(
+      record.mito,
+      /\b(la fuente|las fuentes|la investigación|esta ficha|la página|el registro etnográfico|según el registro)\b/i,
+      `${record.slug}: su Relato habla de la investigación`,
+    );
+  }
 });
 
 test("la landing declara el corpus, los reemplazos y la estrategia visual", () => {
