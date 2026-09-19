@@ -92,8 +92,16 @@ export const ufainaSources = {
   }),
 };
 
-export function pickUfainaSources() {
-  const keys = [
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickUfainaSources(...entries) {
+  // Antes esta función no recibía nada: devolvía la misma lista a todos los
+  // mitos de la comunidad. La lista se conserva como reparto por defecto
+  // mientras cada ficha pasa a declarar sus propias claves.
+  const entradas = entries.length ? entries : [
     "hildebrand1975",
     "hildebrand1984",
     "frankyMahecha2013",
@@ -102,9 +110,26 @@ export function pickUfainaSources() {
     "hughJones2015",
     "arhem2004",
   ];
-  return keys.map((key) => {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = ufainaSources[key];
-    if (!selected) throw new Error(`Fuente Ufaina desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Ufaina desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

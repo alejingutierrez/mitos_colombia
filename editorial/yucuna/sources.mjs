@@ -199,8 +199,16 @@ export const abundanceSources = {
   }),
 };
 
-export function pickYucunaSources() {
-  const keys = [
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickYucunaSources(...entries) {
+  // Antes esta función no recibía nada: devolvía la misma lista a todos los
+  // mitos de la comunidad. La lista se conserva como reparto por defecto
+  // mientras cada ficha pasa a declarar sus propias claves.
+  const entradas = entries.length ? entries : [
     "herreraKanuma",
     "herreraMatapi",
     "herreraYurupari",
@@ -211,15 +219,40 @@ export function pickYucunaSources() {
     "onicYucuna",
     "villaPosse1993",
   ];
-  return keys.map((key) => {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = yucunaSources[key];
-    if (!selected) throw new Error(`Fuente Yucuna desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Yucuna desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }
 
-export function pickAbundanceSources() {
-  const keys = [
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickAbundanceSources(...entries) {
+  // Antes esta función no recibía nada: devolvía la misma lista a todos los
+  // mitos de la comunidad. La lista se conserva como reparto por defecto
+  // mientras cada ficha pasa a declarar sus propias claves.
+  const entradas = entries.length ? entries : [
     "urbina2010",
     "idartes2015",
     "museoNacional",
@@ -228,11 +261,26 @@ export function pickAbundanceSources() {
     "unad2018",
     "bibliotecaNacional",
   ];
-  return keys.map((key) => {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = abundanceSources[key];
     if (!selected) {
-      throw new Error(`Fuente Moniya Amena desconocida: ${key}`);
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Moniya Amena desconocida: ${visto}`);
     }
-    return selected;
-  });
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

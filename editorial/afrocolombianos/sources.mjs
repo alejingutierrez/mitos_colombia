@@ -415,12 +415,35 @@ export const afroSourceKeysBySlug = {
   ],
 };
 
+/**
+ * El reparto ya era por mito: `afroSourceKeysBySlug` le da a cada slug su lista.
+ * Lo que faltaba era que una entrada pudiera decir, además de qué obra, qué dice
+ * esa obra sobre ese relato: `{ key, summary, limitation }`. La ficha
+ * bibliográfica la sigue fijando el pool.
+ */
 export function pickAfroSources(slug) {
-  const keys = afroSourceKeysBySlug[slug];
-  if (!keys) throw new Error(`No hay dossier Afrocolombiano para ${slug}.`);
-  return keys.map((key) => {
+  const entradas = afroSourceKeysBySlug[slug];
+  if (!entradas) throw new Error(`No hay dossier Afrocolombiano para ${slug}.`);
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = afrocolombianSources[key];
-    if (!selected) throw new Error(`${slug}: fuente desconocida ${key}.`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`${slug}: fuente desconocida ${visto}.`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

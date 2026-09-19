@@ -126,12 +126,33 @@ export const defaultEmberaSourceKeys = [
   "icanhEmbera",
 ];
 
-export function pickEmberaSources(...keys) {
-  return [...new Set(keys)].map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickEmberaSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = emberaSources[key];
     if (!selected) {
-      throw new Error(`Fuente Emberá desconocida: ${key}`);
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Emberá desconocida: ${visto}`);
     }
-    return selected;
-  });
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

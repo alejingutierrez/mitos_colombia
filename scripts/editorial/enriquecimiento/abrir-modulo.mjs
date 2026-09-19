@@ -52,21 +52,33 @@ function abrirConstructor(src) {
   return { src: out, hecho: "abierto" };
 }
 
-function abrirPick(src) {
-  if (src.includes("typeof entrada === \"string\"")) return { src, hecho: "ya estaba" };
-  const re = /export function (pick\w+Sources)\(\.\.\.keys\) \{\n  return \[\.\.\.new Set\(keys\)\]\.map\(\(key\) => \{\n    const selected = (\w+)\[key\];\n    if \(!selected\) throw new Error\(`([^`]*)\$\{key\}`\);\n    return selected;\n  \}\);\n\}/;
-  const m = src.match(re);
-  if (!m) return { src, hecho: "no reconozco el pick" };
-  const [, nombre, pool, mensaje] = m;
-  const nuevo = `/**
+// Tres formas de reparto conviven en los módulos:
+//   A. `pickXSources(...keys)` con `[...new Set(keys)].map(...)` (wayuu y sus pares);
+//   B. `pickXSources(...keys)` con `keys.map(...)` (la mayoría del bloque B/C/D);
+//   C. `pickXSources()` con la lista de claves escrita dentro: todos los mitos
+//      de la comunidad reciben exactamente las mismas fuentes. Ésa es la que
+//      más importa abrir, porque el reparto en bloque está en el código.
+// En los tres casos el resultado acepta `{ key, summary, limitation }`.
+// El cuerpo del map varía en detalles que no cambian nada: la variable se llama
+// `selected` o `source`, y el `throw` va con llaves o sin ellas.
+const CUERPO_MAP = String.raw`\.map\(\((?:key|entrada)\) => \{\s*const (?:selected|source) = (\w+)\[key\];\s*if \(!(?:selected|source)\) \{?\s*throw new Error\(\x60([^\x60]*)\$\{key\}\.?\x60\);\s*\}?\s*return (?:selected|source);\s*\}\);`;
+
+function nuevoPick(nombre, pool, mensaje, porDefecto) {
+  const defecto = porDefecto
+    ? `  // Antes esta función no recibía nada: devolvía la misma lista a todos los\n` +
+      `  // mitos de la comunidad. La lista se conserva como reparto por defecto\n` +
+      `  // mientras cada ficha pasa a declarar sus propias claves.\n` +
+      `  const entradas = entries.length ? entries : [\n${porDefecto}\n  ];\n`
+    : `  const entradas = entries;\n`;
+  return `/**
  * Acepta una clave suelta o una clave con resumen y límite propios del mito
  * (\`{ key, summary, limitation }\`). La ficha bibliográfica la fija el pool; lo
  * que cambia por mito es qué dice esa obra sobre ese relato.
  */
 export function ${nombre}(...entries) {
-  const vistas = new Set();
+${defecto}  const vistas = new Set();
   const salida = [];
-  for (const entrada of entries) {
+  for (const entrada of entradas) {
     const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = ${pool}[key];
     if (!selected) {
@@ -87,7 +99,46 @@ export function ${nombre}(...entries) {
   }
   return salida;
 }`;
-  return { src: src.replace(re, nuevo), hecho: "abierto" };
+}
+
+function abrirPick(src) {
+  let cambios = 0;
+  let yaEstaban = 0;
+
+  // A y B: varargs.
+  const reVarargs = new RegExp(
+    String.raw`export function (pick\w+Sources)\(\.\.\.keys\) \{\s*return (?:\[\.\.\.new Set\(keys\)\]|keys)` +
+      CUERPO_MAP +
+      String.raw`\s*\}`,
+    "g",
+  );
+  src = src.replace(reVarargs, (_todo, nombre, pool, mensaje) => {
+    cambios += 1;
+    return nuevoPick(nombre, pool, mensaje, null);
+  });
+
+  // C: lista escrita dentro, sin argumentos.
+  const reLista = new RegExp(
+    String.raw`export function (pick\w+Sources)\(\) \{\s*const keys = \[([\s\S]*?)\];\s*return keys` +
+      CUERPO_MAP +
+      String.raw`\s*\}`,
+    "g",
+  );
+  src = src.replace(reLista, (_todo, nombre, lista, pool, mensaje) => {
+    cambios += 1;
+    const claves = lista
+      .split(",")
+      .map((x) => x.trim())
+      .filter(Boolean)
+      .map((x) => `    ${x},`)
+      .join("\n");
+    return nuevoPick(nombre, pool, mensaje, claves);
+  });
+
+  for (const _ of src.matchAll(/typeof entrada === "string"/g)) yaEstaban += 1;
+  if (cambios) return { src, hecho: `abierto (${cambios})` };
+  if (yaEstaban) return { src, hecho: "ya estaba" };
+  return { src, hecho: "no reconozco el pick" };
 }
 
 function messageSafe(m) {

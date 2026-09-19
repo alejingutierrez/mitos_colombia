@@ -18,8 +18,12 @@ export function defineNukakMyth({
   ...input
 }) {
   const selectedSources = pickNukakSources(...sourceKeys);
-  if (selectedSources.length !== 7) {
-    throw new Error(`${input.slug}: se esperaban siete fuentes únicas.`);
+  // Antes exigía exactamente 7: el reparto en bloque escrito como
+  // aserción. Lo que importa es que haya fuentes suficientes.
+  if (selectedSources.length < 5) {
+    throw new Error(
+      `${input.slug}: ${selectedSources.length} fuentes únicas, el mínimo son cinco.`,
+    );
   }
   return buildNukakEditorialMyth({
     ...input,

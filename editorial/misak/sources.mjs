@@ -191,10 +191,33 @@ export const misakSources = {
   },
 };
 
-export function pickMisakSources(...keys) {
-  return keys.map((key) => {
-    const source = misakSources[key];
-    if (!source) throw new Error(`Fuente Misak desconocida: ${key}.`);
-    return source;
-  });
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickMisakSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = misakSources[key];
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Misak desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }
