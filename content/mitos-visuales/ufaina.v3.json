@@ -991,7 +991,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "imarika_kayafiki": {
       "name": "Imárika Kayafikí, el menor",
@@ -1081,7 +1084,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "el_abuelo_dueno_de_las_hojas": {
       "name": "El abuelo, dueño de las hojas",
@@ -1175,7 +1181,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "mujer_mayor_del_agua": {
       "name": "La mujer mayor que guardaba el agua y los peces",
@@ -1256,7 +1265,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "hija_del_sol": {
       "name": "La hija del Sol",
@@ -1318,7 +1330,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "editorial_interpretation"
+      ]
     },
     "primera_maloca": {
       "name": "La primera maloca (estructura y cubierta)",
@@ -1411,7 +1426,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "palma_de_bombona": {
       "name": "La gran palma de bombona",
@@ -1482,7 +1500,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cuatro_depositos_de_agua": {
       "name": "Los cuatro depósitos de agua",
@@ -1492,7 +1513,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "contextual",
       "visual_status": "required",
       "model_requirements": [
@@ -1568,7 +1589,11 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "arbol_que_se_vuelve_apaporis": {
       "name": "El árbol enorme que se vuelve el río Apaporis",
@@ -1579,7 +1604,7 @@
         "canonico",
         "caido_convertido_en_rio"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -1664,6 +1689,12 @@
       },
       "states_declared": [
         "caido_convertido_en_rio"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "editorial_interpretation",
+        "uncertain"
       ]
     },
     "peces": {
@@ -1674,7 +1705,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -1751,7 +1782,11 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "obtencion_de_la_noche": {
       "name": "La obtención de la noche",
@@ -1844,7 +1879,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "selva_y_rio_apaporis": {
       "name": "Selva del bajo Apaporis y su cauce sinuoso",
@@ -1854,7 +1892,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -1935,7 +1973,12 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "uncertain"
+      ]
     },
     "imarika_minokuribi_karifu_borokuri": {
       "name": "Imárika Minokuribí, Imárika Karifú e Imárika Borokurí",
@@ -1973,7 +2016,10 @@
       ],
       "census_note": "Los tres hermanos mayores sólo aparecen nombrados en el registro temprano y actúan siempre como conjunto; la página usa el nombre colectivo. Darles fichas individuales sería inventarles carácter.",
       "covered_by": "imarikakana_los_cuatro",
-      "coverage_note": "Los tres hermanos mayores sólo aparecen nombrados en el registro temprano y actúan siempre como conjunto; la página usa el nombre colectivo. Darles fichas individuales sería inventarles carácter."
+      "coverage_note": "Los tres hermanos mayores sólo aparecen nombrados en el registro temprano y actúan siempre como conjunto; la página usa el nombre colectivo. Darles fichas individuales sería inventarles carácter.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cuatro_estantillos": {
       "name": "Los cuatro estantillos y su medida",
@@ -2021,7 +2067,10 @@
       ],
       "census_note": "Son la estructura misma de la maloca y el contenido de la enseñanza (la medida señalada en el pecho del abuelo); van en su modelo espacial.",
       "covered_by": "primera_maloca",
-      "coverage_note": "Son la estructura misma de la maloca y el contenido de la enseñanza (la medida señalada en el pecho del abuelo); van en su modelo espacial."
+      "coverage_note": "Son la estructura misma de la maloca y el contenido de la enseñanza (la medida señalada en el pecho del abuelo); van en su modelo espacial.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "refugio_pequeno_inicial": {
       "name": "El refugio pequeño que todavía no era maloca",
@@ -2054,7 +2103,10 @@
       ],
       "census_note": "Estado previo del mismo aprendizaje: «cada respuesta mostraba que aún no era una maloca». Se resuelve como vista de proceso en la misma hoja.",
       "covered_by": "primera_maloca",
-      "coverage_note": "Estado previo del mismo aprendizaje: «cada respuesta mostraba que aún no era una maloca». Se resuelve como vista de proceso en la misma hoja."
+      "coverage_note": "Estado previo del mismo aprendizaje: «cada respuesta mostraba que aún no era una maloca». Se resuelve como vista de proceso en la misma hoja.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "sol_y_luna": {
       "name": "El Sol y la Luna cubiertos por el soplo negro",
@@ -2092,7 +2144,10 @@
       ],
       "census_note": "Aparecen sólo como los astros que la oscuridad tapa; no actúan ni se describen como seres. Van en la lámina de la regla.",
       "covered_by": "obtencion_de_la_noche",
-      "coverage_note": "Aparecen sólo como los astros que la oscuridad tapa; no actúan ni se describen como seres. Van en la lámina de la regla."
+      "coverage_note": "Aparecen sólo como los astros que la oscuridad tapa; no actúan ni se describen como seres. Van en la lámina de la regla.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "animales_nocturnos": {
       "name": "Los animales capaces de ver y alimentarse de noche",
@@ -2102,7 +2157,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2130,7 +2185,11 @@
       ],
       "census_note": "El relato no nombra una sola especie. Se resuelven como siluetas dentro de la lámina de la noche; elegir especies concretas sería inventar fauna con nombre propio.",
       "covered_by": "obtencion_de_la_noche",
-      "coverage_note": "El relato no nombra una sola especie. Se resuelven como siluetas dentro de la lámina de la noche; elegir especies concretas sería inventar fauna con nombre propio."
+      "coverage_note": "El relato no nombra una sola especie. Se resuelven como siluetas dentro de la lámina de la noche; elegir especies concretas sería inventar fauna con nombre propio.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "casa_del_sol": {
       "name": "La casa del Sol",
@@ -2140,7 +2199,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "sensitive",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2163,7 +2222,11 @@
       ],
       "census_note": "Destino nombrado sin una línea de descripción; el escenario del acto es el árbol que está en pie allí. Se resuelve como localización dentro del modelo de entorno, sin interior y sin arquitectura inventada.",
       "covered_by": "selva_y_rio_apaporis",
-      "coverage_note": "Destino nombrado sin una línea de descripción; el escenario del acto es el árbol que está en pie allí. Se resuelve como localización dentro del modelo de entorno, sin interior y sin arquitectura inventada."
+      "coverage_note": "Destino nombrado sin una línea de descripción; el escenario del acto es el árbol que está en pie allí. Se resuelve como localización dentro del modelo de entorno, sin interior y sin arquitectura inventada.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "lago_de_las_astillas": {
       "name": "El lago donde las astillas se vuelven peces",
@@ -2173,7 +2236,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2196,7 +2259,11 @@
       ],
       "census_note": "Cuerpo de agua sin rasgos propios; variante del mismo modelo fluvial.",
       "covered_by": "selva_y_rio_apaporis",
-      "coverage_note": "Cuerpo de agua sin rasgos propios; variante del mismo modelo fluvial."
+      "coverage_note": "Cuerpo de agua sin rasgos propios; variante del mismo modelo fluvial.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "cauce_sinuoso": {
       "name": "El cauce sinuoso que abre el agua liberada",
@@ -2206,7 +2273,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2234,7 +2301,11 @@
       ],
       "census_note": "Resultado del tercer episodio y anticipo del Apaporis; es el mismo modelo de entorno en formación.",
       "covered_by": "selva_y_rio_apaporis",
-      "coverage_note": "Resultado del tercer episodio y anticipo del Apaporis; es el mismo modelo de entorno en formación."
+      "coverage_note": "Resultado del tercer episodio y anticipo del Apaporis; es el mismo modelo de entorno en formación.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "caja_de_hojas_amarrada": {
       "name": "La caja de hojas bien amarrada",
@@ -2267,7 +2338,10 @@
       ],
       "census_note": "Objeto menor con un beat grande: el abuelo advierte que sólo se abra al llegar, Kayafikí afloja los amarres y las hojas escapan al monte. El episodio se cuenta por la maloca, no por la caja.",
       "covered_by": "hoja_utileria_ufaina",
-      "coverage_note": "Objeto menor con un beat grande: el abuelo advierte que sólo se abra al llegar, Kayafikí afloja los amarres y las hojas escapan al monte. El episodio se cuenta por la maloca, no por la caja."
+      "coverage_note": "Objeto menor con un beat grande: el abuelo advierte que sólo se abra al llegar, Kayafikí afloja los amarres y las hojas escapan al monte. El episodio se cuenta por la maloca, no por la caja.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "esfera_negra": {
       "name": "La pequeña esfera negra de la noche",
@@ -2305,7 +2379,10 @@
       ],
       "census_note": "Gemela estructural de la caja: recipiente pequeño, misma advertencia, misma desobediencia. Es el continente; la ficha del episodio es la noche que sale de él.",
       "covered_by": "hoja_utileria_ufaina",
-      "coverage_note": "Gemela estructural de la caja: recipiente pequeño, misma advertencia, misma desobediencia. Es el continente; la ficha del episodio es la noche que sale de él."
+      "coverage_note": "Gemela estructural de la caja: recipiente pequeño, misma advertencia, misma desobediencia. Es el continente; la ficha del episodio es la noche que sale de él.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "astillas": {
       "name": "Las astillas del árbol",
@@ -2315,7 +2392,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "variant",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2343,7 +2420,12 @@
       ],
       "census_note": "Se reponen cada noche en el tronco hasta que Kayafikí las arroja al lago. Su forma va en la hoja de utilería y su transformación en la ficha de peces.",
       "covered_by": "hoja_utileria_ufaina",
-      "coverage_note": "Se reponen cada noche en el tronco hasta que Kayafikí las arroja al lago. Su forma va en la hoja de utilería y su transformación en la ficha de peces."
+      "coverage_note": "Se reponen cada noche en el tronco hasta que Kayafikí las arroja al lago. Su forma va en la hoja de utilería y su transformación en la ficha de peces.",
+      "evidence_basis_mix": [
+        "variant",
+        "editorial_interpretation",
+        "uncertain"
+      ]
     },
     "hojas_de_milpesos": {
       "name": "Las hojas de milpesos de la cubierta",
@@ -2381,7 +2463,10 @@
       ],
       "census_note": "Material de techado que se pide al abuelo, se transporta en la caja, escapa al monte y alcanza sólo para media maloca. Va como pieza de utilería atada, no como ficha botánica: la palma que sí se ficha es la bombona.",
       "covered_by": "hoja_utileria_ufaina",
-      "coverage_note": "Material de techado que se pide al abuelo, se transporta en la caja, escapa al monte y alcanza sólo para media maloca. Va como pieza de utilería atada, no como ficha botánica: la palma que sí se ficha es la bombona."
+      "coverage_note": "Material de techado que se pide al abuelo, se transporta en la caja, escapa al monte y alcanza sólo para media maloca. Va como pieza de utilería atada, no como ficha botánica: la palma que sí se ficha es la bombona.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "soporte_del_deposito": {
       "name": "El soporte del depósito que se derriba",
@@ -2391,7 +2476,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2424,7 +2509,11 @@
       ],
       "census_note": "Pieza menor pero es lo que se rompe para liberar el agua; sin ella el tercer episodio no tiene gesto.",
       "covered_by": "hoja_utileria_ufaina",
-      "coverage_note": "Pieza menor pero es lo que se rompe para liberar el agua; sin ella el tercer episodio no tiene gesto."
+      "coverage_note": "Pieza menor pero es lo que se rompe para liberar el agua; sin ella el tercer episodio no tiene gesto.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "yurupari": {
       "name": "El Yuruparí",
@@ -2456,7 +2545,10 @@
         }
       ],
       "census_note": "No es una omisión de conveniencia: es la petición registrada de quienes narraron. No se ficha, no se insinúa y no se compone en segundo plano.",
-      "exclusion_reason": "do_not_visualize: Hildebrand lo dejó fuera de la publicación de 1975 por petición expresa de sus interlocutores, y el módulo mantiene esa exclusión"
+      "exclusion_reason": "do_not_visualize: Hildebrand lo dejó fuera de la publicación de 1975 por petición expresa de sus interlocutores, y el módulo mantiene esa exclusión",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "interior_ritual_de_la_maloca": {
       "name": "El interior de la maloca y su disposición ritual",
@@ -2483,7 +2575,10 @@
         }
       ],
       "census_note": "La ficha de la primera maloca cubre estructura, estantillos y cubierta. Cualquier keyframe que necesite el adentro se detiene aquí.",
-      "exclusion_reason": "consult_required: la maloca por dentro es materia sensible en el Apaporis y el relato no describe su interior; el estudio de 1984 la lee como modelo del cosmos, que es justamente lo que no se puede reconstruir sin consulta"
+      "exclusion_reason": "consult_required: la maloca por dentro es materia sensible en el Apaporis y el relato no describe su interior; el estudio de 1984 la lee como modelo del cosmos, que es justamente lo que no se puede reconstruir sin consulta",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "formulas_y_procedimientos_de_curacion": {
       "name": "Fórmulas y procedimientos de curación",
@@ -2510,7 +2605,10 @@
         }
       ],
       "census_note": "No están en el relato adaptado; los dejo escritos para que el límite exista antes del diseño.",
-      "exclusion_reason": "do_not_visualize: el módulo los registra como narrativa sólo de contexto y prohíbe convertir conocimientos operativos en contenido público"
+      "exclusion_reason": "do_not_visualize: el módulo los registra como narrativa sólo de contexto y prohíbe convertir conocimientos operativos en contenido público",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "seres_peligrosos_de_los_depositos": {
       "name": "Los seres peligrosos de uno de los depósitos",
@@ -2542,7 +2640,10 @@
         }
       ],
       "census_note": "Verificado contra el relato. Si el guion los necesita, se resuelven como agua turbia o movimiento, nunca como criaturas diseñadas.",
-      "exclusion_reason": "sin evidencia visual: el texto sólo dice «otras con seres peligrosos» y no da una sola forma; dibujarlos sería inventar un bestiario amazónico"
+      "exclusion_reason": "sin evidencia visual: el texto sólo dice «otras con seres peligrosos» y no da una sola forma; dibujarlos sería inventar un bestiario amazónico",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "el_sol_como_personaje": {
       "name": "El Sol como personaje",
@@ -2574,7 +2675,10 @@
         }
       ],
       "census_note": "Séptima pasada. Como astro cubierto por el soplo negro sí aparece, y eso va embebido en la regla de la noche.",
-      "exclusion_reason": "se menciona pero nunca se ve: el relato nombra su casa y su hija, y el Sol mismo no actúa ni se describe en ningún momento"
+      "exclusion_reason": "se menciona pero nunca se ve: el relato nombra su casa y su hija, y el Sol mismo no actúa ni se describe en ningún momento",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ayawa_makuna": {
       "name": "Los Ayawa y el árbol Makuna",
@@ -2601,7 +2705,10 @@
         }
       ],
       "census_note": "Es la mezcla más fácil de cometer en el Apaporis, porque el episodio se parece casi línea por línea. Lo registro como excluido para que quede escrito antes de diseñar.",
-      "exclusion_reason": "paralelo regional de otro pueblo: la etnografía Makuna documenta a los Ayawa derribando un árbol del que salen aguas y peces, y la propia fuente advierte que no es una variante incorporable ni una fuente para vestir o ritualizar estas imágenes"
+      "exclusion_reason": "paralelo regional de otro pueblo: la etnografía Makuna documenta a los Ayawa derribando un árbol del que salen aguas y peces, y la propia fuente advierte que no es una variante incorporable ni una fuente para vestir o ritualizar estas imágenes",
+      "evidence_basis_mix": [
+        "variant"
+      ]
     },
     "hoja_utileria_ufaina": {
       "name": "hoja utileria ufaina",
@@ -2611,7 +2718,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -2676,7 +2783,11 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     }
   },
   "models": {

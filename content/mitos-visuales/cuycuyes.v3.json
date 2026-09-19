@@ -1363,7 +1363,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1406,7 +1406,11 @@
       ],
       "census_note": "Es el objeto por el que se cuenta el relato y conduce la única acción sobrenatural: aparece dentro del humo y responde a los ministros del rito. La hoja existe sobre todo para fijar lo que NO puede hacerse, que los dos prompts ya escriben: silueta humana ambigua sugerida por el humo, dos puntos de luz sobrios en los ojos, sin rostro monstruoso, sin figura literal, sin cuernos, sin ídolo monumental y sin identificarla como Calgari. La crónica no le da nombre ni palabras y la ficha tampoco.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "calgari-untre-y-calgavi": {
       "name": "Untré, Calgari o Calgavi",
@@ -1433,7 +1437,10 @@
         }
       ],
       "census_note": "Verificado contra los cuatro campos: la página heredada presentaba a Calgari o Calgavi como demonio adorado por los Cuycuyes, y la revisión demuestra dos cosas: Cieza no llama Calgari a la figura del oratorio, y el vocabulario de Uribe Ángel de 1885 traduce Untré, Calgari y Calgavi como equivalentes de Dios. No hay ninguna entidad Calgari en el relato: hay una palabra de un vocabulario tardío. Ficharla sería dar cuerpo a un error de traducción colonial.",
-      "exclusion_reason": "atribución que la fuente no sostiene"
+      "exclusion_reason": "atribución que la fuente no sostiene",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "antomia": {
       "name": "Antomiá",
@@ -1460,7 +1467,10 @@
         }
       ],
       "census_note": "Verificado: aparece únicamente como la entrada que el vocabulario de Uribe Ángel traduce por Diablo. No tiene narración, ni escena, ni cuerpo, y el propio canon advierte que la recopilación es del siglo XIX y no debe proyectarse sin reservas hasta el XVI.",
-      "exclusion_reason": "sin evidencia visual"
+      "exclusion_reason": "sin evidencia visual",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "demonio-de-la-traduccion-colonial": {
       "name": "El «demonio» de la categoría cristiana de Cieza",
@@ -1497,7 +1507,10 @@
         }
       ],
       "census_note": "Verificado: Cieza llamó demonio a la presencia porque interpretó la ceremonia desde el cristianismo de la conquista, y la revisión declara que no repite esa traducción como si fuera el nombre indígena. Los dos prompts prohíben expresamente demonio y cuernos. La iconografía diabólica europea no entra en esta biblia por ninguna vía.",
-      "exclusion_reason": "do_not_visualize: categoría impuesta, no ser del relato"
+      "exclusion_reason": "do_not_visualize: categoría impuesta, no ser del relato",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "especialistas-del-rito": {
       "name": "Especialistas que conducen la ceremonia",
@@ -1507,7 +1520,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "contextual",
       "visual_status": "required",
       "model_requirements": [],
@@ -1540,7 +1553,11 @@
       ],
       "census_note": "Conducen toda la acción del relato: preparan las vasijas, ponen las resinas y las flores, llenan el cuarto de humo y formulan las preguntas por las cosechas y el bienestar de la provincia. El prompt horizontal pide tres. Gramática de grupo del siglo XVI: sin tocados panindígenas y sin símbolos aztecas, mayas ni muiscas, que es la advertencia literal del prompt de comunidad.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "casa-redonda-de-arma": {
       "name": "Casa redonda de la provincia de Arma",
@@ -1550,7 +1567,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1583,7 +1600,11 @@
       ],
       "census_note": "Escenario del acto y arquitectura que identifica al territorio: casas grandes y redondas levantadas con varas, vigas y techos de paja, algunas divididas por esteras en varios espacios. El modelo espacial debe resolver esa división interior, porque de ella depende que el recinto del oratorio se lea como lugar apartado y no como plaza abierta.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "recinto-apartado-del-oratorio": {
       "name": "Recinto interior donde se hacen las preguntas",
@@ -1593,7 +1614,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1621,7 +1642,11 @@
       ],
       "census_note": "El relato insiste en que no era una plaza abierta ni una estatua exhibida ante toda la población, sino un lugar interior al que entraban quienes conducían la ceremonia. Es una parte de la casa redonda y se produce dentro de su modelo espacial; si el guion lo necesita como plano propio habrá que abrirle una hoja de estado.",
       "covered_by": "casa-redonda-de-arma",
-      "coverage_note": "El relato insiste en que no era una plaza abierta ni una estatua exhibida ante toda la población, sino un lugar interior al que entraban quienes conducían la ceremonia. Es una parte de la casa redonda y se produce dentro de su modelo espacial; si el guion lo necesita como plano propio habrá que abrirle una hoja de estado."
+      "coverage_note": "El relato insiste en que no era una plaza abierta ni una estatua exhibida ante toda la población, sino un lugar interior al que entraban quienes conducían la ceremonia. Es una parte de la casa redonda y se produce dentro de su modelo espacial; si el guion lo necesita como plano propio habrá que abrirle una hoja de estado.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "esteras": {
       "name": "Esteras que dividen el espacio",
@@ -1654,7 +1679,10 @@
       ],
       "census_note": "Dividen los espacios de la casa y el humo oculta sus bordes: hacen trabajo espacial, no de utilería, así que se resuelven en el modelo de la casa redonda. Están en los dos prompts.",
       "covered_by": "casa-redonda-de-arma",
-      "coverage_note": "Dividen los espacios de la casa y el humo oculta sus bordes: hacen trabajo espacial, no de utilería, así que se resuelven en el modelo de la casa redonda. Están en los dos prompts."
+      "coverage_note": "Dividen los espacios de la casa y el humo oculta sus bordes: hacen trabajo espacial, no de utilería, así que se resuelven en el modelo de la casa redonda. Están en los dos prompts.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "vasijas-de-sahumerio": {
       "name": "Vasijas de barro para las resinas",
@@ -1664,7 +1692,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1702,7 +1730,11 @@
       ],
       "census_note": "Son el instrumento material de la ceremonia y están en los dos prompts, el vertical con filas enteras de ellas. Cerámica del Cauca medio en época de contacto: la hoja debe fijar una forma documentada para que no se dibuje alfarería genérica ni de otra región andina.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "flores-blancas-y-negras": {
       "name": "Pequeñas flores blancas y negras",
@@ -1712,7 +1744,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1740,7 +1772,11 @@
       ],
       "census_note": "Es el detalle más específico que conserva la crónica y aparece en los dos prompts y en el de comunidad. Los dos colores son portantes: sin ellos la escena pierde lo único que la distingue de cualquier sahumerio. Hoja botánica sobria, sin resolver una especie que la fuente no nombra.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "resinas": {
       "name": "Resinas quemadas en las vasijas",
@@ -1750,7 +1786,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1788,7 +1824,12 @@
       ],
       "census_note": "La crónica sólo dice que ponían resinas junto a las flores. Material menor sin forma descrita: la hoja de utilería le da una presentación documentada en vez de dejar que cada prompt invente un incienso.",
       "covered_by": "hoja_utileria_cuycuyes",
-      "coverage_note": "La crónica sólo dice que ponían resinas junto a las flores. Material menor sin forma descrita: la hoja de utilería le da una presentación documentada en vez de dejar que cada prompt invente un incienso."
+      "coverage_note": "La crónica sólo dice que ponían resinas junto a las flores. Material menor sin forma descrita: la hoja de utilería le da una presentación documentada en vez de dejar que cada prompt invente un incienso.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis",
+        "uncertain"
+      ]
     },
     "humo-del-oratorio": {
       "name": "Humo que llena el cuarto en capas",
@@ -1798,7 +1839,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1831,7 +1872,13 @@
       ],
       "census_note": "Regla de atmósfera, distinta de la ficha del ser: el humo llena el cuarto en capas lentas, oculta los bordes de las esteras y cambia la luz, y es lo que en los dos prompts sugiere la silueta. Sin una regla escrita, cada escena resolverá la niebla de manera distinta y la ambigüedad —que es el argumento— se perderá.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis",
+        "editorial_interpretation",
+        "uncertain"
+      ]
     },
     "cieza-de-leon": {
       "name": "Pedro Cieza de León",
@@ -1858,7 +1905,10 @@
         }
       ],
       "census_note": "Verificado: el relato lo cita como autor de la crónica («Según la crónica de Pedro Cieza de León»), no como presente en el oratorio. No está en ninguno de los dos prompts. Dibujarlo metería un cronista español en una escena que la fuente describe sin él.",
-      "exclusion_reason": "se menciona pero nunca se ve"
+      "exclusion_reason": "se menciona pero nunca se ve",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "sacrificio-y-canibalismo": {
       "name": "Acusaciones coloniales de sacrificio y canibalismo",
@@ -1885,7 +1935,10 @@
         }
       ],
       "census_note": "Verificado: universe.mjs las registra como narrativa de contexto que debe leerse como archivo colonial en disputa y no convertirse en escenas legendarias nuevas, y la historia cita a Jaramillo y a Rodríguez para leerlas con cautela. Los dos prompts prohíben sacrificio y violencia.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "carnaval-del-diablo-de-riosucio": {
       "name": "Carnaval del Diablo de Riosucio",
@@ -1912,7 +1965,10 @@
         }
       ],
       "census_note": "Verificado: la página heredada enlazaba la figura del oratorio con el carnaval y la revisión elimina la asociación. Es una tradición mestiza de otro municipio, con su propia historia colonial y republicana; compartir la palabra española «diablo» no prueba continuidad. Ninguna iconografía de carnaval entra en estas fichas.",
-      "exclusion_reason": "retirado por la edición: pertenece a otra tradición"
+      "exclusion_reason": "retirado por la edición: pertenece a otra tradición",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "comunidad-cuy-cuy-arma": {
       "name": "Gente de la provincia Cuy-Cuy o Arma, siglo XVI",
@@ -1922,7 +1978,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -1966,7 +2022,11 @@
       ],
       "census_note": "Aparece en los dos relatos: es la población por cuyas cosechas y bienestar se pregunta en el oratorio, y son los pobladores que al llegar la conquista esconden parte de los adornos de oro. Gramática de grupo de época de contacto, deliberadamente separada de la de los arrieros: el canon advierte que la provincia era multilingüe y de cacicazgos y que no puede convertirse en una comunidad contemporánea homogénea.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "gente-de-la-provincia": {
       "name": "Habitantes por cuyo bienestar se pregunta",
@@ -1976,7 +2036,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "contextual",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2004,7 +2064,11 @@
       ],
       "census_note": "Nombrados sólo como aquello que motiva las preguntas del rito; nunca entran en escena. Mismo colectivo ya fichado.",
       "covered_by": "comunidad-cuy-cuy-arma",
-      "coverage_note": "Nombrados sólo como aquello que motiva las preguntas del rito; nunca entran en escena. Mismo colectivo ya fichado."
+      "coverage_note": "Nombrados sólo como aquello que motiva las preguntas del rito; nunca entran en escena. Mismo colectivo ya fichado.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "pobladores-que-esconden-el-oro": {
       "name": "Pobladores que esconden los adornos",
@@ -2042,7 +2106,10 @@
       ],
       "census_note": "Actúan en el arranque de la leyenda, cuando la conquista llega al territorio de Arma. Son la misma población de contacto ya fichada y no los arrieros que siglos después buscan la cueva.",
       "covered_by": "comunidad-cuy-cuy-arma",
-      "coverage_note": "Actúan en el arranque de la leyenda, cuando la conquista llega al territorio de Arma. Son la misma población de contacto ya fichada y no los arrieros que siglos después buscan la cueva."
+      "coverage_note": "Actúan en el arranque de la leyenda, cuando la conquista llega al territorio de Arma. Son la misma población de contacto ya fichada y no los arrieros que siglos después buscan la cueva.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "adornos-de-oro-de-los-armados": {
       "name": "Adornos de oro que dieron el nombre de Armados",
@@ -2096,7 +2163,10 @@
       ],
       "census_note": "Ficha de época de contacto: son los ornamentos personales a partir de los cuales los españoles impusieron el rótulo Arma o Armados, según recuerda Valencia Llano, y lo que los pobladores esconden al llegar la conquista. Va separada de las figuras del tesoro precisamente para que no se confundan un adorno llevado en el cuerpo en el siglo XVI y un inventario de guaca escrito en 1983.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "pipinta": {
       "name": "Pipintá",
@@ -2123,7 +2193,10 @@
         }
       ],
       "census_note": "Verificado: da nombre al tesoro y es «recordado como cacique de resistencia», pero no aparece en ninguna escena, no actúa, no tiene una línea de descripción y no está en ninguno de los dos prompts del mito. Retratarlo fabricaría la efigie de un cacique prehispánico a partir de una leyenda regional del siglo XX: exactamente el error de época que este corpus obliga a evitar.",
-      "exclusion_reason": "sin evidencia visual"
+      "exclusion_reason": "sin evidencia visual",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "arrieros-y-campesinos-de-la-montana": {
       "name": "Arrieros, campesinos y curas de la montaña",
@@ -2133,7 +2206,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2176,7 +2249,12 @@
       ],
       "census_note": "La segunda gramática humana del corpus y la razón de ser de este censo: el mundo regional mestizo tardío en el que la leyenda fue escrita y reelaborada. Cubre a Martín Blandón, al sacerdote que recibe las indicaciones, a quienes intentaron seguir la ruta y a los dos arrieros con mula del prompt vertical. Época de arriería, no de contacto: ni un solo adorno prehispánico sobre estos cuerpos.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "uncertain"
+      ]
     },
     "martin-blandon": {
       "name": "Martín Blandón",
@@ -2204,7 +2282,10 @@
       ],
       "census_note": "Decía descender de Pipintá a través de Paco y entregó a un sacerdote las indicaciones del depósito. Está nombrado pero no descrito, no está en ningún prompt, y el canon declara que la edición no consultó un testimonio directo suyo. Se resuelve desde la gramática regional tardía.",
       "covered_by": "arrieros-y-campesinos-de-la-montana",
-      "coverage_note": "Decía descender de Pipintá a través de Paco y entregó a un sacerdote las indicaciones del depósito. Está nombrado pero no descrito, no está en ningún prompt, y el canon declara que la edición no consultó un testimonio directo suyo. Se resuelve desde la gramática regional tardía."
+      "coverage_note": "Decía descender de Pipintá a través de Paco y entregó a un sacerdote las indicaciones del depósito. Está nombrado pero no descrito, no está en ningún prompt, y el canon declara que la edición no consultó un testimonio directo suyo. Se resuelve desde la gramática regional tardía.",
+      "evidence_basis_mix": [
+        "contemporary_memory"
+      ]
     },
     "sacerdote-que-recibe-las-indicaciones": {
       "name": "Sacerdote que recibe la ruta",
@@ -2232,7 +2313,10 @@
       ],
       "census_note": "Una línea de función y ninguna descripción. Miembro del mismo mundo regional tardío.",
       "covered_by": "arrieros-y-campesinos-de-la-montana",
-      "coverage_note": "Una línea de función y ninguna descripción. Miembro del mismo mundo regional tardío."
+      "coverage_note": "Una línea de función y ninguna descripción. Miembro del mismo mundo regional tardío.",
+      "evidence_basis_mix": [
+        "contemporary_memory"
+      ]
     },
     "buscadores-que-no-encuentran-la-entrada": {
       "name": "Quienes intentaron seguir las indicaciones",
@@ -2265,7 +2349,10 @@
       ],
       "census_note": "Regresaron sin encontrar la entrada; el paisaje conservaba las señales sólo mientras nadie pretendiera poseerlas. Sin rasgos propios: misma gramática.",
       "covered_by": "arrieros-y-campesinos-de-la-montana",
-      "coverage_note": "Regresaron sin encontrar la entrada; el paisaje conservaba las señales sólo mientras nadie pretendiera poseerlas. Sin rasgos propios: misma gramática."
+      "coverage_note": "Regresaron sin encontrar la entrada; el paisaje conservaba las señales sólo mientras nadie pretendiera poseerlas. Sin rasgos propios: misma gramática.",
+      "evidence_basis_mix": [
+        "contemporary_memory"
+      ]
     },
     "mula": {
       "name": "Mula de arriería",
@@ -2298,7 +2385,10 @@
       ],
       "census_note": "Está en el prompt vertical con dos arrieros, y la hipérbole habla de decenas de mulas para transportar el tesoro. Es inseparable de la figura del arriero y se resuelve dentro de esa gramática, que debe fijarla para que no se dibuje un caballo.",
       "covered_by": "arrieros-y-campesinos-de-la-montana",
-      "coverage_note": "Está en el prompt vertical con dos arrieros, y la hipérbole habla de decenas de mulas para transportar el tesoro. Es inseparable de la figura del arriero y se resuelve dentro de esa gramática, que debe fijarla para que no se dibuje un caballo."
+      "coverage_note": "Está en el prompt vertical con dos arrieros, y la hipérbole habla de decenas de mulas para transportar el tesoro. Es inseparable de la figura del arriero y se resuelve dentro de esa gramática, que debe fijarla para que no se dibuje un caballo.",
+      "evidence_basis_mix": [
+        "contemporary_memory"
+      ]
     },
     "figuras-de-caciques-de-oro": {
       "name": "Dieciséis figuras de caciques de oro macizo",
@@ -2308,7 +2398,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2351,7 +2441,12 @@
       ],
       "census_note": "Es el objeto por el que se cuenta el relato y el punto más delicado del corpus. El inventario viene de la Monografía de Aguadas de 1983 con lenguaje hiperbólico de guaca —tres reinos, cincuenta mulas— y el canon advierte que no debe leerse como inventario histórico comprobado. La hoja debe resolverlas como figuras de una leyenda, dispuestas con sobriedad tal como pide el prompt, y NO reproducir orfebrería quimbaya ni del Cauca medio como si fueran piezas catalogadas: eso convertiría una lista legendaria en un registro arqueológico.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "editorial_interpretation"
+      ]
     },
     "mono-de-oro": {
       "name": "Mono de oro que sostiene la guardiana",
@@ -2361,7 +2456,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2384,7 +2479,11 @@
       ],
       "census_note": "Parte del mismo inventario de la cueva y del mismo problema de época; se produce dentro de la hoja de orfebrería legendaria, bajo su misma prohibición.",
       "covered_by": "figuras-de-caciques-de-oro",
-      "coverage_note": "Parte del mismo inventario de la cueva y del mismo problema de época; se produce dentro de la hoja de orfebrería legendaria, bajo su misma prohibición."
+      "coverage_note": "Parte del mismo inventario de la cueva y del mismo problema de época; se produce dentro de la hoja de orfebrería legendaria, bajo su misma prohibición.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "pareja-guardiana": {
       "name": "Guardián y guardiana del escondite",
@@ -2394,7 +2493,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "variant",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2417,7 +2516,11 @@
       ],
       "census_note": "Conducen la custodia dentro del inventario transmitido por Blandón y el prompt horizontal los pide al fondo, no monstruosos. Necesitan hoja propia justamente porque el canon deja su naturaleza abierta: pueden ser personas, imágenes o presencias según la interpretación, y no se identifican con ninguna deidad Cuy-Cuy. Esa ambigüedad hay que resolverla una vez y sostenerla.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "variant",
+        "editorial_interpretation"
+      ]
     },
     "cueva-del-tesoro": {
       "name": "Cámara de piedra donde está el depósito",
@@ -2427,7 +2530,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2470,7 +2573,14 @@
       ],
       "census_note": "Escenario del acto y sujeto del prompt horizontal. El modelo espacial recoge toda la secuencia de acceso que la ruta enumera: escalones naturales junto a la cascada, cornisa, roca que funciona como tapón, salón, segunda piedra y escalas labradas que bajan al corazón del escondite.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant",
+        "academic_hypothesis",
+        "editorial_interpretation"
+      ]
     },
     "escalones-cornisa-y-roca-tapon": {
       "name": "Escalones de piedra, cornisa y roca que tapona",
@@ -2513,7 +2623,11 @@
       ],
       "census_note": "Elementos sucesivos del mismo acceso; se producen dentro del modelo espacial de la cámara y no como fichas de piedra sueltas.",
       "covered_by": "cueva-del-tesoro",
-      "coverage_note": "Elementos sucesivos del mismo acceso; se producen dentro del modelo espacial de la cámara y no como fichas de piedra sueltas."
+      "coverage_note": "Elementos sucesivos del mismo acceso; se producen dentro del modelo espacial de la cámara y no como fichas de piedra sueltas.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "escalas-labradas-y-segunda-piedra": {
       "name": "Escalas labradas y segunda piedra interior",
@@ -2556,7 +2670,11 @@
       ],
       "census_note": "Cierran y abren la cámara más profunda. Parte del mismo modelo espacial.",
       "covered_by": "cueva-del-tesoro",
-      "coverage_note": "Cierran y abren la cámara más profunda. Parte del mismo modelo espacial."
+      "coverage_note": "Cierran y abren la cámara más profunda. Parte del mismo modelo espacial.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "cascada": {
       "name": "Caída de agua al final de la quebrada",
@@ -2566,7 +2684,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2599,7 +2717,12 @@
       ],
       "census_note": "Último hito de la ruta y umbral del acceso: junto a ella aparecen los escalones naturales. Se produce con el modelo de la cámara, del que es la entrada.",
       "covered_by": "cueva-del-tesoro",
-      "coverage_note": "Último hito de la ruta y umbral del acceso: junto a ella aparecen los escalones naturales. Se produce con el modelo de la cámara, del que es la entrada."
+      "coverage_note": "Último hito de la ruta y umbral del acceso: junto a ella aparecen los escalones naturales. Se produce con el modelo de la cámara, del que es la entrada.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "academic_hypothesis"
+      ]
     },
     "montanas-y-canon-del-cauca": {
       "name": "Montañas del norte de Caldas y cañón del Cauca",
@@ -2609,7 +2732,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2653,7 +2776,12 @@
       ],
       "census_note": "Modelo de entorno de los dos relatos: la montaña y el cielo nocturno que se ven por la abertura del recinto, y el camino entre Aguadas y Pácora sobre el cañón del Cauca. Recoge todos los topónimos de la ruta, y hace bien: el canon dice que los lugares fluctúan entre Aguadas, Pácora, Salamina, río Arma, río Pozo y el Cauca, y que «no es necesario escoger un punto único».",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "academic_hypothesis"
+      ]
     },
     "plaza-de-armaviejo": {
       "name": "Plaza de Armaviejo",
@@ -2691,7 +2819,11 @@
       ],
       "census_note": "Punto de partida del itinerario; nombrado sin una sola línea de descripción. Hito del modelo de entorno.",
       "covered_by": "montanas-y-canon-del-cauca",
-      "coverage_note": "Punto de partida del itinerario; nombrado sin una sola línea de descripción. Hito del modelo de entorno."
+      "coverage_note": "Punto de partida del itinerario; nombrado sin una sola línea de descripción. Hito del modelo de entorno.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "quebrada-de-pacora-y-tolda-del-guayabo": {
       "name": "Quebrada de Pácora y Tolda del Guayabo",
@@ -2701,7 +2833,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2729,7 +2861,12 @@
       ],
       "census_note": "Hitos intermedios de la ruta, sin descripción propia. El valor narrativo está en la enumeración, no en cada lugar.",
       "covered_by": "montanas-y-canon-del-cauca",
-      "coverage_note": "Hitos intermedios de la ruta, sin descripción propia. El valor narrativo está en la enumeración, no en cada lugar."
+      "coverage_note": "Hitos intermedios de la ruta, sin descripción propia. El valor narrativo está en la enumeración, no en cada lugar.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "uncertain"
+      ]
     },
     "cuchilla-y-vista-del-cauca": {
       "name": "Cuchilla y punto desde donde se divisa el Cauca",
@@ -2767,7 +2904,11 @@
       ],
       "census_note": "Giro decisivo del itinerario y, a la vez, la vista que el prompt vertical usa para el espejismo. Relieve del mismo modelo de entorno.",
       "covered_by": "montanas-y-canon-del-cauca",
-      "coverage_note": "Giro decisivo del itinerario y, a la vez, la vista que el prompt vertical usa para el espejismo. Relieve del mismo modelo de entorno."
+      "coverage_note": "Giro decisivo del itinerario y, a la vez, la vista que el prompt vertical usa para el espejismo. Relieve del mismo modelo de entorno.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "camino-entre-aguadas-y-pacora": {
       "name": "Camino montañoso entre Aguadas y Pácora",
@@ -2777,7 +2918,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2820,7 +2961,13 @@
       ],
       "census_note": "Escenario de la variante del espejismo según el prompt vertical; es una vista del mismo modelo de entorno, no un lugar aparte.",
       "covered_by": "montanas-y-canon-del-cauca",
-      "coverage_note": "Escenario de la variante del espejismo según el prompt vertical; es una vista del mismo modelo de entorno, no un lugar aparte."
+      "coverage_note": "Escenario de la variante del espejismo según el prompt vertical; es una vista del mismo modelo de entorno, no un lugar aparte.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "academic_hypothesis",
+        "uncertain"
+      ]
     },
     "resplandor-que-se-deshace": {
       "name": "Resplandor dorado que se deshace en niebla",
@@ -2830,7 +2977,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2858,7 +3005,12 @@
       ],
       "census_note": "Es toda la variante de Ocampo y no se reduce a un objeto: el tesoro se manifiesta a los arrieros desde lejos como un brillo entre la montaña y la niebla, y cuando creen haber fijado el lugar desaparece. El prompt es explícito en la regla: debe sentirse como espejismo y no como portal. Sin hoja de fenómeno, se dibujará una puerta mágica.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "academic_hypothesis"
+      ]
     },
     "mantas-plegadas": {
       "name": "Mantas plegadas de la cámara",
@@ -2868,7 +3020,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2891,7 +3043,11 @@
       ],
       "census_note": "Guardadas en el salón junto a los sombreros, «como si el lugar hubiera guardado no solo metal sino huellas de quienes lo prepararon». Objeto menor, pero con advertencia de época: la hoja debe declarar qué textil se dibuja, porque el relato no lo dice y la tentación es vestir la cueva de prehispánico.",
       "covered_by": "hoja_utileria_cuycuyes",
-      "coverage_note": "Guardadas en el salón junto a los sombreros, «como si el lugar hubiera guardado no solo metal sino huellas de quienes lo prepararon». Objeto menor, pero con advertencia de época: la hoja debe declarar qué textil se dibuja, porque el relato no lo dice y la tentación es vestir la cueva de prehispánico."
+      "coverage_note": "Guardadas en el salón junto a los sombreros, «como si el lugar hubiera guardado no solo metal sino huellas de quienes lo prepararon». Objeto menor, pero con advertencia de época: la hoja debe declarar qué textil se dibuja, porque el relato no lo dice y la tentación es vestir la cueva de prehispánico.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "sombreros-de-cana": {
       "name": "Sombreros de caña",
@@ -2901,7 +3057,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2929,7 +3085,12 @@
       ],
       "census_note": "El otro rastro humano dentro de la cámara y uno de los pocos objetos fechables del inventario. Objeto menor con la misma advertencia de época que las mantas.",
       "covered_by": "hoja_utileria_cuycuyes",
-      "coverage_note": "El otro rastro humano dentro de la cámara y uno de los pocos objetos fechables del inventario. Objeto menor con la misma advertencia de época que las mantas."
+      "coverage_note": "El otro rastro humano dentro de la cámara y uno de los pocos objetos fechables del inventario. Objeto menor con la misma advertencia de época que las mantas.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "academic_hypothesis"
+      ]
     },
     "senora-vegetal-sal-plagas-y-guardian-inmundo": {
       "name": "Señora del Pipintá de hojas, círculo de sal, plagas y «guardián inmundo»",
@@ -2984,7 +3145,10 @@
         }
       ],
       "census_note": "Verificado en universe.mjs: son personajes históricos de la resistencia a la conquista que las fuentes conservan como acontecimiento, sin narración mítica autónoma que justifique página. Ni cuerpo, ni escena, ni relato: no hay nada que fichar sin inventarlo.",
-      "exclusion_reason": "sin evidencia visual"
+      "exclusion_reason": "sin evidencia visual",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ubicacion-verificable-de-la-cueva": {
       "name": "Ubicación identificable de la cueva y la ruta",
@@ -2994,7 +3158,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "excluded",
       "model_requirements": [],
@@ -3021,7 +3185,11 @@
         }
       ],
       "census_note": "Verificado: el canon dice que las coordenadas conservan el entorno aproximado de Aguadas, que no señalan una cueva verificable y que la ruta «no es una ubicación arqueológica ni una invitación a buscar guacas». Una ilustración de un accidente reconocible funcionaría como mapa de guaquería. El paisaje se produce evocador y genérico, nunca localizable.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "hoja_utileria_cuycuyes": {
       "name": "hoja utileria cuycuyes",
@@ -3031,7 +3199,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -3060,7 +3228,13 @@
         "sombreros-de-cana"
       ],
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis",
+        "editorial_interpretation",
+        "uncertain"
+      ]
     }
   },
   "models": {},

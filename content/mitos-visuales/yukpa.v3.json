@@ -1024,7 +1024,7 @@
         "canonico",
         "luna"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1069,6 +1069,10 @@
       "design": null,
       "states_declared": [
         "luna"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
       ]
     },
     "kopeco": {
@@ -1080,7 +1084,7 @@
         "canonico",
         "rana"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1120,6 +1124,11 @@
       "design": null,
       "states_declared": [
         "rana"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation",
+        "uncertain"
       ]
     },
     "pozo_de_brasas": {
@@ -1130,7 +1139,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1153,7 +1162,11 @@
       ],
       "census_note": "Escenario del acto decisivo: el Sol cae ahí y sale cambiado. No es intercambiable con el paisaje del Perijá ni con una fogata genérica.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "serrania_del_perija": {
       "name": "Serranía del Perijá (nacederos, quebradas, monte del Cesar)",
@@ -1163,7 +1176,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1207,7 +1220,12 @@
       ],
       "census_note": "Modelo de entorno único de los dos relatos: las montañas recalentadas del primero y los valles anegados del segundo son el mismo mundo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "academic_hypothesis"
+      ]
     },
     "cumbres_shkhimo_y_tutarhi": {
       "name": "Cumbres Shkhimo y Tütarhi",
@@ -1217,7 +1235,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "contextual",
       "visual_status": "required",
       "model_requirements": [],
@@ -1260,7 +1278,12 @@
       ],
       "census_note": "Refugio nombrado del diluvio y escenario del acto de sobrevivir. El modelo de entorno del Perijá no entrega dos cumbres verdes emergiendo sobre un mar de agua.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "academic_hypothesis"
+      ]
     },
     "nacimiento_de_la_noche": {
       "name": "Nacimiento de la noche y alternancia día/noche",
@@ -1313,7 +1336,10 @@
       ],
       "census_note": "Es aquello por lo que se cuenta el relato. La regla fija cómo lee el cielo antes (claridad continua, sin sombra) y después (dos astros separados, pausa), y evita que el ilustrador dibuje una noche cualquiera.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "diluvio_y_oscuridad_prolongada": {
       "name": "Diluvio: lluvia y oscuridad prolongadas",
@@ -1323,7 +1349,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1366,7 +1392,11 @@
       ],
       "census_note": "Objeto del relato. La regla debe fijar semanas o meses de lluvia con oscuridad, no una tormenta; el texto insiste en que es una de-creación parcial, no un borrón total.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "armadillos": {
       "name": "Armadillos que retiran las aguas",
@@ -1376,7 +1406,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "contextual",
       "visual_status": "required",
       "model_requirements": [],
@@ -1409,7 +1439,11 @@
       ],
       "census_note": "Conducen la acción del desenlace: cavan, beben o conducen el exceso hacia abajo hasta que reaparece la tierra habitable. Una identidad de especie repetida basta; no necesita gramática de grupo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "gente_yukpa": {
       "name": "Gente Yukpa (sobrevivientes y comunidad del Perijá)",
@@ -1463,7 +1497,11 @@
       ],
       "census_note": "Los que atienden la advertencia, suben, esperan y reconstruyen. Es la gramática de grupo que fija cuerpos y vestuario para toda masa humana del corpus; sin ella cada keyframe inventa un traje.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "vivienda_yukpa": {
       "name": "Vivienda y parcela Yukpa",
@@ -1473,7 +1511,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -1516,7 +1554,12 @@
       ],
       "census_note": "El agua «cubrió lugares habitados» y borra «las separaciones entre monte, cultivo y vivienda»: lo que se destruye y se rehace tiene que existir como modelo o el diluvio se ilustra sobre un paisaje vacío.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant"
+      ]
     },
     "luna": {
       "name": "Luna",
@@ -1564,7 +1607,10 @@
       ],
       "census_note": "No es otro ser: es el estado del hermano solar que pasó por las brasas. Se resuelve en la hoja de estado de esa ficha.",
       "covered_by": "soles_hermanos",
-      "coverage_note": "No es otro ser: es el estado del hermano solar que pasó por las brasas. Se resuelve en la hoja de estado de esa ficha."
+      "coverage_note": "No es otro ser: es el estado del hermano solar que pasó por las brasas. Se resuelve en la hoja de estado de esa ficha.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "rana_de_kopeco": {
       "name": "Rana",
@@ -1592,7 +1638,10 @@
       ],
       "census_note": "Es la forma final de Kopeco, no una especie aparte del relato.",
       "covered_by": "kopeco",
-      "coverage_note": "Es la forma final de Kopeco, no una especie aparte del relato."
+      "coverage_note": "Es la forma final de Kopeco, no una especie aparte del relato.",
+      "evidence_basis_mix": [
+        "uncertain"
+      ]
     },
     "agua_donde_cae_kopeco": {
       "name": "Agua donde cae Kopeco (laguna o río de montaña)",
@@ -1620,7 +1669,10 @@
       ],
       "census_note": "El texto corregido sólo dice «la arroja al agua»; la escena aprobada la sitúa en una laguna. Es una variante del mismo modelo de entorno.",
       "covered_by": "serrania_del_perija",
-      "coverage_note": "El texto corregido sólo dice «la arroja al agua»; la escena aprobada la sitúa en una laguna. Es una variante del mismo modelo de entorno."
+      "coverage_note": "El texto corregido sólo dice «la arroja al agua»; la escena aprobada la sitúa en una laguna. Es una variante del mismo modelo de entorno.",
+      "evidence_basis_mix": [
+        "uncertain"
+      ]
     },
     "canales_excavados": {
       "name": "Canales por donde desciende el agua",
@@ -1648,7 +1700,10 @@
       ],
       "census_note": "Los canales sólo existen como huella del trabajo de los armadillos; van en su ficha, no en una lámina de lugar.",
       "covered_by": "armadillos",
-      "coverage_note": "Los canales sólo existen como huella del trabajo de los armadillos; van en su ficha, no en una lámina de lugar."
+      "coverage_note": "Los canales sólo existen como huella del trabajo de los armadillos; van en su ficha, no en una lámina de lugar.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "parcelas_y_senderos_reaparecidos": {
       "name": "Parcelas, senderos y árboles que reaparecen",
@@ -1658,7 +1713,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1691,7 +1746,12 @@
       ],
       "census_note": "Es el estado «después del agua» del mismo modelo de entorno, no otro paisaje.",
       "covered_by": "serrania_del_perija",
-      "coverage_note": "Es el estado «después del agua» del mismo modelo de entorno, no otro paisaje."
+      "coverage_note": "Es el estado «después del agua» del mismo modelo de entorno, no otro paisaje.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant"
+      ]
     },
     "figura_que_advierte_el_diluvio": {
       "name": "Quien advierte el diluvio (montaña personificada, tuwancha o figura creadora)",
@@ -1701,7 +1761,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "excluded",
       "model_requirements": [],
@@ -1733,7 +1793,11 @@
         }
       ],
       "census_note": "Detectada en la séptima pasada. Si el guion necesita la advertencia, debe resolverse sin cuerpo (señal, sueño, montaña sin rostro).",
-      "exclusion_reason": "variante no resuelta y sin descripción visual: el texto ofrece tres posibilidades excluyentes y no describe ninguna; elegir una fijaría una variante como doctrina e inventaría su cuerpo"
+      "exclusion_reason": "variante no resuelta y sin descripción visual: el texto ofrece tres posibilidades excluyentes y no describe ninguna; elegir una fijaría una variante como doctrina e inventaría su cuerpo",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "piedra_flotante": {
       "name": "La piedra-nido que flota",
@@ -1760,7 +1824,10 @@
         }
       ],
       "census_note": "Está en el canon congelado, no en el corpus corregido. Ficharla sería producir arte para una ficción ya retirada.",
-      "exclusion_reason": "invención editorial retirada: el propio expediente anterior la declaró creación nueva y el módulo la sustituye por el refugio en las cumbres"
+      "exclusion_reason": "invención editorial retirada: el propio expediente anterior la declaró creación nueva y el módulo la sustituye por el refugio en las cumbres",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "venado_guia": {
       "name": "El venado que guía y golpea la piedra",
@@ -1787,7 +1854,10 @@
         }
       ],
       "census_note": "Aparece dos veces en el texto congelado (mensajero y guía) y en ninguna de las fuentes Yukpa consultadas por el módulo.",
-      "exclusion_reason": "invención editorial retirada junto con la piedra flotante"
+      "exclusion_reason": "invención editorial retirada junto con la piedra flotante",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "pareja_sobreviviente_encerrada": {
       "name": "La pareja que se salva dentro de la piedra",
@@ -1814,7 +1884,10 @@
         }
       ],
       "census_note": "Su función pasa a la ficha de colectivo «gente Yukpa».",
-      "exclusion_reason": "invención editorial retirada: el corpus corregido salva grupos anónimos en las cumbres, no una pareja fundadora"
+      "exclusion_reason": "invención editorial retirada: el corpus corregido salva grupos anónimos en las cumbres, no una pareja fundadora",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "animales_que_empujan_la_piedra": {
       "name": "Armadillo, mico y pájaro carpintero empujando la piedra",
@@ -1841,7 +1914,10 @@
         }
       ],
       "census_note": "Ojo con el armadillo: sobrevive en el corpus corregido, pero con otra función (retira el agua, no empuja una piedra). El mico y el pájaro carpintero desaparecen; el carpintero reaparece, documentado, en el ciclo de Aponto que el módulo añade.",
-      "exclusion_reason": "invención editorial retirada"
+      "exclusion_reason": "invención editorial retirada",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "tomaira_abuelo_narrador": {
       "name": "El tomaira que sueña el canto y el abuelo narrador junto al fogón",
@@ -1874,7 +1950,10 @@
         }
       ],
       "census_note": "El tomaira existe en la etnografía Yukpa, pero no en la secuencia documentada de estos dos relatos; fichar su cuerpo sería inventar un especialista ritual para ilustrar una escena retirada.",
-      "exclusion_reason": "invención editorial retirada: el módulo elimina el marco del abuelo narrador en los dos relatos y el canto amarrador del tomaira"
+      "exclusion_reason": "invención editorial retirada: el módulo elimina el marco del abuelo narrador en los dos relatos y el canto amarrador del tomaira",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "senales_y_utileria_heredadas": {
       "name": "Señales y utilería del texto heredado (piedra que suda, árbol de hojas al revés, totuma con brasa, semilla de maíz en hoja seca)",
@@ -1906,7 +1985,10 @@
         }
       ],
       "census_note": "Agrupados en una sola entrada porque son la utilería completa del relato inventado. Con ellos fuera, el corpus Yukpa corregido se queda sin objetos y por eso no lleva hoja de utilería.",
-      "exclusion_reason": "invención editorial retirada: ninguno de estos objetos aparece en el corpus corregido"
+      "exclusion_reason": "invención editorial retirada: ninguno de estos objetos aparece en el corpus corregido",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     }
   },
   "models": {},

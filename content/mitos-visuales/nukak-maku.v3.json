@@ -788,7 +788,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -868,7 +868,13 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant",
+        "uncertain"
+      ]
     },
     "aukuribo": {
       "name": "Aukurɨbo, la Gente de Árbol",
@@ -880,7 +886,7 @@
         "oruga",
         "mariposa"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -967,6 +973,12 @@
       "states_declared": [
         "oruga",
         "mariposa"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant",
+        "editorial_interpretation"
       ]
     },
     "familias_nikak": {
@@ -977,7 +989,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -1061,7 +1073,13 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant",
+        "academic_hypothesis"
+      ]
     },
     "bak": {
       "name": "Bak, el mundo de abajo",
@@ -1152,7 +1170,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "paso_entre_bak_y_ye": {
       "name": "El paso abierto entre bak y yê",
@@ -1243,7 +1264,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ye_selva_y_confluencia": {
       "name": "Yê: selva del Guaviare y la confluencia de los dos ríos",
@@ -1253,7 +1277,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -1334,7 +1358,11 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "gente_tucan": {
       "name": "La Gente Tucán",
@@ -1344,7 +1372,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1367,7 +1395,11 @@
       ],
       "census_note": "Abre camino y orienta el avance, pero el relato no le da un solo rasgo propio. Se resuelve como marcador de grupo dentro de la gramática de las familias; darle lámina propia empujaría a inventar hombres-pájaro, que es exactamente lo que no se puede hacer.",
       "covered_by": "familias_nikak",
-      "coverage_note": "Abre camino y orienta el avance, pero el relato no le da un solo rasgo propio. Se resuelve como marcador de grupo dentro de la gramática de las familias; darle lámina propia empujaría a inventar hombres-pájaro, que es exactamente lo que no se puede hacer."
+      "coverage_note": "Abre camino y orienta el avance, pero el relato no le da un solo rasgo propio. Se resuelve como marcador de grupo dentro de la gramática de las familias; darle lámina propia empujaría a inventar hombres-pájaro, que es exactamente lo que no se puede hacer.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "mayores_que_guian": {
       "name": "Los mayores que guían a sus familias",
@@ -1377,7 +1409,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1420,7 +1452,13 @@
       ],
       "census_note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual.",
       "covered_by": "familias_nikak",
-      "coverage_note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual."
+      "coverage_note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant",
+        "uncertain"
+      ]
     },
     "unas_de_oso_hormiguero": {
       "name": "Las uñas de oso hormiguero con que se escarba el paso",
@@ -1430,7 +1468,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1453,7 +1491,11 @@
       ],
       "census_note": "El texto no aclara si son sus propias uñas o una herramienta, y el oso hormiguero nunca aparece como animal. Va en la hoja de Machoroko con la ambigüedad declarada, no como ficha de animal.",
       "covered_by": "machoroko",
-      "coverage_note": "El texto no aclara si son sus propias uñas o una herramienta, y el oso hormiguero nunca aparece como animal. Va en la hoja de Machoroko con la ambigüedad declarada, no como ficha de animal."
+      "coverage_note": "El texto no aclara si son sus propias uñas o una herramienta, y el oso hormiguero nunca aparece como animal. Va en la hoja de Machoroko con la ambigüedad declarada, no como ficha de animal.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "oruga": {
       "name": "Oruga",
@@ -1463,7 +1505,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1491,7 +1533,11 @@
       ],
       "census_note": "Primera forma de Aukurɨbo, no una especie del relato.",
       "covered_by": "aukuribo",
-      "coverage_note": "Primera forma de Aukurɨbo, no una especie del relato."
+      "coverage_note": "Primera forma de Aukurɨbo, no una especie del relato.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "mariposa": {
       "name": "Mariposa",
@@ -1501,7 +1547,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1529,7 +1575,11 @@
       ],
       "census_note": "Segunda forma de Aukurɨbo, la que le permite regresar a bak con parte de su familia.",
       "covered_by": "aukuribo",
-      "coverage_note": "Segunda forma de Aukurɨbo, la que le permite regresar a bak con parte de su familia."
+      "coverage_note": "Segunda forma de Aukurɨbo, la que le permite regresar a bak con parte de su familia.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "canos_lagunas_y_sectores": {
       "name": "Caños, lagunas y sectores donde se detienen",
@@ -1567,7 +1617,10 @@
       ],
       "census_note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar.",
       "covered_by": "ye_selva_y_confluencia",
-      "coverage_note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar."
+      "coverage_note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "semilla_chontaduro": {
       "name": "Semilla de chontaduro",
@@ -1595,7 +1648,10 @@
       ],
       "census_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales.",
       "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales."
+      "coverage_note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "semilla_tabaco": {
       "name": "Semilla de tabaco",
@@ -1623,7 +1679,10 @@
       ],
       "census_note": "Nombrada en la lista de semillas cargadas en canastos.",
       "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos."
+      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "semilla_cana": {
       "name": "Semilla de caña",
@@ -1651,7 +1710,10 @@
       ],
       "census_note": "Nombrada en la lista de semillas cargadas en canastos.",
       "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos."
+      "coverage_note": "Nombrada en la lista de semillas cargadas en canastos.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "totumo": {
       "name": "Totumo",
@@ -1679,7 +1741,10 @@
       ],
       "census_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
       "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto."
+      "coverage_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "platano": {
       "name": "Plátano",
@@ -1707,7 +1772,10 @@
       ],
       "census_note": "Nombrado en la lista de semillas cargadas en canastos.",
       "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos."
+      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "yuca_dulce": {
       "name": "Yuca dulce",
@@ -1735,7 +1803,10 @@
       ],
       "census_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir.",
       "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir."
+      "coverage_note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "yuca_amarga": {
       "name": "Yuca amarga",
@@ -1763,7 +1834,10 @@
       ],
       "census_note": "Distinta de la dulce en el propio texto.",
       "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Distinta de la dulce en el propio texto."
+      "coverage_note": "Distinta de la dulce en el propio texto.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "maiz": {
       "name": "Maíz",
@@ -1791,7 +1865,10 @@
       ],
       "census_note": "Nombrado en la lista de semillas cargadas en canastos.",
       "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos."
+      "coverage_note": "Nombrado en la lista de semillas cargadas en canastos.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "name": {
       "name": "Ñame",
@@ -1819,7 +1896,10 @@
       ],
       "census_note": "Cierra la lista de nueve cultivos traídos desde bak.",
       "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Cierra la lista de nueve cultivos traídos desde bak."
+      "coverage_note": "Cierra la lista de nueve cultivos traídos desde bak.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "canastos": {
       "name": "Canastos de carga",
@@ -1829,7 +1909,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -1857,7 +1937,11 @@
       ],
       "census_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
       "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas."
+      "coverage_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "perseguidores_de_bak": {
       "name": "Los seres que perseguían a los Nɨkak en bak",
@@ -1894,7 +1978,10 @@
         }
       ],
       "census_note": "Verificado contra el texto. Conducen la acción, pero eso no basta si no hay nada que dibujar: si un keyframe los necesita, se resuelven como amenaza fuera de campo.",
-      "exclusion_reason": "sin evidencia visual: el relato sólo dice que «otros seres los perseguían, los atacaban y querían impedirles continuar», sin una sola línea sobre su forma; dibujarlos sería inventarlos"
+      "exclusion_reason": "sin evidencia visual: el relato sólo dice que «otros seres los perseguían, los atacaban y querían impedirles continuar», sin una sola línea sobre su forma; dibujarlos sería inventarlos",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "idn_kamni_y_el_rio_de_leche": {
       "name": "Idn Kamni, la saliva, la tierra y el Río de Leche",
@@ -1931,7 +2018,10 @@
         }
       ],
       "census_note": "Es la trampa central de esta comunidad, y es exactamente la falta de mezclar iconografía de un pueblo en otro. Las dos imágenes heredadas ilustraban esta versión equivocada y fueron reemplazadas.",
-      "exclusion_reason": "atribución Kakua retirada: la investigación de Mahecha demuestra que ese héroe y ese trayecto pertenecen al origen Kakua, no al Nɨkak, y la ficha fue reescrita por completo conservando sólo la URL"
+      "exclusion_reason": "atribución Kakua retirada: la investigación de Mahecha demuestra que ese héroe y ese trayecto pertenecen al origen Kakua, no al Nɨkak, y la ficha fue reescrita por completo conservando sólo la URL",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "mauro": {
       "name": "Mauro",
@@ -1958,7 +2048,10 @@
         }
       ],
       "census_note": "Séptima pasada. Sirve para separar Nɨkak de Kakua, no para producir imagen.",
-      "exclusion_reason": "se menciona en el aparato crítico pero no en el relato: la historia lo nombra como el héroe que los Nɨkak reconocen, y ninguna escena del mito lo muestra"
+      "exclusion_reason": "se menciona en el aparato crítico pero no en el relato: la historia lo nombra como el héroe que los Nɨkak reconocen, y ninguna escena del mito lo muestra",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "otros_pobladores_y_la_violencia_del_contacto": {
       "name": "Los otros pobladores y su violencia",
@@ -1990,7 +2083,10 @@
         }
       ],
       "census_note": "El cierre del mito es memoria de desplazamiento contemporáneo (contacto oficial 1988, epidemias). Se narra, no se ilustra.",
-      "exclusion_reason": "materia sensible y sin descripción: el relato cierra con la llegada y la violencia de otros pobladores sin describirlos, y el canon advierte contra convertir el desplazamiento forzado en espectáculo"
+      "exclusion_reason": "materia sensible y sin descripción: el relato cierra con la llegada y la violencia de otros pobladores sin describirlos, y el canon advierte contra convertir el desplazamiento forzado en espectáculo",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cantos_formulas_y_procedimientos_chamanicos": {
       "name": "Cantos, fórmulas y procedimientos chamánicos",
@@ -2022,7 +2118,11 @@
         }
       ],
       "census_note": "No aparecen en el relato; los registro para que el límite quede escrito antes de diseñar y no después.",
-      "exclusion_reason": "do_not_visualize: el canon declara que sólo resume material publicado y que no reproduce cantos, fórmulas, procedimientos chamánicos ni localizaciones operativas"
+      "exclusion_reason": "do_not_visualize: el canon declara que sólo resume material publicado y que no reproduce cantos, fórmulas, procedimientos chamánicos ni localizaciones operativas",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "hoja_semillas_nikak_1": {
       "name": "hoja semillas nikak 1",
@@ -2092,7 +2192,10 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "hoja_semillas_nikak_2": {
       "name": "hoja semillas nikak 2",
@@ -2102,7 +2205,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
@@ -2163,7 +2266,11 @@
         ],
         "states_to_model": []
       },
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     }
   },
   "models": {

@@ -1838,7 +1838,10 @@
       ],
       "census_note": "Conduce la creación: forma la tierra, levanta las montañas, abre el mar, pone el sol y la luna, hace la playa del Sábalo y crea a su hijo Ewandam; a petición de este forma la gente. Está en el prompt horizontal. La memoria comunitaria le asigna función distinta a la de Ewandam y la ficha debe sostener esa diferencia.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ewandam": {
       "name": "Ewandam",
@@ -1878,7 +1881,10 @@
       ],
       "census_note": "Reaparece en tres relatos conduciendo la acción: pide la creación de la gente, promete alimento sin trabajo, crea las plantas de la competencia y sala el mar con una cucharada. Es el padre que los Wounaan reconocen. Está en los prompts de dos mitos.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "dosat": {
       "name": "Dosat",
@@ -1916,7 +1922,10 @@
       ],
       "census_note": "Conduce el segundo motor del relato: lleva machete y hacha, enseña a preparar la tierra y a sembrar, responde a cada planta con otra parecida y fracasa al salar el mar. El prompt existente exige resolverlo «sin demonio europeo»: los nombres Dosat y Satanás son mediación cristiana visible y la ficha no puede convertirlo en diablo de iconografía occidental.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "gente-de-barro": {
       "name": "Gente de barro de la playa del Baudó",
@@ -1927,7 +1936,7 @@
         "canonico",
         "levantadas, ya con vida"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -1962,6 +1971,10 @@
       "design": null,
       "states_declared": [
         "levantadas, ya con vida"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
       ]
     },
     "barro-humedo": {
@@ -1972,7 +1985,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2000,7 +2013,12 @@
       ],
       "census_note": "Materia de la que salen las figuras; es parte de esa ficha y de la del lugar, no un objeto con acto propio.",
       "covered_by": "gente-de-barro",
-      "coverage_note": "Materia de la que salen las figuras; es parte de esa ficha y de la del lugar, no un objeto con acto propio."
+      "coverage_note": "Materia de la que salen las figuras; es parte de esa ficha y de la del lugar, no un objeto con acto propio.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis",
+        "uncertain"
+      ]
     },
     "playa-del-rio-baudo": {
       "name": "Playa del río Sábalo, en el Baudó",
@@ -2010,7 +2028,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -2043,7 +2061,11 @@
       ],
       "census_note": "Escenario del acto del relato y nombrado con precisión por la memoria comunitaria: allí el agua encuentra la tierra y allí se forman los primeros cuerpos. El canon advierte que pertenece al tiempo cosmogónico y no es Santa Marta de Curiche, así que no puede resolverse con una orilla genérica ni con una localidad actual.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "mar": {
       "name": "Mar abierto por Maach Aai",
@@ -2053,7 +2075,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -2097,7 +2119,11 @@
       ],
       "census_note": "Reaparece en dos relatos: lo abre Maach Aai en la creación y es el objeto de la prueba de la sal. El encuentro del río con el mar está en el prompt horizontal del weguer. Es un entorno distinto del río y la selva y necesita su propio modelo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "montanas": {
       "name": "Montañas levantadas en la creación",
@@ -2130,7 +2156,10 @@
       ],
       "census_note": "Se nombran en la secuencia de creación y aparecen en los dos prompts como capas de fondo; son relieve del modelo de entorno, sin acto propio.",
       "covered_by": "rio-y-selva-del-pacifico",
-      "coverage_note": "Se nombran en la secuencia de creación y aparecen en los dos prompts como capas de fondo; son relieve del modelo de entorno, sin acto propio."
+      "coverage_note": "Se nombran en la secuencia de creación y aparecen en los dos prompts como capas de fondo; son relieve del modelo de entorno, sin acto propio.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "sol-y-luna": {
       "name": "Sol y luna puestos en el cielo",
@@ -2163,7 +2192,10 @@
       ],
       "census_note": "Puestos una vez y nunca vuelven a intervenir; están en los dos prompts como formas recortadas del cielo. Son parte del modelo de entorno, no dos reglas de fenómeno.",
       "covered_by": "rio-y-selva-del-pacifico",
-      "coverage_note": "Puestos una vez y nunca vuelven a intervenir; están en los dos prompts como formas recortadas del cielo. Son parte del modelo de entorno, no dos reglas de fenómeno."
+      "coverage_note": "Puestos una vez y nunca vuelven a intervenir; están en los dos prompts como formas recortadas del cielo. Son parte del modelo de entorno, no dos reglas de fenómeno.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "los-mundos-creados-por-maach-aai": {
       "name": "Los mundos creados por Maach Aai",
@@ -2190,7 +2222,10 @@
         }
       ],
       "census_note": "Verificado: la memoria de Curiche dice que los humanos quedaron en el tercero de los mundos, el estudio del Ministerio de Ambiente habla de cuatro, y el canon declara expresamente que conserva esa formulación «sin completar los niveles restantes con información tomada de otro expediente». Dibujar la escalera de mundos sería completarla.",
-      "exclusion_reason": "sin evidencia visual"
+      "exclusion_reason": "sin evidencia visual",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ensayos-con-chonta-y-balso": {
       "name": "Ensayos de creación con chonta y balso",
@@ -2227,7 +2262,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2271,7 +2306,11 @@
       ],
       "census_note": "Reaparece en dos relatos conduciendo acción: busca el balso, vacía la madera, talla los pasajeros, se forma esperando los sueños y sana con plantas y espíritus. La hoja es del oficio, no el retrato de una persona real, y debe fijar que en woun meu es benkhuun y no jaibaná.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "aprendiz-del-benkhuun": {
       "name": "Aprendiz que espera los sueños",
@@ -2354,7 +2393,10 @@
         }
       ],
       "census_note": "Verificado: el relato lo nombra como benkhuun y líder espiritual de Curiche, con conocimientos heredados de su abuelo y su padre, y dice que la comunidad volvió a reunirse en su vivienda. Es una persona real identificada; su retrato requiere consentimiento de su familia y de la comunidad, no una decisión editorial. La hoja del oficio cubre la función sin ponerle su cara.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "saber-del-benkhuun": {
       "name": "Saber del benkhuun: plantas, espíritus, palabras y límites",
@@ -2387,7 +2429,10 @@
         }
       ],
       "census_note": "Verificado: el relato dice que debía aprender las palabras, los cuidados y los límites de una práctica destinada a sanar y proteger, y la historia declara que la revisión evita describir fórmulas, cantos o secretos rituales no publicados. No tiene forma visible y dársela sería fabricar liturgia.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "espiritus-del-benkhuun": {
       "name": "Espíritus con que se relaciona el benkhuun",
@@ -2420,7 +2465,10 @@
         }
       ],
       "census_note": "Verificado: en los sueños podía encontrarse con ellos, reconocerlos y escuchar cómo dirigirse a ellos, y el relato advierte que no podía tratarlos como obedientes por naturaleza. Ninguna fuente les da forma. Los pasajeros tallados son figuras de madera, no retratos de espíritus, y así debe decirlo su ficha.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "jaibana-y-la-iconografia-embera": {
       "name": "Jaibaná, término homónimo emberá",
@@ -2430,7 +2478,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
       "visual_status": "excluded",
       "model_requirements": [],
@@ -2463,7 +2511,11 @@
         }
       ],
       "census_note": "Verificado: la cartilla de Curiche define benkhuun en woun meu y aclara que «jaibaná» es el término homónimo usado entre comunidades emberá; el canon corrige expresamente el uso indiscriminado que traía la ficha heredada. Queda registrado como exclusión para que ninguna hoja Wounaan tome prestada iconografía emberá ni de la biblia chamí existente, aunque compartan territorio en el San Juan.",
-      "exclusion_reason": "consult_required: pertenece a otra comunidad"
+      "exclusion_reason": "consult_required: pertenece a otra comunidad",
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
     },
     "barca-de-los-espiritus": {
       "name": "Barca ritual tallada en balso",
@@ -2473,7 +2525,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2511,7 +2563,12 @@
       ],
       "census_note": "Es el objeto por el que se cuenta el relato: vaciada de una pieza ligera de balso, con pasajeros tallados dentro, instrumento ritual y no canoa de transporte ni recuerdo de viaje. Su tamaño pequeño no disminuye su función y eso es lo que la hoja debe resolver.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "academic_hypothesis"
+      ]
     },
     "arbol-de-balso": {
       "name": "Árbol de balso",
@@ -2521,7 +2578,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "contextual",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -2544,7 +2601,11 @@
       ],
       "census_note": "El benkhuun lo busca y elige una pieza ligera; la fibra del balso es lo que el aprendiz observa. Es la materia de la ficha de la barca, no un árbol con acto propio.",
       "covered_by": "barca-de-los-espiritus",
-      "coverage_note": "El benkhuun lo busca y elige una pieza ligera; la fibra del balso es lo que el aprendiz observa. Es la materia de la ficha de la barca, no un árbol con acto propio."
+      "coverage_note": "El benkhuun lo busca y elige una pieza ligera; la fibra del balso es lo que el aprendiz observa. Es la materia de la ficha de la barca, no un árbol con acto propio.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "herramientas-del-benkhuun": {
       "name": "Herramientas con que vacía la madera",
@@ -2577,7 +2638,10 @@
       ],
       "census_note": "El relato dice «con sus herramientas» y nada más. Se resuelven dentro de la hoja de la barca para que no se inventen instrumentos ajenos al oficio.",
       "covered_by": "barca-de-los-espiritus",
-      "coverage_note": "El relato dice «con sus herramientas» y nada más. Se resuelven dentro de la hoja de la barca para que no se inventen instrumentos ajenos al oficio."
+      "coverage_note": "El relato dice «con sus herramientas» y nada más. Se resuelven dentro de la hoja de la barca para que no se inventen instrumentos ajenos al oficio.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "pasajeros-protectores": {
       "name": "Pasajeros tallados: figuras humanas y animales",
@@ -2587,7 +2651,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "inferred",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -2620,7 +2684,11 @@
       ],
       "census_note": "Cada pasajero acompaña y protege al dueño de la barca y su selección expresa relaciones que el benkhuun conoce: no son adorno. Gramática de conjunto de figuras talladas. El canon prohíbe llamarlas ídolos, juguetes o equivalentes de objetos ajenos, y prohíbe leerlas como retratos de espíritus.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "academic_hypothesis"
+      ]
     },
     "barca-o-chingo-suspendida": {
       "name": "Barca pequeña o chingo suspendida en la rogativa",
@@ -2630,7 +2698,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2674,7 +2742,13 @@
       ],
       "census_note": "Ficha aparte por mandato explícito del canon, que conserva la diferencia y prohíbe declararla el mismo objeto que la barca de iniciación: esta cuelga en el centro de la vivienda ceremonial, se percute con dos percutores y su golpe sirvió para comunicar a distancia la presencia de un animal peligroso. Aparece en los dos relatos del ciclo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "variant",
+        "uncertain"
+      ]
     },
     "lideresa-de-la-rogativa": {
       "name": "Mujer que lidera el ruego",
@@ -2684,7 +2758,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2728,7 +2802,12 @@
       ],
       "census_note": "Conduce la ceremonia en los dos relatos del ciclo: ocupa el centro y golpea la barca con dos percutores mientras las demás mujeres se reúnen alrededor. Está en los prompts de ambas páginas. El liderazgo femenino es el dato que la fuente comunitaria subraya y la hoja tiene que sostenerlo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "uncertain"
+      ]
     },
     "mujeres-de-la-rogativa": {
       "name": "Mujeres que rodean el centro",
@@ -2767,7 +2846,11 @@
       ],
       "census_note": "Ocupan el centro de la acción, pero lo que hay que fijar es su disposición en el espacio, y eso pertenece al modelo de la vivienda ceremonial. Sus cuerpos salen de la gramática de la comunidad.",
       "covered_by": "comunidad-wounaan",
-      "coverage_note": "Ocupan el centro de la acción, pero lo que hay que fijar es su disposición en el espacio, y eso pertenece al modelo de la vivienda ceremonial. Sus cuerpos salen de la gramática de la comunidad."
+      "coverage_note": "Ocupan el centro de la acción, pero lo que hay que fijar es su disposición en el espacio, y eso pertenece al modelo de la vivienda ceremonial. Sus cuerpos salen de la gramática de la comunidad.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "hombres-que-se-ubican-afuera": {
       "name": "Hombres ubicados más afuera del círculo",
@@ -2801,7 +2884,11 @@
       ],
       "census_note": "La fuente sólo registra su posición relativa; la disposición la resuelve la vivienda ceremonial y los cuerpos, la comunidad.",
       "covered_by": "comunidad-wounaan",
-      "coverage_note": "La fuente sólo registra su posición relativa; la disposición la resuelve la vivienda ceremonial y los cuerpos, la comunidad."
+      "coverage_note": "La fuente sólo registra su posición relativa; la disposición la resuelve la vivienda ceremonial y los cuerpos, la comunidad.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "cuatro-flautistas": {
       "name": "Cuatro hombres que acompañan con flautas",
@@ -2840,7 +2927,11 @@
       ],
       "census_note": "Reaparecen en los dos relatos del ciclo con un dato preciso y repetido: son cuatro y tocan flautas o carrizos de diferentes tamaños. Están en los prompts de ambas páginas. Gramática de conjunto, no cuatro retratos.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "flautas-y-carrizos": {
       "name": "Flautas o carrizos de diferentes tamaños",
@@ -2879,7 +2970,10 @@
       ],
       "census_note": "Reaparecen en los dos relatos y tienen organología documentada: cuatro tamaños distintos. No son utilería porque el relato hace de su pérdida un hecho narrado: el desplazamiento se llevó los instrumentos y los materiales para fabricar los carrizos.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "materiales-para-fabricar-carrizos": {
       "name": "Materiales para fabricar los carrizos",
@@ -2907,7 +3001,10 @@
       ],
       "census_note": "El relato los nombra sólo como lo que se perdió con el desplazamiento, sin identificar la planta. Se resuelven dentro de la ficha del instrumento.",
       "covered_by": "flautas-y-carrizos",
-      "coverage_note": "El relato los nombra sólo como lo que se perdió con el desplazamiento, sin identificar la planta. Se resuelven dentro de la ficha del instrumento."
+      "coverage_note": "El relato los nombra sólo como lo que se perdió con el desplazamiento, sin identificar la planta. Se resuelven dentro de la ficha del instrumento.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "vivienda-ceremonial": {
       "name": "Vivienda ceremonial de la rogativa",
@@ -2917,7 +3014,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -2961,7 +3058,13 @@
       ],
       "census_note": "Escenario del acto en los dos relatos del ciclo y no intercambiable con la casa común: es el lugar propio que la comunidad necesitaba, con la barca colgada en el centro, las mujeres alrededor y los hombres más afuera. El relato registra además que se perdió y que la rogativa continuó en una casa que no había sido construida para ella; el modelo espacial debe poder mostrar las dos situaciones.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "academic_hypothesis",
+        "uncertain"
+      ]
     },
     "sueno-de-los-antepasados": {
       "name": "Sueño que comunica los motivos",
@@ -3000,7 +3103,11 @@
       ],
       "census_note": "Es el objeto por el que se cuenta el relato y reaparece en el otro: por él los antepasados hacen saber que hay que reunirse, y por él se forma el benkhuun. Los dos prompts lo resuelven como ondas abstractas sobre un río nocturno, no como visión figurativa, y la regla del fenómeno existe para mantener esa abstracción.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "antepasados": {
       "name": "Antepasados que comunican por sueños",
@@ -3033,7 +3140,11 @@
       ],
       "census_note": "Nunca aparecen con cuerpo: lo que el relato muestra es el mensaje al despertar. Los prompts los resuelven como ondas abstractas y no como figuras, así que se cubren dentro de la regla del sueño.",
       "covered_by": "sueno-de-los-antepasados",
-      "coverage_note": "Nunca aparecen con cuerpo: lo que el relato muestra es el mensaje al despertar. Los prompts los resuelven como ondas abstractas y no como figuras, así que se cubren dentro de la regla del sueño."
+      "coverage_note": "Nunca aparecen con cuerpo: lo que el relato muestra es el mensaje al despertar. Los prompts los resuelven como ondas abstractas y no como figuras, así que se cubren dentro de la regla del sueño.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "desplazamiento-forzado": {
       "name": "Desplazamiento forzado y el regreso",
@@ -3060,7 +3171,10 @@
         }
       ],
       "census_note": "Verificado: el relato lo narra como lo que interrumpió la permanencia, se llevó la vivienda ceremonial, los instrumentos y los materiales, y redujo la frecuencia de la rogativa. Es contexto histórico y ninguno de los dos prompts lo representa. Su huella se produce como estado de la vivienda ceremonial, no como escena de violencia.",
-      "exclusion_reason": "no se visualiza: causa histórica, no escena"
+      "exclusion_reason": "no se visualiza: causa histórica, no escena",
+      "evidence_basis_mix": [
+        "contemporary_memory"
+      ]
     },
     "baston-espiritu-pez-y-nina-enferma": {
       "name": "Bastón luminoso, espíritu con forma de pez y niña enferma",
@@ -3114,7 +3228,10 @@
         }
       ],
       "census_note": "Verificado en versiones: la antigua «barca de dos tintas» añadía un maestro, un aprendiz y una prueba de poder entre jagua y achiote. El canon reconoce que la jagua tiene usos Wounaan documentados pero que esa combinación argumental no está en las fuentes directas de la barca. No se conserva como tradición.",
-      "exclusion_reason": "retirado por la edición: invención no acreditada"
+      "exclusion_reason": "retirado por la edición: invención no acreditada",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "weguer-werregue": {
       "name": "Weguer o wérregue, palma espinosa",
@@ -3152,7 +3269,11 @@
       ],
       "census_note": "Es el objeto por el que se cuenta el relato: la palma que Dosat hace frente al chontaduro de Ewandam, espinosa, con un cogollo que guarda fibras largas y resistentes. Está en los dos prompts. Las grafías weguer, wérregue, werregue y güérregue son de documentos distintos y no son plantas diferentes.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory"
+      ]
     },
     "cogollo-del-weguer": {
       "name": "Cogollo del que se extraen las fibras",
@@ -3180,7 +3301,10 @@
       ],
       "census_note": "Hay que entrar entre las espinas para extraerlo; es parte de la misma ficha botánica, en su fase de aprovechamiento.",
       "covered_by": "weguer-werregue",
-      "coverage_note": "Hay que entrar entre las espinas para extraerlo; es parte de la misma ficha botánica, en su fase de aprovechamiento."
+      "coverage_note": "Hay que entrar entre las espinas para extraerlo; es parte de la misma ficha botánica, en su fase de aprovechamiento.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "canasto-de-werregue": {
       "name": "Canasto tejido en rollo de wérregue",
@@ -3190,7 +3314,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -3233,7 +3357,12 @@
       ],
       "census_note": "Ficha con una restricción dura, y esa restricción es su razón de ser: se usa la forma documentada de la pieza —silueta, proporción, tejido en rollo, espiral— y jamás un patrón real, porque los diseños de la cestería werregue son identidad y son sustento de las artesanas. La hoja debe llevar escrita esa prohibición para que ningún prompt posterior la pierda.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "uncertain"
+      ]
     },
     "fibras-de-werregue": {
       "name": "Fibras secadas, teñidas y enrolladas",
@@ -3243,7 +3372,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -3281,7 +3410,12 @@
       ],
       "census_note": "Las familias las secan, las tiñen y las enrollan hasta formar canastos; es la fase previa del mismo objeto y el prompt vertical la muestra ascendiendo hacia la pieza tejida.",
       "covered_by": "canasto-de-werregue",
-      "coverage_note": "Las familias las secan, las tiñen y las enrollan hasta formar canastos; es la fase previa del mismo objeto y el prompt vertical la muestra ascendiendo hacia la pieza tejida."
+      "coverage_note": "Las familias las secan, las tiñen y las enrollan hasta formar canastos; es la fase previa del mismo objeto y el prompt vertical la muestra ascendiendo hacia la pieza tejida.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "uncertain"
+      ]
     },
     "patron-de-la-cesteria-werregue": {
       "name": "Diseños y patrones de la cestería werregue",
@@ -3313,7 +3447,10 @@
         }
       ],
       "census_note": "Verificado contra el relato y el referencial de cestería citado: el expediente habla del oficio, la preparación de las fibras y el tejido en rollo, nunca de un diseño concreto. Reproducir un patrón real sería tomar la identidad y el sustento de las artesanas. El lenguaje del oficio sí entra; el ejemplar no.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "chontaduro": {
       "name": "Chontaduro",
@@ -3341,7 +3478,10 @@
       ],
       "census_note": "Es el término de comparación sin el cual el weguer no se entiende: Ewandam lo crea y Dosat responde con la palma espinosa; el chontaduro sigue dando fruto y el weguer da fibra. Está en el prompt horizontal. Sin las dos palmas juntas la competencia se vuelve genérica.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "plantas-contrastantes-platano-y-cana": {
       "name": "Plátano de Dios y platanillo, caña de azúcar y caña brava",
@@ -3374,7 +3514,10 @@
       ],
       "census_note": "Una sola lámina comparativa para los dos primeros pares. El canon insiste en conservar las parejas nombradas para que el episodio no se vuelva una competencia creadora genérica, pero el relato nunca las escenifica por separado: lo que hace falta es poder distinguir la planta de Ewandam de la respuesta de Dosat en un mismo plano.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "platano-de-dios": {
       "name": "Plátano de Dios",
@@ -3430,7 +3573,10 @@
       ],
       "census_note": "Respuesta de Dosat al plátano; parecida y distinta. Miembro de la lámina comparativa.",
       "covered_by": "plantas-contrastantes-platano-y-cana",
-      "coverage_note": "Respuesta de Dosat al plátano; parecida y distinta. Miembro de la lámina comparativa."
+      "coverage_note": "Respuesta de Dosat al plátano; parecida y distinta. Miembro de la lámina comparativa.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cana-de-azucar": {
       "name": "Caña de azúcar",
@@ -3458,7 +3604,10 @@
       ],
       "census_note": "Segunda planta de Ewandam en la competencia. Miembro de la lámina comparativa.",
       "covered_by": "plantas-contrastantes-platano-y-cana",
-      "coverage_note": "Segunda planta de Ewandam en la competencia. Miembro de la lámina comparativa."
+      "coverage_note": "Segunda planta de Ewandam en la competencia. Miembro de la lámina comparativa.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cana-brava": {
       "name": "Caña brava",
@@ -3486,7 +3635,10 @@
       ],
       "census_note": "Respuesta de Dosat a la caña de azúcar. Miembro de la lámina comparativa.",
       "covered_by": "plantas-contrastantes-platano-y-cana",
-      "coverage_note": "Respuesta de Dosat a la caña de azúcar. Miembro de la lámina comparativa."
+      "coverage_note": "Respuesta de Dosat a la caña de azúcar. Miembro de la lámina comparativa.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "prueba-de-salar-el-mar": {
       "name": "Prueba de salar el mar",
@@ -3519,7 +3671,10 @@
       ],
       "census_note": "Es el desenlace de la competencia y no se reduce a sus objetos: Dosat arroja una carga entera transportada en barco y no consigue nada, y Ewandam da sal a toda el agua marina con una sola cucharada. El prompt horizontal pide exactamente esa desproporción, con la pequeña cuchara volviéndose ondas blancas. Regla de fenómeno, no bodegón.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "hijos-de-ewandam": {
       "name": "Hijos de Ewandam que aprenden a cultivar",
@@ -3585,7 +3740,10 @@
       ],
       "census_note": "Aprenden a entrar entre las espinas, extraer el cogollo y tejer; el prompt horizontal pide manos Wounaan tejiendo al fondo. Mismo colectivo, con el oficio como acción.",
       "covered_by": "comunidad-wounaan",
-      "coverage_note": "Aprenden a entrar entre las espinas, extraer el cogollo y tejer; el prompt horizontal pide manos Wounaan tejiendo al fondo. Mismo colectivo, con el oficio como acción."
+      "coverage_note": "Aprenden a entrar entre las espinas, extraer el cogollo y tejer; el prompt horizontal pide manos Wounaan tejiendo al fondo. Mismo colectivo, con el oficio como acción.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "tierra-preparada-para-sembrar": {
       "name": "Tierra preparada y sembrada",
@@ -3661,7 +3819,10 @@
       ],
       "census_note": "Conduce el relato que lleva su nombre: llega con los ñames, obliga a comer, es enfrentada y de su cuerpo enterrado brota el cultivo. Se ficha viva y llegando con los ñames, que es exactamente lo que pide el prompt horizontal. El canon advierte que no es una diosa ni una doctrina sobre la maternidad: alimenta y amenaza a la vez.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "name": {
       "name": "Ñame: enredadera y raíces blancas y rojas",
@@ -3689,7 +3850,10 @@
       ],
       "census_note": "Ficha botánica completa del cultivo que el relato explica: la enredadera que brota sobre la sepultura y extiende sus hojas, y las raíces grandes, unas blancas y otras rojas, que las familias reparten y siembran. Los dos colores son el detalle documentado y la hoja no puede perderlos. Es el sujeto del prompt vertical.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "enredadera-sobre-la-sepultura": {
       "name": "Enredadera brotada sobre la sepultura",
@@ -3717,7 +3881,10 @@
       ],
       "census_note": "Fase de la misma ficha botánica; el prompt exige mostrarla sin tumba explícita, así que la planta se dibuja sobre tierra húmeda junto al río.",
       "covered_by": "name",
-      "coverage_note": "Fase de la misma ficha botánica; el prompt exige mostrarla sin tumba explícita, así que la planta se dibuja sobre tierra húmeda junto al río."
+      "coverage_note": "Fase de la misma ficha botánica; el prompt exige mostrarla sin tumba explícita, así que la planta se dibuja sobre tierra húmeda junto al río.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "raices-blancas-y-rojas": {
       "name": "Raíces blancas y rojas",
@@ -3745,7 +3912,10 @@
       ],
       "census_note": "Lo que las mujeres encuentran al remover la tierra y lo que cada familia se lleva a sembrar. Parte de la misma ficha botánica.",
       "covered_by": "name",
-      "coverage_note": "Lo que las mujeres encuentran al remover la tierra y lo que cada familia se lleva a sembrar. Parte de la misma ficha botánica."
+      "coverage_note": "Lo que las mujeres encuentran al remover la tierra y lo que cada familia se lleva a sembrar. Parte de la misma ficha botánica.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "names-que-trae-la-anciana": {
       "name": "Ñames que la anciana lleva a la casa",
@@ -3773,7 +3943,10 @@
       ],
       "census_note": "Los tubérculos con que llega y ordena cocinar, antes de que el cultivo exista en las tierras de la gente. Misma ficha botánica, otro momento.",
       "covered_by": "name",
-      "coverage_note": "Los tubérculos con que llega y ordena cocinar, antes de que el cultivo exista en las tierras de la gente. Misma ficha botánica, otro momento."
+      "coverage_note": "Los tubérculos con que llega y ordena cocinar, antes de que el cultivo exista en las tierras de la gente. Misma ficha botánica, otro momento.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ninos-obligados-a-comer": {
       "name": "Niños obligados a comer hasta morir",
@@ -3800,7 +3973,10 @@
         }
       ],
       "census_note": "Verificado contra el relato, que narra la muerte sin detalle gráfico, y contra los dos prompts, que dicen literalmente «sin representar muerte, arma o daño infantil». Pertenece al núcleo narrado y no al inventario visual.",
-      "exclusion_reason": "do_not_visualize"
+      "exclusion_reason": "do_not_visualize",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "lanza-del-joven": {
       "name": "Lanza con que el joven la hiere",
@@ -3827,7 +4003,10 @@
         }
       ],
       "census_note": "Verificado: el relato dice que sale del escondite y la enfrenta con una lanza. Los dos prompts prohíben expresamente el arma. No se ficha ni siquiera como utilería.",
-      "exclusion_reason": "do_not_visualize"
+      "exclusion_reason": "do_not_visualize",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "sepultura-rio-abajo": {
       "name": "Sepultura río abajo",
@@ -3854,7 +4033,10 @@
         }
       ],
       "census_note": "Verificado: llevan el cuerpo río abajo, lo entierran y cubren la tierra. El prompt vertical exige «sin tumba explícita». El lugar sí se dibuja —tierra húmeda junto al río donde brota la enredadera— pero se produce desde el modelo de entorno, no como una ficha de tumba.",
-      "exclusion_reason": "do_not_visualize"
+      "exclusion_reason": "do_not_visualize",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "joven-que-enfrenta-a-la-anciana": {
       "name": "Joven que la espera y la enfrenta",
@@ -3882,7 +4064,10 @@
       ],
       "census_note": "Conduce el giro del relato pero no tiene un solo rasgo en la fuente, y la escena en que actúa está excluida de la producción visual. Se resuelve desde la gramática de la comunidad.",
       "covered_by": "comunidad-wounaan",
-      "coverage_note": "Conduce el giro del relato pero no tiene un solo rasgo en la fuente, y la escena en que actúa está excluida de la producción visual. Se resuelve desde la gramática de la comunidad."
+      "coverage_note": "Conduce el giro del relato pero no tiene un solo rasgo en la fuente, y la escena en que actúa está excluida de la producción visual. Se resuelve desde la gramática de la comunidad.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "hijo-que-escapa": {
       "name": "Hijo que logró escapar y contar lo ocurrido",
@@ -3976,7 +4161,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -4023,7 +4208,13 @@
       ],
       "census_note": "Está en los cinco relatos y absorbe a casi todo el elenco sin cuerpo propio: mujeres de la rogativa, hombres afuera, hijos de Ewandam, artesanas, padres, el joven de la lanza. Su gramática debe cerrar la puerta a la iconografía emberá y a tocados panindígenas, que es el riesgo específico de esta comunidad.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "editorial_interpretation",
+        "uncertain"
+      ]
     },
     "casa-wounaan-sobre-pilotes": {
       "name": "Casa Wounaan sobre pilotes",
@@ -4033,7 +4224,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -4078,7 +4269,13 @@
       ],
       "census_note": "Reaparece en tres relatos con cuerpo reconocible: la vivienda del río donde cuelga la barca en el prompt horizontal de la barca, la casa a la que la comunidad vuelve a reunirse tras el regreso, y la casa de Puerto Pizario donde esperan los niños. Es la arquitectura que identifica a esta comunidad y no es la vivienda ceremonial, que tiene ficha aparte.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "academic_hypothesis",
+        "uncertain"
+      ]
     },
     "rio-y-selva-del-pacifico": {
       "name": "Ríos y selva húmeda del Pacífico",
@@ -4088,7 +4285,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -4135,7 +4332,12 @@
       ],
       "census_note": "Modelo de entorno de los cinco relatos: el Baudó, el Bajo San Juan y Puerto Pizario, con río nocturno, selva húmeda, orillas y relieve. Recoge también el sol y la luna, las montañas, la tierra sembrada y el sitio río abajo donde brota la enredadera, para que ninguno de esos elementos se resuelva por separado.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "contemporary_memory",
+        "uncertain"
+      ]
     },
     "percutores": {
       "name": "Dos percutores",
@@ -4174,7 +4376,10 @@
       ],
       "census_note": "Con ellos la lideresa golpea la barca suspendida en los dos relatos del ciclo. Objeto menor pero constante: la hoja de utilería debe fijar su forma para que la ceremonia sea consistente entre páginas.",
       "covered_by": "hoja_utileria_wounaan",
-      "coverage_note": "Con ellos la lideresa golpea la barca suspendida en los dos relatos del ciclo. Objeto menor pero constante: la hoja de utilería debe fijar su forma para que la ceremonia sea consistente entre páginas."
+      "coverage_note": "Con ellos la lideresa golpea la barca suspendida en los dos relatos del ciclo. Objeto menor pero constante: la hoja de utilería debe fijar su forma para que la ceremonia sea consistente entre páginas.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "fogon": {
       "name": "Fogón de la casa",
@@ -4212,7 +4417,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -4235,7 +4440,11 @@
       ],
       "census_note": "Son lo que cambia la vida de los hijos de Ewandam, así que importan; pero son dos herramientas y no una entidad con acto propio. Ojo de época: son herramientas de metal dentro de un relato con mediación colonial declarada, y la hoja debe resolverlas sin convertirlas en utillaje europeo de catálogo.",
       "covered_by": "hoja_utileria_wounaan",
-      "coverage_note": "Son lo que cambia la vida de los hijos de Ewandam, así que importan; pero son dos herramientas y no una entidad con acto propio. Ojo de época: son herramientas de metal dentro de un relato con mediación colonial declarada, y la hoja debe resolverlas sin convertirlas en utillaje europeo de catálogo."
+      "coverage_note": "Son lo que cambia la vida de los hijos de Ewandam, así que importan; pero son dos herramientas y no una entidad con acto propio. Ojo de época: son herramientas de metal dentro de un relato con mediación colonial declarada, y la hoja debe resolverlas sin convertirlas en utillaje europeo de catálogo.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "cuchara-de-sal": {
       "name": "Cucharada con que Ewandam sala el mar",
@@ -4268,7 +4477,10 @@
       ],
       "census_note": "Está en el prompt horizontal como el gesto mínimo que vence a la carga entera. La desproporción la resuelve la regla del fenómeno; la forma de la medida, la hoja de utilería.",
       "covered_by": "hoja_utileria_wounaan",
-      "coverage_note": "Está en el prompt horizontal como el gesto mínimo que vence a la carga entera. La desproporción la resuelve la regla del fenómeno; la forma de la medida, la hoja de utilería."
+      "coverage_note": "Está en el prompt horizontal como el gesto mínimo que vence a la carga entera. La desproporción la resuelve la regla del fenómeno; la forma de la medida, la hoja de utilería.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "barco-de-la-sal": {
       "name": "Barco con que Dosat transporta la sal",
@@ -4296,7 +4508,10 @@
       ],
       "census_note": "Ninguna fuente dice qué embarcación es y el objeto arrastra la mediación colonial que el canon pide hacer visible sin convertirla en esencia diabólica. Va a utilería con advertencia de época: la hoja debe declarar qué se dibuja y por qué, en vez de que cada prompt improvise un galeón.",
       "covered_by": "hoja_utileria_wounaan",
-      "coverage_note": "Ninguna fuente dice qué embarcación es y el objeto arrastra la mediación colonial que el canon pide hacer visible sin convertirla en esencia diabólica. Va a utilería con advertencia de época: la hoja debe declarar qué se dibuja y por qué, en vez de que cada prompt improvise un galeón."
+      "coverage_note": "Ninguna fuente dice qué embarcación es y el objeto arrastra la mediación colonial que el canon pide hacer visible sin convertirla en esencia diabólica. Va a utilería con advertencia de época: la hoja debe declarar qué se dibuja y por qué, en vez de que cada prompt improvise un galeón.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "hoja_utileria_wounaan": {
       "name": "hoja utileria wounaan",

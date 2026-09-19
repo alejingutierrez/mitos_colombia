@@ -2123,7 +2123,10 @@
         }
       ],
       "census_note": "Verificado: el relato le da un solo verbo («creador de los inmortales, dio forma a la tierra y creó a Ngutapa») y no vuelve a aparecer. Ninguna fuente le da cuerpo y los dos scene prompts existentes eligieron no incluirlo. Ficharlo produciría un segundo creador abstracto confundible con Ngutapa.",
-      "exclusion_reason": "sin evidencia visual"
+      "exclusion_reason": "sin evidencia visual",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ngutapa": {
       "name": "Ngutapa",
@@ -2171,7 +2174,10 @@
       ],
       "census_note": "Primer inmortal y padre de los cuatro hermanos: conduce el relato de apertura. El prompt ya fija el contrato completo (silueta humanoide geométrica de papel liso, torso rectangular abstracto, sin rasgos anatómicos, nunca con pecho femenino) y muestra las dos rodillas circulares luminosas en las dos escenas, así que la gestación es una sola forma y no paga estado.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "kuayare": {
       "name": "Kuãyaré",
@@ -2182,7 +2188,7 @@
         "canonico",
         "avispa"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2217,6 +2223,10 @@
       "design": null,
       "states_declared": [
         "avispa"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "avispa": {
@@ -2289,7 +2299,10 @@
       ],
       "census_note": "Reaparece en dos relatos conduciendo la acción: nace de la rodilla derecha, derriba Wone, exprime el huito y pesca a la gente Tikuna en Eware. Recordado como reflexivo y sensato frente a Ípi; esa diferencia es de carácter y no de silueta, así que no paga estado.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "ipi": {
       "name": "Ípi",
@@ -2341,6 +2354,9 @@
       "design": null,
       "states_declared": [
         "pez con la frente brillante"
+      ],
+      "evidence_basis_mix": [
+        "documented_core"
       ]
     },
     "ipi-pez": {
@@ -2369,7 +2385,10 @@
       ],
       "census_note": "Forma transformada del mismo personaje; se produce como su hoja de estado, ya contabilizada.",
       "covered_by": "ipi",
-      "coverage_note": "Forma transformada del mismo personaje; se produce como su hoja de estado, ya contabilizada."
+      "coverage_note": "Forma transformada del mismo personaje; se produce como su hoja de estado, ya contabilizada.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "mowacha-y-aukuna": {
       "name": "Mowacha y Aüküná",
@@ -2425,7 +2444,10 @@
       ],
       "census_note": "Aparecen sólo como quienes la liberan y la curan; sin descripción. Pertenecen al tiempo anterior a los mortales, así que se cubren con los inmortales y no con la comunidad Tikuna.",
       "covered_by": "inmortales",
-      "coverage_note": "Aparecen sólo como quienes la liberan y la curan; sin descripción. Pertenecen al tiempo anterior a los mortales, así que se cubren con los inmortales y no con la comunidad Tikuna."
+      "coverage_note": "Aparecen sólo como quienes la liberan y la curan; sin descripción. Pertenecen al tiempo anterior a los mortales, así que se cubren con los inmortales y no con la comunidad Tikuna.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "primeros-intentos-de-ngutapa": {
       "name": "Primeros seres que Ngutapa juzgó incompletos",
@@ -2452,7 +2474,10 @@
         }
       ],
       "census_note": "Verificado: «juzgaba incompletos a los seres que hacía y los hacía desaparecer». Están definidos por ser incompletos y por desaparecer; la fuente no dice en qué eran incompletos. Dibujarlos sería inventar una teratología entera.",
-      "exclusion_reason": "sin evidencia visual"
+      "exclusion_reason": "sin evidencia visual",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "inmortales": {
       "name": "Seres inmortales del tiempo anterior",
@@ -2486,7 +2511,10 @@
       ],
       "census_note": "Pueblan el mundo oscuro y son los «otros seres» que Yoí e Ípi convocan para derribar Wone: sin ellos no hay tala. Reaparecen en dos relatos. La hoja es gramática de grupo bajo el mismo contrato de abstracción geométrica de Ngutapa, precisamente para que nadie invente un catálogo de criaturas.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "agresion-a-kuayare": {
       "name": "Violencia de Ngutapa contra Kuãyaré",
@@ -2513,7 +2541,10 @@
         }
       ],
       "census_note": "Verificado contra el relato («la llevó contra su voluntad y la trató con violencia») y contra la decisión editorial del módulo, que resume la violencia sin recrear escenas gráficas. Se narra, no se dibuja.",
-      "exclusion_reason": "do_not_visualize"
+      "exclusion_reason": "do_not_visualize",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "wone": {
       "name": "Wone, el árbol inmenso",
@@ -2524,7 +2555,7 @@
         "canonico",
         "caído, convertido en la red fluvial"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -2565,6 +2596,10 @@
       "design": null,
       "states_declared": [
         "caído, convertido en la red fluvial"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "corazon-de-wone": {
@@ -2598,7 +2633,10 @@
       ],
       "census_note": "Hay que sacarlo porque el árbol no quiere morir, y varios intentan llevárselo. Es parte de la ficha del árbol, no un objeto autónomo; su viaje se resuelve con la hoja de Wone y la del tintín.",
       "covered_by": "wone",
-      "coverage_note": "Hay que sacarlo porque el árbol no quiere morir, y varios intentan llevárselo. Es parte de la ficha del árbol, no un objeto autónomo; su viaje se resuelve con la hoja de Wone y la del tintín."
+      "coverage_note": "Hay que sacarlo porque el árbol no quiere morir, y varios intentan llevárselo. Es parte de la ficha del árbol, no un objeto autónomo; su viaje se resuelve con la hoja de Wone y la del tintín.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "tintin": {
       "name": "Tintín que transporta el corazón",
@@ -2608,7 +2646,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "variant",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2631,7 +2669,11 @@
       ],
       "census_note": "Conduce la acción decisiva después de que otros fracasan: lleva el corazón hasta la cima del cerro y lo siembra, de donde nacen el umarí y la compañera de Yoí. Roedor documentado; la hoja evita que se convierta en un animal genérico.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant"
+      ]
     },
     "arbol-de-umari": {
       "name": "Árbol de umarí nacido del corazón",
@@ -2641,7 +2683,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -2674,7 +2716,11 @@
       ],
       "census_note": "Nace del corazón sembrado y su último fruto se transforma en la mujer que acompaña a Yoí: es el objeto que produce un personaje. No es intercambiable con Wone ni con la vegetación de fondo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "mujer-nacida-del-umari": {
       "name": "Mujer nacida del último fruto de umarí",
@@ -2684,7 +2730,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -2712,7 +2758,11 @@
       ],
       "census_note": "Conduce acciones propias: prueba las carnadas junto a Yoí y es quien logra sacar a Ípi del agua. No es una figura de parentesco sin cuerpo: el relato la hace nacer de un fruto y actuar.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "huito": {
       "name": "Huito",
@@ -2722,7 +2772,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2761,7 +2811,12 @@
       ],
       "census_note": "Reaparece en dos relatos con función decisiva y cuerpo reconocible: el afrecho de sus frutos verdes se vuelve peces y oscurece la quebrada que por eso se llama Eware; su jugo marca la cara del visitante lunar y no se borra. Su tinte oscuro es la firma visual de los dos mitos.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "variant",
+        "uncertain"
+      ]
     },
     "peces-de-eware": {
       "name": "Peces que cruzan la orilla y se hacen gente",
@@ -2791,7 +2846,10 @@
       ],
       "census_note": "Gramática de cardumen para todo el corpus: los peces nacidos del afrecho que al tocar tierra se vuelven personas, los sábalos de las astillas de Moe y los peces que desbordan el envoltorio. Una sola hoja de peces de río, con las especies nombradas dentro, en vez de tres.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "sabalo": {
       "name": "Sábalos nacidos de las astillas",
@@ -2824,7 +2882,10 @@
       ],
       "census_note": "Especie nombrada que se resuelve dentro de la gramática de peces de río ya fichada; el hecho drawable es la astilla que toca el agua y cambia, no una segunda anatomía.",
       "covered_by": "peces-de-eware",
-      "coverage_note": "Especie nombrada que se resuelve dentro de la gramática de peces de río ya fichada; el hecho drawable es la astilla que toca el agua y cambia, no una segunda anatomía."
+      "coverage_note": "Especie nombrada que se resuelve dentro de la gramática de peces de río ya fichada; el hecho drawable es la astilla que toca el agua y cambia, no una segunda anatomía.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "peces-del-envoltorio": {
       "name": "Peces que se multiplican al abrirse el envoltorio",
@@ -2852,7 +2913,10 @@
       ],
       "census_note": "Misma gramática de cardumen; lo específico es la cantidad que desborda la casa, que resuelve la hoja del envoltorio.",
       "covered_by": "peces-de-eware",
-      "coverage_note": "Misma gramática de cardumen; lo específico es la cantidad que desborda la casa, que resuelve la hoja del envoltorio."
+      "coverage_note": "Misma gramática de cardumen; lo específico es la cantidad que desborda la casa, que resuelve la hoja del envoltorio.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "gente-tikuna-pescada": {
       "name": "Gente Tikuna sacada del agua con yuca",
@@ -2880,7 +2944,10 @@
       ],
       "census_note": "Cada pez que toca la tierra se transforma en una persona: son la comunidad Tikuna en su momento de origen, no otro colectivo.",
       "covered_by": "comunidad-tikuna",
-      "coverage_note": "Cada pez que toca la tierra se transforma en una persona: son la comunidad Tikuna en su momento de origen, no otro colectivo."
+      "coverage_note": "Cada pez que toca la tierra se transforma en una persona: son la comunidad Tikuna en su momento de origen, no otro colectivo.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "otras-naciones-pescadas-por-ipi": {
       "name": "Otras naciones que pesca Ípi",
@@ -2907,7 +2974,10 @@
         }
       ],
       "census_note": "Verificado: el propio mito dice que la página no repite las clasificaciones raciales añadidas al final de la edición académica y que esas glosas requieren crítica histórica. Dibujar «las otras naciones» restituiría exactamente lo que la edición retiró.",
-      "exclusion_reason": "sensible: la edición retira las clasificaciones raciales de la fuente"
+      "exclusion_reason": "sensible: la edición retira las clasificaciones raciales de la fuente",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "quebrada-eware": {
       "name": "Quebrada Eware",
@@ -2917,7 +2987,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -2950,7 +3020,11 @@
       ],
       "census_note": "Escenario del acto del relato y no intercambiable con el río grande: es agua oscurecida por el huito, de crecida estacional, donde ocurre la pesca de los humanos. Da nombre al mito.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "rio-tatu-amazonas": {
       "name": "Río Tatü, el Amazonas",
@@ -3005,7 +3079,10 @@
       ],
       "census_note": "Nace del tronco de Wone y reaparece en tres relatos: por él entran los peces a Eware, por él viaja la canoa de Moe y sobre él cae la luz del Sol. Modelo de entorno del gran cauce.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "afluentes-quebradas-y-riachuelos": {
       "name": "Afluentes, quebradas y riachuelos de las ramas",
@@ -3038,7 +3115,10 @@
       ],
       "census_note": "Ramas gruesas y pequeñas de Wone convertidas en red hidrográfica; son escala del mismo modelo fluvial.",
       "covered_by": "rio-tatu-amazonas",
-      "coverage_note": "Ramas gruesas y pequeñas de Wone convertidas en red hidrográfica; son escala del mismo modelo fluvial."
+      "coverage_note": "Ramas gruesas y pequeñas de Wone convertidas en red hidrográfica; son escala del mismo modelo fluvial.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "lagos-y-lagunas-del-follaje": {
       "name": "Lagos y lagunas nacidos del follaje",
@@ -3071,7 +3151,10 @@
       ],
       "census_note": "Última capa de la misma transformación del árbol en agua; no tiene acto propio que la separe del modelo fluvial.",
       "covered_by": "rio-tatu-amazonas",
-      "coverage_note": "Última capa de la misma transformación del árbol en agua; no tiene acto propio que la separe del modelo fluvial."
+      "coverage_note": "Última capa de la misma transformación del árbol en agua; no tiene acto propio que la separe del modelo fluvial.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cerro-woruapu-moruapu": {
       "name": "Cerro Woruapü o Moruapü",
@@ -3081,7 +3164,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "contextual",
       "visual_status": "required",
       "model_requirements": [],
@@ -3110,7 +3193,11 @@
       ],
       "census_note": "Reaparece en dos relatos: allí siembra el tintín el corazón de Wone y allí espera Moru a Moe. Santos 2010 escribe Woruapü y la compilación de Moruapü escribe Moruapü; el canon no arbitra, así que una sola hoja declara las dos grafías en vez de inventar dos cerros.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "mundo-oscuro-primordial": {
       "name": "Mundo oscuro, nublado y semejante a vapor de agua",
@@ -3154,7 +3241,10 @@
       ],
       "census_note": "Los dos primeros relatos transcurren en él y no es la selva ya formada: no hay cauces, ni claridad, ni límites. Modelo de entorno anterior a la caída de Wone; sin esta hoja se dibujaría una selva nocturna cualquiera y se perdería el argumento.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "fuente-primordial": {
       "name": "Fuente de agua primordial",
@@ -3193,7 +3283,10 @@
       ],
       "census_note": "Reaparece en dos relatos con función propia: junto a ella encuentra Ngutapa a Kuãyaré, a ella son llevados los cuatro hermanos para recibir fuerza y pensamiento, y por el tronco de Wone bajan sus aguas. Está en el prompt horizontal de «creacion».",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "moe": {
       "name": "Moe",
@@ -3204,7 +3297,7 @@
         "canonico",
         "ave"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -3239,6 +3332,10 @@
       "design": null,
       "states_declared": [
         "ave"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "moru": {
@@ -3250,7 +3347,7 @@
         "canonico",
         "loro"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -3280,6 +3377,10 @@
       "design": null,
       "states_declared": [
         "loro"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "loros-moru": {
@@ -3308,7 +3409,10 @@
       ],
       "census_note": "Conducen la acción de apertura: comen los frutos de chontaduro antes de que maduren y Moe empieza a matarlos, que es el reclamo del que nace todo. Gramática de bandada de la que Moru y su madre son miembros.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "madre-de-moru": {
       "name": "Madre de Moru",
@@ -3374,7 +3478,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -3397,7 +3501,11 @@
       ],
       "census_note": "Conduce el quiebre: espía y desde ese momento las virutas dejan de transformarse; después no puede volar y Moe hunde la canoa con él. Su forma de ave es la segunda de las dos aves del prompt vertical y se resuelve con la gramática de estado de Moe, así que no paga hoja aparte.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "canoa-de-moe": {
       "name": "Canoa tallada por Moe",
@@ -3407,7 +3515,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -3435,7 +3543,11 @@
       ],
       "census_note": "Es el objeto por el que se cuenta y se titula el relato. Navegar boca abajo es una orientación de uso, no otro modelo; su conversión en boa la resuelve la hoja de la gran boa.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "arbol-de-pescado": {
       "name": "Árbol de pescado de la quebrada",
@@ -3502,7 +3614,10 @@
       ],
       "census_note": "Reaparece en dos relatos con cuerpo reconocible: la canoa convertida en boa al llegar a Moruapü, y la boa que impide recoger los peces en la laguna hasta que las grullas la vencen y la cocinan. Son dos boas distintas y una sola hoja de cuerpo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "tinaja": {
       "name": "Tinaja",
@@ -3531,7 +3646,10 @@
       ],
       "census_note": "Reaparece en dos relatos y en ambos hace un truco visual: tres tinajas llenas de chicha que la suegra no ve hasta que las golpea, y una serpiente que resulta ser una tinaja cuando el compañero la voltea. La hoja fija la forma para que los dos trucos funcionen.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "chicha-invisible": {
       "name": "Chicha de maíz invisible para la suegra",
@@ -3587,7 +3705,10 @@
       ],
       "census_note": "Sus frutos verdes son lo que comen los loros y por eso empieza el relato. Es una palma cultivada del mismo espacio ya fichado y no tiene acto propio.",
       "covered_by": "chagra",
-      "coverage_note": "Sus frutos verdes son lo que comen los loros y por eso empieza el relato. Es una palma cultivada del mismo espacio ya fichado y no tiene acto propio."
+      "coverage_note": "Sus frutos verdes son lo que comen los loros y por eso empieza el relato. Es una palma cultivada del mismo espacio ya fichado y no tiene acto propio.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "joven-que-se-vuelve-luna": {
       "name": "Joven que se convierte en Luna",
@@ -3598,7 +3719,7 @@
         "canonico",
         "cuerpo luminoso, Luna llena"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -3643,6 +3764,10 @@
       "design": null,
       "states_declared": [
         "cuerpo luminoso, Luna llena"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "luna-como-astro": {
@@ -3698,7 +3823,10 @@
         }
       ],
       "census_note": "Verificado: el relato abre con «la Luna era un joven del clan Garza» y no vuelve sobre ello. La pertenencia clánica es material sensible y los scene prompts del corpus ya prohíben diadema, collares, aretes, pintura corporal y tatuajes, que son justo donde se codificaría. No se ficha ninguna marca de clan.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "hermana-del-joven-luna": {
       "name": "Hermana del joven Luna",
@@ -3708,7 +3836,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -3736,7 +3864,11 @@
       ],
       "census_note": "Conduce la acción: observa la dentadura, va a la chagra, mastica la wocha, recibe en su cuerpo a la mujer boruga y marca la cara del visitante con huito. El relato gira sobre su cuerpo, porque es confundida con la esposa escondida. Está en el prompt horizontal con el cuenco de huito junto a la hamaca.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "mujer-boruga": {
       "name": "Mujer boruga escondida en la chagra",
@@ -3764,7 +3896,10 @@
       ],
       "census_note": "Conduce una acción propia: entra en el cuerpo de la hermana cuando esta mastica la wocha, y es la causa de la confusión. El relato sólo la muestra ya transformada en mujer, así que una hoja, sin forma animal que la fuente no escenifica.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "boruga-animal": {
       "name": "Boruga como animal",
@@ -3792,7 +3927,10 @@
       ],
       "census_note": "El origen animal está en el nombre pero el relato nunca muestra la transformación; se anota dentro de su ficha y no se produce como estado.",
       "covered_by": "mujer-boruga",
-      "coverage_note": "El origen animal está en el nombre pero el relato nunca muestra la transformación; se anota dentro de su ficha y no se produce como estado."
+      "coverage_note": "El origen animal está en el nombre pero el relato nunca muestra la transformación; se anota dentro de su ficha y no se produce como estado.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "madre-del-joven-luna": {
       "name": "Madre del joven Luna",
@@ -3848,7 +3986,10 @@
       ],
       "census_note": "Corta la base del árbol mientras Luna sube por dentro. Una acción, cero descripción: gramática de la comunidad.",
       "covered_by": "comunidad-tikuna",
-      "coverage_note": "Corta la base del árbol mientras Luna sube por dentro. Una acción, cero descripción: gramática de la comunidad."
+      "coverage_note": "Corta la base del árbol mientras Luna sube por dentro. Una acción, cero descripción: gramática de la comunidad.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "wocha": {
       "name": "Wocha",
@@ -3876,7 +4017,10 @@
       ],
       "census_note": "Es el objeto que dispara el relato: sus hojas masticadas dan color oscuro y brillante a los dientes y transfieren a la mujer boruga. La fuente no la identifica botánicamente, y por eso necesita hoja propia: sin ella el modelo la inventa distinta en cada escena.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "uncertain"
+      ]
     },
     "arbol-del-centro-de-la-chagra": {
       "name": "Árbol del centro de la chagra nueva",
@@ -3886,7 +4030,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -3909,7 +4053,11 @@
       ],
       "census_note": "Es el vehículo del ascenso y el sujeto del prompt vertical: el joven entra por una abertura del tronco y trepa hacia el espacio. No es intercambiable con Wone, con el umarí ni con la vegetación de fondo; su interior recortado es lo que hay que resolver.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "relacion-prohibida-entre-hermanos": {
       "name": "Relación prohibida entre los hermanos",
@@ -3936,7 +4084,10 @@
         }
       ],
       "census_note": "Verificado: el relato la nombra sin escena («se acercó a ella y cometió una relación prohibida») y el prompt horizontal dice literalmente «sin representar contacto sexual». La marca de huito es la forma visual que el expediente eligió para hacerla visible.",
-      "exclusion_reason": "do_not_visualize"
+      "exclusion_reason": "do_not_visualize",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "hombre-grulla": {
       "name": "Hombre que se transforma en grulla",
@@ -3947,7 +4098,7 @@
         "canonico",
         "grulla"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -3992,6 +4143,10 @@
       "design": null,
       "states_declared": [
         "grulla"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "grullas": {
@@ -4025,7 +4180,10 @@
       ],
       "census_note": "Conducen la acción colectiva: se reúnen para la pesca, construyen la casa, vencen a la boa y quedan en la memoria como madres del friaje. Gramática de bandada. El canon advierte que la publicación en castellano dice grullas y otras traducciones dicen garzas: la hoja no puede resolverlo inventando una especie.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "jefe-de-las-grullas": {
       "name": "Jefe de las grullas",
@@ -4053,7 +4211,10 @@
       ],
       "census_note": "Ordena construir la casa; ninguna fuente lo distingue del resto de la bandada. Miembro del colectivo ya fichado.",
       "covered_by": "grullas",
-      "coverage_note": "Ordena construir la casa; ninguna fuente lo distingue del resto de la bandada. Miembro del colectivo ya fichado."
+      "coverage_note": "Ordena construir la casa; ninguna fuente lo distingue del resto de la bandada. Miembro del colectivo ya fichado.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "companero-grulla": {
       "name": "Compañero que le enseña a ver",
@@ -4081,7 +4242,10 @@
       ],
       "census_note": "Le muestra que lo que parece animal también es material de la vivienda y voltea la serpiente que era tinaja. Función pedagógica sin cuerpo propio.",
       "covered_by": "grullas",
-      "coverage_note": "Le muestra que lo que parece animal también es material de la vivienda y voltea la serpiente que era tinaja. Función pedagógica sin cuerpo propio."
+      "coverage_note": "Le muestra que lo que parece animal también es material de la vivienda y voltea la serpiente que era tinaja. Función pedagógica sin cuerpo propio.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "esposa-del-hombre-grulla": {
       "name": "Esposa del hombre grulla",
@@ -4091,7 +4255,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -4119,7 +4283,11 @@
       ],
       "census_note": "Conduce el clímax: ve llegar la bandada, juzga pequeño el envoltorio y lo abre de un golpe, y los peces llenan la casa. Está en el prompt vertical como parte de la pareja sorprendida.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "friaje": {
       "name": "Friaje",
@@ -4147,7 +4315,10 @@
       ],
       "census_note": "Es el fenómeno que el relato explica y el que sigue existiendo, ya disminuido. La regla tiene que cubrir también la percepción transformada que el frío hace posible: varas que son peces eléctricos, hojas de techo que son rayas, serpiente que es tinaja. Eso es una sola regla de fenómeno con sus ejemplos, no un segundo modelo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "varas-y-hojas-de-la-casa-de-las-grullas": {
       "name": "Varas y hojas que son peces eléctricos y rayas",
@@ -4175,7 +4346,10 @@
       ],
       "census_note": "El par material/animal es el ejemplo de la regla ya fichada, no dos objetos: cuando busca varas ve peces eléctricos y cuando recoge hojas encuentra rayas.",
       "covered_by": "friaje",
-      "coverage_note": "El par material/animal es el ejemplo de la regla ya fichada, no dos objetos: cuando busca varas ve peces eléctricos y cuando recoge hojas encuentra rayas."
+      "coverage_note": "El par material/animal es el ejemplo de la regla ya fichada, no dos objetos: cuando busca varas ve peces eléctricos y cuando recoge hojas encuentra rayas.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "pez-electrico": {
       "name": "Peces eléctricos",
@@ -4203,7 +4377,10 @@
       ],
       "census_note": "Sólo existen como percepción de las varas dentro del mundo de las grullas; nunca actúan. Se resuelven en la regla del fenómeno.",
       "covered_by": "friaje",
-      "coverage_note": "Sólo existen como percepción de las varas dentro del mundo de las grullas; nunca actúan. Se resuelven en la regla del fenómeno."
+      "coverage_note": "Sólo existen como percepción de las varas dentro del mundo de las grullas; nunca actúan. Se resuelven en la regla del fenómeno.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "serpiente-que-era-tinaja": {
       "name": "Serpiente que resulta ser una tinaja",
@@ -4231,7 +4408,10 @@
       ],
       "census_note": "Mismo mecanismo: lo que el hombre teme se revela como recipiente al voltearlo. Ejemplo de la regla, cubierto además por la hoja de la tinaja.",
       "covered_by": "friaje",
-      "coverage_note": "Mismo mecanismo: lo que el hombre teme se revela como recipiente al voltearlo. Ejemplo de la regla, cubierto además por la hoja de la tinaja."
+      "coverage_note": "Mismo mecanismo: lo que el hombre teme se revela como recipiente al voltearlo. Ejemplo de la regla, cubierto además por la hoja de la tinaja.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "raya": {
       "name": "Raya",
@@ -4264,7 +4444,10 @@
       ],
       "census_note": "Además de ser lo que el hombre ve en lugar de las hojas, es animal con papel etiológico: cocinan la boa con una raya y la fuerza de esos animales queda asociada al friaje. Cuerpo reconocible y función en el desenlace.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "envoltorio-de-hojas-con-peces": {
       "name": "Envoltorio de hojas con unos pocos peces",
@@ -4274,7 +4457,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -4297,7 +4480,11 @@
       ],
       "census_note": "Es el objeto por el que se cuenta el desenlace: pequeño y despreciable hasta que se abre y los peces llenan la casa. Es el sujeto del prompt vertical. Abrirlo es un uso del mismo objeto, no otro modelo.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "laguna-de-las-grullas": {
       "name": "Laguna de la pesca colectiva",
@@ -4330,7 +4517,10 @@
       ],
       "census_note": "Escenario del acto del relato: allí construyen la casa, allí está la boa y allí ocurre la pesca. No es intercambiable con el río ni con la quebrada, que ya tienen hoja.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "casa-de-las-grullas": {
       "name": "Casa construida en la laguna",
@@ -4363,7 +4553,10 @@
       ],
       "census_note": "Levantada con varas y hojas dentro del mundo de las grullas; comparte tipología con la vivienda ya fichada y su rareza está en el material transformado, que resuelve la regla del friaje.",
       "covered_by": "vivienda-tikuna",
-      "coverage_note": "Levantada con varas y hojas dentro del mundo de las grullas; comparte tipología con la vivienda ya fichada y su rareza está en el material transformado, que resuelve la regla del friaje."
+      "coverage_note": "Levantada con varas y hojas dentro del mundo de las grullas; comparte tipología con la vivienda ya fichada y su rareza está en el material transformado, que resuelve la regla del friaje.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "pesca-con-sustancias-vegetales": {
       "name": "Procedimiento de pesca con sustancias vegetales",
@@ -4390,7 +4583,10 @@
         }
       ],
       "census_note": "Verificado: el propio mito declara que omite los detalles operativos y no los presenta como instrucciones. No se ficha ni el material ni el gesto.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cazador-que-se-vuelve-sol": {
       "name": "Cazador que se convierte en Sol",
@@ -4401,7 +4597,7 @@
         "canonico",
         "Sol"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -4436,6 +4632,10 @@
       "design": null,
       "states_declared": [
         "Sol"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "sol-como-astro": {
@@ -4475,7 +4675,7 @@
         "canonico",
         "árbol de algodón"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "required",
       "model_requirements": [],
@@ -4500,6 +4700,10 @@
       "design": null,
       "states_declared": [
         "árbol de algodón"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
       ]
     },
     "arbol-de-algodon": {
@@ -4617,7 +4821,10 @@
       ],
       "census_note": "Es el objeto por el que se cuenta el relato: el zumo rojo que se derrama sobre el cuerpo, en el suelo y en el fondo de la olla, y que al beberse da la fuerza extraordinaria. Está en el prompt horizontal. No puede confundirse con el huito: uno es rojo y da fuerza, el otro es oscuro y delata.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "danta": {
       "name": "Danta cazada",
@@ -4650,7 +4857,10 @@
       ],
       "census_note": "Aparece cargada al hombro en el trayecto de vuelta y no vuelve a intervenir; no está en ninguno de los dos prompts. Fauna del modelo de entorno, que debe fijar su silueta documentada para que no se dibuje un venado.",
       "covered_by": "selva-y-varzea-del-amazonas",
-      "coverage_note": "Aparece cargada al hombro en el trayecto de vuelta y no vuelve a intervenir; no está en ninguno de los dos prompts. Fauna del modelo de entorno, que debe fijar su silueta documentada para que no se dibuje un venado."
+      "coverage_note": "Aparece cargada al hombro en el trayecto de vuelta y no vuelve a intervenir; no está en ninguno de los dos prompts. Fauna del modelo de entorno, que debe fijar su silueta documentada para que no se dibuje un venado.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "animales-del-monte-pescados-con-frutos": {
       "name": "Animales del monte sacados con carnada de frutos",
@@ -4716,7 +4926,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [],
@@ -4764,7 +4974,12 @@
       ],
       "census_note": "La hoja que más trabajo ahorra: suegras, suegros, cuñados, madres y la gente pescada en Eware salen todos de aquí. Su contrato es el más estricto del expediente y está literalmente escrito en el prompt de «creacion»: sin diadema, collares, aretes, pintura corporal, tatuajes ni vestuario inventado. Esa prohibición es también la barrera contra la marca de clan.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation",
+        "uncertain"
+      ]
     },
     "vivienda-tikuna": {
       "name": "Vivienda Tikuna",
@@ -4815,7 +5030,10 @@
       ],
       "census_note": "Reaparece en cuatro relatos con cuerpo reconocible: la casa de la madre de Moe con el techo al que sube Moru, la casa que los peces desbordan, la casa de la suegra donde se rompe la olla y la casa donde cuelga la hamaca. El prompt de «creacion» prohíbe casas en ese mito, lo que confirma que aquí sí hay una tipología que fijar.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "chagra": {
       "name": "Chagra",
@@ -4855,7 +5073,10 @@
       ],
       "census_note": "Reaparece en tres relatos como espacio de trabajo con acto propio: allí están las mazorcas que la suegra cree intactas, allí esconde el joven Luna a la mujer boruga y cultiva la wocha, y allí se eleva el Sol y se siembra el árbol de algodón.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "selva-y-varzea-del-amazonas": {
       "name": "Selva y várzea del Trapecio Amazónico",
@@ -4903,7 +5124,10 @@
       ],
       "census_note": "Modelo de entorno de los seis relatos: bosque inundable, orillas, quebradas y lagunas. Recoge además la fauna y los árboles que ninguna fuente identifica, para que no se inventen especie por especie.",
       "design": null,
-      "states_declared": []
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "otro-mundo-cercano-al-sol": {
       "name": "Otro mundo cercano al lugar al que sube el Sol",
@@ -4963,7 +5187,10 @@
         }
       ],
       "census_note": "Verificado en el campo historia de las dos fichas heredadas: la página anterior construía una historia de María y la pelazón sin cadena documental verificable, y la revisión la retiró. Es además material ritual sensible. No entra al inventario visual por ninguna vía.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "cantos-formulas-e-instrucciones-rituales": {
       "name": "Cantos, fórmulas e instrucciones rituales",
@@ -4995,7 +5222,10 @@
         }
       ],
       "census_note": "Los seis research_notes repiten la misma línea: se parafrasea material publicado y no se reproducen cantos, fórmulas ni instrucciones rituales. No tienen forma visual y darles una sería fabricar liturgia Tikuna.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "localizaciones-sensibles": {
       "name": "Localizaciones sensibles del territorio",
@@ -5005,7 +5235,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "public",
       "visual_status": "excluded",
       "model_requirements": [],
@@ -5032,7 +5262,11 @@
         }
       ],
       "census_note": "Los seis mitos declaran coordenadas aproximadas del Trapecio Amazónico y no del lugar exacto de cada episodio, y los research_notes excluyen expresamente las localizaciones sensibles. El paisaje se produce genérico y situado, nunca identificable.",
-      "exclusion_reason": "consult_required"
+      "exclusion_reason": "consult_required",
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "yuca-carnada": {
       "name": "Raíz de yuca usada como carnada",
@@ -5088,7 +5322,10 @@
       ],
       "census_note": "Produce el sonido fino durante el viaje río abajo. Objeto menor de una escena.",
       "covered_by": "hoja_utileria_ticuna_pesca",
-      "coverage_note": "Produce el sonido fino durante el viaje río abajo. Objeto menor de una escena."
+      "coverage_note": "Produce el sonido fino durante el viaje río abajo. Objeto menor de una escena.",
+      "evidence_basis_mix": [
+        "uncertain"
+      ]
     },
     "varas-largas-para-asar": {
       "name": "Varas largas para asar los peces",
@@ -5116,7 +5353,10 @@
       ],
       "census_note": "Lo que el hombre pide al llegar con el envoltorio. Objeto menor.",
       "covered_by": "hoja_utileria_ticuna_pesca",
-      "coverage_note": "Lo que el hombre pide al llegar con el envoltorio. Objeto menor."
+      "coverage_note": "Lo que el hombre pide al llegar con el envoltorio. Objeto menor.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "herramientas-de-talla-de-moe": {
       "name": "Herramientas con que Moe talla la canoa",
@@ -5205,7 +5445,10 @@
       ],
       "census_note": "Está en el prompt horizontal como resto abajo del ascenso. Objeto menor; no se confunde con la tinaja, que sí tiene hoja por aparecer en dos relatos.",
       "covered_by": "hoja_utileria_ticuna_domestica",
-      "coverage_note": "Está en el prompt horizontal como resto abajo del ascenso. Objeto menor; no se confunde con la tinaja, que sí tiene hoja por aparecer en dos relatos."
+      "coverage_note": "Está en el prompt horizontal como resto abajo del ascenso. Objeto menor; no se confunde con la tinaja, que sí tiene hoja por aparecer en dos relatos.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "totuma": {
       "name": "Totuma",
@@ -5238,7 +5481,10 @@
       ],
       "census_note": "Con ella recoge el achiote derramado en el suelo. Objeto menor de una acción.",
       "covered_by": "hoja_utileria_ticuna_domestica",
-      "coverage_note": "Con ella recoge el achiote derramado en el suelo. Objeto menor de una acción."
+      "coverage_note": "Con ella recoge el achiote derramado en el suelo. Objeto menor de una acción.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "chambira": {
       "name": "Fibra de chambira",
@@ -5266,7 +5512,10 @@
       ],
       "census_note": "Se seca al sol para tejidos y cierra el relato ligando el astro al trabajo cotidiano. Está en el prompt vertical. Material menor, pero debe tener forma documentada y no pasar por otra fibra.",
       "covered_by": "hoja_utileria_ticuna_domestica",
-      "coverage_note": "Se seca al sol para tejidos y cierra el relato ligando el astro al trabajo cotidiano. Está en el prompt vertical. Material menor, pero debe tener forma documentada y no pasar por otra fibra."
+      "coverage_note": "Se seca al sol para tejidos y cierra el relato ligando el astro al trabajo cotidiano. Está en el prompt vertical. Material menor, pero debe tener forma documentada y no pasar por otra fibra.",
+      "evidence_basis_mix": [
+        "documented_core"
+      ]
     },
     "maiz-y-mazorcas": {
       "name": "Maíz, mazorcas y los tres granos",
@@ -5304,7 +5553,7 @@
       "states": [
         "canonico"
       ],
-      "evidence_basis": "documented",
+      "evidence_basis": "uncertain",
       "sensitivity": "sensitive",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -5327,7 +5576,11 @@
       ],
       "census_note": "El joven pide recuperarlo antes de abrir la chagra nueva. La paráfrasis es deliberadamente vaga y la hoja de utilería debe dejarlo así de sobrio, sin inventarle uso ritual.",
       "covered_by": "hoja_utileria_ticuna_domestica",
-      "coverage_note": "El joven pide recuperarlo antes de abrir la chagra nueva. La paráfrasis es deliberadamente vaga y la hoja de utilería debe dejarlo así de sobrio, sin inventarle uso ritual."
+      "coverage_note": "El joven pide recuperarlo antes de abrir la chagra nueva. La paráfrasis es deliberadamente vaga y la hoja de utilería debe dejarlo así de sobrio, sin inventarle uso ritual.",
+      "evidence_basis_mix": [
+        "documented_core",
+        "uncertain"
+      ]
     },
     "hoja_utileria_ticuna_pesca": {
       "name": "hoja utileria ticuna pesca",
