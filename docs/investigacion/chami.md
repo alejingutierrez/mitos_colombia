@@ -1017,10 +1017,30 @@ atribuciones que este expediente venía arrastrando mal en las dos direcciones:
 3. **Cinco de los nueve cuentos de Chaves son katío por narrador**, recogidos
    de un hombre katío que los oyó a su abuela antes de salir de su tierra y los
    tradujo del katío. No son primarias chamí y no deben entrar en ese
-   denominador. Eso alcanza a **`la mujer de Karagabí`**, que la biblia tiene
-   fichada y que este dossier ya listaba entre las no sostenidas: la razón es
-   más dura de lo que decía — no es que le falte descripción, es que **su
-   relato no es chamí**.
+   denominador.
+
+### 15.1 · Corrección a lo anterior: «La mujer de Karagabí» son dos relatos
+
+**Este mismo apartado afirmó primero que la página publicada con ese título no
+era chamí, y era falso.** Lo corrigió quien escribió su acta, y la
+comprobación le da la razón: contados **sólo sobre el campo `mito`** —el
+relato, 1.743 caracteres—, la página tiene **lorita 1 y bailes 8**, y **cero
+lechuza, cero Barakoko, cero arañazos**. Ésos son los marcadores de
+**Reichel-Dolmatoff 1953, relato 8**, que es chamí. El homónimo katío es el
+**cuento VII de Chaves**, narrado por Rafael Bailarín, y ahí están la lechuza
+(4) y Barakoko (2) y no está la lorita.
+
+El error vino de contar sobre el registro entero en vez de sobre el relato: la
+lechuza y Barakoko aparecen en los campos editoriales de la página, que
+discuten el homónimo katío — que es exactamente lo que deben hacer.
+
+**Hay dos relatos distintos con el mismo título, uno chamí y uno katío.** El
+tratamiento correcto es el que hace el acta: separarlos por deslinde, no
+descartar la página. Y la ficha `la mujer de Karagabí` sigue entre las no
+sostenidas por la razón original —le falta descripción—, no por su fuente.
+
+*Corrección hecha por la sesión coordinadora sobre el canon congelado,
+2026-09-19.*
 
 *Verificación hecha por la sesión coordinadora sobre el texto primario, no por
 búsqueda. 2026-09-19.*

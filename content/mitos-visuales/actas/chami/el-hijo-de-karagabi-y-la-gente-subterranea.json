@@ -8,12 +8,148 @@
   "canon_field": "mito",
   "canon_sha256": "66d87eece2f79bdcdd104450f267b4aab5e52e23d2df60351fa7ba0ac27324a8",
   "canon_chars": 509,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "El relato abre certificando su autoridad, y esa autoridad es lo que va a fallar",
+      "evidencia": "El hijo de Karagabí era un sabio"
+    },
+    {
+      "id": "n02",
+      "nudo": "Debajo de la tierra hay otro estado, no otro paisaje",
+      "evidencia": "Debajo de la tierra había otro estado"
+    },
+    {
+      "id": "n03",
+      "nudo": "La gente de abajo tiene nombre propio",
+      "evidencia": "allí vivía una gente que se llamaba aramúko dohurá"
+    },
+    {
+      "id": "n04",
+      "nudo": "Lo que los define es cómo comen, no cómo se ven",
+      "evidencia": "comían solamente el jugo de la comida, y no defecaban"
+    },
+    {
+      "id": "n05",
+      "nudo": "El sabio diagnostica mirando",
+      "evidencia": "El hijo de Karagabí los miró comer"
+    },
+    {
+      "id": "n06",
+      "nudo": "La oferta se presenta como una mejora, no como un castigo",
+      "evidencia": "voy a hacerles un ano a cada uno, para que puedan comer de todo"
+    },
+    {
+      "id": "n07",
+      "nudo": "Ellos consienten, y el consentimiento es lo que hace grave el final",
+      "evidencia": "Los aramúko dijeron"
+    },
+    {
+      "id": "n08",
+      "nudo": "La confianza del sabio cabe en dos palabras",
+      "evidencia": "Eso es fácil"
+    },
+    {
+      "id": "n09",
+      "nudo": "El instrumento es de hierro y la operación es un corte",
+      "evidencia": "trajo un cuchillo y cortó a cada uno las nalgas"
+    },
+    {
+      "id": "n10",
+      "nudo": "El remedio del sabio mata a todos los que lo aceptaron",
+      "evidencia": "Pero los aramúko se murieron de eso"
+    }
+  ],
+  "deslindes": [
+    "El corte de las nalgas es `do_not_visualize` en la matriz de esta comunidad: es mutilación explícita. La escena del acto se compone con el cuchillo todavía en la mano y con la fila de los que dijeron «bien», nunca con el corte, la herida ni el cuerpo abierto.",
+    "El mundo de abajo de la biblia no es chamí, y esta página depende de esa ficha. `el_mundo_de_abajo` es una de las veintiuna no sostenidas: sus tres rasgos —plano, sólo chontaduro, piedras azules de amolar— son del padre Rochereau describiendo a los catíos del occidente de Antioquia, citado dentro de una nota comparativa de Chaves. Lo único que este relato da es «otro estado» y una gente que come jugo. La lámina se compone con eso y con nada más: ni llanura, ni chontaduro exclusivo, ni piedra azul.",
+    "Los aramúko dohurá de esta página no son los «indios muy bajitos» del relato del hijo de la nutria. La biblia fundió los dos pueblos en una sola ficha y al hacerlo perdió el único dato de estatura de todo el corpus, que pertenece al otro. Aquí no hay ninguna medida: nada autoriza a dibujarlos bajitos.",
+    "El cuchillo no tiene ficha propia —va embebido— y es de hierro. Eso no es anacronismo: el estrato `mitico_chami` se añadió precisamente para no amputar el hacha, el serrucho, el machete y el cuchillo que los narradores dijeron.",
+    "El relato no cuenta cómo se baja ni cómo se vuelve. La bisagra del agua, el charco como puerta y la caída lenta pertenecen a otras páginas; traerlas aquí sería empalmar dos relatos que el corpus mantiene aparte."
+  ],
+  "descartes": [
+    {
+      "que": "El corte y la herida",
+      "razon": "`do_not_visualize` declarado. El nudo n09 se sostiene con el cuchillo en la mano y el nudo n10 con la ausencia, que es lo que el canon deja al final."
+    },
+    {
+      "que": "El descenso al mundo de abajo",
+      "razon": "Esta página empieza con el otro estado ya existiendo. Dibujar el viaje sería importarlo de `el-hijo-de-la-nutria` y de `jinopotabar`."
+    },
+    {
+      "que": "Los rasgos katíos del mundo de abajo",
+      "razon": "Llanura, chontaduro como única vegetación y piedras azules de amolar son de Rochereau sobre los catíos y no de ninguno de los catorce relatos de Río Frío."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Diez nudos y ninguno es de acción larga: son una presentación, un diagnóstico, una oferta, un sí y un desastre. Ocho bloques permiten que el sí de los aramúko tenga cuadro propio —sin él, el final parece violencia y es error médico— y que el desastre no se reparta en varios planos, porque el canon lo despacha en una frase.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05"
+      ],
+      "momento": "El hijo de Karagabí está de pie mirando comer a los aramúko dohurá.",
+      "composicion": "Plano general en un interior de tierra, sin horizonte y sin cielo: el mundo de abajo se lee por el techo bajo de tierra que cierra el encuadre por arriba, no por una llanura. El hijo de Karagabí entra por el tercio izquierdo, de cuerpo completo y legible, de pie y quieto; a la derecha, los aramúko sentados en fila comiendo, con la comida entera delante y sólo el jugo en la boca. Luz de una sola fuente lateral, tonos ocres y pardos, sin piedra azul y sin chontaduro.",
+      "entity_refs": [
+        "el_hijo_de_karagabi",
+        "los_aramuko_dohura",
+        "el_mundo_de_abajo"
+      ],
+      "no_mostrar": [
+        "llanura plana, chontaduro como única planta, piedras azules",
+        "figuras de estatura baja marcada"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n06",
+        "n07",
+        "n08",
+        "n09"
+      ],
+      "momento": "Él anuncia el remedio con el cuchillo ya en la mano y ellos dicen que sí.",
+      "composicion": "Vertical de dos alturas. Arriba, el hijo de Karagabí de pie y de cuerpo entero, con el brazo bajando y el cuchillo en la mano, recortado contra el techo de tierra; abajo, la fila de aramúko de rodillas o sentados, con la cabeza levantada hacia él en gesto de asentimiento. El vertical existe para que el filo baje y el consentimiento suba en el mismo eje: es la escena entera del relato.",
+      "entity_refs": [
+        "el_hijo_de_karagabi",
+        "los_aramuko_dohura",
+        "el_mundo_de_abajo"
+      ],
+      "no_mostrar": [
+        "el corte",
+        "herida, nalgas, sangre",
+        "gesto de forcejeo o de resistencia"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n10"
+      ],
+      "momento": "Donde estaba la fila que comía jugo ya no hay nadie.",
+      "composicion": "Cuadrada y cerrada sobre el mismo suelo de la primera escena, reconocible por el techo bajo de tierra. La comida sigue servida y entera, en el mismo sitio y en la misma cantidad; los sitios están vacíos. Sin figura, sin cuerpo y sin sangre: la muerte se lee por la comida que nadie va a tocar y por la ausencia exacta de una fila que la primera lámina ya dejó memorizada.",
+      "entity_refs": [
+        "los_aramuko_dohura",
+        "el_mundo_de_abajo"
+      ],
+      "no_mostrar": [
+        "cadáveres",
+        "sangre",
+        "el cuchillo"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "el_hijo_de_karagabi",

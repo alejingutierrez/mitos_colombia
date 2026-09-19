@@ -8,12 +8,143 @@
   "canon_field": "mito",
   "canon_sha256": "e912675990ecea07480dea3a23ee84c929b09e433283b69253ea4214e55e82f4",
   "canon_chars": 432,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "La orden viene de fuera: el que cava no decide nada",
+      "evidencia": "Karagabí mandó a un hombre a cavar un árbol"
+    },
+    {
+      "id": "n02",
+      "nudo": "La forma que se pide es la de un ataúd, y en pie",
+      "evidencia": "que cavara el tronco por dentro, hasta dejarlo hueco como un ataúd"
+    },
+    {
+      "id": "n03",
+      "nudo": "El que va a quedar encerrado es el hijo del que manda",
+      "evidencia": "que su hijo se metiera en ese árbol"
+    },
+    {
+      "id": "n04",
+      "nudo": "La excepción es un dedo, y es lo que sostiene el relato entero",
+      "evidencia": "pero que le quedara un dedo afuera"
+    },
+    {
+      "id": "n05",
+      "nudo": "La orden se cumple sin resistencia",
+      "evidencia": "El hombre cavó el árbol y el hijo se metió"
+    },
+    {
+      "id": "n06",
+      "nudo": "Queda tapado, no enterrado",
+      "evidencia": "Así lo dejó tapado, con el dedo por fuera"
+    },
+    {
+      "id": "n07",
+      "nudo": "Al artesano se le paga convirtiéndolo en el animal que hace ese trabajo",
+      "evidencia": "Al hombre que hizo el ataúd, Karagabí lo volvió pájaro carpintero"
+    },
+    {
+      "id": "n08",
+      "nudo": "El encerrado no muere",
+      "evidencia": "Pero el hijo quedó vivo dentro del árbol"
+    },
+    {
+      "id": "n09",
+      "nudo": "El temblor de la tierra es un dedo que se mueve",
+      "evidencia": "cuando mueve el dedo, hay temblor"
+    }
+  ],
+  "deslindes": [
+    "El hijo no muere: el canon lo dice con un «pero» que corrige la impresión anterior. El ataúd es la forma del hueco, no su función, y ninguna escena puede mostrar cadáver, velorio, duelo ni entierro. Si la lámina lo lee como muerte, el nudo n09 deja de tener causa.",
+    "El dedo es la máquina del relato y tiene que estar visible desde el primer recorte. Un tronco que se cierre entero, aunque sea más bonito, borra el mito: la escena del cierre se compone para que el dedo quede fuera y legible a escala del tronco.",
+    "Ésta es la explicación chamí del temblor. La otra explicación emberá —Awena que se hunde— es katía: viene del cuento VI de Chaves, que narró Rafael Bailarín, indio katío, y que el propio Chaves separa en su página 134. No se fusionan, y nada de Awena entra en esta lámina.",
+    "El relato no nombra herramienta: dice «cavar» y «cavó». La ficha `hacha` existe en este corpus y sirve a otras páginas, pero aquí no hay nada que cortar. El hueco se resuelve por la viruta y por el vaciado, no por un filo.",
+    "Karagabí manda en la primera línea y el plan no lo recogió entre las entidades de esta página; la escena de entrada se compone con su ficha porque sin el que ordena no hay orden. Y no lleva ningún atributo de jaibanismo: la transformación del carpintero es suya y del relato, no de un oficio."
+  ],
+  "descartes": [
+    {
+      "que": "El entierro, el duelo y el cuerpo muerto",
+      "razon": "El relato dice lo contrario —«quedó vivo dentro del árbol»— y el corpus además resuelve su único muerto sin enterrar por el hueco y el sonido, nunca por el cuerpo."
+    },
+    {
+      "que": "El hacha o cualquier herramienta de filo",
+      "razon": "No está en el texto. Ponerla añadiría al relato un gesto —cortar— que el narrador evitó dos veces al decir cavar."
+    },
+    {
+      "que": "El rostro del hijo dentro del tronco",
+      "razon": "El canon no lo describe ni lo deja ver: lo único que sale del árbol es un dedo, y ése es todo el cuerpo que la página autoriza."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Nueve nudos en cinco frases, y siete de ellos son una sola acción continuada: cavar, meter, tapar. Ocho bloques es el mínimo que permite darle su propio cuadro a las dos cosas que no son esa acción —el pago al carpintero y el temblor—, que es donde el relato cambia de escala y pasa de un encargo doméstico a la mecánica de la tierra.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03"
+      ],
+      "momento": "Karagabí le da el encargo al hombre delante del árbol todavía entero.",
+      "composicion": "Plano general de tarde a la altura del suelo. El árbol de pie ocupa el eje central y llega a los dos bordes del encuadre; a su izquierda Karagabí, de cuerpo completo y legible, señalando el tronco; a su derecha el hombre, de pie, con las manos vacías. El hijo aún no está: el encuadre lo deja hueco a propósito, en el mismo sitio donde después estará el tronco abierto. Luz abierta, pardos de madera, el verde al borde.",
+      "entity_refs": [
+        "karagabi",
+        "el_hombre_que_cava_el_arbol",
+        "el_arbol_cavado_ataud"
+      ],
+      "no_mostrar": [
+        "herramienta de filo",
+        "resplandor sobre Karagabí"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n04",
+        "n05",
+        "n06"
+      ],
+      "momento": "El hijo entra en el tronco vaciado y lo tapan; queda un dedo fuera.",
+      "composicion": "Vertical ocupado de arriba abajo por el tronco en pie, abierto como una ranura. Arriba, la tapa bajando en manos del hombre; en medio, el hijo ya dentro, de cuerpo completo y de pie, visible por la ranura que se está cerrando; abajo, a la altura del suelo y en el borde del tronco, el dedo asomado, recortado grande y solo para que se lea como lo que queda fuera. El vertical existe para que la tapa baje y el dedo se quede: los dos en el mismo eje.",
+      "entity_refs": [
+        "el_hijo_de_karagabi",
+        "el_hombre_que_cava_el_arbol",
+        "el_arbol_cavado_ataud"
+      ],
+      "no_mostrar": [
+        "cadáver, mortaja o gesto de velorio",
+        "tierra echada encima",
+        "el rostro del hijo en pánico"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n07",
+        "n08",
+        "n09"
+      ],
+      "momento": "El que cavó ya es pájaro carpintero y está en el mismo tronco; el dedo se mueve y el suelo se abre.",
+      "composicion": "Cuadrada y cerrada sobre el pie del árbol. El tronco tapado ocupa la mitad derecha, con el dedo asomado en el centro geométrico de la lámina; el pájaro carpintero, agarrado a la corteza justo encima, del tamaño que la escala del tronco le da. En la mitad izquierda, el suelo abierto en grietas cortas que parten exactamente del dedo, sin humo ni polvo: el temblor se lee por la grieta, no por el efecto atmosférico. Sin figura humana.",
+      "entity_refs": [
+        "pajaro_carpintero",
+        "el_arbol_cavado_ataud",
+        "el_temblor",
+        "el_hijo_de_karagabi"
+      ],
+      "no_mostrar": [
+        "Awena ni ninguna figura hundiéndose",
+        "polvo, humo o nubes de derrumbe"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "el_hijo_de_karagabi",
