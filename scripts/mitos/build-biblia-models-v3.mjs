@@ -28,18 +28,22 @@ export const PURPOSE_BY_KIND = {
   deidad_fuerza: ["identity_sheet", "state_sheet"],
   criatura: ["identity_sheet", "state_sheet"],
   animal: ["identity_sheet", "state_sheet"],
-  // La V3 admite un segundo modelo «segun necesidad explicita» para el
-  // colectivo y «segun ciclo documentado» para la planta. Tenerlos con una
-  // sola ficha obligo a katios a resolver barro/piedra y arbol/tronco como dos
-  // registros de la misma lamina: era un limite de este script, no una
-  // decision.
+  // **Las once categorias admiten un segundo modelo**, y asi lo dice la tabla
+  // de `docs/biblia-visual-v3.md`: «segun necesidad explicita» para el
+  // colectivo, «segun uso o transformacion» para el objeto, «segun ciclo
+  // documentado» para la planta, «segun cambio espacial» para arquitectura y
+  // lugar, «segun clima o epoca» para el paisaje y «segun fases de la regla»
+  // para el fenomeno. Tener solo cuatro obligo a katios a resolver
+  // barro/piedra y arbol/tronco, y a boyaca la cuesta que se multiplica, como
+  // dos registros de la misma lamina: era un limite de este script, no una
+  // decision. El segundo modelo solo se emite si hay `states_to_model`.
   colectivo: ["group_grammar", "state_sheet"],
-  objeto: ["object_sheet"],
+  objeto: ["object_sheet", "state_sheet"],
   planta: ["botanical_sheet", "state_sheet"],
-  arquitectura: ["spatial_model"],
-  lugar: ["spatial_model"],
-  paisaje: ["environment_model"],
-  fenomeno: ["phenomenon_rule"],
+  arquitectura: ["spatial_model", "state_sheet"],
+  lugar: ["spatial_model", "state_sheet"],
+  paisaje: ["environment_model", "state_sheet"],
+  fenomeno: ["phenomenon_rule", "state_sheet"],
 };
 
 /** Las fichas de cuerpo de personaje, criatura y animal exigen esta vista. */

@@ -1583,10 +1583,12 @@
       "sensitivity": "public",
       "visual_status": "required",
       "model_requirements": [
-        "botanical_sheet"
+        "botanical_sheet",
+        "state_sheet"
       ],
       "model_refs": [
-        "arbol_que_se_vuelve_apaporis__botanical_sheet"
+        "arbol_que_se_vuelve_apaporis__botanical_sheet",
+        "arbol_que_se_vuelve_apaporis__state_sheet"
       ],
       "legacy_model_refs": [],
       "myth_refs": [
@@ -1651,7 +1653,7 @@
         ],
         "editorial": [
           "La especie del árbol no está en la fuente: se resuelve como árbol colosal sin caracteres de identificación —sin fruto, sin flor y sin hoja diagnóstica—, igual que la bombona y por la misma razón.",
-          "El estado «caído convertido en río» estaba declarado por el censo como lámina aparte; la tabla de propósitos de la v3 da a las plantas una sola ficha botánica, así que los dos tiempos se componen dentro de la misma plancha. Si el editor quiere la segunda lámina, se separa: la decisión está tomada por el esquema, no por el relato.",
+          "El estado «caído convertido en río» se cobra como lámina aparte, tal como pidió el censo: la ficha botánica muestra el árbol en pie con la copa atada y la muesca rellena, y la hoja de estado muestra el tronco tendido convertido en cauce. Son dos siluetas y no dos momentos de la misma.",
           "El cuarto episodio no se leyó en el original en esta sesión y se conoce por el canon: esta ficha es, junto con la de la hija del Sol, la más revisable del corpus.",
           "Los amarres de la copa al cielo se dibujan como cuerdas tensas entre dos planos: la fuente dice que amarró, no con qué.",
           "El pie de esta lámina lleva el nombre doble, Tanimuka (Ufaina): «Tanimuka» es palabra geral, «gente de ceniza», con que las tribus del Apaporis denominan a los Ufaina, y «Ufaina» era la autodenominación bajo la cual se recogió el único registro del ciclo. Una lámina rotulada sólo con uno de los dos nombres queda inubicable."
@@ -2612,8 +2614,12 @@
       "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "required",
-      "model_requirements": [],
-      "model_refs": [],
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "model_refs": [
+        "hoja_utileria_ufaina__object_sheet"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "creacion-ufaina"
@@ -2633,7 +2639,43 @@
         "hojas_de_milpesos",
         "soporte_del_deposito"
       ],
-      "design": null,
+      "design": {
+        "silhouette": "Cinco piezas menores en una plancha partida en dos mitades desiguales: arriba y juntas, la caja alargada de tres amarres y el racimo de pelotas negras, que son los dos recipientes prohibidos y se leen como pareja; abajo y en fila, la astilla, la hoja de milpesos y el palo del depósito. Esta hoja fija la hechura de lo que otras fichas muestran en uso.",
+        "materials": [
+          "caja de guardar pluma alargada y trenzada, con tres amarres de pita: uno por un lado, uno por la mitad y uno por el otro",
+          "racimo de pelotas negras amarradas y graduadas, con la más pequeña al final del cordel",
+          "astilla de madera clara, la misma que se repone en el corte y la que se tira al lago",
+          "hoja de milpesos entera y pinnada, distinta de la hoja de bombona y de la de empajar",
+          "palo del depósito, con la sección del corte a la vista y el canto de la rotura"
+        ],
+        "palette": "Fibra trenzada y madera en la mitad de abajo, y en la de arriba el único negro del ciclo, el de las pelotas, que es presagio y no decoración. La astilla aporta el claro y la hoja de milpesos el único verde: cinco materias distintas y ni un solo tono repetido.",
+        "scale": "Dos escalas declaradas dentro de la misma plancha: los dos recipientes a escala de brazo, porque se cargan por el camino, y las tres piezas de abajo a escala de mano, con una referencia de mano dibujada en la casilla de la astilla. La hoja de milpesos es la mayor de las tres y se ve que lo es.",
+        "continuity": [
+          "la caja y el racimo van arriba y juntos, siempre: son gemelos estructurales y el censo pidió diseñarlos juntos",
+          "tres amarres en la caja y ninguno más",
+          "el racimo está graduado y la pequeña es la última del cordel",
+          "las tres hojas del relato no se confunden: aquí sólo va la de milpesos",
+          "escala declarada en las dos mitades, con referencia de mano abajo"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha: el ciclo es Tanimuka (Ufaina), recogido por Hildebrand en 1972 entre narradores tanimuka. El episodio del árbol derribado del que salen aguas y peces existe casi línea por línea entre los Makuna del mismo Apaporis, con los Ayawa en lugar de los Imarikakana: nada makuna entra a esta lámina y nada de esta lámina sirve para vestir a un makuna.",
+          "«En una caja como las de guardar pluma estaba la hoja. La caja estaba bien amarrada con tres amarres, uno por un lado, uno por la mitad y uno por otro lado.» Y se abre así: «Abrió un poquito soltando las pitas de los lados y el centro reventó».",
+          "La noche no es una esfera: «Vea tengo muchas pelotas amarradas, grandes y chicas, el menor último es el chiquitico». El abuelo tiene muchas, graduadas, y la que se llevan es la pequeña.",
+          "La caja y la esfera son gemelas estructurales —mismo recipiente prohibido, misma advertencia, misma desobediencia a mitad de camino— y el censo hizo bien en diseñarlas juntas.",
+          "Las astillas se reponen cada noche en el corte del tronco hasta que Kayafikí las tira al lago, y de ellas nacen los peces.",
+          "Hay tres hojas distintas para tres cosas distintas: milpesos (Jessenia batana) para el rancho, bombona para el segundo intento, hoja de empajar —caraná, Lepidocaryum tenue— para el techo definitivo.",
+          "El soporte que se derriba es «el palo» que ella hizo poner, y es lo que se rompe: sin él el tercer episodio no tiene gesto.",
+          "Regla del ejemplar: se usa la forma documentada de una caja de esa clase y jamás una caja real, ni su contenido, ni un adorno de pluma. La caja del relato guarda hoja, no plumas, y así se dibuja."
+        ],
+        "editorial": [
+          "Esta hoja fija la hechura y las otras fichas muestran el uso: la caja y el racimo cuelgan también en la lámina del abuelo, la astilla aparece en la de peces y en la del árbol, la hoja de milpesos en la de la primera maloca y el palo en la de los cuatro depósitos. La división es deliberada y evita que cada ficha invente su propia versión de la misma pieza.",
+          "El número de pelotas del racimo y su escalonado son composición: la fuente dice «muchas, grandes y chicas» sin dar cifra.",
+          "El trenzado de la caja se resuelve como fibra genérica sin motivo: un patrón de cestería sería identidad de un pueblo.",
+          "La partición de la plancha en dos escalas es decisión de lámina y se declara, porque sin ella cinco piezas menores se leerían como un muestrario plano.",
+          "El pie de esta lámina lleva el nombre doble, Tanimuka (Ufaina): «Tanimuka» es palabra geral, «gente de ceniza», con que las tribus del Apaporis denominan a los Ufaina, y «Ufaina» era la autodenominación bajo la cual se recogió el único registro del ciclo. Una lámina rotulada sólo con uno de los dos nombres queda inubicable."
+        ],
+        "states_to_model": []
+      },
       "states_declared": []
     }
   },
@@ -3630,7 +3672,7 @@
         ],
         "editorial_features": [
           "La especie del árbol no está en la fuente: se resuelve como árbol colosal sin caracteres de identificación —sin fruto, sin flor y sin hoja diagnóstica—, igual que la bombona y por la misma razón.",
-          "El estado «caído convertido en río» estaba declarado por el censo como lámina aparte; la tabla de propósitos de la v3 da a las plantas una sola ficha botánica, así que los dos tiempos se componen dentro de la misma plancha. Si el editor quiere la segunda lámina, se separa: la decisión está tomada por el esquema, no por el relato.",
+          "El estado «caído convertido en río» se cobra como lámina aparte, tal como pidió el censo: la ficha botánica muestra el árbol en pie con la copa atada y la muesca rellena, y la hoja de estado muestra el tronco tendido convertido en cauce. Son dos siluetas y no dos momentos de la misma.",
           "El cuarto episodio no se leyó en el original en esta sesión y se conoce por el canon: esta ficha es, junto con la de la hija del Sol, la más revisable del corpus.",
           "Los amarres de la copa al cielo se dibujan como cuerdas tensas entre dos planos: la fuente dice que amarró, no con qué.",
           "El pie de esta lámina lleva el nombre doble, Tanimuka (Ufaina): «Tanimuka» es palabra geral, «gente de ceniza», con que las tribus del Apaporis denominan a los Ufaina, y «Ufaina» era la autodenominación bajo la cual se recogió el único registro del ciclo. Una lámina rotulada sólo con uno de los dos nombres queda inubicable."
@@ -3682,6 +3724,128 @@
             "canonico"
           ],
           "reference_views": []
+        }
+      ]
+    },
+    "arbol_que_se_vuelve_apaporis__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "arbol_que_se_vuelve_apaporis"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "El río se hace cuando cae el poste del cuarto depósito, y tiene forma de cuerpo: «Cayó, ahí mismo se hizo el río. Ese palo era puro estantillo, era boa, por eso el río parece camino de boa». Se usa la forma del meandro que se lee como un cuerpo que repta y no se dibuja ninguna boa en el río."
+        },
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "El ciclo tiene dos procedencias del río que no se pueden dibujar como el mismo suceso: en el tercer episodio el cauce lo abre el poste-boa del cuarto depósito, y el canon atribuye el Apaporis al árbol derribado del cuarto episodio, que no se leyó en el original en esta sesión. La contradicción queda declarada y sin resolver."
+        },
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "La hija del Sol no tiene una línea de cuerpo en ninguna fuente: repone las astillas cada noche, el tronco amanece entero y después amarra la copa al cielo. Su ficha se construye sobre acción y posición, y el cuerpo queda declarado como decisión editorial reversible."
+        },
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "El episodio makuna en el que los Ayawa derriban un árbol del que salen aguas y peces es el paralelo regional más cercano y la mezcla más fácil de cometer en el Apaporis: ninguna lámina puede ser intercambiable con una escena makuna, y cada ficha del cuarto acto lo declara por escrito."
+        },
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "Las palabras castellanas de objeto que trae la traducción de 1972 —hacha, platón, llave de agua, ventanilla— son del castellano amazónico del registro y no necesariamente del objeto: cada una se dibuja por su función y va marcada como no resuelta en su ficha."
+        },
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "El territorio es el bajo Apaporis dentro de un área multiétnica y ningún sitio del relato puede dibujarse identificable: la casa del Sol no tiene descripción y se resuelve como localización sin interior y sin arquitectura inventada, y el lago de las astillas es un cuerpo de agua sin rasgos propios."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Un árbol colosal con la copa atada al cielo por amarres visibles y un corte a media altura del tronco que nunca termina de abrirse, porque cada noche vuelve a llenarse de astillas: y en el segundo momento, el mismo tronco tendido hacia el occidente convertido en cauce, con el agua corriendo por donde estaba la madera.",
+        "materials": [
+          "tronco colosal de corteza en capas gruesas de papel, con el corte de madera fresca más clara",
+          "astillas repuestas en el corte, visibles como piezas pequeñas encajadas una a una",
+          "amarres de fibra que sujetan la copa al plano del cielo",
+          "agua que sustituye a la madera en el tronco tendido, en planos translúcidos y con el meandro como forma"
+        ],
+        "palette_logic": "Corteza oscura, madera fresca clara en el corte y agua como el plano más claro del conjunto: los tres valores del ciclo entero en una sola lámina. Ningún verde de copa domina, porque la copa está atada y fuera del alcance visual.",
+        "scale": "Modelo de escala mayor del corpus: el árbol no cabe en el encuadre de pie, y por eso la lámina lo compone en dos tiempos dentro de la misma plancha, con figuras humanas minúsculas al pie del tronco en los dos. La caída se lee hacia el occidente y el cauce que resulta se pierde fuera del cuadro.",
+        "continuity_markers": [
+          "el corte está siempre a media altura del tronco y siempre relleno de astillas mientras el árbol está en pie",
+          "la copa siempre atada, y los amarres siempre visibles",
+          "cae hacia el occidente y ninguna lámina lo tumba en otra dirección",
+          "el cauce que resulta lleva la forma del meandro, jamás una boa dibujada",
+          "el árbol del cuarto episodio y el poste-boa del tercero no comparten lámina: son dos procedencias del río y no el mismo suceso"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha: el ciclo es Tanimuka (Ufaina), recogido por Hildebrand en 1972 entre narradores tanimuka. El episodio del árbol derribado del que salen aguas y peces existe casi línea por línea entre los Makuna del mismo Apaporis, con los Ayawa en lugar de los Imarikakana: nada makuna entra a esta lámina y nada de esta lámina sirve para vestir a un makuna.",
+          "Se corta de día y sana de noche, tiene la copa amarrada al cielo y al caer hacia el occidente se vuelve el Apaporis: es el clímax del ciclo.",
+          "Las astillas se reponen cada noche hasta que Kayafikí las tira al lago, y de ellas nacen los peces: la reposición es el mecanismo del episodio.",
+          "La forma del cauce viene de la fuente y de otro episodio: «Ese palo era puro estantillo, era boa, por eso el río parece camino de boa». Se usa la forma —el meandro que se lee como un cuerpo que repta— y no se dibuja una boa en el río.",
+          "El mismo episodio existe casi línea por línea entre los Makuna, con los Ayawa en lugar de los Imarikakana: es la mezcla concreta que esta ficha existe para impedir, y toda composición intercambiable con una escena makuna se rechaza."
+        ],
+        "editorial_features": [
+          "La especie del árbol no está en la fuente: se resuelve como árbol colosal sin caracteres de identificación —sin fruto, sin flor y sin hoja diagnóstica—, igual que la bombona y por la misma razón.",
+          "El estado «caído convertido en río» se cobra como lámina aparte, tal como pidió el censo: la ficha botánica muestra el árbol en pie con la copa atada y la muesca rellena, y la hoja de estado muestra el tronco tendido convertido en cauce. Son dos siluetas y no dos momentos de la misma.",
+          "El cuarto episodio no se leyó en el original en esta sesión y se conoce por el canon: esta ficha es, junto con la de la hija del Sol, la más revisable del corpus.",
+          "Los amarres de la copa al cielo se dibujan como cuerdas tensas entre dos planos: la fuente dice que amarró, no con qué.",
+          "El pie de esta lámina lleva el nombre doble, Tanimuka (Ufaina): «Tanimuka» es palabra geral, «gente de ceniza», con que las tribus del Apaporis denominan a los Ufaina, y «Ufaina» era la autodenominación bajo la cual se recogió el único registro del ciclo. Una lámina rotulada sólo con uno de los dos nombres queda inubicable."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Tanimuka (Ufaina) V1 - state_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "el cambio de estado sin perder la identidad para El árbol enorme que se vuelve el río Apaporis. Un árbol colosal con la copa atada al cielo por amarres visibles y un corte a media altura del tronco que nunca termina de abrirse, porque cada noche vuelve a llenarse de astillas: y en el segundo momento, el mismo tronco tendido hacia el occidente convertido en cauce, con el agua corriendo por donde estaba la madera.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. La cubierta de la maloca en dos texturas opuestas en el mismo techo: hoja soltada desde arriba, suelta y de canto irregular, y hoja tejida, trenzada y más envejecida. Estantillos como cilindros de papel enrollado; agua como planos translúcidos superpuestos; semilla y astilla como piezas pequeñas y plenas. La selva del bajo Apaporis se construye por planos escalonados en profundidad, nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Modelo de escala mayor del corpus: el árbol no cabe en el encuadre de pie, y por eso la lámina lo compone en dos tiempos dentro de la misma plancha, con figuras humanas minúsculas al pie del tronco en los dos. La caída se lee hacia el occidente y el cauce que resulta se pierde fuera del cuadro.",
+        "lighting_mood": "Tres estados y sólo tres. Día perpetuo: luz plana y alta, sin sombra dirigida y sin disco solar, para todo el primer episodio. La maloca del abuelo: el único interior oscuro de un mundo de día, con un fogón bajo la hamaca como única fuente. Y la noche con su amanecer, que dura exactamente una hoguera: luz de leña que va bajando hasta el tizón, y al clarear la oscuridad se recoge en los huecos y bajo las ollas. Ningún rayo volumétrico, ningún resplandor sobre una figura.",
+        "materials_textures": "hoja de palma en tres calidades: milpesos, bombona y caraná de empajar, y la cubierta en dos texturas dentro del mismo techo; madera de estantillo y de vara, y bejuco de amarre; fibra trenzada de la caja de guardar pluma y de sus tres amarres; agua en cuatro estados: encerrada en el poste, en chorro por la llave, en lago quieto y en cauce sinuoso; ceniza, tizón y leña, que son el reloj de la noche; barro cocido de olla y platón; karayurú rojo y negro de pintura, los dos únicos colores del corpus y los dos de presagio; corteza percutida de marimá como única tela documentada de la región; tronco colosal de corteza en capas gruesas de papel, con el corte de madera fresca más clara; astillas repuestas en el corte, visibles como piezas pequeñas encajadas una a una; amarres de fibra que sujetan la copa al plano del cielo; agua que sustituye a la madera en el tronco tendido, en planos translúcidos y con el meandro como forma",
+        "era": "Tiempo del comienzo, sin fecha, con un inventario material estricto y enteramente vegetal: maloca semicónica de estantillos, bejuco, vara y tres hojas distintas —milpesos, bombona, caraná—; caja de guardar pluma con tres amarres; racimo de pelotas negras amarradas; cuatro estantillos con llave y ventanilla; macana, platón, popay, olla, fogón, canasta; astillas, leña y tizón; coca y tabaco nombrados y no representados. Sin metal identificable, sin tela industrial, sin arma de fuego, sin moneda, sin objeto de mercado y sin un solo europeo. Los objetos cuyo nombre viene del castellano de 1972 se dibujan por su función.",
+        "constraints": [
+          "Un árbol colosal con la copa atada al cielo por amarres visibles y un corte a media altura del tronco que nunca termina de abrirse, porque cada noche vuelve a llenarse de astillas: y en el segundo momento, el mismo tronco tendido hacia el occidente convertido en cauce, con el agua corriendo por donde estaba la madera.",
+          "mostrar: Clímax del ciclo y escenario del cuarto episodio: se corta de día, sana de noche, tiene la copa amarrada al cielo y al caer hacia el occidente se vuelve el Apaporis. El estado caído está mostrado y cambia todo, así que cuesta hoja aparte.",
+          "documentado: Deslinde escrito en la ficha: el ciclo es Tanimuka (Ufaina), recogido por Hildebrand en 1972 entre narradores tanimuka. El episodio del árbol derribado del que salen aguas y peces existe casi línea por línea entre los Makuna del mismo Apaporis, con los Ayawa en lugar de los Imarikakana: nada makuna entra a esta lámina y nada de esta lámina sirve para vestir a un makuna.",
+          "documentado: Se corta de día y sana de noche, tiene la copa amarrada al cielo y al caer hacia el occidente se vuelve el Apaporis: es el clímax del ciclo.",
+          "documentado: Las astillas se reponen cada noche hasta que Kayafikí las tira al lago, y de ellas nacen los peces: la reposición es el mecanismo del episodio.",
+          "documentado: La forma del cauce viene de la fuente y de otro episodio: «Ese palo era puro estantillo, era boa, por eso el río parece camino de boa». Se usa la forma —el meandro que se lee como un cuerpo que repta— y no se dibuja una boa en el río.",
+          "documentado: El mismo episodio existe casi línea por línea entre los Makuna, con los Ayawa en lugar de los Imarikakana: es la mezcla concreta que esta ficha existe para impedir, y toda composición intercambiable con una escena makuna se rechaza.",
+          "La paleta es vegetal: hoja de palma, madera mojada, fibra y agua. Todo lo demás se resta.",
+          "Los dos únicos colores del corpus son presagio y no decoración: el negro de la pelota de la noche y el rojo del karayurú, que el texto glosa como podredumbre y sangre.",
+          "El día perpetuo del primer episodio no tiene sombra dirigida ni hora: es luz plana y alta, y sólo la maloca del abuelo introduce oscuridad.",
+          "El agua es siempre el plano más claro de la lámina, porque el ciclo entero trata de soltarla.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada del Yuruparí, ni por alusión, ni en segundo plano, ni como forma sugerida.",
+          "Ningún interior de maloca, ninguna disposición ritual y ningún objeto ceremonial, incluido el maguaré.",
+          "Ninguna preparación ni consumo de coca o tabaco, ningún utensilio de mambeo y ningún poporo.",
+          "Ningún diseño de pintura corporal, ningún adorno de pluma y ninguna pieza real de waya, brazalete o saya.",
+          "Nada makuna: ni los Ayawa, ni su árbol, ni ninguna composición intercambiable con una escena makuna.",
+          "Ninguna boa dibujada en el río: el camino de boa es la forma del meandro, no el animal.",
+          "Ningún sitio del Apaporis o del Mirití con perfil reconocible, ni mapa, ni coordenada, ni sitio sagrado.",
+          "Ningún metal identificable, arma de fuego, tela industrial, objeto de mercado ni figura europea."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos, y los cuatro hermanos se distinguen sólo por estatura y por posición, nunca por rostro. El pelaje del mico de noche y del borugo sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón. El quilling se reserva para lo que enrolla de verdad: el chorro de agua que sale de la llave del estantillo, el humo del fogón bajo el abuelo, el meandro del río como camino de boa, el soplo negro que sube al cielo."
+      },
+      "views": [
+        {
+          "id": "estado_caido_convertido_en_rio",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: caido_convertido_en_rio",
+          "aspect": "1:1",
+          "states": [
+            "caido_convertido_en_rio"
+          ],
+          "reference_views": [
+            "canon"
+          ]
         }
       ]
     },
@@ -4047,6 +4211,108 @@
           "view_type": "environment_establishing",
           "purpose": "el mundo hasta los cuatro limites, con su hora y su clima",
           "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "hoja_utileria_ufaina__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "hoja_utileria_ufaina"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-ufaina",
+          "field": "mito",
+          "note": "Cinco piezas menores en una hoja. Dos de ellas, la caja y la esfera, son recipientes prohibidos que el menor abre antes de tiempo: comparten regla y conviene diseñarlas juntas para que se lean como pareja."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Cinco piezas menores en una plancha partida en dos mitades desiguales: arriba y juntas, la caja alargada de tres amarres y el racimo de pelotas negras, que son los dos recipientes prohibidos y se leen como pareja; abajo y en fila, la astilla, la hoja de milpesos y el palo del depósito. Esta hoja fija la hechura de lo que otras fichas muestran en uso.",
+        "materials": [
+          "caja de guardar pluma alargada y trenzada, con tres amarres de pita: uno por un lado, uno por la mitad y uno por el otro",
+          "racimo de pelotas negras amarradas y graduadas, con la más pequeña al final del cordel",
+          "astilla de madera clara, la misma que se repone en el corte y la que se tira al lago",
+          "hoja de milpesos entera y pinnada, distinta de la hoja de bombona y de la de empajar",
+          "palo del depósito, con la sección del corte a la vista y el canto de la rotura"
+        ],
+        "palette_logic": "Fibra trenzada y madera en la mitad de abajo, y en la de arriba el único negro del ciclo, el de las pelotas, que es presagio y no decoración. La astilla aporta el claro y la hoja de milpesos el único verde: cinco materias distintas y ni un solo tono repetido.",
+        "scale": "Dos escalas declaradas dentro de la misma plancha: los dos recipientes a escala de brazo, porque se cargan por el camino, y las tres piezas de abajo a escala de mano, con una referencia de mano dibujada en la casilla de la astilla. La hoja de milpesos es la mayor de las tres y se ve que lo es.",
+        "continuity_markers": [
+          "la caja y el racimo van arriba y juntos, siempre: son gemelos estructurales y el censo pidió diseñarlos juntos",
+          "tres amarres en la caja y ninguno más",
+          "el racimo está graduado y la pequeña es la última del cordel",
+          "las tres hojas del relato no se confunden: aquí sólo va la de milpesos",
+          "escala declarada en las dos mitades, con referencia de mano abajo"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha: el ciclo es Tanimuka (Ufaina), recogido por Hildebrand en 1972 entre narradores tanimuka. El episodio del árbol derribado del que salen aguas y peces existe casi línea por línea entre los Makuna del mismo Apaporis, con los Ayawa en lugar de los Imarikakana: nada makuna entra a esta lámina y nada de esta lámina sirve para vestir a un makuna.",
+          "«En una caja como las de guardar pluma estaba la hoja. La caja estaba bien amarrada con tres amarres, uno por un lado, uno por la mitad y uno por otro lado.» Y se abre así: «Abrió un poquito soltando las pitas de los lados y el centro reventó».",
+          "La noche no es una esfera: «Vea tengo muchas pelotas amarradas, grandes y chicas, el menor último es el chiquitico». El abuelo tiene muchas, graduadas, y la que se llevan es la pequeña.",
+          "La caja y la esfera son gemelas estructurales —mismo recipiente prohibido, misma advertencia, misma desobediencia a mitad de camino— y el censo hizo bien en diseñarlas juntas.",
+          "Las astillas se reponen cada noche en el corte del tronco hasta que Kayafikí las tira al lago, y de ellas nacen los peces.",
+          "Hay tres hojas distintas para tres cosas distintas: milpesos (Jessenia batana) para el rancho, bombona para el segundo intento, hoja de empajar —caraná, Lepidocaryum tenue— para el techo definitivo.",
+          "El soporte que se derriba es «el palo» que ella hizo poner, y es lo que se rompe: sin él el tercer episodio no tiene gesto.",
+          "Regla del ejemplar: se usa la forma documentada de una caja de esa clase y jamás una caja real, ni su contenido, ni un adorno de pluma. La caja del relato guarda hoja, no plumas, y así se dibuja."
+        ],
+        "editorial_features": [
+          "Esta hoja fija la hechura y las otras fichas muestran el uso: la caja y el racimo cuelgan también en la lámina del abuelo, la astilla aparece en la de peces y en la del árbol, la hoja de milpesos en la de la primera maloca y el palo en la de los cuatro depósitos. La división es deliberada y evita que cada ficha invente su propia versión de la misma pieza.",
+          "El número de pelotas del racimo y su escalonado son composición: la fuente dice «muchas, grandes y chicas» sin dar cifra.",
+          "El trenzado de la caja se resuelve como fibra genérica sin motivo: un patrón de cestería sería identidad de un pueblo.",
+          "La partición de la plancha en dos escalas es decisión de lámina y se declara, porque sin ella cinco piezas menores se leerían como un muestrario plano.",
+          "El pie de esta lámina lleva el nombre doble, Tanimuka (Ufaina): «Tanimuka» es palabra geral, «gente de ceniza», con que las tribus del Apaporis denominan a los Ufaina, y «Ufaina» era la autodenominación bajo la cual se recogió el único registro del ciclo. Una lámina rotulada sólo con uno de los dos nombres queda inubicable."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Tanimuka (Ufaina) V1 - object_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro.",
+        "primary_request": "hechura, escala y uso del objeto para hoja utileria ufaina. Cinco piezas menores en una plancha partida en dos mitades desiguales: arriba y juntas, la caja alargada de tres amarres y el racimo de pelotas negras, que son los dos recipientes prohibidos y se leen como pareja; abajo y en fila, la astilla, la hoja de milpesos y el palo del depósito. Esta hoja fija la hechura de lo que otras fichas muestran en uso.",
+        "style_medium": "Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. La cubierta de la maloca en dos texturas opuestas en el mismo techo: hoja soltada desde arriba, suelta y de canto irregular, y hoja tejida, trenzada y más envejecida. Estantillos como cilindros de papel enrollado; agua como planos translúcidos superpuestos; semilla y astilla como piezas pequeñas y plenas. La selva del bajo Apaporis se construye por planos escalonados en profundidad, nunca por perspectiva atmosférica pintada.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Dos escalas declaradas dentro de la misma plancha: los dos recipientes a escala de brazo, porque se cargan por el camino, y las tres piezas de abajo a escala de mano, con una referencia de mano dibujada en la casilla de la astilla. La hoja de milpesos es la mayor de las tres y se ve que lo es.",
+        "lighting_mood": "Tres estados y sólo tres. Día perpetuo: luz plana y alta, sin sombra dirigida y sin disco solar, para todo el primer episodio. La maloca del abuelo: el único interior oscuro de un mundo de día, con un fogón bajo la hamaca como única fuente. Y la noche con su amanecer, que dura exactamente una hoguera: luz de leña que va bajando hasta el tizón, y al clarear la oscuridad se recoge en los huecos y bajo las ollas. Ningún rayo volumétrico, ningún resplandor sobre una figura.",
+        "materials_textures": "hoja de palma en tres calidades: milpesos, bombona y caraná de empajar, y la cubierta en dos texturas dentro del mismo techo; madera de estantillo y de vara, y bejuco de amarre; fibra trenzada de la caja de guardar pluma y de sus tres amarres; agua en cuatro estados: encerrada en el poste, en chorro por la llave, en lago quieto y en cauce sinuoso; ceniza, tizón y leña, que son el reloj de la noche; barro cocido de olla y platón; karayurú rojo y negro de pintura, los dos únicos colores del corpus y los dos de presagio; corteza percutida de marimá como única tela documentada de la región; caja de guardar pluma alargada y trenzada, con tres amarres de pita: uno por un lado, uno por la mitad y uno por el otro; racimo de pelotas negras amarradas y graduadas, con la más pequeña al final del cordel; astilla de madera clara, la misma que se repone en el corte y la que se tira al lago; hoja de milpesos entera y pinnada, distinta de la hoja de bombona y de la de empajar; palo del depósito, con la sección del corte a la vista y el canto de la rotura",
+        "era": "Tiempo del comienzo, sin fecha, con un inventario material estricto y enteramente vegetal: maloca semicónica de estantillos, bejuco, vara y tres hojas distintas —milpesos, bombona, caraná—; caja de guardar pluma con tres amarres; racimo de pelotas negras amarradas; cuatro estantillos con llave y ventanilla; macana, platón, popay, olla, fogón, canasta; astillas, leña y tizón; coca y tabaco nombrados y no representados. Sin metal identificable, sin tela industrial, sin arma de fuego, sin moneda, sin objeto de mercado y sin un solo europeo. Los objetos cuyo nombre viene del castellano de 1972 se dibujan por su función.",
+        "constraints": [
+          "Cinco piezas menores en una plancha partida en dos mitades desiguales: arriba y juntas, la caja alargada de tres amarres y el racimo de pelotas negras, que son los dos recipientes prohibidos y se leen como pareja; abajo y en fila, la astilla, la hoja de milpesos y el palo del depósito. Esta hoja fija la hechura de lo que otras fichas muestran en uso.",
+          "mostrar: Cinco piezas menores en una hoja. Dos de ellas, la caja y la esfera, son recipientes prohibidos que el menor abre antes de tiempo: comparten regla y conviene diseñarlas juntas para que se lean como pareja.",
+          "documentado: Deslinde escrito en la ficha: el ciclo es Tanimuka (Ufaina), recogido por Hildebrand en 1972 entre narradores tanimuka. El episodio del árbol derribado del que salen aguas y peces existe casi línea por línea entre los Makuna del mismo Apaporis, con los Ayawa en lugar de los Imarikakana: nada makuna entra a esta lámina y nada de esta lámina sirve para vestir a un makuna.",
+          "documentado: «En una caja como las de guardar pluma estaba la hoja. La caja estaba bien amarrada con tres amarres, uno por un lado, uno por la mitad y uno por otro lado.» Y se abre así: «Abrió un poquito soltando las pitas de los lados y el centro reventó».",
+          "documentado: La noche no es una esfera: «Vea tengo muchas pelotas amarradas, grandes y chicas, el menor último es el chiquitico». El abuelo tiene muchas, graduadas, y la que se llevan es la pequeña.",
+          "documentado: La caja y la esfera son gemelas estructurales —mismo recipiente prohibido, misma advertencia, misma desobediencia a mitad de camino— y el censo hizo bien en diseñarlas juntas.",
+          "documentado: Las astillas se reponen cada noche en el corte del tronco hasta que Kayafikí las tira al lago, y de ellas nacen los peces.",
+          "documentado: Hay tres hojas distintas para tres cosas distintas: milpesos (Jessenia batana) para el rancho, bombona para el segundo intento, hoja de empajar —caraná, Lepidocaryum tenue— para el techo definitivo.",
+          "documentado: El soporte que se derriba es «el palo» que ella hizo poner, y es lo que se rompe: sin él el tercer episodio no tiene gesto.",
+          "documentado: Regla del ejemplar: se usa la forma documentada de una caja de esa clase y jamás una caja real, ni su contenido, ni un adorno de pluma. La caja del relato guarda hoja, no plumas, y así se dibuja.",
+          "La paleta es vegetal: hoja de palma, madera mojada, fibra y agua. Todo lo demás se resta.",
+          "Los dos únicos colores del corpus son presagio y no decoración: el negro de la pelota de la noche y el rojo del karayurú, que el texto glosa como podredumbre y sangre.",
+          "El día perpetuo del primer episodio no tiene sombra dirigida ni hora: es luz plana y alta, y sólo la maloca del abuelo introduce oscuridad.",
+          "El agua es siempre el plano más claro de la lámina, porque el ciclo entero trata de soltarla.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada del Yuruparí, ni por alusión, ni en segundo plano, ni como forma sugerida.",
+          "Ningún interior de maloca, ninguna disposición ritual y ningún objeto ceremonial, incluido el maguaré.",
+          "Ninguna preparación ni consumo de coca o tabaco, ningún utensilio de mambeo y ningún poporo.",
+          "Ningún diseño de pintura corporal, ningún adorno de pluma y ninguna pieza real de waya, brazalete o saya.",
+          "Nada makuna: ni los Ayawa, ni su árbol, ni ninguna composición intercambiable con una escena makuna.",
+          "Ninguna boa dibujada en el río: el camino de boa es la forma del meandro, no el animal.",
+          "Ningún sitio del Apaporis o del Mirití con perfil reconocible, ni mapa, ni coordenada, ni sitio sagrado.",
+          "Ningún metal identificable, arma de fuego, tela industrial, objeto de mercado ni figura europea."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos, y los cuatro hermanos se distinguen sólo por estatura y por posición, nunca por rostro. El pelaje del mico de noche y del borugo sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón. El quilling se reserva para lo que enrolla de verdad: el chorro de agua que sale de la llave del estantillo, el humo del fogón bajo el abuelo, el meandro del río como camino de boa, el soplo negro que sube al cielo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "object_three_quarter",
+          "purpose": "hechura, escala y uso del objeto",
+          "aspect": "1:1",
           "states": [
             "canonico"
           ],
