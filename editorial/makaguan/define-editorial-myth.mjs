@@ -1,26 +1,28 @@
 import { buildMakaguanEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickMakaguanSources } from "./sources.mjs";
 
-// Reparto por defecto. Un mito que declare su propio `sourceKeys` lo sustituye
-// entero: antes los tres compartían esta lista y no había manera de separarlos.
-const sourceKeysPorDefecto = [
-  "mattar2024",
-  "unal2024",
-  "icbf2021",
-  "mininterior",
-  "apoyar2014",
-  "radioNacional2022",
-  "jangwapana2026",
-];
-
 export function defineMakaguanMyth({
-  sourceKeys = sourceKeysPorDefecto,
+  // Cada mito declara las obras que su reescritura usó, en orden de peso: las
+  // tres primeras salen como fuentes clave. Antes había un reparto por defecto
+  // de siete y los tres mitos lo compartían entero, con la ficha del
+  // Mininterior entre ellas, cuyo documento ya no existe.
+  sourceKeys,
   seoTitle,
   seoDescription,
   focusKeywords,
   ...input
 }) {
+  if (!Array.isArray(sourceKeys) || sourceKeys.length === 0) {
+    throw new Error(`${input.slug}: falta declarar sourceKeys.`);
+  }
   const selectedSources = pickMakaguanSources(...sourceKeys);
+  // El mínimo es cinco fuentes únicas, no un número exacto: el siete de antes
+  // era el reparto en bloque escrito como condición.
+  if (selectedSources.length < 5) {
+    throw new Error(
+      `${input.slug}: ${selectedSources.length} fuentes únicas, el mínimo son cinco.`,
+    );
+  }
   return buildMakaguanEditorialMyth({
     ...input,
     seoTitle,

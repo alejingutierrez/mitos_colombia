@@ -1,31 +1,20 @@
 import { buildBarasanaEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickBarasanaSources } from "./sources.mjs";
 
-const defaultContextKeys = [
-  "palm",
-  "milkRiver",
-  "torres",
-  "pleiades",
-  "minCultura",
-  "planVida",
-];
-
 export function defineBarasanaMyth({
-  narrativeSource,
-  // Fuentes propias del mito; sustituyen al reparto compartido cuando existen.
+  // Cada mito declara su propio reparto: las obras que usó, en orden de peso.
+  // Ya no hay reparto compartido por defecto, que era lo que hacía que las
+  // seis fichas citaran lo mismo dijeran lo que dijeran.
   sourceKeys,
-  contextSources = defaultContextKeys,
   seoTitle,
   seoDescription,
   focusKeywords,
   ...input
 }) {
-  const selectedSources = sourceKeys
-    ? pickBarasanaSources(...sourceKeys)
-    : pickBarasanaSources(
-    narrativeSource,
-    ...contextSources,
-  );
+  if (!Array.isArray(sourceKeys) || sourceKeys.length === 0) {
+    throw new Error(`${input.slug}: falta declarar sourceKeys.`);
+  }
+  const selectedSources = pickBarasanaSources(...sourceKeys);
   // Antes exigía exactamente 7: el reparto en bloque escrito como
   // aserción. Lo que importa es que haya fuentes suficientes.
   if (selectedSources.length < 5) {

@@ -16,6 +16,14 @@ function myth({ title, summary, tags, ...definition }) {
 export const makaguanDefinitions = [
   myth({
     slug: "creacion-makawanes",
+    sourceKeys: [
+      "mattar2024",
+      "menHitnu2022",
+      "amaya2025",
+      "cartillaHistorias2014",
+      "unal2024",
+      "icbf2021",
+    ],
     title: "Los hijos del venado",
     summary:
       "Tacu llama a un venado y de su grito nacen cuatro mujeres y cuatro hombres, antepasados que se reconocen como hijos del venado.",
@@ -61,6 +69,13 @@ El otro paralelo es de nombres, y es propio. El relato explica por qué este pue
   }),
   myth({
     slug: "la-gran-inundacion",
+    sourceKeys: [
+      "mattar2024",
+      "menHitnu2022",
+      "unal2024",
+      "icbf2021",
+      "jangwapana2026",
+    ],
     title: "La gran inundación y Wiri",
     summary:
       "Tras la muerte accidental de Wiri, Tacu desata una inundación; una pareja sobrevive y una variante comunitaria restituye al samuro.",
@@ -104,6 +119,14 @@ Un diluvio con una pareja salvada en un monte se parece a muchos otros, y la pro
   }),
   myth({
     slug: "el-alma",
+    sourceKeys: [
+      "mattar2024",
+      "amaya2025",
+      "cartillaHistorias2014",
+      "menHitnu2022",
+      "radioNacional2022",
+      "unal2024",
+    ],
     title: "Wuachirajua, la leyenda de El Alma",
     summary:
       "Wuachirajua aparece entre la laguna del Lipa y El Vigía como una presencia cambiante ligada al acompañamiento de los muertos.",

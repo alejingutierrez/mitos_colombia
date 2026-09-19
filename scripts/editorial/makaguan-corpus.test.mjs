@@ -48,11 +48,72 @@ test("los tres expedientes Makaguán cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const sourceUrls = [...record.keySources, ...record.sources].map(
-      ({ url }) => url,
+    // Antes: `keySources + sources === 7`. Ese siete era el reparto en bloque
+    // escrito como aserción; desde la Fase B del 2026-09-19 cada ficha cita
+    // las obras que su reescritura usó, y son distintas entre fichas. Lo que
+    // se verifica es la sustancia: mínimo de fuentes, dominios distintos,
+    // ninguna URL repetida y todas con resumen, límite y URL https.
+    const todas = [...record.keySources, ...record.sources];
+    assert.ok(
+      todas.length >= 5,
+      `${record.slug}: ${todas.length} fuentes, el mínimo son cinco.`,
     );
-    assert.equal(new Set(sourceUrls).size, sourceUrls.length);
+    assert.equal(record.keySources.length, 3);
+    const urls = todas.map(({ url }) => url);
+    assert.equal(new Set(urls).size, urls.length);
+    assert.ok(
+      new Set(urls.map((url) => new URL(url).host)).size >= 3,
+      `${record.slug}: menos de tres dominios distintos.`,
+    );
+    assert.ok(
+      todas.every(
+        ({ url, title, summary, limitation }) =>
+          url.startsWith("https://") && title && summary && limitation,
+      ),
+      `${record.slug}: hay una fuente sin https, título, resumen o límite.`,
+    );
+  }
+});
+
+test("ninguna pareja de fichas repite el mismo reparto de fuentes", () => {
+  const repartos = new Map();
+  for (const record of records) {
+    const firma = [...record.keySources, ...record.sources]
+      .map(({ url }) => url)
+      .join("|");
+    assert.ok(
+      !repartos.has(firma),
+      `${record.slug} y ${repartos.get(firma)} citan exactamente lo mismo.`,
+    );
+    repartos.set(firma, record.slug);
+  }
+  for (const record of records) {
+    const todas = [...record.keySources, ...record.sources];
+    // La tesis de Mattar 2024 es la única que trae los tres relatos: va en
+    // las tres fichas y siempre como fuente clave.
+    assert.ok(
+      record.keySources.some(({ url }) =>
+        url.includes("repositorio.unal.edu.co"),
+      ),
+      `${record.slug}: Mattar 2024 no está entre las fuentes clave.`,
+    );
+    // El diagnóstico del Mininterior se retiró: su PDF devuelve 404 y la
+    // página que lo enlazaba es un índice, no el documento.
+    assert.ok(
+      !todas.some(({ url }) => url.includes("mininterior.gov.co")),
+      `${record.slug}: el diagnóstico del Mininterior ya no existe.`,
+    );
+    // Lo hitnü se cita como vecindad, nunca como makaguán: ahí el creador es
+    // Nakanü y no Tacu, y la variación es un dato, no un error.
+    for (const fuente of todas) {
+      if (/colombiaaprende\.edu\.co|doi\.org\/10\.1590/.test(fuente.url)) {
+        assert.match(
+          fuente.limitation,
+          /hitn[uü]/i,
+          `${record.slug}: ${fuente.title} no declara que es hitnü.`,
+        );
+      }
+    }
   }
 });
 

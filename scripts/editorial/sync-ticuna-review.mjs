@@ -93,12 +93,28 @@ function validateRecords(provenance) {
     if (record.tags.length !== 4 || record.focus_keywords.length !== 5) {
       throw new Error(`${record.slug}: taxonomía o palabras clave inválidas.`);
     }
-    const sources = [...record.keySources, ...record.sources];
-    if (
-      sources.length !== 7 ||
-      new Set(sources.map(({ url }) => url)).size !== 7
-    ) {
-      throw new Error(`${record.slug}: se esperaban siete fuentes.`);
+    // Antes exigía siete exactas: era el reparto en bloque escrito como
+    // aserción. Desde la Fase B del 2026-09-19 cada ficha cita las obras que
+    // su reescritura usó, así que lo que se comprueba es la sustancia.
+    const fuentes = [...record.keySources, ...record.sources];
+    const fuenteUrls = fuentes.map(({ url }) => url);
+    if (fuentes.length < 5) {
+      throw new Error(`${record.slug}: ${fuentes.length} fuentes; el mínimo son cinco.`);
+    }
+    if (new Set(fuenteUrls).size !== fuenteUrls.length) {
+      throw new Error(`${record.slug}: fuentes con URL repetida.`);
+    }
+    if (!fuenteUrls.every((url) => /^https:\/\//.test(url))) {
+      throw new Error(`${record.slug}: hay una fuente sin URL https.`);
+    }
+    if (new Set(fuenteUrls.map((url) => new URL(url).host)).size < 3) {
+      throw new Error(`${record.slug}: menos de tres dominios distintos.`);
+    }
+    if (!fuentes.every(({ summary, limitation }) => summary && limitation)) {
+      throw new Error(`${record.slug}: hay una fuente sin resumen o sin límite.`);
+    }
+    if (fuenteUrls.some((url) => url.includes("gov.br/museudoindio"))) {
+      throw new Error(`${record.slug}: la ficha del Museu do Índio responde 401.`);
     }
     if (
       !/^https:\/\//.test(record.image_url) ||
@@ -674,7 +690,12 @@ async function run() {
           },
           dossiers: records.length,
           imagePairs: records.length,
-          sourcesPerMyth: 7,
+          sourcesPerMyth: Object.fromEntries(
+            records.map((record) => [
+              record.slug,
+              record.keySources.length + record.sources.length,
+            ]),
+          ),
           tags: {
             requested: tagNames.length,
             existing: tagNames.length,

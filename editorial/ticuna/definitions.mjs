@@ -3,8 +3,14 @@ import { defineTicunaMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineTicunaMyth({
     slug: "creacion",
+    sourceKeys: [
+      "santos2010",
+      "nimuendaju1952",
+      "gomezPulgarin2012",
+      "gomezPulgarin2011",
+      "toruDuugu1985",
+    ],
     title: "Ngutapa y el nacimiento de Yoí e Ípi",
-    primarySource: "santos2010",
     excerpt:
       "Ngutapa recibe en sus rodillas a Yoí, Mowacha, Ípi y Aüküná, quienes crecerán para ordenar el mundo y formar a la gente Tikuna.",
     tags: ["ticuna", "creación", "origen del hombre", "familia"],
@@ -53,8 +59,14 @@ Lo que no se repite fuera de aquí es la combinación: un creador que fracasa en
   }),
   defineTicunaMyth({
     slug: "el-combate-del-sueno-y-la-palabra",
+    sourceKeys: [
+      "santos2010",
+      "nimuendaju1952",
+      "gomezPulgarin2011",
+      "toruDuugu1985",
+      "faulhaber2020",
+    ],
     title: "Wone, Eware y la pesca del pueblo Tikuna",
-    primarySource: "santos2010",
     excerpt:
       "Yoí e Ípi derriban Wone, forman la red del Amazonas y preparan Eware, donde los peces pescados con yuca se vuelven personas Tikuna.",
     tags: ["ticuna", "río", "árbol", "origen"],
@@ -105,10 +117,16 @@ Del lado brasileño, la iconografía que estudia Faulhaber liga a Yoí con la pe
   }),
   defineTicunaMyth({
     slug: "origen-del-sol-tikuna",
+    sourceKeys: [
+      "moruapu2000",
+      "faulhaber2020",
+      "nimuendaju1952",
+      "men2014",
+      "santos2010",
+    ],
     relatoCorto:
       "La narración de Dolores Noé ocupa dos páginas del libro y está cerrada: cinco escenas, sin diálogo más allá de la despedida del suegro y sin episodios laterales. Alargarla hasta 300 palabras obligaría a inventar o a repetir.",
     title: "El origen del Sol Tikuna",
-    primarySource: "moruapu2000",
     excerpt:
       "Un cazador bebe el achiote derramado, adquiere una fuerza extraordinaria y asciende; su esposa permanece en la chagra como árbol de algodón.",
     tags: ["ticuna", "Sol", "transformación", "chagra"],
@@ -159,8 +177,14 @@ Del lado brasileño, Priscila Faulhaber muestra que esa pareja de Sol y Luna org
   }),
   defineTicunaMyth({
     slug: "origen-de-la-luna-tikuna",
+    sourceKeys: [
+      "moruapu2000",
+      "nimuendaju1952",
+      "faulhaber2020",
+      "gomezPulgarin2012",
+      "men2014",
+    ],
     title: "El origen de la Luna Tikuna",
-    primarySource: "moruapu2000",
     excerpt:
       "El joven Luna oculta a su esposa en la chagra, no reconoce a su hermana transformada y el huito revela una falta que lo lleva a ascender.",
     tags: ["ticuna", "luna", "transgresión", "ascensión"],
@@ -211,8 +235,14 @@ Lo que fija esta versión frente a las demás es su química: una planta que enn
   }),
   defineTicunaMyth({
     slug: "origen-del-friaje-tikuna",
+    sourceKeys: [
+      "moruapu2000",
+      "nimuendaju1952",
+      "men2014",
+      "gomezPulgarin2012",
+      "toruDuugu1985",
+    ],
     title: "Las grullas y el origen del friaje",
-    primarySource: "moruapu2000",
     excerpt:
       "Un hombre viaja con las grullas, aprende a ver su mundo y vuelve con un envoltorio de peces; su partida intensifica el friaje.",
     tags: ["ticuna", "aves", "viento", "fenómenos naturales"],
@@ -263,8 +293,14 @@ La secuencia que identifica a esta versión no reaparece en los demás relatos d
   }),
   defineTicunaMyth({
     slug: "la-canoa-de-moe",
+    sourceKeys: [
+      "moruapu2000",
+      "men2014",
+      "gomezPulgarin2012",
+      "nimuendaju1952",
+      "toruDuugu1985",
+    ],
     title: "La canoa de Moe y la mujer Moru",
-    primarySource: "moruapu2000",
     excerpt:
       "Moru vuelve a ser ave y guía a Moe hacia un árbol de pescado; las astillas se vuelven peces y la canoa abre el viaje a Moruapü.",
     tags: ["ticuna", "Moé", "viaje", "transformación"],

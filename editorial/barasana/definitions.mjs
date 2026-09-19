@@ -16,33 +16,29 @@ function myth({ title, summary, tags, mito, ...definition }) {
   };
 }
 
-const archivalContext = [
-  "communityBook",
-  "milkRiver",
-  "torres",
-  "pleiades",
-  "minCultura",
-  "planVida",
-];
-
-const communityContext = [
-  "palm",
-  "milkRiver",
-  "torres",
-  "pleiades",
-  "minCultura",
-  "planVida",
-];
+// Reparto por ficha. Primero las obras que esa ficha usó de verdad —las tres
+// primeras salen como fuentes clave—, después el contexto verificado que la
+// enmarca. Antes las seis compartían dos listas en bloque y ninguna de las dos
+// decía qué obra sostenía cada relato.
 
 export const barasanaDefinitions = [
   myth({
     slug: "la-luna",
+    sourceKeys: [
+      "communityBook",
+      "ilv1974",
+      "palm",
+      "cayon2013",
+      "minCultura",
+      // Torres Laborde va último a propósito: es la obra a la que la ficha
+      // heredada atribuía Muyhu y Méneri-Ya sin que nadie lo corroborara, y
+      // su enlace es una ficha de catálogo sin texto. No puede ser clave.
+      "torres",
+    ],
     title: "Muyhu, Méneri-Ya y Warimi",
     summary:
       "La marca de Méneri-Ya revela a Luna; su hijo Warimi nace entre los jaguares y transforma la pérdida en un largo ciclo de regreso.",
     tags: ["Muyhu", "Méneri-Ya", "Warimi", "Luna"],
-    narrativeSource: "palm",
-    contextSources: archivalContext,
     mito: `Luna visitaba de noche la hamaca de su hermana menor. Ella no sabía quién llegaba, y una tarde preparó pintura negra y la dejó lista junto a la hamaca. Cuando el visitante volvió, le marcó el rostro. Al amanecer Luna vio la señal, trató de quitársela y enfermó. Murió, y su cuerpo se deshizo junto al río. Más tarde la Gente del Cielo reunió sus restos y lo devolvió a la vida. Desde entonces, muere y regresa cada mes.
 
 Méneri-Ya ya estaba embarazada. Su padre la mandó hacia un árbol de caimo, y una rama la impulsó hacia arriba hasta el cielo, donde las abejas le rodearon la cabeza. Umu, el ave que la acompañaba, vio el reflejo de la mujer en una vasija de agua, voló hasta ella y volvió por el canasto donde guardaba el hilo. Con ese hilo, Méneri-Ya bajó otra vez a la tierra y se echó a andar buscando a su familia.
@@ -78,12 +74,17 @@ Fuera de ese conjunto, la comparación con Orfeo y Eurídice no la sostiene ning
   }),
   myth({
     slug: "sol-luna-dia-y-noche",
+    sourceKeys: [
+      "palm",
+      "communityBook",
+      "pleiades",
+      "minCultura",
+      "planVida",
+    ],
     title: "Sol y Luna: día y noche",
     summary:
       "Sol y Luna disputan el día; el brillo, los eclipses y las estaciones quedan ordenados cuando cada hermano ocupa su camino.",
     tags: ["Sol", "Luna", "día", "noche"],
-    narrativeSource: "palm",
-    contextSources: archivalContext,
     mito: `Sol y Luna eran hermanos. Luna, el mayor, anunció que sería dueño del día y que su calor secaría los vientres de las mujeres. Sol, el menor, pensó en el agua, en la comida y en el cambio de las estaciones, rechazó la propuesta, tomó el día para sí y le dejó la noche a su hermano. Después se apartó para que la disputa no siguiera.
 
 La luz de Luna resultó débil frente al resplandor de Sol. En ciertos momentos su cuerpo se pone rojo y parece morir, y a eso se atribuyen los eclipses y la luna roja. Cuando baja, llega a una casa abandonada. La corona luminosa que lleva puesta llena el interior de claridad, pero al quitársela todo cambia: Luna toma forma de armadillo y se pone a escarbar buscando huesos debajo del piso.
@@ -119,12 +120,17 @@ La misma monografía que publica esta narración registra, entre los desana, una
   }),
   myth({
     slug: "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+    sourceKeys: [
+      "communityBook",
+      "cayon2013",
+      "palm",
+      "minCultura",
+      "planVida",
+    ],
     title: "Kahe Sawari y Kata Yai",
     summary:
       "Kahe Sawari atraviesa mundos y Kata Yai completa su recorrido hasta el surgimiento, el territorio y la lengua de los Barasano.",
     tags: ["Kahe Sawari", "Kata Yai", "origen", "territorio"],
-    narrativeSource: "communityBook",
-    contextSources: communityContext,
     mito: `En el origen navegaba una canoa con forma de anaconda. La conducía el Sol y en ella iban los primeros seres, que venían buscando una tierra donde sembrar; la que tenían quedaba lejos y no servía para cultivar cera de abejas, tabaco ni coca. Del Gran Chamán Anaconda nacieron Kahe Sawari y Sawa Sawa. El recorrido terminó en el Cerro-Estantillo de Leche Pura, y allí el padre les dijo a sus hijos que en ese lugar debía surgir su descendencia. El Sol se quedó con el tiempo y la luz; los dos hermanos menores se dedicaron a organizar los lugares de origen, el paso de las épocas y las normas de los rituales.
 
 La rivalidad empezó cuando la mujer de Kahe Sawari se enamoró de Sawa Sawa. El menor invitó al mayor a cavar una trampa para danta y lo hizo bajar prendido de una palma de asaí; cuando iba por la mitad del hueco, soltó la palma. Kahe Sawari atravesó el manto de la tierra y salió al mundo de abajo. No murió: en ese tiempo no había muerte. Convertido en copo de algodón flotó hasta las ramas de unos guamos a la orilla del río Umarí. Vio pasar varias canoas y por fin una que parecía arder; en ella venía el Sol. Para saber si eran parientes hicieron una prueba: el Sol sopló fuego contra la nave y Kahe Sawari se volvió araña y se escondió bajo el casco. Aguantó cinco veces, y el Sol lo reconoció.
@@ -160,12 +166,17 @@ La prueba del fuego entre el Sol y Kahe Sawari funciona como reconocimiento de p
   }),
   myth({
     slug: "la-cuerda-de-leche-y-la-anaconda-yeba",
+    sourceKeys: [
+      "communityBook",
+      "cayon2013",
+      "pleiades",
+      "palm",
+      "minCultura",
+    ],
     title: "La Cuerda de Leche y la Anaconda Yeba",
     summary:
       "Los ríos forman una Cuerda de Leche por la que las anacondas ancestrales reciben conocimiento y llegan al territorio del Pirá Paraná.",
     tags: ["Anaconda Yeba", "Río de Leche", "Pirá Paraná", "surgimiento"],
-    narrativeSource: "communityBook",
-    contextSources: communityContext,
     mito: `El río Amazonas es el Río de Leche y el río Pirá Paraná es el Río de Aguas de Yuruparí. En esos dos ríos se originó la humanidad, y juntos forman la Cuerda de Leche de la Evolución. La desembocadura del Amazonas en el Atlántico es la Puerta de las Aguas, y allí está la Maloca de Origen de Yuruparí, donde nace el Yuruparí y donde empieza la historia.
 
 De esa maloca salieron las Anacondas Ancestrales. Durante el recorrido, en los lugares sagrados de los dos grandes ríos, fueron transformándose y recibiendo de los Jaguares de Hee los conocimientos curativos, las semillas de los alimentos, los ornamentos y los instrumentos ceremoniales. Recibieron el conocimiento de los rezos, el de las danzas rituales y el de la oratoria, y con ellos el bejuco de yagé y las semillas de tabaco y de coca.
@@ -203,12 +214,17 @@ Lo que identifica a esta versión es la cuenta concreta: dos ríos leídos como 
   }),
   myth({
     slug: "los-cerros-estantillos-y-la-cera-de-abejas",
+    sourceKeys: [
+      "communityBook",
+      "cayon2013",
+      "planVida",
+      "minCultura",
+      "pleiades",
+    ],
     title: "Cerros-Estantillos y Cera de Abejas",
     summary:
       "Los cerros son estantillos de una gran maloca territorial: guardan memoria, cera y relaciones para cuidar la vida en cada época.",
     tags: ["Cerros-Estantillos", "cera de abejas", "territorio", "maloca"],
-    narrativeSource: "communityBook",
-    contextSources: communityContext,
     mito: `Los Estantillos de Yuruparí son los cerros que contienen el poder del Gran Yuruparí y de los cuencos sagrados de cera de abejas. Por esos cerros pasaron las Anacondas durante el recorrido del surgimiento de la humanidad, y allí recibieron los poderes para el manejo del territorio. Los cerros le transfieren al sabedor esos poderes cuando hace prevención del mundo; por eso el sabedor los recorre en forma de espíritu. De allí toma la fuerza para rechazar los efectos de la maldad que aparecen en el cielo en forma de largas nubes, y para calmar los relámpagos que producen enfermedades.
 
 Los mismos cerros tienen tres nombres, y los tres dicen lo mismo de otra manera: cerros de cera de abejas donde surgió la gente, grandes cúmulos de cera de abejas del origen de la gente, antiguas murallas de cera de abejas del cuenco sagrado donde emergió la gente. Si se reza la comida, se reza a través de ellos, y se convierten en estantillos de vida para que no alcancen los venenos de los peces de Yuruparí, del bejuco de yagé, de las bancas, de la mata de tabaco y del río.
@@ -244,12 +260,17 @@ Lo que ata esta versión a un narrador y no a una idea general de montañas sagr
   }),
   myth({
     slug: "el-origen-de-la-gente-de-los-frutales-silvestres",
+    sourceKeys: [
+      "communityBook",
+      "ilv1974",
+      "pleiades",
+      "minCultura",
+      "planVida",
+    ],
     title: "La Gente de los Frutales Silvestres",
     summary:
       "En Badi Serero, Kata Bahi y sus compañeros atan, distribuyen y ordenan los frutos que alimentarán a las generaciones.",
     tags: ["frutales silvestres", "Kata Bahi", "Badi Serero", "calendario"],
-    narrativeSource: "communityBook",
-    contextSources: communityContext,
     mito: `«No hay frutales silvestres, queremos comer frutales silvestres», dijeron los Jaguares de Yuruparí, y miraron hacia Badi Serero. Allí quedó el Estantillo de Origen y la Casa de Origen de los Frutales Silvestres, y la palma de almidón de achiote quedó como cuna de esa gente. A la pava Kata Bahi le entregaron un territorio, tabaco, el cuenco de coca y los bastones ceremoniales, y le dijeron que sería la curadora de los frutales. La adornaron con pendientes brillantes, la pintaron con tintura de wee y le pusieron corona de plumas.
 
 Crearon después al Torcedor de Cumare, para que los frutos tuvieran siempre de dónde colgarse, y con él llegó el Diablo de Breo. Fue el último en entrar a la maloca: saludó pidiendo tabaco puro y coca pura, le hicieron oler tabaco, le ofrecieron coca y le dieron chicha, y cuando se paró en la mitad y se frotó la cabeza, el resplandor del breo alumbró todo el recinto. Entonces el Torcedor clavó un gran manojo de cumare, todos se pusieron a torcer las fibras, las tiñeron con almidón de achiote y salieron a amarrar frutos.

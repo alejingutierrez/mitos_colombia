@@ -1,16 +1,23 @@
 import { buildTicunaEditorialMyth } from "./build-editorial-myth.mjs";
-import { pickTicunaSources } from "./sources.mjs";
+import { entradasPropias } from "./sources.mjs";
 
 export function defineTicunaMyth({
-  primarySource,
+  // Cada mito declara las obras que su reescritura usó, en orden de peso: las
+  // tres primeras salen como fuentes clave. `primarySource` era un solo
+  // interruptor que rellenaba el resto con un dossier fijo de siete, y por eso
+  // las seis fichas citaban lo mismo.
+  sourceKeys,
   seoTitle,
   seoDescription,
   focusKeywords,
   ...input
 }) {
-  const selectedSources = pickTicunaSources(primarySource);
-  // Antes exigía exactamente 7: el reparto en bloque escrito como
-  // aserción. Lo que importa es que haya fuentes suficientes.
+  if (!Array.isArray(sourceKeys) || sourceKeys.length === 0) {
+    throw new Error(`${input.slug}: falta declarar sourceKeys.`);
+  }
+  const selectedSources = entradasPropias(...sourceKeys);
+  // Antes exigía exactamente 7: el dossier fijo escrito como aserción. Lo que
+  // importa es que haya fuentes suficientes.
   if (selectedSources.length < 5) {
     throw new Error(
       `${input.slug}: ${selectedSources.length} fuentes únicas, el mínimo son cinco.`,
