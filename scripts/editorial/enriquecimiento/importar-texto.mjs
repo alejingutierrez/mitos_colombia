@@ -19,7 +19,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { pathToFileURL } from "node:url";
-import { parseArgs, requireCommunity, loadModules, words, normalizeUrl, WORD_RANGES, TEXT_FIELDS } from "./lib.mjs";
+import { parseArgs, requireCommunity, loadModules, words, normalizeUrl, validateRecord, WORD_RANGES, TEXT_FIELDS } from "./lib.mjs";
 
 const options = parseArgs(process.argv.slice(2));
 const communitySlug = requireCommunity(options);
@@ -218,6 +218,7 @@ if (usesDefinitions) {
   for (const file of touched) await fs.writeFile(file, sources.get(file), "utf8");
   const nombres = [...touched].map((f) => path.basename(f)).join(", ");
   console.log(`Escritos ${count} mitos en ${nombres}. Siguiente: node --test scripts/editorial/${communitySlug}-corpus.test.mjs → aplicar-texto.mjs`);
+  await comprobarDespues(count);
   process.exit(0);
 }
 
@@ -259,3 +260,29 @@ for (const { slug, data } of plans) {
   written += 1;
 }
 console.log(`Escritos ${written} módulos en ${path.relative(process.cwd(), dir)}. Siguiente: node --test scripts/editorial/${communitySlug}-corpus.test.mjs → aplicar-texto.mjs`);
+
+// Se vuelve a leer el módulo para validar el registro que de verdad sale de él.
+// El dry-run valida el JSON; el módulo puede añadirle cosas por su cuenta. En
+// desana el envoltorio `myth()` pegaba un descargo de cuarenta palabras dentro
+// de cada Relato, así que ocho fichas que validaban en el JSON salían del
+// módulo pasadas del máximo y con aparato dentro. Sin este paso no se veía.
+async function comprobarDespues(escritas) {
+  if (!escritas) return;
+  const recargados = await loadModules(communitySlug, options);
+  let malos = 0;
+  for (const record of recargados?.values() ?? []) {
+    if (only && !only.has(record.slug)) continue;
+    const errores = validateRecord(record, { texto: true, fuentes: false });
+    if (errores.length) {
+      malos += 1;
+      console.log(`  ✗ ${record.slug}: ${errores.join("; ")}`);
+    }
+  }
+  console.log(
+    malos
+      ? `\nAviso: ${malos} fichas no cumplen DESPUÉS de componerse en el módulo. Mira qué les añade el módulo.`
+      : "\nComprobado: las fichas siguen cumpliendo después de componerse en el módulo.",
+  );
+}
+
+await comprobarDespues(written);
