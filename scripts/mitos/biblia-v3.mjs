@@ -367,7 +367,49 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
   }
 }
 
+/**
+ * Un estado que se produce tiene que ser un estado que la ficha declara.
+ *
+ * No exige literalidad, porque una hoja de modelo necesita mas detalle que un
+ * inventario: «sin los cuernos» se escribe «sin los cuernos, con dos muñones de
+ * canto cortado». Eso es el mismo estado. Lo que no puede pasar es que la ficha
+ * diga que no tiene estados y aun asi se le encargue una lamina de estado, o
+ * que declare uno y produzca otro: la Madremonte declaraba «forma temible» y
+ * producia «presencia insinuada», que es justo el estado que su propio
+ * `editorial` dice que NO se produce.
+ */
+function estadoDeclarado(producido, declarados) {
+  const palabras = (x) => String(x).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    // Tres letras, no cuatro: hay estados que son una sola palabra corta —«ave»,
+    // «Sol»— y con el filtro en cuatro no podian casar con nada.
+    .replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length >= 3);
+  const P = new Set(palabras(producido));
+  // Expandir conserva las palabras del estado declarado y añade otras; escribir
+  // otro estado no las conserva. «en obra, con un hueco por cerrar» sobrevive
+  // entero dentro de «en obra, con el hueco del ultimo sillar abierto en el
+  // arco», y «forma temible: colmillos, manos descarnadas» no sobrevive dentro
+  // de «presencia insinuada: una zarza que se mueve». La mitad basta.
+  return declarados.some((d) => {
+    const D = palabras(d);
+    if (!D.length) return false;
+    const comunes = D.filter((w) => P.has(w)).length;
+    return comunes / D.length >= 0.5;
+  });
+}
+
 function validateDesign(plan, report) {
+  for (const [entityId, entity] of Object.entries(plan.entities || {})) {
+    const producidos = entity?.design?.states_to_model || [];
+    if (!producidos.length) continue;
+    const declarados = (entity.states || []).slice(1);
+    for (const estado of producidos) {
+      if (estadoDeclarado(estado, declarados)) continue;
+      add(report, "errors", `entities.${entityId}.design.states_to_model`,
+        declarados.length
+          ? `produce un estado que la ficha no declara: «${String(estado).slice(0, 60)}...»`
+          : `produce una lamina de estado pero la ficha no declara ninguno en \`states\``);
+    }
+  }
   if (!isObject(plan.models)) {
     add(report, "errors", "models", "falta la biblioteca de modelos V3");
     return;

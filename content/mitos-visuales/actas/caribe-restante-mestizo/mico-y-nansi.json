@@ -8,12 +8,217 @@
   "canon_field": "content",
   "canon_sha256": "bde2e3b89882bb4363f8c7eee1b9fb38b5ca6939f2baa4ebb116618e9494c42b",
   "canon_chars": 6210,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "Mico no es un mono en una rama: en esta página es un cazador con nombre",
+      "evidencia": "vivía un hábil cazador conocido por el nombre de Mico"
+    },
+    {
+      "id": "n02",
+      "nudo": "Su poder es una jauría adiestrada para una presa concreta",
+      "evidencia": "adiestrados desde cachorros para cazar cerdos salvajes"
+    },
+    {
+      "id": "n03",
+      "nudo": "Los perros y el dueño se entienden sin voz",
+      "evidencia": "guiados por un lenguaje mudo compartido únicamente entre ellos y su dueño"
+    },
+    {
+      "id": "n04",
+      "nudo": "Nansi vive en los mismos parajes y su oficio declarado es el engaño",
+      "evidencia": "habitaba Hermano Nansi, conocido por su arte de embuste y embaucamientos"
+    },
+    {
+      "id": "n05",
+      "nudo": "Nansi no caza: espía la caza ajena desde un escondite",
+      "evidencia": "Desde su escondite, vio cómo uno de los valientes canes inmovilizó a un cerdo robusto y resoplante"
+    },
+    {
+      "id": "n06",
+      "nudo": "El robo empieza apartando al perro de su propia presa",
+      "evidencia": "espantando al perro lejos de su presa"
+    },
+    {
+      "id": "n07",
+      "nudo": "La apropiación es corporal antes que verbal",
+      "evidencia": "estaba sobre el cerdo, aferrándolo con firmeza"
+    },
+    {
+      "id": "n08",
+      "nudo": "El engaño se apoya en un objeto tallado que Nansi levanta como prueba",
+      "evidencia": "levantó ante él una cabeza seca de perro, tallada con destreza"
+    },
+    {
+      "id": "n09",
+      "nudo": "La mentira es de propiedad: el perro de palo habría cazado",
+      "evidencia": "Es mi perro quien ha atrapado al puerco"
+    },
+    {
+      "id": "n10",
+      "nudo": "Y se blinda acusando al otro de no saber ver",
+      "evidencia": "Usted no puede ver porque no tiene el ojo que conoce el alma de las máscaras"
+    },
+    {
+      "id": "n11",
+      "nudo": "Mico duda y cede sin pelear",
+      "evidencia": "con el peso de la duda aplomando sus pensamientos, dejó a Nansi en paz"
+    },
+    {
+      "id": "n12",
+      "nudo": "Nansi despelleja la presa fingiendo honradez",
+      "evidencia": "continuó despellejando al cerdo con un gesto que simulaba honradez"
+    },
+    {
+      "id": "n13",
+      "nudo": "La respuesta de Mico es fabricar un objeto, no buscar pelea",
+      "evidencia": "tejió un largo rejo, un látigo"
+    },
+    {
+      "id": "n14",
+      "nudo": "El arma se usa a distancia y contra el aire, nunca contra un cuerpo",
+      "evidencia": "Desde una distancia prudente, Mico azotó el aire"
+    },
+    {
+      "id": "n15",
+      "nudo": "Mico habla como si fuera otro y delata a Nansi por su nombre",
+      "evidencia": "es Hermano Nansi allá abajo pelando tu puerco"
+    },
+    {
+      "id": "n16",
+      "nudo": "El sonido basta: Nansi se sabe descubierto antes de que nadie llegue",
+      "evidencia": "Supo, en los repliegues de su mente, que había sido descubierto"
+    },
+    {
+      "id": "n17",
+      "nudo": "Nansi se defiende con la lógica que él mismo acaba de romper",
+      "evidencia": "¿Cuándo has oído que una cabeza de perro caza puercos?"
+    },
+    {
+      "id": "n18",
+      "nudo": "Huye y abandona lo robado",
+      "evidencia": "Nansi huyó, su silueta desdibujándose entre los arbustos"
+    },
+    {
+      "id": "n19",
+      "nudo": "Mico baja y recupera lo suyo sin haber tocado a nadie",
+      "evidencia": "descendió al corazón del valle, reclamó su derecho y tomó el animal"
+    }
+  ],
+  "deslindes": [
+    "La cabeza de perro NO es una máscara. El bloque «Versiones» de la misma página dice que Nansi «usó una cabeza seca de perro como máscara», pero el relato no se la pone en la cara en ninguna línea: la «levantó ante él» como se levanta un documento. La lámina la dibuja sostenida en alto, a la altura de los ojos de Mico, y nunca calzada sobre un rostro. Si se dibuja como máscara, la frase de Nansi sobre «el ojo que conoce el alma de las máscaras» deja de ser una bravata y se convierte en una descripción, que es lo contrario de lo que el texto hace.",
+    "El escenario escrito no existe en la isla y esta página no tiene ficha de paisaje con la que reponerlo. El texto habla de «los espesos valles», del «bosque» y del «corazón del valle»; la geografía del archipiélago —trece kilómetros por tres, setenta y nueve metros de altura, cubierto de cocoteros— no los tiene, y el censo excluyó `la_selva_y_el_rio_continental` sin dar sustituto: `paisaje_isleno` pertenece a otra página. Consecuencia dura: las tres láminas se componen con figuras y suelo, con el fondo resuelto por profundidad de campo, y ninguna dibuja horizonte vegetal.",
+    "Mico es cazador aquí y observador arbóreo en la otra página, y la ficha lleva una sola silueta con nota de ambigüedad declarada. En estas tres escenas está siempre en el suelo, de pie, con la jauría: no se le inventa cola, ni rama, ni postura simiesca para reconciliarlo con `beda-nansi-beda-monkey-y-el-molino`.",
+    "El rejo no golpea a nadie. Mico «azotó el aire» y lo hace «desde una distancia prudente»: el arma de esta página es el sonido, y su blanco es el oído de Nansi. Ninguna lámina muestra contacto entre el látigo y un cuerpo, ni marca de golpe.",
+    "La victoria no incluye castigo. El relato termina con Mico tomando el animal y con Nansi desdibujándose; no hay captura, ni reparación, ni escarmiento. La escena de huella no puede poner a Nansi sometido ni humillado en el cuadro: si está, está saliendo.",
+    "El registro cósmico del narrador —las estrellas que conspiran, el firmamento que conoce la historia, el viento que la escribe en la memoria del mundo— es voz y no iconografía. No hay estrella, ni cielo simbólico, ni hoja con cara en ninguna lámina."
+  ],
+  "descartes": [
+    {
+      "que": "El valle espeso y el bosque como escenario dibujado",
+      "razon": "Es la deriva de paisaje que el dossier (§3.1) convierte en obligación de corregir: en una isla coralina de 25 km² cubierta de cocoteros no hay valles espesos. Y esta página no tiene con qué reemplazarlos, así que el escenario se resuelve por ausencia y no por sustitución."
+    },
+    {
+      "que": "Reponer el fondo con la ficha `paisaje_isleno`",
+      "razon": "Esa ficha existe pero esta página no la cita: el censo la levantó para la playa de `el-tesoro-de-morgan`. Traerla aquí sería añadir al relato un mar y una playa que el texto no pone en ninguna línea."
+    },
+    {
+      "que": "La cabeza seca de perro llevada como máscara",
+      "razon": "Lo dice el resumen de «Versiones», no el relato. Ver deslinde 1."
+    },
+    {
+      "que": "La lección y las Similitudes (Loki, Hermes)",
+      "razon": "Son aparato editorial de la ficha, no acontecimiento del relato. No se ilustra la moraleja."
+    },
+    {
+      "que": "Los puercos salvajes como manada en escena",
+      "razon": "El texto sólo pone en acto un cerdo, «robusto y resoplante», el que la jauría inmoviliza. Los demás son costumbre narrada, no escena."
+    }
+  ],
+  "N_propuesto": 10,
+  "razon_N": "Diecinueve nudos, pero el relato tiene dos motores cortos y un cuerpo largo: el robo se consuma en cinco líneas y la respuesta de Mico ocupa la mitad del texto sin que nadie se mueva de sitio. Diez bloques bastan para que el tramo del rejo —fabricar, apostarse, sonar, hablar— tenga un bloque por gesto y no se atropelle, y dejan el desenlace en dos, que es lo que el canon le da.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05"
+      ],
+      "momento": "La cacería funcionando como funciona siempre, y un tercero mirándola desde fuera de ella.",
+      "composicion": "Plano general a media altura. Mico ocupa el tercio izquierdo de cuerpo entero y de pie, con la mano abierta en el gesto mudo con que manda; dos perros de la jauría cruzan el centro en carrera y el cerdo entra por el borde derecho. Nansi está agazapado en el primer término del tercio derecho, más cerca de la cámara que nadie y de espaldas a ella, mirando lo que miramos: es el único que no participa. El fondo se desenfoca a suelo y sombra sin línea de horizonte vegetal, porque el escenario escrito no es el de la isla y esta página no tiene ficha con que reponerlo. No es paisaje: las cuatro figuras llenan el cuadro.",
+      "entity_refs": [
+        "mico",
+        "animales_del_monte_isleno",
+        "nansi_isleno"
+      ],
+      "no_mostrar": [
+        "selva, valle espeso o dosel: la geografía de la isla no los tiene",
+        "río de aguas negras",
+        "techo de palma o muro de barro"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "momento": "La mentira se levanta y el sonido baja: el vertical existe para que el objeto suba y el látigo caiga por el mismo eje.",
+      "composicion": "Vertical apilado en tres alturas sobre un solo eje. Abajo, el cerdo en el suelo y el perro desplazado hacia el borde inferior, todavía vuelto hacia su presa. En el medio, Nansi de rodillas sobre el animal, una mano aferrándolo y la otra estirada hacia arriba con la cabeza seca de perro sostenida en alto, a la altura de los ojos de Mico: el objeto es el punto más iluminado del cuadro. Arriba y pequeño, casi en el borde superior, Mico a distancia con el rejo en descenso y el aire abierto entre el látigo y todo lo demás. Nada toca nada: la única cosa que conecta las tres alturas es la línea del brazo levantado y la del látigo que baja.",
+      "entity_refs": [
+        "nansi_isleno",
+        "mico",
+        "animales_del_monte_isleno",
+        "hoja_utileria_islena"
+      ],
+      "no_mostrar": [
+        "la cabeza de perro puesta sobre el rostro de Nansi: el relato la levanta en la mano",
+        "contacto entre el látigo y un cuerpo, o marca de golpe",
+        "sangre o despiece reconocible del cerdo",
+        "cualquier fondo de selva o valle"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n17",
+        "n18",
+        "n19"
+      ],
+      "momento": "Sobre el suelo queda la prueba falsa y ya no queda quien la sostenía.",
+      "composicion": "Cuadrada y cerrada sobre el suelo, cámara baja. En el centro del cuadro la cabeza seca de perro, caída de canto y abandonada, con el rejo enrollado junto a ella: los dos objetos del relato juntos, el que mintió y el que desmintió. Detrás, el cerdo recuperado y la mano de Mico sobre él, entrando por el borde superior sin que se le vea la cara. En el borde izquierdo, sólo la parte del cuerpo de Nansi que todavía no ha salido del cuadro, en el gesto de salir: está huyendo, no está preso. El aire vacío entre los objetos y la figura que se va es el tema de la lámina.",
+      "entity_refs": [
+        "hoja_utileria_islena",
+        "mico",
+        "animales_del_monte_isleno",
+        "nansi_isleno"
+      ],
+      "no_mostrar": [
+        "Nansi capturado, atado o sometido: el relato lo deja irse",
+        "público humano: el desenlace no tiene testigos",
+        "sangre",
+        "cielo estrellado o firmamento simbólico"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "nansi_isleno",

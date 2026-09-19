@@ -892,3 +892,49 @@ test("un rol que el script propuso y nadie reviso bloquea la compuerta de diseno
   assert.equal(report.ok, false);
   assert.ok(report.errors.some((error) => /nunca revisado/.test(error.message)));
 });
+
+test("una ficha no puede producir una lamina de un estado que no declara", () => {
+  // La Madremonte declaraba «forma temible» y producia «presencia insinuada»,
+  // que es justo el estado que su propio `editorial` dice que NO se produce.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico", "forma temible: colmillos y manos descarnadas"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["presencia insinuada: una zarza que se mueve"];
+  const report = validateBibleV3(plan, { stage: "design" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((e) => /estado que la ficha no declara/.test(e.message)));
+});
+
+test("una ficha sin estados declarados no encarga laminas de estado", () => {
+  // Siete fichas cobraban estado contra el censo y dejaban `states` en
+  // `["canonico"]`: la lamina existia y el registro decia que no habia estado.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["aguas bajas de julio a octubre"];
+  const report = validateBibleV3(plan, { stage: "design" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((e) => /no declara ninguno/.test(e.message)));
+});
+
+test("expandir un estado declarado no es contradecirlo", () => {
+  // Una hoja de modelo necesita mas detalle que un inventario: «en obra, con un
+  // hueco por cerrar» se escribe «en obra, con el hueco del ultimo sillar
+  // abierto en el arco». Es el mismo estado, y exigir literalidad daba cuatro
+  // corpus en falso rojo.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico", "en obra, con un hueco por cerrar"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["en obra, con el hueco del ultimo sillar abierto en el arco y las piedras en el suelo"];
+  assert.ok(validateBibleV3(plan, { stage: "design" }).errors.every((e) => !/states_to_model/.test(e.path)));
+});
+
+test("un estado de una sola palabra corta tambien casa", () => {
+  // «ave» y «Sol» son estados enteros en ticuna y en u'wa, y un filtro de mas
+  // de tres letras los dejaba sin una sola palabra con la que casar.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico", "ave"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["ave"];
+  assert.ok(validateBibleV3(plan, { stage: "design" }).errors.every((e) => !/states_to_model/.test(e.path)));
+});

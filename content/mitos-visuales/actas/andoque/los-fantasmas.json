@@ -8,12 +8,204 @@
   "canon_field": "mito",
   "canon_sha256": "4265bd66803d2d2039688760ad16903ccf2c4d75e862847cd9666d6c9e19fbb8",
   "canon_chars": 1530,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "Llega un visitante y lo primero que recibe es una advertencia",
+      "evidencia": "A ese lugar llegó un visitante, y lo primero que hicieron los de la casa fue advertirle"
+    },
+    {
+      "id": "n02",
+      "nudo": "La advertencia es topográfica y horaria: sitios concretos, de noche",
+      "evidencia": "Le señalaron por dónde no se andaba de noche sin cuidado, cuáles eran los sitios"
+    },
+    {
+      "id": "n03",
+      "nudo": "Y viene con precedente: ya le pasó a otros",
+      "evidencia": "le contaron lo que le pasaba al que no hacía caso"
+    },
+    {
+      "id": "n04",
+      "nudo": "El hombre se ríe de la advertencia",
+      "evidencia": "El hombre se rió. Dijo que a él no le iban a venir con esas"
+    },
+    {
+      "id": "n05",
+      "nudo": "Su bravata es de reciprocidad: agarrar al que agarra",
+      "evidencia": "si el fantasma lo agarraba, él también lo agarraba a él"
+    },
+    {
+      "id": "n06",
+      "nudo": "Promete traerlo cargado hasta la casa como prueba pública",
+      "evidencia": "que lo iba a coger y lo iba a traer cargado hasta la casa para mostrárselo a los que lo querían asustar"
+    },
+    {
+      "id": "n07",
+      "nudo": "Lo dice dos veces: la fanfarronada queda dicha y ratificada",
+      "evidencia": "Lo dijo una vez y lo repitió"
+    },
+    {
+      "id": "n08",
+      "nudo": "Llega la noche y tiene que probarlo",
+      "evidencia": "Llegó la noche y le tocó probarlo"
+    },
+    {
+      "id": "n09",
+      "nudo": "La aparición ocurre exactamente en el sitio señalado: la advertencia era exacta",
+      "evidencia": "allí donde le habían dicho se le apareció"
+    },
+    {
+      "id": "n10",
+      "nudo": "Cumple su palabra y ataca primero",
+      "evidencia": "se le fue encima para agarrarlo"
+    },
+    {
+      "id": "n11",
+      "nudo": "El fantasma no es sombra: tiene consistencia y no se deja coger",
+      "evidencia": "el fantasma no era una sombra que se deja coger"
+    },
+    {
+      "id": "n12",
+      "nudo": "Y tiene voz: contesta la bravata",
+      "evidencia": "Habló. Le contestó"
+    },
+    {
+      "id": "n13",
+      "nudo": "Se escurre de las manos y reaparece por otro lado",
+      "evidencia": "se le soltó de las manos, se le apareció por otro lado"
+    },
+    {
+      "id": "n14",
+      "nudo": "En el momento en que el hombre se cree ganador, el fantasma llama a los suyos",
+      "evidencia": "cuando el hombre creyó que ya lo tenía, el fantasma llamó a los suyos"
+    },
+    {
+      "id": "n15",
+      "nudo": "El que acude tiene nombre y es una mariposa; lo que pide es un machete",
+      "evidencia": "Llamó a Mariposa-cara-de-fantasma y le pidió que le trajera un machete para despedazar al hombre"
+    },
+    {
+      "id": "n16",
+      "nudo": "El despedazamiento se enumera en voz alta y delante de la víctima",
+      "evidencia": "Dijo por dónde lo iba a partir y qué pedazo iba a quedar de cada corte, y lo fue diciendo delante de él"
+    },
+    {
+      "id": "n17",
+      "nudo": "El tono es de reparto de cosa ya poseída",
+      "evidencia": "como quien reparte lo que ya tiene cogido"
+    },
+    {
+      "id": "n18",
+      "nudo": "La inversión es literal y simétrica",
+      "evidencia": "el que iba a agarrar resultó agarrado"
+    },
+    {
+      "id": "n19",
+      "nudo": "Lo que queda es él afuera, en la oscuridad, oyéndose repartir",
+      "evidencia": "se quedó allá afuera, en la oscuridad, oyendo cómo lo iban a trozar"
+    }
+  ],
+  "deslindes": [
+    "El relato no lo mata. Termina con el hombre oyendo cómo lo iban a trozar, y el canon no dice ni que lo cortaran ni que volviera. La ficha `descuartizamiento_del_visitante` está excluida del censo precisamente porque es amenaza y no hecho. Ninguna lámina lo muestra herido, partido ni muerto: el castigo entero es acústico.",
+    "El machete se pide y el canon nunca dice que llegue. «Le pidió que le trajera un machete» es una orden dentro de una amenaza, no un objeto en una mano. Dibujarlo convertiría la amenaza en ejecución y además metería filo de acero en una escena de capa D que no lo necesita.",
+    "Mariposa-cara-de-fantasma no es adorno ni presagio: es convocada por su nombre y acude a un encargo. Entra en la lámina como quien llega llamada, en la misma escena que el fantasma, y no como insecto suelto del monte.",
+    "El fantasma tiene voz y peso, y ese es su rasgo diferencial contra cualquier espectro traslúcido: «no era una sombra que se deja coger». Se compone como cuerpo opaco que se suelta de las manos, no como niebla ni como transparencia.",
+    "La advertencia resultó cierta punto por punto —el sitio, la hora, lo que le pasa al que no hace caso—, y por eso la escena de entrada tiene que poder leerse como información correcta y no como superstición de los de la casa."
+  ],
+  "descartes": [
+    {
+      "que": "El machete y los cortes enumerados",
+      "razon": "Amenaza dicha, no acto ocurrido. El nudo n15 y el n16 se sostienen con la mariposa acudiendo y con el fantasma contando delante de él; la ficha del despedazamiento está excluida y el filo se nombra y no se dibuja."
+    },
+    {
+      "que": "Los de la casa y la casa misma",
+      "razon": "El relato los usa para advertir y para ser el público de la bravata, pero este mito no cita ninguna ficha de gente ni de maloca en el plan del corpus. La advertencia se compone en el sitio señalado y no en el interior del que se sale."
+    },
+    {
+      "que": "El desenlace",
+      "razon": "No hay ninguno. El canon corta con el hombre oyendo, y la huella respeta ese corte: no se inventa muerte, rescate ni regreso."
+    }
+  ],
+  "N_propuesto": 10,
+  "razon_N": "Diecinueve nudos, y el peso no está repartido: siete son la bravata dicha y repetida antes de que pase nada, y cinco son un forcejeo que el relato cuenta como una sola cosa que se repite. Diez bloques permiten que la advertencia y la burla ocupen el arranque completo —porque de ahí sale toda la ironía del final— y dejan los últimos bloques para la enumeración del reparto, que es lo único que este relato entrega como desenlace.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06",
+        "n07"
+      ],
+      "momento": "Todavía es de día y el visitante ya se está riendo de lo que le acaban de señalar.",
+      "composicion": "Plano general en el borde del monte, con luz de tarde. El visitante ocupa el tercio derecho, de cuerpo entero y legible, el torso echado atrás en el gesto de la risa y el brazo extendido señalando hacia el sitio que le han prohibido. En el tercio izquierdo, ese sitio: la boca de sombra entre los troncos por donde no se anda de noche, tratada como un hueco ya lleno y no como un fondo. Nadie más en cuadro; la advertencia se lee en la dirección de los dos brazos, el que señala y el que se burla.",
+      "entity_refs": [
+        "el_visitante_desafiante",
+        "selva_amazonica_de_aduche"
+      ],
+      "no_mostrar": [
+        "el fantasma todavía",
+        "la casa ni los que advierten",
+        "cualquier señal de miedo en el visitante"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n08",
+        "n09",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n14"
+      ],
+      "momento": "El hombre se le fue encima y el fantasma ya se le soltó: la escena es el instante en que el que agarra se queda con las manos vacías.",
+      "composicion": "Vertical de noche cerrada. Abajo, el visitante en el suelo, lanzado hacia arriba con los dos brazos cerrados sobre nada, las manos todavía en la forma del cuerpo que acaban de perder. Arriba, ya fuera de su alcance, el fantasma completo y opaco —no traslúcido—, vuelto hacia él y con la boca abierta en la contestación. El eje vertical es la diferencia entre los dos: el hombre sube y no alcanza, el fantasma se soltó y se reaparece más arriba. En el borde superior entra el llamado, todavía sin cuerpo que responda.",
+      "entity_refs": [
+        "el_visitante_desafiante",
+        "el_fantasma",
+        "selva_amazonica_de_aduche"
+      ],
+      "no_mostrar": [
+        "fantasma transparente o de niebla",
+        "el machete",
+        "sangre o herida"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n15",
+        "n16",
+        "n17",
+        "n18",
+        "n19"
+      ],
+      "momento": "La mariposa ya acudió al llamado y el fantasma va contando los pedazos; el hombre está afuera, en lo oscuro, oyéndose repartir.",
+      "composicion": "Cuadrada y cerrada sobre la oscuridad, con el visitante desplazado al borde inferior y de espaldas, inmóvil, sólo la cabeza girada hacia el sonido: es él quien oye y no quien mira. En el centro, el fantasma de perfil con la mano abierta en el aire marcando la primera división, y Mariposa-cara-de-fantasma posada cerca, recién llegada, de tamaño legible y con el dibujo de la cara visible en las alas. Entre el que cuenta y el que oye no hay contacto: la distancia es lo que queda del combate.",
+      "entity_refs": [
+        "el_visitante_desafiante",
+        "el_fantasma",
+        "mariposa_cara_de_fantasma",
+        "selva_amazonica_de_aduche"
+      ],
+      "no_mostrar": [
+        "el machete en ninguna mano",
+        "el cuerpo del visitante cortado, herido o marcado",
+        "la casa al fondo: el relato lo deja allá afuera"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "el_visitante_desafiante",
