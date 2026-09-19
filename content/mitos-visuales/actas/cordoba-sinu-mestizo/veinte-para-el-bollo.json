@@ -8,12 +8,188 @@
   "canon_field": "content",
   "canon_sha256": "3aaf6ac65c89d0f1eabd7fb6143eab336f58aa7462777d78824a276a22dae682",
   "canon_chars": 4790,
-  "nudos": null,
-  "deslindes": null,
-  "descartes": null,
-  "N_propuesto": null,
-  "razon_N": null,
-  "escenas": null,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "Hay un hombre al que se conoce por su reloj",
+      "evidencia": "vivía un hombre conocido simplemente por su reloj"
+    },
+    {
+      "id": "n02",
+      "nudo": "El reloj es viejo y es lo único de valor que tiene",
+      "evidencia": "Este reloj, aunque antiguo y de esfera resplandeciente, era su único bien valioso"
+    },
+    {
+      "id": "n03",
+      "nudo": "En el bolsillo no le suena nada",
+      "evidencia": "en su bolsillo nada tintineaba"
+    },
+    {
+      "id": "n04",
+      "nudo": "Sale al mercado todas las mañanas sin poder comprar",
+      "evidencia": "salir al mercado cada mañana"
+    },
+    {
+      "id": "n05",
+      "nudo": "Un día se tropieza con una moneda en el suelo",
+      "evidencia": "el hombre tropezó, no con una piedra, sino con lo inesperadamente tangible: veinte centavos"
+    },
+    {
+      "id": "n06",
+      "nudo": "La recoge con respeto",
+      "evidencia": "Los recogió con una reverencia"
+    },
+    {
+      "id": "n07",
+      "nudo": "Con esos veinte hay que elegir una cosa sola",
+      "evidencia": "Si compro queso, se gasta. Si compro el bollo, se gasta"
+    },
+    {
+      "id": "n08",
+      "nudo": "La duda se la plantea en el mercado, entre los puestos",
+      "evidencia": "Mientras caminaba entre los puestos coloridos"
+    },
+    {
+      "id": "n09",
+      "nudo": "Escoge el queso",
+      "evidencia": "La elección de un queso reluciente"
+    },
+    {
+      "id": "n10",
+      "nudo": "Y se lo va comiendo por la calle",
+      "evidencia": "Con el queso en la mano, salió a la calle masticándolo lentamente"
+    },
+    {
+      "id": "n11",
+      "nudo": "Aparece otro hombre que le da conversación",
+      "evidencia": "emergió de la nada otro personaje"
+    },
+    {
+      "id": "n12",
+      "nudo": "Y le pregunta la hora, que es lo que se le pregunta a quien tiene reloj",
+      "evidencia": "¿Qué hora es?"
+    },
+    {
+      "id": "n13",
+      "nudo": "Él mira el reloj de verdad antes de contestar",
+      "evidencia": "miró su reloj con la paciencia de quien comprende el tiempo"
+    },
+    {
+      "id": "n14",
+      "nudo": "Y contesta con el remate",
+      "evidencia": "Faltan veinte para el bollo"
+    },
+    {
+      "id": "n15",
+      "nudo": "Los veinte no son minutos: son los centavos que se fueron en el queso",
+      "evidencia": "veinte eran esos centavos que habían encontrado el queso sobre toda alternativa"
+    },
+    {
+      "id": "n16",
+      "nudo": "Lo que le marca el tiempo no son las horas sino lo que decidió",
+      "evidencia": "Eran las decisiones, no las horas"
+    }
+  ],
+  "deslindes": [
+    "El chiste es de un solo objeto puesto dos veces: el reloj mide horas y la respuesta mide plata. Para que se lea, la esfera del reloj y la moneda tienen que aparecer juntas en el mismo cuadro, y ésa es la única exigencia real de esta página.",
+    "El hombre no es pobre de estampa: tiene un reloj de esfera, que en este caserío es una posesión notable, y no tiene un centavo. Esa contradicción es su personaje entero y se compone con el reloj a la vista y el bolsillo vacío, no con harapos.",
+    "Lo que elige es el queso y lo que no elige es el bollo, y eso importa porque el remate nombra al que se quedó sin comprar. En la lámina del mercado los dos tienen que estar en el mismo puesto y a la misma distancia de su mano.",
+    "El bollo del corpus va envuelto en hoja de palma amarga atada con nervadura, que es la misma hoja que techa la casa: la utilería de cocina comparte materia con la arquitectura y eso tiene que notarse en la textura.",
+    "El remate es una frase y la lámina se queda en la cara del que la oye. No hay explicación en cuadro, ni globo, ni rótulo: el chiste es verbal y la huella es el desconcierto del otro."
+  ],
+  "descartes": [
+    {
+      "que": "Los puestos coloridos como cuadro de tipismo",
+      "razon": "El mercado del corpus es plaza de tierra con puestos de tabla y toldo de lona, sin saturación: los únicos colores saturados de toda la biblia son el amarillo, el azul y el rojo del bus y de la corraleja."
+    },
+    {
+      "que": "Cualquier objeto folclórico añadido al mercado",
+      "razon": "El corpus no nombra sombrero, pollera ni artesanía. En los puestos va lo que el relato dice: queso y bollo."
+    },
+    {
+      "que": "El texto del remate escrito en la lámina",
+      "razon": "El chiste es una frase y no se rotula. La huella se compone con la cara del que pregunta y el reloj todavía abierto en la mano del otro."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Dieciséis nudos y un relato de una mañana con un solo gasto. Todo lo que ocurre cabe en tres gestos —encontrar, escoger, contestar—, y ocho bloques son el mínimo del molde; se gastan en la duda del mercado, que es donde el relato se detiene, y no en inventar recorrido.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03",
+        "n04",
+        "n05",
+        "n06"
+      ],
+      "momento": "El hombre del reloj encuentra veinte centavos en la tierra de la plaza.",
+      "composicion": "Plano general de la plaza del caserío, con los puestos de tabla y toldo al fondo y la calle de tierra batida delante. Él ocupa el centro, de cuerpo entero, agachado, recogiendo la moneda con las dos manos; del bolsillo del pantalón le cuelga la cadena del reloj y la esfera queda a la vista. Día duro de verano, sombra corta, polvo.",
+      "entity_refs": [
+        "el_campesino_del_sinu",
+        "el_caserio_de_calles_de_tierra",
+        "hoja_utileria_plata_y_tiempo"
+      ],
+      "no_mostrar": [
+        "puestos saturados de color",
+        "harapos ni pobreza de estampa",
+        "objeto folclórico que el corpus no nombre"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n07",
+        "n08",
+        "n09",
+        "n10"
+      ],
+      "momento": "Frente al puesto, la moneda alcanza para una sola cosa y escoge el queso.",
+      "composicion": "Vertical apilado sobre el puesto del mercado. Arriba, el queso y el bollo envuelto en hoja de palma amarga, los dos a la misma altura y a la misma distancia de la mano. En el medio, la mano con la moneda de veinte centavos, detenida entre los dos. Abajo, el hombre de medio cuerpo, mirando hacia arriba. El vertical existe porque la elección está arriba y la plata está abajo, y entre las dos hay exactamente veinte centavos de distancia.",
+      "entity_refs": [
+        "el_campesino_del_sinu",
+        "hoja_utileria_cocina_y_mesa",
+        "hoja_utileria_plata_y_tiempo",
+        "el_caserio_de_calles_de_tierra"
+      ],
+      "no_mostrar": [
+        "el reloj en esta escena",
+        "otros clientes ni bullicio",
+        "colores saturados"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n11",
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "momento": "Le preguntan la hora y contesta con lo que le costó el queso.",
+      "composicion": "Cuadrada y cerrada sobre los dos hombres en la calle de tierra. A la izquierda, el que pregunta, de medio cuerpo y con la cara desconcertada. A la derecha, el hombre del reloj con la tapa abierta en la palma y el pedazo de queso mordido en la otra mano: la esfera y el queso ocupan el mismo primer término y esa vecindad es el chiste. Ningún rótulo, ninguna explicación.",
+      "entity_refs": [
+        "el_campesino_del_sinu",
+        "hoja_utileria_plata_y_tiempo",
+        "hoja_utileria_cocina_y_mesa",
+        "el_caserio_de_calles_de_tierra"
+      ],
+      "no_mostrar": [
+        "texto o rótulo con el remate",
+        "la moneda: ya se gastó",
+        "gesto de burla"
+      ]
+    }
+  ],
   "entidades_disponibles": [
     {
       "entity_id": "el_campesino_del_sinu",
