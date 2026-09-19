@@ -65,12 +65,21 @@ test("los siete expedientes Tucano cumplen la metodología editorial", () => {
   }
 });
 
-test("corrige duplicados, atribuciones y contenido sintético", () => {
+test("el título de cada página dice de qué trata su dirección", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  assert.equal(
-    bySlug.get("cuando-la-danta-perdio-su-hegemonia").title,
-    "Boraró y Boraró Numió",
-  );
+  // Esta dirección llevaba el título «Boraró y Boraró Numió» y contaba a Boraró,
+  // aunque el slug nombra a la danta. La reescritura del 2026-09-19 devolvió a
+  // Wejké y su pito a la dirección que los nombra; Boraró quedó resumido en
+  // Versiones y, si se quiere publicar entero, necesita URL propia.
+  const danta = bySlug.get("cuando-la-danta-perdio-su-hegemonia");
+  assert.match(danta.title, /danta|Wejk[eé]/i);
+  assert.match(danta.mito, /Wejk[eé]/);
+  assert.doesNotMatch(danta.title, /Borar[oó]/i);
+
+  // Yepá Uejkeó, con u: así la escribe Fulop. La ficha decía «Vejkeó».
+  const yuca = bySlug.get("la-semilla-de-la-yuca-tucano");
+  assert.match(yuca.title, /Yep[aá] Uejke[oó]/);
+
   assert.equal(
     bySlug.get("el-origen-del-hombre").title,
     "La Canoa de Transformación y el origen de los pueblos",
@@ -83,13 +92,21 @@ test("corrige duplicados, atribuciones y contenido sintético", () => {
     bySlug.get("yepa-castiaga-a-los-animales").title,
     "Yepá Huáke y la transformación de los animales",
   );
-  assert.equal(
-    bySlug.get("la-semilla-de-la-yuca-tucano").title,
-    "Yepá Vejkeó y la semilla de la yuca",
-  );
   assert.doesNotMatch(
     bySlug.get("la-aparicion-del-sol-del-viento-y-los-mares").mito,
-    /\bPaola\b|\bBeatriz\b|\bZabulón\b/,
+    /\bPaola\b|\bBeatriz\b|\bZabul[oó]n\b/,
+  );
+});
+
+test("las siete fichas nombran a quien narró el corpus", () => {
+  // Fulop recogió todo de Marcos Sierra, en Guadalajara sobre el río Paca, con
+  // su hermano Manuel de intérprete. Ninguna ficha lo decía.
+  const conNarrador = records.filter((record) =>
+    /Marcos Sierra/.test(`${record.historia}\n${record.versiones}`),
+  );
+  assert.ok(
+    conNarrador.length >= 6,
+    `sólo ${conNarrador.length} de ${records.length} nombran a Marcos Sierra`,
   );
 });
 

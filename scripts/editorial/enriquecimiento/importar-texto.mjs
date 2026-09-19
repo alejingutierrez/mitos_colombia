@@ -64,7 +64,7 @@ const MITO_MINIMO_CORTO = 70;
 
 function validate(data) {
   const errors = [];
-  const corto = String(data.relato_corto || "").trim();
+  const corto = String(data.relato_corto || data.relatoCorto || "").trim();
   for (const [field, [min, max]] of Object.entries(WORD_RANGES)) {
     const n = words(data[field]);
     const piso = field === "mito" && corto ? MITO_MINIMO_CORTO : min;
@@ -108,7 +108,10 @@ console.table(rows);
 for (const p of problems) console.log(`  ✗ ${p}`);
 const asList = (v) => (Array.isArray(v) ? v : v ? [String(v)] : []);
 for (const { slug, data } of plans) for (const d of asList(data.dudas)) console.log(`  ? ${slug}: ${d}`);
-for (const { slug, data } of plans) if (data.relato_corto) console.log(`  ! ${slug}: relato corto bajo el mínimo — ${data.relato_corto}`);
+for (const { slug, data } of plans) {
+  const corto = data.relato_corto || data.relatoCorto;
+  if (corto) console.log(`  ! ${slug}: relato corto bajo el mínimo — ${corto}`);
+}
 if (!options.apply) { console.log(`\nDry-run: ${plans.length} reescrituras, ${problems.length} con problemas. Añade --apply para escribir los módulos (sólo se escriben las que validan).`); process.exit(problems.length ? 1 : 0); }
 
 // Mapa URL → clave del pool, para retirar por URL las fuentes que la reescritura
@@ -190,7 +193,7 @@ if (usesDefinitions) {
     // La excepción al mínimo del Relato vive en el módulo, con su razón escrita,
     // para que el validador compartido y el verificador en vivo la respeten.
     const reCorto = /\n    relatoCorto:\s*(?:"[\s\S]*?"|`[\s\S]*?`),\n/;
-    const corto = String(data.relato_corto || "").trim();
+    const corto = String(data.relato_corto || data.relatoCorto || "").trim();
     if (corto) {
       const linea = `\n    relatoCorto:\n      ${JSON.stringify(corto)},\n`;
       block = reCorto.test(block)

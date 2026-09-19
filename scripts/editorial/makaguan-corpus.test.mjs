@@ -56,12 +56,9 @@ test("los tres expedientes Makaguán cumplen la metodología editorial", () => {
   }
 });
 
-test("restituye títulos, género y correcciones comunitarias", () => {
+test("los relatos cuentan, y las correcciones viven donde deben", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  assert.equal(
-    bySlug.get("creacion-makawanes").title,
-    "Los hijos del venado",
-  );
+  assert.equal(bySlug.get("creacion-makawanes").title, "Los hijos del venado");
   assert.equal(
     bySlug.get("la-gran-inundacion").title,
     "La gran inundación y Wiri",
@@ -70,19 +67,32 @@ test("restituye títulos, género y correcciones comunitarias", () => {
     bySlug.get("el-alma").title,
     "Wuachirajua, la leyenda de El Alma",
   );
-  assert.match(
-    bySlug.get("la-gran-inundacion").mito,
-    /no era una paloma, sino un samuro/is,
-  );
-  assert.match(bySlug.get("el-alma").mito, /clasifica El Alma como leyenda/i);
-  assert.doesNotMatch(
-    bySlug.get("el-alma").mito,
-    /yōkai|mitología nórdica|viaje del héroe/i,
-  );
-  assert.match(
-    bySlug.get("creacion-makawanes").mito,
-    /no la convierte en una jerarquía verdadera/is,
-  );
+
+  // La corrección la hizo la comunidad: donde el texto escolar decía paloma, un
+  // narrador aclaró que los abuelos contaban un samuro, el que se comió la
+  // podredumbre que dejó el diluvio. El Relato cuenta el samuro; la
+  // discrepancia vive en Versiones, que es su sitio.
+  const inundacion = bySlug.get("la-gran-inundacion");
+  assert.match(inundacion.mito, /samuro/i);
+  assert.doesNotMatch(inundacion.mito, /paloma/i);
+  assert.match(inundacion.versiones, /paloma/i);
+
+  // Antes el Relato llevaba dentro la clasificación editorial y las cautelas
+  // sobre jerarquías. Eso es aparato: va fuera del mito.
+  for (const record of records) {
+    assert.doesNotMatch(
+      record.mito,
+      /clasifica|esta p[aá]gina|la fuente|la investigaci[oó]n|jerarqu[ií]a verdadera/i,
+      record.slug,
+    );
+    assert.doesNotMatch(record.mito, /y[oō]kai|mitolog[ií]a n[oó]rdica|viaje del h[eé]roe/i);
+  }
+
+  // Y los tres nombran ahora a quien narró: Mattar recogió los tres relatos de
+  // los sabedores de El Vigía, con nombre y fecha.
+  const narradores = /Gregorio Fl[oó]rez|David Emiro Gonz[aá]lez|Manuel S[aá]nchez|Ar[ií]stides Tocaria|Jos[eé] Dar[ií]o Cuenza/;
+  const conNarrador = records.filter((r) => narradores.test(`${r.historia}\n${r.versiones}`));
+  assert.equal(conNarrador.length, records.length);
 });
 
 test("cada ficha reutiliza una pareja horizontal y vertical distinta", () => {
