@@ -86,22 +86,61 @@ test("la dirección visual exige ilustración full paper cut 2D", () => {
   assert.match(pananCommunityPage.imagePrompt, /sin fotograf[ií]a/i);
 });
 
-test("separa huacas de Waka y añade solamente Guamurran", () => {
+test("huacas y waka son dos páginas distintas, y nombran a quien contó", () => {
   const huacas = records.find(({ slug }) => slug === "la-huacas");
   const waka = records.find(({ slug }) => slug === "la-waka");
   const guamurran = records.find(
     ({ slug }) => slug === "guamurran-madre-de-agua",
   );
-  assert.match(huacas.mito, /Guillermo Tatamues/);
-  assert.match(huacas.mito, /Luis Ulpiano Tatamues García/);
-  assert.match(waka.mito, /lenguaje simbólico/i);
-  assert.match(waka.historia, /no contiene una trama autónoma/i);
-  assert.match(guamurran.historia, /único apartado.+ausente/s);
-  assert.match(
+  // El testimonio del buey que se hunde lo dio Guillermo Tatamués, comunero de
+  // Panán, en junio de 2013. Antes la ficha lo contaba sin nombrarlo.
+  assert.match(huacas.mito, /Guillermo Tatamu[eé]s/);
+  // Y no lo atribuía a quien lo recogió: el nombre de los investigadores estaba
+  // dentro del Relato, que es donde no va.
+  assert.doesNotMatch(huacas.mito, /Estacio|Tatamu[eé]s Garc[ií]a/);
+  // Las dos páginas se escribieron juntas y se leían igual. Ahora no comparten
+  // ni una oración.
+  const oraciones = (texto) =>
+    new Set(
+      texto
+        .split(/(?<=[.!?])\s+/)
+        .map((o) => o.trim().toLowerCase())
+        .filter((o) => o.split(/\s+/).length >= 8),
+    );
+  const deHuacas = oraciones(huacas.mito);
+  const comunes = [...oraciones(waka.mito)].filter((o) => deHuacas.has(o));
+  assert.deepEqual(comunes, []);
+  // Guamurran es un nacedero, no una mujer sobrenatural: la fuente no la trae y
+  // la ficha no la inventa.
+  assert.doesNotMatch(
     guamurran.mito,
-    /no aparece en la fuente como una mujer sobrenatural/i,
+    /la guardiana dijo|se transformó en mujer|madre de agua le habló/i,
   );
-  assert.doesNotMatch(guamurran.mito, /la guardiana dijo|se transformó en mujer/i);
+});
+
+test("las fichas nombran a quienes contaron, no sólo a quienes recogieron", () => {
+  // Las dieciséis acreditaban a los dos investigadores de la tesis de 2016 y a
+  // los narradores no: sólo dos nombraban a uno. La tesis y los trabajos del
+  // resguardo nombran a comuneros y exgobernadores con fecha de entrevista.
+  const narradores =
+    /Tarapues|Tatamu[eé]s|Chalpariz[aá]n|Puenay[aá]n|Juaspuez[aá]n|Tudpue|Malte|Quiroz|Ipial|Canacu[aá]n|Cu[aá]squer/;
+  const conNarrador = records.filter((record) =>
+    narradores.test(`${record.historia}\n${record.versiones}`),
+  );
+  assert.ok(
+    conNarrador.length >= 12,
+    `sólo ${conNarrador.length} de ${records.length} nombran a alguien`,
+  );
+});
+
+test("ninguna página se apoya en la bitácora anónima", () => {
+  // `origendelospananes.blogspot.com` no tiene autor y su texto sobre La Tuta es
+  // casi el mismo de Puenayán 2011, que sí está firmado y arbitrado.
+  for (const record of records) {
+    for (const { url } of [...record.keySources, ...record.sources]) {
+      assert.doesNotMatch(url, /origendelospananes/i, record.slug);
+    }
+  }
 });
 
 test("la landing identifica a Panán como comunidad del pueblo Pastos", () => {

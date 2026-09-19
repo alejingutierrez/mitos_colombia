@@ -50,8 +50,10 @@ if (!modules) throw new Error(`Sin módulos para ${communitySlug}`);
 
 // Nombres de recopiladores y vocabulario de aparato crítico: el Relato cuenta la
 // historia y nada más. Se amplía comunidad a comunidad a medida que entran.
+// «Fuente» es la palabra tramposa: en estos corpus andinos una fuente de agua es
+// un nacedero, no una referencia bibliográfica, y el Relato la nombra con razón.
 const RELATO_PROHIBIDO =
-  /\b(chaves|pineda|perrin|paz ipuana|finol|villa posse|jusay[uú]|wilbert|reichel|dolmatoff|tangrutaya|rocha vivas|ni[ñn]o vargas|bolinder|cronista|recopilad|registr[oó]|informante|la fuente|las fuentes|versi[oó]n|el relato|la narraci[oó]n|el cuento|la transcripci[oó]n|la ficha|esta p[aá]gina|la p[aá]gina|la tradici[oó]n|editorial|antrop[oó]log|etn[oó]graf|mitolog[ií]a)\b/i;
+  /\b(chaves|pineda|perrin|paz ipuana|finol|villa posse|jusay[uú]|wilbert|reichel|dolmatoff|tangrutaya|rocha vivas|ni[ñn]o vargas|bolinder|cronista|recopilad|registr[oó]|informante|la fuente(?! de agua| hídrica| termal)|las fuentes(?! de agua| hídricas| termales)|versi[oó]n|el relato|la narraci[oó]n|el cuento|la transcripci[oó]n|la ficha|esta p[aá]gina|la p[aá]gina|la tradici[oó]n|editorial|antrop[oó]log|etn[oó]graf|mitolog[ií]a)\b/i;
 const FORMULAS = /desde tiempos inmemoriales|misterio ancestral|el destino estaba escrito|por ahora no tenemos|actualizaremos/i;
 
 // Excepción declarada al mínimo del Relato: cuando la fuente primaria es tan
@@ -169,9 +171,14 @@ if (usesDefinitions) {
       // Y una tercera forma: el campo es un objeto literal que un envoltorio
       // pasa a la plantilla —`history: { sourceFocus: …, … },`—.
       const objeto = new RegExp(`\n    (?:${core}): \\{[\\s\\S]*?\n    \\},\n`);
+      // Y una cuarta: la plantilla recibe sus trozos como argumentos sueltos
+      // —`historia: history(\`…\`, \`…\`),`— en vez de como un objeto. Es la
+      // disposición de panán.
+      const llamada = new RegExp(`\n    (?:${core}): [A-Za-z0-9_$]+\\(\n[\\s\\S]*?\n    \\),\n`);
       if (literal.test(block)) block = block.replace(literal, nuevo);
       else if (compuesto.test(block)) block = block.replace(compuesto, nuevo);
       else if (objeto.test(block)) block = block.replace(objeto, nuevo);
+      else if (llamada.test(block)) block = block.replace(llamada, nuevo);
       else throw new Error(`${slug}: no encuentro ninguno de ${core}`);
     }
     const reMito = /\n    mito:\s*(?:"[\s\S]*?"|`[\s\S]*?`),\n/;
