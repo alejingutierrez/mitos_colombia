@@ -116,6 +116,74 @@ export const yukpaSources = {
     limitation:
       "Es una fuente secundaria y regional; se controla con estudios etnográficos posteriores antes de adaptar nombres o secuencias.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  halbmayermundo2025: source({
+    title: "El mundo que se daña. Transgresiones humanas, castigos cataclísmicos y la de-creación parcial del mundo entre los yukpa",
+    author: "Ernst Halbmayer y Anne Goletz",
+    year: 2025,
+    type: "artículo de revista arbitrada",
+    url: "https://revistas.ucm.es/index.php/REAA/article/view/99239",
+    summary:
+      "Es la fuente de la secuencia. Reúne versiones irapa, iroka y sokorhpa del diluvio: lluvias continuas de semanas y meses con una oscuridad prolongada, la huida a las dos montañas más altas de la Serranía del Perijá, Shkhimo y Tʉtarhi, que en Sokorhpa son personas y son las que instruyen a cuál subir; el desacuerdo sobre la causa, que en muchas versiones no se menciona; y los armadillos que hunden el agua y vuelven a separar tierra, cauce, monte y conuco. De aquí sale la frase del narrador irapa Kumateta —«se salvó la tierra, y quien lo arregló era el armadillo»— y la observación de que los animales eran yukpapi y sólo tomaron forma animal después de la re-diferenciación. También el incendio y la sequía posteriores en algunas versiones.",
+    limitation:
+      "Vecindad declarada: buena parte del material es del lado venezolano de la Serranía, del territorio irapa, y los autores escriben desde Marburg. Las versiones primarias del diluvio —Wilbert 1974, Armato 1988, Vannini y Armato 2001, Acuña Delgado 1998, Castillo 2016— se leen aquí de segunda mano, citadas con página pero no reproducidas; ninguna de ellas se pudo abrir en línea. El artículo tampoco fecha ni sitúa la narración de Kumateta más allá de identificarlo como irapa.",
+  }),
+  goletzRecibiendo2020: source({
+    title: "Recibiendo el canto del armadillo: transmisión onírica de saberes entre un armadillo y una mujer sabia en Sokorpa, territorio yukpa al norte de Colombia",
+    author: "Anne Goletz",
+    year: 2020,
+    type: "artículo de revista arbitrada",
+    url: "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1794-24892020000400267",
+    summary:
+      "Sostiene al armadillo, que en este relato es quien arregla la tierra. Documenta la relación entre la mujer sabia Diocelina Restrepo y el armadillo Kamashrhush en Sokorpa, en el municipio de Becerril, Cesar, y explica qué es un tuwancha, «el que sabe»: el especialista que en algunas versiones del diluvio es quien avisa a la gente qué montaña debe escalar.",
+    limitation:
+      "No narra el diluvio. Es un estudio sobre transmisión onírica de saberes en una sola unidad territorial, Sokorpa, y su objeto es la comunicación con lo que no es humano. Se usa para el lugar del armadillo y para la figura del tuwancha, nunca para la secuencia del relato. SciELO Colombia sirve este artículo sólo por http: la versión https no responde, y se prefiere el enlace que funciona al que se ve mejor.",
+  }),
+  halbmayerTecendo2016: source({
+    title: "Tecendo o mundo e as origens da vida como a conhecemos: noções de crescimento, fabricação e reprodução nos mitos de origem yukpa",
+    author: "Ernst Halbmayer",
+    year: 2016,
+    type: "artículo de revista arbitrada",
+    url: "https://www.revistas.usp.br/ra/article/view/116915",
+    summary:
+      "Da el marco conceptual que el relato necesita: owaya como mundo-espacio entre la tierra y el firmamento, owaya tamorhiya como el tiempo en que el mundo todavía se estaba haciendo, y la clasificación de la mitología yukpa publicada en cuatro complejos, de los cuales el diluvio pertenece al primero. Explica por qué los animales del episodio podían actuar como personas y sólo después quedaron fijados como animales.",
+    limitation:
+      "Está escrito en portugués, con versión inglesa en la misma ficha del artículo, y su tema es la transformación del mundo y el origen de la vida, no el diluvio: aporta los conceptos y no la secuencia. El campo es irapa, en Venezuela, e iroka y sokorpa, en Colombia, y el autor no nombra a los narradores de cada versión.",
+  }),
+  correayukpa2023: source({
+    title: "Los yukpa: un pueblo móvil doblemente confinado. COVID-19 y gobierno propio en la serranía de Perijá (resguardo Iroka, Cesar, Colombia)",
+    author: "Claudia Cano Correa, Claudia Patricia Platarrueda Vanegas, Sandra Carolina Portela García, Javier Clavijo Franco, Wilson Largo Sichacá y Herlinda Luisa Nieves Alarcón",
+    year: 2023,
+    type: "artículo de revista arbitrada",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/2426",
+    summary:
+      "Impide que la montaña del relato se lea como paisaje. Describe el resguardo Iroka en la serranía de Perijá, la reducción progresiva de sus tierras, los despojos, las expulsiones y las violencias de larga data, y el gobierno propio con el que el pueblo responde. La altura a la que se sube en el mito es el mismo territorio que se ha ido perdiendo.",
+    limitation:
+      "Su objeto es el confinamiento durante la pandemia y el gobierno propio en un solo resguardo colombiano; no aporta material mítico ni versiones del diluvio.",
+  }),
+  halbmayerBailando2020: source({
+    title: "Bailando recién nacidos, sometiendo enemigos, formando guerreros: el baile del niño como fuente de fuerza, vitalidad, y resistencia entre los yukpa",
+    author: "Ernst Halbmayer",
+    year: 2020,
+    type: "artículo de revista arbitrada",
+    url: "https://www.revistatabularasa.org/numero-36/13-halbmayer.pdf",
+    summary:
+      "Ilumina el final del relato, cuando hay que volver a sembrar. Explica el tami, la masa de maíz molido que fermenta y produce vitalidad, y el ciclo ritual asociado al maíz que el diluvio interrumpe y que hay que reactivar cuando el agua baja.",
+    limitation:
+      "Su objeto es el baile del recién nacido y la formación de personas fuertes; el maíz aparece como medio y no como tema, y el artículo no narra el diluvio. El material es sobre todo irapa, del lado venezolano.",
+  }),
+  mauriOfrendas2020: source({
+    title: "Ofrendas, intercambios y otros modos de relación en las socio-cosmologías indígenas contemporáneas del área istmo-colombiana",
+    author: "Mònica Martínez Mauri y Ernst Halbmayer",
+    year: 2020,
+    type: "artículo de revista arbitrada",
+    url: "https://www.revistatabularasa.org/numero-36/02-martinez-halbmayer.pdf",
+    summary:
+      "Da el marco comparativo que usa Similitudes: define el área istmo-colombiana como una región con modos de relación propios, distintos de los amazónicos, y permite explicar por qué este relato se parece más a las cosmologías chibchas vecinas que a las de los pueblos caribes del sur con los que los yukpa comparten lengua.",
+    limitation:
+      "Es la introducción de un dossier de revista y no trata de los yukpa en particular: se usa para el encuadre regional y no aporta ningún dato del relato.",
+  }),
 };
 
 /**

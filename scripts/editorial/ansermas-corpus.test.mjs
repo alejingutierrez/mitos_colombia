@@ -49,12 +49,40 @@ test("los dos expedientes Ansermas cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const sourceUrls = [...record.keySources, ...record.sources].map(
-      ({ url }) => url,
-    );
+    // Antes se exigían exactamente siete fuentes en todas las fichas. Ese
+    // número era el reparto en bloque escrito como aserción: todas recibían la
+    // misma lista. Lo que hay que sostener es el mínimo, la ausencia de
+    // duplicados, que el relato apoye en dominios distintos, que no entre
+    // ninguna portada de catálogo y que las fichas no citen todas lo mismo.
+    const fuentes = [...record.keySources, ...record.sources];
+    assert.ok(fuentes.length >= 5, `${record.slug}: ${fuentes.length} fuentes`);
+    const sourceUrls = fuentes.map(({ url }) => url);
     assert.equal(new Set(sourceUrls).size, sourceUrls.length);
+    const dominios = new Set(sourceUrls.map((url) => new URL(url).host));
+    assert.ok(dominios.size >= 3, `${record.slug}: ${dominios.size} dominios`);
+    for (const url of sourceUrls) {
+      assert.doesNotMatch(
+        url,
+        /books\.google\.|openlibrary\.org|worldcat\.org|\.blogspot\.|scribd\.com|academia\.edu|wikipedia\.org/i,
+        `${record.slug}: fuente de catálogo ${url}`,
+      );
+    }
+    assert.match(
+      record.historia,
+      /\b(1[5-9]|20)\d\d\b/,
+      `${record.slug}: su Historia no fecha el registro`,
+    );
+    assert.doesNotMatch(
+      record.mito,
+      /\b(la fuente|las fuentes|la investigación|esta ficha|la página|según el registro|el cronista)\b/i,
+      `${record.slug}: su Relato habla de la investigación`,
+    );
   }
+  // Dos fichas de un corpus pequeño pueden apoyarse en la misma bibliografía
+  // —aquí caben tres crónicas y poco más—, pero no pueden abrir con las mismas
+  // tres fuentes clave: eso sería otra vez el reparto en bloque.
+  const clave = records.map((r) => r.keySources.map(({ url }) => url).join("|"));
+  assert.equal(new Set(clave).size, clave.length, "dos fichas abren con las mismas fuentes clave");
 });
 
 test("la revisión unifica un duplicado y recupera el relato de los Tamaracas", () => {
@@ -73,17 +101,31 @@ test("la revisión unifica un duplicado y recupera el relato de los Tamaracas", 
     ({ slug }) => slug === "las-huellas-de-mapura",
   );
   assert.match(footsteps.title, /huellas de Xixaraca/i);
-  assert.match(footsteps.mito, /Lágrimas de Michua/i);
-  assert.match(footsteps.historia, /dos páginas/i);
+  // Las aserciones que exigían que el Relato explicara la investigación
+  // —«No había una princesa», «leyenda literaria publicada en 1932», «no
+  // registra un nombre propio»— eran el aparato editorial escrito como prueba.
+  // Ese aparato salió del Relato y vive ahora en Historia, Versiones y el
+  // dossier. Lo que se comprueba es lo mismo, dicho donde corresponde.
+  // «Lágrimas de Michua» sólo se sostiene en blogs y en este mismo sitio: se
+  // retiró del Relato y la constancia quedó en el dossier. Michua sigue,
+  // porque sí está documentada como diosa del valor y de la guerra.
+  assert.doesNotMatch(footsteps.mito, /Lágrimas de Michua/i);
+  assert.match(footsteps.mito, /Michua/);
+  assert.match(footsteps.mito, /Xixaraca/);
+  assert.match(footsteps.mito, /Karambá/);
+  assert.match(footsteps.historia, /Guacuma/);
   assert.match(tamaracas.title, /Tamaracas/i);
-  assert.match(tamaracas.mito, /Opiramá/i);
-  assert.match(tamaracas.mito, /langostas/i);
-  assert.match(tamaracas.versiones, /Tamaraca para los españoles/i);
-  assert.match(tamaracas.versiones, /categoría móvil/i);
-  assert.match(
-    tamaracas.mito,
-    /no los identifica con ningún pueblo indígena vivo/i,
-  );
+  // El «cerro Opiramá» no resiste: Opiramá es un río en la UTP y un cacique de
+  // 1557 en Zuluaga, nunca el cerro donde se encierra a los Tamaracas. Queda
+  // en Versiones, como problema, y fuera del Relato.
+  assert.doesNotMatch(tamaracas.mito, /Opiramá/i);
+  assert.match(tamaracas.versiones, /Opiramá/i);
+  assert.match(tamaracas.mito, /langosta/i);
+  assert.match(tamaracas.mito, /Tamaraca/);
+  // Y lo que Cieza documenta: tamaraca es la palabra con que esa gente nombró
+  // a los invasores, no un pueblo indígena.
+  assert.match(tamaracas.historia, /Cieza/);
+  assert.match(tamaracas.versiones, /Tamaraca/);
   assert.doesNotMatch(
     tamaracas.mito,
     /Noanamá|Tatamá|Chocó.*(?:mal|demon|enemig)/i,

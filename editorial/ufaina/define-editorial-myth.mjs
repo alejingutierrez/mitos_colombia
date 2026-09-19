@@ -7,7 +7,7 @@ export function defineUfainaMyth({
   focusKeywords,
   ...input
 }) {
-  const selectedSources = pickUfainaSources();
+  const selectedSources = pickUfainaSources(...(input.sourceKeys ?? []));
   // Antes exigía exactamente 7: el reparto en bloque escrito como
   // aserción. Lo que importa es que haya fuentes suficientes.
   if (selectedSources.length < 5) {

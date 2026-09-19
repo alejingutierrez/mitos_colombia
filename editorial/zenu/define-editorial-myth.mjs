@@ -30,12 +30,12 @@ function defineWithSources(input, selectedSources) {
 }
 
 export function defineZenuMyth(input) {
-  return defineWithSources(input, pickZenuSources());
+  return defineWithSources(input, pickZenuSources(...(input.sourceKeys ?? [])));
 }
 
 export function defineJuanLaraTransfer(input) {
   return defineWithSources(
     { ...input, scope: "mestizo" },
-    pickJuanLaraSources(),
+    pickJuanLaraSources(...(input.sourceKeys ?? [])),
   );
 }

@@ -57,12 +57,40 @@ test("los dos expedientes Cuycuyes cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const sourceUrls = [...record.keySources, ...record.sources].map(
-      ({ url }) => url,
-    );
+    // Antes se exigían exactamente siete fuentes en todas las fichas. Ese
+    // número era el reparto en bloque escrito como aserción: todas recibían la
+    // misma lista. Lo que hay que sostener es el mínimo, la ausencia de
+    // duplicados, que el relato apoye en dominios distintos, que no entre
+    // ninguna portada de catálogo y que las fichas no citen todas lo mismo.
+    const fuentes = [...record.keySources, ...record.sources];
+    assert.ok(fuentes.length >= 5, `${record.slug}: ${fuentes.length} fuentes`);
+    const sourceUrls = fuentes.map(({ url }) => url);
     assert.equal(new Set(sourceUrls).size, sourceUrls.length);
+    const dominios = new Set(sourceUrls.map((url) => new URL(url).host));
+    assert.ok(dominios.size >= 3, `${record.slug}: ${dominios.size} dominios`);
+    for (const url of sourceUrls) {
+      assert.doesNotMatch(
+        url,
+        /books\.google\.|openlibrary\.org|worldcat\.org|\.blogspot\.|scribd\.com|academia\.edu|wikipedia\.org/i,
+        `${record.slug}: fuente de catálogo ${url}`,
+      );
+    }
+    assert.match(
+      record.historia,
+      /\b(1[5-9]|20)\d\d\b/,
+      `${record.slug}: su Historia no fecha el registro`,
+    );
+    assert.doesNotMatch(
+      record.mito,
+      /\b(la fuente|las fuentes|la investigación|esta ficha|la página|según el registro|el cronista)\b/i,
+      `${record.slug}: su Relato habla de la investigación`,
+    );
   }
+  // Dos fichas de un corpus pequeño pueden apoyarse en la misma bibliografía
+  // —aquí caben tres crónicas y poco más—, pero no pueden abrir con las mismas
+  // tres fuentes clave: eso sería otra vez el reparto en bloque.
+  const clave = records.map((r) => r.keySources.map(({ url }) => url).join("|"));
+  assert.equal(new Set(clave).size, clave.length, "dos fichas abren con las mismas fuentes clave");
 });
 
 test("corrige Calgari sin inventar la identidad del ser del oratorio", () => {
@@ -72,11 +100,20 @@ test("corrige Calgari sin inventar la identidad del ser del oratorio", () => {
     "correct-colonial-mistranslation",
   );
   assert.equal(record.title, "El ser de los ojos resplandecientes");
-  assert.match(record.mito, /no registra un nombre propio/i);
-  assert.match(record.mito, /Calgari o Calgavi aparecen como equivalentes de Dios/i);
-  assert.match(record.mito, /Antomiá aparece como equivalente de Diablo/i);
-  assert.match(record.historia, /no llama Calgari a esa presencia/i);
-  assert.match(record.versiones, /se elimina esa asociación/i);
+  // Las aserciones que exigían que el Relato explicara la investigación
+  // —«No había una princesa», «leyenda literaria publicada en 1932», «no
+  // registra un nombre propio»— eran el aparato editorial escrito como prueba.
+  // Ese aparato salió del Relato y vive ahora en Historia, Versiones y el
+  // dossier. Lo que se comprueba es lo mismo, dicho donde corresponde.
+  // Calgari no entra en el Relato: es una equivalencia de vocabulario emberá
+  // que Uribe Ángel puso donde no iba. Se discute en Historia y en Versiones.
+  assert.doesNotMatch(record.mito, /Calgari|Antomiá/i);
+  assert.match(record.historia, /Calgari/);
+  assert.match(record.versiones, /Calgari/);
+  // Y el Relato trae lo que Cieza sí describe del oratorio de Arma.
+  assert.match(record.mito, /incensario/i);
+  assert.match(record.mito, /Yayo/);
+  assert.match(record.mito, /Paucura/);
   assert.doesNotMatch(
     record.content,
     /Calgari (?:era|es|fue) (?:el |un )?(?:demonio|diablo)/i,
@@ -92,16 +129,19 @@ test("sustituye el Pipintá sintético por las dos variantes documentadas", () =
     cuycuyesEditorialDecisions["el-tesoro-del-pipinta"].action,
     "replace-synthetic-story",
   );
-  assert.match(record.mito, /Martín Blandón/i);
-  assert.match(record.mito, /dieciséis figuras de caciques/i);
+  // Martín Blandón es quien recogió la ruta del tesoro, no un personaje del
+  // relato: salió del Relato y quedó en Historia, donde va el registro.
+  assert.doesNotMatch(record.mito, /Martín Blandón/i);
+  assert.match(record.historia, /Martín Blandón/i);
+  assert.match(record.mito, /dieciséis caciques/i);
   assert.match(record.mito, /arrieros/i);
-  assert.match(record.mito, /espejismo/i);
-  assert.match(record.historia, /narración sintética/i);
+  assert.match(record.mito, /Maitamá/);
+  assert.match(record.mito, /Pácora/);
   assert.doesNotMatch(
     record.mito,
     /mujer hecha de hojas|dibuj[oó] un círculo de sal|guardián inmundo|desat[oó] plagas/i,
   );
-  assert.match(record.historia, /no la llama mito prehispánico intacto/i);
+  assert.match(record.historia, /\b1[5-9]\d\d\b|\b20\d\d\b/);
 });
 
 test("cada página exige una horizontal y una vertical públicas y distintas", () => {

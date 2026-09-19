@@ -116,6 +116,40 @@ export const yucunaSources = {
     limitation:
       "No es una versión oral independiente y contiene errores tipográficos de la reproducción; se usa para consulta y control, no para aumentar artificialmente el número de testimonios.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  hildebrandOrigen1975: source({
+    title: "Origen del mundo según los Ufaina",
+    author: "Martín von Hildebrand",
+    year: 1975,
+    type: "registro etnográfico primario",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/1609",
+    summary:
+      "Es la obra a la que Herrera remite en la nota donde explica que entre los tanimuka los «mayores» nacieron del tigre, dato con el que interpreta el privilegio de bailar primero que Ka'amari reclama al comienzo del conflicto.",
+    limitation:
+      "Registro de otro pueblo, los tanimuka o ufaina; se usa como paralelo documentado y para sostener una nota de Herrera, no como versión de este mito.",
+  }),
+  registroCorpus: source({
+    title: "Corpus yucuna de la Collection Pangloss",
+    author: "Laurent Fontaine (registro y transcripción), CNRS-LACITO",
+    type: "corpus de textos transcritos y grabaciones en línea",
+    url: "https://pangloss.cnrs.fr/corpus/Yucuna?lang=en",
+    summary:
+      "Documenta que los mitos largos del Mirití y La Pedrera siguen narrándose con narrador y fecha —entre ellos un Horacio Matapi en 1970— y registra el término Jupichiya como nombre de uno de los grupos incorporados, la misma raíz que aquí aparece como upichiya.",
+    limitation:
+      "No contiene una versión del «Nacimiento de la Gente»; se consultaron la ficha del corpus y los resúmenes públicos, en francés e inglés.",
+  }),
+  fontainelagentivite2013: source({
+    title: "De l'agentivité mythique et incantatoire. Le mythe de Kawáirimi chez les Yucuna (Amazonie colombienne)",
+    author: "Laurent Fontaine",
+    year: 2013,
+    type: "artículo académico",
+    url: "https://journals.openedition.org/ateliers/9481",
+    summary:
+      "Compara dos versiones fechadas y atribuidas de un mismo mito yucuna, una de Mario Matapi en 2008 y otra de Horacio Matapi en 1970, y es la referencia que permite verificar que ese nombre circula como narrador en el corpus del Mirití.",
+    limitation:
+      "Está en francés, trata del ciclo de Kawáirimi y no de este relato, y no establece que el Horacio Matapi de 1970 sea el narrador de 1974.",
+  }),
 };
 
 export const abundanceSources = {

@@ -181,6 +181,23 @@ function messageSafe(m) {
   return m.replace(/`/g, "\\`");
 }
 
+/**
+ * El reparto en bloque tiene un tercer escondite, más profundo que el pool: el
+ * `define`. Zenú, yucuna, yukpa, ufaina y yagua llamaban a su `pickXSources()`
+ * **sin argumentos**, así que daba igual lo que la ficha declarara en
+ * `sourceKeys`: el define lo ignoraba y repartía la misma lista a todos. Aquí
+ * se le pasa lo que la ficha declara, dejando la lista de siempre como
+ * respaldo cuando no declara nada.
+ */
+function abrirReparto(src) {
+  if (/pick\w+Sources\(\s*\.\.\./.test(src)) return { src, hecho: "ya estaba" };
+  const re = /(pick\w+Sources)\(\)/g;
+  if (!re.test(src)) return { src, hecho: "no reconozco la llamada" };
+  re.lastIndex = 0;
+  const out = src.replace(re, "$1(...(input.sourceKeys ?? []))");
+  return { src: out, hecho: "abierto" };
+}
+
 function abrirDefine(src) {
   const re = /  if \(selectedSources\.length !== (\d+)\) \{\n    throw new Error\(`\$\{input\.slug\}: [^`]*`\);\n  \}/;
   const m = src.match(re);
@@ -213,6 +230,7 @@ for (const modulo of String(options.modulos).split(",").map((s) => s.trim())) {
     ["build-editorial-myth.mjs", abrirConstructor],
     ["sources.mjs", abrirPick],
     ["define-editorial-myth.mjs", abrirDefine],
+    ["define-editorial-myth.mjs", abrirReparto],
   ]) {
     const ruta = path.join(root, archivo);
     let src;

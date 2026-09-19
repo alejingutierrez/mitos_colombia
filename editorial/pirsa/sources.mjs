@@ -113,6 +113,63 @@ export const pirsaSources = {
     limitation:
       "Documenta el carnaval contemporáneo y no establece que su Diablo sea la misma presencia que la crónica colonial atribuyó a Tamaracunga.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  madridcronica1553: source({
+    title: "La crónica del Perú, primera parte, capítulo CXVIII",
+    author: "Pedro Cieza de León (edición de Madrid, Calpe, 1922)",
+    year: 1553,
+    type: "crónica colonial",
+    url: "https://archive.org/details/lacrnicadelper00ciez",
+    summary:
+      "Es la única fuente narrativa del relato y el testimonio más temprano. Fecha el suceso en 1549, sitúa el pueblo de Pirsa a casi cuatro leguas de la villa de Anserma, identifica a Tamaracunga como hermano joven del señor natural, y da toda la secuencia en su orden: las auras que sólo él ve, el cristiano que lo signa, las piedras que silban, la elevación del cuerpo delante de dos testigos, el vaso de vino que se alza y se vacía, el barro en la boca bajo las mantas, los más de doscientos que lo acompañan, las cuerdas a los cintos y las tres cruces, el «hu, hu, hu» de guerra en casa de Juan Pacheco, la iglesia de paja sin Sacramento, las figuras invertidas, fray Juan de Santa María de la Orden de la Merced, la estola y el agua bendita sobre él, los bofetones y la saliva, el silencio al empezar la misa, el bautismo de él, su mujer y su hijo, y las dos o tres vueltas por la iglesia diciendo «cristiano soy» y alabando a Dios en su lengua.",
+    limitation:
+      "Cieza declara que escribe «para que los fieles glorifiquen el nombre de Dios [...] y los malos y incrédulos teman»: todo lo que Tamaracunga ve queda traducido a demonios, y no se conserva ninguna explicación de Pirsa sobre las auras, las piedras o las figuras. La edición de Calpe normaliza la ortografía y no es la príncipe; imprime además «siguió» donde debe leerse «signó».",
+  }),
+  amberesParte1554: source({
+    title: "Parte primera de la Chronica del Peru, capítulo CXVIII",
+    author: "Pedro Cieza de León (Amberes, Hans de Laet)",
+    year: 1554,
+    type: "crónica colonial",
+    url: "https://archive.org/details/PartePrimeraDeLaChronicaDelPeru",
+    summary:
+      "Fija las grafías de época contra las que se comprueban los nombres de la ficha: imprime «Pirſa» —es decir, Pirsa, y no Pirza— y «Tamaraqunga». Confirma además que la numeración del capítulo es CXVIII, a un año de la príncipe de Sevilla.",
+    limitation:
+      "Es la segunda edición, no la príncipe de 1553, que no se pudo cotejar. El reconocimiento óptico del tipo gótico es defectuoso y el texto sólo sirve leído contra el facsímil de imagen.",
+  }),
+  mesaCreando2020: source({
+    title: "Creando posesión vía desposesión. Visitas a la tierra y conformación de resguardos indígenas en la Vega de Supía, 1559-1759",
+    author: "Gloria Patricia Lopera Mesa",
+    year: 2020,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/journal/833/83363975005/html/",
+    summary:
+      "Confirma de forma independiente y arbitrada el eslabón que decide la lectura del nombre: el traslado de los indios pirzas y umbras a la Vega de Supía por el oidor Lesmes de Espinosa Saravia, y el papel de esas visitas a la tierra en la formación de los resguardos que existen hoy. Sostiene que la continuidad entre el Pirsa de 1549 y el resguardo actual es territorial y no demográfica.",
+    limitation:
+      "No menciona a Tamaracunga ni a Cieza: sirve para el marco territorial y jurídico, no para el relato.",
+  }),
+  ashwinCompendium1608: source({
+    title: "Compendium Maleficarum, libro III capítulo IV",
+    author: "Francesco Maria Guazzo (traducción de E. A. Ashwin, edición de Montague Summers, Londres, John Rodker, 1929)",
+    year: 1608,
+    type: "tratado europeo de demonología",
+    url: "https://archive.org/details/compendium-maleficarum",
+    summary:
+      "Muestra cómo el episodio empieza a circular separado de su geografía. Guazzo promete citar a Cieza fielmente y lo reescribe: llama Inca al gobernante, convierte las auras en cóndores de los Andes, sube los más de doscientos a más de trescientos, transforma las piedras en granizo, refunde a los dos cristianos en uno solo, añade aves que intentan arrebatar y matar al hombre y cambia los bofetones por dardos blandidos ante los ojos. Confirma en cambio que la estola se le pone a Tamaracunga.",
+    limitation:
+      "No es una fuente independiente: depende enteramente de Cieza y somete el episodio a las categorías europeas de brujería y posesión. La edición consultada es la traducción inglesa de 1929; no se localizó un facsímil latino de Milán 1608 con texto verificado página a página.",
+  }),
+  limaCronica1750: source({
+    title: "Crónica de la Orden de la Merced en América: prosiguen hechos heroicos de nuestros misioneros mercedarios, parágrafo VIII",
+    author: "Fray Diego de Mondragón (Lima, manuscrito inédito, AGI, Indiferente, leg. 2981; paleografía de Fernando de Armas Medina, transcripción de José Gálvez Krüger)",
+    year: 1750,
+    type: "crónica hagiográfica manuscrita",
+    url: "https://ec.aciprensa.com/wiki/Cr%C3%B3nica_de_la_Orden_de_la_Merced_en_Am%C3%A9rica:_Prosiguen_hechos_heroicos_de_nuestros_misioneros_mercedarios_en_servicio_de_ambas_majestades",
+    summary:
+      "Es la versión de la orden, dos siglos después. Asciende a Tamaracunga a «el gran cacique», atribuye su deseo de bautizarse a los sermones del padre Santa María, arma al fraile con estola y agua bendita y le hace comprimir al demonio con exorcismos expresos, hace teniente de Belalcázar a Juan Pacheco y multiplica los conversos. Unas líneas antes narra el bautismo del cacique Xamanare, su mujer y su hijo, con nombres castellanos impuestos: la misma tríada familiar, lo que la revela como convención del género.",
+    limitation:
+      "Es un manuscrito inédito fechado en Lima el 6 de abril de 1750, no una obra publicada, y está alojado en un wiki confesional sin control de versiones. No nombra Pirsa, ni 1549, ni las auras, ni la copa, ni las tres cruces, de modo que no corrige a Cieza en ningún punto verificable. Contra lo que afirmaba la ficha anterior, no hace levitar al fraile.",
+  }),
 };
 
 /**

@@ -147,6 +147,137 @@ export const zenuSources = {
     limitation:
       "Es una versión breve de divulgación; no se amplía como testimonio individual ni se confunde con todo el ciclo de Corcovao.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  zenuPlan: source({
+    title: "Plan Especial de Salvaguardia: trenzado en caña flecha, prácticas y conocimientos ancestrales artesanales de la identidad zenú",
+    author: "Cabildo Mayor Regional del Pueblo Zenú, Resguardo de San Andrés de Sotavento",
+    type: "plan de salvaguardia presentado por la autoridad indígena",
+    url: "https://patrimonio.mincultura.gov.co/salvaguardiapci/Lista-Representativa/Documents/PES%20Trenzado%20en%20can%CC%83a%20flecha,%20pra%CC%81cticas%20y%20conocimiento%20artesanales%20de%20la%20identidad%20Zenu%CC%81.pdf",
+    summary:
+      "Reproduce el mapa que el propio pueblo zenú dibujó del resguardo con el caimán de oro encima, rotulado como interpretación mítica, con San Andrés en el corazón del animal y los oficios artesanales repartidos por las extremidades, y resume que sacar al caimán significaría la destrucción del mundo zenú.",
+    limitation:
+      "El caimán aparece como ilustración territorial dentro de un expediente sobre el trenzado: no hay relato, ni narradores, ni variantes, y los rótulos del mapa no son legibles en el texto extraíble del PDF.",
+  }),
+  nietoCambios1988: source({
+    title: "Cambios ambientales y desarrollo cultural en el bajo río San Jorge",
+    author: "Clemencia Plazas de Nieto, Ana María Falchetti, Thomas van der Hammen, Pedro Botero, Juanita Sáenz Samper y Sonia Archila",
+    year: 1988,
+    type: "artículo de Boletín Museo del Oro",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7167",
+    summary:
+      "Explica por qué el cuerpo del caimán enlaza lugares que hoy parecen inconexos: la llanura entre el bajo San Jorge y la depresión momposina fue un sistema continuo de canales, camellones y asentamientos zenúes que cubrió más de quinientas mil hectáreas.",
+    limitation:
+      "Es arqueología y paleoambiente de la cuenca del San Jorge, no del resguardo de San Andrés: no toca el mito y no puede usarse para fechar el relato.",
+  }),
+  bordaResistencia2002: source({
+    title: "Resistencia en el San Jorge. Historia doble de la Costa 3",
+    author: "Orlando Fals Borda",
+    year: 2002,
+    type: "historia regional con testimonios",
+    url: "https://repositorio.unal.edu.co/bitstreams/8f017138-80f3-4f40-8c86-17efa29e9d7b/download",
+    summary:
+      "Ofrece el contrapunto necesario del otro caimán de la costa: el hombre-caimán del bajo Magdalena, que él usó como tótem de la cultura anfibia en el primer tomo de Historia doble y que aquí discute al preguntarse si el exterminio del saurio lo redujo al hombre-hicotea.",
+    limitation:
+      "El ejemplar del repositorio es una selección de 55 páginas de la Serie Maestros de la Sede, no el libro completo; el hombre-caimán es un tótem literario del autor y no un relato zenú.",
+  }),
+  larrainRelaciones2024: source({
+    title: "Relaciones interétnicas en el caribe colombiano. Una aproximación etnográfica al caso zenú",
+    author: "América Larraín",
+    year: 2024,
+    type: "artículo de revista académica",
+    url: "https://revistas.unimagdalena.edu.co/index.php/jangwapana/article/view/5703",
+    summary:
+      "Describe etnográficamente la relación entre los indígenas zenú y la población blanca y mestiza circundante en términos de reciprocidad negativa, celos y envidia: el marco social del «chumpo» que en el relato viene a sacar el oro.",
+    limitation:
+      "Etnografía contemporánea sobre relaciones interétnicas: no trata el mito del caimán ni la cosmología, y sus resultados no se pueden proyectar a 1920.",
+  }),
+  colombiaResguardo2013: source({
+    title: "Resguardo indígena Zenú de San Andrés de Sotavento (informe INST-D 2013.43)",
+    author: "Artesanías de Colombia, repositorio institucional",
+    year: 2013,
+    type: "informe técnico de repositorio institucional",
+    url: "https://repositorio.artesaniasdecolombia.com.co/bitstream/handle/001/1797/INST-D%202013.%2043.pdf?sequence=1",
+    summary:
+      "Enumera los municipios del resguardo entre los que el relato reparte el cuerpo del animal —Sincelejo, Palmito, Sampués y las veredas artesanales de San Antonio de Palmito— y describe los talleres y viviendas de esas localidades.",
+    limitation:
+      "Informe técnico de un proyecto artesanal de 2013: no menciona el caimán ni la mitología, y su cobertura es de unas pocas comunidades, no del resguardo entero.",
+  }),
+  sINICColombia: source({
+    title: "Colombia Cultural: mitos y leyendas – Sucre (acopio de Zully Torres y Oswaldo Villera)",
+    author: "Sistema Nacional de Información Cultural (SINIC), Ministerio de Cultura",
+    type: "registro oficial de tradición oral departamental (copia archivada)",
+    url: "https://web.archive.org/web/20230417204328/https://www.sinic.gov.co/SINIC/ColombiaCultural/ColCulturalBusca.aspx?AREID=3&SECID=8&IdDep=70&COLTEM=212",
+    summary:
+      "Es el único registro narrativo: en la ciénaga de La Sierpe aparece de pronto la canoa con el tesoro que cuida el mocán del Corcovao; quien la ve está perdido si quita el limón de acero que está en el ojo de esa canoa, porque la serpiente Torcerá, que es una bruja y duerme sobre el tesoro, despierta y ataca; tiene patas y plumas en las orejas. Publicado por el Ministerio de Cultura dentro del acopio de Zully Torres y Oswaldo Villera.",
+    limitation:
+      "Son cinco renglones, con el nombre escrito Torcorá en el título y Torcerá en el cuerpo, sin narrador, sin fecha, sin municipio y sin adscripción étnica; la página está retirada del portal y se consulta por copia archivada.",
+  }),
+  severichecanales2022: source({
+    title: "Los canales zenúes en Colombia: un desaparecido en el territorio y un desconocido en el bolsillo",
+    author: "César Olmos Severiche, Elvia María González-Agudelo, Fabio de Jesús Vélez-Macías y Néstor Jaime Aguirre-Ramírez",
+    year: 2022,
+    type: "artículo de revisión académica",
+    url: "https://revistas.unimagdalena.edu.co/index.php/intropica/article/view/4052",
+    summary:
+      "Revisa los canales ancestrales de la depresión momposina y su desaparición del paisaje y de la memoria pública: el mismo sistema cenagoso en el que se sitúa la canoa y que explica la inestabilidad del agua.",
+    limitation:
+      "Artículo de revisión sobre hidráulica y cambio climático, sin ninguna referencia a la tradición oral de la ciénaga.",
+  }),
+  fernandezLiteratura2015: source({
+    title: "Literatura y política en la «reconstrucción» de Jegua en Resistencia en el San Jorge: una lectura de los archivos personales de Orlando Fals Borda",
+    author: "Nohora Alejandra Arrieta Fernández",
+    year: 2015,
+    type: "artículo de revista académica",
+    url: "https://www.revistatabularasa.org/numero-23/06Arrieta.pdf",
+    summary:
+      "Muestra hasta qué punto los habitantes de la ribera del San Jorge han naturalizado lo extraordinario: no se inmutan si los muertos bogan inundados en el cementerio o si unas brasas señalan un enterramiento indígena.",
+    limitation:
+      "Lectura crítica de archivos y no recolección de tradición oral; sus ejemplos son de Jegua y no de La Sierpe.",
+  }),
+  sINICColombia2: source({
+    title: "Colombia Cultural: mitos y leyendas – Córdoba",
+    author: "Sistema Nacional de Información Cultural (SINIC), Ministerio de Cultura",
+    type: "registro oficial de tradición oral departamental (copia archivada)",
+    url: "https://web.archive.org/web/20240519043115/https://www.sinic.gov.co/SINIC/ColombiaCultural/ColCulturalBusca.aspx?AREID=3&SECID=8&IdDep=23&COLTEM=212",
+    summary:
+      "Funciona como control negativo: la lista oficial de mitos y leyendas de Córdoba del mismo organismo no incluye a Juan Lara. Registra el Gritón, el duende, la Llorona, el agüero del yacabó, los animes, el niño en cruz y la aguja del muerto.",
+    limitation:
+      "Una ausencia en un inventario no prueba que el personaje no circule en Córdoba: prueba que el Ministerio de Cultura no lo registró allí. También está retirada del portal.",
+  }),
+  villadiegosombrero1984: source({
+    title: "El sombrero vueltiao zenú",
+    author: "Benjamín Puche Villadiego",
+    year: 1984,
+    type: "conferencia publicada en revista universitaria",
+    url: "https://medellin.unal.edu.co/revista-extension-cultural/images/revista/rec60/REC_60-95-108.pdf",
+    summary:
+      "Describe el sombrero pieza por pieza —plantilla, copa, vueltas, pies, rombos, pintas, ala— y explica que las pintas se colocan en vueltas determinadas siguiendo reglas de conteo; es la contraprueba técnica de la correspondencia que el relato establece entre partes del sombrero y partes del mundo.",
+    limitation:
+      "Conferencia de 1984 de un investigador aficionado, centrada en defender el origen colombiano del sombrero: no recoge el mito ni cita narradores del resguardo.",
+  }),
+  argelFortalecimiento2026: source({
+    title: "Fortalecimiento de la identidad cultural desde la cosmovisión étnica a través del Museo Zenú",
+    author: "E. Ruiz Argel y A. M. Posada",
+    year: 2026,
+    type: "artículo de revista académica",
+    url: "https://revistavitalia.org/index.php/vitalia/article/view/965",
+    summary:
+      "Es el registro bibliográfico vivo de la obra que sostiene este relato: cita «Mendoza, W. (2011). Ordenando el Universo Zenú: ORUZEN. Tuchín: CMRPZ» como fuente de la cosmogonía que la institución educativa trabaja en su museo escolar.",
+    limitation:
+      "Sólo consta en la bibliografía: el artículo no resume ni cita el contenido de ORUZEN, y fecha el libro en 2011 mientras la ONIC lo fecha en 2010.",
+  }),
+  sotaventoPlan2020: source({
+    title: "Plan de Desarrollo Territorial 2020-2023 del municipio de San Andrés de Sotavento",
+    author: "Alcaldía de San Andrés de Sotavento",
+    year: 2020,
+    type: "plan de desarrollo municipal",
+    url: "https://sanandresdesotaventocordoba.micolombiadigital.gov.co/sites/sanandresdesotaventocordoba/content/files/000122/6083_pdt-sas-v7-1.pdf",
+    summary:
+      "Registra que San Andrés de Sotavento reconoce oficialmente «la leyenda del cerro Tofeme» entre los rasgos de su riqueza cultural ancestral, junto al tejido trenzado y al festival del pito atravesao.",
+    limitation:
+      "Documento de planeación municipal: menciona la leyenda por su nombre en una línea y no la reproduce.",
+  }),
 };
 
 export const juanLaraSources = {

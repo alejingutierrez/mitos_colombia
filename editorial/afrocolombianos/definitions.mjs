@@ -3,6 +3,33 @@ import { defineAfrocolombianMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineAfrocolombianMyth({
     slug: "anansi",
+    sourceKeys: [
+      {
+        key: "arochaAnanse",
+        summary:
+          "Reproduce textualmente el relato que Don Pío Perea, director de la Defensa Civil en el Chocó, le contó a Nina S. de Friedemann: Anansi sacristana, las hostias comidas, la condena a muerte, el repique en la torre, la voz delgadita, el cura que no la ve y la condena suspendida con la condición de trabajar. Añade la oración de Anansi para andar sobre el agua, la prohibición de matar a la araña en el alto Baudó y la ombligada con Araña.",
+        limitation:
+          "Arocha cita el pasaje de Friedemann y Vanín 1991, páginas 189 y 190; no es la transcripción de primera mano y el episodio llega por una cadena identificada de tres eslabones. El libro es un ensayo antropológico sobre africanía en el Pacífico, no una colección de cuentos, y Anansi aparece en él sobre todo como metáfora de resistencia.",
+      },
+      "mejiaOralidad2007",
+      "rodriguezdiaspora2011",
+      "mejiacuentistas2007",
+      {
+        key: "bejaranoAnanse",
+        summary:
+          "Muestra que Ananse sigue viva como referencia en la escritura chocoana contemporánea y que se la asocia con el vínculo ancestral, el nacimiento y la continuidad de la africanía; se apoya expresamente en Arocha 1999.",
+        limitation:
+          "Analiza un cuento de autor, no tradición oral: no aporta una segunda versión del episodio del campanario y su Ananse es ya una figura literaria.",
+      },
+      "velasquezCriollo2023",
+      {
+        key: "vaninPacific",
+        summary:
+          "Sitúa la pluralidad de mundos y de memorias del litoral en la que se mueve el Anansi chocoano, y es del mismo autor que, con Friedemann, publicó en 1991 el relato de Pío Perea.",
+        limitation:
+          "No contiene el episodio del campanario ni ninguna versión de Anansi; se usa para el marco regional y para identificar al coautor de la publicación original de 1991, que no está digitalizada.",
+      },
+    ],
     title: "Ananse en el campanario",
     excerpt:
       "Ananse come las hostias que debía cuidar, sube al campanario y usa su voz para escapar de una condena.",
@@ -47,6 +74,39 @@ Ananse salió con vida del campanario. Quedaba por saber si cumpliría la condic
   }),
   defineAfrocolombianMyth({
     slug: "tulavieja-tunda",
+    sourceKeys: [
+      {
+        key: "valenciaTunda",
+        summary:
+          "Contiene, narrada por Mónica Sánchez, la versión que esta ficha cuenta: Nelsi sale del colegio a las seis, cree ver a su madre, se aparta del grupo, no logra alcanzarla, las compañeras encuentran a la madre en la casa y la madre la halla asustada y aturdida. El anexo reúne además las otras formas de la Tunda en Tumaco —cara de la madre o del hermano, mujer hermosa junto a las catangas, anciana con canasto, pollo que crece—, la pata de molinillo, el entunde con camarones que son cucarrones, la genealogía diabólica y la alianza con el Riviel, el descabezado y la bruja.",
+        limitation:
+          "La entrada de Mónica Sánchez lleva narradora pero no lugar ni fecha: el bloque «Lugar: Chontal la Frontera / Fecha: marzo 10 de 2007» que aparece después corresponde al relato siguiente, no al suyo. La tesis interpreta el conjunto y no debe leerse como biografía única de la Tunda.",
+      },
+      "ontanedaTeratologia2026",
+      "archivesTulivieja2018",
+      "bolivarFondo",
+      {
+        key: "chocoTourismSierpe",
+        summary:
+          "Sirve aquí para delimitar el territorio: su listado de seres del Chocó recoge la Yesca, el Indio de Agua, la Sierpe de Beté, el Duende, el Rivial, la Bruja y la Sirena, y en esa lista la Tunda no figura, lo que respalda situar el relato en el Pacífico nariñense y no en el Chocó, como hacía la ficha heredada.",
+        limitation:
+          "Es divulgación turística, no etnografía: describe cada ser en una o dos frases, sin narrador, sin lugar preciso y sin fecha, y una ausencia en un folleto no prueba que la Tunda no se cuente en el Chocó.",
+      },
+      {
+        key: "minCulturaTunda",
+        summary:
+          "Confirma que la Tunda sigue siendo, en 2017 y en la propia San Andrés de Tumaco, un relato que se cuenta en primera persona: once minutos y cuarenta y nueve segundos en los que una familia tumaqueña narra sus experiencias con el mito.",
+        limitation:
+          "Sólo se consultó su ficha documental: la pieza sonora requiere solicitud y no se escuchó, así que no aporta ninguna frase al texto. Es además una producción radiofónica dirigida a público infantil dentro de una serie de divulgación patrimonial.",
+      },
+      {
+        key: "arochaAnanse",
+        summary:
+          "Aporta el marco del litoral en el que la Tunda es vecina de otros seres: su glosario define el riviel como demonio del litoral Pacífico y su texto describe el uso de la Patasola en las ombligadas de Timbiquí, es decir, seres del monte que intervienen en la vida ordinaria de la gente.",
+        limitation:
+          "No contiene ninguna versión de la Tunda ni la estudia; se usa sólo como contexto del litoral y su glosario es breve.",
+      },
+    ],
     title: "La Tunda con el rostro de una madre",
     excerpt:
       "Al salir de la escuela, Nelsi sigue a quien parece su madre; sus compañeras descubren que la madre real sigue en casa.",
@@ -93,6 +153,39 @@ La figura que se adelantaba era la Tunda. No necesitó mostrar una forma monstru
   }),
   defineAfrocolombianMyth({
     slug: "kijimba-de-las-animas",
+    sourceKeys: [
+      "rEDescuela",
+      "rianoAlcalaCantando2020",
+      {
+        key: "arochaAnanse",
+        summary:
+          "Aporta el tercer eco de las similitudes: el 25 de octubre de 1995, en el velorio de doña Genara Bonilla, en el río Pepé del bajo Baudó, don Juan Arce narró historias de guacas en las que el minero que se guarda la riqueza para sí desaparece de la tierra, y otros pepeseños siguieron contando en la misma ceremonia. Muestra que el velorio chocoano es el lugar donde se narra y que el desenlace fatal se dispara por desoír a la familia.",
+        limitation:
+          "No menciona a Kijimba ni el baile de las ánimas, y su Chocó es el Baudó, no el Medio Atrato. El paralelo es de situación narrativa y de castigo, no de trama.",
+      },
+      {
+        key: "unadAlabaos",
+        summary:
+          "Sirve para separar géneros: documenta los alabaos y gualíes como prácticas de duelo vivas en Quibdó y su transmisión a los estudiantes, lo que permite decir en versiones que son el ritual con el que se acompaña al muerto y no variantes del baile de Kijimba.",
+        limitation:
+          "Es un trabajo de pregrado centrado en la percepción escolar y la etnoeducación, no en la narrativa; no contiene relatos de aparecidos y sólo se consultó su ficha de repositorio, no el PDF completo.",
+      },
+      {
+        key: "unicaucaDeath",
+        summary:
+          "Aporta contexto comparativo sobre cómo una comunidad negra del Pacífico organiza la relación entre muerte, fiesta y sentido de comunidad, es decir el terreno en el que una fiesta puede ser de los muertos sin dejar de ser fiesta.",
+        limitation:
+          "Su territorio es Guapi, en el Cauca, y no el Chocó, y su objeto son los matachines y el sentido de comunidad, no los relatos de ánimas; funciona como contexto y no como versión.",
+      },
+      "aristizabalChoco2022",
+      {
+        key: "chocoTourismSierpe",
+        summary:
+          "Permite situar a Kijimba frente al repertorio chocoano que sí está inventariado institucionalmente —la Yesca, el Indio de Agua, la Sierpe de Beté, el Duende, el Rivial, la Bruja, la Sirena— y comprobar que el baile de las ánimas no figura en esas listas.",
+        limitation:
+          "Es divulgación turística: una o dos frases por ser, sin narrador, sin lugar preciso y sin fecha. Su silencio sobre Kijimba no prueba nada sobre la circulación del relato.",
+      },
+    ],
     title: "Kijimba y el baile de las ánimas",
     excerpt:
       "Kijimba sigue una tambora hasta una casa llena de figuras blancas; allí descubre demasiado tarde quiénes celebran.",
@@ -141,6 +234,38 @@ Kijimba llegó porque creyó que cualquier música anunciaba una fiesta para los
   }),
   defineAfrocolombianMyth({
     slug: "la-sierpe-de-bete",
+    sourceKeys: [
+      {
+        key: "chocoTourismSierpe",
+        summary:
+          "Es la única fuente que registra la Sierpe de Beté y contiene todo su núcleo: una serpiente mitológica que pasó por los pueblos durante las festividades patronales, que poseía tres cabezas y que asustaba a los pescadores. La misma página enumera a los seres con los que comparte territorio —la Yesca, el Indio de Agua, el Duende, el Rivial, la Bruja, la Sirena— y advierte que las tradiciones chocoanas están ligadas a la forma de vida de sus habitantes.",
+        limitation:
+          "Son dos frases en un folleto de promoción turística: no hay narrador, ni lugar preciso dentro del municipio, ni fecha, ni testimonio en primera persona, ni bibliografía. No sostiene diálogos, poderes, curaciones ni desenlaces, y la ficha no le puede pedir más de lo que dice.",
+      },
+      "netoModo2024",
+      {
+        key: "rianoAlcalaCantando2020",
+        summary:
+          "Sitúa el Medio Atrato en el que ocurre el relato: la vida comunitaria organizada alrededor del río, las comunidades ribereñas del municipio y de Bojayá, y el peso de la fiesta y el canto como calendario colectivo, incluida la referencia a la fiesta patronal de San Antonio de Padua en Tanguí como resistencia festiva.",
+        limitation:
+          "No menciona Beté ni la Sierpe: su tema son los alabaos, el duelo y la acción política de las cantadoras de Pogue. Aporta región y calendario, no versión.",
+      },
+      {
+        key: "arochaAnanse",
+        summary:
+          "Documenta con nombre propio cómo se organizan las fiestas patronales chocoanas —doña Luz Amira Largacha Mosquera como síndica de las fiestas de la Virgen de la Pobreza, patrona de su pueblo en el Baudó— y define el riviel en su glosario como demonio del litoral Pacífico, uno de los seres de agua con los que la Sierpe comparte repertorio.",
+        limitation:
+          "Su terreno es el Baudó y el litoral, no el Medio Atrato, y no menciona la Sierpe de Beté. Sirve para entender qué significa «patronales» en el Chocó, no para ampliar el relato.",
+      },
+      "frazerBiblioteca",
+      {
+        key: "aristizabalChoco2022",
+        summary:
+          "Advierte sobre el problema que esta ficha tiene encima: cómo se ha construido el Chocó desde afuera, quién ha narrado sus relatos y con qué límites lo hace un observador externo, y documenta la cadena de transcriptores —Alfredo Vanín y narradores como Manuel María Moreno, de Opogodó— por la que la oralidad chocoana llega a la letra.",
+        limitation:
+          "Su objeto es el oro y la economía extractiva, no los seres del río, y no menciona la Sierpe. Se usa como advertencia metodológica sobre la mirada externa, no como fuente narrativa.",
+      },
+    ],
     title: "La Sierpe de Beté",
     excerpt:
       "Durante las fiestas patronales, una sierpe de tres cabezas atraviesa las aguas de Beté y llena de miedo a los pescadores.",

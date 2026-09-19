@@ -15,6 +15,7 @@
  * los núcleos `historyCore`/`versionCore`/`similarityCore` por los campos
  * completos `historia`/`versiones`/`similitudes`.
  */
+import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
@@ -270,21 +271,30 @@ console.log(`Escritos ${written} módulos en ${path.relative(process.cwd(), dir)
 // desana el envoltorio `myth()` pegaba un descargo de cuarenta palabras dentro
 // de cada Relato, así que ocho fichas que validaban en el JSON salían del
 // módulo pasadas del máximo y con aparato dentro. Sin este paso no se veía.
+// Corre en un proceso aparte a propósito: dentro de éste, ESM ya tiene el
+// módulo en caché desde antes de escribir, `?t=` no invalida lo que ese módulo
+// importa a su vez, y la comprobación informaba de fallos ya corregidos.
 async function comprobarDespues(escritas) {
   if (!escritas) return;
-  const recargados = await loadModules(communitySlug, options);
-  let malos = 0;
-  for (const record of recargados?.values() ?? []) {
-    if (only && !only.has(record.slug)) continue;
-    const errores = validateRecord(record, { texto: true, fuentes: false });
-    if (errores.length) {
-      malos += 1;
-      console.log(`  ✗ ${record.slug}: ${errores.join("; ")}`);
-    }
-  }
+  const args = [
+    path.join(import.meta.dirname, "comprobar-modulo.mjs"),
+    `--comunidad=${communitySlug}`,
+    ...(options.modulos ? [`--modulos=${options.modulos}`] : []),
+    ...(options.env ? [`--env=${options.env}`] : []),
+    ...(only ? [`--slugs=${[...only].join(",")}`] : []),
+  ];
+  const salida = await new Promise((resolve) => {
+    const hijo = spawn(process.execPath, args, { stdio: ["ignore", "pipe", "inherit"] });
+    let out = "";
+    hijo.stdout.on("data", (d) => { out += d; });
+    hijo.on("close", () => resolve(out));
+  });
+  const lineas = salida.trimEnd().split("\n");
+  const total = Number((lineas.pop() || "").replace("TOTAL ", "")) || 0;
+  for (const l of lineas) console.log(l);
   console.log(
-    malos
-      ? `\nAviso: ${malos} fichas no cumplen DESPUÉS de componerse en el módulo. Mira qué les añade el módulo.`
+    total
+      ? `\nAviso: ${total} fichas no cumplen DESPUÉS de componerse en el módulo. Mira qué les añade el módulo.`
       : "\nComprobado: las fichas siguen cumpliendo después de componerse en el módulo.",
   );
 }

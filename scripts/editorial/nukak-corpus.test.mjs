@@ -59,7 +59,13 @@ test("retira la conflación Kakua del relato Nukak", () => {
   assert.match(record.mito, /Aukurɨbo/);
   assert.match(record.mito, /\bbak\b/);
   assert.doesNotMatch(record.mito, /Idn Kamni|Río de Leche|saliva/i);
-  assert.match(record.historia, /Kakua/);
+  // La ficha escribe los etnónimos en minúscula —nɨkak, kakua—, así que la
+  // comprobación no puede depender de la mayúscula.
+  assert.match(record.historia, /kakua/i);
+  // Y lo que importa es que la Historia separe los dos orígenes en vez de
+  // fundirlos, que era la conflación que se retiró del Relato.
+  assert.match(record.historia, /Idn Kamni/);
+  assert.match(record.similitudes, /kakua/i);
   assert.match(record.researchNotes, /CORRECCIÓN INTEGRAL/);
 });
 

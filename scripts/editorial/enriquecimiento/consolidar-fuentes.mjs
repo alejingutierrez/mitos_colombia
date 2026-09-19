@@ -36,7 +36,14 @@ if (!options.propuestas) throw new Error("Falta --propuestas=<archivo.json o dir
 const dir = path.resolve("editorial", String(options.modulos || communitySlug));
 const poolPath = path.join(dir, "sources.mjs");
 const poolModule = await import(pathToFileURL(poolPath).href + `?t=${Date.now()}`);
-const poolName = Object.keys(poolModule).find((k) => /Sources$/.test(k) && typeof poolModule[k] === "object");
+// Las claves de un namespace ESM salen en orden alfabético, no en el del
+// archivo: buscar el primer export que acabe en `Sources` elegía
+// `juanLaraSources` antes que `zenuSources` y `abundanceSources` antes que
+// `yucunaSources`, y las obras nuevas acababan en el objeto secundario. El
+// pool es el que más obras tiene.
+const poolName = Object.keys(poolModule)
+  .filter((k) => /Sources$/.test(k) && poolModule[k] && typeof poolModule[k] === "object")
+  .sort((a, b) => Object.keys(poolModule[b]).length - Object.keys(poolModule[a]).length)[0];
 if (!poolName) throw new Error(`No encuentro el pool exportado (…Sources) en ${poolPath}`);
 const pool = poolModule[poolName];
 const modules = await loadModules(communitySlug, options);
@@ -151,8 +158,15 @@ for (const r of rejected) console.log(`  ${r.razon.startsWith("AVISO") ? "·" : 
 if (!options.apply) { console.log("\nDry-run. Añade --apply para escribir el pool y los módulos."); process.exit(0); }
 
 let poolSrc = await fs.readFile(poolPath, "utf8");
-const closing = poolSrc.lastIndexOf("\n};");
-if (closing < 0) throw new Error("No encuentro el cierre del pool");
+// El pool no siempre es el último objeto del archivo: zenú tiene después
+// `juanLaraSources`, yucuna `abundanceSources` y afrocolombianos el mapa
+// `afroSourceKeysBySlug`. Buscar el último `\n};` metía las obras nuevas en
+// el objeto equivocado —y en afrocolombianos convertía doce claves de fuente
+// en doce slugs falsos—, así que se cierra el objeto que de verdad es el pool.
+const apertura = poolSrc.indexOf(`export const ${poolName} = {`);
+if (apertura < 0) throw new Error(`No encuentro la apertura de ${poolName} en ${poolPath}`);
+const closing = poolSrc.indexOf("\n};", apertura);
+if (closing < 0) throw new Error(`No encuentro el cierre de ${poolName}`);
 // No todos los pools envuelven sus entradas en un `source({ … })`: unos pocos
 // —misak— son objetos literales sueltos. Escribir la llamada ahí rompe el
 // módulo con «source is not defined», así que se mira antes qué usa el archivo.

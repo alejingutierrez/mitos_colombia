@@ -355,6 +355,137 @@ export const afrocolombianSources = {
     limitation:
       "No prueba que toda fiesta de un relato use marimba ni que prácticas del sur describan el Medio Atrato.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  mejiaOralidad2007: source({
+    title: "Oralidad y escritura en la isla de San Andrés",
+    author: "Juliana Botero Mejía",
+    year: 2007,
+    type: "artículo de revista arbitrada",
+    url: "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-48072007000200014",
+    summary:
+      "Fija los nombres con que la araña circula en el archipiélago —Anancy, Nansi, Anansi, Old Anancy, Bredda Anancy, Hemano Nansi— y registra que las Historias de Anancy se hicieron para ser contadas, cantadas y actuadas por los abuelos, y que en ellas se narran África, la esclavitud y el presente de las islas.",
+    limitation:
+      "Es un estudio sobre oralidad y alfabetización, no una recopilación: los datos sobre Anancy están en una nota al pie y no incluye ninguna versión narrativa. Remite a los trabajos de Carol O'Flynn de Chávez, Marcia Dittmann y Oakley Forbes sin reproducirlos.",
+  }),
+  rodriguezdiaspora2011: source({
+    title: "La diáspora akán: los cuentos de Anancy en Limón y el Caribe colombiano insular",
+    author: "Lina Pochet Rodríguez",
+    year: 2011,
+    type: "artículo de revista arbitrada",
+    url: "https://dialnet.unirioja.es/descarga/articulo/5689730.pdf",
+    summary:
+      "Traza la ruta por la que el personaje llegó a Colombia: los akán del sur de Ghana y las zonas vecinas de Costa de Marfil y Togo, la lengua twi, la atribución de los cuentos de la araña a los asante, las compañías navieras inglesas, Jamaica como plataforma de distribución y el desembarco en el archipiélago de San Andrés, Vieja Providencia y Santa Catalina.",
+    limitation:
+      "Es una reseña histórica de la diasporización, no un corpus de relatos; no documenta ninguna versión chocoana ni menciona el episodio del campanario. Su otro caso es Limón, en Costa Rica, y no Colombia continental.",
+  }),
+  mejiacuentistas2007: source({
+    title: "Las cuentistas de hoy en La Guajira, San Andrés y Providencia y El Chocó",
+    author: "Ana Mercedes Patiño Mejía",
+    year: 2007,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/pdf/4983/498357113007.pdf",
+    summary:
+      "Describe el corpus isleño: los veintidós relatos de Lolia Pomare Myles publicados en «Anancy Stories. Cuentos de Anancy» (Fabio Eusse, ed., Fondo Mixto para la Promoción de la Cultura y las Artes del Archipiélago, 2001), en los que Anancy aparece siempre con el hermano Tigre y no siempre sale bien librado, y las compilaciones que Bill y Cathy Washabaugh hicieron en Vieja Providencia en los años setenta.",
+    limitation:
+      "Es una reseña de literatura escrita por mujeres: describe el volumen de 2001 pero no lo transcribe, y el libro de Eusse no está digitalizado, de modo que el contenido de los veintidós relatos se conoce aquí sólo por esta descripción.",
+  }),
+  velasquezCriollo2023: source({
+    title: "Criollo sanandresano (ficha de lengua)",
+    author: "Astrid Lorena Bernal Velásquez, Instituto Caro y Cuervo",
+    year: 2023,
+    type: "ficha institucional de lengua",
+    url: "https://lenguasyliteraturasnativas.caroycuervo.gov.co/criollo-sanandresano/",
+    summary:
+      "Documenta la lengua en la que se cuentan los Anancy stories: población raizal del archipiélago, base lexical inglesa del criollo, y la sectorización lingüística de San Andrés descrita por Marcia Dittmann tras la declaratoria de puerto libre de 1953.",
+    limitation:
+      "No menciona a Anancy ni recoge relato alguno; sirve únicamente para situar la lengua y el desplazamiento del criollo, y sus cifras de población provienen del censo piloto de 1999.",
+  }),
+  rEDescuela: source({
+    title: "La escuela en la tradición oral",
+    author: "Programa RED, Universidad Nacional de Colombia; narración de Rosalba Cossio García",
+    type: "recopilación escolar de tradición oral",
+    url: "https://books.google.com.co/books?id=P5WYUJAbAr8C&pg=PA44&q=Kijimba",
+    summary:
+      "Es la fuente del relato completo. En las páginas 44 y 45, bajo el título «KIJIMBA» y la línea «Narración de la señora Rosalba Cossio García», está todo lo que la ficha cuenta: los bailes de Tanguí, Guayabal, Tutunendo, Condoto, Tanando y Quito; la tambora escuchada desde la cama; las advertencias de los familiares; la palanca, el canalete y la champa achicada; la casa río arriba con todos vestidos de blanco; el grito «llegó Kijimba»; el trago que era hiel; el coro que ordena tomárselo porque a todo baile no se va; y la muerte al día siguiente en una fiesta de las ánimas. La página 45 trae además «La viudita», narrada por María de Jesús Ampudia Perea, nacida en Tadó en 1924, que la ficha usa como paralelo.",
+    limitation:
+      "Sólo se pudo leer en la vista previa parcial de Google Libros: las páginas 7, 44 y 45 se leyeron completas y el resto del volumen no. No se pudo confirmar el año, el pie de imprenta ni el compilador desde el propio libro, ni se sabe dónde, cuándo ni a qué edad narró Rosalba Cossio García. Es material recogido en trabajo escolar, sin aparato etnográfico.",
+  }),
+  rianoAlcalaCantando2020: source({
+    title: "Cantando el sufrimiento del río. Memoria, poética y acción política de las cantadoras del Medio Atrato chocoano",
+    author: "Pilar Riaño-Alcalá y Ricardo Chaparro Pacheco",
+    year: 2020,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/journal/1050/105064118004/html/",
+    summary:
+      "Da el marco en el que las ánimas del Medio Atrato son agentes y no decorado: documenta que la fuerza para invocar alabaos viene de personas de entendimiento fuerte con conexión especial con las ánimas, y que la alabaora mayor Petrona aportó tres alabaos que, según ella, se los enseñaron en sueños las ánimas. Sitúa además el eje geográfico del relato y distingue alabaos de gualís, que se cantan en el duelo por niños.",
+    limitation:
+      "No conoce a Kijimba ni recoge relato alguno de aparecidos: su objeto son el canto, el duelo y la acción política de las cantadoras de Pogue tras la masacre de Bojayá. El paralelo de las ánimas que enseñan en sueños es temático, no genealógico.",
+  }),
+  aristizabalChoco2022: source({
+    title: "El Chocó y las mitologías de oro",
+    author: "Juanita C. Aristizábal",
+    year: 2022,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/journal/396/39672447013/html/",
+    summary:
+      "Muestra cómo la narración oral chocoana llega a la letra impresa y quién la ha mediado, incluidas las transcripciones que Alfredo Vanín hizo de narradores mayores como Manuel María Moreno, de Opogodó; ayuda a leer «La escuela en la tradición oral» como un eslabón más de esa cadena de mediaciones.",
+    limitation:
+      "Su tema es el oro y la economía extractiva, no las ánimas; no menciona a Kijimba y trata sobre todo producción literaria, periodística y cinematográfica sobre el Chocó, con el riesgo de mirada externa que la propia autora discute.",
+  }),
+  netoModo2024: source({
+    title: "Modo de vida afrocolombiano y territorialidades pesqueras en el Chocó (Colombia)",
+    author: "Dorival Bonfá Neto y Luis Carlos Jiménez Reyes",
+    year: 2024,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/journal/268/26878603005/html/",
+    summary:
+      "Sostiene lo que la ficha dice de los pescadores: que en las comunidades negras del Chocó la pesca artesanal es la base de un modo de vida y que el agua es un espacio vivido, concebido y percibido, donde se concentra un saber complejo construido en interacción continua con el ambiente. Es lo que explica por qué el miedo de un pescador ante la Sierpe es una noticia y no una anécdota.",
+    limitation:
+      "Su trabajo de campo es en Bahía Solano, en la costa pacífica del Chocó, y su elemento es el mar, no el Atrato ni el Medio Atrato; no menciona la Sierpe ni recoge narrativa oral. Se usa para el oficio, no para el relato.",
+  }),
+  frazerBiblioteca: source({
+    title: "Biblioteca, libro 2, capítulo 5, sección 2",
+    author: "Apolodoro; edición de James George Frazer, Perseus Digital Library",
+    type: "fuente clásica en edición crítica",
+    url: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0022%3Atext%3DLibrary%3Abook%3D2%3Achapter%3D5%3Asection%3D2",
+    summary:
+      "Da el paralelo formal que la ficha usa y sus medidas exactas: la hidra criada en el pantano de Lerna, con cuerpo enorme y nueve cabezas, ocho mortales y la del medio inmortal, que salía a arrasar el ganado y los campos y a la que Heracles sólo venció con la ayuda de Yolao quemando los cuellos.",
+    limitation:
+      "Es griega y pertenece al ciclo de los trabajos de Heracles: su estructura es de combate y muerte, mientras la Sierpe sólo pasa. La coincidencia de cabezas múltiples no prueba transmisión alguna y no debe convertir a la Sierpe en monstruo clásico.",
+  }),
+  ontanedaTeratologia2026: source({
+    title: "Teratología afropacífica: la Tunda y el vocablo de la violencia en la frontera entre Ecuador y Colombia",
+    author: "Juan Suárez Ontaneda",
+    year: 2026,
+    type: "artículo de revista arbitrada",
+    url: "https://lalrp.net/articles/10.26824/lalr.660",
+    summary:
+      "Sostiene que la Tunda es una sola a ambos lados de la frontera y que su nombre es también un verbo: entundar, el estado de ensueño y abandono en que queda la víctima, para el que no hay otro vocabulario. Rastrea los registros desde el periodo colonial en Ecuador hasta las etnografías, cuentos y canciones del siglo XX, con Adalberto Ortiz entre ellos, y lee a la criatura como figura de la frontera y del ciclo largo de violencias sobre los niños del Pacífico.",
+    limitation:
+      "Es crítica literaria y cultural: no recoge versiones nuevas ni aporta narradores colombianos. Su centro de gravedad es Esmeraldas y la lectura fronteriza, y no menciona en ningún momento a la Tulavieja.",
+  }),
+  archivesTulivieja2018: source({
+    title: "La Tulivieja, Panama",
+    author: "USC Digital Folklore Archives, Universidad del Sur de California",
+    year: 2018,
+    type: "archivo universitario de tradición oral",
+    url: "https://folklore.usc.edu/la-tulivieja-panama/",
+    summary:
+      "Es la pieza que permite separar los dos nombres que el sitio venía fundiendo: registra la Tulivieja como leyenda panameña, contada por una joven nacida y criada en Ciudad de Panamá, con su trama propia —la mujer que ahoga a su hijo, el castigo divino, la cara llena de agujeros, las alas de murciélago, las patas de gallina, el sombrero de tule y los pechos llenos de leche—, sin pata de molinillo, sin entunde y sin suplantación de la madre.",
+    limitation:
+      "Es panameña y describe a la Tulivieja, no a la Tunda. Además es una entrada de archivo estudiantil: la narradora tenía veinte años, contaba desde Los Ángeles el 24 de abril de 2018 y ella misma especula con un parentesco con La Llorona mexicana, especulación que no se recoge.",
+  }),
+  bolivarFondo: source({
+    title: "Fondo Documental Afro-Andino",
+    author: "Universidad Andina Simón Bolívar y Proceso de Comunidades Negras; archivo reunido por Juan García Salazar",
+    type: "archivo de tradición oral",
+    url: "https://www.uasb.edu.ec/vinculacion/fondo-documental-afro%E2%88%92andino/",
+    summary:
+      "Es el depósito donde está grabada la Tunda del lado ecuatoriano: más de tres mil horas de audio y 1.333 archivos de tradición oral de Esmeraldas y el valle del Chota, recogidos durante más de treinta años entre decimeros, curanderos de culebra, arrulladoras y cuenteros.",
+    limitation:
+      "La página institucional describe el acervo pero no publica los relatos: ninguna versión de la Tunda se consultó aquí de primera mano. Es material afroecuatoriano, no colombiano, y el cotejo con las versiones de Tumaco está pendiente.",
+  }),
 };
 
 export const afroSourceKeysBySlug = {

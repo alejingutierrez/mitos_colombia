@@ -133,6 +133,74 @@ export const umbraSources = {
     limitation:
       "Una referencia cartográfica moderna solo fija el lugar; no acredita la historicidad de la desaparición de los jeques.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  ticoraLengua2021: source({
+    title: "Lengua Umbra como lengua chocó: una clasificación en disputa",
+    author: "Simón González Ticora",
+    year: 2021,
+    type: "trabajo de grado universitario",
+    url: "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/110d072a-f035-4105-8561-b1733e8f3bb5/content",
+    summary:
+      "Es lo único que respalda el topónimo del refugio fuera del reportaje: recoge que un hablante «era oriundo de un lugar llamado la Guaira, de donde se dice que tuvo lugar una mayor resistencia a la asimilación social y cultural criolla». Y reconstruye el recorrido histórico que el relato presupone: los umbra encomendados en 1559, trasladados a Quinchía y Riosucio para las minas de Picará y Mápura, sacados en 1627 al valle de los Pirzas, y reaparecidos en 1990 en torno a Escopetera y Pirza.",
+    limitation:
+      "Es un trabajo de grado de pregrado, no una publicación arbitrada. No menciona ni los jeques, ni el cerro Batero, ni la desaparición: nada liga en él La Guaira a esta historia, de modo que el respaldo es del topónimo y no del episodio.",
+  }),
+  ospinaEntre2020: source({
+    title: "Entre cerros y montañas. Memorias de resistencias en Quinchía, Colombia",
+    author: "Alberto A. Berón Ospina, Juan Pablo Arciniegas Martin, Isabel Cristina Castillo Quintero y Jefferson Jaramillo Marín",
+    year: 2020,
+    type: "libro universitario de memoria e historia oral",
+    url: "https://comunicaciones.utp.edu.co/wp-content/uploads/sites/2/Entre-cerros-y-Montan-as-Memorias-de-resistencias-en-Quinchia-Risaralda-pdf.pdf",
+    summary:
+      "Da el escenario y una objeción. Registra el cerro de Batero, también llamado Karambá, con el significado «piedra alta y dura», llama a los oriundos habitantes de la tierra de Guacuma y fecha en 1539 la llegada de Jorge Robledo a la zona. Y sostiene que, tras la conquista, al territorio llegaron familias de diverso origen que fueron elaborando, por intercambio lingüístico, la lengua conocida como umbra: una historia de formación posterior que no es la que el relato presupone.",
+    limitation:
+      "Su objeto es la memoria de la violencia del siglo XX en Quinchía; lo del cerro y la lengua son párrafos de contexto, sin discusión de fuentes. Y la tesis del umbra como lengua formada después de la conquista se enuncia de pasada, sin demostración.",
+  }),
+  leoncronica1553: source({
+    title: "La crónica del Perú, primera parte",
+    author: "Pedro de Cieza de León",
+    year: 1553,
+    type: "crónica del siglo XVI",
+    url: "https://archive.org/details/lacrnicadelper00ciez",
+    summary:
+      "Aporta dos paralelos de la misma comarca. En el capítulo XV cuenta que los naturales de un valle vecino a Ancerma «dejaron su antigua tierra» y que muchos, «por huir de la crueldad de los españoles, se fueron a unas bravas y altas montañas que están por encima deste valle»: subir al monte para dejar de estar donde los buscan está registrado como hecho corriente. Y conserva el episodio de Tamaracunga en Pirsa, fechado en 1549, donde un religioso interviene sobre un indígena acosado por presencias y el desenlace es el bautismo.",
+    limitation:
+      "Cieza escribe desde la conquista y sobre pueblos a los que se estaba sometiendo, y sus capítulos están construidos para justificar el sometimiento. Escribe Tamaracunga y no Taramakunga, y lo sitúa en Pirsa en 1549 como hermano joven del señor natural, no como el defensor de la lengua del relato: no consta que sean la misma figura.",
+  }),
+  caicedoComentarios2018: source({
+    title: "Comentarios al libro de Guillermo Rendón sobre el descubrimiento de indígenas Quimbaya en Riosucio (Caldas), en Ciencia Nueva 2(1), pp. 154-171",
+    author: "Luis Javier Caicedo",
+    year: 2018,
+    type: "artículo académico de revisión crítica",
+    url: "https://revistas.utp.edu.co/index.php/historia/article/view/18261",
+    summary:
+      "Fija la escala de lo que se puede afirmar sobre los umbra del siglo XVI: sostiene que Umbra no designaba una provincia extensa sino un sitio y una loma, que en una relación de 1559 Umbría figura como una entre unas treinta parcialidades encomendadas en la provincia de Ancerma, y desmonta las reconstrucciones que unen con demasiada seguridad Umbra, Kirma, Anserma y Quimbaya.",
+    limitation:
+      "Es una reseña crítica dirigida a una obra concreta y no examina el relato de los jeques. Su aporte es de cautela y no de contenido.",
+  }),
+  marinPacificacion2020: source({
+    title: "Pacificación territorial e insubordinación social en una «Plaza Roja». El caso de Quinchía, Colombia, en Anuario Colombiano de Historia Social y de la Cultura 47(2)",
+    author: "Jefferson Jaramillo Marín, Alberto Berón Ospina y Juan Carlos Victoria Mena",
+    year: 2020,
+    type: "artículo de historia social",
+    url: "https://www.redalyc.org/journal/1271/127164235005/html/",
+    summary:
+      "Documenta la disolución de los resguardos, la supresión del gobierno indígena y la formación de los corregimientos de Batero e Irra, es decir, la cadena de presiones que continúa la que el relato sitúa en el siglo XVI y que explica por qué la lengua siguió hablándose sólo en privado.",
+    limitation:
+      "Es historia social del siglo XX y no menciona a los jeques ni la desaparición en el cerro: aporta la continuidad del despojo, no el episodio.",
+  }),
+  gomezHistoria2013: source({
+    title: "Historia extensa de Pereira",
+    author: "Víctor Zuluaga Gómez",
+    year: 2013,
+    type: "historia regional universitaria",
+    url: "https://repositorio.utp.edu.co/server/api/core/bitstreams/4f719db8-fd72-4308-857f-6025849013c8/content",
+    summary:
+      "Muestra lo que sí quedó escrito de esa represión: en 1557 el teniente Luis de Guevara mandó capturar y remitir a Anserma a los caciques de la provincia, entre ellos Tuzarma y Aytamara de Mapura, Opirama de Andica, Guática y don Francisco de Pirsa. Es el contraste exacto del relato: a los que el poder alcanzó los nombra el archivo, y a los que se le escaparon no.",
+    limitation:
+      "Es historia regional de divulgación universitaria, sin exponer en el pasaje las referencias documentales de la lista, y no menciona jeques ni el cerro Batero.",
+  }),
 };
 
 /**
