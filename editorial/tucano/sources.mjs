@@ -119,3 +119,34 @@ export function pickTucanoSources(primaryKey) {
     return selected;
   });
 }
+
+/**
+ * Vía por entradas, para los mitos reescritos: una lista propia de claves, o de
+ * `{ key, summary, limitation }` cuando el mito quiere decir qué aporta esa
+ * obra a él en particular. La de arriba arma un reparto fijo con un solo
+ * interruptor y se conserva como respaldo.
+ */
+export function entradasPropias(...entries) {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entries) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = tucanoSources[key];
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente desconocida en tucano: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
+}

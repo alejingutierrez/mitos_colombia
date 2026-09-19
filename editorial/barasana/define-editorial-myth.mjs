@@ -12,18 +12,26 @@ const defaultContextKeys = [
 
 export function defineBarasanaMyth({
   narrativeSource,
+  // Fuentes propias del mito; sustituyen al reparto compartido cuando existen.
+  sourceKeys,
   contextSources = defaultContextKeys,
   seoTitle,
   seoDescription,
   focusKeywords,
   ...input
 }) {
-  const selectedSources = pickBarasanaSources(
+  const selectedSources = sourceKeys
+    ? pickBarasanaSources(...sourceKeys)
+    : pickBarasanaSources(
     narrativeSource,
     ...contextSources,
   );
-  if (selectedSources.length !== 7) {
-    throw new Error(`${input.slug}: se esperaban siete fuentes únicas.`);
+  // Antes exigía exactamente 7: el reparto en bloque escrito como
+  // aserción. Lo que importa es que haya fuentes suficientes.
+  if (selectedSources.length < 5) {
+    throw new Error(
+      `${input.slug}: ${selectedSources.length} fuentes únicas, el mínimo son cinco.`,
+    );
   }
   return buildBarasanaEditorialMyth({
     ...input,

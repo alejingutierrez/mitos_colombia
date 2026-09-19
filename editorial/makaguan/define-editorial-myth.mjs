@@ -1,7 +1,9 @@
 import { buildMakaguanEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickMakaguanSources } from "./sources.mjs";
 
-const sourceKeys = [
+// Reparto por defecto. Un mito que declare su propio `sourceKeys` lo sustituye
+// entero: antes los tres compartían esta lista y no había manera de separarlos.
+const sourceKeysPorDefecto = [
   "mattar2024",
   "unal2024",
   "icbf2021",
@@ -12,6 +14,7 @@ const sourceKeys = [
 ];
 
 export function defineMakaguanMyth({
+  sourceKeys = sourceKeysPorDefecto,
   seoTitle,
   seoDescription,
   focusKeywords,
