@@ -90,28 +90,114 @@ export function requirementsFor(entity) {
   return stateful && modelStates.length ? [base, stateful] : [base];
 }
 
+/** Palabras vacias que no distinguen un estrato de otro. */
+const VACIAS = new Set("para pero como mas muy este esta estos estas cada solo sola sino desde hasta entre sobre bajo ante tras todo toda todos todas otro otra otros otras cuando donde porque aunque sino mismo misma nunca siempre".split(" "));
+
+const palabras = (texto) => String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  .replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 3 && !VACIAS.has(w));
+
+/**
+ * Parte `plan.visual_system.era` en preambulo y estratos etiquetados.
+ *
+ * Un estrato abre frase y cierra en dos puntos: «Fundacion (la mayoria del
+ * corpus):», «B, 1603:», «Republicano del XIX, que es el grueso:». Lo que va
+ * antes del primero es preambulo y **se conserva siempre**, porque ahi vive la
+ * regla que ordena los estratos («tres estratos que no se mezclan», «el objeto
+ * que decide es el alumbrado»).
+ */
+export function splitEra(era) {
+  const texto = String(era || "").trim();
+  const re = /(?:^|(?<=[.;])\s+)([A-ZÁÉÍÓÚÑ][^.;:]{1,45}):\s+/g;
+  const marcas = [...texto.matchAll(re)];
+  if (marcas.length < 2) return { preamble: texto, strata: [] };
+  const preamble = texto.slice(0, marcas[0].index).trim();
+  const strata = marcas.map((m, i) => ({
+    label: m[1].trim(),
+    text: texto.slice(m.index, i + 1 < marcas.length ? marcas[i + 1].index : texto.length).trim(),
+  }));
+  return { preamble, strata };
+}
+
+/**
+ * Una frase de prohibicion absoluta vale para toda la biblia aunque este
+ * escrita dentro del ultimo estrato. Santander cierra con «La crinolina de aros
+ * no existe antes de 1856 y no entra en la escena de 1828», y esa regla no
+ * puede desaparecer porque la ficha viva en el estrato colonial.
+ *
+ * Exige frase entera: las prohibiciones de estrato van como inciso —«sin metal
+ * forjado, sin moneda, sin plata»— y esas si son propias de su capa.
+ */
+const PROHIBICION_ABSOLUTA = /(?:^|(?<=[.;])\s*)[^.;]*\b(?:no existe|no entra|no puede|no hay|nunca|jam[aá]s|prohibid)\b[^.;]*[.;]/gi;
+
+/**
+ * **Recorte 1.** `era` enumeraba los tres estratos del corpus en las 103
+ * laminas de katios cuando a cada ficha le aplica **uno**. Se estrecha al
+ * estrato en que esa ficha vive, medido contra lo que el agente escribio en su
+ * `design`. Conservador por diseño: si ningun estrato gana con claridad, se
+ * devuelven todos. La defensa contra el anacronismo no se negocia por ahorrar.
+ */
+export function narrowEra(era, entity) {
+  const { preamble, strata } = splitEra(era);
+  if (!strata.length) return { text: String(era || "") || null, basis: null };
+
+  const d = entity.design || {};
+  const firma = new Set(palabras([d.silhouette, d.palette, d.scale, ...(d.materials || []),
+    ...(d.continuity || []), ...(d.documented || []), entity.description].join(" ")));
+
+  const puntuados = strata.map((s) => {
+    const suyas = new Set(palabras(s.text));
+    let comunes = 0;
+    for (const w of suyas) if (firma.has(w)) comunes += 1;
+    return { ...s, score: comunes / Math.sqrt(suyas.size || 1) };
+  }).sort((a, b) => b.score - a.score);
+
+  const [mejor, segundo] = puntuados;
+  if (!mejor.score || (segundo && mejor.score < segundo.score * 1.3)) {
+    return { text: String(era || ""), basis: "sin estrato dominante: se conservan todos" };
+  }
+
+  // Las prohibiciones absolutas de los estratos descartados viajan igual.
+  const descartadas = strata.filter((s) => s.label !== mejor.label)
+    .flatMap((s) => s.text.match(PROHIBICION_ABSOLUTA) || [])
+    .map((f) => f.trim()).filter(Boolean);
+
+  const text = [preamble, mejor.text, ...descartadas].filter(Boolean).join(" ").trim();
+  return { text, basis: mejor.label };
+}
+
+/** Las citas sostienen la ficha; no dirigen el pincel. Siguen en `design_contract`. */
+const CITA = /^((?:corpus|dossier|canon|m[oó]dulo|fuente)\b[^:]{0,40}|[^:]{0,60}\b(?:1[4-9]\d\d|20[0-2]\d)\b[^:]{0,40}|[^:]{0,40}\bet al\b[^:]{0,20})\s*:\s+/i;
+
 /**
  * La tecnica abre el prompt y se repite al cierre. No es estilo: es la
  * instruccion que el modelo tira primero cuando el prompt se alarga. La tanda
  * 01 wayuu salio fotorrealista por decirla al final, entre veinte reglas.
+ *
+ * **Recorte 2.** `style_medium` viajaba como campo aparte y no repetia ni una
+ * frase de `technique` —medido: 0 % de solape—, asi que la tecnica se decia en
+ * dos bloques separados por cinco campos. Ahora se pliega en uno solo al
+ * frente. No ahorra caracteres: los concentra donde mandan.
  */
 function buildPromptSpec({ plan, entity, purpose, view }) {
   const vs = plan.visual_system || {};
   const technique = vs.technique || "";
+  const era = narrowEra(vs.era, entity);
   return {
     use_case: "stylized-concept",
     asset_type: `Biblia visual ${plan.community} V1 - ${purpose}`,
-    technique_first: technique,
+    technique_first: [technique, vs.style_medium].filter(Boolean).join(" "),
     primary_request: `${view.purpose} para ${entity.name}. ${entity.design.silhouette}`,
-    style_medium: vs.style_medium || technique,
     composition_framing: `${view.aspect}; mundo full bleed hasta los cuatro limites; ${entity.design.scale}`,
     lighting_mood: vs.lighting || "luz natural lateral suave, sombras fisicas entre capas",
-    materials_textures: [...(vs.materials_base || []), ...entity.design.materials].join("; "),
-    era: vs.era || null,
+    // La lista de materiales del corpus se repetia identica en cada lamina, y el
+    // agente escribio la de su entidad **contra** ella: repetirla es ruido.
+    materials_textures: (entity.design.materials || []).join("; "),
+    era: era.text || null,
     constraints: [
-      entity.design.silhouette,
-      `mostrar: ${entity.description}`,
-      ...(entity.design.documented || []).map((feature) => `documentado: ${feature}`),
+      // La silueta ya viaja entera en `primary_request`, y `entity.description`
+      // es campo de inventario —lo que la figura hace en todo el corpus—, no de
+      // diseño: en una hoja de identidad empuja al modelo a narrar nueve actos.
+      ...(entity.design.documented || []).map((feature) => `documentado: ${feature.replace(CITA, "")}`),
       ...(vs.palette_rules || []),
       "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",
     ],
@@ -186,6 +272,10 @@ export function buildModels(plan) {
         design_status: "ready_for_pilot_review",
         evidence_refs: entity.evidence || [],
         design_contract,
+        // Fuera de `prompt_spec` a proposito: es rastro de auditoria, no
+        // instruccion, y no debe pesar en el prompt. Dice que estrato de epoca
+        // se le dejo a esta ficha y por que, para poder revisar el recorte.
+        era_basis: narrowEra(plan.visual_system?.era, entity).basis,
         prompt_spec: buildPromptSpec({ plan, entity, purpose, view: VIEW_BY_PURPOSE[purpose] }),
         views,
       };
