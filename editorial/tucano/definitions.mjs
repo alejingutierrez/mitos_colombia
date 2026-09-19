@@ -3,8 +3,20 @@ import { defineTucanoMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineTucanoMyth({
     slug: "cuando-la-danta-perdio-su-hegemonia",
+    sourceKeys: [
+      "fulop1954",
+      "fulop1956",
+      "maiaAndrello2019",
+      "lanaLana1995",
+      {
+        key: "hughJonesDominguez1981",
+        summary:
+          "La historia del Vaupés —misión, caucho, comercio, escuela— en la que se inscribe todo el corpus recogido por Fulop.",
+        limitation:
+          "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
+      },
+    ],
     title: "Wejké, la danta, y el pito que abría la tierra",
-    primarySource: "fulop1956",
     excerpt:
       "Wejké dijo que se comería a la gente y enseñó el pito con que iba a matar; Yepá Huáke se lo quitó, se lo dio al mono y le dejó el pitico chiquito.",
     tags: ["tucano", "danta", "animales", "castigo"],
@@ -65,8 +77,26 @@ Dentro del propio corpus de Marcos Sierra, el poder vive en objetos —los Yurup
   }),
   defineTucanoMyth({
     slug: "el-origen-del-hombre",
+    sourceKeys: [
+      "fulop1954",
+      "maiaAndrello2019",
+      "lanaLana1995",
+      {
+        key: "fulop1956",
+        summary:
+          "La otra mitad de la misma campaña: los nueve conjuntos narrativos que Marcos Sierra dictó a Fulop en Guadalajara en 1954, alrededor de este mismo ciclo.",
+        limitation:
+          "No se usó para escribir esta ficha. Se cita como la otra mitad del corpus de Fulop, nunca como fuente de una escena de esta página.",
+      },
+      {
+        key: "hughJonesDominguez1981",
+        summary:
+          "La historia del Vaupés —misión, caucho, comercio, escuela— en la que se inscribe todo el corpus recogido por Fulop.",
+        limitation:
+          "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
+      },
+    ],
     title: "La Canoa de Transformación y el origen de los pueblos",
-    primarySource: "fulop1954",
     excerpt:
       "Yúpuri Baúro conduce a la gente por ríos y casas de surgimiento en una canoa-güío hasta reconocer territorios, nombres y diferencias.",
     tags: ["tucano", "origen", "transformación", "selva"],
@@ -115,8 +145,26 @@ El segundo paralelo es de otro pueblo. En el libro desana de Umusi Pãrõkumu y 
   }),
   defineTucanoMyth({
     slug: "la-aparicion-del-sol-del-viento-y-los-mares",
+    sourceKeys: [
+      "fulop1954",
+      "maiaAndrello2019",
+      "lanaLana1995",
+      {
+        key: "fulop1956",
+        summary:
+          "La otra mitad de la misma campaña: los nueve conjuntos narrativos que Marcos Sierra dictó a Fulop en Guadalajara en 1954, alrededor de este mismo ciclo.",
+        limitation:
+          "No se usó para escribir esta ficha. Se cita como la otra mitad del corpus de Fulop, nunca como fuente de una escena de esta página.",
+      },
+      {
+        key: "hughJonesDominguez1981",
+        summary:
+          "La historia del Vaupés —misión, caucho, comercio, escuela— en la que se inscribe todo el corpus recogido por Fulop.",
+        limitation:
+          "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
+      },
+    ],
     title: "Yepá Huáke hace aparecer el Sol, el viento y los mares",
-    primarySource: "fulop1954",
     excerpt:
       "Yepá Huáke hace aparecer el Sol, sopla el primer viento, extiende la tierra y rodea el mundo con mares de los que nacen grandes ríos.",
     tags: ["tucano", "Sol", "viento", "origen"],
@@ -167,8 +215,26 @@ El segundo paralelo es de otro pueblo y hay que decirlo. En «Antes o mundo não
   }),
   defineTucanoMyth({
     slug: "los-blancos-dominan-a-los-indios",
+    sourceKeys: [
+      "fulop1954",
+      "hughJonesDominguez1981",
+      "lanaLana1995",
+      {
+        key: "fulop1956",
+        summary:
+          "La otra mitad de la misma campaña: los nueve conjuntos narrativos que Marcos Sierra dictó a Fulop en Guadalajara en 1954, alrededor de este mismo ciclo.",
+        limitation:
+          "No se usó para escribir esta ficha. Se cita como la otra mitad del corpus de Fulop, nunca como fuente de una escena de esta página.",
+      },
+      {
+        key: "maiaAndrello2019",
+        summary:
+          "El relato que los propios tucano del Vaupés publican hoy, con el que se puede contrastar lo que Fulop escribió en los años cincuenta.",
+        limitation:
+          "No se usó para escribir esta ficha, y es del lado brasileño: vecindad documentada. Se cita como cotejo contemporáneo, nunca para completar una escena.",
+      },
+    ],
     title: "La memoria y el papel en el ciclo de Yepá Huáke",
-    primarySource: "fulop1954",
     excerpt:
       "Yepá Huáke contrapone la memoria confiada a Yúpuri Baúro con los cuadernos entregados al extranjero dentro de un relato marcado por el contacto.",
     tags: ["tucano", "memoria", "origen", "transformación"],
@@ -219,8 +285,26 @@ Los relatos que explican el reparto desigual de la escritura son frecuentes en c
   }),
   defineTucanoMyth({
     slug: "yepa-abandona-la-tierra",
+    sourceKeys: [
+      "fulop1954",
+      "lanaLana1995",
+      "fulop1956",
+      {
+        key: "maiaAndrello2019",
+        summary:
+          "El relato que los propios tucano del Vaupés publican hoy, con el que se puede contrastar lo que Fulop escribió en los años cincuenta.",
+        limitation:
+          "No se usó para escribir esta ficha, y es del lado brasileño: vecindad documentada. Se cita como cotejo contemporáneo, nunca para completar una escena.",
+      },
+      {
+        key: "hughJonesDominguez1981",
+        summary:
+          "La historia del Vaupés —misión, caucho, comercio, escuela— en la que se inscribe todo el corpus recogido por Fulop.",
+        limitation:
+          "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
+      },
+    ],
     title: "El sueño, la noche y la partida de Yepá Huáke",
-    primarySource: "fulop1954",
     excerpt:
       "Serítia y Patáro reciben una caja con sueño y noche; al abrirla antes de tiempo alteran el camino y Yepá Huáke reparte después sus semillas.",
     tags: ["tucano", "noche", "sueño", "Yepá Huake"],
@@ -275,8 +359,26 @@ Caja pesada, orden de no abrirla, apertura a mitad de camino, oscuridad de golpe
   }),
   defineTucanoMyth({
     slug: "yepa-castiaga-a-los-animales",
+    sourceKeys: [
+      "fulop1954",
+      "fulop1956",
+      "maiaAndrello2019",
+      {
+        key: "lanaLana1995",
+        summary:
+          "La colección desana del Tiquié, el punto de comparación más cercano para la canoa que sube el río y la salida de los pueblos.",
+        limitation:
+          "No se usó para escribir esta ficha, y es desana y brasileña: vecindad doble. Se cita para contrastar, nunca para completar.",
+      },
+      {
+        key: "hughJonesDominguez1981",
+        summary:
+          "La historia del Vaupés —misión, caucho, comercio, escuela— en la que se inscribe todo el corpus recogido por Fulop.",
+        limitation:
+          "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
+      },
+    ],
     title: "Yepá Huáke y la transformación de los animales",
-    primarySource: "fulop1954",
     excerpt:
       "Los animales comen sus propias colas y pierden su condición anterior; después Yepá Huáke interroga a quienes amenazan con devorar personas.",
     tags: ["tucano", "animales", "transformación", "selva"],
@@ -331,8 +433,26 @@ El segundo paralelo está dentro del mismo corpus. En la colección de 1956, Ful
   }),
   defineTucanoMyth({
     slug: "la-semilla-de-la-yuca-tucano",
+    sourceKeys: [
+      "fulop1956",
+      "fulop1954",
+      "lanaLana1995",
+      {
+        key: "maiaAndrello2019",
+        summary:
+          "El relato que los propios tucano del Vaupés publican hoy, con el que se puede contrastar lo que Fulop escribió en los años cincuenta.",
+        limitation:
+          "No se usó para escribir esta ficha, y es del lado brasileño: vecindad documentada. Se cita como cotejo contemporáneo, nunca para completar una escena.",
+      },
+      {
+        key: "hughJonesDominguez1981",
+        summary:
+          "La historia del Vaupés —misión, caucho, comercio, escuela— en la que se inscribe todo el corpus recogido por Fulop.",
+        limitation:
+          "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
+      },
+    ],
     title: "Yepá Uejkeó y la semilla de la yuca",
-    primarySource: "fulop1956",
     excerpt:
       "Cuando ya no quedan las piedras de la comida, Yepá Uejkeó y tres mujeres llevan tallos de yuca a una huerta preparada junto a Diawí.",
     tags: ["tucano", "chagra", "semillas", "transformación"],

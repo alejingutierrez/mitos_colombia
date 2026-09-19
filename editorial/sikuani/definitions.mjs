@@ -13,24 +13,22 @@ function myth({ title, summary, tags, ...definition }) {
   };
 }
 
-const ortizContext = [
-  "villaRecord",
-  "icbfEnsani",
-  "cnmh",
-  "ucla",
-  "onic",
-  "baquero",
-];
-
 export const sikuaniDefinitions = [
   myth({
     slug: "historia-de-un-brujo",
+    sourceKeys: [
+      "villaPosse1993",
+      "ortiz1982",
+      "torres1994",
+      "agudelo2015",
+      "baquero1989",
+      "ortizRezo1988",
+      "queixalos1991",
+    ],
     title: "El brujo y el águila enorme",
     summary:
       "Dos enemigos envían a un brujo hacia una laguna peligrosa; su conocimiento y sus transformaciones le permiten volver con vida.",
     tags: ["brujo", "águila", "yopo", "prueba"],
-    narrativeSource: "villaPdf",
-    contextSources: ortizContext,
     mito: `Dos hombres querían quitarse de encima a un brujo. Le hablaron de una laguna lejos, que él no conocía, y le dijeron que allá había pescado. Lo mandaron a pescar seguros de que no volvía.
 
 El brujo aceptó el viaje. Llegó a la laguna, vio que en efecto había peces y se puso a preparar la jornada, pero antes de meterse al agua sorbió yopo para ver con qué estaba tratando. Con el yopo encima reconoció el lugar. Cerca del agua había cuatro serpientes Kueima. No lo tomaron por sorpresa.
@@ -72,14 +70,21 @@ El águila desmedida tiene su lugar propio. En el ciclo de Kuwei, después de qu
   }),
   myth({
     slug: "historia-de-un-tigre",
+    sourceKeys: [
+      "villaPosse1993",
+      "ortiz1982",
+      "men2015",
+      "ortizRezo1988",
+      "ortiz1976",
+      "queixalos1978",
+      "baquero1989",
+    ],
     relatoCorto:
       "El texto completo no está en disco. Sólo se conserva el resumen heredado de una pieza breve, y estirarlo hasta las trescientas palabras obligaría a inventar escenas que la fuente no da.",
     title: "El jaguar y los dos hermanos",
     summary:
       "Una disputa familiar empuja a una mujer al camino; el regreso de su esposo revela una pérdida causada por el jaguar y por la hostilidad.",
     tags: ["jaguar", "familia", "camino", "duelo"],
-    narrativeSource: "villaPdf",
-    contextSources: ortizContext,
     mito: `Dos hermanos vivían cerca, cada uno con su familia. El menor salió a cambiar yopo y lancetas y se demoró. Su mujer se quedó en casa de la suegra con un hijo todavía de brazos.
 
 En esos días los niños de las dos mujeres se pelearon, como se pelean los niños. La mujer del hermano mayor le reclamó a su cuñada con dureza y no se quedó con nada adentro: le hizo sentir que allí ya no tenía dónde estar. La otra no contestó. Al día siguiente alzó al niño y salió sola a buscar a su marido.
@@ -117,14 +122,21 @@ De esta versión es propio lo demás: el intercambio de yopo y lancetas, la pele
   }),
   myth({
     slug: "kawiri-monae",
+    sourceKeys: [
+      "villaPosse1993",
+      "ortiz1982",
+      "ortiz1976",
+      "ortizRezo1988",
+      "ortizCesteria1988",
+      "men2015",
+      "queixalos1978",
+    ],
     relatoCorto:
       "El texto completo no está en disco; sólo el resumen heredado de una pieza breve, y no hay con qué extenderlo sin agregar escenas que la fuente no da.",
     title: "Kawiri Monae y la mujer ausente",
     summary:
       "Una mujer recién parida desaparece con los Kawiri Monae y vuelve años después, cuando su nueva familia la conduce hasta los suyos.",
     tags: ["Kawiri Monae", "retorno", "familia", "bachacos"],
-    narrativeSource: "villaPdf",
-    contextSources: ortizContext,
     mito: `Una mujer acababa de tener a su hijo y estaba apartada, en una casita separada de la otra, como se hace en esos días. Allí llegaron los Kawiri Monae. Se la llevaron con el niño, y en la casa nadie supo para dónde.
 
 Los parientes salieron a buscarla. Recorrieron los alrededores, bajaron por los caños, miraron en los sitios a los que ella solía ir, y la fueron llamando a gritos por el monte. No les contestó nadie.
@@ -162,14 +174,21 @@ Las dos historias empiezan igual: una mujer sola en la casa apartada y unos que 
   }),
   myth({
     slug: "la-mujer-sarnosa",
+    sourceKeys: [
+      "villaPosse1993",
+      "ortiz1982",
+      "ortizCesteria1988",
+      "ortizRezo1988",
+      "torres1994",
+      "men2015",
+      "ortiz1976",
+    ],
     relatoCorto:
       "El texto completo no está en disco; sólo el resumen heredado de una pieza breve, y estirarlo hasta las trescientas palabras obligaría a inventar.",
     title: "La mujer y el áinawi",
     summary:
       "Abandonada por su esposo, una mujer recibe ayuda de un áinawi invisible, sana y elige no volver con quien la dejó.",
     tags: ["áinawi", "abandono", "sanación", "mundo subterráneo"],
-    narrativeSource: "villaPdf",
-    contextSources: ortizContext,
     mito: `Un hombre dejó a su mujer en la cabecera de un caño y se fue. Ella tenía sarna. Quedó sola allá, sin canoa y sin camino, y sin nadie a quien pedirle nada.
 
 Del monte le salió otro hombre. No llegó con las manos vacías: le trajo jabón, un vestido, perfume y un peine. Con eso ella se lavó, se curó la piel y volvió a quedar como era antes.
@@ -209,14 +228,21 @@ Y en El hombre pájaro, también de 2015, las dos mujeres de Makoko se van al r�
   }),
   myth({
     slug: "el-tigre",
+    sourceKeys: [
+      "villaPosse1993",
+      "ortiz1982",
+      "ortizRezo1988",
+      "ortizCesteria1988",
+      "ortiz1976",
+      "baquero1989",
+      "men2015",
+    ],
     relatoCorto:
       "El relato no tiene fuente en disco ni fuera de ella: el resumen heredado es todo lo que hay, y no da más de lo que aquí se cuenta.",
     title: "El jaguar en la casa Tsorueto",
     summary:
       "Una mujer descubre un jaguar dentro de una casa Tsorueto, salva a sus hijos por el techo y avisa a los hermanos de su esposo.",
     tags: ["jaguar", "Tsorueto", "rescate", "casa"],
-    narrativeSource: "villaPdf",
-    contextSources: ortizContext,
     mito: `Un hombre salió de viaje con su mujer y sus hijos a visitar a la familia. Llegaron a una casa Tsorueto, la casa de sueño. Estaba cerrada por todos lados para que no se metieran los insectos, y por fuera no se oía nada adentro. Parecía vacía.
 
 No lo estaba. Adentro había un tigre. En la oscuridad se le alcanzaban a ver los ojos, y la mujer fue la que los vio. Se lo dijo al marido. El hombre miró hacia donde ella le señalaba y no le dio importancia: dijo que sería otra cosa, que ya era tarde para seguir camino, que se quedaban ahí. Se acomodaron todos.
@@ -254,12 +280,19 @@ Lo que no se repite en ninguno de los dos es la salida por el caballete. Esa es 
   }),
   myth({
     slug: "la-danta-y-el-terecay",
+    sourceKeys: [
+      "villaPosse1993",
+      "ortiz1982",
+      "ortizCesteria1988",
+      "ortizRezo1988",
+      "ortizQueixalosOrnitologia",
+      "ortiz1976",
+      "men2015",
+    ],
     title: "La danta y el terecay",
     summary:
       "Tras la muerte de una anciana, un terecay sigue durante años el rastro de la danta hasta encontrar una forma de vengarla.",
     tags: ["danta", "terecay", "anciana", "rastreo"],
-    narrativeSource: "villaPdf",
-    contextSources: ortizContext,
     mito: `Una anciana cuidaba animales. Un día, conversando, comentó delante de todos que el hígado de danta era sabroso. La danta la oyó.
 
 No dijo nada entonces. Al cabo de un tiempo se le acostó de un modo que la mujer creyera que podía alcanzarle el hígado metiendo el brazo por una abertura del cuerpo. La anciana metió el brazo. El animal la agarró ahí mismo, la mató y se la llevó.
@@ -305,12 +338,18 @@ Propio de esta versión es el resto: el hígado nombrado en voz alta, el cuerpo 
   }),
   myth({
     slug: "historia-de-un-viejo",
+    sourceKeys: [
+      "villaPosse1993",
+      "ortiz1982",
+      "men2015",
+      "ortiz1976",
+      "ortizRezo1988",
+      "ortizCesteria1988",
+    ],
     title: "Los hermanos y la mujer del monte",
     summary:
       "Dos hermanos abandonados recuperan la vista, sobreviven a una mujer caníbal y reciben cuatro perros surgidos de su cabeza.",
     tags: ["hermanos", "abandono", "pajuil", "cuatro perros"],
-    narrativeSource: "villaPdf",
-    contextSources: ortizContext,
     mito: `Un viudo vivía con su hijo y su hija. Cuando se volvió a casar, la nueva mujer no quiso a los niños y le insistió al padre hasta que aceptó dejarlos botados en el monte.
 
 La primera vez la niña fue regando granos de maíz por el camino, de trecho en trecho, sin que el padre alcanzara a verla. Cuando los dejó y se devolvió, los hermanos esperaron un rato y después fueron levantando los granos uno por uno, y por ahí llegaron otra vez a la casa. La mujer los vio entrar y no dijo nada.
@@ -352,19 +391,18 @@ Propio de esta versión es lo demás: los ojos restituidos con savia, el ave que
   }),
   myth({
     slug: "el-creador-del-cosmos",
+    sourceKeys: [
+      "baquero1989",
+      "queixalos1985",
+      "men2015",
+      "ortizRezo1988",
+      "ortizCesteria1988",
+      "torres1994",
+    ],
     title: "Kuwei, Kuemi y el comienzo del mundo",
     summary:
       "Kuwei ordena el mundo frente a Kuemi, señor de la oscuridad, y ensaya distintos materiales antes de formar una humanidad duradera.",
     tags: ["Kuwei", "Kuemi", "creación", "Vía Láctea"],
-    narrativeSource: "baquero",
-    contextSources: [
-      "icbfEnsani",
-      "cnmh",
-      "ucla",
-      "onic",
-      "icbfBibliography",
-      "villaRecord",
-    ],
     mito: `Antes de Kuwei mandaba un señor de las tinieblas. Se llamaba Kuemi, tenía forma de culebra gigantesca y ocupaba el universo entero: nadie podía entrar. Kuwei, a quien también se nombra Phurnaminali, pensó el mundo y lo fue sacando de su pensamiento —los cielos, el agua, los árboles, los animales— y quiso sacar de ahí también a la gente.
 
 Para acercarse a Kuemi se volvió un insecto pequeño y se prendió del sexo de su hija Puakali. Así entró en la casa de la culebra y se casó con ella. En esa casa vivía también la mujer de Kuemi, madre de los alacranes, las culebras, las arañas y las hormigas. Un día un hijo de Kuwei llegó a la casa en figura de lapa y Kuemi se lo comió. De dos pedacitos de carne que sobraron, Kuwei crió dos polluelos de águila y los hizo crecer hasta un tamaño monstruoso.
@@ -406,11 +444,19 @@ Lo propio de esta versión es el reparto: Kuemi que es culebra y es Vía Láctea
   }),
   myth({
     slug: "la-comida-para-los-muertos",
+    sourceKeys: [
+      "icbfTsamani",
+      "torres1994",
+      "agudelo2015",
+      "baquero1989",
+      "ortizRezo1988",
+      "ortizCesteria1988",
+      "men2015",
+    ],
     title: "Tsamani y el camino de la luz",
     summary:
       "Tsamani y sus cinco hermanos danzan, siguen una alimentación rigurosa y se vuelven livianos hasta ocupar un lugar entre las estrellas.",
     tags: ["Tsamani", "estrellas", "danza", "Itomo"],
-    narrativeSource: "icbfTsamani",
     mito: `Los Tsamani eran cinco hermanos: Tsamani, Kajuyali y Uwinei, y las dos hermanas, Kaweineduawa y Jumeneduawa. Eran los más sabios de los antiguos, de aquellos en los que todavía no se podía separar lo animal de lo humano, y Tsamani era el que iba adelante, el que sabía por dónde caminar.
 
 Ya habían hecho en la tierra todo lo que había que hacer. Habían tumbado el árbol de los alimentos y habían enseñado a sembrar. En la tierra ya estaba trazado el designio de la muerte, y ellos eran chamanes inmortales: les tocaba ir a poblar un espacio que no se acabara.
@@ -454,11 +500,21 @@ Del cuerpo que se aligera para cambiar de mundo hay otro caso en el corpus, y es
   }),
   myth({
     slug: "kaliwirnae-el-arbol-de-los-alimentos",
+    sourceKeys: [
+      "icbfKaliwirnae",
+      "queixalos1978",
+      "vargasKondo1974",
+      "men2015",
+      "torres1994",
+      "baquero1989",
+      "ortizRezo1988",
+      "ortizCesteria1988",
+      "queixalos1991",
+    ],
     title: "Kaliwirnae, el árbol de los alimentos",
     summary:
       "El mono nocturno oculta el gran árbol que reúne los alimentos, pero el picure y la lapa siguen el aroma de la piña y descubren su secreto.",
     tags: ["Kaliwirnae", "alimentos", "mono nocturno", "lapa"],
-    narrativeSource: "icbfKaliwirnae",
     mito: `Un niño se volvió mata de yuca, y de esa mata creció un árbol grande. Era Kaliwirnae. En sus ramas estaba toda la comida junta: la piña, el ají, la caña y frutas de todas las clases. La gente todavía no sabía que existía.
 
 El que sí sabía era Kutsikutsi, el mico de noche. Salía cuando oscurecía y volvía de madrugada oliendo a piña, y no decía nada. El picure le sintió el olor y trató de seguirlo. No pudo: el mico iba por arriba, saltando de rama en rama, y el picure se quedó abajo sin dar con el camino.

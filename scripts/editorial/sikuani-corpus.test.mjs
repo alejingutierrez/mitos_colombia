@@ -55,9 +55,100 @@ test("los diez expedientes Sikuani cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
+    // Antes: `keySources + sources === 7`. Ese siete era el reparto en bloque
+    // —una fuente narrativa más seis de contexto idénticas para las diez
+    // fichas— escrito como aserción. La Fase B del 2026-09-19 dejó en cada
+    // ficha las obras que su reescritura usó de verdad, que son entre seis y
+    // nueve. Lo que se comprueba ahora es la sustancia.
+    const fuentes = [...record.keySources, ...record.sources];
+    const urls = fuentes.map(({ url }) => url);
+    assert.ok(
+      fuentes.length >= 5,
+      `${record.slug}: ${fuentes.length} fuentes, el mínimo son cinco`,
+    );
+    assert.equal(record.keySources.length, 3);
     assert.equal(new Set(urls).size, urls.length);
+    assert.ok(urls.every((url) => url.startsWith("https://")));
+    assert.ok(
+      new Set(urls.map((url) => new URL(url).hostname)).size >= 4,
+      `${record.slug}: fuentes de menos de cuatro dominios`,
+    );
+    assert.ok(fuentes.every(({ summary, limitation }) => summary && limitation));
+  }
+});
+
+test("ninguna ficha repite el reparto de otra, y las retiradas no vuelven", () => {
+  const repartos = records.map((record) =>
+    [...record.keySources, ...record.sources]
+      .map(({ url }) => url)
+      .sort()
+      .join("|"),
+  );
+  assert.equal(
+    new Set(repartos).size,
+    records.length,
+    "dos fichas citan exactamente las mismas obras",
+  );
+
+  const todas = records.flatMap((record) => [
+    ...record.keySources,
+    ...record.sources,
+  ]);
+  const urls = todas.map(({ url }) => url);
+  // Las seis que la auditoría tumbó: la de la ONIC redirige a la portada; el
+  // PDF del ICBF no responde; las dos de FLACSO devuelven 403; la de UCLA es
+  // una página de venta sin una línea de relato; y el blogspot reproducía a
+  // Baquero sin acreditarlo.
+  for (const muerta of [
+    "onic.org.co",
+    "icbf.gov.co/sites/default/files/sikuanicompressed.pdf",
+    "repositorio.flacsoandes.edu.ec",
+    "international.ucla.edu",
+    "armonicosdeconciencia.blogspot.com",
+    "centrodememoriahistorica.gov.co",
+  ]) {
+    assert.ok(
+      !urls.some((url) => url.includes(muerta)),
+      `volvió una URL retirada: ${muerta}`,
+    );
+  }
+
+  // Baquero se cita por el artículo del Boletín Museo del Oro 23, y las dos
+  // piezas de la Audioteca —las únicas con narrador acreditado— se conservan.
+  assert.ok(
+    urls.some((url) =>
+      url.startsWith(
+        "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/6964",
+      ),
+    ),
+  );
+  assert.ok(
+    urls.some((url) =>
+      url.startsWith("https://audiotecadigital.icbf.gov.co/adultos/articulo/332"),
+    ),
+  );
+  assert.ok(
+    urls.some((url) =>
+      url.startsWith("https://audiotecadigital.icbf.gov.co/adultos/articulo/304"),
+    ),
+  );
+
+  // La frontera guahibo queda escrita donde se lee: en el `limitation`.
+  const porUrl = new Map(todas.map((fuente) => [fuente.url, fuente]));
+  for (const [fragmento, marca] of [
+    ["maguare/article/view/14222", /cuiba/i],
+    ["ornitologi", /cuiba/i],
+    ["rca/article/view/1731", /cuiba|guahibo/i],
+  ]) {
+    const fuente = [...porUrl.values()].find(({ url }) => url.includes(fragmento));
+    assert.ok(fuente, `falta la fuente ${fragmento}`);
+    assert.match(fuente.limitation, marca);
+  }
+
+  // El certificado caducado de la Audioteca se dice, no se esconde.
+  for (const articulo of ["articulo/332", "articulo/304"]) {
+    const fuente = [...porUrl.values()].find(({ url }) => url.includes(articulo));
+    assert.match(fuente.limitation, /certificado SSL|certificado/i);
   }
 });
 

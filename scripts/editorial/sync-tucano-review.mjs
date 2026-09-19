@@ -94,12 +94,26 @@ function validateRecords(provenance) {
     if (record.tags.length !== 4 || record.focus_keywords.length !== 5) {
       throw new Error(`${record.slug}: taxonomía o palabras clave inválidas.`);
     }
+    // Antes exigía siete exactas: era el dossier fijo de `pickTucanoSources`
+    // escrito como aserción, con ocho URLs heredadas que no eran las obras
+    // que la ficha había usado. Ahora son las cinco del corpus, ordenadas por
+    // ficha: las que esa página usó salen primero y quedan como clave.
     const sources = [...record.keySources, ...record.sources];
-    if (
-      sources.length !== 7 ||
-      new Set(sources.map(({ url }) => url)).size !== 7
-    ) {
-      throw new Error(`${record.slug}: se esperaban siete fuentes.`);
+    const sourceUrls = sources.map(({ url }) => url);
+    if (sources.length < 5) {
+      throw new Error(`${record.slug}: ${sources.length} fuentes; el mínimo son cinco.`);
+    }
+    if (new Set(sourceUrls).size !== sourceUrls.length) {
+      throw new Error(`${record.slug}: fuentes con URL repetida.`);
+    }
+    if (!sourceUrls.every((url) => /^https:\/\//.test(url))) {
+      throw new Error(`${record.slug}: hay una fuente sin URL https.`);
+    }
+    if (!sources.every(({ summary, limitation }) => summary && limitation)) {
+      throw new Error(`${record.slug}: hay una fuente sin resumen o sin límite.`);
+    }
+    if (!sourceUrls.some((url) => url.includes("revistas.icanh.gov.co"))) {
+      throw new Error(`${record.slug}: no cita a Fulop, que es la fuente madre.`);
     }
     if (
       !/^https:\/\//.test(record.image_url) ||
@@ -693,7 +707,12 @@ async function run() {
           },
           dossiers: records.length,
           imagePairs: records.length,
-          sourcesPerMyth: 7,
+          sourcesPerMyth: Object.fromEntries(
+            records.map((record) => [
+              record.slug,
+              record.keySources.length + record.sources.length,
+            ]),
+          ),
           tags: {
             requested: tagNames.length,
             existing: tagNames.length,
