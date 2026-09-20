@@ -147,7 +147,7 @@ Fecha de corte: **17 de septiembre de 2026**. Base: Neon (producción).
 | U'wa | 11 | Completa | Pendiente | — | — |
 | Sikuani | 10 | Completa | Pendiente | — | — |
 | Otras (23 comunidades) | 72 | Completa | Pendiente | — | — |
-| **Total** | **596** | **Completa en 596** | **378 con expediente y fuentes en Neon; 228 reescritos sobre el primario y verificados en vivo en quince comunidades (wayúu, nasa, chimila, huitoto, chamí, katío, kogui, andoque, panán, desana, tucano, barasana, ticuna, makaguán, sikuani)** | | |
+| **Total** | **596** | **Completa en 596** | **380 con expediente y fuentes en Neon; 298 reescritos sobre el primario y verificados en vivo en treinta y cinco comunidades (wayúu, nasa, chimila, huitoto, chamí, katío, kogui, andoque, panán, desana, tucano, barasana, ticuna, makaguán, sikuani, u'wa, barí, wounaan, misak, quillacingas, awá, eperara, emberá, zenú, quimbaya, ansermas, umbra, cuycuyes, yucuna, yagua, afrocolombianos, africano, yukpa, nɨkak, pirsa, ufaina)** | | |
 
 > **El denominador de esta tabla estaba mal.** Decía 407 mitos, y el sitio tiene **596** —contados el 2026-09-19 sobre `myths`, con 596 slugs distintos y ninguno despublicado—. La cifra vieja se venía arrastrando y se propagó a los cierres de varias comunidades. Lo que no cambia es el numerador: nueve comunidades cerradas y 188 fichas reescritas sobre sus primarios y verificadas en vivo. Lo que cambia es cuánto falta.
 
@@ -195,3 +195,38 @@ Fecha de corte: **17 de septiembre de 2026**. Base: Neon (producción).
 3. Seguir con Ette Ennaka, Chamí, Huitoto, Kogui, Katíos, etc., en orden
    descendente de mitos; las que no tienen módulos empiezan por escribirlos.
 4. Registrar cada lote en §5 y en `ESTADO.md` con su fecha y conteo final.
+
+## Bloque B/C/D · 2026-09-19
+
+Setenta mitos en veinte comunidades, reescritos sobre el primario y con las
+fuentes repartidas ficha a ficha: u'wa 11, zenú 7, misak 7, barí 6,
+quillacingas 6, wounaan 5, afrocolombianos y africano 5, quimbaya 3, yucuna 2,
+awá 2, eperara 2, umbra 2, ansermas 2, yukpa 2, cuycuyes 2, y uno cada uno
+emberá, nɨkak, pirsa, ufaina y yagua. Cero bloqueos en la auditoría de
+fuentes, 168 pruebas en verde y `verificar --vivo` conforme en las veintiuna
+rutas de comunidad.
+
+Tres decisiones editoriales tomadas con el director:
+
+- **«El origen de las frutas» se reclasificó a Huitoto / Murui-Muina**
+  conservando URL y texto. Publicaba el ciclo uitoto-muinane de Moniya Amena
+  bajo los yucuna; *Libro al Viento* 44 lo atribuye sólo a «Putumayo». El
+  episodio yucuna de las frutas, escrito durante esta revisión, queda en el
+  dossier sin publicar.
+- **La ficha yagua pasa a «Los mellizos y el árbol del agua»**: lo publicado
+  no era un relato sino una descripción del pueblo, con nombres que ninguna
+  fuente sostiene. De los antiguos sólo sobrevive Há.
+- **«Tulavieja (Tunda)» pasa a La Tunda.** Son dos seres de dos países, y la
+  única referencia que ataba «Tulavieja» al Chocó salía de este sitio.
+
+Queda pendiente decidir sobre tres cosas más: que **«Kcrey» no existe fuera de
+este sitio** (el sustrato misak del mito sí está documentado, el título no);
+que **umbra y ansermas son el mismo pueblo** y el sitio los duplica en cuatro
+fichas, con una quinta escondida en `pirsa`; y que la comunidad **«Africano»**
+agrupa tres fichas que pertenecen a tradiciones distintas.
+
+Del lado del kit: el reparto en bloque tenía tres escondites —la lista dentro
+del `pick`, el bloque compartido dentro del constructor y, el más profundo, el
+`define` llamando al `pick` sin argumentos—; el `<title>` de la página sale de
+`seo_pages` y no de `myths.seo_title`; y ahora se puede crear un expediente
+sin revertir la portada y reclasificar un mito sin despublicarlo.
