@@ -238,6 +238,42 @@ function cotejarRelato(acta, relato) {
     bloqueos.push(`el relato da fechas o cifras sin nudo: ${cifrasHuerfanas.join(", ")}`);
   }
 
+  // Ningún campo publicable habla del proyecto. El spec §5.4 lo prohíbe en el
+  // Relato, pero al reescribir el primer ciclo apareció el mismo defecto una
+  // capa más abajo: doce de quince fichas contaban en `historia` y en
+  // `versiones` la historia de nuestras propias fichas —«el cierre no es el que
+  // el sitio venía contando», «el informe de búsqueda de este ciclo le asignaba
+  // las páginas 263 y 264»—. El lector no sabe qué es un ciclo, ni un informe
+  // de búsqueda, ni qué decía la ficha anterior, y no tiene por qué. Eso vive
+  // en `dudas` y en el informe.
+  //
+  // Los patrones son deliberadamente estrechos: «el sitio era el peor posible»
+  // es un lugar y «el encargo» puede ser un pedido de zapatos, así que sólo se
+  // marca cuando la frase se refiere sin duda al proyecto.
+  const PROYECTO = [
+    /\b(?:el|este) sitio (?:ven[ií]a|tra[ií]a|contaba|publicaba|daba|declaraba|dec[ií]a|resum[ií]a)\b/i,
+    /\blo que el sitio\b/i,
+    /\b(?:esta|la) ficha (?:que|ten[ií]a|ven[ií]a|dec[ií]a|daba|la titula|lo titula|resum[ií]a)\b/i,
+    /\bel informe de b[uú]squeda\b/i,
+    /\b(?:el|este) (?:encargo|ciclo|lote|m[oó]dulo) (?:de este|del sitio|lo situaba|le asignaba|dec[ií]a)\b/i,
+    /\b(?:de|en) este ciclo\b/i,
+    /\bel m[oó]dulo (?:del sitio|se repet[ií]a|ven[ií]a)\b/i,
+    /\b(?:la|su) (?:descripci[oó]n|versi[oó]n) heredada\b/i,
+    /\bla reescritura\b/i,
+    /\bcomprobado contra el texto\b/i,
+  ];
+  for (const campo of ["mito", "historia", "versiones", "similitudes", "leccion"]) {
+    for (const patron of PROYECTO) {
+      const m = String(relato[campo] || "").match(patron);
+      if (m) {
+        bloqueos.push(
+          `«${campo}» habla del proyecto y no de la obra: «${m[0]}». ` +
+            "El lector no sabe qué es un ciclo ni qué decía la ficha anterior; eso va en «dudas».",
+        );
+      }
+    }
+  }
+
   // El relato no habla de la investigación (spec §5.4).
   const APARATO = /\b(la fuente|las fuentes|el recopilador|la edición|la versión que se conserva|según el registro|no se sabe si|la investigación|el manuscrito|la transcripción|esta página|la ficha)\b/i;
   const m = String(relato.mito || "").match(APARATO);
