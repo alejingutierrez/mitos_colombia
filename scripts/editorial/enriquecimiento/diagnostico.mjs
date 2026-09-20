@@ -26,17 +26,17 @@
  * No toca la red salvo para leer Neon. Es el paso cero de cada comunidad.
  */
 import process from "node:process";
-import { parseArgs, connect, resolveCommunity, loadDbMyths, words, allSources, hostOf } from "./lib.mjs";
+import {
+  parseArgs, connect, resolveCommunity, loadDbMyths, words, allSources, hostOf,
+  medirProsa, repeticion, aperturaFirma, fuenteVetada, PROSA,
+} from "./lib.mjs";
 
 const options = parseArgs(process.argv.slice(2));
 const CAMPOS = ["mito", "historia", "versiones", "similitudes"];
 
-/** Dominios que existen para catalogar, no para contar un mito. */
-const CATALOGO = [
-  /books\.google\./i, /openlibrary\.org/i, /worldcat\.org/i, /redcol\.minciencias/i,
-  /\.blogspot\./i, /scribd\.com/i, /academia\.edu/i, /researchgate\.net/i,
-  /wikipedia\.org/i, /dialnet\.unirioja\.es\/servlet\/(libro|articulo)\?/i,
-];
+// La clasificación de dominios vive en lib.mjs (`fuenteVetada`), compartida con
+// el auditor y con el gate del acta: catálogos, copias sin editor, relleno de
+// UNESCO, blogs de turismo y los espejos del propio sitio.
 
 /** Vocabulario de aparato crítico dentro del Relato. */
 const APARATO =
@@ -82,19 +82,50 @@ async function diagnosticar(client, slug) {
   // 3 · fuentes
   const urls = new Set();
   const catalogo = new Set();
+  const vetadas = {};
   let citas = 0;
   for (const f of fichas) {
     for (const s of allSources(f)) {
       citas += 1;
       if (!s?.url) continue;
       urls.add(s.url);
-      if (CATALOGO.some((p) => p.test(s.url))) catalogo.add(s.url);
+      const veto = fuenteVetada(s.url);
+      if (veto) (vetadas[veto] ||= new Set()).add(s.url);
+      if (veto === "CATALOGO") catalogo.add(s.url);
     }
   }
   const dominios = new Set([...urls].map(hostOf).filter(Boolean));
 
   // 4 · aparato dentro del Relato
   const conAparato = fichas.filter((f) => APARATO.test(f.mito)).length;
+
+  // 5 · prosa (spec-mestizos-y-mixtos §5.3). Sólo tiene sentido sobre las
+  // fichas que ya tienen un Relato: las que sólo traen `content` no se miden.
+  const conMito = fichas.filter((f) => words(f.mito));
+  const medidas = conMito.map((f) => medirProsa(f.mito));
+  const mediaDe = (xs) => (xs.length ? Number((xs.reduce((a, b) => a + b, 0) / xs.length).toFixed(3)) : null);
+  const ttrs = medidas.map((m) => m.ttr).filter((x) => x !== null);
+  const adjs = medidas.map((m) => m.adjetivos).filter((x) => x !== null);
+  const bajoTtr = ttrs.filter((x) => x < PROSA.ttrMinimo).length;
+  const altoAdj = adjs.filter((x) => x > PROSA.adjetivosMaximo).length;
+  const conFormula = medidas.filter((m) => m.fallos.some((f) => f.startsWith("fórmula"))).length;
+
+  // 6 · aperturas. Lo que delata el molde no es que dos fichas coincidan —con
+  // cuatro categorías gruesas eso pasa siempre, y el corpus aprobado «falla» 20
+  // de 27 veces— sino la CONCENTRACIÓN: en Piedecuesta siete de ocho abren con
+  // la misma estructura. Así que se mide la firma más frecuente, no las
+  // coincidencias sueltas. Y, como señal aparte, la primera palabra literal:
+  // si media comunidad empieza con la misma palabra, eso ya no es casualidad.
+  const firmas = new Map();
+  const primeras = new Map();
+  for (const f of conMito) {
+    const firma = aperturaFirma(f.mito);
+    if (firma) firmas.set(firma, (firmas.get(firma) || 0) + 1);
+    const p1 = String(f.mito).trim().split(/\s+/)[0]?.toLowerCase().replace(/[^a-záéíóúüñ]/g, "");
+    if (p1) primeras.set(p1, (primeras.get(p1) || 0) + 1);
+  }
+  const topFirma = [...firmas.entries()].sort((a, b) => b[1] - a[1])[0] || ["—", 0];
+  const topPalabra = [...primeras.entries()].sort((a, b) => b[1] - a[1])[0] || ["—", 0];
 
   return {
     comunidad: community.name,
@@ -116,6 +147,14 @@ async function diagnosticar(client, slug) {
     catálogo: catalogo.size,
     "con narrador": `${conNombre}/${fichas.length}`,
     "aparato en relato": `${conAparato}/${fichas.length}`,
+    ttr: mediaDe(ttrs),
+    "ttr bajo": conMito.length ? `${bajoTtr}/${conMito.length}` : "—",
+    "adj %": adjs.length ? Number((100 * mediaDe(adjs)).toFixed(1)) : null,
+    "adj alto": conMito.length ? `${altoAdj}/${conMito.length}` : "—",
+    fórmulas: conFormula,
+    "apertura top": conMito.length ? `${topFirma[1]}/${conMito.length} ${topFirma[0]}` : "—",
+    "1ª palabra top": conMito.length ? `${topPalabra[1]}/${conMito.length} ${topPalabra[0]}` : "—",
+    vetadas: Object.entries(vetadas).map(([k, v]) => `${k.toLowerCase()} ${v.size}`).join(" · ") || "—",
   };
 }
 
@@ -149,4 +188,13 @@ console.log(
 );
 console.log(
   "«formato: sólo content» = la ficha nunca entró en la estructura de cinco campos; hay que repartirla antes de reescribirla.",
+);
+console.log(
+  `\nProsa (spec mestizos §5.3, umbrales calibrados contra el corpus aprobado): ttr ≥ ${PROSA.ttrMinimo} · adjetivos ≤ ${(PROSA.adjetivosMaximo * 100).toFixed(0)} % ·`,
+);
+console.log(
+  "«apertura top» = cuántas fichas comparten la estructura de apertura más frecuente (D determinante, P preposición, C conjunción, X otra). Por encima de la mitad del ciclo, hay molde.",
+);
+console.log(
+  "«vetadas» = catálogo, copia sin editor, relleno de UNESCO, turismo o el propio sitio.",
 );

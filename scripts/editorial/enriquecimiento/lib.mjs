@@ -63,6 +63,344 @@ export const COMPARATIVE_HOSTS = [
 /** Dominios de relleno: se aceptan sólo con limitación declarada y nunca como fuente clave. */
 export const WEAK_HOSTS = [/wikipedia\.org/i, /pueblosoriginarios\.com/i, /uniquecolombia\.com/i, /profesorenlinea\.cl/i, /tumblr\.com/i, /scribd\.com/i, /pueblosindigenas\.es/i];
 
+/**
+ * Catálogos: responden 200 y no contienen el relato. Una portada de WorldCat,
+ * una ficha de Open Library o un registro de metadatos pasan cualquier
+ * comprobación de salud de URL y no sostienen nada. En andoque, once de catorce
+ * fichas declaraban como fuente narrativa la portada de Google Books del libro
+ * del que salían.
+ */
+export const CATALOG_HOSTS = [
+  /books\.google\./i,
+  /openlibrary\.org/i,
+  /worldcat\.org/i,
+  /ci\.nii\.ac\.jp/i,
+  /redcol\.minciencias/i,
+  /dialnet\.unirioja\.es\/servlet\/(libro|articulo)\?/i,
+  /\/opac_css\//i,
+  /vitalsource\.com/i,
+  /jstor\.org\/publisher\//i,
+];
+
+/**
+ * Copias sin editor. Si la obra vale, se cita por su editor o por su ficha
+ * institucional. Son 172 citas en el corpus mestizo y mixto.
+ */
+export const MIRROR_HOSTS = [
+  /scribd\.com/i, /docslib\.org/i, /1library\./i, /academia\.edu/i,
+  /researchgate\.net/i, /studylib\./i, /dokumen\.pub/i, /vdocuments\./i,
+  /coursehero\.com/i, /pdfcoffee\.com/i, /idoc\.pub/i,
+];
+
+/**
+ * Relleno: documentos reales que no dicen nada de ningún relato concreto. La
+ * Convención del Patrimonio Inmaterial está citada 34 veces y la declaratoria
+ * de Cartagena otras 33, en fichas de aparecidos.
+ *
+ * Excepción: un expediente PES o una ficha de inventario que SÍ trate el relato
+ * concreto entra; lo que no entra es la Convención genérica ni la declaratoria.
+ * Por eso se mira la ruta, no sólo el dominio.
+ */
+export const FILLER_URLS = [
+  /ich\.unesco\.org\/en\/convention/i,
+  /ich\.unesco\.org\/es\/convenci/i,
+  /whc\.unesco\.org\/en\/list\//i,
+  /whc\.unesco\.org\/es\/list\//i,
+  /unesco\.org\/[a-z-]*\/?$/i,
+];
+
+/** Agregadores y blogs de turismo: sin autoría ni registro. */
+export const TOURISM_HOSTS = [
+  /zonaturistica/i, /colombia\.travel/i, /tripadvisor\./i, /civitatis\./i,
+  /viajaporcolombia/i, /donde-?ir/i, /top\d+/i,
+];
+
+/** El sitio y sus espejos: circularidad. En este corpus el riesgo es máximo. */
+export const SELF_HOSTS = [/mitosdecolombia\.com/i, /mitos-?de-?colombia/i];
+
+/**
+ * Clasifica una URL contra las listas propias del bloque mestizo y mixto.
+ * Devuelve la etiqueta del primer motivo de rechazo, o null si pasa.
+ */
+export function fuenteVetada(url) {
+  const u = String(url || "");
+  if (!u) return null;
+  if (SELF_HOSTS.some((r) => r.test(u))) return "CIRCULAR";
+  if (MIRROR_HOSTS.some((r) => r.test(u))) return "COPIA_SIN_EDITOR";
+  if (CATALOG_HOSTS.some((r) => r.test(u))) return "CATALOGO";
+  if (FILLER_URLS.some((r) => r.test(u))) return "RELLENO";
+  if (TOURISM_HOSTS.some((r) => r.test(u))) return "TURISMO";
+  return null;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Medidas de prosa (spec-mestizos-y-mixtos §5.3)
+//
+// «Mejorar la redacción» tenía que dejar de ser una opinión. Son cuatro
+// números, y cada uno nació de un defecto medido en el lote heredado.
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Umbrales del bloque, CALIBRADOS el 2026-09-19 contra los dos corpus que ya
+ * existen: 67 mitos aprobados (wayuu + muisca) y los ocho marcos de plantilla
+ * de `caribe-mestizo-final`. Los del spec estaban escritos a ojo y dos de los
+ * cuatro no resistían el contraste:
+ *
+ *   medida      corpus aprobado          plantilla heredada    veredicto
+ *   ─────────────────────────────────────────────────────────────────────────
+ *   TTR         0,473 – 0,653            0,657 – 0,764         NO discrimina:
+ *               (mediana 0,567)                                el texto malo
+ *                                                              puntúa MÁS alto,
+ *                                                              porque es prosa
+ *                                                              abstracta, no
+ *                                                              relleno repetido.
+ *                                                              Sigue valiendo
+ *                                                              como piso.
+ *   adjetivos   0 – 2,1 % (med. 1,0 %)   3,8 – 8,6 %           DISCRIMINA. Es
+ *                                                              la única de las
+ *                                                              cuatro que separa
+ *                                                              limpiamente.
+ *   mediana     7 – 21 (mediana 10)      15 – 20               NO discrimina, y
+ *                                                              el rango 12-22
+ *                                                              del spec suspendía
+ *                                                              a 11 de cada 12
+ *                                                              fichas wayuu.
+ *   oración     hasta 61 palabras        hasta 32              el corpus bueno
+ *   máxima                                                     se pasa de 45: es
+ *                                                              aviso, no bloqueo.
+ *
+ * Lo que de verdad destapa la plantilla no es ninguna de las cuatro: es
+ * `repeticion()` entre fichas del ciclo (86,6 % en caribe) y `aperturaFirma()`.
+ */
+export const PROSA = {
+  // Bloquean.
+  ttrMinimo: 0.45,        // piso; el corpus aprobado no baja de 0,473
+  adjetivosMaximo: 0.03,  // aprobado ≤ 2,1 % · heredado ≥ 3,8 %
+  repeticionMaxima: 2,    // % de oraciones repetidas dentro del ciclo
+  // Avisan.
+  oracionMaxima: 45,      // el spec lo pedía; el corpus bueno llega a 61
+  medianaMinima: 8,
+  medianaMaxima: 22,
+};
+
+const PALABRA = /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ'’-]*/g;
+
+export function tokens(texto) {
+  return (String(texto || "").toLowerCase().match(PALABRA) || []);
+}
+
+/** Oraciones de un texto, en crudo (para medir) o normalizadas (para comparar). */
+export function sentences(texto, { normalizar = false } = {}) {
+  const partes = String(texto || "")
+    .split(/(?<=[.!?…])\s+/)
+    .map((o) => o.trim())
+    .filter(Boolean);
+  if (!normalizar) return partes;
+  return partes.map((o) => o.toLowerCase().replace(/\s+/g, " ").replace(/[«»"“”]/g, ""));
+}
+
+/**
+ * Riqueza léxica (type-token ratio). El relleno repite las mismas veinte
+ * palabras: 0,30 frente al 0,45 del resto del corpus.
+ *
+ * El TTR cae con la longitud del texto, así que se mide sobre una ventana fija
+ * de 300 tokens —el mínimo del Relato— y no sobre el texto entero: si no, un
+ * mito de 640 palabras suspende por ser largo y uno de 310 aprueba por ser corto.
+ */
+export function ttr(texto, ventana = 300) {
+  const t = tokens(texto);
+  if (!t.length) return null;
+  if (t.length <= ventana) return Number((new Set(t).size / t.length).toFixed(3));
+  let suma = 0;
+  let n = 0;
+  for (let i = 0; i + ventana <= t.length; i += ventana) {
+    suma += new Set(t.slice(i, i + ventana)).size / ventana;
+    n += 1;
+  }
+  const resto = t.length % ventana;
+  if (resto >= ventana / 2) {
+    suma += new Set(t.slice(-ventana)).size / ventana;
+    n += 1;
+  }
+  return Number((suma / n).toFixed(3));
+}
+
+/**
+ * Sufijos adjetivales del español. No es un etiquetador morfológico —no lo
+ * necesitamos— sino un detector de grandilocuencia: mide la proporción de
+ * palabras con forma de adjetivo valorativo, que es lo que infla esta prosa.
+ */
+/**
+ * Detector de grandilocuencia, no etiquetador morfológico. Marca las formas
+ * inequívocamente adjetivales del español —las que no se confunden con un
+ * sustantivo— y deja fuera a propósito los adjetivos en -o/-a simples («viejo»,
+ * «negra»), porque separarlos de «perro» y «casa» exige un analizador y no hace
+ * falta: la prosa inflada no se infla con «viejo», se infla con «tenebroso»,
+ * «inconmensurable» y «ancestral».
+ *
+ * Por eso el umbral NO es el 8 % de tokens que escribió el spec a ojo: se fijó
+ * midiendo el corpus ya aprobado contra el heredado (ver PROSA más arriba).
+ */
+const ADJETIVO = new RegExp(
+  "^(?:" +
+    [
+      "[a-záéíóúñ]{3,}(?:ísim|érrim)[oa]s?",        // superlativos
+      "[a-záéíóúñ]{3,}os[oa]s?",                    // -oso / -osa
+      "[a-záéíóúñ]{3,}(?:abl|ibl)es?",              // -able / -ible
+      "[a-záéíóúñ]{3,}ient[oa]s?",                  // -iento
+      "[a-záéíóúñ]{4,}(?:al|ales)",                 // -al
+      "[a-záéíóúñ]{3,}iv[oa]s?",                    // -ivo
+      "[a-záéíóúñ]{4,}(?:ante|antes|ente|entes)",   // -ante / -ente
+      "[a-záéíóúñ]{3,}(?:und|end)[oa]s?",           // -undo / -endo
+      "[a-záéíóúñ]{3,}(?:izo|iza|izos|izas)",       // -izo
+      "[a-záéíóúñ]{3,}(?:esc[oa]s?)",               // -esco
+      "[a-záéíóúñ]{3,}(?:ífic[oa]s?)",              // -ífico
+      "[a-záéíóúñ]{3,}(?:bundo|bunda)s?",           // -bundo
+      "[a-záéíóúñ]{3,}(?:áce[oa]|íne[oa]|óre[oa])s?",
+      // -ario/-orio queda FUERA a propósito: produce más sustantivos
+      // («memoria», «territorio», «campanario») que adjetivos.
+      "in[a-záéíóúñ]{4,}(?:o|a|os|as|e|es)",        // in- privativo
+    ].join("|") +
+    ")$",
+  "i",
+);
+
+/** Palabras frecuentes que caen en los sufijos de arriba y no son adjetivos. */
+const NO_ADJ = new Set([
+  "cuando", "cuanto", "cuantos", "cuantas", "durante", "mediante", "entonces",
+  "general", "animal", "final", "local", "capital", "canal", "corral", "metal",
+  "total", "igual", "real", "cristal", "umbral", "portal", "cardenal", "caudal",
+  "arenal", "maizal", "cañaveral", "catedral", "hospital", "funeral", "carnaval",
+  "arrabal", "matorral", "manantial", "material", "pedestal", "ritual", "animales",
+  "canales", "corrales", "metales", "umbrales", "portales", "rituales", "materiales",
+  "delante", "adelante", "comerciante", "habitante", "estudiante", "cantante",
+  "viajante", "amante", "sirviente", "teniente", "presidente", "cliente",
+  "pariente", "diente", "puente", "monte", "horizonte", "corriente", "torrente",
+  "accidente", "instante", "semblante", "guante", "elefante", "gigante",
+  "diamante", "comandante", "ayudante", "vigilante", "navegante", "tratante",
+  "danzante", "habitantes", "comerciantes", "estudiantes", "parientes", "dientes",
+  "puentes", "montes", "gente", "frente", "muerte", "suerte", "fuente", "fuentes",
+  "hombre", "nombre", "sangre", "hambre", "madre", "padre", "noche", "tarde",
+  "vivo", "vivos", "viva", "vivas", "nativo", "nativos",
+])
+
+export function adjetivos(texto) {
+  const t = tokens(texto);
+  if (!t.length) return { total: 0, cuantos: 0, ratio: null, muestra: [] };
+  const marcados = t.filter((w) => w.length > 4 && !NO_ADJ.has(w) && ADJETIVO.test(w));
+  return {
+    total: t.length,
+    cuantos: marcados.length,
+    ratio: Number((marcados.length / t.length).toFixed(3)),
+    muestra: [...new Set(marcados)].slice(0, 12),
+  };
+}
+
+/** Ritmo: la mediana y el máximo, que es lo que la metodología pedía y nadie medía. */
+export function ritmo(texto) {
+  const largos = sentences(texto).map((o) => tokens(o).length).filter((n) => n > 0);
+  if (!largos.length) return { oraciones: 0, mediana: null, maxima: null, largas: [] };
+  const orden = [...largos].sort((a, b) => a - b);
+  const mitad = Math.floor(orden.length / 2);
+  const mediana = orden.length % 2 ? orden[mitad] : Math.round((orden[mitad - 1] + orden[mitad]) / 2);
+  return {
+    oraciones: largos.length,
+    mediana,
+    maxima: Math.max(...largos),
+    largas: sentences(texto).filter((o) => tokens(o).length > PROSA.oracionMaxima),
+  };
+}
+
+/**
+ * Firma sintáctica de la apertura: las primeras cuatro palabras reducidas a su
+ * categoría gruesa. Siete de las ocho fichas de Piedecuesta empiezan igual y
+ * ninguna comparte una oración literal, así que comparar texto no basta.
+ */
+const DET = /^(el|la|los|las|un|una|unos|unas|este|esta|estos|estas|ese|esa|aquel|aquella|su|sus|mi|tu)$/;
+const PREP = /^(a|ante|bajo|con|contra|de|desde|durante|en|entre|hacia|hasta|para|por|según|sin|sobre|tras|al|del)$/;
+const CONJ = /^(y|e|o|u|pero|aunque|cuando|mientras|porque|si|que|como|donde|aún|todavía)$/;
+
+export function aperturaFirma(texto, n = 4) {
+  const primera = sentences(texto)[0];
+  if (!primera) return null;
+  return tokens(primera)
+    .slice(0, n)
+    .map((w) => (DET.test(w) ? "D" : PREP.test(w) ? "P" : CONJ.test(w) ? "C" : "X"))
+    .join("");
+}
+
+/** Fórmulas prohibidas propias de este bloque (spec §5.3), más las de siempre. */
+export const FORMULAS = [
+  /desde tiempos inmemoriales/i,
+  /un misterio ancestral/i,
+  /sabidur[ií]a ancestral/i,
+  /el destino estaba escrito/i,
+  /cuenta la leyenda que/i,
+  /dicen los abuelos que/i,
+  /nadie sabe a ciencia cierta/i,
+  /lo cierto es que/i,
+  /se pierde en la noche de los tiempos/i,
+  /como por arte de magia/i,
+];
+
+/** Las cuatro medidas de §5.3 sobre un texto, con su veredicto. */
+export function medirProsa(texto) {
+  const r = ritmo(texto);
+  const a = adjetivos(texto);
+  const t = ttr(texto);
+  const fallos = [];
+  const avisos = [];
+  if (t !== null && t < PROSA.ttrMinimo) fallos.push(`TTR ${t} < ${PROSA.ttrMinimo}`);
+  if (a.ratio !== null && a.ratio > PROSA.adjetivosMaximo) {
+    fallos.push(`adjetivos ${(a.ratio * 100).toFixed(1)}% > ${(PROSA.adjetivosMaximo * 100).toFixed(0)}% (${a.muestra.slice(0, 6).join(", ")})`);
+  }
+  for (const f of FORMULAS) {
+    const m = String(texto || "").match(f);
+    if (m) fallos.push(`fórmula prohibida: «${m[0]}»`);
+  }
+  if (r.largas.length) avisos.push(`${r.largas.length} oración(es) de más de ${PROSA.oracionMaxima} palabras`);
+  if (r.mediana !== null && (r.mediana < PROSA.medianaMinima || r.mediana > PROSA.medianaMaxima)) {
+    avisos.push(`mediana ${r.mediana} fuera de ${PROSA.medianaMinima}-${PROSA.medianaMaxima}`);
+  }
+  return {
+    ttr: t, adjetivos: a.ratio, mediana: r.mediana, maxima: r.maxima,
+    oraciones: r.oraciones, apertura: aperturaFirma(texto), fallos, avisos,
+  };
+}
+
+/**
+ * Repetición dentro de un conjunto de fichas: el porcentaje de oraciones que
+ * aparecen en más de una. Es la medida que destapó el 86,6 % de
+ * `caribe-mestizo-final`. Cuenta oraciones de 7+ palabras, que es el umbral
+ * del spec §5.2.
+ */
+export function repeticion(fichas, campos = TEXT_FIELDS) {
+  const todas = [];
+  const porOracion = new Map();
+  for (const f of fichas) {
+    const vistas = new Set();
+    for (const c of campos) {
+      for (const o of sentences(f[c], { normalizar: true })) {
+        if (tokens(o).length < 7) continue;
+        todas.push(o);
+        if (vistas.has(o)) continue;
+        vistas.add(o);
+        if (!porOracion.has(o)) porOracion.set(o, []);
+        porOracion.get(o).push(f.slug || f.titulo || "?");
+      }
+    }
+  }
+  const compartidas = [...porOracion.entries()].filter(([, fs]) => fs.length > 1);
+  const repetidas = todas.filter((o) => (porOracion.get(o) || []).length > 1).length;
+  return {
+    oraciones: todas.length,
+    repetidas,
+    pct: todas.length ? Number(((100 * repetidas) / todas.length).toFixed(1)) : 0,
+    peores: compartidas.sort((a, b) => b[1].length - a[1].length).slice(0, 10)
+      .map(([o, fs]) => ({ oracion: o.slice(0, 110), fichas: fs.length })),
+  };
+}
+
 export function parseArgs(argv, defaults = {}) {
   const options = { ...defaults, _: [] };
   for (const arg of argv) {
@@ -466,5 +804,10 @@ export function printTable(rows) {
 }
 
 export function today() {
-  return new Date().toISOString().slice(0, 10);
+  // Fecha LOCAL, no UTC. Con `toISOString()`, a partir de las 19:00 en Colombia
+  // el kit nombraba las carpetas con el día siguiente y el trabajo de una misma
+  // sesión quedaba partido entre `busqueda-<hoy>` y `actas-<mañana>`.
+  const d = new Date();
+  const p2 = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}`;
 }
