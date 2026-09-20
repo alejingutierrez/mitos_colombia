@@ -1,49 +1,63 @@
 import { defineWayuuMyth } from "../define-editorial-myth.mjs";
 
-const mito = `Siki, el Fuego, vivía como un joven que no quería trabajar. Pasaba los días tendido en el chinchorro mientras su mujer recorría los ranchos buscando comida. La suegra lo reprendía, pero él prefería guardar su fuerza y su luz.
+const mito = `En un principio los hombres no conocían el fuego. Comían crudas las carnes, las raíces y los frutos del monte; la carne la tendían al sol hasta hacerla cecina. Unos vivían en troncos y cuevas; otros tenían ranchos, pero sin lumbre que los calentara ni ahuyentara el miedo que subía del fondo de las noches.
 
-Nadie más conocía el fuego. La comida se comía cruda y en las noches la oscuridad entraba hasta las hamacas. Siki ocultaba lo que llevaba dentro.
+Solo Maleiwa tenía el fuego. Lo guardaba como piedras encendidas en una gruta fuera del alcance de los hombres, porque los creía faltos de juicio: podían quemar sus ranchos, incendiar los montes, abrasar a las criaturas vivas.
 
-Mareiwa decidió que aquel bien no podía permanecer encerrado. Envió primero a varios animales para descubrir el secreto. Unos se acercaron demasiado pronto y huyeron; otros no entendieron dónde estaba escondida la llama.
+Una vez, mientras Maleiwa calentaba el cuerpo junto a su fogata, vio venir hacia él a un joven aterido de frío. Se llamaba Junuunay. Maleiwa se indignó.
 
-Junuunay, un joven de movimientos rápidos, observó con paciencia. Supo que Siki guardaba el fuego en su cuerpo y que solo lo mostraba cuando creía estar a salvo. Esperó el momento en que la brasa quedó al alcance y la tomó.
+—¿Qué vienes a hacer, intruso? ¿No sabes que este sitio está vedado? ¿Vienes a acabar con mi paciencia?
 
-Siki despertó sobresaltado. Corrió detrás del ladrón, pero Junuunay ya había entregado la llama a quienes aguardaban. Cada persona buscó una rama seca. El fuego pasó de mano en mano y encendió muchos fogones.
+—No, abuelo —respondió Junuunay, suplicante—. Solo vengo a calentarme junto a usted. Tenga clemencia. Ampáreme de este frío que me puya la carne y me llega hasta los huesos. Apenas entre en calor, me iré.
 
-La península cambió. La carne pudo asarse. La luz mantuvo lejos la noche alrededor de los ranchos. Las familias aprendieron a conservar una brasa bajo la ceniza para no empezar de nuevo cada mañana.
+Así hablaba, escondiendo su intención. Para convencer a Maleiwa hizo crujir los dientes, se erizó como carne de gallina muerta, tembló como un machorro, se frotó las manos. Maleiwa, compadecido, lo aceptó, pero no le quitó la vista de encima. Los dos se frotaron las manos ante las llamas, que resplandecían a lo lejos como brasas del cielo.
 
-Siki, furioso por la pérdida, persiguió a quienes habían participado. En unas versiones, Maleiwa lo castigó y distribuyó su energía entre maderas capaces de producirla por fricción. En otras, animales como el conejo o el junco intervienen en el robo y reciben marcas sobre el cuerpo. Ninguno sale intacto.
+Junuunay intentó conversar para distraerlo. Maleiwa callaba. Entonces un rumor de viento, como pasos cautelosos sobre la hojarasca, le hizo volver la cara hacia atrás. Ese instante bastó. Junuunay cogió de la fogata dos brasas encendidas y las metió en un morralito que llevaba oculto bajo el brazo.
 
-La mujer de Siki lo buscó por los montes. Lo llamó una y otra vez, pero el fuego ya no podía volver a ser posesión de una sola casa. Estaba escondido en dos varitas, esperando el roce preciso; dormía en la leña y despertaba con aire y cuidado.
+Se dio a la fuga entre las malezas que rodeaban la gruta. Maleiwa, burlado, corrió tras él.
 
-Desde entonces, encender un fogón repite aquella disputa. La llama alimenta y reúne, pero también quema si se la abandona. Lo que fue arrancado del secreto se convirtió en responsabilidad compartida.`;
+—Me ha engañado el muy bribón. Le haré vivir en los muladares, rodando bolas de excremento.
 
-const historia = `José Enrique Finol transcribe y analiza tres versiones del origen del fuego. Dos proceden de Ramón Paz Ipuana y otra de Michel Perrin. Finol eligió una para su análisis principal, pero conservó las demás para mostrar que cambian protagonista, auxiliares, forma del robo y desenlace. La ficha anterior mezclaba nombres y acciones de esas versiones sin advertir al lector.
+Junuunay huía desesperado, pero sus pasos eran tan cortos que casi no avanzaba. Llamó en su auxilio a un joven cazador llamado Kenáa y le entregó una brasa para que la escondiera. Kenáa se alejó sin ser visto mientras hubo sol, pero al llegar la noche, cuando trataba de esconderse entre las matas, la brasa lo delató. Maleiwa lo convirtió en cocuyo, que en las noches oscuras del invierno enciende y apaga su luz mientras vuela.
 
-Paz Ipuana era escritor e investigador Wayuu y dominaba la lengua de su pueblo. Finol defiende su posición privilegiada para recopilar y traducir, pero reconoce el “embellecimiento” literario de sus textos. Perrin, por su parte, registró en wayuunaiki, realizó una traducción yuxtalineal con jóvenes bilingües y después produjo su versión francesa. Las dos líneas tienen mediaciones distintas; ninguna es una voz sin edición.
+Junuunay encontró en su camino a Jimut, el cigarrón.
 
-El motivo del fuego se relaciona con una necesidad material evidente: cocer alimentos, producir luz y organizar el espacio nocturno. Sin embargo, el mito no es un manual técnico ni una cronología de la primera combustión. Convierte la circulación de un bien en problema social. Mientras Siki acapara, los demás viven en carencia; al repartirse la llama, aparecen beneficios y peligros.
+—Amigo, Maleiwa me persigue porque le robé el fuego para dárselo a los hombres. Toma esta brasa que me queda y escóndela en un sitio seguro. Quien la tenga será el más afortunado de los hombres.
 
-La prosa revisada conserva el núcleo común —fuego personificado, posesión exclusiva, robo o distribución y permanencia en maderas— y evita convertir a Junuunay en un Prometeo local. Los nombres y papeles que cambian quedan atribuidos en Versiones.
+Jimut tomó la brasa y la metió dentro de un palo de caujaro; luego la pasó a un olivo, después a otro palo, y así el fuego se extendió y se multiplicó por todas partes.
 
-No ubicamos el episodio en una ranchería precisa. El punto cartográfico representa de manera aproximada la península Wayuu.`;
+Los hombres lo encontraron por medio de un niño llamado Serumáa. Mientras jugaba por los montes, el niño iba señalando los palos donde Jimut había guardado el fuego. No sabía hablar; solo decía «Skii… Ski… Skii…», que quiere decir fuego. Los hombres buscaron en todos los palos y troncos, probaron mil maneras y no encontraron nada, hasta que vieron a Jimut perforando un palo. Siguiendo su ejemplo, taladraron y frotaron con las manos dos varitas de caujaro, y al punto brotó el fuego. Iluminó el corazón de los montes y encendió de alegría a los hombres.
 
-const versiones = `En una versión de Paz Ipuana, Siki es un joven ocioso sostenido por su mujer. La acción revela que el fuego, aunque personificado, puede quedar contenido y luego liberarse para uso humano. El desenlace explica la presencia de Siki en maderas que producen llama al frotarse.
+Desde entonces el fuego quedó a su servicio y no volvieron a sufrir el rigor de las noches frías. A Serumáa, Maleiwa lo convirtió en un pajarillo que salta de rama en rama diciendo «ski, ski, ski», y por eso lo llaman Sikiyuu. A Junuunay lo convirtió en escarabajo y lo condenó a vivir entre las inmundicias por haber robado el fuego. Desde entonces el escarabajo se alimenta de excremento y lleva en las patas, como huella del robo, unas manchas brillantes.`;
 
-Otra versión amplía la intervención de Mareiwa y de animales. El ladrón, los perseguidores y las marcas corporales cambian. En la versión recopilada por Perrin, la secuencia se organiza con otros nombres y una relación distinta entre quien posee el fuego y quienes logran repartirlo. Finol muestra que todas trabajan oposiciones entre posesión y carencia, crudo y cocido, secreto y distribución.
+const historia = `Este mito llega a nosotros por dos manos. Ramón Paz Ipuana, escritor e investigador wayuu, lo puso por escrito en castellano; José Enrique Finol, semiólogo de la Universidad del Zulia, lo transcribió y analizó en «Mito y cultura guajira», donde explica que «el origen del fuego en la mitología guajira es relatado en tres versiones diferentes» y que la primera y la tercera las incluye «según Paz Ipuana». El Diccionario de mitología Wayuu de la Corporación Jayeechi confirma en su entrada Siki que Paz Ipuana recopiló tres versiones. La ficha anterior atribuía una de ellas a Michel Perrin; el expediente no respalda esa atribución, y por eso la retiramos. Perrin publicó en 1979 y 1980 colecciones en wayuunaiki con traducción asistida por hablantes bilingües, pero ninguna de las fuentes consultadas dice que contengan este mito.
 
-La ficha anterior unía las tres como si fueran capítulos consecutivos: un joven holgazán, un robo heroico, castigos animales y una persecución final. Esta edición construye un Relato legible a partir del núcleo coincidente y conserva las divergencias aquí. No atribuye a una versión detalles tomados de otra.
+Las dos mediaciones dejan huella. Paz Ipuana escribe con voluntad literaria: el voseo de Maleiwa («¿Qué venís hacer, intruso?»), el «Gran Padre», el «abuelo venerable», las brasas «como los fulgores áureos de las estrellas». Esa prosa es suya, no de un narrador anónimo, y el «abuelo» con que Junuunay llama a Maleiwa conviene leerlo como forma de respeto y no como parentesco. Finol, por su parte, abre el capítulo con una cita de Engels sobre el fuego por fricción y analiza el mito con la semiótica de Greimas: sujeto, objeto de valor, programa narrativo. Propone que el fuego pasa del dominio mineral (las piedras encendidas de la gruta) al vegetal (los palos de caujaro) gracias a mediadores del aire, insectos y pájaros, y sugiere, «a título de hipótesis», que esa mediación aérea explicaría por qué en ocho de los dieciséis mitos sudamericanos que examinó el poseedor del fuego es un pájaro. Sostiene también que Maleiwa, al negarse a dar, pierde su papel de donador y obliga al intercambio, y que el mito funda así la reciprocidad y la sociedad. Son lecturas de un analista, no afirmaciones wayuu.
 
-“Creación Wayuu” se relaciona con esta página porque ambos relatos explican bienes necesarios para habitar el mundo. No se fusionan: el fuego posee un ciclo narrativo propio, con tres versiones publicadas y un conflicto específico sobre quién puede guardar un recurso.`;
+Jenny Fraile Velásquez transcribió esta misma versión en 2013 y la comparó con mitos warao, yekuana y brasileños, concluyendo que en todos el fuego se obtiene tras robarlo con una treta; anota que la línea de Junuunay y Maleiwa viene de Paz Ipuana y de Armellada. Mariano Nava Contreras, filólogo clásico, la leyó en 2019 frente a Prometeo como historia de engaño, transgresión y castigo ligada al progreso. Ambos trabajan con el texto de Paz Ipuana, no con nuevas voces de campo.
+
+Sobre el territorio, el mito no nombra rancherías ni cerros. Los palos de caujaro, el olivo, el cocuyo de las noches de invierno y el cigarrón pertenecen al monte seco de la península que describe la Caracterización del pueblo Wayúu del Ministerio de Cultura; frotar dos varitas es una técnica real de encendido, no una imagen. Una cautela final: el texto abre diciendo que los hombres sin fuego eran «seres imperfectos» cuya suerte «era igual a la de los animales». Es la axiología del propio mito en la pluma de Paz Ipuana, y así se mantiene en el Relato; no es una descripción etnográfica de nadie.`;
+
+const versiones = `Finol publica tres versiones del origen del fuego, las tres atribuidas a Ramón Paz Ipuana, y advierte que eligió la segunda porque es la que trae más elementos y una organización temporal más clara. El Relato sigue esa segunda versión, la única que el expediente trae completa: Junuunay engaña a Maleiwa fingiendo frío, roba dos brasas en un morralito, entrega una a Kenáa (convertido en cocuyo) y otra a Jimut el cigarrón, que la esconde en el caujaro; el niño Serumáa señala los palos gritando «ski» y termina como el pajarillo Sikiyuu; Junuunay es condenado a ser escarabajo con manchas brillantes en las patas.
+
+La primera versión es otra historia. Aquí el fuego es una persona: Ski o Siki, un joven holgazán apodado Makutulain, que vive en el chinchorro mientras su mujer Maajua pide comida de rancho en rancho, soportando los reproches de su suegra y las burlas de sus cuñados, los Señores de Wuna'apü, trabajadores y soberbios cuyas siembras no rinden. Cuando Ski se cansa de las afrentas, va al corazón del monte, se frota las manos, sopla vapores calientes y el bosque arde: así prepara su conuco de una sola vez. El expediente corta el texto ahí, pero Finol resume el desenlace: la mujer y la suegra son convertidas en pájaros, perdiz y ave de rapiña; los cuñados, en ardillas, pericos, bachacos, hormigas, langostas, ratas y saínos; la paloma Mouwa hace que Ski se vuelva tímido y se esconda, llega El Hambre, y Ski se refugia en los árboles, de donde saldrá cuando los guajiros froten dos maderas. No hay robo ni Maleiwa como guardián.
+
+La tercera versión, que el expediente solo conoce por el resumen de Finol, gira sobre un niño vivaracho llamado Kasémashi que se niega a prestar su arco; Maleiwa convierte en estela luminosa la flecha que el niño lanza (de ahí los meteoros) y transforma al niño en fuego, «encerrado en las piedras del Puloi o lugares encantados». Aquí el fuego no llega a los palos sino a las piedras.
+
+Las tres coinciden en dos cosas: una marca queda en quien tocó el fuego, y el fuego termina escondido en la madera o en la piedra, de donde hay que sacarlo. No coinciden en nada más, y por eso no deben fundirse. La ficha anterior de este sitio lo hacía: un Siki holgazán al que Junuunay le roba la brasa, animales marcados y una esposa que lo busca por los montes. Esa mezcla no existe en ninguna fuente y aquí se deshace. También retiramos la atribución de una versión a Perrin, que el expediente no sostiene.
+
+Esta ficha se distingue de “Mareiwa”, que trata al creador y sus obras en general, y de “Creación Wayuu” y “Los mellizos transformadores”, donde se ordenan el mundo y sus seres. El fuego tiene su propio ciclo, con nombres que no aparecen en esas páginas.`;
 
 const leccion =
-  "Un bien que sostiene a todos deja de ser privilegio y se convierte en cuidado compartido.";
+  "Un bien que se arranca para todos deja en quien lo arrancó una marca que nadie le agradece.";
 
-const similitudes = `El paralelo más conocido es Prometeo, narrado por Hesíodo: el fuego llega a los humanos mediante una disputa con el poder divino y desencadena consecuencias. La semejanza está en la transferencia de una capacidad decisiva; la diferencia, en que Siki puede ser a la vez persona, energía y presencia vegetal, dentro de relaciones propias del mundo Wayuu.
+const similitudes = `El paralelo que el expediente pide nombrar es Prometeo, tal como lo cuenta Hesíodo en la Teogonía y en Los trabajos y los días: Zeus niega el fuego a los hombres, Prometeo lo roba escondido en una cañaheja y lo entrega, y el castigo cae sobre el ladrón, encadenado con el águila que le devora el hígado, y sobre los hombres, que reciben a Pandora. La resonancia con Junuunay es fuerte: un guardián divino que retiene el fuego por desconfianza hacia los hombres, un robo por astucia, una brasa escondida en un recipiente pequeño, un castigo que marca al ladrón. Mariano Nava Contreras la desarrolló en «Prometeo en la Guajira». Las diferencias importan tanto como el parecido. Maleiwa no castiga a los hombres, solo a los que tocaron la brasa; el castigo no es eterno ni heroico, sino una transformación en escarabajo, cocuyo y pajarillo, animales que siguen ahí, con la marca a la vista; y el fuego no llega a los hombres por entrega directa sino escondido en el caujaro, de donde deben aprender a sacarlo imitando a un insecto. Ningún dato permite hablar de influencia; son dos respuestas a la misma pregunta sobre por qué el fuego hubo que robarlo.
 
-El Popol Vuh presenta a los primeros seres enfrentando la oscuridad y el problema de conservar el fuego bajo lluvia intensa. Allí el acceso a la llama también organiza alianzas y dependencia. No hay evidencia de que una tradición derive de la otra; el motivo permite comparar cómo cocinar, iluminar y vivir juntos se vuelven preguntas cosmológicas.
+El Popol Vuh, en la edición de Allen Christenson, cuenta el fuego de otro modo: el dios Tohil lo da a los pueblos k'iche', la lluvia y el granizo lo apagan, y las demás naciones, ateridas, deben pedirlo a cambio de entregarse al sacrificio. La resonancia está en el frío y en la dependencia: quien no tiene fuego se somete a quien lo posee. La diferencia es que allí el fuego se negocia y se paga; en la Guajira se roba y se castiga. Es la misma distinción entre don e intercambio que Finol propone para leer a Maleiwa, aunque él no cita el Popol Vuh.
 
-Dentro del corpus Wayuu, “Serranías de La Guajira” explica la distribución de semillas y alimentos. Ambos relatos rechazan un mundo donde un recurso esencial queda inmóvil: aves reparten frutos y la llama pasa a muchas casas. “Los dominios de Juyá” vuelve sobre la abundancia y la obligación de compartir la caza. En cada caso, la escasez no se resuelve con acumulación ilimitada, sino mediante circulación, alternancia y responsabilidad.`;
+Dentro del corpus wayuu, “Serranías de La Guajira” cuenta cómo un bien necesario se reparte por la tierra y cómo Mareiwa convierte personas en cerros, y “La India Worunka” muestra al mismo creador secando las matas de tuma como castigo: el Maleiwa que aquí vuelve escarabajo a Junuunay pertenece a esa familia de transformaciones. “Los dominios de Juyá” trata la abundancia que no puede acapararse; como aquí, un recurso que estaba en un solo lugar termina en muchos.
+
+Fuera de la Guajira, Fraile Velásquez señala que en mitos warao, yekuana y brasileños el fuego también se obtiene por una treta, y Finol recuerda, siguiendo a Lévi-Strauss, que en los mitos del Brasil central el dueño del fuego suele ser el jaguar. La Guajira pone en ese lugar a Maleiwa; la treta y la marca se repiten.`;
 
 export default defineWayuuMyth({
   slug: "el-origen-del-fuego",
@@ -68,13 +82,28 @@ export default defineWayuuMyth({
   ],
   tags: ["Maleiwa", "Wayúu", "fuego", "origen", "transformación"],
   sourceKeys: [
-    "finol2007",
+    {
+      key: "finol2007",
+      summary:
+        "Sección IV dedicada a los mitos del origen del fuego con tres versiones recopiladas y análisis semiótico.",
+      limitation:
+        "Obra general de mitos guajiros, no exclusiva del tema.",
+    },
     "pazIpuana",
     "perrin1980",
     "perrin1979",
     "minculturaWayuu",
     "hesiod",
     "popolVuh",
+    {
+      key: "dictionaryWayuu",
+      summary:
+        "Entrada SIKI o SKI (fuego): ente mítico benéfico, con nota de que Ramón Paz Ipuana recopiló tres versiones sobre el origen del fuego.",
+      limitation:
+        "Entrada breve de diccionario; no transcribe los relatos completos.",
+    },
+    "velasquezMiradas2013",
+    "contrerasPrometeo2019",
   ],
   researchNotes: `NÚCLEO: fuego personificado y acaparado; intervención para transferirlo a los humanos; permanencia de su energía en maderas; consecuencias para participantes.
 

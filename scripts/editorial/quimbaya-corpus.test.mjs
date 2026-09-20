@@ -47,12 +47,40 @@ test("los tres expedientes Quimbaya cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const sourceUrls = [...record.keySources, ...record.sources].map(
-      ({ url }) => url,
-    );
+    // Antes se exigían exactamente siete fuentes en todas las fichas. Ese
+    // número era el reparto en bloque escrito como aserción: todas recibían la
+    // misma lista. Lo que hay que sostener es el mínimo, la ausencia de
+    // duplicados, que el relato apoye en dominios distintos, que no entre
+    // ninguna portada de catálogo y que las fichas no citen todas lo mismo.
+    const fuentes = [...record.keySources, ...record.sources];
+    assert.ok(fuentes.length >= 5, `${record.slug}: ${fuentes.length} fuentes`);
+    const sourceUrls = fuentes.map(({ url }) => url);
     assert.equal(new Set(sourceUrls).size, sourceUrls.length);
+    const dominios = new Set(sourceUrls.map((url) => new URL(url).host));
+    assert.ok(dominios.size >= 3, `${record.slug}: ${dominios.size} dominios`);
+    for (const url of sourceUrls) {
+      assert.doesNotMatch(
+        url,
+        /books\.google\.|openlibrary\.org|worldcat\.org|\.blogspot\.|scribd\.com|academia\.edu|wikipedia\.org/i,
+        `${record.slug}: fuente de catálogo ${url}`,
+      );
+    }
+    assert.match(
+      record.historia,
+      /\b(1[5-9]|20)\d\d\b/,
+      `${record.slug}: su Historia no fecha el registro`,
+    );
+    assert.doesNotMatch(
+      record.mito,
+      /\b(la fuente|las fuentes|la investigación|esta ficha|la página|según el registro|el cronista)\b/i,
+      `${record.slug}: su Relato habla de la investigación`,
+    );
   }
+  // Dos fichas de un corpus pequeño pueden apoyarse en la misma bibliografía
+  // —aquí caben tres crónicas y poco más—, pero no pueden abrir con las mismas
+  // tres fuentes clave: eso sería otra vez el reparto en bloque.
+  const clave = records.map((r) => r.keySources.map(({ url }) => url).join("|"));
+  assert.equal(new Set(clave).size, clave.length, "dos fichas abren con las mismas fuentes clave");
 });
 
 test("Batatabatí vuelve al juego documentado y elimina la princesa sintética", () => {
@@ -62,9 +90,16 @@ test("Batatabatí vuelve al juego documentado y elimina la princesa sintética",
     "replace-synthetic-princess",
   );
   assert.equal(record.title, "Batatabatí: «ea, juguemos»");
-  assert.match(record.mito, /No había una princesa/i);
+  // Las aserciones que exigían que el Relato explicara la investigación
+  // —«No había una princesa», «leyenda literaria publicada en 1932», «no
+  // registra un nombre propio»— eran el aparato editorial escrito como prueba.
+  // Ese aparato salió del Relato y vive ahora en Historia, Versiones y el
+  // dossier. Lo que se comprueba es lo mismo, dicho donde corresponde.
+  assert.doesNotMatch(record.mito, /princesa/i);
+  assert.match(record.mito, /batatabati/i);
   assert.match(record.mito, /dos tambores/i);
-  assert.match(record.mito, /hechos de quienes habían vivido antes/i);
+  assert.match(record.mito, /sucesos pasados de sus mayores/i);
+  assert.match(record.historia, /Cieza/);
   assert.doesNotMatch(
     record.mito,
     /ojos azules|le arrancaron los ojos|lágrimas formaron el río Quindío/i,
@@ -77,10 +112,17 @@ test("Ipiaré se identifica como leyenda literaria de 1932", () => {
     quimbayaEditorialDecisions["ipiare-ebachi"].action,
     "identify-modern-literary-legend",
   );
-  assert.match(record.mito, /leyenda literaria publicada en 1932/i);
+  // Las aserciones que exigían que el Relato explicara la investigación
+  // —«No había una princesa», «leyenda literaria publicada en 1932», «no
+  // registra un nombre propio»— eran el aparato editorial escrito como prueba.
+  // Ese aparato salió del Relato y vive ahora en Historia, Versiones y el
+  // dossier. Lo que se comprueba es lo mismo, dicho donde corresponde.
+  assert.doesNotMatch(record.mito, /leyenda literaria|1932/i);
   assert.match(record.historia, /Gonzalo Uribe Mejía/i);
-  assert.match(record.historia, /hija, no nieta/i);
-  assert.match(record.versiones, /no se encontró una versión oral independiente/i);
+  assert.match(record.historia, /\b1932\b/);
+  assert.match(record.historia, /Yagarí/);
+  assert.match(record.versiones, /\b1932\b/);
+  assert.match(record.versiones, /nieta/i);
   assert.doesNotMatch(record.mito, /lengua del Sol/i);
 });
 
@@ -92,9 +134,19 @@ test("Nabsacadas entra sin demonización ni deificación general", () => {
     quimbayaEditorialDecisions["nabsacadas-la-estrella-caida"].action,
     "add-documented-colonial-narrative",
   );
+  // Las aserciones que exigían que el Relato explicara la investigación
+  // —«No había una princesa», «leyenda literaria publicada en 1932», «no
+  // registra un nombre propio»— eran el aparato editorial escrito como prueba.
+  // Ese aparato salió del Relato y vive ahora en Historia, Versiones y el
+  // dossier. Lo que se comprueba es lo mismo, dicho donde corresponde.
   assert.match(record.mito, /páramo de Tataquí/i);
-  assert.match(record.mito, /mediante azotes/i);
-  assert.match(record.historia, /ni demonio colonial ni dios panquimbaya/i);
+  assert.match(record.mito, /azote/i);
+  // Los detalles que Pedro Simón sí trae y que la ficha había perdido.
+  assert.match(record.mito, /ahuyama/i);
+  assert.match(record.mito, /estera/i);
+  assert.match(record.mito, /pata de gallo/i);
+  assert.match(record.historia, /Simón/);
+  assert.match(record.versiones, /Zuluaga/);
   assert.doesNotMatch(record.content, /Nabsacadas (?:era|es|fue) el dios/i);
 });
 

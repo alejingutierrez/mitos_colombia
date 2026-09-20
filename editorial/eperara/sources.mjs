@@ -73,12 +73,70 @@ export const eperaraSources = {
     summary:
       "Sitúa la presencia Eperara Siapidara en Nariño y resume su Ley de Origen, territorio y autoridades tradicionales.",
   },
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  diagoCosmovisiones2015: {
+    title: "Cosmovisiones y naturalezas en tres culturas indígenas de Colombia",
+    author: "Olga Lucía Sanabria Diago y Arturo Argueta Villamar",
+    year: 2015,
+    type: "artículo de revista arbitrada",
+    url: "https://revistaetnobiologia.mx/index.php/etno/article/view/76/74",
+    summary:
+      "Documenta desde el resguardo de Guanguí, en Timbiquí y López de Micay, la estructura del universo Sía que el relato instaura: Tachi Ãk'ore como el sol e hijo de Tachi Nawe, Tachi Nawe como la luna, el mundo del medio que comienza en las cabeceras de los ríos y termina en las bocanas, y el mundo de abajo donde están las semillas buenas «a los cuales corresponden mitos de origen». Confirma que la Tachi Nawe hereda su distinción por línea familiar y viaja entre Ecuador, Colombia y Panamá.",
+    limitation:
+      "Es un estudio de etnobiología centrado en el manejo del bosque, no en la narrativa: no transcribe el mito de origen. Trabaja principalmente con un resguardo del Cauca y sus datos proceden en buena parte de documentos de la organización ACIESCA, no de una encuesta narrativa propia.",
+  },
+  mezaNarraciones2018: {
+    title: "Narraciones de montaña y educación en la cultura del pueblo Ɨnkal Awá",
+    author: "Bayron Rodrigo Arcos Meza",
+    year: 2018,
+    type: "tesis doctoral con textos en awapit y traducción al castellano",
+    url: "https://sired.udenar.edu.co/7875/1/92632.pdf",
+    summary:
+      "Sostiene el paralelo declarado con un pueblo vecino: publica el relato awá en que del árbol grande baja una barbacha negra que al tocar la tierra se vuelve el primer hombre y después una barbacha blanca que se vuelve la primera mujer. Permite contrastar dos maneras distintas de que materia vegetal del territorio se vuelva gente, y medir la diferencia: allá la planta baja sola y la pareja se forma con siglos de distancia; aquí alguien siembra, corta, clava y llama, y el nacimiento es colectivo y de golpe.",
+    limitation:
+      "Es una fuente del pueblo Awá, no del pueblo Eperara Siapidaara: son pueblos y lenguas distintos y se cita aquí sólo como término de comparación declarado. Nada en esta obra se refiere a los eperara, y la semejanza de operación no implica préstamo ni origen común.",
+  },
+  mambuscayHistorias2022: {
+    title: "Historias propias del pueblo Ɨnkal Awá como material didáctico para la enseñanza de las ciencias sociales en las instituciones y centros educativos Awá",
+    author: "Deiby Orlando Sinsajoa Mambuscay",
+    year: 2022,
+    type: "tesis de maestría con entrevistas a mayores y sabedores",
+    url: "https://sired.udenar.edu.co/8175/1/2022306.pdf",
+    summary:
+      "Aporta el segundo paralelo: recoge del mayor Eduardo Cánticus, del Resguardo El Gran Sábalo, el 5 de junio de 2022, el episodio de la amparengua, dueña del árbol grande, que impedía tumbarlo y bajaba con una espada a matar a la gente, hasta que excavaron bajo la escalera, la untaron de brea y la hicieron resbalar al hueco. Otra vez la dueña del árbol es una figura hostil y el árbol sólo cae por acción organizada de la comunidad.",
+    limitation:
+      "Es una fuente del pueblo Awá, no del pueblo Eperara Siapidaara, y se cita sólo como paralelo declarado. Además es un trabajo de finalidad didáctica circunscrito a resguardos de Tumaco y Barbacoas, y el episodio de la amparengua no es un relato del agua sino del árbol de la comida.",
+  },
 };
 
-export function pickEperaraSources(...keys) {
-  return keys.map((key) => {
-    const source = eperaraSources[key];
-    if (!source) throw new Error(`Fuente Eperara desconocida: ${key}.`);
-    return source;
-  });
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickEperaraSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = eperaraSources[key];
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Eperara desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

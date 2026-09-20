@@ -138,10 +138,77 @@ export const yaguaSources = {
     limitation:
       "El corpus reúne interlocutores de varias pertenencias, con énfasis en material Ticuna. Sirve para explicar el rumor regional, no para adjudicar todos sus episodios a los Yagua.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  acevedoCultura2011: source({
+    title: "¿Cultura para consumir? Los yagua y el turismo cultural en el Trapecio Amazónico",
+    author: "Lina Marcela Gallego Acevedo",
+    year: 2011,
+    type: "etnografía contemporánea",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/927",
+    summary:
+      "Documenta la comunidad yagua de La Libertad, en el Trapecio Amazónico colombiano, y su inserción en los circuitos turísticos: sirve para sostener que hay yagua en Colombia hoy y para explicar por qué el material narrativo disponible viene del lado peruano y no de allí.",
+    limitation:
+      "Su objeto es el turismo cultural y la escenificación de la diferencia, no la mitología: no contiene ninguna versión de este ciclo.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  valdiviesoCuidado2005: source({
+    title: "Cuidado te mochan la cabeza. Circulación y construcción de un rumor en la frontera amazónica de Colombia, Perú y Brasil",
+    author: "Salima Cure Valdivieso",
+    year: 2005,
+    type: "tesis de maestría con trabajo de campo",
+    url: "https://repositorio.unal.edu.co/items/1a723217-91df-44a2-b7bc-46be3abfc030",
+    summary:
+      "Aporta casi todo el detalle del relato: las luces de colores que cambian de tamaño y tono, el aparato silencioso con computadores que detecta si la víctima va armada, el rayo que paraliza, los laboratorios que mantienen vivas cabezas y órganos, los disfraces de bufeo, caimán, tigre, pirarucú, pintadillo, venado, vaca marina, boa y águila con aparato para respirar, y el modo de reconocerlos por la conducta del animal. Contiene el episodio del muchacho de trece años que pescaba en el lago del Pan, el dibujo con cara de chimbilaco, tijeras en el pecho y patas de gavilán, y la prohibición familiar de volver a pescar.",
+    limitation:
+      "La autora advierte que no cita a sus interlocutores por sus nombres reales: todos los nombres son cambiados, de modo que la ficha no puede atribuir el episodio a una persona verificable. La palabra chimbilaco aparece sólo dos veces y siempre como el murciélago al que se parece la máscara, no como nombre del ser.",
+  }),
+  pribylEvidencias2010: source({
+    title: "Evidencias médico antropológicas sobre el origen del Pishtaco",
+    author: "Rosario de Pribyl",
+    year: 2010,
+    type: "artículo de revista arbitrada",
+    url: "http://www.scielo.org.pe/scielo.php?script=sci_arttext&pid=S1726-46342010000100017",
+    summary:
+      "Sostiene el paralelo andino que la ficha usa en similitudes: el pishtaco o sacagrasa como extractor de grasa de cuerpos indígenas para beneficio del blanco, y la tesis de que su antecedente está en el uso farmacéutico europeo de material humano en los siglos XVI y XVII, es decir, que la figura no tiene origen andino.",
+    limitation:
+      "Es peruana y andina, no amazónica ni colombiana, y está escrita desde la salud pública y la etnomedicina: no menciona el cortacabezas, el pelacara ni el chimbilaco. El eslabón que une pishtaco, pelacara y cortacabezas lo aporta Cure, no este artículo.",
+  }),
+  espanolachimbilaco2010: source({
+    title: "chimbilaco (entrada del Diccionario de americanismos)",
+    author: "Asociación de Academias de la Lengua Española",
+    year: 2010,
+    type: "entrada de diccionario",
+    url: "https://www.asale.org/damer/chimbilaco",
+    summary:
+      "Registra chimbilaco como palabra viva del español de Colombia y la remite a chimbilá, con marca de área Co:SO. Es lo que permite decir en la ficha que el nombre del ser es, antes que nada, el nombre del murciélago.",
+    limitation:
+      "Es una remisión de una línea, sin definición propia y sin ninguna acepción sobrenatural; la marca de área apunta a Colombia y no al Amazonas, de modo que no confirma por sí sola el uso amazónico del término.",
+  }),
+  espanolachimbila2010: source({
+    title: "chimbilá (entrada del Diccionario de americanismos)",
+    author: "Asociación de Academias de la Lengua Española",
+    year: 2010,
+    type: "entrada de diccionario",
+    url: "https://www.asale.org/damer/chimbil%C3%A1",
+    summary:
+      "Da la definición a la que remite chimbilaco: sustantivo masculino usado en Colombia para el murciélago, con identificación zoológica de la familia Emballonuridae.",
+    limitation:
+      "Es una entrada estrictamente léxica: no documenta creencia, relato ni región amazónica, y su acepción zoológica no coincide necesariamente con el murciélago que la gente del río tiene en mente.",
+  }),
 };
 
-export function pickYaguaSources() {
-  const keys = [
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickYaguaSources(...entries) {
+  // Antes esta función no recibía nada: devolvía la misma lista a todos los
+  // mitos de la comunidad. La lista se conserva como reparto por defecto
+  // mientras cada ficha pasa a declarar sus propias claves.
+  const entradas = entries.length ? entries : [
     "powlison1993",
     "chaumeil1978",
     "chaumeil1994",
@@ -152,15 +219,40 @@ export function pickYaguaSources() {
     "gobiernoMayor",
     "minedu2024",
   ];
-  return keys.map((key) => {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = yaguaSources[key];
-    if (!selected) throw new Error(`Fuente Yagua desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Yagua desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }
 
-export function pickChimbilacoSources() {
-  const keys = [
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickChimbilacoSources(...entries) {
+  // Antes esta función no recibía nada: devolvía la misma lista a todos los
+  // mitos de la comunidad. La lista se conserva como reparto por defecto
+  // mientras cada ficha pasa a declarar sus propias claves.
+  const entradas = entries.length ? entries : [
     "gallego2011",
     "cure2005",
     "ramos2021",
@@ -169,11 +261,26 @@ export function pickChimbilacoSources() {
     "gobiernoMayor",
     "chaumeil1994",
   ];
-  return keys.map((key) => {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = yaguaSources[key];
     if (!selected) {
-      throw new Error(`Fuente de Chimbilaco desconocida: ${key}`);
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente de Chimbilaco desconocida: ${visto}`);
     }
-    return selected;
-  });
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

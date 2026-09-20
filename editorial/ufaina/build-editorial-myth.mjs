@@ -51,9 +51,14 @@ export function buildUfainaEditorialMyth(input) {
   if (!media) throw new Error(`Falta inventario visual para ${input.slug}.`);
   const categoryPath = ufainaCategoryBySlug[input.slug];
   if (!categoryPath) throw new Error(`Falta taxonomía para ${input.slug}.`);
-  const historia = `${input.historyCore}\n\n${sharedHistory}`;
-  const versiones = `${input.versionCore}\n\n${sharedVersions}`;
-  const similitudes = `${input.similarityCore}\n\n${sharedSimilarities}`;
+  // Las fichas reescritas entregan el campo entero. `historyCore` y los tres
+  // bloques compartidos son el camino viejo: daban un párrafo propio y el
+  // resto idéntico para toda la comunidad, que es la razón de que todas
+  // midieran lo mismo y se leyeran igual.
+  const historia = input.historia ?? `${input.historyCore}\n\n${sharedHistory}`;
+  const versiones = input.versiones ?? `${input.versionCore}\n\n${sharedVersions}`;
+  const similitudes =
+    input.similitudes ?? `${input.similarityCore}\n\n${sharedSimilarities}`;
   const imagePromptHorizontal = horizontalPrompt(input.sceneHorizontal);
   const imagePromptVertical = verticalPrompt(input.sceneVertical);
   const record = {
@@ -64,6 +69,7 @@ export function buildUfainaEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia,
     versiones,
     leccion: input.leccion,

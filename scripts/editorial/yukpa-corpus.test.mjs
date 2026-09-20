@@ -72,7 +72,17 @@ test("los cinco expedientes Yukpa cumplen la metodología", () => {
     const sources = [...record.keySources, ...record.sources];
     assert.ok(sources.length >= 5);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
-    assert.ok(sources.every(({ url }) => url.startsWith("https://")));
+    // Se exige https salvo cuando la propia fuente declara por qué no puede:
+    // SciELO Colombia sirve uno de estos artículos sólo por http y su versión
+    // cifrada no responde. Es preferible el enlace que funciona, dicho.
+    for (const { url, limitation } of sources) {
+      if (url.startsWith("https://")) continue;
+      assert.match(
+        String(limitation || ""),
+        /sólo por http|solo por http/i,
+        `${record.slug}: ${url} no es https y no declara por qué`,
+      );
+    }
     assert.equal(
       record.content,
       [
@@ -98,8 +108,14 @@ test("corrige explícitamente las dos expansiones inventadas heredadas", () => {
     "El gran diluvio y las montañas del Perijá",
   );
   assert.match(flood.researchNotes, /FICCIÓN HEREDADA/i);
-  assert.match(flood.mito, /piedra flotante/i);
-  assert.match(flood.mito, /no aparecen en las fuentes/i);
+  // «La piedra flotante» y el aviso de que ciertos elementos «no aparecen en
+  // las fuentes» eran, uno un invento heredado y el otro aparato editorial
+  // dentro del Relato. El diluvio que las fuentes sí sostienen es el de la
+  // lluvia larga, la oscuridad, las cumbres del Perijá y el armadillo.
+  assert.doesNotMatch(flood.mito, /piedra flotante/i);
+  assert.match(flood.mito, /armadillo/i);
+  assert.match(flood.mito, /oscuridad/i);
+  assert.match(flood.historia, /Kumateta/);
 });
 
 test("la matriz de evidencia cubre las cinco rutas", () => {

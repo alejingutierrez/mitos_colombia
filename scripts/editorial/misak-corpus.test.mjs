@@ -107,7 +107,13 @@ test("corrige los núcleos documentales sin fundir relatos distintos", () => {
   assert.match(mama.historia, /Domingo Tombé/);
   assert.doesNotMatch(mama.mito, /honda|gigante/i);
   assert.doesNotMatch(pedro.mito, /tambor|tumba/i);
-  assert.match(pedro.historia, /reelaboración tardía/i);
+  // Antes se comprobaba que la Historia llamara «reelaboración tardía» a la
+  // versión de 1980. Esa etiqueta editorial ya no va en el texto publicado: lo
+  // que va es el registro, con su libro, su año y los dos escalones por los
+  // que llegó hasta aquí.
+  assert.match(pedro.historia, /Namuy Misag/);
+  assert.match(pedro.historia, /Hernández de Alba/);
+  assert.match(pedro.historia, /\b1949\b/);
 });
 
 test("la landing usa Misak como nombre público y explica la ruta histórica", () => {

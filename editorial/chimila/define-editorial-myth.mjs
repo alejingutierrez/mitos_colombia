@@ -25,12 +25,15 @@ export function defineChimilaMyth({
   seoTitle,
   seoDescription,
   focusKeywords,
+  sourceKeys,
   ...input
 }) {
+  const fallbackKeys =
+    input.sourceMode === "living" ? livingSourceKeys : corpusSourceKeys;
   const selectedSources = pickChimilaSources(
-    ...(input.sourceMode === "living"
-      ? livingSourceKeys
-      : corpusSourceKeys),
+    ...(Array.isArray(sourceKeys) && sourceKeys.length
+      ? sourceKeys
+      : fallbackKeys),
   );
   return buildChimilaEditorialMyth({
     ...input,

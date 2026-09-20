@@ -28,7 +28,11 @@ test("la sincronización Yukpa hace preflight sin exigir imágenes pendientes", 
   assert.deepEqual(output.universe.toDelete, []);
   assert.equal(output.dossiers, 5);
   assert.equal(output.imagePairs, 5);
-  assert.equal(output.sourcesPerMyth, 9);
+  // Antes eran nueve para las cinco fichas: el reparto en bloque. Ahora cada
+  // ficha cita lo suyo, así que se comprueba el mínimo y que haya más de un
+  // reparto.
+  const repartos = [output.sourcesPerMyth].flat();
+  assert.ok(Math.min(...repartos) >= 5, `reparto por debajo del mínimo: ${repartos}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

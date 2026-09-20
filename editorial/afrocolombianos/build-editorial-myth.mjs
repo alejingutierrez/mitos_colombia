@@ -34,13 +34,16 @@ function verticalPrompt(scene) {
   return `Ilustración editorial vertical digital 2D full paper cut y paper quilling, acabado gráfico plano y composición a página completa: ${scene}; segunda escena claramente distinta de la portada, territorio del Pacífico colombiano expresado con capas digitales recortadas de borde limpio, formas mate y quilling dibujado selectivo sin volumen físico; figuras humanas adultas con ropa cotidiana sobria cuando corresponda, sin rasgos caricaturescos, exotización, máscaras, tocados, joyas, pintura corporal ni vestuario ceremonial inventado; sin horror gráfico, texto ni letras, sin fotografía, fibras reales, pliegues reales, grosor de papel, sombras proyectadas, objeto físico, maqueta, diorama, CGI ni render 3D.`;
 }
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildAfrocolombianEditorialMyth(input) {
   const media = afrocolombianMedia[input.slug];
   if (!media) throw new Error(`Falta inventario visual para ${input.slug}.`);
   const categoryPath = afrocolombianCategoryBySlug[input.slug];
   if (!categoryPath) throw new Error(`Falta taxonomía para ${input.slug}.`);
-  const historia = `${input.historyCore}\n\n${sharedAfroHistory}`;
-  const versiones = `${input.versionCore}\n\n${sharedAfroVersions}`;
+  const historia = input.historia ?? `${input.historyCore}\n\n${sharedAfroHistory}`;
+  const versiones = input.versiones ?? `${input.versionCore}\n\n${sharedAfroVersions}`;
   const imagePromptHorizontal = horizontalPrompt(input.sceneHorizontal);
   const imagePromptVertical = verticalPrompt(input.sceneVertical);
   const record = {
@@ -51,10 +54,11 @@ export function buildAfrocolombianEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia,
     versiones,
     leccion: input.leccion,
-    similitudes: input.similarityCore,
+    similitudes: input.similitudes ?? input.similarityCore,
     excerpt: input.excerpt,
     seo_title: input.seoTitle,
     seo_description: input.seoDescription,

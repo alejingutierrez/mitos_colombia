@@ -94,17 +94,6 @@ export const yucunaSources = {
     limitation:
       "Es una fuente histórica escrita por un investigador externo y no se usa para completar diálogos o episodios narrativos ausentes.",
   }),
-  onicYucuna: source({
-    title: "Yukuna",
-    author:
-      "Organización Nacional Indígena de Colombia, con perfiles del Ministerio del Interior y Ministerio de Cultura",
-    type: "perfil comunitario y territorial contemporáneo",
-    url: "https://www.onic.org.co/sitio/pueblos/1167-yucuna",
-    summary:
-      "Sitúa al pueblo en Amazonas, Putumayo y Vaupés y reconoce a los Karipulakena como hijos del mundo vinculados con la vida acuática.",
-    limitation:
-      "Es una síntesis institucional actualizable; no sustituye las narraciones atribuidas ni fija una versión única de la cosmología.",
-  }),
   villaPosse1993: source({
     title: "Mitos y leyendas de Colombia",
     author: "Eugenia Villa Posse, compiladora",
@@ -115,6 +104,40 @@ export const yucunaSources = {
       "Reproduce en acceso abierto La historia de Kanumá y El nacimiento de los Matapí, con referencias a las publicaciones originales.",
     limitation:
       "No es una versión oral independiente y contiene errores tipográficos de la reproducción; se usa para consulta y control, no para aumentar artificialmente el número de testimonios.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  hildebrandOrigen1975: source({
+    title: "Origen del mundo según los Ufaina",
+    author: "Martín von Hildebrand",
+    year: 1975,
+    type: "registro etnográfico primario",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/1609",
+    summary:
+      "Es la obra a la que Herrera remite en la nota donde explica que entre los tanimuka los «mayores» nacieron del tigre, dato con el que interpreta el privilegio de bailar primero que Ka'amari reclama al comienzo del conflicto.",
+    limitation:
+      "Registro de otro pueblo, los tanimuka o ufaina; se usa como paralelo documentado y para sostener una nota de Herrera, no como versión de este mito.",
+  }),
+  registroCorpus: source({
+    title: "Corpus yucuna de la Collection Pangloss",
+    author: "Laurent Fontaine (registro y transcripción), CNRS-LACITO",
+    type: "corpus de textos transcritos y grabaciones en línea",
+    url: "https://pangloss.cnrs.fr/corpus/Yucuna?lang=en",
+    summary:
+      "Documenta que los mitos largos del Mirití y La Pedrera siguen narrándose con narrador y fecha —entre ellos un Horacio Matapi en 1970— y registra el término Jupichiya como nombre de uno de los grupos incorporados, la misma raíz que aquí aparece como upichiya.",
+    limitation:
+      "No contiene una versión del «Nacimiento de la Gente»; se consultaron la ficha del corpus y los resúmenes públicos, en francés e inglés.",
+  }),
+  fontainelagentivite2013: source({
+    title: "De l'agentivité mythique et incantatoire. Le mythe de Kawáirimi chez les Yucuna (Amazonie colombienne)",
+    author: "Laurent Fontaine",
+    year: 2013,
+    type: "artículo académico",
+    url: "https://journals.openedition.org/ateliers/9481",
+    summary:
+      "Compara dos versiones fechadas y atribuidas de un mismo mito yucuna, una de Mario Matapi en 2008 y otra de Horacio Matapi en 1970, y es la referencia que permite verificar que ese nombre circula como narrador en el corpus del Mirití.",
+    limitation:
+      "Está en francés, trata del ciclo de Kawáirimi y no de este relato, y no establece que el Horacio Matapi de 1970 sea el narrador de 1974.",
   }),
 };
 
@@ -199,8 +222,16 @@ export const abundanceSources = {
   }),
 };
 
-export function pickYucunaSources() {
-  const keys = [
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickYucunaSources(...entries) {
+  // Antes esta función no recibía nada: devolvía la misma lista a todos los
+  // mitos de la comunidad. La lista se conserva como reparto por defecto
+  // mientras cada ficha pasa a declarar sus propias claves.
+  const entradas = entries.length ? entries : [
     "herreraKanuma",
     "herreraMatapi",
     "herreraYurupari",
@@ -208,18 +239,42 @@ export function pickYucunaSources() {
     "fontaine2014",
     "fontaine2011",
     "jacopin1972",
-    "onicYucuna",
     "villaPosse1993",
   ];
-  return keys.map((key) => {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = yucunaSources[key];
-    if (!selected) throw new Error(`Fuente Yucuna desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Yucuna desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }
 
-export function pickAbundanceSources() {
-  const keys = [
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickAbundanceSources(...entries) {
+  // Antes esta función no recibía nada: devolvía la misma lista a todos los
+  // mitos de la comunidad. La lista se conserva como reparto por defecto
+  // mientras cada ficha pasa a declarar sus propias claves.
+  const entradas = entries.length ? entries : [
     "urbina2010",
     "idartes2015",
     "museoNacional",
@@ -228,11 +283,26 @@ export function pickAbundanceSources() {
     "unad2018",
     "bibliotecaNacional",
   ];
-  return keys.map((key) => {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = abundanceSources[key];
     if (!selected) {
-      throw new Error(`Fuente Moniya Amena desconocida: ${key}`);
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Moniya Amena desconocida: ${visto}`);
     }
-    return selected;
-  });
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

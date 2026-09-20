@@ -1,53 +1,63 @@
 import { defineWayuuMyth } from "../define-editorial-myth.mjs";
 
-const mito = `Worunka bajó desde la serranía de la Macuira hasta un arroyo situado entre Itojoro y Kousopa. Llevaba un hijo en el vientre y caminaba con dificultad.
+const mito = `Worunka bajó de la Sierra de Macuira hasta el arroyo que corre por el valle entre el Itojoro y el Kousopa. Iba a bañarse. Llevaba un hijo en el vientre y el cuerpo le pesaba: estaba enferma y tenía pocas costillas.
 
-En aquel tiempo, cuenta la historia, las mujeres tenían dientes en la abertura por donde hoy nacen los niños. Para dar a luz era necesario abrir el vientre. Así habían sacado al primer hijo de Worunka y después habían cerrado la herida.
+En aquel tiempo las mujeres tenían dientes en la vulva. Ningún hijo podía salir por allí. Para sacarlos había que abrir el vientre de la madre y coserlo después. Así le habían sacado a Worunka su primer hijo: la abrieron, lo sacaron y la cosieron.
 
-Mareiwa la vio junto al agua. Comprendió que aquel modo de nacer traía sufrimiento. Tomó una piedra y la lanzó hacia Worunka. El golpe quebró los dientes.
+Mareiwa la observaba. Vio la herida cosida y vio que aquello no estaba bien. Tomó una piedra y la lanzó. La piedra rompió los dientes de la boca de la vulva.
 
 —Por aquí nacerán los hijos —dijo.
 
-La sangre tocó una piedra del arroyo. Un pájaro pequeño, llamado Sangre Toro, se acercó y quedó teñido de rojo. Después llegaron el carpintero, el guacamayo y otras aves. Cada una rozó el color y se llevó una parte sobre las plumas.
+Hasta entonces los hombres tenían miedo de acostarse con las mujeres: temían que el jeruwai les fuera mordido y cortado, y hacían los hijos por el nocho, el ombligo. Desde que Mareiwa rompió los dientes de Worunka, hombres y mujeres se unen como hoy.
 
-Worunka seguía débil. Tenía pocas costillas y el embarazo pesaba sobre su cuerpo. Mareiwa tomó dos costillas del hombre y se las puso. La mujer ganó fuerza para dar a luz.
+Pero Worunka seguía enferma y embarazada, y con tan pocas costillas no podía parir sin dolor. Mareiwa se apiadó de ella. Le cortó dos costillas al hombre y se las puso a Worunka, para que diera a luz con facilidad y fuera más gorda y más robusta. Desde entonces las mujeres guajiras paren con menos dolores y pueden tener hasta mellizos.
 
-También cambió la manera de formar pareja. Antes, según esta versión, las mujeres buscaban a los hombres y entregaban bienes para casarse. Mareiwa dispuso que los hombres fueran a la casa de las mujeres y entregaran animales. Si la unión se rompía de cierta manera, parte de esos bienes debía devolverse.
+En el tiempo de Worunka eran las mujeres quienes compraban a los hombres por maridos. Iban a buscarlos a sus casas para acostarse con ellos. Mareiwa lo vio y le pareció muy feo que la mujer buscara al hombre.
 
-Luego envió a dos viajeros por semillas rojas. Ellos caminaron hasta encontrarlas y las llevaron a la Macuira. Eran tumas, piedras valiosas. Worunka recibió otras semillas para sembrar alimentos.
+—Debe ser el hombre quien busque a la mujer —dijo.
 
-La cosecha fue abundante. La gente preparó una bebida y bebió hasta perder la medida. Mareiwa se enfureció: hizo que las plantas de tuma quedaran bajo tierra y que los veranos fueran largos. Desde entonces, la lluvia vuelve solo por temporadas.
+Se cambiaron los papeles: el hombre compra a la mujer, la busca en su casa y manda en el hogar. Mareiwa puso también la ley del pago, para que al padre le devuelvan los animales que dio por la madre de la hija.
 
-Worunka permaneció junto al arroyo convertida en piedra. El lugar guardó la forma de su cuerpo, el nacimiento de las aves rojas y el recuerdo de cambios que afectaron parto, matrimonio, alimentos y sequía.
+Después Mareiwa llamó a dos hombres y les señaló un camino largo.
 
-Quien mira esa piedra no ve una ley simple. Ve una historia antigua donde el cuerpo de una mujer carga demasiadas explicaciones y todavía exige preguntas.`;
+—Recórranlo hasta el final. Allá hay unas matas de frutas coloradas. Traigan las semillas y siémbrenlas en la Sierra de Macuira.
 
-const historia = `Chaves publicó “La India Worunka” en 1946 a partir de un relato transmitido por Juancito Iguarán, de setenta años, perteneciente al clan Pushaina y no hablante de castellano; Roberto Iguarán actuó como intérprete. Esa información es valiosa porque muestra una cadena concreta de voz, traducción y edición. No autoriza a tratar el texto español como transcripción literal en wayuunaiki.
+Los dos hombres caminaron hasta donde el camino se acababa, encontraron las matas, recogieron las semillas y volvieron. Las sembraron en la sierra. Las frutas que nacieron eran tumas, y Mareiwa dijo que esas piedras tendrían mucho valor en la Guajira.
 
-La narración reúne episodios sobre vagina dentada, parto, costillas, iniciativa matrimonial, compensación, semillas, tumas y origen de la sequía. El comentario de Chaves interpreta los cambios como restauración de un equilibrio y naturaliza que el hombre “mande en el hogar”. Esa lectura refleja también el género y la época del investigador. No la reproducimos como doctrina Wayuu.
+Todas las demás semillas se las entregaron a Worunka, para que las sembrara y la gente pudiera mantenerse. La gente, muy contenta, hizo chicha y la dejó fuertear en una tinaja. Cuando estuvo fuerte se la tomaron y se emborracharon.
 
-Las fuentes contemporáneas describen clanes matrilineales, importancia del tío materno y un sistema de reparación y compensación. Matrilinealidad no significa que todas las mujeres gobiernen ni confirma que el orden actual naciera por una decisión de Mareiwa. La versión de Worunka dramatiza tensiones sobre reproducción, alianza y bienes; no puede resumir por sí sola la vida de las mujeres Wayuu.
+Mareiwa se puso muy bravo.
 
-La Macuira aporta contexto territorial verificable: serranía, agua dulce, bosque y lugares de memoria dentro del resguardo. El arroyo entre Itojoro y Kousopa no tiene una coordenada pública suficientemente segura; el mapa usa un punto aproximado y así queda declarado.
+—Que se sequen las matas de tuma y las demás plantas. Que nunca más haya abundancia. Que los veranos sean largos y que la gente de la Guajira sufra hambre y sed.
 
-El final del Relato añade una pregunta editorial, no una sentencia tradicional: reconocer que el cuerpo femenino sostiene varias instituciones narradas por una cadena masculina de transmisión.`;
+Por eso hoy las tumas se encuentran enterradas, el verano es largo y con él vienen el hambre y la sed. Solo cuando Mareiwa tiene lástima de la gente trae la lluvia, para que no perezca de hambre.
 
-const versiones = `La fuente de 1946 ofrece una sola versión extensa. Dentro de ella pueden distinguirse cinco episodios: transformación del parto; color rojo de ciertas aves; incorporación de costillas; cambio en las alianzas matrimoniales; y origen de tumas, semillas y verano. No sabemos si el informante los narraba siempre como una unidad o si la edición de Chaves los encadenó.
+Worunka volvió al arroyo del valle a bañarse, como había venido la primera vez desde la Macuira. Allí Mareiwa la convirtió en piedra. La piedra quedó en el lugar donde le había roto los dientes, y tiene exactamente la forma de la vulva de Worunka.
 
-La ficha anterior trataba cada cambio como una reforma sabia y presentaba la autoridad masculina resultante como equilibrio cultural. Esta revisión conserva el acontecimiento narrado, pero separa narración de aprobación. La violencia sobre el cuerpo de Worunka no se embellece ni se ofrece a niños como orden natural.
+Mareiwa cogió al pajarito Sangre Toro y lo metió en esa piedra; por eso el pájaro es rojo. El Carpintero alcanzó a meter el copete y le quedó pintado de rojo. Al Guacamayo también lo echaron a la piedra. Todos los pájaros que llevan rojo en las plumas tocaron la piedra de Worunka.`;
 
-El motivo de la vagina dentada aparece en muchas regiones del mundo y también en repertorios indígenas americanos. Su dispersión no demuestra que todas las versiones tengan el mismo significado. Aquí se une a parto, aves, alianza y paisaje de Macuira.
+const historia = `Milcíades Chaves publicó “La India Worunka” en 1946 en el Boletín de Arqueología, dentro de quince narraciones guajiras que presentó como aporte al folclor colombiano y como material para “la interpretación de la cultura guajira”. La ficha anterior conserva el dato de procedencia: el narrador fue Juancito Iguarán, de setenta años, del clan Pushaina, que no hablaba castellano, y Roberto Iguarán tradujo. Esa cadena —voz en wayuunaiki, intérprete, redacción de un antropólogo bogotano— explica el tono desigual del texto y obliga a no leerlo como transcripción literal. Chaves escribía desde la antropología nacional de su época: en la introducción sostiene que conocer la religión de los “grupos primitivos” sirve para incorporarlos “a un credo, a una filosofía o a una nacionalidad”, y en su nota previa lee la historia como “un conflicto sexual”, el temor del hombre hacia la mujer, que Mareiwa “arregla restableciendo el equilibrio”. Que el hombre “manda en el hogar” es frase del texto de 1946: el Relato la conserva porque ahí está, pero no la presentamos como doctrina wayuu. Chaves define además la tuma como piedra de color coral brillante, usada como adorno y objeto mágico.
 
-“El Incesto” también convierte el cuerpo de una joven en roca y “Serranías de La Guajira” enlaza personas, piedras y origen de plantas. No se fusionan con Worunka porque sus transmisiones conservan conflictos diferentes. La mención de costillas puede resonar con traducciones cristianas, pero la fuente no permite decidir si es préstamo, convergencia o intervención del intérprete. La duda permanece explícita.`;
+Sobre el territorio: la Macuira es una serranía con bosque nublado y fuentes de agua permanentes en medio de la Alta Guajira, traslapada con el resguardo, según Parques Nacionales; el Régimen Especial de Manejo de 2019 describe allí territorios claniles, descendencia por línea materna y lugares de valor cultural. Otto Vergara, en la Enciclopedia Banrepcultural (2023), registra a Wolunka entre los lugares sagrados wayuu: una enorme piedra negra con manchas rojas en la serranía, que recuerda a las mujeres primigenias y la vagina dentada. El proyecto Relatos con GPS la sitúa dentro del parque y el Diccionario de mitología wayuu la localiza en Nazareth. El arroyo “entre el Itojoro y el Kousopa” no tiene coordenada pública segura.
+
+Cautelas. Pineda (1950) mostró que misioneros y viajeros tradujeron Mareiwa como “Dios” y propuso leerlo más bien como espíritu propiciador de la lluvia; el cierre de esta historia, donde solo la lástima de Mareiwa trae el agua, encaja con esa lectura sin necesidad de un dios bíblico. Las dos costillas cortadas al hombre resuenan con el Génesis, pero el texto se recogió tras siglos de misiones y pasó por un intérprete: no hay forma de decidir si es préstamo, convergencia o intervención del traductor. La descendencia materna que describen el expediente de la UNESCO (2010) y el Régimen de Manejo no equivale a un gobierno de mujeres, y la “ley del pago” de Mareiwa no resume el sistema de compensaciones que aplica el pütchipü’üi. Los estudios recientes leen el mito como génesis de la fertilidad femenina: Carrasquero y Finol (2010) lo vinculan con el paso de niña a mujer; Suárez González (2025) propone un análisis simbólico completo; Paz Reverol, Valbuena y García Gavidia (2022) documentan que la historia sigue viva, porque hoy se usa en pedagogía intercultural para prevenir el virus del papiloma entre mujeres wayuu.`;
+
+const versiones = `Existen dos líneas documentales que no deben fundirse. La primera es la de Chaves (1946): Mareiwa rompe los dientes con una piedra lanzada, corta dos costillas al hombre, cambia la iniciativa matrimonial, encarga la expedición de las tumas y castiga la borrachera con el verano largo; Worunka termina convertida en piedra en el arroyo. Villa Posse (1993) reedita este texto y no es un testimonio independiente. La segunda línea es la de Ramón Paz Ipuana y Michel Perrin, que resumen el Diccionario de mitología wayuu, Relatos con GPS y los artículos de Carrasquero, Finol y García Gavidia: Wolunka, hija de Juyá, nace con la vagina dentada; los Mellizos Transformadores la flechan mientras se baña; su sangre tiñe las piedras y a aves como el cardenal guajiro. En esa línea no hay Mareiwa, ni costillas, ni tumas, ni sequía, y la piedra manchada de rojo queda en la Macuira, en Nazareth. Carrasquero, Finol y García Gavidia (2009) añaden una tercera voz, la de Atala Uriana: una danzarina que se deja ver ante Kashi al primer sangrado, lectura que enlaza el episodio con la yonna y la primera menstruación. Delio Guerra Ibarra (2020) narra en prensa regional la historia de Worunka junto con la expedición de Warapuru convertida en cerros por Mareiwa.
+
+Las grafías también separan las líneas: Worunka en Chaves y en el Diccionario; Wolunka en Paz Ipuana, Vergara y Relatos con GPS.
+
+El Relato sigue a Chaves porque es el texto primario de esta ficha y la única versión con la secuencia completa de parto, costillas, matrimonio, tumas y sequía. Reordena los episodios: en 1946 la piedra y las aves aparecen antes que las costillas y la borrachera; aquí la petrificación va al final, porque Worunka recibe las semillas viva. Lo que sí cambia frente a la ficha anterior es la fidelidad al gesto: allí las aves “rozaban el color” y el texto cerraba con un comentario; aquí Mareiwa mete al pájaro en la piedra, como dice el texto, y el comentario se queda en Historia. El episodio de los mellizos que flechan a Wolunka pertenece a “Los mellizos transformadores” y allí se cuenta; esta ficha no lo mezcla con Mareiwa.`;
 
 const leccion =
-  "Ninguna costumbre se comprende sin preguntar quién soporta el cambio y quién obtiene autoridad para nombrarlo.";
+  "Un cuerpo puede cargar con todos los cambios de una comunidad sin que nadie le pregunte cuánto le cuesta.";
 
-const similitudes = `La vagina dentada es un motivo documentado en relatos de distintas regiones de América y del mundo. La semejanza está en el temor masculino ante un cuerpo capaz de herir y en la intervención que vuelve posible la unión sexual. La versión de Worunka se distingue porque enlaza ese motivo con nacimiento, plumaje rojo, piedras, alianza matrimonial y sequía de La Guajira.
+const similitudes = `“Los mellizos transformadores” es el paralelo más cercano: en la línea de Paz Ipuana y Perrin son los gemelos quienes flechan la vulva dentada de Wolunka mientras se baña, y su sangre tiñe a las aves rojas. El motivo es el mismo —dientes rotos, sangre, plumaje—, pero cambia quién actúa: allí dos héroes culturales, aquí Mareiwa con una piedra; y cambia lo que sigue, porque solo la historia de Worunka encadena el episodio con costillas, matrimonio, tumas y sequía.
 
-El pasaje de las costillas recuerda el relato bíblico de la creación de la mujer a partir del cuerpo del hombre. Esa resonancia debe manejarse con especial cautela: el texto fue recogido después de siglos de evangelización y traducido al castellano, pero no contamos con evidencia suficiente para declarar un préstamo directo.
+“El Incesto” convierte también el cuerpo de una joven en roca, y “Serranías de La Guajira” hace cerros de personas. En “La sed de los forasteros” dos comerciantes quedan de piedra en Utta. Puestas juntas, estas fichas muestran que la piedra wayuu no significa siempre lo mismo: vergüenza en el incesto, cansancio en Utta, y en Worunka una marca que sigue activa, porque las aves se pintan en ella. Relatos con GPS formula el principio general: el paisaje fue modelado por seres que viajaron y pelearon sobre la tierra y allí se volvieron piedra.
 
-Dentro del corpus, “El Incesto” y “La sed de los civilizados” también producen cuerpos de piedra. En aquellos relatos, la petrificación fija una transgresión o una diferencia frente a la sed; Worunka queda asociada a una transformación amplia del orden reproductivo y económico. Compararlos permite ver que la piedra no tiene un único significado. Puede ser memoria corporal, accidente geográfico, castigo o prueba visible de un cambio. Por eso evitamos traducir toda petrificación como “castigo divino” sin atender su escena particular.`;
+El verano largo que trae la borrachera conversa con “Los dominios de Juya”: allí la lluvia es Juyá, un ser con dominios propios; aquí depende de la lástima de Mareiwa, a quien Pineda propuso leer justamente como espíritu propiciador de las lluvias. Son dos maneras de decir que el agua en la Guajira no está garantizada.
+
+Fuera del corpus, la vagina dentada es un motivo documentado en muchos repertorios de América y del mundo; la coincidencia no prueba contacto y el sentido cambia con cada historia. Las dos costillas cortadas al hombre recuerdan el Génesis, con la cautela dicha en Historia: no hay evidencia para hablar de préstamo. Ninguna de estas semejanzas autoriza a decir que una historia copia a otra.`;
 
 export default defineWayuuMyth({
   slug: "la-india-worunka",
@@ -78,7 +88,38 @@ export default defineWayuuMyth({
     "regimenMacuira",
     "unescoPalabrero",
     "macuira",
-    "ovidMetamorphoses",
+    "mitoWayuu2025",
+    {
+      key: "carrasqueroFinolYonna",
+      summary:
+        "Analiza el mito de Wolunka como explicación de la reproducción y el paso de niña a mujer wayuu.",
+      limitation:
+        "Artículo general sobre el cuerpo en varios mitos.",
+    },
+    "tradicionMitologia2020",
+    {
+      key: "dictionaryWayuu",
+      summary:
+        "La entrada Worunka la define como el personaje femenino de la vagina dentada a quien los mellizos flechan mientras se baña, y localiza en Nazareth la piedra donde se sentó; conserva la grafía con R, la misma de Chaves 1946.",
+      limitation:
+        "Compilación divulgativa basada en Paz Ipuana y Perrin, sin aparato crítico por entrada; no menciona a Mareiwa, las costillas ni la sequía de la versión de Chaves.",
+    },
+    "gonzalezCoexistencias2023",
+    {
+      key: "geografiasMiticas",
+      summary:
+        "En su punto 7 narra la versión en que Wolunka, hija de Juyá, nace con la vagina dentada, es flechada por dos mellizos mientras se baña, su sangre tiñe piedras y aves como el cardenal guajiro, y sitúa la piedra negra con manchas rojas dentro del Parque Nacional Macuira.",
+      limitation:
+        "Sigue la línea de Paz Ipuana y Perrin (mellizos, Juyá), no la de Chaves (Mareiwa, costillas, tumas).",
+    },
+    {
+      key: "simbolosEspacio2009",
+      summary:
+        "Contrasta dos versiones de Wolunka: la de Paz Ipuana, en que los Mellizos Transformadores flechan su vagina como símbolo de la primera menstruación, y la de Atala Uriana, una danzarina que se deja ver ante Kashi al primer sangrado, y lee el episodio como origen de la fertilidad femenina escenificada en la yonna.",
+      limitation:
+        "Wolunka es un apartado dentro de un análisis de la danza, no el objeto central; no cubre la versión de Chaves.",
+    },
+    "reverolLecturas2022",
   ],
   researchNotes: `NÚCLEO: parto difícil, ruptura de dientes, aves rojas, costillas, cambio matrimonial, semillas/tumas, embriaguez, sequía y petrificación.
 

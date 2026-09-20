@@ -100,12 +100,70 @@ export const bariSources = {
     limitation:
       "Su énfasis es filosófico y ético; no publica por sí solo un corpus narrativo completo.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  caballerobari1980: source({
+    title: "Los barí. Su mundo social y religioso",
+    author: "Dionisio Castillo Caballero",
+    year: 1980,
+    type: "etnografía misionera con relatos grabados en lengua barí",
+    url: "http://www.bidicap.org/doai/PS_NyG_1980v027n003p0413_0708/HTML//files/assets/common/downloads/publication.pdf",
+    summary:
+      "Describe la escatología grabada en lengua barí: la salida del bosobokú por nariz, oídos y boca, los basunchimba que salen al encuentro, la antesala, el camino blando dibóuriboúske, el juicio de Sabaséba sobre matar, robar, mentir y chismear, los tres destinos y el baño del aboo.",
+    limitation:
+      "Registro venezolano del Zulia; el autor discute abiertamente a Alcácer y su exposición es sistemática, no narrativa, de modo que reconstruye un modelo a partir de varias narraciones y no reproduce un relato único.",
+  }),
+  gomezBari1993: source({
+    title: "Los Barí, en Geografía humana de Colombia. Nordeste indígena, tomo II",
+    author: "Orlando Jaramillo Gómez",
+    year: 1993,
+    type: "capítulo de etnografía institucional",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2809/download",
+    summary:
+      "Ubica en el mapa de cielos el lugar del encuentro de los muertos con sus familiares, en el kokda sada, y a los basunchimba en el barún, y resume la idea barí de la muerte como paso a un mundo nuevo.",
+    limitation:
+      "Capítulo colombiano de 1993 que no recoge ningún relato de viaje al más allá; sólo aporta la cartografía, tomada de Castillo.",
+  }),
+  sotobari2012: source({
+    title: "Los barí: historia, sociedad y cultura",
+    author: "Zaidy Fernández Soto y Asmery González",
+    year: 2012,
+    type: "monografía etnográfica de divulgación",
+    url: "https://albaciudad.org/wp-content/uploads/2021/05/los_bari_historia_sociedad_y_cultura.pdf",
+    summary:
+      "Describe a los ichigbarí como seres del aire que pueden matar a los niños y a los que se teme de noche, lo que precisa qué clase de ser es el guía del viaje.",
+    limitation:
+      "Registro venezolano del Zulia que no recoge relato alguno de viaje al más allá; el PDF verificado está alojado en el sitio de un medio de comunicación.",
+  }),
 };
 
-export function pickBariSources(...keys) {
-  return [...new Set(keys)].map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickBariSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = bariSources[key];
-    if (!selected) throw new Error(`Fuente Barí desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Barí desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

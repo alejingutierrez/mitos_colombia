@@ -2,11 +2,9 @@ import { buildHuitotoEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickHuitotoSources } from "./sources.mjs";
 
 const contextualSources = [
-  "cervantesUrbina",
   "preussOne",
   "preussTwo",
   "onic",
-  "unalRecord",
   "mythEthics",
 ];
 
@@ -16,14 +14,18 @@ export function defineHuitotoMyth({
   seoTitle,
   seoDescription,
   focusKeywords,
+  sourceKeys,
   ...input
 }) {
+  // `sourceKeys` propias del mito sustituyen la lista compartida. Mientras un
+  // mito no las declare sigue con la fuente narrativa más el contexto común.
   const selectedSources = pickHuitotoSources(
-    narrativeSource,
-    ...contextSources,
+    ...(Array.isArray(sourceKeys) && sourceKeys.length
+      ? sourceKeys
+      : [narrativeSource, ...contextSources]),
   );
-  if (selectedSources.length !== 7) {
-    throw new Error(`${input.slug}: se esperaban siete fuentes únicas.`);
+  if (selectedSources.length < 5) {
+    throw new Error(`${input.slug}: ${selectedSources.length} fuentes, mínimo 5.`);
   }
   return buildHuitotoEditorialMyth({
     ...input,

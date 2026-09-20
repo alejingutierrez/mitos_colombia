@@ -98,12 +98,103 @@ export const uwaSources = {
     limitation:
       "No publica el mito completo; remite al trabajo de Falchetti y Nates-Parra y se usa como corroboración temática.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  cabreraComer1990: source({
+    title: "Comer y ser comido: los animales en la tradición oral u’wa (tunebo)",
+    author: "Ann Osborn; traducción de Fabricio Cabrera",
+    year: 1990,
+    type: "artículo de revista arbitrada",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7083",
+    summary:
+      "Su resumen del mito cantado del aya conserva el canto 13, donde Rukwa advierte que todo está creado pero nada se ha puesto en movimiento y mezcla el calor del sol con el agua de los lagos del mundo de arriba, desencadenando a la vez la vida y la mortalidad.",
+    limitation:
+      "Es una síntesis de veintiocho páginas centrada en los animales, no en la cosmogonía; la propia edición advierte que se basa en dos versiones corregidas parcialmente por la autora antes de morir. No cubre el comienzo absoluto del universo.",
+  }),
+  laverdeLinajes1995: source({
+    title: "Linajes y circuitos de matrimonio en tres grupos chibcha: u’wa, kogui y muisca",
+    author: "Eduardo Londoño Laverde",
+    year: 1995,
+    type: "artículo de revista arbitrada",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/6977",
+    summary:
+      "Sirve para acotar la comparación con otras cosmogonías chibchas: muestra que lo comparable entre u’wa, kogui y muisca es la arquitectura del parentesco y la alianza, no el elenco de deidades.",
+    limitation:
+      "No analiza mitos de creación ni cita este relato; su aporte a la ficha es metodológico y se usa solo para delimitar hasta dónde llega una comparación entre pueblos chibchas.",
+  }),
+  perezestructuras1996: source({
+    title: "Las estructuras de pensamiento dual en el ámbito de las sociedades indígenas de los Andes Orientales",
+    author: "Roberto Lleras Pérez",
+    year: 1996,
+    type: "artículo de revista arbitrada",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/6932",
+    summary:
+      "Sitúa el dualismo arriba-abajo de esta cosmogonía dentro del conjunto de las sociedades indígenas de los Andes Orientales, donde los pares de opuestos son la norma.",
+    limitation:
+      "Es un estudio regional de larga escala que no trabaja directamente con material u’wa de primera mano; sirve de contraste y no sostiene ningún dato del relato.",
+  }),
+  torresResena1991: source({
+    title: "Reseña de «Tengo los pies en la cabeza», de Berichá (Esperanza Aguablanca)",
+    author: "William Torres",
+    year: 1991,
+    type: "reseña de libro en revista arbitrada",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7023",
+    summary:
+      "Documenta que existe una autobiografía mitogónica escrita por una mujer U’wa, Berichá, hija de uejes y de mancena, y que en su cultura una transgresión alimentaria acarrea consecuencias corporales duraderas.",
+    limitation:
+      "Solo se pudo consultar la reseña de dos páginas, no el libro de 1992: todo lo que de allí se toma llega filtrado por el reseñista y no por la autora u’wa.",
+  }),
+  falchettiofrenda1997: source({
+    title: "La ofrenda y la semilla: notas sobre el simbolismo del oro entre los Uwa",
+    author: "Ana María Falchetti",
+    year: 1997,
+    type: "artículo de revista arbitrada",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/6882",
+    summary:
+      "Documenta el intercambio silencioso por el que los U’wa dejaban cera de abejas y otros productos en puntos ceremoniales y recogían después objetos de oro que decían dejados por las abejas, lo que explica la tierra amarilla que las abejas reciben como pago en el mito.",
+    limitation:
+      "Su objeto es el simbolismo del oro y no el mito de las abejas, que trata de forma lateral apoyándose en Osborn; el texto digitalizado tiene errores de reconocimiento óptico en varios pasajes.",
+  }),
+  ruedaTres1987: source({
+    title: "Tres formas de acceso a recursos en territorio de la Confederación del Cocuy, siglo XVI",
+    author: "Carl Henrik Langebaek Rueda",
+    year: 1987,
+    type: "artículo de revista arbitrada de etnohistoria documental",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7214",
+    summary:
+      "Documenta con visitas y pleitos coloniales del siglo XVI la red de acceso a recursos del territorio de la Confederación del Cocuy —Chita, Panqueba, El Pueblo de la Sal, Sacamá, Ura, Ogamora—, con la sal en bloque como bien central, y registra que en 1772 todavía se acusaba a los tunebos de Güicán de persistir en sus prácticas.",
+    limitation:
+      "Es etnohistoria de archivo sobre el siglo XVI y no recoge ningún relato oral; el vínculo con Monoa es que documenta el circuito de trueque, no el episodio ni sus personajes.",
+  }),
 };
 
-export function pickUwaSources(...keys) {
-  return [...new Set(keys)].map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickUwaSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = uwaSources[key];
-    if (!selected) throw new Error(`Fuente U’wa desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente U’wa desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

@@ -13,17 +13,23 @@ const defaultContextKeys = [
 export function defineAndoqueMyth({
   narrativeSource,
   contextSources = defaultContextKeys,
+  // Fuentes propias del mito, en el orden en que deben leerse: las tres
+  // primeras quedan como claves y el resto como apoyo. Cuando un mito la
+  // declara, sustituye por completo al par narrativeSource + contextSources,
+  // que era el reparto igual para las catorce fichas.
+  sourceKeys,
   seoTitle,
   seoDescription,
   focusKeywords,
   ...input
 }) {
-  const selectedSources = pickAndoqueSources(
-    narrativeSource,
-    ...contextSources,
-  );
-  if (selectedSources.length !== 7) {
-    throw new Error(`${input.slug}: se esperaban siete fuentes únicas.`);
+  const selectedSources = sourceKeys
+    ? pickAndoqueSources(...sourceKeys)
+    : pickAndoqueSources(narrativeSource, ...contextSources);
+  if (selectedSources.length < 5) {
+    throw new Error(
+      `${input.slug}: ${selectedSources.length} fuentes únicas, el mínimo son cinco.`,
+    );
   }
   return buildAndoqueEditorialMyth({
     ...input,

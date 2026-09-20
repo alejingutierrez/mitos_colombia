@@ -103,12 +103,114 @@ export const ansermasSources = {
     limitation:
       "Integra bibliografía regional, investigación ambiental y divulgación; varios pasajes dependen de Cardona y no equivalen a una nueva versión oral independiente.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  socioculturalesMichua2020: source({
+    title: "Michua",
+    author: "Instituto de Estudios Socioculturales y Problemática Ambiental, Facultad de Ciencias Ambientales, Universidad Tecnológica de Pereira",
+    year: 2020,
+    type: "nota institucional universitaria",
+    url: "https://www.iespautp.com/actualidad/michua-iespa.",
+    summary:
+      "Es la formulación citable del ciclo entero: «Michua la diosa Anserma del valor y de la guerra protegía desde el cerro Karambá al actual territorio de Quinchía, llamado Guacuma. Los Tamaracas como dioses enemigos han querido acabar con el territorio […] convirtiéndose en diversos enemigos […] langostas, conquistadores españoles», y cierra diciendo que con su dios protector Xixaraca el territorio aún intenta defenderse de la minería transnacional. De aquí salen las dos formas de los Tamaracas que la ficha narra y el uso contemporáneo del relato.",
+    limitation:
+      "Es una nota web publicada el 17 de agosto de 2020, sin autor firmado y sin aparato, que remite a un «(Cardona, 1987)» que no se ha podido localizar. Usa la fórmula «desde tiempos inmemoriales» y enumera entre los enemigos a un pueblo indígena vecino vivo: esta edición no reproduce ni la fórmula ni esa identificación. Su marco es la defensa ambiental del territorio, y el relato le sirve de argumento.",
+  }),
+  leoncronica1553: source({
+    title: "La crónica del Perú, primera parte",
+    author: "Pedro de Cieza de León",
+    year: 1553,
+    type: "crónica del siglo XVI",
+    url: "https://archive.org/details/lacrnicadelper00ciez",
+    summary:
+      "El capítulo XVI aporta la clave filológica del nombre de los enemigos: de los pueblos comarcanos a la villa de Ancerma escribe «Llaman al diablo Xixarama, y a los españoles, tamaraca». Tamaraca era la palabra con que esa gente nombraba a los invasores, lo que explica por qué cuatro siglos después designa a las potencias que vienen de afuera a acabar con el territorio. El capítulo XV añade que esos mismos pueblos adoraban ídolos tallados y figuras de gatos, y que «cuando tienen necesidad de agua o de sol para cultivar sus tierras, piden ayuda a estos sus dioses».",
+    limitation:
+      "Cieza escribe desde la conquista y sobre gente a la que se estaba sometiendo, y traduce con la categoría cristiana de diablo lo que no entendía. Registra la palabra tamaraca en singular y como gentilicio, no como nombre de potencias enemigas: entre ese uso y el del siglo XX no hay ningún eslabón documentado, sólo continuidad del término.",
+  }),
+  ospinaEntre2020: source({
+    title: "Entre cerros y montañas. Memorias de resistencias en Quinchía, Colombia",
+    author: "Alberto A. Berón Ospina, Juan Pablo Arciniegas Martin, Isabel Cristina Castillo Quintero y Jefferson Jaramillo Marín",
+    year: 2020,
+    type: "libro universitario de memoria e historia oral",
+    url: "https://comunicaciones.utp.edu.co/wp-content/uploads/sites/2/Entre-cerros-y-Montan-as-Memorias-de-resistencias-en-Quinchia-Risaralda-pdf.pdf",
+    summary:
+      "Confirma los dos topónimos del relato —el cerro de Batero o Karambá como «piedra alta y dura» y la tierra de Guacuma— y aporta una corrección importante: Opiramá aparece allí como río del que bajan las quebradas hacia el Cauca, no como cerro donde estarían encerrados los Tamaracas.",
+    limitation:
+      "Su objeto es la memoria de la violencia del siglo XX; lo que dice de los mitos son tres líneas de contexto, y llama a Xixaraca cacique y no dios, sin discutir la discrepancia.",
+  }),
+  gomezHistoria2013: source({
+    title: "Historia extensa de Pereira",
+    author: "Víctor Zuluaga Gómez",
+    year: 2013,
+    type: "historia regional universitaria",
+    url: "https://repositorio.utp.edu.co/server/api/core/bitstreams/4f719db8-fd72-4308-857f-6025849013c8/content",
+    summary:
+      "Aporta la tercera acepción de Opiramá y desarma la geografía heredada: entre los caciques de la provincia de Anserma capturados en la represión de 1557 figuran «Opirama, hijo y heredero de la cacica de Andica», «Tuzarma, cacique de Mapura, hoy Quinchía» y «Aytamara, hermano del cacique de Mapura». Opiramá es también nombre de persona, no sólo de accidente geográfico.",
+    limitation:
+      "Es historia regional de divulgación universitaria y no expone en el pasaje las referencias documentales de esa lista. No menciona a los Tamaracas ni a Michua.",
+  }),
+  marinPacificacion2020: source({
+    title: "Pacificación territorial e insubordinación social en una «Plaza Roja». El caso de Quinchía, Colombia, en Anuario Colombiano de Historia Social y de la Cultura 47(2)",
+    author: "Jefferson Jaramillo Marín, Alberto Berón Ospina y Juan Carlos Victoria Mena",
+    year: 2020,
+    type: "artículo de historia social",
+    url: "https://www.redalyc.org/journal/1271/127164235005/html/",
+    summary:
+      "Documenta la sucesión de amenazas concretas sobre el territorio de Guacuma en el siglo XX —disolución de los resguardos, despojo de tierras comunales, violencia partidista— que es la serie histórica sobre la que la comunidad proyecta el retorno de los Tamaracas con caras nuevas.",
+    limitation:
+      "Es historia social contemporánea y no trata los relatos míticos: la conexión entre esa serie de daños y el ciclo de los Tamaracas la hace la comunidad, no el artículo.",
+  }),
+  caicedoComentarios2018: source({
+    title: "Comentarios al libro de Guillermo Rendón sobre el descubrimiento de indígenas Quimbaya en Riosucio (Caldas), en Ciencia Nueva 2(1), pp. 154-171",
+    author: "Luis Javier Caicedo",
+    year: 2018,
+    type: "artículo académico de revisión crítica",
+    url: "https://revistas.utp.edu.co/index.php/historia/article/view/18261",
+    summary:
+      "Impide tratar «los ansermas» como una etnia unificada: muestra que Anserma fue un nombre colonial aplicado a unas treinta parcialidades y advierte contra las reconstrucciones que empalman Umbra, Kirma, Anserma y Quimbaya sin evidencia. De ahí que esta ficha hable de memoria regional y no de una creencia de todo un pueblo.",
+    limitation:
+      "Es una reseña crítica dirigida a una obra concreta y no menciona a Xixaraca, a Michua ni a los Tamaracas. Su aporte es de método.",
+  }),
+  ticoraumbra2025: source({
+    title: "¿Es el umbra una lengua chocó?: un primer acercamiento desde la lingüística comparada, en Lengua y Sociedad 24(2)",
+    author: "Simón González Ticora",
+    year: 2025,
+    type: "artículo de lingüística comparada",
+    url: "https://www.scielo.org.pe/scielo.php?pid=S2413-26592025000200011&script=sci_arttext&tlng=es",
+    summary:
+      "Sirve para no asignar los nombres Tamaraca, Michua y Xixaraca a una familia lingüística concreta: concluye que el umbra no es chocó, que los parecidos con el emberá-chamí son de contacto, y que la relación entre anserma y umbra no puede precisarse con la evidencia disponible.",
+    limitation:
+      "Trabaja sobre un corpus pequeño y declara él mismo que sus conclusiones son preliminares. No analiza ninguno de los tres nombres de esta ficha.",
+  }),
 };
 
-export function pickAnsermasSources(...keys) {
-  return [...new Set(keys)].map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickAnsermasSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = ansermasSources[key];
-    if (!selected) throw new Error(`Fuente Anserma desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Anserma desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

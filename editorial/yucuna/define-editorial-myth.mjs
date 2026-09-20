@@ -32,13 +32,13 @@ function defineWithSources(input, selectedSources) {
 export function defineYucunaMyth(input) {
   return defineWithSources(
     { ...input, editorialScope: "yucuna" },
-    pickYucunaSources(),
+    pickYucunaSources(...(input.sourceKeys ?? [])),
   );
 }
 
 export function defineAbundanceTransfer(input) {
   return defineWithSources(
     { ...input, editorialScope: "abundance-transfer" },
-    pickAbundanceSources(),
+    pickAbundanceSources(...(input.sourceKeys ?? [])),
   );
 }

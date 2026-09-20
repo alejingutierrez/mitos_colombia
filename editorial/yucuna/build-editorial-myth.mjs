@@ -54,16 +54,19 @@ function verticalPrompt(scene, scope) {
   return `Ilustración vertical digital 2D full paper cut y paper quilling, acabado gráfico plano y composición a página completa: ${scene}; segunda escena claramente distinta de la portada, ${scope}; capas recortadas digitales de borde limpio y quilling dibujado selectivo, sin volumen físico; personajes humanos como siluetas adultas secundarias sin rasgos étnicos, pintura corporal, tocados, joyas, plumas ni vestuario ceremonial inventado; sin objetos rituales restringidos, horror gráfico, texto ni letras, sin fotografía, fibras reales, pliegues reales, grosor de papel, sombras proyectadas, objeto físico, maqueta, diorama, CGI ni render 3D.`;
 }
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildYucunaEditorialMyth(input) {
   const media = yucunaMedia[input.slug];
   if (!media) throw new Error(`Falta inventario visual para ${input.slug}.`);
   const categoryPath = yucunaCategoryBySlug[input.slug];
   if (!categoryPath) throw new Error(`Falta taxonomía para ${input.slug}.`);
   const transferred = input.editorialScope === "abundance-transfer";
-  const historia = `${input.historyCore}\n\n${
+  const historia = input.historia ?? `${input.historyCore}\n\n${
     transferred ? sharedAbundanceHistory : sharedYucunaHistory
   }`;
-  const versiones = `${input.versionCore}\n\n${
+  const versiones = input.versiones ?? `${input.versionCore}\n\n${
     transferred ? sharedAbundanceVersions : sharedYucunaVersions
   }`;
   const visualScope = transferred
@@ -85,10 +88,11 @@ export function buildYucunaEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia,
     versiones,
     leccion: input.leccion,
-    similitudes: input.similarityCore,
+    similitudes: input.similitudes ?? input.similarityCore,
     excerpt: input.excerpt,
     seo_title: input.seoTitle,
     seo_description: input.seoDescription,

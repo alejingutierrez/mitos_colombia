@@ -5,44 +5,42 @@ export const pirsaDefinitions = [
   {
     slug: "el-exorcismo-de-tamaracunga",
     title: "La noche de Tamaracunga",
-    mito: `Tamaracunga era el hermano joven del señor de Pirsa. Deseaba recibir el bautismo y había escuchado a los cristianos hablar de su ceremonia, pero antes de emprender el camino hacia Anserma comenzaron a rodearlo presencias que solo él podía ver. Señalaba en el aire unas aves oscuras llamadas auras. Quienes estaban cerca no veían los pájaros, aunque sí escuchaban silbidos y sentían caer piedras sin descubrir quién las arrojaba.
+    mito: `A cuatro leguas de la villa de Anserma había un pueblo llamado Pirsa. El señor de aquel pueblo tenía un hermano joven, bien parecido, llamado Tamaracunga, y a Tamaracunga le entró el deseo de hacerse cristiano y de ir hasta donde estaban los españoles para que lo bautizaran.
 
-Durante la comida, una copa de vino se levantó ante los presentes. El líquido desapareció y volvió a llenar el recipiente. Tamaracunga intentó beber, pero encontró barro dentro de su boca. Después su cuerpo fue alzado y sacudido. Dos cristianos decidieron acompañarlo hasta Anserma. Más de doscientas personas de Pirsa los siguieron con temor. Para atravesar pasos difíciles, los viajeros ataron cuerdas a sus cinturas y llevaron tres cruces sencillas como señal de protección.
+Entonces empezaron a venir las aves. Eran auras, esos pájaros hediondos que comen muerto, y se posaban donde sólo él podía verlas. Mandó llamar a toda prisa a un cristiano que vivía cerca. El hombre llegó, lo santiguó, y con eso el asunto no mejoró sino que empeoró: en el aire pasaban piedras que nadie tiraba, y se oían silbar.
 
-Al llegar, alojaron a Tamaracunga en una casa. La noche no trajo descanso. Continuaron los golpes, los silbidos y las piedras. En la iglesia de techo de paja, el joven dijo ver figuras invertidas que los demás no distinguían. Cuando fray Juan de Santa María entró para prepararlo, Tamaracunga volvió a quedar suspendido, esta vez con la cabeza hacia abajo. Los presentes lo sujetaron y el fraile usó agua bendita y su estola mientras esperaban el amanecer.
+Llegó también el hermano de Juan Pacheco, que mandaba en la villa mientras el teniente andaba en Caramanta. Los dos encontraron a Tamaracunga desmayado y maltratado, y delante de ellos lo llevaron por el aire de un lado a otro. Después, mientras estaba sentado con un vaso de vino delante, vieron cómo el vaso se alzaba solo y quedaba vacío, y al rato el vino caía otra vez dentro. Él se tapó la cara y el cuerpo entero con unas mantas para no ver lo que tenía enfrente, y así, sin que nadie le moviera la ropa ni le destapara el rostro, le metieron barro en la boca como si lo quisieran ahogar.
 
-Con la primera misa cesó el ruido. Tamaracunga permaneció dentro de la iglesia y caminó por el recinto como si comprobara que aquello que lo había perseguido ya no podía alcanzarlo. Su esposa y su hijo estaban con él. Los tres pidieron recibir el bautismo. Luego el joven recorrió la iglesia repitiendo que era cristiano y regresó a su tierra.
+Decidieron llevarlo a la villa. Salieron con ellos más de doscientos indios, aunque tan asustados que no se atrevían a acercársele. En unos pasos malos del camino lo levantaron en el aire para despeñarlo y él gritó: válganme, cristianos, válganme. Lo pusieron en medio, le ataron cuerdas a la cintura, rezaron y siguieron con tres cruces en las manos. Aun así los derribaron varias veces, y en una subida se vieron en el mayor aprieto de todos.
 
-La historia conservada no explica qué veía Tamaracunga ni permite escuchar cómo lo habría contado una persona Pirsa. Las auras, las piedras y las figuras llegan a nosotros a través de una crónica que las convirtió en adversarios de la conversión. Por eso esta noche puede narrarse sin decidir que eran demonios: lo seguro es el viaje, el miedo compartido, la iglesia de Anserma y una elección que el archivo colonial presentó como triunfo de su propia fe.`,
-    historia: `Pedro Cieza de León publicó en 1553 el testimonio más temprano conocido y fechó el episodio en 1549. Llama a Tamaracunga “hermano mancebo” del señor natural de Pirsa; no lo identifica como cacique. También nombra al religioso como fray Juan de Santa María. La pertenencia correcta del fraile es la Orden de Nuestra Señora de la Merced, no la orden franciscana.
+Llegaron a la casa de Juan Pacheco. Se juntaron casi todos los cristianos del pueblo y todos vieron caer piedras pequeñas desde lo alto del techo y oyeron los silbos. Y se oía algo más: un «hu, hu, hu» rápido y recio, el mismo grito con que los indios salen a la guerra.
 
-El capítulo está construido como un ejemplo de conversión. Cieza anuncia que los fieles deben glorificar a Dios y que los no creyentes deben temer. Esa finalidad explica por qué traduce cuanto ocurre como oposición diabólica y por qué el desenlace es el bautismo. No conserva una explicación Pirsa de las auras, las piedras, los silbidos, la elevación del cuerpo ni las figuras vistas por Tamaracunga. La narración revisada mantiene esos hechos como afirmaciones del cronista y no como demostración de entidades sobrenaturales.
+De ahí fueron a la iglesia, que era de paja y no guardaba el Sacramento. Antes de abrirla algunos oyeron pasos dentro. Adentro, Tamaracunga dijo que los veía con caras fieras, las cabezas abajo y los pies arriba. Cuando entró fray Juan de Santa María, de la Merced, para bautizarlo, lo tomaron y lo dejaron en el aire puesto igual que ellos, cabeza abajo. Los cristianos gritaron el nombre de Jesucristo, se santiguaron, arremetieron, lo agarraron, le echaron una estola encima y agua bendita. Siguieron los aullidos. Le dieron tantos bofetones que le arrojaron lejos el sombrero que llevaba sobre los ojos para no ver, y le escupieron en la cara una saliva podrida y hedionda.
 
-La página heredada añadía un nombre bautismal —Sebastián—, cuervos, una luz celestial, una lucha interior detallada y una conexión directa con el Diablo del Carnaval de Riosucio. Esos elementos no aparecen en la fuente temprana. También llamaba exorcismo a todo el episodio. El término surge con mayor claridad en la crónica mercedaria tardía; por estabilidad se conserva el slug antiguo, pero el nuevo título evita convertir esa interpretación posterior en el nombre principal.
+Todo eso pasó de noche. Amaneció, el fraile se vistió para decir misa, y desde el momento en que empezó no se volvió a oír nada.
 
-La compilación histórica del Cabildo Escopetera Pirza y estudios recientes sitúan el episodio dentro de una memoria territorial que continúa usando la grafía Pirza. La relación entre la población histórica y el resguardo actual debe reconocerse sin borrar siglos de desplazamientos, recomposiciones e identidades Emberá Chamí presentes en la región. Las coordenadas señalan el Anserma contemporáneo como destino aproximado del viaje, no la ubicación comprobada de la casa o la iglesia de 1549.`,
-    versiones: `La versión de Cieza es la base más antigua y también la más cercana al suceso que afirma narrar. Presenta a Tamaracunga como hermano del gobernante de Pirsa, describe el trayecto con dos cristianos y más de doscientos seguidores, y concentra el desenlace en la misa y el bautismo familiar. Habla de auras, no de cuervos, y no asigna al joven el nombre Sebastián.
+Acabada la misa, Tamaracunga pidió por su boca el agua del bautismo, y lo mismo pidieron su mujer y su hijo. Después, ya bautizado, pidió que lo dejaran andar solo para ver si todavía tenían poder sobre él. Lo dejaron. Salió con gran alegría diciendo «cristiano soy», alabando a Dios en su lengua, y dio dos o tres vueltas por la iglesia. No volvió a verlos. Se fue a su casa contento.`,
+    historia: `El único testimonio temprano lo escribió Pedro Cieza de León y se imprimió en Sevilla en 1553, en el capítulo CXVIII de la primera parte de la Crónica del Perú. Fecha el suceso en 1549. En la edición de Amberes de 1554 el pueblo se imprime «Pirſa» y el nombre del joven, «Tamaraqunga». Gobernaba la provincia de Popayán el adelantado Belalcázar; el teniente en la villa de Anserma era un Gómez Hernández, ausente en Caramanta, y quedaba en su lugar Juan Pacheco. El fraile pertenece a la Orden de Nuestra Señora de la Merced, no a la franciscana.
 
-Francesco Maria Guazzo reutilizó la historia en su tratado europeo de demonología de 1608. La convirtió en prueba contra la brujería, llamó “Inca” al gobernante y transformó las auras en cóndores. Sus cambios muestran cómo el episodio comenzó a circular separado de la geografía Pirsa y subordinado a debates europeos sobre demonios.
+Cieza declara para qué cuenta esto: «para que los fieles glorifiquen el nombre de Dios, que tantas mercedes nos hace, y los malos y incrédulos teman». El capítulo es una pieza de un remate: el anterior narra otra conversión, en Lampaz, y el siguiente cierra el libro con milagros del descubrimiento. Todo lo que Tamaracunga ve queda traducido a la lengua del vencedor: las auras, las piedras, el barro y las figuras invertidas se nombran desde la teología del cronista, no desde la de Pirsa. Lo poco que Cieza sí anota de la región es que allí al diablo lo llaman Xixarama y a los españoles, tamaraca; que no había ídolos ni casa de adoración; y que el cacicazgo lo hereda el hijo de la mujer principal, y si no hay hijo, el de la hermana. Esa regla coloca al hermano menor del señor en una posición real.
 
-Fray Diego de Mondragón, en una crónica mercedaria publicada en 1750, amplió el papel de Juan de Santa María. Introdujo exorcismos explícitos, hizo levitar al propio fraile y atribuyó al acontecimiento conversiones más numerosas. Esa variante es hagiográfica y tardía: sirve para estudiar la memoria de la orden, no para corregir automáticamente a Cieza.
+Pirsa aparece después en el archivo: en 1552 como «el cacique Pirsa, señor principal de Anserma»; en 1557 como provincia; en 1560 como encomienda de Gómez Hernández con cuatrocientos indios; y en 1627 como repartimiento censado por el oidor Lesmes de Espinosa Saravia, que ese mismo mes traslada a los pirsas y a los umbras a la Vega de Supía. En 1722 forman parte de Cañamomo Lomaprieta, y en 1759 el valle lo repueblan indígenas de La Montaña comprándole el terreno a una española. De ahí sale el actual resguardo de Escopetera y Pirza, en Riosucio y Quinchía, reconocido como Embera Chamí. La continuidad del nombre es territorial, y entre un extremo y otro hay un destierro, una absorción y una compra.
 
-Una reelaboración regional de Alfredo Cardona Tobón añade comparaciones modernas, gallinazos y una relación retórica con el diablo riosuceño. El Carnaval de Riosucio tiene, sin embargo, su propia historia festiva. Su Diablo oficial representa vida, alegría, amistad y sátira, no una continuidad documentada con las figuras temidas por Tamaracunga.
+La villa a la que caminaron tampoco es sin más el municipio que hoy lleva su nombre: Anserma se fundó como Santa Ana de los Caballeros en 1539, y el valle de Pirsa queda en el actual Riosucio.`,
+    versiones: `Cieza es la base y también la más cercana al suceso que dice narrar. Habla de auras y no de cuervos, no le pone al joven ningún nombre cristiano, cuenta más de doscientos acompañantes, tres cruces y cuerdas a los cintos, y sitúa el bautismo después de la misa y el paseo por la iglesia después del bautismo. El orden es parte de su argumento: el agua vence primero y sólo entonces el hombre se atreve a probar si lo siguen.
 
-Esta edición toma de Cieza la secuencia narrativa, señala la finalidad colonial del texto y usa las demás versiones para mostrar las transformaciones. No fusiona todos los añadidos en una escena espectacular ni presenta la demonología europea como cosmología Pirsa.`,
+Francesco Maria Guazzo la reutilizó en 1608 en su tratado de demonología, dentro del capítulo sobre los remedios divinos, y prometiendo citar a Cieza fielmente. Lo que hace es otra cosa: llama Inca al gobernante, convierte las auras en cóndores de los Andes, sube los doscientos a más de trescientos, transforma las piedras en granizo, refunde a los dos cristianos en uno solo, añade aves que intentan arrebatar y matar al hombre, y convierte los bofetones en dardos blandidos ante los ojos. El episodio se despega de la geografía de Anserma y pasa a servir de prueba en discusiones europeas sobre brujería.
+
+Fray Diego de Mondragón lo reescribió en Lima en 1750, en una crónica mercedaria que quedó manuscrita. Allí Tamaracunga es «el gran cacique», su deseo de bautizarse ya no viene de inspiración divina sino de los sermones del padre Santa María, el fraile se arma con estola y agua bendita y comprime al demonio con exorcismos expresos, y detrás del cacique se convierten su mujer, sus hijos y numerosísimas familias de su gobierno. Mondragón hace además teniente de Belalcázar a Juan Pacheco, que en Cieza sólo lo suple. No nombra Pirsa, ni 1549, ni las auras, ni la copa, ni las cruces.
+
+La divulgación histórica regional del siglo XX añadió una capa más: adelantó la fecha a 1546, cambió las auras por gallinazos y emparentó el episodio con el Diablo del Carnaval de Riosucio. Esa tercera versión circula sin aparato y no se toma aquí como variante del relato.`,
     leccion:
-      "Toda conversión narrada por el vencedor conserva también el silencio de quien fue transformado.",
-    similitudes: `El capítulo anterior de Cieza narra otro bautismo indígena en Lampas y funciona como relato ejemplar semejante. En ambos casos, la conversión se presenta como una victoria visible del cristianismo. La cercanía dentro de la crónica permite reconocer una estrategia narrativa, pero no demuestra que las comunidades compartieran el mismo episodio ni la misma explicación de lo sobrenatural.
+      "De quien fue convertido queda el gesto y el nombre, pero su manera de entender el mundo la escribió otro.",
+    similitudes: `El paralelo más cercano está en el capítulo inmediatamente anterior de la misma crónica. En el CXVII, un cacique de Lampaz metido en una guaca el miércoles de Tinieblas ve a un hombre vestido de blanco que le manda salir y hacerse cristiano; el jueves aparece de rodillas en la iglesia, se bautiza, sale dando voces de alegría, quema su casa y reparte sus mujeres y sus ganados entre hermanos y parientes. Cieza recibió esa relación por escrito del clérigo Marcos Otazo, vecino de Valladolid, en el pueblo de Asangaro. Los dos capítulos hacen lo mismo con signo invertido: allí la aparición es luminosa y aquí es hedionda, y el desenlace es idéntico. El paralelo vale por la estructura, no por la geografía: Asangaro está en los Andes del sur y Pirsa en la provincia de Anserma.
 
-La reutilización de Guazzo se parece a otros tratados europeos que reunían noticias americanas para confirmar categorías de brujería y posesión ya definidas. La comparación revela el desplazamiento: una historia localizada en Pirsa termina convertida en prueba universal para lectores que nunca conocieron el territorio.
+El segundo paralelo está en la crónica mercedaria. Unas líneas antes de Tamaracunga, Mondragón cuenta el bautismo del cacique Xamanare, su mujer Mararo y su hijo, a quienes se impone nombre castellano. La tríada de cacique, mujer e hijo se repite, lo que indica que es convención del género y no dato biográfico. Sirve para leer con cautela la escena familiar del desenlace.
 
-La crónica de Mondragón pertenece a la tradición hagiográfica de las órdenes religiosas. Como otras vidas de misioneros, amplía prodigios y atribuye eficacia extraordinaria al fraile. El contraste con Cieza ayuda a distinguir la escena temprana de la memoria institucional construida dos siglos después.
-
-Las auras son aves carroñeras americanas y no equivalen automáticamente a un demonio o a un mal presagio Pirsa. Cieza escribe que solo Tamaracunga las veía; esa limitación impide reconstruir un simbolismo indígena seguro. Representarlas como aves ambiguas conserva el detalle sin fijar una teología inexistente en el archivo.
-
-El Diablo del Carnaval de Riosucio es una figura festiva distinta. Compararlo con Tamaracunga puede abrir una conversación sobre cómo la región transformó símbolos cristianos mediante sátira y celebración, pero no autoriza una genealogía directa. Compartir la palabra “diablo” en textos de épocas diferentes no convierte a los personajes en uno solo.
-
-El episodio se aproxima también a relatos de pruebas de conversión, posesión y liberación presentes en tradiciones cristianas. Esa forma literaria pertenece a quien escribió la crónica. Reconocerla permite leer la noche con cautela y dejar abierto aquello que el registro Pirsa no pudo conservar.`,
+El Diablo del Carnaval de Riosucio es otra cosa. La ficha de patrimonio que lo describe lo presenta como figura central de la fiesta y como representación de la vida, la alegría, la amistad, la sátira y la burla, con una composición triétnica, y no menciona ni Pirsa, ni 1549, ni a Tamaracunga. Compartir la palabra «diablo» en textos separados por trescientos años no convierte a dos figuras en una sola.`,
     excerpt:
       "Tamaracunga viaja de Pirsa a Anserma entre auras, piedras y silbidos; la crónica convierte su noche en un ejemplo colonial de bautismo.",
     seoTitle: "Tamaracunga: relato colonial de Pirsa",
@@ -57,15 +55,39 @@ El episodio se aproxima también a relatos de pruebas de conversión, posesión 
     ],
     tags: ["Tamaracunga", "conversión", "colonialismo", "sobrenatural"],
     sourceKeys: [
-      "cieza1553",
-      "cabildo2016",
-      "elizalde1997",
-      "correaDelgado2024",
-      "cabildoTitulos",
-      "guazzo1608",
-      "mondragon1750",
-      "cardona2013",
-      "minculturaCarnaval",
+      "madridcronica1553",
+      "amberesParte1554",
+      {
+        key: "cabildo2016",
+        summary:
+          "Es lo que permite responder qué era Pirsa. Reúne con fuente archivística citada la cadena entera: la probanza de 1552 donde «el cacique Pirsa» es el señor principal de Anserma, la lista de caciques de 1557 donde Pirsa ya es una provincia, la encomienda de 1560 a Gómez Hernández con cuatrocientos indios, el censo del oidor Lesmes de Espinosa Saravia de 1627 y el traslado de pirsas y umbras a la Vega de Supía ese mismo mes. Reproduce también el capítulo CXVIII.",
+        limitation:
+          "Es una recopilación documental de iniciativa comunitaria, no una investigación arbitrada, y propone algunas conexiones interpretativas propias. Transmite el texto colonial: no lo convierte en testimonio oral de Pirsa. El módulo la atribuía sólo al Cabildo, sin nombrar al recopilador.",
+      },
+      "mesaCreando2020",
+      {
+        key: "cabildoTitulos",
+        summary:
+          "Da las cifras de la encomienda de Gómez Hernández —Pirsa cuatrocientos indios, Supinga cincuenta— con su fuente, y advierte de algo que la ficha necesita: «pueblo de indios» es una división administrativa española y no una aldea prehispánica. Recoge la hipótesis de que la aldea de Pirsa estuvo en el sitio llamado Palenque, hoy El Olvido.",
+        limitation:
+          "La localización de la aldea descansa en tradición oral recogida por una maestra, no en arqueología, y no se publica como hecho. Su propósito es la historia territorial del resguardo y no registra ninguna variante del episodio.",
+      },
+      "ashwinCompendium1608",
+      "limaCronica1750",
+      {
+        key: "elizalde1997",
+        summary:
+          "Explica para qué está el capítulo donde está. Lee el episodio como historia ejemplar interpolada que ratifica la legitimidad de la conquista como cruzada salvadora y construye la identidad del «nosotros» español como soldado de la cruz. Sostiene la advertencia de la ficha sobre la finalidad colonial del texto.",
+        limitation:
+          "Confunde los capítulos CXVII y CXVIII: atribuye a Tamaracunga la visión del ser resplandeciente y la quema de la casa, que pertenecen al converso de Lampaz. Se usa sólo por el argumento y en ningún caso para los hechos.",
+      },
+      {
+        key: "minculturaCarnaval",
+        summary:
+          "Sirve para cortar una genealogía que circula sin pruebas. Describe al Diablo del carnaval como figura central de la fiesta y representación de la vida, la alegría, la amistad, la sátira y la burla, con una composición triétnica, y no menciona a Tamaracunga, ni a Pirsa, ni el año 1549. Ese silencio es el argumento.",
+        limitation:
+          "Es una ficha administrativa de salvaguardia sin genealogía histórica: documenta el carnaval contemporáneo y no puede, por sí sola, negar ni afirmar nada sobre el siglo XVI.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: camino andino nocturno entre Pirsa y Anserma, Tamaracunga como joven caminante sostenido por dos acompañantes unidos con cuerdas a la cintura, más de doscientos seguidores sugeridos con pequeñas siluetas al fondo, tres cruces sencillas de viaje, piedras suspendidas y líneas de silbidos como elementos ambiguos, unas pocas auras oscuras en el cielo; sin demonios literales, levitación espectacular, rayos celestiales, carnaval, oro, regalia inventada, tocados panindígenas, texto, objeto físico, maqueta, diorama, CGI ni render 3D.",

@@ -11,88 +11,142 @@ function source({ title, author, year, type, url, summary, limitation }) {
 }
 
 export const desanaSources = {
-  primaryBook: source({
-    title: "Antes o mundo não existia: Mitologia Desana-Kêhíripõrã",
+  lanaLana1995: source({
+    title: "Antes o mundo não existia. Mitologia dos antigos Desana-Kẽhíripõrã",
+    author: "Umusĩ Pãrõkumu (Firmiano Arantes Lana) y Tõrãmũ Kẽhíri (Luiz Gomes Lana)",
+    year: 1995,
+    type: "libro de autoría desana, segunda edición",
+    url: "https://acervo.socioambiental.org/acervo/livros/antes-o-mundo-nao-existia-mitologia-dos-antigos-desana-kehiripora-2a-ed-rev-ampl",
+    summary:
+      "El primer volumen de la colección Narradores Indígenas do Rio Negro: la mitología desana dictada por el tuxaua, baya y kumu Umusĩ Pãrõkumu a su hijo Tõrãmũ Kẽhíri, que empezó a escribirla en 1968 sin grabadora, en cuadernos comprados por él. Sostiene las ocho fichas.",
+    limitation:
+      "Es la versión del clan Kẽhíripõrã, del Tiquié, en Brasil: una versión de clan, no la doctrina del pueblo desana, y del otro lado de la frontera. La reedición de 2019 cambió deliberadamente varios términos, así que no es intercambiable con esta.",
+  }),
+  dantes2019: source({
+    title: "Antes o mundo não existia (reedición)",
     author: "Umusĩ Pãrõkumu y Tõrãmũ Kẽhíri",
     year: 2019,
-    type: "libro de autoría indígena, tercera edición",
-    url: "https://selvagemciclo.org.br/wp-content/uploads/2025/03/Antes_o_mundo_nao_existia_Dantes2019.pdf",
-    summary:
-      "Obra escrita e ilustrada por narradores Desana del clan Kêhíripõrã. Publica los ciclos de Yebá Buró, la Canoa de Transformación, la noche, los cataclismos, las flautas, la mandioca, el chontaduro y Ãgãmahsãpu.",
-    limitation:
-      "Es la versión de un clan y no un canon de todas las comunidades Desana. La ficha parafrasea únicamente capítulos publicados y no operacionaliza conocimiento ceremonial.",
-  }),
-  dantes: source({
-    title: "Antes o mundo não existia",
-    author: "Dantes Editora",
-    year: 2019,
-    type: "ficha editorial de la tercera edición",
+    type: "reedición con revisión de terminología",
     url: "https://dantes.com.br/produto/antes-o-mundo-nao-existia/",
     summary:
-      "Presenta la tercera edición, sus autores Desana, la trayectoria de la obra y el trabajo editorial que actualizó grafías e ilustraciones.",
+      "La edición viva de la obra, con PDF gratuito en el sitio de la editorial.",
     limitation:
-      "Es una ficha editorial y comercial; aporta historia de publicación, no una versión narrativa independiente.",
+      "Su prólogo lista las sustituciones de vocabulario respecto de la edición de 1995 —firmamento por céu, demiurgo por espírito, navio por canoa—, de modo que no sirve para citar pasajes de aquella.",
   }),
-  isaPeople: source({
-    title: "Desana",
-    author: "Instituto Socioambiental, Povos Indígenas no Brasil",
-    type: "perfil etnográfico y territorial",
-    url: "https://www.povosindigenas.org.br/pt/Povo%3ADesana",
-    summary:
-      "Sitúa a los Desana o Umukomasã en el sistema social del Alto Río Negro, sus territorios, clanes, lenguas y relaciones con otros pueblos tukano orientales.",
-    limitation:
-      "Resume contexto regional y no prueba por sí solo cada episodio del libro Kêhíripõrã.",
-  }),
-  museu: source({
-    title: "Povo Desano",
-    author: "Museu do Índio, ProDoclin",
-    type: "perfil lingüístico y cultural institucional",
-    url: "https://prodoclin.museudoindio.gov.br/index.php/etnias/desano/povo",
-    summary:
-      "Aporta una presentación institucional del pueblo Desano, su lengua, localización y denominaciones.",
-    limitation:
-      "No contiene la transcripción completa de los ciclos y se usa solo para contextualizar nombres y localización.",
-  }),
-  wariBook: source({
-    title: "Mitologia sagrada dos antigos Desana do grupo Wari Dihputiro Põrã",
-    author: "Diakuru y Kisibi",
+  diakuruKisibi1996: source({
+    title: "A mitologia sagrada dos antigos Desana do grupo Wari Dihputiro Põrã",
+    author: "Diakuru (Américo Castro Fernandes) y Kisibi (Dorvalino Moura Fernandes)",
     year: 1996,
-    type: "catálogo de libro de narradores indígenas",
+    type: "libro de autoría desana",
     url: "https://acervo.socioambiental.org/acervo/livros/mitologia-sagrada-dos-antigos-desana-do-grupo-wari-dihputiro-pora",
     summary:
-      "Registra otra publicación Desana dentro de la Colección Narradores Indígenas do Rio Negro y demuestra la existencia de versiones ligadas a clanes distintos.",
+      "La versión del clan Wari Dihputiro Põrã, escrita en Cucura a lo largo de cinco años, con borradores retraducidos al desana para que el padre los corrigiera.",
     limitation:
-      "La ficha bibliográfica no ofrece el texto integral. Se usa para evitar presentar la versión Kêhíripõrã como única.",
+      "Es otra versión de clan y difiere de la de los Kẽhíripõrã en episodios enteros: no se funden.",
   }),
-  googleBook: source({
-    title: "Antes o mundo não existia: Mitologia dos antigos Desana-Kêhíripõrã",
-    author: "Tõrãmũ Kêhíri y Umusí Pãrõkumu; FOIRN y UNIRT",
-    year: 1995,
-    type: "registro bibliográfico de la segunda edición",
-    url: "https://books.google.com.br/books?hl=pt-BR&id=7Kh-BgAAQBAJ",
+  galvao2004: source({
+    title: "Livro dos antigos Desana-Guahari Diputiro Porã",
+    author: "Tõrãmũ Bayaru (Wenceslau Sampaio Galvão) y Guahari Ye Ni (Raimundo Castro Galvão)",
+    year: 2004,
+    type: "libro de autoría desana",
+    url: "https://acervo.socioambiental.org/acervo/livros/livro-dos-antigos-desana-guahari-diputiro-por%C3%A3",
     summary:
-      "Documenta la edición de FOIRN y UNIRT, la autoría de padre e hijo y la pertenencia de Luiz Gomes Lana al clan Kêhíripõrã del río Tiquié.",
+      "La versión del clan Guahari Diputiro Porã, del medio Papurí, en casi setecientas páginas. Es donde Miriá Porã Masü mata tres turmas de iniciados y por eso fracasan los tres primeros intentos de poblar el mundo.",
     limitation:
-      "La vista es parcial y sirve como control bibliográfico, no para completar pasajes que la edición abierta no publique.",
+      "Tercera versión de clan, con su propio reparto de episodios; tampoco se funde con las otras dos.",
   }),
-  terminology: source({
-    title:
-      "Estudo etnoterminológico da obra Antes o mundo não existia",
-    author: "José Alves da Costa Neto",
-    year: 2021,
-    type: "trabajo académico de lingüística y traducción",
-    url: "https://bdm.unb.br/handle/10483/31507",
+  amazonianCosmos1971: source({
+    title: "Amazonian Cosmos. The Sexual and Religious Symbolism of the Tukano Indians",
+    author: "Gerardo Reichel-Dolmatoff",
+    year: 1971,
+    type: "monografía etnográfica",
+    url: "https://lccn.loc.gov/73133491",
     summary:
-      "Analiza vocabulario y decisiones de traducción de la obra Desana, útil para reconocer que los nombres y conceptos no son equivalentes transparentes en español.",
+      "La obra que dio a conocer la cosmología desana fuera de Colombia. Se hizo en una oficina de Bogotá, en seis meses de sesiones con Antonio Guzmán, desana del sib semé-peyáru-porá del Macú-paraná.",
     limitation:
-      "Es un análisis universitario posterior; no reemplaza a los autores indígenas ni constituye una segunda narración oral.",
+      "Antonio Guzmán figura como informante y asistente de investigación, nunca como coautor. El enlace es el registro de la Library of Congress: la editorial descatalogó el título y no tiene página, y las copias con texto que circulan están en repositorios que alojan obra en derechos sin licencia declarada.",
+  }),
+  bruzzi1994: source({
+    title: "Crenças e lendas do Uaupés",
+    author: "Alcionilio Brüzzi Alves da Silva",
+    year: 1994,
+    type: "compilación misionera de tradición oral",
+    url: "https://www.documentation.ird.fr/hor/fdi:010020940",
+    summary:
+      "Recopilación salesiana de creencias y leyendas del Uaupés, útil para cotejar episodios entre pueblos del alto río Negro.",
+    limitation:
+      "Es obra de un misionero y del lado brasileño: vecindad documentada, no fuente desana de primera mano.",
+  }),
+  ribeiro1994: source({
+    title: "Desana Mythology: Oral Indigenous Literature",
+    author: "Berta G. Ribeiro",
+    year: 1994,
+    type: "artículo académico",
+    url: "https://doi.org/10.1080/08873267.1994.9976945",
+    summary:
+      "Presentación en inglés del libro de los Lana, traducida por Stanley Krippner, con el relato de cómo se preparó aquella primera edición.",
+    limitation:
+      "Es un artículo de revista, no un libro, y habla sobre la obra de los Lana más que sobre la mitología misma.",
+  }),
+  beksta1988: source({
+    title: "A maloca tukano-dessana e seu simbolismo",
+    author: "Casimiro Béksta",
+    year: 1988,
+    type: "estudio etnográfico",
+    url: "http://www.etnolinguistica.org/biblio:beksta-1988-maloca",
+    summary:
+      "Estudio de la maloca tukano-desana y de su simbolismo espacial, con el que se leen las casas y los recorridos que nombran los relatos.",
+    limitation:
+      "La ficha está completa y curada, pero la descarga del PDF falla; y es material de contexto, no narración.",
+  }),
+  desanaTexts1989: source({
+    title: "Desana Texts and Contexts. Origin Myths and Tales of a Tukanoan Tribe of the Colombian Northwest Amazon",
+    author: "Gerardo Reichel-Dolmatoff",
+    year: 1989,
+    type: "colección de textos con narradores acreditados",
+    url: "https://lccn.loc.gov/95102090",
+    summary:
+      "La mejor fuente del lado colombiano: relatos del bajo Papurí y de Mitú con sus kumua acreditados, entre ellos Torame, que había visto a los misioneros de Montfort quemar los objetos sagrados de su pueblo.",
+    limitation:
+      "No existe ninguna copia legítima en línea: el editor austríaco no tiene presencia digital y lo que circula son archivos personales. El enlace es el registro de la Library of Congress; la lectura se hizo sobre el ejemplar digitalizado que hay en el expediente.",
+  }),
+  geografiaChamanistica: source({
+    title: "Algunos conceptos de geografía chamanística de los indios Desana de Colombia",
+    author: "Gerardo Reichel-Dolmatoff",
+    year: 1981,
+    type: "capítulo de libro",
+    url: "http://www.etnolinguistica.org/biblio:reichel-1981-algunos",
+    summary:
+      "Sobre cómo los desana leen el territorio: los lugares del relato como puntos de una geografía que el chamán recorre.",
+    limitation:
+      "Capítulo de un homenaje académico; el volumen anfitrión no está digitalizado en ningún repositorio universitario.",
   }),
 };
 
-export function pickDesanaSources(...keys) {
-  return [...new Set(keys)].map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito.
+ */
+export function pickDesanaSources(...entries) {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entries) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = desanaSources[key];
-    if (!selected) throw new Error(`Fuente Desana desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Desana desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

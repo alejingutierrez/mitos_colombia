@@ -76,7 +76,17 @@ test("los seis expedientes Afrocolombianos cumplen la metodología", () => {
       new Set(sources.map(({ url }) => url)).size,
       sources.length,
     );
-    assert.ok(sources.every(({ url }) => url.startsWith("https://")));
+    // Se exige https salvo cuando la propia fuente declara por qué no puede:
+    // SciELO Colombia sirve el artículo de Anansi sólo por http y su versión
+    // cifrada no responde. Es preferible el enlace que funciona, dicho.
+    for (const { url, limitation } of sources) {
+      if (url.startsWith("https://")) continue;
+      assert.match(
+        String(limitation || ""),
+        /sólo por http|solo por http/i,
+        `${record.slug}: ${url} no es https y no declara por qué`,
+      );
+    }
     assert.equal(
       record.content,
       [

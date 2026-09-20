@@ -72,8 +72,25 @@ function validateRecords() {
     if (record.tags.length !== 4 || record.focus_keywords.length !== 5) {
       throw new Error(`${record.slug}: taxonomía o palabras clave inválidas.`);
     }
-    if (record.keySources.length + record.sources.length !== 7) {
-      throw new Error(`${record.slug}: se esperaban siete fuentes.`);
+    // Antes exigía siete exactas: era el reparto en bloque escrito como
+    // aserción. Cada ficha cita ahora las obras que su reescritura usó, y son
+    // entre seis y nueve, con URLs únicas y de dominios distintos.
+    const fuentes = [...record.keySources, ...record.sources];
+    const urls = fuentes.map(({ url }) => url);
+    if (fuentes.length < 5) {
+      throw new Error(`${record.slug}: ${fuentes.length} fuentes; el mínimo son cinco.`);
+    }
+    if (new Set(urls).size !== urls.length) {
+      throw new Error(`${record.slug}: fuentes con URL repetida.`);
+    }
+    if (!urls.every((url) => /^https:\/\//.test(url))) {
+      throw new Error(`${record.slug}: hay una fuente sin URL https.`);
+    }
+    if (new Set(urls.map((url) => new URL(url).hostname)).size < 4) {
+      throw new Error(`${record.slug}: las fuentes vienen de menos de cuatro dominios.`);
+    }
+    if (!fuentes.every(({ summary, limitation }) => summary && limitation)) {
+      throw new Error(`${record.slug}: hay una fuente sin resumen o sin límite.`);
     }
     if (
       !/^https:\/\//.test(record.image_url) ||
@@ -593,7 +610,12 @@ async function run() {
           },
           dossiers: records.length,
           imagePairs: records.length,
-          sourcesPerMyth: 7,
+          sourcesPerMyth: Object.fromEntries(
+            records.map((record) => [
+              record.slug,
+              record.keySources.length + record.sources.length,
+            ]),
+          ),
           tags: {
             requested: tagNames.length,
             existing: tagNames.length - missingTags.length,

@@ -15,95 +15,125 @@ export const ticunaSources = {
     title: "Narración tikuna del origen del territorio y de los humanos",
     author: "Abel Antonio Santos Angarita",
     year: 2010,
-    type: "artículo académico basado en historia oral Tikuna",
+    type: "artículo de autoría tikuna en revista de acceso abierto",
     url: "https://revistas.unal.edu.co/index.php/imanimundo/article/view/10900",
     summary:
-      "Publica la narración del profesor Marcelino Noé y aportes de mayores sobre Mowíchina, Ngutapa, Yoí, Ípi, Wone, Eware y el origen de los humanos.",
+      "Abel Antonio Santos, lingüista tikuna, publica en Mundo Amazónico —Universidad Nacional sede Amazonia, acceso abierto— la narración del profesor Marcelino Noé y los aportes de los abuelos de Santa Lucía sobre Mowíchina, Ngutapa, Yoí, Ípi, Wone, Eware y el origen de los humanos.",
     limitation:
-      "La edición y las glosas pertenecen al autor; esta revisión parafrasea solo los episodios públicos y no reproduce fórmulas rituales.",
+      "El artículo no fecha las narraciones de Marcelino Noé ni las de los abuelos de Santa Lucía: da comunidad y resguardo, pero no el año de la grabación, y el abuelo Manrique aparece sólo con ese nombre. La edición y las glosas son del autor; la ficha parafrasea episodios públicos y no reproduce fórmulas rituales.",
   }),
   moruapu2000: source({
-    title: "Historias de los abuelos de Moruapü: versión libre en castellano",
+    title: "Historias de los abuelos de Moruapü. Versión libre en castellano",
     author:
-      "Hugo Armando Camacho González, Federico José Huaines Arara y Sergio Ramos del Águila",
+      "Hugo Armando Camacho González, Federico José Huaines Arara y Sergio Ramos del Águila (compiladores); narradores Dolores Noé, Augusto Coello y Remigio Santos",
     year: 2000,
-    type: "compilación de relatos de mayores para educación bilingüe Tikuna",
+    type: "compilación de tradición oral con narradores fechados",
     url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/1335/",
     summary:
-      "Atribuye y publica los relatos del Sol, la Luna, el friaje y la canoa de Moe recogidos con narradores Tikuna de varias comunidades.",
+      "El libro que sostiene el Sol, la Luna, el friaje y la canoa de Moe. La Biblioteca Digital del Banco de la República publica el PDF completo, y cada relato lleva en el índice y en la nota al pie el nombre del narrador, la comunidad y el taller donde se grabó, entre 1993 y 1994.",
     limitation:
-      "Es una versión libre en castellano. La página identifica al narrador de cada relato y evita tratar la traducción como texto literal.",
+      "Es una versión libre en castellano, no un texto literal en tikuna. El escaneo tiene reconocimiento óptico defectuoso: hay letras cambiadas en casi todas las páginas y varios nombres propios sólo se leen por contexto. El libro alterna las grafías Moruapü y Muruapü en páginas contiguas.",
   }),
-  goulard2009: source({
-    title: "Entre mortales e inmortales: el ser según los Ticuna de la Amazonía",
-    author: "Jean-Pierre Goulard",
-    year: 2009,
-    type: "monografía antropológica de acceso abierto",
-    url: "https://books.openedition.org/ifea/3927",
+  nimuendaju1952: source({
+    title: "The Tukuna",
+    author:
+      "Curt Nimuendajú; editado por Robert H. Lowie, traducido por William D. Hohenthal",
+    year: 1952,
+    type: "monografía etnográfica clásica, registro del editor",
+    url: "https://www.ucpress.edu/books/the-tukuna",
     summary:
-      "Analiza la relación entre cuerpos, inmortales, parentesco y territorio en versiones Ticuna del ciclo de Yoí e Ípi.",
+      "University of California Publications in American Archaeology and Ethnology 45: la etnografía clásica del pueblo, con una última sección de mitos de creación recogidos de narradores tikuna. Es la comparación obligada para el ciclo de Yoí e Ípi, la Luna y el origen de la humanidad.",
     limitation:
-      "Es una interpretación antropológica comparativa y no sustituye la voz de los narradores identificados en las fuentes principales.",
+      "Es del lado brasileño: el trabajo de campo se hizo en el alto Solimões, y sus versiones se citan como variantes del mismo pueblo, no como la versión colombiana. La obra sigue en derechos —ISBN 9780520349681, edición electrónica de pago—, así que el enlace es el registro del editor; la lectura se hizo sobre el ejemplar digitalizado que hay en el expediente y en la Biblioteca Digital Curt Nimuendajú, que no ofrece TLS.",
   }),
-  lopez2002: source({
+  toruDuugu1985: source({
+    title: "Torü Duü'ügü. Nosso povo",
+    author:
+      "Maestros tikuna de Vendaval y Campo Alegre —Reinaldo Otaviano do Carmo, Quintino Emílio Marques y Miguel Avelino Firmino— con la Organização Geral dos Professores Ticuna Bilíngues",
+    year: 1985,
+    type: "libro escolar bilingüe de autoría tikuna",
+    url: "https://acervo.socioambiental.org/acervo/livros/toru-duuugu-nosso-povo",
+    summary:
+      "Ciento diez páginas en tikuna y portugués con los mitos principales del pueblo, escritas para las escuelas por maestros tikuna del alto Solimões. El acervo del Instituto Socioambiental ofrece el PDF completo.",
+    limitation:
+      "Fuente vecina: es del lado brasileño, del alto Solimões, y está en tikuna y portugués. Se usa para cotejar episodios, nunca como la versión colombiana de un relato.",
+  }),
+  faulhaber2020: source({
+    title: "Sol e lua na iconografia Tikuna",
+    author: "Priscila Faulhaber",
+    year: 2020,
+    type: "artículo de etnoastronomía en repositorio universitario",
+    url: "https://sedici.unlp.edu.ar/handle/10915/132367",
+    summary:
+      "Cosmovisiones/Cosmovisões 1 (1), pp. 90-104: lee los dibujos tikuna donde el Sol y la Luna tuvieron existencia terrestre antes de subir al cielo, y los liga al origen de la gente, al parentesco y a las prescripciones de la ceremonia de la nueva muchacha. El repositorio SEDICI de la Universidad Nacional de La Plata publica el PDF.",
+    limitation:
+      "Trabaja con comunidades tikuna de Brasil y con iconografía, no con transcripción de relatos: es fuente vecina y de interpretación, no una segunda versión narrativa.",
+  }),
+  gomezPulgarin2011: source({
     title:
-      "Los ticuna frente a los procesos de nacionalización en la frontera entre Brasil, Colombia y Perú",
-    author: "Claudia Leonor López Garcés",
-    year: 2002,
-    type: "artículo académico de antropología fronteriza",
-    url: "https://www.redalyc.org/pdf/1050/105015289004.pdf",
+      "Dos mitos culturales de la alta Amazonia: relatos de un mundo humanizado",
+    author: "W. Eduardo Gómez Pulgarín",
+    year: 2011,
+    type: "artículo comparativo de acceso abierto",
+    url: "https://revistas.unal.edu.co/index.php/imanimundo/article/view/18912",
     summary:
-      "Documenta cómo distintas versiones del ciclo de origen dialogan con fronteras nacionales y experiencias históricas contemporáneas.",
+      "Mundo Amazónico 2, pp. 359-364: compara los mitos de origen tikuna y uitoto y muestra la complementariedad entre los gemelos míticos y la reorganización del mundo para que la gente pueda vivir en él.",
     limitation:
-      "Aporta contexto sobre variantes y nacionalización; no es la fuente narrativa de los episodios resumidos.",
+      "Es un artículo comparativo de seis páginas, no una recopilación: aporta el paralelo con los uitoto y la lectura de los gemelos, no el texto de ningún relato tikuna.",
   }),
-  minCultura: source({
-    title: "Caracterización del pueblo Tikuna",
-    author: "Ministerio de Cultura de Colombia",
-    type: "caracterización institucional",
-    url: "https://mng.mincultura.gov.co/prensa/noticias/Documents/Poblaciones/PUEBLO%20TIKUNA.pdf",
+  gomezPulgarin2012: source({
+    title: "Rasgos lingüísticos en relatos míticos tikuna: una caracterización",
+    author: "W. Eduardo Gómez Pulgarín",
+    year: 2012,
+    type: "tesis de maestría en repositorio institucional",
+    url: "https://repositorio.unal.edu.co/items/7c7d7491-4077-4aa2-867b-f9453a589fea",
     summary:
-      "Sitúa al pueblo Tikuna en Colombia, Perú y Brasil y resume la centralidad de Yoí, Ípi, Wone y el territorio amazónico.",
+      "Tesis de la Maestría en Estudios Amazónicos de la Universidad Nacional en Leticia sobre cuatro narraciones orales de la frontera colombo-peruana. Su ficha de corpus es la que fecha y atribuye el relato de origen de Humberto Chetanükü —grabado por Jean-Pierre Goulard en 1989 en Santa Rosa de Loreto— y el «Ngutapachiga» de Augusto Coello.",
     limitation:
-      "Es una síntesis institucional y se usa como contexto, no para completar escenas ausentes en los relatos publicados.",
+      "De esos dos relatos aquí sólo se conoce la ficha de corpus —narrador, año, lugar, número de líneas—: no se leyó el texto de ninguno. La tesis analiza prosodia y cohesión gramatical, no reconstruye argumentos.",
   }),
-  funaiFilm: source({
-    title: "Yo'i e Ipi: filme producido por indígenas del pueblo Ticuna",
-    author: "Museu do Índio / Funai y realizadores Ticuna de Umariaçu II",
-    year: 2022,
-    type: "presentación institucional de película indígena",
-    url: "https://www.gov.br/museudoindio/pt-br/assuntos/noticias/2022/yo-i-e-ipi-assista-ao-filme-produzido-por-indigenas-do-povo-ticuna",
+  men2014: source({
+    title: "Bamachigà. Historias del bama",
+    author:
+      "Docentes de la comunidad tikuna de Macedonia y San Martín de Amacayacu; Ministerio de Educación Nacional, serie Río de Letras — Territorios Narrados",
+    year: 2014,
+    type: "libro bilingüe tikuna-español de autoría comunitaria",
+    url: "https://redaprende.colombiaaprende.edu.co/media/recursos/alliances/reception/resources/b4490f4b-0881-410c-b1a3-48c51b633aa2/T%C3%ADtulo_7._Historias_del_Bama.pdf",
     summary:
-      "Presenta una realización Ticuna construida mediante entrevistas con mayores sobre Ngutapa, Yoí, Ípi y la pesca del pueblo en Eware.",
+      "Relatos escritos por docentes tikuna del Amazonas colombiano dentro del proyecto educativo comunitario Naane ru duetagu, con glosario y texto bilingüe. ISBN 978-958-691-605-9; el catálogo del Ministerio publica el PDF completo.",
     limitation:
-      "La ficha resume la producción y no reemplaza el visionado ni autoriza a reproducir íntegramente testimonios o escenas.",
-  }),
-  parques2024: source({
-    title: "Siete cantos de la sabiduría ancestral Tikuna",
-    author: "Parques Nacionales Naturales de Colombia y comunidades Tikuna",
-    year: 2024,
-    type: "publicación institucional y comunitaria de contexto cultural",
-    url: "https://www.parquesnacionales.gov.co/sala-de-prensa/publicaciones/7-cantos-de-la-sabiduria-ancestral-tikuna/",
-    summary:
-      "Muestra la continuidad contemporánea de la lengua, la memoria y el vínculo territorial Tikuna en el Trapecio Amazónico.",
-    limitation:
-      "No se usa para transcribir cantos ni como fuente de los argumentos míticos; aporta contexto vivo y una advertencia contra folklorizar.",
+      "Es material escolar reescrito por docentes, no la transcripción de una grabación con narrador fechado: da el lado colombiano y contemporáneo de los relatos, no la versión de un mayor identificado.",
   }),
 };
 
-export function pickTicunaSources(primaryKey) {
-  const keys = [
-    primaryKey,
-    primaryKey === "santos2010" ? "moruapu2000" : "santos2010",
-    "goulard2009",
-    "lopez2002",
-    "minCultura",
-    "funaiFilm",
-    "parques2024",
-  ];
-  return [...new Set(keys)].map((key) => {
+/**
+ * Entradas propias por mito: una lista de claves, o de `{ key, summary,
+ * limitation }` cuando el mito quiere decir qué le aporta esa obra a él en
+ * particular. Antes había además un `pickTicunaSources(primaryKey)` que
+ * armaba un dossier fijo de siete con un solo interruptor: eso era el reparto
+ * en bloque, y por eso las seis fichas citaban lo mismo.
+ */
+export function entradasPropias(...entries) {
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entries) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = ticunaSources[key];
-    if (!selected) throw new Error(`Fuente Ticuna desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente desconocida en ticuna: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

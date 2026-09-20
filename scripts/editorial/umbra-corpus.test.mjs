@@ -47,12 +47,40 @@ test("los dos expedientes Umbra cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const sourceUrls = [...record.keySources, ...record.sources].map(
-      ({ url }) => url,
-    );
+    // Antes se exigían exactamente siete fuentes en todas las fichas. Ese
+    // número era el reparto en bloque escrito como aserción: todas recibían la
+    // misma lista. Lo que hay que sostener es el mínimo, la ausencia de
+    // duplicados, que el relato apoye en dominios distintos, que no entre
+    // ninguna portada de catálogo y que las fichas no citen todas lo mismo.
+    const fuentes = [...record.keySources, ...record.sources];
+    assert.ok(fuentes.length >= 5, `${record.slug}: ${fuentes.length} fuentes`);
+    const sourceUrls = fuentes.map(({ url }) => url);
     assert.equal(new Set(sourceUrls).size, sourceUrls.length);
+    const dominios = new Set(sourceUrls.map((url) => new URL(url).host));
+    assert.ok(dominios.size >= 3, `${record.slug}: ${dominios.size} dominios`);
+    for (const url of sourceUrls) {
+      assert.doesNotMatch(
+        url,
+        /books\.google\.|openlibrary\.org|worldcat\.org|\.blogspot\.|scribd\.com|academia\.edu|wikipedia\.org/i,
+        `${record.slug}: fuente de catálogo ${url}`,
+      );
+    }
+    assert.match(
+      record.historia,
+      /\b(1[5-9]|20)\d\d\b/,
+      `${record.slug}: su Historia no fecha el registro`,
+    );
+    assert.doesNotMatch(
+      record.mito,
+      /\b(la fuente|las fuentes|la investigación|esta ficha|la página|según el registro|el cronista)\b/i,
+      `${record.slug}: su Relato habla de la investigación`,
+    );
   }
+  // Dos fichas de un corpus pequeño pueden apoyarse en la misma bibliografía
+  // —aquí caben tres crónicas y poco más—, pero no pueden abrir con las mismas
+  // tres fuentes clave: eso sería otra vez el reparto en bloque.
+  const clave = records.map((r) => r.keySources.map(({ url }) => url).join("|"));
+  assert.equal(new Set(clave).size, clave.length, "dos fichas abren con las mismas fuentes clave");
 });
 
 test("Tasime significa tigre y no se convierte en nombre propio inventado", () => {
@@ -62,9 +90,18 @@ test("Tasime significa tigre y no se convierte en nombre propio inventado", () =
     "correct-name-and-remove-unsupported-amplification",
   );
   assert.equal(record.title, "Tasime: el tigre y el incesto");
-  assert.match(record.mito, /Tasime o tassime no aparece allí como su nombre propio/i);
+  // Las aserciones que exigían que el Relato explicara la investigación
+  // —«No había una princesa», «leyenda literaria publicada en 1932», «no
+  // registra un nombre propio»— eran el aparato editorial escrito como prueba.
+  // Ese aparato salió del Relato y vive ahora en Historia, Versiones y el
+  // dossier. Lo que se comprueba es lo mismo, dicho donde corresponde.
   assert.match(record.mito, /se transformó en lobo/i);
-  assert.match(record.historia, /solo la presenta como pintura negra/i);
+  assert.match(record.mito, /Tassime/);
+  assert.match(record.mito, /\bbee\b/);
+  // Que tassime es «tigre» y no un nombre propio se dice en Versiones.
+  assert.match(record.versiones, /tigre/i);
+  assert.match(record.versiones, /[Tt]a[sS]{1,2}ime/);
+  assert.match(record.historia, /Guakurama/);
   assert.doesNotMatch(
     record.mito,
     /llamado Tasime|el joven Tasime|ritual de beé|petroglifo contaba/i,
@@ -81,9 +118,17 @@ test("Batero entra como memoria atribuida y no como hecho colonial probado", () 
     ].action,
     "add-community-attributed-contemporary-account",
   );
-  assert.match(record.mito, /testimonio contemporáneo de Merardo Largo/i);
-  assert.match(record.mito, /salieron en secreto hacia La Güaira/i);
-  assert.match(record.mito, /No se ha localizado un documento colonial/i);
+  // Las aserciones que exigían que el Relato explicara la investigación
+  // —«No había una princesa», «leyenda literaria publicada en 1932», «no
+  // registra un nombre propio»— eran el aparato editorial escrito como prueba.
+  // Ese aparato salió del Relato y vive ahora en Historia, Versiones y el
+  // dossier. Lo que se comprueba es lo mismo, dicho donde corresponde.
+  assert.match(record.mito, /Güaira/);
+  assert.match(record.mito, /Taramakunga/);
+  assert.doesNotMatch(record.mito, /Merardo Largo/);
+  // Quién lo atribuye y con qué alcance va en Historia y en Versiones.
+  assert.match(record.historia, /Merardo Largo/);
+  assert.match(record.versiones, /Merardo Largo/);
   assert.doesNotMatch(record.mito, /se comprobó|está demostrado|portal mágico/i);
 });
 
