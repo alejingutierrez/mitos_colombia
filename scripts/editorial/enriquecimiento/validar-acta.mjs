@@ -337,14 +337,23 @@ for (const d of detalle) {
 
 // Aperturas repetidas: el defecto más visible del lote.
 if (conRelato) {
+  // Lo que delata el molde es la CONCENTRACIÓN, no que dos fichas coincidan.
+  // Con cuatro categorías gruesas la coincidencia es inevitable a partir de
+  // cierto número de fichas: el corpus wayuu, que está bien escrito, tiene 20
+  // de 27 «repetidas» y su firma más frecuente sólo agrupa 4. Piedecuesta, que
+  // sí tiene molde, pone siete de ocho en la misma. Así que bloquea la
+  // concentración —una firma con 4 o más fichas, o con más de un cuarto del
+  // lote— y lo demás sólo se señala.
   const repes = [...aperturas.entries()].filter(([, s]) => s.length > 1);
   if (repes.length) {
-    console.log("\nAPERTURAS REPETIDAS (misma estructura sintáctica en la primera oración)");
+    const limite = Math.max(4, Math.ceil(archivos.length / 4));
+    console.log("\nAPERTURAS COMPARTIDAS (estructura sintáctica de la primera oración)");
     for (const [firma, slugs] of repes.sort((a, b) => b[1].length - a[1].length)) {
-      console.log(`  ${firma}  ×${slugs.length}  ${slugs.join(", ")}`);
-      totalBloqueos += slugs.length - 1;
+      const concentra = slugs.length >= limite;
+      console.log(`  ${concentra ? "✖" : "·"} ${firma}  ×${slugs.length}  ${slugs.join(", ")}`);
+      if (concentra) totalBloqueos += 1;
     }
-    console.log("  D=determinante P=preposición C=conjunción X=otra");
+    console.log(`  D=determinante P=preposición C=conjunción X=otra · bloquea a partir de ${limite} fichas`);
   }
 }
 

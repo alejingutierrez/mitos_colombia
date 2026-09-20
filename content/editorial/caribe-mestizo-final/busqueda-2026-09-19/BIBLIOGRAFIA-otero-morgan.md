@@ -285,9 +285,26 @@ Univalle (1977-1993) y el doctorado honoris causa en Letras de 1997.
 *Limitación:* es una cronología institucional sin aparato: no da elenco, ni teatro, ni fuente
 del cuento.
 
+### Escalón 2 — el autor y su taller
+
+**3. Jaramillo, María Mercedes, y Osorio, Betty. «El legado de Enrique Buenaventura».**
+*Revista de Estudios Sociales* n.º 17, Universidad de los Andes, Bogotá, enero-abril de 2004.
+`http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0123-885X2004000100011`
+✅ **texto** — se abre **por HTTP**; por HTTPS el servidor rechaza la conexión. Artículo
+arbitrado. Aporta el marco que la ficha necesita para decir de dónde saca Buenaventura sus
+materiales: «con las tradiciones precolombinas, las de origen africano y las europeas,
+Buenaventura tejió un rico corpus», y sus fuentes van «desde el teatro medieval, la cultura
+popular, las tradiciones indígenas y afro-colombianas hasta las propuestas teóricas más
+renovadoras de las ciencias sociales». Y fecha el punto de partida: «cuando el autor regresó a
+Cali a finales de 1955, empezó a trabajar como asistente de dirección de la Escuela de Teatro
+dirigida por el español Cayetano Luca de Tena», que es la casa donde nace *Tío Conejo zapatero*
+tres años después.
+*Limitación:* **no menciona *Tío Conejo zapatero*** ni el teatro infantil. Sirve para la
+`historia`, no para el relato.
+
 ### Escalón 4 — comparativas (sólo si `Similitudes` las nombra)
 
-**3. Biblioteca Virtual Miguel de Cervantes. *Cuentos para dormir a Isabella: tradición oral
+**4. Biblioteca Virtual Miguel de Cervantes. *Cuentos para dormir a Isabella: tradición oral
 afropacífica colombiana*.**
 `https://www.cervantesvirtual.com/obra/cuentos-para-dormir-a-isabella-tradicion-oral-afropacifica-colombiana-882225/`
 ⛔ **bloqueada** — el dominio responde con la interposición de Cloudflare («Just a moment…») a
@@ -296,7 +313,7 @@ búsqueda: la obra contiene «El Tío Conejo y la Tía Tigra» y se declara como
 afropacífica colombiana, que es exactamente el corpus que la tesis de Univalle señala como
 origen de la adaptación de Buenaventura. **Queda como pista, no como fuente**: no se abrió.
 
-**4. Portafolio, redacción. «Un conejo zapatero en el Teatro Colón».** 19 de noviembre de 2005.
+**5. Portafolio, redacción. «Un conejo zapatero en el Teatro Colón».** 19 de noviembre de 2005.
 `https://www.portafolio.co/economia/finanzas/conejo-zapatero-teatro-colon-218182`
 ✅ **texto** — se abre y se lee. Registra un montaje de la Corporación 702 en el Teatro Colón:
 «un conejo astuto que monta una zapatería en el bosque» y convence a los demás animales de
@@ -307,7 +324,7 @@ en lo esencial (zapatos prometidos y no entregados).
 Buenaventura ni menciona tradición oral alguna. Sirve para fechar la circulación escénica
 contemporánea del argumento, no para sostener su procedencia.
 
-**5. List, George; McDowell, John Holmes; Rojas E., Juan Sebastián. *Animal Tales from the
+**6. List, George; McDowell, John Holmes; Rojas E., Juan Sebastián. *Animal Tales from the
 Caribbean*.** Indiana University Press, 2017. `https://iupress.org/9780253031174/animal-tales-from-the-caribbean/`
 🟡 **ficha** — ya está en el módulo para el subciclo `list`. Aquí entra sólo si `Similitudes`
 compara la cadena de persecución del conejo caribeño con la del conejo pacífico.
