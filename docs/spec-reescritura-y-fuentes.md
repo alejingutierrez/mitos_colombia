@@ -230,3 +230,13 @@ del `pick`, el bloque compartido dentro del constructor y, el más profundo, el
 `define` llamando al `pick` sin argumentos—; el `<title>` de la página sale de
 `seo_pages` y no de `myths.seo_title`; y ahora se puede crear un expediente
 sin revertir la portada y reclasificar un mito sin despublicarlo.
+
+## Lo que queda: mestizos y mixtos
+
+Los 253 restantes tienen su propio documento, porque no son comunidades sino
+dos cajones administrativos y el proceso cambia: la unidad es el ciclo, la
+prensa local entra como fuente, el mínimo sube a 8 fuentes por ficha y hay un
+gate nuevo —el acta de procedencia— antes de redactar.
+
+→ [`spec-mestizos-y-mixtos.md`](spec-mestizos-y-mixtos.md) y
+[`brief-mestizos-y-mixtos.md`](brief-mestizos-y-mixtos.md)

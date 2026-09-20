@@ -180,6 +180,37 @@ que ya pasó por el pipeline de imágenes: reescribe `image_url` desde
 - Crear categorías o etiquetas.
 - Dar por publicado un cambio sin `verificar --vivo` en la URL pública.
 - Trabajar con una muestra: el alcance es la comunidad completa.
+- Dar por bueno un reparto de fuentes sin **cotejarlo** contra el JSON de la
+  investigación, URL por URL: diez de las once fichas u'wa se publicaron con
+  las fuentes de otra mientras todo lo demás pasaba en verde.
+- Olvidar que el `<title>` de la página sale de `seo_pages` y no de
+  `myths.seo_title`: se puede reescribir una ficha entera y que la pestaña siga
+  diciendo el título viejo.
+
+## Mestizos y mixtos: otro corpus, otras reglas
+
+Los 253 que quedan —184 mestizos y 69 mixtos— **no se trabajan con este
+proceso tal cual**. No son comunidades: son dos cajones administrativos, sin
+pueblo, sin territorio y sin corpus cerrado. Tres diferencias que cambian el
+trabajo:
+
+- **La unidad es el ciclo, no la comunidad**: un municipio, un recopilador, un
+  libro. Existen ya como 31 carpetas en `editorial/`.
+- **La prensa local antigua sí es fuente**, con condiciones, porque muchas
+  veces es el registro más antiguo del relato. El mínimo de fuentes sube de 5
+  a 8 y la meta de 8 a 12.
+- **Hay un gate nuevo antes de redactar**: el acta de procedencia, que ancla
+  cada hecho del relato a una página y obliga a decir por qué el mito está en
+  ese cajón.
+
+Antes de tocar nada de ese bloque, leer
+`docs/spec-mestizos-y-mixtos.md` y usar el brief de
+`docs/brief-mestizos-y-mixtos.md`.
+
+**Aviso**: hay 256 fichas ya escritas en esos módulos que nunca se aplicaron.
+No sirven tal cual —242 no cumplen el contrato y `caribe-mestizo-final` tiene
+el 86,6 % de sus oraciones repetidas—, pero traen narrador nombrado en la
+mayoría, y ese trabajo no hay que rehacerlo.
 
 ## Mapa
 
@@ -187,6 +218,7 @@ que ya pasó por el pipeline de imágenes: reescribe `image_url` desde
 |---|---|
 | Metodología | `docs/metodologia-revision-mitos.md` |
 | Proceso y estado por comunidad | `docs/spec-reescritura-y-fuentes.md` |
+| **Mestizos y mixtos** | `docs/spec-mestizos-y-mixtos.md` + `docs/brief-mestizos-y-mixtos.md` |
 | Kit | `scripts/editorial/enriquecimiento/` |
 | Módulos | `editorial/<comunidad>/` |
 | Auditorías | `content/editorial/<comunidad>/` |
