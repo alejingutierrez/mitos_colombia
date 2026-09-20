@@ -45,7 +45,18 @@ const mythFileHasFields = await fs
     return /const mito = /.test(await fs.readFile(path.join(dir, first), "utf8"));
   })
   .catch(() => false);
-const usesDefinitions = !mythFileHasFields && definitionFiles.length > 0;
+// Y una quinta, la del bloque mestizo y mixto: el inventario heredado vive en
+// `catalog.mjs` como filas posicionales —[slug, título, resumen]— que no pueden
+// llevar los cinco campos, así que lo reescrito va a un mapa aparte,
+// `reescrituras.mjs`, que `records.mjs` fusiona por slug. Tiene una ventaja
+// sobre las otras cuatro: se ve de un vistazo qué fichas del ciclo ya se
+// rehicieron y cuáles siguen cayendo en el marco de grupo.
+const rewriteMapFile = path.join(root, "reescrituras.mjs");
+const usesRewriteMap = await fs
+  .access(rewriteMapFile)
+  .then(() => true)
+  .catch(() => false);
+const usesDefinitions = !usesRewriteMap && !mythFileHasFields && definitionFiles.length > 0;
 const modules = await loadModules(communitySlug, options);
 if (!modules) throw new Error(`Sin módulos para ${communitySlug}`);
 
@@ -143,6 +154,63 @@ function blockRange(src, slug) {
   const end = src.indexOf(cierre, at);
   if (end < 0) throw new Error(`${slug}: bloque sin cierre`);
   return [ultima.index, end + cierre.length];
+}
+
+if (usesRewriteMap) {
+  const urlKeys = await poolByUrl();
+  const src = await fs.readFile(rewriteMapFile, "utf8");
+  const { default: previas } = await import(pathToFileURL(rewriteMapFile).href);
+  const mapa = new Map(Object.entries(previas || {}));
+
+  let nuevas = 0;
+  for (const { slug, data } of plans) {
+    if (problems.some((p) => p.startsWith(`${slug}:`))) continue;
+    const entrada = { ...(mapa.get(slug) || {}) };
+    for (const f of TEXT_FIELDS) entrada[f] = String(data[f]).trim();
+    const corto = String(data.relato_corto || data.relatoCorto || "").trim();
+    if (corto) entrada.relatoCorto = corto;
+    else delete entrada.relatoCorto;
+    const agotadas = String(data.fuentes_agotadas || data.fuentesAgotadas || "").trim();
+    if (agotadas) entrada.fuentesAgotadas = agotadas;
+    if (Array.isArray(data.sourceKeys) && data.sourceKeys.length) entrada.sourceKeys = data.sourceKeys;
+    // Las comparativas retiradas salen de sus claves propias, si las tiene.
+    for (const url of data.fuentes_que_no_aplican || []) {
+      const key = urlKeys.get(normalizeUrl(url));
+      if (!key) { console.log(`  · ${slug}: ${url} no está en el pool`); continue; }
+      if (!Array.isArray(entrada.sourceKeys)) { console.log(`  · ${slug}: aún no tiene sourceKeys propias`); continue; }
+      entrada.sourceKeys = entrada.sourceKeys.filter((k) => (typeof k === "string" ? k : k.key) !== key);
+    }
+    mapa.set(slug, entrada);
+    nuevas += 1;
+  }
+
+  const literal = (t) => `\`${esc(t)}\``;
+  const cuerpo = [...mapa.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([slug, e]) => {
+      const lineas = [];
+      for (const f of TEXT_FIELDS) if (e[f]) lineas.push(`    ${f}: ${literal(e[f])},`);
+      if (e.relatoCorto) lineas.push(`    relatoCorto: ${JSON.stringify(e.relatoCorto)},`);
+      if (e.fuentesAgotadas) lineas.push(`    fuentesAgotadas: ${JSON.stringify(e.fuentesAgotadas)},`);
+      if (e.excerpt) lineas.push(`    excerpt: ${JSON.stringify(e.excerpt)},`);
+      if (Array.isArray(e.sourceKeys)) {
+        lineas.push(`    sourceKeys: ${JSON.stringify(e.sourceKeys, null, 6).replace(/\n/g, "\n    ")},`);
+      }
+      return `  ${JSON.stringify(slug)}: {\n${lineas.join("\n")}\n  },`;
+    })
+    .join("\n");
+
+  const abre = src.indexOf("= {");
+  const cierra = src.lastIndexOf("};");
+  if (abre < 0 || cierra < 0) throw new Error(`${rewriteMapFile}: no encuentro el objeto exportado`);
+  const salida = `${src.slice(0, abre + 3)}\n${cuerpo}\n${src.slice(cierra)}`;
+  await fs.writeFile(rewriteMapFile, salida, "utf8");
+  console.log(
+    `Escritos ${nuevas} mitos en ${path.basename(rewriteMapFile)} (${mapa.size} de ${modules.size} del ciclo ya rehechos).` +
+      ` Siguiente: node --test → aplicar-texto.mjs`,
+  );
+  await comprobarDespues(nuevas);
+  process.exit(0);
 }
 
 if (usesDefinitions) {

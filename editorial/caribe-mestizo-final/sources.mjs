@@ -400,10 +400,36 @@ export function sourceKeysForCaribeMestizoFinalGroup(group) {
   return [...keys];
 }
 
-export function pickCaribeMestizoFinalSources(group) {
-  return sourceKeysForCaribeMestizoFinalGroup(group).map((key) => {
+/**
+ * Resuelve una lista de fuentes.
+ *
+ * Admite dos formas, y la segunda es la que importa: además del nombre de un
+ * grupo —el reparto en bloque heredado, ocho fuentes iguales para las treinta y
+ * tres fichas de Martínez— acepta una lista propia por mito, donde cada entrada
+ * puede ser una clave del pool o un `{ key, summary, limitation }`.
+ *
+ * La ficha bibliográfica la fija el pool; lo que cambia por mito es qué dice
+ * esa obra SOBRE ESE RELATO. Villa Posse aparecerá en decenas de fichas: bien.
+ * Lo que no puede repetirse es el resumen.
+ */
+export function pickCaribeMestizoFinalSources(groupOrKeys) {
+  const lista = Array.isArray(groupOrKeys)
+    ? groupOrKeys
+    : sourceKeysForCaribeMestizoFinalGroup(groupOrKeys);
+  return lista.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = caribeMestizoFinalSources[key];
-    if (!selected) throw new Error(`Fuente desconocida: ${key}.`);
-    return selected;
+    if (!selected) {
+      throw new Error(
+        `Fuente desconocida: ${typeof entrada === "string" ? entrada : JSON.stringify(entrada)}.`,
+      );
+    }
+    if (typeof entrada === "string") return selected;
+    // El resumen y el límite propios del mito pisan los del pool.
+    return {
+      ...selected,
+      ...(entrada.summary ? { summary: entrada.summary } : {}),
+      ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
   });
 }
