@@ -392,9 +392,19 @@ ninguna es el primario real.**
 > `rambao` es **239-245**, no 239-246 (la 246 es la lámina de Tío Conejo);
 > `lo-justo-y-lo-legal` empieza y acaba **dentro de la p. 264**, no 264-265; y
 > `el-burro-y-la-policia` está **entero en la p. 258**, no 258-259 (la 259 abre
-> con «El paisa y el gringo»). Además, la palabra «apuesta» en
+> con «El paisa y el gringo»). Tres más sobran una página:
+> `las-orejas-del-tio-conejo` cabe entera en la **259**,
+> `conejo-y-los-hijos-de-tia-tigra` en la **263**, y `tio-conejo-zapatero` va de
+> **261 a 262**.
+>
+> Y dos datos de las notas son falsos. La palabra «apuesta» en
 > `quien-manda-mas-en-casa` **la puso este informe**: la fuente dice
-> «discusión», y no hay apuesta en el cuento. Manda el acta.
+> «discusión», y no hay apuesta en el cuento. En `tio-conejo-y-los-platanos`
+> Conejo se hace el muerto **tres veces, no dos**: el dos que sí está en la
+> fuente son los dos conejos que Tigre cree haber dejado atrás. Y las dos
+> impresiones de `tio-sapo-y-cangrejo` **no son idénticas**: la p. 251 titula
+> «Tio Sapo» sin tilde y la p. 266 «Tío», con el cuerpo palabra por palabra
+> igual. Manda el acta.
 
 
 

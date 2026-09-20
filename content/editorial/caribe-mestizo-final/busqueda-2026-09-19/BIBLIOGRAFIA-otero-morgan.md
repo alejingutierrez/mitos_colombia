@@ -385,21 +385,55 @@ y a Louis-Michel Aury, muerto en San Andrés en agosto de 1821.
 la nota **no reproduce la leyenda**, sólo la nombra. Es prensa reciente: entra por el dato de
 1947 y por los nombres, no por el relato.
 
-**4. Radio Nacional de Colombia, San Andrés. «La leyenda del pirata Morgan en la tradición oral
-de San Andrés».** 2018.
+**4. Banco de la República, Centro de Memorias Orales. Subcolección «La imagen histórica de los
+sanandresanos en el Mar Caribe colombiano»: audios (MP3) y transcripciones (PDF) de las
+entrevistas de Claudia Leipold, 1994-1995.**
+Iris Abrahams: `https://babel.banrepcultural.org/digital/collection/p17054coll11/id/92`
+Walwin Peterson: `.../p17054coll11/id/94` · Delwin May: `.../id/95` · Thomas Livingston: `.../id/96`
+Orly Livingston: `.../id/97` · Lolia Pomare: `.../id/98` y `.../id/91` · Cecilia Francis Hall: `.../id/100`
+Álvaro Archbold: `.../id/93` · Miss Bowie y rev. George M. May: `.../id/99`
+✅ **texto** (se abrieron la ficha maestra de Leipold y el ítem de Iris Abrahams con navegador;
+la página es un CONTENTdm que tarda y no responde a fetch automático). No son referencias
+secundarias: **es el archivo sonoro y transcrito de la tradición oral raizal**, catalogado uno a
+uno con biografía del hablante. La ficha de Iris Abrahams (1900-1999), pintora de paisaje,
+maestra de español, entrevistada el **20 de octubre de 1994 en San Luis**, la describe «en una
+silla de ruedas» y «siempre vestida de blanco». Idioma: inglés. Tipo: transcripción + audio.
+*Limitación:* las entrevistas versan sobre la historia y la identidad isleñas en general. Morgan
+aparece dentro de ellas, no como tema. Derechos reservados del autor: hay que citar, no
+reproducir.
+
+**5. Jay, Vilma. «La leyenda del pirata Morgan presente en la tradición oral de San Andrés».**
+Radio Nacional de Colombia, San Andrés, **14 de agosto de 2018**.
 `https://www.radionacional.co/cultura/la-leyenda-del-pirata-morgan-presente-en-la-tradicion-oral-de-san-andres`
-✅ **se abre** (HTTP 200, 88 KB). Ya está en el módulo.
-*Limitación:* la ficha heredada admite que «reproduce la tradición y algunos datos turísticos».
-Mantener con esa limitación o sustituir por la nota 3, que sí nombra informantes.
+✅ **texto** — se abre y se lee. Ya está en el módulo, pero sin firma ni fecha. Datos concretos:
+la cueva está a **8 kilómetros por la vía circunvalar**, tiene **120 metros de profundidad** y
+agua dulce; la tradición sitúa el saqueo de Panamá y Portobelo en 1668 y hace refugiarse a
+Morgan en San Andrés durante un huracán con cinco galeones cargados de oro, perlas, plata y
+monedas. Cita a **Jimmy Gordon**: «El mito sigue vivo, la leyenda sigue viva, la narración oral
+sigue viva». Y es explícita en lo que importa: la transmisión lleva **cinco generaciones**,
+quienes dicen haber entrado encontraron «una isla virgen» sin tesoro, y no existe registro
+fotográfico.
+*Limitación:* nombra la leyenda y la circulación, **no la narra**. Sus cifras sobre los galeones
+no tienen fuente.
 
 ### Escalón 2 — el territorio y la búsqueda documentada
 
-**5. República de Colombia. Decreto 2571 de 1957.** SUIN-Juriscol.
+**6. República de Colombia. Decreto 2571 de 1957 (19 de diciembre).** SUIN-Juriscol.
 `https://www.suin-juriscol.gov.co/viewDocument.asp?id=1468761`
-✅ **se abre** (HTTP 200). Ya está en el módulo como prueba de una partida estatal para buscar
-el tesoro en Providencia. Ver **ANEXO** para la lectura literal del articulado.
+❌ **no legible hoy** — la URL responde HTTP 200 pero sirve sólo el armazón de una aplicación
+Angular («GovcoFrontendBase») y, tras cargar, **redirige a la portada del Ministerio de Justicia**.
+Se probó con `curl`, con fetch automático y con navegador real, esperando hasta nueve segundos;
+también `?ruta=Decretos/`, `funcionpublica.gov.co/eva/gestornormativo/norma.php?i=1468761`
+(«esta página no está disponible») y la variante `legislacion/decreto2571_1957.html`. El
+contenido que circula en los índices de búsqueda —6.000 pesos de auxilio a la Intendencia de San
+Andrés y Providencia «para gastos de los trabajos que se adelantan en la isla de Providencia en
+busca del tesoro de Morgan», expedido en Bogotá el 19 de diciembre de 1957— **no se pudo
+verificar abriendo el documento**.
+*Limitación:* hasta que se abra, es una cita de segunda mano. **Declararlo así o retirarlo.**
+Si se conserva, el `limitation` debe decir que la norma prueba que hubo búsqueda, no que hubo
+tesoro.
 
-**6. El Tiempo. «Islas de leyendas y cuentos del mar».** Archivo, 1996.
+**7. El Tiempo. «Islas de leyendas y cuentos del mar».** Archivo, 1996.
 `https://www.eltiempo.com/archivo/documento/MAM-301752`
 ✅ **texto** — se abre y se leyó el cuerpo. **El módulo lo cita con un título que no existe**
 («Tras el tesoro de Morgan»). Es un reportaje de turismo —precios de alquiler de moto, hoteles,
@@ -413,7 +447,7 @@ prensa reciente que sólo reempaqueta lo que ya circula no entra». **Sacarlo de
 del tesoro.** Si el caballo sin cabeza entra alguna vez en `Similitudes`, entra ahí y con esta
 limitación declarada.
 
-**7. Banco de la República. «Providencia y Santa Catalina», *Credencial Historia* n.º 364.**
+**8. Banco de la República. «Providencia y Santa Catalina», *Credencial Historia* n.º 364.**
 `https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-364/providencia-y-santa-catalina`
 ⛔ **bloqueada a fetch automático** (Radware). Ya está en el módulo; no se pudo releer en esta
 pasada para escribir un `summary` propio. **No usar su resumen heredado sin abrirla con
@@ -675,6 +709,10 @@ No son criterio editorial, son errores de dato, pero cada una toca fichas de est
    el `summary` heredado: trae las tres expediciones al tesoro de 1877, 1879 y 1881.
 3. **`morganTiempo` tiene mal el título y el contenido.** MAM-301752 se titula «Islas de leyendas
    y cuentos del mar» y es un reportaje de turismo; no documenta ninguna búsqueda del tesoro.
+4. **`morganDecree` ya no se puede abrir.** SUIN-Juriscol migró a una aplicación que devuelve la
+   portada del Ministerio de Justicia en lugar del decreto. Es, además, la única fuente del módulo
+   que sostenía que hubo búsqueda estatal. Loboguerrero 1954 la sustituye con ventaja: da **tres**
+   expediciones, con nombre y año.
 
 - **Opción A — corregir los tres registros en `sources.mjs` en el lote de reescritura**, con los
   datos de este documento, y sustituir `villaFull` por una URL viva o retirarla del grupo `otero`
@@ -710,7 +748,7 @@ el diagnóstico.
 | `el-castellano-de-san-juan` | *(no hay narrador oral)*. Otero cita como autoridad al **alférez Joseph Nicolás de la Rosa**, *Floresta de la Santa Iglesia Cathedral de Santa Marta*, libro I, cap. VIII; al cronista **fray Alonso de Zamora**; y una tradición conservada por **don Antonio Barranco Manjarrés, deán de Santa Marta** | Santa Marta | siglo XVIII (la Floresta es de 1739) | Otero D'Costa, «Leyendas», Rev. UPB, pp. 61 y 63 |
 | `genus-irritable-vatum` | *(no hay narrador)*. Otero cita al **Padre Simón** y al **R. P. Antonio Julián** | provincia de Santa Marta | siglos XVII-XVIII | ibíd., pp. 67-68 |
 | `el-tesoro-de-morgan` | **Miss Gal Gal** (nacida en 1910), bailarina y maestra | San Andrés | **17 de septiembre de 1994** | Leipold 2002, apéndice p. 209 |
-| `el-tesoro-de-morgan` | **Iris Abraham**, pintora | San Andrés | **20 de octubre de 1994** | Leipold 2002, apéndice p. 202 |
+| `el-tesoro-de-morgan` | **Iris Abrahams (1900-1999)**, pintora de paisaje y una de las primeras maestras de español de la isla; entrevistada en silla de ruedas en su bungalow | **San Luis, San Andrés** | **20 de octubre de 1994** | Leipold 2002, apéndice p. 202; ficha y audio en el Centro de Memorias Orales del Banco de la República, `p17054coll11/id/92` |
 | `el-tesoro-de-morgan` | **Thomas Livingston**, ex navegante, bisnieto del pastor Philip B. Livingston; hoy con empresa de salvamento de tesoros de mar | San Andrés | **7 de octubre de 1994** | Leipold 2002, apéndice p. 247 |
 | `el-tesoro-de-morgan` | **Walwin Peterson** (30/07/1994, p. 252), **Orly Livingston** (11/12/1994, p. 258), **Dulph Mitchell** (07/01/1995, p. 269), **Delwin May** (29/10/1994, p. 272), **Álvaro Archbold Núñez** (07/03/1995, p. 277), **Lolia Pomaire** (14/02/1995, p. 222), **Frank Corpus** (08/08/1994, p. 289), **Cecilia Francis** (27/09/1994, p. 215), **Mrs. Bowie** (29/11/1994, p. 212), **Octavia Steel** (21/09/1994, p. 207), **Rev. Dr. George May** (30/01/1995, p. 292), **Dra. Rosa Suárez** (13/01/1995, p. 271) | San Andrés | 1994-1995 | Leipold 2002, índice del apéndice, pp. 202-292 |
 | `el-tesoro-de-morgan` | **Jimmy «Bull» Gordon**, escritor raizal, miembro de la Academia de Historia del Archipiélago, administrador de la Cueva de Morgan; y **Salomón Gordon**, que abrió la cueva al público en **1947** | San Andrés (La Loma / West View) | entrevista publicada el **7 de septiembre de 2018** | Barraza Escobar, Radio Nacional |
@@ -742,6 +780,12 @@ como la lista de arriba.
   Sierra Nevada): protegido con Anubis (prueba de trabajo). No se cruzó.
 - **`scielo.org.co`** rechazó la conexión por HTTPS; responde por HTTP. Afecta a «El legado de
   Enrique Buenaventura», *Revista de Estudios Sociales*, 2004.
+- **`suin-juriscol.gov.co`**: el enlace profundo a una norma ya no devuelve la norma. El Decreto
+  2571 de 1957 —la única prueba documental de búsqueda estatal que tenía el módulo— es hoy
+  ilegible por esa vía. Habría que buscarlo en el *Diario Oficial* de diciembre de 1957.
+- El PDF de **«El Archipiélago de San Andrés (las Islas de San Andrés y Providencia): noticia
+  geográfica»** (Banrep Babel, `p17054coll10/id/2288`) cortó la descarga dos veces a los ~3 MB.
+  Queda como pendiente técnico, no como fuente descartada.
 
 ### Buscado y no encontrado
 
