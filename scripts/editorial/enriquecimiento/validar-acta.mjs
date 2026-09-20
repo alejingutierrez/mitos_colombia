@@ -20,7 +20,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
-import { parseArgs, words, fuenteVetada, medirProsa, WORD_RANGES, today } from "./lib.mjs";
+import { parseArgs, words, fuenteVetada, medirProsa, WORD_RANGES, MITO_MINIMO_CORTO, today } from "./lib.mjs";
 
 const options = parseArgs(process.argv.slice(2));
 const ciclo = String(options.ciclo || options.modulos || "").trim();
@@ -261,6 +261,14 @@ function cotejarRelato(acta, relato) {
     /\b(?:la|su) (?:descripci[oó]n|versi[oó]n) heredada\b/i,
     /\bla reescritura\b/i,
     /\bcomprobado contra el texto\b/i,
+    // Jerga de tanda de trabajo: «la única del lote», «las dos de las trece».
+    // Son unidades nuestras, no del libro. Un «ciclo» CON complemento sí es una
+    // unidad folclórica que el lector entiende —«el ciclo del conejo burlador»,
+    // «el ciclo de Tío Conejo»— y no se marca; lo que se marca es el ciclo a
+    // secas, que sólo existe en nuestra contabilidad.
+    /\beste ciclo\b/i,
+    /\b(?:el|del|en el) (?:lote|ciclo)\b(?!\s+(?:de|del)\s)/i,
+    /\b(?:de las|las) (?:trece|catorce|quince|treinta y dos)\b/i,
   ];
   for (const campo of ["mito", "historia", "versiones", "similitudes", "leccion"]) {
     for (const patron of PROYECTO) {
@@ -280,11 +288,15 @@ function cotejarRelato(acta, relato) {
   if (m) bloqueos.push(`el relato menciona el aparato: «${m[0]}». Eso vive en «historia», no en la página del mito`);
 
   // Rangos y prosa.
-  for (const [campo, rango] of Object.entries(WORD_RANGES)) {
+  // `WORD_RANGES` guarda arrays [min, max], no objetos. Leerlos como
+  // `rango.min` daba `undefined`, y comparar contra `undefined` siempre es
+  // falso: la comprobación de extensión no disparaba nunca y el gate dejaba
+  // pasar relatos de 289 palabras y `historia` por debajo del piso.
+  for (const [campo, [minBase, max]] of Object.entries(WORD_RANGES)) {
     const n = words(relato[campo]);
     if (!n) { bloqueos.push(`campo «${campo}» vacío`); continue; }
-    const min = relato.relato_corto && campo === "mito" ? 90 : rango.min;
-    if (n < min || n > rango.max) avisos.push(`«${campo}» tiene ${n} palabras (contrato ${min}-${rango.max})`);
+    const min = (relato.relato_corto || relato.relatoCorto) && campo === "mito" ? MITO_MINIMO_CORTO : minBase;
+    if (n < min || n > max) bloqueos.push(`«${campo}» tiene ${n} palabras y el contrato pide ${min}-${max}`);
   }
   const prosa = medirProsa(relato.mito);
   for (const f of prosa.fallos) bloqueos.push(`prosa: ${f}`);

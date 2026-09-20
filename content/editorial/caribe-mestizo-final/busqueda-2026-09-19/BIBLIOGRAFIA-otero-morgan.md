@@ -250,14 +250,28 @@ pertenecientes a los sectores populares». Explica por qué a Otero le interesa 
 
 # FICHA · `tio-conejo-zapatero`
 
-### El veredicto sobre la atribución
+> **CORRECCIÓN DEL 2026-09-20.** Este apartado se escribió buscando el relato por el lado de
+> Buenaventura, y por ese lado la ficha parecía no tener escalón 1. **Lo tiene, y por otro
+> lado.** El cuento está impreso en **Manuel Zapata Olivella, *Tradición oral y conducta en
+> Córdoba* (Incora 1972; 3.ª ed. Univalle 2021), pp. 261-262**, y su primera línea escribe el
+> lugar dentro del relato: «Para el Sábado de Gloria en Cotorra, se andaba preparando la gente
+> para festejarlo muy bien». **Cotorra no era una atribución del sitio: está en el texto**, y no
+> se retira. El primario de la ficha es Zapata, y el acta ya está escrita con esa procedencia.
+> Todo lo que este apartado documenta sobre la pieza de 1958 **sigue valiendo y pasa a
+> `versiones` como recepción posterior**, que es su sitio.
+>
+> Texto primario en el repo:
+> `content/editorial/caribe-mestizo-final/primarias/zapata-olivella-1972-cuento-y-leyenda.txt`
 
-**La atribución a Enrique Buenaventura es correcta.** *Tío Conejo zapatero* es una obra real
-de 1958. Lo que no se sostiene es la localización heredada en Cotorra (Córdoba): la única
-fuente académica que la data la describe como **adaptación de tradición oral de la costa
-Pacífica**, y la sitúa en una serie de teatro infantil, no en el repertorio caribeño.
+### El veredicto sobre la atribución teatral
 
-### Escalón 1
+**La atribución a Enrique Buenaventura es correcta como adaptación.** *Tío Conejo zapatero* es
+una obra real de 1958. Lo que no se sostiene es que sea el registro del relato: es teatro de
+autor, y la única fuente académica que la data la describe como **adaptación de tradición oral
+de la costa Pacífica**, dentro de una serie de teatro infantil. Esa adscripción pacífica es de
+la adaptación, no del cuento cordobés que Zapata recogió.
+
+### Recepción posterior (va a `versiones`, no a escalón 1)
 
 **1. Durán Charria, Jesús Mauricio. *Consolidación y autonomía del campo teatral colombiano:
 la propuesta de Enrique Buenaventura, 1950-1980*.** Tesis de Maestría en Historia, Universidad
@@ -330,10 +344,10 @@ Caribbean*.** Indiana University Press, 2017. `https://iupress.org/9780253031174
 compara la cadena de persecución del conejo caribeño con la del conejo pacífico.
 *Limitación:* ficha editorial, no texto. Y no contiene esta pieza.
 
-> **Pendiente:** el texto publicado de *Tío Conejo zapatero* (¿se editó?), el catálogo del TEC,
-> y un registro folclórico del cuento del conejo zapatero con narrador y lugar. Sin eso, **esta
-> ficha no tiene escalón 1 propio**: tiene autoría verificada de una adaptación cuya fuente
-> nadie ha publicado. Ver **DECISIÓN 2** y **LO QUE NO EXISTE**.
+> **Pendiente:** el texto publicado de *Tío Conejo zapatero* (¿se editó?) y el catálogo del TEC.
+> Ya **no** es pendiente «un registro folclórico del cuento con narrador y lugar»: es Zapata
+> Olivella 1972, pp. 261-262. Lo que falta es la edición de la pieza teatral, para que la entrada
+> de `versiones` se cite por su texto y no por la tesis que la menciona.
 
 ---
 
@@ -464,7 +478,65 @@ prensa reciente que sólo reempaqueta lo que ya circula no entra». **Sacarlo de
 del tesoro.** Si el caballo sin cabeza entra alguna vez en `Similitudes`, entra ahí y con esta
 limitación declarada.
 
-**8. Banco de la República. «Providencia y Santa Catalina», *Credencial Historia* n.º 364.**
+**8. Exquemelin, Alexandre Olivier. *The Buccaneers of America* / *Piratas de la América*.**
+Original neerlandés: *De Americaensche Zee-Roovers*, Ámsterdam, Jan ten Hoorn, 1678.
+Ed. inglesa: `https://www.gutenberg.org/cache/epub/26690/pg26690.txt`
+Facsímil de la 1.ª neerlandesa (John Carter Brown Library): `https://archive.org/details/deamericaenschez00exqu`
+Trad. española de Alonso de Buena-Maison, Colonia Agripina, 1681: `https://archive.org/details/piratasdelaameri00exqu`
+✅ **texto** — descargado y comprobado pasaje por pasaje. **Es la fuente que la leyenda invoca
+y la que la desmiente.** El **capítulo XV, p. 179**, se titula «Captain Morgan leaves Hispaniola,
+and goes to St. Catherine's, which he takes»; el desembarco es «in a bay called Aguade Grande»;
+el castillo principal es Santa Teresa; y al día siguiente cuentan los prisioneros: «four hundred
+and fifty-nine persons, men, women, and children». El **capítulo XVI, p. 187**, saca de allí
+cuatrocientos hombres hacia Chagre. En la edición española de 1681 el pasaje abre el **capítulo
+III, p. 235**, y la isla se escribe «Sancta Cathalina» —por eso no aparece si se busca
+«Catalina»—. Lo decisivo para la ficha: Morgan **vacía** Santa Catalina y reparte el botín de
+Panamá **en Chagre** antes de escabullirse a Jamaica. No hay entierro, no hay mapa, no hay isla.
+*Limitación:* la inglesa amplifica mucho respecto del neerlandés; el OCR de la gótica de 1678 es
+malo y sólo sirve para el facsímil; la española de 1681 trae la ese larga y hay que transcribir a
+mano.
+
+**9. Steele Mitchell, Andrés. «Fuerte Warwick».** Enciclopedia del Banco de la República, Centro
+Cultural del Banco de la República de San Andrés, 2020.
+`https://enciclopedia.banrepcultural.org/index.php?title=Fuerte_Warwick`
+✅ **texto** (sólo con navegador; a `curl` y a fetch automático devuelve el CAPTCHA de Radware).
+Historia del fuerte que la leyenda usa de decorado: colonos ingleses en 1629 con la nave *Sea
+Flower*; en 1630 el ingeniero **Samuel Axe** levanta la primera estructura en la ladera oriental
+de Santa Catalina; el nombre viene de **Robert Rich, segundo conde de Warwick**. En 1641 lo
+reconquista **Francisco Díaz Pimienta** y lo rebautiza Fuerte de la Cortadura de San Jerónimo;
+después será **Fuerte La Libertad, Fuerte Aury y Fuerte Morgan**. Declarado Monumento Nacional
+por la Resolución 0788 del 31 de julio de 1998. Enlaza el dibujo de **Perú de Lacroix** en
+`babel.banrepcultural.org/cdm/ref/collection/p17054coll13/id/708`.
+*Limitación, y es importante:* la entrada dice que el complejo español fue destruido «durante la
+retoma inglesa del año 1666 dirigida por […] Sir Henry Morgan». **Eso es impreciso**: en 1666
+quien mandaba era Edward Mansvelt y Morgan iba de vicealmirante, según Exquemelin. No copiar esa
+frase. Y **no menciona ningún tesoro**.
+
+**10. Archbold Núñez, Álvaro. «El soporte documental de la historia del Archipiélago de San
+Andrés y Providencia».** *Cuadernos del Caribe*, Universidad Nacional de Colombia sede Caribe,
+2007, pp. 67-85.
+Ficha: `https://revistas.unal.edu.co/index.php/ccaribe/article/view/41698`
+PDF: `https://revistas.unal.edu.co/index.php/ccaribe/article/download/41698/43411`
+✅ **texto** — PDF de 20 páginas, descargado y leído. Inventario archivístico de la historia
+insular hecho por un abogado y político isleño. Sitúa el periodo —«Esta es la época de piratas y
+corsarios conocidos como Henry Morgan y Edward Mannsveldt»— y, sobre todo, **dice dónde está lo
+que falta**: el Centro de Documentación del Banco de la República en San Andrés guarda el
+«Informe del reconocimiento técnico-histórico del Fuerte de La Libertad en la Isla de Santa
+Catalina, 1986», el Newton sobre los puritanos, **Parsons, *San Andrés y Providencia. Una
+geografía histórica…*, El Áncora Editores, 1985**, y **Rowland, Donald, *Spanish Occupation of
+the Island of Old Providence, or Santa Catalina 1641-1670***.
+*Limitación:* no habla del tesoro ni de las búsquedas. Es la llave del archivo, no el archivo.
+
+**11. Stanislawski, Dan. «San Andrés y Providencia (Islas)».** Trad. Marco F. Archbold Britton.
+*Boletín de la Sociedad Geográfica de Colombia*, n.º 60, vol. XVI, cuarto trimestre de 1958.
+`https://www.sogeocol.edu.co/documentos/060_san_andr_y_prov.pdf`
+✅ **texto** — PDF descargado y extraído. Menciona el contrabando y la piratería como norma
+insular y corsarios daneses hacia 1629.
+*Limitación, que aquí es el dato:* **no menciona a Morgan ni ningún tesoro**, y es de 1958, el año
+siguiente al decreto que supuestamente financió la búsqueda. La geografía oficial de ese momento
+no da la noticia por buena.
+
+**12. Banco de la República. «Providencia y Santa Catalina», *Credencial Historia* n.º 364.**
 `https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-364/providencia-y-santa-catalina`
 ⛔ **bloqueada a fetch automático** (Radware). Ya está en el módulo; no se pudo releer en esta
 pasada para escribir un `summary` propio. **No usar su resumen heredado sin abrirla con
@@ -641,7 +713,19 @@ posición en la controversia, no como prueba**, y sólo hasta que se abra el vis
 
 # DECISIONES
 
-Cada una con tres opciones concretas. Nada se aplica sin respuesta del director.
+Cada una con tres opciones concretas. **Estado al 2026-09-20**, después de la respuesta del
+director:
+
+| # | asunto | estado |
+|---|---|---|
+| 1 | Otero D'Costa en un ciclo caribe | **resuelta, opción A**: el subciclo no se renombra y cada `historia` escribe la procedencia caribeña del autor, con BHA-166 y Preciado |
+| 2 | la atribución de `tio-conejo-zapatero` | **resuelta, y la decisión partía de un error mío**: el primario es Zapata Olivella 1972, pp. 261-262; Cotorra está en la primera línea del relato y no se retira; Buenaventura pasa a `versiones` |
+| 3 | qué línea cuenta el `mito` de `francisco-el-hombre` | **resuelta, opción A**: el `mito` cuenta la victoria canónica y `versiones` abre con Brugés Carmona 1940 y el pacto de Pedro Nolasco Padilla. Las dos líneas están ancladas en el acta |
+| 4 | tres registros malos en `sources.mjs` | **resuelta, opción C ampliada**: se corrigen los tres y el cotejo de URLs se hace para el ciclo entero antes de publicar (paso 9 del spec) |
+| 5 | los slugs y la grafía impresa | **resuelta, opción A**: los slugs se quedan; la grafía correcta va al título visible y a `historia`, y la transcripción va a `fuera` |
+| 6 | `el-tesoro-de-morgan` no es mestizo | **nueva, abierta** (ver abajo) |
+
+Lo que sigue es el razonamiento con el que se tomaron, conservado porque las actas lo citan.
 
 ## DECISIÓN 1 · Otero D'Costa en un ciclo caribe: resuelta a favor, pero hay que escribirla
 
@@ -665,7 +749,16 @@ está bien colocado: es si el módulo lo dice.
 
 **Recomendación:** A, y B si se va a tocar el catálogo por otra razón.
 
-## DECISIÓN 2 · `tio-conejo-zapatero`: la autoría es buena, la procedencia no
+## DECISIÓN 2 · `tio-conejo-zapatero` — **RESUELTA, y mi diagnóstico estaba mal**
+
+> El relato **sí** tenía escalón 1 y yo no lo encontré porque lo busqué por el autor equivocado.
+> Está en Zapata Olivella, *Tradición oral y conducta en Córdoba*, pp. 261-262, y Cotorra es la
+> primera palabra del relato, no una atribución del sitio. Ninguna de las tres opciones de abajo
+> se aplicó: el primario es Zapata y Buenaventura baja a `versiones`. Se conserva el
+> razonamiento porque lo que dice sobre la pieza de 1958 sigue siendo válido y es justo lo que
+> esa capa de `versiones` necesita.
+
+### Razonamiento original (superado)
 
 **El hecho:** *Tío Conejo zapatero* sí existe, es de Enrique Buenaventura y es de 1958. Pero la
 única fuente académica que la data la clasifica como **adaptación de tradición oral de la costa
@@ -710,6 +803,27 @@ fechas de nacimiento y muerte, y una tumba en Machobayo que el PES del vallenato
 
 **Recomendación:** A. El corpus publica leyendas, no historiografía; pero `versiones` tiene aquí
 material de primera y hay que usarlo entero.
+
+## DECISIÓN 6 · `el-tesoro-de-morgan` está en el cajón equivocado (nueva, sale del acta)
+
+**El hecho:** el propio módulo describe la pieza como «leyenda raizal e isleña», y todo lo
+verificado lo confirma: los informantes son raizales y hablan en inglés isleño; la transmisión
+lleva, según Radio Nacional, cinco generaciones; su custodio es miembro de la Academia de
+Historia del Archipiélago; y el archivo está catalogado en el Centro de Memorias Orales del
+Banco de la República. **El pueblo raizal no es un cajón administrativo**: tiene lengua propia,
+territorio y reconocimiento legal. Llamarlo «mestizo» es el error que el spec advierte que se va
+a repetir.
+
+- **Opción A — mover la ficha a una comunidad `raizal`.** Es lo que dice la evidencia. Exige que
+  el catálogo tenga esa comunidad, y abre un ciclo nuevo por una sola ficha.
+- **Opción B — dejarla en `caribe-mestizo-final` y declararlo en `historia`.** La ficha dice, con
+  fuente, que el relato es raizal y de dónde viene el registro; el cajón se queda como lo que es,
+  una etiqueta administrativa. Es lo barato y no miente, siempre que la página lo diga.
+- **Opción C — dejarla y no decir nada.** Es lo que hay hoy. No se recomienda: publica como
+  mestizo un relato que tres fuentes distintas llaman raizal.
+
+**Recomendación:** B si no hay comunidad raizal en el catálogo; A si la hay o puede abrirse. El
+acta va propuesta como «mover a raizal» para que la decisión quede a la vista del director.
 
 ## DECISIÓN 4 · Tres URLs del módulo que no aguantan una lectura
 
