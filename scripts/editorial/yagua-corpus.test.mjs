@@ -77,7 +77,11 @@ test("corrige la ficha sintética y delimita Chimbilaco como relato contemporán
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   assert.equal(
     bySlug.get("yagua").title,
-    "Ndanu, Mêna y el árbol del agua",
+    // El título deja de fijar una grafía. «Ndanu» y «Mêna» vienen del material
+    // educativo de ACITAM, CODEBA y UNICEF; Chaumeil escribe ndano y mena, y
+    // Powlison los llama Hermano Mayor y Placenta. Las tres formas conviven en
+    // Versiones, que es donde se discuten, y no en la portada de la ficha.
+    "Los mellizos y el árbol del agua",
   );
   assert.doesNotMatch(
     records.map(({ mito }) => mito).join("\n"),

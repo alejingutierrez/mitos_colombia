@@ -44,7 +44,7 @@ const records = [
           "Estudia la vitalidad de la lengua, no la narrativa; es un trabajo de grado y no publica relatos.",
       },
     ],
-    title: "Ndanu, Mêna y el árbol del agua",
+    title: "Los mellizos y el árbol del agua",
     excerpt:
       "Dos mellizos nacen después de una matanza, reúnen a los clanes y derriban el árbol que guardaba el agua del mundo.",
     tags: ["hermanos", "agua", "origen", "transformación"],
@@ -88,13 +88,13 @@ Lo que identifica a esta versión y no se puede intercambiar es la abuela que se
       "una abuela encuentra junto a un pequeño pozo a dos bebés envueltos en hojas, uno nacido del vientre y otro de la placenta, mientras detrás quedan las formas humeantes de una casa destruida sin cuerpos ni violencia gráfica",
     researchNotes:
       "CORRECCIÓN INTEGRAL Y REUTILIZACIÓN DE URL: el slug yagua se conserva, pero el contenido sintético se reemplaza por el ciclo de los mellizos y la lupuna. La secuencia combina solo episodios que Powlison y Chaumeil documentan como parte del mismo ciclo.",
-    seoTitle: "Ndanu, Mêna y el árbol del agua | Mito Yagua",
+    seoTitle: "Los mellizos y el árbol del agua | Mito Yagua",
     seoDescription:
       "Mito Yagua documentado sobre los mellizos Ndanu y Mêna, el origen de los clanes y la lupuna que se convierte en el río Amazonas.",
     focusKeywords: [
-      "Ndanu y Mêna",
-      "mito Yagua del árbol del agua",
       "mellizos Yagua",
+      "Los mellizos y el árbol del agua",
+      "mito Yagua del árbol del agua",
       "lupuna y río Amazonas",
       "mitología Ñihamwo",
     ],
