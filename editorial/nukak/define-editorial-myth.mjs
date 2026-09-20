@@ -1,7 +1,10 @@
 import { buildNukakEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickNukakSources } from "./sources.mjs";
 
-const sourceKeys = [
+// Reparto por defecto, para cuando una ficha no declara el suyo. Era la lista
+// que recibían todas por igual, con `sourceKeys` declarado en el módulo y el
+// define ignorándolo: la constante de arriba tapaba lo que traía la ficha.
+const repartoPorDefecto = [
   "mahecha2024",
   "franky2011",
   "gutierrez2016",
@@ -17,7 +20,9 @@ export function defineNukakMyth({
   focusKeywords,
   ...input
 }) {
-  const selectedSources = pickNukakSources(...sourceKeys);
+  const selectedSources = pickNukakSources(
+    ...(input.sourceKeys?.length ? input.sourceKeys : repartoPorDefecto),
+  );
   // Antes exigía exactamente 7: el reparto en bloque escrito como
   // aserción. Lo que importa es que haya fuentes suficientes.
   if (selectedSources.length < 5) {

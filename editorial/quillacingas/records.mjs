@@ -61,7 +61,46 @@ Dentro del mismo territorio, el origen de La Corota y el Rabo de Casapamba retom
       "Refugio del Sol",
     ],
     tags: ["agua", "laguna", "origen", "transformación"],
-    sourceKeys: [...commonSources, "cualanquizanFlacso"],
+    sourceKeys: [
+      {
+        key: "mitosIdentidad2023",
+        summary:
+          "Transcribe las dos versiones que sostienen esta ficha: la del taita Carlos Erazo, con los siete pueblos, el peine de cacho, el pilche rebosado, la maldición al primer pueblo y el episodio completo del Bordoncillo y las tres canciones; y la del taita William Jojoa, con el destierro, los niños que dan el agua, los cuatro cerros y las siete ciudades sumergidas de las que solo asoman las iglesias.",
+        limitation:
+          "Es un trabajo de grado de licenciatura en lengua castellana, no una etnografía: nombra a los narradores pero no consigna vereda, edad ni fecha de las entrevistas. Su capítulo 6 resume ambas versiones amputando el episodio del Bordoncillo y omitiendo al Tábano entre los compadres llamados. Documenta relatos vivos de un cabildo constituido en 1999, no un corpus precolombino, y el propio trabajo señala la impronta católica del vocabulario de falta y castigo.",
+      },
+      {
+        key: "mitoEncano2009",
+        summary:
+          "Reúne siete versiones más de la formación de La Cocha recogidas en El Encano, cada una con narrador identificado: «La ciudad perdida» y «Los amancebados» de Nelcy Jojoa, «El encanto de la Laguna de La Cocha» de Hugo Bayardo Miramag Jojoa, «La ciudad encantada» de Clara Criollo, «La formación de La Cocha» de Rafael Jacanamijoy con el creador Ñamuy y los Mocoas, y dos versiones breves de estudiantes. Aporta además el tábano como insecto que pica y obliga a devolver el agua, y la lectura de Luis Manuel Montenegro sobre el recipiente que se vuelca y la gradación de la pareja censurada hasta el incesto.",
+        limitation:
+          "Las versiones fueron escritas por estudiantes de bachillerato a partir de lo que oyeron en casa, no transcritas directamente de los mayores; la propia tesis distingue a los estudiantes que pertenecen al cabildo de los que no, de modo que el corpus mezcla memoria indígena y memoria campesina de El Encano. La lectura de Montenegro se cita de trabajos inéditos de la Universidad de Nariño que no están disponibles.",
+      },
+      {
+        key: "memoriaCultural2011",
+        summary:
+          "Registra el marco de transmisión de estos relatos en la casa cabildo: la entrevista fechada del 15 de septiembre de 2011 a Milena Jacanamejoy, que nombra la conformación de la laguna y los amancebados entre los mitos que conoce, y la versión, tomada de Edilberto Hidalgo Meza, según la cual El Encano lo poblaron a finales del siglo XIX colonos de La Laguna, Cabrera, San Fernando y Pejendino Reyes.",
+        limitation:
+          "Es un trabajo de especialización en pedagogía de la creatividad, con foco en creación artística escolar, no una recopilación de mitos: no transcribe ninguna versión completa de la creación de la laguna. La versión de Hidalgo Meza que contradice el poblamiento quillacinga se cita de segunda mano y sin referencia de archivo.",
+      },
+      {
+        key: "salasVoltear2017",
+        summary:
+          "Fecha la constitución del cabildo que hoy narra este mito: documenta que el proceso de adscripción quillasinga en Pasto inició a finales de los noventa con el Resguardo Refugio del Sol en El Encano, el primero del valle de Atriz, y que antes de esa década la denominación la usaban cronistas y académicos, no los habitantes, que se identificaban por el gentilicio de su vereda.",
+        limitation:
+          "Su trabajo de campo es en Jenoy y Mocondino, no en El Encano: menciona Refugio del Sol como antecedente del proceso regional pero no estudia su corpus narrativo. Trata la reetnización contemporánea y no dice nada sobre la profundidad histórica del relato de la laguna.",
+      },
+      "jojoaBotinalaguna2022",
+      "justiciaGuia2019",
+      "hofmannNinos2016",
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Da el marco de pueblo en el que se inscribe esta laguna: distingue a los quillacingas de los pastos, registra la desaparición del etnónimo con el Decreto-ley 1421 de 1940 y la parcelación de 19 resguardos quillacingas entre 1943 y 1958, y consigna que en 1999 se reconoció la parcialidad indígena Refugio del Sol en El Encano.",
+        limitation:
+          "Es una ficha administrativa breve, construida sobre fuentes secundarias —sobre todo Claudia Leonor López (2000)— y con su trabajo de campo centrado en la comunidad de Jenoy, no en El Encano. No contiene ningún relato y el documento no lleva fecha de publicación: el año se infiere de las consultas que cita.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: en una planicie altoandina de El Encano, una mujer deja caer un pilche de cuya agua nace la Laguna de La Cocha; Tábano, Patascoy, Bordoncillo y Alcalde se levantan como montañas en capas planas, totora y niebla fría, sin Bartolomé, santo, báculo ni sabana de Túquerres, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:

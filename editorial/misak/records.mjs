@@ -66,7 +66,48 @@ La comparación sirve para medir la distancia. El agua que mata y el agua que da
       "laguna de Piendamó",
     ],
     tags: ["Pishimisak", "agua", "creación", "dualidad"],
-    sourceKeys: [...commonSources, "lagunaPiendamo", "ovidioDiluvio"],
+    sourceKeys: [
+      {
+        key: "hijosArcoiris",
+        summary:
+          "Texto base del relato. El capítulo «Una historia que nace del agua» da Nupisu como matriz y corazón del páramo, Pishimisak él-ella junto a Kallim, Kosrompoto nacido del agua, el derrumbe llamado pirran uno, «parir el agua», los niños chumbados que bajan encima del shau y el olor a sangre en la herida de la montaña. Trae además la lista nominal de mayores por vereda y la definición de Cruz Tunubalá, de Cacique: los pishau son los mismos misak.",
+        limitation:
+          "El PDF disponible en el archivo de Vasco es la segunda edición, de 2015, de modo que la paginación no corresponde a la primera de 1998. Es obra de un comité: salvo en los pasajes explícitamente atribuidos, no separa qué mayor dijo cada frase.",
+      },
+      "uribeGuambianos2001",
+      "vivasAntes2010",
+      "tunubalaSegundo2009",
+      {
+        key: "leyOrigenCric",
+        summary:
+          "Formulación contemporánea de la Ley de Origen: la conexión de los espíritus pi (agua) y nak (fuego, sol) hace nacer el køshømpøtø, que posa sus franjas sobre Nupisu y Ñimpi y transporta la semilla de la creación; del gran lodo pabø, salido de las entrañas del kørrak, brotan los numisak enchumbados, recogidos río abajo por pishimisak y kallim. Confirma piurek como nombre del origen.",
+        limitation:
+          "La formulación va en un recuadro final, marcado como «sección especial», dentro de un reportaje ambiental sobre truchicultura y jardines botánicos. No cita narradores ni fuente escrita, y su ortografía de los nombres no coincide con la del Comité de Historia.",
+      },
+      "escobarciclo2019",
+      "uribeEntre2002",
+      {
+        key: "leyOrigenMisak",
+        summary:
+          "Voz institucional misak sobre el par que abre el relato: registra Pishimisak y Kallim como unidad complementaria del territorio, con sus glosas en namui wam —kallim kantө como territorio macho, pishimisak pailө pulө pura como territorio mujer— y sitúa a los pishau dentro del vocabulario propio.",
+        limitation:
+          "Está escrito casi íntegramente en namtrik y organizado como tablas de ideogramas y correspondencias fonéticas, con traducciones literales muy breves al castellano; no narra el mito ni cita narradores.",
+      },
+      {
+        key: "puebloMisakIcanh",
+        summary:
+          "Referencia institucional para el encuadre de la ficha: fija el nombre propio misak, la lengua nam trik, el resguardo de Guambía en el municipio de Silvia y los páramos de Las Delicias y el Pisno como el paisaje de lagunas del que habla el relato.",
+        limitation:
+          "Es una ficha de museo de pocas líneas, sin fecha de publicación y sin bibliografía. No contiene ningún material narrativo: solo sirve para verificar nombre, lengua y territorio.",
+      },
+      {
+        key: "ovidioDiluvio",
+        summary:
+          "Término de comparación para el diluvio: Deucalión y Pirra sobreviven a la inundación enviada por Zeus y repueblan la tierra arrojando piedras por encima del hombro, lo que permite marcar por contraste que en el relato misak el derrumbe no castiga ni salva a nadie, sino que pare a los primeros habitantes.",
+        limitation:
+          "Fuente literaria grecolatina sin ninguna relación histórica con los Andes: sirve para contrastar motivos, nunca para explicar ni completar el relato misak.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: Nupisu en el páramo Misak, Pishimisak como figura dual junto al aroiris circular y una creciente que trae niños chumbados sobre piedras, barro y ramas; frailejones, agua y montañas en capas planas, sin coronas ni oro ornamental, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:

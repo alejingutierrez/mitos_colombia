@@ -94,6 +94,35 @@ function defaultKeys(mod) {
   return key && Array.isArray(mod[key]) ? mod[key] : [];
 }
 
+/**
+ * Delimita una propiedad de primer nivel dentro del bloque de un mito y
+ * devuelve [inicio, fin] relativos al bloque. El inicio es el salto de línea
+ * que la precede y el fin, la coma que la cierra. Cuenta corchetes, llaves y
+ * paréntesis para no cortar en medio de un array ni de un objeto, e ignora los
+ * que aparezcan dentro de una cadena.
+ */
+function rangoPropiedad(bloque, nombre) {
+  const marca = `\n    ${nombre}: `;
+  const ini = bloque.indexOf(marca);
+  if (ini < 0) return null;
+  let i = ini + marca.length;
+  let prof = 0;
+  let comilla = null;
+  for (; i < bloque.length; i += 1) {
+    const c = bloque[i];
+    if (comilla) {
+      if (c === "\\") i += 1;
+      else if (c === comilla) comilla = null;
+      continue;
+    }
+    if (c === '"' || c === "'" || c === "`") { comilla = c; continue; }
+    if ("[{(".includes(c)) prof += 1;
+    else if ("]})".includes(c)) prof -= 1;
+    else if (c === "," && prof === 0) return [ini, i + 1];
+  }
+  return null;
+}
+
 const js = (v) => JSON.stringify(v);
 const poolByUrl = new Map(Object.entries(pool).map(([k, v]) => [normalizeUrl(v.url), k]));
 const usedKeys = new Set(Object.keys(pool));
@@ -202,14 +231,23 @@ if (hasDefinitions && !hasMythFiles) {
             : `      {\n        key: ${js(e.key)},\n${e.summary ? `        summary:\n          ${js(e.summary)},\n` : ""}${e.limitation ? `        limitation:\n          ${js(e.limitation)},\n` : ""}      },`,
         )
         .join("\n");
-    const yaDeclara = /\n    sourceKeys: \[/.test(bloque);
+    const yaDeclara = /\n    sourceKeys: /.test(bloque);
     if (yaDeclara && options.reemplazar) {
       // La lista vieja era el reparto en bloque: se va entera y en su lugar
       // queda la que el mito usó de verdad, en el orden en que la propuso.
-      const inicio = src.indexOf("\n    sourceKeys: [\n", at.index);
-      const fin = src.indexOf("\n    ],\n", inicio);
-      if (inicio < 0 || fin < 0) throw new Error(`${slug}: no puedo delimitar su sourceKeys`);
-      sources.set(file, src.slice(0, inicio) + `\n    sourceKeys: [\n${render(entries)}` + src.slice(fin));
+      //
+      // Hay que delimitar la propiedad de verdad, no buscar `sourceKeys: [` a
+      // partir del slug. `sourceKeys` no siempre es un array escrito ahí: en
+      // u'wa es un identificador compartido —`sourceKeys: communityStorySources,`—
+      // y en misak un spread en una línea. Buscando el corchete se saltaba al
+      // bloque del mito siguiente y se le escribía encima; y cuando no había
+      // corchete se insertaba una segunda `sourceKeys` en el mismo objeto, que
+      // la primera pisaba. Diez de las once fichas u'wa quedaron con el
+      // reparto equivocado por eso.
+      const relativo = rangoPropiedad(bloque, "sourceKeys");
+      if (!relativo) throw new Error(`${slug}: no puedo delimitar su sourceKeys`);
+      const [ini, fin] = [at.index + relativo[0], at.index + relativo[1]];
+      sources.set(file, src.slice(0, ini) + `\n    sourceKeys: [\n${render(entries)}\n    ],` + src.slice(fin));
       touched.add(file);
       continue;
     }

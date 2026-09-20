@@ -47,9 +47,11 @@ test("el expediente Nukak cumple la metodología editorial", () => {
   assert.ok(record.seo_description.length <= 165);
   assert.equal(record.tags.length, 4);
   assert.equal(record.focus_keywords.length, 5);
-  assert.equal(record.keySources.length + record.sources.length, 7);
+  // Antes eran exactamente siete: la lista que el define aplicaba a todas por
+  // igual. Ahora la ficha declara las suyas, y lo que se exige es el mínimo.
+  assert.ok(record.keySources.length + record.sources.length >= 5);
   const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
-  assert.equal(new Set(urls).size, 7);
+  assert.equal(new Set(urls).size, urls.length);
 });
 
 test("retira la conflación Kakua del relato Nukak", () => {

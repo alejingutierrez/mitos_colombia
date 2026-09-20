@@ -11,7 +11,11 @@ const records = [
         limitation:
           "Arocha cita el pasaje de Friedemann y Vanín 1991, páginas 189 y 190; no es la transcripción de primera mano y el episodio llega por una cadena identificada de tres eslabones. El libro es un ensayo antropológico sobre africanía en el Pacífico, no una colección de cuentos, y Anansi aparece en él sobre todo como metáfora de resistencia.",
       },
-      "mejiaOralidad2007",
+      {
+        key: "mejiaOralidad2007",
+        limitation:
+          "Es un estudio sobre oralidad y alfabetización, no una recopilación: los datos sobre Anancy están en una nota al pie y no incluye ninguna versión narrativa. Remite a los trabajos de Carol O'Flynn de Chávez, Marcia Dittmann y Oakley Forbes sin reproducirlos. SciELO Colombia sirve este artículo sólo por http: la versión https no responde, y se prefiere el enlace que funciona al que se ve mejor.",
+      },
       "rodriguezdiaspora2011",
       "mejiacuentistas2007",
       {
@@ -34,27 +38,34 @@ const records = [
     excerpt:
       "Ananse come las hostias que debía cuidar, sube al campanario y usa su voz para escapar de una condena.",
     tags: ["araña", "astucia", "engaño", "tradición oral"],
-    mito: `Ananse trabajaba como sacristán. Entre sus tareas estaba cuidar la iglesia y preparar aquello que el sacerdote necesitaba. También debía vigilar las hostias. Eran pequeñas, estaban al alcance de su mano y despertaron su apetito.
+    mito: `En el Chocó la araña no se mata. Quien la aplasta con el sombrero se echa encima años de mala suerte, porque esa araña tiene nombre y el nombre es Anansi. Saca de su propio cuerpo el hilo con que construye la casa donde vive y donde consigue la comida. Camina sobre el agua del río y sobre el agua del mar, y los niños que quieren hacer lo mismo se zambullen al mediodía y a medianoche y le piden prestado ese poder.
 
-Primero tomó una. Después otra. Cada vez que abría el lugar donde se guardaban pensaba que nadie notaría una falta tan pequeña. Pero las ausencias se acumularon. Cuando descubrieron lo ocurrido, Ananse ya no pudo ocultar que se las había comido.
+Anansi tuvo alguna vez un oficio en la iglesia. Era la sacristana: abría, cerraba, preparaba lo que el cura necesitaba para la misa y guardaba las hostias. Las hostias estaban a la mano y ella se las fue comiendo. No una vez. Varias. Cuando el faltante se hizo evidente ya no había manera de disimular quién se las había comido.
 
-El castigo fue extremo: lo sentenciaron a muerte. Ananse, que había confiado en su habilidad para salir de dificultades, quedó frente a una decisión que no podía deshacer con una excusa corriente. Buscó entonces una altura desde la cual su cuerpo quedara escondido y su voz llegara hasta todos. Subió al campanario.
+La sentencia fue la muerte. Contra eso no servían los hilos ni el tamaño pequeño ni la costumbre de escaparse por las rendijas: había un castigo dictado y un pueblo enterado. Anansi hizo entonces lo único que todavía estaba a su alcance. Subió a la torre más alta de la iglesia, se metió entre las campanas y empezó a repicarlas.
 
-Abajo se reunieron el sacerdote y quienes conocían la condena. Desde arriba descendió una voz. No parecía salir de una persona visible. La torre la recibía, la movía entre campanas y paredes y la devolvía hacia el suelo. Ananse habló de sí mismo como si otra presencia estuviera intercediendo por él.
+El pueblo se juntó abajo a oír por qué repicaban las campanas a deshora. Y desde arriba bajó una voz delgadita que anunciaba desastres: si Anansi muere, se acaba el mundo, la candela se apaga para siempre y la gente también se acaba.
 
-El sacerdote alzó la mirada. No alcanzó a ver al sacristán oculto en lo alto y creyó que aquella voz venía del cielo. Si una autoridad superior pedía suspender la sentencia, había que escucharla. La muerte quedó aplazada, pero no sin condiciones: Ananse debía abandonar su mala conducta y ponerse a trabajar.
+El cura salió a mirar quién estaba tocando. Levantó la cara hacia la torre y no vio a nadie. Anansi era tan liviana y tenía un cuerpo tan chiquito que se perdía entre el bronce y la madera. Al no encontrar cuerpo para aquella voz, el cura entendió que la voz venía del cielo y que un aviso así no se desoye.
 
-Cuando pudo bajar, había transformado una voz escondida en una oportunidad de seguir vivo. La maniobra no borró que había tomado lo que debía custodiar. Tampoco lo convirtió en inocente. Le permitió atravesar el castigo mediante el recurso que siempre lo acompañaba: observar qué creían los demás, encontrar un punto ciego y hablar desde allí.
+La multitud pidió que no la mataran. La condena quedó suspendida, pero con una condición dicha en voz alta delante de todos: que Anansi dejara las malas mañas y se pusiera a trabajar.
 
-Ananse salió con vida del campanario. Quedaba por saber si cumpliría la condición o si su apetito volvería a ponerlo frente a otro límite. La historia se detiene en esa tensión: la misma inteligencia que rescata a alguien de una condena puede ser la que antes lo llevó a abusar de su encargo.`,
-    historyCore:
-      "Jaime Arocha publicó el episodio dentro de Ombligados de Ananse y explicó su cadena: Don Pío Perea lo comunicó a Nina S. de Friedemann. La revisión usa Ananse, forma visible en el registro colombiano, y conserva Anansi como término de búsqueda comparativo.",
-    versionCore:
-      "El episodio del campanario no se presenta como resumen de todas las aventuras de Ananse. Otras tradiciones afroatlánticas cambian antagonistas, animales, alimentos y desenlaces; ninguna de esas escenas se injerta en la narración chocoana.",
-    similarityCore:
-      "Los relatos ashanti conservados por Smithsonian Folkways presentan a la araña como personaje de ingenio, deseo y conflicto; la investigación sobre Anansi en Jamaica muestra cómo la figura viajó y adquirió sentidos de resistencia. El episodio chocoano comparte esa capacidad para invertir una desventaja mediante la palabra, pero se distingue por la iglesia, las hostias, la condena y el campanario. Dentro de esta colección, el Riviel también desorienta, aunque actúa en el agua y no intenta librarse de una sentencia. Comparar astucia no convierte a los personajes en versiones de un mismo cuento.",
+Anansi bajó viva de la torre. No la absolvieron: le aplazaron el castigo. Se había comido lo que estaba encargada de cuidar y eso no se deshizo con el repique. Lo que hizo fue más pequeño y más exacto: mirar qué estaban dispuestos a creer los que la iban a matar, encontrar el punto donde nadie podía verla y hablar desde ahí.`,
+    historia: `El episodio tiene una cadena de transmisión conocida. Don Pío Perea, director de la Defensa Civil en el Chocó, se lo contó a la antropóloga Nina S. de Friedemann en una reunión con dirigentes cimarrones del Baudó, entre ellos Rudecindo Castro, entonces encargado de la etnoeducación del movimiento. Friedemann y el escritor Alfredo Vanín lo publicaron en «Chocó: magia y leyenda» (1991), en las páginas 189 y 190, y Jaime Arocha lo reprodujo palabra por palabra en «Ombligados de Ananse» (1999), el libro que el Centro de Estudios Sociales de la Universidad Nacional publicó y que Arocha dedicó a Friedemann, muerta semanas antes.
+
+Pío Perea no contaba desde afuera: había sido acólito y sacristán, como la araña del cuento, y por eso se sabía muchas oraciones. Recordaba que de niño, con sus amigos, consiguió la oración de Anansi para convertirse en araña y pasar de un cuarto a otro en las casas de tabla; que en Semana Santa las oraciones eran más efectivas; y que por eso se iban al río San Juan al mediodía y a las doce de la noche, se zambullían y rezaban tres veces sin respirar pidiéndole a Anansi el poder de andar sobre el agua. Friedemann anotó que Perea se dirigía a Anansi de cerca, sin intermediarios, y que se reía porque sabía qué parte del secreto se estaba guardando.
+
+Anansi llegó al continente por la trata. Los akán del sur de Ghana y de las zonas vecinas de Costa de Marfil y Togo hablan lenguas de la rama kwa, y a los asante —el grupo akán más numeroso, que habla twi— se les atribuye la invención de los cuentos de la araña. Las compañías navieras inglesas los llevaron al Caribe, Jamaica funcionó como plataforma de distribución y de ahí pasaron al archipiélago de San Andrés, Providencia y Santa Catalina, donde se cuentan en criollo. En el Baudó, la historiadora Adriana Maya reconoció en la araña que un campesino defendió del sombrero de un estudiante a la misma que se nombra en las islas y entre los fanti.`,
+    versiones: `En el Chocó la araña es ella. Arocha la llama héroe-heroína, dice que puede tener cualidades masculinas y femeninas, y escribe su nombre unas veces Anansi y otras Ananse; el relato de Perea la presenta de sacristana y termina con una condena aplazada. En el archipiélago el personaje es él: Anancy, Nansi, Old Anancy, Bredda Anancy o Hemano Nansi, y sus historias se cuentan, se cantan y se actúan en criollo. Lolia Pomare Myles reunió veintidós relatos cortos en los que Anancy aparece siempre con el hermano Tigre, a veces antagonista y a veces colaborador; en ninguno de ellos hay iglesia ni sentencia. Allí Anancy es más astuto que el Tigre pero no siempre sale bien librado ni es el más sabio de los personajes, y el nombre «historias de Anancy» cubre además adivinanzas, leyendas, fábulas y canciones.
+
+Las dos maneras no se funden. El Chocó narra un episodio suelto de sacrilegio y salvamento; las islas narran un ciclo de duelos entre animales. También cambia el oficio del personaje fuera del cuento: en el Baudó a Anansi se la protege, se la carga en la mano, se la deja tejer sobre la nevera de la tienda, y hay quien se ombliga con ella para heredar su astucia. Arocha la relaciona además con Esú —Eshu, Exú, Elegbara, Legba, Eléggua— por su capacidad de tener los dos géneros y de crear desorden; esa relación es una interpretación del antropólogo, no una escena del relato de Perea.`,
+    similitudes: `Dos paralelos están documentados y son de distinto orden. El primero es de origen: los cuentos de la araña se atribuyen a los asante, el grupo akán más numeroso del sur de Ghana, y su llegada al Caribe se explica por el comercio de esclavizados y por el papel de Jamaica como punto de distribución; la investigación sobre esa diáspora sigue el mismo hilo hasta el archipiélago colombiano y hasta Limón, en Costa Rica. El segundo es interno al país: en San Andrés y Providencia el mismo personaje protagoniza un ciclo completo, siempre frente al hermano Tigre, recogido por Lolia Pomare Myles y, una generación antes, por Bill y Cathy Washabaugh en Vieja Providencia durante los años setenta, con versiones en inglés y en español cuyas adivinanzas no son traducción una de la otra.
+
+Un tercer parentesco es de figura, no de trama: Arocha coloca a Anansi en la misma familia de Esú, el orisha yoruba que en México, Cuba, Haití, Brasil y Surinam aparece como creador de desorden y, en el Brasil, como liberador de esclavizados.
+
+Lo que separa al episodio chocoano de todos ellos es el decorado: una iglesia, unas hostias, un cura, una condena a muerte y un campanario. Ninguna versión ghanesa, jamaiquina o isleña conocida pone a la araña a repicar campanas para que la confundan con el cielo.`,
     leccion:
-      "La inteligencia puede salvar una vida sin borrar la responsabilidad que hizo necesario el escape.",
+      "Un cuerpo pequeño y una voz bien colocada bastan para aplazar una sentencia que parecía definitiva.",
     sceneHorizontal:
       "Ananse, figura pequeña asociada visualmente con una araña sin caricatura, permanece oculto entre las formas planas de un campanario mientras un sacerdote y vecinos adultos escuchan desde abajo",
     sceneVertical:
@@ -111,29 +122,38 @@ Ananse salió con vida del campanario. Quedaba por saber si cumpliría la condic
     excerpt:
       "Al salir de la escuela, Nelsi sigue a quien parece su madre; sus compañeras descubren que la madre real sigue en casa.",
     tags: ["madre", "engaño", "selva", "peligro"],
-    mito: `A las seis de la tarde, Nelsi salió de la escuela con sus compañeras. El día ya estaba cambiando. Las voces del grupo acompañaban el camino y cada una sabía en qué punto debía separarse para llegar a su casa.
+    mito: `La mamá de Nelsi estaba trabajando esa tarde. Nelsi salió del colegio a las seis, cuando en Tumaco el día ya está cediendo y la luz alcanza apenas para reconocer una cara al otro lado de la calle. Salió con sus compañeras, como todos los días, y las muchachas se fueron caminando juntas por el tramo que comparten antes de repartirse hacia sus casas.
 
-Entonces Nelsi vio a su madre. La figura estaba más adelante y parecía esperarla. Reconoció el rostro, el cuerpo y la manera de moverse. Sin pensar que algo pudiera estar mal, dejó a sus compañeras y tomó el camino de aquella mujer.
+Más adelante, en el camino, Nelsi vio a su mamá.
 
-La figura avanzó. Nelsi aceleró para alcanzarla, pero la distancia no se cerraba. Cada vez que creía estar cerca, quien tenía el rostro de su madre aparecía unos pasos más adelante. El camino conocido empezó a llevarla lejos de las casas.
+No era una silueta dudosa ni una sospecha: era su mamá, y estaba ahí, adelante. Nelsi les dijo a sus compañeras que iba a tratar de alcanzarla y se apartó del grupo. Las otras siguieron su camino.
 
-Sus compañeras continuaron juntas. Al pasar frente a la vivienda de Nelsi vieron a la madre verdadera. No estaba en el camino ni había salido a buscar a su hija. Seguía allí. Las jóvenes le contaron que Nelsi acababa de apartarse del grupo porque había visto a una mujer idéntica a ella.
+La mujer que iba adelante no se detuvo. Nelsi apuró el paso y la distancia no se cerró. Volvió a apurar y la distancia siguió igual, o se hizo un poco más larga. Cada vez que creía estar a punto de alcanzarla, la figura reaparecía unos metros más allá, sin correr, sin volverse a mirar, sin apurarse tampoco. Entre más caminaba Nelsi, más lejos quedaba la persona que ella creía que era su madre. El camino conocido se le fue alargando por delante.
 
-La madre entendió que su hija estaba siguiendo a otra presencia. Salió a buscarla. Preguntó, llamó y recorrió los lugares por donde podía haber pasado. La claridad se iba apagando y el rastro se volvía más difícil de seguir.
+Las compañeras, mientras tanto, pasaron frente a la casa de Nelsi. Y ahí estaba la mamá. No en la calle, no adelante en el camino, no esperando a nadie: en la casa. Las muchachas se detuvieron y le contaron lo que acababa de pasar, que Nelsi se había separado del grupo porque la había visto a ella.
 
-Cuando por fin encontró a Nelsi, la joven estaba asustada y confundida. La mujer a la que había seguido ya no estaba. Nelsi explicó que había visto a su madre con toda claridad, pero que nunca lograba alcanzarla. Solo cuando la distancia se hizo imposible comprendió que aquel rostro conocido estaba guiándola hacia un lugar desconocido.
+La mamá salió de inmediato. Recorrió el camino por donde su hija había tenido que pasar, preguntando y llamando, con la luz cayéndose encima.
 
-La madre real la llevó de regreso. Nelsi volvió por el mismo territorio, aunque ya no lo percibía de la misma manera. Había aprendido que una apariencia exacta podía ocultar una voluntad distinta y que reconocer un rostro no siempre bastaba para reconocer a quien lo llevaba.
+Cuando la encontró, Nelsi estaba asustada y aturdida. La mujer a la que había seguido ya no estaba en ninguna parte. Nelsi le explicó lo que le había ocurrido: que había visto su cara con toda claridad, que la había seguido sin dudar, y que entre más caminaba más se iba alejando la persona que ella creía que era su madre. Sólo cuando la distancia se volvió imposible entendió lo que le estaba pasando.
 
-La figura que se adelantaba era la Tunda. No necesitó mostrar una forma monstruosa. Su poder estaba en parecer alguien de confianza y convertir esa confianza en un desvío.`,
-    historyCore:
-      "Willian Javier Valencia Hurtado reunió versiones de Tumaco en una tesis de etnoliteratura de 2010. La ficha sigue el relato de Nelsi y elimina a Adriano Lemos, Mecana y la expansión titulada Tulavieja, que no aparecieron en el expediente consultado.",
-    versionCore:
-      "Otras versiones describen transformaciones, pies distintos, alimentos, cautiverios o relaciones sexuales. Esta adaptación no las mezcla con la secuencia escolar de Nelsi ni las usa para definir una apariencia universal de la Tunda.",
-    similarityCore:
-      "Muchas historias de la Tunda comparten el engaño mediante una apariencia cercana, pero cambian lugar, edad, duración y forma de regreso. El Riviel también altera la orientación: la Tunda atrae por un rostro familiar y lleva fuera del camino, mientras la mochita entra en una canoa y confunde su rumbo. En cuentos universales existen dobles que imitan a una persona querida, aunque el dossier no demuestra una genealogía concreta y por eso no se fuerza una equivalencia. Lo específico aquí es la versión tumaqueña de Nelsi, sus compañeras y la madre real.",
+Era la Tunda. No se había mostrado con la cara llena de verrugas, ni con la pata de molinillo sonando en el barro, ni con la risa de dientes amarillos que le cambian de color. Le había bastado ponerse el rostro de la persona en la que Nelsi nunca iba a desconfiar, y caminar adelante.`,
+    historia: `La versión de Nelsi la narró Mónica Sánchez y está en el anexo «Historias de la tunda contadas por diferentes habitantes» de la tesis «El mito de la Tunda en el imaginario de Tumaco», que Willian Javier Valencia Hurtado presentó en 2010 en la Maestría en Etnoliteratura de la Universidad de Nariño, en Pasto, con asesoría de Helmer Hernández. Valencia, que creció en el barrio Pantano de Vargas de Tumaco, hizo el trabajo de campo entre 2009 y 2010 en los barrios de la periferia municipal y prefirió llamar a sus interlocutores portantes antes que informantes.
+
+El anexo es un mapa del litoral nariñense y de sus tiempos. Cada relato lleva narrador y, en la mayoría de los casos, lugar, fecha y hasta la hora y el nombre de la persona a la que le ocurrió: Chontal la Frontera en marzo de 2007, Gualajo y Gualajito un viernes de marzo de 2009 a las 3:45 de la tarde, el Guadual del río Chagüí en agosto de 1994 a las diez de la noche, Tumaco en octubre de 1984, Pueblo Nuevo Kilómetro 41 en 1997, el río Rosario en 1950, Maguí Payán en diciembre de 2006, el barrio la Florida en julio de 2001, Brisas del Aeropuerto en 2006, y también Iscuandé, el Limonar de Guapi, Caunapí, las Mercedes y Barbacoas. La entrada de Mónica Sánchez es de las que llevan narradora pero no lugar ni fecha.
+
+La Tunda no es sólo de Nariño. El mismo ser, con el mismo verbo —entundar, quedar entundado—, se cuenta en Esmeraldas, al otro lado de la frontera, donde Juan García Salazar y un equipo de investigadores afroecuatorianos grabaron durante más de treinta años la tradición oral que hoy conserva el Fondo Documental Afro-Andino de la Universidad Andina Simón Bolívar. La crítica reciente lee justamente ese reparto como parte del asunto: la Tunda atraviesa una frontera que a las comunidades negras del Pacífico las parte en dos.`,
+    versiones: `El corpus de Tumaco no se pone de acuerdo sobre casi nada, y ahí está su interés. En la versión de Mónica Sánchez la Tunda toma la cara de la madre; en la de Leidy Vanessa Sánchez también, y la tía Isabel la descubre porque una pierna la tiene más pequeña que la otra; en la de Yeandra Maribi Ortiz se le aparece a un niño con la cara del hermano, lo amarra a un palo de mango y lo dejan arañado y golpeado; en la que Wilder Segundo oyó de su abuela es una mujer muy linda que sale a la orilla del río donde están las catangas, para los hombres mujeriegos. Otros la vieron de anciana con canasto y sombrero, o como un pollo que crece hasta el tamaño de una persona y se transforma al huir. Lo que casi todos comparten es la pata de molinillo, una pata de palo que suena duro al caminar, y el entunde con camarones que en realidad son cucarrones y ciempiés.
+
+Tampoco coinciden en cómo se sale. A unos los devuelve la oración —el padrenuestro, la señal de la cruz—; a otros los recupera un padre que la insulta; a un niño lo soltó y le quedó la virtud perdida. Sobre su origen, una versión la hace hija del diablo y de una negra barbacoana, y otra dice que se topó con uno de los libros de Satanás y ahí aprendió a convertirse en Tunda; en el Guadual, una abuela la vio jugando fútbol de tapadora en el equipo del diablo, con la bruja y el descabezado.
+
+Con el nombre Tulavieja, Tulivieja o Tulevieja circula en cambio otra figura, que es panameña: una mujer que ahogó a su hijo recién nacido para esconder la falta, fue castigada y quedó convertida en un ser con la cara llena de agujeros, alas de murciélago, patas de gallina y un sombrero de tule, condenada a buscar al hijo con los pechos siempre llenos de leche. No tiene pata de molinillo, no entunda y no toma el rostro de la madre. Son dos seres distintos de dos países distintos.`,
+    similitudes: `Hay dos parentescos documentados y uno que conviene deshacer. El primero es transfronterizo y es el más estrecho: en Esmeraldas, en la costa ecuatoriana, la Tunda es la misma y el verbo es el mismo, entundar, que nombra el estado de abandono y ensueño en que queda la víctima, sin que exista otra palabra para decirlo; los registros van del periodo colonial a las etnografías, cuentos y canciones del siglo XX, con Adalberto Ortiz entre los autores que la fijaron. La lectura académica reciente propone verla como figura de la frontera misma, encadenando el rapto de niños en el monte con el ciclo largo de violencias que va de la esclavización al reclutamiento armado.
+
+El segundo es de vecindario y está dentro del propio corpus de Tumaco: la Tunda comparte territorio, y hasta un partido de fútbol, con el Riviel, el descabezado, la bruja y el duende. Del otro lado de la cordillera del litoral, en el Chocó, la lista institucional de seres recoge al Rivial, al Duende, a la Bruja, a la Sirena y al Indio de Agua, un ser que habita todos los ríos y se posa al sol sobre una piedra; en esa lista chocoana la Tunda no aparece.
+
+El parentesco que hay que deshacer es el del nombre: la Tulivieja panameña también es una mujer castigada y también asusta de noche, pero su falta es el infanticidio, su marca es el sombrero de tule y su condena es buscar al hijo. Coincidir en el castigo no las vuelve la misma.`,
     leccion:
-      "La confianza necesita atención, porque una apariencia familiar también puede conducir lejos del cuidado.",
+      "Una cara conocida puede ser el señuelo, y la distancia que no se cierra es lo primero que avisa.",
     sceneHorizontal:
       "Nelsi sale de la escuela con varias compañeras al atardecer y se separa para seguir a una figura con el rostro de su madre que siempre permanece varios pasos adelante",
     sceneVertical:
@@ -190,31 +210,48 @@ La figura que se adelantaba era la Tunda. No necesitó mostrar una forma monstru
     excerpt:
       "Kijimba sigue una tambora hasta una casa llena de figuras blancas; allí descubre demasiado tarde quiénes celebran.",
     tags: ["fiesta", "ánimas", "muerte", "advertencia"],
-    mito: `Kijimba era una mujer alegre a quien le gustaban los bailes. Si escuchaba música, quería saber quién celebraba, dónde estaba la casa y cuánto faltaba para que empezara la danza.
+    mito: `Kijimba era una señora muy alegre a la que le gustaba ir a todo baile. Se divertía a la hora que fuera y el día que fuera, y el sitio geográfico no le impedía nada: si había baile en Tanguí, se iba; si lo había en Guayabal, en Tutunendo, en Condoto, en Tanando o en Quito, también. Por eso era muy conocida en distintos sitios del Chocó.
 
-Una noche oyó una tambora. El sonido venía de lejos, pero parecía claro. Su familia le aconsejó que no saliera. Era tarde y nadie sabía de una fiesta en el lugar hacia donde llamaba el tambor. Kijimba escuchó la advertencia y, aun así, decidió ir.
+Un día estaba acostada y escuchó el sonido de una tambora. Era un baile y sonaba buenísimo.
 
-Tomó el camino río arriba. A medida que avanzaba, la música parecía acercarse. La tambora no se perdía con la distancia: marcaba un rumbo. Kijimba siguió ese pulso hasta encontrar una casa iluminada y llena de gente.
+Entonces dijo: ay, suena un baile, voy para allá.
 
-Todas las personas estaban vestidas de blanco. Cuando la vieron entrar, celebraron su llegada. La llamaron por su nombre como si la hubieran esperado. Kijimba, acostumbrada a ser recibida en los bailes, entró sin detenerse a preguntar quién había organizado aquel encuentro.
+Sus familiares le advirtieron que no se levantara, que ya era muy tarde, que ya estaba descansando. No valieron las advertencias. Se arregló, agarró su palanca y su canalete, achicó el agua de su champa y se fue para el baile.
 
-Le ofrecieron una bebida. Al probarla reconoció la hiel y se negó a tomarla. Entonces las voces cambiaron. Ya no eran solo una bienvenida. Repitieron que debía beber porque no se puede ir a todo baile.
+A medida que subía el río, el baile se escuchaba más cerca. No se perdía con la distancia ni cambiaba de dirección: la tambora marcaba el rumbo y ella lo siguió con la palanca y el canalete, como había seguido tantos otros.
 
-Kijimba intentó resistirse, pero la obligaron. La música continuó mientras la amargura le llenaba la boca. Las figuras blancas seguían alrededor. La fiesta que había parecido una oportunidad para divertirse se reveló como un lugar al que no debía haber entrado.
+Llegó a una casa donde había mucha gente. Gritaban, bailaban, cantaban. Todos los asistentes vestían de blanco, sin una sola excepción, y ninguno pareció extrañarse de verla llegar a esa hora.
 
-Al día siguiente, Kijimba murió. Solo entonces quedó claro qué clase de reunión había encontrado: era una fiesta de las ánimas.
+Al verla llegar, la recibieron gritando su nombre: llegó Kijimba, llegó Kijimba. La estaban esperando y no lo disimularon.
 
-La tambora la había atraído desde lejos y su gusto por toda celebración la llevó más allá de la advertencia de su familia. El relato no dice que bailar sea una falta ni que la alegría deba evitarse. Sitúa el peligro en no reconocer que cada invitación tiene un límite, un lugar y una compañía distinta.
+Le sirvieron el trago. Kijimba lo miró y vio que era hiel, bilis pura, y dijo que no quería. Pero la casa entera le respondió en coro, y no era una invitación: que se lo tomara, Kijimba, que se lo tomara, que a todo baile no se va.
 
-Kijimba llegó porque creyó que cualquier música anunciaba una fiesta para los vivos. Las ánimas la recibieron porque ella había cruzado sin saberlo el umbral de su baile.`,
-    historyCore:
-      "La escuela en la tradición oral atribuye Kijimba a Rosalba Cossio García y conserva el núcleo en sus páginas 44 y 45. La revisión elimina una llave, una cantadora, una gota del Atrato, San Pacho y un amuleto que no pertenecían a esa narración.",
-    versionCore:
-      "La única versión narrativa completa del expediente es la de Rosalba Cossio García. Los estudios sobre alabaos, gualíes, velorios y celebración contextualizan relaciones entre muerte y comunidad, pero no son variantes de Kijimba ni aportan escenas al baile.",
-    similarityCore:
-      "La Danza de la Muerte europea representa a los muertos convocando a personas vivas de distintas condiciones, y el British Museum documenta ceremonias donde se imagina la cercanía entre vivos y muertos. Kijimba comparte el cruce de ese límite, pero se distingue por una mujer que ama los bailes, la tambora, las figuras vestidas de blanco, la hiel y la frase que acompaña su muerte. Dentro del Pacífico, prácticas de duelo y canto relacionan memoria, música y comunidad; no por eso el baile de las ánimas se convierte en un alabao, un gualí o una fiesta patronal.",
+Se lo hicieron tomar a la fuerza. El baile siguió alrededor de ella con la misma música y la misma gente de blanco.
+
+Al otro día, Kijimba falleció.
+
+Sólo entonces quedó claro a qué clase de baile había subido por el río. Era una fiesta de las ánimas, y por eso todos los que se encontraban en ese sitio vestían de blanco.`,
+    historia: `La narración es de la señora Rosalba Cossio García y está publicada, con su nombre encima, en las páginas 44 y 45 de «La escuela en la tradición oral», un volumen de relatos chocoanos recogidos en trabajo escolar y reunidos por el Programa RED de la Universidad Nacional de Colombia. Kijimba ocupa allí un lugar preciso dentro de un índice que va de «El ojo secado» y «El diluvio» a «Los primeros niños», «El castigo del diablo», «Kijimba» y «La viudita»: seis piezas seguidas en las que el Chocó habla de sus difuntos, sus castigos y sus apariciones.
+
+La página siguiente, «La viudita», la narra la señora María de Jesús Ampudia Perea, nacida en Tadó en 1924, y recorre la carrera tercera de Quibdó hasta las cuatro esquinas. Las dos narradoras son mujeres mayores y las dos cuentan encuentros con muertos que caminan como camina la gente.
+
+El escenario de Kijimba es el Medio Atrato y sus alrededores. Tanguí, Tanando y Quito quedan sobre ese eje de ríos; Tutunendo y Condoto, más arriba y más abajo. Ir a un baile significaba ahí lo que dice el relato: palanca, canalete, achicar la champa y subir el río de noche.
+
+En esa misma región, las cantadoras de Pogue explican que los alabaos y los gualís no se aprenden sólo de oído. La alabaora mayor Petrona, una de las voces más reconocidas del Medio Atrato, aportó al repertorio del grupo tres alabaos que, según ella, se los enseñaron en sueños las ánimas, es decir las almas de los fieles difuntos, y el saber cantar se atribuye a personas de entendimiento fuerte con una conexión especial con ellas. Las ánimas del Chocó no son un decorado: enseñan, reclaman y convocan.`,
+    versiones: `La versión que circula con narradora nombrada es la de Rosalba Cossio García, y tiene una forma cerrada: una mujer conocida en muchos pueblos, una tambora que suena de noche, la advertencia familiar desoída, la subida por el río, la casa de blanco, la hiel, el coro que obliga y la muerte al día siguiente. El relato no dice quiénes eran esas ánimas ni de qué habían muerto, no le pone fecha al baile y no nombra el río por el que Kijimba subió; tampoco explica si Kijimba es nombre o apodo. La frase que la mata es también la que explica el relato: que a todo baile no se va.
+
+Alrededor de esa pieza, el Chocó cuenta a sus muertos de otras maneras. La viudita camina una calle exacta de Quibdó en noches de luna llena y le presta su tabaco a un hombre que sale de una cantina; ahí el encuentro no mata. En los velorios del bajo Baudó se narran cuentos de guacas en los que el que se queda con la riqueza desaparece o se lo traga la tierra: el castigo llega por avaricia y no por alegría. Y en Pogue las ánimas se acercan cantando y enseñan, en vez de cobrar.
+
+Los alabaos, los gualís y el levantamiento de tumba pertenecen a otro género. Son el ritual con el que la comunidad acompaña al muerto, no variantes del baile de Kijimba, y no deben leerse como la misma escena.`,
+    similitudes: `Dos paralelos están documentados y los dos están cerca. El primero comparte incluso las páginas: «La viudita», narrada por María de Jesús Ampudia Perea, nacida en Tadó en 1924, es una señora bajita de faldones negros que lleva un puchito de tabaco en la mano y sale en las noches de luna llena a recorrer la carrera tercera de Quibdó hasta las cuatro esquinas; un hombre que salía de una cantina se la encontró y le pidió prestado el tabaco para encender el suyo. Como Kijimba, es una muerta que se comporta como la gente y se cruza con un vivo en un lugar que todos pueden señalar con el dedo; a diferencia de Kijimba, el encuentro no cobra la vida.
+
+El segundo es del mismo Medio Atrato y cambia el signo: las cantadoras de Pogue sostienen que las ánimas enseñan alabaos en sueños a quienes tienen entendimiento fuerte, y la alabaora Petrona atribuye a esas revelaciones tres de sus cantos. Es el mismo trato entre vivos y difuntos, pero con la mano abierta.
+
+Un tercer eco, más lejano, está en los velorios del río Pepé, donde don Juan Arce contó en 1995 historias de guacas en las que el minero que se queda con el oro desaparece de la tierra: la fiesta y el hallazgo se pagan igual cuando se desoye a la familia.
+
+Lo propio de Kijimba es el brindis: no la persigue nadie, la invitan por su nombre y la matan obligándola a beber.`,
     leccion:
-      "La alegría también necesita discernimiento para reconocer qué invitaciones cruzan un límite irreversible.",
+      "Toda invitación tiene anfitrión, y hay bailes cuyo anfitrión no está entre los vivos.",
     sceneHorizontal:
       "Kijimba adulta camina río arriba hacia una casa iluminada donde siluetas vestidas de blanco bailan alrededor de una tambora, con distancia clara entre ella y la puerta",
     sceneVertical:
@@ -270,29 +307,36 @@ Kijimba llegó porque creyó que cualquier música anunciaba una fiesta para los
     excerpt:
       "Durante las fiestas patronales, una sierpe de tres cabezas atraviesa las aguas de Beté y llena de miedo a los pescadores.",
     tags: ["serpiente", "río", "pescador", "miedo"],
-    mito: `En Beté, el río forma parte del camino cotidiano. Por sus aguas se mueven canoas, alimentos, herramientas y personas. Los pescadores conocen corrientes, orillas y cambios de nivel porque de esa atención depende el regreso.
+    mito: `Beté está sobre el Atrato, y el Atrato es el camino. Por ahí bajan y suben las canoas cargadas de plátano, de pescado, de gente que va a otro pueblo y vuelve el mismo día. Quien pesca ahí conoce el río como se conoce una casa: sabe dónde se hondea, dónde arrastra la corriente, en qué orilla se para el agua y a qué hora conviene salir. Ese conocimiento no es adorno; de él depende volver.
 
-Cuando llegan las fiestas patronales, el pueblo se reúne. La vida habitual no desaparece: algunas canoas siguen sobre el agua y quienes pescan todavía miran la superficie. Pero en esos días se cuenta que otra presencia atraviesa el río.
+Cuando llegan las festividades patronales, el pueblo se junta. La fiesta no detiene el río: hay canoas amarradas y canoas andando, y todavía hay quien está sobre el agua mientras en tierra suena la música. Son los días en que más gente hay en la orilla y más ojos hay mirando la superficie.
 
-Es la Sierpe de Beté. Tiene tres cabezas.
+En esos días pasó la Sierpe.
 
-Su cuerpo avanza por el agua mientras las cabezas abren una figura imposible de confundir con una culebra común. No hace falta que hable ni que persiga a una persona determinada. El tamaño y la forma bastan para alterar aquello que los pescadores creían conocer.
+No era una culebra de monte ni una boa de patio: era una serpiente enorme, y no traía una cabeza sino tres. Fue recorriendo los pueblos, uno detrás de otro, por las aguas que todos usan. No se cuenta que hablara. No se cuenta que persiguiera a nadie en particular. No se cuenta que se llevara a alguien. Lo que se cuenta es que pasó, y que los pescadores le tuvieron miedo.
 
-La aparición ocurre durante el tiempo de las fiestas patronales. El encuentro entre celebración en tierra y peligro en el río fija la memoria del relato. Mientras el pueblo comparte una fecha importante, las aguas muestran algo que no se deja incorporar a la rutina.
+El miedo fue lo que quedó. A un pescador del Atrato no lo asusta el tamaño de un animal: ha visto caimanes, ha visto culebras cruzando de orilla a orilla, ha visto crecientes. Lo que no tenía medida era eso: tres cabezas avanzando juntas sobre el agua que él usa todos los días para trabajar, y avanzando justamente en los días en que el pueblo entero estaba reunido celebrando.
 
-Quienes la ven sienten miedo. Son pescadores acostumbrados a leer el río, pero la experiencia acumulada no les ofrece una medida para tres cabezas que pasan sobre la superficie. Nada en su paso explica por qué aparece ante ellos. El miedo nace de estar frente a una presencia extraordinaria en el lugar del trabajo diario.
+Después la Sierpe siguió su camino río abajo, o río arriba, hacia los otros pueblos ribereños, y el agua volvió a ser la de siempre: la corriente, los reflejos, los palos que bajan.
 
-La Sierpe continúa su paso por las aguas de los pueblos ribereños. La narración no fija una lucha, una captura o una forma de vencerla. Tampoco convierte sus cabezas en voces con mensajes distintos. La deja pasar como fue recordada: grande, triple y capaz de hacer que los pescadores miren el río con temor durante las celebraciones.
+Pero las patronales de Beté quedaron con dos memorias encima. La de la fiesta, que se repite cada año y reúne a la gente. Y la de la Sierpe, que pasó una vez por delante de los que estaban pescando y les enseñó que el río que se conocen de memoria todavía puede traer algo que no saben nombrar.`,
+    historia: `El núcleo documentado de esta leyenda es breve y hay que decirlo con precisión: la guía turística del Chocó que publica el Ministerio de Comercio, Industria y Turismo la registra, dentro de una lista de tradiciones chocoanas, como una serpiente mitológica que pasó por los pueblos durante las festividades patronales, que poseía tres cabezas y que asustaba a los pescadores. Aparece ahí junto a la Yesca, el Indio de Agua, el Duende, el Rivial, la Bruja y la Sirena, y la propia guía advierte que casi todas las tradiciones chocoanas están estrechamente ligadas a la forma de vida de sus habitantes.
 
-Después, el agua vuelve a mostrar corrientes, reflejos y madera. Pero la fiesta ya tiene una segunda memoria. Junto a aquello que reúne a la comunidad queda el recuerdo de la Sierpe, cuya aparición recuerda que un río conocido puede conservar formas que nadie domina.`,
-    historyCore:
-      "El único núcleo narrativo directo hallado está en una guía pública del Chocó y es muy breve. La caracterización del Medio Atrato confirma Beté, pesca, río y festividades; esos datos sostienen el escenario, pero no añaden poderes a la Sierpe.",
-    versionCore:
-      "No se halló una versión atribuida que explique el origen, los nombres o las funciones de las tres cabezas. Canto, risa, fiebre, mentira, curación, velas y un desenlace moral permanecen fuera porque la ficha heredada los afirmaba sin respaldo.",
-    similarityCore:
-      "La hidra de Lerna también tiene varias cabezas y un vínculo acuático, pero pertenece al ciclo griego de Heracles y su historia se organiza como combate. Fuentes colombianas reúnen otras serpientes pluricéfalas en cosmologías indígenas; esas figuras tienen pueblos, nombres y funciones propias y no deben trasladarse a Beté. La Sierpe afrochocoana se distingue por pasar durante fiestas patronales y atemorizar a pescadores del Medio Atrato. El Riviel comparte agua y desorientación nocturna, pero usa una mochita y entra en canoas; no es otra forma de la Sierpe.",
+Esa forma de vida es la que da sentido al relato. Beté es la cabecera del municipio de Medio Atrato, en el Chocó, sobre el río Atrato, en el territorio de comunidades negras que el Consejo Comunitario Mayor de la Asociación Campesina Integral del Atrato agrupa junto a Quibdó, Bojayá, Vigía del Fuerte, Murindó y Carmen del Darién. La investigación sobre el modo de vida afrocolombiano en el Chocó describe una economía tradicional de pesca, agricultura y extractivismo en la que el agua no es paisaje sino territorio vivido y trabajado, con un saber acumulado sobre corrientes, especies y horarios.
+
+Las festividades patronales son el otro eje. En el Chocó organizan el calendario, sostienen la vida colectiva y han seguido celebrándose incluso bajo el conflicto armado: en el Baudó, doña Luz Amira Largacha Mosquera era la síndica de las fiestas de la Virgen de la Pobreza, patrona de su pueblo, y en el propio Medio Atrato la fiesta de San Antonio de Padua en Tanguí ha sido estudiada como forma de resistencia festiva. Una aparición fechada «en patronales» no es un detalle decorativo: es la manera chocoana de fechar.`,
+    versiones: `De la Sierpe circula una sola descripción escrita y es la que la ficha conserva: tamaño grande, tres cabezas, paso por los pueblos durante las festividades patronales y miedo entre los pescadores. Todo lo demás que se le ha atribuido —que cada cabeza cantara, riera o mirara; que llamara a los pescadores por su nombre; que castigara la mentira con fiebre; que se alejara si el pueblo encendía velas— pertenece a la versión que este sitio publicó, no a la fuente, y se retira.
+
+Lo que sí admite comparación es la vecindad. En la misma lista chocoana, el Indio de Agua habita todos los ríos y se posa sobre una piedra a la salida del sol, al acecho de la gente; el Rivial es una ráfaga de luz que aparece en el mar en forma de ola, se divide y se transforma; la Sirena es mitad mujer y mitad pez; la Yesca abraza y ahoga con bejucos. Son seres del agua y del monte con conductas distintas y ninguno de ellos es otra forma de la Sierpe.
+
+Hay además una discrepancia de escala que conviene no tapar: la guía habla de «los pueblos», en plural, y no sólo de Beté, de modo que el nombre del ser lo ancla en un lugar aunque su recorrido sea de varios. Y no hay narrador identificado, ni fecha, ni nombre de pescador, ni versión en primera persona recogida en el Medio Atrato.`,
+    similitudes: `El paralelo formal más conocido está fuera de América y conviene medirlo bien. La hidra de Lerna, según la Biblioteca atribuida a Apolodoro, se criaba en el pantano de Lerna, salía a la llanura a arrasar el ganado y los campos, y tenía un cuerpo enorme con nueve cabezas, ocho mortales y la del medio inmortal; Heracles la sacó de su guarida con flechas encendidas y sólo pudo vencerla con la ayuda de Yolao, que quemaba los cuellos para que no rebrotaran. Coincide con la Sierpe en el agua estancada o corriente, el cuerpo grande y las cabezas múltiples, y se separa de ella en todo lo demás: la hidra tiene enemigo, combate y muerte, y la Sierpe sólo tiene paso y testigos.
+
+El segundo paralelo es local y es más útil. En la misma enumeración chocoana, el Indio de Agua habita todos los ríos y está al acecho de los seres humanos desde una piedra al sol, y el Rivial se manifiesta como una ráfaga de luz sobre el mar que se divide y cambia de forma. Los tres comparten un rasgo: son apariciones que ocurren en el lugar de trabajo y frente a quienes mejor conocen el agua, no en un lugar prohibido ni frente a forasteros.
+
+Lo que sólo tiene la Sierpe es la fecha. Aparece en patronales, es decir cuando el pueblo está reunido y celebrando, y ese cruce entre la fiesta en tierra y el miedo en el río es lo que fijó su memoria.`,
     leccion:
-      "La experiencia orienta en el territorio, pero no elimina todo aquello que permanece fuera del control.",
+      "El río que se conoce de memoria puede todavía traer una forma que nadie sabe medir.",
     sceneHorizontal:
       "una enorme sierpe estilizada de tres cabezas cruza el río frente a Beté durante una tarde de fiesta patronal sugerida solo por colores y reunión distante, mientras pescadores adultos observan desde canoas",
     sceneVertical:

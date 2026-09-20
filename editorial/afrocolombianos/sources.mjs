@@ -552,8 +552,8 @@ export const afroSourceKeysBySlug = {
  * esa obra sobre ese relato: `{ key, summary, limitation }`. La ficha
  * bibliográfica la sigue fijando el pool.
  */
-export function pickAfroSources(slug) {
-  const entradas = afroSourceKeysBySlug[slug];
+export function pickAfroSources(slug, declaradas) {
+  const entradas = declaradas?.length ? declaradas : afroSourceKeysBySlug[slug];
   if (!entradas) throw new Error(`No hay dossier Afrocolombiano para ${slug}.`);
   const vistas = new Set();
   const salida = [];

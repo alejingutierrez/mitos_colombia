@@ -350,7 +350,11 @@ Esa noche los mellizos hicieron una nueva choza. Esta vez buscaron hojas y mirar
           "Todo lo relativo al chimbilaco cabe en una nota al pie de un artículo cuyo tema es el turismo cultural, no la narrativa. La autora lo define como relato contemporáneo ampliamente regional, no como ciclo propio del pueblo yagua, y no transcribe ninguna narración.",
       },
       "valdiviesoCuidado2005",
-      "pribylEvidencias2010",
+      {
+        key: "pribylEvidencias2010",
+        limitation:
+          "Es peruana y andina, no amazónica ni colombiana, y está escrita desde la salud pública y la etnomedicina: no menciona el cortacabezas, el pelacara ni el chimbilaco. El eslabón que une pishtaco, pelacara y cortacabezas lo aporta Cure, no este artículo. SciELO Colombia sirve este artículo sólo por http: la versión https no responde, y se prefiere el enlace que funciona al que se ve mejor.",
+      },
       "espanolachimbilaco2010",
       "espanolachimbila2010",
       {
