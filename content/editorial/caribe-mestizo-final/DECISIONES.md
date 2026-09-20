@@ -80,9 +80,7 @@ en la procedencia.
 
 ---
 
-## Abiertas
-
-### G · Los once cuentos del mismo libro que no tienen ficha
+### G · Los once cuentos del mismo libro sin ficha → **anotarlos, no publicarlos**
 
 «El montuno y el radio» (p. 247), «La muerte de Tía Zorra (Tercera versión)»
 (255), «Un día estaba un caimán asoleándose» (257), «El diablo haciendo
@@ -90,24 +88,28 @@ palomitas» (257), «La receta» (257), «El burro y el puerco» (264), «El pan
 y el perro» (264), «El indio y el negro» (265), «Los ladrones» (265), «Tío
 Conejo y Tío Gallo (Segunda versión)» (265) y «La misa del testamento» (266).
 
-Está fuera del encargo —el alcance es reescribir lo publicado, no ampliarlo—
-pero conviene decidirlo antes de cerrar el ciclo, porque el primario ya está
-abierto y extraído y no volverá a salir tan barato.
+**Decisión:** quedan registrados en el módulo como corpus conocido sin ficha,
+con su página, en `caribeMestizoFinalCorpusSinFicha`. No se publican ahora: el
+encargo es reescribir lo publicado, no ampliarlo. Pero el primario ya está
+abierto y extraído, y no volverá a salir tan barato, así que el hallazgo no se
+pierde.
 
-① Publicarlos como fichas nuevas del mismo subciclo. ② Anotarlos en el módulo
-como corpus conocido sin ficha, para cuando se quiera ampliar. ③ No hacer nada.
-
-### H · El sitio higienizaba el material
+### H · El material que el sitio higienizaba → **contarlo, sin explicitar**
 
 Tres casos medidos: `la-vieja-el-burro-y-los-huevos` es un cuento de burros
-apareándose y la descripción heredada lo vuelve un percance doméstico;
+apareándose y el resumen heredado lo vuelve un percance doméstico;
 `el-burro-y-la-policia` es abiertamente obsceno y transcurre en la puerta de la
 iglesia durante la misa; `la-confesion` es un cura rebautizando el cuerpo de
 una muchacha con eufemismos.
 
-Es la misma pregunta que apareció en wayuu con Pushaina y Mareiwa. No es una
-decisión por ficha sino de criterio, y hay que tomarla antes de redactar.
+**Decisión:** el relato conserva el conflicto real —porque el chiste es ese— con
+lenguaje adulto pero no gráfico, y la `historia` declara el registro del
+original. Es el criterio que se usó en wayuu con Pushaina y Mareiwa. Suavizarlo
+tiene dos costes: el cuento deja de tener gracia, y la ficha miente sobre su
+fuente.
 
-① Contar lo que el cuento cuenta, sin explicitar, y declarar el registro en
-`historia`. ② Mantener la higienización actual y decir en `dudas` que la fuente
-es más cruda. ③ Caso por caso según el daño representado.
+---
+
+## Abiertas
+
+Ninguna por ahora.
