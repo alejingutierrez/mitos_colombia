@@ -260,12 +260,25 @@ ninguna otra**, y se comprueba:
 Las tres pasadas de la metodología §6 siguen. Se añaden cuatro medidas, que
 `diagnostico.mjs` pasará a calcular:
 
-| comprobación | umbral | por qué |
-|---|---|---|
-| **Apertura distinta** | ninguna ficha del ciclo abre con la misma estructura sintáctica que otra | siete de las ocho de Piedecuesta empiezan igual |
-| **Riqueza léxica** | *type-token ratio* ≥ 0,45 en el `mito` | detecta la prosa de relleno, que repite las mismas veinte palabras |
-| **Densidad de adjetivos** | ≤ 8 % de los tokens del `mito` | la grandilocuencia se mide |
-| **Frases largas** | ninguna oración de más de 45 palabras; mediana entre 12 y 22 | ritmo, que es lo que la metodología pide y nadie medía |
+> **Calibrado el 2026-09-19.** Los cuatro umbrales de abajo se escribieron a
+> ojo y, al medirlos contra los 67 mitos ya aprobados (wayuu y muisca) y contra
+> los ocho marcos de plantilla de `caribe-mestizo-final`, **dos no medían lo que
+> decían**. Éstos son los reales, y están en `PROSA` dentro de `lib.mjs`.
+
+| comprobación | umbral | aprobado | heredado | veredicto |
+|---|---|---|---|---|
+| **Densidad de adjetivos** | ≤ **3 %** (no 8 %) | 0 – 2,1 % | 3,8 – 8,6 % | **la única que discrimina** |
+| **Riqueza léxica** | *TTR* ≥ 0,45, medido en ventana de 300 tokens | 0,47 – 0,65 | 0,66 – 0,76 | **al revés de lo previsto**: el texto malo puntúa más alto, porque es prosa abstracta y no relleno repetido. Vale como piso, no como detector de plantilla |
+| **Frases largas** | ninguna de más de 45 palabras; mediana **8-22** (no 12-22) | mediana 7-21, máxima hasta 61 | mediana 15-20 | **no separa**, y el rango 12-22 suspendía a 11 de cada 12 fichas wayuu. Avisa, no bloquea |
+| **Apertura distinta** | la firma más frecuente no pasa de la mitad del ciclo | 4 de 27 | — | reformulada: «que dos fichas coincidan» le daba 20 de 27 al corpus bien escrito, porque con cuatro categorías gruesas la coincidencia es inevitable. Lo que delata el molde es la **concentración** |
+
+Con estos umbrales la separación es limpia: pasan las 27 fichas wayuu y fallan
+los 8 marcos de caribe.
+
+**Y la lección de fondo:** lo que de verdad destapa la plantilla no es ninguna
+de las cuatro medidas de prosa, sino **la repetición de oraciones entre fichas
+del ciclo** (86,6 % en caribe) y la concentración de aperturas. Las cuatro
+miden la calidad de una ficha suelta; el molde es una propiedad del conjunto.
 
 Y las prohibiciones de siempre, ahora con una lista propia de este corpus:
 «desde tiempos inmemoriales», «un misterio ancestral», «sabiduría ancestral»,
@@ -355,14 +368,26 @@ salir:
 
 Seis cosas. Las cinco primeras son pequeñas; la sexta es el gate.
 
-| qué | dónde | para qué |
+**Hecho el 2026-09-19**, salvo donde se diga.
+
+| qué | dónde | estado |
 |---|---|---|
-| `--region` en `diagnostico.mjs` y en el resto del kit | `lib.mjs` ya resuelve la ambigüedad; falta pasarla en todos | `mestizo` existe en cinco regiones |
-| Las cuatro medidas de prosa de §5.3 | `diagnostico.mjs` | que «mejorar la redacción» sea una cifra y no una opinión |
-| Detección de aperturas repetidas | `diagnostico.mjs` | el defecto más visible del lote |
-| `cotejar.mjs` como comando del kit | `scripts/editorial/enriquecimiento/` | hoy es un script de scratchpad y es el que destapó el error más grave |
-| Lista de dominios de relleno propia de este corpus | `lib.mjs`, junto a `WEAK_HOSTS` | UNESCO, WorldCat, CiNii, docslib |
-| **`validar-acta.mjs`** | nuevo | comprueba que cada acta tenga registro, nudos anclados y clasificación, y **que cada hecho del relato tenga su nudo**. Es el gate del paso 5 |
+| `--region` en todo el kit | `lib.mjs` | **ya estaba**: los siete scripts pasan `options` a `resolveCommunity`, que lee `options.region` |
+| Las cuatro medidas de prosa de §5.3 | `lib.mjs` (`medirProsa`, `PROSA`) y `diagnostico.mjs` | hecho, y recalibrado: ver el aviso de §5.3 |
+| Detección de aperturas | `lib.mjs` (`aperturaFirma`) y `diagnostico.mjs` | hecho, como concentración y no como coincidencia |
+| `cotejar.mjs` como comando | `npm run mitos:enriquecer:cotejar` | hecho |
+| Dominios propios del corpus | `lib.mjs` (`fuenteVetada`): `CATALOG_HOSTS`, `MIRROR_HOSTS`, `FILLER_URLS`, `TOURISM_HOSTS`, `SELF_HOSTS` | hecho; el diagnóstico y el gate los comparten |
+| **`validar-acta.mjs`** | `npm run mitos:enriquecer:acta` | hecho. Con `--con-relato` busca los nombres propios, fechas y cifras del relato que ningún nudo ancla, y mide la prosa |
+
+Y una séptima que no estaba prevista y hacía falta: **dónde escribir lo
+reescrito**. El inventario de estos ciclos vive en `catalog.mjs` como filas
+posicionales `[slug, título, resumen]`, que no pueden llevar un relato de 600
+palabras. Lo rehecho va a `editorial/<ciclo>/reescrituras.mjs`, un mapa que
+`records.mjs` fusiona por slug: una ficha que aparezca ahí deja de usar el
+marco de grupo en los campos que declare, y una que no aparezca sigue igual.
+`importar-texto.mjs` aprendió esa disposición, así que sirve para los 31
+ciclos. Tiene una ventaja sobre las otras cuatro: se ve de un vistazo qué
+fichas del ciclo ya se rehicieron.
 
 ---
 
