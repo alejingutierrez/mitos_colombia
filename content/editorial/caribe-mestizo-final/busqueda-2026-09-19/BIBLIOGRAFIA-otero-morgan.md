@@ -327,7 +327,8 @@ compara la cadena de persecución del conejo caribeño con la del conejo pacífi
 **1. Leipold, Claudia. *«Our Native Thing». Estudio sobre la imagen histórica de los
 sanandresanos en el Mar Caribe colombiano*.** Tesis doctoral, Philipps-Universität Marburg,
 2002. Versión en español digitalizada por el Banco de la República (Babel), 247 pp.
-`https://babel.banrepcultural.org/digital/api/collection/p17054coll23/id/1005/download`
+Ficha canónica: `https://babel.banrepcultural.org/digital/collection/p17054coll23/id/1005/`
+PDF: `https://babel.banrepcultural.org/digital/api/collection/p17054coll23/id/1005/download`
 ✅ **texto** — PDF descargado y leído. **Es el hallazgo del subciclo.** Trabajo de campo en San
 Andrés entre julio de 1994 y marzo de 1995, con archivo en el Banco de la República de San
 Andrés y **apéndice de entrevistas transcritas en creole/inglés con traducción al español, cada

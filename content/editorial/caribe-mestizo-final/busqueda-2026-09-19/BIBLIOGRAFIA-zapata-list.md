@@ -387,6 +387,17 @@ ninguna es el primario real.**
 
 ## REPARTO REAL
 
+> **Correcciones posteriores (2026-09-19, al escribir las actas contra el texto).**
+> Tres datos de las tablas de abajo no resistieron el cotejo página a página:
+> `rambao` es **239-245**, no 239-246 (la 246 es la lámina de Tío Conejo);
+> `lo-justo-y-lo-legal` empieza y acaba **dentro de la p. 264**, no 264-265; y
+> `el-burro-y-la-policia` está **entero en la p. 258**, no 258-259 (la 259 abre
+> con «El paisa y el gringo»). Además, la palabra «apuesta» en
+> `quien-manda-mas-en-casa` **la puso este informe**: la fuente dice
+> «discusión», y no hay apuesta en el cuento. Manda el acta.
+
+
+
 **Clave de la obra:** **ZO** = Zapata Olivella, *Tradición oral y conducta en Córdoba*
 (Incora 1972; páginas de la 3.ª ed., Univalle 2021), «Género: cuento y leyenda».
 **GL** = List, *Animal Tales from the Caribbean* (IU Press 2017), páginas de la sección española.
