@@ -280,53 +280,6 @@ export const zenuSources = {
   }),
 };
 
-export const juanLaraSources = {
-  loricaTravel: source({
-    title: "Mitos, sucesos y leyendas: Juan Lara",
-    author: "Alcaldía de Santa Cruz de Lorica, portal Lorica Travel",
-    type: "compilación pública de tradición oral local",
-    url: "https://www.loricatravel.gov.co/mitos-sucesos-y-leyendas/",
-    summary:
-      "Describe a Juan Lara como espíritu burlón y enamorado asociado con pedradas sobre los techos y risas que se oyen en el aire.",
-    limitation:
-      "La ficha no identifica narrador ni adjudica el personaje a una comunidad indígena específica.",
-  }),
-  guiaMonteria: source({
-    title: "Mitos y leyendas de Córdoba",
-    author: "La Guía de Montería",
-    type: "compilación periodística y turística regional",
-    url: "https://www.laguiademonteria.co/mitos-y-leyendas-de-cordoba/",
-    summary:
-      "Confirma la circulación cordobesa de Juan Lara y los motivos de asedio, piedras y risas sin origen visible.",
-    limitation:
-      "Es una fuente secundaria sin transcripción oral completa; sirve para controlar el núcleo y no para añadir una biografía.",
-  }),
-  cordobaEducation: source({
-    title: "Guía de aprendizaje de Lengua Castellana, grado quinto",
-    author: "Secretaría de Educación de Córdoba",
-    year: 2020,
-    type: "material educativo departamental sobre tradición oral",
-    url: "https://seducacion.cordoba.gov.co/_contenido/noticias/2020/Noviembre/Lengua_castellana_5.pdf",
-    summary:
-      "Usa leyendas de Córdoba como material de lectura y confirma su tratamiento como patrimonio oral regional.",
-    limitation:
-      "La adaptación pedagógica no prueba una atribución étnica ni sustituye el registro de variantes locales.",
-  }),
-  elUniversal: source({
-    title: "Semana Santa: el misterio que flota en los días santos",
-    author: "El Universal",
-    year: 2019,
-    type: "crónica periodística de creencias y relatos del Caribe",
-    url: "https://www.eluniversal.com.co/suplementos/facetas/2019/04/17/semana-santa-el-misterio-que-flota-en-los-dias-santos/",
-    summary:
-      "Aporta contexto sobre la vigencia y circulación de apariciones, sonidos y relatos orales en Córdoba y el Caribe.",
-    limitation:
-      "No es una versión primaria de Juan Lara; se usa únicamente como contexto de recepción regional.",
-  }),
-  minCulturaZenu: zenuSources.minCulturaZenu,
-  banrepZenu: zenuSources.banrepZenu,
-};
-
 /**
  * Acepta una clave suelta o una clave con resumen y límite propios del mito
  * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
@@ -374,6 +327,8 @@ export function pickZenuSources(...entries) {
   return salida;
 }
 
-export function pickJuanLaraSources() {
-  return Object.values(juanLaraSources);
-}
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */

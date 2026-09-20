@@ -94,17 +94,6 @@ export const yucunaSources = {
     limitation:
       "Es una fuente histórica escrita por un investigador externo y no se usa para completar diálogos o episodios narrativos ausentes.",
   }),
-  onicYucuna: source({
-    title: "Yukuna",
-    author:
-      "Organización Nacional Indígena de Colombia, con perfiles del Ministerio del Interior y Ministerio de Cultura",
-    type: "perfil comunitario y territorial contemporáneo",
-    url: "https://www.onic.org.co/sitio/pueblos/1167-yucuna",
-    summary:
-      "Sitúa al pueblo en Amazonas, Putumayo y Vaupés y reconoce a los Karipulakena como hijos del mundo vinculados con la vida acuática.",
-    limitation:
-      "Es una síntesis institucional actualizable; no sustituye las narraciones atribuidas ni fija una versión única de la cosmología.",
-  }),
   villaPosse1993: source({
     title: "Mitos y leyendas de Colombia",
     author: "Eugenia Villa Posse, compiladora",
@@ -250,7 +239,6 @@ export function pickYucunaSources(...entries) {
     "fontaine2014",
     "fontaine2011",
     "jacopin1972",
-    "onicYucuna",
     "villaPosse1993",
   ];
   const vistas = new Set();

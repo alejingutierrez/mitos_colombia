@@ -171,6 +171,25 @@ function abrirPick(src) {
     return nuevoPick(nombre, pool, mensaje, claves);
   });
 
+  // D: el pick devuelve el pool entero con `Object.values`. Es la forma más
+  // extrema del reparto en bloque —la ficha no elige nada— y la usaba el
+  // dossier de Juan Lara.
+  const reTodo = new RegExp(
+    String.raw`export function (pick\w+Sources)\(\) \{\s*return Object\.values\((\w+)\);\s*\}`,
+    "g",
+  );
+  src = src.replace(reTodo, (_todo, nombre, pool) => {
+    cambios += 1;
+    const claves = Object.keys({}).length; // sin lista escrita: el defecto es el pool entero
+    void claves;
+    return nuevoPick(nombre, pool, `Fuente desconocida en ${pool}: `, null).replace(
+      "  const entradas = entries;\n",
+      "  // Antes devolvía el pool entero, sin que la ficha eligiera nada. Se\n" +
+        "  // conserva ese comportamiento cuando no se le pasa nada.\n" +
+        `  const entradas = entries.length ? entries : Object.keys(${pool});\n`,
+    );
+  });
+
   for (const _ of src.matchAll(/typeof entrada === "string"/g)) yaEstaban += 1;
   if (cambios) return { src, hecho: `abierto (${cambios})` };
   if (yaEstaban) return { src, hecho: "ya estaba" };

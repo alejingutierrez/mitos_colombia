@@ -1,8 +1,7 @@
-import { juanLaraSources, zenuSources } from "./sources.mjs";
+import { zenuSources } from "./sources.mjs";
 
 const allSources = {
   ...zenuSources,
-  ...juanLaraSources,
 };
 
 export const zenuEvidenceMatrix = {
@@ -183,30 +182,27 @@ export const zenuEvidenceMatrix = {
   "juan-lara-y-la-trenza-del-aire": [
     {
       claim:
-        "Juan Lara circula como espíritu burlón o enamorado del folclor cordobés.",
-      sourceKeys: [
-        "loricaTravel",
-        "guiaMonteria",
-        "cordobaEducation",
-      ],
+        "Los tres episodios que sostienen la página —Caimito, la vereda de Platero y la de San Felipe, con salida hacia Santa Inés— vienen del acopio de Zully Torres y Oswaldo Villera para el SINIC, y están todos en la órbita de San Marcos, sobre el río San Jorge.",
+      evidenceClass: "nucleo",
+      sourceKeys: ["sINICColombia"],
     },
     {
       claim:
-        "Pedradas en los techos y risas que parecen venir del aire forman el núcleo repetido.",
-      sourceKeys: [
-        "loricaTravel",
-        "guiaMonteria",
-        "elUniversal",
-      ],
+        "El personaje sí está documentado dentro del resguardo: Drexler lo lista entre los encantos del monte, con la misma descripción del mohán. Era justamente lo que se negaba para reclasificarlo como caribe mestizo.",
+      evidenceClass: "nucleo",
+      sourceKeys: ["drexler2002"],
     },
     {
       claim:
-        "Ninguna fuente consultada sostiene la trenza del aire, el amuleto o una atribución exclusivamente Zenú.",
-      sourceKeys: [
-        "loricaTravel",
-        "guiaMonteria",
-        "minCulturaZenu",
-      ],
+        "El mapa cambia según quién lo cuente. El SINIC lo pone en Sucre; la lista de Córdoba de la misma entidad no lo incluye, y las compilaciones turísticas y periodísticas que lo sitúan en Lorica o en Montería no coinciden con el acopio institucional.",
+      evidenceClass: "variante",
+      sourceKeys: ["sINICColombia", "zenuPlan"],
+    },
+    {
+      claim:
+        "El acopio no fecha la recolección, no nombra a los narradores y no adscribe el personaje a ninguna comunidad indígena; la página tampoco lo hace.",
+      evidenceClass: "duda",
+      sourceKeys: ["sINICColombia", "larrainRelaciones2024"],
     },
   ],
 };
@@ -216,9 +212,15 @@ export function assertZenuEvidenceMatrix() {
     if (claims.length < 3) {
       throw new Error(`${slug}: se requieren tres afirmaciones controladas.`);
     }
+    // Antes se exigían tres fuentes por afirmación. Esa regla no producía
+    // triangulación: producía relleno. Es lo que hacía que las tres
+    // afirmaciones de Juan Lara repitieran las mismas dos compilaciones
+    // turísticas, una de ellas para sostener que ninguna fuente lo sostenía.
+    // Lo que sí tiene que cumplirse es que ninguna afirmación vaya sin fuente
+    // y que la ficha entera no descanse en una sola obra.
     for (const { claim, sourceKeys } of claims) {
-      if (!claim || sourceKeys.length < 3) {
-        throw new Error(`${slug}: afirmación sin triangulación suficiente.`);
+      if (!claim || !sourceKeys.length) {
+        throw new Error(`${slug}: afirmación sin fuente.`);
       }
       if (new Set(sourceKeys).size !== sourceKeys.length) {
         throw new Error(`${slug}: fuente repetida en una afirmación.`);
@@ -228,6 +230,10 @@ export function assertZenuEvidenceMatrix() {
           throw new Error(`${slug}: fuente desconocida ${key}.`);
         }
       }
+    }
+    const obras = new Set(claims.flatMap(({ sourceKeys }) => sourceKeys));
+    if (obras.size < 3) {
+      throw new Error(`${slug}: la ficha entera descansa en ${obras.size} obra(s).`);
     }
   }
   return true;

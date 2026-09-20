@@ -74,17 +74,47 @@ if (!options["sin-red"]) {
 }
 const healthByUrl = new Map(health.map((h) => [normalizeUrl(h.url), h]));
 const brokenUrls = health.filter((h) => !h.ok && !h.restricted && h.verdict !== "SIN_RESPUESTA");
+
+// Un punto final en la URL casi siempre es el punto de la frase que se coló al
+// copiarla, y por eso bloquea. Pero a veces es parte de la dirección: la nota
+// de Michua en iespautp.com responde 200 **con** el punto y 404 sin él. En vez
+// de suponer, se comprueban las dos y sólo bloquea si la de verdad es la corta.
+const puntoFinal = new Set();
+if (!options["sin-red"]) {
+  const conPunto = [...usages.values()].map((u) => u.url).filter((url) => /\.$/.test(url));
+  const comprobadas = await mapLimit(conPunto, 4, async (url) => {
+    const sin = url.replace(/\.+$/, "");
+    const [a, b] = await Promise.all([checkUrl(url), checkUrl(sin)]);
+    return { url, sirveConPunto: Boolean(a.ok), sirveSinPunto: Boolean(b.ok) };
+  });
+  for (const c of comprobadas) {
+    if (c.sirveConPunto && !c.sirveSinPunto) puntoFinal.add(normalizeUrl(c.url));
+  }
+}
 const restrictedUrls = health.filter((h) => h.restricted);
 const silentUrls = health.filter((h) => h.verdict === "SIN_RESPUESTA");
 
 const blockers = [
   ...perMyth.filter((m) => m.estado === "BLOQUEO").map((m) => `${m.slug}: ${m.total} fuentes (<${MIN_SOURCES})`),
-  ...perMyth.flatMap((m) => m.flags.filter((f) => f.flag.startsWith("COMPARATIVA_SIN_PARALELO") || f.flag === "URL_TERMINA_EN_PUNTO").map((f) => `${m.slug}: ${f.flag} ${f.url}`)),
+  ...perMyth.flatMap((m) =>
+    m.flags
+      .filter(
+        (f) =>
+          f.flag.startsWith("COMPARATIVA_SIN_PARALELO") ||
+          (f.flag === "URL_TERMINA_EN_PUNTO" && !puntoFinal.has(normalizeUrl(f.url))),
+      )
+      .map((f) => `${m.slug}: ${f.flag} ${f.url}`),
+  ),
   ...brokenUrls.map((h) => `${h.verdict} ${h.url} (${h.status ?? h.error}) citada en ${usages.get(normalizeUrl(h.url)).slugs.join(", ")}`),
 ];
 const warnings = [
   ...perMyth.filter((m) => m.estado === "BAJO_META").map((m) => `${m.slug}: ${m.total} fuentes, meta ${TARGET_SOURCES}`),
   ...perMyth.flatMap((m) => m.flags.filter((f) => f.flag === "DOMINIO_DEBIL" || f.flag === "HTTP_SIN_TLS").map((f) => `${m.slug}: ${f.flag} ${f.url}`)),
+  ...perMyth.flatMap((m) =>
+    m.flags
+      .filter((f) => f.flag === "URL_TERMINA_EN_PUNTO" && puntoFinal.has(normalizeUrl(f.url)))
+      .map((f) => `${m.slug}: el punto final es parte de la dirección, no un error de copia: ${f.url}`),
+  ),
   ...restrictedUrls.map((h) => `RESTRINGIDA ${h.url} (${h.status}${h.captcha ? ", captcha" : ""}): no se puede verificar automáticamente; comprobar a mano`),
   ...silentUrls.map((h) => `SIN_RESPUESTA ${h.url} (${h.error}): el servidor no contestó; comprobar a mano antes de retirarla, citada en ${usages.get(normalizeUrl(h.url)).slugs.join(", ")}`),
   ...inconsistent.map((u) => `misma URL con fichas bibliográficas distintas: ${u.url} → ${[...u.variants].join(" | ")}`),
