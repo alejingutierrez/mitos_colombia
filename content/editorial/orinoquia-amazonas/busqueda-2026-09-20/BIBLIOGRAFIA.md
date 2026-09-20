@@ -510,3 +510,373 @@ literaria firmada duplicada (`chuya-chaqui`) y uno está sin registro (`madre-de
 africana resultó ser un rumor amazónico contemporáneo». Aquí el equivalente es
 `madre-de-playa`: una sirena de playa fluvial con nombre propio inventado y ninguna
 fuente abierta. Es el candidato número uno a no existir.
+
+---
+
+# IV. LO COMPARTIDO CON VENEZUELA
+
+El encargo acertó: varias piezas del llano son binacionales y **existe bibliografía
+venezolana seria que el módulo no tenía**. Lo que sigue está abierto y leído.
+
+## La obra madre
+
+**Carmen Pérez Montero, *Mitos y leyendas del estado Portuguesa*, Caracas, Fundación
+Empresas Polar, 2014** (§A3). Capítulos independientes en PDF, con testimonios firmados.
+El patrón de URL es `https://bibliofep.fundacionempresaspolar.org/media/<1377933+N>/mitos_portuguesa_c_<NN>_<slug>.pdf`.
+Verificados uno a uno con 200:
+
+| capítulo | URL |
+|---|---|
+| presentación e introducción | `.../media/1377933/presentacion-introduccion-y-aspectos-generales.pdf` |
+| c_01 El Silbón | `.../media/1377934/mitos_portuguesa_c_01_el-silbon.pdf` |
+| c_12 La Bola de Fuego | `.../media/1377945/mitos_portuguesa_c_12_la-bola-de-fuego.pdf` |
+| c_18 Los duendes | `.../media/1377951/mitos_portuguesa_c_18_los-duendes.pdf` |
+| c_27 La Llorona o la Gritona | `.../media/1377960/mitos_portuguesa_c_27_la-llorona.pdf` |
+| c_28 La Sayona | `.../media/1377961/mitos_portuguesa_c_28_la-sayona.pdf` |
+| bibliografía general | `.../media/1377963/mitos_portuguesa_e_bibliografia.pdf` |
+
+Quedan sin resolver los nombres de archivo de **c_11 «El familiar o los pactos con el
+diablo»** (= la familia de Juan Machete) y **c_14 «El amo del agua»** (= la familia del
+Mohán). El número de media está calculado; falta el *slug*. **Pendiente de abrir la
+página índice en navegador y copiar los enlaces.**
+
+## Pieza por pieza
+
+**La Bola de Fuego.** Compartida, y de las dos orillas hay registro. Colombia:
+Martín 1979 la nombra entre los espantos llaneros; el EOT de Campohermoso registra la
+versión de piedemonte con el látigo como defensa y **dice explícitamente que viene de los
+Llanos Orientales**. Venezuela: Pérez Montero 2014 c_12, con tres testimonios y un
+abanico de orígenes que Colombia no tiene —«el alma en pena de un obispo pecador, de un
+hijo que maldijo a su madre, de **dos comadres que pelearon un jueves santo**, del judío
+errante, **del tirano Aguirre**, o del espíritu vagante de una pareja enamorada que hizo
+el amor en los días de Semana Santa». Esa lista es material nuevo para `versiones`.
+
+**El Silbón.** **La pieza que más nos falta.** Está en los dos libros colombianos del
+ciclo —Vargas Barón, relato 6.º; Baquero Nariño, p. 52; y Baquero abre su libro con un
+«Corrio de duendes y brujas / Golpe del Silbón»— y **no tiene ficha en el catálogo**.
+Del lado venezolano, Pérez Montero c_01 lo documenta con densidad: nace en **El Vijao
+(distrito Rojas, Barinas)** o en **Guanarito (Portuguesa)**, según quién cuente; se
+llamaría **Joaquín Flores**; mató a su padre por un venado y le llevó la asadura a su
+madre. Y aporta el dato bibliográfico que explica su difusión: el compositor
+**Dámaso Delgado** lo proyectó nacional e internacionalmente con su copla, y hay un
+folleto anterior, **Juan Pablo Rojas Hidalgo, *El Silbón: mito o realidad*, Guanare,
+Coordinación de Cultura del Estado Portuguesa, 1990**.
+
+**La Sayona.** No tenemos ficha. Pérez Montero c_28 la documenta con testimonios
+(quebrada de Araure; carretera vía San Carlos; urbanización Mamanico). **Y el eco
+colombiano existe y está documentado en fuente oficial**: el EOT de Campohermoso
+describe, sin nombrarla, a la mujer bella que «relinchaba como una mula» y se llevaba a
+«los hombres mujeriegos y adúlteros», con el tiple como defensa. Ese par
+—Portuguesa contra Campohermoso— es exactamente la comparativa que el spec §4.1 pide:
+el mismo motivo en otro municipio, no Medea.
+
+**La Llorona llanera.** No tenemos ficha llanera. Pérez Montero c_27 da la versión de
+Portuguesa con su explicación colonial —una española «de mucho abolengo» que mata al
+hijo tenido con un nativo— y tres testimonios.
+
+**Juan Machete.** No tenemos ficha. Del lado colombiano, **Martín 1979 trae el motivo
+completo sin el nombre**, en su sección «El pacto con el diablo»: el hombre que vende su
+alma un Viernes Santo a cambio de fincas ganaderas, con **un toro negro que vigila al
+amo**, y que muere una noche de relámpagos. Del lado venezolano, el capítulo 11 de Pérez
+Montero, «El familiar o los pactos con el diablo». Ese cruce es el mejor material sin
+usar de todo el encargo, y de paso reencuadra `el-toro-negro-patorreal`: el toro negro
+de Vargas Barón no es una invención literaria suelta, **es la figura del «familiar»**.
+
+**El Espanto del Río / el amo del agua.** Cap. 14 de Pérez Montero. Emparienta con
+`madre-rio-o-mohana` (Baquero, p. 42) y con los Mohanes del EOT de Campohermoso.
+
+## La escalera venezolana de segundo nivel
+
+Citada dentro de Pérez Montero 2014 y por tanto verificada como existente, aunque **no
+localizada en abierto**: Isabel Aretz, *Manual de folklore venezolano*, Caracas, Monte
+Ávila, 1976 · Miguel Acosta Saignes, *Estudios de folklore venezolano*, Caracas, UCV,
+1962 · Luis Arturo Domínguez, *Encuentro con el folklore en Venezuela*, Caracas, Cincel
+Kapelusz, 1992.
+
+---
+
+# V. NARRADORES — todo nombre, hato, vereda y fecha encontrados
+
+Hoy el corpus mestizo y mixto tiene **0 de 253 fichas que nombren a quien narra**
+(spec §2). Esto es lo que este levantamiento encontró. Todo está en fuente abierta y leída.
+
+## Orinoquía
+
+| nombre | qué narró | lugar | fecha | fuente |
+|---|---|---|---|---|
+| **Víctor Pascual Herrera**, «Pascual», campesino, nacido en una vereda de **Quetame** (Oriente de Cundinamarca), con **40 años en el piedemonte** | las ocho narraciones de *Los cuentos de Pascual* | **vereda de El Carmen, Villavicencio (Meta)**, entre el **caño Maizaro** y el **caño Buque** | recogidas «a finales del siglo XX»; preámbulo firmado en **enero de 1991**, en la **finca Hato Chico** | Baquero Nariño, *Los cuentos de Pascual*, dedicatoria y preámbulo pp. 3-25 |
+| **Alberto Baquero Nariño** | recopilador y reescritor declarado; «escritor e historiador, asesor de Planeación de la Universidad de los Llanos» | Villavicencio | 1991 / 2009 | el propio libro; revista *Orinoquia*, Unillanos, 2009 |
+| **Getulio Vargas Barón** (n. 1933) | autor de los doce relatos; se declara «testigo presencial y actor de los hechos» y dice haber trabajado «entre charlas informales, reuniones de familia e investigación» | Meta / Villavicencio | 1996 | *Cuentos, mitos y leyendas del llano*, presentación |
+| **Nacianceno Parra** y su hermano | mencionados como personas reales en el relato de Paratebueno, residentes en **Cumaral** y **Paratebueno** | Cumaral, Paratebueno | — | Baquero, p. 29 y ss. |
+| **«el Pollo de Oro»** | entrevistado por Baquero «por esos días» | Villavicencio | c. 1990 | Baquero, p. 29 y ss. |
+| **Miguel Ángel Martín** | folclorólogo; recopila creencias, coplas y el pacto con el diablo | Villavicencio | 1979 | *Del folclor llanero* |
+| **Temis Perea Pedroza** | firma la versión del tesoro de Caribabare reproducida por Llanera.com | Casanare | c. 2010 | Llanera.com (fuente **baja**) |
+
+Lugares citables con nombre y ya verificados: vereda de **El Carmen** y vereda de
+**El Calvario** (Villavicencio), **Cumaral**, **Paratebueno**, **Hato Corozal** (antes
+**La Yegüera**, parte de la hacienda jesuita **Caribabare**, 1664), **San Salvador del
+Puerto de Casanare**, **Nunchía**, **Yopal** (antes **La Estancia**, posada ganadera de
+**Elías Granados**, 1915), **Aguazul** (antes el caserío **Sevilla**; fundador **Efraín
+Morales**), **Chámeza** (1629), **La Salina** (c. 1537), **Maní**, **Monterrey** (antes
+**La Finca**, de **don Víctor Manuel Fernández**).
+
+## Amazonas — la encuesta de Leticia, septiembre de 1975
+
+Comisión del Instituto Caro y Cuervo llegada a Leticia el **17 de septiembre de 1975**,
+una semana de trabajo: **Luis Flórez** (jefe de Dialectología), **Jennie Figueroa**,
+**Marina Dueñas**, **María Luisa R. de Montes**, **José Joaquín Montes**, con el
+dialectólogo español **Manuel Alvar**. Trabajaron en **Leticia** y en **Nazareth**.
+
+| informante | qué narró | fuente |
+|---|---|---|
+| **Gladys de Bolívar** | El Cotomachaco (boa de dos cabezas, «vive por el Perú, en la selva, en cananguchal») **y** El Bufeo (el diente, la *pusanga*, el maleficio) | *Noticias Culturales* 179, pp. 6-9 |
+| **Manuel Curitima** | El Cotomachaco (la versión larga, «50 metros o más de alto») **y** El Bufeo (el perro que aúlla, los soles gastados en la noche, el huequito bajo el sombrero) | ídem |
+| **María Cachique de Vega** | El Bufeo: «se trasparenta es a gente… se aparece en forma del enamorao» | ídem |
+| **Pedro Rodoyc** (grafía del escaneo; probablemente *Rodóy* o *Rodoy*) | El Bufeo: el diente que se usa «pa'cer brujería» | ídem |
+| **Raimundo Curico** | El Bufeo: **distingue expresamente lo que vio de lo que le contaron** —«Claro que nojotros no hemos visto, pero… si contaban»— y clasifica tres clases de bufeo | ídem |
+| **niños de 10 a 12 años del puerto de Leticia**, «hablan portugués y español» | El Bufeo: el juego, la fruta, el que se lleva a la gente | ídem |
+| **Antonio Hernández Venancio**, **curaca** (jefe) **ticuna** | interrogado por Alvar y Flórez | **Nazareth** | ídem, fotografías |
+| **José García**, hablante de **muinane**, y **Francisco Martínez** | informantes de la encuesta lingüística | ídem |
+| **Heriberto Uribe** | facilitador local de la comisión, «conectándonos con personas adecuadas» | ídem |
+| **Mike Tsalickis** | prestó la lancha para el viaje **Leticia–San José** | ídem |
+| **Milton Jesús Pinto Linares**, Asociación Airumaküchi | «El mito de los alimentos» (base de `petapeta`) | CIFOR, **URL muerta (404)** |
+| **Pedro Roque** | Honorato y la Cobra Grande, en Leticia | Rodríguez de Montes 1981, **no verificado en abierto** |
+| **Guaraná Tanimuka** y **Ñaki Tanimuka** | narradores del ciclo ufaina según el módulo | von Hildebrand 1975, **por comprobar dentro del escaneo** |
+
+## Venezuela (para `versiones` y `similitudes`, no para el `mito`)
+
+De Pérez Montero 2014, todos con su capítulo: **Eduardo Daza** (vecino de Guanarito;
+Bola de Fuego, camino de Charco Azul por Mata Larga y Garcitas, sabanas de El Toro, con
+su sobrino **Rafael Daza**) · **Mercedes de Mena** (Bola de Fuego, Semana Santa, de Las
+Matas a Guanare, a los nueve años) · **Matilde Torres** (Bola de Fuego, finca de Guásimo
+Mayita, límite de Portuguesa con Cojedes) · **Francisco «Pancho» Orozco**, guanariteño de
+**80 años** (el Silbón sería **Joaquín Flores**, de El Vijao, distrito Rojas, Barinas) ·
+**Juan Francisco Tovar** (la Sayona y su hermano **Pedro Tovar**, quebrada de Araure) ·
+**Francisco Ignacio Pérez** (la Sayona, carretera vía San Carlos, hoy urbanización
+Mamanico) · **Eloy Armando Molina**, vecino de **Papelón** (la Llorona y el cementerio) ·
+**Freddy José Virgüez** (la Llorona, a los 14 años, en Guanarito) · y, en el capítulo del
+Silbón, **José Ramón Coronado, Mario Alvarado, Pilar de Salazar, Alejandro Asís Quintana,
+Alejandro Barco, Filomena Montilla, Giovanni Falcón, Gustavo Olivares, Josefa García,
+Julio Hernández, Rafael Pérez Hernández, Uslar García**.
+
+---
+
+# V-bis. Dos fuentes más, abiertas y verificadas hoy
+
+**Gracineia dos Santos Araújo**, «Curupira: configuración del mito en las narraciones
+orales de los pueblos de la selva», *Muiraquitã* (Universidade Federal do Acre), DOI
+10.29327/210932.11.1-8. Universidade Federal do Pará, Faculdade de Letras, Castanhal.
+URL verificada (200, PDF con texto, **en español**):
+`https://periodicos.ufac.br/index.php/mui/article/download/6343/4220`.
+Analiza la configuración del Curupira en narraciones orales del interior ribereño, con
+la misión de protección de la selva como elemento común a todos los relatos estudiados.
+**Sustituye al `cascudoCurupira` cuyo host está caído**, y es mejor: es análisis de
+relatos orales recogidos, no una síntesis de 1947. Limitación: es Pará y Acre, no Leticia.
+
+**Carlos G. Zárate Botía y Carlos E. Franky Calvo (eds.), *IMANI Mundo: estudios en la
+Amazonia colombiana*.** Instituto Amazónico de Investigaciones IMANI, Universidad
+Nacional de Colombia sede Amazonia. URL verificada (200, 1,8 MB, PDF con texto):
+`https://bffrepositorio.unal.edu.co/server/api/core/bitstreams/f695cf95-e7df-4c12-ab1b-911b8f3b66d5/content`.
+**Limitación, y hay que decirla claro: cero apariciones de «bufeo», «curupira» o
+«leyenda» en todo el volumen.** Sirve como segundo escalón de territorio para las 12
+fichas amazónicas, y para nada más. No se cita en `Similitudes`.
+
+---
+
+# VI. LO QUE NO EXISTE — qué se buscó y no se encontró
+
+Esta sección es larga a propósito. El encargo lo autorizaba.
+
+## Orinoquía
+
+1. **«Miguel Ángel Ospino, *Leyendas del Llano*». No existe.** Búsqueda por autor, por
+   título y por combinación con Villavicencio: nada. Lo que sí existe, y encaja con la
+   descripción del encargo, es **Miguel Ángel Martín, *Del folclor llanero*, 1979**
+   (§A1). Probablemente sea una confusión de nombre arrastrada.
+2. **Nepomuceno Jiménez.** Buscado por nombre con «llano», «leyendas», «Casanare»,
+   «Arauca», «folclor». **Sin resultado alguno.** No aparece ni como autor ni como
+   recopilador en ninguna base abierta. Puede ser otra confusión: el nombre que sí sale
+   en la bibliografía llanera es **Juan Nepomuceno Moreno**, el caudillo casanareño sobre
+   el que escribió Jane Rausch.
+3. **Los institutos de cultura de Casanare, Meta, Arauca y Vichada.** No se localizó un
+   solo repertorio de tradición oral publicado y abierto por ninguno de los cuatro. Lo
+   único institucional que apareció con contenido narrativo es municipal y de otro
+   departamento: el **EOT de Campohermoso (Boyacá)** en el repositorio CDIM de la ESAP.
+   **Queda pendiente**: el repositorio CDIM tiene EOT y PBOT de casi todos los municipios
+   del país, y muchos incluyen un capítulo cultural con leyendas. **Esa es la veta que
+   hay que picar para Casanare, Meta, Arauca y Vichada**, municipio por municipio.
+4. **El corpus del joropo y el contrapunteo.** Martín 1979 tiene capítulos sobre la
+   trova, el contrapunteo, la copla, el corrío y «Florentino y el Diablo», pero **no se
+   localizó ningún cancionero digitalizado y abierto** que fije una de nuestras 19 piezas
+   como texto cantado. El *Diccionario llanero* de **Hugo Mantilla Trejos** circula en
+   `musica-llanera.com`, un sitio sin editor identificable: **no se usó**.
+5. **El registro de «El tesoro de Caribabare» como relato.** Es el peor caso del ciclo.
+   La historia de la hacienda está bien documentada (Rueda Enciso, Martín, Rausch). **El
+   relato no tiene registro localizado**: sólo la versión de Temis Perea Pedroza
+   reproducida por un sitio web regional. El padre Manare, la bóveda, el riachuelo
+   desviado y la sombra de plenilunio **no aparecen en ninguna fuente de primer escalón**.
+6. **Prensa llanera antigua.** Se buscó hemeroteca regional de Casanare, Meta y Arauca
+   de mediados del siglo XX. **No se encontró ninguna digitalizada y abierta.** Lo único
+   de prensa que hay son cuatro notas de *El Tiempo* de 1997-2005, que son recepción
+   contemporánea, no registro antiguo. El tercer escalón del §4.1 **está vacío para este
+   ciclo**, y conviene decirlo en vez de simularlo.
+7. **La paginación del libro de Vargas Barón.** El ejemplar digitalizado no numera el
+   índice. Sin el impreso no se puede citar página.
+
+## Amazonas
+
+8. **El texto de Rodríguez de Montes 1981.** 262 páginas, ocho versiones de El Bufeo, y
+   **no está digitalizado en abierto en ninguna parte**. Es la carencia más cara del
+   ciclo: seis de las doce fichas dependen de ella. Lo único abierto es la ficha
+   descriptiva del Caro y Cuervo.
+9. **Hugo Niño, *Primitivos relatos contados otra vez* (1979)** y **Fernando Solarte
+   Lindo, *El hombre con cola de león* (1980)**. Ninguno de los dos está en abierto. Las
+   únicas URL que existen son fichas de **Google Books**, prohibidas por el §4.2. Tres
+   fichas (`chuya-chaqui`, `el-hijo-de-tuhixana`,
+   `el-descubrimiento-del-agua-y-los-peces`) **no tienen hoy fuente legítima de su
+   registro**.
+10. **Revista *Mundo Amazónico* (IMANI / UFAM).** Revisada. **No se localizó ningún
+    artículo sobre nuestras figuras.** La revista es de antropología social y ecología
+    política, no de literatura oral.
+11. **Instituto SINCHI.** Buscado. No se localizó material narrativo utilizable.
+12. **El nombre «Angélica Lucas» de `madre-de-playa`.** Cero apariciones en fuente
+    abierta. La propia nota del módulo lo llama «dato heredado del corpus».
+13. **Dialnet.** Dos artículos pertinentes localizados —«Notas etnográficas sobre el
+    cosmos Ufaina y su relación con la maloca» (cód. 4862345) y «Mitos y leyendas de la
+    Amazonía brasileña y peruana» (cód. 7528487)—. **Las dos descargas devuelven 503
+    repetido: pendientes de comprobar en navegador**, no muertas.
+
+## Lo que hay que abrir en navegador, no dar por muerto
+
+`revistafche.medellin.unal.edu.co` (Quirón, el inventario de bienes de Caribabare:
+timeout) · `dialnet.unirioja.es/descarga/articulo/{4862345,7528487}.pdf` (503) ·
+`cervantesvirtual.com` (3 URLs, 403) · `butantan.gov.br` y
+`serpentesegentes.butantan.gov.br` (403) · `portaldoprofessor.mec.gov.br` (403) ·
+`formacionenservicio.minedu.gob.pe` (403) · `africa.si.edu` (403) · la página índice de
+`bibliofep.fundacionempresaspolar.org` para copiar los enlaces de los capítulos 11 y 14.
+
+## Y la circularidad, que se cumplió
+
+Buscando la Curupira, **el cuarto resultado orgánico fue
+`mitosdecolombia.com/mitos/la-curupira`**. Somos, como avisaba el encargo, de los pocos
+sitios que publican estos relatos. **No se usó ninguna URL nuestra ni de ningún espejo**,
+y hay que contar con que volverá a pasar en `madre-de-playa`, `el-chuy-achaque` y
+`petapeta`.
+
+---
+
+# VII. DECISIONES
+
+Nueve decisiones. Cada una con tres opciones concretas, según la regla del proyecto.
+Ninguna se ejecuta aquí: esto es el paso 1.
+
+## D1. Faltan dos piezas de Vargas Barón y Baquero: **el Silbón, dos veces**
+
+El Silbón está en los dos libros del ciclo (Vargas, relato 6.º; Baquero, p. 52, más el
+poema de apertura) y **no tiene ficha**. Es, además, la figura llanera con mejor
+bibliografía venezolana disponible.
+
+- **A.** Crear **una sola ficha `el-silbon`** que use los dos registros colombianos como
+  versiones de un mismo motivo, con Pérez Montero 2014 c_01 para el origen venezolano.
+  *Ventaja:* una ficha densa y bien sostenida. *Coste:* mezcla dos obras firmadas.
+- **B.** Crear **dos fichas**, `el-silbon-vargas` y `el-silbon-baquero`, siguiendo la
+  lógica que el módulo ya aplica al separar subciclos por autor. *Ventaja:* coherente
+  con `definitions-vargas` / `definitions-baquero`. *Coste:* dos páginas casi gemelas,
+  que es justo lo que este bloque intenta evitar.
+- **C.** No crear ficha y **documentar el Silbón dentro de `la-bola-de-fuego`**, como
+  parte del repertorio que Martín 1979 y Vargas nombran juntos. *Ventaja:* cero páginas
+  nuevas. *Coste:* se pierde la pieza mejor documentada del ciclo.
+  → **Recomendación: A.**
+
+## D2. Falta *El Centauro* (Baquero, p. 33)
+
+- **A.** Crear `el-centauro-del-piedemonte`, con Pascual Herrera como narrador.
+- **B.** Dejarlo fuera y anotarlo como decisión editorial explícita en el dossier.
+- **C.** Absorberlo en `los-monstruos-de-paratebueno`, que comparte carretera y camino.
+  → **Recomendación: A**, por simetría con D1: el módulo tiene 6 de 8 sin razón declarada.
+
+## D3. `el-tesoro-de-caribare`: el slug conserva un error que ya nadie defiende
+
+La forma documentada es **Caribabare** en Martín 1979, en Rueda Enciso 2018 y en el
+inventario de Quirón. El módulo ya corrigió el título y dejó el slug «para no romper la URL».
+
+- **A.** Mantener slug, título corregido. *(lo que hay hoy)*
+- **B.** Cambiar a `el-tesoro-de-caribabare` con redirección 301 desde el viejo.
+- **C.** Cambiar a `la-hacienda-caribabare` y reencuadrar la ficha como historia con
+  leyenda adosada, que es lo que las fuentes sostienen.
+  → **Recomendación: B.** La 301 es barata y el error ortográfico está publicado.
+
+## D4. `el-llano-cobra-sus-deudas` no se llama así en el libro
+
+El índice de Vargas Barón dice **«El Llano cobra sus cuentas»**, y el título del módulo
+ya lo respeta. El slug dice `deudas`.
+
+- **A.** Dejarlo. **B.** Cambiar a `el-llano-cobra-sus-cuentas` con 301.
+- **C.** Cambiar slug y título a la forma del índice sin subtítulo.
+  → **Recomendación: B**, en el mismo lote que D3.
+
+## D5. `petapeta` y `ngutapa-y-chimuiyae` no son mixtos: son ticuna
+
+Nimuendajú 1952 y el ciclo de Yoí y Jau son mitología ticuna, y la ronda 4 incluye
+`ticuna-residual`.
+
+- **A.** **Moverlas a la comunidad `ticuna`**, región amazonas, en el mismo lote.
+- **B.** Dejarlas en `mixto` y declarar en la ficha que la atribución es ticuna.
+- **C.** Dejarlas y abrir la pregunta al cierre de `ticuna-residual`.
+  → **Recomendación: A.** El spec dice que «mixto» sin argumento no se publica, y aquí
+  el argumento contrario está en la etnografía.
+
+## D6. `el-descubrimiento-del-agua-y-los-peces`: tanimuka/ufaina
+
+Von Hildebrand 1975 (RCA 18: 323-382), recuperado y vivo, más el perfil lingüístico
+tanimuka del Ministerio de Cultura.
+
+- **A.** Mover a la comunidad **tanimuka**.
+- **B.** Dejar en mixto declarando que la versión publicada es la reescritura de Solarte
+  y no el ciclo ufaina, que es lo que hoy dice la nota del módulo.
+- **C.** Partir en dos: la reescritura de Solarte (mixto, literatura) y el ciclo ufaina
+  (tanimuka, etnografía).
+  → **Recomendación: C**, porque hoy la ficha confunde las dos cosas y las fuentes de
+  cada una son distintas.
+
+## D7. `yacuruna` es peruano, no colombiano ni mixto
+
+- **A.** Retirarlo del catálogo colombiano.
+- **B.** Mantenerlo y reencuadrarlo como **«figura amazónica de circulación peruana»**,
+  con la atribución en el título y `Similitudes` apoyada en el bufeo de Leticia.
+- **C.** Fundirlo con `el-bufeo` como variante del mismo motivo del hombre del agua.
+  → **Recomendación: B.** La circulación transfronteriza es real; lo falso es el cajón.
+
+## D8. `chuya-chaqui` y `el-chuy-achaque` son la misma figura, y ninguna tiene fuente viva
+
+Dos fichas para *chulla chaki*: una es la versión breve leticiana (fuente 404), la otra
+la reescritura de Hugo Niño (sólo Google Books).
+
+- **A.** **Fusionar en una sola** `el-chullachaqui`, con la grafía quechua documentada,
+  y declarar la versión de Hugo Niño dentro de `versiones`.
+- **B.** Mantener las dos y buscar fuente nueva para cada una antes de escribir.
+- **C.** Mantener sólo la breve y retirar la de Hugo Niño por falta de fuente citable.
+  → **Recomendación: A**, y bloquear la redacción hasta que
+  `bicentenario.gob.pe` o el MINEDU vuelvan a abrirse en navegador.
+
+## D9. `madre-de-playa`: el caso sospechoso del ciclo
+
+Sin registro abierto, con un nombre propio sin fuente y un perfil de sirena fluvial que
+no aparece en el corpus de 1975.
+
+- **A.** **Bloquear la ficha** y declararla `SIN REGISTRO` hasta conseguir el impreso de
+  Rodríguez de Montes 1981.
+- **B.** Reescribirla retirando «Angélica Lucas» y toda biografía, dejando sólo playa,
+  guitarra y medianoche, con la fuente declarada como no verificada.
+- **C.** Retirarla del catálogo, como se hizo con `chimbilaco`.
+  → **Recomendación: A**, con **C** si el impreso no aparece. No **B**: publicar con la
+  fuente declarada como no verificada es lo que el spec §4 prohíbe.
+
+## Y una decisión que no es de ficha sino de módulo
+
+**El `definition-helpers.mjs` de Orinoquía tiene que desaparecer.** Seis marcos
+compartidos generan la `historia` y las `versiones` de 17 de las 19 fichas. Mientras
+exista, la meta 3 del spec §3 (≤ 2 % de oraciones repetidas dentro del ciclo) es
+inalcanzable por construcción. Y dos de sus afirmaciones son **falsas**, comprobado hoy:
+que Vargas Barón publicó «once cuentos» (son doce) y que Baquero «no publica fichas de
+informantes» (nombra a Víctor Pascual Herrera, su vereda y su origen).
