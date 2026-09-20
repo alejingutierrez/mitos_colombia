@@ -26,6 +26,7 @@ try {
   const rows = await loadDbMyths(client, community.id);
   const plan = [];
   const problems = [];
+  const porCrear = [];
   for (const row of rows) {
     if (only && !only.has(row.slug)) continue;
     const record = modules.get(row.slug);
@@ -33,9 +34,15 @@ try {
       problems.push(`${row.slug}: publicado en Neon pero sin módulo en el repo`);
       continue;
     }
+    // Las fichas que nunca entraron en la estructura editorial no tienen fila
+    // en `editorial_myths`: el dossier no existe todavía. Mandaba a
+    // `apply-editorial-myth.mjs`, que crea el expediente entero y de paso
+    // reescribe `image_url` desde `media.mjs` —con lo que revierte la portada
+    // de cualquier mito que ya pasó por el pipeline de imágenes—. Aquí se crea
+    // la fila copiando de `myths` lo que ya está publicado y sin tocar una sola
+    // columna de imagen.
     if (!row.editorial_id) {
-      problems.push(`${row.slug}: no tiene fila en editorial_myths; usa apply-editorial-myth.mjs para crear el expediente completo`);
-      continue;
+      porCrear.push(row);
     }
     const errors = validateRecord(record, { texto: false, fuentes: true });
     if (errors.length) problems.push(`${row.slug}: ${errors.join("; ")}`);
@@ -46,7 +53,8 @@ try {
   }
   for (const slug of modules.keys()) if (!rows.some((r) => r.slug === slug) && (!only || only.has(slug))) problems.push(`${slug}: módulo sin mito publicado en Neon para ${communitySlug}`);
 
-  console.log(`Fase B · ${communitySlug} · ${rows.length} publicados · ${modules.size} módulos · ${plan.length} con cambios de fuentes`);
+  console.log(`Fase B · ${communitySlug} · ${rows.length} publicados · ${modules.size} módulos · ${plan.length} con cambios de fuentes${porCrear.length ? ` · ${porCrear.length} expediente(s) por crear` : ""}`);
+  for (const row of porCrear) console.log(`  ✚ ${row.slug}: se creará su fila en editorial_myths copiando lo publicado; ninguna columna de imagen se toca`);
   console.table(plan.map(({ row, diff }) => ({ slug: row.slug, antes: diff.before, despues: diff.after, agregadas: diff.added.length, quitadas: diff.removed.length, reescritas: diff.reworded.length, clave: diff.keyChanged })));
   for (const { row, diff } of plan) {
     for (const u of diff.added) console.log(`  + ${row.slug}: ${u}`);
@@ -56,13 +64,38 @@ try {
     console.log(`\nPROBLEMAS (${problems.length}), no se aplica nada:`);
     for (const p of problems) console.log(`  ✗ ${p}`);
     process.exitCode = 1;
-  } else if (!plan.length) console.log("Neon ya coincide con los módulos: nada que aplicar.");
+  } else if (!plan.length && !porCrear.length) console.log("Neon ya coincide con los módulos: nada que aplicar.");
   else if (!options.apply) console.log(`\nDry-run. Para escribir: --apply --confirm=${confirmation}`);
   else if (options.confirm !== confirmation) throw new Error(`Para aplicar usa --confirm=${confirmation}.`);
   else {
     const backup = await saveBackup(client, communitySlug, "fuentes", plan.map(({ row }) => row.id));
     await client.query("BEGIN");
     try {
+      for (const row of porCrear) {
+        const record = modules.get(row.slug);
+        await client.query(
+          `INSERT INTO editorial_myths
+             (source_myth_id, title, slug, region_id, community_id, category_path, tags_raw,
+              content, excerpt, seo_title, seo_description, focus_keyword, focus_keywords_raw,
+              image_prompt, latitude, longitude, sources_json, key_sources_json, research_notes,
+              mito, historia, versiones, leccion, similitudes)
+           SELECT m.id, m.title, m.slug, m.region_id, m.community_id, $2, $3,
+                  m.content, m.excerpt, m.seo_title, m.seo_description, m.focus_keyword, $4,
+                  $5, m.latitude, m.longitude, $6, $7, $8,
+                  m.mito, m.historia, m.versiones, m.leccion, m.similitudes
+             FROM myths m WHERE m.id = $1`,
+          [
+            row.id,
+            record.category_path,
+            (record.tags || []).join(", "),
+            (record.focus_keywords || []).join(", "),
+            record.image_prompt || record.image_prompt_horizontal || "",
+            JSON.stringify(record.sources),
+            JSON.stringify(record.keySources),
+            record.researchNotes || null,
+          ],
+        );
+      }
       for (const { row, record } of plan) {
         await client.query("UPDATE editorial_myths SET sources_json = $2, key_sources_json = $3, updated_at = NOW() WHERE id = $1", [row.editorial_id, JSON.stringify(record.sources), JSON.stringify(record.keySources)]);
       }

@@ -128,15 +128,16 @@ function validateRecords(provenance, { allowPendingMedia = false } = {}) {
     if (record.tags.length !== 4 || record.focus_keywords.length !== 5) {
       throw new Error(`${record.slug}: taxonomía o palabras clave inválidas.`);
     }
+    // Antes fijaba nueve fuentes —siete para la ficha transferida—: el reparto
+    // en bloque escrito como aserción. Ahora cada ficha cita lo que usó, así
+    // que lo que se exige es el mínimo y que no haya URLs repetidas.
     const sources = [...record.keySources, ...record.sources];
-    const expectedSources =
-      record.editorial_scope === "abundance-transfer" ? 7 : 9;
     if (
-      sources.length !== expectedSources ||
-      new Set(sources.map(({ url }) => url)).size !== expectedSources
+      sources.length < 5 ||
+      new Set(sources.map(({ url }) => url)).size !== sources.length
     ) {
       throw new Error(
-        `${record.slug}: se esperaban ${expectedSources} fuentes únicas.`,
+        `${record.slug}: ${sources.length} fuentes, y el mínimo son cinco únicas.`,
       );
     }
     if (allowPendingMedia) {

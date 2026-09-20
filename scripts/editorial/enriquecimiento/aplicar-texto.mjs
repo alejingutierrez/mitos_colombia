@@ -8,6 +8,8 @@
  * en `myths` (lo que lee la página) y en `editorial_myths` (el expediente), en una
  * sola transacción con respaldo previo. Nunca imágenes, taxonomía, coordenadas ni
  * fuentes: para eso están apply-myth-triptych, los sync-<com>-review y aplicar-fuentes.
+ * Sí mantiene en paso `seo_pages`, que es de donde la página saca su <title> y su
+ * descripción: `myths.seo_title` sólo actúa de reserva cuando esa fila no existe.
  * A diferencia de apply-editorial-myth.mjs, no reescribe image_url desde el módulo,
  * que suele estar desactualizado respecto de lo que subió el pipeline de imágenes.
  */
@@ -26,6 +28,16 @@ const client = await connect(options);
 try {
   const community = await resolveCommunity(client, communitySlug, options);
   const rows = await loadDbMyths(client, community.id);
+  // La cabecera de la página vive en `seo_pages` y puede haberse quedado atrás
+  // aunque el texto ya coincida: hay que mirarla para decidir si hay trabajo.
+  const cabeceras = new Map(
+    (
+      await client.query(
+        "SELECT slug, meta_title, meta_description FROM seo_pages WHERE page_type = 'myth' AND slug = ANY($1)",
+        [rows.map((r) => r.slug)],
+      )
+    ).rows.map((r) => [r.slug, r]),
+  );
   const plan = [];
   const problems = [];
   for (const row of rows) {
@@ -35,6 +47,12 @@ try {
     const errors = validateRecord(record, { texto: true, fuentes: false });
     if (errors.length) problems.push(`${row.slug}: ${errors.join("; ")}`);
     const changed = diffText(row, record);
+    const cabecera = cabeceras.get(row.slug);
+    const cabeceraVieja =
+      !cabecera ||
+      cabecera.meta_title !== record.seo_title ||
+      cabecera.meta_description !== record.seo_description;
+    if (cabeceraVieja) changed.push("seo_pages");
     if (changed.length) plan.push({ row, record, changed });
   }
   console.log(`Fase A · ${communitySlug} · ${rows.length} publicados · ${plan.length} con cambios de texto`);
@@ -55,6 +73,36 @@ try {
         const set = FIELDS.map((f, i) => `${f} = $${i + 2}`).join(", ");
         await client.query(`UPDATE myths SET ${set}, content_formatted = TRUE, updated_at = NOW() WHERE id = $1`, [row.id, ...values]);
         if (row.editorial_id) await client.query(`UPDATE editorial_myths SET ${set}, content_formatted = TRUE, updated_at = NOW() WHERE id = $1`, [row.editorial_id, ...values]);
+        // El <title> de la página no sale de `myths.seo_title`: sale de
+        // `seo_pages`, una tabla aparte que `generateMetadata` consulta antes
+        // que nada y que se quedaba con el título viejo. Se veía crudo en la
+        // ficha de la Tunda, que seguía anunciándose en Google como «Tulavieja:
+        // El Mito de Adriano Lemos» —un nombre que la investigación mostró que
+        // sale de este mismo sitio— mucho después de reescribirla.
+        await client.query(
+          `INSERT INTO seo_pages
+             (page_type, slug, meta_title, meta_description, meta_keywords,
+              og_title, og_description, twitter_title, twitter_description,
+              canonical_path, updated_at)
+           VALUES ('myth', $1, $2, $3, $4, $2, $3, $2, $3, $5, NOW())
+           ON CONFLICT (page_type, slug) DO UPDATE SET
+             meta_title = EXCLUDED.meta_title,
+             meta_description = EXCLUDED.meta_description,
+             meta_keywords = EXCLUDED.meta_keywords,
+             og_title = EXCLUDED.og_title,
+             og_description = EXCLUDED.og_description,
+             twitter_title = EXCLUDED.twitter_title,
+             twitter_description = EXCLUDED.twitter_description,
+             canonical_path = EXCLUDED.canonical_path,
+             updated_at = NOW()`,
+          [
+            row.slug,
+            record.seo_title,
+            record.seo_description,
+            (record.focus_keywords || []).join(", "),
+            `/mitos/${row.slug}`,
+          ],
+        );
       }
       await client.query("COMMIT");
     } catch (error) {
