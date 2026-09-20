@@ -110,6 +110,50 @@ fuente.
 
 ---
 
+### I · `las-clavelinas`, `el-castellano-de-san-juan`, `genus-irritable-vatum`, `francisco-el-hombre` → resueltas al escribir las actas
+
+Otero D'Costa se queda en el ciclo y cada `historia` escribe su procedencia
+caribeña, que está documentada: vivió en Cartagena desde antes de 1912 hasta
+1923, dirigió el ferrocarril Cartagena-Calamar, fue concejal y **fundó la
+Academia de Historia de Cartagena y su Boletín Historial**. Las tres piezas
+transcurren en Santa Marta (dos) y Cartagena (una).
+
+Los slugs `las-clavelinas` y `genus-irritable-vatum` se conservan; la grafía
+impresa —«Las Clavellinas», «Genus irritabile vatum», que es Horacio— se
+corrige en el título visible y se menciona en `historia`. Es distinto del caso
+de «Clara»: allí el slug sostenía una invención sobre el personaje, aquí sólo
+hay una errata de transcripción.
+
+En `francisco-el-hombre` el relato cuenta la victoria canónica y **`versiones`
+abre con el registro de 1940**: «Vida y muerte de Pedro Nolasco Padilla», de
+Antonio Brugés Carmona en *El Tiempo*, donde el acordeonero no vence al diablo
+sino que pacta con él.
+
+---
+
 ## Abiertas
 
-Ninguna por ahora.
+### J · `el-tesoro-de-morgan` es raizal y el catálogo no tiene dónde ponerlo
+
+El propio módulo la llama «leyenda raizal e isleña». Los informantes hablan en
+inglés isleño, la transmisión lleva cinco generaciones y el archivo está
+catalogado en el Centro de Memorias Orales del Banco de la República. El acta
+la propone como `mover a raizal`.
+
+**Comprobado contra Neon: de las 51 comunidades del catálogo, ninguna es
+raizal ni isleña.** No hay dónde moverla.
+
+Medida tomada mientras tanto: la ficha se queda en «mestizo» y **lo dice en
+`historia`**, nombrando lo que la pieza es y que el cajón es una agrupación
+administrativa del sitio. No se calla.
+
+① Crear la comunidad raizal en el catálogo y mover la ficha (y las que
+aparezcan después: San Andrés y Providencia tienen corpus propio).
+② Dejarlo como está, con la procedencia declarada en `historia`.
+③ Crear una región o etiqueta de archipiélago sin comunidad propia.
+
+Y un dato del anexo que la ficha tiene que recoger: **Exquemelin, el único
+testigo próximo que la leyenda invoca, describe a Morgan vaciando Santa
+Catalina y repartiendo el botín de Panamá en Chagre antes de escabullirse a
+Jamaica. No hay entierro.** Además, «luces y mapas» del resumen heredado no
+aparece en ninguna fuente verificada: es utilería añadida.

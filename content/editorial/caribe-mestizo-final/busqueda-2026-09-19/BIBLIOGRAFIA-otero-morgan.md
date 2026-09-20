@@ -917,14 +917,40 @@ como la lista de arriba.
 - El PDF de **«El Archipiélago de San Andrés (las Islas de San Andrés y Providencia): noticia
   geográfica»** (Banrep Babel, `p17054coll10/id/2288`) cortó la descarga dos veces a los ~3 MB.
   Queda como pendiente técnico, no como fuente descartada.
+- **Parsons digitalizado no existe en el Banco de la República.** Se consultó la API CONTENTdm de
+  `babel.banrepcultural.org` con «Parsons» (100 resultados) y «Providencia» (1.135) y la
+  monografía no está en ninguna colección digital. La edición confirmada es El Áncora Editores,
+  1985, citada por Archbold Núñez. La única copia en línea está en Scribd, que está vetado.
+- **Díaz Galindo (1978) y Cabrera Ortiz (1980): sin digitalización institucional.** Ninguno se
+  abrió, y por tanto ninguno se reporta como verificado. Ojo con el primero: las referencias
+  oscilan entre «Francisco Díaz Galindo» y «Félix Galindo Díaz». El nombre del autor está sin
+  fijar.
+- **Kupperman, *Providence Island 1630-1641*** y **Wilson, *Crab Antics* (1973)**: los dos están
+  escaneados en Internet Archive pero bajo préstamo restringido, y Cambridge devolvió 403 y 500.
+  No se pudo comprobar si Wilson menciona a Morgan o el tesoro. Y Kupperman **termina en 1641**:
+  sirve para el fuerte, no para Morgan.
+- **Rowland, «Spanish Occupation of the Island of Old Providence, or Santa Catalina, 1641-1670»**
+  (*Hispanic American Historical Review* 15:3, 1935, pp. 298-312): **HTTP 403** en Duke UP. Por
+  título y fechas es el artículo académico más pertinente que existe sobre la ocupación española
+  que Morgan encontró, y está citado por Archbold Núñez. Requiere acceso institucional.
+- **El informe «Fort Warwick/Fuerte La Libertad: Santa Catalina y Providencia» de Jairo Archbold
+  Núñez (2014)** y los informes del OPSCIAP: existen, son la mejor arqueología del fuerte y
+  **sólo están en academia.edu y ResearchGate**, que están vetados. El informe de 1986 sobre el
+  Fuerte de La Libertad está en el Centro de Documentación del Banco de la República en San
+  Andrés, en papel.
 
 ### Buscado y no encontrado
 
 - **El texto publicado de *Tío Conejo zapatero* de Buenaventura.** No aparece en el catálogo de
   Univalle, ni en la cronología del Departamento de Artes Escénicas, ni en ninguna antología
   localizable. Se buscó por título exacto, por «teatro para niños Buenaventura», por TEC y por
-  Escuela Departamental de Teatro. **Sin esto, la ficha no tiene escalón 1.**
-- **Cualquier fuente que ligue *Tío Conejo zapatero* con Cotorra o con Córdoba.** Cero resultados.
+  Escuela Departamental de Teatro. Hace falta para citar la entrada de `versiones` por su texto.
+- ~~Cualquier fuente que ligue *Tío Conejo zapatero* con Cotorra o con Córdoba.~~ **Encontrada, y
+  no por mí:** Zapata Olivella, *Tradición oral y conducta en Córdoba*, pp. 261-262. Cotorra está
+  escrita en la primera línea del cuento. **La lección es de método:** busqué el relato por el
+  autor que la ficha heredada nombraba y no por el corpus del ciclo, y así se pierde un primario
+  que estaba en la misma carpeta del repo. Cuando una ficha viene atribuida a un autor, hay que
+  buscar además el relato sin él.
 - **El PDF del libro *Francisco el Hombre, juglar y leyenda* (Mincultura 2014).** El enlace oficial
   da 404 en los cuatro dominios del Ministerio. La única copia que aparece en búsquedas está en
   StudyLib, que es agregador y está prohibido.
@@ -958,5 +984,17 @@ territorio de las tres fichas `otero` (el *Floresta* de José Nicolás de la Ros
 de Santa Marta y los ataques neerlandeses de 1629, Pedro Claver y la trata en Cartagena,
 Reichel-Dolmatoff y la provincia de El Carbón en la Sierra Nevada).
 
-**Este anexo se completa con esos resultados antes de pasar al Paso 2.** Lo que está por encima de
-esta línea es lo verificado a mano, URL por URL, el 2026-09-19.
+**El barrido (a) está cerrado**: sus resultados están incorporados arriba, en las entradas 8 a 11
+de `el-tesoro-de-morgan` y en **LO QUE NO EXISTE**. Las tres piezas que quedaron sólidas y
+legibles son Exquemelin en sus dos ediciones abiertas, la entrada «Fuerte Warwick» de la
+Enciclopedia del Banco de la República y el inventario archivístico de Archbold Núñez en
+*Cuadernos del Caribe*.
+
+**El barrido (b), el del territorio de las tres fichas `otero`, sigue abierto** y es lo único
+que le falta a este documento: el *Floresta* de José Nicolás de la Rosa, los ataques neerlandeses
+a Santa Marta en 1629, Pedro Claver y la trata en Cartagena, y la provincia de El Carbón en la
+Sierra Nevada. Las tres actas lo declaran como pendiente y ninguna escribe un solo hecho de
+territorio sin anclarlo.
+
+Todo lo que está por encima de esta línea se abrió y se leyó a mano, URL por URL, entre el
+2026-09-19 y el 2026-09-20.
