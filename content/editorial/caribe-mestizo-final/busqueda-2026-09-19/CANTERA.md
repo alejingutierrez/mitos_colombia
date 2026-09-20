@@ -346,3 +346,32 @@ el nivel de concreción que se pide; no se copia.
 - **ya usada en 1 ficha(s):** la-mina-de-oro-en-el-infierno
 - **ejemplo de summary** (de `la-mina-de-oro-en-el-infierno`, NO copiar): Mide hoy el prejuicio que este chiste da por supuesto. El trabajo parte de que en la costa Caribe los términos costeño y cachaco se usan con connotación negativa en un caso y positiva en el otro, y prueba con medidas explícitas e implícitas si existen prejuicios entre los dos grupos, cuál de ellos l
 - **ejemplo de limitation:** Es un trabajo de grado de pregrado en administración, no un estudio de folclor ni de historia: su objeto es la gestión de recursos humanos, su muestra es contemporánea y urbana, y no dice nada del Sinú, de los años sesenta ni de la tradición oral. No distingue
+
+---
+
+## Nota de verificación · 2026-09-19
+
+**`enciclopedia.banrepcultural.org` es válida, aunque `curl` y `WebFetch` digan
+que no.** Un agente avisó de que devolvía 302 a `validate.perfdrive.com` —un
+antibot de Radware— y propuso retirarla; está citada en las 19 fichas
+escritas hasta ese momento, así que se comprobó antes de tocar nada.
+
+Comprobado con `curl` y user-agent de navegador: **responde 200 pero la URL
+final es la del validador y el cuerpo no tiene una palabra del artículo.**
+Comprobado después con un navegador real: **la página carga sola, entera y sin
+pedir nada**, con los datos que las fichas citan (Lorica, Córdoba; médico,
+antropólogo y folclorista; 1920-2004).
+
+El antibot filtra clientes de línea de comandos y deja pasar navegadores. La
+fuente es buena y se queda.
+
+**La lección de método, que vale para todo el bloque:** una URL que falla por
+`curl` o por `WebFetch` no está necesariamente caída. Antes de retirar una
+fuente por un 403 o por una redirección a un validador, hay que abrirla en un
+navegador. Retirarla sin comprobarlo habría costado una fuente institucional
+en diecinueve fichas.
+
+Y al revés, el caso contrario sigue valiendo: FLACSO
+(`biblio.flacsoandes.edu.ec`) sí está fuera de alcance, porque su pantalla
+pide pulsar un botón para confirmar que quien accede es una persona. Eso no es
+un filtro que un navegador cruce solo.
