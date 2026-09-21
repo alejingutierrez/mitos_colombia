@@ -667,7 +667,13 @@ export function validateRecord(record, { texto = true, fuentes = true } = {}) {
         continue;
       }
       if (!["https:", "http:"].includes(parsed.protocol)) errors.push(`protocolo no permitido: ${s.url}`);
-      const key = normalizeUrl(s.url);
+      // La identidad de una fuente es su URL **y su título**: un mismo PDF
+      // puede contener varias obras —las actas de un simposio con seis
+      // capítulos de seis autores, o una antología que reproduce el libro de
+      // otro—, y ésas son citas distintas aunque el enlace coincida. Se
+      // distinguen con `#page=`, que `normalizeUrl` borra a propósito. Lo que
+      // sigue prohibido es la misma obra dos veces.
+      const key = `${normalizeUrl(s.url)}|${String(s.title || "").trim().toLowerCase()}`;
       if (seen.has(key)) errors.push(`fuente duplicada dentro del mito: ${s.url}`);
       seen.add(key);
     }
