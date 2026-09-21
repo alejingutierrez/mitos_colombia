@@ -1,3 +1,17 @@
+> **CORRECCIÓN (2026-09-21).** Este informe afirma que la URL de Villa Posse
+> «no contiene ninguna de las dieciséis». **Es falso.** El tomo II trae
+> «EL HOMBRE DEL FAROL» íntegro en las pp. 44-49, dentro de la **sección 17**,
+> que reproduce las *Leyendas* de Enrique Otero D'Costa (Biblioteca Aldeana,
+> 1936) — con las declaraciones de Manuel Llanos y el auto de 1828 que ordena
+> «publíquese su inocencia». Comprobado contra el texto ya extraído en
+> `content/editorial/caribe-mestizo-final/primarias/villa-posse-1993-otero-varias-regiones.txt`.
+>
+> El error vino de buscar «Bogotá» en el índice: esa sección se titula «Varias
+> regiones» y no nombra la ciudad. Es el mismo despiste que dejó tres fichas
+> del Caribe por «sin fuente» hasta que se miró la sección 17.
+>
+> Con esto, **Otero D'Costa sostiene siete fichas del bloque**, no seis.
+
 # Bibliografía — Bogotá mestizo, ronda 3 (16 fichas)
 
 Paso 1 del brief `docs/brief-mestizos-y-mixtos.md`. Escalera del spec §4.1.

@@ -7,6 +7,33 @@ nada se publica hasta que responde.
 
 ## Abiertas
 
+### 0 · El libro de 2008 existe, sostiene DOCE fichas y nadie puede abrirlo
+
+Identificado hasta la página: **Asdrúbal López Orozco, *Mitos y leyendas de
+Bogotá: biografía*, Kingkolor, 2008, 107 pp., ISBN 978-958-8260-82-2**. Es
+obra distinta de *Mitos y leyendas de Colombia* del mismo autor, que sí está
+en Internet Archive pero sólo en préstamo.
+
+La ficha Koha de Fe y Alegría trae **el índice completo con paginación**, y
+ahí se ve que no sostiene cuatro fichas sino **doce de las dieciséis**: la
+monja y el taxista (p. 4), los esqueletos caminantes (12), el ánima sola (18),
+los fantasmas de La Candelaria (25), la Loca Margarita (30), Russi (44), el
+venado de oro (51), el Loco Arias (56), el toro en el ascensor (59), el bobo
+del tranvía (66), Monserrate (69) y la calle del Cartucho (84).
+
+**No hay ejemplar digitalizado**: BibloRed, la Biblioteca Digital de Bogotá,
+Internet Archive y la Biblioteca Nacional no lo tienen, y el CENDOC del IDPC
+lleva días devolviendo 502. Dos fichas quedan bloqueadas por esto
+—`la-monja-vidente-y-el-taxista` y `los-esqueletos-caminantes`—, con
+`nudos: []` y «sin decidir», que es lo que el spec §8 prescribe. Las otras
+diez se salvaron porque aparecieron registros mejores y anteriores.
+
+① Conseguir el libro —está en Fe y Alegría y probablemente en la Luis Ángel
+Arango— y desbloquear las dos. ② Publicarlas apoyadas sólo en lo que el
+territorio sostiene, sin afirmar nada del relato. ③ Dejarlas bloqueadas y
+dichas hasta que aparezca.
+
+
 ### A · `la-loca-margarita`: el apellido del título no está en el registro
 
 El único registro de época del ciclo es la crónica del **Magazín dominical de
