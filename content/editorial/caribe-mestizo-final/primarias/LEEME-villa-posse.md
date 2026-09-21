@@ -44,19 +44,28 @@ texto.
 > índice impreso: un relato que empieza a media página comparte esa página con
 > el anterior.)
 >
-> **Las dieciséis que siguen bloqueadas**, sin un solo nudo posible:
-> `castellano-viejo`, `por-la-boca-muere-el-pez`,
-> `a-dios-rogando-y-con-el-mazo-dando`, `la-imagen-de-san-antonio`,
-> `al-convento`, `la-sombra`, `despues-del-sitio`, `la-casa-de-don-benito`,
-> `doce-en-punto-de-la-noche`, `un-quejido-una-luz`,
-> `una-reunion-clandestina`, `en-el-once`, `viva-la-libertad`, `un-anonimo`,
-> `en-el-sitio-de-morillo`, `la-clave-de-la-felicidad`.
+> **Las dieciséis que no están aquí**: trece de ellas aparecieron el mismo día
+> en la **sección 28** del mismo tomo, que es de otra autora y otro libro —ver
+> `LEEME-porto-de-gonzalez.md`—: `la-imagen-de-san-antonio`, `al-convento`,
+> `la-sombra`, `despues-del-sitio`, `la-casa-de-don-benito`,
+> `doce-en-punto-de-la-noche`, `un-quejido-una-luz`, `una-reunion-clandestina`,
+> `en-el-once`, `viva-la-libertad`, `un-anonimo`, `en-el-sitio-de-morillo` y
+> `la-clave-de-la-felicidad`.
 >
-> Para ésas no hay atajo digital: hay que ir al papel (BNC N 55398 / N 55399
-> para la edición de 1946, A 36897 para la de 1948; también en el Banco de la
-> República). Y conviene pedir el **índice**, porque dos títulos del catálogo
-> ya no coinciden con los del libro y `al-convento` puede ser un duplicado de
-> «¡Maldito sea Napoleón!…», que cuenta el mismo argumento.
+> **Y quedan tres sin fuente localizada, en ninguna de las dos secciones:**
+> `castellano-viejo`, `por-la-boca-muere-el-pez` y
+> `a-dios-rogando-y-con-el-mazo-dando`. Comprobado por título y por contenido
+> en los dos extractos (no aparecen «Villalta», «Mariana», «da Cunha», «Juan
+> Pérez» ni «hisopo» en ninguno de los dos). Para ésas no hay atajo digital:
+> hay que ir al papel (BNC N 55398 / N 55399 para la edición de 1946, A 36897
+> para la de 1948; también en el Banco de la República), y conviene pedir el
+> **índice**, porque son las únicas tres del subciclo cuyo título no se ha
+> podido confrontar con nada.
+>
+> **La cuenta cuadra:** 17 (sección 18, Martínez Fajardo) + 13 (sección 28,
+> Porto de González) + 3 sin fuente = las 33 fichas del subciclo `martinez`.
+> Que trece de las treinta y tres no sean de Martínez Fajardo es un problema
+> del subciclo, no de este archivo.
 
 ## La frase que sostiene el límite editorial, por fin con página
 
