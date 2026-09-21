@@ -381,14 +381,20 @@ export function citaEstaEn(cita, primarioNormalizado, { umbral = 0.66, trozo = 2
   if (partes.length > 1) {
     return partes.every((parte) => citaEstaEn(parte, primarioNormalizado, { umbral, trozo }));
   }
-  // Los trozos se solapan a la mitad. Con troceado a tope, **una sola letra de
-  // más desplaza todos los fragmentos siguientes** y una cita buena con una
-  // errata del OCR en la segunda palabra falla entera. Con solapamiento, cada
-  // posición del texto queda cubierta por dos trozos y una errata local sólo
-  // rompe los que la contienen.
-  const paso = Math.max(8, Math.floor(trozo / 2));
+  // Los trozos van a tope, sin solaparse, y es un compromiso medido.
+  //
+  // Solapándolos, una errata rompe menos fragmentos —el argumento es bueno—
+  // pero salen el doble de trozos y el umbral de dos tercios se vuelve más
+  // exigente: probado sobre las 675 citas del primer ciclo, el solapamiento
+  // convirtió tres citas buenas en bloqueos y no rescató ninguna. Sin él, el
+  // gate encontró los tres errores reales de transcripción que había y ningún
+  // falso positivo.
+  //
+  // La limitación conocida se queda escrita: una cita corta con dos erratas
+  // seguidas puede fallar entera. La salida es citarla por tramos con
+  // corchetes, que además es mejor práctica editorial.
   const trozos = [];
-  for (let i = 0; i + trozo <= c.length; i += paso) trozos.push(c.slice(i, i + trozo));
+  for (let i = 0; i + trozo <= c.length; i += trozo) trozos.push(c.slice(i, i + trozo));
   if (!trozos.length) return primarioNormalizado.includes(c);
   const hallados = trozos.filter((t) => primarioNormalizado.includes(t)).length;
   return hallados / trozos.length >= umbral;
