@@ -41,8 +41,13 @@ export function buildBogotaMestizoMemoryEditorialMyth(input) {
   if (!media) throw new Error(`${input.slug}: falta inventario visual.`);
   const categoryPath = bogotaMestizoMemoryCategoryBySlug[input.slug];
   if (!categoryPath) throw new Error(`${input.slug}: falta taxonomía.`);
-  const historia = `${input.historyCore}\n\n${sharedHistory}`;
-  const versiones = `${input.versionCore}\n\n${sharedVersions}`;
+  // Lo propio manda; el marco compartido sólo actúa donde aún no se ha
+  // reescrito. `sharedHistory` son 277 palabras idénticas en las ocho fichas
+  // —entre el 83 % y el 85 % de cada `historia`— y además hablan del proyecto
+  // («este frente revisa ocho URL heredadas bajo Andina > Bogotá > Mestizo»),
+  // que es contabilidad interna y no tiene por qué leerla nadie.
+  const historia = input.historia ?? `${input.historyCore}\n\n${sharedHistory}`;
+  const versiones = input.versiones ?? `${input.versionCore}\n\n${sharedVersions}`;
   const imagePromptHorizontal = horizontalPrompt(input.sceneHorizontal);
   const imagePromptVertical = verticalPrompt(input.sceneVertical);
   const record = {
@@ -56,7 +61,8 @@ export function buildBogotaMestizoMemoryEditorialMyth(input) {
     historia,
     versiones,
     leccion: input.leccion,
-    similitudes: input.similarityCore,
+    similitudes: input.similitudes ?? input.similarityCore,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     excerpt: input.excerpt,
     seo_title: input.seoTitle,
     seo_description: input.seoDescription,

@@ -493,9 +493,18 @@ export const bogotaMestizoMemorySourceKeysBySlug = {
 export function pickBogotaMestizoMemorySources(slug) {
   const keys = bogotaMestizoMemorySourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: falta selección de fuentes.`);
-  return keys.map((key) => {
+  // Admite `{ key, summary, limitation }` además de la clave suelta: la ficha
+  // bibliográfica la fija el pool y lo que cambia por mito es qué dice esa
+  // obra sobre ESE relato.
+  return keys.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = bogotaMestizoMemorySources[key];
-    if (!selected) throw new Error(`${slug}: fuente desconocida ${key}.`);
-    return selected;
+    if (!selected) throw new Error(`${slug}: fuente desconocida ${JSON.stringify(entrada)}.`);
+    if (typeof entrada === "string") return selected;
+    return {
+      ...selected,
+      ...(entrada.summary ? { summary: entrada.summary } : {}),
+      ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
   });
 }
