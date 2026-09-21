@@ -20,7 +20,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
-import { parseArgs, words, fuenteVetada, medirProsa, WORD_RANGES, MITO_MINIMO_CORTO, today } from "./lib.mjs";
+import {
+  parseArgs, words, fuenteVetada, medirProsa, WORD_RANGES, MITO_MINIMO_CORTO, today,
+  normalizarParaCotejo, citaEstaEn,
+} from "./lib.mjs";
 
 const options = parseArgs(process.argv.slice(2));
 const ciclo = String(options.ciclo || options.modulos || "").trim();
@@ -30,6 +33,34 @@ const base = path.join("content", "editorial", ciclo);
 const fecha = String(options.fecha || today());
 const dirActas = path.join(base, `actas-${fecha}`);
 const dirRelatos = path.join(base, `reescritura-${fecha}`);
+
+// Los primarios del ciclo, normalizados, para cotejar contra ellos las citas
+// literales de los nudos. Hasta ahora el gate comprobaba que un nudo TUVIERA
+// cita; no comprobaba que la cita existiera. Es la diferencia entre exigir la
+// forma del ancla y exigir que el ancla agarre.
+const dirPrimarias = path.join(base, "primarias");
+let primario = "";
+// Qué obras tenemos extraídas, deducido del nombre de cada archivo. Sólo se
+// cotejan las citas cuyo nudo remite a una de ellas: un nudo que cita a
+// Exquemelin o una crónica de prensa no puede buscarse en un texto que no
+// tenemos, y bloquearlo sería ruido. De 675 nudos, eso separa 47 falsos
+// positivos de los que hay que mirar de verdad.
+const obrasExtraidas = [];
+try {
+  for (const f of fs.readdirSync(dirPrimarias)) {
+    if (!f.endsWith(".txt")) continue;
+    primario += normalizarParaCotejo(fs.readFileSync(path.join(dirPrimarias, f), "utf8"));
+    for (const parte of f.replace(/\.txt$/, "").split("-")) {
+      if (parte.length > 4 && !/^\d+$/.test(parte)) obrasExtraidas.push(parte.toLowerCase());
+    }
+  }
+} catch { /* sin primarios: el cotejo de citas se salta y se avisa */ }
+
+/** ¿El nudo remite a una obra cuyo texto tenemos? */
+function citaObraExtraida(fuente) {
+  const f = String(fuente || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  return obrasExtraidas.some((o) => f.includes(o));
+}
 
 const PROPUESTAS = new Set(["mestizo", "mixto", "sin decidir"]);
 const NUDOS_MINIMOS = Number(options["nudos-minimos"] || 3);
@@ -165,6 +196,15 @@ function validarActa(slug, acta) {
         if (words(n.literal) < 4) bloqueos.push(`${etq}.literal es demasiado corto para ser una cita: «${n.literal}»`);
         if (String(n.literal).trim() === String(n.hecho || "").trim()) {
           bloqueos.push(`${etq}.literal repite el «hecho» en vez de citar la fuente`);
+        }
+        // ¿La cita está de verdad en el primario? Se compara sobre texto sin
+        // espacios ni puntuación, porque el extraído parte frases por salto de
+        // línea, corta palabras con guion y a veces espacia las letras.
+        const enFuente = citaObraExtraida(n.fuente) ? citaEstaEn(n.literal, primario) : null;
+        if (enFuente === false) {
+          bloqueos.push(
+            `${etq}.literal cita una obra que tenemos extraída, y la frase no aparece en ella: «${String(n.literal).slice(0, 70)}…»`,
+          );
         }
       }
       if (n?.fuente && !/\bp{1,2}\.?\s*\d|\bpág|\bfol|\bmin\s*\d|\bcap/i.test(String(n.fuente))) {
@@ -372,6 +412,12 @@ for (const archivo of archivos) {
     prosa: prosaTxt,
   });
   if (bloqueos.length || avisos.length) detalle.push({ slug, bloqueos, avisos });
+}
+
+if (!primario) {
+  console.log(
+    `Aviso: no hay primarios en ${dirPrimarias}, así que las citas literales no se cotejan contra la fuente.\n`,
+  );
 }
 
 console.table(filas);

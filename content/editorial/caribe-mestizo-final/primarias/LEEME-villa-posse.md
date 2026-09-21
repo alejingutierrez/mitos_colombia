@@ -1,4 +1,4 @@
-# Villa Posse, el registro que desbloquea 17 de las 33 de Martínez
+# Villa Posse, el registro que desbloquea las 33 de Martínez — en tres secciones y con tres autores
 
 Eugenia Villa Posse (investigación y compilación), *Mitos y leyendas de
 Colombia*, **volumen II**, colección «Integración cultural», IADAP, Quito,
@@ -13,66 +13,44 @@ Colombia*, **volumen II**, colección «Integración cultural», IADAP, Quito,
 digitalizado en ninguna parte**: existe en dos ediciones de papel en la
 Biblioteca Nacional y el Banco de la República, y nada más. Eso dejaba 33
 fichas sin poder anclar un solo nudo, y el spec §8 las bloqueaba. Villa Posse
-desbloquea diecisiete; dieciséis siguen bloqueadas (ver la corrección de abajo).
+las desbloquea todas, pero no donde se creía: diecisiete en la sección 18 y
+dieciséis repartidas en otras dos secciones del mismo tomo, que son de otros
+dos autores (ver la corrección de abajo).
 
 **Villa Posse reproduce esos textos.** La sección 18 del tomo II, «Cuentos y
 leyendas · Cartagena — Departamento de Bolívar», declara su procedencia en la
-p. 67 y va seguida de los relatos. Es un registro de segunda mano, pero con el
+p. 65 y va seguida de los relatos. Es un registro de segunda mano, pero con el
 texto.
 
-> ### ⚠️ Corrección del 2026-09-21: son 17 de 33, no 31
+> ### ⚠️ Corrección 1 · 2026-09-21 · no son 31 títulos, son 17
 >
 > Este archivo afirmaba que «31 de los 33 títulos del subciclo se localizan por
-> su título». **Es falso, y costó media jornada de un lote descubrirlo.** La
-> sección 18 ocupa las pp. 67-125 —la siguiente, Santander, abre en la p. 127,
-> y el extracto no tiene huecos de paginación— y contiene **diecisiete**
-> relatos. La propia p. 67 lo dice en su primera línea: «Esta **selección** de
-> cuentos y leyendas de Cartagena…». El libro de 1948 tiene pp. 25-177; Villa
-> Posse reproduce 59 páginas de ellas.
+> su título» en la sección 18. **Son diecisiete.** La sección ocupa las
+> pp. 65-123 y su propia nota lo dice en la primera línea: «Esta **selección**
+> de cuentos y leyendas de Cartagena…». El libro de 1948 tiene pp. 25-177;
+> Villa Posse reproduce 59 páginas de ellas. Las dieciséis restantes están en
+> otras dos secciones del mismo tomo y son de otros dos autores: ver las
+> correcciones 2 y 3 al final de este archivo.
 >
-> **Los diecisiete que sí están** (con su paginación en la antología):
-> «El fantasma del Teatro Azul» (68-72) · «Macú, o el collar de camarones de
-> oro» (72-75) · «Zequiel» (75-80) · «Del folklore macabro» (80-83) · «La
-> muerte de los ojos verdes» (83-86) · «El talismán fúnebre» (86-89) ·
-> «Marineritis sentimental» (89-94) · «Mona… Mona…» (94-96) · «La abadesa
-> arrodillada» (96-98) · «De cuando fue regalado el Castillo de San Felipe y
-> La Popa» (99-101) · «El milagro de la Candelaria» (101-106) · «Celos de
-> esclavo» (106-108) · «El mal del mar» (108-110) · «El héroe» (110-112) ·
-> «¡Maldito sea Napoleón!…» (112-116) · «Templo de Santo Domingo y el Cristo
-> de la Expiración» (116-120) · «El auriga a quien mató el pasado…» (120-125).
-> (Las paginaciones salen de los marcadores de página del extracto, no de un
-> índice impreso: un relato que empieza a media página comparte esa página con
-> el anterior.)
->
-> **Las dieciséis que no están aquí**: trece de ellas aparecieron el mismo día
-> en la **sección 28** del mismo tomo, que es de otra autora y otro libro —ver
-> `LEEME-porto-de-gonzalez.md`—: `la-imagen-de-san-antonio`, `al-convento`,
-> `la-sombra`, `despues-del-sitio`, `la-casa-de-don-benito`,
-> `doce-en-punto-de-la-noche`, `un-quejido-una-luz`, `una-reunion-clandestina`,
-> `en-el-once`, `viva-la-libertad`, `un-anonimo`, `en-el-sitio-de-morillo` y
-> `la-clave-de-la-felicidad`.
->
-> **Y quedan tres sin fuente localizada, en ninguna de las dos secciones:**
-> `castellano-viejo`, `por-la-boca-muere-el-pez` y
-> `a-dios-rogando-y-con-el-mazo-dando`. Comprobado por título y por contenido
-> en los dos extractos (no aparecen «Villalta», «Mariana», «da Cunha», «Juan
-> Pérez» ni «hisopo» en ninguno de los dos). Para ésas no hay atajo digital:
-> hay que ir al papel (BNC N 55398 / N 55399 para la edición de 1946, A 36897
-> para la de 1948; también en el Banco de la República), y conviene pedir el
-> **índice**, porque son las únicas tres del subciclo cuyo título no se ha
-> podido confrontar con nada.
->
-> **La cuenta cuadra:** 17 (sección 18, Martínez Fajardo) + 13 (sección 28,
-> Porto de González) + 3 sin fuente = las 33 fichas del subciclo `martinez`.
-> Que trece de las treinta y tres no sean de Martínez Fajardo es un problema
-> del subciclo, no de este archivo.
+> **Los diecisiete de la sección 18**, con el folio ya corregido según la
+> corrección 3 (el número encabeza la página, no la cierra):
+> «El fantasma del Teatro Azul» (67-71) · «Macú, o el collar de camarones de
+> oro» (71-74) · «Zequiel» (74-78) · «Del folklore macabro» (78-82) · «La
+> muerte de los ojos verdes» (82-85) · «El talismán fúnebre» (85-88) ·
+> «Marineritis sentimental» (88-93) · «Mona… Mona…» (93-95) · «La abadesa
+> arrodillada» (95-97) · «De cuando fue regalado el Castillo de San Felipe y
+> La Popa» (98-100) · «El milagro de la Candelaria» (100-105) · «Celos de
+> esclavo» (105-107) · «El mal del mar» (107-109) · «El héroe» (109-111) ·
+> «¡Maldito sea Napoleón!…» (111-115) · «Templo de Santo Domingo y el Cristo
+> de la Expiración» (115-119) · «El auriga a quien mató el pasado…» (119-123).
 
 ## La frase que sostiene el límite editorial, por fin con página
 
 El módulo afirmaba que «la antología de Villa Posse explica que el autor
 recogió materiales asociados con tradición popular y los elaboró
 literariamente», y esa frase no se había podido confirmar en ninguna parte.
-Está en la **p. 65** (ver la corrección 3 al final: el folio encabeza la página, y la primera versión de este archivo dijo 67), y dice:
+Está en la **p. 65** (ver la corrección 3: el folio encabeza la página; la
+primera versión de este archivo dijo 67), y dice:
 
 > Martínez Fajardo, Eustorgio. Cuentos y Leyendas de Cartagena. Editorial
 > Nuevo Mundo, Cartagena, 1948. (p. 25-177)
@@ -110,8 +88,11 @@ tras una pantalla que pide confirmar que uno es persona.
 ## Este archivo
 
 `villa-posse-1993-cartagena-martinez-fajardo.txt` son las páginas de la
-sección 18 completa, extraídas con `pdftotext -layout`. Se versiona el texto y
-no el PDF. La sección de Santander del mismo tomo está en
+sección 18 completa (pp. 65-123), extraídas con `pdftotext -layout`. Se
+versiona el texto y
+no el PDF. Las otras dos secciones del ciclo tienen su propio extracto:
+`villa-posse-1993-cartagena-porto-de-gonzalez.txt` y
+`villa-posse-1993-otero-varias-regiones.txt`. La sección de Santander del mismo tomo está en
 `content/editorial/piedecuesta-santander/primarias/`.
 
 ---

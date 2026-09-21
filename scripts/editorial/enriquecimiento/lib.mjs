@@ -329,6 +329,65 @@ export function aperturaFirma(texto, n = 4) {
     .join("");
 }
 
+/**
+ * Normaliza un texto extraído con `pdftotext` para poder COTEJAR citas contra
+ * él. No sirve para leer: sirve para comparar.
+ *
+ * Tres cosas rompen la búsqueda literal en estos extractos, y las tres
+ * costaron una verificación fallida cada una:
+ *
+ *  1. **Saltos de línea dentro de la frase.** «Yo soy Jaime / Restrepo, de
+ *     Marinilla» no se encuentra buscándola entera.
+ *  2. **Guiones de fin de línea.** El texto imprime «llevado a la man-\ncuerda»,
+ *     así que «mancuerda» no aparece por ninguna parte.
+ *  3. **Letras espaciadas.** El OCR de las secciones peores escribe
+ *     «Z a r a t e y Saravia»; el extracto de Otero tiene 18.879 fragmentos así.
+ *
+ * La comparación se hace sobre el texto sin espacios ni puntuación y en
+ * minúsculas, que es la única forma fiable de preguntar «¿está esta frase?».
+ */
+export function normalizarParaCotejo(texto) {
+  return String(texto || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")   // tildes: el OCR las pierde y las inventa
+    .toLowerCase()
+    .replace(/[-\u00ad]\s*/g, "")       // guiones de fin de línea
+    .replace(/[^a-z0-9]/g, "");         // espacios y puntuación
+}
+
+/**
+ * ¿Aparece esta cita en el primario?
+ *
+ * La comparación **no puede ser exacta**, porque el primario es un OCR y tiene
+ * erratas dentro de las frases: «Sofamente» por «Solamente», «Debérnoslo» por
+ * «Debémoslo». Un redactor que copia bien la cita y de paso arregla la errata
+ * —que es lo que hay que hacer— produciría un falso positivo en cada una.
+ *
+ * Así que se trocea la cita en fragmentos y se mira cuántos aparecen. Una
+ * errata rompe uno o dos trozos y deja intactos los demás; una cita inventada
+ * no coincide en ninguno. El umbral está en dos tercios.
+ *
+ * Devuelve true, false, o null cuando no hay con qué comparar.
+ */
+export function citaEstaEn(cita, primarioNormalizado, { umbral = 0.66, trozo = 24 } = {}) {
+  if (!primarioNormalizado) return null;
+  const c = normalizarParaCotejo(cita);
+  if (c.length < 12) return null; // demasiado corta para afirmar nada
+  if (primarioNormalizado.includes(c)) return true;
+  // Una cita puede unir dos pasajes no contiguos con elipsis —«llegaron dos
+  // cachacos […] y contesta uno»—. Cada parte se comprueba por su cuenta: si
+  // todas están, la cita está.
+  const partes = String(cita).split(/\[\s*(?:\.{3}|…)\s*\]|…|\.{3}/).map((x) => x.trim()).filter((x) => normalizarParaCotejo(x).length >= 12);
+  if (partes.length > 1) {
+    return partes.every((parte) => citaEstaEn(parte, primarioNormalizado, { umbral, trozo }));
+  }
+  const trozos = [];
+  for (let i = 0; i + trozo <= c.length; i += trozo) trozos.push(c.slice(i, i + trozo));
+  if (!trozos.length) return primarioNormalizado.includes(c);
+  const hallados = trozos.filter((t) => primarioNormalizado.includes(t)).length;
+  return hallados / trozos.length >= umbral;
+}
+
 /** Fórmulas prohibidas propias de este bloque (spec §5.3), más las de siempre. */
 export const FORMULAS = [
   /desde tiempos inmemoriales/i,
