@@ -72,7 +72,7 @@ texto.
 El módulo afirmaba que «la antología de Villa Posse explica que el autor
 recogió materiales asociados con tradición popular y los elaboró
 literariamente», y esa frase no se había podido confirmar en ninguna parte.
-Está en la **p. 67**, y dice:
+Está en la **p. 65** (ver la corrección 3 al final: el folio encabeza la página, y la primera versión de este archivo dijo 67), y dice:
 
 > Martínez Fajardo, Eustorgio. Cuentos y Leyendas de Cartagena. Editorial
 > Nuevo Mundo, Cartagena, 1948. (p. 25-177)
@@ -113,3 +113,61 @@ tras una pantalla que pide confirmar que uno es persona.
 sección 18 completa, extraídas con `pdftotext -layout`. Se versiona el texto y
 no el PDF. La sección de Santander del mismo tomo está en
 `content/editorial/piedecuesta-santander/primarias/`.
+
+---
+
+## Corrección 2 · 2026-09-21 · las 33 salen de TRES secciones, y ninguna queda fuera
+
+Las tres fichas que se habían declarado «sin fuente en ninguna parte»
+—`castellano-viejo`, `por-la-boca-muere-el-pez` y
+`a-dios-rogando-y-con-el-mazo-dando`— **están en el mismo tomo**, en una
+tercera sección que nadie había mirado.
+
+**Sección 17, «Varias regiones · Leyendas», pp. 7-63.** Su nota de procedencia
+declara:
+
+> Otero D'Costa, Enrique. *Leyendas*. Biblioteca Aldeana de Colombia. Selección
+> Samper Ortega de Literatura Colombiana. Publicaciones Ministerio de Educación
+> Nacional, Ed. Minerva, S.A., Bogotá, 1936. (p. 15-46).
+>
+> […] muchas de ellas **oídas por el autor directamente de narraciones
+> campesinas**, que él recuerda y elabora con el fin de dar una presentación
+> más literaria a estos textos del folclor colombiano.
+
+- `castellano-viejo` — p. 21 · «Villalta» aparece en el texto
+- `por-la-boca-muere-el-pez` — p. 31 · «da Cunha», tres veces
+- `a-dios-rogando-y-con-el-mazo-dando` — p. 60 · remata «¡Después de mi Dios,
+  al hisopazo!»
+
+Texto en `villa-posse-1993-otero-varias-regiones.txt`.
+
+**Es el mismo Otero D'Costa de las tres fichas del subciclo `otero`**, así que
+el ciclo tiene seis suyas y no tres, y su límite editorial es distinto del de
+Martínez Fajardo: aquí el autor dice haber oído los relatos de narraciones
+campesinas, no haberlos tomado de estudios previos.
+
+### El reparto definitivo de las 33 «de Martínez»
+
+| sección | autor | obra | fichas |
+|---|---|---|---|
+| 17, pp. 7-63 | Enrique Otero D'Costa | *Leyendas*, Minerva, Bogotá, **1936** | **3** |
+| 18, pp. 65-123 | Eustorgio Martínez Fajardo | *Cuentos y leyendas de Cartagena*, Nuevo Mundo, **1948** | **17** |
+| 28, pp. 359-413 | Judith Porto de González | *Al filo de la leyenda*, Imprenta Departamental, **1982** | **13** |
+
+Tres autores, tres libros, tres décadas y tres límites editoriales distintos,
+bajo un solo subciclo llamado `martinez`.
+
+## Corrección 3 · el folio va en la CABECERA
+
+Dato fino y con consecuencias, porque es el número con el que cada `historia`
+va a citar. En este tomo **el número de página encabeza cada página**, no la
+cierra. `pdftotext` lo emite justo antes del texto de esa página, de modo que
+el folio que aparece *encima* de un relato es el suyo.
+
+Efecto: **la nota de procedencia de la sección 18 está en la p. 65, no en la
+67** —el índice del tomo lo confirma: «18. Cuentos y leyendas. Cartagena… 65»—,
+y la de la sección 28 está en el folio **359**, no en el 360. La primera
+versión de este LEEME decía 67 y las primeras actas dijeron 360.
+
+Al citar, comprobar el folio contra el índice del tomo (líneas finales del
+extracto completo), que es la referencia que no se desplaza.
