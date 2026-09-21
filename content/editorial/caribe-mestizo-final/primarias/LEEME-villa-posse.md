@@ -1,4 +1,4 @@
-# Villa Posse, el registro que desbloquea las 33 de Martínez
+# Villa Posse, el registro que desbloquea 17 de las 33 de Martínez
 
 Eugenia Villa Posse (investigación y compilación), *Mitos y leyendas de
 Colombia*, **volumen II**, colección «Integración cultural», IADAP, Quito,
@@ -12,14 +12,51 @@ Colombia*, **volumen II**, colección «Integración cultural», IADAP, Quito,
 *Cuentos y leyendas de Cartagena*, de Eustorgio Martínez Fajardo, **no está
 digitalizado en ninguna parte**: existe en dos ediciones de papel en la
 Biblioteca Nacional y el Banco de la República, y nada más. Eso dejaba 33
-fichas sin poder anclar un solo nudo, y el spec §8 las bloqueaba.
+fichas sin poder anclar un solo nudo, y el spec §8 las bloqueaba. Villa Posse
+desbloquea diecisiete; dieciséis siguen bloqueadas (ver la corrección de abajo).
 
 **Villa Posse reproduce esos textos.** La sección 18 del tomo II, «Cuentos y
 leyendas · Cartagena — Departamento de Bolívar», declara su procedencia en la
-p. 67 y va seguida de los relatos. Comprobado: **31 de los 33 títulos del
-subciclo se localizan por su título**, y los otros dos —«Macú y el collar de
-camarones de oro» y «Cuando regalaron San Felipe y La Popa»— también están,
-con otra forma del título. Es un registro de segunda mano, pero con el texto.
+p. 67 y va seguida de los relatos. Es un registro de segunda mano, pero con el
+texto.
+
+> ### ⚠️ Corrección del 2026-09-21: son 17 de 33, no 31
+>
+> Este archivo afirmaba que «31 de los 33 títulos del subciclo se localizan por
+> su título». **Es falso, y costó media jornada de un lote descubrirlo.** La
+> sección 18 ocupa las pp. 67-125 —la siguiente, Santander, abre en la p. 127,
+> y el extracto no tiene huecos de paginación— y contiene **diecisiete**
+> relatos. La propia p. 67 lo dice en su primera línea: «Esta **selección** de
+> cuentos y leyendas de Cartagena…». El libro de 1948 tiene pp. 25-177; Villa
+> Posse reproduce 59 páginas de ellas.
+>
+> **Los diecisiete que sí están** (con su paginación en la antología):
+> «El fantasma del Teatro Azul» (68-72) · «Macú, o el collar de camarones de
+> oro» (72-75) · «Zequiel» (75-80) · «Del folklore macabro» (80-83) · «La
+> muerte de los ojos verdes» (83-86) · «El talismán fúnebre» (86-89) ·
+> «Marineritis sentimental» (89-94) · «Mona… Mona…» (94-96) · «La abadesa
+> arrodillada» (96-98) · «De cuando fue regalado el Castillo de San Felipe y
+> La Popa» (99-101) · «El milagro de la Candelaria» (101-106) · «Celos de
+> esclavo» (106-108) · «El mal del mar» (108-110) · «El héroe» (110-112) ·
+> «¡Maldito sea Napoleón!…» (112-116) · «Templo de Santo Domingo y el Cristo
+> de la Expiración» (116-120) · «El auriga a quien mató el pasado…» (120-125).
+> (Las paginaciones salen de los marcadores de página del extracto, no de un
+> índice impreso: un relato que empieza a media página comparte esa página con
+> el anterior.)
+>
+> **Las dieciséis que siguen bloqueadas**, sin un solo nudo posible:
+> `castellano-viejo`, `por-la-boca-muere-el-pez`,
+> `a-dios-rogando-y-con-el-mazo-dando`, `la-imagen-de-san-antonio`,
+> `al-convento`, `la-sombra`, `despues-del-sitio`, `la-casa-de-don-benito`,
+> `doce-en-punto-de-la-noche`, `un-quejido-una-luz`,
+> `una-reunion-clandestina`, `en-el-once`, `viva-la-libertad`, `un-anonimo`,
+> `en-el-sitio-de-morillo`, `la-clave-de-la-felicidad`.
+>
+> Para ésas no hay atajo digital: hay que ir al papel (BNC N 55398 / N 55399
+> para la edición de 1946, A 36897 para la de 1948; también en el Banco de la
+> República). Y conviene pedir el **índice**, porque dos títulos del catálogo
+> ya no coinciden con los del libro y `al-convento` puede ser un duplicado de
+> «¡Maldito sea Napoleón!…», que cuenta el mismo argumento.
 
 ## La frase que sostiene el límite editorial, por fin con página
 
