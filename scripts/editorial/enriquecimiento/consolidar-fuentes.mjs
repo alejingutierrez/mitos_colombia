@@ -124,7 +124,21 @@ function rangoPropiedad(bloque, nombre) {
 }
 
 const js = (v) => JSON.stringify(v);
-const poolByUrl = new Map(Object.entries(pool).map(([k, v]) => [normalizeUrl(v.url), k]));
+// Una obra se identifica por su URL **y su título**, no sólo por la URL.
+//
+// Un mismo PDF puede contener varias obras distintas: el volumen del V Simposio
+// del Banco de la República sobre la Cartagena del XVII son actas con seis
+// capítulos de seis autores, y una ficha del ciclo cita cinco. Indexando sólo
+// por URL, los cinco colapsaban en una entrada del pool y el consolidador
+// descartaba cuatro como «propuesta repetida»: se perdían cuatro fuentes
+// buenas y la ficha caía por debajo del mínimo.
+//
+// `normalizeUrl` borra el fragmento a propósito —para detectar la misma obra
+// citada con y sin ancla— así que el `#page=` que distingue capítulos no sirve
+// como identidad. El título sí.
+const claveDeObra = (url, title) =>
+  `${normalizeUrl(url)}|${String(title || "").trim().toLowerCase().replace(/\s+/g, " ")}`;
+const poolByUrl = new Map(Object.entries(pool).map(([k, v]) => [claveDeObra(v.url, v.title), k]));
 const usedKeys = new Set(Object.keys(pool));
 const additions = new Map();
 const plan = new Map(); // slug → entries
@@ -135,9 +149,14 @@ function keyFor(source) {
   const author = String(source.author || "").split(/,| y | and /)[0].trim().split(/\s+/).pop() || "fuente";
   const base = `${author}${String(source.title).split(/\s+/).filter((w) => w.length > 3)[0] || ""}`.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-zA-Z]/g, "");
   const stem = base ? base[0].toLowerCase() + base.slice(1) : "fuente";
-  let key = `${stem}${source.year || ""}`;
+  // La clave va sin comillas en `sources.mjs`, así que tiene que ser un
+  // identificador JS válido. Un título que empieza por cifra («14 de…») metía
+  // un guion —`flacoEpistularum-14`— y dejaba el pool sin poder cargarse.
+  const limpio = (x) => String(x).replace(/[^a-zA-Z0-9]/g, "");
+  let key = `${limpio(stem)}${limpio(source.year || "")}` || "fuente";
+  if (/^[0-9]/.test(key)) key = `f${key}`;
   let n = 2;
-  while (usedKeys.has(key)) key = `${stem}${source.year || ""}${n++}`;
+  while (usedKeys.has(key)) key = `${limpio(stem)}${limpio(source.year || "")}${n++}`;
   usedKeys.add(key);
   return key;
 }
@@ -153,17 +172,18 @@ for (const { slug, source, file } of proposals) {
   const norm = normalizeUrl(url);
   if (!source.title || !source.summary || !source.limitation || !url) { rejected.push({ slug, url, razon: "faltan title/summary/limitation/url" }); continue; }
   const h = health.get(norm);
-  if (h && !h.ok && !h.restricted && h.verdict !== "SIN_RESPUESTA") { rejected.push({ slug, url, razon: `URL ${h.verdict} (${h.status ?? h.error})` }); continue; }
+  if (h && !h.ok && !h.restricted && h.verdict !== "SIN_RESPUESTA" && h.verdict !== "LIMITE_O_TEMPORAL") { rejected.push({ slug, url, razon: `URL ${h.verdict} (${h.status ?? h.error})` }); continue; }
   const flags = sourceFlags({ ...source, url }, record).filter((f) => f !== "HTTP_SIN_TLS");
   if (flags.some((f) => f.startsWith("COMPARATIVA_SIN_PARALELO"))) { rejected.push({ slug, url, razon: flags.join(",") }); continue; }
   if (!options.reemplazar && allSources(record).some((s) => normalizeUrl(s.url) === norm)) { rejected.push({ slug, url, razon: "el mito ya la cita" }); continue; }
-  let key = poolByUrl.get(norm);
+  const obra = claveDeObra(url, source.title);
+  let key = poolByUrl.get(obra);
   let isNew = false;
   if (!key) {
     key = keyFor(source);
     isNew = true;
     additions.set(key, { title: source.title, author: source.author, ...(source.year ? { year: source.year } : {}), type: source.type, url, summary: source.summary, limitation: source.limitation });
-    poolByUrl.set(norm, key);
+    poolByUrl.set(obra, key);
   }
   const entries = plan.get(slug) || [];
   if (entries.some((e) => (typeof e === "string" ? e : e.key) === key)) { rejected.push({ slug, url, razon: "propuesta repetida" }); continue; }
@@ -173,7 +193,7 @@ for (const { slug, source, file } of proposals) {
   if (source.limitation !== base.limitation) override.limitation = source.limitation;
   entries.push(Object.keys(override).length ? { key, ...override } : key);
   plan.set(slug, entries);
-  if (h?.verdict === "SIN_RESPUESTA" || h?.restricted || flags.length) rejected.push({ slug, url, razon: `AVISO (se incluye): ${[h?.verdict, ...flags].filter(Boolean).join(",")}` });
+  if (h?.verdict === "SIN_RESPUESTA" || h?.verdict === "LIMITE_O_TEMPORAL" || h?.restricted || flags.length) rejected.push({ slug, url, razon: `AVISO (se incluye): ${[h?.verdict, ...flags].filter(Boolean).join(",")}` });
   void isNew;
 }
 
@@ -204,7 +224,43 @@ const [abre, cierra] = envuelve ? ["source({", "}),"] : ["{", "},"];
 const poolCode = [...additions.entries()].map(([k, o]) => `  ${k}: ${abre}\n    title: ${js(o.title)},\n    author: ${js(o.author)},\n${o.year ? `    year: ${o.year},\n` : ""}    type: ${js(o.type)},\n    url: ${js(o.url)},\n    summary:\n      ${js(o.summary)},\n    limitation:\n      ${js(o.limitation)},\n  ${cierra}`).join("\n");
 if (additions.size) poolSrc = `${poolSrc.slice(0, closing)}\n\n  // ——— Búsqueda profunda ${new Date().toISOString().slice(0, 10)} ———\n${poolCode}${poolSrc.slice(closing)}`;
 await fs.writeFile(poolPath, poolSrc, "utf8");
-if (hasDefinitions && !hasMythFiles) {
+const rewriteMapPath = path.join(dir, "reescrituras.mjs");
+const hasRewriteMap = await fs.access(rewriteMapPath).then(() => true).catch(() => false);
+
+if (hasRewriteMap) {
+  // Disposición del bloque mestizo y mixto: el inventario vive en
+  // `catalog.mjs` como filas posicionales y lo reescrito en un mapa por slug.
+  // `sourceKeys` va dentro de la entrada de cada mito en ese mapa.
+  let src = await fs.readFile(rewriteMapPath, "utf8");
+  const render = (lista) =>
+    lista
+      .map((e) =>
+        typeof e === "string"
+          ? `      ${js(e)},`
+          : `      {\n        key: ${js(e.key)},${e.summary ? `\n        summary: ${js(e.summary)},` : ""}${e.limitation ? `\n        limitation: ${js(e.limitation)},` : ""}\n      },`,
+      )
+      .join("\n");
+  let escritos = 0;
+  for (const [slug, entries] of plan) {
+    const anchor = new RegExp(`\n  ${js(slug).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}: \\{\n`);
+    const m = src.match(anchor);
+    if (!m) { console.log(`  · ${slug}: no está en reescrituras.mjs`); continue; }
+    const ini = m.index + m[0].length;
+    const fin = src.indexOf("\n  },\n", ini);
+    let bloque = src.slice(ini, fin);
+    const yaTiene = /\n    sourceKeys: \[/.test(bloque);
+    const nuevo = `    sourceKeys: [\n${render(entries)}\n    ],`;
+    bloque = yaTiene
+      ? bloque.replace(/\n    sourceKeys: \[[\s\S]*?\n    \],/, `\n${nuevo}`)
+      : `${bloque}\n${nuevo}`;
+    src = src.slice(0, ini) + bloque + src.slice(fin);
+    escritos += 1;
+  }
+  await fs.writeFile(rewriteMapPath, src, "utf8");
+  console.log(`Escritas las fuentes de ${escritos} mitos en ${path.basename(rewriteMapPath)}.`);
+  console.log("Siguiente: node --test del corpus → cotejar.mjs → aplicar-fuentes.mjs");
+  process.exit(0);
+} else if (hasDefinitions && !hasMythFiles) {
   // Disposición `definitions*.mjs`: uno o varios arrays de `myth({ ... })`. Se
   // inserta `sourceKeys` dentro del bloque del mito, después de su `slug:`.
   const sources = new Map();

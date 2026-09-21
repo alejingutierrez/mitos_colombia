@@ -64,6 +64,14 @@ if (!modules) throw new Error(`Sin módulos para ${communitySlug}`);
 // historia y nada más. Se amplía comunidad a comunidad a medida que entran.
 // «Fuente» es la palabra tramposa: en estos corpus andinos una fuente de agua es
 // un nacedero, no una referencia bibliográfica, y el Relato la nombra con razón.
+// Las fórmulas con que el narrador oral cierra su propio cuento —«así se acabó
+// el cuento», «ahí se terminó el chiste»— NO son aparato crítico: son parte
+// del relato y están en la fuente. La lista de abajo bloqueaba «el cuento» y
+// dejaba pasar «el chiste», que es la misma figura. Se exceptúan antes de
+// mirar nada más.
+const CIERRE_ORAL =
+  /(?:as[ií]|ah[ií]|y as[ií]|con esto)?,?\s*(?:se\s+)?(?:acab[oó]|termin[oó]|complet[oó])\s+(?:as[ií]\s+)?(?:el|la)\s+(?:cuento|chiste|historia|relaci[oó]n)/gi;
+
 const RELATO_PROHIBIDO =
   /\b(chaves|pineda|perrin|paz ipuana|finol|villa posse|jusay[uú]|wilbert|reichel|dolmatoff|tangrutaya|rocha vivas|ni[ñn]o vargas|bolinder|cronista|recopilad|registr[oó]|informante|la fuente(?! de agua| hídrica| termal)|las fuentes(?! de agua| hídricas| termales)|versi[oó]n|el relato|la narraci[oó]n|el cuento|la transcripci[oó]n|la ficha|esta p[aá]gina|la p[aá]gina|la tradici[oó]n|editorial|antrop[oó]log|etn[oó]graf|mitolog[ií]a)\b/i;
 const FORMULAS = /desde tiempos inmemoriales|misterio ancestral|el destino estaba escrito|por ahora no tenemos|actualizaremos/i;
@@ -89,7 +97,9 @@ function validate(data) {
   if (marks.length !== 1 || !/[.!?…]$/.test(leccion)) errors.push("leccion: debe ser exactamente una oración terminada en punto");
   if (/;/.test(leccion)) errors.push("leccion: contiene punto y coma");
   if (/\b(debemos|hay que|no debes|debes)\b/i.test(leccion)) errors.push("leccion: orden moral");
-  const m = String(data.mito || "");
+  // La fórmula de cierre del narrador se retira antes de buscar aparato: es
+  // parte del relato, no comentario sobre él.
+  const m = String(data.mito || "").replace(CIERRE_ORAL, "");
   const hit = m.match(RELATO_PROHIBIDO);
   if (hit) errors.push(`mito: menciona «${hit[0]}» (el Relato sólo cuenta la historia)`);
   for (const f of TEXT_FIELDS) {

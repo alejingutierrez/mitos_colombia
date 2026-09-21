@@ -771,6 +771,13 @@ async function checkUrlOnce(url, timeoutMs = 20_000) {
 function classify(result) {
   const { status, finalUrl, url, captcha, cert } = result;
   const restricted = [401, 403, 405, 429].includes(status) || captcha;
+  // 503 y las pasarelas caídas son temporales, no una fuente muerta. Dialnet
+  // responde 503 con el texto «Ha sobrepasado los límites de acceso […]
+  // inténtelo de nuevo más tarde» cuando se le piden muchos PDF seguidos: el
+  // recurso está entero y la culpa es del ritmo al que preguntamos. Tratarlo
+  // como CAIDA hacía que el consolidador descartara once fuentes buenas de
+  // golpe, entre ellas la única clasificación hispanoamericana del ciclo.
+  const temporal = [502, 503, 504, 408].includes(status);
   const homepageRedirect = Boolean(finalUrl) && new URL(finalUrl).pathname.replace(/\/+$/, "") === "" && new URL(url).pathname.replace(/\/+$/, "") !== "";
   const ok = status !== null && status >= 200 && status < 400 && !homepageRedirect;
   // CAIDA es una respuesta del servidor (404, 410, 5xx). Sin respuesta (timeout,
@@ -781,6 +788,7 @@ function classify(result) {
   else if (homepageRedirect) verdict = "REDIRIGE_A_PORTADA";
   else if (cert && ok) verdict = "CERTIFICADO_INVALIDO";
   else if (status === null) verdict = "SIN_RESPUESTA";
+  else if (temporal) verdict = "LIMITE_O_TEMPORAL";
   else if (!ok) verdict = "CAIDA";
   return { ...result, ok, restricted: Boolean(restricted), homepageRedirect, verdict };
 }
