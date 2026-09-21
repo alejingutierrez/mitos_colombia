@@ -73,7 +73,14 @@ if (!options["sin-red"]) {
   health = await mapLimit(urls, 8, (url) => checkUrl(url));
 }
 const healthByUrl = new Map(health.map((h) => [normalizeUrl(h.url), h]));
-const brokenUrls = health.filter((h) => !h.ok && !h.restricted && h.verdict !== "SIN_RESPUESTA");
+// Un 503 por límite de peticiones no es una fuente muerta: es el servidor
+// diciendo «vuelva luego». Dialnet lo devuelve con ese texto cuando se le
+// piden muchos PDF seguidos, y tratarlo como caída bloqueaba la publicación
+// de setenta fichas por cinco URLs que están enteras.
+const brokenUrls = health.filter(
+  (h) => !h.ok && !h.restricted && h.verdict !== "SIN_RESPUESTA" && h.verdict !== "LIMITE_O_TEMPORAL",
+);
+const rateLimited = health.filter((h) => h.verdict === "LIMITE_O_TEMPORAL");
 
 // Un punto final en la URL casi siempre es el punto de la frase que se coló al
 // copiarla, y por eso bloquea. Pero a veces es parte de la dirección: la nota
@@ -116,6 +123,7 @@ const warnings = [
       .map((f) => `${m.slug}: el punto final es parte de la dirección, no un error de copia: ${f.url}`),
   ),
   ...restrictedUrls.map((h) => `RESTRINGIDA ${h.url} (${h.status}${h.captcha ? ", captcha" : ""}): no se puede verificar automáticamente; comprobar a mano`),
+  ...rateLimited.map((h) => `LIMITE_O_TEMPORAL ${h.url} (${h.status}): el servidor limita las peticiones, no es una fuente caída; comprobar a mano y espaciar la auditoría`),
   ...silentUrls.map((h) => `SIN_RESPUESTA ${h.url} (${h.error}): el servidor no contestó; comprobar a mano antes de retirarla, citada en ${usages.get(normalizeUrl(h.url)).slugs.join(", ")}`),
   ...inconsistent.map((u) => `misma URL con fichas bibliográficas distintas: ${u.url} → ${[...u.variants].join(" | ")}`),
   ...sameWorkManyUrls.map((w) => `misma obra en varias URLs (elegir una canónica): ${w.work} → ${w.urls.join(" , ")}`),
