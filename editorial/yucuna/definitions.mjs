@@ -260,31 +260,64 @@ Los Karipú Lakena continuaron hasta la mañana y trabajaron para dejar la noche
   }),
   defineAbundanceTransfer({
     slug: "el-origen-de-las-frutas",
-    title: "Moniya Amena, el árbol de la abundancia",
+    title: "El origen de las frutas",
     excerpt:
       "El don de Yiida Buinama es rechazado; durante la hambruna una hormiga revela la yuca y comienza a crecer el árbol de los frutos.",
     tags: ["abundancia", "agricultura", "árbol", "frutos"],
-    mito: `Monayakono, llamada también Monaya Tirizaï en la versión publicada por Fernando Urbina, había rechazado a quienes querían casarse con ella. En secreto recibía a Yiida Buinama. Él pertenecía al mundo de abajo y traía la fuerza de las frutas. Durante el día permanecía oculto bajo el asiento de la joven; por la noche salía y el aroma de piña, uva y otros frutos anunciaba su presencia.
+    mito: `Monalla Jurama era el cacique de una familia numerosa. Su hija, Monalla Tirisa, era bonita y trabajadora como nadie, y todos los jóvenes la pretendían. Ella los despreciaba a todos, y nadie, ni su propio padre, sabía por qué.
 
-Cuando la madre descubrió que su hija estaba embarazada, quiso saber quién la visitaba. Le ordenó traer agua en un cernidor. Mientras la muchacha intentaba cumplir una tarea imposible, la mujer barrió el lugar, levantó el banco y encontró a Yiida Buinama. Él trató de comunicarse mediante el olor de los alimentos, pero ella no comprendió el don. Calentó agua y la derramó sobre él.
+Ella quería a Cullo Buinayma, que no vivía entre la gente. Era el dueño de las frutas y tenía el oficio de traer al mundo cosas buenas. No la visitaba como hombre: llegaba cada noche en forma de lombriz. Así pasaron varios meses, hasta que ella quedó en cinta.
 
-Yiida Buinama regresó al mundo de abajo. Esa noche habló en sueños con Monayakono. Dijo que había querido entregar las frutas a Monaya Jurama, padre de la joven, pero que el ofrecimiento había sido rechazado. Dejó a su hijo y retiró la abundancia.
+Entonces empezaron las burlas.
 
-Comenzó una hambruna. Monayakono conservaba palabras de alimento y podía preparar yuca, pero no la compartía. Un día cayó al suelo una pequeña vena de la masa. Una hormiga la tomó y pasó frente a Monaya Jurama. Él reconoció el olor, siguió la señal y reclamó que hubiera comida mientras la gente sufría.
+—Si hubiera vivido conmigo, no le habría pasado —decía uno.
 
-El sabedor Pïdïma le explicó que la vena no era solo algo escondido: era una invitación. Yiida Buinama había intentado informar por medio de la hija, pero el gesto de la madre había interrumpido la llegada. Aun así, había quedado un hijo: la semilla o palo de yuca.
+Jurama reunió a todos los jóvenes para saber quién era el padre, y nadie lo supo. La muchacha tampoco lo dijo.
 
-De esa continuidad creció Moniya Amena, Árbol de los frutos o Árbol de la abundancia. En sus ramas aparecieron maraca, guama, uva, yuca, caimo y otras comidas. Todos los frutos podían entenderse como transformaciones de una forma primera de alimento.
+Una mañana, entre oscuro y claro, la madre la mandó a la quebrada a traer agua con un colador. Mientras la hija se afanaba con el agua que se le escurría, la madre barrió el fogón, levantó cuanto había en el suelo y alzó el asiento donde su hija se sentaba siempre. Debajo encontró una lombriz muy fea. Puso agua a calentar y, cuando hirvió, se la derramó encima despacio. La lombriz no murió: se hundió hasta el centro de la tierra.
 
-El árbol siguió creciendo hasta quedar fuera del alcance. Urbina explica que otras versiones continúan con la decisión de tumbarlo: su tronco se vuelve el gran Amazonas, las ramas forman afluentes y las hojas y semillas extienden la selva. Esta página se detiene antes de convertir esa imagen en geografía literal. Conserva el núcleo del relato: un don incomprendido se retira, una pequeña señal vuelve a abrir la posibilidad de compartir y la abundancia solo tiene sentido cuando deja de permanecer oculta.`,
-    historyCore:
-      "TRANSFERENCIA DOCUMENTADA: la página estaba clasificada como Yucuna por una antología que solo decía Putumayo. La versión atribuida de Julio Ribera y cinco controles institucionales la sitúan dentro del ciclo Huitoto-Muinane de Moniya Amena.",
-    versionCore:
-      "Julio Ribera usa Yiida Buinama, Monayakono y Moniya Amena. Idartes publica Cullo Buinayma, Monalla Tirisa y Monilla Amena, además de Iga y la estrella de Jurama. Las grafías y episodios permanecen atribuidos a cada versión.",
-    similarityCore:
-      "Árboles que contienen alimentos, aguas o ríos aparecen en muchas tradiciones amazónicas. El árbol Yagua de Ndanu y Mêna libera agua y peces; el árbol Ufaina se vuelve Apaporis; Moniya Amena reúne frutos y, en versiones amplias, forma el Amazonas. La semejanza regional no permite intercambiar protagonistas ni trasladar un árbol de una comunidad a otra. Esta ficha se distingue por Yiida Buinama, Monayakono, la hambruna, la hormiga que lleva una vena de yuca y el Árbol de la Abundancia Huitoto-Muinane.",
+La muchacha volvió recelosa, fue derecho al asiento y no encontró nada.
+
+—Estuvo muy mal quemar a ese hombre —le dijo a su madre—. Él es el dueño de todas las frutas y pensaba traer abundancia de comidas.
+
+Esa noche, dormida en el chinchorro, lo oyó en sueños:
+
+—Me llamo Cullo Buinayma. Pensaba traer frutas a este mundo, pero tu mamá me quemó. De ahora en adelante no habrá comida. Tú serás la única que no padezca hambre. Mañana temprano mira la quebrada: si la espuma está abajo, lo que llevas es mujer, y harás llomenico; si está arriba, es hombre, y harás fuare. No le des a nadie, aunque tu padre o tu madre se estén muriendo de hambre.
+
+Al amanecer la espuma estaba arriba. Monalla Tirisa la recogió a escondidas e hizo fuare. En ese momento empezó el hambre para todos. La gente desenterraba el juki, la primera yuca, que se había quedado en el monte vuelta raíz de bejuco. Comían soñeki, una pepa que sólo comen los animales, cogollos de palma y, al final, tierra asada.
+
+Un día Jurama, agonizante, vio en la puerta de la maloca una hormiga que jalaba una vena de yuca. La olió, buscó por toda la casa y encontró yuca en las canasticas de su hija.
+
+—¿Por qué comes sola? Vamos a morir todos de hambre.
+
+—Más malos son ustedes —contestó ella—. Lo quemaron, y por eso él se llevó todas las frutas.
+
+La espuma era pura yuca. Pasados unos días brotó de ella un palo en la quebrada, que floreció y dio frutas de muchas clases: Monilla Amena, el Palo de la Abundancia. Al fin la muchacha se compadeció y dio de comer a sus padres, que revivieron. Cada mañana traía una yuquita, la ponía a madurar junto al fogón, y al otro día había bastante yuca.
+
+Jurama, contento, cantaba burlándose de los vecinos que seguían comiendo cogollos. Ellos fueron a visitarlo con cacería y pescado, y él les dio casabe y masa de yuca. Nadie volvió a morir de hambre.
+
+Pero el palo creció tanto, en medio del agua, que ya nadie alcanzaba las frutas. Sólo Iga subía, por un bejuco que colgaba, a chuparlas sin permiso. Cercaron el árbol con estacas afiladas para descubrir al ladrón. Un día Jurama, sin saber que había alguien arriba, cortó el bejuco. El bejuco se balanceó, volvió y le dio en el ojo. El ojo salió hasta el oriente y quedó como estrella de la mañana, Monalla Okudo, con el nombre de Jurama. Él fue el primer tuerto que hubo.`,
+    historia: `Este texto se publicó en castellano en Mitos de creación, el número 44 de la colección Libro al Viento de Idartes, en Bogotá, con selección de Julio Paredes Castro. Allí aparece bajo el título «El origen de las frutas» con una sola indicación de procedencia: Putumayo. No se nombra narrador, traductor ni fecha de recolección, y el texto trae marcas de haber sido adaptado para lectores escolares, como la frase según la cual Dios dispuso que el novio llegara en forma de lombriz.
+
+La lengua de los nombres permite situarlo. Monalla Jurama, Monalla Tirisa, Monilla Amena, el fuare y el llomenico corresponden a las formas uitoto que Fernando Urbina transcribe como Monaya Jurama, Monaya Tïrizaï, Moniya Amena y fuare, y Urbina explica que kuio es lombriz y que el dueño de las frutas figura con más frecuencia en las variantes de este ciclo como Kuio Buinaima. Por eso aquí se lee Cullo Buinayma como la misma figura, y el relato como parte de la tradición uitoto-muinane del Caquetá y el Putumayo, no de otro pueblo amazónico.
+
+La variante con narrador identificado es la que Urbina publicó en 2010 en Las palabras del origen, un compendio de mitos uitoto editado por el Ministerio de Cultura. La narró en Araracuara, en 1985, el abuelo Julio Ribera, Kúgaï Únuba, de 85 años, miembro de la nación muinane, cuyo último territorio tradicional fue La Sabana, en el alto río Cahuinarí. La contó en uitoto, y su sobrino Ismael Mendoza la tradujo en Bogotá dos años después. Urbina la acompaña de notas: el aroma de las frutas es el lenguaje con que el visitante ofrece su don y la madre no lo entiende; la yuca es el fruto modelo del que los demás son variaciones; la hambruna que sigue a la muerte del dueño de las frutas es un rasgo de las variantes de Moniya Amena reseñadas por Beatriz Yépez en 1982 y por él mismo.
+
+Urbina señala también la dimensión mayor del ciclo. En su resumen de otra variante, el árbol crece tanto que hay que tumbarlo, el hacha se obtiene de Muinájema, antepasado de los muinanes, y al caer el árbol se forma la Amazonia. Él mismo publicó una versión de «El árbol de la abundancia» en la revista Tablero del Convenio Andrés Bello en 2003.`,
+    versiones: `Hay dos cadenas documentales distintas, y no se funden.
+
+La de Idartes, que es la que sigue el Relato, arranca con el novio ya convertido en lombriz y con el pueblo entero burlándose de la muchacha. Trae detalles que no están en la otra: la espuma de la quebrada que indica si la criatura es hombre o mujer, el juki, el soñeki y la tierra asada que se comen durante la hambruna, el canto burlón de Jurama y el final con Iga, el ladrón de frutas, el bejuco cortado y el ojo del cacique convertido en la estrella de la mañana.
+
+La de Julio Ribera, en la traducción de Ismael Mendoza, llama al visitante Yiida Buinaima, y también Yinaka Buinaima y Kuio; es hijo de Okïnuiema, a quien el narrador también llama Kïneiyama y Nuikïniyama, hermano de Monaya Jurama. Su padre le entrega las palabras de abundancia y le advierte que vaya de frente, pero él va a escondidas. La muchacha, Monayakono, lo esconde bajo su banco; los pajaritos que la habían pretendido cantan su embarazo; la madre culpa al padre de haber embarazado a la hija. Cuando la madre lo descubre, él sonríe y sólo se siente olor de piña, de uva, de maraca. El agua hirviendo lo devuelve abajo con un sonido como de trueno lejano. La hormiga jímuitino se lleva la vena de yuca cantando, y es el sabedor Pïdïma quien explica a Jurama que el hijo que quedó es el palo o semilla de yuca, Moniya Amena, que da maraca, guama, uva, yuca y caimo. Esa narración continúa con el corazón del muerto encontrado como huevecillo de lombriz, y ese tramo se cuenta en «El origen del maguaré».
+
+Una tercera variante, que Urbina resume sin transcribir, lleva la historia hasta la tala del árbol con el hacha de Muinájema y el nacimiento de la Amazonia de su caída. El Relato se detiene donde se detiene el texto de Idartes.`,
+    similitudes: `El paralelo más cercano está en los Llanos y está firmado. Al reseñar la compilación de tradición oral sikuani de Francisco Queixalós, William Torres pone a Kaliawiri, el árbol de los alimentos de los sikuani, al lado de Moniya Amena, el árbol de la abundancia uitoto y muinane. Los dos árboles concentran lo que después se cultiva, y en ambos el alimento empieza siendo de alguien que no lo reparte. La diferencia es de origen y de final: el árbol sikuani se tumba y su caída reparte el mundo, mientras que aquí el palo nace de la espuma de una quebrada, por el hijo de un amante quemado, y el final no es la tala sino el ojo de Jurama vuelto estrella.
+
+El segundo paralelo lo propone Fernando Urbina en sus notas a la variante de Julio Ribera. Compara al dueño de las frutas, cuya muerte trae la hambruna, con el complejo de Deméter y Core, o Perséfone, entre los griegos, con Telepinu entre los hititas y con Osiris en el Nilo: dioses de la vegetación que desaparecen y cuya ausencia deja la tierra sin fruto. La resonancia está en la ausencia que produce hambre. La diferencia es clara: Cullo Buinayma no vuelve. Lo que vuelve es su hijo, en forma de palo, y la comida pasa primero por las manos de una muchacha que la guarda para sí. Urbina añade que en varias culturas la agricultura aparece ligada a uniones entre parientes muy cercanos, y cita a Perséfone y Hades; en la variante de Ribera el visitante es hijo del hermano de Jurama.
+
+Dentro del mismo corpus uitoto, «El origen del maguaré» comparte el comienzo: la visita escondida, el agua hirviendo y el don de las frutas que no se entiende. Allí la historia sigue hacia el tambor; aquí se queda en el hambre, la yuca y el árbol.`,
     leccion:
-      "La abundancia comienza a sostener la vida cuando sus señales se comprenden y el alimento vuelve a compartirse.",
+      "Un regalo que no se sabe reconocer se pierde, y el hambre enseña tarde a compartir lo que queda.",
     sceneHorizontal:
       "Moniya Amena crece desde una quebrada como un árbol plano de ramas repletas de guama, uva, yuca y caimo, mientras una pequeña hormiga lleva una vena de yuca hacia la maloca",
     sceneVertical:
