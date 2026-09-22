@@ -148,3 +148,75 @@ redirección. ③ Conservar «La Bruja del Trinche».
 
 *Mientras tanto:* ③. Publicada el 2026-09-22 con el texto y las fuentes
 nuevos y el título de siempre.
+
+## Abiertas desde la noche del 2026-09-22 (redacción C4 sin agentes)
+
+### D15 · Piso de 3 fuentes con `fuentesAgotadas` · 60+ fichas
+
+El kit exigía 5 fuentes a toda ficha, aunque el spec del cierre acepta
+`fuentesAgotadas` como alternativa a las 8. En Tolima, Antioquia, Caldas y
+Boyacá la cantera abierta no da más: los libros de primer escalón (Blanca
+Álvarez, Artunduaga, Lozano Galindo, Escobar Uribe 1950, Ocampo López 2001,
+Julián Bueno 1988) sólo existen como fichas de catálogo.
+
+① **Piso 3 fuentes y 2 dominios** para la ficha que declara
+`fuentesAgotadas` con su razón; por debajo, se bloquea. ② Volver a 5 y
+bloquear las que no lleguen (una veintena). ③ Sin piso.
+
+*Mientras tanto:* ①, aplicado en `validateRecord`, el auditor, `verificar` y
+las dos librerías de sincronización; `loadModules` lee la declaración del
+texto del módulo y los 49 constructores la propagan.
+
+### D16 · El bestiario de 2004 como única fuente · 6 fichas
+
+La Tarasca, el Chenche, la Cabellona, el Mareco, el Patón (con textos
+escolares) y la Niña de la Carta sólo existen, como relato, en *Cuentos de
+espantos y otros seres fantásticos del folclor colombiano* (2004), que se
+declara «recopilación de documentos imaginarios».
+
+① **Publicarlas como ficción de autor declarada** (criterio de
+`la-bruja-del-tranvia`), cuando hay al menos 3 fuentes. ② Retirarlas del
+catálogo. ③ Reorientar las que tienen otro objeto documentado (la tarasca
+procesional del Corpus).
+
+*Mientras tanto:* ① para las cinco primeras; la Niña de la Carta queda
+**bloqueada** (sólo 2 fuentes que respondan).
+
+### D17 · Títulos propuestos por la redacción · 40+ fichas
+
+Cada redactor propuso un título nuevo («Rafael Toro, el aserrador, y el Uñón»,
+«Mayavita y los mensajeros de los dioses», «Cuento de ánimas: Laurián y Ñuá
+Ulogia»…). `reponer-titulos` dejó en todos el publicado; las propuestas viven
+en el campo `titulo` de cada JSON de `reescritura-2026-09-22/`.
+
+① Revisarlas por ciclo y aplicar las que la fuente sostiene. ② **Dejar los
+publicados.** ③ Aplicarlas todas.
+
+*Mientras tanto:* ②. Dos casos piden decisión aparte: las dos Patasolas del
+Tolima se publican ambas como «La patasola», y «El origen de las frutas»
+(huitoto) tenía propuesto «Moniya Amena», que el relato de Idartes no sostiene
+(dice Monalla).
+
+### D18 · Fichas en un cajón geográfico que no es el suyo · 4 fichas
+
+`cuento-de-animas` (en caldas-mestizo) ocurre en Santander;
+`no-hay-deuda-que-no-se-pague` (en antioquia-mestizo) ocurre en Arma, hoy
+Aguadas (Caldas); `el-cazador` y `el-mareco` están en módulos «mixto» y sus
+actas proponen «mestizo».
+
+① **Mover la categoría** a donde ocurre el relato. ② Dejarlas y decirlo en
+`historia` (ya se dice). ③ Mover sólo las de cajón mestizo/mixto.
+
+*Mientras tanto:* ②.
+
+### D19 · Fichas bloqueadas que siguen publicadas con texto viejo · 3 fichas
+
+`el-sombreron` y `dioses-lares` (Tolima) y `esperanza-en-el-oriente`
+(Boyacá) tienen acta bloqueada; su texto de Neon es el heredado y no se tocó.
+Al Sombrerón y a Dioses lares se les retiraron en el módulo tres URLs caídas
+que en Neon siguen.
+
+① **Despublicarlas** hasta que haya fuente. ② Dejarlas como están. ③ Aplicar
+sólo la limpieza de fuentes.
+
+*Mientras tanto:* ②.
