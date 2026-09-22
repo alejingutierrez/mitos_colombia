@@ -47,7 +47,9 @@ test("los ocho expedientes Desana cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
+    // Eran 7 exactas, la cuota de la primera ronda. Tras la Fase B del cierre
+    // (2026-09-22) cada ficha tiene las suyas: se comprueba el piso, no un número.
+    assert.ok(record.keySources.length + record.sources.length >= 8, `${record.slug}: menos de 8 fuentes`);
     const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
     assert.equal(new Set(urls).size, urls.length);
   }

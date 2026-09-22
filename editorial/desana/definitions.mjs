@@ -25,6 +25,25 @@ export const desanaDefinitions = [
       "amazonianCosmos1971",
       "ribeiro1994",
       "bruzzi1994",
+      "andrellohumanidade2022",
+      "angeloLivros2020",
+      "freireTradicao1992",
+      {
+        key: "fernandesBueri2006",
+        summary:
+          "Abre el calendario desana con la creciente yahi puiro (de la garza), que recuerda la llegada de la Pamurĩ Yukusiru, la Canoa de Transformación, a Siruriduri, la cachoeira de Ipanoré; cuenta que en esa época encostan en Ipanoré mandi, aracu (boreka) y surubí como símbolo de la llegada de la Gente de Transformación, y que hacia 1940 los pueblos del Tiquié aún festejaban juntos ese aniversario. Trata también la jerarquía de clanes encabezada por Boreka.",
+        limitation:
+          "Es del lado brasileño y es la voz del clan Wari Dihputiro Põrã de Cucura, no la del Kẽhíripõrã que narra la ficha. No es otra versión del mito sino el libro de enseñanzas —calendario, dabucuris, historia de los clanes— que remite a su volumen de 1996.",
+      },
+      {
+        key: "buchilletMaladie1983",
+        summary:
+          "Resume el origen según los desana del Tiquié: Yeba biro, la Abuela, pide al tercer Trueno las joyas ceremoniales que serán gente; el Trueno se vuelve Pabidi-gasiru, la canoa-de-transformación en forma de anaconda, que sube desde el Lago de Leche con el Creador de la Tierra y Boreka por el Amazonas, el Negro, el Uaupés y el Tiquié, parando en casas donde los ancestros bailan y crecen 'como el niño de año en año', hasta salir en los rápidos de Siruri duri, Ipanoré, donde se separan blancos e indios. Reproduce dibujos de Feliciano Lana.",
+        limitation:
+          "Es del lado brasileño: campo de doce meses (1980-1981) con dos clanes desana del Tiquié y del igarapé Umari, el de Tolaman Kenhíri y el Kisibi; los mitos transcritos en el anexo son del clan Kisibi, no del Kẽhíripõrã. Texto completo en el repositorio del IRD (ficha: https://www.documentation.ird.fr/hor/fdi:15520); el escaneo tiene errores de OCR. Es una tesis sobre enfermedad y terapéutica, no una colección de mitos.",
+      },
+      "kehiriNosso1993",
+      "hughJonesDesana",
     ],
     title: "Yebá Buró y la Canoa de Transformación",
     summary:
@@ -81,6 +100,9 @@ Reichel-Dolmatoff registró del lado colombiano que hasta las variedades de yuca
       "bruzzi1994",
       "amazonianCosmos1971",
       "beksta1988",
+      "fernandesBueri20062",
+      "hughJonesorigem2015",
+      "buchilletMaladie19832",
     ],
     title: "Ñami y el origen de la noche",
     summary:
@@ -135,6 +157,23 @@ El anfitrión que se quita la piel de viejo y aparece joven, y el hermano menor 
       "desanaTexts1989",
       "geografiaChamanistica",
       "ribeiro1994",
+      "kramerCosmologia1982",
+      {
+        key: "fernandesBueri20062",
+        summary:
+          "Cuenta que Mirupu apareció entre las frutas de un dabucuri en la maloca del igarapé Macucu, afluente del Papurí, y que por eso se le tiene por Miriá Porã Masú, dueño de las frutas del monte; explica que todos los clanes desana dan el nombre de Mirupu al segundo hijo. En el capítulo de la iniciación anota que no se podía comer nada caliente durante el ayuno porque Gãmoyeri Wãhtĩ mató a los muchachos que comieron uacú asado, y remite a «A vingança de Mirupu ou Miñapõrã mahsü» del libro de 1996 (pp. 147-150).",
+        limitation:
+          "Es del lado brasileño y del clan Wari/Wahari Diputiro Porã: comenta el episodio y la regla de iniciación que funda, no lo vuelve a narrar, y usa los nombres de ese clan (Mirupu, Gãmoyeri Wãhtĩ), no Guramüye. PDF completo en la página del ISA.",
+      },
+      "barrosKapiwaya2012",
+      {
+        key: "andrellohumanidade2022",
+        summary:
+          "Compara las narraciones tukano, desana y baniwa sobre Jurupari y la iniciación de la primera generación de muchachos: en unas versiones los rapazes desobedecen y son devorados por Jurupari, al que los padres vengan quemándolo vivo en una gran hoguera, y de sus cenizas nacen las paxiúbas de las flautas; señala que hay narraciones desana que combinan este episodio con el de las paxiúbas que irrumpen desde el mundo de abajo. Anota que en los relatos tukano Jurupari nace de la segunda preñez primordial, por medio del ipadu, y cita la versión desana de Diakuru y Kisibi (1996) en que el tronco del niño sale disparado al cielo y es el Jurupari que luego vendrá a iniciar a los hijos de la humanidad; sitúa en el igarapé Macucu, afluente del Papurí, el centro del universo marcado por las primeras paxiúbas.",
+        limitation:
+          "Es un ensayo comparativo sobre género y parentesco en todo el noroeste amazónico (tukano, desana, baniwa), del lado brasileño; no narra la versión Kẽhíripõrã de la ficha ni nombra a Guramüye, y usa el nombre Jurupari que la ficha evita a propósito.",
+      },
+      "barrosResena2015",
     ],
     title: "Guramüye y el primer cataclismo",
     summary:
@@ -193,6 +232,14 @@ El anclaje material es local y verificable en el texto: las señales que, según
       "geografiaChamanistica",
       "bruzzi1994",
       "amazonianCosmos1971",
+      {
+        key: "buchilletMaladie19832",
+        summary:
+          "Recoge entre los desana del clan Kisibi un mito del diluvio mandado por el Creador en el que algunos, para escapar del agua, cavan un hueco y se meten en lo hondo de la tierra, donde se convierten en wai mahsã, la gente-pez: la misma solución que la versión Wari Dihputiro Põrã da a la creciente de Sëpïrõ (la gente que cava huecos y los tapa en vez de subirse a los cerros).",
+        limitation:
+          "Es una nota al pie de unas pocas líneas, no una narración del episodio, y la autora la juzga «probablemente de inspiración cristiana». Trabajo de campo en el Uaupés brasileño con el clan Kisibi, otra versión de clan; no nombra a Nügüye ni a Sëpïrõ.",
+      },
+      "hughJonesDesana2002",
     ],
     title: "Nügüye y Sëpïrõ: fuego y creciente",
     summary:
@@ -247,6 +294,43 @@ Reichel-Dolmatoff anotó que las grandes inundaciones son corrientes a lo largo 
       "desanaTexts1989",
       "beksta1988",
       "bruzzi1994",
+      {
+        key: "kramerCosmologia1982",
+        summary:
+          "Compara la primera edición del libro de los Lana (1980) con Reichel-Dolmatoff (1968) y dedica un apartado, «Las flautas sagradas: distribución del poder entre los sexos», al mismo capítulo que narra la ficha: Abé deja dos trozos de paxiúba y un bejuco de vomitar en el puerto, el hijo dormilón no despierta, las dos hijas encuentran la paxiúba dorada que se les escapa, el hombre-pez les enseña a soplarla, los hombres barren la maloca a las diez de la mañana, la flauta nueva lanzada hacia el sur mata al hermano y Ngoamãn sopla en su lugar. Lo contrasta con la versión colombiana de Reichel, donde las flautas nacen del incesto del Sol con su hija y denuncian el crimen.",
+        limitation:
+          "Cita la edición de 1980, no la revisada de 1995 que sigue la ficha, y transcribe en portugués los pasajes; la lectura interpretativa (poder procreador frente a conocimiento) es de la autora. Es la versión Kẽhíripõrã del Tiquié, del lado brasileño, puesta al lado de la colombiana de Reichel-Dolmatoff.",
+      },
+      {
+        key: "barrosKapiwaya2012",
+        summary:
+          "Tiene un apartado entero, «Sobre o roubo das flautas sagradas», con la versión del clan Guahari Diputiro Porã: de las cenizas de Miriá Porã Masü nacen las paxiúbas que sonaban solas; Kisibi, hijo de Abe, se levanta tarde para vomitar de madrugada; las mujeres se apoderan de las flautas y de las funciones masculinas; Kisibi las cerca en Tauripu (cachoeira de Aracapá), mascan pimienta y escupen, y de ahí salen las flautas Sĩmiomĩ y Põrerõ, con las que las espantan y recuperan las sagradas. Lo cruza con el repertorio que se toca hoy en el dabucuri.",
+        limitation:
+          "Es la versión Guahari Diputiro Porã del Papurí brasileño, resumida a partir del libro de los Galvão (2004) y del bayá Raimundo Galvão; no es la Kẽhíripõrã que narra la ficha. El eje del artículo es un repertorio musical, no el mito. Lado brasileño.",
+      },
+      "barrosMusic2015",
+      {
+        key: "barrosResena2015",
+        summary:
+          "Reseña del estudio de Mello sobre el mito de las flautas sagradas en su versión desana del clan Guahari Diputiro Porã, narrada por el bayá Raimundo Galvão: de las cenizas de Miriá Porã Masü (Gurumuyé) brota la paxiúba, sus pedazos dan las flautas, su custodia pasa a Kisibi, que descuida las reglas, las mujeres las encuentran y se las llevan, y la disputa termina con la derrota de ellas y la prohibición de las flautas a las mujeres.",
+        limitation:
+          "Es una reseña, no el libro, y trata la versión Guahari Diputiro Porã del Papurí brasileño (igarapé Urucu), no la Kẽhíripõrã que narra la ficha; la compara además con la versión baniwa de Kuwai, que es de otro pueblo. Lado brasileño.",
+      },
+      {
+        key: "buchilletMaladie19832",
+        summary:
+          "Resume el mito desana de las flautas sagradas tal como lo recogió en el clan Kisibi: los instrumentos pertenecieron primero a las mujeres, el mundo estaba invertido y los hombres hacían las tareas domésticas; la reconquista de las flautas por los hombres explica el origen de la menstruación, y las flautas quedan como el análogo masculino de las reglas femeninas. Describe además el rito de iniciación en que las flautas, sacadas del río, se muestran a los muchachos y se prohíben a la vista de las mujeres.",
+        limitation:
+          "Trabajo de campo en el Uaupés brasileño, con el clan Kisibi: otra versión de clan, distinta de la Kẽhíripõrã del Tiquié que narra la ficha, y dada en resumen, no como texto dictado. Es una tesis sobre enfermedad y terapéutica; el mito de las flautas ocupa unos párrafos. La ficha del IRD enlaza el PDF completo.",
+      },
+      {
+        key: "hughJonesDesana2002",
+        summary:
+          "La entrada del ISA sobre los desana explica que cada grupo tukano tiene sus flautas y trompetas Yurupari de paxiúba, que son los huesos del ancestro, y resume el mito: al principio las mujeres poseían las flautas mientras los hombres procesaban la yuca y hacían tareas femeninas, y al quitárselas les pasaron la menstruación. Cuenta también el mito del Yurupari que, quemado, deja de sus cenizas la palma de la que se hacen los instrumentos, y cita el libro de los Lana y el de los Wari Dihputiro Põrã como bibliografía desana.",
+        limitation:
+          "Es una síntesis regional del sistema tukano oriental firmada por un especialista en los barasana, no una versión desana: sus ejemplos narrativos son sobre todo barasana y el resumen del mito es genérico para el Uaupés. Lado brasileño.",
+      },
+      "silvaAnalogia2004",
     ],
     title: "El robo de las flautas sagradas",
     summary:
@@ -301,6 +385,31 @@ El anclaje que no se repite es la piedra. Las hijas de Abe dejan escrita su vers
       "desanaTexts1989",
       "amazonianCosmos1971",
       "dantes2019",
+      {
+        key: "andrellohumanidade2022",
+        summary:
+          "Presenta a Baseboo o Baariboo como el 'dueño de la alimentación' que ya traía en su cuerpo todas las manivas (esquejes de yuca) que la humanidad cultivaría, junto al Abuelo y la Abuela del Mundo, apoyándose en la versión desana de Bayaru y Ye Ni (2004) y en una tukano; y lo liga a la generación de los 'moradores del hueso de multiplicación de Baaribo'.",
+        limitation:
+          "Es del lado brasileño y sigue la versión Guahari Diputiro Porã (2004), no el capítulo de la chagra del libro Kẽhíripõrã que narra la ficha. Es comparativo y es un artículo.",
+      },
+      {
+        key: "fernandesBueri2006",
+        summary:
+          "Resume el mismo núcleo de la ficha desde otro clan: Baaribo, Dueño de la Fartura, escondió los pies de maniva y otras plantas para castigar a su primogénito, que había matado al hermano menor por acostarse con su mujer; después le ofreció un dabucuri de mandioca, tapioca y harina y le enseñó a tumbar y sembrar (remite a 'A vida de Baaribo', 1996, pp. 79-92). Explica que en el dabucuri de mandioca los oferentes dicen 'Somos Baaribo Masá'.",
+        limitation:
+          "Es del lado brasileño y es la voz del clan Wari Dihputiro Põrã de Cucura, no la del Kẽhíripõrã que narra la ficha. No es otra versión del mito sino el libro de enseñanzas —calendario, dabucuris, historia de los clanes— que remite a su volumen de 1996.",
+      },
+      "bidouTrois1996",
+      "oliveiraMulheres2023",
+      "buchilletInterpretacao1988",
+      "coordSistema2019",
+      {
+        key: "buchilletMaladie1983",
+        summary:
+          "Transcribe el mito M.5, 'Origine du manioc', del clan Kisibi: Baribo, 'el Maestro de la comida', tenía una piedra blanca (bariboye) que daba toda la comida y la ponía bajo la batea del almidón; la nuera la descubre y la esconde, Baribo la recupera y se va a vivir con las dos hijas del agutí, y 'no hubo nunca más almidón'. Por la desobediencia de ellas hace crecer una cáscara dura en el tubérculo: el mismo origen del trabajo de pelar la yuca que cuenta la ficha.",
+        limitation:
+          "Es del lado brasileño: campo de doce meses (1980-1981) con dos clanes desana del Tiquié y del igarapé Umari, el de Tolaman Kenhíri y el Kisibi; los mitos transcritos en el anexo son del clan Kisibi, no del Kẽhíripõrã. Texto completo en el repositorio del IRD (ficha: https://www.documentation.ird.fr/hor/fdi:15520); el escaneo tiene errores de OCR. Es una tesis sobre enfermedad y terapéutica, no una colección de mitos. Su versión del episodio de las dos esposas es distinta (hijas del agutí, piedra de almidón) y no trae la chagra que arde.",
+      },
     ],
     title: "Baaribo y el origen de la mandioca",
     summary:
@@ -353,6 +462,21 @@ Reichel-Dolmatoff documentó del lado colombiano que las variedades de yuca brav
       "bruzzi1994",
       "amazonianCosmos1971",
       "geografiaChamanistica",
+      {
+        key: "fernandesBueri20062",
+        summary:
+          "En el calendario de constelaciones, el «verano de pupunha» (ürĩ weri bohori, finales de febrero y comienzos de marzo) recuerda que un Umurĩ Masú se casó con una mujer Wai Masó (Gente-Peixe) que sólo comía insectos; al visitar al suegro llevaron insectos y frutas secas de regalo, y en la maloca del suegro él robó un carozo de pupunha convertido en el pájaro yeoro, escondiéndolo debajo de la barbilla, para sembrarlo en esta tierra. Del carozo guardado en lo oscuro sale la sequía nublada de ese verano y un tumor que tiene rezo propio. Distingue la pupunha verdadera (diciembre-febrero) de la pupunha de agua.",
+        limitation:
+          "Es del lado brasileño y del clan Wari/Wahari Diputiro Porã: es otra versión, sin el nombre de Gãipayã, sin las pruebas del suegro y sin las cuatro variedades; el carozo va bajo la barbilla, no tragado. Es un pasaje de calendario de una página, no un capítulo narrativo. PDF completo en la página del ISA.",
+      },
+      "saHistorias2020",
+      {
+        key: "buchilletMaladie19832",
+        summary:
+          "Compara la versión publicada por los Lana (1980), con Gain Panan, el antepasado de los periquitos, que se traga el carozo y lo recupera en la letrina, con otra versión que la autora recogió en otra aldea desana, donde el héroe no tiene nombre y podría ser Butari Gõãmü, ya casado con una mujer de la Gente-del-Agua. Explica que el robo del carozo contra la voluntad del wai-mahsã funda un rezo de curación: en cada punto del cuerpo donde se escondió la semilla —planta del pie, corva, ingle, axila, bajo la lengua— puede levantarse un tumor (bihiribu), y la incantación se construye sobre el episodio. Menciona también que el héroe creó hierbas para atraer los insectos con que alimentaba a su mujer.",
+        limitation:
+          "Es una tesis sobre enfermedad y terapéutica, del lado brasileño: usa el mito para explicar un rezo, no lo publica completo. Su versión de campo difiere de la ficha en el protagonista. El registro del IRD da el PDF escaneado completo, con OCR imperfecto.",
+      },
     ],
     title: "Gãïpayã y el origen del chontaduro",
     summary:
@@ -409,6 +533,9 @@ La palma única que da cuatro frutos distintos es la parte que más se sostiene 
       "desanaTexts1989",
       "geografiaChamanistica",
       "beksta1988",
+      "fernandesBueri2006",
+      "lanaChuvas1987",
+      "buchilletMaladie1983",
     ],
     title: "Ãgãmahsãpu y el tiempo del umarí",
     summary:
