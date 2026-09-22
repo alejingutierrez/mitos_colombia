@@ -19,9 +19,9 @@ const records = [
       "martinezCon2006",
       "rosaCalles1938",
     ],
-    title: "Antonín, el Bobo del Tranvía",
+    title: "El Bobo del Tranvía",
     excerpt:
-      "Antonín regula con pito y señales el tránsito bogotano; cuando pierde a su hermana, los rieles que amaba conducen su historia al dolor.",
+      "Con pito y señales regula gratis el tránsito bogotano; cuando pierde a su hermana, los rieles que amaba conducen su historia al dolor.",
     tags: ["Antonín", "Bogotá", "tragedia", "coexistencia"],
     mito: `Bogotá estrenó tranvía en 1884 con dieciséis coches comprados a una casa estadounidense: ocho abiertos, en los que se subía por cualquiera de los dos costados, y ocho cerrados, con una sola puerta. Los coches de mulas eran vagones de madera con cinco bancas largas de cinco puestos cada una, tirados por caballos o por mulas. Después vino la electricidad, con carros fabricados en Estados Unidos entre 1910 y 1949, un chofer, un supervisor que imponía el orden y un cobrador que pasaba puesto por puesto pidiendo cinco centavos. El sistema anduvo así, de tracción animal a cable, desde 1884 hasta 1951.
 
@@ -57,9 +57,9 @@ El segundo paralelo es de lengua y no de biografía. El bobo de Coria, fijado en
       "Antonín corre junto a un tranvía mientras saluda a su hermana desde lejos, con los rieles extendiéndose hacia el fondo de la calle",
     researchNotes:
       "MEMORIA URBANA CON DIGNIDAD: conserva el núcleo institucional y el escenario documental del tranvía; trata el apodo como vocabulario histórico y elimina diagnóstico, heroización y final celestial.",
-    seoTitle: "Antonín, el Bobo del Tranvía de Bogotá",
+    seoTitle: "El Bobo del Tranvía, memoria de la antigua Bogotá",
     seoDescription:
-      "Historia de Antonín, agente vial espontáneo de la antigua Bogotá, su hermana y el tranvía que marcó su memoria y su desenlace trágico.",
+      "Historia del Bobo del Tranvía, agente vial espontáneo de la antigua Bogotá, su hermana y el tranvía que marcó su memoria y su desenlace trágico.",
     focusKeywords: [
       "Bobo del Tranvía",
       "Antonín Bogotá",
@@ -263,7 +263,7 @@ El segundo paralelo es de plaza y no de figura. La Plaza Mayor de Lima recibió 
           "Su objeto es la empresa y la infraestructura, no la vida de la calle: no menciona a Margarita ni a ninguno de los personajes urbanos del periodo, y no documenta un solo relato. Es territorio, no registro, y por eso no puede ir de fuente clave. Tesis de maestría sin publicación posterior.",
       },
     ],
-    title: "Margarita Villaquirá, la Loca Margarita",
+    title: "Margarita, la Loca Margarita",
     excerpt:
       "Vestida de rojo y fiel a su voz liberal, Margarita recorrió el centro de Bogotá y siguió hablando incluso cuando la encerraron.",
     tags: ["Margarita", "política", "memoria", "resiliencia"],
@@ -288,7 +288,7 @@ Y mientras el periodista se iba, la fue oyendo de lejos, cada vez más corta. Me
 
 El cronista escribe a los quince días de su desaparición de las calles y a ocho o más de su reclusión. Cuenta que unas beatas la sacaron de la iglesia de San Ignacio y que un policía se la llevó; que la orden vino del alcalde mayor, don Ernesto S. de Santamaría; que en el asilo de locas de El Aserrío le negaron la entrada por ser hombre, y que la encontró, por indicación del fotógrafo, en el asilo de mujeres desamparadas. También toma partido: pregunta si es justo encerrarla por gritar vivas a un partido medio muerto mientras otros preparan sus mueras al mismo partido desde la política profesional. Y se abstiene de diagnosticarla: la última línea de la crónica es una pregunta sobre si estará loca.
 
-El único nombre que la crónica contiene es el que ella misma da al preguntárselo: María Margarita Josefa Mogollón Leiva del Carmen y Santander, reina de Colombia. Lo dice dentro de un discurso que mezcla geografía y realeza, de modo que funciona como declaración de identidad y no como dato civil, y no hay en el texto partida, edad ni lugar de origen que lo respalden.`,
+El único nombre que la crónica contiene es el que ella misma da al preguntárselo: María Margarita Josefa Mogollón Leiva del Carmen y Santander, reina de Colombia. Lo dice dentro de un discurso que mezcla geografía y realeza, de modo que funciona como declaración de identidad y no como dato civil, y no hay en el texto partida, edad ni lugar de origen que lo respalden. El apellido Villaquirá, con el que hoy suele nombrársela, no aparece en ninguna de esas dos mil ciento setenta palabras: lo puso el periódico en el titular de la reedición de 2024, y de ahí pasó a la memoria que circula.`,
     versiones: `Hay tres capas encima de la crónica de 1924 y cada una añade algo distinto. La primera es una versión que difunde la Secretaría de Cultura acreditando en cabecera que la toma de Asdrúbal López Orozco: de ahí salen la biografía de maestra en Fusagasugá y un hijo al que unos conservadores le quitaron la vida, y también un periodo de circulación callejera, de 1930 a 1942, por La Candelaria, Las Cruces y San Victorino, con un retrato físico detallado. La misma versión le atribuye haber inspirado al maestro Milciades Garavito una canción compuesta en su honor.
 
 La segunda capa es audiovisual. Una miniserie de televisión, reseñada por Radio Nacional, agrega el esposo muerto en la guerra, la casa incendiada y la llegada a Bogotá como desplazada. Esos tres episodios no están en la versión anterior ni en la crónica, y aparecen por primera vez en la ficción.
@@ -307,9 +307,9 @@ El segundo paralelo está más cerca en el tiempo y también fue registrado por 
       "Margarita con hábito gris conserva en la mano un pétalo rojo dentro del patio del asilo, sin barrotes ni caricatura",
     researchNotes:
       "VOZ TEMPRANA Y BIOGRAFÍA EN DISPUTA: privilegia la crónica de 1924 leída críticamente, atribuye la historia familiar a versiones tardías y evita diagnóstico retrospectivo.",
-    seoTitle: "Margarita Villaquirá, voz de la antigua Bogotá",
+    seoTitle: "La Loca Margarita, voz de la antigua Bogotá",
     seoDescription:
-      "Historia de Margarita Villaquirá, su vestido rojo, su voz liberal y el encierro que la memoria bogotana convirtió en leyenda urbana.",
+      "Historia de la Loca Margarita, su vestido rojo, su voz liberal y el encierro que la memoria bogotana convirtió en leyenda urbana.",
     focusKeywords: [
       "Loca Margarita",
       "Margarita Villaquirá Aya",

@@ -34,7 +34,23 @@ territorio sostiene, sin afirmar nada del relato. ③ Dejarlas bloqueadas y
 dichas hasta que aparezca.
 
 
-### A · `la-loca-margarita`: el apellido del título no está en el registro
+### B · La cadena que sale de un libro que nadie ha abierto
+
+La biografía de maestra de Fusagasugá con el hijo asesinado no viene de
+«perfiles posteriores», como decía el módulo: la Secretaría de Cultura la
+acredita en cabecera —«Versión tomada de Asdrúbal López Orozco»—, igual que
+Canal Capital acredita al Loco Arias. **Las dos fuentes que la matriz contaba
+por separado son una sola cadena, y sale del libro de 2008 que nadie ha
+abierto** y que sólo consta en dos fichas de catálogo.
+
+① Tratar esa línea como una sola fuente, declarada como cadena de dos manos, y
+no anclar en ella ningún hecho biográfico. ② Buscar el libro en la Biblioteca
+Nacional antes de decidir. ③ Retirar la línea biográfica de las fichas hasta
+que aparezca.
+
+## Resueltas por el director, 2026-09-22
+
+### A · resuelta ①: `la-loca-margarita`: el apellido del título no está en el registro
 
 El único registro de época del ciclo es la crónica del **Magazín dominical de
 El Espectador del domingo 20 de julio de 1924**, con la voz de la protagonista
@@ -51,21 +67,13 @@ la Loca Margarita», nombrando en `historia` el nombre completo que ella da y
 declarando de dónde sale «Villaquirá». ② Corregir título y slug al nombre de
 la fuente, con redirección. ③ Conservarlo todo y anotarlo en `dudas`.
 
-### B · La cadena que sale de un libro que nadie ha abierto
+**Resuelta: ①.** El slug se queda. El título visible pasa a «Margarita, la
+Loca Margarita», y lo mismo el título SEO y la descripción. La `historia`
+dice ahora de dónde sale el apellido: del titular de la reedición de 2024, no
+de la crónica. «Villaquirá» se queda sólo como palabra clave de búsqueda,
+porque así la busca la gente.
 
-La biografía de maestra de Fusagasugá con el hijo asesinado no viene de
-«perfiles posteriores», como decía el módulo: la Secretaría de Cultura la
-acredita en cabecera —«Versión tomada de Asdrúbal López Orozco»—, igual que
-Canal Capital acredita al Loco Arias. **Las dos fuentes que la matriz contaba
-por separado son una sola cadena, y sale del libro de 2008 que nadie ha
-abierto** y que sólo consta en dos fichas de catálogo.
-
-① Tratar esa línea como una sola fuente, declarada como cadena de dos manos, y
-no anclar en ella ningún hecho biográfico. ② Buscar el libro en la Biblioteca
-Nacional antes de decidir. ③ Retirar la línea biográfica de las fichas hasta
-que aparezca.
-
-### C · `el-bobo-del-tranvia` se queda sin registro
+### C · resuelta ①: `el-bobo-del-tranvia` se queda sin registro
 
 Para Antonín no hay nada: «Antonín» aparece **cero veces** en las 226 páginas
 de la tesis sobre el tranvía que el módulo cita.
@@ -76,6 +84,23 @@ que el territorio sostiene —el tranvía, sus fechas, sus rutas— sin afirmar
 nada del personaje. ③ Retirarla del ciclo.
 
 ---
+
+**Resuelta: ①.** Se publica, y «Antonín» sale del título, del título SEO, de
+la descripción y del extracto: el nombre no tiene registro. El Relato lo
+conserva como lo que la divulgación distrital dice que la ciudad lo llamaba,
+y la `historia` declara que no aparece en la tesis.
+
+### Títulos de Monserrate, Russi y Arias · aceptados
+
+«El Señor Caído de Monserrate», «José Raimundo Russi, el abogado en disputa»
+y «Eduardo Arias, el Loco Arias». Los slugs no cambian.
+
+### 0 y B · sin respuesta, y no frenan el ciclo
+
+El libro de 2008 sigue sin ejemplar: las dos fichas que dependen sólo de él
+quedan **bloqueadas y declaradas** (spec del cierre §4). Y la cadena de B ya
+está escrita como una sola mano en las dos fichas afectadas, que es la
+opción ①; si el director prefiere otra, se rehace.
 
 ## Resueltas por el cotejo, sin necesidad de consulta
 
