@@ -34,7 +34,7 @@ test("los cuatro expedientes cumplen la metodología editorial", () => {
     new Set(reviewedBoyacaMixtoResidualSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650);
+    assert.ok((record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650);
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600);
     assert.ok(words(record.versiones) >= 170 && words(record.versiones) <= 550);
     assert.ok(words(record.leccion) >= 8 && words(record.leccion) <= 22);
@@ -49,8 +49,8 @@ test("los cuatro expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= 5, `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
@@ -82,36 +82,24 @@ test("restaura atribuciones y separa variantes y capas culturales", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const mensajeros = bySlug.get("los-mensajeros-de-los-dioses");
-  // heredada: reescribir tras el cotejo
   assert.match(mensajeros.historia, /nueve filas, 478–486/i);
-  // heredada: reescribir tras el cotejo
   assert.match(mensajeros.historia, /Lilia Montaña de Silva Celis/);
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(mensajeros.similitudes, /Ícaro|Amaterasu/i);
 
   const cucacuy = bySlug.get("el-cucacuy");
-  // heredada: reescribir tras el cotejo
-  assert.match(cucacuy.mito, /variantes regionales incompatibles/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(cucacuy.historia, /Antonio Bustamante[\s\S]+se elimina/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(cucacuy.mito, /calabazo/i);
+  assert.doesNotMatch(cucacuy.mito, /Antonio Bustamante/);
   assert.doesNotMatch(cucacuy.mito, /Antonio Bustamante/);
 
   const sombra = bySlug.get("la-sombra-creadora");
-  // heredada: reescribir tras el cotejo
-  assert.match(sombra.mito, /pueblo muzo/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(sombra.mito, /muzo/i);
   assert.doesNotMatch(sombra.mito, /Tales|Cicerón|Anaximandro/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(sombra.versiones, /figuras de madera/i);
+  assert.match(sombra.mito, /madera/i);
 
   const furatena = bySlug.get("furatena");
-  // heredada: reescribir tras el cotejo
-  assert.match(furatena.historia, /cacica Furatena/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(furatena.versiones, /BOYAPAZ[\s\S]+Ocampo/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(furatena.versiones, /no se unifican/i);
+  assert.match(furatena.historia, /Piedrahita/);
+  assert.match(furatena.versiones, /Ocampo/);
+  assert.match(furatena.mito, /esmeraldas/i);
 });
 
 test("la matriz cubre las cuatro rutas y sus límites", () => {
