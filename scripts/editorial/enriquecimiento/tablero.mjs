@@ -113,6 +113,34 @@ async function actasDelRepo() {
   return actas;
 }
 
+/**
+ * Fichas que declaran `fuentesAgotadas` en su módulo: la investigación no dio
+ * para ocho sin relleno y lo dejó razonado. Para el spec valen como cerradas en
+ * el criterio de fuentes (≥8 o agotadas). Se lee del texto de los módulos
+ * porque el constructor no siempre propaga el campo al expediente.
+ */
+async function agotadasDelRepo() {
+  const slugs = new Set();
+  const raiz = path.resolve("editorial");
+  const recorrer = async (dir) => {
+    for (const e of await fs.readdir(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) await recorrer(p);
+      else if (e.name.endsWith(".mjs")) {
+        const src = await fs.readFile(p, "utf8");
+        if (!src.includes("fuentesAgotadas:")) continue;
+        for (const m of src.matchAll(/slug: "([^"]+)",\s*\n\s*fuentesAgotadas:/g)) slugs.add(m[1]);
+        if (path.basename(dir) === "myths" && /\n  fuentesAgotadas:/.test(src)) {
+          const m = src.match(/\n  slug: "([^"]+)"/);
+          if (m) slugs.add(m[1]);
+        }
+      }
+    }
+  };
+  await recorrer(raiz);
+  return slugs;
+}
+
 const client = await connect(options);
 const { rows } = await client.query(`
   SELECT m.slug, m.title, co.slug AS comunidad, r.slug AS region,
@@ -131,6 +159,7 @@ await client.end();
 const { porSlug } = await slugsPorModulo();
 const actas = await actasDelRepo();
 const reescrituras = await reescriturasDelRepo();
+const agotadas = await agotadasDelRepo();
 const enNeon = new Set(rows.map((r) => r.slug));
 
 const fichas = rows.map((r) => {
@@ -139,18 +168,19 @@ const fichas = rows.map((r) => {
   const bloque = !r.comunidad || BLOQUE.has(r.comunidad);
   const rehecho = reescrituras.get(r.slug);
   const publicada = Boolean(rehecho) && huella(rehecho) === huella(r.mito);
+  const fuentesOk = r.fuentes >= 8 || agotadas.has(r.slug);
   let estado;
   let carril = null;
   if (bloque) {
     if (acta?.bloqueada) estado = "bloqueada";
-    else if (acta && r.cinco && r.fuentes >= 8 && publicada) estado = "cerrada";
+    else if (acta && r.cinco && fuentesOk && publicada) estado = "cerrada";
     else estado = "abierta";
     if (estado === "abierta") {
       const mod = modulos[0] || "";
       carril = (CARRIL_POR_MODULO.find(([re]) => re.test(mod)) || [])[1] || (r.cinco ? "C6" : "C5");
     }
   } else {
-    estado = r.cinco && r.fuentes >= 8 ? "cerrada" : "abierta";
+    estado = r.cinco && fuentesOk ? "cerrada" : "abierta";
     if (estado === "abierta") carril = r.cinco ? "C7c" : "C7a";
   }
   return {
@@ -197,6 +227,7 @@ const resumen = {
     cerradas: comunidades.filter((f) => f.estado === "cerrada").length,
     sinCincoCampos: comunidades.filter((f) => !f.cinco).length,
     bajoOchoFuentes: comunidades.filter((f) => f.fuentes < 8).length,
+    agotadasDeclaradas: comunidades.filter((f) => f.fuentes < 8 && agotadas.has(f.slug)).length,
   },
   porCarril: Object.fromEntries(
     ["C1", "C2", "C3", "C4", "C5", "C6", "C7a", "C7c"].map((c) => [c, cuenta((f) => f.carril === c)]),

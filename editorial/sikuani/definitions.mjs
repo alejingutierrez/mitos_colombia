@@ -401,6 +401,7 @@ Propio de esta versión es el resto: el hígado nombrado en voz alta, el cuerpo 
   }),
   myth({
     slug: "historia-de-un-viejo",
+    fuentesAgotadas: "queda en 7. Se buscó una versión o un tratamiento directo de la vieja caníbal, los hermanos abandonados, el pajuil y los cuatro perros-felinos en archive.org (no está Folk Literature of the Sikuani Indians de Wilbert y Simoneau), la Biblioteca Virtual del Banco de la República (Geografía humana de Colombia, Orinoquia, 1993: sólo trae el pajuil como presa de caza), Redalyc, PMC, repositorios de Uniandes, Uniminuto y UNAD, las cartillas sikuani del MEN (Tajume liwaisi: vocabulario, sin relatos) y la bibliografía de Roncería. Queixalós y Jiménez, Entre cantos y llantos, y Ortiz, Ainawi, encantos de la selva (1998), que describe a los yajewi, no están en digital libre fuera de academia.edu; Visión de la cultura y sociedad jivi (Ortiz y Castillo, UNICEF 2006) sólo circula en Scribd y SlideShare.",
     sourceKeys: [
       "villaPosse1993",
       "ortiz1982",

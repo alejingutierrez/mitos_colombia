@@ -3,6 +3,7 @@ import { defineTucanoMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineTucanoMyth({
     slug: "cuando-la-danta-perdio-su-hegemonia",
+    fuentesAgotadas: "queda en 6. Se buscó el episodio de Wejké y el pito, y la danta como personaje tucano, en el resto de Fulop en la RCA (1955, parentesco; ningún otro artículo suyo en el ICANH), en Rodríguez Lamus 1958 (misma aldea: no nombra a la danta), en los libros tucano de ISA/FOIRN (sólo Hausirõ Porã trae un episodio de la Anta), en Gentil 2007, Barreto 2018, Azevedo 2016 (REIA) y Oliveira 2017 (constelaciones), y en la web por «danta/anta/tapir» + tukano/Vaupés. Reichel-Dolmatoff, «Tapir avoidance in the Colombian northwest Amazon» (1985) trata el tema pero no tiene URL abierta; la tesis de João Paulo Barreto (TEDE-UFAM) devolvió 504 y no pudo abrirse.",
     sourceKeys: [
       "fulop1954",
       "fulop1956",

@@ -77,6 +77,7 @@ Fuera de ese conjunto, la comparación con Orfeo y Eurídice no la sostiene ning
   }),
   myth({
     slug: "sol-luna-dia-y-noche",
+    fuentesAgotadas: "con estas dos queda en 7. Se buscó M.3 fuera de Hugh-Jones 1979 (eHRAF, ya en el pool) en SciELO, ICANH (RCA y publicaciones), PIB/ISA, Tipití, UCR, UNESCO y Encyclopedia.com; la traducción al castellano de la monografía (Ediciones Universidad Central, 2011) devolvió 502 y no se pudo abrir; el artículo de Tipití sobre Warimi da 403.",
     sourceKeys: [
       "palm",
       "communityBook",
@@ -323,6 +324,7 @@ Lo que ata esta versión a un narrador y no a una idea general de montañas sagr
   }),
   myth({
     slug: "el-origen-de-la-gente-de-los-frutales-silvestres",
+    fuentesAgotadas: "queda en 7. Se buscó en el PES de la ACAIPI (2010), el expediente UNESCO 00574, Correa 1981 (ICANH), Cayón 2024 (Boletim Goeldi), Body Tubes (Mundo Amazónico), Revista Semillas 26/27 (2006), El Tiempo (2011), las notas de calendario de gaiaamazonas.org y eHRAF (From the Milk River, sólo ficha). Ninguna otra obra abierta trata el origen de los frutales, Badi Serero o la pava Kata Bahi; Semillas y El Tiempo sólo nombran el calendario y se descartaron por no tratar el relato.",
     sourceKeys: [
       "communityBook",
       "ilv1974",

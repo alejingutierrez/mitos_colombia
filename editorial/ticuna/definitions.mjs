@@ -273,6 +273,7 @@ Lo que fija esta versión frente a las demás es su química: una planta que enn
   }),
   defineTicunaMyth({
     slug: "origen-del-friaje-tikuna",
+    fuentesAgotadas: "con una sola fuente nueva queda en 6. Se buscó el friaje (friagem), las grullas (yauru, jaburu, garza) y la pesca con barbasco que produce el frío en: Valenzuela 2010 (UNAL), la tesis de Matarezio Filho 2015 y su artículo de 2017 (USP), Faulhaber 2004 (antropología del clima, SciELO), Goulard 2009 en OpenEdition y Goulard 2013 en Maguaré, Belaunde, Letts y Sullón 2016 (Ministerio de Cultura del Perú), Belaunde y Nieto 2023 (REAA, sobre el friaje murui), Santos 2014 (Mundo Amazónico), el acervo del ISA (Ore i Nucümaügüü, sin versión digital) y los textos ya descargados en busqueda-2026-09-19. El único paralelo directo fuera de Moruapü es la pesca de Ũnẽ en Nimuendajú 1952, «padre del friaje», y esa obra ya está en la ficha.",
     sourceKeys: [
       "moruapu2000",
       "nimuendaju1952",
@@ -338,6 +339,7 @@ La secuencia que identifica a esta versión no reaparece en los demás relatos d
   }),
   defineTicunaMyth({
     slug: "la-canoa-de-moe",
+    fuentesAgotadas: "se buscó el relato de Moe, la mujer moru y la canoa en Nimuendajú 1952 (trae la versión de la mujer guacamaya, pp. 151-152, ya en el pool), Toru Duü'ügü 1985 (ya en el pool), OGPTB 1988, Santos y Ramos 2010, Gómez Pulgarín 2012 (sólo ficha de corpus), la Biblioteca Digital del Banco de la República (tikuna), Camacho García 2013, Matarezio sobre chamanismo ticuna, el portal del Instituto Caro y Cuervo y búsquedas en español y portugués (Moe, Moru, Moruapü, mujer loro/guacamaya, astillas que se vuelven peces, yewae/dye'vae). Camacho 1995 y 1996 y Lévi-Strauss, Mitológicas III, sólo circulan en copias vetadas; Goulard 2009 en OpenEdition no deja leer más que el comienzo de los anexos.",
     sourceKeys: [
       "moruapu2000",
       "men2014",
