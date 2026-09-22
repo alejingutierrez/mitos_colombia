@@ -1,0 +1,32 @@
+{
+  "slug": "la-vista-del-libertador",
+  "titulo_en_la_fuente": "La Visita del Libertador (según la ficha publicada; no se ha visto en ninguna obra consultable)",
+  "bloqueada": true,
+  "por_que_bloqueada": "El primario que propone la bibliografía no sostiene el relato. Abrí José María Baraya, Biografías militares, o Historia militar del país en medio siglo (Bogotá, 1874), texto completo en https://archive.org/download/biografasmilita00baragoog/biografasmilita00baragoog_djvu.txt, y lo barrí entero: Piedecuesta aparece sólo cuatro veces (MacGregor organiza allí una división en 1814, Urdaneta y Rovira reúnen restos de tropa en 1815, Santander disciplina tropas hasta enero de 1816, y la biografía del jeneral Mantilla lo presenta como «hijo de la villa de Piedecuesta»). Ninguna narra una visita de Bolívar a la villa; no aparecen la Pedregosa, la Puerta del Sol, el padre Valenzuela, la Capilla de los Dolores, Lacroix, el banquete, el baile ni Margarita Camacho. El fragmento queda en primarias/baraya-1874-biografias-militares-piedecuesta.txt. La pista de Baraya en la bibliografía parece un cruce con un-libertador-piedecuestano, que sí sale de ese libro. La ficha publicada, además, no se apoya en Baraya: se presenta como un romance de Vicente Arenas Mantilla en Crónicas y romances (pp. 519-522 según la compilación de Pérez Pinzón, 2016). Esa obra no es consultable: la ficha de Ediciones UIS (https://ediciones.uis.edu.co/index.php/publicacionesuis/catalog/book/128, abierta con curl -k el 2026-09-22) dice «Disponible: No» y «La descarga de datos todavía no está disponible», y su sumario de quince piezas no incluye ningún título sobre Bolívar ni sobre una visita del Libertador. La compilación de 2016 sólo circula en Scribd, vetado. Crucé los primarios del repo (grep de Piedecuesta, Pedregosa, Visita del Libertador y Bolívar en content/editorial/*/primarias/): Villa Posse II sólo trae el municipio de Bolívar (Santander), no el episodio. Una búsqueda web del título con Pedregosa y Arenas no devolvió ningún texto. Sin un solo literal anclable, no hay nudos.",
+  "registro": {
+    "obra": null,
+    "url": null,
+    "autor": null,
+    "anio": null,
+    "paginas": null,
+    "narrador": null,
+    "lugar": "Piedecuesta, Santander",
+    "fecha_de_recoleccion": null
+  },
+  "nudos": [],
+  "fuera": [
+    {
+      "elemento": "toda la ficha publicada: comitiva (Ferguson, Lacroix, O'Leary, Soublette, Wilson), Pedregosa vieja, Puerta del Sol, la joven del saludo, la casa con establo, el baile, el chocolate de Girón, el padre Valenzuela, la Capilla de los Dolores, el temblor, Floridablanca, Rionegro y los pasos en la casa",
+      "por_que": "ninguno de estos elementos está en Baraya 1874 ni en ningún texto abierto; sólo se conocen por la compilación de 2016, que no es consultable fuera de Scribd"
+    },
+    {
+      "elemento": "la hipótesis de Margarita Camacho y Miguel Simón",
+      "por_que": "es recepción periodística posterior (Vanguardia, 2010, atribuida a Antonio Cacua Prada), no parte de un relato; no se abrió como primario"
+    }
+  ],
+  "pendiente": "Conseguir el texto de «La Visita del Libertador»: un ejemplar físico de Crónicas y romances (Biblioteca Mínima Santandereana, UIS, 2012, ISBN 978-958-8777-15-3, o la edición de 1960) o de Pérez Pinzón (ed.), Literatura folclórica: leyendas y relatos legendarios de Piedecuesta (2016, ISBN 978-958-46-9297-9) en un repositorio abierto de la UNAB. Comprobar también si las pp. 519-522 corresponden de verdad a Crónicas y romances o a otra obra de Arenas, porque el sumario publicado no lo incluye.",
+  "clasificacion": {
+    "por_que_mestizo": "sin sostener: sin registro no se puede argumentar el cajón",
+    "propuesta": "sin decidir"
+  }
+}
