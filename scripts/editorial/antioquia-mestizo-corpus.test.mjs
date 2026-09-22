@@ -35,7 +35,7 @@ test("los diez expedientes cumplen rangos y estructura metodológica", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      (record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -66,7 +66,7 @@ test("los diez expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
@@ -97,42 +97,33 @@ test("los diez expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-paton").mito,
     /Sasquatch|Armando Bulla|ecologistas asesinados/i,
   );
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-perro-negro").mito,
     /Aurora|canódromo|boda/,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-cabellona").versiones,
-    /separada[\s\S]+Mechuda del Socorro/i,
+    /SINIC[\s\S]+Liborina/,
   );
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("la-dama-verde").mito, /Damián Robledo/);
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("la-rodillona").mito,
     /Aquileo|Virgelina/,
   );
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("las-ilusiones").mito,
     /Matilde|San Justina/,
   );
-  assert.equal(bySlug.get("los-rescoldos").title, "Los Rescoldados");
-  // heredada: reescribir tras el cotejo
+  assert.equal(bySlug.get("los-rescoldos").title, "Los rescoldos");
   assert.doesNotMatch(bySlug.get("los-rescoldos").mito, /Justiniano/);
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("maria-centeno").historia,
     /esclavos/i,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("maria-la-larga").mito,
     /Santa Rita[\s\S]+Poceta de la Virgen/,
@@ -141,10 +132,9 @@ test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
     bySlug.get("no-hay-deuda-que-no-se-pague").category_path,
     "Andina > Caldas > Mestizo",
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("no-hay-deuda-que-no-se-pague").historia,
-    /Otero D’Costa[\s\S]+Rionegro/,
+    /Otero D'Costa[\s\S]+Arma/,
   );
 });
 

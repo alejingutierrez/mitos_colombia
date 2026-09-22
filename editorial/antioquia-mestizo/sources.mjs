@@ -384,6 +384,118 @@ export const antioquiaMestizoSources = {
     limitation:
       "Es la tradición llanera venezolana; comparación de estructura.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  mejiaDiseno2012: source({
+    title: "Diseño de pruebas objetivas para evaluar competencias en el área de castellano para el grado tercero de la educación básica primaria",
+    author: "Luis Arturo Aguilar Mejía y Silvia Rosa Sierra Calvo (Universidad del Norte)",
+    year: 2012,
+    type: "trabajo de grado (Maestría en Educación)",
+    url: "https://manglar.uninorte.edu.co/bitstream/handle/10584/7607/luis%20arturo.pdf",
+    summary:
+      "Reproduce el texto escolar «Patón», firmado «Leyenda popular»: el ser que tumba árboles en las montañas, la trampa del lazo, los campesinos que esperan tres horas y el hombre de pies enormes que parece una ele.",
+    limitation:
+      "Tesis de evaluación escolar (Barranquilla, 2012): el texto no tiene procedencia ni narrador.",
+  }),
+  grilloteGuia2021: source({
+    title: "Guía de Lengua Castellana, grado tercero, «Tema: la leyenda»",
+    author: "Centro Educativo El Grillote",
+    year: 2021,
+    type: "material escolar",
+    url: "https://www.webcolegios.com/file/2360bb.pdf",
+    summary:
+      "Guía de grado tercero de 2021 con la misma leyenda, situada en Antioquia, con patas de un metro y el cierre «no es un monstruo, pero hace mucho daño».",
+    limitation:
+      "Material de aula sin procedencia; variante del mismo texto escolar.",
+  }),
+  compiladoraInforme1997: source({
+    title: "Informe Fulbright-Hays 1997 con «Niños de las regiones de Colombia» (Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro (compiladora), ERIC ED430849",
+    year: 1997,
+    type: "informe educativo",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "Incluye la página infantil «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN), donde una niña de la región cafetera cuenta que el Patón son «unos pies muy grandes que pasan por los caminos, solos, sin el cuerpo», junto a los Meneses que nombra Similitudes.",
+    limitation:
+      "Es una página infantil de divulgación impresa en un informe de 1997; no da narrador ni lugar exacto.",
+  }),
+  lopezpueblo1977: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López",
+    year: 1977,
+    type: "libro (cap. 8, pp. 120-126)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "Recoge en Tunja el espanto del perro de San Francisco, con aullidos, arrastre de cadenas y ojos con luces fuertes, el paralelo de Similitudes.",
+    limitation:
+      "Es un espanto urbano de Boyacá.",
+  }),
+  noticiasAntioquenidad2023: source({
+    title: "(Antioqueñidad III) Mitos y leyendas de Antioquia",
+    author: "IFM Noticias, con información del SINIC",
+    year: 2023,
+    type: "prensa regional",
+    url: "https://ifmnoticias.com/antioquenidad-iii-mitos-y-leyendas-de-antioquia/",
+    summary:
+      "Reproduce la ficha del Sistema Nacional de Información Cultural: la Cabellona es un espanto rural vespertino y de tiempos lluviosos, de Liborina a Pavarandocito.",
+    limitation:
+      "Nota de prensa regional que reproduce una ficha institucional hoy caída; una línea.",
+  }),
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Texto del cuento de Otero D'Costa (Leyendas, 1936) en la sección 17, pp. 53-56: el perulero Damián Vásquez Montiel en la Villa de Arma, el pacto contado por doña Mónica y el jinete de la mula de fuego del viernes santo.",
+    limitation:
+      "Villa Posse lo presenta como leyenda oída y reelaborada; es un cuento firmado.",
+  }),
+  hernandezAnimas2012: source({
+    title: "Ánimas y pactos diabólicos: un regaño platónico a los borrachos e idólatras de Santander desde la mitología en prosa",
+    author: "Farouk Caballero Hernández",
+    year: 2012,
+    type: "artículo (Rastros Rostros 14 (27), pp. 69-74, Universidad Cooperativa de Colombia)",
+    url: "https://revistas.ucc.edu.co/index.php/ra/article/download/445/450",
+    summary:
+      "Recuerda el pacto diabólico de don David Puyana en Bucaramanga, que nunca perdía en el juego, recreado por Gómez Valderrama, el paralelo de Similitudes, y analiza «Cuento de ánimas» del mismo libro de Otero.",
+    limitation:
+      "No trata este cuento.",
+  }),
+  camargoHacia2015: source({
+    title: "Hacia una nueva comprensión de la historiografía colombiana: breve historia intelectual de Enrique Otero D'Costa (1883-1964)",
+    author: "Daniel Mauricio Preciado Camargo",
+    year: 2015,
+    type: "trabajo de grado (Universidad del Rosario)",
+    url: "https://repository.urosario.edu.co/handle/10336/10607",
+    summary:
+      "Estudio de la obra de Otero D'Costa que lee sus leyendas como historiografía de la vida cotidiana colonial.",
+    limitation:
+      "No analiza este cuento.",
+  }),
+  republicacoleccionsf: source({
+    title: "La colección de Enrique Otero D'Costa",
+    author: "Credencial Historia n.º 375 (Banco de la República)",
+    year: "s. f.",
+    type: "artículo de divulgación histórica",
+    url: "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-375/la-coleccion-de-enrique-otero-dcosta",
+    summary:
+      "Presenta al autor como historiador y coleccionista de documentos coloniales, de donde vienen el maese de campo, el licenciado vicario y la dueña del cuento.",
+    limitation:
+      "No menciona este cuento.",
+  }),
+  caldasconquistasf: source({
+    title: "La conquista o encuentro de dos culturas",
+    author: "Gobernación de Caldas",
+    year: "s. f.",
+    type: "síntesis histórica institucional",
+    url: "https://www.caldas.gov.co/index.php/historia-caldas/10044-la-conquista-o-encuentro-de-dos-culturas",
+    summary:
+      "Síntesis de la conquista del antiguo Caldas, con la fundación de las primeras poblaciones, entre ellas Arma, escenario del cuento.",
+    limitation:
+      "Síntesis institucional; no trata el cuento.",
+  }),
 };
 
 export const antioquiaMestizoSourceKeysBySlug = {

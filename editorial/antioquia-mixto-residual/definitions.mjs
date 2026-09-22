@@ -3,38 +3,56 @@ import { defineAntioquiaMixtoResidualMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineAntioquiaMixtoResidualMyth({
     slug: "el-patetarro",
-    title: "El Patetarro de las sementeras",
+    fuentesAgotadas: "Escobar Uribe (Mitos de Antioquia, 1950), Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001) y Salazar Duque (Mitos y mensajes, 1990) no tienen texto abierto; sólo se leen en citas de Vélez Correa. Fuera de Vélez, SENA 2022, Villa Posse y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "carrasquillamarquesa1928",
+      {
+        key: "correaMitos1997",
+        summary:
+          "Capítulo «El Patetarro», con Agustín Jaramillo, Iván Salazar Duque (1990, p. 76) y Escobar Uribe (1950, p. 20): el tarro-letrina, la Patetarro de los pueblos mineros y la noche de los monteadores.",
+        limitation:
+          "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      "toledoRemembranzas2022",
+      "patrimonioPropuesta2019",
+      "tiempoMedellin1990",
+      {
+        key: "espantosArchive",
+        summary:
+          "Lo trae como ficha técnica (demonio, Chocó y Antioquia) y relato de horror con personajes inventados (pp. 43-44).",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      "moralesFolclor2013",
+    ],
+    title: "El patetarro",
     excerpt:
       "Un gigante apoyado en un tarro de guadua cruza del monte a los sembrados y deja tras de sí plagas, malos olores y presagios.",
     tags: ["Patetarro", "agricultura", "muerte", "caos"],
-    mito: `Cuando la noche cerraba sobre las zonas mineras, el monte y la parcela dejaban de parecer espacios separados. Los perros aullaban, los árboles se agitaban con un viento repentino y, desde una quebrada o un socavón, podía escucharse un grito seguido por una carcajada. La gente decía entonces que el Patetarro andaba cerca.
+    mito: `En el monte vive un gigantón que sólo tiene una pierna de carne y hueso. Para poder andar, se acomoda en el muslo mocho un tarro de guadua, de esos que usan los montañeses para cargar agua. Es descomunal, feo, sucio y desgreñado, y el tarro le sirve de letrina. Cuando lo tiene lleno de sus líquidos pestilentes, baja a las sementeras y los derrama: donde cae, se secan hasta los árboles, o nacen gusaneras y hormigueros que arrasan las cosechas. Lo único que le da miedo son las calaveras de vaca; si no fuera por ellas, no quedaría vivo ni un papayo en los sembrados.
 
-La figura que describe Tomás Carrasquilla es un gigantón. Solo conserva una pierna de carne y hueso. En el otro lado apoya el muslo en un trozo hueco de guadua, semejante a los recipientes usados para cargar agua en la montaña. Ese tarro le permite avanzar a saltos por el borde del bosque, pero también guarda los líquidos pestilentes que acompañan su paso.
+Cuando aparece, anuncia desgracia: muerte, inundaciones, cosechas perdidas. En las noches lluviosas y oscuras se oyen sus gritos y sus carcajadas en los socavones de las minas y en las hondonadas de los riachuelos, y antes de que llegue aúllan los perros, se sacuden los árboles y se revuelve la hojarasca. Según la región, es hombre o mujer. Donde es mujer, tiene el rostro entre mujer y bestia, va cubierta de hojarasca, con colmillos y uñas deformes, y baja de noche de los montes a los pueblos mineros a espantar con gritos a los mineros que encuentra en las calles vacías.
 
-Cuando el recipiente se llena, el Patetarro sale hacia las sementeras. Lo que derrama seca plantas y árboles o hace aparecer gusaneras, hormigueros y otras plagas capaces de arrasar una cosecha. No cultiva, no recoge frutos y no protege el monte. Cruza desde la espesura hacia el espacio trabajado y convierte la frontera entre ambos en una señal de calamidad.
+Entre los mineros, la Patetarro es una dueña del monte, perversa y vengativa, que no tolera que nadie entre en sus dominios, y persigue a los monteadores que se atreven a profanar la selva. De noche, cuando ya se apagaron las fogatas y están colgadas las hamacas, los perros empiezan a aullar. Los hombres buscan las armas, y algo como un búho enorme revolotea azotando las copas de los árboles, desgajando chamizas y levantando la hojarasca, y no los deja encontrar las armas ni los fósforos ni juntar la candela. Todos saben de qué se trata. «La Patetarro nos persigue», dicen con la voz temblando, y pasan la noche en vela hasta que entra la luz del amanecer.
 
-En esta versión impresa, una calavera de vaca puede mantenerlo lejos. Por eso una osamenta elevada frente al sembrado no es un adorno: funciona dentro del relato como defensa contra el visitante. Otras narraciones no mencionan esa protección. Conservan, en cambio, los malos olores, la lluvia, los gritos y la idea de que su aparición anuncia una muerte, una inundación o alguna desgracia todavía desconocida.
+En Samaná, Pensilvania, Manzanares y Marquetalia, los campesinos y los mineros cuentan de dónde salió. Unos dicen que perdió las piernas en la guerra de los Mil Días y que, en venganza, destruía los cultivos para que los ejércitos murieran de hambre. Otros, que era un hombre de mal carácter, peleonero y mujeriego, que perdió una pierna en una pelea a machete y se puso un tarro de guadua en su lugar. Otros, que es un hombre alto que esconde dentro del tarro un pie podrido, y que al caminar va dejando un líquido maloliente. Todas las historias terminan igual: donde aparece el Patetarro, viene la desgracia.`,
+    historia: `El testimonio literario más antiguo del Patetarro está en La marquesa de Yolombó, la novela de Tomás Carrasquilla publicada por entregas desde 1926 y en libro en 1928. En el capítulo de las noches de la hacienda, Carrasquilla describe «la corte infernal y selvática» de los montes antioqueños —la Patasola, la Madremonte, los ilusiones, el Bracamonte— y dice que sus genios vinieron de África con los barcos negreros a mezclarse con las deidades indígenas. Allí el Patetarro es el gigantón del tarro de guadua, de los líquidos que arruinan las sementeras y del miedo a las calaveras de vaca.
 
-Una variante cuenta que alguien robaba gallinas durante la noche. Los dueños esperaron creyendo que encontrarían un animal y sorprendieron a un hombre. Al huir, metió un pie en un recipiente con estiércol. Desde entonces habría regresado para vengarse de las fincas y estropear los cultivos. Esta explicación no es la biografía única del Patetarro, sino una manera regional de responder por qué lleva el tarro.
+Fabio Vélez Correa, en Mitos, espantos y leyendas de Caldas (1.ª ed., 1997; ampliada después de 2007), le dedica un capítulo en que reúne tres fuentes: Agustín Jaramillo, que lo describe como hombre descomunal con la pierna de guadua que le sirve de letrina; Iván Salazar Duque (Mitos y mensajes, 1990, p. 76), que lo hace mujer y lo baja a los pueblos mineros; y Arturo Escobar Uribe (Mitos de Antioquia, 1950, p. 20), que lo llama «deidad montaraz» de los mineros y cuenta la noche de pavor de los monteadores. Vélez lo lee como la manera en que el colono antioqueño y el campesino caldense explicaron las heladas, las sequías y las plagas.
 
-No siempre se habla de un hombre. Hay registros que usan La Patetarro y la presentan junto a ríos o como figura vengadora. Cambian el género, el motivo y el daño, pero mantienen una extremidad sustituida por un recipiente, el salto irregular, la pestilencia y una presencia que transforma en amenaza el paisaje nocturno.`,
-    historia: `La atestación consultable más temprana de este expediente aparece en La marquesa de Yolombó. Tomás Carrasquilla comenzó a publicar la novela por entregas en 1926 y allí enumera seres temidos en un paisaje minero: Ilusiones, Patasola, Madremonte, Patetarro y Bracamonte. Su Patetarro ya tiene los rasgos centrales de esta ficha: tamaño enorme, una sola pierna de carne, tarro de guadua, líquidos que destruyen sembrados y una defensa con calaveras de vaca.
+El libro del SENA de 2022, Remembranzas de mis abuelos, lo recoge en el alto oriente caldense (p. 70) con tres explicaciones de su origen. Y el escultor Pedro Nel Gómez talló «La Patetarro» en 1968 y 1972-1973, según el informe de conservación del Tótem Mítico de la Selva de la Universidad Nacional en Medellín.`,
+    versiones: `Las fuentes no se ponen de acuerdo ni en el sexo del Patetarro. Carrasquilla, Jaramillo y el SENA lo hacen hombre; Salazar Duque y Escobar Uribe, mujer. Vélez registra la diferencia: según la región aparece como uno u otra.
 
-Arturo Escobar Uribe incluyó después al personaje en Mitos de Antioquia de 1950. Javier Ocampo López volvió a organizarlo dentro de Mitos y leyendas de Antioquia la grande en 2001. Estas obras prueban circulación literaria y folclórica durante el siglo XX, pero ninguna permite fechar un primer relato oral ni afirmar que una sola localidad lo originó.
+Tampoco coinciden en su oficio. En Carrasquilla y en Jaramillo arruina las cosechas con el contenido del tarro. En Escobar persigue a los monteadores que entran a la selva, como un búho enorme que no les deja encender el fuego. En Salazar Duque espanta a los mineros por las calles de los pueblos. En el SENA anuncia la muerte, las inundaciones y la pérdida de cosechas.
 
-La Secretaría de Cultura de Bogotá amplía el mapa a zonas mineras de Antioquia, Chocó y Cundinamarca. Su ficha reúne plagas, presagios, una pareja masculina y femenina y la explicación del ladrón de gallinas. El informe de la Universidad Nacional sobre el Tótem Mítico de la Selva estudia otra forma: la Patetarro representada por Pedro Nel Gómez como figura vengadora relacionada con violencia, ríos y restablecimiento simbólico del orden.
-
-Un reportaje con antropólogos de la Universidad de Antioquia interpreta al personaje en el límite entre la parcela doméstica y el monte no intervenido. Esa lectura ayuda a entender su función espacial, pero no lo convierte en una deidad ecológica demostrada. Las coordenadas de esta página son regionales y aproximadas; no localizan una mina ni un sitio de aparición.`,
-    versiones: `La versión de Carrasquilla conserva el núcleo más antiguo consultable y una protección concreta: la calavera de vaca. La ficha institucional de Bogotá coincide en el tarro, la pestilencia y la ruina agrícola, pero añade gritos, carcajadas, presagios de muerte o inundación y el episodio del gallinero. Esta última escena explica el recipiente mediante un accidente y una venganza; no cuenta la pérdida de una pierna en una riña.
-
-El informe sobre el Tótem Mítico usa La Patetarro. La figura castiga el asesinato a traición de una persona cuyo cuerpo fue arrojado al río y esparce destrucción sobre aguas y cultivos. Esa variante femenina y vengadora tiene otra función narrativa. Se presenta como lectura vinculada con la obra de Pedro Nel Gómez, no como sustituta de todos los relatos mineros.
-
-Cuentos de espantos y otros seres fantásticos publicó en 2004 una recreación de horror atribuida dentro de la ficción a una revista de 2003. Ernesto visita una finca heredada, escucha la historia familiar de Amalia y ve cómo el Patetarro ataca a su prometida. El expediente adopta forma clínica y testimonial, pero pertenece al diseño literario de la antología. No es un caso psiquiátrico comprobado.
-
-La página heredada añadía un peleador mujeriego que se amputaba la pierna en un socavón y una interpretación como guardián castigado por la destrucción del bosque. Esas ideas circulan en versiones digitales tardías, pero no tienen respaldo equivalente en las fuentes principales seleccionadas. Se retiran del Relato y no se presentan como origen histórico.`,
+El origen es lo que más varía, y sólo lo da el SENA: una víctima de la guerra de los Mil Días que se venga destruyendo los cultivos, un hombre pendenciero que perdió la pierna a machete, un hombre alto con un pie podrido escondido en el tarro. El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara ficción, lo sitúa en el Chocó y Antioquia y le inventa un relato de horror con personajes propios.`,
     leccion:
-      "Cuando el daño se vuelve señal, una comunidad aprende a observar lo que amenaza su sustento.",
-    similitudes: `La Patasola también recorre montañas y selvas con una sola extremidad, pero su cuerpo, sus víctimas y sus escenas de seducción o extravío forman otro repertorio; el Patetarro se apoya en guadua y deja el daño sobre cultivos. La Madremonte ocupa la frontera entre vegetación, agua y trabajo humano, aunque suele actuar como protectora frente a taladores o cazadores. El Patetarro, por el contrario, llega desde el monte para contaminar la parcela y anunciar calamidad. Carrasquilla nombra las tres figuras juntas, pero no las convierte en una sola entidad. Estas comparaciones muestran funciones territoriales distintas y no prueban parentesco, origen común ni equivalencia regional.`,
+      "Quien destruye lo sembrado por rencor deja el hambre como huella por donde pasa.",
+    similitudes: `En el mismo pasaje de La marquesa de Yolombó, Carrasquilla pone al Patetarro junto a la Patasola, el otro ser de una sola pierna del monte andino. En el Tolima, Misael Devia la recogió como mujer que se vuelve perra o vaca y salta sobre una pata; en Antioquia es la compañera del Patetarro en la corte selvática. Los dos tienen una pierna menos y los dos castigan desde el monte, pero la Patasola seduce y devora, y el Patetarro envenena la tierra.
+
+Escobar Uribe, citado por Vélez, separa al Patetarro de la Patasola y la Madremonte: los tres son dueños del monte, pero la Patetarro de los mineros es más perversa y no tolera ninguna intromisión. Es la misma figura de dueña del bosque que castiga al que entra sin permiso, que en el Tolima encarnan la Madremonte de Devia y en el occidente caldense los seres vengativos que recoge Vélez.
+
+La Rodillona de Vélez y del SENA, que se burla de los caminantes con carcajadas desde los barrancos, comparte con la Patetarro de Salazar Duque la risa como arma. Y el Patetarro de Pedro Nel Gómez, tallado en el tótem de la Universidad Nacional, lo convirtió en una de las figuras del arte público antioqueño.`,
     sceneHorizontal:
       "al borde entre una montaña oscura y una sementera antioqueña, un gigante sobrio de una sola pierna se apoya en un tarro hueco de guadua mientras cintas gráficas de olor y pequeñas plagas avanzan entre plantas marchitas, sin heridas ni fluidos realistas",
     sceneVertical:
@@ -54,38 +72,54 @@ La página heredada añadía un peleador mujeriego que se amputaba la pierna en 
   }),
   defineAntioquiaMixtoResidualMyth({
     slug: "el-mareco",
-    title: "El Mareco y el viento del castigo",
+    fuentesAgotadas: "Escobar Uribe (Mitos de Antioquia, 1950), Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001) y Salazar Duque (Mitos y mensajes, 1990) no tienen texto abierto; sólo se leen en citas de Vélez Correa. Fuera de Vélez, SENA 2022, Villa Posse y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      {
+        key: "espantosArchive",
+        summary:
+          "Único texto del relato: la ficha técnica del Mareco (demonio de Antioquia, diablillo rojo con aire de lagartija, ventarrón, dulces bendecidos) y el informe de la profesora sobre Manuel en el barrio San Ildefonso (pp. 47-48).",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      {
+        key: "unabMareco",
+        summary:
+          "Tesis sobre secuencias didácticas en que un estudiante opina que «el mito Mareco no es un mito»: prueba de que el nombre circula en la escuela.",
+        limitation:
+          "Mención de paso; no describe la figura.",
+      },
+      "correaMitos1997",
+    ],
+    relatoCorto:
+      "El único texto con trama es el informe de ficción del libro de 2004, de una página; la ficha técnica es de pocas líneas. Llegar a 300 palabras exigiría inventar.",
+    title: "El mareco",
     excerpt:
       "El Mareco roba dulces y se vuelve ventarrón para asustar a niños desobedientes; una recreación de 2004 le dio forma de lagartija roja.",
     tags: ["Mareco", "desobediencia", "familia", "miedo"],
-    mito: `En la forma más breve del relato, el Mareco es un diablillo infantil de varios municipios antioqueños. No tiene padres, casa ni fecha de nacimiento. Aparece cuando un niño desobedece, toma dulces que no le pertenecen o levanta la mano contra sus padres. Puede robar las golosinas y, si la falta continúa, transformarse en un ventarrón que levanta al pequeño y lo aleja por los aires.
+    mito: `Una profesora de sociales de un colegio pequeño del barrio San Ildefonso vio que un niño, Manuel, dibujaba en clase una escena extraña: un niño que se defendía de un monstruo con manos de torbellino. Cuando le preguntó por el dibujo, Manuel se puso a llorar y le rogó que no se lo dijera a nadie. Ella le prometió callar si él le contaba.
 
-Esa descripción no explica dónde termina el viaje ni afirma que el niño desaparezca para siempre. Su fuerza está en la advertencia: un comportamiento que los adultos no logran detener adquiere una consecuencia fantástica. El viento entra en la vida doméstica, desordena lo que encuentra y vuelve visible el temor de la familia.
+Unos veinte días antes, Manuel le había robado cinco mil pesos de la cartera a su mamá para comprar globos y armar una guerra de bombas de agua en el barrio. Estaba escondido detrás de unos arbustos, esperando para emboscar a los vecinos, cuando se le apareció un duende rojo y desnudo, parecido a una lagartija parada en dos patas, que le preguntó de dónde había sacado la plata para las bombas.
 
-Una recreación publicada en 2004 convirtió ese núcleo en una historia más extensa. Manuel había tomado dinero de la cartera de su madre para comprar globos de agua. Durante el juego se escondió detrás de unos arbustos, listo para sorprender a otros niños. En lugar de un rival apareció un ser pequeño, rojo y desnudo, parecido a una lagartija erguida sobre dos patas. Le preguntó de dónde había sacado el dinero.
+Manuel mintió: le dijo que su mamá se la había dado. El duende se llenó de ira y se convirtió en un ventarrón enorme, con ojos de matorral y boca de polvareda que echaba chispas, que levantó a Manuel por los aires entre luces. De pronto el viento desapareció, y Manuel cayó de bruces sobre los arbustos de su emboscada y salió huyendo.
 
-Manuel respondió que su madre se lo había dado. El pequeño duende se llenó de ira y cambió de forma. Sus manos se volvieron torbellinos; el cuerpo creció como un vendaval con polvo y chispas. El niño sintió que lo lanzaban por el aire y, cuando el viento se apagó, cayó sobre los mismos arbustos desde los que había preparado su juego.
+La profesora creyó que mentía y lo mandó a la psicóloga. Hasta que un día, en un libro de mitos, leyó del Mareco, el demonio que asusta a los niños malos y desobedientes, que hace exactamente lo que había hecho el duende. Creyó que el niño había aprendido la lección de la manera más convincente. Ella, por su parte, no supo qué pensar.`,
+    historia: `El Mareco sólo tiene texto abierto en Cuentos de espantos y otros seres fantásticos del folclor colombiano, publicado en 2004 por Casa Editorial El Tiempo, el periódico Hoy y la Universidad Autónoma de Colombia, bajo la dirección de Juan Torres Mantilla, pp. 47-48. El libro se presenta como «recopilación de documentos imaginarios» y se sitúa «en un espacio intermedio entre lo real y lo imaginario».
 
-Días después dibujó la escena durante una clase. Una profesora vio en el papel a un niño frente a un monstruo de viento y le pidió que contara lo sucedido. Ella buscó después un libro de mitos y encontró una descripción del Mareco. El relato termina sin decidir si Manuel vivió un encuentro sobrenatural, imaginó el castigo o dio forma a su culpa mediante una historia que ya circulaba.
+La entrada tiene dos partes. La p. 47 es una ficha técnica: el Mareco es un demonio de Antioquia que vive en casas de muchas habitaciones y rincones oscuros, y en bosques y alamedas; un diablillo rojo que, parado en dos patas, parece una lagartija, y que se come los dulces de los niños desobedientes que ofenden a sus padres; a veces se vuelve ventarrón y se los lleva por los aires. Sus contras son obedecer a los padres, rociar agua bendita y bendecir un puñado de dulces dejados como señuelo. La p. 48 es un informe fingido que una profesora entrega al párroco del barrio San Ildefonso, con el caso de Manuel, y pies de ilustración que muestran a un niño de nueve años arrastrado por el viento y unos dulces con agua bendita.
 
-La lagartija roja, los arbustos, el dinero y el dibujo pertenecen a esa adaptación editorial. En el núcleo de Javier Ocampo solo son estables el diablillo, los dulces, la desobediencia y el ventarrón. La revisión conserva ambas capas sin presentar la escena de Manuel como informe escolar real.`,
-    historia: `Javier Ocampo López publicó Mitos y leyendas de Antioquia la grande en 2001. La tabla de contenido sitúa Los mitos infantiles en la página 125. Una cita localizada de esa página define al Mareco como diablillo que roba dulces a niños desobedientes y que puede convertirse en ventarrón para llevarse a quienes se comportan mal, especialmente a quienes levantan la mano contra sus progenitores.
+El informe, la profesora y el niño son composición del libro, que en sus créditos da las gracias a Javier Ocampo López. Lo que queda como núcleo es la figura de la ficha: un diablillo que castiga a los niños desobedientes.`,
+    versiones: `La ficha técnica y el informe de 2004 dan dos imágenes compatibles del Mareco: un diablillo rojo con aire de lagartija que se come los dulces, y un ventarrón con ojos de matorral y boca de polvareda que levanta a los niños. El informe une las dos en una sola escena, la del duende que se transforma cuando el niño miente.
 
-Ese pasaje es el respaldo central del expediente. No nombra municipio, narrador, fecha de recolección ni práctica de protección. Por eso la página conserva Antioquia como procedencia regional, pero no afirma que el personaje sea antiquísimo, uniforme en todos los pueblos o transmitido sin cambios durante generaciones.
+Fuera del libro, el Mareco aparece en la escuela como nombre sin historia. Karina Salazar Niño, en su tesis de 2018 para la Universidad Autónoma de Bucaramanga sobre secuencias didácticas, recoge la opinión de un estudiante que dice que «el mito Mareco no es un mito»: la figura circula entre niños como algo que se nombra, se discute y se duda.
 
-En 2004, Casa Editorial El Tiempo y la Universidad Autónoma de Colombia publicaron Cuentos de espantos y otros seres fantásticos del folclor colombiano. El volumen dedica las páginas 47 y 48 al Mareco y construye un supuesto informe entregado al párroco de San Ildefonso. Allí aparecen Manuel, el dinero tomado, los globos, la forma roja semejante a lagartija y la profesora. La introducción declara una voluntad de recrear los relatos; el marco de informe no se toma como documento parroquial.
-
-El catálogo de la Biblioteca de Mosquera y Open Library controlan la existencia, autoría editorial, ISBN y paginación del libro. Una tesis de la Universidad Autónoma de Bucaramanga registra además su uso en el aula: durante la lectura, estudiantes concluyeron que Mareco funcionaba como leyenda y no como mito cosmogónico. Esa recepción pedagógica ayuda a clasificar el texto, pero tampoco aporta una nueva línea oral.`,
-    versiones: `Ocampo ofrece una descripción mínima. El Mareco roba dulces y el viento castiga desobediencia o agresión contra los padres. No describe color, anatomía, rincón oscuro, escuela ni conversación. Esa brevedad permite reconocer el motivo sin completar una biografía inexistente.
-
-La antología de 2004 añade una trama literaria. Manuel roba dinero, compra globos, miente al pequeño ser y enfrenta un torbellino. La profesora aparece como narradora de un informe y encuentra después la leyenda en un libro. El color rojo y la semejanza con una lagartija bípeda nacen, dentro de la cadena consultable, en esta recreación. Las páginas web recientes repiten esos rasgos y añaden rincones oscuros de las casas, señal de circulación digital, no de una versión oral independiente demostrada.
-
-La ficha heredada llamaba Doña Marta a la profesora, convertía San Ildefonso en un colegio verificable y presentaba el episodio como una manifestación real. El texto de 2004 no da ese nombre y su encuadre forma parte de una colección fantástica. La revisión mantiene a Manuel solo como personaje de una adaptación atribuida.
-
-El Excel de origen agregaba agua bendita y dulces bendecidos como defensas. Ninguna de las fuentes seleccionadas los registra. No se despublica el relato por esa carencia: se retiran las protecciones, se conserva el núcleo documentado y se declara el límite. Tampoco se generaliza que asustar sea una práctica educativa deseable para todas las familias antioqueñas.`,
+El castigo por la mentira y el robo a la madre, el agua bendita y los dulces bendecidos como señuelo hacen del Mareco un espanto de crianza católica de ciudad, más que un ser del monte. Lo que el libro de 2004 le agrega a esa idea es el ventarrón, la mentira del niño y la duda final de la profesora.`,
     leccion:
-      "El miedo puede imponer obediencia, pero escuchar y reparar enseña mejor que una amenaza.",
-    similitudes: `El Coco comparte la función más general: la Real Academia Española lo define como un ser imaginario usado para meter miedo a los niños. El Mareco tiene rasgos más precisos —dulces, desobediencia y ventarrón— y una procedencia editorial antioqueña. La Mano Peluda, incluida en la misma antología de 2004, también aparece en el dormitorio después de una amenaza adulta para obligar a una niña a acostarse. Sin embargo, es una mano nocturna que persigue en la habitación, no un diablillo que roba dulces o controla el viento. Son figuras de disciplina mediante temor, no nombres intercambiables ni prueba de una genealogía compartida.`,
+      "La mentira que un niño cree bien guardada puede volverse viento y levantarlo del suelo.",
+    similitudes: `El pariente más cercano es el Coco caldense que Fabio Vélez Correa llama «Mito de la Desobediencia»: un espíritu maligno sin forma fija con que los padres amenazaban a los niños malcriados, y que en Caldas se llamaba también el Chucho, un duendecillo diminuto que vivía en los desvanes, detrás de las puertas y debajo de las camas. El Mareco comparte con el Chucho el tamaño, la casa y el oficio; le añade el cuerpo de lagartija y el ventarrón.
+
+En el mismo libro de Vélez, los Rescoldaos son también diablillos rojos del tamaño de un dedo, que viven en las brasas y roban carne a los arrieros, y se espantan con agua bendita escondida en una botella. El Mareco se caza con dulces bendecidos: en los dos casos el remedio es engañar al diablillo con lo que le gusta.
+
+Y el viento que se lleva a los desobedientes tiene su eco en los espantos que Vélez recoge en el occidente caldense, donde la naturaleza castiga con un ventarrón o con un animal a quien falta a las reglas de la casa y de la comunidad.`,
     sceneHorizontal:
       "en un corredor doméstico antioqueño, una pequeña silueta roja semejante a lagartija bípeda toma varios dulces desde un rincón mientras una espiral plana de viento empieza a mover cortinas y un niño observa a distancia, dejando claro que es la adaptación de 2004",
     sceneVertical:

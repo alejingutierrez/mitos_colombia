@@ -3,31 +3,60 @@ import { defineAntioquiaMestizoMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineAntioquiaMestizoMyth({
     slug: "el-paton",
-    title: "El Patón",
+    fuentesAgotadas: "Escobar Uribe (Mitos de Antioquia, 1950), Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001) y Salazar Duque (Mitos y mensajes, 1990) no tienen texto abierto; sólo se leen en citas de Vélez Correa. Fuera de Vélez, SENA 2022, Villa Posse y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "mejiaDiseno2012",
+      "grilloteGuia2021",
+      "compiladoraInforme1997",
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Finge una noticia de El Sátrapa (1986) sobre tres ecologistas muertos en Antioquia atribuidos al Patón, «un espanto invisible al que sólo se le ven sus descomunales pies» (pp. 67-68).",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      {
+        key: "carrasquillamarquesa1928",
+        summary:
+          "Describe al Patetarro, el gigantón de una pierna del monte antioqueño que arruina las sementeras, el pariente que nombra Similitudes.",
+        limitation:
+          "Es novela; no nombra al Patón.",
+      },
+    ],
+    relatoCorto:
+      "El único texto con trama es una leyenda escolar de 250 palabras sin procedencia; llegar a 300 exigiría inventar episodios.",
+    title: "El patón",
     excerpt:
       "Un hombre de pies desmesurados daña cultivos sin querer; al verlo caminar, los campesinos comprenden que su torpeza no es malicia.",
     tags: ["bestias", "El Patón", "coexistencia", "montañas"],
-    mito: `En una zona montañosa de Antioquia, varios campesinos encontraron ramas quebradas, árboles jóvenes derribados y cultivos aplastados. El daño se repetía durante la noche. Como no hallaban huellas de ganado ni señales claras de una herramienta, imaginaron un animal fuerte o una persona empeñada en arruinar su trabajo.
+    mito: `Hace muchos años vivía en las montañas un ser que pisaba las matas y tumbaba los árboles. Los campesinos estaban furiosos, porque les dañaba las cosechas. Nadie lo había visto, pero todos se lo imaginaban como un monstruo malvado que andaba con un hacha por los campos.
 
-Prepararon una trampa en el paso donde aparecían las marcas. A la mañana siguiente, el lazo estaba movido y la tierra removida, pero nada había quedado atrapado. Volvieron a organizarlo con mayor cuidado. El resultado fue el mismo: nuevas plantas dobladas, surcos deformados y ninguna explicación visible.
+Un día decidieron unirse para capturarlo. Uno propuso ponerle una trampa: colgaron un lazo de un árbol, para que si lo pisaba le atrapara el pie y lo subiera. Pero la trampa no sirvió: el Patón quitó el lazo y siguió derribando árboles.
 
-Los trabajadores decidieron vigilar. Se ocultaron detrás de una roca antes de que oscureciera y esperaron en silencio. Pasó una hora, luego otra y después una tercera. Cuando estaban a punto de abandonar el lugar, oyeron un avance pesado entre la vegetación.
+Entonces se reunieron todos y planearon atraparlo juntos. Se escondieron y esperaron tres horas, callados y quietos como estatuas. Al rato oyeron caer un árbol, y algunos empezaron a temblar. El más valiente avanzó unos pasos y los demás lo siguieron.
 
-Lo que salió del monte no era una fiera cubierta de pelo ni un gigante agresivo. Era un hombre de proporciones humanas, salvo por unos pies desmesurados. Cada paso le exigía levantar un peso que parecía vencerlo. Para recuperar el equilibrio apoyaba el cuerpo contra ramas y troncos; al girar, pisaba varias plantas a la vez.
+De pronto lo vieron: era un hombre con unos pies enormes, de un metro. Al principio se asustaron, y después les dio pesar, porque caminaba con mucha dificultad: a cada paso tumbaba un árbol o pisaba una mata. Visto de perfil parecía una ele, y se veía tan chistoso que todos soltaron la risa.
 
-Los campesinos entendieron entonces la forma de los daños. El desconocido no arrancaba los árboles ni perseguía a quienes lo observaban. Caminaba con dificultad. Sus pies enormes, que le dieron el nombre de Patón, convertían cualquier desplazamiento en una sucesión de tropiezos.
+Dicen que todavía anda por las montañas, y que los campesinos ruegan que no llegue a sus campos. No es un monstruo, pero hace mucho daño por donde pasa.`,
+    historia: `El Patón no tiene un registro folclórico con narrador ni lugar. El texto con trama más antiguo que puede leerse es una leyenda escolar, «Patón», firmada «Leyenda popular», que Luis Arturo Aguilar Mejía y Silvia Rosa Sierra Calvo usaron como lectura en su trabajo de Maestría en Educación de la Universidad del Norte (Barranquilla, 2012), en una batería de pruebas de castellano para tercer grado. Allí el Patón vive «en las montañas de Colombia».
 
-La sorpresa reemplazó el deseo de capturarlo. Quienes habían esperado con herramientas y garrotes vieron que castigar al hombre no repararía las cosechas ni resolvería su condición. Lo dejaron continuar y observaron cómo se internaba otra vez en el paisaje, lento y cargando su propio cuerpo.
+Una guía de lengua castellana de tercer grado del Centro Educativo El Grillote (2021) trae el mismo texto con pequeñas variantes: sitúa al Patón en Antioquia, le da patas de un metro y cierra diciendo que no es un monstruo, pero hace mucho daño.
 
-El relato termina sin explicar de dónde vino, dónde vivía o si volvió al mismo campo. Tampoco le atribuye asesinatos, poderes o parentesco con criaturas extranjeras. Su fuerza está en el cambio de mirada: las señales que parecían obra de una amenaza resultan ser consecuencias involuntarias de una dificultad visible solo cuando alguien decide esperar y mirar.`,
-    historyCore:
-      "La versión rastreable circula en materiales de comprensión lectora que remiten a Leyendas latinoamericanas y del mundo, antología de Carlos William Gómez y Olegario Ordóñez publicada en 1995. No se encontró narrador, comunidad, fecha de recolección oral ni paraje preciso. La ficha identifica por ello una cadena pedagógica tardía y no una tradición antioqueña de antigüedad demostrada.",
-    versionCore:
-      "Las reproducciones consultadas conservan daños en cultivos, trampa, larga espera y descubrimiento de un hombre torpe por el tamaño de sus pies. Algunas abreviaciones cambian el tiempo de espera o simplifican la reacción campesina. La versión heredada añadía ecologistas asesinados, un Sasquatch colombiano y un profesor llamado Armando Bulla; esos elementos no aparecen en la cadena documentada y se eliminan.",
-    similarityCore:
-      "El nombre corporal acerca al Patón a la Patasola, pero uno tiene dos pies enormes y causa daño accidental, mientras la otra es una aparición unípede con repertorio propio. Bigfoot y el Yeti también se describen como seres grandes vinculados con huellas y montañas; son comparaciones modernas de cultura popular, no antepasados demostrados del relato colombiano. La escena comparte además la estructura de cuentos donde una amenaza aparente se vuelve vulnerable al observarla de cerca. A diferencia del Hojarasquín, el Patón no protege el monte ni castiga al cazador.",
+Un registro distinto, más corto y más antiguo, está en «Niños de las regiones de Colombia», de Esmeralda Van Vliet, una página infantil del ICAN que en 1997 se imprimió dentro de un informe del programa Fulbright-Hays conservado en ERIC. Una niña de la región cafetera dice que las chapoleras y los peones le han contado muchas leyendas, entre ellas la del Patón: «unos pies muy grandes que pasan por los caminos, solos, sin el cuerpo».
+
+En los dos materiales escolares el texto sirve para enseñar el género: la guía de El Grillote lo propone en una actividad titulada «la leyenda», con un cuadro para que el niño identifique personajes, lugar y problema.`,
+    versiones: `Los registros abiertos dan dos Patones. En la leyenda escolar es un hombre con pies enormes, torpe y dañino sin querer, que da primero miedo y después lástima y risa. En la lista de Van Vliet, de la región cafetera, es sólo un par de pies descomunales que pasan solos por los caminos, sin cuerpo.
+
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», recoge la segunda imagen y la vuelve de terror. Finge una noticia del periódico El Sátrapa, fechada en Bogotá el 29 de junio de 1986, sobre tres ecologistas muertos en Antioquia que un profesor atribuye a un Pie Grande; dentro de la noticia, los campesinos dicen que fue el Patón, un espanto invisible del que sólo se ven los pies, y una maestra lo describe tumbando el monte con su hacha. El periódico y los muertos son composición del libro.
+
+Entre la guía escolar y la noticia inventada, el Patón pasa de ser un vecino torpe a un homínido asesino. Las dos formas circulan hoy sin procedencia.`,
+    similitudes: `El pariente más cercano es el Patetarro del monte antioqueño, que Tomás Carrasquilla describe en La marquesa de Yolombó como un gigantón de una sola pierna que arruina las sementeras. Como el Patón, se define por un pie desmedido y por el daño a los cultivos; pero el Patetarro lo hace con malicia y con sus líquidos pestilentes, y el Patón por torpeza.
+
+La noticia inventada del libro de 2004 lo acerca al Pie Grande norteamericano, el homínido gigante de las huellas enormes, y lo nombra así. Es un préstamo del cine y la prensa sensacionalista, no de la tradición campesina, y el propio libro se declara ficción.
+
+Y los pies que pasan solos por los caminos, sin cuerpo, de la lista de Van Vliet, pertenecen a la misma familia de espantos cafeteros de un solo rasgo que la niña enumera junto a ellos: los Meneses, chiquillos que en los caminos piden dulces o monedas y, si no se los dan, hacen cosquillas hasta dejar a uno rendido de la risa.`,
     leccion:
-      "Mirar antes de castigar permite distinguir la malicia del daño que alguien causa sin querer.",
+      "El daño que alguien hace sin querer también se sufre, aunque dé más lástima que miedo.",
     sceneHorizontal:
       "campesinos observan cultivos doblados y huellas desmesuradas junto a una trampa vacía en una ladera antioqueña al amanecer",
     sceneVertical:
@@ -47,31 +76,61 @@ El relato termina sin explicar de dónde vino, dónde vivía o si volvió al mis
   }),
   defineAntioquiaMestizoMyth({
     slug: "el-perro-negro",
-    title: "El Perro Negro",
+    fuentesAgotadas: "Escobar Uribe (Mitos de Antioquia, 1950), Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001) y Salazar Duque (Mitos y mensajes, 1990) no tienen texto abierto; sólo se leen en citas de Vélez Correa. Fuera de Vélez, SENA 2022, Villa Posse y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      {
+        key: "correaMitos1997",
+        summary:
+          "Capítulo «Presencia animal del diablo»: el perro negro de Ocampo López (p. 215) y los testimonios de Guacaica, Neira, Marulanda, Marmato y el puente de Maibá, con la mula de tres patas que compara Similitudes.",
+        limitation:
+          "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Recoge en Manzanares tres casos del Perro Negro: la linterna que se apaga cuando el perro mira, el perrito que echa candela y crece, y el perro bajo la cama en el velorio de un hombre malo (pp. 75-77).",
+        limitation:
+          "Recopilación comunitaria de 2022, con narradores nombrados.",
+      },
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Trae un Perro Negro en sus pp. 15-16.",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      "lopezpueblo1977",
+    ],
+    title: "El perro negro",
     excerpt:
       "En los caminos oscuros del suroeste antioqueño, un perro grande acompaña al viajero hasta volverse presagio, alma o figura del Patas.",
     tags: ["bestias", "miedo", "diablo", "misterio"],
-    mito: `La noche cerraba el antiguo camino de herradura entre las poblaciones del suroeste antioqueño. Había llovido y las curvas desaparecían bajo la neblina. Un viajero avanzaba solo, atento al barro, a las piedras sueltas y a cualquier sonido que anunciara otra persona.
+    mito: `De noche, en los caminos y los parajes solitarios, cuando hay tormenta y oscuridad cerrada, se oye aullar a un perro como si pidiera misericordia. Unos dicen que es un alma en pena; otros, que es el Patas en figura de animal. Es tan grande que se confunde con las sombras, arrastra una cadena atada al cuello y echa candela por los ojos y la boca. Con sólo verlo, la gente pierde el conocimiento, y hay quien ha muerto del susto. Después se hunde en la tierra sin que nadie sepa cómo.
 
-En uno de los recodos distinguió un perro. Era negro, grande y permanecía inmóvil a un lado de la vía. Cuando el caminante siguió, el animal empezó a moverse detrás de él. No ladraba. La distancia parecía mantenerse aunque el hombre acelerara o redujera el paso.
+Un hombre iba una noche por un camino de la vereda Guacaica, cerca de la bocatoma, en Neira, cuando oyó un grito horrible por el lado del río. Llegó a la orilla y, al ir a cruzar, vio en la otra un perro negro de unos dos metros y medio de largo y uno de alto. Andaba por el rastrojo y el rastrojo no se movía; tampoco se oían sus pasos. Sintió un frío intenso y se puso a temblar. Cuando se dio vuelta para regresar, el perro desapareció sin saberse por dónde.
 
-Un relámpago iluminó la ladera. Por un instante, los ojos del perro brillaron y su boca pareció encendida. El agua que caía de la vegetación produjo un ruido semejante al arrastre de una cadena. El viajero recordó entonces lo que se decía en las casas y posadas: un perro negro podía ser el Patas, un espíritu maligno o un alma condenada a recorrer caminos solitarios.
+En el centro de Neira, en la última década del siglo XIX, se aparecía un perro negro grandísimo, cargado de cadenas que arrastraba con estruendo. En las noches oscuras echaba fuego por la boca y chispas por los ojos, y nunca se le aparecía a más de una persona a la vez. A los trasnochadores que iban callados se les ponía de frente, en la partida de la carretera hacia Manizales con el camino de Pueblo Rico, y no los dejaba pasar. En el pueblo había un descreído que se jactaba de ser amigo íntimo del diablo y de no tenerle miedo en ninguna de sus figuras. Una noche el perro se le tiró encima aullando, ladrando y lanzando dentelladas. Él se defendía con el palo del zurriago, pero no lo tocaba, porque el perro saltaba muy alto. Lo persiguió un buen trecho, hasta que el hombre invocó a Cristo y a la Virgen, y el espanto desapareció.
 
-La figura creció en su percepción. Cada curva que debía ocultarla la devolvía más cerca. El hombre evitó mirar de frente y continuó hacia un tramo donde esperaba encontrar viviendas. El miedo no provenía de un ataque; nacía de la compañía silenciosa y de todas las explicaciones que la noche permitía.
+En Marulanda, un muchacho de 25 años salió borracho de la cantina a la una de la madrugada, aunque las muchachas le advirtieron que lo iban a asustar. En la esquina de la cooperativa encontró un perro negro sentado, ni muy grande ni muy pequeño, que empezó a darle vueltas meneando la cola sin dejarlo andar. Alzó el pie para patearlo y quedó montado en él, y el perro se volvió una mula grande, orejona y gorda que se lo llevó calle abajo. Se acordó de lo que decía su mamá, que al diablo se le dice el Ave María, pero sólo le salió un murmullo, y la mula lo descargó en una esquina. Pasó tres meses sin salir de noche. La primera vez que volvió a salir, esperando a un amigo en una esquina, vio otra vez al perro rondándolo, y agarró a un muchacho que pasaba para que lo acompañara a su casa.
 
-Al acercarse a una zona habitada, volvió la cabeza. El camino estaba vacío. No había cadena, huellas extraordinarias ni resplandor entre los árboles. Solo la lluvia y el terreno oscuro. El viajero no pudo decidir si había encontrado un perro real, una forma agrandada por la tormenta o el espanto del que hablaban los mayores.
+En Marmato, el Alto del Perro se llama así porque allí se le presentaba el diablo a un cura en figura de perro que echaba candela por la trompa. Y en el puente de Maibá, camino de Filadelfia, el conductor que sube de noche siente pesado el carro, mira atrás y ve un perro negro echando candela en el asiento trasero. El carro no sube, y el espanto sólo desaparece cuando vuelve al puente.`,
+    historia: `Los testimonios están en el capítulo «Presencia animal del diablo» de Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, Manizales, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total). Vélez abre con una idea que atribuye a los abuelos: el diablo podía presentarse en figura de animal para castigar a los niños desobedientes, y de ahí salieron la mula de tres patas, el perro negro, el pollo maligno y la gallina ciega. Para el perro cita a Javier Ocampo López (Mitos colombianos, p. 215), que lo describe con cadena, candela y tamaño descomunal.
 
-Esa incertidumbre sostiene al Perro Negro. Las compilaciones lo sitúan en rutas de Antioquia y, de manera particular, recuerdan los caminos entre Andes, Jardín y Caramanta. Lo describen como animal grande, a veces con ojos o boca de fuego y una cadena. También explican que el hambre, la soledad y la oscuridad pueden transformar un perro común en presencia temida.
+Siguen varios casos con narrador. José Jesús Cardona G., de Villamaría, cuenta el encuentro de Guacaica; don Antonio Morales, el perro de las cadenas que salía en el centro de Neira en la última década del siglo XIX y el descreído que se jactaba de ser amigo del diablo; don Antonio María Marulanda, el perro que se volvió mula en la plaza de Marulanda cuando él tenía 25 años, «hace 59». Octavio Hernández Jiménez recoge el Alto del Perro de Marmato, de boca de Dayro Castro, y el perro del puente de Maibá, en la carretera a Filadelfia.
 
-El relato no necesita biografías individuales ni episodios urbanos añadidos. Es un encuentro caminero: el animal que acompaña, el paisaje que altera sus proporciones y una memoria regional que ofrece varios nombres para aquello que no puede comprobarse al amanecer.`,
-    historyCore:
-      "Arturo Escobar Uribe describió al Perro Negro como un trasgo conocido en Colombia y lo vinculó con caminos del suroeste antioqueño. Su explicación mezcla observación de perros hambrientos, imaginación nocturna y creencias sobre el Patas o almas en pena. Algunas atribuciones étnicas de la edición de 1950 usan categorías coloniales y no se trasladan como voz indígena contemporánea.",
-    versionCore:
-      "Ocampo conserva el perro grande de tormentas y soledad, con cadena, ojos y boca encendidos. Escobar permite una lectura ambigua: un animal furtivo puede volverse espanto en la imaginación del caminante. Los perros espectrales europeos muestran apariencias semejantes, pero pertenecen a otras historias. La biografía de Aurora y la mezcla urbana heredada carecen de respaldo y desaparecen.",
-    similarityCore:
-      "El Perro Negro comparte con Black Shuck y el Barguest la forma de can oscuro que aparece en rutas solitarias, aunque no se demuestra contacto entre esas tradiciones. Dentro de Colombia se acerca al Cadejo por la compañía nocturna y al Patas por la interpretación diabólica; se diferencia porque su núcleo antioqueño puede conservar la duda entre animal y aparición. La cadena y los ojos luminosos funcionan como signos narrativos, no como prueba zoológica. Tampoco es el familiar de una bruja ni un guardián de tesoros en esta versión.",
+Es, por eso, uno de los espantos del libro con más testimonios nombrados, repartidos por el centro y el norte de Caldas, y el más reciente de ellos ya pertenece a la época de los automóviles.`,
+    versiones: `Las versiones de Vélez no coinciden en el tamaño ni en la conducta del perro. En Guacaica es enorme y silencioso, no hace ruido ni mueve el rastrojo, y desaparece. En Neira arrastra cadenas, echa fuego y ataca a dentelladas al que se jacta de su amistad con el diablo. En Marulanda es un perro corriente que se convierte en mula y se lleva al borracho. En Maibá se sube a un carro. Lo que se mantiene es la noche, el camino y la candela.
+
+El libro del SENA de 2022 sobre el alto oriente caldense recoge tres casos más en Manzanares. Luis Javier Gallego salió a esperar al perro que aparecía hacia las once, y la linterna se apagaba cuando el animal volteaba a mirar; su compañero cayó inconsciente al llegar a casa. Chillo Jaramillo, de niño, desobedeció a su madre y vio un perrito que echaba candela por la lengua y crecía en segundos. Y en el velorio de un hombre malo, un perro gruñó debajo de la cama y al amanecer no había cuerpo que enterrar.
+
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara ficción, también trae un Perro Negro, en sus pp. 15-16.`,
+    similitudes: `En Tunja, Javier Ocampo López recoge en El pueblo boyacense y su folclor el espanto del perro de San Francisco: un perro de piedra del antiguo convento, sentado de cara al muro, junto al cual los tunjanos oían de noche aullidos, arrastre de cadenas, ladridos terribles y veían ojos con luces fuertes. Son las mismas cadenas y los mismos ojos del perro de Neira, pero atados a un convento y a una estatua, no a un camino.
+
+En el propio capítulo de Vélez, la mula de tres patas cumple el oficio del perro negro. Se aparece a los tahúres y a los que se trasnochan hablando mal de los demás, y en Marulanda le quitó la borrachera a una mujer con sólo mirarla. El perro que se vuelve mula y se lleva al borracho une los dos espantos en una sola escena.
+
+El remedio es el mismo en todos: invocar a Cristo y a la Virgen, o decir el Ave María. El descreído de Neira, que presumía de ser amigo del diablo, sólo se salva cuando acude a esa oración.`,
     leccion:
-      "La oscuridad no inventa todo miedo, pero puede darle cuerpo a cuanto ya tememos.",
+      "El miedo a lo que ronda los caminos de noche ha servido para devolver a casa a más de uno.",
     sceneHorizontal:
       "un viajero con ruana cruza un camino de herradura entre Andes y Jardín bajo lluvia mientras un gran perro negro permanece en un recodo",
     sceneVertical:
@@ -91,31 +150,63 @@ El relato no necesita biografías individuales ni episodios urbanos añadidos. E
   }),
   defineAntioquiaMestizoMyth({
     slug: "la-cabellona",
-    title: "La Cabellona",
+    fuentesAgotadas: "Escobar Uribe (Mitos de Antioquia, 1950), Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001) y Salazar Duque (Mitos y mensajes, 1990) no tienen texto abierto; sólo se leen en citas de Vélez Correa. Fuera de Vélez, SENA 2022, Villa Posse y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Único texto con trama: la carta fingida de un médico, fechada en Frontino el 28 de junio de 1971, sobre el campesino que teme a una mujer peluda y la Cabellona, «un espectro que aterroriza a los caminantes y se ensaña especialmente con los violadores» (pp. 65-66).",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      "noticiasAntioquenidad2023",
+      {
+        key: "lopezpueblo1977",
+        summary:
+          "Nombra a la Cabellona, con el ánima sola, la viudita y la mula de tres patas, entre los mitos estudiados en Boyacá (cap. 8).",
+        limitation:
+          "Sólo el nombre, en una lista.",
+      },
+      {
+        key: "correaMitos1997",
+        summary:
+          "Describe a la Rodillona, la vieja burlona de los barrancos que ataca a los hombres de noche, el paralelo que nombra Similitudes.",
+        limitation:
+          "No nombra a la Cabellona. Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+    ],
+    relatoCorto:
+      "El único texto con trama es la carta de ficción del libro de 2004, de extensión breve; el registro del SINIC es de una línea. Llegar a 300 palabras exigiría inventar.",
+    title: "La cabellona",
     excerpt:
       "Al caer la tarde, una mujer de cabello interminable aparece en las curvas de caminos del occidente antioqueño y desconcierta a quienes regresan.",
     tags: ["La Cabellona", "espectro", "miedo", "misterio"],
-    mito: `En tardes de invierno, cuando quienes habían ido al mercado regresaban por los caminos de Liborina, Olaya, Sabanalarga, San Andrés, Toledo o Ituango, una mujer podía aparecer en la siguiente curva. La hora se acercaba a las seis y la lluvia reducía el paisaje a laderas húmedas y pasos estrechos.
+    mito: `Un campesino de Frontino llegó desesperado al consultorio de un médico. Antes había ido donde varios médicos, psicólogos y siquiatras, y todos le habían dicho lo mismo: que tenía un desorden nervioso, causado por un sentimiento de culpa. Él decía que no sufría de nada de eso. Lo que le pasaba era sencillo: le tenía pánico al espectro de una mujer toda peluda que se le aparecía cerca de su finca.
 
-Desde lejos, la figura parecía una caminante detenida. Al acercarse, lo primero que se distinguía era el cabello: descendía sobre el rostro, cubría el vestido y parecía llegar hasta los pies. Algunas personas creían ver detrás de esa cortina una cara hermosa; otras recordaban ojos intensos, dientes feroces o una risa que deshacía cualquier impresión de belleza.
+El médico lo puso bajo la luz de un aparato con que se ven las auras, y encontró una mancha enorme sobre su cabeza. La barrió con una descarga de luz, y la sombra se desparramó como humo en el aire del consultorio. El paciente dijo que por fin sentía calma y se despidió agradecido.
 
-La Cabellona no bloqueaba siempre la ruta ni perseguía a quien la encontraba. En la caracterización de Arturo Escobar Uribe es un espanto vespertino, rural y generalmente inofensivo. Su presencia bastaba para alterar el regreso. El caminante evitaba aproximarse, cambiaba de lado o apresuraba el paso mientras la mujer quedaba junto al barranco.
+Un rato después, mientras tomaba notas, solo, el médico oyó pisadas a pocos metros de su escritorio. Levantó la vista y vio a la enfermedad que acababa de sacarle al campesino. Era un cuerpo traslúcido de mujer, cubierto de la cintura a los pies por retazos de costales; el resto lo ocultaba un halo amarillento. La aparición se acercó y, con la mayor naturalidad, pasó a través del escritorio.
 
-Una anécdota localizada en Olaya cuenta algo distinto. Un hombre que volvía embriagado creyó reconocer a una mujer atractiva y se acercó. Cuando la apariencia cambió ante sus ojos, reaccionó con violencia y sacó un cuchillo. La escena muestra el peligro de la conducta del caminante y no autoriza a justificar una agresión contra una mujer real.
+Entonces la vio de frente. La mitad de arriba era una montaña de pelo castaño que le caía hasta la cintura, trenzada en una maraña de nudos y pegotes. Era la Cabellona, el espectro que aterroriza a los caminantes y se ensaña especialmente con los violadores.
 
-Al día siguiente, el mismo lugar podía verse ordinario. No quedaban cabellos en las ramas ni huellas que resolvieran lo sucedido. La narración sobrevivía porque cada retorno lluvioso ofrecía condiciones semejantes: poca luz, cansancio, alcohol en algunos viajeros y una curva que ocultaba lo que venía.
+Desde ese día, dice el médico, ella es una presencia asidua en su lugar de trabajo.`,
+    historia: `El relato es la entrada «La cabellona» de Cuentos de espantos y otros seres fantásticos del folclor colombiano, publicado en 2004 por Casa Editorial El Tiempo, el periódico Hoy y la Universidad Autónoma de Colombia, bajo la dirección de Juan Torres Mantilla, en sus pp. 65-66. El libro se declara a sí mismo una «recopilación de documentos imaginarios» y construye cada ser con documentos fingidos. Aquí la pieza es una carta de un médico, fechada en Frontino el 28 de junio de 1971, con un aparato de fotografía del aura y un «bisturí lumínico» que son composición del libro, como la carta y su fecha.
 
-El repertorio antioqueño no le entrega a la Cabellona una biografía única. Su nombre describe la señal principal, no la causa de una condena. La historia santandereana de la Mechuda, asociada con una mujer muerta cerca de una quebrada, es otra variante y no el origen demostrado de todas las apariciones.
+El registro independiente que existe de la Cabellona es mínimo. Una ficha del Sistema Nacional de Información Cultural, hoy fuera de línea, reproducida por IFM Noticias en 2023, la describe como un espanto rural vespertino y de tiempos lluviosos, que aparece desde Liborina hasta Pavarandocito, en el occidente y el Urabá antioqueños. Javier Ocampo López la nombra además entre los mitos que se estudian en Boyacá, en El pueblo boyacense y su folclor, sin describirla.
 
-Así, la Cabellona permanece en los caminos sin convertirse en ángel castigador, víctima de vanidad ni espectro con domicilio fijo. Es una forma que el cabello vuelve ilegible: quien la observa no sabe si está ante belleza, amenaza, persona o sombra.`,
-    historyCore:
-      "Escobar sitúa la circulación en un arco amplio del occidente y norte antioqueños y la caracteriza como vespertina, invernal e inofensiva. Ocampo fija la cabellera que cubre rostro y cuerpo. Los catálogos posteriores prueban recepción editorial. La revisión usa Liborina como aproximación geográfica, no como origen ni lugar de aparición comprobado.",
-    versionCore:
-      "La versión antioqueña de caminos se conserva separada de la Mechuda del Socorro, Santander, cuya narración incluye una mujer casada, un conflicto junto a una quebrada y una muerte. La anécdota de Olaya también se presenta como episodio localizado, no como biografía general. El castigo angélico por vanidad y la mezcla entre Santander y Antioquia fueron añadidos sin respaldo.",
-    similarityCore:
-      "La Cabellona se aproxima a la Llorona por su figura femenina nocturna y alusión a caminos o aguas, pero carece del lamento y del relato materno característico. La Mechuda santandereana comparte el cabello que oculta el rostro, aunque ofrece una historia de origen propia. En Antioquia, su parentesco más útil es con espantos camineros cuya forma cambia al acercarse. A diferencia de la Patasola, no seduce antes de revelar una anatomía monstruosa ni persigue dentro del monte. Estos paralelos pertenecen a los mismos repertorios regionales y permiten contrastar señales sin convertir personajes diferentes en una sola mujer.",
+Nada de eso contradice la carta de 2004, que sitúa a la Cabellona en Frontino, en la misma región, y le da el oficio de castigar a los violadores. La carta, en suma, sitúa bien a su espanto y se inventa todo lo demás.`,
+    versiones: `Hay dos formas de la Cabellona y ninguna tiene narrador. La del SINIC es un espanto de los caminos, que sale a la caída de la tarde y en tiempo de lluvia entre Liborina y Pavarandocito; no dice qué hace ni cómo es. La del libro de 2004 le da cuerpo —mujer traslúcida vestida de costales, con una mata de pelo castaño hasta la cintura— y una función moral, ensañarse con los violadores.
+
+La carta de 2004 añade además una idea que no está en ninguna otra parte: la Cabellona como enfermedad del alma que se puede extraer, pero que no se va, sino que se muda al consultorio del médico. Es el recurso del libro para convertir cada espanto en un caso clínico o científico.
+
+El nombre alude al pelo, y es lo único en que coinciden todas las menciones. En la carta es además lo que sale de la cabeza del campesino, casi una forma de su culpa; en la ficha del SINIC es algo que está afuera, en el camino, a la hora de la lluvia. Esa diferencia separa el espanto del caso clínico.`,
+    similitudes: `La mujer peluda que aterroriza a los hombres en el monte tiene parientes en el mismo repertorio antioqueño y caldense. La Rodillona, que Vélez Correa recoge en Caldas, es una vieja de cabellos canosos que se burla de los caminantes desde los barrancos y ataca a los hombres que andan de noche fuera de casa. Como la Cabellona, es una mujer definida por un rasgo desmedido del cuerpo; en su caso las rodillas, en la otra el pelo.
+
+La Patasola y la Madremonte, que Tomás Carrasquilla pone en la corte de seres del monte antioqueño en La marquesa de Yolombó, castigan también a quien entra al monte con malas intenciones. La Cabellona del libro de 2004 lleva ese castigo a una falta precisa, la violación, y convierte al espanto en vengadora.
+
+En Boyacá, Javier Ocampo López pone a la Cabellona en su lista junto al ánima sola, la viudita y la mula de tres patas, espantos de la noche campesina. La lista no la describe, pero muestra que el nombre circulaba lejos de Antioquia.`,
     leccion:
-      "Una apariencia incompleta revela tanto del miedo del observador como de aquello que mira.",
+      "La culpa que se saca de encima alguien puede quedarse rondando al que quiso curarla.",
     sceneHorizontal:
       "caminantes regresan del mercado bajo lluvia por una curva rural de Liborina mientras una figura de cabello muy largo espera junto al barranco",
     sceneVertical:
@@ -360,33 +451,67 @@ María la Larga, de nuevo en Vélez, comparte con las figuras blancas de las Ilu
   }),
   defineAntioquiaMestizoMyth({
     slug: "los-rescoldos",
-    title: "Los Rescoldados",
+    fuentesAgotadas: "Escobar Uribe (Mitos de Antioquia, 1950), Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001) y Salazar Duque (Mitos y mensajes, 1990) no tienen texto abierto; sólo se leen en citas de Vélez Correa. Fuera de Vélez, SENA 2022, Villa Posse y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      {
+        key: "correaMitos1997",
+        summary:
+          "Único registro con tradición: el apartado «Los Rescoldaos» del capítulo «Presencia animal del diablo», diablillos del fogón de los arrieros en Antioquia, Caldas, el Quindío y Risaralda.",
+        limitation:
+          "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Recrea a los Rescoldaos en una noche de arrieros con un diablillo del tamaño de un dedo, de ojos azules, que habla y promete la lotería (pp. 89-90).",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      {
+        key: "tiempoMedellin1990",
+        summary:
+          "Cuenta «Los Rescoldados» entre las comparsas de un desfile de mitos y leyendas en Medellín, el 6 de diciembre de 1990.",
+        limitation:
+          "Prensa de época: fecha la circulación pública de la figura.",
+      },
+      {
+        key: "lopezpueblo1977",
+        summary:
+          "Describe al Cucacuy, el hombre desnudo del Valle de Tenza que sale de noche a calentarse en las parrillas, el paralelo que nombra Similitudes (p. 121).",
+        limitation:
+          "Es otro ser, de Boyacá.",
+      },
+    ],
+    relatoCorto:
+      "La única fuente con registro, Vélez Correa, da una descripción de un párrafo sin caso ni narrador; la escena del arriero del libro de 2004 es ficción declarada y no se usa. Llegar a 300 palabras exigiría inventar.",
+    title: "Los rescoldos",
     excerpt:
       "Pequeños diablos danzan sobre las brasas que dejan los arrieros; la fuente conserva una imagen breve, no la biografía de un testigo.",
     tags: ["culturales", "diablillos", "fuego", "misterio"],
-    mito: `Los arrieros detenían la marcha antes de que la oscuridad cubriera por completo el camino. Junto a las cargas encendían un fogón, calentaban la comida y se reunían alrededor del fuego mientras los animales descansaban. Cuando llegaba la hora de dormir, apartaban las llamas y dejaban un círculo de brasas.
+    mito: `En Antioquia, Caldas, el Quindío y Risaralda andan unos espíritus burlones que los arrieros llaman los Rescoldaos. Son diablillos del tamaño de un dedo, con el cuerpo del mismo color de las brasas y los ojos azules, redondos como cabezas de alfiler.
 
-El rescoldo no estaba apagado. Debajo de la ceniza persistían puntos rojos que cambiaban con el aire. Una rama se hundía, una chispa saltaba y las sombras pequeñas se movían sobre las piedras. Quien permanecía despierto podía creer que varias figuras bailaban allí.
+Viven en las brasas de los fogones y en las parrillas, y caminan sobre el carbón encendido sin sentir nada. Aparecen y desaparecen cuando quieren. Salen a la hora de comer, cuando los arrieros o los comerciantes hacen un alto en el camino para descansar y reponer fuerzas.
 
-La tradición impresa llama Rescoldaos o Rescoldados a esos pequeños diablos. Su acción documentada es breve: danzan sobre el rescoldo de los fogones que hacen los arrieros en sus viajes. No se describe una batalla, un tesoro ni una conversación. El motivo se concentra en el fuego que parece animarse cuando la jornada termina.
+No necesitan comer ni beber, pero les gusta robar trozos de carne asada y dejar a alguno de los que comen sin su porción. Hay arrieros que dicen haberlos visto beber aguardiente directamente de las botellas que les ofrecían los borrachos. Conceden deseos, proponen acertijos y premian al que los resuelve, y pueden multiplicar las raciones de carne o hacerlas desaparecer.
 
-En la oscuridad, cada brasa podía convertirse en cabeza, brazo o pie. Las figuras surgían juntas, giraban con el aire y desaparecían cuando una zona del fogón se enfriaba. Si alguien removía las cenizas, la danza cambiaba. El mismo gesto que buscaba comprobarlas producía nuevas chispas.
+Para atacarlos, se les rocía agua bendita escondida en una botella de aguardiente.`,
+    historia: `Los Rescoldaos están en Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, Manizales, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total), al final del capítulo «Presencia animal del diablo». Vélez los describe en un párrafo, sin narrador ni caso, y los sitúa en Antioquia, Caldas, el Quindío y Risaralda, es decir, en la región de la colonización antioqueña.
 
-Los viajeros podían interpretar la escena como advertencia para no abandonar un fuego peligroso, como juego del cansancio o como presencia diabólica. Las fuentes consultadas no eligen una explicación ni atribuyen el relato a un arriero identificado. Tampoco afirman que ver la danza trajera buena o mala suerte.
+El capítulo los pone junto a los espantos en que el diablo se presenta en figura de animal, la mula de tres patas y el perro negro, que según Vélez los abuelos usaban para asustar a los niños. Los Rescoldaos, en cambio, no castigan a nadie: son diablillos juguetones del fogón de los arrieros, que roban carne, beben aguardiente y conceden deseos.
 
-Al amanecer quedaban ceniza, leños consumidos y la obligación práctica de apagar bien el campamento. Los Rescoldados no dejaban otro rastro. Su pequeñez los distingue de los grandes espantos que bloquean caminos: aparecen dentro de un espacio creado por los propios viajeros y duran lo que duran las brasas.
+Su nombre viene del rescoldo, la brasa que queda entre la ceniza. La prensa registra su presencia pública: El Tiempo, en su crónica del 6 de diciembre de 1990 sobre un desfile de danzas, mitos y leyendas en Medellín, cuenta «Los Rescoldados» entre las comparsas, junto al Patetarro, la Muelona y la Monja sin Cabeza. Javier Ocampo López, por su parte, los cuenta entre los mitos infantiles de Antioquia. La del libro de Vélez es, por tanto, la única descripción abierta con la que puede fijarse la figura.`,
+    versiones: `El registro de Vélez es el único abierto con algo de tradición detrás, y no cuenta ningún caso: describe la figura, sus costumbres y su remedio. El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara ficción, les dedica sus pp. 89-90: un narrador arriero cuenta una noche de camino en que un compañero borracho le da un puñetazo al fogón y otro grita «¡Los Rescoldaos!»; entre las brasas aparece un diablillo del tamaño de un dedo gordo, de ojos azules, que habla, se burla y le promete la lotería.
 
-La figura llegó también a representaciones públicas, como el desfile de mitos y leyendas de Medellín. Esa recepción confirma que el nombre circuló, pero no amplía automáticamente la narración. La revisión conserva la modestia de la fuente.
+La escena de 2004 conserva todo lo que dice Vélez —el tamaño, los ojos azules, el fogón, el aguardiente, los deseos— y le añade nombres, diálogos y un final feliz que son composición del libro. Por eso aquí se usa para mostrar cómo circulaba la figura en 2004, no como otra versión oral.
 
-Por eso desaparece el protagonista individual que la versión heredada añadió con borrachera, convivencia y suerte. Nombrar a un testigo inexistente convertía una imagen colectiva y escueta en falsa memoria personal. Aquí quedan los arrieros, el fogón y la danza incierta sobre el rescoldo.`,
-    historyCore:
-      "Ocampo define de manera escueta a los Rescoldaos como diablillos que danzan sobre fogones de arrieros y su tabla de contenido los ubica entre motivos infantiles. Solórzano confirma el nombre en su catálogo y El Tiempo registra su representación en Medellín en 1990. Esa cadena demuestra recepción, pero ofrece pocos detalles narrativos independientes.",
-    versionCore:
-      "Rescoldaos y Rescoldados son variantes ortográficas del mismo nombre; la ficha usa Los Rescoldados como título legible y conserva la forma popular en Historia. Algunas adaptaciones pueden describir colores o movimientos de las brasas, pero no hay respaldo para Justiniano, una borrachera, un pacto de convivencia ni augurios de suerte. La brevedad documental se declara en vez de rellenarse.",
-    similarityCore:
-      "Los Rescoldados se parecen a fuegos fatuos y luces viajeras porque una luminosidad nocturna recibe intención, pero nacen en un fogón humano y no en pantanos o cementerios. Comparten con duendes y pequeños diablos el tamaño y la danza, aunque no habitan una casa ni custodian un tesoro. Frente al Perro Negro o la Rodillona, no persiguen caminantes: ocupan por unos minutos las brasas que los arrieros dejan atrás. El fuego doméstico los acerca al relato de cocina, pero su escenario móvil pertenece al viaje y al campamento.",
+En el desfile de Medellín de 1990 los Rescoldados salían ya como comparsa, con el nombre escrito completo, catorce años antes de esa recreación.`,
+    similitudes: `En Boyacá, Javier Ocampo López recoge en El pueblo boyacense y su folclor al Cucacuy, el hombre desnudo del Valle de Tenza que sale de noche a calentarse en las parrillas. Como los Rescoldaos, vive del calor del fogón ajeno. Pero el Cucacuy es un hombre con pacto, que espanta, y los Rescoldaos son diablillos juguetones que se ganan con aguardiente.
+
+En el mismo capítulo de Vélez, los otros animales del diablo —la mula de tres patas, el perro negro— castigan a los trasnochadores, los borrachos y los que hablan mal de los demás. Los Rescoldaos invierten el oficio: comparten el trago con los borrachos, les roban la carne y les conceden deseos. El remedio contra ellos, agua bendita disfrazada de aguardiente, es una broma a su medida.
+
+Los diablillos del fuego que viven en las brasas y castigan o premian a quien los alimenta pertenecen a la familia de los duendes domésticos. El libro de Vélez los llama diablos, pero se comportan como los duendes de la casa campesina: roban, juegan y sólo se van con un truco.`,
     leccion:
-      "Una tradición breve merece conservar su silencio antes que recibir recuerdos que nadie documentó.",
+      "Hasta los diablos del fogón se conforman con un trago y un pedazo de carne compartidos.",
     sceneHorizontal:
       "arrieros descansan junto a mulas y un fogón en un camino montañoso antioqueño mientras cae la noche",
     sceneVertical:
@@ -560,33 +685,60 @@ Fuera de Colombia, la aparición de mujer seductora que atrae al caminante noctu
   }),
   defineAntioquiaMestizoMyth({
     slug: "no-hay-deuda-que-no-se-pague",
+    fuentesAgotadas: "Escobar Uribe (Mitos de Antioquia, 1950), Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001) y Salazar Duque (Mitos y mensajes, 1990) no tienen texto abierto; sólo se leen en citas de Vélez Correa. Fuera de Vélez, SENA 2022, Villa Posse y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "compiladoraMitos1993",
+      "hernandezAnimas2012",
+      "camargoHacia2015",
+      "republicacoleccionsf",
+      "caldasconquistasf",
+      {
+        key: "correaMitos1997",
+        summary:
+          "Recoge al diablo en figura de animal que echa candela por la trompa en Marmato, Neira y el puente de Maibá, el motivo de la bestia de fuego de Similitudes.",
+        limitation:
+          "No trata el cuento. Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+    ],
     title: "No hay deuda que no se pague",
     excerpt:
       "Otero D’Costa cuenta cómo un jinete negro llega por Damián Vásquez Montiel a la Villa de Arma durante una noche de Viernes Santo.",
     tags: ["Damián", "pacto", "desaparición", "diablo"],
-    mito: `Enrique Otero D’Costa situó su leyenda en la Villa de Arma del siglo XVI. Allí vivía Damián Vásquez Montiel, extremeño que había pasado por el Perú antes de llegar al territorio. El narrador lo presenta como jugador, bebedor y hombre dispuesto a pelear por dominio, dinero o reputación.
+    mito: `La Villa de Arma, poblada a mediados del siglo XVI en nombre de Benalcázar, tuvo fama en sus primeros años de tierra rica en minas y en indios de encomienda, y atrajo a muchos españoles. Entre los aventureros que llegaron había un Damián Vásquez Montiel, que se decía extremeño y venía del Perú, y por eso lo llamaban el perulero. Tenía unos cuarenta años, era membrudo y fuerte, jugador, enamoradizo y buen bebedor en los ventorros de la villa, y tenía espantados a los vecinos tímidos y desasosegados a los espadachines. Se decía que había sido soldado de Francisco Hernández Girón, el que se alzó en el Perú contra el rey.
 
-La gente explicaba su fortuna mediante un rumor. Decían que Damián había firmado con sangre un pacto con el diablo y que, a cambio de riqueza, éxito con las mujeres y ventaja sobre sus adversarios, debía pagar una deuda final. Dentro del cuento, doña Mónica transmite esa versión; su voz reproduce lo que se decía, no un contrato encontrado por un historiador.
+Una tarde calurosa de agosto, en una calleja de Arma, el maese de campo Diego López Farfán le contaba al licenciado Muñatones, cura y vicario de la villa, la última del perulero. La noche anterior se había pasado la noche jugando a los dados en el mesón con otros dos, y al alba lo acusaron de trampa y salieron las espadas. Ya lo tenían en aprietos cuando de un rincón salió un desconocido que los hizo huir a mandobles. Y el desconocido olía tanto a azufre que nadie dudaba ya de que era el diablo.
 
-Pasaron los años y Damián continuó ocupando el centro de reuniones y disputas. El pacto parecía una historia útil para explicar cuanto los demás no podían o no querían atribuir a decisiones humanas. Si vencía, era por ayuda infernal; si acumulaba bienes, el precio quedaba aplazado.
+Era voz pública que el perulero tenía pacto con el Demonio: lo decían su falta de religión, sus blasfemias, su suerte en las peleas y el oro que gastaba. Doña Mónica, una dueña que servía en casa de don Jerónimo Fernández Vahamonde, contaba cómo había sido. Estando Damián en la ciudad de los Reyes, subió de noche a un altillo y se puso a llamar a gritos a Don Leandro, que es como se llama al enemigo. A medianoche cayó un relámpago con una cola enorme, y en la punta de la cola venía montado un hombrecillo negro, peludo, cornudo y dentón, que le preguntó qué quería. Damián le ofreció su alma a cambio de dominar a sus enemigos en mar y tierra, ganar el corazón de las doncellas y tener riqueza. Firmó la escritura con unas gotas de sangre sacadas del lado del corazón, y el enemigo se fue por los aires a horcajadas sobre una nube negra, dejando un olor que sintió toda la ciudad.
 
-La noche de un Viernes Santo, la plaza estaba recogida por la celebración católica. Entonces apareció una mula negra montada por un jinete también oscuro. El visitante llamó a Damián. No llegó como adversario que negociara una nueva condición, sino como acreedor que venía a cobrar.
+¿Era verdad, o conseja de una dueña miedosa? Una noche de viernes santo, en la plaza mayor, unos vecinos esperaban la procesión de La Soledad cuando llegó Damián y preguntó por Pero Díaz, porque quería despedirse de él: se iba para la tierra caliente. Y se puso a cantar en falsete:
 
-Damián salió. El cuento no le concede una confesión prolongada ni una conversión de último momento. Subió con el jinete y ambos abandonaron la plaza. Quienes observaron dijeron que la montura se volvió una bola de fuego antes de desaparecer. Damián no fue visto otra vez.
+En la puente tuve cita,
+pero no vide la dama;
+llora, llora, corazón,
+que llevo perdida el alma.
 
-El título formula la moraleja con claridad: ninguna deuda pactada con el mal permanece aplazada para siempre. Otero construye la escena con fechas, procedencias y un lugar histórico para darle verosimilitud. Eso no convierte a Damián en persona comprobada ni el rumor en evidencia sobrenatural.
+En eso llegó un jinete en una mula negrísima y preguntó por Damián Vásquez Montiel.
 
-La Villa de Arma había sido fundada en 1542 dentro de un proceso colonial de ocupación, extracción y sometimiento. Las acusaciones contra poblaciones indígenas sirvieron para justificar esclavización y trabajo minero. Ese contexto es más verificable que el pacto, aunque el cuento apenas lo permite ver.
+—Os esperan en la puente, y por voz vengo. Cabalgad a la grupa, si os place.
 
-La clasificación heredada en Antioquia provenía probablemente de la relación posterior entre Arma y Rionegro. Sin embargo, el poblado de la acción corresponde al territorio que hoy pertenece a Caldas. La URL se conserva y la categoría se corrige. La leyenda queda como obra firmada que disciplina excesos mediante un cobro diabólico, no como crónica anónima de un hecho colonial.`,
-    historyCore:
-      "Villa Posse reproduce el cuento y explica el modo en que Otero D’Costa transformó materiales escuchados en elaboración literaria. La Gobernación de Caldas ubica Santiago de Arma y ofrece el contexto colonial. Banco de la República y Archivo General de la Nación documentan la transferencia posterior del nombre y privilegios hacia Rionegro, origen probable de la confusión departamental.",
-    versionCore:
-      "El texto conserva a Damián Vásquez Montiel, su procedencia extremeña y peruana, el rumor transmitido por doña Mónica, el Viernes Santo y el jinete de mula negra. El pacto se cuenta dentro de la ficción y no se afirma como documento. Adaptaciones pueden intensificar la bola de fuego o resumir los excesos de Damián; no deben cambiar Arma por Antioquia ni ocultar la autoría.",
-    similarityCore:
-      "El Jinete Negro comparte montura, oscuridad y recorrido nocturno, aunque aquí actúa como acreedor dentro de una obra firmada. El Mandingas o Patas se acerca por la identidad diabólica que los repertorios regionales asignan al visitante, pero no protagoniza el mismo cuento. Frente al Ánima Sola, no hay penitencia posterior visible: la desaparición cierra el relato en el instante del cobro. La bola de fuego recuerda luces viajeras, pero funciona como desenlace literario y no como fenómeno natural identificado dentro de esta comparación regional.",
+Damián saltó a la grupa, y la mula partió a todo escape, echando fuego por los ojos, la boca y la nariz, hasta que en la distancia no se vio más que una bola de fuego. Los vecinos, dando diente con diente, se pusieron a rezar el trisagio, y en el aire se oía el eco de la copla. Nunca más se supo del perulero.`,
+    historia: `El texto es un cuento de Enrique Otero D'Costa, de su libro Leyendas (Biblioteca Aldeana de Colombia, Selección Samper Ortega, Minerva, Bogotá, 1936). Se lee en el segundo tomo de Mitos y leyendas de Colombia de Eugenia Villa Posse (IADAP, Quito, 1993), sección 17, «Varias regiones», pp. 53-56, donde no figura en el índice: va a continuación de «Genus irritabile vatum». Villa Posse advierte que Otero reunió allí relatos oídos a campesinos que «recuerda y elabora» para darles forma literaria. La Revista UPB, que en 1964 reimprimió seis piezas del libro, no trae ésta.
+
+La acción transcurre en la Villa de Arma, fundada a mediados del siglo XVI en la actual Aguadas, en el norte de Caldas, una de las primeras poblaciones españolas de la región, cuya conquista narra la historia regional desde las expediciones de Robledo y Benalcázar. Otero escribe con la lengua de los documentos coloniales que estudió como historiador: el maese de campo, el licenciado vicario, la dueña, la ciudad de los Reyes, el alzamiento de Hernández Girón en el Perú (1553-1554).
+
+No hay narrador de la tradición. El pacto lo cuenta dentro del cuento doña Mónica, y el narrador deja abierta la pregunta de si es verdad o conseja de una dueña medrosa, y la contesta con la escena del Viernes Santo. La respuesta del narrador es la escena misma, sin comentario: el lector sabe lo que vio la plaza.`,
+    versiones: `El texto que se lee es el de 1936 reproducido por Villa Posse; la Revista UPB de 1964, que reimprimió otras seis leyendas del libro, dejó ésta fuera.
+
+El cuento combina dos relatos que la tradición cuenta por separado. El primero es el pacto: la invocación de noche, el diablo que llega en figura de hombrecillo negro, la firma con sangre y la fortuna en el juego, las armas y el amor. El segundo es el cobro: el jinete que viene a buscar al deudor en una noche santa y se lo lleva en una bestia de fuego. El título del cuento, «No hay deuda que no se pague», los une como causa y consecuencia.
+
+El libro de Villa Posse agrupa esta pieza con otras de Otero en que la historia colonial de Antioquia y Caldas sirve de escenario: Arma, Anserma, Chinchiná. Daniel Mauricio Preciado Camargo, en su estudio sobre Otero para la Universidad del Rosario, lee esas leyendas como una historiografía de la vida cotidiana, más interesada en las costumbres que en las hazañas.`,
+    similitudes: `El pacto con el diablo que da suerte en el juego y en los negocios tiene en Santander un caso famoso. Farouk Caballero Hernández, en su estudio de 2012 sobre ánimas y pactos diabólicos en la narrativa santandereana, recuerda el de don David Puyana, el comerciante de Bucaramanga de quien la gente decía que había negociado con el diablo, que nunca perdía en el juego y que iba cada año a recibir instrucciones; Pedro Gómez Valderrama lo recreó en La otra raya del tigre. Como el perulero de Arma, Puyana explica una fortuna y un poder que el pueblo no sabe explicar de otro modo.
+
+En el mismo tomo de Otero, «Cuento de ánimas» castiga en Santander otra falta con otra procesión: las ánimas pelotean al borracho Laurián en el camino. En los dos cuentos la procesión religiosa nocturna es el momento en que lo sobrenatural cobra, pero allí la lección se aprende y aquí el deudor desaparece.
+
+El jinete de la mula que echa fuego repite un motivo muy extendido en los espantos del occidente colombiano, la bestia de candela que lleva al condenado. En el libro de Vélez Correa sobre Caldas, el diablo que se presenta en figura de animal echando candela por la trompa aparece en Marmato, en Neira y en el puente de Maibá.`,
     leccion:
-      "Toda ventaja obtenida sometiendo la conciencia termina presentando una cuenta que nadie puede delegar.",
+      "Lo que se obtiene prometiendo más de lo que se tiene termina cobrándose en el peor momento.",
     sceneHorizontal:
       "la plaza colonial de la Villa de Arma en Viernes Santo mientras un jinete oscuro sobre mula negra llega frente a la casa de Damián",
     sceneVertical:
