@@ -70,7 +70,8 @@
     "mitos:enriquecer:diagnostico": "node scripts/editorial/enriquecimiento/diagnostico.mjs",
     "mitos:enriquecer:abrir": "node scripts/editorial/enriquecimiento/abrir-modulo.mjs",
     "mitos:enriquecer:acta": "node scripts/editorial/enriquecimiento/validar-acta.mjs",
-    "mitos:enriquecer:cotejar": "node scripts/editorial/enriquecimiento/cotejar.mjs"
+    "mitos:enriquecer:cotejar": "node scripts/editorial/enriquecimiento/cotejar.mjs",
+    "mitos:enriquecer:tablero": "node scripts/editorial/enriquecimiento/tablero.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1095.0",
