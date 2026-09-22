@@ -451,6 +451,19 @@ export const tolimaMixtoResidualSources = {
     limitation:
       "Es otro ser, de otro departamento, y hace lo contrario: no daña a quien la trata bien.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  tolimafiesta2024: source({
+    title: "La fiesta de Corpus Christi en Guamo, apuntes de viaje",
+    author: "Pantoja Barco (Universidad del Tolima)",
+    year: 2024,
+    type: "trabajo de grado",
+    url: "https://repository.ut.edu.co/handle/001/3883",
+    summary:
+      "Documenta la danza de la tarasca en el Corpus Christi del Guamo, «de origen francés», con un ser de aspecto monstruoso usualmente verde, citando a Fajardo de Rueda (1996).",
+    limitation:
+      "Es la tarasca procesional, rito y no relato; el repositorio pide verificación antibot a los lectores automáticos.",
+  }),
 };
 
 const sourceKeysBySlug = {

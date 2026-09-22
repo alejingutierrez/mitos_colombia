@@ -264,40 +264,87 @@ El CINEP lee a la Muelona junto a la Llorona del Magdalena, la mujer que enloque
 
   defineTolimaMixtoResidualMyth({
     slug: "el-cazador",
+    fuentesAgotadas: "Fuera de Devia (1962; 2013) y de lo que Villa Posse II reproduce de Devia y de Rocha Castilla (1968), la cantera tolimense abierta no trae otro registro de este relato. Los candidatos de primer escalón —Blanca Álvarez de Parra, Bajo el cielo hechizado del Tolima (1973); Fabio Artunduaga Ospina, Mitología y folclor del Tolima (1986); Edgar Leonidas Lozano Galindo «Matraca», Enciclopedia del folclor terrígeno (1973; 2007); la tesis de Blanca Edilma Guerra sobre Purificación (U. de La Salle, 1994)— sólo existen como fichas de catálogo. La prensa (El Tiempo 1995 y 2010) y la encuesta de MODULEMA 2024 son ecos, y la divulgación de Bogotá no da fuente.",
+    sourceKeys: [
+      {
+        key: "moralesFolclor2013",
+        summary:
+          "Registro del relato: el cazador empedernido de un pueblito cerca de Río Grande que deja la capilla durante el sermón de las siete palabras para seguir a un venado, y la montaña desconocida que lo traga con su perro; los efectos del hechizo, a quiénes persigue y los remedios (pp. 69-71 de la edición de 2013).",
+        limitation:
+          "Devia lo cuenta en su voz, atribuido a «nuestros antepasados campesinos», sin narrador ni municipio.",
+      },
+      {
+        key: "compiladoraMitos1993",
+        summary:
+          "Segundo registro del texto de Devia en la sección 20, «El cazador» (pp. 154-156).",
+        limitation:
+          "Copia sin aparato crítico, con erratas de OCR.",
+      },
+      {
+        key: "coyaimaNatagaimaEthnography",
+        summary:
+          "Registra en la cosmología de coyaimas y natagaimas la Patasola que devora a los cazadores que no respetan los días sagrados (pp. 134-137), la misma falta castigada desde otra tradición.",
+        limitation:
+          "No nombra al Cazador; es el paralelo pijao que compara Similitudes.",
+      },
+      {
+        key: "espantosScan",
+        summary:
+          "Trae al Cazador en una carta fechada en Roncesvalles en 1960: la cacería de boruga un Viernes Santo, el silencio de las tres de la tarde, el grito, el aullido y el escapulario (pp. 19-20).",
+        limitation:
+          "El libro se declara «material de ficción» hecho de «documentos imaginarios»; la carta es composición de autor.",
+      },
+      {
+        key: "culturaCazador",
+        summary:
+          "Divulgación del «cazador fantasma» cuya alma está en el purgatorio y grita de pena.",
+        limitation:
+          "Página infantil sin fuente; el purgatorio no está en Devia.",
+      },
+      {
+        key: "narinocuentos1988",
+        summary:
+          "Nombra a El Cazador entre los mitos campesinos del interior que la migración llevó al piedemonte llanero, con el Tunjo, el Sombrerón, el Fraile y el Guando.",
+      },
+    ],
     title: "El cazador",
     excerpt:
       "Un venado aparta a un cazador de la capilla y lo conduce hasta una montaña donde su grito queda flotando con el ladrido del perro.",
     tags: ["cacería", "venado", "perro", "montaña"],
-    mito: `Cerca de Río Grande vivía un hombre que conocía la caza mejor que cualquier otro trabajo. Seguía venados por los breñales, cafuches entre guayabales, borugas junto al guadual y aves en los montes ribereños. Su perro lo acompañaba siempre.
+    mito: `Hubo una vez un cazador empedernido que todo lo dejaba por la cacería. Perseguía los venados por los breñales a la hora en que el sol se pone, que en el campo llaman el sol de los venados; buscaba los cafuches entre los guayabales, la boruga por el guadual y a la orilla de los ríos, los conejos en los pajonales, y en los montes de las riberas las chilacoas, las chorolas y las guacharacas. Vivía en un pueblito colonial cerca de Río Grande, rodeado de llanos de pajonales y matojos, de lomas altas cubiertas de arboledas y de quebradas limpias, y en esas colinas y cañadas la caza bullía por todas partes. No tenía otro oficio ni otra renta.
 
-Un Viernes Santo, a las tres de la tarde, el cazador estaba dentro de la capilla del pueblo. Por una ventana entraba el olor del rastrojo. Afuera, a pocos pasos, un venado grande como un ternero pastaba sin inquietarse. El hombre miró el altar, volvió a mirar el animal y sintió que toda su atención salía detrás de él.
+Al final de la calle más concurrida del pueblo había una capilla blanca y espaciosa, con ventanales grandes abiertos hacia los sotos y los bosques. Allí se celebraban con recogimiento todas las fiestas, y con más devoción que ninguna la Semana Santa.
 
-Abandonó la capilla, corrió a su casa por el arma y encontró al venado en una cañada. Cuando iba a disparar, el animal desapareció dentro del rastrojo. Reapareció más adelante, esperó a que el cazador levantara el arma y volvió a escapar. La persecución atravesó valles, mesetas, ríos y farallones. El hombre dejó de reconocer el camino, pero cada nueva aparición parecía prometerle que la presa estaba al alcance.
+Eran las tres de la tarde. El párroco llegaba al final del sermón de las siete palabras y casi todos lloraban. El cazador estaba de rodillas, con los ojos en el altar, rezando en voz baja, y por la ventana le daban en la cara ráfagas de brisa con olor a rastrojo. En un momento bajó los ojos, y en otro los levantó hacia afuera, buscando el viento. Esa fue su perdición: allí mismo, junto a la ventana, pastaba tranquilo un venado hermoso, grande como un ternero, al alcance de la mano.
 
-Al anochecer llegó a una montaña que no conocía. El venado se internó entre los árboles. Detrás entraron el cazador y su perro. Ninguno regresó.
+No lo pensó dos veces. Se escurrió entre la gente y corrió a su casa por la chilacoa, la escopeta que colgaba de un cuerno detrás de la puerta, cargada con tiro venadero. Así dejó la iglesia en un día tan grande y a una hora tan santa, cuando la cacería estaba vedada. No pensó en castigo del cielo ni de la tierra: sólo en la pieza.
 
-Desde entonces no se vio una figura caminando por esos montes. Lo que se escuchó fue un grito que azuzaba a un perro, seguido por un ladrido triste. A veces llegaban con un viento repentino; otras veces parecían acercarse y luego se perdían en una cañada. Quien perseguía una pieza con crueldad o se dejaba dominar por la cacería podía oír el llamado y seguirlo hasta perderse.
+A pocos metros de donde lo había visto lo encontró otra vez, en una cañada. El venado lo miró, paró las orejas y se quedó quieto. El hombre levantó el arma, apuntó, y cuando iba a apretar el gatillo el animal se perdió en el rastrojo. Desde ahí fue siempre igual: el venado lo esperaba cerca, él apuntaba, y en el instante del disparo se le escapaba. Sin darse cuenta del tiempo ni de los parajes cruzó valles, mesetas, farallones, ríos y malezales, con su perro detrás, hasta llegar a una montaña desconocida, oscura y sombría, que se los tragó a los dos.
 
-Una tarde, otro cazador levantó el arma contra un animal que se detenía de manera extraña. Antes de disparar oyó el grito y el perro. Bajó el cañón. El venado cruzó el sendero y desapareció sin huir. El hombre volvió al pueblo mientras todavía reconocía el terreno. La montaña quedó en silencio, como si el Cazador hubiera recordado a tiempo una moderación que él mismo no conoció.`,
-    historia: `Misael Devia publica el relato del Cazador dentro de Folclor tolimense. Su personaje es un espíritu sin forma física: nadie lo ve; se oyen el grito que anima al perro, el ladrido melancólico y un viento que acompaña el presagio. La biografía explica esa invisibilidad mediante un cazador que abandona la ceremonia de Viernes Santo para seguir un venado y desaparece con su perro en una montaña desconocida.
+Desde entonces su grito se oye en el monte cuando azuza al perro, sobre todo a las tres de la tarde, y después el perro ladra, lastimero. Entonces las aves callan, hasta los insectos se detienen, y un viento repentino azota los árboles. Las mulas paran las orejas, revientan las sogas, botan la carga y salen corriendo, y los perros se pegan a las pantorrillas del amo. Ese espanto persigue a quien caza en días santos, en el Corpus o el día del Sagrado Corazón, a quien caza por vicio, a quien maldice en la montaña o persigue con saña una pieza, y más que a nadie a quien deja la misa por irse al monte. A muchos el mismo venado los ha engañado igual, y se han perdido para siempre o han vuelto locos.
 
-La fuente combina conocimiento detallado de animales y paisajes con una norma católica. El castigo se agrava para quienes cazan en días santos, maldicen o persiguen una pieza sin tregua. La revisión conserva la escena religiosa porque organiza el relato, pero la lectura cultural no reduce la caza de subsistencia a culpa. El conflicto es el exceso: una actividad que sostiene al hombre termina dominando su decisión y borrando su orientación.
+Quien sale a cazar lleva algo bendito y muchos perros, reza a la hora de alzar, se persigna, carga municiones rayadas en cruz, y si ve una pieza de porte extraño deja la cacería y reza. En un apuro, se mete entre los animales de la casa.`,
+    historia: `El texto sale del capítulo «Mitos» de Folclor tolimense, el estudio que Misael Devia Morales publicó en 1962 en la Revista Colombiana de Folclor (Instituto Colombiano de Antropología, v. 3, n.º 7, pp. 9-106) y que Ediciones Unibagué reeditó en acceso abierto en 2013, donde «El Cazador» ocupa las pp. 69-71. Eugenia Villa Posse lo reprodujo en 1993 en el segundo tomo de Mitos y leyendas de Colombia (IADAP, Quito), sección 20, pp. 154-156, con la misma letra y algunas erratas de copia.
 
-La Secretaría de Cultura de Bogotá difunde un Cazador Fantasma visible, corpulento y equipado con carabina, binóculos, cantimplora y mochila, protector de animales frente a cazadores crueles. Es una actualización ecológica y nacional distinta del espectro invisible de Devia.
+Devia era de Armero y recogía en el campo del sur del Tolima; aquí no nombra a ningún narrador. Cuenta el caso en su propia voz y lo atribuye en bloque a «nuestros antepasados campesinos». Tampoco da el nombre del pueblo: dice sólo que era un pueblito colonial cerca de Río Grande, entre llanos de pajonales, lomas arboladas y quebradas.
 
-El libro de 2004 sitúa una carta en Roncesvalles, dentro del estuche de una escopeta de anticuario. La inspección visual confirma que remitente, coleccionista, municiones y carta forman el diseño literario de la página. Roncesvalles queda como ancla aproximada de esa recepción, no como prueba de que el episodio de Devia ocurrió allí.`,
-    versiones: `En Devia, el Cazador no lleva cuerpo, ropa ni arma visibles. Se manifiesta mediante voz, perro y viento. Su origen transcurre cerca de un Río Grande no identificado: un hombre sale de la capilla, persigue un venado inalcanzable y queda absorbido por una montaña. La leyenda modera la caza excesiva dentro de una moral de Semana Santa.
+El marco es cristiano de punta a punta. La falta es dejar la capilla durante el sermón de las siete palabras, a las tres de la tarde de la Semana Santa, cuando la caza estaba vedada; el castigo alcanza a quien caza en días santos, el Corpus o el día del Sagrado Corazón, y los remedios son objetos benditos, oraciones a la hora de alzar y munición rayada en cruz. Devia cierra la entrada remitiendo a otro espanto de su colección: en caso apurado hay que meterse entre animales domésticos, «como con la Patasola».
 
-La versión institucional contemporánea lo transforma en guardián de fauna. Persigue venados de oro y otros animales extraordinarios, lleva equipo de monte y anuncia castigo a traficantes o cazadores por ambición. Esa elaboración hace explícita una lectura ambiental que en Devia solo puede inferirse parcialmente; por eso no se retroproyecta al texto de 1962.
+En 2004, el libro Cuentos de espantos y otros seres fantásticos del folclor colombiano, de Casa Editorial El Tiempo y la Universidad Autónoma de Colombia, dedicó al Cazador sus pp. 19-20. El propio libro se presenta como «material de ficción» hecho de «documentos imaginarios», y así se lee su entrada.`,
+    versiones: `El texto de Devia y la copia de Villa Posse son el mismo; no hay en el Tolima otro registro abierto con narrador. Devia no nombra el día de la cacería: habla de la Semana Santa, de las tres de la tarde y del sermón de las siete palabras, que es predicación del Viernes Santo.
 
-La edición de 2004 cuenta el encuentro mediante una carta fechada en Roncesvalles en 1960. Un grupo caza en Viernes Santo, oye perros y gritos y se protege con oración y escapulario. El documento está acompañado por dibujos de escopeta y munición y por una nota de supuesto coleccionista. El catálogo de Bibliovalle clasifica la obra como cuento fantástico, de modo que la carta se presenta como recurso literario.
+El libro de 2004 cambia la forma, no el espanto. Pone el caso en una carta fechada en Roncesvalles en 1960: un grupo sale a cazar boruga un Viernes Santo, a las tres de la tarde la montaña enmudece, oyen un grito y un aullido, sopla un viento fuerte y se salvan rezando con un escapulario. La carta, su firmante y la fecha son composición de autor; lo que conserva de Devia es la hora, el silencio del monte, el grito y el remedio religioso.
 
-La hoja del proyecto había unido obsesión, castigo andino y detalles posteriores. La nueva ficha mantiene una ruta, pero señala con claridad qué pertenece a Devia, a la divulgación ambiental y al montaje epistolar.`,
+La divulgación de la Secretaría de Cultura de Bogotá, en su serie Bogotanitos, lo llama «el cazador fantasma» y añade que su alma está en el purgatorio, que no ha podido descansar y grita de pena. Devia no dice nada del purgatorio: su cazador fue tragado por la montaña y su grito es aviso.
+
+Entre los coyaimas y natagaimas, Diana Oliveros registra otra forma del mismo castigo: la Patasola que devora a los cazadores enamorados que no respetan los días sagrados. Allí el monte castiga desde la cosmología pijao; en Devia, desde el calendario de la parroquia.`,
     leccion:
-      "Una destreza pierde su medida cuando el deseo de vencer borra el camino de regreso.",
-    similitudes: `El Hojarasquín del Monte también limita la acción humana sobre animales y bosque. La diferencia es que suele adquirir un cuerpo vegetal o animal y funciona como guardián visible, mientras el Cazador de Devia es una voz condenada que repite su propio exceso. La Patasola habita montañas apartadas y puede atacar a cazadores, pero se muestra como mujer o animal negro y engaña con lamentos; el Cazador se reconoce por el perro y el grito.
+      "Quien abandona lo sagrado por un deseo termina perdido en aquello mismo que perseguía.",
+    similitudes: `El paralelo más cercano está en la misma colección. Devia termina la entrada del Cazador con el remedio que comparte con la Patasola: quien se ve en apuros en el monte debe meterse entre los animales domésticos. Los dos espantos castigan al que se interna en la montaña cuando no debe, y los dos se detienen ante el ganado de la casa. Los separa el cuerpo: la Patasola se deja ver como mujer, perra o vaca; el Cazador no tiene forma y sólo se oye.
 
-La Cacería Salvaje europea comparte la imagen de una persecución espectral acompañada por perros y ruidos en el cielo o el monte. No obstante, el relato tolimense se concentra en un solo hombre, su venado inalcanzable y la norma de Viernes Santo, sin procesión de jinetes ni genealogía germánica. La resonancia no prueba influencia; muestra cómo distintas tradiciones convierten una persecución interminable en señal de peligro.`,
+Diana Oliveros, en su capítulo sobre coyaimas y natagaimas de la Geografía Humana de Colombia, registra en la cosmología pijao una Patasola que devora a los cazadores que no respetan los días sagrados. Es la misma falta, cazar en el tiempo vedado, castigada desde otra tradición y por otra figura.
+
+Alberto Baquero Nariño, en Los cuentos de Pascual, pone al Cazador en la lista de mitos campesinos del interior que la migración andina llevó al piedemonte llanero, junto al Tunjo, el Sombrerón, el Fraile y el Guando. El venado que se deja ver y siempre escapa, y que en el Tolima es la trampa del condenado, viajó así con los colonos hacia el Meta.`,
     sceneHorizontal:
       "capilla rural abierta al paisaje del Tolima a las tres de la tarde, un cazador mira por la ventana a un venado grande junto al rastrojo mientras su perro espera fuera",
     sceneVertical:
@@ -634,40 +681,70 @@ Rocha Castilla, en la misma página del duende, lo mide contra otro espanto del 
 
   defineTolimaMixtoResidualMyth({
     slug: "la-tarasca",
+    fuentesAgotadas: "La Tarasca como relato sólo existe en Cuentos de espantos (2004), que se declara ficción; en el Tolima la tarasca documentada es la figura procesional del Corpus (Pantoja Barco 2024). Los libros que MODULEMA da como fuentes de su Tarasca —Blanca Álvarez de Parra (1973) y Artunduaga Ospina (1986)— sólo existen como fichas de catálogo. Ninguna otra obra abierta (Devia, Villa Posse II y III, CINEP, Oliveros, la prensa) la nombra.",
+    sourceKeys: [
+      {
+        key: "espantosScan",
+        summary:
+          "Único texto del relato: la ficha técnica de la Tarasca (animal-monstruo del Tolima Grande y Antioquia, metro y medio, sangre de niños, gula) y la carta del mineralogista y Saulo ante el lagarto esmeralda con cabeza de pez (pp. 1-2).",
+        limitation:
+          "Ficción de autor declarada («material de ficción… documentos imaginarios»): la carta, su firmante, la fecha de 1825 y el archivo son composición del libro.",
+      },
+      {
+        key: "modulemaTolima",
+        summary:
+          "La encuesta a habitantes de Ibagué incluye a la Tarasca entre las leyendas zoomorfas del Tolima, con el Silbador, y la sitúa en Tolima y Antioquia atacando niños y animales.",
+        limitation:
+          "Estudio de recepción de 2024; sus resúmenes dicen salir de Blanca Álvarez y de Artunduaga Ospina, libros sin texto abierto.",
+      },
+      {
+        key: "unescoTarasque",
+        summary:
+          "Describe los gigantes y dragones procesionales de Bélgica y Francia, entre ellos los de Tarascón, aparecidos en procesiones religiosas urbanas desde finales del siglo XIV, la familia de la tarasca del Corpus.",
+        limitation:
+          "Es la tarasca europea procesional, no el relato colombiano.",
+      },
+      "tolimafiesta2024",
+      {
+        key: "compiladoraMitos1993",
+        summary:
+          "Reproduce la lista «Algunos de los mitos populares del Tolima» de Rocha Castilla, donde la Patasola sirve para asustar a los niños y hacerlos portarse bien (p. 180), el espanto pedagógico que compara Similitudes.",
+        limitation:
+          "No nombra a la Tarasca.",
+      },
+    ],
     title: "La Tarasca",
     excerpt:
       "Un mineralogista y su joven guía encuentran una criatura enorme en el bosque, dentro de un cuento construido como carta antigua.",
     tags: ["bestias", "selva", "miedo", "literatura"],
-    mito: `Un mineralogista extranjero entró en los bosques de la provincia de Mariquita buscando piedras y metales. Lo acompañaba Saulo, un muchacho que conocía los senderos y aceptó guiarlo cuando otros estudiantes se negaron. Los pobladores les habían hablado de una criatura que perseguía a los niños, pero el visitante creyó que se trataba de un temor inventado.
+    mito: `Un mineralogista recorría los bosques calientes con una cuadrilla de ayudantes y guías. Uno de los guías era un niño que, según él sospechaba, venía robando provisiones durante toda la travesía. Una mañana lo encontraron pálido, inconsciente, con una herida extraña en el cuello.
 
-Después de una larga caminata encontraron un claro cubierto de hongos y frutas podridas. El olor era tan fuerte que el mineralogista estuvo a punto de desmayarse. Saulo se apartó para buscar otro paso. Entonces un rugido profundo atravesó el bosque.
+Entre los ayudantes empezaron a correr rumores, y amenazaron con dejarlo solo en aquellas tierras. Él les aseguró que había sido una fiera, y para quitarles el miedo salió a cazarla. Sólo quiso acompañarlo Saulo, un guía bajito pero muy valiente.
 
-El hombre vio avanzar una bestia enorme, semejante a una rata gigantesca, con cabeza monstruosa, patas delanteras cortas y una boca capaz de abrirse más que su propio rostro. Se quedó inmóvil mientras la criatura pasaba cerca. La Tarasca olfateó el aire y continuó hacia el lugar donde había desaparecido el muchacho.
+Buscaron largo rato. El atardecer los sorprendió al pie de una formación de rocas en medio del bosque, y mientras buscaban dónde pasar la noche entraron en una cueva. Adentro había un arrume de musgo y frutas podridas casi tan alto como Saulo. El guía salió corriendo, y el hombre tuvo que seguirlo. Saulo juraba que aquello era la guarida de uno de los demonios que persiguen a los niños, esos que la gente llama cocos, y que el montón era su comida.
 
-El mineralogista oyó un grito. Corrió, pero llegó tarde. Saulo yacía en el suelo y la bestia se internaba entre los árboles. El hombre no intentó perseguirla. Permaneció junto a su guía hasta recuperar fuerzas y luego regresó a la población con una historia que sabía difícil de creer.
+Entre divertido y curioso, el mineralogista lo obligó a sentarse con él detrás de unos matorrales a esperar. De la cueva salió de pronto un gruñido, como de cerdo, y enseguida apareció la bestia: un lagarto gordo, verde esmeralda, salpicado de verrugas y pelos, con una cabeza monstruosa parecida a la de un pez. No tardó en descubrirlos. Se acercó mostrando los colmillos manchados de sangre, y el hombre, en vez de tomar el fusil, se quedó quieto, mirándole los ojos rojos y la boca enorme. Cuando la bestia le pasaba al lado, ya alejándose, se desmayó.
 
-De vuelta, dibujó la cabeza y el esqueleto que imaginaba para el animal. Escribió que la Tarasca no parecía interesarse por los adultos y que su tamaño podía superar el de un niño. Los habitantes, en cambio, no necesitaron dibujos. Para ellos el peligro ya tenía nombre y una regla sencilla: ningún menor debía entrar solo en el bosque.
+Al despertar, Saulo temblaba y tartamudeaba junto a él. Le insistía en que aquello había sido la Tarasca, un monstruo chupasangre de la región, y que ella había atacado al muchacho del campamento. Él se había salvado de milagro, porque sin pensarlo se subió a una piedra.
 
-Con los años, la carta y los bocetos quedaron guardados como si fueran documentos de una expedición. La Tarasca siguió en el margen entre bestia y espanto. No había un ejemplar en un museo ni huesos que pudieran medirse; quedaba una historia que usaba el lenguaje de la ciencia para conducir al lector hasta el momento en que una certeza arrogante se rompe frente al bosque.`,
-    historia: `La fuente narrativa más detallada localizada para esta ruta es Cuentos de espantos y otros seres fantásticos del folclor colombiano, publicado en 2004. La página presenta una carta atribuida a un mineralogista inglés, fechada en la provincia de Mariquita en 1825, y añade dibujos de un cráneo y un esqueleto supuestamente conservados en el Museo Nacional. La inspección visual confirma que carta, compañía minera, museo y bocetos forman un montaje gráfico coherente con los demás “documentos encontrados” del volumen.
+Un mes después, ya tranquilo, el mineralogista sacó su conclusión: la Tarasca apenas alcanza el metro y medio, y no ataca a quien la supera en estatura. Por eso, pensó, los lugareños creen que sólo los niños menores de diez años son sus víctimas. Y escribió al vicepresidente pidiéndole que organizara con urgencia una expedición mitozoológica para buscarla.`,
+    historia: `Este relato es la entrada «La Tarasca» de Cuentos de espantos y otros seres fantásticos del folclor colombiano, publicado en 2004 por Casa Editorial El Tiempo con la Universidad Autónoma de Colombia, bajo la dirección de Juan Torres Mantilla; las láminas llevan además el logo del periódico Hoy. Ocupa las pp. 1-2, la primera lámina del libro, y se lee en el escaneo que conserva archive.org.
 
-El catálogo de la Biblioteca Departamental Jorge Garcés Borrero clasifica el libro como literatura, cuento fantástico y espantos en la literatura. Por ello Saulo, Thomas Wildland y los archivos confidenciales no se publican como personas o documentos históricos verificados. El relato puede leerse como ficción patrimonial que imita una voz científica.
+El libro se declara a sí mismo «material de ficción» hecho de «documentos imaginarios», y la entrada es un ejemplo de ese método. La p. 1 es una ficha técnica que clasifica a la Tarasca como animal-monstruo del Tolima Grande y Antioquia: vive en bosques y cavernas, come helechos, musgos y frutos, a veces bebe sangre de niños o de animales domésticos, mide metro y medio y asusta a los niños que caen en la gula. Distingue una Tarasca carpanta, de las montañas antioqueñas, con cabeza de mujer despeinada, y una común, de las planicies del Huila y el Tolima, con cabeza de pez. La p. 2 es la carta de un mineralogista inglés, Thomas Wildland, fechada en 1825 en la Provincia de Mariquita y dirigida al vicepresidente, que el libro dice sacar de unos documentos confidenciales. La carta, su firmante, la fecha y el archivo son composición del libro.
 
-MODULEMA incluye la Tarasca entre las figuras zoomorfas conocidas en Ibagué y resume una criatura de zonas rurales de Tolima y Antioquia que amenaza niños y animales domésticos. Esa síntesis documenta circulación regional, aunque no identifica narradores ni la antigüedad del argumento. Devia menciona la Tarasca en un panorama general, pero el facsímil consultado no contiene una entrada sustantiva equivalente.
+Una nota al margen, junto al dibujo de una mandíbula, dice que con ella los misioneros españoles advertían a los niños sobre la gula. Es el eco de otra tarasca, la de las procesiones del Corpus Christi, que llegó a la Nueva Granada con las fiestas religiosas de origen europeo. En el Tolima esa tarasca procesional está documentada en el Corpus del Guamo: Pantoja Barco (Universidad del Tolima, 2024), citando a Fajardo de Rueda, la describe como un ser de aspecto monstruoso, usualmente verde, cuya danza tiene origen francés.`,
+    versiones: `Dentro del mismo libro hay dos tarascas. La ficha técnica separa la carpanta antioqueña, con cabeza de mujer de cabellos abundantes, de la común del Huila y el Tolima, con cabeza de pez; la carta sólo describe a la segunda, el lagarto esmeralda con cabeza de pez que ven el mineralogista y Saulo.
 
-La Tarasque de Tarascon es una tradición europea documentada por UNESCO y la BnF. El nombre compartido hace pertinente la comparación, pero no se encontró una cadena que pruebe traslado colonial directo. Ibagué queda como ancla editorial aproximada.`,
-    versiones: `La versión de 2004 adopta forma epistolar. Un mineralogista extranjero escribe a una autoridad política, describe hongos, un rugido, una bestia semejante a una rata enorme y la muerte de su guía Saulo. Los dibujos del cráneo y el esqueleto simulan una prueba museal. Todo el conjunto pertenece al dispositivo literario del libro.
+La tarasca del Corpus es otra cosa. En las procesiones es una figura, no un animal del monte: la llevan y la hacen bailar, y su fealdad representa el pecado que la procesión vence. De ella viene el nombre, y quizá el aviso contra la gula que el libro de 2004 pone en boca de los misioneros.
 
-MODULEMA ofrece una versión más general: monstruo de zonas rurales de Tolima y Antioquia, oculto en selvas y temido porque ataca a niños y animales domésticos. No menciona al mineralogista, a Saulo ni los archivos de 1825. Puede representar circulación oral o editorial posterior, pero la publicación no entrega cadena de informantes.
-
-La Tarasque provenzal no es una variante colombiana del mismo relato. UNESCO documenta una efigie procesional viva en Tarascon dentro de fiestas europeas de gigantes y dragones; la BnF la sitúa en el bestiario regional de Francia. La semejanza del nombre y la condición monstruosa permiten una nota comparativa, no una genealogía automática.
-
-La hoja heredada trataba expedición, huesos y museo como si sustentaran una criatura zoológica. La revisión conserva el cuento, identifica el artificio y retira toda afirmación de que el Museo Nacional posea restos de Tarasca.`,
+La encuesta que Guarnizo Sánchez y otros publicaron en MODULEMA en 2024 con habitantes de Ibagué incluye a la Tarasca entre las leyendas zoomorfas del Tolima, junto al Silbador, y la sitúa en Tolima y Antioquia como un ser que ataca a niños y animales. Sus resúmenes dicen salir de dos libros regionales, Bajo el cielo hechizado del Tolima, de Blanca Álvarez, y Mitología y folclor del Tolima, de Fabio Artunduaga Ospina.`,
     leccion:
-      "Imitar la voz de la ciencia no convierte una historia extraordinaria en prueba histórica.",
-    similitudes: `La Tarasque de Tarascon se parece a la Tarasca colombiana por el nombre y por ser una criatura grande que amenaza a una comunidad. Se diferencia en soporte y función: la europea vive como efigie procesional y emblema urbano; la tolimense del libro de 2004 habita un bosque y llega mediante una carta fantástica. Sin una cadena documental, la similitud no prueba que una derive de la otra.
+      "Lo que se dice para asustar a los niños puede guardar la advertencia que el adulto descarta.",
+    similitudes: `El pariente europeo es el de su nombre. La UNESCO tiene en su lista del patrimonio inmaterial los gigantes y dragones procesionales de Bélgica y Francia, entre ellos los de Tarascón: efigies de animales y monstruos que aparecieron en las procesiones religiosas urbanas desde finales del siglo XIV y siguen saliendo a la calle. La tarasca que las fiestas del Corpus trajeron a la Nueva Granada es de esa familia, y el monstruo verde del libro de 2004 conserva su color y su fealdad, pero la saca de la procesión y la mete en una cueva del bosque.
 
-El Pie Grande del mismo volumen comparte bosque, tamaño desmesurado y una ficha que imita investigación, pero adopta forma humanoide y pertenece a otra familia del bestiario. El Hojarasquín del Monte también encarna una presencia no humana del bosque colombiano; suele proteger animales y componerse de vegetación, mientras la Tarasca se presenta como bestia depredadora. Compararlos permite distinguir funciones sin llenar los vacíos históricos con un origen inventado.`,
+Dentro del relato, Saulo la identifica con los cocos, los demonios genéricos que persiguen a los niños, y la ficha técnica le da el oficio de asustar a los golosos. Es la función del coco de las nanas y de los espantos pedagógicos del mismo repertorio tolimense, como la Patasola que, según Rocha Castilla, servía a los campesinos para que los muchachos se portaran bien.
+
+La sangre la acerca a los seres chupadores de la tradición campesina, pero aquí la Tarasca no se transforma ni tiene historia: es un animal, y el mineralogista la explica como a una fiera, por su estatura.`,
     sceneHorizontal:
       "bosque húmedo de la antigua provincia de Mariquita, un mineralogista y el joven Saulo observan desde un claro una criatura enorme semejante a roedor con mandíbula ancha, entre hongos y frutas caídas, sin ataque gráfico",
     sceneVertical:

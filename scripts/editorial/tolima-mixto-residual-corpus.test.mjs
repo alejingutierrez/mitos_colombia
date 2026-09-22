@@ -82,12 +82,12 @@ test("corrige fusiones, falsos archivos y atribuciones culturales", () => {
   assert.match(bySlug.get("la-candileja").mito, /tres hachones/i);
   assert.doesNotMatch(bySlug.get("la-muelona").mito, /La Maga/i);
   assert.match(bySlug.get("la-muelona").versiones, /Patasola/i);
-  assert.match(bySlug.get("el-cazador").mito, /grito[^]+ladrido/i);
+  assert.match(bySlug.get("el-cazador").mito, /grito[^]+ladra/i);
   assert.match(bySlug.get("el-tunjo").mito, /Venancio/i);
   assert.match(bySlug.get("el-guango").mito, /Meta el hombro, compañero/i);
   assert.match(bySlug.get("el-silbador").versiones, /Baltasar[^]+Timoteo/i);
   assert.match(bySlug.get("brujas-y-duendes").mito, /pisca[^]+tiple/i);
-  assert.match(bySlug.get("la-tarasca").historia, /montaje gráfico/i);
+  assert.match(bySlug.get("la-tarasca").historia, /material de ficción/i);
   assert.match(bySlug.get("el-chenche").historia, /ficción/i);
   assert.match(bySlug.get("dioses-lares").historia, /analogía clásica externa/i);
 });
