@@ -89,13 +89,19 @@ test("los dos expedientes cumplen la metodología editorial", () => {
 test("separa los núcleos documentados de adaptaciones e invenciones", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const patetarro = bySlug.get("el-patetarro");
+  // heredada: reescribir tras el cotejo
   assert.match(patetarro.mito, /Carrasquilla|calavera de vaca/);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(patetarro.mito, /mujeriego|deidad guardiana/i);
+  // heredada: reescribir tras el cotejo
   assert.match(patetarro.versiones, /recreación[\s\S]+Ernesto/i);
 
   const mareco = bySlug.get("el-mareco");
+  // heredada: reescribir tras el cotejo
   assert.match(mareco.mito, /Manuel[\s\S]+adaptación editorial/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(mareco.mito, /Doña Marta/i);
+  // heredada: reescribir tras el cotejo
   assert.match(mareco.versiones, /agua bendita[\s\S]+se retiran/i);
 });
 

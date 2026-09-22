@@ -97,44 +97,56 @@ test("los siete expedientes cumplen rangos y estructura metodológica", () => {
 
 test("retira las fusiones originales y conserva versiones incompatibles", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("chiles-y-cumbal").mito, /Embilpud[\s\S]+Embilquer/);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("chiles-y-cumbal").mito,
     /mandato del fogón|pacto de agua y fuego/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-diablo-chivo-de-rumichaca").mito,
     /contrabando|sombra del viajero|pacto de frontera/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("guagua-rayo").mito,
     /Juan y Telma[\s\S]+Otra memoria de Jenoy/,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("guagua-rayo").mito,
     /Guagua Auca|violencia doméstica/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-totuma-de-la-cocha").mito,
     /Pucara[\s\S]+Tamia[\s\S]+Munani[\s\S]+pilche/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-totuma-de-la-cocha").mito,
     /No reemplaza las historias directas del Refugio del Sol/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("taita-galeras").mito,
     /Jenoy[\s\S]+Virgen del Rosario/,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("taita-galeras").mito,
     /cuatro ojos de agua|Telpis|barniz de Pasto/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-padre-mera").mito, /milagro/i);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-padre-mera").mito,
     /marimbas, cununos, bombos y guás/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("la-sirena-del-arco").mito,
     /Antonio|psicólog|asesinatos industriales/i,

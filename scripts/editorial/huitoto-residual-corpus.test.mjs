@@ -96,16 +96,24 @@ test("los cuatro expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige atribución, ciclo, desenlace y moraleja heredados", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("taife").mito, /Madremonte|niguas/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("taife").versiones, /El origen de los Huitotos/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("taik").mito, /diablo|Jatacoremui|mariposa/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("taik").historia, /Pablo Bigïdïma/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("nonuetoma").mito, /lo mataron/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("nonuetoma").historia, /Amazonía Peruana/i);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-diluvio-guinadoma").historia,
     /Lorenzo y José Soto Flórez/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-diluvio-guinadoma").leccion,
     /fe|creencia|salvación/i,

@@ -126,3 +126,26 @@ test("comprobar-modulo marca el define por slug cuando alguna ficha declara sour
   const despues = correr("comprobar-modulo.mjs", ["--comunidad=prueba", "--modulos=prueba"], raiz);
   assert.doesNotMatch(despues.stdout, /resuelve las fuentes por slug/);
 });
+
+test("marca las aserciones sobre texto heredado en los tests del ciclo, sin borrarlas", () => {
+  const { raiz } = crearFixture();
+  const dirTests = path.join(raiz, "scripts", "editorial");
+  fs.mkdirSync(dirTests, { recursive: true });
+  const archivo = path.join(dirTests, "prueba-corpus.test.mjs");
+  const original = `import records from "../../editorial/prueba/records.mjs";
+test("x", () => {
+  assert.match(
+    bySlug.get("vieja").historia,
+    /1775/,
+  );
+  assert.match(record.seo_title, /x/);
+});
+`;
+  fs.writeFileSync(archivo, original);
+  correr("abrir-modulo.mjs", ["--modulos=prueba", "--apply"], raiz);
+  const marcado = fs.readFileSync(archivo, "utf8");
+  assert.equal(marcado.match(/heredada: reescribir tras el cotejo/g)?.length, 1);
+  assert.equal(marcado.replace(/^\s*\/\/ heredada: reescribir tras el cotejo\n/m, ""), original);
+  correr("abrir-modulo.mjs", ["--modulos=prueba", "--apply"], raiz);
+  assert.equal(fs.readFileSync(archivo, "utf8"), marcado);
+});

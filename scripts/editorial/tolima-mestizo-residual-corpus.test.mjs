@@ -79,23 +79,35 @@ test("diferencia las dos Patasolas y corrige Poira y Sombrerón", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const patasola = bySlug.get("la-patasola");
+  // heredada: reescribir tras el cotejo
   assert.match(patasola.mito, /Misael Devia en 1962/i);
+  // heredada: reescribir tras el cotejo
   assert.match(patasola.mito, /mujer hermosa[^]+perra negra[^]+vaca negra/i);
+  // heredada: reescribir tras el cotejo
   assert.match(patasola.mito, /Julián Bueno[^]+se retiran/i);
 
   const norMica = bySlug.get("la-patasola-mixto");
+  // heredada: reescribir tras el cotejo
   assert.match(norMica.mito, /Ricardo Rocha G\./i);
+  // heredada: reescribir tras el cotejo
   assert.match(norMica.mito, /Ñor Mica[^]+San Juan[^]+oración del monte/i);
+  // heredada: reescribir tras el cotejo
   assert.match(norMica.mito, /filas 431 a 435[^]+reúne aquí/i);
 
   const poira = bySlug.get("el-poira");
+  // heredada: reescribir tras el cotejo
   assert.match(poira.mito, /Poira no es[^]+separada del Mohán/i);
+  // heredada: reescribir tras el cotejo
   assert.match(poira.mito, /coerción y peligro sexual/i);
+  // heredada: reescribir tras el cotejo
   assert.match(poira.historia, /no equivale a confirmación histórica/i);
 
   const sombreron = bySlug.get("el-sombreron");
+  // heredada: reescribir tras el cotejo
   assert.match(sombreron.mito, /sombrero negro[^]+pantorrillas/i);
+  // heredada: reescribir tras el cotejo
   assert.match(sombreron.mito, /Sombrerón guatemalteco/i);
+  // heredada: reescribir tras el cotejo
   assert.match(sombreron.mito, /María[^]+se retira/i);
 });
 

@@ -97,26 +97,32 @@ test("los cinco expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige autorías, fusiones, arqueología y atribución cultural", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-anima-coy").versiones,
     /no resuelve esas variantes (?:ni|y no) inventa el significado de Coy/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-luz-del-limonal").versiones,
     /nueva versión de Valenzuela[\s\S]+páginas permanecen separadas/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-silbon").versiones,
     /no incluye parricidio[\s\S]+castigo de infieles/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("los-tunjos-de-la-cantera").mito,
     /no es una descripción de los tunjos arqueológicos/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("duende-del-salto").mito,
     /propio editor la llama leyenda híbrida[\s\S]+no se atribuye aquí a una cosmología Guane/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("duende-del-salto").versiones,
     /retira suicidios, violencia sexual, sacrificios, divinidad Guane/i,

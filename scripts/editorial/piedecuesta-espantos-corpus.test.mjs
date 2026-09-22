@@ -97,34 +97,42 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige fusiones, criaturas y causalidades heredadas", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-hilandera").versiones,
     /La Máncara de San Francisco[\s\S]+fusión se elimina/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-doctor-galeacer").versiones,
     /Curación por contacto[\s\S]+expansiones heredadas sin respaldo/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-carriazo-de-vereda-san-isidro").versiones,
     /Silvio[\s\S]+Reyes[\s\S]+Carmelo/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-reventon-de-jacobo").versiones,
     /huesos pasados por la ventana[\s\S]+entrega directa de cofre/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-cueva-de-la-pisca").historia,
     /una pisca es una pava/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-monedita-en-la-alcancia").versiones,
     /conjeturas internas[\s\S]+dirección precisa/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-diabla-castigadora").mito,
     /no hay una transformación sobrenatural[\s\S]+responsabilidad/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-lampara-de-petroleo").versiones,
     /no convierte la luz en entidad con propósito/i,

@@ -97,34 +97,42 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
 
 test("restaura fuentes, explicaciones y límites sensibles", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-mula-del-diablo").versiones,
     /no.*prueba de asesinato[\s\S]+metamorfosis real/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-mula-maneada").mito,
     /no ofrece.*una escena inequívoca[\s\S]+se transforme/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-llorona-del-molino").mito,
     /no usa la palabra locura[\s\S]+(?:no|tampoco) adopta etiquetas raciales/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-mechuda").versiones,
     /no contiene cabellera descrita[\s\S]+metamorfosis/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-fantasma-de-el-horizonte").mito,
     /burro cojo cubierto con una manta[\s\S]+explicación diferente/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-puerta-del-perdon").mito,
     /no recomienda[\s\S]+puede causar daño/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-sayona-del-cementerio").versiones,
     /retira.*castigo de infieles/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-pollo-de-las-animas").mito,
     /mecanismo se revela[\s\S]+actuación humana/i,

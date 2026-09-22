@@ -99,17 +99,23 @@ test("restaura procedencias y retira los tres núcleos inventados", () => {
 
   const viudita = bySlug.get("la-viudita");
   assert.equal(viudita.category_path, "Andina > Nariño > Mestizo");
+  // heredada: reescribir tras el cotejo
   assert.match(viudita.mito, /Pasto[\s\S]+cementerio/i);
+  // heredada: reescribir tras el cotejo
   assert.match(
     viudita.mito,
     /Clemente Vidal, Clara y Del Castillo[\s\S]+sin respaldo[\s\S]+se retiran/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(viudita.versiones, /Viuda Alegre[\s\S]+separada/i);
 
   const judio = bySlug.get("el-judio-errante");
   assert.equal(judio.category_path, "Andina > Boyacá > Mestizo");
+  // heredada: reescribir tras el cotejo
   assert.match(judio.mito, /leyenda cristiana de origen antijudío/i);
+  // heredada: reescribir tras el cotejo
   assert.match(judio.historia, /Galit Hasan-Rokem/i);
+  // heredada: reescribir tras el cotejo
   assert.match(
     judio.mito,
     /inventaba celos hacia María Magdalena[\s\S]+Ninguna[\s\S]+sostiene esas identidades[\s\S]+Se retiran/i,
@@ -117,8 +123,11 @@ test("restaura procedencias y retira los tres núcleos inventados", () => {
 
   const bus = bySlug.get("el-bus-fantasma");
   assert.equal(bus.category_path, "Varios > Varios > Mestizo");
+  // heredada: reescribir tras el cotejo
   assert.match(bus.mito, /carretera de montaña[\s\S]+ruta G66/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bus.historia, /Marcel Laforet no apareció/i);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bus.mito,
     /Marcel Laforet[\s\S]+manuscrito de tinta plateada[\s\S]+Ninguna fuente[\s\S]+los retira/i,

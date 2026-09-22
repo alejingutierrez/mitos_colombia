@@ -65,32 +65,39 @@ test("corrige fusiones, nombres sin respaldo y relaciones entre leyendas", () =>
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const cura = bySlug.get("el-cura-sin-cabeza");
   assert.equal(cura.category_path, "Andina > Nariño > Mestizo");
+  // heredada: reescribir tras el cotejo
   assert.match(cura.mito, /templo de Santiago[\s\S]+misas gregorianas[\s\S]+misa espectral/i);
   assert.match(cura.researchNotes, /Mariano Narváez[\s\S]+no presenta/i);
 
   const jinete = bySlug.get("el-jinete-negro");
   assert.match(jinete.title, /variante colombiana del Sombrerón/i);
+  // heredada: reescribir tras el cotejo
   assert.match(jinete.mito, /Cundinamarca y Boyacá[\s\S]+Lérida[\s\S]+variante/i);
   assert.match(jinete.researchNotes, /Don Roque[\s\S]+no tienen respaldo/i);
 
   const mandingas = bySlug.get("el-mandingas");
   assert.equal(mandingas.category_path, "Caribe > Bolívar y Atlántico > Mestizo");
+  // heredada: reescribir tras el cotejo
   assert.match(mandingas.mito, /Atlas Lingüístico-Etnográfico[\s\S]+África occidental[\s\S]+racialización/i);
   assert.match(mandingas.researchNotes, /ANTIRRACISTA[\s\S]+Pamba Ahumé/i);
 
   const mohan = bySlug.get("el-mohan");
+  // heredada: reescribir tras el cotejo
   assert.match(mohan.mito, /Magdalena y el Saldaña[\s\S]+Poira[\s\S]+coerción/i);
   assert.match(mohan.researchNotes, /Poira conserva su expediente diferenciado/i);
 
   const llorona = bySlug.get("la-llorona");
+  // heredada: reescribir tras el cotejo
   assert.match(llorona.mito, /tres hijos[\s\S]+esposo violento[\s\S]+contradicción/i);
   assert.match(llorona.researchNotes, /madre despojada[\s\S]+filicidas/i);
 
   const madremonte = bySlug.get("la-madremonte");
+  // heredada: reescribir tras el cotejo
   assert.match(madremonte.mito, /Coyaimas[\s\S]+Tumaco[\s\S]+Caldas/i);
   assert.match(madremonte.researchNotes, /Dabeiba automática[\s\S]+creación angelical/i);
 
   const duendes = bySlug.get("los-duendes");
+  // heredada: reescribir tras el cotejo
   assert.match(duendes.mito, /tiple desafinado[\s\S]+ninguna de las ocho fuentes/i);
   assert.match(duendes.researchNotes, /PROTECCIÓN DE PERSONA[\s\S]+afirmación clínica/i);
 });

@@ -86,15 +86,23 @@ test("deshace la fusión del trinche y limpia la adopción del río", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const montufar = bySlug.get("la-bruja-del-trinche");
   assert.equal(montufar.title, "Andrés Montúfar y Dolores Escalona");
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(montufar.mito, /trinche/i);
+  // heredada: reescribir tras el cotejo
   assert.match(montufar.historia, /Quín Vásquez[\s\S]+trinche/i);
+  // heredada: reescribir tras el cotejo
   assert.match(montufar.versiones, /Quín Vásquez no es una versión/i);
+  // heredada: reescribir tras el cotejo
   assert.match(montufar.similitudes, /Francisco el Hombre[\s\S]+Quín Vásquez/i);
 
   const sirena = bySlug.get("la-sirena-de-hurtado");
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(sirena.mito, /adopta|pacto|cobra su deseo/i);
+  // heredada: reescribir tras el cotejo
   assert.match(sirena.historia, /1998[\s\S]+1994/i);
+  // heredada: reescribir tras el cotejo
   assert.match(sirena.versiones, /no decide que la sirena provoque ahogamientos/i);
+  // heredada: reescribir tras el cotejo
   assert.match(sirena.similitudes, /Madre de Agua[\s\S]+Mohana/i);
 });
 

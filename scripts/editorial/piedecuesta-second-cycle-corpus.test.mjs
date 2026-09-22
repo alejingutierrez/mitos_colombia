@@ -97,34 +97,42 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige género, fusiones, causalidades y territorio", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-bruja-silbona").versiones,
     /gran chulo negro[\s\S]+no importa la penitencia de El Silbón/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-mancarita").versiones,
     /título vuelve a La Máncara de San Francisco[\s\S]+No es Oliva/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("cuento-fantastico").versiones,
     /cuento literario moderno[\s\S]+no fabrica una tradición oral/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-campana-del-diablo").versiones,
     /no decide[\s\S]+ni convierte[\s\S]+en causalidad sobrenatural/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-diablo-de-umpala").mito,
     /diablo de carne y hueso[\s\S]+explicación material/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-cueva-del-diablo").mito,
     /no describe una entrada[\s\S]+sin inventar una cavidad/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("nueva-version-de-la-luz-del-limonal").versiones,
     /separada de La Luz del Limonal de Vicente Arenas/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-griton").versiones,
     /no hay criatura de boca gigante[\s\S]+tampoco es El Silbón/i,

@@ -78,17 +78,29 @@ test("los once expedientes Tolima Mixto cumplen la metodología editorial", () =
 test("corrige fusiones, falsos archivos y atribuciones culturales", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("la-madre-agua").mito, /pies[^]+vueltos hacia atrás/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("la-candileja").mito, /tres hachones/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("la-muelona").mito, /La Maga/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("la-muelona").versiones, /La Maga/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-cazador").mito, /grito[^]+ladrido/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-tunjo").historia, /separar objeto arqueológico y espanto campesino/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-guango").mito, /Meta el hombro, compañero/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-silbador").versiones, /Silbón[^]+parricidio/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("brujas-y-duendes").mito, /dos clases de relato/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("la-tarasca").historia, /montaje gráfico/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-chenche").historia, /documento encontrado/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("dioses-lares").historia, /analogía clásica externa/i);
 });
 

@@ -326,6 +326,46 @@ function abrirDefinePorSlug(src) {
   return { src: src.replace(re, nuevo), hecho: "abierto" };
 }
 
+/**
+ * Los tests de cada ciclo afirman frases literales del texto heredado. Cuando
+ * el cotejo con el primario desmiente ese texto —el Mono «de 1775», el «hábito
+ * blanco» de la monja—, aparecen en rojo el día de aplicar, todos a la vez. Al
+ * abrir el ciclo se marcan, para que se reescriban sobre la sustancia en cuanto
+ * llegue la reescritura. Nunca se borran.
+ */
+const MARCA = "// heredada: reescribir tras el cotejo";
+function marcarAsercionesHeredadas(src) {
+  const lineas = src.split("\n");
+  const salida = [];
+  let marcadas = 0;
+  for (let i = 0; i < lineas.length; i += 1) {
+    const linea = lineas[i];
+    if (/^\s*assert\.(match|doesNotMatch)\(/.test(linea)) {
+      let fin = i;
+      while (fin < lineas.length - 1 && fin - i < 8 && !/\);\s*$/.test(lineas[fin])) fin += 1;
+      const sentencia = lineas.slice(i, fin + 1).join("\n");
+      const anterior = salida[salida.length - 1] || "";
+      if (/\.(mito|historia|versiones|similitudes|leccion)\b/.test(sentencia) && !anterior.includes(MARCA)) {
+        salida.push(`${linea.match(/^\s*/)[0]}${MARCA}`);
+        marcadas += 1;
+      }
+    }
+    salida.push(linea);
+  }
+  return { src: salida.join("\n"), marcadas };
+}
+
+async function testsDelModulo(modulo) {
+  const dir = path.resolve("scripts", "editorial");
+  const archivos = (await fs.readdir(dir).catch(() => [])).filter((f) => f.endsWith("-corpus.test.mjs"));
+  const propios = [];
+  for (const f of archivos) {
+    const src = await fs.readFile(path.join(dir, f), "utf8");
+    if (src.includes(`editorial/${modulo}/`)) propios.push(path.join(dir, f));
+  }
+  return propios;
+}
+
 for (const modulo of String(options.modulos).split(",").map((s) => s.trim())) {
   const root = path.resolve("editorial", modulo);
   console.log(`\n### ${modulo}`);
@@ -347,6 +387,12 @@ for (const modulo of String(options.modulos).split(",").map((s) => s.trim())) {
     }
     const { src: out, hecho } = abrir(src);
     console.log(`  ${archivo.padEnd(26)} ${hecho}`);
+    if (apply && out !== src) await fs.writeFile(ruta, out);
+  }
+  for (const ruta of await testsDelModulo(modulo)) {
+    const src = await fs.readFile(ruta, "utf8");
+    const { src: out, marcadas } = marcarAsercionesHeredadas(src);
+    console.log(`  ${path.basename(ruta).padEnd(26)} ${marcadas ? `${marcadas} aserciones de texto marcadas` : "nada que marcar"}`);
     if (apply && out !== src) await fs.writeFile(ruta, out);
   }
 }

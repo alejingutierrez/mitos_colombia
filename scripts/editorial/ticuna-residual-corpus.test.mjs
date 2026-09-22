@@ -96,21 +96,30 @@ test("los siete expedientes cumplen rangos y estructura metodológica", () => {
 
 test("declara variantes, recompone fragmentos y corrige identidades", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("origen-del-sol").mito, /corona|guacamayo/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("origen-del-sol").versiones, /Dolores Noé/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("origen-de-la-luna").mito, /Ayara|Mayari/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("origen-de-la-luna").versiones, /Augusto Coello/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("origen-del-agua").historia, /ventana del gran ciclo/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("origen-de-los-vegetales-cultivaldos").mito,
     /Ariana|halo/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("origen-del-gavilan").historia, /dos registros/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("origen-de-los-micos-boquiblancos").mito,
     /montañas|sauce|bambú|Madre Tierra/i,
   );
   assert.equal(bySlug.get("moe-e-ipi").title, "Yoí, Ípi y la mujer del umarí");
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("moe-e-ipi").mito, /hermano bueno|el loco/i);
 });
 

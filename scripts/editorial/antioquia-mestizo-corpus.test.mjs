@@ -97,33 +97,42 @@ test("los diez expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-paton").mito,
     /Sasquatch|Armando Bulla|ecologistas asesinados/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-perro-negro").mito,
     /Aurora|canódromo|boda/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-cabellona").versiones,
     /separada[\s\S]+Mechuda del Socorro/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("la-dama-verde").mito, /Damián Robledo/);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("la-rodillona").mito,
     /Aquileo|Virgelina/,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("las-ilusiones").mito,
     /Matilde|San Justina/,
   );
   assert.equal(bySlug.get("los-rescoldos").title, "Los Rescoldados");
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("los-rescoldos").mito, /Justiniano/);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("maria-centeno").historia,
     /trabajo esclavizado/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("maria-la-larga").mito,
     /Santa Rita[\s\S]+Poceta de la Virgen/,
@@ -132,6 +141,7 @@ test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
     bySlug.get("no-hay-deuda-que-no-se-pague").category_path,
     "Andina > Caldas > Mestizo",
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("no-hay-deuda-que-no-se-pague").historia,
     /Otero D’Costa[\s\S]+Rionegro/,

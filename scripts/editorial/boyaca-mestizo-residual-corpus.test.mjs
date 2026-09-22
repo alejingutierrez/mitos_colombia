@@ -42,10 +42,15 @@ test("el expediente cumple la metodología editorial", () => {
 
 test("unifica cinco filas y elimina la segunda versión inventada", () => {
   const [record] = records;
+  // heredada: reescribir tras el cotejo
   assert.match(record.historia, /cinco filas, 288–292/i);
+  // heredada: reescribir tras el cotejo
   assert.match(record.historia, /Enrique Otero D’Costa/);
+  // heredada: reescribir tras el cotejo
   assert.match(record.versiones, /no actúa como maestro benévolo/i);
+  // heredada: reescribir tras el cotejo
   assert.match(record.versiones, /esa lectura se descarta/i);
+  // heredada: reescribir tras el cotejo
   assert.match(record.historia, /no es un registro parroquial/i);
 });
 

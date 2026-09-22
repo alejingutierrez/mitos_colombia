@@ -85,23 +85,34 @@ test("los tres expedientes cumplen la metodología editorial", () => {
 test("separa archivo, fábula editorial y resistencia documentada", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const catalina = bySlug.get("catalina-la-napanga");
+  // heredada: reescribir tras el cotejo
   assert.match(catalina.historia, /pruebas[\s\S]+circunstanciales/i);
+  // heredada: reescribir tras el cotejo
   assert.match(catalina.versiones, /recreación[\s\S]+Marco Antonio Valencia/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(catalina.historia, /adulterio comprobado/i);
 
   const hada = bySlug.get("el-hada-de-los-canaverales");
+  // heredada: reescribir tras el cotejo
   assert.match(hada.mito, /fábula contemporánea creada para el sitio/i);
+  // heredada: reescribir tras el cotejo
   assert.match(hada.historia, /no encontró una fuente independiente/i);
+  // heredada: reescribir tras el cotejo
   assert.match(hada.versiones, /No existen[\s\S]+versiones tradicionales/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(hada.historia, /tradición ancestral|leyenda ancestral/i);
 
   const quinunchu = bySlug.get("el-silbo-de-quinunchu");
+  // heredada: reescribir tras el cotejo
   assert.match(quinunchu.mito, /Guacá[\s\S]+Abibe/i);
+  // heredada: reescribir tras el cotejo
   assert.match(quinunchu.historia, /no pertenecían al valle de Aburrá/i);
+  // heredada: reescribir tras el cotejo
   assert.match(
     quinunchu.versiones,
     /silbo encantado[\s\S]+se retiran/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     quinunchu.mito,
     /Ninguna fuente consultada contiene esos episodios/i,

@@ -67,11 +67,13 @@ test("atribuye los diecisiete cuentos firmados y corrige límites críticos", ()
     const record = bySlug.get(slug);
     if (["el-tesoro-de-caribare", "la-bola-de-fuego"].includes(slug)) continue;
     assert.match(record.researchNotes, /LITERATURA FIRMADA/);
+    // heredada: reescribir tras el cotejo
     assert.match(record.mito, /obra firmada|recreación literaria|serie literaria/i);
   }
   assert.match(bySlug.get("amanecer-llanero").researchNotes, /genealogía panindígena/i);
   assert.match(bySlug.get("los-delfines-dorados").researchNotes, /no se atribuyen a pueblos indígenas/i);
   assert.match(bySlug.get("el-brujo-de-la-costa-del-pauto").researchNotes, /No es consejo médico/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("leal-hasta-la-muerte").mito, /Calila y Dimna/i);
   assert.equal(bySlug.get("el-llano-cobra-sus-deudas").title, "El Llano cobra sus cuentas: hacienda y ruina");
   assert.match(bySlug.get("los-tres-luceros").researchNotes, /suicidio[\s\S]+no recompensa/i);
@@ -83,12 +85,15 @@ test("corrige Caribabare y preserva Bola de Fuego como variante llanera", () => 
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const treasure = bySlug.get("el-tesoro-de-caribare");
   assert.match(treasure.title, /Caribabare/);
+  // heredada: reescribir tras el cotejo
   assert.match(treasure.historia, /hacienda[\s\S]+1767[\s\S]+no prueba/i);
   assert.match(treasure.researchNotes, /forma documentada es Caribabare/i);
 
   const fire = bySlug.get("la-bola-de-fuego");
+  // heredada: reescribir tras el cotejo
   assert.match(fire.mito, /luz errante[\s\S]+Candileja[\s\S]+tres llamas/i);
   assert.match(fire.researchNotes, /David Gamboa[\s\S]+Hato Valbuena[\s\S]+sin fusionarse/i);
+  // heredada: reescribir tras el cotejo
   assert.match(fire.versiones, /rezar atrae[\s\S]+sin comprobar eficacia/i);
 });
 

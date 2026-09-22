@@ -97,60 +97,76 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
 
 test("retira ficciones sintéticas y declara la clase real de cada relato", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("buziraco").mito, /1837[\s\S]+1925[\s\S]+1938/);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("buziraco").mito,
     /prejuicios|racial|personas negras/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-caballo-del-morro").mito,
     /Marco Antonio Valencia Calle[\s\S]+Babieca/,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-caballo-del-morro").mito,
     /abuelos de mis abuelos/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-roble-del-caballero").mito,
     /Torre del Reloj/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-roble-del-caballero").mito,
     /No afirma que un roble sobrenatural/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-yesca").mito,
     /brujo o chinango[\s\S]+bejucos o ramas/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-yesca").mito,
     /No hay respaldo para añadir un joven pescador/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-duende-peluquero").mito, /Dagua/);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-duende-peluquero").mito,
     /Las fuentes no sostienen ese traslado/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-casa-de-la-tradicion").mito,
     /pasos y voces/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-casa-de-la-tradicion").mito,
     /La versión anterior añadió guardianes/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-piramide-del-chontaduro").mito,
     /sueño[\s\S]+lotería/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-piramide-del-chontaduro").mito,
     /Esa trama no aparece en las fuentes/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-barco-fantasma").mito,
     /Maravel[ií][\s\S]+brújula[\s\S]+carta/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-barco-fantasma").mito,
     /se distingue del Riviel/,

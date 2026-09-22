@@ -97,10 +97,12 @@ test("los cuatro expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige género, título, estigma y afirmaciones históricas", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-cerro-encantado").mito,
     /no adopta ese retrato como descripción histórica/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-quijote-piedecuestano").mito,
     /no reconstruye una religión Guane/i,
@@ -109,14 +111,17 @@ test("corrige género, título, estigma y afirmaciones históricas", () => {
     bySlug.get("la-vista-del-libertador").title,
     "La Visita del Libertador",
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-vista-del-libertador").versiones,
     /(?:conserva|mantiene) el error heredado la-vista-del-libertador/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("un-libertador-piedecuestano").mito,
     /no es un mito sobrenatural/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("un-libertador-piedecuestano").versiones,
     /elimina cóndores, voces ancestrales, destino sobrenatural/i,

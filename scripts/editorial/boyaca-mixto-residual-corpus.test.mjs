@@ -82,23 +82,35 @@ test("restaura atribuciones y separa variantes y capas culturales", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const mensajeros = bySlug.get("los-mensajeros-de-los-dioses");
+  // heredada: reescribir tras el cotejo
   assert.match(mensajeros.historia, /nueve filas, 478–486/i);
+  // heredada: reescribir tras el cotejo
   assert.match(mensajeros.historia, /Lilia Montaña de Silva Celis/);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(mensajeros.similitudes, /Ícaro|Amaterasu/i);
 
   const cucacuy = bySlug.get("el-cucacuy");
+  // heredada: reescribir tras el cotejo
   assert.match(cucacuy.mito, /variantes regionales incompatibles/i);
+  // heredada: reescribir tras el cotejo
   assert.match(cucacuy.historia, /Antonio Bustamante[\s\S]+se elimina/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(cucacuy.mito, /Antonio Bustamante/);
 
   const sombra = bySlug.get("la-sombra-creadora");
+  // heredada: reescribir tras el cotejo
   assert.match(sombra.mito, /pueblo muzo/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(sombra.mito, /Tales|Cicerón|Anaximandro/i);
+  // heredada: reescribir tras el cotejo
   assert.match(sombra.versiones, /figuras de madera/i);
 
   const furatena = bySlug.get("furatena");
+  // heredada: reescribir tras el cotejo
   assert.match(furatena.historia, /cacica Furatena/i);
+  // heredada: reescribir tras el cotejo
   assert.match(furatena.versiones, /BOYAPAZ[\s\S]+Ocampo/i);
+  // heredada: reescribir tras el cotejo
   assert.match(furatena.versiones, /no se unifican/i);
 });
 

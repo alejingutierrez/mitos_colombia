@@ -96,30 +96,37 @@ test("los seis expedientes cumplen rangos y estructura metodológica", () => {
 
 test("desfusiona ciclos y corrige título, estigma y patrimonio", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-trapiche-ardiendo").mito,
     /barbacoa|Mancarita/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("lagunas-encantadas").versiones,
     /restituye ocho localizaciones/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("lo-que-ensenan-las-cuevas").mito,
     /Alejandro/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("lo-que-ensenan-las-cuevas").versiones,
     /reportarse al ICANH/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-cacique-salomon").historia,
     /no identifica a un personaje llamado Salomón/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("tal-para-cual").versiones,
     /Omite la copla y las bromas/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("tal-para-cual").mito, /cotudo|bobo/i);
 });
 

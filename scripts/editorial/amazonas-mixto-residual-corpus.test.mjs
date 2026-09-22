@@ -69,28 +69,38 @@ test("los doce expedientes cumplen rangos y estructura metodológica", () => {
 
 test("deshace fusiones y conserva atribuciones con frontera visible", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-bufeo").historia,
     /María Cachique[\s\S]+Raimundo Curico/);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("el-bufeo").mito, /seductor irresistible/i);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-cotomachaco").historia,
     /Gladys de Bolívar[\s\S]+Manuel Curitima/);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("la-cobra-grande").historia,
     /Pedro Roque[\s\S]+deshace esa unión accidental/i);
   assert.equal(bySlug.get("petapeta").category_path,
     "Amazonía > Amazonas > Ticuna");
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("petapeta").mito, /Milton Jesús Pinto Linares/);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("petapeta").mito, /trabajadores mágicos/i);
   assert.equal(bySlug.get("ngutapa-y-chimuiyae").title,
     "Los caminos de Chimuya-e");
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("ngutapa-y-chimuiyae").mito.split("\n\n").slice(0, 5).join("\n\n"),
     /Ngutapa|rodillas|partes del cuerpo.*human/i,
   );
   assert.equal(bySlug.get("el-descubrimiento-del-agua-y-los-peces").category_path,
     "Amazonía > Amazonas > Ufaina");
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("chuya-chaqui").historia, /Hugo Niño/);
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-chuy-achaque").versiones,
     /mantenerla separada/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(bySlug.get("yacuruna").mito, /dios del agua/i);
 });
 

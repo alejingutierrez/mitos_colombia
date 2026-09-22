@@ -86,14 +86,21 @@ test("corrige Talabalí y las capas del Ermitaño", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const talabali = bySlug.get("talabad");
   assert.match(talabali.title, /^Talabalí/);
+  // heredada: reescribir tras el cotejo
   assert.match(talabali.historia, /cuatro filas[\s\S]+una secuencia continua/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(talabali.similitudes, /Orfeo|Amaterasu/i);
+  // heredada: reescribir tras el cotejo
   assert.match(talabali.versiones, /no lo identifican/i);
 
   const ermitano = bySlug.get("el-ermitano-iracundo");
+  // heredada: reescribir tras el cotejo
   assert.match(ermitano.mito, /Mago de Oz[\s\S]+banda/i);
+  // heredada: reescribir tras el cotejo
   assert.match(ermitano.versiones, /no aparece como topónimo/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(ermitano.mito, /Cuevas de Oz/);
+  // heredada: reescribir tras el cotejo
   assert.match(
     ermitano.mito,
     /no presenta al Ermitaño como maestro ni como guía de autoconocimiento/i,

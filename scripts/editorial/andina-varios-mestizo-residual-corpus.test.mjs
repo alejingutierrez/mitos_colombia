@@ -79,28 +79,43 @@ test("corrige marcos ficticios, fusiones y sujeto narrativo", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const anima = bySlug.get("el-anima-sola");
+  // heredada: reescribir tras el cotejo
   assert.match(anima.mito, /“al parecer”[^]+3 de noviembre de 1940/i);
+  // heredada: reescribir tras el cotejo
   assert.match(anima.historia, /no bastan para afirmar que Jairo Ocampo existió/i);
+  // heredada: reescribir tras el cotejo
   assert.match(anima.versiones, /versión masculina y picaresca de Bogotá[^]+se elimina/i);
 
   const colmillona = bySlug.get("la-vieja-colmillona");
+  // heredada: reescribir tras el cotejo
   assert.match(colmillona.mito, /La Colmillona no es la Muelona/i);
+  // heredada: reescribir tras el cotejo
   assert.match(colmillona.historia, /no hay[^]+manuscrito independiente/i);
+  // heredada: reescribir tras el cotejo
   assert.match(colmillona.versiones, /La Muelona queda fuera/i);
 
   const nina = bySlug.get("la-nina-de-la-carta");
+  // heredada: reescribir tras el cotejo
   assert.match(nina.mito, /1 de noviembre de 1963/i);
+  // heredada: reescribir tras el cotejo
   assert.match(nina.historia, /cambiaba la fecha a 1965/i);
+  // heredada: reescribir tras el cotejo
   assert.match(nina.versiones, /no hay evidencia suficiente[^]+investigación real/i);
 
   const barbacoa = bySlug.get("la-barbacoa-del-muerto");
+  // heredada: reescribir tras el cotejo
   assert.match(barbacoa.mito, /Sara Tustra/i);
+  // heredada: reescribir tras el cotejo
   assert.match(barbacoa.mito, /El Calzo[^]+Virgen de Chiquinquirá/i);
+  // heredada: reescribir tras el cotejo
   assert.match(barbacoa.versiones, /familia narrativa del Guando/i);
 
   const meneses = bySlug.get("los-meneses");
+  // heredada: reescribir tras el cotejo
   assert.match(meneses.mito, /Los Meneses no son un vagabundo solitario/i);
+  // heredada: reescribir tras el cotejo
   assert.match(meneses.mito, /doce y quince años[^]+moneda/i);
+  // heredada: reescribir tras el cotejo
   assert.match(meneses.versiones, /No se inventa un origen familiar/i);
 });
 

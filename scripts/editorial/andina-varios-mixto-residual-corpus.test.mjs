@@ -79,21 +79,33 @@ test("corrige mezclas, invenciones y la falsa tradición panamericana", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const mano = bySlug.get("la-mano-peluda");
+  // heredada: reescribir tras el cotejo
   assert.match(mano.historia, /dos filas del Excel, 826 y 842/i);
+  // heredada: reescribir tras el cotejo
   assert.match(mano.mito, /dos formas no necesitan convertirse en una sola biografía/i);
+  // heredada: reescribir tras el cotejo
   assert.match(mano.mito, /no añade una pistola de ácido[^]+dimensiones celestes/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(mano.mito, /Álvaro Gartner/i);
 
   const hojarasquin = bySlug.get("el-hojarasquin-del-monte");
+  // heredada: reescribir tras el cotejo
   assert.match(hojarasquin.mito, /puede perder a quien entra[^]+también guiar/i);
+  // heredada: reescribir tras el cotejo
   assert.match(hojarasquin.historia, /Joaquín Romero[^]+Ninguna/i);
+  // heredada: reescribir tras el cotejo
   assert.match(hojarasquin.mito, /conserva un botánico[^]+diario de 1928/i);
+  // heredada: reescribir tras el cotejo
   assert.match(hojarasquin.versiones, /Tío Conejo[^]+homónimo/i);
 
   const esperanza = bySlug.get("esperanza-en-el-oriente");
+  // heredada: reescribir tras el cotejo
   assert.match(esperanza.mito, /no cuenta una historia transmitida por una comunidad/i);
+  // heredada: reescribir tras el cotejo
   assert.match(esperanza.historia, /Historias 5\.13 de Tácito, no en los Anales/i);
+  // heredada: reescribir tras el cotejo
   assert.match(esperanza.versiones, /observación e interpretación/i);
+  // heredada: reescribir tras el cotejo
   assert.match(esperanza.mito, /sin convertirse automáticamente en prueba de contacto/i);
 });
 

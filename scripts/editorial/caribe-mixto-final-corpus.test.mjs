@@ -71,26 +71,38 @@ test("restaura el corpus raizal y separa al Hombre Caimán", () => {
     );
   }
   const molino = bySlug.get("beda-nansi-beda-monkey-y-el-molino");
+  // heredada: reescribir tras el cotejo
   assert.match(molino.mito, /molino[\s\S]+barra de hierro[\s\S]+Monkey/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(molino.mito, /destinos|estrellas|ceremonias/i);
   const mico = bySlug.get("mico-y-nansi");
+  // heredada: reescribir tras el cotejo
   assert.match(mico.mito, /cabeza seca de perro[\s\S]+rejo/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(mico.mito, /hilo de sol|palabras ancestrales/i);
   const baile = bySlug.get("tiger-y-el-baile-de-perros");
+  // heredada: reescribir tras el cotejo
   assert.match(baile.mito, /baile de etiqueta[\s\S]+bunda[\s\S]+Tiger/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     baile.mito,
     /Gran Baile de Gala|plegaria y un hechizo|profecía de renacimiento/i,
   );
   const tigre = bySlug.get("tigre-y-nansi");
+  // heredada: reescribir tras el cotejo
   assert.match(tigre.versiones, /primera versión[\s\S]+segunda/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(tigre.mito, /Oída Nansi/i);
   const perro = bySlug.get("un-perro-una-cabra-y-beda-tiger");
+  // heredada: reescribir tras el cotejo
   assert.match(perro.mito, /perro y una cabra[\s\S]+violín[\s\S]+olla/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(perro.mito, /zorro de ojos zafiros|luna.*disfrazada/i);
   const caiman = bySlug.get("el-hombre-caiman");
   assert.equal(caiman.category_path, "Caribe > Magdalena > Mestizo");
+  // heredada: reescribir tras el cotejo
   assert.match(caiman.historia, /Virgilio Di Filippo[\s\S]+personaje de leyenda/i);
+  // heredada: reescribir tras el cotejo
   assert.match(caiman.historia, /fuente comunitaria Ette Ennaka/i);
 });
 
