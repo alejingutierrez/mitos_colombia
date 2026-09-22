@@ -6,6 +6,7 @@ import {
 const records = [
   defineYaguaMyth({
     slug: "yagua",
+    fuentesAgotadas: "El relato de los mellizos y la lupuna tiene dos registros de autor, Chaumeil (Amazonía Peruana, 1978) y Powlison (La mitología yagua, SIL), ya citados. Se buscó en la ONIC (sitio rehecho, sin perfil), el catálogo del Graduate Institute y ALICIA/Concytec (fichas de catálogo del mismo Powlison), la Enciclopedia Banrep (no nombra a los yagua) y ResearchGate (vetado): no hay tercera versión con texto.",
     sourceKeys: [
       {
         key: "chaumeil1978",

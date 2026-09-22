@@ -260,6 +260,7 @@ Los Karipú Lakena continuaron hasta la mañana y trabajaron para dejar la noche
   }),
   defineAbundanceTransfer({
     slug: "el-origen-de-las-frutas",
+    fuentesAgotadas: "El relato de Monalla Tirisa y Cullo Buinayma sólo tiene texto en Urbina (Las palabras del origen) y en el libro de Idartes, ya citados. Se buscó en el Boletín del Museo del Oro (el maguaré de Yiida Buinaima, otra versión del árbol de la abundancia, ya citada), en Dialnet («Mito y ética» de uitotos y muinanes, que no cuenta este relato) y en blogs y SlideShare (vetados).",
     title: "El origen de las frutas",
     excerpt:
       "El don de Yiida Buinama es rechazado; durante la hambruna una hormiga revela la yuca y comienza a crecer el árbol de los frutos.",

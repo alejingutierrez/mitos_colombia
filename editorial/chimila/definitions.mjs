@@ -1527,6 +1527,7 @@ Fuera del corpus, la creencia en el tigre que es otra cosa no es sólo chimila. 
   }),
   myth({
     slug: "los-monos",
+    fuentesAgotadas: "El relato de los monos que son gente sólo está en Reichel-Dolmatoff, Mitos y cuentos de los indios Chimila (1946), que la ficha ya cita con la antología de Banrep y los estudios ette de Estudios de Lingüística Chibcha (UCR), Tabula Rasa y el Journal de la Société des Américanistes. Se buscó en el ICANH (sólo ficha de catálogo), Banrep («Cómo los chimila consiguieron agua», otro mito), Scribd y blogs (vetados): no hay otro registro del relato.",
     sourceKeys: [
       "reichel1945",
       "rocha2010",
