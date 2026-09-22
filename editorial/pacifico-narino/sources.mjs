@@ -436,6 +436,97 @@ export const pacificoNarinoSources = {
     limitation:
       "La copia disponible está mediada por ResearchGate y se usa con cautela.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (investigación y compilación)",
+    year: 1993,
+    type: "antología con textos reproducidos",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Sección 27: José Miguel Garrido, «La leyenda viva del padre Mera», de Tras el alma de un pueblo (1980, pp. 191-201): testimonios, alabaos y partidas parroquiales de Jesús María Mera.",
+    limitation:
+      "Antología: reproduce el capítulo, no el libro completo.",
+  }),
+  uNESCOMusica2015: source({
+    title: "Música de marimba y cantos y bailes tradicionales de la región colombiana del Pacífico sur y de la provincia ecuatoriana de Esmeraldas",
+    author: "UNESCO, Patrimonio Cultural Inmaterial",
+    year: 2015,
+    type: "inscripción en la Lista Representativa",
+    url: "https://ich.unesco.org/es/RL/musica-de-marimba-y-cantos-y-bailes-tradicionales-de-la-region-colombiana-del-pacifico-sur-y-de-la-provincia-ecuatoriana-de-esmeraldas-01099",
+    summary:
+      "La inscripción de la marimba y los cantos del Pacífico sur, que nombra Similitudes.",
+    limitation:
+      "No trata al padre Mera.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (Fulbright-Hays 1997), con las páginas «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "unidad didáctica con páginas web impresas",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Sirena del Arco de Tumaco, contada por Anita: reina del mar que sale de noche de su palacio y se deja ver sola en la playa.",
+    limitation:
+      "Divulgación infantil de pocas frases.",
+  }),
+  culturaLeyenda: source({
+    title: "Leyenda de la Sirena del Arco",
+    author: "Secretaría de Cultura, Recreación y Deporte de Bogotá (Bogotanitos)",
+    type: "página divulgativa infantil",
+    url: "https://www.culturarecreacionydeporte.gov.co/es/bogotanitos/cuenta-la-leyenda/leyenda-de-la-sirena-del-arco",
+    summary:
+      "La descripción larga: cola de ave, máscara, puñal y cetro, lapidario de once piedras, cantos, ballenas jorobadas.",
+    limitation:
+      "Sin firma ni fecha; amplía la ficha de 1997.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo y Universidad Autónoma de Colombia, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Ficha de la Sirena del Arco (pp. 49-50): costa Pacífica, cola de delfín, palacios submarinos y la carta del biólogo cerca de la isla del Gallo.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: sus relatos son composición de autor.",
+  }),
+  caroNoticias1975: source({
+    title: "Noticias Culturales n.º 179: folclor, el bufeo en Leticia",
+    author: "José Joaquín Montes Giraldo (Instituto Caro y Cuervo)",
+    year: 1975,
+    type: "boletín",
+    url: "https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf",
+    summary:
+      "El bufeo de Leticia que toma figura de hombre para llevarse a las mujeres: paralelo de Similitudes.",
+    limitation:
+      "Otra región.",
+  }),
+  ibagueFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales (Universidad de Ibagué)",
+    year: 2013,
+    type: "libro de folclor regional",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "La Madre de Agua del Tolima, que llama a los niños desde la orilla: paralelo de Similitudes.",
+    limitation:
+      "Otra región.",
+  }),
+  homeroOdyssey1900: source({
+    title: "The Odyssey",
+    author: "Homero, trad. Samuel Butler (Project Gutenberg)",
+    year: 1900,
+    type: "poema épico",
+    url: "https://www.gutenberg.org/ebooks/1727",
+    summary:
+      "Canto XII: las sirenas que atraen a los navegantes con su canto: paralelo de Similitudes.",
+    limitation:
+      "Obra clásica.",
+  }),
 };
 
 export const pacificoNarinoSourceKeysBySlug = {

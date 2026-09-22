@@ -321,33 +321,43 @@ Quien contempla la pirámide puede sentir curiosidad sin convertir la falta de d
   }),
   definePacificoRestanteMyth({
     slug: "el-barco-fantasma",
-    title: "El Maravelí, barco fantasma del Pacífico",
+    fuentesAgotadas: "Pedrosa y Vanín, La vertiente afropacífica de la tradición oral (1992), no tiene texto abierto; el audio de María Raquel Riascos no se transcribe; las páginas que lo ponen en Tumaco o Barbacoas copian la ficha de 2004.",
+    sourceKeys: [
+      "republicamirada2016",
+      "valleAnalisis2015",
+      "tiempoCuentos2004",
+      "investigacionMitos1993",
+      "ibagueFolclor2013",
+      "gutenbergPhantom1839",
+    ],
+    relatoCorto:
+      "El registro con narradora (Vanín 2016) es una sola mención y la descripción de Buenaventura un párrafo; llegar a 300 palabras exigiría inventar.",
+    title: "El barco fantasma",
     excerpt:
       "El Maravelí aparece alrededor de una embarcación, desordena su rumbo e inutiliza brújula y carta hasta que regresa el día.",
     tags: ["fantasma", "mar", "marineros", "noche"],
-    mito: `En el litoral Pacífico se cuenta sobre un barco fantasma conocido como Maravelí, Maravelly o por una grafía cercana. No espera quieto en un puerto. Se presenta durante la navegación y convierte el mar conocido en un espacio imposible de orientar.
+    mito: `Por todo el mar Pacífico colombiano navega un buque que se llama el Maravelí. En las noches de navegación, el que va en una canoa o en un barco lo ve de pronto por la proa. En el momento menos pensado desaparece, y vuelve a surgir por babor, y después por estribor, hasta que el capitán y la tripulación pierden todo sentido de la orientación. Cuando aparece, la brújula y la carta de navegación no sirven de nada, y los navegantes quedan a merced de las olas hasta el otro día, cuando por fin salen de su influencia.
 
-Una descripción académica dice que el barco aparece primero por la proa de una embarcación. Quienes lo ven intentan reconocer su distancia o corregir el rumbo. Entonces desaparece. Poco después vuelve a mostrarse por babor o estribor, como si hubiera cruzado el agua sin seguir una trayectoria.
+Es un barco muy iluminado, mucho más que cualquier embarcación corriente. Su tripulación la forman marinos que tenían deudas pendientes con el diablo, y que al morir se fueron a trabajar a su servicio. Sus almas nunca encontrarán reposo.
 
-El capitán y la tripulación pierden sus referencias. La brújula deja de servir y la carta de navegación tampoco ayuda. Cada intento de fijar una dirección es contradicho por una nueva aparición. El Maravelí no necesita abordar ni perseguir a gran velocidad: basta con alterar la relación entre los lados del barco, el horizonte y los instrumentos.
+En los ríos de la costa, las mujeres mayores se acuerdan de que se lo contaban cuando eran niñas: la historia del Maravelí, el barco de los demonios.`,
+    historia: `El barco fantasma del Pacífico tiene una voz con nombre, fecha y lugar. En Una mirada a la tradición oral del Pacífico, un folleto que el escritor y folclorista Alfredo Vanín Romero publicó en 2016 con el Banco de la República para acompañar una antología de relatos grabados, la narradora María Raquel Riascos, nacida en López de Micay (Cauca) en 1952, recuerda entre las historias que le contaban de niña «la del Maravelí, un barco de demonios». El relato completo está en la grabación, no en el folleto.
 
-La confusión dura hasta el día siguiente. Con la luz, el barco fantasma deja de presentarse y los navegantes pueden recuperar el rumbo. El núcleo no exige naufragio, encuentro con un capitán condenado ni una explicación única sobre el origen de la tripulación.
+La descripción del barco que puede leerse está en un trabajo de la Universidad del Valle de 2015, un análisis del entorno de una organización portuaria de Buenaventura, que en su capítulo sobre la cultura de la ciudad incluye «El Barco Fantasma» con el nombre de Maravelly: las apariciones por proa, babor y estribor, la brújula inútil, la iluminación y la tripulación de marinos endeudados con el diablo. El trabajo advierte en una nota que el texto se tomó de una página web sobre Buenaventura.
 
-Otras circulaciones amplían la imagen. Una crónica cultural lo llama barco condenado a navegar por toda la eternidad y menciona instrumentos antiguos que acompañan el lamento de quienes viajan a bordo. Una adaptación editorial dice que transporta almas atribuladas de personas que llegaron a vivir o conquistar la región. Esos detalles pertenecen a versiones o recreaciones identificadas.
+Entre las dos, el Maravelí queda anclado en la costa caucana y vallecaucana del Pacífico, en las rutas de los pescadores y de los barcos que salen de Buenaventura. Buenaventura es el principal puerto de esa costa, y el trabajo presenta el relato como parte de la conciencia colectiva de la ciudad.`,
+    versiones: `Vanín y el trabajo de Buenaventura dan el mismo nombre con dos grafías, Maravelí y Maravelly, y el mismo núcleo: un barco de demonios. La descripción de Buenaventura detalla cómo desorienta a los navegantes; la narradora de López de Micay sólo lo nombra.
 
-El Maravelí se distingue del Riviel. El Riviel suele aparecer como una figura individual en una canoa pequeña, asociada con una luz, un remo o una búsqueda nocturna. El barco fantasma tiene tripulación, mayor escala y el poder narrativo de desordenar la navegación alrededor de otra embarcación. Compartir mar y noche no los vuelve el mismo ser.
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», lo titula «El Buque Fantasma» en su índice y «El Barco Fantasma» en su ficha técnica, y lo describe con lámparas de candela en el palo mayor, medidas descomunales, música siniestra y cadenas, y con el poder de enloquecer o cegar a quien no ha comulgado. Esa ficha es la que repiten muchas páginas de internet que lo sitúan en Tumaco o en Barbacoas, y que le atribuyen un origen en un barco negrero o de caucho.
 
-La ruta heredada de este sitio estaba vacía. Completarla no requiere inventar una esclava, un hundimiento fechado o un barco histórico específico. Las fuentes disponibles sostienen la aparición cambiante, la desorientación, la inutilidad temporal de instrumentos y la desaparición con el día.
+Lo que se mantiene en todas las formas es la condena: el barco no llega nunca a puerto y sus marinos no descansan. Cambian la causa —deudas con el diablo, comunión no recibida— y el efecto sobre quien lo ve.`,
+    similitudes: `El buque fantasma que se aparece a los navegantes y los desorienta es una leyenda marinera muy extendida. La más conocida es la del Holandés Errante, el barco condenado a navegar para siempre por su capitán, que la literatura y la ópera europeas convirtieron en símbolo del marino maldito. Como el Maravelí, su aparición anuncia la desgracia a quien lo ve, y su tripulación está condenada.
 
-Cuando el Maravelí se retira, la tripulación vuelve a leer el mar. La experiencia deja una advertencia de navegantes: incluso quien conoce brújula, carta y costados puede encontrarse con una noche en la que ninguna señal permanece donde debería.`,
-    historyCore:
-      "Investigaciones alojadas por la Universidad del Valle registran el nombre y la secuencia de desorientación; una crónica de El Espectador muestra una reinterpretación musical de 2013-2015. RTVC, Maguaré y una adaptación editorial prueban circulación contemporánea. El expediente no identifica un único puerto, fecha de origen ni barco histórico.",
-    versionCore:
-      "La versión más estable presenta apariciones por proa y costados, instrumentos inútiles y recuperación al día siguiente. Otras añaden navegación eterna, instrumentos antiguos, lamentos o almas atribuladas. Las grafías Maravelí y Maravelly varían. No se fusiona con el Riviel ni se adopta una explicación reciente sobre un navío esclavista sin cadena documental suficiente.",
-    similarityCore:
-      "El Maravelí pertenece a la gran familia de barcos fantasmas que incluye al Holandés Errante y al Caleuche, pero su localización y secuencia de desorientación son propias del Pacífico colombiano. Dentro del sitio, el Riviel es el paralelo más cercano por mar, noche y peligro para navegantes. La diferencia de escala, tripulación y modo de aparecer justifica dos fichas. La Sirena del Arco también atrae o desorienta embarcaciones mediante canto; el Maravelí altera posiciones e instrumentos y no depende de una figura marina femenina.",
+En el Pacífico colombiano, el pacto con el diablo que explica la tripulación del Maravelí es el mismo que explica las fortunas y los castigos de muchos relatos de la costa y de los Andes: en Santander, el perulero de Otero D'Costa que se lleva una mula de fuego; en Bucaramanga, el comerciante que nunca perdía en el juego.
+
+Y la barca que desaparece y reaparece por distintos lados hasta dejar a los navegantes sin rumbo tiene su pariente en los seres del agua que extravían a los pescadores en ríos y ciénagas, como el Mohán del Tolima que recogió Misael Devia, dueño de los charcos hondos del río, que se lleva a la gente a su morada bajo el agua.`,
     leccion:
-      "Ningún instrumento reemplaza la prudencia cuando el horizonte deja de ofrecer señales confiables.",
+      "Quien vende su alma en vida puede terminar trabajando para siempre en un viaje sin rumbo.",
     sceneHorizontal:
       "el Maravelí aparece primero frente a una embarcación del Pacífico y reaparece simultáneamente sugerido a un costado, mientras capitán y tripulación comparan brújula y carta",
     sceneVertical:

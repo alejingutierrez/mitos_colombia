@@ -189,35 +189,48 @@ Esta es la versión divulgada de Pucara, Tamia y Munani. No reemplaza las histor
   }),
   definePacificoNarinoMyth({
     slug: "la-sirena-del-arco",
-    title: "La Sirena del Arco, reina del mar de Tumaco",
+    fuentesAgotadas: "Ningún registro con informante nombra a la Sirena del Arco; Pedrosa y Vanín (1992) y el libro completo de Garrido (1980) no tienen texto abierto.",
+    sourceKeys: [
+      "vlietColombia1997",
+      "culturaLeyenda",
+      {
+        key: "corponarinoSirena",
+        summary:
+          "Reproduce casi literalmente la página de Bogotanitos sobre la Sirena del Arco.",
+        limitation:
+          "Copia sin fuente propia.",
+      },
+      "tiempoCuentos2004",
+      "caroNoticias1975",
+      "ibagueFolclor2013",
+      "homeroOdyssey1900",
+    ],
+    relatoCorto:
+      "El registro fechado (1997) tiene tres frases y la ampliación de Bogotá una descripción sin caso; llegar a 300 palabras exigiría inventar.",
+    title: "La sirena del arco",
     excerpt:
       "La Sirena del Arco recorre de noche las costas de Tumaco; su canto atrae navegantes y, bajo la luna, convoca bailes en la playa.",
     tags: ["sirena", "mar", "noche", "peligro"],
-    mito: `En la costa de Tumaco se cuenta que la Sirena del Arco es reina del mar. Durante el día permanece lejos de las miradas. De noche sale de sus palacios submarinos y recorre las playas para observar a quienes viven o navegan junto al océano.
+    mito: `En el puerto de Tumaco dicen que el mar tiene reina. Es la Sirena del Arco, que sale por las noches de su palacio marino a recorrer las costas y a mirar de cerca a los hombres. Nada como un fantasma. Tiene cabeza y busto de mujer, cuerpo de pez y cola de ave; lleva una máscara, en una mano un puñal y en la otra un cetro de oro. Los buzos más atrevidos cuentan que sus palacios del fondo del mar están hechos de cristales, joyas y piedras preciosas.
 
-Su cuerpo reúne formas diferentes. Tiene cabeza y busto de mujer, cuerpo de pez y una cola comparada con la de un ave. Lleva una máscara. En una mano sostiene un puñal y en la otra un cetro. La imagen combina autoridad, belleza y amenaza sin pertenecer por completo a la tierra, al agua ni al aire.
+Los marinos y los pescadores dicen que a veces canta cantos sagrados y poesías de amor, y que con su voz dulce enloquece a los navegantes, que se van hundiendo en el mar, adormecidos, sin darse cuenta de que se ahogan. En las noches de luna llena aparece en las playas, y con su canto hace que las parejas de enamorados salgan a bailar en la arena. Otros la han visto con las ballenas jorobadas que pasan por el Pacífico: de pronto se juntan, arrastran las embarcaciones ancladas a su lado y se llevan a los marinos y a los pescadores al fondo del océano.
 
-Algunos relatos adornan sus palacios con cristales, joyas y piedras preciosas. A cada piedra le atribuyen una virtud distinta. Esta lista aparece en una versión divulgada y no necesita aceptarse como inventario antiguo o común a toda la gente de Tumaco. Expresa, sobre todo, la riqueza imaginada bajo el mar.
+Los que la han visto dicen que es la tristeza y el remordimiento de quienes se dejan atrapar por su belleza y por su voz. Y algunos pescadores dicen que la han visto sola, en la playa.`,
+    historia: `El registro más antiguo de la Sirena del Arco es una página infantil de la Biblioteca Virtual del Banco de la República, «Niños de las regiones de Colombia», de Esmeralda Van Vliet para el ICAN, que se imprimió el 12 de enero de 1997 dentro de un informe del programa Fulbright-Hays compilado por Ana María Alfaro y conservado en la base ERIC. En tres frases, Anita, una niña de Pasto, cuenta que es la reina del mar, que en el puerto de Tumaco sale de noche de su palacio marino y recorre las costas, y que los pescadores dicen haberla visto sola en la playa.
 
-Los pescadores y marineros temen más su voz. La Sirena entona cantos y poesías de amor. Quien escucha puede perder la orientación, abandonar la embarcación y seguirla hacia aguas profundas. El canto promete cercanía, pero la distancia entre una persona y la reina marina no puede cruzarse sin peligro.
+La descripción larga está en la serie Bogotanitos de la Secretaría de Cultura, Recreación y Deporte de Bogotá, sin firma ni fecha, que la atribuye a «la gente de la región de Tumaco» y termina casi con la misma frase de 1997. Esa página le añade la cola de ave, la máscara, el puñal y el cetro, los palacios de piedras preciosas con un lapidario de once gemas, los cantos, las parejas que bailan en luna llena y las ballenas jorobadas. La Corporación Autónoma Regional de Nariño la reprodujo casi literalmente en 2024, en su caracterización cultural del Pacífico nariñense. Las dos coinciden en el lugar, el puerto de Tumaco, y en la imagen final de la sirena sola en la playa.`,
+    versiones: `La Sirena del Arco de 1997 es breve y serena: una reina del mar que recorre la costa y se deja ver sola. La de Bogotá es peligrosa: su canto ahoga a los navegantes y las ballenas que la acompañan hunden los barcos. Entre las dos, la figura pasa de ser un ser del paisaje de Tumaco a ser una sirena de los relatos de marinos.
 
-No todas sus apariciones terminan de la misma manera. En noches de luna llena también llega a la playa. Su canto mueve a parejas enamoradas a bailar sobre la arena. En esa escena, la voz no conduce inmediatamente al fondo: transforma la costa en un espacio de danza.
+Algunos detalles de la página de Bogotá tienen otro origen: el lapidario de once piedras, cada una con su virtud —ágata para el espíritu, amatista para la castidad, esmeralda para la belleza—, es un tópico de los lapidarios europeos, no un dato de la costa nariñense.
 
-Otras versiones la relacionan con ballenas jorobadas y embarcaciones arrastradas mar adentro. Algunas personas dicen verla sola en la playa. Cada imagen amplía su dominio, aunque ninguna ofrece la biografía completa de la Sirena.
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», le dedica una entrada en la costa Pacífica con cola de delfín, palacios submarinos y la carta en una botella de un biólogo que convive con los delfines cerca de la isla del Gallo. Es composición del libro.`,
+    similitudes: `La sirena que atrae con su canto a los navegantes hasta ahogarlos es la de la tradición grecolatina, las sirenas de la Odisea, y la de los relatos de marinos europeos. La Sirena del Arco de Bogotá conserva ese oficio, y le suma la máscara, el cetro y el lapidario de la imaginería europea.
 
-Quien navega debe distinguir entre oír el mar y entregarle la voluntad. La Sirena del Arco no persigue a un personaje individual en esta adaptación. Aparece como presencia costera: puede cantar desde el agua, cruzar junto a una ballena o dejar una silueta en la arena.
+En el Pacífico y la Amazonia colombianos, los seres del agua que se llevan a las personas son otros. El bufeo o delfín de río de Leticia, que José Joaquín Montes Giraldo recogió en 1975, toma figura de hombre para llevarse a las mujeres; la entrada del libro de 2004 sobre la Sirena del Arco mezcla a la sirena con los delfines, y menciona que los nativos del Pacífico dicen que los delfines poblaron el mar tras la erupción de un volcán en la isla Gorgona.
 
-La mañana devuelve a la costa sus sonidos conocidos. Las embarcaciones que conservaron el rumbo regresan. La Sirena vuelve a sus palacios y espera otra noche.
-
-Su historia permanece entre atracción y límite. La belleza del canto no elimina la profundidad del océano. El baile bajo la luna no borra el riesgo de seguir una voz lejos de la orilla. Por eso la reina del mar puede ser celebrada, temida y recordada sin reducirse a una sola emoción.`,
-    historyCore:
-      "Una página institucional atribuye la leyenda a gente de la región de Tumaco y reúne la descripción corporal, los objetos, el canto, el baile lunar y variantes con ballenas. Un material educativo de 1997 conserva un núcleo más breve. Caracterizaciones y panoramas posteriores prueban circulación en fuentes escritas de alcance educativo y periodístico, no antigüedad ni unanimidad comunitaria.",
-    versionCore:
-      "La forma básica combina mujer, pez y ave; las versiones ornamentadas añaden máscara, daga, cetro, palacios y una lista de gemas con poderes. El canto puede llevar navegantes a la muerte o convocar parejas a bailar bajo la luna. También aparecen ballenas y barcos arrastrados. Se mantienen como posibilidades distintas, no como una noche única ni como prueba de un personaje histórico.",
-    similarityCore:
-      "Las sirenas mediterráneas también atraen navegantes con la voz, pero esa semejanza no basta para derivar la Sirena del Arco de Homero ni borrar su localización en Tumaco. La Sirena de La Cocha pertenece a un paisaje lacustre Quillacinga y no debe confundirse con la reina del océano. El Riviel comparte canoas, noche y desorientación en el Pacífico, aunque no canta ni tiene el mismo cuerpo. La combinación de peligro y baile lunar distingue una circulación donde el mar puede seducir, celebrar y recordar su profundidad.",
+Y en la región andina, la Madre de Agua del Tolima, que Misael Devia recogió en 1962, es otra reina de las aguas que llama a sus víctimas desde la orilla, aunque en su caso las víctimas son niños.`,
     leccion:
-      "La belleza de una voz no elimina el peligro de abandonar el propio rumbo.",
+      "La belleza que canta en la noche también puede ser la que arrastra hacia el fondo.",
     sceneHorizontal:
       "la Sirena del Arco emerge de un mar nocturno frente a Tumaco con cuerpo compuesto, máscara, cetro y puñal, mientras una embarcación mantiene distancia",
     sceneVertical:
@@ -285,35 +298,52 @@ La historia conserva una reciprocidad. La gente reconoce la fuerza de la montañ
   }),
   definePacificoNarinoMyth({
     slug: "el-padre-mera",
-    title: "Padre Mera: milagro, miedo y marimba",
+    fuentesAgotadas: "El estudio de FLACSO sobre «Manuel María Mera» da 403 y el informe de la Comisión de la Verdad no abrió; el artículo de González (1995) está en ResearchGate, vetado. Garrido 1980 es el único registro con testimonios.",
+    sourceKeys: [
+      "investigacionMitos1993",
+      {
+        key: "rayaMarimba",
+        summary:
+          "Llama al padre Manuel María Mera y lo sitúa en Guapi en 1908 preguntando quién tenía marimba en casa.",
+        limitation:
+          "Divulgación; el nombre difiere del de los libros parroquiales.",
+      },
+      "uNESCOMusica2015",
+    ],
+    title: "El padre Mera",
     excerpt:
       "En Guapi y el Pacífico sur, Manuel María Mera fue recordado como sacerdote milagroso y también como perseguidor de marimbas y bailes.",
     tags: ["música", "memoria", "respeto", "tradición oral"],
-    mito: `Cuando Manuel María Mera llegó a comunidades del Pacífico sur, su presencia produjo recuerdos que nunca terminaron de coincidir. Algunas personas lo llamaron santo. Otras lo nombraron dios-diablo. En Guapi y poblaciones cercanas se contaron prodigios, castigos y episodios de una autoridad que parecía saber lo ocurrido aun cuando no estaba presente.
+    mito: `Por los ríos de la costa sur anduvo, hace más de un siglo, un padre al que nadie le vio nunca los pies. Decían que había salido de un guadual en la costa, y en Salahonda el síndico juraba que era San Antonio. Llamaba a la oración por las tardes, y si la gente no acudía, salía con el látigo que llevaba prendido en la correa.
 
-Una mujer lavaba ropa en el río cuando vio acercarse al sacerdote. El temor que inspiraba le hizo pensar que era el Diablo. Más tarde, durante la confesión, Mera le reveló que conocía aquel pensamiento. Para quienes repitieron la escena, esa capacidad mostraba un conocimiento extraordinario. Para otros, reforzaba el miedo que acompañaba su nombre.
+Cuando iba camino de Guapi, todo el pueblo salió a recibirlo. Una mujer que lavaba en el río lo vio pasar y dijo para sí: «¿Padre? El diablo será». Días después fue a confesarse, y él le preguntó: «¿Te vas a confesar con el diablo?». Desde entonces lo tuvo por santo. Otra mujer habló mal de él, y él anunció un incendio: una chispa cayó en esa casa y el fuego arrasó dos terceras partes del pueblo.
 
-También se narraron cambios del tiempo, curaciones, advertencias y regresos que parecían imposibles. Las versiones no permiten probar cada milagro como hecho histórico. Sí muestran que Mera fue convertido por la memoria en un personaje capaz de intervenir más allá de las facultades ordinarias de un sacerdote.
+En tiempo de escasez bendijo las semillas de los labradores, y donde se sembraron siguen dando. A una señora que le negó un poco de leche porque no tenía ni para ella le mandó poner una vasija más grande, y la vaca la llenó: bebió la familia, bebió él y sobró. A los del trapiche que no le quisieron vender panela, la panela se les puso dura como piedra. Unos huevos que le regalaron los devolvió: eran robados.
 
-Esa imagen tiene otro lado. Mera predicaba contra bailes y músicas que consideraba incompatibles con su misión. En testimonios del Pacífico se recuerda que prohibió o hizo destruir marimbas, cununos, bombos y guás. Instrumentos centrales para la celebración y la vida comunitaria fueron tratados como enemigos religiosos.
+En San José, viendo que no le hacían caso, se volvió a la imagen del Señor del Amparo y le dijo: «Señor del Amparo, levántate para que estos vean que mis palabras son verdad». La imagen empezó a moverse, y el pueblo entero pidió perdón. En Payán, el párroco no quería dejarlo celebrar; se fueron al cementerio, el Padre Mera desapareció en la puerta, y junto a la cruz mayor el párroco encontró un Cristo crucificado que derramaba sangre por todos los vellos. En Salahonda apagó las luces de la iglesia y se oyeron ruidos que venían de lo hondo de la tierra, del otro mundo, hasta que la gente se le abrazó a los pies y cesaron. Otra vez anunció lluvia: se apagaron las luces, sonó un aguacero con truenos, y al salir de la iglesia el suelo estaba seco.
 
-Algunas marimbas terminaron en el río. Los sonidos que acompañaban reuniones, cantos y bailes debieron ocultarse, resistir o esperar. La persecución no eliminó la música. La dejó marcada por un conflicto entre autoridad eclesiástica y prácticas negras del Pacífico.
+En Balsita, cerca de Iscuandé, encontró a una señora llorando en el entierro de su única hija. Mandó hacer una toldada sobre la sepultura, pidió un vaso de agua y despidió a todos. Desenterró a la niña, se quedó a solas con la muerta, y al rato salió con la niña viva.
 
-Por eso el Padre Mera no puede narrarse solo como santo ni solo como monstruo. Las personas que le atribuyeron milagros podían ser las mismas o vivir cerca de quienes recordaron su dureza. La admiración, el miedo, la fe y el daño cultural quedaron enlazados.
+Comía unas pocas lentejitas que él mismo cocinaba, bebía agua de coco y dormía con un tronco de balsa por almohada: al terminar las misiones, la cama que le preparaban estaba intacta. Una noche unas mujeres lo espiaron y lo vieron a oscuras, crucificado boca abajo. Al día siguiente preguntó quién lo había visto. Por las noches cargaba descalzo una gran cruz y cantaba: «Mira, mira, pecador, que si vives en pecado puedes anochecer bueno y amanecer condenado».
 
-Mera siguió su itinerario por distintas poblaciones. Su vida histórica terminó en 1926, pero el personaje oral continuó caminando por relatos familiares. Cada lugar añadió o conservó escenas según su propia experiencia.
+En Bocagrande pidió que lo llevara el buque Tumaquito, y no quisieron llevarlo. El Tumaquito se hundió. Y en las velaciones del viernes santo todavía se canta: «si no viene el Padre Mera, nos íbamos a acabar».`,
+    historia: `La leyenda la recogió el carmelita José Miguel Garrido, párroco en el Vicariato de Tumaco, en el último capítulo de su libro Tras el alma de un pueblo (Folclor religioso del Vicariato de Tumaco, 1980, pp. 191-201). Eugenia Villa Posse lo reprodujo en el segundo tomo de Mitos y leyendas de Colombia (IADAP, Quito, 1993), sección 27, pp. 345-358, y lo presenta como la «leyenda viva» que la población negra construyó sobre un sacerdote que vivió en la región.
 
-En esta versión, el río no demuestra que el sacerdote venciera al Diablo ni que una comunidad aceptara en silencio sus prohibiciones. El río recibe tanto la historia de la lavandera como la memoria de los instrumentos arrojados. Devuelve dos preguntas: cómo una autoridad se vuelve milagrosa y qué ocurre cuando esa autoridad intenta callar una cultura.
+Garrido cuenta cómo llegó a ella. El síndico de Salahonda, de más de setenta años, le habló del padre al que no se le veían los pies; en la velación del viernes santo oyó un alabao que lo nombraba; y salió por los pueblos a buscar testimonios. Los transcribe sin juzgarlos: una anciana de San José que lo conoció de muchacha, un antiguo monaguillo nacido en la guerra de los Mil Días, un hombre de más de noventa años, un señor de 78 y una señora nacida en 1889, además de alabaos, décimas y coplas de los ríos Patía, Telembí e Ispí.
 
-La marimba sobrevivió. Hoy su música es reconocida como patrimonio vivo del Pacífico sur. Recordar al Padre Mera exige escuchar también aquello que quiso silenciar.`,
-    historyCore:
-      "Manuel María Mera nació en 1872 y murió en 1926, según reconstrucciones históricas citadas por Michel Agier. Investigaciones afrocolombianas publicadas reúnen testimonios de Guapi, Salahonda y otras localidades del Pacífico sur que lo recuerdan como santo, profeta, dios-diablo y autoridad temida. El libro comunitario de la Comisión de la Verdad conserva la memoria de instrumentos prohibidos o destruidos.",
-    versionCore:
-      "Los relatos cambian de localidad, narrador y valoración. Unos atribuyen a Mera conocimiento secreto, control del tiempo, curaciones o regresos; otros enfatizan castigos, prédica contra bailes y persecución de marimbas, cununos y bombos. La ficha no decide si los prodigios ocurrieron ni los convierte en una secuencia biográfica. Conserva la ambivalencia como dato de memoria y separa la persona histórica del personaje oral.",
-    similarityCore:
-      "En el Pacífico y otras regiones de Colombia existen sacerdotes recordados como santos populares, taumaturgos o figuras temidas. La coincidencia muestra cómo una autoridad histórica puede transformarse en personaje oral, pero no valida automáticamente sus milagros. El conflicto con la marimba se relaciona con procesos más amplios de persecución eclesiástica de músicas negras; el reconocimiento patrimonial posterior no borra esa violencia. A diferencia de entidades como la Tunda o el Riviel, Padre Mera fue una persona histórica. Su dimensión mítica nace de memorias contradictorias sobre acciones, poderes y consecuencias.",
+Después buscó en los archivos parroquiales. Encontró a Jesús María Mera, bautizado en Florida (Valle) en 1872, coadjutor en Pradera en 1909, en Guapi en la Semana Santa de 1910, bautizando en misiones en Chimbuza en octubre de ese año, en Salahonda, Payán y Barbacoas en 1911, y muerto de tisis en Palmira en 1926. Garrido cree que una clave de su impacto fue que el padre era descendiente de esclavos.`,
+    versiones: `Los testimonios que reúne Garrido no concuerdan en el itinerario. Unos dicen que llegó del Ecuador por Cabo Manglares, otros que bajó de la sierra por Balsitas hacia Guapi, otros que apareció en el río Nansalbí, y una señora dice que venía «de la costa». Garrido reconstruye un recorrido que no pretende ser cronológico, y lo contrasta con los libros parroquiales, que lo sitúan en el Vicariato entre 1910 y 1912.
+
+Dentro de los prodigios hay variantes: en Payán, el que derramaba sangre en el cementerio era el Cristo según el monaguillo, y el propio Padre Mera según otra versión de la costa; en Salahonda, los ruidos del otro mundo se oyeron en la iglesia o en el cementerio junto a la Peña del Señor.
+
+El nombre también cambia. Los libros parroquiales dicen Jesús María Mera, y las coplas lo llaman «el padre Jesús María». La revista Raya, en un artículo sobre la persecución de la marimba en el Pacífico, lo llama Manuel María Mera y lo sitúa en Guapi en 1908, preguntando a los guapireños si tenían marimba en casa. Las coplas que recoge Garrido conservan esa prédica: la marimba, la sonaja, el baile y el cununo son lo que hay que olvidar para enmendarse.`,
+    similitudes: `El Padre Mera pertenece a la tradición de los santos populares del catolicismo latinoamericano, sacerdotes o laicos a los que la gente atribuye milagros en vida sin que la Iglesia los reconozca. Garrido mismo señala el paralelo bíblico del milagro de la leche: la escena del profeta Elías con la viuda de Sarepta, cuya harina y aceite no se acabaron.
+
+La marimba que el Padre Mera mandaba olvidar es hoy patrimonio. La UNESCO inscribió en su lista representativa la música de marimba y los cantos y bailes tradicionales del Pacífico sur colombiano y de Esmeraldas, en Ecuador, la misma tradición de alabaos y arrullos con la que la gente del Vicariato canta todavía al padre que la combatía. El alabao que Garrido oyó en la velación del viernes santo es parte de ese repertorio.
+
+Y el sacerdote que llega de ninguna parte, hace prodigios, castiga al que lo desprecia y se va sin que se sepa adónde tiene su contrapartida en los relatos del diablo disfrazado: la mujer de Guapi que lo toma por el diablo y la variante en que él mismo derrama sangre muestran que la frontera entre el santo y el espanto se cruzaba en las dos direcciones.`,
     leccion:
-      "Recordar con justicia exige escuchar tanto los milagros atribuidos como las voces que fueron silenciadas.",
+      "Un pueblo puede hacer santo a quien le prohíbe lo que ama si siente que ese alguien es de los suyos.",
     sceneHorizontal:
       "el Padre Mera camina por la ribera de Guapi mientras una lavandera lo observa con temor y, al otro lado, músicos protegen una marimba y tambores",
     sceneVertical:

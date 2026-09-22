@@ -526,6 +526,74 @@ export const pacificoRestanteSources = {
     limitation:
       "Es una adaptación y puede reorganizar personajes; no se usa para fusionar Maravelí y Riviel.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  republicamirada2016: source({
+    title: "Una mirada a la tradición oral del Pacífico",
+    author: "Alfredo Vanín Romero (Banco de la República)",
+    year: 2016,
+    type: "folleto de antología sonora",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll18/id/330/download",
+    summary:
+      "María Raquel Riascos (López de Micay, 1952) recuerda «la del Maravelí, un barco de demonios».",
+    limitation:
+      "El relato completo está en la grabación.",
+  }),
+  valleAnalisis2015: source({
+    title: "Análisis del entorno de una organización del sector portuario de Buenaventura",
+    author: "Oviedo Arroyo (Universidad del Valle)",
+    year: 2015,
+    type: "trabajo de grado",
+    url: "https://bibliotecadigital.univalle.edu.co/server/api/core/bitstreams/0a2e9862-89eb-4777-bc1b-77d86f83950b/content",
+    summary:
+      "§3.7.2.4 «El Barco Fantasma» (Maravelly): proa, babor, estribor, brújula inútil, tripulación endeudada con el diablo.",
+    limitation:
+      "Copia una página personal de Galeon (nota 32).",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo y Universidad Autónoma de Colombia, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Ficha del Buque o Barco Fantasma (pp. 53-54): lámparas en el palo mayor, medidas descomunales, cadenas; enloquece a quien no ha comulgado.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: sus relatos son composición de autor.",
+  }),
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (investigación y compilación)",
+    year: 1993,
+    type: "antología con textos reproducidos",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Otero D'Costa: el perulero de la Villa de Arma que se lleva una mula de fuego, paralelo del pacto con el diablo en Similitudes.",
+    limitation:
+      "Otro relato.",
+  }),
+  ibagueFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales (Universidad de Ibagué)",
+    year: 2013,
+    type: "libro de folclor regional",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "El Mohán, dueño de los charcos del río que desorienta a los pescadores: paralelo de Similitudes.",
+    limitation:
+      "Otra región.",
+  }),
+  gutenbergPhantom1839: source({
+    title: "The Phantom Ship",
+    author: "Frederick Marryat (Project Gutenberg)",
+    year: 1839,
+    type: "novela",
+    url: "https://www.gutenberg.org/ebooks/12954",
+    summary:
+      "La novela que fijó en la literatura europea la leyenda del Holandés Errante: paralelo de Similitudes.",
+    limitation:
+      "Ficción europea.",
+  }),
 };
 
 export const pacificoRestanteSourceKeysBySlug = {

@@ -35,7 +35,7 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      words(record.mito) >= (record.relatoCorto ? 70 : 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -66,7 +66,7 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
@@ -166,11 +166,7 @@ test("retira ficciones sintéticas y declara la clase real de cada relato", () =
     bySlug.get("el-barco-fantasma").mito,
     /Maravel[ií][\s\S]+brújula[\s\S]+carta/,
   );
-  // heredada: reescribir tras el cotejo
-  assert.match(
-    bySlug.get("el-barco-fantasma").mito,
-    /se distingue del Riviel/,
-  );
+  assert.doesNotMatch(bySlug.get("el-barco-fantasma").mito, /Tumaco|Barbacoas|negrero/i);
 });
 
 test("la matriz cubre las ocho rutas y sus límites", () => {
