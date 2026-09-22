@@ -134,6 +134,30 @@ for (const { slug, data } of plans) {
   const corto = data.relato_corto || data.relatoCorto;
   if (corto) console.log(`  ! ${slug}: relato corto bajo el mínimo — ${corto}`);
 }
+// El título que se publica es el del módulo, y un nombre propio en él es un
+// hecho como cualquier otro: tiene que estar en alguna cita literal del acta.
+// En Bogotá «Margarita Villaquirá» entraba así, y el apellido no está en la
+// crónica de 1924: sólo en el titular de una reedición. No bloquea —puede ser
+// una decisión tomada—, pero se dice. La primera palabra se salta porque va en
+// mayúscula por ser inicial, no por ser nombre.
+const dirActas = path.dirname(path.resolve(String(options.reescrituras)));
+const carpetasActas = (await fs.readdir(dirActas).catch(() => [])).filter((d) => d.startsWith("actas-")).sort().reverse();
+const sinTilde = (t) => String(t).normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+for (const { slug } of plans) {
+  const titulo = modules.get(slug)?.title;
+  if (!titulo) continue;
+  let acta = null;
+  for (const c of carpetasActas) {
+    acta = await fs.readFile(path.join(dirActas, c, `${slug}.json`), "utf8").then(JSON.parse).catch(() => null);
+    if (acta) break;
+  }
+  if (!acta || !Array.isArray(acta.nudos)) continue;
+  const literales = sinTilde(acta.nudos.map((n) => (n && typeof n === "object" ? n.literal || "" : "")).join(" "));
+  const nombres = (titulo.match(/\p{Lu}[\p{L}'’]+/gu) || []).slice(titulo.match(/^\p{Lu}/u) ? 1 : 0);
+  const sueltos = nombres.filter((n) => !/^(El|La|Los|Las|Lo|Un|Una|Del|De)$/.test(n) && !literales.includes(sinTilde(n)));
+  if (sueltos.length)
+    console.log(`  ! ${slug}: el título «${titulo}» nombra ${sueltos.map((n) => `«${n}»`).join(", ")}, que ninguna cita literal del acta sostiene`);
+}
 if (!options.apply) { console.log(`\nDry-run: ${plans.length} reescrituras, ${problems.length} con problemas. Añade --apply para escribir los módulos (sólo se escriben las que validan).`); process.exit(problems.length ? 1 : 0); }
 
 // Mapa URL → clave del pool, para retirar por URL las fuentes que la reescritura

@@ -57,6 +57,14 @@ try {
   }
   console.log(`Fase A · ${communitySlug} · ${rows.length} publicados · ${plan.length} con cambios de texto`);
   console.table(plan.map(({ row, record, changed }) => ({ slug: row.slug, campos: changed.join(","), mito: `${words(row.mito)}→${words(record.mito)}`, leccion: `${words(row.leccion)}→${words(record.leccion)}`, tiene_expediente: Boolean(row.editorial_id) })));
+  // El título es lo que el lector ve primero, y cambiarlo puede resolver en
+  // silencio una decisión abierta: en Bogotá, «Margarita Villaquirá» y
+  // «Antonín» entraban así. Se enseña entero, no como un campo más.
+  const titulos = plan.filter(({ changed }) => changed.includes("title"));
+  if (titulos.length) {
+    console.log(`\nCambian de título (${titulos.length}):`);
+    for (const { row, record } of titulos) console.log(`  · ${row.slug}: «${row.title}» → «${record.title}»`);
+  }
   if (problems.length) {
     console.log(`\nPROBLEMAS (${problems.length}), no se aplica nada:`);
     for (const p of problems) console.log(`  ✗ ${p}`);
