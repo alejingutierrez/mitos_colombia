@@ -16,6 +16,8 @@
  */
 import process from "node:process";
 
+import fs from "node:fs/promises";
+import path from "node:path";
 import { loadModules, parseArgs, requireCommunity, validateRecord } from "./lib.mjs";
 
 const options = parseArgs(process.argv.slice(2));
@@ -30,5 +32,22 @@ for (const record of records?.values() ?? []) {
   if (!errores.length) continue;
   malos += 1;
   console.log(`  ✗ ${record.slug}: ${errores.join("; ")}`);
+}
+// El cuarto escondite: un `define` que resuelve las fuentes por slug no lee
+// las `sourceKeys` de la ficha, y el módulo publica el reparto heredado aunque
+// la ficha declare otro. Todo lo demás pasa en verde, así que se marca aquí.
+// Sólo importa si alguna ficha del ciclo ya declara las suyas.
+const carpeta = path.resolve("editorial", String(options.modulos || communitySlug));
+const archivos = await fs.readdir(carpeta).catch(() => []);
+const leer = (f) => fs.readFile(path.join(carpeta, f), "utf8").catch(() => "");
+const defines = (await Promise.all(archivos.filter((f) => /^define.*\.mjs$/.test(f)).map(leer))).join("\n");
+const declaran = (
+  await Promise.all(archivos.filter((f) => /^(definitions.*|records|reescrituras)\.mjs$/.test(f)).map(leer))
+).some((src) => /\bsourceKeys\s*:/.test(src));
+if (declaran && /pick\w+Sources\(\s*input\.slug,?\s*\)/.test(defines)) {
+  malos += 1;
+  console.log(
+    `  ✗ ${path.basename(carpeta)}: el define resuelve las fuentes por slug e ignora las sourceKeys de la ficha (abrir-modulo.mjs --apply)`,
+  );
 }
 console.log(`TOTAL ${malos}`);

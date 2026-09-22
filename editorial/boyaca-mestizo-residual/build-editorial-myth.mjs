@@ -22,6 +22,9 @@ function verticalPrompt(scene) {
   return `Ilustración editorial vertical digital 2D full paper cut y paper quilling, acabado gráfico plano y composición a página completa: ${scene}; segunda escena narrativa claramente distinta de la portada, capas digitales recortadas de bordes limpios, formas mate y quilling dibujado selectivo sin volumen físico; tensión sugerida sin horror gráfico, caricatura, texto ni letras, sin fotografía, fibras reales, pliegues reales, grosor de papel, sombras proyectadas, objeto físico, maqueta, diorama, CGI ni render 3D.`;
 }
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildBoyacaMestizoResidualEditorialMyth(input) {
   const media = boyacaMestizoResidualMedia[input.slug];
   if (!media) throw new Error(`${input.slug}: falta inventario visual.`);
@@ -37,6 +40,7 @@ export function buildBoyacaMestizoResidualEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia: input.historia,
     versiones: input.versiones,
     leccion: input.leccion,

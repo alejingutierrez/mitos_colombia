@@ -72,6 +72,9 @@ const locationBySlug = {
     "UBICACIÓN: ancla aproximada en Natagaima para contextualizar el sur del Tolima; el texto de 1956 mezcla además Huila y el territorio Lache de Boyacá.",
 };
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildTolimaMixtoResidualEditorialMyth(input) {
   const media = tolimaMixtoResidualMedia[input.slug];
   if (!media) throw new Error(`${input.slug}: falta inventario visual.`);
@@ -87,6 +90,7 @@ export function buildTolimaMixtoResidualEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia: input.historia,
     versiones: input.versiones,
     leccion: input.leccion,

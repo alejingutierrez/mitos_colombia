@@ -22,6 +22,9 @@ function verticalPrompt(scene) {
   return `Ilustración vertical digital 2D full paper cut y paper quilling, acabado gráfico plano y composición a página completa: ${scene}; segunda escena narrativa claramente distinta de la portada, capas recortadas digitales de bordes limpios, formas mate sin volumen físico y quilling dibujado selectivo; paisaje amazónico documentado, acción central legible, violencia sugerida sin horror gráfico y figuras humanas sobrias sin pintura corporal, tocados, joyas, plumas ni vestuario ceremonial inventado; sin exotización, texto ni letras, sin fotografía, fibras reales, pliegues reales, grosor de papel, objeto físico, maqueta, diorama, CGI ni render 3D.`;
 }
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildHuitotoResidualEditorialMyth(input) {
   const media = huitotoResidualMedia[input.slug];
   if (!media) throw new Error(`Falta inventario visual para ${input.slug}.`);
@@ -37,6 +40,7 @@ export function buildHuitotoResidualEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia: input.historia,
     versiones: input.versiones,
     leccion: input.leccion,

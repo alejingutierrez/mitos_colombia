@@ -51,6 +51,7 @@ export function buildCaribeMixtoFinalMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia: input.historia,
     versiones: input.versiones,
     leccion: input.leccion,

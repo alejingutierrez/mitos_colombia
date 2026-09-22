@@ -44,6 +44,9 @@ const locationBySlug = {
     "UBICACIÓN: ancla editorial en Lérida por una memoria local del Gran Tolima; otras versiones colombianas se sitúan en Antioquia, Huila, Cundinamarca y Boyacá.",
 };
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildTolimaMestizoResidualEditorialMyth(input) {
   const media = tolimaMestizoResidualMedia[input.slug];
   if (!media) throw new Error(`${input.slug}: falta inventario visual.`);
@@ -59,6 +62,7 @@ export function buildTolimaMestizoResidualEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
     historia: input.historia,
     versiones: input.versiones,
     leccion: input.leccion,

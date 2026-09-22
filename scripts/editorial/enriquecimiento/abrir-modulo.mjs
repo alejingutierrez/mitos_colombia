@@ -242,6 +242,90 @@ function abrirDefine(src) {
   return { src: out, hecho: "abierto" };
 }
 
+/**
+ * El cuarto escondite, el del bloque mestizo y mixto: `pickXSources(slug)` lee
+ * un mapa por slug escrito en `sources.mjs`, y el `define` lo llama con
+ * `input.slug`. Da igual lo que la ficha declare en `sourceKeys`: nadie lo lee.
+ * En Bogotá el consolidador escribió 115 fuentes nuevas y el módulo siguió
+ * publicando las viejas; el cotejo encontró seis fichas sin una URL en común
+ * con su investigación. Estaba en 26 de los 27 ciclos pendientes.
+ *
+ * El `pick` heredado tiene once formas distintas —mapa por slug, ternarias,
+ * una lista fija para un solo slug—, así que no se reescribe: se conserva tal
+ * cual como `…Heredadas` y se le antepone uno que resuelve la lista de la
+ * ficha cuando la hay.
+ */
+function abrirPickPorSlug(src) {
+  if (/function pick\w+SourcesHeredadas\(/.test(src)) return { src, hecho: "ya estaba" };
+  const re = /export function (pick\w+Sources)\(slug\) \{([\s\S]*?)\n\}/;
+  const m = src.match(re);
+  if (!m) return { src, hecho: "no es pick por slug" };
+  const [, nombre, cuerpo] = m;
+  const pool = (cuerpo.match(/(\w+)\[key\]/) || [])[1];
+  if (!pool) return { src, hecho: "no reconozco el pool" };
+  // Un módulo cuyo pick heredado devuelve `{ key, ...selected }` sigue
+  // devolviendo la clave también por la vía nueva.
+  const conClave = /return \{ key, \.\.\.selected \}/.test(cuerpo);
+  const nuevo = `/**
+ * Resuelve las fuentes de una ficha. Con una lista —la \`sourceKeys\` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o \`{ key, summary, limitation }\` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function ${nombre}(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return ${nombre}Heredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = ${pool}[key];
+    if (!selected) throw new Error(\`Fuente desconocida: \${JSON.stringify(entrada)}.\`);
+    return {
+      ${conClave ? "key,\n      " : ""}...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin \`sourceKeys\`.
+function ${nombre}Heredadas(slug) {${cuerpo}
+}`;
+  return { src: src.replace(re, nuevo), hecho: "abierto" };
+}
+
+/**
+ * La otra mitad del cuarto escondite: el `define` pasa `input.slug` y fija un
+ * piso —exacto o mínimo— pensado para el reparto en bloque. Pasa a leer
+ * `sourceKeys` cuando la ficha las declara, con el piso del bloque (8, o 1 si
+ * declara `fuentesAgotadas`), y conserva la comprobación de siempre para las
+ * heredadas.
+ */
+function abrirDefinePorSlug(src) {
+  if (/Sources\(input\.sourceKeys \|\| input\.slug\)/.test(src)) return { src, hecho: "ya estaba" };
+  const re =
+    /  const (\w+) = (pick\w+Sources)\(\s*input\.slug,?\s*\);\n  if \(([\s\S]*?)\) \{\n    throw new Error\((`[^`]*`)\);\n  \}\n/;
+  const m = src.match(re);
+  if (!m) return { src, hecho: "no es define por slug" };
+  const [, variable, pick, condicion, mensaje] = m;
+  const nuevo =
+    `  // Las fuentes son las que la ficha declara en \`sourceKeys\`; sin ellas cae\n` +
+    `  // en el reparto heredado por slug, con la comprobación de siempre.\n` +
+    `  const ${variable} = ${pick}(input.sourceKeys || input.slug);\n` +
+    `  if (input.sourceKeys) {\n` +
+    `    // Piso del bloque mestizo y mixto: 8, salvo \`fuentesAgotadas\` declarado.\n` +
+    `    const minimo = input.fuentesAgotadas ? 1 : 8;\n` +
+    `    if (${variable}.length < minimo) {\n` +
+    `      throw new Error(\`\${input.slug}: \${${variable}.length} fuentes, y el piso es \${minimo}.\`);\n` +
+    `    }\n` +
+    `    if (new Set(${variable}.map(({ url }) => url)).size !== ${variable}.length) {\n` +
+    `      throw new Error(\`\${input.slug}: hay URLs repetidas entre sus fuentes.\`);\n` +
+    `    }\n` +
+    `  } else if (${condicion.trim().replace(/\s*\n\s*/g, " ")}) {\n` +
+    `    throw new Error(${mensaje});\n` +
+    `  }\n`;
+  return { src: src.replace(re, nuevo), hecho: "abierto" };
+}
+
 for (const modulo of String(options.modulos).split(",").map((s) => s.trim())) {
   const root = path.resolve("editorial", modulo);
   console.log(`\n### ${modulo}`);
@@ -250,6 +334,8 @@ for (const modulo of String(options.modulos).split(",").map((s) => s.trim())) {
     ["sources.mjs", abrirPick],
     ["define-editorial-myth.mjs", abrirDefine],
     ["define-editorial-myth.mjs", abrirReparto],
+    ["sources.mjs", abrirPickPorSlug],
+    ["define-editorial-myth.mjs", abrirDefinePorSlug],
   ]) {
     const ruta = path.join(root, archivo);
     let src;
