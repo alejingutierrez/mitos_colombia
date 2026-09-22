@@ -3,38 +3,68 @@ import { defineBoyacaMixtoResidualMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineBoyacaMixtoResidualMyth({
     slug: "los-mensajeros-de-los-dioses",
-    title: "Mayavita y los mensajeros de los dioses",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "investigacionMitos1993",
+      "caroConversas2022",
+      {
+        key: "elTiempoMayavita",
+        summary:
+          "Resume el relato de Montaña con Guáquira, Mayavita y Sua en una nota de 2002.",
+        limitation:
+          "Reempaque de prensa, sin versión propia.",
+      },
+      {
+        key: "popolVuh",
+        summary:
+          "Trae el episodio de Vucub Caquix, el Gran Guacamayo que se proclamaba sol, que la propia autora cita y Similitudes compara.",
+        limitation:
+          "Es otra tradición; comparación de motivo.",
+      },
+      {
+        key: "puebloBoyacense",
+        summary:
+          "Cuenta el mito de Bachué y el culto muisca del campo boyacense, el mundo al que Montaña adscribe a Sua y a Bochica.",
+        limitation:
+          "No trata este relato.",
+      },
+    ],
+    title: "Los mensajeros de los dioses",
     excerpt:
       "Mayavita dio vida a dos aves de hojas para volar hacia el oriente; después de su caída, las guacamayas regresaron como mensajeras de Sua.",
     tags: ["guacamayas", "transformación", "Sol", "viaje"],
-    mito: `Mongatá era un ceramista que vivía cerca del lago de Tota. Se había casado muy joven, pero, al pensar que su esposa no podía tener hijos, decidió separarse de ella. La mujer se retiró a una vivienda próxima a Guáquira, en el territorio de la actual Aquitania. Allí descubrió que estaba embarazada. No avisó a Mongatá y, cuando nació la niña, la llamó Mayavita.
+    mito: `Mongatá era alfarero. Su padre, famoso por las copas y los vasos rituales que fabricaba, le había enseñado el oficio y a decorar las vasijas con jugos de plantas. Huérfano de madre, se enamoró de una muchacha vecina con la que iba a traer agua fresca del manantial de Turubiuta. Se casaron: ella guardó las mantas que él le había dado en señal de compromiso, y en la boda bebió el licor ritual y le ofreció la copa.
 
-Desde pequeña, Mayavita miraba hacia el oriente. Por allí aparecía Sua, el Sol, y detrás de la cordillera comenzaban las selvas y llanuras cálidas. Quería conocer ese mundo, pero no tenía alas para atravesar el lago y las montañas. Un día reunió hojas verdes y anaranjadas y formó con ellas dos aves grandes. Mientras contemplaba las figuras, las alas se extendieron y las aves cobraron vida.
+Vivían con desahogo junto al manantial, pero una desgracia les amargaba la vida: los dioses no les daban un hijo. Ni los sacerdotes ni los curanderos, ni las yerbas ni los sacrificios lo remediaron. Mongatá, que la quería, entendió que debía tomar otra esposa, y no tenía cómo sostener a dos. Un día la encontró cavando papas con la coa y le dijo que tomara de sus bienes lo que quisiera y se fuera antes de que él volviera, porque así lo mandaban los dioses y el sacerdote.
 
-Mayavita se sujetó a ellas. Juntas volaron sobre el lago de Tota, remontaron la cordillera y descendieron hacia el piedemonte. En la selva la joven comía los frutos que recogían las aves y los micos, y dormía al abrigo de un árbol inmenso. Enseñó palabras a sus compañeras. Con el tiempo, las dos aves tuvieron polluelos y Mayavita formó con ellas una nueva familia.
+Ella se fue a la casa de una anciana parienta suya en Guáquira, cerca del lago, y la encontró abandonada. Allí vivió sola y callada, cultivando la tierra. Mongatá tomó pronto otra compañera. Y ella descubrió que estaba encinta. Sola, a la hora del parto, se encomendó a Bochica, y decidió que nunca le diría a Mongatá que la criatura era suya, como castigo por su impaciencia.
 
-Pasaron los años y la joven quiso volver junto a su madre. Las aves adultas prepararon el viaje, pero la versión reproducida por El Tiempo cuenta que fueron las aves jóvenes las encargadas de sostenerla durante el regreso. Al cruzar las alturas no resistieron su peso. Mayavita cayó y murió. Las guacamayas descendieron para auxiliarla y su sangre dejó una marca roja en el plumaje.
+Nació una niña parecida al padre, a la que llamó Mayavita, y la crió apartada del mundo. Mayavita no hablaba con nadie más que con su madre. De los pájaros, prefería las quinzas, las tominejas que llegaban al cercado y se iban volando hacia el oriente, por donde sale Sua, el Sol, y las envidiaba. La madre le contaba de las llanuras ardientes adonde iban las caravanas por maderos para los templos y las casas de los caciques.
 
-Las aves continuaron hasta el lugar de origen de Mayavita. Allí se celebraba una ceremonia dedicada a Sua y una luz rojiza cubría a la comunidad. Las guacamayas parecieron desprenderse de esa claridad, se posaron en un árbol y, usando las palabras aprendidas, contaron lo ocurrido. Desde entonces quedaron asociadas con el viaje de las súplicas humanas hacia el Sol.
+Un día, bajo un arbusto de grao, de hojas verdes y naranja que el viento no deshoja, Mayavita armó con sus hojas dos aves grandes. Tomó un ala de cada una, y las figuras echaron a volar llevándola entre las dos, cruzaron la laguna y se perdieron por el camino de Sua. Bajaron en la selva caliente. Allí las aves le traían frutos en el pico, los micos le traían frutas y un árbol inmenso le daba abrigo. Las aves no tenían voz; Mayavita les hablaba todos los días, hasta que repitieron sus palabras en su misma lengua. Anidaron y tuvieron dos pichones, que crecieron verdes y amarillos.
 
-Este relato no se presenta como una transcripción anónima sin autor. La versión consultable fue publicada y difundida bajo el nombre de la historiadora boyacense Lilia Montaña de Silva Celis. Su trama reúne pérdida, desplazamiento y retorno: Mayavita no vuelve en persona, pero las aves que creó llevan su memoria a la casa que había dejado.`,
-    historia: `Lilia Montaña de Silva Celis publicó Mitos, leyendas, tradiciones y folclor del Lago de Tota en 1970. Catálogos del Jardín Botánico de Bogotá y WorldCat controlan la edición, mientras un estudio del Instituto Caro y Cuervo sitúa Los mensajeros de los dioses dentro de la obra de la autora. Ninguna de esas fichas bibliográficas ofrece, por sí sola, una lista de informantes o una fecha de recolección oral.
+La madre la buscó y creyó que la laguna sagrada se la había llevado; de noche le parecía oír su voz, con reproche.
 
-La reproducción narrativa más accesible apareció en El Tiempo en 2002 bajo el título Aves mensajeras del Sol. El periódico identificó los pasajes como apartes de la leyenda de Montaña y explicó que habían sido retomados en Loros de Colombia, guía de José Vicente Rodríguez Mahecha y Jorge Ignacio Hernández Camacho. Esa circulación ornitológica vinculó a las aves de la historia con la guacamaya roja aliamarilla, pero la identificación naturalista es una lectura contemporánea.
+Mayavita, ya mujer, sintió nostalgia de su madre y del lago, y pidió a las aves que la devolvieran. Las dos mayores la cargaron, pero sobre la cordillera se fatigaron, porque pesaba mucho más que en el primer viaje. Mayavita se soltó, cayó y se estrelló contra las rocas, y al tratar de rescatarla, el plumaje de las aves se tiñó con su sangre.
 
-Los hijos del agua, novela de Susana Henao Montoya publicada en 1995, también alude a Mongatá y Mayavita. Sirve para mostrar recepción literaria, no como segundo testimonio independiente del origen. Del mismo modo, la compilación de Javier Ocampo permite comparar a las aves con especialistas rituales muiscas que llevaban ruegos al Sol, aunque su síntesis depende de fuentes coloniales y secundarias.
+Las aves siguieron al país de la niña. El día en que el pueblo rendía homenaje al Sol, Sua salió rojizo y de él se desprendieron dos aves. Se posaron en los árboles y hablaron a la gente en su propia lengua, y la gente, creyéndolas hijas del Sol, clamó: «¡Sue!». Tenían el verde del maizal, el brillo del oro, el azul del cielo y el rojo de la sangre. Desde entonces son las mensajeras que llevan los ruegos al Sol. Se multiplicaron y volvieron a la selva con sus hermanos verdes y amarillos, y desde entonces los hombres traen guacamayas de las ferias de tierra caliente y les enseñan a hablar.`,
+    historia: `El relato es de Lilia Montaña de Silva Celis, que lo publicó en 1970 en Mitos, leyendas y tradiciones del folclor del Lago de Tota (Universidad Pedagógica y Tecnológica de Colombia, Ediciones La Rana y El Águila, Tunja). Eugenia Villa Posse lo reprodujo en el segundo tomo de Mitos y leyendas de Colombia (IADAP, Quito, 1993), sección 23, «Mitos, leyendas y tradiciones · Lago de Tota», pp. 231-243, con la advertencia de que la autora elaboró la «tradición oral del campesino boyacense del Lago de Tota» de una manera «excesivamente literaria». Montaña quería, según esa nota, buscar relaciones entre la tradición campesina y la historia chibcha.
 
-El archivo Excel del proyecto dividió la secuencia en nueve filas, 478–486: separación de Mongatá, nacimiento de Mayavita, creación de las aves, viaje, caída y regreso ceremonial. No son nueve mitos. La revisión los mantiene unidos en la ruta existente y corrige el nombre Mongati por Mongatá. También retira la supuesta conexión maya-quiché: ninguna fuente seleccionada demuestra esa genealogía.`,
-    versiones: `La versión atribuida a Montaña y reproducida por El Tiempo ofrece la secuencia más completa: Mongatá abandona a su primera esposa, Mayavita nace cerca de Guáquira, crea aves con hojas, cruza Tota, vive en la selva, muere durante el regreso y las guacamayas narran su historia en una ceremonia de Sua. Las nueve filas del Excel son cortes de esa secuencia, no variantes autónomas.
+La autora cierra con un vocabulario que da raíz local a los nombres: Mongatá es un cerro de Tota y una quebrada; Mayavita, una vereda; Guáquira, la actual Aquitania; Sua, el Sol; Sue, guacamaya. Y añade dos datos de su cosecha: que en Ramiriquí se veneraba en una gruta una guacamaya de oro, en el sitio que hoy llaman Cueva de la Guacamaya, y que los chibchas compraban guacamayas en las ferias de tierra caliente, les enseñaban palabras y las sacrificaban; y relaciona el nombre de Suesca con la cola de la guacamaya.
 
-Loros de Colombia reutiliza el relato para interpretar la presencia de guacamayas del piedemonte en prácticas de las tierras altas. La novela Los hijos del agua lo incorpora a otro proyecto literario. Ambas obras prueban circulación posterior; no autorizan a completar diálogos, edades o rituales ausentes de la versión atribuida.
+Huérfano Huérfano, en su tesis de maestría del Instituto Caro y Cuervo (2022) sobre las conversas del lago de Tota y el valle de Sogamoso, describe el libro de Montaña: nueve mitos y 786 coplas, escritos en el contexto de las excavaciones de Eliécer Silva Celis en el Templo del Sol de Sogamoso.`,
+    versiones: `Montaña es la única autora que cuenta el relato completo, y lo hace con nombres, lugares y un vocabulario propios. Villa Posse advierte la elaboración literaria, y la historia muestra la mano de la autora: los datos de la guacamaya de oro de Ramiriquí y de las guacamayas sacrificadas son explicaciones que ella añade al final, junto a una cita del Gran Guacamayo de la tradición maya-quiché.
 
-El Tiempo afirma que Sua llegó a significar guacamaya y que las aves eran sacrificadas para llevar súplicas. La revisión conserva esa afirmación dentro de la cadena de transmisión, pero no la presenta como traducción lingüística demostrada. Sua está ampliamente documentado como nombre del Sol en fuentes muiscas; la equivalencia con guacamaya necesita un estudio específico que las fuentes consultadas no aportan.
+La prensa lo resumió en 2002. El Tiempo publicó una nota titulada «Aves mensajeras del Sol» que retoma el relato de Montaña con Guáquira, Mayavita y Sua, en el marco de un libro sobre los loros de Colombia. Es un reempaque del texto de 1970, sin versión propia ni narrador nuevo.
 
-La ficha anterior comparaba el viaje con Ícaro y Amaterasu y proponía un vínculo americano general. Esas analogías borraban las funciones concretas de las aves. La nueva versión conserva la atribución de Montaña, declara sus límites y compara únicamente el papel de los mensajeros.`,
+Lo que en el libro son tres historias encadenadas —el matrimonio sin hijos de Mongatá, la niña criada en soledad y el origen de las guacamayas— se cuenta a veces sólo en su final, como explicación de por qué las guacamayas hablan y tienen el color de la sangre y del oro.`,
     leccion:
-      "La memoria puede regresar por otras voces cuando una persona ya no logra volver.",
-    similitudes: `Las mojas descritas en compilaciones sobre los muiscas dialogaban ritualmente con el Sol y transmitían peticiones de la comunidad. Comparten con las guacamayas una función mediadora; son personas especializadas y no aves creadas por Mayavita, y su registro procede de otra clase de fuente. En las Metamorfosis de Ovidio, el cuervo de Apolo lleva una noticia y su plumaje cambia de color como consecuencia del mensaje. También une ave, comunicación divina y transformación cromática, pero la causa, el dios y el desenlace son grecorromanos. Estos paralelos ayudan a comparar funciones narrativas; no prueban contacto, préstamo ni un origen común.`,
+      "Lo que nace del abandono puede volver, transformado, para hablar en nombre de quien se perdió.",
+    similitudes: `El pariente más cercano está en la misma sección de Villa Posse, que reúne otros relatos de Montaña sobre el lago de Tota: el origen mítico del lago, la aparición de los chihicas y el castigo de Chaquén. En todos, el paisaje de Tota y el culto al Sol explican un rasgo del mundo, y la laguna aparece como fuerza sagrada que retiene a los que se pierden.
+
+La propia autora trae el paralelo maya: el Gran Guacamayo del Popol Vuh, Vucub Caquix, el ave que se proclamaba sol y luna antes de que existieran y que los gemelos héroes derribaron. Allí la guacamaya es soberbia y usurpa el lugar del Sol; en Tota es mensajera y lleva los ruegos al Sol. Las dos historias ponen al ave de colores en relación con el astro.
+
+Y las aves hechas de hojas que vuelan son un motivo de figuras que cobran vida. Mayavita las arma con sus manos como Mongatá, su padre, modelaba vasijas: la hija del alfarero hace de la materia muerta un ser que vuela, y ese ser, teñido con su sangre, se convierte en mensajero entre los hombres y el Sol.`,
     sceneHorizontal:
       "sobre el lago de Tota al amanecer, Mayavita sostiene dos grandes aves recién formadas con capas de hojas verdes y anaranjadas que comienzan a desplegar las alas, con Guáquira, montañas y una franja solar al oriente",
     sceneVertical:

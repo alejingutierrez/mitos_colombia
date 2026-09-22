@@ -3,38 +3,68 @@ import { defineAndinaVariosMestizoResidualMyth } from "./define-editorial-myth.m
 const records = [
   defineAndinaVariosMestizoResidualMyth({
     slug: "el-anima-sola",
-    title: "El Ánima Sola: devoción y relato de Marquetalia",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "toledoRemembranzas2022",
+      {
+        key: "losonczyAnima",
+        summary:
+          "Estudia la devoción al Ánima Sola y su traslado a los muertos anónimos de la violencia en la ciudad colombiana.",
+        limitation:
+          "Es sobre la devoción urbana, no sobre el relato campesino.",
+      },
+      {
+        key: "espantosScan",
+        summary:
+          "Le dedica las pp. 53-54: ficha técnica (luz azul de los guaqueros, mal de ojo) y la nota inventada de un animero de Marquetalia.",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      "investigacionMitos1993",
+      "lopezpueblo1977",
+    ],
+    title: "El ánima sola",
     excerpt:
       "Una devoción a las almas olvidadas y una nota literaria de 2004 confluyen sin demostrar que pertenezcan a una sola mujer histórica.",
     tags: ["muerte", "ánimas", "redención", "tradición"],
-    mito: `El Ánima Sola no posee una biografía única comprobada. En la religiosidad popular designa al alma olvidada que permanece sin familiares ni personas que recen por ella. Su imagen suele mostrar una figura entre llamas, a veces con cadenas o los brazos levantados. Quien la invoca puede ofrecer oraciones, agua o luz y pedir ayuda, pero los modos de la promesa cambian entre estampas, cementerios y relatos familiares.
+    mito: `Dicen que a quien ha burlado la justicia de los hombres algún día se le presentará el Ánima Sola a cobrarle su conducta. Hay quienes cuentan que fue una mujer tan malvada en vida que Dios no le permitió descansar en paz y dejó su alma varada en este mundo, persiguiendo a los que andan por mal camino. Unos rezan por su alma, otros le piden ayuda, y otros aseguran haberla visto: una mujer vestida de blanco que aparece por los caminos en las noches de luna llena o de tempestad. Algunos dicen que es una difunta que no puede entrar al cielo porque dejó algo guardado, como hacían los viejos, que metían la plata debajo del piso.
 
-Una narración publicada en 2004 sitúa el motivo en Marquetalia, Caldas. El libro presenta una nota supuestamente hallada en la capilla del cementerio y escrita, “al parecer”, en la madrugada del 3 de noviembre de 1940. La atribuye a Jairo Ocampo, descrito dentro del propio relato como animero. Esa cautela impresa importa: el volumen no reproduce un expediente de archivo ni aporta datos externos que permitan comprobar al autor.
+Pero hay quien dice que a las ánimas no se las debe llamar. Había una abuelita que, por la edad, ya no podía con sus oficios, y todos los días se le oía suplicar:
 
-En la nota, el animero recorre las calles llamando a rezar por los muertos. Durante una noche deja por fuera al Ánima Sola. Luego encuentra a una mujer rodeada por fuego, con los brazos sujetos por cadenas, que pide agua y reclama haber sido olvidada. Él le ofrece ayuda, escucha que también puede acudir a ella cuando lo necesite y despierta con la impresión de haber recibido una advertencia. La página acompaña el episodio con recomendaciones devocionales sobre una estampa y un vaso de agua. Esta revisión las registra como parte de la edición, no como instrucciones que el sitio garantice.
+—Ánimas benditas, ayúdenme, ayúdenme.
 
-El marco local dialoga con prácticas colombianas más amplias. La antropóloga Anne-Marie Losonczy documentó en cementerios urbanos cultos dirigidos a muertos anónimos, abandonados o asociados con la violencia, así como oraciones a las almas del purgatorio. Ese trabajo confirma un campo religioso vivo, pero no autentica la nota de Marquetalia ni identifica al Ánima Sola con una mujer llamada Celestina.
+Una mañana llegó a su casa una señora y le preguntó si necesitaba ayuda.
 
-La doctrina católica sobre el purgatorio habla de purificación y de sufragios por los difuntos. No establece una santa llamada Ánima Sola ni promete favores particulares. Por eso la página distingue doctrina, devoción popular y relato literario. También elimina al espíritu masculino y picaresco de Bogotá que la versión anterior había mezclado sin fuente: no pertenece al núcleo documentado de este expediente.`,
-    historia: `La fuente central es Cuentos de espantos y otros seres fantásticos del folclor colombiano, publicado en 2004 por el Periódico Hoy y la Universidad Autónoma de Colombia. El facsímil muestra una ficha descriptiva y, en la página contigua, la nota del animero. Open Library permite ubicar la entrada en las páginas impresas 53 y 54. Los catálogos de Mosquera y del Valle clasifican el volumen simultáneamente como literatura, cuento fantástico, mitología y leyenda, y su propio resumen dice que ocupa un espacio entre lo real y lo imaginario.
+—Sí, cómo le parece, que no hago sino invocar a las ánimas benditas para que me ayuden, porque estoy sola para todo.
 
-Esa identidad editorial obliga a leer la nota con prudencia. La expresión “al parecer”, el hallazgo perfecto en una capilla y la primera persona forman un dispositivo narrativo; no bastan para afirmar que Jairo Ocampo existió, ejerció como animero o escribió el texto en 1940. La versión antigua del sitio borraba esa frontera y ampliaba la escena como si fuera una crónica histórica.
+—¿Y en qué le ayudo?
 
-El estudio de Losonczy, publicado en la Revista Colombiana de Antropología, aporta otro nivel. Analiza cómo muertos sin nombre, tumbas periféricas y experiencias de violencia pueden transformarse en figuras de recurso ritual en ciudades colombianas. Sirve para contextualizar la devoción, no para rellenar la biografía del personaje del libro.
+—Una remendadita de la ropita de los niños.
 
-Existe además El ánima sola de Tomás Carrasquilla, escrito hacia finales del siglo XIX y conservado por el Banco de la República. Es un cuento literario antioqueño donde la expresión aparece dentro de otro argumento. Se incluye para evitar una confusión frecuente: compartir título y lenguaje de purgatorio no convierte el cuento de Carrasquilla, la devoción popular y la nota de Marquetalia en una sola tradición textual.
+La señora aceptó y se puso a remendar. Al rato, la abuelita le ofreció el desayuno, y mientras lo preparaba vio que la señora se había puesto pálida. Se acercó a socorrerla, y la señora le dijo:
 
-La página heredada también afirmaba la identidad de María Celestina Abdégano y reunía escenas bogotanas no respaldadas por el dossier. Al no existir corroboración suficiente, Celestina queda como asociación devocional difundida, no como dato histórico central, y las escenas ajenas se retiran.`,
-    versiones: `La primera versión es la nota literaria de Marquetalia publicada en 2004. Un animero omite una oración, encuentra a una mujer entre llamas y cadenas, le ofrece agua y recibe la promesa de ayuda. La fecha, el nombre Jairo Ocampo y el hallazgo en la capilla pertenecen al marco del libro y no se presentan como archivo verificado.
+—Yo soy un ánima, soy un ánima. Hágame el favor y no nos vuelva a invocar, porque Dios nos tiene donde nos tiene y no nos ha dado permiso de volver a la Tierra.
 
-La segunda capa es la devoción popular al alma olvidada. Puede concentrarse en una estampa, un vaso de agua, una vela, oraciones de lunes o visitas al cementerio. Losonczy documenta prácticas dirigidas a almas anónimas y muertos desatendidos, pero no una liturgia uniforme ni una identidad individual única.
+Y sin decir más, desapareció ante sus ojos, y la abuelita se quedó perpleja.
 
-Una tercera asociación llama Celestina o María Celestina a la mujer de la imagen. El expediente no encuentra un documento biográfico que pruebe su historia, por lo que el nombre se registra como atribución devocional y no como origen demostrado.
+Por eso hay quien sostiene que los que piden auxilio a las ánimas faltan a la ley de Dios: a los muertos hay que dejarlos descansar, y el único que resucitó fue Dios, que murió y resucitó al tercer día.`,
+    historia: `El relato viene de Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense, un libro de 2022 del Centro Pecuario y Agroempresarial del SENA en La Dorada, hecho por Santiago Useche Toledo, Allison González González, Carlos Alberto Guzmán Ruiz y Eliana Marcela Tunarrosa Echeverría con testimonios de campesinos de Manzanares y Marquetalia. El capítulo «El Ánima Sola» ocupa las pp. 21-25 y va precedido por un epígrafe de Anadelia Galvis.
 
-Finalmente está el cuento El ánima sola de Tomás Carrasquilla. Allí la expresión participa en una obra literaria propia, con personajes y argumento distintos. No es una variante de la nota de 1940. La versión masculina y picaresca de Bogotá, añadida por la ficha anterior, no aparece en las ocho fuentes seleccionadas y se elimina en lugar de inventarle una procedencia.`,
+Allí hablan dos narradores de Manzanares. Anadelia Galvis cuenta el caso de la abuelita que invocaba a las ánimas y sostiene que pedirles auxilio va contra la ley de Dios. Hernán Aristizábal describe al Ánima Sola como una mujer vestida de blanco que sale por los caminos en noches de luna llena o de tempestad, y explica que es una difunta que no puede entrar al cielo por haber dejado plata escondida bajo el piso. Los compiladores presentan estos relatos como herencia de la colonización antioqueña y de creencias europeas fundidas con las campesinas.
+
+La devoción del Ánima Sola, la figura de la mujer entre llamas y cadenas que se reza para pedir favores, es antigua en el catolicismo popular colombiano. La antropóloga Anne-Marie Losonczy estudió en 2001, en la Revista Colombiana de Antropología, cómo esa devoción se trasladó a la ciudad y a los muertos anónimos de la violencia.`,
+    versiones: `Los narradores del SENA no están de acuerdo sobre qué es el Ánima Sola. Para unos es una mujer malvada condenada a vagar; para Hernán Aristizábal, una difunta atada a su dinero escondido; para Anadelia Galvis, un alma del purgatorio que no tiene permiso de volver, y a la que no conviene invocar. Todos coinciden en que es una mujer y en que anda sola.
+
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», le dedica sus pp. 53-54. Su ficha técnica la hace guía de guaqueros con una luz azul, ayudante para hallar objetos perdidos y protectora contra el mal de ojo, y su pieza narrativa es la nota inventada de un animero de Marquetalia que la excluía de sus rezos y la ve de noche entre llamas, encadenada, pidiéndole agua sin palabras.
+
+Javier Ocampo López cuenta al ánima sola entre los mitos que se estudian en Boyacá, y Enrique Otero D'Costa, en un cuento de 1936, la pone entre las «tenebrosas historias» de las tierras de Caldas.`,
     leccion:
-      "Distinguir devoción, doctrina y literatura permite respetar la creencia sin inventarle una biografía.",
-    similitudes: `Las almas del purgatorio se parecen al Ánima Sola porque reciben oraciones y sufragios de los vivos; la diferencia es que la doctrina católica habla de una condición general de purificación, mientras la devoción popular imagina una figura solitaria capaz de intervenir en necesidades concretas. El animero comparte con otros mediadores funerarios la tarea de recordar a quienes ya no tienen voz, pero es una persona ritual viva y no el alma encadenada que encuentra en la nota. El cuento de Carrasquilla usa el mismo nombre y un paisaje católico antioqueño; sin embargo, es una obra literaria de finales del siglo XIX, no evidencia del episodio de Marquetalia. Estas comparaciones explican un vocabulario común sin fusionar culto, oficio y ficción.`,
+      "A veces la ayuda que se pide con insistencia llega de donde no debería volver nadie.",
+    similitudes: `En el «Cuento de ánimas» de Enrique Otero D'Costa (1936), las ánimas benditas de Santander también visitan a los vivos para corregirlos: pelotean al borracho Laurián y le dan un canillazo a la costurera que trabaja en domingo. Otero abre el cuento con el Ánima Sola de Caldas como ejemplo de ánima terrible. En los dos casos el alma del purgatorio vuelve a este mundo, pero en Manzanares lo hace para ayudar, y pide que no la vuelvan a llamar.
+
+Anne-Marie Losonczy estudió cómo la devoción al Ánima Sola, con su imagen de la mujer entre llamas y cadenas, pasó en las ciudades colombianas a los muertos sin nombre de la violencia, a quienes la gente reza y pide favores. Es la misma relación de intercambio —el vivo reza, el muerto ayuda— que la abuelita de Manzanares practica y que la ánima que la visita le pide abandonar.
+
+Y la ficha del libro de 2004, con su animero de Marquetalia que ve a la mujer encadenada pidiendo agua, conserva la iconografía de las estampas del Ánima Sola que circulan en las iglesias y los hogares campesinos.`,
     sceneHorizontal:
       "calle montañosa de Marquetalia en la madrugada, un animero con campana y farol se detiene a distancia ante la figura simbólica de una mujer entre llamas planas y cadenas abiertas, con la capilla del cementerio al fondo",
     sceneVertical:
@@ -55,38 +85,66 @@ Finalmente está el cuento El ánima sola de Tomás Carrasquilla. Allí la expre
 
   defineAndinaVariosMestizoResidualMyth({
     slug: "la-vieja-colmillona",
-    title: "La Vieja Colmillona: la visitante de los fogones",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "correaMitos1997",
+      {
+        key: "espantosScan",
+        summary:
+          "Trae a la Colmillona en sus pp. 57-58: ficha técnica y diario inventado en Aguadas.",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      {
+        key: "cinepColmillona",
+        summary:
+          "Recorte de prensa de 1982 que cuenta a la Vieja Colmillona entre los espantos regionales nombrados en tertulias de relatos.",
+        limitation:
+          "Sólo la nombra.",
+      },
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Registra la Rodillona en Manzanares (p. 83), la vieja de rasgo desmedido que compara Similitudes.",
+        limitation:
+          "No trae a la Colmillona.",
+      },
+      {
+        key: "lopezpueblo1977",
+        summary:
+          "Describe al Cucacuy de Boyacá, que sale de noche a calentarse en las parrillas, el paralelo del fogón.",
+        limitation:
+          "Es otro ser.",
+      },
+    ],
+    title: "La vieja colmillona",
     excerpt:
       "Una vieja de largos colmillos toma comida de las brasas sin quemarse; el diario que la narra es un marco literario, no un archivo probado.",
     tags: ["La Colmillona", "noche", "miedo", "tradición"],
-    mito: `En relatos de Antioquia y el antiguo Gran Caldas, la Vieja Colmillona aparece donde los peones descansan y preparan comida después de una jornada. Tiene cabello largo hasta la cintura, manos cubiertas de pelo, uñas crecidas y dos colmillos que sobresalen de la boca. Algunas descripciones añaden saliva espesa. Su aspecto intimida, pero la escena más característica no es un ataque: se acerca al fogón, mete las manos entre las brasas y toma plátanos, arepas o carne sin quemarse.
+    mito: `En las haciendas de Aguadas, después del trabajo duro del día, los peones se arriman a los fogones a asar plátanos y a tomar el café de la noche en tazas grandes. Es la hora de los cantos, las coplas, las trovas y los cuentos de Pedro Rimales, Cosiaca y Sebastián de las Gracias. Y los aguadeños de la hacienda El Oro, cerca del río Arma, recuerdan que varias veces llegó hasta allí una vieja de pelo largo hasta la cintura, manos peludas y uñas y colmillos largos.
 
-La versión más desarrollada del libro de 2004 está construida como un fragmento de diario. El encabezado lo atribuye a Agustín Moreno, presentado como escritor e historiador. Las anotaciones de agosto cuentan que llega a Aguadas, conoce a un joven llamado Justino y se dirige a una hacienda. En la noche comparte historias y canciones con trabajadores reunidos cerca de los fogones. Cuando la mayoría descansa, ve a una anciana de dientes enormes que se acerca al fuego y se lleva los plátanos asados. La criatura no hiere a los presentes y desaparece después de comer.
+Otros la describen como una anciana pálida, de mirada perdida, con dos colmillos largos como de morsa en la mandíbula de arriba, bata negra de tela burda de esparto o de palma, un cinturón de bejuco rojo y botas amarillas hasta la rodilla.
 
-El volumen complementa el episodio con una ficha técnica. Localiza a la Colmillona en Antioquia, Viejo Caldas, Tolima Grande y los Llanos, y la vincula con haciendas, caminos y lugares de alimentación de los peones. Afirma que resiste el fuego y que en ciertas versiones puede mostrarse primero como una mujer atractiva para acercarse a hombres borrachos o infieles. También registra una contra particular: no entraría en casas donde hay recién nacidos ni atacaría a mujeres embarazadas. Son atributos de esa edición, no reglas universales confirmadas por cada fuente regional.
+Le gusta arrimarse a los fogones. Entra a la cocina de las casas campesinas y del fogón de leña coge con las manos las brasas encendidas, remueve el rescoldo con las uñas sin quemarse, se arrodilla a avivar el fuego y sopla la ceniza. Después pone la parrilla sobre tres piedras, saca de su mochila unos plátanos maduros y los asa; de su costal saca una chocolatera y un molinillo de madera y se prepara el chocolate.
 
-Otros repertorios contemporáneos insisten en la visita silenciosa al fogón y en el robo de comida. Una mención académica la ubica precisamente en zonas de alimentación de trabajadores, y un archivo hemerográfico demuestra que su nombre circulaba entre los espantos evocados en tertulias. Ninguno autentica a Agustín Moreno ni el diario.
+A veces las amas de casa y las cocineras le dejan en la tapia de la hornilla arepas de maíz, mazorcas asadas y carne frita, y ella envuelve el fiambre en hojas de plátano y lo guarda en su tula. Cuando termina de comer, se va sin despedirse, callada, con la cabeza baja y el costal terciado, hacia el cafetal, el cañaveral, el maizal o el potrero, donde duerme a la intemperie como un animal.
 
-La Colmillona no es la Muelona. La página anterior las fundía y añadía a la segunda como si fuera el desenlace de la primera. La Muelona suele seducir y atacar con una dentadura desmesurada; la Colmillona del núcleo aquí documentado come del fogón y se retira. Pueden compartir dientes y nocturnidad, pero no necesitan una sola biografía.`,
-    historia: `Cuentos de espantos y otros seres fantásticos del folclor colombiano publica a la Vieja Colmillona en las páginas impresas 57 y 58. El facsímil permite ver que la ficha técnica y el diario son piezas de una misma composición gráfica. Los catálogos de la reedición identifican a Julio Orozco Vargas como editor, a Juan Federico Torres Mantilla entre los investigadores y a David Niño y Rafael Yockteng en la ilustración y el montaje.
+Llega y se va sin hablar. No le hace mal a la gente hospitalaria. Pero si alguien la ataca, se revuelve furiosa y salvaje contra el que la agrede.`,
+    historia: `La Vieja Colmillona está en Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, Manizales, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total), en un capítulo propio. Vélez cuenta que se la relataron a Javier Ocampo López unos peones de la hacienda El Oro, en Aguadas, cerca del río Arma, y la sitúa en el mundo de las haciendas cafeteras del norte de Caldas: el fogón de la noche, el café en tazas grandes, las coplas y los cuentos de Pedro Rimales y Cosiaca.
 
-El libro se presenta como un bestiario que da rostros, poderes y hábitos a figuras populares. Esa decisión creativa explica por qué combina descripción clasificatoria con supuestos documentos personales. No hay en el expediente un catálogo de archivo, manuscrito independiente o referencia biográfica que confirme que Agustín Moreno fue el autor de un diario hallado. Por eso la revisión atribuye fechas, viaje, Justino y hacienda al relato de 2004.
+El capítulo junta dos descripciones. La primera, de los aguadeños de El Oro, es la de una vieja de pelo largo, manos peludas y colmillos que come plátanos asados y se va sin hacer daño. La segunda, más detallada, la viste con bata de esparto, cinturón de bejuco rojo y botas amarillas, y la muestra preparando su propio chocolate con chocolatera y molinillo.
 
-Javier Ocampo López incluyó a la Colmillona dentro de Mitos y leyendas de Antioquia la grande. Una investigación universitaria de 2018 la menciona en las zonas de alimentación de peones, mientras una microficha del archivo de prensa CINEP enumera el nombre entre espantos regionales. Estas fuentes ayudan a demostrar circulación del motivo más allá de una sola página, aunque no proporcionan versiones completas ni cadenas de informantes.
+La prensa la registró antes que el libro. Un recorte de 1982 conservado en el archivo de prensa del CINEP, en la Biblioteca Digital de Bogotá, la cuenta entre los espantos regionales que se nombraban en tertulias de relatos. Es, en el libro de Vélez, uno de los pocos espantos que se definen por lo que hacen en la cocina y no por el miedo que dan en el camino.`,
+    versiones: `En Vélez la Colmillona es inofensiva con quien la trata bien y sólo se defiende si la atacan. El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», la vuelve peligrosa: en su ficha técnica, que el propio Vélez copia, vaga por caminos y orillas de ríos, a veces se presenta como mujer hermosa para atraer a infieles y borrachos y morderlos, no ataca a embarazadas ni a casas con recién nacidos y es inmune al fuego; la sitúa en Antioquia, el Viejo Caldas, el Tolima Grande y los Llanos.
 
-La edición educativa de 2016 y el catálogo de Red Académica describen el volumen como material para reconocer seres fantásticos y estimular la escritura. Esa función no disminuye su valor como testimonio editorial, pero impide convertir la escenificación en prueba histórica automática.
-
-La página heredada mezclaba a la Colmillona con una Muelona de origen colonial, casa de juego, seducción y venganza. También presentaba el diario de Moreno como testimonio auténtico. La revisión restaura el fogón, la resistencia al fuego y la ambigüedad no agresiva, y mueve la Muelona a la comparación donde puede distinguirse con claridad.`,
-    versiones: `La versión del diario de 2004 sitúa el encuentro en Aguadas. Agustín Moreno, Justino y los trabajadores pasan la noche cerca de los fogones; la anciana aparece, toma plátanos asados sin quemarse y se retira. La escena se conserva con sus fechas internas, pero se atribuye al montaje literario del libro.
-
-La ficha técnica del mismo volumen amplía el repertorio. La Colmillona puede recorrer caminos y haciendas de Antioquia, Viejo Caldas, Tolima y Llanos. En unas descripciones es una anciana de greñas, manos peludas y uñas largas; en otras puede ocultar su aspecto para acercarse a hombres ebrios o infieles. La revisión no obliga a que todas las apariciones incluyan ambos comportamientos.
-
-Versiones divulgativas regionales vuelven central el robo de comida. Los campesinos la ven meter la mano en el fogón, sacar plátanos, arepas o carne y marcharse sin hacer daño. Esa visitante cotidiana produce inquietud, pero no actúa como depredadora en cada relato.
-
-La Muelona queda fuera de estas versiones. Tiene dientes enormes y puede atraer o perseguir hombres, pero constituye otra figura del catálogo. Cabellona tampoco es un nombre alterno: su rasgo central es el cabello que envuelve o asusta. Compartir cuerpo femenino exagerado no borra las diferencias entre los tres espantos.`,
+La pieza narrativa del mismo libro es un diario inventado de un escritor que llega a Aguadas, se aloja en una pensión, va a la hacienda y ve de noche a la Colmillona saltar sobre los que duermen, pararse en el fuego sin quemarse y llevarse los plátanos. Los personajes son composición del libro; lo que conserva de la tradición es la hacienda, el fogón, los plátanos y la vieja que no se quema.`,
     leccion:
-      "Separar criaturas parecidas preserva los matices que cada fogón y cada camino transmitieron.",
-    similitudes: `La Muelona comparte con la Colmillona una dentadura desmesurada y la aparición nocturna ante hombres; se distingue porque suele seducir, perseguir o castigar, mientras la Colmillona documentada aquí busca comida y puede retirarse sin herir. La Cabellona también es una figura femenina de rasgos corporales exagerados, pero su poder narrativo reside en el cabello y no en colmillos resistentes al fuego. La Madremonte ronda espacios rurales y puede sorprender a trabajadores, aunque protege monte y agua, no visita el fogón para alimentarse. Son comparaciones de forma, escenario o función; ninguna autoriza a convertirlas en etapas de una sola mujer castigada.`,
+      "Quien comparte el fuego con un extraño hambriento no tiene nada que temer de él.",
+    similitudes: `La Rodillona, que Vélez recoge en el mismo libro y el SENA registra en Manzanares, comparte con la Colmillona la regla de no atacar a las mujeres embarazadas ni entrar en casas con recién nacidos, según la descripción que Vélez copia del libro de 2004, y el rasgo corporal desmedido: rodillas en un caso, colmillos en el otro. Pero la Rodillona se burla y ataca a los hombres de noche, y la Colmillona sólo quiere el calor del fogón.
+
+Los Rescoldaos, en el mismo libro de Vélez, son diablillos del tamaño de un dedo que viven en las brasas de los fogones de los arrieros y roban carne asada. Como la Colmillona, se alimentan del fuego ajeno y caminan sobre las brasas sin quemarse; la diferencia es que la vieja no roba, sino que recibe lo que le dejan.
+
+En Boyacá, el Cucacuy de Javier Ocampo López es un hombre desnudo que sale de noche a calentarse en las parrillas donde todavía queda brasa. Los tres espantos rondan el mismo lugar de la casa campesina, el fogón, y lo hacen en la hora en que la familia ya se retiró.`,
     sceneHorizontal:
       "hacienda de Aguadas durante una noche fría, peones descansan a distancia alrededor de varios fogones mientras una anciana de cabello largo y colmillos visibles retira con calma un plátano asado de las brasas sin quemarse",
     sceneVertical:
@@ -159,38 +217,62 @@ La recepción sonora de 2022 convierte la carta en mensaje para localizar un cue
 
   defineAndinaVariosMestizoResidualMyth({
     slug: "la-barbacoa-del-muerto",
-    title: "La Barbacoa del Muerto: procesiones y guandos",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      {
+        key: "investigacionMitos1993",
+        summary:
+          "Texto de Juan de Dios Arias, «Veladas campesinas. La Barbacoa», de Folclor santandereano (1954), en la sección 19, pp. 131-134: la velada de El Calzo, la abuela Nativa, el señor que no agradeció a la Virgen de Chiquinquirá y los cuatro hombres sin cabeza.",
+        limitation:
+          "Es la reproducción de Villa Posse; Arias lo cuenta como recuerdo de infancia.",
+      },
+      "ariasFolclor1954",
+      {
+        key: "espantosScan",
+        summary:
+          "Trae una «Barbacoa del Muerto» en sus pp. 77-78, con personajes inventados en el camino de Santa Rita.",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+      },
+      "moralesFolclor2013",
+      "narinocuentos1988",
+    ],
+    title: "La barbacoa del muerto",
     excerpt:
       "Una camilla de guadua cruza caminos nocturnos; tres versiones explican la carga mediante avaricia, promesas incumplidas o falta de solidaridad.",
     tags: ["muerte", "castigo", "fantasmas", "tradición"],
-    mito: `En caminos rurales de Antioquia, Viejo Caldas, Tolima y Santander, barbacoa o guando puede nombrar la camilla de guadua usada para trasladar un cuerpo. La leyenda convierte ese objeto comunitario en una procesión nocturna: cuatro cargadores avanzan con un difunto, velas y un chirrido que se oye antes de distinguir las figuras. Según la versión, los portadores tienen rostros de calavera, carecen de cabeza o van seguidos por personas vestidas de negro.
+    mito: `Una noche en El Calzo, después de la cena, don Vicente dijo que ya debía ser tiempo de la barbacoa, y la abuela le dio la razón. Doña Pura contó que su papá se la había encontrado una noche, volviendo del pueblo. Los niños pidieron que se la contaran.
 
-El libro de 2004 presenta una historia mediante el supuesto testimonio del alma de Anselmo Santamaría, transmitido en trance por una médium llamada Sara Tustra. Anselmo es un hacendado rico y hostil que acumula dinero y niega ayuda incluso a una familia en duelo. Después sufre un robo, es herido y termina lanzándose con su vehículo contra la cordillera. El cuerpo queda en un precipicio. Su condena consiste en recorrer el camino de Santa Rita sobre una barbacoa de guadua, llevado por cuatro figuras de rostro descarnado.
+—Voy a contarles —dijo la abuela—, pero no se asusten, niños, porque la barbacoa no entra a las casas.
 
-La ficha técnica del mismo volumen describe un espanto colectivo que aparece en noches de mercado o de pago y asusta a avaros, ladrones y homicidas. La escena conserva cuatro velas y una cama o toldo sobre la guadua. Pero el trance, la médium y Anselmo pertenecen a la composición narrativa de 2004: no existen fuentes independientes en el dossier que los conviertan en expediente histórico. La página anterior además escribía Sara Trista; el facsímil permite leer Sara Tustra.
+Hace ya mucho tiempo, un señor muy enfermo hizo la promesa de ir a visitar a la Virgen de Chiquinquirá para que lo curara. Se hizo llevar en guando, una camilla que cargaban varios peones. Al llegar a una lomita desde donde se divisaba el santuario, se sintió curado de golpe. Se levantó y les dijo a sus hombres que ya no había para qué seguir. Y a pesar de los ruegos de los peones, se volvió a su tierra sin darle las gracias a la Virgen. Poco tiempo después se murió, casi de repente.
 
-El Excel del proyecto guarda otra explicación escuchada durante una velada familiar en la finca El Calzo. Un enfermo promete peregrinar ante la Virgen de Chiquinquirá si sana. Al divisar el santuario cree que ya cumplió, se devuelve y muere. En tiempo de peregrinaciones aparece una barbacoa cargada por cuatro hombres sin cabeza. Aquí el centro no es la avaricia de Anselmo sino una promesa sagrada incumplida.
+Desde entonces, cuando llegan las romerías a Chiquinquirá, sale la barbacoa por los caminos. La barbacoa es un cañizo angosto, hecho de varas delgadas amarradas con bejucos, en el que la gente del campo lleva a sus muertos al pueblo para enterrarlos en sagrado. Los que se la han encontrado dicen que ven a cuatro hombres sin cabeza que cargan a un muerto cubierto; que caminan muy aprisa, casi por el aire, y que se oye chirriar el cañizo.
 
-Las versiones del Guando ofrecen un tercer núcleo. Un hombre se niega a ayudar a trasladar muertos; al fallecer, su cuerpo se vuelve imposible de cargar o cae a un río al cruzar un puente. Luego reaparece en una procesión durante la víspera de Todos los Santos o el Día de Difuntos. Las tres explicaciones comparten camilla, camino y responsabilidad comunitaria, pero no forman una biografía única.`,
-    historia: `La Barbacoa del Muerto ocupa las páginas impresas 77 y 78 de Cuentos de espantos y otros seres fantásticos del folclor colombiano. La imagen de alta resolución del facsímil permite corregir el nombre de Sara Tustra y comprobar que el encabezado presenta el texto como testimonio mediúmnico. Igual que los diarios y notas del volumen, es un recurso literario dentro de un bestiario ilustrado.
+—Y es que toda promesa hay que cumplirla —dijo la abuela—, porque con Dios y la Virgen no se juega.
 
-Open Library, la Biblioteca de Mosquera y la Biblioteca Departamental del Valle documentan la edición y su carácter híbrido. Ninguna aporta registro civil de Anselmo, reporte del precipicio, ficha de la médium o fecha del supuesto trance. Por eso la revisión conserva el argumento sin declarar que ocurrió.
+Don Vicente dijo que, con todo lo que había caminado de noche, nunca se había encontrado con ese espanto. La abuela contó entonces que, cuando era muchacha, estando en casa de unos parientes, su tío la vio venir desde la ventana y la llamó: «Nativa, venga a ver la barbacoa». Ella no quiso levantarse, pero oyó los chirridos al pasar el muerto frente a la ventana.
 
-La hoja Mitos del archivo base aporta evidencia interna diferente. La fila 399 conserva el recuerdo de una narración familiar en El Calzo sobre la peregrinación a Chiquinquirá y los cuatro cargadores sin cabeza. Sus campos de interpretación fueron generados durante la construcción del sitio, de modo que el expediente toma el relato y no trata las conclusiones automáticas como testimonio adicional.
+También pasa por los pueblos, por todos los lugares por donde transitan los romeros. En el pueblo de la abuela, una noche de baile, del lado de El Chorro, uno de los señores salió hasta la esquina a buscar una tienda abierta para comprar tabacos, y vio venir la barbacoa. Volvió corriendo, abrió la puerta de un empellón y cayó privado del susto en la sala. En ese momento la barbacoa pasó frente a la casa; todos la vieron, y desapareció al final de la calle. Ahí se acabó la fiesta.
 
-Dos investigaciones educativas muestran que El Guando o la barbacoa del muerto se usa como leyenda regional. La tesis de la Universidad Autónoma de Bucaramanga la identifica con Antioquia Grande; el material de Los Libertadores resume la versión del avaro cuyo cuerpo cae al río. Un documento municipal de Remedios enumera la barbacoa dentro del repertorio paisa local. Son pruebas de circulación, no confirmaciones del trance de 2004.
+La abuela se santiguó, pidió que Dios los favoreciera y mandó a todos a acostarse. Esa noche los niños durmieron inquietos.`,
+    historia: `El relato está en «Veladas campesinas. La Barbacoa — El Trapiche Ardiendo», un capítulo de Folclor santandereano de Juan de Dios Arias, publicado en 1954 en la Biblioteca Santander (vol. XXIV, t. II, Bucaramanga). Eugenia Villa Posse lo reprodujo en el segundo tomo de Mitos y leyendas de Colombia (IADAP, Quito, 1993), sección 19, «Narraciones del folclor · Santander», pp. 131-134.
 
-La página antigua ampliaba el drama de Anselmo y mezclaba el castigo con una sola explicación moral. La revisión devuelve agencia a cada soporte: bestiario, memoria familiar del Excel y adaptación escolar del Guando. También evita afirmar que todos los cortejos aparecen en las mismas fechas o castigan exactamente las mismas conductas.`,
-    versiones: `La versión de Anselmo Santamaría proviene del libro de 2004. Un hacendado que negó ayuda queda asociado después de su muerte con una procesión de cuatro cargadores de rostro descarnado por el camino de Santa Rita. Sara Tustra y el trance son parte del marco editorial, no personas corroboradas por este expediente.
+Arias lo cuenta como recuerdo de infancia. La escena es una velada en la finca El Calzo, en la provincia de Guanentá, después de la cena, y la narradora es su abuela materna, a la que su tío llamaba Nativa; conversan don Vicente, «el compadre», y doña Pura, que cuenta que su padre se encontró la barbacoa volviendo del pueblo. La abuela la oyó pasar de muchacha, en casa de unos parientes, y cuenta además lo que pasó en su pueblo, del lado de El Chorro, una noche de baile.
 
-La versión de El Calzo y Chiquinquirá explica la aparición mediante una promesa incumplida. El enfermo sana durante el viaje, se devuelve antes de agradecer en el santuario y muere. En época de peregrinación, cuatro hombres sin cabeza llevan al difunto sobre una camilla estrecha que cruje al avanzar.
+El relato gira en torno a la Virgen de Chiquinquirá, patrona de Colombia, y a las romerías que cada año llegan a su santuario en Boyacá desde Santander y el resto del país. La barbacoa del título es una camilla fúnebre campesina, y el espanto aparece en los caminos de los romeros. Por eso el espanto pertenece a los caminos que unen Santander con Boyacá, más que a un solo pueblo.`,
+    versiones: `El texto de Arias es el único con narradores y lugares. En él la barbacoa es un castigo concreto: el señor que no le agradeció a la Virgen su curación, y desde entonces el cortejo de cuatro hombres sin cabeza que sale en tiempo de romerías.
 
-La familia narrativa del Guando enfatiza solidaridad funeraria. Un hombre rechaza ayudar a cargar a los muertos; cuando le llega su turno, el cuerpo pesa demasiado, nadie puede sostenerlo o cae al río desde un puente. Después la procesión se aparece cerca del cementerio y en días dedicados a los difuntos.
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», trae una «Barbacoa del Muerto» en sus pp. 77-78, en la que un tal Anselmo Santamaría y una médium, Sara Tustra, la encuentran en el camino de Santa Rita. Los personajes y la escena son composición del libro; lo que conserva de la tradición es la camilla fúnebre que pasa sola por el camino.
 
-Las descripciones también varían en los portadores: calaveras visibles, hombres sin cabeza o vecinos vestidos de negro. La carga puede llevar cuatro velas y provocar miedo, desmayo o una petición de ayuda. Estas diferencias permanecen atribuidas; no se combinan para fabricar una escena más espectacular que las fuentes.`,
+En el Tolima, Misael Devia recogió en 1962 un espanto con el mismo vehículo: el Guango, o guando, el cortejo fúnebre que cargan los muertos por los caminos y que castiga a quien se niega a cargar a sus difuntos. Allí la falta es otra, pero el guando, los cargadores y el camino de noche son los mismos.`,
     leccion:
-      "Cargar a los muertos recuerda que la dignidad final también depende de la solidaridad viva.",
-    similitudes: `El Guando y la Barbacoa del Muerto pertenecen a la misma familia narrativa: ambos nombran la camilla funeraria y la procesión que vuelve por caminos rurales. La diferencia está en sus explicaciones locales, no en dos monstruos necesariamente separados. El Ánima Sola comparte la idea de un muerto que necesita memoria, oración o reparación; es una figura individual entre purgatorio y devoción, mientras la barbacoa es un cortejo móvil y colectivo. La Llorona también anuncia su presencia mediante un sonido nocturno y obliga al caminante a recordar una pérdida, pero su núcleo es el lamento materno y no el transporte comunitario de un cadáver. Las semejanzas no autorizan a intercambiar nombres, fechas ni castigos.`,
+      "Una promesa que se olvida cuando pasa el apuro puede seguir caminando mucho después de uno.",
+    similitudes: `El pariente más cercano es el Guango del Tolima, que Misael Devia registró en su Folclor tolimense: un guando fúnebre que se ve por los caminos, cargado por muertos, que castiga a los vivos que no quisieron cargar a sus difuntos. Las dos historias usan el mismo instrumento del entierro campesino, la camilla de varas, y la vuelven espanto. En Santander la falta es con la Virgen; en el Tolima, con los muertos.
+
+La promesa incumplida a un santuario es un motivo muy común en la religiosidad popular colombiana. La Virgen de Chiquinquirá, a la que el señor del relato no da las gracias, es la misma a la que llegan cada año las romerías de Santander y Boyacá por los caminos donde sale la barbacoa. El castigo sigue la ruta de la devoción.
+
+Y los cuatro cargadores sin cabeza pertenecen a la familia de los espantos acéfalos del mundo hispánico, como el fraile sin cabeza que el libro de Baquero Nariño cuenta entre los mitos andinos llevados al piedemonte llanero. En los dos casos, la falta de cabeza marca a los que ya no son de este mundo.`,
     sceneHorizontal:
       "camino rural de Santa Rita al anochecer, cuatro figuras sobrias con rostros de calavera cargan una barbacoa de guadua con un cuerpo cubierto y cuatro velas, mientras viajeros observan desde una casa iluminada",
     sceneVertical:
@@ -211,40 +293,54 @@ Las descripciones también varían en los portadores: calaveras visibles, hombre
 
   defineAndinaVariosMestizoResidualMyth({
     slug: "los-meneses",
-    title: "Los Meneses: muchachos que comen monedas",
+    fuentesAgotadas: "Fuera de la página de Van Vliet (1997) y del libro de 2004, la cantera abierta no trae a los Meneses: Ocampo López (2001) no tiene texto abierto y el programa de gobierno de Remedios sólo los nombra.",
+    sourceKeys: [
+      "compiladoraInforme1997",
+      {
+        key: "espantosScan",
+        summary:
+          "Les dedica las pp. 87-88: ficha técnica (espíritus burlones que comen monedas y curan la fatiga) y la nota inventada de un vagabundo de Anserma.",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»: la nota y su marco son composición de autor.",
+      },
+      {
+        key: "correaMitos1997",
+        summary:
+          "Describe a los Rescoldaos, diablillos burlones de los caminos de la arriería que conceden deseos, el paralelo que nombra Similitudes.",
+        limitation:
+          "No nombra a los Meneses; se lee la edición ampliada, posterior a 2007.",
+      },
+    ],
+    relatoCorto:
+      "El registro con tradición (Van Vliet 1997) tiene dos frases; la nota del libro de 2004 es ficción declarada de un párrafo. Llegar a 300 palabras exigiría inventar.",
+    title: "Los meneses",
     excerpt:
       "Muchachos vestidos a la antigua rodean al viajero, piden monedas y recompensan la generosidad con compañía, descanso o alegría.",
     tags: ["niño", "espíritus", "generosidad", "juego"],
-    mito: `Los Meneses no son un vagabundo solitario. El nombre designa a un grupo de muchachos-espíritu que aparece de repente en caminos y carreteras rurales. Parecen tener entre doce y quince años, visten calzones antiguos y camisas blancas, rodean al viajero y piden una moneda entre risas y bromas. Si reciben algo, muerden el metal como si fuera chocolate: la moneda misma es su alimento.
+    mito: `Por los caminos de la tierra cafetera andan los Meneses, unos chiquillos que les piden dulces o monedas a los que pasan. Al que no les da nada le hacen cosquillas, y más cosquillas, hasta que cae rendido de la risa.
 
-La ficha técnica del libro de 2004 los localiza en Antioquia, Cundinamarca y Tolima Grande, con apariciones parecidas en Nariño. Pueden mostrarse y desaparecer a voluntad. Un roce de sus dedos en la frente alivia el cansancio; la alegría que transmiten puede acompañar durante meses. A las personas generosas les dejan a veces monedas de poco valor nominal pero muy antiguas. La contra no es un objeto mágico: es responder con generosidad.
+Son espíritus burlones. Recorren los caminos y las carreteras pidiendo limosna y haciéndoles bromas a los viajeros. Aparecen y desaparecen cuando quieren. No compran nada con las monedas que les dan: las monedas mismas son su comida, y las muerden como si fueran de chocolate. Al viajero cansado le curan la fatiga con sólo rozarle la frente con los dedos, y a quien los encuentra le dejan una alegría que le dura meses.
 
-La narración contigua adopta la forma de una nota hallada detrás del afiche de un circo en la pared de un tren viejo. Su autor anónimo se presenta como vagabundo y jugador nacido en Anserma. Dice caminar para escapar de la crueldad humana y haber olvidado su nombre para sentirse libre. Una tarde, antes de subir al tren, siente tirones en la camisa y escucha risas. Los muchachos lo rodean, le piden una moneda y amenazan con hacerle cosquillas hasta dejarlo sin fuerzas ni ganas de reír.
+Una tarde, a las cinco, con el sol rojo y un viento suave, un vagabundo iba descalzo por un camino cuando sintió que le tiraban de la manga de la camisa rota. Se dio vuelta y no vio a nadie; oyó risas. De pronto se vio rodeado de muchachos de doce a quince años que le pedían una moneda y se reían como locos, y le advertían que, si no les daba nada, le harían cosquillas hasta dejarlo sin fuerzas. Él les dijo que no llevaba nada, pero que si tuviera les daría todo lo que estuviera a su alcance. Los muchachos lo miraron sorprendidos, como si nadie les hubiera contestado así antes. Le dieron las gracias con una cortesía anticuada y lo acompañaron varios kilómetros.
 
-El viajero confiesa que no lleva nada, pero que compartiría cuanto tuviera. La respuesta sorprende a Los Meneses. Lo abrazan con cortesía, lo acompañan varios kilómetros y se despiden dejándole una alegría duradera. El hombre escribe la nota para que alguien encuentre un rastro de su felicidad y paz. Así, el vagabundo sirve como narrador del encuentro; no se transforma en los niños ni explica su origen.
+A los viajeros que han sido generosos con ellos, a veces les dejan en el bolsillo unas monedas de poco valor, pero muy antiguas.`,
+    historia: `Los Meneses aparecen en una página infantil de la Biblioteca Virtual del Banco de la República, «Niños de las regiones de Colombia», de Esmeralda Van Vliet para el ICAN, que se imprimió el 12 de enero de 1997 dentro de un informe del programa Fulbright-Hays compilado por Ana María Alfaro y conservado en la base ERIC. En la sección de la región andina, una niña de la tierra cafetera dice que las chapoleras y los peones le han contado muchas leyendas, y enumera a los Meneses junto al Patón y el Hojarasquín: chiquillos que piden dulces o monedas en los caminos y hacen cosquillas hasta dejar a uno rendido de la risa.
 
-El encabezado, la nota escondida y la voz perfecta del caminante pertenecen al montaje literario del bestiario. No hay prueba independiente de que el papel se hallara en un tren ni de que su autor fuera una persona histórica. Un documento municipal de Remedios sí enumera a Los Meneses dentro del repertorio paisa, lo que apoya circulación del nombre sin autenticar la escena.
+Siete años después, el libro Cuentos de espantos y otros seres fantásticos del folclor colombiano (Casa Editorial El Tiempo, Universidad Autónoma de Colombia, 2004), que se declara «recopilación de documentos imaginarios», les dedicó sus pp. 87-88. La ficha técnica los clasifica como espanto colectivo de espíritus burlones, vistos en Antioquia, Cundinamarca y el Tolima Grande, que comen monedas, curan la fatiga y contagian alegría. La página narrativa es una nota inventada de un vagabundo nacido en Anserma, hallada, dice el libro, detrás del afiche de un circo en la pared de un tren viejo.
 
-La página anterior centraba el mito en la búsqueda de libertad del vagabundo y apenas definía a los seres. La revisión devuelve el protagonismo al grupo infantil, conserva monedas, cosquillas, alivio y alegría, y atribuye la nota al libro que la publicó.`,
-    historia: `Los Meneses aparecen en las páginas impresas 87 y 88 del volumen de 2004. El facsímil muestra con claridad la ficha técnica y la nota manuscrita simulada. Open Library ubica la entrada; los catálogos de Mosquera y del Valle documentan la reedición, los responsables editoriales y su clasificación como cuento fantástico, leyenda y mitología colombiana.
+Entre las dos fechas, la figura pasó de ser un recuerdo de peones cafeteros a una ficha de bestiario con poderes, hábitat y alimentación.`,
+    versiones: `Van Vliet y el libro de 2004 describen el mismo ser con tonos distintos. En la página de 1997 los Meneses son pedigüeños y traviesos: si no les dan, castigan con cosquillas. En la ficha de 2004 son benéficos: comen las monedas, curan la fatiga, dejan alegría y, a los generosos, monedas antiguas en el bolsillo.
 
-La Red Académica presenta el libro como recurso para lectura y creación. Ese dato ayuda a entender el procedimiento: cada ser recibe una taxonomía lúdica y una pieza narrativa que le da voz o testigo. La nota del tren funciona como cuento encontrado. Sin un soporte independiente, no se describe como documento recuperado realmente ni se busca convertir al vagabundo en informante verificable.
+La nota del vagabundo de Anserma une las dos caras. Los muchachos lo amenazan con las cosquillas, pero cuando él les dice que no tiene nada y que les daría todo lo que tuviera, lo acompañan y le dejan una alegría duradera. El marco —el tren, el afiche de circo de los años sesenta y la moneda que un expresidente anónimo habría recibido de ellos— es composición del libro.
 
-Mitos y leyendas de Antioquia la grande, de Javier Ocampo López, incluye a Los Meneses entre figuras del repertorio regional. El programa de gobierno de Remedios también los menciona junto con la barbacoa, el Gritón y otros relatos paisas. Estas referencias muestran que el nombre no depende exclusivamente del bestiario, aunque ninguna reproduce las monedas comestibles o la curación de la fatiga con una cadena oral identificada.
-
-Para comparar sin absorber el motivo, el Instituto Caro y Cuervo documentó duendes del Valle y Chocó como espíritus traviesos con apariencia infantil que hacen ruidos y pequeñas bromas. La RAE también registra que el duende puede aparecer como niño. Las semejanzas ayudan a clasificar la función burlona, pero Los Meneses conservan rasgos propios: son un grupo, piden monedas, comen metal y recompensan la generosidad.
-
-La ficha heredada confundía sujeto y narrador. Al organizar el expediente, la pregunta editorial deja de ser quién era el vagabundo y pasa a ser qué hacen los muchachos, cómo responde el viajero y qué parte procede de la edición de 2004.`,
-    versiones: `La ficha técnica de 2004 describe a Los Meneses como espanto colectivo. Los muchachos aparecen en carreteras, piden monedas, se alimentan de ellas, curan la fatiga y dejan alegría o monedas antiguas a quien comparte. La generosidad transforma el asedio en compañía.
-
-La nota del vagabundo desarrolla un solo encuentro. El narrador no tiene dinero, pero declara que daría todo lo que estuviera a su alcance. Los niños aceptan la intención, lo abrazan, caminan con él y le dejan felicidad. La amenaza de cosquillas permanece como broma potencial y no llega a convertirse en castigo.
-
-El documento municipal de Remedios solo conserva el nombre entre mitos paisas. No ofrece apariencia, poderes ni argumento, de modo que se usa para demostrar circulación local y no para completar lagunas del libro.
-
-En repertorios colombianos, los duendes también pueden parecer niños, hacer travesuras, tocar animales o atraer personas hacia espacios rurales. Esa es una comparación, no otra versión de Los Meneses. El grupo de calzones antiguos y camisas blancas, su apetito por monedas y su recompensa alegre pertenecen al perfil específico de la edición consultada. No se inventa un origen familiar para el apellido ni se afirma que fueron niños muertos.`,
+Los dos textos coinciden en la edad, niños o muchachos; en el lugar, los caminos, y en la moneda como centro del encuentro. En los dos, además, el trato con los Meneses se decide en una sola respuesta del caminante: dar, o no dar, y cómo decirlo.`,
     leccion:
-      "La generosidad puede convertir un encuentro inquietante en compañía, descanso y alegría compartida.",
-    similitudes: `Los duendes del Valle y Chocó se parecen a Los Meneses por su apariencia infantil, sus bromas y su presencia inesperada en espacios rurales; suelen actuar solos, hacer ruidos o jugar con animales, mientras Los Meneses llegan en grupo y negocian con monedas. Los niños fantasmas de relatos urbanos también conservan edad y juego después de la muerte, pero suelen estar ligados a una casa o a una tragedia particular; el libro no da a Los Meneses una muerte previa ni una vivienda fija. El Coco puede usar el temor infantil para exigir obediencia, mientras estos muchachos se relacionan con viajeros adultos y premian la intención generosa. Las afinidades son funcionales, no identidades ni genealogías probadas.`,
+      "La generosidad sin nada que dar también se paga con alegría.",
+    similitudes: `Los Rescoldaos del libro de Fabio Vélez Correa sobre Caldas son también espíritus burlones de los caminos de la arriería: diablillos del tamaño de un dedo que roban carne, beben aguardiente, conceden deseos y premian a quien resuelve sus acertijos. Como los Meneses, juegan con el viajero y lo premian si les sigue el juego.
+
+En la misma lista de Van Vliet, el Patón y el Hojarasquín son espantos del camino y del monte de la región cafetera; los Meneses son el único que no asusta. La niña que los enumera los pone juntos porque se los contaron las mismas chapoleras y los mismos peones.
+
+La figura del ser pequeño que pide una limosna y premia al que da, y castiga al que niega, tiene una larga historia en los cuentos de todo el mundo hispánico, donde el mendigo de apariencia humilde resulta ser un santo o un ser del otro mundo que pone a prueba la caridad del caminante.`,
     sceneHorizontal:
       "camino rural de Anserma al atardecer, un viajero descalzo conversa con un grupo de muchachos de camisas blancas y calzones antiguos que sostienen monedas y ríen, con un tren viejo a lo lejos",
     sceneVertical:

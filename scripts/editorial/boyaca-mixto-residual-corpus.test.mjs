@@ -82,7 +82,7 @@ test("restaura atribuciones y separa variantes y capas culturales", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const mensajeros = bySlug.get("los-mensajeros-de-los-dioses");
-  assert.match(mensajeros.historia, /nueve filas, 478–486/i);
+  assert.match(mensajeros.historia, /Villa Posse[\s\S]+Tota/);
   assert.match(mensajeros.historia, /Lilia Montaña de Silva Celis/);
   assert.doesNotMatch(mensajeros.similitudes, /Ícaro|Amaterasu/i);
 

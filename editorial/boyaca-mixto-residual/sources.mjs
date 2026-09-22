@@ -368,6 +368,30 @@ export const boyacaMixtoResidualSources = {
     limitation:
       "Ocampo elabora literariamente; no da narrador.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II (sección 20, Mitos del Tolima: Misael Devia, «Folclor tolimense», 1962)",
+    author: "Eugenia Villa Posse (investigación y compilación); Misael Devia",
+    year: 1993,
+    type: "antología con texto reproducido de folclorólogo",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Texto del relato de Lilia Montaña de Silva Celis (1970) en la sección 23, pp. 231-243: Mongatá, la esposa abandonada, Mayavita y las aves de hojas de grao que se vuelven guacamayas mensajeras del Sol, con el vocabulario de la autora.",
+    limitation:
+      "Villa Posse advierte una «elaboración excesivamente literaria» de la tradición campesina de Tota.",
+  }),
+  caroConversas2022: source({
+    title: "Conversas del lago de Tota y el valle de Sogamoso",
+    author: "Huérfano Huérfano (Instituto Caro y Cuervo)",
+    year: 2022,
+    type: "tesis de maestría",
+    url: "https://bibliotecadigital.caroycuervo.gov.co/1862/1/2022-80768352.pdf",
+    summary:
+      "Describe el libro de Montaña (nueve mitos y 786 coplas) y su contexto en las excavaciones de Eliécer Silva Celis en el Templo del Sol.",
+    limitation:
+      "Estudio de las conversas de Tota; no reproduce el relato.",
+  }),
 };
 
 const sourceKeysBySlug = {

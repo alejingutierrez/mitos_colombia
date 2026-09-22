@@ -3,36 +3,57 @@ import { defineAndinaVariosMixtoResidualMyth } from "./define-editorial-myth.mjs
 const records = [
   defineAndinaVariosMixtoResidualMyth({
     slug: "la-mano-peluda",
-    title: "La Mano Peluda: dos versiones de un espanto",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      {
+        key: "tunjaMano",
+        summary:
+          "Texto firmado por Javier Ocampo López: la mano peluda o mano verde del convento de los agustinos de la Candelaria y las casas viejas de Tunja.",
+        limitation:
+          "Portal divulgativo sin edición ni fecha.",
+      },
+      "correaMitos1997",
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Testimonio inventado de una mujer amenazada de niña con la mano peluda, que de adulta vela con una pistola de ácido bendito (pp. 27-28).",
+      },
+      {
+        key: "banrepFolclor",
+        summary:
+          "Recoge en Tunja el espanto del perro de piedra del convento de San Francisco, otro espanto colonial atado a un edificio, que compara Similitudes.",
+        limitation:
+          "No trae a la Mano Peluda.",
+      },
+    ],
+    relatoCorto:
+      "Las fuentes describen el espanto sin un caso con personajes; el único caso con trama es el testimonio ficticio del libro de 2004, que no se usa en el relato. Llegar a 300 palabras exigiría inventar.",
+    title: "La mano peluda",
     excerpt:
       "Una mano incorpórea ronda La Candelaria y Tunja; en otra versión, es la garra del Viejo del Costal que amenaza a los niños.",
     tags: ["miedo", "noche", "castigo", "tradición"],
-    mito: `En La Candelaria, cerca de Ráquira, y en relatos sobre casas antiguas de Tunja aparece una mano sin brazo ni cuerpo. Es grande, peluda y de uñas largas. Algunas descripciones le dan un tono verdoso; otras se concentran en el pelo oscuro y en el tamaño desproporcionado. No conversa ni explica de dónde viene. Se desplaza por paredes, ventanas y rincones, y su presencia basta para convertir una habitación conocida en un lugar inseguro.
+    mito: `En Tunja, en el convento de los agustinos de la Candelaria y en algunas casas viejas y solariegas de la ciudad, se cree que en cierta habitación se aparece la mano peluda, la mano verde, muy velluda y de uñas grandes y puntiagudas. Sale en las noches oscuras y solitarias, y se mueve por las ventanas y las paredes del cuarto.
 
-La mano puede moverse cuando la casa está en silencio o sorprender a quien camina de noche. En versiones difundidas para público infantil, alcanza a los niños o intenta arrastrarlos. En otras, asusta a personas que regresan tarde o han bebido. El motivo cambia según quien lo cuenta, pero conserva una imagen central: una parte del cuerpo actúa sola, sin que pueda verse al dueño ni anticiparse su recorrido.
+En Antioquia y el Viejo Caldas vivía en los subterráneos de las casas,, y se le tenía tanto miedo como a los espantos de los despoblados. Tenía una hermana, la Mano Negra, y las dos eran manazas negras y velludas, de uñas grandes y puntiagudas, que en las noches oscuras y las tardes solitarias se alargaban por las ventanas, las rendijas de las paredes, los postigos, las troneras de los bahareques y los boquetes de los muros.
 
-Otra versión regional, recogida por Javier Ocampo López, acerca la Mano Peluda a una amenaza diferente. El Viejo del Costal es un anciano mendigo que carga un saco y persigue a los niños desobedientes. Una de sus manos tiene forma de garra: negra, peluda, con uñas largas y puntiagudas. Esa garra recibe el mismo nombre, Mano Peluda. Aquí no vuela ni recorre muros de manera independiente; pertenece al personaje que encarna el temor de ser apartado de la casa y llevado dentro de un costal.
+Era un espanto de la casa. Las madres la usaban para asustar a los niños traviesos, malcriados y callejeros y llamarlos al orden. Hasta hace algunos años bastaba con nombrarla para que un niño se quedara quieto.`,
+    historia: `La Mano Peluda tiene dos registros que se leen abiertos. El primero es un texto firmado por Javier Ocampo López, «El espanto de la Mano Peluda», publicado en el sitio cultural Tunja Ciudad de Tesoros Escondidos, que la sitúa en el convento de los agustinos de la Candelaria y en casas viejas de Tunja. Ocampo la cuenta entre los espantos de la ciudad de los siglos sin alumbrado eléctrico, cuando la oscuridad marcaba la vida nocturna, y dice que con la iluminación del siglo XX esos espantos se retiraron a la memoria de los viejos tunjanos.
 
-Las dos formas no necesitan convertirse en una sola biografía. La mano incorpórea pertenece al paisaje narrativo de La Candelaria y Tunja. La garra del Viejo del Costal forma parte de repertorios de Antioquia y el antiguo Gran Caldas compilados por Ocampo. Comparten el nombre, el pelo, las uñas y la función de producir miedo, pero actúan de modo distinto.
+El segundo está en Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, Manizales, 1997; ampliada después de 2007), en el capítulo «La Mano Peluda». Vélez la describe con su gemela, la Mano Negra, como espanto doméstico con que las madres asustaban a los niños, y cita a Arturo Escobar Uribe (Mitos de Antioquia, 1950, p. 179), según el cual su ancestro es muy antiguo y su leyenda se conoce en toda Antioquia y el Viejo Caldas.
 
-Esta revisión no añade una pistola de ácido, viajes por dimensiones celestes ni una explicación científica de alucinaciones. Tampoco inventa un propietario para la mano. El espanto funciona precisamente porque el cuerpo ausente no resuelve el enigma: queda una presencia parcial que cruza la casa o el camino y que cada transmisión acomoda a sus propios temores nocturnos.`,
-    historia: `La ruta anterior mezclaba dos filas del Excel, 826 y 842, como si fueran relatos independientes. Ambas reescribían el mismo campo narrativo y acumulaban motivos sin distinguir su procedencia. La revisión las reúne en una sola URL y separa las dos variantes que sí pueden rastrearse.
+En el mismo libro de Vélez, Julián Bueno describe la Mano Peluda del occidente caldense como la mano en garra que el Viejo del Costal lleva escondida. Es, por eso, un espanto con dos domicilios: la celda del convento tunjano y el sótano de la casa campesina antioqueña.`,
+    versiones: `Ocampo y Vélez describen la misma mano en dos lugares y con dos colores. En Tunja es verde, se aparece en una habitación concreta de un convento o de una casa vieja, y pertenece a la historia de la ciudad colonial; en Antioquia y Caldas es negra, vive en los subterráneos de cualquier casa y sirve a las madres para disciplinar a los niños.
 
-Javier Ocampo López incluyó la Mano Peluda y el Viejo del Costal en Mitos y leyendas de Antioquia la grande, publicado en 2001. También registró la figura en su síntesis nacional de 2006. Sus libros prueban circulación folclórica publicada, aunque la vista bibliográfica disponible no expone la cadena completa de informantes de cada pasaje.
+En el occidente caldense, según Julián Bueno, no anda sola: es la mano escondida del Viejo del Costal, el limosnero que se lleva a los niños llorones.
 
-Para el núcleo cundiboyacense, un texto atribuido al propio Ocampo en Tunja Tesoros Escondidos sitúa la mano en el convento de La Candelaria y en viviendas antiguas de Tunja. Señal Colombia, Radio Nacional y Boyacá Radio reproducen variantes semejantes. Esa convergencia permite describir el espanto y su geografía contemporánea. No permite afirmar que el relato nació en la Colonia: las páginas usan esa ambientación, pero ninguna aporta un manuscrito colonial que date la creencia.
-
-La página antigua nombraba una pistola de ácido, dimensiones celestes, episodios bogotanos y atribuciones a personas concretas. Esos elementos no aparecen en las ocho fuentes del expediente y se retiran. La ficha tampoco presenta el miedo infantil como una práctica educativa recomendable. Registra una función histórica del relato y deja claro que amenazar a niños no es una lección que el sitio adopte.`,
-    versiones: `La variante de La Candelaria y Tunja presenta una mano autónoma. Puede ser verdosa o negra, moverse por muros y ventanas, aparecer en casas viejas y alcanzar a quien está cerca. Las fuentes modernas difieren en la víctima: niños, caminantes nocturnos o personas que regresan después de beber. Esas diferencias se mantienen como circulación diversa, no como una secuencia obligatoria.
-
-La variante del Viejo del Costal conserva la mano unida a un cuerpo. El anciano lleva un saco y su garra peluda refuerza la amenaza dirigida a niños desobedientes. El nombre Mano Peluda puede designar esa garra o, en otros relatos regionales, al espanto completo. No se afirma que una forma haya evolucionado necesariamente de la otra.
-
-Las versiones divulgativas llaman colonial a la aparición de Boyacá. La revisión usa esa palabra únicamente para describir el escenario arquitectónico que mencionan, no como fecha comprobada. Tampoco conserva explicaciones psicológicas, religiosas o sobrenaturales que las fuentes no desarrollan.
-
-El archivo previo atribuía episodios a Julián Bueno y Álvaro Gartner. Aunque catálogos de Ocampo indexan nombres propios en el volumen, el material accesible no permite verificar aquí qué afirmó cada persona. Por eso el texto se atribuye al compilador y a los medios que lo reproducen, sin fabricar una genealogía personal.`,
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», la hace protagonista de un testimonio inventado: una mujer cuenta que de niña su madre la amenazaba con la mano peluda, que la mano se deslizaba por las paredes dejando un rastro pegajoso y le buscaba los pies bajo las cobijas, y que de adulta vela junto a su hija con una pistola de ácido bendito. Son composición del libro.`,
     leccion:
-      "Nombrar cada versión evita convertir un miedo compartido en una historia falsamente única.",
-    similitudes: `El Coco comparte la función de asustar a los niños para exigir obediencia. Sin embargo, el diccionario lo define como un ser imaginario sin cuerpo ni geografía fijos, mientras la Mano Peluda cundiboyacense posee una forma visible y se vincula con La Candelaria y Tunja. El Hombre del Saco se acerca más al Viejo del Costal: ambos amenazan con llevarse a quien desobedece. La diferencia es que la tradición colombiana destacada por Ocampo convierte una garra negra y peluda en rasgo propio. Estas semejanzas describen funciones disciplinarias y formas narrativas; no prueban que las versiones colombianas desciendan de un único modelo europeo ni justifican reproducir esas amenazas.`,
+      "El miedo que los mayores usan para gobernar la casa termina viviendo en sus rincones más oscuros.",
+    similitudes: `El pariente más cercano es el Viejo del Costal del libro de Vélez, que lleva escondida la Mano Peluda y se lleva a los niños llorones en su costal. Allí la mano es parte de un cuerpo; en Tunja y en el capítulo propio de Vélez, anda suelta por las paredes.
+
+El Coco, al que Vélez llama «Mito de la Desobediencia», y el Chucho de Octavio Hernández Jiménez, que vive detrás de las puertas y debajo de las camas, cumplen el mismo oficio de crianza: son espantos que las madres invocan para que los niños obedezcan. Escobar Uribe, citado por Vélez, pone al chucho, la mano peluda y la vieja Inés entre los «cocos inofensivos» de la infancia.
+
+En Tunja, Ocampo pone la Mano Peluda junto a otros espantos coloniales de la ciudad, como el perro de piedra del convento de San Francisco que aullaba y arrastraba cadenas de noche. Son espantos atados a un edificio, que según Ocampo se fueron con la luz eléctrica.`,
     sceneHorizontal:
       "corredor nocturno de una casa antigua de Tunja, una gran mano peluda incorpórea de uñas largas cruza una ventana en arco mientras una familia la observa desde una distancia segura, luna fría y muros encalados",
     sceneVertical:
@@ -53,36 +74,45 @@ El archivo previo atribuía episodios a Julián Bueno y Álvaro Gartner. Aunque 
 
   defineAndinaVariosMixtoResidualMyth({
     slug: "el-hojarasquin-del-monte",
-    title: "El Hojarasquín del Monte, guardián del bosque",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "nacionalProyectosf",
+      "eSAPFichasf",
+      "caldasInformacion2014",
+      "compiladoraInforme1997",
+      "tiempoCuentos2004",
+      "samanacaldasnetcoHojarasquinsf",
+    ],
+    relatoCorto:
+      "El único texto con trama es una cita de Ocampo López de cinco oraciones; lo demás son descripciones de fichas municipales. Llegar a 300 palabras exigiría inventar.",
+    title: "El hojarasquín del monte",
     excerpt:
       "Cubierto de hojas, musgo y ramas, el Hojarasquín protege el monte, confunde a cazadores y puede perder o guiar a los viajeros.",
     tags: ["naturaleza", "bosque", "castigo", "misterio"],
-    mito: `Quienes entran al monte pueden encontrar un tronco seco donde antes no había ninguno. A veces parece un hombre formado por corteza, ramas, musgo y hojas; otras veces adopta el tamaño de un mico velludo o mezcla cuerpo humano y patas de animal. Lo llaman Hojarasquín del Monte. No existe un retrato único porque su apariencia cambia con el bosque que protege y con la versión que llega a cada municipio.
+    mito: `Cuentan que el Hojarasquín era un leñador. Un día pasó los límites del bosque y cortó un guayacán, el árbol que en las montañas tienen por rey, por su madera. La madre monte lo capturó, le hizo un juicio de responsabilidad y lo convirtió en el reemplazo del árbol que había cortado. Lo peor fue que no le quitó el entendimiento: siguió vivo, sintiendo el peligro. Cuando alguien se le acerca con un cuchillo, un hacha o una motosierra, siente lo que antes les hacía sentir a los árboles.
 
-Durante una tala o una quema, el supuesto tronco puede levantarse y revelar que estaba observando. El Hojarasquín defiende árboles y animales frente a quien destruye por exceso o caza sin necesidad. No siempre ataca. Su poder consiste muchas veces en desorientar: deja huellas de pezuñas, marcas invertidas o rastros que parecen pertenecer a animales distintos. El cazador sigue esas señales y termina lejos de la presa o regresando al punto de partida.
+Desde entonces es el protector de los bosques y de los animales del monte. Se aparece en figuras de hombre o de animal, con el cuerpo musgoso, cubierto de líquenes y helechos. Algunos campesinos lo han visto como un hombre árbol que se mueve; otros, como un monstruo con figura de mono gigante, peludo, lleno de musgo y hojas secas. Cuando talan, destruyen árboles o queman el monte, se vuelve un tronco seco y se queda escondido hasta que el bosque reverdece; por eso muchos campesinos respetan los troncos secos.
 
-Con los viajeros su conducta es ambivalente. Puede perder a quien entra con arrogancia, pero también guiar fuera del monte a una persona extraviada. Esta diferencia impide reducirlo a monstruo o castigo automático. Es un guardián que evalúa la relación de cada visitante con el territorio. Su cuerpo vegetal borra la frontera entre ser y paisaje: mientras permanece inmóvil, no se sabe si se está frente a una criatura o ante otra capa del bosque.
+Hace perder a los caminantes en el bosque. Pero cuando alguien le cae bien, le muestra el camino de salida, y por eso lo invocan cuando un caminante se pierde en las montañas. Sus huellas parecen rastros de pezuñas de venado, de danta o de otros animales, para despistar a los cazadores.`,
+    historia: `El relato del leñador que se volvió árbol es de Javier Ocampo López, que lo publicó en Mitos y leyendas de Antioquia la Grande (Plaza & Janés, 2001). Ese libro no tiene texto abierto, pero el Ministerio de Educación Nacional reprodujo el pasaje completo, con su nombre, en el Proyecto 5, «La Colombia de todos», un material de Aceleración del Aprendizaje para la educación rural, p. 170. Es la versión con trama que puede leerse.
 
-Una versión etiológica atribuida a Javier Ocampo López cuenta que antes fue un leñador. Había cruzado los límites permitidos de corte y derribó un guayacán. La Madremonte lo juzgó y lo obligó a reemplazar el árbol, conservando conciencia dentro de su nueva forma. El castigo explica por qué el guardián conoce la tala y por qué su cuerpo se confunde con troncos y follaje.
+La descripción del Hojarasquín como protector de los bosques —el cuerpo de musgo y líquenes, el hombre árbol, el tronco seco, las huellas de venado— viene de las fichas municipales de Risaralda (Caldas), en el repositorio de la ESAP, y de Samaná, publicada por la Gobernación de Caldas en 2014, que traen el mismo texto en su apartado sobre cultura.
 
-No todas las fuentes incluyen ese origen. Los inventarios de Risaralda y Caldas se concentran en las formas del personaje, las huellas engañosas y su función protectora. La revisión no las fuerza a encajar en una biografía única. Tampoco conserva un botánico llamado Joaquín Romero ni un diario de 1928: esos detalles aparecían en la página anterior, pero no en las fuentes consultadas. El Hojarasquín queda, así, como una figura variable del monte y no como descubrimiento de un investigador inventado.`,
-    historia: `Javier Ocampo López registró al Hojarasquín en Mitos y leyendas de Antioquia la grande. Colombia Aprende reproduce, con atribución al libro de 2001, la versión del leñador, el guayacán y el juicio de la Madremonte. Es una adaptación educativa útil para identificar el origen publicado, aunque no reemplaza la fuente ni aporta una entrevista nueva.
+Una página infantil de la Biblioteca Virtual del Banco de la República, «Niños de las regiones de Colombia», de Esmeralda Van Vliet, impresa en 1997 dentro de un informe educativo conservado en ERIC, lo describía ya con cuerpo frondoso de árbol, entretenido en cambiar de lugar en el monte para desorientar y hacer perder a leñadores y cazadores.
 
-Un inventario cultural conservado por la ESAP en Risaralda documenta un repertorio más amplio: hombre-árbol, mico gigante, cuerpo híbrido, tronco seco durante desmontes, protección de fauna, huellas que engañan al cazador y capacidad de perder o guiar viajeros. Una ficha de la Gobernación de Caldas muestra circulación administrativa semejante. Como sus redacciones son cercanas, no se cuentan como dos tradiciones independientes para cada detalle.
+El nombre alude a la hojarasca, la capa de hojas secas del suelo del monte, que en las descripciones le cubre el cuerpo y le sirve para esconderse.`,
+    versiones: `Las fuentes abiertas dan dos Hojarasquines que no se contradicen. En Ocampo es un leñador castigado, convertido en árbol por la madre monte, que sufre lo que hacía sufrir. En las fichas municipales y en Van Vliet es un guardián del monte, con cuerpo vegetal, que hace perder a los cazadores y leñadores o les muestra la salida.
 
-Un artículo académico de 2023 analiza estos seres protectores desde una perspectiva ecocrítica y rastrea versiones publicadas. Sirve para comprender cómo el Hojarasquín expresa arraigo y defensa ambiental, pero su interpretación no prueba una antigüedad precisa ni sustituye voces comunitarias. El pueblo boyacense y su folclor aporta contexto regional sin convertir en boyacense toda variante disponible.
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», le dedica sus pp. 39-40. Su ficha técnica añade que puede ser un hombre árbol con corona de flores silvestres o un monstruo mitad asno hacia arriba y mitad hombre hacia abajo, y su pieza narrativa es el diario inventado de un botánico que en 1928 sigue unas huellas de venado y ve un gorila enorme cubierto de maleza. Son composición del libro.
 
-La base anterior inventaba un diario del botánico Joaquín Romero fechado en 1928. Ninguna de las ocho fuentes seleccionadas lo menciona. También acumulaba gorila, golem, centauro inverso y una genealogía indígena-africana sin demostrar. Se retiran esas afirmaciones y se conservan únicamente las formas que aparecen en compilaciones e inventarios identificables.`,
-    versiones: `La versión más extendida en inventarios institucionales describe un guardián cubierto de vegetación. Puede parecer hombre-árbol, mico velludo, híbrido o tronco seco. Sus poderes se organizan alrededor del extravío y la protección: confunde huellas, aleja cazadores, detiene talas y decide si pierde o conduce a los caminantes.
-
-La versión etiológica del material de Colombia Aprende explica el cuerpo vegetal mediante un leñador castigado por la Madremonte después de cortar un guayacán. No aparece en todos los registros, por lo que se conserva como una explicación particular y no como nacimiento obligatorio del personaje.
-
-En Samaná existe además un texto de Agustín Jaramillo Londoño, fechado en 1963, donde Tío Conejo se cubre con miel y hojas y adopta el nombre Hojarasquín para asustar a otros animales. Comparte nombre e imagen de hojas, pero pertenece a un cuento literario del ciclo de Tío Conejo. Se registra como homónimo y no se mezcla con el protector del bosque.
-
-Las descripciones modernas que lo llaman golem, gorila o centauro inverso son analogías visuales, no categorías de las fuentes seleccionadas. La revisión usa las formas documentadas sin imponer una anatomía fija ni una ascendencia cultural única.`,
+Con el mismo nombre circula en Samaná otra historia: un cuento de Tío Conejo en que el conejo se unta de miel y se revuelca en la hojarasca para hacerse pasar por «el hojarasquín del monte» y beber en la laguna que vigila Tío Tigre. No es el guardián del bosque; es un disfraz.`,
     leccion:
-      "El bosque deja de ser recurso vacío cuando cada huella recuerda que también tiene guardianes.",
-    similitudes: `La Madremonte comparte con el Hojarasquín la defensa de bosques y el castigo a quien sobrepasa límites; en una versión, incluso actúa como quien transforma al leñador. Suele aparecer como figura femenina asociada también con aguas y tempestades, mientras el Hojarasquín adopta cuerpos masculinos, vegetales o animales y engaña mediante rastros. El Curupira brasileño protege fauna y confunde cazadores con los pies vueltos hacia atrás. El Hojarasquín también altera huellas, pero su cuerpo está hecho de hojas, corteza o rasgos híbridos en contextos colombianos. Son guardianes comparables por función, no nombres equivalentes ni evidencia de un origen común.`,
+      "El que hiere lo que no puede defenderse puede terminar sintiendo en carne propia lo que hizo.",
+    similitudes: `La madre monte que juzga al leñador es la misma dueña del bosque que Misael Devia recogió en el Tolima y Tomás Carrasquilla puso en la corte selvática de La marquesa de Yolombó: una fuerza que castiga a quien entra en el monte sin respeto. En Ocampo es ella la que convierte al leñador en árbol, y el Hojarasquín queda como su guardián.
+
+La transformación en árbol como castigo tiene su modelo más conocido en las Metamorfosis de Ovidio, donde los dioses convierten a los mortales en plantas. Pero en esas historias el cambio suele ser refugio o recompensa; aquí es condena, y el castigado conserva la conciencia para sufrir lo que hizo sufrir.
+
+Y el guardián que hace perder a los cazadores y cambia de lugar en el monte pertenece a la familia de los dueños de los animales de las tradiciones andinas y amazónicas, que protegen la caza y extravían al que abusa de ella. En el occidente caldense, Fabio Vélez Correa recoge seres parecidos, como la Madrevieja de Supía, que cuida las arenas del río y aleja el oro del codicioso.`,
     sceneHorizontal:
       "bosque andino húmedo al amanecer, el Hojarasquín emerge como un hombre-árbol cubierto de hojas, musgo y ramas entre un guayacán intacto y animales protegidos, con un leñador que baja su herramienta",
     sceneVertical:

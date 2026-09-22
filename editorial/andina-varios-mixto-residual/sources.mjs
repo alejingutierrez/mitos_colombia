@@ -253,6 +253,85 @@ export const andinaVariosMixtoResidualSources = {
     limitation:
       "Las semejanzas comparativas requieren evidencia material e histórica específica y no establecen una religión panamericana única.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  nacionalProyectosf: source({
+    title: "Proyecto 5: La Colombia de todos (Aceleración del Aprendizaje)",
+    author: "Ministerio de Educación Nacional",
+    year: "s. f.",
+    type: "material educativo",
+    url: "https://colombiaaprende.edu.co/sites/default/files/files_public/rural-adultos/1_Coleccion_Avanzada_Programa_de_Educacion_Rural_PER/4-Modelos_Educativos_Flexibles/3-Aceleracion%20_del_aprendizaje/Materiales_Estudiantes/Proyecto-5-La_Colombia_de_todos.pdf",
+    summary:
+      "Cita textual de Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001): el leñador que corta un guayacán y la madre monte convierte en árbol (p. 170).",
+    limitation:
+      "Es un material escolar que reproduce el pasaje; el libro de Ocampo no tiene texto abierto.",
+  }),
+  eSAPFichasf: source({
+    title: "Ficha municipal de Risaralda (Caldas)",
+    author: "Municipio de Risaralda (repositorio ESAP)",
+    year: "s. f.",
+    type: "documento municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/572d52ab-2933-4d57-97f6-e17f39163934/download",
+    summary:
+      "Ficha municipal de Risaralda (Caldas) que describe al Hojarasquín como protector de bosques y animales, hombre árbol o mono gigante musgoso, tronco seco y huellas de venado.",
+    limitation:
+      "El texto es casi literal de la ficha técnica del libro de 2004.",
+  }),
+  caldasInformacion2014: source({
+    title: "Información de Samaná",
+    author: "Gobernación de Caldas",
+    year: 2014,
+    type: "documento institucional",
+    url: "https://caldas.gov.co/media/pdf/2014/infomunicipios/INFORMACION%20DE%20SAMANa.pdf",
+    summary:
+      "Ficha de Samaná con el mismo texto sobre el Hojarasquín del Monte.",
+    limitation:
+      "Texto idéntico al de Risaralda; derivado.",
+  }),
+  compiladoraInforme1997: source({
+    title: "Informe Fulbright-Hays 1997 con «Niños de las regiones de Colombia» (Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro (compiladora), ERIC ED430849",
+    year: 1997,
+    type: "informe educativo",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La página infantil de Van Vliet (1997) lo describe con cuerpo frondoso de árbol, que cambia de lugar para hacer perder a leñadores y cazadores.",
+    limitation:
+      "Divulgación infantil impresa en un informe educativo.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Le dedica las pp. 39-40: ficha técnica (hombre árbol, monstruo mitad asno) y el diario inventado de un botánico de 1928.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+  }),
+  samanacaldasnetcoHojarasquinsf: source({
+    title: "El Hojarasquín del Monte",
+    author: "Portal municipal de Samaná (samanacaldas.net.co)",
+    year: "s. f.",
+    type: "página cultural municipal",
+    url: "https://www.samanacaldas.net.co/folclorver.php?idfolclor=4",
+    summary:
+      "Recoge un cuento de Tío Conejo en que el conejo se disfraza de «hojarasquín del monte» con miel y hojarasca, el homónimo que registra Versiones.",
+    limitation:
+      "Es otra tradición con el mismo nombre.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (edición ampliada en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «La Mano Peluda», con la Mano Negra y la cita de Escobar Uribe (p. 179), y en «El Viejo del Costal» la mano escondida del limosnero según Julián Bueno.",
+    limitation:
+      "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+  }),
 };
 
 const sourceKeysBySlug = {

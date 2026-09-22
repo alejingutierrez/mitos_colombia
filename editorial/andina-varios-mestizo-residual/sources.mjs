@@ -219,6 +219,96 @@ export const andinaVariosMestizoResidualSources = {
     limitation:
       "Proviene del Valle y Chocó y describe otro repertorio; la semejanza infantil no prueba identidad con Los Meneses.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Useche Toledo, González González, Guzmán Ruiz y Tunarrosa Echeverría (SENA)",
+    year: 2022,
+    type: "libro de memoria oral (SENA, La Dorada)",
+    url: "https://repositorio.sena.edu.co/bitstream/handle/11404/8024/Remembranzas_de_mis_abuelos.pdf?sequence=4&isAllowed=y",
+    summary:
+      "Capítulo «El Ánima Sola» (pp. 21-25): los testimonios de Anadelia Galvis (la abuelita que invocaba a las ánimas) y Hernán Aristizábal (la mujer de blanco de los caminos), de Manzanares.",
+    limitation:
+      "Recopilación comunitaria de 2022.",
+  }),
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II (sección 20, Mitos del Tolima: Misael Devia, «Folclor tolimense», 1962)",
+    author: "Eugenia Villa Posse (investigación y compilación); Misael Devia",
+    year: 1993,
+    type: "antología con texto reproducido de folclorólogo",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "En el «Cuento de ánimas» de Otero D'Costa (1936), sección 17, p. 56, el Ánima Sola figura entre las «tenebrosas historias» de Caldas, y las ánimas santandereanas visitan a los vivos para corregirlos.",
+    limitation:
+      "Es otro cuento; sólo nombra al Ánima Sola.",
+  }),
+  lopezpueblo1977: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López",
+    year: 1977,
+    type: "libro (cap. 8, pp. 120-126)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "Nombra al ánima sola entre los mitos estudiados en Boyacá (cap. 8).",
+    limitation:
+      "Sólo el nombre.",
+  }),
+  ariasFolclor1954: source({
+    title: "Folclor santandereano",
+    author: "Juan de Dios Arias",
+    year: 1954,
+    type: "libro (Biblioteca Santander, vol. XXIV)",
+    url: "https://www.ellibrototal.com/ltotal/?t=1&d=298",
+    summary:
+      "Edición digital de Folclor santandereano de Juan de Dios Arias, la obra de donde sale el relato.",
+    limitation:
+      "El visor es dinámico; se lee por secciones.",
+  }),
+  moralesFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales",
+    year: 2013,
+    type: "libro (reedición del artículo de 1962)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "Registra el Guango o guando del Tolima (pp. 75-77), el cortejo fúnebre que castiga a quien no carga a sus muertos, el paralelo de Similitudes.",
+    limitation:
+      "Es otro relato, del Tolima.",
+  }),
+  narinocuentos1988: source({
+    title: "Los cuentos de Pascual: mitos y leyendas del piedemonte llanero",
+    author: "Alberto Baquero Nariño",
+    year: 1988,
+    type: "libro",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2818/",
+    summary:
+      "Nombra al Fraile sin cabeza entre los mitos andinos llevados al piedemonte llanero, el espanto acéfalo que compara Similitudes.",
+    limitation:
+      "Es una enumeración.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (edición ampliada en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «La Vieja Colmillona»: los peones de la hacienda El Oro en Aguadas, el fogón, las brasas sin quemarse, el chocolate y el costal, y la descripción de la bata de esparto y las botas amarillas; en el mismo libro, la Rodillona y los Rescoldaos de Similitudes.",
+    limitation:
+      "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+  }),
+  compiladoraInforme1997: source({
+    title: "Informe Fulbright-Hays 1997 con «Niños de las regiones de Colombia» (Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro (compiladora), ERIC ED430849",
+    year: 1997,
+    type: "informe educativo",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La página infantil de Van Vliet (1997), región andina, trae a los Meneses: chiquillos que piden dulces o monedas en los caminos y hacen cosquillas hasta dejar a uno rendido de la risa, contados por chapoleras y peones.",
+    limitation:
+      "Divulgación infantil impresa en un informe educativo; dos frases.",
+  }),
 };
 
 const sourceKeysBySlug = {

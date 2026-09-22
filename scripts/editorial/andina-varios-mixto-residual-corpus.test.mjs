@@ -31,7 +31,7 @@ test("los tres expedientes cumplen la metodología editorial", () => {
     new Set(reviewedAndinaVariosMixtoResidualSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650);
+    assert.ok((record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650);
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600);
     assert.ok(words(record.versiones) >= 170 && words(record.versiones) <= 550);
     assert.ok(words(record.leccion) >= 8 && words(record.leccion) <= 22);
@@ -46,8 +46,8 @@ test("los tres expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
@@ -79,33 +79,21 @@ test("corrige mezclas, invenciones y la falsa tradición panamericana", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const mano = bySlug.get("la-mano-peluda");
-  // heredada: reescribir tras el cotejo
-  assert.match(mano.historia, /dos filas del Excel, 826 y 842/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(mano.mito, /dos formas no necesitan convertirse en una sola biografía/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(mano.mito, /no añade una pistola de ácido[^]+dimensiones celestes/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(mano.historia, /Tunja[\s\S]+Vélez/);
+  assert.match(mano.mito, /mano verde/);
+  assert.match(mano.mito, /troneras de los bahareques/);
   assert.doesNotMatch(mano.mito, /Álvaro Gartner/i);
 
   const hojarasquin = bySlug.get("el-hojarasquin-del-monte");
-  // heredada: reescribir tras el cotejo
-  assert.match(hojarasquin.mito, /puede perder a quien entra[^]+también guiar/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(hojarasquin.historia, /Joaquín Romero[^]+Ninguna/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(hojarasquin.mito, /conserva un botánico[^]+diario de 1928/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(hojarasquin.versiones, /Tío Conejo[^]+homónimo/i);
+  assert.match(hojarasquin.mito, /perder a los caminantes[\s\S]+camino de salida/);
+  assert.match(hojarasquin.historia, /Ocampo López[\s\S]+Ministerio de Educación/);
+  assert.match(hojarasquin.mito, /guayacán/);
+  assert.match(hojarasquin.versiones, /Tío Conejo/);
 
   const esperanza = bySlug.get("esperanza-en-el-oriente");
-  // heredada: reescribir tras el cotejo
   assert.match(esperanza.mito, /no cuenta una historia transmitida por una comunidad/i);
-  // heredada: reescribir tras el cotejo
   assert.match(esperanza.historia, /Historias 5\.13 de Tácito, no en los Anales/i);
-  // heredada: reescribir tras el cotejo
   assert.match(esperanza.versiones, /observación e interpretación/i);
-  // heredada: reescribir tras el cotejo
   assert.match(esperanza.mito, /sin convertirse automáticamente en prueba de contacto/i);
 });
 

@@ -96,6 +96,74 @@ export const boyacaMestizoResidualSources = {
     limitation:
       "El Dorado tiene historia regional y colonial propia; no contiene a Lope, Laserna, Buzagá ni el mohán cargado.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II (sección 20, Mitos del Tolima: Misael Devia, «Folclor tolimense», 1962)",
+    author: "Eugenia Villa Posse (investigación y compilación); Misael Devia",
+    year: 1993,
+    type: "antología con texto reproducido de folclorólogo",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Texto del cuento de Otero D'Costa (Leyendas, 1936) en la sección 17, pp. 12-18: Lope Badillo, el clérigo Benito de Laserna, la india vieja, el mohán del valle de Iza que se hace cargar y el agua bendita que lo derriba.",
+    limitation:
+      "Villa Posse lo presenta como leyenda oída y reelaborada; es un cuento firmado.",
+  }),
+  noesisMitos2018: source({
+    title: "Mitos y leyendas de la región Andina como textos",
+    author: "Universidad Industrial de Santander (Noesis)",
+    year: 2018,
+    type: "material didáctico",
+    url: "https://noesis.uis.edu.co/server/api/core/bitstreams/557e955c-c23c-4be5-9639-b7e9f5f2d339/content",
+    summary:
+      "Propone «El tesoro de Buzagá» como lectura escolar, «de Javier Ocampo López, adaptado por Rosmira Ardila Ortiz».",
+    limitation:
+      "Adaptación didáctica en lengua actual; sin narrador.",
+  }),
+  camargoHacia2015: source({
+    title: "Hacia una nueva comprensión de la historiografía colombiana: breve historia intelectual de Enrique Otero D'Costa (1883-1964)",
+    author: "Daniel Mauricio Preciado Camargo",
+    year: 2015,
+    type: "trabajo de grado (Universidad del Rosario)",
+    url: "https://repository.urosario.edu.co/handle/10336/10607",
+    summary:
+      "Estudio de la obra de Otero D'Costa y de sus Leyendas como historiografía de la vida cotidiana colonial.",
+    limitation:
+      "No analiza este cuento.",
+  }),
+  republicacoleccionsf: source({
+    title: "La colección de Enrique Otero D'Costa",
+    author: "Credencial Historia n.º 375 (Banco de la República)",
+    year: "s. f.",
+    type: "artículo de divulgación histórica",
+    url: "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-375/la-coleccion-de-enrique-otero-dcosta",
+    summary:
+      "Presenta al autor como historiador y coleccionista de documentos coloniales.",
+    limitation:
+      "No menciona este cuento.",
+  }),
+  lopezpueblo1977: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López",
+    year: 1977,
+    type: "libro (cap. 8, pp. 120-126)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "Registra en Boyacá el hueso de mohán venerado en Onzaga y el Cucacuy, guardián del dinero enterrado, los paralelos que nombra Similitudes.",
+    limitation:
+      "No trata el cuento de Otero.",
+  }),
+  republicaofrendasf: source({
+    title: "La ofrenda (exposición permanente del Museo del Oro)",
+    author: "Banco de la República, Museo del Oro",
+    year: "s. f.",
+    type: "exposición museográfica",
+    url: "https://www.banrepcultural.org/exposiciones/exposicion-permanente-del-museo-del-oro/la-ofrenda",
+    summary:
+      "Explica las ofrendas de oro muiscas —tunjos y otras piezas— depositadas en santuarios, lagunas y cuevas, el oro que el mohán promete.",
+    limitation:
+      "Es la exposición del museo; no trata el cuento.",
+  }),
 };
 
 /**
