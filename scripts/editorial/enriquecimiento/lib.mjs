@@ -621,6 +621,20 @@ export async function loadModules(communitySlug, options = {}) {
   } catch (error) {
     if (error.code !== "ENOENT" && error.code !== "ERR_MODULE_NOT_FOUND") throw error;
   }
+  // Módulos sueltos en la propia carpeta: `editorial/myths/bachue.mjs`, la ficha
+  // muisca que quedó fuera de `editorial/muisca/myths/` (--modulos=myths).
+  if (options.modulos) {
+    try {
+      const files = (await fs.readdir(dir)).filter((n) => n.endsWith(".mjs")).sort();
+      for (const file of files) {
+        const { default: data } = await import(pathToFileURL(path.join(dir, file)).href);
+        if (data?.slug) records.set(data.slug, data);
+      }
+      if (records.size) return records;
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
   return null;
 }
 
