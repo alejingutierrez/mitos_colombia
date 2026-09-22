@@ -225,7 +225,7 @@ if (closing < 0) throw new Error(`No encuentro el cierre de ${poolName}`);
 // módulo con «source is not defined», así que se mira antes qué usa el archivo.
 const envuelve = /\bfunction source\s*\(/.test(poolSrc) || /\bconst source\s*=/.test(poolSrc);
 const [abre, cierra] = envuelve ? ["source({", "}),"] : ["{", "},"];
-const poolCode = [...additions.entries()].map(([k, o]) => `  ${k}: ${abre}\n    title: ${js(o.title)},\n    author: ${js(o.author)},\n${o.year ? `    year: ${o.year},\n` : ""}    type: ${js(o.type)},\n    url: ${js(o.url)},\n    summary:\n      ${js(o.summary)},\n    limitation:\n      ${js(o.limitation)},\n  ${cierra}`).join("\n");
+const poolCode = [...additions.entries()].map(([k, o]) => `  ${k}: ${abre}\n    title: ${js(o.title)},\n    author: ${js(o.author)},\n${o.year ? `    year: ${typeof o.year === "number" ? o.year : js(o.year)},\n` : ""}    type: ${js(o.type)},\n    url: ${js(o.url)},\n    summary:\n      ${js(o.summary)},\n    limitation:\n      ${js(o.limitation)},\n  ${cierra}`).join("\n");
 if (additions.size) poolSrc = `${poolSrc.slice(0, closing)}\n\n  // ——— Búsqueda profunda ${new Date().toISOString().slice(0, 10)} ———\n${poolCode}${poolSrc.slice(closing)}`;
 await fs.writeFile(poolPath, poolSrc, "utf8");
 const rewriteMapPath = path.join(dir, "reescrituras.mjs");

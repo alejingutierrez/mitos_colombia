@@ -31,7 +31,7 @@ test("los seis expedientes cumplen la metodología editorial", () => {
     new Set(reviewedCaribeMixtoFinalSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650, `${record.slug}: mito ${words(record.mito)}`);
+    assert.ok((record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650, `${record.slug}: mito ${words(record.mito)}`);
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600, `${record.slug}: historia ${words(record.historia)}`);
     assert.ok(words(record.versiones) >= 170 && words(record.versiones) <= 550, `${record.slug}: versiones ${words(record.versiones)}`);
     assert.ok(words(record.leccion) >= 8 && words(record.leccion) <= 22, `${record.slug}: lección ${words(record.leccion)}`);
@@ -43,8 +43,8 @@ test("los seis expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= 8, `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(sources.every(({ url, summary, limitation }) => summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation)))));
     assert.equal(
       record.content,
@@ -71,39 +71,26 @@ test("restaura el corpus raizal y separa al Hombre Caimán", () => {
     );
   }
   const molino = bySlug.get("beda-nansi-beda-monkey-y-el-molino");
-  // heredada: reescribir tras el cotejo
-  assert.match(molino.mito, /molino[\s\S]+barra de hierro[\s\S]+Monkey/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(molino.mito, /molino[\s\S]+barra de hierro[\s\S]+lo mató/i);
   assert.doesNotMatch(molino.mito, /destinos|estrellas|ceremonias/i);
   const mico = bySlug.get("mico-y-nansi");
-  // heredada: reescribir tras el cotejo
-  assert.match(mico.mito, /cabeza seca de perro[\s\S]+rejo/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(mico.mito, /cabeza seca de perro[\s\S]+puerco/i);
   assert.doesNotMatch(mico.mito, /hilo de sol|palabras ancestrales/i);
   const baile = bySlug.get("tiger-y-el-baile-de-perros");
-  // heredada: reescribir tras el cotejo
-  assert.match(baile.mito, /baile de etiqueta[\s\S]+bunda[\s\S]+Tiger/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(baile.mito, /Tiger[\s\S]+bunda[\s\S]+perros/i);
   assert.doesNotMatch(
     baile.mito,
     /Gran Baile de Gala|plegaria y un hechizo|profecía de renacimiento/i,
   );
   const tigre = bySlug.get("tigre-y-nansi");
-  // heredada: reescribir tras el cotejo
-  assert.match(tigre.versiones, /primera versión[\s\S]+segunda/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(tigre.versiones, /La primera[\s\S]+La segunda[\s\S]+Friedemann/);
   assert.doesNotMatch(tigre.mito, /Oída Nansi/i);
   const perro = bySlug.get("un-perro-una-cabra-y-beda-tiger");
-  // heredada: reescribir tras el cotejo
-  assert.match(perro.mito, /perro y una cabra[\s\S]+violín[\s\S]+olla/i);
-  // heredada: reescribir tras el cotejo
+  assert.match(perro.mito, /cabra[\s\S]+Tigre se quedó en su orilla/i);
   assert.doesNotMatch(perro.mito, /zorro de ojos zafiros|luna.*disfrazada/i);
   const caiman = bySlug.get("el-hombre-caiman");
   assert.equal(caiman.category_path, "Caribe > Magdalena > Mestizo");
-  // heredada: reescribir tras el cotejo
-  assert.match(caiman.historia, /Virgilio Di Filippo[\s\S]+personaje de leyenda/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(caiman.historia, /fuente comunitaria Ette Ennaka/i);
+  assert.match(caiman.historia, /Virgilio Di Filippo[\s\S]+El Heraldo[\s\S]+1940/);
 });
 
 test("la matriz cubre seis rutas y explicita límites", () => {

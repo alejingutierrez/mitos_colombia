@@ -3,7 +3,25 @@ import { defineCaribeMixtoFinalMyth } from "./define-editorial-myth.mjs";
 const definitions = [
   defineCaribeMixtoFinalMyth({
     slug: "beda-nansi-beda-monkey-y-el-molino",
-    title: "Beda Nansi, Beda Monkey y el molino",
+    sourceKeys: [
+      "compMitos1993",
+      "beckwithJamaica1924",
+      "edJamaican1907",
+      "belloColombia",
+      "nacionalMiss1965",
+      "rodriguezcuentos2012",
+      "leipoldOur2002",
+      "mejiaOralidad2007",
+      {
+        key: "duncan2015",
+        summary:
+          "Estudia el origen de Anansi y las funciones míticas e ideológicas de la pareja Anancy-Tigre en la literatura oral afrodescendiente, con ejemplos de África, el Pacífico colombiano y Centroamérica, a lo largo de la esclavización y la lucha por la libertad.",
+        limitation:
+          "Cuadernos de Literatura 19 (38), Javeriana. Se consultó el resumen de la página del artículo; no trabaja con los cuentos de San Andrés recogidos por Friedemann.",
+      },
+      "idarragaLiteratura",
+    ],
+    title: "Beda Nansi, Beda Monkey y el Molino",
     tags: ["Anansi", "astucia", "engaño", "tradición oral"],
     focusKeywords: [
       "Beda Nansi y el molino",
@@ -12,37 +30,66 @@ const definitions = [
       "Anancy San Andrés",
       "tradición oral sanandresana",
     ],
-    mito: `Beda Nansi caminaba por el monte cuando encontró un molino. No era un edificio con sacos ni un molinero humano: era el molino mismo el que hablaba y agarraba a quien lo tocaba. Nansi puso una mano sobre él y quedó preso.
+    mito: `Nansi andaba por el monte, paseando sin rumbo, y se encontró con un molino. Lo tocó, y el molino lo agarró.
 
-—¿Quién eres tú? —preguntó.
+—¿Quién eres tú? —dijo Nansi.
 
-—Yo, molinero —respondió el molino.
+—Yo, molinero.
 
-Nansi pidió que lo dejara verlo. Entonces el molino lo soltó de golpe y lo arrojó lejos. Después del susto, Nansi entendió el mecanismo y pensó cómo usarlo. Preparó junto al lugar donde caían las víctimas una barra de hierro y comenzó a invitar animales. A cada uno le indicaba las palabras que debía decir: tocar el molino, preguntarle quién era y pedirle que se mostrara. El molino los lanzaba contra la trampa y Nansi se quedaba con la carne.
+—Bueno, déjame verte.
 
-Llegó Vaca. Confió en las instrucciones, fue atrapada y cayó donde Nansi quería. Después llegaron otros animales. Cada vez se repetían la pregunta, la respuesta y el golpe. Nansi creía haber encontrado una manera inagotable de alimentarse sin cazar.
+Y el molino hizo «uuuuu», lo hizo girar y lo tiró abajo, a un sitio cerca de allí. Nansi se puso a pensar. En ese rato Mico estaba subido en un árbol del monte, mirándolo todo. Nansi consiguió una barra de hierro y la clavó en la tierra, justo en el sitio donde la rueda del molino lo había lanzado.
 
-Beda Monkey observaba desde un árbol. Había visto el molino, la barra y el destino de quienes aceptaban el consejo. Cuando Nansi le propuso probar la máquina, Monkey no fingió ignorancia. Se acercó con cautela y dejó que el molino lo agarrara, pero se negó a pronunciar la frase final.
+Entonces pasó hermana Vaca, tan, tan, tan. Nansi se le acercó:
 
-—Vaca la dijo y murió. Los otros la dijeron y murieron. Yo no voy a decirla.
+—Hermana Vaca, ¿quieres dar un paseo agradable? Sólo tienes que ir hasta ese molino de allá y acercarte bastante. Él te agarra, y cuando te agarre le preguntas «¿quién eres tú?». Él te dice «yo, molinero», y tú le dices «bueno, déjame verte».
 
-Nansi insistió, pero Monkey señaló la barra y le pidió que la retirara. Para convencerlo de que no había peligro, Nansi se acercó a la trampa que él mismo había preparado. Monkey cambió la dirección del engaño: hizo que el experto mostrara lo que exigía a sus víctimas. El molino atrapó a Nansi, y la artimaña dejó de pertenecerle.
+Vaca lo hizo. El molino la lanzó, la clavó en la barra de hierro y la mató, y Nansi tuvo carne en abundancia.
 
-Así termina el cuento en su forma breve: quien estudió el engaño desde las ramas no necesitó más fuerza que su atención. Monkey no venció al molino ni lo convirtió en aliado. Comprendió la secuencia, se negó a repetirla y devolvió a Nansi el riesgo que este había organizado para los demás.`,
-    historia: `Esta pieza pertenece al repertorio oral raizal de San Andrés. Una antología conservada por FLACSO la publica junto con “Mico y Nansi” y otros materiales asociados con Miss Nansi, Old Nansi y Beda Nansi. El marco documental procede de la investigación de Nina S. de Friedemann y María Rosa de R., realizada por comisión del Instituto Colombiano de Antropología. En 1965 grabaron narraciones de habitantes negros del sureste de la isla, principalmente de Ground Road y Sound Bay, y trabajaron con Lynn Newball para transcribir y traducir formas del creole insular.
+Cuando se le acabó esa carne, volvió a ponerse junto al camino, y a todo el que pasaba le decía lo mismo del molino. Así mató a la cabra, al perro y a todo lo que pasó por ahí.
 
-El texto no entrega una fecha interna, un autor individual ni una explicación religiosa del molino. Su valor documental está en la voz oral: repeticiones, preguntas directas, acciones rápidas y una inversión final. La ficha anterior rellenaba esos silencios con “destinos”, estrellas, ceremonias, estaciones y una máquina “tan antigua como el tiempo”. Nada de eso aparece en el registro consultado. La revisión recupera el argumento y declara la mediación editorial sin disfrazar una narración breve como saga cosmogónica.
+Mico, mientras tanto, seguía en el monte mirando. Cuando le pareció que ya era suficiente, bajó como si pasara por casualidad.
 
-Anancy es una figura central de la memoria raizal. El Centro Cultural del Banco de la República explica que puede aparecer como araña o persona, con género variable, y actuar unas veces como vencedor y otras como víctima de sus propios trucos. Juliana Botero describe estas historias como relatos para contar, cantar y animar entre generaciones. En este cuento, Beda Monkey altera el patrón habitual: observa, aprende y obliga a Nansi a enfrentar su propia trampa. La clasificación “Mixto” se conserva solo porque el catálogo no dispone aún de una comunidad Raizal; la procedencia pública se nombra de forma explícita.`,
-    versiones: `La versión facsimilar consultada conserva los nombres Beda Nansi y Beda Monkey, el molino parlante, la barra de hierro, una sucesión de animales y el contraengaño del observador. La traducción y el OCR dejan frases difíciles, por lo que esta adaptación no pretende reconstruir palabra por palabra una grabación que no se ha escuchado directamente. Mantiene únicamente las acciones que la transcripción permite seguir.
+—Hola, hermano.
 
-El relato está emparentado con el ciclo amplio de Anancy, pero no debe confundirse con “Mico y Nansi”. En aquel cuento, Nansi roba un cerdo cazado por los perros de Mico y pierde el botín cuando el cazador inventa otro engaño. Aquí el objeto decisivo es un molino y Monkey aprende mirando desde un árbol. Tampoco es una variante de “Tigre y Nansi rivalizan en amores”: no hay boda, muchachas, caballo fingido ni promesa de oro.
+—Hola, hermano Mico. ¿Quieres dar un paseo agradable?
 
-Las grafías Anansi, Anancy, Nansi, Nancy y Beda Anancy circulan en el Caribe. Esa variación no demuestra personajes distintos. “Beda” corresponde a una forma creole de “brother”, pero traducir todos los nombres a “Hermano Araña” borraría el sonido insular que conserva la fuente. Por eso el título histórico de la URL se mantiene, mientras la página explica su lugar dentro de una tradición afrocaribeña viva y cambiante.`,
-    leccion: "Observar el patrón de un engaño permite detenerlo antes de repetirlo.",
-    similitudes: `Como “Mico y Nansi”, enfrenta dos inteligencias y termina con el embaucador desplazado por alguien que entiende su procedimiento. La diferencia es material: Mico recupera una presa mediante un sonido fingido; Beda Monkey estudia una máquina y se niega a pronunciar la fórmula mortal. “Tigre y Nansi” también invierte una relación de fuerza, pero allí la humillación pública y la rivalidad amorosa organizan el conflicto.
+—A mí no me importan los paseos.
 
-En las colecciones asante descritas por Smithsonian Folkways, Anansi puede ser héroe, villano o figura cómica. Esa ambivalencia ayuda a comparar funciones, no a afirmar que el molino llegó intacto desde Ghana. La Library of Congress documenta la circulación de Anansi entre África occidental y las Antillas; la versión sanandresana debe leerse como una elaboración raizal propia, registrada en creole y situada en una red caribeña, no como copia sin historia local.`,
+—Vamos, hombre dulce, se pasea muy dulcemente.
+
+Nansi se esforzaba tanto por meter a Mico en el molino que se acercó demasiado, y el molino lo agarró a él. Nansi sabía muy bien lo que venía después.
+
+—¡Señor! ¿Qué es esto?
+
+Preguntó quién era, y el molino contestó:
+
+—Yo, molinero.
+
+Pero Nansi no era capaz de decir «déjame verte».
+
+—No lo puedo decir. Vaca lo dijo y la mató, cabra lo dijo y la mató, y a mí también me va a matar. Ve tú y quita esa barra de hierro.
+
+Mico fue, jugó un rato con la barra como si tratara de sacarla, y volvió:
+
+—No la puedo sacar.
+
+Y Hermano Nansi tuvo que decirlo:
+
+—Bueno, déjame verte.
+
+Y el molino lo hizo girar, lo echó sobre la barra y lo mató.`,
+    historia: `Es un cuento raizal de San Andrés. Pertenece a los que Nina S. de Friedemann y María Rosa de R., del Instituto Colombiano de Antropología, grabaron en 1965 entre los isleños negros del sureste de la isla, sobre todo en Ground Road y Sound Bay. Se narró en creole, la lengua cotidiana de los raizales, y pasó al castellano gracias a intérpretes bilingües, con una transcripción revisada por Lynn Newball, de Providencia. Friedemann no dice quién lo contó.
+
+Apareció en su artículo «Miss Nansi, Old Nansi y otras narraciones del folclor de las islas de San Andrés (Colombia)», en la Revista Colombiana de Folclor, vol. IV, n.º 9 (1964-1965, impreso con retraso). La única edición abierta es la de Eugenia Villa Posse en Mitos y leyendas de Colombia, tomo II (Quito, IADAP, 1993), pp. 187-189, en castellano; Colombia, cuento popular no lo reproduce.
+
+El título dice «Beda Nansi, Beda Monkey»: Beda es la forma creole de brother, hermano, y Monkey es el mono. En el cuerpo del texto la traducción los llama Nansi, Hermano Nansi y Mico, y a las víctimas hermana Vaca, cabra y perro. Nansi es Anansi, la araña tramposa de los cuentos afrocaribeños de habla inglesa, que llegó a las islas con la gente esclavizada de África occidental y con el trato continuo con Jamaica. Es ese parentesco, y no una mezcla con lo hispano, lo que hace de este cuento un cuento raizal.`,
+    versiones: `En San Andrés sólo se conoce esta versión, y la traducción literal deja dos pasos oscuros. Al clavar la barra, la frase dice «él consigue una barra de hierro» justo después de nombrar a Mico en el árbol; por todo lo que sigue, quien la clava es Nansi. Y en la escena final no está claro a quién agarra el molino: la réplica que pide quitar la barra viene marcada como de Mico, pero sólo tiene sentido en boca del atrapado, y quien muere en la última línea es Hermano Nansi.
+
+En la versión jamaicana que Beckwith le oyó a George Parkes, en Mandeville, la cosa no es un molino sino algo escondido en un hueco del río, que se llama a sí mismo Fling-a-mile y lanza a sus víctimas a una milla. Anansi clava seis horquetas de hierro y seis de madera donde cayó; las víctimas son Cerdo, Cabra y Perro. Monkey se niega a meter la mano, y cuando Anansi hace el gesto de meter la suya, Monkey se la empuja adentro. En el aire Anansi le suplica que corra a sacar las horquetas; Monkey corre sólo hasta la mitad, se queda mirando, y luego mete el cuerpo de Anansi en su morral para comérselo. En San Andrés el castigo es el mismo, pero sin el empujón ni el morral, y la escena de la barra se parece más a la versión que Walter Jekyll publicó en 1907, donde el que mira finge ir a arrancar las estacas y vuelve diciendo que no pudo.`,
+    leccion:
+      "La trampa que uno arma para los demás espera también al que la armó.",
+    similitudes: `Es el cuento que Martha Warren Beckwith publicó en Jamaica Anansi Stories (1924) con el número 33, «Fling-a-mile», y que llama «very popular» en Jamaica. El pariente más cercano está en Jamaican Song and Story (1907), de Walter Jekyll: en «Wheeler», Annancy mete la mano en un tronco de abejas, algo lo agarra y contesta «Me, Wheeler» a la pregunta de quién es; Annancy le pide que lo haga girar para verlo, sale lanzado una milla y clava estacas de hierro donde cayó. Puss mira desde un árbol, finge no ver el hueco hasta que la mano de Annancy resbala adentro, y cuando Annancy le suplica que arranque las estacas, se esconde, vuelve y dice que no pudo. Beckwith compara el tipo con dos cuentos bulu de Camerún recogidos por Schwab: en uno la tortuga enseña una trampa a los animales uno por uno hasta caer en ella; en otro la tortuga desbarata la trampa del pangolín. Lina Pochet anota en San Andrés un «Anancy and the Molasses Mill», del que sólo da el título. Y entre los cuentos de Nansi grabados en la isla, el de Mico y el cerdo tiene el mismo reparto: Mico mira, calla y le devuelve a Nansi su propio engaño.`,
     excerpt:
       "Beda Monkey observa el molino con el que Nansi atrapa animales y vuelve la trampa contra quien la preparó.",
     seoTitle: "Beda Nansi y el molino: cuento raizal",
@@ -58,7 +105,34 @@ En las colecciones asante descritas por Smithsonian Folkways, Anansi puede ser h
 
   defineCaribeMixtoFinalMyth({
     slug: "mico-y-nansi",
-    title: "Mico y Nansi: el cerdo disputado",
+    sourceKeys: [
+      {
+        key: "compMitos1993",
+        summary:
+          "Es la única obra abierta que trae el cuento, en la p. 187: los perros de Mico que cazan cerdos salvajes, Nansi que espanta al perro y dice que la presa la agarró su perro, la cabeza seca de perro, el rejo largo con que Mico finge que el dueño lo azota, y la huida de Nansi, que deja el puerco.",
+        limitation:
+          "Reproduce sólo la versión castellana, traducida por bilingües, y el OCR del PDF tiene erratas («Oída Nansi» por Old Nansi). No nombra narradores. IADAP, Quito. P. 187.",
+      },
+      "beckwithJamaica19242",
+      "belloColombia",
+      "parsonsFolkLore1923",
+      "nacionalMiss1965",
+      "rodriguezcuentos2012",
+      "leipoldOur2002",
+      "mejiaOralidad2007",
+      {
+        key: "duncan2015",
+        summary:
+          "Estudia el origen de Anansi y las funciones míticas e ideológicas de la pareja Anancy-Tigre en la literatura oral afrodescendiente, con ejemplos de África, el Pacífico colombiano y Centroamérica, a lo largo de la esclavización y la lucha por la libertad.",
+        limitation:
+          "Cuadernos de Literatura 19 (38), Javeriana. Se consultó el resumen de la página del artículo; no trabaja con los cuentos de San Andrés recogidos por Friedemann.",
+      },
+      "edJamaican1907",
+      "idarragaLiteratura",
+    ],
+    relatoCorto:
+      "El texto de San Andrés tiene unas 190 palabras de narración: la cacería, el robo, la cabeza de perro, el rejo y la huida. Llegar a 300 exigiría inventar escenas o explicar lo que el cuento deja al oyente. Se cuenta entero, con sus réplicas, y sin rellenar.",
+    title: "Mico y Nansi",
     tags: ["Anansi", "astucia", "engaño", "tradición oral"],
     focusKeywords: [
       "Mico y Nansi",
@@ -67,53 +141,32 @@ En las colecciones asante descritas por Smithsonian Folkways, Anansi puede ser h
       "tradición oral de San Andrés",
       "Beda Nansi",
     ],
-    mito: `Mico tenía buenos perros para cazar animales salvajes. Cuando los soltaba tras los cerdos del monte, ellos seguían el rastro hasta el valle y sujetaban la presa mientras su dueño llegaba.
+    mito: `Una vez Mico tenía unos perros que sabían cazar cerdos salvajes. Eran buenos perros. Él los azuzaba detrás de los puercos del monte, y los perros bajaban al valle y agarraban al cerdo.
 
-Una vez, Nansi estaba abajo y vio cómo los perros alcanzaban un cerdo. Corrió, los espantó y se apoderó del animal. Cuando Mico llegó, encontró a Nansi junto a la presa y le preguntó qué había ocurrido.
+Nansi estaba allá abajo mirando cómo el perro cazaba al puerco. Salió corriendo, espantó al perro, cogió el cerdo y se quedó con él. Tenía a mano una cabeza seca de perro. Cuando Mico llegó abajo, donde estaba el cerdo, Nansi le dijo:
 
-Nansi levantó una cabeza seca de perro, usada como máscara o señuelo, y afirmó que aquel era su perro.
+—Es mi perro el que agarró al puerco. ¿No lo ves? Es mi perro el que lo agarró.
 
-—Fue mi perro el que agarró al puerco. ¿No lo ves?
+Mico no le discutió. Lo dejó allá abajo pelando el puerco, y se le ocurrió una idea. Dio la vuelta y tejió un rejo tan largo como pudo. ¡Pow! Entonces hizo como si el dueño del cerdo lo estuviera azotando a él, y a cada latigazo, ¡pow!, gritaba:
 
-La explicación era absurda, pero Mico no discutió. Dejó a Nansi pelando el cerdo y se retiró como si aceptara la pérdida. Mientras caminaba, preparó un rejo lo más largo que pudo. Volvió por otro lado y lo hizo restallar con fuerza.
+—¡Ay, no soy yo, no soy yo! Es Hermano Nansi, que está allá abajo pelando tu puerco. ¡No soy yo! ¡Pow! Ve allá abajo y encuentras a Hermano Nansi pelando tu puerco.
 
-—¡Pow!
+Nansi se enderezó de un salto:
 
-Nansi oyó el latigazo. Mico fingió hablar con el dueño verdadero del cerdo, una presencia que no se veía.
+—¡Tú mientes! ¿Cuándo se ha oído que una cabeza de perro cace puerco? ¡Tú mientes!
 
-—No fui yo. Hermano Nansi está allá abajo pelando tu puerco. Ve y encuéntralo.
+Y salió corriendo y dejó el puerco. Mico bajó, se llevó el animal y se fue a su casa, muy contento.`,
+    historia: `Es un cuento raizal de San Andrés, uno de los que grabaron en 1965 Nina S. de Friedemann y María Rosa de R., del Instituto Colombiano de Antropología, entre los isleños negros del sureste de la isla, sobre todo en Ground Road y Sound Bay. Se contó en creole y se tradujo al castellano con ayuda de hablantes bilingües; la transcripción se hizo con Lynn Newball, de Providencia. Friedemann no dice quién lo contó ni en cuál de los dos caseríos.
 
-Volvió a sonar el rejo.
+Salió en su artículo «Miss Nansi, Old Nansi y otras narraciones del folclor de las islas de San Andrés (Colombia)», en la Revista Colombiana de Folclor, vol. IV, n.º 9, fechado en 1964-1965 e impreso después. Hoy se lee en una sola obra abierta: Mitos y leyendas de Colombia, tomo II, de Eugenia Villa Posse (Quito, IADAP, 1993), que lo reproduce en la p. 187 sólo en castellano. La otra antología que trae a Friedemann, Colombia, cuento popular, no lo incluye.
 
-—¡Pow!
+La traducción es literal y conserva la voz del que contaba: el «usted sabe» dirigido a quien escucha, el «pow» del rejo hecho con la boca y una nota del traductor entre paréntesis, «a modo de máscara», sobre la cabeza seca del perro. Nansi es Anansi, la araña de los cuentos afrocaribeños de lengua inglesa, y Mico ocupa aquí el lugar que en Jamaica tiene Tacoomah, el compañero de cacería. Por la lengua en que se grabó y por el repertorio al que pertenece es un cuento raizal, no mestizo.`,
+    versiones: `En San Andrés sólo se conoce esta versión, de la p. 187 de Villa Posse, y es muy escueta. Deja dos cosas al oyente. La primera es qué hace Nansi con la cabeza de perro: el texto dice sólo que la «recoge», y el traductor añade «a modo de máscara». La segunda es el sentido del rejo: Mico lo hace sonar como si el dueño del cerdo lo estuviera castigando a él, y así le hace creer a Nansi que alguien viene a cobrar el animal.
 
-La seguridad de Nansi desapareció. Si alguien venía a reclamar la presa, lo encontraría con el cuchillo en la mano y el animal ajeno a sus pies. Se levantó y trató de sostener su mentira:
-
-—¡Tú mientes! ¿Cuándo se ha oído que una cabeza de perro cace puercos?
-
-Al decirlo, Nansi deshizo su propio argumento. Acababa de reconocer que la cabeza seca no podía haber perseguido ni sujetado al animal. No esperó respuesta. Corrió y dejó el cerdo.
-
-Mico descendió al valle, recogió la presa conseguida por sus perros y regresó a casa. No necesitó golpear a Nansi ni demostrar ante un juez quién había cazado. Repitió el método de su adversario: inventó un dueño invisible, hizo creíble la llegada con el sonido del rejo y dejó que el ladrón se contradijera.
-
-El cuento acaba ahí, con la economía de una narración oral. Nansi intenta apropiarse del trabajo de otros mediante una prueba falsa. Mico recupera lo suyo mediante otra ficción. La victoria no declara a uno eternamente justo y al otro eternamente malo; muestra una competencia en la que cada palabra puede volverse contra quien la pronuncia.`,
-    historia: `“Mico y Nansi” aparece en una compilación de folclor colombiano que reproduce materiales del ciclo insular de Anancy. La transcripción abre con la caza de cerdos salvajes, conserva fórmulas conversacionales como “usted sabe” y registra los “pow” del rejo como parte de la actuación oral. Esos rasgos importan: el relato no depende de grandes descripciones, sino del ritmo, la voz y el sonido que hacen visible a un supuesto perseguidor.
-
-El contexto documental remite a las grabaciones realizadas por Nina S. de Friedemann y María Rosa de R. en San Andrés en 1965. Sus informantes pertenecían a distintos grupos de edad y vivían principalmente en Ground Road y Sound Bay. Las investigadoras notaron que las personas mayores recordaban los cuentos con facilidad y que jóvenes ayudaban a padres y abuelos a evocarlos. La transmisión aparece así como una práctica intergeneracional, no como una pieza anónima caída fuera de todo lugar.
-
-La página anterior convertía a Mico en un cazador casi sobrenatural, añadía “ceremonias”, estrellas, hilos de sol, palabras ancestrales y un bosque que juzgaba a los personajes. La fuente no contiene esos elementos. También transformaba la cabeza seca de perro en un artefacto tallado con poderes simbólicos. En la transcripción funciona como evidencia falsa dentro del engaño de Nansi. Esta revisión conserva la extrañeza del objeto sin adjudicarle un ritual.
-
-Anancy sigue siendo una figura identitaria del archipiélago y un trickster moralmente variable. En este episodio no logra imponerse: Mico responde con un ardid sonoro. Nombrar esa derrota evita reducir el ciclo a la fórmula “Nansi siempre vence” y respeta la flexibilidad que documentan fuentes raizales y comparativas.`,
-    versiones: `La versión publicada es muy breve. Los perros de Mico capturan un cerdo, Nansi los ahuyenta, exhibe una cabeza seca de perro y reclama la presa. Mico fabrica un rejo, hace creer que se acerca el dueño y recupera el animal cuando Nansi huye. La adaptación amplía la legibilidad, pero no cambia esa secuencia ni añade un castigo posterior.
-
-La cabeza seca admite una dificultad de traducción. La edición incluye la aclaración “a modo de máscara”, mientras el diálogo la trata como si Nansi pretendiera presentarla como perro cazador. No se afirma que fuera máscara ceremonial, talla mágica o reliquia. El efecto cómico depende precisamente de que el objeto no pueda haber cazado nada.
-
-Anancy cambia de nombre, género y forma según quien narra. En algunas historias es araña; en otras actúa como persona y recibe el tratamiento Beda, “hermano”. Aquí la transcripción en español usa pronombres masculinos, pero eso no fija para todo el ciclo un género inmutable. Tampoco convierte a Mico en un humano: ambos personajes pertenecen al mundo flexible de los cuentos de animales.
-
-La ficha no se unifica con “Beda Nansi, Beda Monkey y el molino”. Aunque ambas enfrentan a Monkey o Mico con Nansi, una gira alrededor de una presa robada y un látigo; la otra, alrededor de un molino y una trampa observada desde un árbol. Son episodios distintos del mismo repertorio.`,
-    leccion: "Una mentira puede derrumbarse cuando obliga al mentiroso a contradecirse.",
-    similitudes: `El parentesco más directo es con “Beda Nansi, Beda Monkey y el molino”: en ambos, Mico o Monkey observa el método de Nansi y responde sin recurrir a mayor fuerza. Aquí crea un dueño invisible con el chasquido del rejo; allí evita una fórmula y devuelve una trampa mecánica. “Tigre y Nansi” comparte la competencia entre engaño y poder, pero introduce cortejo, boda y humillación pública.
-
-Los relatos asante y caribeños reúnen con frecuencia a Anansi con adversarios animales. Smithsonian Folkways documenta esa variabilidad moral y cómica. La comparación no autoriza a identificar este cerdo, la cabeza seca o el rejo en una versión ghanesa específica. La particularidad sanandresana está en la transcripción, el creole que la rodea y el modo performativo de los sonidos.`,
+Las versiones jamaicanas llenan esos huecos. En la que Beckwith oyó a Richard Morgan, en las montañas de Santa Cruz, Anansi se ha comido su propio perro y sólo le queda la cabeza, que lleva en el morral; cuando el perro de Tacoomah agarra una vaca, él clava encima la cabeza y grita que la presa es suya. Tacoomah restalla el látigo gritando que no fue él, y Anansi, muerto de miedo, le contesta con la misma burla que en San Andrés: que nadie ha oído que una cabeza de perro cace. En Beckwith la presa es una vaca del blanco y el castigo tiene dueño; en la isla es un cerdo del monte.`,
+    leccion:
+      "La mentira que se defiende con un argumento termina desmentida por ese mismo argumento.",
+    similitudes: `Martha Warren Beckwith publicó el mismo cuento en Jamaica Anansi Stories (1924) con el número 19, «Dog and Dog-head». Anota que se cuenta «everywhere in Jamaica», que no encontró versión africana y que Elsie Clews Parsons lo oyó una y otra vez en Carolina del Sur, en las Sea Islands, y nunca en Carolina del Norte; de esa distribución deduce que la forma completa es relativamente moderna. Distingue dos partes, las mismas que en San Andrés: el dueño de la cabeza de perro reclama la presa, y el compañero la recupera fingiendo que el dueño viene a castigar el robo. A veces hay un comienzo en que cada uno recibe un perro y el glotón se come el suyo empezando por la cola hasta que sólo queda la cabeza. Dentro de los cuentos de Nansi grabados en la isla, el par más cercano es el del molino, donde también es Mico quien mira, espera y le devuelve a Nansi su trampa.`,
     excerpt:
       "Nansi roba el cerdo cazado por los perros de Mico, pero un rejo y un dueño invisible hacen caer su mentira.",
     seoTitle: "Mico y Nansi: cuento raizal de astucia",
@@ -129,6 +182,38 @@ Los relatos asante y caribeños reúnen con frecuencia a Anansi con adversarios 
 
   defineCaribeMixtoFinalMyth({
     slug: "tiger-y-el-baile-de-perros",
+    fuentesAgotadas: "Se buscó el cuento del baile de perros y los bundas en Beckwith 1924, Pochet 2012, Leipold 2002, Botero 2007 y en la búsqueda web del tipo ATU 200B; el único paralelo del tipo fuera de agregadores es el volumen estonio. Nueve fuentes sin relleno.",
+    sourceKeys: [
+      "compMitos19932",
+      "friedemannColombiasfc19831985",
+      "estonioEesti2020",
+      "beckwithJamaica19243",
+      {
+        key: "rodriguezcuentos2012",
+        summary:
+          "Señala la fiesta y el banquete como escenario recurrente de los cuentos de Anancy del Caribe occidental, donde los animales humanizados se reúnen a celebrar (p. 193), con títulos como «Anancy, Tigre y sus amigos asisten a una fiesta». Sitúa el baile de etiqueta de los perros dentro de ese gusto isleño por la fiesta de animales.",
+        limitation:
+          "Revista de Lenguas Modernas 17 (Universidad de Costa Rica), pp. 189-207. Trabaja títulos, no textos; no trae este cuento.",
+      },
+      "leipoldOur20022",
+      {
+        key: "mejiaOralidad2007",
+        summary:
+          "Describe la convivencia del creole, el inglés y el español en la oralidad isleña y la función de las historias de la araña, hechas para contarse y animarse. Ayuda a entender por qué un cuento del mismo repertorio circulaba también en español.",
+        limitation:
+          "Universitas Humanística (Javeriana). Contexto sobre oralidad; no trata este cuento.",
+      },
+      {
+        key: "duncan2015",
+        summary:
+          "Analiza al Tigre como figura del poderoso en la oralidad afrodescendiente de África, el Pacífico colombiano y Centroamérica. Da el fondo del Tiger que aquí basta con aparecer en la puerta para deshacer la fiesta.",
+        limitation:
+          "Cuadernos de Literatura 19 (38), pp. 65-78. Estudio general; no conoce este cuento.",
+      },
+      "aprendeMiss19641965",
+    ],
+    relatoCorto:
+      "El texto de partida es un solo párrafo de unas 110 palabras (Villa Posse 1993, t. II, p. 190). Llegar a 300 exigiría inventar invitados, música, diálogos o lo que hizo Tiger después, y nada de eso está. El relato ordena y da ritmo a lo que hay, sin añadir hechos.",
     title: "Tiger y el baile de perros",
     tags: ["perros", "humor", "identidad", "tradición oral"],
     focusKeywords: [
@@ -138,39 +223,30 @@ Los relatos asante y caribeños reúnen con frecuencia a Anansi con adversarios 
       "por qué los perros se olfatean",
       "folclor sanandresano",
     ],
-    mito: `Hubo una vez un baile de etiqueta entre perros. Todos llegaron muy elegantes y dispuestos a pasar la noche con música. La entrada, sin embargo, tenía una regla extraña: cada perro debía quitarse el bunda —la parte de debajo de la cola— y colgarlo en un clavo junto a la puerta.
+    mito: `Una noche hubo entre los perros un baile de etiqueta. Todos llegaron al sitio muy elegantes, y en la entrada los esperaba la regla de la casa: para pasar, cada perro tenía que quitarse el bunda, la parte de debajo de la cola, y colgarlo de un clavo junto a la puerta. Así lo fueron haciendo, uno tras otro, y adentro empezó la fiesta.
 
-Los invitados obedecieron. Dejaron sus bundas alineados y entraron al salón. Adentro comenzaron el baile y la conversación. Sin aquello que habían colgado, ninguno se preocupaba por reconocer a los demás de la manera acostumbrada. Era una fiesta ordenada, con cada cosa en su lugar.
+Estaban en pleno baile cuando llegó Tiger.
 
-Entonces apareció Tiger.
+Se armó la confusión. Los perros se atropellaron hacia la puerta para escapar, y ninguno tuvo tiempo de buscar en los clavos el bunda que le pertenecía. Cada cual agarró el primero que tuvo a mano, cualquiera, y salió corriendo.
 
-No llegó como invitado ni esperó a que le explicaran la regla. Su sola presencia produjo confusión. Los perros corrieron hacia la salida, empujándose para escapar. Frente a la puerta encontraron todos los bundas mezclados, pero no tuvieron tiempo de buscar cuál correspondía a cada uno. Cada perro agarró el primero que tuvo a mano, se lo puso y siguió corriendo.
+Por eso, desde entonces, cada vez que un perro se encuentra con otro, o con varios, se huelen el bunda a ver si por fin dan con el suyo. Y muchas veces, cuando uno cree que ya encontró el propio, se arman las peleas y las discusiones que oímos entre perros.`,
+    historia: `Es la última narración de la sección que Eugenia Villa Posse dedicó a San Andrés en el segundo tomo de Mitos y leyendas de Colombia (IADAP, Quito, 1993), sección 22, página 190, y lleva bajo el título una advertencia entre paréntesis: «Relato hecho en español». Es la única pieza de la sección marcada así. Las otras cuatro pasaron del creole isleño al castellano por traducción; ésta se dijo en español desde el principio.
 
-Cuando el peligro pasó, descubrieron que casi ninguno llevaba el suyo. Unos tenían uno demasiado grande; otros, uno pequeño; muchos no podían recordar quién había tomado cuál. Volver al salón y ordenar los clavos ya era imposible.
+Viene del artículo de Nina S. de Friedemann «Miss Nansi, Old Nansi y otras narraciones del folclor de las islas de San Andrés», publicado en el n.º 9 de la Revista Colombiana de Folclor, con fecha de 1964-1965, a partir de las cintas que ella y María Rosa de R. grabaron en 1965 para el Instituto Colombiano de Antropología. En la introducción de ese trabajo, que reproduce la antología Colombia, cuento popular, Friedemann explica que en Ground Road y Sound Bay los adultos hablaban entre sí la lengua de la isla, que eran los adolescentes quienes se defendían en español con los forasteros, y que muchas conversaciones pasaron por intérpretes jóvenes de la familia.
 
-Desde aquella noche, explica el cuento, cada vez que un perro se encuentra con otro se acerca a olerle el bunda. No es un saludo sin propósito: está comprobando si por fin ha encontrado el que perdió en el baile. A veces cree reconocerlo y trata de reclamarlo. El otro se resiste. Por eso se oyen discusiones y peleas entre perros después de que se examinan.
+Es un cuento de por qué: toma una costumbre que cualquiera ha visto en la calle y le inventa un origen de fiesta arruinada. Su palabra clave, bunda, la glosa el propio texto: «parte de debajo de la cola». Después del párrafo, en la misma página, empiezan unas rimas burlescas sobre Miss Nansi, un canto y una adivinanza, que son piezas aparte.`,
+    versiones: `Del baile de los perros de San Andrés se conoce una sola transcripción, la de la página 190 de Villa Posse, y es breve: la fiesta, la regla del clavo, la llegada de Tiger, la huida y la costumbre que queda. Lo que cambia de un lugar a otro es el objeto perdido y el motivo de la búsqueda.
 
-La narración no cuenta qué hizo Tiger después, quién organizó la fiesta ni cómo se podían quitar y volver a poner aquellas partes. Su humor nace de aceptar por un momento la regla imposible y convertir una conducta cotidiana de los perros en consecuencia de una celebración arruinada.
+El motivo tiene nombre en el catálogo internacional de cuentos: tipo ATU 200B, «Por qué los perros se huelen unos a otros», vecino de los tipos 200 y 200A. La antología de cuentos de animales del Archivo de Folclor Estonio (2020) resume dos formas de ese tipo en Estonia. En una, el león prepara un banquete al que sólo le falta la pimienta; el perro sale a buscarla, se queda a vivir con el hombre y no vuelve, y desde entonces los perros se huelen para encontrar al que se fue. En la otra, los perros viven en el cielo, uno se tira un pedo, todos son arrojados a la tierra y todavía buscan al culpable. En el tipo 200A, que el mismo volumen también registra, los perros mandan un emisario con una petición para mejorar su suerte; el emisario se come el documento, escrito en cuero, y no se atreve a volver.
 
-En la fuente, el cuento termina antes de unas rimas sobre Miss Nansi, un canto acompañado con movimientos y una adivinanza registrada a un hombre mayor de Sound Bay. Esos materiales comparten la colección folclórica, pero no forman un hechizo ni una profecía del baile. La historia pública conserva su frontera: perros, clavos, una irrupción de Tiger y una búsqueda que continúa cada vez que dos animales se encuentran.`,
-    historia: `Nina S. de Friedemann publicó “Tiger y el baile de perros” dentro de un conjunto de narraciones, rimas y adivinanzas recogidas en la isla de San Andrés. La propia fuente indica que parte del material fue grabado en 1965 entre habitantes de Ground Road y Sound Bay. Este cuento fue relatado en español, dato importante dentro de una colección que también conserva piezas en creole con traducción literal.
+En San Andrés no hay culpable ni emisario: hay un depredador que entra en la fiesta, y la búsqueda es de cada perro por su propia parte, cambiada en la carrera.`,
+    leccion:
+      "Una costumbre de todos los días puede guardar el recuerdo de una fiesta que terminó en desbandada.",
+    similitudes: `El mejor pariente cercano del cuento está en Jamaica, en la misma familia de relatos de la que salieron los de Nansi. Martha Warren Beckwith recogió en Jamaica Anansi Stories (1924), dentro del número 40, una variante que tituló «The Dance»: Anansi y Assono organizan un baile, invitan a la cabra y al perro, y se sientan cada uno junto a una puerta para que los invitados no puedan salir. Como en San Andrés, el baile de los animales es la trampa, y la fiesta se deshace en fuga.
 
-La secuencia pertenece al tipo de relato etiológico humorístico: imagina una causa para una conducta animal observada. No explica el origen del mundo, una ceremonia real ni la identidad espiritual de los perros. “Bunda” designa en el registro la zona bajo la cola. Su uso cómico y corporal no necesita elevarse a símbolo metafísico para tener valor cultural.
+El otro paralelo es el tipo ATU 200B, documentado en Estonia por el Archivo de Folclor del Museo Literario Estonio: un banquete de animales, una ausencia que nadie repara y la búsqueda eterna por el olfato. El esquema es el mismo en el Báltico y en el Caribe, y lo que varía es qué se perdió.
 
-La ficha anterior situaba un “Gran Baile de Gala Canina” bajo una luna mágica, interpretaba la regla como abandono de “identidades terrenales” y anexaba cantos y una adivinanza como plegaria y profecía de redención. La publicación de Friedemann dispone esos materiales uno después de otro, pero no afirma que las rimas sobre Miss Nansi liberen a los perros ni que el canto sea un hechizo. Esa fusión se retira.
-
-El contexto sí permite una lectura histórica más sobria. Friedemann observó diferencias generacionales en lo que las personas deseaban grabar: mayores recordaban cuentos, adultos jóvenes preferían canciones jamaicanas y jóvenes escolarizados cantaban en español o repertorio religioso. Juliana Botero, décadas después, describe cómo la oralidad raizal se relaciona con infancia, escuela, creole e identidad. El cuento es una pieza dentro de esa ecología cambiante de narración, no una reliquia inmóvil.`,
-    versiones: `La versión publicada en la antología de folclor colombiano es compacta y fue “relato hecho en español”. Los perros asisten a un baile de etiqueta, cuelgan sus bundas, huyen cuando llega Tiger, toman cualquiera al salir y desde entonces se olfatean buscando el propio. Las peleas actuales serían intentos fallidos de recuperación.
-
-El motivo de partes corporales intercambiadas circula en diversos repertorios humorísticos, pero esta ficha no construye una genealogía global sin evidencia textual. Tampoco cambia “Tiger” por un jaguar zoológico o un tigre asiático. En los cuentos afrocaribeños, Beda Tiger es un personaje fuerte y recurrente; su nombre forma parte del repertorio, no de una ficha de fauna.
-
-Las rimas de Miss Nansi, el canto “Ahnansi” y la adivinanza que siguen en la fuente deben conservarse como piezas contiguas, no como episodios del baile. La página anterior los integraba en una misma noche y les atribuía una función de redención. La revisión los menciona solo para explicar el montaje documental.
-
-No se unifica este cuento con “Un perro, una cabra y Beda Tiger”. Ambos incluyen perro y Tiger, pero allí hay refugio, música, amenaza, fuga y una olla junto al río. Aquí hay una fiesta colectiva y una explicación cómica de por qué los perros se olfatean.`,
-    leccion: "El desorden colectivo deja consecuencias que cada individuo intenta reparar después.",
-    similitudes: `“Un perro, una cabra y Beda Tiger” comparte animales parlantes, música y la amenaza de Tiger, pero su desenlace celebra la cooperación de dos viajeros. “Tiger y el baile de perros” explica una conducta animal mediante una confusión colectiva. “Mico y Nansi” también usa humor corporal y sonido, aunque su conflicto es la apropiación de una presa.
-
-Fuera del archipiélago existen numerosos cuentos etiológicos que explican rasgos de animales. La semejanza de función no demuestra que todos procedan de una fuente única. En esta ficha importan la atribución a la colección sanandresana, el relato en español dentro de un archivo multilingüe y la proximidad —no fusión— con rimas y adivinanzas de Sound Bay.`,
+Dentro de la recolección de Friedemann, Tiger cumple aquí el papel que tiene en los cuentos de Nansi: el grande y temible que irrumpe. Pero en éste no hay araña que lo burle; basta con que aparezca en la puerta.`,
     excerpt:
       "Tiger irrumpe en un baile de perros y provoca el intercambio que explicaría por qué aún se olfatean y discuten.",
     seoTitle: "Tiger y el baile de perros: cuento raizal",
@@ -186,7 +262,38 @@ Fuera del archipiélago existen numerosos cuentos etiológicos que explican rasg
 
   defineCaribeMixtoFinalMyth({
     slug: "tigre-y-nansi",
-    title: "Tigre y Nansi rivalizan en amores",
+    sourceKeys: [
+      {
+        key: "compMitos1993",
+        summary:
+          "Trae el cuento completo en castellano, pp. 185-187: la boda de Hermano Tigre con la hija del rey, la calumnia de Old Nansi, la montura, la brida, la fusta y la espuela, y la boda de Nansi; la variante «recogida en el norte de la isla y dicha por un individuo que conoce el español», con la copla «Unna gal»; y el episodio de las escamas de sábalo y el falso oro.",
+        limitation:
+          "Reproduce sólo la versión castellana, traducida por bilingües, y el OCR del PDF tiene erratas («Oída Nansi» por Old Nansi). No nombra narradores. IADAP, Quito. Pp. 185-187.",
+      },
+      {
+        key: "belloColombia",
+        summary:
+          "Trae la introducción de Friedemann: la comisión del Instituto Colombiano de Antropología (Friedemann y María Rosa de R.), las grabaciones de 1965 a habitantes negros de Ground Road y Sound Bay, los grupos de edad que recordaban o ayudaban a recordar los cuentos de Miss Nansi, la transcripción con Lynn Newball, de Providencia, y el uso del creole. Da además el creole de este cuento con su traducción literal (pp. 125-128), que añade la frase de Tigre «Si aún tengo que cargarte, tú tienes que ir».",
+        limitation:
+          "Sin fecha de edición (su bibliografía llega a 1982). La URL antigua de FLACSO Andes da 403; ésta abre. No nombra narradores.",
+      },
+      "beckwithJamaica19244",
+      "nacionalMiss1965",
+      {
+        key: "duncan2015",
+        summary:
+          "Estudia el origen de Anansi y las funciones míticas e ideológicas de la pareja Anancy-Tigre en la literatura oral afrodescendiente, con ejemplos de África, el Pacífico colombiano y Centroamérica, a lo largo de la esclavización y la lucha por la libertad.",
+        limitation:
+          "Cuadernos de Literatura 19 (38), Javeriana. Se consultó el resumen de la página del artículo; no trabaja con los cuentos de San Andrés recogidos por Friedemann.",
+      },
+      "rodriguezcuentos2012",
+      "parsonsFolkLore1923",
+      "leipoldOur2002",
+      "mejiaOralidad2007",
+      "edJamaican1907",
+      "idarragaLiteratura",
+    ],
+    title: "Tigre y Nansi",
     tags: ["Anansi", "astucia", "rivalidad", "tradición oral"],
     focusKeywords: [
       "Tigre y Nansi",
@@ -195,41 +302,70 @@ Fuera del archipiélago existen numerosos cuentos etiológicos que explican rasg
       "tradición oral San Andrés",
       "Nansi trickster",
     ],
-    mito: `Beda Tiger estaba a punto de casarse con la hija del rey. El ponqué ya estaba horneado y la casa se preparaba para la boda cuando Old Nansi supo la noticia.
+    mito: `Hermano Tigre iba a casarse con la hija del rey. En la casa de la novia ya tenían el ponqué horneado y todo listo para el matrimonio cuando Old Nansi se enteró. Fue hasta allá y les dijo a los padres:
 
-Nansi visitó a la familia y dijo que no debían entregar la muchacha a Tiger porque Tiger era el caballo de paseo de su padre. Cuando el novio llegó, encontró el matrimonio suspendido. Corrió a casa de Nansi y exigió que fuera a probar la acusación.
+—¿Ustedes van a dejar que su hija se case con Tigre, si él es el caballo de pasear de mi padre?
 
-Nansi fingió estar enfermo. Tiger respondió que lo llevaría cargado si era necesario. El supuesto enfermo aceptó, pero pidió una montura, una brida, una fusta y espuelas para viajar. Impaciente, Tiger permitió cada objeto.
+Cuando Tigre llegó a la boda, le contaron lo que Nansi andaba diciendo, y que por eso ya no le podían dar a la muchacha. Tigre salió disparado para la casa de Nansi.
 
-Al principio Nansi se quejaba y pedía caminar despacio. Cerca del patio ordenó acelerar. Frente a la familia clavó las espuelas, hizo sonar la fusta y gritó:
+—Nansi, tienes que venir y probar eso delante de ellos.
 
-—¡Les dije que era el caballo de paseo de mi padre, y ahora es mi caballo!
+Nansi se metió en la cama y se hizo el enfermo, muy enfermo.
 
-Saltó del lomo. Tiger, humillado, se internó en el monte y Nansi quedó como vencedor del cortejo.
+—Aunque tenga que cargarte, tú vas —dijo Tigre.
 
-En el norte de la isla se registró otra forma. Tiger y Nansi visitaban la misma casa y competían por las muchachas, sin boda real. Nansi repetía que Tiger era caballo para desacreditarlo. Cuando volvió a montar al rival y proclamó su mentira frente a ellas, Tiger corrió hacia la selva. Nansi tuvo tanto miedo de la reacción que se aferró a una rama alta y no podía bajar. La burla seguía funcionando, pero el triunfo ya no era completo.
+—Muy bien, hermano. Déjame ponerte esa cosita que llaman montura.
 
-La publicación añade después otro encuentro. Tiger buscaba a Nansi para matarlo. Lo sorprendió mirando unas escamas de sábalo bajo el agua, brillantes como plata y oro. Nansi señaló aquel reflejo y propuso bucear por un tesoro. Le pidió a Tiger traer un bejuco y una piedra grande; lo amarró para que descendiera. Tiger saltó arrastrando la roca y Nansi escapó.
+—Ponla, ponla.
 
-Los tres movimientos muestran el mismo desequilibrio: Tiger posee fuerza y reputación; Nansi controla la definición de la escena. Convierte una ayuda en prueba de servidumbre, una persecución en búsqueda de oro y una victoria amorosa en peligro inmediato. El cuento no dice que esa astucia sea siempre justa. Su humor deja visible tanto la humillación del fuerte como el riesgo creado por el embaucador.`,
-    historia: `La antología “Colombia, cuento popular” publica este ciclo bajo el título “Tigre y Nanci rivalizan en amores” y lo atribuye a la sección de Nina S. de Friedemann sobre San Andrés y Providencia. Conserva primero una transcripción en creole con traducción literal, luego una variante recogida en el norte de la isla por un narrador que conocía español y finalmente un episodio breve de persecución y falso oro.
+—Y esa cosita que llaman la brida.
 
-El marco procede de grabaciones de 1965. Friedemann explica que trabajó con habitantes negros del sureste de San Andrés, principalmente Ground Road y Sound Bay, y con personas de varias edades. La traducción contó con Lynn Newball. Esa información no identifica al narrador de cada fragmento, pero sí demuestra que las diferencias no son invención moderna de esta página: la propia publicación distingue lugares, lenguas y finales.
+—Ponla, ponla.
 
-Nansi pertenece al ciclo afrocaribeño de Anancy. Quince Duncan estudia su relación con Tiger dentro de la literatura oral afrodescendiente y propone funciones históricas e ideológicas para la pareja. Claudia Leipold recupera la interpretación de Oakley Forbes: la figura pequeña y astuta quiebra reglas frente al adversario fuerte. Esa lectura es útil, pero no debe transformarse en una clave única. En este relato también hay crueldad, competencia por mujeres y un engaño que pone a Tiger en peligro.
+—Ahora, yo estoy enfermo, tú sabes, pero déjame traer esa cosita que llaman la fusta, sólo para ir paseando.
 
-La versión anterior de la web añadía una selva mágica, un río que hablaba, una doncella de ojos nocturnos y un “destino” que organizaba cada escena. Además escribía “Oída Nansi”, error producido por leer “Old Nansi”. La revisión recupera Old Nansi, preserva el ponqué, la montura, la brida, la fusta, las espuelas y las escamas de sábalo, y retira la ornamentación sin fuente.`,
-    versiones: `La primera versión presenta una boda: Tiger pretende casarse con la hija del rey y Nansi consigue que la familia lo rechace. Al montar al rival con arreos completos, convierte en imagen pública la calumnia de que Tiger es un caballo. El final favorece a Nansi, quien se casa con la muchacha.
+—Lo que sea, pero tú tienes que ir, tienes que ir a probarlo. Ponte todo.
 
-La segunda fue recogida en el norte de San Andrés y narrada por una persona que conocía español. Ya no hay hija de rey ni matrimonio preparado: ambos visitan una casa y compiten por varias muchachas. La demostración ecuestre se repite, pero Nansi termina atrapado en una rama por miedo, mientras Tiger desaparece en la selva. El embaucador gana reputación y pierde seguridad.
+—Y esa cosita que llaman la espuela.
 
-El episodio del falso oro puede leerse como continuación de la enemistad: Tiger busca matar a Nansi, quien usa el brillo de escamas de sábalo para convencerlo de bucear atado a una piedra. La edición lo coloca después de las dos versiones, pero su comienzo abrupto aconseja presentarlo como pieza contigua, no como desenlace obligatorio de ambas.
+—Ponla, ponla, lo que sea. Súbete a la espalda de Tigre.
 
-Las formas Beda Tiger, Tiger, Tigre, Nansi, Nanci y Old Nansi reflejan transcripción, traducción y variación oral. Se conservan cuando ayudan a entender la fuente; no se convierten en personajes biográficamente distintos.`,
-    leccion: "La fuerza pierde ventaja cuando acepta sin pensar las reglas del embaucador.",
-    similitudes: `“Beda Nansi, Beda Monkey y el molino” también termina cuando alguien comprende una regla antes que el poderoso, pero allí Monkey desarma la trampa de Nansi. En “Tigre y Nansi”, es Nansi quien define cada objeto y gesto. “Mico y Nansi” ofrece un contrapeso: otro personaje puede usar una ficción mejor y obligarlo a huir.
+Arrancaron. Nansi se quejaba a cada paso:
 
-La pareja Anancy-Tiger circula ampliamente en la oralidad afrocaribeña documentada por Quince Duncan. También recuerda cuentos latinoamericanos de Tío Conejo y Tío Tigre, donde el pequeño monta o engaña al fuerte. Esa similitud de motivos no borra la especificidad raizal: esta versión conserva creole, una boda con ponqué, una variante norteña y un registro insular fechado.`,
+—¡Ay, dolor, dolor! Hermano, no camines tan rápido, no camines tan rápido.
+
+Tigre caminaba y caminaba con él encima. Cuando ya casi llegaban, Nansi le dijo:
+
+—Ahora puedes caminar un poquito más rápido.
+
+Y Hermano Tigre apuró el paso. Apenas entraron al patio, Nansi le metió la fusta y la espuela: ¡pow, pow! Y les gritó a todos:
+
+—¡Yo les dije que era el caballo de pasear de mi padre, muchacha, y ahora es mi caballo de pasear!
+
+Saltó del lomo, Tigre se metió en el monte, y Nansi fue y se casó con la muchacha.
+
+Pero Tigre no olvidó. Lo buscaba para agarrarlo y matarlo en cuanto pudiera. Un día Nansi estaba descuidado, mirando hacia abajo, a una cueva con agua donde pelan sábalo, y las escamas brillaban en el fondo como plata y oro. Ahí apareció Tigre.
+
+—¡Ay, te agarré! Ahora sí te agarré.
+
+—Ahora me vas a matar... Pero mira el oro allá abajo, mira el oro. No me mates, hombre, saquemos oro. Tú traes un bejuco largo y una piedra grande, yo te la amarro, y tú buceas oro para mí y para ti.
+
+Nansi amarró a Tigre a la piedra, y Tigre saltó al agua arrastrando la roca detrás de él.
+
+Y Nansi corrió.`,
+    historia: `Es un cuento raizal de San Andrés. Lo grabaron en 1965 Nina S. de Friedemann y María Rosa de R., investigadoras del Instituto Colombiano de Antropología, entre habitantes negros del sureste de la isla, sobre todo en los caseríos de Ground Road y Sound Bay. Se contó en el creole de la isla, que los isleños llaman inglés, y lo transcribieron con ayuda de Lynn Newball, de Providencia. Friedemann no dice quién contó cada pieza: sólo que los mayores de cuarenta años recordaban los cuentos sin esfuerzo y que los muchachos de diez a veinte ayudaban a sus padres y abuelos a recordar los de Miss Nansi.
+
+El texto salió en el artículo «Miss Nansi, Old Nansi y otras narraciones del folclor de las islas de San Andrés (Colombia)», en la Revista Colombiana de Folclor, vol. IV, n.º 9, un número fechado en 1964-1965 que se imprimió después de las grabaciones. Aquí se sigue la reproducción castellana de Eugenia Villa Posse en Mitos y leyendas de Colombia, tomo II (Quito, IADAP, 1993), pp. 185-187, cotejada con Colombia, cuento popular (IADAP / Convenio Andrés Bello), pp. 125-128, que trae la transcripción en creole y una traducción literal. De ahí sale la frase de Tigre «aunque tenga que cargarte», que falta en la otra antología.
+
+Nansi es Anansi, la araña que engaña en los cuentos de Jamaica, de las Antillas anglófonas y de la costa caribe centroamericana, y que viene de los cuentos akán de África occidental. Tigre o Beda Tiger —Beda es brother, hermano— es su rival de siempre. Que el cuento sea raizal, y no mestizo, lo dicen la lengua en que se grabó y la familia de cuentos a la que pertenece.`,
+    versiones: `El folio reúne tres piezas. La primera es la de la boda con la hija del rey, contada en creole y traducida palabra por palabra; es la que tiene los arreos pedidos uno a uno y la última palabra de Nansi, que se casa con la muchacha.
+
+La segunda se recogió en el norte de la isla y la contó, según Friedemann, «un individuo que conoce el español». Ahí no hay boda ni rey: Beda Tiger y Nansi visitan la misma casa y Tiger va ganando con las muchachas, hasta que Nansi les dice que es el caballo de su padre y dejan de hacerle caso. Tiger lo quiere llevar al pueblo aunque sea montado, y Nansi llega a la casa espoleándolo y canta en creole «Unna gal, unna gal, ain't I tell you that Tiger is mi fader riding harse?». Tiger huye a la selva y no vuelve a salir, y a Nansi le da tal susto que se agarra de una rama tan alta que ya no puede bajarse.
+
+La tercera, la de las escamas de sábalo y el falso oro, viene a continuación sin título y empieza con «Entonces»: puede ser el final de la variante norteña o un cuento aparte. Villa Posse y Colombia, cuento popular la traen igual, y las dos terminan con Nansi corriendo, sin decir qué fue de Tigre en el agua.`,
+    leccion:
+      "Quien pide los arreos uno por uno termina montado sobre el orgullo del que tenía prisa.",
+    similitudes: `En Jamaica es uno de los cuentos de Anansi más contados. Martha Warren Beckwith lo publicó en Jamaica Anansi Stories (1924) con el número 3, «Tiger as Riding-horse», en la versión de William Forbes, de Dry River: Tiger corteja a dos señoritas, Anansi les dice que es el viejo caballo de su padre, se hace el que no puede caminar y pide silla, brida, fusta y espuelas con una excusa para cada una; entra galopando al patio y remata con «Po' Tiger dead an' gone». Beckwith anota que es «very common in Jamaica» y que en una versión de Santa Cruz la silla se queda pegada para siempre en la espalda de una araña de manchas amarillas, el tacoomah. La misma nota lo compara con cuentos hausa, donde la araña ensilla a la hiena, y yoruba, donde la tortuga monta al elefante, y con una versión venezolana en que el conejo cruza un río a lomos del tigre. Quince Duncan estudia la pareja de Anancy y el tigre en la literatura oral afrodescendiente, con ejemplos de África, el Pacífico colombiano y Centroamérica, y Lina Pochet anota, entre los cuentos publicados en Anancy in Limon (Costa Rica), dos titulados «Tiger, Anancy's Father Old Riding Horse».`,
     excerpt:
       "Nansi hace pasar a Tiger por caballo ante la familia de la novia; la fuente conserva dos variantes y una fuga junto al agua.",
     seoTitle: "Tigre y Nansi rivalizan en amores",
@@ -245,6 +381,54 @@ La pareja Anancy-Tiger circula ampliamente en la oralidad afrocaribeña document
 
   defineCaribeMixtoFinalMyth({
     slug: "un-perro-una-cabra-y-beda-tiger",
+    fuentesAgotadas: "Se buscaron otras versiones colombianas del cuento del perro, la cabra y el Tigre en Pochet 2012 (inventario de 143 títulos), Leipold 2002, Botero 2007 y la bibliografía raizal del Banco de la República; Dittmann 2008 (Providencia) no está abierto en línea. No aparece otra transcripción: nueve fuentes sin relleno.",
+    sourceKeys: [
+      "friedemannColombiasfc198319852",
+      "compMitos19933",
+      "beckwithJamaica19245",
+      {
+        key: "aprendeMiss19641965",
+        summary:
+          "Identifica el artículo en que Friedemann publicó este cuento, en la Revista Colombiana de Folclor, vol. IV, n.º 9, con el rango de páginas 215-233.",
+        limitation:
+          "Sólo se consultó su ficha: el visor dice que la visualización del recurso no está disponible. No contiene el cuento.",
+      },
+      {
+        key: "rodriguezcuentos2012",
+        summary:
+          "Inventario de cuentos de Anancy en San Andrés, Providencia y Limón con sus narradores (p. 199: varios «Beda Nancy, Beda Tiga» y «Breda Tiga and Breda Nancy» contados en San Andrés), y lectura de la fiesta y el banquete como escenario que reúne a los animales (p. 193). Sitúa el cuento del perro, la cabra y el Tigre dentro de un repertorio isleño que seguía vivo en el siglo XXI.",
+        limitation:
+          "Da títulos, no textos; ningún título del inventario es este cuento. Revista de Lenguas Modernas 17 (Universidad de Costa Rica), pp. 189-207.",
+      },
+      {
+        key: "leipoldOur20022",
+        summary:
+          "Resume el trabajo de Friedemann de 1965: los viejos recordaban los cuentos y los contaban delante de sus nietos, los niños ayudaban a entender el creole, y el narrador se transforma en cada personaje durante la ejecución. Con Edwards (1973) describe la narración nocturna en círculo pequeño. Da el marco de ejecución en que se contaba un cuento cantado como éste.",
+        limitation:
+          "Paráfrasis de segunda mano (Philipps-Universität Marburg), en un castellano traducido con errores; no trae este cuento.",
+      },
+      {
+        key: "mejiaOralidad2007",
+        summary:
+          "En su nota 11 da los nombres isleños de la araña (Anancy, Nansi, Old Anancy, Bredda Anancy, Hemano Nansi) y dice que sus historias se hicieron para ser contadas, cantadas y animadas. Explica el tratamiento «Beda/Bredda» del título y la ejecución cantada del canto de violín y tambor.",
+        limitation:
+          "Universitas Humanística (Javeriana). Contexto sobre la oralidad isleña; no menciona este cuento.",
+      },
+      {
+        key: "duncan2015",
+        summary:
+          "Estudia la pareja Anancy/Tigre en la literatura oral afrodescendiente de África, el Pacífico colombiano y Centroamérica, y la función del Tigre como el poderoso al que se burla. Sirve para leer al Beda Tiger de este cuento, que aquí no es burlado por la araña sino por un perro.",
+        limitation:
+          "Cuadernos de Literatura 19 (38), pp. 65-78. Estudio comparativo general; no trata San Andrés ni este cuento.",
+      },
+      {
+        key: "idarragaLiteratura",
+        summary:
+          "Reúne la bibliografía de la literatura raizal, entre ella la colección de historias de Anansi de Providencia editada por Marcia Dittmann (2008). Es la puerta para buscar otras versiones isleñas del perro, la cabra y el Tigre.",
+        limitation:
+          "Lista bibliográfica; no contiene cuentos ni menciona éste.",
+      },
+    ],
     title: "Un perro, una cabra y Beda Tiger",
     tags: ["animales", "astucia", "supervivencia", "tradición oral"],
     focusKeywords: [
@@ -254,45 +438,58 @@ La pareja Anancy-Tiger circula ampliamente en la oralidad afrocaribeña document
       "Beda Tiger",
       "creole sanandresano",
     ],
-    mito: `Un perro y una cabra viajaban cuando comenzó a llover y cayó la noche. Necesitaban refugio, así que llamaron a la casa de Beda Tiger. Tiger se alegró al verlos: pensó que aquella noche tendría comida.
+    mito: `Llovía, y la noche se les vino encima a mitad de camino. Un perro y una cabra que iban de viaje tocaron en una casa para descansar hasta el día siguiente, y la casa era la de Beda Tiger. El dueño los hizo pasar muy contento. Creía que esa noche iba a tener negocio.
 
-Antes de dormir propuso música. Tomó un violín y entregó el tambor al perro. Mientras tocaba, Tiger cantó una frase que dejaba oír su intención: el patrón le había dado abundancia y con los visitantes tenía suficiente. Perro entendió. Respondió con el tambor, acomodando las palabras al ritmo:
+Antes de acostarse, dijo, habría música y diversión. Tigre tomó un violín y al perro le entregó el tambor. Pulsó las cuerdas y se puso a cantar al paso del violín:
 
-—Eso crees tú, eso crees tú; mentiroso, mentiroso.
+—Massa give me, Massa give me, with Beda we got plenty.
 
-La cabra escuchó el intercambio. Cuando terminó el baile, todos se acostaron. Tiger se durmió rápido; perro permaneció despierto. Tocó a cabra y le dijo que debían irse. Salieron en silencio.
+Dame, Patrón, dame, Patrón, que con Beda tenemos suficiente. El perro entendió muy bien qué era lo que iba a alcanzar en esa casa. Agarró el tambor y le contestó al mismo compás, golpe por golpe:
 
-Al despertar, Tiger descubrió la fuga y siguió sus rastros. Estaba a punto de alcanzarlos cuando los viajeros llegaron a un río. Perro sabía nadar y cruzó. Cabra temía el agua y quedó en la orilla, balando mientras Tiger se acercaba.
+—You tink so, you tink so, you liar, though, you liar, though.
 
-Perro vio una olla grande junto al río y le indicó a cabra esconderse debajo. Cuando Tiger llegó, encontró a perro en la otra margen. Tiger tampoco quería entrar al agua.
+Eso crees tú, eso crees tú, mentiroso, mentiroso. Y siguieron tocando los dos, el violín por un lado y el tambor por el otro, cada uno diciendo lo suyo.
 
-—¿Quieres que el río quede seco para venir a cogerme? —preguntó perro—. Toma esa olla vieja sin mirar dentro y lánzala hasta acá.
+Se acabó el baile y todos se fueron a la cama. Tigre se durmió enseguida. El perro no pegó el ojo. La cabra dormía; el perro la tocó despacio y le dijo:
 
-Tiger creyó que la olla serviría para vaciar el río o acercarse a su presa. La levantó sin revisar y la arrojó. En el aire, cabra salió de debajo con un balido y alcanzó la orilla donde esperaba perro.
+—Vámonos.
 
-Tiger miró a los dos viajeros juntos al otro lado. Había tenido a cabra escondida bajo sus manos y él mismo la había transportado fuera de peligro.
+Y salieron a la noche mojada. Cuando Tigre despertó y encontró que se habían ido, se echó a seguirles el rastro. Ya casi los tenía cuando llegaron a un río. El perro sabe nadar: se tiró al agua y pasó al otro lado. A la cabra no le gusta el agua, y se quedó en la orilla balando. El perro vio venir a Tigre y le avisó que allí, en la orilla, había una olla grande y vieja:
 
-—Señor, pusiste mi comida en mis manos y la dejé ir —lamentó.
+—¡Métete debajo de esa olla!
 
-Perro y cabra siguieron su camino. No derrotaron a Tiger peleando. Primero escucharon el doble sentido de su música, luego aprovecharon el sueño, las capacidades distintas de cada uno y un objeto común. El tambor sirvió para advertir; la olla, para cruzar a quien no podía nadar.`,
-    historia: `“Un perro, una cabra y Beda Tiger” fue publicado por Nina S. de Friedemann a partir de material recogido en San Andrés. La antología “Colombia, cuento popular” conserva el relato primero en creole y después en una traducción española literal. La investigadora explica que las cintas fueron grabadas en 1965, principalmente entre habitantes de Ground Road y Sound Bay, y que Lynn Newball colaboró en una transcripción que resultaba difícil incluso para hablantes de inglés no familiarizados con las formas insulares.
+La cabra se metió. Tigre llegó a la orilla, pero él también le tiene miedo al agua, y se quedó mirando al perro, que lo esperaba del otro lado.
 
-La lengua no es un defecto del cuento. El creole organiza los sonidos del violín y el tambor, el diálogo y el humor. La traducción intenta conservar el sentido, pero no reproduce por completo la musicalidad de una ejecución oral. Las fuentes contemporáneas del Banco de la República y del Ministerio de Educación reconocen el creole como lengua del pueblo raizal y las historias de Anancy y sus compañeros como parte de la memoria insular.
+—¿Quieres ver este río seco para venir aquí y cogerme? —le dijo el perro—. Toma esa olla vieja, no mires adentro y tírala rápido para este lado.
 
-La página anterior cambiaba a perro por un “zorro de ojos zafiros”, convertía a cabra en una luna disfrazada y añadía toallas, batas, té, paredes perfumadas, sueños y numerosos símbolos. Esos elementos contradicen o exceden el registro. La revisión recupera a perro, cabra, Tiger, violín, tambor, río y olla, sin embellecer la hospitalidad del depredador.
+Tigre agarró la olla sin mirar y la lanzó. Y cuando la lanzó, de debajo salió la cabra: baa, baa.
 
-Este relato no está protagonizado por Nansi. Pertenece al mismo repertorio de animales y Beda Tiger, pero el agente astuto es perro y su inteligencia está ligada a la colaboración. El cuento muestra cómo una advertencia puede codificarse dentro de la música cuando hablar directamente sería peligroso. No se presenta esa lectura como ritual secreto: es una inferencia narrativa apoyada por la respuesta del tambor y la fuga inmediata.`,
-    versiones: `La publicación facsimilar ofrece dos columnas narrativas sucesivas: la transcripción creole y una traducción literal al español. No son dos argumentos distintos. Ambas contienen la llegada por lluvia y noche, la música de Tiger y perro, el sueño del anfitrión, la persecución, el río, la cabra bajo la olla y el lanzamiento que la salva.
+Tigre se quedó en su orilla con las manos vacías.
 
-Las diferencias visibles nacen de traducción y OCR. La canción del violín y la réplica del tambor imitan sonidos instrumentales; trasladarlas como prosa elimina parte del juego. La frase final de Tiger también conserva una estructura oral que puede sonar extraña en español. Esta adaptación privilegia el sentido sin atribuir letras completas que la fuente no fija con claridad.
+—Señor, me pones la comida en las manos y la dejo ir.`,
+    historia: `Lo que se lee de este cuento viene de una grabación en cinta hecha en San Andrés en 1965 por la comisión del Instituto Colombiano de Antropología que dirigía Nina S. de Friedemann, en el sureste de la isla, donde ella situó casi todo su trabajo: Ground Road y Sound Bay. Friedemann lo dio a conocer en su artículo sobre Miss Nansi y Old Nansi en el número 9 de la Revista Colombiana de Folclor, que lleva la fecha de 1964-1965 aunque recoge cintas de 1965.
 
-No se fusiona con “Tiger y el baile de perros”. Allí hay muchos perros, un baile de etiqueta y partes intercambiadas. Aquí solo un perro y una cabra viajan, sospechan de un anfitrión depredador y cooperan para cruzar el río. Tampoco se añade Nansi por el simple hecho de que Tiger aparezca.
+Pocas piezas de aquella recolección pueden leerse en la lengua en que se contaron, y ésta es una. La antología Colombia, cuento popular, del Instituto Andino de Artes Populares, la da en las páginas 128 y 129 en dos tiempos: arriba la transcripción en el creole de base inglesa que hablan los isleños, abajo una traducción que Friedemann llama literal. Para transcribir contó con Lynn Newball, nacido en Providencia; hablantes de inglés de otras partes que oyeron las cintas, cuenta ella, apenas reconocían palabras y frases sueltas. Esa misma página guarda una indicación de ejecución que no aparece en ninguna otra reproducción: el canto del violín y la respuesta del tambor se entonan imitando el sonido de los dos instrumentos. El cuento se cantaba tanto como se decía.
 
-Algunas reescrituras modernas convierten el refugio en una casa lujosa o explican de forma mecánica cómo una olla secaría el río. El cuento funciona porque Tiger actúa sin mirar: la propuesta de perro es una distracción, y el recipiente se vuelve vehículo involuntario para cabra.`,
-    leccion: "Escuchar la advertencia y cooperar convierte diferencias individuales en una salida común.",
-    similitudes: `Comparte con “Tiger y el baile de perros” la música, los animales y la irrupción de Tiger, pero cambia por completo la estructura: en el baile, Tiger causa una huida colectiva; aquí ofrece refugio con intención depredadora y es vencido por dos viajeros. “Mico y Nansi” también usa un sonido para crear una ventaja, aunque el “pow” del rejo engaña y el tambor de perro advierte.
+Friedemann describe a quienes le contaron cuentos por generaciones: los de más de cuarenta años los tenían frescos y los grababan sin reparo; los más jóvenes preferían las canciones y ayudaban a los viejos a acordarse.
 
-El episodio recuerda fábulas donde animales pequeños burlan a un depredador, incluida la amplia familia de Tío Conejo y Tío Tigre. La comparación es funcional, no una equivalencia de origen. La pareja perro-cabra, el diálogo musical en creole y la olla lanzada sobre un río pertenecen a la forma sanandresana documentada.`,
+La traducción castellana, sin el texto creole, reaparece en la página 189 del segundo tomo de la antología de Eugenia Villa Posse (IADAP, Quito, 1993), cuya presentación dice que los relatos se contaron en inglés, que los tradujeron al castellano informantes bilingües y que «en la publicación sólo se incluye la versión castellana», sin aclarar si habla del artículo de Friedemann o de su propia antología.`,
+    versiones: `Las dos lecturas que hoy se pueden hacer del cuento, la criolla y la castellana, cuentan lo mismo, pero no dicen lo mismo en todas partes.
+
+En el texto criollo el anfitrión se llama Beda Tiger, y al lanzar la olla es Old Big Tiga; la traducción lo vuelve «hermano Tigre» desde la primera línea, y el nombre que da título a la pieza sólo sobrevive en el título. Donde la transcripción dice que Tiger creía que esa noche tendría trade, negocio o ganancia, la traducción dice «alguna actividad», y la amenaza queda más velada.
+
+El paso del río también cambia. El criollo es preciso: el perro sabe nadar y cruza, la cabra no quiere agua y se queda balando, y es el perro quien le avisa de la olla. La traducción dice que «llegan a un río y nadan», como si nadaran los dos, y deja sin sujeto claro la orden de meterse bajo la olla.
+
+El remate es el que más se aleja. En el criollo Tiger dice «Lawd me chow da me han an me leta»: la comida en la mano, y él la suelta. La traducción lo resuelve como una queja al Señor, que le puso la comida en las manos para que la dejara ir.
+
+Las dos antologías imprimen la misma traducción, con diferencias de una palabra: en una Tigre está «tan contento», en la otra sólo «contento».`,
+    leccion:
+      "Un anfitrión que canta su hambre avisa a los huéspedes que saben escuchar.",
+    similitudes: `Es un cuento jamaiquino. Entre los cuentos que Martha Warren Beckwith reunió en Jamaica Anansi Stories, de 1924, lleva el número 40, «Goat's Escape», y lo da por uno de los favoritos de la isla. Según su nota, tiene dos partes: la cabra y el perro huyen de un perseguidor y el perro cruza un río que la cabra no puede cruzar; luego la cabra se convierte en una piedra que el mismo perseguidor lanza al otro lado. La primera parte cambia de una variante a otra; la segunda, dice, se mantiene.
+
+En la variante que Beckwith oyó a Richard Pottinger, en Claremont, St. Ann, el perseguidor es Anansi, la cabra le teme a la lluvia, el violín canta que la lluvia empuja la carne del monte a la casa, y la cabra se vuelve una piedrita blanca en la orilla. Anansi remata con casi las mismas palabras que el Tigre sanandresano: tenía la suerte en la mano y se le escapó. En San Andrés la piedra es una olla, y el perseguidor es el Tigre.
+
+Beckwith compara además un cuento de Walter Jekyll en que un gato ofrece un baile a las ratas y sólo se salvan las que atienden al ratoncito que entendió la canción del gato: el mismo aviso escondido en la música.`,
     excerpt:
       "Perro y cabra descubren la intención de Beda Tiger y usan música, vigilancia y una olla para escapar juntos.",
     seoTitle: "Un perro, una cabra y Beda Tiger",
@@ -308,7 +505,26 @@ El episodio recuerda fábulas donde animales pequeños burlan a un depredador, i
 
   defineCaribeMixtoFinalMyth({
     slug: "el-hombre-caiman",
-    title: "El Hombre Caimán de Plato",
+    sourceKeys: [
+      "tiempotestigo2020",
+      "tiempoMurio2006",
+      "uribeHombre2010",
+      {
+        key: "elTiempoTrenos",
+        summary:
+          "Presenta a Di Filippo como oficinista, sacristán y organista que recogió la historia de pescadores, y da la forma donjuanesca: Saúl con la boca llena de oro, un niño en cruz en la muñeca, amantes, las dos botellas ganadas a un indio de la sierra, el amigo Felicito Triste y el frasco reventado. Propone la Metamorfosis de Apuleyo como antecedente.",
+        limitation:
+          "Crónica recreativa con pasajes en primera persona fantástica (el autor dice haber visto al caimán en un circo); no es registro de campo.",
+      },
+      "panoramaCulturalleyenda2023",
+      "colombiaGaceta2024",
+      "visiblePlato2015",
+      "platoFestivalsf",
+      "reichelDolmatoffMitos1945",
+      "apuleyoBookes1566",
+      "colombiaResolucion2018",
+    ],
+    title: "El hombre caimán",
     tags: ["transformación", "río Magdalena", "caimán", "consecuencias"],
     focusKeywords: [
       "Hombre Caimán de Plato",
@@ -317,39 +533,44 @@ El episodio recuerda fábulas donde animales pequeños burlan a un depredador, i
       "Festival del Hombre Caimán",
       "Caño de las Mujeres",
     ],
-    mito: `En Plato, a orillas del río Magdalena, se cuenta que Saúl Montenegro quería observar sin permiso a las mujeres que se bañaban en el Caño de las Mujeres. Temía ser descubierto entre los arbustos y buscó una forma de acercarse sin que ellas lo reconocieran.
+    mito: `A las tres de la tarde corrió por Plato la noticia. En el campamento petrolero de la Andian, a un kilómetro del pueblo, había salido del río un animal que era hombre y caimán al mismo tiempo. El primero en verlo fue el celador del puerto: echó a correr como alma que lleva el diablo, alcanzó a darle el aviso al jefe del campamento y cayó desmayado. El animal seguía tendido en la playa, enorme.
 
-Viajó hasta la Alta Guajira y consiguió de un brujo dos preparados. Uno debía convertirlo en caimán; el otro devolverle el cuerpo humano. Saúl regresó a Plato y pidió ayuda a un amigo. Cada vez que quería entrar al caño, usaba la primera pócima. Después de nadar oculto entre el agua y la vegetación, salía donde el cómplice lo esperaba con el remedio de regreso.
+El jefe mandó que le dispararan. Entonces el bicho hizo ademán de súplica, y nadie se atrevió. Con la mano derecha pedía de comer. Le tiraron un pedazo de carne cruda y no lo quiso. Le pusieron comida cocida a una distancia prudente y se la tragó en el acto. Alfonso Camargo Maestre y Luis Arrieta, que estaban allí, lo describieron después: brazos de hombre y media cabeza humana.
 
-La artimaña funcionó durante un tiempo. Un día el ayudante habitual no pudo acompañarlo y otra persona ocupó su lugar. Cuando Saúl salió del agua como caimán, el nuevo acompañante se asustó. Dejó caer el frasco que debía restaurarlo. Solo unas gotas alcanzaron la cabeza del animal.
+En el pueblo lo tomaron por chascarrillo. Al día siguiente dejó de serlo. En casa de Ana Leonor Rivera se había hospedado una mujer de El Yucal, Manuela Aguilar, que decía ser la madre del caimán, y el pueblo entero salió corriendo a verla. Era una anciana de setenta y tres años, muy acongojada.
 
-Saúl recuperó el rostro humano, pero el resto del cuerpo siguió cubierto de escamas, con patas y cola de caimán. El ayudante huyó. La noticia llegó al pueblo y las bañistas dejaron de ir al caño.
+—Mi hijo no es el diablo, como ha inventado la gente del Cerro de San Antonio. Era un hombre como cualquiera de ustedes.
 
-La madre de Saúl fue quien volvió a acercarse. Le llevaba alimento y trataba de encontrar otro remedio. En varias versiones, el brujo que conocía la fórmula había muerto; en otras, la madre emprende un viaje inútil para buscarlo. Cuando ella también muere, el Hombre Caimán queda sin la única persona que lo atendía.
+Contó que el año anterior, en marzo, su hijo quemaba los rastrojos de una roza en El Yucal cuando le cayó encima una llovizna que le dejó tos. Seis meses lo trató Blas Contreras con bebidas de calahuala, frutas maduras y cáscaras de guayacán con sal, puestas al sereno. El hijo se llamaba Saúl Montenegro. Como no mejoraba, un vendedor de hamacas les aconsejó mandarlo donde los brujos de La Guajira, y en mayo volvió curado. Lo que nadie en la casa sabía era que traía un secreto: al lanzarse al agua se volvía caimán.
 
-Entonces se deja llevar por el Magdalena. La corriente lo conduce río abajo, hacia Bocas de Ceniza y Barranquilla. El final no asegura que haya muerto. Pescadores y viajeros lo siguen imaginando entre gramalotes, orillas y aguas oscuras: un cuerpo de caimán con cabeza humana que ya no puede regresar a Plato como hombre.
+Antes de zambullirse le entregaba a un compañero un frasco con un líquido del color del azufre. Para recobrar la figura de hombre se arrimaba a la orilla y se echaba unas gotas. La madre le rogó que dejara esos embolismos, que ya la tenían muy nerviosa. Una mañana, mientras ella hacía bollos, Saúl salió con José Manuel Arenilla, El Cojo, que nunca lo había visto hacer la prueba. Cuando el caimán volvió a la orilla, El Cojo se asustó tanto que, en vez de rociarlo, le tiró de lejos el frasco tapado. El frasco se hundió y El Cojo salió corriendo.
 
-La transformación no borra la causa. Saúl no es castigado por una curiosidad inocente, sino por convertir el baño de las mujeres en espectáculo clandestino. El disfraz animal le permitía violar un límite; el accidente hace permanente ese cuerpo usado para ocultarse.
+La madre pidió que corrieran la voz: aquel caimán era su hijo, y que no se lo mataran mientras ella hacía traer de La Guajira el agua que compone el cacique Mantaura. En Plato formaron una comisión para conseguirle comida. Hubo quien juró haberlo visto pedir, por el amor de Dios, un poquito de arroz o una yuca.
 
-La tradición convirtió el episodio en emblema plateño. La historia pasó por relatos de pescadores, crónicas atribuidas a Virgilio Di Filippo, la canción de José María Peñaranda, un monumento y un festival. Cada forma cambia detalles, pero conserva la imagen que identifica al personaje: cabeza de hombre y cuerpo de caimán, unido para siempre al Magdalena.`,
-    historia: `La Alcaldía de Plato atribuye la leyenda publicada a una compilación de cuentos de pescadores realizada por Virgilio Di Filippo. Documentos del Congreso sitúan sus crónicas en la década de 1940 en el diario La Prensa de Barranquilla y explican que la canción de José María Peñaranda amplió la circulación. El archivo periodístico disponible confirma la memoria de Di Filippo como recopilador, pero las crónicas originales no fueron localizadas en el dossier. Por eso Saúl Montenegro se presenta como personaje de leyenda, no como comerciante o pescador históricamente verificado.
+El día 3, hacia las once de la noche, Juan García, que vivía en la plaza junto al mercado, fue antes de acostarse a la tienda de Miguel Tejada y compró plátanos maduros y un pedazo de queso. De vuelta vio que por la calle se le acercaba, arrastrándose despacio, un reptil enorme. Su grito levantó al vecindario. Llegaron policías, guardas de rentas y mujeres en ropa de dormir; los muchachos gritaban y las mujeres clamaban misericordia. Sólo el viejo recobró la calma. Sin quitarle los ojos de encima, le arrojó los plátanos y el queso, y el animal los devoró con hambre atrasada.
 
-La primera versión del Festival Folclórico se celebró en 1972. La fundación organizadora obtuvo personería en 1973 y el evento reúne música, disfraces, canotaje, atarraya, conversatorios y expresiones de la región ribereña. El monumento de Plato y la aparición de la leyenda en el telón patrimonial del Teatro Santa Marta muestran una recepción que supera la página escrita.
+—Saúl, vuelve al agua.
 
-Álvaro González Uribe registra al menos dos líneas. Una enfatiza al mirón que espía a las bañistas del Caño de las Mujeres. Otra convierte a Saúl en enamorado de Roque Lina, hija de un hombre rico que prohíbe la relación, y usa los brebajes para encuentros clandestinos. La versión pública más extendida conserva el voyeurismo, el ayudante asustado y la transformación incompleta. Esta ficha narra ese núcleo y reserva la historia amorosa para “Versiones”.
+En voz baja, García le rezó el Magnificat y el Credo al revés. El caimán soltó un ronquido enorme y se echó al caño con tal estruendo que levantó un oleaje de diez metros y hundió varias canoas.`,
+    historia: `El texto más antiguo que se conoce de esta historia es una carta de Virgilio Di Filippo que, según Juan Gossaín, publicó El Heraldo de Barranquilla el 5 de julio de 1940. Di Filippo había nacido en Cerro San Antonio y vivía en Plato, donde la Gaceta del Congreso lo sitúa como secretario del juzgado municipal desde 1927; fue además sacristán, organista, compositor y cronista del pueblo. Gossaín la cita por extenso en El Tiempo el 15 de julio de 2020, y por esa cita se lee hoy: escrita en presente y en primera persona del plural, fecha el comienzo el 29 de junio, atribuye el primer avistamiento a dos testigos con nombre, Alfonso Camargo Maestre y Luis Arrieta, y dice acompañar un dibujo hecho con su descripción. La parte central la pone en boca de la madre, Manuela Aguilar, y el cierre, la noche de Juan García, lo fecha el día 3 del mes en curso.
 
-Algunas exposiciones legislativas enlazan la leyenda moderna con la sacralidad del caimán entre los Chimila. El expediente revisado no incluye una fuente comunitaria Ette Ennaka que contenga a Saúl, los frascos o el Caño de las Mujeres. Ese vínculo se declara como afirmación de recepción institucional y no como origen indígena probado. La ruta se transfiere de Caribe/Mixto a Caribe/Mestizo sin despublicarla.`,
-    versiones: `La variante más difundida presenta a Saúl como hombre que espía a las bañistas. Recibe dos pócimas —los colores y el orden cambian en las reescrituras— y depende de un amigo para recuperar su forma. Un reemplazo se asusta, rompe o deja caer el frasco y solo unas gotas alcanzan la cabeza. La madre alimenta al híbrido y busca una cura; tras perderla, Saúl baja por el Magdalena.
+La carta no es una leyenda de pescadores recogida años después, sino una noticia de pueblo escrita con los nombres de los vecinos, de la tienda y de la casa donde se hospedó la madre, y con la seriedad fingida de una crónica. Por eso importa separarla de lo que vino luego. La Gaceta del Congreso 518 de 2024 y buena parte de la memoria local ponen las crónicas de Di Filippo en La Prensa de Barranquilla y en la década de 1940; Gossaín dice El Heraldo y da el día exacto.
 
-Álvaro González Uribe registra otra versión de amor contrariado. Saúl y Roque Lina sostienen una relación prohibida por el padre de ella. La forma de caimán permite encuentros furtivos y el accidente rompe el retorno. En ese relato, la novia continúa visitándolo y el conflicto familiar adquiere mayor importancia que el espionaje. La página no fusiona ambas motivaciones como si fueran una biografía continua.
+El orden entre la canción y la leyenda está en disputa. Gossaín escribe que el episodio llegó a oídos de José María Peñaranda y que de ahí salió «Se va el caimán». Roberto Llanos Rodado, en El Tiempo del 7 de febrero de 2006, dice lo contrario: que Peñaranda inició su carrera en 1937 precisamente con esa canción, que sonó en 1940 en la película Pasiones tormentosas. Si esa fecha es exacta, la copla es anterior a la carta. Ninguna de las dos afirmaciones se ha cotejado con la prensa de la época.
 
-Las canciones también transforman el motivo. “Se va el caimán”, de José María Peñaranda, sitúa la historia en Plato y convierte el desplazamiento hacia Barranquilla en estribillo de circulación internacional. Una canción no demuestra el accidente, pero sí explica cómo la figura pasó de relato local a emblema reconocible.
+Es un relato ribereño del bajo Magdalena, contado en castellano por un vecino de Plato y armado con catolicismo popular, medicina de monte y la brujería atribuida a La Guajira, que aparece vista desde fuera.`,
+    versiones: `Lo que se cuenta hoy casi nunca empieza donde empieza la carta de 1940. Las formas posteriores ponen el motivo al principio: Saúl se vuelve caimán para mirar a las mujeres que se bañan. En la carta ese motivo no está entre comillas; sólo aparece en la paráfrasis de Gossaín, que dice que Saúl volvía de disfrutar la desnudez de las mujeres en el río.
 
-Otras ampliaciones enumeran marcas corporales de Saúl, amantes, remedios, disparos y fechas precisas. Algunas aparecen en crónicas tardías; otras no cuentan con fuente controlable. Se conservan solo como posibilidades cuando una referencia las atribuye. El núcleo público no necesita presentarlas como hechos.`,
-    leccion: "Ocultarse para vulnerar la intimidad ajena no elimina la responsabilidad ni las consecuencias.",
-    similitudes: `El caimán de oro documentado en la cosmología Zenú y el Hombre Caimán comparten especie solo en apariencia. El primero sostiene o protege un territorio dentro de otro sistema cultural; Saúl es un humano transformado por un ardid y ligado a Plato. Fusionarlos borraría comunidad, función y argumento.
+«Los fatídicos trenos del Hombre Caimán», crónica sin firma de El Tiempo del 9 de diciembre de 1995, hace de Saúl un donjuán con la boca llena de oro, un niño en cruz en la muñeca y nueve amantes, que ganó dos botellas a un indio de la sierra y que se convirtió ante su amigo Felicito Triste, cuando se le reventó el líquido del regreso. Su madre le deja botellas de ron en la orilla.
 
-El Mohán también habita ríos colombianos y se relaciona en ciertas versiones con mujeres, pesca y peligro. Sin embargo, no depende de dos pócimas ni conserva una cabeza humana sobre cuerpo de caimán. La Patasola y otros relatos de transformación punitiva se acercan por la relación entre conducta y cuerpo, pero difieren en paisaje, género y transmisión. Estas comparaciones sitúan motivos; ninguna prueba que todas las figuras procedan de una sola leyenda.`,
+Álvaro González Uribe, en una crónica fechada el 12 de enero de 2008 y reunida en De Bolombolo a Aracataca (Unimagdalena, 2010), distingue dos líneas. En una, un pícaro pescador llamado Saúl mira en las mañanas a las platenses en el Caño de las Mujeres. En la otra, más elaborada y que algunos sitúan en Magangué, Saúl ama a Roque Lina, hija del rico del pueblo, consigue de chamanes wayúus de la Alta Guajira una pócima de ida y otra de vuelta, y el frasco roto le salpica sólo la cara; su madre lo alimenta con queso, pan y ron, un cuñado lo descubre y el suegro ordena disparar.
+
+La Gaceta del Congreso 518 de 2024 lo llama comerciante y habla de «chismes locales» y de un brujo. Juan Luis Romani Arroyo, en PanoramaCultural (1 de mayo de 2023), sigue la recopilación de Darío Bolaño Ricaurte: Saúl es un pescador con un diente dorado; la alcaldía prohíbe a los hombres acercarse al Caño de las Mujeres; él viaja con unos gitanos hasta la Alta Guajira, donde el gran Piacha le prepara un líquido rojizo para ir y uno blanco para volver; su ayudante de siempre, Mingo Padilla, cae con malaria, y el pescador que lo reemplaza deja caer la botella. Perseguido con arpones y escopetas, huye río abajo, y la última noticia lo da herido entre Tenerife y Sitio Nuevo. La copla de Peñaranda le da queso, pan y ron, y lo manda río abajo hacia Barranquilla.`,
+    leccion:
+      "Un secreto confiado a quien no sabe guardarlo puede dejar a un hombre atrapado en su otra forma.",
+    similitudes: `La comparación más citada la propuso la crónica de El Tiempo de 1995: la Metamorfosis de Apuleyo, del siglo II, donde Fotis unta a Lucio con el ungüento equivocado y lo vuelve asno cuando él quería imitar a Pánfila, que se había convertido en búho. El parecido es de mecanismo: un preparado que transforma, un antídoto que depende de otra mano y un error ajeno que deja al hombre preso de su cuerpo animal. Lucio recupera su forma veinte años después, dice la crónica; Saúl no.
+
+Más cerca, río arriba en el mismo departamento, Gerardo Reichel-Dolmatoff publicó en 1945, en el Boletín de Arqueología, «El hombre que soñó con caimán», un cuento chimila. Allí el caimán «es gente como nosotros»: se traga al hombre, que escapa hiriéndolo por dentro, cae enfermo, se retira al monte y vuelve convertido en cazador que llama a los animales con un silbido, porque lo aprendió del caimán. Hombre y caimán se cruzan en los dos relatos, pero el chimila no conoce frascos, brujos lejanos ni madre que suplica; su caimán enseña, el de Plato sólo pide comida. La Gaceta del Congreso de 2024 llama al caimán «animal totémico de los Chimilas» sin citar obra; este cuento es lo más cercano a un respaldo que existe, y no cuenta la misma historia.`,
     excerpt:
       "Saúl Montenegro usa una transformación para espiar en Plato y queda con cabeza humana y cuerpo de caimán junto al Magdalena.",
     seoTitle: "El Hombre Caimán de Plato: historia y versiones",
