@@ -66,13 +66,22 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    // Piso del bloque mestizo: 8 por ficha reescrita. Las dos bloqueadas por
+    // falta de registro consultable siguen en el reparto heredado, con el de 5.
+    const piso = ["la-monja-vidente-y-el-taxista", "los-esqueletos-caminantes"].includes(record.slug) ? 5 : 8;
+    assert.ok(sources.length >= piso, `${record.slug}: ${sources.length} fuentes, piso ${piso}`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
+    // `http` se admite sólo cuando el servidor no ofrece `https` —SciELO
+    // Colombia— y la fuente lo declara en su límite (spec §8).
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary &&
+          limitation &&
+          (url.startsWith("https://") ||
+            (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
+      `${record.slug}: una fuente va sin resumen, sin límite, o en http sin declararlo`,
     );
     assert.equal(
       record.content,
@@ -95,38 +104,38 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
   }
 });
 
+// Las aserciones de antes fijaban frases del texto heredado —el hábito blanco,
+// don Juan de Guevara como dueño, Guadalupe— que el cotejo con el primario
+// retiró. Se comprueba ahora lo que la fuente sostiene; las dos fichas
+// bloqueadas conservan su texto y sus aserciones.
 test("restaura fuentes y deshace las fusiones heredadas", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  const ficha = (slug) => bySlug.get(slug);
+  // El expediente de 1828 y el auto del 3 de noviembre.
+  assert.match(ficha("el-hombre-del-farol").mito, /Acevedo|Acebedo/);
+  assert.match(ficha("el-hombre-del-farol").historia, /3 de noviembre|tres de noviembre/i);
+  // El toro pasa de fecha inestable a placa.
+  assert.match(ficha("el-toro-en-el-ascensor").historia, /SW\s?1012[\s\S]*1985|1985[\s\S]*SW\s?1012/);
+  // El venado: El Boquerón, la crónica de 1896, y Guadalupe sólo como divulgación.
+  assert.match(ficha("el-venado-de-oro").mito, /Boquerón/);
+  assert.match(ficha("el-venado-de-oro").historia, /1896/);
+  assert.doesNotMatch(ficha("el-venado-de-oro").mito, /Guadalupe/);
+  // La carta ficticia lleva firma y fecha, y se cuenta como composición.
+  assert.match(ficha("la-bruja-del-tranvia").historia, /Revetés[\s\S]*2004|2004[\s\S]*Revetés/);
+  // La mujer de negro se lleva el ramo: sólo caen pétalos. Y es un guion.
+  assert.match(ficha("la-monja-de-las-rosas").mito, /pétalos/i);
+  assert.doesNotMatch(ficha("la-monja-de-las-rosas").mito, /hábito blanco/i);
+  assert.match(ficha("la-monja-de-las-rosas").historia, /guion[\s\S]*Ottinger|Ottinger[\s\S]*guion/i);
+  // Guevara sale del relato y queda como atribución del Bogotálogo en versiones.
+  assert.match(ficha("la-mula-herrada").historia, /Bayona Posada/);
+  assert.doesNotMatch(ficha("la-mula-herrada").mito, /Guevara/);
+  assert.match(ficha("la-mula-herrada").versiones, /Guevara/);
   assert.match(
-    bySlug.get("el-hombre-del-farol").historia,
-    /Juan Miguel Acevedo[\s\S]+decreto del 3 de noviembre/i,
-  );
-  assert.match(
-    bySlug.get("el-toro-en-el-ascensor").versiones,
-    /Bachué[\s\S]+Torre Colpatria[\s\S]+fotografías destruidas/i,
-  );
-  assert.match(
-    bySlug.get("el-venado-de-oro").versiones,
-    /Diego Barreto[\s\S]+Zipa[\s\S]+añadidos sin respaldo/i,
-  );
-  assert.match(
-    bySlug.get("la-bruja-del-tranvia").historia,
-    /documentos imaginarios y material de ficción/i,
-  );
-  assert.match(
-    bySlug.get("la-monja-de-las-rosas").versiones,
-    /padre, niña, mujer vestida de negro[\s\S]+hábito blanco/i,
-  );
-  assert.match(
-    bySlug.get("la-monja-vidente-y-el-taxista").versiones,
+    ficha("la-monja-vidente-y-el-taxista").versiones,
     /Bogotá y Tuluá[\s\S]+lotería[\s\S]+taxista muerto/i,
   );
   assert.match(
-    bySlug.get("la-mula-herrada").historia,
-    /Álvaro Sánchez[\s\S]+don Juan de Guevara/i,
-  );
-  assert.match(
-    bySlug.get("los-esqueletos-caminantes").versiones,
+    ficha("los-esqueletos-caminantes").versiones,
     /condición de no identificado[\s\S]+derecho/i,
   );
 });
