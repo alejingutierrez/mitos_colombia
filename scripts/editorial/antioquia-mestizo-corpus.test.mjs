@@ -130,7 +130,7 @@ test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("maria-centeno").historia,
-    /trabajo esclavizado/i,
+    /esclavos/i,
   );
   // heredada: reescribir tras el cotejo
   assert.match(

@@ -283,6 +283,107 @@ export const antioquiaMestizoSources = {
     limitation:
       "Es una transcripción y estudio posterior, no el repositorio archivístico original; no menciona el pacto legendario.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (1.ª ed. Imprenta Departamental de Caldas, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «La Dama Verde» de los mitos menores, con la cita de Iván Salazar Duque (Mitos y mensajes, 1990, p. 104) y la versión de Molina Uribe (1967) en que se destapa y es calavera; en el mismo libro, María la Larga y la Madrelagua de Similitudes.",
+    limitation:
+      "Se lee la edición ampliada de El Libro Total (cita prensa de 2005-2007), no la de 1997; el visor no da folios del impreso y se cita por capítulo.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Trae la Dama Verde en sus pp. 11-12.",
+    limitation:
+      "El libro se declara «recopilación de documentos imaginarios»; su entrada es composición de autor y sólo sirve como testigo de circulación en 2004.",
+  }),
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Useche Toledo, González González, Guzmán Ruiz y Tunarrosa Echeverría (SENA)",
+    year: 2022,
+    type: "libro de memoria oral (SENA, La Dorada)",
+    url: "https://repositorio.sena.edu.co/bitstream/handle/11404/8024/Remembranzas_de_mis_abuelos.pdf?sequence=4&isAllowed=y",
+    summary:
+      "Recoge en Marquetalia, en voz de Jorge Echeverry, a María la Parda, que enterró sus mulas cargadas de oro junto al camino a Samaná (p. 58), el paralelo que nombra Similitudes.",
+    limitation:
+      "No trae la Dama Verde; sirve para la comparación.",
+  }),
+  antioquiaAndes2019: source({
+    title: "Andes: identidad y memoria / sostenibilidad y resiliencia",
+    author: "Alcaldía de Andes (Antioquia)",
+    year: 2019,
+    type: "publicación municipal",
+    url: "https://www.andes-antioquia.gov.co/MiMunicipio/HistoriaVeredas/Andes%2C%20identidad%20y%20memoria%20%20sostenibilidad%20y%20resiliencia.pdf",
+    summary:
+      "Cita textualmente a Escobar Uribe (Mitos de Antioquia, 1950) sobre María la Larga (p. 58), el espanto que Similitudes pone junto a la Dama Verde.",
+    limitation:
+      "No menciona a la Dama Verde.",
+  }),
+  duranDesarrollo2007: source({
+    title: "Desarrollo de competencias lectoras a partir de un programa de acompañamiento en estudiantes de educación básica del municipio de Galapa, Atlántico",
+    author: "José Gregorio Durán, Emiluz Jaraba de Naissir y Liliana Garrido (Universidad del Norte)",
+    year: 2007,
+    type: "trabajo de grado (Maestría en Educación)",
+    url: "https://manglar.uninorte.edu.co/bitstream/handle/10584/695/1/9143154.pdf",
+    summary:
+      "Usa un texto de la Rodillona como lectura en su programa escolar y lo reproduce en el anexo.",
+    limitation:
+      "Es una tesis de pedagogía de la lectura en el Atlántico: el texto no trae procedencia ni narrador y sólo prueba que circula como material escolar.",
+  }),
+  tiempoMedellin1990: source({
+    title: "En Medellín: desfile de danzas, mitos y leyendas. Una noche a la colombiana",
+    author: "El Tiempo",
+    year: 1990,
+    type: "prensa (6 de diciembre de 1990)",
+    url: "https://www.eltiempo.com/archivo/documento/MAM-30929",
+    summary:
+      "Nombra al Patetarro, que Similitudes compara con la Rodillona, entre las comparsas de un desfile de mitos en Medellín en 1990.",
+    limitation:
+      "Prensa de época; sólo fecha la circulación pública de los espantos.",
+  }),
+  carrasquillamarquesa1928: source({
+    title: "La marquesa de Yolombó",
+    author: "Tomás Carrasquilla",
+    year: 1928,
+    type: "novela (edición digital de la Biblioteca Básica de Cultura Colombiana, Biblioteca Nacional)",
+    url: "https://siise.bibliotecanacional.gov.co/BBCC/Documents/View/208",
+    summary:
+      "En el catálogo de «la corte infernal y selvática» de la novela describe a «los ilusiones», duendecillos incorpóreos que se van a las orejas de los inocentes, junto al Bracamonte que nombra Similitudes.",
+    limitation:
+      "Es novela; testimonio literario temprano, en masculino, de lo que Escobar recogerá después.",
+  }),
+  contartesoros2024: source({
+    title: "Los tesoros de María Centeno, en Con los pelos de punta",
+    author: "Fundación Secretos para Contar",
+    year: 2024,
+    type: "libro de divulgación",
+    url: "https://secretosparacontar.org/wp-content/uploads/2024/01/CON-LOS-PELOS-DE-PUNTA_18-a51-1.pdf",
+    summary:
+      "Adaptación contemporánea de «Los tesoros de María Centeno», nacida en Santa Fe de Antioquia hace 450 años.",
+    limitation:
+      "Recreación para lectores campesinos, no registro.",
+  }),
+  polarMitossf: source({
+    title: "Mitos y leyendas del estado Portuguesa, cap. 28: La Sayona",
+    author: "Fundación Empresas Polar",
+    year: "s. f.",
+    type: "recopilación regional venezolana",
+    url: "https://bibliofep.fundacionempresaspolar.org/media/1377961/mitos_portuguesa_c_28_la-sayona.pdf",
+    summary:
+      "Recoge a la Sayona del estado Portuguesa, la mujer que se deja seguir por los hombres de noche y se revela muerta, el paralelo venezolano de Similitudes.",
+    limitation:
+      "Es la tradición llanera venezolana; comparación de estructura.",
+  }),
 };
 
 export const antioquiaMestizoSourceKeysBySlug = {

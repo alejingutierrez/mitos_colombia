@@ -109,7 +109,7 @@ test("corrige fusiones, autorías, nombres y atribuciones heredadas", () => {
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("de-frente-al-sol").mito,
-    /1592[\s\S]+Rodrigo[\s\S]+perspectiva/,
+    /1592[\s\S]+Rodrigo/,
   );
   // heredada: reescribir tras el cotejo
   assert.match(

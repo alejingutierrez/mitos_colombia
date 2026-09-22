@@ -365,6 +365,107 @@ export const caldasMestizoSources = {
     limitation:
       "No es una versión de Clementina ni una prueba de brujería histórica en Salamina.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Texto del cuento de Enrique Otero D'Costa, de sus Leyendas (Minerva, 1936), en la sección 17 «Varias regiones», pp. 17-21, con la dedicatoria a Aquilino Villegas.",
+    limitation:
+      "Villa Posse lo presenta como leyenda oída y reelaborada por el autor; es un cuento firmado, no un registro oral.",
+  }),
+  dCostaLeyendas1964: source({
+    title: "Leyendas",
+    author: "Enrique Otero D'Costa",
+    year: 1964,
+    type: "artículo (Revista Universidad Pontificia Bolivariana 27 (95), pp. 55-73)",
+    url: "https://revistas.upb.edu.co/index.php/revista-institucional/article/view/3125",
+    summary:
+      "Tercera impresión del cuento, póstuma, que abre el grupo de seis «Leyendas» del autor (pp. 55-58) y trae entero el romance final.",
+    limitation:
+      "Variantes de taller frente a 1993; la revista lo llama crónica sobre temas coloniales.",
+  }),
+  camargoHacia2015: source({
+    title: "Hacia una nueva comprensión de la historiografía colombiana: breve historia intelectual de Enrique Otero D'Costa (1883-1964)",
+    author: "Daniel Mauricio Preciado Camargo",
+    year: 2015,
+    type: "trabajo de grado (Universidad del Rosario)",
+    url: "https://repository.urosario.edu.co/handle/10336/10607",
+    summary:
+      "Estudio de la obra de Otero D'Costa que copia el pasaje del desayuno del tambo y lo remite a Historietas. Leyendas y tradiciones colombianas (Manizales, 1934), p. 131.",
+    limitation:
+      "Lee el cuento como historiografía de la vida diaria; no se ocupa del romance ni del honor del caído.",
+  }),
+  republicacoleccionsf: source({
+    title: "La colección de Enrique Otero D'Costa",
+    author: "Credencial Historia n.º 375 (Banco de la República)",
+    year: "s. f.",
+    type: "artículo de divulgación histórica",
+    url: "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-375/la-coleccion-de-enrique-otero-dcosta",
+    summary:
+      "Presenta a Enrique Otero D'Costa como historiador y coleccionista de documentos coloniales, el oficio desde el que escribe sus leyendas.",
+    limitation:
+      "No menciona este cuento.",
+  }),
+  plutarcoSayingssf: source({
+    title: "Sayings of Spartan Women (Moralia)",
+    author: "Plutarco, trad. F. C. Babbitt (LacusCurtius, Universidad de Chicago)",
+    year: "s. f.",
+    type: "fuente clásica comparativa",
+    url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/Sayings_of_Spartan_Women*.html",
+    summary:
+      "Reúne el dicho de la madre espartana que, al saber que su hijo cayó en su puesto, pide que lo entierren y que su hermano ocupe el lugar (n.º 20), el paralelo de Similitudes.",
+    limitation:
+      "Es la Esparta de Plutarco, sin relación histórica con el cuento.",
+  }),
+  anonimoSongsf: source({
+    title: "The Song of Roland",
+    author: "Anónimo, trad. C. K. Scott-Moncrieff (Project Gutenberg)",
+    year: "s. f.",
+    type: "fuente medieval comparativa",
+    url: "https://www.gutenberg.org/ebooks/391",
+    summary:
+      "El Roland moribundo que se tiende bajo un pino con la cara vuelta hacia el enemigo, el segundo paralelo de Similitudes.",
+    limitation:
+      "Épica francesa medieval; comparación de gesto, no de filiación.",
+  }),
+  colombianoGeneralidadessf: source({
+    title: "Generalidades volcán Nevado del Ruiz",
+    author: "Servicio Geológico Colombiano",
+    year: "s. f.",
+    type: "página institucional",
+    url: "https://www2.sgc.gov.co/sgc/volcanes/VolcanNevadoRuiz/Paginas/generalidades-volcan-nevado-ruiz.aspx",
+    summary:
+      "Registra que en época precolombina el volcán se llamaba Cumanday (Cerro Blanco), Tabuchía o Tama.",
+    limitation:
+      "Es la página técnica del volcán; da el nombre, no el relato.",
+  }),
+  tiempollama2023: source({
+    title: "Por qué se llama Nevado del Ruiz, la historia del volcán que genera alerta",
+    author: "El Tiempo",
+    year: 2023,
+    type: "prensa",
+    url: "https://www.eltiempo.com/colombia/otras-ciudades/por-que-se-llama-nevado-del-ruiz-la-historia-del-volcan-que-genera-alerta-759403",
+    summary:
+      "Explica en prensa que los quimbayas llamaban Cumanday al volcán y por qué terminó llamándose Nevado del Ruiz.",
+    limitation:
+      "Nota de actualidad sin fuentes citadas.",
+  }),
+  mexicoIztaccihuatl2022: source({
+    title: "Iztaccíhuatl, la mujer dormida",
+    author: "Instituto Nacional de Antropología e Historia (México)",
+    year: 2022,
+    type: "nota institucional",
+    url: "https://www.inah.gob.mx/foto-del-dia/iztaccihuatl-la-mujer-dormida",
+    summary:
+      "Resume la leyenda de Iztaccíhuatl y Popocatépetl, la princesa y el guerrero convertidos en volcanes, el paralelo mexicano de Similitudes.",
+    limitation:
+      "Es otra tradición; la comparación es de función, no de parentesco.",
+  }),
 };
 
 export const caldasMestizoSourceKeysBySlug = {

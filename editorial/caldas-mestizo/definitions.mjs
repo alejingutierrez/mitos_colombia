@@ -45,31 +45,61 @@ Otero hace que su narrador afirme haber conocido la cicatriz de Ñuá Ulogia. Es
   }),
   defineCaldasMestizoMyth({
     slug: "de-frente-al-sol",
+    fuentesAgotadas: "Es un cuento firmado de Enrique Otero D'Costa: sólo existen sus impresiones (Historietas, 1934, sin copia abierta; Leyendas, 1936, vía Villa Posse II; Revista UPB, 1964) y los estudios sobre su autor.",
+    sourceKeys: [
+      "compiladoraMitos1993",
+      "dCostaLeyendas1964",
+      "camargoHacia2015",
+      "republicacoleccionsf",
+      "plutarcoSayingssf",
+      "anonimoSongsf",
+    ],
     title: "De frente al sol",
     excerpt:
       "Otero D’Costa imagina la defensa de una encomienda de Chinchiná y convierte la muerte de Rodrigo en emblema de honor colonial.",
     tags: ["conquista", "batalla", "honor", "muerte"],
-    mito: `En el cuento de Enrique Otero D’Costa, los restos de una casona en Playa Rica abren el recuerdo de la encomienda de Chinchiná. La acción ocurre en agosto de 1592. Don Fernán López de Sandoval, viejo encomendero, recorre el corredor armado mientras vigías anuncian movimiento al otro lado del río.
+    mito: `Todavía asoman, en un recodo de Playa Rica, los restos del caserón que fue de la encomienda de Chinchiná. Allí esperaba don Fernán López de Sandoval una madrugada de agosto de 1592.
 
-Antón Dávalos, administrador de la encomienda, confirma que la defensa está preparada. Dentro de la casa se escuchan oraciones; afuera crece el ruido de quienes se aproximan. Otero presenta a los atacantes como pijaos y organiza la escena desde el miedo y el lenguaje de los españoles cercados.
+El viejo encomendero iba y venía por el corredor con el sayo de armas puesto, y las espuelas le sonaban a cada paso. Afuera acechaban los vigías; del oratorio salían rezos lentos. Un muchacho indígena llegó corriendo: la escucha del río oía ruido de gente que se acercaba. Don Fernán llamó a gritos a Antón Dávalos, el administrador, y éste le juró que estaban listos.
 
-Entre quienes acompañan a Don Fernán están Don Diego y el joven Rodrigo. La lucha rompe la espera. Los defensores disparan y resisten, pero la fuerza atacante los obliga a abandonar la posición. El repliegue no se describe como una retirada ordenada, sino como un momento donde el orgullo militar pesa tanto como la supervivencia.
+A lo lejos, la escucha dio el alto. «¡Consota y al Rey!», respondieron, y una voz altanera añadió que el paso no lo pide quien lo toma. Don Fernán sonrió. Era el socorro de don Diego de Aguilar, señor de Consota, y llegaba a tiempo: la víspera, los espías habían visto a los pijaos trasponiendo las lomas de Corozal.
 
-Rodrigo queda expuesto. Cuando podría girar para escapar, se niega a mostrar la espalda. Sigue mirando al enemigo y recibe en el pecho el golpe que lo derriba. Su padre llega hasta él, comprende que la herida es mortal y formula el juicio que da sentido al título: Rodrigo ha muerto de frente, con el rostro hacia el sol y hacia quienes combatía.
+Entraron en orden. Primero don Diego, con lanza y adarga de cuero de danta. Luego García de Cáceres, con veinticinco labradores indios armados de flechas y macanas. Después el mosquetero Leandro Estopiñán, capataz de veinte negros mineros. Y cerrando la marcha, en un alazán nervioso, don Rodrigo de Aguilar, primogénito de don Diego, que apenas cumplía veinte años, al frente de ocho vaqueros con lanzas.
 
-La narración convierte esa postura en una imagen de honor. El joven no vence la batalla, pero el cuento lo presenta como vencedor moral porque no retrocede. La ruina de la encomienda funciona entonces como marco material de una memoria heroica.
+Los indios de ambas encomiendas, quimbayas todos, se juntaron con los negros en el tambo, donde se aderezaba una novilla y se doraban arepas en las callanas, junto a una olla de chingua. Los blancos aguardaban el desayuno en la sala.
 
-Esta adaptación conserva la secuencia literaria sin asumir su perspectiva como verdad histórica neutral. Los personajes indígenas aparecen filtrados por una voz colonial que los reduce a amenaza. La resistencia contra una encomienda no era simplemente una agresión sin contexto: las encomiendas formaban parte del sometimiento, el tributo y la ocupación española.
+Entonces sonó la alarma. Fotutos, caracoles, alaridos: los pijaos estaban en el campo. Blancos, indios y africanos salieron a una, vadearon el río y se trabaron con el enemigo. Al principio ningún arcabuz fallaba. Pronto el agua del Chinchiná bajó roja.
 
-Por eso el desenlace puede leerse de dos maneras simultáneas. Dentro del cuento, Rodrigo encarna la valentía que Otero admira. Fuera de él, el lector puede reconocer que esa heroicidad fue construida desde uno de los bandos y que la literatura selecciona quién recibe nombre, palabra y duelo.`,
-    historyCore:
-      "El texto primario publicado por la Universidad Pontificia Bolivariana atribuye claramente el relato a Enrique Otero D’Costa y lo sitúa en la encomienda de Chinchiná en 1592. Las fuentes históricas confirman la conquista, la encomienda y las guerras coloniales del territorio, pero no prueban la conversación, el parentesco ni la muerte de Rodrigo tal como aparecen en la ficción.",
-    versionCore:
-      "Las reproducciones del cuento mantienen a Don Fernán, Antón Dávalos, Don Diego y Rodrigo, además del ataque y la muerte frontal. Lo que varía en adaptaciones digitales son ortografía, cortes y modernización del lenguaje. No se trata como una versión oral independiente ni se añade una profecía solar: el sol funciona como imagen literaria del desenlace.",
-    similarityCore:
-      "De frente al sol comparte con otras ficciones históricas el uso de una ruina como puerta hacia el pasado y el motivo del guerrero que prefiere morir antes que dar la espalda. Se acerca a relatos de honor militar, pero también a crónicas coloniales que nombran a los españoles y vuelven masa anónima a sus adversarios. A diferencia de una leyenda de origen indígena, la obra está firmada por un autor del siglo XX y dramatiza una encomienda desde una mirada hispanocéntrica que la revisión hace visible.",
+Luego la pelea se torció. Don Fernán cayó herido en una pierna; García de Cáceres murió de un tajo de macana; a Estopiñán lo sacó de combate un lanzazo bajo el brazal. Del escuadrón de don Rodrigo quedaban tres jinetes. Los negros se desbandaron. Sólo cabía volver a la casona.
+
+Don Diego improvisó unas andas para el herido. Dávalos le rogó a don Rodrigo que huyeran, que era hora de fiarse más de los pies que de las manos. El joven contestó que el amo se salvaría, pero la honra no. Dávalos le suplicó al menos que dieran la cara, porque de espaldas no llegarían vivos.
+
+Don Rodrigo no pensaba dar la espalda. Retrocedió de frente, palmo a palmo, cuando ya se veían los techos de la casa. Un dardo le entró en el pecho y le partió el corazón. Murió en el acto.
+
+Una escolta salida de la casona cubrió la retirada, y los pijaos, viendo que aquellos muros no se tomaban fácil, se marcharon.
+
+El muchacho quedó tendido en mitad de la sala, con el dardo clavado todavía. Su padre no lloró. Cruzó los brazos y llamó a don Fernán, a Dávalos, a todos: que vinieran a mirar la herida, que nadie diría jamás que había caído huyendo. Era un Aguilar, como las águilas que miran de frente al sol.
+
+Las gentes del valle de Cartago cantaban después un romance viejo: el capitán yace boca abajo, y quien quiera verle las heridas tendrá que voltearlo y buscarlas en el pecho, porque el muerto es de la casa de Aguilar.`,
+    historia: `En la antología quiteña que Eugenia Villa Posse preparó para el Instituto Andino de Artes Populares, tomo segundo, esta pieza ocupa los folios 17 a 21 de la sección «Varias regiones», dentro del bloque que la compiladora toma del libro Leyendas de Enrique Otero D'Costa, impreso por Minerva en Bogotá en 1936 para la Biblioteca Aldeana de Colombia. Allí lleva una dedicatoria: «Para Aquilino Villegas, castellano de Playa Rica», el mismo paraje donde el narrador sitúa las ruinas de la encomienda.
+
+El cuento no nació en 1936. Daniel Mauricio Preciado Camargo, en su trabajo de grado sobre la obra del autor en la Universidad del Rosario, copia el pasaje del desayuno de quimbayas y negros en el tambo y lo remite a la página 131 de Historietas. Leyendas y tradiciones colombianas, el tomo que la casa de Arturo Zapata sacó en Manizales en 1934. La ciudad no es casual. Otero vivía allí a finales de la década de 1910, se sentó en su concejo y dirigió el Archivo Historial de Manizales, y Chinchiná queda a un paso.
+
+Hubo una tercera impresión, póstuma. La Revista Universidad Pontificia Bolivariana, volumen 27, número 95, abre con este texto un grupo de seis «Leyendas» del autor, entre las páginas 55 y 58, y en una nota lo despide como historiador recién muerto, de «maravillosa erudición». Esa impresión trae entero el romance del cierre, diez octosílabos que el narrador pone en boca de «las buenas gentes del valle de Cartago».
+
+Quien habla es el propio autor, plantado ante unos muros caídos: «Uno pienso relatar ahora, antes de que le devore la carcoma del olvido». Villa Posse advierte que Otero oyó muchas de sus leyendas a campesinos y las «elabora» para darles forma literaria. Aquí la elaboración pesa más que lo oído: nombres de encomenderos, número de flecheros y mineros, la hora del ataque. El romance es lo único que el texto atribuye a boca ajena.`,
+    versiones: `Las impresiones que pueden leerse dicen lo mismo con pequeñas diferencias de taller. La de 1993 compone «poner a saldo a don Fernán» donde la revista de 1964 dice «a salvo», escribe «Fenán» una vez y rebaja a minúscula el apellido en la pregunta «¿Volver la espalda al enemigo un aguilar?». La revista, en cambio, se come letras en la batalla y deja rastros de otro alfabeto en «la gloria de la casta». Ninguna de esas variantes toca la trama. La dedicatoria a Aquilino Villegas figura en la antología quiteña y no en la revista medellinense.
+
+Lo que sí cambia es la etiqueta que cada editor pone al mismo texto. Villa Posse lo presenta dentro de un conjunto de leyendas regionales que su autor escuchó y reelaboró. La revista de 1964 lo llama crónica sobre temas coloniales. Preciado Camargo lo lee como historiografía de la vida diaria: le interesa menos la muerte del joven que el desayuno del tambo, porque allí ve a indios y africanos como sujetos con costumbres propias y no como fondo de la hazaña. Las tres lecturas conviven porque el cuento mezcla las tres cosas.
+
+El texto tiene su propia duplicidad. Los pijaos aparecen como horda y como «valientes guerreros cauchumas del Quindío, que tanto y tanto desazonaron al colono español», en la misma frase. Y la batalla se gana y se pierde a la vez: los atacantes se retiran porque la casona es difícil de tomar, pero el campo cristiano se ha desbandado. El padre convierte esa derrota en victoria mirando dónde entró el dardo, y el romance viejo repite el mismo gesto con otras palabras.`,
+    similitudes: `El gesto de don Diego tiene un antecedente clásico muy preciso. Entre los dichos de mujeres espartanas que Plutarco reunió en sus Moralia hay uno en que una madre, al saber que su hijo murió en la línea de combate, pide que lo entierren y que en su lugar ocupe el puesto el hermano; en otros se juzga al caído por si volvió o no la espalda. La honra del muerto, allí también, se decide mirando cómo cayó y no si se ganó.
+
+El segundo paralelo está en la épica francesa. En la Chanson de Roland, el sobrino de Carlomagno, moribundo en Roncesvalles, se tiende bajo un pino con la cabeza vuelta hacia los sarracenos, para que el emperador y los suyos digan que murió como conquistador. Como don Rodrigo, Roland muere en una retaguardia que se retira, y como él cuida que el cuerpo mire hacia el enemigo. El romance del valle de Cartago lleva la idea un paso más allá: quien quiera ver las heridas del capitán tendrá que dar vuelta al cadáver, porque todas están en el pecho.
+
+Dentro de la obra del mismo autor, «In illo tempore» mide el honor de otro caballero de la región por lo contrario, por haber cambiado de bando.`,
     leccion:
-      "El valor de un personaje no vuelve neutral la historia desde la cual fue imaginado.",
+      "Una muerte en combate puede leerse por el lugar de la herida más que por el resultado de la batalla.",
     sceneHorizontal:
       "la encomienda de Chinchiná en 1592 junto al río, con Don Fernán y sus acompañantes vigilando desde el corredor antes del combate, sin glorificar la violencia colonial",
     sceneVertical:
@@ -135,33 +165,65 @@ Esa incertidumbre pertenece al relato. La tradición regional llama Uñón a una
   }),
   defineCaldasMestizoMyth({
     slug: "el-cacique-cumanday",
-    title: "Cumanday y las hierbas del nevado",
+    fuentesAgotadas: "El texto sólo se lee en Vélez Correa, que lo transcribe de John Marulanda (Papel Salmón de La Patria n.º 242, 1997), sin copia abierta. Fuera de él, las fuentes abiertas dan el nombre Cumanday del volcán, no el relato.",
+    sourceKeys: [
+      {
+        key: "velezReader",
+        summary:
+          "Único texto del relato: el capítulo «El Cacique Cumanday», que Vélez transcribe entre comillas como «otro canto, otra oda», y en el mismo libro «Ipiaré Ebachí», el paralelo de Similitudes.",
+        limitation:
+          "El texto no es de Vélez: su bibliografía remite a John Marulanda, «Cumanday y su albo reino», citado en Papel Salmón de La Patria n.º 242 (1997), que no tiene copia abierta. Se lee la edición ampliada de El Libro Total (cita prensa de 2005-2007), no la de 1997; el visor no da folios del impreso y se cita por capítulo.",
+      },
+      "colombianoGeneralidadessf",
+      {
+        key: "sgcRuizFactSheet",
+        summary:
+          "Hoja informativa del Nevado del Ruiz que recoge el nombre indígena de Cumanday.",
+        limitation:
+          "Documento técnico; sin relato.",
+      },
+      {
+        key: "sgcGeologiaRuiz",
+        summary:
+          "Capítulo de geología del complejo volcánico que menciona el nombre Cumanday en su presentación del volcán.",
+        limitation:
+          "Geología, no tradición oral.",
+      },
+      "tiempollama2023",
+      "mexicoIztaccihuatl2022",
+    ],
+    title: "El cacique Cumanday",
     excerpt:
       "En una leyenda firmada por Fabio Vélez Correa, Cumanday cruza el Nevado del Ruiz en busca de hierbas para salvar a su esposa.",
     tags: ["cumanday", "cacique", "montaña", "amor"],
-    mito: `Fabio Vélez Correa presenta la historia de Cumanday como un canto al nevado que también lleva ese nombre. Su protagonista es un cacique joven que se enamora de la hija de un gobernante lejano. Después de acordar la unión, Cumanday lleva a la mujer a su territorio y comienza con ella una vida de pareja.
+    mito: `En una tarde clara, vista desde Manizales, la mole del nevado del Ruiz parece un titán que cuida lo que le dejaron sus antepasados. Brilla bajo el sol cuando el cielo está azul, y cuando se pone sombrío se envuelve en un manto de neblina. Por esa nieve caminó una vez un hombre. Sus huellas la marcaron, el calor de su cuerpo derritió algunos copos y su vida quedó unida para siempre a la de la montaña. Se llamaba Cumanday y era el cacique del albo reino, el reino blanco de la cumbre.
 
-Cuando llega el nacimiento del primer hijo, la situación cambia. La esposa enferma gravemente y el niño también corre peligro. Los conocimientos disponibles en la casa no bastan. Un brujo indica que las hierbas capaces de salvarlos crecen al otro lado del Ruiz, más allá de las alturas, grietas y nieves.
+Hay quien lo cree paez, de un pueblo hecho a los riscos y a las tormentas, que tendía puentes ingeniosos sobre los abismos y defendió su tierra con ferocidad cuando llegó el invasor.
 
-Cumanday parte sin demora. La montaña no es un simple fondo: separa al hombre de la medicina y convierte el viaje en prueba. Él asciende, atraviesa el paisaje helado y busca las plantas descritas. El tiempo que tarda en encontrarlas aumenta la urgencia de regresar.
+Cumanday se enamoró perdidamente de una india hermosa, hija de un cacique de una tribu lejana. Aquel amor floreció en las soledades de la cordillera, entre abismos sin vegetación y lagunas heladas. Por fin, un día, los picachos se vistieron de gala. De las profundidades subieron cantos delicados y tristes, sonaron los tambores, y las lagunas guardaron temblando un poco de calor en su seno. El cacique se casaba: ¡Uri, yani hiri hauna!
 
-Durante el descenso, una grieta del nevado interrumpe la ruta. Cumanday desaparece en ella con las hierbas. En su casa, la espera termina sin remedio. La mujer y el recién nacido mueren antes de recibir la medicina.
+Pero la desgracia rondaba aquella unión. Los malos espíritus se ensañaron con esos dos que eran tan felices. Cuando llegó el tiempo de nacer el primer hijo, la esposa cayó gravemente enferma. Otra vez reinó la niebla, y un silencio sin fin se apoderó de la cordillera.
 
-La leyenda no concluye con el accidente. Mucho después, alguien que llega a la cumbre encuentra a Cumanday todavía en el paisaje. El cacique conserva las hierbas y pide al visitante que las lleve a su hogar. Para él, el tiempo parece haberse detenido en el instante de la búsqueda.
+El brujo, arrugado como las montañas que lo rodeaban, dijo que sólo unas yerbas podían salvarla, y que esas yerbas se encontraban al otro lado del Ruiz. Cumanday partió melancólico, pero con ahínco: de él dependían la vida de su mujer y la del hijo que estaba por venir.
 
-El viajero sabe que la casa a la que Cumanday quiere volver ya no lo espera. La petición convierte la medicina en señal de una promesa imposible: las plantas fueron encontradas, pero no a tiempo. El nevado guarda al hombre, su encargo y el retraso.
+No volvió nunca. La montaña lo devoró entre sus pliegues blandos. Una grieta traicionera y voraz se tragó sin piedad al esposo amoroso y al padre que esperaba. También murieron su mujer y su hijo.
 
-La obra sugiere que Cumanday pudo pertenecer al pueblo páez, pero lo formula como una inferencia, no como dato transmitido por una autoridad indígena identificada. Esta adaptación no añade lengua nasa, rituales ni filiación comunitaria. Conserva al personaje tal como funciona en la leyenda literaria de Vélez Correa.
+Desde entonces, el caminante osado que logre llegar a lo más alto del nevado se encontrará con él. Cumanday aparece fantasmal, rodeado de soledad, en una cumbre donde sólo se oye el silbido del viento. Tiene en las manos un manojo de yerbas y se lo ofrece, suplicante, al visitante asombrado que ha subido hasta su alto reino. Le ruega que lo lleve a su hogar, a su tribu.`,
+    historia: `Este texto no es un testimonio oral sino una pieza literaria firmada. Fabio Vélez Correa la incluye en Mitos, espantos y leyendas de Caldas, en la primera parte, dedicada a leyendas de tema indígena, bajo el título «El Cacique Cumanday». La primera edición la hizo la Imprenta Departamental de Caldas en Manizales en 1997; la que se lee hoy en la biblioteca digital El Libro Total es una edición ampliada y corregida, posterior a 2007, porque sus fuentes citan prensa de 2005 a 2007. Vélez sólo escribe un párrafo de presentación, donde llama al texto «otro canto, otra oda al Nevado Cumanday», recuerda que muchos han escrito sobre la «Montaña Blanca» y lamenta que la tala y las quemas hayan reducido su nieve. El resto lo transcribe entre comillas, sin nombrar al autor al pie.
 
-El nombre Cumanday sí está documentado como una denominación precolombina del Nevado del Ruiz. Eso vincula la narración con un paisaje real y una memoria nominal profunda, pero no demuestra que hubiera un cacique histórico con esa biografía.`,
-    historyCore:
-      "Vélez Correa firma la pieza y la presenta como oda al Nevado Cumanday. Dentro del mismo texto propone, con lenguaje conjetural, que el personaje fue páez; ninguna fuente comunitaria independiente confirma esa identidad. El Servicio Geológico Colombiano e IDEAM sí documentan Cumanday o Kumanday como nombre del Nevado del Ruiz y describen el volcán real.",
-    versionCore:
-      "La trama estable reúne matrimonio, parto difícil, encargo de hierbas, travesía del Ruiz, desaparición en una grieta y encuentro posterior con el viajero. La identidad páez no se trata como versión ancestral, sino como hipótesis del autor. Tampoco se identifica al brujo, la planta o el visitante, porque el relato consultado no ofrece esos datos.",
-    similarityCore:
-      "Cumanday comparte con Orfeo, Izanagi y otros relatos de pérdida el intento de cruzar una frontera peligrosa para recuperar a un ser amado, aunque aquí el objetivo es llevar medicina y no sacar a la persona del mundo de los muertos. También se acerca a leyendas de viajeros detenidos en el tiempo dentro de montañas encantadas. Su rasgo propio es el Nevado del Ruiz, la búsqueda de hierbas y el regreso que nunca alcanza a comenzar. La montaña guarda el remedio y también impide su llegada.",
+El autor probable es John Marulanda. En sus «Fuentes de consulta» Vélez registra «Cumanday y su albo reino», de Marulanda, citado por Alba Nelfy Bernal en el Papel Salmón, el suplemento dominical de La Patria de Manizales, n.º 242, del domingo 8 de junio de 1997. La expresión «albo reino» se repite dentro del texto, lo que refuerza la atribución. No hay narrador, lugar ni fecha de recolección: la voz es la de un escritor manizaleño que mira el Ruiz desde la ciudad y dice «recordamos una leyenda».
+
+La filiación paez del cacique es una conjetura del propio autor («Todos los indicios nos llevan a pensar que Cumanday fue un Paece»), acompañada de un elogio de las «virtudes americanistas» y de un lamento por la decadencia de ese pueblo. Es indigenismo romántico de la prensa caldense, no la palabra de una comunidad. La exclamación de la boda, «¡Uri, yani hiri hauna!», no se traduce ni se atribuye a ninguna lengua.`,
+    versiones: `El texto de 1997 es el único que cuenta la historia del cacique; no se conoce otro registro que la narre. Lo que cambia entre los textos que la rodean es qué cosa es Cumanday. En el mismo libro de Vélez Correa, los capítulos vecinos de la primera parte usan el nombre para la montaña y no para una persona. En «Ipiaré Ebachí», que el libro presenta como leyenda quimbaya, el ánima de la princesa busca su sandalia de oro «por las laderas del Cumanday». En «La Princesa Napicura», al nacer la niña, «el páramo-volcán de Cumanday arrojó al cielo fuego, humo y piedras». Sólo el texto atribuido a John Marulanda convierte el topónimo en un hombre que se funde con la montaña, y lo dice casi de entrada: el personaje «unió por siempre su vida a la del inerte coloso».
+
+Dentro del propio texto conviven dos registros. Uno es la historia: amor, boda, parto, brujo, travesía, grieta y aparición. El otro es la tesis del autor, que lo hace paez, lo liga a la Gaitana y lamenta la «aculturación descompuesta» de ese pueblo. La presentación de Vélez añade una tercera capa, ecológica: el nevado que pierde su nieve «por la inconsciencia de los hombres». Del artículo del Papel Salmón sólo se conoce el título y la cita de Alba Nelfy Bernal; no se ha podido comparar su texto con el que transcribe el libro.`,
+    similitudes: `El paralelo más cercano está en el mismo libro. En «Ipiaré Ebachí», la princesa quimbaya pierde una sandalia de oro al huir de la erupción; los sobrevivientes ven durante muchas noches su ánima buscándola en las laderas del Cumanday, y dicen que sus lágrimas formaron el nevado Santa Isabel. Como Cumanday, es un muerto que vaga por la montaña con un encargo sin cumplir, y el paisaje entero queda como huella de una pérdida.
+
+En México, la leyenda de Iztaccíhuatl y Popocatépetl cuenta el amor de una princesa y un guerrero que terminan convertidos en los dos volcanes que dominan el valle. Comparte con el texto caldense la pareja indígena idealizada, el desenlace fúnebre y la identificación de un hombre con una montaña nevada. Ambas son relatos de fundación del paisaje que circularon sobre todo en la prensa, el calendario y la escuela, más que en la boca de los pueblos indígenas a quienes se atribuyen.
+
+El viaje por una planta que salve a otro y el fracaso por llegar tarde tienen además un modelo antiguo en Gilgamesh, que baja al fondo del mar por la planta que devuelve la juventud y la pierde en el camino de vuelta.`,
     leccion:
-      "El amor puede sostener una búsqueda, pero no concede dominio sobre el tiempo ni la montaña.",
+      "Un remedio que llega tarde sigue pesando en las manos de quien salió a buscarlo.",
     sceneHorizontal:
       "Cumanday asciende por el Nevado del Ruiz con un pequeño atado para recoger hierbas, entre laderas volcánicas y nieve, sin símbolos étnicos inventados",
     sceneVertical:

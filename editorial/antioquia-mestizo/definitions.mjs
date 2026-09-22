@@ -135,31 +135,54 @@ Así, la Cabellona permanece en los caminos sin convertirse en ángel castigador
   }),
   defineAntioquiaMestizoMyth({
     slug: "la-dama-verde",
-    title: "La Dama Verde",
+    fuentesAgotadas: "El registro de Escobar Uribe (Mitos de Antioquia, 1950) y de Ocampo López (Mitos colombianos, 1989; Mitos y leyendas de Antioquia la Grande, 2001) sólo se lee de segunda mano, en las citas con página de Vélez Correa y de la Alcaldía de Andes: los libros no tienen texto abierto (Google Books, vetado). Tampoco Julián Bueno (1988), Jiménez Mejía (1977) ni López Cardona (2016). Fuera de Vélez, SENA 2022 y la ficción de 2004, la cantera abierta del ciclo no nombra esta figura.",
+    sourceKeys: [
+      "correaMitos1997",
+      "tiempoCuentos2004",
+      "toledoRemembranzas2022",
+      "antioquiaAndes2019",
+      {
+        key: "udeaCenteno",
+        summary:
+          "Estudia a María del Pardo, «la Centena» y María la Parda en el occidente y el bajo Cauca antioqueño, la mujer ligada al oro escondido.",
+        limitation:
+          "Es la figura que compara Similitudes, no la Dama Verde.",
+      },
+    ],
+    title: "La dama verde",
     excerpt:
       "Una mujer cubierta con bayetón verde cruza las calles antes del amanecer y desaparece cuando quienes la siguen alcanzan el borde del pueblo.",
     tags: ["espectro", "moralidad", "misterio", "castigos"],
-    mito: `En una madrugada fría de noviembre, cuando las calles de un pueblo antioqueño estaban vacías, una figura apareció bajo los aleros. Era más alta de lo que parecía a distancia y llevaba un largo bayetón verde. Un velo ocultaba su cara; guantes y antiguos chapines completaban un vestido que no correspondía con la hora ni con el uso cotidiano.
+    mito: `Cuando las calles de las ciudades antiguas se quedan solas, de alguna casa abandonada sale la Dama Verde. Es una anciana más bien alta, de porte y compostura distinguidos, vestida con un largo sayal de bayetón verde. Una mantilla negra le cubre la cabeza y la cara y le cae suelta sobre los hombros. Por debajo le brillan los ojos como rubíes, con la profundidad de un abismo.
 
-Quien la vio caminar decidió seguirla. La mujer no pidió ayuda ni volvió la cabeza. Avanzó por el centro urbano con un paso regular, llevando a veces un pequeño bulto contra el cuerpo. Las puertas permanecían cerradas y el sonido de los zapatos marcaba la distancia.
+Trae siempre entre las manos un rosario de ébano, y hay quien jura que las cuentas le fosforecen. Otros la han visto pasar con un atado de ropa bajo el brazo. Toda ella alumbra en lo oscuro.
 
-Al llegar a las últimas casas, la Dama Verde siguió hacia la oscuridad. El testigo apresuró el paso para no perderla. Cuando esperaba verla entrar en un camino o detenerse junto a un muro, la figura dejó de estar. No hubo carrera, giro ni puerta abierta. El bayetón verde simplemente desapareció del paisaje.
+Recorre los parques y las plazoletas donde se citan los enamorados, y a ellos no les hace nada. A las parejas que se ven a escondidas las ampara. Su enojo es para los borrachos y para los jugadores empedernidos, que se espantan en cuanto la ven venir.
 
-La historia no concluye quién era. En algunas poblaciones se decía que una mujer de familia poderosa había ocultado el nacimiento y muerte de un hijo, y que regresaba cargando aquello que no quiso reconocer. Esa explicación expresa una moral sobre secreto, maternidad y culpa, pero no ofrece nombres verificables ni un origen común para la aparición.
+En varios pueblos se aparece de otro modo. Es una mujer alta, toda de verde, con la cara tapada, que sale de golpe al paso de los hombres trasnochadores. Les hace señas feas y sucias, los convida a lo que no se debe, y ellos la siguen. Ella los lleva a un lugar oculto y allí, de improviso, se destapa la cara: debajo no hay rostro, sólo una calavera. Más de un galán ha amanecido desmayado en el suelo.
 
-En Andes circuló otra narración. Allí, la Dama Verde fue asociada con el barrio San Pedro y con un sacerdote joven. La memoria local organizó el espanto alrededor de calles y personajes propios. No es necesario convertir esa versión en expediente histórico ni unirla con la explicación del bulto.
+Quién es, lo explica una historia vieja. Fue una dama de alcurnia que guardaba un pecado oculto. Tuvo un niño, lo mató y lo escondió dentro de una tapia, y luego volvió a revocar la pared para que nadie notara nada. Por esa culpa tiene que vagar sin fin, purgando. Su pena tiene un oficio: servir de guía hacia los objetos preciosos que escondieron los muertos. Esos difuntos no descansan mientras lo suyo siga bajo tierra, y sólo encuentran la paz cuando alguien lo desentierra.
 
-El color, la vestimenta y el recorrido urbano son más constantes que cualquier biografía. A diferencia de otros espantos de monte, la Dama Verde pertenece a poblaciones de cierta importancia y a las horas anteriores al amanecer. Su misterio se construye en espacios conocidos que se vuelven extraños cuando todos duermen.
+Por eso a la Dama Verde se la mira hasta el final. El último punto donde se apaga su figura luminosa es la seña. Allí hay que cavar, porque cerca está el entierro, la guaca que algún muerto dejó guardada y que ella, con su rosario y su sayal, sigue señalando noche tras noche.`,
+    historia: `Esta Dama Verde sale del capítulo que Fabio Vélez Correa le dedica en «Mitos, espantos y leyendas de Caldas», publicado por la Imprenta Departamental de Caldas en 1997 y leído aquí en la edición ampliada que sirve El Libro Total. Vélez la clasifica entre los mitos menores y arma el capítulo con dos obras antioqueñas que cita por su nombre.
 
-La revisión conserva esa caminata y sus versiones sin añadir cazadores de tesoros, haciendas ni aventuras de redención. Basta la figura velada que atraviesa el pueblo y la imposibilidad de saber a quién estaba siguiendo realmente el testigo.`,
-    historyCore:
-      "Escobar Uribe la caracteriza como espanto urbano desconocido en el campo y detalla bayetón verde, velo, guantes y chapines. Ocampo conserva el seguimiento hasta las afueras. El libro municipal de Andes documenta una localización propia. Ninguna fuente establece una biografía común ni prueba como hecho el infanticidio que algunas versiones usan para explicarla.",
-    versionCore:
-      "La figura con bulto y la mujer castigada por ocultar un hijo pertenecen a una explicación moral de poblaciones antiguas. Andes conserva una versión relacionada con San Pedro y un sacerdote. Son relatos incompatibles que comparten la aparición verde, no capítulos de una misma vida. La trama heredada de Damián, tesoro y hacienda mezclaba motivos ajenos y se elimina.",
-    similarityCore:
-      "La Dama Verde comparte con María la Larga el recorrido por calles desiertas y con la Viudita la ropa que comunica una identidad antes de mostrar el rostro. Se diferencia de ambas por el bayetón verde, los chapines y el seguimiento hasta las afueras. Dentro de Antioquia, su forma revela cómo un pueblo convierte prendas antiguas y secretos familiares en explicación de una presencia urbana. El posible bulto recuerda a la Llorona, pero aquí no hay búsqueda de hijos ni lamento audible. Los repertorios de Escobar y Ocampo documentan esas figuras por separado y permiten comparación, no genealogía.",
+La primera es «Mitos y mensajes» de Iván Salazar Duque (Grafoprint, Medellín, 1990), página 104. De allí salen la anciana alta de porte distinguido, el sayal de bayetón verde, la mantilla negra, los ojos de rubí, el rosario de ébano, la luz que despide, el amparo a los enamorados furtivos y el enojo con borrachos y jugadores, y la seña del entierro en el punto donde desaparece. Salazar la llama espanto citadino, muy popular en la mayoría de las poblaciones de Antioquia y del antiguo Caldas, y la sitúa en casas abandonadas, calles de ciudades antiguas y medianas, parques y plazoletas.
+
+La segunda es «¡A echar cuentos, pues! Consejas y leyendas del mito campesino» de Antonio Molina Uribe (Bolsilibros Bedout, volumen 21, Medellín, 1967), página 218, que Vélez copia entre comillas: la mujer alta de verde con la cara cubierta que convida a los trasnochadores y se destapa en calavera.
+
+El párrafo final, sin firma, es de Vélez y atribuye a «la leyenda» el origen de la dama: una señora de alcurnia que emparedó a su hijo en una tapia y vaga guiando hacia los tesoros de los muertos. Ninguna de las tres voces da nombre de narrador ni de pueblo. Es un espanto de la sociedad urbana de la colonización antioqueña, con su rosario, su linaje y sus guacas.`,
+    versiones: `Las dos descripciones que Vélez reúne no coinciden del todo. Para Salazar Duque la Dama Verde es una anciana de porte señorial, casi benévola: alumbra, protege a los enamorados y marca el lugar de los tesoros; sólo borrachos y jugadores tienen motivo para temerla. Para Molina Uribe es una mujer alta que seduce a los trasnochadores con señas obscenas, los arrastra a un sitio oculto y les enseña una calavera. La primera castiga el vicio y ampara el amor; la segunda castiga el deseo del hombre que sale de noche.
+
+El origen de la figura, la dama que emparedó a su hijo, no pertenece a ninguna de las dos citas: Vélez lo presenta como lo que dice la leyenda, y lo usa para explicar por qué la aparición guía hacia los entierros.
+
+En 2004, la antología «Cuentos de espantos y otros seres fantásticos del folclor colombiano», editada por la Casa Editorial El Tiempo con la Universidad Autónoma de Colombia, le dedica sus páginas 11 y 12. El libro se define en su introducción como una recopilación de «documentos imaginarios», y así hay que leer esta entrada: es una noticia inventada de un periódico del más allá, fechada en Santa Fe de Antioquia, donde un zapatero enamorado ve salir de una casona a una señora de vestido verde casi luminoso y velo oscuro, y luego encuentra allí un cofre de monedas. Los personajes, la fecha y el cofre son composición del libro. Lo que conserva del registro folclórico es el vestido verde, la cara velada, la protección a una pareja furtiva y el tesoro.`,
+    similitudes: `María la Larga, en el mismo capítulo de mitos menores de Vélez, repite el golpe final de la versión de Molina Uribe. Es también una mujer que seduce a los trasnochadores de los pueblos de Antioquia y el Viejo Caldas, los lleva hacia el cementerio y, cuando van a abrazarla, les muestra una horrenda calavera. Las dos castigan con el mismo gesto: dejar ver la muerte debajo del cuerpo deseado.
+
+La Madrelagua o Madrevieja, que Vélez recoge en San Lorenzo y en Supía citando a Bueno Rodríguez, comparte con la Dama Verde el vínculo con el oro. Es una mujer que se sienta sobre los depósitos auríferos del río y cuya presencia advierte al barequero que su corazón debe estar limpio de envidia y codicia. La Dama Verde guía hacia los entierros de los muertos; la Madrelagua cuida las arenas del río. Ambas ponen una figura femenina entre el buscador y la riqueza escondida.
+
+El libro del SENA de 2022 trae, en su página 58, a María la Parda de Marquetalia: una mujer codiciosa que, según el marquetón Jorge Echeverry, enterró sus mulas cargadas de oro junto al antiguo camino a Samaná y se enterró con ellas. Allí la mujer no guía hacia el tesoro: es ella misma quien lo esconde.`,
     leccion:
-      "Cuando una comunidad oculta una culpa, el relato puede vestirla sin llegar a demostrarla.",
+      "Una culpa escondida en la pared no descansa hasta que otros sacan a la luz lo enterrado.",
     sceneHorizontal:
       "una Dama Verde de velo, guantes y largo bayetón cruza sola las calles empedradas de Andes antes del amanecer",
     sceneVertical:
@@ -179,33 +202,68 @@ La revisión conserva esa caminata y sus versiones sin añadir cazadores de teso
   }),
   defineAntioquiaMestizoMyth({
     slug: "la-rodillona",
-    title: "La Rodillona",
+    fuentesAgotadas: "El registro de Escobar Uribe (Mitos de Antioquia, 1950) y de Ocampo López (Mitos colombianos, 1989; Mitos y leyendas de Antioquia la Grande, 2001) sólo se lee de segunda mano, en las citas con página de Vélez Correa y de la Alcaldía de Andes: los libros no tienen texto abierto (Google Books, vetado). Tampoco Julián Bueno (1988), Jiménez Mejía (1977) ni López Cardona (2016). Fuera de Vélez, SENA 2022 y la ficción de 2004, la cantera abierta del ciclo no nombra esta figura.",
+    sourceKeys: [
+      {
+        key: "correaMitos1997",
+        summary:
+          "Capítulo «La Rodillona», con la cita de Escobar Uribe (Mitos de Antioquia, 1950, p. 119), la copla y «La Rodillona en Risaralda»; en el mismo libro, la Vieja Colmillona y el Patetarro de Similitudes.",
+      },
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Registro oral reciente de la Rodillona en el alto oriente caldense, con el narrador Javier Gallego (p. 83), y los animales «arregionados» de los cazadores.",
+        limitation:
+          "Recopilación escolar-comunitaria de 2022; los narradores hablan de oídas.",
+      },
+      "duranDesarrollo2007",
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Trae la Rodillona en sus pp. 69-70.",
+        limitation:
+          "El libro se declara «recopilación de documentos imaginarios»; su entrada es composición de autor y sólo sirve como testigo de circulación en 2004. El OCR de esas páginas está vacío.",
+      },
+      "tiempoMedellin1990",
+    ],
+    title: "La rodillona",
     excerpt:
       "Una vieja de rodillas enormes espera sobre los barrancos y rompe la noche con una risa que desconcierta a amantes y caminantes.",
     tags: ["Rodillona", "miedo", "espectro", "castigos"],
-    mito: `Un caminante regresaba tarde por una vía estrecha de Antioquia. Había demorado el regreso esperando a la persona que cortejaba y ahora avanzaba sin compañía, debajo de barrancos que la oscuridad volvía más altos.
+    mito: `En los pueblos paisas la llaman la Rodillona por lo que más la atormenta: unas rodillas enormes. De noche se sienta en lo alto de los barrancos que bordean los caminos, encogida como una vieja, con la cara metida entre las piernas. Tiene el pelo canoso, los ojos rojos, la nariz afilada y ganchuda como de bruja y una boca grande con un solo diente. Cuando alguien pasa por debajo, suelta la carcajada.
 
-Desde arriba oyó una risa larga. No parecía venir de una casa ni de alguien que caminara detrás. El sonido se interrumpía y volvía a empezar, como si quien reía conociera cada pausa del viajero. Al levantar la mirada, distinguió una figura sentada en el borde.
+Su presa es el trasnochador perdido en la oscuridad. Si el hombre raspa un fósforo para encender el farol, ella se vuelve ventarrón y se lo apaga. Luego se ríe del desesperado que no atina con la entrada, ni da con la salida, ni encuentra el portillo ni la señal convenida. A los jugadores que de regreso tienden la ruana en mitad de las mangas para echar los dados o unas manos de tute, les llega en forma de murciélago. Les apaga el farol y se burla hasta de los más valientes.
 
-Era una vieja encorvada, con la cara metida entre las piernas. Sus rodillas sobresalían de manera desmesurada. El cabello gris caía alrededor de un rostro arrugado; los ojos parecían inflamados, la nariz era afilada y ganchuda, y una boca amplia dejaba ver un solo diente largo.
+Sus chanzas no tienen medida. Hay quien se ha ido por un abismo, quien se ha herido con el arma que sacó contra ella, quien ha caído sin sentido del puro miedo. Entonces es cuando más se ríe.
 
-La Rodillona no bajó del barranco. Volvió a reír: un “ja, ja” que ocupó el camino y obligó al hombre a decidir entre detenerse o pasar debajo de ella. Cuando aceleró, el sonido lo acompañó. No hubo conversación, nombre propio ni explicación de una muerte anterior.
+Hay cosas que no soporta. Donde hay una mujer encinta o un niño que berrea, no se arrima ni deja oír su risa. Los campesinos de experiencia, cuando andan en malos pasos, cargan el cordón del Señor Caído para azotarla si los persigue. Y para alejarla sin llamarla se canta una copla que la nombra de lejos: allá en la montaña, con sus rodillas hinchadas, la Rodillona aparece.
 
-Las versiones la presentan como un espanto burlón. Su aparición se dirige con frecuencia a amantes que regresan después de una espera nocturna. La burla puede funcionar como advertencia sobre horarios y encuentros, pero el relato no necesita afirmar que todo afecto tardío merece castigo.
+De dónde salió, unos lo saben así: es el alma en pena de una alcahueta embaidora que con sus astucias deshonró doncellas, avergonzó hogares, arruinó fortunas y enfermó a clérigos confiados. En el atrio se oye otra cosa. Fue una mujer arrogante y vanidosa a quien el destino castigó con una artritis sin cura. Desde entonces va a la misa de la aurora y a la del anochecer, le da la vuelta al templo de rodillas y baja las escalinatas apoyada en ellas, pagando una promesa. Sale la última, con unas muletas de madera que suenan, lenta como una tortuga. Sus rótulas parecen calabazas peladas y sangrientas. Se sabe todas las oraciones, lleva medallas y escapularios colgados de la ropa y un galón de agua bendita. Las veladoras que le sobran del altar mayor las prende frente a las tumbas del cementerio, para que los difuntos descansen.
 
-También se dice que evita a mujeres embarazadas y a niños que lloran. Ese detalle cambia la relación con el miedo: quienes suelen aparecer como vulnerables quedan fuera de su persecución, mientras el adulto que camina solo recibe la risa.
+En Risaralda, cuando el pueblo todavía se llamaba San Joaquín, a finales de los años 20, la vieron más de una noche por las calles empedradas de Chisperos, la zona de tolerancia. Caminaba con sus piernas largas y esqueléticas, de rótulas salidas, asustando a los trasnochadores y a los borrachitos.
 
-Al dejar atrás el barranco, el viajero ya no vio a la vieja. El sonido se confundió con el viento y los animales nocturnos. La ruta continuó sin ofrecer una causa. La Rodillona pertenece al punto alto desde donde observa y deforma el cuerpo, no a una tumba ni a una población única.
+En el alto oriente caldense la conocen los cazadores. Allá se sube a la copa de los árboles y se hace pasar por uno de esos animales endemoniados, arregionados, que no se dejan cazar. Javier Gallego era apenas un muchacho cuando encontró a unos cazadores dándole bala a un perezoso trepado en un árbol altísimo, sin poder tumbarlo. Él sabía cómo se bajaban esos animales necios, y lo bajó. Aquello cayó como una llanta de tractor, con un estruendo terrible, y rodó. Cuando los cazadores fueron a recogerlo, en el suelo estaba la señora, con el pelo tirado sobre toda la cara y las rodillas saliéndole por los hombros. Dejaron allí la escopeta y todo lo demás.`,
+    historia: `La Rodillona tiene dos registros escritos que no dependen uno del otro. El primero es el capítulo que le dedica Fabio Vélez Correa en «Mitos, espantos y leyendas de Caldas», libro que la Imprenta Departamental de Caldas publicó en 1997 y que El Libro Total sirve hoy en una edición ampliada. Vélez la coloca entre los mitos menores y abre con Arturo Escobar Uribe, «Mitos de Antioquia» (Minerva, 1950), página 119: de allí vienen el nombre, la vieja sentada en el barranco con la cara entre las piernas, el diente único, el ventarrón que apaga los fósforos, el cordón del Señor Caído, la copla, el ancestro de la alcahueta y el miedo a las embarazadas y a los niños que lloran. La explicación de la mujer soberbia castigada con artritis, que da vueltas de rodillas a la iglesia, Vélez la atribuye a «otros investigadores» y a lo que dicen feligreses y parroquianos, sin dar nombres. Cierra con un apunte propio, «La Rodillona en Risaralda»: varios ancianos le contaron que a finales de los años veinte, cuando el pueblo caldense aún se llamaba San Joaquín, la vieron por las calles de Chisperos, la zona de tolerancia.
 
-Por eso la revisión elimina la pareja y el vendaval que una versión heredada convirtió en origen. El repertorio impreso conserva una figura, una risa y una función caminera. Añadir una tragedia personal cerraba artificialmente lo que el espanto mantiene abierto.`,
-    historyCore:
-      "Escobar Uribe la define como mito burlón no vinculado con una montaña especial y fija su posición sobre barrancos. Ocampo y materiales educativos reproducen los rasgos corporales, la risa y el encuentro con amantes. La circulación editorial es comprobable; la presencia sobrenatural y una historia de origen no lo son.",
-    versionCore:
-      "Las descripciones varían en el tamaño de las rodillas, el color de los ojos y el número o longitud de los dientes. Algunas enfatizan amantes nocturnos; otras, caminantes en general. El rechazo a embarazadas y niños llorando aparece en versiones impresas. Aquileo, Virgelina y un vendaval vengativo no pertenecen a ese expediente y fueron retirados.",
-    similarityCore:
-      "La Rodillona comparte nariz, dentadura y risa con la Colmillona o Muelona, pero se reconoce por las rodillas enormes y la postura en el barranco. La Tarasca también exagera boca y dientes, aunque pertenece a otra forma festiva y monstruosa. Como la Patasola, intercepta recorridos nocturnos y puede disciplinar conductas; a diferencia de ella, no corre sobre una sola pierna ni ofrece una seducción previa. La ubicación elevada también la separa de figuras que siguen al viajero desde atrás o bloquean directamente el sendero.",
+El segundo registro es oral y reciente. «Remembranzas de mis abuelos. Memoria oral y ambiental del alto oriente caldense», libro digital del SENA publicado en La Dorada en 2022 por Santiago Useche Toledo, Allison González González, Carlos Alberto Guzmán Ruiz y Eliana Marcela Tunarrosa Echeverría, recoge testimonios de Manzanares y Marquetalia. En sus páginas 83 a 85 describe a la anciana de rodillas abultadas y transcribe en primera persona a Javier Gallego, «un morador caldense», que cuenta cómo, siendo muchacho, tumbó de un árbol a un perezoso que resultó ser ella.
+
+Es un espanto de los pueblos de la colonización antioqueña: se defiende uno de ella con un objeto de devoción católica y su penitencia transcurre entre el atrio, la misa y el cementerio.`,
+    versiones: `Escobar Uribe, según lo resume Vélez, la ve como espanto caminero y burlón: vieja sentada en lo alto del barranco, que apaga luces, extravía al que busca el portillo y lo lleva hasta el abismo. Para él es el alma en pena de una alcahueta, y en esa línea la hace aparecer también a los jugadores que tiran los dados sobre la ruana, esta vez en figura de murciélago.
+
+Los feligreses que Vélez cita sin nombre cuentan algo muy distinto, casi piadoso. Allí la Rodillona no se ríe de nadie: fue una mujer soberbia enferma de artritis que se arrastra de rodillas alrededor del templo, reza de memoria, carga agua bendita e incienso y enciende veladoras a los difuntos. La culpa es la misma, pero la figura ha pasado de verdugo a penitente.
+
+La memoria de Risaralda, también en Vélez, la saca del camino y la mete en el pueblo: la ven por las calles empedradas de la zona de tolerancia, con piernas largas y esqueléticas, espantando borrachos.
+
+El testimonio de Javier Gallego en el libro del SENA de 2022 cambia de escenario y de víctimas. La anciana aparece despeinada y canosa, confundida con bruja, con las rodillas «por los hombros», y no en un barranco sino en la copa de los árboles, disfrazada de animal «endemoniado» o «arregionado». Asusta a cazadores y a amantes solitarios. No hay risa, ni farol, ni origen: sólo el golpe de algo que cae como una llanta de tractor y la huida.
+
+«Cuentos de espantos y otros seres fantásticos del folclor colombiano» (El Tiempo y Universidad Autónoma, 2004) le dedica las páginas 69 y 70, pero es un libro que se presenta a sí mismo como recopilación de «documentos imaginarios»: ficción de autor, no testimonio.`,
+    similitudes: `En el mismo libro de Vélez, la Vieja Colmillona, que peones de la hacienda El Oro, en Aguadas, contaron a Javier Ocampo López, comparte con la Rodillona una regla precisa: no ataca a las mujeres embarazadas ni entra en casas con niños recién nacidos. Las dos son viejas de un rasgo corporal desmedido, colmillos en un caso y rodillas en el otro, y las dos atacan al hombre que anda de noche fuera de casa.
+
+El Patetarro, según Iván Salazar Duque citado por Vélez, baja de los montes a los poblados mineros a altas horas para espantar con gritos y carcajadas a los mineros que sorprende por las calles desiertas. La carcajada como arma, y no el golpe, es lo que acerca a los dos espantos.
+
+El libro del SENA de 2022 ofrece un tercer vínculo, esta vez con el mundo de la cacería: los animales «endemoniados» o «arregionados», que no se dejan cazar, son una categoría que los cazadores del alto oriente caldense conocen por sí misma. La Rodillona se esconde en ella. Lo que el cazador cree una presa difícil resulta ser un espanto con forma de mujer.`,
     leccion:
-      "La burla puede vigilar una conducta sin explicar quién obtuvo autoridad para condenarla.",
+      "La soberbia que se burla del extraviado termina pagando su culpa de rodillas y a la vista de todos.",
     sceneHorizontal:
       "un caminante nocturno mira hacia un barranco antioqueño donde la Rodillona aparece sentada con la cara entre las piernas",
     sceneVertical:
@@ -225,31 +283,64 @@ Por eso la revisión elimina la pareja y el vendaval que una versión heredada c
   }),
   defineAntioquiaMestizoMyth({
     slug: "las-ilusiones",
-    title: "Las Ilusiones Malas",
+    fuentesAgotadas: "El registro de Escobar Uribe (Mitos de Antioquia, 1950) y de Ocampo López (Mitos colombianos, 1989; Mitos y leyendas de Antioquia la Grande, 2001) sólo se lee de segunda mano, en las citas con página de Vélez Correa y de la Alcaldía de Andes: los libros no tienen texto abierto (Google Books, vetado). Tampoco Julián Bueno (1988), Jiménez Mejía (1977) ni López Cardona (2016). Fuera de Vélez, SENA 2022 y la ficción de 2004, la cantera abierta del ciclo no nombra esta figura.",
+    sourceKeys: [
+      {
+        key: "correaMitos1997",
+        summary:
+          "Capítulo «Las ilusiones malas», con la cita de Escobar Uribe (Mitos de Antioquia, 1950, p. 168); en el mismo libro, la Rodillona y María la Larga de Similitudes.",
+      },
+      "carrasquillamarquesa1928",
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Trae las Ilusiones en sus pp. 71-72.",
+      },
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Registro oral de la Rodillona en el alto oriente caldense (p. 83), el espanto que Similitudes pone junto a las Ilusiones.",
+        limitation:
+          "No trae las Ilusiones; sirve para la comparación.",
+      },
+      {
+        key: "antioquiaAndes2019",
+        summary:
+          "Cita a Escobar Uribe sobre María la Larga (p. 58), la mujer que crece hasta las nubes que compara Similitudes.",
+        limitation:
+          "No menciona las Ilusiones.",
+      },
+    ],
+    title: "Las ilusiones",
     excerpt:
       "Sombras, hojas y sonidos crecen alrededor del fogón cuando el miedo les da forma; las Ilusiones no tienen un solo rostro ni una biografía.",
     tags: ["sobrenatural", "sombras", "miedo", "misterio"],
-    mito: `En una cocina rural de Antioquia, las brasas quedaban encendidas después de la comida. Alrededor del fogón, las personas mayores contaban lo que podía aparecer en un camino oscuro: figuras que crecían, voces sin dueño y bultos capaces de cambiar de tamaño cuando alguien intentaba reconocerlos.
+    mito: `No son brujas ni aparecidos, y la gente sencilla lo tiene bien claro. Las ilusiones malas son otra cosa: endriagos sin carne, hechos de imaginación y engordados por el miedo, que apenas asombran a los cristianos. Aun así cargan con percances terribles, encuentros horribles y sustos de los que no se olvidan.
 
-Quien salía después de escuchar esas historias llevaba consigo un repertorio de formas. Las hojas secas que corrían por el suelo podían parecer pasos. El silbido entre las tablas se volvía respiración. Una rama movida por el viento adquiría brazos, y el lomo de un animal escondido se levantaba como una sombra desproporcionada.
+Quien las ve, las ve un instante. Son sombras de monstruos extravagantes o figuras disconformes que se alargan y se encogen delante de los ojos aterrados. Unas veces es la sombra de un pajarraco descomunal. Otras, la de un gigante. Otras, largas figuras blancas que se tienden sobre los tejados o asoman por encima de las copas de los árboles, y en un segundo crecen y descrecen hasta turbar los sentidos. No hablan. No hacen ruido alguno. Sólo salen de noche.
 
-A esas presencias se las llamó Ilusiones Malas. No eran brujas con nombre propio ni difuntos que regresaban para cumplir una deuda. Arturo Escobar Uribe las describió como endriagos incorpóreos creados por la imaginación y alimentados por el miedo. Su cuerpo dependía de quien observaba.
+Aparecen en los despoblados, en las casas abandonadas, en las calles desiertas, en los montes, en los socavones de las minas y en los potreros, y sobre todo en la soledad nocturna. En los cementerios se las ve alumbradas por los fuegos fatuos o heridas por la luz vagabunda de los cocuyos, y ahí sí ponen los pelos de punta.
 
-En el camino, una figura podía extenderse hasta ocupar la ladera y luego reducirse al tamaño de un matorral. Si el caminante corría, los sonidos parecían seguirlo. Si se detenía, la espera daba tiempo para que cada ruido recibiera una intención. Nada tenía que tocarlo para modificar la ruta.
+A veces una ilusión mala es una mata de salvia florecida que el viento mece en la oscuridad: su floración blanca parece un fantasma envuelto en un largo sudario que hace señas desde la falda de la colina. A veces es la sombra chinesca que echa sobre el camino la luz mortecina del farol. Al borracho enguayabado lo asusta el rumor del viento entre los árboles, o su propia sombra cuando la luz cambia de golpe. Al que tiene la pasma, con ansia de seguir la juma, se le aparecen trasgos espantosos.
 
-Al volver a una casa iluminada, la experiencia se convertía en relato de fogón. Otra persona aprendía qué debía temer y reconocería después los mismos sonidos. Así, las Ilusiones circulaban entre noche y narración: el miedo producía una forma, la forma alimentaba una historia y la historia preparaba el miedo siguiente.
+Nada de eso les quita peso. Para los campesinos existen, tan de verdad como cualquier otro espanto, y se habla de ellas con el respeto que se guarda a lo que está por encima de los sentidos. Quien se topa con una la toma por anuncio fatal. Por eso los montañeses que salen de noche a sus aventuras galantes llevan, además de un arma blanca, alguna reliquia que los libre de ellas.
 
-El motivo no afirma que toda aparición sea imaginaria ni que quien siente temor carezca de razón. Los caminos podían ser peligrosos y la oscuridad ocultaba animales, caídas y otras personas. Su particularidad consiste en mostrar cómo la percepción completa aquello que no alcanza a ver.
+En los montes de las minas viejas se conoce además otra casta, los ilusiones, duendecillos sin cuerpo que no se dejan ver. Esos no asustan a los ojos: se meten en las orejas de los inocentes y les revelan secretos feos y pecaminosos, y así enseñan cosas horrendas desde la cuna.`,
+    historia: `Las Ilusiones Malas tienen su capítulo en «Mitos, espantos y leyendas de Caldas» de Fabio Vélez Correa, editado por la Imprenta Departamental de Caldas en 1997 y consultado en la edición ampliada de El Libro Total. Es un capítulo breve y descriptivo, sin episodio ni narrador con nombre, que habla de lo que «cuentan las gentes del pueblo» y cierra con una atribución expresa: «concluye Escobar Uribe (p. 168)». Todo indica que Vélez sigue aquí a Arturo Escobar Uribe, «Mitos de Antioquia» (Minerva, Bogotá, 1950), página 168: la definición de endriagos incorpóreos, la distinción con brujas y aparecidos, el inventario de sombras, los lugares donde se ven, las salvias, el farol, los borrachos y la creencia campesina de que anuncian desgracia. En el capítulo sobre la Rodillona, Vélez añade que los montañeses que salen de aventuras galantes cargan una reliquia para librarse de ellas.
 
-No existe una protagonista individual ni una casona determinada en las fuentes consultadas. La versión heredada transformó un conjunto plural de sombras y ruidos en una biografía. La revisión devuelve las Ilusiones al espacio donde funcionan: entre brasas, hojarasca, ramas, silbidos y palabras que hacen crecer lo incierto.`,
-    historyCore:
-      "Escobar Uribe dedica un apartado a las Ilusiones Malas y las relaciona con relatos de cocina, hojarasca, animales y sonidos nocturnos. Ocampo conserva el motivo dentro de compilaciones posteriores. Los registros demuestran su lugar en el folclor impreso, no una entidad única, un hecho sobrenatural ni una procedencia municipal exclusiva.",
-    versionCore:
-      "La forma cambia precisamente porque la Ilusión depende de percepción y miedo: puede ser sombra, bulto, sonido o figura que crece y disminuye. Algunas explicaciones se acercan a una lectura psicológica; otras mantienen el lenguaje de endriagos. Ambas comparten ausencia de cuerpo estable. Matilde, la casona y San Justina no aparecen en el expediente y se eliminan.",
-    similarityCore:
-      "Las Ilusiones se parecen al Coco porque una forma incompleta recibe cuerpo mediante el miedo, pero no se usan exclusivamente para disciplinar niños. También recuerdan relatos de luces malas y espantos de hojarasca, aunque aquí no existe una señal fija como llama o silbido. Frente a la Dama Verde y María la Larga, carecen de vestuario y recorrido reconocibles. Su paralelo más directo es el proceso por el cual una sombra ambigua hereda las historias escuchadas antes. Los repertorios regionales conservan estos motivos como entradas distintas y la comparación no autoriza a darles un mismo origen.",
+El testigo literario más antiguo es Tomás Carrasquilla. En el capítulo I de «La marquesa de Yolombó», novela publicada por entregas desde 1926 y en libro en 1928, ambientada en las minas de Yolombó del siglo XVIII, el narrador enumera los seres que pueblan el monte de la mina y empieza por ellos: «los ilusiones», duendecillos incorpóreos que se van a las orejas de los inocentes. Carrasquilla da además una lectura propia de su procedencia: esos genios, escribe, llegaron de África en los barcos negreros y se mezclaron en los Andes con las deidades indígenas. Es la opinión de un novelista antioqueño que conocía la región, no el dato de un registro de campo. Se lee en la edición digital de la Biblioteca Básica de Cultura Colombiana de la Biblioteca Nacional.`,
+    versiones: `Entre las dos obras cambian el género, la forma y el sentido. Carrasquilla escribe «los ilusiones», en masculino, y los hace duendecillos que no se ven pero hablan: susurran al oído de los inocentes secretos pecaminosos y los pervierten desde la cuna. Su daño es moral y se transmite por la palabra.
+
+Escobar Uribe, según lo transmite Vélez, habla de «las Ilusiones Malas», en femenino, y las describe como todo lo contrario: se ven pero no hablan ni producen sonido. Son sombras que crecen y menguan, figuras blancas, pajarracos y gigantes proyectados sobre tejados y árboles. Su daño es el susto y el presagio. Además, el mismo texto ofrece a la vez dos lecturas que no se excluyen: por un lado las explica por la óptica, el farol, las salvias y el delirio del bebedor; por otro deja constancia de que los campesinos las tienen por reales y por anuncio fatal.
+
+La antología «Cuentos de espantos y otros seres fantásticos del folclor colombiano» (Casa Editorial El Tiempo y Universidad Autónoma de Colombia, 2004) titula su entrada «Las Ilusiones», en las páginas 71 y 72. El libro se presenta como una recopilación de «documentos imaginarios», y la entrada es un monólogo inventado: una narradora recuerda la casona de sus abuelos, donde desde 1867 había sombras, cosas cambiadas de lugar y cuchicheos que le enseñaban a desobedecer, y concluye que se llaman Las Ilusiones. Es ficción de autor. Curiosamente junta lo que las otras dos obras separan: las sombras de Escobar y los susurros de Carrasquilla.`,
+    similitudes: `El vecino más cercano está en el mismo libro de Vélez: la Rodillona, que en noches oscuras se vuelve ventarrón y apaga los fósforos del caminante, y cuyo capítulo termina precisamente mencionando la reliquia que los montañeses llevan para librarse de las ilusiones malas. Las dos figuras viven del farol que se apaga o que proyecta sombras, y las dos se ceban en el hombre que anda de noche fuera de su casa.
+
+En el mismo pasaje de «La marquesa de Yolombó», Carrasquilla pone a los ilusiones junto al Patasola, la Madremonte, el Patetarro y el Bracamonte. A este último, dice la novela, ningún ojo humano lo ha visto, porque nunca sale de la espesura, y sin embargo sus bramidos matan de espanto a los ganados. Como las Ilusiones, es un ser que se conoce por sus efectos y no por su cuerpo, aunque en su caso por el oído y no por la vista.
+
+María la Larga, de nuevo en Vélez, comparte con las figuras blancas de las Ilusiones el crecimiento súbito: en Alto Villarazo, José Jesús Cardona vio a una mujer de blanco que empezó a crecer hasta llegar a las nubes.`,
     leccion:
-      "El miedo completa las formas inciertas, pero reconocerlo también puede devolverles su tamaño.",
+      "Lo que el miedo agranda en la oscuridad sigue pesando aunque la luz del día lo reduzca a una rama.",
     sceneHorizontal:
       "una familia campesina escucha relatos alrededor de un fogón de brasas mientras sombras de hojas y ramas aparecen en las paredes",
     sceneVertical:
@@ -315,33 +406,68 @@ Por eso desaparece el protagonista individual que la versión heredada añadió 
   }),
   defineAntioquiaMestizoMyth({
     slug: "maria-centeno",
-    title: "Los tesoros de María Centeno",
+    fuentesAgotadas: "El registro de Escobar Uribe (Mitos de Antioquia, 1950) y de Ocampo López (Mitos colombianos, 1989; Mitos y leyendas de Antioquia la Grande, 2001) sólo se lee de segunda mano, en las citas con página de Vélez Correa y de la Alcaldía de Andes: los libros no tienen texto abierto (Google Books, vetado). Tampoco Julián Bueno (1988), Jiménez Mejía (1977) ni López Cardona (2016). Fuera de Vélez, SENA 2022 y la ficción de 2004, la cantera abierta del ciclo no nombra esta figura.",
+    sourceKeys: [
+      {
+        key: "udeaCenteno",
+        summary:
+          "Estudio de antropología histórica con archivo y campo en Santa Fe de Antioquia, Buriticá y Sabanalarga: los nombres María Centeno, María del Pardo, «la Centena» y María la Parda, una mujer centenaria de Buriticá y el relato de Cañaona en que el diablo le construye las iglesias.",
+        limitation:
+          "Lee a María como héroe fundador; el relato de Cañaona viene de Espinosa y Duque 1994, pp. 201-202, citados.",
+      },
+      {
+        key: "correaMitos1997",
+        summary:
+          "Capítulo «María, La Parda»: tesoro escondido y pacto con el diablo en la cordillera central, con citas de Octavio Hernández Jiménez y Á. M. Ocampo y la Madrelagua de Supía que nombra Similitudes.",
+        limitation:
+          "Es la María la Parda caldense, no la Centeno de Santa Fe con ese nombre. Se lee la edición ampliada de El Libro Total (cita prensa de 2005-2007), no la de 1997; el visor no da folios del impreso y se cita por capítulo.",
+      },
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Recoge a María la Parda en Marquetalia con los narradores Jorge Echeverry y Darío Valencia (p. 58).",
+        limitation:
+          "Otra región y otro nombre; la ficha la trata como variante.",
+      },
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Trae a María Centeno en sus pp. 95-96.",
+      },
+      "contartesoros2024",
+    ],
+    title: "María Centeno",
     excerpt:
       "Una joven sigue un becerro de oro, entra en una montaña y regresa con una moneda cuando para su madre ya han pasado muchos años.",
     tags: ["María", "codicia", "oro", "memoria"],
-    mito: `Una joven vivía con su madre en una casa modesta. Un día vio pasar un becerro de oro. El animal brillaba y avanzaba sin apresurarse, como si supiera que ella lo seguiría. La muchacha dejó lo que estaba haciendo y caminó detrás.
+    mito: `A la que en unos pueblos llaman María Centeno y en otros María del Pardo la describen como una española tan hermosa que el demonio, apenas la vio, se enamoró perdidamente. Ella le hizo caso. Le dijo que necesitaba una casa grande para pasar con él la luna de mes, y que la gente viniera de fiesta.
 
-El becerro llegó a la entrada de una montaña y desapareció por un túnel. La joven entró. Al otro lado encontró una cámara llena de oro: monedas, objetos y montones que parecían no terminar. Durante un momento creyó que podía tomar cuanto quisiera.
+El diablo dijo que sí de inmediato. Ella le mandó traer leña de la orilla del río, pero no cualquier leña: una madera incorruptible, a la que no le entrara el comején. Entonces él llamó a siete legiones de negros grandes, demonios a su servicio, que cargaron la madera y echaron a andar. Hay quien dice que esos diablos viajaban chiquitos, como duendecitos, en una costalejita que ella llevaba, y que al sacarlos se volvían grandotes y se ponían a tumbar monte, a lavar oro y a componer acequias.
 
-Algo en el lugar le produjo desconfianza. Decidió salir sin cargar el tesoro y volvió por el mismo camino. No advirtió que una moneda había quedado atrapada en su ropa. El becerro ya no estaba cuando alcanzó el exterior.
+Ella iba adelante en un caballo que de un salto se pasaba las montañas. Algunos juran que la bestia era el mismo demonio, y todavía se muestran en la región las marcas de su herradura.
 
-La ruta de regreso parecía conocida, pero las casas y los árboles habían cambiado. Al llegar a su hogar encontró a una mujer anciana. Era su madre, que la había esperado durante años. Para la joven, la visita a la montaña había durado poco; afuera, el tiempo había seguido otro curso.
+Por el camino los cogió una tormenta terrible. Los diablos labraron a mano una cueva y allí se escamparon la noche entera; en la peña quedó la mano de una mujer y, junto a ella, otra mucho más grande. Al llegar al valle tendieron para dormir una sábana tan larga que cupieron todos, y por eso el lugar se llama Sabanalarga.
 
-La moneda confirmó que el oro no había sido solo una imagen. Sin embargo, su valor resultaba pequeño frente a los años perdidos. La muchacha había entrado atraída por una riqueza extraordinaria y salía a un mundo donde la persona que amaba había envejecido sin ella.
+Allí ella pidió su casa grande. Los diablos trabajaron toda la noche y al amanecer estaba construida la iglesia, porque el demonio no sabía qué era lo que en verdad quería la señora. A ella le pareció chiquita y mandó seguir más allá. En Liborina levantaron otra, y tampoco le gustó; luego la de Sopetrán, y tampoco. Así llegaron hasta Medellín, donde le hizo cuatro casas más. En los montes de Toledo se oyeron golpes de hacha toda una noche, y a la mañana el pueblo estaba fundado con iglesia y todo: se llamó Toledo porque allí toldó María del Pardo.
 
-La Fundación Secretos para Contar publicó esta narración como adaptación basada en una leyenda colombiana. Su protagonista comparte el nombre de María Centeno con una figura histórica y con un amplio ciclo oral del occidente y norte antioqueños, pero el texto no debe presentarse como transcripción antigua ni como biografía.
+En Buriticá, Cañasgordas y Frontino la llaman la Centena, por las cien cargas de oro que sacó de la región. Subía el agua desde Remango, por Pajarito, en acequias, hasta sus minas de Manglar. Una mujer muy vieja recordaba que la veían por el aire, muy bonita, y que la gente corría a esconderse. Cuando una mula se le cansaba con la carga, la hacía matar y la enterraba en un hoyo con el oro y el arriero. Una vez, acosada desde Urabá, le ordenó al arriero: «¡Abrí aquí!», y así se quedó llamando Abriaquí.
 
-En otras memorias, María Centeno o María del Pardo es dueña de minas, ocultadora de tesoros, viajera extraordinaria o explicación popular de nombres como Abriaquí. Detrás de esas imágenes existe una historia colonial de extracción de oro, encomiendas y trabajo de personas esclavizadas. Llamarla simplemente madre del emprendimiento minero borra esa violencia.
+Río abajo, donde le dicen María la Parda, los esclavos le debían cinco totumas de oro. Un día se emborracharon y no se las entregaron. Ella, furiosa, pateó a su mula endiablada, y el animal saltó al otro lado del río, donde hoy está Puerto Valdivia.
 
-La adaptación del becerro cambia el centro del relato. No celebra la acumulación: mide el tesoro con el tiempo. La única moneda que acompaña a la joven permite preguntar qué riqueza podría compensar una vida transcurrida lejos de quienes esperaban su regreso.`,
-    historyCore:
-      "Herrera Correa estudia a María Centeno o María del Pardo como memoria mestiza elaborada alrededor de conquista, poblamiento, iglesias y minería en el cañón del Cauca. El decreto de Abriaquí registra una etimología popular como teoría. La ficha separa ese ciclo de la adaptación contemporánea de Secretos para Contar y nombra el trabajo esclavizado detrás de la riqueza colonial.",
-    versionCore:
-      "Los tesoros de María Centeno usa una joven anónima, un becerro, una cueva y tiempo alterado. Otras versiones presentan a María como minera histórica, dueña de tesoros, viajera asociada con una mula negra o figura ligada a María del Pardo. No se funden en una cronología personal. La explicación «abrí aquí» se conserva como memoria popular, no como etimología comprobada.",
-    similarityCore:
-      "El becerro y la cámara de oro se acercan al Tunjo y a los relatos de guacas y tesoros encantados reunidos en repertorios colombianos. En esos paralelos, una riqueza visible puede atraer, ocultarse o imponer condiciones, pero no siempre altera el tiempo. María del Pardo comparte nombre y memoria minera, aunque no es automáticamente la joven de la adaptación. La explicación popular de Abriaquí también gira alrededor de oro oculto, no del becerro. El contraste decisivo de esta versión es entre riqueza material y tiempo irreversible.",
+Sus hijas siguen encantadas en una cueva de dos ventanas, en El Uvital, guardadas por un monstruo grandísimo con el que hay que pelear a punta de oraciones. De su muerte se dice que se enterró en el Paramillo con un bastón de oro, o que se ahogó en el Cauca con su mula negra en uno de sus saltos. Una monja de Toledo que en sueños volaba al cielo preguntó a la Madre de Dios si María del Pardo se había salvado o condenado. Le respondieron: «¡Ni se salvó ni se condenó porque iglesia levantó!».`,
+    historia: `Este relato se arma con lo que Carlos Mario Herrera Correa, antropólogo de la Universidad de Antioquia, publicó en 2005 en el Boletín de Antropología de esa universidad (vol. 19, n.º 36), en el artículo «Narrativas y lógicas de una memoria mestiza», dentro del apartado «María del Pardo y el Demonio que dejó sus huellas en las piedras» (pp. 41-45). El núcleo, el pacto amoroso y la cadena de iglesias de Sabanalarga a Medellín, es la narración de un habitante de Cañaona, en Sabanalarga, que Espinosa y Duque levantaron y publicaron en 1994 (pp. 201-202) y que Herrera cita completa en la p. 43. Alrededor de ella Herrera reúne fragmentos de su propio trabajo de campo en el cañón del Cauca: una mujer centenaria de Buriticá, un anciano conocedor de las minas, gente de San Juan de Rodas, de Santana y de Ituango, y un viejo minero de Buriticá. De ahí salen la Centena y las cien cargas, la acequia de Manglar, Abriaquí, el salto a Puerto Valdivia, las hijas encantadas de El Uvital y la respuesta dada a la monja de Toledo.
+
+Detrás del nombre hay una persona documentada. En su nota 11, Herrera identifica a María Zafra del Centeno, nacida en Santa Fe de Antioquia en 1599, casada tres veces con capitanes de la conquista, dueña de minas y cuadrillas de esclavos, que pleiteó en 1642 por las encomiendas de Sabanalarga y murió al parecer en 1645. Herrera sostiene que las historias populares sobre ella son una elaboración de los indígenas del cañón y de sus descendientes mestizos: la encomendera y minera se volvió heroína fundadora ambivalente, la que ordena el territorio con ayuda del diablo y le pone nombre a los pueblos.`,
+    versiones: `Herrera recoge variantes que no caben en una sola línea de tiempo, y lo dice: los narradores no se ocupan de ordenar las fundaciones. En San Juan de Rodas la madre maldice a María por mala y la vuelve una mula enorme que se oye pasar hacia Ituango. En el bajo Cauca es concubina del rey de España, que la manda embarazada a Cáceres; tuvo un hijo, Estorquiel, enterrado bajo un palo de mamoncillo. Otros dicen que donde ella y el diablo se acostaban se levantaba una iglesia, y un minero de Buriticá asegura que naufragó rumbo a España con su oro.
+
+En Caldas la figura cambia de oficio. Fabio Vélez Correa, en Mitos, espantos y leyendas de Caldas, cita a Octavio Hernández Jiménez: María la Parda robó el dinero a su madre y lo escondió en una gruta entre Marulanda y San Félix, que el diablo cuida por pacto; en Marquetalia la guarda una serpiente. En Neira, según Antonio Morales Arias, María Pardo llevó ganado por los caminos de las brujas. El SENA publicó en 2022 lo que cuentan Jorge Echeverry y Darío Valencia en Marquetalia: enterró las mulas con el oro en el camino a Samaná y se enterró con ellas.
+
+La Fundación Secretos para Contar publicó «Los tesoros de María Centeno», adaptación declarada: una muchacha sigue un ternero de oro por un túnel, halla una estatua de María con ojos de esmeralda y no puede salir con el tesoro. El libro Cuentos de espantos de 2004 (El Tiempo y Universidad Autónoma) trae una entrada sobre ella, pero se presenta como material de ficción y documentos imaginarios, y su marco de un pergamino guardado en la alcaldía de Abriaquí es composición del libro, no un hallazgo.`,
+    similitudes: `El diablo que construye en una noche es una figura muy extendida en el folclor europeo: en Martorell, Cataluña, el Puente del Diablo se atribuye a un pacto semejante, y en el paso suizo de Schöllenen el puente también lleva el nombre del demonio que lo levantó. En esas leyendas alguien burla al constructor; aquí el engaño es de ella, que pide una casa y recibe iglesias, y el diablo trabaja sin saber para quién.
+
+En el mismo libro de Vélez Correa, la Madrelagua de Supía custodia las arenas auríferas y hace huir el oro ante la codicia: dueña del metal como María, pero guardiana y no explotadora. Y el motivo de las hijas encantadas en una cueva, que sólo se rescatan con oraciones y a costa de pelear con un monstruo, es el mismo que acompaña a los tesoros enterrados de la minería colonial en Antioquia y Caldas, donde el oro escondido siempre tiene un guardián. Herrera, por su parte, lee a María como héroe fundador, emparentada con los personajes que ordenan un espacio caótico y lo nombran.`,
     leccion:
-      "Quien convierte el tiempo en precio puede salir rico y descubrir que perdió la vida.",
+      "Quien levanta templos con ayuda del diablo deja una cuenta que nadie sabe cómo cobrar.",
     sceneHorizontal:
       "una joven sigue a un becerro de oro hacia la entrada de una montaña del occidente antioqueño, con el valle del Cauca al fondo",
     sceneVertical:
@@ -361,33 +487,60 @@ La adaptación del becerro cambia el centro del relato. No celebra la acumulaci�
   }),
   defineAntioquiaMestizoMyth({
     slug: "maria-la-larga",
-    title: "María la Larga",
+    fuentesAgotadas: "El registro de Escobar Uribe (Mitos de Antioquia, 1950) y de Ocampo López (Mitos colombianos, 1989; Mitos y leyendas de Antioquia la Grande, 2001) sólo se lee de segunda mano, en las citas con página de Vélez Correa y de la Alcaldía de Andes: los libros no tienen texto abierto (Google Books, vetado). Tampoco Julián Bueno (1988), Jiménez Mejía (1977) ni López Cardona (2016). Fuera de Vélez, SENA 2022 y la ficción de 2004, la cantera abierta del ciclo no nombra esta figura.",
+    sourceKeys: [
+      {
+        key: "antioquiaAndes2019",
+        summary:
+          "Cita textual de Escobar Uribe, Mitos de Antioquia (1950), sobre María la Larga en Andes: el camino de Santa Rita, la Poceta de la Virgen, la calle del Cura, las almadreñas claveteadas y el padre Eleázar Marulanda con rejo y cordón de San Francisco (p. 58), y la biografía de Escobar (p. 44).",
+        limitation:
+          "No es memoria municipal independiente: es Escobar 1950 citado.",
+      },
+      {
+        key: "correaMitos1997",
+        summary:
+          "Capítulo «María la Larga», con la cita de Ocampo López (Mitos colombianos, p. 190) y el testimonio de José Jesús Cardona en Alto Villarazo, Villamaría; en el mismo libro, la Rodillona y la Dama Verde de Similitudes.",
+      },
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Trae a María la Larga en sus pp. 83-84.",
+      },
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Registro oral de la Rodillona en el alto oriente caldense (p. 83), la otra mujer de cuerpo desmedido que compara Similitudes.",
+        limitation:
+          "No trae a María la Larga.",
+      },
+      "polarMitossf",
+    ],
+    title: "María la larga",
     excerpt:
       "En Andes, una figura de miembros interminables baja por el camino de Santa Rita y deja chispas junto a la Poceta de la Virgen.",
     tags: ["María", "espectro", "misterio", "transformación"],
-    mito: `Después de medianoche, cuando las calles de Andes quedaban vacías, algunas personas decían oír pasos que bajaban por el antiguo camino de Santa Rita. El ritmo no correspondía con una caminata corriente. Cada apoyo producía un golpe seco y, cerca de la Poceta de la Virgen, podían verse chispas.
+    mito: `Sale en las horas de la madrugada, cuando los trasnochadores vuelven a casa por calles vacías. Es una mujer alta, elegante y muy hermosa, con enaguas o con un vestido blanco largo, tan recién planchado que cruje al caminar. Anda con un balanceo raro, como un junco que mece el viento, y tiene los pies muy altos y los brazos descomunales. Mira a los hombres con insinuación y sigue de largo.
 
-La figura era llamada María la Larga. Desde lejos parecía una mujer alta. Al acercarse, sus brazos y piernas daban la impresión de alargarse. El cuerpo se inclinaba con un balanceo exagerado y los zapatos de madera, reforzados con clavos, golpeaban las piedras.
+El que se va detrás ve que ella apura el paso y toma el camino del cementerio del pueblo. Cuanto más corre él, más de prisa va ella. Y cuando el galán la alcanza por fin y abre los brazos para abrazarla, María se alarga y se alarga hasta el infinito, y el hombre se queda abajo, mirando hacia arriba, muerto de espanto.
 
-Quien intentaba seguirla no conseguía reducir la distancia. María avanzaba hacia la calle del Cura y los alrededores del cementerio. Si el perseguidor aceleraba, ella parecía crecer o dar pasos imposibles. La calle conocida se convertía en un trayecto sin medida.
+En Andes fue muy popular en la segunda mitad del siglo XIX. Los vecinos que aseguraban haberla visto contaban cómo bajaba por el antiguo camino de Santa Rita y cómo, al pasar frente a la Poceta de la Virgen, en la calle del Cura, arrancaba chispas de las piedras con las almadreñas claveteadas que llevaba puestas. El cura de entonces, el padre Eleázar Marulanda, tenía fama de perito en cacería de brujas. Dicen que la acechó varias noches, rejo en mano y cordón de San Francisco al cinto, para conjurarla y darle unos cuantos cordonazos. Pero María la Larga sabía más que el señor cura, y jamás se dejó pillar de su reverencia.
 
-La memoria local cuenta que el sacerdote Eleázar Marulanda quiso alcanzarla y conjurarla. Nunca lo logró. Ese fracaso conserva la regla del espanto: puede ser visto y seguido, pero no detenido para pedirle una identificación ni una historia de vida.
+En Caldas también la han visto. José Jesús Cardona volvía una noche a su casa, en la vereda Alto Villarazo, de Villamaría. Serían las nueve cuando, desde un barranco a un lado del camino, empezaron a caerle piedras grandes, y en un potrero relinchaban unos caballos. Sintió algo de temor, pero se calmó y siguió. Al ir a cruzar el potrero vio, junto a una piedra inmensa, a una mujer sentada, vestida de blanco y de ojos grandes. Pensó que a esas horas una mujer sola no tenía nada que hacer por ahí, y menos tirando piedras, y que ella tenía que ser la del susto. Se agachó, cogió una piedra del suelo para arrojársela, y en ese momento ella se puso de pie y empezó a crecer, a crecer, hasta llegar a las nubes. Él salió corriendo como loco y no paró hasta su casa, sin mirar una sola vez para atrás.
 
-Arturo Escobar Uribe recogió a María la Larga como figura popular de Antioquia. En otros pueblos, las calles, iglesias y cementerios cambian, mientras permanece la mujer que se estira y atrae al caminante nocturno. La variante de Andes es valiosa porque fija sonidos y lugares sin reclamar que allí naciera el motivo.
+Cada pueblo la cuenta con sus propias calles, su templo y su cementerio.`,
+    historia: `El pasaje más antiguo que se puede leer es de Arturo Escobar Uribe, periodista nacido en Andes en 1909, que la incluyó en Mitos de Antioquia (Medellín, Editorial Minerva, 1950). Ese libro no está abierto en línea, pero la Alcaldía de Andes reproduce el pasaje entre comillas, con la firma de Escobar y el título de la obra, en Andes: identidad y memoria (2019), p. 58 del PDF. Todo lo de Andes sale de ahí: la segunda mitad del siglo XIX, el camino de Santa Rita, la Poceta de la Virgen en la calle del Cura, las almadreñas claveteadas y el padre Eleázar Marulanda con su rejo y su cordón. La Alcaldía no añade memoria propia: cita a Escobar.
 
-Al amanecer, las chispas podían explicarse por clavos contra piedra y el cuerpo alargado por sombra, pendiente o miedo. La narración no obliga a elegir. También podía funcionar como advertencia para quienes permanecían fuera hasta la madrugada y arriesgaban el regreso por calles solitarias.
+La figura general y el encuentro de Villamaría vienen de Fabio Vélez Correa, Mitos, espantos y leyendas de Caldas, en la edición ampliada que sirve la Fundación El Libro Total (posterior a 2007; la primera salió en Manizales en 1997), capítulo «María la Larga». Vélez toma de Javier Ocampo López (Mitos colombianos, p. 190) la descripción de un espanto femenino de Antioquia y el Viejo Caldas, sobre todo de los pueblos, que aparece de madrugada con pies muy altos y brazos descomunales. Y transcribe, en primera persona, el testimonio de José Jesús Cardona sobre lo que le pasó en la vereda Alto Villarazo. Vélez no fecha ese testimonio.`,
+    versiones: `El pasaje de Escobar sobre Andes no dice que se alargue: le bastan los pasos, las chispas y el cura burlado. El alargamiento es lo que Ocampo López, citado por Vélez, pone en el centro, y lo que José Jesús Cardona dice haber visto cuando la mujer de blanco se levantó hasta las nubes. En Villarazo, además, no hay persecución ni cementerio: ella está sentada y crece cuando él va a tirarle una piedra.
 
-La versión heredada había añadido un perseguidor, violencia sexual y una transformación castigadora. Esos elementos no aparecen en el expediente municipal ni en las compilaciones consultadas. Además, convertían la violencia contra una mujer en explicación automática de su figura.
+Vélez abre su capítulo con un párrafo propio, sin fuente, que la pone a la salida de bares y discotecas, con minifalda y tacones, llevando a los borrachos al cementerio; allí crece como cincuenta metros, les muestra una calavera que los besa y los deja colgados de la cruz del templo o de la copa de un pino. Es una actualización con marcas de estos años.
 
-María la Larga queda entonces como aparición urbana que desordena distancia y proporción. No ofrece una biografía cerrada. Su señal en Andes son el camino de Santa Rita, la Poceta de la Virgen, los zapatos claveteados y un cuerpo que siempre permanece fuera del alcance.`,
-    historyCore:
-      "El libro institucional de Andes registra que María la Larga fue popular en la segunda mitad del siglo XIX y conserva camino, poceta, calle, zapatos y sacerdote. Remite a Arturo Escobar Uribe, cuya compilación demuestra circulación regional. La fecha se refiere a memoria local publicada, no a prueba de apariciones ni al nacimiento del motivo.",
-    versionCore:
-      "La forma regional puede atraer a noctámbulos hacia un cementerio, balancearse o estirar miembros indefinidamente. Andes aporta el camino de Santa Rita, la Poceta de la Virgen, la calle del Cura y Eleázar Marulanda. Otros pueblos reemplazan esos lugares por su propio trazado. Juan Galán, la persecución sexual y una condena por engaño son añadidos sin respaldo y se retiran.",
-    similarityCore:
-      "María la Larga comparte con la Dama Verde el recorrido urbano en horas desiertas, pero se distingue por el cuerpo extensible y los zapatos que producen chispas. La Llorona también puede conducir al borde del pueblo, aunque su señal es el lamento y no la longitud. Las figuras elásticas de otros folclores sirven como paralelo corporal, no como origen. Su comparación más precisa es con espantos que vuelven interminable una distancia conocida. A diferencia de la Cabellona, su rasgo no oculta el rostro: altera la proporción y la posibilidad de alcanzarla.",
+El libro Cuentos de espantos y otros seres fantásticos del folclor colombiano (Casa Editorial El Tiempo y Universidad Autónoma de Colombia, 2004), pp. 83-84, la presenta en cartas que un joven bogotano escribe desde Medellín a su hermano: ella le arrebata un cigarrillo estirando el brazo diez metros y dobla la esquina con el cuello. Ese libro se declara a sí mismo material de ficción y recopilación de documentos imaginarios; las cartas y el remitente son composición del libro.`,
+    similitudes: `En el mismo capítulo de Vélez Correa, la Rodillona de Risaralda anda con largas piernas esqueléticas por las calles de la zona de tolerancia asustando a los trasnochadores y a los borrachitos: otra mujer de cuerpo desmedido que castiga la noche larga. La Dama Verde, que Vélez toma de Iván Salazar Duque, recorre calles, parques y casas abandonadas de los pueblos antioqueños y caldenses, pero su espanto está en el rostro cubierto y los ojos de rubí, no en la estatura.
+
+Fuera de Colombia, la aparición de mujer seductora que atrae al caminante nocturno y se revela monstruosa al acercarse es la estructura de la Sayona de los llanos venezolanos, que se deja seguir por los hombres infieles y en el último momento muestra una cara de muerta. El cura que intenta conjurar al espanto con el cordón franciscano, en cambio, es un rasgo antioqueño: la autoridad religiosa del pueblo sale a la calle y el espanto la deja en ridículo.`,
     leccion:
-      "Perseguir una sombra puede alargar el camino hasta hacernos perder la medida del regreso.",
+      "Lo que se persigue de noche con ganas puede crecer más allá de lo que alcanzan los brazos.",
     sceneHorizontal:
       "María la Larga baja por el antiguo camino de Santa Rita en Andes con brazos y piernas alargados y zapatos de madera claveteados",
     sceneVertical:
