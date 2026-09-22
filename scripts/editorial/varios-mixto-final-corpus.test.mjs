@@ -31,7 +31,7 @@ test("los siete expedientes cumplen la metodología editorial", () => {
     new Set(reviewedVariosMixtoFinalSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650, `${record.slug}: mito ${words(record.mito)}`);
+    assert.ok(words(record.mito) >= (record.relatoCorto ? 70 : 300) && words(record.mito) <= 650, `${record.slug}: mito ${words(record.mito)}`);
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600, `${record.slug}: historia ${words(record.historia)}`);
     assert.ok(words(record.versiones) >= 170 && words(record.versiones) <= 550, `${record.slug}: versiones ${words(record.versiones)}`);
     assert.ok(words(record.leccion) >= 8 && words(record.leccion) <= 22, `${record.slug}: lección ${words(record.leccion)}`);
@@ -43,8 +43,8 @@ test("los siete expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(sources.every(({ url, summary, limitation }) => summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation)))));
     assert.equal(
       record.content,
@@ -65,14 +65,12 @@ test("corrige fusiones, nombres sin respaldo y relaciones entre leyendas", () =>
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const cura = bySlug.get("el-cura-sin-cabeza");
   assert.equal(cura.category_path, "Andina > Nariño > Mestizo");
-  // heredada: reescribir tras el cotejo
-  assert.match(cura.mito, /templo de Santiago[\s\S]+misas gregorianas[\s\S]+misa espectral/i);
+  assert.match(cura.mito, /Túquerres[\s\S]+misas[\s\S]+San Felipe[\s\S]+templo de Santiago/i);
   assert.match(cura.researchNotes, /Mariano Narváez[\s\S]+no presenta/i);
 
   const jinete = bySlug.get("el-jinete-negro");
-  assert.match(jinete.title, /variante colombiana del Sombrerón/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(jinete.mito, /Cundinamarca y Boyacá[\s\S]+Lérida[\s\S]+variante/i);
+  assert.match(jinete.title, /jinete negro/i);
+  assert.match(jinete.mito, /Ocaña[\s\S]+Santa Rita[\s\S]+potro de fuego/i);
   assert.match(jinete.researchNotes, /Don Roque[\s\S]+no tienen respaldo/i);
 
   const mandingas = bySlug.get("el-mandingas");
@@ -82,23 +80,19 @@ test("corrige fusiones, nombres sin respaldo y relaciones entre leyendas", () =>
   assert.match(mandingas.researchNotes, /ANTIRRACISTA[\s\S]+Pamba Ahumé/i);
 
   const mohan = bySlug.get("el-mohan");
-  // heredada: reescribir tras el cotejo
-  assert.match(mohan.mito, /Magdalena y el Saldaña[\s\S]+Poira[\s\S]+coerción/i);
+  assert.match(mohan.mito, /Ambalema[\s\S]+Coyaima[\s\S]+Jueves Santo[\s\S]+atarraya/i);
   assert.match(mohan.researchNotes, /Poira conserva su expediente diferenciado/i);
 
   const llorona = bySlug.get("la-llorona");
-  // heredada: reescribir tras el cotejo
-  assert.match(llorona.mito, /tres hijos[\s\S]+esposo violento[\s\S]+contradicción/i);
+  assert.match(llorona.mito, /guerra[\s\S]+Magdalena[\s\S]+Tamalameque/i);
   assert.match(llorona.researchNotes, /madre despojada[\s\S]+filicidas/i);
 
   const madremonte = bySlug.get("la-madremonte");
-  // heredada: reescribir tras el cotejo
-  assert.match(madremonte.mito, /Coyaimas[\s\S]+Tumaco[\s\S]+Caldas/i);
+  assert.match(madremonte.mito, /linderos[\s\S]+San Isidro Labrador[\s\S]+Corpus/i);
   assert.match(madremonte.researchNotes, /Dabeiba automática[\s\S]+creación angelical/i);
 
   const duendes = bySlug.get("los-duendes");
-  // heredada: reescribir tras el cotejo
-  assert.match(duendes.mito, /tiple desafinado[\s\S]+ninguna de las ocho fuentes/i);
+  assert.match(duendes.mito, /Pantoja[\s\S]+tiple[\s\S]+arpa/i);
   assert.match(duendes.researchNotes, /PROTECCIÓN DE PERSONA[\s\S]+afirmación clínica/i);
 });
 

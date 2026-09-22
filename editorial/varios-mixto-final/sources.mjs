@@ -337,6 +337,181 @@ export const variosMixtoFinalSources = {
     limitation:
       "Estudia historia del arte e identidad nacional; la escultura no es una imagen etnográfica ni prueba de origen indígena único.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  bravoEstrategia2019: source({
+    title: "Estrategia de narrativa transmedia para la rememoración de relatos de la tradición oral del municipio de Túquerres",
+    author: "Vanessa Erazo Bravo y Diana Isabel Martínez Cerón (Universidad de Nariño)",
+    year: 2019,
+    type: "trabajo de grado con trabajo de campo",
+    url: "https://sired.udenar.edu.co/18217/1/210263.pdf",
+    summary:
+      "§6.3.9.8 «El cura sin cabeza / Padre descabezado» (pp. 54-55): el padre de Túquerres que paga misas incumplidas con una vela que no se apaga.",
+    limitation:
+      "Cita a Imbacuan (2013), no identificado, y un texto general de internet.",
+  }),
+  narinoleyenda2015: source({
+    title: "La leyenda rural como estrategia didáctica para mejorar la ortografía",
+    author: "Alicia del Carmen Bustos Delgado (Universidad de Nariño)",
+    year: 2015,
+    type: "trabajo de grado",
+    url: "https://sired.udenar.edu.co/8579/1/91329.pdf",
+    summary:
+      "§2.16.2 «El Cura sin Cabeza» (p. 46): la versión de las misas gregorianas.",
+    limitation:
+      "La toma de Sánchez (2001), compilación nacional; no es registro nariñense.",
+  }),
+  lopezpueblo1977: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López",
+    year: 1977,
+    type: "libro (cap. 8, pp. 120-131)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "El toque de ánimas de San Francisco y el espanto del Panóptico en Tunja: los paralelos de Similitudes.",
+    limitation:
+      "No trae el cura sin cabeza.",
+  }),
+  cINEPColombia1998: source({
+    title: "Colombia país de regiones, tomo 3: Región del Alto Magdalena",
+    author: "CINEP y Colciencias",
+    year: 1998,
+    type: "obra de síntesis regional",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2835/download",
+    summary:
+      "El fraile capuchino jugador que deambula sin cabeza por los llanos del Tolima Grande (p. 98).",
+    limitation:
+      "Una frase; otro lugar.",
+  }),
+  ocanaLeyendas2011: source({
+    title: "Leyendas de Ocaña",
+    author: "Academia de Historia de Ocaña",
+    year: 2011,
+    type: "blog institucional",
+    url: "https://academiaocana.blogspot.com/2011/09/leyendas-de-ocana.html",
+    summary:
+      "Transcribe la versión de Osorio Quintero (1962): Antón García de Bonilla, la epidemia, la promesa a Santa Rita y el potro de fuego; reúne versos de Milanés, Castillo, Amaya y Páez Courvel.",
+    limitation:
+      "Blog sin paginación; la obra de 1962 no se ha podido consultar directamente.",
+  }),
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (Fulbright-Hays 1997), con las páginas «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "unidad didáctica con páginas web impresas",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "El jinete negro de Ocaña, contado por Manuela (Santander): el caballero rico de la Colonia, el potro negro, la capa, el sombrero y el cigarro.",
+    limitation:
+      "Divulgación infantil de pocas frases.",
+  }),
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (investigación y compilación)",
+    year: 1993,
+    type: "antología con textos reproducidos",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Antología en cuatro tomos que reproduce textos de folcloristas colombianos; el tomo II reúne las leyendas y mitos de Santander, Tolima (Devia 1962, Rocha Castilla 1968) y Tumaco (Garrido 1980).",
+    limitation:
+      "Ficha de catálogo de la biblioteca de FLACSO; cada mito cita la sección que usa.",
+  }),
+  ibagueFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales (Universidad de Ibagué)",
+    year: 2013,
+    type: "libro de folclor regional (reedición del texto de 1962)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "Capítulo «El Mohán» (pp. 58-62): el Mohán de Ambalema, de la Vega de los Padres, de Coyaima y de Chenche; los pescadores, el Jueves Santo, la atarraya bautizada, el tabaco y el trago.",
+    limitation:
+      "Escrito en 1962; describe sin nombrar informantes.",
+  }),
+  pressDance1994: source({
+    title: "Dance of the Dolphin: Transformation and Disenchantment in the Amazonian Imagination",
+    author: "Candace Slater (University of Chicago Press)",
+    year: 1994,
+    type: "libro académico",
+    url: "https://press.uchicago.edu/ucp/books/book/chicago/D/bo3632345.html",
+    summary:
+      "Estudia los relatos amazónicos del boto, el delfín encantado que toma forma humana, seduce y lleva a la gente bajo el río: el paralelo que nombra Similitudes.",
+    limitation:
+      "Página del editor; el libro no es de acceso abierto.",
+  }),
+  santanderSaberes: source({
+    title: "Saberes del Cañón del Chicamocha",
+    author: "Universidad Industrial de Santander",
+    type: "inventario de patrimonio en línea",
+    url: "https://proyectos.uis.edu.co/ccg/saberes/",
+    summary:
+      "La Llorona entre los relatos más citados por los habitantes del cañón: mujer de pelo largo y vestido blanco que llama a sus hijos junto a los ríos.",
+    limitation:
+      "Descripción breve.",
+  }),
+  polarMitos2014: source({
+    title: "Mitos y leyendas del estado Portuguesa, cap. 28: La Sayona",
+    author: "Carmen Pérez Montero (Fundación Empresas Polar)",
+    year: 2014,
+    type: "libro de tradición oral venezolana",
+    url: "https://bibliofep.fundacionempresaspolar.org/media/1377961/mitos_portuguesa_c_28_la-sayona.pdf",
+    summary:
+      "La Sayona de los llanos venezolanos, mujer condenada por un crimen de celos que persigue a los infieles: paralelo de Similitudes.",
+    limitation:
+      "Tradición venezolana.",
+  }),
+  eSAPInventario: source({
+    title: "Inventario turístico de Viterbo (Caldas): mitos y tradición oral",
+    author: "Municipio de Viterbo (repositorio ESAP)",
+    type: "inventario municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/e2157446-5cb0-4e99-afa6-f31ad7ee56b6/download",
+    summary:
+      "§1.4.1 «La Madremonte»: mujer musgosa enraizada en los pantanos o mujer alta vestida de ramajes con sombrero de hojas y plumas; tempestades, se baña en los nacimientos y enturbia el agua.",
+    limitation:
+      "Sin autor ni fecha en el PDF.",
+  }),
+  cardonaMadremonte: source({
+    title: "La Madremonte (Itinerancias, vol. 2: mitos y leyendas)",
+    author: "Biblioteca Nacional de Colombia; narradora María del Carmen Cardona",
+    type: "relato de biblioteca rural itinerante",
+    url: "https://www.bibliotecanacional.gov.co/es-co/Bibliotecas-en-Red/bibliotecas-publicas-moviles/Itinerancias/la-madremonte.html",
+    summary:
+      "Presenta la leyenda tal como la oyó María del Carmen Cardona, de la vereda La Plata (Palestina, Caldas).",
+    limitation:
+      "La página no transcribe el relato.",
+  }),
+  araujomito2025: source({
+    title: "El mito Curupira en las narraciones orales de Boa Vista, una comunidad ribereña ubicada en el municipio de Nova Timboteua (PA)",
+    author: "Gracineia dos Santos Araújo y Sara Cristina Aleixo (Entreparênteses, Unifal)",
+    year: 2025,
+    type: "artículo",
+    url: "https://publicacoes.unifal-mg.edu.br/revistas/index.php/entreparenteses/article/view/2383",
+    summary:
+      "Estudia el Curupira amazónico, protector de la selva que extravía a cazadores, con la noticia de Anchieta (1560) y el análisis de Câmara Cascudo: el paralelo de Similitudes.",
+    limitation:
+      "Trata el Curupira brasileño, no la Madremonte.",
+  }),
+  orozcoTesoro1611: source({
+    title: "Tesoro de la lengua castellana o española",
+    author: "Sebastián de Covarrubias Orozco",
+    year: 1611,
+    type: "diccionario histórico",
+    url: "https://archive.org/details/tesorodelalengua00covauoft",
+    summary:
+      "Entrada «Duende»: espíritu de los que cayeron con Lucifer, que se aparece en las casas; deriva el nombre de «dueño de casa». Paralelo de Similitudes.",
+    limitation:
+      "Obra lexicográfica española, no colombiana.",
+  }),
+  gutenbergRomeo1597: source({
+    title: "Romeo and Juliet",
+    author: "William Shakespeare (Project Gutenberg)",
+    year: 1597,
+    type: "teatro",
+    url: "https://www.gutenberg.org/ebooks/1513",
+    summary:
+      "Acto I, escena 4: Mercucio describe a la reina Mab, que trenza de noche las crines de los caballos. Paralelo de Similitudes.",
+    limitation:
+      "Obra literaria inglesa.",
+  }),
 };
 
 const sourceKeysBySlug = {
