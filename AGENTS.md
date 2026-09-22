@@ -48,6 +48,21 @@ Editorial y minimalista. Manrope y Inter, verde selva `#1c5c3f`, iconos de
 línea. Las ilustraciones son paper cut y quilling. Referencia sutil a Colombia
 —verde selva, azul ríos, dorados tierra— nunca la bandera literal.
 
+## Proceso vigente de carruseles
+
+Desde el 22 de septiembre de 2026, el proceso predeterminado de carruseles es
+[`docs/instagram-story.md`](docs/instagram-story.md), en
+`/design-system/instagram-story`. Usa `npm run instagram:studio` y los comandos
+`instagram:story:*`. Los flujos v10 y anteriores quedan para reproducir ediciones
+históricas, no como punto de partida de carruseles nuevos.
+
+Para este taller rigen **Asimovian y Noto Sans Display** y la paleta de
+`content/instagram/design/paleta-20260919/palette.json`. Todo carrusel tiene diez
+láminas y cinco variantes por tipo. La portada muestra solo el título. Prioriza
+la imagen y resuelve contraste con composición, ubicación y color de texto;
+la sombra es un apoyo. Revisa geometría, contraste y lectura visual en móvil
+antes de exportar. Cada preparación conserva un `freeze.json` nuevo.
+
 ## Operación
 
 ```bash
@@ -98,3 +113,13 @@ git diff --cached -U0 | grep -nEi 'token=|api[_-]?key|secret|password|AKIA|sk-|v
 - No sobrescribir un freeze ni una carpeta `prepared-NN` existente.
 - No borrar `artifacts/` ni ramas sin fusionar sin preguntar: hay trabajo vivo
   en 55 ramas fuera de `main`.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

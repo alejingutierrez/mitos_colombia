@@ -12,7 +12,7 @@ function envValue(env, ...keys) {
   return keys.map((key) => env[key]).find((value) => String(value || "").trim());
 }
 
-function createClient(env) {
+export function createClient(env) {
   const region =
     envValue(env, "INSTAGRAM_BEDROCK_REGION", "BEDROCK_REGION", "AWS_REGION") ||
     "us-east-2";

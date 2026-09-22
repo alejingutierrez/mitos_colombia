@@ -52,3 +52,14 @@ test("photographic hero titles opt into white for contrast", async () => {
     assert.match(source, /<h1\s[^>]*!text-white/);
   }
 });
+
+test("the carousel workshop inherits the approved brand fonts without replacements", async () => {
+  const [page, css] = await Promise.all([
+    read("src/app/design-system/instagram-story/page.js"),
+    read("src/components/instagram/story.module.css"),
+  ]);
+  assert.doesNotMatch(page, /next\/font|Manrope|Inter/);
+  assert.match(css, /font-family:var\(--font-display\)/);
+  assert.match(css, /font-family:var\(--font-body\)/);
+  assert.doesNotMatch(css, /--font-story-|font-weight:650/);
+});

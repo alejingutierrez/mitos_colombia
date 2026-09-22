@@ -1,5 +1,18 @@
 # Carruseles de Instagram
 
+## Proceso vigente: taller de relatos ilustrados
+
+El proceso adoptado el 2026-09-22 está en
+[`instagram-story.md`](./instagram-story.md): inventario completo de los 41
+muiscas, guion anclado al acta, selección de escenas del archivo, editor local y
+exportación de diez PNG con imágenes protagonistas, portadas de solo título y
+QA de contraste, geometría y lectura visual.
+
+`npm run instagram:studio` inicia el taller en
+`http://127.0.0.1:3111/design-system/instagram-story`.
+`npm run instagram:story:render -- --slug bachue` exporta el relato de referencia.
+Los comandos y reglas siguientes corresponden a las ediciones anteriores.
+
 La metodología completa y canónica de producción, revisión, aprobación,
 registro y expansión está en
 [`docs/instagram-editorial-methodology.md`](./instagram-editorial-methodology.md).
