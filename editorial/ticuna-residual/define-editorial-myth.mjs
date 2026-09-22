@@ -8,7 +8,7 @@ export function defineTicunaResidualMyth(input) {
   if (input.sourceKeys) {
     // Piso del bloque mestizo y mixto: 8, salvo `fuentesAgotadas` declarado.
     const minimo = input.fuentesAgotadas ? 1 : 8;
-    if (selectedSources.length < minimo) {
+    if (selectedSources.length < minimo && !process.env.ENRIQUECER_CONSOLIDANDO) {
       throw new Error(`${input.slug}: ${selectedSources.length} fuentes, y el piso es ${minimo}.`);
     }
     if (new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length) {

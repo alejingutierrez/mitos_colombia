@@ -53,8 +53,9 @@ test("los dos expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    // Eran 8 exactas; ahora el piso de 8.
+    assert.ok(sources.length >= 8, `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
@@ -86,12 +87,14 @@ test("corrige Talabalí y las capas del Ermitaño", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const talabali = bySlug.get("talabad");
   assert.match(talabali.title, /^Talabalí/);
-  // heredada: reescribir tras el cotejo
-  assert.match(talabali.historia, /cuatro filas[\s\S]+una secuencia continua/i);
-  // heredada: reescribir tras el cotejo
+  // Talabalí sale de «Leyendas» (1936), no de «Cronicón solariego» (1922), y
+  // recupera la bisagra que se había borrado: el consejo de Beltrán de
+  // Luzuriaga y el primer golpe que rompe la rodela.
+  assert.match(talabali.historia, /1936/);
+  assert.doesNotMatch(talabali.historia, /Cronicón solariego[^.]*fuente/i);
+  assert.match(talabali.mito, /Luzuriaga/);
+  assert.match(talabali.mito, /rodela/);
   assert.doesNotMatch(talabali.similitudes, /Orfeo|Amaterasu/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(talabali.versiones, /no lo identifican/i);
 
   const ermitano = bySlug.get("el-ermitano-iracundo");
   // heredada: reescribir tras el cotejo

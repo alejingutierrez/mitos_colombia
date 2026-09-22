@@ -314,7 +314,10 @@ function abrirDefinePorSlug(src) {
     `  if (input.sourceKeys) {\n` +
     `    // Piso del bloque mestizo y mixto: 8, salvo \`fuentesAgotadas\` declarado.\n` +
     `    const minimo = input.fuentesAgotadas ? 1 : 8;\n` +
-    `    if (${variable}.length < minimo) {\n` +
+    // Mientras el consolidador reescribe las fuentes, una ficha puede quedar
+    // un momento bajo el piso, y el piso le impedía cargar el módulo que tiene
+    // que arreglar. Lo exigen después el test del corpus y la aplicación.
+    `    if (${variable}.length < minimo && !process.env.ENRIQUECER_CONSOLIDANDO) {\n` +
     `      throw new Error(\`\${input.slug}: \${${variable}.length} fuentes, y el piso es \${minimo}.\`);\n` +
     `    }\n` +
     `    if (new Set(${variable}.map(({ url }) => url)).size !== ${variable}.length) {\n` +

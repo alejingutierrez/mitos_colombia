@@ -150,7 +150,7 @@ for (const { slug, data } of plans) {
 const dirActas = path.dirname(path.resolve(String(options.reescrituras)));
 const carpetasActas = (await fs.readdir(dirActas).catch(() => [])).filter((d) => d.startsWith("actas-")).sort().reverse();
 const sinTilde = (t) => String(t).normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
-for (const { slug } of plans) {
+for (const { slug, data } of plans) {
   const titulo = modules.get(slug)?.title;
   if (!titulo) continue;
   let acta = null;
@@ -161,7 +161,13 @@ for (const { slug } of plans) {
   if (!acta || !Array.isArray(acta.nudos)) continue;
   const literales = sinTilde(acta.nudos.map((n) => (n && typeof n === "object" ? n.literal || "" : "")).join(" "));
   const nombres = (titulo.match(/\p{Lu}[\p{L}'’]+/gu) || []).slice(titulo.match(/^\p{Lu}/u) ? 1 : 0);
-  const sueltos = nombres.filter((n) => !/^(El|La|Los|Las|Lo|Un|Una|Del|De)$/.test(n) && !literales.includes(sinTilde(n)));
+  // Una palabra que el Relato usa —«muerto», «encantadas», «Salomón»— ya pasó
+  // el cotejo del acta con --con-relato: lo que interesa es el nombre que sólo
+  // está en el título, como «Villaquirá».
+  const relato = sinTilde(data?.mito || "");
+  const sueltos = nombres.filter(
+    (n) => !/^(El|La|Los|Las|Lo|Un|Una|Del|De)$/.test(n) && !literales.includes(sinTilde(n)) && !relato.includes(sinTilde(n)),
+  );
   if (sueltos.length)
     console.log(`  ! ${slug}: el título «${titulo}» nombra ${sueltos.map((n) => `«${n}»`).join(", ")}, que ninguna cita literal del acta sostiene`);
 }

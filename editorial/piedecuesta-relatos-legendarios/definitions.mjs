@@ -159,41 +159,68 @@ La Visita del Libertador permanece como una forma en que Piedecuesta imagina su 
   }),
   definePiedecuestaLegendaryAccountsMyth({
     slug: "un-libertador-piedecuestano",
-    title: "Un Libertador Piedecuestano",
+    sourceKeys: [
+      "mcCormickJose1975",
+      {
+        key: "barayaFullText",
+        summary:
+          "El capítulo «Jeneral Mantilla» (pp. 53-55) es el retrato más antiguo del personaje: hijo de la villa de Piedecuesta, estudiante de 17 años en la capital en 1810, en las acciones de la primera campaña de Venezuela y en el primer sitio de Valencia, guerrillero con Nonato Pérez, preso en 1818. Da otra versión de 1819: la pena de muerte conmutada por servir de soldado raso en filas realistas y la liberación «sublevando la tropa que lo custodiaba». Añade la campaña de Ocaña contra los Colorados y cierra con el elogio del demócrata que «amaba al pueblo» y la muerte el 22 de enero de 1860.",
+        limitation:
+          "Biografía militar elogiosa, sin documentos citados; la versión de la conmutación choca con el expediente que maneja el discurso de 1975. Se leyó el OCR de Internet Archive (ortografía de Bello y erratas: «M.vntilla», «sub propios»). No llega a 1854.",
+      },
+      "galindoRecuerdos1900",
+      "moureReminiscencias1907",
+      "banrepculturalJose2017",
+      "uribesociedades1976",
+      "encisoGuaches2015",
+      "historicoFernando2019",
+      "pinzonQue2011",
+      "espanolJose2026",
+    ],
+    title: "Un libertador piedecuestano",
     excerpt:
       "La semblanza de José María Mantilla recorre su carrera militar y política; es memoria biográfica documentada, no mito sobrenatural.",
     tags: ["Piedecuesta", "independencia", "historia", "memoria"],
-    mito: `Un Libertador Piedecuestano no es un mito sobrenatural. La compilación de 2016 reproduce y edita una semblanza del general José María Mantilla publicada por José María Baraya en Biografías militares, o Historia militar del país en medio siglo, de 1874.
+    mito: `En el valle de Piedecuesta el aire es tibio, y de ese aire salió un muchacho rumbo a Santafé para estudiar. Se llamaba José María Mantilla. Cuando la capital se sacudió el 20 de julio de 1810, él tenía 16 años y ese mismo día se presentó como soldado voluntario.
 
-Baraya presenta a Mantilla como hijo de la villa de Piedecuesta, en la antigua provincia de Pamplona. Dice que estudiaba en Santafé cuando comenzó el proceso independentista de 1810 y que se incorporó como soldado voluntario.
+No volvió a soltar el fusil. Marchó con Bolívar desde San Cristóbal hacia Venezuela y peleó en casi todas las acciones de aquella campaña. En Valencia, cercada por Boves, los sitiados oyeron la promesa de que se respetarían sus vidas si se rendían. Mantilla no la creyó. Escapó con otros cinco oficiales, y fueron los únicos que se salvaron de la degollina.
 
-La biografía enumera ascensos y campañas. Lo sitúa en operaciones de Venezuela, Cúcuta, Casanare, el Magdalena, Ocaña y Maracaibo. También relata su captura por fuerzas realistas y una fuga mediante la sublevación de la tropa que lo custodiaba.
+De regreso, la guerra se volvió contra los patriotas. Antes del desastre de Cachirí lo mandaron con una columna a golpear la escolta que llevaba vestuarios a Calzada, y ese mismo día lo derrotaron en Cúcuta. En Casanare no quiso quedarse quieto: se fue al monte con la guerrilla de Ramón Nonato Pérez.
 
-La edición de 2016 añade entre corchetes algunas explicaciones, por ejemplo una guerrilla que habría mantenido rutas entre Pamplona, Tunja, Ocaña y Piedecuesta. Esas interpolaciones no deben confundirse con el texto original de Baraya.
+Dos años duró aquello. En octubre de 1818 cayó preso y lo llevaron a Pamplona. Un Consejo de Guerra lo condenó a la horca y le confiscó los bienes. El gobernador José Bausa quiso más: que su cabeza quedara expuesta en la plaza, para escarmiento de quienes todavía abrigaban la infidencia.
 
-Después de la Independencia, Mantilla ocupó cargos militares, administrativos y políticos. La semblanza menciona gobernaciones, comandos de armas, responsabilidades en tribunales militares y participación en el Congreso.
+Lo salvó el papeleo. Anselmo de Bierna, asesor de Sámano, devolvió la causa por vicios de procedimiento. Se repitió el juicio y salió otra sentencia de muerte. Bierna la objetó también, porque los cargos eran anteriores al indulto, y Sámano acabó dándole la razón. Esa noticia nunca llegó a la celda.
 
-Baraya lo describe como demócrata, republicano y orador de convicciones. Es el lenguaje elogioso de una biografía militar decimonónica. Esta página lo atribuye al autor y no lo adopta como valoración neutral de toda su trayectoria.
+La noche del 31 de julio de 1819, una semana antes de Boyacá, Mantilla dejó de esperar. Se amotinó en la cárcel, liberó a los otros presos, asaltó la guardia y repartió los fusiles. Reunió gente, tomó las cajas reales y se proclamó gobernador de la provincia. Miguel de La Torre, que venía a relevar a Barreiro, encontró cerrados los caminos, tuvo que detenerse en Cúcuta y le escribió a Sámano que no le quedaba ninguno seguro para marchar.
 
-La vida pública de Mantilla también tuvo controversias. Participó en la revolución y guerra civil de 1854. Como consecuencia perdió temporalmente grado y pensión. Un decreto de 1859 restituyó su derecho alimentario por los servicios prestados durante la Independencia.
+Tras la victoria, Santander lo nombró gobernador de Mariquita. Hubo quien lo miró con recelo: Córdova preguntó por carta cómo podía llevar la orden de los libertadores de Venezuela. Él siguió adelante y llegó a general.
 
-Mantilla murió en Bogotá el 22 de enero de 1860. La compilación y un estudio posterior de la Academia Colombiana de Historia coinciden en ese cierre biográfico.
+Después cambió el campamento por el Congreso. Fue durante años la voz de Pamplona, temido por su sátira y por sus anécdotas crueles. Juntó a los artesanos arruinados en una sociedad de rojos. En la sesión que eligió a López azuzaba a las barras para que gritaran su nombre, y apenas posesionado el nuevo presidente fue a exigirle la expulsión de los jesuitas.
 
-La ficha heredada convertía la enumeración en relato heroico sin explicar su fuente. Añadía voces ancestrales, cóndores, truenos y un destino casi sobrenatural que no existen en la semblanza de Baraya.
+En 1854 aconsejó al general Melo. Cuando Melo cayó, los dos compartieron prisión. Al verlo con un par de grillos recién remachados, Mantilla le dijo con sarcasmo que su plan de campaña se le había bajado a los tobillos. Lo juzgaron y lo indultaron porque lo pidió la ciudad entera. Murió retirado en Bogotá el 22 de enero de 1860, lejos del valle tibio donde había empezado todo.`,
+    historia: `Esta semblanza sale de un discurso de academia. Ricardo Ortiz McCormick, periodista de El Tiempo y natural de Piedecuesta, lo leyó el 29 de abril de 1975 al tomar posesión como miembro de número de la Academia Colombiana de Historia, en la silla que había dejado Andrés Soriano Lleras. El Boletín de Historia y Antigüedades lo imprimió en su número 709, de abril a junio de ese año, con el título «José María Mantilla, combatiente y caudillo», entre las páginas 182 y 199. En la página 198 el orador llama a su tema «la parábola humana» del prócer.
 
-La revisión elimina esos adornos. También evita presentar todas las campañas como victorias personales o borrar los conflictos políticos posteriores. Mantiene la página porque la memoria local incluye figuras históricas junto con leyendas, pero señala la diferencia de género.
+El texto tiene dos mitades. La militar va de 1810 a 1833 y se apoya en el expediente del proceso de Pamplona, del que copia la sentencia, el oficio del gobernador Bausa y los dictámenes del asesor Bierna, y en la carta en que Miguel de La Torre confiesa a Sámano que no tiene camino. Cierra con la hoja de servicios completa: los ascensos día por día, los batallones, los cargos. La civil es otra cosa: un alegato sobre los draconianos, las Sociedades Democráticas, la elección de José Hilario López y el golpe de Melo, en el que el orador toma partido abiertamente.
 
-Los documentos citados permiten afirmar que Mantilla fue militar y político, que Baraya publicó una biografía en 1874 y que su carrera se recordó desde Piedecuesta. Para evaluar cada batalla, ascenso o decisión haría falta contrastar expedientes específicos, algo que esta ficha no simula haber completado.
+A continuación, en las páginas 199 a 204, viene la respuesta de Rafael Bernal Medina en nombre de la corporación. Recuerda a otros hijos ilustres de la villa, de Fernando Serrano al poeta Abel Karl, y deja constancia de que Ortiz McCormick preparaba una biografía de Mantilla en forma de libro. Bernal Medina insiste en el episodio de Pamplona como el que le da a Mantilla derecho a figurar entre los próceres.
 
-El interés del texto está en observar cómo una ciudad construye un libertador propio. Entre servicio militar, cargos públicos, elogio republicano y disputa civil, José María Mantilla aparece como personaje histórico complejo, no como héroe sin fisuras ni criatura de leyenda.`,
-    historyCore:
-      "José María Baraya publicó la semblanza de Mantilla en 1874; Open Library e Internet Archive preservan la edición. La compilación de 2016 reproduce el texto e introduce aclaraciones editoriales. El Boletín de Historia y Antigüedades ofrece una lectura posterior. La carrera y muerte son materia histórica, aunque cada campaña y juicio de carácter exige contraste documental específico.",
-    versionCore:
-      "El núcleo conserva origen piedecuestano, incorporación militar, campañas, captura, fuga, ascensos, cargos, actuación de 1854, restitución de la pensión y muerte en 1860. La revisión elimina cóndores, voces ancestrales, destino sobrenatural y otros adornos heredados. Distingue el texto de Baraya, los corchetes de 2016 y la interpretación posterior de la Academia.",
-    similarityCore:
-      "Un Libertador Piedecuestano comparte con biografías heroicas del siglo XIX una carrera ordenada por campañas, ascensos, sacrificios y virtudes republicanas. Se distingue de La Visita del Libertador porque su protagonista es José María Mantilla y su fuente principal es prosa biográfica de Baraya, no un romance de Vicente Arenas sobre Bolívar. También se aparta de leyendas de guerreros: no hay prodigio, aparición o tradición oral demostrada. La página permanece como memoria histórica local y no debe usarse para convertir elogios de época en evaluación definitiva.",
+Es la voz de un paisano que, siglo y medio después, reclama para su pueblo un nombre que la historia nacional había dejado en la sombra.`,
+    versiones: `Del mismo hombre hay retratos que no coinciden. El más favorable es el de José María Baraya en sus Biografías militares de 1874, que el discurso copia al final: un general demócrata, sin ambiciones bastardas, que hablaba como en una conversación seria y familiar y que amaba al pueblo como un padre a sus hijos. Aníbal Galindo, citado en la página 192, lo recuerda por sus «sangrientas anécdotas» y su estilo sarcástico y burlón. Es la misma lengua vista desde la otra orilla.
+
+Baraya y el discurso tampoco cuentan igual la cárcel de Pamplona. Para Baraya, la sentencia de muerte se le conmutó por la de servir de soldado raso en las filas realistas, y así sirvió hasta el 31 de julio de 1819, cuando se libertó sublevando a la tropa que lo custodiaba al grito de libertad. El discurso, que trabaja con el expediente, no conoce esa conmutación: habla de dos condenas a muerte recurridas por el asesor Bierna y de un preso que se amotina en la cárcel y asalta la guardia. Hay diferencias menores. Baraya le da diecisiete años en 1810, no dieciséis, y registra una campaña de Ocaña contra la guerrilla realista de los Colorados que el discurso menciona sin situarla en Ocaña.
+
+El gobernador realista José Bausa, en el oficio de 1818, lo pinta como un hombre de gran influencia durante el desorden y pide su cabeza para la plaza. José María Córdova, en carta a Santander de marzo de 1820, duda de que haya estado en Venezuela y le choca verlo firmar como libertador. Ortiz McCormick responde a ambos con la hoja de servicios y llama injusta la carta de Córdova.
+
+La divergencia más viva está en el 9 de marzo de 1849. Los conservadores contaron que el Congreso eligió a López bajo amenaza, con puñales en las barras, y Mariano Ospina dejó escrito en su papeleta que votaba así para que no asesinaran al Congreso. A Mantilla se le acusó de azuzar a la multitud, y un testigo lo confirma sin rencor: Aníbal Galindo, que estaba en la barra, lo recuerda de escrutador, con los brazos cruzados a la espalda para no tocar las papeletas, acercándose cada rato a los muchachos para que no faltara el grito por López. El discurso admite que lo hizo, pero sostiene, con el acta y con Eduardo Rodríguez Piñeres, que en el escrutinio decisivo las barras ya estaban despejadas, y despacha la frase de Ospina como una truculencia.
+
+También difiere el peso que cada lector da al episodio de 1819. Para Bernal Medina es lo que convierte a Mantilla en prócer; para Ortiz McCormick es sólo el pico de una vida cuya faceta civil importaba más.`,
+    similitudes: `El propio discurso pone al lado del levantamiento de Pamplona otro episodio del mismo mes. Horacio Rodríguez Plata había llamado «momento estelar» a la batalla de Charalá, donde los socorranos detuvieron los refuerzos que debían llegar a Barreiro en los primeros días de agosto de 1819. Pamplona y Charalá funcionan igual en la memoria santandereana: dos acciones de provincia, lejos del campo de Boyacá, que se reclaman como condición de la victoria.
+
+El segundo paralelo es el compañero de calabozo. José María Melo, el general cuyo gobierno de 1854 apoyaron los draconianos, fue desterrado y murió en México combatiendo bajo las banderas de Juárez. El discurso lo dice con cierta envidia: a Mantilla no le tocó esa gloria, sino el indulto y un retiro discreto. Los dos cargan con la misma derrota, y el orador los recuerda juntos en la misma página.
+
+El tercero está en la misma villa. Fernando Serrano, bautizado en Matanza y vecino de Piedecuesta, defendió la villa en 1812 y gobernó la provincia de Pamplona durante la guerra, con Mantilla bajo su mando. El mismo número del boletín lo nombra dos veces como el otro gran hijo de Piedecuesta, y en la respuesta académica se afirma que allí nació. Serrano y Mantilla son la manera en que un pueblo pequeño se escribe a sí mismo dentro de la Independencia: con nombres propios que la historia de Bogotá había dejado al margen.`,
     leccion:
-      "Una biografía gana profundidad cuando conserva logros, conflictos, fuentes y voces de época.",
+      "Un expediente lento puede salvar la vida que una sentencia ya había dado por perdida.",
     sceneHorizontal:
       "José María Mantilla joven se incorpora a un batallón republicano junto a voluntarios, mapas y caminos de 1810, sin glorificación de combate",
     sceneVertical:

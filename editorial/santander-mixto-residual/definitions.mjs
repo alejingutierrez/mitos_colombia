@@ -3,40 +3,76 @@ import { defineSantanderMixtoResidualMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineSantanderMixtoResidualMyth({
     slug: "talabad",
-    title: "Talabalí: cautiverio y duelo en Bucarica",
+    sourceKeys: [
+      "investigacionMitos1993",
+      "perezPinzonBucaramanga2022",
+      {
+        key: "uisColonialPunishment",
+        summary:
+          "Cuenta a Juan de Velasco, encomendero de Bucarica-Guaca, entre los amos señalados por su dureza en la provincia de Pamplona, y transcribe de las diligencias de visita de 1622 el caso más extremo: Juan de Arteaga, administrador de la cuadrilla de Bucarica y Guaca, azotó con ayuda de Andrés Páez de Sotomayor al lavador Martín Melchor Báez por medio peso de oro y lo tuvo una semana en el cepo. Permite leer el «injusto castigo» que echa a Talabalí al monte contra la práctica documentada de esas mismas encomiendas.",
+        limitation:
+          "Estudio de archivo que no trata la literatura de Otero. No identifica a ningún indio llamado Talabalí ni a una hija de Velasco llamada María.",
+      },
+      "camargoHacia2015",
+      "gonzalezHistoria2023",
+      "ercillaAraucana1569",
+      "meraCumanda1879",
+      "cupaedicion2019",
+    ],
+    title: "Talabalí",
     excerpt:
       "Otero D’Costa convirtió el cautiverio de Talabalí y un duelo impuesto en una tragedia romántica situada en la Bucarica colonial.",
     tags: ["Talabalí", "amor", "sacrificio", "resistencia"],
-    mito: `Don Juan de Velasco llegó con su familia al valle de Bucarica cuando su fortuna empezaba a disminuir. La narración de Enrique Otero D’Costa presenta cañaduzales, ganado y arenas de oro, pero también un territorio sometido a entradas armadas y a la violencia de la encomienda. En ese escenario ubica a Talabalí.
+    mito: `Don Juan de Velasco, hijo de Ortún Velásquez de Velasco y heredero de las encomiendas de Guaca, Bucarica y Bucaramanga, gastó su hacienda sirviendo al rey, fundando monasterios y pleiteando con vecinos y no vecinos. Un día tuvo que dejar la casa solariega de Pamplona y marcharse con su numerosa familia al valle de Bucarica.
 
-Según el relato, Talabalí era un joven guane de Bucarica que había servido como paje en la casa de Velasco en Pamplona. Un castigo injusto lo empujó a huir al monte y luego a unirse a guerreros yariguíes. Su conocimiento del castellano y de las costumbres de los colonizadores lo habría convertido en un capitán temido. Durante una incursión de Velasco fue capturado junto con otros hombres.
+El valle tenía un pero: los yariguíes, y entre ellos la parcialidad de los suamacaes, asentada en las vegas del Cáchira. Velasco armó a su gente y les hizo entradas. En la última sorprendieron al cacique Suamacá, y el mejor botín fue un prisionero: Talabalí.
 
-El encomendero lo encerró en una jaula que antes había guardado un tigre. Allí el cautivo recibía humillaciones y apenas tenía alimento. María de Velasco, hija del dueño de Bucarica, sintió compasión por quien había conocido desde niño y le hizo llegar comida en secreto. Talabalí interpretó esos gestos desde un amor silencioso que el texto presenta como imposible.
+Talabalí era guane, natural de Bucarica, y de muchacho había servido como paje en la casa de Pamplona. Vuelto a su valle, un castigo injusto lo echó al monte, y acosado por sus perseguidores se unió a los yariguíes. Llegó a ser uno de sus capitanes más temidos, por su fuerza y porque conocía la lengua y las argucias de los blancos. Velasco lo encerró en una vieja jaula que había guardado un tigre y prometía verlo colgado en la plaza mayor de Pamplona. Habría muerto de hambre y de sed si doña María, la hija del encomendero, no le hubiera hecho llevar comida a escondidas.
 
-María, sin embargo, amaba a Juan de Arteaga Gamboa. Velasco rechazaba al pretendiente porque quería para su hija una alianza más ventajosa. Creyendo que el joven no aceptaría una condición degradante y peligrosa, anunció que solo permitiría el matrimonio si Arteaga vencía a Talabalí en un duelo de espada contra macana.
+Por María suspiraba don Juan de Arteaga Gamboa, un hidalgo vizcaíno de veinticinco años, espadachín y con la bolsa vacía. El padre quería para ella un enlace con la rica nobleza de Pamplona; ella había dicho que no se casaría con otro. El traslado ponía veinticinco leguas de montaña entre los dos, pero a los dos meses el vizcaíno entró al valle del Río del Oro montado en un rocín despeado.
 
-Arteaga aceptó. En la plaza de la doctrina de Bucarica levantaron un palenque para el combate. A un lado se reunieron la familia del encomendero, el sacerdote y los mineros; al otro, el cacique y las personas indígenas de la encomienda. Una trompeta dio la señal. Talabalí descargó su macana y rompió la rodela de su rival.
+Velasco lo mandó llamar.
 
-En ese instante escuchó a María gritar su nombre. Otero cuenta que el cautivo entendió el temor de ella por Arteaga y decidió no continuar. Bajó su defensa y avanzó hacia la espada. Mientras agonizaba, levantó los ojos y le ofreció a María una última sonrisa.
+—Os concedo la mano de doña María con una sola condición: que venzáis al indio Talabalí en duelo singular de espada y macana.
 
-La escena no es un acta del siglo XVII. Es una tragedia literaria que usa nombres y lugares coloniales para hablar de cautiverio, desigualdad y amor no correspondido. Talabalí no elige entre dos contendientes libres: el duelo ha sido organizado por quienes controlan su cuerpo y su destino.`,
-    historia: `Enrique Otero D’Costa publicó Cronicón solariego en 1922. La obra mezcla investigación regional, reconstrucción histórica y prosa literaria. Eugenia Villa Posse reprodujo Talabalí en Mitos y leyendas de Colombia, volumen II, de 1993, dentro de una selección que permite observar distintos grados de elaboración de materiales folclóricos. Esa cadena es la fuente directa del argumento.
+—Considerad que soy hidalgo y español, y que no es de mi clase batirme así, y menos con un indio.
 
-El trasfondo colonial sí puede contrastarse. En 1914, el propio Otero publicó documentos sobre la llamada fundación de Bucaramanga. Investigaciones posteriores de Luis Rubén Pérez Pinzón y Leonardo Fabián García Rincón vuelven a las visitas de 1622: allí aparecen Juan de Velasco, Juan de Arteaga, Bucarica, Guaca y trabajadores indígenas obligados a lavar oro. Las diligencias describen cuotas, salarios impagos, castigos y huidas.
+Arteaga se fue a su posada, mohíno y confuso. Su huésped era Beltrán de Luzuriaga, un viejo minero del Río del Oro.
 
-Esos estudios no registran a Talabalí, una jaula de tigre, la ayuda secreta de María ni el duelo. Por eso la página distingue dos niveles: los propietarios, administradores, lugares y formas de explotación pertenecen a un contexto histórico documentado; la biografía del cautivo y el desenlace romántico pertenecen a la construcción de Otero mientras no aparezca otra evidencia.
+—Conozco a don Juan de Velasco —le dijo—. Os hace la propuesta porque cuenta con que no la aceptaréis, y vuestra negativa os desmerecerá ante doña María, que pensará que vuestro amor es muy flaco si no vence una preocupación de casta. Aceptad el duelo. Eso sí, ese Talabalí es un bestión tan grande como una ceiba y con más fuerzas que una danta…
 
-El archivo de origen dividió la historia en cuatro filas: Hidalgo Velasco y el Indio Astuto, Cautiverio y Amor en Pamplona, Duelo de Honor en Bucarica y Duelo de Honor y Sacrificio. No son cuatro mitos independientes. Forman una secuencia continua y se reúnen en esta ruta heredada. El slug talabad se conserva para no romper enlaces; el título visible usa Talabalí, forma repetida para el personaje en el texto y en el Excel.`,
-    versiones: `La versión consultable es, en esencia, una sola elaboración de Otero transmitida por reediciones. El principio presenta a Velasco, su traslado a Bucarica, las incursiones contra grupos vecinos y la captura de Talabalí. La segunda mitad introduce a María, Arteaga, la condición matrimonial y el duelo. Separarlas como “versión histórica” y “versión romántica” oculta que ambas partes pertenecen a la misma composición.
+—Ahorraos el advertimiento —lo cortó Arteaga—. Hoy mismo vuelvo a Bucarica a decir que acepto.
 
-Algunas transcripciones digitales y el slug heredado muestran Talabad, mientras el personaje aparece reiteradamente como Talabalí y así lo nombran las cuatro filas del Excel. La revisión corrige el título sin cambiar la URL. Tampoco convierte en certeza la adscripción personal del protagonista: Otero lo llama guane y cuenta que se unió a yariguíes de la parcialidad suamacá, pero los padrones y diligencias seleccionados no lo identifican.
+Velasco, cogido en su propia red, tuvo que cumplir. En la plaza de la doctrina de Bucarica levantaron el palenque. En el mejor tablado se sentó el encomendero con los suyos y el padre doctrinero Alonso Ortiz Galeano. Al lado, en otro mayor, los blancos del contorno: el teniente-alcalde de minas, el escribano del valle, el alguacil, los mineros, y Luzuriaga. En un tercero, don Diego, cacique de Bucarica, con su familia. Los indios de la encomienda, de pie, llenaban la estacada.
 
-El relato usa vocabulario colonial y expresiones deshumanizantes para el cautivo. Esta ficha no las adopta como voz neutral. Conserva la asimetría del palenque —un indígena preso obligado a combatir por una decisión matrimonial ajena— y evita celebrar su muerte como prueba de una supuesta nobleza natural. Su último gesto pertenece a la lógica romántica del autor, no a una virtud exigible ni a una costumbre guane.
+Sonó la trompeta. Arteaga, sereno, llevaba rodela y espada fina; frente a él, Talabalí embrazaba una adarga rústica y blandía una macana desmesurada. Los mineros aullaban: ¡Santiago, y al bárbaro! Cruzaron las armas. Talabalí descargó la macana, y la rodela de Arteaga saltó en pedazos.
 
-La página anterior comparaba a Talabalí con Orfeo y Amaterasu. Ninguna figura comparte cautiverio colonial, duelo impuesto o amor unilateral. Esos paralelos se retiran y se reemplazan por comparaciones de género explícitamente literarias.`,
+Un grito angustiado salió del tablado del encomendero:
+
+—¡Talabalí! ¡Talabalí!
+
+Él vio quién gritaba y entendió. Había querido a María desde niño, y recordó cuál era su destino. Quiso morir de una vez, antes de llevarle a ella ese dolor. Triste, sin cubrirse siquiera, buscó la punta del acero y avanzó contra ella, ayudando con su empuje el brazo del rival.
+
+Y cuando sintió que el alma se le iba, alzó los ojos hacia la novia imposible y le lanzó su más bella sonrisa de amor.`,
+    historia: `Entre los folios 36 y 41 de la compilación quiteña de Villa Posse corre este texto, el más largo de los tres santandereanos que ella toma del libro bogotano de Otero D'Costa de 1936. La pieza no trae fecha propia de escritura. Circulaba ya dos años antes: Daniel Mauricio Preciado Camargo cita la negativa del hidalgo a batirse con un indio por la página 150 de «Historietas. Leyendas y tradiciones colombianas», la colección de historietas que salió de las prensas de Zapata en Manizales en 1934. En la cabecera de la antología el título sale partido, «T ALABAD», mientras el cuerpo del texto llama al protagonista Talabalí de principio a fin.
+
+De las tres piezas santandereanas del libro es la que más debe al archivo. Otero era bumangués y fue él quien encontró en 1914, en el fondo Tierras del Archivo Histórico Nacional, el auto de 1622 que la ciudad adoptó como su acta de fundación; lo publicó ese año en el número 100 del Boletín de Historia y Antigüedades. Los nombres del palenque salen de esa documentación. Luis Rubén Pérez Pinzón, al revisar en 2022 los expedientes de la visita de Juan de Villabona Zubiaurre, muestra que el oidor ordenó congregar a los indios de Guaca y Bucarica para protegerlos de los abusos del encomendero Juan de Velasco, de su familia y en especial de su yerno Juan de Arteaga, y que el auto lo cumplió Andrés Páez de Sotomayor, teniente del alcalde de minas.
+
+La cabecera anuncia en bloque que muchas leyendas del libro vinieron de boca campesina, sin decir cuáles, y ésta no deja rastro de ello: no hay copla, refrán ni narrador interpuesto. Habla un escritor que se dirige al «lector curioso» y le presenta a los personajes con fórmula de sobremesa. La mezcla es la de una tragedia de autor con materia colonial documentada. El protagonista es un guane criado como paje en casa española, que aprende allí la lengua y las mañas de los blancos y con ellas se hace capitán de los yariguíes. Muere en un palenque que montan hidalgos para dirimir una boda, bajo tres tablados que ordenan a los presentes por su rango.`,
+    versiones: `Lo que el archivo cuenta y lo que cuenta el relato van por caminos distintos, y conviene tenerlos separados.
+
+En el relato, Juan de Arteaga Gamboa es un vizcaíno pobre y enamorado al que el encomendero rechaza y que se juega la vida para ganar a doña María. En los expedientes de 1622 que estudian Pérez Pinzón y Leonardo Fabián García Rincón, Juan de Arteaga es ya el yerno de Velasco y el administrador de la cuadrilla de Bucarica y Guaca, y figura entre los castigadores más duros de la provincia de Pamplona. García Rincón transcribe la queja de un lavador de oro, Martín Melchor Báez, azotado por Arteaga con ayuda de Andrés Páez de Sotomayor por medio peso que no alcanzaba a pagar. El galán de la leyenda y el administrador del expediente llevan el mismo nombre y viven en el mismo valle. Ninguno de los dos autores menciona a Talabalí, la jaula ni el duelo.
+
+Páez de Sotomayor aparece también en las dos orillas. En el texto se sienta en el tablado de los blancos como teniente-alcalde de minas; en el archivo es el funcionario que cumple el auto de 1622 del que la ciudad de Bucaramanga hizo su partida de fundación.
+
+Dentro del propio texto, el nombre del protagonista vacila en la cabecera de 1993 y no en el cuerpo. El guane Talabalí se une a los yariguíes, y los suamacaes aparecen como una parcialidad de ellos asentada en las vegas del Cáchira; a él lo capturan en la entrada contra el cacique Suamacá. Otero no dice que Talabalí fuera suamacá.
+
+Donde las ediciones pueden compararse, apenas se apartan. La negativa del hidalgo que Preciado cita de la impresión de Manizales dice «con indios o personas de baja condición»; la de 1993 escribe «con indios y personas de baja condición». Es la única variante a la vista, y es de una letra.`,
     leccion:
-      "Ningún sacrificio vuelve honorable un duelo impuesto por quienes controlan la libertad de otra persona.",
-    similitudes: `Uncas, en The Last of the Mohicans de James Fenimore Cooper, también es un personaje indígena construido por una novela histórica de autor no indígena. Los dos quedan atrapados en una frontera colonial y mueren dentro de una trama afectiva; Uncas participa en una guerra norteamericana y Talabalí en un palenque imaginado en Bucarica. Atala, de Chateaubriand, comparte el paisaje americano idealizado, el amor imposible y un desenlace sacrificial. Allí una promesa religiosa determina la tragedia de una mujer; en Otero, el poder del encomendero organiza el duelo de un cautivo. Los paralelos muestran convenciones del romance histórico, no una genealogía guane ni prueba de que Otero copiara esas obras.`,
+      "Quien gana el primer golpe y elige no dar el segundo convierte su muerte en una decisión propia.",
+    similitudes: `El paralelo más exacto de la trayectoria de Talabalí está en «La Araucana», que Alonso de Ercilla publicó en 1569. En el canto III aparece «un hijo de un cacique conocido / que a Valdivia de paje le servía»: Lautaro, criado en casa del conquistador, que en plena batalla se pasa a los suyos, los arenga y termina como su capitán. Talabalí recorre el mismo camino, de paje de Velasco en Pamplona a capitán de los yariguíes, y como Lautaro saca su fuerza de conocer por dentro la lengua y las argucias de los blancos. La diferencia es el desenlace. Lautaro vence a su antiguo amo; Talabalí, que ha ganado el primer golpe, renuncia a la victoria.
+
+La renuncia tiene su paralelo andino en «Cumandá o un drama entre salvajes», la novela que Juan León Mera publicó en Quito en 1879. Cumandá, criada entre los indios de la selva oriental del Ecuador, acepta ir a la muerte para salvar a Carlos, el joven blanco al que ama, y lo dice sin rodeos: prefiere sacrificar su vida por la de su adorado. En los dos textos el amor atraviesa la frontera colonial y sólo se resuelve con la muerte voluntaria del personaje indígena. Mera, sin embargo, reserva una revelación de parentesco que vuelve imposible el amor; Otero no necesita ninguna, porque lo imposible es la escala de los tres tablados.`,
     sceneHorizontal:
       "en la hacienda de Bucarica al amanecer, Talabalí permanece de pie dentro de una jaula abierta de madera mientras María de Velasco deja discretamente una cesta de alimentos y al fondo se ven cañaduzales, río y trabajadores indígenas, sin exotización ni barrotes sobre el rostro",
     sceneVertical:

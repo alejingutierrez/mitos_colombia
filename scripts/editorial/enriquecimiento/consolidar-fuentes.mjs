@@ -30,6 +30,10 @@ import { pathToFileURL } from "node:url";
 import { parseArgs, requireCommunity, loadModules, allSources, normalizeUrl, checkUrl, mapLimit, sourceFlags } from "./lib.mjs";
 
 const options = parseArgs(process.argv.slice(2));
+// El `define` de cada módulo abierto exige su piso de fuentes al cargar, salvo
+// mientras se consolida: si una propuesta deja una ficha en siete, el módulo
+// tiene que poder cargarse para que se le escriba la octava o su `agotado`.
+process.env.ENRIQUECER_CONSOLIDANDO = "1";
 const communitySlug = requireCommunity(options);
 if (!options.propuestas) throw new Error("Falta --propuestas=<archivo.json o directorio>");
 
