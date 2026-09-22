@@ -187,6 +187,85 @@ export const tolimaMestizoResidualSources = {
     limitation:
       "Su objeto es comparativo y dedica la mayor parte del análisis al ámbito tojolabal; la mención colombiana depende de fuentes publicadas.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  moralesFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales",
+    year: 2013,
+    type: "libro (reedición de Ediciones Unibagué del artículo de 1962 en la Revista Colombiana de Folclor, v. 3, n.º 7)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "Registro del Mohán del sur del Tolima, «el Poira… el Mohán travieso, enamorado, libertino y raptor», y de la Mohana en la misma página del rapto (pp. 59-62 de la edición de 2013).",
+    limitation:
+      "Devia no nombra al narrador de esta entrada; el Poira aparece como faceta del Mohán, no con entrada propia.",
+  }),
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Segundo registro de Devia (sección 20, p. 145) y la entrada propia «El Poira» de Rocha Castilla (sección 21, p. 181).",
+    limitation:
+      "El «Mohán» de la sección 21 (pp. 169-173) es novela (Río y Pampa, de Nicanor Velásquez Ortiz) y no se usa.",
+  }),
+  oliverosCoyaimas2000: source({
+    title: "Coyaimas y Natagaimas",
+    author: "Diana E. Oliveros",
+    year: 2000,
+    type: "capítulo de la Geografía Humana de Colombia, t. IV, vol. II (Instituto Colombiano de Cultura Hispánica)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2778/download",
+    summary:
+      "Pone a «El Poira (dueño del oro)» con la madre de agua y los mohanes en la capa de agua dulce de la cosmología de coyaimas y natagaimas (pp. 134-135).",
+    limitation:
+      "Sigue la tabla de Frank Faust (1990); es el Poira pijao, dueño del oro, más que el raptor de muchachas de Devia.",
+  }),
+  cINEPColombia1998: source({
+    title: "Colombia país de regiones, tomo 3: Región del Alto Magdalena",
+    author: "CINEP y Colciencias",
+    year: 1998,
+    type: "obra de síntesis regional",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2835/download",
+    summary:
+      "Lee al Mohán del Tolima Grande como sacerdote pijao en resistencia y resume sus raptos (pp. 96-101).",
+    limitation:
+      "Síntesis interpretativa; cita a Ramírez Sendoya y no trae narradores.",
+  }),
+  culturaLeyendasf: source({
+    title: "Leyenda de El Mohán",
+    author: "Secretaría de Cultura, Recreación y Deporte de Bogotá (Bogotanitos)",
+    year: "s. f.",
+    type: "divulgación institucional infantil",
+    url: "https://culturarecreacionydeporte.gov.co/es/bogotanitos/cuenta-la-leyenda/leyenda-de-el-mohan",
+    summary:
+      "Divulgación que recoge la fórmula de Devia: «El Poira es el Mohán travieso y enamorado», que vive en los charcos hondos de los ríos.",
+    limitation:
+      "Página infantil sin fuente declarada; parafrasea a Devia.",
+  }),
+  caroNoticias1975: source({
+    title: "Noticias Culturales n.º 179: el bufeo en Leticia",
+    author: "José Joaquín Montes Giraldo (Instituto Caro y Cuervo)",
+    year: 1975,
+    type: "boletín académico",
+    url: "https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf",
+    summary:
+      "Recoge en 1975 el bufeo de Leticia, que toma figura de hombre para llevarse a las mujeres, el paralelo amazónico que nombra Similitudes (pp. 6-9).",
+    limitation:
+      "Es otra región y otro ser; la comparación es de función, no de parentesco.",
+  }),
+  narinocuentos1988: source({
+    title: "Los cuentos de Pascual: mitos y leyendas del piedemonte llanero",
+    author: "Alberto Baquero Nariño",
+    year: 1988,
+    type: "libro (recopilación regional, Biblioteca Digital Banrepcultural)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2818/",
+    summary:
+      "Nombra a la Patasola entre los mitos andinos que la migración llevó al piedemonte llanero (pp. 22-23).",
+    limitation:
+      "Resumen de un párrafo; no el relato tolimense.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -224,7 +303,6 @@ const sourceKeysBySlug = {
     "espantosScan",
     "menMunicipio",
     "modulemaTolima",
-    "colombiaAprendeSombreron",
     "leridaSombreron",
     "radioNacionalSombreron",
     "guatemalaMcd",

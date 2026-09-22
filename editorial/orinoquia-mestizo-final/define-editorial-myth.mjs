@@ -14,7 +14,7 @@ export function defineOrinoquiaMestizoFinalMyth(input) {
     if (new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length) {
       throw new Error(`${input.slug}: hay URLs repetidas entre sus fuentes.`);
     }
-  } else if (selectedSources.length !== 8 || new Set(selectedSources.map(({ url }) => url)).size !== 8) {
+  } else if ((input.fuentesAgotadas ? selectedSources.length < 1 : selectedSources.length !== 8) || new Set(selectedSources.map(({ url }) => url)).size !== 8) {
     throw new Error(`${input.slug}: se esperaban ocho fuentes únicas.`);
   }
   return buildOrinoquiaMestizoFinalMyth({

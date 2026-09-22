@@ -339,6 +339,118 @@ export const tolimaMixtoResidualSources = {
     limitation:
       "Pertenece al folclor irlandés y no prueba difusión ni parentesco histórico con el pájaro Silbador del sur del Tolima.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  moralesFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales",
+    year: 2013,
+    type: "libro (reedición de Ediciones Unibagué del artículo de 1962 en la Revista Colombiana de Folclor, v. 3, n.º 7)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "Registro de los dos repertorios bajo un título: las brujas que se vuelven pisca y los duendes que tiran terrones y persiguen muchachas, y el tiplecito de ocho cuerdas que los espanta (pp. 81-84 de la edición de 2013).",
+    limitation:
+      "Es un encabezado de categoría con varios casos, no un relato único; sin narrador.",
+  }),
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Segundo registro de Devia (sección 20, pp. 165-166) y «El duende» de Rocha Castilla (sección 21, p. 182).",
+    limitation:
+      "Copia sin aparato crítico.",
+  }),
+  baronCuentos1996: source({
+    title: "Cuentos, mitos y leyendas del llano",
+    author: "Getulio Vargas Barón",
+    year: 1996,
+    type: "libro (Corpes Orinoquía)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2797/",
+    summary:
+      "Cuenta el duende del hato de Las Camazas que molestaba a don Gregorio Zambrano, con la copla que lo recuerda, el paralelo llanero de Similitudes.",
+    limitation:
+      "Otra región; el duende llanero se burla del patrón y no persigue muchachas.",
+  }),
+  cINEPColombia1998: source({
+    title: "Colombia país de regiones, tomo 3: Región del Alto Magdalena",
+    author: "CINEP y Colciencias",
+    year: 1998,
+    type: "obra de síntesis regional",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2835/download",
+    summary:
+      "Lee al Guando como lección de solidaridad campesina en la síntesis del Tolima Grande (p. 99).",
+    limitation:
+      "Interpretación de síntesis, sin narradores.",
+  }),
+  narinocuentos1988: source({
+    title: "Los cuentos de Pascual: mitos y leyendas del piedemonte llanero",
+    author: "Alberto Baquero Nariño",
+    year: 1988,
+    type: "libro (recopilación regional, Biblioteca Digital Banrepcultural)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2818/",
+    summary:
+      "Nombra al Guando entre los mitos campesinos llevados al piedemonte llanero.",
+    limitation:
+      "Es una enumeración de una línea.",
+  }),
+  rangelpalabras2010: source({
+    title: "Las palabras del origen: breve compendio de la mitología de los uitoto",
+    author: "Fernando Urbina Rangel",
+    year: 2010,
+    type: "libro (Ministerio de Cultura)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll8/id/4",
+    summary:
+      "Reúne relatos uitotos donde Jitoma oye cantar a Nokaido, busca al pájaro, no lo encuentra y sabe que es mal agüero (pp. 103-104).",
+    limitation:
+      "Otra tradición; la comparación es de función.",
+  }),
+  compiladoraMitos19932: source({
+    title: "Mitos y leyendas de Colombia, tomo III",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "El apartado «Los tunjos» de la sección chibcha describe las figuras de oro que se ofrecían en santuarios y lagunas, de donde viene el nombre.",
+    limitation:
+      "Es la glosa arqueológica, no el relato campesino.",
+  }),
+  oRLLOPComo2010: source({
+    title: "Cómo se formó nuestra mitología en el departamento del Tolima",
+    author: "El Tiempo (firma «ORLLOP»)",
+    year: 2010,
+    type: "prensa (5 de marzo de 2010)",
+    url: "https://www.eltiempo.com/archivo/documento/MAM-3868565",
+    summary:
+      "Nombra al Tunjo en el repertorio tolimense de espantos.",
+    limitation:
+      "Teoría del origen, no relato.",
+  }),
+  redaccionAprendamos1995: source({
+    title: "Aprendamos más de lo nuestro",
+    author: "El Tiempo (Redacción)",
+    year: 1995,
+    type: "prensa (11 de octubre de 1995)",
+    url: "https://www.eltiempo.com/archivo/documento/mam-425024",
+    summary:
+      "Fecha la circulación de la Candileja en la prensa en 1995.",
+    limitation:
+      "Eco de Rocha Castilla 1968.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (edición ampliada en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Recoge a la Vieja Colmillona de Caldas (pp. 57-58), la otra mujer definida por los dientes que compara Similitudes.",
+    limitation:
+      "Es otro ser, de otro departamento, y hace lo contrario: no daña a quien la trata bien.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -440,14 +552,11 @@ const sourceKeysBySlug = {
     "culturaMohan",
     "radioNacionalMohan",
     "minculturaPijao",
-    "onicPijao",
   ],
   "dioses-lares": [
     "flacsoVolume3",
     "izquierdoCatalog",
     "minculturaPijao",
-    "onicPijao",
-    "onicCrit",
     "britishMuseumLares",
     "tolimaArchaeology",
     "coyaimaNatagaimaEthnography",

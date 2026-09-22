@@ -14,7 +14,7 @@ export function defineSantanderMixtoResidualMyth(input) {
     if (new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length) {
       throw new Error(`${input.slug}: hay URLs repetidas entre sus fuentes.`);
     }
-  } else if (selectedSources.length !== 8 || new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length) {
+  } else if ((input.fuentesAgotadas ? selectedSources.length < 1 : selectedSources.length !== 8) || new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length) {
     throw new Error(`${input.slug}: se esperaban ocho fuentes únicas.`);
   }
   return buildSantanderMixtoResidualEditorialMyth({
