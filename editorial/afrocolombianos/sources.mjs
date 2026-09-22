@@ -486,6 +486,96 @@ export const afrocolombianSources = {
     limitation:
       "La página institucional describe el acervo pero no publica los relatos: ninguna versión de la Tunda se consultó aquí de primera mano. Es material afroecuatoriano, no colombiano, y el cotejo con las versiones de Tumaco está pendiente.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  duncanAnancy2015: source({
+    title: "Anancy y el tigre en la literatura oral afrodescendiente",
+    author: "Quince Duncan",
+    year: 2015,
+    type: "artículo de revista arbitrada (Cuadernos de Literatura, vol. XIX, n.º 38, pp. 65-78)",
+    url: "https://revistas.javeriana.edu.co/index.php/cualit/article/view/12949",
+    summary:
+      "Rastrea a Anansi desde la cultura akan —donde Kuaku Anansi es la persona de Nyame que teje el universo— hasta el Gran Caribe, y dice expresamente que su presencia llega hasta el Pacífico colombiano. Registra la variedad de nombres (Hermano Araña, Breda Nansi, Anancy, Ananse, Aunt Nancy, Ti Malice, Nansi), el par araña débil y astuta frente al Hermano Tigre fuerte y torpe, la fórmula jamaicana de Jack Mandora con que el narrador se descarga de la historia, y transcribe como «Ejemplo 1. Pacífico colombiano» el cuento «Hermano tigre, hermano Anancy y el pescado frito», en el que Anancy salva a su familia subiéndola a un árbol de calabaza y hiere al Tigre.",
+    limitation:
+      "Es un ensayo de síntesis de un autor costarricense, no trabajo de campo, y no menciona el Anansi chocoano del campanario. El cuento que presenta como «Ejemplo 1. Pacífico colombiano» lo toma del portal Colombia Aprende sin narrador ni lugar; Pochet (2012) lo registra en cambio como relato escrito de Lolia Pomare, de San Andrés, así que su procedencia real es isleña. La fórmula de Jack Mandora y buena parte del marco son jamaicanos y centroamericanos.",
+  }),
+  rodriguezcuentos2012: source({
+    title: "Los cuentos de Anancy: huella indeleble de una tradición akán",
+    author: "Lina Pochet Rodríguez",
+    year: 2012,
+    type: "artículo de revista arbitrada (Revista de Lenguas Modernas, n.º 17, pp. 189-207, Universidad de Costa Rica)",
+    url: "https://archivo.revistas.ucr.ac.cr/index.php/rlm/article/view/12667",
+    summary:
+      "Compara la estructura —personajes, escenarios, tono, conflictos y temas— de un corpus de ciento cincuenta cuentos de Anancy reunidos en 2001 en San Andrés, Providencia y Santa Catalina y en Limón, con cuentos jamaiquinos y tres relatos akán de referencia. Su tabla enumera los relatos isleños escritos por Lolia Pomare («El muñeco de brea», «Anancy le hace una jugarreta a Tigre», «Hermano Tigre, Hermano Anancy y el pescado frito», «Anancy y Tigre utilizan los servicios de Mico como juez», entre otros) y muestra cómo el narrador sitúa la acción en Jamaica, San Andrés, Providencia o aldeas ghanesas.",
+    limitation:
+      "Es un trabajo distinto del artículo de 2011 de la misma autora que la ficha ya cita (Cuadernos de Antropología), aunque sale del mismo corpus. Trata el ciclo isleño y costarricense, no el episodio chocoano del campanario; buena parte de la comparación es con Jamaica y Limón, fuera de Colombia, y los relatos de San Andrés se citan por título, sin transcribirlos.",
+  }),
+  corredorFormaciones2021: source({
+    title: "Formaciones de alteridades e identidades desde el Caribe insular: memorias y huellas de africanía en San Andrés Islas",
+    author: "Laura García Corredor",
+    year: 2021,
+    type: "artículo de revista arbitrada con trabajo de campo (Fronteiras: Revista de História, vol. 23, n.º 42, pp. 87-108)",
+    url: "https://ojs.ufgd.edu.br/index.php/FRONTEIRAS/article/view/15808",
+    summary:
+      "Recoge en entrevistas con raizales de San Andrés cómo se nombra a Anansi en la memoria isleña: personaje vinculado a las huellas de africanía tanto en el Caribe como en el Pacífico afrodescendiente, héroe de la Costa de Oro que con su inteligencia vence la fuerza del Tigre, y figura «contraelite» de estilo criollo, rebelde frente a la respetabilidad de cuño británico; sigue en esto a Nina S. de Friedemann, «Religión y tradición oral en San Andrés y Providencia» (1989).",
+    limitation:
+      "Anansi ocupa un párrafo y una nota en un artículo sobre identidad raizal; no transcribe ningún cuento ni dice nada del Anansi chocoano. La caracterización es de Friedemann 1989, cuyo texto no está digitalizado y no se leyó de primera mano. La revista es brasileña.",
+  }),
+  mRitos1961: source({
+    title: "Ritos de la muerte en el Alto y Bajo Chocó",
+    author: "Rogerio Velásquez M.",
+    year: 1961,
+    type: "etnografía (Revista Colombiana de Folclor 2 (6): 9-76), reeditada en «Antropología hecha en Colombia», tomo 1, Universidad del Cauca, ICANH y ALA, 2017, pp. 359-",
+    url: "https://asociacionlatinoamericanadeantropologia.net/portal/wp-content/uploads/2018/09/Antropologia_hecha_en_Colombia_T1_-_2017.pdf",
+    summary:
+      "Es la descripción chocoana de primera mano de cómo se trata a las ánimas, dedicada a informantes del Atrato, Buenaventura y el Patía. Registra que las ánimas que no han llegado a puerto seguro se aparecen en sueños, como estrellas errantes o ramas que tiemblan en la corriente, y exigen oraciones; que las ánimas condenadas causan tormentas, dañan siembras y «asisten a sitios en que no se les llama»; que los muertos se muestran de frente, con vestido talar y la cara borrosa, sobre todo en Semana Santa; que durante la gravedad de un enfermo se cambian los vestidos de color por pálidos o blancos y hacer bailes crea enemistades; que el luto se cierra con un baile en que se come y se bebe para olvidar; y transcribe los cantos del velorio, prohibidos en gualíes y velatorios de niños.",
+    limitation:
+      "No menciona a Kijimba ni ningún baile de ánimas que invite a un vivo: sostiene el marco de creencias sobre los difuntos en el Chocó y la separación entre velorio, gualí y relato que hace la ficha, no el relato mismo. Es un texto de 1961 con juicios de su época sobre la población («ignorancia», «ridícula fiesta») que no deben trasladarse a la ficha. La paginación citada es la de la reedición de 2017; el URL es el PDF completo del tomo en la Asociación Latinoamericana de Antropología, coeditora.",
+  }),
+  solanoTras2006: source({
+    title: "Tras las huellas de la Candelaria en los litorales colombianos",
+    author: "Laura De la Rosa Solano y Lina del Mar Moreno Tovar",
+    year: 2006,
+    type: "artículo de revista con trabajo de campo (Memorias: revista digital de historia y arqueología desde el Caribe, n.º 5, Universidad del Norte)",
+    url: "https://rcientificas.uninorte.edu.co/memorias/es/article/view/287",
+    summary:
+      "Documenta que Beté celebra como fiesta patronal la de la Virgen de la Candelaria, igual que Bagadó, Cértegui, Tadó y Paimadó, y recoge de la maestra e historiadora quibdoseña Ezequiela Urrutia un relato del propio pueblo: la imagen original de Beté era una aparición, un cuadro milagroso, que alguien venido de Cartagena cambió y se llevó, de modo que «la famosa» del cerro de la Popa «es de Beté»; el historiador Sergio Mosquera confirma la historia pero atribuye el cambio a viajeros y no a un cura. Es la única fuente hallada que dice cuáles son las patronales de Beté.",
+    limitation:
+      "El trabajo de campo es sobre todo de Paimadó (2002-2004) y Beté aparece en dos pasajes; no menciona la Sierpe ni a los pescadores. El relato de la imagen es de una informante de Quibdó, no de un vecino de Beté. Hay copia en Redalyc; se prefiere la del editor.",
+  }),
+  lemosTamarasistemas2012: source({
+    title: "Los sistemas productivos tradicionales de comunidades negras del Medio Atrato chocoano, su relación con el clima y su vulnerabilidad frente a eventos climáticos extremos",
+    author: "Liliana L. Lemos-Támara, William Murillo-López y José Daniel Pabón-Caicedo",
+    year: 2012,
+    type: "artículo de revista arbitrada (Bioetnia, vol. 9, n.º 1, Instituto de Investigaciones Ambientales del Pacífico)",
+    url: "https://bioetnia.iiap.org.co/index.php/bioetnia/article/view/82",
+    summary:
+      "Sitúa el lugar con precisión: Beté es la cabecera del municipio de Medio Atrato, el río Beté es una de las subcuencas de la margen occidental del Atrato y la comunidad de Beté pertenece a la zona 4 de la ACIA, donde se vive del corte de madera y de la pesca. Describe esa pesca con los datos de las entrevistas en las comunidades: se pesca todo el año, sobre todo en las subiendas de enero a marzo; con el río crecido los pescadores no salen y con el río bajo escasea el pescado; se usan atarraya, copón, anzuelo, chinchorro y trasmallo, y se capturan bocachico, dentón, sabaleta, mojarra y barbudo. Registra además avalanchas en Beté.",
+    limitation:
+      "Es un estudio de clima y sistemas productivos: no trata relatos, fiestas ni seres del agua, y no menciona la Sierpe. Sirve para el lugar y el oficio de los pescadores que la ficha describe, no para el relato.",
+  }),
+  bernalCosmograma2024: source({
+    title: "Cosmograma de la gente negra de Guapi, Colombia: cosmovisión y conocimiento ancestral",
+    author: "Ernesto Hernández Bernal y Anairamiz Aranguren Becerra",
+    year: 2024,
+    type: "artículo de revista arbitrada con testimonios de campo (Boletín Antropológico, año 42, n.º 107, pp. 8-35, Universidad de Los Andes, Mérida)",
+    url: "https://doi.org/10.53766/BA/2024.01.107.01",
+    summary:
+      "Dedica un apartado a la Tunda en Guapi: mujer que toma la apariencia de un familiar o conocido, desvía a la persona de su camino y se la lleva al monte, donde vive; se la reconoce porque una pierna es de niño y la otra un molinillo de madera. Registra que se la invoca contra los niños que se meten al monte o desobedecen y contra los hombres infieles, trasnochadores o borrachos; que para rescatar al entundado van al monte los padrinos llamándolo por su nombre mientras otros rezan, dicen groserías o tocan instrumentos, a veces con el cura; y trae dos testimonios de 2017: el del que camina todo el día y vuelve a pasar por el mismo sitio sin darse cuenta, y el de una niña hallada sujeta en una mesa comiendo camarón, «porque la Tunda los pone a comer camarón», que quedó muda unos diez días. Cita además la quebrada de la Tunda del barrio San Pablo, donde una mujer bonita y mal peinada con pata de palo cantaba «tundu, tundu, tundu» y echaba camarones en un canasto, y la definición de Yacup (1990).",
+    limitation:
+      "Es de Guapi, en la costa del Cauca, no de Tumaco: sirve como variante vecina del mismo ser. El artículo trata sobre todo de las azoteas y la cosmovisión agrícola y la Tunda ocupa un apartado; los testimonios son anónimos. La revista es venezolana y su repositorio sólo publica por http: el DOI resuelve a http://www.saber.ula.ve/handle/123456789/50560.",
+  }),
+  guayaquildare2019: source({
+    title: "«Te daré una Tunda», Editorial UArtes presenta libro de Ibsen Hernández",
+    author: "Universidad de las Artes (Guayaquil), sobre el libro de Ibsen Hernández Valencia",
+    year: 2019,
+    type: "nota editorial de presentación de libro",
+    url: "https://www.uartes.edu.ec/sitio/blog/2019/02/21/te-dare-una-tunda-editorial-uartes-presenta-libro-de-ibsen-hernandez/",
+    summary:
+      "Presenta el libro con que el educador afroecuatoriano Ibsen Hernández Valencia relee a la Tunda como «Tunda libertaria»: una cimarrona que se hizo montaraz, invitaba a sus hermanos a meterse a la montaña a construir palenques y fue satanizada por la sociedad dominante y la Iglesia; lee la pata de molinillo como la mutilación que le hizo el opresor. Es la lectura emancipadora de la figura que la ficha resume al hablar de la cadena de violencias que va de la esclavización al reclutamiento.",
+    limitation:
+      "Es la nota de la editorial, no el libro, que no está en abierto; recoge palabras del autor en una presentación. Es una interpretación de autor desde Esmeraldas, del lado ecuatoriano, no un registro de tradición oral, y no aporta ninguna versión del relato de Tumaco.",
+  }),
 };
 
 export const afroSourceKeysBySlug = {

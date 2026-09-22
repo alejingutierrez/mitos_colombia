@@ -836,6 +836,74 @@ export const huitotoSources = {
     limitation:
       "Es otro cuento, con otro protagonista y otro narrador: no toca a Konago, ni a los jaguares, ni a la tortuga. Sirve como término de comparación de género y de tratamiento documental, no como versión del relato. Verifiqué los metadatos y el fragmento de transcripción publicados en el registro; no escuché el audio ni leí la narración completa.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  revisadaJitoma1994: source({
+    title: "8. Jitoma igai — Sol y Luna (capítulo 8 de Religión y mitología de los uitotos, II parte)",
+    author: "Konrad Theodor Preuss; transcripción revisada y traducción de Eudocio Becerra Bigïdïma y Gabriele Petersen de Piñeros",
+    year: 1994,
+    type: "capítulo de libro (texto bilingüe uitoto-español) en repositorio institucional",
+    url: "https://bffrepositorio.unal.edu.co/server/api/core/bitstreams/3b4532a6-546e-484f-8fbc-79b92c44aadc/content",
+    summary:
+      "Es la versión de 1914 de este mismo ciclo, en sus doce páginas propias: Jizebeño, mujer de Jitoma, llama a Gaimo tirando de un bejuco desde el bañadero; Jitoma pisa el bejuco y Gaimo, saliendo del hueco de un árbol hecho tigre, lo devora. Los hijos, Iaiyeniduma e Iaiyejitoma, cazan con cerbatana y la madre lleva lo cazado a Gaimo; envenena los dardos con los ojos de los hijos cerrados. Ante el árbol tumbado preguntan por el padre y ella responde que nacieron de su corva, que al padre lo mordió una culebra, que se quemó, que cayó de un árbol, que se ahogó: el mayor prueba cada muerte en su hermano y ninguna lo mata. El carpintero grande, curado al chuparle el veneno, revela que fue Gaimo, dónde vive, dónde cuelgan la cerbatana y el veneno del padre, y promete avisar tocando el maguaré. Con el envuelto de hojas de yarumo y el bejuco hacen asomarse a Gaimo y lo matan; Jitoma le corta las quijadas.",
+    limitation:
+      "Ya está citada en bloque por el registro del volumen (handle unal/3114); lo nuevo es el capítulo consultable por sí solo. Es la variedad mika y otro narrador, sin nombre, recogido hacia 1914: los hermanos se llaman Iaiyeniduma e Iaiyejitoma (y Manakejitoma en el cuerpo), la madre Jizebeño, hay un pájaro ookoyiri que muere antes del carpintero y el título «Sol y Luna» es rótulo de Preuss, no del narrador. PDF escaneado: la columna en lengua tiene OCR corrompido y sólo se cita por la página impresa.",
+  }),
+  kneraJaeni2022: source({
+    title: "Jaɨeni Jitoma iaɨyinoɨ ikakɨ = Historia de los huérfanos del Sol: transcripción original",
+    author: "Hipólito Candre (Kɨneraɨ), narrador; recopilación de Juan Álvaro Echeverri y Olga Lucía Montenegro; transcripción y traducción de Blas Candre y Juan Álvaro Echeverri",
+    year: 2022,
+    type: "transcripción literal bilingüe uitoto mɨnɨka-español de una grabación de campo (1992), depositada con DOI",
+    url: "https://zenodo.org/records/5884552",
+    summary:
+      "Es la transcripción de la grabación tal como la narró Kɨneraɨ en Cordillera, río Igaraparaná, el 25 de septiembre de 1992, sin las inserciones de Blas Candre que lleva la edición de Mundo Amazónico: resuelve justo la reserva que la ficha anota sobre esa edición. Abre con que el padre se llamaba Monairue Jitoma, y trae el ciclo entero: la mujer que le lleva a Gaimoɨ la cacería sobre un casabe y lo llama sacudiendo el bejuco yukurio, el mico rigɨ que vigila como ayudante, la madre que niega que hubiera padre y las muertes falsas (quemado en el fogón, mordido por culebra, caído de un árbol) que los hermanos prueban en sí mismos, la ronda de animales flechados que mienten —mariposa, lagartija, picón, carpintero chuerengo— hasta que el carpintero de pico duro revela a Gaimoɨ y el ardid del comején envuelto en yarumo blanco, la trampa donde se echa la madre tras apagar los fogones y las niguas marcadas con achiote y carbón con que la reconocen. Sigue hasta el sueño envuelto que da la abuela, el caimo a la hija de Ameoma, el robo de su macana, espejo y sonajera, y la destrucción de Yaroka Amena: el gusano de rayo se parte, sus pedazos se vuelven dantas y vacas marinas, y la macana arrojada al río queda como temblón.",
+    limitation:
+      "Es la voz de otro sabedor (ocaina-uitoto del Igaraparaná) y no la versión de Pablo Bigïdïma que sigue la ficha: los hermanos son Uatoma/Jitoma y Kechatoma, el dueño del rayo es Ameoma y no Améori, y Gaimoɨ cae flechado en los testículos, no en la frente. El audio de 68 minutos está aparte, en https://doi.org/10.5281/zenodo.5884420. Es un depósito de 2022 en Zenodo, no una publicación revisada por pares; la edición revisada es la de Mundo Amazónico 2015 que ya cita la ficha.",
+  }),
+  gonzalezMitologia1997: source({
+    title: "Mitología uitota: contada por un áronɨ «gente de avispa» (capítulo «Historia de Jitoma»)",
+    author: "Ángel Kuyoteka Jifikomui (Gaïriyarokï); edición del presbítero Daniel Restrepo González",
+    year: 1997,
+    type: "libro de mitos escrito por un autor uitoto de La Chorrera, digitalizado con DOI",
+    url: "https://zenodo.org/records/4774239",
+    summary:
+      "Es una de las versiones publicadas que Echeverri enumera para este ciclo, y la única escrita por un autor uitoto. El capítulo «Historia de Jitoma» (pp. 31-45 del PDF) pone la muerte del padre dentro de una contienda con tres seres —Aiñï «el diablo», Gaimï «el hombre tigre» y Nokaido «el hombre picón»—: la esposa de Jitoma, que es moza de Gaimï, lo manda a bañarse al pozo; Jitoma pisa el bejuco que cuelga de la punta de un palo, el secretario de Gaimï lo reconoce y el devorador lo mata. Nombra los hijos: Fareka Jitoma y Kecha, «tuerto», más una hija, Bekogïza, que queda encantada como búho fakuua; y abre la pregunta de los niños a la madre «¿dónde está nuestro papá?». En el epílogo, Restrepo lista entre los porqués del libro por qué el carpintero tiene rojo el copete.",
+    limitation:
+      "Es un texto escrito y reelaborado por un autor de la gente áronɨ de La Chorrera, con edición de un misionero que añade lecturas cristianas explícitas en el epílogo; no es la versión de Pablo Bigïdïma. Los hijos se llaman Fareka Jitoma y Kecha, no Nopïda Jitoma e Iaijenima. El PDF de Zenodo (218 MB) es un escaneo sin capa de texto: se cita por número de párrafo, como pide la propia obra. Se revisaron las primeras páginas del capítulo; el resto de la secuencia no se cotejó párrafo a párrafo.",
+  }),
+  afrocolombianaCuentos2010: source({
+    title: "Cuentos para dormir a Isabella: tradición oral afropacífica colombiana",
+    author: "Baudilio Revelo Hurtado (compilador); Biblioteca de Literatura Afrocolombiana, tomo VIII, Ministerio de Cultura",
+    year: 2010,
+    type: "antología de tradición oral transcrita de narradores del Pacífico colombiano, en biblioteca digital institucional",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll7/id/7/",
+    summary:
+      "Es la colección colombiana de referencia del ciclo en el que se inscribe la ficha: más de sesenta apariciones de Tío Conejo, recogidas de mayores de Nariño, Chocó, Valle y Cauca, con cuentos titulados «El Tío Conejo y el Tío Tigre» y «El Tío Conejo y la Tía Tigra». Trae el mismo trato de parentesco burlón —la Tía Tigre llama «sobrino» a Conejo y le encarga a «sus primos»—, dos huidas a una cueva donde el perseguidor no cabe y el engaño con que el pequeño dicta su propio castigo: el sapo que custodia la cueva le pide a la Tía Tigra que lo mate tirándolo al agua, y así se salva. La introducción describe a Tío Conejo como el más hábil, el que vence sin fuerza, colmillos ni garras, y a Tío Tigre como el constantemente engañado.",
+    limitation:
+      "Es tradición afropacífica, no amazónica ni huitoto: sirve para el paralelo afroamericano que ya nombra la ficha, no para atribuir el cuento. No trae el episodio de la figura pegajosa junto a las sandías, y la treta de «tírame al agua» la hace el sapo, no Conejo. Es la vista de la Biblioteca Virtual del Banco de la República; el PDF se descarga desde ella.",
+  }),
+  cantillanocuentos2002: source({
+    title: "Los cuentos de tío Conejo",
+    author: "Odilie Cantillano",
+    year: 2002,
+    type: "artículo académico de folclorística (Letras, núm. 34, Universidad Nacional de Costa Rica, pp. 5-41)",
+    url: "https://www.revistas.una.ac.cr/index.php/letras/article/view/3627",
+    summary:
+      "Clasifica por cuento-tipo (Aarne-Thompson y Hansen) los episodios de Tío Conejo de Carmen Lyra y los coteja con versiones de todo el continente. Trata los dos episodios de la ficha: el muñeco de cera que una viejita pone en la huerta para coger al que se come las legumbres, al que Conejo reta, golpea y se queda pegado de manos y pies —con la lista de variantes publicadas: «El muñeco de brea», «El muñeco de cera», «El mono y la figura de cera», entre otras—; y la treta de la voz, en la que Conejo contesta con el tono más hueco posible y Tío Tigre cree que se trata de un gran animal y lo deja en paz. Cita además el paralelo amazónico brasileño del jabutí (la tortuga) que engaña al tapir.",
+    limitation:
+      "Es un estudio del ciclo costarricense de Carmen Lyra y sus paralelos hispanoamericanos, no de ninguna tradición huitoto ni colombiana: documenta la circulación continental que la ficha invoca para no atribuir el cuento, y en su versión el castigo es el agua hirviendo, no la huida al monte.",
+  }),
+  garciaLeporidos2023: source({
+    title: "Lepóridos tramposos. De la fábula oriental, los tratados de caza y la historia natural a Tío Conejo",
+    author: "Miguel Rodríguez García",
+    year: 2023,
+    type: "artículo académico de literatura comparada (1616: Anuario de Literatura Comparada, 13, Universidad de Salamanca, pp. 255-279)",
+    url: "https://revistas.usal.es/dos/index.php/1616_Anuario_Literatura_Comp/article/view/31190",
+    summary:
+      "Sigue el linaje del conejo tramposo desde el Panchatantra y los Jātaka hasta Tío Conejo, y dice de dónde viene el primer episodio de la ficha: la fábula del muñeco de brea o tar-baby (ATU 175) remonta a los Jātaka y entró a América por tres vías posibles, africana, europea e hispana. Reseña el ciclo venezolano de Antonio Arráiz, Tío Tigre y Tío Conejo (1945), y otra colección donde «La primera patilla» reelabora el muñeco de brea —Conejo, que había comido de una plantación humana, sale de la trampa y deja preso a Tío Tigre— y donde, en «Tío Caricari», el tigre acorrala a Conejo en un agujero y éste escapa. Propone por qué conejos y liebres ocupan el papel de trickster en tantas culturas.",
+    limitation:
+      "Es un ensayo comparatista sobre la figura del lepórido en la tradición hispánica y oriental; no trata tradiciones amazónicas ni colombianas y su material americano es sobre todo venezolano y centroamericano. Sirve para el paralelo que la ficha ya nombra, no para atribuir el cuento a un pueblo.",
+  }),
 };
 
 export function pickHuitotoSources(...entries) {

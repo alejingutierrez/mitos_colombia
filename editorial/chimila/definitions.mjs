@@ -824,6 +824,7 @@ Hay además un testimonio ette posterior que conviene no confundir con este cuen
           "Trata la hamaca y la cosmología, no el origen de la semilla ni su paso a otro pueblo.",
       },
       "villamilMemorias2020",
+      "thurnAmong1883",
     ],
     title: "La semilla de algodón compartida",
     summary:
@@ -908,6 +909,8 @@ Fuera del corpus ette, el mismo volumen de 1945 transcribe un relato karib de Gu
         limitation:
           "Se ocupa del agua que cae del cielo sobre los campos, no del agua subterránea ni de manantiales.",
       },
+      "teresaindios1959",
+      "historicaCaragabi",
     ],
     title: "El palo que abrió el agua",
     summary:
@@ -990,6 +993,7 @@ Hay también un testimonio ette posterior en el que la madera sí contiene el ag
         limitation:
           "Describe la organización actual del trabajo agrícola y no analiza el relato ni la exigencia al anciano enfermo.",
       },
+      "reichelDolmatofflengua1947",
     ],
     title: "La llamada «mala mujer»",
     summary:
@@ -1088,6 +1092,15 @@ El tercero desactiva la lectura más fácil. «El hombre que soñó con danta» 
         limitation:
           "El artículo advierte que la vivienda ette pertenece a lo profano y rara vez figura en el discurso mítico, así que no autoriza a atribuir carga ritual a la casa del cuento.",
       },
+      "ortegaEntre2015",
+      "finolMito2007",
+      {
+        key: "simonNoticias1892",
+        summary:
+          "En las pp. 283-284 de la Cuarta noticia registra que los muiscas tenían las almas por inmortales, que al salir del cuerpo bajaban al centro de la tierra por caminos y barrancas de tierra amarilla y negra, pasando antes un gran río en barcas o balsas de telas de araña, y que por eso no osaban matar las arañas: es el relato muisca del camino de los muertos que la ficha pone frente al ette.",
+        limitation:
+          "Es una crónica franciscana de 1627 sobre los muiscas, leída por su autor como vestigio del Evangelio; no dice nada de los chimila y sólo sostiene el contraste que la ficha declara. La obra ya está en el pool del módulo muisca con esta misma URL, no en el de chimila.",
+      },
     ],
     title: "La casa de los muertos en el monte",
     summary:
@@ -1180,6 +1193,21 @@ Dentro del mismo corpus de 1945 vale mirar el diluvio, donde un hombre levanta u
         limitation:
           "Esos espíritus no son muertos ni brujos, sino entidades del mundo no-humano; el texto no los identifica con difuntos que regresan.",
       },
+      "wavrinFolklore1932",
+      {
+        key: "kochGrunbergZwei1909",
+        summary:
+          "Es el pasaje que Reichel-Dolmatoff tradujo en su nota al cuento de los brujos y que la ficha cita en Similitudes. En la p. 156, entre los kobeua del río Querary, Koch-Grünberg anota que hay «buenos payé» y «malos payé»; que cuando un chamán envejece tanto que sólo camina con trabajo se vuelve jaguar, va al monte, mata y come venados, agutíes y también gente, y regresa hombre; que al morir se entierra con él su piel de jaguar; y que su alma no pasa al más allá sino que vaga para siempre por el monte como «jaguar muy malo». Añade que en kobeua y en la mayoría de las lenguas tukano la palabra para jaguar y para chamán es la misma (kobeua yaui, tukano yai).",
+        limitation:
+          "Paralelo tukano oriental del Vaupés, en alemán y con la etiqueta de «creencia de hombre lobo» del autor; no dice nada de los chimila. Reichel-Dolmatoff cita la 2.ª edición de 1923, p. 317; en esta edición de 1909 el pasaje está en el tomo 2, p. 156. El río Querary queda en el Vaupés colombiano, aunque la obra se titula por el noroeste del Brasil. Coincide con el relato en la tipología de chamanes buenos y malos y en el alma que no se va, pero allí la transformación empieza en vida con la vejez.",
+      },
+      {
+        key: "reichelDolmatofflengua1947",
+        summary:
+          "El vocabulario del mismo trabajo de campo registra en ette taara los elementos del cuento de los brujos: la «casa redonda» como entrada propia, distinta de la casa en general (p. 31); el shamán entre los términos de relación social con prefijo ta- (p. 24), junto a «cacique», ta-ngrúta-ya (pp. 16, 25); y el tigre, kón:ne, con nombre científico en la fauna (p. 34) y como ejemplo recurrente de la gramática, en el paradigma completo de «temo al tigre» (p. 22) y en frases como «el tigre es bravo», «el tigre vendrá» y «los hombres mataron al tigre» (pp. 46-48). No hay en la lista una palabra para «brujo» distinta de la del shamán.",
+        limitation:
+          "Es del mismo autor y la misma estancia, así que sirve de procedencia y no de confirmación independiente; no cita el cuento. Que el paradigma gramatical elegido para ilustrar la conjugación sea precisamente el miedo al tigre es un dato del cuaderno de campo, no una interpretación del recopilador.",
+      },
     ],
     title: "Los buenos y los malos brujos",
     summary:
@@ -1264,6 +1292,7 @@ La diferencia con el relato ette es precisa. En esos casos la transformación em
         limitation:
           "Es historia colonial de misiones y campañas militares; no toca el cuento, ni la antropofagia, ni la etnografía del siglo XX.",
       },
+      "simonNoticias1892",
     ],
     title: "El crimen ocultado",
     summary:
@@ -1436,6 +1465,14 @@ Lo que distingue a este relato de los dos es la aritmética. No es una calamidad
         limitation:
           "Analiza un mito distinto y su lectura astral: sirve como contexto de género, no como versión de este cuento.",
       },
+      {
+        key: "reichelDolmatofflengua1947",
+        summary:
+          "Es el vocabulario que el mismo recopilador levantó en el trabajo de campo de 1944 y que deja oír en ette taara las palabras del cuento. Registra el verbo «hablar», tá:ra-, con la misma raíz de tárasa, el nombre de la lengua («yo hablo chimila»), y ejemplos como «oigo como ellos hablan» y «el niño no sabe hablar» (pp. 45-46). Da la frase «el mono canta» (úru:úru krá:ui, p. 43), la misma construcción que para el oropéndola y el gallo. Y en las fórmulas de conversación (p. 27) anota que al escuchar a otro hablar se responde de vez en cuando hati:rata é:e, «¡así es!»: exactamente la respuesta que en el cuento los monos se dan de un lado a otro. Nombra además con nombre científico la ardilla, el tapir, el tigre y el venado que el cuento pone a hablar (pp. 34-35).",
+        limitation:
+          "No es un testimonio independiente: es el mismo autor y la misma estancia de 1944, y no cita el cuento. La correspondencia entre la fórmula de conversación y el «¡Así es!» de los monos la establece esta ficha, no Reichel-Dolmatoff. Contradice en parte la última frase de la Historia publicada («nadie registró qué palabra del ette taara tradujo el recopilador como “hablar”»): la palabra general sí quedó registrada por él mismo en 1947, aunque no sabemos cuál usó Mutsu esa noche.",
+      },
+      "kochGrunbergZwei1909",
     ],
     title: "Los animales hablan",
     summary:
@@ -1605,6 +1642,7 @@ El paralelo más cercano fuera del país es yaqui. En el texto “U yoeme maasom
         limitation:
           "No comenta el relato ni la expresión con que se califica a la danta: aporta el entorno de caza y la cultura material.",
       },
+      "reverolHacer2017",
     ],
     title: "El hombre que soñó con una danta",
     summary:
@@ -1687,6 +1725,16 @@ Entre los wayuu, vecinos del norte, el sueño tiene dueño y obliga. Carmen Laur
         limitation:
           "No reproduce ni comenta el cuento: es la descripción material y de creencias que lo rodea.",
       },
+      "ehrenreichMythen1905",
+      {
+        key: "thurnAmong1883",
+        summary:
+          "Contiene el relato que la ficha y el recopilador de 1945 invocan como paralelo de Guayana (pp. 385-386): un piache akawaio envuelve dos palos de hacer fuego para que no se mojen, se zambulle en el raudal de Ouropocari, entra en el vientre del omar que hundía las canoas, prende fuego a la madera podrida que hay dentro y el monstruo, dolorido, sube a la superficie, lo eructa y muere. El autor lo agrupa con Jonás y la ballena como caso del hombre que entra en el vientre de un animal y sale a salvo.",
+        limitation:
+          "Es akawaio de la Guayana británica, no karib en sentido estricto, y no menciona caimán, flecha ni tranca: el piache sale porque el omar lo eructa, no porque le atranque la boca. Contradice, por tanto, la afirmación de Ehrenreich que recoge el comentario de 1945 y que la ficha reproduce.",
+      },
+      "gillMyths1876",
+      "rothInquiry1915",
     ],
     title: "El hombre que soñó con un caimán",
     summary:

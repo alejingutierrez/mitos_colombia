@@ -139,6 +139,74 @@ export const yucunaSources = {
     limitation:
       "Está en francés, trata del ciclo de Kawáirimi y no de este relato, y no establece que el Horacio Matapi de 1970 sea el narrador de 1974.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  yucunaHistoire2015: source({
+    title: "Histoire de Ka'marí, l'ancêtre éponyme des Matapí (ou Jupichiya)",
+    author: "Mario Matapi (narrador); Laurent Fontaine (transcripción yucuna, traducción francesa y notas)",
+    year: 2015,
+    type: "transcripción bilingüe yucuna-francés de un relato grabado en La Pedrera, agosto de 2006 (186 páginas)",
+    url: "https://web.archive.org/web/20240616040239/http://site.laurentfontaine.free.fr/Transcriptions-yucuna/Recits/Jupichiya_Mario/MATAPI_Mario-KahmarI-eponyme_jupichiya_2006-08.pdf",
+    summary:
+      "Es una segunda versión matapí íntegra del mismo relato, con narrador, lugar y fecha. Ka'marí nace sin padre conocido de la hermana de unos jaguares-chamanes, con manos y cola de jaguar; un tío evita que lo entierren y le hace los cuidados chamánicos; Yuwinata, en lo alto del Mirití-Paraná, es la tierra natal de los matapí, donde Ka'marí se instala como dueño de maloca y reparte a sus hermanos en clanes. La guerra estalla porque Junimare —cuyo nombre de niño era Jímuya, «paujil», y luego Wepana— deja pasar a sus hombres con las trompas del yuruparí entre las mujeres; siguen generaciones de guerras fratricidas, el carbón de furia que Ka'marí obtiene de su cuñado, su muerte en forma de jaguar a manos de Papukuwá, el poder chamánico que sus hijos rehúsan heredar, y un cierre con la alianza con los kamejeya (yucuna) al recibir la hija de Pichawatá. Fontaine explica en nota que Jupichiya significa en yucuna «gente de hace mucho tiempo».",
+    limitation:
+      "Está en yucuna y francés, no en español. El sitio personal de Fontaine (site.laurentfontaine.free.fr) está suspendido y responde 403; la copia que se cita es la del Internet Archive, capturada en 2024 (desde esta máquina web.archive.org sólo respondió por http; la URL https reseteó la conexión, comprobar a mano). Difiere de la versión de Horacio Matapi en puntos que la ficha no recoge: el nacimiento no es del canangucho sino de una madre sin varón; el rival se llama Junimare y no Himuri, y la ofensa del yuruparí la cometen los hombres de Junimare, no los de Ka'amari; y el final es la alianza con los yucuna, como en van der Hammen, no la emboscada contra la gente de Kerámoa. Fontaine remite a Matapí, Matapí y Rodríguez 1997 como la otra versión íntegra.",
+  }),
+  robayoIdeologias2012: source({
+    title: "Ideologías lingüísticas y chamanismo entre los indígenas yukuna-matapí",
+    author: "Camilo Alberto Robayo, con la colaboración de Uldarico Matapí",
+    year: 2012,
+    type: "artículo académico (Forma y Función 25-2, Universidad Nacional de Colombia)",
+    url: "https://revistas.unal.edu.co/index.php/formayfuncion/article/view/39836",
+    summary:
+      "Recoge la periodización del propio Uldarico Matapí: una «primera época» de los héroes Karipulakena y una «segunda época» que inaugura el surgimiento de Ka'mari, «el ancestro que inició las generaciones sobre el mundo actual», con quien aparece el lenguaje ordinario. Menciona el origen del grupo como la eclosión de un huevo del que salen los antepasados, y que la lengua upichía/matapí desapareció hace generaciones por asimilación al kamejeya de los yukuna, sus cuñados. Remite a Historia de los upichía (Matapí y Matapí, 1997) y a las aclaraciones de Rodríguez y van der Hammen sobre cómo se transcribió ese libro.",
+    limitation:
+      "Es un estudio de ideologías lingüísticas, no una versión narrada del nacimiento: sitúa a Ka'mari en la cadena mítica pero no cuenta la disputa del baile ni las guerras. El origen por eclosión de un huevo no coincide con el nacimiento del canangucho de Horacio Matapi; es otra imagen del comienzo, no la misma escena.",
+  }),
+  huaiHistoria1997: source({
+    title: "Historia de los upichía",
+    author: "Carlos Matapí (Huai) y Uldarico Matapí (Turupi), con Carlos Alberto Rodríguez; Tropenbos Colombia",
+    year: 1997,
+    type: "ficha del editor de una historia escrita por autores matapí (serie Colombia de Tropenbos)",
+    url: "https://www.tropenboscol.org/resources/history-of-the-upichia/",
+    summary:
+      "La página del editor describe el libro: la historia de los upichía, hoy matapí, contada por el viejo conocedor Carlos Matapí a su hijo Uldarico, formado para manejar maloca, transcrita y traducida por ellos. Tiene tres partes —origen del mundo y de la maloca, organización social y, al final, la secuencia detallada del gran héroe del grupo, «considerado el principal antepasado»—. Es la versión propia de los matapí que Fontaine y Robayo citan como la otra versión íntegra de la historia de Ka'marí.",
+    limitation:
+      "Es la ficha del editor, en inglés, con resumen y portada: el libro no está en línea ni en Tropenbos (se probaron las rutas de su serie) ni en ningún repositorio abierto; sólo aparece en Google Books, vetado. No sostiene por sí sola ningún episodio: se cita para declarar que existe una versión escrita por los propios matapí y que la ficha no la pudo leer.",
+  }),
+  reichelYukuna1994: source({
+    title: "Yukuna",
+    author: "Elizabeth Reichel",
+    year: 1994,
+    type: "entrada de enciclopedia (Encyclopedia of World Cultures, vol. VII, reproducida en Encyclopedia.com)",
+    url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/yukuna",
+    summary:
+      "Dice que en el siglo XX los yukuna «adoptaron» a los matapí (upichía), que eran unos 90 en 1989, que antes hablaban una lengua tukano oriental y hoy hablan yukuna, que antiguamente se los consideraba gente común o «esclavos», y que su sitio mítico de origen está en la región alta de los ríos Yapiya y Guacaya.",
+    limitation:
+      "Es una síntesis de enciclopedia servida por un agregador (Encyclopedia.com reproduce la obra de Gale; el original no está abierto). No narra el mito. Choca con las otras fuentes en dos puntos que conviene anotar y no resolver: sitúa el origen en el alto Yapiya y Guacaya, no en Yuinata (Herrera, Fontaine, van der Hammen), y da el matapí como lengua tukano, cuando Fontaine sostiene que es arawak.",
+  }),
+  narradorMythe2005: source({
+    title: "Mythe de Kanumá (Histoire de Kanumá)",
+    author: "Mario Matapi (narrador, La Pedrera, 27 de enero de 2005); Laurent Fontaine (transcripción yucuna, traducción francesa y notas), CNRS-LACITO, Collection Pangloss",
+    year: 2005,
+    type: "transcripción bilingüe yucuna-francés de un relato grabado (59 páginas, 1.458 enunciados)",
+    url: "https://cocoon.huma-num.fr/data/fontaine/masters/YCN_KANUMA.pdf",
+    summary:
+      "Es el texto íntegro de la versión de Mario Matapi, no sólo su resumen. Tiene los mismos pilares que la de Herrera: las Ñamátuna, que saben el chamanismo y guardan las flautas del yuruparí; Yewari, compañero de Kanumá, que las roba; la huida de las mujeres Mirití abajo mientras Kanumá y Kawáirimi levantan con cantos las piedras que cierran el río, y los chorros que quedaron, Ja'riyé —sagrado, habitado por un anaconda— y Mamurá; Churumi, el martín pescador pequeño, que recibe casabe de una hermana; y la captura de Je'chúmeru, hija de Je'chú (el Cielo), que el narrador llama también Iñaweló, madre de los peces, y Maire'ru, madre de las pirañas. Sigue hasta mucho después: los frutos de la chagra, el chontaduro, y el final en que Kanumá baja con su mujer por el Amazonas a otro mundo, donde todavía se le oye afilar la lanza, «te te te».",
+    limitation:
+      "Está en yucuna y francés, sin versión española. La ficha del corpus que ya cita el sitio (registroCorpus) es la presentación general; ésta es la transcripción, con DOI 10.24397/pangloss-0000495 y licencia CC BY-NC-ND. Difiere de Herrera en puntos que conviene no fundir: Kanumá vive con las Ñamátuna como su marido, no llega pidiendo dónde vivir; aparece Kawáirimi ayudando a cerrar el río; los chorros tienen otros nombres; y la segunda hermana es hija del Cielo. El nombre Maire'ru confirma la Mairero de van der Hammen.",
+  }),
+  yucunaMythe2015: source({
+    title: "Mythe de Kalapejé, le jeune Kanumá",
+    author: "Milciades Yucuna, Túwemi (narrador, La Pedrera, octubre de 2005); Rey Yucuna (transcripción y traducción al español); Laurent Fontaine (corrección, traducción francesa y notas)",
+    year: 2015,
+    type: "transcripción bilingüe yucuna-francés de un relato grabado (11 páginas)",
+    url: "https://web.archive.org/web/20210417201601/http://site.laurentfontaine.free.fr/Transcriptions-yucuna/Recits/Kamejeya_Milciades%26Edilberto/YUCUNA_Milciades-Kanuma-Kalapeje_2005-10.pdf",
+    summary:
+      "Es la versión kamejeya —de un narrador yucuna, no matapí— del mismo tramo que publicó Herrera. Kalapejé, nombre de niño de Kanumá, llega donde las Ñamatu, unas cuarenta mujeres que no querían hombre, diciendo que no tiene con quién vivir; ellas hacen el yuruparí y le prohíben mirar; él mira y les roba las trompas de los tres hermanos más poderosos, Jarají, Juwipí y Maarepela; ellas le piden varias veces que las devuelva y él niega haberlas visto; se van, y él baja el Mirití-Paraná detrás intentando cerrarles el paso, sin lograrlo. Corrobora desde otro narrador y otro linaje la llegada sin casa, la prohibición de mirar y la negación repetida que la ficha toma de Herrera.",
+    limitation:
+      "Está en yucuna y francés. El sitio de Fontaine está suspendido (403) y la copia citada es la del Internet Archive de 2021; no está en la colección Pangloss. Aquí quien roba es el propio Kalapejé, no la lagartija Yévari, y el relato termina con la huida de las mujeres, sin el hambre ni el encuentro con las hijas de Je'chú.",
+  }),
 };
 
 export const abundanceSources = {

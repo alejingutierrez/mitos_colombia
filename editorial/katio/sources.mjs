@@ -504,6 +504,74 @@ export const katioSources = {
     limitation:
       "Es un estudio de biología y uso de fauna, no de mitología: los mitos aparecen como anotaciones laterales a las fichas de especies. No contiene este relato ni la figura de Pãkõré. La información se obtuvo en talleres con nombres de especie en castellano y embera, mediados por la antropóloga del proyecto, no en recolección de tradición oral. Las comunidades son del San Jorge cordobés, no del Urabá antioqueño del registro de 1924.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  reichelDolmatoffMitos1945: source({
+    title: "Mitos y cuentos de los indios chimila (Boletín de Arqueología, vol. I, n.º 1)",
+    author: "Gerardo Reichel-Dolmatoff",
+    year: 1945,
+    type: "recolección etnográfica de relatos orales con comentario",
+    url: "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/book/234",
+    summary:
+      "Es la fuente de primera mano del segundo paralelo que las Similitudes de Ancastor ya nombran. El cuento 8, «Cómo los Chimila consiguieron el maíz» (pp. 8-9), trae el texto que Chaves copia en su nota comparativa a Ancastor: la semilla del maíz guardada en una tusa en lo más alto de una ceiba, el árbol que se recompone cada noche y los hombres que lo tumban trabajando hasta medianoche. En el comentario (pp. 23-24) Reichel-Dolmatoff lo coloca en el ciclo del «árbol de la vida», en cuya cúspide crecían las semillas indispensables, y lo liga al cuento 9, donde la semilla se siembra en un tronco. Permite leer el paralelo en su fuente y no sólo a través de Chaves.",
+    limitation:
+      "Es un pueblo no emberá (chimila, hoy ette ennaka, del Magdalena) y no menciona a Ancastor, a Bajía ni el viaje de las dos mujeres: entra sólo como la comparativa que la ficha ya declara. El PDF del ICANH reúne el número entero del Boletín; el cuento está en las primeras treinta páginas. Las hipótesis difusionistas del comentario (origen arawak, fechas de llegada del maíz) son del autor en 1945.",
+  }),
+  bakataMina2021: source({
+    title: "Mina de Oro (Dachi Chiuu, Nuestra Lucha. La historia de la comunidad embera katío en Bogotá)",
+    author: "Comunidades Emberá Katío del Alto Andágueda en Bogotá (colectivos Embera Bakata y Abauda Andagueda, Agrupación Conondo) y CNMH",
+    year: 2021,
+    type: "memoria comunitaria (iniciativa de memoria histórica priorizada en 2020)",
+    url: "https://micrositios.centrodememoriahistorica.gov.co/dachichiuu/mina-de-oro/",
+    summary:
+      "Es la pieza que el mismo micrositio pone al lado del relato de Cobaima y la que explica por qué el último episodio del recorrido —la mina donde el oro se comía a la gente y a los animales— pesa tanto para quienes lo cuentan. Abre con la frase «La mina no solo era la vida de la tierra, sino que también representa la sangre en la tierra» y narra, con testimonios de participantes de la iniciativa (entrevista a Felipe Campo, 4 de noviembre de 2020), la historia del oro en el territorio que Caragabí entregó a los emberá katío: la mina El Morrón, el hallazgo de La Bruja en 1975 por Aníbal Murillo, el pleito con la familia Escobar, el asesinato de Luis Enrique Arce y otros líderes, la llegada del M-19 y la base militar montada en la Misión de Aguasal —el mismo Aguasal que Cobaima nombra en su segunda parada—, y el desplazamiento de 2008 hacia Bogotá. Sitúa en el tiempo y en el mapa lo que el relato dice en clave mítica: un oro que devora a los vivos.",
+    limitation:
+      "No nombra a Cobaima ni narra el episodio mítico: la relación entre el oro que devora del relato y la mina que trae la muerte es una lectura que la página sugiere al ponerlos juntos, no un enunciado de los narradores. Es la misma obra colectiva que la ficha ya cita en su portada y en la página de Cobaima (otra URL del mismo micrositio). La historia de la mina se apoya en fuentes secundarias de prensa y en Hoyos (2016) y en Molina y Molina (2013), que no están en línea; el CNMH advierte que los contenidos son responsabilidad de sus autores.",
+  }),
+  carupiaEmbera2024: source({
+    title: "Embera trü: revitalización de la educación propia desde el (re)encuentro con nuestros nombres propios con los estudiantes embera eyabida de la Casa del Saber Isla Cruces, comunidad Isla, Murindó, Antioquia",
+    author: "Dobigama Cabrera Carupia",
+    year: 2024,
+    type: "trabajo de grado (Licenciatura en Pedagogía de la Madre Tierra, Universidad de Antioquia), con versión oral transcrita",
+    url: "https://hdl.handle.net/10495/41841",
+    summary:
+      "Trae, en las pp. 48-51 («Embera trú tejido al árbol Genené: origen del agua»), una versión eyabida contemporánea con narradora, lugar y fecha: la contó Edilma Carupia, Jainawidau, de 60 años, historiadora de la comunidad Isla (Murindó), a su hija el 9 de marzo de 2024; la autora la escribió en embera y la llevó al castellano. No había agua; la tenía Genzerá, la hormiga conga, que se niega a darle una gota a Karagabí; el hijo colibrí Chumbizú la sigue y la ve abrir con una llave el árbol Genené. Karagabí y sus hijos (mico tití cabeza blanca, mico negro y Chidima, ardilla pequeña) hacen hachas; el árbol amanece cada día sin lesión, hasta que el mico, de guardia, descubre que la rana Bokorro le vuelve a pegar la corteza. A los tres días cae, pero se queda enredado en un bejuco, y la prueba de la fruta la gana Chidima, que «se cayó antes de caer la fruta». Del tronco quedan los mares, del tallo el río grande, de las ramas las quebradas, de las hojas la ciénaga y la laguna, y de la flor lo húmedo.",
+    limitation:
+      "Es una versión de 2024 de Murindó (Atrato medio antioqueño), no de las notas de Urabá de 1924/1929, y no debe fundirse con ellas. Coincide con 1929 —no con Severino 1924— en la prueba de la fruta (caer antes que la fruta es lo que habilita a Chidima) y con Severino 1959 en el colibrí que sigue a Genzerá; no tiene diluvio, peña, aves emisarias ni cirios. Trae un personaje que ninguna fuente de la ficha nombra, la rana Bokorro que recompone la corteza. El trabajo es pedagógico, no una edición crítica.",
+  }),
+  morenoCaminar2020: source({
+    title: "Caminar, identificar y exaltar: hacia la construcción de una propuesta de educación sensible, desde el arraigo y la apropiación simbólica del territorio y su relación sagrada con la naturaleza del Alto Atrato, en el resguardo embera katío «El 18»",
+    author: "Daniel Ospina Moreno",
+    year: 2020,
+    type: "tesis de maestría en Educación (Universidad de Antioquia) con relatos orales transcritos",
+    url: "https://hdl.handle.net/10495/17967",
+    summary:
+      "Transcribe (pp. 121-125) dos relatos del origen del agua recogidos en 2018 y 2019 entre los guardias jóvenes del resguardo embera katío «El 18» (Carmen de Atrato, Chocó): el de «Flechazi» y el complemento de Hernando Wataquí, «Calvo». No hay agua; Jetserá, la hormiga conga (Paraponera clavata), guarda el árbol Jenené y pica a quien se acerca; el tominejo, colibrí mensajero, lleva a los emberá hasta el árbol; lo cortan con hacha durante varios días, pero no cae porque está pegado del cielo, y una sola ardilla sube y roe durante días la fibra que lo une al cielo. Al caer, el tallo se vuelve el río Atrato (o la cordillera Occidental), las ramas los afluentes, la raíz el mar, y la parte que quedó arriba sigue cayendo como lluvia. El autor anota además que en el Urabá eyabida el origen del agua gira alrededor de una roca y en el alto Andágueda-Atrato en torno a un árbol.",
+    limitation:
+      "Versión del alto Atrato chocoano, contada en castellano por jóvenes en 2018-2019 y anotada por un investigador externo; no es la de las notas misioneras de Urabá y no debe fundirse con ella. El dios que ordena la tala es Ancoré, no Caragabí; no hay prueba de la fruta, ni diluvio, ni aves emisarias, ni cirios; la ardilla no tiene nombre. La cosmogonía que la precede mezcla elementos cristianos (Oquendo y Ambrosia, la mujer de barro) que el propio autor no discute.",
+  }),
+  carupiaEmbera2023: source({
+    title: "Embera bedea kiranduade e baida zorara nenburadeba: historias propias como caminos de aprendizaje para el fortalecimiento de la lengua ebera eyabida con niñas, niños, escuela del saber Koredó, comunidad Kichabi, Dabeiba, Antioquia",
+    author: "Iris Dilanie Domicó Carupia",
+    year: 2023,
+    type: "trabajo de grado (Licenciatura en Pedagogía de la Madre Tierra, Universidad de Antioquia) que transcribe un relato con narrador acreditado",
+    url: "https://hdl.handle.net/10495/36045",
+    summary:
+      "Transcribe (pp. 44-45) el relato «Burumia o Bibidi o Bibidogomia» tal como lo publicó Luis Fernando Vélez en «Relatos tradicionales de la cultura catía» (ed. Universidad de Antioquia, 1990, p. 87), contado por Rubén Domicó el 24 de agosto de 1981. Es una segunda versión katía con narrador y fecha, independiente de Rafael Bailarín, y comparte con la de la ficha su núcleo operativo: el antropófago vive en la copa de un árbol muy grande; los indios siembran ají, rodean el árbol de leña, echan el ají al fuego y, con el humo, el que está arriba cae aturdido y lo matan a garrotazos. Difiere en lo demás: aquí es un solo ser, «como un indio muy grande», con uñas de más de dos pulgadas con que abre los cuerpos; cuelga de las ramas a los que caza, «más de mil indígenas pegados como murciélagos»; el ataque es de quinientos indios y quinientas indias a medianoche; y funde bajo un solo nombre a Burumiá y a Bibidí. No hay rastreador, negro, tigres ni niña cautiva. La autora, eyabida de Dabeiba, comenta además la mediación misionera que arrastra la antología de Vélez.",
+    limitation:
+      "Es cita de cita: la antología de Vélez (1982; reed. Universidad de Antioquia, 1990 y 2018) no está digitalizada en abierto, y el relato llega a través de este trabajo de grado, que no da el lugar donde se narró. Vélez mezcla en su antología relatos de religiosos y de narradores indígenas; éste declara narrador. La identificación Burumiá = Bibidí es del narrador de 1981 y contradice a Vasco, para quien los bibidí guerrean contra los burumiás.",
+  }),
+  isaramaKirincia2012: source({
+    title: "Kirincia bio o kuitá. Pensar bien el camino de la sabiduría: una forma de volver a recorrer el camino del pensamiento y la sabiduría ancestral en diálogo con los mayores [...] para la pervivencia del pueblo embera eyábida y dóbida de Antioquia y Chocó",
+    author: "Guzmán Cáisamo Isaramá",
+    year: 2012,
+    type: "tesis doctoral en Educación (Universidad de Antioquia) de un autor emberá",
+    url: "https://hdl.handle.net/10495/6938",
+    summary:
+      "Es testimonio emberá, no misionero, de que el cuento sigue circulando y de qué lugar ocupa. El autor recuerda (p. 36) que en el internado de Catrú los jóvenes se reunían de noche a narrar en embera bedea «mitos, cuentos de baracocó, llianbera, jurara, bibidi komia, gemené». En el capítulo sobre el origen (pp. 107 y 111) define a los bibidi comia como «personaje mítico de los primeros hombres guerreros y malos que vivieron dentro los árboles grandes como su hábitat o escondite», recoge que hay quien sostiene que los emberá son «de la generación de bibidi comia», y que otros dicen que vienen de la raíz de un árbol grande llamado jenené, «que así lo llamaron la gente de bibidi comia». Confirma así el rasgo central de la ficha —el árbol como morada del pueblo antropófago— y lo coloca en el tiempo de las primeras generaciones, como hacen Vasco y Gálvez.",
+    limitation:
+      "No narra el relato: son tres menciones en una tesis de casi 800 páginas. El autor es dóbida, formado en el internado de Catrú, y escribe sobre eyábida y dóbida sin separar siempre de quién es cada versión; la genealogía que hace descender a los emberá de los bibidi comia no está en Bailarín ni en las notas de 1929 y no debe injertarse en la ficha.",
+  }),
 };
 
 export const defaultKatioSourceKeys = [

@@ -364,6 +364,9 @@ Esa noche los mellizos hicieron una nueva choza. Esta vez buscaron hojas y mirar
         limitation:
           "Es una página de metadatos: no contiene el texto del artículo ni sostiene por sí sola ningún elemento del relato.",
       },
+      "graneroBultos2010",
+      "andinosBrujeria2025",
+      "cagliariDesangrar2019",
     ],
     title: "Chimbilaco, el rumor sobre el río",
     excerpt:

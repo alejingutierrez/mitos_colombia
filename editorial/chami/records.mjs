@@ -190,6 +190,7 @@ ${commonResearch}`,
   }),
   defineChamiMyth({
     slug: "horchibari",
+    fuentesAgotadas: "se buscó Horchibarí/Horchíbarí, Dumío, Kokoró, tiumía y «negro chipote» en abierto (buscador general, luguiva.net —incluido el PDF completo de Jaibanás, sin ninguna aparición—, Redalyc/Boletín de Antropología de Rubiano Carvajal 2023, que ya está en el pool) y se volvió a abrir Castrillón Caviedes 2010 en Uniclaretiana: los seis PDF del catálogo son prefacio, índice y la nota «Para acceder a todo el contenido de este libro puede dirigirse a las bibliotecas físicas de Uniclaretiana en Quibdó y Medellín». Las únicas páginas web que dan la entrada de tiumía de Puerto de Oro son blogs de leyendas que reproducen a Zuluaga sin citarlo (vetados). No hay obra nueva que trate este relato: queda en 7.",
     sourceKeys: [
       "reichel1953",
       "redAprendeMetadata",
@@ -1896,6 +1897,7 @@ IMÁGENES: reemplazo obligatorio; el par anterior mostraba Jenené y raíces, un
   }),
   defineChamiMyth({
     slug: "el-gusano-gigante",
+    fuentesAgotadas: "tras la única obra nueva hallada se buscó «Surranabe» en abierto (CVC, luguiva.net, IIAP, Persée, salacela.net), la lista de plantas de Cayón y Aristizábal en Cespedesia 9 (1980) y la fuente del paralelo de «otros mellizos» que secan la laguna con sus bastones (Pinto 1978, Wassén 1933); ninguna de las dos últimas tiene copia abierta consultable. Queda en 8 con la nueva.",
     relatoCorto:
       "El relato tal como fue narrado ocupa nueve líneas. No hay segunda versión que lo amplíe, y todo lo que se añadiera para llegar a trescientas palabras sería invención.",
     title: "Surranabe, el gusano gigante",
@@ -1937,6 +1939,7 @@ IMÁGENES: reemplazo obligatorio; el par anterior mostraba Jenené y raíces, un
         limitation:
           "El trabajo de campo es del golfo de Tribugá, Nuquí, con comunidades emberá del Chocó: no es chamí. No menciona a Surranabe, ni mellizos, ni el occidente de Caldas. Úsese sólo como comparación explícitamente marcada como de otro subgrupo.",
       },
+      "arauzPanama1980",
     ],
     mito: `Surranabe, el gusano grande, era bastante grande y se comía hasta los hombres y los animales. Era muy bravo. Todo lo que arrimaba donde él, se lo comía, y por eso la gente de indio, todos, todos, le tenían mucho miedo.
 

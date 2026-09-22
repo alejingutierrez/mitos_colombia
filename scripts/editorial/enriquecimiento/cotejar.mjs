@@ -13,6 +13,11 @@
  * tratan de la comunidad.
  *
  * Esto compara conjunto contra conjunto, por slug, y no mira nada más.
+ *
+ * Con --sumar (Fase B de una comunidad, cuyo JSON trae sólo las fuentes NUEVAS
+ * que se añadieron a las que la ficha ya tenía) lo que cuenta es que cada URL
+ * pedida esté en el módulo; las anteriores no son «sobrantes». Las fichas sin
+ * JSON tampoco son huérfanas: esa búsqueda no las cubría.
  * Era un script de scratchpad; el spec §7 pide que sea un comando del kit.
  */
 import fsp from "node:fs/promises";
@@ -75,7 +80,7 @@ for (const archivo of archivos) {
   const enJson = new Set(pedidas.map((s) => normalizeUrl(s?.url)).filter(Boolean));
 
   const faltan = [...enJson].filter((u) => !enModulo.has(u));
-  const sobran = [...enModulo].filter((u) => !enJson.has(u));
+  const sobran = options.sumar ? [] : [...enModulo].filter((u) => !enJson.has(u));
   const vetadas = [...enModulo].map((u) => [u, fuenteVetada(u)]).filter(([, v]) => v);
 
   const lineas = [];
@@ -86,7 +91,7 @@ for (const archivo of archivos) {
   // El caso u'wa: el módulo resuelve un conjunto entero que no es el suyo.
   const solapa = [...enJson].filter((u) => enModulo.has(u)).length;
   let veredicto = "coincide";
-  if (!enJson.size) veredicto = "JSON VACÍO";
+  if (!enJson.size) veredicto = options.sumar ? "coincide" : "JSON VACÍO";
   else if (!solapa) veredicto = "NINGUNA COINCIDE";
   else if (faltan.length || sobran.length) veredicto = "difiere";
 
@@ -105,7 +110,7 @@ for (const archivo of archivos) {
 
 // Fichas del módulo que ninguna investigación cubrió.
 const cubiertos = new Set(archivos.map((f) => f.replace(/\.json$/, "")));
-const huerfanas = [...records.keys()].filter((s) => !cubiertos.has(s));
+const huerfanas = options.sumar ? [] : [...records.keys()].filter((s) => !cubiertos.has(s));
 
 console.table(filas);
 

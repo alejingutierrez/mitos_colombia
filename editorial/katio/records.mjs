@@ -209,6 +209,7 @@ El tercero está dentro del propio corpus emberá y lo señala Aída Gálvez: Je
         limitation:
           "NO PUDE LEER EL TEXTO COMPLETO. Persée sólo publica en línea el prólogo del artículo y la copia de Gallica está tras una verificación antibot que no franqueé. Lo que afirmo de su contenido procede de la transcripción literal que hace Chaves 1945 (pp. 150-151, referencia «9-107, 108») y de la cita de Gálvez 1997 (Wassén 1933: 107-110), no de lectura directa. Los narradores son emberá del istmo de Panamá, no katíos.",
       },
+      "reichelDolmatoffMitos1945",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, no fotografía: una gran ave blanca Ancastor vuela entre montañas y cielo llevando con cuidado a dos mujeres sobre sus alas; al fondo aparece Bajía como paisaje luminoso de papel, con maíz y chontaduro discretos, sin ángel humano, sin alas pegadas a una persona, sin iconografía cristiana, sin texto, sin maqueta física, diorama ni 3D.",
@@ -484,6 +485,7 @@ ${archiveResearch}`,
   }),
   communityRecord({
     slug: "cobaima",
+    fuentesAgotadas: "una nueva (queda en 7). Se probó Cobaima con tres grafías y los topónimos del recorrido (Aguasal, Embibicuras, río Odo, Ocotuma) en buscador general, Redalyc, Dialnet, revistas del ICANH y de la UdeA; se abrieron la sentencia de restitución del Alto Andágueda (el enlace de Mincultura da 404), el especial «Alto Andágueda» de la Unidad para las Víctimas (sólo crónica del retorno), la caracterización de la Procuraduría (ya descartada el 2026-09-18 por genérica), la reseña de Pinto García 1974/1978 en Thesaurus (lingüística), «Narrativas territoriales embera» de la Javeriana Cali y el Plan de Vida katío de Dabeiba: ninguno nombra a Cobaima ni trata el relato. Fuera del micrositio del CNMH no hay literatura sobre el personaje.",
     title: "Cobaima, primer jaibaná",
     mito: `Caragabí no sólo creó el mundo. También creó a Cobaima, el primer jaibaná de los emberá katío. Cobaima era un sabedor indígena del Chocó, y es el primero del que se tiene noticia.
 
@@ -559,6 +561,7 @@ El tercero toca el oro. En las notas katías de 1929 los Costé son cuatro diabl
         limitation:
           "No nombra a Cobaima. El territorio es Chigorodó (Urabá antioqueño), a más de doscientos kilómetros del Alto Andágueda, con comunidades procedentes del Sinú y el San Jorge: la coincidencia del motivo no autoriza a trasladar nombres de lugar ni de ser. La fuente del «encierro» en el artículo es a su vez otra obra (Bailarín, 2006), que no consulté.",
       },
+      "bakataMina2021",
     ],
     researchNotes: `FUENTE PRINCIPAL: Dachi Chiuu / CNMH, Alto Andágueda.
 DECISIÓN: voz comunitaria contemporánea separada del archivo misionero.
@@ -567,6 +570,7 @@ ${archiveResearch}`,
   }),
   archiveRecord({
     slug: "coste",
+    fuentesAgotadas: "ninguna nueva (queda en 6). Buscado: «Costé», «Kosté», «Koste», «dueño del oro», burumiá/carauta/bibidikomía en buscador general, Redalyc, Dialnet, SciELO y revistas del ICANH, la UdeA y Banrep. El texto de Pineda y Gutiérrez de Pineda que Vasco copia («En el mundo espiritual del indio chocó», Miscellanea Paul Rivet) sólo está en archive.org como préstamo restringido (no verificable, y en la lista vetada por analogía con Open Library); su «Ciclo vital y chamanismo entre los indios chocó» (RCA 25, 1984, OCR completo de 95 páginas) no menciona a Costé; tampoco Reichel-Dolmatoff en la RCA («Notas etnográficas sobre los indios del Chocó», 1960, y «Contribuciones a la etnografía de los indios del Chocó»), la reseña de «Criaturas de Caragabí» en el Boletín Cultural y Bibliográfico (2001), el Plan de Vida katío de Dabeiba ni «Narrativas territoriales embera» (Javeriana Cali). El relato de Rubén Domicó Domicó sólo existe en Vasco 2001; la versión de María de Betania que Vasco menciona no tiene copia abierta. Zroarã nẽburã de Pardo (burumiá) sólo circula en Scribd, 1library, Academia y el agregador pueblosoriginarios. Todo lo demás que trata a Costé o su vecindad ya está en el pool (Rochereau 1929, Vasco 2001, Vasco 1985, Turbay y Domicó 2021, Uribe Ángel 1885).",
     sourceKeys: [
       "rochereau1929",
       "clacsoRegionalization",
@@ -1023,6 +1027,17 @@ ${archiveResearch}`,
   }),
   archiveRecord({
     slug: "fragmentos-de-otras-tradiciones",
+    sourceKeys: [
+      "severino1924",
+      "rochereau1929",
+      "villa1993",
+      "clacsoRegionalization",
+      "onicKatio",
+      "gobiernoMayorKatio",
+      "minInteriorPlan",
+      "carupiaEmbera2024",
+      "morenoCaminar2020",
+    ],
     title: "El árbol Genené",
     mito: `El mundo de Caragabí era hermoso, para envidia de Tutruicá, pero tenía un grave defecto: le faltaba el agua, y el propio dios sentía mucha necesidad de ese elemento. Tres veces soñó que había agua en el mundo sin saber dónde estaba depositada. Tenía una paloma que andaba buscándosela y al fin la consiguió, aunque no en este mundo sino en otro, cuyo soberano se llama Orre. Volvió Caragabí a soñar, y una vez vio un árbol inmensamente grande, llamado Genené, y le pareció que el agua estaba encerrada dentro de él.
 
@@ -1156,6 +1171,7 @@ ${archiveResearch}`,
   }),
   archiveRecord({
     slug: "icades-name",
+    fuentesAgotadas: "se buscó el episodio (Yaedé/Yeadé, Icané, Yame, origen del ñame, diablos gigantes que comen niños huérfanos) en el repositorio de la Universidad de Antioquia (búsqueda de texto completo: 'yaedé', 'yaede', 'Icané', 'ñame embera', 'origen del ñame', 'diablos gigantes embera', 'Antomiá niños'; se abrieron y leyeron nueve trabajos de grado eyabida de Pedagogía de la Madre Tierra —Domicó Carupia 2023, Cabrera Carupia 2024, Cuñapa 2023, Domico 2010, Bailarín 2024, Carupia Cuñapa 2024, Nusidó 2013, Legados de saber 1996, identidad y alimentación eyabida-senú 2024— y el bestiario de Toro 2023), en los libros de Vasco alojados en luguiva.net (Semejantes a los dioses, Del barro al aluminio, Desarrollo histórico del Chamí: el ñame sólo aparece como cultivo), en el plan de vida embera katío de Dabeiba (gobernación de Antioquia), en Reichel-Dolmatoff 1960 (RCA, escaneo sin capa de texto) y en la web general. Ninguna obra nueva narra ni comenta el episodio; las dos únicas que lo registran (Severino 1924/1959 y las notas de 1929) ya están en la ficha. La antología de Luis Fernando Vélez, «Relatos tradicionales de la cultura catía» (1982; Universidad de Antioquia, 1990 y 2018), probablemente lo reproduce, pero no está en acceso abierto y sus dos reseñas (Boletín Museo del Oro; Estudios de Derecho) no lo mencionan. El diccionario catío-español de Constancio Pinto García (1950, U. de Caldas) sólo está como ficha de una página. La ficha queda con 7.",
     relatoCorto:
       "Los dos textos que registran este episodio lo despachan en pocas líneas —seis renglones en el volumen de Severino, ocho en las notas de 1929— y no hay ningún otro que lo narre. Escribir trescientas palabras exigiría inventar diálogos, ceremonias o un desenlace para el niño que ninguna fuente da. En Historia se explica qué falta.",
     sourceKeys: [
@@ -1357,6 +1373,8 @@ ${archiveResearch}`,
           "Es cita de cita: la versión larga viene de María de Betania (1964), que recogió en el noroccidente antioqueño y a quien Vasco corrige con paréntesis tomados de Santa Teresa. El testimonio de las cuevas de madera es una nota de campo chamí, no katía. La traición de la vieja bibidí y el motivo de engordar a los cautivos no están en el relato de Bailarín y no deben fundirse con él.",
       },
       "uribeplata2001",
+      "carupiaEmbera2023",
+      "isaramaKirincia2012",
     ],
     title: "Los Bibidigomia",
     mito: `Los indios iban de cacería y se perdían. Una vez los siguieron y vieron con sus propios ojos lo que pasaba: otros indios los cogían y se los llevaban. Los que vieron regresaron a avisar.

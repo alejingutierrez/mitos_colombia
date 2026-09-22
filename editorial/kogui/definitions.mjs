@@ -1160,6 +1160,7 @@ Dentro del propio conjunto de 1947 hay un tercer contraste. En el relato del alg
           "Es trabajo de campo contemporáneo (Tairona Heritage Trust) y no menciona a Magri, Mamagakue ni Námsiku; no puede usarse para reconstruir el relato de origen, solo para explicar qué hace hoy el algodón. El sitio del editor (revistas.universidadmayor.edu.co) responde con una pantalla de verificación anti-bots, así que la lectura se hizo en Redalyc, que reproduce el texto completo con la paginación original.",
       },
       "knowledgemochila2025",
+      "mutsuMitos1945",
     ],
     title: "El algodón entregado a Mamagakue",
     summary:
@@ -1474,6 +1475,14 @@ La diferencia que los tres comparten y que conviene retener es la forma. Uno hac
         limitation:
           "El PDF de ICANH es un facsímil escaneado sin capa de texto; verifiqué las primeras páginas leyéndolas como imagen, de modo que las secciones astronómicas posteriores no las he comprobado una por una. No menciona a Gotzé, ni las cuatro flechas, ni el relato del origen del fuego: el vínculo con esta ficha es el espacio ritual y las direcciones, no la narración. Es un texto de 1975 con lenguaje de la época («sacerdote», «idolo») —aunque el propio autor aclara en nota que los mámas pueden designarse sacerdotes y no chamanes—, y anota que «cansamaría» es una expresión de origen misional colonial, no una palabra kogui.",
       },
+      {
+        key: "mutsuMitos1945",
+        summary:
+          "Es el primario del paralelo ette ennaka que la ficha pone primero. El relato 6, «Como los Chimila consiguieron el fuego», cuenta que otros indios «al otro lado del Gran Río» tenían candela; el brujo Huhum «se cambió en el sapo Mamu», cruzó a nado, espantó a los que comían pescado alrededor del fuego, se tragó una braza y la escupió en la otra orilla, «pero el brujo se quedó sapo». En el comentario del mismo artículo Reichel-Dolmatoff pone el catálogo de ladrones del fuego que la ficha resume: el colibrí, el ratón entre los matako, el buitre negro entre los tapieté, el sapo entre los chiriguano, los gemelos míticos entre los bakairi.",
+        limitation:
+          "Es ette ennaka (chimila), no kogui: entra sólo porque «Similitudes» ya nombra este paralelo. El catálogo comparativo es del recopilador, no del narrador, y también nombra a jívaros y okaima de pasada: las atribuciones concretas de la ficha deben citarse como de Reichel-Dolmatoff 1945.",
+      },
+      "reichelDolmatoffAlgunos1953",
     ],
     title: "Gotzé y las cuatro flechas de fuego",
     summary:

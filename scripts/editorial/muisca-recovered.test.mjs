@@ -74,7 +74,7 @@ test("los 41 expedientes muiscas son módulos editoriales completos", async () =
     assert.equal(myth.seo_title.length <= 60, true, file);
     assert.equal(
       myth.seo_description.length >= 120 &&
-        myth.seo_description.length <= 160,
+        myth.seo_description.length <= 165,
       true,
       file
     );

@@ -130,6 +130,7 @@ Dentro del propio universo yukpa, la separación del Sol y la Luna es la misma o
         limitation:
           "Es un artículo de trabajo social sobre el plan de vida, hecho con investigación acción participante; su único material narrativo es el origen de la gente de madera, que pertenece a otro ciclo. El módulo lo atribuía a «María Franco», que no es la autora.",
       },
+      "bastidasEtnohistoria2013",
     ],
     title: "El gran diluvio y las montañas del Perijá",
     excerpt:

@@ -33,6 +33,9 @@ const records = [
         limitation:
           "No contiene el episodio del campanario ni ninguna versión de Anansi; se usa para el marco regional y para identificar al coautor de la publicación original de 1991, que no está digitalizada.",
       },
+      "duncanAnancy2015",
+      "rodriguezcuentos2012",
+      "corredorFormaciones2021",
     ],
     title: "Ananse en el campanario",
     excerpt:
@@ -117,6 +120,8 @@ Lo que separa al episodio chocoano de todos ellos es el decorado: una iglesia, u
         limitation:
           "No contiene ninguna versión de la Tunda ni la estudia; se usa sólo como contexto del litoral y su glosario es breve.",
       },
+      "bernalCosmograma2024",
+      "guayaquildare2019",
     ],
     title: "La Tunda con el rostro de una madre",
     excerpt:
@@ -205,6 +210,7 @@ El parentesco que hay que deshacer es el del nombre: la Tulivieja panameña tamb
         limitation:
           "Es divulgación turística: una o dos frases por ser, sin narrador, sin lugar preciso y sin fecha. Su silencio sobre Kijimba no prueba nada sobre la circulación del relato.",
       },
+      "mRitos1961",
     ],
     title: "Kijimba y el baile de las ánimas",
     excerpt:
@@ -302,6 +308,8 @@ Lo propio de Kijimba es el brindis: no la persigue nadie, la invitan por su nomb
         limitation:
           "Su objeto es el oro y la economía extractiva, no los seres del río, y no menciona la Sierpe. Se usa como advertencia metodológica sobre la mirada externa, no como fuente narrativa.",
       },
+      "solanoTras2006",
+      "lemosTamarasistemas2012",
     ],
     title: "La Sierpe de Beté",
     excerpt:

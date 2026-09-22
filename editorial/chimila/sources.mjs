@@ -349,6 +349,150 @@ export const chimilaSources = {
     limitation:
       "No narra la creación con las mazorcas ni cita fuentes: es una nota de gestión institucional sin autoría personal, útil sólo como testimonio de la vigencia contemporánea de la figura.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  thurnAmong1883: source({
+    title: "Among the Indians of Guiana: being sketches chiefly anthropologic from the interior of British Guiana",
+    author: "Everard F. im Thurn",
+    year: 1883,
+    type: "monografía etnográfica (Kegan Paul, Trench & Co., Londres; ejemplar de dominio público en Internet Archive)",
+    url: "https://archive.org/details/amongindiansgui00thurgoog",
+    summary:
+      "Es la fuente original del relato karib que el campo de similitudes ya contrapone a este cuento: en el capítulo de folclore (pp. 379-380) cuenta que al llegar del cielo la yuca, el plátano y todas las plantas útiles crecían en un solo árbol que descubrió una danta, que los karib lo derribaron tras muchos meses con hachas de piedra y que cada hombre se llevó pedazos para sembrarlos en su propio campo, «so from that day each Indian has had his own cassava-field». Añade que los akawoio cuentan lo mismo con el acure como descubridor.",
+    limitation:
+      "Bibliografía de la Guayana británica (hoy Guyana), fuera de Colombia, y en inglés de 1883; no menciona a los chimila ni el algodón: sostiene sólo el contraste ya escrito en la ficha entre un reparto de plantas hacia adentro del pueblo y una semilla que cruza una enemistad. El recopilador de 1945 la cita como de 1878; la edición que existe es de 1883.",
+  }),
+  ehrenreichMythen1905: source({
+    title: "Die Mythen und Legenden der südamerikanischen Urvölker und ihre Beziehungen zu denen Nordamerikas und der alten Welt",
+    author: "Paul Ehrenreich",
+    year: 1905,
+    type: "monografía de mitología comparada (suplemento de la Zeitschrift für Ethnologie 37, A. Asher & Co., Berlín; dominio público en Internet Archive)",
+    url: "https://archive.org/details/diemythenundleg00ehregoog",
+    summary:
+      "Es la obra de la que el recopilador de 1945 toma el paralelo que la ficha repite: en el apartado sobre las analogías con Polinesia califica de «una de las más interesantes coincidencias» la del mito de Rata de Aitutaki (según Gill) con el relato de Im Thurn sobre un chamán de Guayana que se mete en las fauces de un omar, los dos del tipo de Jonás, y afirma que en ambos el héroe usa un trozo de su lanza como tranca para mantener abierta la boca del monstruo y con el otro hace un taladro de fuego.",
+    limitation:
+      "En alemán y de 1905; no conoce el cuento chimila. Su lectura del texto de Im Thurn no se sostiene al cotejarlo (véase esa fuente): la tranca en la jeta sólo está documentada aquí para el mito polinesio.",
+  }),
+  gillMyths1876: source({
+    title: "Myths and Songs from the South Pacific",
+    author: "William Wyatt Gill",
+    year: 1876,
+    type: "compilación misionera de mitos de las islas Cook (Henry S. King & Co., Londres; dominio público en Internet Archive)",
+    url: "https://archive.org/details/mythssongsfromso00gill",
+    summary:
+      "Es la fuente primaria del «mito polinésico de Ratham de Aututaki» que la ficha cita de segunda mano: «Rata's canoe. A legend from Aitutaki» (pp. 142-149). Cuando una ballena abre la boca con una mandíbula bajo la canoa y otra encima, Nganaoa parte en dos su lanza larga y mete las dos estacas en la boca del animal para que no pueda cerrarla, salta adentro, encuentra vivos a sus padres tragados mientras pescaban, convierte una de las estacas en palos de fuego, quema la grasa del estómago y los tres salen por la boca abierta cuando la ballena encalla. El propio Gill anota que los isleños lo leían como una versión deformada de Jonás.",
+    limitation:
+      "Oceanía, no América; el paralelo está ya nombrado en similitudes. Corrige un detalle de la ficha: quien atranca las fauces no es Rata sino su acompañante Nganaoa, y lo que se atranca es una ballena, no un caimán.",
+  }),
+  rothInquiry1915: source({
+    title: "An Inquiry into the Animism and Folk-lore of the Guiana Indians",
+    author: "Walter E. Roth",
+    year: 1915,
+    type: "monografía etnográfica (30th Annual Report of the Bureau of American Ethnology, Washington; dominio público en Internet Archive)",
+    url: "https://archive.org/details/cu31924104074665",
+    summary:
+      "Es la página que el comentario de 1945 cita para los akawoio y los warao (p. 244): reproduce el omar de Im Thurn y añade un relato warao del río Moruca, «The Piai in the Water Spirit's Belly», en que el espíritu de agua Ho-arinni se traga al piache con su canoa, leña y fuego; en la oscuridad del vientre enciende fuego y clava postes en la barriga del monstruo hasta que, de tanto dolor, sale a boquear a la superficie y el piache se escapa por entre las fauces; llega a su casa diciendo que viene sólo a mostrarse y muere poco después.",
+    limitation:
+      "Guayana británica, en inglés; no menciona a los chimila. El paralelo es de estructura —hombre tragado en el río, que hiere al monstruo desde dentro, escapa por la boca y vuelve enfermo— y no incluye aprendizaje de caza: donde el ette se recupera en el monte y vuelve gordo, el piache warao muere.",
+  }),
+  reverolHacer2017: source({
+    title: "«Hacer los sueños». Una perspectiva wayuu",
+    author: "Carmen Laura Paz Reverol",
+    year: 2017,
+    type: "artículo académico (EntreDiversidades 9, Universidad Autónoma de Chiapas)",
+    url: "https://entrediversidades.unach.mx/index.php/entrediversidades/article/view/18",
+    summary:
+      "Es la fuente del paralelo wayuu que ya nombra el campo de similitudes: define a Lapü como la deidad que transmite mensajes a través de los sueños y pronostica sucesos de salud, vida y muerte, describe al aa'in que deambula mientras se duerme y recibe mensajes, recoge el testimonio de un sueño que llega «como si fuera un aviso» de algo malo, y cierra con la costumbre de preguntar «¿cómo estuvo tu sueño?» y de «escuchar y hacer los sueños».",
+    limitation:
+      "Trata a los wayuu, en buena parte del lado venezolano de la Guajira, y no menciona a los ette ni este cuento: sólo sostiene el contraste que la ficha ya traza entre un sueño con deidad que obliga y uno sin deidad que empujan los compañeros.",
+  }),
+  teresaindios1959: source({
+    title: "Los indios catíos, los indios cunas: ensayo etnográfico de dos razas de indios de la América española",
+    author: "Fray Severino de Santa Teresa, O.C.D.",
+    year: 1959,
+    type: "monografía misionera (Autores Antioqueños 7, Imprenta Departamental, Medellín; reedición de «Creencias, ritos, usos y costumbres de los indios catíos», 1924; ejemplar digitalizado por Princeton en Internet Archive)",
+    url: "https://archive.org/details/losindioscatiosl00seve",
+    summary:
+      "Es la fuente del relato katío que el campo de similitudes ya empareja con este cuento (pp. 23-25): Caragabí no tiene agua, la paloma y el pájaro mosca descubren a Gentzerá bañándose, y según «los más» el agua está en la concavidad de un árbol enorme y sagrado, el Genené; Caragabí y su gente lo cortan con hachas de piedra, el árbol amanece sin las incisiones del día anterior, trabajan de noche con la luz que él saca frotándose las manos, los bejucos lo sostienen hasta que una ardita, Chidima, los desenreda, y al caer brotan las aguas e inundan la tierra durante un año.",
+    limitation:
+      "Es la mirada de un misionero carmelita, con comentarios burlones sobre el dios katío, y el texto de 1959 no coincide literalmente con la cita que da el comentario de 1945 (allí hachas de hierro y el tronco hecho mar; aquí hachas de piedra y un diluvio de un año). No menciona a los ette: sostiene sólo el paralelo ya escrito, con el agua dentro de la madera y no debajo del palo.",
+  }),
+  historicaCaragabi: source({
+    title: "Caragabi · Dachi Chiuu, nuestra lucha: la historia de la comunidad embera katío en Bogotá",
+    author: "Centro Nacional de Memoria Histórica, con la comunidad emberá katío del Alto Andágueda (resguardo Tahamí) en Bogotá",
+    type: "micrositio institucional de una iniciativa de memoria histórica, en voz comunitaria",
+    url: "https://micrositios.centrodememoriahistorica.gov.co/dachichiuu/caragabi/",
+    summary:
+      "Versión contemporánea, contada en primera persona plural por emberá katío desplazados, del mismo mito que la ficha cita del volumen de 1945: Gentserá entra al gran árbol Jenené por una puerta invisible y dentro hay un pozo de aguas azules; las hachas, primero grandes y luego de hierro, no bastan porque el árbol sana cada noche; Caragabí ilumina el bosque para trabajar día y noche, monos y ardillas lo desatan de los bejucos y, al caer, del tronco salen los mares Atlántico y Pacífico, de las ramas grandes el Atrato y el San Juan y de las pequeñas los arroyos, ciénagas y lagos.",
+    limitation:
+      "Es un texto de divulgación sin fecha visible ni narrador individual identificado, y no menciona a los ette. Confirma que el detalle «el tronco es el mar y los brazos los ríos» sigue vivo en la tradición katío, y con ello el contraste que la ficha traza con el palo pequeño que sólo tapa el agua.",
+  }),
+  reichelDolmatofflengua1947: source({
+    title: "La lengua chimila",
+    author: "Gerardo Reichel-Dolmatoff",
+    year: 1947,
+    type: "estudio lingüístico con gramática y vocabulario (Journal de la Société des Américanistes, nouvelle série XXXVI, pp. 15-50; edición digital Persée)",
+    url: "https://www.persee.fr/doc/jsa_0037-9174_1947_num_36_1_2358",
+    summary:
+      "Es el vocabulario levantado en el mismo trabajo de campo de 1944, y nombra en ette taara el atavío con que los hijos reconocen al padre muerto. En la lista de casa, utensilios y armas (pp. 31-32) registra el arco, la flecha, la macana, el penacho de plumas, el collar, el vestido de hombre y la faja de los guerreros, junto al achiotero; en la fauna, la guacamaya (p. 35); y el verbo «morir», yút:ka- («está muerto», p. 46). Anota además que «cacique», ta-ngrúta-ya, es una de las pocas palabras que marcan género posponiendo «hombre» o «mujer» (p. 16): existe la forma femenina, «cacica», que la Etnografía de 1946 no menciona al reservar la corona al cacique.",
+    limitation:
+      "No menciona el cuento ni la muerte de la mujer: aporta el léxico de los objetos que el relato enumera, del mismo autor y la misma estancia, por lo que no es confirmación independiente. La lista no trae una entrada para «corona» ni para las ligaduras de hilo; sólo «penacho de plumas». De paso deja ver que ta-ngrúta-ya, que la Historia publicada trata como parte del nombre del narrador («Tangrutaya Mutsu»), es en el vocabulario del mismo recopilador la palabra para «cacique» (pp. 16, 25, 45-47).",
+  }),
+  kochGrunbergZwei1909: source({
+    title: "Zwei Jahre unter den Indianern: Reisen in Nordwest-Brasilien 1903/1905, Band 2",
+    author: "Theodor Koch-Grünberg",
+    year: 1909,
+    type: "relato de viaje etnográfico (Ernst Wasmuth, Berlín; copia digital en Internet Archive)",
+    url: "https://archive.org/details/zwei-jahre-unter-den-indianern-t-koch-grunberg-band-2-1909-45000030641",
+    summary:
+      "Es la fuente del primer paralelo que la ficha nombra en Similitudes, el de los kobeua (cubeo), tomado de la Etnografía chimila de 1946, que la cita como «82, 317». En la p. 156 del tomo 2 Koch-Grünberg anota, entre los kobeua del río Querary, que el chamán viejo se vuelve jaguar de tiempo en tiempo, va al monte, mata y come venados, agutíes y también gente, y regresa hombre; que su alma, al morir, vaga para siempre como «jaguar muy malo»; y que en kobeua y la mayoría de las lenguas tukano jaguar y chamán se nombran con la misma palabra (yaui, yai). Es el tigre-que-es-otra-cosa contra el que la ficha mide al tigre chimila, que no es nadie transformado y simplemente habla.",
+    limitation:
+      "Paralelo tukano oriental del Vaupés en alemán, sin relación con los chimila ni con la idea de que los animales hablen; sólo sostiene el contraste que Similitudes ya plantea. Reichel-Dolmatoff cita la 2.ª edición de 1923; en esta de 1909 el pasaje está en el tomo 2, p. 156.",
+  }),
+  wavrinFolklore1932: source({
+    title: "Folk-lore du Haut-Amazone",
+    author: "Marquis Robert de Wavrin",
+    year: 1932,
+    type: "artículo etnográfico (Journal de la Société des Américanistes, nouvelle série XXIV-1, pp. 121-146; edición digital Persée)",
+    url: "https://www.persee.fr/doc/jsa_0037-9174_1932_num_24_1_1847",
+    summary:
+      "Es la obra exacta de la que Reichel-Dolmatoff sacó, en su nota al cuento de los brujos de 1945, el paralelo huitoto que la ficha cita en Similitudes. En la sección «Croyances des Witotos» (pp. 135-136) se lee que después de su muerte el alma de los brujos sigue haciendo el mal y que el tigre y la boa son brujos metamorfoseados, al punto que algunos imploran al jaguar por tenerlo invulnerable «puisqu'il est sorcier»; y en la p. 140, en la misma región del Putumayo, que tras su muerte los brujos se metamorfosean en tigres y sólo el corazón sigue vivo, por lo que no se los puede matar.",
+    limitation:
+      "Es la fuente del paralelo comparativo, no del relato chimila: habla de pueblos del Putumayo y del alto Amazonas (Witoto y vecinos), recogido por un viajero en francés y con la mirada de 1932. Reichel-Dolmatoff la cita como «34. 133, 136, 142»; en la edición digital las frases están en las pp. 135-136 y 140, y la atribución de la p. 140 a los miraña es de Reichel, no se lee en la página misma.",
+  }),
+  simonNoticias1892: source({
+    title: "Noticias historiales de las conquistas de Tierra Firme en las Indias Occidentales, segunda parte (Cuarta noticia)",
+    author: "Fray Pedro Simón",
+    year: 1892,
+    type: "crónica colonial (1627), edición de Medardo Rivas, Bogotá; escaneo con texto en Internet Archive",
+    url: "https://archive.org/details/tierrafirmeindias02simbrich",
+    summary:
+      "En la Cuarta noticia, capítulos XV a XVII (pp. 325-329), cuenta cómo el Ubaque mata al hermano del zipa Nemequene y, temiendo su indignación, le envía la verdad del caso con mensajeros y regalos; el zipa exige que venga en persona, rehúsa el presente salvo dos mantas «por no tomar del acusado cosa que turbase la claridad de la justicia», manda averiguar y tras seis meses de pesquisas lo deja volver libre. Es el Nemequene juez que la ficha opone en «similitudes»: allí un homicidio se lleva ante la autoridad y se investiga; aquí dos homicidas borran el cuerpo para que el cacique nunca lo sepa.",
+    limitation:
+      "Es una crónica franciscana muisca de 1627, no ette, escrita con la mirada evangelizadora de su autor; sirve sólo al contraste que la ficha declara y no dice nada de los chimila. La obra ya está en el pool del módulo muisca con esta misma URL, no en el de chimila.",
+  }),
+  ortegaEntre2015: source({
+    title: "Entre ríos, llanuras y selva: aspectos culturales de las poblaciones nativas de la provincia de Santa Marta en la segunda mitad del XVIII",
+    author: "Antonino Vidal Ortega y David J. Luquetta Cediel",
+    year: 2015,
+    type: "artículo académico (Investigación y Desarrollo 23-1, Universidad del Norte; texto completo en SciELO Colombia)",
+    url: "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0121-32612015000100002",
+    summary:
+      "Lee los diarios de guerra de 1765 y 1768 del Archivo General de la Nación contra los chimila y recoge lo que dicen de su trato con la muerte: la expedición de 1765 halló dos casas dejadas desde hacía tiempo y, en una, un hoyo como de sepultura fresca con dos calaveras, ropas y macanas; otro testimonio describe a una mujer muerta a flechazos junto a la que dejaron una totuma de chicha y sonajas «al uso bárbaro antiguo, practicado en la sepultura de los indios». Es el antecedente documental, dos siglos anterior, de la casa convertida en tumba y abandonada que Reichel-Dolmatoff describe en 1946 y que el relato desplaza al monte.",
+    limitation:
+      "Es historia colonial escrita desde los diarios de las expediciones punitivas, con su vocabulario de «bárbaros»; no conoce ni comenta el relato. SciELO Colombia sólo publica por http, y el DOI que imprime la página (10.14482/indes.22.2.6615) resuelve a otro artículo de la revista. Una versión anterior de los mismos autores y el mismo tema en Diálogos (Costa Rica, 2014) figura como «Retractado» sin que la página diga el motivo: se cita esta de 2015, que no lleva esa marca.",
+  }),
+  finolMito2007: source({
+    title: "Mito y cultura guajira",
+    author: "José Enrique Finol",
+    year: 2007,
+    type: "libro de semiótica del mito (2.ª edición, Universidad del Zulia), PDF del autor",
+    url: "https://www.joseenriquefinol.com/wp-content/uploads/2020/07/MITO-Y-CULTURA-GUAJIRA-Libro.pdf",
+    summary:
+      "Su capítulo VI publica y analiza los mitos «Viaje al más allá» y «La historia de Ulépala», con una secuencia dedicada a Jepira, la tierra de los guajiros muertos: el paralelo wayuu del vivo que cruza al dominio de los muertos que la ficha nombra en «similitudes».",
+    limitation:
+      "Es bibliografía venezolana sobre los wayuu, otro pueblo y otra familia lingüística; se cita como contraste, no como filiación, y no menciona a los ette ni este relato.",
+  }),
 };
 
 export function pickChimilaSources(...entries) {

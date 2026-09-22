@@ -423,6 +423,30 @@ export const koguiSources = {
     limitation:
       "Es etnobotánica cuantitativa: nombra especies y usos, no la cosmología de la enfermedad, y no menciona a Hiwihá, a los Mulkokókwi ni el relato de origen. Su marco conceptual es biomédico («enfermedades comunes») y traduce categorías kogui a diagnósticos occidentales, exactamente la operación contra la que la ficha advierte. Verifiqué la ficha del artículo y su resumen en el portal del editor, no el texto completo. El PDF está abierto, pero el espejo de SciELO Colombia no respondía durante la consulta.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  mutsuMitos1945: source({
+    title: "Mitos y cuentos de los indios Chimila",
+    author: "Gerardo Reichel-Dolmatoff; narrados por Tangrutaya Mutsu",
+    year: 1945,
+    type: "recolección etnográfica primaria (Boletín de Arqueología, vol. I, núm. 1, PDF abierto del ICANH con licencia CC BY-NC-ND)",
+    url: "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/234/256/1567?inline=1",
+    summary:
+      "Es el primario del paralelo ette ennaka que la ficha nombra en «Similitudes». El relato 10, «Como los Chimila regalaron el algodón a los Aruacos», dice que «Cuando los Chimilas bajaron a la tierra, ya tenían el algodón porque Papá Grande había dado al primer Chimila una mochilita con semilla»; un Aruaco pide semilla, el Chimila le advierte que si siembra algodón los otros Aruacos sabrán que estuvo allí y lo matarán, él insiste, se lleva la semilla, la siembra «y no lo mataron». Sostiene literalmente todo lo que la ficha compara: la semilla que baja con la gente, la transacción entre enemigos y el don a un solo hombre.",
+    limitation:
+      "Es ette ennaka (chimila), no kogui: entra sólo porque «Similitudes» ya nombra este paralelo. Los «Aruacos» del relato son la gente de la Sierra vista desde el llano chimila; el texto no distingue ika de kogui, y la ficha no debe leerlo como un relato sobre los kogui. El relato no dice que el don «no funde nada»: esa es lectura de la ficha, que conviene sostener como comparación y no como dato.",
+  }),
+  reichelDolmatoffAlgunos1953: source({
+    title: "Algunos mitos de los indios Chamí (Colombia)",
+    author: "Gerardo Reichel-Dolmatoff",
+    year: 1953,
+    type: "recolección etnográfica primaria (Revista Colombiana de Folklore, núm. 2, pp. 148-165; facsímil del Ministerio de Educación y la Biblioteca Nacional)",
+    url: "https://redaprende.colombiaaprende.edu.co/recursos/colecciones/34UDQKC25D1/T5RZEZ6LF62/1226",
+    summary:
+      "Es el primario del segundo paralelo que la ficha nombra, «Hímo, la iguana y la candela». El relato 9, recogido en Río Frío en 1945, empieza «Hímo la Iguana, tenía la candela. No la mostró a nadie»; Karagabí se vuelve un pescado grande, se deja pescar, desde la casa de Hímo ve «allí escondida la candela», salta y se la lleva, y «Hímo se volvió animal, Una hormiga chiquita. Karagabí lo hizo así como para castigo». Sostiene el contraste que hace la ficha: el que acapara el fuego pierde la forma humana, al revés que Gotzé, que al final «aún vive» como hombre.",
+    limitation:
+      "Es emberá chamí, no kogui, y entra sólo porque «Similitudes» ya lo nombra. Hay dos puntos en que la ficha kogui no coincide con el primario: el fuego no está escondido «en su madriguera» sino en la casa de Hímo, y el relato no termina con «los hombres gozando del fuego», sino con Karagabí, que «sí tenía fuego siempre» y a mediodía lo hizo con un serrucho «pero no servía». La identificación de Hímo como iguana y su conversión en hormiga son del texto; la nota 34 («fuego») es glosa de Reichel-Dolmatoff.",
+  }),
 };
 
 export function pickKoguiSources(...entries) {

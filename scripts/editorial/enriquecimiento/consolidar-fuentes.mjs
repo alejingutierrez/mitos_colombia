@@ -341,6 +341,9 @@ if (hasRewriteMap) {
 for (const [slug, entries] of plan) {
   const file = path.join(dir, "myths", `${slug}.mjs`);
   let src = await fs.readFile(file, "utf8");
+  // `sourceKeys: ["a", "b"],` en una línea (nencatacoa): se abre a una por línea.
+  src = src.replace(/^  sourceKeys: \[([^\n\]]*)\],\n/m, (_, lista) =>
+    `  sourceKeys: [\n${lista.split(",").map((k) => k.trim()).filter(Boolean).map((k) => `    ${k},`).join("\n")}\n  ],\n`);
   const match = src.match(/  sourceKeys: \[[\s\S]*?\n  \],\n/);
   const code = entries.map((e) => (typeof e === "string" ? `    ${js(e)},` : `    {\n      key: ${js(e.key)},\n${e.summary ? `      summary:\n        ${js(e.summary)},\n` : ""}${e.limitation ? `      limitation:\n        ${js(e.limitation)},\n` : ""}    },`)).join("\n");
   if (match && options.reemplazar) {

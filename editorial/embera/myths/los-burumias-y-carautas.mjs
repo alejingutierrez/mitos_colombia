@@ -107,6 +107,11 @@ export default defineEmberaMyth({
       limitation:
         "Es una capa cartográfica derivada de OpenStreetMap, no una fuente etnográfica ni histórica. La coordenada corresponde a la confluencia de los cauces, no al alto donde la narración sitúa las casas Burumiá, que no es un lugar localizable.",
     },
+    "isacssonGentilicios1980",
+    "gomezMitos1997",
+    "edicionNociones1929",
+    "teresaindios1959",
+    "gradoEmbera2023",
   ],
   imagePromptHorizontal:
     "Ilustración editorial horizontal 16:9, full paper cut con detalles selectivos de paper quilling, no fotografía ni maqueta. En la selva lluviosa del Chocó, la quebrada Usagará desemboca hacia el río Bojayá; un joven y una joven Emberá escapan río abajo en una gran canoa tallada, acompañados por un perro, mientras el poblado Burumia queda distante sobre un alto entre árboles. Capas recortadas de agua, follaje y niebla, composición narrativa adulta, vestuario sobrio sin tocados panindígenas, sin fuego, deidades, oro, texto, logos, violencia explícita, diorama ni render 3D.",

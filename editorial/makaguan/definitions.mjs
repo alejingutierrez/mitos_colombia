@@ -16,6 +16,7 @@ function myth({ title, summary, tags, ...definition }) {
 export const makaguanDefinitions = [
   myth({
     slug: "creacion-makawanes",
+    fuentesAgotadas: "Se abrieron y descartaron: las otras cinco cartillas de APOYAR 2014-2025 (juegos, artesanías, fortalecimiento, Territorio de diversidad, En comunidad nos protegemos: no narran relatos ni nombran estas figuras); Geografía humana de Colombia, Orinoquia t. III vol. I (babel.banrepcultural.org, id 2786: sólo menciona a los Macaguane en la historia de los Chiricoa, sin mitología); Getulio Vargas Barón, Cuentos, mitos y leyendas del llano (UNAL: sólo nombra a los macaguanes en una lista); Tocarema 2020 (Uniminuto: citada por Mattar pero trata relatos arhuacos, nada makaguán); Biomédica 45(4) 2025 sobre epidemias de sarampión (sin Roménu ni relato); Amaya-Castellanos, Langdon y Ortega 2026 (J Racial Ethn Health Disparities: el resumen es de salud urbana hitnü, texto completo bloqueado por Springer). No accesibles: Escobar 2019, Etnobotánica makaguán (repositorio Unipamplona responde 404); MinCultura, Estudios Hitnü (404); portal de Lenguas de Colombia del Caro y Cuervo (el dominio no resuelve); Lobo-Guerrero y Herrera 1984, Los hitnü del Airico de Macaguane, y Ortiz 1978, Los Macaguanes (sin copia abierta); ONIC (muerta). YouTube de Territorio 360 (short de 30 s, no verificable como fuente). Queda con 7.",
     sourceKeys: [
       "mattar2024",
       "menHitnu2022",
@@ -23,6 +24,7 @@ export const makaguanDefinitions = [
       "cartillaHistorias2014",
       "unal2024",
       "icbf2021",
+      "tiradoPalabras2014",
     ],
     title: "Los hijos del venado",
     summary:
@@ -69,12 +71,20 @@ El otro paralelo es de nombres, y es propio. El relato explica por qué este pue
   }),
   myth({
     slug: "la-gran-inundacion",
+    fuentesAgotadas: "Se abrieron y descartaron: las otras cinco cartillas de APOYAR 2014-2025 (juegos, artesanías, fortalecimiento, Territorio de diversidad, En comunidad nos protegemos: no narran relatos ni nombran estas figuras); Geografía humana de Colombia, Orinoquia t. III vol. I (babel.banrepcultural.org, id 2786: sólo menciona a los Macaguane en la historia de los Chiricoa, sin mitología); Getulio Vargas Barón, Cuentos, mitos y leyendas del llano (UNAL: sólo nombra a los macaguanes en una lista); Tocarema 2020 (Uniminuto: citada por Mattar pero trata relatos arhuacos, nada makaguán); Biomédica 45(4) 2025 sobre epidemias de sarampión (sin Roménu ni relato); Amaya-Castellanos, Langdon y Ortega 2026 (J Racial Ethn Health Disparities: el resumen es de salud urbana hitnü, texto completo bloqueado por Springer). No accesibles: Escobar 2019, Etnobotánica makaguán (repositorio Unipamplona responde 404); MinCultura, Estudios Hitnü (404); portal de Lenguas de Colombia del Caro y Cuervo (el dominio no resuelve); Lobo-Guerrero y Herrera 1984, Los hitnü del Airico de Macaguane, y Ortiz 1978, Los Macaguanes (sin copia abierta); ONIC (muerta). YouTube de Territorio 360 (short de 30 s, no verificable como fuente). Ninguna fuente fuera de Mattar narra el diluvio makaguán, el wiri, la ardita ni el cangrejo del tambor. Queda con 6.",
     sourceKeys: [
       "mattar2024",
       "menHitnu2022",
       "unal2024",
       "icbf2021",
       "jangwapana2026",
+      {
+        key: "tiradoPalabras2014",
+        summary:
+          "En voz makaguán describe paso a paso el viente o boko, el vino de palma real (p. 26; también la entrada boko, p. 14): se tumba la palma, se deja tres días caída, se abre una caja junto al cogollo y a los tres a cinco días el jugo ya está fermentado. Es exactamente la faena dentro de la cual muere el wiri en el relato —la palma derribada que se deja fermentar—, documentada por la propia comunidad y no por el investigador.",
+        limitation:
+          "No narra el mito: sostiene sólo el pasaje de la palma de vino y la capa de historia que lo explica. Es de otro resguardo (La Esperanza, en Tame), no de El Vigía. No sirve para el perro, la ardita, la lluvia, el samuro ni el cangrejo.",
+      },
     ],
     title: "La gran inundación y Wiri",
     summary:
@@ -119,6 +129,7 @@ Un diluvio con una pareja salvada en un monte se parece a muchos otros, y la pro
   }),
   myth({
     slug: "el-alma",
+    fuentesAgotadas: "Se abrieron y descartaron: las otras cinco cartillas de APOYAR 2014-2025 (juegos, artesanías, fortalecimiento, Territorio de diversidad, En comunidad nos protegemos: no narran relatos ni nombran estas figuras); Geografía humana de Colombia, Orinoquia t. III vol. I (babel.banrepcultural.org, id 2786: sólo menciona a los Macaguane en la historia de los Chiricoa, sin mitología); Getulio Vargas Barón, Cuentos, mitos y leyendas del llano (UNAL: sólo nombra a los macaguanes en una lista); Tocarema 2020 (Uniminuto: citada por Mattar pero trata relatos arhuacos, nada makaguán); Biomédica 45(4) 2025 sobre epidemias de sarampión (sin Roménu ni relato); Amaya-Castellanos, Langdon y Ortega 2026 (J Racial Ethn Health Disparities: el resumen es de salud urbana hitnü, texto completo bloqueado por Springer). No accesibles: Escobar 2019, Etnobotánica makaguán (repositorio Unipamplona responde 404); MinCultura, Estudios Hitnü (404); portal de Lenguas de Colombia del Caro y Cuervo (el dominio no resuelve); Lobo-Guerrero y Herrera 1984, Los hitnü del Airico de Macaguane, y Ortiz 1978, Los Macaguanes (sin copia abierta); ONIC (muerta). YouTube de Territorio 360 (short de 30 s, no verificable como fuente). Para esta ficha se buscó además Wuachirajua/Wachirajua, «el alma» makaguán y Roménu fuera de Amaya-Castellanos 2025 (ya en el pool): ninguna obra abierta nueva los trata. Queda con 6 y sin fuentes nuevas.",
     sourceKeys: [
       "mattar2024",
       "amaya2025",

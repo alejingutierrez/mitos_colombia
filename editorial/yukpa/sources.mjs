@@ -184,6 +184,19 @@ export const yukpaSources = {
     limitation:
       "Es la introducción de un dossier de revista y no trata de los yukpa en particular: se usa para el encuadre regional y no aporta ningún dato del relato.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  bastidasEtnohistoria2013: source({
+    title: "Etnohistoria y etnogénesis del pueblo yukpa",
+    author: "Luis Bastidas, en Fermentum. Revista Venezolana de Sociología y Antropología 23 (66): 85-110, Universidad de Los Andes, Mérida",
+    year: 2013,
+    type: "artículo de revista con relatos recogidos en campo",
+    url: "http://www.saber.ula.ve/bitstream/handle/123456789/39889/articulo5.pdf?sequence=1&isAllowed=y",
+    summary:
+      "Transcribe tres versiones yukpa del diluvio con narrador, edad y comunidad. Angélica Romero (67 años, Yishara) atribuye la inundación al incesto de un yukpa con su hermana, castigado por Cumuco. Pablo García (93 años, Miquibo) cuenta que los atancha subieron al Tectarí, que el agua se llevó a los de «la cima más bajita» y quedaron los de arriba; el cangrejo dice que va a arreglarlo y sólo excava alrededor de la montaña, y el cachicamo (armadillo) lo saca, excava él mismo para que el agua «se vaya para otro lado», anuncia que se va a convertir en árbol, deja la orden de no bajar en dos meses porque la tierra sigue húmeda, y los dos que desobedecen se hunden. Adolfo Maiquishi (78 años, El Tokuko) nombra las cinco cabezas que se salvaron. Resume además a Acuña Delgado (1998): la gran inundación por lluvia incesante, los sobrevivientes en el monte Tetarí, máxima elevación del Perijá, y los püpütü que se salvan bajo tierra. Es la fuente abierta que sostiene de primera mano la montaña más alta, la mala elección del cerro bajo y el armadillo que abre el camino al agua.",
+    limitation:
+      "Es del lado venezolano del Perijá (comunidades del Río Negro y de Irapa, Zulia): bibliografía válida, pero no de Sokorhpa ni de Iroka. Bastidas lee el diluvio como castigo de Cumuco por incesto y guerra; la ficha, con Acuña Delgado, dice que la mayoría de versiones no dan causa: su lectura es una de las versiones, no la regla. Nombra una sola montaña, Tectarí/Tetarí, no la pareja Shkhimo y Tʉtarhi. SaberULA sólo publica por http (su https da un certificado autofirmado); hay copia https en Redalyc: https://www.redalyc.org/pdf/705/70538668006.pdf.",
+  }),
 };
 
 /**

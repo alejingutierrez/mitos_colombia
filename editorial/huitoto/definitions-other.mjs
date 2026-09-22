@@ -387,6 +387,17 @@ La diferencia con esta página es exacta. Allá la ortiga es el instrumento con 
   }),
   myth({
     slug: "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+    sourceKeys: [
+      "rabbitCatalog",
+      "urbinaBook",
+      "preussOne",
+      "preussTwo",
+      "onic",
+      "mythEthics",
+      "afrocolombianaCuentos2010",
+      "cantillanocuentos2002",
+      "garciaLeporidos2023",
+    ],
     title: "Peleas entre el sobrino Conejo y el tío Tigre",
     seoTitle: "Conejo y tío Tigre | Atribución no confirmada",
     summary:

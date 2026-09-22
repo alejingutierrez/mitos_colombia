@@ -554,6 +554,63 @@ export const muiscaSources = {
     limitation:
       "Crónica general; no nombra a Toquechá/Toquilla.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  rubioSociedad2005: source({
+    title: "Sociedad y naturaleza en la mitología muisca",
+    author: "François Correa Rubio",
+    year: 2005,
+    type: "artículo académico de acceso abierto (Tabula Rasa 3, pp. 197-222)",
+    url: "https://www.revistatabularasa.org/numero-3/corrrea.pdf",
+    summary:
+      "Analiza la antropogénesis de los caciques de Sogamoso y Ramiriquí dentro del ciclo solar y lunar (pp. 204-205): subraya que la creación humana «fue distinguida por su género» —hombres de tierra amarilla, mujeres de la hierba alta de tronco hueco— y que, según Piedrahita, los dos caciques fundaron linajes «nobles». Sitúa el episodio en un diagrama de parentesco (Sogamoso-Luna, Ramiriquí-Tunja-Sol, Bachué) que lee la relación entre los astros como modelo de las relaciones sociales.",
+    limitation:
+      "Es análisis estructural, no una fuente nueva: trabaja sobre Simón y Piedrahita. Su lectura de los linajes nobles y del género como principio de orden social es del autor. Es otra obra del mismo Correa ya citado en la ficha por El sol del poder (enlace de Google Books), pero ésta tiene texto completo abierto.",
+  }),
+  hoyosTextiles1993: source({
+    title: "Textiles de las culturas muisca y guane [reseña del libro de Gladys Tavera de Téllez y Carmen Urbina Caycedo]",
+    author: "Adriana Muñoz Hoyos",
+    year: 1993,
+    type: "reseña académica (Boletín Museo del Oro 34-35, pp. 195-197)",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7007",
+    summary:
+      "Abre con el relato: Chiminigagua da forma a dos caciques divinos, Iraca y Ramiriquí, que se vuelven Luna y Sol después de fabricar al primer hombre de tierra amarilla y a la primera mujer de «una hierba alta de tallo hueco», que identifica con el junco de las orillas de las lagunas, el mismo que entrelazado forma las esteras y funda el oficio textil femenino. Es la lectura que liga la materia vegetal de las mujeres con el tejido.",
+    limitation:
+      "Es una reseña breve, y el pasaje es una cita de Chaves Mendoza recogida por Tavera y Urbina, no una fuente primaria. Introduce a Chiminigagua como creador de los dos caciques y llama Iraca al de Sogamoso, elementos que Simón no pone en este episodio; la identificación de la hierba con el junco es interpretación moderna. El relato publicado dice «tallos» sin especie y no nombra a Chiminigagua: la diferencia queda anotada, no se corrige.",
+  }),
+  pazHistoria1886: source({
+    title: "Historia del Nuevo Reino de Granada, tomo I",
+    author: "Juan de Castellanos; publícala por primera vez Antonio Paz y Mélia",
+    year: 1886,
+    type: "crónica colonial en verso (edición decimonónica, facsímil digital)",
+    url: "https://archive.org/details/historiadelnuevo01cast",
+    summary:
+      "El Canto primero (pp. 22-70) es la versión más antigua y extensa de la vida de Nemequene: lo llama «penúltimo rey» de Bogotá y traduce su nombre como «hueso de león»; narra su rivalidad heredada con Tunja y con Guatavita y Ubaque, el parlamento a sus principales antes de la campaña, el sacrificio y el augurio del xeque, el estrago en tierras de Turmequé, la batalla del Arroyo de las Vueltas contra el Tunja y Sogamoso, el dardo que lo hiere en la tetilla derecha y que él mismo se arranca, la huida hasta Chocontá, el traslado en andas a Bogotá, la cura de los xeques y la muerte a los tres, cuatro o cinco días; después, las exequias y la sucesión por el sobrino Thisquesuzha.",
+    limitation:
+      "Poema épico de un conquistador escrito hacia 1601, anterior a Simón y a Piedrahita y fuente de ambos: narra con retórica de epopeya y juicio evangelizador («infames ceremonias»). Es la fuente del entierro con mujeres y esclavos vivos drogados que la ficha decide no publicar. No trae el llamado código de leyes. Ojo: contradice el relato publicado en que Nemequene «murió antes de volver al cercado»; en Castellanos llega vivo a Bogotá y muere allí bajo la cura de los xeques.",
+  }),
+  laverdeGuerras1992: source({
+    title: "Guerras y fronteras: los límites territoriales del dominio prehispánico de Tunja",
+    author: "Eduardo Londoño Laverde",
+    year: 1992,
+    type: "artículo académico (Boletín Museo del Oro 32-33, pp. 3-19)",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/view/7010",
+    summary:
+      "Usa la campaña final de Nemequene como prueba de la frontera entre el Zipa y el Tunja: transcribe el pasaje de Castellanos (estrago en tierras de Turmequé, alianza del Tunja con Sogamoso, batalla del Arroyo de las Vueltas), lo contrasta con Piedrahita y Aguado y lo corrobora con archivo: la declaración de 1571 de un indio de Cucunubá sobre Babaguicanguya, que huyó al valle de Tenza «por guerras que tuvo con el cacique Bogotá». Anota que el arroyo de Las Vueltas, en Chocontá, aún se llamaba «la Carnicería» en memoria de esas batallas (Fals Borda). Lee además al Sogamoso como aliado y no como sujeto del Tunja.",
+    limitation:
+      "Es arqueología e historia territorial: no trata las leyes ni la figura legendaria, sólo la guerra con Tunja y su geografía. Resume a Castellanos diciendo que Nemequene «murió en esta refriega», cuando el poema lo hace morir días después en Bogotá. La documentación de archivo prueba guerras entre Bogotá y Tunja, no los detalles de la batalla.",
+  }),
+  murciaNencatacoa2015: source({
+    title: "De Nencatacoa a San Lucas: mantas muiscas de algodón como soporte pictórico en el Nuevo Reino de Granada",
+    author: "Laura Liliana Vargas Murcia",
+    year: 2015,
+    type: "artículo académico de acceso abierto (UCOARTE. Revista de Teoría e Historia del Arte 4, pp. 25-43)",
+    url: "https://journals.uco.es/ucoarte/article/view/9477",
+    summary:
+      "El único estudio que lleva a Nencatacoa en el título. Resume la noticia de Simón —dios de los tejedores de mantas y de las borracheras, que se aparecía como oso o zorra cubierto con manta y gustaba de la chicha— y propone que, tras la Conquista, la gratitud al dios que enseñó a hilar, tejer y pintar pasó a santos patronos de oficio: santa Catalina de Alejandría para los tejedores y san Lucas para los pintores. Distingue además que Simón atribuye la enseñanza del hilado y el tejido a Bochica, no a Nencatacoa.",
+    limitation:
+      "Es historia del arte colonial: su objeto son las mantas como soporte de pintura de caballete, y Nencatacoa ocupa sólo dos pasajes (pp. 25-26). Depende de Simón y no aporta noticia nueva del dios. La sustitución por santa Catalina y san Lucas es una hipótesis de la autora («debió ser manifestada»), paralela a la de San Pascual Bailón que la ficha también da como hipótesis; no la confirma ni la contradice.",
+  }),
 };
 
 /**

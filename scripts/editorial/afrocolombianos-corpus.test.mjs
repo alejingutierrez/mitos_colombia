@@ -83,7 +83,7 @@ test("los seis expedientes Afrocolombianos cumplen la metodología", () => {
       if (url.startsWith("https://")) continue;
       assert.match(
         String(limitation || ""),
-        /sólo por http|solo por http/i,
+        /s[óo]lo (publica )?por http/i,
         `${record.slug}: ${url} no es https y no declara por qué`,
       );
     }

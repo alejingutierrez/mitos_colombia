@@ -111,6 +111,19 @@ export const makaguanSources = {
     limitation:
       "No es una recopilación mitológica: sólo aporta el estado contemporáneo del resguardo, nunca escenas. El servidor de la revista sirve una cadena de certificados incompleta, de modo que algunos clientes la marcan como insegura aunque el navegador la abra sin problema.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  tiradoPalabras2014: source({
+    title: "Palabras propias del pueblo Makaguán. Resguardo Indígena La Esperanza",
+    author: "Claudia Giovanna Rivera Tirado, Francisco Alejandro Forero Yanquén y Juan Sebastián Hurtado Holguín (APOYAR), con la comunidad makaguán de La Esperanza; convenio 115 de 2014 DPS–APOYAR",
+    year: 2014,
+    type: "cartilla comunitaria (glosario de palabras propias)",
+    url: "https://apoyar.org/wp-content/uploads/2024/09/Cartilla-1-Palabras-Propias-La-Esperanza-Noviembre-27_compressed.pdf",
+    summary:
+      "Glosario makaguán levantado con la comunidad de La Esperanza. En la p. 9 registra «Malilua o Malua: según la mitología del pueblo Makaguán así se llamaba el primer hombre de esta etnia»: el único nombre publicado, fuera del corpus de Mattar, para un antepasado del origen makaguán. Trae además samulia (marrano de monte, p. 14 y ss.), una de las presas que cazan los primeros makaguanes en el relato. ISBN 978-958-58710-3-8.",
+    limitation:
+      "Es de otro resguardo (La Esperanza, en Tame), no de El Vigía. No narra el relato del venado: sólo nombra al primer hombre, y ese nombre no aparece en la versión de El Vigía, que habla de cuatro mujeres y cuatro hombres sin nombre. Constancia de una tradición de origen en otro resguardo, no para completar escenas.",
+  }),
 };
 
 /**

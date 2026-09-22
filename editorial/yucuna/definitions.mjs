@@ -56,6 +56,8 @@ const records = [
         limitation:
           "Está en francés y trata de otro ciclo, el de Kawáirimi; no aporta episodios de Kanumá.",
       },
+      "narradorMythe2005",
+      "yucunaMythe2015",
     ],
     title: "Kanumá y el regreso de los alimentos",
     excerpt:
@@ -150,6 +152,10 @@ Lo que identifica a esta versión y no se puede intercambiar es la cadena de cho
         limitation:
           "Está en francés, se sirve en Persée como imágenes de página, y no contiene esta narración ni los nombres de sus personajes.",
       },
+      "yucunaHistoire2015",
+      "robayoIdeologias2012",
+      "huaiHistoria1997",
+      "reichelYukuna1994",
     ],
     title: "El nacimiento de los Matapí / Upichiya",
     excerpt:

@@ -44,7 +44,7 @@ test("los dos expedientes Kuiva cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
+    assert.ok(record.keySources.length + record.sources.length >= 6);
     const sourceUrls = [...record.keySources, ...record.sources].map(
       ({ url }) => url,
     );

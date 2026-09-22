@@ -106,6 +106,8 @@ Ambas memorias muestran una necesidad humana: vincular el orden con una figura c
     "cobo",
     "correa",
     "hammurabi",
+    "pazHistoria1886",
+    "laverdeGuerras1992",
   ],
   researchNotes: `ESTADO: figura histórica con memoria legendaria; se reclasifica editorialmente como historia narrada, no dios ni mito puro.
 

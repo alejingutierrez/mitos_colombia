@@ -93,6 +93,9 @@ La otra gran pieza de madera de estas fiestas es la viga de baile, lladiko o yad
         limitation:
           "Los fragmentos están escogidos por su interés gramatical, no narrativo: aparecen sueltos, de dos o tres líneas, sin el relato completo ni el nombre del narrador en el cuerpo del texto. Los hermanos son Jitoma y Kechatoma, no Monairue Jitoma y Nofïda Jitoma, y no hay rastro de Gaimo, Améori ni Fïzido.",
       },
+      "revisadaJitoma1994",
+      "kneraJaeni2022",
+      "gonzalezMitologia1997",
     ],
     title: "Monairue Jitoma y Nofïda Jitoma",
     summary:

@@ -7,13 +7,17 @@ const keySources = [
     summary:
       "Testimonio colonial más antiguo usado para fijar el núcleo del relato: Iguaque, la mujer llamada Bachué o Farachogua, el niño sin nombre, la descendencia, la exhortación final y el retorno como serpientes.",
     url: "https://archive.org/details/tierrafirmeindias02simbrich/page/n299/mode/2up",
+    limitation:
+      "Es la versión de un franciscano que escribe para refutar: enmarca el relato como «engaño» del demonio y cierra con la orden de adorar a Bachué como diosa, así que la exhortación sobre «el culto de los dioses» y el paso a los sacrificios en el agua son lectura del cronista, no voz muisca. Ocupa un párrafo (pp. 279-280 de la edición de 1882) y no dice de quién lo oyó ni en qué pueblo.",
   },
   {
     title:
       "Medicina Tradicional y Partería de la Comunidad Muisca de Bosa",
     summary:
-      "Memoria viva construida con sabedores, parteras y médicos tradicionales. Vincula a madre Bachué con la ley de origen y con el cuidado del cuerpo, la comunidad, el territorio y los elementos.",
+      "Cartilla de 2022 de la Secretaría Distrital de Salud y el Cabildo Muisca de Bosa, hecha con sabedores, parteras y médicos tradicionales. Vincula a madre Bachué con la ley de origen y con el cuidado del cuerpo, la comunidad, el territorio y los elementos.",
     url: "https://www.saludcapital.gov.co/Documents/com_etnias/Med_Trad_Com_Muisca_Bosa.pdf",
+    limitation:
+      "Es una cartilla de salud pública (Secretaría Distrital de Salud y Cabildo Muisca de Bosa, 2022) sobre partería, no una versión del relato: nombra a Bachué como madre que sale de Iguaque y encarna en la parturienta, pero no cuenta al niño, la descendencia ni el regreso como serpientes. Habla por una comunidad urbana contemporánea en proceso de recuperación, y mete en la misma cosmogonía a la madre abuela Bagué y a Bochica, figuras que las crónicas no unen así.",
   },
   {
     title:
@@ -21,6 +25,8 @@ const keySources = [
     summary:
       "Estudio académico reciente que propone relaciones entre el relato, el paisaje, la Vía Láctea, el Sol, las Pléyades y vasijas muiscas con serpientes. Se presenta como hipótesis interpretativa, no como consenso cerrado.",
     url: "https://doi.org/10.1558/jsa.29614",
+    limitation:
+      "Es un artículo de arqueoastronomía (Journal of Skyscape Archaeology 10.1, pp. 1-46) que propone, no demuestra: el animal jorobado en la Vía Láctea, las alineaciones de El Infiernito con el Sol y las Pléyades y la fecha de 700-1000 d. C. para el origen del mito son hipótesis de los autores. No aporta versión nueva del relato; trabaja sobre las mismas crónicas.",
   },
   {
     title:
@@ -28,13 +34,17 @@ const keySources = [
     summary:
       "Revisión histórica de las fuentes coloniales y de sus categorías. Sustenta una lectura cauta de la supuesta religión muisca homogénea y describe grupos de parentesco matrilineal con liderazgos generalmente masculinos.",
     url: "https://doi.org/10.1017/9781009314046.003",
+    limitation:
+      "El capítulo no menciona a Bachué: sirve para desconfiar de las crónicas, no para contar el mito. Sostiene que la «rica mitología» atribuida a los muiscas fue elaborada por cronistas del XVII —nombra a Simón—, lo que obliga a leer las dos fuentes primarias de esta ficha como construcciones coloniales.",
   },
   {
     title:
       "Fray Alonso de Zamora, Historia de la provincia de San Antonino del Nuevo Reino de Granada (1701)",
     summary:
-      "Segunda crónica colonial contrastada para el núcleo narrativo. Nombra a la mujer Bacuche, conserva al niño de tres años, los partos múltiples, la despedida ante la descendencia y el ingreso a la laguna como serpientes.",
+      "Segunda crónica colonial, dominicana, citada por la historiografía como la que llama Bacuche a la mujer de Iguaque y repite el núcleo de Simón.",
     url: "https://www.cervantesvirtual.com/obra/historia-de-la-provincia-de-san-antonino-del-nuevo-reino-de-granada-tomo-i-1072975/",
+    limitation:
+      "Crónica dominicana de 1701, casi un siglo posterior a Simón y probablemente dependiente de él; es historia de la orden, no etnografía, y el pasaje de Bacuche es una digresión dentro de ella. El enlace lleva al tomo I de la edición digital, sin capítulo ni página, y el sitio no deja abrir el texto: el pasaje no está a la vista.",
   },
 ];
 
@@ -42,8 +52,10 @@ const sources = [
   {
     title: "Santuario de Fauna y Flora Iguaque — Parques Nacionales Naturales",
     summary:
-      "Contexto territorial actual de la laguna sagrada: ubicación, coordenadas oficiales, ecosistemas de páramo y bosque altoandino, función hídrica y memoria cultural asociada a Bachué.",
+      "Contexto territorial actual de la laguna sagrada: ubicación, extensión, ecosistemas de páramo y bosque altoandino, función hídrica y memoria cultural asociada a Bachué.",
     url: "https://www.parquesnacionales.gov.co/nuestros-parques/santuario-de-fauna-y-flora-iguaque/",
+    limitation:
+      "Es una página institucional de turismo y conservación: repite la leyenda en una frase («madre de la humanidad») sin fuente y no aporta nada al relato; vale sólo para el territorio (3.599 m, 6.889 ha, Chíquiza-Arcabuco-Villa de Leyva, acueductos). No publica coordenadas.",
   },
   {
     title:
@@ -51,30 +63,40 @@ const sources = [
     summary:
       "Evidencia histórica de rasgos matrilineales en herencias y sucesión de cacicazgos. Ayuda a no confundir matrilinealidad con matriarcado.",
     url: "https://revistas.unal.edu.co/index.php/achsc/article/view/34162",
+    limitation:
+      "Es un artículo sobre 89 testamentos indígenas de Santafé (Anuario Colombiano de Historia Social y de la Cultura), no sobre mitología: no menciona a Bachué ni a Iguaque. Documenta familias muiscas ya coloniales y urbanas, así que sirve para matizar lo de «madre del pueblo», no para leer el relato.",
   },
   {
     title: "Pueblo Muisca — Instituto Colombiano de Antropología e Historia",
     summary:
       "Síntesis institucional sobre territorio, actividades históricas y presencia contemporánea del pueblo muisca a través de sus cabildos y procesos de recuperación cultural y lingüística.",
     url: "https://colecciones.icanh.gov.co/articulos/pueblos/MUISCA.php",
+    limitation:
+      "Es una ficha de un párrafo de la colección etnográfica del ICANH (curaduría de Margarita Reyes Suárez): no nombra a Bachué, a Iguaque ni ningún relato, y la única figura mítica que menciona es Bochica. Sólo sostiene el dato de los cabildos de Suba, Bosa y Engativá y la recuperación de la lengua.",
   },
   {
-    title: "Lago Titicaca — Portal del Inca Garcilaso, Biblioteca Virtual Miguel de Cervantes",
+    title: "Lago Titicaca — pie de imagen del portal del Inca Garcilaso, Biblioteca Virtual Miguel de Cervantes",
     summary:
-      "Referencia para comparar, sin afirmar parentesco directo, el surgimiento lacustre de Manco Cápac y Mama Ocllo y su papel como pareja fundadora.",
+      "Pie de foto de la estatua de Manco Cápac; sirve para comparar, sin afirmar parentesco directo, el surgimiento lacustre de Manco Cápac y Mama Ocllo y su papel como pareja fundadora.",
     url: "https://www.cervantesvirtual.com/portales/inca_garcilaso_de_la_vega/imagenes_motivos/imagen/imagenes_motivos_01_inca_garcilaso_lago/",
+    limitation:
+      "No es texto del Inca Garcilaso: es el pie de una foto de la estatua de Manco Cápac a orillas del Titicaca, de dos líneas y con crédito a un tercero («Amautacuna de Historia»). Es comparativa, de otro pueblo andino, y no dice nada de los muiscas; el relato del Inca está en los Comentarios reales, lib. I, cap. XV.",
   },
   {
     title: "Ovidio, Metamorfosis I: Deucalión y Pirra — University of Virginia",
     summary:
       "Fuente clásica para contrastar otra pareja que repuebla el mundo. La comparación destaca diferencias de contexto: un nuevo comienzo después del diluvio, no una aparición primordial desde una laguna.",
     url: "https://ovid.lib.virginia.edu/book1.html",
+    limitation:
+      "Es comparativa y de otra tradición: la Roma augustea, en la edición ilustrada de 1563 con traducción inglesa de Kline. Deucalión y Pirra repueblan tras un diluvio arrojando piedras, no salen del agua ni se vuelven serpientes; sirve sólo para marcar la diferencia.",
   },
   {
     title: "Stories of the Creation of Japan — Library of Congress",
     summary:
       "Referencia institucional sobre Izanagi e Izanami como pareja creadora de las islas y deidades de Japón; sirve para comparar la función de las parejas primordiales sin borrar las diferencias culturales.",
     url: "https://www.loc.gov/exhibits/world/accounts.html#obj13",
+    limitation:
+      "Es la ficha de exposición de un libro japonés de 1827 (Hosoda Tominobu, Kamiyo no masagoto tokiwagusa), no un estudio: un párrafo que resume a Izanagi e Izanami. Comparativa, de otra tradición, y sólo se consultó esa ficha.",
   },
 ];
 

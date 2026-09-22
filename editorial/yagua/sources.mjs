@@ -197,6 +197,41 @@ export const yaguaSources = {
     limitation:
       "Es una entrada estrictamente léxica: no documenta creencia, relato ni región amazónica, y su acepción zoológica no coincide necesariamente con el murciélago que la gente del río tiene en mente.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  graneroBultos2010: source({
+    title: "Bultos, selladores y gringos alados: percepciones indígenas de la violencia capitalista en la Amazonía peruana",
+    author: "Fernando Santos Granero y Frederica Barclay, en Anthropologica 28 (supl. 1): 21-52, Pontificia Universidad Católica del Perú",
+    year: 2010,
+    type: "artículo de revista antropológica",
+    url: "https://revistas.pucp.edu.pe/index.php/anthropologica/article/view/1369",
+    summary:
+      "Documenta el pariente más cercano de la figura que describe la ficha: los «gringos alados» de la selva central peruana, hombres y a veces mujeres que vuelan de noche «gracias a sus alas de acero» o a motorcitos amarrados al estómago, emiten luces multicolores, ciegan a sus víctimas con una linterna potente y raptan gente para sacarle el corazón y otros órganos que envían a Estados Unidos. Los sitúa como continuación de los pishtacos y pelacaras «con apariencia de gringos» que circularon en la Amazonía en los años ochenta (Roe, Brown, Gow, Santos Granero). Sostiene, con fuente propia y abierta, la cadena pishtaco → pelacara → ser alado tecnológico que Similitudes traza, y la figura humana con alas que vuela de noche.",
+    limitation:
+      "Es del lado peruano y de otros pueblos (asháninka, awajún, wampis), no del Trapecio ni de los yagua; no usa las palabras cortacabezas ni chimbilaco. Lee los relatos como respuesta a la violencia extractiva de los gobiernos peruanos de 2006-2010: esa lectura es de los autores.",
+  }),
+  andinosBrujeria2025: source({
+    title: "Brujería capitalista y turistas pishtaco. Tensiones ocultas en torno al turismo de ayahuasca entre los shipibo de San Francisco (Amazonía peruana)",
+    author: "Doriane Sabine Slaghenauffi (Instituto Francés de Estudios Andinos), en Anthropologica 43 (55): 26-49",
+    year: 2025,
+    type: "artículo de revista antropológica con trabajo de campo",
+    url: "https://revistas.pucp.edu.pe/index.php/anthropologica/article/view/30592",
+    summary:
+      "Registra, entre los shipibo del Ucayali, la asimilación de los turistas a «la figura quimérica del pishtaco o pelacara», que es el nudo con que cierra el relato de la ficha (los cortacabezas son de los turistas o son los turistas). Describe al pishtaco como un hombre blanco que vuela con dispositivos tecnológicos, se anuncia por una luz como una estrella que baja, paraliza a la víctima con un láser, lleva un radar capaz de detectar si el indígena va armado y le saca los órganos para venderlos; y el encuentro típico es el de «un hombre solitario que sale de noche a pescar al lago». Fecha su llegada a la Amazonía peruana en los años sesenta, con los misioneros del ILV que llegaban en avión.",
+    limitation:
+      "Es peruana y shipibo-konibo, no yagua ni del Trapecio, y su tema es el turismo de ayahuasca, no el turismo fluvial de Leticia. No usa las palabras cortacabezas ni chimbilaco. Es traducción de un artículo publicado antes en francés en el Journal de la Société des Américanistes.",
+  }),
+  cagliariDesangrar2019: source({
+    title: "Desangrar. Violencia y relaciones inter-étnicas en algunos relatos de la Amazonía peruana",
+    author: "Stefano Pau (Università di Cagliari), en Mitologías hoy 19: 63-73, Universitat Autònoma de Barcelona",
+    year: 2019,
+    type: "artículo de revista con relatos orales recogidos en campo (2011-2013)",
+    url: "https://revistes.uab.cat/mitologias/article/view/v19-pau",
+    summary:
+      "Sostiene el eslabón amazónico de la genealogía que la ficha traza en Similitudes: estudia la figura que en la Amazonía peruana se llama pelacara, «sacacara, sacamanteca, sacaojos, cortacabezas o mariluluera», la presenta como la forma amazónica del pishtaco andino, fecha sus primeras referencias antropológicas en los años ochenta y reúne los rumores sobre blancos que sacan grasa o cuerpos para hacer funcionar automóviles y aviones (Gow entre los piro, Weiss entre los asháninka, los gringos del ILV). Cita también los «gringos alados» de Santos Granero y Barclay, que es la imagen del ser humano con alas que la ficha describe.",
+    limitation:
+      "Es del lado peruano (Loreto, kukama y otros pueblos) y no menciona el Trapecio colombiano, a los yagua ni la palabra chimbilaco. Su tema central es el tigre negro o yanapuma y el paralelo con la extracción del caucho; el pelacara es su punto de partida, no su objeto único.",
+  }),
 };
 
 /**

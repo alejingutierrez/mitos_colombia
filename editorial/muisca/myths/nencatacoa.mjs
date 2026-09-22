@@ -72,7 +72,16 @@ En la mitología griega, Dioniso es el dios del vino, de la fiesta y del éxtasi
     "Fotografía editorial horizontal exacta 16:9. Escena principal: una jornada comunitaria de construcción y tejido avanza en el altiplano; en primer plano hay una pequeña figura animal cubierta con manta, mientras personas diversas levantan una casa. Estilo studioPaperMaquette aprobado: maqueta física hecha a mano con papel cortado, cartón y fibras naturales, fotografiada de frente; relieve bajo, bordes visibles, pequeñas imperfecciones humanas, micro-sombras reales e iluminación sobria. Fantasía anclada en el paisaje del altiplano cundiboyacense. Composición panorámica de un solo tableau; los personajes y objetos esenciales permanecen dentro del 80 % central. Sin texto ni logotipos; sin CGI, render digital ni apariencia de 3D sintético; sin coronas, tronos o templos europeos; sin pirámides, penachos ni iconografía mesoamericana; sin símbolos espirituales inventados; sin dios-zorro gigante, borrachera, templo clásico, adoración o animal realista dominante.",
   imageUrl:
     "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/nencatacoa-1784766069513.jpg",
-  sourceKeys: ["simon", "villa", "mantas", "banrepMuisca", "cobo", "planBosa", "dionysus"],
+  sourceKeys: [
+    "simon",
+    "villa",
+    "mantas",
+    "banrepMuisca",
+    "cobo",
+    "planBosa",
+    "dionysus",
+    "murciaNencatacoa2015",
+  ],
   researchNotes: `ESTADO: ficha reescrita con núcleo documentado en crónica colonial y recreación literaria declarada.
 
 NÚCLEO DOCUMENTADO: dios de las borracheras, pintores y tejedores de mantas; ayuda a traer arrastrando los maderos gruesos para los edificios; se aparece en figura de oso cubierto con manta y la cola de fuera; baila y canta con la gente; no le hacían ofrendas porque le bastaba hartarse de chicha; otros lo llamaban Fo, que quiere decir zorra.
