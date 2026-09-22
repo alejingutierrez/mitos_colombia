@@ -430,6 +430,7 @@ esa constancia se escribe en su dossier.
 | Metodología general | [`metodologia-revision-mitos.md`](metodologia-revision-mitos.md) |
 | Proceso general y estado | [`spec-reescritura-y-fuentes.md`](spec-reescritura-y-fuentes.md) |
 | **Brief de redacción de este bloque** | [`brief-mestizos-y-mixtos.md`](brief-mestizos-y-mixtos.md) |
+| **Dónde vamos: el tablero** | [`estado-mestizos-y-mixtos.md`](estado-mestizos-y-mixtos.md) |
 | Receta de fuentes al módulo | [`receta-fuentes-al-modulo.md`](receta-fuentes-al-modulo.md) |
 | Kit | `scripts/editorial/enriquecimiento/` |
 | Módulos | `editorial/<ciclo>/` |

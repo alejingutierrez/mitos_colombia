@@ -233,6 +233,11 @@ sin revertir la portada y reclasificar un mito sin despublicarlo.
 
 ## Lo que queda: mestizos y mixtos
 
+> **El estado al día de este bloque vive en
+> [`estado-mestizos-y-mixtos.md`](estado-mestizos-y-mixtos.md)**: qué está
+> publicado, qué está listo sin publicar, qué decisiones esperan y qué falta.
+> Al 2026-09-21: 70 publicadas de 253.
+
 Los 253 restantes tienen su propio documento, porque no son comunidades sino
 dos cajones administrativos y el proceso cambia: la unidad es el ciclo, la
 prensa local entra como fuente, el mínimo sube a 8 fuentes por ficha y hay un
