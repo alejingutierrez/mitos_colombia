@@ -143,7 +143,7 @@ function abrirPick(src) {
 
   // A y B: varargs.
   const reVarargs = new RegExp(
-    String.raw`export function (pick\w+Sources)\(\.\.\.keys\) \{\s*return (?:\[\.\.\.new Set\(keys\)\]|keys)` +
+    String.raw`export function (pick\w*Sources)\(\.\.\.keys\) \{\s*return (?:\[\.\.\.new Set\(keys\)\]|keys)` +
       CUERPO_MAP +
       String.raw`\s*\}`,
     "g",
@@ -155,7 +155,7 @@ function abrirPick(src) {
 
   // C: lista escrita dentro, sin argumentos.
   const reLista = new RegExp(
-    String.raw`export function (pick\w+Sources)\(\) \{\s*const keys = \[([\s\S]*?)\];\s*return keys` +
+    String.raw`export function (pick\w*Sources)\(\) \{\s*const keys = \[([\s\S]*?)\];\s*return keys` +
       CUERPO_MAP +
       String.raw`\s*\}`,
     "g",
@@ -175,7 +175,7 @@ function abrirPick(src) {
   // extrema del reparto en bloque —la ficha no elige nada— y la usaba el
   // dossier de Juan Lara.
   const reTodo = new RegExp(
-    String.raw`export function (pick\w+Sources)\(\) \{\s*return Object\.values\((\w+)\);\s*\}`,
+    String.raw`export function (pick\w*Sources)\(\) \{\s*return Object\.values\((\w+)\);\s*\}`,
     "g",
   );
   src = src.replace(reTodo, (_todo, nombre, pool) => {

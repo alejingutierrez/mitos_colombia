@@ -487,14 +487,102 @@ export const muiscaSources = {
     limitation:
       "El castigo de Atlas es cósmico y posterior a una derrota de dioses; el de Chibchacum explica los temblores de una tierra concreta.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  piedrahitaHistoria1688: source({
+    title: "Historia general de las conquistas del Nuevo Reyno de Granada",
+    author: "Lucas Fernández de Piedrahita",
+    year: 1688,
+    type: "crónica colonial (facsímil)",
+    url: "https://archive.org/details/historiagenerald00fern",
+    summary:
+      "Registra el pez negro con cabeza de buey del lago de Tota, citado por Quesada y asociado al demonio por los indígenas.",
+    limitation:
+      "Cubre solo el estrato colonial del ciclo; no narra el mito de Busiraco.",
+  }),
+  calderaConcepcion2008: source({
+    title: "Concepción sagrada de la naturaleza en la mítica muisca",
+    author: "Luis Alfredo Bohórquez Caldera",
+    year: 2008,
+    type: "artículo académico (Franciscanum 149)",
+    url: "https://www.redalyc.org/pdf/3435/343529807006.pdf",
+    summary:
+      "Trata a Tota como laguna sagrada y los intentos de desagüe, citando a Camargo Pérez y a Pedro Simón.",
+    limitation:
+      "No relata la leyenda de Busiraco; solo el estatuto sagrado del lago.",
+  }),
+  tiempoLaguna2023: source({
+    title: "Laguna de Tota: descubre el lago más grande de Colombia",
+    author: "Pamela Avendaño Parra (El Tiempo)",
+    year: 2023,
+    type: "divulgación periodística",
+    url: "https://www.eltiempo.com/colombia/otras-ciudades/laguna-de-tota-descubre-el-lago-mas-grande-de-colombia-758997",
+    summary:
+      "Cuenta la variante del origen por la múcura de agua entregada a una familia indígena.",
+    limitation:
+      "Registra una versión distinta de la del ciclo Busiraco.",
+  }),
+  tadeoviaje: source({
+    title: "Un viaje al lago de Tota",
+    author: "Yeison Alejandro Naranjo Molano (U. Tadeo)",
+    type: "crónica universitaria",
+    url: "https://www.utadeo.edu.co/es/articulo/crossmedialab/277626/un-viaje-al-lago-de-tota",
+    summary:
+      "Recoge la leyenda local de la cantina de agua sagrada que al derramarse formó el lago.",
+    limitation:
+      "Variante etiológica distinta y sin filiación bibliográfica.",
+  }),
+  albaImpresiones1871: source({
+    title: "Impresiones de un viaje a América: Sogamoso, La Roma de los Chibchas",
+    author: "José María Gutiérrez de Alba",
+    year: 1871,
+    type: "fuente primaria digitalizada (Banco de la República)",
+    url: "https://www.banrepcultural.org/impresiones-de-un-viaje/index.php?fltcats%5B%5D=Ciudades%20y%20pueblos&id=43&r=episodios%2Fview",
+    summary:
+      "Describe Sugamuxi/Iracá, el iraca y el templo del Sol, contexto sagrado del conjuro de Suamox contra Busiraco.",
+    limitation:
+      "Trata la ciudad sagrada, no el lago ni la leyenda de su origen.",
+  }),
+  simonNoticias1881: source({
+    title: "Noticias historiales de las conquistas de Tierra Firme en las Indias Occidentales",
+    author: "Fray Pedro Simón",
+    year: 1881,
+    type: "crónica (facsímil digital)",
+    url: "https://archive.org/details/pedro_simon-noticias_historiales_1",
+    summary:
+      "Crónica fuente de las costumbres muiscas, incluida la restricción del consumo de venado a los caciques.",
+    limitation:
+      "Crónica general; no nombra a Toquechá/Toquilla.",
+  }),
 };
 
-export function pickSources(...keys) {
-  return keys.map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = muiscaSources[key];
     if (!selected) {
-      throw new Error(`Fuente muisca desconocida: ${key}`);
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente muisca desconocida: ${visto}`);
     }
-    return selected;
-  });
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }
