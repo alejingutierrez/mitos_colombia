@@ -37,6 +37,7 @@ export function buildCaribeMestizoFinalMyth(input) {
     // Relato a 90 palabras cuando la fuente primaria no da para más, y la razón
     // viaja con la ficha para que se pueda auditar.
     ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
+    ...(input.fuentesAgotadas ? { fuentesAgotadas: input.fuentesAgotadas } : {}),
     excerpt: input.excerpt,
     seo_title: input.seoTitle,
     seo_description: input.seoDescription,

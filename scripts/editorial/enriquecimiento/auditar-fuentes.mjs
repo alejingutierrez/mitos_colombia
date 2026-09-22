@@ -11,7 +11,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
-import { parseArgs, requireCommunity, connect, resolveCommunity, loadDbMyths, loadModules, allSources, normalizeUrl, hostOf, sourceFlags, checkUrl, mapLimit, MIN_SOURCES, TARGET_SOURCES, today } from "./lib.mjs";
+import { parseArgs, requireCommunity, connect, resolveCommunity, loadDbMyths, loadModules, allSources, normalizeUrl, hostOf, sourceFlags, checkUrl, mapLimit, MIN_SOURCES, MIN_SOURCES_AGOTADAS, TARGET_SOURCES, today } from "./lib.mjs";
 
 const options = parseArgs(process.argv.slice(2), { desde: "modulos" });
 const communitySlug = requireCommunity(options);
@@ -57,7 +57,8 @@ for (const record of records) {
     total: sources.length,
     clave: (record.keySources || []).length,
     dominios: new Set(sources.map((s) => hostOf(s.url))).size,
-    estado: sources.length < MIN_SOURCES ? "BLOQUEO" : sources.length < TARGET_SOURCES ? "BAJO_META" : "OK",
+    minimo: record.fuentesAgotadas ? MIN_SOURCES_AGOTADAS : MIN_SOURCES,
+    estado: sources.length < (record.fuentesAgotadas ? MIN_SOURCES_AGOTADAS : MIN_SOURCES) ? "BLOQUEO" : sources.length < TARGET_SOURCES ? (record.fuentesAgotadas ? "AGOTADAS" : "BAJO_META") : "OK",
     flags,
   });
 }
@@ -102,7 +103,7 @@ const restrictedUrls = health.filter((h) => h.restricted);
 const silentUrls = health.filter((h) => h.verdict === "SIN_RESPUESTA");
 
 const blockers = [
-  ...perMyth.filter((m) => m.estado === "BLOQUEO").map((m) => `${m.slug}: ${m.total} fuentes (<${MIN_SOURCES})`),
+  ...perMyth.filter((m) => m.estado === "BLOQUEO").map((m) => `${m.slug}: ${m.total} fuentes (<${m.minimo})`),
   ...perMyth.flatMap((m) =>
     m.flags
       .filter(

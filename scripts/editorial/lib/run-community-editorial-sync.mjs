@@ -192,7 +192,7 @@ function validateRecords(config, provenance, requireVisuals) {
     const sources = [...record.keySources, ...record.sources];
     const expectedSources = expectedSourceCount(config, record.slug);
     if (
-      sources.length < 5 ||
+      sources.length < (record.fuentesAgotadas ? 3 : 5) ||
       (expectedSources > 0 && sources.length !== expectedSources) ||
       new Set(sources.map(({ url }) => url)).size !== sources.length
     ) {

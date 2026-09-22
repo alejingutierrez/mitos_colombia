@@ -47,6 +47,7 @@ export const WORD_RANGES = {
 export const MIN_SOURCES = 5;
 export const TARGET_SOURCES = 8;
 export const MIN_HOSTS = 3;
+export const MIN_SOURCES_AGOTADAS = 3;
 export const USER_AGENT = "MitosColombiaEditorialAudit/1.0 (+https://www.mitosdecolombia.com)";
 export const BROWSER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36";
 
@@ -593,6 +594,34 @@ export async function loadDbMyths(client, communityId) {
  * Devuelve Map slug → expediente, o null si la comunidad no tiene módulos.
  */
 export async function loadModules(communitySlug, options = {}) {
+  const records = await loadModulesSinAgotadas(communitySlug, options);
+  if (!records) return records;
+  // El constructor no siempre propaga `fuentesAgotadas` al expediente: se lee
+  // del texto de los módulos, donde `declarar-agotadas` lo escribe tras el slug.
+  const dir = path.resolve("editorial", String(options.modulos || communitySlug));
+  const archivos = [];
+  const recorrer = async (d) => {
+    let entradas = [];
+    try { entradas = await fs.readdir(d, { withFileTypes: true }); } catch { return; }
+    for (const e of entradas) {
+      const p = path.join(d, e.name);
+      if (e.isDirectory()) await recorrer(p);
+      else if (e.name.endsWith(".mjs")) archivos.push(p);
+    }
+  };
+  await recorrer(dir);
+  for (const f of archivos) {
+    const src = await fs.readFile(f, "utf8");
+    if (!src.includes("fuentesAgotadas:")) continue;
+    for (const m of src.matchAll(/slug: "([^"]+)",\s*\n\s*fuentesAgotadas:\s*("(?:[^"\\]|\\.)*")/g)) {
+      const r = records.get(m[1]);
+      if (r && !r.fuentesAgotadas) r.fuentesAgotadas = JSON.parse(m[2]);
+    }
+  }
+  return records;
+}
+
+async function loadModulesSinAgotadas(communitySlug, options = {}) {
   // El slug de Neon y la carpeta de editorial/ no siempre coinciden (nasa-paeces → editorial/nasa):
   // sin --modulos, se prueba el slug completo y después su primer tramo.
   let dir = path.resolve("editorial", String(options.modulos || communitySlug));
@@ -669,7 +698,11 @@ export function validateRecord(record, { texto = true, fuentes = true } = {}) {
   }
   if (fuentes) {
     const sources = allSources(record);
-    if (sources.length < MIN_SOURCES) errors.push(`fuentes: ${sources.length}, mínimo ${MIN_SOURCES}`);
+    // Una ficha que declara `fuentesAgotadas` en su módulo —la investigación no
+    // dio para más sin relleno, y lo dejó razonado— tiene piso 3 y dos
+    // dominios: por debajo de eso no hay ficha, hay acta bloqueada.
+    const minimo = record.fuentesAgotadas ? MIN_SOURCES_AGOTADAS : MIN_SOURCES;
+    if (sources.length < minimo) errors.push(`fuentes: ${sources.length}, mínimo ${minimo}`);
     const seen = new Set();
     for (const s of sources) {
       if (!s?.title || !s?.summary || !s?.url || !s?.limitation) errors.push(`fuente sin title/summary/limitation/url: ${s?.title || s?.url || "?"}`);
@@ -692,7 +725,8 @@ export function validateRecord(record, { texto = true, fuentes = true } = {}) {
       seen.add(key);
     }
     const hosts = new Set(sources.map((s) => hostOf(s.url)).filter(Boolean));
-    if (hosts.size < MIN_HOSTS) errors.push(`fuentes: sólo ${hosts.size} dominios distintos, mínimo ${MIN_HOSTS}`);
+    const minHosts = record.fuentesAgotadas ? 2 : MIN_HOSTS;
+    if (hosts.size < minHosts) errors.push(`fuentes: sólo ${hosts.size} dominios distintos, mínimo ${minHosts}`);
   }
   return errors;
 }

@@ -466,6 +466,107 @@ export const caldasMestizoSources = {
     limitation:
       "Es otra tradición; la comparación es de función, no de parentesco.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  hernandezAnimas2012: source({
+    title: "Ánimas y pactos diabólicos: un regaño platónico a los borrachos e idólatras de Santander desde la mitología en prosa",
+    author: "Farouk Caballero Hernández",
+    year: 2012,
+    type: "artículo (Rastros Rostros 14 (27), pp. 69-74, Universidad Cooperativa de Colombia)",
+    url: "https://revistas.ucc.edu.co/index.php/ra/article/download/445/450",
+    summary:
+      "Analiza el cuento con el libro de 1936 a la vista, dando sus folios (pp. 130-137), y lo lee como mitología en prosa de Santander junto a los relatos de pactos diabólicos.",
+    limitation:
+      "Estudio breve; su paginación no concilia con la de Villa Posse.",
+  }),
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Useche Toledo, González González, Guzmán Ruiz y Tunarrosa Echeverría (SENA)",
+    year: 2022,
+    type: "libro de memoria oral (SENA, La Dorada)",
+    url: "https://repositorio.sena.edu.co/bitstream/handle/11404/8024/Remembranzas_de_mis_abuelos.pdf?sequence=4&isAllowed=y",
+    summary:
+      "Recoge en Manzanares, con los narradores Anadelia Galvis y Hernán Aristizábal, el Ánima Sola del alto oriente caldense (pp. 21-25), la devoción que el cuento nombra al abrir.",
+    limitation:
+      "Es la tradición caldense de 2022, no el relato santandereano de Otero.",
+  }),
+  gutenbergEnglish1890: source({
+    title: "English Fairy Tales",
+    author: "Joseph Jacobs (Project Gutenberg)",
+    year: 1890,
+    type: "recopilación de cuentos",
+    url: "https://www.gutenberg.org/ebooks/7439",
+    summary:
+      "Trae el «Jack and the Beanstalk» con la fórmula del gigante que olfatea al escondido, «Fee-fi-fo-fum, I smell the blood of an Englishman», el paralelo de Similitudes.",
+    limitation:
+      "Cuento inglés; comparación de fórmula, no de filiación.",
+  }),
+  carrasquillamarquesa1928: source({
+    title: "La marquesa de Yolombó",
+    author: "Tomás Carrasquilla",
+    year: 1928,
+    type: "novela (edición digital de la Biblioteca Básica de Cultura Colombiana, Biblioteca Nacional)",
+    url: "https://siise.bibliotecanacional.gov.co/BBCC/Documents/View/208",
+    summary:
+      "Catálogo de los seres del monte antioqueño —Patetarro, Madremonte, Bracamonte— que Similitudes pone junto al hombre peludo de Supía.",
+    limitation:
+      "Es novela; no nombra al Uñón.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Inventa, bajo el nombre de El Patón, un gigante peludo del monte antioqueño que ataca a caminantes (pp. 67-68), la figura que compara Similitudes.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: su Patón es una noticia falsa, no un registro.",
+  }),
+  mejiaDiseno2012: source({
+    title: "Diseño de pruebas objetivas para evaluar competencias en el área de castellano para el grado tercero de la educación básica primaria",
+    author: "Luis Arturo Aguilar Mejía y Silvia Rosa Sierra Calvo (Universidad del Norte)",
+    year: 2012,
+    type: "trabajo de grado (Maestría en Educación)",
+    url: "https://manglar.uninorte.edu.co/bitstream/handle/10584/7607/luis%20arturo.pdf",
+    summary:
+      "Usa como texto de prueba escolar un relato del Patón firmado «Leyenda popular», el gigante del monte que compara Similitudes.",
+    limitation:
+      "Tesis de evaluación escolar en Barranquilla: el texto no tiene procedencia ni narrador y sólo prueba su circulación en materiales de aula.",
+  }),
+  aragonvienesf: source({
+    title: "Que viene el coco (Los Caprichos, n.º 3)",
+    author: "Fundación Goya en Aragón",
+    year: "s. f.",
+    type: "ficha de obra (grabado de Goya, 1799)",
+    url: "https://fundaciongoyaenaragon.es/eng/obra/que-viene-el-coco/871",
+    summary:
+      "Ficha del tercer Capricho de Goya, «Que viene el coco» (1799): la madre y los niños aterrados ante una figura envuelta, leída como crítica de la crianza por el miedo, el paralelo de Similitudes.",
+    limitation:
+      "Es el coco español; comparación de función.",
+  }),
+  escondidosespantosf: source({
+    title: "El espanto de la Mano Peluda",
+    author: "Javier Ocampo López (en Tunja Ciudad de Tesoros Escondidos)",
+    year: "s. f.",
+    type: "texto divulgativo",
+    url: "https://www.tunjatesorosescondidos.com/index.php/escudo-de-tunja/193-el-espanto-de-la-mano-peluda",
+    summary:
+      "Texto firmado por Javier Ocampo López, «El espanto de la Mano Peluda», ambientado en el convento de agustinos de la Candelaria y las casas de Tunja, la versión tunjana que citan Versiones y Similitudes.",
+    limitation:
+      "Portal divulgativo sin edición ni fecha; es el único texto abierto de esa variante.",
+  }),
+  rodriguezSalamina2016: source({
+    title: "Salamina repasa el legado de Rodrigo Jiménez Mejía",
+    author: "Luis Fernando Rodríguez, La Patria",
+    year: 2016,
+    type: "prensa",
+    url: "https://archivo.lapatria.com/entretenimiento/salamina-repasa-el-legado-de-rodrigo-jimenez-mejia-281961",
+    summary:
+      "Nota de La Patria sobre Rodrigo Jiménez Mejía, «autor de Tierrabuena», nacido en Salamina en 1904, líder salamineño.",
+    limitation:
+      "Es sobre el autor, no sobre Clementina.",
+  }),
 };
 
 export const caldasMestizoSourceKeysBySlug = {

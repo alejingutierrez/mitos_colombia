@@ -3,29 +3,86 @@ import { defineCaldasMestizoMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineCaldasMestizoMyth({
     slug: "cuento-de-animas",
-    title: "Cuento de ánimas: Laurián y Ñuá Ulogia",
+    fuentesAgotadas: "Es un cuento firmado de Otero D'Costa (Leyendas, 1936): sólo se lee en Villa Posse II, y la Revista UPB de 1964 no lo trae. No hay otra versión abierta de los episodios de Laurián y de Ulogia.",
+    sourceKeys: [
+      {
+        key: "compiladoraMitos1993",
+        summary:
+          "Texto del cuento de Otero D'Costa (Leyendas, 1936) en la sección 17, pp. 56-59: las ánimas de Caldas y de Santander, Laurián y la procesión del alto de Miradores, y Ñuá Ulogia y la mortaja de Jovita.",
+        limitation:
+          "Villa Posse lo presenta como relato oído y reelaborado; es un cuento firmado.",
+      },
+      "hernandezAnimas2012",
+      "toledoRemembranzas2022",
+      "gutenbergEnglish1890",
+      {
+        key: "camargoHacia2015",
+        summary:
+          "Estudio de la obra de Otero D'Costa y de sus Leyendas.",
+        limitation:
+          "No analiza este cuento.",
+      },
+      {
+        key: "republicacoleccionsf",
+        summary:
+          "Presenta al autor como historiador y coleccionista de documentos coloniales.",
+      },
+    ],
+    title: "Cuento de ánimas",
     excerpt:
       "Dos relatos de Otero D’Costa hacen aparecer ánimas a Laurián y Ñuá Ulogia para imponer disciplina católica en Santander.",
     tags: ["ánimas", "moralidad", "memoria", "miedo"],
-    mito: `Enrique Otero D’Costa reunió bajo el mundo de las ánimas dos episodios situados en Rionegro, Santander. El primero sigue a Laurián, campesino trabajador y buen cantor que cada lunes bajaba al mercado. Compraba las provisiones de su casa, pero en el regreso se detenía en las tiendas del camino y gastaba parte del dinero bebiendo guarapo.
+    mito: `En las tierras de Caldas las ánimas benditas asustan a los niños y a las viejas. Allá cuentan del Ánima Sola y de la Pata-Sola, y de ánimas que despertaron a medianoche a la cocinera Mariejesús Cañas para que se levantara a rezar las oraciones que esa noche, enferma, había dejado de rezar. En las montañas de Santander son otra cosa: traviesas, alegres, a veces bromistas, viven entre los campesinos y, si los molestan, es para corregirlos, como madres cuidadosas. De ellas se habla junto al fogón en las noches de invierno, cuando la lluvia se desgaja sobre los montes.
 
-Una noche de noviembre, Laurián volvía alegre y entonaba coplas. La oscuridad cambió cuando una procesión fúnebre avanzó por el camino. Él intentó ocultarse, pero las ánimas advirtieron la presencia de un cuerpo vivo. Lo rodearon, lo golpearon y lo lanzaron por el aire mientras lo reprendían por su embriaguez.
+Laurián era buen trabajador, pero a su familia le servía de poco, porque cada lunes bajaba a la feria de Rionegro y, hecho el mercado, se gastaba lo que le sobraba en las tiendas del camino. Allí se estaba tomando totumas de guarapo con tres o cuatro amigotes, al son de los tiples y las maracas.
 
-Al día siguiente, la familia salió a buscarlo. Lo encontró en la copa de un árbol, confundido y sin poder explicar con calma cómo había llegado hasta allí. Durante varios días permaneció trastornado. Según el cuento, una promesa al Señor de los Milagros de Girón le devolvió la salud y lo apartó para siempre de la bebida. El narrador cierra el episodio dirigiendo la advertencia a quienes bebían como Laurián.
+Una noche de noviembre volvía a su cabaña con el hatillo del mercado a cuestas y una borrachera de tamaño heroico. Había buena luna, cantaban las ranas en los pantanos, y Laurián, que era un poco trovero, se puso a cantar:
 
-El segundo relato presenta a Ñuá Ulogia, costurera que atendía a la gente del mercado los lunes. Una noche de domingo siguió trabajando hasta escuchar voces que rezaban el rosario. Por la ventana vio otra procesión de ánimas. Entre ellas reconoció a la difunta Jovita, retrasada porque la mortaja le quedaba demasiado larga.
+En la puent'el Chicamocha
+me taba aguaitando el tigre.
+Yo pelé por mi machete,
+y nian el rabo le vide.
 
-Jovita pidió ayuda. Ñuá Ulogia tomó las tijeras y cortó el ruedo, pero lo dejó tan corto que las piernas de la difunta quedaron descubiertas. Enfurecida, Jovita levantó lo que parecía un cirio y resultó ser un hueso. Con él golpeó a la costurera por trabajar en día de guarda.
+Iba a empezar otra copla cuando, al asomar al alto de Miradores, casi se desmaya: por el camino avanzaba, despacio, bajo la luna, una larga procesión de ánimas. Se salió del camino y se escondió detrás de un matorral de urimaco, más muerto que un difunto. Las ánimas pasaban rezando con mucha pausa, y ya iba él dando gracias al cielo porque no lo habían visto, cuando una de ellas, más larga y flaca que las demás, olfateó el aire y dijo:
 
-Otero hace que su narrador afirme haber conocido la cicatriz de Ñuá Ulogia. Ese recurso busca dar apariencia testimonial al cuento, pero no convierte el episodio en un registro comprobado. Ambos relatos usan el encuentro sobrenatural para censurar conductas: beber hasta descuidar a la familia y trabajar cuando la disciplina católica exigía descanso.`,
-    historyCore:
-      "Farouk Caballero Hernández analiza ambos episodios como mitología en prosa de Otero D’Costa y los ubica explícitamente en Santander. Laurián baja al mercado de Rionegro y su promesa se dirige al Señor de los Milagros de Girón; Ñuá Ulogia también es presentada como campesina de Rionegro. La ficha abandona por ello la clasificación heredada en Caldas.",
-    versionCore:
-      "No se funden los dos episodios en una sola aparición: Laurián encuentra una procesión que castiga su embriaguez; Ñuá Ulogia ayuda a Jovita y recibe el golpe de un hueso por trabajar el domingo. La voz del narrador imita un testimonio local, mientras el análisis académico los trata como relatos literarios moralizantes publicados por un autor identificable.",
-    similarityCore:
-      "Las procesiones de ánimas aparecen en numerosos repertorios católicos de Colombia y América Latina como almas que piden oraciones o corrigen conductas. La escena de Laurián se acerca a cuentos donde un caminante ebrio despierta lejos de la ruta; la de Ñuá Ulogia combina la mortaja, el rosario y la prohibición dominical. Se parecen al Ánima Sola por el marco del purgatorio, pero aquí actúa un grupo y la intención disciplinaria es directa. La comparación no autoriza a trasladar estos textos santandereanos a Caldas.",
+—¡Fo, fo! ¡Hiede a carne humana!
+
+Todas se volvieron a una, cayeron sobre Laurián y lo sacaron al camino. Lo pelotearon por los aires como una perinola, de cabeza, de pie, atravesado, mientras cantaban en coro:
+
+¡Volá, volá,
+por borrachito,
+señor Laurián!
+
+Cuando se cansaron, lo alzaron de pies y manos, lo golpearon media docena de veces contra el suelo y desaparecieron.
+
+Al día siguiente la familia salió a buscarlo y lo encontró enredado en la copa de un gualanday, tan aturdido que en ocho días no supo de dónde era vecino. Una promesa al Señor de los Milagros de San Juan Girón le devolvió todas sus facultades menos una, la de beber, de la que quedó curado para siempre. Cuando los amigos lo invitaban a guarapo, contestaba que prefería el gusarapo, y tomaba agua.
+
+La cocinera contaba otra. En las afueras de Rionegro, saliendo hacia Bucaramanga, junto a un cacaotal, vivía la comadre Ulogia, que rezaba en la iglesia y cosía para la gente del campo. Un domingo, a las diez de la noche, seguía dale que dale a la máquina, porque al día siguiente había mercado, cuando oyó voces que rezaban el rosario. Por la ventana vio una fila de ánimas que salían del cacaotal con mortajas blancas, el rosario en una mano y un cirio en la otra. Se arrodilló aterrada. La última era la difunta Jovita, conocida suya, que se acercó a la ventanilla:
+
+—¡Por tu madrecita, recórtame la mortaja, que me queda tan larga que no me deja caminar!
+
+Ulogia salió con las tijeras y le cortó el ruedo. Jovita se miró las canillas al aire y se enojó. Alzó lo que parecía un cirio, que era una canilla de muerto, y le dio con ella en la frente:
+
+—¡Demonia de mujer, nada te iba a salir derecho por andar trabajando los domingos!
+
+Y se fue corriendo detrás de las otras. Quien contó esto después aseguraba que de niño conoció a ñuá Ulogia, y que ella misma le mostró en la frente la cicatriz del canillazo.`,
+    historia: `El texto es un cuento de Enrique Otero D'Costa publicado en 1936 en su libro Leyendas, de la Biblioteca Aldeana de Colombia (Selección Samper Ortega, Minerva), con dedicatoria a José Joaquín Casas. Se lee en el segundo tomo de Mitos y leyendas de Colombia de Eugenia Villa Posse (IADAP, Quito, 1993), sección 17, «Varias regiones», pp. 56-59. Villa Posse advierte que Otero reunió allí relatos oídos directamente a campesinos, que «recuerda y elabora» para darles forma literaria. La Revista UPB, que en 1964 reimprimió otras piezas del libro, no trae ésta.
+
+Farouk Caballero Hernández lo estudió en 2012 en la revista Rastros Rostros (Universidad Cooperativa de Colombia, vol. 14, n.º 27, pp. 69-74) con el libro de 1936 a la vista, y sitúa el episodio de Laurián en sus pp. 130-134 y el cierre de Ulogia en la p. 137. Esa paginación no concilia con la de Villa Posse, que da las pp. 15-46 para toda su selección.
+
+La geografía es santandereana: la feria de Rionegro, el alto de Miradores, el camino a Bucaramanga, el puente del Chicamocha de la copla y el Señor de los Milagros de Girón. El cuento abre en Caldas sólo para contrastar: allí las ánimas son terribles; en Santander, bromistas y correctoras. El primer episodio lo cuenta el autor; el segundo lo pone en boca de una cocinera y lo cierra con un testimonio en primera persona, el de quien vio de niño la cicatriz.`,
+    versiones: `Hay un solo texto abierto, el de 1936 reproducido por Villa Posse, y un estudio que lo cita por el original. Caballero lo lee como mitología en prosa de Santander y lo pone junto a los relatos de pactos diabólicos de la región: las ánimas de Otero no condenan, corrigen, y el castigo es físico y cómico, no eterno.
+
+Dentro del cuento hay dos maneras de contar. El episodio de Laurián es una escena de costumbres con coplas, tiples y guarapo, narrada por el autor con humor. El de Ulogia es una conseja con testigo: la cocinera la cuenta y el narrador la remata diciendo que conoció a la protagonista. Los dos castigan una falta distinta, la borrachera del lunes y el trabajo del domingo, y los dos terminan en enmienda.
+
+En el alto oriente caldense, el libro del SENA de 2022 recoge otra forma de las ánimas: el Ánima Sola, a la que sus narradores de Manzanares, Anadelia Galvis y Hernán Aristizábal, rezan y piden favores, y que asusta a quien la ofende. Es la devoción que Otero menciona de pasada al abrir el cuento, en la tierra que él presenta como la de las ánimas terribles.`,
+    similitudes: `La frase del ánima que olfatea al escondido, «¡Fo, fo! ¡Hiede a carne humana!», es la fórmula del ogro de los cuentos europeos. En el «Jack and the Beanstalk» que Joseph Jacobs recogió en sus English Fairy Tales (1890), el gigante entra a su casa diciendo «Fee-fi-fo-fum, I smell the blood of an Englishman». En los dos casos el que se esconde es descubierto por el olfato; pero en Santander quien olfatea es un alma del purgatorio, y en vez de comerse al intruso lo pelotea hasta quitarle el vicio.
+
+El Ánima Sola que Otero nombra al empezar, como espanto de Caldas, tiene registro propio en el alto oriente caldense. En el libro del SENA de 2022, los narradores de Manzanares la describen como un alma que se reza y que responde, favorable a quien la honra y temible con quien la desprecia. Es la misma ambivalencia de las ánimas santandereanas de Otero, que ayudan y castigan.
+
+Y la mortaja que no deja caminar, recortada de más por la costurera que trabaja en domingo, une dos preceptos que el cuento castiga juntos: guardar el día del Señor y tratar a los muertos con el respeto debido. La canilla que parecía un cirio convierte ese doble descuido en una cicatriz.`,
     leccion:
-      "Una voz moral puede conservar memoria y, al mismo tiempo, revelar quién pretendía disciplinar a quién.",
+      "El castigo que corrige con una burla puede cambiar una costumbre mejor que el castigo que sólo asusta.",
     sceneHorizontal:
       "en un camino rural de Rionegro, Santander, Laurián observa una procesión de ánimas con cirios mientras deja atrás las tiendas del mercado, sin golpes ni horror gráfico",
     sceneVertical:
@@ -119,33 +176,55 @@ Dentro de la obra del mismo autor, «In illo tempore» mide el honor de otro cab
   }),
   defineCaldasMestizoMyth({
     slug: "el-aserrador",
-    title: "Rafael Toro, el aserrador, y el Uñón",
+    fuentesAgotadas: "El testimonio sólo se lee en Vélez Correa; su fuente probable, Julián Bueno Rodríguez, Creencias del occidente caldense (Universidad de Caldas, 1988), no tiene texto abierto. Ninguna otra obra abierta —Villa Posse, SENA 2022, los documentos municipales de Supía— nombra al Uñón ni a Rafael Toro.",
+    sourceKeys: [
+      {
+        key: "velezReader",
+        summary:
+          "Único registro del relato: el capítulo «El Uñón» con el testimonio «Rafael Toro, El aserrador. Leyenda de Supía la Alta», en voz de un narrador de 86 años (La Miel, Oro Fino, Hojas Anchas, Los Zorros, la posada de Carmela Piedrahita), y en el mismo libro la Chichita de Riosucio que compara Similitudes.",
+        limitation:
+          "El narrador no tiene nombre y Vélez no dice de dónde tomó el testimonio. Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      "carrasquillamarquesa1928",
+      "tiempoCuentos2004",
+      "mejiaDiseno2012",
+    ],
+    title: "El aserrador",
     excerpt:
       "Rafael Toro regresa de La Miel cuando un hombre velludo, barbado y de uñas enormes lo persigue por los caminos de Supía la Alta.",
     tags: ["miedo", "montaña", "carretera", "supervivencia"],
-    mito: `Fabio Vélez Correa incluye la experiencia de Rafael Toro dentro del apartado dedicado al Uñón. Rafael era aserrador y trabajaba con un compañero en La Miel, por la zona de Arcón Grande y Oro Fino, en Supía la Alta.
+    mito: `Lo que voy a contar pasó en la entrada para la Bocatoma, y no es cuento sino cosa real. Yo estaba en la escuela hace ochenta años; ahora entré a los ochenta y seis.
 
-Una tarde terminó la jornada y emprendió solo el regreso. Salió cerca de las seis, con un trozo de vela dentro de un farol. Alrededor de las ocho llegó a la entrada de La Toma, por encima de Hojas Anchas. Allí oyó una carrera que se acercaba con rapidez por el camino.
+Un aserrador de La Miel trabajaba con un compañero en Arcón Grande, allá en Oro Fino, bastante arriba. Trabajaban hasta las seis de la tarde. Se llamaba Rafael Toro, de una familia de Toros de La Miel: eran dos hermanos, don Manuel y don Rafael.
 
-Rafael levantó el farol para ver. La luz reveló una figura más grande que él, cubierta de pelo, con barba abundante y uñas desmesuradas. El desconocido extendió los brazos para sujetarlo. Rafael retrocedió, dejó caer el farol y corrió entre zanjas y desniveles.
+Todas las tardes el compañero se quedaba a dormir en Veneros y don Rafael se iba solo para La Miel. Metía un cabo de vela en un farol, de los que se usaban en ese tiempo, porque linterna no había, y arrancaba.
 
-Mientras escapaba invocó a la Virgen del Carmen. La figura siguió detrás y alcanzó a rasgarle la ropa y la espalda. Para correr con mayor libertad, Rafael fue abandonando lo que llevaba: primero el sombrero, luego el machete, el carriel y la ruana. No se detuvo a recoger nada.
+Un día, en la entrada de La Toma, más arriba de Hojas Anchas, sintió un tropel. Serían las ocho de la noche. Volteó a mirar y alzó el farolito, y ahí estaba: un hombre más grande que él, todo peludo, barbado, con unas manos de uñas muy grandes, que le iba a echar mano. Don Rafael pegó el brinco, y en el brinco se le zafó el farol y quedó a oscuras.
 
-Alcanzó el camino de Caramanta en el sitio conocido como Los Zorros. Allí encontró una posada de arrieros atendida por doña Carmela Piedrahita. Entró agotado, contó lo sucedido y pasó la noche acompañado. La presencia de otros viajeros marcó el final de la persecución.
+Salió corriendo por unos canalones, en un terreno muy disparejo, invocando a la Virgen del Carmen, y aquel animal detrás, arañándolo por encima y agarrándole la ropa. Le dejó la ropa hecha una porquería. Se le fueron quedando las cosas: el sombrero, el machete, el carriel, la ruana. Así llegó al camino que baja de Oro Fino y va para Caramanta, en un punto que llaman Los Zorros, más acá de Hojas Anchas.
 
-Cuando regresó a casa, permaneció enfermo durante ocho días. La camisa estaba destruida y la espalda tenía golpes y arañazos. Después de aquella noche dejó de viajar solo por esos caminos.
+Ahí había una posada de mulas, en la casa de doña Carmela Piedrahita, y él dejó el camino de su casa y se fue para allá. Aquello estaba lleno de arrieros. Llegó despavorido, y al verlo así le preguntaron qué le había pasado, y él les contó todo tal como fue. Le dieron posada, se quedó dormido, y al otro día por la mañana se fue para su casa.
 
-El hombre que transmitió el episodio a Vélez Correa lo había oído cuando era estudiante muchas décadas atrás. También conservó una duda central: nadie supo qué persiguió a Rafael. Según su recuerdo, un sacerdote de Caramanta objetó que un espíritu no debía causar heridas físicas y propuso que quizá había sido una fiera.
+Estuvo como ocho días enfermo, con la camisa destrozada y las espaldas moradas y aruñadas. Cuando se alivió, dejó la costumbre de andar de noche: de ahí en adelante volvía del aserradero de día.
 
-Esa incertidumbre pertenece al relato. La tradición regional llama Uñón a una figura masculina de uñas enormes y carácter vengativo, pero la historia de Rafael no obliga a elegir entre animal, agresor humano, espanto o miedo nocturno. “El aserrador” es la ocupación de Rafael, no el nombre de la criatura.`,
-    historyCore:
-      "Vélez Correa titula el testimonio «Rafael Toro, El aserrador. Leyenda de Supía la Alta» y lo coloca dentro de El Uñón. La ficha restaura esa relación y los topónimos La Miel, La Toma, Hojas Anchas, Los Zorros y Caramanta. Los documentos municipales solo ubican el territorio; no verifican la persecución.",
-    versionCore:
-      "En la caracterización general, el Uñón es un hombre vengativo con uñas enormes. En la experiencia de Rafael aparecen además pelo, barba y tamaño excepcional. El propio informante conserva una explicación alternativa, «como una fiera», después de consultar a un sacerdote. La revisión no borra esa duda ni convierte al aserrador en entidad sobrenatural.",
-    similarityCore:
-      "El Uñón comparte con la Mano Peluda y otros espantos regionales la exageración de uñas o garras. La persecución nocturna de un trabajador recuerda relatos de arrieros acosados por bestias, duendes o sombras en caminos aislados. Sin embargo, el episodio tiene una identidad precisa: Rafael Toro es el aserrador y el perseguidor queda sin identificar. El abandono sucesivo del sombrero, machete, carriel y ruana también aparece en cuentos de huida, donde cada objeto perdido mide la urgencia del escape y la vulnerabilidad del caminante.",
+Nadie ha podido saber qué fue lo que lo atacó. Algunos dicen que un espíritu. Yo le pregunté a un sacerdote de Caramanta, muy virtuoso y muy inteligente, y me dijo que no podía ser un espíritu, porque el espíritu no hace cosa parecida: hace ruidos y se presenta como fantasma en distintas formas, pero no deja marcas. Y si el espíritu no hace cosa que se vea, entonces aquello tuvo que ser algo como una fiera.`,
+    historia: `El relato está en Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa, cuya primera edición hizo la Imprenta Departamental de Caldas en Manizales en 1997 y que hoy se lee en una edición ampliada, posterior a 2007, en la biblioteca digital El Libro Total. Va dentro del capítulo «El Uñón», que Vélez abre con un párrafo propio: en Supía la Alta, la naturaleza vengativa se representa en una figura masculina cuyo rasgo son unas uñas usadas como garras de fiera. Sigue un subtítulo, «Rafael Toro, El aserrador. Leyenda de Supía la Alta», y un testimonio transcrito entre comillas.
+
+El narrador no tiene nombre. Habla en primera persona, dice tener ochenta y seis años y haber estado en la escuela hace ochenta, y sitúa todo en la parte alta de Supía: las veredas y parajes de La Miel, Oro Fino, Arcón Grande, Veneros, Hojas Anchas y Los Zorros, y el camino que baja hacia Caramanta, del lado antioqueño. Tampoco da la fecha del ataque, que por la edad del narrador y la mención del farol de vela queda en la primera mitad del siglo XX.
+
+Vélez cita buena parte de su material de Supía y Riosucio de los trabajos de Julián Bueno Rodríguez sobre las creencias del occidente caldense, publicados por la Universidad de Caldas a fines de los años ochenta, y es probable que este testimonio venga de ahí; el capítulo no lo dice. En el mismo libro, el Uñón comparte región con otros seres que castigan a quien falta al respeto a la naturaleza, como la Chichita de Riosucio.`,
+    versiones: `Hay un solo testimonio, y Vélez lo presenta dos veces con palabras distintas. En su párrafo de entrada, el Uñón es una figura mítica: la naturaleza vengativa hecha hombre, con garras. En el testimonio no hay mito sino un suceso: un hombre grande, peludo y barbado que ataca a un aserrador a las ocho de la noche, y un narrador que no sabe qué fue.
+
+El narrador contrasta dos explicaciones. Unos dicen que fue un espíritu; el sacerdote de Caramanta lo niega, porque los espíritus asustan con ruidos y apariciones pero no dejan la camisa rota ni la espalda arañada. El narrador concluye que tuvo que ser como una fiera, y así el relato queda entre el espanto y el animal, sin decidir.
+
+El nombre del Uñón no aparece en boca del narrador: lo pone Vélez al titular el capítulo. El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara ficción, no trae al Uñón, pero sí inventa, bajo el nombre de El Patón, un gigante peludo del monte antioqueño que ataca a los caminantes, y los materiales escolares que circulan en la región repiten esa figura sin procedencia.`,
+    similitudes: `En el mismo libro de Vélez, la Chichita de Riosucio castiga con las uñas. Es un grillo que, si alguien le imita el canto, viene de noche convertido en insecto gigante a arañar al burlón mientras duerme. Como el Uñón, es la naturaleza que se defiende con garras, aunque la Chichita tiene causa, la burla, y el ataque al aserrador no la tiene.
+
+Tomás Carrasquilla, en La marquesa de Yolombó, reúne la «corte infernal y selvática» del monte antioqueño: el Patetarro, la Madremonte, el Bracamonte, al que nadie ha visto nunca porque no sale de la espesura. Son seres del bosque que no se dejan describir del todo, y el hombre peludo de Supía, que aparece un instante a la luz de un farol y se pierde, pertenece a esa familia.
+
+El gigante peludo que acomete a los caminantes reaparece en la región con el nombre de El Patón. Su registro abierto es tardío: una noticia inventada del libro de 2004 y unos textos escolares firmados «Leyenda popular». Allí es un monstruo de película; en el testimonio de Supía es un vecino del monte que deja al aserrador enfermo ocho días y le quita las ganas de caminar de noche.`,
     leccion:
-      "Conservar la duda de un testimonio puede ser más fiel que imponerle una criatura definitiva.",
+      "Quien anda solo de noche por el monte puede encontrar algo que ni el cura sabe nombrar.",
     sceneHorizontal:
       "Rafael Toro sale de La Miel al anochecer con farol, ruana, machete y carriel por un camino montañoso de Supía la Alta",
     sceneVertical:
@@ -243,31 +322,54 @@ El viaje por una planta que salve a otro y el fracaso por llegar tarde tienen ad
   }),
   defineCaldasMestizoMyth({
     slug: "el-coco",
-    title: "El Coco y los calabazos de Riosucio",
+    fuentesAgotadas: "La figura sólo se lee en Vélez Correa, que la toma de Julián Bueno Rodríguez (Creencias del occidente caldense, 1988), de Escobar Uribe (1950) o de Jiménez Mejía (Tierrabuena, 1977), ninguno con texto abierto. Villa Posse, SENA 2022 y el libro de 2004 no la traen con este nombre o la traen sólo como ficción.",
+    sourceKeys: [
+      {
+        key: "velezReader",
+        summary:
+          "Capítulo «El Coco» («Mito de la Desobediencia»), con la cita de Julián Bueno (p. 91) sobre su origen africano y minero y la «Versión de Tatínez» del calabazo con vela de Riosucio; en otros capítulos, el Chucho de Octavio Hernández Jiménez (p. 48), el fantasma de Rubén Bayer y la Mano Peluda.",
+        limitation:
+          "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      "aragonvienesf",
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Trae un Coco Pelao llanero (pp. 91-92), distinto del caldense, que Similitudes cita como otro espanto con el mismo nombre.",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»; no es registro.",
+      },
+    ],
+    relatoCorto:
+      "Las fuentes no traen un caso con trama: el Coco y el Chucho son una amenaza que los padres hacen a los niños y un espanto sin forma, y el calabazo de Riosucio y el fantasma de Rubén Bayer se cuentan en dos frases cada uno. Llegar a 300 palabras exigiría inventar escenas.",
+    title: "El coco",
     excerpt:
       "El Coco sin forma definida convivió en Riosucio con calabazos iluminados que algunas personas usaban para asustar caminantes nocturnos.",
     tags: ["Coco", "miedo", "obediencia", "tradición"],
-    mito: `El Coco no necesita un rostro fijo. En la descripción reunida por Fabio Vélez Correa, es una presencia incorpórea que los adultos nombran para asustar a los niños desobedientes. También puede llamarse Chucho. Su fuerza proviene menos de una apariencia que de la advertencia: si el niño no obedece, algo desconocido puede venir.
+    mito: `Al niño que no obedecía le bastaba oír que se lo iba a llevar el Coco para cumplir enseguida lo que le mandaban. Nadie sabía cómo era. No tenía cuerpo ni forma fija: era un espíritu maligno que cada cual se imaginaba a su manera.
 
-En Riosucio circuló además una forma visible y fabricada. El relato atribuido a Carlos Martínez Marín, conocido como Tatínez, habla de un calabazo grande al que se abrían ojos y boca. Dentro se colocaba una vela. Una persona cargaba la pieza sobre la cabeza y salía en la noche para asustar a quienes caminaban por las calles o caminos.
+En Caldas también lo llamaban el Chucho. El Chucho no vivía en el monte. Vivía en la pieza del rebujo, en el rincón más oscuro del subterráneo, detrás de las puertas, debajo de las camas, en el zarzo y en las casas deshabitadas, y en los desvanes y entre los cielos rasos. Era diminuto e invisible, y podía tomar la figura de cualquier alimaña repugnante. Nadie lo veía, pero ahí estaba. El niño empezaba a andar pegado de las enaguas de la mamá en cuanto alguien le decía: «Hoy sí te va a llevar el Chucho».
 
-Desde lejos, la luz convertía los huecos del calabazo en facciones. El cuerpo del portador quedaba oculto por la oscuridad y la cabeza luminosa parecía avanzar sola. Quien no conocía el mecanismo podía interpretar la figura como el Coco que tantas veces había oído nombrar.
+En Riosucio el Coco llegó a tener cuerpo. Por los extramuros del pueblo, a altas horas de la noche, se aparecía un calabazo gigante con ojos y boca y una vela encendida por dentro, que alguien llevaba sobre la cabeza para asustar a los trasnochadores ingenuos. Nadie supo con qué fin, hasta que lo descubrieron.
 
-La aparición dependía, sin embargo, de una puesta en escena. Había que vaciar el fruto, cortar las aberturas, encender la vela y sostener el conjunto. El miedo terminaba cuando alguien descubría a la persona que lo llevaba. Una vez visible el artificio, el monstruo regresaba a ser calabazo, llama y cuerpo humano.
+No fue el único. Otro espanto de Riosucio era un calabazo pequeño en forma de calavera, pintado de blanco, clavado en la punta de un palo forrado en tela blanca. La persona que iba adentro lo empujaba hacia arriba y parecía que el fantasma se alargaba. Asustó a más de uno, hasta que lo descubrieron también: su autor era don Rubén Bayer, zapatero y concejal del pueblo.`,
+    historia: `El Coco está en Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, Manizales, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total). Vélez lo llama «Mito de la Desobediencia», lo sitúa en el mundo infantil y lo define como un genio maléfico, incorpóreo, sin representación fija. Cita a Julián Bueno Rodríguez (p. 91) para su origen: el culto africano a los antepasados muertos, que pudo afianzarse en la región con las sociedades negras de las minas de Quiebralomo, Supía y Marmato.
 
-Otra memoria de Riosucio describe un fantasma improvisado por Rubén Bayer. Usaba un calabazo pequeño con aspecto de calavera, colocado sobre un palo y cubierto con tela blanca. La construcción producía una silueta diferente, más cercana al fantasma teatral que a la cabeza luminosa de Tatínez.
+A esa definición Vélez añade una «Versión de Tatínez», tomada de Carlos Martínez Marín, cronista de Riosucio, que recuerda el calabazo con vela que aparecía de noche por los extramuros del pueblo. En otros capítulos del mismo libro completan la figura el Chucho, que Vélez toma de Octavio Hernández Jiménez (p. 48) y que éste reclama como personaje propio de Caldas frente al «insulso Coco de otras regiones», y el fantasma de Riosucio de don Rubén Bayer, otra vez según Tatínez. Escobar Uribe, citado por Vélez, pone al chucho, la mano peluda y la vieja Inés entre los «cocos inofensivos», espantos de la infancia que pierden su poder hacia los diez años.
 
-Las dos escenificaciones ayudan a entender cómo una amenaza sin forma puede adquirir cuerpos locales. No prueban que el Coco sea un calabazo ni que todas las familias riosuceñas lo imaginaran así. Muestran que algunas personas materializaron el miedo con objetos disponibles.
+No hay un narrador del caso. Lo que el libro recoge es una práctica —la amenaza de los mayores— y dos recuerdos de pueblo en que alguien fabricó el espanto con un calabazo.`,
+    versiones: `En el libro de Vélez el Coco tiene tres caras. La primera es abstracta: un espíritu sin forma que existe sólo en la amenaza de los padres. La segunda es doméstica: el Chucho de Hernández Jiménez, que tiene casa, la pieza del rebujo, el zarzo, debajo de la cama, y que se parece al duende pero no chupa sangre. La tercera es teatral: en Riosucio, alguien le da cuerpo con un calabazo iluminado, y el espanto se acaba cuando lo descubren.
 
-La obra de Vélez Correa reproduce una propuesta según la cual el Coco habría llegado desde África y estaría vinculado con el culto a los antepasados. Esta adaptación no presenta esa genealogía como certeza. Las fuentes históricas documentan la palabra y la figura en la tradición hispánica desde siglos anteriores, mientras el repertorio colombiano también recibió y transformó herencias europeas, indígenas y africanas.`,
-    historyCore:
-      "Vélez Correa clasifica al Coco como mito de la desobediencia, incorpóreo y sin forma definida, y registra las dos escenificaciones de Riosucio. Su explicación africana depende de una cadena interpretativa secundaria. Estudios históricos de la tradición hispánica documentan menciones del Coco desde el siglo XV, por lo que no es riguroso sostener un origen único.",
-    versionCore:
-      "Se distinguen tres formas: el Coco o Chucho nombrado sin cuerpo; el gran calabazo con vela que Tatínez recuerda en Riosucio; y el fantasma de Rubén Bayer, armado con calabazo pequeño, palo y tela blanca. Son modos relacionados de producir miedo, no descripciones intercambiables de una sola entidad física.",
-    similarityCore:
-      "El Coco pertenece a una familia internacional de figuras usadas para disciplinar la infancia: Cuco, Hombre del Saco, Bogeyman y Bicho-papão. Como el Viejo del Costal, amenaza con llevarse a quien desobedece, pero el Coco puede no tener cuerpo ni biografía. Las máscaras y calabazos iluminados de Riosucio recuerdan otras bromas nocturnas, aunque sus materiales y nombres son locales. La comparación permite estudiar el uso del miedo sin celebrar que sea una práctica educativa deseable. También distingue una voz amenazante de un disfraz construido.",
+Las dos versiones de Tatínez muestran el mismo mecanismo. El calabazo con vela y el calabazo con forma de calavera en la punta de un palo son espantos hechos a mano, y en los dos casos el relato termina con el descubrimiento. El segundo tiene autor con nombre, don Rubén Bayer, zapatero y concejal.
+
+El origen que da Julián Bueno, africano y minero, contrasta con el de la palabra, que es española. El libro de 2004 Cuentos de espantos, que se declara ficción, trae un Coco Pelao llanero que no es este espanto.`,
+    similitudes: `El Coco caldense es pariente directo del coco español de las nanas y las amenazas de crianza. Goya lo grabó en 1799 en el tercero de sus Caprichos, «Que viene el Coco»: una madre ante una figura envuelta en una sábana, con dos niños aterrados abrazados a ella. La Fundación Goya en Aragón lo lee como crítica de una educación que se apoya en el miedo a seres sobrenaturales. Es la misma pedagogía que Vélez atribuye a los abuelos caldenses, y la figura de Goya, una sábana con alguien dentro, se parece al fantasma de palo y tela de Riosucio.
+
+En el propio libro de Vélez, la Mano Peluda cumple el mismo oficio: manazas negras y velludas que se alargan de noche por las ventanas y las troneras de los bahareques para asustar a los niños malcriados, y que viven, como el Chucho, en los subterráneos de las casas. Escobar Uribe los pone juntos entre los cocos inofensivos de la infancia.
+
+El libro de 2004 Cuentos de espantos, que se declara ficción, trae un Coco Pelao de los Llanos, distinto del caldense, prueba de que el nombre se aplicó en cada región a espantos muy diversos con la misma función.`,
     leccion:
-      "Cuando el miedo recibe una forma, también se vuelve posible descubrir quién la construyó.",
+      "El miedo que se usa para hacer obedecer a los niños también lo puede fabricar cualquiera con un calabazo.",
     sceneHorizontal:
       "una calle nocturna de Riosucio donde una figura humana sostiene sobre la cabeza un gran calabazo iluminado con ojos y boca recortados",
     sceneVertical:
@@ -287,31 +389,62 @@ La obra de Vélez Correa reproduce una propuesta según la cual el Coco habría 
   }),
   defineCaldasMestizoMyth({
     slug: "el-cole-cabuya",
-    title: "El Cole-cabuya de San Lorenzo y Supía",
+    fuentesAgotadas: "La figura sólo se lee en Vélez Correa, que la toma de Julián Bueno Rodríguez (Creencias del occidente caldense, 1988), de Escobar Uribe (1950) o de Jiménez Mejía (Tierrabuena, 1977), ninguno con texto abierto. Villa Posse, SENA 2022 y el libro de 2004 no la traen con este nombre o la traen sólo como ficción.",
+    sourceKeys: [
+      {
+        key: "velezReader",
+        summary:
+          "Único registro: el capítulo «El Cole-Cabuya», que Vélez toma de Julián Bueno (censura del incesto en San Lorenzo y Supía la Alta; Llanogrande, Pasmí y La Loma, 1969-1972; testimonio de Alejandrino Izquierdo), y en el mismo libro El Mirón, la Chichita y el Uñón que compara Similitudes.",
+        limitation:
+          "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      {
+        key: "antSanLorenzo",
+        summary:
+          "Auto de visita para la ampliación del resguardo indígena de San Lorenzo, el territorio donde se sitúan las apariciones.",
+        limitation:
+          "Documento administrativo: sirve para el territorio, no nombra al Cole-Cabuya.",
+      },
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Recoge en Manzanares al Perro Negro, que con su sola presencia hace perder el conocimiento, con el testimonio de Luis Javier Gallego (pp. 75-77), el paralelo que nombra Similitudes.",
+        limitation:
+          "Otro ser, del alto oriente caldense; no nombra al Cole-Cabuya.",
+      },
+    ],
+    relatoCorto:
+      "La única fuente es una descripción de un párrafo con un testimonio de dos frases; llegar a 300 palabras exigiría inventar un caso.",
+    title: "El cole-cabuya",
     excerpt:
       "Un animal semejante a burro o perro, con cola de cabuya, se atravesaba de noche en caminos de San Lorenzo y Supía la Alta.",
     tags: ["Cole-cabuya", "burro", "miedo", "incesto"],
-    mito: `En los relatos recogidos para la zona de San Lorenzo y Supía la Alta, el Cole-cabuya aparece de noche cerca de las casas y en los caminos. Puede tener forma de burro o de perro. Aunque el cuerpo cambie, produce un sonido semejante al rebuzno y lleva una cola de cabuya que recuerda la flor del guache o de la cañabrava.
+    mito: `Donde hay gente que vive mal, dicen en San Lorenzo, tiene que aparecer el Cole-Cabuya. Es una bestia con cara de burro, o un perro que rebuzna como burro, y lo raro que tiene es la cola: una cola de cabuya en forma de flor de guache, como la espiga de la cañabrava.
 
-La figura no necesita correr detrás de nadie. Se tiende atravesada en la ruta e impide el paso. Cuando levanta la cola y dirige la mirada hacia una persona, el encuentro puede terminar en desmayo. El peligro está en la obstrucción, la mirada y la incertidumbre de no saber si el animal común que ocupa el camino es realmente común.
+Sale de noche cerca de las casas donde un tío vive con su sobrina, o un padrino con su ahijada. Se echa en la tierra o se atraviesa en los caminos, y espera a los caminantes solitarios. Cuando alguien se le acerca, se levanta con la cola parada y lo mira, y con esa sola mirada lo deja desmayado.
 
-Fabio Vélez Correa sitúa manifestaciones entre 1969 y 1972 en Llanogrande y Pasmí, dentro de San Lorenzo, y en La Loma, en Supía la Alta. Esos lugares delimitan la circulación documentada mejor que una atribución vaga a todo Caldas.
+En Llanogrande y en Pasmí, y en La Loma, del lado de Supía la Alta, se supo de él entre 1969 y 1972. Alejandrino Izquierdo lo contaba así: por ahí había uno que vivía con una ahijada y además sobrina, y otros mal vividos, y cosas raras. A Carlitos, el hijo de Milia, le tocó ver al maldito Cole-Cabuya ahí echado, y quedó enfermo de gravedad.`,
+    historia: `El Cole-Cabuya está entre los mitos menores de Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, Manizales, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total). Vélez lo toma de Julián Bueno Rodríguez, que estudió las creencias del occidente caldense, y lo presenta como símbolo de la censura contra las uniones incestuosas —por lo general, unión libre entre tío y sobrina— que, según Bueno, se daban en las comunidades indígenas de San Lorenzo y en el sector vecino de Supía la Alta.
 
-Uno de los recuerdos conservados se relaciona con Carlitos, hijo de Milia. El muchacho habría visto al Cole-cabuya y enfermado gravemente después del encuentro. La fuente no ofrece una descripción clínica ni permite establecer una causa; lo que registra es la manera en que la comunidad vinculó enfermedad y aparición.
+Da una fecha y tres lugares para las apariciones más recientes: las veredas Llanogrande y Pasmí, en San Lorenzo, y La Loma, en Supía la Alta, hacia 1969-1972. Y trae un testimonio de dos frases, atribuido a Alejandrino Izquierdo, que ata el espanto a los vecinos «mal vividos» y cuenta que el niño Carlitos, hijo de Milia, lo vio y enfermó.
 
-La interpretación recogida por Julián Bueno y reproducida por Vélez Correa asocia el animal con la censura de relaciones incestuosas, sobre todo entre tío y sobrina. Alejandrino Izquierdo resumía esa función diciendo que el Cole-cabuya aparecía donde había gente que vivía mal.
+San Lorenzo es un resguardo indígena del municipio de Riosucio, en el occidente de Caldas, y el relato pertenece al mundo mestizo de esa frontera, donde Vélez y Bueno recogen seres que castigan faltas morales con una mirada o un desmayo.
 
-Esa explicación pertenece a una moralización social del relato. No autoriza a señalar familias reales, repetir rumores como acusaciones ni describir a San Lorenzo como una comunidad definida por el incesto. El mito puede estudiarse como instrumento de vigilancia y vergüenza, precisamente porque esa función tuvo consecuencias sobre la manera de hablar de otras personas.
+Vélez no dice si tomó el testimonio de un libro o de una entrevista. Su lista de fuentes registra los trabajos de Julián Bueno sobre las creencias del occidente caldense, publicados por la Universidad de Caldas a fines de los años ochenta, que son el origen probable de toda la entrada.`,
+    versiones: `No hay otra versión abierta. Vélez y Bueno dan una sola descripción y un solo testimonio, y el Cole-Cabuya no aparece en Villa Posse, en el libro del SENA de 2022 sobre el alto oriente caldense, ni en el libro de 2004 Cuentos de espantos.
 
-El nombre une la cola y el material: cole o cola de cabuya. El animal compuesto convierte una fibra cotidiana en señal extraordinaria. Al mismo tiempo, la ficha conserva que su territorio incluye un resguardo indígena vivo y evita rebajarlo a escenario genérico de folclor mestizo.`,
-    historyCore:
-      "Vélez Correa remite la interpretación moral a Julián Bueno Rodríguez y ubica apariciones concretas entre 1969 y 1972. San Lorenzo es un territorio indígena entre Riosucio y Supía, condición verificada por la Agencia Nacional de Tierras. La categoría editorial Mestizo no borra esa realidad ni atribuye el relato a autoridades actuales del resguardo.",
-    versionCore:
-      "El cuerpo puede ser de burro o perro; el rebuzno, la cola de cabuya, el bloqueo del camino y el desmayo forman el núcleo más estable. Llanogrande, Pasmí y La Loma son los lugares mencionados. El episodio de Carlitos conserva la atribución de enfermedad, pero no se transforma en diagnóstico sobrenatural.",
-    similarityCore:
-      "El Cole-cabuya se aproxima a mulas, perros y otros animales nocturnos que anuncian transgresiones en la tradición andina. Comparte con el Cadejo la ambigüedad entre perro real y ser extraordinario, aunque el rebuzno y la cola de fibra lo distinguen. Su función de censura recuerda a espantos usados para vigilar sexualidad y parentesco. Esa semejanza invita a estudiar el poder social del rumor, no a validar acusaciones contra personas o comunidades. El camino bloqueado convierte una norma social en obstáculo visible y corporal.",
+Dentro de la misma entrada hay dos maneras de decir lo mismo. Bueno lo explica como un mito con función social, la censura del incesto, dicho en lenguaje de estudioso. Alejandrino Izquierdo lo dice en el habla de la vereda: donde hay gente mal vivida tiene que existir eso. Para el primero es un símbolo; para el segundo es un animal que se echa en el camino y enferma a un niño.
+
+La forma del animal también duda: burro, o perro que rebuzna. Lo único fijo es la cola de cabuya, como la flor del guache o la espiga de la cañabrava, que le da el nombre. Tampoco es uno solo el lugar: Llanogrande y Pasmí quedan dentro del resguardo de San Lorenzo, y La Loma, al otro lado del límite, en Supía la Alta.`,
+    similitudes: `El pariente más cercano está en el mismo capítulo de Vélez: El Mirón, otro castigo por la mirada tomado de Julián Bueno. A quien fisgonea de noche por las rendijas lo mira fijo un ojo desde el otro lado, o un animal familiar de tamaño desusado, y lo deja hipnotizado hasta perder el sentido. El Cole-Cabuya invierte la culpa: no castiga al que mira sino que, mirando, señala la casa del que vive mal.
+
+El libro de Vélez reúne varios seres de San Lorenzo y Supía que vigilan faltas contra la naturaleza o la comunidad, como la Chichita de Riosucio, el grillo que viene de noche a arañar a quien imita su canto. En todos el castigo llega de noche, en forma de animal, y deja una marca o una enfermedad.
+
+Y el desmayo por la sola mirada de una bestia echada en el camino es la misma fuerza que otros espantos del occidente caldense ejercen sobre el caminante solitario: el Uñón de Supía la Alta ataca al aserrador que vuelve solo de noche. En los dos casos, quien se salva queda enfermo varios días.
+
+En el alto oriente caldense, el libro del SENA de 2022 recoge al Perro Negro, que con su sola presencia hace perder el conocimiento. Luis Javier Gallego, de Manzanares, cuenta que salió de noche a esperarlo, y que su compañero cayó inconsciente al llegar a casa. Como el Cole-Cabuya, es un animal negro de la noche que desmaya a quien lo encuentra, aunque el perro no señala ninguna falta ajena.`,
     leccion:
-      "Un relato puede regular conductas, pero nunca justifica convertir rumores en acusaciones contra una comunidad.",
+      "Una falta que el vecindario calla puede terminar tomando la forma de un animal atravesado en el camino.",
     sceneHorizontal:
       "un camino rural de Pasmí al anochecer con un animal ambiguo entre burro y perro tendido en la ruta, cuya larga cola parece hecha de cabuya",
     sceneVertical:
@@ -331,31 +464,70 @@ El nombre une la cola y el material: cole o cola de cabuya. El animal compuesto 
   }),
   defineCaldasMestizoMyth({
     slug: "el-viejo-del-costal",
-    title: "El Viejo del Costal y la Mano Peluda",
+    fuentesAgotadas: "La figura sólo se lee en Vélez Correa, que la toma de Julián Bueno Rodríguez (Creencias del occidente caldense, 1988), de Escobar Uribe (1950) o de Jiménez Mejía (Tierrabuena, 1977), ninguno con texto abierto. Villa Posse, SENA 2022 y el libro de 2004 no la traen con este nombre o la traen sólo como ficción.",
+    sourceKeys: [
+      {
+        key: "velezReader",
+        summary:
+          "Capítulos «El Viejo del Costal» (Julián Bueno, p. 92; copla citada por Álvaro Gartner; El Costalón de Iván Salazar Duque) y «La Mano Peluda» (Escobar Uribe, p. 179), con la Mano Negra.",
+        limitation:
+          "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      "escondidosespantosf",
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Trae «La Mano Peluda» (pp. 27-28) como testimonio inventado de una mujer a quien su madre amenazaba con ella para que se fuera a dormir.",
+        limitation:
+          "Se declara «recopilación de documentos imaginarios»; no trae al Viejo del Costal.",
+      },
+      {
+        key: "aragonvienesf",
+        summary:
+          "Ficha del Capricho de Goya «Que viene el coco» (1799), la crianza por el miedo que Similitudes compara con la copla del Viejo del Costal.",
+      },
+    ],
+    relatoCorto:
+      "Las fuentes describen al Viejo del Costal y a la Mano Peluda y citan una amenaza y una copla, sin un caso con personajes. Llegar a 300 palabras exigiría inventar.",
+    title: "El viejo del costal",
     excerpt:
       "Un viejo limosnero con costal y una mano escondida servía para amenazar a los niños que lloraban o desobedecían.",
     tags: ["Viejo del Costal", "mendigo", "miedo", "obediencia"],
-    mito: `El Viejo del Costal pertenece a los relatos que entraban en la casa antes de que apareciera personaje alguno. Bastaba que un niño llorara, se negara a dormir o insistiera en salir para que una persona adulta anunciara que el viejo podía llevárselo.
+    mito: `Era un viejo limosnero que andaba de día y de noche con un costal al hombro. Una de sus manos era como una garra, y la llevaba escondida: ésa era la Mano Peluda. Cuando encontraba a un niño, lo metía en el costal y se escapaba.
 
-La descripción recogida por Fabio Vélez Correa, a partir de Julián Bueno, lo presenta como un anciano limosnero. Lleva un saco grande y mantiene una mano escondida. Esa mano recibe el nombre de Mano Peluda y se imagina como una garra.
+Parecía un ser cansado y manso, ocupado sólo en llenar el costal y cargarlo. Pero su único oficio era robarse para siempre a los niños malcriados o groseros y llevárselos sin regreso a comarcas muy lejanas. Su hambre de niños no tenía fin, y en el costal le cabían todos los que quisiera llevar.
 
-El personaje puede aparecer de día o de noche. No depende por completo de la oscuridad, porque su apariencia de mendigo le permite confundirse con alguien que camina y pide ayuda. La amenaza transforma esa figura cotidiana en un secuestrador fantástico: los niños caprichosos, llorones o desobedientes serían metidos en el costal.
+Por eso los mayores les decían a los niños llorones:
 
-En una escena doméstica típica, el llanto disminuye cuando se escucha un paso fuera de la casa. Nadie necesita ver una garra. Un costal sobre el hombro de un caminante puede bastar para que la advertencia parezca confirmarse. El adulto señala la calle; el niño imagina el interior del saco y el destino distante al que sería llevado.
+—Seguí llorando, culicagao, y viene el Viejo del Costal y te lleva con la mano peluda.
 
-La eficacia del relato está en lo que no muestra. No hay una vivienda del viejo, una lista de víctimas ni una explicación de lo que hace después. El costal funciona como espacio cerrado donde desaparece quien no obedece. La mano oculta deja que cada oyente complete la forma del peligro.
+Y los campesinos todavía cantan:
 
-Vélez Correa también registra una copla campesina citada por Álvaro Gartner. Su circulación confirma que la figura pasó por amenazas, versos y recuerdos de infancia. Memorias locales de Riosucio todavía reúnen al Viejo del Costal y la Mano Peluda entre los nombres con que se asustaba a los niños.
+Con el Viejo del Costal
+a muchos nos espantaron;
+para no oírnos llorar
+los mocos se nos cuajaron.
 
-La versión anterior de esta ficha convirtió al personaje en espíritu errante que buscaba redención y recorría caminos olvidados. Ese desarrollo no aparece en el núcleo consultado. Tampoco se afirma que se alimentara del miedo. La revisión conserva una figura mucho más breve y, por eso mismo, más reveladora: un adulto desconocido, una mano que no se ve y un saco usado para obtener obediencia.`,
-    historyCore:
-      "Vélez Correa clasifica al personaje entre los mitos de los caprichos y remite a Creencias del Occidente Caldense, de Julián Bueno Rodríguez. También cita una copla registrada por Álvaro Gartner. La memoria local de Riosucio muestra su persistencia como amenaza infantil, pero no documenta secuestros ni una biografía sobrenatural.",
-    versionCore:
-      "Viejo del Costal y Mano Peluda pueden funcionar como dos nombres de una misma amenaza o como rasgos que se separan en otras circulaciones. El cuerpo de limosnero, la mano oculta y el costal pertenecen a la descripción caldense consultada. Redención, espíritu errante, alimento de miedo y peregrinación se retiran por falta de respaldo.",
-    similarityCore:
-      "El personaje pertenece a la amplia familia del Hombre del Saco, el Coco y el Bogeyman: figuras invocadas para impedir que los niños lloren, desobedezcan o salgan solos. Se diferencia del Coco porque posee objetos y aspecto reconocibles, y de la Mano Peluda mexicana porque aquí la mano es un rasgo del viejo limosnero. La semejanza principal no es una genealogía segura, sino el uso educativo del miedo a ser llevado lejos. El costal hace imaginable una desaparición que el relato nunca describe.",
+La Mano Peluda también andaba sola. En las noches oscuras y en las tardes solitarias se alargaba, negra, velluda y con uñas grandes y puntiagudas, por las ventanas, los postigos, las rendijas de las paredes, las troneras de los bahareques y los boquetes de los muros. Vivía en los subterráneos de las casas, y a los niños traviesos y callejeros las madres los llamaban al orden con ella.`,
+    historia: `El Viejo del Costal y la Mano Peluda están en capítulos contiguos de Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total), dentro de los mitos menores. Vélez toma al Viejo de Julián Bueno Rodríguez (p. 92), que lo llama «Mito de los Caprichos» y lo describe como un limosnero con una mano de garra escondida, la Mano Peluda. Añade la amenaza que usaban los mayores con los niños llorones, una copla campesina que cita Álvaro Gartner, y la descripción de Iván Salazar Duque, que lo llama El Costalón.
+
+Para la Mano Peluda, Vélez cita a Arturo Escobar Uribe (Mitos de Antioquia, 1950, p. 179), según el cual su ancestro es muy viejo y su leyenda se conoce en toda Antioquia y el Viejo Caldas, y la describe con su gemela, la Mano Negra.
+
+No hay narrador de un caso: el libro recoge una figura, una amenaza de crianza y una copla. Es un espanto doméstico del mundo infantil, que en el libro va inmediatamente después del Coco, el «Mito de la Desobediencia».
+
+La copla que recoge Gartner está en primera persona del plural, «a muchos nos espantaron», y es la única voz de quien fue niño bajo esa amenaza. El resto de la entrada está escrito desde los adultos que la usaban para callar el llanto.`,
+    versiones: `En Vélez, el Viejo del Costal y la Mano Peluda son a la vez una sola figura y dos. Julián Bueno dice que la Mano Peluda es la mano escondida del Viejo; el capítulo siguiente la trata como un espanto con vida propia, que se mete por las ventanas y vive en los subterráneos, con una gemela, la Mano Negra.
+
+Salazar Duque le cambia el tono al Viejo. Lo llama El Costalón y lo imagina cansado y manso, ocupado sólo en su costal; lo terrible no es su aspecto, sino que se lleva a los niños para siempre a comarcas lejanas.
+
+Fuera de Caldas, Javier Ocampo López publicó una versión tunjana, «El espanto de la Mano Peluda», ambientada en el convento de agustinos de la Candelaria y en las casas de Tunja, que se lee en el portal Tunja Ciudad de Tesoros Escondidos. Y el libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara ficción, inventa un testimonio de una mujer a quien su madre amenazaba con la mano peluda para que se fuera a dormir.`,
+    similitudes: `El pariente más cercano está en la página anterior del mismo libro: el Coco, al que Vélez llama «Mito de la Desobediencia» y que, como el Viejo del Costal, existe sobre todo en la amenaza de los padres. Pero el Coco no tiene cuerpo, y el Viejo sí: un costal, una mano escondida y un oficio preciso.
+
+El hombre del saco que se lleva a los niños es una figura conocida en toda la tradición hispánica, y el Viejo caldense es una de sus formas. Goya grabó en 1799, en su tercer Capricho, «Que viene el Coco», a una madre y sus niños ante una figura envuelta; la Fundación Goya en Aragón lo lee como crítica de la crianza por el miedo, la misma que resume la copla campesina: con el Viejo del Costal a muchos los espantaron para no oírlos llorar.
+
+La Mano Peluda tunjana de Ocampo López lleva la figura a los conventos y las casas coloniales de Tunja. Allí la mano sale de los muros de la ciudad vieja; en Caldas, de las troneras de los bahareques.`,
     leccion:
-      "La obediencia conseguida mediante amenazas también merece ser examinada desde la experiencia de la infancia.",
+      "Las amenazas que calman el llanto de un niño se recuerdan de adulto como una copla.",
     sceneHorizontal:
       "una calle tradicional de Riosucio al caer la tarde, con un anciano limosnero de costal caminando a distancia mientras una familia observa desde la puerta",
     sceneVertical:
@@ -375,33 +547,90 @@ La versión anterior de esta ficha convirtió al personaje en espíritu errante 
   }),
   defineCaldasMestizoMyth({
     slug: "in-illo-tempore",
-    title: "In illo tempore: la lealtad de Jerónimo",
+    fuentesAgotadas: "Es un cuento firmado de Enrique Otero D'Costa: sólo existen sus impresiones (Leyendas, 1936, vía Villa Posse II; Revista UPB, 1964) y los estudios sobre su autor; los hechos de fondo están en la historia de la conquista, no en otras versiones del relato.",
+    sourceKeys: [
+      {
+        key: "compiladoraMitos1993",
+        summary:
+          "Texto del cuento de Otero D'Costa, de sus Leyendas (1936), en la sección 17 «Varias regiones», pp. 25-27: el atrio de Anserma, el consejo de la almohada, la sorpresa del 1 de octubre de 1546 y la respuesta de don Diego.",
+        limitation:
+          "Villa Posse lo presenta como leyenda oída y reelaborada; es un cuento firmado, sin informante.",
+      },
+      {
+        key: "dCostaLeyendas1964",
+        summary:
+          "Segunda impresión del cuento, póstuma (pp. 58-61), con la nota que llama al autor «destacado historiador» y a sus piezas «crónicas sobre temas coloniales».",
+        limitation:
+          "Coincide con 1993 salvo erratas.",
+      },
+      {
+        key: "camargoHacia2015",
+        summary:
+          "Estudio de la obra de Otero D'Costa que lee sus leyendas como historiografía de la vida cotidiana colonial.",
+        limitation:
+          "No analiza este cuento en particular.",
+      },
+      {
+        key: "republicacoleccionsf",
+        summary:
+          "Presenta a Otero D'Costa como historiador y coleccionista de documentos coloniales, el oficio que da nombres y fechas a su cuento.",
+      },
+      {
+        key: "caldasConquista",
+        summary:
+          "Síntesis de la conquista del antiguo Caldas: Robledo llega con Belalcázar en 1536, recorre la provincia de Anserma y funda sus poblaciones, el fondo histórico del cuento.",
+        limitation:
+          "Es una síntesis institucional sin aparato crítico; no cuenta el episodio de Vezga, que es invención del autor.",
+      },
+    ],
+    title: "In illo tempore",
     excerpt:
       "Jerónimo de Vezga cambia de bando esperando casarse con Isabel, pero la ejecución de Robledo lo obliga a regresar ante Don Diego.",
     tags: ["traición", "lealtad", "conquista", "amor"],
-    mito: `Enrique Otero D’Costa sitúa In illo tempore en los conflictos de la conquista del territorio del actual Caldas. Jerónimo de Vezga sirve a Don Diego, un hombre ligado a las campañas españolas, y ama a Isabel. La posibilidad de casarse con ella depende de la aprobación y la confianza del padre.
+    mito: `Un domingo, después de la misa mayor, en el atrio del templo de Anserma, un amigo se acercó a don Jerónimo de Vezga con malas noticias.
 
-La llegada de noticias sobre Jorge Robledo altera ese equilibrio. Jerónimo cree que junto al nuevo caudillo encontrará mejores oportunidades y que el ascenso militar le permitirá regresar con una posición suficiente para pedir la mano de Isabel. La ambición se mezcla con el deseo.
+—Inútil, don Jerónimo, inútil vuestra porfía. Bien sabéis la enemistad que guarda don Diego contra el Adelantado, y lo testarudo que es el viejo en esas pasiones.
 
-En lugar de permanecer con Don Diego, Jerónimo cambia de bando. No lo hace porque haya abandonado a Isabel, sino porque imagina un camino más rápido hacia ella. Su decisión, sin embargo, es leída por quienes deja atrás como deslealtad.
+Y le repitió lo que el viejo había dicho delante de él: que dar la mano de su hija a un partidario de Benalcázar, jamás; que antes lo verían muerto.
 
-El proyecto se derrumba cuando las fuerzas de Pedro de Heredia capturan a Jorge Robledo. La ejecución del mariscal en 1546 dispersa a sus seguidores y convierte la apuesta de Jerónimo en peligro. Él logra escapar. Ya no tiene jefe, recompensa ni victoria que presentar.
+Don Jerónimo bajó la calle rumbo a su posada. El sol de septiembre caía a manojos sobre las calles, bajo un cielo tan limpio que parecía un lago de cobalto, y su sombra larga se encogía y se estiraba a cada paso. Se retorcía el bigote y hablaba solo. Si el viejo lo había dicho, el viejo lo cumplía. Y el dilema no tenía salida: si dejaba las banderas del Adelantado para seguir las de Robledo, perdía la honra y además se embarcaba en una nave que, a su parecer, se estaba yendo a pique; y si no lo hacía, jamás podría llamar suegro a don Diego.
 
-Jerónimo emprende el regreso. Vuelve a la casa de Don Diego y se presenta ante él, esperando que el amor por Isabel y el fracaso sufrido permitan reparar la ruptura. El anciano no acepta esa explicación. Para él, quien abandona a su señor cuando cambia la fortuna ya ha mostrado qué valor concede a su palabra.
+Llegó al mesón, se encerró en su cuarto, se tendió en la cama y le pidió consejo a la almohada. Era una consejera de poca tripa y mal aliento, y así fue su consejo:
 
-Isabel queda entre el afecto y la autoridad paterna. El cuento no convierte el regreso en reconciliación. Don Diego niega el matrimonio y rechaza a Jerónimo por la lealtad quebrada. La decisión que debía acercarlo a Isabel termina separándolo definitivamente de ella.
+—¿Qué os reportan el Adelantado, el guion real o el mismo rey? Bien poca cosa. ¿Y vale todo eso siquiera una pestaña de los ojos de doña Isabel? Pues dejad esas banderas y marchaos con el mariscal Robledo.
 
-El título latino, “en aquel tiempo”, anuncia una mirada retrospectiva. Otero usa nombres, fechas y rivalidades de la conquista para construir verosimilitud, pero la intimidad de Jerónimo, Isabel y Don Diego pertenece a la ficción. No hay respaldo independiente para tratar sus conversaciones como documento.
+Y el corazón dijo que sí. Tenía motivos: la muchacha era doña Isabel Gutiérrez de los Ríos, que hacía reventar de envidia a las rosas.
 
-La historia tampoco presenta la conquista desde la experiencia de las poblaciones sometidas. Los dilemas ocurren entre españoles y convierten el territorio indígena en escenario de honor personal. Esta adaptación conserva el argumento y señala ese límite, en lugar de transformar la obediencia a un conquistador en virtud universal.`,
-    historyCore:
-      "La antología de Otero D’Costa reproduce In illo tempore como obra firmada. La captura y ejecución de Jorge Robledo en 1546 pertenecen al marco histórico, mientras Jerónimo, Isabel, Don Diego y sus motivos funcionan dentro de la ficción. Los estudios de conquista y arqueología permiten recuperar un territorio más amplio que el conflicto entre caudillos españoles.",
-    versionCore:
-      "El núcleo no es una aparición sobrenatural, sino una leyenda histórica sobre ambición, amor y fidelidad. Las adaptaciones pueden resumir el cambio de bando como traición o como error estratégico; ambas lecturas deben conservar que Jerónimo esperaba mejorar su posición para casarse. No se añaden maldiciones, fantasmas ni castigos divinos.",
-    similarityCore:
-      "In illo tempore recuerda tragedias donde una decisión tomada para alcanzar el amor produce la pérdida de la persona amada. También comparte con relatos caballerescos el conflicto entre lealtad al señor y deseo individual. Se diferencia de una crónica porque organiza el pasado alrededor de motivaciones íntimas y una moraleja. Frente a De frente al sol, otra ficción de Otero, cambia el valor central: allí el honor se expresa mirando al enemigo; aquí se mide por permanecer con un jefe.",
+Antes de que amaneciera sobre los jardines de Anserma, un jinete salía de la ciudad rumbo al norte. Don Jerónimo iba camino de la villa de Arma, detrás del estandarte del mariscal Robledo, el rival de Benalcázar. Robledo lo recibió con gusto, porque sus tercios flaqueaban, y le dio un puesto de honor en su guardia personal.
+
+Le duró poco. El primer día de octubre de 1546, de madrugada, el Adelantado cayó sobre el campo descuidado de Robledo y se lo llevó sin disparar un tiro. Don Jerónimo despertó al mariscal; acudieron Alonso de Medina y el alférez Hernando Gutiérrez de Altamirano a animarlo a pelear. Pero Robledo vio cuán pocos eran, dejó caer la pica y fue a entregarse a Benalcázar. Cuatro días después murió a garrote, con tres de sus capitanes.
+
+Don Jerónimo huyó. Se despeñó por un precipicio sin hacerse daño y, tras mucho correr, llegó a esconderse en Anserma, en casa de un camarada.
+
+Pasaron los días. Cuando el Adelantado se fue a Popayán, don Jerónimo salió del escondite, primero con cautela y luego con toda confianza, y se fue derecho a casa de don Diego Gutiérrez de los Ríos a pedir su premio. Ya no quedaba, pensaba, ninguna razón para negárselo.
+
+El viejo lo oyó y le contestó con calma:
+
+—Señor pretendiente: cuando erais del bando del Adelantado, quizá con constancia me habríais ganado. Hoy, que cambiasteis de bandera como quien cambia de jubón, habéis perdido toda esperanza, porque prefiero ver a mi hija en manos de un enemigo leal que en las de un amigo que se me cuela por el postigo de la traición.
+
+Así habló don Diego en Santa Ana de los Caballeros de Anserma, hace cuatro siglos.`,
+    historia: `El texto es un cuento de Enrique Otero D'Costa, historiador colombiano que publicó en 1936 un tomo de Leyendas en la Biblioteca Aldeana de Colombia, la colección que la Selección Samper Ortega sacó con el Ministerio de Educación y la editorial Minerva. Se lee en dos testigos. Eugenia Villa Posse lo reprodujo en 1993 en el segundo tomo de Mitos y leyendas de Colombia (IADAP, Quito), sección 17, «Varias regiones», pp. 25-27, y advierte que Otero reunió allí textos que «recuerda y elabora» para darles forma literaria. La Revista Universidad Pontificia Bolivariana lo publicó de nuevo en 1964 (vol. 27, n.º 95, pp. 58-61), en un homenaje póstumo que llama al autor «destacado historiador» y a sus piezas «crónicas sobre temas coloniales». Los dos textos coinciden salvo erratas de composición.
+
+No hay informante. Habla el autor, que se dirige al lector y llama a Jerónimo «nuestro enamorado hidalgo». La materia es la guerra entre los conquistadores de la gobernación de Popayán: Sebastián de Benalcázar, el Adelantado, y el mariscal Jorge Robledo, fundador de Anserma, que en 1546 se proclamó gobernador de las tierras del norte. Otero, que dirigió el Archivo Historial de Manizales y coleccionó documentos coloniales, pone su cuento dentro de esos hechos: la sorpresa del 1 de octubre de 1546, la entrega de Robledo y su muerte a garrote cuatro días después.
+
+El título latino, «en aquel tiempo», es la fórmula con que la liturgia abría la lectura del Evangelio, y marca el tono del cierre: el cuento termina situando la respuesta de don Diego en Santa Ana de los Caballeros de Anserma, «ahora cuatro siglos».`,
+    versiones: `Las dos impresiones que pueden leerse dicen lo mismo. La de 1993 descompone el espaciado de la tipografía y la de 1964 se come algunas letras, pero ninguna variante toca la trama. El folio de la pieza en el libro de 1936 no está a la vista: Villa Posse da las pp. 15-46 para toda su selección, y un estudio posterior sitúa otra pieza del mismo tomo, «Cuento de ánimas», en las pp. 130-133.
+
+Lo que cambia es la etiqueta. Villa Posse la reúne con leyendas regionales oídas a campesinos y reelaboradas; la revista de 1964 la llama crónica; Daniel Mauricio Preciado Camargo, en su trabajo de grado sobre Otero en la Universidad del Rosario, lee sus leyendas como una forma de historiografía de la vida cotidiana colonial. El cuento admite las tres lecturas: tiene nombres y fechas de la historia, un narrador que ironiza y una moraleja de caballería.
+
+Los hechos de fondo coinciden con los que cuenta la historia regional. La Gobernación de Caldas, en su síntesis de la conquista, narra cómo Robledo llegó a la región con Benalcázar en 1536 y después fundó Anserma, y cómo la rivalidad entre los dos terminó con el mariscal preso. El cuento añade lo que la historia no registra: el pretendiente que cambia de bando por amor y el suegro que no lo perdona.`,
+    similitudes: `El paralelo más cercano está en el mismo libro. En «De frente al sol», otro cuento de las Leyendas de Otero, un encomendero de Chinchiná mide la honra de su hijo muerto por el lugar de las heridas: si están en el pecho, murió bien. «In illo tempore» mide la honra por el lado contrario, el de quien abandona su bandera. En los dos, el juicio lo da un viejo que prefiere perder algo querido antes que aceptar una mancha.
+
+La respuesta de don Diego tiene raíz en el romancero y en la moral caballeresca que Otero imita en todo el cuento: el narrador lo compara, en la misma escena, con los héroes castellanos de la lealtad, y la fórmula del enemigo leal preferido al amigo traidor es un lugar común de esa tradición. El que cambia de señor por interés, aunque el interés sea el amor, queda deshonrado a los ojos del que no cambió.
+
+Y la escena del pretendiente rechazado por un padre intransigente, en medio de una guerra civil entre los propios vencedores, repite a escala de aldea lo que la historia de la gobernación cuenta en grande: la lucha entre Robledo y Benalcázar partió a los españoles de Anserma y Arma en dos bandos, y la derrota de uno arrastró a los que se habían pasado a él a última hora.`,
     leccion:
-      "Una decisión interesada puede conservar su intención amorosa y aun así quebrar una confianza decisiva.",
+      "Quien cambia de lealtad para conseguir lo que desea suele perder, por eso mismo, lo que buscaba.",
     sceneHorizontal:
       "Jerónimo de Vezga abandona la casa de Don Diego para unirse a la expedición de Jorge Robledo, con montañas de Anserma al fondo",
     sceneVertical:
@@ -421,31 +650,63 @@ La historia tampoco presenta la conquista desde la experiencia de las poblacione
   }),
   defineCaldasMestizoMyth({
     slug: "las-brujas",
-    title: "Clementina, la bruja salamineña",
+    fuentesAgotadas: "La figura sólo se lee en Vélez Correa, que la toma de Julián Bueno Rodríguez (Creencias del occidente caldense, 1988), de Escobar Uribe (1950) o de Jiménez Mejía (Tierrabuena, 1977), ninguno con texto abierto. Villa Posse, SENA 2022 y el libro de 2004 no la traen con este nombre o la traen sólo como ficción.",
+    sourceKeys: [
+      {
+        key: "velezReader",
+        summary:
+          "Capítulo «Las Brujas», con el apartado «Una bruja salamineña», que transcribe entre comillas a Rodrigo Jiménez Mejía, Tierrabuena: Clementina, el cruce de la carretera a Pácora, los baúles con retratos, las escobas y las fórmulas del quereme y de los recién casados; y las volantonas y hechiceras de Julián Bueno.",
+        limitation:
+          "Tierrabuena no tiene texto abierto: se lee a través de Vélez. Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+      },
+      "rodriguezSalamina2016",
+      {
+        key: "toledoRemembranzas2022",
+        summary:
+          "Recoge en Manzanares la bruja que se echa encima de los hombres dormidos y las formas de descubrirla, la linaza y el cuchillo en el pecho (pp. 28-29).",
+        limitation:
+          "Es otra bruja, del alto oriente caldense; sirve para Versiones y Similitudes.",
+      },
+      {
+        key: "ceroSetentaBruja",
+        summary:
+          "Ensayo de Andrés Arroyave sobre La bruja de las minas, de Gregorio Sánchez Gómez, novela ambientada en Marmato, que Similitudes cita.",
+        limitation:
+          "Es sobre una novela; comparación literaria.",
+      },
+    ],
+    title: "Las brujas",
     excerpt:
       "Rodrigo Jiménez Mejía narra una visita a la casa de Clementina, en el camino de Salamina a Pácora, y revela su archivo de temores.",
     tags: ["brujas", "brujería", "misterio", "memoria"],
-    mito: `Rodrigo Jiménez Mejía situó a Clementina cerca del cruce entre la carretera de Salamina a Pácora y un sendero de la ladera de La Candelaria, poco después de la quebrada El Palo. El relato tiene forma de visita: Camilo Ángel Echeverri conduce al narrador hasta la casa donde vive la mujer.
+    mito: `Hace unos diez años conocí en Salamina a una bruja auténtica. Con ella se cumplió el dicho: no hay que creer en brujas, pero que las hay, las hay.
 
-El camino ya prepara la inquietud. No se llega a una plaza ni a un consultorio reconocido, sino a una vivienda apartada cuya fama circula antes que su habitante. Cuando los visitantes entran, Clementina habla de sus prácticas y de la muerte de su esposo, de apellido Orrego.
+Se llamaba Clementina. Vivía donde la carretera de Salamina a Pácora se cruza con el camino de la falda de La Candelaria, veinte pasos después de la quebrada de El Palo. Su refugio, destartalado, quedaba pocos metros encima de la carretera, perdido entre la maleza. Allá me llevó Camilo Ángel Echeverri, mi condiscípulo, que ya murió.
 
-La casa funciona como archivo material de su reputación. Hay baúles con fotografías. Algunas imágenes están perforadas a la altura del corazón o de los ojos. También aparecen velas, aguas perfumadas, ramas, escobas y papeles con fórmulas. Los objetos permiten que el visitante imagine destinatarios, encargos y enemistades sin que la narración tenga que probar el efecto de un hechizo.
+Clementina nos explicó toda su magia. Nos contó, en un lenguaje muy pintoresco, el misterioso asesinato de Orrego, su marido. Después nos mostró una serie de baúles donde velaba los retratos de hombres y mujeres a los que tenía sometidos a maleficio. Los retratos tenían alfileres clavados en el corazón y en los ojos, estaban alumbrados con velas de sebo y rodeados de vasijas de agua mezclada con esencias de hojas y de flores, entre ramas de muchas clases. Nos mostró también las escobas en que salía de excursión por las noches.
 
-Clementina muestra ese repertorio en lugar de esconderlo. Explica que campesinos acudían a ella y que el dinero recibido sostenía su vida. El encuentro reúne consulta, comercio, temor y curiosidad. Quien llega buscando a una bruja participa también en la construcción de su fama.
+Vivía de los denarios que le daban los campesinos por todos esos oficios.
 
-El episodio del esposo ocupa el centro oscuro de la conversación. Clementina cuenta su muerte dentro del mismo universo de prácticas que exhibe. La ficha no convierte su versión en expediente judicial ni afirma que una acción mágica causara un homicidio. Conserva lo que hace el relato: permitir que una mujer asociada con lo oculto administre la historia que otros cuentan sobre ella.
+Nos recitó fórmulas y oraciones extraordinarias de su liturgia. Años después, cuando llegó a mis manos un manual de brujería del folclor, encontré en él algunas oraciones y recetas iguales a las que le oí a Clementina. Una era la fórmula del quereme, para amañar a una persona: raspado de uña de la gran bestia, del colmillo del caimán y de la muela del morrocoy; los tres raspados se juntan con una covalonga criolla bien curada, se les añade por tres veces lo que se coja en el canto de una uña de raspado de jarete, y para perfumar el compuesto se le pone una flor de naranjo dulce. Se guarda en una caja de lata y de ahí se va echando en la comida o la bebida de la persona que uno quiere amañar.
 
-Al salir de la casa, los visitantes llevan más imágenes que certezas. Han visto fotografías dañadas y objetos ritualizados, pero no han comprobado transformaciones, vuelos ni poderes. La inquietud nace de la cercanía entre cosas ordinarias y significados amenazantes.
+La otra era para guardar las fuerzas de los recién casados, y sólo servía para la luna de miel: la cabeza y el corazón de una tórtola cogida a las cinco de la tarde, sangre de mico marimondo para la agilidad, y sangre de palomo y de león para el aguante.`,
+    historia: `El relato está en el capítulo «Las Brujas» de Mitos, espantos y leyendas de Caldas, de Fabio Vélez Correa (1.ª ed., Imprenta Departamental de Caldas, Manizales, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total), bajo el subtítulo «Una bruja salamineña». Vélez lo transcribe entre comillas de Rodrigo Jiménez Mejía, Tierrabuena, un libro de evocaciones que el Banco de la República publicó en la edición conmemorativa del sesquicentenario de Salamina (1827-1977).
 
-Esta Clementina pertenece a una pieza firmada de Jiménez Mejía, publicada en Tierrabuena, seguido de Evocaciones. No es una suma de todas las brujas de Caldas. Aspasia, a quien una versión anterior incorporó, es personaje de la novela La bruja de las minas, de Gregorio Sánchez Gómez, ambientada en Marmato. Unirlas borraba dos obras, dos autores y dos contextos diferentes.`,
-    historyCore:
-      "Vélez Correa reproduce el pasaje de Clementina y lo atribuye a Rodrigo Jiménez Mejía dentro de Tierrabuena. Su bibliografía fecha la edición consultada en 1977, mientras un perfil de La Patria registra la primera edición en 1959 y una segunda del Banco de la República en 1978. La discrepancia editorial se conserva; ninguna fecha vuelve anónima la obra.",
-    versionCore:
-      "Clementina conserva casa, cruce de caminos, Camilo Ángel Echeverri, objetos y relato sobre Orrego. Aspasia o Cecilia no es una versión de Clementina: pertenece a La bruja de las minas, novela de Gregorio Sánchez Gómez sobre Marmato. Las brujas volantonas y otras narraciones caldenses pueden compararse, pero no se insertan en esta visita.",
-    similarityCore:
-      "Clementina comparte con otros relatos de curanderas y brujas el espacio doméstico lleno de velas, plantas, aguas y objetos asociados con clientes. Las fotografías perforadas recuerdan prácticas de magia por semejanza presentes en muchas tradiciones, sin probar eficacia sobrenatural. Aspasia también es llamada bruja, pero su historia literaria gira alrededor de minería, despojo y violencia en Marmato. Distinguirlas permite comparar cómo dos autores usaron la figura de la bruja sin reducir a las mujeres ni a Caldas a un solo estereotipo.",
+Quien habla es el propio Jiménez Mejía, salamineño nacido en 1904, abogado y dirigente de su pueblo, a quien la prensa de Manizales recordaba todavía en 2016 como «autor de Tierrabuena». Cuenta una visita hecha unos diez años antes de escribir, con su condiscípulo Camilo Ángel Echeverri, y da el lugar con precisión de vecino: el cruce de la carretera a Pácora con el camino de La Candelaria, pasando la quebrada de El Palo. El texto no da el año de la visita, que por la fecha del libro queda hacia fines de los años sesenta.
+
+El capítulo de Vélez enmarca a Clementina en lo que se cree de las brujas en Caldas: que hacen pacto con el diablo, que aprenden a volar gritando desde el techo una fórmula herética, que hay «volantonas» y «hechiceras», según Julián Bueno. Jiménez Mejía no cuenta nada de eso: cuenta una mujer que vive de sus oficios, guarda retratos con alfileres y recita recetas. Él mismo las compara después con las del manual de brujería de Arturo Escobar Uribe y las encuentra iguales.`,
+    versiones: `Dentro del libro de Vélez, Clementina es la única bruja con nombre, casa y oficio. Las demás del capítulo son figuras de la creencia: las volantonas de Julián Bueno, que no dejan dormir a una familia o se echan encima del hombre que les gusta; las que se inician en el cementerio con una escoba negra, según una investigación del Instituto Caro y Cuervo que cita María Luisa Rodríguez; las que se reúnen en el Patio de Brujas de La Merced a parrandear con el diablo, oliendo a albahaca.
+
+Jiménez Mejía no la presenta como espanto sino como una vecina que ejerce un oficio y cobra por él. Las recetas que da, con su ortografía de habla campesina en el original, son, según él mismo, las que encontró después en el manual de folclor de brujería de Escobar Uribe.
+
+En el alto oriente caldense, el libro del SENA de 2022 recoge otra bruja, la que se echa encima de los hombres dormidos, y dos maneras de descubrirla que cuentan en Manzanares: regar una libra de linaza en la pieza, porque la bruja amanece recogiéndola grano por grano, o ponerse un cuchillo en el pecho para que se ensarte al acostarse encima.`,
+    similitudes: `La bruja que se echa encima del hombre dormido, la de Manzanares en el libro del SENA de 2022, es la misma volantona que Julián Bueno describe en el occidente caldense, citado por Vélez. Clementina está en el otro extremo: no vuela ni ahoga a nadie, sino que prepara filtros y vela retratos. Las dos clases de Bueno, volantonas y hechiceras, caben en el mismo capítulo y separan el espanto de la vecina que presta un servicio.
+
+La narrativa caldense tiene una bruja más famosa en la novela La bruja de las minas, de Gregorio Sánchez Gómez, ambientada en Marmato. El ensayo de Andrés Arroyave en la revista 070 de la Universidad de los Andes (2026) la lee como precursora del gótico andino: allí la bruja está ligada a la minería y a la llegada de una compañía extranjera. En el relato de Salamina no hay tragedia ni terror; hay una mujer con baúles, escobas y recetas, contada con humor por un visitante que la respeta.
+
+Las fórmulas de Clementina, con uñas, colmillos, sangres y flores, tienen su espejo en el manual de brujería de Escobar Uribe que el propio narrador cita. Es la prueba de que la magia de la ladera salamineña circulaba por Antioquia y Caldas con las mismas palabras.`,
     leccion:
-      "Distinguir autores y personajes protege la memoria frente a una tradición inventada por simple mezcla.",
+      "La fama de bruja también puede ser un oficio del que se vive en la orilla de un camino.",
     sceneHorizontal:
       "Camilo Ángel Echeverri y el narrador llegan a la casa de Clementina junto al camino Salamina-Pácora y la ladera de La Candelaria",
     sceneVertical:

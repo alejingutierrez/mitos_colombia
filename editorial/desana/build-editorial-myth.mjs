@@ -70,6 +70,7 @@ export function buildDesanaEditorialMyth(input) {
     longitude: media.longitude,
     mito: input.mito,
     ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
+    ...(input.fuentesAgotadas ? { fuentesAgotadas: input.fuentesAgotadas } : {}),
     historia,
     versiones,
     leccion: input.leccion,

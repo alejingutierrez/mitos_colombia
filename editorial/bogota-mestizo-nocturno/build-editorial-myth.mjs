@@ -63,6 +63,7 @@ export function buildBogotaMestizoNightEditorialMyth(input) {
     leccion: input.leccion,
     similitudes: input.similitudes ?? input.similarityCore,
     ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
+    ...(input.fuentesAgotadas ? { fuentesAgotadas: input.fuentesAgotadas } : {}),
     excerpt: input.excerpt,
     seo_title: input.seoTitle,
     seo_description: input.seoDescription,

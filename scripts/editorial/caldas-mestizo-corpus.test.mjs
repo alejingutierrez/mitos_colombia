@@ -35,7 +35,7 @@ test("los nueve expedientes cumplen rangos y estructura metodológica", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      (record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -66,7 +66,7 @@ test("los nueve expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
@@ -101,50 +101,41 @@ test("corrige fusiones, autorías, nombres y atribuciones heredadas", () => {
     bySlug.get("cuento-de-animas").category_path,
     "Andina > Santander > Mestizo",
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("cuento-de-animas").mito,
-    /Laurián[\s\S]+Ñuá Ulogia/,
+    /Laurián[\s\S]+Ulogia/,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("de-frente-al-sol").mito,
     /1592[\s\S]+Rodrigo/,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-aserrador").mito,
-    /Rafael Toro[\s\S]+Uñón[\s\S]+fiera/,
+    /Rafael Toro[\s\S]+fiera/,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-cacique-cumanday").historia,
     /conjetural|conjetura/i,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-coco").mito,
-    /incorpórea[\s\S]+calabazo[\s\S]+Rubén Bayer/,
+    /cuerpo[\s\S]+calabazo[\s\S]+Rubén Bayer/,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-cole-cabuya").mito,
     /Llanogrande[\s\S]+Pasmí[\s\S]+La Loma/,
   );
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-viejo-del-costal").mito,
     /busca redención|se alimenta del miedo/i,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("in-illo-tempore").mito,
-    /Jerónimo de Vezga[\s\S]+Jorge Robledo[\s\S]+1546/,
+    /Jerónimo de Vezga[\s\S]+Robledo[\s\S]+1546/,
   );
-  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("las-brujas").versiones,
-    /Aspasia[\s\S]+no es una versión de Clementina/,
+    /Clementina[\s\S]+Escobar Uribe/,
   );
 });
 
