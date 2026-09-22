@@ -32,9 +32,18 @@ Texto en `../../caribe-mestizo-final/primarias/villa-posse-1993-otero-varias-reg
 Contiene:
 
 - `tal-para-cual` (p. 9)
-- `el-cacique-salomon` (33) — **transcurre en Sogamoso, no en Santander**
+- `el-cacique-salomon` (33) — **sí es de Santander**. Este archivo decía antes
+  lo contrario, repitiendo un aviso del informe de búsqueda: es falso.
+  Sogamoso son las veinte líneas de apertura con Sugamuxi; las cuatro quintas
+  partes restantes transcurren en **Dubigara**, «en cuyas tierras asiéntase hoy
+  la gentil Barichara», y en **Vélez**, con el encomendero Juan Bautista de
+  Olarte, provincial de la Santa Hermandad de esa ciudad. Comprobado en el
+  texto. La ficha se queda donde está.
 - `talabad` (36) — el libro lo titula **«TALABALÍ»**; el slug es una errata de
-  OCR, y la pieza transcurre en el valle de Bucarica
+  OCR, y la pieza transcurre en el valle de Bucarica. **Ojo a la procedencia:**
+  la ficha publicada la atribuye a *Cronicón solariego* (1922), y lo que Villa
+  Posse reproduce es *Leyendas* (Minerva, 1936, pp. 15-46). Hay que cambiar
+  obra y año.
 
 Su límite editorial es propio y distinto: la nota de esa sección declara que
 muchas de estas leyendas fueron «oídas por el autor directamente de
