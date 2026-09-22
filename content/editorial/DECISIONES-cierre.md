@@ -34,6 +34,11 @@ resulta tener pueblo. ③ Retirarla del catálogo.
 
 *Mientras tanto:* entra en C6 con las demás de forma cumplida.
 
+*Resultado de C6 (2026-09-22):* bloqueada. La propia ficha se declaraba
+«fábula contemporánea creada para el sitio»; con el nombre exacto sólo salen
+el sitio, su copia en Vercel y resúmenes que lo copian, y ninguna de sus 8
+fuentes nombra un hada. No hay pueblo al que asignarla: queda ③.
+
 ### D2 · El libro de López Orozco (2008) sin ejemplar · 12 fichas, 2 bloqueadas
 
 [`bogota-mestizo/DECISIONES.md` §0](bogota-mestizo/DECISIONES.md)
@@ -206,12 +211,28 @@ están en módulos «mixto» y sus actas proponen «mestizo» (ningún registro
 abierto les da rasgo indígena ni afro). En el mismo ciclo, `el-jinete-negro`
 es de Ocaña y el módulo lo pone en Cundinamarca-Boyacá.
 
+C6 suma cinco: `chiles-y-cumbal` es un mito de origen del pueblo pasto
+(Embilpud y Embilquer) y su acta propone moverla a pananes; `guagua-rayo` y
+`taita-galeras` son relatos del Cabildo Quillasinga de Jenoy (candidatas a
+quillacingas); `el-riviel-del-rosario` es tradición afro del Pacífico y está
+en el cajón mixto; `el-tesoro-de-dabeiba` y `dobaida` son tradición cueva
+contada por cronistas y siguen en el módulo katío. Además, el slug dice
+«dabeiba», el título «Dobaida» y las crónicas «Dabaiba»: hay que escoger una
+grafía. Y `la-piramide-del-chontaduro` es un suceso de prensa de 2025, no una
+leyenda: se sostiene sólo si el director acepta sucesos contemporáneos.
+
 ① **Mover la categoría** a donde ocurre el relato. ② Dejarlas y decirlo en
 `historia` (ya se dice). ③ Mover sólo las de cajón mestizo/mixto.
 
 *Mientras tanto:* ②.
 
-### D19 · Fichas bloqueadas que siguen publicadas con texto viejo · 5 fichas
+### D19 · Fichas bloqueadas que siguen publicadas con texto viejo · 49 fichas
+
+Al cierre son 49 (ver `docs/estado-enriquecimiento.md` §0). Las que se
+bloquearon en esta sesión, además de las cinco de abajo: `la-casa-de-la-tradicion`
+(su única página, Visit Cali, da 404), `la-yesca` (una línea de guía
+turística), `el-silbo-de-quinunchu` (sólo existe en el sitio) y
+`el-hada-de-los-canaverales` (D1).
 
 `el-sombreron` y `dioses-lares` (Tolima), `esperanza-en-el-oriente`
 (Boyacá), `el-bus-fantasma` y `el-mandingas` (varios) tienen acta bloqueada;

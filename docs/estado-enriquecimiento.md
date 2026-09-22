@@ -1,15 +1,51 @@
 # Estado del enriquecimiento · todo el catálogo
 
-**Dónde vamos, medido contra Neon el 2026-09-21.** Este documento es el
-tablero del proyecto entero —596 mitos—, no sólo del bloque en curso: qué
-está cerrado, qué está a medias, qué no se ha tocado y qué espera una
-decisión.
+**Cierre medido contra Neon el 2026-09-22** con `tablero.mjs --guardar`
+(`content/editorial/tablero/tablero-2026-09-22.json`). Las secciones desde la
+§1 son la foto del 2026-09-21, antes del cierre; se conservan como registro
+de dónde se partió.
 
 El proceso lo gobiernan
 [`spec-reescritura-y-fuentes.md`](spec-reescritura-y-fuentes.md) para las
-comunidades y [`spec-mestizos-y-mixtos.md`](spec-mestizos-y-mixtos.md) +
+comunidades, [`spec-mestizos-y-mixtos.md`](spec-mestizos-y-mixtos.md) +
 [`brief-mestizos-y-mixtos.md`](brief-mestizos-y-mixtos.md) para el bloque
-mestizo-mixto. Esto no los repite: los mide.
+mestizo-mixto y [`spec-cierre-del-catalogo.md`](spec-cierre-del-catalogo.md)
+para el cierre.
+
+## 0. El cierre, 2026-09-22
+
+**Ninguna ficha abierta.** Cada una de las 596 está cerrada o bloqueada con
+acta y razón escrita.
+
+| | fichas |
+|---|---:|
+| **Cerradas** (acta, cinco campos, ≥8 fuentes o `fuentesAgotadas` con piso de 3, cotejo 1:1, auditoría sin bloqueos, `verificar --vivo`) | **547** |
+| · comunidades indígenas y afro | 342 |
+| · bloque mestizo y mixto | 205 |
+| **Bloqueadas con acta** (siguen publicadas con su texto viejo, D19) | **49** |
+| Abiertas | 0 |
+
+Las 342 de comunidad: 322 con ≥8 fuentes y 20 con `fuentesAgotadas`
+declarado en el módulo (D15). Las 254 del bloque tienen acta sin excepción.
+
+**Las 49 bloqueadas**, por ciclo: Piedecuesta 29 (segundo ciclo 7, espantos
+y entierros 8, Vicente Arenas I 7, clásicos 4, relatos legendarios 3),
+amazonas-mixto 3, ticuna 3, Bogotá nocturno 2, Pacífico restante 2 (Casa de
+la Tradición, cuya única página da 404; La Yesca), andina-legacy 2 (el Hada
+de los cañaverales, fábula del propio sitio; el Silbo de Quinunchú), y una en
+cada uno de: andina-varios mestizo y mixto, huitoto, Santander mixto, Tolima
+mestizo (Sombrerón) y mixto (Dioses lares), varios mestizo (Bus fantasma) y
+varios mixto (Mandingas). Cada razón está en `por_que_bloqueada` de su acta.
+
+**Lo que queda es del director**, en
+[`content/editorial/DECISIONES-cierre.md`](../content/editorial/DECISIONES-cierre.md):
+despublicar o no las bloqueadas (D19), títulos propuestos (D17), cajones
+dudosos (D18: La Llorona y los Duendes proponen mestizo; Chiles y Cumbal es
+mito pasto; Guagua Rayo y Taita Galeras son quillasingas de Jenoy; el Riviel
+es afro), el Hada sin comunidad (D1) y las 13 fichas que están en módulo y no
+en Neon (D10, D13).
+
+Las secciones §1 a §7 son la foto del 2026-09-21.
 
 ---
 

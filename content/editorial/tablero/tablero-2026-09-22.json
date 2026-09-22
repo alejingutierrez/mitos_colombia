@@ -2,35 +2,35 @@
   "resumen": {
     "fecha": "2026-09-22",
     "total": 596,
-    "cincoCampos": 540,
-    "conCincoFuentes": 533,
-    "conOchoFuentes": 478,
-    "sinFuentes": 52,
+    "cincoCampos": 551,
+    "conCincoFuentes": 543,
+    "conOchoFuentes": 480,
+    "sinFuentes": 41,
     "sinComunidad": 1,
     "bloque": {
       "fichas": 254,
-      "cerradas": 180,
-      "bloqueadas": 43,
-      "abiertas": 31,
-      "conActa": 223,
-      "conOchoFuentes": 156
+      "cerradas": 205,
+      "bloqueadas": 49,
+      "abiertas": 0,
+      "conActa": 254,
+      "conOchoFuentes": 158
     },
     "comunidades": {
       "fichas": 342,
-      "cerradas": 339,
+      "cerradas": 342,
       "sinCincoCampos": 0,
       "bajoOchoFuentes": 20,
-      "agotadasDeclaradas": 17
+      "agotadasDeclaradas": 20
     },
     "porCarril": {
       "C1": 0,
       "C2": 0,
       "C3": 0,
       "C4": 0,
-      "C5": 13,
-      "C6": 18,
+      "C5": 0,
+      "C6": 0,
       "C7a": 0,
-      "C7c": 3
+      "C7c": 0
     },
     "soloEnModulo": 13
   },
@@ -44,10 +44,10 @@
       "modulo": "andina-legacy-editorial-residual",
       "cinco": true,
       "fuentes": 30,
-      "acta": null,
+      "acta": "andina-legado/actas-2026-09-22",
       "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "estado": "bloqueada",
+      "carril": null
     },
     {
       "slug": "anansi",
@@ -1012,8 +1012,8 @@
       "fuentes": 6,
       "acta": null,
       "reescritura": "publicada",
-      "estado": "abierta",
-      "carril": "C7c"
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "los-muertos-en-el-monte",
@@ -1488,8 +1488,8 @@
       "fuentes": 7,
       "acta": null,
       "reescritura": "publicada",
-      "estado": "abierta",
-      "carril": "C7c"
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-origen-del-maguare",
@@ -2395,11 +2395,11 @@
       "bloque": true,
       "modulo": "pacifico-restante",
       "cinco": true,
-      "fuentes": 26,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 11,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "castellano-viejo",
@@ -2423,11 +2423,11 @@
       "bloque": true,
       "modulo": "andina-legacy-editorial-residual",
       "cinco": true,
-      "fuentes": 28,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 10,
+      "acta": "andina-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "celos-de-esclavo",
@@ -2660,12 +2660,12 @@
       "region": "pacifico",
       "bloque": true,
       "modulo": "pacifico-restante",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 6,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-bobo-del-tranvia",
@@ -2718,10 +2718,10 @@
       "modulo": "varios-mestizo-final",
       "cinco": false,
       "fuentes": 0,
-      "acta": null,
+      "acta": "varios-pacifico/actas-2026-09-22",
       "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "estado": "bloqueada",
+      "carril": null
     },
     {
       "slug": "el-caballo-del-morro",
@@ -2731,11 +2731,11 @@
       "bloque": true,
       "modulo": "pacifico-restante",
       "cinco": true,
-      "fuentes": 26,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 15,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-cacique-cumanday",
@@ -2941,11 +2941,11 @@
       "bloque": true,
       "modulo": "pacifico-restante",
       "cinco": true,
-      "fuentes": 27,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 8,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-enigmatico-abogado",
@@ -3052,12 +3052,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mestizo-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 7,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-llano-ayer-hoy",
@@ -3164,12 +3164,12 @@
       "region": "pacifico",
       "bloque": true,
       "modulo": "pacifico-narino",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 3,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-paisa-y-el-gringo",
@@ -3277,11 +3277,11 @@
       "bloque": true,
       "modulo": "pacifico-restante",
       "cinco": true,
-      "fuentes": 26,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 16,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-silbo-de-quinunchu",
@@ -3292,10 +3292,10 @@
       "modulo": "andina-legacy-editorial-residual",
       "cinco": true,
       "fuentes": 28,
-      "acta": null,
+      "acta": "andina-legado/actas-2026-09-22",
       "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "estado": "bloqueada",
+      "carril": null
     },
     {
       "slug": "el-sombreron",
@@ -3754,10 +3754,10 @@
       "modulo": "pacifico-restante",
       "cinco": true,
       "fuentes": 25,
-      "acta": null,
+      "acta": "pacifico-legado/actas-2026-09-22",
       "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "estado": "bloqueada",
+      "carril": null
     },
     {
       "slug": "la-clave-de-la-felicidad",
@@ -4131,11 +4131,11 @@
       "bloque": true,
       "modulo": "pacifico-restante",
       "cinco": true,
-      "fuentes": 27,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 8,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "la-puerta-del-perdon",
@@ -4270,12 +4270,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mestizo-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 8,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "la-yesca",
@@ -4286,10 +4286,10 @@
       "modulo": "pacifico-restante",
       "cinco": true,
       "fuentes": 27,
-      "acta": null,
+      "acta": "pacifico-legado/actas-2026-09-22",
       "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "estado": "bloqueada",
+      "carril": null
     },
     {
       "slug": "lagunas-encantadas",
@@ -5055,11 +5055,11 @@
       "bloque": true,
       "modulo": "pacifico-narino",
       "cinco": true,
-      "fuentes": 33,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 6,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "chuya-chaqui",
@@ -5097,11 +5097,11 @@
       "bloque": true,
       "modulo": "katio",
       "cinco": true,
-      "fuentes": 6,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 8,
+      "acta": "andina-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-bufeo",
@@ -5194,12 +5194,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mixto-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 6,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-descubrimiento-del-agua-y-los-peces",
@@ -5223,11 +5223,11 @@
       "bloque": true,
       "modulo": "pacifico-narino",
       "cinco": true,
-      "fuentes": 27,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 6,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-diluvio-guinadoma",
@@ -5320,12 +5320,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mixto-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 6,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-mandingas",
@@ -5336,10 +5336,10 @@
       "modulo": "varios-mixto-final",
       "cinco": false,
       "fuentes": 0,
-      "acta": null,
+      "acta": "varios-pacifico/actas-2026-09-22",
       "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "estado": "bloqueada",
+      "carril": null
     },
     {
       "slug": "el-mareco",
@@ -5362,12 +5362,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mixto-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 7,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-patetarro",
@@ -5391,11 +5391,11 @@
       "bloque": true,
       "modulo": "afrocolombianos",
       "cinco": true,
-      "fuentes": 25,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 7,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-silbador",
@@ -5433,11 +5433,11 @@
       "bloque": true,
       "modulo": "katio",
       "cinco": true,
-      "fuentes": 6,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 8,
+      "acta": "andina-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-tunjo",
@@ -5489,11 +5489,11 @@
       "bloque": true,
       "modulo": "pacifico-narino",
       "cinco": true,
-      "fuentes": 27,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 7,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "la-candileja",
@@ -5544,12 +5544,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mixto-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 10,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "la-madre-agua",
@@ -5572,12 +5572,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mixto-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 9,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "la-mano-peluda",
@@ -5628,12 +5628,12 @@
       "region": "pacifico",
       "bloque": true,
       "modulo": "pacifico-narino",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 7,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "la-sombra-creadora",
@@ -5672,10 +5672,10 @@
       "modulo": "pacifico-narino",
       "cinco": true,
       "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "los-duendes",
@@ -5684,12 +5684,12 @@
       "region": "varios",
       "bloque": true,
       "modulo": "varios-mixto-final",
-      "cinco": false,
-      "fuentes": 0,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C5"
+      "cinco": true,
+      "fuentes": 9,
+      "acta": "varios-pacifico/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "los-mensajeros-de-los-dioses",
@@ -5909,11 +5909,11 @@
       "bloque": true,
       "modulo": "pacifico-narino",
       "cinco": true,
-      "fuentes": 27,
-      "acta": null,
-      "reescritura": null,
-      "estado": "abierta",
-      "carril": "C6"
+      "fuentes": 9,
+      "acta": "pacifico-legado/actas-2026-09-22",
+      "reescritura": "publicada",
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "talabad",
@@ -8222,8 +8222,8 @@
       "fuentes": 6,
       "acta": null,
       "reescritura": "publicada",
-      "estado": "abierta",
-      "carril": "C7c"
+      "estado": "cerrada",
+      "carril": null
     },
     {
       "slug": "el-nacimiento-de-los-matapi",
