@@ -42,7 +42,7 @@ Dicen que todavía anda por las montañas, y que los campesinos ruegan que no ll
 
 Una guía de lengua castellana de tercer grado del Centro Educativo El Grillote (2021) trae el mismo texto con pequeñas variantes: sitúa al Patón en Antioquia, le da patas de un metro y cierra diciendo que no es un monstruo, pero hace mucho daño.
 
-Un registro distinto, más corto y más antiguo, está en «Niños de las regiones de Colombia», de Esmeralda Van Vliet, una página infantil del ICAN que en 1997 se imprimió dentro de un informe del programa Fulbright-Hays conservado en ERIC. Una niña de la región cafetera dice que las chapoleras y los peones le han contado muchas leyendas, entre ellas la del Patón: «unos pies muy grandes que pasan por los caminos, solos, sin el cuerpo».
+Un registro distinto, más corto y más antiguo, está en «Niños de las regiones de Colombia», de Esmeralda Van Vliet, una página infantil del ICAN que en 1997 se imprimió dentro de un informe del programa Fulbright-Hays conservado en ERIC. Mauricio, un niño de la región cafetera, dice que las chapoleras y los peones le han contado muchas leyendas, entre ellas la del Patón: «unos pies muy grandes que pasan por los caminos, solos, sin el cuerpo».
 
 En los dos materiales escolares el texto sirve para enseñar el género: la guía de El Grillote lo propone en una actividad titulada «la leyenda», con un cuadro para que el niño identifique personajes, lugar y problema.`,
     versiones: `Los registros abiertos dan dos Patones. En la leyenda escolar es un hombre con pies enormes, torpe y dañino sin querer, que da primero miedo y después lástima y risa. En la lista de Van Vliet, de la región cafetera, es sólo un par de pies descomunales que pasan solos por los caminos, sin cuerpo.
@@ -54,7 +54,7 @@ Entre la guía escolar y la noticia inventada, el Patón pasa de ser un vecino t
 
 La noticia inventada del libro de 2004 lo acerca al Pie Grande norteamericano, el homínido gigante de las huellas enormes, y lo nombra así. Es un préstamo del cine y la prensa sensacionalista, no de la tradición campesina, y el propio libro se declara ficción.
 
-Y los pies que pasan solos por los caminos, sin cuerpo, de la lista de Van Vliet, pertenecen a la misma familia de espantos cafeteros de un solo rasgo que la niña enumera junto a ellos: los Meneses, chiquillos que en los caminos piden dulces o monedas y, si no se los dan, hacen cosquillas hasta dejar a uno rendido de la risa.`,
+Y los pies que pasan solos por los caminos, sin cuerpo, de la lista de Van Vliet, pertenecen a la misma familia de espantos cafeteros de un solo rasgo que el niño enumera junto a ellos: los Meneses, chiquillos que en los caminos piden dulces o monedas y, si no se los dan, hacen cosquillas hasta dejar a uno rendido de la risa.`,
     leccion:
       "El daño que alguien hace sin querer también se sufre, aunque dé más lástima que miedo.",
     sceneHorizontal:

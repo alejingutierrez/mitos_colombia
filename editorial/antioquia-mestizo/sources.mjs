@@ -415,7 +415,7 @@ export const antioquiaMestizoSources = {
     type: "informe educativo",
     url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
     summary:
-      "Incluye la página infantil «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN), donde una niña de la región cafetera cuenta que el Patón son «unos pies muy grandes que pasan por los caminos, solos, sin el cuerpo», junto a los Meneses que nombra Similitudes.",
+      "Incluye la página infantil «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN), donde Mauricio, un niño de la región cafetera, cuenta que el Patón son «unos pies muy grandes que pasan por los caminos, solos, sin el cuerpo», junto a los Meneses que nombra Similitudes.",
     limitation:
       "Es una página infantil de divulgación impresa en un informe de 1997; no da narrador ni lugar exacto.",
   }),
