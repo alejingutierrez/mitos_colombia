@@ -5,7 +5,7 @@
  *
  * Lee las fuentes del módulo (la verdad) o de Neon (--desde=neon, para comunidades
  * sin módulos o para medir lo publicado). Escribe el informe en
- * content/editorial/<comunidad>/auditoria-fuentes-<fecha>.json y sale con código 1
+ * content/editorial/<comunidad>/auditoria-fuentes-<fecha>[-<modulos>].json y sale con código 1
  * si hay bloqueos (mito con menos de 5 fuentes, URL caída, comparativa sin paralelo).
  */
 import fs from "node:fs/promises";
@@ -145,7 +145,10 @@ const report = {
 };
 const outDir = path.resolve("content", "editorial", communitySlug);
 await fs.mkdir(outDir, { recursive: true });
-const outFile = path.join(outDir, `auditoria-fuentes-${today()}.json`);
+// Varios ciclos comparten cajón —mestizo, mixto— y se auditan el mismo día:
+// sin el módulo en el nombre, el segundo informe pisaba al primero.
+const sufijo = options.modulos && options.modulos !== communitySlug ? `-${options.modulos}` : "";
+const outFile = path.join(outDir, `auditoria-fuentes-${today()}${sufijo}.json`);
 await fs.writeFile(outFile, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
 console.log(`Auditoría de fuentes · ${communitySlug} desde ${label} · ${records.length} mitos · ${report.citations} citas · ${usages.size} URLs únicas`);
