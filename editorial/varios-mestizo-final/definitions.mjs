@@ -3,36 +3,66 @@ import { defineVariosMestizoFinalMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineVariosMestizoFinalMyth({
     slug: "la-viudita",
-    title: "La Viudita de Nariño",
+    sourceKeys: [
+      {
+        key: "caliEntreRios",
+        summary:
+          "p. 25: «La viudita», publicada en 1990 en Despertar Vallecaucano: la niña sin bautizar, Juan Patas y el marido infiel.",
+        limitation:
+          "Reproduce un texto de prensa.",
+      },
+      {
+        key: "nuquiEot",
+        summary:
+          "Tabla de mitos: la Viudita de luto con una lámpara, que llora al esposo muerto en la guerra y muestra el rostro cadavérico a los infieles.",
+        limitation:
+          "Una entrada de tabla.",
+      },
+      "vlietColombia1997",
+      "bravoEstrategia2019",
+      {
+        key: "boyacaFolklore",
+        summary:
+          "Nombra a la viudita entre los mitos estudiados en Boyacá (p. 123).",
+        limitation:
+          "Sólo el nombre.",
+      },
+      {
+        key: "tiempoCuentos2004",
+        summary:
+          "Ficha de la Viudita (pp. 45-46): Antioquia, Nariño y el Occidente, mantilla verde, rostro de calavera.",
+      },
+      "polarMitos2014",
+      "correaMitos1997",
+    ],
+    relatoCorto:
+      "Los cuatro registros suman un párrafo de historia (Valle, 1990) y tres descripciones de una o dos frases; llegar a 300 palabras exigiría inventar.",
+    title: "La viudita",
     excerpt:
       "Una anciana de luto anuncia desgracias y guía a trasnochadores hasta el cementerio en Pasto, sin confundirse con otras viudas legendarias.",
     tags: ["muerte", "noche", "miedo", "tradición"],
-    mito: `En Nariño y otros lugares del occidente colombiano se cuenta que La Viudita camina con pasos breves y rápidos cuando las calles quedan solas. Parece una mujer de unos sesenta años, delgada y de baja estatura. Lleva vestido largo de luto, enaguas que suenan al avanzar y una mantilla verde sobre la cabeza. No necesita llamar: su presencia cerca de una sacristía, un sótano o la casa de una persona enferma basta para que alguien tema una muerte próxima.
+    mito: `Dos campesinos que vivían a orillas del río Cauca tuvieron una niña, y de puro pobres no la llevaron a bautizar. La niña creció. Un vaquero de la finca, Juan Patas, supo su historia y le prometió llevarla a bautizar, pero la engañó: le mostró la llegada del obispo de Cali y no la hizo bautizar. Pasó el tiempo y la muchacha se casó con un campesino de la región, que a la larga le empezó a faltar. Entonces ella se volvió su vigilante de las noches, y vestida de negro lo seguía por las calles del pueblo. Cuando murió, le quedó ese destino: perseguir a los trasnochadores y a los borrachos.
 
-La aparición tiene en Pasto otra escena recurrente. Durante la noche encuentra a un hombre que vuelve después de beber y le permite caminar detrás de ella. La figura mantiene el rostro cubierto, de modo que el acompañante cree seguir a una mujer bien arreglada. Ella no conversa ni ofrece un destino. Avanza por callejuelas hasta acercarse al cementerio, mientras el ruido de la ropa impide que el silencio vuelva a cerrarse.
+En Pasto la conocen como una mujer muy emperifollada, que hace mucho ruido con las enaguas al caminar y asusta a los borrachos. En Túquerres es una anciana vestida de negro que, a pesar de la edad, es rápida; merodea los cementerios, busca a los borrachos, y a veces aparece barriendo las calles o simplemente caminando. Si nadie le pone atención, no pasa nada; pero si alguien se acerca, puede venir una tragedia, porque es presagio de desgracia.
 
-Cuando el seguidor intenta alcanzarla o verle la cara, la Viudita se detiene. Bajo la mantilla ya no aparece un rostro cotidiano, sino una calavera con las órbitas encendidas y la boca desdentada. El relato no necesita decir que ella mata. En unas narraciones el hombre cae desmayado; en otras despierta al amanecer dentro de una tumba vacía o regresa a casa dominado por el susto.
+En Nuquí, en el Chocó, es una mujer bella de baja estatura y cabellos largos, vestida de luto, que sale a medianoche con una lámpara prendida en la mano, llorando la muerte de su esposo en la guerra. Se aparece en las calles solitarias a los hombres infieles que andan buscando amantes. Ellos la galantean; ella les pregunta por su marido muerto y les muestra su rostro cadavérico, y los deja desmayados.`,
+    historia: `La Viudita no tiene un solo registro sino varios, de regiones distintas, que comparten el nombre y el oficio. La versión con más historia se publicó en 1990 en el magazine cultural Despertar Vallecaucano, de Cali, y la reprodujeron Chazatar, Giraldo y Sánchez en Cali entre ríos, un trabajo de la Universidad del Valle sobre los ríos en el imaginario caleño (p. 25): la niña sin bautizar de las orillas del Cauca, el vaquero Juan Patas y el marido infiel.
 
-El presagio doméstico y el recorrido al cementerio pueden aparecer juntos o por separado. Una familia teme la visita porque hay una persona grave; un trasnochador la recuerda como escarmiento; otra persona solo escucha las enaguas en una calle sin iluminación. Esa flexibilidad explica por qué el personaje reúne un anecdotario distinto en cada pueblo.
+En Nariño la registra primero una página infantil del ICAN, «Niños de las regiones de Colombia», de Esmeralda Van Vliet, impresa en 1997 dentro de un informe educativo conservado en ERIC: Anita, una niña de Pasto, la nombra entre los espantos que conoce. La tesis de Vanessa Erazo Bravo y Diana Isabel Martínez Cerón (Universidad de Nariño, 2019) la incluye entre los relatos de Túquerres con el nombre de «La Viuda», con una descripción que toma de un repertorio publicado en internet, y su encuesta muestra que es uno de los personajes que más recuerdan los tuquerreños.
 
-La Viudita no recibe aquí un nombre civil, un marido homicida ni una biografía de amante castigada. Clemente Vidal, Clara y Del Castillo pertenecían a la ficha anterior sin respaldo en las ocho fuentes seleccionadas y se retiran. Tampoco se la convierte en la Viuda Alegre o la Dama Verde. Esas figuras comparten luto, noche o seducción, pero sus argumentos y apariencias no son intercambiables. La ruta conserva el núcleo más consistente de Nariño: anciana de negro y verde, anuncio de desgracia, calles de Pasto y miedo frente al cementerio.`,
-    historia: `La clasificación heredada decía Varios, aunque la fila fuente del archivo base ya titulaba el relato “La Viudita: Presagio de Muerte” y lo ubicaba en Andina > Nariño. La revisión devuelve esa procedencia a la taxonomía pública. No integra la fila cercana de la Viuda Negra o Viuda Alegre, porque el propio material y las fuentes las presentan como seres diferentes.
+En el Chocó aparece en la tabla de mitos del Esquema de Ordenamiento Territorial de Nuquí. Y Javier Ocampo López la nombra entre los mitos estudiados en Boyacá. Ninguno de estos registros cita a los otros: son la misma figura contada por separado en cuatro regiones.`,
+    versiones: `Las versiones comparten tres cosas: una mujer de negro o de luto, la noche y los hombres que andan en malos pasos. Difieren en todo lo demás: la causa del castigo, la edad de la mujer y lo que les pasa a los que la encuentran.
 
-Una compilación educativa de 1997 incluye una versión breve en la que la mujer bien vestida y el ruido de sus enaguas asustan a hombres ebrios. La memoria de encuentros regionales de narradores celebrados en Buga en 1990 y 1991 coloca otra Viudita dentro de un bloque nariñense junto con Pandiaco, la laguna de la Cocha y otros relatos del departamento. Esos soportes son anteriores a las síntesis web actuales y sostienen la localización sin demostrar una fecha de origen.
+En el Valle es un alma condenada por una historia propia: no la bautizaron, la engañó un vaquero y la engañó el marido, y por eso persigue a los trasnochadores. En Pasto es una figura casi cómica, emperifollada y ruidosa. En Túquerres es una anciana que anuncia la desgracia. En Nuquí es la viuda de un soldado que castiga a los infieles mostrándoles la cara de la muerte.
 
-Las páginas de 2008 y de El Rincón Colombiano coinciden en anciana, vestido negro, mantilla verde, presagio de muerte, sacristías y cementerio. La coincidencia no se cuenta como dos tradiciones orales independientes: ninguna declara informantes y ambas pueden depender de repertorios impresos. El catálogo de Cuentos de espantos y el de Antonio Molina Uribe aportan control bibliográfico y muestran que La Viudita circuló como entrada propia dentro de colecciones colombianas.
-
-La comparación territorial demuestra por qué no conviene fabricar una sola biografía. El Esquema de Ordenamiento Territorial de Nuquí registra a una viuda joven con lámpara que llora a un esposo muerto en la guerra y se aparece a infieles. Cali entre ríos identifica una leyenda homónima publicada en 1990 alrededor de una casa campesina junto al río Cauca. Son variantes de la familia de viudas aparecidas, no pruebas de que la mujer de Pasto recorriera Nuquí y Cali ni de que todas fueran el mismo espíritu.`,
-    versiones: `La versión nariñense concentra dos funciones. Como presagio, La Viudita ronda sacristías, sótanos y viviendas donde alguien está enfermo; verla anuncia una desgracia y activa preparativos funerarios. Como espanto nocturno de Pasto, guía a hombres ebrios hasta el cementerio, descubre un rostro de calavera y los deja desmayados o dentro de tumbas vacías. Las dos secuencias comparten vestido negro, mantilla verde y andar rápido, pero no siempre aparecen en el mismo testimonio.
-
-El material educativo de 1997 reduce la escena a una mujer muy arreglada cuyas enaguas ruidosas asustan a los borrachos. Esa economía narrativa confirma que el cementerio, el fuego y la tumba no son obligatorios en toda circulación. Los repertorios web amplían precisamente esos motivos y añaden el rostro con ojos encendidos.
-
-La versión institucional de Nuquí es distinta: una mujer bella y baja, vestida de luto y con una lámpara, llora al esposo muerto en la guerra. Pregunta por él a hombres infieles y después revela el rostro cadavérico. La variante vallecaucana localizada por Cali entre ríos comienza en una casa campesina junto al Cauca y pertenece a otra cadena impresa. Ambas se registran como paralelos regionales y no se insertan en las calles de Pasto.
-
-La Viuda Alegre o Viuda Negra de Nariño también queda separada. Puede atraer desde el baile, la risa o una apariencia juvenil, mientras esta Viudita se reconoce como anciana de luto y presagio. La Dama Verde comparte un elemento cromático y la persecución nocturna, pero su vestido o presencia vegetal no equivale a la mantilla verde de la Viudita.`,
+El libro de 2004 Cuentos de espantos y otros seres fantásticos del folclor colombiano, que se declara «recopilación de documentos imaginarios», le dedica una ficha técnica que la sitúa en Antioquia, Nariño y el Occidente, con mantilla verde y rostro de calavera; esa ficha es la que copian muchas páginas de internet sobre la Viudita. De esas páginas pasó a otros materiales de divulgación sin fuente.`,
     leccion:
-      "Conservar las diferencias regionales evita inventar una sola culpable detrás de todas las viudas legendarias.",
-    similitudes: `La Dama Verde es la comparación directa más próxima por el color, la noche y el encuentro con hombres trasnochados. Sin embargo, suele mostrarse como una figura joven vestida de verde que cambia de aspecto, mientras La Viudita nariñense es una anciana de negro cuya mantilla verde cubre el rostro. María la Larga comparte calles pueblerinas, persecución y un cuerpo femenino que altera sus proporciones para provocar miedo; se diferencia porque crece o se alarga y no actúa principalmente como anuncio de muerte. La Viuda Alegre pertenece a la misma gran familia de viudas aparecidas, pero el baile, la seducción y su apariencia juvenil no deben añadirse a la anciana de Pasto. Compararlas permite reconocer motivos comunes sin borrar nombres, edades, territorios y funciones.`,
+      "Quien anda de noche detrás de un engaño puede encontrarse de frente con el rostro de la muerte.",
+    similitudes: `La Sayona de los llanos venezolanos, que recoge la Fundación Empresas Polar en sus Mitos y leyendas del estado Portuguesa, es la pariente más cercana de la Viudita de Nuquí: una mujer de luto que se deja seguir por los hombres infieles y, en el último momento, les muestra un rostro de muerta. Las dos castigan la infidelidad con el mismo gesto.
+
+En la región andina, la María la Larga de Antioquia y el Viejo Caldas, que recogen Arturo Escobar Uribe y Fabio Vélez Correa, es otra mujer de la noche que seduce a los trasnochadores y los espanta, y el Ánima Sola de Nariño y Caldas es otra mujer condenada a vagar por lo que hizo en vida.
+
+El detalle del bautismo que no se hizo, en la versión del Valle, liga a la Viudita con los espantos del limbo y de las almas sin sacramento, un tema muy presente en la religiosidad campesina colombiana: el que no fue bautizado queda a medio camino entre este mundo y el otro.`,
     sceneHorizontal:
       "calle nocturna de Pasto con arquitectura andina sobria, una anciana baja de vestido negro y mantilla verde camina hacia un cementerio distante mientras un trasnochador se detiene sin acercarse, las enaguas sugeridas por capas curvas y sin rostro cadavérico en primer plano",
     sceneVertical:
@@ -53,42 +83,80 @@ La Viuda Alegre o Viuda Negra de Nariño también queda separada. Puede atraer d
 
   defineVariosMestizoFinalMyth({
     slug: "el-judio-errante",
-    title: "El “Judío Errante”: leyenda y estigma",
+    fuentesAgotadas: "Rubio y Briceño, Tunja desde su fundación (1909), no abrió en la Biblioteca Digital AECID; Otálora de Corsi (1939) no tiene texto abierto.",
+    sourceKeys: [
+      {
+        key: "boyacaFolklore",
+        summary:
+          "El Judío Errante de Tunja (pp. 124-125): la talla de Santo Domingo, los novicios y el viajero que visita al padre Luis.",
+        limitation:
+          "Toma el relato de Otálora de Corsi (1939).",
+      },
+      {
+        key: "elTiempoTunja",
+        summary:
+          "El paso procesional tunjano, las tallas del siglo XVI, la voz de Guillermo Rodríguez (Academia Boyacense de Historia) y el diálogo tomado de Rubio y Briceño (1909).",
+        limitation:
+          "Nota de prensa.",
+      },
+      "pastoEspantos2024",
+      {
+        key: "ensstTunja",
+        summary:
+          "«El Judío Errante · La leyenda», con la acuarela de Adrián Munar del claustro de Santo Domingo.",
+        limitation:
+          "Material escolar derivado.",
+      },
+      "tiempoCuentos2004",
+      {
+        key: "jewishEncyclopedia",
+        summary:
+          "La leyenda europea de Ahasvero y Cartáfilo: los nombres que cita Similitudes.",
+        limitation:
+          "Obra de referencia general.",
+      },
+      {
+        key: "conwayWandering",
+        summary:
+          "Historia de la leyenda del judío errante en Europa.",
+        limitation:
+          "Obra de referencia general.",
+      },
+    ],
+    title: "El judío errante",
     excerpt:
       "Una leyenda cristiana antijudía llegó a Tunja y se vinculó con una talla de Santo Domingo; su revisión hace visible el estigma que transmitió.",
     tags: ["castigo", "viaje", "tradición", "memoria"],
-    mito: `Esta página narra una leyenda cristiana de origen antijudío; no una tradición nacida dentro del judaísmo ni la historia de una persona real. El relato europeo más difundido cuenta que un hombre de Jerusalén negó descanso o apuró a Jesús durante el camino hacia la crucifixión. Como castigo, quedó obligado a caminar hasta el regreso de Cristo. El nombre Ahasuerus, el oficio de zapatero y muchas señales físicas cambian según el texto.
+    mito: `Cuando Jesús iba camino del Calvario con la cruz a cuestas y quiso sentarse a descansar en una piedra, un judío llamado Ahseverús le gritó: «¡Anda!». Y Jesús le contestó: «Anda tú, anda hasta cuando yo vuelva, hasta el fin de los tiempos». Desde entonces anda por el mundo.
 
-La versión colombiana mejor documentada sitúa una recepción de ese motivo en Tunja. En la iglesia de Santo Domingo se conservó un conjunto de tallas policromadas: Jesús Nazareno, Simón de Cirene y una figura llamada El Judío. Las esculturas participaron en procesiones de Semana Santa y la apariencia severa de la última provocó temor, sobre todo entre niñas y niños. Alrededor de la imagen se dijo que movía la cabeza, recorría el convento y recibía comida.
+En Tunja, en la iglesia de Santo Domingo, hay una talla de madera de un judío que sale en las procesiones de Semana Santa. Va delante del Nazareno, arrogante, tirando de Jesús con una cuerda, mientras Simón Cireneo ayuda a cargar la cruz por detrás. Es oscura, y daba tanto miedo que hubo gente que se desmayó al verla por primera vez.
 
-La leyenda tunjana añade la visita de un viajero durante Semana Santa. Un fraile llamado Padre Luis permanece en el claustro cuando llega un hombre cansado, vestido de manera parecida a la estatua. El visitante pregunta por la figura guardada en Santo Domingo. Ambos llegan hasta ella y el viajero le pregunta si lo reconoce. La escultura responde dentro del relato; el encuentro confirma su identidad legendaria y el caminante abandona el convento para continuar su errancia.
+Los novicios del convento creían que el Judío salía de noche, a escondidas, de su celda, recorría los claustros y robaba comida. Decían que la estatua volvía de pronto la cabeza y clavaba miradas tenebrosas, que a veces lo encontraban sentado, llorando, con la frente escondida entre los brazos, y que hablaba, y que en el convento le daban de comer las sobras de la cocina.
 
-La talla es patrimonio material; el diálogo y la visita pertenecen a la tradición narrativa. Que las esculturas sean antiguas no demuestra que Ahasuerus llegara históricamente a Tunja. La página conserva esa frontera y tampoco presenta la supuesta visita como prueba de la crucifixión.
+Un viernes santo, el padre Luis recibió en el convento a un viajero que le preguntó por la estatua del Judío de Santo Domingo. Lo llevó a la celda donde estaban las tres figuras. El viajero y la estatua vestían de la misma manera. El viajero le preguntó al Judío de Santo Domingo si lo conocía, y el Judío le contestó que sí:
 
-El castigo individual funcionó durante siglos como imagen de una culpa colectiva: convertía a “el judío” en testigo condenado y al pueblo judío en humanidad incompleta mientras no aceptara el cristianismo. Esa carga no desaparece al trasladar la historia a Colombia. Contarla responsablemente exige nombrarla, evitar caricaturas y reconocer que autores judíos modernos también reapropiaron la figura con sentidos de memoria, diferencia o esperanza.
+—El mismo soy. La esperanza de la humanidad está toda en este martirio, en esta muerte que tuvo lugar hace dieciséis siglos y que yo presencié.
 
-La ficha anterior inventaba celos hacia María Magdalena y afirmaba que el mismo personaje había sido Demetrios, Ragnar, Hiuan-tsang, Ibn Battuta y el Sombrerón. Ninguna de las ocho fuentes sostiene esas identidades. Se retiran porque confunden personas históricas, culturas y épocas para hacer eterna una acusación contra un personaje definido solo por su condición judía.`,
-    historia: `La cadena escrita no comienza en tiempos de Jesús. Moncure Conway y Joseph Jacobs distinguen una noticia medieval de 1228 sobre Cartaphilus, portero de Pilato, de la figura llamada Ahasuerus que circuló con enorme éxito en impresos alemanes desde 1602. Entre ambos momentos cambian nombre, oficio, gesto ofensivo y sentido del castigo. Los supuestos avistamientos posteriores son parte de la propagación de la leyenda, no evidencia de inmortalidad.
+El viajero era Ahseverús, el Judío Errante. Recorrió los claustros, salió del convento y siguió su camino con paso lento y cansado, hasta la consumación de los siglos.
 
-Galit Hasan-Rokem formula el límite central: la figura fue inventada por cristianos antijudíos y presentó la conversión como condición para reconocer plenamente la humanidad judía. Cordelia Heß la integra en un archivo más amplio de textos cristianos que asignaban maldiciones corporales y colectivas a judíos por la crucifixión. La recepción no fue uniforme: escritores judíos modernos también la transformaron, pero esa reapropiación no borra el origen estigmatizante.
+También ha pasado por Pasto. Una noche de Jueves Santo, una mujer que volvía a su casa en el sector de San Ignacio, después de visitar los monumentos, vio a un hombre de apariencia extraña, con ropas antiguas, que rezaba de espaldas a una pared con la voz más dolorosa que había oído: «Dios mío, perdóname, Dios mío, perdóname, ya no puedo caminar más». Cuando se acercó, el hombre se esfumó en el aire. En su casa se lo contó a su marido, y él le dijo que acababa de ver al Judío Errante.`,
+    historia: `La leyenda tunjana está en El pueblo boyacense y su folclor, de Javier Ocampo López (Corporación de Promoción Cultural de Boyacá, Tunja, 1977), pp. 124-125, que dice que aparece en Tunja desde finales del siglo XVI y la toma de Rosa María Otálora de Corsi, Ambiente tunjano. Crónicas y leyendas de Tunja (1939). Ocampo cuenta la escultura del Judío de Santo Domingo, lo que creían los novicios del convento y la visita del viajero al padre Luis un viernes santo.
 
-El título “judío eterno” siguió disponible para usos políticos. El Museo Conmemorativo del Holocausto documenta el pseudodocumental nazi Der ewige Jude, que utilizó caricaturas, imágenes de guetos y comparaciones deshumanizantes. No es una versión folclórica de Tunja, sino una prueba de cómo el motivo podía alimentar repertorios de propaganda antisemita.
+El Tiempo publicó el 2 de abril de 1996, en su sección Boyacá 7 Días, una nota sobre la talla con la voz de Guillermo Rodríguez, secretario de la Academia Boyacense de Historia: las figuras del Nazareno, el Judío y el Cireneo se tallaron en talleres tunjanos en la segunda mitad del siglo XVI y forman un solo paso procesional. La nota da como fuente un libro anterior a Otálora, Tunja desde su fundación hasta la época presente, de Ozías S. Rubio y Manuel Briceño (1909), y reproduce de él el diálogo entre el Errante y la estatua.
 
-En Boyacá, Javier Ocampo López describe la proyección local alrededor de la estatua de Santo Domingo. El reportaje de 1996 documenta que las tres tallas fueron realizadas y policromadas en talleres tunjanos durante la segunda mitad del siglo XVI, que continuaban en procesión y que la leyenda confundía imagen y viajero. La cartilla de la Escuela Normal de Tunja conserva para uso educativo las salidas nocturnas, la visita al Padre Luis y el diálogo con la escultura.
+El testimonio de Pasto lo publicó el Diario del Sur el 26 de marzo de 2024, en una nota sin firma sobre los espantos de la Semana Santa en la ciudad, con el nombre de la testigo protegido. La nota sitúa el encuentro en la noche en que la ciudad sale a visitar los monumentos del Jueves Santo.`,
+    versiones: `Ocampo y El Tiempo cuentan la misma visita con dos diferencias. En Ocampo el viajero pregunta al padre Luis por la estatua y los dos «entablaron un diálogo de reconocimiento» sin palabras; en la nota de 1996, que sigue a Rubio y Briceño, el Errante va a la ermita con un sacerdote y el Judío de Santo Domingo le responde en voz alta. Ocampo sitúa la leyenda en el siglo XVI; la nota habla de la época colonial en general.
 
-Esos soportes prueban patrimonio, circulación y adaptación narrativa. No prueban una visita sobrenatural a finales del siglo XVI. Tampoco autorizan a describir al personaje como diablo real, personificación de todas las personas judías o equivalente del Sombrerón. La revisión conserva el nombre por estabilidad de la URL, lo entrecomilla en el título visible y explica su historia en vez de repetir el estigma sin comentario.`,
-    versiones: `La noticia medieval de Cartaphilus habla de un portero de Pilato que golpea o apura a Jesús y debe esperar su regreso. En algunas formas se bautiza y vive como penitente entre cristianos. El relato de Ahasuerus impreso desde 1602 lo convierte en zapatero de Jerusalén que niega reposo, abandona casa y familia y aprende las lenguas de cada país. La distancia entre ambas versiones impide tratarlas como una biografía continua.
+La leyenda universal tiene dos versiones de la falta, que el Diario del Sur recoge: el judío que se burló de Jesús cuando cargaba la cruz, o el comerciante o carpintero que le negó agua mientras él mismo bebía. Ocampo sigue la primera: el grito de «anda» cuando Jesús quiso sentarse.
 
-Los impresos modernos multiplicaron nombres como Juan Espera en Dios, oficios, monedas, edades renovadas y supuestos encuentros en ciudades europeas. Esa movilidad literaria produjo un testigo conveniente para polémicas cristianas y una metáfora injusta de la diáspora judía. Más tarde, autores judíos pudieron reapropiar la errancia como experiencia de alteridad o expectativa mesiánica. La inversión del símbolo es una recepción crítica, no una confirmación del castigo.
-
-La versión de Tunja cambia el centro. El viajero llega al convento de Santo Domingo, habla con el Padre Luis y se reconoce frente a una talla procesional. Otras historias locales atribuyen movimientos, miradas o recorridos nocturnos a la estatua. La Semana Santa, el claustro y el conjunto escultórico vuelven boyacense una leyenda europea sin convertirla en tradición judía.
-
-La propaganda nazi reutilizó la fórmula del judío eterno para representar a toda una población como extraña, contagiosa y peligrosa. Se registra como consecuencia histórica del repertorio de estereotipos, no como una variante apta para recreación fantástica.
-
-La versión heredada del sitio queda descartada en sus añadidos: no hay fuente para celos de María Magdalena, un nombre Demetrios ni encarnaciones como Ragnar, Hiuan-tsang, Ibn Battuta o el Sombrerón. Mezclarlos no ampliaba la leyenda; borraba personas reales y extendía artificialmente la acusación.`,
+El caso de Pasto es distinto de los de Tunja: no hay estatua ni convento, sino un hombre solo que reza y pide perdón porque ya no puede caminar más. Es la forma de la leyenda que circula hoy en la Semana Santa nariñense.`,
     leccion:
-      "Revisar una leyenda también exige reconocer el prejuicio que convirtió una identidad en condena colectiva.",
-    similitudes: `El Ánima Sola es una comparación directa por la condena, el tiempo suspendido y la expectativa de alivio. Sin embargo, el Ánima Sola pertenece a devociones por muertos olvidados y puede recibir oraciones; el llamado Judío Errante fue construido desde una polémica cristiana que estigmatizó una identidad viva. El Maravelí comparte el viaje interminable y la aparición ante testigos, pero es un barco fantasma del Pacífico que desorienta navegantes, no una personificación étnica ni un testigo de la Pasión. El Sombrerón también recorre caminos y asusta en repertorios colombianos; no es otra encarnación de Ahasuerus, pues posee historias regionales, apariencia y funciones propias. Las similitudes de errancia o castigo nunca justifican fundir tradiciones ni convertir viajeros históricos en el mismo personaje.`,
+      "El que niega un descanso a quien sufre puede quedarse sin descanso para siempre.",
+    similitudes: `La leyenda del judío condenado a vagar hasta la segunda venida es una de las más difundidas de la cristiandad, con nombres distintos según las regiones: Ahasvero, Cartáfilo, Juan Espera en Dios. Ocampo lo dice al contarla: se ha ubicado en muchos lugares del mundo y representa la figura andante del pueblo judío. En Tunja la leyenda universal se ató a una talla concreta, y el que llega de fuera es el Errante que viene a reconocerse en la estatua.
+
+En la misma Tunja de Ocampo hay otros espantos atados a los conventos: el monje del Panóptico con una calavera bajo la capucha, el perro de piedra de San Francisco que aullaba y arrastraba cadenas, los monjes asomados en las ventanas que pedían ayuda para salir de penas. Como el Judío, son figuras de la ciudad colonial que salen de noche.
+
+Y en Pasto, el Diario del Sur pone al Judío Errante junto al padre sin cabeza de la iglesia de San Felipe y la mula herrada: los espantos de la Semana Santa, cuando la ciudad sale de noche a visitar los monumentos y se cruza con los que no descansan.`,
     sceneHorizontal:
       "interior amplio y respetuoso de la iglesia de Santo Domingo en Tunja durante preparación de Semana Santa, el conjunto de tres tallas policromadas aparece como patrimonio sobre andas mientras un fraile y visitantes observan; la figura llamada El Judío se muestra sin caricatura, rasgos exagerados ni símbolos identitarios",
     sceneVertical:

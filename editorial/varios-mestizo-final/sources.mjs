@@ -255,6 +255,74 @@ export const variosMestizoFinalSources = {
     limitation:
       "Es una tradición cultural distinta y transfronteriza; no debe absorberse en el bus mestizo de carretera ni en la creepypasta bogotana.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  pastoEspantos2024: source({
+    title: "Espantos que todavía asustan en las semanas santas",
+    author: "Diario del Sur (Pasto), sin firma",
+    year: 2024,
+    type: "prensa regional",
+    url: "https://www.diariodelsur.com.co/espantos-que-todavia-asustan-en-las-semanas-santas/",
+    summary:
+      "El Judío Errante del Jueves Santo en Pasto: el hombre que reza de espaldas a la pared y pide perdón porque ya no puede caminar.",
+    limitation:
+      "Nota reciente con testigos de nombre protegido: fecha la circulación, no la antigüedad.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo y Universidad Autónoma de Colombia, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Ficha del Judío Errante (pp. 51-52).",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: sus relatos son composición de autor.",
+  }),
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (Fulbright-Hays 1997), con las páginas «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "unidad didáctica con páginas web impresas",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Viudita de Pasto, contada por Anita: la mujer emperifollada que hace ruido con las enaguas y asusta a los borrachos.",
+    limitation:
+      "Divulgación infantil de pocas frases.",
+  }),
+  bravoEstrategia2019: source({
+    title: "Estrategia de narrativa transmedia para la rememoración de relatos de la tradición oral del municipio de Túquerres",
+    author: "Vanessa Erazo Bravo y Diana Isabel Martínez Cerón (Universidad de Nariño)",
+    year: 2019,
+    type: "trabajo de grado con trabajo de campo",
+    url: "https://sired.udenar.edu.co/18217/1/210263.pdf",
+    summary:
+      "§6.3.9.6 «La Viuda» de Túquerres, anciana de negro que anuncia la desgracia; la encuesta la pone entre los personajes más recordados.",
+    limitation:
+      "La descripción cita un repertorio web (Esquivel 2018).",
+  }),
+  polarMitos2014: source({
+    title: "Mitos y leyendas del estado Portuguesa, cap. 28: La Sayona",
+    author: "Carmen Pérez Montero (Fundación Empresas Polar)",
+    year: 2014,
+    type: "libro de tradición oral venezolana",
+    url: "https://bibliofep.fundacionempresaspolar.org/media/1377961/mitos_portuguesa_c_28_la-sayona.pdf",
+    summary:
+      "La Sayona, mujer de luto que castiga a los infieles mostrándoles un rostro de muerta: paralelo de Similitudes.",
+    limitation:
+      "Tradición venezolana.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro de folclor regional",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "María la Larga, la mujer de la noche que se alarga ante los trasnochadores: paralelo de Similitudes.",
+    limitation:
+      "Otro personaje.",
+  }),
 };
 
 const sourceKeysBySlug = {

@@ -35,7 +35,7 @@ test("los tres expedientes cumplen la metodología editorial", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      words(record.mito) >= (record.relatoCorto ? 70 : 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -65,8 +65,8 @@ test("los tres expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
@@ -99,27 +99,14 @@ test("restaura procedencias y retira los tres núcleos inventados", () => {
 
   const viudita = bySlug.get("la-viudita");
   assert.equal(viudita.category_path, "Andina > Nariño > Mestizo");
-  // heredada: reescribir tras el cotejo
-  assert.match(viudita.mito, /Pasto[\s\S]+cementerio/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(
-    viudita.mito,
-    /Clemente Vidal, Clara y Del Castillo[\s\S]+sin respaldo[\s\S]+se retiran/i,
-  );
-  // heredada: reescribir tras el cotejo
-  assert.match(viudita.versiones, /Viuda Alegre[\s\S]+separada/i);
+  assert.match(viudita.mito, /Cauca[\s\S]+Juan Patas[\s\S]+Pasto[\s\S]+Túquerres[\s\S]+Nuquí/i);
+  assert.doesNotMatch(viudita.mito, /Clemente Vidal|Viuda Alegre/i);
 
   const judio = bySlug.get("el-judio-errante");
   assert.equal(judio.category_path, "Andina > Boyacá > Mestizo");
-  // heredada: reescribir tras el cotejo
-  assert.match(judio.mito, /leyenda cristiana de origen antijudío/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(judio.historia, /Galit Hasan-Rokem/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(
-    judio.mito,
-    /inventaba celos hacia María Magdalena[\s\S]+Ninguna[\s\S]+sostiene esas identidades[\s\S]+Se retiran/i,
-  );
+  assert.match(judio.mito, /Tunja[\s\S]+Santo Domingo/i);
+  assert.match(judio.historia, /Ocampo López[\s\S]+Rubio y Manuel Briceño/i);
+  assert.doesNotMatch(judio.mito, /María Magdalena/i);
 
   const bus = bySlug.get("el-bus-fantasma");
   assert.equal(bus.category_path, "Varios > Varios > Mestizo");
