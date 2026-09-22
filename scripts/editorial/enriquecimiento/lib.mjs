@@ -54,7 +54,7 @@ export const BROWSER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) Apple
 export const COMPARATIVE_HOSTS = [
   { host: /ovid\.lib\.virginia\.edu/i, mentions: /ovidio|metamorfosis|orfeo|eur[ií]dice/i, label: "Ovidio" },
   { host: /mesoweb\.com/i, mentions: /popol\s*vuh|k['’]?iche|maya/i, label: "Popol Vuh" },
-  { host: /perseus\.tufts\.edu/i, mentions: /hes[ií]odo|prometeo|teogon[ií]a|griego|griega/i, label: "Hesíodo" },
+  { host: /perseus\.tufts\.edu/i, mentions: /hes[ií]odo|prometeo|teogon[ií]a|griego|griega|homero|odisea|il[ií]ada|ulises|odiseo|argos/i, label: "Perseus (Hesíodo, Homero…)" },
   { host: /biblegateway\.com/i, mentions: /biblia|b[ií]blico|g[ée]nesis|no[ée]/i, label: "Biblia" },
   { host: /worldhistory\.org/i, mentions: /./, label: "World History Encyclopedia" },
   { host: /metmuseum\.org/i, mentions: /./, label: "Met Museum" },

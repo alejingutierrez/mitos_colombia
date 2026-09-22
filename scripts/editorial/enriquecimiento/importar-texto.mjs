@@ -99,7 +99,12 @@ function validate(data) {
   if (/\b(debemos|hay que|no debes|debes)\b/i.test(leccion)) errors.push("leccion: orden moral");
   // La fórmula de cierre del narrador se retira antes de buscar aparato: es
   // parte del relato, no comentario sobre él.
-  const m = String(data.mito || "").replace(CIERRE_ORAL, "");
+  let m = String(data.mito || "").replace(CIERRE_ORAL, "");
+  // Un personaje puede llevar el apellido de un autor del corpus: el ingeniero
+  // Julio Pineda de «La tertulia de la italiana» no es Pineda Giraldo. Se
+  // declara en `personajes_homonimos` y se imprime en cada pasada, para que la
+  // excepción no pase en silencio.
+  for (const nombre of data.personajes_homonimos || []) m = m.split(nombre).join("");
   const hit = m.match(RELATO_PROHIBIDO);
   if (hit) errors.push(`mito: menciona «${hit[0]}» (el Relato sólo cuenta la historia)`);
   for (const f of TEXT_FIELDS) {
@@ -133,6 +138,8 @@ for (const { slug, data } of plans) for (const d of asList(data.dudas)) console.
 for (const { slug, data } of plans) {
   const corto = data.relato_corto || data.relatoCorto;
   if (corto) console.log(`  ! ${slug}: relato corto bajo el mínimo — ${corto}`);
+  for (const nombre of data.personajes_homonimos || [])
+    console.log(`  ! ${slug}: «${nombre}» es un personaje, no el autor homónimo (personajes_homonimos)`);
 }
 // El título que se publica es el del módulo, y un nombre propio en él es un
 // hecho como cualquier otro: tiene que estar en alguna cita literal del acta.
@@ -267,8 +274,8 @@ if (usesDefinitions) {
     // El nombre del campo de origen varía por comunidad: `historyCore`,
     // `historia`, o `history` donde un envoltorio compone las capas.
     for (const [alternativas, field] of [
-      [["historyCore", "historia", "history"], "historia"],
-      [["versionCore", "versiones", "versions"], "versiones"],
+      [["historyCore", "historia", "history", "context"], "historia"],
+      [["versionCore", "versiones", "versions", "variants"], "versiones"],
       [["similarityCore", "similitudes", "similarities"], "similitudes"],
     ]) {
       const core = alternativas.join("|");
@@ -291,7 +298,7 @@ if (usesDefinitions) {
       else if (llamada.test(block)) block = block.replace(llamada, nuevo);
       else throw new Error(`${slug}: no encuentro ninguno de ${core}`);
     }
-    const reMito = /\n    mito:\s*(?:"[\s\S]*?"|`[\s\S]*?`),\n/;
+    const reMito = /\n    (?:mito|plot):\s*(?:"[\s\S]*?"|`[\s\S]*?`),\n/;
     if (!reMito.test(block)) throw new Error(`${slug}: no encuentro mito`);
     block = block.replace(reMito, `\n    mito: \`${esc(data.mito.trim())}\`,\n`);
     const reLec = /\n    leccion:\s*(?:"[\s\S]*?"|`[\s\S]*?`),\n/;

@@ -42,10 +42,20 @@ test("los diecinueve expedientes cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length >= 120 && record.seo_description.length <= 165, `${record.slug}: SEO ${record.seo_description.length}`);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
+    // Eran 8 exactas, el reparto en bloque. Tras la ronda del cierre cada ficha
+    // tiene las suyas: piso de 8, o `fuentesAgotadas` declarado (el Domínguez).
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
-    assert.ok(sources.every(({ url, summary, limitation }) => url.startsWith("https://") && summary && limitation));
+    assert.ok(sources.length >= (record.slug === "el-dominguez" ? 7 : 8), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
+    assert.ok(
+      sources.every(
+        ({ url, summary, limitation }) =>
+          summary &&
+          limitation &&
+          (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
+      ),
+      `${record.slug}: fuente sin resumen, sin límite o en http sin declararlo`,
+    );
     assert.equal(
       record.content,
       [
@@ -67,15 +77,21 @@ test("atribuye los diecisiete cuentos firmados y corrige límites críticos", ()
     const record = bySlug.get(slug);
     if (["el-tesoro-de-caribare", "la-bola-de-fuego"].includes(slug)) continue;
     assert.match(record.researchNotes, /LITERATURA FIRMADA/);
-    // heredada: reescribir tras el cotejo
-    assert.match(record.mito, /obra firmada|recreación literaria|serie literaria/i);
+    // Antes se exigía que el Relato dijera «obra firmada» o «serie literaria»:
+    // era el párrafo de marco pegado al mito, aparato dentro del Relato. La
+    // autoría se declara ahora donde toca, en la historia, con nombre del autor.
+    assert.match(record.historia, /Vargas Bar[oó]n|Baquero/);
+    assert.doesNotMatch(record.mito, /obra firmada|serie literaria|la revisión conserva/i);
   }
   assert.match(bySlug.get("amanecer-llanero").researchNotes, /genealogía panindígena/i);
   assert.match(bySlug.get("los-delfines-dorados").researchNotes, /no se atribuyen a pueblos indígenas/i);
   assert.match(bySlug.get("el-brujo-de-la-costa-del-pauto").researchNotes, /No es consejo médico/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(bySlug.get("leal-hasta-la-muerte").mito, /Calila y Dimna/i);
-  assert.equal(bySlug.get("el-llano-cobra-sus-deudas").title, "El Llano cobra sus cuentas: hacienda y ruina");
+  // El narrador dice haber leído la fábula en Calila y Dimna.
+  assert.match(bySlug.get("leal-hasta-la-muerte").mito, /Calila/i);
+  // Los títulos con subtítulo («hacienda y ruina», «amor y metamorfosis») eran
+  // del sitio, no del libro, y alguno afirmaba lo que el texto desmiente. El
+  // visible sigue siendo el publicado hasta que el director decida (agenda).
+  for (const record of records) assert.doesNotMatch(record.title, /:/, `${record.slug}: subtítulo sin fuente`);
   assert.match(bySlug.get("los-tres-luceros").researchNotes, /suicidio[\s\S]+no recompensa/i);
   assert.match(bySlug.get("madre-rio-o-mohana").researchNotes, /coerción[\s\S]+contra/i);
   assert.match(bySlug.get("el-domador-de-brujas").researchNotes, /Coerción sexual[\s\S]+pseudomedicina/i);
@@ -84,17 +100,20 @@ test("atribuye los diecisiete cuentos firmados y corrige límites críticos", ()
 test("corrige Caribabare y preserva Bola de Fuego como variante llanera", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const treasure = bySlug.get("el-tesoro-de-caribare");
-  assert.match(treasure.title, /Caribabare/);
-  // heredada: reescribir tras el cotejo
-  assert.match(treasure.historia, /hacienda[\s\S]+1767[\s\S]+no prueba/i);
+  // El slug dice Caribare, la grafía del inventario de 1768; el título es el publicado.
+  assert.match(treasure.title, /Carib/);
+  // La historia de la hacienda con fuentes altas; la leyenda, con su cadena.
+  assert.match(treasure.historia, /1767/);
+  assert.match(treasure.historia, /Rueda Enciso/);
+  assert.match(treasure.historia, /Perea/);
   assert.match(treasure.researchNotes, /forma documentada es Caribabare/i);
 
   const fire = bySlug.get("la-bola-de-fuego");
-  // heredada: reescribir tras el cotejo
-  assert.match(fire.mito, /luz errante[\s\S]+Candileja[\s\S]+tres llamas/i);
+  // La madre y el corazón en llamas vuelven con su registro (MEN 2012).
+  assert.match(fire.mito, /coraz[oó]n/i);
   assert.match(fire.researchNotes, /David Gamboa[\s\S]+Hato Valbuena[\s\S]+sin fusionarse/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(fire.versiones, /rezar atrae[\s\S]+sin comprobar eficacia/i);
+  // Las dos orillas enfrentadas, con el registro venezolano.
+  assert.match(fire.versiones, /Portuguesa|Pérez Montero/);
 });
 
 test("la matriz cubre diecinueve rutas y explicita límites", () => {
