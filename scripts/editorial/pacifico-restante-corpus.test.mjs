@@ -98,16 +98,16 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
 test("retira ficciones sintéticas y declara la clase real de cada relato", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   // heredada: reescribir tras el cotejo
-  assert.match(bySlug.get("buziraco").mito, /1837[\s\S]+1925[\s\S]+1938/);
+  assert.match(bySlug.get("buziraco").mito, /1825[\s\S]+1837[\s\S]+1925/);
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("buziraco").mito,
-    /prejuicios|racial|personas negras/i,
+    /cimarrones|tambores/i,
   );
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-caballo-del-morro").mito,
-    /Marco Antonio Valencia Calle[\s\S]+Babieca/,
+    /Victorio Macho[\s\S]+Babieca/,
   );
   // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
@@ -122,7 +122,7 @@ test("retira ficciones sintéticas y declara la clase real de cada relato", () =
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-roble-del-caballero").mito,
-    /No afirma que un roble sobrenatural/i,
+    /Quijote[\s\S]+Popayán/i,
   );
   // heredada: reescribir tras el cotejo
   assert.match(
@@ -139,7 +139,7 @@ test("retira ficciones sintéticas y declara la clase real de cada relato", () =
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-duende-peluquero").mito,
-    /Las fuentes no sostienen ese traslado/i,
+    /Dagua[\s\S]+crines/i,
   );
   // heredada: reescribir tras el cotejo
   assert.match(
@@ -159,7 +159,7 @@ test("retira ficciones sintéticas y declara la clase real de cada relato", () =
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-piramide-del-chontaduro").mito,
-    /Esa trama no aparece en las fuentes/i,
+    /pirámide[\s\S]+lotería/i,
   );
   // heredada: reescribir tras el cotejo
   assert.match(

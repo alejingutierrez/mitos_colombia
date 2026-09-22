@@ -799,43 +799,36 @@ ${archiveResearch}`,
   archiveRecord({
     slug: "dobaida",
     title: "Dobaida, memoria Cueva del bajo Atrato",
-    mito: `Las fuentes coloniales escribieron Dobaida o Dobaiba para nombrar una figura vinculada con las tormentas y también un lugar del bajo Atrato. Los relatos llegaron a confundir territorio, poblado, santuario y persona sagrada porque quienes preguntaban buscaban riquezas y traducían lo que oían desde sus propias expectativas.
+    mito: `Hubo una mujer, entre los antepasados de la gente del Darién, a la que todos admiraban por su grandeza de ánimo y su prudencia. Mientras vivió la veneraron. Cuando murió no dejaron de hacerlo, y de ella tomaron nombre las montañas y el gran río que baja hacia el golfo de Urabá. La llamaban Dabaiba, y otros Dobaiba.
 
-Dobaida pertenecía a la memoria de los Cueva o pueblos del Darién, vecinos históricos de otras sociedades del Atrato. Su nombre quedó asociado a lluvia, viento, trueno y a un centro que los invasores imaginaban lleno de oro. La noticia viajó por rutas fluviales y se transformó en promesa de conquista.
+Con el tiempo se supo quién era. Era la madre del que hizo los cielos, el sol, la luna y todo lo invisible, el creador del que vienen todos los bienes. Y era ella quien gobernaba el tiempo. Si estaba contenta con su gente, repartía con medida los días de sol y los de lluvia. Si se enojaba, venían el rayo y el trueno, y se perdían las cosechas. Se enojaba como un niño, por cualquier descuido en sus ceremonias. Por eso, cuando truena, la gente dice que Dobaiba está enojada.
 
-Los expedicionarios no se acercaron para comprender la relación entre la figura, el territorio y sus habitantes. Querían localizar un santuario y apoderarse de lo que suponían guardado allí. Cada información incompleta produjo una nueva búsqueda. Cuando no encontraban el lugar esperado, el nombre se desplazaba hacia otra montaña, otro río o una población más distante.
+Una vez, hace muchísimo tiempo, se irritó de veras. Se secaron todos los ríos y todos los manantiales. La mayor parte de los hombres de aquellas tierras murió de hambre y de sed. Los que quedaron abandonaron las montañas, bajaron hasta la orilla del mar y cavaron hoyos en la playa para sacar agua, porque no había otra.
 
-El expediente muestra cómo una tradición puede quedar atrapada dentro del archivo de quienes la persiguen. Dobaida aparece entre descripciones de tormenta y relatos de riquezas, pero las voces Cueva no fueron conservadas con la claridad de una narración oral completa. Lo que queda es una memoria fragmentaria, atravesada por traducciones, guerra y codicia.
+Nadie olvidó aquella calamidad. Desde entonces cada cacique tiene en su casa un santuario cercado, y sus sacerdotes lo barren todos los días para que no quede en él moho, ni basura, ni hierba. Cuando la comarca necesita sol o lluvia, el cacique sube con ellos a una especie de púlpito dentro del santuario y no baja hasta que le conceden lo que pide. Mientras rezan, el pueblo entero ayuna cuatro días sin comer ni beber. Al quinto toma apenas unos sorbos de una bebida de harina de maíz, para que el estómago recobre poco a poco las fuerzas.
 
-Con el tiempo, Dobaida fue comparada con Dabeiba, maestra y protectora del corpus histórico Katío. La proximidad de los nombres y los fenómenos atmosféricos hizo atractiva la identificación. Sin embargo, las fuentes hablan de pueblos diferentes y construyen a cada figura mediante cadenas distintas.
+A su templo grande, a unas cuarenta leguas del Darién, los caciques de regiones lejanas mandan en ciertas épocas del año esclavos para sacrificar, y el pueblo acude en multitud. Delante de la diosa los degüellan y después los queman, porque piensan que el olor de esas llamas le agrada. Para las fiestas y los juegos tocan trompetas de oro. Para llamar a lo sagrado suenan campanas de oro, con badajos blancos de hueso de pescado y un sonido dulce. Los sacerdotes se abstienen de mujer, aun de la propia, durante el ayuno, y el que falta muere apedreado o quemado.
 
-Esta página no inventa una aventura para llenar los vacíos. Conserva la tradición como dossier histórico del bajo Atrato: una figura de tormenta, un nombre territorial y una memoria que la búsqueda colonial convirtió en objetivo. El límite también es contenido. Saber que no poseemos una versión comunitaria completa evita presentar la mirada conquistadora como si fuera el mito mismo.
+Así la sirven, con temor y con oro, para tenerla propicia. Porque ella está en el cielo al lado del que hizo el mundo, y cuando los hombres descuidan su culto espanta con truenos, castiga con látigos de fuego y arrasa los sembrados y las aldeas.`,
+    historia: `Dobaiba era una deidad de los cueva, el pueblo que ocupaba el Darién y la orilla oriental del bajo Atrato cuando llegaron los españoles, y que desapareció en pocas décadas. Nadie de ese pueblo dejó escrito su relato. Lo que se sabe de ella llegó por la crónica.
 
-Dobaida permanece, entonces, no como pirámide ni soberana mesoamericana, sino como nombre del Darién y del Atrato cuya historia escrita revela tanto una antigua sacralidad como la violencia con que fue perseguida.`,
-    history: {
-      sourceFocus:
-        "Dobaida se retira del universo Katío y se conserva como tradición histórica mixta de los Cueva del bajo Atrato.",
-      evidenceDetail:
-        "Trimborn estudió las fuentes coloniales; la compilación de 1993 distingue Dabaiba como territorio o poblado, Dobaiba como figura Cueva y Dabeiba como nombre asociado al ámbito Katío.",
-      editorialDecision:
-        "La página abandona la falsa categoría Katío y la iconografía de pirámide mesoamericana, y declara que el archivo no conserva una voz Cueva completa.",
-    },
-    versions: {
-      mainVariant:
-        "Las crónicas asocian Dobaida con tormentas y con un centro del bajo Atrato perseguido por expediciones.",
-      contrastVariant:
-        "Dabeiba Katío enseña cultivo, vivienda y tejido antes de ascender desde Cerro León; esa secuencia no se traslada aquí.",
-      boundary:
-        "Dobaida queda en comunidad Mixto porque el sitio no cuenta con una taxonomía Cueva y porque su recepción es regional y colonial.",
-    },
+El testimonio más antiguo es el de Pedro Mártir de Anglería, humanista italiano de la corte de Castilla, que nunca cruzó el océano y escribió sus Décadas del Nuevo Mundo, en latín, con las cartas y las conversaciones de quienes volvían. En la Década tercera (libro IV) explica de dónde toman nombre las montañas de Dabaiba: de una mujer antigua, magnánima y providente, que se enoja con rayos, truenos y pérdida de cosechas. En la Década séptima (libro X, capítulo II) cuenta los ritos que le refirieron «los de las colonias del Darién»: el templo a cuarenta leguas, los esclavos sacrificados, la sequía primordial, el ayuno de cuatro días, las trompetas y campanas de oro. Se lee en la traducción castellana de Joaquín Torres Asensio, publicada en Madrid en 1892.
+
+El oidor Juan de Vadillo, que pasó por Urabá hacia 1537, dejó dos frases que se citan desde entonces: que fue «una cacica antigua» y que, cuando truena, dicen que está enojada.
+
+En el siglo XX el etnólogo alemán Hermann Trimborn reunió esos testimonios en el artículo «Dobaiba, diosa de las tormentas», publicado en Medellín en 1953. Eugenia Villa Posse lo resume en el volumen III de Mitos y leyendas de Colombia (Quito, IADAP, 1993), capítulo 2.3, «Dobaida», páginas 49 a 52. Allí separa tres palabras que se confunden: Dabaiba, el territorio de una fracción cueva; Dobaiba, la diosa; y Dabeiba, el pueblo antioqueño de hoy.`,
+    versiones: `Anglería y Villa Posse no cuentan exactamente lo mismo. En Anglería, Dabaiba es a la vez el nombre de un simulacro, el de un río y el de una antepasada; la gente del Darién la llama madre del creador, y el cronista añade de su cosecha que los sacerdotes explotan esa creencia para quedarse con las ofrendas. En Villa Posse, que sigue a Trimborn, la figura crece: es «la gran bisabuela de los dioses», hacedora del sol, con una estatua de oro macizo del tamaño de una persona.
+
+También cambia el calendario. Anglería habla de un ayuno de cuatro días mientras el cacique ora. Villa Posse recoge otros testimonios según los cuales se ayunaba durante toda la menguante de la luna, y cita a Vadillo para una práctica que Anglería no menciona: cada luna nueva se entregaba a la diosa una doncella escogida entre las más hermosas.
+
+Otra diferencia es de nombre y de pueblo. La tradición emberá katía de Antioquia habla de Dabeiba, una mujer venida de las llanuras del Atrato que enseñó a tejer, a sembrar y a construir, y que subió al cielo desde un cerro. Una nota de Semana de 2017 y una crónica de Vivir en El Poblado de 2005 la cuentan así, y le atribuyen también la lluvia, los huracanes y los temblores. Villa Posse insiste en que son figuras distintas, de pueblos distintos, aunque el nombre y la tormenta las acerquen.`,
     leccion:
-      "Nombrar una frontera incierta evita convertir la mirada del conquistador en voz de un pueblo.",
-    similarities: {
-      internalComparison:
-        "Dobaida se compara con Dabeiba y Baha por tormentas, pero la primera pertenece al archivo Cueva y a búsquedas del bajo Atrato.",
-      broaderComparison:
-        "Los santuarios convertidos en rumores de oro se repiten en crónicas de conquista, aunque cada caso exige recuperar su territorio particular.",
-    },
+      "Lo que se venera por miedo pide cada vez más a quienes lo veneran.",
+    similitudes: `El parentesco más cercano está en la misma región. La Dabeiba de los emberá katíos, que Semana describió en 2017 como la diosa que manda la lluvia, los huracanes y los terremotos y que se fue al cielo desde un cerro, comparte con Dobaiba la tormenta y el ascenso de una mujer al rango de deidad. Carlo Emilio Piazzini la encontró viva en 2007 entre los embera de Río Verde, en Frontino, junto a los caciques Nutibara y Toné.
+
+Villa Posse propone otro paralelo, en el altiplano: los chibchas divinizaron a Bochica y a su consorte Chía y los hicieron sol y luna, del mismo modo que los cueva hicieron dioses a Chipiripa y a Dobaiba, personajes de hechos memorables. En los dos casos una figura humana, recordada por su prudencia o su enseñanza, termina gobernando el cielo.
+
+La sequía primordial, en la que se secan los ríos y los sobrevivientes bajan al mar a cavar pozos en la playa, es la versión cueva del castigo que borra a la primera humanidad. Villa Posse subraya que no es un diluvio: aquí el castigo es la falta de agua, no su exceso.`,
     excerpt:
       "Dobaida es una memoria Cueva del bajo Atrato atravesada por tormentas, territorio y búsquedas coloniales de riqueza.",
     seoTitle: "Dobaida: memoria Cueva del bajo Atrato",
@@ -850,12 +843,14 @@ Dobaida permanece, entonces, no como pirámide ni soberana mesoamericana, sino c
     ],
     tags: ["Dobaiba", "tormentas", "río Atrato", "conquista"],
     sourceKeys: [
-      "trimborn1953",
-      "villa1993",
-      "clacsoRegionalization",
-      "restrepo2019",
-      "severino1924",
-      "minInteriorPlan",
+      "asensioDecadas1892",
+      "asensioDecadas18922",
+      "posseMitos1993",
+      "piazziniPlaneacion2009",
+      "redaccionmitos2017",
+      "redaccionCacica2005",
+      "edenDecades1555",
+      "espanolDabeiba2026",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, no fotografía: paisaje del bajo Atrato y Darién con gran río, selva húmeda y tormenta; Dobaida sugerida como presencia humana-serena integrada a nubes, lluvia y viento, sin templo inventado, sin pirámide, sin oro ceremonial, sin tocado mesoamericano, sin texto, sin maqueta física, diorama ni render 3D.",
@@ -958,43 +953,38 @@ ${archiveResearch}`,
   archiveRecord({
     slug: "el-tesoro-de-dabeiba",
     title: "El tesoro de Dobaida",
-    mito: `Entre las noticias que circularon durante la conquista apareció el nombre Dobaida. Algunos lo entendieron como una figura asociada a tormentas; otros, como un poblado, un santuario o un territorio del bajo Atrato. A la ambigüedad se sumó un rumor poderoso: allí habría una riqueza extraordinaria.
+    mito: `Vasco Núñez de Balboa descubrió el Atrato en 1510, y desde entonces no pudo quitarse de la cabeza un nombre: Dabaiba. Los indios del Darién hablaban de un señor, río arriba, cuyo reino rebosaba de oro, y de un templo con techo de oro, lleno de objetos preciosos, que guardaba un tigre. Decían que a Dabaiba le llevaban el metal de minas lejanas, y Balboa llegó a creer que se lo llevaban en cestas de oro.
 
-Los expedicionarios escuchaban relatos sobre objetos de oro y un centro venerado. En lugar de reconocer que el nombre podía tener sentidos distintos, lo convirtieron en punto sobre un mapa. Prepararon viajes, interrogaron a habitantes y avanzaron por ríos y selvas buscando un tesoro que siempre parecía quedar más lejos.
+Un día tomó el cabo de Culata con cien hombres, en un bergantín y en canoas de la tierra, y entró por un río diez veces más grande que el del Darién. Subieron unas treinta millas, torciendo hacia el mediodía, hasta dar con unos pueblos de pescadores cuyo cacique se llamaba Dabaiba. Allí se había refugiado Cemaco, el cacique del Darién al que los españoles habían derrotado. Dabaiba no los esperó: huyó y dejó todo desierto. En los bohíos encontraron montones de arcos y flechas, redes, lanchas de pescar. Era tierra de lagunas y pantanos, mala para sembrar. Buscaban comida y hallaron poca, pero de las casas abandonadas sacaron siete mil castellanos de oro.
 
-Cuando una ruta no llevaba al lugar esperado, la historia no terminaba. Dobaida se desplazaba hacia otro afluente, otra montaña o una región todavía no dominada. El tesoro crecía a medida que faltaban pruebas. Cada fracaso alimentaba la idea de que los habitantes lo habían escondido o que una expedición rival estaba más cerca.
+Luego vieron el error. Aquellos eran sólo los pescadores de Dabaiba. La corte verdadera quedaba a cincuenta leguas del Darién, y nadie había podido tocarla por el poder de su señor. Escribieron al rey que en esa tierra, donde se cavara, salían pepitas de oro, y pidieron trescientos hombres escogidos, jóvenes y bien armados, para ir sobre Dabaiba y vencerlo si no quería paz.
 
-La búsqueda transformó una memoria territorial en objetivo de saqueo. Las referencias a tormentas, autoridad y santuario quedaron subordinadas al oro que los invasores deseaban encontrar. Las voces de los Cueva aparecen fragmentadas en los escritos de quienes avanzaban sobre su territorio.
+Otros españoles, movidos por la misma sed, recorrieron después las riberas del río. Vencieron a un régulo, y éste les entregó unos catorce mil pesos de oro labrado en figuras. Entre ellas venían tres trompetas de oro y tres campanas de oro, la mayor de seiscientos pesos, con badajos tan blancos que los tomaron por perlas, hasta ver que eran de hueso de pescado. Venían también mil trescientos cascabeles. El templo no apareció.
 
-Esta historia no incluye al arriero Roque, una luz de Semana Santa, un niño con dientes de huito ni un cafetal milagroso. Esos episodios pertenecían a una leyenda paisa generada para la ficha anterior y no a la tradición colonial documentada. Tampoco afirma que el tesoro premiara a quien tuviera buen corazón.
+Pasaron los años y el nombre siguió llamando. Pedro de Heredia, gobernador de Cartagena, mandó a Francisco César a buscar el tesoro de Dabaibe. César entró en Tierra Firme hasta el valle de Guaca y sacó oro de las sepulturas de los indios. Con esa noticia, Juan Vadillo salió el 24 de enero de 1538 de San Sebastián de Urabá con doscientos soldados y trescientos caballos, y se metió tierra adentro.
 
-Lo que permanece es otra clase de advertencia. El tesoro de Dobaida muestra cómo la codicia puede reorganizar el conocimiento: un nombre se vuelve promesa, una tormenta se vuelve obstáculo y un territorio habitado se vuelve escondite que alguien cree tener derecho a abrir.
+Nunca se supo si los españoles llegaron a ver el templo, ni si los indios lo enterraron en el Atrato o en el fondo de alguna laguna. Los embera de Río Verde, en Frontino, tienen su propia respuesta. Cerca de sus casas hay unos túmulos antiguos, los perúes, y dicen que allí Antomiá, el diablo, escondió los tesoros de los indios para que los españoles no los pudieran encontrar.`,
+    historia: `Este no es un relato que una comunidad contara para sí, sino el rumor que persiguió a los conquistadores del golfo de Urabá durante casi treinta años, y la respuesta que le dieron, mucho después, los embera de Frontino.
 
-Dobaida nunca aparece como una guaca lista para ser recuperada. En el archivo, el tesoro es una búsqueda repetida y una razón de violencia. Su ausencia material no hace falsa la historia; revela el mecanismo con que la conquista fabricó certezas a partir de rumores y convirtió una tradición ajena en mandato de posesión.`,
-    history: {
-      sourceFocus:
-        "La página se reconstruye como dossier de la búsqueda colonial del tesoro de Dobaida y se transfiere de Katío a Mixto.",
-      evidenceDetail:
-        "Las fuentes distinguen Dobaida de Dabeiba y muestran el desplazamiento del nombre entre figura, poblado y territorio del bajo Atrato.",
-      editorialDecision:
-        "Se elimina la leyenda inventada de guaca paisa, río Sucio y Semana Santa; la URL se conserva para no perder circulación ni SEO.",
-    },
-    versions: {
-      mainVariant:
-        "Las fuentes coloniales presentan un centro rico que las expediciones intentan localizar y cuya posición cambia dentro de los relatos de conquista.",
-      contrastVariant:
-        "La ficha anterior fusionaba Dabeiba Katío con motivos campesinos de guacas y añadía personajes sin fuente; no se conserva como variante.",
-      boundary:
-        "El título se corrige a Dobaida y la página queda como recepción histórica regional.",
-    },
+La primera noticia está en las Décadas del Nuevo Mundo de Pedro Mártir de Anglería, que se leen en la traducción de Joaquín Torres Asensio (Madrid, 1892). En la Década segunda, libro IV, capítulo II, narra la entrada de Balboa río arriba y el pueblo de pescadores abandonado. En la Década tercera, libro VI, copia lo que los del Darién escribieron al rey: que la corte de Dabaiba estaba a cincuenta leguas y que habían confundido a sus pescadores con él. En la Década séptima, libro X, capítulo II, cuenta el botín de trompetas, campanas y cascabeles tomado a un régulo del río.
+
+Eugenia Villa Posse, en el volumen III de Mitos y leyendas de Colombia (IADAP, 1993), abre su capítulo «Dobaida» con esta búsqueda y la llama el «Dorado de Dobaiba», anterior al de Cundinamarca. De ella vienen las cestas de oro que imaginó Balboa, el techo de oro que mencionan Herrera y Beuchat y el tigre guardián que registró Vadillo.
+
+El episodio de Francisco César y la expedición de Vadillo en 1538 lo reconstruye el historiador Luis Javier Caicedo en la revista Ciencia Nueva de la Universidad Tecnológica de Pereira (2017), a partir de los textos de Vadillo, Cieza y Castellanos.
+
+El final pertenece a otra voz. El arqueólogo Carlo Emilio Piazzini entrevistó en octubre de 2007 a don Vicente Bailarín, embera de Río Verde, en Frontino, y lo publicó en el Boletín de Antropología de la Universidad de Antioquia en 2009.`,
+    versiones: `El tesoro cambia de dueño y de sitio según quién lo cuente. En la primera noticia de Anglería, Dabaiba es un cacique de pescadores que huye; en la carta al rey pasa a ser un señor poderoso con corte propia, y el cronista admite que la primera identificación fue un error. En la Década séptima el oro ya no es un rumor: es un botín concreto, pesado en pesos, tomado a un régulo del río.
+
+Villa Posse, siguiendo a Trimborn, desplaza el centro del relato del cacique a la diosa: el oro estaba en el templo de Dobaiba, la diosa de las tormentas, y los caciques lo acumulaban por tres razones, el oro de los ríos, las peregrinaciones y el monopolio del comercio con las minas de Antioquia. Añade que la historia conoce apenas una tercera parte de la verdad del tesoro.
+
+Piazzini sitúa a Dabaibe, junto con Nore y Guaca, como un eslabón en la red de intercambio que llevaba el oro de Buriticá hacia el Sinú, el Atrato y Urabá: para él, la riqueza de Dabaibe no era un depósito sino un paso.
+
+La versión embera de Río Verde invierte la perspectiva. El tesoro existe, pero no se perdió: lo escondió Antomiá, el diablo, en los perúes, precisamente para que los españoles no lo encontraran. Una nota de Semana de 2017 añade que el templo de oro fue construido por los katíos en agradecimiento a la diosa Dabeiba, y que Jorge Robledo también lo buscó.`,
     leccion:
-      "La codicia puede convertir un nombre, un pueblo y un territorio en permiso imaginario de saqueo.",
-    similarities: {
-      internalComparison:
-        "el tesoro de Dobaida acompaña el dossier Dobaida y las memorias de conquista, pero no completa la biografía de Dabeiba Katío.",
-      broaderComparison:
-        "Los rumores de ciudades de oro impulsaron otras expediciones americanas; compararlos sirve para estudiar la conquista, no para igualar tradiciones.",
-    },
+      "Un tesoro que nadie encuentra crece con cada expedición que sale a buscarlo.",
+    similitudes: `Villa Posse pone este relato al lado de El Dorado de Guatavita, y el paralelo es el más claro de Colombia: una noticia oída a los indios, un lugar sagrado lleno de oro y una cadena de expediciones que nunca lo alcanzan. Ella insiste en que el Dorado de Dobaiba fue anterior: Balboa lo persiguió antes de que nadie en Quito o Popayán oyera hablar del cacique cubierto de oro de la laguna de Guatavita, que la misma obra describe cuando trata a los chibchas.
+
+El otro paralelo está en la misma región y en la voz embera. Piazzini recoge en Frontino la tradición de la diosa Dabeiba y de los caciques Nutibara y Toné, y el oro escondido por el diablo en los túmulos funerarios. El entierro indígena se vuelve depósito de oro, vigilado por una fuerza que lo aparta de quien lo busca. Aquí el guardián no es un tigre de crónica sino Antomiá, y lo que protege no es un templo sino la memoria de los antiguos.`,
     excerpt:
       "El tesoro de Dobaida fue un rumor colonial que convirtió una memoria del bajo Atrato en objetivo repetido de conquista.",
     seoTitle: "El tesoro de Dobaida: búsqueda colonial",
@@ -1009,12 +999,44 @@ Dobaida nunca aparece como una guaca lista para ser recuperada. En el archivo, e
     ],
     tags: ["tesoro", "oro", "conquista", "río Atrato"],
     sourceKeys: [
-      "trimborn1953",
-      "villa1993",
-      "clacsoRegionalization",
-      "restrepo2019",
-      "severino1924",
-      "bicanGuide",
+      "asensioDecadas18923",
+      {
+        key: "posseMitos1993",
+        summary:
+          "Presenta la búsqueda como el «Dorado de Dobaiba», anterior al de Cundinamarca: 1510 y 1512, las cestas de oro que imaginó Balboa, el templo de techo de oro y el tigre guardián de Vadillo (pp. 49-51).",
+        limitation:
+          "Resume a Trimborn y cita a Herrera, Beuchat y Vadillo de segunda mano, sin páginas.",
+      },
+      "caicedoRuta2017",
+      "asensioDecadas18924",
+      {
+        key: "piazziniPlaneacion2009",
+        summary:
+          "Dabaibe como eslabón del comercio del oro entre Buriticá y Urabá (p. 205), y la entrevista de 2007 a don Vicente Bailarín: Antomiá escondió los tesoros en los perúes para que no los hallaran los españoles (p. 208).",
+        limitation:
+          "El testimonio embera ocupa dos líneas y una nota al pie; no se transcribe la entrevista.",
+      },
+      {
+        key: "redaccionmitos2017",
+        summary:
+          "Versión divulgada del templo de oro construido por los katíos en honor de Dabeiba entre las montañas del Atrato, buscado sin éxito por Balboa y Robledo.",
+        limitation:
+          "Sin firma ni aparato; atribuye a Ocampo López datos que no se pudieron comprobar.",
+      },
+      {
+        key: "edenDecades1555",
+        summary:
+          "La huida de Dabaiba ante Balboa, los arcos, flechas y barcas de pesca abandonados, en la primera traducción inglesa.",
+        limitation:
+          "OCR casi ilegible; sirve para cotejo, no como lectura.",
+      },
+      {
+        key: "espanolDabeiba2026",
+        summary:
+          "Recoge que el nombre del municipio se asocia a un «mítico tesoro indígena denominado Dabeibe», aunque lo atribuye a doña Dabeiba Hernández.",
+        limitation:
+          "Sin referencias para la toponimia; se cita sólo por la asociación del nombre con el tesoro.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica full paper cut y paper quilling, no fotografía: pequeña expedición colonial avanza en canoa por un inmenso bajo Atrato de selva y lluvia, guiada por un mapa incompleto mientras el horizonte permanece cerrado; el centro es el territorio, no el oro, sin guaca luminosa, arriero, Semana Santa, pirámide o templo mesoamericano, sin texto, sin maqueta física, diorama ni 3D.",

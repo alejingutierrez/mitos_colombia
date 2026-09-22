@@ -576,6 +576,73 @@ export const afrocolombianSources = {
     limitation:
       "Es la nota de la editorial, no el libro, que no está en abierto; recoge palabras del autor en una presentación. Es una interpretación de autor desde Esmeraldas, del lado ecuatoriano, no un registro de tradición oral, y no aporta ninguna versión del relato de Tumaco.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  charcoVisiones2016: source({
+    title: "Visiones y seres maravillosos del Pacífico (Río de Letras. Territorios Narrados, 21)",
+    author: "Comunidad Educativa de El Charco y La Tola (Nariño); ilustr. Nelly Zoraida Cuero",
+    year: 2016,
+    type: "cartilla de tradición oral (Ministerio de Educación Nacional y Save the Children)",
+    url: "https://colombiaaprende.edu.co/sites/default/files/files_public/plan-lectura-2021/territorios-narrados-parte-1/Visiones_y_seres_maravillosos_del_pacifico.pdf",
+    summary:
+      "El registro que da el título: el Riviel es un sacerdote que quemó un rosario y fue convertido en visión; flota sobre una mochila o una tabla en noches de menguante, embruja y vuelve sonámbula a la gente; trae el caso de don Casimiro y la copla «tu rosario te condena» (pp. 19-21).",
+    limitation:
+      "Texto colectivo escolar, sin narradores identificados salvo don Casimiro; redacción adaptada para niños.",
+  }),
+  rodriguezescuela2013: source({
+    title: "La escuela de tradición oral, una estrategia pedagógica ... del municipio de Magüí Payán",
+    author: "Luz Ángela Pazos Rodríguez",
+    year: 2013,
+    type: "trabajo de grado (Especialización en Pedagogía de la Creatividad, Universidad de Nariño)",
+    url: "https://sired.udenar.edu.co/2701/1/89852.pdf",
+    summary:
+      "En el río Patía el riviel es una lucecita azul o verde que persigue a los pescadores nocturnos hacia la muerte y se espanta con la palabra atarraya (p. 47).",
+    limitation:
+      "Cuatro líneas dentro de una propuesta pedagógica; no identifica al narrador de este relato.",
+  }),
+  penaPinzonPatrimonios: source({
+    title: "Patrimonios emergidos. Herencia inmaterial y su vínculo con el patrimonio sumergido en San Andrés de Tumaco y Buenaventura (Boletín OPCA n.º 13)",
+    author: "Víctor Andrés Pérez Bermúdez; Wilson Peña-Pinzón",
+    type: "artículo de divulgación académica (Observatorio de Patrimonio Cultural y Arqueológico, Universidad de los Andes)",
+    url: "https://cienciassociales.uniandes.edu.co/opca/articulo/patrimonios-emergidos-herencia-inmaterial-y-su-vinculo-con-el-patrimonio-sumergido-en-san-andres-de-tumaco-y-buenaventura/",
+    summary:
+      "La versión de Tumaco: un pirata que abandonó a su tripulación por un tesoro y vaga maldito en una canoa partida en dos con una linterna; le atribuyen naufragios y lo vinculan con la tradición afroecuatoriana.",
+    limitation:
+      "No transcribe testimonios ni da narradores; la página no indica año.",
+  }),
+  rTVCMitos2024: source({
+    title: "Mitos y leyendas de Buenaventura, el puerto del Pacífico",
+    author: "Señal Colombia (RTVC)",
+    year: 2024,
+    type: "nota de medio público",
+    url: "https://www.senalcolombia.tv/cultura/mitos-leyendas-Buenaventura",
+    summary:
+      "La variante del pescador: el Riviel en canoa sin proa pregunta «amigo, ¿cómo está la pesca?» y vuelve pesado el potro; si no le contestan, confunde el rumbo hasta el amanecer.",
+    limitation:
+      "Divulgación sin autor ni fuentes; repite formulaciones que circulan en la red.",
+  }),
+  comejenriviel2020: source({
+    title: "El riviel se los sigue llevando",
+    author: "Harrinson Cuero (El Comején)",
+    year: 2020,
+    type: "columna de prensa regional (Pacífico)",
+    url: "https://elcomejen.com/2020/09/18/el-riviel-se-los-sigue-llevando/",
+    summary:
+      "Usa al riviel, espíritu que boga en un ataúd y sale en la menguante entre el Mira y el Guapi, como figura de los grupos armados que desaparecen líderes del litoral.",
+    limitation:
+      "Columna de opinión: toma la leyenda como metáfora; no es un registro del relato.",
+  }),
+  espanolRiviel2026: source({
+    title: "El Riviel",
+    author: "Wikipedia en español",
+    year: 2026,
+    type: "enciclopedia colaborativa",
+    url: "https://es.wikipedia.org/wiki/El_Riviel",
+    summary:
+      "Resume la variante esmeraldeña (ataúd, cruz por remo, lámpara en la proa, ser sin rostro) y los remedios de gritar nombres de aparejos de pesca o rezar la Magnífica.",
+    limitation:
+      "Wikipedia, apoyada en la tesis de la UASB que no se pudo leer; sólo para el paralelo ecuatoriano.",
+  }),
 };
 
 export const afroSourceKeysBySlug = {

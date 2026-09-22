@@ -3,44 +3,62 @@ import { defineAndinaLegacyEditorialResidualMyth } from "./define-editorial-myth
 const records = [
   defineAndinaLegacyEditorialResidualMyth({
     slug: "catalina-la-napanga",
-    title: "Catalina de Belalcázar: archivo y leyenda",
+    sourceKeys: [
+      "calleCatalina2013",
+      "llorenteCausa1591",
+      {
+        key: "salcedoWomenPopayan",
+        summary:
+          "Reconstruye el caso desde los autos (vía Arboleda Llorente): boda en 1575, celos y golpes del marido, pruebas circunstanciales, la casa del barrio de San Francisco, las criadas Bárbola y doña Juana, la pena revocada por Quito y el segundo matrimonio con Catalina de Zúñiga.",
+        limitation:
+          "Estudio de historia urbana; el caso es un ejemplo dentro de un argumento sobre vecindarios de mujeres, y depende de la lectura de Arboleda.",
+      },
+      {
+        key: "llanosElitePopayan",
+        summary:
+          "Apartado «El matrimonio de Catalina Belalcázar y Herrera y el capitán Lorenzo de Paz Maldonado»: García de Tobar como pretendiente anterior rechazado por falta de méritos, el crimen como asunto «entre nietos de conquistadores» y la apelación ante Quito.",
+        limitation:
+          "Escaneo con OCR defectuoso; sigue a Arboleda sin volver al expediente y llama a García de Tobar «posible amante».",
+      },
+      "mendozaLeyendas2015",
+      "henaoCatalina2020",
+      "santanderescritor2021",
+      "herreraPayanceta2010",
+      "robledoInes2010",
+      "pelayoDramas1881",
+    ],
+    title: "Catalina la Ñapanga",
     excerpt:
       "Una leyenda literaria viste de ñapanga a Catalina; el expediente de 1591 cuenta, con más cautela, un doble homicidio y años de violencia.",
     tags: ["popayan", "violencia", "justicia", "literatura"],
-    mito: `En una recreación literaria contemporánea de Popayán, Catalina de Belalcázar aparece como una joven de familia poderosa que, durante la Semana Santa, mira desde las ventanas el paso de las ñapangas. La ciudad espera recogimiento, pero ella desea atravesar por unas horas los límites de su casa y de su apellido. Por eso cambia sus vestidos por el atuendo popular con el que la narración la hará reconocible.
+    mito: `Catalina de Belalcázar era sobrina del conquistador Sebastián de Belalcázar, y a Popayán le sobraban razones para mirarla. Tenía herencia, tenía belleza y era tan devota del buen Cristo que a los quince años quiso salir a la procesión vestida de ñapanga, como las mujeres del pueblo. Fue un Martes Santo. Entre el humo de los sahumerios y el paso lento de las andas, la vio por primera vez Francisco García, un poeta payanés.
 
-La pieza imagina que Catalina sale un Martes Santo y encuentra a un poeta mestizo sin fortuna. Él no pertenece al círculo que decide los matrimonios de las familias principales. Entre ambos nace un afecto secreto que solo puede avanzar mediante encuentros breves y mensajes escondidos. La diferencia social convierte cada cita en riesgo, mientras las procesiones, las campanas y las calles antiguas ofrecen a la historia su marco romántico.
+No hubo más que un cruce de miradas. Bastó. Desde ese día los dos quedaron amarrados por un amor que iba a hacerlos vibrar, gozar, llorar y sufrir, y que al final los mataría.
 
-El matrimonio de Catalina con Lorenzo de Paz Maldonado no detiene esa trama. En la versión literaria, la joven conserva la memoria del poeta y vuelve a buscarlo. El relato presenta el vínculo como un amor condenado por jerarquías coloniales y hace de la ropa de ñapanga una forma de cruzar, aunque sea de manera temporal, una frontera de clase.
+El poeta era pobre, mestizo y sin apellido, y eso en la ciudad no se perdonaba. En 1576 la familia obligó a Catalina, por conveniencia, a casarse con Alonso de Paz, un capitán español de ojos azules llegado de Salamanca a la gobernación del Cauca para ser encomendero de Caloto. La boda se celebró en una iglesia de retablos quiteños. Ella iba toda de blanco, con un ramo de tallos largos en la mano, y por dentro le seguían sonando los sonetos del muchacho.
 
-La historia termina cuando Lorenzo encuentra a Catalina acompañada por otro hombre. La furia sustituye cualquier pregunta y la casa se convierte en escenario de dos muertes: la de Catalina y la de Francisco García de Tobar. La recreación amorosa tiende a identificar al acompañante con el enamorado secreto y a ordenar el crimen como desenlace de una pasión clandestina.
+No había terminado la luna de miel cuando el poeta volvió a la carga. Escribía para ella y necesitaba quien le llevara los papeles, así que compró los servicios de Bárbula, la criada negra de confianza de la familia. Bárbula entraba y salía con los versos escondidos. De poema en poema, de canción en canción, la voluntad de Catalina se fue quebrando, hasta que un día recibió al poeta en su propia cama de casada.
 
-Esa última unión pertenece a la literatura, no al archivo. El proceso de 1591 confirma las muertes y el juicio, pero conserva testimonios enfrentados sobre el motivo de la visita y pruebas circunstanciales sobre una supuesta relación. Tampoco demuestra que Catalina se disfrazara de ñapanga ni que conociera a un poeta mestizo. Por eso la leyenda puede leerse como una intervención moderna sobre una tragedia colonial, siempre que no sustituya a la mujer asesinada por una heroína romántica inventada ni convierta el rumor que la rodeó en culpabilidad comprobada.`,
-    historia: `Catalina de Belalcázar Herrera era nieta del conquistador Sebastián de Belalcázar y pertenecía a una de las familias dominantes de Popayán. Se casó hacia 1575 o 1576 con Lorenzo de Paz Maldonado. El catálogo del Centro de Investigaciones Históricas José María Arboleda Llorente identifica una causa criminal abierta entre octubre y diciembre de 1591: Lorenzo dio muerte en su casa a Catalina y a Francisco García de Tobar.
+El secreto duró quince años. Quince años de recados, de puertas entornadas y de oído atento a los cascos del caballo del marido. Hasta que alguien habló. Don Alonso recibió el aviso lejos de casa y regresó sin anunciarse, espoleando al animal, con la cabeza llena de escenas que le nublaban el juicio.
 
-El mismo catálogo conserva una diferencia decisiva. Algunos testigos describieron la presencia de García de Tobar como visita de cumplimiento; otros hablaron de malos tratos entre él y Catalina. Jaime Salcedo señala que Francisco se había criado junto a ella y sus hermanos, que existían rumores sobre ambos y que las pruebas usadas para justificar las muertes eran circunstanciales. También documenta años de golpes, celos e intentos de agresión de Lorenzo conocidos por la familia. El caso no debe reducirse a un crimen pasional ni explicarse mediante una infidelidad afirmada como certeza.
+Bárbula alcanzó a dar la alarma, pero tarde. El capitán entró con la espada desnuda y atravesó de lado a lado el corazón del poeta. Después buscó a su mujer gritándole los peores nombres. La encontró en la cocina, y allí, ciego de celos, le dio quince puñaladas.
 
-Lorenzo fue declarado culpable y condenado a muerte y pérdida de bienes. Salcedo indica que la Audiencia de Quito revocó la pena capital y que el acusado regresó, devolvió la dote y contrajo otro matrimonio. La ficha archivística advierte, sin embargo, que al expediente conservado le faltan los primeros 106 folios y que allí no consta el resultado de la apelación. La revisión mantiene visibles ambas condiciones documentales.
+Lo juzgaron. En primera instancia lo condenaron a perder sus bienes y a ser degollado en la plaza pública. Él apeló, y por uno de esos milagros torcidos de la justicia, el crimen quedó sin castigo. Dos años después el viudo volvió a casarse, esta vez con otra Catalina, de apellido Zúñiga, hija del conquistador Francisco Mosquera y Figueroa.`,
+    historia: `«Catalina, la ñapanga» es un relato literario de Marco Antonio Valencia Calle, poeta, narrador y periodista payanés. Lo publicó primero como columna en el diario La Nación de Neiva el 27 de marzo de 2013, con el título «Catalina, La Ñapanga», y lo recogió después, como «Catalina, una ñapanga hechizada de amor», en Leyendas extraordinarias de Popayán (Editorial SIC, 2015), un libro de 125 páginas con veintiséis dibujos a bolígrafo de Rodrigo Valencia Quijano. En 2020 la editorial subió el capítulo como episodio sonoro, leído por Alejandra Henao, y en 2021 el autor presentó el libro en un encuentro virtual de la Universidad de Santander.
 
-El proceso permite escuchar rastros de otras mujeres habitualmente borradas de la leyenda. Salcedo menciona a Bárbola, procedente de Guambía, y a Juana dentro de los testimonios domésticos; también observa que Catalina tenía ascendencia indígena por una de sus abuelas y que, herida de muerte, habría hablado en una lengua indígena. Estos datos provienen del estudio del juicio y requieren la misma cautela que el resto del expediente.
+No es tradición oral recogida en una vereda: es literatura firmada que trabaja con historia local, periodismo y fantasía. Donaldo Mendoza, en su reseña para Proclama del Pacífico, la describe como un reportaje sobre la historia y las leyendas de la ciudad escrito con las armas del poeta y del narrador.
 
-La ñapanga hechizada de amor aparece mucho después en el libro de Marco Antonio Valencia Calle. La UDES presenta esa obra como literatura y realismo mágico; el episodio leído en iVoox acredita autor, título y mediación contemporánea. La URL se conserva, pero ya no confunde esa creación con tradición colonial comprobada.`,
-    versiones: `La versión archivística no es una leyenda completa sino una causa judicial. Acredita el doble homicidio, identifica a las personas involucradas y conserva dos explicaciones testimoniales de la visita de García de Tobar. El estudio de Salcedo añade el historial de violencia de Lorenzo, el carácter circunstancial de las pruebas y la revocatoria de la pena de muerte; el catálogo actual del archivo aclara que ese desenlace procesal no aparece en los folios supervivientes.
+Detrás del relato hay un expediente real. El Archivo Central del Cauca conserva la causa criminal seguida por Sebastián de Belalcázar, hermano de la víctima, y por Fernando de Tobar contra el capitán Lorenzo de Paz Maldonado, que en 1591 mató en su propia casa a su mujer, Catalina de Belalcázar Herrera, y a Francisco García de Tobar. El catálogo registra 368 folios, incompletos. El historiador José María Arboleda Llorente estudió esos autos en Popayán a través del arte y de la historia, y de ahí toman el caso los trabajos de Héctor Llanos Vargas (1979) sobre la élite criolla de Popayán y de Jaime Salcedo Salcedo sobre las mujeres y los vecindarios de la ciudad. La ñapanga, por su parte, es la mujer del pueblo payanés que se vestía con su traje de fiesta para las procesiones, figura que la tradición de Semana Santa conserva en las sahumadoras.`,
+    versiones: `El relato de Valencia Calle y el expediente cuentan dos historias distintas con los mismos muertos. En el relato, Francisco García es un poeta pobre, mestizo y sin apellido; en los autos, Francisco García de Tobar es nieto de uno de los primeros conquistadores de Popayán. Llanos Vargas, que sigue a Arboleda, dice que había pretendido a Catalina antes de su boda y que la familia prefirió a Paz Maldonado por tener mejor linaje y más servicios. Salcedo, en cambio, afirma que García de Tobar se había criado con ella en casa de su padre y que se trataban como hermanos.
 
-Héctor Llanos Vargas inserta el caso en la reproducción de la élite criolla de Popayán. Llama a García de Tobar posible amante y vincula el matrimonio con redes de descendientes de conquistadores. La síntesis de Oscar Tobar vuelve a narrar el drama para público general. Estas reconstrucciones históricas difieren en énfasis, pero ninguna acredita a Catalina como ñapanga enamorada de un poeta.
+El relato da por cierto el adulterio de quince años. El catálogo del archivo recoge que unos testigos describieron la visita de García de Tobar como visita de cumplido y otros como malos tratos, y Salcedo subraya que todas las pruebas del marido eran circunstanciales, que los celos venían de años y que Paz Maldonado golpeaba a su mujer.
 
-La recreación de Marco Antonio Valencia Calle cambia la función del material. El episodio sonoro la presenta como una mujer hechizada de amor, introduce al enamorado pobre y convierte el atuendo de ñapanga en instrumento de libertad y encuentro. La UDES y una reseña de Proclama muestran que el libro trabaja deliberadamente con ficción, periodismo, historia local y realismo mágico. Su valor está en la recepción literaria, no en cerrar las dudas del proceso.
-
-También varía el sentido de la palabra ñapanga. Investigaciones y divulgaciones contemporáneas la relacionan con la mujer popular o mestiza de Popayán, con vestuario festivo y con distintas propuestas etimológicas. Trasladar esa figura a una mujer de élite del siglo XVI produce una imagen narrativa potente, pero anacrónica si se afirma sin atribución.
-
-La revisión mantiene dos capas sin fusionarlas: una leyenda moderna que imagina deseo y transgresión, y un archivo incompleto sobre violencia conyugal, rumor, doble homicidio y justicia colonial.`,
+El marido cambia de nombre dentro del propio relato: es Alonso de Paz en la boda y en el crimen, y Lorenzo de Paz Maldonado en el juicio, que es como lo llaman los documentos. Valencia Calle fecha la boda en 1576; Salcedo, en 1575. La criada que lleva los versos es en el relato la negra Bárbula; en los autos aparece Bárbola, india de Guambía. El relato termina con la impunidad; Salcedo precisa que la Audiencia de Quito revocó la pena de muerte, que el viudo devolvió la dote y se casó con Catalina de Zúñiga, y el catálogo advierte que faltan los primeros 106 folios.`,
     leccion:
-      "Ninguna historia de amor debe convertir el rumor en culpa ni embellecer la violencia contra una mujer.",
-    similitudes: `La Sayona ofrece una primera comparación directa porque también relaciona celos, acusación sexual y violencia contra una mujer. En sus variantes, el personaje sobrenatural termina castigando a hombres infieles; Catalina, en cambio, fue una persona histórica asesinada, y el expediente no autoriza a transformarla en aparición vengadora ni a dar por probada la infidelidad que rodeó el juicio.
+      "Un crimen contado muchas veces como historia de amor termina pareciendo menos un crimen.",
+    similitudes: `El pariente más cercano en la literatura colombiana es Inés de Hinojosa, la criolla de Tunja cuya historia de adulterios y maridos asesinados contó Juan Rodríguez Freyle en el capítulo X de El Carnero. Ángela Inés Robledo muestra cómo ese caso judicial del siglo XVI se reescribió después como romance: Temístocles Avella Mendoza lo hizo novela romántica en 1864 y Próspero Morales Pradilla lo convirtió en Los pecados de Inés de Hinojosa en 1986. Es el mismo camino que recorre Catalina: un proceso colonial entre familias de conquistadores que, siglos después, un escritor vuelve historia de pasión.
 
-La Llorona comparte el modo en que una tragedia femenina puede quedar reducida a culpa, deseo y castigo al circular como leyenda. La diferencia es esencial: la Llorona pertenece a un repertorio de variantes sobrenaturales y maternidades perdidas, mientras Catalina tiene nombres, proceso y violencia conyugal documentados. Leerlas juntas ayuda a preguntar quién recibe voz y quién carga con la responsabilidad en cada relato.
-
-La Marquesa de Yolombó aporta otro contraste histórico-literario. Ambas figuras quedaron ligadas a sociedades coloniales jerarquizadas y fueron reelaboradas por escritores posteriores. La Marquesa se asocia con poder económico y memoria regional; Catalina entra en la tradición desde una muerte violenta. Ninguna obra literaria debe confundirse automáticamente con biografía ni usarse para borrar las incertidumbres de los archivos.`,
+El otro paralelo lo señala el propio relato, que compara al marido con el celoso Otelo. En la tragedia de Shakespeare, que Marcelino Menéndez Pelayo tradujo al castellano, el moro mata a Desdémona convencido de una infidelidad que nadie ha probado, con la ayuda de rumores y de un objeto que pasa de mano en mano. En Popayán el objeto son los versos que lleva una criada; en Venecia, un pañuelo.`,
     sceneHorizontal:
       "una composición dividida pero continua entre una calle de Popayán durante procesión nocturna y una mesa de archivo: a un lado una figura femenina con atuendo de ñapanga atribuida claramente a la imaginación literaria; al otro, folios judiciales de 1591, una casa colonial y dos siluetas ausentes marcadas por espacios vacíos, sin representar el asesinato ni presentar adulterio",
     sceneVertical:

@@ -112,7 +112,7 @@ test("retira las fusiones originales y conserva versiones incompatibles", () => 
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("guagua-rayo").mito,
-    /Juan y Telma[\s\S]+Otra memoria de Jenoy/,
+    /Jenoy[\s\S]+Juan Solarte Criollo/,
   );
   // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
@@ -127,7 +127,7 @@ test("retira las fusiones originales y conserva versiones incompatibles", () => 
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-totuma-de-la-cocha").mito,
-    /No reemplaza las historias directas del Refugio del Sol/,
+    /Tamia[\s\S]+Munani/,
   );
   // heredada: reescribir tras el cotejo
   assert.match(

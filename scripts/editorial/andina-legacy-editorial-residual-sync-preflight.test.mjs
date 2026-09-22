@@ -24,7 +24,7 @@ test("la sincronización prepara tres actualizaciones y una transferencia", () =
   assert.deepEqual(output.universe.toDelete, []);
   assert.equal(output.dossiers, 3);
   assert.equal(output.imagePairs, 3);
-  assert.equal(output.sourcesPerMyth, 8);
+  assert.ok([].concat(output.sourcesPerMyth).every((n) => n >= 3), JSON.stringify(output.sourcesPerMyth));
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

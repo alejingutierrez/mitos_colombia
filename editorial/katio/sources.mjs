@@ -572,6 +572,129 @@ export const katioSources = {
     limitation:
       "No narra el relato: son tres menciones en una tesis de casi 800 páginas. El autor es dóbida, formado en el internado de Catrú, y escribe sobre eyábida y dóbida sin separar siempre de quién es cada versión; la genealogía que hace descender a los emberá de los bibidi comia no está en Bailarín ni en las notas de 1929 y no debe injertarse en la ficha.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  asensioDecadas1892: source({
+    title: "Décadas del Nuevo Mundo, Década séptima, libro X, capítulo II («Sacrificios humanos a Dabaiba»), en Fuentes históricas sobre Colón y América, tomo IV",
+    author: "Pedro Mártir de Anglería; trad. Joaquín Torres Asensio",
+    year: 1892,
+    type: "crónica (traducción castellana del latín)",
+    url: "https://archive.org/details/fuenteshistorica04anghuoft",
+    summary:
+      "El capítulo entero dedicado al culto: el templo a cuarenta leguas del Darién, los esclavos degollados y quemados, la sequía primordial y los pozos en la playa, el ayuno de cuatro días, las campanas de oro y la castidad de los sacerdotes (pp. 232-238).",
+    limitation:
+      "Anglería no estuvo en América: escribe lo que le refirieron los colonos del Darién, con juicios de cristiano del siglo XVI. OCR de Internet Archive con erratas.",
+  }),
+  asensioDecadas18922: source({
+    title: "Décadas del Nuevo Mundo, Década tercera, libro IV, en Fuentes históricas sobre Colón y América, tomo II",
+    author: "Pedro Mártir de Anglería; trad. Joaquín Torres Asensio",
+    year: 1892,
+    type: "crónica (traducción castellana del latín)",
+    url: "https://archive.org/details/fuenteshistorica02anghuoft",
+    summary:
+      "El origen de la figura: Dabaiba fue una mujer antigua, magnánima y providente, venerada en vida y después de muerta; da nombre a las montañas y al río, y cuando se enoja trae rayos, truenos y pérdida de cosechas (pp. 322-324).",
+    limitation:
+      "Pasaje breve dentro de una digresión geográfica sobre el Atrato; el cronista lo cierra acusando a los sacerdotes de explotar la creencia.",
+  }),
+  posseMitos1993: source({
+    title: "Mitos y leyendas de Colombia, volumen III, cap. 2.3 «Dobaida»",
+    author: "Eugenia Villa Posse",
+    year: 1993,
+    type: "compilación (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Resume a Trimborn: Dobaiba como diosa de las tormentas de los cueva, princesa divinizada, madre del Creador; cita a Vadillo («cuando truena, que está enojada la Dobaiba») y distingue Dabaiba, Dobaiba y Dabeiba (pp. 49-52).",
+    limitation:
+      "Reelaboración de segunda mano con tono apologético; mezcla testimonios sin separar siempre quién dice qué. El artículo de Trimborn que resume no está en abierto.",
+  }),
+  piazziniPlaneacion2009: source({
+    title: "Planeación y procesos espaciales: configuración territorial del municipio de Frontino en el noroccidente de Antioquia (Colombia)",
+    author: "Carlo Emilio Piazzini",
+    year: 2009,
+    type: "artículo académico (Boletín de Antropología, Universidad de Antioquia, vol. 23, n.º 40)",
+    url: "https://revistas.udea.edu.co/index.php/boletin/article/view/6481",
+    summary:
+      "Registra en 2007 que la diosa Dabeiba sigue en la tradición oral de los embera de Río Verde (Frontino), y da la referencia de Trimborn, «Dobaiba: diosa de las tormentas» (1953).",
+    limitation:
+      "Artículo de geografía histórica; menciona a la diosa en una línea y no cuenta su relato.",
+  }),
+  redaccionmitos2017: source({
+    title: "Los mitos y leyendas de los embera katío inspirados en el Atrato",
+    author: "Revista Semana (redacción)",
+    year: 2017,
+    type: "prensa nacional",
+    url: "https://www.semana.com/mitos-y-leyendas-de-los-embera-katio-inspirados-en-el-atrato/551257/",
+    summary:
+      "La Dabeiba katía que sirve de paralelo: mujer venida de las llanuras del Atrato, maestra de oficios, que sube al cielo desde un cerro y causa lluvia, huracanes y terremotos.",
+    limitation:
+      "Nota divulgativa sin firma; se apoya en Ocampo López sin citar páginas y funde la diosa cueva con la katía.",
+  }),
+  redaccionCacica2005: source({
+    title: "Cacica Dabeiba",
+    author: "Vivir en El Poblado (redacción)",
+    year: 2005,
+    type: "prensa local (Medellín)",
+    url: "https://vivirenelpoblado.com/cacica-dabeiba/",
+    summary:
+      "Versión antioqueña de la cacica Dabeiba: sube al Cerro León y al cielo, protectora contra tormentas, rayos y tempestades; cita a Amanda Gómez Gómez.",
+    limitation:
+      "Crónica de tono laudatorio, sin fuentes primarias; trata a Dabeiba como heroína regional.",
+  }),
+  edenDecades1555: source({
+    title: "The Decades of the Newe Worlde or West India",
+    author: "Pedro Mártir de Anglería; trad. Richard Eden",
+    year: 1555,
+    type: "crónica (traducción inglesa del siglo XVI)",
+    url: "https://archive.org/details/decadesofnewewor00angh",
+    summary:
+      "La traducción inglesa más antigua de los pasajes sobre el río y las montañas de Dabaiba; permite cotejar la versión castellana de 1892.",
+    limitation:
+      "Inglés del siglo XVI con OCR muy deficiente; no incluye la Década séptima, donde está el culto.",
+  }),
+  espanolDabeiba2026: source({
+    title: "Dabeiba",
+    author: "Wikipedia en español",
+    year: 2026,
+    type: "enciclopedia colaborativa",
+    url: "https://es.wikipedia.org/wiki/Dabeiba",
+    summary:
+      "En la toponimia del municipio separa tres hilos del nombre: doña Dabeiba Hernández, el tesoro «Dabeibe» y la diosa catía.",
+    limitation:
+      "Wikipedia, sin referencia para la etimología; sólo sirve para mostrar la confusión de nombres.",
+  }),
+  asensioDecadas18923: source({
+    title: "Décadas del Nuevo Mundo, Década segunda, libro IV, y Década tercera, libro VI, en Fuentes históricas sobre Colón y América, tomo II",
+    author: "Pedro Mártir de Anglería; trad. Joaquín Torres Asensio",
+    year: 1892,
+    type: "crónica (traducción castellana del latín)",
+    url: "https://archive.org/details/fuenteshistorica02anghuoft",
+    summary:
+      "La entrada de Balboa por el río con cien hombres, el pueblo de pescadores de Dabaiba abandonado y los siete mil castellanos de oro (pp. 95-97); la carta al rey sobre la corte a cincuenta leguas, el error con los pescadores y los trescientos hombres (pp. 364-365).",
+    limitation:
+      "Anglería reescribe cartas de los colonos, que tenían interés en inflar la riqueza para obtener tropas. OCR con erratas.",
+  }),
+  caicedoRuta2017: source({
+    title: "Ruta de Juan Vadillo por el Viejo Caldas (agosto-septiembre de 1538)",
+    author: "Luis Javier Caicedo",
+    year: 2017,
+    type: "artículo académico (Ciencia Nueva, Universidad Tecnológica de Pereira, vol. 1, n.º 1)",
+    url: "https://dialnet.unirioja.es/descarga/articulo/8693379.pdf",
+    summary:
+      "La última búsqueda: Heredia envía a Francisco César tras el tesoro de «Dabaibe», que llega al valle de Guaca, cerca de Dabeiba, y saca oro de las sepulturas; Vadillo sale de San Sebastián de Urabá en enero de 1538 (p. 73).",
+    limitation:
+      "Estudio de ruta; el tesoro aparece sólo como móvil de la expedición.",
+  }),
+  asensioDecadas18924: source({
+    title: "Décadas del Nuevo Mundo, Década séptima, libro X, capítulo II, en Fuentes históricas sobre Colón y América, tomo IV",
+    author: "Pedro Mártir de Anglería; trad. Joaquín Torres Asensio",
+    year: 1892,
+    type: "crónica (traducción castellana del latín)",
+    url: "https://archive.org/details/fuenteshistorica04anghuoft",
+    summary:
+      "El botín tomado a un régulo del río Dabaiba: catorce mil pesos de oro en figuras, tres trompetas, tres campanas con badajos de hueso de pescado y mil trescientos cascabeles (pp. 234-235).",
+    limitation:
+      "No dice quién dirigió la entrada ni en qué año.",
+  }),
 };
 
 export const defaultKatioSourceKeys = [

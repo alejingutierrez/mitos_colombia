@@ -364,33 +364,56 @@ Lo que sólo tiene la Sierpe es la fecha. Aparece en patronales, es decir cuando
   }),
   defineAfrocolombianMyth({
     slug: "el-riviel-del-rosario",
-    title: "El Riviel y la mochita",
+    fuentesAgotadas: "AGOTADO: siete fuentes. No se pudo leer la tesis de la Universidad Andina Simón Bolívar sobre el Riviel esmeraldeño (Chasi Escobar, 2014; repositorio.uasb.edu.ec responde 403), ni Ocampo López, Leyendas populares colombianas (1996, pp. 292-295), que no está en abierto. Los demás resultados (Scribd, Prezi, blogs de leyendas, sitios de leyendas de Ecuador y una partitura en venta) están vetados o no aportan registro.",
+    sourceKeys: [
+      "charcoVisiones2016",
+      {
+        key: "cnhmBuenaventura",
+        summary:
+          "Mama Cuama, nacida en el río Raposo, recuerda al riviel que se metía con su mochita en las canoas de plátano que bajaban del Chocó y dejaba perdidos y locos a los que dormían (cap. 2, § 2.1).",
+        limitation:
+          "Relato elaborado por el equipo a partir de conversaciones de 2013, en un informe sobre violencia; el espanto ocupa un párrafo.",
+      },
+      "rodriguezescuela2013",
+      "penaPinzonPatrimonios",
+      "rTVCMitos2024",
+      "comejenriviel2020",
+      "espanolRiviel2026",
+    ],
+    title: "El Riviel del Rosario",
     excerpt:
       "Una presencia pequeña entra en las canoas de quienes llegan del Chocó, confunde el rumbo y vuelve al agua cuando la descubren.",
     tags: ["pescador", "noche", "agua", "peligro"],
-    mito: `Las canoas llegaban a Buenaventura desde el Chocó siguiendo un territorio de agua. Quienes viajaban conocían el peso de la carga, el sonido del casco y la dirección que debía mantenerse para alcanzar el puerto.
+    mito: `Antes de ser espanto, el Riviel fue sacerdote. Un día, sin necesidad y por pura ociosidad, quemó un rosario. Dios no le perdonó la herejía y lo convirtió en una visión que no tiene descanso.
 
-En algún momento del trayecto, una presencia pequeña se introducía en la embarcación. La recordaban como la mochita del Riviel. No ocupaba el lugar de una persona visible ni pedía permiso para subir. Entraba sin que la tripulación advirtiera el instante exacto.
+Desde entonces anda por los ríos, por los esteros y por el mar. No necesita canoa: flota sobre una mochila, sobre una tabla, sobre cualquier cosa vieja que vaya a la deriva. En el mar se sube a las olas, y en el río navega de arriba abajo. Sale en las noches de luna menguante y se monta y se baja de su tabla gritando, contento por el mal que hace. De lejos es apenas una lucecita azul, a veces verde, que se mueve sobre el agua.
 
-Con la mochita dentro, el rumbo dejaba de obedecer. La canoa podía seguir moviéndose, pero quienes la guiaban perdían la dirección. Lo conocido se volvía confuso: una entrada parecía otra, una distancia se alargaba y la ruta que debía acercarlos los mantenía extraviados.
+Persigue a los pescadores que trabajan de noche y los lleva hacia la muerte. A la gente la embruja y la deja como sonámbula, y así la obliga a hacer lo que no debe. El que cae en sus manos no recuerda después nada de lo que pasó. Cuando toca una canoa, los que van en ella ya no pueden dormir en paz.
 
-El peligro no estaba solamente en ver una luz o una figura. Estaba en no saber que otra presencia viajaba con ellos mientras tomaban decisiones sobre el agua. Cada corrección podía aumentar la confusión porque partía de un rumbo ya alterado.
+En Buenaventura lo conocían por atrevido. Andaba con su mochita, y cuando la gente bajaba del Chocó en sus canoas cargadas de plátano, esperaba a que se durmieran. Entonces se acercaba despacito por detrás y se metía con su mochita en la canoa. De pronto alguno se daba cuenta y gritaba: «¡Eh, muchachos, levántense, que el riviel nos tiene perdidos!». Y se iban levantando. El riviel cogía su mochita y, chum, chum, bum, se echaba a su agua. Se iba, pero los dejaba locos.
 
-Después de un tiempo, las personas despertaban de aquel desconcierto. Miraban la canoa y entendían que algo se había metido. Al ser reconocida, la presencia regresaba al agua.
+Una madrugada de menguante, don Casimiro estaba pescando a la orilla del río cuando divisó a lo lejos una mocha que traía una lámpara en la proa. La luz lo encandilaba. Cuando la embarcación se acercó, vio que iba en ella un hombre y que remaba con una cruz en lugar de canalete. A Casimiro le entró un miedo grande, porque pensó que podía ser el Riviel. Sin perder tiempo le rezó: «Andate a la punta de un cuerno y sobre vos candela». Al oírlo, el Riviel desapareció.
 
-La embarcación quedaba otra vez con su tripulación y su carga. Había que recuperar la orientación, observar la corriente y encontrar de nuevo el camino. La mochita no dejaba una explicación sobre quién había sido en vida. Su paso se reconocía por el efecto: entrar, confundir y volver al agua cuando dejaba de estar oculta.
+Contra él sirven dos cosas. Una es rezarle el rosario, el mismo que lo condenó. La otra es gritarle esa frase. Y cuando quiere meterse en una casa, basta que oiga la palabra atarraya para que se espante y se vaya.`,
+    historia: `El Riviel es un espanto del litoral pacífico, de las comunidades negras del sur de Colombia y del norte de Ecuador. El nombre de esta ficha viene del origen que le da la cartilla Visiones y seres maravillosos del Pacífico, escrita por la comunidad educativa de El Charco y La Tola, en la costa de Nariño, e ilustrada por Nelly Zoraida Cuero. La publicaron en 2016 el Ministerio de Educación Nacional y Save the Children, como número 21 de la serie Territorios Narrados del Plan Nacional de Lectura. En sus páginas 19 a 21 el Riviel es un sacerdote castigado por quemar un rosario; hay además un caso contado por don Casimiro, pescador, y una copla que empieza «Vas sobre un cuerno feroz». Los textos son de las instituciones educativas Sofonías Yacup, de La Tola, y Nuestra Señora del Carmen, de El Charco.
 
-Quienes recordaban el relato no necesitaban convertir cada extravío en aparición. Narraban una forma de expresar el riesgo de navegar cuando el agua, la noche, el cansancio y una presencia inesperada podían romper la seguridad del trayecto.
+El episodio de las canoas de plátano viene de Buenaventura. Lo contó Mama Cuama, mujer de unos setenta años nacida en el río Raposo, hija de una cajambreña y de un indígena, en las conversaciones que sostuvo entre junio y diciembre de 2013 con el equipo del Centro Nacional de Memoria Histórica. Aparece en el informe Buenaventura: un puerto sin comunidad (2015), en el apartado «Preludio», donde recuerda los espíritus que conocía de joven: el duende, el riviel y la sirena.
 
-El Riviel permanecía así unido a las canoas. No como dueño de una ruta única, sino como nombre de aquello que podía viajar sin ser visto y desordenar la dirección hasta que alguien despertara y reconociera que ya no estaba donde creía.`,
-    historyCore:
-      "Buenaventura: un puerto sin comunidad, del Centro Nacional de Memoria Histórica, conserva la evocación local usada como núcleo. La revisión mueve la ficha de Pacífico Mixto a Afrocolombianos y mantiene el slug para no romper enlaces.",
-    versionCore:
-      "En otras costas el Riviel puede aparecer como luz, canoa o alma con genealogías diferentes. La ficha no elige un origen total. El rosario, la burla a mayores, un castigo religioso y el pescador individual pertenecían a la expansión heredada, no a la memoria de la mochita.",
-    similarityCore:
-      "Los estudios del Pacífico colombo-ecuatoriano muestran que el Riviel cambia de forma, nombre y explicación entre Tumaco, Buenaventura y otras costas. La versión elegida se reconoce por la mochita que entra en canoas de quienes vienen del Chocó y por el despertar que rompe la confusión. La Tunda también extravía mediante una apariencia familiar, pero atrae a una persona por tierra; la Sierpe aparece como cuerpo de tres cabezas en el río. Compararlos permite pensar distintos peligros de orientación sin fundirlos ni afirmar que sean una sola entidad.",
+La luz azul o verde que persigue a los pescadores y le teme a la palabra atarraya la registró en 2013 Luz Ángela Pazos Rodríguez en su trabajo de grado para la Universidad de Nariño, entre las leyendas que recogió la escuela de tradición oral de Magüí Payán, en el río Patía.`,
+    versiones: `Cada orilla le da al Riviel un origen distinto. En El Charco y La Tola es un sacerdote que quemó un rosario, y por eso el rosario es también su remedio. En Tumaco, según el estudio de Víctor Andrés Pérez Bermúdez y Wilson Peña-Pinzón para el Observatorio de Patrimonio Cultural y Arqueológico de la Universidad de los Andes, es un pirata que abandonó a su tripulación para buscar un tesoro y quedó maldito, vagando en una canoa partida en dos con una linterna en la punta; a él se le atribuyen muchos naufragios.
+
+También cambia la embarcación. En la cartilla nariñense flota sobre una mochila o una tabla, y don Casimiro lo ve en una mocha remando con una cruz. En Buenaventura, Mama Cuama habla de su mochita. Señal Colombia, en una nota de 2024, lo pone en una canoa sin proa y le hace preguntar a los pescadores cómo está la pesca, antes de volverles la canoa tan pesada que no se puede mover.
+
+El efecto sobre la gente varía entre el extravío y la muerte. En Buenaventura deja a los navegantes perdidos y locos, pero se va cuando lo descubren. En el Patía guía a los pescadores hacia la muerte. En El Charco los vuelve sonámbulos y les hace pecar, y no recuerdan nada.
+
+En 2020 el periodista Harrinson Cuero, en El Comején, usó al riviel como imagen de los grupos armados que desaparecen gente entre el Mira y el Guapi: un riviel que ya no anda de noche ni en potrillo, sino de día y en lancha.`,
+    similitudes: `El pariente más cercano del Riviel está al otro lado de la frontera. Pérez Bermúdez y Peña-Pinzón recuerdan que el mismo espanto forma parte de la cultura afroecuatoriana de Esmeraldas. Allí, en el resumen que hace Wikipedia de esa tradición, es un ser sin rostro que viaja de noche en una embarcación con forma de ataúd, con una lámpara en la proa y una cruz por remo, la misma cruz que don Casimiro vio en el río.
+
+En el Pacífico colombiano comparte el agua con otros seres. Mama Cuama lo nombra junto al duende, que se llevaba a los hombres por el canal y los perdía en el reventadero de las olas, y a las sirenas, cuya música suena como un acordeón en las partes hondas. Los tres extravían a quien navega, y contra el duende también había que saberse unos versos. El Maravelí, el barco fantasma que el mismo estudio de Tumaco y Buenaventura asocia con piratas y mal tiempo, es su equivalente mayor: una embarcación que trae la desgracia a quien la encuentra en el mar.
+
+La condena por sacrilegio a vagar de noche sobre el agua lo acerca, por último, a las almas en pena de la tradición católica: el castigo no es la muerte sino el andar sin descanso.`,
     leccion:
-      "Recuperar el rumbo comienza por reconocer aquello que viaja oculto dentro de nuestras decisiones.",
+      "La falta que se comete sin necesidad es la que más tiempo tarda en pagarse.",
     sceneHorizontal:
       "una canoa de carga avanza por aguas cercanas a Buenaventura mientras una pequeña silueta acuática sin rasgos monstruosos se oculta en la popa y varias rutas gráficas parecen confundirse",
     sceneVertical:
