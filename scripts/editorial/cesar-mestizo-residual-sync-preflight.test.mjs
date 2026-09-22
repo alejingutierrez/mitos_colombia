@@ -23,7 +23,10 @@ test("la sincronización prepara dos actualizaciones sin altas ni bajas", () => 
   assert.deepEqual(output.universe.toDelete, []);
   assert.equal(output.dossiers, 2);
   assert.equal(output.imagePairs, 2);
-  assert.equal(output.sourcesPerMyth, 8);
+  // Era 8 para las dos, porque el aparato se repartía en bloque. Tras la
+  // búsqueda por mito es un abanico: se comprueba el piso, no un número.
+  const porMito = [output.sourcesPerMyth].flat();
+  assert.ok(Math.min(...porMito) >= 8, `alguna ficha baja del piso de 8: ${Math.min(...porMito)}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

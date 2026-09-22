@@ -52,13 +52,18 @@ test("los dos expedientes cumplen la metodología editorial", () => {
     );
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
+    // Eran 8 exactas: el reparto en bloque escrito como aserción. Tras la
+    // búsqueda por mito se comprueba el piso del bloque mestizo, no una cuota.
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= 8, `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary &&
+          limitation &&
+          (url.startsWith("https://") ||
+            (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -82,28 +87,35 @@ test("los dos expedientes cumplen la metodología editorial", () => {
   }
 });
 
+// Las aserciones de antes fijaban el texto heredado, y el cotejo con la fuente
+// desmintió una de ellas: «Quín Vásquez no es una versión de Montúfar» es falso,
+// porque Quin Vásquez está dentro de ella, como el brujo y músico que no logra
+// salvarlo. Se comprueba ahora lo que la fuente sostiene.
 test("deshace la fusión del trinche y limpia la adopción del río", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const montufar = bySlug.get("la-bruja-del-trinche");
-  assert.equal(montufar.title, "Andrés Montúfar y Dolores Escalona");
-  // heredada: reescribir tras el cotejo
+  // El título visible no cambia hasta que el director decida (DECISIONES §A).
+  assert.equal(montufar.title, "La Bruja del Trinche");
+  // El trinche no está en el relato: sólo en la historia, que dice de dónde sale.
   assert.doesNotMatch(montufar.mito, /trinche/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(montufar.historia, /Quín Vásquez[\s\S]+trinche/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(montufar.versiones, /Quín Vásquez no es una versión/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(montufar.similitudes, /Francisco el Hombre[\s\S]+Quín Vásquez/i);
+  assert.match(montufar.historia, /trinche/i);
+  // Quin Vásquez está dentro de la versión de Montúfar, no fuera.
+  assert.match(montufar.mito, /Qu[ií]n Vásquez/);
+  assert.doesNotMatch(montufar.versiones, /no es una versión/i);
+  // Las correcciones de hecho del cotejo: Rincón Hondo, cama de tijera, mapaná.
+  assert.match(montufar.mito, /Rincón Hondo/);
+  assert.doesNotMatch(montufar.mito, /Rincón de Oro/);
+  assert.match(montufar.mito, /tijera/);
+  assert.match(montufar.mito, /mapaná/i);
+  assert.match(montufar.similitudes, /Francisco el Hombre/);
 
   const sirena = bySlug.get("la-sirena-de-hurtado");
-  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(sirena.mito, /adopta|pacto|cobra su deseo/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(sirena.historia, /1998[\s\S]+1994/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(sirena.versiones, /no decide que la sirena provoque ahogamientos/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(sirena.similitudes, /Madre de Agua[\s\S]+Mohana/i);
+  // La fecha de la escultura sigue en disputa, y se dice con sus dos cifras.
+  assert.match(sirena.historia, /1998[\s\S]+1994|1994[\s\S]+1998/);
+  assert.match(sirena.mito, /Jueves Santo/);
+  assert.match(sirena.mito, /Cañaguate/);
+  assert.match(sirena.similitudes, /Madre de Agua|Mohana/);
 });
 
 test("la matriz cubre las dos rutas y sus límites", () => {

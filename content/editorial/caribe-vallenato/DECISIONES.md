@@ -13,11 +13,18 @@ sostiene el registro, conservando el slug porque es URL indexada.
 dónde viene «el trinche». ② Cambiar título y slug, con redirección.
 ③ Conservarlo y anotarlo en `dudas`.
 
-## Pendiente técnico, no editorial
+## Publicadas el 2026-09-22, con A todavía abierta
 
-Estas dos fichas **están publicadas en Neon y no tienen módulo en el repo**,
-que es lo que las dejó fuera de la reescritura del ciclo. Para aplicarlas hay
-que crearles módulo primero: el kit escribe del módulo a Neon, nunca al revés.
+Mientras el director decide A, `la-bruja-del-trinche` conserva el título
+visible que ya tenía el sitio («La Bruja del Trinche»), que es lo único de la
+opción ③ que no cambia nada. El Relato, las cuatro capas y las 12 fuentes sí
+se publicaron: dejar en producción el texto viejo, con Wikipedia, Mapcarta y
+Scribd y seis invenciones, era peor que publicar sin cambiar el título. El
+título SEO y la descripción se rehicieron: los viejos pasaban de 60 caracteres
+y afirmaban lo que el cotejo desmintió.
+
+El «pendiente técnico» que había aquí estaba desfasado: las dos fichas sí
+tenían módulo, `editorial/cesar-mestizo-residual/`.
 
 ## Lo que se resolvió sin consulta
 
