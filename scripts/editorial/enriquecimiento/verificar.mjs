@@ -32,6 +32,7 @@ try {
       keySources: row.keySources,
       sources: row.sources,
       ...(record?.relatoCorto ? { relatoCorto: record.relatoCorto } : {}),
+      ...(record?.fuentesAgotadas ? { fuentesAgotadas: record.fuentesAgotadas } : {}),
     });
     const twoTables = ["mito", "historia", "versiones", "leccion", "similitudes", "content"].every((f) => row[f] === row[`e_${f}`]);
     let modulo = "SIN_MODULO";
