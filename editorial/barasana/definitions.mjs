@@ -34,6 +34,9 @@ export const barasanaDefinitions = [
       // heredada atribuía Muyhu y Méneri-Ya sin que nadie lo corroborara, y
       // su enlace es una ficha de catálogo sin texto. No puede ser clave.
       "torres",
+      "hughJonesNomes2002",
+      "vazquezSouth1987",
+      "penaVersiones1998",
     ],
     title: "Muyhu, Méneri-Ya y Warimi",
     summary:
@@ -79,7 +82,14 @@ Fuera de ese conjunto, la comparación con Orfeo y Eurídice no la sostiene ning
       "communityBook",
       "pleiades",
       "minCultura",
-      "planVida",
+      {
+        key: "hughJonesBarasana2002",
+        summary:
+          "Hugh-Jones describe al Sol, Yeba Hakü en lengua barasana, como «Padre del Universo» que remonta de día los ríos de la tierra de oriente a occidente y de noche el río del inframundo para reaparecer al este; añade que de noche el sol, el cielo y el día quedan bajo la tierra, y que la cumbrera de la maloca es «el camino del Sol». Es el marco de la alternancia día-noche y del recorrido solar que cierra la ficha.",
+        limitation:
+          "Es una síntesis etnográfica del pueblo (publicada en 2002, revisada en 2018), no una transcripción de M.3: no narra la disputa entre Sol y Luna, la corona ni la vasija. Sitio brasileño (ISA): la bibliografía es del lado brasileño del Vaupés.",
+      },
+      "reichelDolmatoffDesana1973",
     ],
     title: "Sol y Luna: día y noche",
     summary:
@@ -125,7 +135,22 @@ La misma monografía que publica esta narración registra, entre los desana, una
       "cayon2013",
       "palm",
       "minCultura",
-      "planVida",
+      {
+        key: "capitanesPlan2010",
+        summary:
+          "Abre con las palabras del maloquero Benedicto Ortega, que nombra a Kata Yai —«El pensamiento de nuestro ancestro Kata Yai (Jagua Pava) recorrió todos los lugares donde se encuentra ese elemento puro y brillante»— y declara a los barasano «Hijos de Yeba», descendientes de la Gran Anaconda Yuruparí. Describe las zonas del río y sitúa a los ~Hadera en la comunidad de San Miguel; en el censo de 2007 atribuye a los barasano el ancestro «El padre Yeba», y en el capítulo de sitios sagrados lista los ~Basa yuhiri bikia wiri, las malocas «donde en los orígenes del mundo surgieron los grupos étnicos», con Yeba ~Hidoria y Yeba hakɨria entre las del Alto Pirá. Es la misma arquitectura del surgimiento que narra la ficha, dicha por la organización cinco años antes del libro.",
+        limitation:
+          "No narra el viaje de Kahe Sawari ni la prueba del fuego: sólo nombra a Kata Yai y fija la adscripción de los barasano a Yeba y el mapa de las malocas de origen. En ese preámbulo el recorrido de Kata Yai «terminó en las Estrellas», un cierre distinto del de la ficha. Es un documento de los seis pueblos del Pirá Paraná y el antecedente del libro de 2015; no es la página web del Ministerio ya citada en el pool, sino el PES en PDF.",
+      },
+      "rubiocamino1981",
+      {
+        key: "hughJonesBody2017",
+        summary:
+          "Mundo Amazónico 8(1): 27-78. Resume el relato tukano de creación en que unos seres entran en una Anaconda-Canoa, suben por el Río de Leche —«an umbilical tube/yagé vine that connects past with present and ancestors with descendants»— y se detienen en casas de transformación hasta emerger en el centro de la tierra como ancestros de los grupos. Dedica una sección a los cerros como postes de la maloca que sostienen el cielo, y al Yuruparí como cuerpo cuyos huesos son las flautas: los dos motivos del cierre de la ficha.",
+        limitation:
+          "El autor advierte que sus resúmenes son selectivos y «no pretenden representar ninguna versión particular»: es la forma regional del relato, no el capítulo barasano. No nombra a Kahe Sawari ni a Kata Yai.",
+      },
+      "colombiaNomination2011",
     ],
     title: "Kahe Sawari y Kata Yai",
     summary:
@@ -172,6 +197,35 @@ La prueba del fuego entre el Sol y Kahe Sawari funciona como reconocimiento de p
       "pleiades",
       "palm",
       "minCultura",
+      {
+        key: "capitanesPlan2010",
+        summary:
+          "Declara que todos los pueblos del río derivan de los mismos ancestros primordiales y que «en las epopeyas descritas en los mitos se habla de antepasados anacondas particulares a cada grupo», que emergieron, poblaron el territorio y entregaron a sus descendientes territorio, conocimientos y elementos ceremoniales: el esquema de la ficha. Su censo de 2007 empareja cada pueblo con su ancestro —«El padre Yeba» para barasano e itana, Anaconda Remedio para eduria, Anaconda de Agua para macuna, Anaconda Celeste para tatuyo—, y el preámbulo de Benedicto Ortega dice: «Somos los hijos de la Tierra / Los Hijos de Yeba / Yeba Haki es nuestro ancestro».",
+        limitation:
+          "No describe la ruta de la Cuerda de Leche ni las tres malocas rituales. Sostiene, desde la organización del río, la atribución barasano = Yeba que la ficha contrasta con la de Cayón (Anaconda Pintada): la contradicción queda como estaba, ahora con otro documento propio del lado del libro. Es un documento de los seis pueblos del río; no es la página web del Ministerio ya citada en el pool, sino el PES en PDF.",
+      },
+      {
+        key: "rubiocamino1981",
+        summary:
+          "Revista Colombiana de Antropología 23: 39-108. Transcribe el viaje de la Anaconda Remedio —una de las cuatro que la ficha nombra al repartir los territorios— desde su maloca sumergida en la Puerta de las Aguas hasta el Pirá Paraná. Describe el Río de Leche como «un solo río, el Camino-Río de Leche de la Anaconda-Ancestro, el camino recorrido por la humanidad desde su origen» hasta su surgimiento en el centro del mundo, y explica que en ese recorrido cada grupo heredó territorio, lengua, cantos, bailes y cultígenos propios, que es la lección de la ficha.",
+        limitation:
+          "Es la versión eduria (taiwano), no la barasana: cuenta la ruta de la Anaconda Remedio, no la de Yeba, y no menciona a Waiya Goheri. Entra porque la Anaconda Remedio es personaje del propio capítulo, no como paralelo de otro pueblo. El PDF es un escaneo sin capa de texto; se leyó con OCR.",
+      },
+      {
+        key: "hughJonesBody2017",
+        summary:
+          "Mundo Amazónico 8(1): 27-78. Describe la Anaconda-Canoa que sube por el Río de Leche, «an umbilical tube/yagé vine», deteniéndose en casas de transformación, y explica que es una y muchas a la vez: el origen del río Negro con sus afluentes y subafluentes, y el ancestro de toda la humanidad, de todos los tukano, de cada grupo y de cada clan. Es la lectura de dos ríos como una sola cuerda que hace la ficha, dicha por el etnógrafo de los barasana.",
+        limitation:
+          "Resumen regional deliberadamente selectivo, que el autor advierte que no representa ninguna versión concreta; no nombra a la Anaconda Yeba ni reparte territorios.",
+      },
+      {
+        key: "colombiaNomination2011",
+        summary:
+          "La lista de reuniones de consulta registra la adscripción de cada pueblo a su anaconda: San Miguel como «Barasano YEBA ~BASA (Hijos de Yeba)», Sonaña como «Eduria (Descendientes de Anaconda Remedio)», el Alto Pirá como «~HEDA (Descendientes de Anaconda Celeste)». Son tres de las cuatro anacondas con que la ficha reparte el territorio, y la adscripción barasano = Yeba que la ficha toma del libro.",
+        limitation:
+          "Es un expediente administrativo: no narra el recorrido. Sirve para fechar y documentar la atribución, no la ruta. Archivo .doc en inglés, descargable desde la página del elemento en ich.unesco.org.",
+      },
+      "santosfirmamento",
     ],
     title: "La Cuerda de Leche y la Anaconda Yeba",
     summary:
@@ -217,9 +271,18 @@ Lo que identifica a esta versión es la cuenta concreta: dos ríos leídos como 
     sourceKeys: [
       "communityBook",
       "cayon2013",
-      "planVida",
       "minCultura",
       "pleiades",
+      "hughJonesBarasana2002",
+      {
+        key: "rubiocamino1981",
+        summary:
+          "Correa recoge de los taiwano (eduria) del Caño Piedra, afluente del Pirá Paraná, que la Anaconda Remedio llegó desde el Tiquié al Pirá y que en el Cerro de la Abeja-de-Día, al celebrar el primer yuruparí, surgieron los fundadores de los sibs y bailaron en fila reproduciendo el cuerpo de la Anaconda; luego ella remonta el río y emerge en cada lugar asignando a cada sib su sitio de nacimiento. Menciona además la cadena de cerros de «La Trampa» como límite con los Kabiyari. Es un testimonio independiente, de 1980, del cerro de abejas como lugar de surgimiento de la gente y de la Anaconda Remedio como una de las descendencias con cerro propio.",
+        limitation:
+          "Es taiwano, no barasana: vecino del mismo río, cuya lengua el autor clasifica como variante dialectal del barasana. Trata la organización social, no el oficio del sabedor con los cerros ni la lista de Reynel Ortega. El PDF del ICANH es un escaneo sin capa de texto; se leyó por OCR.",
+      },
+      "colombiaNomination20112",
+      "aCAIPIPlan2010",
     ],
     title: "Cerros-Estantillos y Cera de Abejas",
     summary:
@@ -265,7 +328,8 @@ Lo que ata esta versión a un narrador y no a una idea general de montañas sagr
       "ilv1974",
       "pleiades",
       "minCultura",
-      "planVida",
+      "capitanesPlan2010",
+      "hughJonesBody2017",
     ],
     title: "La Gente de los Frutales Silvestres",
     summary:

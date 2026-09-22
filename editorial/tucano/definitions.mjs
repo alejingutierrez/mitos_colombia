@@ -15,6 +15,7 @@ const records = [
         limitation:
           "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
       },
+      "azevedoDahsea2003",
     ],
     title: "Wejké, la danta, y el pito que abría la tierra",
     excerpt:
@@ -95,6 +96,17 @@ Dentro del propio corpus de Marcos Sierra, el poder vive en objetos —los Yurup
         limitation:
           "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
       },
+      {
+        key: "azevedoDahsea2003",
+        summary:
+          "Versión tucano completa del origen de la gente, dictada por el kumu Akuto. En pp. 33-35 el Avô do Universo hace salir de una cuia a cinco hermanos y tres hermanas y les da a cada uno nombre y oficio (Yepá Oãku, Dehsubari Oãku, Warãri Oãku, Yupuri Basebo, Buhtuiari Oãku), como la salida con cargos de Diaojpekowí. En pp. 181-184 la humanidad baja como aves al Lago de Leite, se vuelve peces y los cuerpos de los peces forman «un gran barco, como los barcos de hoy, pero en realidad era una cobra», la Pamuri Pirõ, que sube de maloca en maloca recogiendo instrumentos hasta el Buraco da Transformação de Ipanoré. En pp. 214-216 los Pamuri Mahsã, que hablaban una sola lengua y no podían casarse, se embriagan y empiezan a hablar lenguas distintas —tucano, desana, tariana, piratapuya, cubeo, makú—; sólo Doetiro conserva el tucano.",
+        limitation:
+          "Tucano del lado brasileño (clan Hausirõ Porã del medio Tiquié): vecindad de frontera, no la comunidad de Guadalajara. Aquí la humanidad emerge en Ipanoré, no en Diaojpekowí, y las lenguas se separan en una fiesta de caapi, no al levantar una torre: la coincidencia es de estructura (salida con oficios, barco-cobra, diferenciación de lenguas), no de episodio. No trae la hechura de la mujer con la costilla ni el caimo.",
+      },
+      "fulopNotas1955",
+      "brunoBahsariwii2007",
+      "lamusarquitectura1958",
+      "yupuriFormacao2018",
     ],
     title: "La Canoa de Transformación y el origen de los pueblos",
     excerpt:
@@ -163,6 +175,21 @@ El segundo paralelo es de otro pueblo. En el libro desana de Umusi Pãrõkumu y 
         limitation:
           "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
       },
+      {
+        key: "azevedoDahsea2003",
+        summary:
+          "En pp. 21-26 el Avô do Universo (Umuko Ñehku), que comía ipadu y fumaba cigarro ante un mundo vacío y oscuro, levanta con su lança-chocalho de piedra el mundo por capas, cada una con su oración: primero la de las aguas, donde «divide los grandes mares y lagos» y aparecen «mares y océanos, lagos y ríos»; luego tierras y matas; luego la del día y el aire puro, tras la cual «no hubo más noche»; la de la lluvia, la de las nubes y la sexta, la de los vientos fuertes, «que nunca tendrá fin». Es la misma forma que dictó Marcos Sierra: el mundo hecho pieza por pieza, por la palabra y el humo, con mares, día y viento como capas sucesivas.",
+        limitation:
+          "Tucano del lado brasileño (clan Hausirõ Porã, medio Tiquié): vecindad de frontera. El creador no es Yepá Huáke sino el Avô do Universo, y el orden es otro: las aguas van primero, el día es una capa de claridad y no un sol que sale, y no aparecen el banquito ni el reparto de patrias. Sirve para contrastar la forma, no para completar lo que Fulop no trae.",
+      },
+      {
+        key: "brunoBahsariwii2007",
+        summary:
+          "El pajé tucano Gabriel Gentil explica la maloca como cosmos. Dice que «en el comienzo del mundo la primera maloca era la Casa de Viento», Õmewii, la misma Casa del Cielo, donde apareció la creadora Yepá; que el Sol es el Dios Piedra Cuarzo Blanco, Avô do Mundo, cuyo cuerpo hace surgir la luz y que «embaraza a la Tierra»; y nombra el «río subterráneo Wamëdia, que entraba dentro de la Tierra» y salía lejos, en el Titicaca. También sitúa el Lago de Leche «en el fondo del agua, que los blancos llamaron mar»: el Wamëdia es el Uamedia que en el dictado de Marcos Sierra corre por debajo de este mundo, y el mar aparece como agua de origen.",
+        limitation:
+          "Tucano del lado brasileño (Gentil nació en el Tiquié y escribió desde Manaos): vecindad de frontera. Es una exégesis personal y muy elaborada —con incas, Andes y aruak—, no la transcripción de un relato; no narra la aparición del sol por la palabra Bajúrese ni el banquito levantado por el viento. La coincidencia con Fulop está en el río subterráneo y en el viento y el sol como primeros principios, no en la secuencia.",
+      },
+      "menendezLiteratura2014",
     ],
     title: "Yepá Huáke hace aparecer el Sol, el viento y los mares",
     excerpt:
@@ -233,6 +260,16 @@ El segundo paralelo es de otro pueblo y hay que decirlo. En «Antes o mundo não
         limitation:
           "No se usó para escribir esta ficha, y es del lado brasileño: vecindad documentada. Se cita como cotejo contemporáneo, nunca para completar una escena.",
       },
+      {
+        key: "azevedoDahsea2003",
+        summary:
+          "São Gabriel da Cachoeira, UNIRT/FOIRN, 2003. En «Transformação dos Pamũri Mahsã» (pp. 205-207) trae una versión tukano del mismo episodio: en la maloca de Ipanoré hay una mesa con cuias, lanza-sonajero, plumas y bancos, y también sombrero, escopeta, espejo, toalla, libro, peine y jabón, todos de oro; los Tukano escogen primero los ornamentos y los bancos; el último, el blanco, toma el libro, la toalla y el jabón, se zambulle en el hoyo que hierve y por eso queda blanco, mientras los indígenas, sin valor para saltar, «sólo se mojaron las palmas de los pies y de las manos»; la cuia de cambiar de piel está llena de insectos, alacranes y culebras, y los viejos decían que el libro y el sombrero dan inteligencia. Coincide punto por punto con la transcripción de Fulop: el baño que blanquea, las palmas mojadas, la totuma llena de fieras y el reparto de bienes en el que al blanco le toca el libro.",
+        limitation:
+          "Es del lado brasileño (medio Tiquié) y de otro clan tukano, los Hausirõ Porã, escrito cincuenta años después de Fulop: vecindad documentada, no la versión de Marcos Sierra. Aquí no aparece Alemán ni la cláusula de la memoria; el orden de elección y el sentido del libro difieren. Se usa para contrastar, nunca para completar escenas de la ficha.",
+      },
+      "hughJonesBow1988",
+      "buchilletContas2002",
+      "andrelloFalas2010",
     ],
     title: "La memoria y el papel en el ciclo de Yepá Huáke",
     excerpt:
@@ -303,6 +340,11 @@ Los relatos que explican el reparto desigual de la escritura son frecuentes en c
         limitation:
           "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
       },
+      "azevedoDahsea20032",
+      "piedadeMusica1997",
+      "barretoWaiMahsa2013",
+      "hughJonesorigem2015",
+      "negroAstronomia",
     ],
     title: "El sueño, la noche y la partida de Yepá Huáke",
     excerpt:
@@ -376,6 +418,27 @@ Caja pesada, orden de no abrirla, apertura a mitad de camino, oscuridad de golpe
           "La historia del Vaupés —misión, caucho, comercio, escuela— en la que se inscribe todo el corpus recogido por Fulop.",
         limitation:
           "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
+      },
+      {
+        key: "azevedoDahsea20032",
+        summary:
+          "Trae dos pasajes sobre el mismo creador y los mismos seres. En la creación (pp. 36-37), el Avô do Universo y Yepá Numiõ reúnen a todos los animales —pecarí, venado, paca— y con rayos los vuelven personas que empiezan a hablar y luego desaparecen, «por isso os animais têm, hoje em dia, sangue igual ao dos seres humanos»: la misma frontera entre animal y gente que Yepá Huáke cierra en Diawí. Y en la historia de Buhpó, el Añamasu u «hombre jararaca» (pp. 52-59), Yepá Oãku se enfrenta a la gente-culebra venenosa: arma una jararaca con dos dientes de culebra de su cocar, corta la cabeza de las que le echan encima y de allí salen los rezos (benzimentos) contra la mordedura. Es Aña, la culebra de la ficha, del lado del narrador tukano.",
+        limitation:
+          "Es del lado brasileño (medio Tiquié) y del sib Hausirõ Porã: vecindad documentada. Ninguno de los dos pasajes es la escena de las colas ni el interrogatorio en la fiesta; no aparecen Utanurú ni Boraró en ellos, y el conflicto con los Aña Mahsã es una venganza, no un castigo repartido. La ficha del ISA da el PDF completo (tkl00003.pdf).",
+      },
+      {
+        key: "barretoWaiMahsa2013",
+        summary:
+          "En el kihti de origen que resume (pp. 56-57), Yepa-oãku y su hermana Yepalio intentan dos veces hacer gente con una totuma de ipadu (coca); en la tercera la rezan para la transformación y esperan a los futuros humanos, «mas no lugar desses, apareceram pequenos lagartos e serpentes para comer o ipadu», y concluyen que los humanos tendrán vida corta. Es la versión contada por un tukano del mismo motivo de la ficha: la coca que la gente no come y que los animales que cambian de piel sí comen.",
+        limitation:
+          "Es del lado brasileño (São Gabriel da Cachoeira) y resume el kihti sin transcribirlo; no trae la escena de Diawí ni a Yepá Huáke con ese nombre. En la edición en libro de 2018 (EDUA, colección Reflexividades Indígenas) el rezo se precisa como «renovação de pele e de órgãos humanos»; la disertación de 2013 dice sólo «bahsesse de transformação». La ficha del ISA da el PDF completo (TKT00003.pdf).",
+      },
+      {
+        key: "hughJonesorigem2015",
+        summary:
+          "Citando la versión tukano de Fulop (traducción portuguesa de 2009, pp. 49-51), resume la historia de la divinidad que ofrece a los antepasados coca guardada en una totuma infestada de criaturas venenosas: la gente se negó a comer y por eso es mortal; las culebras, arañas e insectos venenosos comieron, y por eso cambian de piel y viven para siempre. Es la primera de las dos razones de la inmortalidad animal que la ficha señala en «versiones», y el autor la liga al cambio de piel, al veneno y al robo del veneno de la olla de curare de la Anaconda.",
+        limitation:
+          "Es comparativo y regional, centrado en el origen de la noche; sólo toca este motivo en un párrafo y no trata la escena de las colas ni el interrogatorio de Aña y Utanurú. Lee a Fulop por la traducción portuguesa de Casimiro Beksta (Manaus, EDUA, 2009).",
       },
     ],
     title: "Yepá Huáke y la transformación de los animales",
@@ -451,6 +514,16 @@ El segundo paralelo está dentro del mismo corpus. En la colección de 1956, Ful
         limitation:
           "No se usó para escribir esta ficha: es historia regional, no aporta ninguna escena y no habla por la comunidad de Guadalajara.",
       },
+      {
+        key: "azevedoDahsea2003",
+        summary:
+          "São Gabriel da Cachoeira, UNIRT/FOIRN, 2003. Es la mitología de un clan tukano del medio Tiquié escrita por el hijo y el nieto del kumu Joanico Azevedo. El capítulo «Yupuri Basebo procura os pés de maniva» (pp. 81-98) cuenta el origen de la yuca: el Abuelo del Universo nombra a Yupuri Basebo dueño de las plantaciones, las estacas de yuca son su cuerpo —«Gente de Maniva»—, y cuando entrega la chagra a sus dos esposas les da instrucciones que ellas rompen: una quiebra la rama, otra mira hacia atrás al volver y en ese instante «la chagra se llenó de las malezas y plagas que conocemos hoy» (p. 92). Es el mismo motivo del relato de Marcos Sierra —la yuca como gente, una mirada prohibida y la maleza como resultado—, contado por tukano desde dentro.",
+        limitation:
+          "Es del lado brasileño (río Tiquié) y de otro clan, los Hausirõ Porã: vecindad documentada, no la versión de Guadalajara. El protagonista y la trama difieren —aquí el dueño de la yuca es Yupuri Basebo, no Yepá Uejkeó, y no aparecen las tres mujeres ni Miriápura Turíkaro—; se usa para contrastar, nunca para completar la ficha.",
+      },
+      "oliveiraMulheres2024",
+      "iphanSistema2019",
+      "bidouTrois1996",
     ],
     title: "Yepá Uejkeó y la semilla de la yuca",
     excerpt:

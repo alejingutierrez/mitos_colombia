@@ -24,6 +24,28 @@ export const sikuaniDefinitions = [
       "baquero1989",
       "ortizRezo1988",
       "queixalos1991",
+      {
+        key: "salmoralNotas1970",
+        summary:
+          "Revista Colombiana de Antropología 15 (1970-1971), pp. 130-169. Notas de campo de 1964 y 1965 en el Vichada medio, entre Cumaribo y Curicagua y en poblados sabaneros como Webery y Malicia, recogidas preguntando a los chamanes con el traductor Manuel Bonilla, que había sido chamán. Documenta lo que el cuento da por sabido: el aprendizaje del brujo con tomas graduales de yopo y capi, con las que «se ve todo como pintado con manchas de tigre» y se aprende a leer las nubes y las aves; la maraca con plumas negras que marca el ritmo del exorcismo; y el wanare, la piedra de enfermedad que un brujo tira contra alguien a quien quiere hacer mal y que a veces rebota contra el que la lanza, que es la lógica de la trampa que se vuelve contra los enemigos del brujo.",
+        limitation:
+          "No trae este relato ni ningún otro: es etnografía de la práctica chamánica, y sirve de contexto verificado, no de fuente del argumento. Dice «guahibo» sin separar sikuani de otros grupos de la familia; el material es del Vichada medio de los años sesenta y el autor mismo lo publica como notas inconclusas. El PDF de la revista es un escaneo sin capa de texto.",
+      },
+      {
+        key: "reichelDolmatoffcultura1944",
+        summary:
+          "Revista del Instituto Etnológico Nacional I (1943-1944), pp. 437-506, en la edición digital abierta del volumen que publica el Fondo Editorial del ICANH. Describe al chamán como dirigente espiritual del poblado, «estimado pero temido», que ejerce de curandero o conjurador sólo en los ritos; el yopo que se tuesta, se muele y se sorbe con un aspirador de hueso de garza, que «se toma siempre antes y durante la celebración de diversos ritos» y se guarda en un estuche de peroné de tigre; y la maraca como «atributo mágico del shaman», con penacho de plumas y pepas secas dentro. Son los tres instrumentos del brujo del cuento: el yopo antes de la laguna, la maraca que anuncia su regreso y el oficio que la gente teme.",
+        limitation:
+          "No trae este relato. Es etnografía de 1943, de un autor externo, sobre la familia guahibo entera, y usa «shaman» sin la distinción sikuani entre sorbedor de yopo y chamán. El enlace es la ficha del volumen completo (615 páginas, un solo PDF de unos 60 MB).",
+      },
+      "cLiana2000",
+      {
+        key: "escobarConocimiento2017",
+        summary:
+          "Universidad de los Andes, Bogotá. Hecha en el resguardo Wacoyo y dedicada a la memoria de José Antonio Casolúa, el mismo chamán que la ficha sigue de Torres a Agudelo. En la entrevista con Hermes Gaitán, que se formó de niño como médico tradicional con su abuelo, transcribe la gradación de oficios que la ficha resume: dopatubinü, «sorber yopo», que «puede ser cualquier persona»; pematawajibinü, el que sabe rezos y «puede hacer maldad»; y penajorobinü, «soplador», el chamán que integra rezos, historias y plantas, «el nivel más alto». Recoge de don Clemente Gaitán que los maleficios enviados contra una persona pueden caer en los animales domésticos cercanos a ella, y nombra el wanali, un cristal celeste maligno, entre los objetos sacros de los rezos.",
+        limitation:
+          "No trae el relato del brujo. Es una tesis sobre trayectorias de vida y educación; el material chamánico viene de una sola familia de Wacoyo. Añade un tercer término, pematawajibinü, que la ficha no da. La página del repositorio de Uniandes pasa por un reto anti-bot antes de mostrar el PDF.",
+      },
     ],
     title: "El brujo y el águila enorme",
     summary:
@@ -78,6 +100,14 @@ El águila desmedida tiene su lugar propio. En el ciclo de Kuwei, después de qu
       "ortiz1976",
       "queixalos1978",
       "baquero1989",
+      "agudeloGuahiboSukani1993",
+      {
+        key: "escobarConocimiento2017",
+        summary:
+          "Departamento de Antropología, Universidad de los Andes, Bogotá, 2017; acceso abierto. Da el nombre sikuani del clan del jaguar tal como lo usan hoy sus interlocutores de Puerto Gaitán: newütjumomowi, «los del clan de tigre» (p. 132), con la fórmula con que se anuncia la llegada de uno de ellos, «newütju[momowi] bereka patajopabaja» (p. 133), y en el anexo de los 51 momowi que dictó don Clemente distingue Newütju, el tigre, de Aïaïto, el tigrillo, «clan menor del tigre» (pp. 310-311). Discute también la lista de Morey y Metzger, que traduce newíthi-momówi como «people of the jaguar» (p. 135). Es lo que sostiene la observación de Versiones de que «tigre», en la edición castellana, simplifica una clasificación sikuani más fina de los felinos.",
+        limitation:
+          "No trata este relato. Aporta el sistema de clanes y los nombres de felinos como clanes, no como animales del cuento; es el conocimiento de un sabedor de Puerto Gaitán dictado en 2015.",
+      },
     ],
     relatoCorto:
       "El texto completo no está en disco. Sólo se conserva el resumen heredado de una pieza breve, y estirarlo hasta las trescientas palabras obligaría a inventar escenas que la fuente no da.",
@@ -130,6 +160,22 @@ De esta versión es propio lo demás: el intercambio de yopo y lancetas, la pele
       "ortizCesteria1988",
       "men2015",
       "queixalos1978",
+      "cubillosCuadradoFish2019",
+      {
+        key: "agudeloGuahiboSukani1993",
+        summary:
+          "Instituto Colombiano de Cultura Hispánica, Santafé de Bogotá, 1993; el capítulo sikuani empieza en la p. 168 del volumen. Sostiene tres piezas del relato. La casa aparte: en el embarazo «el marido construye una casa aparte donde se recluye a la mujer embarazada acompañada de otra mujer», y la parturienta sigue bajo restricciones rezadas después del parto (p. 205). Los que llegan: entre los clanes momobi registra Cabire momobi, «gente Caribe», «bravos», que viven en el Tuparro (p. 207), y en la historia de contacto anota que los sikuani «eran cazados por caribes y portugueses» para la esclavitud hacia las Guayanas (p. 199). Y el paralelo de Bakasoloba, a la que «dejaron sola en la casa» cuando le llegó la menstruación y se la llevaron los pescados (p. 213), que es el que usa Similitudes.",
+        limitation:
+          "No trata el relato de Kawiri Monae: es una monografía del pueblo, y aquí se cita sólo por los tres pasajes nombrados. La casa aparte que describe es la del final del embarazo y el parto, en comunidades del Vichada en 1984-1985; «Cabire» es la grafía de la autora y no se afirma que sea la misma palabra que «kawiri». El enlace es la ficha de la Biblioteca Virtual del Banco de la República, que sirve el PDF completo del volumen.",
+      },
+      "joyamirada2024",
+      {
+        key: "escobarConocimiento2017",
+        summary:
+          "Departamento de Antropología, Universidad de los Andes, Bogotá, 2017; acceso abierto. Escrita con el abuelo José Antonio Casolúa (2006-2011) y con don Clemente (2012-2015), de Wacoyo y Puerto Gaitán. Es la única fuente abierta que define al personaje: «Kawiri es un yajenü, semeja una persona alta, fornida y velluda, que se caracteriza por la antropofagia» (nota 148, p. 311), y los yajewi son los seres no humanos que devoran a la gente y habitan en el monte (p. 114). Don Clemente glosa además Kowaramomowi kawirijiwixaewi, «el clan de la piraña son gente caníbal (gente kawiri que come gente)». Documenta también que el rezo del pescado se hace «al bebé recién nacido como a la niña durante la menarquia» para proteger de los seres del agua (p. 26), y que el agua rezada del nacimiento protege al recién nacido «contra cierto tipo de seres no-humanos» (p. 110): la situación de la madre y el niño del relato.",
+        limitation:
+          "No trata este relato. Es la doctrina de dos sabedores de un área del Meta, recogida entre 2006 y 2015. Contradice una lectura que la ficha publica: donde Ortiz (1976) asigna al grupo antropófago y trabajador el nombre kawiri, Buitrago anota «Kawiris (sic. Kowara)» (p. 136) y, con don Clemente, sostiene que ese clan es el de la piraña, kowara, y que kawiri nombra a un yajenü, no a un grupo humano. La glosa «caribe» no aparece en la tesis.",
+      },
     ],
     relatoCorto:
       "El texto completo no está en disco; sólo el resumen heredado de una pieza breve, y no hay con qué extenderlo sin agregar escenas que la fuente no da.",
@@ -182,6 +228,20 @@ Las dos historias empiezan igual: una mujer sola en la casa apartada y unos que 
       "torres1994",
       "men2015",
       "ortiz1976",
+      {
+        key: "cubillosCuadradoFish2019",
+        summary:
+          "Journal of Ethnobiology and Ethnomedicine 15:48 (doi 10.1186/s13002-019-0326-z). Trabajo de campo en el resguardo Wacoyo, Puerto Gaitán, Meta. Define a los ainawi como las entidades espirituales dueñas de la naturaleza, que habitan las profundidades del agua, los montes, el mundo subterráneo y otros paisajes; recoge que la mujer es especialmente vulnerable a ellos en la menarquia, la menstruación, el embarazo y el posparto, y que el mito de Bakatsolowa recuerda la vulnerabilidad de las muchachas a ser capturadas y llevadas al mundo de abajo o de los peces por los ainawi. Es la definición etnográfica que sitúa a los ainawi también bajo la tierra, que es donde el relato pone al compañero de la mujer.",
+        limitation:
+          "No trae este relato: es un estudio de restricciones alimentarias y del rezo del pescado, con informantes de un solo resguardo (Wacoyo, el mismo de los Kasulú de Torres). Lo que sostiene es la figura del ainawi y su trato con las mujeres, no el argumento. Editor: BioMed Central (https://ethnobiomed.biomedcentral.com/articles/10.1186/s13002-019-0326-z, que redirige a link.springer.com); se cita la copia de PubMed Central porque sirve el texto completo sin muro.",
+      },
+      {
+        key: "barbosavoluntad20202",
+        summary:
+          "Licenciatura en Filosofía, Universidad Pedagógica Nacional, Bogotá, con trabajo en el resguardo Wacoyo, Puerto Gaitán. Al describir el tapi, el banquito tallado que el chamán reza, dice que en él se sienta a la niña en su primera menstruación «para que los espíritus (ainawi) que están por debajo de la tierra no tengan contacto con ella», en el rezo del pescado. Es un segundo testimonio, de campo, que pone a los ainawi bajo la tierra, que es donde vive el compañero de la mujer en el relato.",
+        limitation:
+          "No trae este relato; menciona a los ainawi de pasada, en una sola frase. Es una monografía de pregrado en filosofía y su testimonio es del mismo resguardo que Torres y Cubillos-Cuadrado: no es una región independiente.",
+      },
     ],
     relatoCorto:
       "El texto completo no está en disco; sólo el resumen heredado de una pieza breve, y estirarlo hasta las trescientas palabras obligaría a inventar.",
@@ -236,6 +296,8 @@ Y en El hombre pájaro, también de 2015, las dos mujeres de Makoko se van al r�
       "ortiz1976",
       "baquero1989",
       "men2015",
+      "reichelDolmatoffcultura1944",
+      "salmoralNotas1970",
     ],
     relatoCorto:
       "El relato no tiene fuente en disco ni fuera de ella: el resumen heredado es todo lo que hay, y no da más de lo que aquí se cuenta.",
@@ -288,6 +350,7 @@ Lo que no se repite en ninguno de los dos es la salida por el caballete. Esa es 
       "ortizQueixalosOrnitologia",
       "ortiz1976",
       "men2015",
+      "jilgueroCuando",
     ],
     title: "La danta y el terecay",
     summary:
@@ -345,6 +408,13 @@ Propio de esta versión es el resto: el hígado nombrado en voz alta, el cuerpo 
       "ortiz1976",
       "ortizRezo1988",
       "ortizCesteria1988",
+      {
+        key: "escobarConocimiento2017",
+        summary:
+          "Departamento de Antropología, Universidad de los Andes, Bogotá, 2017; acceso abierto. Resuelve la duda que la ficha deja abierta sobre el pajuil: en el anexo de los 51 momowi que dictó don Clemente en 2015 figura «Ütjübürü (paují): Son pajuil (sic. Paujil), un pájaro. Son gente que cantan, los invitaban mucho a las fiestas» (p. 312), y en la misma lista Awiri, el perro (p. 310). Describe además, con el relato de Hernando que recogieron Queixalós y Jiménez, a los yajewi, los antropófagos que habitan «en cantidades en los montes» y que, si uno va al bosque, «nos persiguen, nos matan y nos comen», entre ellos Jirujiru, que «se alimenta de los ojos de las personas» (p. 114): la clase de ser a la que pertenece la vieja del monte y los que al final se llevan a la hermana.",
+        limitation:
+          "No trata este relato ni nombra a la vieja caníbal: sostiene el pajuil como emblema de clan con su nombre sikuani y la categoría de los antropófagos del monte, no la trama. Es la doctrina de sabedores de Puerto Gaitán recogida entre 2006 y 2015; el relato de Hernando que cita viene de Queixalós y Jiménez (1991).",
+      },
     ],
     title: "Los hermanos y la mujer del monte",
     summary:
@@ -398,6 +468,9 @@ Propio de esta versión es lo demás: los ojos restituidos con savia, el ave que
       "ortizRezo1988",
       "ortizCesteria1988",
       "torres1994",
+      "escobarConocimiento2017",
+      "barbosavoluntad2020",
+      "wrightKuwai2018",
     ],
     title: "Kuwei, Kuemi y el comienzo del mundo",
     summary:
@@ -452,6 +525,9 @@ Lo propio de esta versión es el reparto: Kuemi que es culebra y es Vía Láctea
       "ortizRezo1988",
       "ortizCesteria1988",
       "men2015",
+      "rodriguezCanto",
+      "barbosavoluntad20202",
+      "escobarKnowledge2016",
     ],
     title: "Tsamani y el camino de la luz",
     summary:

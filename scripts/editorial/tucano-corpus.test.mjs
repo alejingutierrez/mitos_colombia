@@ -86,13 +86,17 @@ test("las fuentes son las cinco obras leídas, y la vecindad va escrita", () => 
   ]);
   const porUrl = new Map(todas.map((fuente) => [fuente.url, fuente]));
   const urls = [...porUrl.keys()].sort();
-  assert.deepEqual(urls, [
+  // Eran exactamente las cinco obras de la ronda de septiembre. La Fase B del
+  // cierre (2026-09-22) sumó fuentes nuevas por ficha; las cinco siguen todas.
+  for (const base of [
     "https://acervo.socioambiental.org/acervo/livros/antes-o-mundo-nao-existia-mitologia-dos-antigos-desana-kehiripora-2a-ed-rev-ampl",
     "https://revistas.icanh.gov.co/index.php/rca/article/view/1801",
     "https://revistas.icanh.gov.co/index.php/rca/article/view/1865",
     "https://revistas.unal.edu.co/index.php/imanimundo/article/view/74221",
     "https://revistas.unal.edu.co/index.php/maguare/article/view/29-51",
-  ]);
+  ]) {
+    assert.ok(urls.includes(base), `falta una de las cinco obras leídas: ${base}`);
+  }
 
   // Las ocho heredadas no vuelven: no eran las obras que la ficha usó, y la de
   // Icesi además no respondía.

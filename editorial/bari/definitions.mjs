@@ -94,6 +94,7 @@ Hay un tercer eco. El sueño, en el material de Castillo, es un viaje corto de l
           "Síntesis multimedia colombiana de 2017, sin transcripciones ni variación local; no menciona el viaje del joven ni a Taigda Chigbana.",
       },
       "sotobari2012",
+      "velasquezLiteratura2014",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: un joven Barí camina de la mano de un chigbarí por senderos de papel que atraviesan selva nocturna, mundos superpuestos y una estación de llegada de los muertos; canastos, cañabrava y estrellas como formas recortadas, sin piñas, frailejones, coronas, halos ni símbolos inventados, sin cadáveres explícitos, sin texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -209,6 +210,14 @@ Castillo añade un detalle que la comparación suele perder: lo que los barí tr
         limitation:
           "Documento preliminar colombiano que no recoge el relato del bejuco; su sección cosmológica procede de una edición de Castillo que no se pudo cotejar.",
       },
+      {
+        key: "velasquezLiteratura2014",
+        summary:
+          "Narra la Luna como Chibáig, saimadoyi salida de la piña, desnuda, fría y con dos maridos que no se le acercan; Sabasëba la manda al firmamento a alumbrar de noche, los dos hombres la siguen subiendo por unos bejucos, ella los rechaza y los arroja desde arriba, y al caer se transforman: el primero en karika, la ardilla, el segundo en taibribri, pájaro nocturno. Añade que Chibáig es dueña de los animales y de la caza nocturna, y sitúa la Luna con los zamuros, el trueno, el relámpago y el arco iris en el Barun ascua.",
+        limitation:
+          "Autor venezolano que sintetiza a Castillo y a Jaramillo sin identificar narrador. Su versión discrepa del texto publicado en quién transforma a los dos hombres: aquí los arroja la propia Chibáig, en la ficha los cambia Sabaséba; y omite la visita a los zamuros y el corte del bejuco por celos. Hace de la Luna dueña de la caza, justo lo que la ficha dice que el corpus grabado no sostiene.",
+      },
+      "aSOCBARICultura",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: Ishtana oscura y una Luna cercana unidas por un gran bejuco; cazadores Barí cruzan con alimento mientras, en un plano secundario, un gallinazo se aproxima a la liana; cóndor y buitre como aves, no reinos fantásticos, sin romance ni palacio, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -320,6 +329,15 @@ Jaramillo Gómez apunta un dato que aleja la lectura ecologista contemporánea: 
         limitation:
           "Documento preliminar colombiano que en este punto cita a Castillo por una edición de 1983 que no se pudo cotejar; no narra el corte del árbol.",
       },
+      "aSOCBARICultura2",
+      {
+        key: "velasquezLiteratura2014",
+        summary:
+          "Cuenta que los saimadoyi descubrieron torrentes de agua represados dentro de la gran ceiba, Majumba-Asá'ra, «árbol de agua»; Sabasëba aprobó cortarla con hachas de piedra, costó mucho tiempo y al caer se formó un diluvio del que salieron los ríos, quebradas, manantiales y lagunas. Kokeba fue el principal responsable del corte, y del mismo árbol salieron los peces, los caimanes y los animales de agua y de pantano. Antes, dice, los barí sacaban el agua de los bejucos.",
+        limitation:
+          "Autor venezolano que sintetiza sin identificar narrador. Funde las dos formas que la ficha mantiene separadas: pone a Kokeba como cortador (como Castillo) pero añade los peces y el caimán (como Galvis) y el nombre Majumba-Asá'ra (como el texto de ASOCBARI). Es una lectura combinada, no una versión grabada.",
+      },
+      "jIshtana2005",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: comunidad Barí corta de manera colectiva un árbol gigantesco cuyo tronco abierto libera cintas azules que se vuelven las cuencas del Catatumbo y del Río de Oro; astillas se transforman en peces y el tronco sugiere un caimán, sin tala industrial, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -431,6 +449,8 @@ Las fases lunares se explican con un sombrero grande y uno chiquito, y las manch
         limitation:
           "Síntesis multimedia colombiana de 2017 sin transcripciones extensas; usa grafías que no coinciden con las de ninguna de las fuentes académicas y no explica su criterio ortográfico.",
       },
+      "dEmpaireIntroduccion1966",
+      "alterProduccion2008",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: Ñandóu levanta un collar de dos plumas de tucán, una amarilla y una negra, y se convierte en Sol mientras Chibáig ilumina como Luna sobre Ishtana; un ave mensajera cruza entre ambos, sin coronas ni iconografía grecorromana, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -663,6 +683,13 @@ Castillo advierte contra dos lecturas. Una es la de Jaulin, que interpretó el e
           "Encuadra el relato dentro de la ley de origen y del reparto de funciones entre los samagdoyi, y atribuye a los schumbraba y a los daviddu los males que afectan al pueblo.",
         limitation:
           "Documento preliminar colombiano que no narra el episodio de la ceniza; aporta el marco en el que las autoridades lo colocan.",
+      },
+      {
+        key: "alterProduccion2008",
+        summary:
+          "Da dos versiones independientes de trabajo de campo. La del sagdou José Akrikdá, de Kumanda: Sibabió, una anciana, agarró por el cuello a su nieto pequeño, lo mató, lo destripó, lo asó y se lo ofreció a su hijo, que no lo comió; el hijo le tendió una trampa de palos en la puerta de la casa al volver ella de buscar yuca, le prendieron fuego y de las cenizas dispersadas salieron muchos animales, los negros y los blancos. La del antropólogo Lusbi Portillo (tabla 7) enumera lo que sale de la ceniza: los labagdó o criollos, los ischi o yukpa, los wayúu, los labiddú, shumbraba, taibabioyi, ischibarí, sitbayi y uáiba, los caballos y las escopetas. Las autoras concluyen que de ahí nace la idea de que lo que no es barí es malo.",
+        limitation:
+          "Trabajo de pregrado venezolano (Universidad Rafael Belloso Chacín, Maracaibo, 2008) en comunicación social; la entrevista está parafraseada en español. Trata «Sibabió» como nombre propio, sin la advertencia de Castillo. El informante es probablemente el mismo José Akírikdá de la nómina de Castillo, y la tabla de Portillo coincide casi término a término con Hernández Gómez: ninguna de las dos es enteramente independiente del corpus grabado en los setenta. Aporta, frente al texto publicado, que es el hijo —padre del niño— quien arma la trampa, y que los wayúu y los caballos están en la lista.",
       },
     ],
     imagePromptHorizontal:

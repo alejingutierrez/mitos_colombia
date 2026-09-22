@@ -9,6 +9,9 @@ const records = [
       "gomezPulgarin2012",
       "gomezPulgarin2011",
       "toruDuugu1985",
+      "goulardEntre2009",
+      "vritual2010",
+      "ortizMito2023",
     ],
     title: "Ngutapa y el nacimiento de Yoí e Ípi",
     excerpt:
@@ -65,6 +68,22 @@ Lo que no se repite fuera de aquí es la combinación: un creador que fracasa en
       "gomezPulgarin2011",
       "toruDuugu1985",
       "faulhaber2020",
+      "angaritaCantos2010",
+      {
+        key: "vritual2010",
+        summary:
+          "Maestría en Estudios Amazónicos, Universidad Nacional sede Leticia. En el capítulo 2 resume, con comunicación personal de Abel Santos, que Yoí e Ípi al tumbar el wone (ceiba) separan la corriente de agua —chowatü arriba y Eware abajo— y que por eso el afrecho de huito arrojado se convierte en pescados que en verdad son personas; da la etimología de Eware como «lo que fue negreado por el huito» y liga la quebrada al origen de la pelazón.",
+        limitation:
+          "Etnografía de la pelazón en Arara, no recopilación de mitos: el episodio se resume en un párrafo y la fuente es la misma voz de Abel Santos que sostiene la ficha, por conversación personal. Lado colombiano.",
+      },
+      "nacionalUFRJTicuna2008",
+      {
+        key: "goulardEntre2009",
+        summary:
+          "Instituto Francés de Estudios Andinos y CAAAP, Lima, pp. 391-410. En el resumen del mito de origen, una nota anota que «los restos de genipa se transformaron en peces» —el huito rallado que da los peces y luego la gente— y el texto nombra el río Eware como el lugar de donde viene el canto que llama a los personajes.",
+        limitation:
+          "Bibliografía del lado peruano (ticuna de Loreto). En la edición en línea sólo queda abierto el comienzo del anexo: no se leyó ahí el derribo del árbol ni la pesca de la gente, y de este episodio sólo se verificaron la nota del genipa y la mención de Eware.",
+      },
     ],
     title: "Wone, Eware y la pesca del pueblo Tikuna",
     excerpt:
@@ -123,6 +142,21 @@ Del lado brasileño, la iconografía que estudia Faulhaber liga a Yoí con la pe
       "nimuendaju1952",
       "men2014",
       "santos2010",
+      {
+        key: "valenzuelaritual2010",
+        summary:
+          "Al tratar los colorantes de la pelazón en Arara (p. 99), explica que el nombre tikuna del achiote, ütá, remite a un mito cuyo protagonista es el sol: el sol se tomó todo el achiote candente y brillante, y por eso el achiote irradia y protege. Cita a Abel Santos, que refiere a don Paulino: «El sol fue el que tomó el zumo del achiote y por eso es resplandeciente, caliente», y el achiote en el cuerpo de la niña tiene ese sentido, que no se queme, que no se acabe. Es la tradición colombiana del mismo episodio que narra Dolores Noé. En nota da los nombres del sol, üakü, «el que regaña», y de la luna, Tawemakü, que van en canoa, y transcribe el Canto del Sol del abuelo Jorge Manduca sobre el apagón del sol.",
+        limitation:
+          "El episodio del achiote aparece resumido en una frase, sin la suegra, la danta, el suegro que se despide ni la esposa convertida en árbol de algodón. La lectura etimológica de ütá es del autor y de sus colaboradores tikuna, no de Dolores Noé.",
+      },
+      "filhoFesta2015",
+      {
+        key: "faulhaberestrelas2004",
+        summary:
+          "Revista de Antropologia (USP) 47 (2), pp. 379-426. Registra que para los tikuna el Sol y la Luna son seres vivos que tuvieron existencia terrestre; que el tocado de plumas de guacamayo rojo de la muchacha en la pelazón representa al sol; recuerda la «Canoa del Sol» de Nimuendajú; y recoge una versión en que el primer incesto fue entre la Luna y su hermana el Sol. Sirve para situar el relato de Dolores Noé dentro del ciclo de los astros que el artículo reconstruye con comunidades tikuna de Brasil y de Nazaré.",
+        limitation:
+          "No trae el episodio del achiote ni el del árbol de algodón. Es sobre todo material del lado brasileño y de iconografía y constelaciones; es un artículo distinto del de 2020 de la misma autora que ya está en la ficha.",
+      },
     ],
     relatoCorto:
       "La narración de Dolores Noé ocupa dos páginas del libro y está cerrada: cinco escenas, sin diálogo más allá de la despedida del suegro y sin episodios laterales. Alargarla hasta 300 palabras obligaría a inventar o a repetir.",
@@ -183,6 +217,10 @@ Del lado brasileño, Priscila Faulhaber muestra que esa pareja de Sol y Luna org
       "faulhaber2020",
       "gomezPulgarin2012",
       "men2014",
+      "goulardColores2013",
+      "faulhaberestrelas2004",
+      "valenzuelaritual2010",
+      "filhoamadurecimento2017",
     ],
     title: "El origen de la Luna Tikuna",
     excerpt:
@@ -241,6 +279,13 @@ Lo que fija esta versión frente a las demás es su química: una planta que enn
       "men2014",
       "gomezPulgarin2012",
       "toruDuugu1985",
+      {
+        key: "valenzuelaritual2010",
+        summary:
+          "Recoge en Arara, Amazonas colombiano, la idea que está en el centro de este relato: el friaje «es el envenenamiento de la tierra, la pesca de los yunatügu, ese es su barbasco», y no tanto el frío sino algo que debilita la fuerza de todos los seres (p. 268). Es decir, el friaje como pesca con barbasco de unos seres que no son los humanos de ahora, la misma premisa de las grullas que echan barbasco en la laguna. Añade, según don Paulino Santos, que del ánimo de los üüne, los dueños de los elementos, dependen los vendavales, el friaje y las tempestades (p. 64), y en la entrevista al abuelo Jorge Manduca que en tiempos de friaje llegan primero la madre del viento y las demás madres invitadas a la pelazón.",
+        limitation:
+          "No trae el relato del hombre-grulla ni nombra a las grullas: aporta la concepción del friaje como barbasco de otros seres, en una frase de un anexo, sin narrador identificado. La nota del autor glosa yunatügu como «un tipo de seres inmortales», cuando en la bibliografía tikuna (Santos 2014, Matarezio 2015) yunatü designa la condición mortal: la glosa debe leerse con cuidado.",
+      },
     ],
     title: "Las grullas y el origen del friaje",
     excerpt:
@@ -299,6 +344,8 @@ La secuencia que identifica a esta versión no reaparece en los demás relatos d
       "gomezPulgarin2012",
       "nimuendaju1952",
       "toruDuugu1985",
+      "mindlincabeca1996",
+      "romeroChurichiga2025",
     ],
     title: "La canoa de Moe y la mujer Moru",
     excerpt:
