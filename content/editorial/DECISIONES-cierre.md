@@ -197,22 +197,27 @@ Tolima se publican ambas como «La patasola», y «El origen de las frutas»
 (huitoto) tenía propuesto «Moniya Amena», que el relato de Idartes no sostiene
 (dice Monalla).
 
-### D18 · Fichas en un cajón geográfico que no es el suyo · 4 fichas
+### D18 · Fichas en un cajón geográfico que no es el suyo · 6 fichas
 
 `cuento-de-animas` (en caldas-mestizo) ocurre en Santander;
 `no-hay-deuda-que-no-se-pague` (en antioquia-mestizo) ocurre en Arma, hoy
-Aguadas (Caldas); `el-cazador` y `el-mareco` están en módulos «mixto» y sus
-actas proponen «mestizo».
+Aguadas (Caldas); `el-cazador`, `el-mareco`, `la-llorona` y `los-duendes`
+están en módulos «mixto» y sus actas proponen «mestizo» (ningún registro
+abierto les da rasgo indígena ni afro). En el mismo ciclo, `el-jinete-negro`
+es de Ocaña y el módulo lo pone en Cundinamarca-Boyacá.
 
 ① **Mover la categoría** a donde ocurre el relato. ② Dejarlas y decirlo en
 `historia` (ya se dice). ③ Mover sólo las de cajón mestizo/mixto.
 
 *Mientras tanto:* ②.
 
-### D19 · Fichas bloqueadas que siguen publicadas con texto viejo · 3 fichas
+### D19 · Fichas bloqueadas que siguen publicadas con texto viejo · 5 fichas
 
-`el-sombreron` y `dioses-lares` (Tolima) y `esperanza-en-el-oriente`
-(Boyacá) tienen acta bloqueada; su texto de Neon es el heredado y no se tocó.
+`el-sombreron` y `dioses-lares` (Tolima), `esperanza-en-el-oriente`
+(Boyacá), `el-bus-fantasma` y `el-mandingas` (varios) tienen acta bloqueada;
+su texto de Neon es el heredado y no se tocó. El Bus fantasma sólo existe en
+la ficción de 2004 y en la creepypasta de la G66; el Mandingas es un nombre
+del diablo (ALEC, Devia, Rocha) sin relato.
 Al Sombrerón y a Dioses lares se les retiraron en el módulo tres URLs caídas
 que en Neon siguen.
 
