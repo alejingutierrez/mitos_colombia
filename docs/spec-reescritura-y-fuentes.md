@@ -128,7 +128,15 @@ aceptan `--env=<ruta>` y `--slugs=a,b`.
 
 ## 5. Aplicación hasta hoy (estado por comunidad)
 
-Fecha de corte: **17 de septiembre de 2026**. Base: Neon (producción).
+Fecha de corte de esta tabla: **17 de septiembre de 2026**. Base: Neon
+(producción).
+
+> **El tablero vigente de todo el catálogo es
+> [`estado-enriquecimiento.md`](estado-enriquecimiento.md)**, medido contra
+> Neon el 2026-09-21: 431 de 596 fichas con los cinco campos, 450 con cinco
+> fuentes o más, 146 sin ninguna —todas ellas del bloque mestizo-mixto—. Esta
+> tabla se conserva porque es el registro comunidad por comunidad de qué
+> primario se abrió y qué se corrigió; para saber **dónde vamos**, el tablero.
 
 | Comunidad | Mitos | Reescritura (Fase A) | Fuentes (Fase B) | Fuentes/mito hoy | Módulo = Neon |
 |---|---|---|---|---|---|
@@ -234,7 +242,7 @@ sin revertir la portada y reclasificar un mito sin despublicarlo.
 ## Lo que queda: mestizos y mixtos
 
 > **El estado al día de este bloque vive en
-> [`estado-mestizos-y-mixtos.md`](estado-mestizos-y-mixtos.md)**: qué está
+> [`estado-enriquecimiento.md`](estado-enriquecimiento.md)**: qué está
 > publicado, qué está listo sin publicar, qué decisiones esperan y qué falta.
 > Al 2026-09-21: 70 publicadas de 253.
 
