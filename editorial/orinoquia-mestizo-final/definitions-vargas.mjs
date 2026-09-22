@@ -181,6 +181,7 @@ El mismo autor vuelve al animal en verso. En «Ser poeta», su poemario de 1999,
   }),
   defineVargasLiteraryMyth({
     slug: "los-delfines-dorados",
+    fuentesAgotadas: "Nueve fuentes. Buscado sin resultado: otras versiones de «Los delfines dorados» fuera del libro de Vargas (Banrepcultural, repositorios UNAL y Unillanos, Caro y Cuervo, prensa de El Tiempo); ninguna aparece, y los resultados web que repiten el título reproducen texto de agregadores. Estudios de tonina de la cuenca del Meta y del Orinoco están en ResearchGate (vetado); el artículo de Momentos de Ciencia (Universidad de la Amazonia) sobre relaciones cultura-naturaleza con la tonina en Puerto Carreño no resolvió DNS el 2026-09-22.",
     sourceKeys: [
       {
         key: "baronCuentos1996",
@@ -263,6 +264,7 @@ En la Amazonía brasileña, la leyenda de la Cobra Norato hace al boto padre de 
   }),
   defineVargasLiteraryMyth({
     slug: "la-culebra-cascabel",
+    fuentesAgotadas: "Ocho fuentes. Buscado sin resultado: otras versiones de «La culebra cascabel» o anécdotas de cascabel y dinamita fuera del libro (Banrepcultural, repositorios UNAL, Caro y Cuervo, prensa); estudios sobre Saúl, el Niño Mentiroso, como narrador. Fuentes científicas sobre Crotalus en los llanos aparecen sobre todo en ResearchGate o SlideShare (vetados).",
     sourceKeys: [
       {
         key: "baronCuentos1996",

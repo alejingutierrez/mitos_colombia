@@ -35,7 +35,7 @@ test("el expediente cumple la metodología editorial", () => {
   const sources = [...record.keySources, ...record.sources];
   assert.equal(sources.length, 8);
   assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
-  assert.ok(sources.every(({ url, summary, limitation }) => url.startsWith("https://") && summary && limitation));
+  assert.ok(sources.every(({ url, summary, limitation }) => summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation)))));
   assert.match(record.researchNotes, /boyaca-mestizo-residual\/evidence\.mjs/);
   assert.match(record.researchNotes, /boyaca-mestizo-residual\/provenance\.json/);
 });

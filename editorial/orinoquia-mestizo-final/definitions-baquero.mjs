@@ -253,6 +253,7 @@ El propio libro de Baquero da un tercer punto de apoyo. En la página 24 del pre
   }),
   defineBaqueroLiteraryMyth({
     slug: "madre-rio-o-mohana",
+    fuentesAgotadas: "Se buscó «mohana» y «mohán» en todos los content/editorial/*/primarias/, en el ciclo Caribe mestizo (Zapata Olivella 1972 no la trae) y en la web. La ficha SINIC de las mohanas de Sucre (web.archive.org) no respondió (conexión reiniciada dos veces) y no se incluyó.",
     sourceKeys: [
       {
         key: "narinocuentos1988",

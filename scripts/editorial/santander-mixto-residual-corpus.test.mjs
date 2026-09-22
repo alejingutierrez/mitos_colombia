@@ -59,7 +59,7 @@ test("los dos expedientes cumplen la metodología editorial", () => {
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(

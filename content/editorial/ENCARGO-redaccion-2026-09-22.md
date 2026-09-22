@@ -116,3 +116,19 @@ títulos que la fuente no da, duplicados). No las tomes tú: anótalas.
 La ficha no se redacta: se escribe su acta bloqueada, con lo que buscaste y lo
 que la desbloquearía. Antes, un último cruce con `grep -ril` en todos los
 `content/editorial/*/primarias/` del repo.
+
+## El bestiario de 2004
+
+*Cuentos de espantos y otros seres fantásticos del folclor colombiano* (Casa
+Editorial El Tiempo / Universidad Autónoma de Colombia, 2004, en archive.org)
+es el único registro abierto de muchas fichas de estos ciclos, y **se declara a
+sí mismo «material de ficción… documentos imaginarios»**. Criterio, el mismo con
+que se publicaron `la-bruja-del-tranvia` y `la-monja-de-las-rosas` en Bogotá:
+
+- se usa como registro, pero **como ficción de autor declarada**: la `historia`
+  lo dice con esas palabras, y sus marcos inventados —cartas, recortes de
+  prensa, diarios, fichas técnicas, personajes con nombre— se cuentan como
+  composición del libro, **nunca como hechos**;
+- si hay un registro folclórico independiente (Villa Posse, Ocampo, Devia,
+  Vélez, prensa), ése manda y el libro de 2004 va a `versiones`;
+- si el libro no trae la figura y no hay otro registro, la ficha se bloquea.

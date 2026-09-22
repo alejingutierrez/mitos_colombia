@@ -3,6 +3,7 @@ import { defineOrinoquiaMestizoFinalMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineOrinoquiaMestizoFinalMyth({
     slug: "el-tesoro-de-caribare",
+    fuentesAgotadas: "Buscado y no abierto: Sepúlveda Escobar, Ensayos de historia araucana (Gente Nueva, 1992) y Perea Pedroza 2009 no están en abierto; la Universidad Externado («Tras el leco del cabrestero») devuelve HTML en lugar del PDF; el Boletín Cultural de Rausch 1996 no trata de Caribabare; el repositorio UASB citado por el módulo no menciona la hacienda. No se rellenó hasta doce.",
     sourceKeys: [
       "llaneracomleyenda2009",
       "zuluagaTranscripcion2021",
