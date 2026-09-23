@@ -94,11 +94,11 @@ test("separa archivo, fábula editorial y resistencia documentada", () => {
 
   const hada = bySlug.get("el-hada-de-los-canaverales");
   // heredada: reescribir tras el cotejo
-  assert.match(hada.mito, /fábula contemporánea creada para el sitio/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(hada.historia, /no encontró una fuente independiente/i);
-  // heredada: reescribir tras el cotejo
-  assert.match(hada.versiones, /No existen[\s\S]+versiones tradicionales/i);
+  assert.match(hada.historia, /fábula contemporánea/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(hada.historia, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(hada.versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
   // heredada: reescribir tras el cotejo
   assert.doesNotMatch(hada.historia, /tradición ancestral|leyenda ancestral/i);
 

@@ -79,46 +79,67 @@ El otro paralelo lo señala el propio relato, que compara al marido con el celos
 
   defineAndinaLegacyEditorialResidualMyth({
     slug: "el-hada-de-los-canaverales",
-    title: "El Hada de los Cañaverales: fábula contemporánea",
+    fuentesAgotadas: "La búsqueda exacta de «Hada de los Cañaverales» sólo devuelve mitosdecolombia.com y sus copias. No aparece en Villa Posse 1993, en antologías del Valle ni en prensa.",
+    sourceKeys: [
+      "ibagueFolclor2013",
+      "vlietColombia1997",
+      {
+        key: "isaacsCane",
+        summary:
+          "La caña traída por Belalcázar desde Santo Domingo, los trapiches de los estancieros, el traslado de indígenas al valle y la llegada de población africana ligada a la demanda minera del Chocó: el paisaje en que se sitúa la fábula.",
+        limitation:
+          "Historia económica y social; no trata ninguna creencia ni figura sobrenatural de los cañaverales.",
+      },
+      {
+        key: "cvcSonso",
+        summary:
+          "La Laguna de Sonso como principal humedal de la planicie aluvial del río Cauca y último reducto lagunar autóctono de extensión considerable en el Valle: el humedal al que apunta el hada.",
+        limitation:
+          "Ficha ambiental; no menciona tradición oral ni al hada.",
+      },
+      {
+        key: "cvcBurns",
+        summary:
+          "La CVC reduce del 78 al 32 por ciento el área de caña autorizada para quemas controladas y registra la fauna hallada en los cañaduzales: el contexto de la franja sin quemar de la fábula.",
+        limitation:
+          "Comunicado de regulación ambiental; no trata el relato ni ninguna figura tradicional.",
+      },
+      "eSAPInventario",
+    ],
+    title: "El Hada de los Cañaverales",
     excerpt:
       "Una fábula contemporánea del sitio imagina una guardiana de hojas y agua para hablar del trabajo cañero, las acequias y los humedales del Valle.",
     tags: ["agricultura", "agua", "trabajo", "naturaleza"],
-    mito: `Esta es una fábula contemporánea creada para el sitio, no una leyenda tradicional recopilada en el Valle del Cauca. Cuenta que, cuando la caña cubría el horizonte y el calor detenía hasta a los pájaros, una cuadrilla encontró seca la acequia que acompañaba el corte. El agua había sido desviada y entre los tallos quedaban ceniza, hojas quebradas y un silencio diferente al de la jornada.
+    mito: `Cuando la caña cubría el horizonte y el calor detenía hasta a los pájaros, una cuadrilla de corteros encontró seca la acequia que acompañaba el corte. Alguien había desviado el agua. Entre los tallos quedaban ceniza y hojas quebradas, y había un silencio distinto del de la jornada.
 
-Al amanecer siguiente apareció una figura hecha de hojas verdes, cintas de agua y flores del borde del humedal. No llevaba corona ni alas. Su cuerpo cambiaba con el viento, de modo que a veces parecía una mujer y otras veces una franja de vegetación que el monocultivo todavía no había alcanzado. La cuadrilla la llamó Hada de los Cañaverales porque no conocía otro nombre para aquella presencia imaginada.
+Al amanecer siguiente apareció una figura hecha de hojas verdes, de cintas de agua y de flores del borde del humedal. No llevaba corona ni alas. Su cuerpo cambiaba con el viento: a ratos parecía una mujer y a ratos una franja de vegetación que el monocultivo todavía no había alcanzado. Los corteros la llamaron Hada de los Cañaverales, porque no conocían otro nombre para aquella presencia.
 
-El hada no ofreció oro ni castigó a nadie. Señaló primero la acequia vacía, después las manos de quienes cortaban y, por último, las aves que buscaban agua más allá del sembrado. Cuando una persona quiso preguntarle cómo devolver la corriente, la figura tocó el suelo. Allí quedaron tres marcas: una para cuidar los pasos del agua, otra para reconocer el trabajo humano y una tercera para dejar que la vegetación nativa respirara entre el cultivo y el humedal.
+El hada no ofreció oro ni castigó a nadie. Señaló primero la acequia vacía, después las manos de quienes cortaban y por último las aves que buscaban agua más allá del sembrado. Cuando uno de ellos quiso preguntarle cómo devolver la corriente, ella tocó el suelo y dejó tres marcas: una para cuidar los pasos del agua, otra para reconocer el trabajo de la gente y la tercera para que la vegetación nativa pudiera respirar entre el cultivo y el humedal.
 
-La cuadrilla decidió actuar sin esperar otro prodigio. Retiró residuos del canal, avisó sobre la desviación, reservó una franja sin quemar y compartió la sombra y el agua durante la jornada. La corriente no regresó por encantamiento; volvió después de acuerdos, mantenimiento y lluvia. Con ella llegaron insectos, ranas y algunas aves.
+La cuadrilla no esperó otro prodigio. Sacó los residuos del canal, avisó de la desviación, dejó una franja sin quemar y compartió la sombra y el agua durante la jornada. La corriente no volvió por encantamiento: volvió después de acuerdos, de trabajo en el canal y de lluvia. Con ella llegaron insectos, ranas y algunas aves.
 
-Cuando el cañaveral volvió a moverse, nadie encontró a la guardiana. Unos dijeron que se había disuelto en la acequia. Otros pensaron que jamás estuvo allí y que su figura había servido para reunir problemas que todos veían por separado. Desde entonces, dentro de esta fábula, el hada aparece solamente cuando alguien pretende que la caña existe sin agua, que el paisaje no tiene memoria o que el azúcar llega a la mesa sin cuerpos que trabajen.
+Cuando el cañaveral volvió a moverse, nadie encontró a la guardiana. Unos dijeron que se había disuelto en la acequia. Otros pensaron que nunca estuvo allí, y que su figura sólo había servido para juntar problemas que cada uno veía por separado. Desde entonces el hada aparece únicamente cuando alguien pretende que la caña existe sin agua, que el paisaje no tiene memoria o que el azúcar llega a la mesa sin los cuerpos que la trabajan.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar: es una fábula contemporánea, sin registro en la tradición oral del Valle del Cauca. Se buscó el nombre exacto «Hada de los Cañaverales» en la prensa, en las antologías del Valle y en los tomos de Mitos y leyendas de Colombia de Eugenia Villa Posse (1993), y no aparece en ninguno. Tampoco lo nombran los estudios sobre la caña, los humedales y los corteros que le sirven de contexto: documentan el paisaje, pero ninguno habla de un hada, una guardiana o un espanto de los cañaverales.
 
-El relato no atribuye esta creencia a corteros, campesinos ni comunidades del Valle. Su propósito editorial es convertir datos históricos, laborales y ambientales en una imagen narrativa, dejando explícito quién la inventó y dónde termina la documentación.`,
-    historia: `La revisión no encontró una fuente independiente que documente un ser llamado Hada de los Cañaverales como tradición oral, personaje regional o creencia de trabajadores del Valle del Cauca. La ficha heredada había sido escrita por el propio proyecto a partir del título y presentaba a la figura como guardiana antigua sin declarar su origen. En vez de despublicar la URL, esta edición la clasifica de manera visible como fábula contemporánea del sitio.
+Ese paisaje sí está bien estudiado. Isabel Cristina Bermúdez, en la historia del Valle del Centro Virtual Isaacs de la Universidad del Valle, cuenta que Sebastián de Belalcázar trajo la caña de Santo Domingo en el siglo XVI y la sembró cerca de lo que hoy es Jamundí; que los estancieros levantaron trapiches, que se trasladaron indígenas de las cordilleras al valle y que la demanda de mieles y aguardiente de las minas del Chocó trajo después a la población de origen africano. La Corporación Autónoma Regional del Valle del Cauca describe la Laguna de Sonso como el principal humedal de la planicie aluvial del río Cauca y el último ecosistema lagunar autóctono de gran extensión en el departamento, y en 2020 anunció que el área de caña autorizada para quemas pasaría del 78 al 32 por ciento.
 
-El contexto, en cambio, sí tiene documentación amplia. Isabel Cristina Bermúdez explica que la caña llegó al Valle durante el siglo XVI, impulsó trapiches, acequias y haciendas, movilizó trabajo indígena y africano y después transformó el paisaje mediante la industrialización. Esa historia impide describir el cañaveral como naturaleza intacta o como escenario sin relaciones de poder.
+Lo que la fábula toma prestado de la tradición es la figura de la mujer vegetal que guarda el agua y el monte. Esa figura está documentada en la región andina. Misael Devia Morales la registra en el Tolima como Madremonte, señora vestida de verde que pierde a los que corren las cercas, y como Madre de Agua, divinidad de lagunas y manantiales. Esmeralda Van Vliet recoge en la región cafetera una Madremonte con piel de musgo y brazos de bejucos que llora rocío cuando talan un árbol, y el inventario de tradición oral de Viterbo, en Caldas, la sitúa en los nacimientos de los riachuelos. El Hada de los Cañaverales es una variación nueva sobre esa figura antigua.`,
+    versiones: `Del Hada de los Cañaverales no existen variantes tradicionales, porque no circula en la tradición oral. Lo que sí tiene variantes es la figura en la que se inspira, la mujer hecha de plantas que guarda el agua y el monte, y las diferencias entre ellas iluminan lo que la fábula cambia.
 
-La Laguna de Sonso permite anclar la dimensión hídrica sin inventar geografía. La CVC la identifica como principal humedal de la planicie aluvial y último reducto lagunar autóctono de extensión considerable; también describe ríos, derivaciones y acequias que intervienen en su alimentación. La ficha general de humedales reconoce alteraciones antrópicas intensas en la zona plana agrícola.
+En el Tolima de Misael Devia, la Madremonte es una señora alta y robusta, con sombrero de plumas y vestido verde. Castiga con tempestades e inundaciones y pierde en el monte a quien corre la cerca del vecino, roba o caza por diversión. Su pareja es la Madre de Agua, una niña de cabellos dorados y pies al revés que atrae a los niños hacia los ríos.
 
-Los estudios de Jaramillo Ferro sobre la movilización de 2008 muestran a los corteros como actores con historia laboral, demandas, saberes y capacidad política. Castro Muñoz añade historias de vida, cuerpo, subsistencia y reubicación por accidente. Estas investigaciones no deben transformarse en una supuesta creencia compartida por los trabajadores: sostienen la presencia humana que la fábula tiene la obligación de no borrar.
+En la región cafetera que recoge Esmeralda Van Vliet, la Madremonte camina como mecida por la brisa, tiene cabellos de helechos y lianas bajo un sombrero de flores, piel de musgo y brazos de bejucos. Es la guardiana de las selvas: cuando se tala un árbol sufre, llora gotas de rocío y, enojada, desata tempestades.
 
-Hernando Uribe Castro estudia conflictos ambientales y acción colectiva alrededor de la expansión cañera. La CVC registra medidas sobre quemas y restauración. La ficción toma de ese conjunto agua, trabajo y cuidado, pero el hada, sus marcas y la acción de la cuadrilla son invención editorial declarada.`,
-    versiones: `No existen, dentro del expediente reunido, versiones tradicionales independientes del Hada de los Cañaverales. Por esa razón no se presenta una falsa cadena de informantes, una fecha de origen ni una comunidad portadora. Lo que puede compararse son estados editoriales y lecturas contextuales, no variantes folclóricas.
+En Viterbo, Caldas, el inventario municipal la describe de dos maneras opuestas: como una mujer musgosa enraizada en los pantanos, cerca de los nacimientos de los riachuelos, o como una mujer alta y elegante vestida de ramajes. Allí se dice que las crecientes llegan porque ella se baña en el nacimiento de las quebradas y enturbia el agua.
 
-La ficha anterior describía a una guardiana sobrenatural del cultivo que premiaba el cuidado y castigaba el abuso. Esa redacción sugería que el personaje circulaba en el Valle y mezclaba agricultura, agua y moral laboral sin una fuente que respaldara tal atribución. La versión actual conserva la posibilidad narrativa, pero abre con su condición de fábula creada por el sitio y retira cualquier afirmación de antigüedad.
-
-Una lectura histórica enfatiza la transformación del paisaje: introducción colonial de la caña, trapiches, acequias, haciendas, trabajo forzado, economías campesinas e industrialización. Una lectura ambiental se concentra en el río Cauca, la Laguna de Sonso, los humedales alterados, el agua y las quemas. Una lectura laboral observa a corteros y organizaciones como sujetos políticos, no como figuras decorativas que esperan salvación mágica.
-
-Estas tres perspectivas explican por qué la fábula revisada no hace regresar el agua mediante un hechizo. La cuadrilla actúa, negocia y cuida; la figura simbólica solo vuelve visibles vínculos que las fuentes estudian por separado. Tampoco se afirma que toda caña cause el mismo daño, que una medida institucional resuelva el conflicto o que una sola experiencia represente a todos los trabajadores.
-
-Si en el futuro aparece una recopilación oral independiente con un personaje homónimo, deberá documentarse como tradición separada antes de integrarla. La coincidencia de nombre no bastaría para atribuirle esta trama editorial.`,
+Todas castigan. El hada del cañaveral es la única que no lo hace: señala el daño, deja tres marcas en el suelo y deja que sea la gente la que devuelva el agua.`,
     leccion:
-      "Cuidar el agua y reconocer el trabajo requiere acuerdos humanos, no la espera de un prodigio.",
-    similitudes: `La Madremonte es la comparación directa más cercana por su relación con vegetación, límites del cultivo y daño ambiental. Sin embargo, la Madremonte cuenta con amplia circulación folclórica y suele castigar a quien invade o destruye; el Hada de los Cañaverales está declarada como creación contemporánea, no castiga y funciona como recurso para reunir agua, trabajo y paisaje.
+      "El agua que se pierde por descuido vuelve cuando la gente se pone de acuerdo para cuidarla.",
+    similitudes: `La Madremonte es el paralelo más directo. En el Tolima de Misael Devia y en la región cafetera de Esmeralda Van Vliet es una mujer hecha o vestida de plantas que guarda el monte y el agua, como la figura de hojas, cintas de agua y flores del cañaveral. La diferencia está en el castigo: la Madremonte manda tempestades, seca manantiales y pierde a los culpables en un rastrojo, mientras que el hada no castiga a nadie.
 
-La Madre de Agua comparte la forma femenina y la defensa simbólica de ríos o nacimientos. Esa figura pertenece a repertorios regionales donde atrae, protege o amenaza según la versión. El hada de esta página no habita una corriente como creencia transmitida: señala acequias y humedales porque las fuentes ambientales permiten comprender su importancia material.
+La Madre de Agua, que Devia presenta como pareja de la Madremonte, comparte con el hada el vínculo con el agua quieta de lagunas y manantiales. Pero la Madre de Agua atrae a los niños hacia la orilla y los pone en peligro; el hada, en cambio, aparece junto a una acequia seca y lo que busca es que el agua vuelva.
 
-El Hojarasquín del Monte ofrece un tercer contraste. Su cuerpo vegetal y su defensa del bosque provienen de relatos sobre monte, caza y frontera rural; el hada aparece dentro de un paisaje agroindustrial concreto y no representa una naturaleza anterior intacta. Las semejanzas son motivos literarios, no prueba de parentesco entre tradiciones.`,
+El contraste muestra lo propio de la fábula. Las guardianas tradicionales defienden un monte que existía antes que la gente. El Hada de los Cañaverales aparece en un paisaje ya transformado por siglos de caña, trapiches e ingenios, y su tarea no es expulsar a nadie sino reunir el agua, el trabajo de los corteros y el humedal que todavía resiste.`,
     sceneHorizontal:
       "un paisaje amplio del Valle del Cauca donde un cañaveral, una acequia y el borde de un humedal se conectan; una figura simbólica formada enteramente por hojas planas, cintas de agua y flores emerge de la franja vegetal mientras una cuadrilla observa el canal seco, sin alas europeas, vestido étnico inventado ni aura de tradición antigua",
     sceneVertical:

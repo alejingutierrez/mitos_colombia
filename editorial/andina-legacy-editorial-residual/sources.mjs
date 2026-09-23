@@ -385,6 +385,40 @@ export const andinaLegacyEditorialResidualSources = {
     limitation:
       "Estudio histórico de la conquista; no trata leyendas ni la memoria folclórica del personaje.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  ibagueFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales (Universidad de Ibagué)",
+    year: 2013,
+    type: "libro (reedición)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "«La Madre de Agua» (p. 63) y «La Madremonte» (p. 64): las dos guardianas femeninas de aguas y montes del llano tolimense, la niña de pies al revés y la señora de verde que castiga con tempestades y pierde a los culpables.",
+    limitation:
+      "Trata la Madremonte y la Madre de Agua del Tolima, no el Hada de los Cañaverales, que no tiene registro tradicional.",
+  }),
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (incluye «Niños de las regiones de Colombia», de Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "material educativo (ERIC)",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Madremonte de la región cafetera: cabellos de helechos y lianas, piel de musgo, brazos de bejucos; llora rocío cuando talan un árbol. Es la imagen más cercana a la figura de hojas del cañaveral.",
+    limitation:
+      "Trata la Madremonte cafetera, no esta fábula; texto divulgativo para niños.",
+  }),
+  eSAPInventario: source({
+    title: "Inventario turístico de Viterbo (Caldas): mitos, leyendas y tradición oral",
+    author: "Municipio de Viterbo (repositorio ESAP)",
+    type: "inventario municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/e2157446-5cb0-4e99-afa6-f31ad7ee56b6/download",
+    summary:
+      "§1.4.1: la Madremonte musgosa enraizada en los pantanos y los nacimientos de los riachuelos, o vestida de ramajes; enturbia el agua al bañarse en el nacimiento de las quebradas.",
+    limitation:
+      "Trata la Madremonte caldense, no el hada; inventario sin informantes nombrados.",
+  }),
 };
 
 const sourceKeysBySlug = {

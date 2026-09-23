@@ -3,14 +3,15 @@
   "desde": "modulos",
   "date": "2026-09-22",
   "myths": 12,
-  "citations": 107,
-  "uniqueUrls": 75,
+  "citations": 96,
+  "uniqueUrls": 61,
   "perMyth": [
     {
       "slug": "el-bufeo",
       "total": 11,
       "clave": 3,
       "dominios": 10,
+      "minimo": 5,
       "estado": "OK",
       "flags": []
     },
@@ -19,6 +20,7 @@
       "total": 8,
       "clave": 3,
       "dominios": 8,
+      "minimo": 5,
       "estado": "OK",
       "flags": [
         {
@@ -32,40 +34,34 @@
       "total": 7,
       "clave": 3,
       "dominios": 7,
-      "estado": "BAJO_META",
+      "minimo": 3,
+      "estado": "AGOTADAS",
       "flags": []
     },
     {
       "slug": "madre-de-playa",
-      "total": 8,
+      "total": 5,
       "clave": 3,
-      "dominios": 8,
-      "estado": "OK",
-      "flags": [
-        {
-          "url": "https://es.scribd.com/document/871355828/u-821011",
-          "flag": "DOMINIO_DEBIL"
-        }
-      ]
+      "dominios": 5,
+      "minimo": 3,
+      "estado": "AGOTADAS",
+      "flags": []
     },
     {
       "slug": "la-cobra-grande",
       "total": 8,
       "clave": 3,
       "dominios": 8,
+      "minimo": 3,
       "estado": "OK",
-      "flags": [
-        {
-          "url": "http://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
-          "flag": "HTTP_SIN_TLS"
-        }
-      ]
+      "flags": []
     },
     {
       "slug": "petapeta",
       "total": 10,
       "clave": 3,
       "dominios": 10,
+      "minimo": 5,
       "estado": "OK",
       "flags": []
     },
@@ -74,23 +70,16 @@
       "total": 11,
       "clave": 3,
       "dominios": 10,
+      "minimo": 3,
       "estado": "OK",
-      "flags": [
-        {
-          "url": "http://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
-          "flag": "HTTP_SIN_TLS"
-        },
-        {
-          "url": "http://www.etnolinguistica.org/biblio:reichel-1981-algunos",
-          "flag": "HTTP_SIN_TLS"
-        }
-      ]
+      "flags": []
     },
     {
       "slug": "ngutapa-y-chimuiyae",
       "total": 11,
       "clave": 3,
       "dominios": 10,
+      "minimo": 5,
       "estado": "OK",
       "flags": []
     },
@@ -99,44 +88,51 @@
       "total": 8,
       "clave": 3,
       "dominios": 8,
+      "minimo": 3,
       "estado": "OK",
       "flags": []
     },
     {
       "slug": "chuya-chaqui",
-      "total": 8,
+      "total": 5,
       "clave": 3,
-      "dominios": 7,
-      "estado": "OK",
+      "dominios": 5,
+      "minimo": 3,
+      "estado": "AGOTADAS",
       "flags": []
     },
     {
       "slug": "el-hijo-de-tuhixana",
-      "total": 8,
+      "total": 3,
       "clave": 3,
-      "dominios": 7,
-      "estado": "OK",
-      "flags": [
-        {
-          "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0054%3Abook%3D1",
-          "flag": "COMPARATIVA_SIN_PARALELO_EN_SIMILITUDES:Perseus (Hesíodo, Homero…)"
-        },
-        {
-          "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0129%3Acard%3D507",
-          "flag": "COMPARATIVA_SIN_PARALELO_EN_SIMILITUDES:Perseus (Hesíodo, Homero…)"
-        }
-      ]
+      "dominios": 3,
+      "minimo": 3,
+      "estado": "AGOTADAS",
+      "flags": []
     },
     {
       "slug": "el-descubrimiento-del-agua-y-los-peces",
       "total": 9,
       "clave": 3,
       "dominios": 8,
+      "minimo": 3,
       "estado": "OK",
       "flags": []
     }
   ],
   "shared": [
+    {
+      "url": "https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf",
+      "title": "El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico Etnográfico de Colombia; sección «Folclor. Versiones de algunas leyendas: El bufeo»",
+      "citedBy": 4,
+      "foundational": true
+    },
+    {
+      "url": "https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/",
+      "title": "El bufeo: Muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, 1981)",
+      "citedBy": 4,
+      "foundational": true
+    },
     {
       "url": "https://periodicos.uepa.br/index.php/sentidos/article/download/3673/1917/13707",
       "title": "Anotações sobre a lenda da Cobra Norato",
@@ -144,16 +140,16 @@
       "foundational": true
     },
     {
-      "url": "https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf",
-      "title": "El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico Etnográfico de Colombia; sección «Folclor. Versiones de algunas leyendas: El bufeo»",
-      "citedBy": 3,
-      "foundational": false
+      "url": "https://www.letras.ufmg.br/padrao_cms/documentos/profs/romulo/LibroLoreto1.pdf",
+      "title": "Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto), para la Sección de Folklore y Artes Populares del Ministerio de Educación Pública",
+      "citedBy": 4,
+      "foundational": true
     },
     {
-      "url": "https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/",
-      "title": "El bufeo: Muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, 1981)",
-      "citedBy": 3,
-      "foundational": false
+      "url": "https://dialnet.unirioja.es/descarga/articulo/7528487.pdf",
+      "title": "Mitos y leyendas de la Amazonía brasileña y peruana, dos países con raíces en la literatura indígena",
+      "citedBy": 4,
+      "foundational": true
     },
     {
       "url": "https://www.tropenboscol.org/app/data/uploads/sites/15/Col-Series-4-1.pdf",
@@ -168,14 +164,8 @@
       "foundational": false
     },
     {
-      "url": "https://www.musigrafia.org/acontratiempo/files/ediciones/revista-13/pdf/Investigacion_sobre_musicas_indigenas_Parte1.pdf",
-      "title": "Investigación sobre músicas indígenas en la Amazonía colombiana",
-      "citedBy": 3,
-      "foundational": false
-    },
-    {
-      "url": "https://bicentenario.gob.pe/biblioteca/detalle-libro/voces-del-peru-memoria-y-tradicion-oral",
-      "title": "Voces del Perú: memoria y tradición oral",
+      "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers11-10/010020940.pdf",
+      "title": "Crenças e lendas do Uaupés",
       "citedBy": 3,
       "foundational": false
     },
@@ -192,32 +182,20 @@
       "foundational": false
     },
     {
-      "url": "https://www.letras.ufmg.br/padrao_cms/documentos/profs/romulo/LibroLoreto1.pdf",
-      "title": "Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto), para la Sección de Folklore y Artes Populares del Ministerio de Educación Pública",
+      "url": "https://revistaselectronicas.ujaen.es/index.php/blo/article/view/4768",
+      "title": "Seres imaginarios y motivos de la literatura oral en Mitos, leyendas y cuentos peruanos de José María Arguedas y Francisco Izquierdo Ríos",
       "citedBy": 2,
       "foundational": false
     },
     {
-      "url": "https://dialnet.unirioja.es/descarga/articulo/7528487.pdf",
-      "title": "Mitos y leyendas de la Amazonía brasileña y peruana, dos países con raíces en la literatura indígena",
+      "url": "https://www2.hum.unrc.edu.ar/ojs/index.php/Coord/article/view/2111",
+      "title": "Chullachaqui de la selva",
       "citedBy": 2,
       "foundational": false
     },
     {
-      "url": "https://bibliotecanacional.gov.co/es-co/actividades/Publicaciones%20sobre%20las%20Bibliotecas%20P%C3%BAblicas/Documents/ABC%20del%20Bibliotecario.pdf",
-      "title": "ABC del bibliotecario: mitos y leyendas del Amazonas",
-      "citedBy": 2,
-      "foundational": false
-    },
-    {
-      "url": "http://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
+      "url": "https://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
       "title": "The Tukuna",
-      "citedBy": 2,
-      "foundational": false
-    },
-    {
-      "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers11-10/010020940.pdf",
-      "title": "Crenças e lendas do Uaupés",
       "citedBy": 2,
       "foundational": false
     },
@@ -264,20 +242,14 @@
       "foundational": false
     },
     {
-      "url": "https://www.gutenberg.org/ebooks/2591",
-      "title": "Grimms' Fairy Tales («Hansel and Gretel»), Project Gutenberg n.º 2591",
+      "url": "https://publicacoes.unifal-mg.edu.br/revistas/index.php/entreparenteses/article/view/2383",
+      "title": "El mito Curupira en las narraciones orales de Boa Vista, una comunidad ribereña ubicada en el municipio de Nova Timboteua (PA)",
       "citedBy": 2,
       "foundational": false
     },
     {
       "url": "https://repositorio.utp.edu.co/server/api/core/bitstreams/2971b111-ab2d-44a1-a880-5070d9359a86/content",
-      "title": "Análisis de los relatos de Fernando Solarte Lindo",
-      "citedBy": 2,
-      "foundational": false
-    },
-    {
-      "url": "https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Tanimuca.pdf",
-      "title": "Tanimuca: otras denominaciones de la lengua y el pueblo",
+      "title": "Caracterización temática de la narrativa infantil colombiana (1980-2005)",
       "citedBy": 2,
       "foundational": false
     }
@@ -292,7 +264,7 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "OK",
-      "citedBy": 3
+      "citedBy": 4
     },
     {
       "url": "https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/",
@@ -303,7 +275,7 @@
       "restricted": true,
       "homepageRedirect": false,
       "verdict": "RESTRINGIDA",
-      "citedBy": 3
+      "citedBy": 4
     },
     {
       "url": "https://repositorio.unal.edu.co/items/1a723217-91df-44a2-b7bc-46be3abfc030",
@@ -448,7 +420,7 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "CERTIFICADO_INVALIDO",
-      "citedBy": 2
+      "citedBy": 4
     },
     {
       "url": "https://revistaselectronicas.ujaen.es/index.php/blo/article/view/4768",
@@ -459,19 +431,18 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "OK",
-      "citedBy": 1
+      "citedBy": 2
     },
     {
       "url": "https://dialnet.unirioja.es/descarga/articulo/7528487.pdf",
-      "status": null,
-      "finalUrl": null,
-      "error": "Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW",
-      "cert": false,
-      "ok": false,
+      "status": 206,
+      "finalUrl": "https://dialnet.unirioja.es/descarga/articulo/7528487.pdf",
+      "captcha": false,
+      "ok": true,
       "restricted": false,
       "homepageRedirect": false,
-      "verdict": "SIN_RESPUESTA",
-      "citedBy": 2
+      "verdict": "OK",
+      "citedBy": 4
     },
     {
       "url": "https://www2.hum.unrc.edu.ar/ojs/index.php/Coord/article/view/2111",
@@ -482,7 +453,7 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "OK",
-      "citedBy": 1
+      "citedBy": 2
     },
     {
       "url": "https://documents1.worldbank.org/curated/en/228711468090584434/pdf/396680PE0Mitos0y0leyendas01PUBLIC1.pdf",
@@ -507,93 +478,14 @@
       "citedBy": 1
     },
     {
-      "url": "https://cendoc.caaap.org.pe/cgi-bin/koha/opac-detail.pl?biblionumber=2824&shelfbrowse_itemnumber=3655",
-      "status": 200,
-      "finalUrl": "https://cendoc.caaap.org.pe/cgi-bin/koha/opac-detail.pl?biblionumber=2824&shelfbrowse_itemnumber=3655",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
-      "citedBy": 1
-    },
-    {
-      "url": "https://www.musigrafia.org/acontratiempo/files/ediciones/revista-13/pdf/Investigacion_sobre_musicas_indigenas_Parte1.pdf",
-      "status": 503,
-      "finalUrl": "https://musigrafia.org/acontratiempo/files/ediciones/revista-13/pdf/Investigacion_sobre_musicas_indigenas_Parte1.pdf",
-      "via": "curl",
-      "cert": true,
-      "ok": false,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "LIMITE_O_TEMPORAL",
-      "citedBy": 3
-    },
-    {
-      "url": "https://es.scribd.com/document/871355828/u-821011",
+      "url": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/73b9ac2e-6ba2-40fc-871e-5060dd4c8906/content",
       "status": 206,
-      "finalUrl": "https://es.scribd.com/document/871355828/u-821011",
+      "finalUrl": "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/73b9ac2e-6ba2-40fc-871e-5060dd4c8906/content",
       "captcha": false,
       "ok": true,
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "OK",
-      "citedBy": 1
-    },
-    {
-      "url": "https://bibliotecanacional.gov.co/es-co/actividades/Publicaciones%20sobre%20las%20Bibliotecas%20P%C3%BAblicas/Documents/ABC%20del%20Bibliotecario.pdf",
-      "status": 206,
-      "finalUrl": "https://www.bibliotecanacional.gov.co/es-co/actividades/Publicaciones%20sobre%20las%20Bibliotecas%20P%C3%BAblicas/Documents/ABC%20del%20Bibliotecario.pdf",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
-      "citedBy": 2
-    },
-    {
-      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D12",
-      "status": 206,
-      "finalUrl": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D12",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
-      "citedBy": 1
-    },
-    {
-      "url": "https://africa.si.edu/exhibitions/current-exhibitions/mami-wata/",
-      "status": 403,
-      "finalUrl": "https://africa.si.edu/exhibitions/current-exhibitions/mami-wata/",
-      "captcha": false,
-      "ok": false,
-      "restricted": true,
-      "homepageRedirect": false,
-      "verdict": "RESTRINGIDA",
-      "citedBy": 1
-    },
-    {
-      "url": "https://bicentenario.gob.pe/biblioteca/detalle-libro/voces-del-peru-memoria-y-tradicion-oral",
-      "status": null,
-      "finalUrl": null,
-      "error": "Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW",
-      "cert": false,
-      "ok": false,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "SIN_RESPUESTA",
-      "citedBy": 3
-    },
-    {
-      "url": "https://formacionenservicio.minedu.gob.pe/sifods/centro-recurso/2021/recursos-orientaciones-escolar/recursos-pedagogicos/primaria/materiales-estudiantes/cuadernos-trabajo/comunicacion-2020-6.pdf",
-      "status": 403,
-      "finalUrl": "https://formacionenservicio.minedu.gob.pe/sifods/centro-recurso/2021/recursos-orientaciones-escolar/recursos-pedagogicos/primaria/materiales-estudiantes/cuadernos-trabajo/comunicacion-2020-6.pdf",
-      "captcha": false,
-      "ok": false,
-      "restricted": true,
-      "homepageRedirect": false,
-      "verdict": "RESTRINGIDA",
       "citedBy": 1
     },
     {
@@ -619,7 +511,7 @@
       "citedBy": 1
     },
     {
-      "url": "http://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
+      "url": "https://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
       "status": 200,
       "finalUrl": "https://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
       "captcha": false,
@@ -638,7 +530,7 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "OK",
-      "citedBy": 2
+      "citedBy": 3
     },
     {
       "url": "https://www.amazonialatitude.com/2019/03/26/cobra-norato-a-educacao-do-heroi-pelo-rio/",
@@ -771,7 +663,7 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "OK",
-      "citedBy": 1
+      "citedBy": 2
     },
     {
       "url": "https://www.revistas.uneb.br/index.php/tabuleirodeletras/article/view/14805",
@@ -786,14 +678,13 @@
     },
     {
       "url": "https://periodicos.ufac.br/index.php/mui/article/download/6343/4220",
-      "status": null,
-      "finalUrl": null,
-      "error": "Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW",
-      "cert": false,
-      "ok": false,
+      "status": 200,
+      "finalUrl": "https://periodicos.ufac.br/index.php/mui/article/download/6343/4220",
+      "captcha": false,
+      "ok": true,
       "restricted": false,
       "homepageRedirect": false,
-      "verdict": "SIN_RESPUESTA",
+      "verdict": "OK",
       "citedBy": 1
     },
     {
@@ -808,7 +699,7 @@
       "citedBy": 1
     },
     {
-      "url": "http://www.etnolinguistica.org/biblio:reichel-1981-algunos",
+      "url": "https://www.etnolinguistica.org/biblio:reichel-1981-algunos",
       "status": 200,
       "finalUrl": "https://www.etnolinguistica.org/biblio:reichel-1981-algunos",
       "captcha": false,
@@ -904,7 +795,7 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "OK",
-      "citedBy": 2
+      "citedBy": 1
     },
     {
       "url": "https://web.archive.org/web/20240906143610/https://www.caaap.org.pe/Libros/2022/Hacia-la-tierra-sin-mal.pdf",
@@ -931,14 +822,13 @@
     },
     {
       "url": "https://www.ufac.br/ppehl/producoes/dissertacoes/DissertaoVersoFINAL.pdf",
-      "status": null,
-      "finalUrl": null,
-      "error": "Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW",
-      "cert": false,
-      "ok": false,
+      "status": 200,
+      "finalUrl": "https://www.ufac.br/ppehl/producoes/dissertacoes/DissertaoVersoFINAL.pdf",
+      "captcha": false,
+      "ok": true,
       "restricted": false,
       "homepageRedirect": false,
-      "verdict": "SIN_RESPUESTA",
+      "verdict": "OK",
       "citedBy": 1
     },
     {
@@ -953,29 +843,7 @@
       "citedBy": 1
     },
     {
-      "url": "https://books.google.com/books/about/Primitivos_relatos_contados_otra_vez.html?id=CDsYAAAAYAAJ",
-      "status": 200,
-      "finalUrl": "https://books.google.com.co/books/about/Primitivos_relatos_contados_otra_vez.html?id=CDsYAAAAYAAJ&redir_esc=y",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
-      "citedBy": 1
-    },
-    {
-      "url": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/6361/Antolog%C3%ADa%20literaria%204%20relatos%20amaz%C3%B3nicos.pdf?isAllowed=y&sequence=1",
-      "status": 206,
-      "finalUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/6361/Antolog%C3%ADa%20literaria%204%20relatos%20amaz%C3%B3nicos.pdf?isAllowed=y&sequence=1",
-      "captcha": true,
-      "ok": true,
-      "restricted": true,
-      "homepageRedirect": false,
-      "verdict": "RESTRINGIDA",
-      "citedBy": 1
-    },
-    {
-      "url": "https://bicentenario.gob.pe/exposiciones/amazonas/src/Capitulo9_El_chullachaqui.pdf",
+      "url": "https://repositorio.utp.edu.co/server/api/core/bitstreams/2971b111-ab2d-44a1-a880-5070d9359a86/content",
       "status": null,
       "finalUrl": null,
       "error": "Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW",
@@ -984,78 +852,12 @@
       "restricted": false,
       "homepageRedirect": false,
       "verdict": "SIN_RESPUESTA",
-      "citedBy": 1
-    },
-    {
-      "url": "https://butantan.gov.br/bubutantan/conheca-a-historia-do-curupira-o-defensor-das-arvores-e-dos-animais",
-      "status": 403,
-      "finalUrl": "https://butantan.gov.br/bubutantan/conheca-a-historia-do-curupira-o-defensor-das-arvores-e-dos-animais",
-      "captcha": false,
-      "ok": false,
-      "restricted": true,
-      "homepageRedirect": false,
-      "verdict": "RESTRINGIDA",
-      "citedBy": 1
-    },
-    {
-      "url": "https://books.google.com/books/about/El_hombre_con_cola_de_le%C3%B3n.html?id=bYpsAAAAMAAJ",
-      "status": 200,
-      "finalUrl": "https://books.google.com.co/books/about/El_hombre_con_cola_de_le%C3%B3n.html?id=bYpsAAAAMAAJ&redir_esc=y",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
-      "citedBy": 1
-    },
-    {
-      "url": "https://repositorio.utp.edu.co/server/api/core/bitstreams/2971b111-ab2d-44a1-a880-5070d9359a86/content",
-      "status": 206,
-      "finalUrl": "https://repositorio.utp.edu.co/server/api/core/bitstreams/2971b111-ab2d-44a1-a880-5070d9359a86/content",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
       "citedBy": 2
     },
     {
-      "url": "https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Tanimuca.pdf",
-      "status": 206,
-      "finalUrl": "https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Tanimuca.pdf",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
-      "citedBy": 2
-    },
-    {
-      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0054%3Abook%3D1",
+      "url": "https://revistas.icanh.gov.co/index.php/rca/article/download/1609/1184",
       "status": 200,
-      "finalUrl": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0054%3Abook%3D1",
-      "captcha": false,
-      "ok": true,
-      "restricted": false,
-      "homepageRedirect": false,
-      "verdict": "OK",
-      "citedBy": 1
-    },
-    {
-      "url": "https://www.biblegateway.com/passage/?search=Genesis%201%2CGenesis%207-9&version=NRSVUE",
-      "status": 200,
-      "finalUrl": "https://www.biblegateway.com/passage/?search=Genesis%201%2CGenesis%207-9&version=NRSVUE",
-      "captcha": true,
-      "ok": true,
-      "restricted": true,
-      "homepageRedirect": false,
-      "verdict": "RESTRINGIDA",
-      "citedBy": 1
-    },
-    {
-      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0129%3Acard%3D507",
-      "status": 206,
-      "finalUrl": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0129%3Acard%3D507",
+      "finalUrl": "https://revistas.icanh.gov.co/index.php/rca/article/download/1609/1184",
       "captcha": false,
       "ok": true,
       "restricted": false,
@@ -1100,6 +902,18 @@
       "url": "https://www.scielo.br/j/sant/a/PGN6HrRSsC8ybV4QJgjHM6S/?lang=pt",
       "status": 200,
       "finalUrl": "https://www.scielo.br/j/sant/a/PGN6HrRSsC8ybV4QJgjHM6S/?lang=pt",
+      "via": "curl",
+      "cert": false,
+      "ok": true,
+      "restricted": false,
+      "homepageRedirect": false,
+      "verdict": "OK",
+      "citedBy": 1
+    },
+    {
+      "url": "https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Tanimuca.pdf",
+      "status": 206,
+      "finalUrl": "https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Tanimuca.pdf",
       "captcha": false,
       "ok": true,
       "restricted": false,
@@ -1119,50 +933,25 @@
       "citedBy": 1
     }
   ],
-  "blockers": [
-    "el-hijo-de-tuhixana: COMPARATIVA_SIN_PARALELO_EN_SIMILITUDES:Perseus (Hesíodo, Homero…) https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0054%3Abook%3D1",
-    "el-hijo-de-tuhixana: COMPARATIVA_SIN_PARALELO_EN_SIMILITUDES:Perseus (Hesíodo, Homero…) https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0129%3Acard%3D507"
-  ],
+  "blockers": [],
   "warnings": [
-    "el-chuy-achaque: 7 fuentes, meta 8",
     "el-cotomachaco: HTTP_SIN_TLS http://www.scielo.org.co/pdf/racefn/v42n162/0370-3908-racefn-42-162-00080.pdf",
-    "madre-de-playa: DOMINIO_DEBIL https://es.scribd.com/document/871355828/u-821011",
-    "la-cobra-grande: HTTP_SIN_TLS http://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
-    "la-curupira: HTTP_SIN_TLS http://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
-    "la-curupira: HTTP_SIN_TLS http://www.etnolinguistica.org/biblio:reichel-1981-algunos",
     "RESTRINGIDA https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/ (200, captcha): no se puede verificar automáticamente; comprobar a mano",
-    "RESTRINGIDA https://africa.si.edu/exhibitions/current-exhibitions/mami-wata/ (403): no se puede verificar automáticamente; comprobar a mano",
-    "RESTRINGIDA https://formacionenservicio.minedu.gob.pe/sifods/centro-recurso/2021/recursos-orientaciones-escolar/recursos-pedagogicos/primaria/materiales-estudiantes/cuadernos-trabajo/comunicacion-2020-6.pdf (403): no se puede verificar automáticamente; comprobar a mano",
-    "RESTRINGIDA https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/6361/Antolog%C3%ADa%20literaria%204%20relatos%20amaz%C3%B3nicos.pdf?isAllowed=y&sequence=1 (206, captcha): no se puede verificar automáticamente; comprobar a mano",
-    "RESTRINGIDA https://butantan.gov.br/bubutantan/conheca-a-historia-do-curupira-o-defensor-das-arvores-e-dos-animais (403): no se puede verificar automáticamente; comprobar a mano",
-    "RESTRINGIDA https://www.biblegateway.com/passage/?search=Genesis%201%2CGenesis%207-9&version=NRSVUE (200, captcha): no se puede verificar automáticamente; comprobar a mano",
-    "LIMITE_O_TEMPORAL https://www.musigrafia.org/acontratiempo/files/ediciones/revista-13/pdf/Investigacion_sobre_musicas_indigenas_Parte1.pdf (503): el servidor limita las peticiones, no es una fuente caída; comprobar a mano y espaciar la auditoría",
-    "SIN_RESPUESTA https://dialnet.unirioja.es/descarga/articulo/7528487.pdf (Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW): el servidor no contestó; comprobar a mano antes de retirarla, citada en el-chuy-achaque, yacuruna",
-    "SIN_RESPUESTA https://bicentenario.gob.pe/biblioteca/detalle-libro/voces-del-peru-memoria-y-tradicion-oral (Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW): el servidor no contestó; comprobar a mano antes de retirarla, citada en madre-de-playa, chuya-chaqui, el-hijo-de-tuhixana",
-    "SIN_RESPUESTA https://periodicos.ufac.br/index.php/mui/article/download/6343/4220 (Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW): el servidor no contestó; comprobar a mano antes de retirarla, citada en la-curupira",
     "SIN_RESPUESTA https://web.archive.org/web/20240906143610/https://www.caaap.org.pe/Libros/2022/Hacia-la-tierra-sin-mal.pdf (Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW): el servidor no contestó; comprobar a mano antes de retirarla, citada en yacuruna",
-    "SIN_RESPUESTA https://www.ufac.br/ppehl/producoes/dissertacoes/DissertaoVersoFINAL.pdf (Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW): el servidor no contestó; comprobar a mano antes de retirarla, citada en yacuruna",
-    "SIN_RESPUESTA https://bicentenario.gob.pe/exposiciones/amazonas/src/Capitulo9_El_chullachaqui.pdf (Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW): el servidor no contestó; comprobar a mano antes de retirarla, citada en chuya-chaqui",
-    "misma URL con fichas bibliográficas distintas: https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf → {\"title\":\"El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico Etnográfico de Colombia; sección «Folclor. Versiones de algunas leyendas: El bufeo»\",\"author\":\"José Joaquín Montes Giraldo (Instituto Caro y Cuervo, Noticias Culturales n.º 179)\",\"year\":1975,\"type\":\"transcripción de testimonios orales en boletín institucional\"} | {\"title\":\"El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico Etnográfico de Colombia; sección «Folclor. Versiones de algunas leyendas: El cotomachaco»\",\"author\":\"José Joaquín Montes Giraldo (Instituto Caro y Cuervo, Noticias Culturales n.º 179)\",\"year\":1975,\"type\":\"transcripción de testimonios orales en boletín institucional\"} | {\"title\":\"Folclor: versiones de algunas leyendas (Noticias Culturales n.º 179, pp. 6-9)\",\"author\":\"José Joaquín Montes Giraldo, Instituto Caro y Cuervo\",\"year\":1975,\"type\":\"boletín institucional con transcripciones orales\"}",
-    "misma URL con fichas bibliográficas distintas: https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/ → {\"title\":\"El bufeo: Muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, 1981)\",\"author\":\"Liz Castro, Portal de lenguas y literaturas de Colombia, Instituto Caro y Cuervo\",\"year\":2024,\"type\":\"reseña institucional de un corpus de literatura oral\"} | {\"title\":\"El bufeo: muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, Muestra de literatura oral en Leticia, Amazonas, Instituto Caro y Cuervo, 1981)\",\"author\":\"Liz Castro, Portal de lenguas y literaturas de Colombia, Instituto Caro y Cuervo\",\"year\":2024,\"type\":\"reseña institucional de una recopilación de literatura oral\"}",
+    "SIN_RESPUESTA https://repositorio.utp.edu.co/server/api/core/bitstreams/2971b111-ab2d-44a1-a880-5070d9359a86/content (Command failed: curl -L -sS -k --max-time 30 --connect-timeout 10 -A Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleW): el servidor no contestó; comprobar a mano antes de retirarla, citada en el-hijo-de-tuhixana, el-descubrimiento-del-agua-y-los-peces",
+    "misma URL con fichas bibliográficas distintas: https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf → {\"title\":\"El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico Etnográfico de Colombia; sección «Folclor. Versiones de algunas leyendas: El bufeo»\",\"author\":\"José Joaquín Montes Giraldo (Instituto Caro y Cuervo, Noticias Culturales n.º 179)\",\"year\":1975,\"type\":\"transcripción de testimonios orales en boletín institucional\"} | {\"title\":\"El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico Etnográfico de Colombia; sección «Folclor. Versiones de algunas leyendas: El cotomachaco»\",\"author\":\"José Joaquín Montes Giraldo (Instituto Caro y Cuervo, Noticias Culturales n.º 179)\",\"year\":1975,\"type\":\"transcripción de testimonios orales en boletín institucional\"} | {\"title\":\"Noticias Culturales n.º 179: «El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico-Etnográfico de Colombia»\",\"author\":\"Instituto Caro y Cuervo\",\"year\":1975,\"type\":\"boletín institucional con transcripciones fonéticas de hablantes de Leticia\"} | {\"title\":\"Folclor: versiones de algunas leyendas (Noticias Culturales n.º 179, pp. 6-9)\",\"author\":\"José Joaquín Montes Giraldo, Instituto Caro y Cuervo\",\"year\":1975,\"type\":\"boletín institucional con transcripciones orales\"}",
+    "misma URL con fichas bibliográficas distintas: https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/ → {\"title\":\"El bufeo: Muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, 1981)\",\"author\":\"Liz Castro, Portal de lenguas y literaturas de Colombia, Instituto Caro y Cuervo\",\"year\":2024,\"type\":\"reseña institucional de un corpus de literatura oral\"} | {\"title\":\"El bufeo: muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, Muestra de literatura oral en Leticia, Amazonas, Instituto Caro y Cuervo, 1981)\",\"author\":\"Liz Castro, Portal de lenguas y literaturas de Colombia, Instituto Caro y Cuervo\",\"year\":2024,\"type\":\"reseña institucional de una recopilación de literatura oral\"} | {\"title\":\"El bufeo: muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, Muestra de literatura oral en Leticia, Amazonas, 1981)\",\"author\":\"Liz Castro (Portal de lenguas y literaturas de Colombia, Instituto Caro y Cuervo)\",\"year\":2024,\"type\":\"reseña institucional\"}",
     "misma URL con fichas bibliográficas distintas: https://www.tropenboscol.org/app/data/uploads/sites/15/Col-Series-4-1.pdf → {\"title\":\"El manejo del mundo: naturaleza y sociedad entre los Yukuna de la Amazonia colombiana\",\"author\":\"María Clara van der Hammen (Tropenbos Colombia, Estudios en la Amazonia colombiana IV)\",\"year\":1992,\"type\":\"etnografía\"} | {\"title\":\"El manejo del mundo. Naturaleza y sociedad entre los Yukuna de la Amazonia colombiana\",\"author\":\"María Clara van der Hammen\",\"year\":1992,\"type\":\"monografía etnográfica (Tropenbos Colombia, 2.ª edición, julio de 1992; 1.ª edición ISOR, Utrecht, 1991)\"}",
     "misma URL con fichas bibliográficas distintas: https://etnolinguistica.wdfiles.com/local--files/biblio%3Animuendaju-1952-tukuna/nimuendaju_1952_tukuna.pdf → {\"title\":\"The Tukuna\",\"author\":\"Curt Nimuendajú (trad. William D. Hohenthal; ed. Robert H. Lowie), University of California Publications in American Archaeology and Ethnology 45\",\"year\":1952,\"type\":\"etnografía clásica\"} | {\"title\":\"The Tukuna, «The Acquisition of Cultivated Plants», pp. 130-131, y nota sobre el vatu del venado, p. 22\",\"author\":\"Curt Nimuendajú; edición de Robert H. Lowie; traducción de William D. Hohenthal\",\"year\":1952,\"type\":\"monografía etnográfica\"} | {\"title\":\"The Tukuna, «The Errors of Cimidyue», pp. 148-150 (PDF completo en la Biblioteca Digital Curt Nimuendajú)\",\"author\":\"Curt Nimuendajú; edición de Robert H. Lowie; traducción de William D. Hohenthal\",\"year\":1952,\"type\":\"monografía etnográfica, fuente primaria\"}",
     "misma URL con fichas bibliográficas distintas: https://www.omacha.org/descargas/2025/Libro-Raices-sumergidas-web.pdf → {\"title\":\"Raíces sumergidas: historias ancestrales de la Amazonia\",\"author\":\"Fundación Omacha (comp. Diana Trujillo, Pablo Alonso Ramos-Henao, Mario Guillermo Guerrero), con sabedores tikuna de Puerto Nariño\",\"year\":2025,\"type\":\"compilación comunitaria de relatos\"} | {\"title\":\"Raíces sumergidas. Historias ancestrales de la Amazonia, «Jau y el robo de las semillas», pp. 38-39\",\"author\":\"Fundación Omacha; comps. Diana Trujillo, Pablo Alonso Ramos-Henao y Mario Guillermo Guerrero; abuelos sabedores de Puerto Nariño\",\"year\":2025,\"type\":\"compilación de tradición oral, fuente primaria\"}",
-    "misma URL con fichas bibliográficas distintas: https://www.letras.ufmg.br/padrao_cms/documentos/profs/romulo/LibroLoreto1.pdf → {\"title\":\"Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto), para la Sección de Folklore y Artes Populares del Ministerio de Educación Pública\",\"author\":\"Alumnos del 3.er año de Media del Colegio Nacional «Padre Agustín López»; transcripción alojada por Rômulo Monte Alto (Faculdade de Letras, UFMG)\",\"year\":1947,\"type\":\"composiciones escolares de folklore, transcritas del manuscrito\"} | {\"title\":\"Trabajos folklóricos de Requena (Loreto): «La cocha de “Santa Tereza”» (transcripción)\",\"author\":\"Alumnos de 3.er año de Media del Colegio Nacional «Padre Agustín López» de Requena; transcripción publicada por Rômulo Monte Alto (UFMG)\",\"year\":1947,\"type\":\"composiciones escolares para la Sección de Folklore y Artes Populares del Ministerio de Educación Pública del Perú\"}",
+    "misma URL con fichas bibliográficas distintas: https://www.letras.ufmg.br/padrao_cms/documentos/profs/romulo/LibroLoreto1.pdf → {\"title\":\"Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto), para la Sección de Folklore y Artes Populares del Ministerio de Educación Pública\",\"author\":\"Alumnos del 3.er año de Media del Colegio Nacional «Padre Agustín López»; transcripción alojada por Rômulo Monte Alto (Faculdade de Letras, UFMG)\",\"year\":1947,\"type\":\"composiciones escolares de folklore, transcritas del manuscrito\"} | {\"title\":\"Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto): «El Viajero y la Sirena» y «El albañil i la sirena»\",\"author\":\"César A. Díaz Núñez, Juvencio Vela y otros alumnos del 3.er año de Media; transcripción publicada por Rômulo Monte Alto (UFMG)\",\"year\":1947,\"type\":\"composiciones escolares de folklore reunidas para el Ministerio de Educación del Perú (transcripción en PDF)\"} | {\"title\":\"Trabajos folklóricos de Requena (Loreto): «La cocha de “Santa Tereza”» (transcripción)\",\"author\":\"Alumnos de 3.er año de Media del Colegio Nacional «Padre Agustín López» de Requena; transcripción publicada por Rômulo Monte Alto (UFMG)\",\"year\":1947,\"type\":\"composiciones escolares para la Sección de Folklore y Artes Populares del Ministerio de Educación Pública del Perú\"} | {\"title\":\"Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto): «El Chullacaqui (pies deciguales)» y «El Chulla-chaqui»\",\"author\":\"Alumnos del 3.er año de Media (Rodríguez M., Felix Rengifo y otros); transcripción publicada por Rômulo Monte Alto (UFMG)\",\"year\":1947,\"type\":\"composiciones escolares de folklore reunidas para el Ministerio de Educación del Perú (transcripción en PDF)\"}",
     "misma URL con fichas bibliográficas distintas: https://babel.banrepcultural.org/digital/collection/p17054coll10/id/1335/ → {\"title\":\"Historias de los abuelos de Moruapü. Versión libre en castellano («El venado y la historia de los alimentos», pp. 47-49; «El hombre Gau», pp. 51-54)\",\"author\":\"Hugo Armando Camacho González, Federico José Huaines Arara y Sergio Ramos del Águila (comps.); Asociación Eware\",\"year\":2000,\"type\":\"compilación de relatos tikuna grabados en talleres del ICBF, con narrador, lugar y fecha por relato\"} | {\"title\":\"Historias de los abuelos de Moruapü (versión libre en castellano)\",\"author\":\"Hugo Armando Camacho González, Federico José Huaines Arara y Sergio Ramos del Águila (compiladores)\",\"year\":2000,\"type\":\"antología de narraciones tikuna con narradores nombrados (Bogotá, Imprenta Nacional; Biblioteca Virtual del Banco de la República)\"}",
     "misma URL con fichas bibliográficas distintas: https://repositorio.unal.edu.co/handle/unal/3113 → {\"title\":\"Religión y mitología de los uitotos, primera parte (caps. II y III)\",\"author\":\"Konrad Theodor Preuss; traducción de Ricardo Castañeda Nieto\",\"year\":1994,\"type\":\"etnografía clásica (original alemán de 1921-1923), Universidad Nacional de Colombia\"} | {\"title\":\"Religión y mitología de los uitotos, primera parte (cap. III, «Análisis de los mitos»)\",\"author\":\"Konrad Theodor Preuss; traducción de Ricardo Castañeda Nieto\",\"year\":1994,\"type\":\"etnografía clásica (original alemán de 1921-1923), Universidad Nacional de Colombia\"}",
-    "misma URL con fichas bibliográficas distintas: https://www.gutenberg.org/ebooks/2591 → {\"title\":\"Grimms' Fairy Tales («Hansel and Gretel»), Project Gutenberg n.º 2591\",\"author\":\"Jacob y Wilhelm Grimm\",\"year\":1812,\"type\":\"colección de cuentos populares europeos\"} | {\"title\":\"Grimms' Fairy Tales: Hansel and Gretel\",\"author\":\"Jacob y Wilhelm Grimm; Project Gutenberg\",\"year\":1812,\"type\":\"fuente folclórica comparativa directa\"}",
-    "misma URL con fichas bibliográficas distintas: https://repositorio.utp.edu.co/server/api/core/bitstreams/2971b111-ab2d-44a1-a880-5070d9359a86/content → {\"title\":\"Análisis de los relatos de Fernando Solarte Lindo\",\"author\":\"Universidad Tecnológica de Pereira\",\"type\":\"tesis académica sobre mediación y clasificación literaria\"} | {\"title\":\"Caracterización temática de la narrativa infantil colombiana (1980-2005)\",\"author\":\"Ilene Rojas García y Giohanny Olave Arias\",\"year\":2007,\"type\":\"tesis de licenciatura en Español y Literatura, Universidad Tecnológica de Pereira\"}",
-    "misma URL con fichas bibliográficas distintas: https://mng.mincultura.gov.co/areas/poblaciones/APP-de-lenguas-nativas/Documents/Tanimuca.pdf → {\"title\":\"Tanimuca: otras denominaciones de la lengua y el pueblo\",\"author\":\"Ministerio de Cultura de Colombia\",\"type\":\"perfil lingüístico institucional\"} | {\"title\":\"Tanimuca (perfil de la lengua y el pueblo)\",\"author\":\"Ministerio de Cultura de Colombia, programa de lenguas nativas\",\"type\":\"perfil sociolingüístico institucional\"}",
+    "misma URL con fichas bibliográficas distintas: https://publicacoes.unifal-mg.edu.br/revistas/index.php/entreparenteses/article/view/2383 → {\"title\":\"El mito Curupira en las narraciones orales de Boa Vista, una comunidad ribereña ubicada en el municipio de Nova Timboteua (PA)\",\"author\":\"Gracineia dos Santos Araújo y Sara Cristina Linhares Aleixo\",\"year\":2025,\"type\":\"artículo académico con cinco relatos orales transcritos (Revista (Entre Parênteses), Universidade Federal de Alfenas, v. 14, n. 1, pp. 1-18)\"} | {\"title\":\"El mito Curupira en las narraciones orales de Boa Vista, una comunidad ribereña de Nova Timboteua (Pará)\",\"author\":\"Gracineia dos Santos Araújo y Sara Cristina Linhares Aleixo\",\"year\":2025,\"type\":\"artículo académico con cinco relatos orales transcritos (Revista (Entre Parênteses), UNIFAL, v. 14, n. 1)\"}",
     "redirige: https://repository.udistrital.edu.co/handle/11349/3448 → https://repository.udistrital.edu.co/items/1eb12dd0-635a-4d5a-8c54-5ff1103b74db",
-    "redirige: https://bibliotecanacional.gov.co/es-co/actividades/Publicaciones%20sobre%20las%20Bibliotecas%20P%C3%BAblicas/Documents/ABC%20del%20Bibliotecario.pdf → https://www.bibliotecanacional.gov.co/es-co/actividades/Publicaciones%20sobre%20las%20Bibliotecas%20P%C3%BAblicas/Documents/ABC%20del%20Bibliotecario.pdf",
-    "redirige: http://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna → https://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
     "redirige: https://repositorio.unal.edu.co/handle/unal/3113 → https://repositorio.unal.edu.co/items/91460ff5-0659-449c-8549-28883bbb4cb0",
-    "redirige: http://www.etnolinguistica.org/biblio:reichel-1981-algunos → https://www.etnolinguistica.org/biblio:reichel-1981-algunos",
     "redirige: https://biblio.etnolinguistica.org/nimuendaju_1952_tukuna → https://www.etnolinguistica.org/biblio:nimuendaju-1952-tukuna",
     "redirige: https://www.revistas.usp.br/ra/article/download/132073/129513/256170 → https://revistas.usp.br/ra/pt_BR/article/download/132073/129513/256170",
-    "redirige: https://amazoniaperuana.caaap.org.pe/index.php/amazoniaperuana/article/view/301 → https://amazoniaperuana.caaap.org.pe/index.php/amazoniaperuana/es/article/view/301",
-    "redirige: https://books.google.com/books/about/Primitivos_relatos_contados_otra_vez.html?id=CDsYAAAAYAAJ → https://books.google.com.co/books/about/Primitivos_relatos_contados_otra_vez.html?id=CDsYAAAAYAAJ&redir_esc=y",
-    "redirige: https://books.google.com/books/about/El_hombre_con_cola_de_le%C3%B3n.html?id=bYpsAAAAMAAJ → https://books.google.com.co/books/about/El_hombre_con_cola_de_le%C3%B3n.html?id=bYpsAAAAMAAJ&redir_esc=y"
+    "redirige: https://amazoniaperuana.caaap.org.pe/index.php/amazoniaperuana/article/view/301 → https://amazoniaperuana.caaap.org.pe/index.php/amazoniaperuana/es/article/view/301"
   ]
 }

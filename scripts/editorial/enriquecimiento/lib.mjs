@@ -551,6 +551,9 @@ export async function connect(options) {
 }
 
 export async function resolveCommunity(client, slug, options = {}) {
+  // Una ficha puede no tener comunidad (el-hada-de-los-canaverales, D1): con
+  // `--comunidad=sin-comunidad` el kit trabaja sobre las que tienen community_id nulo.
+  if (slug === "sin-comunidad") return { id: null, name: "sin comunidad", slug, region_slug: String(options.region || ""), myth_count: null };
   const r = await client.query(
     `SELECT c.id, c.name, c.slug, r.slug AS region_slug,
             (SELECT COUNT(*)::int FROM myths m WHERE m.community_id = c.id) AS myth_count
@@ -577,7 +580,7 @@ export async function loadDbMyths(client, communityId) {
             e.leccion AS e_leccion, e.similitudes AS e_similitudes, e.content AS e_content,
             e.updated_at AS editorial_updated_at
      FROM myths m LEFT JOIN editorial_myths e ON e.source_myth_id = m.id
-     WHERE m.community_id = $1 ORDER BY m.slug`,
+     WHERE m.community_id IS NOT DISTINCT FROM $1 ORDER BY m.slug`,
     [communityId],
   );
   return r.rows.map((row) => ({
