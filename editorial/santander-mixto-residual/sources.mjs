@@ -270,6 +270,51 @@ export const santanderMixtoResidualSources = {
     limitation:
       "Historia editorial; no trata el contenido del volumen de Otero ni menciona esta pieza.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  cuelloDiseno2014: source({
+    title: "Diseño y producción del libro: Leyendas de tradición rural y urbana de Ocaña, Norte de Santander",
+    author: "Arlyd Marisol Monterrosa Cuello y Keyla Melissa Guillin Acosta (Universidad Francisco de Paula Santander Ocaña)",
+    year: 2014,
+    type: "trabajo de grado",
+    url: "https://repositorioinstitucional.ufpso.edu.co/handle/20.500.14167/2785",
+    summary:
+      "Proyecto de libro para preservar las leyendas rurales y urbanas de Ocaña, la ciudad donde el libro de 2004 sitúa al ermitaño.",
+    limitation:
+      "Consultado sólo por su ficha institucional; no se pudo comprobar si nombra al ermitaño, y no prueba una versión oral anterior a 2004.",
+  }),
+  claroDesarrollo2018: source({
+    title: "Desarrollo de un software educativo de mitos y leyendas para los estudiantes de tercero primaria del Instituto Técnico Industrial Lucio Pabón Núñez, sede Marabel, en Ocaña",
+    author: "Erika Alexandra Rojas Claro y Angela Viviana Verano Yañez (Universidad Francisco de Paula Santander Ocaña)",
+    year: 2018,
+    type: "trabajo de grado",
+    url: "https://repositorioinstitucional.ufpso.edu.co/handle/20.500.14167/1529",
+    summary:
+      "Uso escolar de los mitos y leyendas de Ocaña en un programa multimedia para tercero de primaria: contexto local del relato.",
+    limitation:
+      "Consultado sólo por su ficha institucional; trata la enseñanza de leyendas ocañeras en general, no este ermitaño.",
+  }),
+  atribuidocondenado1635: source({
+    title: "El condenado por desconfiado",
+    author: "Tirso de Molina (atribuido), ed. digital de Francisco García (Duke University)",
+    year: 1635,
+    type: "comedia teológica del Siglo de Oro",
+    url: "https://people.duke.edu/~garci/garcitextos/MOLINA-TD/Condenado-desconfiado/Condenado-desconfiado.html.bak",
+    summary:
+      "El ermitaño Paulo, que se condena por no aceptar que el rufián Enrico se salve arrepintiéndose al final: el paralelo más cercano del origen del ermitaño en Similitudes.",
+    limitation:
+      "Trata el motivo del ermitaño resentido contra la salvación ajena, no este relato; texto literario español.",
+  }),
+  sedelibro: source({
+    title: "El libro del Pueblo de Dios: Evangelio según san Mateo, capítulo 20",
+    author: "Libreria Editrice Vaticana (Santa Sede)",
+    type: "texto bíblico",
+    url: "https://www.vatican.va/archive/ESL0506/__PUU.HTM",
+    summary:
+      "La parábola de los obreros de la viña y la queja de los que trabajaron toda la jornada contra los de la última hora, citada en Similitudes.",
+    limitation:
+      "Trata el motivo, no este relato; se cita como paralelo.",
+  }),
 };
 
 const sourceKeysBySlug = {

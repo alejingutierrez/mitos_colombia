@@ -268,6 +268,195 @@ export const piedecuestaLegendaryAccountsSources = {
     limitation:
       "Enciclopedia colaborativa: nunca como fuente clave. Sus datos de 1854-1855 remiten a la Gaceta Oficial, que no se abrió; sirven para orientar una verificación, no para escribir.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  uISCronicas2012: source({
+    title: "Crónicas y romances (Biblioteca Mínima Santandereana)",
+    author: "Vicente Arenas Mantilla; Ediciones UIS",
+    year: 2012,
+    type: "página de catálogo de editorial universitaria",
+    url: "https://ediciones.uis.edu.co/index.php/publicacionesuis/catalog/book/128",
+    summary:
+      "Es la obra de la que más probablemente procede el relato, narrado en primera persona por un piedecuestano. El catálogo describe el libro como cuadros de costumbres y «hechos curiosos» de Piedecuesta, Lebrija y Bucaramanga y enumera quince crónicas, entre ellas «El cerro de los compadres», «El correo de las brujas» y «Una librería piedecuestana». Fija editorial, colección e ISBN 978-958-8777-15-3.",
+    limitation:
+      "«La descarga de datos todavía no está disponible»: no hay texto. Ninguna crónica del índice lleva el nombre de Cantera, así que la atribución no está comprobada. El servidor tiene un certificado TLS incompleto.",
+  }),
+  martinezProyecto2023: source({
+    title: "Proyecto de intervención urbana y artística «La Cantera vive» en Piedecuesta, Santander",
+    author: "Giovanny Jaimes Martínez, revista Documenta (Universidad Antonio Nariño, Facultad de Artes), vol. I, año 1",
+    year: 2023,
+    type: "ensayo académico de aula",
+    url: "https://revistas.uan.edu.co/index.php/documenta/article/download/1717/1458/6216",
+    summary:
+      "Es la única fuente abierta que habla de una «leyenda de la Cantera». A partir del documento «La Cantera vive» de Pinzón (1995-2010) explica que el cerro fue decisivo en el nacimiento de Piedecuesta, que de allí salieron piedras y barro para las primeras casas y la piedra de la fachada y el atrio de la iglesia de San Francisco Javier, y que brotaban de él fuentes de agua. Sitúa el cerro a seis cuadras del parque La Libertad.",
+    limitation:
+      "Es un trabajo de grado en formulación y cita a Pinzón de segunda mano; no cuenta la historia de la niña ni de Arnefo. Trata el cerro, no este relato.",
+  }),
+  bucaramangaCantera2013: source({
+    title: "La Cantera en Piedecuesta estrena virgen, atrio, plazoleta, mirador y senderos para convertirse en Parque Metropolitano",
+    author: "Área Metropolitana de Bucaramanga",
+    year: 2013,
+    type: "boletín institucional",
+    url: "https://www.amb.gov.co/la-cantera-en-piedecuesta-estrena-virgen-atrio-plazoleta-mirador-y-senderos-para-convertirse-en-parque-metropolitano/",
+    summary:
+      "Confirma el lugar del relato: el cerro de la Cantera es «el cerro tutelar de Piedecuesta», con una Virgen visible desde todo el municipio, ruta de viacrucis y mirador, y se adecuó como Parque Metropolitano «El Cerro de la Cantera». Es el cerro que el relato dice que se ve desde la plaza.",
+    limitation:
+      "Boletín sin autor individual; el año se infiere de la inauguración de la obra y no está impreso en la página. No menciona leyendas. Trata el lugar, no este relato.",
+  }),
+  araqueVirgen2025: source({
+    title: "La Virgen del Cerro de La Cantera de Piedecuesta volvió a brillar",
+    author: "Milton Velosa Araque, Vanguardia",
+    year: 2025,
+    type: "artículo de prensa regional",
+    url: "https://www.vanguardia.com/area-metropolitana/piedecuesta/2025/04/13/la-virgen-del-cerro-de-la-cantera-de-piedecuesta-volvio-a-brillar/",
+    summary:
+      "Documenta el uso religioso actual del cerro: la restauración de la Virgen de bronce del escultor Juan José Cobos tras trece años, la devoción de los feligreses que la llaman madre protectora del municipio y el cálculo de unos treinta mil visitantes ese año.",
+    limitation:
+      "Nota de actualidad sin contenido histórico ni legendario. Trata el lugar, no este relato.",
+  }),
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II, sección 19: Juan de Dios Arias, «Folclor santandereano» (1954), «Lagunas encantadas», folios 135-138",
+    author: "Eugenia Villa Posse (compiladora), IADAP, Quito",
+    year: 1993,
+    type: "antología institucional con obra de folclor regional",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Da el primer paralelo santandereano de un paisaje nacido de un choque en tiempos de la Conquista: el Socorro está edificado sobre una laguna donde los indios arrojaron sus tesoros; los conquistadores la secaron con 400 arrobas de sal y quedó reducida a dos vigas de oro, y tocarlas derrumbaría la ciudad. Recoge también la laguna de San Mateo en Bucaramanga y la del Peñón de la Luchata en Galán.",
+    limitation:
+      "Trata lagunas, no cerros, y ninguna leyenda de Piedecuesta. Trata el motivo, no este relato.",
+  }),
+  compiladoraMitos19932: source({
+    title: "Mitos y leyendas de Colombia, tomo III, sección 33: Javier Ocampo López, «Mitos colombianos» (1988), «Furatena y las esmeraldas de Muzo», pp. 153-155",
+    author: "Eugenia Villa Posse (compiladora), IADAP, Quito",
+    year: 1993,
+    type: "antología institucional con obra de síntesis",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Sostiene el segundo paralelo: Fura, Tena y su hijo Itoco terminan convertidos en los peñascos que se ven junto al río Minero o Zarbi, después de una historia de deseo, celos y muerte. Es el caso colombiano más conocido de una historia de violencia fijada en cerros que llevan el nombre de sus protagonistas.",
+    limitation:
+      "Es un mito muzo de Boyacá, reelaborado por Ocampo como síntesis. Trata el motivo, no este relato.",
+  }),
+  hOYCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo (Proyectos Especiales) / Periódico HOY, con patrocinio de la Universidad Autónoma de Colombia",
+    year: 2004,
+    type: "libro de ficción declarada («documentos imaginarios»)",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Se revisó porque otras fichas de Piedecuesta resultaron ser láminas casi literales de este libro. Sus cincuenta láminas son espantos y seres, no leyendas de lugar, y el texto completo no nombra a Cantera, Ardila ni Arnefo: queda descartado como origen.",
+    limitation:
+      "Es ficción de autor; se cita para dejar constancia de la búsqueda negativa. No trata este relato ni el motivo.",
+  }),
+  gonzalezHistoria2023: source({
+    title: "Historia de la provincia de Guane: origen, poblamiento y configuraciones sociales (1540-1795), pp. 91, 101 y 140",
+    author: "María Consuelo Moreno González",
+    year: 2023,
+    type: "tesis doctoral en historia (Universidad Industrial de Santander)",
+    url: "https://noesis.uis.edu.co/server/api/core/bitstreams/19c96599-1be0-4c77-a9d7-faf78fa4f1b5/content",
+    summary:
+      "Documenta el mundo indígena que el relato nombra. Macaregua figura entre los cincuenta y ocho caciques guanes que la hueste de Martín Galeano encontró en 1540 (p. 101), y su encomienda se repartió entre Juan Vicente y Juan Eslava (p. 140), apellido que reaparece entre las familias de la villa del relato. La tesis fija además el límite norte del territorio guane en la Mesa de los Santos y la Mesa de Ruitoque (p. 91), el escenario de la huida y de la danza de don Juan.",
+    limitation:
+      "Es historia de archivo: no menciona leyendas, ni a Guarguatí, ni a los Cachimbos, ni ninguna batalla contra Piedecuesta. Trata el contexto, no este relato.",
+  }),
+  bucaramangaPiedecuesta2024: source({
+    title: "Piedecuesta: historia, datos generales, economía (página municipal del Área Metropolitana de Bucaramanga)",
+    author: "Área Metropolitana de Bucaramanga",
+    year: 2024,
+    type: "reseña institucional del municipio",
+    url: "https://www.amb.gov.co/piedecuesta/",
+    summary:
+      "Fija la geografía y la cronología del lugar: Ruitoque al norte del municipio, la Mesa de Géridas, hoy de Los Santos, en el camino real hacia el Socorro, y el reconocimiento de Piedecuesta como villa en 1825 con su propio nombre. Permite ver que los parajes del relato son reales y que la «Villa de San Carlos» no consta.",
+    limitation:
+      "Página institucional sin autor ni fecha visibles (el año es el de la consulta). No menciona el relato, a los guanes ni ninguna batalla. Trata el lugar, no este relato.",
+  }),
+  compiladoraMitos19933: source({
+    title: "Mitos y leyendas de Colombia, tomo II, sección 17 «Varias regiones. Leyendas»: Enrique Otero D'Costa, «Leyendas» (1936), «Talabalí», folios 36-41",
+    author: "Eugenia Villa Posse (compiladora), IADAP, Quito",
+    year: 1993,
+    type: "antología institucional con obra de leyenda de autor",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620#page=34",
+    summary:
+      "Es la leyenda santandereana más cercana: Talabalí, guane del valle de Bucarica, paje del encomendero Juan de Velasco, huye al monte, se hace capitán de los yariguíes y, capturado, pelea en un palenque contra un español ante indios y blancos, y se deja matar por amor a la hija del encomendero. Da el modelo del duelo entre campeones de los dos bandos que el relato piedecuestano resuelve de otro modo.",
+    limitation:
+      "Es leyenda de autor, de ambiente del siglo XVI, sin cañones ni reconciliación final, y no nombra a Guarguatí ni a Piedecuesta. Trata el motivo, no este relato.",
+  }),
+  compiladoraMitos19934: source({
+    title: "Mitos y leyendas de Colombia, tomo II, sección 19: Juan de Dios Arias, «Folclor santandereano» (1954), «Lo que enseñan las cuevas», folios 141-142",
+    author: "Eugenia Villa Posse (compiladora), IADAP, Quito",
+    year: 1993,
+    type: "antología institucional con obra de folclor regional",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620#page=135",
+    summary:
+      "Recoge una «cueva del Indio» santandereana, probablemente cementerio indígena, donde se hallaron huesos, vasijas de barro y gargantillas de oro, y cuya leyenda cuenta que un codicioso murió flechado por los indios al intentar robar sus tesoros. Es el antecedente del túnel de El Clarinete, «la Cueva del Indio», donde Guarguatí y sus hombres trabajan años.",
+    limitation:
+      "La cueva de Arias está en otra comarca santandereana y no es mina ni refugio de caciques huidos. Trata el motivo, no este relato.",
+  }),
+  colaborativoZaquesazipa2026: source({
+    title: "Zaquesazipa",
+    author: "Wikipedia en español (artículo colaborativo, con referencias a Plaza y a Fernández de Piedrahíta)",
+    year: 2026,
+    type: "enciclopedia colaborativa (sólo como paralelo)",
+    url: "https://es.wikipedia.org/wiki/Zaquesazipa",
+    summary:
+      "Resume la historia de Sagipa, el último zipa independiente de Bacatá: Jiménez de Quesada le exigió el tesoro que Tisquesusa había escondido, le fijó un plazo para llenar un bohío de oro y, como no cumplió, lo sometió a tortura hasta su muerte en 1539. Es el paralelo histórico del cacique «zipa» del relato, encadenado para que revele sus caudales.",
+    limitation:
+      "Fuente terciaria y colaborativa, admitida sólo como paralelo. Sagipa es muisca, no guane, y no escapa. Trata el motivo, no este relato.",
+  }),
+  sanchezLeyendas2009: source({
+    title: "Leyendas y cuentos de Santander (fragmento de cubiertas publicado por el autor)",
+    author: "Germán Valenzuela Sánchez",
+    year: 2009,
+    type: "libro de leyendas de autor; sólo cubiertas consultables",
+    url: "https://drive.google.com/uc?export=download&id=1WV9BYw8m9PKm1aQp-0s3v7gEWVw3mSLL",
+    summary:
+      "Es la compilación de leyendas piedecuestanas donde con más probabilidad podría estar un relato como éste: cuarenta y seis sagas de Santander con Piedecuesta como centro, reunidas por un periodista y bibliotecario del municipio.",
+    limitation:
+      "Sólo son las cubiertas; la contraportada nombra cuatro piezas y ninguna es ésta, y el índice no se puede leer. No hay ningún indicio directo de que el relato esté en el libro. Trata el corpus, no este relato.",
+  }),
+  lacroixDiario2009: source({
+    title: "Diario de Bucaramanga (edición del Ministerio del Poder Popular para la Comunicación y la Información, Caracas, 2009, ISBN 978-980-227-085-9)",
+    author: "Luis Perú de Lacroix",
+    year: 2009,
+    type: "diario de época (1828), edición institucional",
+    url: "https://archive.org/details/diario-de-bucaramanga",
+    summary:
+      "Es el registro histórico del que el romance toma casi todo: la estadía de Bolívar en Bucaramanga en 1828 con Soublette, O'Leary, Wilson y Ferguson, el tresillo, los bailes, el convite del cura de Girón, el doctor Eloy Valenzuela, el paseo a Rionegro, la falsa alarma de temblor en misa (pp. 145-147) y la noche en que el Libertador durmió en Pie de Cuesta al emprender el viaje a Bogotá (pp. 250-252).",
+    limitation:
+      "Es la fuente histórica, no el romance: no trae la Pedregosa, la Puerta del Sol, el chocolate de Girón ni la muchacha de Rionegro, y su temblor fue una falsa alarma. La autenticidad del diario ha sido discutida por la historiografía. Trata el hecho, no este relato.",
+  }),
+  lacroixDiario1828: source({
+    title: "Diario de Bucaramanga: vida pública y privada del libertador Simón Bolívar (Biblioteca Virtual del Banco de la República)",
+    author: "Luis Perú de Lacroix",
+    year: 1828,
+    type: "diario de época, copia digital en biblioteca nacional",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/3172/",
+    summary:
+      "Copia colombiana del mismo diario, que permite cotejar la escena del baile al que Bolívar no quiso acudir, la visita de despedida al cura Valenzuela y la jornada a Pie de Cuesta, tres leguas al sur de Bucaramanga, que es el único paso documentado del Libertador por la villa.",
+    limitation:
+      "El visor CONTENTdm no se leyó completo fuera de navegador; la paginación se tomó de la edición de Caracas. Trata el hecho, no este relato.",
+  }),
+  uISCronicas20122: source({
+    title: "Crónicas y romances (Biblioteca Mínima Santandereana), ficha editorial",
+    author: "Vicente Arenas Mantilla; Ediciones UIS",
+    year: 2012,
+    type: "ficha de catálogo editorial universitario",
+    url: "https://ediciones.uis.edu.co/index.php/publicacionesuis/catalog/book/128",
+    summary:
+      "Es la obra a la que el texto que circula atribuye el romance. La ficha fija la reedición de 2012 y publica un sumario de quince piezas en el que no figura ningún título sobre Bolívar ni sobre una visita del Libertador, lo que pone en duda la atribución.",
+    limitation:
+      "La ficha dice «Disponible: No» y no permite descargar el libro; el certificado del sitio exige abrirlo con curl -k. Sólo metadatos: no contiene el relato.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano, «La Monja de las Rosas», pp. 99-100",
+    author: "Casa Editorial El Tiempo, Proyectos Especiales, con el periódico HOY y la Universidad Autónoma de Colombia",
+    year: 2004,
+    type: "libro ilustrado de ficción de autor (documentos imaginarios)",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Da el paralelo de la casa de Bolívar habitada por una presencia: en la Quinta de Bolívar de Bogotá, una niña ve a una mujer de negro recorrer los salones del Libertador y llevarse un ramo de rosas amarillas antes de desvanecerse en el jardín. Es la misma idea del final del romance, la casa donde todavía se oyen los pasos.",
+    limitation:
+      "La obra se declara ficción y la escena es en Bogotá; la aparición no es Bolívar. Trata el motivo, no este relato.",
+  }),
 };
 
 export const piedecuestaLegendaryAccountsSourceKeysBySlug = {

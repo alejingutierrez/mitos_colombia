@@ -60,3 +60,4 @@ en Bogotá, en la misma sección, después de que un informe afirmara que el tom
 **Antes de declarar que algo no existe, cruzar los títulos contra los
 extractos que ya están en el repo.** Este cruce costó veinte minutos y
 resolvió el primario de ocho fichas.
+| `cuentos-de-espantos-2004-ermitano-iracundo-ocana-pp93-94.txt` | *Cuentos de espantos…* (2004), «El Ermitaño Iracundo», pp. 93-94: ficha técnica (Ocaña) y los tres correos de Ana Guevara y Edgar, transcritos a mano sobre la imagen. **Ficción declarada; el relato es de Ocaña, no de Piedecuesta.** | PDF de archive.org, pp. 93 y 95 |

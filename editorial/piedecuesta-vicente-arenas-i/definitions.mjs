@@ -3,37 +3,69 @@ import { definePiedecuestaVicenteArenasIMyth } from "./define-editorial-myth.mjs
 const records = [
   definePiedecuestaVicenteArenasIMyth({
     slug: "la-mula-del-diablo",
-    title: "La Mula del Diablo",
+    fuentesAgotadas: "Seis fuentes; ninguna trae el relato de Eumelia y el herrero Villamizar. Se buscó en el sumario de «Crónicas y romances» (Arenas Mantilla), en Villa Posse II, en Cuentos de espantos (2004, cuya lámina de la Mula Herrada falta en la copia digital) y en prensa con editor. «Estampas de mi tierra» (1941) no tiene copia abierta legítima.",
+    sourceKeys: [
+      "obregonMexico1909",
+      "pastoEspantos2024",
+      "compiladoraMitos19935",
+      {
+        key: "lopezpueblo19772",
+        summary:
+          "Sitúa a la mula entre los espantos andinos vecinos de Santander: al cerrar su repaso de los espantos de Tunja, Ocampo cuenta «la mula de tres patas» entre los mitos estudiados en Boyacá, junto al jinete negro, el ánima sola y la cabellona.",
+        limitation:
+          "Es una mención en una enumeración, sin descripción ni relato de la mula. Trata el motivo, no este relato.",
+      },
+      "tiempoCuentos20043",
+      {
+        key: "mantillaCronicas2012",
+        summary:
+          "Es la obra del cronista a quien el texto publicado atribuye el paseo que enmarca la leyenda. Su sumario de quince crónicas incluye «El circo Santander», uno de los lugares que nombra el preámbulo del relato, y la sinopsis describe el libro como cuadros de costumbres y hechos curiosos de Piedecuesta, Lebrija y Bucaramanga.",
+        limitation:
+          "La página dice «Disponible: No» y «La descarga de datos todavía no está disponible»: no hay texto. El sumario no trae ninguna crónica sobre la mula, así que la procedencia es una conjetura. Requiere curl -k por la cadena de certificados.",
+      },
+    ],
+    title: "La mula del diablo",
     excerpt:
       "Un herrero acepta trabajar para un visitante nocturno y descubre que las monedas y la mula forman parte de una tragedia atribuida.",
     tags: ["Eumelia", "diablo", "tragedia", "transformación"],
-    mito: `Cerca de la antigua bocatoma de Piedecuesta vivían Eumelia y su compañero, un herrero al que la adaptación llama Pacho o Villamizar. El relato lo presenta como un trabajador hábil, pero también como un hombre dispuesto a mantener la fragua encendida los domingos cuando podía obtener más dinero.
+    mito: `Pacho Villamizar era herrero en Piedecuesta y tenía el taller al borde de la bocatoma del agua. Trabajaba los domingos con la misma urgencia que cualquier martes, porque lo movía el brillo del oro. Vivía con Eumelia, una mujer tan bella que los hombres se peleaban por ella a puñetazos, y en más de una fiesta alguno quedó tendido para siempre en la calle.
 
-Una noche llegó un desconocido vestido de negro. Traía una mula oscura y pidió que la herraran de inmediato. El herrero dudó por la hora, aunque cambió de opinión cuando el visitante mostró varias monedas.
+Una noche de agosto, cuando Pacho ya dormía, unos golpes insistentes sonaron en la puerta de su rancho de Reyes. Afuera esperaba un hombre alto y sombrío con una mula. Necesitaba que se la herraran enseguida, a esa hora, con la prisa de quien huye.
 
-La mula se resistía a entrar. Pacho tiró de las riendas y trató al animal con violencia hasta inmovilizarlo. Después ajustó cuatro herraduras mientras el hombre de negro observaba sin hablar.
+El herrero, medio dormido todavía, no quería abrir el taller de madrugada. Entonces el forastero dejó caer sobre el mesón un puñado de monedas, que tintinearon en la madera. Pacho encendió la fragua. Maldiciendo su suerte, le fue clavando a la bestia las herraduras una por una, a golpe de martillo.
 
-Terminado el trabajo, el visitante dejó el pago y salió con la mula. Pacho recogió las monedas, cerró la fragua y volvió a la casa. Allí, según la historia adaptada de Vicente Arenas, encontró a Eumelia muerta.
+Terminado el trabajo, volvió a su cama con ganas de contarle a Eumelia la rareza de aquella noche. No pudo. Encontró el lecho convertido en un charco de sangre. Eumelia estaba muerta, y en sus pies y en sus manos tenía hundidos los mismos clavos que él acababa de meter en los cascos de la mula.
 
-El relato establece una correspondencia inquietante entre lo ocurrido en el taller y las lesiones atribuidas a Eumelia. Esta página no describe esas heridas ni presenta la escena como expediente de un homicidio histórico. Conserva el vínculo como recurso literario de la leyenda y reconoce que no hay corroboración independiente de los personajes o del suceso.
+Al amanecer el pueblo entero supo lo ocurrido y se quedó inmóvil de espanto. Villamizar confesó lo que había hecho, y todos entendieron que su codicia había cargado con la vida de la mujer que amaba.
 
-El dinero también cambia. Las monedas que habían parecido valiosas pierden su apariencia o se convierten en objetos sin valor. De ese modo, el pago prometido deja al herrero frente a una pérdida que ninguna ganancia puede reparar.
+Desde entonces, cada septiembre, en las horas que preceden al alba, los vecinos del barrio despertaban con un ruido de cascos sobre el empedrado. Era Eumelia, convertida en la Mula del Diablo, que arrastraba su pena calle abajo con paso doloroso. Detrás de ella venía otro espanto, de cabello blanco, entre un estrépito de latas y tapas, y así seguían hasta que clareaba.
 
-En la memoria posterior aparecen dos imágenes. Una versión dice que durante ciertas noches de septiembre se oía a Eumelia convertida en mula, arrastrando al compañero ambicioso. Otra recuerda un fantasma oscuro, de cabello blanco, acompañado por el ruido de recipientes metálicos. La adaptación no resuelve la diferencia.
+La gente de Piedecuesta tenía a las mulas por cosa del diablo. Se hablaba también de unos hombres temidos de Umpalá que montaban mulas y arrancaban a las piedras chispas del infierno.
 
-La ficha heredada trataba la muerte como hecho probado, convertía el trabajo dominical en una condena divina inequívoca y recreaba el daño con detalle. La revisión mantiene la crítica a la codicia y al maltrato, pero no transforma una tragedia literaria en sentencia religiosa o judicial.
+Con los años llegó la luz eléctrica a las calles, y las noches dejaron de ser tan oscuras. El oficio de herrero fue desapareciendo, reemplazado por los montallantas y su repiqueteo. Los cascos de la Mula del Diablo dejaron de oírse.`,
+    historia: `La historia de Eumelia y el herrero Villamizar no tiene registro publicado que pueda consultarse. Falta en las recopilaciones piedecuestanas de Germán Valenzuela Sánchez y de Vicente Arenas Mantilla, en la antología de Eugenia Villa Posse (Quito, 1993), en el boletín de la Academia Colombiana de Historia y en los periódicos locales fechables.
 
-Tampoco fusiona esta mula con la Mula Maneada, ligada en otro romance a Petra Agudelo, ni con el Diablo de Umpalá, cuyo jinete explica las chispas de su caballo. Aquí el centro es el acuerdo nocturno y el descubrimiento dentro de la casa.
+El texto que circula la enmarca en un paseo del cronista Vicente Arenas Mantilla por las esquinas del pueblo, y entre los lugares que nombra está el Circo Santander. Con ese mismo nombre figura una de las piezas de «Crónicas y romances», libro del cronista que la Biblioteca Mínima Santandereana recuperó en 2012. Sin embargo, entre esas quince crónicas no hay ninguna mula, y el volumen no circula en línea: su ficha dice «Disponible: No».
 
-La Mula del Diablo permanece como relato de consecuencias. Su fuerza nace de la forma en que la fragua, el dinero y el trato cruel regresan sobre el propio herrero, sin que la página necesite condenar a una mujer ni afirmar que la transformación ocurrió.`,
-    historyCore:
-      "Pérez presenta el capítulo como historia híbrida adaptada de Estampas de mi tierra, páginas 90 a 93, obra atribuida a Vicente Arenas y publicada en 1941. Eumelia, Pacho, el visitante, la muerte y las monedas pertenecen a esa cadena literaria; no se localizaron registros civiles, judiciales o periodísticos independientes.",
-    versionCore:
-      "El núcleo conserva bocatoma, herrero, visitante negro, mula, pago, regreso a casa y correspondencia legendaria con Eumelia. El cierre admite una mula nocturna o un fantasma con objetos metálicos. La revisión no elige una sola imagen ni convierte el relato en prueba de asesinato, castigo divino o metamorfosis real.",
-    similarityCore:
-      "La Mula del Diablo comparte con otros relatos de herreros el encargo nocturno cuyo pago resulta engañoso y con las mulas encantadas la asociación entre animal, culpa y transformación. Se distingue de la Mula Maneada porque allí el texto es un romance sobre Petra y una aparición centenaria, no una fragua. También se diferencia del Diablo de Umpalá: las chispas de Félix Rueda tienen explicación material en las herraduras. La coincidencia de mulas y diablos no permite fundir personajes, atribuirles un origen único ni trasladar acusaciones de una página a otra.",
+El motivo, en cambio, está documentado y es viejo. Luis González Obregón publicó en México viejo y anecdótico (1909) «La casa de la mujer herrada», que toma de una vida del jesuita José Vidal impresa en 1752: a un herrador lo despiertan de noche para herrar la mula de su compadre, un clérigo amancebado, y a la mañana siguiente la manceba aparece muerta con las mismas herraduras y los mismos clavos en manos y pies.
+
+En Colombia la mula herrada es la mujer que tuvo amores con un sacerdote y de noche galopa convertida en mula. Diario del Sur la contaba en 2024 entre los espantos de Semana Santa de Pasto. Javier Ocampo López pone la mula de tres patas en su lista de mitos boyacenses (El pueblo boyacense y su folclor, 1977), y Enrique Otero D'Costa, en sus Leyendas de 1936, hace que una mula negra que echa fuego por los ojos se lleve al perulero de la Villa de Arma. El bestiario Cuentos de espantos y otros seres fantásticos del folclor colombiano (2004) reserva a la mula herrada una lámina entera, según su tabla de contenido.`,
+    versiones: `Las formas registradas del motivo discrepan en quién es la mujer y en quién carga la culpa.
+
+En la versión mexicana de González Obregón la falta es el amancebamiento. La mujer es la manceba de un clérigo; el herrador es un buen hombre que le había aconsejado a su compadre dejar esa vida, y los que traen la mula son dos negros que resultan ser demonios. La difunta aparece además con un freno en la boca y las marcas de los golpes. El clérigo huye, el cura de la parroquia entra en la Compañía de Jesús y a la mujer la entierran en secreto dentro de la casa. No hay aparición posterior: el castigo se cumple en una sola noche.
+
+En Pasto, tal como lo recoge Diario del Sur, no hay herrero ni visitante. La mujer que se entregó a un sacerdote se vuelve mula cada noche y corre desbocada sacando chispas del pavimento; del espanto queda el galope y el resoplido bajo la ventana de un vecino que no podía dormir.
+
+En Otero D'Costa la mula no es una mujer transformada sino la montura del enviado que viene a cobrar. El perulero Damián Vásquez Montiel había vendido su alma a cambio de riqueza, suerte en las pendencias y fortuna con las mujeres; un Viernes Santo, un jinete en una mula negrísima lo sube a la grupa y se lo lleva envuelto en fuego.
+
+El relato de Piedecuesta toma piezas de las tres y mueve el centro. No hay clérigo: la falta es del herrero, que trabaja los domingos y abre el taller de madrugada por un puñado de monedas. Eumelia no ha hecho nada, y sin embargo es ella la que muere con los clavos y la que vuelve cada septiembre, seguida por otro espanto entre latas. Y el final no es un castigo cumplido sino un olvido: la luz eléctrica y los montallantas la borran de las calles.`,
+    similitudes: `El pariente más cercano es mexicano. En «La casa de la mujer herrada», que Luis González Obregón recogió en 1909, un herrador es despertado a deshoras para herrar una mula que no es mula, y la mujer amanece muerta con las herraduras en manos y pies. La secuencia es la misma de Piedecuesta: golpes en la puerta, el trabajo hecho de mala gana, el regreso y el hallazgo. Allá el castigo cae sobre la pareja de un clérigo; aquí, sobre la mujer de un herrero codicioso.
+
+El segundo paralelo está en las Leyendas de Enrique Otero D'Costa (1936), que Villa Posse reprodujo en 1993. En «No hay deuda que no se pague…», el perulero de la Villa de Arma cambia su alma por riqueza y buena suerte, y un Viernes Santo llega por él un jinete en una mula negrísima que echa fuego por los ojos. En los dos relatos el oro viene de un trato que no se discute, y la mula es el vehículo con que se cobra.
+
+La imagen de las chispas también tiene registro. En el bestiario de 2004, que se declara ficción, el Jinete Negro monta un animal negro cuyas herraduras revientan contra las piedras en una lluvia de chispas; el libro lo ubica, entre otras regiones, en los dos Santanderes. Es la misma figura que en Piedecuesta se atribuía a los hombres de Umpalá.`,
     leccion:
-      "La ambición nunca justifica el maltrato ni convierte una tragedia narrada en sentencia comprobada.",
+      "La paga que se acepta sin preguntar de dónde viene puede cobrarse en lo que más se quiere.",
     sceneHorizontal:
       "fragua nocturna cerca de la bocatoma, un herrero frente a una mula oscura y un visitante vestido de negro que ofrece monedas",
     sceneVertical:
@@ -53,37 +85,48 @@ La Mula del Diablo permanece como relato de consecuencias. Su fuerza nace de la 
   }),
   definePiedecuestaVicenteArenasIMyth({
     slug: "la-mula-maneada",
-    title: "La Mula Maneada",
+    fuentesAgotadas: "Cinco fuentes. Ninguna trae a doña Petra Agudelo. Se cotejó el índice y el texto completo de «Cuentos de espantos» (2004): su lámina «La Mula Herrada» (pp. 75-76) falta en la copia de Internet Archive y ninguna otra página nombra a Petra. La búsqueda web de los nombres propios sólo devuelve copias del texto publicado y una columna de opinión sobre una mula maneada venezolana sin fuentes folclóricas, que no se admite.",
+    sourceKeys: [
+      "hOYCuentos2004",
+      "lopezpueblo19773",
+      "lopezbrujas1989",
+      "moureReminiscencias1899",
+      "posadaFantasmas2008",
+    ],
+    title: "La mula maneada",
     excerpt:
       "Un romance recuerda una mula de medianoche y el rumor que la identificaba con Petra Agudelo, sin probar brujería ni transformación.",
     tags: ["bruja", "transformación", "misterio", "noche"],
-    mito: `A medianoche, sobre las calles de piedra de Piedecuesta, se oía una mula que avanzaba con las patas trabadas. El paso irregular hacía resonar los cascos y anunciaba una figura que el pueblo creía reconocer desde hacía un siglo.
+    mito: `Cuando el reloj de la torre daba las doce, la calle empedrada se quedaba sola. Las ventanas estaban cerradas y la gente, que vivía de rezos y de costumbres fijas, sabía que las noches no eran seguras. Por los adoquines andaba la mula maneada, un espectro viejo. Era lo que quedaba de doña Petra Agudelo, la mujer de don Blas Plata.
 
-El Romance de la Mula Maneada, atribuido a Vicente Arenas, relaciona esa aparición con Petra Agudelo, esposa de Blas Plata. El poema la nombra dentro de un tejido de rumores y acusaciones. No ofrece expediente, testimonio repetido ni una escena inequívoca en la que el cuerpo de Petra se transforme.
+Doña Petra había sido la bruja más temida de la comarca, y los ancianos todavía se estremecen al oír su nombre. Atacaba a los viejos. Con palabras mágicas volvía locos a los muchachos. Les chupaba la sangre a los niños. A las novias las engañaba con bebidas envenenadas. De noche se convertía en cuervo, silbaba sobre las casas y arañaba los tejados, y las dueñas de casa, asustadas, le rezaban a San Silvestre para aguantar hasta el día siguiente.
 
-Las voces del romance la señalan como bruja. Le atribuyen daños contra personas mayores, novias, niños y jóvenes, y aseguran que podía adoptar la forma de un cuervo. La revisión conserva esas acusaciones como lenguaje del poema, pero no las presenta como hechos sobre una mujer histórica. Repetirlas sin atribución convertiría la leyenda en una condena.
+Un hombre no le tuvo miedo. Se llamaba don Juan Barbas, y no fue a buscarla con rezos sino con unas tijeras y mostaza bendita. Una noche entró en la casa de donde salían los lamentos de Petra.
 
-Ante el miedo, algunas mujeres rezaban a San Silvestre. También aparece Don Juan Barbas, llamado en otro pasaje Don Juan de Dios, quien prepara tijeras y mostaza para enfrentar al espanto.
+Al amanecer la encontraron en el centro de la plaza. La gente se amontonó a mirarla, entre incrédula y asustada, y ella daba unos quejidos que parecían el balido de una cabra. La llevaron ante el cura. El sacerdote le echó agua bendita y le dijo, con voz de trueno:
 
-El encuentro no produce una captura clara. El personaje es hallado emitiendo sonidos que el romance compara con el balido de una cabra. Después interviene un sacerdote que intenta conjurar a la figura y cortarle las alas.
+—Te juro y te conjuro, Petra, bruja de la plaza, y en nombre de San Ciríaco voy a cortarte las alas.
 
-La escena termina entre humo y pájaros negros. Ese cierre mantiene abierta la relación entre la mula, Petra, el cuervo y quienes pretendían dominar la aparición. El poema no organiza esos elementos como una crónica literal ni explica de manera estable qué cuerpo estuvo frente a los personajes.
+Entonces la casa se llenó de un humo espeso. Unos pájaros negros entraron revoloteando, como una guardia que venía a defenderla, y todo se volvió un enredo de alas y maldiciones. Don Juan de Dios, que intentaba llevársela amarrada, peleó con todo el valor que tenía, y aun así las desgracias le cayeron encima.
 
-La ficha heredada resolvía toda ambigüedad: afirmaba que Petra era una hechicera comprobada, narraba una transformación visible y agregaba ataques concretos. La fuente consultada no permite esas certezas. La página restaurada usa fórmulas de atribución y evita que la diferencia entre rumor y hecho desaparezca.
+Lo que pasó después nadie lo sabe bien. Unos dicen que don Juan terminó enloquecido por lo que vio aquella noche. Otros, que algo de doña Petra se quedó en el pueblo. Lo cierto es que en esas calles, cuando el reloj da la medianoche, algo de ella sigue ahí, como un eco.`,
+    historia: `Ninguna obra que hoy pueda leerse registra la historia de doña Petra Agudelo. Se buscó su nombre, el de don Blas Plata y el de don Juan Barbas en el libro de leyendas de Valenzuela Sánchez (2009), en lo que circula de Arenas Mantilla, en la antología de Villa Posse que reúne a los folcloristas santandereanos, en la revista de la academia nacional de historia y en periódicos locales con fecha, sin resultado. Tampoco aparece su nombre en Cuentos de espantos y otros seres fantásticos del folclor colombiano, el libro de ficción declarada que El Tiempo y la Universidad Autónoma publicaron en 2004; su índice anuncia una Mula Herrada en las páginas 75 y 76, pero esa lámina falta en la única copia digital, y no se puede saber qué contaba.
 
-El adjetivo maneada describe el movimiento atribuido a la mula. No prueba que alguien la hubiera encadenado o que existiera un método histórico para capturar brujas. Las tijeras, la mostaza y las oraciones pertenecen al repertorio protector del romance, no a instrucciones eficaces.
+Lo que sí está documentado son las piezas con que se arma el relato. Javier Ocampo López, en El pueblo boyacense y su folclor (1977), explica que la creencia en brujas llegó con los españoles y fue una profesión «muy socorrida» en la Colonia: unas se dedicaban a los maleficios, otras a los enyerbamientos y a dar bebidas, otras al negocio del amor. Pone en el origen a Juana García, la bruja de Santafé que Rodríguez Freyle retrató en El Carnero. La revista Semana resumió en 1989 el libro de Ocampo sobre supersticiones y agüeros colombianos: las brujas se transforman en gallinazos, en burras y en otros animales, y se las atrapa regando granos de mostaza o poniendo sal y agujas en las puertas. La nota nombra entre las más famosas a las de Floridablanca, en Santander, a pocos kilómetros de Piedecuesta.
 
-Esta Mula Maneada tampoco es la Mula del Diablo. La otra historia gira alrededor de Eumelia, una fragua y un visitante nocturno. Aquí la memoria se organiza como versos sobre una mujer nombrada y una aparición escuchada en el empedrado.
+La mula nocturna es un espanto viejo en las ciudades de los Andes. José María Cordovez Moure la registró en 1899 entre las conversaciones de atrio de la Santafé colonial: una mula herrada que recorría las calles a altas horas y nadie veía. El relato piedecuestano junta las dos figuras, la bruja que vuela y la bestia que ronda la calle, en una sola mujer.`,
+    versiones: `La mula nocturna aparece con historias muy distintas según la ciudad. En la Santafé que recuerda Cordovez Moure es apenas un ruido: una mula herrada que pasa de noche y que nadie ve, sin dueño y sin culpa. Jorge Bayona Posada, en un texto que Stella Monsalve Gaitán transcribió en Fantasmas de ciudad (Archivo de Bogotá, 2008), le da un final: la mula sin jinete corre arrancando chispas al empedrado, y el galope cesa cuando aparece muerta, detrás de la ermita de Belén, una mujer conocida por su oficio de celestina, con herraduras clavadas en manos y pies. El mismo libro recoge en La Candelaria otra variante sin castigo, la de un jugador cuya mula va sola a buscarlo a la casa de juego.
 
-La revisión conserva el ritmo de una comunidad que quiso explicar un sonido nocturno. Al mismo tiempo, devuelve a Petra la distancia que exige una acusación literaria: puede ser personaje de un rumor sin quedar convertida por la página en culpable real.`,
-    historyCore:
-      "La compilación reproduce el Romance de la Mula Maneada y lo remite a Crónicas y romances, páginas 278 a 280, obra de Vicente Arenas publicada en 1960 y reeditada por la UIS. Pérez lo clasifica como leyenda de identidad. No se localizaron pruebas independientes sobre Petra, Blas o las acusaciones del poema.",
-    versionCore:
-      "El romance conserva mula de medianoche, Petra Agudelo, Blas Plata, acusaciones, cuervo, San Silvestre, Don Juan Barbas, tijeras, mostaza, sacerdote, humo y aves. La revisión no inventa una metamorfosis explícita ni decide si Don Juan Barbas y Don Juan de Dios son nombres de una persona histórica.",
-    similarityCore:
-      "La Mula Maneada comparte con la Mula Herrada, la Mula del Diablo y otras mulas nocturnas el sonido de cascos asociado con culpa o transformación. Su rasgo distintivo es la forma de romance y la identificación rumorada con Petra Agudelo. Las tijeras y la mostaza la acercan a relatos domésticos de defensa contra brujas, mientras el cuervo recuerda ciclos de metamorfosis en ave. Esos paralelos no prueban que Petra practicara brujería, que la mula existiera o que las distintas mulas colombianas fueran un solo personaje.",
+La de Piedecuesta se aparta de las dos. Aquí la mujer no se vuelve mula a cambio de un pecado de alcoba: es una bruja con un catálogo de daños, que vuela en forma de cuervo, y la mula maneada es lo que queda de ella después de muerta. El nombre de la bestia no se explica; lo que sí se cuenta con detalle es la captura.
+
+Esa captura coincide con la que describe la tradición recogida por Ocampo. Las armas de don Juan Barbas son la mostaza y las tijeras, las mismas que Semana enumera como remedios caseros contra las brujas convertidas en pájaro. Y el conjuro del cura, que promete cortarle las alas en nombre de San Ciríaco, trata a Petra como a un ave a la que hay que impedir que vuelva a volar.`,
+    similitudes: `El paralelo más cercano está en Bogotá. En el texto de Bayona Posada que transcribe Monsalve Gaitán, el espanto de la mula herrada termina con una mujer muerta que lleva herraduras clavadas en las manos y en los pies: la bestia que corría de noche era ella. En Piedecuesta sucede algo parecido con doña Petra, que después de su captura queda como la mula maneada de las medianoches. En los dos casos el animal es el castigo o el residuo de una mujer que el vecindario señalaba.
+
+El segundo paralelo es Juana García, la bruja de Santafé del siglo XVI, que Ocampo López pone al principio de todas las brujas colombianas y que Semana recuerda a partir de El Carnero. Como Petra, Juana García tiene nombre y apellido, vive en una ciudad que la conoce y termina llevada ante la autoridad. La diferencia está en el desenlace: a la bruja santafereña la juzgan, mientras que a Petra la conjuran con agua bendita y la casa se llena de pájaros negros que la defienden.
+
+Por último, la mostaza. Los granos que se riegan para que la bruja convertida en ave se entretenga y pueda ser atrapada aparecen en el resumen que Semana hizo del libro de Ocampo, junto a la sal y a las agujas. Don Juan Barbas lleva mostaza bendita, la versión consagrada de ese remedio.`,
     leccion:
-      "Una acusación repetida en verso sigue siendo rumor y no condena histórica.",
+      "El miedo de un pueblo puede sobrevivir a la persona que lo causó y seguir rondando sus calles.",
     sceneHorizontal:
       "calle empedrada de Piedecuesta a medianoche, una mula de paso trabado vista desde lejos y vecinos observando desde puertas entreabiertas",
     sceneVertical:
@@ -155,41 +198,69 @@ La Llorona del Molino queda así como una tragedia literaria sobre duelo, violen
   }),
   definePiedecuestaVicenteArenasIMyth({
     slug: "la-mechuda",
-    title: "La Mechuda",
+    fuentesAgotadas: "Seis fuentes. El candidato directo («El mechudo de \"Juan Rodríguez\"», en «Crónicas y romances») sólo existe como ficha editorial sin texto; «Estampas de mi tierra» (1941) no tiene copia abierta legítima. Villa Posse II y Cuentos de espantos (2004) no traen una mechuda de Piedecuesta. No se halló prensa santandereana digitalizada que la nombre.",
+    sourceKeys: [
+      {
+        key: "mantillaCronicas2012",
+        summary:
+          "Es la única obra que nombra algo parecido al relato: la última de sus quince crónicas se titula «El mechudo de \"Juan Rodríguez\"». La sinopsis presenta el libro como cuadros de costumbres y hechos curiosos de Piedecuesta, Lebrija y Bucaramanga, el registro en que caben los nombres de vecinos, las fiqueras y el brujo de la mechuda.",
+        limitation:
+          "La página dice «Disponible: No» y «La descarga de datos todavía no está disponible»: no hay texto. El título dice «mechudo», en masculino, y nombra a un «Juan Rodríguez» que no está en el relato; la identidad es probable, no comprobada. Requiere curl -k.",
+      },
+      "compiladoraMitos19933",
+      "compiladoraMitos19934",
+      "moralesFolclor2013",
+      "lopezpueblo19772",
+      "tiempoCuentos20042",
+    ],
+    title: "La mechuda",
     excerpt:
       "Antoninito y Balbino oyen dos alaridos junto al Puente de Plata y huyen de un bulto apenas visible al lado de una palma.",
     tags: ["miedo", "amistad", "noche", "Piedecuesta"],
-    mito: `Eran cerca de las nueve de la noche cuando Antoninito y Balbino caminaron hacia un baile. El Romance de la Mechuda los sitúa por el Puente de Plata, rumbo a una reunión entre trabajadores del fique en el sector de Villanueva.
+    mito: `Antoninito y Balbino iban una noche por Piedecuesta cuando el reloj de la iglesia vieja daba las nueve. Cruzaron la quebradita menuda que corre bajo el Puente de Plata, fumando sin prisa, con el paso descuidado de quien cree que el mundo le pertenece. Iban a un baile en casa de las fiqueras de Villanueva, donde una de ellas celebraba su matrimonio con ñor Ceferino Ríos, el brujo del Alto de Vacas.
 
-Los dos amigos conversaban sobre una rivalidad amorosa. Sabían que podían encontrar a otros jóvenes interesados en la misma muchacha y discutían si la noche terminaría en una pelea.
+Frente a la casa de Oviedo, Balbino se detuvo en seco. Se acomodó la corbata y murmuró, más para sí que para el amigo:
 
-Antes de llegar, un alarido salió del pequeño arroyo. La conversación se detuvo. Antoninito y Balbino miraron hacia el agua, pero no distinguieron a una persona.
+—Yo sí bailo es con Maruja, y esta noche una vaina ha de pasar.
 
-Continuaron unos pasos. Un segundo grito sonó más cerca y con mayor fuerza. Junto a una palma alcanzaron a ver apenas un bulto. El romance no describe rostro, cabello, brazos, piernas o vestido.
+Antoninito, que solía poner la cordura en aquella pareja, se apresuró a atajarlo:
 
-Los amigos lo identificaron como la Mechuda y corrieron. No hubo persecución visible ni contacto físico. El miedo, el sonido y la figura indeterminada bastaron para dispersar la valentía con la que habían hablado de la posible riña.
+—Deja esas chocheras malas. Ya sabes que si Segundo la pretende, tú mejor saludas, y bailas con Petronila, con Zoila o con Nicasia. No es de caballeros armar lío donde están las Garzas, las Muelalinda y las demás.
 
-Llegaron agotados a una casa y cayeron al suelo. Las personas que los recibieron recurrieron a remedios domésticos y los dejaron descansar. Los jóvenes despertaron al día siguiente y contaron lo sucedido.
+No alcanzó a convencerlo. Un aullido feroz rasgó la calma de repente, subiendo desde el fondo de la quebrada. Los dos se volvieron hacia la espesura. Contra una palma se recortaba un bulto oscuro, con los cabellos alborotados por un viento que ellos no sentían.
 
-Después, la comunidad colocó una cruz o señal en el lugar. El gesto marcó el recuerdo del susto, aunque la página no afirma que la cruz contuviera una criatura verificable.
+—Santo Dios, es la mechuda —susurró Balbino, como si temiera que el aire lo delatara—. Recemos, es lo mejor, si no, ese espanto nos traga.
 
-La ficha heredada presentaba a la Mechuda como una mujer gigantesca cubierta por una cabellera capaz de atrapar caminantes. También añadía un ataque, una transformación y una anatomía detallada. Ninguno de esos rasgos aparece en el romance consultado.
+El miedo fue más rápido que la oración. Echaron a correr por el camino y no pararon hasta caer sin aliento en la sala de las fiqueras, en medio de la fiesta.
 
-El nombre puede sugerir cabello desordenado, pero no basta para dibujar una figura que el texto nunca muestra. La restauración conserva el bulto junto a la palma y hace de la ausencia de detalles una parte central del relato.
+El pánico se regó entre los invitados. Eulogia Plata, una anciana que sabía de remedios, hizo lo que pudo. Les dio fricciones de tuétano con albahaca, los besó en la frente, les puso fomentos calientes en el pecho y en la espalda y les hizo tragar hierbas. Nada les quitó el espanto de los ojos, abiertos y fijos.
 
-Pérez clasifica la pieza como leyenda ecoambiental. El arroyo, la noche y el eco ofrecen un entorno donde un alarido puede cambiar de distancia o confundirse con otros sonidos. Esa lectura no convierte la experiencia en simple error ni asegura una aparición.
+Cuando el alba empezó a rayar sobre Piedecuesta, los dos amigos seguían tendidos bajo sábanas blancas, con la cabeza amarrada, más parecidos a difuntos que a muchachos de fiesta.
 
-La Mechuda tampoco se fusiona con la Patasola, la Máncara o una bruja de cabellera extensa. Su cadena tiene nombres, trayecto y desenlace propios: dos amigos van a un baile, oyen gritos, ven una forma mínima y vuelven a salvo.
+Al día siguiente, enterado todo el pueblo, un gentío llenó la casa de las fiqueras. Todos querían oír a los que habían vuelto del borde del otro mundo. Antoninito y Balbino, arrepentidos, contaron su encuentro con la mechuda con la voz todavía temblorosa.
 
-El romance transforma el temor en una interrupción. Quienes caminaban preparados para demostrar fuerza descubren que no pueden dominar lo que apenas alcanzan a ver. La revisión conserva esa inversión sin fabricar un monstruo.`,
-    historyCore:
-      "La compilación reproduce el Romance de la Mechuda y lo remite a Crónicas y romances, páginas 98 a 100, obra de Vicente Arenas publicada en 1960. Pérez lo clasifica como ecoambiental. No se localizaron entrevistas independientes con Antoninito o Balbino ni identificación verificable del bulto.",
-    versionCore:
-      "El texto conserva nueve de la noche, Puente de Plata, Villanueva, baile, trabajadores del fique, rivalidad, arroyo, dos alaridos, bulto, palma, huida, remedios y cruz. No contiene cabellera descrita, mujer gigante, ataque, metamorfosis o captura; esos añadidos salen de la ficha.",
-    similarityCore:
-      "La Mechuda comparte con relatos de camino el grito que parece acercarse y con espantos de quebrada la dificultad de localizar un sonido en la oscuridad. El nombre la aproxima a figuras de larga cabellera, pero el romance no confirma ese aspecto. A diferencia de la Máncara, no hay peña, puerta, niños ni anatomía variable; frente a la Patasola, tampoco hay persecución o una sola pierna. El bulto y los dos amigos constituyen un núcleo propio que debe preservarse sin completar visualmente lo que la fuente deja abierto.",
+Donde cayeron, la gente levantó una cruz alta con un letrero que decía: «Aquí, escapitas nos matan».`,
+    historia: `Para este relato no hay registro publicado consultable, aunque sí un candidato con nombre. El sumario de «Crónicas y romances», del cronista piedecuestano Vicente Arenas Mantilla, cierra con una pieza titulada «El mechudo de "Juan Rodríguez"». La editorial de la Universidad Industrial de Santander lo volvió a imprimir hace poco más de una década y lo describe como cuadros de costumbres y hechos curiosos de Piedecuesta, Lebrija y Bucaramanga. Nadie puede leerlo hoy en línea, porque la casa editora no ofrece ni ejemplares ni descarga, y el otro título del autor, «Estampas de mi tierra» (1941), tampoco tiene copia abierta. No se sabe, por eso, si aquel mechudo es esta mechuda.
+
+Bien documentado está, en cambio, el espanto greñudo de las aguas y los montes andinos. Juan de Dios Arias, en «Folclor santandereano» (1954), describe la Mancarita tal como la oyó de niño a los campesinos de Guanentá: una mujer salvaje de cabellera larga y desgreñada, cuerpo peludo, que de noche grita en tono lúgubre y hasta se arrima a las viviendas. Ese capítulo pasó en 1993 a la antología que Eugenia Villa Posse editó en Quito.
+
+En esa misma antología, Misael Devia Morales registra la palabra: en el Tolima, cuando el Mohán se mezclaba con los pescadores tomando la forma de uno conocido, los campesinos decían «el mechudo estuvo con nosotros anoche, compadre». Javier Ocampo López cuenta la cabellona y la dama peluda entre los mitos estudiados en Boyacá (1977). Y el bestiario ilustrado de 2004, Cuentos de espantos, confesadamente ficticio, dibuja a la Llorona con una cabellera muy larga y desordenada, rondando quebradas y pozos, y dedica una lámina a la Cabellona.`,
+    versiones: `El espanto de pelo largo tiene en los Andes colombianos varios cuerpos, y los registros no coinciden en su sexo, su lugar ni su amenaza.
+
+En Santander, Arias recoge al menos tres Mancaritas. La de los campesinos de Guanentá es una mujer salvaje de una sola mama, pies vueltos hacia atrás y cabellera desgreñada, que grita de noche; unos dicen que es tímida y huye de la gente y de los perros, otros que se roba a los niños. La del anciano que habló con Manuel Ancízar en un páramo es un salvaje que remeda voces humanas, de hombre, de mujer o de niño, para arrastrar a quien lo sigue. Y la de Samuel Ortiz ni siquiera es un espanto: es Rita, una forastera manca, parlanchina y sin oficio, de los valles del Río Frío.
+
+En el Tolima de Devia el mechudo es varón: es el Mohán, dueño de los charcos del Magdalena, que en Coyaima tiene espesa y larga pelambrera negra y en Ambalema barba y pelo rojizos. Su amenaza no es el grito sino la confusión: toma la forma de un pescador conocido y nadie sabe después quién estuvo dónde.
+
+Los recuadros técnicos de Cuentos de espantos (2004) separan dos figuras. La Llorona tiene la cabellera muy larga y desordenada y el rostro de calavera, y su llanto y sus gritos producen escalofríos sin tocar a nadie. La Cabellona, en cambio, llega por una carta fechada en Frontino en 1971 y se ensaña con los violadores.
+
+La mechuda de Piedecuesta queda cerca de la Mancarita de Arias: es un bulto oscuro de cabellos alborotados, junto a una quebrada, que se anuncia con un aullido. Como la Llorona del libro de 2004, no toca a nadie. El daño lo hace el susto, y la cruz se levanta donde cayeron los muchachos, no donde apareció ella.`,
+    similitudes: `El paralelo más cercano está en Santander. La Mancarita que describe Juan de Dios Arias para la provincia de Guanentá es una mujer salvaje de cabellera larga y desgreñada que de noche se hace oír con un grito lúgubre y prolongado, y que a veces se acerca a las viviendas. La mechuda de Piedecuesta tiene los mismos rasgos esenciales: la cabellera suelta, la hora nocturna, el grito antes que el cuerpo. La diferencia es de escala: la Mancarita es un ser de selvas y páramos que roba niños; la mechuda asusta a dos muchachos junto a una quebrada del pueblo, camino de un baile.
+
+El segundo paralelo es la Llorona tal como la dibuja el recuadro técnico de Cuentos de espantos (2004): figura de mujer con una cabellera muy larga y desordenada, que habita quebradas, pozos y orillas de los montes, y cuyo llanto y cuyos gritos producen escalofríos aunque no agreda físicamente a nadie. Las dos se aparecen junto al agua, las dos castigan con el miedo y no con la mano, y en las dos la víctima es el que anda de noche con malas intenciones: la Llorona espanta a borrachos e infieles, y Balbino iba decidido a que esa noche pasara algo con Maruja.
+
+El nombre tiene su propia historia. En el Tolima, según Misael Devia, «mechudo» era el modo en que los campesinos llamaban al Mohán cuando se colaba entre ellos.`,
     leccion:
-      "Lo que apenas vemos no necesita convertirse en monstruo para cambiar nuestras decisiones.",
+      "Un grito en la oscuridad basta para torcer una noche que prometía baile y conquista.",
     sceneHorizontal:
       "Antoninito y Balbino cruzan el Puente de Plata hacia Villanueva mientras un pequeño bulto se distingue junto a una palma y el arroyo",
     sceneVertical:
@@ -209,39 +280,52 @@ El romance transforma el temor en una interrupción. Quienes caminaban preparado
   }),
   definePiedecuestaVicenteArenasIMyth({
     slug: "el-fantasma-de-el-horizonte",
-    title: "El Fantasma de El Horizonte",
+    fuentesAgotadas: "Cinco fuentes. Ninguna trae el relato de Nepito, don Vicente y el burro. Se buscó en Villa Posse II, en el sumario de «Crónicas y romances», en la obra abierta de Valenzuela Sánchez (sólo cubiertas) y en prensa con editor. «Estampas de mi tierra» (1941) no tiene copia abierta legítima.",
+    sourceKeys: [
+      "lopezpueblo1977",
+      "compiladoraMitos1993",
+      "compiladoraMitos19932",
+      "albarracinalma2023",
+      "mantillaCronicas2012",
+    ],
+    title: "El fantasma de El Horizonte",
     excerpt:
       "Un supuesto penitente recorre la calle El Horizonte, hasta que una espera nocturna revela un burro cojo bajo una manta.",
     tags: ["fantasma", "burro", "engaño", "noche"],
-    mito: `La calle El Horizonte, asociada en la adaptación con la actual carrera 13 de Piedecuesta, tenía un visitante nocturno. Quienes lo oían hablaban de un penitente que avanzaba con rosario y matraca.
+    mito: `La calle de El Horizonte quedaba en el extremo de Piedecuesta, más allá del convento desde donde las monjas rezaban para ahuyentar las sombras. Allí, de noche, rondaba un fantasma. Era una figura envuelta en un manto de penitente que avanzaba en silencio, y los muchachos que tenían que pasar por esa calle se lo encontraban tan de cerca que el sudor frío les calaba los huesos. Juraban que lo oían golpear los muros con un rosario tan pesado que les cortaba el aliento.
 
-La silueta oscura raspaba las paredes. Los golpes y el arrastre podían parecer cuentas que chocaban entre sí o una tabla litúrgica que sonaba en la noche. Pocas personas se acercaban para comprobarlo.
+Nepito, un joven de lengua suelta y ánimo alegre, pasaba las noches en los barrios de Hoyo Chiquito y Hoyo Grande. Allá vivía una muchacha de mirada hechicera que lo entretenía con promesas hasta el amanecer. Pero el amor y el miedo se le enredaban en el pecho, y al caer la noche el fantasma de El Horizonte nunca se le iba del pensamiento.
 
-Nepito regresaba de visitar a su novia cuando escuchó al supuesto penitente. Intentó evitarlo subiendo por una ventana, perdió el equilibrio y cayó sobre la figura que pasaba. La adaptación dice que salió lastimado, pero no ofrece registro médico ni demuestra un ataque del fantasma.
+Una de esas noches, al despedirse de su dama, Nepito llegó con pasos sigilosos a la esquina temida. De repente tuvo el fantasma delante. Desesperado, trató de encaramarse en una ventana, pero se vino al suelo justo cuando la sombra avanzaba. Echó a correr, y el golpe y el susto lo tuvieron varios días sin sentido.
 
-Vicente decidió esperar la noche siguiente. Preparó una cuerda y objetos religiosos, convencido de que podría detener la aparición o descubrir quién recorría la calle.
+La noticia llegó a don Vicente, un periodista que no le temía a ningún hombre pero sí a los fantasmas, y a las lloronas que le contaban los viejos en los portales cuando era niño. Aun así decidió acabar con el espanto. No llevó armas. Se cargó de reliquias y oraciones, tomó un lazo, y esa noche se apostó en la esquina de El Horizonte invocando a los santos con los labios temblorosos.
 
-Cuando volvió el ruido, lanzó la cuerda. La figura se agitó. Al acercarse, encontró un burro cojo cubierto con una manta oscura. El paso desigual del animal y el roce contra los muros producían los sonidos que habían sido interpretados como rosario y matraca.
+Pasaron las horas. Al fin oyó un ruido extraño y vio acercarse la silueta. La enfrentó, y entonces entendió lo que era: un burro cansado y lastimado, que rengueaba bajo una manta oscura con la que su dueño lo abrigaba del sereno de la madrugada. El animal, adolorido, se dejaba ir contra las paredes, y los golpes sonaban como el rosario de un penitente.
 
-El relato no presenta al burro como agresor. Su cojera sugiere dolor o dificultad, no intención sobrenatural. La revisión evita convertir la condición del animal en rasgo grotesco y no recrea la caída de Nepito de forma cómica.
+Don Vicente contó en el pueblo lo que había descubierto, pero nadie quiso creerle. Sus palabras cayeron al suelo como hojas secas. Los piedecuestanos prefirieron quedarse con su espanto, y el burro de la manta terminó convertido en otro cuento de aparecidos que asustan a los que andan de noche.`,
+    historia: `El fantasma de El Horizonte no figura en ningún registro publicado que pueda leerse. Lo buscaron sin éxito, entre otros lugares, las leyendas municipales de Germán Valenzuela Sánchez, la compilación quiteña de Eugenia Villa Posse y los periódicos de Piedecuesta y Bucaramanga que se conservan con fecha.
 
-Otra versión interna propone una explicación diferente. Un hombre del sector habría usado disfraz o manta para espantar a los serenateros que caminaban hacia las casas de sus pretendidas. Esa posibilidad se conserva como rumor atribuido; no identifica culpable ni prueba una serie de engaños.
+Sus rasgos apuntan a la crónica costumbrista. El protagonista es un periodista llamado don Vicente, Hoyo Chiquito aparece también en el paseo del cronista con que se abre otra leyenda del municipio, la de la Mula del Diablo, y la historia es una burla del miedo más que un cuento de miedo. Vicente Arenas Mantilla escribió justamente esa clase de estampas, en un volumen de 1941 y en otro que la universidad santandereana devolvió a las librerías en 2012 como «humorismo, pintura, retrato o caricatura del alma del pueblo». Ninguno de los quince títulos de este último habla de un penitente ni de un burro, y ningún ejemplar puede abrirse en línea.
 
-Las dos explicaciones comparten una operación: la oscuridad y el sonido forman un penitente antes de que alguien observe de cerca. Una lo resuelve como animal cubierto y otra como broma humana.
+El espanto que se describe, en cambio, tiene larga historia andina. Javier Ocampo López, en El pueblo boyacense y su folclor (1977), cuenta los espantos de monjes que en las casonas coloniales de Tunja recorren las piezas y los corredores y se detienen a dar golpes en ciertos sitios, con gran terror para quienes los oyen. Enrique Otero D'Costa, ambientando en Santander un relato de ánimas, pinta una procesión de ánimas envueltas en mortajas blancas, cada una con un grueso rosario en una mano y un cirio en la otra.
 
-La ficha heredada mantenía un alma condenada que golpeaba a quienes regresaban tarde. También convertía las reliquias en armas eficaces y eliminaba el descubrimiento del burro. La revisión devuelve el desenlace que vuelve singular esta historia.
+La historiadora Ana María Henao Albarracín estudió en 2023 un aparecido de parroquia rural decimonónica y lo leyó como herramienta pastoral para fijar normas. Y el escepticismo de don Vicente tampoco carece de antecedentes santandereanos: el viajero Ancízar ya sospechaba, un siglo antes, de quienes esparcían cuentos de encantamientos.`,
+    versiones: `El penitente nocturno que golpea con su rosario aparece en los registros andinos de tres maneras, según quién lo vea y qué se haga con él.
 
-Pérez la clasifica como leyenda negra por la amenaza y el miedo que organiza. Esa categoría no obliga a dejarla sin explicación humana. La propia adaptación combina espanto, investigación nocturna y revelación.
+En Tunja, según Ocampo López, los espantos de dominicos y franciscanos son reales y tienen propósito. Recorren las casas, dan golpes, se asoman a las ventanas y a veces piden que los saquen de penas o que alguien descubra un tesoro. El monje del Panóptico, en cambio, arroja al patio a quien se le interpone, y bajo su capucha hay una calavera. Aquí el valiente que se atreve no deshace el espanto: lo confirma.
 
-El Fantasma de El Horizonte permanece como memoria de una calle y de sus sonidos. Su valor está en mostrar la facilidad con que una silueta incompleta adopta vestiduras religiosas, pero también en la decisión de mirar otra vez y reconocer un cuerpo ordinario debajo de la manta.`,
-    historyCore:
-      "Pérez presenta la historia como adaptación híbrida de Estampas de mi tierra, páginas 173 a 176, y la clasifica como leyenda negra. La obra atribuye a Nepito y Vicente los episodios; no se localizaron registros independientes de caída, lesiones, burro, propietario o autor de una posible broma.",
-    versionCore:
-      "El núcleo conserva calle El Horizonte, penitente, rosario, matraca, Nepito, ventana, espera de Vicente, cuerda y burro cojo bajo manta. Una variante atribuye el disfraz a un hombre que quería ahuyentar serenateros. La revisión mantiene ambas explicaciones sin inventar una entidad sobrenatural residual.",
-    similarityCore:
-      "El Fantasma de El Horizonte comparte con penitentes y ánimas el sonido ritual que atraviesa una calle oscura. Se diferencia porque el relato ofrece una explicación animal y una alternativa humana dentro de su propia cadena. El burro cubierto recuerda historias donde una figura cotidiana es tomada por espanto, mientras la broma contra serenateros se aproxima a controles sociales de la vida nocturna. Ninguna similitud autoriza a maltratar al animal, probar la identidad del bromista o trasladar castigos de otras procesiones de almas.",
+En el cuento de Otero D'Costa la procesión de ánimas con rosarios también es verdadera. Ña Ulogia, que cosía un domingo por la noche, las ve salir del cacaotal rezando; una de ellas, la difunta Jovita, la castiga con un canillazo, y el cirio resulta ser un hueso. El narrador remata que la vieja le mostró la cicatriz.
+
+El relato de Piedecuesta sigue esos pasos y luego los invierte. Hay manto de penitente, hay rosario contra los muros, hay un joven que cae sin sentido, y hay un hombre que se arma de reliquias para enfrentar al espanto. Pero lo que encuentra al final es un burro con una manta. La inversión tiene un segundo giro: la prueba no sirve de nada, y el pueblo se queda con su fantasma.
+
+Esa última vuelta es la que separa este relato de la simple broma. Ancízar pensaba que bastaba con señalar al hombre detrás de la conseja; el relato de El Horizonte sugiere que la gente no quiere que se la señalen.`,
+    similitudes: `El paralelo más cercano es el Toque de las Ánimas de Tunja, que Javier Ocampo López registró en 1977. Durante años los legos de San Francisco no se atrevían a tocar las campanas de ánimas porque en el altar aparecía un sacerdote con casulla roja, hasta que uno se armó de valor, se acercó y le ayudó la misa. La estructura es la de El Horizonte: un espanto que paraliza a todos, un hombre que decide enfrentarlo y una revelación. Pero en Tunja la revelación confirma lo sobrenatural, porque el sacerdote era un alma en pena, mientras que en Piedecuesta lo disuelve.
+
+Otra comparación posible es con la Peregrinación de Alpha, en el pasaje que Arias trasladó a su libro de 1954: allí Ancízar escucha en Los Santos la historia de una laguna hechizada y la atribuye, sin ver nada, a la conveniencia de algunos vecinos. Don Vicente hace el mismo trabajo de viajero ilustrado, con una diferencia: no encuentra a ningún interesado, sino a un burro enfermo y a un dueño que sólo quería abrigarlo.
+
+El rosario golpeando la noche resuena, por último, en las páginas de Otero D'Costa, donde las ánimas santandereanas pasan en procesión con un rosario grueso en la mano.`,
     leccion:
-      "Mirar de cerca puede revelar vulnerabilidad donde el miedo había imaginado una amenaza.",
+      "Un espanto desenmascarado sigue vivo mientras la gente prefiera seguir temiéndole.",
     sceneHorizontal:
       "calle El Horizonte de noche, una figura cubierta avanza junto a los muros mientras Nepito observa desde una ventana baja",
     sceneVertical:
@@ -261,39 +345,53 @@ El Fantasma de El Horizonte permanece como memoria de una calle y de sus sonidos
   }),
   definePiedecuestaVicenteArenasIMyth({
     slug: "la-puerta-del-perdon",
-    title: "La Puerta del Perdón",
+    fuentesAgotadas: "Seis fuentes. Ninguna trae la puerta azul de Piedecuesta ni a sus curados. «Cuentos de espantos» (2004) no tiene lámina con este título ni con estos personajes. La búsqueda web de «Chato Pascasio», «Efraín Gutiérrez» y «mujer de Tona» sólo devuelve copias del texto publicado; la compilación UNAB de Pérez Pinzón (2016) sólo está en ResearchGate y no se admite.",
+    sourceKeys: [
+      "colaborativoPuerta2026",
+      "artencordobaDoor2026",
+      "plazasComo2025",
+      "parradebe2024",
+      "lopezpueblo19774",
+      {
+        key: "hOYCuentos2004",
+        summary:
+          "Se revisó porque otras fichas del ciclo resultaron ser láminas de este libro. Su índice de cincuenta entradas no incluye ninguna puerta, y el texto completo no nombra a don Vicente, a Efraín Gutiérrez, al Chato Pascasio ni a la mujer de Tona: queda descartado como origen del relato.",
+        limitation:
+          "Es ficción de autor; se cita sólo para dejar constancia de la búsqueda negativa. No trata este relato ni el motivo.",
+      },
+    ],
+    title: "La puerta del perdón",
     excerpt:
       "Una puerta lateral de la parroquia San Francisco Javier reúne memorias de respeto, coerción, curaciones y milagros atribuidos.",
     tags: ["fe", "sanación", "tradición", "Piedecuesta"],
-    mito: `En el costado de la parroquia San Francisco Javier de Piedecuesta había una gran puerta de madera enmarcada por piedra tallada. La adaptación recuerda que durante parte del siglo XX estuvo pintada de azul cielo.
+    mito: `Tenía un arco de piedra labrada y un portón de madera pintado de azul, y la llamaban la Puerta del Perdón. El camino que iba hacia la cabecera del llano pasaba por debajo de ella. Al amanecer, con el canto de los pájaros, llegaban los que buscaban consuelo, y las bisagras crujían con el paso de cada uno. Se decía que el alma atormentada que la cruzaba encontraba paz, siempre que su oración fuera sincera.
 
-Las familias la llamaban Puerta del Perdón. Los niños debían descubrirse la cabeza o arrodillarse al pasar. Quienes no lo hacían podían recibir castigos en la casa o en la escuela. La revisión registra esa disciplina como práctica narrada y no la presenta como modelo educativo.
+Los piedecuestanos la respetaban desde niños. Ningún muchacho pasaba frente a ella sin descubrirse la cabeza. Los mayores iban a buscarle alivio a los males del cuerpo y a los del alma, y cada quien tenía su caso.
 
-La puerta también era usada para resolver peleas. Algunas personas amarraban a quienes habían reñido, los obligaban a arrodillarse y luego a cruzar el umbral. La posibilidad de reconciliación no elimina la coerción del procedimiento.
+Don Vicente, un viejo de cara arrugada, juraba que se le había quitado el dolor de muelas frotándose las mejillas contra las piedras lisas del arco. Efraín Gutiérrez, que sufría de unos mezquinos que no se le iban con nada, se curó metiendo los dedos en la cerradura. Una mujer de Tona, que cargaba con dolencias hondas y oscuras, recogió un día una astilla del quicio de la puerta, se la echó a la boca y la masticó. Quedó sana.
 
-Alrededor de la piedra y la madera crecieron historias de curación. Vicente, según el relato, habría aliviado un dolor de muela al rozar su rostro o dientes contra el arco. Efraín habría eliminado verrugas mediante el contacto con la cerradura.
+La puerta también cambiaba a la gente. El Chato Pascasio, que se había pasado la vida en parrandas, dejó de volver borracho a la casa y se volvió manso como un cordero. Se contaba además que a los que tenían las piernas tiesas por sus pecados les volvía el movimiento, pero sólo cuando el arrepentimiento era verdadero.
 
-Otra mujer, llegada de Tona, comió un fragmento de madera. La página no recomienda ninguna de esas acciones. Raspar dientes contra piedra o ingerir partes de una puerta puede causar daño y tampoco existe evidencia médica de eficacia.
+No todos creían. Para algunos, aquello no era más que madera y piedra, incapaz de cambiar a nadie. Pero con los años la puerta se volvió casi una persona del pueblo, una más en las historias de todos los días. El que pasaba bajo el arco dejaba ahí algo de lo que quería y algo de lo que le dolía, y la puerta seguía abierta, esperando al siguiente.`,
+    historia: `De la puerta de madera azul que curaba el dolor de muelas y los mezquinos no se ha encontrado ningún texto impreso que se pueda leer. Ni los cronistas de Piedecuesta, ni el volumen de Valenzuela Sánchez sobre Santander, ni la antología de Villa Posse, ni las revistas de historia o la prensa del municipio la mencionan. Tampoco figura en el índice de Cuentos de espantos y otros seres fantásticos del folclor colombiano (2004). No se sabe, por eso, a qué edificio perteneció la puerta ni quiénes fueron don Vicente, Efraín Gutiérrez o el Chato Pascasio.
 
-La tradición añadía que el umbral podía conceder riqueza o poder. Pascasio, descrito como un hombre que bebía y ejercía violencia, habría cambiado después de pasar por allí. La ficha no reduce la violencia doméstica a un milagro ni sustituye responsabilidad, protección o reparación por una conversión instantánea.
+El nombre, en cambio, tiene una historia larga. En España se llama Puerta del Perdón a uno de los accesos de muchas catedrales e iglesias, ligado a las indulgencias que se ganaban en peregrinaciones y romerías; la de Santiago de Compostela sólo se abre en los años jacobeos, y la de la mezquita-catedral de Córdoba lleva una inscripción que la fecha en marzo de 1377, bajo Enrique II de Castilla. En América, la catedral de Puebla tiene la suya. La costumbre sigue viva en Colombia: en el Jubileo de 2025 la Catedral Primada, en Bogotá, abrió su puerta santa, y los franciscanos celebran cada 2 de agosto el Perdón de Asís, que Honorio III concedió en 1216 a quien visitara la Porciúncula.
 
-Un episodio situado durante las guerras civiles cuenta que hombres armados entraron al templo y quedaron inmóviles. Solo después de confesarse pudieron retirarse. La escena pertenece a la memoria religiosa adaptada; no es un parte militar ni una prueba de parálisis sobrenatural.
+La otra mitad del relato, las curaciones por contacto con un objeto sagrado, también está documentada en la región. Javier Ocampo López cuenta en El pueblo boyacense y su folclor (1977) que, según contaban los españoles, en Onzaga, población santandereana vecina de Boyacá, los campesinos adoraban un hueso de mohán colocado bajo un crucifijo, convencidos de que así tendrían salud y buena cosecha. En la Piedecuesta del relato la reliquia es más humilde: una astilla del quicio, la piedra del arco, el hueco de la cerradura.`,
+    versiones: `No se conocen otras versiones de esta puerta piedecuestana. Lo que sí puede compararse es el sentido que el nombre tiene en cada tradición.
 
-La existencia material de una puerta, un arco y una parroquia puede estudiarse como patrimonio. Las curaciones, castigos y transformaciones morales son otra clase de afirmación. La revisión separa ambos niveles para que la arquitectura no funcione como evidencia automática de milagros.
+En las catedrales españolas la Puerta del Perdón es una entrada de peregrinos. El perdón que da es una indulgencia: la remisión de la pena de los pecados ya confesados, que la Iglesia concede a quien llega al final de un camino y cruza el umbral en las fechas señaladas. En Santiago y en Santo Toribio de Liébana la puerta permanece cerrada fuera de los años santos. Como recuerda la nota de El Tiempo de enero de 2025 sobre el Jubileo, la Iglesia exige para ese perdón arrepentimiento, confesión, comunión y oración por el papa.
 
-La ficha heredada mezclaba todos los episodios como poderes demostrados y animaba a tocar o desprender materiales. La página restaurada evita instrucciones de daño y no ofrece coordenadas precisas como invitación a intervenir el templo.
+La puerta de Piedecuesta invierte casi todo. Está siempre abierta y pertenece al camino. Nadie cuenta que se confiese o comulgue quien la cruza: el perdón se gana con una oración sincera, y en la práctica lo que la gente busca en ella son curaciones del cuerpo. El dolor de muelas, los mezquinos, las dolencias de la mujer de Tona se tratan tocando, frotando o masticando la puerta misma, como se hace con una reliquia. Sólo el Chato Pascasio y los de las piernas tiesas reciben lo que el nombre promete, un cambio del alma, y en su caso el milagro depende del arrepentimiento, igual que en la doctrina de las indulgencias.
 
-La Puerta del Perdón comparte con otros umbrales sagrados la idea de que cruzar modifica a una persona. Aquí esa promesa convive con disciplina infantil, justicia comunitaria, remedios caseros y memoria de guerra.
+El relato deja además un lugar a los incrédulos, que ven en ella madera y piedra y siguen de largo. En la doctrina de las indulgencias esa figura no tiene papel: el perdón sólo alcanza a quien lo pide.`,
+    similitudes: `El paralelo evidente son las puertas del perdón de las catedrales españolas, como la de Córdoba, levantada en 1377 por orden de Enrique II, o la de Santiago de Compostela, que sólo se abre en año santo. En ellas, como en la de Piedecuesta, cruzar el umbral limpia algo del que pasa. La diferencia es que allí el perdón lo administra la Iglesia en fechas fijas, y aquí lo da la puerta todos los días a quien reza con sinceridad.
 
-Contarla hoy exige sostener la ambivalencia. El lugar puede ser significativo para una comunidad y, al mismo tiempo, algunas prácticas asociadas pueden reconocerse como riesgosas o coercitivas. Preservar la leyenda no obliga a repetirlas.`,
-    historyCore:
-      "Pérez presenta la Puerta del Perdón como historia híbrida adaptada de Estampas de mi tierra, páginas 128 a 130, y la clasifica como leyenda de identidad. El patrimonio religioso local aporta contexto material; no se localizaron expedientes médicos, escolares, judiciales o militares que corroboren los efectos narrados.",
-    versionCore:
-      "El núcleo conserva puerta lateral, madera azul, arco de piedra, respeto infantil, conciliación forzada, Vicente, Efraín, mujer de Tona, Pascasio y episodio de guerra. La revisión distingue edificio y memoria de milagros, no recomienda raspar, ingerir o forzar, y no presenta la conversión como solución suficiente a la violencia.",
-    similarityCore:
-      "La Puerta del Perdón comparte con puertas santas y umbrales de iglesias la promesa de reconciliación al cruzar. Sus relatos de dolor dental y verrugas la acercan a santuarios de curación popular, mientras la inmovilidad de hombres armados recuerda milagros protectores de templos. Se diferencia por reunir esos motivos en una puerta lateral específica de Piedecuesta y por incluir mecanismos comunitarios de disciplina. Los paralelos no prueban eficacia médica, poder material o intervención divina, ni convierten prácticas coercitivas en patrimonio que deba repetirse.",
+El segundo es el hueso de mohán de Onzaga que registra Ocampo López: un objeto que los campesinos veneraban junto al crucifijo para tener salud. La puerta azul y el hueso comparten la idea de que la santidad se transmite por contacto y de que una cosa vieja, puesta en el lugar justo, cura. En Onzaga lo que se adora es un resto indígena bajo una imagen cristiana; en Piedecuesta, la madera y la piedra de una construcción del pueblo.
+
+El tercero es el Perdón de Asís, que El Tiempo explicaba a sus lectores en agosto de 2024: una capilla pequeña, la Porciúncula, sobre cuya puerta se lee que es «la puerta de la vida eterna». Allí también el perdón está atado a un umbral concreto. La puerta piedecuestana lo lleva a lo doméstico: nadie va a Asís, basta con pasar camino del llano.`,
     leccion:
-      "El patrimonio puede inspirar reconciliación sin justificar coerción, daño físico ni promesas médicas.",
+      "Un lugar se vuelve sagrado cuando la gente le confía sus dolores y vuelve a él con fe.",
     sceneHorizontal:
       "puerta lateral azul cielo y arco de piedra de la parroquia San Francisco Javier, con habitantes que pasan respetuosamente por la plaza",
     sceneVertical:
@@ -313,41 +411,54 @@ Contarla hoy exige sostener la ambivalencia. El lugar puede ser significativo pa
   }),
   definePiedecuestaVicenteArenasIMyth({
     slug: "la-sayona-del-cementerio",
-    title: "La Sayona del Cementerio",
+    fuentesAgotadas: "Tres fuentes. Ninguna trae el episodio de Piedecuesta. «Cuentos de espantos» (2004) no tiene lámina de la Sayona. La búsqueda de «Carlos Vicente Gómez», «La Gran Luz» y «Elvira» sólo devuelve copias del texto publicado; las páginas que resumen la Sayona en la web son agregadores y blogs (El Rincón Colombiano, mitoyleyenda.com, soloenvenezuela.net), vetados.",
+    sourceKeys: [
+      "tovarMitos2015",
+      "pastoleyenda2024",
+      {
+        key: "hOYCuentos2004",
+        summary:
+          "Se revisó porque otras tres fichas de Piedecuesta resultaron ser láminas casi literales de este libro. Sus cincuenta láminas incluyen espantos femeninos (la Llorona, la Viudita, la Dama Verde, la Niña de la Carta), pero ninguna Sayona, y el texto no nombra a Carlos Vicente Gómez ni a Elvira: queda descartado como origen.",
+        limitation:
+          "Es ficción de autor; se cita para dejar constancia de la búsqueda negativa. No trata este relato ni la Sayona.",
+      },
+    ],
+    relatoCorto:
+      "El texto publicado sólo cuenta un episodio en Piedecuesta: la noche de la tienda, la revelación de Elvira y el duelo de Carlos Vicente. Lo demás eran resúmenes de la Sayona venezolana y de figuras mexicanas, que no forman parte de este relato y van a historia y versiones. Alargarlo exigiría inventar.",
+    title: "La sayona del cementerio",
     excerpt:
       "Carlos Vicente Gómez reconoce en una aparición vestida de negro a Elvira, su amor juvenil, y la sigue hasta el cementerio.",
     tags: ["La Sayona", "amor", "muerte", "memoria"],
-    mito: `En 1910, según la adaptación, Carlos Vicente Gómez contó a Vicente Arenas una experiencia ocurrida en noviembre de 1896. El relato comienza en una tienda llamada La Gran Luz, durante una reunión política de simpatizantes liberales.
+    mito: `Piedecuesta todavía tenía abierta la herida de la última guerra civil. Era noviembre de 1896, y el pueblo se apagaba apenas caía el sol. Los que antes se sentaban en las gradas del atrio a conversar se encerraban temprano, y las calles se quedaban en silencio.
 
-Una mujer vestida de negro entró al lugar. Pronunció palabras que nadie logró comprender y se retiró. Su presencia interrumpió la conversación, aunque los asistentes no pudieron decir quién era.
+Sólo en una tienda, La Gran Luz, seguía habiendo gente de noche. Allí se reunía un grupo de revolucionarios, fieles a sus ideas como un náufrago a la esperanza de tocar tierra. Entre ellos estaba Carlos Vicente Gómez.
 
-Carlos vivía cerca del cementerio. Después del encuentro modeló o esculpió la figura que había visto. Al trabajar el rostro creyó reconocer a Elvira, una compañera de escuela y amor de juventud.
+Una de esas noches la puerta se abrió despacio y entró una mujer. Llevaba un sayal oscuro, tenía la cara afilada como si la hubiera tallado el viento del páramo y en los ojos una pena que no le cabía. Era la Sayona. Habló, pero ninguno de los que estaban en la tienda pudo guardar después lo que dijo.
 
-La historia afirma que Elvira había muerto de tuberculosis esa misma noche, lejos de Piedecuesta, en el alto Magdalena. Esa coincidencia sostiene el componente romántico y sobrenatural, pero no está respaldada aquí por registro civil, parroquial o médico.
+Carlos Vicente, en cambio, entendió algo que no había ido a buscar. Aquella aparición era Elvira, su novia, la que la fiebre blanca había matado lejos, sola, en el Alto Magdalena.
 
-Tiempo después, la mujer de negro volvió a ser vista en las calles. Caminaba sin responder a quienes la llamaban y terminaba su recorrido en el cementerio, donde desaparecía junto a una tumba.
+Desde entonces no volvió a ser el mismo. Se hizo escultor, buscando un consuelo que no iba a encontrar, y llenó el cementerio de monumentos de mármol donde se le iban también las lágrimas. Allí, noche tras noche, Elvira volvía a parecerse a la Sayona, y él seguía esperando una despedida.
 
-La comunidad comenzó a nombrarla Sayona. Sin embargo, esta versión no sigue el ciclo más conocido de una mujer que castiga a hombres infieles. No seduce, persigue o juzga. Su núcleo es el reconocimiento tardío entre Carlos y Elvira.
+Los niños del pueblo corrían asustados entre el monte cuando creían oír a lo lejos los gritos de la Sayona, y los repetían en sus juegos sin saber que estaban cantando la historia de Carlos Vicente y de su Elvira.`,
+    historia: `El episodio de Carlos Vicente Gómez y la tienda La Gran Luz no consta en ninguna publicación al alcance del lector. Lo buscaron sin éxito, en distintos momentos, quienes revisaron las recopilaciones santandereanas de Valenzuela Sánchez y de Villa Posse, las estampas de Arenas Mantilla, las revistas de historia y los periódicos de la región. El libro de espantos que El Tiempo publicó en 2004, que inventa otros aparecidos de Santander, no tiene ninguna Sayona entre sus cincuenta láminas. La fecha del relato tampoco es firme: el texto que circula habla de noviembre de 1896 y, en otro pasaje, de 1910.
 
-La ficha heredada importaba rasgos de la Sayona venezolana y de otras regiones colombianas: dientes desmesurados, castigo a mujeriegos y una transformación monstruosa. Esos elementos no pertenecen a la adaptación piedecuestana consultada.
+La figura, en cambio, está bien documentada, sobre todo del otro lado de la frontera. La Sayona es un espanto de los llanos venezolanos. La Fundación Empresas Polar publicó en Mitos y leyendas del estado Portuguesa los testimonios de varios narradores con nombre: Juan Francisco Tovar la describe como una mujer muy bonita y muy celosa que por sospechas de infidelidad mató a su marido y quedó convertida en Sayona, llamada así por la saya blanca con que sale, y que sólo asusta a los hombres infieles, parranderos y enamorados que andan a medianoche. Otros narradores de Portuguesa cuentan cómo la siguieron hasta una quebrada y le vieron los colmillos largos y los ojos en candela.
 
-También convertía la reunión política, la fecha de muerte y la tuberculosis en hechos comprobados. La revisión mantiene esos detalles con atribución porque organizan la narración, pero no inventa expedientes para confirmarlos.
+En Colombia la leyenda circula sobre todo por la frontera y los llanos. El Diario del Sur, de Pasto, la presentó en 2024 como leyenda venezolana extendida a esa región, con el nombre de Casilda para la mujer celosa que mató a su esposo y a su madre y fue maldecida por ésta al morir.
 
-Pérez clasifica la pieza como leyenda histórica por su anclaje en fechas, nombres, espacio urbano y memoria política. La categoría describe su forma, no garantiza que la aparición, la biografía o la simultaneidad hayan ocurrido.
+En Piedecuesta, el nombre de la Sayona se pone a un fantasma de otra clase: no el de una asesina celosa, sino el de una novia muerta de fiebre que vuelve a quien la lloraba.`,
+    versiones: `Las versiones documentadas de la Sayona coinciden en el castigo y discrepan en el crimen. En los testimonios de Portuguesa la mujer mató al marido por celos y desde entonces persigue a los hombres que andan de noche buscando otras mujeres; su aparición es un escarmiento. Pedro Tovar la siguió hasta la quebrada de Araure y volvió con la advertencia de su esposa: eso le pasaba por andar de mujeriego. En la variante que publicó el Diario del Sur la culpa es doble —el esposo y la madre— y la condena viene de la maldición de la madre moribunda. En casi todas, la Sayona se deja seguir con una figura hermosa y al final muestra un rostro espantoso.
 
-El cementerio funciona como destino y no como sitio de exploración. Las coordenadas son aproximadas y la página no identifica una tumba de Elvira ni invita a buscar restos, inscripciones o pruebas privadas.
+El relato piedecuestano rompe esa lógica. La Sayona entra en una tienda llena de hombres, pero no castiga a ninguno por infiel: habla, y nadie recuerda qué dijo. El único que entiende algo es Carlos Vicente, y lo que entiende es que la aparición es su propia novia, muerta de fiebre lejos de él. No hay crimen ni celos ni venganza; hay un duelo que no se cierra. El vestido también cambia: la saya blanca de los llanos se vuelve un sayal oscuro.
 
-La Sayona del Cementerio es una historia de duelo. Carlos comprende demasiado tarde a quién creyó ver, y la ciudad convierte ese reconocimiento en un recorrido repetido entre la calle y las sepulturas.
+El escenario es otro rasgo propio. La Sayona venezolana sale en calles oscuras, carreteras y orillas de quebrada. La de Piedecuesta llega al pueblo en tiempo de guerra civil, se aparece a un grupo de revolucionarios y termina ligada al cementerio, donde el escultor levanta sus monumentos de mármol. De ahí le viene el nombre: la sayona del cementerio.`,
+    similitudes: `El paralelo directo es la Sayona de los llanos venezolanos, tal como la cuentan los narradores de Portuguesa en el libro de la Fundación Empresas Polar: una mujer alta y elegante que aparece de noche a los hombres, se deja seguir y revela al final que no es de este mundo. La aparición en La Gran Luz conserva lo esencial —la mujer que entra de noche entre hombres, el traje que le da nombre, el espanto de quien la ve—, pero cambia el sentido: en Piedecuesta no castiga una falta.
 
-Restaurar la versión local devuelve humanidad a la figura. Elvira no queda reducida a monstruo ni instrumento para vigilar la conducta masculina. Permanece como nombre dentro de una memoria de amor, distancia y muerte atribuida.`,
-    historyCore:
-      "Pérez presenta la historia como adaptación híbrida de Estampas de mi tierra, páginas 184 a 189, y la clasifica como histórica. Las fechas de 1896 y 1910, La Gran Luz, la reunión liberal, Carlos, Elvira y la tuberculosis proceden de esa cadena; no se localizaron registros independientes que los corroboren.",
-    versionCore:
-      "El núcleo conserva mujer de negro, palabras incomprensibles, Carlos Vicente Gómez, escultura, reconocimiento de Elvira, muerte distante y desaparición en el cementerio. La revisión retira dientes, seducción, persecución y castigo de infieles importados de otras Sayonas y no señala una tumba verificable.",
-    similarityCore:
-      "La Sayona del Cementerio comparte el nombre y la vestimenta oscura con ciclos de la Sayona en Venezuela y Colombia, pero carece de la prueba moral contra hombres infieles y de la transformación monstruosa. Se aproxima más a relatos de la amada muerta que aparece a distancia en la hora de su fallecimiento. El recorrido hacia el cementerio recuerda damas enlutadas urbanas, aunque aquí Carlos, Elvira y la reunión política forman un núcleo propio. Esas semejanzas orientan la comparación sin borrar la identidad piedecuestana.",
+El segundo paralelo está en el mismo libro. Antonio Angulo cuenta que en Los Palmares una mujer muy bonita se les subía a los choferes en los carros y que sólo él la veía transformarse en algo feo, mientras sus acompañantes no veían nada. Como en la tienda piedecuestana, la aparición se muestra a un grupo pero sólo uno de ellos comprende lo que tiene enfrente.
+
+El tercero es la versión que difundió el Diario del Sur, con Casilda, la mujer que mató por celos a su esposo y a su madre. Casilda y Elvira están en extremos opuestos: una es culpable y la otra víctima de una enfermedad. Que el mismo nombre de espanto sirva para las dos muestra cómo la Sayona, al cruzar la frontera hacia el interior de Colombia, pudo quedar como una palabra para cualquier mujer muerta que vuelve.`,
     leccion:
-      "Una memoria de duelo merece conservar sus nombres sin convertir a la persona recordada en monstruo.",
+      "El duelo que no encuentra despedida puede dar rostro de espanto a la persona amada.",
     sceneHorizontal:
       "tienda La Gran Luz durante una reunión de 1896, con una mujer vestida de negro que cruza silenciosamente la entrada",
     sceneVertical:
@@ -367,41 +478,91 @@ Restaurar la versión local devuelve humanidad a la figura. Elvira no queda redu
   }),
   definePiedecuestaVicenteArenasIMyth({
     slug: "el-pollo-de-las-animas",
-    title: "El Pollo de las Ánimas",
+    fuentesAgotadas: "Seis fuentes. Ninguna trae a Ritornelio ni a la madrastra. Se buscó en Villa Posse II (cuyo «Cuento de ánimas» es otro relato), en el sumario de «Crónicas y romances», en Cuentos de espantos (2004) y en prensa con editor. La obra de Valenzuela Sánchez sólo tiene cubiertas abiertas.",
+    sourceKeys: [
+      {
+        key: "compiladoraMitos1993",
+        summary:
+          "Es el texto que se confundió con éste y el que mejor explica su trasfondo: Otero dice que en las montañas de Santander las ánimas son seres traviesos que molestan a los campesinos sólo para corregirles los vicios, «cual cumple a madres solícitas», y lo ilustra con Laurián, curado del guarapo por una procesión de ánimas, y con ña Ulogia, castigada por coser en domingo. La madrastra de Ritornelio imita ese papel.",
+        limitation:
+          "Es otro relato, de autor y con estilo literario; no hay madrastra, pollo ni ánimas fingidas. Trata el motivo, no este relato. El número de página del PDF va dos por detrás del folio.",
+      },
+      {
+        key: "albarracinalma2023",
+        summary:
+          "Da el marco histórico de la amenaza que usa la madrastra: estudia la aparición de un difunto en una parroquia rural colombiana del siglo XIX y concluye que las almas en pena permanecían en la órbita afectiva de los vivos y servían para inculcar normas y principios cristianos. Explica por qué la voz de un ánima podía mandar sobre un muchacho.",
+        limitation:
+          "Estudia un caso documentado y un ánima que pide sufragios, no la suplantación de un ánima ni Santander. Trata el motivo, no este relato.",
+      },
+      {
+        key: "compiladoraMitos19932",
+        summary:
+          "Trae la lectura escéptica que los incrédulos de Piedecuesta hacen del teatro de la madrastra: Ancízar, ante un vecino de Los Santos que culpa al diablo de los prodigios de una laguna, responde que el diablo no se mete en eso «salvo en figura de ciertos hombres interesados en propagar semejantes consejas».",
+        limitation:
+          "Trata una laguna encantada y el diablo, no ánimas ni una madrastra; el comentario es de un viajero ilustrado del siglo XIX. Trata el motivo, no este relato. El número de página del PDF va seis por detrás del folio.",
+      },
+      {
+        key: "lopezpueblo1977",
+        summary:
+          "Registra el alma en pena andina en su forma devota: el Toque de las Ánimas de San Francisco, en Tunja, donde un sacerdote difunto espera en el altar hasta que un lego se atreve a ayudarle la misa y pide comuniones por su redención. Sirve de contraste con el ánima fingida de Piedecuesta, que no pide oraciones sino obediencia.",
+        limitation:
+          "Es un espanto urbano de convento, de Boyacá, sin relación con el relato. Trata el motivo, no este relato.",
+      },
+      "tiempoCuentos2004",
+      {
+        key: "mantillaCronicas2012",
+        summary:
+          "Es la obra del cronista piedecuestano a cuyo nombre circula este grupo de relatos de espantos del municipio, y la única de ellas con ficha editorial abierta. Su sinopsis lo define como humorismo y caricatura del alma del pueblo, que es el tono de la farsa de la madrastra, pero su sumario de quince crónicas no incluye ninguna sobre ánimas ni sobre La Ladera.",
+        limitation:
+          "La página dice «Disponible: No» y no hay texto. La relación con el relato es sólo de corpus y de tono, no de contenido. Requiere curl -k.",
+      },
+    ],
+    title: "El pollo de las ánimas",
     excerpt:
       "Ritornelio trabaja esperando recibir una gallina, pero su madrastra imita voces de ánimas para asustarlo y conservar el beneficio.",
     tags: ["engaño", "explotación", "miedo", "ánimas"],
-    mito: `En el sector de La Ladera vivía Ritornelio. La adaptación lo presenta como un hombre especialmente vulnerable al engaño y utiliza palabras ofensivas para describirlo. Esta revisión elimina esos insultos y no le atribuye un diagnóstico que la fuente no aporta.
+    mito: `Ritornelio era el bobito del paraje de La Ladera. Su padre, el viejo Agapito, había sido un hombre rudo que lo crió a golpes y lo dejó con el entendimiento en sombras. Ahora vivía en manos de una madrastra astuta, que lo tenía a su servicio sin pagarle nada.
 
-Ritornelio trabajaba para su madrastra. Realizaba tareas largas y pesadas sin recibir pago. Ella mantenía su cooperación mediante una promesa: algún día le entregaría una gallina pintada o moteada que él deseaba cuidar.
+Cada vez que Ritornelio, cansado hasta el alma, pensaba en escaparse para Piedecuesta, la madrastra lo llevaba de la mano a la corraleja, entre las gallinas. Allí juntaba su cara con la de él y le decía con una dulzura fingida:
 
-Cuando por fin creyó que el animal sería suyo, la mujer lo vendió. Ritornelio preguntó por la gallina y reclamó el cumplimiento del acuerdo.
+—¡Este pollo saraviado es para que se lo coma mi ratoncito, que tanto trabaja para ayudarle a su viejecita consentida!
 
-La madrastra decidió asustarlo. Esperó la noche, golpeó desde un lugar oculto e imitó una voz que presentó como la de las ánimas. El supuesto mensaje decía que debía abandonar su reclamo y seguir trabajando.
+Luego lo llenaba de mimos y lo abrazaba, y el bobito, como embrujado, volvía a sus tareas con la ilusión renovada. El pollo nunca fue suyo. Cuando llegaba el día prometido, la madrastra ya lo había llevado a la feria y lo había vendido con disimulo.
 
-Para aumentar el temor invocó el recuerdo de Agapito, el padre de Ritornelio, representado en la narración como un hombre violento. La amenaza mezcló autoridad familiar, muerte y religión para que el engaño pareciera imposible de cuestionar.
+Si el muchacho reclamaba, ella tenía preparada otra función. Llegaba de noche con un estruendo tal que la familia corría a encerrarse en los cuartos, encendía velas y rezaba a Dios por el alboroto que se acercaba. La madrastra sabía que Ritornelio se escondía entre las faldas de la cocinera. Se ponía a golpear las puertas y a imitar las voces de las ánimas de los cuentos de miedo, lloriqueando como un alma en agonía:
 
-Ritornelio creyó en la voz. Renunció a la gallina y regresó al trabajo no remunerado. No aparece un pollo sobrenatural ni un alma que castigue la ambición. El mecanismo se revela dentro del propio relato como una actuación humana.
+—¡Ritornelio, venimos por vos a llevarte a donde el viejo Agapito!
 
-Pérez interpreta la historia como una denuncia de la manipulación ejercida por personas con mayor poder sobre quienes tienen menos recursos para defenderse. Esa lectura desplaza el foco desde la credulidad de Ritornelio hacia la conducta de quien explota.
+Ese nombre bastaba. Temblando en su rincón, el muchacho le contestaba a la voz que lo llamaba desde el otro mundo:
 
-La ficha heredada repetía el lenguaje despectivo, presentaba al protagonista como objeto de burla y convertía la voz en aparición real. También sugería que obedecer era una lección de humildad. La revisión elimina ese marco.
+—¡Díganle que yo me morí, más bien llévense mi pollito saraviado!
 
-No se afirma que Ritornelio fuera una persona histórica, que tuviera una discapacidad específica o que la relación familiar estuviera documentada. El respeto editorial no necesita inventar una categoría clínica. Basta reconocer que el relato lo muestra en una posición de vulnerabilidad y que esa condición nunca justifica aprovecharse de él.
+Y así volvía a empezar. Ritornelio regresaba a su servidumbre y aplazaba otra vez la huida, con miedo de que las ánimas volvieran por lo que creían suyo.
 
-El título conserva el Pollo de las Ánimas porque así circula la adaptación, aunque el animal no habla ni regresa de la muerte. La gallina prometida es el objeto de una relación desigual y las ánimas son la máscara usada para sostenerla.
+Desde afuera, los más incrédulos del pueblo miraban aquel teatro y murmuraban que tal vez todas esas historias de espantos no eran más que cuentos de los que mandan, para tener sujetos a los que obedecen.`,
+    historia: `Ninguna obra consultable publica la historia de Ritornelio y su madrastra. Se la buscó en los libros de Germán Valenzuela Sánchez sobre Piedecuesta, en el índice de «Crónicas y romances» de Vicente Arenas Mantilla (Ediciones UIS, 2012) y en periódicos santandereanos con fecha. La antología de Eugenia Villa Posse (Quito, 1993) sí trae un «Cuento de ánimas» de Enrique Otero D'Costa ambientado en Santander, pero es otra historia: no hay en él madrastra, pollo ni Ritornelio.
 
-La historia termina sin reparación. Precisamente por eso su lección contemporánea no puede celebrar la obediencia. Invita a identificar el fraude, el trabajo sin pago y el uso del miedo como formas de abuso.
+Ese cuento sirve, en cambio, para situar el motivo. Otero escribe que en las montañas de Santander las ánimas benditas son seres traviesos, que conviven con los campesinos y los molestan sólo para corregirles los vicios, como madres cuidadosas. Sus dos ejemplos lo confirman: unas ánimas mantean en el aire a un borracho que vuelve de la feria de Rionegro hasta curarlo del guarapo, y otra le rompe la frente de un canillazo a una costurera que trabajaba en domingo.
 
-Contar a Ritornelio con dignidad cambia el centro del relato. Ya no es la persona de quien el público debe reírse, sino alguien cuyo deseo sencillo fue utilizado por otra persona para conservar una ventaja injusta.`,
-    historyCore:
-      "Pérez presenta El Pollo de las Ánimas como historia híbrida adaptada de Estampas de mi tierra, páginas 134 a 136, y la clasifica como leyenda de identidad. Ritornelio, la madrastra, Agapito, La Ladera y el engaño pertenecen a esa cadena; no se localizaron registros independientes de las personas o del trabajo.",
-    versionCore:
-      "El núcleo conserva trabajo sin pago, promesa de una gallina moteada, venta, reclamo, golpes, imitación de ánimas, amenaza con Agapito y renuncia de Ritornelio. La revisión mantiene la explicación humana, elimina insultos capacitistas, no diagnostica al protagonista y no convierte explotación en humildad ejemplar.",
-    similarityCore:
-      "El Pollo de las Ánimas comparte con cuentos de aparecidos la voz nocturna que ordena obedecer, pero se diferencia porque la narración revela a una persona viva detrás del sonido. Se aproxima a relatos de patrón o familiar que retiene salario mediante promesas, y a engaños donde la religión protege una relación desigual. El título puede sugerir un animal sobrenatural, aunque la gallina solo es el bien prometido. Estos paralelos ayudan a reconocer manipulación sin culpar a Ritornelio por creer ni inventarle una condición clínica.",
+Un artículo de Ana María Henao Albarracín, de 2023, examina cómo operaba esa devoción en la Colombia de la segunda mitad del siglo XIX. A partir de la aparición de un difunto en una parroquia rural, concluye que las almas en pena seguían en la órbita afectiva de los vivos y servían para inculcar normas cristianas.
+
+Tampoco es nueva, en esta tierra, la sospecha de que alguien saca provecho del miedo a los muertos. A mediados del siglo XIX, en Los Santos, Manuel Ancízar desconfió de las consejas de encantamiento y las cargó en la cuenta de vecinos a quienes convenía difundirlas; Juan de Dios Arias transcribió esa conversación un siglo después.`,
+    versiones: `En los registros del motivo el ánima castiga para enderezar, y quien la invoca cree en ella. El relato de Piedecuesta es el único en que el ánima es un disfraz.
+
+En Otero D'Costa las ánimas santandereanas son reales y tienen buen humor. A Laurián lo levantan en vilo cantándole «¡por borrachito!», lo dejan enredado en la copa de un gualanday y lo curan para siempre de la bebeta; a ña Ulogia, que cosía un domingo, la difunta Jovita le pide que le recorte la mortaja y después la castiga con un canillazo por trabajar en día de fiesta. La corrección tiene destinatario y motivo, y el castigado sale mejor.
+
+En Tunja, según Javier Ocampo López, el alma en pena del Toque de las Ánimas es un sacerdote que espera en el altar de San Francisco a que alguien le ayude la misa. Durante años los legos no se atreven, hasta que uno lo hace y el difunto pide comuniones por su redención. La aparición pide, no amenaza.
+
+Un bestiario de 2004 que se presenta como colección de papeles imaginarios, Cuentos de espantos, trae en la lámina del Ánima Sola la figura del animero: un vecino de capa negra que en noviembre recorre las casas con un farol y una campanilla pidiendo oraciones por las ánimas. Es la voz humana que habla en nombre de los muertos, pero de buena fe.
+
+En Piedecuesta esa voz está usurpada. La madrastra hace de ánima, y el castigo no endereza a nadie: sólo retiene a un muchacho sin paga. Lo que en Otero es una lección, aquí es un negocio, y los incrédulos del pueblo sacan la conclusión que Ancízar había sacado un siglo antes.`,
+    similitudes: `El paralelo más útil está en el mismo departamento. Dentro del «Cuento de ánimas» de Otero D'Costa, que salió en sus Leyendas de 1936 y reproducido por Villa Posse, las ánimas de Santander se comportan como madres solícitas: aparecen de noche, en procesión, y castigan al borracho o a la que trabaja en domingo para corregirlos. La madrastra de Ritornelio usa exactamente ese papel. Se presenta como «viejecita consentida» de día y como ánima de noche, y en los dos casos habla de premio y de castigo. La diferencia es que en Otero el castigado se enmienda, y aquí el muchacho sólo obedece.
+
+La otra comparación la da un viajero. Cuando un labriego de Los Santos le explicó que cierta laguna estaba embrujada, Ancízar replicó, según lo transcribe Arias, que el demonio no anda en esos oficios y que quienes andan son personas a las que les conviene el rumor. Los escépticos de Piedecuesta dicen lo mismo del teatro de la madrastra: que las historias de espantos son cuentos de los que mandan.
+
+Un tercer eco, ya literario, es la lámina del Ánima Sola en Cuentos de espantos (2004). Allí un animero de pueblo, el hombre que pide oraciones por las ánimas tocando una campanilla, termina encontrándose con el ánima de verdad. En Piedecuesta nadie se encuentra con ninguna: la única ánima que golpea las puertas es la madrastra.`,
     leccion:
-      "La vulnerabilidad nunca autoriza engaño, trabajo sin pago ni burla contra quien confía.",
+      "Quien administra los miedos de otro puede cobrarle trabajo sin pagarle nunca.",
     sceneHorizontal:
       "Ritornelio trabaja en La Ladera y mira con afecto una gallina moteada mientras su madrastra negocia a distancia",
     sceneVertical:

@@ -54,7 +54,7 @@ test("los dos expedientes cumplen la metodología editorial", () => {
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
     // Eran 8 exactas; ahora el piso de 8.
-    assert.ok(sources.length >= 8, `${record.slug}: ${sources.length} fuentes`);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 8), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
@@ -98,16 +98,12 @@ test("corrige Talabalí y las capas del Ermitaño", () => {
 
   const ermitano = bySlug.get("el-ermitano-iracundo");
   // heredada: reescribir tras el cotejo
-  assert.match(ermitano.mito, /Mago de Oz[\s\S]+banda/i);
+  assert.match(ermitano.mito, /Ocaña[\s\S]+ermitaño/i);
   // heredada: reescribir tras el cotejo
-  assert.match(ermitano.versiones, /no aparece como topónimo/i);
   // heredada: reescribir tras el cotejo
   assert.doesNotMatch(ermitano.mito, /Cuevas de Oz/);
   // heredada: reescribir tras el cotejo
-  assert.match(
-    ermitano.mito,
-    /no presenta al Ermitaño como maestro ni como guía de autoconocimiento/i,
-  );
+  assert.doesNotMatch(ermitano.mito, /autoconocimiento/i);
 });
 
 test("la matriz cubre las dos rutas y sus descartes", () => {

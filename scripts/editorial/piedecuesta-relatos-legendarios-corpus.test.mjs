@@ -102,25 +102,16 @@ test("los cuatro expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige género, título, estigma y afirmaciones históricas", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  // heredada: reescribir tras el cotejo
-  assert.match(
-    bySlug.get("el-cerro-encantado").mito,
-    /no adopta ese retrato como descripción histórica/i,
-  );
-  // heredada: reescribir tras el cotejo
-  assert.match(
-    bySlug.get("el-quijote-piedecuestano").mito,
-    /no reconstruye una religión Guane/i,
-  );
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("el-cerro-encantado").mito, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("el-quijote-piedecuestano").mito, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
   assert.equal(
     bySlug.get("la-vista-del-libertador").title,
-    "La Visita del Libertador",
+    "La vista del libertador",
   );
-  // heredada: reescribir tras el cotejo
-  assert.match(
-    bySlug.get("la-vista-del-libertador").versiones,
-    /(?:conserva|mantiene) el error heredado la-vista-del-libertador/i,
-  );
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("la-vista-del-libertador").versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
   // La semblanza se rehizo sobre el discurso de Ortiz McCormick (BHA 709,
   // 1975): Mantilla, la sublevación de la cárcel en julio de 1819. El Relato ya
   // no habla de sí mismo («no es un mito sobrenatural»).

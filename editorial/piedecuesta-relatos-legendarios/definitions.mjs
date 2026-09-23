@@ -3,39 +3,52 @@ import { definePiedecuestaLegendaryAccountsMyth } from "./define-editorial-myth.
 const records = [
   definePiedecuestaLegendaryAccountsMyth({
     slug: "el-cerro-encantado",
-    title: "El Cerro Encantado",
+    fuentesAgotadas: "Siete fuentes. Ninguna trae a Cantera, Bernardino Ardila ni Arnefo. La obra candidata (Arenas Mantilla, «Crónicas y romances», UIS 2012) sólo tiene página de catálogo; «Estampas de mi tierra» (1941) no está digitalizada. «Cuentos de espantos» (2004) no tiene lámina sobre el cerro. La búsqueda web de «Arnefo» no devuelve nada fuera de copias del texto publicado.",
+    sourceKeys: [
+      "uISCronicas2012",
+      "martinezProyecto2023",
+      "bucaramangaCantera2013",
+      "araqueVirgen2025",
+      "compiladoraMitos1993",
+      "compiladoraMitos19932",
+      "hOYCuentos2004",
+    ],
+    title: "El cerro encantado",
     excerpt:
       "Cantera huye hacia Sevilla mientras el romance de Vicente Arenas convierte una crisis en el origen legendario del cerro.",
     tags: ["Cantera", "conquista", "cerro", "memoria"],
-    mito: `El Cerro Encantado no llega al sitio como una crónica de la Conquista. Es un romance de Vicente Arenas publicado en Crónicas y romances y reproducido por la compilación de 2016. Su voz imagina un pasado remoto para explicar el cerro de la Cantera visible desde Piedecuesta.
+    mito: `Todavía retumbaba la Conquista en los valles cuando existía la Villa del Cacho, la que después se llamó San Carlos y más tarde Piedecuesta. Cuatro cerros la rodeaban como las murallas de una fortaleza. Del sur le llegaba el viento, del oriente el agua limpia, del occidente el canto de los pájaros.
 
-El poema abre en un valle al que llama primero Villa del Cacho, después San Carlos y finalmente Piedecuesta. Cuatro cerros rodean el lugar. El viento llega desde el sur, el agua desde el oriente y el canto de las aves desde el occidente.
+La gente de la villa era negra. El que mandaba era don Bernardino Ardila, y tenía una hija llamada Cantera. Era una niña de mejillas sonrosadas que cantaba como un ruiseñor, y su voz les quitaba las penas a los que la oían.
 
-En ese escenario aparece Bernardino Ardila. Arenas lo llama un “mandón” negro con influencia sobre El Zanjón, Riolato, La Curtida, El Tirol, Mensulí y La Cidra. Su hija Cantera canta y se convierte en el centro afectivo del relato.
+Cuando don Bernardino murió, todo se torció. El poder quedó en manos de Arnefo, un indio de cara sombría, famoso por su lascivia sin freno. Arnefo se hizo dueño de todo: El Zanjón, Riolato, La Curtida, y más allá El Tirol, Mensulí y La Cidra. Juzgaba con dureza y castigaba con furia, y también quiso apoderarse de Cantera.
 
-Cuando Bernardino muere, Arnefo ocupa el mando. El romance lo identifica como indígena y lo caracteriza mediante una mirada hostil y sexualizada. Esta revisión no adopta ese retrato como descripción histórica de una persona o de una comunidad.
+La niña no se dejó. Montó en la yegua Pinta, cruzó por El Molino y subió a buscar refugio en el alto de Sevilla. Arnefo, rabioso, decidió borrar hasta el recuerdo del viejo Ardila y le prendió fuego a su rancho.
 
-Arnefo toma control sobre Cantera y lastima a varias personas. Ella escapa en una yegua llamada Pinta. Pasa por El Molino y avanza hacia el alto de Sevilla, mientras la población se dispersa.
+Mientras el rancho ardía, la gente vio a Arnefo bailando entre las llamas como un loco, y los que lo vieron lo compararon con Atila. En lo más fuerte de aquella danza la tierra tembló. Del cielo salió un estruendo y empezó a caer una lluvia de ceniza, como si el cielo quisiera borrar lo que acababa de pasar.
 
-Arnefo sube luego a La Cantera y prende fuego al rancho de Bernardino. En medio de las llamas, el poema introduce un temblor, un grito y una lluvia de ceniza. También habla de muertes, enfermedades y rapiña, pero no ofrece fecha, testigos, archivo o fenómeno geológico identificable.
+Lo que siguió fue la ruina. Muchos hombres desaparecieron, otros cayeron enfermos de peste, y los saqueadores se llevaron lo poco que quedaba. Así terminó el mando de Arnefo.
 
-El final convierte el cerro en memoria de la joven. Arenas dice que el monte que se observa desde la plaza lleva el nombre de Cantera por aquella historia. Es una conclusión poética, no una etimología demostrada.
+De todo aquello quedó el cerro que se ve desde la plaza. Le pusieron el nombre de la niña que cantaba y cuyo canto ya nadie volvió a oír: el cerro de la Cantera.`,
+    historia: `Para la historia de Cantera, la hija de Bernardino Ardila, y del incendio de Arnefo no hay hoy un texto impreso al alcance del lector. El texto que circula está narrado en primera persona por alguien que llama a Piedecuesta su ciudad natal, y todo apunta a Vicente Arenas Mantilla, el cronista piedecuestano cuyo libro Crónicas y romances salió en 2012 con el sello universitario UIS. El catálogo de la editorial enumera quince crónicas, entre ellas «El cerro de los compadres» y «El correo de las brujas», y presenta el volumen como un libro costumbrista sobre sucesos de tres ciudades santandereanas; pero el texto no se puede descargar, y ninguna de esas crónicas lleva el nombre de Cantera. Tampoco hay ejemplar digital de Estampas de mi tierra (1941), del mismo autor. Valenzuela Sánchez y Villa Posse no lo recogen, y el libro de espantos de El Tiempo tampoco.
 
-La ficha heredada transformaba el romance en historia factual de la Conquista. Presentaba categorías raciales como si fueran una descripción neutral, llamaba “tribu” al conjunto de personajes y explicaba el temblor como resultado del poder de Arnefo.
+El cerro, en cambio, tiene documentación propia. El de La Cantera se levanta a pocas cuadras del parque principal de Piedecuesta y es su cerro tutelar. Un trabajo publicado en 2023 en la revista Documenta de la Universidad Antonio Nariño, a partir del documento La Cantera vive, de Pinzón, explica que el cerro fue decisivo en el nacimiento del pueblo y que de allí nace la leyenda de la Cantera: de él salieron piedras y barro para las primeras casas y la piedra de la fachada y el atrio de la iglesia de San Francisco Javier, y en él brotaban fuentes de agua. Hace más de una década lo corona una Virgen de bronce del escultor Juan José Cobos; el Área Metropolitana de Bucaramanga lo adecuó como parque metropolitano, y Vanguardia calculaba en 2025 que ese año subirían a él cerca de treinta mil feligreses.
 
-La revisión conserva los nombres, la huida y la catástrofe porque forman el arco literario. Al mismo tiempo, separa la obra de una reconstrucción histórica. No prueba que Bernardino gobernara esos lugares, que Cantera diera nombre al cerro o que Arnefo provocara un desastre.
+La explicación práctica del nombre, una cantera de piedra, convive así con la de este relato, que se lo atribuye a una niña.`,
+    versiones: `No se conoce otra versión del relato de Cantera y Arnefo. Lo que hay son dos maneras de explicar el nombre del mismo cerro.
 
-También evita ilustrar a una comunidad negra como fondo exótico o a un personaje indígena como monstruo. El conflicto pertenece al romance de un autor del siglo XX. Piedecuesta y su cerro son reales; la secuencia que los conecta con Cantera permanece atribuida.
+La primera es la que recoge el trabajo de Documenta a partir de Pinzón. Allí la Cantera es literalmente eso: el lugar de donde se sacaron piedra y barro para levantar las primeras casas de Piedecuesta y la fachada de su iglesia mayor, y donde había manantiales. La leyenda de la Cantera, en esa lectura, es la del cerro que dio materia al pueblo. No hay niña, ni Arnefo, ni incendio.
 
-Así leído, El Cerro Encantado muestra cómo la literatura local fabrica una memoria del paisaje. Su valor no depende de convertir la discriminación, la violencia o el fuego del poema en hechos comprobados.`,
-    historyCore:
-      "La compilación atribuye El Cerro Encantado a Crónicas y romances, páginas 435 a 437, de Vicente Arenas Mantilla, publicado en 1960 y reeditado por la UIS. El cerro de la Cantera y los topónimos son contexto territorial; no se localizaron documentos independientes sobre Bernardino, Cantera, Arnefo, el incendio, el temblor o el origen del nombre.",
-    versionCore:
-      "El núcleo conserva valle, cuatro cerros, Bernardino Ardila, Cantera, Arnefo, Pinta, El Molino, Sevilla, incendio, temblor, ceniza y cerro visible desde la plaza. La revisión atribuye la oposición racial y no prueba gobierno, catástrofe, poderes o etimología. Tampoco fusiona esta pieza con Los Tunjos de la Cantera, que pertenece a José del Carmen Rivera.",
-    similarityCore:
-      "El Cerro Encantado comparte con leyendas de origen la transformación de un episodio humano en explicación del paisaje. La huida de Cantera recuerda relatos donde una mujer da nombre a una montaña, y el temblor aproxima la obra a memorias de desastre. Se distingue por Bernardino Ardila, Arnefo, la yegua Pinta y la ruta entre El Molino y Sevilla. Los Tunjos de la Cantera usan el mismo cerro, pero siguen a Silvestre y una criatura dorada. La coincidencia espacial no demuestra un ciclo ancestral común ni permite tratar categorías raciales del romance como etnografía.",
+La segunda es la del relato. El nombre viene de una persona, la hija de Bernardino Ardila, y el cerro queda como memoria de una catástrofe: la muerte del mandón negro, la usurpación del indio Arnefo, la huida de la niña a caballo, el incendio del rancho, el temblor, la lluvia de ceniza, la peste y el saqueo. Es un relato de origen del paisaje, con los topónimos de las veredas de Piedecuesta —El Zanjón, Riolato, La Curtida, El Tirol, Mensulí, La Cidra, El Molino, el alto de Sevilla— puestos como dominio del usurpador y como ruta de la fuga.
+
+Hay un tercer uso del cerro que ninguna de las dos recoge: el religioso. Desde que se puso allí una Virgen, el cerro de la Cantera es sitio de viacrucis y de peregrinación, y el Área Metropolitana lo describe como el cerro tutelar del municipio. La niña que cantaba y la Virgen que protege ocupan hoy, en la memoria del pueblo, la misma cumbre.`,
+    similitudes: `En Santander, Juan de Dios Arias recogió en Folclor santandereano (1954) varias leyendas en que un lugar entero depende de un encanto. La más cercana es la del Socorro: la ciudad está edificada sobre una laguna donde los indios arrojaron sus tesoros al llegar los españoles; cuando los conquistadores quisieron secarla con sal, quedó reducida a dos vigas de oro, y tocar una de ellas derrumbaría el Socorro. Como en Piedecuesta, el paisaje que se ve hoy es el resto de un choque entre gentes distintas en tiempo de la Conquista, y guarda la memoria de lo que se perdió.
+
+El segundo paralelo es el mito muzo de Furatena, que Javier Ocampo López incluyó en Mitos colombianos (1988) y reprodujo Eugenia Villa Posse: Fura, Tena y su hijo Itoco se convierten en los peñascos que todavía se ven junto al río Minero, después de una historia de deseo, celos y muerte. Allí las personas se vuelven montaña; en Piedecuesta la montaña no es Cantera, pero lleva su nombre. En los dos casos una historia de violencia termina fijada en un cerro que cualquiera puede señalar.
+
+La diferencia está en quién queda. Fura y Tena son los protagonistas convertidos en piedra; en el cerro de la Cantera queda la niña que huyó, no el usurpador que provocó la ruina.`,
     leccion:
-      "Un paisaje puede guardar literatura sin convertir sus estereotipos en historia comprobada.",
+      "Un paisaje puede guardar el nombre de quien sufrió la injusticia y olvidar el de quien la cometió.",
     sceneHorizontal:
       "Cantera cabalga en la yegua Pinta desde El Molino hacia el alto de Sevilla, con el cerro de la Cantera al fondo y población diversa representada con dignidad",
     sceneVertical:
@@ -55,39 +68,55 @@ Así leído, El Cerro Encantado muestra cómo la literatura local fabrica una me
   }),
   definePiedecuestaLegendaryAccountsMyth({
     slug: "el-quijote-piedecuestano",
-    title: "El Quijote Piedecuestano",
+    fuentesAgotadas: "Seis fuentes. Ninguna trae a don Juan de Guarguatí ni a don Celedonio. Se buscó en la obra abierta de Valenzuela Sánchez, en el catálogo de Arenas Mantilla, en Villa Posse II, en el Boletín de Historia y Antigüedades y en la prensa local fechable. Las fuentes documentan la geografía guane del relato (Macaregua, Ruitoque, Los Santos) y sus dos motivos: el cacique presionado por su tesoro y el duelo entre campeones indígena y español.",
+    sourceKeys: [
+      "gonzalezHistoria2023",
+      "bucaramangaPiedecuesta2024",
+      "compiladoraMitos19933",
+      "compiladoraMitos19934",
+      "colaborativoZaquesazipa2026",
+      "sanchezLeyendas2009",
+    ],
+    title: "El quijote piedecuestano",
     excerpt:
       "Guarguatí escapa del cautiverio y se enfrenta a Celedonio en una ficción histórica de Vicente Arenas narrada desde una mirada colonial.",
     tags: ["Guarguatí", "resistencia", "conquista", "memoria"],
-    mito: `El Quijote Piedecuestano es una ficción histórica de Vicente Arenas tomada de Estampas de mi tierra. El título no nombra a don Quijote de la Mancha: compara el arrojo de sus personajes con un duelo caballeresco y mezcla topónimos reales con una trama no corroborada.
+    mito: `Don Juan de Guarguatí, al que llamaban el zipa, era cacique de los bravos de Macaregua, famoso por su destreza y por su picardía. Los españoles lo capturaron y se lo llevaron encadenado para obligarlo a decir dónde escondía sus caudales y sus tesoros.
 
-La obra presenta a don Juan de Guarguatí como jefe de Macaregua. Los españoles lo llevan encadenado para obligarlo a revelar una gruta con armas y riquezas. Guarguatí escapa con un grupo y traslada objetos hacia Santa Ángela, lugar que el texto aproxima al actual municipio de Los Santos.
+Una noche se les escapó con un ardid. Lo acompañaban sus camaradas más audaces, y cruzaron los montes cargando armas y una guaca cuantiosa.
 
-La investigación histórica sí documenta a Macaregua entre los cacicazgos Guane. No documenta al personaje de Arenas, su título de “zipa”, las agrupaciones llamadas Tiros, Calaveras o Cachimbos, ni la secuencia de fuga.
+Llegaron a Santa Ángela, la que hoy es Los Santos, tierra de minas de cobre, y se unieron a la tribu de los Cachimbos, que gobernaba el cacique Caricachí, también llamado Masuca. Caricachí les dio protección, pero les cobró un precio: Guarguatí y sus hombres tenían que pagarla trabajando en el túnel de El Clarinete, que también llaman la Cueva del Indio. Trabajaron años en sus entrañas, a oscuras.
 
-En Santa Ángela, el relato dice que el grupo es obligado a trabajar en un túnel llamado El Clarinete, con bocas en Chocoa y Ruitoque. Tras años de trabajo sobreviven Guarguatí, varias mujeres y parte de sus acompañantes. La página no presenta esa geografía como una cueva localizable ni invita a explorarla.
+Al sol lo llamaban Pichy, y era su única esperanza. Cuando por fin salieron a su luz, de los noventa y cinco que habían entrado quedaban don Juan, sus once pollonas y treinta y tres camaradas. Venían cargados de metales preciosos y de reliquias adornadas con collares de colmillos, y en lo alto de Ruitoque hicieron una danza ritual en ofrenda a los genios, a las nubes y a los astros.
 
-Después, la prosa imagina una ceremonia en Ruitoque. Arenas describe armas, objetos y prácticas rituales mediante vocabulario exotizante. Esta revisión no reconstruye una religión Guane a partir de ese pasaje y no repite como etnografía las expresiones usadas por el narrador.
+En la Villa de San Carlos, los pobladores blancos oyeron la algarabía que bajaba de las alturas y se helaron de miedo: ¿habrían bajado demonios? Se reunieron de urgencia y escogieron como jefe a don Celedonio, un hombre tan grande como su fama. Con él se armaron los Mantilla, los Moreno, los Rey, los Eslava y otras familias.
 
-Los habitantes de la Villa de San Carlos interpretan la reunión como una amenaza. Designan a don Celedonio para organizar la defensa. El texto convierte a familias locales en una tropa y anuncia que el caserío ha sido rodeado.
+Llegó el día del encuentro. La villa amaneció rodeada por los indígenas, con lanzas y arcabuces en alto. En los primeros choques murió don Plácido, el sacristán, en la Chorrera del Obispo. Don Celedonio tomó el mando, lanzó un grito feroz y cargó contra los atacantes, que se detuvieron sorprendidos ante tanta bravura.
 
-Guarguatí y Celedonio se encuentran a caballo. La narración contiene insultos y violencia explícita contra indígenas. Aquí el episodio se resume sin recrear heridas: ambos avanzan con lanzas y un cañón improvisado cambia el desenlace.
+Don Celedonio y don Juan se enfrentaron cara a cara, y las lanzas sacaban chispas al chocar. En medio del combate, un cañonazo disparado por error desde la artillería piedecuestana cruzó el campo y alcanzó a don Celedonio.
 
-El disparo derriba a Celedonio. Guarguatí detiene a su gente, pide el escudo del adversario y permite que el grupo lo lleve hacia Ruitoque con una despedida ceremonial. Ese homenaje final desplaza la historia desde el odio hacia el reconocimiento entre contendores.
+Cayó el silencio. La tropa de Guarguatí se quedó inmóvil, con los mosquetes listos. Don Juan se acercó al cuerpo del caído con solemnidad y respeto, como quien se acerca a un igual en valor. Tomó el escudo de don Celedonio y lo cubrió con su capa.
 
-La ficha heredada presentaba a Guarguatí como personaje histórico demostrado, convertía topónimos en prueba y hablaba por la cultura Guane. También normalizaba la voz colonial que llamaba salvajes o demonios a los indígenas.
+Indígenas y colonos entendieron entonces que el sacrificio y la valentía tendían un puente entre ellos. Cuando salió el sol sobre el valle, cargaron en hombros el cuerpo de don Celedonio y marcharon juntos hacia Ruitoque, cantando un himno de batalla.`,
+    historia: `El relato de don Juan de Guarguatí y don Celedonio no tiene un registro publicado que pueda consultarse. Ninguna obra abierta lo nombra. No aparece en lo que se puede leer de los libros de leyendas del piedecuestano Germán Valenzuela Sánchez, ni en las crónicas de Vicente Arenas Mantilla, ni en la antología «Mitos y leyendas de Colombia» de Eugenia Villa Posse, ni en el Boletín de Historia y Antigüedades, ni en la prensa local que se puede fechar. Tampoco hay rastro del título, que por el desenlace parece llamar quijote a don Celedonio, el jefe que muere por un cañonazo de su propio bando.
 
-La revisión conserva el cautiverio, la fuga, el duelo y el respeto final como arquitectura de la obra. Retira la certeza histórica de la batalla, los rituales, la etimología de Guatiguará y las identidades colectivas inventadas.
+La geografía del relato sí es la de Piedecuesta. La reseña histórica del Área Metropolitana de Bucaramanga nombra Ruitoque entre los accidentes que marcan el norte del municipio, y recuerda que el camino real hacia el Socorro subía por la Mesa de Géridas, hoy de Los Santos. La misma reseña dice que Piedecuesta fue reconocida como villa en 1825 con su propio nombre; la «Villa de San Carlos» del relato no aparece en ella. Macaregua, la tierra de los bravos de don Juan, también existió: María Consuelo Moreno González, en su historia de la provincia de Guane (UIS, 2023), la cuenta entre los cincuenta y ocho caciques guanes que la hueste de Martín Galeano encontró en 1540, anota que su encomienda se repartió entre Juan Vicente y Juan Eslava, y fija el límite norte del territorio guane en las mesas de Los Santos y de Ruitoque, justo donde transcurre el relato.
 
-Macaregua ofrece un punto de contexto verdadero, pero no autentica toda la narración. El Quijote Piedecuestano queda así como literatura del siglo XX sobre la Conquista, útil para analizar tanto la resistencia que imagina como la mirada colonial que reproduce.`,
-    historyCore:
-      "La compilación atribuye El Quijote Piedecuestano a Estampas de mi tierra, páginas 140 a 144, de Vicente Arenas Mantilla, publicada en 1941. La historiografía de la UIS documenta un cacicazgo Macaregua en fuentes coloniales. No se localizaron pruebas independientes de Juan de Guarguatí, Celedonio, los Cachimbos, El Clarinete o el combate.",
-    versionCore:
-      "El núcleo conserva cautiverio, fuga desde Macaregua, traslado a Santa Ángela, trabajo en un túnel, reunión en Ruitoque, defensa de San Carlos, duelo y homenaje final. La revisión no adopta los insultos, no atribuye rituales o idioma a los Guane y no deriva Guatiguará del apellido ficticio. Los topónimos reales no convierten la trama en crónica.",
-    similarityCore:
-      "El Quijote Piedecuestano comparte con relatos de resistencia el cautiverio de un jefe, la fuga y la protección de bienes comunitarios. Su duelo recuerda romances caballerescos, mientras el homenaje al adversario transforma una batalla en escena de honor. Se distingue por Guarguatí, Celedonio, Santa Ángela, El Clarinete y Ruitoque. La existencia histórica de Macaregua permite contexto, no identidad narrativa. No debe fusionarse con crónicas Guane, con leyendas de guacas o con Los Tunjos de la Cantera, porque sus autores, géneros y pruebas son distintos.",
+El relato pertenece a una familia de leyendas santandereanas de caciques y conquistadores. Enrique Otero D'Costa, en «Leyendas» (1936), escribió la de Talabalí, un indio guane del valle de Bucarica que sirvió de paje a un encomendero, huyó al monte, se hizo capitán de los yariguíes y, capturado, peleó en duelo contra un hidalgo español ante indios y blancos reunidos en un palenque. En el mismo libro, la del cacique Salomón pasa por Dubigara, tierra de los guanes. Juan de Dios Arias, en «Folclor santandereano» (1954), recogió la leyenda de una «cueva del Indio», antiguo cementerio indígena donde se hallaron vasijas y gargantillas de oro, y donde un codicioso murió flechado por los indios cuando quiso robar sus tesoros. El nombre de zipa, en cambio, es muisca: así se llamaba al señor de Bogotá, y el último, Sagipa, murió en 1539 torturado por los conquistadores, que le exigían revelar un tesoro escondido.`,
+    versiones: `El relato mezcla dos maneras de contar la conquista que en la tradición escrita andan separadas.
+
+La primera es la de los tesoros escondidos. El cacique encadenado para que confiese dónde están sus riquezas repite el destino del zipa Sagipa, al que Gonzalo Jiménez de Quesada exigió llenar un bohío de oro. Pero Guarguatí escapa, y se lleva la guaca consigo. Y la Cueva del Indio, que en Arias es un cementerio indígena cuyos tesoros defienden los indios con flechas, aquí es un túnel de minas donde los propios indígenas pagan con años de trabajo la protección de otro cacique.
+
+La segunda es la del duelo caballeresco. En el Talabalí de Otero D'Costa, un guerrero indígena y un hidalgo español pelean frente a frente, con los dos bandos mirando, y el indio se deja matar por un amor imposible; la escena es trágica y la gana el español. En el relato piedecuestano el duelo entre don Juan y don Celedonio no lo gana nadie: lo decide un cañonazo de la propia artillería de la villa. El héroe criollo, que había cargado solo con un grito, cae por un error de los suyos, y de ahí, probablemente, el título burlón.
+
+El final también se aparta. En Otero D'Costa el indio muere y el orden colonial sigue. Aquí el cacique indígena honra al enemigo caído y los dos bandos cargan juntos el cuerpo hacia Ruitoque. Es una reconciliación que ninguna de las leyendas vecinas trae.`,
+    similitudes: `El paralelo más cercano es Talabalí, la leyenda que Enrique Otero D'Costa publicó en 1936 y que Eugenia Villa Posse reprodujo en 1993. Talabalí es un guane del valle de Bucarica, vecino de Piedecuesta, que se alza contra los españoles y termina en un duelo público contra un hidalgo, con indios y blancos como testigos. Como en el combate de don Juan y don Celedonio, la escena reúne a los dos bandos alrededor de dos campeones. La diferencia es el desenlace: Talabalí se deja matar, y en Piedecuesta el que muere es el criollo, por un disparo de los suyos.
+
+El segundo paralelo es histórico. Sagipa, el último zipa de Bogotá, fue apresado por los hombres de Jiménez de Quesada, que le exigieron el tesoro escondido de su hermano Tisquesusa; no pudo entregarlo y murió en 1539 bajo tortura. El don Juan de Guarguatí del relato lleva el título de zipa y empieza igual, encadenado para que revele sus caudales, pero su historia es la contraria: escapa con la guaca y vuelve armado.
+
+Entre los dos queda lo propio del relato: una batalla local, con familias de la villa nombradas una por una, que acaba en un funeral compartido.`,
     leccion:
-      "El contexto histórico no convierte una ficción colonial en voz autorizada de un pueblo.",
+      "Un enemigo valiente merece honra, aunque el azar le haya quitado la victoria.",
     sceneHorizontal:
       "Guarguatí y su grupo atraviesan de noche el paisaje entre Macaregua y Santa Ángela llevando objetos domésticos y de memoria, sin tesoro espectacular",
     sceneVertical:
@@ -107,39 +136,60 @@ Macaregua ofrece un punto de contexto verdadero, pero no autentica toda la narra
   }),
   definePiedecuestaLegendaryAccountsMyth({
     slug: "la-vista-del-libertador",
-    title: "La Visita del Libertador",
+    fuentesAgotadas: "Cinco fuentes. Ninguna trae el romance «La Visita del Libertador». Se barrió entero Baraya 1874 (cuatro menciones de Piedecuesta, ninguna visita de Bolívar); la reedición UIS de «Crónicas y romances» no es descargable y su sumario no trae el título; la compilación de Pérez Pinzón (UNAB, 2016) sólo está en Scribd, vetado; el grep de Piedecuesta, Pedregosa y Bolívar en los primarios del repo sólo halló el municipio de Bolívar (Santander). La nota de Vanguardia (2010) sobre Margarita Camacho es recepción periodística y no se usa.",
+    sourceKeys: [
+      "lacroixDiario2009",
+      "lacroixDiario1828",
+      {
+        key: "barayaFullText",
+        summary:
+          "Era el primario que proponía la bibliografía heredada y no sostiene el relato: sus cuatro menciones de Piedecuesta son militares (MacGregor en 1814, Urdaneta y Rovira en 1815, Santander hasta 1816) y la biografía del general José María Mantilla, «hijo de la villa de Piedecuesta». Sirve para el paralelo del héroe local de la Independencia.",
+        limitation:
+          "No narra ninguna visita de Bolívar a Piedecuesta. OCR de Internet Archive sin corregir. Trata el contexto, no este relato.",
+      },
+      "uISCronicas20122",
+      "tiempoCuentos2004",
+    ],
+    title: "La vista del libertador",
     excerpt:
       "El romance de Vicente Arenas imagina la llegada de Bolívar a Piedecuesta entre flores, comida, iglesia y una casa que conserva sus pasos.",
     tags: ["Bolívar", "Piedecuesta", "historia", "memoria"],
-    mito: `La ruta heredada dice “vista” en su dirección web, pero la obra se titula La Visita del Libertador. Vicente Arenas la publicó como romance en Crónicas y romances. La revisión corrige el título visible y conserva la URL para no romper enlaces.
+    mito: `Simón Bolívar llegó por la Pedregosa vieja, un camino empedrado que subía y bajaba entre lomas. Venía inclinado sobre su bestia. Detrás lo seguían Ferguson, Lacroix, O'Leary, Soublette y Wilson, conversando entre ellos.
 
-El poema sigue a Simón Bolívar por el camino empedrado de la Pedregosa vieja. Lo muestra a caballo y nombra a Ferguson, Lacroix, O’Leary, Soublette y Wilson como acompañantes. Esa lista pertenece a la composición; no funciona aquí como registro de una comitiva fechada.
+En la Puerta del Sol lo esperaba el pueblo entero. Había arcos, gallardetes y banderas, y la gente se apretaba en las calles para ofrecerle manojos de flores. Al pasar, el caballo del Libertador se detuvo ante una muchacha muy hermosa, que le dirigió un saludo breve y gracioso. Alrededor, el pueblo cantaba.
 
-Desde la Puerta del Sol, la población prepara arcos, gallardetes, banderas y flores. Una joven se acerca al caballo y ofrece un saludo. Después, hombres y mujeres acompañan al visitante hacia sectores que el romance llama La Concordia y Siglo XX.
+Bolívar siguió despacio hacia La Concordia, donde manos agradecidas le arrojaban palmas frescas a los pies, y de allí a la calle de El Siglo XX.
 
-Bolívar se aloja en una casa amplia con establo y muebles antiguos. Las vecinas preparan la habitación. La escena pasa luego a un baile, con vestuario que Arenas asocia al miriñaque y la crinolina.
+Lo alojaron en una casa espaciosa. Las damas principales la arreglaron para recibirlo con muebles de la Colonia, y en sus salones se oyeron sus pasos durante los días que estuvo allí.
 
-La mesa reúne chocolate de Girón, amasijos, lechón y arepa. El poema llama “cronicón” a la memoria del banquete, una señal de que mezcla evocación local y tono legendario en vez de presentar un inventario documental.
+En esa casa se dio un baile en su honor. Giraban los miriñaques de moda, las crinolinas estampadas, las cabelleras sueltas. Se sirvió chocolate espumado de Girón, y hubo amasijos, lechón y arepa.
 
-La segunda parte lleva a Bolívar a la iglesia. Allí saluda al padre Valenzuela. La Capilla de los Dolores aparece vinculada a una misa y a un temblor que el romance relaciona con un recuerdo atribuido a Lacroix.
+Bolívar fue también a la iglesia. Al cruzar la puerta de madera tallada se encontró con el padre Valenzuela, y los dos se saludaron. En la Capilla de los Dolores oyó misa en un silencio profundo. El veinticuatro de mayo, estando él en la capilla, hubo un temblor.
 
-El texto añade juegos, bailes, un baño en Floridablanca y fiestas en Rionegro. También insinúa un enamoramiento. No se han localizado en el expediente de esta ficha documentos que permitan ordenar todas esas escenas en una visita única.
+En esos días Bolívar jugó tresillo y bailó en Girón y en Piedecuesta, y se refrescó en las aguas de Floridablanca. Vio las fiestas de plaza en Rionegro, y allí se enamoró de una muchacha tan bella que parecía de otro mundo. Dicen que ella lo acompaña ahora desde las alturas.
 
-El final regresa a la casa. El narrador dice que, al pasar frente a ella, todavía parece escuchar los pasos y la voz de don Simón. Es una imagen de memoria poética, no la afirmación de un fantasma comprobado.
+La casa donde vivió sigue en pie. Quien pasa frente a ella todavía oye, en sus piezas anchas, el eco de los pasos y el murmullo de la voz del Libertador.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. El texto que circula se presenta como un romance de Vicente Arenas Mantilla, «La Visita del Libertador», incluido en su libro «Crónicas y romances» y reproducido, según esa atribución, en las páginas 519 a 522 de la «Literatura folclórica» de Piedecuesta editada por Pérez Pinzón (UNAB, 2016). Esa compilación sólo circula en un repositorio de subida libre sin editor. La reedición de «Crónicas y romances» en la Biblioteca Mínima Santandereana (Ediciones UIS, 2012) figura como no disponible para descarga, y el sumario de quince piezas que publica la editorial no incluye ningún título sobre Bolívar. Tampoco lo sostiene la «Historia militar» de José María Baraya (Bogotá, 1874), que la bibliografía heredada proponía: el libro nombra Piedecuesta cuatro veces y ninguna narra una visita del Libertador.
 
-La compilación de 2016 añade una hipótesis posterior: Bolívar habría tenido con Margarita Camacho un hijo llamado Miguel Simón. Una entrevista periodística atribuye esa propuesta al historiador Antonio Cacua Prada. La página la conserva en la sección de versiones y no como parentesco establecido.
+Lo que sí está documentado es la estadía de Bolívar en la región. Entre abril y junio de 1828, mientras sesionaba la Convención de Ocaña, el Libertador vivió en Bucaramanga, y el coronel Luis Perú de Lacroix llevó un diario de sus días, el «Diario de Bucaramanga». Allí aparecen los generales Soublette, O'Leary, Wilson y Ferguson, las noches de tresillo, los bailes que daban los vecinos, el convite del cura de Girón, las visitas al doctor Eloy Valenzuela, a quien Bolívar llamaba «el buen cura de Bucaramanga», y el paseo a Rionegro. Lacroix cuenta también que un domingo, en misa, una mujer gritó en el momento de alzar y toda la gente corrió a la puerta creyendo que había temblado, mientras Bolívar seguía quieto en su sitio.
 
-La ficha heredada mezclaba el romance, la hipótesis familiar y el itinerario de 1819 en una sola biografía segura. También escribía mal el título. La revisión separa las capas: obra de 1960, lugares reconocibles, afirmaciones históricas pendientes y recepción posterior.
+El mismo diario deja constancia del paso por Piedecuesta. Al emprender la marcha hacia Bogotá, Bolívar fue a dormir a Pie de Cuesta, «distante tres leguas de Bucaramanga». Lacroix lo alcanzó allí esa noche para despedirse en la casa donde se alojaba, y al día siguiente siguió hacia Los Santos, San Gil y el Socorro. El romance piedecuestano toma nombres, lugares y escenas de ese diario y los pone en boca de una ciudad en fiesta.`,
+    versiones: `La escena tiene dos registros de naturaleza muy distinta: el diario de un oficial francés escrito día por día en 1828, y un romance local que se conoce sólo por el texto que circula.
 
-La Visita del Libertador permanece como una forma en que Piedecuesta imagina su relación con la Independencia. Su riqueza está en flores, caminos, sabores y espacios de memoria. Leerla con rigor permite disfrutar esa escena sin convertir cada verso en archivo.`,
-    historyCore:
-      "La compilación identifica La Visita del Libertador como romance de Crónicas y romances, páginas 519 a 522, de Vicente Arenas, obra de 1960 reeditada por la UIS. El contexto municipal y la recepción cultural respaldan la memoria local. No se verificaron en este expediente fecha, comitiva, casa, banquete, misa, temblor o enamoramiento como una sola visita histórica.",
-    versionCore:
-      "El núcleo conserva Pedregosa vieja, Puerta del Sol, flores, casa, baile, comida, iglesia, padre Valenzuela y pasos recordados. La URL mantiene el error heredado la-vista-del-libertador, pero el título se corrige. La hipótesis sobre Margarita Camacho y Miguel Simón se atribuye a su recepción periodística y no se incorpora al romance como hecho probado.",
-    similarityCore:
-      "La Visita del Libertador comparte con memorias cívicas la entrada celebrada de un héroe, la hospitalidad doméstica y la conversión de una casa en lugar de recuerdo. Los pasos finales la acercan a leyendas de casas con ecos, pero el texto no describe una aparición. Se distingue por Pedregosa, Puerta del Sol, chocolate de Girón, Capilla de los Dolores y padre Valenzuela. Frente a Un Libertador Piedecuestano, esta página es un romance sobre Bolívar; la otra es una biografía de José María Mantilla. La cercanía independentista no autoriza a fundir sus trayectorias.",
+En el romance la visita es una entrada triunfal: arcos, gallardetes, flores, palmas arrojadas a los pies, una muchacha que detiene el caballo con su saludo, un baile con miriñaques y chocolate de Girón. En el «Diario de Bucaramanga» Lacroix describe otra cosa: un Bolívar cansado y político, que lee, dicta, juega tresillo con su cuartel general y rehúye los bailes que le ofrecen. Cuenta, por ejemplo, que el Libertador no quiso ir a un baile que le habían preparado.
+
+El temblor es el caso más claro. El romance dice que tembló durante una misa en la Capilla de los Dolores. Lacroix, que estaba en el coro, cuenta que no hubo temblor: un grito en el momento de alzar hizo salir a la gente en tumulto, creyendo que la tierra se movía, y Bolívar no se levantó de su sitio. Lo que en el diario es un malentendido, en el romance es un prodigio.
+
+También cambia el cura. En Lacroix, el doctor Eloy Valenzuela es el cura de Bucaramanga, y la visita que Bolívar le hace antes de partir es, anota el diario, la única que hizo. El romance hace de ese saludo un encuentro solemne a la puerta de la iglesia.
+
+Y cambia la ciudad. El diario sitúa casi todo en Bucaramanga y deja a Piedecuesta como la primera jornada del viaje de regreso a Bogotá, una noche en una casa de la villa. El romance piedecuestano pone el baile, la misa y la casa donde aún se oyen los pasos en una ciudad que no nombra.`,
+    similitudes: `El paralelo más cercano es una casa donde Bolívar vivió y donde algo sigue caminando. «Cuentos de espantos y otros seres fantásticos del folclor colombiano» (2004), un libro de ficción de autor, dedica la lámina de la Monja de las Rosas a la Quinta de Bolívar, en Bogotá. Allí una niña que visita la casa con su padre ve a una mujer vestida de negro recorrer los salones del Libertador y llevarse un ramo de rosas amarillas antes de desaparecer en el jardín. Como en el romance piedecuestano, la casa de Bolívar no es sólo un museo: guarda una presencia que el visitante percibe.
+
+El segundo paralelo está en la misma villa. José María Baraya, en sus «Biografías militares» (1874), presenta al general José María Mantilla como hijo de la villa de Piedecuesta y libertador de Venezuela. Es la otra forma en que Piedecuesta entra en la memoria de la Independencia: no por una visita, sino por un hijo que peleó en ella. El romance y la biografía convierten al pueblo en escenario de la gesta, uno por lo que vio pasar y otro por lo que dio.
+
+El tercero es el propio «Diario de Bucaramanga». Lacroix escribió para retratar al Libertador en la intimidad y lo muestra jugando tresillo, conversando de noche y paseando por los pueblos vecinos. Ese Bolívar doméstico es el que el romance transforma en leyenda: el mismo hombre, las mismas calles y los mismos compañeros, pero con arcos, flores y un eco que no se apaga.`,
     leccion:
-      "La memoria cívica se entiende mejor cuando el romance no sustituye al archivo.",
+      "Una visita breve de un hombre célebre puede volverse, con los años, la fiesta que un pueblo recuerda.",
     sceneHorizontal:
       "Bolívar entra por la Pedregosa vieja a una Piedecuesta festiva con flores, gallardetes, caballos y habitantes diversos sin gesto de culto",
     sceneVertical:
