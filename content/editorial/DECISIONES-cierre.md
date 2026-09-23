@@ -226,7 +226,23 @@ leyenda: se sostiene sólo si el director acepta sucesos contemporáneos.
 
 *Mientras tanto:* ②.
 
-### D19 · Fichas bloqueadas que siguen publicadas con texto viejo · 49 fichas
+### D19 · Fichas bloqueadas · 41 fichas, ya reescritas
+
+*Actualización 2026-09-23:* por decisión del director las bloqueadas se
+reescribieron por tipo: ocho se desbloquearon con su texto y las 41 restantes
+cuentan su relato sin añadir nada y declaran en la Historia que no tienen
+registro consultable. Ya no hay texto viejo publicado. La pregunta que queda
+es otra: si las 41 sin fuente se mantienen publicadas así o se despublican.
+Decisiones sueltas que dejaron los redactores, en el campo `dudas` de cada
+reescritura: fusionar `taik` con `kugi-y-nokuerai` y `chuya-chaqui` con
+`el-chuy-achaque`; `origen-de-la-luna` y `origen-del-sol` solapan con sus
+fichas `-tikuna`; el Ermitaño es de Ocaña y el Gritón del Magdalena, no de
+Piedecuesta; «La vista del libertador» es probablemente «La visita»; la
+Máncara de San Francisco necesita slug propio si se quiere conservar (D7 queda
+en la opción A: `la-mancarita` es la de Arias); de la Monedita se retiraron
+los nombres de particulares.
+
+### D19-antes · Fichas bloqueadas que siguían publicadas con texto viejo · 49 fichas
 
 Al cierre son 49 (ver `docs/estado-enriquecimiento.md` §0). Las que se
 bloquearon en esta sesión, además de las cinco de abajo: `la-casa-de-la-tradicion`

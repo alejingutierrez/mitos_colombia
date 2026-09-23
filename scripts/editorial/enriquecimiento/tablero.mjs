@@ -152,7 +152,7 @@ const { rows } = await client.query(`
   FROM myths m
   LEFT JOIN communities co ON co.id = m.community_id
   LEFT JOIN regions r ON r.id = m.region_id
-  LEFT JOIN editorial_myths e ON e.slug = m.slug
+  LEFT JOIN editorial_myths e ON e.source_myth_id = m.id
   ORDER BY co.slug NULLS FIRST, m.slug`);
 await client.end();
 

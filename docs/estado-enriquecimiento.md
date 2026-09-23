@@ -12,30 +12,38 @@ comunidades, [`spec-mestizos-y-mixtos.md`](spec-mestizos-y-mixtos.md) +
 mestizo-mixto y [`spec-cierre-del-catalogo.md`](spec-cierre-del-catalogo.md)
 para el cierre.
 
-## 0. El cierre, 2026-09-22
+## 0. El cierre, 2026-09-22/23
 
-**Ninguna ficha abierta.** Cada una de las 596 está cerrada o bloqueada con
-acta y razón escrita.
+**Las 596 fichas tienen los cinco campos redactados con el mismo contrato y
+fuentes abiertas.** Ninguna queda abierta. Tablero en
+`content/editorial/tablero/tablero-2026-09-23.json`.
 
 | | fichas |
 |---|---:|
-| **Cerradas** (acta, cinco campos, ≥8 fuentes o `fuentesAgotadas` con piso de 3, cotejo 1:1, auditoría sin bloqueos, `verificar --vivo`) | **547** |
+| **Cerradas** (acta, cinco campos, ≥8 fuentes o `fuentesAgotadas` con piso de 3, cotejo 1:1, auditoría sin bloqueos, `verificar --vivo`) | **555** |
 | · comunidades indígenas y afro | 342 |
-| · bloque mestizo y mixto | 205 |
-| **Bloqueadas con acta** (siguen publicadas con su texto viejo, D19) | **49** |
+| · bloque mestizo y mixto | 213 |
+| **Bloqueadas con acta, reescritas** | **41** |
 | Abiertas | 0 |
 
-Las 342 de comunidad: 322 con ≥8 fuentes y 20 con `fuentesAgotadas`
-declarado en el módulo (D15). Las 254 del bloque tienen acta sin excepción.
+Las 342 de comunidad: 322 con ≥8 fuentes y 20 con `fuentesAgotadas` (D15).
 
-**Las 49 bloqueadas**, por ciclo: Piedecuesta 29 (segundo ciclo 7, espantos
-y entierros 8, Vicente Arenas I 7, clásicos 4, relatos legendarios 3),
-amazonas-mixto 3, ticuna 3, Bogotá nocturno 2, Pacífico restante 2 (Casa de
-la Tradición, cuya única página da 404; La Yesca), andina-legacy 2 (el Hada
-de los cañaverales, fábula del propio sitio; el Silbo de Quinunchú), y una en
-cada uno de: andina-varios mestizo y mixto, huitoto, Santander mixto, Tolima
-mestizo (Sombrerón) y mixto (Dioses lares), varios mestizo (Bus fantasma) y
-varios mixto (Mandingas). Cada razón está en `por_que_bloqueada` de su acta.
+**Las 41 bloqueadas** también se reescribieron el 2026-09-23 (decisión del
+director: todas al mismo nivel de redacción). Cuentan el relato que ya estaba
+publicado, sin añadir nada, y la Historia dice en su primera oración que no
+tiene un registro publicado que se pueda consultar y qué se buscó; Versiones y
+Similitudes tratan el motivo documentado, con fuentes reales. Siguen
+bloqueadas porque su texto no está anclado a una obra: Piedecuesta 27 (los
+libros de Valenzuela 2004 y 2009 y de Arenas Mantilla no están en abierto),
+Bogotá 2 (López Orozco 2008), Amazonas y ticuna 6 (Rodríguez de Montes 1981,
+Solarte Lindo 1980, Hugo Niño 1976), Taik (duplicado), el Sombrerón, la Casa
+de la Tradición, la Yesca, el Silbo de Quinunchú y el Hada de los cañaverales.
+
+Ocho bloqueadas se **desbloquearon** al aparecer su texto: el Bus fantasma, el
+Mandingas, la Niña de la carta, el Gritón y el Ermitaño iracundo (láminas del
+libro de 2004, ficción de autor declarada), Dioses lares (Piedrahita 1688 vía
+Izquierdo Gallo), Esperanza en el Oriente (ensayo de Izquierdo Gallo) y la
+Mancarita (Arias 1954).
 
 **Lo que queda es del director**, en
 [`content/editorial/DECISIONES-cierre.md`](../content/editorial/DECISIONES-cierre.md):
