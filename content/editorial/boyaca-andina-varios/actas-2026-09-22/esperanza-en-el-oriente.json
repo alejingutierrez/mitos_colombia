@@ -1,8 +1,8 @@
 {
   "slug": "esperanza-en-el-oriente",
   "titulo_en_la_fuente": "Esperanza en el oriente (Izquierdo Gallo, apartado 2.4 de «Mitos afines a los chibchas»)",
-  "bloqueada": true,
-  "por_que_bloqueada": "El único registro es Mariano Izquierdo Gallo, Mitología americana (Madrid, Guadarrama, 1956), apartado 2.4, reproducido en Villa Posse (comp.), Mitos y leyendas de Colombia, vol. III (IADAP, 1993), sección 30, pp. 52-53 (texto en primarias/villa-posse-1993-iii-izquierdo-gallo-esperanza-en-el-oriente-p52-53.txt). Se leyó entero: no es un relato sino un ensayo de cuatro párrafos del propio compilador. No hay personaje que actúe, ni acontecimiento, ni narrador, ni pueblo que lo cuente. Su contenido es: (1) Tácito dejó constancia de que en el mundo clásico se creía que del Oriente saldría un salvador; (2) el autor admite «No sabríamos demostrar» que los pueblos americanos llevaran esa esperanza, pero afirma que Quetzalcóatl, Votán, Kukulcán, Nemterequeteba y Bochica «proceden del Oriente»; (3) dice descubrir la misma esperanza, «aunque no de modo explícito», en ritos funerarios, y (4) cita el cementerio del Zenú «cerca de Mompós», con momias y esqueletos de cara al Oriente, y conjetura con «Acaso» que el sol naciente fuera símbolo de resurrección. Sus notas remiten a Pedro Mártir de Anglería y a Trimborn, no a una tradición oral. Villa Posse advierte (p. 15) que Izquierdo Gallo hace «una presentación elaborada literariamente» a partir de cronistas. Un `mito` de 300 palabras sólo podría escribirse inventando una historia que ninguna fuente cuenta, o narrando el ensayo, que es lo que hace hoy la ficha publicada y lo que el contrato prohíbe. Cruce con grep -ril «esperanza en el oriente» en todos los content/editorial/*/primarias/: sólo aparece este apartado y su copia en katio/primarias (el volumen III entero). La BIBLIOGRAFIA lo da como «confirmado (es ensayo, no relato)».",
+  "antes_bloqueada": "El único registro es Mariano Izquierdo Gallo, Mitología americana (Madrid, Guadarrama, 1956), apartado 2.4, reproducido en Villa Posse (comp.), Mitos y leyendas de Colombia, vol. III (IADAP, 1993), sección 30, pp. 52-53 (texto en primarias/villa-posse-1993-iii-izquierdo-gallo-esperanza-en-el-oriente-p52-53.txt). Se leyó entero: no es un relato sino un ensayo de cuatro párrafos del propio compilador. No hay personaje que actúe, ni acontecimiento, ni narrador, ni pueblo que lo cuente. Su contenido es: (1) Tácito dejó constancia de que en el mundo clásico se creía que del Oriente saldría un salvador; (2) el autor admite «No sabríamos demostrar» que los pueblos americanos llevaran esa esperanza, pero afirma que Quetzalcóatl, Votán, Kukulcán, Nemterequeteba y Bochica «proceden del Oriente»; (3) dice descubrir la misma esperanza, «aunque no de modo explícito», en ritos funerarios, y (4) cita el cementerio del Zenú «cerca de Mompós», con momias y esqueletos de cara al Oriente, y conjetura con «Acaso» que el sol naciente fuera símbolo de resurrección. Sus notas remiten a Pedro Mártir de Anglería y a Trimborn, no a una tradición oral. Villa Posse advierte (p. 15) que Izquierdo Gallo hace «una presentación elaborada literariamente» a partir de cronistas. Un `mito` de 300 palabras sólo podría escribirse inventando una historia que ninguna fuente cuenta, o narrando el ensayo, que es lo que hace hoy la ficha publicada y lo que el contrato prohíbe. Cruce con grep -ril «esperanza en el oriente» en todos los content/editorial/*/primarias/: sólo aparece este apartado y su copia en katio/primarias (el volumen III entero). La BIBLIOGRAFIA lo da como «confirmado (es ensayo, no relato)».",
+  "desbloqueo": "2026-09-22: se desbloquea como texto descriptivo de autor. El apartado 2.4 no es un relato recogido sino un ensayo de 1956; el `mito` narra, en relato corto y con sus mismas reservas («acaso»), la creencia que el ensayo describe, y la `historia` dice sin rodeos que es la conjetura de un compilador español. Se añade a primarias el apartado 1.8 del mismo autor (Nemterequeteba, pp. 33-34) para anclar a aztecas, mayas y chibchas.",
   "registro": {
     "obra": "Mitología americana. Selección de mitos aborígenes de América (Guadarrama, 1956), apartado 2.4, en Villa Posse (comp.), Mitos y leyendas de Colombia, vol. III (IADAP, Quito, 1993), sección 30",
     "autor": "Mariano Izquierdo Gallo",
@@ -13,16 +13,84 @@
     "lugar": "ninguno propio; menciona el cementerio del Zenú «cerca de Mompós»",
     "fecha_de_recoleccion": "no aplica"
   },
-  "nudos": [],
+  "nudos": [
+    {
+      "hecho": "En el mundo clásico se creía que del Oriente saldría un salvador del mundo.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 52",
+      "literal": "era común creencia en el mundo clásico de su tiempo que del Oriente saldría un salvador del mundo"
+    },
+    {
+      "hecho": "El autor no puede demostrar que los pueblos de América trajeran esa esperanza en sus migraciones.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 52",
+      "literal": "No sabríamos demostrar que los pueblos prehistóricos de América hubiesen llevado"
+    },
+    {
+      "hecho": "Los hombres extraordinarios de la prehistoria americana proceden del Oriente: Quetzalcóatl, Votán, Kukulcán, Nemterequeteba y Bochica.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 52",
+      "literal": "los hombres extraordinarios, cuya silueta vemos proyectarse sobre la Prehistoria de estos pueblos, proceden del Oriente. Así Quetzalcoatl, así Votan y Kukulcán, así Nemterequeteba y Bochica"
+    },
+    {
+      "hecho": "Los aztecas tuvieron a Quetzalcóatl y los mayas a Votán y a Kukulkán; los chibchas, a Nemterequeteba.",
+      "fuente": "Izquierdo Gallo 1956, apartado 1.8 «Nemterequeteba», en Villa Posse III, sección 30, p. 33",
+      "literal": "Como los aztecas tuvieron a Quetzalcoatl, y los mayas a Votan y a Kukulkán, así también los chibchas prehistóricos recibieron de Dios el don"
+    },
+    {
+      "hecho": "Nemterequeteba vino por el Oriente, de la Tierra del Sol.",
+      "fuente": "Izquierdo Gallo 1956, apartado 1.8 «Nemterequeteba», en Villa Posse III, sección 30, p. 33",
+      "literal": "Vino Nemterequeteba por el Oriente, de la Tierra del Sol"
+    },
+    {
+      "hecho": "La misma esperanza se descubre, aunque no de modo explícito, en ritos funerarios de aborígenes de Colombia.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 52",
+      "literal": "La misma esperanza en el Oriente creemos descubrirla, aunque no de modo explícito, en algunos ritos funerarios"
+    },
+    {
+      "hecho": "El culto a los muertos nacía de la persuasión de que había otra vida.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 52",
+      "literal": "la solicitud que desplegaban universalmente los aborígenes en el culto a los muertos, derivado de su persuasión de la vida futura"
+    },
+    {
+      "hecho": "Las riquezas del cementerio del Zenú confirmaron la leyenda de El Dorado que inventaron los españoles y atrajeron sus miradas al Nuevo Reino de Granada.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 52",
+      "literal": "las riquezas acumuladas en el cementerio del Zenú, confirmaron la leyenda que inventaron los españoles acerca de El Dorado, atrayendo sus miradas sobre el Nuevo Reino de Granada"
+    },
+    {
+      "hecho": "En el cementerio del Zenú las momias y los esqueletos estaban todos de cara al Oriente.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 53",
+      "literal": "se hallaban las momias y los esqueletos todos de cara hacia el Oriente"
+    },
+    {
+      "hecho": "Acaso veían en el sol que se levanta de la tierra, como de una tumba entre montañas, un símbolo de la resurrección tras la noche fría de la muerte.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, pp. 53-54",
+      "literal": "Acaso vieran aquellas sencillas gentes en el Sol, levantándose de la tierra, como de una tumba entre montañas, en la alborada"
+    },
+    {
+      "hecho": "Símbolo de la resurrección de los muertos después de la noche fría de la muerte.",
+      "fuente": "Izquierdo Gallo 1956, apartado 2.4 «Esperanza en el oriente», en Villa Posse III, sección 30, p. 54 (cierre del apartado)",
+      "literal": "resurrección de los muertos, después de la noche fría de la muerte"
+    }
+  ],
   "fuera": [
     {
       "elemento": "La ficha entera como «mito»: su `mito` publicado es un ensayo sobre el ensayo («El texto que llegó a la base…», «La revisión conserva el razonamiento…», «Por eso esta página ya no presenta un mito panamericano»).",
       "por_que": "El `mito` es sólo historia y no puede hablar de la ficha ni del proyecto. Aquí no hay historia que contar."
+    },
+    {
+      "elemento": "«Mucho antes de que la pluma de Tácito…», las figuras que «danzan en el borde entre la leyenda y la realidad» y cruzan la bóveda celeste, los cantos que resuenan en las copas de los árboles y el «amanecer eterno».",
+      "por_que": "Adornos sin ancla: el ensayo no describe ceremonias, cantos ni visiones; sólo la orientación de los cuerpos y una conjetura sobre el sol."
+    },
+    {
+      "elemento": "La lectura del oro del Zenú como «oro hecho de sueños y promesas» que los europeos no comprendían.",
+      "por_que": "Invierte al autor: Izquierdo Gallo dice que las riquezas reales del cementerio confirmaron la leyenda de El Dorado, no que fueran simbólicas."
+    },
+    {
+      "elemento": "El nombre de Tácito dentro del relato.",
+      "por_que": "Es aparato: el relato no nombra autores. Tácito y el pasaje real (Historias V, 13, no los Anales) van a historia y versiones."
     }
   ],
   "pendiente": "No hay registro que desbloquee un relato: el texto no es un mito y no existe otra versión. Propuestas, para que decida el editor: (A, recomendada) retirar la ficha del catálogo de mitos y redirigir su URL (301) a la ficha de Bochica o de Nemqueteba, donde el argumento de Izquierdo Gallo —héroes civilizadores «que proceden del Oriente»— cabe en una línea de `versiones` como lectura comparatista de 1956; (B) conservarla fuera del catálogo de relatos, como nota de historiografía («cómo se leyeron los mitos americanos en 1956»), sin el contrato de mito/lección; (C) convertir en relato el único núcleo narrable —el entierro zenú de cara al sol naciente— sólo si aparece un registro etnohistórico o arqueológico que lo cuente como creencia zenú (Pedro Mártir de Anglería, Décadas, o las descripciones coloniales de los túmulos del Sinú), y entonces sería una ficha zenú, no andina ni mixta.",
   "clasificacion": {
-    "por_que_mixto": "sin sostener: no hay relato que clasificar. El ensayo es de un compilador español de 1956 que junta Tácito, héroes mesoamericanos, Bochica y un cementerio zenú; ninguna de esas piezas es andina ni mezcla tradiciones en boca de un narrador.",
+    "por_que_mixto": "sin sostener: es un ensayo comparatista de 1956 que junta una profecía romana, héroes civilizadores mesoamericanos y chibchas y un cementerio zenú del Caribe; ningún narrador mezcla tradiciones, y el único rito que describe es zenú, no andino.",
     "fuente": "Izquierdo Gallo 1956 en Villa Posse III, pp. 52-53",
     "propuesta": "sin decidir"
   },

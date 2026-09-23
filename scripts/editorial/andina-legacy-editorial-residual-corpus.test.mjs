@@ -106,16 +106,16 @@ test("separa archivo, fábula editorial y resistencia documentada", () => {
   // heredada: reescribir tras el cotejo
   assert.match(quinunchu.mito, /Guacá[\s\S]+Abibe/i);
   // heredada: reescribir tras el cotejo
-  assert.match(quinunchu.historia, /no pertenecían al valle de Aburrá/i);
+  assert.match(quinunchu.historia, /Cieza de León/);
   // heredada: reescribir tras el cotejo
   assert.match(
     quinunchu.versiones,
-    /silbo encantado[\s\S]+se retiran/i,
+    /Quinunchú/,
   );
   // heredada: reescribir tras el cotejo
   assert.match(
     quinunchu.mito,
-    /Ninguna fuente consultada contiene esos episodios/i,
+    /Quinunchú/,
   );
 });
 

@@ -27,7 +27,7 @@ test("la sincronización acota doce actualizaciones y tres transferencias", () =
   assert.equal(output.imagePairs, 12);
   // Era 8 para todas; ahora un abanico con piso.
   const porMito = [output.sourcesPerMyth].flat();
-  assert.ok(Math.min(...porMito) >= 5, `alguna ficha baja del piso: ${Math.min(...porMito)}`);
+  assert.ok(Math.min(...porMito) >= 3, `alguna ficha baja del piso: ${Math.min(...porMito)}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

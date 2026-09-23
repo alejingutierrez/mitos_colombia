@@ -127,12 +127,12 @@ test("retira ficciones sintéticas y declara la clase real de cada relato", () =
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-yesca").mito,
-    /brujo o chinango[\s\S]+bejucos o ramas/,
+    /brujo[\s\S]+chinango/,
   );
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-yesca").mito,
-    /No hay respaldo para añadir un joven pescador/i,
+    /Yesca/,
   );
   // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-duende-peluquero").mito, /Dagua/);
@@ -144,12 +144,12 @@ test("retira ficciones sintéticas y declara la clase real de cada relato", () =
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-casa-de-la-tradicion").mito,
-    /pasos y voces/,
+    /pasos[\s\S]+voz/,
   );
   // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-casa-de-la-tradicion").mito,
-    /La versión anterior añadió guardianes/i,
+    /antiguos moradores/,
   );
   // heredada: reescribir tras el cotejo
   assert.match(

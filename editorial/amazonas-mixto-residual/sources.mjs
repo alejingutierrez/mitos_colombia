@@ -1159,6 +1159,85 @@ export const amazonasMixtoResidualSources = {
     limitation:
       "No nombra al Yacuruna: habla del bufeo. Sirve para las similitudes, no como registro de este relato.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  mTrabajos1947: source({
+    title: "Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto): «El Chullacaqui (pies deciguales)» y «El Chulla-chaqui»",
+    author: "Alumnos del 3.er año de Media (Rodríguez M., Felix Rengifo y otros); transcripción publicada por Rômulo Monte Alto (UFMG)",
+    year: 1947,
+    type: "composiciones escolares de folklore reunidas para el Ministerio de Educación del Perú (transcripción en PDF)",
+    url: "https://www.letras.ufmg.br/padrao_cms/documentos/profs/romulo/LibroLoreto1.pdf",
+    summary:
+      "Es el registro más antiguo y más cercano del ser que da nombre al relato. Rodríguez M. (pp. 15-17) lo describe como un fantasma de los bosques apartados que toma la figura de hermanos, padres o parientes para engañar, y que se reconoce por el pie izquierdo más pequeño; Felix Rengifo (pp. 39-40) cuenta el caso del hijo que mata a su padre creyéndolo el Chullachaqui. Sirve para situar el motivo del ser que suplanta y extravía.",
+    limitation:
+      "Trata el motivo, no este relato: ninguna de las ocho piezas cuenta la aldea de Ahuanari, el huésped que bebe muyá ni el maguaré falso. Son composiciones de colegiales de Loreto, Perú, con ortografía original; la paginación es la de la transcripción.",
+  }),
+  araujomito20252: source({
+    title: "El mito Curupira en las narraciones orales de Boa Vista, una comunidad ribereña de Nova Timboteua (Pará)",
+    author: "Gracineia dos Santos Araújo y Sara Cristina Linhares Aleixo",
+    year: 2025,
+    type: "artículo académico con cinco relatos orales transcritos (Revista (Entre Parênteses), UNIFAL, v. 14, n. 1)",
+    url: "https://publicacoes.unifal-mg.edu.br/revistas/index.php/entreparenteses/article/view/2383",
+    summary:
+      "Transcribe cinco relatos de vecinos de Boa Vista sobre el Curupira: un hombrecito con luz propia que aparece en el camino detrás de un pariente y hace oír pasos que siguen a los caminantes. Es el paralelo oral brasileño del ser que se deja oír y desorienta, que las similitudes contrastan con el tambor falso de Ahuanari.",
+    limitation:
+      "Trata un motivo paralelo, el Curupira del Pará, no el Chullachaqui ni este relato. En esa comunidad el Curupira no tiene los pies vueltos, lo que lo aleja del rasgo del pie desigual.",
+  }),
+  hildebrandOrigen1975: source({
+    title: "Origen del mundo según los Ufaina",
+    author: "Martín von Hildebrand",
+    year: 1975,
+    type: "artículo etnográfico con relato transcrito (Revista Colombiana de Antropología 18, pp. 323-382)",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/download/1609/1184",
+    summary:
+      "En la p. 352 los Imarikakana, que vienen subiendo del mar, hacen la primera canoa copiando el cogollo de la palma de milpesos y ahuecando un tronco con fuego; luego la dejan a los blancos y suben el río convertidos en patos. Es el paralelo documentado más cercano al motivo del relato: mar, palma, primera embarcación y patos.",
+    limitation:
+      "Trata un motivo paralelo de los ufaina del Mirití-Paraná, no este relato ni el Vaupés. El PDF es un escaneo sin capa de texto; se citó por un OCR propio.",
+  }),
+  nunezTrabajos1947: source({
+    title: "Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto): «El Viajero y la Sirena» y «El albañil i la sirena»",
+    author: "César A. Díaz Núñez, Juvencio Vela y otros alumnos del 3.er año de Media; transcripción publicada por Rômulo Monte Alto (UFMG)",
+    year: 1947,
+    type: "composiciones escolares de folklore reunidas para el Ministerio de Educación del Perú (transcripción en PDF)",
+    url: "https://www.letras.ufmg.br/padrao_cms/documentos/profs/romulo/LibroLoreto1.pdf",
+    summary:
+      "Trae las sirenas de río más próximas a la Madre de playa: en «El Viajero y la Sirena» (pp. 28-29) son mitad gente y mitad pez, de ojos azules, cantan de noche por la orilla al son de guitarras y se llevan a un joven al agua; en «El albañil i la sirena» (p. 22) una sirena se aparece a un hombre solo en el Huallaga y luego le habla en sueños.",
+    limitation:
+      "Trata el motivo de la sirena de río en Loreto, Perú, no este relato: no hay ninguna «Madre de playa» ni una sirena que salga a la playa a medianoche con guitarra. Ortografía original de colegiales; paginación de la transcripción.",
+  }),
+  caroNoticias1975: source({
+    title: "Noticias Culturales n.º 179: «El español hablado en el Amazonas. Encuesta en Leticia para el Atlas Lingüístico-Etnográfico de Colombia»",
+    author: "Instituto Caro y Cuervo",
+    year: 1975,
+    type: "boletín institucional con transcripciones fonéticas de hablantes de Leticia",
+    url: "https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf",
+    summary:
+      "Transcribe lo que niños y adultos de Leticia dijeron del bufeo, que llama a la gente a bañarse y la lleva al fondo del agua, con la grafía fonética «eyos yevan uno». Esa grafía es la misma del canto de la Madre de playa, «dice bonito eya», y apoya que la frase viene de una transcripción leticiana.",
+    limitation:
+      "Trata el bufeo y el cotomachaco, no este relato. La coincidencia de grafía es un indicio de lugar y época, no prueba de que el relato esté en la Muestra de 1981.",
+  }),
+  lenguasbufeo2024: source({
+    title: "El bufeo: muestra de literatura oral en Leticia (reseña de Rodríguez de Montes, Muestra de literatura oral en Leticia, Amazonas, 1981)",
+    author: "Liz Castro (Portal de lenguas y literaturas de Colombia, Instituto Caro y Cuervo)",
+    year: 2024,
+    type: "reseña institucional",
+    url: "https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/",
+    summary:
+      "Describe la Muestra de 1981, la obra donde con más probabilidad está este relato: 262 páginas de mitos uitoto y ticuna y narraciones de Leticia, con ocho versiones del hombre bufeo que de noche seduce y lleva a las mujeres a su reino acuático, el mismo destino que el de quien sigue a la Madre de playa.",
+    limitation:
+      "Sólo reseña y reproduce «El bufeo»; no menciona ninguna Madre de playa ni sirena con guitarra.",
+  }),
+  galanteAnimalidad2018: source({
+    title: "Animalidad y otredad en una muestra de literatura oral de Leticia, Amazonas",
+    author: "Andrés González Galante",
+    year: 2018,
+    type: "monografía de pregrado en literatura (Universidad de los Andes)",
+    url: "https://repositorio.uniandes.edu.co/server/api/core/bitstreams/73b9ac2e-6ba2-40fc-871e-5060dd4c8906/content",
+    summary:
+      "Es el único estudio que analiza la Muestra de Rodríguez de Montes: lee los seres del agua y del monte de esos relatos leticianos como figuras de la otredad. Sirve para situar la Madre de playa en el repertorio de seres que se llevan a la gente al agua en Leticia.",
+    limitation:
+      "No menciona una Madre de playa, una sirena ni una guitarra. Trata el corpus en conjunto, no este relato.",
+  }),
 };
 
 export const amazonasMixtoResidualSourceKeysBySlug = {

@@ -428,37 +428,63 @@ La diferencia entre esas fichas de barrio y esta escena está en el final. Los e
   }),
   defineBogotaMestizoNightMyth({
     slug: "la-monja-vidente-y-el-taxista",
-    title: "La monja y el taxista",
+    fuentesAgotadas: "Cuatro fuentes, todas sobre el motivo. El registro (López Orozco 2008, pp. 4-11) no se pudo abrir: Internet Archive, BibloRed, Biblioteca Digital de Bogotá, CENDOC del IDPC (502) y Biblioteca Nacional (403). La nota de Cívico (2015), el trabajo de grado de la Agustiniana (2017), el blog de La Antigua Tuluá y bogotavive.com (500) quedan fuera por vetados o caídos; la crónica de El Tabloide de Tuluá da 404.",
+    sourceKeys: [
+      "playTransportar2021",
+      "samperleyendas2007",
+      "brunvandVanishing1981",
+      "colaborativaAutoestopista",
+    ],
+    title: "La monja vidente y el taxista",
     excerpt:
       "Un taxista lleva a una monja hasta una funeraria y entra a cobrar el viaje, pero la pasajera se encuentra dentro del ataúd.",
     tags: ["monja", "ataúd", "fantasma", "misterio"],
-    mito: `Durante una noche de los años noventa, según una versión bogotana, un taxista encontró a una monja que pedía servicio. La religiosa indicó una dirección y ocupó el asiento trasero. La ciudad seguía despierta, pero dentro del vehículo la conversación parecía separada del ruido exterior.
+    mito: `Llovía sobre Bogotá una noche pesada, de viento frío y truenos, cuando una monja hizo señas a un taxi solitario. Su hábito tenía algo de todas las órdenes, de franciscanas, de carmelitas, de clarisas, y nadie habría sabido decir a qué comunidad pertenecía. Llevaba un paraguas de otros tiempos y un bolso.
 
-En algunas narraciones hablaron del Mundial de fútbol de 1994. La monja hizo comentarios sobre partidos y resultados con una seguridad que el conductor interpretó como intuición o conocimiento extraordinario. Otras versiones omiten por completo esa charla y conservan solo el viaje.
+El conductor, un hombre conversador y curioso, se detuvo enseguida. Apenas ella subió, le preguntó:
 
-Al llegar, la pasajera señaló una funeraria. Dijo que entraría para conseguir el dinero del servicio y pidió al taxista que esperara. Él la vio cruzar la puerta.
+—¿Hermanita, se mojó mucho?
 
-Pasaron los minutos. La monja no regresó. El conductor, preocupado por el pago y por la tardanza, entró a buscarla. Preguntó por la religiosa que acababa de llegar. Quienes estaban en la funeraria respondieron que ninguna mujer había entrado.
+—Esto no es nada para lo que he sufrido y visto sufrir —murmuró ella.
 
-El taxista describió su ropa y su rostro. La familia que acompañaba el velorio lo condujo hacia el ataúd. Allí estaba la misma monja que había viajado en el taxi.
+Por el camino le fue contando cosas que él no sospechaba: conventos donde la virtud se había cambiado por sufrimientos ocultos, monjas obligadas a callar tragedias que nadie oía. El taxista le preguntó si aquello era cierto. Ella sonrió y le advirtió que el silencio podía pagarse con una desgracia de la que no había cómo escapar.
 
-El cadáver no necesitaba levantarse ni perseguir al conductor. La coincidencia bastaba. El hombre había conversado con una pasajera que, según quienes la velaban, no podía haber salido del lugar.
+—Vamos cambiando de tema —dijo.
 
-La leyenda circula también en Tuluá. Allí conserva taxi, deuda, funeraria y reconocimiento, y produjo entre conductores la advertencia de no transportar monjas de noche. Esa presencia territorial no demuestra que el hecho ocurriera en Bogotá ni obliga a escoger una ciudad como origen único. Muestra que el motivo viaja con quienes cuentan historias en la carretera y en las estaciones.
+Y habló de las funerarias.
 
-La ficha no incorpora escándalos eclesiásticos, loterías, placas ganadoras ni premios entregados por la muerta. Tampoco añade un segundo final en que el taxista aparece asesinado y el vehículo queda abandonado. Esas expansiones convierten una escena compacta en varias historias superpuestas.
+—Usted sabe bien, señor taxista, sobre el negocio de la muerte.
 
-La monja paga de otra manera: deja al conductor con un relato que nadie puede comprobar y que, sin embargo, otros taxistas reconocen. La deuda económica desaparece frente a una pregunta más difícil. ¿Quién ocupó el asiento trasero?
+Le explicó que las funerarias no se quedaban en vender un ataúd: se metían en las decisiones más íntimas sobre la muerte y vendían planes para después de ella. Afuera la tormenta arreció, con relámpagos y una neblina que envolvió el carro como un telón. El taxista, temblando, pidió cambiar otra vez de tema para no llamar más desgracias.
 
-La versión bogotana queda atribuida a publicaciones y reproducciones recientes, no a una noticia verificada. Su escenario nocturno y su movimiento entre ciudades explican su permanencia sin exigir una funeraria identificable ni una pasajera histórica.`,
-    historyCore:
-      "El título aparece en Mitos y leyendas de Bogotá, publicado por Asdrúbal López Orozco en 2008. Una reproducción bogotana lo sitúa en los años noventa y otra fuente turística conserva la conversación sobre el Mundial de 1994. Radio Nacional y un archivo comunitario documentan una variante activa en Tuluá, sin ofrecer expediente verificable de la pasajera.",
-    versionCore:
-      "Bogotá y Tuluá comparten monja, taxi, pago aplazado, funeraria y cuerpo reconocido. Fútbol, sonrisa del cadáver y prevención gremial varían. La revisión retira escándalo clerical, lotería, placas premiadas, taxista muerto y taxi abandonado. Ninguna ciudad se presenta como origen probado de todas las variantes.",
-    similarityCore:
-      "La leyenda pertenece al repertorio internacional de pasajeros fantasma que piden un viaje y son reconocidos después como personas muertas. Su variante particular reemplaza la casa familiar o el cementerio por una funeraria y deja una deuda de taxi como razón para entrar. Se diferencia de la Monja de las Rosas porque aquella surge en un guion de jardín y no ocupa un vehículo ni un ataúd. También puede compararse con relatos de la Dama de Blanco, pero el hábito, la conversación y el espacio funerario forman una combinación propia. La semejanza no identifica una pasajera real ni fija una ciudad de origen.",
+Cuando llegaron a la funeraria ya hablaban de pronósticos de fútbol y de loterías, y ella parecía ver más allá que cualquiera.
+
+—Déjeme entrar a buscar el dinero —pidió.
+
+Él se quedó esperando, con el motor encendido. Pasaron los minutos. Al fin se bajó y entró. Adentro encontró a la misma monja que acababa de llevar, tendida en un ataúd.
+
+El taxista se desplomó. Otros lo auxiliaron, y cuando pudo contar lo que había pasado, sus compañeros corrieron a comprobarlo. El rostro de la muerta tenía una expresión macabra y burlona a la vez.
+
+Esa semana, el número ganador de la Lotería de Bogotá coincidió con las placas del taxi, como un pago que llegaba desde el otro lado. Pero al amanecer empezó a correr otro rumor: aquel taxista ya no existía desde hacía un año, y el taxi del último viaje de la monja había acabado en la chatarra después de un accidente en los alrededores del aeropuerto El Dorado.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. La única obra identificada que lo contiene es «Mitos y leyendas de Bogotá», de Asdrúbal López Orozco (Bogotá, Kingkolor, 2008), cuyo índice pone «La monja vidente y el taxista» en las páginas 4 a 11, como capítulo que abre el libro. De ese volumen no se ha encontrado ejemplar digital ni consultable: se buscó en Internet Archive, en el repositorio de la Red Distrital de Bibliotecas Públicas de Bogotá, en la Biblioteca Digital de Bogotá, en el centro de documentación del Instituto Distrital de Patrimonio Cultural y en el catálogo de la Biblioteca Nacional, y lo único que aparece son registros de catálogo. Lo que aquí se cuenta es, por tanto, la historia tal como circula, no un texto cotejado con el libro.
+
+El motivo sí está documentado. Es el del pasajero que resulta estar muerto, que en su forma de carretera se conoce como la autoestopista fantasma. José Manuel de Prada Samper lo estudió como leyenda moderna y recordó que Gabriel García Márquez contó una de esas apariciones en su columna «Fantasmas de carreteras» (El País, 1981), donde señalaba a los conductores profesionales como los grandes narradores de lo sobrenatural. Jan Harold Brunvand había hecho de esa figura, en 1981, el título de su estudio de las leyendas urbanas de los Estados Unidos.
+
+En Colombia, la versión con monja y funeraria tiene un registro fechado en otro lugar. El 21 de octubre de 2021, RTVC Play publicó en la página de Radio Nacional de Colombia la historia de un taxista de Tuluá, en el Valle del Cauca, que recogió a una religiosa camino de una funeraria; ella le pidió que la esperara porque adentro le darían el dinero, y cuando él entró a buscarla le dijeron que la única monja que había allí era la que estaban velando. La nota la presenta como una historia que trascendió hasta volverse mito urbano, junto a relatos de taxistas reunidos para un pódcast. Lo que el relato bogotano añade —las denuncias sobre los conventos, la charla de funerarias, el fútbol, la lotería y el taxista que ya no existía— no se ha podido leer en ninguna obra.`,
+    versiones: `La forma común del motivo tiene tres tiempos: alguien sube a un vehículo, hace el viaje y desaparece, y después el conductor descubre que llevaba a una muerta. Las versiones cambian en lo que la muerta quiere y en cómo se descubre.
+
+En la de Tuluá que publicó Radio Nacional, la monja no conversa de nada en particular: pide que la esperen para pagar, entra a la funeraria y no sale. El taxista la encuentra en el ataúd. La deuda es el mecanismo que lo lleva hasta el cadáver, y la historia termina ahí. En la versión bogotana la deuda se paga: la lotería premia el número de las placas. Y luego se da vuelta, porque el que resulta muerto también es el taxista.
+
+La misma nota de Radio Nacional trae una variante sin cadáver, la de un taxista llamado Guillermo que lleva a un pasajero hacia Chía y, al pedirle las últimas indicaciones, descubre que no hay nadie en el asiento. Ahí el viaje no paga nada: el conductor tiene que pedir prestado para cumplirle al dueño del carro.
+
+En la autoestopista de carretera que estudia Prada Samper, la aparición tiene un propósito, advertir del punto negro donde murió, y en la versión de García Márquez son cuatro jóvenes en un Renault 5 quienes recogen a una mujer de blanco que viaja en silencio. La prueba de la muerte suele llegar después, cuando el viajero se entera de que la mujer había muerto de forma trágica. En la monja bogotana la prueba está a la vista, en el mismo edificio donde ella pidió entrar.`,
+    similitudes: `El paralelo más cercano está en el mismo país. En Tuluá, según la nota de Radio Nacional de Colombia de 2021, una religiosa toma un taxi hasta una funeraria, pide que la esperen para pagar y aparece después en el ataúd que están velando. Monja, taxi, funeraria y deuda coinciden punto por punto con la historia bogotana; lo que falta allí es la conversación y el desenlace de la lotería.
+
+El segundo es la autoestopista fantasma, la joven que para a los viajeros de noche, sube al vehículo y desaparece en marcha. Jan Harold Brunvand la estudió como la leyenda urbana por excelencia en «The Vanishing Hitchhiker» (1981), y José Manuel de Prada Samper recogió su versión española, en la que la muchacha avisa a los conductores de una curva peligrosa. Como la monja, es una muerta que necesita que alguien la lleve y que se revela después del viaje.
+
+La diferencia es el oficio. En la carretera el conductor es cualquiera; en la versión colombiana es un taxista, y el cuento circula entre taxistas. García Márquez ya lo había notado en 1981: los conductores profesionales, como los arrieros de antes, son una fuente inagotable de relatos fantásticos.`,
     leccion:
-      "Escuchar una historia viajera exige conservar sus variantes sin fabricar una certeza.",
+      "Lo que se calla en vida puede cobrarse en el último viaje.",
     sceneHorizontal:
       "un taxi amarillo recorre de noche una avenida bogotana de los años noventa con una monja sentada en la parte trasera",
     sceneVertical:
@@ -575,37 +601,57 @@ Hay una tercera coincidencia que conviene nombrar por lo que separa. Circulan re
   }),
   defineBogotaMestizoNightMyth({
     slug: "los-esqueletos-caminantes",
-    title: "Los Esqueletos Caminantes",
+    fuentesAgotadas: "Cuatro fuentes, todas sobre el motivo o su contexto. El registro (López Orozco 2008, pp. 12-17) no se pudo abrir: Internet Archive (sólo otro libro del autor, en préstamo), BibloRed, Biblioteca Digital de Bogotá, CENDOC del IDPC (502), Biblioteca Nacional (403). El blog mitosyleyendasdebogota y las fichas de Medicina Legal quedan fuera; la Danza general y las Coplas de Manrique en Cervantes Virtual responden 403 a clientes automáticos.",
+    sourceKeys: [
+      {
+        key: "caicedoanfiteatro2015",
+        summary:
+          "Describe la costumbre por la que el estudiante de anatomía llevaba una carta al administrador del Cementerio Central y recibía de la fosa común, en un costal, la osamenta de un NN o de un difunto con la bóveda vencida, y cómo la limpiaba hirviéndola en agua con cal; recuerda que luego se prohibieron los NN y las fosas comunes. Es el sustrato real de los muertos sin dolientes que el relato pone a caminar.",
+        limitation:
+          "Trata el motivo y su contexto, no este relato: es un ensayo en primera persona de un profesor, sin archivo, y no menciona apariciones ni esqueletos que caminen.",
+      },
+      "tiempofantasmas2003",
+      {
+        key: "colombiaCuentos2004",
+        summary:
+          "Pp. 77-78, «La Barbacoa del Muerto»: el cortejo de cuatro fantasmas con calaveras por rostro que carga al hacendado avaro Anselmo Santamaría por el camino de Santa Rita, y su testimonio de arrepentimiento. Es el paralelo colombiano del rico muerto que vaga para asustar a los vivos.",
+        limitation:
+          "Ficción de autor declarada; trata el motivo del rico condenado, no este relato ni Bogotá.",
+      },
+      "colaborativaDanza",
+    ],
+    relatoCorto:
+      "El texto publicado es casi todo adorno y moraleja; sin el capítulo de 2008 no hay más hechos que contar sin inventarlos.",
+    title: "Los esqueletos caminantes",
     excerpt:
       "Dos esqueletos salen de una morgue literaria y conversan sobre las vidas que otros imaginaron para los cuerpos sin identificar.",
     tags: ["esqueletos", "crítica social", "igualdad", "muerte"],
-    mito: `En un cuento publicado en 2008, la noche alcanza una morgue de Bogotá. Cuando cesan las voces de quienes trabajan allí, dos esqueletos se levantan y comienzan a caminar.
+    mito: `Fueron gente de la alta sociedad bogotana. Pasearon por salones de palacio vestidos de seda y cargados de joyas, rieron y cantaron en banquetes, y sus voces tapaban las de aquellos a quienes sus privilegios aplastaban. Se creían por encima de todo, y pensaban que el final que iguala a todos no iba con ellos.
 
-Ya no conservan ropa, dinero ni las señales con que la ciudad separa profesiones y clases. A simple vista parecen iguales. Sin embargo, mientras avanzan, imaginan las vidas que pudieron pertenecer a los cuerpos de los que proceden.
+La muerte los alcanzó. No despertaron en el paraíso que les prometían sus ritos, sino en la morgue, entre cuerpos amontonados, convertidos en NN. Nadie fue a reclamarlos. Sus nombres quedaron sepultados bajo el alud de otros muertos sin nombre, y oyeron a los patólogos discutir sobre sus cadáveres como sobre cualquier otro.
 
-Uno supone que fue una persona rica, rodeada de comodidades y reconocimiento. El otro recibe una vida pobre, anónima y sin privilegios. La conversación construye contrastes entre banquetes y hambre, autoridad y abandono, tumba costosa y destino incierto.
+Allí entendieron que habían vivido una opulencia hueca, un espejismo de poder. Acabaron en las fosas comunes, al lado de indigentes y de víctimas del infortunio, iguales a ellos por fin.
 
-Los esqueletos caminan porque la ficción necesita quitarles todo aquello que permitía distinguirlos. Bajo la ropa y los títulos queda una estructura compartida. Esa igualdad visual sostiene la crítica del relato: las jerarquías que parecían permanentes durante la vida no pueden reconocerse en los huesos.
+Desde entonces se levantan cada noche. Son esqueletos sin carne que recorren las calles viejas de Bogotá, empujados por el arrepentimiento, buscando redención. Sus huesos desnudos chocan en la oscuridad y con ellos suenan las cadenas de sus pecados, la deuda que no pagaron en vida. Asustan a los vivos orgullosos. En algún rincón oscuro dejan escapar un susurro, y quien siente el frío de su paso se acuerda de que también él se va a morir y de que, cuando cae el último telón, todos quedan iguales.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. La única obra que se sabe que lo contiene es «Mitos y leyendas de Bogotá», de Asdrúbal López Orozco (Bogotá, Kingkolor, 2008), cuyo índice lo titula «Los esqueletos caminantes de Bogotá» y lo sitúa en las páginas 12 a 17. Ese libro no tiene copia consultable: se buscó en Internet Archive, donde sólo aparece otro título del mismo autor, «Mitos y leyendas de Colombia», en préstamo; en el repositorio de la Red Distrital de Bibliotecas Públicas de Bogotá; en la Biblioteca Digital de Bogotá; en el centro de documentación del Instituto Distrital de Patrimonio Cultural y en el catálogo de la Biblioteca Nacional. No se ha encontrado ninguna otra versión publicada del relato, así que lo que aquí se cuenta sigue la historia tal como circula.
 
-Pero la alegoría tiene un límite. Un cuerpo en condición de no identificado no es una hoja en blanco sobre la que pueda escribirse culpa, riqueza, soledad o ausencia de familia. La falta de nombre disponible para una institución no significa que la persona no lo tuviera, que nadie la buscara o que mereciera el abandono.
+Lo que sí está documentado es el suelo real sobre el que se levanta. Carlos Arturo Florido Caicedo, profesor de anatomía de la Universidad Nacional, describió en la revista Morfolia (2015) la costumbre con que un estudiante de medicina de Bogotá conseguía su primer esqueleto: llevaba una carta al administrador del Cementerio Central, un empleado sacaba de la fosa común los huesos de algún NN o de un difunto cuya bóveda nadie había vuelto a pagar, y el estudiante los hervía en agua con cal hasta dejarlos blancos. El mismo texto recuerda que después la ley prohibió los NN y las fosas comunes. Los muertos sin dolientes que el relato pone a caminar tenían, en la ciudad, un destino conocido.
 
-Por eso esta versión atribuye las biografías opuestas a la imaginación de los personajes. No las presenta como descripción real de dos cadáveres. El Instituto de Medicina Legal sustituyó la expresión NN por «cadáver en condición de no identificado» precisamente para recordar que la identidad sigue siendo un derecho y que la identificación es una tarea.
+La noche bogotana tiene además una tradición de aparecidos con cronistas propios. En 2003, El Tiempo contó cómo los guías del barrio La Candelaria armaban recorridos nocturnos con el duende Baltazar, la lavandera emparedada o el hombre de casaca verde que vio Ángel Cuervo, a partir de libros como «Reminiscencias de Santa Fe y Bogotá» y de lo que decían los vecinos. Los esqueletos arrepentidos no figuran en ese repertorio.`,
+    versiones: `Como el relato no se ha podido leer en su fuente, las versiones que se comparan son las del motivo: el muerto rico que no descansa y la muerte que iguala a todos.
 
-Los caminantes vuelven antes del amanecer. La morgue recupera su silencio y ningún empleado presencia el recorrido. Dentro del cuento, la caminata permite escuchar una conversación que los vivos no tendrían.
+La danza de la muerte medieval, de la que la «Danza general de la Muerte» castellana del siglo XV es el ejemplo en español, pone a la Muerte, en figura de esqueleto, a llamar uno por uno al papa, al emperador, al obispo y al labrador para que bailen a su lado. La igualdad llega en el momento de morir y es una advertencia a los vivos de todos los estados. En los esqueletos de Bogotá la igualdad llega después, en la morgue y en la fosa común, y son los muertos ricos, no la Muerte, los que salen a advertir.
 
-Fuera de la ficción, el título exacto puede rastrearse en Mitos y leyendas de Bogotá, de Asdrúbal López Orozco. Un inventario comunitario posterior menciona esqueletos andantes, pero no publica una narración anterior comparable. La página no afirma entonces que exista una tradición oral antigua demostrada.
+La Barbacoa del Muerto, que el libro de ficción «Cuentos de espantos» (2004) sitúa en Antioquia, el Viejo Caldas y el Tolima, está más cerca. Allí el alma de un hacendado avaro, Anselmo Santamaría, vaga por el camino de Santa Rita en una camilla de guadua que cargan cuatro fantasmas con calaveras por rostro; asusta a los caminantes en días de paga, maldice su avaricia y el dinero que dejó pudrirse mientras las viudas mendigaban a su puerta. Rico, muerto sin sepultura digna, arrepentido y condenado a asustar: el esquema es el mismo, con un solo muerto y en el campo.
 
-La imagen de dos osamentas que avanzan juntas permanece, pero cambia su responsabilidad. No sirve para convertir muertos reales en ejemplo moral. Sirve para preguntar por qué la sociedad necesita imaginar diferencias incluso cuando ya no puede verlas.
+Lo propio de la versión bogotana es el lugar institucional del castigo. No es el infierno ni un camino rural: es la morgue de la ciudad y el anonimato del cadáver sin reclamar.`,
+    similitudes: `El primer paralelo es la danza de la muerte, el género tardomedieval en el que un esqueleto que personifica a la Muerte llama a bailar alrededor de una tumba a personas de todas las condiciones, del papa al labrador, y les recuerda que los goces del mundo se acaban. Los esqueletos que recorren Bogotá comparten el mensaje, que todos quedan iguales, y lo cambian de boca: aquí son los antiguos poderosos, ya en los huesos, quienes lo llevan a los vivos.
 
-Al terminar, los dos esqueletos ocupan nuevamente su lugar. La igualdad no consiste en borrar sus identidades. Consiste en reconocer que cada una importaba, aunque el relato no pueda recuperarla.`,
-    historyCore:
-      "El título exacto aparece en el índice de Mitos y leyendas de Bogotá, obra literaria de Asdrúbal López Orozco publicada en 2008. Dos catálogos confirman edición y contenido. Un inventario comunitario menciona esqueletos andantes sin relato completo ni fecha anterior. No se localizó una cadena temprana que permita afirmar tradición oral independiente de la publicación.",
-    versionCore:
-      "La ficha conserva la caminata y el contraste social como alegoría atribuida al texto literario. Retira afirmaciones que convierten cuerpos reales en ricos culpables, pobres abandonados o personas sin vínculos. La terminología institucional de Medicina Legal guía un tratamiento digno: condición de no identificado no anula el derecho a la identidad.",
-    similarityCore:
-      "Los esqueletos caminantes comparten con las danzas de la muerte la imagen de huesos que borran visualmente rango, fortuna y oficio. También recuerdan diálogos satíricos entre muertos, usados para criticar a los vivos desde una perspectiva imposible. No hay evidencia de que esas tradiciones europeas sean el origen directo del cuento bogotano. Frente a procesiones de ánimas, los personajes no piden oración ni anuncian una muerte; conversan sobre desigualdad. La corrección ética los distingue además de relatos que usan cuerpos sin identificar como utilería macabra. Comparar la forma no autoriza a negar que cada persona real conserva nombre, historia y derechos.",
+El segundo está en Colombia. La Barbacoa del Muerto del libro de 2004 es un cortejo de cuatro porteadores con calaveras en lugar de rostro que carga a un hacendado rico condenado por su avaricia, y que sale a asustar precisamente a los avaros. Como los esqueletos bogotanos, castiga la riqueza con el vagabundeo nocturno y hace del arrepentimiento del muerto una lección para quien lo encuentra.
+
+El tercero no es un relato sino una práctica. La crónica de Florido Caicedo sobre el Cementerio Central muestra que en Bogotá los huesos de los NN salían de verdad de la fosa común, en costales, hacia las casas de los estudiantes de medicina. Esqueletos que salen de noche de la fosa de los olvidados: la ciudad tenía esa imagen antes de convertirla en espanto.`,
     leccion:
-      "La igualdad ante la muerte no borra el derecho de cada persona a su identidad.",
+      "La muerte deja iguales a quienes en vida se creyeron por encima de los demás.",
     sceneHorizontal:
       "dos esqueletos estilizados caminan en silencio por un corredor nocturno imaginario mientras a ambos lados aparecen objetos de riqueza y trabajo sin dueño",
     sceneVertical:

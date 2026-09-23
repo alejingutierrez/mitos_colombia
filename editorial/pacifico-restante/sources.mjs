@@ -1111,6 +1111,104 @@ export const pacificoRestanteSources = {
     limitation:
       "No trata de la pirámide; es otra región (Norte de Santander) y otro tipo de relato.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  paisCali2023: source({
+    title: "Cali paranormal: historias de fantasmas, avistamientos de otros mundos y hechos inexplicables en la Sucursal del Cielo",
+    author: "Luis Carlos Bermeo Gamboa (El País, Cali)",
+    year: 2023,
+    type: "reportaje de prensa",
+    url: "https://www.elpais.com.co/cultura/cali-paranormal-historias-de-fantasmas-avistamientos-de-otros-mundos-y-hechos-inexplicables-en-la-sucursal-del-cielo-2800.html",
+    summary:
+      "Testimonios de edificios caleños con presencias: gritos y aplausos en el Teatro Municipal vacío (luminotécnico Álvaro Muñoz), el bombero de los años cincuenta y la niña del Muli en la antigua estación del ferrocarril, la Loma de la Cruz según Brandon Aragón.",
+    limitation:
+      "Trata el motivo de los edificios con sonidos y presencias en Cali, no esta casa: no nombra ninguna Casa de la Tradición en San Antonio.",
+  }),
+  caliMano2026: source({
+    title: "La Mano Negra: la leyenda que todavía aterra a los caminantes de la colina de San Antonio en Cali",
+    author: "Semana (sección Cali)",
+    year: 2026,
+    type: "artículo de prensa",
+    url: "https://www.semana.com/nacion/cali/articulo/la-mano-negra-leyenda-que-todavia-aterra-a-los-caminantes-de-la-colina-de-san-antonio-en-cali/202659/",
+    summary:
+      "La leyenda de la cruz de la Loma de la Cruz, junto a San Antonio (calle 5 con carrera 16), en sus dos versiones: el joven matricida cuya mano salía de la tierra y el esclavo Crescencio mutilado por su patrón; caminantes que oyen lamentos de noche.",
+    limitation:
+      "Prensa reciente sin informantes nombrados; trata otra leyenda del mismo barrio, no la casa de los pasos y las voces.",
+  }),
+  iDESCInfraestructura: source({
+    title: "Infraestructura física cultural del municipio de Santiago de Cali: San Antonio",
+    author: "Alcaldía de Santiago de Cali (IDESC)",
+    type: "ficha patrimonial municipal",
+    url: "https://idesc.cali.gov.co/download/bibliotecas/hitos/san_antonio.pdf",
+    summary:
+      "Historia del barrio: Cali de menos de cinco mil habitantes hasta la colina a mediados del XVIII, la viceparroquia pedida por José de Alegría en 1742, la capilla erigida en 1747 y el barrio como el más importante de la ciudad en lo artístico, cultural y arquitectónico.",
+    limitation:
+      "Documenta el escenario del relato; no menciona apariciones ni una Casa de la Tradición.",
+  }),
+  vallePlan2003: source({
+    title: "Plan Especial de Manejo del Patrimonio Cultural Inmueble de Santiago de Cali. Diagnóstico",
+    author: "Departamento Administrativo de Planeación Municipal; Universidad del Valle, CITCE (coord. Francisco Ramírez Potes)",
+    year: 2003,
+    type: "diagnóstico patrimonial",
+    url: "https://idesc.cali.gov.co/download/pot_2000/patrimonio_inmueble/1_Diagnostico_Plan_Especial/plan_especial_manejo_patrimonio_cultural_inmueble.pdf",
+    summary:
+      "Estudia los barrios San Antonio, San Cayetano y Libertadores y describe el trazado colonial de Cali que se estrecha contra la colina de San Antonio.",
+    limitation:
+      "Documento de arquitectura y urbanismo; no trata leyendas ni identifica una casa encantada. Comparte dominio con la ficha IDESC.",
+  }),
+  velasquezmedicina1957: source({
+    title: "La medicina popular en la costa colombiana del Pacífico",
+    author: "Rogerio Velásquez",
+    year: 1957,
+    type: "artículo etnográfico (Revista Colombiana de Antropología, vol. 6, pp. 195-241)",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/1792",
+    summary:
+      "En «Prácticas mágico-religiosas» (pp. 213-214): en el Alto y Bajo Chocó las enfermedades se atribuyen a las influencias de un enemigo; el curandero-brujo, la novena con el muñeco de balso enterrado en el bosque para matar despacio al envidiado, y el ruego al brujo para que cure.",
+    limitation:
+      "Trata el daño puesto por brujo en el Chocó, no la Yesca: no nombra bejucos que ahogan ni usa la palabra chinango. Escaneo sin texto, leído por OCR.",
+  }),
+  salazarCuando2022: source({
+    title: "Cuando las brujas vuelan y hacen daño. Esquemas culturales sobre la brujería del campesinado en Colombia",
+    author: "Alejandro Munévar Salazar, Laura Andrea Chaparro Rojas y Julio Alexander Bernal Chávez",
+    year: 2022,
+    type: "artículo académico (LiminaR, vol. 20, núm. 1)",
+    url: "https://www.scielo.org.mx/scielo.php?pid=S1665-80272022000100314&script=sci_arttext&tlng=es",
+    summary:
+      "Sobre el Atlas Lingüístico-Etnográfico de Colombia: registra en el Chocó «hacer maldad» y «hacer brujería (maleficio)», el testimonio de Aquilina Córdoba en Coredó (1975) y el embrujo como encierro o pérdida del rumbo.",
+    limitation:
+      "Trata la brujería campesina en todo el país y las brujas voladoras, no la Yesca ni el daño en forma de bejucos.",
+  }),
+  colombiacomChoco: source({
+    title: "Chocó (guía turística, sección de mitos y leyendas)",
+    author: "Colombia.com",
+    type: "guía turística en PDF",
+    url: "https://cdn.colombia.com/docs/turismo/sitios-turisticos/pacifico/choco.pdf",
+    summary:
+      "Única forma escrita del nombre: «La Yesca: imaginario de un brujo o chinango que se pone a una persona malévola», representada en algunas partes con bejucos y ramas que abrazan a la víctima y la ahogan.",
+    limitation:
+      "Portal turístico sin fecha, autor ni informante; dos líneas sin relato. Se incluye sólo porque es el único registro del nombre.",
+  }),
+  vlietColombia19972: source({
+    title: "Colombia, Many Countries in One (incluye «Niños de las regiones de Colombia», de Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "material educativo (ERIC)",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Madremonte de la región cafetera con cabellos de helechos y lianas y brazos de bejucos, guardiana que desata tempestades cuando talan un árbol.",
+    limitation:
+      "Trata la Madremonte cafetera, no la Yesca; texto divulgativo para niños.",
+  }),
+  eSAPInventario: source({
+    title: "Inventario turístico de Viterbo (Caldas): mitos, leyendas y tradición oral",
+    author: "Municipio de Viterbo (repositorio ESAP)",
+    type: "inventario municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/e2157446-5cb0-4e99-afa6-f31ad7ee56b6/download",
+    summary:
+      "§1.4.1: la Madremonte vestida de chamizos, hojas y bejucos, o convertida en los rastrojos en una zarza tupida en movimiento que mira con rabia a quienes pasan.",
+    limitation:
+      "Trata la Madremonte de Caldas, no la Yesca; inventario sin informantes nombrados.",
+  }),
 };
 
 export const pacificoRestanteSourceKeysBySlug = {

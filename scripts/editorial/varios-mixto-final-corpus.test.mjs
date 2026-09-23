@@ -76,7 +76,7 @@ test("corrige fusiones, nombres sin respaldo y relaciones entre leyendas", () =>
   const mandingas = bySlug.get("el-mandingas");
   assert.equal(mandingas.category_path, "Caribe > Bolívar y Atlántico > Mestizo");
   // heredada: reescribir tras el cotejo
-  assert.match(mandingas.mito, /Atlas Lingüístico-Etnográfico[\s\S]+África occidental[\s\S]+racialización/i);
+  assert.match(mandingas.mito, /Pamba Ahumé[\s\S]+tambora/i);
   assert.match(mandingas.researchNotes, /ANTIRRACISTA[\s\S]+Pamba Ahumé/i);
 
   const mohan = bySlug.get("el-mohan");

@@ -149,38 +149,65 @@ Y la figura del caballero rico de la Colonia, con esclavos y haciendas, converti
 
   defineVariosMixtoFinalMyth({
     slug: "el-mandingas",
-    title: "El Mandingas: nombre del diablo y memoria colonial",
+    fuentesAgotadas: "El relato sólo está en Cuentos de espantos (2004), p. 22, ficción declarada; fuera de él, «mandingas» es un nombre del diablo (Devia, Rocha Castilla, ALEC) sin relato propio.",
+    sourceKeys: [
+      {
+        key: "espantosScan",
+        summary:
+          "«El Mandingas», pp. 21-22: lámina técnica (demonio de patas de cabra que se presenta como hombre elegante y tienta con riquezas) y la entrevista inventada a René Velandia sobre el duelo de tamboras en el Carnaval de Barranquilla.",
+        limitation:
+          "Se declara «documentos imaginarios» y «material de ficción»: única fuente del relato, composición de autor; la revista «Cronos» y los personajes son inventados.",
+      },
+      {
+        key: "ibagueFolclor2013",
+        summary:
+          "Dos usos del nombre: el insulto contra la Candileja, «el mandingas te ha de tener en los profundos» (p. 66), y el campesino que al oír al Silbador sintió «como si el mandingas estuviera por ai suelto» (p. 80).",
+        limitation:
+          "Trata el nombre del diablo en el Tolima, no este relato.",
+      },
+      {
+        key: "investigacionMitos1993",
+        summary:
+          "Sección 21, p. 182: Rocha Castilla anota «Mandingas, Biruñas, El Maligno, El Patas, algunos de los muchos nombres del diablo»; la sección 20 (p. 151) reproduce el insulto de Devia contra la Candileja.",
+        limitation:
+          "Una línea de glosario, sin relato; trata el nombre, no este relato.",
+      },
+      "baronCuentos1996",
+      "narinocuentos",
+      "polarMitos20142",
+    ],
+    title: "El mandingas",
     excerpt:
       "Mandingas o Maldingas nombra al diablo en repertorios colombianos, pero esa acepción carga una historia colonial que debe explicarse.",
     tags: ["diablo", "tradición", "colonialismo", "cultura"],
-    mito: `En repertorios colombianos, “el Mandingas” o “el Maldingas” puede nombrar al diablo sin necesidad de describir una criatura nueva. Cuando un relato dice que alguien se encontró con el Mandingas, el nombre revela al adversario sobrenatural: una presencia asociada con tentación, engaño, castigo o miedo. El Atlas Lingüístico-Etnográfico de Colombia registró mandingas como equivalente de demonio, y colecciones regionales conservan títulos como El maldingas o Las mandingas.
+    mito: `Barranquilla se llena de comparsas y de músicos en los días de Carnaval, y entre los tamboreros espontáneos que animaban la fiesta estaba Pamba Ahumé. Había nacido en el Macizo de la Guyana y desde muy joven andaba por Latinoamérica siguiendo la ruta de las ferias y los carnavales. No creía en espantos; sólo sabía de tamboras. Con ellas imitaba el ritmo del corazón y convocaba la alegría de la fiesta. Así había conquistado a Lina, una muchacha trabajadora y apasionada por el baile, que desde que lo conoció le dedicaba cada paso.
 
-Las fuentes seleccionadas no permiten reconstruir una sola trama canónica. La pista sonora Mitos del Huila incluye El maldingas, pero la reseña académica no transcribe su argumento. El catálogo de la Universidad Surcolombiana enumera Las mandingas, en plural, sin mostrar el texto. Es responsable afirmar que el nombre circula y que existen relatos regionales; no lo es rellenar el vacío con personajes, conversaciones y finales inventados.
+Lina aceptó casarse con él, y fueron a celebrar el compromiso en pleno Carnaval, con René Velandia, el viejo compañero de andanzas de Pamba. Esa noche conocieron a un extranjero que se hacía llamar Santiago. Llevaba un traje elegante e impecable, tenía buenos modales y una energía que no se agotaba, y los novios quedaron encantados con él. Compartieron ron y tocaron tambores juntos. Sólo René miraba con recelo tantas atenciones.
 
-La página anterior situaba a Pamba Ahumé en un carnaval de Barranquilla, le asignaba una prometida llamada Lina y hacía aparecer a Santiago, un tamborero de pezuñas que los derrotaba y desaparecía entre fuego. Después mezclaba brujas de Marulanda, Tierrabuena y un sacerdote. No se encontró ese duelo en el archivo sonoro, los catálogos, los estudios lexicales ni el expediente del Carnaval. Pamba, Lina, Santiago y la tambora quemada se retiran.
+Sin que nadie supiera cómo, Pamba y Santiago terminaron enfrentados en un duelo de tambora. El bullicio se volvió tensión. Lina se opuso al reto, pero su corazón se partió entre el amor que sentía por Pamba y una atracción ciega por el forastero. Oía cada golpe, y los de Santiago le hacían perder la razón: la hacían olvidarlo todo, le quitaban la voluntad. Aquella destreza no era normal. Algo en el aire apagaba la alegría del Carnaval. La tambora de Santiago dominaba, y Pamba, vencido, se fue retirando del duelo.
 
-El carnaval caribeño sí ofrece un contexto legítimo para máscaras, sátira, tambores y figuras diabólicas, y UNESCO documenta su convergencia amerindia, europea y africana. Pero contexto no equivale a prueba de una leyenda particular. Esta ruta presenta al Mandingas como un nombre narrativo móvil, no como personaje oficial del Carnaval de Barranquilla.
+Entonces René le miró los pies al extranjero. Tenían forma de patas de cabra, con grandes pezuñas apoyadas en el tablado. Sintió la lengua congelada. Santiago lo miraba fijo a él y a Lina al mismo tiempo, aunque estaban en lados opuestos, y Lina se le acercaba despacio, como si fuera el premio del ganador. La tambora no paraba de sonar. Algunos dicen que se vio fuego sobre el cuero en el momento en que René por fin pudo gritar:
 
-Además, la palabra conserva una herida histórica. Mandinga fue y sigue siendo el nombre de pueblos de África occidental. En la Colombia esclavista, nombres como Mandinga, Congo y Carabalí fueron usados para clasificar personas arrancadas de territorios distintos. Convertir uno de esos nombres en sinónimo de demonio responde a una historia de racialización. La ficha puede documentar el uso folclórico sin repetir que un pueblo africano sea maligno.`,
-    historia: `El estudio del Instituto Caro y Cuervo ofrece la base más firme para esta ruta. Registra mandingas como “demonio” en el atlas lingüístico colombiano y, al mismo tiempo, relaciona la voz con Mandinga y con los pueblos de África occidental conocidos también como malinké. Esa doble información obliga a separar el uso folclórico de la identidad humana que fue deformada por siglos de prejuicio.
+—¡Cuidado, Lina! ¡El Mandingas!
 
-La colección histórica de la Universidad Nacional muestra que denominaciones como Mandinga, Congo y Carabalí circularon en los archivos de esclavitud en Colombia. No eran nombres de demonios, sino clasificaciones coloniales aplicadas a personas africanas y sus descendientes. El cambio semántico posterior no puede contarse como una esencia cultural africana.
+Santiago desapareció frente a sus ojos, y Lina se detuvo. La gente de alrededor creyó que era parte del espectáculo y lo celebró con gritos y aplausos.
 
-La revisión de materiales sonoros de la Universidad de Antioquia cataloga una pieza llamada El maldingas dentro de Mitos del Huila. El catálogo de la Universidad Surcolombiana registra Las mandingas en otra colección. Ambas fuentes prueban circulación regional, pero ninguna publica el argumento completo. Por eso la ficha no fabrica una narración unificada.
+Después de ese Carnaval, René no volvió a ver ni a Lina ni a su amigo Pamba. Le quedó un solo recuerdo de aquella noche: la tambora que tocó el falso extranjero, con dos marcas de manos hechas a fuego vivo sobre el cuero.`,
+    historia: `Este relato es ficción de autor. Sale de Cuentos de espantos y otros seres fantásticos del folclor colombiano, un libro ilustrado que la Casa Editorial El Tiempo y la Universidad Autónoma de Colombia publicaron en Bogotá en 2004 y que se declara una colección de «documentos imaginarios sobre espantos y apariciones en Colombia»; cada relato lleva al pie la advertencia «material de ficción». La entrada del Mandingas ocupa las páginas 21 y 22. La primera es una lámina con una «ficha técnica»: demonio conocido también como el Diablo, el Putas o Satán, que vive entre los humanos en pueblos y ciudades, se alimenta de almas y, aunque se le piense como macho cabrío, suele aparecer como un hombre alto, imponente y elegante, al que delatan las patas de cabra. La segunda es una entrevista inventada, atribuida a una revista «Cronos» de finales del siglo XX, en la que René Velandia cuenta el duelo de tamboras. En el margen, dibujos de una máscara de diablo, de unas huellas de pezuña y de la tambora marcada.
 
-UNESCO documenta que el Carnaval de Barranquilla reúne tradiciones europeas, amerindias y africanas, con tambores, máscaras, teatro y sátira. Su plan de salvaguardia insiste en inventario, investigación de campo y transmisión por portadores. Justamente porque esos soportes no registran el duelo de Pamba Ahumé, la antigua escena se descarta. El Ministerio de Cultura aporta el marco de la oralidad como patrimonio, y UNESCO recuerda que la herencia africana es constitutiva del Caribe: ambos ayudan a corregir, no a ocultar, la historia racial del término.`,
-    versiones: `Mandinga y Mandingas aparecen en el habla colombiana como nombres eufemísticos o humorísticos del diablo. La forma puede servir para revelar al tentador de un cuento, explicar una desaparición o evitar pronunciar directamente “diablo”. El registro lexicográfico demuestra la acepción, no un aspecto físico obligatorio.
+Lo que no es invención es el nombre. «Mandingas» es uno de los nombres populares del diablo en el castellano de Colombia. Cesáreo Rocha Castilla, en la antología de Eugenia Villa Posse (tomo II, 1993, p. 182), lo pone en la lista «Mandingas, Biruñas, El Maligno, El Patas, algunos de los muchos nombres del diablo». Misael Devia, en Folclor tolimense (1962; reedición de la Universidad de Ibagué, 2013), recoge el insulto con que se espanta a la Candileja, «el “mandingas” te ha de tener en los “profundos”» (p. 66), y la voz de un campesino del sur del Tolima que, al oír al Silbador, sintió que «too parecía como si el mandingas estuviera por ai suelto» (p. 80). En los Llanos, Getulio Vargas Barón (Cuentos, mitos y leyendas del llano, 1996) hace decir a los vaqueros que el toro que salta el corral «era el mismo Mandingas» (p. 17) y llama así al Silbador, «que no es otro que el mismo Mandingas» (p. 74).
 
-El maldingas es el título de una pista del archivo sonoro Mitos del Huila, reseñado por la Universidad de Antioquia. Sin acceso a una transcripción atribuida, esta revisión no le adjudica pezuñas, tambor, pacto ni carnaval. Las mandingas, en plural, figura en el índice de otra colección surcolombiana y confirma que el repertorio no siempre imagina un individuo único.
+El duelo de tambora de 2004 toma, además, una forma que la tradición llanera conoce bien: el diablo que desafía a un músico.`,
+    versiones: `El Mandingas del libro de 2004 y el de los registros folclóricos no se parecen mucho. El del libro es un personaje con biografía: un extranjero elegante que llega al Carnaval de Barranquilla, gana un duelo de tambora, seduce a una novia y se esfuma en el tablado, dejando dos manos quemadas en el cuero. Los registros andinos y llaneros, en cambio, no lo describen: lo nombran. En el Tolima de Devia es una palabra de maldición y de miedo, la que se lanza contra la Candileja o la que viene a la boca cuando el viento de la noche tumba el sombrero. En la lista de Rocha Castilla es un sinónimo más del diablo, al lado de Biruñas, el Maligno y el Patas.
 
-En el Caribe, máscaras, diablos y sátiras forman parte de carnavales diversos. UNESCO describe esas expresiones como mezclas históricas y actuaciones comunitarias. Ningún documento consultado llama Pamba Ahumé al tamborero vencido ni Santiago al Mandingas, de modo que esa versión heredada queda descartada en vez de ampliada.
+En los Llanos el nombre se pega a otras figuras. Vargas Barón identifica con él al Silbador, el jinete negro que silba en la sabana antes de una tragedia, y al toro bravo que desaparece del corral sin dejar rastro. Alberto Baquero Nariño, en Los cuentos de Pascual, registra que en el piedemonte llanero «el Diablo o Mandingas también aparece», con historias como la de Florentino y el Diablo o la de «Federico y Mandingas», en las que un llanero lo desafía y lo vence contrapunteando o cuerpo a cuerpo.
 
-Fuera del sentido demoníaco, Mandinga nombra pueblos vivos de África occidental y memorias afrodescendientes. No es una variante del monstruo: es la referencia humana que permite entender por qué la acepción colonial debe exponerse con cautela.`,
+Ahí está la diferencia de fondo con el relato de Barranquilla. En la tradición llanera el hombre le gana al diablo con su propio arte; en el libro de 2004 el músico pierde, la novia casi cae y sólo el grito del amigo, que lo llama por su nombre, rompe el hechizo.`,
     leccion:
-      "Conservar una palabra exige explicar también la violencia histórica que transformó su significado.",
-    similitudes: `El Diablo de Umpalá se parece al Mandingas porque ambos pueden nombrar al adversario cristiano dentro de un relato colombiano; se diferencia por estar ligado a una leyenda localizada y a un encuentro narrativo concreto, mientras Mandingas funciona también como apelativo general. Juan Machete comparte el motivo del pacto y la riqueza obtenida a cambio de una deuda sobrenatural, pero las fuentes de esta ruta no prueban que todo Mandingas ofrezca tesoros.
+      "Un nombre dicho a tiempo puede deshacer el encanto que ningún talento alcanza a vencer.",
+    similitudes: `El duelo musical con el diablo es uno de los motivos más difundidos del folclor americano. En los Llanos de Colombia y Venezuela tiene su forma clásica en Florentino y el Diablo, el coplero que se enfrenta en contrapunteo con el Mandingas y lo vence. Alberto Baquero Nariño la registra en Los cuentos de Pascual junto a «Federico y Mandingas», y resume el esquema: el diablo es desafiado por un llanero y vencido en duelo, contrapunteando o cuerpo a cuerpo. El relato de Barranquilla cambia el cuatro y la copla por la tambora del Carnaval, e invierte el final.
 
-El Sombrerón puede sancionar vicios y trasnochos, aunque persigue por caminos en vez de negociar como diablo. Las figuras de diablo del Carnaval de Barranquilla comparten máscara, burla y teatralidad, pero son actuaciones patrimoniales con portadores y reglas escénicas; no son evidencia del duelo inventado de Pamba Ahumé. Mandinga, como nombre de pueblos africanos, no es una similitud mitológica y nunca debe aparecer en una lista de demonios.`,
+El otro rasgo del libro, el diablo que cambia de forma y se presenta como algo que se desea, tiene parientes al otro lado de la frontera. En Mitos y leyendas del estado Portuguesa (Fundación Empresas Polar, 2014), Carmen Pérez Montero recoge en el capítulo «El familiar» los pactos del llano venezolano: el familiar es la figura que el diablo toma en los lugares donde se cerró un pacto, persona o animal, y un vecino de Las Tucuraguas cuenta cómo un patrón se internó en la montaña para pedirle «progreso, dinero y salud» a cambio del alma. Es lo mismo que la lámina de 2004 atribuye al Mandingas, que tienta con riquezas y poder a cambio de almas. Y en Vargas Barón el toro bravo que se escapa del corral sin dejar rastro resulta ser «el mismo Mandingas». El diablo de estas historias no llega con cuernos: llega como un buen toro, una fortuna o un músico que toca mejor que nadie.`,
     sceneHorizontal:
       "composición editorial reflexiva del Caribe colombiano, máscara diabólica de carnaval vacía junto a un tambor y, al otro lado, documentos lexicales y siluetas humanas afrocolombianas dignas que deshacen visualmente la equivalencia racial",
     sceneVertical:

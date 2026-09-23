@@ -330,45 +330,61 @@ Fuera del Tolima, el bufeo de Leticia, tal como lo contaron vecinos del puerto a
 
   defineTolimaMestizoResidualMyth({
     slug: "el-sombreron",
+    fuentesAgotadas: "No hay Sombrerón tolimense en Devia (1962) ni en Rocha (1968); el texto mezcla una carta ficticia del libro de 2004 con la leyenda guatemalteca. El Sombrerón colombiano documentado es el de Caldas (Vélez Correa; SENA 2022).",
+    sourceKeys: [
+      "caldasMitos1997",
+      "toledoRemembranzas2022",
+      {
+        key: "espantosScan",
+        summary:
+          "«El Sombrerón», pp. 79-80: lámina que lo sitúa en el «Tolima Grande y Antioquia» y la carta inventada a Alcohólicos Anónimos (quincena, dos perros, la cadena), que es el hilo del joven bebedor.",
+        limitation:
+          "Se declara «documentos imaginarios»: la carta es ficción de autor sin lugar ni narrador; no sirve de registro tolimense.",
+      },
+      "libreSombreron2025",
+      {
+        key: "moralesFolclor2013",
+        summary:
+          "El Poira, el Mohán enamorado que roba la tranquilidad a las jóvenes y las atrae con artificios (p. 59): el seductor tolimense de Similitudes.",
+        limitation:
+          "El capítulo de mitos (pp. 57-84) no trae al Sombrerón; se usa sólo como paralelo.",
+      },
+      "redaccionMedellin1990",
+      "lopezpueblo1977",
+    ],
     fuentesAgotadas: "Ficha bloqueada: se retiraron fuentes caídas y no hay registro tolimense abierto que las reemplace. Ninguna obra consultable trae un relato tolimense del Sombrerón. Abierto y leído: (1) Devia Morales, Folclor Tolimense (1962; Unibagué 2013), capítulo Mitos completo, pp. 57-84: no tiene entrada del Sombrerón; «sombrero» sólo aparece en la Madremonte, el Tunjo y el Silbador. (2) Villa Posse II, secciones 20 (Devia) y 21 (Rocha Castilla, «Algunos de los mitos populares del Tolima», pp. 180-182): tampoco. (3) CINEP, Colombia país de regiones t. 3, pp. 96-101, y Oliveros, Coyaimas y Natagaimas, pp. 134-137: no lo nombran. (4) Guarnizo Sánchez et al., «Patrimonio cultural: un estudio integral de l",
     title: "El sombrerón",
     excerpt:
       "Un caminante cubierto por un sombrero enorme sale al paso en caminos del Gran Tolima; otras regiones lo convierten en jinete.",
     tags: ["noche", "miedo", "castigo", "tradición"],
-    mito: `En una versión del Gran Tolima, el Sombrerón es un caminante casi oculto por un sombrero negro que le cubre desde la cabeza hasta las pantorrillas. Puede vestir de negro o parecer envuelto en un hábito. Sale en caminos solitarios, camina junto a quien lo encuentra y a veces no responde ninguna pregunta. Su presencia no necesita una biografía: el tamaño imposible del sombrero basta para convertir una silueta común en espanto.
+    mito: `Andaba vestido de negro, y su sombrero era tan grande que le ocultaba la mirada. Lo llamaban el Sombrerón.
 
-La memoria publicada en Lérida dice que persigue a borrachos y a jóvenes que empiezan a fumar. Una frase breve anuncia la amenaza: “si te alcanzo, te lo pongo”. El castigo consiste sobre todo en hacer correr, producir miedo y obligar a recordar los riesgos del camino nocturno. No hay que presentar la sobriedad como un amuleto literal ni la persecución como prueba de que una persona merecía violencia; son funciones moralizadoras del relato.
+En un pueblo pequeño del oriente del Valle vivía María, una muchacha de pelo largo y oscuro, tan bella que en cada esquina se hablaba de ella. Los días pasaban tranquilos hasta una tarde en que aparecieron dos perros negros amarrados al poste solitario del parque, con los ojos encendidos. La gente empezó a murmurar: «Son los perros del Sombrerón». Los hombres se apuraban a volver a casa, y las madres acostaban a los hijos entre salmos y rosarios.
 
-Otras versiones colombianas añaden caballo negro, perros sujetos con cadenas, capa, galope y viento helado. Los materiales escolares del Ministerio de Educación describen a un hombre vestido de negro que aparece y desaparece, persigue a trasnochadores, jugadores tramposos y peleadores y puede confundirse con la noche. Radio Nacional ubica en Cundinamarca y Boyacá un jinete parecido que persigue a borrachos y bandidos. La forma ecuestre es un pariente regional, no el único Sombrerón posible.
+Esa noche una melodía recorrió las calles vacías. Sólo María parecía oírla. Se despertó, se asomó a la ventana y lo vio: un hombre de figura imponente, vestido de negro, con un sombrero enorme que tapaba las estrellas, cantándole serenatas tan dulces que hechizaban.
 
-El libro Cuentos de espantos de 2004 combina Tolima Grande y Antioquia. Su ficha le da perros, cadenas y vendavales; la página contigua simula una solicitud de ingreso a Alcohólicos Anónimos. Un hombre anónimo cuenta que bebía cada quincena, encontró al Sombrerón y recibió una cadena como prueba antes de prometer dejar el alcohol. El diseño de carta hallada y la voz confesional son recursos literarios. No hay evidencia de una reunión, un remitente o un objeto conservado.
+Lejos de allí, en una ciudad, un joven vivía atrapado entre la rutina y el alcohol. Una noche de quincena se le cruzó el Sombrerón, acompañado de unos perros enormes. Le ofreció un sombrero de paja y le prometió que con él conocería el dolor. Cuando el espanto se fue, al joven le quedó una cadena de un metal que nadie conocía.
 
-La página anterior del sitio mezclaba además una joven llamada María, serenatas, encierro en un convento y muerte por tristeza. Ese argumento coincide con el Sombrerón guatemalteco, un hombre diminuto con guitarra que corteja a jóvenes y aparece en tradiciones oficiales de Guatemala. No pertenece al núcleo tolimense y se retira en vez de nacionalizarlo.
+En el pueblo, María se fue consumiendo bajo el hechizo, y todos vivían con miedo. Los días de mercado y de risas se volvieron pesados. Una noche el Sombrerón desapareció antes del amanecer. María, perdida en su trance, ni siquiera supo que se había ido.
 
-La revisión conserva una sola ruta y organiza sus capas: caminante del Gran Tolima como centro, jinete colombiano como variante y carta de 2004 como reelaboración. También elimina una supuesta lluvia que revelaba niños desaparecidos, detalle sin respaldo en las ocho fuentes seleccionadas.`,
-    historia: `El Sombrerón circula en repertorios colombianos con una plasticidad notable. El material de Aceleración del Aprendizaje del Ministerio de Educación reproduce una versión atribuida a Galindo Martín, publicada en Mitos y leyendas de Colombia en 2000. Allí aparece un hombre vestido de negro, montado en caballo negro, acompañado por perros y dedicado a perseguir a quienes transitan de noche.
+El joven de la ciudad no olvidó la advertencia. Decidió dejar la bebida, aferrado a aquel aviso como a un milagro, entre el miedo y el asombro.
 
-Otro recurso oficial, Contenidos para Aprender, resume la misma línea ecuestre para estudiantes de primaria. Su valor está en mostrar recepción nacional y pedagógica, no en fijar una procedencia única. Radio Nacional asigna una versión parecida a Cundinamarca y Boyacá. Por contraste, el portal cultural de Lérida conserva el perfil del Gran Tolima: sombrero hasta las pantorrillas, caminante silencioso, persecución de borrachos y jóvenes fumadores.
+María terminó en un convento. Allí se fue apagando despacio, de pura melancolía, extrañando el canto que la había atormentado tantas noches. El Sombrerón la buscó y no la encontró. Entonces lloró, y sus lágrimas cayeron como lluvia.`,
+    historia: `Este relato del Sombrerón no tiene un registro publicado que se pueda consultar. Se buscó en las obras del folclor tolimense —el capítulo de mitos de Misael Devia en Folclor tolimense (1962), las leyendas del Tolima de Cesáreo Rocha Castilla recogidas por Eugenia Villa Posse (1993), el tomo del CINEP sobre el Alto Magdalena, la monografía de Oliveros sobre coyaimas y natagaimas y un estudio de 2024 sobre las leyendas del Tolima en Ibagué—, y ninguna trae una historia del Sombrerón en el Tolima; el estudio de 2024 sólo lo nombra en una tabla.
 
-El artículo de MODULEMA de 2024 incluye al Sombrerón entre los mitos antropomorfos del Tolima, aunque no desarrolla su argumento. Carlos Orlando Pardo Rodríguez también lo enumera entre los personajes regionales en un artículo de 2010 basado, según explica, en recopilaciones e interlocutores del departamento. Estas dos referencias sostienen pertenencia al repertorio sin autenticar cada escena.
+Los dos hilos del relato tienen, en cambio, un parecido reconocible. El del joven bebedor coincide con una carta inventada, fechada en abril de 2004 y dirigida a un grupo de Alcohólicos Anónimos, que publicó el libro Cuentos de espantos y otros seres fantásticos del folclor colombiano (Casa Editorial El Tiempo y Universidad Autónoma de Colombia, 2004, pp. 79-80): la quincena, los dos perros gigantescos, la amenaza del sombrero y la cadena de metal desconocido. Ese libro se declara una colección de «documentos imaginarios», y su lámina sitúa al Sombrerón en el «Tolima Grande y Antioquia». El hilo de la muchacha, las serenatas, el convento y las lágrimas es el de la leyenda guatemalteca del Sombrerón.
 
-Cuentos de espantos ofrece una ficha de 2004 y una carta supuestamente enviada a Alcohólicos Anónimos. Como en otras entradas del volumen, el documento perfecto funciona como montaje narrativo. Se registra como recepción literaria y no como testimonio clínico, archivo de la organización o caso ocurrido.
+El Sombrerón colombiano que sí tiene registro vive sobre todo en Caldas y Antioquia. Fabio Vélez Correa, en Mitos, espantos y leyendas de Caldas (primera edición de 1997), reúne lo que dice Javier Ocampo López —un ser infernal del Gran Tolima y Caldas, con un sombrero que lo cubre hasta las pantorrillas, que persigue a los borrachos con la frase «Si te alcanzo, te lo pongo» y a los muchachos que empiezan a fumar— y la descripción de Luis M. Sánchez: un hombre muy alto, con ruana y sombrero, montado en una mula negra, entre dos perros negros. El Tiempo, al reseñar en 1990 el desfile de mitos de Medellín, lo pintó corriendo a trasnochadores y borrachos con esa misma frase. En 2022, un libro del SENA recogió en Manzanares y Marquetalia, en el oriente de Caldas, tres testimonios con nombre propio.`,
+    versiones: `Los registros caldenses no coinciden en su figura. En La Merced, según las páginas que Vélez Correa dedica al municipio, en las veredas El Palo y La Chuspa sale cada julio, rodeado de perros que aúllan y arrastrando cadenas, y a su paso sólo queda un viento muy frío; en el área urbana baja por la calle real, y cerca del matadero es un hombre de más de dos metros, quieto, con un sombrero que tapa casi todo el ancho de la carretera. En la vereda Naranjal se le apareció a un hombre que iba en carro por Malpaso: crespo, de negro, con dientes blancos, colmillos largos, guantes y tabaco, sobre un caballo negro; su madre le explicó que el espanto cuida allí un entierro.
 
-La comparación internacional aclara la mezcla heredada. El Ministerio de Cultura de Guatemala describe a su Sombrerón como hombre diminuto y enamorado que canta coplas con una guitarra. María-Cruz La Chica estudia figuras de gran sombrero en la tradición hispanoamericana y cita para Colombia al perseguidor de jóvenes fumadores. El nombre común no autoriza a fundir argumentos.
+En el libro del SENA (2022), Luis Javier Gallego, campesino de Manzanares, cuenta que hace más de cuarenta años lo vio en una mula, con un sombrero negro y una espada, que se le vino encima, le partió el líchigo en dos y se metió por un camino que al otro día no existía. En Marquetalia, María Edilma Gómez recuerda que su nieta lo vio junto al horno, con ropa oscura y sombrero alón. Y Jorge Echeverri habla de una mujer muy bella que iba y venía entre Manzanares y Samaná, que un día se fue de viaje con el Sombrerón y quedó enajenada, perdiendo su belleza.
 
-La ubicación heredada cerca de Cundinamarca se corrige a Lérida como ancla editorial del frente tolimense, sin negar que el jinete negro circule en otras regiones.`,
-    versiones: `La versión caminante del Gran Tolima se reconoce por el sombrero que llega hasta las pantorrillas. Puede pasar en silencio, caminar al lado de la persona o perseguirla con la amenaza de cubrirla. Sus blancos moralizadores son borrachos y jóvenes que empiezan a fumar. Lérida conserva esta forma sin necesidad de caballo.
-
-La versión ecuestre colombiana viste de negro, monta un caballo también negro y puede llevar perros encadenados. Los materiales del Ministerio de Educación la asocian con trasnochadores, peleadores y jugadores tramposos. Radio Nacional ubica otra forma del jinete en Cundinamarca y Boyacá, donde persigue a borrachos y bandidos. No se trasladan automáticamente esos lugares al Tolima.
-
-La edición de 2004 mezcla caminante, perros, cadenas y viento. Su carta anónima presenta a una persona que pide ayuda para dejar de beber después del encuentro y ofrece una cadena como prueba. Es una narración de conversión moral construida por el libro, no un expediente verificable de Alcohólicos Anónimos.
-
-El Sombrerón de Guatemala es otra tradición. Es diminuto, toca guitarra y corteja a jóvenes mediante coplas. Algunas versiones incluyen trenzas, mulas o el debilitamiento de la mujer encantada. El antiguo relato del sitio sobre María, serenatas y convento pertenece a esa familia y se elimina de la ficha tolimense. Compartir sombrero y nombre no basta para llamarlo una variante local.`,
+En casi todos estos registros el Sombrerón castiga a borrachos y trasnochadores o asusta en los caminos. El que enamora y enloquece a una mujer sólo aparece en el testimonio de Marquetalia.`,
     leccion:
-      "Una advertencia nocturna pierde sentido cuando se confunden territorios, versiones y responsabilidades morales.",
-    similitudes: `El Jinete Negro comparte caballo, ropa oscura, caminos y persecución nocturna con algunas versiones del Sombrerón; la diferencia es que el caminante del Gran Tolima puede definirse solo por el sombrero desmesurado y no necesita montura. El Mandingas también aparece para sancionar vicios o malas decisiones, pero suele ofrecer pactos y beneficios a cambio del alma, mientras el Sombrerón asusta, persigue y desaparece sin negociar.
+      "El canto que enamora de noche puede dejar, cuando se calla, una tristeza que ya no se cura.",
+    similitudes: `El pariente más directo de la muchacha de las serenatas está en Guatemala. Allí el Sombrerón es un hombre de sombrero enorme que se enamora de las muchachas de pelo largo y les canta de noche bajo la ventana. En la versión que recogió el historiador Celso Lara Figueroa y que la periodista María Alejandra Guzmán resumió en Prensa Libre (2025), la joven enferma de tanto oírlo, su madre la encierra en un convento, y allí muere; de noche aparecen en el cementerio mulas cargadas de carbón, y sobre la tumba brota una flor cubierta de rocío: las lágrimas del Sombrerón.
 
-El Sombrerón guatemalteco comparte nombre y un sombrero enorme, pero es un enamorador diminuto con guitarra y coplas, no el perseguidor alto o encubierto de los caminos colombianos. El Cadejo se parece a la variante acompañada por perros porque también recorre la noche junto a viajeros; en Centroamérica puede proteger o atacar según su color, mientras los perros del Sombrerón funcionan como séquito amenazante. La comparación demuestra circulación de motivos —sombrero, jinete, perro, noche— y, al mismo tiempo, la necesidad de conservar la atribución territorial de cada relato.`,
+En el Tolima, el oficio de robarles la calma a las muchachas lo tiene otro personaje. Misael Devia escribe en Folclor tolimense que el Poira, el Mohán enamorado, «les robaba la tranquilidad a las jóvenes, las idiotiza, las emboba y las atrae hacia él con artificios», y que son muchas las que ha raptado. Y en el oriente de Caldas, el testimonio de Jorge Echeverri recogido por el SENA cuenta de una mujer que se fue con el Sombrerón y perdió la belleza en la locura. Los tres casos comparten el esquema: un seductor nocturno que no pertenece a este mundo y una muchacha que no vuelve a ser la misma.`,
     sceneHorizontal:
       "camino rural de Lérida bajo una noche ventosa, una figura caminante queda casi completamente cubierta por un sombrero negro enorme hasta las pantorrillas y un viajero sobrio se detiene a distancia, sin caballo",
     sceneVertical:

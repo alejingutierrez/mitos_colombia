@@ -270,31 +270,49 @@ Y la tumba de un héroe que se señala sin que nadie haya visto los huesos tiene
   }),
   definePacificoRestanteMyth({
     slug: "la-yesca",
-    title: "La Yesca, el daño de los bejucos",
+    fuentesAgotadas: "Se buscó «La Yesca» con bejucos, brujo o chinango: sólo aparecen la guía de Colombia.com, portales que la copian y mitosdecolombia.com (no fuente). Ninguna obra etnográfica del Atrato o del San Juan la cuenta.",
+    sourceKeys: [
+      "velasquezmedicina1957",
+      "salazarCuando2022",
+      "colombiacomChoco",
+      {
+        key: "ibagueFolclor2013",
+        summary:
+          "«La Madremonte» (p. 64): el campesino anda por el monte fumando tabaco o con un bejuco de adorote o carare amarrado a la cintura para librarse de ella; el paralelo del bejuco que protege.",
+        limitation:
+          "Trata la Madremonte del Tolima, no la Yesca ni el Chocó.",
+      },
+      "vlietColombia19972",
+      "eSAPInventario",
+    ],
+    relatoCorto:
+      "Todo lo que se conserva de la Yesca es una definición de dos frases: un daño que pone un brujo o chinango, representado a veces por bejucos y ramas que abrazan y ahogan. No hay víctima, lugar ni desenlace, y cualquier escena añadida sería inventada.",
+    title: "La Yesca",
     excerpt:
       "Una descripción chocoana presenta La Yesca como daño asociado con brujo o chinango y con bejucos o ramas que abrazan y ahogan.",
     tags: ["brujo", "brujería", "monte", "misterio"],
-    mito: `En una guía turística del Chocó, La Yesca aparece descrita en pocas líneas. No tiene nombre personal, familia, víctima identificada ni aventura completa. Es un imaginario asociado con un brujo o chinango que se pone sobre una persona. A veces se representa mediante bejucos o ramas que abrazan y ahogan.
+    mito: `La Yesca no es mujer, ni animal, ni espíritu con rostro. Es un daño. En el Chocó se dice que la pone un brujo, al que también llaman chinango, y que la pone sobre una persona. Quién de los dos lleva la maldad, si el que la pone o el que la recibe, no queda claro: lo único seguro es que la Yesca cae sobre alguien.
 
-La frase conserva una imagen fuerte: aquello que crece y enlaza en el monte puede transformarse narrativamente en presión sobre el cuerpo. Sin embargo, la fuente no dice que una planta determinada camine, hable o persiga. Tampoco identifica un río, una población o un sendero exacto.
+En algunas partes la ven. Entonces toma la forma de bejucos y de ramas. Rodean a la víctima, la abrazan y aprietan, y siguen apretando hasta que le quitan el aire y la ahogan. No hay otra cosa que contar de ella: no camina, no habla, no persigue. Abraza, y ese abrazo es el daño.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. Su única forma escrita son dos líneas de la guía turística del Chocó que publicó el portal Colombia.com, en la sección de mitos del departamento: la Yesca es el imaginario de un brujo o chinango que se pone a una persona malévola, y en algunas partes la representan con bejucos y ramas que abrazan a la víctima y la ahogan. Esas líneas no nombran río, pueblo ni narrador, y los portales de turismo que las repiten las copian. Se buscó la Yesca con bejucos, brujo o chinango en obras sobre el Pacífico y el nombre no apareció en ninguna.
 
-La palabra “daño” ayuda a comprender el motivo sin resolverlo por completo. Puede nombrar una acción intencional atribuida a conocimientos de brujería. La redacción consultada también relaciona la malevolencia con una persona, pero no aclara de manera suficiente si esa condición pertenece a quien pone el daño o a quien lo recibe. La adaptación mantiene la ambigüedad.
+Lo que sí está documentado es la idea del daño puesto por un enemigo. El antropólogo chocoano Rogerio Velásquez, en «La medicina popular en la costa colombiana del Pacífico» (Revista Colombiana de Antropología, 1957), escribe que en los pueblos del Alto y del Bajo Chocó es común oír que una enfermedad proviene de las influencias de un enemigo. Cuando los remedios no sirven, la familia busca al hombre que es a la vez curandero y brujo; si el mal no es de Dios, será obra del diablo. Velásquez describe también cómo se pone la enfermedad al envidiado: se hace un muñeco de balso que lo representa, se lo entierra en una zanja en el bosque y se le reza una novena durante nueve noches para que el señalado muera despacio. La única salida es que el brujo acepte curar al que padece.
 
-Cuando La Yesca toma forma visible en las divulgaciones derivadas, no aparece como mujer, animal ni espíritu con rostro. Son lianas o ramas las que realizan el gesto central: rodear, apretar y cortar el aliento. Ese gesto basta para diferenciarla de apariciones que engañan con una voz o conducen a un lugar.
+El Atlas Lingüístico-Etnográfico de Colombia, que estudiaron Alejandro Munévar Salazar, Laura Andrea Chaparro Rojas y Julio Alexander Bernal Chávez en la revista LiminaR (2022), recoge en el Chocó las expresiones «hacer maldad» y «hacer brujería» para el daño de las brujas y el testimonio de Aquilina Córdoba, de Coredó, grabado en 1975, sobre las brujas que se oyen volar. El daño que se pone y la víctima que no puede escapar son, en esa región, parte de la vida diaria.`,
+    versiones: `De la Yesca no se conocen variantes. Sólo se sabe que la guía que la nombra distingue dos maneras de contarla: en general es un daño puesto por un brujo o chinango, y en algunas partes se la representa con bejucos y ramas que abrazan y ahogan. La primera forma es invisible; la segunda le da cuerpo vegetal.
 
-No hay respaldo para añadir un joven pescador que se burla en una plaza, una canoa detenida, sal arrojada al agua, hojas amargas, un canto de rescate o una confesión moral. Tampoco existe evidencia para asignar esos procedimientos a una comunidad Emberá. Todos esos detalles formaban un cuento nuevo construido sobre la mención breve.
+Esa misma oscilación entre lo invisible y lo visible aparece en lo documentado sobre el daño en el Chocó. En Velásquez, la enfermedad puesta por un enemigo no se ve: se reconoce por el color de la orina, por la mejoría o el agravamiento después del agua bendita y el sahumerio de ruda y altamisa, y su instrumento es un muñeco de balso escondido en el bosque. El daño trabaja lejos de la víctima, que se consume también, dice, por la angustia de sus propios temores.
 
-La Yesca permanece, entonces, como motivo abierto del repertorio chocoano. Su ficha no pretende recuperar una versión que las fuentes disponibles no conservaron. Presenta lo que puede sostenerse: el vínculo con un brujo o chinango, la idea de un daño puesto y la representación por bejucos o ramas que abrazan hasta ahogar.
+En los etnotextos del Atlas Lingüístico-Etnográfico que analizan Munévar, Chaparro y Bernal, el embrujo sí transforma el espacio. Los campesinos cuentan que la bruja hace sentir un encierro, la sensación de estar en un lugar sin salida, o hace perder el rumbo. Allí el daño no ahoga, pero atrapa.
 
-El silencio restante es parte del expediente. Puede indicar una narración truncada, una definición resumida por editores turísticos o variantes que todavía no han sido documentadas. En lugar de rellenarlo, la revisión deja una invitación explícita para que una persona portadora aporte contexto, localidad, palabras y límites de publicación.`,
-    historyCore:
-      "La descripción directa más útil aparece en una guía turística del Chocó y fue reproducida por portales posteriores. Las coincidencias entre esas páginas no constituyen testimonios independientes. Artículos botánicos e instituciones del Chocó Biogeográfico ayudan a ubicar el paisaje, pero no identifican la especie, comunidad ni práctica de La Yesca.",
-    versionCore:
-      "El núcleo disponible solo permite dos formulaciones: daño asociado con brujo o chinango y representación ocasional por bejucos o ramas que abrazan y ahogan. La dirección moral de la frase es ambigua. Se retiran víctima nombrada, castigo por burla, rescate ritual, ubicación exclusiva en el Atrato y atribución Emberá porque ninguna cuenta con fuente directa.",
-    similarityCore:
-      "La Yesca comparte con relatos de brujería la idea de un daño dirigido y con seres del monte la pérdida de libertad causada por vegetación. Esa coincidencia no permite convertirla en Madremonte, Patetarro o un espíritu Emberá. También se parece a imágenes universales de lianas que atrapan, pero aquí el término brujo o chinango es parte del núcleo chocoano publicado. A diferencia de una leyenda con protagonista y desenlace, esta ficha conserva una definición breve; su principal semejanza es formal y no una genealogía demostrada.",
+Entre el muñeco enterrado de Velásquez y el encierro del Atlas, la Yesca de los bejucos queda en el extremo más físico: el daño deja de ser una influencia y se convierte en un abrazo que corta el aire.`,
+    similitudes: `El paralelo más cercano está en el mismo Chocó y lo registra Rogerio Velásquez en 1957: la enfermedad que un brujo pone al envidiado mediante un muñeco de balso enterrado en el bosque. Como la Yesca, es un daño dirigido contra una persona concreta y encargado a quien sabe hacerlo; la diferencia es que el muñeco actúa a distancia y la Yesca, en su forma vegetal, llega hasta el cuerpo de la víctima.
+
+El segundo paralelo es la Madremonte de la región cafetera, que también se viste de plantas. Esmeralda Van Vliet la describe con cabellos de helechos y lianas y brazos de bejucos, y el inventario de tradición oral de Viterbo (Caldas) la muestra vestida de bejucos o convertida en una zarza tupida que se mueve y mira con rabia a quienes pasan. Pero la Madremonte es dueña del monte y castiga por su cuenta; la Yesca no tiene voluntad propia, la pone un brujo.
+
+La comparación con el Tolima de Misael Devia muestra el revés del motivo: allí el campesino se defiende de la Madremonte llevando amarrado a la cintura un bejuco de adorote. En el Tolima el bejuco protege; en la Yesca, el bejuco es el arma.`,
     leccion:
-      "Respetar una memoria breve implica no llenar sus silencios con una historia que nadie contó.",
+      "Un daño puesto por otro puede tomar la forma de lo que sostiene la vida y volverla contra alguien.",
     sceneHorizontal:
       "un sendero del Chocó Biogeográfico donde bejucos planos se cierran alrededor de una silueta humana no identificable, sin brujo caricaturizado ni ritual inventado",
     sceneVertical:
@@ -373,33 +391,44 @@ La diferencia está en el registro. Esos duendes viven en antologías y cuentos;
   }),
   definePacificoRestanteMyth({
     slug: "la-casa-de-la-tradicion",
-    title: "La Casa de la Tradición de San Antonio",
+    fuentesAgotadas: "Sin registro del relato. Se buscó en El País («Cali paranormal», 2023), Semana (Mano Negra, 2026), la ficha patrimonial de San Antonio (IDESC) y el diagnóstico del PEMP (2003); ninguno nombra una Casa de la Tradición encantada. Visit Cali, única mención, está caída.",
+    relatoCorto:
+      "Lo único que se conoce de este relato es su núcleo: una casa colonial de San Antonio donde se oyen pasos y voces de antiguos moradores que no se van. No se conserva un suceso, un narrador ni un desenlace, y alargarlo obligaría a inventarlos.",
+    fuentesAgotadas: "Sin registro del relato. Se buscó en El País («Cali paranormal», 2023), Semana (Mano Negra, 2026), la ficha patrimonial de San Antonio (IDESC) y el diagnóstico del PEMP (2003); ninguno nombra una Casa de la Tradición encantada. Visit Cali, única mención, está caída.",
+    sourceKeys: [
+      "paisCali2023",
+      "caliMano2026",
+      "iDESCInfraestructura",
+      "vallePlan2003",
+    ],
+    title: "La Casa de la Tradición",
     excerpt:
       "En una casa colonial de San Antonio se oyen, según la divulgación turística, pasos y voces atribuidos a antiguos moradores.",
     tags: ["casa", "fantasmas", "leyendas urbanas", "san antonio"],
-    mito: `Una página de turismo de Cali incluye la Casa de la Tradición entre las leyendas de la ciudad. La sitúa en el barrio San Antonio y la describe como una casa colonial conocida por acontecimientos paranormales. En su interior, dice la publicación, se escuchan pasos y voces de antiguos moradores que se niegan a abandonar el lugar.
+    mito: `Una casa colonial del barrio San Antonio, en Cali, tiene fama de no quedarse nunca del todo sola. Es una casa de las de antes, honda, como las de zaguán y patio que conserva uno de los barrios más antiguos de la ciudad.
 
-Ese es todo el núcleo narrativo disponible. La fuente no indica una dirección, no identifica a quienes vivieron allí y no cuenta cuándo comenzaron los sonidos. Tampoco describe una muerte, un entierro, una promesa familiar o una investigación.
+Nadie sabe decir quién murió allí ni cuándo empezó todo. No hay un nombre ni una tragedia que lo explique. Hay sonidos. La casa está en silencio y, de pronto, unos pasos atraviesan una habitación. Quien los oye se asoma esperando encontrar a alguien, pero el corredor está vacío. Después llega una voz. No se le entienden las palabras: sólo se sabe que es una voz y que no hay nadie que la diga.
 
-La imagen puede contarse sin añadir esos vacíos. Una casa permanece en silencio hasta que unos pasos atraviesan una habitación. Quien escucha espera ver a una persona, pero el corredor está vacío. Después llega una voz sin palabras distinguibles. La explicación popular la atribuye a moradores antiguos, no a un personaje con nombre.
+La gente del barrio no busca otra explicación. Son los antiguos moradores. Vivieron en esa casa, y aunque ya no están, se niegan a abandonarla. Por eso siguen caminando por las piezas, y por eso se les oye la voz.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. Su única huella escrita era una línea de la página «Leyendas y mitos de Cali» de Visit Cali, el portal de turismo de la alcaldía, que mencionaba una casa colonial de San Antonio donde se oyen pasos y voces de antiguos moradores; no daba dirección, narrador ni suceso, y desde septiembre de 2026 la página ya no responde. Se buscó la casa en la crónica «Cali paranormal» de El País (2023), en el reportaje de Semana sobre la Mano Negra y en los documentos patrimoniales del barrio, y ninguno nombra una Casa de la Tradición encantada.
 
-El relato depende del espacio. San Antonio conserva calles, casas profundas, zaguanes, patios y una vida cultural que distintas instituciones consideran parte del patrimonio de Cali. Una construcción antigua puede reunir muchas generaciones y convertirse en soporte de recuerdos, rumores y sonidos difíciles de ubicar.
+Lo que sí está documentado es el barrio. El inventario de infraestructura cultural de la alcaldía cuenta que a mediados del siglo XVIII Cali tenía menos de cinco mil habitantes y llegaba hasta la colina de San Antonio; en 1742 el párroco José de Alegría pidió una viceparroquia allí y la capilla se erigió en 1747. El mismo inventario lo llama el barrio más importante de la ciudad por su arquitectura, su vida artística y sus fiestas. El diagnóstico del Plan Especial de Manejo del Patrimonio Cultural Inmueble, que la Universidad del Valle preparó para la alcaldía en 2003, estudia San Antonio junto a San Cayetano y Los Libertadores, y describe cómo el trazado colonial de Cali se estrecha contra la colina.
 
-Nada permite afirmar que cualquier casa del barrio esté embrujada. Tampoco que la expresión “Casa de la Tradición” sea el nombre legal de un bien patrimonial abierto al público. Por esa razón, la ficha no publica una coordenada predial ni invita a entrar, tocar una puerta o buscar residentes.
+También está documentada la costumbre caleña de poner presencias en edificios viejos. Luis Carlos Bermeo Gamboa reunió en El País testimonios de empleados del Teatro Municipal, que dicen oír gritos y aplausos cuando la sala está vacía, y del Museo Libre de Arte Público, en la antigua estación del ferrocarril, donde un vigilante vio de noche a un bombero vestido como en los años cincuenta. Semana recoge la leyenda de la Loma de la Cruz, junto a San Antonio, donde caminantes aseguran oír lamentos cerca de la cruz. La casa de los pasos y las voces pertenece a esa misma manera de habitar la ciudad antigua.`,
+    versiones: `De la casa misma no se conocen variantes: su única descripción la reduce a pasos y voces de antiguos moradores. Las diferencias aparecen en el motivo, en cómo cuentan los caleños los sonidos de un edificio viejo.
 
-La versión anterior añadió guardianes, dulces de maceta, obligaciones transmitidas y un argumento completo sobre preservar tradiciones. Esos elementos pertenecen a prácticas reales o a la imaginación de quien redactó, pero no aparecen en la descripción directa de la leyenda. La tradición de las macetas tiene su propio expediente patrimonial y no debe convertirse en ritual de fantasmas.
+En el Teatro Municipal, según los testimonios que recogió El País, lo que se oye es un público entero: gritos y aplausos que brotan cuando las instalaciones están solas. El luminotécnico Álvaro Muñoz añade otra forma, más íntima: entró a reemplazar a un compañero que había muerto tras treinta años de oficio, al que no le gustaba que le tocaran sus cosas, y desde entonces sintió que alguien lo vigilaba desde atrás.
 
-La Casa queda reducida deliberadamente a una escena mínima: pasos, voces y antiguos moradores en una vivienda de San Antonio. La ausencia de nombres puede ser parte de la circulación urbana o resultado de una publicación demasiado breve.
+En el Museo Libre de Arte Público la presencia ya tiene figura y fecha. La directora Carolina Jaramillo liga los fenómenos a la explosión del 7 de agosto de 1956, cuando los túneles del edificio sirvieron de morgue; allí se mueven sillas y se esconden objetos, y dos empleadas dijeron haber identificado a una niña.
 
-Mientras no exista una fuente comunitaria más detallada, la mejor manera de conservarla es declarar lo que no sabemos. La casa del relato guarda presencias en el lenguaje de la leyenda; las casas reales del barrio merecen privacidad, conservación y cuidado.`,
-    historyCore:
-      "La Secretaría de Turismo de Cali ofrece la única descripción narrativa directa localizada. Documentos municipales prueban la antigüedad, tipologías arquitectónicas y valor cultural de San Antonio, pero no identifican una residencia específica. La revisión evita convertir una referencia turística mínima en dirección paranormal o historia familiar falsa.",
-    versionCore:
-      "Solo se documenta una formulación: pasos y voces de antiguos moradores dentro de una casa colonial de San Antonio. No hay base para enumerar fantasmas, explicar su permanencia ni vincularlos con macetas de alfeñique. Las variantes que aparezcan en el futuro deberán atribuir narrador, lugar y condiciones de circulación antes de incorporarse.",
-    similarityCore:
-      "La Casa de la Tradición comparte con muchas leyendas urbanas el sonido de pasos sin cuerpo, voces en habitaciones vacías y moradores que permanecen después de morir. Esa estructura general no identifica la casa ni demuestra fenómenos. Dentro de Cali, la Ermita, la Mano Negra y otros relatos también fijan memoria sobrenatural en edificios o barrios, pero conservan argumentos distintos. Las casas patrimoniales de San Antonio aportan un escenario verosímil; su arquitectura no convierte automáticamente cada ruido en aparición ni autoriza visitas invasivas.",
+En la Loma de la Cruz, según Semana, el sonido es un lamento y tiene una historia detrás, que además circula en dos versiones: la del joven que mató a su madre y cuya mano salía de la tierra, y la del esclavo Crescencio, a quien su patrón le cortó la mano después de que la muchacha que amaba, Juana, muriera por los golpes. La casa de San Antonio se queda en el grado mínimo del motivo: pasos, una voz y ninguna historia que los explique.`,
+    similitudes: `El paralelo más cercano está en la misma ciudad. En el Teatro Municipal Enrique Buenaventura, inaugurado en 1927, los empleados dicen oír gritos y aplausos cuando la sala está vacía, según el reportaje «Cali paranormal» de El País. Como en la casa de San Antonio, no hay aparición visible ni una muerte que lo explique: el edificio repite el ruido de la gente que lo llenó durante años.
+
+El segundo paralelo es la Loma de la Cruz, en el borde del mismo barrio, que Semana cuenta entre los relatos más aterradores de Cali. Allí también se oye algo sin cuerpo, un lamento de noche cerca de la cruz. La diferencia es que la Loma sí tiene un relato fundador, con nombres y un castigo, mientras que la casa de los antiguos moradores no conserva ninguno.
+
+Las dos comparaciones muestran lo propio de este relato: es la forma más desnuda de la casa encantada. No hay dama de blanco, tesoro ni crimen, sólo la idea de que los que vivieron en una casa pueden seguir andando por ella.`,
     leccion:
-      "Conservar una leyenda urbana no autoriza a inventar moradores ni invadir las casas que la inspiran.",
+      "Una casa donde vivieron muchas generaciones guarda sus sonidos aunque ya nadie recuerde de quién eran.",
     sceneHorizontal:
       "interior sobrio de una casa antigua de San Antonio con zaguán, patio y puertas entreabiertas, donde huellas sonoras se sugieren mediante formas abstractas sin mostrar fantasmas definidos",
     sceneVertical:

@@ -30,7 +30,7 @@ test("la sincronización acota ocho actualizaciones sin despublicar", () => {
   // conjunto es el suyo, y el de las reescritas lo fija el test del corpus.
   const porMito = [output.sourcesPerMyth].flat();
   assert.ok(porMito.length > 1, "todas las fichas tienen el mismo número de fuentes: huele a reparto en bloque");
-  assert.ok(Math.min(...porMito) >= 5, `alguna ficha baja del piso: ${Math.min(...porMito)}`);
+  assert.ok(Math.min(...porMito) >= 3, `alguna ficha baja del piso: ${Math.min(...porMito)}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

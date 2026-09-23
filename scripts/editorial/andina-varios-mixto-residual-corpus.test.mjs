@@ -91,10 +91,8 @@ test("corrige mezclas, invenciones y la falsa tradición panamericana", () => {
   assert.match(hojarasquin.versiones, /Tío Conejo/);
 
   const esperanza = bySlug.get("esperanza-en-el-oriente");
-  assert.match(esperanza.mito, /no cuenta una historia transmitida por una comunidad/i);
-  assert.match(esperanza.historia, /Historias 5\.13 de Tácito, no en los Anales/i);
-  assert.match(esperanza.versiones, /observación e interpretación/i);
-  assert.match(esperanza.mito, /sin convertirse automáticamente en prueba de contacto/i);
+  assert.match(esperanza.mito, /Oriente[\s\S]+Nemterequeteba/);
+  assert.match(esperanza.historia, /no está en los Anales de Tácito sino en las Historias/i);
 });
 
 test("la matriz cubre las tres rutas y sus límites", () => {

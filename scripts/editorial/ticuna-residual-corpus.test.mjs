@@ -99,7 +99,7 @@ test("los siete expedientes cumplen rangos y estructura metodológica", () => {
 test("declara variantes, recompone fragmentos y corrige identidades", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   // heredada: reescribir tras el cotejo
-  assert.doesNotMatch(bySlug.get("origen-del-sol").mito, /corona|guacamayo/i);
+  assert.match(bySlug.get("origen-del-sol").historia, /Rodríguez de Montes/);
   // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("origen-del-sol").versiones, /Dolores Noé/i);
   // heredada: reescribir tras el cotejo

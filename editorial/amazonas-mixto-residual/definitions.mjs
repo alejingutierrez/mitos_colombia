@@ -219,28 +219,54 @@ En casa, la niña contó que su hermano la cargaba al pasar el agua y que todos 
   }),
   defineAmazonasMixtoResidualMyth({
     slug: "madre-de-playa",
-    title: "La Madre de Playa y su canción nocturna",
+    fuentesAgotadas: "Rodríguez de Montes, Muestra de literatura oral en Leticia (1981), el único registro, no está en abierto; las demás fuentes tratan el motivo, no este relato.",
+    sourceKeys: [
+      "nunezTrabajos1947",
+      "caroNoticias1975",
+      "lenguasbufeo2024",
+      "galanteAnimalidad2018",
+      {
+        key: "cruzMitos2014",
+        summary:
+          "Registra en Abaetetuba (Pará) a la Iara, madre de los ríos, que en algunas historias tiene figura de sirena; es el paralelo brasileño de una madre del agua con cuerpo de mujer y pez que las similitudes comparan con la Madre de playa.",
+        limitation:
+          "Trata el motivo de la madre del agua en el Pará, no este relato; la mención de la Iara es breve.",
+      },
+    ],
+    relatoCorto:
+      "El texto publicado describe a un ser y su manera de llevarse a la gente; no tiene episodio ni personajes con nombre. Todo lo demás son adornos (runas en la guitarra, «reino de maravillas y enigmas», el abrazo eterno de tierra y mar) que no añaden hechos. Contarlo sin ellos da unas doscientas palabras, y alargarlo obligaría a inventar.",
+    title: "Madre de playa",
     excerpt:
       "En una playa fluvial de Leticia, una figura mitad mujer y mitad pez toca una guitarra a medianoche y llama desde la orilla.",
     tags: ["Madre de Playa", "sirena", "música", "río"],
-    mito: `Cuando el nivel del río bajaba, aparecían playas largas frente al bosque. Durante el día eran lugares de paso, pesca y descanso. De noche cambiaban: la franja clara quedaba entre el agua oscura y la pared de vegetación, y cualquier sonido podía recorrer una gran distancia.
+    mito: `La Madre de playa sale del agua a la medianoche, cuando la luna está en lo más alto. De la cintura para arriba es una mujer, con el pelo amarillo que brilla bajo la luna como escamas; de la cintura para abajo es un pez, y su cola deja en la arena húmeda un rastro que la ola siguiente borra. Tiene los ojos de color mutis, que cambian con la marea como los del paucara, entre dorado y verde.
 
-Angélica Lucas, según la atribución conservada por el registro heredado, hablaba de una Madre de Playa. Su cuerpo reunía dos formas: mujer desde la parte superior y pez hacia el agua. No vivía en el océano ni sobre rocas de costa marina. Pertenecía a la playa fluvial y a la corriente amazónica que la formaba y podía volver a cubrirla.
+Trae una guitarra. Se sienta en la orilla, toca y canta, y su canto es hermoso y triste a la vez. La gente del lugar lo dice en pocas palabras: «Coge guitarra, canta, dice bonito eya».
 
-A medianoche se escuchaba una guitarra. La música llegaba antes de que alguien pudiera distinguir a quien tocaba. Parecía cercana y luego se desplazaba con el viento o el curso del agua. Quien permanecía en la playa podía sentir que la canción le pedía caminar hacia un punto donde el borde del río ya no era visible.
+Quien la oye se siente llamado y camina hacia ella. No lo atrae sólo la belleza de la mujer ni la de la música, sino un deseo más hondo de irse con ella. Ella lo toma de la mano con suavidad y lo lleva hacia el fondo del agua, donde, se dice, la espera un reino escondido. Los que se van con ella no vuelven. De ellos quedan los murmullos de la brisa nocturna y el llanto de los que esperan en la orilla.
 
-Una familia que viajaba en canoa decidió pasar la noche en una orilla alta. Al oír las cuerdas, una joven quiso bajar para saber quién tocaba. Su acompañante observó que no había fogón, embarcación ni huellas recientes. Ambos permanecieron junto a la canoa y escucharon sin acercarse al agua.
+Los viejos se lo advierten a los jóvenes. Aun así, siempre hay alguno que oye el llamado y la sigue.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. Se buscó en la única obra que le atribuye la bibliografía, la Muestra de literatura oral en Leticia, Amazonas de María Luisa Rodríguez de Montes (Instituto Caro y Cuervo, 1981, 262 páginas), que no está en abierto. El portal de lenguas del Caro y Cuervo sólo reproduce de ella «El bufeo», y lo único transcrito en línea es otro relato. Tampoco aparece en la monografía de Andrés González Galante (Universidad de los Andes, 2018), el único estudio que analiza esa Muestra, ni en los registros de sirenas de Loreto de 1947. Tampoco dieron nada las búsquedas en la red por el nombre, la guitarra y la medianoche.
 
-La silueta apareció por un momento en la parte más clara de la playa. No habló ni persiguió a nadie. La guitarra continuó mientras la figura se desplazaba hacia el río. Cuando el sonido terminó, solo quedó la corriente y la arena húmeda.
+Hay un indicio de lugar. La frase del canto, «Coge guitarra, canta, dice bonito eya», escribe «eya» por «ella», que es la grafía fonética con que el Instituto Caro y Cuervo transcribió el español hablado en Leticia. En 1975, en el número 179 de Noticias Culturales, publicó lo que unos niños de diez a doce años del puerto le dijeron del bufeo: «Eyos yevan uno». Eso apunta a una narración oral leticiana de los años de la Muestra, pero sin el libro no se puede comprobar.
 
-La escena adicional de los viajeros no pretende recuperar palabras ausentes: organiza visualmente los rasgos mínimos de la versión. La canción, la hora, el cuerpo doble y la playa son el núcleo. No se añaden runas, templos, palacios submarinos ni una tragedia amorosa que explique su origen.
+El motivo sí está documentado en la región. Entre las composiciones que los alumnos del Colegio Nacional de Requena, en el Loreto peruano, escribieron en 1947, «El Viajero y la Sirena» describe sirenas mitad gente y mitad pez, de ojos azules. De noche recorren la orilla del río cantando canciones melancólicas al son de guitarras, y se llevan a un joven al agua. «El albañil i la sirena» cuenta la de un hombre que sacaba piedra en el Huallaga. En el Pará, Bithian Mota da Cruz y Maria do Socorro Simões registraron a la Iara, madre de los ríos, que en algunos relatos tiene figura de sirena.`,
+    versiones: `La Madre de playa comparte sus rasgos con las sirenas de río del Loreto peruano, y se aparta de ellas en otros.
 
-La Madre de Playa permanece como figura de una frontera cambiante. La playa existe porque el río retrocede y desaparece cuando vuelve a crecer. La música marca esa inestabilidad sin convertirla en hecho comprobable. La prudencia consiste en escuchar desde un lugar seguro y reconocer que una orilla nocturna no ofrece las mismas señales que durante el día.`,
-    historyCore: `La ficha antigua atribuye el relato a Angélica Lucas y lo asocia con la recopilación de Leticia, pero el texto completo y la ficha del informante no están disponibles en las fuentes abiertas consultadas. Esa limitación se declara en vez de llenar el vacío con una biografía. La corrección principal devuelve la escena a una playa de río amazónico: la versión heredada la desplazaba hacia mar, costa y símbolos inexistentes.`,
-    versionCore: `El núcleo conservado es breve: figura mitad mujer y mitad pez, guitarra a medianoche y playa fluvial. No se sabe si todas esas palabras proceden literalmente de la narradora o de la edición posterior. Las sirenas del Mediterráneo y las múltiples figuras de Mami Wata permiten comparar voz, agua y atracción, pero pertenecen a historias separadas. Otras madres del agua colombianas pueden habitar pozos, lagunas o ríos y no deben recibir automáticamente la guitarra ni la forma de esta versión.`,
+En «El Viajero y la Sirena», firmado por César A. Díaz Núñez entre los trabajos de Requena de 1947 (pp. 28-29), las sirenas son mitad gente y mitad pez y tienen los ojos azules. No cantan solas: de noche, mientras el pueblo duerme, se las oye pasar por la orilla cantando canciones melancólicas al son de guitarras, «toda una orquesta». Una de ellas se presenta en un baile como una muchacha, le pide al joven enamorado que la acompañe al puerto a lavarse los zapatos y allí se lo lleva al agua. Un brujo que pasa semanas bajo el agua cuenta que viven en los grandes remolinos, en casas lujosas, con la boa por hamaca y los delfines por sirvientes.
+
+En «El albañil i la sirena», de Juvencio Vela (p. 22), la sirena no canta ni toca: aparece a un hombre solo en la orilla del Huallaga y después le habla en sueños, diciéndole que lo habría llevado si no hubiera vuelto pronto a su casa.
+
+En Leticia, las voces que el Caro y Cuervo recogió en 1975 atribuyen ese mismo rapto al bufeo, que llama a la gente para bañarse con él y la lleva al fondo del agua.
+
+Frente a ellas, la Madre de playa tiene un horario preciso, la medianoche, un instrumento propio y el pelo amarillo, y su nombre la hace dueña de la playa y no del remolino. Se lleva a los que la oyen por un deseo que no se explica, sin disfrazarse de muchacha ni de enamorado.`,
     leccion:
-      "Escuchar el río también significa conservar distancia cuando la noche borra sus límites y señales.",
-    similarityCore: `Las sirenas de la Odisea atraen al navegante con canto, mientras el catálogo de Mami Wata muestra espíritus acuáticos plurales ligados a belleza, peligro y cambio. La Madre de Playa comparte el vínculo entre música y agua, pero su escenario es una playa fluvial amazónica y el instrumento es una guitarra. No tiene las alas de las sirenas antiguas ni puede llamarse Mami Wata. Estas comparaciones iluminan una forma narrativa sin reemplazar la atribución limitada a Angélica Lucas y al corpus leticiano.`,
+      "El canto que llama desde la orilla promete un mundo que nadie regresa a contar.",
+    similitudes: `El paralelo más cercano es la sirena de río del Loreto peruano. En la composición de César A. Díaz Núñez recogida en Requena en 1947, las sirenas son mitad gente y mitad pez, cantan de noche en la orilla al son de guitarras y se llevan a un joven al agua. Comparten con la Madre de playa la hora nocturna, el cuerpo doble, la música de cuerdas y el rapto. Se diferencian en que la sirena de Requena seduce disfrazada de muchacha en un baile, mientras la Madre de playa se muestra tal como es y basta su canto.
+
+El segundo paralelo es el bufeo de Leticia. Los niños del puerto y los adultos que el Instituto Caro y Cuervo entrevistó en 1975 dicen que el bufeo llama a la gente a bañarse, la encanta y se la lleva al fondo del agua, donde queda como gente. El destino del raptado es el mismo que el de quien sigue a la Madre de playa: un mundo bajo el agua del que no se vuelve.
+
+En el Brasil, Bithian Mota da Cruz y Maria do Socorro Simões registraron en Abaetetuba a la Iara, madre de los ríos, que en algunas historias tiene figura de sirena. El nombre la emparienta con la Madre de playa: las dos son madres de un lugar del agua, no simples criaturas que lo habitan.`,
     sceneHorizontal:
       "una amplia playa fluvial amazónica bajo luna sobria; cerca del agua, una figura mitad mujer y mitad pez toca una guitarra mientras una canoa permanece segura en una orilla alta",
     sceneVertical:
@@ -596,32 +622,68 @@ Por eso, para que la gente del agua no se acerque, se lleva ajo en el bolsillo, 
   }),
   defineAmazonasMixtoResidualMyth({
     slug: "chuya-chaqui",
-    title: "Chuya-Chaqui y el falso maguaré",
+    fuentesAgotadas: "El único registro es el cuento de Hugo Niño (Primitivos relatos contados otra vez, 1976), obra protegida sin copia legítima en abierto; las demás fuentes tratan el motivo del chullachaqui amazónico, no este relato.",
+    sourceKeys: [
+      "mTrabajos1947",
+      {
+        key: "mejiaSeres2019",
+        summary:
+          "Dedica un apartado al Chullachaqui en la antología de Arguedas e Izquierdo Ríos: el cazador de San Martín atraído por un paujil y un jabalí que eran el mismo ser, la muchacha del Cumbaza retenida ocho días en una cueva y el hermano suplantado en Loreto, con la descripción de sus pies desiguales. Da el paralelo del engaño por un sonido conocido, que es el mecanismo del maguaré en este relato.",
+        limitation:
+          "Trata el motivo en relatos peruanos, no este cuento colombiano. Es un estudio de una antología, no una recolección propia.",
+      },
+      {
+        key: "cruzMitos2014",
+        summary:
+          "Recoge el Chullachaqui en Iquitos con la etimología quechua del nombre (pie desigual) y lo compara con el Curupira de Abaetetuba: dos protectores del monte que toman la figura de una persona cercana para engañar y castigan a quien daña la selva. Sostiene el paralelo brasileño de las similitudes.",
+        limitation:
+          "Trata el motivo, no este relato. La caracterización es breve y general, y la comparación se hace a partir de dos ciudades concretas, no de la región entera.",
+      },
+      {
+        key: "rocchiettiChullachaqui2024",
+        summary:
+          "Presenta al Chullachaqui como el duende de la selva que se aparece a quienes transitan o trabajan en el monte y los desaparece, y estudia su representación en la cerámica de los kukama lukamiria del Perú. Documenta que el motivo del que se sirve el relato tiene también una vida material, fuera de la narración.",
+        limitation:
+          "Trata el motivo en la iconografía kukama, no este relato. Sólo se leyó la página del artículo con su resumen y referencias.",
+      },
+      "araujomito20252",
+    ],
+    title: "Chuya-Chaqui",
     excerpt:
       "En la reescritura de Hugo Niño, cazadores de Ahuanari siguen un maguaré durante una tormenta y descubren que una figura del monte los desvía.",
     tags: ["Chullachaqui", "maguaré", "engaño", "selva"],
-    mito: `Un grupo de cazadores salió de Ahuanari y se internó en el monte. Conocían senderos, quebradas y señales del cielo, pero una tormenta cerró la luz y borró las referencias. La lluvia hizo que cada tronco pareciera otro y que el camino de regreso dejara de ser visible.
+    mito: `La aldea de Ahuanari era un caserío apartado junto a un riachuelo de la selva. En el centro estaba la maloca, la gran casa comunal de techo de palma a dos aguas, y cerca de ella un maguaré tallado. Con ese tambor, de golpe grave, se anunciaba la llegada de los cazadores.
 
-Entonces escucharon un maguaré. El golpe grave llegaba desde la distancia como una llamada de comunidad. Para quien estaba perdido, aquel sonido prometía una maloca, fuego y gente capaz de indicar la ruta. Los cazadores avanzaron hacia él.
+Una tarde, poco antes de que el sol se pusiera, llegó un extraño. Los hombres se habían ido a las chagras a trabajar o al monte a cazar, y en la aldea sólo quedaban las mujeres y los niños. Lo recibieron con hospitalidad, pero con cautela. La anciana, madre de Ahuanari, le ofreció una totuma de muyá, el licor de yuca fermentada, y le pidió que esperara a los cazadores. El hombre dijo llamarse Chuya-Chaki. Se sentó en un tronco y se quedó mirando el trabajo de las mujeres.
 
-Cada vez que creían estar cerca, el golpe cambiaba de lugar. Cruzaban un tramo de bosque y volvía a sonar detrás de una cortina de lluvia. Ninguno alcanzaba a ver el instrumento. Solo recibían la cadencia suficiente para seguir caminando.
+Una pareja joven colaba el muyá por el tipití, el tejido de caña lisa. Las ancianas hablaban de la cacería prometida y de la carne que iban a recibir. Chuya-Chaki las oía y asentía en silencio, con la mirada en el borde del bosque. Al cabo de un rato hizo como que iba detrás de la maloca, y no volvió: se había ido hacia la selva.
 
-Uno de ellos advirtió que el ritmo no respondía como los mensajes que conocían. La llamada repetía una forma sin entregar orientación. Miró el barro y encontró huellas desiguales. Comprendió que el sonido podía pertenecer al Chuya-Chaqui, figura capaz de imitar a una persona y conducirla hacia una dirección equivocada.
+Más tarde se cerró el cielo. Tronaba sobre el monte cuando Ahuanari y los suyos venían de regreso, cada uno cargando su parte de una danta despresada en bolsas tejidas de chambira. Entonces se descolgó la lluvia, tan pesada que oscureció todo y borró el camino. La tormenta tapaba las voces, y los cazadores se perdieron.
 
-El grupo dejó de perseguir el golpe. Permaneció unido, buscó un lugar alto y esperó a que disminuyera la tormenta. El maguaré continuó llamando durante un tiempo y luego se convirtió en un ruido más entre agua, ramas y truenos.
+En medio del agua oyeron el maguaré. Creyeron que el tambor los guiaba a casa y caminaron hacia el golpe. Pero cada paso los alejaba de la aldea. El sonido los llevaba en círculos, hasta que la noche se cerró del todo. Ahuanari, cansado y abatido, llamó a gritos a su hermano Huatinga. Nadie le respondió; sólo seguía la lluvia.
 
-Al amanecer, los cazadores reconocieron una quebrada y reconstruyeron el camino hacia Ahuanari. No capturaron al Chuya-Chaqui ni demostraron qué cuerpo había producido el sonido. Regresaron con la memoria de una llamada que imitaba refugio sin serlo.
+Llovió cuatro días. Durante esos cuatro días las mujeres esperaron oír el llamado de los cazadores, y el llamado no llegó. La madre de Ahuanari se acordó entonces del forastero que había bebido muyá en su casa mientras ellas hablaban de la cacería. Pensó en el Chullachaqui, el ser del monte que se presenta como amigo o como enemigo, que tiene un pie de hombre y otro de animal y deja huellas que se confunden con las del venado o el sajino. De él se dice que se lleva a los hombres para dejarlos extraviados en el bosque, y que a veces se le desvían los caprichos con regalos de tabaco.
 
-Esta versión procede de una obra firmada por Hugo Niño. El autor reunió y reescribió relatos amazónicos bajo el título explícito de “contados otra vez”. La página no borra esa mediación ni presenta cada frase como transcripción literal de un narrador de Ahuanari.
+Ahuanari y sus compañeros no regresaron.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar de forma legítima en abierto. Procede de «Chuya-Chaki», un cuento de autor firmado por el escritor bogotano Hugo Niño (1947) e incluido en Primitivos relatos contados otra vez: héroes y mitos amazónicos. Ese libro ganó el premio Casa de las Américas en La Habana en 1976, y Carlos Valencia Editores lo reeditó en Bogotá en 1979. De la edición de 1979 hay un escaneo que sólo se presta bajo control, y las copias completas que circulan en la red no tienen editor ni permiso. Niño no dice de qué pueblo, de qué narrador ni de qué lugar tomó la historia: detrás del cuento no hay un relato oral recogido que pueda citarse, sino literatura firmada sobre un motivo amazónico.
 
-Tampoco funde el episodio con la ruta El Chuyachaque. Aquella conserva un resumen breve de Leticia sobre pies desiguales, silbidos y peligro para niños. Aquí hay cazadores, tormenta, una aldea nombrada y un falso maguaré. Comparten una figura regional y por eso se enlazan; sus estructuras narrativas distintas permiten que ambas URL permanezcan.
+El motivo sí está bien documentado. El Chullachaqui, cuyo nombre junta el quechua chulla, 'desigual', y chaki, 'pie', es el ser del monte de la Amazonía peruana y de sus fronteras. En noviembre de 1947, los alumnos del tercer año de Media del Colegio Nacional «Padre Agustín López» de Requena, en Loreto, escribieron ocho composiciones sobre él para la Sección de Folklore del Ministerio de Educación del Perú. Una, firmada por Rodríguez M., lo describe como un fantasma que vive en los bosques apartados y toma la figura de un hermano, un padre o un pariente para engañar a quien quiere robarse. Se le reconoce por el pie izquierdo, más pequeño que el derecho. Otra, de Felix Rengifo, cuenta cómo un muchacho, advertido a medias por su padre, mata a ese mismo padre creyéndolo el Chullachaqui.
 
-El desenlace no afirma que el bosque mienta. Muestra que una señal culturalmente reconocible también puede ser imitada y que, cuando el entorno cambia, detenerse juntos puede ser más seguro que seguir la promesa de una voz aislada.`,
-    historyCore: `Primitivos relatos contados otra vez, de Hugo Niño, incluye Chuya-Chaqui y nombres como Ahuanari dentro de una composición literaria amazónica. El libro circuló desde 1979 y debe citarse con autoría, no como voz indígena transparente. Inventarios institucionales y materiales peruanos permiten reconocer el campo regional del Chullachaqui, pero no identifican al narrador de Niño. La ficha se mantiene como literatura amazónica mediada bajo categoría mixta.`,
-    versionCore: `El episodio de Niño reúne Ahuanari, cazadores, tormenta y un maguaré que promete orientación. El Chullachaqui pedagógico del Perú suele tener pies desiguales, forma de conocido y función protectora del bosque; la ruta breve de Leticia se concentra en niños y silbidos. Aquí los pies se usan solo como señal de reconocimiento dentro de la recreación editorial. La página no atribuye el maguaré falso a todas las versiones, no lo presenta como objeto genérico panamazónico y evita reconstruir códigos o usos ceremoniales del instrumento.`,
+Nécker Salazar Mejía (2019) sigue al personaje en Mitos, leyendas y cuentos peruanos, la antología de José María Arguedas y Francisco Izquierdo Ríos, donde desorienta a un cazador en San Martín y suplanta a un hermano en Loreto. Bithian Mota da Cruz y Maria do Socorro Simões (2014) lo registraron en Iquitos, y Ana María Rocchietti (2024) rastrea su figura en la cerámica de los kukama.`,
+    versiones: `El cuento de Niño y los registros de Loreto coinciden en el oficio del Chullachaqui, perder a la gente en el monte, pero no en su manera de hacerlo.
+
+En las composiciones de Requena de 1947 el engaño es siempre de parentesco. El ser se presenta como un hermano, una hermana, el padre o un amigo, conversa, pregunta por la familia y lleva a su víctima por espinales y bosques espesos de donde no se puede volver. La señal que lo delata es el cuerpo: el pie más pequeño, a veces un olor a chivo. Para Rodríguez M. se aparece a quien toma la purga de su árbol y lo desafía a luchar; para Rengifo hay que mirarle el pie y seguirlo a sablazos. En la antología de Arguedas e Izquierdo Ríos, según la lectura de Salazar Mejía, la huella lo revela: una de pie humano y otra de pata de tigre. A una muchacha del Cumbaza la retiene ocho días en una cueva hasta que un cura bendice los cerros.
+
+En el relato de Ahuanari el engaño es otro. El forastero no finge ser pariente de nadie: llega como huésped, bebe muyá y escucha. Lo que roba es una señal de la aldea, el golpe del maguaré que llama a los cazadores, y con ella los hace dar vueltas bajo la lluvia. Nadie le ve los pies, y nadie lo vence. En los textos de Loreto casi siempre hay quien regresa, a veces rescatado por un brujo que toma ayahuasca; aquí la espera de cuatro días termina sin regreso.
+
+En Iquitos, Cruz y Simões lo recogieron como protector de la selva que castiga a quien la molesta, y en ese papel lo acercan al Curupira brasileño.`,
     leccion:
-      "Cuando una señal conocida conduce en círculos, permanecer juntos puede importar más que obedecer su llamada.",
-    similarityCore: `Hansel y Gretel comparte extravío y señales poco fiables, pero no contiene maguaré, tormenta amazónica ni figura de pies desiguales. El Curupira brasileño confunde rastros y en algunas versiones protege el monte; su historia no sustituye al Chuya-Chaqui literario. La comparación más cercana está dentro del propio sitio: El Chuyachaque breve. Mantener ambos permite observar cómo una criatura regional cambia al pasar de inventario a episodio de autor, sin asumir que uno sea transcripción literal del otro ni copia directa.`,
+      "Quien escucha las señales de una casa puede usarlas después para alejar a los suyos.",
+    similitudes: `El paralelo más cercano está en el Brasil. Bithian Mota da Cruz y Maria do Socorro Simões compararon en 2014 al Chullachaqui de Iquitos con el Curupira de Abaetetuba, en el Pará. Los dos son protectores del monte y de sus animales, los dos pueden tomar la figura de una persona cercana para engañar, y los dos castigan a quien daña la selva. En Boa Vista, una comunidad ribereña de Nova Timboteua, Gracineia dos Santos Araújo y Sara Cristina Linhares Aleixo recogieron en 2025 cinco relatos en que el Curupira es un hombrecito con luz propia. Aparece detrás de un primo en el camino y hace oír pasos que siguen a los caminantes; allí sus pies no tienen nada de raro.
+
+Dentro del Perú, Salazar Mejía destaca el relato de San Martín en que el Chullachaqui toma la voz de un paujil y la forma de un jabalí para meter al cazador cada vez más adentro. El mecanismo es el mismo del maguaré de Ahuanari: un sonido o una presa conocidos que atraen hacia lo desconocido.
+
+La diferencia está en el blanco del engaño. El Curupira y el Chullachaqui de los registros orales castigan casi siempre a un individuo: el cazador codicioso, el niño que se aleja, la muchacha que pesca sola. En el relato de Ahuanari la víctima es una partida entera y, con ella, la aldea que la espera; el daño no se mide en un extravío sino en una ausencia colectiva.`,
     sceneHorizontal:
       "cuatro cazadores sobrios avanzan juntos bajo una tormenta amazónica hacia ondas de un maguaré que suena detrás de árboles, sin mostrar instrumento ceremonial ni vestuario inventado",
     sceneVertical:
@@ -641,30 +703,64 @@ El desenlace no afirma que el bosque mienta. Muestra que una señal culturalment
   }),
   defineAmazonasMixtoResidualMyth({
     slug: "el-hijo-de-tuhixana",
-    title: "El hijo de Tuhixana y la balsa de palmas",
+    fuentesAgotadas: "El libro de Fernando Solarte Lindo (El hombre con cola de león, 1980) sólo existe en papel y Regan (2011) no abre; las demás fuentes tratan el motivo, no este relato.",
+    sourceKeys: [
+      {
+        key: "garciaCaracterizacion2007",
+        summary:
+          "Es la única obra abierta que nombra el relato: su tabla 6 (pp. 38-39) registra «El hijo de Tuhixana» con la etiqueta Vaupés, en el macrotema del origen y el tema de las costumbres, y la p. 37 describe el marco de «El hombre con cola de león», un narrador maduro que cuenta las leyendas a unos niños con intención de rescate. Fija el libro, el año y el público del relato.",
+        limitation:
+          "No trae ni una frase de la trama. Clasifica el libro de Solarte como literatura infantil, lo que confirma que es una reescritura, no una recolección.",
+      },
+      "hildebrandOrigen1975",
+      {
+        key: "silvaCrencas1994",
+        summary:
+          "Reúne los relatos tariana y tukano en que la humanidad llega por agua: la Cobra-Grande que es la canoa de los antepasados (p. 103) y la Canoa de Transformación que el Trueno trae desde el Lago de Leite, identificado con el océano (pp. 354-355). Documenta en el mismo Vaupés el lazo entre el mar, el río y el origen de la navegación.",
+        limitation:
+          "Trata el motivo de la canoa de origen entre pueblos tukano del lado brasileño, no este relato; no menciona a Tuhixana ni una balsa de troncos. Recopilación misionera salesiana.",
+      },
+    ],
+    title: "El hijo de Tuhixana",
     excerpt:
       "Una reescritura de Fernando Solarte ambientada en el Vaupés cuenta cómo un joven descubre la flotación y conduce una balsa que logra regresar.",
     tags: ["Boupé", "viaje", "tronco", "supervivencia"],
-    mito: `En el territorio recorrido por el Vaupés, la gente miraba a los patos y otros animales desplazarse sobre el agua. Deseaba encontrar una forma de viajar sin quedar limitada a las orillas. Probó materiales y observó la corriente, pero no había construido todavía una embarcación capaz de llevar a muchas personas.
+    mito: `El Vaupés atraviesa un territorio inmenso de la selva y lleva el nombre de Boupé, el cacique legendario de aquellas tierras. A él llegan las aguas de incontables quebradas y de otros ríos tan grandes como él: el Inírida, el Cuquiari, el Macaya, el Tuy, el Apoporis y el Guanapanaca.
 
-El hijo de Tuhixana era joven y curioso. Un día vio un tronco de palma que flotaba sin hundirse. Se subió con cuidado y usó brazos y una rama para apartarse de la ribera. El tronco se movió con él. Cuando regresó, dijo que había logrado caminar sobre el río.
+Los indios de esas orillas miraban el agua con reverencia y con envidia. Veían a los patos andar sobre el río sin hundirse y a los animales atravesar la corriente con ligereza. «No sabemos andar sobre los ríos», se decían, tristes. Quisieron aprender, y pasaron años buscando la manera sin que ninguno la encontrara.
 
-Al principio nadie aceptó la afirmación. El joven repitió la prueba ante la comunidad. Entonces varias personas cortaron otros troncos y los unieron con bejucos. La superficie resultante podía sostener cuerpos, provisiones y algunos animales. La observación individual se convirtió en una construcción colectiva.
+El viejo Tuhixana tenía un hijo joven, atolondrado y lleno de travesuras, famoso por sus caídas y por sus carcajadas. Un día, andando cerca del río, el muchacho vio un tronco de palmera que bajaba flotando con la corriente. Se quedó mirándolo y luego, sin pensarlo, brincó sobre otro tronco que flotaba junto a la orilla y empezó a remar con los brazos. El tronco lo llevaba, y la felicidad le iluminaba la cara.
 
-La balsa salió por el gran río. La corriente y el viento la llevaron más lejos de lo esperado, hasta un espacio de agua que la versión de Solarte llama mar. El entusiasmo inicial disminuyó cuando las provisiones comenzaron a faltar y no aparecía una orilla conocida.
+Volvió a tierra y corrió al poblado, riéndose cada vez más fuerte. «He caminado por el río», gritaba. Los demás no le creyeron y murmuraban: «No puede ser». «Es cierto», insistía él. Al final lo siguieron hasta la orilla y vieron con sus propios ojos que no mentía: el hijo de Tuhixana andaba sobre el río. Todos quisieron hacer lo mismo.
 
-El hijo de Tuhixana examinó los troncos. En sus hendiduras encontró pequeños animales que vivían en la palma y podían servir de alimento. La tripulación recuperó fuerzas. No decidió continuar hacia una conquista desconocida: cambió el rumbo y buscó regresar.
+Bajo su dirección cortaron muchos troncos y los amarraron con bejucos hasta formar una gran balsa. Un amanecer subieron a ella con provisiones y con animales, dejaron atrás el poblado y se fueron río abajo, empujando con remos.
 
-Con trabajo de todos, viento y corriente, la balsa alcanzó otra vez el territorio de partida. Quienes habían salido llevaron consigo dos aprendizajes: los troncos unidos podían sostener un viaje, y una embarcación debía leerse también como materia viva, con recursos y límites.
+El viento los llevó hasta el mar, donde el agua no tenía fin. Pasaron días, quizá semanas, y la alegría del comienzo se fue apagando y en su lugar llegó el miedo. La comida se acabó, en el horizonte no aparecía ninguna tierra y los viajeros perdían las fuerzas.
 
-Fernando Solarte publicó esta secuencia como leyenda indígena colombiana. Un análisis académico la clasifica bajo “cultura Vaupés”, no como relato Tucano ni Tanimuka. La obra no nombra al narrador oral y usa una voz pedagógica. La ficha conserva por eso el argumento como reescritura literaria y no como memoria atribuida a una comunidad particular.
+Entonces el hijo de Tuhixana descubrió algo que nadie había visto. En las hendiduras de los troncos de la balsa vivían muchísimos animalitos, los mismos que habitan las palmeras. Probó uno y vio que era sabroso y devolvía el vigor; siguió comiendo, y los demás lo imitaron. Así recobraron la fuerza y la cabeza clara.
 
-Los nombres de afluentes y la explicación de Boupé que aparecían en la página anterior no se repiten como hechos históricos. Tampoco se llama vikinga a la expedición ni se equipara al joven con Ícaro. El relato habla de flotación, ensayo, riesgo y retorno dentro del marco escrito por Solarte.`,
-    historyCore: `El hombre con cola de león, publicado por Fernando Solarte Lindo en 1980, es la fuente editorial conocida. La tesis de la Universidad Tecnológica de Pereira clasifica El hijo de Tuhixana como relato del Vaupés y muestra el trabajo didáctico del autor. Esa procedencia es insuficiente para escoger una comunidad entre la diversidad regional. La ruta continúa en Amazonas Mixto, con coordenada amplia en Vaupés y autoría visible, hasta que una fuente atribuida permita una relocalización más precisa.`,
-    versionCore: `La versión de Solarte empieza con el deseo de andar sobre el agua, pasa por el tronco de palma, la balsa colectiva, la deriva hacia el mar, la falta de comida, los pequeños animales hallados en la madera y el retorno. No se conoce una transcripción anterior que permita medir cuánto amplió o moralizó el escritor. Tuhixana puede ser un nombre o título dentro de la obra, pero la evidencia consultada no lo identifica como pueblo. El perfil Tanimuka se incluye para mostrar por qué “Vaupés” tampoco equivale automáticamente a Ufaina.`,
+Con el cuerpo repuesto cambiaron de rumbo. Remaron todos juntos, y con la ayuda del viento y de las corrientes volvieron a su tierra, a la orilla del Vaupés. Habían aprendido a andar sobre las aguas.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. Procede de «El hombre con cola de león: leyendas indígenas de Colombia», de Fernando Solarte Lindo (Bogotá, Carlos Valencia, 1980; reimpreso luego por Panamericana). Es un libro para lectores de unos once años que reescribe relatos de varios pueblos en cinco secciones, una de ellas «Leyendas del Vaupés». El libro no tiene edición abierta y en línea sólo figura en catálogos, que registran sus secciones pero no el texto.
+
+Lo único consultable que menciona la pieza es la tesis de Ilene Rojas García y Giohanny Olave Arias, Caracterización temática de la narrativa infantil colombiana (1980-2005), presentada en la Universidad Tecnológica de Pereira en 2007. En su tabla 6 anota «El hijo de Tuhixana» con la etiqueta Vaupés y lo clasifica en el macrotema del origen y en el tema de las costumbres. Unas páginas antes describe el marco del libro: un narrador de edad madura cuenta las leyendas a unos niños en vacaciones y las acompaña de comentarios sobre la vida actual de los pueblos, con una intención declarada de rescate. La tesis no resume la trama.
+
+Solarte no dice de qué pueblo del Vaupés tomó la historia ni quién se la contó, y el nombre Tuhixana no aparece en los estudios etnográficos del noroeste amazónico que se revisaron. Por eso la etiqueta Vaupés nombra una región habitada por muchos pueblos, no una comunidad.
+
+Lo que sí está documentado en esa región es el lugar central de la navegación en los relatos de origen. Entre los pueblos tukano del Uaupés, recogidos por Alcionílio Brüzzi Alves da Silva y publicados en 1994, la humanidad llega por agua desde un gran lago que es el océano, dentro de una canoa que es una serpiente. En el Mirití-Paraná, Martín von Hildebrand registró en 1975 el relato ufaina en que los antepasados, subiendo del mar, hacen la primera canoa a imitación del cogollo de una palma.`,
+    versiones: `Del relato del hijo de Tuhixana sólo circula una forma, la reescritura de Solarte, y la tesis de Pereira que la menciona no trae su trama. Lo que se puede comparar son los relatos de origen de la navegación registrados en el noroeste amazónico, que tocan los mismos elementos de maneras muy distintas.
+
+En el relato ufaina que Martín von Hildebrand publicó en la Revista Colombiana de Antropología (1975, p. 352), los Imarikakana vienen subiendo del mar y deciden hacer una canoa. No saben cómo: toman el cogollo de la palma de milpesos, lo abren en forma de canoa y a partir de ese modelo tumban un palo de comino y ahuecan el tronco con fuego. Es la primera canoa. Pero al ver que los dueños de las enfermedades los esperan, la dejan a los blancos y suben el río convertidos en patos de toda clase.
+
+En los relatos tariana y tukano que Brüzzi Alves da Silva reunió en Crenças e lendas do Uaupés (1994), la embarcación no la inventa nadie. En el origen de los tukano (p. 103), una gran serpiente es la canoa en que los antepasados suben el río en forma de peces; en la versión larga de la creación (pp. 354-355), el Trueno baja al Lago de Leite, que es el océano, como una serpiente gigantesca con cabeza de proa, y es la Canoa de Transformación que trae a la futura humanidad río arriba.
+
+En las tres historias el viaje une el río con el mar. Cambia quién lo hace posible: un muchacho travieso que copia a un tronco a la deriva, unos antepasados que copian a una palma, o un ser poderoso que es él mismo la canoa.`,
     leccion:
-      "La innovación se completa cuando una comunidad conoce también el límite y el camino de regreso.",
-    similarityCore: `La Eneida comienza con una flota desviada por tormenta y obligada a buscar tierra, pero su destino imperial no aparece en la balsa del Vaupés. El arca de Génesis transporta personas y animales durante un diluvio ordenado por Dios; Solarte presenta troncos unidos por ensayo humano y un viaje que amenaza con agotar comida. Los paralelos aclaran navegación, riesgo y retorno. No prueban que la versión sea un diluvio, una epopeya clásica ni una historia de contacto europeo directo comprobado.`,
+      "A veces lo que un pueblo busca durante años lo encuentra quien mira jugando lo que flota.",
+    similitudes: `El paralelo más cercano está en el relato ufaina del Mirití-Paraná que registró Martín von Hildebrand en 1975. Allí aparecen juntos casi todos los elementos del hijo de Tuhixana: el mar, una palma que sirve de modelo para flotar, la primera embarcación y los patos. La diferencia está en el orden. En el Vaupés de Solarte los patos son lo que la gente envidia y la balsa es lo que la saca al mar. En el relato ufaina los antepasados ya vienen del mar, hacen la canoa copiando el cogollo de la palma de milpesos y, al final, renuncian a ella y suben el río convertidos en patos.
+
+El segundo paralelo es la canoa-serpiente de los pueblos tukano del Uaupés, que recogió Alcionílio Brüzzi Alves da Silva. En esos relatos la humanidad llega por agua desde el Lago de Leite, identificado con el océano, en una canoa que es una serpiente gigantesca, y va dejando gente en casas a lo largo del río. El viaje entre el mar y las cabeceras es también el que funda el mundo habitado.
+
+Lo propio del hijo de Tuhixana es que el descubrimiento no viene de un ser poderoso ni de un antepasado sabio, sino de un muchacho atolondrado que juega en la orilla. Y que el mar no es el origen sino el peligro: la balsa llega allí por exceso de entusiasmo, y lo que salva a los viajeros es otro hallazgo casual, el alimento escondido en la misma madera que los sostiene.`,
     sceneHorizontal:
       "un joven prueba un tronco de palma flotante en un río del Vaupés mientras varias personas unen otros troncos con bejucos desde la orilla, sin arquitectura o vestuario ceremonial inventado",
     sceneVertical:

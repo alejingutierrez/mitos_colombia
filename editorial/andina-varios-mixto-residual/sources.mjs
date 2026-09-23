@@ -332,6 +332,51 @@ export const andinaVariosMixtoResidualSources = {
     limitation:
       "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo III",
+    author: "Eugenia Villa Posse (investigación y compilación); texto de Mariano Izquierdo Gallo",
+    year: 1993,
+    type: "antología con textos reproducidos (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Sección 30, pp. 52-53: el apartado 2.4 «Esperanza en el oriente» de la Mitología americana de Izquierdo Gallo (1956), con la profecía del salvador oriental, los héroes que «proceden del Oriente» y el cementerio del Zenú con los cuerpos de cara al sol naciente; pp. 33-34, el apartado 1.8 sobre Nemterequeteba, que «vino por el Oriente, de la Tierra del Sol»; p. 15, la nota que califica el trabajo de presentación elaborada literariamente; pp. 121-122 (Ocampo López), el zaque que espera la salida del sol.",
+    limitation:
+      "Es un ensayo de compilador, no un relato recogido: el autor admite que no puede demostrar la creencia y conjetura con «acaso». La nota da las páginas del libro de 1956 con errata (p. 219-207).",
+  }),
+  latinoHistoriae: source({
+    title: "Historiae, liber V",
+    author: "Publio Cornelio Tácito (texto latino, The Latin Library)",
+    type: "fuente clásica (texto latino)",
+    url: "https://www.thelatinlibrary.com/tacitus/tac.hist5.shtml",
+    summary:
+      "Capítulo 13: la creencia de que en ese tiempo prevalecería el Oriente y que hombres salidos de Judea se harían con el poder, que Tácito aplica a Vespasiano y a Tito. Es el pasaje que Izquierdo Gallo atribuye a los Anales y convierte en esperanza de un salvador del mundo.",
+    limitation:
+      "Texto latino sin aparato crítico; no trata América ni el Zenú: sólo sirve para corregir la cita y como paralelo.",
+  }),
+  mateosTodo2018: source({
+    title: "«Todo lo que se hallare en las sepulturas es nuestro». Política y fiscalidad Real en torno a los tesoros indígenas del Zenú (Cartagena de Indias, 1534-1554)",
+    author: "Rocío Delibes Mateos",
+    year: 2018,
+    type: "artículo de revista (Memorias. Revista Digital de Historia y Arqueología desde el Caribe, n.º 36, pp. 7-30, Universidad del Norte)",
+    url: "https://www.redalyc.org/journal/855/85559556002/html/",
+    summary:
+      "Sitúa el gran cementerio del Zenú en el Finzenú, el pueblo más próximo a Cartagena, saqueado por Pedro de Heredia desde 1534; cita a Las Casas (la provincia era «fosario y entierro» de gentes que traían a sus muertos con todo su oro) y a Simón sobre los túmulos de tierra visibles desde lejos. Corrige el «cerca de Mompós» del ensayo y explica la riqueza que alimentó El Dorado.",
+    limitation:
+      "Historia fiscal del saqueo; no menciona la orientación de los cuerpos hacia el oriente ni ninguna creencia en la resurrección.",
+  }),
+  religionQuetzalcoatl2018: source({
+    title: "Quetzalcoatl",
+    author: "Encyclopedia of Religion y Myths and Legends of the World (Gale), en Encyclopedia.com",
+    year: 2018,
+    type: "entrada de obra de referencia reproducida en portal",
+    url: "https://www.encyclopedia.com/people/history/mesoamerican-indigenous-peoples-biographies/quetzalcoatl",
+    summary:
+      "Recoge la partida de Quetzalcóatl hacia el oriente, a la costa del Golfo o en una balsa de serpientes, su transformación en el lucero, la espera de su regreso y la identificación con Cortés que atribuyen varias crónicas; también que los mayas lo llamaron Kukulcán. Sostiene el paralelo que el propio ensayo convoca.",
+    limitation:
+      "Portal que reproduce obras de referencia; se cita como paralelo, no como fuente clave, y no menciona a Bochica ni el Zenú.",
+  }),
 };
 
 const sourceKeysBySlug = {

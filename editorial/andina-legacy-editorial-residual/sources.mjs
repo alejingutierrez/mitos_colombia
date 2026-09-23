@@ -362,6 +362,29 @@ export const andinaLegacyEditorialResidualSources = {
     limitation:
       "Paralelo literario universal traído por el autor, no por la tradición payanesa.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  leonCronica1553: source({
+    title: "Crónica del Perú, primera parte, capítulo XI: «Del cacique Nutibara y de su señorío, y de otros caciques sujetos a la ciudad de Antiocha»",
+    author: "Pedro Cieza de León",
+    year: 1553,
+    type: "crónica (edición digital)",
+    url: "https://pruebatcdn.aprende.org/libros/pdf/Cronica_del_Peru.pdf",
+    summary:
+      "Nutibara, hijo de Anunaybe, señor del valle de Guacá; su hermano Quinuchu, lugarteniente entre los indios de las sierras de Abibe, que lo proveía de puercos, pescado, aves, mantas y joyas de oro; el valle de casas grandes, frutales y grandes sepulturas.",
+    limitation:
+      "Testimonio de un conquistador; no trae ningún relato oral ni sobrenatural de Quinunchú y describe a los indígenas con categorías españolas.",
+  }),
+  cESAProcesos: source({
+    title: "Procesos de territorialización en la Antioquia colonial, siglos XVI-XVII",
+    author: "Juan Santiago Correa R. (CESA)",
+    type: "artículo académico",
+    url: "https://repository.cesa.edu.co/bitstream/handle/10726/268/21.PROCESOS%20DE.pdf",
+    summary:
+      "El cogobierno Guaca de Nutibara y Quinunchú, el «general maestro» de Castellanos, los siete a nueve meses de la hueste de César en tierra Guaca, la muerte de Quinunchú en combate, el botín y las noticias de Buriticá.",
+    limitation:
+      "Estudio histórico de la conquista; no trata leyendas ni la memoria folclórica del personaje.",
+  }),
 };
 
 const sourceKeysBySlug = {

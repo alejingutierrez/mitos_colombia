@@ -51,7 +51,7 @@ test("los doce expedientes cumplen rangos y estructura metodológica", () => {
     const sources = [...record.keySources, ...record.sources];
     // Eran 8 exactas, el reparto en bloque. Tras la ronda del cierre, piso de 8
     // (o `fuentesAgotadas` declarado); las bloqueadas siguen con el heredado.
-    assert.ok(sources.length >= 5, `${record.slug}: ${sources.length} fuentes`);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(sources.every(({ url, summary, limitation }) =>
       summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation)))));

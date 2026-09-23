@@ -98,38 +98,55 @@ Más cerca, dentro del mismo capítulo de Preuss, hay otro visitante de esta cla
   }),
   defineHuitotoResidualMyth({
     slug: "taik",
-    title: "Taik: la transformación de Rikoño",
+    fuentesAgotadas: "El relato es el tramo de Joyareño y Rikoño de Urbina (2010), ya publicado en otra ficha, mezclado con Preuss (1994); «Taik» y «Jatacoremui» no aparecen en ninguna obra consultable.",
+    sourceKeys: [
+      "becerrapalabras2010",
+      "revisadaJoyareno1994",
+      "moraMito2010",
+      "mTrabajos1947",
+    ],
+    title: "Taik",
     excerpt:
       "Joyareño y Rikoño siguen a un falso tío, atraviesan casas peligrosas y solo una hermana regresa antes de transformarse en lora.",
     tags: ["patos", "viaje", "transformación", "familia"],
-    mito: `Buynaiyarai tenía dos hijas, Joyareño y Rikoño. Cuando él salió a quemar hormigas culonas, la madre pidió a Neimuada, tío de las muchachas, que las llevara para recoger algunas. Antes de que el verdadero mico volador llegara, un suplantador tomó su apariencia y las llamó.
+    mito: `Neimuada fue un día donde su hermano y le pidió que le mandara a sus sobrinas para ir con él a quemar curuise, las hormigas arrieras, y tener con qué hacer un festín. El hermano confió en él y le prometió tener a las muchachas listas a la hora convenida.
 
-Las hermanas lo siguieron durante toda la noche. Cada vez que pedían que esperara, la luz que llevaba se alejaba un poco más. Al amanecer las condujo hasta un tronco, abusó de ellas y las dejó solas. En vez de regresar por una trocha que ya no reconocían, avanzaron hasta el río.
+Pero alguien más oyó el trato. Esa noche llegó por el camino un diablo con la figura de Neimuada. Le brillaban los ojos como tizones y llevaba en las manos una luz extraña que las hermanas siguieron sin dudar. «Venga, venga, ya va a amanecer», les decía. Las muchachas caminaron detrás de él toda la noche, monte adentro. Cuando amaneció estaban solas, en un paraje que no conocían, y no había curuise por ninguna parte.
 
-Nokuere, uno de los patos que viajaban hacia un baile, las encontró en la orilla. Las subió y las dejó en un puerto desde el cual podrían buscar el camino de su padre. Allí una mujer las llevó a una casa porque deseaba nueras para su hijo. Otras jóvenes les advirtieron que aquel hijo era una boa que salía de una gran olla por la noche. Rikoño se mantuvo despierta, vio el peligro y ayudó a preparar la fuga.
+Empezaron a buscar la salida. Encontraron un milpeso dorado brillando en el rocío, y al agacharse oyeron la voz de otro demonio, de cabeza enorme y cuerpo alargado. «Ahí hay alimento para hartarse», les dijo, y les señaló el camino a su guarida. Tenían hambre y comieron, pero pronto se dieron cuenta del engaño que había en cada bocado, y huyeron.
 
-Después de nuevos desplazamientos, las dos hermanas llegaron a la casa de Kanimani. Joyareño formó una familia con él y tuvo un hijo. Un conflicto entre parientes llevó a Kanimani a pedir ayuda a su tío Moifenirai, un jaguar, para castigar a una de las mujeres.
+Más adelante una anciana las recibió en su casa y les ofreció su hamaca. Les dijo que su hijo cuidaría su sueño. Cuando cayó la noche y cantaron los grillos, el hijo resultó ser un ciempiés gigantesco que hacía temblar la tierra. Las hermanas escaparon.
 
-Durante el viaje las hermanas intercambiaron las cargas. El jaguar recibió señales equivocadas y atacó a Joyareño. Rikoño permaneció escondida, comprendió lo ocurrido y más tarde enfrentó a Moifenirai. Cuando escapó, un hacha transformada en jaguar siguió su rastro. Un grillo, una lagartija y un cucarrón demoraron al perseguidor y le mostraron cómo continuar.
+Llegaron después donde un hombre solitario que les ofreció cazabe hecho de un modo que no debía contarse. Ellas quisieron saber. Fingieron ir a la quebrada y volvieron por sorpresa a espiarlo: el cazabe le salía de su propio cuerpo, de su podredumbre. Asqueadas, se fueron antes del amanecer.
 
-Rikoño llegó por fin a la chagra de su padre, rodeada de trampas. La familia la reconoció junto a una guara. Sentada entre quienes preparaban comida para el baile de duelo, empezó a hablar en muchas lenguas. Su voz cambió. Pidió sus adornos, subió a un árbol y alzó el vuelo. Se posó primero en un umarí verde; desde allí continuó ya convertida en lora.`,
-    historia: `Fernando Urbina publicó Kugï y Nokuerai dentro de Las palabras del origen. El relato fue contado por Pablo Bigïdïma en El Encanto, río Caraparaná, en noviembre de 1979, y traducido por Eudocio Becerra y Jitoma Zafiama. El capítulo entrelaza el viaje de varios patos hacia un baile con el extravío de Joyareño y Rikoño. La ruta heredada Taik procede del tramo de las hermanas y de la transformación final en lora.
+Agotadas, llegaron a la casa de una mujer y de su hijo. Parecía un lugar tibio, pero el hijo no era un muchacho sino una boa que acechaba a quien se rindiera al sueño. Una de las viejas de la casa les advirtió; la otra disimulaba. Esa noche las hermanas no durmieron y avivaron el fuego. Cuando la boa se acercó, le echaron agua ardiendo y le quemaron la carne, que se desbordaba del cántaro donde se guardaba. La madre soltó un alarido que cruzó los montes. Ellas siguieron su camino.
 
-La colección principal Huitoto del sitio ya contiene la página kugi-y-nokuerai, que resume ambos movimientos del capítulo. Taik no se presenta ahora como otro mito autónomo, sino como una ventana narrativa del mismo ciclo, centrada en la experiencia de las dos hijas de Buynaiyarai. Conservar la URL permite corregir el contenido ya indexado y reconocer el nombre heredado sin multiplicar tradiciones.
+Entonces apareció una mariposa gigantesca, de alas resplandecientes, que conocía a su padre, Jatacoremui, y se ofreció a guiarlas. El viaje duró dos días por ríos hondos. Cerca de la casa del padre había una trampa. Por la indicación de la mariposa la esquivaron, pero en ella murió la guara que las había acompañado, y el padre se lo reprochó sin poder remediarlo.
 
-La versión pública anterior llamaba diablo al suplantador, describía a Neimuada como un hombre común con un secreto oscuro y acumulaba encuentros sin atribución. La fuente identifica a Neimuada como mico volador y distingue al personaje que toma su apariencia. También nombra a Joyareño, Rikoño, Nokuere, Kanimani y Moifenirai; esos nombres no son invenciones editoriales.
+Ya en casa, sólo una de las hermanas se quedó tranquila en los brazos de su padre. La otra se pintó la cara con achote, trazo por trazo, dio un salto y se volvió lorito. Se fue volando, y desde entonces su canto es un aviso para los jóvenes que andan buscando amores.`,
+    historia: `Este relato no tiene un registro propio que se pueda consultar. El título «Taik» y el nombre Jatacoremui no aparecen en ninguna obra abierta; el primero sólo se encuentra en páginas sin autor que hablan de un «loro taik» hija de Neimuda, sin decir de dónde lo sacan. Se buscó en las dos colecciones de relatos uitoto que existen en abierto y en Mitología y cultura huitoto de Lucas Tagliani (1992), que no trae la historia.
 
-Las escenas sexuales y varias muertes se resumen con claridad, sin convertir el daño en espectáculo. La transformación de Rikoño no se explica como castigo simple ni como augurio universal para el amor. La fuente la conecta con capacidades y comentarios específicos del capítulo; esta edición conserva la acción y deja fuera fórmulas operativas o generalizaciones sobre las jóvenes.`,
-    versiones: `La ruta sigue la secuencia de Pablo Bigïdïma publicada por Urbina. En ella las muchachas son Joyareño y Rikoño; Neimuada es el tío mico volador cuya apariencia roba otro personaje; Nokuere es un pato que las transporta; la casa de Noifereiraï contiene a la boa; y la parte final enfrenta a Rikoño con Moifenirai antes de su regreso y transformación.
+Lo que sí está publicado es el relato de las dos hermanas perdidas que termina con una de ellas convertida en lora, y los episodios del texto publicado coinciden con él. Fernando Urbina Rangel lo incluyó, con el título «Kugï y Nokuerai», como capítulo 14 de Las palabras del origen (Ministerio de Cultura, 2010, pp. 230-242). Lo narró el Abuelo Pablo Bigïdïma en El Encanto, sobre el río Caraparaná, en noviembre de 1979, y lo tradujeron Eudocio Becerra y Jitoma Zafiama. Allí las muchachas se llaman Joyareño y Rikoño, su tío es Neimuada, el mico volador, y el que las saca de la casa es otro que ha tomado su apariencia.
 
-El título Taik no encabeza el capítulo de la fuente principal. Circula como nombre resumido del loro o de la lora en repertorios secundarios. La revisión lo conserva por continuidad de URL y de búsqueda, pero el H1 añade La transformación de Rikoño y las capas editoriales enlazan con Kugï y Nokuerai. No se afirma que Taik sea el nombre personal previo de la muchacha.
+La segunda recolección es sesenta y cinco años anterior. Konrad Theodor Preuss la anotó en 1914 entre los uitoto del Igará-Paraná y la publicó en su Religión y mitología de los uitotos. La edición española de la Universidad Nacional (1994), con la transcripción revisada de Eudocio Becerra y Gabriele Petersen de Piñeros, la trae como capítulo 25, «Joyareño igai. La odisea de las dos hermanas» (pp. 607-649). En ella el padre es Buineiyama, el que se las lleva se llama Neeimuada, el casabe que les ofrecen «no es casabe sino semen», unas mariposas las guían y la que regresa se pinta con achiote antes de volverse loro.
 
-La página kugi-y-nokuerai mantiene el panorama del ciclo: patos con rumbo, hermanas extraviadas, Kanimani, jaguar y transformación. Esta ficha se concentra en la línea de Joyareño y Rikoño. Las dos rutas no se cuentan como tradiciones independientes; son ventanas complementarias de un mismo registro, igual que ocurre con otros ciclos extensos del archivo.
+El texto publicado bajo el nombre de Taik mezcla rasgos de las dos: el tío suplantado de Urbina, el casabe repugnante, las mariposas y el achiote de Preuss. Añade un ciempiés y un padre llamado Jatacoremui que no están en ninguna.`,
+    versiones: `Las dos recolecciones abiertas cuentan casi los mismos episodios en el mismo orden, y no coinciden en cuál de las hermanas sobrevive.
 
-La prosa heredada añadía una mariposa gigante como guía final, un padre llamado Jatacoremui, un cazabe producido de manera grotesca y una sucesión de demonios. Esos detalles no gobiernan la secuencia atribuida consultada y se retiran. Tampoco se reproduce violencia sexual o corporal explícita más allá de lo necesario para entender las decisiones y pérdidas.`,
+En lo narrado por Pablo Bigïdïma en 1979, Joyareño se duerme en la hamaca de la casa de la boa y Rikoño vela junto al fogón. Después el tigre sin ano se come a Joyareño, y es Rikoño quien se venga. Huye, aplasta a la guara con la trampa que sostenía y, sentada entre los suyos, empieza a hablar todas las lenguas, pide sus aretes y sus espejos y vuela como lora hasta el umarí del patio. En Preuss es al revés: la devorada es Rükoño y la que vuelve donde su padre, se pinta con achiote y se convierte en loro es Joyareño, mientras su cuerpo cae al bañadero como nutria.
+
+El nombre del tío también cambia de dueño. En Urbina, Neimuada es el tío verdadero y el que se las lleva es un impostor con su figura. En Preuss el tío verdadero pasa más tarde a recogerlas, y el que se las llevó es el que lleva ese nombre, glosado en nota como dueño de las hormigas. El texto publicado sigue la primera lectura y llama al impostor, sin más, un diablo.
+
+Hay además episodios que sólo están en una. Preuss pone a las hermanas en la casa de la Gente Murciélago, donde les dan casabe que es semen. Urbina abre con los patos Kugï y Nokuerai y con el caimán del tapaje, y añade a Kanimani, un río hecho persona que toma por mujer a la mayor. El ciempiés y el hombre cuyo cazabe sale de su podredumbre no están, tal cual, en ninguna de las dos.
+
+En las tres formas la muchacha que vuelve a casa no se queda: el final es una transformación en lora y un canto que queda como aviso.`,
     leccion:
-      "Regresar no siempre restaura lo perdido, pero puede abrir otra forma de continuidad.",
-    similitudes: `Hansel y Gretel comparte el extravío de dos hermanos y el paso por una casa que ofrece refugio mientras oculta peligro. En el cuento europeo ambos vuelven juntos y la amenaza se concentra en una anciana; Joyareño y Rikoño atraviesan una red de parientes, animales y transformaciones, y solo Rikoño regresa. En el libro X de la Odisea, la casa de Circe convierte visitantes en animales y exige reconocer un engaño antes de continuar el viaje. Rikoño se transforma al final de su propio recorrido, no por el poder doméstico de otra persona. Ninguno de estos paralelos prueba influencia ni reemplaza la atribución a Pablo Bigïdïma.`,
+      "Seguir de noche a quien se parece a un pariente puede alejar para siempre de la casa.",
+    similitudes: `Franklin Giovanni Púa Mora, en «Mito y ética» (2010), lee este mismo relato de Preuss como un caso de la figura del dueño. Quien saca a las hermanas de la casa no es un impostor cualquiera sino el dueño de las hormigas que ellas iban a quemar. Ese es el paralelo que mejor explica el comienzo: la falta no es salir, sino ir a tomar sin permiso lo que tiene dueño.
+
+En el mismo libro de Urbina, Guyataiba, narrado por Filomena Tejada en El Encanto en diciembre de 1979, termina también con una mujer convertida en animal y con un rasgo del mundo explicado por esa transformación. Pero allí a la muchacha la transforma su suegro y la echa al monte, mientras que aquí la hermana se transforma por su cuenta: se pinta, salta y se va volando.
+
+Fuera del mundo uitoto, el motivo del ser que se presenta con la figura de un pariente para llevarse a alguien de noche es el del Chullachaqui del Loreto peruano. En las composiciones escolares de Requena de 1947 toma la forma de un hermano o un padre para perder a la gente en el monte. La diferencia es de destino. Quien sigue al Chullachaqui se pierde o enloquece; las hermanas uitoto atraviesan la selva de casa en casa, sobreviven a cada engaño y vuelven, aunque la que vuelve ya no puede quedarse.`,
     sceneHorizontal:
       "Joyareño y Rikoño quedan solas al amanecer junto a un río después de que la silueta del falso Neimuada desaparece entre árboles, mientras Nokuere el pato se acerca por el agua",
     sceneVertical:

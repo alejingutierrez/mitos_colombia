@@ -512,6 +512,40 @@ export const variosMixtoFinalSources = {
     limitation:
       "Obra literaria inglesa.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  baronCuentos1996: source({
+    title: "Cuentos, mitos y leyendas del llano",
+    author: "Getulio Vargas Barón",
+    year: 1996,
+    type: "libro de relatos llaneros (edición digital paginada)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2797/download",
+    summary:
+      "El toro Patorreal que se escapa del corral, «el mismo Mandingas» para los vaqueros (p. 17), y el Silbador, «que no es otro que el mismo Mandingas» (pp. 73-74).",
+    limitation:
+      "Relatos de autor sobre el Casanare; tratan el nombre y otras figuras diabólicas, no este relato.",
+  }),
+  narinocuentos: source({
+    title: "Los cuentos de Pascual: mitos y leyendas del piedemonte llanero",
+    author: "Alberto Baquero Nariño",
+    type: "libro de relatos y folclor del piedemonte",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2818/download",
+    summary:
+      "En el preámbulo (pp. 23-24): «El Diablo o Mandingas también aparece», con Florentino y el Diablo y «Federico y Mandingas», donde un llanero lo vence contrapunteando o cuerpo a cuerpo: el paralelo del duelo musical.",
+    limitation:
+      "Resume el motivo sin transcribir esas versiones; trata el motivo, no este relato.",
+  }),
+  polarMitos20142: source({
+    title: "Mitos y leyendas del estado Portuguesa, cap. 10: «El familiar o los pactos con el diablo»",
+    author: "Carmen Pérez Montero (Fundación Empresas Polar)",
+    year: 2014,
+    type: "antología de testimonios orales con narradores",
+    url: "https://bibliofep.fundacionempresaspolar.org/media/1377943/mitos_portuguesa_c_10_el-familiar.pdf",
+    summary:
+      "El familiar como figura que el diablo toma donde se cerró un pacto, y el patrón que le pide «progreso, dinero y salud» a cambio del alma: paralelo del Mandingas que tienta con riquezas.",
+    limitation:
+      "Llano venezolano; trata el motivo del pacto, no este relato.",
+  }),
 };
 
 const sourceKeysBySlug = {

@@ -323,6 +323,63 @@ export const variosMestizoFinalSources = {
     limitation:
       "Otro personaje.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  tiempoTransMilenio2023: source({
+    title: "G66 de TransMilenio: mito del misterioso bus fantasma en Bogotá",
+    author: "Valeria Castro Valencia (El Tiempo)",
+    year: 2023,
+    type: "prensa",
+    url: "https://www.eltiempo.com/cultura/gente/g66-de-transmilenio-mito-del-misterioso-bus-fantasma-en-bogota-747128",
+    summary:
+      "La leyenda de la ruta G66: bus morado que pasa entre las dos y las tres de la mañana; quien sube desaparece. Circula desde 2014-2017 en YouTube y TikTok.",
+    limitation:
+      "Leyenda digital bogotana distinta del bus de carretera de 2004; la nota reúne testimonios de redes, sin informantes.",
+  }),
+  semanaRuta2023: source({
+    title: "Ruta G66: ¿cuál es el origen de la leyenda urbana de TransMilenio? Esta es la historia del bus fantasma",
+    author: "Redacción Semana",
+    year: 2023,
+    type: "prensa",
+    url: "https://www.semana.com/nacion/bogota/articulo/ruta-g66-cual-es-el-origen-de-la-leyenda-urbana-de-transmilenio-esta-es-la-historia-del-bus-fantasma/202312/",
+    summary:
+      "Dos variantes del G66 (la pareja que se separa en el centro y el grupo de amigos) y la parada en la avenida Jiménez antes de perderse en la niebla.",
+    limitation:
+      "Trata otra leyenda con el mismo nombre genérico; prensa de divulgación sin aparato.",
+  }),
+  republicamirada2016: source({
+    title: "Una mirada a la tradición oral del Pacífico",
+    author: "Alfredo Vanín Romero (Banco de la República)",
+    year: 2016,
+    type: "folleto de antología sonora",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll18/id/330/download",
+    summary:
+      "María Raquel Riascos (López de Micay) recuerda «la del Maravelí, un barco de demonios»: el vehículo de condenados que sirve de paralelo en Similitudes.",
+    limitation:
+      "Trata el motivo del vehículo maldito en el mar, no este bus; el relato completo está en la grabación.",
+  }),
+  valleAnalisis2015: source({
+    title: "Análisis del entorno de una organización del sector portuario de Buenaventura",
+    author: "Oviedo Arroyo (Universidad del Valle)",
+    year: 2015,
+    type: "trabajo de grado",
+    url: "https://bibliotecadigital.univalle.edu.co/server/api/core/bitstreams/0a2e9862-89eb-4777-bc1b-77d86f83950b/content",
+    summary:
+      "«El Barco Fantasma» (Maravelly) de Buenaventura, con su tripulación de marinos endeudados con el diablo: la tripulación condenada que el bus replica en tierra.",
+    limitation:
+      "Trata el barco, no el bus; copia una página web sobre Buenaventura (nota 32).",
+  }),
+  gutenbergPhantom1839: source({
+    title: "The Phantom Ship",
+    author: "Frederick Marryat (Project Gutenberg)",
+    year: 1839,
+    type: "novela",
+    url: "https://www.gutenberg.org/ebooks/12954",
+    summary:
+      "La novela del Holandés Errante: el buque condenado a no llegar nunca a puerto hasta que alguien rompa la maldición, paralelo europeo de Similitudes.",
+    limitation:
+      "Ficción europea sobre el motivo; no trata ningún relato colombiano.",
+  }),
 };
 
 const sourceKeysBySlug = {

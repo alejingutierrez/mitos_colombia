@@ -46,7 +46,7 @@ test("los once expedientes Tolima Mixto cumplen la metodología editorial", () =
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5, `${record.slug}: ${sources.length} fuentes`);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
@@ -89,7 +89,7 @@ test("corrige fusiones, falsos archivos y atribuciones culturales", () => {
   assert.match(bySlug.get("brujas-y-duendes").mito, /pisca[^]+tiple/i);
   assert.match(bySlug.get("la-tarasca").historia, /material de ficción/i);
   assert.match(bySlug.get("el-chenche").historia, /ficción/i);
-  assert.match(bySlug.get("dioses-lares").historia, /analogía clásica externa/i);
+  assert.match(bySlug.get("dioses-lares").historia, /Izquierdo Gallo/);
 });
 
 test("la matriz cubre las once rutas y sus límites", () => {

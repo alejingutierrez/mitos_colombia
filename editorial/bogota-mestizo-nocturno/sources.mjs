@@ -726,6 +726,72 @@ export const bogotaMestizoNightSources = {
     limitation:
       "Es el texto latino de la edición oficial de la Santa Sede, sin comentario ni aparato crítico, y no es una edición filológica de las que discuten el pasaje. No tiene relación documental alguna con el relato bogotano: el parentesco es de motivo y lo establece esta ficha. Que el motivo fuera conocido en la Santafé colonial es una inferencia razonable a partir de la circulación de la Biblia y del sermón, no un dato demostrado.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  playTransportar2021: source({
+    title: "Transportar a una monja que estaban velando en una funeraria, la historia de un taxista",
+    author: "RTVC Play, Radio Nacional de Colombia",
+    year: 2021,
+    type: "nota de medio público (21 de octubre de 2021)",
+    url: "https://www.radionacional.co/actualidad/historias-de-taxistas-transportar-una-monja-que-estaban-velando",
+    summary:
+      "La versión de Tuluá: la religiosa que toma un taxi hasta una funeraria, pide que la esperen porque adentro le darán el dinero y resulta ser la monja que están velando. Añade la variante del pasajero que desaparece camino de Chía y deja al taxista sin la carrera.",
+    limitation:
+      "Trata el motivo en Tuluá, no este relato bogotano; es una nota de promoción de un pódcast, sin nombre de narrador para la versión de la monja.",
+  }),
+  samperleyendas2007: source({
+    title: "Las leyendas modernas y la transmisión de valores",
+    author: "José Manuel de Prada Samper",
+    year: 2007,
+    type: "artículo de revista (Signa, UNED, n.º 16, pp. 57-72)",
+    url: "https://dialnet.unirioja.es/descarga/articulo/2216738.pdf",
+    summary:
+      "Analiza la autoestopista fantasma como leyenda moderna, con la versión de García Márquez en «Fantasmas de carreteras» (1981) y su observación de que los conductores profesionales difunden estos relatos: el marco del pasajero muerto que la monja del taxi comparte.",
+    limitation:
+      "Trata el motivo en España y Europa, no este relato; no menciona monjas, taxis ni funerarias.",
+  }),
+  brunvandVanishing1981: source({
+    title: "The Vanishing Hitchhiker: American Urban Legends and Their Meanings",
+    author: "Jan Harold Brunvand",
+    year: 1981,
+    type: "libro de folclorística (W. W. Norton), copia digital en préstamo",
+    url: "https://archive.org/details/vanishinghitchhi00brun",
+    summary:
+      "El estudio clásico del pasajero que desaparece y resulta estar muerto, la estructura sobre la que se monta el viaje de la monja hasta la funeraria.",
+    limitation:
+      "Trata el motivo en los Estados Unidos, no este relato; sólo disponible en préstamo controlado.",
+  }),
+  colaborativaAutoestopista: source({
+    title: "Autoestopista fantasma",
+    author: "Wikipedia en español (colaborativa)",
+    type: "enciclopedia colaborativa, sólo como paralelo",
+    url: "https://es.wikipedia.org/wiki/Autoestopista_fantasma",
+    summary:
+      "Resume la forma básica del motivo y cómo el viajero se entera después de que la mujer había muerto, contraste útil con la monja que se descubre en el ataúd del mismo edificio.",
+    limitation:
+      "Trata el motivo, no este relato; Wikipedia sin autoría responsable, sólo como paralelo.",
+  }),
+  tiempofantasmas2003: source({
+    title: "Los fantasmas de La Candelaria",
+    author: "Marta Beltrán (El Tiempo)",
+    year: 2003,
+    type: "crónica de prensa (El Tiempo, 2 de febrero de 2003)",
+    url: "https://www.eltiempo.com/archivo/documento/MAM-989068",
+    summary:
+      "Reúne los aparecidos del centro de Bogotá que alimentaban los recorridos nocturnos de La Candelaria —el duende Baltazar, la lavandera emparedada, el cortesano de casaca verde de Ángel Cuervo— y los libros de los que salen. Sitúa la tradición de espantos urbanos en la que se inscribe el relato.",
+    limitation:
+      "Trata la tradición de aparecidos bogotanos, no este relato: no menciona esqueletos, morgues ni élites arrepentidas.",
+  }),
+  colaborativaDanza: source({
+    title: "Danza de la Muerte",
+    author: "Wikipedia en español (colaborativa)",
+    type: "enciclopedia colaborativa, sólo como paralelo",
+    url: "https://es.wikipedia.org/wiki/Danza_de_la_muerte",
+    summary:
+      "Explica el género tardomedieval en que la Muerte, como esqueleto, llama a bailar a personas de todas las condiciones, con la Danza general de la Muerte castellana del siglo XV: el antecedente europeo de la muerte que iguala a poderosos y humildes.",
+    limitation:
+      "Trata el motivo, no este relato; Wikipedia sin autoría responsable, sólo como paralelo.",
+  }),
 };
 
 export const bogotaMestizoNightSourceKeysBySlug = {

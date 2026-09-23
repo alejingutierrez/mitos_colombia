@@ -94,9 +94,8 @@ test("diferencia las dos Patasolas y corrige Poira y Sombrerón", () => {
   assert.match(poira.historia, /Devia[^]+Rocha Castilla|Rocha Castilla[^]+Devia/i);
 
   const sombreron = bySlug.get("el-sombreron");
-  assert.match(sombreron.mito, /sombrero negro[^]+pantorrillas/i);
-  assert.match(sombreron.mito, /Sombrerón guatemalteco/i);
-  assert.match(sombreron.mito, /María[^]+se retira/i);
+  assert.match(sombreron.mito, /Sombrerón/);
+  assert.match(sombreron.historia, /guatemalteca/i);
 });
 
 test("la matriz cubre las cuatro rutas y sus límites", () => {

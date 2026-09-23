@@ -111,13 +111,13 @@ test("restaura procedencias y retira los tres núcleos inventados", () => {
   const bus = bySlug.get("el-bus-fantasma");
   assert.equal(bus.category_path, "Varios > Varios > Mestizo");
   // heredada: reescribir tras el cotejo
-  assert.match(bus.mito, /carretera de montaña[\s\S]+ruta G66/i);
+  assert.match(bus.mito, /contravía[\s\S]+pasajeros/i);
   // heredada: reescribir tras el cotejo
-  assert.match(bus.historia, /Marcel Laforet no apareció/i);
+  assert.match(bus.historia, /Cuentos de espantos/i);
   // heredada: reescribir tras el cotejo
   assert.match(
     bus.mito,
-    /Marcel Laforet[\s\S]+manuscrito de tinta plateada[\s\S]+Ninguna fuente[\s\S]+los retira/i,
+    /almas en pena/i,
   );
 });
 

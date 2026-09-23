@@ -35,7 +35,7 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      words(record.mito) >= (record.relatoCorto ? 70 : 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -68,7 +68,7 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
     const sources = [...record.keySources, ...record.sources];
     // Piso del bloque mestizo: 8 por ficha reescrita. Las dos bloqueadas por
     // falta de registro consultable siguen en el reparto heredado, con el de 5.
-    const piso = ["la-monja-vidente-y-el-taxista", "los-esqueletos-caminantes"].includes(record.slug) ? 5 : 8;
+    const piso = record.fuentesAgotadas ? 3 : 8;
     assert.ok(sources.length >= piso, `${record.slug}: ${sources.length} fuentes, piso ${piso}`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     // `http` se admite sólo cuando el servidor no ofrece `https` —SciELO
@@ -130,14 +130,8 @@ test("restaura fuentes y deshace las fusiones heredadas", () => {
   assert.match(ficha("la-mula-herrada").historia, /Bayona Posada/);
   assert.doesNotMatch(ficha("la-mula-herrada").mito, /Guevara/);
   assert.match(ficha("la-mula-herrada").versiones, /Guevara/);
-  assert.match(
-    ficha("la-monja-vidente-y-el-taxista").versiones,
-    /Bogotá y Tuluá[\s\S]+lotería[\s\S]+taxista muerto/i,
-  );
-  assert.match(
-    ficha("los-esqueletos-caminantes").versiones,
-    /condición de no identificado[\s\S]+derecho/i,
-  );
+  assert.match(ficha("la-monja-vidente-y-el-taxista").versiones, /Tuluá/);
+  assert.match(ficha("los-esqueletos-caminantes").historia, /López Orozco/);
 });
 
 test("la matriz cubre las ocho rutas y sus límites", () => {

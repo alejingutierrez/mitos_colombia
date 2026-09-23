@@ -468,6 +468,52 @@ export const huitotoResidualSources = {
     limitation:
       "La cita mezcla a Zafiama con Tagliani 1992 («como se citó en Tagiliani, 1992») y no queda claro qué es de cada uno. No trata el episodio de la vieja del bastón; el artículo es sobre la yuca.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  becerrapalabras2010: source({
+    title: "Las palabras del origen: breve compendio de la mitología de los uitotos, cap. 14 «Kugï y Nokuerai. Las muchachas perdidas»",
+    author: "Fernando Urbina Rangel (ed.); narración de Pablo Bigïdïma; traducción de Eudocio Becerra y Jitoma Zafiama",
+    year: 2010,
+    type: "compendio de relatos con narrador, lugar y fecha (Ministerio de Cultura, Biblioteca Básica de los Pueblos Indígenas de Colombia)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll8/id/4",
+    summary:
+      "Las pp. 230-242 traen el relato de las dos hermanas que salen a quemar hormigas detrás de un falso tío Neimuada, pasan por la casa de la boa, huyen de un tigre y terminan con Rikoño convertida en lora, narrado en El Encanto en noviembre de 1979. Es el registro del que deriva la mayoría de los episodios del texto publicado como Taik.",
+    limitation:
+      "No usa el título «Taik» ni el nombre Jatacoremui, no trae el ciempiés ni el hombre del cazabe, y reparte los papeles de las hermanas de otro modo. El mismo capítulo ya es la fuente de «kugi-y-nokuerai».",
+  }),
+  revisadaJoyareno1994: source({
+    title: "25. Joyareño igai — La odisea de las dos hermanas (Religión y mitología de los uitotos, II parte, pp. 607-649)",
+    author: "Konrad Theodor Preuss; transcripción revisada y traducción de Eudocio Becerra Bigïdïma y Gabriele Petersen de Piñeros",
+    year: 1994,
+    type: "capítulo de libro, texto bilingüe uitoto-español recogido en 1914 (Universidad Nacional de Colombia)",
+    url: "https://bffrepositorio.unal.edu.co/server/api/core/bitstreams/53f91b2c-4aea-46cb-b0eb-2f21dae9c7c1/content",
+    summary:
+      "La recolección de 1914 de la misma historia y la más próxima al texto publicado: el casabe que «no es casabe sino semen» en la casa de la Gente Murciélago, las mariposas que guían a las hermanas, la guara, y la que regresa pintándose con achiote antes de volverse loro. Permite ver de dónde salen los episodios que Urbina no trae.",
+    limitation:
+      "Los nombres del padre (Buineiyama) y del raptor (Neeimuada) no son los del texto publicado, y la sobreviviente es Joyareño. PDF escaneado con OCR ruidoso; las formas en lengua deben citarse de la página impresa.",
+  }),
+  moraMito2010: source({
+    title: "Mito y ética: una lectura del pensamiento mítico de los Uitoto y Muinane",
+    author: "Franklin Giovanni Púa Mora",
+    year: 2010,
+    type: "artículo académico (Franciscanum LII, n.º 154)",
+    url: "https://dialnet.unirioja.es/servlet/articulo?codigo=3703226",
+    summary:
+      "Cita el capítulo de Preuss sobre las dos hermanas para mostrar la figura del dueño: quien se las lleva no es un impostor cualquiera sino el dueño de las hormigas que ellas salían a quemar. Da la lectura que las similitudes usan para explicar el comienzo del relato.",
+    limitation:
+      "Interpretación académica sobre la versión de Preuss, no sobre el texto publicado como Taik; en Dialnet sólo se consultó la ficha con el resumen.",
+  }),
+  mTrabajos1947: source({
+    title: "Trabajos de carácter monográfico y folklórico de los alumnos del Colegio Nacional «Padre Agustín López» de Requena (Loreto): «El Chullacaqui (pies deciguales)»",
+    author: "Rodríguez M., alumno del 3.er año de Media; transcripción publicada por Rômulo Monte Alto (UFMG)",
+    year: 1947,
+    type: "composiciones escolares de folklore (transcripción en PDF)",
+    url: "https://www.letras.ufmg.br/padrao_cms/documentos/profs/romulo/LibroLoreto1.pdf",
+    summary:
+      "Describe al Chullachaqui como un ser del monte que toma la figura de un hermano, un padre o un pariente para llevarse a la gente y hacerla andar hasta perder el juicio (pp. 15-17). Es el paralelo exterior al mundo uitoto del falso pariente que conduce de noche fuera de la casa.",
+    limitation:
+      "Trata un motivo paralelo del Loreto peruano, no este relato ni la tradición uitoto.",
+  }),
 };
 
 const sourceKeysBySlug = {

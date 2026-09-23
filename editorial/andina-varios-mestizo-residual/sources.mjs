@@ -309,6 +309,51 @@ export const andinaVariosMestizoResidualSources = {
     limitation:
       "Divulgación infantil impresa en un informe educativo; dos frases.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  samperleyendas2007: source({
+    title: "Las leyendas modernas y la transmisión de valores",
+    author: "José Manuel de Prada Samper",
+    year: 2007,
+    type: "artículo de revista (Signa, UNED, n.º 16, pp. 57-72)",
+    url: "https://dialnet.unirioja.es/descarga/articulo/2216738.pdf",
+    summary:
+      "Estudia la autoestopista fantasma como leyenda moderna: la muchacha que advierte de un punto negro de la carretera, y la versión que García Márquez publicó en «Fantasmas de carreteras» (El País, 1981), con la mujer de blanco recogida por cuatro jóvenes y los conductores profesionales como difusores del cuento. Es el marco del motivo que el libro de 2004 lleva a Itagüí.",
+    limitation:
+      "Trabaja leyendas españolas y europeas; no menciona Antioquia ni a la niña de la carta. La semejanza es de motivo.",
+  }),
+  playTransportar2021: source({
+    title: "Transportar a una monja que estaban velando en una funeraria, la historia de un taxista",
+    author: "RTVC Play, Radio Nacional de Colombia",
+    year: 2021,
+    type: "nota de medio público (21 de octubre de 2021)",
+    url: "https://www.radionacional.co/actualidad/historias-de-taxistas-transportar-una-monja-que-estaban-velando",
+    summary:
+      "Recoge en Tuluá la versión colombiana del pasajero muerto: la monja que pide al taxista que la espere para pagarle y aparece luego en el ataúd de la funeraria; también el pasajero que desaparece del taxi camino de Chía. Sirve de paralelo colombiano para el viaje con una muerta que acaba en un lugar de entierro.",
+    limitation:
+      "Nota de divulgación para promocionar un pódcast; no nombra a la niña de la carta ni a Itagüí.",
+  }),
+  brunvandVanishing1981: source({
+    title: "The Vanishing Hitchhiker: American Urban Legends and Their Meanings",
+    author: "Jan Harold Brunvand",
+    year: 1981,
+    type: "libro de folclorística (W. W. Norton), copia digital en préstamo",
+    url: "https://archive.org/details/vanishinghitchhi00brun",
+    summary:
+      "El estudio que fijó el nombre y la forma de la autoestopista que desaparece del vehículo y resulta estar muerta. Es la referencia del paralelo que la niña de Itagüí sigue en sus rasgos: aventón, desaparición en el trayecto, muerte violenta como explicación.",
+    limitation:
+      "Sólo en préstamo controlado en Internet Archive; trata versiones estadounidenses y no conoce el libro colombiano de 2004.",
+  }),
+  colaborativaAutoestopista: source({
+    title: "Autoestopista fantasma",
+    author: "Wikipedia en español (colaborativa)",
+    type: "enciclopedia colaborativa, sólo como paralelo",
+    url: "https://es.wikipedia.org/wiki/Autoestopista_fantasma",
+    summary:
+      "Resume la forma básica del motivo —la joven de vestido blanco o de luto que pide que la lleven cerca de una curva y desaparece— y sus variantes hispanoamericanas, útil para situar el vestido blanco y la curva mortal de la niña de Itagüí.",
+    limitation:
+      "Wikipedia, sin autoría responsable; se cita sólo como paralelo y nunca como fuente clave.",
+  }),
 };
 
 const sourceKeysBySlug = {

@@ -17,3 +17,5 @@ Ya extraídos por otros carriles y usados aquí:
 (Mohán p. 145, Madre monte p. 149, Candileja y «el Mandingas» p. 151, Brujas y
 duendes p. 165) y `…-s21-leyendas-tolima-rocha-castilla-1968.txt` (Mohán
 p. 169, Poira, Madremonte y Tunjitos p. 181, Duende y Mandingas p. 182).
+| `cuentos-de-espantos-2004-bus-fantasma-pp73-74.txt` | *Cuentos de espantos…* (2004), «El Bus Fantasma», pp. 73-74: ficha técnica, entradilla, carta y pies, transcritos a mano sobre la imagen (el OCR pierde la entradilla). **Ficción declarada.** | PDF de archive.org, pp. 77-78 |
+| `cuentos-de-espantos-2004-mandingas-pp21-22.txt` | *Cuentos de espantos…* (2004), «El Mandingas», pp. 21-22: ficha técnica, entradilla («revista Cronos»), relato y pies, transcritos a mano. **Ficción declarada.** | PDF de archive.org, pp. 29-30 |

@@ -480,6 +480,74 @@ export const ticunaResidualSources = {
     limitation:
       "Material de los ticuna de Brasil; no trae este relato ni la variante de Orión que recoge Nimuendajú.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  colombiabibliotecario2010: source({
+    title: "ABC del bibliotecario promotor de lectura",
+    author: "Biblioteca Nacional de Colombia y Sistema Nacional de Información Cultural (SINIC)",
+    year: 2010,
+    type: "manual institucional (copia del Internet Archive del PDF de la Biblioteca Nacional)",
+    url: "https://web.archive.org/web/20240910130633/https://www.bibliotecanacional.gov.co/es-co/actividades/Publicaciones%20sobre%20las%20Bibliotecas%20P%C3%BAblicas/Documents/ABC%20del%20Bibliotecario.pdf",
+    summary:
+      "P. 72, recuadro «Leyendas ticunas» atribuido al SINIC: el único texto consultable de la versión leticiana. Resume «La luna» en una frase: un joven comete incesto con su hermana y sube al cielo mostrando en la cara las manchas de las tinturas negras que lo descubrieron.",
+    limitation:
+      "Dos líneas de resumen sin autor, narrador ni página del libro de 1981; no nombra la madre, el agua ni el pueblo. La URL original da 404 y la copia del Internet Archive responde de forma intermitente (se descargó y leyó el 2026-09-22).",
+  }),
+  carobufeo2024: source({
+    title: "El bufeo: Muestra de literatura oral en Leticia",
+    author: "Instituto Caro y Cuervo",
+    year: 2024,
+    type: "página institucional del portal Lenguas y Literaturas Nativas",
+    url: "https://lenguasyliteraturasnativas.caroycuervo.gov.co/el-bufeo-muestra-de-literatura-oral-en-leticia/",
+    summary:
+      "Presenta el libro de Rodríguez de Montes (1981) como corpus de literatura oral de Leticia con mitos ticuna y uitoto y narraciones de la población hispanohablante; es la referencia institucional del registro de este relato.",
+    limitation:
+      "Sólo reproduce «El bufeo»; no trae el relato de la Luna.",
+  }),
+  boasCentral1888: source({
+    title: "The Central Eskimo",
+    author: "Franz Boas",
+    year: 1888,
+    type: "monografía etnográfica (Sixth Annual Report of the Bureau of Ethnology), edición de Project Gutenberg",
+    url: "https://www.gutenberg.org/ebooks/42084",
+    summary:
+      "Sección de leyendas, «The sun and the moon»: la versión de los akudnirmiut y oqomiut en que una muchacha, violentada a oscuras en la casa de cantos, embadurna con hollín la espalda del hombre, descubre a su hermano y huye con una tea; ella se vuelve el sol y él la luna. Es el paralelo lejano de Similitudes.",
+    limitation:
+      "Tradición inuit de la tierra de Baffin, sin relación histórica con los ticuna; sirve sólo como paralelo del motivo.",
+  }),
+  nacionalBamachiga2014: source({
+    title: "Bamachigà. Historias del bama (Río de Letras, Territorios Narrados)",
+    author: "Docentes de la comunidad tikuna (Ministerio de Educación Nacional)",
+    year: 2014,
+    type: "libro bilingüe tikuna-español del Plan Nacional de Lectura y Escritura",
+    url: "https://redaprende.colombiaaprende.edu.co/media/recursos/alliances/reception/resources/b4490f4b-0881-410c-b1a3-48c51b633aa2/T%C3%ADtulo_7._Historias_del_Bama.pdf",
+    summary:
+      "«Iya Iyachigà. Historia de Iya Iya, el hombre venado», narrada por Augusto Coello, escrita y traducida por Mariano Morán: la versión más larga del motivo. El venado deja cáscaras de caimo y restos de caña para tentar a la gente, un joven lo espía, lo engañan con una pesca y el ladrón le engancha la mochila con una horqueta; la mochila trae palo de yuca, caña, ñame y chonque para sembrar.",
+    limitation:
+      "Otra historia del mismo motivo, contada por el mismo abuelo que en Moruapü; no es la versión de Leticia.",
+  }),
+  trujilloRaices2025: source({
+    title: "Raíces sumergidas. Historias ancestrales de la Amazonia",
+    author: "Diana Trujillo, Pablo Alonso Ramos-Henao y Mario Guillermo Guerrero (comps.), Fundación Omacha",
+    year: 2025,
+    type: "libro de relatos recogidos con abuelos de Puerto Nariño",
+    url: "https://www.omacha.org/descargas/2025/Libro-Raices-sumergidas-web.pdf",
+    summary:
+      "Pp. 38-39, «Jau y el robo de las semillas»: Jau, disfrazado con plumas, le roba a Petapeta, hombre encantado que se vuelve venado, el costal con ñame, batata, camote, plátano, estacas de yuca y semillas de frutales, y Petapeta le grita que siembre todo. Sostiene el segundo paralelo de Similitudes.",
+    limitation:
+      "Versión reciente y editada para divulgación, sin narrador individual; trata el motivo, no este relato. El servidor rechaza clientes sin cabecera de navegador (406): se leyó con user-agent de navegador.",
+  }),
+  galloMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo III (sección 30, «Mitos Chibcha»: Mariano Izquierdo Gallo, «Panteón de los chibchas», de Mitología americana, 1956)",
+    author: "Eugenia Villa Posse (comp.); Mariano Izquierdo Gallo",
+    year: 1993,
+    type: "antología (IADAP, Quito) que reproduce un capítulo de libro de 1956",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "P. 15, «Panteón de los chibchas»: con cita de fray Pedro Simón, el primer cacique de Ramiriquí se transformó en el sol y su tío materno, primer cacique de Sogamoso, en la luna, y juntos crearon a los hombres. Es el paralelo andino de Similitudes: un Sol que antes fue hombre.",
+    limitation:
+      "Tradición muisca de cronistas, reelaborada literariamente por Izquierdo Gallo; sin relación con los ticuna, sirve sólo como paralelo.",
+  }),
 };
 
 const sourceKeysBySlug = {

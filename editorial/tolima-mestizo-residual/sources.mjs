@@ -266,6 +266,63 @@ export const tolimaMestizoResidualSources = {
     limitation:
       "Resumen de un párrafo; no el relato tolimense.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  caldasMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa (Fundación El Libro Total / Gobernación de Caldas)",
+    year: 1997,
+    type: "libro de folclor regional (edición digital ampliada)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «El Sombrerón»: la descripción de Ocampo López («Si te alcanzo, te lo pongo», los muchachos que fuman), la de Luis M. Sánchez (mula negra, dos perros negros) y las versiones de La Merced y la vereda Naranjal.",
+    limitation:
+      "Trata el Sombrerón de Caldas, no este relato; la edición digital es posterior a 2007 y se cita por capítulo, no por folio.",
+  }),
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Santiago Useche Toledo, Allison González González, Carlos Alberto Guzmán Ruiz y Eliana Marcela Tunarrosa Echeverría (SENA, La Dorada)",
+    year: 2022,
+    type: "libro de memoria oral con testimonios",
+    url: "https://repositorio.sena.edu.co/handle/11404/8024",
+    summary:
+      "«El Sombrerón», pp. 92-97: Luis Javier Gallego (Manzanares) y el jinete de la espada; la nieta de María Edilma Gómez (Marquetalia); la mujer que se fue con el Sombrerón y perdió la belleza, según Jorge Echeverri.",
+    limitation:
+      "Trata el motivo en el oriente de Caldas, no este relato; los testimonios vienen reescritos por los autores.",
+  }),
+  libreSombreron2025: source({
+    title: "«El Sombrerón»: la leyenda del hombre que no olvida a las mujeres que ha amado",
+    author: "María Alejandra Guzmán (Prensa Libre, Guatemala), con Celso Lara Figueroa",
+    year: 2025,
+    type: "prensa con fuentes académicas",
+    url: "https://www.prensalibre.com/vida/escenario/el-sombreron-la-leyenda-del-hombre-que-no-olvida-a-las-mujeres-que-ha-amado/",
+    summary:
+      "La leyenda guatemalteca: serenatas nocturnas, la muchacha encerrada en el convento de Santa Catarina que muere, las mulas con carbón y las lágrimas del Sombrerón: el hilo de María.",
+    limitation:
+      "Trata el Sombrerón de Guatemala, no este relato; prensa de divulgación que resume a Lara Figueroa.",
+  }),
+  redaccionMedellin1990: source({
+    title: "En Medellín: desfile de danzas, mitos y leyendas. Una noche a la colombiana",
+    author: "El Tiempo (redacción)",
+    year: 1990,
+    type: "prensa",
+    url: "https://www.eltiempo.com/archivo/documento/MAM-30929",
+    summary:
+      "El Sombrerón del desfile de Medellín, con grandes pies y un sombrero hasta las pantorrillas, que corre a trasnochadores y borrachos diciendo «si te alcanzo te lo pongo».",
+    limitation:
+      "Nota de agenda sobre una comparsa; trata el motivo antioqueño, no este relato.",
+  }),
+  lopezpueblo1977: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López",
+    year: 1977,
+    type: "libro de folclor regional",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "Cap. 8: incluye «el sombrerón» entre los seres que recorren los caminos de Boyacá y asustan a los que vuelven de velorios y alumbrados.",
+    limitation:
+      "Una mención en una lista, sin relato; trata el motivo, no este relato.",
+  }),
 };
 
 const sourceKeysBySlug = {

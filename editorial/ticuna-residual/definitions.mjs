@@ -3,36 +3,110 @@ import { defineTicunaResidualMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineTicunaResidualMyth({
     slug: "origen-del-sol",
-    title: "El Sol, el achiote y el regreso a la madre",
+    fuentesAgotadas: "El registro propio, «El sol» en Rodríguez de Montes 1981, no está en abierto; de él sólo queda una frase del ABC del bibliotecario (2010, p. 72). Se buscó además en la monografía de González Galante (2018), en el portal del Caro y Cuervo, en todos los primarios del repo (achiote, ceniza, sol) y por WebSearch, que sólo devuelve copias de este mismo catálogo. Las demás fuentes tratan el motivo del hombre que se vuelve Sol, no esta versión.",
+    sourceKeys: [
+      {
+        key: "colombiabibliotecario2010",
+        summary:
+          "P. 72, recuadro «Leyendas ticunas»: el único rastro escrito de la versión leticiana de «El sol». Dice que cierto hombre, compadecido de las personas de su tribu, sube al cielo para alumbrar y calentar el mundo; sostiene la compasión como motivo del viaje que se discute en Versiones.",
+        limitation:
+          "Una sola frase, sin autor ni página del libro de 1981: no menciona la madre, el achiote, las cenizas ni el regreso. La URL original da 404 y la copia del Internet Archive responde de forma intermitente (se descargó y leyó el 2026-09-22).",
+      },
+      {
+        key: "moruapu2000",
+        summary:
+          "Dos versiones colombianas del origen solar: «Origen del Sol», de Dolores Noé (Ventura, 1993), en que el Sol bebe el zumo de achiote que cocina su suegra y la esposa se vuelve árbol de algodón; y «Otra versión de Sol y Luna», de Julia del Águila (1994), con la prueba de brillo que gana el Sol porque permite secar la ropa y la chambira. Son la base de Versiones.",
+        limitation:
+          "Son registros del trapecio amazónico y del Putumayo, no la versión de Leticia de 1981; ninguno trae a la madre quemada ni su resurrección.",
+      },
+      {
+        key: "hohenthalTukuna19522",
+        summary:
+          "P. 142: el sol quema hasta carbonizar a quien se le acerca y lleva una corona de plumas rojas de la cola del guacamayo, como la de la muchacha en la fiesta de pubertad; Nimuendajú vio tres máscaras del sol con rostro humano. Transcribe el fragmento de «The Canoe of the Sun», paralelo de Similitudes. Explica además el uso del urucú (achiote) en la pintura corporal.",
+        limitation:
+          "Etnografía del lado brasileño, traducida al inglés; no trae un relato del origen del Sol.",
+      },
+      "galloMitos1993",
+      {
+        key: "faulhabericonografia2020",
+        summary:
+          "Muestra que el par Sol-Luna organiza la iconografía ticuna como oposición y complementariedad entre día y noche, claridad y oscuridad, y que los astros nacen de rupturas de reglas sociales. Da el marco de la rivalidad entre el Sol y la Luna que el relato pone en boca de la gente.",
+        limitation:
+          "Trabajo del lado brasileño sobre dibujos y cosmología; no transcribe un origen del Sol ni menciona Leticia.",
+      },
+      {
+        key: "almeidaAnimalidad2018",
+        summary:
+          "Estudio del libro de Rodríguez de Montes en que se registra «El sol»: describe el corpus leticiano y cita con página los relatos del gavilán, los micos, Díjoma y el bufeo. Sirve para fijar qué es el registro de este relato.",
+        limitation:
+          "No cita ni analiza el relato del Sol.",
+      },
+      {
+        key: "carobufeo2024",
+        summary:
+          "Referencia institucional del libro de 1981 que contiene «El sol»: lo presenta como corpus de literatura oral de Leticia con mitos ticuna y uitoto.",
+        limitation:
+          "Sólo reproduce «El bufeo»; no trae este relato.",
+      },
+    ],
+    title: "Origen del sol",
     excerpt:
       "Un hombre bebe achiote hirviendo para llevar una luz más fuerte al cielo; el calor alcanza a su madre y después vuelve para restaurarla.",
     tags: ["ticuna", "Sol", "luz", "transformación"],
-    mito: `Hubo un tiempo en que la Luna ya alumbraba, pero su claridad no bastaba para las labores del día. La humedad permanecía en las fibras y la gente necesitaba una luz capaz de calentar la tierra. Un hombre dijo que subiría y brillaría con más fuerza. Algunos dudaron de que una persona pudiera ocupar el cielo.
+    mito: `No se distinguían bien el día y la noche, porque en el cielo sólo alumbraba la Luna. Su luz pálida no alcanzaba. La gente vivía en una penumbra que no se acababa, el cumare recogido nunca secaba del todo y las artesanías de chambira seguían húmedas y frías al tacto.
 
-Antes de salir de cacería, el hombre pidió a su madre que preparara achiote y lo mantuviera hirviendo. Ella temió que aquel encargo anunciara una despedida. Le rogó que no la dejara, pero finalmente puso el líquido rojo al fuego y esperó su regreso.
+Entre esa gente andaba un hombre que iba a ser el Sol. Llevaba dentro un ardor que sólo él sentía, y lo decía en voz baja: «Yo voy a alumbrar mejor que la Luna». Los demás se reían. «¡Qué va! La Luna es diosa, nadie puede brillar más que ella».
 
-Cuando volvió, el hombre encontró el achiote todavía caliente. Llenó una vasija y advirtió a su madre que buscara protección, porque el calor que iba a despertar podía alcanzarla. Ella se resistía a alejarse. Quería permanecer cerca de su hijo aunque no comprendiera del todo lo que ocurriría.
+Una noche habló con su madre, una anciana que lo quería más que a su propia vida.
 
-El hombre bebió el achiote. El rojo y el calor atravesaron su cuerpo. La penumbra retrocedió mientras él se elevaba. Desde lo alto comenzó a iluminar el mundo y se convirtió en Sol. La gente pudo ver con claridad y el calor ayudó a secar las fibras que antes permanecían húmedas.
+—Madre, me voy de cacería. Prepáreme achiote y hiérvalo bien, para tomármelo cuando vuelva.
 
-La madre, sin embargo, no logró apartarse a tiempo. El resplandor la alcanzó y solo quedaron sus cenizas. Desde el cielo, el Sol supo lo ocurrido. Había conseguido la claridad que buscaba, pero su ascenso había dejado una pérdida en la casa.
+La madre, con miedo de perderlo en el cielo, le rogó que no se fuera.
 
-Después de un largo tiempo regresó al lugar donde había vivido. Encontró las cenizas de su madre y la llamó para que se levantara. La materia dispersa volvió a reunirse hasta devolverle su cuerpo. Madre e hijo pudieron mirarse otra vez.
+—No me deje sola. No se aparte de este mundo.
 
-El Sol se despidió y ascendió de nuevo. Esta vez permaneció en el cielo. Su luz continuó sobre la gente, las chagras y las fibras puestas a secar, mientras su regreso quedó como memoria de que la transformación no había borrado el vínculo con quien preparó el achiote.`,
-    historia: `La Biblioteca Nacional de Colombia y el Sistema Nacional de Información Cultural incluyen El sol dentro de una lista de leyendas Ticuna y resumen su núcleo: un hombre se compadece de la gente, sube al cielo y proporciona luz y calor. La cadena bibliográfica conduce a Muestra de literatura oral en Leticia, Amazonas, publicada por María Luisa Rodríguez de Montes en 1981 a partir de grabaciones realizadas en Leticia durante la década anterior. El acceso público consultado confirma el volumen y su estructura, pero no deja ver el nombre del informante de esta pieza.
+Pero él, con su corona de plumas de guacamayo, insistió:
 
-La ruta heredada añadió plumas de guacamayo, una corona implícita, estrellas que escuchan y otras imágenes sin sustento. La revisión conserva únicamente la secuencia que puede reconocerse en la transmisión disponible: insuficiencia de la luz lunar, decisión del hombre, achiote preparado por la madre, ascenso, daño causado por el calor y restauración posterior. No presenta el procedimiento como ceremonia ni afirma que el achiote produzca transformaciones fuera del relato.
+—Si yo voy al cielo, madre, alumbraré más que la Luna.
 
-Historias de los abuelos de Moruapü publica otro origen del Sol, narrado por Dolores Noé en Ventura en 1993. Ese testimonio ya tiene una ruta propia y atribuida. La presente página se conserva porque la versión leticiana incluye el desafío frente a la luz de la Luna y el regreso por la madre, episodios ausentes de Dolores Noé. Su localización se mantiene aproximada al Trapecio Amazónico y no pretende señalar una comunidad o chagra concreta.`,
-    versiones: `Esta página sigue la versión leticiana asociada con el volumen de Rodríguez de Montes: la Luna ya existe, el futuro Sol quiere dar más calor, pide a su madre achiote hirviendo, asciende después de beberlo, la quema involuntariamente y más tarde vuelve para levantarla de las cenizas. El nombre del narrador no se atribuye porque la fuente completa no está disponible en línea.
+Llorando, ella aceptó. Preparó el achiote y lo mantuvo hirviendo, como él le había pedido. Cuando el hijo regresó de la cacería, el achiote, rojo, hervía con fuerza. Él llenó un totumo con el líquido y miró a su madre.
 
-La versión de Dolores Noé publicada en Moruapü comienza durante una cacería. Una vasija de achiote se rompe en casa de la suegra; el cazador bebe lo que queda, adquiere fuerza y asciende. Su esposa, que no presencia la partida, se transforma en árbol de algodón, y la luz del Sol seca la chambira. Allí no aparece una madre reducida a cenizas ni un regreso para restaurarla.
+—Escóndase, madre. No quiero que mi calor la queme.
 
-Ambas secuencias relacionan una persona, el achiote y la transformación solar, pero no son intercambiables. La revisión tampoco adopta como hecho Ticuna general la oposición moral entre Sol y Luna. Conserva una variante de Leticia y remite a la ficha de Dolores Noé para que las diferencias permanezcan visibles.`,
+—No —dijo ella en voz baja, y se quedó a su lado.
+
+Entonces él se bebió el achiote hirviendo. El calor le subió por el cuerpo y el mundo entero vaciló ante aquel resplandor. Sus plumas se volvieron rayos.
+
+—Me voy, madre. Algún día volveré.
+
+La madre, que no se había escondido, se volvió ceniza.
+
+Así subió el Sol al cielo por primera vez. Llegó el día, y con él la gente pudo trabajar a la luz y al calor.
+
+Pasó el tiempo, uno o dos años, y el Sol cumplió su promesa: bajó a la tierra a buscar a su madre. En el lugar donde la había dejado sólo encontró cenizas. Pisó con fuerza el suelo y gritó:
+
+—¡Levántate, madre!
+
+Las cenizas se agitaron, se alzaron en un remolino y tomaron otra vez la forma de la anciana, que se levantó sonriendo y lo miró con el mismo amor de antes.
+
+Al verla viva, el Sol se despidió de ella sin palabras y subió al cielo para no volver a bajar.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. Su versión propia es «El sol», uno de los relatos de Leticia que María Luisa Rodríguez de Montes reunió en Muestra de literatura oral en Leticia, Amazonas (Instituto Caro y Cuervo, 1981), y ese libro no está en abierto: el Caro y Cuervo sólo publica en línea el relato del bufeo, y ni la monografía de Andrés González Galante sobre el libro (Universidad de los Andes, 2018) ni los repositorios de tradición oral ticuna traen el pasaje del hombre que bebe achiote hirviendo, de la madre reducida a cenizas o de su regreso. Lo único que queda escrito de esa versión es una frase del ABC del bibliotecario promotor de lectura (Biblioteca Nacional y SINIC, 2010, p. 72), en el recuadro de leyendas ticunas: cierto hombre, compadecido de la gente de su tribu, sube al cielo para alumbrar y calentar el mundo.
+
+Los elementos del relato, en cambio, sí tienen apoyo en la etnografía ticuna. Curt Nimuendajú anota en The Tukuna (1952, p. 142) que el sol, le dijeron, era caliente hasta el punto de carbonizar a quien se le acercara, y que llevaba por tocado una corona de plumas rojas de la cola del guacamayo, igual a la que usa la muchacha en su fiesta de pubertad; vio tres veces máscaras del sol talladas en madera, con rostro humano. El achiote es el urucú, el colorante rojo con que los ticuna pintan al niño cuando empieza a gatear y que, junto con el genipapo, aparece en las historias de los héroes culturales.
+
+El origen solar por un trago de achiote tiene un registro colombiano abierto: el que narró Dolores Noé, de la comunidad de Ventura, en el río Putumayo, publicado en Historias de los abuelos de Moruapü (Asociación Eware, 2000). Allí el achiote lo cocina la suegra, no la madre, y la mujer que se queda en la tierra es la esposa. El detalle del cumare y la chambira que no secan con la sola luz de la Luna tiene su eco en el mismo libro, en la versión de Julia del Águila, donde el Sol gana la prueba de brillo porque con él la gente puede secar la ropa y la chambira.`,
+    versiones: `Las versiones ticuna del origen del Sol que se pueden leer no coinciden en quién prepara el achiote ni en quién paga el precio de la subida. En la de Dolores Noé, el Sol pasa de regreso de cacería por la casa de su suegra, que está cocinando zumo de achiote; la olla se rompe, parte del zumo se le riega por el cuerpo y él se toma el resto, y a la vuelta, con una danta al hombro, recoge en una totuma lo que quedó en el suelo y se lo bebe todo. Recibe entonces un gran poder y se eleva. El suegro lo despide sin drama y la que sufre es la esposa, que no puede dormir de tristeza y termina convertida en árbol de algodón, sembrado por la suegra en un extremo de la chagra. En el relato de Leticia, en cambio, es la madre quien hierve el achiote por encargo del hijo, se niega a esconderse, queda hecha ceniza y es resucitada por él.
+
+Cambia también el motivo del viaje. La frase que resume la versión de Leticia habla de un hombre que sube compadecido de su gente, para darle luz y calor. En la versión de Julia del Águila, en el mismo libro de Moruapü, no hay achiote ni madre: el Sol, que es de la nación guacamayo, y la Luna son primos que se tienen rabia, y se enfrentan en una prueba para ver quién brilla más. Gana el Sol porque alumbra de día y calienta.
+
+Las tres versiones comparten un rasgo menor que dice mucho: el Sol sirve para secar. La chambira y el cumare de Leticia, la chambira que las mujeres ponen a secar desde que el Sol brilla sobre el árbol de algodón, en Dolores Noé, la ropa y la chambira de Julia del Águila. Y la corona de plumas de guacamayo del relato leticiano coincide con la que Nimuendajú describe en las máscaras del sol.`,
     leccion:
-      "Toda luz nueva exige reconocer el daño que puede causar a quienes permanecen cerca.",
-    similitudes: `Faetón, en el libro segundo de las Metamorfosis de Ovidio, también busca ocupar una función solar y descubre que una luz desmedida puede quemar el mundo. Allí conduce un carro heredado de su padre y muere durante el intento; el Sol Ticuna bebe achiote, logra ascender y regresa por su madre. Génesis organiza Sol, Luna y vegetación mediante mandatos sucesivos de una divinidad. Esta versión, en cambio, comienza con personas que ya viven y trabajan, y convierte a una de ellas mediante una decisión familiar. Las resonancias hablan de luz, riesgo y orden cotidiano; no prueban préstamo ni equivalencia religiosa.`,
+      "Quien se vuelve luz para todos no puede quedarse cerca de los que más quiere.",
+    similitudes: `Entre los propios ticuna, el paralelo más curioso es el único fragmento que Nimuendajú logró grabar de «La canoa del Sol», porque ya nadie sabía contarla entera. Un muchacho que pesca solo recibe la visita del Sol, que llega en canoa y lo invita a subir. El Sol lo vuelve insensible a su calor, y el joven sigue creyendo que reman por la tierra cuando ya van por el cielo. Allí el Sol asa un pirarucú con su solo calor y, después de comer, recoge las espinas y las escamas, rearma el pez y lo devuelve vivo al agua. Es el mismo astro que carboniza a quien se le acerca, pero que puede proteger a quien él elige; en el relato de Leticia, en cambio, la madre se niega a esconderse y el calor la alcanza.
+
+En los Andes colombianos, las crónicas recogidas por fray Pedro Simón y resumidas por Mariano Izquierdo Gallo en el panteón muisca que reproduce Eugenia Villa Posse cuentan que el primer cacique de Ramiriquí se transformó en el sol y que su tío materno, primer cacique de Sogamoso, se transformó en la luna, y que juntos crearon a los hombres. Como en el relato ticuna, el Sol fue antes un hombre con parientes en la tierra, y su subida es una transformación, no un nacimiento.
+
+La diferencia está en el precio. El cacique muisca sube con su tío para crear; el hombre del relato de Leticia sube solo y deja atrás a una madre que tiene que resucitar.`,
     sceneHorizontal:
       "un hombre bebe de una vasija de achiote rojo humeante y comienza a elevarse sobre una chagra todavía en penumbra mientras su madre observa desde una distancia segura, sin alas, coronas ni plumas",
     sceneVertical:
@@ -52,36 +126,80 @@ Ambas secuencias relacionan una persona, el achiote y la transformación solar, 
   }),
   defineTicunaResidualMyth({
     slug: "origen-de-la-luna",
-    title: "La marca que reveló a la Luna",
+    sourceKeys: [
+      "colombiabibliotecario2010",
+      {
+        key: "hohenthalTukuna19522",
+        summary:
+          "Pp. 142-143, «The Spots on the Moon»: la versión ticuna más próxima al resumen leticiano. El hermano entra de noche en la hamaca de la hermana en una maloca oscura; ella, que pinta a su hijo con genipapo, le unta la cara; él se limpia con hojas que se vuelven pájaros negros, se lava en el igarapé de São Jerônimo, que queda negro, y sube al cielo como luna.",
+        limitation:
+          "Es la versión del alto Solimões (Brasil), traducida al inglés; trata el motivo, no el relato de Leticia, y no trae a la madre que idea la trampa.",
+      },
+      {
+        key: "moruapu2000",
+        summary:
+          "Trae dos versiones colombianas del motivo grabadas en 1994: «Origen de la Luna» de Augusto Coello (la wocha, la esposa boruga, el huito mezclado con wone) y «Otra versión de Sol y Luna» de Julia del Águila, donde la madre aconseja preparar el huito, el joven no logra quitarse la mancha en la quebrada y sube por el interior de un árbol de algodón. Es la versión que más se parece al texto leticiano en la madre y el lavado inútil.",
+        limitation:
+          "Son versiones del trapecio amazónico, no la de Leticia de 1981; la paginación del índice y la del cuerpo del libro no siempre coinciden en la digitalización.",
+      },
+      {
+        key: "faulhaberestrelas2004",
+        summary:
+          "Documenta el incesto primordial de la Luna como origen de los astros con rostro humano, parientes de la Luna aislados en el mundo de arriba, y cita una canción de la Luna registrada en Enepü (Évare II, Brasil) en la que la muchacha, orientada por su abuela, le echa jugo de jenipapo en la cara al hermano. Sostiene la versión de la abuela y el primer paralelo de Similitudes.",
+        limitation:
+          "Trabajo sobre los ticuna del Brasil, centrado en iconografía y constelaciones; trata el motivo, no esta versión.",
+      },
+      {
+        key: "faulhabericonografia2020",
+        summary:
+          "Asocia al Sol y a la Luna con un episodio de incesto en que la Luna, masculina, tiene relaciones con su hermana y engendra a los hermanos Woramacuri, estrellas que vistas cerca de la luna pueden anunciar el nacimiento de una mujer, y liga a la Luna con el ciclo menstrual.",
+        limitation:
+          "Análisis iconográfico del lado brasileño; no transcribe un relato completo ni menciona Leticia.",
+      },
+      {
+        key: "almeidaAnimalidad2018",
+        summary:
+          "El único estudio abierto sobre el libro de Rodríguez de Montes en que se registra esta versión: describe el corpus leticiano y cita con página otros relatos del libro. Sirve para situar el registro y su contexto de recolección.",
+        limitation:
+          "No analiza ni cita el relato de la Luna; se usa sólo para fijar qué es el libro de 1981.",
+      },
+      "carobufeo2024",
+      "boasCentral1888",
+    ],
+    relatoCorto:
+      "El texto que se conserva es casi todo adorno: quitados los nombres que no tienen fuente, las fórmulas y las imágenes de relleno, la historia se reduce a siete pasos (el visitante nocturno, la confesión a la madre, la tintura, la marca, el lavado inútil, la subida y la luna manchada). Alargarlo obligaría a inventar escenas que ningún registro consultable sostiene.",
+    title: "Origen de la luna",
     excerpt:
       "Una joven marca con tinte oscuro al visitante nocturno; al amanecer reconoce a su hermano, que no puede borrar el rostro y asciende como Luna.",
     tags: ["ticuna", "Luna", "desenmascaramiento", "ascensión"],
-    mito: `Una joven recibía de noche la visita de alguien cuyo rostro no conseguía ver. El visitante llegaba cuando la casa estaba oscura y se marchaba antes del amanecer. Ella sabía que una relación prohibida estaba ocurriendo, pero no podía reconocer a quien entraba junto a su hamaca.
+    mito: `Una muchacha vivía en un pueblo rodeado de selva con su madre y con su hermano mayor. Desde hacía algunas lunas, alguien la visitaba de noche. Llegaba en silencio hasta su hamaca, se acostaba junto a ella en la oscuridad y se iba antes de que pudiera saber quién era.
 
-La joven habló con su madre. Entre las dos prepararon un tinte oscuro y decidieron que la próxima vez ella marcaría al visitante. No buscaron adivinar su nombre: dejaron una señal que pudiera permanecer cuando volviera la claridad.
+La muchacha vivía inquieta con ese secreto. Una noche se lo contó a su madre, y entre las dos decidieron averiguar quién era el visitante. La madre preparó una tintura negra y se la dio a la hija para que se la untara en la cara al que llegaba.
 
-Aquella noche el hombre regresó. La joven extendió el pigmento sobre su cara sin que él lo advirtiera. Antes de que saliera el Sol, el visitante escapó de la casa y corrió al agua. Se lavó una y otra vez, pero el color no desapareció.
+El visitante volvió. En la oscuridad, la muchacha le pasó la tintura por el rostro.
 
-Al amanecer la familia vio que el hermano de la joven llevaba el rostro manchado. La oscuridad que lo había protegido ya no podía ocultar quién era. Él sintió vergüenza y trató de apartarse de las miradas. La marca no era un adorno: era la prueba visible de aquello que había hecho en secreto.
+Al amanecer, con la luz, se supo todo: el hermano se despertó con la cara manchada de negro. Lleno de vergüenza, corrió al río y se lavó una y otra vez, pero la mancha no salía. La tintura se le había metido en la piel.
 
-El joven dejó la casa y comenzó a subir. La tierra quedó abajo mientras su figura alcanzaba el cielo nocturno. Allí se transformó en Luna. Las manchas del pigmento permanecieron en su rostro luminoso y podían verse desde el mundo al que ya no regresó.
+Cuando el pueblo despertó, él ya entendía que no había vuelta atrás. Empezó a subir, despacio, hasta perderse en el cielo, y allá arriba se convirtió en la Luna.
 
-La joven continuó en la tierra. El relato no convierte su experiencia en culpa ni presenta el ascenso como una reparación para ella. La acción decisiva había sido hacer reconocible al visitante y terminar con el amparo de la noche.
+Desde entonces, en las noches claras, la luna sale con las manchas de aquella tintura en la cara, y desde lejos alumbra la hamaca donde duerme su hermana.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. Su versión de Leticia forma parte de Muestra de literatura oral en Leticia, Amazonas, de María Luisa Rodríguez de Montes (Instituto Caro y Cuervo, 1981), un libro de 262 páginas que no está digitalizado en abierto: el portal de lenguas y literaturas nativas del Caro y Cuervo sólo reproduce de él el relato del bufeo, y la monografía que Andrés González Galante dedicó en 2018 a ese mismo libro, en la Universidad de los Andes, analiza otros relatos y no éste. Lo único que se puede leer de la versión leticiana son dos líneas del ABC del bibliotecario promotor de lectura, que la Biblioteca Nacional y el Sistema Nacional de Información Cultural publicaron en 2010: en la página 72, bajo el título «Leyendas ticunas», resumen que un joven comete incesto con su hermana y sube al cielo mostrando en la cara las manchas de las tinturas negras que lo delataron.
 
-Desde entonces, cuando la Luna muestra zonas oscuras en su superficie, la historia recuerda la señal que resistió el agua. Lo que ocurrió oculto dejó una huella capaz de atravesar la distancia entre la casa y el cielo.`,
-    historia: `La síntesis de la Biblioteca Nacional y SINIC identifica como Ticuna una historia lunar donde un joven comete incesto con su hermana, es descubierto por manchas de tintura negra y sube al cielo. La obra bibliográfica de referencia es Muestra de literatura oral en Leticia, Amazonas, de María Luisa Rodríguez de Montes, publicada en 1981. La recopilación contiene relatos Tikuna, Huitoto y de población leticiana de habla española; por eso la atribución de esta página depende del inventario institucional y se presenta con su límite.
+El motivo, en cambio, está bien documentado entre los ticuna, a los dos lados de la frontera. Curt Nimuendajú lo recogió en el alto Solimões y lo publicó en The Tukuna (Universidad de California, 1952), en las páginas 142 y 143, con el título «The Spots on the Moon». Lo sitúa en una de las grandes malocas antiguas, cerradas de noche por los mosquitos y por eso completamente oscuras, y el tinte es el genipapo con que las madres pintaban de negro a los recién nacidos. En el lado colombiano, Historias de los abuelos de Moruapü (Asociación Eware, 2000), compilado por Hugo Armando Camacho, Federico José Huaines y Sergio Ramos del Águila, publica dos versiones grabadas en 1994 en un taller de tradición oral, con el huito como tintura y la wocha, la hoja que ennegrece los dientes, en el origen del enredo.
 
-La ficha heredada inventó los nombres Ayara y Mayari, convirtió el tinte en esencia de sombras, atribuyó sabiduría sobrenatural a la madre y presentó el ascenso como designio cósmico. Ninguno de esos elementos es necesario para el núcleo documentado. La revisión usa figuras sin nombre, nombra la transgresión sin recrearla y concentra la acción en la marca que permite identificar al responsable.
+Priscila Faulhaber, que estudió la cosmología ticuna del lado brasileño, muestra que el incesto de la Luna no es un episodio aislado: de él nacen los hermanos Woramacuri, dos estrellas que, cuando se ven cerca de la luna, pueden anunciar el nacimiento de una mujer.`,
+    versiones: `El detalle que cambia entre los registros es quién idea la trampa. En la página de Nimuendajú la hermana está sola: duerme tan profundo que no siente nada, sólo por la mañana sabe lo que ha pasado, intenta sin éxito quedarse despierta, queda embarazada y da a luz un hijo. Es la costumbre de pintar al niño con genipapo la que le pone el tinte a mano, y una noche mete la mano en la olla y se la pasa por la cara al que llega. En la versión de Julia del Águila publicada en Moruapü, la idea es de la madre: le aconseja rallar huito, exprimirlo y dejar el zumo listo dentro del toldillo. En una canción de la Luna registrada en Enepü, en el Brasil, que recoge Faulhaber, es la abuela quien orienta a la muchacha para echarle el jugo de jenipapo en la cara.
 
-Augusto Coello narró en Boyahuazú en 1994 otra versión ya publicada en la ruta origen-de-la-luna-tikuna. Allí aparecen la planta wocha, una mujer boruga oculta en la chagra, el huito, un árbol y un ascenso más largo. Julia del Águila aportó otra variante a la misma compilación. Esta ruta residual no sustituye esos testimonios atribuidos: conserva la secuencia breve de Leticia para mostrar que el motivo circula con diferencias importantes. Ninguna se presenta como explicación única para todas las comunidades Ticuna.`,
-    versiones: `La versión leticiana resume una estructura directa: un hermano visita a su hermana durante la noche, la madre propone usar un pigmento oscuro, el rostro queda marcado, el agua no borra la prueba y el hombre asciende como Luna. El acceso público no permite saber qué palabra empleó el informante para el tinte, por lo cual el Relato evita asegurar que siempre fuera huito.
+También cambia lo que el hermano deja en la tierra al huir. Con Nimuendajú, las hojas con que se limpia se vuelven pavas de monte, anúes y otros pájaros negros, y el igarapé de São Jerônimo, donde se lava, queda negro para siempre. En Moruapü las hojas dan los pájaros bocamuchacha y locheros, en la versión de Augusto Coello, y el bocamonchado y el cuervo, en la de Julia del Águila; en las dos el joven no sube por el aire sino por el hueco del tronco de un árbol que ha mandado cortar a su cuñado.
 
-En el testimonio de Augusto Coello, Luna pertenece al clan Garza, mastica wocha y mantiene oculta a una boruga convertida en mujer. La hermana toca la planta y la esposa entra en su cuerpo; el joven dice no haberla reconocido. La marca de huito revela la relación y después él sube por el interior de un árbol. Julia del Águila distribuye de otro modo el embarazo, la marca y la aparición de la Luna llena.
-
-La página no combina nombres ni excusas de estas versiones. También evita presentar el ascenso como redención, castigo divino o destino romántico: esas lecturas no forman parte del resumen institucional. La constante documentada es una identidad revelada por una marca imborrable; el sentido de cada variante permanece atribuido a su transmisión.`,
+La versión leticiana resumida en 2010 conserva lo esencial y nada más: el incesto, la tintura negra que lo descubre y la subida al cielo con las manchas en la cara. La madre que prepara el tinte y el lavado inútil en el agua coinciden con Julia del Águila; los pájaros, el árbol y el hijo no aparecen.`,
     leccion:
-      "Una señal persistente puede romper la protección que la oscuridad ofrece al abuso.",
-    similitudes: `En The Sun and the Moon, publicado por Knud Rasmussen a partir de relatos árticos, una transgresión entre hermanos también conduce a una persecución y a cuerpos celestes. Su ecología, su desenlace y su historia de traducción son distintos: no hay tinte, hamaca ni árbol Ticuna. El origen solar de Dolores Noé y la variante de Sol conservada en Leticia presentan personas que ascienden, pero mediante achiote y con otras relaciones familiares. Génesis dispone la Luna por creación divina y no como huella de una identidad revelada. Comparar permite reconocer el motivo celeste sin transformar culturas diferentes en una sola explicación.`,
+      "Lo que se hace a oscuras termina escrito en la cara, a la vista de todos.",
+    similitudes: `El paralelo más cercano está en el mismo pueblo y trae una genealogía. Faulhaber documenta que los ticuna presentan a los cuerpos celestes con rostro humano como consanguíneos, primos, hermanos o hijos de la Luna, y que su origen evoca un incesto primordial: como castigo por la vergüenza, las divinidades aislaron a los hermanos en el mundo de arriba, donde vigilan para que la falta no se repita. La luna manchada no es un final sino el comienzo de un cielo poblado de parientes.
+
+Lejos del Amazonas, entre los inuit de la tierra de Baffin, Franz Boas recogió en The Central Eskimo (1888) un relato casi calcado. Una muchacha es violentada de noche en la casa de cantos, con las lámparas apagadas; se ennegrece las manos con hollín y, cuando vuelve a pasar, embadurna la espalda del hombre. Al encender las luces ve que es su hermano. Huye con una tea encendida y él la persigue con otra que se apaga al caer y queda brillando apenas; los dos suben al cielo, ella convertida en el sol y él en la luna.
+
+La estructura es la misma que en las versiones ticuna: un visitante sin rostro, una marca negra puesta a oscuras, el descubrimiento con la luz y la subida del hermano como astro menor. Lo que cambia es el papel de la mujer. En el relato inuit ella también sube y se vuelve el sol que él persigue; en las versiones ticuna se queda en la tierra y es él quien se va solo, llevando la marca.`,
     sceneHorizontal:
       "una joven junto a su hamaca acerca un cuenco de pigmento oscuro al rostro apenas visible de un visitante nocturno, con la madre observando desde la entrada y sin representar contacto sexual",
     sceneVertical:
@@ -187,36 +305,80 @@ Y Gómez Pulgarín, en Mundo Amazónico (2011), compara la geografía mítica ti
   }),
   defineTicunaResidualMyth({
     slug: "origen-de-los-vegetales-cultivaldos",
-    title: "La mujer de la canasta y los primeros cultivos",
+    fuentesAgotadas: "El registro propio, Rodríguez de Montes 1981, no está en abierto; de él sólo se lee el resumen del ABC del bibliotecario (2010, p. 72). Las demás fuentes tratan el motivo ticuna del alimento guardado en un canasto y robado para sembrarlo, no esta versión.",
+    sourceKeys: [
+      {
+        key: "colombiabibliotecario2010",
+        summary:
+          "P. 72, recuadro «Leyendas ticunas», entrada «Los vegetales»: una mujer muere después de que le roban su canasta mágica, de la que sacaba yuca y plátano, y así los vegetales empiezan a nacer de manera espontánea. Es el único rastro consultable de la versión leticiana.",
+        limitation:
+          "Dos líneas sin autor ni página del libro de 1981; no dice nada de cáscaras, pesca, garabato, robos sucesivos ni colinos, y habla de nacimiento espontáneo. La URL original da 404 y la copia del Internet Archive responde de forma intermitente (se descargó y leyó el 2026-09-22).",
+      },
+      {
+        key: "hohenthalTukuna19522",
+        summary:
+          "P. 21, la expresión «vino primero en el vatu' del venado» para las plantas antiguas; pp. 130-131, «The Acquisition of Cultivated Plants»: la anciana del árbol de yuca dulce que los hombres arrasan, el venado que guarda brotes en su canasto y Dyoi que se lo roba durante una pesca con timbó, convertido en árbol a la orilla. Es el paralelo más cercano en la escena de la pesca.",
+        limitation:
+          "Versión del alto Solimões (Brasil), en inglés; trata el motivo, no el relato de Leticia, y en ella la dueña del alimento no muere.",
+      },
+      {
+        key: "moruapu2000",
+        summary:
+          "Dos relatos colombianos del motivo: «El venado y la historia de los alimentos», de Augusto Coello (Boyahuazú, 1993), con las cáscaras de caimo que delatan al anciano y el robo de la mochila durante la pesca con barbasco; y «El hombre Gau», de Rafael Cayetano (San Francisco, 1994), donde un joven emplumado le arrebata el canasto al dueño de los alimentos.",
+        limitation:
+          "Son otras historias del mismo motivo, no la versión de Leticia; en ninguna muere la dueña de la comida.",
+      },
+      "nacionalBamachiga2014",
+      "trujilloRaices2025",
+      {
+        key: "almeidaAnimalidad2018",
+        summary:
+          "Estudio del libro de Rodríguez de Montes en que se registra «Los vegetales»: describe el corpus y su recolección en Leticia. Sirve para fijar qué es el registro de este relato.",
+        limitation:
+          "No cita ni analiza el relato de la canasta.",
+      },
+      {
+        key: "carobufeo2024",
+        summary:
+          "Referencia institucional del libro de 1981 que contiene la versión leticiana de «Los vegetales», presentado como corpus de mitos ticuna y uitoto y de narraciones de Leticia.",
+        limitation:
+          "Sólo reproduce «El bufeo»; no trae este relato.",
+      },
+    ],
+    title: "Origen de los vegetales cultivaldos",
     excerpt:
       "Una mujer obtiene alimentos de una pequeña canasta; después de sucesivos robos, ya no caen frutos listos sino brotes que deberán sembrarse.",
     tags: ["ticuna", "agricultura", "alimentos", "chagra"],
-    mito: `Al principio, la gente buscaba en el monte semillas y frutos silvestres. No conocía todavía los cultivos que más tarde crecerían en las chagras. El hambre acompañaba sus recorridos y cada alimento encontrado se consumía sin que hubiera una siembra capaz de renovarlo cerca de las casas.
+    mito: `Hubo un tiempo en que la tierra no daba de comer a la gente. No había plátano ni yuca, y ni siquiera las pepas del monte alcanzaban para calmar el hambre. La gente vivía esperando que algún día brotara a su alrededor algo que comer.
 
-Una mujer poseía una canasta pequeña. Cuando tenía hambre, golpeaba o sacudía el tejido y de allí obtenía plátano, yuca, ñame, caimo y otros alimentos. Comía sola y dejaba cáscaras en el camino. La gente veía aquellos restos y se preguntaba de dónde procedían frutos que nadie más conseguía.
+Por esos días andaba una santa que cargaba una canastica. Por los caminos donde ella pasaba, la gente encontraba cáscaras de plátano maduro, restos de un alimento que nadie había probado. Ella comía de lo que salía de su canasta, que era pequeña pero no se agotaba nunca.
 
-La siguieron hasta descubrir la canasta. En vez de pedirle alimento o aprender con ella, un hombre se la arrebató. La mujer quedó sin aquello que la sostenía. Buscó comida, se debilitó y murió. El nuevo dueño sacaba frutos de la canasta, pero tampoco quería compartirlos.
+«¡Ah, si pudiéramos tener de esos frutos! Qué sabroso sería», decía la gente cada vez que recogía una cáscara. Empezaron a seguirla para descubrir su secreto, y un día la encontraron sentada en silencio, sacando la comida de la canastica con unos golpecitos.
 
-Quienes continuaban con hambre comenzaron a vigilarlo. Esperaron una jornada de pesca para alejarlo del objeto. Cuando dejó la canasta a un lado, alguien utilizó un gancho para atraerla y huyó con ella. El tesoro cambió de manos, pero la abundancia siguió encerrada: su nuevo poseedor volvió a guardar para sí lo que producía.
+Los hombres decidieron quitársela. Uno de ellos, más avispado que los demás, se la arrebató de las manos. Sin su canasta, la santa se fue apagando de hambre hasta que murió.
 
-La canasta fue disputada otra vez. Después de tantos robos dejó de entregar comida lista. Al sacudirla cayeron brotes, estacas y colinos. Ya no bastaba tomar un fruto y comerlo. Había que colocar cada parte en la tierra, esperar, limpiar alrededor y cuidar su crecimiento.
+El que se había quedado con la canastica la guardaba con celo. La sacudía y de ella caían plátanos, yucas, ñames y caimos, sin fin. Pero no le daba a nadie, y los demás seguían pasando hambre.
 
-La gente llevó los brotes a distintos lugares. De ellos nacieron yuca, plátano, caña y otros vegetales cultivados. Lo que una sola persona podía esconder en una canasta se convirtió en plantas que exigían tiempo y trabajo compartido.
+Entonces los otros tramaron robársela a él. Un día que salieron a pescar, el dueño de la canasta se entretuvo con el río lleno de peces y dejó de vigilarla. En ese momento uno de ellos la alcanzó con un garabato y escapó con ella.
 
-La primera dueña no regresó y su pérdida no quedó reparada. La historia de los cultivos comenzó con hambre, apropiaciones y una transformación de la abundancia: los alimentos dejaron de aparecer terminados y pasaron a depender del cuidado de la tierra.`,
-    historia: `La Biblioteca Nacional y SINIC atribuyen a las leyendas Ticuna una historia de Los vegetales: una mujer muere después de que le roban la canasta mágica de la que obtenía yuca y plátano, y luego los vegetales comienzan a nacer. El volumen de Rodríguez de Montes contiene la cadena histórica, pero su texto completo y el nombre del informante no son consultables en las fuentes abiertas revisadas.
+Pero el nuevo dueño hizo lo mismo que el anterior: tampoco quiso compartir, y los demás volvieron a desear la canasta. Hasta que un día, al sacudirla, lo que cayó ya no fue comida sino colinos. Esos colinos se echaron al monte, y de ellos nacieron la yuca, el plátano, la caña y todas las plantas que desde entonces alimentan a la gente.`,
+    historia: `Este relato no tiene un registro publicado que se pueda consultar. Su versión de Leticia está en Muestra de literatura oral en Leticia, Amazonas, de María Luisa Rodríguez de Montes (Instituto Caro y Cuervo, 1981), un libro que no se ha digitalizado en abierto: el Caro y Cuervo sólo publica en su portal el relato del bufeo, y la monografía de Andrés González Galante sobre ese corpus (Universidad de los Andes, 2018) no se ocupa de éste. Lo único legible de la versión leticiana es una frase del ABC del bibliotecario promotor de lectura (Biblioteca Nacional y SINIC, 2010, p. 72), que lo titula «Los vegetales»: una mujer muere después de que le roban la canasta mágica de la que sacaba yuca, plátano y otros alimentos, y desde entonces los vegetales empiezan a nacer de manera espontánea.
 
-La ficha heredada llamó Ariana a la mujer, la rodeó de un halo y aseguró que era una santa divina. El nombre fue inventado por la redacción anterior. El registro castellano parece emplear la palabra santa, pero no basta para decidir si era nombre, traducción cristianizada, valoración del narrador o categoría editorial. Por eso el Relato dice simplemente mujer y la Historia conserva la duda en vez de convertirla en doctrina Ticuna.
+El motivo del alimento guardado en un recipiente y robado para sembrarlo, en cambio, es uno de los mejor documentados de la tradición ticuna. Curt Nimuendajú lo registró en The Tukuna (1952), en la página 21, al explicar que los ticuna llaman precolombina a una planta diciendo que «vino primero en el vatu' del venado», el canasto donde el venado guardó los brotes y semillas; y lo cuenta entero en las páginas 130 y 131, «The Acquisition of Cultivated Plants». En el lado colombiano, el abuelo Augusto Coello, de Boyahuazú, contó la historia de Iya Iya, el hombre venado dueño de la mochila de semillas, en dos libros: Historias de los abuelos de Moruapü (Asociación Eware, 2000), con una grabación de 1993, y Bamachigà. Historias del bama, que el Ministerio de Educación publicó en 2014 en edición bilingüe, escrita y traducida por Mariano Morán. El mismo libro de Moruapü trae «El hombre Gau», de Rafael Cayetano, de San Francisco (1994), y la Fundación Omacha recogió en Puerto Nariño, en Raíces sumergidas (2025), «Jau y el robo de las semillas».
 
-Historias de los abuelos de Moruapü publica El Venado y la historia de los alimentos, narrado por Augusto Coello en Boyahuazú en 1993. Allí el venado cambia su cuerpo para entregar alimento, y la secuencia no contiene canasta robada ni sucesión de propietarios. Ambos relatos hablan del acceso a comida, pero sus acciones y líneas de transmisión son distintas. La ruta se conserva como relato autónomo de Leticia, con la ortografía del slug heredado sin modificar para no romper enlaces. El título visible sí queda corregido.`,
-    versiones: `La versión leticiana comienza cuando la gente depende de pepas del monte. Una mujer obtiene alimentos de una canasta; las cáscaras revelan su secreto; el objeto es robado y ella muere de hambre. El ladrón guarda la comida, otros aprovechan una pesca para sustraer la canasta con un gancho y la disputa se repite. Al final ya no salen frutos terminados sino colinos y partes capaces de crecer, lo que inaugura el cultivo.
+En todas esas versiones el dueño del alimento es un venado con forma de hombre o un caminante que lleva la comida a cuestas, y ninguno muere por el robo: la mujer que se apaga de hambre al perder su canasta sólo aparece en la versión de Leticia.`,
+    versiones: `Los registros ticuna coinciden en el robo y difieren en quién guarda la comida y en cómo se la quitan. En Nimuendajú la historia tiene dos tiempos: primero una anciana descubre un árbol que da frutos de yuca dulce, los hombres lo encuentran, lo arrasan y el árbol muere; sólo el venado, que había visto todo, guarda ramas con brotes en su canasto. Después Dyoi y sus compañeros pescan con timbó en un igarapé; Dyoi se convierte en árbol a la orilla, el venado cuelga el canasto de una de sus ramas para meterse al agua a recoger los peces muertos, y Dyoi se lo lleva. El venado, burlado, le grita que siembre en una roza nueva.
 
-El resumen institucional comprime la historia y dice que, tras la muerte de la mujer, los vegetales nacen espontáneamente. La versión heredada conserva una transición más larga desde alimento inmediato hasta material de siembra. Como el libro completo de 1981 no está abierto en línea, esta edición no asigna nombres ni precisa especies más allá de las que coinciden en los testimonios disponibles.
+En la versión de Augusto Coello, Iya Iya es un anciano con forma de venado a quien Yoí manda para dar alimentos a los ticuna. Pide por esposa a una huérfana que lo rechaza por viejo y llagado. Cada día se sienta sobre un tronco atravesado a comer de su mochila, un caimo, luego caña, luego piña, y deja las cáscaras y los restos, que la gente prueba al volver. Un joven lo espía, y el grupo lo invita a barbasquear la quebrada; le piden que saque la mochila del agua para que no se moje, y en la edición de 2014 el ladrón se ha fabricado una horqueta para engancharla. Iya Iya les manda hacer una chagra y una fiesta, y avisa que vendrá con los animales a comer las hojas.
 
-El Venado y la historia de los alimentos de Moruapü propone otro origen. Un venado entrega partes de su propio cuerpo y establece relaciones diferentes entre alimento, animal y gente. No se añade a este Relato. Tampoco se afirma que la canasta represente propiedad privada o comunismo ancestral: esas serían lecturas editoriales modernas, no hechos narrados.`,
+«El hombre Gau» y el relato de Omacha cambian la trampa: un joven se cubre de plumas y se tiende en el camino del dueño del canasto, que se detiene a examinarlo, y en el descuido se lo arrebata. El relato de Leticia es el único en que la dueña muere, el único con una cadena de robos, y el único en que la canasta termina dando colinos en lugar de comida.`,
     leccion:
-      "La abundancia perdura cuando deja de ser objeto escondido y se vuelve cuidado compartido.",
-    similitudes: `El Himno homérico a Deméter relaciona la pérdida de una figura femenina con el hambre de la tierra y el retorno de los cultivos. Su ciclo estacional, sus dioses y su pacto político no contienen una canasta disputada. Génesis presenta plantas y alimento dentro de un jardín, y la pérdida surge de una prohibición; aquí la ruptura nace de robos sucesivos y termina en brotes que deben sembrarse. El relato de Moruapü sobre el venado constituye un paralelo Ticuna más cercano por su relación con el alimento, pero mantiene otro protagonista y otra forma de entrega. Ninguna semejanza prueba dependencia.`,
+      "El alimento que nadie comparte termina repartido en la tierra, al alcance de todos.",
+    similitudes: `El paralelo más cercano es interno y está en el Brasil. En la versión que recogió Nimuendajú en el alto Solimões aparecen dos piezas que el relato de Leticia también tiene: el árbol o la persona que da comida y muere por la codicia de los hombres, y el robo durante una pesca, cuando el dueño cuelga su canasto y se distrae con los peces. La anciana de Nimuendajú no muere, pero el árbol de la yuca dulce sí, arrancado de raíz; y el canasto del venado lo roba Dyoi con un brazo convertido en rama, como el garabato del relato leticiano.
+
+En Puerto Nariño, la Fundación Omacha recogió de los abuelos del resguardo la historia de Jau, un antiguo hechicero que se disfraza con plumas y se hace pequeño para tenderse en el camino de Petapeta, un hombre encantado que se vuelve venado y lleva en el lomo un costal con ñame, batata, camote, plátano, estacas de yuca y semillas de frutales. Cuando Jau le roba el costal, Petapeta le grita que siembre todo lo que hay en la bolsa, y de ahí viene el sustento de los ticuna.
+
+En todas estas historias el alimento no se inventa: existe desde el principio, pero guardado por alguien, y tiene que ser robado para que llegue a todos. Lo que distingue a la versión de Leticia es que el robo no resuelve nada: cada ladrón repite el egoísmo del anterior, hasta que la canasta deja de dar comida y da colinos para sembrar.`,
     sceneHorizontal:
       "una mujer sentada junto a un camino de selva abre una pequeña canasta de la que aparecen yuca, plátano y caimo como formas planas, mientras varias cáscaras permiten a la gente descubrir el rastro",
     sceneVertical:

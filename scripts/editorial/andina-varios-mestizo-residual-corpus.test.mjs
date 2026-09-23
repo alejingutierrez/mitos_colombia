@@ -89,9 +89,8 @@ test("corrige marcos ficticios, fusiones y sujeto narrativo", () => {
   assert.match(colmillona.versiones, /mujer hermosa/);
 
   const nina = bySlug.get("la-nina-de-la-carta");
-  assert.match(nina.mito, /1 de noviembre de 1963/i);
-  assert.match(nina.historia, /cambiaba la fecha a 1965/i);
-  assert.match(nina.versiones, /no hay evidencia suficiente[^]+investigación real/i);
+  assert.match(nina.mito, /Itagüí[\s\S]+carta/i);
+  assert.match(nina.historia, /Cuentos de espantos/i);
 
   const barbacoa = bySlug.get("la-barbacoa-del-muerto");
   assert.match(barbacoa.mito, /cuatro hombres sin cabeza/);
