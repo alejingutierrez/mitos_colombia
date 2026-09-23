@@ -122,18 +122,10 @@
       "desc": "PLANO GENERAL del pozo entero y quieto al atardecer, con la zanja abandonada y ya cubriéndose de hierba a un lado. Sin personas."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b1a",
-      "reusa": "mitos/el-pozo-de-hunzahua/entrada"
-    },
-    {
-      "tag": "b5a",
-      "reusa": "mitos/el-pozo-de-hunzahua/acto"
-    },
-    {
-      "tag": "b9a",
-      "reusa": "mitos/el-pozo-de-hunzahua/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-pozo-hunzahua-escenas.mjs"
+  }
 }

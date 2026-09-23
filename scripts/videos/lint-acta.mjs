@@ -62,8 +62,13 @@ if (!acta.razon_N) errs.push("sin razon_N: el largo debe salir de los nudos, no 
 // convertían mitos de 90 s en videos de 180 s. Auditado el 2026-09-17 sobre los
 // 117 guiones: la correlación nudos-N era 0,93 y la de canon-nudos apenas 0,56,
 // es decir el troceo mandaba sobre el mito.
+// Un mito con video ya montado queda congelado: su guion no se vuelve a medir
+// porque volver a producirlo costaría más que el largo que ganaría. Se marca
+// con `congelado` en el acta y se dice por qué, para que no parezca descuido.
 const N_DERIVADO = Math.min(18, Math.max(8, Math.ceil(acta.nudos.length / 2)));
-if (N !== N_DERIVADO) {
+if (acta.congelado) {
+  avisos.push(`congelado (${acta.congelado}): N=${N} se conserva aunque los nudos pidan N=${N_DERIVADO}`);
+} else if (N !== N_DERIVADO) {
   errs.push(
     `N_propuesto ${N} no sale de los nudos: ${acta.nudos.length} nudos piden N=${N_DERIVADO} ` +
       `(${N_DERIVADO * 2} keyframes, ≈${N_DERIVADO * 10}s). ` +

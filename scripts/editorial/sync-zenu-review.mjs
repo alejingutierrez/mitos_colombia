@@ -14,10 +14,15 @@ import {
 } from "../../editorial/zenu/universe.mjs";
 import { runCommunityEditorialSync } from "./lib/run-community-editorial-sync.mjs";
 
+// Antes decía «doce para todos, seis para Juan Lara»: era el reparto en bloque
+// escrito en la configuración de sincronización. Ahora cada ficha lleva las
+// obras que usó, así que el número sale de la propia ficha. Lo que la
+// comprobación sigue garantizando es que Neon reciba exactamente lo que el
+// módulo tiene, ni una fuente más ni una menos.
 const expectedSourceCountsBySlug = Object.fromEntries(
   records.map((record) => [
     record.slug,
-    record.slug === "juan-lara-y-la-trenza-del-aire" ? 6 : 12,
+    record.keySources.length + record.sources.length,
   ]),
 );
 

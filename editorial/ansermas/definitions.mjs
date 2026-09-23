@@ -5,42 +5,42 @@ export const ansermasDefinitions = [
   {
     slug: "los-pasos-de-xixaraca",
     title: "Las huellas de Xixaraca y las lágrimas de Michua",
-    mito: `En el territorio de Guacuma, el cerro Karambá —también llamado Batero— se levantaba como lugar de Xixaraca y Michua. Desde sus alturas, ambos cuidaban los caminos, los cultivos y las aguas. Xixaraca protegía a la gente y Michua recorría las nubes y las pendientes. Su presencia no se limitaba a una figura visible: se reconocía en la montaña, en la fertilidad y en el orden que sostenía la vida.
+    mito: `A orillas del río Mápura hay huellas humanas gigantescas estampadas en las rocas. Están a la vista, junto al agua, en el camino por donde la gente pasa todos los días. Y la gente que pasa a su lado se santigua.
 
-Con el paso del tiempo, la relación entre los protectores y las poblaciones cambió. Algunas versiones dicen que la gente olvidó agradecer; otras sitúan la ruptura en la llegada de extranjeros y en la destrucción del mundo antiguo. Xixaraca y Michua decidieron partir. No abandonaron el territorio sin dejar señales: atravesaron las montañas y pasaron junto al río Mápura.
+No todos explican lo mismo. Unos dicen que son señales del diablo y aprietan el paso. Otros creen que son el testimonio del dios de los indígenas, que derrotado y triste se alejó en días remotos de este territorio, y entonces se quedan un momento mirando el agua.
 
-Al caminar sobre las rocas, Xixaraca imprimió grandes huellas humanas. En algunos relatos fue Michua quien dejó otras marcas; en otros, las pisadas pertenecen a ambos. Quedaron cerca del agua como una memoria difícil de borrar. No eran simples rastros de un cuerpo gigantesco. Mostraban que el protector había recorrido un paisaje que la conquista y el olvido no lograron volver completamente extraño.
+El que las dejó se llamaba Xixaraca y era el dios supremo. La tierra que cuidaba se llama Guacuma. El cerro desde donde se cuidaba es una piedra alta y dura que se llamó Karambá y que después la gente llamó Batero, y desde arriba se ve todo lo que hay que ver: los filos, las quebradas, los caminos por donde puede venir alguien.
 
-Michua miró por última vez el territorio y lloró. Sus lágrimas descendieron por la montaña hasta convertirse en cascadas. La memoria regional las llamó Lágrimas de Michua y las relacionó con los saltos de Bellavista. Así, piedra y agua conservaron dos formas de la despedida: la huella que permanece y la corriente que sigue moviéndose.
+Con él estaba Michua, diosa del valor y de la guerra. Cuando había que defender a los suyos, convertía los ríos en sangre y destrozaba con rayos a los enemigos. No era una fuerza lejana ni silenciosa: se anunciaba en el agua y en el cielo, y los que peleaban sabían leer las dos señales antes de que llegara el golpe.
 
-Las fuentes no cuentan un destino único para Xixaraca y Michua. Algunas los hacen alejarse hacia otras tierras; otras mantienen su presencia dentro del cerro y del paisaje. Tampoco explican todas las marcas de Mápura como una prueba histórica literal. La narración las reconoce como lugares donde generaciones posteriores volvieron a contar quiénes protegían Guacuma.
+Después el mundo cambió y Xixaraca se fue. No se fue vencedor, ni se fue enojado. Se fue derrotado y triste, que es la manera más difícil de irse, y se alejó de Guacuma en días remotos, cuando ya no quedaba modo de sostener lo que había sostenido.
 
-Por eso las huellas no cierran la historia. Cada vez que alguien las nombra, el viaje vuelve a comenzar. El cerro, el río y las cascadas forman un archivo territorial: recuerdan a Xixaraca y Michua sin separarlos del agua, la agricultura y las comunidades que han cuidado esos nombres.`,
-    historia: `El sitio heredaba dos páginas —“Los pasos de Xixaraca” y “Las huellas de Mápura”— que repetían la misma partida, las pisadas sobre roca y las lágrimas convertidas en cascadas. La revisión las unifica aquí y conserva la segunda URL para un relato distinto, el ciclo de los Tamaracas.
+Al irse pisó la roca junto al río. El pie entró en la piedra como entra en el barro, del tamaño que él tenía, y ahí quedó. Por eso las huellas son tan grandes, y por eso están abajo, al borde del agua, y no arriba en el cerro: marcan una salida y no una llegada.
 
-Pedro Cieza de León registró en el siglo XVI la provincia de Anserma o Umbra, pero describió a Xixarama con la categoría cristiana de “diablo”. El gobernador indígena Gabriel Campeón rechazó expresamente esa equivalencia en una entrevista de 1977 publicada por Albeiro Valencia Llano: Xixarama era una deidad importante, no el demonio europeo. Esta edición adopta esa corrección y no repite la demonización colonial.
+Quien las mira hoy no puede saber si lo que quedó impreso allí es una amenaza o una despedida. Las dos lecturas caben en la misma piedra, y por eso el gesto de persignarse sirve para las dos.`,
+    historia: `El registro más antiguo del nombre está en la primera parte de la «Crónica del Perú» de Pedro Cieza de León, impresa en 1553. En el capítulo XVI, sobre los caciques y pueblos comarcanos a la villa de Ancerma, escribe una sola frase: «Llaman al diablo Xixarama, y a los españoles, tamaraca». Es una traducción hecha desde la conquista y por un participante en ella: lo que Cieza registra es el nombre, no lo que ese nombre significaba para quienes lo usaban.
 
-Inés Lucía Abad y el Handbook of South American Indians reúnen referencias históricas sobre Xixarama. Alfredo Cardona Tobón vincula a Xixaraca y Michua con Karambá, Mápura y las cascadas; su ensayo de 1993 documenta la memoria regional de grandes huellas en las rocas sin afirmar que sean evidencia arqueológica de una figura sobrenatural. León Felipe Cubillos retoma esos lugares dentro de una lectura ambiental de Guacuma.
+El relato de las huellas lo publicó Alfredo Cardona Tobón en «Las huellas ancestrales», revista Ánfora 1(1), Universidad Autónoma de Manizales, 1993, páginas 76 a 79. Su primer párrafo describe las rocas del Mápura, los vecinos que se santiguan y las dos interpretaciones; en la página 78 escribe que de las creencias de las tribus de la familia Anserma «queda el recuerdo vago de Xixaraca, Dios supremo que estampó sus huellas en las rocas de Mápura, y el de Michua, la diosa del valor y de la guerra que convertía los ríos en sangre y destrozaba con rayos a los enemigos de sus pueblos». El ensayo trata de la desaparición de la memoria regional, y es él mismo un lamento por lo que ya casi no se recuerda.
 
-“Anserma” fue un nombre colonial amplio para poblaciones diversas del alto Cauca. Por eso esta página habla de memoria Anserma regional y no presenta una versión de Quinchía como relato uniforme de todos los pueblos actuales relacionados con Umbra o Umbrá. Las coordenadas ubican el entorno de Mápura, no certifican una piedra específica.`,
-    versiones: `El nombre aparece como Xixarama en la crónica de Cieza y en varias síntesis históricas, mientras la memoria regional de Quinchía usa con frecuencia Xixaraca. La revisión conserva ambas grafías y emplea Xixaraca en el título porque así circula la narración de las huellas. No asegura que sean personajes distintos ni que todos los hablantes los hayan entendido de idéntica manera.
+El cerro y el territorio tienen respaldo propio. «Entre cerros y montañas. Memorias de resistencias en Quinchía», de Alberto Berón Ospina, Juan Pablo Arciniegas, Isabel Cristina Castillo y Jefferson Jaramillo, publicado en 2020 por la Universidad Tecnológica de Pereira con Ediciones desde abajo, registra el cerro de Batero o de Karambá con el significado «piedra alta y dura» y llama a los oriundos del municipio habitantes de la tierra de Guacuma.
 
-Cardona reúne versiones donde Xixaraca y Michua viven en Karambá o Batero. La causa de su partida cambia: ingratitud de la gente, pérdida del culto, llegada de los conquistadores o transformación general del territorio. También varía quién deja cada pisada y por cuáles sitios continúa el recorrido. Mápura es el lugar más constante; Irra, Naranjal y Santa Elena aparecen en reconstrucciones más amplias.
+Mápura tampoco es sólo un río. Víctor Zuluaga Gómez documenta el cacicazgo de Mapura en el actual Quinchía, con los caciques Tuzarma y Aytamara capturados en la represión de 1557, y un pleito del siglo XVIII menciona las salinas de Mapura entre los caminos de Chamí, Quiebralomo y Pirsa.`,
+    versiones: `Xixaraca cambia de categoría según quién lo nombre. En Cieza es «el diablo», con la grafía Xixarama y dentro de una traducción cristiana del siglo XVI. En Cardona Tobón es «Dios supremo». En «Entre cerros y montañas», que recoge lo que la comunidad dice hoy, es «un cacique indígena de nombre Xixaraca, símbolo del liderazgo y la resistencia del pueblo Embera». Dios, diablo y cacique son tres estatutos distintos, y no se funden aquí.
 
-Las Lágrimas de Michua se identifican con cascadas de Bellavista en relatos regionales. Esa relación entre llanto y agua puede acompañar la salida de ambos protectores o funcionar como episodio final independiente. La página no inventa una ruta continua entre todas las marcas y saltos.
+La causa de la partida también varía. Cardona Tobón dice sólo que se alejó «derrotado y triste», sin atribuirlo a nadie. Las versiones que circulan en Quinchía hablan unas veces de la ingratitud de la gente y otras de la llegada de los conquistadores. La primera culpa a los de adentro y la segunda a los de afuera, y no son intercambiables.
 
-Fuentes de mediados del siglo XX describen a Xixarama como progenitor del Sol y la Luna. Es un dato cosmológico relevante, pero no se conserva una trama pública suficientemente desarrollada para convertirlo en otra página. Se incluye como contexto y no como una escena añadida a la despedida.
+Quién dejó las huellas es el punto donde más se ha desplazado el relato. En la fuente indexada las estampa Xixaraca, él solo. Otras reconstrucciones se las reparten entre los dos, o se las atribuyen a Michua. Esta revisión se queda con la atribución de la fuente publicada.
 
-Las huellas pueden interpretarse como marcas naturales, grabados o lugares de memoria. Las fuentes consultadas no permiten resolver su origen material. La relevancia editorial está en la atribución transmitida y en la forma como piedra y agua sostienen una historia territorial.`,
+Y hay un episodio que la ficha anterior daba por firme y que aquí se retira: las cascadas llamadas Lágrimas de Michua, en Bellavista. Las cascadas existen; el nombre y el llanto que las origina no aparecen en ninguna fuente localizable fuera de un blog personal y del propio sitio. Por eso el título de la página cambia y el relato termina en la piedra, que es donde termina el testimonio.`,
     leccion:
-      "Un territorio conserva memoria cuando sus nombres, piedras y aguas siguen siendo escuchados y cuidados.",
-    similitudes: `Las huellas de seres protectores o gigantes aparecen en muchos paisajes de Colombia y América. El motivo convierte una forma de la roca en testimonio de un paso antiguo, pero cada tradición define quién caminó, por qué partió y qué relación mantiene con la comunidad. Xixaraca no debe homologarse con Bochica, Viracocha ni héroes viajeros solo porque también deja señales.
+      "Una piedra marcada guarda a la vez la amenaza y la despedida, según quién la mire.",
+    similitudes: `El paralelo documentado más cercano está en la misma crónica y en la misma comarca. Cieza describe en el capítulo XV que los indios vecinos de Ancerma esculpían en tablas «la figura del demonio, muy fiera, de manera humana, y otros ídolos y figuras de gatos, en quien adoran», y que «cuando tienen necesidad de agua o de sol para cultivar sus tierras, piden, según dicen los mismos indios naturales, ayuda a estos sus dioses». Deidades con forma humana y forma de felino, talladas, a las que se pide agua o sol: es el mismo repertorio en el que cabe un dios que deja su forma impresa en la piedra.
 
-El llanto convertido en cascada comparte una imagen extendida en relatos sobre pérdidas y despedidas. Aquí las Lágrimas de Michua se vinculan con Bellavista y con la transformación histórica de Guacuma. La semejanza poética no vuelve el agua un adorno: la cascada es parte del archivo territorial que mantiene el nombre de la protectora.
+El segundo paralelo, también en Cieza y a pocas leguas, es el episodio de Tamaracunga en Pirsa, fechado en 1549, donde un hombre es perseguido por presencias que sólo él ve y termina bautizado. Sirve para medir la distancia entre lo que un cronista de conquista consigna y lo que una comunidad recuerda cuatro siglos después: en 1549 la escena se escribe para probar una conversión; en 1993 la misma región recuerda a un dios que se marchó.
 
-La demonización de Xixarama recuerda un patrón colonial frecuente: cronistas cristianos tradujeron deidades, dueños y especialistas indígenas como “demonios”. Comparar esos registros ayuda a reconocer el sesgo, no a reconstruir una religión panindígena. El testimonio de Gabriel Campeón ofrece una corrección concreta desde una autoridad indígena del territorio.
+Las huellas de gigantes o de seres protectores impresas en la roca aparecen en muchos paisajes americanos, y el motivo convierte una forma natural en testimonio de un paso antiguo. La semejanza es formal y no autoriza a homologar a Xixaraca con héroes viajeros de otras tradiciones sólo porque también dejen señales.
 
-El tema de una deidad que se aleja cuando cambia la relación con la gente puede parecerse a relatos de pacto roto. Algunas versiones regionales hablan de ingratitud, pero otras enfatizan conquista y despojo. Presentar una única moraleja de abandono ocultaría esa diferencia histórica. La revisión conserva el núcleo compartido —partida, huellas y agua— y deja abiertas las causas que las fuentes narran de modos distintos.`,
+El dios que se aleja cuando la relación con la gente se rompe pertenece a una familia amplia de relatos de pacto deshecho. Aquí conviene no cerrar la moraleja: la fuente publicada no dice por qué se fue, sólo cómo iba.`,
     excerpt:
       "Xixaraca y Michua parten de Karambá, dejan huellas junto al Mápura y convierten una despedida en memoria de piedra y agua.",
     seoTitle: "Xixaraca y Michua: huellas y cascadas Ansermas",
@@ -55,13 +55,62 @@ El tema de una deidad que se aleja cuando cambia la relación con la gente puede
     ],
     tags: ["Xixaraca", "huellas", "memoria", "montaña"],
     sourceKeys: [
-      "cieza1864",
-      "steward1948",
-      "abad1955",
-      "cardona1989",
-      "cardona1993",
-      "valencia2009",
-      "cubillos2020",
+      {
+        key: "cardona1993",
+        summary:
+          "Es la única fuente académica abierta e indexada del relato. Abre con las rocas: «A orillas del río Mápura gigantescas huellas humanas, estampadas en las rocas, exaltan la imaginación de los vecinos que se santiguan al pasar por su lado. Son señales del diablo, dicen unos, otros creen que son testimonio del Dios de los indígenas que derrotado y triste se alejó en días remotos del territorio quinchieño». Y en la página 78 da los dos nombres: «queda el recuerdo vago de Xixaraca, Dios supremo que estampó sus huellas en las rocas de Mápura, y el de Michua, la diosa del valor y de la guerra que convertía los ríos en sangre y destrozaba con rayos a los enemigos de sus pueblos».",
+        limitation:
+          "Es un ensayo de opinión sobre la desaparición de la memoria regional, sin aparato crítico, sin informantes citados para esas dos frases y sin fecha de recolección. No menciona Karambá, Batero, Opiramá, Guacuma, los Tamaracas, Bellavista ni ninguna lágrima: la ficha heredada le atribuía mucho más de lo que dice. Su vocabulario sobre los indígenas es el de un letrado caldense de 1993 y no se reproduce.",
+      },
+      {
+        key: "leoncronica1553",
+        summary:
+          "El capítulo XVI, sobre los caciques y pueblos comarcanos a la villa de Ancerma, contiene el registro más antiguo del nombre en una sola frase: «Llaman al diablo Xixarama, y a los españoles, tamaraca». El mismo capítulo dice que el sitio donde se fundó la villa «es llamado por los indios naturales Umbra» y explica el topónimo Ancerma por «ancer», la palabra de la sal. El capítulo XV añade el contexto religioso: los ídolos tallados, las figuras de gatos y la petición de agua o de sol para las labranzas.",
+        limitation:
+          "Cieza traduce con la categoría cristiana de diablo lo que no entendía, y escribe como participante en la conquista de esa gente: registra el nombre, no lo que significaba para quienes lo usaban. La grafía es Xixarama y no Xixaraca, y entre esa mención y el relato de las huellas median cuatro siglos sin ningún eslabón documentado.",
+      },
+      {
+        key: "ospinaEntre2020",
+        summary:
+          "Da el anclaje territorial del relato: registra el cerro de Batero, también llamado Karambá, con el significado «piedra alta y dura», llama a los oriundos del municipio habitantes de la tierra de Guacuma, y recoge que en los mitos de Quinchía «un cacique indígena de nombre Xixaraca, símbolo del liderazgo y la resistencia del pueblo Embera» aparece junto a «Michua, diosa del valor y la guerra».",
+        limitation:
+          "Su objeto es la memoria de la violencia del siglo XX y no la mitología: lo que dice de Xixaraca y Michua son tres líneas de contexto, recogidas de lo que hoy dicen los habitantes. Y lo llama cacique, no dios, lo que contradice al ensayo de 1993 sin discutirlo. No menciona las huellas ni el río Mápura.",
+      },
+      {
+        key: "gomezHistoria2013",
+        summary:
+          "Documenta que Mápura no es sólo un río: en la represión de la rebelión de 1557 el teniente Luis de Guevara mandó capturar a los caciques de la provincia de Anserma, entre ellos «Aytamara, hermano del cacique de Mapura, en territorios que hoy corresponden a Quinchía» y «Tuzarma, cacique de Mapura, hoy Quinchía», junto a Opirama, heredero de la cacica de Andica, y Guática. Un pleito del siglo XVIII que reproduce menciona además «las salinas de Mapura» entre los caminos de Chamí, Quiebralomo y Pirsa.",
+        limitation:
+          "Es historia regional de divulgación universitaria y no expone las referencias documentales de esa lista de caciques en el pasaje. Nada de lo que aporta toca el relato de las huellas: sirve para demostrar que los topónimos existen como cacicazgos coloniales, no para sostener la narración.",
+      },
+      {
+        key: "socioculturalesMichua2020",
+        summary:
+          "Reúne en un solo párrafo lo que el relato de las huellas presupone y el ensayo de 1993 no dice: que Michua «protegía desde el cerro Karambá al actual territorio de Quinchía, llamado Guacuma» y que Xixaraca es su dios protector. Es el eslabón que conecta a las dos divinidades con el cerro y con el nombre del territorio.",
+        limitation:
+          "Es una nota web sin autor firmado, de agosto de 2020, que remite a un «(Cardona, 1987)» que no se ha podido localizar. Reproduce además la fórmula «desde tiempos inmemoriales» y una identificación de los enemigos con un pueblo indígena vecino que esta edición no publica.",
+      },
+      {
+        key: "caicedoComentarios2018",
+        summary:
+          "Es la pieza que impide leer «Anserma» como una etnia con contornos fijos: sostiene que Umbra no designaba una provincia extensa sino el nombre de un sitio y de una loma, que en una relación colonial de 1559 Umbría figura como una entre unas treinta parcialidades encomendadas en la provincia de Ancerma, y desmonta las reconstrucciones que unen con demasiada seguridad Umbra, Kirma, Anserma y Quimbaya.",
+        limitation:
+          "Es una reseña crítica dirigida contra una obra concreta, no un estudio de los relatos: no menciona a Xixaraca, a Michua ni las huellas de Mápura. Su aporte a esta ficha es negativo, de cautela.",
+      },
+      {
+        key: "ticoraumbra2025",
+        summary:
+          "Concluye que el umbra no es una lengua chocó y que los parecidos con el emberá-chamí se explican por contacto y préstamo, y deja abierta la relación entre la lengua anserma y la umbra. Sirve para no atribuir los nombres Xixaraca y Michua a una familia lingüística determinada.",
+        limitation:
+          "Es un primer acercamiento comparativo sobre un corpus pequeño y declara él mismo que la evidencia no permite conclusiones específicas. No dice nada de los relatos ni de los nombres de esta ficha.",
+      },
+      {
+        key: "marinPacificacion2020",
+        summary:
+          "Da la historia larga del territorio donde están las rocas: la disolución de los resguardos, la supresión del gobierno indígena y la formación de los corregimientos de Batero e Irra, que es el proceso durante el cual la memoria de Xixaraca pasó a ser «un recuerdo vago».",
+        limitation:
+          "Es historia social del siglo XX y no menciona el relato: explica las condiciones en que se perdió, no su contenido.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: paisaje de Guacuma con el cerro Karambá, río Mápura y una gran huella humana recortada en una roca plana; Xixaraca y Michua se alejan como siluetas protectoras sobrias mientras dos cascadas nacen de cintas de papel azul, sin gigantes monstruosos, tocados genéricos, símbolos aztecas, mayas o muiscas, texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -76,44 +125,40 @@ ${visualRule}`,
   {
     slug: "las-huellas-de-mapura",
     title: "Xixaraca, Michua y los Tamaracas",
-    mito: `Cándido Aricapa contaba que Xixaraca vivía en el cerro Karambá y cuidaba a la gente de Guacuma. Bajo su protección crecían el maíz y el chontaduro, y los caminos podían recorrerse sin que las fuerzas escondidas destruyeran las cosechas. En las profundidades del cerro Opiramá permanecían encerrados los Tamaracas, seres de adentro cuya salida traía peligro.
+    mito: `Guacuma es la tierra que queda entre los cerros, la que hoy se llama Quinchía. Karambá es la piedra alta y dura desde donde se la vigila. Desde arriba se ven los filos, las quebradas y los caminos por donde puede venir alguien, y desde arriba protegía Michua, diosa del valor y de la guerra. Con ella estaba Xixaraca, que sostenía lo demás.
 
-Xixaraca los mantenía sujetos. La montaña no era una cárcel muerta, sino un límite que debía renovarse. Durante ciertos periodos, los Tamaracas cambiaban de forma y buscaban una abertura. Cuando lograban escapar, se extendían como nubes de langostas y otras plagas. Devoraban las plantas y convertían la abundancia en hambre.
+Los Tamaracas querían acabar con ese territorio. No eran una sola cosa y no tenían una sola forma: eran potencias enemigas, y por eso cada vez podían presentarse de otra manera. Una vez llegaron como nube de langostas y se comieron lo sembrado, y la abundancia se volvió hambre en pocos días. Otra vez llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron.
 
-Entonces Michua descendía desde Batero. Su llegada se anunciaba con relámpagos y tormenta. El agua cambiaba de color en medio del combate, y el cielo parecía participar en la defensa de los cultivos. Xixaraca y Michua obligaban a los seres dañinos a regresar bajo Opiramá. Después era necesario restablecer la relación entre montaña, agua y siembra; la victoria no duraba para siempre.
+Contra los que devoraban los cultivos bajaba Michua con tormenta. Convertía los ríos en sangre y destrozaba con rayos a los enemigos de su pueblo. El agua cambiaba delante de todos y el cielo se ponía de parte del maíz. Xixaraca sostenía lo que no se defiende con rayos: que la siembra volviera, que los caminos pudieran andarse, que la gente pudiera quedarse donde estaba.
 
-Los Tamaracas volvían a intentar la salida porque el peligro era cíclico. A veces aparecían como plaga; en narraciones posteriores podían representar invasión, violencia o destrucción del territorio. Esta edición no los identifica con ningún pueblo indígena vivo ni presenta a comunidades vecinas como enemigas sobrenaturales. Son figuras cambiantes dentro de una memoria que ha absorbido amenazas de épocas diferentes.
+Ninguna de esas victorias quedó hecha para siempre. Los Tamaracas vuelven, y vuelven con otra cara. Lo que una generación aprendió a reconocer, a la siguiente le llega cambiado, y hay que volver a aprender a mirar: primero al cultivo, después al camino, después a lo que hay debajo.
 
-Tampoco Xixaraca y Michua actúan como guerreros de una batalla única. Protegen las condiciones que permiten sembrar, cosechar y continuar habitando Guacuma. Su fuerza consiste en reconocer cuándo algo oculto rompe el equilibrio y en volver a poner límites.
+Porque ahora vienen por el oro del cerro, y no traen langostas ni lanzas sino papeles, permisos y máquinas. La forma es nueva y el daño es el mismo: que Guacuma deje de dar de comer y que la gente tenga que irse.
 
-El cerro Opiramá conserva así una tensión: contiene aquello que puede salir y, al mismo tiempo, forma parte del territorio que sostiene la vida. La historia recuerda que ninguna defensa autoriza a despreciar a otras personas. Exige vigilar los daños concretos —plaga, despojo, violencia— y renovar el cuidado antes de que vuelvan a extenderse.`,
-    historia: `Esta página recupera un relato autónomo en la URL que antes duplicaba las huellas de Mápura. Su fuente narrativa principal es Alfredo Cardona Tobón, quien en 2011 publicó lo que recordaba haber escuchado en 1947 a Cándido Aricapa. Cardona sitúa a Xixaraca en Karambá, a los Tamaracas bajo Opiramá y a Michua descendiendo con rayos para enfrentar la destrucción de los cultivos.
+Por eso la protección no se cuenta como una batalla ganada sino como un oficio que no termina. No consiste en vencer una vez. Consiste en reconocer la figura nueva de lo de siempre y volver a poner el límite antes de que se extienda por toda la tierra.`,
+    historia: `La formulación más clara y citable de este ciclo la publicó el Instituto de Estudios Socioculturales y Problemática Ambiental de la Facultad de Ciencias Ambientales de la Universidad Tecnológica de Pereira, el 17 de agosto de 2020: «Michua la diosa Anserma del valor y de la guerra protegía desde el cerro Karambá al actual territorio de Quinchía, llamado Guacuma. Los Tamaracas como dioses enemigos han querido acabar con el territorio […] convirtiéndose en diversos enemigos […] langostas, conquistadores españoles». La nota cita a Cardona, 1987, y cierra diciendo que con Xixaraca el territorio aún intenta defenderse de la minería transnacional. Es decir: no es un relato cerrado en el pasado, sino uno que se está usando.
 
-La mediación debe quedar visible: el texto apareció más de seis décadas después de la conversación y dentro de una memoria personal marcada por conflictos políticos regionales. Cardona también emplea expresiones sobre supuestos “últimos descendientes puros” que esta edición no adopta. Su publicación es valiosa por nombrar narrador, fecha recordada y lugares, pero no equivale a una grabación de Aricapa ni a una versión consensuada por todas las comunidades.
+Los atributos de las dos divinidades tienen fuente indexada. Alfredo Cardona Tobón, en «Las huellas ancestrales», Ánfora 1(1), 1993, página 78, escribe que de las creencias de las tribus de la familia Anserma queda el recuerdo de «Xixaraca, Dios supremo» y de «Michua, la diosa del valor y de la guerra que convertía los ríos en sangre y destrozaba con rayos a los enemigos de sus pueblos».
 
-León Felipe Cubillos retoma a los Tamaracas como “seres de adentro” y los integra a una historia ambiental de Guacuma. “Quinchía mestizo” aporta antecedentes regionales. El testimonio de Gabriel Campeón y las fuentes históricas permiten corregir la lectura colonial de Xixaraca como demonio.
+El nombre Tamaraca, en cambio, viene de más atrás y significaba otra cosa. Pedro Cieza de León, en el capítulo XVI de la primera parte de su crónica, impresa en 1553, escribe de los pueblos vecinos a la villa de Ancerma: «Llaman al diablo Xixarama, y a los españoles, tamaraca». Tamaraca era la palabra con que esa gente nombraba a los invasores. Que cuatro siglos después designe a las potencias que quieren acabar con el territorio no es una coincidencia: es la historia del propio término.
 
-La narración evita otro problema de versiones tardías: identificar a pueblos Noanamá, Tatamá, Chocó u otros vecinos con el mal. Esas asociaciones expresan conflictos históricos y prejuicios del narrador o del editor, no una característica esencial de comunidades vivas. La coordenada señala el cerro Opiramá como centro del episodio, no una entrada literal al mundo subterráneo.`,
-    versiones: `La palabra Tamaraca tiene una historia particularmente inestable. En la traducción histórica de Cieza de León, los habitantes llamaban Xixarama a la figura que el cronista traducía como “diablo” y usaban Tamaraca para los españoles. Esa formulación del siglo XVI no describe seres subterráneos prehispánicos; muestra un término aplicado a los conquistadores dentro de una traducción colonial problemática.
+El cerro y el topónimo están documentados aparte. «Entre cerros y montañas», publicado en 2020 por la Universidad Tecnológica de Pereira, registra el cerro de Batero o de Karambá como «piedra alta y dura» y llama a los oriundos habitantes de la tierra de Guacuma.`,
+    versiones: `La fuente universitaria enumera tres formas de los Tamaracas: langostas, conquistadores españoles e «indígenas Chocoes». Esta edición conserva las dos primeras y no reproduce la tercera. Identificar a un pueblo vecino vivo con la potencia del mal es un residuo de conflictos regionales entre comunidades y de la manera en que la memoria de una guerra se hereda, y publicarlo hoy haría daño sin aportar nada al relato. Se registra aquí, en la capa de variantes, para que no parezca que la fuente dice menos de lo que dice.
 
-En el relato que Cardona atribuye a Cándido Aricapa, ya en el siglo XX, aparece el plural Tamaracas: seres escondidos bajo Opiramá que Xixaraca mantiene encadenados. Escapan convertidos en langostas o plagas, mientras Michua baja con rayos y hace que el agua parezca sangre. Cubillos resume una variante cercana y los llama seres de adentro.
+El cerro donde estarían encerrados los Tamaracas tampoco se sostiene igual en todas partes. La ficha anterior los ponía bajo el cerro Opiramá, y esa localización procede de un blog personal. En «Entre cerros y montañas», Opiramá es un río del que bajan las quebradas hacia el Cauca; en Víctor Zuluaga Gómez, Opirama es el nombre de un cacique, hijo y heredero de la cacica de Andica, capturado en la represión de 1557 junto con Tuzarma y Aytamara, caciques de Mapura. Río, cacique y cerro no son la misma cosa, y esta revisión no elige entre ellos.
 
-Cardona relacionó después el nombre con la violencia política de 1948. Estudios ambientales recientes lo emplean para hablar de amenazas mineras, pérdida del patrimonio o deterioro territorial. Esos usos muestran que Tamaracas se volvió una categoría móvil para daños históricos y contemporáneos. No deben retroproyectarse como si todos pertenecieran a una doctrina antigua sin cambios.
+Cambia también el año de la fuente que todos citan. La nota universitaria remite a «Cardona, 1987»; el sitio venía citando un texto de 2011 y el libro «Quinchía mestizo» de 1989. No se ha podido determinar cuál de las tres publicaciones contiene el ciclo completo.
 
-También varían los papeles de Xixaraca y Michua. Uno protege alimentos y contiene a los seres; la otra llega desde Batero con tormenta. Algunas síntesis funden sus acciones o las conectan con la partida y las huellas. Esta página separa el combate periódico de la despedida para conservar dos núcleos narrativos legibles.
-
-La revisión no decide si los Tamaracas son espíritus, metáforas, enemigos humanos transformados o nombres sucesivos del peligro. Presenta la estratificación histórica como parte de la propia historia del relato.`,
+Y cambia la naturaleza de Xixaraca según quién hable: dios supremo en el ensayo de 1993, «el diablo» en la traducción del cronista de 1553, y cacique y símbolo de la resistencia embera en el libro de memorias de 2020.`,
     leccion:
-      "Cuidar el territorio exige reconocer daños recurrentes sin convertir a pueblos vivos en enemigos míticos.",
-    similitudes: `Seres contenidos dentro de una montaña aparecen en tradiciones de muchas regiones. Su encierro suele explicar por qué terremotos, tormentas o plagas regresan. En Opiramá, la fuerza subterránea se relaciona con cultivos, Xixaraca y Michua; no corresponde llamarla demonio cristiano ni equipararla automáticamente con titanes, djinn o monstruos europeos.
+      "El daño que vuelve con otra cara exige aprender a mirar de nuevo cada generación.",
+    similitudes: `El paralelo documentado más directo está en la misma comarca y en la primera fuente escrita. Cieza describe en el capítulo XV que los indios vecinos de Ancerma adoraban figuras talladas —«la figura del demonio, muy fiera, de manera humana, y otros ídolos y figuras de gatos»— y que «cuando tienen necesidad de agua o de sol para cultivar sus tierras, piden ayuda a estos sus dioses». Divinidades a las que se les pide el clima que necesita la siembra: ésa es exactamente la función que Michua y Xixaraca siguen cumpliendo en la versión del siglo XX, con la lluvia convertida en arma.
 
-La transformación en langostas se aproxima a relatos agrícolas sobre invasiones que devoran cosechas. El motivo convierte una crisis visible en parte de un ciclo territorial. La comparación ayuda a entender la amenaza, pero no permite identificar un hecho biológico preciso ni fechar una plaga concreta.
+El segundo paralelo está en la palabra misma. En 1553 tamaraca nombra al español recién llegado; en 2020 nombra a la minería transnacional. El trayecto de un término que cambia de referente pero conserva su función —nombrar lo que viene de afuera a acabar con el territorio— está documentado aquí de punta a punta, con cuatro siglos y medio entre los dos extremos. Pocos nombres míticos colombianos permiten seguir ese recorrido con fuentes en las dos puntas.
 
-Xixaraca y Michua recuerdan pares protectores que combinan montaña y tormenta. Aquí no forman una pareja romántica inventada ni un panteón cerrado. Las fuentes regionales los reúnen por su relación con Karambá, Batero, Opiramá y la defensa de Guacuma. Sus funciones pueden cambiar entre relatos.
+Las potencias contenidas que escapan por ciclos y vuelven convertidas en plaga aparecen en relatos agrícolas de muchas regiones, y el motivo sirve para explicar por qué el daño regresa. La semejanza es formal: no permite fechar ninguna plaga concreta ni identificar una especie.
 
-El uso posterior de Tamaracas para conquistadores, violencia partidista o destrucción ambiental se parece a la manera como muchos nombres míticos se vuelven lenguaje político. La continuidad no es identidad: cada época selecciona un peligro y reinterpreta el término. Por eso la página conserva la tensión entre el registro de Cieza y la memoria de Aricapa.
-
-Otros relatos regionales con enemigos transformados pueden contener juicios contra pueblos vecinos. Esta revisión no reproduce esa equivalencia. Comparar versiones sirve para revelar cómo el conflicto modifica la memoria, no para declarar que una población real encarna el mal.`,
+Y el cerro tutelar desde el cual una divinidad vigila los caminos de acceso es figura frecuente en territorios de montaña. Aquí conviene no generalizar: Karambá es también el nombre de una parcialidad embera viva en Quinchía, de modo que el cerro no es sólo un motivo narrativo.`,
     excerpt:
       "Xixaraca contiene bajo Opiramá a los Tamaracas, mientras Michua desciende con rayos para proteger los cultivos de Guacuma.",
     seoTitle: "Xixaraca, Michua y los Tamaracas de Opiramá",
@@ -128,13 +173,20 @@ Otros relatos regionales con enemigos transformados pueden contener juicios cont
     ],
     tags: ["Xixaraca", "conflicto", "protección", "tormenta"],
     sourceKeys: [
-      "cardona2011",
-      "cubillos2020",
-      "cardona1989",
-      "valencia2009",
-      "cieza1864",
-      "steward1948",
-      "abad1955",
+      "socioculturalesMichua2020",
+      {
+        key: "cardona1993",
+        summary:
+          "Da los atributos de las dos divinidades que la ficha usa, en la página 78: de las creencias de las tribus de la familia Anserma «queda el recuerdo vago de Xixaraca, Dios supremo», y el de «Michua, la diosa del valor y de la guerra que convertía los ríos en sangre y destrozaba con rayos a los enemigos de sus pueblos». De ahí procede la escena de la defensa con tormenta.",
+        limitation:
+          "Es un ensayo de opinión sin aparato crítico y no menciona a los Tamaracas, ni Karambá, ni Guacuma, ni Opiramá: todo el armazón del ciclo entra por otra fuente. Tampoco cita informantes para esas dos frases.",
+      },
+      "leoncronica1553",
+      "ospinaEntre2020",
+      "gomezHistoria2013",
+      "marinPacificacion2020",
+      "caicedoComentarios2018",
+      "ticoraumbra2025",
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: cerros Karambá y Opiramá sobre cultivos de maíz y chontaduro; Xixaraca protege la siembra mientras Michua desciende como silueta sobria entre rayos de papel, y desde una grieta salen sombras abstractas convertidas en pequeñas langostas, sin representar pueblos humanos como enemigos, sin demonios, cuernos, sangre explícita, tocados genéricos, texto, objeto físico, maqueta, diorama, CGI ni render 3D.",

@@ -86,6 +86,14 @@ En el mundo, los mitos de origen de lagos suelen explicar cómo una pérdida o u
     "siturTota",
     "ovidio",
     "trentren",
+    {
+      key: "calderaConcepcion2008",
+      summary:
+        "Documenta el carácter sagrado del venado entre los muiscas y a Tota como laguna sagrada.",
+      limitation:
+        "No conoce el mito de los venados modelados en arcilla.",
+    },
+    "simonNoticias1881",
   ],
   researchNotes: `ESTADO: leyenda regional reelaborada por Lilia Montaña; no se atribuye sin reservas a una oralidad prehispánica.
 

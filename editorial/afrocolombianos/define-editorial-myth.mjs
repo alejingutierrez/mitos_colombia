@@ -2,7 +2,12 @@ import { buildAfrocolombianEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickAfroSources } from "./sources.mjs";
 
 export function defineAfrocolombianMyth(input) {
-  const selectedSources = pickAfroSources(input.slug);
+  // El reparto venía de `afroSourceKeysBySlug`, un mapa aparte del módulo. La
+  // ficha manda cuando declara sus claves; el mapa queda de respaldo para las
+  // que todavía no lo hacen.
+  const selectedSources = input.sourceKeys?.length
+    ? pickAfroSources(input.slug, input.sourceKeys)
+    : pickAfroSources(input.slug);
   if (
     selectedSources.length < 5 ||
     new Set(selectedSources.map(({ url }) => url)).size !==

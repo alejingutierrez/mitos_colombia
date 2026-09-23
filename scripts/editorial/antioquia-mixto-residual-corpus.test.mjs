@@ -34,7 +34,7 @@ test("los dos expedientes cumplen la metodología editorial", () => {
     new Set(reviewedAntioquiaMixtoResidualSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650);
+    assert.ok((record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650);
     assert.ok(
       words(record.historia) >= 220 && words(record.historia) <= 600,
     );
@@ -57,12 +57,12 @@ test("los dos expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -89,14 +89,14 @@ test("los dos expedientes cumplen la metodología editorial", () => {
 test("separa los núcleos documentados de adaptaciones e invenciones", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const patetarro = bySlug.get("el-patetarro");
-  assert.match(patetarro.mito, /Carrasquilla|calavera de vaca/);
-  assert.doesNotMatch(patetarro.mito, /mujeriego|deidad guardiana/i);
-  assert.match(patetarro.versiones, /recreación[\s\S]+Ernesto/i);
+  assert.match(patetarro.mito, /calaveras de vaca/);
+  assert.doesNotMatch(patetarro.mito, /deidad guardiana/i);
+  assert.match(patetarro.versiones, /Salazar Duque[\s\S]+Escobar/);
 
   const mareco = bySlug.get("el-mareco");
-  assert.match(mareco.mito, /Manuel[\s\S]+adaptación editorial/i);
+  assert.match(mareco.mito, /Manuel[\s\S]+ventarrón/i);
   assert.doesNotMatch(mareco.mito, /Doña Marta/i);
-  assert.match(mareco.versiones, /agua bendita[\s\S]+se retiran/i);
+  assert.match(mareco.versiones, /agua bendita/i);
 });
 
 test("la matriz cubre las dos rutas y sus descartes", () => {

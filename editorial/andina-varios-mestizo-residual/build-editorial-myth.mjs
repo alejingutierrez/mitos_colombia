@@ -48,6 +48,9 @@ const locationBySlug = {
     "UBICACIÓN: ancla heredada en Anserma por el narrador de la nota de 2004; la ficha amplía el motivo a Antioquia, Cundinamarca, Tolima y referencias de Nariño.",
 };
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildAndinaVariosMestizoResidualEditorialMyth(input) {
   const media = andinaVariosMestizoResidualMedia[input.slug];
   if (!media) throw new Error(`${input.slug}: falta inventario visual.`);
@@ -63,6 +66,8 @@ export function buildAndinaVariosMestizoResidualEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
+    ...(input.fuentesAgotadas ? { fuentesAgotadas: input.fuentesAgotadas } : {}),
     historia: input.historia,
     versiones: input.versiones,
     leccion: input.leccion,

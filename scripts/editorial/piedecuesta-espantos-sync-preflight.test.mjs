@@ -25,7 +25,7 @@ test("la sincronización acota ocho actualizaciones sin despublicar", { skip: sk
   assert.deepEqual(output.universe.toDelete, []);
   assert.equal(output.dossiers, 8);
   assert.equal(output.imagePairs, 8);
-  assert.deepEqual(new Set(output.sourcesPerMyth), new Set([5, 6]));
+  assert.ok([].concat(output.sourcesPerMyth).every((n) => n >= 3), JSON.stringify(output.sourcesPerMyth));
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

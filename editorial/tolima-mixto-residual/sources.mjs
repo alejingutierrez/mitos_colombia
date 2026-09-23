@@ -339,6 +339,177 @@ export const tolimaMixtoResidualSources = {
     limitation:
       "Pertenece al folclor irlandés y no prueba difusión ni parentesco histórico con el pájaro Silbador del sur del Tolima.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  moralesFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales",
+    year: 2013,
+    type: "libro (reedición de Ediciones Unibagué del artículo de 1962 en la Revista Colombiana de Folclor, v. 3, n.º 7)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "Registro de los dos repertorios bajo un título: las brujas que se vuelven pisca y los duendes que tiran terrones y persiguen muchachas, y el tiplecito de ocho cuerdas que los espanta (pp. 81-84 de la edición de 2013).",
+    limitation:
+      "Es un encabezado de categoría con varios casos, no un relato único; sin narrador.",
+  }),
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Segundo registro de Devia (sección 20, pp. 165-166) y «El duende» de Rocha Castilla (sección 21, p. 182).",
+    limitation:
+      "Copia sin aparato crítico.",
+  }),
+  baronCuentos1996: source({
+    title: "Cuentos, mitos y leyendas del llano",
+    author: "Getulio Vargas Barón",
+    year: 1996,
+    type: "libro (Corpes Orinoquía)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2797/",
+    summary:
+      "Cuenta el duende del hato de Las Camazas que molestaba a don Gregorio Zambrano, con la copla que lo recuerda, el paralelo llanero de Similitudes.",
+    limitation:
+      "Otra región; el duende llanero se burla del patrón y no persigue muchachas.",
+  }),
+  cINEPColombia1998: source({
+    title: "Colombia país de regiones, tomo 3: Región del Alto Magdalena",
+    author: "CINEP y Colciencias",
+    year: 1998,
+    type: "obra de síntesis regional",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2835/download",
+    summary:
+      "Lee al Guando como lección de solidaridad campesina en la síntesis del Tolima Grande (p. 99).",
+    limitation:
+      "Interpretación de síntesis, sin narradores.",
+  }),
+  narinocuentos1988: source({
+    title: "Los cuentos de Pascual: mitos y leyendas del piedemonte llanero",
+    author: "Alberto Baquero Nariño",
+    year: 1988,
+    type: "libro (recopilación regional, Biblioteca Digital Banrepcultural)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2818/",
+    summary:
+      "Nombra al Guando entre los mitos campesinos llevados al piedemonte llanero.",
+    limitation:
+      "Es una enumeración de una línea.",
+  }),
+  rangelpalabras2010: source({
+    title: "Las palabras del origen: breve compendio de la mitología de los uitoto",
+    author: "Fernando Urbina Rangel",
+    year: 2010,
+    type: "libro (Ministerio de Cultura)",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll8/id/4",
+    summary:
+      "Reúne relatos uitotos donde Jitoma oye cantar a Nokaido, busca al pájaro, no lo encuentra y sabe que es mal agüero (pp. 103-104).",
+    limitation:
+      "Otra tradición; la comparación es de función.",
+  }),
+  compiladoraMitos19932: source({
+    title: "Mitos y leyendas de Colombia, tomo III",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "El apartado «Los tunjos» de la sección chibcha describe las figuras de oro que se ofrecían en santuarios y lagunas, de donde viene el nombre.",
+    limitation:
+      "Es la glosa arqueológica, no el relato campesino.",
+  }),
+  oRLLOPComo2010: source({
+    title: "Cómo se formó nuestra mitología en el departamento del Tolima",
+    author: "El Tiempo (firma «ORLLOP»)",
+    year: 2010,
+    type: "prensa (5 de marzo de 2010)",
+    url: "https://www.eltiempo.com/archivo/documento/MAM-3868565",
+    summary:
+      "Nombra al Tunjo en el repertorio tolimense de espantos.",
+    limitation:
+      "Teoría del origen, no relato.",
+  }),
+  redaccionAprendamos1995: source({
+    title: "Aprendamos más de lo nuestro",
+    author: "El Tiempo (Redacción)",
+    year: 1995,
+    type: "prensa (11 de octubre de 1995)",
+    url: "https://www.eltiempo.com/archivo/documento/mam-425024",
+    summary:
+      "Fecha la circulación de la Candileja en la prensa en 1995.",
+    limitation:
+      "Eco de Rocha Castilla 1968.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (edición ampliada en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Recoge a la Vieja Colmillona de Caldas (pp. 57-58), la otra mujer definida por los dientes que compara Similitudes.",
+    limitation:
+      "Es otro ser, de otro departamento, y hace lo contrario: no daña a quien la trata bien.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  tolimafiesta2024: source({
+    title: "La fiesta de Corpus Christi en Guamo, apuntes de viaje",
+    author: "Pantoja Barco (Universidad del Tolima)",
+    year: 2024,
+    type: "trabajo de grado",
+    url: "https://repository.ut.edu.co/handle/001/3883",
+    summary:
+      "Documenta la danza de la tarasca en el Corpus Christi del Guamo, «de origen francés», con un ser de aspecto monstruoso usualmente verde, citando a Fajardo de Rueda (1996).",
+    limitation:
+      "Es la tarasca procesional, rito y no relato; el repositorio pide verificación antibot a los lectores automáticos.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  piedrahitaHistoria1881: source({
+    title: "Historia general de las conquistas del Nuevo Reino de Granada",
+    author: "Lucas Fernández de Piedrahita",
+    year: 1881,
+    type: "crónica (1688), edición de Bogotá, Imprenta de Medardo Rivas, 1881, con prólogo de Miguel Antonio Caro; digitalización de la Biblioteca Luis Ángel Arango",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/3164/",
+    summary:
+      "Libro I, cap. II, pp. 9-10: la fuente de fondo de las dos creencias. En la p. 9, algunas naciones del grupo de los pijaos, coyaimas y natagaimas tienen por dios al hombre que matan, que sale inocente de este mundo y protege a su matador y a su familia por cierto número de lunas; la víctima no puede ser del propio pueblo ni enemiga: hombres de los caminos, mujeres o niños. En la p. 10, los laches de la provincia de Tunja adoran las piedras, que fueron hombres, y su propia sombra, que el Sol les da por dioses. En el libro VII cuenta la sombra Are de los muzos, paralelo de Similitudes.",
+    limitation:
+      "Es la mirada de un obispo del siglo XVII que califica las creencias de «barbaridad» y «estolidez»; no dice de quién las supo. El PDF es un OCR sin corregir y la paginación citada es la de la edición de 1881.",
+  }),
+  galloMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo III (sección 30, «Mitos Chibcha»: Mariano Izquierdo Gallo, «Dioses lares», de Mitología americana, 1956)",
+    author: "Eugenia Villa Posse (comp.); Mariano Izquierdo Gallo",
+    year: 1993,
+    type: "antología (IADAP, Quito) que reproduce un capítulo de libro de 1956",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Apartado 2.5, pp. 53-54: el texto que dio título al relato. Izquierdo Gallo llama dioses lares, por analogía con los romanos, al muerto inocente que los pijaos, coyaimas y natagaimas hacían dios protector, y reúne con él las piedras y la sombra de los laches de Tunja, con nota a Darío Rozo M. (1938). Pone a un amigo entre las víctimas, cosa que la crónica excluye. La nota de procedencia de la sección (pp. 12-13) lo califica de presentación elaborada literariamente a partir de cronistas.",
+    limitation:
+      "Es una glosa apologética sin personaje ni escena; el propio compilador lo presenta como reelaboración literaria. Está en la sección chibcha, no en una tolimense, y la mitad del texto es sobre un pueblo de Boyacá.",
+  }),
+  edLares1849: source({
+    title: "Lares (A Dictionary of Greek and Roman Biography and Mythology)",
+    author: "William Smith (ed.)",
+    year: 1849,
+    type: "diccionario de referencia, edición digital de Perseus (Tufts University)",
+    url: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0104:entry=lares-bio-1",
+    summary:
+      "Sostiene el paralelo romano de Similitudes: los Lares domésticos eran espíritus de muertos elevados a protectores de la casa, sólo de los hombres buenos, encabezados por el Lar familiaris, fundador de la familia; recoge que podían serlo los niños muertos antes de los cuarenta días. Es la categoría que Izquierdo Gallo aplicó a los pijaos.",
+    limitation:
+      "Trata la religión romana, no esta creencia; es una obra de consulta del siglo XIX, útil sólo para fijar qué entendía por Lares la tradición que usó el autor de 1956.",
+  }),
+  oliverosCoyaimas1996: source({
+    title: "Coyaimas y natagaimas (Geografía humana de Colombia, Región Andina Central, t. IV, vol. II)",
+    author: "Diana E. Oliveros",
+    year: 1996,
+    type: "capítulo de obra colectiva del Instituto Colombiano de Cultura Hispánica",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2778/download",
+    summary:
+      "Da el contexto de dos de los tres pueblos a los que la crónica atribuye el dios muerto: sistema de creencias, mohanes, cosmovisión y mitología de coyaimas y natagaimas (pp. 134-137). Sirve para situar la atribución colonial frente a lo que la etnografía del siglo XX registra de esos pueblos.",
+    limitation:
+      "No registra un culto al muerto inocente convertido en protector: trata a los pueblos, no esta creencia. Año de edición según la ficha de Banrepcultural, no verificado en el colofón.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -440,21 +611,40 @@ const sourceKeysBySlug = {
     "culturaMohan",
     "radioNacionalMohan",
     "minculturaPijao",
-    "onicPijao",
   ],
   "dioses-lares": [
     "flacsoVolume3",
     "izquierdoCatalog",
     "minculturaPijao",
-    "onicPijao",
-    "onicCrit",
     "britishMuseumLares",
     "tolimaArchaeology",
     "coyaimaNatagaimaEthnography",
   ],
 };
 
-export function pickTolimaMixtoResidualSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickTolimaMixtoResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickTolimaMixtoResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = tolimaMixtoResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickTolimaMixtoResidualSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene mapa de fuentes.`);
   return keys.map((key) => {

@@ -253,6 +253,130 @@ export const andinaVariosMixtoResidualSources = {
     limitation:
       "Las semejanzas comparativas requieren evidencia material e histórica específica y no establecen una religión panamericana única.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  nacionalProyectosf: source({
+    title: "Proyecto 5: La Colombia de todos (Aceleración del Aprendizaje)",
+    author: "Ministerio de Educación Nacional",
+    year: "s. f.",
+    type: "material educativo",
+    url: "https://colombiaaprende.edu.co/sites/default/files/files_public/rural-adultos/1_Coleccion_Avanzada_Programa_de_Educacion_Rural_PER/4-Modelos_Educativos_Flexibles/3-Aceleracion%20_del_aprendizaje/Materiales_Estudiantes/Proyecto-5-La_Colombia_de_todos.pdf",
+    summary:
+      "Cita textual de Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001): el leñador que corta un guayacán y la madre monte convierte en árbol (p. 170).",
+    limitation:
+      "Es un material escolar que reproduce el pasaje; el libro de Ocampo no tiene texto abierto.",
+  }),
+  eSAPFichasf: source({
+    title: "Ficha municipal de Risaralda (Caldas)",
+    author: "Municipio de Risaralda (repositorio ESAP)",
+    year: "s. f.",
+    type: "documento municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/572d52ab-2933-4d57-97f6-e17f39163934/download",
+    summary:
+      "Ficha municipal de Risaralda (Caldas) que describe al Hojarasquín como protector de bosques y animales, hombre árbol o mono gigante musgoso, tronco seco y huellas de venado.",
+    limitation:
+      "El texto es casi literal de la ficha técnica del libro de 2004.",
+  }),
+  caldasInformacion2014: source({
+    title: "Información de Samaná",
+    author: "Gobernación de Caldas",
+    year: 2014,
+    type: "documento institucional",
+    url: "https://caldas.gov.co/media/pdf/2014/infomunicipios/INFORMACION%20DE%20SAMANa.pdf",
+    summary:
+      "Ficha de Samaná con el mismo texto sobre el Hojarasquín del Monte.",
+    limitation:
+      "Texto idéntico al de Risaralda; derivado.",
+  }),
+  compiladoraInforme1997: source({
+    title: "Informe Fulbright-Hays 1997 con «Niños de las regiones de Colombia» (Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro (compiladora), ERIC ED430849",
+    year: 1997,
+    type: "informe educativo",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La página infantil de Van Vliet (1997) lo describe con cuerpo frondoso de árbol, que cambia de lugar para hacer perder a leñadores y cazadores.",
+    limitation:
+      "Divulgación infantil impresa en un informe educativo.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Le dedica las pp. 39-40: ficha técnica (hombre árbol, monstruo mitad asno) y el diario inventado de un botánico de 1928.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+  }),
+  samanacaldasnetcoHojarasquinsf: source({
+    title: "El Hojarasquín del Monte",
+    author: "Portal municipal de Samaná (samanacaldas.net.co)",
+    year: "s. f.",
+    type: "página cultural municipal",
+    url: "https://www.samanacaldas.net.co/folclorver.php?idfolclor=4",
+    summary:
+      "Recoge un cuento de Tío Conejo en que el conejo se disfraza de «hojarasquín del monte» con miel y hojarasca, el homónimo que registra Versiones.",
+    limitation:
+      "Es otra tradición con el mismo nombre.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (edición ampliada en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «La Mano Peluda», con la Mano Negra y la cita de Escobar Uribe (p. 179), y en «El Viejo del Costal» la mano escondida del limosnero según Julián Bueno.",
+    limitation:
+      "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo III",
+    author: "Eugenia Villa Posse (investigación y compilación); texto de Mariano Izquierdo Gallo",
+    year: 1993,
+    type: "antología con textos reproducidos (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Sección 30, pp. 52-53: el apartado 2.4 «Esperanza en el oriente» de la Mitología americana de Izquierdo Gallo (1956), con la profecía del salvador oriental, los héroes que «proceden del Oriente» y el cementerio del Zenú con los cuerpos de cara al sol naciente; pp. 33-34, el apartado 1.8 sobre Nemterequeteba, que «vino por el Oriente, de la Tierra del Sol»; p. 15, la nota que califica el trabajo de presentación elaborada literariamente; pp. 121-122 (Ocampo López), el zaque que espera la salida del sol.",
+    limitation:
+      "Es un ensayo de compilador, no un relato recogido: el autor admite que no puede demostrar la creencia y conjetura con «acaso». La nota da las páginas del libro de 1956 con errata (p. 219-207).",
+  }),
+  latinoHistoriae: source({
+    title: "Historiae, liber V",
+    author: "Publio Cornelio Tácito (texto latino, The Latin Library)",
+    type: "fuente clásica (texto latino)",
+    url: "https://www.thelatinlibrary.com/tacitus/tac.hist5.shtml",
+    summary:
+      "Capítulo 13: la creencia de que en ese tiempo prevalecería el Oriente y que hombres salidos de Judea se harían con el poder, que Tácito aplica a Vespasiano y a Tito. Es el pasaje que Izquierdo Gallo atribuye a los Anales y convierte en esperanza de un salvador del mundo.",
+    limitation:
+      "Texto latino sin aparato crítico; no trata América ni el Zenú: sólo sirve para corregir la cita y como paralelo.",
+  }),
+  mateosTodo2018: source({
+    title: "«Todo lo que se hallare en las sepulturas es nuestro». Política y fiscalidad Real en torno a los tesoros indígenas del Zenú (Cartagena de Indias, 1534-1554)",
+    author: "Rocío Delibes Mateos",
+    year: 2018,
+    type: "artículo de revista (Memorias. Revista Digital de Historia y Arqueología desde el Caribe, n.º 36, pp. 7-30, Universidad del Norte)",
+    url: "https://www.redalyc.org/journal/855/85559556002/html/",
+    summary:
+      "Sitúa el gran cementerio del Zenú en el Finzenú, el pueblo más próximo a Cartagena, saqueado por Pedro de Heredia desde 1534; cita a Las Casas (la provincia era «fosario y entierro» de gentes que traían a sus muertos con todo su oro) y a Simón sobre los túmulos de tierra visibles desde lejos. Corrige el «cerca de Mompós» del ensayo y explica la riqueza que alimentó El Dorado.",
+    limitation:
+      "Historia fiscal del saqueo; no menciona la orientación de los cuerpos hacia el oriente ni ninguna creencia en la resurrección.",
+  }),
+  religionQuetzalcoatl2018: source({
+    title: "Quetzalcoatl",
+    author: "Encyclopedia of Religion y Myths and Legends of the World (Gale), en Encyclopedia.com",
+    year: 2018,
+    type: "entrada de obra de referencia reproducida en portal",
+    url: "https://www.encyclopedia.com/people/history/mesoamerican-indigenous-peoples-biographies/quetzalcoatl",
+    summary:
+      "Recoge la partida de Quetzalcóatl hacia el oriente, a la costa del Golfo o en una balsa de serpientes, su transformación en el lucero, la espera de su regreso y la identificación con Cortés que atribuyen varias crónicas; también que los mayas lo llamaron Kukulcán. Sostiene el paralelo que el propio ensayo convoca.",
+    limitation:
+      "Portal que reproduce obras de referencia; se cita como paralelo, no como fuente clave, y no menciona a Bochica ni el Zenú.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -288,7 +412,29 @@ const sourceKeysBySlug = {
   ],
 };
 
-export function pickAndinaVariosMixtoResidualSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickAndinaVariosMixtoResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickAndinaVariosMixtoResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = andinaVariosMixtoResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickAndinaVariosMixtoResidualSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

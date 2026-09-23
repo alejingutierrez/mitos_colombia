@@ -104,14 +104,14 @@ test("reclasifica Moniya Amena sin despublicar y añade solo un ciclo Yucuna", (
 
   assert.equal(
     transfer.title,
-    "Moniya Amena, el árbol de la abundancia",
+    "El origen de las frutas",
   );
   assert.equal(
     transfer.category_path,
     "Amazonía > Caquetá y Putumayo > Huitoto / Murui-Muina",
   );
   assert.match(transfer.researchNotes, /RECLASIFICACIÓN SIN DESPUBLICAR/i);
-  assert.match(transfer.historia, /clasificó esa adaptación como Yucuna/i);
+  assert.match(transfer.historia, /Libro al Viento[\s\S]+Putumayo/);
   assert.equal(
     bySlug.get("karipu-lakena-y-la-primera-noche").title,
     "Los Karipú Lakena y la primera noche",

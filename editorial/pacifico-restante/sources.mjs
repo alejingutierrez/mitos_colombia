@@ -526,6 +526,689 @@ export const pacificoRestanteSources = {
     limitation:
       "Es una adaptación y puede reorganizar personajes; no se usa para fusionar Maravelí y Riviel.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  republicamirada2016: source({
+    title: "Una mirada a la tradición oral del Pacífico",
+    author: "Alfredo Vanín Romero (Banco de la República)",
+    year: 2016,
+    type: "folleto de antología sonora",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll18/id/330/download",
+    summary:
+      "María Raquel Riascos (López de Micay, 1952) recuerda «la del Maravelí, un barco de demonios».",
+    limitation:
+      "El relato completo está en la grabación.",
+  }),
+  valleAnalisis2015: source({
+    title: "Análisis del entorno de una organización del sector portuario de Buenaventura",
+    author: "Oviedo Arroyo (Universidad del Valle)",
+    year: 2015,
+    type: "trabajo de grado",
+    url: "https://bibliotecadigital.univalle.edu.co/server/api/core/bitstreams/0a2e9862-89eb-4777-bc1b-77d86f83950b/content",
+    summary:
+      "§3.7.2.4 «El Barco Fantasma» (Maravelly): proa, babor, estribor, brújula inútil, tripulación endeudada con el diablo.",
+    limitation:
+      "Copia una página personal de Galeon (nota 32).",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo y Universidad Autónoma de Colombia, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Ficha del Buque o Barco Fantasma (pp. 53-54): lámparas en el palo mayor, medidas descomunales, cadenas; enloquece a quien no ha comulgado.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: sus relatos son composición de autor.",
+  }),
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (investigación y compilación)",
+    year: 1993,
+    type: "antología con textos reproducidos",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Otero D'Costa: el perulero de la Villa de Arma que se lleva una mula de fuego, paralelo del pacto con el diablo en Similitudes.",
+    limitation:
+      "Otro relato.",
+  }),
+  ibagueFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales (Universidad de Ibagué)",
+    year: 2013,
+    type: "libro de folclor regional",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "El Mohán, dueño de los charcos del río que desorienta a los pescadores: paralelo de Similitudes.",
+    limitation:
+      "Otra región.",
+  }),
+  gutenbergPhantom1839: source({
+    title: "The Phantom Ship",
+    author: "Frederick Marryat (Project Gutenberg)",
+    year: 1839,
+    type: "novela",
+    url: "https://www.gutenberg.org/ebooks/12954",
+    summary:
+      "La novela que fijó en la literatura europea la leyenda del Holandés Errante: paralelo de Similitudes.",
+    limitation:
+      "Ficción europea.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  palabracaras2015: source({
+    title: "Las dos caras de Buziraco. Héroe del negro y demonio del blanco",
+    author: "Oscar Obando (La Palabra, Universidad del Valle)",
+    year: 2015,
+    type: "crónica en periódico universitario",
+    url: "https://lapalabra.univalle.edu.co/las-dos-caras-de-buziraco-heroe-del-negro-y-demonio-del-blanco/",
+    summary:
+      "La narración más completa: los dos orígenes (demonio español o espíritu de los esclavizados), la derrota en La Popa ante fray Alonso de la Cruz Paredes, el camino por Buenaventura, las cruces de guadua de 1837, la voz de 1876, el cambio trienal de cruces el 3 de mayo, el temblor de 1925 y la obra de Collazos terminada en 1937.",
+    limitation:
+      "Crónica de estudiante con voz de autor, sin informantes; toma de Silva Holguín episodios sin dar edición ni página, y escribe «Costa» por Cuesta.",
+  }),
+  calipersonas2014: source({
+    title: "400 mil personas subieron a los cerros de Cristo Rey y Tres Cruces el jueves santo",
+    author: "Alcaldía de Santiago de Cali",
+    year: 2014,
+    type: "crónica institucional",
+    url: "https://web1.cali.gov.co/planeacion/publicaciones/mil_personas_subieron_a_los_cerros_de_cristo_rey_y_tres_cruces_el_jueves_santo_pub",
+    summary:
+      "Resume la leyenda con fechas: desgracias y langosta desde 1825, el murciélago gigante en noches de lluvia, los misioneros Vicente y Juan Cuesta enviados desde Popayán, las cruces de guadua de 1837, la maldición de 1876, el temblor de 1925 y las cruces de ferroconcreto de 1937.",
+    limitation:
+      "Texto de comunicaciones municipales sin fuente declarada; reproduce sin distancia la ronda de «hombres y mujeres de color negro» alrededor del demonio.",
+  }),
+  sanchezTres2015: source({
+    title: "Las Tres Cruces, historia de un monumento caleño (reseña en «Tres hitos de Cali brillarán…»)",
+    author: "Gustavo Sánchez, Comunicaciones Alcaldía de Cali",
+    year: 2015,
+    type: "reseña institucional",
+    url: "https://web1.cali.gov.co/planeacion/publicaciones.php?dPrint=1&id=110027",
+    summary:
+      "Reseña del monumento: los frailes Vicente y Juan Cuesta y las cruces de guadua de 1837 contra el demonio que un agustino había sacado de La Popa; las cruces de hierro y concreto terminadas el 6 de enero de 1938 por impulso del padre Marco Tulio Collazos; la subida de cada 3 de mayo.",
+    limitation:
+      "Dice apoyarse en «la bibliografía» sin nombrarla; da 1938 donde otras fuentes dan 1937.",
+  }),
+  aSESMitos2017: source({
+    title: "Mitos, leyendas e historias",
+    author: "Estrategia ASES, Universidad del Valle",
+    year: 2017,
+    type: "página institucional universitaria",
+    url: "https://ases.univalle.edu.co/mitos-leyendas-e-historias",
+    summary:
+      "Versión breve: el murciélago rodeado de bailarines al son de tambores, los misioneros «Vicente y Juan de la Cuesta» con tres cruces de guadua, el temblor de 1925 y las cruces de concreto doce años después; muchos aseguran que el demonio quedó sepultado bajo ellas.",
+    limitation:
+      "Página de acompañamiento estudiantil sin autor ni fecha (el pie dice 2016-2017); texto divulgativo.",
+  }),
+  caliUna2023: source({
+    title: "¿Una maldición? La historia detrás de las tres cruces en Cali",
+    author: "El País (Cali)",
+    year: 2023,
+    type: "prensa regional",
+    url: "https://www.elpais.com.co/cali/una-maldicion-la-historia-detras-de-las-tres-cruces-en-cali-2422.html",
+    summary:
+      "Identifica al Buziraco con Changó y lo hace llegar a Cartagena con los africanos esclavizados; atribuye la caída de las cruces de madera al terremoto de 1925 y recoge la leyenda urbana del bailarín de discoteca que pide no mirarle los pies.",
+    limitation:
+      "Prensa reciente sin fuentes; la equivalencia con Changó y el bailarín no aparecen en registros anteriores.",
+  }),
+  tiempoCerro2023: source({
+    title: "Cerro de las Tres Cruces en Cali: el mito de Buziraco que aterra a caminantes",
+    author: "El Tiempo",
+    year: 2023,
+    type: "prensa nacional",
+    url: "https://www.eltiempo.com/cultura/gente/cerro-de-las-tres-cruces-en-cali-el-mito-de-buziraco-que-aterra-a-caminantes-790266",
+    summary:
+      "Añade que el nombre juntaría «brujo» y «diablo», describe al murciélago gigante con cuernos y risa, y sitúa la «celda» del demonio entre la segunda y la tercera cruz; fecha en 1937 la orden de Collazos.",
+    limitation:
+      "Reempaqueta la página de Univalle y testimonios sin nombre; la etimología no tiene respaldo.",
+  }),
+  calinacieron2021: source({
+    title: "Así nacieron las tres cruces en Cali",
+    author: "Q'hubo Cali",
+    year: 2021,
+    type: "prensa popular regional",
+    url: "https://www.qhubocali.com/asi-paso/asi-nacieron-las-tres-cruces-en-cali/",
+    summary:
+      "Cuenta el envío de Vicente y Juan Cuesta por la curia de Popayán en 1837, la caída de las cruces con el terremoto de 1925 y el papel de Marco Tulio Collazos, primer párroco de Santa Rosa, en las cruces de 1937.",
+    limitation:
+      "Nota breve de diario popular, sin fuentes citadas.",
+  }),
+  universalhistoria2024: source({
+    title: "La historia mal contada de Buziraco, el dios que aparecía en La Popa",
+    author: "Lía Miranda Batista (El Universal, Cartagena)",
+    year: 2024,
+    type: "prensa regional",
+    url: "https://www.eluniversal.com.co/cartagena/2024/02/03/la-historia-mal-contada-de-buziraco-el-dios-que-aparecia-en-la-popa/",
+    summary:
+      "El Buziraco cartagenero: con Rodrigo Alfaro y Ubaldo Elles Quintana lo presenta como deidad indígena protectora de la bahía, con adoratorio en La Popa y un sacerdote mestizo, Luis Andrea, condenado por la Inquisición; menciona la leyenda caleña del murciélago y las cruces.",
+    limitation:
+      "Es la versión de Cartagena; las afirmaciones históricas descansan en dos historiadores locales sin referencias de archivo en la nota.",
+  }),
+  infobaeBuziraco2024: source({
+    title: "Buziraco: la historia del demonio español que llegó a Cartagena y fue ahuyentado en Cali por el cerro de las Tres Cruces",
+    author: "Infobae",
+    year: 2024,
+    type: "prensa digital",
+    url: "https://www.infobae.com/colombia/2024/03/26/buziraco-la-historia-del-demonio-espanol-que-llego-a-cartagena-y-fue-ahuyentado-en-cali-por-el-cerro-de-las-tres-cruces/",
+    summary:
+      "Une las dos orillas del relato: el culto de La Popa según El Universal y la reclusión del demonio con las cruces de Collazos; describe el murciélago con cuernos como la forma más citada.",
+    limitation:
+      "Reempaqueta El Universal y El Tiempo; no aporta registro propio.",
+  }),
+  hurtadoContribucion2007: source({
+    title: "Contribución al análisis macrosísmico del terremoto del 7 de junio de 1925: principales efectos en la ciudad de Cali",
+    author: "Elkin de Jesús Salcedo Hurtado, Mario Diego Romero Vergara y María Alexandra Vallejo Chocué",
+    year: 2007,
+    type: "artículo científico (Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales 31 (120): 379-394)",
+    url: "https://raccefyn.co/index.php/raccefyn/article/view/2347",
+    summary:
+      "Fija con archivos y prensa el terremoto de 1925 que la leyenda hace responsable de la caída de las cruces de guadua: magnitud cercana a 6,8 y daños importantes en Cali, con mapa de la zona más afectada.",
+    limitation:
+      "No menciona las cruces ni a Buziraco: sostiene sólo el hecho sísmico que la leyenda incorpora.",
+  }),
+  mendozaLeyendas2015: source({
+    title: "Leyendas extraordinarias de Popayán (reseña)",
+    author: "Donaldo Mendoza, Proclama del Pacífico",
+    year: 2015,
+    type: "reseña en prensa regional",
+    url: "https://proclamadelpacifico.com/leyendas-extraordinarias-de-popayan/",
+    summary:
+      "Reseña del libro (Editorial SIC, 2015, 125 páginas, ilustraciones de Rodrigo Valencia Quijano); resume la segunda historia como las fábulas que costó erigir el caballo del Morro.",
+    limitation:
+      "Reseña elogiosa; no cita el texto del cuento.",
+  }),
+  pardoLeyendas2015: source({
+    title: "Leyendas extraordinarias de Popayán (reseña)",
+    author: "Carlos Orlando Pardo, Proclama del Pacífico",
+    year: 2015,
+    type: "reseña en prensa regional",
+    url: "https://proclamadelpacifico.com/leyendas-extraordinarias-de-popayan-2/",
+    summary:
+      "Sitúa el libro entre las antologías de leyendas colombianas y menciona «el asombroso relato sobre el caballo del conquistador Sebastián de Belalcázar».",
+    limitation:
+      "Menciona el relato sin resumirlo.",
+  }),
+  calleleyendas2016: source({
+    title: "Las leyendas Extraordinarias de Popayán / Reseña",
+    author: "Álvaro Grijalba Gómez (reproducida por Marco Antonio Valencia Calle)",
+    year: 2016,
+    type: "reseña reproducida en el blog del autor",
+    url: "https://marcoantoniovalenciacalle.blogspot.com/2016/04/las-leyendas-extraordinarias-de-popayan.html",
+    summary:
+      "Llama «ficticia» a la historia de Babieca sepultado bajo la estatua de Victorio Macho en el Morro de Tulcán.",
+    limitation:
+      "Reproducida por el propio autor; no se ha localizado la publicación original; solo http.",
+  }),
+  ciddescanso2019: source({
+    title: "El descanso eterno de Babieca",
+    author: "Consorcio Camino del Cid",
+    year: 2019,
+    type: "ficha de patrimonio institucional",
+    url: "https://www.caminodelcid.org/servicios/el-descanso-eterno-de-babieca-2344024",
+    summary:
+      "La tradición entierra a Babieca a las puertas de San Pedro de Cardeña bajo dos olmos, con un monolito; el duque de Alba excavó en 1949 sin resultado: el hecho real sobre el que se monta el cuento.",
+    limitation:
+      "Ficha turística breve; no cita estudio arqueológico.",
+  }),
+  espanolMonasterio2026: source({
+    title: "Monasterio de San Pedro de Cardeña",
+    author: "Wikipedia en español",
+    year: 2026,
+    type: "enciclopedia colaborativa",
+    url: "https://es.wikipedia.org/wiki/Monasterio_de_San_Pedro_de_Carde%C3%B1a",
+    summary:
+      "Resume, citando a Richard Fletcher, el culto de reliquias cidianas del monasterio a fines del siglo XIII, incluidos los olmos de la tumba de Babieca: paralelo de Similitudes.",
+    limitation:
+      "Fuente terciaria de relleno; se usa sólo para el paralelo.",
+  }),
+  tiempoAbuelo2020: source({
+    title: "Abuelo de Paloma Valencia pedía otro sitio para estatua en Popayán",
+    author: "El Tiempo",
+    year: 2020,
+    type: "prensa nacional",
+    url: "https://www.eltiempo.com/colombia/cali/abuelo-de-paloma-valencia-pedia-otro-sitio-para-estatua-en-popayan-538845",
+    summary:
+      "La estatua de Macho iba a la plaza de San Francisco y al Morro un cacique Pubén de Rómulo Rozo; Guillermo Valencia no quiso a Belalcázar en el Morro y no dio el discurso: contraste con el papel que el cuento da a Maya.",
+    limitation:
+      "Recoge un trino de 2020 como «información histórica básica», sin documento.",
+  }),
+  antioquiapueblo2021: source({
+    title: "El pueblo Misak quiere resignificar el Morro del Tulcán tras derrumbar la estatua de Belalcázar",
+    author: "Hacemos Memoria (Universidad de Antioquia)",
+    year: 2021,
+    type: "periodismo universitario",
+    url: "https://hacemosmemoria.org/2021/08/24/el-pueblo-misak-quiere-resignificar-el-morro-del-tulcan-tras-derrumbar-la-estatua-de-belalcazar/",
+    summary:
+      "La Junta Cívica planeó en 1936 un cacique Pubén para la cima y la estatua de Macho para San Francisco; el derribo misak y la resignificación del Morro.",
+    limitation:
+      "Contexto de la estatua real; no trata el cuento.",
+  }),
+  ultimanueva2021: source({
+    title: "La nueva cara del pedestal del Morro de Tulcán en Popayán",
+    author: "Periódico La Última",
+    year: 2021,
+    type: "prensa regional",
+    url: "https://periodicolaultima.com/2021/06/16/la-nueva-cara-del-pedestal-del-morro-de-tulcan-en-popayan/",
+    summary:
+      "En 1940 se destruyó la cúspide de la pirámide para el pedestal; atribuye a Guillermo Valencia la frase «de una obra de arte hicieron un pisa papel»; derribo del 16 de septiembre de 2020.",
+    limitation:
+      "Nota breve sin firma ni fuentes citadas.",
+  }),
+  rojasBajar2018: source({
+    title: "¿Bajar a Belalcázar de Tulcán?",
+    author: "Álvaro Jesús Urbano Rojas, Proclama del Pacífico",
+    year: 2018,
+    type: "columna en prensa regional",
+    url: "https://proclamadelpacifico.com/bajar-a-belalcazar-de-tulcan/",
+    summary:
+      "Dice que Macho, asesorado por Valencia, se inspiró en el Colleoni de Verrocchio: otra genealogía del caballo, sin Babieca.",
+    limitation:
+      "Columna de opinión.",
+  }),
+  chaparroMorro1959: source({
+    title: "El Morro de Tulcán (pirámide prehispánica). Arqueología de Popayán, Cauca",
+    author: "Julio César Cubillos Chaparro, Revista Colombiana de Antropología, vol. 8",
+    year: 1959,
+    type: "artículo académico",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/1768",
+    summary:
+      "Estudio arqueológico del Morro como pirámide prehispánica: el lugar real donde el cuento entierra a Babieca.",
+    limitation:
+      "No trata la estatua ni el cuento; la página abre el registro y el PDF.",
+  }),
+  espectadorEstatua2020: source({
+    title: "Estatua de Sebastián de Belalcázar no regresará al Morro del Tulcán en Popayán",
+    author: "El Espectador, Redacción Colombia",
+    year: 2020,
+    type: "prensa nacional",
+    url: "https://www.elespectador.com/colombia/mas-regiones/estatua-de-sebastian-de-belalcazar-no-regresara-al-morro-del-tulcan-en-popayan-article/",
+    summary:
+      "El juicio misak y el derribo del 16 de septiembre de 2020; el Ministerio de Cultura anuncia que la estatua no vuelve al Morro.",
+    limitation:
+      "Contexto de la estatua; no trata el cuento.",
+  }),
+  valenciaMuerte2014: source({
+    title: "Muerte y entierro del Quijote en Popayán",
+    author: "Marco Antonio Valencia, Proclama del Pacífico",
+    year: 2014,
+    type: "cuento de autor en prensa regional",
+    url: "https://proclamadelpacifico.com/muerte-y-entierro-del-quijote-en-popayan/",
+    summary:
+      "Cuento hermano del mismo libro: el Quijote muere en Popayán y queda en la Torre del Reloj; paralelo de Similitudes.",
+    limitation:
+      "Ficción firmada; otro relato.",
+  }),
+  negretpoesia1987: source({
+    title: "La poesía en Popayán: el hacerse de un paratexto poético",
+    author: "Betty Osorio de Negret, Thesaurus XLII (Instituto Caro y Cuervo)",
+    year: 1987,
+    type: "artículo académico",
+    url: "https://cvc.cervantes.es/lengua/thesaurus/pdf/42/TH_42_002_117_0.pdf",
+    summary:
+      "Estudia cómo Guillermo Valencia hizo de Popayán la «tumba de Don Quijote»: la tradición letrada de apropiarse de héroes castellanos que el cuento del caballo prolonga.",
+    limitation:
+      "No menciona a Babieca ni la estatua.",
+  }),
+  radioAseguran2019: source({
+    title: "Aseguran que un duende mantuvo retenida a una niña por cuatro horas en Dagua, Valle",
+    author: "Redacción Blu Radio",
+    year: 2019,
+    type: "prensa radial",
+    url: "https://www.bluradio.com/nacion/aseguran-que-un-duende-mantuvo-retenida-a-una-nina-por-cuatro-horas-en-dagua-valle",
+    summary:
+      "La desaparición y el hallazgo de la niña en Dagua, con la voz del capitán Paulo Perdomo Gálvis; los campesinos cuentan que los duendes trenzan a los caballos.",
+    limitation:
+      "Nota breve de prensa.",
+  }),
+  caracolFue2019: source({
+    title: "¿Fue un duende? Afirman que uno de estos seres fantásticos se habría llevado a niña de cuatro años",
+    author: "Noticias Caracol",
+    year: 2019,
+    type: "prensa televisiva",
+    url: "https://www.noticiascaracol.com/valle/fue-un-duende-afirman-que-uno-de-estos-seres-fantasticos-se-habria-llevado-a-nina-de-cuatro-anos",
+    summary:
+      "La búsqueda con Policía y bomberos, el llanto en la zona boscosa y la frase «Es que el niño, el niño».",
+    limitation:
+      "Nota breve de prensa.",
+  }),
+  pulzoCulpan2019: source({
+    title: "Culpan a duende de llevarse a niña de 4 años en Dagua, Valle del Cauca",
+    author: "Pulzo",
+    year: 2019,
+    type: "prensa digital",
+    url: "https://www.pulzo.com/nacion/culpan-duende-llevarse-nina-4-anos-dagua-valle-cauca-PP656514",
+    summary:
+      "Resume la entrevista de Blu Radio y cita la foto del rescate publicada por el medio regional Tu Barco.",
+    limitation:
+      "Reproduce a Blu Radio.",
+  }),
+  colombiacomAterrados2019: source({
+    title: "¡Aterrados! Vallecaucanos aseguran que duende se roba niños de la comunidad",
+    author: "Colombia.com",
+    year: 2019,
+    type: "prensa digital",
+    url: "https://www.colombia.com/tecnologia/paranormal/aterrados-vallecaucanos-aseguran-que-duende-se-roba-ninos-de-la-comunidad-222133",
+    summary:
+      "Añade lo que cuentan los vecinos: animales alterados, crines trenzadas, cosas apiñadas en los cultivos.",
+    limitation:
+      "Sección de temas paranormales.",
+  }),
+  airesMisterio2019: source({
+    title: "Misterio en Colombia: aterrador duende peluquero habría secuestrado a nena",
+    author: "Crónica (Buenos Aires)",
+    year: 2019,
+    type: "prensa",
+    url: "https://www.cronica.com.ar/cosa-de-locos/Misterio-en-Colombia-aterrador-duende-peluquero-habria-secuestrado-a-nena-20190905-0015.html",
+    summary:
+      "El diario argentino que retoma el caso en septiembre y le da el nombre de duende peluquero.",
+    limitation:
+      "Nota de rarezas, derivada de la prensa colombiana.",
+  }),
+  culturaDuende2: source({
+    title: "El Duende",
+    author: "Secretaría de Cultura, Recreación y Deporte de Bogotá (Bogotanitos)",
+    type: "página divulgativa infantil",
+    url: "https://www2.culturarecreacionydeporte.gov.co/es/bogotanitos/cuenta-la-leyenda/el-duende",
+    summary:
+      "El duende que invita a los niños a jugar en el bosque y los devuelve arañados y con fiebre: paralelo de Similitudes.",
+    limitation:
+      "Sin firma ni fuente declarada.",
+  }),
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (Fulbright-Hays 1997), con las páginas «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "unidad didáctica con páginas web impresas",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "El duende malo de Pasto que le hace trenzas a los caballos: paralelo de Similitudes.",
+    limitation:
+      "Una frase de divulgación infantil.",
+  }),
+  polarMitos2014: source({
+    title: "Mitos y leyendas del estado Portuguesa, cap. 18 «Los duendes»",
+    author: "Carmen Pérez Montero (Fundación Empresas Polar)",
+    year: 2014,
+    type: "libro de tradición oral venezolana",
+    url: "https://bibliofep.fundacionempresaspolar.org/media/1377951/mitos_portuguesa_c_18_los-duendes.pdf",
+    summary:
+      "Los duendes llaneros como niños muertos sin bautizo que quedaron en el limbo: paralelo de Similitudes.",
+    limitation:
+      "Tradición venezolana.",
+  }),
+  nicolasMuerte2020: source({
+    title: "Muerte y entierro del Quijote en Popayán. Edición trilingüe español-inglés-francés",
+    author: "Marco Antonio Valencia Calle; trad. Nicolás y Laura Lobatón, María Isabel Zamora Yusti y Laure Rocher",
+    year: 2020,
+    type: "cuento de autor, edición digital (Unikids Colombia)",
+    url: "https://marcoantoniovalencia.com/wp-content/uploads/woocommerce_uploads/2021/12/Muerte-y-entierro-del-Quijote-en-Popayan-tipaeu.pdf",
+    summary:
+      "Texto completo (pp. 7-11 en español): las niguas de Cervantes, la cuarta salida, la muerte en Santo Domingo, la velación con Dulcinea, las honras en la Ermita y el entierro en la Torre del Reloj; el árbol propuesto es de corcho.",
+    limitation:
+      "Ficción literaria firmada; el marco de la revista Semana y el Príncipe de Asturias no se ha verificado.",
+  }),
+  calleMuerte2026: source({
+    title: "Muerte y entierro del Quijote en Popayán (página del libro)",
+    author: "Marco Antonio Valencia Calle",
+    year: 2026,
+    type: "página del autor",
+    url: "https://marcoantoniovalencia.com/muerte-y-entierro-del-quijote-en-popayan/",
+    summary:
+      "El autor dice que con este cuento «reescribe una de las leyendas más originales» de Popayán y lo ubica en Leyendas extraordinarias de Popayán, traducido al inglés.",
+    limitation:
+      "Página promocional del autor.",
+  }),
+  vecinosfunerales1987: source({
+    title: "Los funerales de Don Quijote",
+    author: "Octavio Hernández Jiménez; reseña de Vicente Pérez Silva (Espacios Vecinos)",
+    year: 1987,
+    type: "ensayo-cuento reseñado en revista cultural digital",
+    url: "https://www.espaciosvecinos.com/publicaciones/libros-y-comentarios/los-funerales-de-don-quijote/",
+    summary:
+      "Funerales de Don Quijote, leído en Popayán en 1987, ya trae la Ermita, el miércoles de ceniza a las cinco, la velación en el Paraninfo y la ñapanga Dulcinea; cita Don Quijote muere en Popayán de Rafael Maya (1974).",
+    limitation:
+      "Se conoce por fragmentos y reseñas; el texto íntegro no está abierto.",
+  }),
+  valencianariz2017: source({
+    title: "La nariz de Popayán",
+    author: "Marco Antonio Valencia, blog La Casa Encendida (El Espectador)",
+    year: 2017,
+    type: "columna en blog de prensa nacional",
+    url: "https://blogs.elespectador.com/actualidad/la-casa-encendida/la-nariz-popayan-2/",
+    summary:
+      "Leyendas de la Torre del Reloj: allí reposan los huesos del Quijote y quien aspire a ser poeta debe tocar sus paredes.",
+    limitation:
+      "Del mismo autor del cuento: no es testigo independiente.",
+  }),
+  pacificoTorre2020: source({
+    title: "La Torre del Reloj y la Llorona",
+    author: "Proclama del Pacífico",
+    year: 2020,
+    type: "nota en prensa regional",
+    url: "https://www.proclamadelpacifico.com/la-torre-del-reloj-y-la-llorona/",
+    summary:
+      "Historia de la torre (1673, noventa y seis mil ladrillos) y, citando a Valencia Calle, la creencia de que encubre los restos del Quijote.",
+    limitation:
+      "Sin firma visible; repite al autor del cuento.",
+  }),
+  popayanMunicipio2026: source({
+    title: "Mi Municipio: Historia",
+    author: "Alcaldía de Popayán",
+    year: 2026,
+    type: "página institucional",
+    url: "https://www.popayan.gov.co/MiMunicipio/Paginas/Historia.aspx",
+    summary:
+      "La Torre del Reloj, «la nariz de Popayán» según Guillermo Valencia, construida entre 1673 y 1682: el lugar real del entierro imaginario.",
+    limitation:
+      "No menciona la leyenda.",
+  }),
+  buenoescritor2021: source({
+    title: "El escritor Marco Antonio Valencia presentó su obra «Leyendas Extraordinarias de Popayán» en la UDES",
+    author: "Fredy Armando Herrera Bueno, Universidad de Santander",
+    year: 2021,
+    type: "nota institucional universitaria",
+    url: "https://bucaramanga.udes.edu.co/extension/noticias/el-escritor-marco-antonio-valencia-presento-su-obra-leyendas-extraordinarias-de-popayan-en-la-udes",
+    summary:
+      "El autor cuenta en voz propia el episodio de las niguas de Cervantes.",
+    limitation:
+      "Nota de difusión.",
+  }),
+  parraperros2025: source({
+    title: "Si los perros ladran: seis encuentros con don Quijote",
+    author: "Juan Pablo Parra, Casa Macondo",
+    year: 2025,
+    type: "testimonio periodístico",
+    url: "https://casamacondo.co/testimonio/quijote-literatura-testimonio-parra/",
+    summary:
+      "Un guía de la casa museo le contó que en Popayán se decía que Cervantes visitó la ciudad y que los restos del Quijote estaban allí.",
+    limitation:
+      "Recuerdo personal sin fecha exacta de la visita.",
+  }),
+  acesQuijote: source({
+    title: "Don Quijote está enterrado en Bogotá",
+    author: "Maruja Vieira (Revista Aces)",
+    type: "crónica literaria",
+    url: "https://marujavieira.com/obra/cronicas/114-don-quijote-esta-enterrado-en-bogota",
+    summary:
+      "Menciona la leyenda payanesa y le opone la tesis de Germán Arciniegas: el Quijote pudo inspirarse en Gonzalo Jiménez de Quesada; paralelo de Similitudes.",
+    limitation:
+      "Sin fecha visible en la página.",
+  }),
+  tiempopiramide2025: source({
+    title: "La pirámide oculta en el Valle del Cauca que sorprende a los visitantes: podría tener un significado religioso y su origen se relaciona con leyendas",
+    author: "El Tiempo",
+    year: 2025,
+    type: "prensa nacional",
+    url: "https://www.eltiempo.com/cultura/gente/la-piramide-oculta-en-el-valle-del-cauca-que-sorprende-a-los-visitantes-podria-tener-un-significado-religioso-y-su-origen-se-relaciona-con-leyendas-3470807",
+    summary:
+      "Cuenta el sueño con la pirámide y el número de lotería según el canal de Alex Villotravel, el premio invertido en la obra, los diez años de construcción y el cuarzo según «De Viaje con Jenni», y la atribución a Carlos Bernal en 1986.",
+    limitation:
+      "Reempaqueta dos videos de redes y a TuBarco; no habla con vecinos ni con los dueños del predio.",
+  }),
+  fMantigua2025: source({
+    title: "La antigua y misteriosa pirámide escondida en Valle del Cauca: ¿cuál sería su origen?",
+    author: "Bésame FM",
+    year: 2025,
+    type: "portal de emisora",
+    url: "https://www.besame.fm/2025/la-antigua-y-misteriosa-piramide-escondida-en-valle-del-cauca-cual-seria-su-origen-212427.html/amp",
+    summary:
+      "Única nota con otra explicación atribuida a los vecinos: el hijo del dueño del terreno soñó que debía construirla para honrar a Dios; da casi 25 metros, la media luna, la frase «Gracias Dios» en cuatro idiomas y el interior con humedad y murciélagos.",
+    limitation:
+      "Nota de entretenimiento de una emisora musical; los vecinos no tienen nombre y el resto del texto es guía de ruta.",
+  }),
+  calienigmatica2025: source({
+    title: "La enigmática pirámide oculta en el Valle del Cauca que fascina a visitantes: posible significado religioso y conexión con leyendas ancestrales",
+    author: "El País (Cali)",
+    year: 2025,
+    type: "prensa regional",
+    url: "https://www.elpais.com.co/turismo/la-enigmatica-piramide-oculta-en-el-valle-del-cauca-que-fascina-a-visitantes-posible-significado-religioso-y-conexion-con-leyendas-ancestrales-2709.html",
+    summary:
+      "Da los tres nombres de la estructura (Chontaduro, Buitrera, Luna), atribuye la obra al arquitecto Carlos Bernal en 1986 tras ganar la lotería con el número soñado, y recoge los 30 metros y los diez años de obra.",
+    limitation:
+      "Sección de turismo; el titular promete «leyendas ancestrales» que el cuerpo no trae.",
+  }),
+  tuBarcoantigua2025: source({
+    title: "La antigua pirámide escondida en el Valle: fue construida por un hombre que, según la leyenda local, ganó la lotería",
+    author: "TuBarco",
+    year: 2025,
+    type: "prensa digital regional",
+    url: "https://tubarco.news/la-antigua-piramide-escondida-en-el-valle-fue-construida-por-un-hombre-que-segun-la-leyenda-local-gano-la-loteria/",
+    summary:
+      "Primera nota de la serie: el constructor anónimo que soñó la pirámide y un número de lotería, el premio usado en la obra y las inscripciones de gratitud a Dios; insiste en que no se conoce al constructor.",
+    limitation:
+      "Toma el relato del canal de YouTube de Alex Villotravel; buena parte de la nota promociona la cascada cercana.",
+  }),
+  lasorillasmisteriosa2025: source({
+    title: "La misteriosa y antigua pirámide escondida en Palmira; habría sido construida por un millonario",
+    author: "Las2orillas",
+    year: 2025,
+    type: "prensa digital",
+    url: "https://www.las2orillas.co/la-misteriosa-y-antigua-piramide-escondida-en-palmira-habria-sido-construida-por-un-millonario/",
+    summary:
+      "Cuenta el sueño premonitorio con el número de lotería, el hombre que se volvió millonario y decidió construir la pirámide en lugar de gastar en lujos, y el misterio de su identidad.",
+    limitation:
+      "Parafrasea a TuBarco casi frase por frase; «millonario» es adorno de la nota.",
+  }),
+  infobaeColombia2025: source({
+    title: "En Colombia también hay una pirámide: está escondida en el Valle del Cauca y la relacionan con leyendas",
+    author: "Infobae",
+    year: 2025,
+    type: "prensa digital",
+    url: "https://www.infobae.com/colombia/2025/07/10/en-colombia-tambien-hay-una-piramide-esta-escondida-en-el-valle-del-cauca-y-la-relacionan-con-leyendas/",
+    summary:
+      "Cita textualmente a la creadora «De Viaje con Jenni»: el arquitecto Carlos Bernal, 1986, gratitud a Dios «por un sueño cumplido», el cuarzo de la punta y los 30 metros.",
+    limitation:
+      "Confunde la ubicación (Jamundí y Palmira a la vez) y depende de un video de TikTok.",
+  }),
+  ocanaLeyendas2011: source({
+    title: "Leyendas de Ocaña",
+    author: "Academia de Historia de Ocaña",
+    year: 2011,
+    type: "blog institucional",
+    url: "https://academiaocana.blogspot.com/2011/09/leyendas-de-ocana.html",
+    summary:
+      "Paralelo citado en similitudes: la promesa a Santa Rita que don Antón García de Bonilla no cumplió y que lo condenó a galopar de noche, reverso de la promesa pagada con una obra.",
+    limitation:
+      "No trata de la pirámide; es otra región (Norte de Santander) y otro tipo de relato.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  paisCali2023: source({
+    title: "Cali paranormal: historias de fantasmas, avistamientos de otros mundos y hechos inexplicables en la Sucursal del Cielo",
+    author: "Luis Carlos Bermeo Gamboa (El País, Cali)",
+    year: 2023,
+    type: "reportaje de prensa",
+    url: "https://www.elpais.com.co/cultura/cali-paranormal-historias-de-fantasmas-avistamientos-de-otros-mundos-y-hechos-inexplicables-en-la-sucursal-del-cielo-2800.html",
+    summary:
+      "Testimonios de edificios caleños con presencias: gritos y aplausos en el Teatro Municipal vacío (luminotécnico Álvaro Muñoz), el bombero de los años cincuenta y la niña del Muli en la antigua estación del ferrocarril, la Loma de la Cruz según Brandon Aragón.",
+    limitation:
+      "Trata el motivo de los edificios con sonidos y presencias en Cali, no esta casa: no nombra ninguna Casa de la Tradición en San Antonio.",
+  }),
+  caliMano2026: source({
+    title: "La Mano Negra: la leyenda que todavía aterra a los caminantes de la colina de San Antonio en Cali",
+    author: "Semana (sección Cali)",
+    year: 2026,
+    type: "artículo de prensa",
+    url: "https://www.semana.com/nacion/cali/articulo/la-mano-negra-leyenda-que-todavia-aterra-a-los-caminantes-de-la-colina-de-san-antonio-en-cali/202659/",
+    summary:
+      "La leyenda de la cruz de la Loma de la Cruz, junto a San Antonio (calle 5 con carrera 16), en sus dos versiones: el joven matricida cuya mano salía de la tierra y el esclavo Crescencio mutilado por su patrón; caminantes que oyen lamentos de noche.",
+    limitation:
+      "Prensa reciente sin informantes nombrados; trata otra leyenda del mismo barrio, no la casa de los pasos y las voces.",
+  }),
+  iDESCInfraestructura: source({
+    title: "Infraestructura física cultural del municipio de Santiago de Cali: San Antonio",
+    author: "Alcaldía de Santiago de Cali (IDESC)",
+    type: "ficha patrimonial municipal",
+    url: "https://idesc.cali.gov.co/download/bibliotecas/hitos/san_antonio.pdf",
+    summary:
+      "Historia del barrio: Cali de menos de cinco mil habitantes hasta la colina a mediados del XVIII, la viceparroquia pedida por José de Alegría en 1742, la capilla erigida en 1747 y el barrio como el más importante de la ciudad en lo artístico, cultural y arquitectónico.",
+    limitation:
+      "Documenta el escenario del relato; no menciona apariciones ni una Casa de la Tradición.",
+  }),
+  vallePlan2003: source({
+    title: "Plan Especial de Manejo del Patrimonio Cultural Inmueble de Santiago de Cali. Diagnóstico",
+    author: "Departamento Administrativo de Planeación Municipal; Universidad del Valle, CITCE (coord. Francisco Ramírez Potes)",
+    year: 2003,
+    type: "diagnóstico patrimonial",
+    url: "https://idesc.cali.gov.co/download/pot_2000/patrimonio_inmueble/1_Diagnostico_Plan_Especial/plan_especial_manejo_patrimonio_cultural_inmueble.pdf",
+    summary:
+      "Estudia los barrios San Antonio, San Cayetano y Libertadores y describe el trazado colonial de Cali que se estrecha contra la colina de San Antonio.",
+    limitation:
+      "Documento de arquitectura y urbanismo; no trata leyendas ni identifica una casa encantada. Comparte dominio con la ficha IDESC.",
+  }),
+  velasquezmedicina1957: source({
+    title: "La medicina popular en la costa colombiana del Pacífico",
+    author: "Rogerio Velásquez",
+    year: 1957,
+    type: "artículo etnográfico (Revista Colombiana de Antropología, vol. 6, pp. 195-241)",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/1792",
+    summary:
+      "En «Prácticas mágico-religiosas» (pp. 213-214): en el Alto y Bajo Chocó las enfermedades se atribuyen a las influencias de un enemigo; el curandero-brujo, la novena con el muñeco de balso enterrado en el bosque para matar despacio al envidiado, y el ruego al brujo para que cure.",
+    limitation:
+      "Trata el daño puesto por brujo en el Chocó, no la Yesca: no nombra bejucos que ahogan ni usa la palabra chinango. Escaneo sin texto, leído por OCR.",
+  }),
+  salazarCuando2022: source({
+    title: "Cuando las brujas vuelan y hacen daño. Esquemas culturales sobre la brujería del campesinado en Colombia",
+    author: "Alejandro Munévar Salazar, Laura Andrea Chaparro Rojas y Julio Alexander Bernal Chávez",
+    year: 2022,
+    type: "artículo académico (LiminaR, vol. 20, núm. 1)",
+    url: "https://www.scielo.org.mx/scielo.php?pid=S1665-80272022000100314&script=sci_arttext&tlng=es",
+    summary:
+      "Sobre el Atlas Lingüístico-Etnográfico de Colombia: registra en el Chocó «hacer maldad» y «hacer brujería (maleficio)», el testimonio de Aquilina Córdoba en Coredó (1975) y el embrujo como encierro o pérdida del rumbo.",
+    limitation:
+      "Trata la brujería campesina en todo el país y las brujas voladoras, no la Yesca ni el daño en forma de bejucos.",
+  }),
+  colombiacomChoco: source({
+    title: "Chocó (guía turística, sección de mitos y leyendas)",
+    author: "Colombia.com",
+    type: "guía turística en PDF",
+    url: "https://cdn.colombia.com/docs/turismo/sitios-turisticos/pacifico/choco.pdf",
+    summary:
+      "Única forma escrita del nombre: «La Yesca: imaginario de un brujo o chinango que se pone a una persona malévola», representada en algunas partes con bejucos y ramas que abrazan a la víctima y la ahogan.",
+    limitation:
+      "Portal turístico sin fecha, autor ni informante; dos líneas sin relato. Se incluye sólo porque es el único registro del nombre.",
+  }),
+  vlietColombia19972: source({
+    title: "Colombia, Many Countries in One (incluye «Niños de las regiones de Colombia», de Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "material educativo (ERIC)",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Madremonte de la región cafetera con cabellos de helechos y lianas y brazos de bejucos, guardiana que desata tempestades cuando talan un árbol.",
+    limitation:
+      "Trata la Madremonte cafetera, no la Yesca; texto divulgativo para niños.",
+  }),
+  eSAPInventario: source({
+    title: "Inventario turístico de Viterbo (Caldas): mitos, leyendas y tradición oral",
+    author: "Municipio de Viterbo (repositorio ESAP)",
+    type: "inventario municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/e2157446-5cb0-4e99-afa6-f31ad7ee56b6/download",
+    summary:
+      "§1.4.1: la Madremonte vestida de chamizos, hojas y bejucos, o convertida en los rastrojos en una zarza tupida en movimiento que mira con rabia a quienes pasan.",
+    limitation:
+      "Trata la Madremonte de Caldas, no la Yesca; inventario sin informantes nombrados.",
+  }),
 };
 
 export const pacificoRestanteSourceKeysBySlug = {
@@ -595,7 +1278,29 @@ export const pacificoRestanteSourceKeysBySlug = {
   ],
 };
 
-export function pickPacificoRestanteSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickPacificoRestanteSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickPacificoRestanteSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = pacificoRestanteSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickPacificoRestanteSourcesHeredadas(slug) {
   const keys = pacificoRestanteSourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

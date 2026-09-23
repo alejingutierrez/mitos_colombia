@@ -20,7 +20,18 @@ test("los setenta expedientes cumplen la metodología editorial", () => {
   assert.equal(records.length, 70);
   assert.deepEqual(new Set(records.map(({ slug }) => slug)), new Set(reviewedCaribeMestizoFinalSlugs));
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650, `${record.slug}: mito ${words(record.mito)}`);
+    // El piso del Relato baja a 90 palabras cuando la ficha declara
+    // `relatoCorto` con su razón: hay tres piezas en el ciclo que en la fuente
+    // son cinco frases, y estirarlas hasta trescientas palabras obligaría a
+    // inventar escenas. La excepción se declara en el módulo, no se supone.
+    const pisoMito = record.relatoCorto ? 90 : 300;
+    assert.ok(
+      words(record.mito) >= pisoMito && words(record.mito) <= 650,
+      `${record.slug}: mito ${words(record.mito)} (piso ${pisoMito})`,
+    );
+    if (record.relatoCorto) {
+      assert.ok(words(record.relatoCorto) >= 15, `${record.slug}: relatoCorto sin razón escrita`);
+    }
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600, `${record.slug}: historia ${words(record.historia)}`);
     assert.ok(words(record.versiones) >= 170 && words(record.versiones) <= 550, `${record.slug}: versiones ${words(record.versiones)}`);
     assert.ok(words(record.leccion) >= 8 && words(record.leccion) <= 22, `${record.slug}: lección`);
@@ -32,9 +43,20 @@ test("los setenta expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
-    assert.ok(sources.every(({ url, summary, limitation }) => url.startsWith("https://") && summary && limitation));
+    // Ocho es el PISO, no una cuota: el bloque mestizo pide mínimo 8 y meta 12,
+    // y tras la búsqueda por mito las fichas van de 8 a 13. La aserción vieja
+    // exigía ocho exactas, que es lo que produce el reparto en bloque.
+    assert.ok(sources.length >= 8, `${record.slug}: ${sources.length} fuentes, el piso es 8`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length, `${record.slug}: URLs repetidas`);
+    // `http` se admite cuando el servidor no ofrece `https` —SciELO Colombia y
+    // algunos repositorios universitarios sólo sirven en claro— pero entonces
+    // la limitación tiene que decirlo (spec §8).
+    assert.ok(
+      sources.every(({ url, summary, limitation }) =>
+        summary && limitation &&
+        (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation)))),
+      `${record.slug}: una fuente va sin resumen, sin límite, o en http sin declararlo`,
+    );
     assert.equal(record.content, [
       `Mito\n${record.mito}`,
       `Historia\n${record.historia}`,
@@ -47,18 +69,58 @@ test("los setenta expedientes cumplen la metodología editorial", () => {
   }
 });
 
-test("restaura corpus y hace visible la brecha de trece rutas", () => {
-  const counts = Object.fromEntries([...new Set(caribeMestizoFinalCatalog.map(({ group }) => group))].map((group) => [group, caribeMestizoFinalCatalog.filter((entry) => entry.group === group).length]));
-  assert.deepEqual(counts, { martinez: 33, zapata: 15, list: 3, unresolved: 13, buenaventura: 1, otero: 3, morgan: 1, francisco: 1 });
+test("las tres procedencias del ciclo, y ninguna ficha declara carencia", () => {
+  // Este test sustituye a «restaura corpus y hace visible la brecha de trece
+  // rutas», que afirmaba lo contrario de lo que resultó ser verdad. Aquel daba
+  // por buenas trece fichas «sin fuente primaria localizada», exigía que su
+  // `researchNotes` dijera BRECHA DOCUMENTAL EXPLÍCITA y que su `historia`
+  // dijera «no apareció». Las trece salen del libro de Zapata Olivella, que
+  // está en abierto, y declarar carencia en la página está prohibido por el
+  // spec §5.4. No se borra la comprobación: se afirma sobre lo que hay.
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  for (const entry of caribeMestizoFinalCatalog.filter(({ group }) => group === "unresolved")) {
-    assert.match(bySlug.get(entry.slug).researchNotes, /BRECHA DOCUMENTAL EXPLÍCITA/i);
-    assert.match(bySlug.get(entry.slug).historia, /no apareció|no localizó/i);
+
+  // El subciclo que el módulo llama `martinez` son en realidad tres obras, de
+  // tres autores y tres décadas, y cada una permite afirmar cosas distintas.
+  const martinez = caribeMestizoFinalCatalog.filter(({ group }) => group === "martinez");
+  assert.equal(martinez.length, 33);
+  const procedencias = martinez.map((entry) => {
+    const h = bySlug.get(entry.slug).historia;
+    if (/Porto de González/i.test(h)) return "porto";
+    if (/Otero D.?Costa/i.test(h)) return "otero";
+    if (/Martínez Fajardo/i.test(h)) return "martinez";
+    return "sin declarar";
+  });
+  const cuenta = procedencias.reduce((acc, k) => ({ ...acc, [k]: (acc[k] || 0) + 1 }), {});
+  assert.equal(cuenta["sin declarar"] ?? 0, 0, "toda ficha declara de qué obra sale");
+  assert.ok(cuenta.porto >= 13, `Porto de González sostiene 13 fichas, declaradas: ${cuenta.porto}`);
+  assert.ok(cuenta.otero >= 3, `Otero D'Costa sostiene 3 de este subciclo, declaradas: ${cuenta.otero}`);
+
+  // Ninguna ficha declara carencia en un campo publicable: eso vive en `dudas`.
+  for (const record of records) {
+    for (const campo of ["mito", "historia", "versiones", "similitudes", "leccion"]) {
+      assert.doesNotMatch(
+        record[campo],
+        // La carencia prohibida es la de la investigación, no la del relato:
+        // «el fantasma no se apareció a nadie» es narración y debe pasar.
+        // Por eso el patrón exige un sustantivo documental detrás.
+        /no (?:se )?(?:ha(?:n)? )?(?:apareci[óo]|localiz[óo]|encontr[óo]|conserva|conoce)\w*\s+(?:ning[uú]n[a]?\s+)?(?:fuente|registro|testimonio|documento|edici[óo]n|versi[óo]n escrita|dato|estudio|transcripci[óo]n|expediente)/i,
+        `${record.slug}: «${campo}» declara carencia y eso va en dudas`,
+      );
+      assert.doesNotMatch(record[campo], /BRECHA DOCUMENTAL/i, `${record.slug}: «${campo}»`);
+    }
   }
-  assert.match(bySlug.get("conejo-y-los-hijos-de-tia-tigra").mito, /siete hijos/i);
-  assert.match(bySlug.get("tio-conejo-zapatero").historia, /Pacífico/i);
-  assert.match(bySlug.get("el-tesoro-de-morgan").historia, /1957/);
-  assert.match(bySlug.get("francisco-el-hombre").versiones, /Credo|oración/i);
+
+  // Las dos cifras del cuento de Tía Tigra se conservan, cada una con su
+  // fuente: Zapata dice cinco y List siete, y las dos son correctas.
+  const tigra = bySlug.get("conejo-y-los-hijos-de-tia-tigra");
+  assert.match(tigra.mito, /cinco/i, "el relato sigue a Zapata, que dice cinco");
+  assert.match(tigra.versiones, /siete/i, "la cifra de List se conserva en versiones");
+
+  // Tío Conejo zapatero cambió de procedencia: su primario es cordobés y la
+  // localización está dentro del propio relato.
+  const zapatero = bySlug.get("tio-conejo-zapatero");
+  assert.match(zapatero.mito, /Cotorra/i);
+  assert.match(zapatero.historia, /Zapata Olivella/i);
 });
 
 test("la matriz cubre las setenta rutas y explicita límites", () => {

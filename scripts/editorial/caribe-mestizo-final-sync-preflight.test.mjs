@@ -20,7 +20,13 @@ test("la sincronización prepara 70 actualizaciones y conserva 72 rutas", { skip
   assert.deepEqual(output.universe.toDelete, []);
   assert.equal(output.dossiers, 70);
   assert.equal(output.imagePairs, 70);
-  assert.equal(output.sourcesPerMyth, 8);
+  // `sourcesPerMyth` era 8 para las setenta, porque el aparato se repartía en
+  // bloque. Tras la búsqueda por mito es un abanico: se comprueba el piso del
+  // bloque mestizo, no una cuota. Que deje de ser un número único es
+  // justamente la señal de que el reparto en bloque desapareció.
+  const porMito = [output.sourcesPerMyth].flat();
+  assert.ok(porMito.length > 1, "todas las fichas tienen el mismo número de fuentes: huele a reparto en bloque");
+  assert.ok(Math.min(...porMito) >= 8, `alguna ficha baja del piso de 8: ${Math.min(...porMito)}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

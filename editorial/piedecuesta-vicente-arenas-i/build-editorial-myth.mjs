@@ -36,13 +36,16 @@ function verticalPrompt(scene) {
   return `Ilustración editorial vertical digital 2D full paper cut y paper quilling, acabado gráfico plano y composición a página completa: ${scene}; segunda escena claramente distinta de la portada, construida con capas digitales recortadas, bordes limpios, formas mate y quilling dibujado selectivo sin volumen físico; tensión narrativa sobria, trato digno y sin violencia gráfica, caricatura, texto ni letras, sin fotografía, fibras reales, pliegues reales, grosor de papel, sombras proyectadas, objeto físico, maqueta, diorama, CGI ni render 3D.`;
 }
 
+// Las fichas reescritas entregan el campo entero; si no lo traen, se compone
+// como antes. El camino viejo daba un párrafo propio y el resto idéntico para
+// toda la comunidad: por eso todas medían lo mismo y se leían igual.
 export function buildPiedecuestaVicenteArenasIEditorialMyth(input) {
   const media = piedecuestaVicenteArenasIMedia[input.slug];
   if (!media) throw new Error(`${input.slug}: falta inventario visual.`);
   const categoryPath = piedecuestaVicenteArenasICategoryBySlug[input.slug];
   if (!categoryPath) throw new Error(`${input.slug}: falta taxonomía.`);
-  const historia = `${input.historyCore}\n\n${sharedHistory}`;
-  const versiones = `${input.versionCore}\n\n${sharedVersions}`;
+  const historia = input.historia ?? `${input.historyCore}\n\n${sharedHistory}`;
+  const versiones = input.versiones ?? `${input.versionCore}\n\n${sharedVersions}`;
   const imagePromptHorizontal = horizontalPrompt(input.sceneHorizontal);
   const imagePromptVertical = verticalPrompt(input.sceneVertical);
   const record = {
@@ -53,10 +56,12 @@ export function buildPiedecuestaVicenteArenasIEditorialMyth(input) {
     latitude: media.latitude,
     longitude: media.longitude,
     mito: input.mito,
+    ...(input.relatoCorto ? { relatoCorto: input.relatoCorto } : {}),
+    ...(input.fuentesAgotadas ? { fuentesAgotadas: input.fuentesAgotadas } : {}),
     historia,
     versiones,
     leccion: input.leccion,
-    similitudes: input.similarityCore,
+    similitudes: input.similitudes ?? input.similarityCore,
     excerpt: input.excerpt,
     seo_title: input.seoTitle,
     seo_description: input.seoDescription,

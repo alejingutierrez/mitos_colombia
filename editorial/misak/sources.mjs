@@ -189,12 +189,92 @@ export const misakSources = {
     summary:
       "Fuente comparativa directa del diluvio de Noé, útil para identificar qué motivos aparecen solo en la reelaboración tardía de Pedro de Urdimales.",
   },
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  uribeGuambianos2001: {
+    title: "Guambianos: una cultura de oro",
+    author: "Luis Guillermo Vasco Uribe",
+    year: 2001,
+    type: "artículo de revista arbitrada",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/download/4866/5112/0",
+    summary:
+      "Aporta el nacimiento concreto que el capítulo general no detalla: la cacica Teresita de la Estrella, o Tesha, bajada de la quebrada de Ñimpi, con el tampalkuare que desciende del aroiris parado con un pie a cada lado de la laguna, el derrumbe a los siete meses de páramo, el rescate en el plan de Nuyapale frente a la salina de Las Delicias y las siete madres de crianza que mueren. Añade los ciclos de 200 y de 1.000 a 2.000 años y los ocho colores del chumbe.",
+    limitation:
+      "Vasco advierte en la nota inicial que los análisis son de su autoría y no comprometen a los taitas del Comité de Historia. El artículo fue encargado y financiado por el Museo del Oro y organiza el material alrededor del oro, lo que sobrerrepresenta ese motivo frente a otros del mismo corpus.",
+  },
+  vivasAntes2010: {
+    title: "Antes el amanecer. Antología de las literaturas indígenas de los Andes y la Sierra Nevada de Santa Marta, tomo 1",
+    author: "Miguel Rocha Vivas y María Villa Largacha (compiladores)",
+    year: 2010,
+    type: "antología del Ministerio de Cultura",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll8/id/9/",
+    summary:
+      "Publica «Piunɵ / Los hijos del agua», de Bárbara Muelas: una secuencia de creación distinta, con Mama Chuminka —que es el Pishimisak— y tata Ciru Kallim preparando la llegada, el derrumbe que trae junto con los niños el origen de la música de flauta y tambor, y el rescate con rejo de dos criaturas un domingo al amanecer. Fija Ñimpipisu como hembra y Nupitrapuik como macho.",
+    limitation:
+      "Es una antología: el texto de Bárbara Muelas se reproduce fuera de su libro de origen, «La fuerza de la gente» (2005), y va acompañado de notas interpretativas del compilador que no son voz misak. La transcripción vacila entre «una hija» y «el niño» dentro del mismo relato.",
+  },
+  tunubalaSegundo2009: {
+    title: "Segundo plan de vida de pervivencia y crecimiento Misak. Mananasrøkurri Mananasrønkatik Misak Waramik",
+    author: "Floro Tunubalá y Juan Bautista Muelas Trochez (Cabildo del Resguardo de Guambía)",
+    year: 2009,
+    type: "plan de vida",
+    url: "https://repository.iom.int/bitstream/handle/20.500.11788/377/COL%20OIM%200296.pdf?sequence=1&isAllowed=y",
+    summary:
+      "Da la versión oficial del cabildo: en el kөrrak había dos grandes lagunas, Nupisu o Piendamu mөk (macho) y Ñimpi ishukpisu (hembra), cuyas aguas se unen para dar origen al piurek, que se llamó tata Illimpi y mama Keltsi; de sus primeros hijos, los shurmera, descienden Piendamú, Calambás, Tumpe, Tesha de la Estrella, Karamaya, Manuela y Dominga.",
+    limitation:
+      "Es un documento de planeación política, no una recopilación de tradición oral: comprime el origen en un párrafo doctrinal, sin narradores ni variantes, y está redactado para sustentar el gobierno propio ante el Estado.",
+  },
+  escobarciclo2019: {
+    title: "El ciclo sagrado de las altas cumbres: agua, vida y pensamiento entre los misak (guambianos)",
+    author: "Duvan Escobar",
+    year: 2019,
+    type: "ensayo fotográfico en revista arbitrada",
+    url: "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1900-54072019000100145",
+    summary:
+      "Registra la vigencia actual del origen acuático: en el trabajo de campo de 2016 en San Pedro, los jóvenes de la Misak Universidad y los mayores remiten constantemente al «parto de las lagunas» y a piurek, y el docente misak Javier Morales describe el saludo al agua —sacarla cuatro veces a la izquierda y cuatro a la derecha— antes de caminar la montaña.",
+    limitation:
+      "Es un ensayo fotográfico, no una recopilación narrativa: no transcribe ningún relato de origen completo, y la parte etnográfica llega filtrada por un diálogo a dos voces entre el antropólogo y un solo interlocutor misak.",
+  },
+  uribeEntre2002: {
+    title: "Entre selva y páramo. Viviendo y pensando la lucha india",
+    author: "Luis Guillermo Vasco Uribe",
+    year: 2002,
+    type: "monografía etnográfica",
+    url: "https://www.luguiva.net/admin/pdfs/ENTRE%20SELVA%20Y%20PARAMO.%20VIVIENDO%20Y%20PENSANDO%20LA%20LUCHA%20INDIA.pdf",
+    summary:
+      "Aporta el testimonio fechado sobre quiénes son los Pishau: Cruz Tunubalá, de Cacique, el 25 de abril de 1988, los define como los papá señores antiguos y los pisuabuelos, los abuelos de la laguna «que dan el espíritu a nosotros», gigantes que amasaban el oro con plantas vivas, tsilo, y no comían sal del blanco. Documenta también la disputa con los etnohistoriadores que los identificaban con los pijaos.",
+    limitation:
+      "Los relatos aparecen como citas dentro de una argumentación sobre método y lucha política, recortados según lo que ese argumento necesita; el libro no añade narradores nuevos para el origen.",
+  },
 };
 
-export function pickMisakSources(...keys) {
-  return keys.map((key) => {
-    const source = misakSources[key];
-    if (!source) throw new Error(`Fuente Misak desconocida: ${key}.`);
-    return source;
-  });
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickMisakSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = misakSources[key];
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Misak desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

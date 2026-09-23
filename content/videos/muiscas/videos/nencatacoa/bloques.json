@@ -122,18 +122,10 @@
       "desc": "PLANO GENERAL del patio al amanecer con las vasijas secas, los músicos dormidos contra los maderos y una figura oscura cruzando hacia el bosque."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b3a",
-      "reusa": "mitos/nencatacoa/entrada"
-    },
-    {
-      "tag": "b6a",
-      "reusa": "mitos/nencatacoa/acto"
-    },
-    {
-      "tag": "b9b",
-      "reusa": "mitos/nencatacoa/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-nencatacoa-escenas.mjs"
+  }
 }

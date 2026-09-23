@@ -27,6 +27,9 @@ function digest(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+const REHECHAS = new Set(["la-piedra-del-muerto", "el-trapiche-ardiendo", "lagunas-encantadas", "lo-que-ensenan-las-cuevas", "el-cacique-salomon", "tal-para-cual"]);
+
+
 test("los seis expedientes cumplen rangos y estructura metodológica", () => {
   assert.equal(records.length, 6);
   assert.deepEqual(
@@ -65,12 +68,19 @@ test("los seis expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 7);
+    // Era una cuota fija, el reparto en bloque. Tras la ronda del cierre cada
+    // ficha rehecha tiene las suyas, con piso de 8; las bloqueadas siguen
+    // con el reparto heredado.
+    assert.ok(sources.length >= (REHECHAS.has(record.slug) ? 8 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary &&
+          limitation &&
+          // `http` sólo si el servidor no ofrece `https` —SciELO Colombia— y
+          // la fuente lo declara en su límite (spec §8).
+          (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -94,33 +104,22 @@ test("los seis expedientes cumplen rangos y estructura metodológica", () => {
   }
 });
 
+// Las aserciones de antes fijaban el texto heredado, que el cotejo con Arias y
+// Otero (Villa Posse II) desmintió por omisión: el remate de la Mancarita, la
+// doncella de catorce años, el Colmenero en los oficios del Viernes Santo, el
+// final «por bobos o por cotudos». Se comprueba ahora lo que la fuente trae.
 test("desfusiona ciclos y corrige título, estigma y patrimonio", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  assert.doesNotMatch(
-    bySlug.get("el-trapiche-ardiendo").mito,
-    /barbacoa|Mancarita/i,
-  );
-  assert.match(
-    bySlug.get("lagunas-encantadas").versiones,
-    /restituye ocho localizaciones/i,
-  );
-  assert.doesNotMatch(
-    bySlug.get("lo-que-ensenan-las-cuevas").mito,
-    /Alejandro/i,
-  );
-  assert.match(
-    bySlug.get("lo-que-ensenan-las-cuevas").versiones,
-    /reportarse al ICANH/i,
-  );
-  assert.match(
-    bySlug.get("el-cacique-salomon").historia,
-    /no identifica a un personaje llamado Salomón/i,
-  );
-  assert.match(
-    bySlug.get("tal-para-cual").versiones,
-    /Omite la copla y las bromas/i,
-  );
-  assert.doesNotMatch(bySlug.get("tal-para-cual").mito, /cotudo|bobo/i);
+  const ficha = (slug) => bySlug.get(slug);
+  assert.match(ficha("el-trapiche-ardiendo").mito, /Nazario/);
+  assert.match(ficha("el-trapiche-ardiendo").mito, /Mancarita/);
+  assert.match(ficha("lagunas-encantadas").mito, /Alto Nogales[\s\S]*catorce|catorce[\s\S]*Alto Nogales/);
+  assert.match(ficha("lo-que-ensenan-las-cuevas").mito, /Colmenero/);
+  assert.match(ficha("lo-que-ensenan-las-cuevas").mito, /Viernes Santo/);
+  assert.match(ficha("lo-que-ensenan-las-cuevas").mito, /Cachal[uú]/);
+  assert.match(ficha("el-cacique-salomon").historia, /Otero/);
+  assert.match(ficha("el-cacique-salomon").mito, /V[eé]lez/);
+  assert.match(ficha("tal-para-cual").mito, /bobo[\s\S]*cotudo|cotudo[\s\S]*bobo/i);
 });
 
 test("la matriz cubre seis rutas, autores y límites", () => {

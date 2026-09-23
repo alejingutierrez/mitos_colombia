@@ -365,6 +365,208 @@ export const caldasMestizoSources = {
     limitation:
       "No es una versión de Clementina ni una prueba de brujería histórica en Salamina.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Texto del cuento de Enrique Otero D'Costa, de sus Leyendas (Minerva, 1936), en la sección 17 «Varias regiones», pp. 17-21, con la dedicatoria a Aquilino Villegas.",
+    limitation:
+      "Villa Posse lo presenta como leyenda oída y reelaborada por el autor; es un cuento firmado, no un registro oral.",
+  }),
+  dCostaLeyendas1964: source({
+    title: "Leyendas",
+    author: "Enrique Otero D'Costa",
+    year: 1964,
+    type: "artículo (Revista Universidad Pontificia Bolivariana 27 (95), pp. 55-73)",
+    url: "https://revistas.upb.edu.co/index.php/revista-institucional/article/view/3125",
+    summary:
+      "Tercera impresión del cuento, póstuma, que abre el grupo de seis «Leyendas» del autor (pp. 55-58) y trae entero el romance final.",
+    limitation:
+      "Variantes de taller frente a 1993; la revista lo llama crónica sobre temas coloniales.",
+  }),
+  camargoHacia2015: source({
+    title: "Hacia una nueva comprensión de la historiografía colombiana: breve historia intelectual de Enrique Otero D'Costa (1883-1964)",
+    author: "Daniel Mauricio Preciado Camargo",
+    year: 2015,
+    type: "trabajo de grado (Universidad del Rosario)",
+    url: "https://repository.urosario.edu.co/handle/10336/10607",
+    summary:
+      "Estudio de la obra de Otero D'Costa que copia el pasaje del desayuno del tambo y lo remite a Historietas. Leyendas y tradiciones colombianas (Manizales, 1934), p. 131.",
+    limitation:
+      "Lee el cuento como historiografía de la vida diaria; no se ocupa del romance ni del honor del caído.",
+  }),
+  republicacoleccionsf: source({
+    title: "La colección de Enrique Otero D'Costa",
+    author: "Credencial Historia n.º 375 (Banco de la República)",
+    year: "s. f.",
+    type: "artículo de divulgación histórica",
+    url: "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-375/la-coleccion-de-enrique-otero-dcosta",
+    summary:
+      "Presenta a Enrique Otero D'Costa como historiador y coleccionista de documentos coloniales, el oficio desde el que escribe sus leyendas.",
+    limitation:
+      "No menciona este cuento.",
+  }),
+  plutarcoSayingssf: source({
+    title: "Sayings of Spartan Women (Moralia)",
+    author: "Plutarco, trad. F. C. Babbitt (LacusCurtius, Universidad de Chicago)",
+    year: "s. f.",
+    type: "fuente clásica comparativa",
+    url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/Sayings_of_Spartan_Women*.html",
+    summary:
+      "Reúne el dicho de la madre espartana que, al saber que su hijo cayó en su puesto, pide que lo entierren y que su hermano ocupe el lugar (n.º 20), el paralelo de Similitudes.",
+    limitation:
+      "Es la Esparta de Plutarco, sin relación histórica con el cuento.",
+  }),
+  anonimoSongsf: source({
+    title: "The Song of Roland",
+    author: "Anónimo, trad. C. K. Scott-Moncrieff (Project Gutenberg)",
+    year: "s. f.",
+    type: "fuente medieval comparativa",
+    url: "https://www.gutenberg.org/ebooks/391",
+    summary:
+      "El Roland moribundo que se tiende bajo un pino con la cara vuelta hacia el enemigo, el segundo paralelo de Similitudes.",
+    limitation:
+      "Épica francesa medieval; comparación de gesto, no de filiación.",
+  }),
+  colombianoGeneralidadessf: source({
+    title: "Generalidades volcán Nevado del Ruiz",
+    author: "Servicio Geológico Colombiano",
+    year: "s. f.",
+    type: "página institucional",
+    url: "https://www2.sgc.gov.co/sgc/volcanes/VolcanNevadoRuiz/Paginas/generalidades-volcan-nevado-ruiz.aspx",
+    summary:
+      "Registra que en época precolombina el volcán se llamaba Cumanday (Cerro Blanco), Tabuchía o Tama.",
+    limitation:
+      "Es la página técnica del volcán; da el nombre, no el relato.",
+  }),
+  tiempollama2023: source({
+    title: "Por qué se llama Nevado del Ruiz, la historia del volcán que genera alerta",
+    author: "El Tiempo",
+    year: 2023,
+    type: "prensa",
+    url: "https://www.eltiempo.com/colombia/otras-ciudades/por-que-se-llama-nevado-del-ruiz-la-historia-del-volcan-que-genera-alerta-759403",
+    summary:
+      "Explica en prensa que los quimbayas llamaban Cumanday al volcán y por qué terminó llamándose Nevado del Ruiz.",
+    limitation:
+      "Nota de actualidad sin fuentes citadas.",
+  }),
+  mexicoIztaccihuatl2022: source({
+    title: "Iztaccíhuatl, la mujer dormida",
+    author: "Instituto Nacional de Antropología e Historia (México)",
+    year: 2022,
+    type: "nota institucional",
+    url: "https://www.inah.gob.mx/foto-del-dia/iztaccihuatl-la-mujer-dormida",
+    summary:
+      "Resume la leyenda de Iztaccíhuatl y Popocatépetl, la princesa y el guerrero convertidos en volcanes, el paralelo mexicano de Similitudes.",
+    limitation:
+      "Es otra tradición; la comparación es de función, no de parentesco.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  hernandezAnimas2012: source({
+    title: "Ánimas y pactos diabólicos: un regaño platónico a los borrachos e idólatras de Santander desde la mitología en prosa",
+    author: "Farouk Caballero Hernández",
+    year: 2012,
+    type: "artículo (Rastros Rostros 14 (27), pp. 69-74, Universidad Cooperativa de Colombia)",
+    url: "https://revistas.ucc.edu.co/index.php/ra/article/download/445/450",
+    summary:
+      "Analiza el cuento con el libro de 1936 a la vista, dando sus folios (pp. 130-137), y lo lee como mitología en prosa de Santander junto a los relatos de pactos diabólicos.",
+    limitation:
+      "Estudio breve; su paginación no concilia con la de Villa Posse.",
+  }),
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Useche Toledo, González González, Guzmán Ruiz y Tunarrosa Echeverría (SENA)",
+    year: 2022,
+    type: "libro de memoria oral (SENA, La Dorada)",
+    url: "https://repositorio.sena.edu.co/bitstream/handle/11404/8024/Remembranzas_de_mis_abuelos.pdf?sequence=4&isAllowed=y",
+    summary:
+      "Recoge en Manzanares, con los narradores Anadelia Galvis y Hernán Aristizábal, el Ánima Sola del alto oriente caldense (pp. 21-25), la devoción que el cuento nombra al abrir.",
+    limitation:
+      "Es la tradición caldense de 2022, no el relato santandereano de Otero.",
+  }),
+  gutenbergEnglish1890: source({
+    title: "English Fairy Tales",
+    author: "Joseph Jacobs (Project Gutenberg)",
+    year: 1890,
+    type: "recopilación de cuentos",
+    url: "https://www.gutenberg.org/ebooks/7439",
+    summary:
+      "Trae el «Jack and the Beanstalk» con la fórmula del gigante que olfatea al escondido, «Fee-fi-fo-fum, I smell the blood of an Englishman», el paralelo de Similitudes.",
+    limitation:
+      "Cuento inglés; comparación de fórmula, no de filiación.",
+  }),
+  carrasquillamarquesa1928: source({
+    title: "La marquesa de Yolombó",
+    author: "Tomás Carrasquilla",
+    year: 1928,
+    type: "novela (edición digital de la Biblioteca Básica de Cultura Colombiana, Biblioteca Nacional)",
+    url: "https://siise.bibliotecanacional.gov.co/BBCC/Documents/View/208",
+    summary:
+      "Catálogo de los seres del monte antioqueño —Patetarro, Madremonte, Bracamonte— que Similitudes pone junto al hombre peludo de Supía.",
+    limitation:
+      "Es novela; no nombra al Uñón.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Inventa, bajo el nombre de El Patón, un gigante peludo del monte antioqueño que ataca a caminantes (pp. 67-68), la figura que compara Similitudes.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: su Patón es una noticia falsa, no un registro.",
+  }),
+  mejiaDiseno2012: source({
+    title: "Diseño de pruebas objetivas para evaluar competencias en el área de castellano para el grado tercero de la educación básica primaria",
+    author: "Luis Arturo Aguilar Mejía y Silvia Rosa Sierra Calvo (Universidad del Norte)",
+    year: 2012,
+    type: "trabajo de grado (Maestría en Educación)",
+    url: "https://manglar.uninorte.edu.co/bitstream/handle/10584/7607/luis%20arturo.pdf",
+    summary:
+      "Usa como texto de prueba escolar un relato del Patón firmado «Leyenda popular», el gigante del monte que compara Similitudes.",
+    limitation:
+      "Tesis de evaluación escolar en Barranquilla: el texto no tiene procedencia ni narrador y sólo prueba su circulación en materiales de aula.",
+  }),
+  aragonvienesf: source({
+    title: "Que viene el coco (Los Caprichos, n.º 3)",
+    author: "Fundación Goya en Aragón",
+    year: "s. f.",
+    type: "ficha de obra (grabado de Goya, 1799)",
+    url: "https://fundaciongoyaenaragon.es/eng/obra/que-viene-el-coco/871",
+    summary:
+      "Ficha del tercer Capricho de Goya, «Que viene el coco» (1799): la madre y los niños aterrados ante una figura envuelta, leída como crítica de la crianza por el miedo, el paralelo de Similitudes.",
+    limitation:
+      "Es el coco español; comparación de función.",
+  }),
+  escondidosespantosf: source({
+    title: "El espanto de la Mano Peluda",
+    author: "Javier Ocampo López (en Tunja Ciudad de Tesoros Escondidos)",
+    year: "s. f.",
+    type: "texto divulgativo",
+    url: "https://www.tunjatesorosescondidos.com/index.php/escudo-de-tunja/193-el-espanto-de-la-mano-peluda",
+    summary:
+      "Texto firmado por Javier Ocampo López, «El espanto de la Mano Peluda», ambientado en el convento de agustinos de la Candelaria y las casas de Tunja, la versión tunjana que citan Versiones y Similitudes.",
+    limitation:
+      "Portal divulgativo sin edición ni fecha; es el único texto abierto de esa variante.",
+  }),
+  rodriguezSalamina2016: source({
+    title: "Salamina repasa el legado de Rodrigo Jiménez Mejía",
+    author: "Luis Fernando Rodríguez, La Patria",
+    year: 2016,
+    type: "prensa",
+    url: "https://archivo.lapatria.com/entretenimiento/salamina-repasa-el-legado-de-rodrigo-jimenez-mejia-281961",
+    summary:
+      "Nota de La Patria sobre Rodrigo Jiménez Mejía, «autor de Tierrabuena», nacido en Salamina en 1904, líder salamineño.",
+    limitation:
+      "Es sobre el autor, no sobre Clementina.",
+  }),
 };
 
 export const caldasMestizoSourceKeysBySlug = {
@@ -446,7 +648,29 @@ export const caldasMestizoSourceKeysBySlug = {
   ],
 };
 
-export function pickCaldasMestizoSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickCaldasMestizoSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickCaldasMestizoSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = caldasMestizoSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickCaldasMestizoSourcesHeredadas(slug) {
   const keys = caldasMestizoSourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

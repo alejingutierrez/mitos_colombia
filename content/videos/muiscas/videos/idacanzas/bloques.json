@@ -122,18 +122,10 @@
       "desc": "PLANO MEDIO de un grupo sentado e inmóvil en el borde de un sembrado anegado, de perfil, mirando el agua que ya no se puede sacar."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b2a",
-      "reusa": "mitos/idacanzas/entrada"
-    },
-    {
-      "tag": "b6a",
-      "reusa": "mitos/idacanzas/acto"
-    },
-    {
-      "tag": "b9a",
-      "reusa": "mitos/idacanzas/huella"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-idacanzas-escenas.mjs"
+  }
 }

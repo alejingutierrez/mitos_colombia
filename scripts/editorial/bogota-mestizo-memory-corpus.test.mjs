@@ -66,13 +66,21 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    // Piso del bloque mestizo: 8 por ficha, no una cuota fija.
+    const piso = 8;
+    assert.ok(sources.length >= piso, `${record.slug}: ${sources.length} fuentes, piso ${piso}`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
+    // `http` se admite sólo cuando el servidor no ofrece `https` —SciELO
+    // Colombia— y la fuente lo declara en su límite (spec §8).
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary &&
+          limitation &&
+          (url.startsWith("https://") ||
+            (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
+      `${record.slug}: una fuente va sin resumen, sin límite, o en http sin declararlo`,
     );
     assert.equal(
       record.content,
@@ -95,44 +103,33 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
   }
 });
 
+// Las aserciones de antes fijaban frases del texto heredado —«ninguna ficha
+// deduce una condición clínica», «1584 … 1775 … 1960»—, y la reescritura sobre
+// el primario las desmintió: el Mono no es de 1775 ni está en el Museo
+// Colonial. Se comprueba ahora lo que el cotejo estableció, ficha por ficha.
 test("corrige diagnósticos, fusiones, cronología y territorio heredados", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  assert.match(
-    bySlug.get("el-bobo-del-tranvia").versiones,
-    /ninguna ficha deduce una condición clínica a partir de un apodo/i,
-  );
-  assert.match(
-    bySlug.get("el-loco-arias").versiones,
-    /ninguna ficha deduce una condición clínica/i,
-  );
-  assert.match(
-    bySlug.get("el-mono-de-la-pila").historia,
-    /1584[\s\S]+1775[\s\S]+1960/,
-  );
-  assert.match(
-    bySlug.get("la-loca-margarita").historia,
-    /1924[\s\S]+lenguaje burlón y estigmatizante/i,
-  );
-  assert.match(
-    bySlug.get("el-enigmatico-abogado").historia,
-    /La sentencia es un hecho[\s\S]+culpabilidad material/i,
-  );
-  assert.match(
-    bySlug.get("los-fantasmas-de-la-candelaria").versiones,
-    /relacionados por territorio, no variantes de una sola entidad/i,
-  );
-  assert.match(
-    bySlug.get("la-leyenda-del-santuario-de-monserrate").versiones,
-    /volcán y presencias muiscas[\s\S]+se retiran/i,
-  );
-  assert.equal(
-    bySlug.get("el-diablo-del-puente-del-comun").category_path,
-    "Andina > Varios > Mestizo",
-  );
-  assert.match(
-    bySlug.get("el-diablo-del-puente-del-comun").historia,
-    /Chía, Cundinamarca[\s\S]+Domingo Esquiaqui/,
-  );
+  const ficha = (slug) => bySlug.get(slug);
+  // El Mono: el oidor de los 1580 y el Museo Nacional de las tres fuentes de época.
+  assert.match(ficha("el-mono-de-la-pila").historia, /Pérez de Salazar/);
+  assert.match(ficha("el-mono-de-la-pila").historia, /Museo Nacional/);
+  // El Puente del Común: la inscripción de 1792, Esquiaqui y Chía, no Bogotá.
+  assert.equal(ficha("el-diablo-del-puente-del-comun").category_path, "Andina > Varios > Mestizo");
+  assert.match(ficha("el-diablo-del-puente-del-comun").historia, /1792/);
+  assert.match(ficha("el-diablo-del-puente-del-comun").historia, /Chía[\s\S]+Esquiaqui|Esquiaqui[\s\S]+Chía/);
+  // La Calle del Fantasma es un pacto con informante nombrada y 665 piedras.
+  assert.match(ficha("los-fantasmas-de-la-candelaria").historia, /Carmen Domínguez/);
+  assert.match(ficha("los-fantasmas-de-la-candelaria").mito, /665|seiscientas sesenta y cinco/i);
+  // La crónica de 1924 y el nombre que ella misma da.
+  assert.match(ficha("la-loca-margarita").historia, /1924[\s\S]+Mogollón|Mogollón[\s\S]+1924/);
+  // La cadena libro → ficha distrital → televisión se declara como una sola mano.
+  assert.match(ficha("el-loco-arias").historia, /Asdrúbal López Orozco/);
+  assert.match(ficha("el-loco-arias").historia, /Canal Capital/);
+  // El abogado se condenó por indicios: la culpa no se da por resuelta.
+  assert.match(ficha("el-enigmatico-abogado").historia, /indicios/i);
+  // El tranvía celestial es desenlace añadido, no del registro.
+  assert.match(ficha("el-bobo-del-tranvia").versiones, /tranvía celestial/i);
+  assert.match(ficha("la-leyenda-del-santuario-de-monserrate").historia, /1656/);
 });
 
 test("la matriz cubre las ocho rutas y sus límites", () => {

@@ -92,12 +92,59 @@ export const nukakSources = {
     limitation:
       "Define una manifestación patrimonial y sus medidas de salvaguardia; no narra por sí sola el mito de origen.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  herreranukak2016: source({
+    title: "Los nükak: en marcha por tierras devastadas. Nomadismo y continuidad en la Amazonia colombiana",
+    author: "Ruth Gutiérrez Herrera, Fondo Editorial ICANH, colección Terrenos Etnográficos",
+    year: 2016,
+    type: "monografía etnográfica",
+    url: "https://publicaciones.icanh.gov.co/index.php/picanh/catalog/download/123/172/68?inline=1",
+    summary:
+      "Publica en las pp. 87-95 la segunda versión, narrada por Kerayi, del grupo Wayari muno, la noche del 17 de junio de 2007. Es la que sostiene toda la capa de Versiones: Matchoroco mitad humano y mitad animal, parecido a una mariposa de manos largas; el lago Ké Inbé en las postrimerías del bajo Inírida; la puerta rota con hachas de piedra; Aukeribo como héroe activo que enseña a abrir trochas; Mauro saliendo entre los primeros; y el alarido de Meabu jumat que forma las montañas.",
+    limitation:
+      "La autora declara que trabajó con traductores —Yorena tradujo y se revisó con Dugupé, Wembe y Kurui— y que sólo usa fragmentos, sin pretender fijar «la» versión. Su ortografía es una tercera, distinta de las de Franky y Mahecha.",
+  }),
+  colombiaAuto2009: source({
+    title: "Auto 004 de 2009, apartado «Situación del pueblo indígena Nukak-Makú»",
+    author: "Corte Constitucional de Colombia, magistrado ponente Manuel José Cepeda Espinosa",
+    year: 2009,
+    type: "providencia judicial",
+    url: "https://www.corteconstitucional.gov.co/relatoria/autos/2009/a004-09.htm",
+    summary:
+      "Es lo que impide escribir esta ficha en pasado etnográfico. Documenta que en el contacto oficial de 1988 llegaron a Calamar cuarenta y tres personas —cuatro hombres, doce mujeres y veintiséis niños— con una epidemia de gripa, que la población cayó después a unas cuatrocientas, y la cadena de éxodos forzados entre 1965 y 2005.",
+    limitation:
+      "Es un diagnóstico judicial de 2009 sobre desplazamiento forzado y riesgo de exterminio; no habla de mitología ni de tradición oral, y sus cifras son las de ese año.",
+  }),
 };
 
-export function pickNukakSources(...keys) {
-  return [...new Set(keys)].map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickNukakSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = nukakSources[key];
-    if (!selected) throw new Error(`Fuente Nukak desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Nukak desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

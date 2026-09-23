@@ -436,6 +436,326 @@ export const pacificoNarinoSources = {
     limitation:
       "La copia disponible está mediada por ResearchGate y se usa con cautela.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (investigación y compilación)",
+    year: 1993,
+    type: "antología con textos reproducidos",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Sección 27: José Miguel Garrido, «La leyenda viva del padre Mera», de Tras el alma de un pueblo (1980, pp. 191-201): testimonios, alabaos y partidas parroquiales de Jesús María Mera.",
+    limitation:
+      "Antología: reproduce el capítulo, no el libro completo.",
+  }),
+  uNESCOMusica2015: source({
+    title: "Música de marimba y cantos y bailes tradicionales de la región colombiana del Pacífico sur y de la provincia ecuatoriana de Esmeraldas",
+    author: "UNESCO, Patrimonio Cultural Inmaterial",
+    year: 2015,
+    type: "inscripción en la Lista Representativa",
+    url: "https://ich.unesco.org/es/RL/musica-de-marimba-y-cantos-y-bailes-tradicionales-de-la-region-colombiana-del-pacifico-sur-y-de-la-provincia-ecuatoriana-de-esmeraldas-01099",
+    summary:
+      "La inscripción de la marimba y los cantos del Pacífico sur, que nombra Similitudes.",
+    limitation:
+      "No trata al padre Mera.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (Fulbright-Hays 1997), con las páginas «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "unidad didáctica con páginas web impresas",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Sirena del Arco de Tumaco, contada por Anita: reina del mar que sale de noche de su palacio y se deja ver sola en la playa.",
+    limitation:
+      "Divulgación infantil de pocas frases.",
+  }),
+  culturaLeyenda: source({
+    title: "Leyenda de la Sirena del Arco",
+    author: "Secretaría de Cultura, Recreación y Deporte de Bogotá (Bogotanitos)",
+    type: "página divulgativa infantil",
+    url: "https://www.culturarecreacionydeporte.gov.co/es/bogotanitos/cuenta-la-leyenda/leyenda-de-la-sirena-del-arco",
+    summary:
+      "La descripción larga: cola de ave, máscara, puñal y cetro, lapidario de once piedras, cantos, ballenas jorobadas.",
+    limitation:
+      "Sin firma ni fecha; amplía la ficha de 1997.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo y Universidad Autónoma de Colombia, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Ficha de la Sirena del Arco (pp. 49-50): costa Pacífica, cola de delfín, palacios submarinos y la carta del biólogo cerca de la isla del Gallo.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: sus relatos son composición de autor.",
+  }),
+  caroNoticias1975: source({
+    title: "Noticias Culturales n.º 179: folclor, el bufeo en Leticia",
+    author: "José Joaquín Montes Giraldo (Instituto Caro y Cuervo)",
+    year: 1975,
+    type: "boletín",
+    url: "https://bibliotecadigital.caroycuervo.gov.co/id/eprint/1634/1/NC_1E_179_1975.pdf",
+    summary:
+      "El bufeo de Leticia que toma figura de hombre para llevarse a las mujeres: paralelo de Similitudes.",
+    limitation:
+      "Otra región.",
+  }),
+  ibagueFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales (Universidad de Ibagué)",
+    year: 2013,
+    type: "libro de folclor regional",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "La Madre de Agua del Tolima, que llama a los niños desde la orilla: paralelo de Similitudes.",
+    limitation:
+      "Otra región.",
+  }),
+  homeroOdyssey1900: source({
+    title: "The Odyssey",
+    author: "Homero, trad. Samuel Butler (Project Gutenberg)",
+    year: 1900,
+    type: "poema épico",
+    url: "https://www.gutenberg.org/ebooks/1727",
+    summary:
+      "Canto XII: las sirenas que atraen a los navegantes con su canto: paralelo de Similitudes.",
+    limitation:
+      "Obra clásica.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  rLeyenda2018: source({
+    title: "Leyenda Pasto «Embilput y Embilquer»",
+    author: "Luis A. Ibarra R., TulcánOnline (fuente declarada: Luis Rosero Mora, Autorretrato del Carchi, vol. 2)",
+    year: 2018,
+    type: "portal cultural regional",
+    url: "https://www.tulcanonline.com/index.php/cultura/leyendas/200-leyenda-pasto-embilput-y-embilquer.html",
+    summary:
+      "La versión larga: carácter de cada volcán, diez meses solares bajo el agua, la misión de fundar la Gran Nación Pasto, trece pueblos nombrados y el final en que los ancianos vuelven al agua y salen por el cráter como cóndores.",
+    limitation:
+      "Reelaboración literaria de un libro que no se ha podido consultar; sin fecha ni página de la obra de Rosero Mora.",
+  }),
+  webAmor2023: source({
+    title: "Amor del Taita Imbabura y Mama Cotacachi",
+    author: "El Telégrafo (Redacción Web)",
+    year: 2023,
+    type: "prensa nacional ecuatoriana",
+    url: "https://www.eltelegrafo.com.ec/noticias/nacionales/44/amor-del-taita-imbabura-y-mama-cotacachi",
+    summary:
+      "Paralelo de Similitudes: los volcanes Imbabura y Cotacachi como pareja enamorada, él padre sabio que vigila, ella esposa; versión tomada de un manuscrito de 1946 publicado por la Casa de la Cultura, núcleo de Imbabura, en 2012.",
+    limitation:
+      "Es otro relato, de Imbabura; la prensa no da la referencia completa del manuscrito.",
+  }),
+  culturaBachue: source({
+    title: "Bachué y el origen del hombre",
+    author: "Secretaría de Cultura, Recreación y Deporte de Bogotá, Bogotanitos",
+    type: "divulgación institucional",
+    url: "https://www.culturarecreacionydeporte.gov.co/es/bogotanitos/cuenta-la-leyenda/bachue-y-el-origen-del-hombre",
+    summary:
+      "Paralelo de Similitudes: Bachué sale de la laguna de Iguaque, puebla la tierra con su esposo y, ya anciana, vuelve con él al agua convertidos en dos serpientes.",
+    limitation:
+      "Versión infantil sin fecha ni fuente colonial citada; es otro pueblo y otro relato.",
+  }),
+  moraMitos2004: source({
+    title: "Mitos y leyendas de la región andina de Nariño para el imaginario infantil. Aplicación multimedial",
+    author: "John Harvey Benavides Mora, Carmenza Janeth Espinoza Rosero y Sonia Alejandra Portilla Melo, Universidad de Nariño",
+    year: 2004,
+    type: "trabajo de grado",
+    url: "https://sired.udenar.edu.co/248/1/63632.pdf",
+    summary:
+      "Recoge La Moledora de Cumbal (texto de Luis Manuel Montenegro Pérez): la cacica de la sección de abajo frente al hermano de la sección de arriba; paralelo de Similitudes para la pareja de opuestos del territorio pasto.",
+    limitation:
+      "No trae el relato de Embilpud y Embilquer; se usa sólo como paralelo.",
+  }),
+  erazoRumichaca2016: source({
+    title: "Rumichaca, más que un punto en el límite cero",
+    author: "Carchi al Día (Redacción Tulcán; fotos de Lorena Erazo)",
+    year: 2016,
+    type: "prensa digital local",
+    url: "https://carchialdia.wordpress.com/2016/11/19/rumichaca-mas-que-un-punto-en-el-limite-cero/",
+    summary:
+      "La versión de Dimas Alfredo Tenganán, de 75 años, oída a su abuelo: carrera de noche, el «arrume piedra», el gallo de las cinco, la piedra que el Diablo no alcanzó a poner y la serpiente del río; da el «arrume piedra» como origen colombiano del nombre.",
+    limitation:
+      "Medio digital pequeño alojado en WordPress; crónica turística con el relato en un solo párrafo.",
+  }),
+  coralRituales: source({
+    title: "Rituales y sincretismos en el Resguardo de Ipiales",
+    author: "Edmundo Osejo Coral y Álvaro Flores Rosero (Abya-Yala); PDF del Museo El Chalguar",
+    type: "libro de etnografía",
+    url: "https://museoelchalguar.com/wp-content/uploads/2021/07/4.-Rituales-y-sincretismo-en-el-resguardo-indigena-de-Ipiales.pdf",
+    summary:
+      "P. 22: el chivo de Rumichaca que espera entre recodos y cuevas para cambalachar riquezas por almas, y el diablo que sube de las aguas bajas del Güaitara, junto al de la Humeadora. Pp. 197-198: el «Relato del diablo» de Guachucal (1991), paralelo de Similitudes.",
+    limitation:
+      "El chivo aparece en dos líneas de un recorrido, no como relato completo; el PDF no da el año de edición.",
+  }),
+  armasAlternativa2017: source({
+    title: "Alternativa para la puesta en valor del sistema vial andino Qhapaq Ñan, para generar desarrollo ecoturístico en la parroquia Urbina, cantón Tulcán",
+    author: "Stalin Andrés Lima Armas, Universidad Técnica del Norte",
+    year: 2017,
+    type: "tesis de maestría",
+    url: "https://repositorio.utn.edu.ec/bitstream/123456789/7677/1/PG%20564%20TESIS.pdf",
+    summary:
+      "P. 48: el «Puente del diablo» y la victoria de Dios con la obra más hermosa y resistente, más el duende de las aguas termales. P. 62: José Arellano cuenta que hay quien pide posada y baja a medianoche a hacerse lamer del chivo para volverse millonario.",
+    limitation:
+      "Tesis de ecoturismo: la versión de los puentes copia casi literal la nota de La Hora de 2006.",
+  }),
+  espanolatrio: source({
+    title: "El atrio de Cantuña",
+    author: "Wikipedia en español",
+    type: "enciclopedia colaborativa",
+    url: "https://es.wikipedia.org/wiki/El_atrio_de_Cantu%C3%B1a",
+    summary:
+      "Paralelo de Similitudes: el pacto de Cantuña con el diablo para acabar la iglesia de San Francisco de Quito antes del amanecer y la última piedra escondida que anula el trato.",
+    limitation:
+      "Wikipedia, sólo como comparativa; resume versiones escritas (Barrera Valverde, Quito Eterno) que no se consultaron.",
+  }),
+  pantojarugir2010: source({
+    title: "Al rugir del Galeras. Discursos y saberes en el contexto cultural del Cabildo Indígena de Genoy",
+    author: "Víctor Javier Erazo Pantoja",
+    year: 2010,
+    type: "monografía de grado, Universidad de Nariño (pp. 52-53)",
+    url: "https://sired.udenar.edu.co/11562/1/81629.pdf",
+    summary:
+      "Transcribe entera la narración de Pascuala Criollo (27 de abril de 2008): el matrimonio pobre despojado de El Edén, el trueno que deja al Guagua Rayo, el wilque, el bautizo con la escritura en pecho y espalda, la colita, la plata del papá rayo y la salida de los ricos.",
+    limitation:
+      "Monografía de pregrado; la entrevista se transcribe sin pautas explícitas de edición.",
+  }),
+  roserocaminos2014: source({
+    title: "Los caminos del Derecho Mayor en Jenoy (Pasto, Nariño, Colombia)",
+    author: "Franco Ceballos Rosero, Martha Isabel Rosas y Darío Tupaz Coral",
+    year: 2014,
+    type: "artículo, Procesos Históricos 26 (Universidad de los Andes, Mérida), pp. 158-185",
+    url: "https://www.redalyc.org/pdf/200/20031754012.pdf",
+    summary:
+      "Publica la versión de 2007 de Pascuala Criollo (lienzo, olla, bautizo, Juan Solarte Criollo) y recoge que otros mayores hacen a Juan Rayo hijo del Rayo y de la Virgen del Rosario Chiquita; sitúa su aparición en el Mantel de Piedra.",
+    limitation:
+      "Artículo de antropología jurídica: lee el relato como discurso político ante el reasentamiento; la versión de 2007 remite a una obra de 2010 que no está en abierto.",
+  }),
+  roseromayores2018: source({
+    title: "Los mayores y el territorio de Jenoy (Pasto, Colombia): quehacer etnográfico y etnoliteratura de resistencia",
+    author: "Franco Ceballos Rosero",
+    year: 2018,
+    type: "artículo, Universitas Humanística 86 (Pontificia Universidad Javeriana), pp. 197-218",
+    url: "https://www.redalyc.org/journal/791/79158036009/html/",
+    summary:
+      "Versión de una mayor que la oyó de su abuela: el rayo en el centro del pueblo, la mujer indígena que recoge al niño, el líder que saca a la gente de la esclavitud y hace nombrar Cabildo; la historia escrita en la piedra de Tomates.",
+    limitation:
+      "Texto etnoliterario: el autor recompone voces de varias reuniones en un solo relato y no identifica a la narradora.",
+  }),
+  sanchezmodern2024: source({
+    title: "Old and modern volcanic depictions as evidence of communities-volcanoes mutualism in Colombia",
+    author: "John J. Sánchez y William A. Posada",
+    year: 2024,
+    type: "artículo, Andean Geology 51 (1)",
+    url: "https://www.andeangeology.cl/index.php/revista1/article/view/V51n1-3667/html",
+    summary:
+      "Fotografía y describe el petroglifo Piedra de Guagua Rayo (Vuelta Larga) en Genoy y recoge que en Mapachico el niño del rayo se transforma en el Galeras y es patriarca de la región.",
+    limitation:
+      "Artículo de geología: el relato llega resumido y de segunda mano (cita a Cepeda 2020).",
+  }),
+  corponarinoDocumento2017: source({
+    title: "Documento étnico comunidades indígenas en la cuenca del río Juanambú (POMCA Juanambú)",
+    author: "Corponariño",
+    year: 2017,
+    type: "documento técnico institucional, pp. 198-200",
+    url: "https://corponarino.gov.co/wp-content/uploads/2018/08/1-Documento_%C3%A9tnico_Juanamb%C3%BA.pdf",
+    summary:
+      "En el apartado del Cabildo de Jenoy registra el petroglifo Mantel de la Vida, en el sector Tomates, donde «los ancestros dejaron tallando la figura del guagua rayo».",
+    limitation:
+      "Sólo nombra el mito y el lugar; no lo narra.",
+  }),
+  inguilanSaberes2023: source({
+    title: "Saberes ancestrales del Cabildo Indígena de Jenoy",
+    author: "María Camila Muñoz Inguilan",
+    year: 2023,
+    type: "monografía de grado, ESAP, territorial Nariño",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/54a4142b-7e1c-4b84-86e1-b72f65932b86/download",
+    summary:
+      "Menciona la piedra del Mantel de la Vida, en la parte alta del volcán, como reflejo del «mito de origen El guagua rayo», al que presenta como cuidador de la naturaleza.",
+    limitation:
+      "Trabajo de administración pública; una sola línea sobre el relato.",
+  }),
+  cAJARJuan2021: source({
+    title: "Juan Tama de la Estrella",
+    author: "Colectivo de Abogados José Alvear Restrepo (CAJAR)",
+    year: 2021,
+    type: "página institucional de ONG",
+    url: "https://www.colectivodeabogados.org/juan-tama-de-la-estrella/",
+    summary:
+      "Paralelo nasa: el hijo de la estrella que aparece en una balsa sobre la quebrada El Lucero, es criado por los médicos y llega a cacique defensor del territorio.",
+    limitation:
+      "Divulgación sin aparato; sólo sirve para el paralelo. Año de publicación no verificado en la página.",
+  }),
+  guerreromito2009: source({
+    title: "El mito, un mundo legendario real en los imaginarios socioculturales de los estudiantes del corregimiento de El Encano",
+    author: "Mario Enrique Sarasty Guerrero y Sonia Rocío Ramírez Barco",
+    year: 2009,
+    type: "tesis de Maestría en Etnoliteratura, Universidad de Nariño (cap. 4, pp. 76-80)",
+    url: "https://sired.udenar.edu.co/361/1/81610.pdf",
+    summary:
+      "Trae la versión más completa: los hijos Chasca, Coyllur y Waira, el Inti Raimi, el danzante Munani, el pilche conseguido con engaño, el tábano que pica la nalga del amante, la campana, el cerro Tábano y la balsa de totora del Viernes Santo que desencantaría la laguna.",
+    limitation:
+      "Reproduce un texto ajeno tomado de un portal del Ministerio de Cultura (nota 38) sin nombrar al autor; es literatura, no transcripción oral.",
+  }),
+  culturaLeyenda2: source({
+    title: "Leyenda de la laguna La Cocha - Nariño",
+    author: "Secretaría de Cultura, Recreación y Deporte de Bogotá (Bogotanitos)",
+    type: "página institucional infantil",
+    url: "https://www.culturarecreacionydeporte.gov.co/es/bogotanitos/cuenta-la-leyenda/leyenda-de-la-laguna-la-cocha-narino",
+    summary:
+      "Versión resumida, casi con las mismas frases que la tesis de 2009, con los hijos Lucero, Estrella y Viento y el insecto que pica al amante; cierra con el llanto de Pucara que aumenta la laguna.",
+    limitation:
+      "Divulgación infantil sin fecha ni autor; no cita de dónde toma el texto.",
+  }),
+  arteagamitos2023: source({
+    title: "Los mitos en la construcción discursiva de la identidad del Resguardo Quillasinga Refugio del Sol",
+    author: "Jeison Albeiro Benavides Arteaga, Tatiana Marcela Muñoz Araujo y Diana Marcela Muñoz Botina",
+    year: 2023,
+    type: "trabajo de grado, Licenciatura en Lengua Castellana y Literatura, Universidad de Nariño (pp. 45-49 del PDF)",
+    url: "https://sired.udenar.edu.co/16185/1/2023284.pdf",
+    summary:
+      "Paralelo oral del resguardo: los taitas Carlos Erazo y William Jojoa cuentan el origen de La Cocha con los siete pueblos, el pilche con agua, la pareja rechazada, el esposo convertido en cerro Tábano y el pilche volteado que se vuelve La Corota.",
+    limitation:
+      "No trae la versión de Pucara y Tamia: sirve para versiones y similitudes.",
+  }),
+  portillaRepresentaciones2023: source({
+    title: "Representaciones sociales sobre el volcán Galeras en Aguapamba, Genoy, municipio de Pasto, Nariño - Colombia",
+    author: "Roxana Cruz Portilla y Camilo Yaqueno Yaqueno",
+    year: 2023,
+    type: "artículo, Imagonautas 12 (17), pp. 305-323",
+    url: "https://imagonautas.upaep.mx/index.php/imagonautas/article/view/171",
+    summary:
+      "Testimonios de adultos mayores de Aguapamba: la subida con la Virgen del Rosario hasta las bocas humeantes, la «mamita chiquita» puesta arriba para que tendiera un mantel sobre el volcán, y el mortiño que se da en sus faldas.",
+    limitation:
+      "Estudio de representaciones sociales: los testimonios son fragmentos breves con seudónimo y edad.",
+  }),
+  ojedaErasoRepresentaciones2018: source({
+    title: "Representaciones sociales en una comunidad educativa de la Zona de Amenaza Alta del volcán Galeras (Colombia)",
+    author: "Nasly Anabel Ojeda-Eraso, Natalia Jurado-Romero y Elizabeth Ojeda-Rosero",
+    year: 2018,
+    type: "artículo, Boletín de Geología 40 (3)",
+    url: "https://www.redalyc.org/journal/3496/349660405010/html/",
+    summary:
+      "Testimonio de una vecina de Genoy: cuando el volcán erupciona y relampaguea se reza pasando la Virgen del Rosario por cada casa, con altares.",
+    limitation:
+      "Una sola cita sobre el rito, dentro de un estudio de percepción del riesgo.",
+  }),
+  robertsdeconstruction2015: source({
+    title: "The deconstruction of volcanic risk. Case study: Galeras, Colombia",
+    author: "Jessica Kate Roberts",
+    year: 2015,
+    type: "tesis doctoral, University of York",
+    url: "https://etheses.whiterose.ac.uk/id/eprint/12709/1/Final.THE%20DECONSTRUCTION%20OF%20VOLCANIC%20RISK-WHITEROSEdoc.pdf",
+    summary:
+      "Los líderes de Genoy describen el volcán como padre y protector que los salvó en otras erupciones; un líder dice que el Taita Galeras es como el padre, y un funcionario de cultura compara la mirada indígena al volcán con la católica a la Virgen.",
+    limitation:
+      "En inglés, con citas traducidas por la autora; no trae la historia de la Virgen de Sachapamba.",
+  }),
 };
 
 export const pacificoNarinoSourceKeysBySlug = {
@@ -500,7 +820,29 @@ export const pacificoNarinoSourceKeysBySlug = {
   ],
 };
 
-export function pickPacificoNarinoSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickPacificoNarinoSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickPacificoNarinoSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = pacificoNarinoSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickPacificoNarinoSourcesHeredadas(slug) {
   const keys = pacificoNarinoSourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

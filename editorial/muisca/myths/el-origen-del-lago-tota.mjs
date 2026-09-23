@@ -90,6 +90,11 @@ En el mundo, el paralelo más citado es védico: Indra vence a Vritra, la serpie
     "indra",
     "viracocha",
     "trentren",
+    "piedrahitaHistoria1688",
+    "calderaConcepcion2008",
+    "tiempoLaguna2023",
+    "tadeoviaje",
+    "albaImpresiones1871",
   ],
   researchNotes: `ESTADO: tradición regional del entorno de Tota reelaborada literariamente por Lilia Montaña (1970); no se presenta como transcripción prehispánica.
 

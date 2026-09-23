@@ -1,49 +1,69 @@
 import { defineWayuuMyth } from "../define-editorial-myth.mjs";
 
-const mito = `Mucho antes de que los caminos tuvieran cercas, varios hombres salieron de Uchi Juroteka para conocer otras tierras. Mareiwa les había encargado avanzar hacia el norte. Llevaban sandalias, agua y la confianza de quienes todavía no han sentido la sed de la península.
+const mito = `Salieron de Uchi Juroteka, en la Sierra Nevada de Santa Marta, varios hombres que querían correr tierras, conocer gentes y probar suerte. Caminaron hacia la península por arenales que no se acababan.
 
-El primero en detenerse fue Wojoro. Cerca de Maiceo tenía los pies abiertos y ya no podía apoyar el cuerpo sobre ellos. Sus compañeros miraron el horizonte y le dijeron que debían continuar. Wojoro se quedó sentado junto al camino.
+Al llegar a Maiceo, Wojoro iba muy cansado. Se le habían pelado los pies y no podía seguir.
 
-Más adelante, Epits se quitó las sandalias para descansar. Cuando quiso levantarse, las fuerzas no volvieron. Wososopo sintió que el aire seco le quemaba por dentro y pidió agua hasta que la voz se le apagó. Juyouirá llamó a quienes aún caminaban, pero el hambre le mordía el vientre. Tsitsi, que le había dicho que se quedara, tampoco consiguió llegar muy lejos.
+—Ya que tú te cansaste, nosotros seguiremos adelante —le dijeron los compañeros—. Tú te quedarás aquí.
 
-Itojoro avanzaba delante de todos. Cada vez que alguien cedía, gritaba que pronto encontrarían una tierra mejor. Los Monkii alcanzaron la orilla del mar. Guarapú se tendió un momento y el sueño lo venció. Al final, también Itojoro quedó con los pies heridos, junto a una mata de ita, cerca de Akuwa.
+Así fue como Wojoro se quedó cerca de Maiceo.
 
-Mareiwa contempló el camino incompleto. Aquellos viajeros no habían llegado al lugar señalado, pero tampoco serían borrados. Los convirtió en cerros. Cada cuerpo levantó una loma; cada nombre quedó unido a una altura. Los Monkii se volvieron morros junto al mar y Guarapú permaneció dormido sobre la tierra.
+Otro de ellos, Epits, se quitó las sandalias para descansar. Cuando quiso levantarse, las fuerzas le faltaron y la sed no lo dejó. Se quedó en medio del camino.
 
-Entonces Mareiwa subió a Tsitsi. La península seguía cubierta por el agua. Puso una piedra en su honda y la lanzó hasta Kasuto. El mar retrocedió, dejó la tierra descubierta y conservó pozos salados como memoria de su antigua extensión.
+Itojoro, el más ágil y el más fuerte de todos, iba adelante dando voces de aliento:
 
-—¿Qué comerán mis hijos sobre esta tierra? —se preguntó.
+—Vamos, compañeros, que pronto saldremos de estos arenales y encontraremos mejores tierras.
 
-Envió bandadas de pavas, turpiales y otras aves. Comieron frutos y los llevaron por toda la península. Donde dejaron caer las semillas nacieron cardones, iguarayas y plantas capaces de resistir el verano.
+Los que se quedaban le contestaban:
 
-En Arachí, entre grandes piedras, Mareiwa reunió a los primeros Wayuu. Dio nombre a sus clanes, entregó animales y compañeras, repartió territorios y pintó sobre la roca las marcas con que cada grupo reconocería sus bienes.
+—No podemos más. Nuestras fuerzas no nos sirven. Ojalá tú también te canses y te quedes con nosotros.
 
-Desde entonces, las serranías no son solamente relieve. Son viajeros detenidos, nombres que orientan y cuerpos que aprendieron a permanecer.`;
+Wososopo tenía tanta sed que no pudo dar un paso más. «Tengo el bofe seco», gritaba; pero los otros seguían, y él los miró alejarse. Murió de sed, y por eso le pusieron el nombre de Wososopo.
 
-const historia = `Milcíades Chaves publicó esta narración en 1946 dentro de “Mitos, leyendas y cuentos de la Guajira”. Su texto conserva una cadena precisa de topónimos —Maiceo, Epits, Wososopo, Juyouirá, Tsitsi, Itojoro, Akuwa, los Monkii y Kasuto— y enlaza tres movimientos: la transformación de los viajeros en cerros, el retiro del mar y la organización de clanes y alimentos. La compilación de Eugenia Villa Posse la volvió a publicar en 1993, pero pertenece a la misma línea documental y no cuenta como testimonio independiente.
+Le tocó el turno a Juyouirá, sobre el que siempre truena y llueve. La sed y el hambre no lo dejaron seguir. Pedía que no lo abandonaran, y Tsitsi, en vez de ayudarle, le dijo:
 
-La versión debe leerse junto con las condiciones de su registro. Chaves escribió desde la antropología colombiana de mediados del siglo XX, llamó “primitivos” a los pueblos indígenas y veía la investigación como herramienta para su incorporación nacional y religiosa. Esas categorías no son la voz de los informantes. Tampoco conservó el relato en wayuunaiki, de modo que nombres, explicaciones entre paréntesis y continuidad de escenas pasaron por un intérprete y por la edición del investigador.
+—Tú ya no puedes seguir. Te quedarás.
 
-El paisaje sí ofrece una base material verificable. La Macuira concentra bosque nublado, agua dulce, bosque seco y territorios claniles dentro del resguardo de Alta y Media Guajira. Parques Nacionales reconoce su valor como lugar de origen y escenario de mitología Wayuu. El relato vuelve parentesco una geografía extrema: los cerros guardan nombres, las aves distribuyen alimento y la tierra habitable nace de una retirada del mar.
+El hambre y la sed le picaban el estómago a Juyouirá, y por eso le pusieron ese nombre. Tsitsi tampoco pudo continuar.
 
-No entendemos esa relación como una simple “explicación primitiva” del relieve. Es una forma narrativa de unir movilidad, memoria, subsistencia y pertenencia territorial.`;
+Itojoro seguía adelantándose, animando a los amigos. Por último, también a él se le pelaron los pies, y murió de sed y de hambre en el camino, apenas llegado hasta Akuwa. Le pusieron su nombre por una mata de ita, un totumo, que encontraron arriba, en la cima.
 
-const versiones = `La publicación de 1946 presenta la historia como una sola secuencia, pero contiene tres núcleos que otras ediciones pueden separar. El primero es el viaje de hombres enviados desde Uchi Juroteka y su transformación en cerros. El segundo cuenta que Mareiwa, desde Tsitsi, apartó el mar con una piedra lanzada hacia Kasuto. El tercero explica la dispersión de frutos por las aves y el reparto de clanes, territorios, animales y marcas en Arachí.
+Los últimos en avanzar fueron los Monkis, que llegaron hasta la orilla y hoy son morros junto al mar. Y Guarapú, que era muy dormilón, se acostó, le cogió el sueño y se quedó allí para siempre.
 
-La ficha anterior fundía esos episodios con una narración ornamental y describía a Mareiwa como una figura omnisciente uniforme. Esta revisión conserva las acciones registradas y retira diálogos, símbolos y emociones que no estaban sustentados. Los nombres de clanes se mantienen en Historia y no se recitan por completo dentro del Relato, para evitar que una lista extensa interrumpa la acción.
+Mareiwa los había mandado a correr tierras, y ninguno llegó a su destino. Entonces les dijo:
 
-Pineda Giraldo recogió en 1947 otro testimonio sobre Mareiwa y las aves que dispersan frutos de cardón, tunas y cerezas. Esa coincidencia respalda el motivo de la siembra por medio de aves, aunque no prueba que todo el relato de las serranías tuviera una versión única y estable.
+—Todos ustedes se convertirán en cerros.
 
-“Creación Wayuu” y “Maleiwa” comparten materiales cosmogónicos con esta página, pero no se fusionan. Esta ficha se concentra en la geografía nombrada y en el surgimiento de territorios claniles; las otras conservan versiones distintas sobre origen humano, dioses y transformadores.`;
+Desde entonces los montes llevan los nombres que les pusieron los primeros hombres.
+
+Todo alrededor estaba cubierto por el mar. Mareiwa subió a la cima del Tsitsi y desde allí disparó su honda. La piedra cayó en Kasuto, la piedra blanca, y el mar se apartó: quedó solamente la tierra. Por eso en la Guajira todavía hay pozos salados; antes del disparo, toda la península estaba bajo el agua.`;
+
+const historia = `Milcíades Chaves publicó este texto en 1946 en el Boletín de Arqueología, como segunda pieza de «Mitos, leyendas y cuentos de la Guajira», un conjunto de quince narraciones reunidas para el Instituto Etnológico Nacional. En la introducción explica qué buscaba: conocer «el mecanismo de la religión de los grupos primitivos» para facilitar la incorporación de una sociedad «a un credo, a una filosofía, o a una nacionalidad». Es la antropología nacional de su época, con vocación integradora, y sus categorías —«primitivos», «indios», «castas», «hierro» por marca de ganado— no son la voz de quien contó la historia, y el Relato no las usa en su voz narrativa. Chaves tampoco conservó el wayuunaiki: los nombres llegan con glosas entre paréntesis (Epits, «Cerro de la Teta»; Kasuto, «piedra blanca»; Akuwa, «nombre antiguo de Nazareth») y con la ortografía de un oyente en castellano. En su «explicación previa» resume la pieza como el modo en que «los guajiros explican la formación de los principales cerros» y presenta a Mareigua como divinidad que convierte personas en cerros, aparta el mar y puebla la tierra. Las antologías de Eugenia Villa Posse (1991 y 1993) reeditan ese mismo texto y no son testimonios independientes.
+
+Lo que Chaves llama «casta» es lo que hoy se nombra clan matrilineal: él mismo lo define como el conjunto de quienes llevan el mismo apellido en línea materna. El Plan Especial de Salvaguardia del sistema normativo wayuu (2009), formulado por la Junta Mayor Autónoma de Palabreros, describe desde la propia organización esos clanes, su territorio y los fundamentos míticos del derecho propio; el Régimen Especial de Manejo del Parque Macuira (2019), acordado con autoridades tradicionales, documenta territorios claniles y descendencia materna en la Alta Guajira. El reparto de tierras, animales y marcas con que Chaves cierra su texto —contado en “Creación Wayuu”— se lee sobre ese fondo, sin tomar la lista de dieciocho castas de 1946 como inventario definitivo de hoy.
+
+El territorio es verificable. Parques Nacionales describe la serranía de la Macuira como bosque nublado y manantiales en medio del desierto, traslapada con el resguardo y reconocida como lugar de origen y escenario de la mitología wayuu. Roberto Pineda Giraldo, en la expedición de 1947, recogió otro testimonio de Mareiwa y de aves que dispersan frutos de cardón, tunas y cerezas, y anotó que esa divinidad es ante todo protectora de la lluvia y propiciadora de cosechas. El lector notará que el texto de Chaves escribe Mareiwa y Mareigua para la figura que otras fichas nombran Maleiwa: son grafías de un mismo nombre, no dos dioses.
+
+Dos cautelas más. La muerte de los caminantes no es castigo en el texto de 1946: es el origen de los nombres, y Mareiwa los vuelve cerros porque no llegaron, no porque fallaran. Y el disparo de la honda, la siembra por las aves y la creación en la cueva son tres movimientos que Chaves enlaza en una sola pieza, de los que esta página cuenta sólo el primero; lecturas territoriales recientes —Guerra Curvelo citado por Arroyo de la Ossa y Arenas Granados (2021), Ochoa Sierra (2025)— muestran que la memoria contemporánea organiza esos cerros como hermanos tutelares, con nombres algo distintos. Esa diferencia se detalla en Versiones.`;
+
+const versiones = `Para esta secuencia de la marcha existe una sola cadena documental: Chaves 1946, reeditado por Villa Posse. Pero el motivo de los cerros que bajan de la Sierra Nevada circula hoy con otra nómina. Parques Nacionales (2015) transcribe una versión de la Macuira: tres hermanos descienden de la Sierra Nevada, uno queda como cerro Epitz, otro como Itujol y el tercero como Cerro de los Monjes, y la familia que los sigue amanece convertida en todos los cerros de la Macuira; el mismo documento lista el cerro del Itojoro entre sus sitios. Arroyo de la Ossa y Arenas Granados (2021), citando a Weildler Guerra Curvelo, describen la tríada Epitsü, Itojolu y Kamaichi, con Epitsü como dueño de los seres terrestres, y enumeran los sitios sagrados de la Alta Guajira: Jepira, Kamaichi, Epitsü, Itojolu, Wolunka. Ochoa Sierra (2025) habla de cuatro cerros tutelares —Epitsü o Cerro de la Teta, Iitolujo en la Macuira, Kamaichi o Pilón de Azúcar y Los Monjes— como el triángulo que construye la geografía mítica wayuu. Relatos con GPS, que sigue la línea de Perrin y de Wilbert y Simoneau, recorre ese triángulo y dedica una entrada a Wososopo, amigo de los tres hermanos, del que un narrador Iguarán Pushaina cuenta que tenía tanta sed que no pudo dar un paso más: la misma frase que Chaves puso en boca del caminante de 1946.
+
+Lo que cambia entre cadenas: Chaves nombra ocho caminantes o grupos (Wojoro, Epits, Itojoro, Wososopo, Juyouirá, Tsitsi, los Monkis y Guarapú) y ninguno es hermano de otro; las versiones territoriales reducen la marcha a tres o cuatro hermanos y suman a Kamaichi, ausente en 1946. Chaves hace de Itojoro el más fuerte y lo detiene en Akuwa; en la memoria de la Macuira, Itojolu es el cerro donde se suele situar el origen wayuu. Sólo Chaves trae el disparo de honda desde Tsitsi, los pozos salados, la siembra por las aves y la creación de las castas en la cueva.
+
+El Relato sigue a Chaves porque es el único texto con la secuencia completa, con nombres, diálogos y causa de cada detención; no le injerta a Kamaichi ni el parentesco fraterno, que pertenecen a otra cadena. Respecto de la ficha anterior, devuelve dos cosas al primario: la creación de la gente ocurre dentro de una cueva y en Arachí sólo se pintan las marcas; y la marcha no fue encargada hacia un punto preciso, sino «a correr tierras».
+
+Esta ficha no debe confundirse con “Creación Wayuu” ni con “Maleiwa”, que tratan el origen de la gente y del creador desde otras versiones; aquí el eje es la geografía nombrada. Tampoco con “Ulépala” ni “Los dominios de Juyá”, donde animales y plantas nacen de otro modo: por transformación de personas en el mundo de Juyá.
+
+El texto de Chaves continúa, sin corte, con la siembra por las aves, la cueva donde Mareiwa hace a la gente, las castas y los hierros de Arachí. Ese segundo movimiento se cuenta en “Creación Wayuu”; esta página termina donde la marcha de los viajeros se vuelve paisaje y el mar se aparta.`;
 
 const leccion =
-  "Pertenecer a un territorio es aprender los nombres, límites y cuidados que la memoria dejó sobre él.";
+  "Un cuerpo que se detiene a mitad de camino puede volverse la señal que orienta a otros.";
 
-const similitudes = `Dentro del mismo corpus, “La sed de los civilizados” también convierte cuerpos detenidos por la falta de agua en piedra. La diferencia es de escala: allí dos viajeros quedan como advertencia localizada; aquí una marcha completa organiza cerros, costa, plantas y clanes. “La India Worunka” vuelve piedra a una mujer y vincula su cuerpo con aves y semillas. Ambas historias hacen visible una continuidad entre cuerpo y paisaje, pero no deben reducirse a una misma trama.
+const similitudes = `Dentro del corpus wayuu, “La sed de los civilizados” es el paralelo más cercano: allí también la falta de agua detiene a caminantes y sus cuerpos quedan fijados en piedra. La escala es distinta: aquella es una advertencia localizada; aquí la marcha entera se vuelve cordillera y costa, y de ella arranca la tierra habitable. “La India Worunka” convierte a una mujer en piedra y enlaza su cuerpo con aves y semillas; comparte con esta página la continuidad entre cuerpo y paisaje y el papel de los pájaros como sembradores, pero su trama es otra. “Creación Wayuu” y “Maleiwa” cuentan de otro modo la aparición de la gente y el reparto de clanes; conviene leerlas juntas sin fundirlas.
 
-Fuera del ámbito Wayuu, las Metamorfosis de Ovidio reúnen numerosos casos en que una persona queda fijada como roca, árbol, río o constelación. El parecido reside en usar la transformación para conservar un acontecimiento dentro del mundo visible. La diferencia es decisiva: las serranías de La Guajira forman una cartografía de movilidad, sed, alimento y pertenencia clanil; Ovidio organiza genealogías y conflictos del Mediterráneo clásico.
+Fuera del ámbito wayuu, las Metamorfosis de Ovidio reúnen decenas de casos en que una persona queda fijada como roca, árbol, río o constelación, y en varios de ellos la transformación conserva un nombre en el mundo visible, como aquí conservan el suyo Wososopo o Juyouirá. La resonancia está en ese uso del cuerpo transformado como memoria del paisaje. La diferencia es de fondo: en Ovidio las metamorfosis castigan, premian o resuelven pasiones y pleitos entre dioses y mortales del Mediterráneo; en la Guajira nadie es castigado. Los hombres se detienen por sed y cansancio, Mareiwa los vuelve cerros porque no llegaron, y de esa geografía nace el mar retirado.
 
-El Popol Vuh también relaciona creación humana, animales, alimentos y orden del mundo mediante varias tentativas y transformaciones. No hay base para afirmar influencia entre ambos relatos. La resonancia permite observar una pregunta compartida —cómo llega un territorio a ser habitable— y dos respuestas arraigadas en paisajes, lenguas e historias propias.`;
+El Popol Vuh también relaciona la creación de la gente con los animales, los alimentos y el orden del mundo, en tentativas sucesivas, y en él los animales reciben su morada y los seres humanos su sustento como parte de un mismo ordenamiento. La resonancia con el cierre de esta página —el mar que se aparta para que haya tierra— y con su continuación en “Creación Wayuu” —aves que siembran, gente que sale de la cueva, clanes y marcas— es funcional: ambos textos preguntan cómo un territorio se vuelve habitable. Nada permite afirmar contacto ni influencia entre el libro k’iche’ y el texto wayuu; las respuestas están arraigadas en paisajes, lenguas e historias propias.`;
 
 export default defineWayuuMyth({
   slug: "serranias-de-la-guajira",
@@ -73,9 +93,26 @@ export default defineWayuuMyth({
     "pineda1950",
     "macuira",
     "regimenMacuira",
-    "onicWayuu",
+    "pesPalabreros",
     "ovidMetamorphoses",
     "popolVuh",
+    "mitosLeyendas1991",
+    "ossaconstruccion2021",
+    "colombiaParque2015",
+    {
+      key: "geografiasMiticas",
+      summary:
+        "Recorre el triángulo de los cerros tutelares Epitsü, Kama'ichi e Iitujolu que bajaron de la Sierra Nevada en busca de nuevos caminos y dedica una entrada al cerro Wososopo, amigo de los tres, del que un narrador Iguarán Pushaina cuenta que tenía tanta sed que no pudo dar un paso más: coincide con el Wososopo de Chaves.",
+      limitation:
+        "Sigue la línea de Perrin y de Wilbert y Simoneau, con nombres distintos de los de Chaves; sin fecha de edición explícita.",
+    },
+    {
+      key: "ochoaSoberania",
+      summary:
+        "Describe los cuatro cerros tutelares, Epitsü (Cerro de la Teta), Iitolujo (Macuira, donde se suele situar el origen wayuu), Kamaichi (Pilón de Azúcar) y Los Monjes, como triángulo que construye la geografía mítica y humana de la historia territorial wayuu.",
+      limitation:
+        "El mito aparece como contexto de un artículo sobre política y temporalidades wayuu, no como objeto de análisis.",
+    },
   ],
   researchNotes: `NÚCLEO DOCUMENTADO: viajeros enviados desde Uchi Juroteka; detenciones sucesivas por cansancio, hambre y sed; transformación en cerros; retirada del mar desde Tsitsi; dispersión de plantas por aves; reparto de clanes y marcas en Arachí.
 

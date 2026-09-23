@@ -28,16 +28,43 @@ function descriptionForSeo(title) {
   );
 }
 
+/**
+ * Construye una ficha del ciclo.
+ *
+ * Hasta el 2026-09-19 sólo sabía hacer una cosa: pegar el marco del grupo. Las
+ * setenta fichas compartían la misma `historia` y las mismas 113 palabras de
+ * `similitudes`, y el 86,6 % de sus oraciones se repetían. El reparto de
+ * fuentes también era por grupo: ocho iguales para las treinta y tres de
+ * Martínez.
+ *
+ * Ahora la entrada puede traer lo suyo. Si el `entry` declara `mito`,
+ * `historia`, `versiones`, `leccion` o `similitudes`, se usan tal cual y el
+ * marco no interviene en ese campo. Si declara `sourceKeys`, esas son sus
+ * fuentes. Mientras una ficha no se haya reescrito sigue cayendo en el marco,
+ * así que el ciclo se puede abrir mito a mito sin romper las demás.
+ */
 export function defineCaribeMestizoFinalMyth(entry) {
   const frame = caribeMestizoFinalGroupFrames[entry.group];
   if (!frame) throw new Error(`${entry.slug}: grupo desconocido ${entry.group}.`);
-  const selectedSources = pickCaribeMestizoFinalSources(entry.group);
-  if (selectedSources.length !== 8 || new Set(selectedSources.map(({ url }) => url)).size !== 8) {
-    throw new Error(`${entry.slug}: se esperaban ocho fuentes únicas.`);
+
+  const propio = Boolean(entry.mito || entry.historia || entry.versiones || entry.similitudes);
+  const selectedSources = pickCaribeMestizoFinalSources(entry.sourceKeys || entry.group);
+  const urlsUnicas = new Set(selectedSources.map(({ url }) => url)).size;
+  if (urlsUnicas !== selectedSources.length) {
+    throw new Error(`${entry.slug}: hay URLs repetidas entre sus fuentes.`);
   }
-  const seoTitle = titleForSeo(entry.title);
-  const seoDescription = descriptionForSeo(entry.title);
-  const excerpt = truncateSentence(entry.core, 180);
+  // El piso del bloque mestizo y mixto es 8, no un número fijo: una ficha
+  // reescrita puede traer doce, y una agotada seis con su razón declarada.
+  const minimo = entry.fuentesAgotadas ? 1 : 8;
+  if (selectedSources.length < minimo) {
+    throw new Error(
+      `${entry.slug}: ${selectedSources.length} fuentes, y el piso es ${minimo}. ` +
+        "Si el relato no da más, declara `fuentesAgotadas` con su razón.",
+    );
+  }
+  const seoTitle = entry.seoTitle ?? titleForSeo(entry.title);
+  const seoDescription = entry.seoDescription ?? descriptionForSeo(entry.title);
+  const excerpt = entry.excerpt ?? truncateSentence(entry.core, 180);
   const boundary = entry.boundary
     ? `Límite particular: ${entry.boundary}`
     : "El argumento se conserva con atribución y sin convertir sus detalles en hechos externos.";
@@ -52,11 +79,17 @@ export function defineCaribeMestizoFinalMyth(entry) {
     slug: entry.slug,
     title: entry.title,
     tags: frame.tags,
-    mito: `El núcleo de ${entry.title} es el siguiente: ${entry.core}\n\n${frame.myth}\n\n${mythMethodBoundary}\n\n${boundary}`,
-    historia: `${frame.history}\n\n${historyMethodBoundary}\n\nPara esta ruta, la investigación controla el núcleo “${entry.core}” y evita extenderlo más allá de la fuente o versión declarada. ${boundary}`,
-    versiones: `${frame.versions}\n\n${versionsMethodBoundary}\n\nEn ${entry.title}, la variación responsable empieza por conservar este núcleo: ${entry.core} ${boundary}`,
-    leccion: frame.lesson,
-    similitudes: `${frame.similarities}\n\n${similaritiesMethodBoundary}`,
+    // Campo a campo: lo propio manda; si no lo hay, queda el marco heredado.
+    mito: entry.mito
+      ?? `El núcleo de ${entry.title} es el siguiente: ${entry.core}\n\n${frame.myth}\n\n${mythMethodBoundary}\n\n${boundary}`,
+    historia: entry.historia
+      ?? `${frame.history}\n\n${historyMethodBoundary}\n\nPara esta ruta, la investigación controla el núcleo “${entry.core}” y evita extenderlo más allá de la fuente o versión declarada. ${boundary}`,
+    versiones: entry.versiones
+      ?? `${frame.versions}\n\n${versionsMethodBoundary}\n\nEn ${entry.title}, la variación responsable empieza por conservar este núcleo: ${entry.core} ${boundary}`,
+    leccion: entry.leccion ?? frame.lesson,
+    similitudes: entry.similitudes
+      ?? `${frame.similarities}\n\n${similaritiesMethodBoundary}`,
+    relatoCorto: entry.relatoCorto,
     excerpt,
     seoTitle,
     seoDescription,
@@ -65,7 +98,7 @@ export function defineCaribeMestizoFinalMyth(entry) {
     sceneVertical: `Una segunda escena simbólica de ${entry.title}: huellas, objeto o gesto central del relato ascienden entre paisaje caribeño y capas de memoria, sin repetir la acción panorámica y sin violencia gráfica.`,
     keySources: selectedSources.slice(0, 3),
     sources: selectedSources.slice(3),
-    researchNotes: `${frame.note} ${boundary}`,
+    researchNotes: entry.researchNotes ?? (propio ? boundary : `${frame.note} ${boundary}`),
     seo: {
       meta_title: seoTitle,
       meta_description: seoDescription,

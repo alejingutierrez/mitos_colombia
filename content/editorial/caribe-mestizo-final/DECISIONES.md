@@ -1,0 +1,159 @@
+# Decisiones editoriales · ciclo `caribe-mestizo-final`
+
+Ninguna se toma sola: se presentan al director con tres opciones concretas y
+nada se publica hasta que responde (brief, «Notas para quien orquesta»).
+
+---
+
+## Resueltas el 2026-09-19
+
+Las cuatro primeras las decidió el director; las dos últimas se resolvieron por
+reglas que ya existen en la metodología y quedan aquí por constancia.
+
+### A · Los tres subciclos son uno → **fundir los tres**
+
+`zapata` (15), `list` (3) y `unresolved` (13) salen del mismo libro: Zapata
+Olivella, *Tradición oral y conducta en Córdoba* (Incora 1972; 3.ª ed.
+Univalle 2021), «Género: cuento y leyenda», pp. 237-267.
+
+**Decisión:** un solo subciclo, `zapata-cordoba-1972`. Los tres cuentos que
+George List también grabó entran como capa de `versiones`, con su narrador,
+su fecha y su cinta. Con `tio-conejo-zapatero` (decisión D) son **32 fichas**.
+
+Se descartó dejar `list` aparte pese a que es el único registro con narrador
+nombrado: esa diferencia de calidad se cuenta en `versiones`, que es donde
+vive, y no justifica partir un corpus que la evidencia muestra unido.
+
+### B · `conejo-y-los-hijos-de-tia-tigra`: cinco o siete → **las dos**
+
+El límite publicado dice que List «registra siete hijos, no cinco como decía la
+versión heredada», dando por corregido un dato que estaba bien: Zapata dice
+cinco y List dice siete, **y las dos cifras son correctas, cada una en su
+fuente**.
+
+**Decisión:** se retira el límite y la doble cifra pasa a `versiones`, con
+quién dice qué. Es la regla 3 del brief —si dos fuentes se contradicen, no se
+funden— y no hacía falta consultarla.
+
+### C · `este-era-un-joven-que-estaba-estudiando` → **corregir título y slug**
+
+La fuente dice «**Esta era una joven** que estaba estudiando», es una interna
+en un colegio de monjas, y **la «Clara» de la ficha no aparece en el texto**.
+
+**Decisión:** título y slug pasan a la forma de la fuente y se borra a Clara.
+Es un nombre propio inventado, justo lo que la licencia literaria prohíbe, y
+eso pesa más que la redirección de URL que cuesta.
+
+### D · `tio-conejo-zapatero` → **a Zapata; Buenaventura, recepción**
+
+Está en el libro de 1972, p. 261, **con su localización en Cotorra escrita
+dentro del propio relato** («Para el Sábado de Gloria en Cotorra»). El límite
+publicado dice que Cotorra «sigue sin fuente exacta»: la tiene.
+
+**Decisión:** el primario pasa a ser el libro; la adaptación teatral de Enrique
+Buenaventura (1958) queda citada como recepción posterior en `versiones`. El
+subciclo `buenaventura` se queda vacío.
+
+### E · Los tres microrrelatos → **excepción de relato corto declarada**
+
+`tio-sapo-y-cangrejo` (dos frases, y el libro lo imprime dos veces idéntico, en
+las pp. 251 y 266), `este-era-un-rey-que-tenia-dos-hijas-bonitas` y
+`veinte-para-el-bollo` (cinco frases cada uno) no dan un relato de 300 palabras
+sin inventar.
+
+**Decisión:** se publican cortos, con `relatoCorto` y su razón escrita en el
+módulo. El validador baja el piso a 90 palabras y la riqueza léxica prueba que
+no hay relleno. El mecanismo ya existe y se usó en wayuu.
+
+### F · Dos límites declarados que son falsos → **retirarlos**
+
+`la-mina-de-oro-en-el-infierno` («no apareció una fuente que sostenga la
+adscripción a Córdoba») y `el-paisa-y-el-gringo` («el propio escenario
+contradice una procedencia cordobesa segura»). **Las dos salen del libro de
+Córdoba**, y en la primera «Yo soy Jaime Restrepo, de Marinilla» es literal de
+la fuente: el protagonista es antioqueño, la recolección es cordobesa, y eso
+no es una contradicción.
+
+**Decisión:** se retiran y se sustituyen por la procedencia real. Donde hay un
+problema que sí merece declararse es en el estereotipo regional del chiste, no
+en la procedencia.
+
+---
+
+### G · Los once cuentos del mismo libro sin ficha → **anotarlos, no publicarlos**
+
+«El montuno y el radio» (p. 247), «La muerte de Tía Zorra (Tercera versión)»
+(255), «Un día estaba un caimán asoleándose» (257), «El diablo haciendo
+palomitas» (257), «La receta» (257), «El burro y el puerco» (264), «El panadero
+y el perro» (264), «El indio y el negro» (265), «Los ladrones» (265), «Tío
+Conejo y Tío Gallo (Segunda versión)» (265) y «La misa del testamento» (266).
+
+**Decisión:** quedan registrados en el módulo como corpus conocido sin ficha,
+con su página, en `caribeMestizoFinalCorpusSinFicha`. No se publican ahora: el
+encargo es reescribir lo publicado, no ampliarlo. Pero el primario ya está
+abierto y extraído, y no volverá a salir tan barato, así que el hallazgo no se
+pierde.
+
+### H · El material que el sitio higienizaba → **contarlo, sin explicitar**
+
+Tres casos medidos: `la-vieja-el-burro-y-los-huevos` es un cuento de burros
+apareándose y el resumen heredado lo vuelve un percance doméstico;
+`el-burro-y-la-policia` es abiertamente obsceno y transcurre en la puerta de la
+iglesia durante la misa; `la-confesion` es un cura rebautizando el cuerpo de
+una muchacha con eufemismos.
+
+**Decisión:** el relato conserva el conflicto real —porque el chiste es ese— con
+lenguaje adulto pero no gráfico, y la `historia` declara el registro del
+original. Es el criterio que se usó en wayuu con Pushaina y Mareiwa. Suavizarlo
+tiene dos costes: el cuento deja de tener gracia, y la ficha miente sobre su
+fuente.
+
+---
+
+### I · `las-clavelinas`, `el-castellano-de-san-juan`, `genus-irritable-vatum`, `francisco-el-hombre` → resueltas al escribir las actas
+
+Otero D'Costa se queda en el ciclo y cada `historia` escribe su procedencia
+caribeña, que está documentada: vivió en Cartagena desde antes de 1912 hasta
+1923, dirigió el ferrocarril Cartagena-Calamar, fue concejal y **fundó la
+Academia de Historia de Cartagena y su Boletín Historial**. Las tres piezas
+transcurren en Santa Marta (dos) y Cartagena (una).
+
+Los slugs `las-clavelinas` y `genus-irritable-vatum` se conservan; la grafía
+impresa —«Las Clavellinas», «Genus irritabile vatum», que es Horacio— se
+corrige en el título visible y se menciona en `historia`. Es distinto del caso
+de «Clara»: allí el slug sostenía una invención sobre el personaje, aquí sólo
+hay una errata de transcripción.
+
+En `francisco-el-hombre` el relato cuenta la victoria canónica y **`versiones`
+abre con el registro de 1940**: «Vida y muerte de Pedro Nolasco Padilla», de
+Antonio Brugés Carmona en *El Tiempo*, donde el acordeonero no vence al diablo
+sino que pacta con él.
+
+---
+
+## Abiertas
+
+### J · `el-tesoro-de-morgan` es raizal y el catálogo no tiene dónde ponerlo
+
+El propio módulo la llama «leyenda raizal e isleña». Los informantes hablan en
+inglés isleño, la transmisión lleva cinco generaciones y el archivo está
+catalogado en el Centro de Memorias Orales del Banco de la República. El acta
+la propone como `mover a raizal`.
+
+**Comprobado contra Neon: de las 51 comunidades del catálogo, ninguna es
+raizal ni isleña.** No hay dónde moverla.
+
+Medida tomada mientras tanto: la ficha se queda en «mestizo» y **lo dice en
+`historia`**, nombrando lo que la pieza es y que el cajón es una agrupación
+administrativa del sitio. No se calla.
+
+① Crear la comunidad raizal en el catálogo y mover la ficha (y las que
+aparezcan después: San Andrés y Providencia tienen corpus propio).
+② Dejarlo como está, con la procedencia declarada en `historia`.
+③ Crear una región o etiqueta de archipiélago sin comunidad propia.
+
+Y un dato del anexo que la ficha tiene que recoger: **Exquemelin, el único
+testigo próximo que la leyenda invoca, describe a Morgan vaciando Santa
+Catalina y repartiendo el botín de Panamá en Chagre antes de escabullirse a
+Jamaica. No hay entierro.** Además, «luces y mapas» del resumen heredado no
+aparece en ninguna fuente verificada: es utilería añadida.

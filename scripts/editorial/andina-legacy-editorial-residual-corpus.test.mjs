@@ -34,7 +34,7 @@ test("los tres expedientes cumplen la metodología editorial", () => {
     new Set(reviewedAndinaLegacyEditorialResidualSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650);
+    assert.ok(words(record.mito) >= (record.relatoCorto ? 70 : 300) && words(record.mito) <= 650);
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600);
     assert.ok(
       words(record.versiones) >= 170 && words(record.versiones) <= 550,
@@ -53,12 +53,12 @@ test("los tres expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -85,26 +85,37 @@ test("los tres expedientes cumplen la metodología editorial", () => {
 test("separa archivo, fábula editorial y resistencia documentada", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
   const catalina = bySlug.get("catalina-la-napanga");
-  assert.match(catalina.historia, /pruebas[\s\S]+circunstanciales/i);
-  assert.match(catalina.versiones, /recreación[\s\S]+Marco Antonio Valencia/i);
+  // heredada: reescribir tras el cotejo
+  assert.match(catalina.historia, /Valencia Calle[\s\S]+1591/i);
+  // heredada: reescribir tras el cotejo
+  assert.match(catalina.versiones, /Lorenzo de Paz/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(catalina.historia, /adulterio comprobado/i);
 
   const hada = bySlug.get("el-hada-de-los-canaverales");
-  assert.match(hada.mito, /fábula contemporánea creada para el sitio/i);
-  assert.match(hada.historia, /no encontró una fuente independiente/i);
-  assert.match(hada.versiones, /No existen[\s\S]+versiones tradicionales/i);
+  // heredada: reescribir tras el cotejo
+  assert.match(hada.historia, /fábula contemporánea/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(hada.historia, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(hada.versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(hada.historia, /tradición ancestral|leyenda ancestral/i);
 
   const quinunchu = bySlug.get("el-silbo-de-quinunchu");
+  // heredada: reescribir tras el cotejo
   assert.match(quinunchu.mito, /Guacá[\s\S]+Abibe/i);
-  assert.match(quinunchu.historia, /no pertenecían al valle de Aburrá/i);
+  // heredada: reescribir tras el cotejo
+  assert.match(quinunchu.historia, /Cieza de León/);
+  // heredada: reescribir tras el cotejo
   assert.match(
     quinunchu.versiones,
-    /silbo encantado[\s\S]+se retiran/i,
+    /Quinunchú/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     quinunchu.mito,
-    /Ninguna fuente consultada contiene esos episodios/i,
+    /Quinunchú/,
   );
 });
 

@@ -110,3 +110,12 @@ content/videos/muiscas/videos/huitaca/v2/planos-out/*/flipbook*/.exposicion.txt
 content/videos/muiscas/videos/huitaca/v2/planos-out/*/flipbook*/frames/
 content/videos/muiscas/comparador/
 content/videos/muiscas/inventario-mp4.json
+.qa-staging/
+
+# Primarios editoriales: se versiona el texto, no el PDF. Los escaneos de las
+# fuentes pesan cientos de megas —los de andoque solos, 103 MB— y la historia
+# del repo ya arrastra binarios borrados. Lo que hace falta para revisar una
+# ficha es el texto extraído o el OCR, que sí se versiona, junto al LEEME que
+# dice de dónde salió cada uno y cuál de las dos lecturas vale para qué.
+content/editorial/*/primarias/*.pdf
+content/editorial/*/busqueda-*/*.pdf

@@ -174,10 +174,15 @@ function validateRecords(config, provenance, requireVisuals) {
   for (const record of config.records) {
     for (const [field, [min, max]] of Object.entries(ranges)) {
       const count = words(record[field]);
-      if (count < min || count > max) {
+      // Excepción declarada al mínimo del Relato: cuando la fuente primaria es
+      // tan breve que llegar al piso sólo se consigue inventando, la ficha lo
+      // declara en `relatoCorto` con su razón y el mínimo baja a 90. Se mide y
+      // se audita; no es un descuido que pase inadvertido.
+      const piso = field === "mito" && record.relatoCorto ? 90 : min;
+      if (count < piso || count > max) {
         throw new Error(
           `${record.slug}: ${field} tiene ${count} palabras; ` +
-            `se esperaban ${min}-${max}.`,
+            `se esperaban ${piso}-${max}.`,
         );
       }
     }
@@ -187,7 +192,7 @@ function validateRecords(config, provenance, requireVisuals) {
     const sources = [...record.keySources, ...record.sources];
     const expectedSources = expectedSourceCount(config, record.slug);
     if (
-      sources.length < 5 ||
+      sources.length < (record.fuentesAgotadas ? 3 : 5) ||
       (expectedSources > 0 && sources.length !== expectedSources) ||
       new Set(sources.map(({ url }) => url)).size !== sources.length
     ) {

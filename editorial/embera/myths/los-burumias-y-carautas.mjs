@@ -1,42 +1,42 @@
 import { defineEmberaMyth } from "../define-editorial-myth.mjs";
 
-const mito = `En un alto sobre la quebrada Usagará vivían los Burumia. Desde sus casas podían ver a quienes remontaban el agua rumbo al río Bojayá. La gente Emberá no conocía aquel poblado. Cuando alguien se internaba por esa ruta para cazar, los Burumia lo sorprendían antes de que pudiera regresar.
+const mito = `En la quebrada Usagará, que cae al río Bojayá, vivían los Burumiá, y la gente emberá no lo sabía. Los Burumiá vivían en un alto, como en un salto, y desde allí veían a cualquiera que viniera subiendo por el río. Cuando alguien se internaba por esa ruta a montiar, lo cogían antes de que pudiera regresar, y no volvía.
 
-Un día subieron varias canoas con familias enteras. Los Burumia atacaron al grupo y llevaron a su asentamiento a una mujer mayor, un niño y una niña. Los tres quedaron allí. A los jóvenes les permitían recorrer el monte, pero siempre hacia las cabeceras: nunca río abajo, donde podían descubrir el camino de regreso.
+Un día subieron varias canoas con familias enteras, con mujeres y con niños. Los Burumiá los atacaron y se llevaron a todos menos a una vieja y a dos niños, un niño y una niña, que dejaron vivos para criarlos entre ellos. A los que capturaban montiando los encerraban en un chiquero, y al mismo tiempo sembraban junto a la casa una mata de primitivo: cuando el primitivo cargaba y las frutas maduras se rajaban, también se rajaba de grasa la piel del cautivo, y era la hora de matarlo.
 
-Pasaron los años. El muchacho aprendió a fabricar arco y bodoquera, y salía a buscar alimento. La joven también conocía ya los senderos. La mujer mayor observaba en silencio. Sabía que, debajo del alto, permanecían algunas canoas abandonadas junto con hachas, machetes y canaletes. Un día preparó comida para el viaje y explicó a los dos jóvenes cómo rodear el asentamiento sin tomar el camino vigilado.
+El niño fue creciendo. Hizo bodoquera y arco y salía a montiar, pero los Burumiá no lo dejaban ir hacia abajo, por si encontraba el camino y se volaba. «¡Qué hace por allá! Eche para arriba, vaya a montiar para arriba», le decían. Así creció, y su hermana con él.
 
-Ellos caminaron entre el bosque hasta alcanzar el río. Rompieron las canoas pequeñas para impedir una persecución inmediata, escogieron la más grande y partieron agua abajo con un perro. Más adelante, un grupo Emberá esperaba escondido entre el rastrojo. Durante mucho tiempo había creído que los Cuna eran responsables de las desapariciones. Al ver acercarse la embarcación, lanzó flechas. Los jóvenes levantaron el canalete para protegerse y consiguieron hacerse oír.
+Mientras tanto, río abajo, la gente emberá creía que eran los Cuna quienes estaban matando a los suyos. Se reunieron del Atrato, de Lloró, de Dubasa, de Pató, de Munguidó, de todas partes, y fueron y echaron a los Cuna. Por eso los Cuna casi no nos saludan. Pidieron permiso al gobierno de Panamá para venir a pelear y no se lo dieron. Después de esa guerra la gente se quedó esperando en el Bojayá, por si volvían.
 
-Entonces contaron lo que habían visto: no eran los Cuna, sino los Burumia quienes capturaban a la gente. También describieron el alto, las casas y el camino de entrada. Los Emberá reunidos decidieron comprobarlo.
+La vieja les decía a los muchachos: vayan rodeando, rodeando, buscando camino, que allá abajo en el río hay bastantes canoas y hachas y machetes de la gente que han matado; cojan la más grande, váyanse y avisen que son los Burumiá los que se están comiendo a la gente. Un día les hizo un buen fiambre y ellos se fueron rodeando, rodeando, hasta salir al río. Allí estaban las canoas, con hachas, machetes y canaletes. Con un hacha fueron rompiendo todas, dejaron la más grande y se fueron agua abajo con un perro grande.
 
-Esa noche, uno de ellos tomó forma de murciélago y voló sobre el asentamiento. Contó las viviendas desde el aire, aunque no vio una casa apartada de las demás. A la noche siguiente, el grupo subió y atacó cada casa que el explorador había señalado.
+Abajo, escondidos en el rastrojo, los emberá silbaban como el pájaro buchelé para avisarse. Cuando la canoa se acercó les dispararon flechas, y los muchachos las paraban con el canalete y gritaban que no dispararan. Entonces salieron, como cien, como doscientos. Los muchachos contaron que no eran los Cuna, que eran los Burumiá. Les preguntaron cuántos eran y no habían contado; sólo dijeron que eran como diablos, de cabeza pelada, así como peña.
 
-Los habitantes de la vivienda distante lograron escapar por la cabecera del Bojayá. Llegaron al río Valle, derribaron un árbol y trabajaron con rapidez hasta convertirlo en canoa. Cuando sus perseguidores alcanzaron la desembocadura, los fugitivos ya navegaban costa abajo.
+Esa noche subieron, y uno que se volvía murciélago voló y contó las casas, pero le faltó una que estaba retirada. A la noche siguiente subieron todos armados. Ya sabían que el que dormía en hamaca en la casa grande era el jefe, y cuando se paró a orinar lo flecharon. Ahí mismo atacaron, dos para cada casa, y mataron a todos menos a los de la casa apartada. Esos se huyeron por la cabecera del Bojayá, salieron al río Valle, tumbaron un palo y empezaron a hacer una canoa. Cuando los perseguidores llegaron a la boca del río, los Burumiá ya la habían terminado e iban costa abajo, y como no tenían embarcación no pudieron seguirlos.`;
 
-La persecución terminó junto al agua. Quedó, sin embargo, la memoria de un error que había enfrentado a pueblos vecinos y de dos jóvenes que, al encontrar el río, pudieron revelar quién estaba detrás de las ausencias.`;
+const historia = `La narradora de este relato es Odilia Dogiramá, prima de Floresmiro Dogiramá. Aparece como pieza número 19, dentro del capítulo «Historias de guerra», en «Zrõarã Nẽburã: historia de los antiguos. Literatura oral emberá», la colección de veintiséis narraciones que Mauricio Pardo recopiló en el alto Baudó, en el Chocó, y que el Centro Jorge Eliécer Gaitán publicó en Bogotá en 1984, con ilustraciones de la fauna hechas por César Landázabal. Los otros narradores del volumen son Floresmiro, Alipio y Joaquín.
 
-const historia = `La versión que sostiene esta página fue narrada por Odilia Dogiramá y publicada en 1984 dentro de Zrõarã Nẽburã: Historia de los antiguos, colección asociada a Floresmiro Dogiramá y compilada por Mauricio Pardo. La obra reúne veintiséis narraciones recogidas en el Alto Baudó y clasifica “Los Burumia” entre las historias de guerra. El relato localiza la acción en la quebrada Usagará, afluente del río Bojayá, y menciona conexiones con Atrato, Lloró, Dubasa, Pató, Munguidó y el río Valle.
+Floresmiro Dogiramá, el narrador principal, no era un informante casual. Luis Guillermo Vasco Uribe, al reseñar el libro en el Boletín Museo del Oro en 1986, describe a un cacique anciano con un largo trato con antropólogos: el sueco Nordenskiöld, a quien conoció al comenzar su vida adulta; más tarde el inglés Moser, la suiza Arianne Deluz y finalmente Pardo. Vasco lo llama «un hombre de dos mundos».
 
-La edición castellana utiliza “cholos” para nombrar a los Emberá. Esta adaptación emplea “gente Emberá” para que el lector actual identifique a quiénes se refiere, sin borrar el término del registro documental. También reduce la descripción explícita del cautiverio y la antropofagia, pero conserva que el peligro atribuido a los Burumia moviliza la fuga y el conflicto. Narrar esos hechos no equivale a certificarlos como crónica histórica.
+El territorio del relato es también el de la recolección. En su estudio de 1987 sobre las áreas dialectales emberá, Pardo agrupa Atrato, Bojayá y alto Baudó en una misma subárea, la de los dialectos originados en el alto Atrato, junto con el Darién panameño. La Usagará que nombra la narradora no figura en la cartografía de la cuenca del Bojayá, donde sí están registrados más de cien hidrónimos; el único Usagará que levantan los inventarios oficiales desagua en el Pacífico, en el Bajo Baudó. El propio relato describe ese paso: los Burumiá huyen por cabecera de Bojayá y salen al río Valle. Cita además Lloró, Dubasa, Pató y Munguidó, que dibujan las rutas fluviales por donde llegaron quienes se sumaron.
 
-Bojayá y el Alto Baudó se encuentran hoy dentro de un ámbito reconocido como Emberá Dóbida, gente de río, según perfiles de la ONIC y el Ministerio de Cultura. La base del sitio no posee todavía una comunidad Dóbida y la metodología prohíbe inventar una taxonomía aislada; por eso la página permanece bajo la comunidad Emberá genérica y registra esa limitación.
+La edición castellana de 1984 emplea «cholos» para nombrar a los emberá. Esta adaptación usa «gente emberá» para que el lector actual identifique de quiénes se habla, sin borrar que el término está en el registro documental. El título público se corrige a «Los Burumia»: la mención de Carautas del slug proviene de una fusión editorial posterior que no aparece en la narración de Odilia Dogiramá y que se retira. El slug se conserva sólo para no romper la URL.`;
 
-El mapa señala de forma aproximada la confluencia del Usagará con el Bojayá, no el alto exacto de las casas. El título público se corrige a “Los Burumia”. Se conserva el slug histórico para no romper la URL, aunque su mención de Carautas provenía de una fusión editorial posterior que no aparece en la narración de Odilia Dogiramá.`;
+const versiones = `El punto más interesante no es que existan variantes de esta historia, sino que el nombre «burumía» aparezca en otra colección con los papeles invertidos. En «Mitos, tradiciones y cuentos de los indios Chamí», publicado por Milcíades Chaves en 1945 en el Boletín de Arqueología, la nota comparativa al relato Bibidigomia cita al padre Rochereau: «un bibidi cogió de prisioneros a dos burumías y los volvieron eunucos para que engordaran para comérselos. Uno de ellos escapó, reunió un ejército de burumías a atacar a los Bibidi, pero ya se habían comido al otro burumía. Una vieja Bibidi indignada por la mala ración que le había tocado en suerte… ayudó para que los burumías triunfasen de los Bibidi». Allí los burumías son las víctimas, los Bibidi los caníbales, y la vieja que ayuda pertenece al bando de los captores. En el relato de Odilia Dogiramá los Burumiá son los captores, los dos jóvenes son emberá y la vieja es una cautiva. Lo que se repite es el armazón: dos prisioneros, un engorde, una anciana que colabora, una fuga y un ataque final que aniquila al poblado. Lo que cambia es quién es quién. Las fuentes no permiten fundirlos y aquí no se funden.
 
-const versiones = `La versión de Odilia Dogiramá forma una secuencia precisa: los Burumia viven sobre el Usagará; capturan a personas que suben a cazar; una mujer mayor ayuda a escapar a dos jóvenes; los Emberá descubren que habían culpado por error a los Cuna; un explorador convertido en murciélago cuenta las casas; una vivienda queda fuera del cálculo y sus habitantes huyen hacia el río Valle. Ese es el núcleo conservado en el Relato.
+Ese mismo volumen de Chaves trae otro relato con las mismas piezas, «La india Pixaawina», narrado por Rafael Bailarín, indio katío casado con una mujer chamí, que dijo haberlo aprendido de su abuela: unos indios capturan, castran y engordan a sus prisioneros, una viejita harta de su ración ayuda a escapar a uno de ellos, y la huida se hace río abajo sobre un balso para no dejar rastro. Es de otro narrador, de otro subgrupo emberá y de otra región, y su parecido de motivos no lo convierte en la misma historia.
 
-La página anterior había unido esa historia con Carautas, Bibidí, Antomia, oro, incesto, transformaciones en animales y un incendio enviado por Karaví. Ninguno de esos episodios aparece en “Los Burumia”. Algunos nombres sí existen en otras narraciones o estudios Emberá: Bibidí y Bibidigomia pertenecen a ciclos distintos; Burumia y Carauta aparecen juntos en interpretaciones etnohistóricas sobre pueblos antiguos; Karagabí tiene otros papeles en diversas regiones. Su mera proximidad bibliográfica no los convierte en una sola trama.
+Pardo sitúa todo esto en un problema que deja explícitamente abierto. En 1987 señala que los emberá llaman Jurá a los Cuna y los waunana Juranán, que los emberá reconocen sin ambigüedad a los Cuna contemporáneos, y que existen además relatos de guerra contra gentes designadas con gentilicios propios: Burumiás, Bibidícomias, Carautas. Remite para ello a Betania 1964, Santa Teresa 1959, Vargas 1982 y a su propio trabajo de 1986. No resuelve si esos nombres designan pueblos históricos, y esta edición tampoco lo hace.
 
-Luis Guillermo Vasco advirtió que Zrõarã Nẽburã organiza relatos complejos bajo categorías editoriales como historias de guerra, animales o jaibanás. La clasificación ayuda a recorrer el libro, pero no agota el conocimiento que cada narración articula. Esta edición tampoco decide si “Burumia” nombra seres, un pueblo recordado, adversarios históricos o varias capas a la vez.
+Vasco, por su parte, advirtió que organizar estas narraciones bajo rótulos editoriales —historias de guerra, de animales, de jaibanás— ayuda a recorrer el libro pero recorta lo que cada una articula, y objetó que llamarlas «literatura oral» las reduzca a su forma. La clasificación se usa aquí para citar, no para interpretar.`;
 
-Se mantiene por separado la historia de los Cuna: aquí funciona como memoria de una acusación equivocada y de un conflicto anterior. La investigación etnohistórica permite contextualizar relaciones entre pueblos del Chocó y el Darién, pero no convierte cada detalle del relato en fecha, batalla o población verificable.`;
+const similitudes = `Dentro del mismo volumen, el ciclo de los Jurá vuelve sobre enfrentamientos y desplazamientos entre colectivos nombrados desde la memoria emberá, y Pardo lo resume en 1987: un relato recogido en el Baudó cuenta una guerra de emberá confederados de Pepé, Munguidó, Quito y el Atrato contra los Jurá del río Dubasa, afluente occidental del Baudó, a quienes persiguieron hasta Panamá. Es el mismo repertorio de la página que se lee aquí —confederación de gente de varios ríos, identificación del adversario, persecución por agua— y el mismo Dubasa aparece en las dos. No son capítulos de una sola campaña: Pardo los cita como registros distintos y el interrogante que le interesa es por qué los emberá identificaban como Cuna a gentes asentadas en el medio Baudó y el San Juan.
 
-const similitudes = `Dentro del mismo Zrõarã Nẽburã, “Los Jurá” vuelve sobre enfrentamientos y desplazamientos entre colectivos nombrados desde la memoria Emberá. La cercanía está en la pregunta por quién ocupa un territorio, cómo se reconoce al adversario y qué consecuencias deja una guerra. No son capítulos consecutivos de una sola campaña: cada narrador, ruta fluvial y desenlace exige lectura propia.
+El segundo paralelo es el de Rochereau y Chaves, con los burumías en el papel contrario, y vale como advertencia además de como semejanza: dos corpus recogidos en décadas y regiones distintas conservan el mismo nombre en posiciones opuestas del conflicto. Una coincidencia de nombre no es una genealogía. La página anterior de este catálogo había hecho exactamente eso, reunir Burumia, Carauta y Bibidí en una sola trama con oro, incesto, transformaciones en animales y un incendio; las fuentes no lo autorizan.
 
-El episodio de Bibidí, y la narración Katío de Bibidigomia publicada por Milciades Chaves en 1945, también presentan seres antiguos, cautiverio, escape y respuesta colectiva. La página anterior convirtió esas resonancias en una genealogía única de Burumia, Carauta y Bibidí. Las fuentes no autorizan esa fusión. Una semejanza de acción puede revelar un repertorio compartido de peligros sin afirmar que todos los nombres designen al mismo pueblo o personaje.
+Hay un tercer paralelo del lado vecino. Pardo registra que los waunana del bajo San Juan también refieren enemistades y escaramuzas pasadas con los Cuna, citando a Wassén. Los waunana son un pueblo distinto de los emberá, con lengua propia; lo comparable es que dos pueblos del Chocó guarden por separado la memoria de una guerra con el mismo adversario.
 
-La transformación del explorador en murciélago tiene además ecos en numerosos relatos donde una forma animal permite ver o cruzar lo que el cuerpo humano no alcanza. Aquí su función es concreta: contar las casas desde el aire. No se presenta como símbolo universal ni como prueba de una doctrina total Emberá. La comparación más útil permanece cerca del corpus: muestra cómo río, fuga, reconocimiento y error organizan memorias de conflicto, al tiempo que cada historia conserva su territorio y su voz.`;
+La transformación del explorador en murciélago tiene ecos en muchos relatos donde una forma animal permite ver lo que el cuerpo humano no alcanza, pero aquí su función es estrictamente operativa: contar casas desde el aire. Y falla. La casa que no contó es la que decide el final.`;
 
 export default defineEmberaMyth({
   slug: "los-burumias-y-carautas",
@@ -45,7 +45,7 @@ export default defineEmberaMyth({
   historia,
   versiones,
   leccion:
-    "Una acusación equivocada puede prolongar la violencia hasta que alguien logra regresar y contar.",
+    "Una guerra puede librarse entera contra el vecino equivocado antes de que alguien vuelva y cuente.",
   similitudes,
   excerpt:
     "Dos jóvenes escapan del poblado Burumia por el río y revelan quién causaba las desapariciones atribuidas a los Cuna.",
@@ -70,15 +70,48 @@ export default defineEmberaMyth({
     "tradición oral",
   ],
   sourceKeys: [
-    "dogiramaBurumia1984",
-    "vascoReview1986",
-    "onicDobida",
-    "pardoRegionalizacion1987",
-    "minculturaDobida",
-    "icanhEmbera",
-    "vargas1993",
-    "chaves1945",
-    "usagaraMap",
+    "dogiramaBurumia19842",
+    {
+      key: "vascoReview1986",
+      summary:
+        "Describe con precisión el volumen del que sale el relato: veintiséis narraciones recogidas en su totalidad en el alto Baudó, los cuatro narradores —Floresmiro, Odilia, Alipio y Joaquín—, las ilustraciones de fauna de César Landázabal, y los capítulos en que el compilador las agrupó, entre ellos el de historias de guerra al que pertenece esta pieza. Sitúa a Floresmiro Dogiramá como un cacique anciano con largo trato con antropólogos, de Nordenskiöld a Moser, Arianne Deluz y Pardo. Y objeta que llamarlas «literatura oral» las reduzca a su forma, cuando son una sistematización del conocimiento.",
+      limitation:
+        "Es una reseña crítica de dos páginas: no reproduce ninguna narración y no reemplaza el texto de Odilia Dogiramá. Sus juicios sobre la clasificación editorial son una posición teórica del reseñista, no un dato sobre el contenido del relato.",
+    },
+    {
+      key: "pardoRegionalizacion1987",
+      summary:
+        "Es la única fuente académica localizada que nombra directamente a los Burumiás dentro del problema al que pertenece este relato: registra que los emberá llaman Jurá a los Cuna y los waunana Juranán, que los emberá reconocen sin ambigüedad a los Cuna contemporáneos, y que existen además relatos de guerra contra gentes con gentilicios propios, «Burumiás, Bibidícomias, Carautas». Cita del mismo volumen de 1984, pp. 205-217, la guerra de emberá confederados de Pepé, Munguidó, Quito y Atrato contra Jurás del río Dubasa, perseguidos hasta Panamá, y agrupa Atrato, Bojayá y alto Baudó en una misma subárea dialectal.",
+      limitation:
+        "Deja el problema expresamente abierto: no decide si esos gentilicios designan pueblos históricos, subgrupos o adversarios narrativos, y esta ficha tampoco lo hace. Sus referencias de apoyo —Betania 1964, Santa Teresa 1959, Vargas 1982, Wassén 1963— no se pudieron abrir. La regionalización refleja la investigación disponible en los años ochenta.",
+    },
+    "chMitos1945",
+    {
+      key: "minculturaDobida",
+      summary:
+        "Sitúa el territorio del relato: describe a los Emberá Dóbida como «gente de río», habitantes de las orillas cuya vida gira en torno al agua, y registra el Alto Baudó entre sus zonas de asentamiento y concentración poblacional en el Chocó. Permite decir bajo qué denominación se reconoce hoy la región donde Odilia Dogiramá narró, sin proyectarla sobre el tiempo del relato.",
+      limitation:
+        "Es una caracterización institucional que sintetiza bibliografía —Ulloa 1992, el plan de salvaguarda de OREWA— y no una etnografía ni una voz comunitaria: no edita ni comenta el relato de los Burumia. Describe una situación contemporánea que no puede trasladarse sin más al tiempo narrativo.",
+    },
+    {
+      key: "icanhEmbera",
+      summary:
+        "Sirve para una sola cosa y se cita sólo para eso: distingue a los Ëmbërä Dobidá y Eperara Siapidara, gente de río, de los Ëmbërä Chamí y los Ëmbërä Katío, gente de monte, y describe al jaibaná como la autoridad espiritual que controla las enfermedades. Sostiene que no se puede atribuir automáticamente cada narración a un subgrupo.",
+      limitation:
+        "Es una página de entrada a una colección de objetos, no un texto etnográfico: su contenido es breve y acompaña galerías de imágenes. No menciona el Chocó, el Baudó, el Atrato ni Bojayá, y no aporta nada sobre el relato de los Burumia.",
+    },
+    {
+      key: "usagaraMap",
+      summary:
+        "Ubica cartográficamente el escenario del relato: la desembocadura del Usagará en el río Bojayá, cerca de 6°8′54″ N, 77°5′56″ O, dentro de la subárea que Pardo agrupa como Atrato, Bojayá y alto Baudó.",
+      limitation:
+        "Es una capa cartográfica derivada de OpenStreetMap, no una fuente etnográfica ni histórica. La coordenada corresponde a la confluencia de los cauces, no al alto donde la narración sitúa las casas Burumiá, que no es un lugar localizable.",
+    },
+    "isacssonGentilicios1980",
+    "gomezMitos1997",
+    "edicionNociones1929",
+    "teresaindios1959",
+    "gradoEmbera2023",
   ],
   imagePromptHorizontal:
     "Ilustración editorial horizontal 16:9, full paper cut con detalles selectivos de paper quilling, no fotografía ni maqueta. En la selva lluviosa del Chocó, la quebrada Usagará desemboca hacia el río Bojayá; un joven y una joven Emberá escapan río abajo en una gran canoa tallada, acompañados por un perro, mientras el poblado Burumia queda distante sobre un alto entre árboles. Capas recortadas de agua, follaje y niebla, composición narrativa adulta, vestuario sobrio sin tocados panindígenas, sin fuego, deidades, oro, texto, logos, violencia explícita, diorama ni render 3D.",

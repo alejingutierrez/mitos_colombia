@@ -152,6 +152,7 @@ function selectedDefinitions(config, options) {
           sourceUrls: [...record.keySources, ...record.sources].map(
             ({ url }) => url,
           ),
+          fuentesAgotadas: Boolean(record.fuentesAgotadas),
           localPath: path.join(
             outputDir,
             `${record.slug}-${orientation}.jpg`,
@@ -185,7 +186,7 @@ function validateDefinition(config, definition) {
   }
   const expected = Number(config.expectedSourceCount || 0);
   if (
-    definition.sourceUrls.length < 5 ||
+    definition.sourceUrls.length < (definition.fuentesAgotadas ? 3 : 5) ||
     (expected > 0 && definition.sourceUrls.length !== expected) ||
     new Set(definition.sourceUrls).size !== definition.sourceUrls.length
   ) {

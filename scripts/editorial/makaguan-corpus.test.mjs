@@ -48,20 +48,78 @@ test("los tres expedientes Makaguán cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const sourceUrls = [...record.keySources, ...record.sources].map(
-      ({ url }) => url,
+    // Antes: `keySources + sources === 7`. Ese siete era el reparto en bloque
+    // escrito como aserción; desde la Fase B del 2026-09-19 cada ficha cita
+    // las obras que su reescritura usó, y son distintas entre fichas. Lo que
+    // se verifica es la sustancia: mínimo de fuentes, dominios distintos,
+    // ninguna URL repetida y todas con resumen, límite y URL https.
+    const todas = [...record.keySources, ...record.sources];
+    assert.ok(
+      todas.length >= 5,
+      `${record.slug}: ${todas.length} fuentes, el mínimo son cinco.`,
     );
-    assert.equal(new Set(sourceUrls).size, sourceUrls.length);
+    assert.equal(record.keySources.length, 3);
+    const urls = todas.map(({ url }) => url);
+    assert.equal(new Set(urls).size, urls.length);
+    assert.ok(
+      new Set(urls.map((url) => new URL(url).host)).size >= 3,
+      `${record.slug}: menos de tres dominios distintos.`,
+    );
+    assert.ok(
+      todas.every(
+        ({ url, title, summary, limitation }) =>
+          url.startsWith("https://") && title && summary && limitation,
+      ),
+      `${record.slug}: hay una fuente sin https, título, resumen o límite.`,
+    );
   }
 });
 
-test("restituye títulos, género y correcciones comunitarias", () => {
+test("ninguna pareja de fichas repite el mismo reparto de fuentes", () => {
+  const repartos = new Map();
+  for (const record of records) {
+    const firma = [...record.keySources, ...record.sources]
+      .map(({ url }) => url)
+      .join("|");
+    assert.ok(
+      !repartos.has(firma),
+      `${record.slug} y ${repartos.get(firma)} citan exactamente lo mismo.`,
+    );
+    repartos.set(firma, record.slug);
+  }
+  for (const record of records) {
+    const todas = [...record.keySources, ...record.sources];
+    // La tesis de Mattar 2024 es la única que trae los tres relatos: va en
+    // las tres fichas y siempre como fuente clave.
+    assert.ok(
+      record.keySources.some(({ url }) =>
+        url.includes("repositorio.unal.edu.co"),
+      ),
+      `${record.slug}: Mattar 2024 no está entre las fuentes clave.`,
+    );
+    // El diagnóstico del Mininterior se retiró: su PDF devuelve 404 y la
+    // página que lo enlazaba es un índice, no el documento.
+    assert.ok(
+      !todas.some(({ url }) => url.includes("mininterior.gov.co")),
+      `${record.slug}: el diagnóstico del Mininterior ya no existe.`,
+    );
+    // Lo hitnü se cita como vecindad, nunca como makaguán: ahí el creador es
+    // Nakanü y no Tacu, y la variación es un dato, no un error.
+    for (const fuente of todas) {
+      if (/colombiaaprende\.edu\.co|doi\.org\/10\.1590/.test(fuente.url)) {
+        assert.match(
+          fuente.limitation,
+          /hitn[uü]/i,
+          `${record.slug}: ${fuente.title} no declara que es hitnü.`,
+        );
+      }
+    }
+  }
+});
+
+test("los relatos cuentan, y las correcciones viven donde deben", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  assert.equal(
-    bySlug.get("creacion-makawanes").title,
-    "Los hijos del venado",
-  );
+  assert.equal(bySlug.get("creacion-makawanes").title, "Los hijos del venado");
   assert.equal(
     bySlug.get("la-gran-inundacion").title,
     "La gran inundación y Wiri",
@@ -70,19 +128,32 @@ test("restituye títulos, género y correcciones comunitarias", () => {
     bySlug.get("el-alma").title,
     "Wuachirajua, la leyenda de El Alma",
   );
-  assert.match(
-    bySlug.get("la-gran-inundacion").mito,
-    /no era una paloma, sino un samuro/is,
-  );
-  assert.match(bySlug.get("el-alma").mito, /clasifica El Alma como leyenda/i);
-  assert.doesNotMatch(
-    bySlug.get("el-alma").mito,
-    /yōkai|mitología nórdica|viaje del héroe/i,
-  );
-  assert.match(
-    bySlug.get("creacion-makawanes").mito,
-    /no la convierte en una jerarquía verdadera/is,
-  );
+
+  // La corrección la hizo la comunidad: donde el texto escolar decía paloma, un
+  // narrador aclaró que los abuelos contaban un samuro, el que se comió la
+  // podredumbre que dejó el diluvio. El Relato cuenta el samuro; la
+  // discrepancia vive en Versiones, que es su sitio.
+  const inundacion = bySlug.get("la-gran-inundacion");
+  assert.match(inundacion.mito, /samuro/i);
+  assert.doesNotMatch(inundacion.mito, /paloma/i);
+  assert.match(inundacion.versiones, /paloma/i);
+
+  // Antes el Relato llevaba dentro la clasificación editorial y las cautelas
+  // sobre jerarquías. Eso es aparato: va fuera del mito.
+  for (const record of records) {
+    assert.doesNotMatch(
+      record.mito,
+      /clasifica|esta p[aá]gina|la fuente|la investigaci[oó]n|jerarqu[ií]a verdadera/i,
+      record.slug,
+    );
+    assert.doesNotMatch(record.mito, /y[oō]kai|mitolog[ií]a n[oó]rdica|viaje del h[eé]roe/i);
+  }
+
+  // Y los tres nombran ahora a quien narró: Mattar recogió los tres relatos de
+  // los sabedores de El Vigía, con nombre y fecha.
+  const narradores = /Gregorio Fl[oó]rez|David Emiro Gonz[aá]lez|Manuel S[aá]nchez|Ar[ií]stides Tocaria|Jos[eé] Dar[ií]o Cuenza/;
+  const conNarrador = records.filter((r) => narradores.test(`${r.historia}\n${r.versiones}`));
+  assert.equal(conNarrador.length, records.length);
 });
 
 test("cada ficha reutiliza una pareja horizontal y vertical distinta", () => {

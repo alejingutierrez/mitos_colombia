@@ -3,38 +3,68 @@ import { defineBoyacaMixtoResidualMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineBoyacaMixtoResidualMyth({
     slug: "los-mensajeros-de-los-dioses",
-    title: "Mayavita y los mensajeros de los dioses",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "investigacionMitos1993",
+      "caroConversas2022",
+      {
+        key: "elTiempoMayavita",
+        summary:
+          "Resume el relato de Montaña con Guáquira, Mayavita y Sua en una nota de 2002.",
+        limitation:
+          "Reempaque de prensa, sin versión propia.",
+      },
+      {
+        key: "popolVuh",
+        summary:
+          "Trae el episodio de Vucub Caquix, el Gran Guacamayo que se proclamaba sol, que la propia autora cita y Similitudes compara.",
+        limitation:
+          "Es otra tradición; comparación de motivo.",
+      },
+      {
+        key: "puebloBoyacense",
+        summary:
+          "Cuenta el mito de Bachué y el culto muisca del campo boyacense, el mundo al que Montaña adscribe a Sua y a Bochica.",
+        limitation:
+          "No trata este relato.",
+      },
+    ],
+    title: "Los mensajeros de los dioses",
     excerpt:
       "Mayavita dio vida a dos aves de hojas para volar hacia el oriente; después de su caída, las guacamayas regresaron como mensajeras de Sua.",
     tags: ["guacamayas", "transformación", "Sol", "viaje"],
-    mito: `Mongatá era un ceramista que vivía cerca del lago de Tota. Se había casado muy joven, pero, al pensar que su esposa no podía tener hijos, decidió separarse de ella. La mujer se retiró a una vivienda próxima a Guáquira, en el territorio de la actual Aquitania. Allí descubrió que estaba embarazada. No avisó a Mongatá y, cuando nació la niña, la llamó Mayavita.
+    mito: `Mongatá era alfarero. Su padre, famoso por las copas y los vasos rituales que fabricaba, le había enseñado el oficio y a decorar las vasijas con jugos de plantas. Huérfano de madre, se enamoró de una muchacha vecina con la que iba a traer agua fresca del manantial de Turubiuta. Se casaron: ella guardó las mantas que él le había dado en señal de compromiso, y en la boda bebió el licor ritual y le ofreció la copa.
 
-Desde pequeña, Mayavita miraba hacia el oriente. Por allí aparecía Sua, el Sol, y detrás de la cordillera comenzaban las selvas y llanuras cálidas. Quería conocer ese mundo, pero no tenía alas para atravesar el lago y las montañas. Un día reunió hojas verdes y anaranjadas y formó con ellas dos aves grandes. Mientras contemplaba las figuras, las alas se extendieron y las aves cobraron vida.
+Vivían con desahogo junto al manantial, pero una desgracia les amargaba la vida: los dioses no les daban un hijo. Ni los sacerdotes ni los curanderos, ni las yerbas ni los sacrificios lo remediaron. Mongatá, que la quería, entendió que debía tomar otra esposa, y no tenía cómo sostener a dos. Un día la encontró cavando papas con la coa y le dijo que tomara de sus bienes lo que quisiera y se fuera antes de que él volviera, porque así lo mandaban los dioses y el sacerdote.
 
-Mayavita se sujetó a ellas. Juntas volaron sobre el lago de Tota, remontaron la cordillera y descendieron hacia el piedemonte. En la selva la joven comía los frutos que recogían las aves y los micos, y dormía al abrigo de un árbol inmenso. Enseñó palabras a sus compañeras. Con el tiempo, las dos aves tuvieron polluelos y Mayavita formó con ellas una nueva familia.
+Ella se fue a la casa de una anciana parienta suya en Guáquira, cerca del lago, y la encontró abandonada. Allí vivió sola y callada, cultivando la tierra. Mongatá tomó pronto otra compañera. Y ella descubrió que estaba encinta. Sola, a la hora del parto, se encomendó a Bochica, y decidió que nunca le diría a Mongatá que la criatura era suya, como castigo por su impaciencia.
 
-Pasaron los años y la joven quiso volver junto a su madre. Las aves adultas prepararon el viaje, pero la versión reproducida por El Tiempo cuenta que fueron las aves jóvenes las encargadas de sostenerla durante el regreso. Al cruzar las alturas no resistieron su peso. Mayavita cayó y murió. Las guacamayas descendieron para auxiliarla y su sangre dejó una marca roja en el plumaje.
+Nació una niña parecida al padre, a la que llamó Mayavita, y la crió apartada del mundo. Mayavita no hablaba con nadie más que con su madre. De los pájaros, prefería las quinzas, las tominejas que llegaban al cercado y se iban volando hacia el oriente, por donde sale Sua, el Sol, y las envidiaba. La madre le contaba de las llanuras ardientes adonde iban las caravanas por maderos para los templos y las casas de los caciques.
 
-Las aves continuaron hasta el lugar de origen de Mayavita. Allí se celebraba una ceremonia dedicada a Sua y una luz rojiza cubría a la comunidad. Las guacamayas parecieron desprenderse de esa claridad, se posaron en un árbol y, usando las palabras aprendidas, contaron lo ocurrido. Desde entonces quedaron asociadas con el viaje de las súplicas humanas hacia el Sol.
+Un día, bajo un arbusto de grao, de hojas verdes y naranja que el viento no deshoja, Mayavita armó con sus hojas dos aves grandes. Tomó un ala de cada una, y las figuras echaron a volar llevándola entre las dos, cruzaron la laguna y se perdieron por el camino de Sua. Bajaron en la selva caliente. Allí las aves le traían frutos en el pico, los micos le traían frutas y un árbol inmenso le daba abrigo. Las aves no tenían voz; Mayavita les hablaba todos los días, hasta que repitieron sus palabras en su misma lengua. Anidaron y tuvieron dos pichones, que crecieron verdes y amarillos.
 
-Este relato no se presenta como una transcripción anónima sin autor. La versión consultable fue publicada y difundida bajo el nombre de la historiadora boyacense Lilia Montaña de Silva Celis. Su trama reúne pérdida, desplazamiento y retorno: Mayavita no vuelve en persona, pero las aves que creó llevan su memoria a la casa que había dejado.`,
-    historia: `Lilia Montaña de Silva Celis publicó Mitos, leyendas, tradiciones y folclor del Lago de Tota en 1970. Catálogos del Jardín Botánico de Bogotá y WorldCat controlan la edición, mientras un estudio del Instituto Caro y Cuervo sitúa Los mensajeros de los dioses dentro de la obra de la autora. Ninguna de esas fichas bibliográficas ofrece, por sí sola, una lista de informantes o una fecha de recolección oral.
+La madre la buscó y creyó que la laguna sagrada se la había llevado; de noche le parecía oír su voz, con reproche.
 
-La reproducción narrativa más accesible apareció en El Tiempo en 2002 bajo el título Aves mensajeras del Sol. El periódico identificó los pasajes como apartes de la leyenda de Montaña y explicó que habían sido retomados en Loros de Colombia, guía de José Vicente Rodríguez Mahecha y Jorge Ignacio Hernández Camacho. Esa circulación ornitológica vinculó a las aves de la historia con la guacamaya roja aliamarilla, pero la identificación naturalista es una lectura contemporánea.
+Mayavita, ya mujer, sintió nostalgia de su madre y del lago, y pidió a las aves que la devolvieran. Las dos mayores la cargaron, pero sobre la cordillera se fatigaron, porque pesaba mucho más que en el primer viaje. Mayavita se soltó, cayó y se estrelló contra las rocas, y al tratar de rescatarla, el plumaje de las aves se tiñó con su sangre.
 
-Los hijos del agua, novela de Susana Henao Montoya publicada en 1995, también alude a Mongatá y Mayavita. Sirve para mostrar recepción literaria, no como segundo testimonio independiente del origen. Del mismo modo, la compilación de Javier Ocampo permite comparar a las aves con especialistas rituales muiscas que llevaban ruegos al Sol, aunque su síntesis depende de fuentes coloniales y secundarias.
+Las aves siguieron al país de la niña. El día en que el pueblo rendía homenaje al Sol, Sua salió rojizo y de él se desprendieron dos aves. Se posaron en los árboles y hablaron a la gente en su propia lengua, y la gente, creyéndolas hijas del Sol, clamó: «¡Sue!». Tenían el verde del maizal, el brillo del oro, el azul del cielo y el rojo de la sangre. Desde entonces son las mensajeras que llevan los ruegos al Sol. Se multiplicaron y volvieron a la selva con sus hermanos verdes y amarillos, y desde entonces los hombres traen guacamayas de las ferias de tierra caliente y les enseñan a hablar.`,
+    historia: `El relato es de Lilia Montaña de Silva Celis, que lo publicó en 1970 en Mitos, leyendas y tradiciones del folclor del Lago de Tota (Universidad Pedagógica y Tecnológica de Colombia, Ediciones La Rana y El Águila, Tunja). Eugenia Villa Posse lo reprodujo en el segundo tomo de Mitos y leyendas de Colombia (IADAP, Quito, 1993), sección 23, «Mitos, leyendas y tradiciones · Lago de Tota», pp. 231-243, con la advertencia de que la autora elaboró la «tradición oral del campesino boyacense del Lago de Tota» de una manera «excesivamente literaria». Montaña quería, según esa nota, buscar relaciones entre la tradición campesina y la historia chibcha.
 
-El archivo Excel del proyecto dividió la secuencia en nueve filas, 478–486: separación de Mongatá, nacimiento de Mayavita, creación de las aves, viaje, caída y regreso ceremonial. No son nueve mitos. La revisión los mantiene unidos en la ruta existente y corrige el nombre Mongati por Mongatá. También retira la supuesta conexión maya-quiché: ninguna fuente seleccionada demuestra esa genealogía.`,
-    versiones: `La versión atribuida a Montaña y reproducida por El Tiempo ofrece la secuencia más completa: Mongatá abandona a su primera esposa, Mayavita nace cerca de Guáquira, crea aves con hojas, cruza Tota, vive en la selva, muere durante el regreso y las guacamayas narran su historia en una ceremonia de Sua. Las nueve filas del Excel son cortes de esa secuencia, no variantes autónomas.
+La autora cierra con un vocabulario que da raíz local a los nombres: Mongatá es un cerro de Tota y una quebrada; Mayavita, una vereda; Guáquira, la actual Aquitania; Sua, el Sol; Sue, guacamaya. Y añade dos datos de su cosecha: que en Ramiriquí se veneraba en una gruta una guacamaya de oro, en el sitio que hoy llaman Cueva de la Guacamaya, y que los chibchas compraban guacamayas en las ferias de tierra caliente, les enseñaban palabras y las sacrificaban; y relaciona el nombre de Suesca con la cola de la guacamaya.
 
-Loros de Colombia reutiliza el relato para interpretar la presencia de guacamayas del piedemonte en prácticas de las tierras altas. La novela Los hijos del agua lo incorpora a otro proyecto literario. Ambas obras prueban circulación posterior; no autorizan a completar diálogos, edades o rituales ausentes de la versión atribuida.
+Huérfano Huérfano, en su tesis de maestría del Instituto Caro y Cuervo (2022) sobre las conversas del lago de Tota y el valle de Sogamoso, describe el libro de Montaña: nueve mitos y 786 coplas, escritos en el contexto de las excavaciones de Eliécer Silva Celis en el Templo del Sol de Sogamoso.`,
+    versiones: `Montaña es la única autora que cuenta el relato completo, y lo hace con nombres, lugares y un vocabulario propios. Villa Posse advierte la elaboración literaria, y la historia muestra la mano de la autora: los datos de la guacamaya de oro de Ramiriquí y de las guacamayas sacrificadas son explicaciones que ella añade al final, junto a una cita del Gran Guacamayo de la tradición maya-quiché.
 
-El Tiempo afirma que Sua llegó a significar guacamaya y que las aves eran sacrificadas para llevar súplicas. La revisión conserva esa afirmación dentro de la cadena de transmisión, pero no la presenta como traducción lingüística demostrada. Sua está ampliamente documentado como nombre del Sol en fuentes muiscas; la equivalencia con guacamaya necesita un estudio específico que las fuentes consultadas no aportan.
+La prensa lo resumió en 2002. El Tiempo publicó una nota titulada «Aves mensajeras del Sol» que retoma el relato de Montaña con Guáquira, Mayavita y Sua, en el marco de un libro sobre los loros de Colombia. Es un reempaque del texto de 1970, sin versión propia ni narrador nuevo.
 
-La ficha anterior comparaba el viaje con Ícaro y Amaterasu y proponía un vínculo americano general. Esas analogías borraban las funciones concretas de las aves. La nueva versión conserva la atribución de Montaña, declara sus límites y compara únicamente el papel de los mensajeros.`,
+Lo que en el libro son tres historias encadenadas —el matrimonio sin hijos de Mongatá, la niña criada en soledad y el origen de las guacamayas— se cuenta a veces sólo en su final, como explicación de por qué las guacamayas hablan y tienen el color de la sangre y del oro.`,
     leccion:
-      "La memoria puede regresar por otras voces cuando una persona ya no logra volver.",
-    similitudes: `Las mojas descritas en compilaciones sobre los muiscas dialogaban ritualmente con el Sol y transmitían peticiones de la comunidad. Comparten con las guacamayas una función mediadora; son personas especializadas y no aves creadas por Mayavita, y su registro procede de otra clase de fuente. En las Metamorfosis de Ovidio, el cuervo de Apolo lleva una noticia y su plumaje cambia de color como consecuencia del mensaje. También une ave, comunicación divina y transformación cromática, pero la causa, el dios y el desenlace son grecorromanos. Estos paralelos ayudan a comparar funciones narrativas; no prueban contacto, préstamo ni un origen común.`,
+      "Lo que nace del abandono puede volver, transformado, para hablar en nombre de quien se perdió.",
+    similitudes: `El pariente más cercano está en la misma sección de Villa Posse, que reúne otros relatos de Montaña sobre el lago de Tota: el origen mítico del lago, la aparición de los chihicas y el castigo de Chaquén. En todos, el paisaje de Tota y el culto al Sol explican un rasgo del mundo, y la laguna aparece como fuerza sagrada que retiene a los que se pierden.
+
+La propia autora trae el paralelo maya: el Gran Guacamayo del Popol Vuh, Vucub Caquix, el ave que se proclamaba sol y luna antes de que existieran y que los gemelos héroes derribaron. Allí la guacamaya es soberbia y usurpa el lugar del Sol; en Tota es mensajera y lleva los ruegos al Sol. Las dos historias ponen al ave de colores en relación con el astro.
+
+Y las aves hechas de hojas que vuelan son un motivo de figuras que cobran vida. Mayavita las arma con sus manos como Mongatá, su padre, modelaba vasijas: la hija del alfarero hace de la materia muerta un ser que vuela, y ese ser, teñido con su sangre, se convierte en mensajero entre los hombres y el Sol.`,
     sceneHorizontal:
       "sobre el lago de Tota al amanecer, Mayavita sostiene dos grandes aves recién formadas con capas de hojas verdes y anaranjadas que comienzan a desplegar las alas, con Guáquira, montañas y una franja solar al oriente",
     sceneVertical:
@@ -55,38 +85,52 @@ La ficha anterior comparaba el viaje con Ícaro y Amaterasu y proponía un vínc
 
   defineBoyacaMixtoResidualMyth({
     slug: "el-cucacuy",
-    title: "El Cucacuy: silbidos y tesoros de Boyacá",
+    fuentesAgotadas: "Fuera de Ocampo López, Izquierdo Gallo y Piedrahita, la cantera abierta del ciclo no trae otro registro: Galindo (Boyacá en la leyenda indígena, 1965), López Guevara (Leyendas indígenas) y Sarmiento de Quiñones (Leyendas de los Boches, 1939) no tienen texto abierto.",
+    sourceKeys: [
+      {
+        key: "puebloBoyacense",
+        summary:
+          "Registro del Cucacuy del Valle de Tenza: el hombre con pacto que guarda el dinero enterrado y se aparece en caminos y fogones (p. 121), los «cucacuyes» como nombre colonial de los brujos (p. 126) y Fu, el espíritu de Fúquene, que abre el capítulo.",
+        limitation:
+          "Ocampo resume creencias («las gentes creen») sin narrador ni vereda.",
+      },
+      "eSAPEsquemasf",
+      "corpoboyacaPOMCA2017",
+      "gallegoInfluencia2014",
+      "tiempoCuentos2004",
+    ],
+    title: "El cucacuy",
     excerpt:
       "El Cucacuy cambia entre el hombre silbador del Valle de Tenza y el cerdo con duende de Lengupá; ninguna versión agota la figura.",
     tags: ["Cucacuy", "miedo", "fuego", "tesoro"],
-    mito: `En las noches frías del Valle de Tenza se habla de un hombre desnudo que busca el calor de hornillas, fogones y trapiches. Lo llaman Cucacuy, Cocacuy, Cucuyé o Quicacuy. No tiene una biografía única: se reconoce por un conjunto de señales que cambia de pueblo en pueblo.
+    mito: `En el Valle de Tenza, cuando la noche enfría las veredas, dicen que sale un hombre desnudo. Busca el calor. Se arrima a las parrillas donde todavía queda brasa y allí se queda, calentándose, mientras el resto del mundo duerme. Lo llaman el Cucacuy.
 
-Una de ellas es el silbido. La tradición recogida por estudios lingüísticos le atribuye una uña muy larga, perforada en la punta, con la que produce un sonido engañoso. Cuando parece lejano, podría estar cerca; cuando se oye próximo, quizá se encuentre a distancia. El silbido evita que quien camina de noche pueda ubicarlo con seguridad.
+Nunca anda con las manos vacías. Lleva siempre en la mano un bordón largo, y de la punta le cuelga un calabazo. Adentro, encerrados, van varios demonios. Más al norte, por las tierras del río Suárez, hay quien asegura que lo que cuelga del bordón no es un calabazo sino una calavera, y que los demonios que guarda allí son para atormentar.
 
-En Sutatenza aparece durante las moliendas y se acerca a las casas. Algunas versiones le dan una macana; otras, un bastón largo y una calabaza donde guarda pequeños demonios. El relato cristianizado dice que hizo un pacto con el diablo y quedó condenado a vagar. También lo describe como custodio de entierros o riquezas escondidas. Quien intenta seguirlo por codicia puede perder el camino, asustarse ante el silbido o encontrar que el tesoro se ha desplazado.
+Antes de verlo, se le oye. Se ha dejado crecer la uña del pulgar y le ha abierto un agujero, y por ese agujero silba de un modo especial, un silbido que en el campo nadie confunde.
 
-Las fichas locales añaden una conducta agresiva hacia mujeres solas. Esta revisión registra que ese motivo existe, pero no convierte la amenaza en una lección sobre cómo deben comportarse las mujeres. El Cucacuy funciona como espanto nocturno y como advertencia sobre espacios inseguros; la responsabilidad de la violencia no recae en sus posibles víctimas.
+Las gentes creen que es un varón al que nunca bautizaron y que tiene pacto con el diablo. En San Eduardo saben también cuál fue el precio del trato. El Cucacuy se comprometió a llevar una vida miserable aunque tenga dinero: se viste con harapos, anda siempre a pie y siempre descalzo. Tiene con qué, y aun así vive como el más pobre.
 
-Al otro lado de Boyacá, en Miraflores y la provincia de Lengupá, la figura cambia de cuerpo. Allí puede ser un cerdo, algunas veces dorado, que carga sobre el lomo a un duende. El animal ronda trapiches durante jornadas de molienda que duran toda la noche. Su brillo lo hace parecer una riqueza fácil, pero el silbido y el movimiento lo vuelven imposible de atrapar.
+El dinero, sin embargo, no le es ajeno. Uno de sus oficios es cuidar, algunas noches, los lugares donde hay plata enterrada. Y en las noches de luna llena, cuentan, deja allí una moneda.
 
-No es necesario escoger cuál forma es la verdadera. El hombre desnudo del Valle de Tenza y el cerdo con duende de Lengupá son variantes regionales incompatibles que comparten noche, molienda, silbido y tesoro. El nombre mantiene un campo común, mientras cada provincia imagina de manera diferente aquello que circula cuando el fuego del trapiche ilumina la oscuridad.`,
-    historia: `Javier Ocampo López incluyó al Cucacuy dentro del folclor boyacense y lo situó especialmente en el Valle de Tenza. Documentos territoriales de Corpoboyacá, San Eduardo y Sutatenza repiten rasgos como desnudez, fogón, bastón, silbido y custodia de tesoros. Son fuentes institucionales útiles para localizar la creencia, aunque a menudo resumen monografías sin detallar cada cadena de narradores.
+Es de los que asustan a los caminantes en la oscuridad y a los campesinos que regresan a sus casas después de los velorios y de los alumbrados. Hace mucho, en tiempos de la Colonia, en Boyacá se llamaba cucacuyes a los brujos, a los que la gente buscaba en la enfermedad, en la muerte o en el hambre. Hoy el nombre es de este hombre desnudo con su bordón y su silbido. Y si alguien en el valle pregunta si de verdad existe, la respuesta es la misma que se da para todos los espantos del campo: porque los hay, los hay.`,
+    historia: `El registro más antiguo que se puede leer del Cucacuy está en El pueblo boyacense y su folclor, de Javier Ocampo López, digitalizado por la Biblioteca Luis Ángel Arango. En el capítulo 8, «Mitos, leyendas y creencias populares en Boyacá», página 121, Ocampo lo describe en un solo párrafo como «un mito del Valle de Tenza»: hombre fabuloso que sale desnudo a calentarse en las parrillas, con un largo bordón del que pende un calabazo con demonios, que silba en la uña crecida del pulgar y que, según las gentes, es un varón no bautizado con pacto con el diablo. No da narrador ni fecha; su bibliografía llega hasta 1976. En la página 126 del mismo capítulo anota que en la Colonia los brujos de Boyacá se llamaban cucacuyes.
 
-Un artículo lingüístico de la UPTC, basado en datos recogidos en 2010, registra las formas cocacuy, cucacuy, cucuyé y quicacuy. Su definición destaca la uña perforada y el silbido, y permite tratar la variación del nombre como dato documentado. Un trabajo de grado de la misma universidad ofrece la versión de Miraflores: cerdo, a veces de oro, que lleva un duende y aparece en moliendas nocturnas. La diferencia confirma que no existe un solo libreto departamental.
+El Esquema de Ordenamiento Territorial de San Eduardo, en el repositorio de la ESAP, reproduce en su página 31 el retrato de Ocampo y le añade dos cosas: el pacto obliga al Cucacuy a vivir en la miseria aunque tenga dinero, en harapos, a pie y descalzo, y uno de sus oficios es cuidar el dinero enterrado y depositar una moneda en las noches de luna llena. El Plan de Ordenación de la cuenca del río Alto Suárez (Corpoboyacá, volumen III, apartado 4.1.5.7) lo resume con una variante: el bordón lleva una calavera. En 2010 Diana Andrea Giraldo Gallego recogió el nombre en Guateque, Sutatenza, Guayatá, La Capilla, Garagoa, Chinavita y Pachavita, y lo publicó en 2014 en Cuadernos de Lingüística Hispánica.
 
-La entrada de Muysc cubun remite a una carta de 1635–1636 que usa cocacuyes para personas asociadas con prácticas rituales y traducidas colonialmente como brujos. La coincidencia léxica es sugerente, pero el documento no describe al hombre desnudo, al cerdo, la uña o el trapiche. No se afirma continuidad directa entre aquel término y el espanto actual.
+Es una figura mixta por su propio material: el nombre coincide con el que Ocampo da a los brujos coloniales, y el contenido es cristiano, con bautismo negado, diablo y demonios encerrados.`,
+    versiones: `Ocampo fija el núcleo del Valle de Tenza: desnudez, fuego, bordón con calabazo, silbido en la uña y pacto. La ficha municipal de San Eduardo conserva ese núcleo palabra por palabra y lo prolonga hacia el dinero: miseria voluntaria a pesar de la riqueza y guarda de entierros, con la moneda de luna llena. El documento de Corpoboyacá para el Alto Suárez cambia el calabazo por una calavera y precisa que los demonios sirven para atormentar.
 
-La versión anterior del sitio inventaba a Antonio Bustamante y un diálogo sobre deseos lujuriosos. Ese personaje no aparece en las ocho fuentes del expediente y se elimina. La ruta permanece publicada, tal como permite la metodología aun cuando la evidencia no resuelva la edad exacta de la creencia.`,
-    versiones: `En el Valle de Tenza domina la figura antropomorfa: hombre desnudo, friolento, asociado con hornillas y tesoros. Sutatenza añade la entrada a casas, la macana y una inversión acústica del silbido. San Eduardo y el POMCA del Garagoa resaltan el bastón, la calabaza con demonios y el pacto cristiano. Estas variaciones no son detalles acumulables en una criatura fija; reflejan transmisiones municipales diferentes.
+La encuesta lingüística de 2010 recoge cuatro formas del nombre, cocacuy, cucacuy, cucuyé y quicacuy, y una definición que deja fuera el fuego y el pacto: un ser que cuida los tesoros que dejaron los indígenas y silba por un orificio en la uña del pulgar. Giraldo Gallego lo incluye entre los préstamos de posible origen muisca.
 
-En Miraflores y Lengupá, el Cucacuy puede ser un cerdo que lleva un duende. El animal dorado convierte el tesoro en cuerpo móvil y conserva el trapiche como escenario. La versión no necesita explicarse como transformación del hombre desnudo: las fuentes seleccionadas no narran ese paso.
-
-El registro colonial de cocacuyes forma una cuarta capa, exclusivamente lexical e histórica. Se refiere a personas y prácticas que un funcionario colonial condenaba. Relacionarlo de manera automática con el espanto moderno confundiría semejanza de palabra con identidad cultural continua.
-
-Por estas razones la ficha no inventa un nacimiento, nombre civil ni castigo único. Expone qué motivos están documentados, dónde circulan y cuándo una fuente solo resume una creencia. También elimina la moralización sexual del relato anterior y mantiene la advertencia general sobre codicia, desorientación y miedo nocturno.`,
+El libro Cuentos de espantos y otros seres fantásticos del folclor colombiano (Casa Editorial El Tiempo y Universidad Autónoma de Colombia, 2004) dedica al Cucacuy las páginas 35 y 36, y se declara material de ficción compuesto con documentos imaginarios. Su ficha técnica lo pone en las moliendas, sobre las enramadas de los trapiches mientras se hace la panela, y lo pinta apuesto, joven y exhibicionista. La página narrativa es un fragmento de una novela inventada por el propio libro, «Enemigo», en la que un narrador cabalga hacia un trapiche con un caballero llamado Antonio Bustamante, que arroja miel caliente al espanto. Bustamante, la novela y el trapiche son composición de autor de 2004, no registro folclórico.`,
     leccion:
-      "La codicia extravía cuando convierte cada señal del camino en promesa de riqueza.",
-    similitudes: `El Yato de relatos boyacenses también puede presentarse como riqueza que se mueve y engaña a quien intenta capturarla. Comparte con el Cucacuy de Lengupá el brillo y la imposibilidad de apropiarse del tesoro, pero no necesariamente adopta forma de cerdo ni lleva un duende. El Mohán custodia oro y entierros en múltiples regiones colombianas y puede castigar la búsqueda codiciosa. A diferencia del Cucacuy del Valle de Tenza, suele estar ligado a ríos, cuevas o peñascos y no se reconoce por una uña perforada junto al trapiche. Son comparaciones de función, no nombres intercambiables.`,
+      "Quien pacta con el diablo puede tener dinero y seguir viviendo en la miseria.",
+    similitudes: `En la misma página del Esquema de San Eduardo aparece el Biato, espanto de las afueras del pueblo: el alma de alguien que enterraba dinero, amortajado con un hábito de monje, que por sus pecados no entraba al cielo y por el hábito no entraba al infierno, y por eso penaba donde estaba. Comparte con el Cucacuy el dinero enterrado y la condena entre dos mundos, pero el Biato es un muerto y el Cucacuy un hombre vivo con pacto.
+
+El mohán es el otro guardián de riquezas del altiplano. La misma encuesta de 2010 que registra el cucacuy lo define como ser que cuida tesoros y cuyas historias se ligan al agua, y Ocampo recuerda que en Onzaga los campesinos veneraban un hueso de mohán bajo un crucifijo. El mohán vive en ríos y lagunas; el Cucacuy, en caminos y fogones.
+
+El propio Ocampo abre su capítulo con Fu, el espíritu de la laguna de Fúquene que se aparece en forma humana a los obreros del ferrocarril para decirles que invaden su palacio: otra figura del campo boyacense que toma cuerpo de hombre para imponer su ley.`,
     sceneHorizontal:
       "trapiche del Valle de Tenza durante una molienda nocturna, el Cucacuy humano permanece a prudente distancia junto al resplandor de la hornilla y levanta una mano de uña larga para silbar, con trabajadores protegidos bajo el techo",
     sceneVertical:
@@ -107,38 +151,76 @@ Por estas razones la ficha no inventa un nacimiento, nombre civil ni castigo ún
 
   defineBoyacaMixtoResidualMyth({
     slug: "la-sombra-creadora",
-    title: "La sombra creadora de Are, mito muzo",
+    fuentesAgotadas: "Fuera de Ocampo López, Izquierdo Gallo y Piedrahita, la cantera abierta del ciclo no trae otro registro: Galindo (Boyacá en la leyenda indígena, 1965), López Guevara (Leyendas indígenas) y Sarmiento de Quiñones (Leyendas de los Boches, 1939) no tienen texto abierto.",
+    sourceKeys: [
+      {
+        key: "compiladoraMitos1993",
+        summary:
+          "Texto de Mariano Izquierdo Gallo, Mitología americana (1956), «La sombra creadora», en la sección 30, pp. 47-48, que cita a Piedrahita; en la sección 33, la Furatena de Ocampo con el mismo Are.",
+        limitation:
+          "Villa Posse advierte que es «presentación elaborada literariamente» a partir de cronistas.",
+      },
+      {
+        key: "piedrahitaBanrep",
+        summary:
+          "La fuente de Izquierdo Gallo: la sombra de los muzos «que siempre estaba recostada, á quien llaman en su idioma Are», que labra rostros en madera, los echa al agua y los casa (lib. VII, cap. VI, p. 218 del PDF).",
+        limitation:
+          "Crónica del siglo XVII escrita desde la conquista; no da informante.",
+      },
+      {
+        key: "puebloBoyacense",
+        summary:
+          "Cuenta a Bachué saliendo de la laguna de Iguaque, el paralelo muisca de Similitudes, en el capítulo de mitos de Boyacá.",
+        limitation:
+          "No trata la sombra Are.",
+      },
+      {
+        key: "eanFuratena",
+        summary:
+          "Versión del occidente de Boyacá en que Are forma a Fura y Tena de barro (p. 55), la otra historia muzo del mismo creador.",
+        limitation:
+          "Documento académico de síntesis.",
+      },
+      {
+        key: "rosarioFuratena",
+        summary:
+          "Estudia a Furatena y su culto con la cita de Simón, la figura que Similitudes pone junto a la sombra creadora.",
+        limitation:
+          "No nombra a Are.",
+      },
+    ],
+    relatoCorto:
+      "El único registro del núcleo es un párrafo de Piedrahita (1688) de unas 80 palabras; la reelaboración de 1956 añade sólo matices (la sombra tendida, los días de trabajo, la juventud de los que salen del agua) y una digresión filosófica que no es relato. Llegar a 300 palabras exigiría inventar diálogos, paisajes o episodios que ninguna fuente da.",
+    title: "La sombra creadora",
     excerpt:
       "Are apareció como una gran sombra, talló figuras humanas en madera y las llevó al agua hasta que cobraron vida y poblaron el territorio muzo.",
     tags: ["Are", "creación", "agua", "territorio"],
-    mito: `En una narración atribuida al pueblo muzo, el mundo humano comienza con una sombra. Are apareció al costado oriental del río Magdalena con una forma semejante a la de una persona, pero de tamaño extraordinario. No llegó acompañado por una familia ni descendió para gobernar. Su primera acción fue fabricar cuerpos.
+    mito: `Al principio del mundo, antes de que hubiera sol y luna, al otro lado del gran río Magdalena apareció una sombra. Tenía forma de hombre y estaba siempre recostada, tendida sobre la tierra. Los muzos la llamaban Are.
 
-Are buscó madera y talló figuras de hombres y mujeres. La materia todavía estaba quieta: tenía contorno humano, pero no respiraba ni podía sostenerse por sí misma. El creador llevó entonces las figuras hacia el río y las arrojó o acercó a sus aguas. Allí cobraron vida.
+Durante algunos días la sombra trabajó. Tomó madera y en ella fue labrando rostros: rostros de hombres y rostros de mujeres, figura tras figura, hasta tener varias acabadas.
 
-Cuando los nuevos seres comenzaron a moverse, Are los reunió en parejas. Les señaló el territorio y les enseñó a cultivar, de modo que pudieran alimentarse y multiplicarse. Después desapareció. La sombra no funda una dinastía visible ni permanece como jefe entre sus criaturas; deja personas vivas, trabajo compartido y una tierra que debe ser habitada.
+Cuando terminó, las llevó a la orilla del río y las echó al agua. Las figuras se agitaron. La madera se llenó de vida, y del agua salieron, de pie, hombres y mujeres radiantes de juventud.
 
-La brevedad es parte del relato conservado. No hay en las fuentes seleccionadas una conversación extensa entre Are y las figuras ni nombres individuales para la primera pareja. Tampoco se afirma que los muzo fueran muiscas. Aunque la taxonomía heredada del sitio use la comunidad editorial Mixto, Are pertenece al ciclo muzo del occidente de Boyacá y del valle medio del Magdalena.
+Are no los dejó sueltos. Los juntó de dos en dos y los casó. Después los repartió por la tierra, cada pareja por su lado, para que la cultivaran.
 
-El agua cumple una función decisiva: la talla sola no basta. El paso desde la madera hacia la vida ocurre en la orilla o dentro del río. La creación no surge de una abstracción universal añadida por comentaristas posteriores, sino de una secuencia concreta de sombra, madera, agua, parejas y cultivo.
+Y cuando ya estaban formados los primeros padres, la sombra desapareció. No se quedó a gobernarlos ni volvió a mostrarse. Los dejó como padres de toda la gente que vino después.
 
-Esta historia puede leerse junto a Furatena porque Are vuelve a aparecer como creador en versiones de Fura y Tena. Sin embargo, no son la misma escena. La sombra creadora explica el origen colectivo de hombres y mujeres; Furatena transforma una pareja y su conflicto en cerros, río, esmeraldas y mariposas. Mantener las dos rutas permite ver episodios distintos del ciclo sin fundirlos artificialmente.`,
-    historia: `La narración llega a través de crónicas coloniales tardías y de compilaciones posteriores. Lucas Fernández de Piedrahita escribió su Historia general de las conquistas en 1688, más de un siglo después de las primeras campañas españolas en territorio muzo. Javier Ocampo López retomó el episodio en su síntesis de mitos indígenas: Are, la gran sombra, fabrica figuras de madera, las anima con el agua, las empareja para cultivar y desaparece.
+Por eso los muzos no adoraban al sol ni a la luna. Decían que esos astros se hicieron después, cuando ellos ya habían sido criados. Aun así, al sol lo llamaban padre, y a la luna, madre.`,
+    historia: `El relato llega por un solo camino. Lucas Fernández de Piedrahita, en la Historia general de las conquistas del Nuevo Reino de Granada, publicada en 1688, lo cuenta en el libro VII, capítulo VI, al narrar la entrada del capitán Lanchero a la provincia de Muzo, la tierra de las esmeraldas al noroeste de Santafé. Allí escribe que sus moradores «afirmaban» que al principio del mundo hubo al otro lado del Magdalena una sombra de hombre, siempre recostada, que en su idioma llamaban Are; que labró en madera rostros de hombres y mujeres, los echó al agua, se levantaron vivos, los casó y repartió para cultivar la tierra y desapareció. En el párrafo siguiente anota que los muzos no tenían por dioses al sol ni a la luna, hechos después de su creación, aunque los llamaban padre y madre. No da narrador ni fecha de la noticia; habla de un pueblo que en su tiempo ya había sido sometido.
 
-Boletines de la Academia Colombiana de Historia de comienzos del siglo XX repitieron el relato, pero lo utilizaron para teorías sobre migraciones y supuestas invasiones caribes. José Pérez de Barradas también organizó las noticias coloniales bajo categorías etnológicas de su época. Estas obras permiten rastrear la historia de interpretación; no prueban que sus modelos raciales o difusionistas pertenecieran a la tradición muzo.
+El título «La sombra creadora» es de Mariano Izquierdo Gallo, que reelaboró el pasaje en Mitología americana (Madrid, Guadarrama, 1956), dentro de un apartado de «mitos afines a los chibchas». Eugenia Villa Posse lo reprodujo en el tercer volumen de Mitos y leyendas de Colombia (IADAP, Quito, 1993), páginas 47 y 48, con la advertencia de que el autor presenta los relatos de los cronistas de forma elaborada literariamente. El relato es muzo, no muisca: Piedrahita lo separa expresamente de los ritos de las demás naciones del Reino.`,
+    versiones: `Entre la crónica y la reelaboración de 1956 hay diferencias pequeñas pero reales. Piedrahita pone la sombra «de la otra banda» del Magdalena; Izquierdo Gallo la sitúa «a la banda izquierda del anchuroso Magdalena». Piedrahita dice que Are labró «los rostros» de hombres y mujeres; Izquierdo Gallo habla de «figuras» y añade que el trabajo duró algunos días. En la crónica las figuras se echan «en el agua» y se levantan vivas; en 1956 se echan a la orilla del río, se agitan llenas de vida y salen del agua radiantes de juventud. El cronista dice que la sombra los casó y dividió; el compilador, que los distribuyó en parejas y los dispersó.
 
-La distancia documental importa. No se dispone en el expediente de una versión en lengua muzo ni de testimonios comunitarios contemporáneos que expliquen cada motivo. La ficha conserva el relato porque está atestiguado en la historiografía y declara esa limitación, en lugar de inventar una voz indígena directa.
+Izquierdo Gallo añade después una digresión que no pertenece al relato: elogia el ingenio de muzos y chibchas por hacer salir del agua a los primeros hombres, recuerda que Tales de Mileto tenía el agua por principio de las cosas, cita a Cicerón y presenta a Anaximandro como precursor de los transformistas. Remite además a Belisario Matos Hurtado y a Darío Rozo, que escribieron sobre los chibchas en el Registro Municipal de Bogotá en 1938. Nada de eso procede de los muzos.
 
-La página anterior atribuía la historia a los muiscas y mezclaba el núcleo con Tales, Cicerón y Anaximandro. Ocampo introdujo esos nombres como comparaciones eruditas; no son personajes ni fuentes del acto creador de Are. Se eliminan del relato. La ruta permanece en Boyacá > Mixto solo porque el catálogo actual no tiene una comunidad Muzo, no porque la adscripción cultural sea dudosa.`,
-    versiones: `El núcleo transmitido por Piedrahita y retomado por Ocampo es estable en cinco movimientos: Are aparece como sombra humana de gran tamaño, talla hombres y mujeres en madera, los lleva al agua, los organiza en parejas para cultivar y desaparece. Algunas redacciones dicen que los arrojó al río; otras suavizan el gesto y señalan que allí adquirieron vida. Esa diferencia no modifica la función animadora del agua.
-
-Los boletines históricos agregaron una lectura migratoria: las figuras representarían pueblos llegados desde otras tierras. Es una interpretación historiográfica, no un episodio contado por Are. La revisión la menciona como capa posterior y rechaza presentarla como certeza arqueológica.
-
-En versiones contemporáneas de Fura y Tena, Are forma una pareja con tierra o barro, le enseña oficios y condiciona su juventud a la fidelidad. Ese ciclo comparte creador y territorio, pero nombra a dos protagonistas y explica un paisaje específico. No se usa para rellenar con barro, inmortalidad o Zarbi la escena de las figuras de madera.
-
-La concisión evita otro problema: convertir una noticia colonial fragmentaria en una cosmogonía completa. Esta ficha no añade guerras, templos, mandamientos ni diálogos ausentes. Lo que permanece es suficiente para reconocer una concepción de la vida vinculada con material vegetal, agua y cultivo.`,
+Javier Ocampo López, en Mitos colombianos (1988), da otro origen de la gente con el mismo creador: el dios Are crea a Fura y a Tena, «los padres de la humanidad», que enseñan a los muzos la agricultura, la alfarería y la guerra. En la crónica de 1688 Are hace muchas parejas sin nombre; en 1988, una sola con nombre propio.`,
     leccion:
-      "Crear comunidad también exige agua, territorio y trabajo compartido para sostener la vida.",
-    similitudes: `Bachué emerge con un niño de la laguna de Iguaque y da origen a una población. Comparte con Are el agua y la formación de una comunidad en el territorio boyacense; la tradición muisca parte de una mujer ya viva, mientras la muzo anima figuras de madera y atribuye la acción a una sombra creadora. En el Popol Vuh k’iche’, los seres de madera hablan y se multiplican, pero fracasan y son destruidos por carecer de memoria hacia sus creadores. En el relato de Are, la madera llega exitosamente a la vida mediante el río. La semejanza material hace visible el contraste; no demuestra parentesco entre ambos pueblos.`,
+      "La vida pasa de la madera tallada a las personas solo cuando la toca el agua.",
+    similitudes: `Bachué, en el capítulo que Javier Ocampo López dedica a los mitos del campo boyacense en El pueblo boyacense y su folclor, emerge de la laguna de Iguaque, se casa con su hijo, puebla la tierra y vuelve a la laguna. Como en el relato de Are, la gente nace del agua; pero la madre muisca sale ya viva de la laguna con su hijo, mientras la sombra muzo fabrica a los primeros padres en madera y necesita el agua para animarlos.
+
+Furatena es la otra historia muzo con el mismo creador. En la versión de Ocampo de 1988, reproducida por Villa Posse, Are forma a Fura y a Tena, Fura se va a la montaña con Zarbi, Tena mata al extranjero, a Fura y a sí mismo, y los dos esposos quedan convertidos en peñascos separados por el río Minero, mientras los gritos y las lágrimas de Fura se vuelven esmeraldas y mariposas. La sombra creadora explica el origen de toda la gente; Furatena, el de los cerros y las piedras del occidente de Boyacá.
+
+Ocampo recuerda en esas mismas páginas que Piedrahita habla de una cacica Furatena, dueña de las esmeraldas más finas de Muzo, a quien el zipa Saquezazipa quiso visitar con la comitiva más ostentosa de su reino: el nombre del mito aparece también en la historia de la conquista.`,
     sceneHorizontal:
       "orilla amplia del río Magdalena en el occidente de Boyacá, la enorme sombra antropomorfa de Are talla con gesto cuidadoso varias figuras humanas de madera mientras capas de bosque y agua rodean la escena",
     sceneVertical:
@@ -159,40 +241,66 @@ La concisión evita otro problema: convertir una noticia colonial fragmentaria e
 
   defineBoyacaMixtoResidualMyth({
     slug: "furatena",
-    title: "Fura y Tena: los peñones de Furatena",
+    fuentesAgotadas: "Fuera de Ocampo López, Izquierdo Gallo y Piedrahita, la cantera abierta del ciclo no trae otro registro: Galindo (Boyacá en la leyenda indígena, 1965), López Guevara (Leyendas indígenas) y Sarmiento de Quiñones (Leyendas de los Boches, 1939) no tienen texto abierto.",
+    sourceKeys: [
+      "compiladoraMitos1993",
+      {
+        key: "puebloBoyacense",
+        summary:
+          "Presenta a Furatena como leyenda muzo del occidente de Boyacá (p. 124).",
+        limitation:
+          "Mención breve dentro de un capítulo de síntesis.",
+      },
+      {
+        key: "rosarioFuratena",
+        summary:
+          "Estudio sobre Furatena con la cita de Simón que la llama «mujer encumbrada» y habla de su hijo y del adoratorio (pp. 588-595).",
+        limitation:
+          "Es historia de la cacica y del culto, no del mito de Fura y Tena.",
+      },
+      {
+        key: "eanFuratena",
+        summary:
+          "Recoge la «Leyenda de la Furatena» del occidente de Boyacá con Are, Fura y Tena de barro y Zarbi (§13.2, p. 55).",
+        limitation:
+          "Documento académico de síntesis; sigue a Ocampo.",
+      },
+      {
+        key: "piedrahitaBanrep",
+        summary:
+          "Nombra a la cacica Furatena, señora de las esmeraldas de Muzo, independiente de los reyes de Tunja y Bogotá.",
+        limitation:
+          "Es la cacica histórica de la crónica, no la pareja mítica.",
+      },
+    ],
+    title: "Furatena",
     excerpt:
       "Una versión muzo convierte a Fura, Tena y Zarbi en peñones, río, esmeraldas y mariposas; otras fuentes conservan desenlaces diferentes.",
     tags: ["esmeraldas", "traición", "tragedia", "transformación"],
-    mito: `En una versión contemporánea difundida en el occidente de Boyacá, Are creó a Fura y Tena con tierra de la región del Carare. Les enseñó a sembrar, fabricar loza, tejer y defenderse. También les concedió juventud duradera con una condición: debían conservar la fidelidad entre ellos. Si el pacto se rompía, aparecerían la vejez y la muerte.
+    mito: `Are hizo a Fura y a Tena, y de ellos dos vino la gente. Fueron los primeros padres. A los muzos les enseñaron a sembrar, a trabajar el barro y a pelear, y el pueblo creció entre montañas donde el río corre encajonado entre peñas.
 
-Durante mucho tiempo la pareja vivió sin conocer el deterioro. Un día llegó Zarbi, extranjero de ojos azules, en busca de una flor capaz de curar enfermedades y aliviar dolores. Fura conocía el territorio y decidió ayudarlo. Recorrieron montañas y quebradas durante varios días. En el camino se acercaron y quebraron el pacto establecido por Are.
+Un día llegó a esa tierra un hombre distinto de todos. Tenía los ojos azules y la barba rubia, y se llamaba Zarbi. Andaba buscando una planta escondida que daba la eterna juventud, y le hacía falta alguien que conociera los caminos del monte. Fura era hermosa y sabía seducir. Se fue con él a la montaña, y en la montaña le faltó a su marido.
 
-Cuando Fura regresó junto a Tena, el cambio se hizo visible. El rostro y el cuerpo comenzaron a envejecer. Tena comprendió que la condición había sido rota. En la versión transmitida por BOYAPAZ, se quitó la vida y Fura quedó obligada a sostener su cuerpo. Antes del desenlace, Tena convirtió a Zarbi en una gran roca. De ella brotó un torrente que pasó entre la pareja y se convirtió en río.
+Tena lo supo. El esposo ofendido mandó matar al forastero, y no se quedó en eso: le echó a Fura el cadáver de Zarbi y la obligó a cargarlo. Ella lo llevó a cuestas un día y otro, y otro más, hasta que el muerto empezó a pudrirse. Entonces Tena, desesperado, mató a Fura, y después se quitó la vida.
 
-Are transformó a Fura y Tena en los dos peñones que dominan el paisaje. La mujer quedó con el cuerpo de su compañero sobre las rodillas. Sus lágrimas descendieron hacia la tierra y se volvieron esmeraldas. Sus lamentos tomaron forma de mariposas de colores que todavía anuncian, dentro del relato, la presencia de las piedras verdes. Zarbi permaneció convertido en peña y su sangre dio origen al curso que separa las montañas.
+Los dos esposos quedaron convertidos en peñascos, y entre ellos corre el río que lleva el nombre de Zarbi, el mismo que hoy llaman Minero. De Fura quedó también el llanto. Sus gritos de dolor y sus lágrimas se volvieron esmeraldas, tantas que llenaron las cordilleras, y se volvieron mariposas de muchos colores que invadieron el aire: son las mariposas que todavía vuelan en Muzo. Itoco, el hijo de Fura y Tena, también se hizo peñasco, y en su roca quedó el filón más rico de piedras verdes.
 
-Algunas versiones llaman Itoco al río o al hijo surgido de la tragedia. Otras organizan de manera distinta las muertes y los cuerpos. Por eso esta narración se presenta como una versión local actual y no como libreto inmutable. El paisaje reúne motivos de amor, ruptura, duelo y transformación, pero no convierte la violencia en una costumbre del pueblo muzo.
+Aquellos cerros habían sido de los chibchas en tiempos remotos, hasta que los muzos, guerreros y belicosos, se los quitaron en sus entradas por la frontera. Aun así los muiscas no dejaron de ir a Furatena. Subían a adorar a los dos cerros en mucho secreto, porque si los muzos los sorprendían en el camino se los llevaban prisioneros y se los comían.`,
+    historia: `El texto viene de «Mitos colombianos», el libro que Javier Ocampo López publicó con El Áncora Editores en Bogotá en 1988; el apartado dedicado a los chibchas ocupa sus páginas 86 a 133. Eugenia Villa Posse lo reprodujo en el tercer tomo de «Mitos y leyendas de Colombia» (IADAP, Quito, 1993), sección 33, bajo el rótulo «Chibcha - Región Cundiboyacense», y allí «Furatena y las esmeraldas de Muzo» ocupa los folios 154 y 155, justo después de la cacica de Guatavita. La nota de la compiladora elogia el trabajo de investigación histórica del autor.
 
-Furatena también es un nombre histórico. Crónicas y ensayos mencionan una cacica llamada Furatena y describen un gran cerro como “mujer encumbrada”, acompañado por otro menor identificado como su hijo. Esas noticias no contienen necesariamente a Zarbi ni el pacto de juventud. La Fura de esta narración, la cacica de las crónicas y el topónimo de los peñones se relacionan en la memoria regional, pero no se funden en un solo personaje comprobado.`,
-    historia: `Las noticias más tempranas y el romance hoy difundido no son idénticos. Un pasaje de fray Pedro Simón, citado en la Revista del Colegio Mayor del Rosario, describe al norte de Muzo una gran peña llamada Furatena, interpretada como mujer encumbrada, y otra más pequeña considerada su hijo. También afirma que los muiscas peregrinaban allí como adoratorio después de haber sido expulsados del territorio por los muzo. Ese registro no narra a Fura como esposa de Tena ni introduce a Zarbi.
+Ocampo no da narrador, lugar de recolección ni fecha. Atribuye lo esencial a «las tradiciones de los indios muzos» y encierra la trama en un solo párrafo; lo demás es comentario suyo. Habla del prestigio universal de la esmeralda —cita el Ratnapariska hindú y recuerda a egipcios, hebreos y griegos—, compara las piedras «gotas de aceite» de Muzo con las de Rusia, Brasil o la India, describe la guerra de frontera entre muzos y muiscas y cierra con un pasaje de Lucas Fernández de Piedrahita sobre otra Furatena, una cacica dueña de las esmeraldas más finas, a quien el zipa Saquezazipa quiso ir a ver durante una tregua con el zaque de Tunja.
 
-Lucas Fernández de Piedrahita, cronista del siglo XVII, menciona además a una cacica Furatena dentro de la historia de Saquezazipa. La coincidencia del nombre ha favorecido mezclas posteriores, pero una líder histórica de la crónica no equivale automáticamente a la mujer convertida en montaña. La acuarela de Carmelo Fernández de 1850 documenta el paisaje y su importancia esmeraldera, no la factualidad de la tragedia.
+La mezcla que justifica el cajón está en el propio lugar. Fray Pedro Simón, en las «Noticias historiales», ya describía al norte de Muzo un cerro alto que los muiscas llamaban Furatena, «mujer encumbrada», y otro menor que decían su hijo; eran adoratorios muiscas en tierra que los muzos les habían quitado, y los devotos seguían yendo de noche. Ocampo recoge esa peregrinación. Un sitio sagrado de un pueblo, en territorio de otro, con un relato que el autor atribuye a los segundos y que la antología archiva bajo el nombre de los primeros: eso es lo que aquí se llama mixto. Hay además un forastero de ojos azules y barba rubia que busca la juventud eterna, figura que Ocampo no comenta.`,
+    versiones: `Las variantes discrepan en quién muere y por qué. En la de Ocampo (1988) Tena manda matar a Zarbi, obliga a Fura a cargar el cadáver hasta que se pudre, la mata y se suicida; aparecen Itoco, el hijo convertido en peñasco, y las mariposas nacidas del llanto.
 
-Javier Ocampo López publicó una versión amplia en 1997. BOYAPAZ difundió otra, atribuida en su página a Víctor Julio Mendieta Verges y fechada en 2013. Un trabajo de la Universidad EAN vuelve a contar la creación de la pareja con tierra y la juventud condicionada. Estas fuentes muestran una tradición regional activa, pero también una fuerte elaboración literaria y pedagógica.
+Un trabajo de grado de la Universidad EAN, «Galería Minas de Colombia» de Juan Manuel Losada Losada y Roberto Hernández López (2012), trae en su anexo 13.2, página 55, una «Leyenda de la Furatena» que dice venir de la transmisión oral. Allí Are modela en barro dos figuras pequeñas y las arroja al río sagrado Carare, donde cobran vida; les concede la juventud eterna a condición de que se sean fieles. Zarbi busca una flor, no una planta, Fura cede una noche y Tena, «según la Ley», se abre el pecho para morir junto a ella. Are, conmovido, los vuelve dos montañas; las lágrimas de Fura, iluminadas por el sol, se hacen esmeraldas, y Zarbi, convertido en roca, deja correr su sangre para que se interponga entre ellos. No hay Itoco ni mariposas.
 
-Un estudio antropológico sobre el río Minero recoge nombres como Furatena y Pitisoque, cerros encantados, guardianes y una mujer llamada Furatena. Su diversidad confirma que el territorio no conserva una sola secuencia. La revisión atribuye el ciclo a los muzo, distingue fuentes coloniales y contemporáneas, y mantiene la categoría Boyacá > Mixto únicamente porque el sitio aún no posee una comunidad Muzo.`,
-    versiones: `La versión de BOYAPAZ hace que Tena se quite la vida; Fura debe sostener su cuerpo y Zarbi se convierte en roca y río. Las lágrimas de Fura producen esmeraldas y sus lamentos, mariposas. Esta es la secuencia usada para el relato principal porque tiene atribución local explícita y conserva la relación entre los peñones y la minería regional.
-
-La compilación de Ocampo presenta un desenlace más violento: Tena mata a Zarbi, obliga a Fura a cargar el cadáver y después mata a Fura y a sí mismo. En esa redacción, los cuerpos y las montañas se distribuyen de otra manera. No se armoniza con BOYAPAZ cambiando silenciosamente quién muere primero. La discrepancia se expone como evidencia de transmisión y reelaboración.
-
-El ensayo de Suárez Forero ofrece otra historia: Fura es una mujer con un hijo y el ataque de guerreros transforma un lago y los cerros. Al mismo tiempo cita a Pedro Simón sobre Furatena y el cerro menor como madre e hijo. Los testimonios contemporáneos del río Minero conservan Furatena, Pitisoque y guardianes encantados sin repetir necesariamente el romance de Zarbi.
-
-La cacica Furatena de las crónicas forma una capa histórica separada. No hay base suficiente para decir que ella vivió los acontecimientos de Fura y Tena. Tampoco se conservan las digresiones de Ocampo sobre divinidades egipcias o mediterráneas: son comparaciones del autor, no episodios muzo.
-
-La ruta queda vinculada conceptualmente con La sombra creadora porque Are protagoniza ambos relatos. No se unifican: uno explica el origen colectivo mediante madera y agua; el otro convierte un conflicto de pareja en geografía esmeraldera.`,
+Eliécer Suárez Forero, en la Revista del Colegio Mayor de Nuestra Señora del Rosario de 1938, pone en boca de un guía indio una historia distinta: Fura es hija de un cacique de un pueblo lacustre; cuando los colimas la persiguen con su hijo, el lago se vacía, ella se vuelve el cerro grande y el niño el pequeño, «Tena (hombre) o Pitisoque». Ahí no hay Are ni Zarbi. El mismo autor copia a Simón: la peña mayor era la mujer y la menor su hijo.`,
     leccion:
-      "El paisaje guarda versiones distintas y ninguna justifica convertir el dolor en destino obligatorio.",
-    similitudes: `Iztaccíhuatl y Popocatépetl también son interpretados en una leyenda mexicana como una pareja trágica convertida en montañas. Comparten amor, muerte y explicación del relieve; no tienen a Are, Zarbi, un río de sangre, mariposas ni esmeraldas. La cacica de Guatavita, en versiones recogidas por compiladores colombianos, transforma una ruptura afectiva y una muerte en memoria ligada a una laguna y a ofrendas de oro. Furatena vincula la tragedia con peñones y piedras verdes, y además conserva versiones incompatibles sobre quién muere. Ambos paralelos son funcionales: no establecen parentesco entre muzo, muisca y pueblos de México.`,
+      "Un castigo que no conoce medida acaba cayendo también sobre quien lo impone.",
+    similitudes: `El paralelo más cercano está en la misma sección de Ocampo, dos páginas antes: la cacica de Guatavita. También allí una mujer falta a su esposo, el castigo convierte un paraje en lugar sagrado y los muiscas peregrinan a él con ofrendas, porque creían que la cacica seguía viva bajo el agua. Guatavita convierte la culpa en laguna y ofrenda de oro; Furatena, en peñascos y esmeraldas. En ambos casos el sitio de culto nace de un adulterio castigado.
+
+El segundo lo propone el propio Ocampo cuando cita el Ratnapariska, tratado indio de gemas: la esmeralda nació de la bilis del rey de los dānavas, y Vasuki, rey de las serpientes, la dejó caer dentro de una montaña al huir de sus enemigos. Las dos explicaciones sacan la piedra verde de un cuerpo herido y la guardan en la roca. Pero en la india la gema es botín robado, y en Muzo es el llanto de una mujer.`,
     sceneHorizontal:
       "los peñones de Fura y Tena sobre el río Minero al amanecer, con dos perfiles montañosos entrelazados, vetas verdes de esmeralda y mariposas de colores elevándose desde la vegetación",
     sceneVertical:

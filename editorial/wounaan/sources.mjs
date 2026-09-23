@@ -144,12 +144,146 @@ export const wounaanSources = {
     limitation:
       "Corresponde a un proceso Wounaan de Panamá sobre personas y aves; no registra Madre Ñame ni representa la transmisión específica de Puerto Pizario.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  colombiaColombia2016: source({
+    title: "Colombia artesanal: objetos rituales, barca de los espíritus",
+    author: "Artesanías de Colombia",
+    year: 2016,
+    type: "nota de gremio artesanal sobre objeto ritual",
+    url: "https://www.artesaniasdecolombia.com.co/PortalAC/Noticia/colombia-artesanal-objetos-rituales-barca-de-los-espiritus_8765",
+    summary:
+      "Describe la pieza que se percute en la ceremonia: tallada en madera de balso, con figuras protectoras llamadas páchaidáma y pintada con negro de jagua y rojo de achiote sobre el blanco de la madera.",
+    limitation:
+      "Habla del objeto de un especialista y de su aprendizaje mediante sueños, no de la rogativa colectiva liderada por mujeres; llega sin comunidad, sin río y sin año, y usa vocabulario emberá para un objeto wounaan.",
+  }),
+  salmoralNuevas1962: source({
+    title: "Nuevas observaciones sobre los waunana del Chocó",
+    author: "Manuel Lucena Salmoral",
+    year: 1962,
+    type: "etnografía",
+    url: "https://revistas.icanh.gov.co/index.php/rca/article/view/1677",
+    summary:
+      "Documenta que en 1962 un viaje a Noanamá, en el bajo San Juan, coincidió con una fiesta religiosa a la que habían acudido los waunana de la zona: el registro más antiguo localizable en abierto de estas reuniones ceremoniales.",
+    limitation:
+      "Otro lugar, otra cuenca y sesenta años de distancia respecto de la rogativa de Curiche; el propio autor califica sus notas de informales y de finalidad más lingüística que antropológica, y el facsímil es un escaneo sin capa de texto que no pudo leerse línea por línea.",
+  }),
+  guerreromedicina2016: source({
+    title: "La medicina Wounaan en el desplazamiento: entre el olvido y el recuerdo",
+    author: "Andrea González Guerrero",
+    year: 2016,
+    type: "artículo de revista arbitrada",
+    url: "https://revistas.udistrital.edu.co/index.php/cpaz/article/view/10208",
+    summary:
+      "Explica el costo del desplazamiento para la práctica ritual y medicinal wounaan, que es exactamente lo que la memoria de Curiche describe al perder la casa ceremonial, los instrumentos y los materiales para fabricar el carrizo.",
+    limitation:
+      "Su trabajo de campo es con familias desplazadas a la ciudad: no describe la rogativa, ni la barca percutida, ni los cuatro flautistas.",
+  }),
+  rojasescalera1986: source({
+    title: "La escalera de cristal: términos y conceptos cosmológicos de los indígenas emberá",
+    author: "Mauricio Pardo Rojas",
+    year: 1986,
+    type: "artículo de revista arbitrada",
+    url: "https://revistas.unal.edu.co/index.php/maguare/article/view/21-46",
+    summary:
+      "Permite medir la diferencia estructural: entre los emberá, las figuras creadoras quedan confinadas al tiempo del origen, no reciben reverencia ni se les piden favores, y la comunicación pasa por los espíritus del mundo intermedio; la rogativa wounaan, en cambio, se dirige a Ewandam.",
+    limitation:
+      "Fuente emberá, pueblo y lengua distintos del wounaan, con campo en el alto Baudó entre 1980 y 1983. No describe ninguna rogativa wounaan.",
+  }),
+  uribeplata2001: source({
+    title: "El oro y la plata entre los embera y waunaan",
+    author: "Luis Guillermo Vasco Uribe",
+    year: 2001,
+    type: "artículo de revista arbitrada",
+    url: "https://publicaciones.banrepcultural.org/index.php/bmo/article/download/4861/5107",
+    summary:
+      "Registra la pintura con jagua y el adorno con chaquiras como preparación de ceremonias en el Chocó, que Esmeralda Carpio también menciona al recordar cómo se entraba a la rogativa, con guayuco los hombres y paruma blanca las mujeres.",
+    limitation:
+      "Trata a embera y waunaan en conjunto y la escena ceremonial que detalla, observada en el río Majecito, es emberá y panameña.",
+  }),
+  colombiaorigen: source({
+    title: "El origen de la palma de weguer",
+    author: "Celso Piña (narrador); Artesanías de Colombia",
+    type: "nota de gremio artesanal con relato de narrador identificado",
+    url: "https://www.artesaniasdecolombia.com.co/PortalAC/Noticia/el-origen-de-la-palma-de-weguer_11850",
+    summary:
+      "Publica el relato de la creación del weguer atribuido a Celso Piña, docente de la Escuela Centro Indígena La Unión de Pichimá, en el Litoral del San Juan: el plátano de Dios que libraba del trabajo, el viaje de Ewandam en busca de ropa, la llegada de Dosat con machete y hacha, la prueba de salar el mar —un barco entero de sal frente a una sola cucharada— y las parejas de plantas contrastadas, plátano y platanillo, caña de azúcar y caña brava, chontaduro y weguer.",
+    limitation:
+      "Es una nota de gremio artesanal y no una etnografía: no dice dónde ni cuándo narró Celso Piña, traduce a Dosat directamente como Satanás, coloca la prueba de la sal antes de la competencia de las plantas y presenta la palma dentro de un argumento sobre el oficio. La grafía del apellido difiere de la que usaba el archivo de este sitio, que escribía Celso Peña.",
+  }),
+  bernalBotswanan2013: source({
+    title: "Botswanan palm basketry among the Wounaan of western Colombia: lessons from an intercontinental technology transfer",
+    author: "Bernal, Galeano, García y Palacios",
+    year: 2013,
+    type: "artículo de revista arbitrada",
+    url: "https://bioone.org/journals/Tropical-Conservation-Science/volume-6/issue-2/194008291300600204/Botswanan-palm-basketry-among-the-Wunaan-of-western-Colombia/10.1177/194008291300600204.full",
+    summary:
+      "Fecha el oficio que el relato parece explicar: antes de los años setenta los Wounaan hacían cestos enrollados simples con esa misma fibra, oscuros o del color natural, con poca o ninguna decoración y a menudo como subproducto de las palmas tumbadas para construir casas; la puntada apretada llegó a Pichimá cuando una misionera española llamada Rosa llevó muestras del delta del Okavango tejidas por los Ba Yei y los HaMbukushu, los Wounaan la adoptaron con sus propios diseños y el auge comercial del cántaro es de los ochenta y noventa.",
+    limitation:
+      "Es un estudio de etnobotánica y conservación centrado en la técnica, la palma y el mercado: no recoge el relato de Ewandam y Dosat, no nombra tejedoras y no discute el sentido ritual de la fibra.",
+  }),
+  simaoAspectos2016: source({
+    title: "Aspectos da dialogia do mito Madre Ñame na cultura indígena wounaan-nonam",
+    author: "Lívia Mathias Simão y Hernán Sánchez Ríos",
+    year: 2016,
+    type: "artículo de revista arbitrada",
+    url: "https://www.scielo.br/j/pusp/a/MJz6mwWyYMmqJjyzHM9LhBF/?lang=es",
+    summary:
+      "Permite el contraste interno entre dos llegadas de planta: el ñame también aparece después de creada la gente, pero por una sepultura río abajo y no por una respuesta fallida en una competencia entre hacedores.",
+    limitation:
+      "Es un artículo sobre otro mito y otra comunidad del bajo San Juan, y su texto atravesó dos traducciones, del woun meu al español y de ahí al portugués.",
+  }),
+  upuaMorfosintaxis2012: source({
+    title: "Morfosintaxis del waunana a partir de un texto tradicional",
+    author: "José Manuel Murillo Miranda; historia tradicional narrada por Diego Upúa",
+    year: 2012,
+    type: "descripción lingüística con texto tradicional",
+    url: "https://dialnet.unirioja.es/descarga/articulo/5476357.pdf",
+    summary:
+      "Permite tratar las grafías divergentes del nombre del creador como variantes de escritura y no como personajes distintos: describe el woun meu como una sola lengua hablada en el Chocó y en el Darién, cuya variación mayor corre entre tierras altas (dusĩ pien) y tierras bajas (du charpien) y no entre países.",
+    limitation:
+      "El corpus analizado es una historia tradicional narrada por Diego Upúa en el Darién panameño, ajena a la cosmogonía, y el trabajo es gramatical: no discute ninguna versión de la creación.",
+  }),
+  frenchResena2021: source({
+    title: "Reseña de «Crafting Wounaan Landscapes: Identity, Art, and Environmental Governance in Panama's Darién», de Julie Velásquez Runk",
+    author: "Katherine E. French",
+    year: 2021,
+    type: "reseña académica",
+    url: "https://www.ojs.ethnobiology.org/index.php/ebl/article/download/1727/901?inline=1",
+    summary:
+      "Resume cómo la etnografía de Velásquez Runk describe el mundo en que despierta la gente de barro: un paisaje cargado de espíritus que habitan ecosistemas y objetos, con los ríos como eje de los intercambios sociales y como motivo recurrente del arte wounaan.",
+    limitation:
+      "Es una reseña y no la obra reseñada; el libro trata de los Wounaan del Darién panameño, vecinos legítimos pero de otro país, y su edición española del ICANH de 2020 no está disponible en descarga libre.",
+  }),
 };
 
-export function pickWounaanSources(...keys) {
-  return [...new Set(keys)].map((key) => {
+/**
+ * Acepta una clave suelta o una clave con resumen y límite propios del mito
+ * (`{ key, summary, limitation }`). La ficha bibliográfica la fija el pool; lo
+ * que cambia por mito es qué dice esa obra sobre ese relato.
+ */
+export function pickWounaanSources(...entries) {
+  const entradas = entries;
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = wounaanSources[key];
-    if (!selected) throw new Error(`Fuente Wounaan desconocida: ${key}`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`Fuente Wounaan desconocida: ${visto}`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

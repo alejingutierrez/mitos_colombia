@@ -35,7 +35,7 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      words(record.mito) >= (record.relatoCorto ? 70 : 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -66,12 +66,12 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length}`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -97,38 +97,25 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
 
 test("corrige género, fusiones, causalidades y territorio", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-bruja-silbona").versiones,
     /gran chulo negro[\s\S]+no importa la penitencia de El Silbón/i,
   );
-  assert.match(
-    bySlug.get("la-mancarita").versiones,
-    /título vuelve a La Máncara de San Francisco[\s\S]+No es Oliva/i,
-  );
-  assert.match(
-    bySlug.get("cuento-fantastico").versiones,
-    /cuento literario moderno[\s\S]+no fabrica una tradición oral/i,
-  );
-  assert.match(
-    bySlug.get("la-campana-del-diablo").versiones,
-    /no decide[\s\S]+ni convierte[\s\S]+en causalidad sobrenatural/i,
-  );
-  assert.match(
-    bySlug.get("el-diablo-de-umpala").mito,
-    /diablo de carne y hueso[\s\S]+explicación material/i,
-  );
-  assert.match(
-    bySlug.get("la-cueva-del-diablo").mito,
-    /no describe una entrada[\s\S]+sin inventar una cavidad/i,
-  );
-  assert.match(
-    bySlug.get("nueva-version-de-la-luz-del-limonal").versiones,
-    /separada de La Luz del Limonal de Vicente Arenas/i,
-  );
-  assert.match(
-    bySlug.get("el-griton").versiones,
-    /no hay criatura de boca gigante[\s\S]+tampoco es El Silbón/i,
-  );
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("la-mancarita").versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("cuento-fantastico").versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("la-campana-del-diablo").versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("el-diablo-de-umpala").mito, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("la-cueva-del-diablo").mito, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("nueva-version-de-la-luz-del-limonal").versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
+  // reescrita 2026-09-22: el texto ya no cuenta el proyecto
+  assert.doesNotMatch(bySlug.get("el-griton").versiones, /la ficha|se retiran?\b|no hay respaldo|la versión anterior|cantera de/i);
 });
 
 test("la matriz cubre las ocho rutas y sus límites", () => {

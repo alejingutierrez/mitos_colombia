@@ -164,6 +164,74 @@ export const antioquiaMixtoResidualSources = {
     limitation:
       "La definición no describe al Mareco, su viento, los dulces ni su localización antioqueña y no prueba un origen compartido.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (1.ª ed. Imprenta Departamental de Caldas, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Describe el Coco y el Chucho, «Mito de la Desobediencia», y los Rescoldaos, diablillos que se espantan con agua bendita, los parientes que nombra Similitudes.",
+    limitation:
+      "No nombra al Mareco. Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+  }),
+  carrasquillamarquesa1928: source({
+    title: "La marquesa de Yolombó",
+    author: "Tomás Carrasquilla",
+    year: 1928,
+    type: "novela (edición digital de la Biblioteca Básica de Cultura Colombiana, Biblioteca Nacional)",
+    url: "https://siise.bibliotecanacional.gov.co/BBCC/Documents/View/208",
+    summary:
+      "Testimonio literario más antiguo: el Patetarro como gigantón de una pierna con el muslo en un tarro de guadua, que derrama líquidos pestilentes en las sementeras y teme las calaveras de vaca, en la corte selvática de genios africanos e indígenas.",
+    limitation:
+      "Es novela (1926-1928), no registro oral.",
+  }),
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Useche Toledo, González González, Guzmán Ruiz y Tunarrosa Echeverría (SENA)",
+    year: 2022,
+    type: "libro de memoria oral (SENA, La Dorada)",
+    url: "https://repositorio.sena.edu.co/bitstream/handle/11404/8024/Remembranzas_de_mis_abuelos.pdf?sequence=4&isAllowed=y",
+    summary:
+      "Recoge el Patetarro en Samaná, Pensilvania, Manzanares y Marquetalia con tres orígenes: la guerra de los Mil Días, la pelea a machete y el pie podrido en el tarro (p. 70).",
+    limitation:
+      "Recopilación comunitaria de 2022.",
+  }),
+  patrimonioPropuesta2019: source({
+    title: "Propuesta de conservación del Tótem Mítico de la Selva",
+    author: "Proyecto Patrimonio, Universidad Nacional de Colombia sede Medellín",
+    year: 2019,
+    type: "informe técnico",
+    url: "https://www.proyectopatrimonio.info/wp-content/uploads/2020/05/15-Informe-Totem-Mitico.pdf",
+    summary:
+      "Informe de conservación del Tótem Mítico de la Selva: Pedro Nel Gómez talló «La Patetarro» en 1968 y 1972-1973.",
+    limitation:
+      "Recepción artística; no narra.",
+  }),
+  tiempoMedellin1990: source({
+    title: "En Medellín: desfile de danzas, mitos y leyendas. Una noche a la colombiana",
+    author: "El Tiempo",
+    year: 1990,
+    type: "prensa (6 de diciembre de 1990)",
+    url: "https://www.eltiempo.com/archivo/documento/MAM-30929",
+    summary:
+      "Cuenta al Patetarro entre las comparsas de un desfile de mitos en Medellín en 1990.",
+    limitation:
+      "Prensa de época; sólo fecha su circulación pública.",
+  }),
+  moralesFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales",
+    year: 2013,
+    type: "libro (reedición del artículo de 1962)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "Registra la Patasola del Tolima, mujer que se vuelve perra o vaca y salta sobre una pata (pp. 67-69), el ser de una pierna que compara Similitudes.",
+    limitation:
+      "Es otro ser, del Tolima.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -189,7 +257,29 @@ const sourceKeysBySlug = {
   ],
 };
 
-export function pickAntioquiaMixtoResidualSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickAntioquiaMixtoResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickAntioquiaMixtoResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = antioquiaMixtoResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickAntioquiaMixtoResidualSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

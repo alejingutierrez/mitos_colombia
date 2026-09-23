@@ -47,10 +47,63 @@ test("los catorce expedientes Andoque cumplen la metodología editorial", () => 
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
+    // Antes las catorce fichas citaban exactamente las mismas siete URLs, así
+    // que bastaba con contar siete. Lo que se comprueba ahora es lo que aquella
+    // cuenta escondía: que cada ficha tiene fuentes suficientes, de dominios
+    // distintos y sin repetir.
+    const fuentes = [...record.keySources, ...record.sources];
+    assert.ok(fuentes.length >= 5, `${record.slug}: ${fuentes.length} fuentes`);
+    const urls = fuentes.map(({ url }) => url);
     assert.equal(new Set(urls).size, urls.length);
+    const dominios = new Set(urls.map((url) => new URL(url).host));
+    assert.ok(dominios.size >= 3, `${record.slug}: ${dominios.size} dominios`);
   }
+});
+
+test("ninguna ficha se apoya en una portada de catálogo ni en una URL caída", () => {
+  // Once de las catorce declaraban como fuente narrativa la portada de Google
+  // Books del libro de 1984, y las catorce citaban una página del IGAC que
+  // responde 404.
+  const prohibidas = [
+    /books\.google\./i,
+    /openlibrary\.org/i,
+    /redcol\.minciencias\.gov\.co/i,
+    /expediciones\.igac\.gov\.co/i,
+  ];
+  for (const record of records) {
+    for (const { url } of [...record.keySources, ...record.sources]) {
+      for (const patron of prohibidas) {
+        assert.ok(!patron.test(url), `${record.slug} cita ${url}`);
+      }
+    }
+  }
+});
+
+test("el reparto de fuentes no es el mismo para toda la comunidad", () => {
+  const juegos = new Set(
+    records.map((record) =>
+      [...record.keySources, ...record.sources]
+        .map(({ url }) => url)
+        .sort()
+        .join("|"),
+    ),
+  );
+  assert.ok(juegos.size >= 8, `sólo ${juegos.size} repartos distintos`);
+});
+
+test("las fichas nombran a quienes narraron el corpus", () => {
+  // Ninguna de las catorce nombraba a un narrador. El corpus lo contaron el
+  // capitán Yiñeko, Plumón-de-Fiebre, y su hermano Yiñefoque,
+  // Plumón-de-Gavilán, y lo tradujo Fisi, el hijo del capitán.
+  const conNarrador = records.filter((record) =>
+    /Yi[ñn]eko|Yi[ñn]efoque|Yi[ñn]ejoke|Ji[ñn]eke|F[ií]si\b/.test(
+      `${record.historia}\n${record.versiones}`,
+    ),
+  );
+  assert.ok(
+    conNarrador.length >= 12,
+    `sólo ${conNarrador.length} de ${records.length} nombran a sus narradores`,
+  );
 });
 
 test("incorpora tres ciclos primarios y distingue los dos retornos", () => {

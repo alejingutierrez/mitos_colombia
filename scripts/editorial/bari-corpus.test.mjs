@@ -105,12 +105,24 @@ test("corrige el mito heredado y sitúa los cinco núcleos añadidos", () => {
     ({ slug }) => slug === "caminar-liviano-hacia-el-mas-alla",
   );
 
-  assert.match(bejuco.mito, /unirse íntimamente/i);
-  assert.match(bejuco.mito, /gallinazo|zamuro/i);
+  // «Unirse íntimamente» era la fórmula de la versión literaria heredada. Lo
+  // que la ficha tiene que sostener no es esa frase, sino el motivo: la Luna
+  // es Chibáig, mujer salida de las piñas, y lo que se corta es el bejuco que
+  // unía cielo y tierra.
+  assert.match(bejuco.mito, /Chibáig/);
+  assert.match(bejuco.mito, /bejuco/i);
+  assert.match(bejuco.mito, /gallinazo|zamuro|bachirugdú|bagchíba/i);
   assert.doesNotMatch(bejuco.mito, /palacio de plata|señora de la Sabiduría/i);
   assert.match(sabaseba.mito, /piñas/);
   assert.match(tree.mito, /Dabogyi|Iquibocyi/);
-  assert.match(sibabio.historia, /vocabulario racial|problema racial/i);
+  // La Historia de Sibabió ya no comenta el vocabulario racializado de la
+  // fuente vieja: eso se dice en el `limitation` de la obra, que no se pinta.
+  // Lo que la página sí tiene que traer es de dónde salió el relato —Castillo
+  // lo grabó en cinta en Saimadoyi y Bokshí— y que «sibabió» no es un nombre
+  // propio sino la palabra para la viejecita.
+  assert.match(sibabio.historia, /Castillo/);
+  assert.match(sibabio.historia, /Saimadoyi|Bokshí/);
+  assert.match(sibabio.versiones, /viejecita/i);
   assert.match(lights.mito, /Ñandóu/);
   assert.match(lights.mito, /Chibáig/);
   assert.match(afterlife.historia, /venezolano/i);

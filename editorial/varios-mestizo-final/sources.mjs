@@ -255,6 +255,131 @@ export const variosMestizoFinalSources = {
     limitation:
       "Es una tradición cultural distinta y transfronteriza; no debe absorberse en el bus mestizo de carretera ni en la creepypasta bogotana.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  pastoEspantos2024: source({
+    title: "Espantos que todavía asustan en las semanas santas",
+    author: "Diario del Sur (Pasto), sin firma",
+    year: 2024,
+    type: "prensa regional",
+    url: "https://www.diariodelsur.com.co/espantos-que-todavia-asustan-en-las-semanas-santas/",
+    summary:
+      "El Judío Errante del Jueves Santo en Pasto: el hombre que reza de espaldas a la pared y pide perdón porque ya no puede caminar.",
+    limitation:
+      "Nota reciente con testigos de nombre protegido: fecha la circulación, no la antigüedad.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo y Universidad Autónoma de Colombia, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Ficha del Judío Errante (pp. 51-52).",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: sus relatos son composición de autor.",
+  }),
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (Fulbright-Hays 1997), con las páginas «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "unidad didáctica con páginas web impresas",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Viudita de Pasto, contada por Anita: la mujer emperifollada que hace ruido con las enaguas y asusta a los borrachos.",
+    limitation:
+      "Divulgación infantil de pocas frases.",
+  }),
+  bravoEstrategia2019: source({
+    title: "Estrategia de narrativa transmedia para la rememoración de relatos de la tradición oral del municipio de Túquerres",
+    author: "Vanessa Erazo Bravo y Diana Isabel Martínez Cerón (Universidad de Nariño)",
+    year: 2019,
+    type: "trabajo de grado con trabajo de campo",
+    url: "https://sired.udenar.edu.co/18217/1/210263.pdf",
+    summary:
+      "§6.3.9.6 «La Viuda» de Túquerres, anciana de negro que anuncia la desgracia; la encuesta la pone entre los personajes más recordados.",
+    limitation:
+      "La descripción cita un repertorio web (Esquivel 2018).",
+  }),
+  polarMitos2014: source({
+    title: "Mitos y leyendas del estado Portuguesa, cap. 28: La Sayona",
+    author: "Carmen Pérez Montero (Fundación Empresas Polar)",
+    year: 2014,
+    type: "libro de tradición oral venezolana",
+    url: "https://bibliofep.fundacionempresaspolar.org/media/1377961/mitos_portuguesa_c_28_la-sayona.pdf",
+    summary:
+      "La Sayona, mujer de luto que castiga a los infieles mostrándoles un rostro de muerta: paralelo de Similitudes.",
+    limitation:
+      "Tradición venezolana.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro de folclor regional",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "María la Larga, la mujer de la noche que se alarga ante los trasnochadores: paralelo de Similitudes.",
+    limitation:
+      "Otro personaje.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  tiempoTransMilenio2023: source({
+    title: "G66 de TransMilenio: mito del misterioso bus fantasma en Bogotá",
+    author: "Valeria Castro Valencia (El Tiempo)",
+    year: 2023,
+    type: "prensa",
+    url: "https://www.eltiempo.com/cultura/gente/g66-de-transmilenio-mito-del-misterioso-bus-fantasma-en-bogota-747128",
+    summary:
+      "La leyenda de la ruta G66: bus morado que pasa entre las dos y las tres de la mañana; quien sube desaparece. Circula desde 2014-2017 en YouTube y TikTok.",
+    limitation:
+      "Leyenda digital bogotana distinta del bus de carretera de 2004; la nota reúne testimonios de redes, sin informantes.",
+  }),
+  semanaRuta2023: source({
+    title: "Ruta G66: ¿cuál es el origen de la leyenda urbana de TransMilenio? Esta es la historia del bus fantasma",
+    author: "Redacción Semana",
+    year: 2023,
+    type: "prensa",
+    url: "https://www.semana.com/nacion/bogota/articulo/ruta-g66-cual-es-el-origen-de-la-leyenda-urbana-de-transmilenio-esta-es-la-historia-del-bus-fantasma/202312/",
+    summary:
+      "Dos variantes del G66 (la pareja que se separa en el centro y el grupo de amigos) y la parada en la avenida Jiménez antes de perderse en la niebla.",
+    limitation:
+      "Trata otra leyenda con el mismo nombre genérico; prensa de divulgación sin aparato.",
+  }),
+  republicamirada2016: source({
+    title: "Una mirada a la tradición oral del Pacífico",
+    author: "Alfredo Vanín Romero (Banco de la República)",
+    year: 2016,
+    type: "folleto de antología sonora",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll18/id/330/download",
+    summary:
+      "María Raquel Riascos (López de Micay) recuerda «la del Maravelí, un barco de demonios»: el vehículo de condenados que sirve de paralelo en Similitudes.",
+    limitation:
+      "Trata el motivo del vehículo maldito en el mar, no este bus; el relato completo está en la grabación.",
+  }),
+  valleAnalisis2015: source({
+    title: "Análisis del entorno de una organización del sector portuario de Buenaventura",
+    author: "Oviedo Arroyo (Universidad del Valle)",
+    year: 2015,
+    type: "trabajo de grado",
+    url: "https://bibliotecadigital.univalle.edu.co/server/api/core/bitstreams/0a2e9862-89eb-4777-bc1b-77d86f83950b/content",
+    summary:
+      "«El Barco Fantasma» (Maravelly) de Buenaventura, con su tripulación de marinos endeudados con el diablo: la tripulación condenada que el bus replica en tierra.",
+    limitation:
+      "Trata el barco, no el bus; copia una página web sobre Buenaventura (nota 32).",
+  }),
+  gutenbergPhantom1839: source({
+    title: "The Phantom Ship",
+    author: "Frederick Marryat (Project Gutenberg)",
+    year: 1839,
+    type: "novela",
+    url: "https://www.gutenberg.org/ebooks/12954",
+    summary:
+      "La novela del Holandés Errante: el buque condenado a no llegar nunca a puerto hasta que alguien rompa la maldición, paralelo europeo de Similitudes.",
+    limitation:
+      "Ficción europea sobre el motivo; no trata ningún relato colombiano.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -290,7 +415,30 @@ const sourceKeysBySlug = {
   ],
 };
 
-export function pickVariosMestizoFinalSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickVariosMestizoFinalSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickVariosMestizoFinalSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = variosMestizoFinalSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      key,
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickVariosMestizoFinalSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene selección de fuentes.`);
   return keys.map((key) => {

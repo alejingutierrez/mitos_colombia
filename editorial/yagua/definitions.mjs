@@ -6,46 +6,96 @@ import {
 const records = [
   defineYaguaMyth({
     slug: "yagua",
-    title: "Ndanu, Mêna y el árbol del agua",
+    fuentesAgotadas: "El relato de los mellizos y la lupuna tiene dos registros de autor, Chaumeil (Amazonía Peruana, 1978) y Powlison (La mitología yagua, SIL), ya citados. Se buscó en la ONIC (sitio rehecho, sin perfil), el catálogo del Graduate Institute y ALICIA/Concytec (fichas de catálogo del mismo Powlison), la Enciclopedia Banrep (no nombra a los yagua) y ResearchGate (vetado): no hay tercera versión con texto.",
+    sourceKeys: [
+      {
+        key: "chaumeil1978",
+        summary:
+          "Publica los dos mitos que esta ficha encadena, grabados en lengua yagua y traducidos con intérprete: la matanza, la abuela que recoge al niño y a la placenta, el pífano arrebatado al padre muerto, la creación de los clanes pisando árboles y animales, la fiesta de cinco días y la venganza; y después el abuelo krora que raciona el agua, el picaflor que descubre la llave del árbol, los alacranes que le hacen soltar el bejuco y la caída de la lupuna convertida en el Amazonas, sus quebradas y sus peces.",
+        limitation:
+          "Registro peruano del río Loreto Yacu, traducido del francés al castellano; sólo imprime la inicial del nombre del narrador principal y conserva rótulos coloniales de la antropología de su época.",
+      },
+      {
+        key: "powlison1993",
+        summary:
+          "Traduce entera la quinta de diecisiete versiones transcritas del ciclo de los Mellizos, narrada por Laureano Mozombite en Yarinacocha en febrero de 1960, con los siete episodios que van del origen de los mellizos a las canciones de la Gran Fiesta, incluido el episodio del agua acaparada por el abuelo Caronu. Aporta además la comparación entre narradores sobre quién transforma y la síntesis de cuarenta incidentes del mito sudamericano de mellizos que sostiene Similitudes.",
+        limitation:
+          "Trabajo hecho desde un proyecto lingüístico misionero; los resúmenes que encabezan cada episodio son composiciones del autor a partir de varias versiones y nadie los narró así. El PDF de SIL no se sirve directamente y hubo que leer la copia archivada del mismo archivo.",
+      },
+      {
+        key: "minCulturaColombia",
+        summary:
+          "Es el único registro colombiano localizado que nombra este relato: dice que el mito de los mellizos, el de la luna y el sol y el del jaguar y la tortuga siguen un mismo esquema de masacre, venganza y victoria. Recoge además la otra cuenta de origen, la de Nawanchi y el primer Ñihamwo llamado Há, agua, y sitúa a los yagua en los resguardos de Leticia y Puerto Nariño.",
+        limitation:
+          "Resume materiales secundarios y comunitarios sin publicar las narraciones; su cuenta de Nawanchi y Há es una versión distinta que no se fundió con este ciclo.",
+      },
+      {
+        key: "bdpi",
+        summary:
+          "Fija la vecindad que el relato declara: los yagua se autodenominan nihamwo, hablan la única lengua viva de la familia peba-yagua y tienen presencia tradicional en los ríos Putumayo, Ampiyacu y Amazonas, en la frontera con Colombia, que es exactamente el área donde se grabaron las dos versiones usadas.",
+        limitation:
+          "Es una síntesis administrativa actualizable, sin contenido narrativo: no aporta episodios, nombres de héroes ni variantes.",
+      },
+      "acevedoCultura2011",
+      {
+        key: "ramos2021",
+        summary:
+          "Registra el desequilibrio ecolingüístico de la comunidad yagua de La Libertad y la escasez de datos lingüísticos y etnográficos colombianos, que es la razón material de que el relato se apoye en registros peruanos de 1960 y 1976.",
+        limitation:
+          "Estudia la vitalidad de la lengua, no la narrativa; es un trabajo de grado y no publica relatos.",
+      },
+    ],
+    title: "Los mellizos y el árbol del agua",
     excerpt:
       "Dos mellizos nacen después de una matanza, reúnen a los clanes y derriban el árbol que guardaba el agua del mundo.",
     tags: ["hermanos", "agua", "origen", "transformación"],
-    mito: `La abuela había ido temprano a la chacra. Desde allí oyó los tambores de la casa comunal y supo que la gente bebía mientras esperaba el regreso de una expedición. Después, el sonido se interrumpió. Al volver encontró la casa destruida y a su familia muerta.
+    mito: `La abuela se había ido temprano a la chacra a sembrar palos de yuca. Desde allí oyó los tambores de la casa, donde los suyos tomaban masato esperando a los que habían salido al monte. De pronto el tambor paró y no se oyó nada más. Cuando volvió por la tarde, la casa estaba humeando: habían llegado los enemigos y habían matado a todos.
 
-Buscó a su hija, que estaba a punto de dar a luz. Cerca de un pequeño depósito de agua escuchó el llanto de un niño. Lo recogió, le cortó el cordón y lo llevó a su refugio. Cuando se alejaba oyó un segundo llanto: la placenta se había convertido en otro niño. La abuela los alimentó y los dos crecieron en pocos días.
+Buscó a su hija, que estaba por dar a luz. Junto al pozo oyó llorar. Allí estaba su hija muerta; le abrió el vientre y sacó un niño, lo lavó, le cortó el ombligo y se lo llevó al tambo. Cuando se alejaba oyó otro llanto y volvió: la placenta se había vuelto otro niño. A los dos días ya se sentaban; a los tres, caminaban; a la semana hablaban; a los cinco días eran casi del tamaño de un hombre. Preguntaron de qué habían muerto su padre y su madre, y la abuela les contó.
 
-Al conocer la muerte de sus padres, los hermanos regresaron al lugar de la casa. Allí vieron bajar a los espíritus de los muertos, que bailaban y tocaban flautas cuyo sonido hacía caer a quien lo escuchaba. Los mellizos se escondieron, soportaron varias veces aquel estremecimiento y lograron conservar una flauta. Con ella prepararían la respuesta a la matanza.
+Empezó a tronar y a llover fuerte. Entre el trueno bajaban a seguir la fiesta los muertos, y el padre soplaba un pífano cuyo sonido tumbaba al que lo oyera. Los mellizos se escondieron en la chapana y aguantaron el estremecimiento. Al tercer día se acercaron despacio y forcejearon, el mayor con su padre y el menor con su madre. Los pífanos se pusieron calientes. Sólo el mayor aguantó y se quedó con uno. Probaron el sonido con la abuela hasta que ella misma se acostumbró a no caerse.
 
-Pidieron a la abuela que hiciera masato para una gran reunión. Ella no entendía quién podría acudir, porque estaban solos. Ndanu y Mêna tocaron o pisaron objetos relacionados con los nombres de los clanes, y de ellos surgió gente. La casa creció, llegaron mujeres, hombres y niños, y la fiesta duró hasta que todos pudieron resistir la flauta. Después partieron juntos y vengaron a los muertos.
+Le pidieron que hiciera masato, cinco tinajas. La abuela preguntó para quién, si estaban solos. Ellos dijeron que lo hiciera nomás. El menor salió a invitar y volvió diciendo que no había nadie. Entonces fue el mayor, pisó un palo y lo llamó por su nombre, y así fue llamando a la gente apellido por apellido: los del palo grueso, los del ayahuasca, los de la lupuna, los del cedro, los de la soga, los del coto, los del guacamayo, los del tucán. Vinieron todos. Cantaron el canto del padre finado y la casa se agrandó. La fiesta duró cinco días y a cada rato soplaban el pífano, hasta que la gente aguantó de pie. Después salieron y vengaron a sus muertos.
 
-Más adelante apareció otra necesidad. El abuelo Krora guardaba el agua dentro de una lupuna gigantesca y entregaba a sus nietos apenas una vasija cada día. Mêna se volvió picaflor para seguirlo y descubrió el lugar. Los hermanos llamaron a pájaros carpinteros y animales roedores para derribar el tronco. Cada noche, sin embargo, Krora devolvía las astillas a su sitio y el árbol amanecía entero.
+Quedaba el agua. El abuelo la repartía en tinajas, un poco cada día, y decía que sólo juntaba la de lluvia. Los mellizos se cansaron de cargar. El mayor mandó al menor que se volviera picaflor y lo siguiera. El abuelo abrió una llave en un árbol enorme, se paró debajo del chorro y se bañó; el picaflor se bañó también y el viejo lo espantó con un palo.
 
-Los mellizos descubrieron que el abuelo sostenía con el pie una atadura ligada a la copa. Mêna tomó forma de alacrán y lo picó. La primera vez el árbol solo se inclinó; la segunda, Krora levantó el pie y soltó la soga. La lupuna cayó con un estruendo.
+Fueron a avisarle que iban a tumbar ese árbol y él dijo que lo tumbaran, que no estaba prohibido. Invitaron a los pájaros carpinteros, a las ardillas, a los añujes y a todos los que roen. Cortaron hasta el corazón del tronco y se hizo tarde. Al otro día el árbol amanecía entero: el abuelo había vuelto a poner las astillas en su sitio. Mandaron otra vez al menor, y volvió diciendo que el viejo sostenía con el pie un bejuco amarrado a la copa y que el árbol sólo caería si un alacrán lo picaba en el dedo pequeño. Se volvió alacrán y lo picó; el árbol sonó y quedó inclinado. Se volvió alacrán colorado y lo picó otra vez; el viejo soltó el pie y el árbol cayó.
 
-El agua contenida en el tronco se extendió como el Amazonas. Las ramas abrieron sus afluentes. Las astillas y las hojas se convirtieron en peces y tortugas de agua. Los hermanos reanimaron al abuelo y explicaron que habían derribado el árbol para que la gente futura no dependiera de una sola vasija.
+El tronco se hizo el río grande y las ramas, sus quebradas. Las astillas y las hojas se volvieron peces, y los gusanos del árbol se fueron remando en canoas hechas de su corteza, convertidos en gente de todas clases. Los mellizos soplaron al abuelo y lo levantaron. Él les reclamó, y ellos le contestaron que lo habían tumbado para que tuviera qué beber la gente que venía detrás.`,
+    historia: `Los dos registros que sostienen este relato son peruanos y llevan nombre de narrador.
 
-Krora aceptó lo que ya no podía deshacerse. Desde entonces el río siguió la forma del árbol caído y sus aguas dejaron alimento y camino para quienes habitarían sus orillas.`,
-    historyCore:
-      "La URL heredada se dedica ahora al ciclo mejor documentado de origen Yagua. La ficha anterior reunía bajo el título genérico «Yagua» al agua Há, Petita, Ya-Tuján, un gobierno idealizado, guerras, Iiñi/Liñi y una doctrina de pureza; ninguna fuente atribuida sostenía esa versión compuesta.",
-    versionCore:
-      "Powlison coloca al hermano llamado Placenta como transformador en muchas versiones. En los registros de Chaumeil, A. Sarko atribuye normalmente la iniciativa y el poder a Ndanu, el mayor, mientras Mêna se transforma con su ayuda. La adaptación evita decidir cuál es la forma «correcta» y usa a ambos como equipo.",
-    similarityCore:
-      "El ciclo Yagua comparte con la creación Ufaina la caída de un árbol que se vuelve un gran río y con la tradición Makuna la liberación conjunta de agua y peces. Las tres narraciones pertenecen a redes amazónicas donde un recurso retenido se vuelve paisaje compartido, pero difieren en protagonistas y geografía: Ndanu, Mêna, Krora y la lupuna forman la secuencia Yagua. Dentro del propio corpus, el nacimiento extraordinario y la pérdida de los padres resuenan con Luna y Sol y con el Huérfano; aquí conducen además a la creación de clanes, alimentos y vías de agua.",
+J. y J.-P. Chaumeil grabaron los dos mitos directamente en lengua yagua y los hicieron traducir por un intérprete yagua bilingüe. Las versiones que publicaron en 1978 en Amazonía Peruana, bajo el título «Los mellizos y la Lupuna», son las de A. Sarko, del río Loreto Yacu, con un dibujo suyo fechado en 1976; el gráfico del mundo con forma de lupuna derribada lo elaboró en octubre de 1975 Alberto Prohaño, yagua de la quebrada Yurura, que aportó además el relato de cómo se hizo la gente paña. Los Chaumeil advierten que tenían al menos tres versiones de cada mito, que los dos pueden contarse por separado, completos o en parte, o encadenarse uno detrás del otro, y que pertenecen a un ciclo mucho más amplio sobre los mellizos míticos.
+
+Paul Powlison empezó a grabar en 1955 y tardó tres años en que alguien le contara una leyenda verdadera. La versión que traduce entera de este ciclo es la quinta de diecisiete que transcribió, tiene siete episodios y se la narró Laureano Mozombite en Yarinacocha en febrero de 1960; Mozombite, nacido en el Pumayacu, fue el fundador de la comunidad de Catalán y trabajó con él hasta su muerte en 1982. Powlison grabó también a Luzmina Silva, a Jacinto Acipali, a doña Agripina de Núñez y a Rufino Macahuachi, y en 1967 recorrió unos mil quinientos kilómetros por el Amazonas hasta la frontera con Brasil grabando unas noventa narraciones con veintidós personas. Su libro salió en castellano en Lima, en la serie Comunidades y Culturas Peruanas del Instituto Lingüístico de Verano.
+
+En Colombia los yagua viven en Leticia y Puerto Nariño. El perfil del Ministerio de Cultura, apoyado en el plan de vida de ATICOYA de 2008, nombra el mito de los mellizos entre los que el pueblo conserva.`,
+    versiones: `Los nombres cambian entre los dos registros. En Chaumeil los mellizos son ndano, el mayor, y mena, «placenta», el menor, y el abuelo que guarda el agua se llama krora. En Powlison son Hermano Mayor y Placenta, y el abuelo es Caronu, identificado con el creador; en la versión que traduce se le llama además Risu, del castellano Dios.
+
+Quién actúa es el desacuerdo principal, y los dos recopiladores lo declaran uno contra el otro. Powlison dice que la mayoría de sus narradores hacen de Placenta, el menor, el que se transforma a voluntad y el que crea los clanes, mientras el mayor es enviado y fracasa. Chaumeil sostiene lo contrario: en todas las versiones que él recogió es ndano, el mayor, quien detenta el poder de crear y transformar, y mena sólo se transforma cuando su hermano le sopla. Chaumeil añade que los yagua hablan a menudo indiferentemente de uno o de otro, y que a veces los consideran una sola persona.
+
+También cambia lo que sale del árbol caído. En Powlison, los gusanos se convierten en blancos, en negros y en los demás pueblos de Sudamérica menos los yagua, y las hojas y astillas en peces y tortugas de agua; el mayor queda como creador de los otros pueblos y Placenta como creador de los yagua. En Chaumeil, de un caracolito negro sobre una hoja salen los negros, y los demás pueblos los hace ndano con barro, golpeando un cernidor o dibujando una paña en el suelo.
+
+Y cambia el abuelo. Los narradores de Powlison identifican a Caronu con el creador. Chaumeil anota que sus informantes rara vez asimilaron a krora al creador y lo describieron más bien como el guardián avaro del agua y las semillas.`,
+    similitudes: `Powlison comparó las versiones sudamericanas recogidas por Ehrenreich, Koch-Grünberg, Métraux, Lehmann-Nitsche y Lévi-Strauss, entre otros, y sintetizó una historia de mellizos divinos en cuarenta incidentes. Después revisó cuáles aparecen en cada leyenda yagua: en este ciclo cuenta los incidentes 16 a 26, 28, 32, 33 y 36 a 39, es decir la madre devorada, la supervivencia milagrosa del hijo no nacido, la anciana que lo cría, el crecimiento sobrenatural, el animal que revela quiénes fueron los asesinos, la decisión de vengarse, la planeación, la muerte de todos menos uno, el mellizo torpe como contraste y la contribución cultural del héroe. Señala como detalle cercano el escape por el agua en la leyenda de Sol y Luna de los amuesha, un pueblo vecino del Perú.
+
+El segundo paralelo documentado es interno al corpus yagua. Powlison advierte que el episodio del agua acaparada se enlaza a menudo con el octavo episodio del ciclo de Tortuga y Jaguar, donde es Tortuga, creador disfrazado, quien confisca el agua para castigar a la gente Perico; en ese caso el abuelo aparece sólo como el que la cuida y la reparte en vasijas.
+
+Lo que identifica a esta versión y no se puede intercambiar es la abuela que se salva porque estaba sembrando yuca, el pífano arrebatado al padre muerto, los clanes llamados uno por uno pisando árboles y animales, y el árbol del agua cuyo tronco se vuelve el río grande y cuyas astillas se vuelven los peces.`,
     leccion:
-      "El agua y el alimento se vuelven herencia cuando el poder deja de guardarlos para unos pocos.",
+      "El agua deja de ser un favor diario cuando alguien derriba lo que la tenía guardada.",
     sceneHorizontal:
       "Ndanu y Mêna observan la caída de una lupuna gigantesca cuyo tronco se transforma en el río Amazonas y cuyas ramas abren afluentes; pájaros carpinteros y pequeños animales aparecen como colaboradores, sin mostrar al abuelo herido",
     sceneVertical:
       "una abuela encuentra junto a un pequeño pozo a dos bebés envueltos en hojas, uno nacido del vientre y otro de la placenta, mientras detrás quedan las formas humeantes de una casa destruida sin cuerpos ni violencia gráfica",
     researchNotes:
       "CORRECCIÓN INTEGRAL Y REUTILIZACIÓN DE URL: el slug yagua se conserva, pero el contenido sintético se reemplaza por el ciclo de los mellizos y la lupuna. La secuencia combina solo episodios que Powlison y Chaumeil documentan como parte del mismo ciclo.",
-    seoTitle: "Ndanu, Mêna y el árbol del agua | Mito Yagua",
+    seoTitle: "Los mellizos y el árbol del agua | Mito Yagua",
     seoDescription:
       "Mito Yagua documentado sobre los mellizos Ndanu y Mêna, el origen de los clanes y la lupuna que se convierte en el río Amazonas.",
     focusKeywords: [
-      "Ndanu y Mêna",
-      "mito Yagua del árbol del agua",
       "mellizos Yagua",
+      "Los mellizos y el árbol del agua",
+      "mito Yagua del árbol del agua",
       "lupuna y río Amazonas",
       "mitología Ñihamwo",
     ],
@@ -292,31 +342,67 @@ Esa noche los mellizos hicieron una nueva choza. Esta vez buscaron hojas y mirar
   }),
   defineChimbilacoMyth({
     slug: "chimbilaco",
+    sourceKeys: [
+      {
+        key: "gallego2011",
+        summary:
+          "Es la única fuente que nombra al chimbilaco como tal y lo describe: ser con figura humana y alas de ave que sobrevuela ríos y quebradas en la noche, ataca a los pescadores y les corta la cabeza. Registra además el nudo que la ficha cuenta al final: los yagua de La Libertad lo asocian con las dos grandes embarcaciones turísticas que recorren el Amazonas de noche, y mientras unos creen que los cortacabezas son propiedad de los turistas, otros creen que son los turistas.",
+        limitation:
+          "Todo lo relativo al chimbilaco cabe en una nota al pie de un artículo cuyo tema es el turismo cultural, no la narrativa. La autora lo define como relato contemporáneo ampliamente regional, no como ciclo propio del pueblo yagua, y no transcribe ninguna narración.",
+      },
+      "valdiviesoCuidado2005",
+      {
+        key: "pribylEvidencias2010",
+        limitation:
+          "Es peruana y andina, no amazónica ni colombiana, y está escrita desde la salud pública y la etnomedicina: no menciona el cortacabezas, el pelacara ni el chimbilaco. El eslabón que une pishtaco, pelacara y cortacabezas lo aporta Cure, no este artículo. SciELO Colombia sirve este artículo sólo por http: la versión https no responde, y se prefiere el enlace que funciona al que se ve mejor.",
+      },
+      "espanolachimbilaco2010",
+      "espanolachimbila2010",
+      {
+        key: "acevedoCultura2011",
+        summary:
+          "Da los datos de publicación que la ficha cita —volumen 47, número 1, enero-junio de 2011, páginas 113-136— y el enlace estable de la fuente principal del chimbilaco.",
+        limitation:
+          "Es una página de metadatos: no contiene el texto del artículo ni sostiene por sí sola ningún elemento del relato.",
+      },
+      "graneroBultos2010",
+      "andinosBrujeria2025",
+      "cagliariDesangrar2019",
+    ],
     title: "Chimbilaco, el rumor sobre el río",
     excerpt:
       "Una silueta humana con alas de ave cruza de noche ríos y quebradas; su aparición obliga a los pescadores a regresar.",
     tags: ["noche", "río", "pescador", "peligro"],
-    mito: `Cuando oscurece sobre el Amazonas, las canoas pequeñas dejan de distinguirse desde la orilla. Cada luz se aleja hasta parecer suspendida sobre el agua. Los pescadores que todavía siguen en el río miran el curso, las quebradas y el cielo bajo antes de decidir si continúan.
+    mito: `Chimbilaco es como se le dice al murciélago. También es el nombre de lo que cruza el río de noche: una figura con cuerpo de persona y alas de ave que sobrevuela ríos y quebradas, cae sobre los pescadores y les corta la cabeza.
 
-En esas noches puede aparecer el chimbilaco. Tiene figura humana y alas de ave. No llega caminando por una playa ni se anuncia desde una casa. Vuela sobre ríos y quebradas, allí donde la oscuridad junta el agua con las copas de los árboles.
+De noche, sobre el Amazonas, lo primero que se ve son las luces. Pasan por el cielo despidiendo rayos de colores que cambian de tamaño y de tono, rojos, azules, amarillos, verdes. Unos dicen que el aparato no suena nada; otros, que suena pasito. Adentro hay computadores y equipos que localizan a la gente y saben de lejos si va armada. Cuando encuentran a alguien, baja un haz que lo deja quieto donde está, sin poder mover ni las manos.
 
-Su presencia significa peligro para quien pesca solo. El relato no lo presenta como un animal que pueda confundirse con cualquier pájaro. La forma humana debajo de las alas permite reconocer que algo extraño acompaña el vuelo. Si se acerca a una canoa, la amenaza puede ser mortal.
+A los que se llevan los suben a bases y laboratorios donde hay máquinas capaces de mantener vivas las cabezas y los órganos que sacan. A otros los abren ahí mismo.
 
-Por eso, al advertir una silueta sobre el cauce, el pescador no intenta seguirla ni comprobar de dónde viene. Recoge lo que puede, orienta la proa hacia el regreso y busca la orilla conocida. El río continúa siendo camino y alimento, pero la noche ha cambiado la manera de recorrerlo.
+No siempre vienen por el aire. También andan por el agua y por tierra, y entonces no se los reconoce por la forma sino por la conducta. Se visten de bufeo, de caimán, de tigre, de pirarucú, de pintadillo, de venado, de vaca marina, de boa, de águila; el traje es de cuero o de piel y lleva por dentro un aparato para respirar. Por eso, cuando un bufeo al que se le apunta con la flecha en vez de huir se acerca más a la canoa y la golpea, no es un bufeo. Cuando un pirarucú, con lo manso que es ese animal, embiste la canoa, no es un pirarucú. Cuando el arpón entra fácil en el cuero de un caimán, tampoco es un caimán.
 
-Desde algunas comunidades también se ven pasar embarcaciones grandes. Sus luces recorren la distancia y desaparecen después de una curva. La llegada de visitantes puede traer compras y dinero; su paso nocturno puede despertar temor. En el relato, esa ambigüedad toma la figura del chimbilaco: algo deseado se mueve junto a algo que amenaza.
+Un muchacho de trece años lo encontró pescando en el lago del Pan, con un compañero. Miró una mata cargada de pajaritos y sintió un viento fuerte, como si algo lo estuviera persiguiendo. Se echó de espaldas en el fondo de la canoa y la cosa pasó de largo por encima. Después lo dibujó: negro, grande, cara de chimbilaco, orejas a los lados, unas tijeras a la altura del pecho, patas de gavilán con sus uñas, y adentro una persona. Desde ese día en su casa le prohibieron salir a pescar.
 
-No todos explican de la misma forma la relación. Para algunas personas, el cortacabezas pertenece a quienes viajan en los grandes botes. Para otras, los viajeros mismos pueden ocupar ese lugar inquietante. La historia no obliga a escoger una identidad única. Conserva el miedo que nace cuando una presencia externa atraviesa el territorio sin que quienes viven allí puedan saber qué busca.
+Las luces pasan las mismas noches en que suben y bajan por el río los barcos grandes de tres pisos, los que hacen la ruta con turistas y paran siempre en los mismos sitios. Unos dicen que los cortacabezas son de la gente que viaja en esos barcos. Otros dicen que son esa misma gente.`,
+    historia: `Dos trabajos académicos sostienen esta ficha y ninguno de los dos es antiguo. En 2011, en la Revista Colombiana de Antropología, Lina Marcela Gallego Acevedo publicó «¿Cultura para consumir? Los yagua y el turismo cultural en el Trapecio Amazónico», un estudio sobre la comunidad yagua de La Libertad y su inserción en los circuitos turísticos de Leticia. En una nota al pie define al chimbilaco o cortacabezas como el protagonista de un relato contemporáneo que creen ampliamente las poblaciones indígenas de la región, sobre todo las ribereñas, y explica por qué los yagua de La Libertad temen y desean a la vez el turismo: los indígenas relacionan al depredador con los turistas porque aparece las mismas noches en que dos grandes embarcaciones turísticas recorren el Amazonas, y mientras unos piensan que los cortacabezas son propiedad de los turistas, otros piensan que son los turistas mismos.
 
-La canoa pequeña alcanza la orilla. Quienes esperan reconocen primero el golpe suave contra la ribera y luego la figura del pescador. Sobre el agua ya no se ve la silueta alada. Queda la advertencia de regresar y la pregunta que vuelve cada vez que una luz desconocida cruza el río de noche.`,
-    historyCore:
-      "La ruta se transfiere desde una comunidad llamada Africano, donde había sido convertida en un guardián afropacífico inventado. La evidencia verificable la sitúa en el Trapecio Amazónico y registra una asociación concreta hecha por habitantes Yagua de La Libertad.",
-    versionCore:
-      "Gallego conserva una descripción breve del chimbilaco alado y la relación Yagua entre turismo nocturno y cortacabezas. Cure documenta un rumor transfronterizo mucho más amplio. La adaptación usa el primer núcleo y reserva el segundo para explicar circulación y cambio.",
-    similarityCore:
-      "El chimbilaco se relaciona con otros rumores amazónicos de cortacabezas porque todos convierten una amenaza externa difícil de identificar en luces, máquinas o figuras que recorren la noche. Cure muestra que esas narraciones circulan entre pueblos y fronteras; no forman un mito único. El pishtaco andino también representa extracción y desigualdad, pero su historia, territorio y apariencia no se trasladan aquí. Dentro del corpus Yagua, Calvito y los mellizos afrontan seres de la selva en ciclos antiguos; Chimbilaco se distingue por ser una memoria contemporánea sobre botes, turismo y temor en el río.",
+Seis años antes, en 2005, Salima Cure Valdivieso había presentado en la Universidad Nacional de Colombia, Sede Amazonia, la tesis «Cuidado te mochan la cabeza», dirigida por Juan Álvaro Echeverri, sobre la circulación de ese rumor en la frontera de Colombia, Perú y Brasil. Cure trabajó en Macedonia, Mocagua, Puerto Nariño, los lagos de Tarapoto, El Castañal y el Kilómetro Tres, con gente ticuna, uitoto y cocama y con colonos, y de ahí salen las luces, los aparatos, las máscaras y los disfraces. Los interlocutores aparecen con nombres cambiados: la autora advierte en sus agradecimientos que no los cita por sus nombres reales.
+
+Las dos fuentes fechan el asunto. Un hombre ticuna nacido en Puerto Nariño le contó a Cure que en los años sesenta su madre le decía que los motores que pasaban tarde en la noche eran los aceiteros, gringos que sacaban manteca para sus aviones, y que de cortacabezas se empezó a hablar más o menos desde 1999.
+
+Chimbilaco, además, es una palabra del español de Colombia: el Diccionario de americanismos la registra como variante de chimbilá, que es el murciélago.`,
+    versiones: `Las dos descripciones publicadas no coinciden y no se funden. La de Gallego es una silueta: figura humana con alas de ave que sobrevuela ríos y quebradas de noche, ataca a los pescadores y les corta la cabeza. La que Cure recoge es tecnológica: un aparato de hierro con forma de águila, de pájaro o de murciélago; o una máquina de propulsión, a gas o a batería, como la de los astronautas; o simplemente un traje. Uno de los dibujos que le hicieron muestra un aparato en forma de águila; otro, hecho por un muchacho de trece años, muestra la cara de chimbilaco, las orejas, las tijeras en el pecho, las patas de gavilán y la persona que va adentro.
+
+Tampoco coinciden sobre quién está debajo del disfraz. Para unos son gringos con máquinas que sacan cabezas y órganos; para otros son los dueños de los barcos turísticos; para otros, los turistas. Un periodista alemán al que Cure entrevistó relacionaba las luces con proyectos secretos, y en las ciudades y entre la gente mestiza el tema no interesaba mayor cosa.
+
+Cure señala además que el disfraz tiene una gramática local: los ticuna usan máscaras de animales en el ritual de la pelazón, hechas en yanchama, y dos de sus interlocutores recurrieron justamente a esas máscaras para explicarle cómo se visten los cortacabezas. Sobre el sentido de esas máscaras los especialistas discrepan: para Jean-Pierre Goulard median con un mundo anterior en el que inmortales y mortales compartían la fiesta y no representan gran peligro; para Sandra Turbay expresan fieras destructoras que sólo se apaciguan cuando las mujeres ofrecen masato y carne ahumada.`,
+    similitudes: `El paralelo mejor documentado es andino y es también una genealogía. En los Andes, desde la conquista, se habla del pishtaco o sacagrasa, el que extrae la grasa de los cuerpos indígenas para beneficio del blanco; un análisis médico-antropológico rastreó ese temor hasta el uso europeo de material humano con fines farmacéuticos en los siglos XVI y XVII y concluyó que la figura no tiene origen andino. Al bajar a la Amazonía, lo que se extrae cambia: el pishtaco se vuelve pelacara o sacacaras, y lo que se llevan es la piel del rostro; más tarde, ya en el Trapecio, se vuelve cortacabezas. El chimbilaco es el último eslabón de esa cadena y el único que lleva nombre de murciélago.
+
+El segundo paralelo es lateral y está en el mismo territorio: las máscaras de animales de la pelazón ticuna, hechas en yanchama con motivos de mico, tigre, picaflor o la madre de viento, que sirven para entrar en relación con seres con los que de otro modo no se podría tratar. El disfraz de bufeo o de caimán del cortacabezas funciona con esa misma lógica, aplicada a un otro nuevo.
+
+Lo que distingue al chimbilaco de sus parientes es la escena: no el camino de la puna ni la casa, sino la canoa de noche, y no un cuchillo, sino luces de colores, un rayo que paraliza y un barco de turistas que sube y baja por el río a las mismas horas.`,
     leccion:
-      "El miedo también interpreta relaciones desiguales cuando una presencia externa atraviesa el territorio sin explicarse.",
+      "El miedo nombra con animales conocidos aquello que llega de fuera y no se deja identificar.",
     sceneHorizontal:
       "una canoa de pesca pequeña gira hacia la ribera mientras una silueta humana alada cruza muy arriba sobre el río nocturno y, al fondo, pasa un barco grande con luces discretas",
     sceneVertical:

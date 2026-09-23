@@ -1,41 +1,215 @@
 {
-  "schema": "acta-de-reduccion-v1", "mito": "el-indio-kuriruputa", "comunidad": "wayuu",
+  "schema": "acta-de-reduccion-v1",
+  "mito": "el-indio-kuriruputa",
+  "comunidad": "wayuu",
   "canon_slug": "el-indio-kuriruputa",
-  "canon_sha256": "b59411cf8dadf68f2389904ca01dc9e3dca9a5330355870ebb111964fb6234a3",
+  "canon_sha256": "88dc90e43fe3b3cce29547196ca754657bfc28d9d152c72ed0b8d94ce9a16a4a",
   "nudos": [
-    { "id": "n01", "nudo": "Kuriruputá tenía un rebaño numeroso y una familia conocida por cuidar sus animales", "evidencia": "Kuriruputá tenía un rebaño numeroso y una familia conocida por cuidar sus animales" },
-    { "id": "n02", "nudo": "Una mañana descubrió huellas alrededor de los corrales: un grupo de Kosina se había llevado parte del ganado", "evidencia": "Un grupo de Kosina había llevado parte del ganado hacia sus caminos" },
-    { "id": "n03", "nudo": "Reunió a sus parientes y salió tras ellos", "evidencia": "Kuriruputá reunió a sus parientes y salió tras ellos" },
-    { "id": "n04", "nudo": "Las hermanas le pidieron prudencia, pero él confiaba en recuperar solo lo perdido", "evidencia": "Las hermanas le pidieron prudencia, pero él confiaba en recuperar solo lo perdido" },
-    { "id": "n05", "nudo": "El encuentro se convirtió en combate", "evidencia": "El encuentro se convirtió en combate" },
-    { "id": "n06", "nudo": "Los adversarios eran más numerosos: Kuriruputá recibió una herida y cayó", "evidencia": "Los adversarios eran más numerosos. Kuriruputá recibió una herida y cayó." },
-    { "id": "n07", "nudo": "Sus compañeros retrocedieron mientras los atacantes se acercaban al resto del rebaño", "evidencia": "Sus compañeros retrocedieron mientras los atacantes se acercaban al resto del rebaño" },
-    { "id": "n08", "nudo": "Entonces llegaron sus hermanas y no esperaron una orden", "evidencia": "Entonces llegaron sus hermanas. No esperaron una orden" },
-    { "id": "n09", "nudo": "No se limitaron a recoger el cuerpo: tomaron las armas, organizaron la defensa y obligaron a los atacantes a retirarse", "evidencia": "Tomaron las armas disponibles, organizaron la defensa y obligaron a los atacantes a retirarse" },
-    { "id": "n10", "nudo": "Después levantaron a Kuriruputá y lo llevaron de vuelta", "evidencia": "Después levantaron a Kuriruputá y lo llevaron de vuelta" },
-    { "id": "n11", "nudo": "Durante la recuperación soñó con una tuma, la piedra roja de gran valor", "evidencia": "él soñó con una tuma, la piedra roja de gran valor" },
-    { "id": "n12", "nudo": "Una voz le indicaba que debía aceptar otra alianza para continuar la casa", "evidencia": "debía aceptar otra alianza para continuar la casa" },
-    { "id": "n13", "nudo": "Y no responder a la pérdida con una guerra interminable", "evidencia": "no responder a la pérdida con una guerra interminable" },
-    { "id": "n14", "nudo": "Al despertar contó la visión y sus hermanas discutieron con él qué parte seguir y qué parte interpretar", "evidencia": "Sus hermanas discutieron con él qué parte podía seguirse y qué parte necesitaba interpretación" },
-    { "id": "n15", "nudo": "La piedra no ordenaba olvidar a quienes habían muerto ni convertir una mujer en premio", "evidencia": "La piedra no ordenaba olvidar a quienes habían muerto ni convertir una mujer en premio" },
-    { "id": "n16", "nudo": "Señalaba que la riqueza solo permanece cuando una red de parientes puede sostenerla", "evidencia": "señalaba que la riqueza solo permanece cuando una red de parientes puede sostenerla" },
-    { "id": "n17", "nudo": "Kuriruputá buscó mediación", "evidencia": "Kuriruputá buscó mediación" },
-    { "id": "n18", "nudo": "Se calcularon animales, daños y responsabilidades; no todo quedó resuelto, pero el rebaño dejó de ser motivo de ataques inmediatos", "evidencia": "No todo quedó resuelto de una vez, pero el rebaño dejó de ser motivo de ataques inmediatos" },
-    { "id": "n19", "nudo": "Con el tiempo formó una nueva unión y la tuma del sueño fue guardada como recuerdo de la transición", "evidencia": "Con el tiempo formó una nueva unión. La tuma del sueño fue guardada como recuerdo de la transición." },
-    { "id": "n20", "nudo": "Sus hermanas conservaron el reconocimiento por haber defendido a la familia cuando él no podía hacerlo", "evidencia": "Sus hermanas conservaron el reconocimiento por haber defendido a la familia cuando él no podía hacerlo" },
-    { "id": "n21", "nudo": "El relato termina con un hombre herido que depende de mujeres capaces de combatir, deliberar y reconstruir", "evidencia": "Termina con un hombre herido que depende de mujeres capaces de combatir, deliberar y reconstruir" },
-    { "id": "n22", "nudo": "La riqueza está en no perder, junto con los animales y la piedra, la continuidad del parentesco", "evidencia": "Está en no perder, junto con ellos, la continuidad del parentesco" }
+    {
+      "id": "n01",
+      "nudo": "Kuriruputá era un hombre rico: tenía tantos animales y andaba tan bien puesto que brillaba como el sol",
+      "evidencia": "Tenía tantos animales y andaba tan bien puesto que brillaba como el sol."
+    },
+    {
+      "id": "n02",
+      "nudo": "Su casa quedaba en Matumuy, con los corrales de los novillos y de las vacas de ordeño a un lado",
+      "evidencia": "Su casa quedaba en Matumuy, con los corrales de los novillos y de las vacas de ordeño a un lado."
+    },
+    {
+      "id": "n03",
+      "nudo": "Unos kosinas salieron en busca de animales",
+      "evidencia": "Unos kosinas salieron en busca de animales."
+    },
+    {
+      "id": "n04",
+      "nudo": "Llegaron a la laguna de Kuitsá, esperaron quietos entre los cardones hasta que se ocultó el sol, y a las nueve de la noche estaban en Matumuy",
+      "evidencia": "Llegaron a la laguna de Kuitsá y allí esperaron, quietos entre los cardones, hasta que se ocultó el sol."
+    },
+    {
+      "id": "n05",
+      "nudo": "Encontraron los animales encerrados, abrieron un hueco en el costado opuesto a la puerta y volvieron a cerrar la cerca",
+      "evidencia": "Encontraron los animales encerrados, abrieron un hueco en el costado opuesto a la puerta"
+    },
+    {
+      "id": "n06",
+      "nudo": "Sacaron algunos de los mejores novillos",
+      "evidencia": "sacaron algunos de los mejores novillos y volvieron a cerrar la cerca."
+    },
+    {
+      "id": "n07",
+      "nudo": "Entre los animales había un novillo muy bravo que corrió detrás de los kosinas, y ellos huyeron",
+      "evidencia": "Entre los animales había un novillo muy bravo. Corrió detrás de los kosinas y ellos huyeron."
+    },
+    {
+      "id": "n08",
+      "nudo": "Decidieron dejar los novillos",
+      "evidencia": "Mejor será dejarlos."
+    },
+    {
+      "id": "n09",
+      "nudo": "Abrieron el corral de las vacas de ordeño y se las llevaron",
+      "evidencia": "Abrieron entonces el corral de las vacas de ordeño y se las llevaron"
+    },
+    {
+      "id": "n10",
+      "nudo": "Las vacas no corrían ni querían caminar; a empujones las arriaron hasta la laguna de Kuitsá, y allí pasaron la noche",
+      "evidencia": "las vacas no corrían ni querían caminar. A empujones las arriaron hasta la laguna de Kuitsá, y allí pasaron la noche."
+    },
+    {
+      "id": "n11",
+      "nudo": "Cuando el novillo comenzó a bramar, el dueño se despertó",
+      "evidencia": "Cuando el novillo comenzó a bramar, el dueño se despertó."
+    },
+    {
+      "id": "n12",
+      "nudo": "Recogió los animales que los kosinas no habían podido llevarse y, como había luna, vio las huellas sobre la arena",
+      "evidencia": "Recogió los animales que los kosinas no habían podido llevarse y, como había luna, vio las huellas sobre la arena."
+    },
+    {
+      "id": "n13",
+      "nudo": "Llamó a toda la gente, despertó a todos, pero solo vinieron las mujeres: no había más hombres",
+      "evidencia": "Llamó a toda la gente, despertó a todos, pero solo vinieron las mujeres: no había más hombres."
+    },
+    {
+      "id": "n14",
+      "nudo": "Les dijo que él se alistaría y seguiría atrás de los animales",
+      "evidencia": "Yo me alistaré y seguiré atrás de los animales"
+    },
+    {
+      "id": "n15",
+      "nudo": "Se fajó el revólver, cargó el rifle y se puso a la cintura tres fajones llenos de balas",
+      "evidencia": "Se fajó el revólver, cargó el rifle y se puso a la cintura tres fajones llenos de balas."
+    },
+    {
+      "id": "n16",
+      "nudo": "Les dio alcance en la laguna, corrió hacia el cerro para salirles adelante y les cortó el paso",
+      "evidencia": "Les dio alcance en la laguna. Corrió hacia el cerro para salirles adelante y les cortó el paso."
+    },
+    {
+      "id": "n17",
+      "nudo": "Los kosinas lo divisaron y decidieron matarlo",
+      "evidencia": "Allá está. Mejor matémoslo."
+    },
+    {
+      "id": "n18",
+      "nudo": "Le tiraron, y las balas pasaban junto a él sin herirlo",
+      "evidencia": "Le tiraron. Las balas pasaban junto a él sin herirlo."
+    },
+    {
+      "id": "n19",
+      "nudo": "Cuando todos hubieron disparado, Kuriruputá les anunció que ahora tiraría él",
+      "evidencia": "Ahora tiraré yo."
+    },
+    {
+      "id": "n20",
+      "nudo": "Al primer disparo mató a un kosina",
+      "evidencia": "Al primer disparo mató a un kosina."
+    },
+    {
+      "id": "n21",
+      "nudo": "Mientras tanto las vacas, solas, tomaban el camino de su casa; él las siguió y los kosinas lo siguieron a él",
+      "evidencia": "Mientras tanto las vacas, solas, tomaban el camino de su casa. Kuriruputá las siguió y los kosinas lo siguieron a él."
+    },
+    {
+      "id": "n22",
+      "nudo": "Por fin uno le pegó en la pierna y le desastilló la rodilla",
+      "evidencia": "Por fin uno le pegó en la pierna y le desastilló la rodilla."
+    },
+    {
+      "id": "n23",
+      "nudo": "Apoyado en la otra pierna se volvió hacia ellos, disparó el revólver y el rifle y mató a dos",
+      "evidencia": "Apoyado en la otra pierna, Kuriruputá se volvió hacia ellos, disparó el revólver y el rifle y mató a dos."
+    },
+    {
+      "id": "n24",
+      "nudo": "Los kosinas vieron que estaba herido y decidieron acercarse para rematarlo",
+      "evidencia": "Los kosinas vieron que estaba herido y decidieron acercarse para rematarlo."
+    },
+    {
+      "id": "n25",
+      "nudo": "Tomó el revólver en una mano y el rifle en la otra y mató a otros dos",
+      "evidencia": "Él tomó el revólver en una mano y el rifle en la otra y mató a otros dos."
+    },
+    {
+      "id": "n26",
+      "nudo": "Le tiraron flechas iguarayo y no le pegaban; disparó otra vez y cayó otro kosina",
+      "evidencia": "Le tiraron flechas iguarayo; no le pegaban. Disparó otra vez y cayó otro kosina."
+    },
+    {
+      "id": "n27",
+      "nudo": "A lo lejos aparecieron sus hermanas, con un rifle y un pañuelo de cuatro varas, porque creían que estaría muerto y venían a recoger el cadáver",
+      "evidencia": "Traían un rifle y un pañuelo de cuatro varas, porque creían que estaría muerto y venían a recoger el cadáver."
+    },
+    {
+      "id": "n28",
+      "nudo": "Lo primero que encontraron fueron las vacas que regresaban; después, las huellas de sangre del hermano",
+      "evidencia": "Lo primero que encontraron fueron las vacas que regresaban; después, las huellas de sangre del hermano."
+    },
+    {
+      "id": "n29",
+      "nudo": "Cuando dieron con él ya casi no tenía fuerzas",
+      "evidencia": "Cuando dieron con él ya casi no tenía fuerzas."
+    },
+    {
+      "id": "n30",
+      "nudo": "Le amarraron la herida de la pierna y lo llevaron a un cerrito",
+      "evidencia": "Le amarraron la herida de la pierna y lo llevaron a un cerrito."
+    },
+    {
+      "id": "n31",
+      "nudo": "Las mujeres siguieron persiguiendo a los kosinas",
+      "evidencia": "Las mujeres siguieron persiguiendo a los kosinas."
+    },
+    {
+      "id": "n32",
+      "nudo": "Estos, al darse cuenta de que eran mujeres, se dijeron que las cogerían y las tendrían por sus mujeres",
+      "evidencia": "Vamos a cogerlas. Las tendremos por nuestras mujeres."
+    },
+    {
+      "id": "n33",
+      "nudo": "Marcharon hacia ellas, pero las hermanas se armaron y cada una mató a un kosina, y otros que intentaron cogerlas también murieron",
+      "evidencia": "Pero las hermanas se armaron y cada una mató a un kosina; otros intentaron cogerlas y también murieron."
+    },
+    {
+      "id": "n34",
+      "nudo": "Los que quedaban dijeron que eran muy bravas y que mejor huían",
+      "evidencia": "Son muy bravas. Es mejor que huyamos."
+    },
+    {
+      "id": "n35",
+      "nudo": "Las mujeres los persiguieron sin darles alcance, y solo entonces volvieron a atender al hermano y lo llevaron a la casa",
+      "evidencia": "Las mujeres los persiguieron sin darles alcance. Solo entonces volvieron a atender al hermano y lo llevaron a la casa."
+    },
+    {
+      "id": "n36",
+      "nudo": "Esa noche, con la rodilla rota, soñó que le mandaban tragarse una contra y una tuma y tomar por mujer a una criada, y así sanó y vivió muchos años",
+      "evidencia": "Para que te sanes, trágate una contra y una tuma."
+    }
   ],
   "deslindes": [
-    "NO es la historia de un guerrero invencible. La fuente lo dice expresamente: termina con un hombre herido que depende de mujeres capaces de combatir, deliberar y reconstruir. Ese giro es el relato.",
-    "Las hermanas NO recogen el cuerpo: pelean. Tomaron las armas, organizaron la defensa y obligaron a los atacantes a retirarse, sin esperar orden de nadie.",
-    "El sueño NO se obedece literalmente. Ellas discuten con él qué parte seguir y qué parte interpretar, y esa deliberación es parte del desenlace.",
-    "La tuma NO ordena olvidar a los muertos NI convertir a una mujer en premio. La fuente cierra esas dos lecturas por adelantado y el guion las cierra también.",
-    "La mediación NO resuelve todo. El relato dice que no quedó resuelto de una vez; lo que cambió es que el rebaño dejó de ser motivo de ataques inmediatos."
+    "El nudo del relato es que NO HABÍA HOMBRES: llama a todos y solo vienen las mujeres. Por eso sale solo, y por eso son ellas quienes terminan la pelea.",
+    "Las hermanas no son rescatadoras pasivas: vienen creyéndolo muerto, con un pañuelo de cuatro varas para el cadáver, y acaban matando a más kosinas que él.",
+    "Los kosinas se lanzan sobre ellas por creerlas presa fácil —querían tenerlas por mujeres— y ése es el error que las revela. La cámara no las convierte en víctimas.",
+    "Kuriruputá es invulnerable a las balas y a las flechas iguarayo, pero NO del todo: la rodilla desastillada es real y lo deja casi sin fuerzas.",
+    "El robo está contado con detalle técnico —el hueco en el costado opuesto a la puerta, la cerca vuelta a cerrar— y ese oficio se conserva en el plano.",
+    "Quien da la alarma es el novillo bravo, no una persona. El animal que no se dejó robar es el que despierta al dueño.",
+    "La cura del sueño incluye abandonar a su mujer y tomar a una criada. Está en el canon, se narra sin glosa y sin convertirlo en moraleja.",
+    "El sueño que ordena y se cumple es el mismo procedimiento que en «el-indio-guerrero-ipuana», pero invertido: allá el hijo no lo obedece y muere, aquí él lo obedece y vive. Son fichas distintas y el contraste se declara, no se cruza."
   ],
   "descartes": [
-    { "que": "Que Kuriruputá vivió hasta tiempos cercanos al registro y su paso de persona a personaje", "razon": "Aparato del expediente sobre cómo se forma la tradición, no parte del relato." }
+    {
+      "que": "Los otros cinco parlamentos del canon",
+      "razon": "Una sola cita por guion. El anuncio de salida, el «mejor matémoslo», el «mejor será dejarlos», el «vamos a cogerlas» y el mandato del sueño pasan a voz sin comillas."
+    },
+    {
+      "que": "El mandato completo del sueño —la contra, la tuma, la criada, la mujer abandonada",
+      "razon": "Espacio: N está en el techo, y ya se usó la cita. Queda comprimido en media frase y declarado entero en el acta."
+    },
+    {
+      "que": "La cuenta exacta de kosinas muertos en cada tanda",
+      "razon": "Espacio. Se conservan los tres momentos del combate; el marcador se pierde."
+    }
   ],
   "N_propuesto": 18,
-  "razon_N": "Veintidós nudos y cuatro tiempos: el robo y la salida imprudente, la caída, la defensa de las hermanas, y el sueño deliberado en familia que abre la mediación. Dieciocho bloques, 36 cuadros, ≈180 s."
+  "razon_N": "36 nudos consolidados, techo(36/2)=18, dentro de [8,18]. El canon es un asalto y dos combates encadenados —el del hombre solo contra los kosinas y el de las hermanas contra los mismos— y el sueño que lo cura cierra los dos. Ninguno sobra. 18 bloques, 36 keyframes, ≈180 s."
 }

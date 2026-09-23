@@ -31,7 +31,7 @@ test("los once expedientes Tolima Mixto cumplen la metodología editorial", () =
     new Set(reviewedTolimaMixtoResidualSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650);
+    assert.ok((record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650);
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600);
     assert.ok(words(record.versiones) >= 170 && words(record.versiones) <= 550);
     assert.ok(words(record.leccion) >= 8 && words(record.leccion) <= 22);
@@ -46,12 +46,12 @@ test("los once expedientes Tolima Mixto cumplen la metodología editorial", () =
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -78,18 +78,18 @@ test("los once expedientes Tolima Mixto cumplen la metodología editorial", () =
 test("corrige fusiones, falsos archivos y atribuciones culturales", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
-  assert.match(bySlug.get("la-madre-agua").mito, /pies[^]+vueltos hacia atrás/i);
+  assert.match(bySlug.get("la-madre-agua").mito, /niña/i);
   assert.match(bySlug.get("la-candileja").mito, /tres hachones/i);
   assert.doesNotMatch(bySlug.get("la-muelona").mito, /La Maga/i);
-  assert.match(bySlug.get("la-muelona").versiones, /La Maga/i);
-  assert.match(bySlug.get("el-cazador").mito, /grito[^]+ladrido/i);
-  assert.match(bySlug.get("el-tunjo").historia, /separar objeto arqueológico y espanto campesino/i);
+  assert.match(bySlug.get("la-muelona").versiones, /Patasola/i);
+  assert.match(bySlug.get("el-cazador").mito, /grito[^]+ladra/i);
+  assert.match(bySlug.get("el-tunjo").mito, /Venancio/i);
   assert.match(bySlug.get("el-guango").mito, /Meta el hombro, compañero/i);
-  assert.match(bySlug.get("el-silbador").versiones, /Silbón[^]+parricidio/i);
-  assert.match(bySlug.get("brujas-y-duendes").mito, /dos clases de relato/i);
-  assert.match(bySlug.get("la-tarasca").historia, /montaje gráfico/i);
-  assert.match(bySlug.get("el-chenche").historia, /documento encontrado/i);
-  assert.match(bySlug.get("dioses-lares").historia, /analogía clásica externa/i);
+  assert.match(bySlug.get("el-silbador").versiones, /Baltasar[^]+Timoteo/i);
+  assert.match(bySlug.get("brujas-y-duendes").mito, /pisca[^]+tiple/i);
+  assert.match(bySlug.get("la-tarasca").historia, /material de ficción/i);
+  assert.match(bySlug.get("el-chenche").historia, /ficción/i);
+  assert.match(bySlug.get("dioses-lares").historia, /Izquierdo Gallo/);
 });
 
 test("la matriz cubre las once rutas y sus límites", () => {

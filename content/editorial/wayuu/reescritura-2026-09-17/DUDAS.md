@@ -1,0 +1,112 @@
+# Dudas abiertas de la reescritura wayuu · 2026-09-17
+
+Lo que los redactores no pudieron resolver con el expediente. Cada una es una pista de revisión futura, no un error publicado.
+
+- **aramai**: El título de la página escribe «Arámai» con tilde y la ficha anterior «Wanurü»; el Relato sigue la grafía de Chaves 1946 (Aramai, Wanurú). Conviene decidir si el título se alinea con el primario.
+- **aramai**: En la transcripción del expediente el cuento VII no trae nota de informante; si el PDF completo la tiene, debería añadirse en Historia.
+- **aramai**: La afirmación de que el sarampión es enfermedad posterior al contacto se apoya sólo indirectamente (Perrin 1988 sobre epidemias como novedad mitologizada; Rincón Soto sobre remedios); se dejó como sugerencia, no como hecho.
+- **creacion-wayuu**: Los textos marcados como primarios en este expediente (nota de Pineda sobre el banquete y el Maleiwa de Perrin) no narran la hechura de la gente wayuu; el Relato se construyó sobre Chaves 1946, fuente listada en el expediente y transcrita en el de Serranías. Si el editor prefiere que esta página siga la nota de Pineda o la línea de Perrin (Wotkasainru), hay que rehacer el Relato.
+- **creacion-wayuu**: TRASLAPE CONFIRMADO: la reescritura paralela de “Serranías de La Guajira” (reescrituras/serranias-de-la-guajira.json, 639 palabras) narra íntegro el mismo segmento de la cueva, las dieciocho castas, los animales, las compañeras y el hierro en Arachí. Hoy los dos Relatos cuentan lo mismo en su segunda mitad. Opciones: (a) dejar creacion-wayuu con la línea de Chaves y recortar Serranías a la marcha de los cerros y la piedra de la honda; (b) lo inverso, y rehacer creacion-wayuu sobre la nota de Pineda (banquete de Nazaret) o sobre Wotkasainru vía Perrin; (c) fusionar las dos páginas. No recomiendo (b) con la nota de Pineda: es un cuento sobre etiqueta que deja a los wayuu como «los que se portaron mal», y Pineda mismo lo cita como ejemplo de mitología vuelta peyorativa; publicado como Relato sin comentario, se lee mal.
+- **creacion-wayuu**: La lista de castas viene de un OCR degradado (Apchana, Jirnú, Guaroguoroyú, Cayariyú); conviene cotejarla con el PDF antes de publicar.
+- **creacion-wayuu**: No se usó la lista de Perrin por Sánchez (Wotkasainru) para el Relato porque sólo llega en resumen de tercera mano; queda en Versiones.
+- **el-hijo-del-condor**: Chaves promete por boca de Jujía «una hija» pero entrega «dos lindas muchachas» y luego otras dos «civilizadas»; el Relato conserva la incoherencia sin resolverla, como está en el primario.
+- **el-hijo-del-condor**: La nota «Informador: José Jusayú… Intérprete Roberto Iguarán» aparece al cierre de este texto, el último del artículo; no se pudo confirmar si aplica sólo a este cuento o a todo el conjunto de Chaves.
+- **el-hijo-del-condor**: La madre desaparece del cuento después de la fundación de la roza; el Relato no la devuelve a escena porque el primario tampoco lo hace.
+- **el-hijo-del-condor**: «Ranchería de civilizados» se mantuvo con el vocabulario del primario dentro del Relato; si se prefiere «alijuna», habría que cambiarlo en cuatro lugares.
+- **el-incesto**: Chaves no dice si los dos episodios fueron contados como una sola unidad por un mismo informante; se mantienen juntos porque así se publicaron.
+- **el-incesto**: La frase «Nadie decía nada del padre» es la única intervención editorial dentro del Relato: subraya un silencio del primario sin inventar hechos; si se considera comentario, puede retirarse sin afectar el rango.
+- **el-incesto**: Katetamana no se georreferenció: no hay fuente territorial en el expediente que lo ubique.
+- **el-incesto**: El primario dice que la hermana «se lanzó al mar» sin indicar altura; el Relato dice «desde lo alto» para que tenga sentido que no cayera en las piedras.
+- **el-incesto**: Editor: la frase final de Chaves sobre el ahorcamiento como costumbre se retiró del Relato y se documentó en Versiones.
+- **el-indio-guerrero-ipuana**: El episodio del caballo y la botella de ron está corrupto en el OCR («montó a caballo, siguió su camino, lo persiguió»): no queda claro si el hijo perseguía a un ladrón, al caballo o a otra cosa. El Relato lo deja como «salió tras un rastro» sin inventar el objeto.
+- **el-indio-guerrero-ipuana**: «Rayas» puede referirse a púas de raya usadas como puntas; el texto no lo aclara y no se glosó.
+- **el-indio-guerrero-ipuana**: El sueño no dice quién es «esa majayura» ni por qué cogerla salvaría al hijo; se respetó la opacidad.
+- **el-indio-guerrero-ipuana**: Chaves escribe «Jayariyú» y una vez «Jayaripú» (probable OCR); se usó Jayariyú.
+- **el-indio-guerrero-ipuana**: Los títulos “El indio Kuriruputá”, “El indio Pushaina” y “Umaralá” se citaron según los slugs del corpus; conviene confirmar los títulos publicados.
+- **el-indio-jaichuasay**: El texto de 1946 no aclara quién era el primer indio-venado ni qué fue de él; el Relato deja la ambigüedad tal como está.
+- **el-indio-jaichuasay**: No se dice si Jaichuasay sobrevivió al flechazo; el Relato no lo resuelve.
+- **el-indio-jaichuasay**: La cita de Forero (1995) no es verificable; si alguien accede al libro, podría ser una segunda atestación o simple reedición.
+- **el-indio-jaichuasay**: Sin informante ni intérprete en la transcripción disponible; cotejar con el PDF del ICANH.
+- **el-indio-jaichuasay**: El título publicado de la página de Pushaina se citó como “El indio Pushaina”; confirmar contra el slug el-indio-pushalna.
+- **el-indio-jururiana**: El título vigente «Jururiana y la gran lluvia» no tiene respaldo en Chaves, donde solo hay un chubasco de madrugada; convendría revisar el título visible.
+- **el-indio-jururiana**: La nota de informante (Juancito Iguarán / Roberto Iguarán) aparece al cierre de «El indio Pushaina» y dice cubrir «los anteriores cuentos»; asumimos que incluye a Jururiana, pero Chaves no lo dice de manera explícita.
+- **el-indio-jururiana**: «El invierno iba a pasar» en Chaves es ambiguo; lo leímos como «iba a llegar» (razón para guardar semillas). Si el sentido fuera «terminar», la escena cambiaría.
+- **el-indio-jururiana**: Chaves escribe que escondieron a Maratey «para que Jururiana lo encontrara» después de narrar su muerte; lo tratamos como desliz y atribuimos la prueba a Warir.
+- **el-indio-jururiana**: Sueño de lluvia y epidemia, reparto de semillas y el nombre Mma venían de la ficha anterior, no del texto primario; se retiraron del Relato.
+- **el-indio-kuriruputa**: El informante de este cuento no está identificado: la nota de Juancito Iguarán cierra el cuento anterior y dice cubrir «los anteriores», por lo que puede no incluir este.
+- **el-indio-kuriruputa**: «Criadas» es el término de Chaves; no sabemos qué relación wayuu traduce (servidumbre, parentesco dependiente). Se mantuvo en el diálogo por fidelidad y se explicó en Historia.
+- **el-indio-kuriruputa**: El libro de Alfonso Forero (1995) que documentaría a Kuriruputá no pudo consultarse; podría contener una versión independiente.
+- **el-indio-kuriruputa**: La identificación de este texto con la «novena narración» de la introducción de Chaves es una inferencia por contenido (sueño obedecido, realidad y fantasía parejas), no una afirmación explícita.
+- **el-indio-pushalna**: En Chaves no queda claro si es el niño o Pushaina quien vuela como gallinazo; se leyó como Pushaina porque la queja la pronuncia el visitado.
+- **el-indio-pushalna**: La ficha del expediente afirma que Pineda 1950 trae un relato sobre un individuo del clan Pushaina y el vaticinio de su muerte; el extracto disponible no lo contiene y no pudo cotejarse.
+- **el-indio-pushalna**: Las dos listas de animales (culebra/zorro/mapurito y gallinazo/ciempiés) no coinciden en el primario; se dejaron ambas sin explicar.
+- **el-indio-pushalna**: Editor: el episodio del ciempiés y las muchachas se retiró del Relato y se documentó en Versiones.
+- **el-origen-del-fuego**: La ficha anterior atribuía una versión a Perrin; Finol dice que la primera y la tercera son «según Paz Ipuana» y el Diccionario Jayeechi habla de tres versiones de Paz Ipuana. Se retiró la atribución a Perrin; conviene verificar si alguna colección de Perrin trae un mito del fuego.
+- **el-origen-del-fuego**: La primera versión (Ski holgazán) está truncada en el expediente y su desenlace se conoce solo por el resumen de Finol; la tercera (Kasémashi) solo por ese resumen.
+- **el-origen-del-fuego**: Finol escribe «Paz Iguana» en un pasaje; se asume errata por Paz Ipuana.
+- **el-origen-del-fuego**: El «olivo» del texto es nombre local de un árbol guajiro, no el olivo mediterráneo; no se glosó por falta de fuente en el expediente.
+- **el-origen-del-fuego**: «Abuelo» con que Junuunay llama a Maleiwa se leyó como tratamiento de respeto, no como parentesco.
+- **el-pequeno-indio-kosina**: La versión completa de Perrin (1986) no está en el expediente; sólo se usó su resumen de 1987.
+- **el-pequeno-indio-kosina**: Las grafías Jopomuy, Akuwa y jarareño provienen del OCR de Chaves 1946 y se conservan sin traducir; no se verificaron contra el impreso.
+- **el-pequeno-indio-kosina**: Chaves no da nombre de narrador para esta pieza en el fragmento disponible; Historia lo señala como ausencia.
+- **el-viaje-del-mas-alla**: El informe de Perrin (1975) hace volver a la esposa por la Vía Láctea; el texto de Luuka Iipuana la hace cruzar el mar. Se siguió el texto transcrito y se anotó la diferencia en Versiones.
+- **el-viaje-del-mas-alla**: Por el límite de 650 palabras se omitieron del Relato la glosa del narrador sobre las botellas de Juyá con sangre para Pulowi, el melón que la esposa lleva al mediodía y la mesa de alimentos que llegan solos; ninguno altera la secuencia.
+- **el-viaje-del-mas-alla**: Se usan las grafías del texto (Pulowi, Alekerü, yoluja, kusina, alijuna), que difieren de las de otras fichas del corpus (Pülowi, yolujaa).
+- **guanuru**: Pineda no narra una historia titulada Guanurú: el Relato es una puesta en escena de creencias documentadas; si el proyecto exige un cuento autónomo, no existe en el expediente.
+- **guanuru**: La ficha anterior decía que Pineda comparaba los wanurú con los lemures romanos; esa comparación no aparece en el OCR del capítulo disponible, por eso se retiró de Similitudes.
+- **guanuru**: El canto jirairay y la descripción del piache están en el capítulo de Pineda sobre el piache, no en el capítulo IX; se usaron porque el expediente los incluye como texto primario.
+- **guanuru**: No se georreferenció nada: la creencia doméstica no tiene lugar único, y Nazaret aparece sólo como localidad donde Pineda recogió otra leyenda.
+- **jirairay**: No existe un cuento autónomo de Jirairay: el Relato es una ceremonia compuesta con los elementos que Pineda describe, en una sola noche, sin nombres ni lugar. Si el sitio exige un texto tradicional íntegro, esta ficha no puede ofrecerlo.
+- **jirairay**: El género de la piache se tomó del cuento de Umaralá (la tía); Pineda escribe siempre “el piache”.
+- **jirairay**: Grafía: el Relato escribe wanurü (como el título de la ficha del corpus) y Historia/Versiones wanurú cuando citan a Pineda; unificar si el sitio prefiere una sola.
+- **jirairay**: No se pudo verificar en el texto de Chaves 1946 la grafía exacta del nombre (el OCR disponible no lo localiza); se citó a través de Pineda.
+- **la-chama**: Pineda 1947 no es consultable: el Relato reescribe la ficha actual sin añadir hechos, y no pudo comprobarse contra el original ningún episodio (por ejemplo, el ataque al niño o la dispersión de la familia).
+- **la-chama**: La ficha anterior remitía al corpus de Chaves 1946, pero el OCR de Chaves disponible no contiene el nombre de la Chama; Historia lo deja en duda en vez de afirmarlo.
+- **la-chama**: La forma de huevo, mencionada en la ficha anterior como repertorio atribuido, no está en el Relato porque tampoco estaba en su parte narrativa.
+- **la-india-worunka**: El expediente dice que la versión de Paz Ipuana de los mellizos transcrita por Finol contiene el episodio de Wolunka, pero el fragmento transcrito termina con los Hombres-Tigres y no llega a ese episodio; Versiones y Similitudes describen la línea Paz Ipuana/Perrin a partir de los resúmenes del Diccionario, Relatos con GPS y Carrasquero/Finol/García Gavidia, no del texto de Finol.
+- **la-india-worunka**: Los nombres de informante e intérprete (Juancito Iguarán, Roberto Iguarán) provienen de la ficha actual, no del fragmento de Chaves incluido en el expediente; se conservan porque la ficha los atribuye a Chaves 1946.
+- **la-india-worunka**: El primario no aclara si la piedra “parecida a la vulva de Worunka” y la Worunka “convertida en piedra” son la misma piedra; el Relato las identifica, lo que es la lectura más económica pero no está explícita.
+- **la-india-worunka**: El título del ítem del corpus sobre Juyá se cita como “Los dominios de Juya” según el listado de expedientes; no se verificó su contenido más allá del título.
+- **la-majayura-que-pierde-a-los-hombres**: El fragmento de Chaves en el expediente no trae informante ni intérprete para esta narración; Historia lo declara en vez de suponerlo.
+- **la-majayura-que-pierde-a-los-hombres**: La versión de Cora (Kuai-Mare, 1957) solo se conoce por su reproducción en un blog; no se pudo cotejar con el libro, y no se sabe si es independiente de Chaves.
+- **la-majayura-que-pierde-a-los-hombres**: No hay fuente que localice Puró más allá de “cerca de la costa” (Cora); Chaves solo implica que el mar está cerca.
+- **la-majayura-que-pierde-a-los-hombres**: “Los dominios de Juya” se cita por su título en el corpus; se usó únicamente para la oposición Juyá/Pulowi que documentan Lizot y el Diccionario, sin verificar el contenido de esa ficha.
+- **la-sed-da-los-civilizados**: El título en la transcripción de Chaves dice “La sed de los civilizados”; la ficha actual y el slug traen “La sed da (a) los civilizados”. Historia cita la forma de la transcripción; conviene confirmar contra el PDF cuál es la de 1946.
+- **la-sed-da-los-civilizados**: Katetamana no aparece en ninguna fuente del expediente; no se pudo ubicar.
+- **la-sed-da-los-civilizados**: El primario no dice qué pasó con la panela; el Relato no lo afirma.
+- **la-sed-da-los-civilizados**: Los ejemplos de Ovidio (Níobe, Bato, Anaxárete) se citan de memoria de las Metamorfosis, no de una edición del expediente.
+- **las-wanulus-y-el-valle-de-la-muerte**: No existe texto primario para esta trama; el Relato descansa en la ficha actual (circulación digital) y la matriz lo declara. Sigue en estado de documentación pendiente.
+- **las-wanulus-y-el-valle-de-la-muerte**: No se dispone del texto de la ficha original (anterior a la revisión que introdujo la consulta a mayores); Versiones describe ese primer estado a partir de lo que la ficha revisada dice de él, no del texto mismo.
+- **las-wanulus-y-el-valle-de-la-muerte**: Grafía: se mantuvo “wanurü” por el título de la ficha; el primario de contexto (Pineda) escribe wanurú y el Diccionario Wanülüü. Es una decisión de continuidad, no de fidelidad al primario.
+- **las-wanulus-y-el-valle-de-la-muerte**: El cuento del cazador de venados (Angola y Mejía) se conoce por el resumen del expediente, no por el artículo completo.
+- **los-dominios-de-juya**: El Relato se detiene antes de la visita de Maleiwa y del tesoro convertido en constelaciones para no repetir la ficha Ulépala; si se prefiere que esta ficha incluya ese tramo, cabe en el rango pero duplicaría el desenlace publicado allí.
+- **los-dominios-de-juya**: El primario dice que Ulépala tocaba la trompa y el taliray; no se identificó el instrumento y el Relato conserva sólo trompa con la grafía del texto.
+- **los-dominios-de-juya**: Los jóvenes-venados llevan tolomas en el primario; no se pudo determinar qué es una toloma y el Relato la sustituye por casquetes empenachados, que el mismo pasaje menciona.
+- **los-dos-hermanos**: El texto de 1946 llama indios a los enemigos; el Relato usa hombres y conserva casta en el sentido de linaje que Chaves explica. Si se prefiere mantener el término del primario, es un cambio de una palabra.
+- **los-dos-hermanos**: La contra que la hermana se aplica tres veces no se describe en el primario; el Relato la deja sin explicar y Similitudes remite a Umaralá.
+- **los-dos-hermanos**: Querosín y rifles son del texto de 1946 y se conservan; la ficha anterior los había cambiado por arco y flecha.
+- **los-mellizos-transformadores**: Grafía: el primario escribe WANULUU; el Relato usa Wanülüü, que es la forma del contrato, mientras el título de otra ficha del corpus dice Wanurü. Conviene unificar en la edición.
+- **los-mellizos-transformadores**: El dato del narrador Nicanor González (Uliana, Walerpa'a, 55 años) proviene de la ficha actual, que lo atribuye a Finol; la transcripción incluida no lo trae y no se pudo verificar en el expediente.
+- **los-mellizos-transformadores**: Se omitió del Relato la genealogía inicial (incesto de Mannuuya con Saiñ-Ma, Palla y Wawai) y la reyerta de los genios en la fiesta, por longitud; quedan atribuidas en Versiones.
+- **maleiwa**: Grafía: el Relato escribe Maleiwa, que es la del primario elegido (Perrin); el título de la ficha es Mareiwa por Chaves y Pineda. Hay que decidir si el Relato debe unificarse con el título.
+- **maleiwa**: Los episodios de Fulera y Cachicamo son de humillación sexual explícita en el primario; el Relato los conserva porque son etiológicos, pero con una formulación sobria (se le entregara, se dejó tomar, lo usó). Conviene que el editor confirme ese nivel para un sitio de público general.
+- **maleiwa**: El Relato comparte con Los mellizos transformadores el tramo de la madre devorada y el caldero; se distinguen por el primario y por el énfasis (aquí, la persecución de Jaguar), pero la superposición es inevitable si ambas fichas conservan un Relato completo.
+- **maleiwa**: Pineda atribuye el nacimiento de las olas y las nubes al hijo de Dios (Mareiwa) según una ficha de campo; la formulación es ambigua sobre si se trata de Mareiwa o de un hijo suyo, y Versiones lo presenta como nacimiento de Mareiwa siguiendo la lectura de la ficha actual.
+- **serranias-de-la-guajira**: El OCR de Chaves trae «Monkis» y la ficha anterior «Monkii»; se conservó la grafía del primario. Conviene cotejar con el PDF.
+- **serranias-de-la-guajira**: Chaves escribe «Mareiwa» en el texto y «Mareigua» en su introducción; el Relato usa Mareiwa y la Historia lo aclara.
+- **serranias-de-la-guajira**: El primario dice «vosotros os convertiréis en cerros»; se tradujo a «todos ustedes se convertirán» por la norma de español de Colombia sin voseo.
+- **serranias-de-la-guajira**: Editor: el Relato se cerró en la honda y Kasuto; el pasaje de la cueva, las castas y Arachí pasa íntegro a Creación Wayuu para no duplicarlo.
+- **ulepala**: La ficha anterior llamaba «araña» a la anciana que ayuda a huir; el texto de Paz Ipuana en Finol sólo dice «vieja» y «abuela» con un ovillo de hilo. Se retiró la identificación; confirmar si la versión de Perrin sí la hace araña antes de enlazarlo con Waleker.
+- **ulepala**: La ficha anterior mencionaba a Pülowi y «patillas»; ninguno está en el primario transcrito. Se retiraron.
+- **ulepala**: La ficha anterior atribuía la flecha a «Mareiwa»; el primario dice Maleiwa. Se usó Maleiwa.
+- **ulepala**: El primario está en 'vosotros'; los diálogos se pasaron a tuteo por la norma de español de Colombia sin voseo.
+- **ulepala**: El expediente no incluye el texto de la versión de Perrin: Versiones la describe a partir de la ficha anterior y de Finol, no del texto mismo.
+- **umarala**: El nombre anterior de Umaralá aparece en el OCR como «John Paurala»; se conservó así, pero la grafía es sospechosa (¿«Johnpaurala»?, ¿error de OCR?). Cotejar con el PDF.
+- **umarala**: El primario dice «el espíritu de allá, que era nada menos que Jirairaí»; el Relato lo conserva como voz nombrada y la Historia explica, con Pineda, que jirairay es el canto con que se llama a Wanurü. Si se prefiere que el Relato mismo diga Wanurü, habría que apartarse del primario.
+- **umarala**: La ficha anterior decía que Umaralá «rechazó una montura y caminó hasta la casa»; el primario dice que rechaza la mula, manda instrucciones y llega de noche como tropel de caballos con canto. Se siguió el primario.
+- **umarala**: El compañero de Macuira sólo recibe el nombre de Jururiana en el epílogo; el Relato lo deja innominado y Versiones lo enlaza con “El indio Jururiana”. Confirmar el título exacto de esa página en el sitio.
+- **umarala**: Kuai-Mare (De Cora 1972) sólo se vio en fragmentos; se presume derivado de Chaves, sin poder verificar si añade variantes.
+- **waleker-el-origen-del-tejido**: No hay primario consultable: el Relato se reescribió sobre la ficha actual, que a su vez se escribió sobre Paz Ipuana. Cualquier detalle de escena que no esté en la ficha (sombra del rancho, cardones) es licencia sensorial y puede retirarse.
+- **waleker-el-origen-del-tejido**: La ficha actual decía que el corazón de Irunúu quedó asociado «en algunas versiones» con una estrella fugaz; se dejó en Versiones con la atribución a Mercado Epieyu, no en el Relato.
+- **waleker-el-origen-del-tejido**: Aracne no está en el pool comparativo del expediente («ninguna»), pero la ficha anterior la mencionaba; se conservó como comparación breve con su diferencia. Retirarla si el pool debe ser estricto.
+- **waleker-el-origen-del-tejido**: La grafía de los nombres (Wokoloonat, Atía, Kanaspi, Wanurü) sigue la ficha actual; no pudo cotejarse con Paz Ipuana.

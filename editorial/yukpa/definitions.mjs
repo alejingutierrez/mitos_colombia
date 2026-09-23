@@ -3,31 +3,94 @@ import { defineYukpaMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineYukpaMyth({
     slug: "los-dos-caminos-del-cielo",
+    sourceKeys: [
+      {
+        key: "halbmayerTecendo2016",
+        summary:
+          "Es la fuente del episodio central. En las versiones irapa y sokorpa el firmamento estaba cerca de la tierra, hacía tanto calor que hervía el agua de ríos y lagunas y había dos soles en el cielo, de modo que nunca oscurecía; Amoricha disparó flechas de punta roma hechas con cera de abeja negra, el firmamento empezó a subir, y de un tiro en el ojo de uno de los soles ese sol se oscureció y se volvió la luna. Trae también la variante sokorpa, donde el relato se cuenta desde arriba y el propio dios-sol se dispara en el ojo con la flecha de mapicha, y la iroka, donde el héroe no dispara sino que teje las montañas, los árboles y las hojas para dar sombra. Da además la etimología de Amoricha y sus otros nombres: Otompa, Maipore, Aponto, Papsh tyos.",
+        limitation:
+          "Está escrito en portugués, con versión inglesa en la misma ficha del artículo. El campo es irapa, en Venezuela, e iroka y sokorpa, en Colombia, y el autor no nombra a los narradores de ninguna de las tres versiones que compara, de modo que la atribución individual falta.",
+      },
+      {
+        key: "halbmayermundo2025",
+        summary:
+          "Sostiene la segunda mitad del relato: la diferencia entre el Sol y la Luna como personas, el Sol isope —agresivo, antropófago, enemigo— frente a la Luna kowaso —gentil, que alimenta, esconde y se vuelve suegro—, el cazador perdido escondido en una de las vasijas de barro donde las hijas de la Luna se recogen en su primera sangre, y el primer eclipse cuando el Sol las destapa. Cita literalmente al autor irapa yukpa Javier Armato, de quien son los ríos hirviendo y la frase «porque el sol no respetó a las señoritas». Explica el eclipse como owaya inipi, el apagado del mundo, y la respuesta de gritar, golpear machetes y ollas y disparar contra el Sol y la Luna.",
+        limitation:
+          "Vecindad declarada: el material irapa es venezolano y los autores escriben desde Marburg. Armato 1988 y Wilbert 1974, que son las fuentes primarias de estos dos episodios, se citan con página pero no están digitalizados ni se pudieron abrir. El artículo trata de los daños del mundo, no del ciclo de origen, de modo que el episodio de los dos soles aparece de pasada.",
+      },
+      "mauriOfrendas2020",
+      {
+        key: "minCulturaYukpa",
+        summary:
+          "Publica un cuadro del cielo yukpa distinto del de las etnografías y por eso está en Versiones: dos soles que ascienden en el universo, Paphs como creador, sópasha como guardián del territorio, Tumanke como divinidad de la salud y de la vida y Yuwanano como deidad de las plantas medicinales; el Sol gobierna las estrellas y tiene de aliada a la gente jaguar, y la Luna vive con sus hijos, siembra batatas y yuca y juzga las almas camino de la tumba.",
+        limitation:
+          "Ninguno de esos nombres aparece en las versiones irapa, iroka o sokorpa recogidas en campo, y no se han podido contrastar: la síntesis procede de Jaramillo 1992 y del Consejo Superior de la Judicatura. Se cita atribuida y no se mezcla con el Relato.",
+      },
+      {
+        key: "planVidaYukpa",
+        summary:
+          "Confirma desde el lado colombiano que Aponto es el nombre actual del creador y recoge el episodio en que hace al hombre y a la mujer de madera y les da movimiento con la risa. Es el mismo héroe que aquí dispara al sol, bajo el nombre que usan los iroka y los sokorpa.",
+        limitation:
+          "Es un artículo de trabajo social sobre el plan de vida, no una etnografía del ciclo de origen: da el nombre y el episodio de la gente de madera, y nada sobre los dos soles ni sobre el eclipse.",
+      },
+      {
+        key: "goletzRecibiendo2020",
+        summary:
+          "Describe Sokorpa, la unidad territorial de la que procede la variante en que es el propio sol quien se dispara en el ojo, y el modo reservado en que allí se trata con lo que no es humano. Permite entender por qué esa versión se cuenta desde la perspectiva del dios-sol y no desde la tierra.",
+        limitation:
+          "No contiene el relato de los dos soles ni el del eclipse: se usa para situar la variante sokorpa y su manera de narrar, en una sola comunidad del municipio de Becerril. SciELO Colombia sirve este artículo sólo por http: la versión https no responde, y se prefiere el enlace que funciona al que se ve mejor.",
+      },
+      {
+        key: "correayukpa2023",
+        summary:
+          "Da el presente del territorio iroka, del que proceden algunas de las versiones comparadas, y está firmado también por dos personas yukpa del resguardo. Sirve para que el relato no se lea como pasado cerrado.",
+        limitation:
+          "Su objeto es el confinamiento durante la pandemia y el gobierno propio; no aporta material mítico ni discute los nombres del héroe cultural.",
+      },
+      {
+        key: "lecHisYup",
+        summary:
+          "Documenta el proceso de fijar por escrito la lengua yukpa y las decisiones ortográficas que las publicaciones actuales siguen. Se usa como control de las grafías de los nombres del relato, no como fuente narrativa.",
+        limitation:
+          "Es un documento de metodología de alfabetización y no contiene ninguna versión del ciclo de los soles ni de ningún otro. El módulo lo describía como «Lecturas históricas Yukpa» con una adaptación breve del ciclo de Mé: no es eso.",
+      },
+    ],
     title: "Los dos Soles y el nacimiento de la noche",
     excerpt:
       "Dos hermanos alumbran sin descanso hasta que el engaño de Kopeco transforma a uno en Luna y abre un tiempo de oscuridad.",
     tags: ["sol y luna", "noche", "transformación", "origen"],
-    mito: `Al comienzo había dos Soles. Eran hermanos y recorrían juntos el cielo. Su claridad no terminaba: no existía una noche que refrescara la tierra ni una oscuridad que separara un día del siguiente. El calor continuo hacía difícil la vida.
+    mito: `Había dos soles en el cielo y el cielo estaba bajo. Tan bajo que el calor no tenía por dónde escaparse: el agua de los ríos y de las lagunas hervía, y como los dos soles se turnaban sin dejar hueco, nunca oscurecía. No había noche, no había frío, no había una hora en que el cuerpo pudiera descansar. La tierra era angosta y era inhabitable.
 
-Kopeco, una mujer asociada con la rana en la versión compilada, quiso atraer a uno de los hermanos. Preparó un engaño junto a un lugar lleno de brasas y lo invitó a acercarse. El hermano solar cayó en el fuego. No murió, pero perdió la fuerza luminosa que lo hacía igual al otro.
+El que vino a arreglarlo se llama Amoricha entre los irapa. Tomó el arco y se puso a disparar hacia arriba. No eran flechas de matar: las puntas eran romas, hechas con cera de abeja negra, hechas para tocar y no para herir. Disparaba contra el cielo, y el cielo empezó a subir. Cada flecha lo empujaba un poco más, y entre la tierra y el firmamento se fue abriendo el espacio en el que después se podría vivir.
 
-Cuando salió de las brasas ya no podía alumbrar como antes. Su cuerpo conservaba una claridad más fría y débil. Ascendió de nuevo, esta vez convertido en Luna. Desde entonces los hermanos dejaron de recorrer el cielo al mismo tiempo y del mismo modo.
+Después apuntó a uno de los dos soles y le dio en el ojo. El sol herido se oscureció. No se apagó del todo ni cayó: se quedó arriba, con una luz distinta, fría, y desde entonces es la luna. Con esa puntería quedaron hechas de golpe todas las diferencias que faltaban: el día y la noche, el calor y el frío, lo seco y lo húmedo. Se pudo sembrar, se pudo dormir, se pudo contar el tiempo.
 
-La separación produjo una diferencia que el mundo necesitaba. El Sol siguió marcando la claridad y el calor. La Luna comenzó a transitar la oscuridad. Con ella aparecieron la noche, el descanso y una medida para los ritmos que antes no tenían pausa. Estudios posteriores relacionan esta diferenciación también con cambios estacionales y con el orden visible del cielo.
+Pero los dos que quedaron arriba no se hicieron iguales ni amigos. El Sol es bravo y come gente; anda de cacería y lo que persigue son personas. La Luna es mansa, da de comer y esconde. Un cazador que se perdió llegó a la casa de la Luna, y la Luna lo acogió, lo alimentó y lo escondió en una de las vasijas de barro donde sus hijas se recogen cuando les llega la primera sangre. El Sol vino detrás, olfateando, y se puso a destapar las vasijas una por una buscando al hombre. Las muchachas quedaron a la intemperie, descubiertas cuando nadie debía verlas.
 
-El relato no termina presentando a Kopeco como vencedora. En la versión publicada, el hermano transformado reconoce el engaño y la arroja al agua. Allí queda convertida en rana. Su voz continúa oyéndose desde los lugares húmedos y recuerda el episodio que rompió la claridad permanente.
+Entonces ellas le echaron las mantas encima a la cara de la Luna. Y así apareció el primer eclipse sobre la tierra, porque el Sol no respetó a las señoritas.
 
-La antigua ficha llamaba a esta historia Los dos caminos del cielo y añadía un abuelo narrador, una fogata y explicaciones que ninguna fuente identificaba. La URL se conserva, pero el relato vuelve a su núcleo documentado: dos hermanos solares, una trampa, el paso por las brasas y la aparición de Luna.
+Desde ese día las dos cosas están juntas. La noche existe porque una flecha oscureció un ojo, y el mundo se apaga cada vez que el Sol vuelve a abrir lo que no debía abrir. Cuando eso pasa, abajo la gente grita, golpea los machetes y las ollas y dispara hacia arriba: se está repitiendo el tiro que hizo la noche, y se está exigiendo que el mundo vuelva a quedar separado como quedó aquella vez.`,
+    historia: `El héroe que dispara no tiene un solo nombre, y eso no es un descuido de las fuentes. Los irapa lo llaman Amoricha; los iroka, Otompa. Hoy se lo nombra también Maipore entre los irapa, Aponto entre los iroka y los sokorpa, y Papsh tyos, Dios-padre, en un uso que muchos yukpa entienden como el mismo del Dios cristiano. Ernst Halbmayer, que analizó el conjunto en la Revista de Antropologia de la Universidad de São Paulo en 2016, muestra que Amoricha viene del verbo -amó-, con el sufijo -cha que marca a una persona fallecida: es el que tuvo el conocimiento para transformar, no una fuerza que engendra. Es también, en varias versiones, una araña y un aspecto del sol, que bajó a la tierra como un rayo en la neblina, en forma de hilo.
 
-No todas las versiones describen del mismo modo a Kopeco ni el momento exacto de la transformación. Coinciden, sin embargo, en que el mundo no adquiere su forma habitable por creación instantánea. Una diferencia se produce mediante conflicto y cambio: de dos luces semejantes surgen Sol y Luna, y entre ambos queda abierto el espacio de la noche.`,
-    historyCore:
-      "CORRECCIÓN INTEGRAL: conserva la URL heredada y el núcleo real de los dos Soles, pero elimina el marco ficticio del abuelo junto al fuego y distingue la compilación narrativa de los análisis etnográficos.",
-    versionCore:
-      "La compilación regional nombra a Kopeco y cuenta la caída en las brasas y su transformación en rana. Los estudios Irapa, Iroka y Sokorpa comparan la diferenciación Sol-Luna con otros cataclismos y no fijan una única secuencia.",
-    similarityCore:
-      "Relatos sobre dos astros originalmente semejantes aparecen en distintas tradiciones americanas, y la transformación de un hermano en Luna ofrece un motivo comparativo amplio. La versión Yukpa se reconoce por el exceso inicial de luz y calor, los hermanos solares, el engaño de Kopeco y el paso por las brasas. No es equivalente a cualquier historia de eclipse ni a una explicación astronómica moderna. Dentro del propio universo Yukpa, la diferenciación de los astros dialoga con los gemelos Yirhwach y con los ciclos que enlazan cielo nocturno, estaciones y lluvia, pero cada relato conserva protagonistas y consecuencias propias.",
+Halbmayer ordena la mitología yukpa publicada en cuatro complejos. El primero, del que sale esta página, cuenta la transformación del mundo y el establecimiento de la vida humana y animal. Los otros tres son el ciclo de los gemelos y el cielo nocturno, el origen de las plantas cultivadas y los relatos sobre los blancos y su tecnología. El material viene de campo en Irapa, en Venezuela, y en Iroka y Sokorpa, en el Cesar.
+
+Los dos episodios que aquí se juntan, la transformación de un sol en luna y el eclipse en casa de la Luna, los publicó Javier Armato, autor irapa yukpa, en Maracaibo en 1988: suyas son la descripción de los ríos hirviendo y la frase sobre el Sol que no respetó a las señoritas, que Halbmayer y Goletz citan literalmente en 2025. El episodio del cazador perdido está registrado además por Johannes Wilbert en el corpus que publicó en la Universidad de California en 1974. Conviene decirlo: la mayor parte de este ciclo se documentó del lado venezolano de la Serranía del Perijá, y llega al español a través de investigaciones escritas en inglés, alemán y portugués.
+
+El episodio pertenece a lo que los yukpa llaman owaya tamorhiya, el tiempo en que el mundo todavía estaba en formación. Halbmayer propone leer estas escenas no como creación desde la nada ni como apropiación de saberes ajenos, sino como transcreaciones: manipulaciones intencionadas que ajustan un mundo que ya existe. Disparar, aquí, no es matar. Es establecer contacto, transformar al otro y abrir la distancia que hace falta para que se pueda vivir.`,
+    versiones: `Los subgrupos no cuentan lo mismo ni se interesan por lo mismo. Las versiones irapa y, en parte, las sokorpa insisten en cómo unas condiciones hostiles se volvieron habitables. Las iroka insisten en cómo llegaron a existir los elementos básicos del mundo y cómo se hizo posible la reproducción.
+
+El mecanismo cambia con el subgrupo, y el cambio no es un detalle. En la versión irapa es Amoricha quien dispara y acierta en el ojo de uno de los soles. En la sokorpa, el mismo episodio se cuenta desde arriba y desde el otro lado: es el dios-sol quien habla, cansado de que le disparen desde la tierra, y termina disparándose él mismo en el ojo con la flecha de punta de mapicha; los sokorpa dicen que el sol era el ojo de Dios. En las versiones iroka no hay flecha: el héroe teje las montañas, los árboles y las hojas para dar sombra, y así le va formando al mundo sus contornos. Disparar y tejer no son la misma manera de hacer que algo ocurra, y las tres se dejan como están.
+
+La caracterización que publica el Ministerio de Cultura de Colombia ofrece un cuadro distinto del cielo: dos soles que ascienden en el universo, Paphs como creador, sópasha como guardián del territorio, Tumanke como divinidad de la salud y Yuwanano como deidad de las plantas medicinales. Allí el Sol gobierna las estrellas y tiene de aliada a la gente jaguar, y la Luna vive con sus hijos, siembra batatas y yuca y juzga las almas de los yukpa camino de la tumba. Ninguno de esos nombres aparece en las versiones irapa, iroka o sokorpa recogidas en campo, y no se mezclan con ellas.
+
+Hoy conviven dos lecturas del eclipse que las fuentes no dan por excluyentes: la que lo entiende como continuación de la pelea entre el Sol y la Luna, y la que, en contexto cristianizado, lo lee como castigo del dios creador ante una transgresión humana.`,
+    similitudes: `El primer paralelo está documentado por los propios etnógrafos del caso. Halbmayer y Goletz señalan que la reacción yukpa ante un eclipse —gritar, golpear machetes y ollas, disparar flechas contra el Sol y la Luna— es comparable a la de otros pueblos indígenas del continente, y remiten para ello al análisis que Lévi-Strauss hizo de ese conjunto de conductas. Lo que distingue al caso yukpa no es el ruido, sino que el ruido repite un gesto fundador: se vuelve a disparar lo que una vez hizo la noche.
+
+El segundo paralelo es una diferencia de fondo con la Amazonía. Halbmayer sostiene que estos relatos no son creaciones desde la nada ni apropiaciones de saberes ajenos, los dos modelos frecuentes en las narraciones amazónicas, sino transcreaciones: manipulaciones intencionadas que ajustan un mundo que ya existe. Ese rasgo es prominente entre los pueblos de habla chibcha del área istmo-colombiana, vecinos de los yukpa, y coloca este relato más cerca de ellos que de los pueblos caribes del sur con los que comparte lengua.
+
+Dentro del propio universo yukpa, la separación del Sol y la Luna es la misma operación que el diluvio deshace. Una establece diferencias y el otro las disuelve; el eclipse está en medio, como recaída. Conviene no confundir esta historia con cualquier explicación de las manchas lunares ni con un relato de eclipse sin más: aquí la luna no es un astro observado, es un hermano herido en el ojo, y el eclipse es una falta de respeto con consecuencias.`,
     leccion:
-      "Un mundo habitable necesita diferencias y pausas, aunque su aparición pueda nacer de una transformación conflictiva.",
+      "La diferencia entre el día y la noche no estaba dada: alguien tuvo que abrir la distancia.",
     sceneHorizontal:
       "dos discos solares hermanos recorren un cielo continuo sobre montañas recalentadas; en primer plano Kopeco señala un círculo de brasas estilizadas y una franja azul anuncia la futura noche",
     sceneVertical:
@@ -47,31 +110,66 @@ No todas las versiones describen del mismo modo a Kopeco ni el momento exacto de
   }),
   defineYukpaMyth({
     slug: "la-piedra-que-flota",
+    sourceKeys: [
+      "halbmayermundo2025",
+      "goletzRecibiendo2020",
+      {
+        key: "minCulturaYukpa",
+        summary:
+          "Aporta una versión distinta y por eso está en Versiones. Ordena la historia yukpa en ocho etapas y coloca el diluvio en la cuarta; en su síntesis del episodio del agua no son los armadillos los que resuelven, sino el pájaro carpintero, el tapir, el caimán, el cangrejo y la tortuga, que construyen muros para que las inundaciones no acaben con la gente. Da además territorio, lengua y cifras de población.",
+        limitation:
+          "Es un perfil institucional sin trabajo de campo propio: la síntesis mitológica la toma de Jaramillo 1992 y del Consejo Superior de la Judicatura, y no se ha podido contrastar con ninguna etnografía. Se cita como versión atribuida y no entra en el Relato.",
+      },
+      "halbmayerTecendo2016",
+      "correayukpa2023",
+      "halbmayerBailando2020",
+      {
+        key: "planVidaYukpa",
+        summary:
+          "Sitúa el territorio en el que ocurre el relato y lo que significa rehacerlo. Nombra los asentamientos yukpa de la Serranía del Perijá —El Kozo, Sokorpa, Caño Padilla, entre otros— y expone la relación entre territorio y buen vivir desde la que se entiende la reconstrucción del mundo después de la inundación.",
+        limitation:
+          "Es un artículo de trabajo social sobre el plan de vida, hecho con investigación acción participante; su único material narrativo es el origen de la gente de madera, que pertenece a otro ciclo. El módulo lo atribuía a «María Franco», que no es la autora.",
+      },
+      "bastidasEtnohistoria2013",
+    ],
     title: "El gran diluvio y las montañas del Perijá",
     excerpt:
       "La lluvia oscurece el mundo; quienes alcanzan las cumbres del Perijá sobreviven y los armadillos ayudan a retirar las aguas.",
     tags: ["diluvio", "agua", "montaña", "armadillo"],
-    mito: `Una lluvia extraordinaria comenzó a caer sobre el territorio. No terminó después de una tarde ni de una noche. En las versiones comparadas continuó durante semanas o meses, acompañada por una oscuridad prolongada. Los ríos crecieron, el agua cubrió lugares habitados y una parte del mundo quedó destruida.
+    mito: `La lluvia empezó y no paró. No fue una tarde de agua ni una crecida de invierno: cayó durante semanas y después durante meses, y con ella vino una oscuridad larga, una noche que no cedía. Los arroyos se volvieron ríos, los ríos se salieron, y el agua fue tapando los conucos, los caminos y las casas. Murieron muchas personas. Murieron también los árboles y los animales, y el mundo que con tanto trabajo había quedado repartido en tierra firme, monte y cauce volvió a ser una sola cosa revuelta.
 
-No todas las narraciones explican de la misma forma por qué llegó el diluvio. Algunas lo relacionan con una transgresión humana; otras cuentan que una montaña personificada, un tuwancha o una figura creadora advirtió a determinadas personas. El cataclismo no puede reducirse siempre a un castigo enviado por un dios único.
+En la Serranía del Perijá hay dos montañas que están por encima de todas las demás: Shkhimo y Tʉtarhi. En aquel tiempo no eran sólo piedra y niebla. Eran personas, y hablaron. Avisaron que subieran, y dijeron a cuál de las dos había que subir. Algunos oyeron y treparon hasta donde les dijeron. Otros no creyeron, o creyeron a medias, y se quedaron abajo, o escogieron por su cuenta el cerro que les quedaba más cerca y que no era el más alto. El agua los alcanzó allí.
 
-Quienes atendieron la advertencia buscaron altura. Las cumbres Shkhimo y Tütarhi, situadas en la serranía del Perijá, aparecen como refugios en las versiones publicadas. Mientras el agua ocupaba las tierras bajas, los sobrevivientes permanecieron arriba con aquello que podían proteger. La montaña no era un fondo decorativo: sostenía la posibilidad de que la vida continuara.
+Arriba, los que subieron esperaron. Vieron el agua debajo, quieta y sin orilla, sin saber cuánto duraría ni qué quedaría cuando bajara. Y no bajaba. La lluvia terminó y el agua siguió donde estaba, borrando la diferencia entre el monte y la sabana, entre lo que se siembra y lo que se navega.
 
-Cuando la lluvia cesó, todavía no era posible volver. El agua cubría las separaciones entre monte, cultivo y vivienda. Entonces intervinieron los armadillos. Cavaron, bebieron o condujeron el exceso hacia abajo, según la versión, hasta que reaparecieron superficies habitables. Su trabajo ayudó a distinguir otra vez tierra y agua.
+Entonces trabajaron los armadillos. En aquel tiempo los armadillos todavía no eran del todo animales: eran yukpapi, gente como la gente, y por eso podían hacer lo que hicieron. Cavaron. Abrieron por debajo el camino del agua y la hicieron hundirse. Donde pasó la garra apareció otra vez el suelo, y con el suelo volvió a haber una parte que es río y otra que es bosque, una que es sitio de vivir y otra que es sitio de sembrar. Sólo después de que la tierra quedó otra vez separada del agua los armadillos y los demás tomaron la forma de animales que hoy tienen.
 
-El mundo que quedó no era una copia intacta del anterior. Había escasez y era necesario reconstruir. Las personas debieron recuperar cultivos y relaciones con los seres que habían permitido la supervivencia. El diluvio funciona así como una de-creación parcial: no borra todo para comenzar desde cero, sino que daña un orden y obliga a rehacerlo.
+Lo que quedó no era lo mismo que había. No había qué comer. Hubo hambre. En algunos relatos, detrás de la inundación vino un incendio y una sequía que terminaron de castigar lo poco que se había salvado, y dejaron la tierra en pura roca, pelada, sin monte y sin dónde hacer conuco. Hubo que volver a empezar la siembra y volver a poner en su sitio cada cosa que el agua había mezclado.
 
-La ficha heredada hablaba de una piedra flotante empujada por animales, una pareja encerrada dentro y un venado guía. Esas escenas no aparecen en las fuentes Yukpa consultadas y habían sido descritas por la propia investigación anterior como una creación nueva. La URL no se despublica, pero su título y contenido quedan corregidos.
+Por eso no se cuenta como un final. Se cuenta como un daño: el mundo no se acabó ni se hizo de nuevo desde cero. Se estropeó, se deshizo en parte, y hubo que rehacerlo encima de lo que había quedado. El agua se acuerda, y la gente también.`,
+    historia: `Las versiones que sostienen esta página vienen de tres territorios yukpa distintos y de investigaciones largas: Irapa, en Venezuela, donde Ernst Halbmayer trabajó entre 1991 y 2009; Iroka, en el Cesar, entre 2009 y 2023; y Sokorhpa, en el municipio de Becerril, entre 2014 y 2022, donde trabajó Anne Goletz. Las dos montañas Shkhimo y Tʉtarhi, la instrucción de subir y la intervención de los armadillos aparecen comparadas en el artículo que ambos publicaron en 2025 en la Revista Española de Antropología Americana.
 
-Lo que permanece es el ciclo documentado: lluvia y oscuridad prolongadas, refugio en las montañas del Perijá, diferencias sobre la advertencia, descenso de las aguas con ayuda de armadillos y una restauración que nunca elimina la memoria del daño.`,
-    historyCore:
-      "REEMPLAZO DOCUMENTADO SIN DESPUBLICAR: la piedra flotante era una invención editorial admitida en el expediente anterior. La página conserva su slug para no romper enlaces y publica en su lugar el diluvio Yukpa.",
-    versionCore:
-      "Cambian la causa del diluvio, la figura que advierte, las personas que sobreviven y la acción precisa de los armadillos. La revisión mantiene Shkhimo y Tütarhi donde el estudio las registra y no presenta una variante como doctrina común.",
-    similarityCore:
-      "Los diluvios aparecen en numerosas tradiciones indígenas y religiosas, pero la semejanza de una inundación no vuelve intercambiables sus causas ni sus sobrevivientes. El ciclo Yukpa se distingue por la oscuridad prolongada, las montañas altas de la serranía del Perijá y la participación de armadillos en el retiro de las aguas. El énfasis en un mundo dañado y parcialmente restaurado también lo separa de relatos donde toda la creación comienza otra vez. La página no lo fusiona con el mito muisca de Bochica, con el arca bíblica ni con historias amazónicas de árboles que liberan agua.",
+Hay nombres detrás de cada pieza. La frase que cierra el episodio la dice un narrador irapa, Kumateta: «Ovaya nüpünmanak, nopa nükünni prak oran ka psek ok ka nech kamashru» —se salvó la tierra, y quien lo arregló era el armadillo—. La transcripción del material en lengua yukpa la hizo Diomedes de Jesús Bernal Fernández, llamado Tintin, de la comunidad Los Granados, en Sokorhpa. De Sokorhpa son también Darwin Pérez Restrepo, Luka, que aportó las encuestas sobre el daño del mundo, y Ángel Pérez Restrepo, que expuso el tema en la Universidad del Magdalena el 28 de febrero de 2023. En 2015, los estudiantes de la escuela bilingüe Santa Teresita de Sokorhpa dibujaron la inundación en un taller dirigido por Gilberto Rodríguez López.
+
+Detrás de ese trabajo reciente hay un corpus anterior, casi todo venezolano y casi todo en inglés o alemán: las narraciones que Johannes Wilbert publicó en 1974 en la Universidad de California, las que reunió el autor irapa yukpa Javier Armato en Maracaibo en 1988, la compilación de Vannini y Armato de 2001, la etnografía de Ángel Acuña Delgado de 1998 y el estudio de Dionisio Castillo de 2016. Esa vecindad importa: buena parte del ciclo se documentó del lado venezolano de la Serranía, y lo que aquí se lee llega traducido dos veces.
+
+El diluvio no es en este corpus un episodio suelto. Los yukpa distinguen owaya tamorhiya, el tiempo en que el mundo todavía estaba en formación, de owaya akayi, el mundo que se daña: la disolución parcial de las diferencias que costó trabajo establecer. La inundación es la manifestación más completa de lo segundo, y por eso el relato no termina con la salvación de unos pocos sino con la obligación de volver a separar lo que el agua mezcló. En Sokorhpa, hoy, esa misma clave se aplica a las lluvias que llegan a destiempo y a las inundaciones de las zonas bajas, atribuidas a la deforestación, las quemas, la minería, el desvío de ríos y la agricultura industrial.`,
+    versiones: `Las versiones no coinciden en quién avisa. En algunas regiones, y sobre todo en Sokorhpa, son las propias montañas Shkhimo y Tʉtarhi, pensadas como personas, las que instruyen. En otras avisa un tuwancha, uno de los especialistas yukpa que saben tratar con lo que no es humano. En otras es el creador deificado. La página narra la primera y no las funde.
+
+Tampoco coinciden en la causa, y el desacuerdo es de fondo. En muchas versiones sencillamente no se menciona ninguna. Ángel Acuña Delgado subraya en 1998 que la inundación yukpa, a diferencia de la bíblica, no se entiende como castigo divino. Las pocas versiones que sí dan una causa la atribuyen al quebrantamiento de la prohibición del incesto, según registran Ruddle y Wilbert y también Castillo, lo que enlaza el diluvio con el eclipse. Y hay versiones cristianizadas donde el reparto es moral: los buenos son llevados al cerro más alto y los que pelean o roban, al más bajo, donde se ahogan.
+
+Cuál de las dos montañas es la más alta depende de dónde esté el territorio desde el que se cuenta: en unos relatos es Shkhimo, en otros Tʉtarhi.
+
+La caracterización que publica el Ministerio de Cultura de Colombia ordena la historia yukpa en ocho etapas y coloca el diluvio en la cuarta; en la síntesis que recoge de Jaramillo no son los armadillos quienes resuelven, sino el pájaro carpintero, el tapir, el caimán, el cangrejo y la tortuga, que levantan muros para que las inundaciones no acaben con la gente. Es otra versión, y se registra como tal.
+
+El incendio y la sequía que siguen a la inundación aparecen sólo en algunas narraciones. Se marcan como tales y no se convierten en parte obligatoria del ciclo.`,
+    similitudes: `El paralelo más instructivo es también el más cercano, y es de contraste. Halbmayer y Goletz sitúan a los yukpa en el área istmo-colombiana y los comparan con sus vecinos de habla chibcha de la Sierra Nevada de Santa Marta, que sí se sienten responsables de sostener el equilibrio del mundo mediante rituales en los que se transfiere vitalidad a los padres originales para evitar su fin. Entre los yukpa no hay ese encargo ni hay un fin del mundo general: hay daños parciales y selectivos. El diluvio es el más grande de esos daños, no un apocalipsis.
+
+El segundo paralelo documentado es el diluvio bíblico, y Acuña Delgado lo trae precisamente para separarlos: la inundación yukpa no funciona como sanción de una divinidad ofendida. Que dos relatos tengan agua, montaña y sobrevivientes no los vuelve la misma historia, y la versión cristianizada que reparte buenos y malos entre dos cerros se reconoce como préstamo tardío, no como núcleo.
+
+Dentro de la propia tradición yukpa, el diluvio se enlaza con el eclipse: las pocas versiones que le atribuyen una causa la ponen en la transgresión de la prohibición del incesto, la misma que se invoca cuando el mundo se apaga. Los dos episodios describen lo mismo desde ángulos distintos, la disolución de diferencias que costó trabajo establecer, y por eso se leen juntos sin confundirse.`,
     leccion:
-      "Sobrevivir a una ruptura exige escuchar advertencias, cuidar refugios y reconstruir las relaciones que sostienen la vida.",
+      "Un mundo dañado no vuelve a empezar de cero: se rehace encima de lo que quedó.",
     sceneHorizontal:
       "lluvias densas cubren los valles mientras dos cumbres verdes del Perijá emergen sobre un mar de capas azules y pequeños grupos permanecen protegidos en lo alto",
     sceneVertical:

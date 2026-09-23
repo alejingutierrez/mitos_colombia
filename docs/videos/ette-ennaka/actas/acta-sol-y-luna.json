@@ -1,31 +1,139 @@
 {
   "schema": "acta-de-reduccion-v1",
-  "mito": "sol-y-luna", "comunidad": "ette-ennaka",
+  "mito": "sol-y-luna",
+  "comunidad": "ette-ennaka",
   "canon_slug": "sol-y-luna",
-  "canon_sha256": "58ba480bf2f956aa95477c132a698cb3108bee2bf5da24ab0545a47121196d97",
+  "canon_sha256": "9fc85b422e29b02cbd0ecefd40b3884015505e129d885dbc7f3be25d73c7ef65",
   "nudos": [
-    { "id": "n01", "nudo": "Sol y Luna son hermanos, y Luna es el hermano mayor", "evidencia": "Sol y Luna son hermanos. En el relato de Tangrutaya Mutsu, Luna es el hermano mayor" },
-    { "id": "n02", "nudo": "Sol es hermana mucho más joven, y es la tercera que ocupa el cielo", "evidencia": "Sol es una hermana mucho más joven y no es la primera que ha ocupado el cielo: la luz actual corresponde a la tercera hermana" },
-    { "id": "n03", "nudo": "Los dos soles anteriores envejecieron y murieron cuando se acabó su familia", "evidencia": "Los dos soles anteriores envejecieron y murieron cuando se acabó su familia" },
-    { "id": "n04", "nudo": "El orden celeste es una sucesión, no una pareja inmóvil desde siempre", "evidencia": "el orden celeste como una sucesión, no como una pareja inmóvil desde el comienzo del tiempo" },
-    { "id": "n05", "nudo": "El primer Sol salía por donde ahora termina el día", "evidencia": "El primer Sol salía por el lugar donde ahora termina el día" },
-    { "id": "n06", "nudo": "Con él cada día duraba cuatro años y se podía trabajar sin que llegara la noche", "evidencia": "cada día duraba cuatro años. La gente podía trabajar durante aquel tiempo prolongado sin que llegara la noche" },
-    { "id": "n07", "nudo": "El segundo Sol aparecía detrás de la Sierra Nevada y sus días duraban un año", "evidencia": "Este aparecía detrás de la Sierra Nevada y sus días duraban un año" },
-    { "id": "n08", "nudo": "Finalmente llegó el Sol de ahora, que sale por el lugar actual", "evidencia": "Finalmente llegó el Sol que se ve ahora y comenzó a salir por el lugar actual" },
-    { "id": "n09", "nudo": "No hay batalla ni se explica cómo murieron: sólo tres edades y tres amaneceres", "evidencia": "no explica la transición mediante una batalla ni describe cómo murieron las hermanas anteriores" },
-    { "id": "n10", "nudo": "Hacia el norte el Sol ya no sirve porque allí termina la tierra", "evidencia": "Hacia el norte, dice, el Sol ya no sirve porque allí termina la tierra" },
-    { "id": "n11", "nudo": "Hacia el sur se extienden tierra, monte y gente", "evidencia": "hacia el sur se extienden tierra, monte y gente" },
-    { "id": "n12", "nudo": "De noche la hermana Sol duerme, y a veces se enferma y no quiere salir", "evidencia": "De noche, la hermana Sol duerme. A veces se enferma y no quiere salir" },
-    { "id": "n13", "nudo": "Cuando eso pasa, los Ette sienten miedo ante la ausencia de la luz", "evidencia": "los Ette sienten miedo ante la ausencia de la luz" }
+    {
+      "id": "n01",
+      "nudo": "Sol y Luna son hermanos; Luna es el hermano y es mucho más viejo",
+      "evidencia": "Luna es el hermano y es mucho más viejo."
+    },
+    {
+      "id": "n02",
+      "nudo": "Sol es la hermana y es mucho más joven: hace poco que nació",
+      "evidencia": "Sol es la hermana y es mucho más joven: hace poco que nació."
+    },
+    {
+      "id": "n03",
+      "nudo": "Y no es la primera: es ya la tercera hermana",
+      "evidencia": "Es ya la tercera hermana."
+    },
+    {
+      "id": "n04",
+      "nudo": "Antes de ella hubo otros dos soles",
+      "evidencia": "Antes de ella hubo otros dos soles."
+    },
+    {
+      "id": "n05",
+      "nudo": "Los dos sirvieron mientras estuvieron nuevos y ya no sirvieron cuando estuvieron viejos",
+      "evidencia": "Los dos sirvieron mientras estuvieron nuevos y ya no sirvieron cuando estuvieron viejos."
+    },
+    {
+      "id": "n06",
+      "nudo": "Se acabó su familia y entonces se murieron",
+      "evidencia": "Se acabó su familia y entonces se murieron."
+    },
+    {
+      "id": "n07",
+      "nudo": "De esos dos no queda nada en el cielo: cada uno tuvo su tiempo y cada uno se acabó",
+      "evidencia": "De esos dos no queda nada en el cielo"
+    },
+    {
+      "id": "n08",
+      "nudo": "El primer Sol salía por allá, por donde ahora se acaba el día",
+      "evidencia": "El primer Sol salía por allá, por donde ahora se acaba el día."
+    },
+    {
+      "id": "n09",
+      "nudo": "Mientras ese Sol anduvo por el cielo, los días duraban cuatro años",
+      "evidencia": "Mientras ese Sol anduvo por el cielo, los días duraban cuatro años."
+    },
+    {
+      "id": "n10",
+      "nudo": "Todo ese tiempo había día, y así los indios podían trabajar todo el tiempo con día",
+      "evidencia": "Así los indios podían trabajar todo el tiempo con día."
+    },
+    {
+      "id": "n11",
+      "nudo": "Más tarde, Papá Grande hizo salir al segundo Sol por otra parte: detrás de la Sierra Nevada",
+      "evidencia": "Papá Grande hizo salir al segundo Sol por otra parte"
+    },
+    {
+      "id": "n12",
+      "nudo": "Con ese Sol los días ya no duraban cuatro años sino uno",
+      "evidencia": "Con ese Sol los días ya no duraban cuatro años sino uno."
+    },
+    {
+      "id": "n13",
+      "nudo": "Por fin ese Sol también cambió, y desde entonces el sol sale por donde lo vemos salir hoy",
+      "evidencia": "desde entonces el sol sale por donde lo vemos salir hoy"
+    },
+    {
+      "id": "n14",
+      "nudo": "Tres veces ha salido el sol por lugares distintos",
+      "evidencia": "ha salido el sol por lugares distintos"
+    },
+    {
+      "id": "n15",
+      "nudo": "Cada vez que cambió el lugar de la salida cambió también lo que duraba un día",
+      "evidencia": "cada vez que cambió el lugar de la salida cambió también lo que duraba un día"
+    },
+    {
+      "id": "n16",
+      "nudo": "Allá por el norte el Sol no sirve, porque por allá se acaba la tierra",
+      "evidencia": "No sirve porque por allá se acaba la tierra."
+    },
+    {
+      "id": "n17",
+      "nudo": "Por el sur es distinto: hay tierra y tierra, y mucho monte, y mucho indio",
+      "evidencia": "por el sur hay tierra y tierra, y mucho monte, y mucho indio"
+    },
+    {
+      "id": "n18",
+      "nudo": "De noche el Sol no anda por el cielo: de noche el Sol duerme, porque es mujer",
+      "evidencia": "De noche el Sol duerme, porque es mujer."
+    },
+    {
+      "id": "n19",
+      "nudo": "Y a veces está enferma y no quiere salir",
+      "evidencia": "Y a veces está enferma y no quiere salir."
+    },
+    {
+      "id": "n20",
+      "nudo": "No sale, y entonces no llega el día",
+      "evidencia": "No sale, y entonces no llega el día."
+    },
+    {
+      "id": "n21",
+      "nudo": "Mientras la hermana no sale, los indios tienen mucho miedo",
+      "evidencia": "Mientras la hermana no sale, los indios tienen mucho miedo."
+    }
   ],
   "deslindes": [
-    "La ficha antigua convirtió esto en una «danza cósmica» con fragilidad y renovación heroica. Nada de eso está en el cuento y no puede volver: el relato sólo marca tres edades de la luz y tres orientaciones del amanecer.",
-    "La Luna es masculina y la Sol femenina. No invertirlo ni neutralizarlo."
+    "Luna es MASCULINO y viejo; Sol es FEMENINA y recién nacida. El canon lo dice dos veces y lo usa al final para explicar por qué duerme. No se invierte.",
+    "Los soles NO mueren en una batalla: sirvieron mientras estuvieron nuevos, dejaron de servir cuando estuvieron viejos, se acabó su familia y se murieron.",
+    "De los dos soles anteriores NO QUEDA NADA en el cielo. La imagen no puede mostrarlos como astros apagados ni como restos visibles.",
+    "El cambio del lugar de salida y el cambio de la duración del día van juntos: cuatro años, un año, y lo de ahora. Son dos caras del mismo cambio.",
+    "El norte NO es un punto cardinal cualquiera: allá se acaba la tierra y por eso el Sol no sirve. El sur es lo contrario, tierra y tierra y mucho indio.",
+    "El miedo es concreto y presente: mientras la hermana no sale, no llega el día. No es presagio ni castigo, es una enferma que no se levanta.",
+    "La ficha anterior hablaba de «danza cósmica» y de renovación heroica. El canon lo retira; aquí hay tres soles que se gastaron como se gasta cualquiera."
   ],
   "descartes": [
-    { "que": "La aclaración de que «cuatro años» no debe leerse como medida astronómica exacta", "razon": "Es nota de lectura del expediente: dentro del relato la cifra comunica duración extraordinaria y así se narra." },
-    { "que": "El nombre del narrador, Tangrutaya Mutsu", "razon": "Es atribución de fuente y ocuparía uno de los dos nombres propios que admite el guion; queda en el acta y en la biblia." }
+    {
+      "que": "La enumeración de las tres salidas repetida una por una al final del canon",
+      "razon": "Fórmula oral de recapitulación. El guion la conserva como afirmación —tres veces por lugares distintos— sin volver a listarlas."
+    },
+    {
+      "que": "Que cada uno de los dos soles tuvo su tiempo y cada uno se acabó",
+      "razon": "Espacio. El bloque conserva que de esos dos no queda nada en el cielo, que dice lo mismo."
+    },
+    {
+      "que": "El cierre «Así dijeron y así es»",
+      "razon": "Fórmula de clausura del narrador. Se conserva como cita en el último bloque, que es donde cierra."
+    }
   ],
-  "N_propuesto": 10,
-  "razon_N": "Trece nudos en tres tiempos: el parentesco, las tres edades de la luz y la geografía con el miedo final. Nueve bloques obligarían a fundir dos edades del Sol, que son el corazón del cuento. Diez dejan una por bloque. Veinte cuadros, unos 100 s."
+  "N_propuesto": 11,
+  "razon_N": "Veintiún nudos. El canon reescrito desarrolla las tres edades de la luz una por una, con su lugar de salida y su duración, y cierra con la hermana que duerme y se enferma. N = techo(21/2) = 11 bloques, 22 cuadros, ≈110 s."
 }

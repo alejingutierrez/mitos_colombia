@@ -59,18 +59,137 @@ test("los siete expedientes Tucano cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
-    assert.equal(new Set(urls).size, 7);
+    // Antes: `keySources + sources === 7` y `new Set(urls).size === 7`. Ese
+    // siete era el dossier fijo que `pickTucanoSources` armaba con un solo
+    // interruptor, escrito como aserción; las siete fichas citaban las mismas
+    // ocho URLs heredadas y ninguna era la obra que la ficha había usado. La
+    // Fase B del 2026-09-19 dejó las cinco obras del corpus, pero ordenadas
+    // por ficha: primero las que esa página usó. Lo que se comprueba ahora es
+    // la sustancia, y el orden lo comprueba el test siguiente.
+    const fuentes = [...record.keySources, ...record.sources];
+    const urls = fuentes.map(({ url }) => url);
+    assert.ok(
+      fuentes.length >= 5,
+      `${record.slug}: ${fuentes.length} fuentes, el mínimo son cinco`,
+    );
+    assert.equal(record.keySources.length, 3);
+    assert.equal(new Set(urls).size, urls.length);
+    assert.ok(urls.every((url) => url.startsWith("https://")));
+    assert.ok(fuentes.every(({ summary, limitation }) => summary && limitation));
   }
 });
 
-test("corrige duplicados, atribuciones y contenido sintético", () => {
-  const bySlug = new Map(records.map((record) => [record.slug, record]));
-  assert.equal(
-    bySlug.get("cuando-la-danta-perdio-su-hegemonia").title,
-    "Boraró y Boraró Numió",
+test("las fuentes son las cinco obras leídas, y la vecindad va escrita", () => {
+  const todas = records.flatMap((record) => [
+    ...record.keySources,
+    ...record.sources,
+  ]);
+  const porUrl = new Map(todas.map((fuente) => [fuente.url, fuente]));
+  const urls = [...porUrl.keys()].sort();
+  // Eran exactamente las cinco obras de la ronda de septiembre. La Fase B del
+  // cierre (2026-09-22) sumó fuentes nuevas por ficha; las cinco siguen todas.
+  for (const base of [
+    "https://acervo.socioambiental.org/acervo/livros/antes-o-mundo-nao-existia-mitologia-dos-antigos-desana-kehiripora-2a-ed-rev-ampl",
+    "https://revistas.icanh.gov.co/index.php/rca/article/view/1801",
+    "https://revistas.icanh.gov.co/index.php/rca/article/view/1865",
+    "https://revistas.unal.edu.co/index.php/imanimundo/article/view/74221",
+    "https://revistas.unal.edu.co/index.php/maguare/article/view/29-51",
+  ]) {
+    assert.ok(urls.includes(base), `falta una de las cinco obras leídas: ${base}`);
+  }
+
+  // Las ocho heredadas no vuelven: no eran las obras que la ficha usó, y la de
+  // Icesi además no respondía.
+  for (const muerta of [
+    "repository.icesi.edu.co",
+    "acervo.socioambiental.org/acervo/livros/povo-tukano",
+    "pesquisa.museudoindio.gov.br",
+    "gov.br/funai",
+    "povosindigenas.org.br",
+    "sag-ssa.ch",
+    "cambridge.org",
+  ]) {
+    assert.ok(
+      !urls.some((url) => url.includes(muerta)),
+      `volvió una URL retirada: ${muerta}`,
+    );
+  }
+
+  // Fulop es la fuente madre: ninguna ficha se sostiene sin él.
+  for (const record of records) {
+    assert.ok(
+      [...record.keySources, ...record.sources].some(({ url }) =>
+        url.includes("revistas.icanh.gov.co"),
+      ),
+      `${record.slug} no cita a Fulop`,
+    );
+  }
+
+  // Y la reserva que el propio Fulop escribió, y la doble vecindad de las dos
+  // obras brasileñas, quedan en el `limitation`, que no se pinta en la página.
+  assert.match(
+    porUrl.get("https://revistas.icanh.gov.co/index.php/rca/article/view/1865")
+      .limitation,
+    /un solo informante/i,
   );
+  assert.match(
+    porUrl.get("https://revistas.unal.edu.co/index.php/imanimundo/article/view/74221")
+      .limitation,
+    /brasile/i,
+  );
+  const desana = porUrl.get(
+    "https://acervo.socioambiental.org/acervo/livros/antes-o-mundo-nao-existia-mitologia-dos-antigos-desana-kehiripora-2a-ed-rev-ampl",
+  );
+  assert.match(desana.limitation, /desana, no tucano/i);
+  assert.match(desana.limitation, /brasile/i);
+
+  // Y el orden ya no es uno solo para las siete: cambia por ficha, y con él
+  // cambian las tres fuentes clave, que son las que esa página usó.
+  const claves = records.map((record) =>
+    record.keySources.map(({ url }) => url).join("|"),
+  );
+  assert.ok(
+    new Set(claves).size >= 4,
+    "las siete fichas destacan las mismas tres fuentes clave",
+  );
+
+  // Las obras que una ficha no usó lo dicen en su propia entrada; las que sí,
+  // no arrastran esa frase.
+  for (const record of records) {
+    for (const fuente of record.keySources) {
+      assert.doesNotMatch(
+        fuente.limitation,
+        /No se usó para escribir esta ficha/,
+        `${record.slug}: una fuente clave se declara no usada`,
+      );
+    }
+  }
+  const marcadas = records.flatMap((record) =>
+    record.sources.filter(({ limitation }) =>
+      /No se usó para escribir esta ficha/.test(limitation),
+    ),
+  );
+  assert.ok(
+    marcadas.length >= 7,
+    "ninguna ficha declara qué obra del corpus no la alimentó",
+  );
+});
+
+test("el título de cada página dice de qué trata su dirección", () => {
+  const bySlug = new Map(records.map((record) => [record.slug, record]));
+  // Esta dirección llevaba el título «Boraró y Boraró Numió» y contaba a Boraró,
+  // aunque el slug nombra a la danta. La reescritura del 2026-09-19 devolvió a
+  // Wejké y su pito a la dirección que los nombra; Boraró quedó resumido en
+  // Versiones y, si se quiere publicar entero, necesita URL propia.
+  const danta = bySlug.get("cuando-la-danta-perdio-su-hegemonia");
+  assert.match(danta.title, /danta|Wejk[eé]/i);
+  assert.match(danta.mito, /Wejk[eé]/);
+  assert.doesNotMatch(danta.title, /Borar[oó]/i);
+
+  // Yepá Uejkeó, con u: así la escribe Fulop. La ficha decía «Vejkeó».
+  const yuca = bySlug.get("la-semilla-de-la-yuca-tucano");
+  assert.match(yuca.title, /Yep[aá] Uejke[oó]/);
+
   assert.equal(
     bySlug.get("el-origen-del-hombre").title,
     "La Canoa de Transformación y el origen de los pueblos",
@@ -83,13 +202,21 @@ test("corrige duplicados, atribuciones y contenido sintético", () => {
     bySlug.get("yepa-castiaga-a-los-animales").title,
     "Yepá Huáke y la transformación de los animales",
   );
-  assert.equal(
-    bySlug.get("la-semilla-de-la-yuca-tucano").title,
-    "Yepá Vejkeó y la semilla de la yuca",
-  );
   assert.doesNotMatch(
     bySlug.get("la-aparicion-del-sol-del-viento-y-los-mares").mito,
-    /\bPaola\b|\bBeatriz\b|\bZabulón\b/,
+    /\bPaola\b|\bBeatriz\b|\bZabul[oó]n\b/,
+  );
+});
+
+test("las siete fichas nombran a quien narró el corpus", () => {
+  // Fulop recogió todo de Marcos Sierra, en Guadalajara sobre el río Paca, con
+  // su hermano Manuel de intérprete. Ninguna ficha lo decía.
+  const conNarrador = records.filter((record) =>
+    /Marcos Sierra/.test(`${record.historia}\n${record.versiones}`),
+  );
+  assert.ok(
+    conNarrador.length >= 6,
+    `sólo ${conNarrador.length} de ${records.length} nombran a Marcos Sierra`,
   );
 });
 
@@ -133,6 +260,10 @@ test(
         assert.equal(digest(editorialPrompt), item.editorialPromptSha256);
         assert.equal(digest(item.generationPrompt), item.generationPromptSha256);
         assert.equal(item.url, media[orientation]);
+        // `sourceUrls` es el acta de lo que se citaba el día en que se generó
+        // la imagen: siete URLs, el dossier fijo de entonces. Se comprueba tal
+        // cual porque describe el pasado; el reparto vivo lo comprueban los
+        // dos primeros tests.
         assert.equal(item.sourceUrls.length, 7);
       }
     }

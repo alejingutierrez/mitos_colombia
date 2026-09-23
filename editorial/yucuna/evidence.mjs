@@ -64,7 +64,6 @@ export const yucunaEvidenceMatrix = {
       sourceKeys: [
         "fontaine2014",
         "vanDerHammen1992",
-        "onicYucuna",
       ],
     },
     {
@@ -118,13 +117,21 @@ export function assertYucunaEvidenceMatrix() {
     if (rows.length < 3) {
       throw new Error(`${slug}: matriz de evidencia insuficiente.`);
     }
+    // Exigir tres fuentes por fila no da triangulación: da relleno, y obliga a
+    // repetir la misma obra en filas donde no dice nada. Lo que sí se exige es
+    // que ninguna fila vaya sin fuente y que la ficha entera no descanse en
+    // una sola obra.
     for (const row of rows) {
-      if (!row.claim || row.sourceKeys.length < 3) {
-        throw new Error(`${slug}: fila de evidencia incompleta.`);
+      if (!row.claim || !row.sourceKeys.length) {
+        throw new Error(`${slug}: fila de evidencia sin fuente.`);
       }
       if (new Set(row.sourceKeys).size !== row.sourceKeys.length) {
         throw new Error(`${slug}: fuente repetida en una fila.`);
       }
+    }
+    const obras = new Set(rows.flatMap((row) => row.sourceKeys));
+    if (obras.size < 3) {
+      throw new Error(`${slug}: la ficha entera descansa en ${obras.size} obra(s).`);
     }
   }
   return true;

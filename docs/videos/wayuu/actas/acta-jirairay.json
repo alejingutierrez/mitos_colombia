@@ -1,44 +1,150 @@
 {
-  "schema": "acta-de-reduccion-v1", "mito": "jirairay", "comunidad": "wayuu",
+  "schema": "acta-de-reduccion-v1",
+  "mito": "jirairay",
+  "comunidad": "wayuu",
   "canon_slug": "jirairay",
-  "canon_sha256": "c4c3f43c92c7652e41f5bf25f442afd480b30a7887027b092c6474b4b3df2061",
+  "canon_sha256": "51d615153dc35c9978e7857c83e76da79d162f46c4fea411962209d3cb416b45",
   "nudos": [
-    { "id": "n01", "nudo": "Una persona enfermó durante una temporada de fiebre", "evidencia": "Una persona enfermó durante una temporada de fiebre" },
-    { "id": "n02", "nudo": "La familia llamó a una piache y preparó el espacio alrededor del chinchorro", "evidencia": "La familia llamó a una piache y preparó el espacio alrededor del chinchorro" },
-    { "id": "n03", "nudo": "La especialista tomó su maraca, mascó tabaco según la práctica registrada y empezó a cantar", "evidencia": "La especialista tomó su maraca, mascó tabaco según la práctica registrada y empezó a cantar" },
-    { "id": "n04", "nudo": "En el canto se repetía una palabra: Jirairay", "evidencia": "En el canto se repetía una palabra: Jirairay" },
-    { "id": "n05", "nudo": "Quienes escuchaban desde afuera pensaron que era el nombre de un espíritu llegado a disputar el cuerpo", "evidencia": "pensaron que era el nombre de un espíritu que había llegado a disputar el cuerpo" },
-    { "id": "n06", "nudo": "Años después una ficha escrita lo convirtió en dios de la enfermedad y la muerte", "evidencia": "una ficha escrita lo convirtió en “dios de la enfermedad y la muerte”" },
-    { "id": "n07", "nudo": "Jirairay no designaba necesariamente a otro ser", "evidencia": "Jirairay no designaba necesariamente a otro ser" },
-    { "id": "n08", "nudo": "Pineda Giraldo explicó que era el canto o el nombre bajo el cual se invocaba a Wanurü", "evidencia": "era el canto o el nombre bajo el cual se invocaba a Wanurü durante la ceremonia" },
-    { "id": "n09", "nudo": "La voz de la piache llamaba a la entidad vinculada con la dolencia para preguntar, negociar o hacerla retirarse", "evidencia": "La voz de la piache llamaba a la entidad vinculada con la dolencia para preguntar, negociar o hacerla retirarse" },
-    { "id": "n10", "nudo": "La maraca marcaba el tiempo", "evidencia": "La maraca marcaba el tiempo" },
-    { "id": "n11", "nudo": "Escuchaba a sus auxiliares y respondía con frases que la familia no siempre podía interpretar", "evidencia": "La especialista escuchaba a sus auxiliares y respondía con frases que la familia no siempre podía interpretar" },
-    { "id": "n12", "nudo": "El enfermo sudaba y permanecía entre sueño y vigilia", "evidencia": "El enfermo sudaba y permanecía entre sueño y vigilia" },
-    { "id": "n13", "nudo": "La piache pidió alimentos y objetos para cumplir obligaciones de la ceremonia", "evidencia": "La piache pidió alimentos y objetos para cumplir obligaciones de la ceremonia" },
-    { "id": "n14", "nudo": "No eran pago a un demonio en el sentido cristiano", "evidencia": "No eran pago a un “demonio” en el sentido cristiano" },
-    { "id": "n15", "nudo": "Formaban parte de una relación entre familia, especialista y presencias cuya traducción quedó incompleta", "evidencia": "Formaban parte de una relación entre familia, especialista y presencias cuya traducción quedó incompleta en las fuentes" },
-    { "id": "n16", "nudo": "Durante la noche el canto cambió y Jirairay dejó de oírse con tanta frecuencia", "evidencia": "Durante la noche, el canto cambió. Jirairay dejó de oírse con tanta frecuencia." },
-    { "id": "n17", "nudo": "La piache anunció que Wanurü aflojaba su dominio", "evidencia": "La piache anunció que Wanurü aflojaba su dominio" },
-    { "id": "n18", "nudo": "Al amanecer la persona enferma seguía viva y la familia continuó cuidándola", "evidencia": "Al amanecer, la persona enferma seguía viva. La familia continuó cuidándola." },
-    { "id": "n19", "nudo": "El registro etnográfico no permite atribuir una recuperación clínica a una sola acción ni volver la ceremonia tratamiento reproducible", "evidencia": "no permite atribuir una recuperación clínica a una sola acción ni convertir la ceremonia en tratamiento reproducible" },
-    { "id": "n20", "nudo": "Lo que permaneció fue el nombre: separado de su música pasó a glosarios, páginas y comparaciones", "evidencia": "Separado de su música, pasó a glosarios, páginas y comparaciones" },
-    { "id": "n21", "nudo": "Allí empezó a parecer un personaje autónomo", "evidencia": "Allí empezó a parecer un personaje autónomo" },
-    { "id": "n22", "nudo": "Esta reconstrucción devuelve Jirairay al acto de cantar", "evidencia": "Esta reconstrucción devuelve Jirairay al acto de cantar" },
-    { "id": "n23", "nudo": "No inventa rostro, genealogía ni voluntad propia", "evidencia": "No inventa rostro, genealogía ni voluntad propia" },
-    { "id": "n24", "nudo": "La palabra tiene fuerza porque se pronuncia dentro de una relación ritual, no porque nombre a un villano fijo", "evidencia": "La palabra tiene fuerza porque es pronunciada dentro de una relación ritual, no porque nombre a un villano fijo" }
+    {
+      "id": "n01",
+      "nudo": "La fiebre llegó a la ranchería con el viento",
+      "evidencia": "La fiebre llegó a la ranchería con el viento."
+    },
+    {
+      "id": "n02",
+      "nudo": "Uno de la casa dejó de comer, dejó de hablar y quedó tendido en el chinchorro, sudando, con los ojos abiertos hacia el techo",
+      "evidencia": "Uno de la casa dejó de comer, dejó de hablar y quedó tendido en el chinchorro, sudando, con los ojos abiertos hacia el techo."
+    },
+    {
+      "id": "n03",
+      "nudo": "La familia mandó llamar a la piache",
+      "evidencia": "La familia mandó llamar a la piache."
+    },
+    {
+      "id": "n04",
+      "nudo": "Ella llegó al caer la tarde, con su maraca y su tabaco",
+      "evidencia": "Ella llegó al caer la tarde, con su maraca y su tabaco."
+    },
+    {
+      "id": "n05",
+      "nudo": "Se sentó junto al chinchorro, pidió silencio y mascó el tabaco hasta que la boca se le llenó de jugo",
+      "evidencia": "Se sentó junto al chinchorro, pidió silencio y mascó el tabaco hasta que la boca se le llenó de jugo."
+    },
+    {
+      "id": "n06",
+      "nudo": "Le pasó las manos por el cuerpo al enfermo, lo sobó, escupió sobre él y empezó a cantar",
+      "evidencia": "Le pasó las manos por el cuerpo al enfermo, lo sobó, escupió sobre él. Luego empezó a cantar."
+    },
+    {
+      "id": "n07",
+      "nudo": "Tenía varios espíritus, y a cada uno lo llamaba con un canto distinto",
+      "evidencia": "Tenía varios espíritus, y a cada uno lo llamaba con un canto distinto."
+    },
+    {
+      "id": "n08",
+      "nudo": "Cantó primero a los suyos, los que la habían escogido, y a Mareiwa bajo el nombre de fumayule, como lo nombran los que curan",
+      "evidencia": "Cantó a Mareiwa bajo el nombre de fumayule, como lo nombran los que curan."
+    },
+    {
+      "id": "n09",
+      "nudo": "Cuando la noche estuvo cerrada cantó el canto que llama a wanurü, el que enferma y el que mata: jirairay",
+      "evidencia": "cuando la noche estuvo cerrada cantó el canto que llama a wanurü, el que enferma y el que mata: jirairay"
+    },
+    {
+      "id": "n10",
+      "nudo": "Wanurü acudió; no se lo veía, se lo oía en la voz de la piache, que ahora discutía consigo misma",
+      "evidencia": "No se lo veía; se lo oía en la voz de la piache, que ahora discutía consigo misma."
+    },
+    {
+      "id": "n11",
+      "nudo": "El que tenía apresada el alma del enfermo no quería soltarla",
+      "evidencia": "El que tenía apresada el alma del enfermo no quería soltarla."
+    },
+    {
+      "id": "n12",
+      "nudo": "Exigía su ofrenda: un regalo de tales condiciones, y sin pérdida de tiempo",
+      "evidencia": "Exigía su ofrenda: un regalo de tales condiciones, y sin pérdida de tiempo."
+    },
+    {
+      "id": "n13",
+      "nudo": "Los espíritus de la piache le respondían, y la discusión iba y venía por la garganta de la mujer mientras la maraca no paraba",
+      "evidencia": "la discusión iba y venía por la garganta de la mujer mientras la maraca no paraba"
+    },
+    {
+      "id": "n14",
+      "nudo": "La familia salió al patio, reunió lo que se pedía y lo trajo",
+      "evidencia": "La familia salió al patio. Reunió lo que se pedía y lo trajo."
+    },
+    {
+      "id": "n15",
+      "nudo": "La piache siguió cantando",
+      "evidencia": "La piache siguió cantando."
+    },
+    {
+      "id": "n16",
+      "nudo": "Hacia la madrugada el canto cambió: wanurü discutía todavía, pero ya por el precio, no por el alma",
+      "evidencia": "Wanurü discutía todavía, pero ya por el precio, no por el alma."
+    },
+    {
+      "id": "n17",
+      "nudo": "Cuando la primera luz entró por las rendijas de la enramada el enfermo cerró los ojos y durmió, y la piache soltó la maraca",
+      "evidencia": "el enfermo cerró los ojos y durmió. La piache soltó la maraca."
+    },
+    {
+      "id": "n18",
+      "nudo": "Antes de irse repitió lo que sus espíritus le decían: que piachara todos los días, porque tenía enemigos y peligros",
+      "evidencia": "piacha mucho, piacha todos los días, porque tienes enemigos y peligros"
+    },
+    {
+      "id": "n19",
+      "nudo": "Que lo hiciera muchas veces para que el mal se alejara, como se alejan las lluvias en verano",
+      "evidencia": "hazlo muchas veces para que el mal se aleje, como se alejan las lluvias en verano"
+    },
+    {
+      "id": "n20",
+      "nudo": "Esa misma noche una mariposa nocturna, blanca, entró al dormitorio y revoloteó junto al chinchorro",
+      "evidencia": "Esa misma noche una mariposa nocturna, blanca, entró al dormitorio y revoloteó junto al chinchorro."
+    },
+    {
+      "id": "n21",
+      "nudo": "Nadie la tocó: la sacaron despacio, con las dos manos",
+      "evidencia": "Nadie la tocó. La sacaron despacio, con las dos manos"
+    },
+    {
+      "id": "n22",
+      "nudo": "Podía ser uno de los muertos de la casa que venía de visita, y quien mata a un visitante así lo ve después en sueños preguntándole por qué lo mató",
+      "evidencia": "¿por qué me mataste, si vine a verte porque te estimo?"
+    },
+    {
+      "id": "n23",
+      "nudo": "El regalo prometido se entregó completo, porque un espíritu al que se le falta huye y no vuelve, y contentarlo de nuevo es muy difícil",
+      "evidencia": "El regalo prometido se entregó completo. Un espíritu al que se le falta huye y no vuelve, y contentarlo de nuevo es muy difícil."
+    },
+    {
+      "id": "n24",
+      "nudo": "Wanurü había soltado el alma, y jirairay quedó guardado en la voz de la piache para la próxima vez que hubiera que llamarlo",
+      "evidencia": "jirairay quedó guardado en la voz de la piache para la próxima vez que hubiera que llamarlo"
+    }
   ],
   "deslindes": [
-    "Jirairay NO es un dios ni un personaje. Es el canto, o el nombre bajo el cual se invoca a Wanurü. Esa es la corrección entera y el guion existe para sostenerla: darle rostro, genealogía o voluntad sería repetir el error que la ficha desmonta.",
-    "LA IMAGEN NO LE DA CUERPO A JIRAIRAY. Puede mostrar la maraca, el chinchorro, la noche, la respiración del enfermo; no una criatura.",
-    "Los alimentos y objetos NO son pago a un demonio. La categoría cristiana está expresamente rechazada por la fuente: son obligaciones dentro de una relación cuya traducción quedó incompleta.",
-    "NO se afirma que la ceremonia curó. La persona seguía viva al amanecer y la familia siguió cuidándola; el registro no permite atribuir una recuperación clínica a una sola acción ni volver esto tratamiento reproducible. El guion no describe procedimiento.",
-    "La corrección NO elimina el misterio del rito. Solo evita crear una entidad que la fuente principal distingue del nombre cantado."
+    "Jirairay NO es un personaje: es el CANTO con que se llama a wanurü. El título nombra un procedimiento, no un ser, y la dirección de arte va al canto y a la maraca.",
+    "Wanurü es el que enferma y el que mata, y aun así se lo llama a propósito. La piache negocia con él; no lo expulsa ni lo vence.",
+    "La posesión se OYE, no se ve. El canon insiste: no se lo veía, se lo oía en la voz de la piache. Nada de aparición visible del espíritu.",
+    "La cura es un TRATO con precio. Lo que cambia hacia la madrugada es que la discusión pasa del alma al precio; el enfermo sana cuando se paga.",
+    "La mariposa nocturna blanca puede ser un muerto de la casa de visita, y por eso se saca con las dos manos. No es augurio de muerte: es una visita.",
+    "El nombre Jirairaí también aparece en «umarala», donde es el espíritu que cobra la vida de la tía. Es la misma familia de creencia y son fichas distintas: no se cruzan.",
+    "Mareiwa aparece aquí nombrado fumayule, «como lo nombran los que curan». Se conserva el doble nombre y no se armoniza con las otras fichas."
   ],
   "descartes": [
-    { "que": "Que la página sigue publicada porque los errores de transmisión necesitan explicación visible", "razon": "Aparato del expediente: explica por qué existe la ficha, no lo que ocurrió esa noche." },
-    { "que": "La conexión con la historia de Umaralá, donde la tía canta frente a la enfermedad", "razon": "Pertenece a ese otro guion. Aquí abriría un hilo que este relato no cierra." }
+    {
+      "que": "El segundo parlamento —el consejo de piachar todos los días—",
+      "razon": "Una sola cita por guion. Queda como habla reportada, sin comillas, que es donde cabe en el bloque."
+    },
+    {
+      "que": "El detalle del regalo exigido —«un regalo de tales condiciones»—",
+      "razon": "El canon no lo especifica y no se inventa. Se conserva la exigencia y la entrega completa."
+    }
   ],
-  "N_propuesto": 16,
-  "razon_N": "Veinticuatro nudos y dos capas que deben ir juntas: la noche de la ceremonia y la corrección de lo que se escribió sobre ella. Dieciséis bloques, 32 cuadros, ≈160 s."
+  "N_propuesto": 12,
+  "razon_N": "24 nudos consolidados, techo(24/2)=12, dentro de [8,18]. El canon es una sola noche de piachada, de la llegada de la piache al amanecer, más la mariposa y la entrega del pago. No hay segunda catástrofe que sostener. 12 bloques, 24 keyframes, ≈120 s."
 }

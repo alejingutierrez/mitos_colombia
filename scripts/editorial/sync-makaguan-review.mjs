@@ -71,8 +71,28 @@ function validateRecords() {
     if (record.tags.length !== 4 || record.focus_keywords.length !== 5) {
       throw new Error(`${record.slug}: taxonomía o palabras clave inválidas.`);
     }
-    if (record.keySources.length + record.sources.length !== 7) {
-      throw new Error(`${record.slug}: se esperaban siete fuentes.`);
+    // Antes exigía siete exactas: era el reparto en bloque escrito como
+    // aserción. Desde la Fase B del 2026-09-19 cada ficha cita las obras que
+    // su reescritura usó, así que lo que se comprueba es la sustancia.
+    const fuentes = [...record.keySources, ...record.sources];
+    const fuenteUrls = fuentes.map(({ url }) => url);
+    if (fuentes.length < 5) {
+      throw new Error(`${record.slug}: ${fuentes.length} fuentes; el mínimo son cinco.`);
+    }
+    if (new Set(fuenteUrls).size !== fuenteUrls.length) {
+      throw new Error(`${record.slug}: fuentes con URL repetida.`);
+    }
+    if (!fuenteUrls.every((url) => /^https:\/\//.test(url))) {
+      throw new Error(`${record.slug}: hay una fuente sin URL https.`);
+    }
+    if (new Set(fuenteUrls.map((url) => new URL(url).host)).size < 3) {
+      throw new Error(`${record.slug}: menos de tres dominios distintos.`);
+    }
+    if (!fuentes.every(({ summary, limitation }) => summary && limitation)) {
+      throw new Error(`${record.slug}: hay una fuente sin resumen o sin límite.`);
+    }
+    if (!fuenteUrls.some((url) => url.includes("repositorio.unal.edu.co"))) {
+      throw new Error(`${record.slug}: no cita la tesis de Mattar 2024.`);
     }
     if (
       !/^https:\/\//.test(record.image_url) ||
@@ -590,7 +610,12 @@ async function run() {
           },
           dossiers: records.length,
           imagePairs: records.length,
-          sourcesPerMyth: 7,
+          sourcesPerMyth: Object.fromEntries(
+            records.map((record) => [
+              record.slug,
+              record.keySources.length + record.sources.length,
+            ]),
+          ),
           tags: {
             requested: tagNames.length,
             existing: tagNames.length - missingTags.length,

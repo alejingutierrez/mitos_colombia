@@ -64,12 +64,20 @@ test("corrige el relato colonial sin inventar una cosmología Pirsa", () => {
     "correct-colonial-conversion-story",
   );
   assert.equal(record.title, "La noche de Tamaracunga");
-  assert.match(record.mito, /hermano joven del señor de Pirsa/i);
+  assert.match(record.mito, /hermano joven/i);
+  assert.match(record.mito, /Pirsa/);
   assert.match(record.mito, /auras/i);
   assert.match(record.historia, /Orden de Nuestra Señora de la Merced/i);
-  assert.match(record.historia, /no lo identifica como cacique/i);
-  assert.match(record.historia, /no aparecen en la fuente temprana/i);
-  assert.match(record.versiones, /Diablo oficial representa vida, alegría/i);
+  // Antes se exigía que la Historia dijera que Cieza «no lo identifica como
+  // cacique». Es al revés: el encabezado del capítulo lo llama «un cacique
+  // comarcano de la villa de Ancerma», y Pirsa aparece en el archivo de 1552
+  // como cacique y señor principal. La aserción sostenía un error.
+  assert.match(record.historia, /cacique/i);
+  assert.match(record.historia, /\b1552\b/);
+  // Y lo que iba escrito en la página sobre sus propios límites vive ahora en
+  // Versiones, que es donde se confrontan las dos crónicas.
+  assert.match(record.versiones, /Mondragón/);
+  assert.match(record.versiones, /\b1750\b/);
   assert.doesNotMatch(record.mito, /Sebastián|cuervos|luz celestial/i);
   assert.doesNotMatch(record.content, /franciscano|fraile franciscano/i);
   assert.doesNotMatch(

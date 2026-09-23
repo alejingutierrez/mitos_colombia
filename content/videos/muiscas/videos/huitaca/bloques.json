@@ -136,10 +136,13 @@
       "desc": "PLANO GENERAL del campo en silencio bajo la luna, con una mancha clara y pequeña en la oscuridad de un techo: apenas se distingue si es ella. Sin personas."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b6a",
-      "reusa": "mitos/huitaca/acto"
-    }
-  ]
+  "reusadas": [],
+  "guion": "docs/videos/muiscas/mvp-guiones/guion-huitaca-v3.json",
+  "acta": "docs/videos/muiscas/actas/acta-huitaca.json",
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-huitaca-escenas.mjs",
+    "account_source": "OPENAI_API_KEY from ignored .env"
+  }
 }

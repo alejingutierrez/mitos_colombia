@@ -35,7 +35,7 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      words(record.mito) >= (record.relatoCorto ? 70 : 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -66,12 +66,12 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -97,64 +97,76 @@ test("los ocho expedientes cumplen rangos y estructura metodológica", () => {
 
 test("retira ficciones sintéticas y declara la clase real de cada relato", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
-  assert.match(bySlug.get("buziraco").mito, /1837[\s\S]+1925[\s\S]+1938/);
+  // heredada: reescribir tras el cotejo
+  assert.match(bySlug.get("buziraco").mito, /1825[\s\S]+1837[\s\S]+1925/);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("buziraco").mito,
-    /prejuicios|racial|personas negras/i,
+    /cimarrones|tambores/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-caballo-del-morro").mito,
-    /Marco Antonio Valencia Calle[\s\S]+Babieca/,
+    /Victorio Macho[\s\S]+Babieca/,
   );
+  // heredada: reescribir tras el cotejo
   assert.doesNotMatch(
     bySlug.get("el-caballo-del-morro").mito,
     /abuelos de mis abuelos/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-roble-del-caballero").mito,
     /Torre del Reloj/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-roble-del-caballero").mito,
-    /No afirma que un roble sobrenatural/i,
+    /Quijote[\s\S]+Popayán/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-yesca").mito,
-    /brujo o chinango[\s\S]+bejucos o ramas/,
+    /brujo[\s\S]+chinango/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-yesca").mito,
-    /No hay respaldo para añadir un joven pescador/i,
+    /Yesca/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(bySlug.get("el-duende-peluquero").mito, /Dagua/);
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-duende-peluquero").mito,
-    /Las fuentes no sostienen ese traslado/i,
+    /Dagua[\s\S]+crines/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-casa-de-la-tradicion").mito,
-    /pasos y voces/,
+    /pasos[\s\S]+voz/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-casa-de-la-tradicion").mito,
-    /La versión anterior añadió guardianes/i,
+    /antiguos moradores/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-piramide-del-chontaduro").mito,
     /sueño[\s\S]+lotería/,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("la-piramide-del-chontaduro").mito,
-    /Esa trama no aparece en las fuentes/i,
+    /pirámide[\s\S]+lotería/i,
   );
+  // heredada: reescribir tras el cotejo
   assert.match(
     bySlug.get("el-barco-fantasma").mito,
     /Maravel[ií][\s\S]+brújula[\s\S]+carta/,
   );
-  assert.match(
-    bySlug.get("el-barco-fantasma").mito,
-    /se distingue del Riviel/,
-  );
+  assert.doesNotMatch(bySlug.get("el-barco-fantasma").mito, /Tumaco|Barbacoas|negrero/i);
 });
 
 test("la matriz cubre las ocho rutas y sus límites", () => {

@@ -15,38 +15,40 @@ export const uwaDefinitions = [
   {
     slug: "creacion-u-wa",
     title: "Rurcocá, Sira y la creación del mundo intermedio",
-    mito: `Al principio estaba Rurcocá en Cuarára, un lugar alto y estrecho donde solo cabía ella. Sentada en su banco y mascando la coca celeste, pensó a Sira. Él surgió debajo, en un espacio más amplio. Rurcocá le enseñó a pensar como ella, y desde entonces los actos de creación repitieron ese principio: cada ser pensaba al siguiente y el universo se desplegaba en lugares cada vez mayores.
+    mito: `Al principio solo estaba Rurcocá, en Cuarára, una punta tan estrecha que apenas cabía ella. Sentada en su banquito y chupando coca celeste, formó a Sira pensándolo. Sira salió debajo, en un espacio mayor, y Rurcocá le enseñó a pensar y a chupar la coca celestial. Desde entonces cada acto de creación repitió esa enseñanza: el creado piensa al siguiente, y cada lugar nuevo es más amplio que el anterior.
 
-Arriba se formó un mundo asociado con la luz, lo seco y el color blanco. Abajo existía su contraparte roja, húmeda y oscura. Allí, la madre del fuego encargó a Canwará que creara. Canwará tomó demasiado yopo y enfermó mientras pensaba; por eso las cosas surgidas de su acción podían contener peligro, dolor o mortalidad. La creación no provenía de un único lado. Los seres de arriba y de abajo actuaban en direcciones opuestas hasta que sus mundos comenzaron a moverse.
+El universo quedó formado por dos esferas. Arriba, lo seco, la luz y el pensamiento, del color blanco. Abajo, lo húmedo, la oscuridad y la sangre, del color rojo. En el mundo de abajo, la madre del fuego ordenó a Canwará que saliera a crear. Canwará se embriagó con yopo y quiso hacer las cosas con puro pensamiento, pero exageró la inhalación hasta enfermar, y por eso sus obras cargan un componente dañino. La génesis del universo superior se orientó de arriba hacia abajo; la de Canwará, de abajo hacia arriba.
 
-Cuando ambos extremos se encontraron, su mezcla produjo el mundo intermedio. Del blanco y el rojo surgieron el azul y el amarillo. La Tierra habitada quedó en ese espacio mezclado, dependiente de fuerzas que no podían confundirse ni separarse por completo. Las deidades guardaban en lagos de colores las materias y propiedades de lo existente. Seres viajeros llevaron al mundo intermedio la materia primordial, y por eso plantas, animales y personas comparten un origen y no forman naturalezas aisladas.
+Los dos extremos se movieron hasta encontrarse. De la mezcla del blanco y el rojo nació el mundo del medio, Ura, compuesto por azul y amarillo: el azul con mayor proporción de rojo, el amarillo con mayor proporción de blanco. La Tierra quedó en el azul. El blanco almacena el agua pura, el alucinógeno y la asexualidad; el amarillo guarda la enfermedad y las plantas medicinales; el rojo es el lugar de la fertilidad y de la sangre. El limo, materia básica de todo lo que existe, lo guardaban las deidades en las distintas esferas, y de allí lo sustrajeron mediante engaño deidades chamánicas viajeras que lo trajeron al mundo del medio. Por eso todos los seres de aquí adquirieron lo esencial de las mismas fuentes y por procedimientos parecidos, están compuestos de una misma materia y no admiten distinciones tajantes entre sí.
 
-Rukwa, una manifestación solar de la luz, observó que las formas ya estaban creadas pero aún no seguían el ciclo de vida y muerte. Mezcló el calor del Sol con el agua de los lagos. Las semillas empezaron a crecer y el mundo se puso en movimiento.
+Rukwa, que es el nombre del Sol en el azul, advirtió que todo estaba ya creado pero nada se había puesto en movimiento. Mezcló el calor del sol con el agua de los lagos del mundo de arriba y así desencadenó a la vez el proceso de la vida y el de la mortalidad. Las semillas empezaron a crecer.
 
-Ruruna recibió después el encargo de sembrar gente. De las lagunas alrededor de la Sierra Nevada del Cocuy salieron parejas que recorrieron el territorio y dieron origen a los clanes. Cada laguna conservó la memoria de un nacimiento. La tarea de las personas no fue dominar lo creado, sino mantener en relación los mundos, los seres y los ciclos mediante pensamiento, cantos, ayunos y ceremonias.`,
-    historia: `La ficha heredada conservaba parte del esquema cosmológico publicado en el compendio del Ministerio del Interior, pero empezaba después de los actos de Rurcocá, Sira y Canwará. A cambio, añadía una larga prosa ornamental sobre “la infinitud”, “hilos de existencia” y “tambores cósmicos”, además de comparar el relato con el yin y el yang y la mitología nórdica. La revisión retira esos añadidos y restituye la secuencia documentada.
+Sira pensó entonces cómo soplar para hacer a los U’wa. Ordenó a Ruruna que pensara, y Ruruna fue haciendo como una siembra de gente: primero nació una mujer, después un hombre, hasta completar siete ancestros. Las criaturas de carne, sangre y hueso quedaron mortales; las deidades, que se reproducen sin unión sexual, no.
 
-Ann Osborn elaboró su estudio durante años de trabajo con el clan Kubaruwa y explicó que los mitos cantados no deben leerse como cuentos separados de sus ceremonias. Su monografía sustenta los mundos de colores, la mezcla creadora, las deidades móviles y la función de los cantos en la continuidad del universo. El artículo de Juan Carlos Alonso reproduce una síntesis del ciclo de creación y declara explícitamente esa procedencia.
+Los mundos de arriba y de abajo son indestructibles. El del medio existe solo mientras aquellos dos se sostengan. Los U’wa quedaron equidistantes de sus antepasados divinos del rojo y del blanco, y su tarea es mantener ese balance. Si se perturbara, el rojo subiría e invadiría el blanco, y eso sería el fin del universo.`,
+    historia: `El texto que circula sobre esta cosmogonía proviene de un montaje declarado. Juan Carlos Alonso, psicólogo y analista junguiano, lo presentó el 5 de abril de 2008 en el Segundo Encuentro de Mitos y Cuentos Colombianos, en Medellín, y allí escribe que armó el relato con dos fuentes distintas —un artículo de la antropóloga inglesa Ann Osborn y un texto del antropólogo colombiano François Correa—, reubicando pasajes de ambos documentos para ajustarlos al esquema de análisis de Marie-Louise von Franz. Los nombres Rurcocá, Cuarára, Sira y Canwará entran por esa vía: no figuran en la lista alfabética de deidades U’wa que Osborn publicó como apéndice de su libro.
 
-El Documento Madre de Leyes de Origen, preparado en un espacio indígena e interinstitucional, confirma la unión del mundo blanco de arriba con el rojo de abajo y la formación del mundo intermedio azul y amarillo. La caracterización del Ministerio de Cultura añade el origen de parejas en las lagunas y su relación con los clanes.
+Osborn trabajó catorce años con el clan kubaruwa, unos quinientos miembros de un total de unos dos mil U’wa, alrededor del poblado de Cobaría, a 1.300 metros y con unas setenta casas. Su monografía Las cuatro estaciones apareció en 1995 en el Banco de la República, editada después de su muerte en 1988 por Fabricio Cabrera Micolta y Melba Rodríguez de León. De allí vienen el esquema de las esferas —rojo y azul abajo, blanco y amarillo arriba—, la mezcla de rojo y blanco de la que surgió el mundo del medio llamado Ura, y la advertencia de que si el balance se rompiera el rojo invadiría el blanco.
 
-La página no presenta una versión única para todo el pueblo U’wa. Conserva nombres y grafías de las fuentes consultadas, identifica el foco Kubaruwa de Osborn y usa la coordenada heredada solo como punto representativo del territorio.`,
-    versiones: `Una síntesis ampliamente circulada comienza con las dos esferas, los lagos de colores, la materia común de los seres y la intervención de Rukwa para poner la vida en movimiento. Es el núcleo que conservaba la ficha anterior, aunque mezclado con literatura no acreditada.
+Osborn fija también el nombre del Sol. Thira, Racha, Teca y Rukwa son cuatro nombres de una misma luz, uno por esfera: Thira es luz en el blanco, Racha es un tucán en el amarillo, Teca es un jaguar en el rojo y Rukwa corresponde al azul. Y describe a Ruruna como Ser Solar del blanco, hermano clasificatorio de Baukara, que en el mundo del medio es la pluma de garza que se usa en las ceremonias de soplar.
 
-La versión expuesta a partir de Osborn empieza antes: Rurcocá piensa a Sira y le enseña a crear mediante pensamiento. En el mundo inferior, Canwará actúa bajo el mandato de la madre del fuego. El encuentro de ambas direcciones genera el mundo intermedio. Esta secuencia permite entender que Rukwa no es simplemente un “dios solar creador” aislado.
+Hay además un canto de creación registrado en otro clan. En 1962 Sergio Daza P. recogió entre los tunebos del grupo Cobaría un Canto a la creación del mundo que la Secretaría Técnica de la Mesa Permanente de Concertación y la ONIC reprodujeron íntegro en su Documento Madre de Leyes de Origen de 2022, advirtiendo que puede haber variaciones del canto de origen entre los clanes Kaibaká, Rikuwa, Kubaruwa y Yithkaya.`,
+    versiones: `Las fuentes no cuentan el mismo comienzo y conviene no fundirlas.
 
-Las fuentes institucionales y de ley de origen destacan otros énfasis. Unas presentan a Sira como Padre Creador y a Ruruna como quien siembra parejas en lagunas; otras explican a Rukwa, Racha, Teca y Thira como nombres o manifestaciones relacionadas con luz y Sol en distintos mundos. La grafía Siria también aparece en caracterizaciones recientes.
+En el montaje de Alonso, tomado de Correa, todo empieza con Rurcocá en Cuarára y sigue con Sira, Canwará y la siembra de siete ancestros por orden de Ruruna. En el libro de Osborn no aparecen ni Rurcocá ni Sira: el universo estuvo conformado desde el principio por un mundo de arriba y uno de abajo, y Ruruna es un Ser Solar del blanco que se presenta en forma de garza, no un sembrador de gente.
 
-La revisión reúne esos núcleos en una página porque describen fases de la misma cosmogonía. No decide que todos los nombres sean sinónimos exactos ni introduce jerarquías que las fuentes no sostienen.`,
+El canto que Sergio Daza recogió en 1962 entre los Cobaría ordena los hechos de otra manera todavía. Allí Sira hace primero el mundo, que era plano, y Kanuará hace los cerros y los montes; Iáchawa hace las aguas y cría los peces por encargo de Sira, y Risbara queda de cuidandero de los peces con el poder de crear más hasta que se acabe el mundo; Rukcoa cuida las colmenas, con Busena y Casirá de encargados; el sol se hace de último, para iluminar a los animales que estaban a oscuras; y la primera mujer se llama Ruia y el primer hombre Kuiyobara.
+
+El origen de la gente en las lagunas es una cuarta versión. La caracterización del Ministerio de Cultura, apoyada en Ana María Falchetti, sostiene que de cada laguna de la Sierra Nevada del Cocuy las deidades hicieron nacer un hombre y una mujer y que cada pareja dio origen a un clan. En ese texto la montaña principal es Raiana, el lago Bekana es el centro del mundo, el creador se llama Sirateta y organizó el mundo sobre ocho bases, cuatro hacia arriba y cuatro hacia abajo.
+
+Los nombres se mueven incluso dentro de una misma fuente. Osborn advierte que todas las deidades U’wa cambian de nombre y de forma según el lugar, de modo que dos nombres distintos pueden designar al mismo ser en dos esferas.`,
     leccion:
-      "Vivir en el mundo intermedio implica cuidar el equilibrio que hace posible toda forma de vida.",
-    similitudes: `Los mundos de arriba y abajo pueden recordar cosmologías duales de muchas sociedades, pero en la visión U’wa el elemento decisivo es su mezcla: el mundo intermedio no es una copia menor, sino el lugar activo donde azul y amarillo contienen proporciones de los extremos rojo y blanco. Reducirlo a una oposición universal borraría esa estructura.
+      "El mundo habitado es una mezcla y dura solamente mientras sus dos extremos se sostienen mutuamente.",
+    similitudes: `La creación por pensamiento acerca este relato a otras cosmogonías chibchas, pero la comparación más productiva es interna. Eduardo Londoño examinó en 1995 los linajes y circuitos de matrimonio de tres grupos chibchas —u’wa, kogui y muisca— y mostró que lo comparable entre ellos es la arquitectura de la alianza y no el elenco de dioses. Aplicado aquí, el rasgo propio no es que existan un arriba y un abajo, sino que el mundo habitado sea una mezcla con proporciones declaradas: el azul lleva más rojo, el amarillo más blanco.
 
-El origen de clanes en lagunas dialoga con otros relatos colombianos donde el agua funciona como matriz territorial. Entre los Misak y los Muisca también existen lagunas de origen, pero los nombres, parentescos, recorridos y deberes son distintos. La semejanza no convierte las tradiciones en variantes de un solo mito andino.
+El segundo paralelo está en la obra de Osborn. El procedimiento que crea el universo —dos extremos que se combinan sin confundirse— es el mismo que organiza la vida diaria kubaruwa. El maíz se siembra y se cosecha para que coincida con las ceremonias del reowa y del aya, aunque las mazorcas estén verdes, y la gente sube y baja por los pisos térmicos siguiendo el calendario ceremonial y no la conveniencia agrícola. La cosmogonía no explica el mundo desde lejos: prescribe dónde hay que estar en cada estación.
 
-La creación mediante pensamiento aparece en varios pueblos de lenguas chibchas y amazónicas. Aquí se vincula con la enseñanza de Rurcocá, el uso de sustancias sagradas y la capacidad de deidades y especialistas para recorrer mundos. No equivale a imaginar libremente: es una acción regulada que produce consecuencias.
-
-El calor y el agua que activan semillas pueden compararse con observaciones agrícolas muy extendidas. En la vida U’wa, sin embargo, el ciclo se celebra mediante mitos cantados, desplazamientos por pisos térmicos y trabajos estacionales. La cosmología no funciona como explicación antigua reemplazada por la ciencia, sino como una red vigente de relaciones y obligaciones.`,
+Un tercer punto de contacto es la idea de sostén. Los menhires repartidos por el territorio son, en el habla de los mitos cantados, kerkacha: postes de casa que unen las dos mitades del azul. Cada clan es a la vez una casa y uno de los ocho postes que sostienen el universo, y cuando una deidad purifica el territorio de un clan se sienta sobre esos postes. La caracterización del Ministerio de Cultura recoge la misma cifra al decir que el creador organizó el mundo sobre ocho bases. Roberto Lleras situó estas estructuras duales en el conjunto de los Andes Orientales, donde el par de opuestos es frecuente; lo infrecuente es que el tercer término, la mezcla, tenga tanto peso como los otros dos.`,
     excerpt:
       "Rurcocá piensa a Sira, los mundos rojo y blanco se mezclan y Rukwa pone en movimiento la vida del mundo intermedio.",
     seoTitle: "Creación U’wa: Rurcocá, Sira y los cuatro colores",
@@ -61,13 +63,51 @@ El calor y el agua que activan semillas pueden compararse con observaciones agr�
     ],
     tags: ["creación", "equilibrio", "Sol", "lagunas"],
     sourceKeys: [
-      "osborn1995",
-      "leyesOrigenOnic",
-      "alonsoCreacion",
-      "caracterizacionMincultura",
-      "mininteriorMitos",
-      "historiasAncestrales",
-      "icanhUwa",
+      {
+        key: "osborn1995",
+        summary:
+          "Fija el esquema cosmológico entero: rojo y azul abajo, blanco y amarillo arriba, la mezcla de rojo y blanco de la que surge el mundo del medio llamado Ura, las proporciones del azul y el amarillo, el reparto de propiedades por esfera y la advertencia de que si el balance se rompiera el rojo invadiría el blanco. Su apéndice de deidades identifica a Thira, Racha, Teca y Rukwa como cuatro nombres de una misma luz, uno por esfera.",
+        limitation:
+          "No contiene los nombres Rurcocá, Sira ni Canwará, y su Ruruna es un Ser Solar del blanco con forma de garza, no un sembrador de gente: el esquema es suyo pero la narración que esta página cuenta no lo es. Se basa en el clan kubaruwa y en catorce años de registro que terminan con la muerte de la autora en 1988.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta una cosmogonía completa y de otro clan: Sira hace el mundo plano y Kanuará los cerros, Iáchawa hace las aguas y los peces, Rukcoa cuida las colmenas, los seia recorren las lagunas de oriente a occidente, el sol se hace de último y los primeros seres humanos son la mujer Ruia y el hombre Kuiyobara.",
+        limitation:
+          "El canto original de 1962 no es consultable por sí mismo: solo se accede a la transcripción que el Documento Madre reproduce en 2022, sin facsímil ni datos sobre quién lo cantó. El propio documento advierte que pueden existir variaciones entre los clanes Kaibaká, Rikuwa, Kubaruwa y Yithkaya.",
+      },
+      {
+        key: "alonsoCreacion",
+        summary:
+          "Es la fuente directa del relato que circula con los nombres Rurcocá, Cuarára, Sira, Canwará y la siembra de siete ancestros por orden de Ruruna, y declara expresamente que su texto es un montaje de un artículo de Ann Osborn y un texto de François Correa, reordenado según el esquema de Marie-Louise von Franz.",
+        limitation:
+          "No es una fuente de campo sino una recomposición con fines de análisis junguiano: reubicó pasajes y eliminó otros por considerarlos secundarios. No da la referencia bibliográfica del texto de Correa, de modo que la mitad de los nombres que aporta no se puede rastrear hasta su registro original.",
+      },
+      "cabreraComer1990",
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Aporta la versión del origen humano en las lagunas: las deidades hicieron nacer un hombre y una mujer de cada laguna de la Sierra Nevada del Cocuy y cada pareja dio origen a un clan, con Raiana como montaña principal y Bekana como lago central; nombra Sirateta al creador y le atribuye ocho bases del mundo.",
+        limitation:
+          "Es un resumen de bibliografía ajena, no un registro propio: atribuye el origen en lagunas a Falchetti (2003) sin transcribir el relato ni citar página, y su grafía Sirateta no coincide con ninguna otra fuente consultada.",
+      },
+      "laverdeLinajes1995",
+      "perezestructuras1996",
+      {
+        key: "icanhUwa",
+        summary:
+          "Confirma la autodenominación, la filiación chibcha, el territorio en el norte de la Cordillera Oriental y que el municipio con mayor población es Cubará.",
+        limitation:
+          "Es una ficha breve de contexto, sin contenido narrativo; su página incluye además un enlace cartográfico que apunta a Inzá (Cauca), ajeno al territorio u’wa.",
+      },
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Su capítulo sobre la cultura U’wa describe el universo como cuatro cielos, cada uno una dimensión con su color, con la Tierra azul relacionándose con las demás, y fija la Ley de Origen como mandato de Sira junto a las enseñanzas de Bistoa.",
+        limitation:
+          "No incluye ninguna narración de creación entre sus nueve relatos: aporta tres páginas de marco divulgativo, y su orden ascendente de colores —rojo, blanco, amarillo, azul— no coincide con el esquema de Osborn.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: Rurcocá sentada en un banco piensa a Sira mientras cuatro mundos de papel blanco, rojo, azul y amarillo se mezclan alrededor de lagunas y la Sierra Nevada del Cocuy; Rukwa como Sol sobrio activa agua y semillas, sin divinidades europeizadas, coronas, halos ni texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",
@@ -82,40 +122,44 @@ ${visualRule}`,
   {
     slug: "mensajes-de-los-animales-uwa",
     title: "Los mensajes de los animales",
-    mito: `En los cerros de Lobara, Serobakara y Toiroa, cerca del camino entre Cascajal y Mulera, se reunieron los animales. Desde las alturas observaban a las familias U’wa que subían y bajaban por el territorio. Veían viajeros con mochilas cargadas y niños sostenidos en la espalda. Sabían que cada recorrido atravesaba lugares visibles y otros que podían esconder peligros.
+    mito: `En un tiempo se reunieron todos los animales en los cerros de Lobara, Serobakara y Toiroa, muy cerca del camino que pasa por las comunidades de Cascajal y Mulera. Entre ellos se contaban historias sobre los U’wa.
 
-Los animales conversaron sobre la manera de ayudar. No querían detener los viajes ni reemplazar el conocimiento de las personas. Decidieron enviar advertencias por los medios que ya compartían con ellas: el canto, el sueño y las señales del camino.
+Les parecía muy curioso que los viajeros de Cascajal y Mulera subieran y bajaran con muchas mochilas y cargando a sus niños en las espaldas. También se interesaron por saber todos los misterios de esos viajeros. Querían facilitarles la vida dándoles consejos y, para eso, idearon varias estrategias.
 
-El pájaro cientaro propuso seguir a los viajeros mientras cantaba. Cuando se sentaran a descansar, los soplaría para que entraran en un sueño profundo. Allí conocería aquello que los inquietaba y convertiría ese conocimiento en un canto que otros animales pudieran comprender. Varias aves eligieron esperar junto a los senderos. Sus voces cambiarían según el riesgo: un llamado insistente podría avisar de algo oculto más adelante; otro sonido recordaría que no era buen momento para continuar.
+El pájaro cientaro, que es un ave propia del territorio ancestral, de pico largo y de plumas rojas y amarillas, dijo que perseguiría a los viajeros cantando, y que cuando ellos se sentaran a descansar los soplaría para que entraran en un sueño profundo. Luego, dentro de ese sueño, aprendería los secretos de los viajeros y haría con ellos un canto que después les transmitiría a sus amigos animales.
 
-El tigrillo tomó una tarea diferente. Seguiría a la gente hasta sus casas sin acercarse de forma amenazante. Cuando durmieran, se conectaría con su espíritu. El consejo aparecería con una forma cercana: la voz de un familiar, un vecino o un ser de otra dimensión. Al despertar, la persona tendría que recordar el sueño y reconocer qué acción debía corregir.
+Otros pájaros dijeron que esperarían a la orilla de los caminos, para dar mensajes de advertencia a los viajeros mediante su canto.
 
-Desde entonces, los animales no son un decorado silencioso del territorio. Aconsejan, revelan peligros y hacen visible cuando una conducta rompe la armonía. El cientaro conoce secretos porque acompaña los caminos; las otras aves hacen oír advertencias; el tigrillo trabaja en el espacio de los sueños.
+Por su parte, el tigrillo dijo que seguiría el camino de los viajeros hasta sus casas. Y que cuando se durmieran, él se conectaría con sus espíritus para aconsejarlos. En el sueño, los U’wa recibirían el consejo por medio de un familiar, de un vecino o de un ser de otra dimensión.
 
-Los U’wa agradecen esos mensajes prestando atención. Escuchar un canto o recordar un sueño no significa obedecer cualquier temor: exige leer la relación entre lugar, momento, animal y conducta. La ayuda funciona porque personas y animales participan de un territorio vivo y pueden advertirse mutuamente.`,
-    historia: `“Los mensajes de los animales” abre la selección de nueve narraciones de Historias ancestrales U’wa — Kajkin Luin Karita. El libro fue construido por la Institución Etnoeducativa U’wa Izketa Segovia a partir de procesos con niños, dinamizadores y autoridades tradicionales de comunidades de Norte de Santander. Los textos fueron revisados en u’wajka y castellano para una publicación educativa de 2020.
+Desde entonces los U’wa están agradecidos con los animales, porque los advierten de los peligros y los aconsejan a través de sus cantos o de sus sueños. También, gracias a esos mensajes, saben qué cosas de las que hacen son indebidas, pues el cientaro conoce todos sus secretos.
 
-La procedencia es importante: no se trata de una transcripción extraída por un coleccionista externo ni de una leyenda genérica adaptada al pueblo U’wa. La introducción explica que las historias circulan en Unkarkuba, un encuentro anual de intercambio de saberes, y que las autoridades participaron en su transmisión. Esta página parafrasea la narración y acredita el libro; no reproduce su texto bilingüe ni sus ilustraciones.
+Los animales no quedaron como un adorno del paisaje. Cada especie tiene un ser supremo en otra dimensión que la controla y la protege, y para ese ser supremo los animales de este mundo son sus cultivos y su alimento diario. Son seres inteligentes, curiosos, sabios y poseedores de poderes propios. Por eso los mensajes viajan en las dos direcciones: de las autoridades tradicionales hacia la naturaleza y de la naturaleza hacia los seres humanos, unas veces por la palabra y otras veces por el sueño.`,
+    historia: `La narración la aportó la Sede Onkasa de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, y su título en u’wajka es Luat Shit Ekuga. Abre el libro Historias ancestrales U’wa — Kajkin Luin Karita, publicado en 2020 como número 32 de la serie Territorios Narrados del Ministerio de Educación Nacional y el Cerlalc, con textos y traducción de Senén Airima Ríos Santos y Camilo Andrés Delgado Rodríguez, ilustraciones de Elizabeth Builes y revisión del wejen Situa Kamara. La selección de las nueve narraciones se hizo, según explica la propia institución, teniendo como referente la convivencia, la armonía y el equilibrio del ser U’wa con los animales, de acuerdo con la Ley de Origen o Sir Ajka.
 
-La monografía de Osborn ayuda a comprender por qué animales, cantos y sueños pueden comunicar mundos. Su investigación muestra que los seres celebrados no son “animales” en un sentido naturalista simple y que los cantos mantienen relaciones entre deidades, lugares y actividades. La caracterización cultural confirma el papel de autoridades, oralidad y lengua.
+El relato está anclado en un camino concreto. Los animales se reúnen en los cerros de Lobara, Serobakara y Toiroa, cerca del camino que pasa por las comunidades de Cascajal y Mulera, y lo que observan son los viajeros que suben y bajan por ahí. El glosario del mismo libro precisa que Toiroa es el cerro que representa una de las puntas de los cuatro pilares de la dimensión de la Tierra, y que el cientaro es un ave del territorio ancestral cuyas plumas rojas y amarillas se usan para elaborar algunos elementos sagrados.
 
-Los cerros y comunidades nombrados pertenecen al ámbito de la Institución Izketa Segovia. La coordenada es territorial y no pretende ubicar con exactitud la reunión animal.`,
-    versiones: `La publicación comunitaria presenta una versión concreta con tres estrategias: el cientaro aprende secretos durante el sueño, otras aves advierten desde las orillas de los caminos y el tigrillo aconseja al conectarse con el espíritu de quien duerme. El cierre expresa gratitud y recuerda que los animales ayudan a reconocer acciones indebidas.
+El procedimiento del cientaro tiene definición propia en ese glosario: soplar es la transmisión de energías a otro ser para su purificación. No es un gesto figurado, sino el mismo acto que ejecutan las autoridades tradicionales.
 
-En otros registros U’wa, las relaciones con animales aparecen dentro de mitos cantados extensos, ceremonias de soplar y sistemas de equivalencia entre cultivos, presas y dueños no visibles. No se incorporan esos materiales como si fueran escenas omitidas de esta historia. Funcionan como contexto para comprender una continuidad cosmológica.
+El marco general lo escribe la institución en el capítulo sobre la cultura U’wa: cada especie animal tiene un ser supremo en otra dimensión que la controla y la protege; las autoridades tradicionales transmiten mensajes de armonización y protección mediante la oralidad o los sueños, de los seres humanos hacia la naturaleza y al revés; y los animales son amigos y consejeros.
 
-La traducción castellana usa “cientaro” para el ave que encabeza el relato. La edición conserva ese nombre sin asignarle una especie científica que la fuente no identifica. Tampoco decide si la conexión del tigrillo debe clasificarse como sueño, visión o mensaje chamánico en categorías occidentales.
+Ann Osborn llegó a una conclusión equivalente desde el otro extremo del territorio, en el clan kubaruwa del Cocuy: los u’wa no hacen una distinción tajante entre ellos y los animales, puesto que ambos están conformados por las mismas propiedades originales y ambos obtienen sustancias alucinógenas en los mitos.`,
+    versiones: `El texto de Onkasa es breve y deliberadamente abierto. Los pájaros que esperan a la orilla del camino dan «mensajes de advertencia» mediante su canto, sin que se diga qué canto significa qué. Cualquier catálogo de señales que se le añada es interpretación y no relato.
 
-Algunas lecturas infantiles podrían convertir a los animales en personajes que hablan como en una fábula. Aquí se conserva el tono pedagógico, pero el consejo animal se presenta como relación territorial y no como moraleja inventada.`,
+El reparto de tareas sí está fijado: el cientaro persigue y sopla para inducir el sueño y convierte los secretos en canto; otros pájaros esperan junto a los caminos; el tigrillo sigue hasta las casas y se conecta con los espíritus de quienes duermen. El consejo llega entonces con la voz de un familiar, de un vecino o de un ser de otra dimensión.
+
+En el trabajo de Ann Osborn entre los kubaruwa los pájaros ocupan otra posición. En el canto 16d del mito cantado del aya, cuatro tipos de tijeretas aparecen por el este, vuelan hacia el oeste y regresan, y repiten ese vuelo cuatro veces, cada una más alto, cantando mientras vuelan; Kanwara les da el alucinógeno para que puedan seguir volando aunque ya se hayan asentado en la tierra a procrear, y a esos pájaros se los designa como aya, ordenamiento. Allí el ave que recorre el territorio cantando no advierte a nadie: lo ordena.
+
+Sobre quién recibe el mensaje hay otra diferencia. La caracterización del Ministerio de Cultura y el Documento Madre de Leyes de Origen atribuyen la lectura de los sueños a las autoridades tradicionales, los Werjayas o los Karecas. La narración de Onkasa la pone en manos de cualquier viajero: quien despierta tiene que reconocer el consejo por su cuenta y decidir qué corregir.`,
     leccion:
-      "Quien aprende a escuchar el territorio reconoce advertencias antes de que el daño sea irreversible.",
-    similitudes: `Las aves que anuncian acontecimientos aparecen en muchas tradiciones campesinas e indígenas de Colombia. La coincidencia no vuelve al cientaro equivalente a cualquier ave agorera: su función se relaciona con viajeros U’wa, cerros concretos y un conocimiento transmitido en canto.
+      "Un territorio habitado avisa de sus peligros por el canto y por el sueño de quien lo cruza.",
+    similitudes: `Dos paralelos documentados sostienen la idea de un territorio que avisa.
 
-El consejo recibido en sueños recuerda relatos donde antepasados o protectores visitan a quienes duermen. En esta historia, el tigrillo no reemplaza a la familia; hace que el mensaje pueda aparecer por medio de una voz familiar, vecinal o procedente de otra dimensión. Esa mediación distingue la escena de un simple “animal guía”.
+El primero es el vuelo de las tijeretas que Osborn transcribió en el canto 16d del aya. Cuatro tipos de aves de cola bifurcada aparecen por el este, vuelan hacia el oeste y regresan por debajo, y hacen ese recorrido cuatro veces, cada vez más alto, cantando. Es el mismo dispositivo de la narración de Onkasa —un ave que recorre un camino cantando y va dejando información en él—, puesto esta vez al servicio del ordenamiento del mundo y no del cuidado de unos caminantes concretos.
 
-Dentro del corpus U’wa, el pájaro carpintero entrega poder de curación y el oso protege una comunidad. Los tres relatos muestran capacidades animales, pero sus relaciones son diferentes: unos advierten, otro sana y otro vigila. No conviene unificarlos en una categoría plana de “animales mágicos”.
+El segundo es el reowa, el mito cantado de la soplada. Osborn registra sopladas dirigidas contra los peligros de los seres acuosos y orientales del solsticio; en una de ellas Ruruna sopla las culebras del mundo de abajo, desde las montañas del oeste hasta donde el cielo toca la tierra, para que su veneno no dañe, y en otra se echa sobre las culebras el sueño-Sol. El soplo que adormece aparece en las dos tradiciones: allí para neutralizar un peligro, aquí para abrir el sueño donde se entrega el consejo.
 
-La enseñanza se aproxima a prácticas contemporáneas de observación ecológica, porque cantos y comportamientos animales pueden indicar cambios ambientales. El relato, sin embargo, no se reduce a un manual de señales naturales: incluye dimensiones espirituales, conducta humana y reciprocidad.`,
+Un tercer punto de contacto es el de las plumas. Las del cientaro sirven, según el glosario del libro, para elaborar elementos sagrados. Osborn documenta que las plumas de pavo se insertaban en las capas ceremoniales y en los gorros de iniciación de las adolescentes, y que circulaban como artículo de intercambio entre habitantes de distintas zonas. Aconsejar al que camina y vestir la ceremonia resultan ser dos usos del mismo vínculo con esas aves.`,
     excerpt:
       "Aves y tigrillo acuerdan aconsejar a los viajeros U’wa mediante cantos, señales y sueños.",
     seoTitle: "Los mensajes de los animales: relato U’wa",
@@ -129,7 +173,64 @@ La enseñanza se aproxima a prácticas contemporáneas de observación ecológic
       "historias U’wa",
     ],
     tags: ["animales", "sueños", "viajero", "música"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «Mensajes de los animales / Luat Shit Ekuga», Sede Onkasa, con el camino entre Cascajal y Mulera, el reparto de tareas entre el cientaro, las otras aves y el tigrillo; el glosario describe al cientaro y define Toiroa y soplar, y el capítulo cultural explica que los animales son amigos y consejeros.",
+        limitation:
+          "El texto es muy breve y no dice qué significa cada canto de advertencia: cualquier catálogo de señales queda fuera de la fuente. Tampoco identifica la especie del cientaro ni fecha el registro.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta el canto 16d del mito cantado del aya, donde cuatro tipos de tijeretas aparecen por el este, vuelan al oeste y regresan cuatro veces cada vez más alto, cantando mientras vuelan, y Kanwara les da el alucinógeno para que puedan volar aunque ya se hayan asentado; y el principio de que los u’wa no distinguen tajantemente entre ellos y los animales.",
+        limitation:
+          "Allí las aves ordenan el mundo y no aconsejan a viajeros; es material del clan kubaruwa del Cocuy y el paralelo es de dispositivo narrativo, no de contenido.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta el mito cantado del reowa con sus sopladas: Ruruna sopla las culebras del mundo de abajo desde las montañas del oeste hasta donde el cielo toca la tierra para que su veneno no dañe, y en otra soplada se echa sobre las culebras el sueño-Sol.",
+        limitation:
+          "El soplo que adormece aparece allí como acto de una deidad contra un peligro, no como recurso de un ave para abrir el sueño de un caminante; la obra no registra este relato.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Confirma que los mitos cantados reowa son rituales de soplar orientados a la purificación y atribuye a las autoridades tradicionales la transmisión de mensajes por la oralidad y los sueños.",
+        limitation:
+          "Resume bibliografía ajena y sitúa la lectura de los sueños en el Werjaya, no en cualquier viajero, que es lo que dice la narración de Onkasa.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta la creación de las aves en el canto Cobaría: Sira creó las pavas y las mandó del cielo al oriente, y luego las golondrinas, encargando estas últimas a Huaa, con lo que el poblamiento del mundo por aves viajeras queda documentado en otro clan.",
+        limitation:
+          "El canto no menciona aves consejeras ni sueños; solo se accede a la transcripción de 2022 del registro de 1962.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Confirma el territorio y la continuidad de las autoridades tradicionales en al menos diecisiete comunidades, marco en el que se transmite este tipo de saber.",
+        limitation:
+          "Ficha breve de contexto, sin narrativa ni referencia a los animales consejeros.",
+      },
+      {
+        key: "perezestructuras1996",
+        summary:
+          "Permite situar el par humano-animal como aviso mutuo dentro del repertorio de estructuras duales documentado para los Andes Orientales.",
+        limitation:
+          "No trabaja material u’wa de campo ni menciona este relato; su uso es comparativo.",
+      },
+      {
+        key: "torresResena1991",
+        summary:
+          "Documenta la existencia de una escritura u’wa propia sobre rituales chamanísticos y sobre la relación con seres de otras dimensiones, que es el registro al que pertenecen los consejos recibidos en sueños.",
+        limitation:
+          "Solo se pudo consultar la reseña de dos páginas y no el libro de 1992; nada en ella toca este relato.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: viajeros U’wa con mochilas recorren un sendero entre Lobara, Serobakara y Toiroa; aves cantan desde los bordes y un tigrillo observa como consejero, atmósfera de escucha y cuidado, sin rasgos amenazantes, texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -143,40 +244,44 @@ ${visualRule}`,
   {
     slug: "el-oso-y-el-hombre-uwa",
     title: "El oso y el hombre",
-    mito: `En las montañas altas de Bakokuira vivía un oso grande. No atacaba a la comunidad. Desde el bosque protegía su territorio y observaba con curiosidad las actividades de una familia U’wa. Veía al padre regresar con carne o pescado, a la madre cargar plátanos en la mochila y a los niños jugar alrededor de la casa.
+    mito: `En las montañas de la comunidad U’wa de Bakokuira vivía un oso grande. Era un oso amigo: desde las montañas más altas protegía el territorio de esa comunidad y no le hacía daño a nadie.
 
-El oso se alegraba cuando la familia volvía con alimento. Después subía a buscar frutos entre los árboles y dormía en la montaña. Antes del amanecer bajaba con cuidado hasta los alrededores de la vivienda. Permanecía entre el rastrojo, sin entrar ni perturbar a nadie, y comprobaba que todo estuviera en orden.
+Lo que la gente hacía a diario le daba curiosidad. Por eso se acercaba poco a poco a una casa y, desde el rastrojo, miraba. Veía llegar al papá con carne y con pescado. Veía entrar a la mamá con una chinchorrada de plátano, la mochila llena hasta el borde. También los veía jugar: el papá y la mamá se escondían, divertidos, mientras los niños trataban de encontrarlos. El oso se ponía alegre sobre todo cuando los padres traían banano y bagala para los hijos.
 
-Una tarde, el padre encontró las huellas cerca de la casa. No reconoció en ellas a su protector. Pensó que otro oso acechaba a los niños y que debía actuar antes de que ocurriera una desgracia. Reunió palos y preparó una trampa. El animal ya había vuelto a las alturas y no pudo ver el peligro que se construía en su camino habitual.
+Después subía a lo alto de la montaña, se alimentaba de los frutos de los árboles y se dormía. Cuando llegaba la madrugada bajaba otra vez, muy despacio y en silencio, hasta los alrededores de la casa, y desde allí los observaba de nuevo.
 
-Al día siguiente, el oso descendió temprano y quedó atrapado. Herido y asustado, lloró porque no comprendía la acción del hombre a quien había cuidado. Cuando el padre lo encontró, vio demasiado tarde que era el oso amigo. Sintió tristeza y pidió a los seres de la naturaleza que armonizaran su error. No había querido traicionar a su protector; había actuado desde el miedo y una lectura equivocada de las señales.
+Una tarde el papá encontró el rastro cerca de la vivienda y lo leyó como una amenaza. Se dijo a sí mismo que ese no era su amigo el oso, sino otro oso que les haría daño a sus hijos. Entonces empezó a cargar palos para hacer una trampa. El oso no alcanzó a ver nada de eso, porque ya había subido a la parte alta de la montaña.
 
-Las heridas eran graves. El hombre acompañó al animal mientras ambos lloraban. Sus lágrimas cayeron sobre el bosque de Bakokuira. La narración no convierte el accidente en una victoria de caza ni promete que toda equivocación pueda repararse de inmediato. Conserva el peso de una decisión tomada sin reconocer al otro.
+A la mañana siguiente descendió muy temprano, como siempre, y cayó en la trampa. Lloraba desesperado y adolorido, lleno de tristeza. No entendía por qué el hombre al que él cuidaba y protegía había hecho esa trampa para cazarlo.
 
-Desde entonces, las huellas no solo anuncian una amenaza. También recuerdan que quien comparte el territorio puede estar cuidando desde una distancia que las personas no comprenden. Antes de responder con violencia, hay que mirar de nuevo, recordar la relación y pedir consejo.`,
-    historia: `La narración procede de la sede Bako Kuira de la Institución Etnoeducativa U’wa Izketa Segovia y fue incluida en Historias ancestrales U’wa. Su edición se apoya en un proceso comunitario de memoria, lengua y educación propia. El título, el lugar Bakokuira y la relación entre el oso protector y la familia pertenecen a esa fuente.
+Cuando el papá llegó y vio a su amigo atrapado, se sintió muy triste. Les pidió a los seres de la naturaleza que armonizaran su error. Él no había querido cazar al oso; había leído mal las señales y había actuado desde el miedo. Pero ya era demasiado tarde: el animal estaba malherido y pronto moriría.
 
-La reescritura mantiene la secuencia sin copiar la prosa: observación cotidiana, huella malinterpretada, trampa, reconocimiento tardío y pedido de armonización. No añade un rescate feliz ni convierte al oso en espíritu tutelar universal de todos los clanes. El desenlace doloroso es parte de la enseñanza.
+Las lágrimas del papá y las del oso bañaron el bosque de Bakokuira.
 
-La caracterización del Ministerio de Cultura describe un territorio que atraviesa altas montañas, bosque y piedemonte y donde la vida se organiza mediante caminos. El libro comunitario explica que cada especie tiene un ser en otra dimensión que la controla y protege y que animales y personas transmiten mensajes de armonización. Esos marcos ayudan a leer la historia sin reducirla a defensa moderna de fauna.
+Desde entonces, un rastro cerca de la casa no anuncia solamente un peligro. También puede ser la huella de alguien que estaba cuidando desde una distancia que las personas no alcanzan a ver, y que ya no volverá a bajar por ese camino.`,
+    historia: `La narración la aportó la Sede Bako Kuira de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, y su título en u’wajka es Manoji Ujia. Llegó al libro por una ruta que el propio libro detalla: desde 2017 el equipo de Material Pedagógico Propio de la institución, liderado por la licenciada Mireya Suárez Santafé y el maestro de lengua materna Senén Airima Ríos Santos, recopila y ajusta los relatos con las orientaciones del wejen Kuanima Runía. Las narraciones se socializan cada año entre el 7 y el 12 de octubre en el encuentro Unkarkuba, donde intercambian saberes siete comunidades U’wa de Norte de Santander; en 2019 se compilaron seis en el documento U’kajkut shit saunga; y para la edición de 2020 se escogieron nueve, revisadas y adaptadas al castellano y al u’wajka por el lingüista Camilo Andrés Delgado Rodríguez y el wejen Situa Kamara. El libro se cerró tras un recorrido por el territorio hecho entre julio y octubre de 2020 con las autoridades tradicionales, los wejen y los niños del cabildo Unido U’wa de Toledo.
 
-La especie de oso no se nombra en la narración. Aunque el oso andino habita la Cordillera Oriental, esta página no introduce rasgos biológicos ni una identificación taxonómica ausente. La coordenada representa el territorio U’wa y no localiza la casa o la trampa.`,
-    versiones: `La versión pública de 2020 cuenta un solo desenlace: la trampa hiere mortalmente al oso y las lágrimas del padre y del animal bañan el bosque. La familia no había acordado con él una vigilancia explícita; el vínculo se conoce desde la perspectiva narrativa, mientras el hombre lo descubre demasiado tarde.
+El error del padre tiene una explicación que la etnografía documenta. Ann Osborn registró entre los kubaruwa una clasificación de parentesco extendida a los animales: los U’wa y los animales que no son rikuma, es decir los que no están «más allá del límite», son raba, hermanos y primos paralelos. Los animales rikuma, entre ellos los que comen gente como el jaguar y el oso, quedan del otro lado junto con la gente de otras tribus y los clanes con los que no hay intercambio matrimonial, y se clasifican como shara, primos cruzados. El oso no es ni pariente de casa ni enemigo: es el pariente ambiguo con el que hay que tratar.
 
-No se encontraron variantes publicadas con un final diferente. La ausencia se declara en vez de rellenar la sección con comparaciones de folclor europeo o cuentos contemporáneos. La transmisión oral puede conservar otros detalles en Bakokuira, pero no corresponde inventarlos.
+Osborn recogió además un hecho ocurrido poco antes y que le fue narrado. Un oso atacó y mató a una criatura que habían dejado un momento al borde de un cultivo. Los kubaruwa no culparon al animal: tenía hambre y vio a la niña como maíz, de modo que se trataba de una identidad equivocada y la culpa era de las deidades que le habían dado el alucinógeno. Lo mataron para que no cometiera otra vez el mismo error y le dieron un entierro como gente, porque en el mundo de abajo él se volvería un ser humano.`,
+    versiones: `El relato de la Sede Bako Kuira no deja dudas sobre el final: el oso queda malherido y va a morir, y las dos lloradas bañan el bosque. Ahí termina. No hay reparación ni castigo.
 
-En el mismo libro, animales y seres no humanos aparecen como consejeros, curadores, dueños o protectores. Esa recurrencia confirma un marco común, no una serie de versiones del oso. “Los mensajes de los animales” explica advertencias; “La competencia de los tigres” regula límites; Monoa protege ante seres peligrosos.
+Osborn documenta el mismo problema resuelto al revés. En el caso que le contaron, quien mata es el animal y quien decide es la comunidad, y la decisión incluye ejecutar al oso y darle honras funerarias humanas. En Bakokuira quien mata es el hombre, y lo único que hay es la petición de que los seres de la naturaleza armonicen el error.
 
-El padre actúa por temor a un posible oso distinto. La edición evita llamarlo cazador cruel: su error consiste en no reconocer una relación y responder antes de comprender. También evita presentar la muerte como castigo sobrenatural. El énfasis permanece en las consecuencias de la desconfianza.`,
+Las dos coinciden en un punto que separa este relato de una historia de caza: en ninguna se dice que el animal obró mal. La responsabilidad se busca en la lectura equivocada, no en la intención.
+
+La clasificación del oso tampoco es idéntica. Para los kubaruwa que trabajó Osborn el oso está entre los animales rikuma, comedores de gente, que no se cazan porque hacerlo equivaldría a matar gente. En la narración de Bakokuira el oso es explícitamente «un oso amigo» que protege el territorio, y la trampa es justamente el acto que no debía ocurrir. La distancia entre las dos lecturas corresponde a comunidades distintas: Osborn trabajó alrededor de Cobaría, en Boyacá, y esta narración viene de Norte de Santander.
+
+El libro de 2020 añade un marco que Osborn no formula así: cada especie animal tiene un ser supremo en otra dimensión que la controla y la protege, y para ese ser supremo los animales son sus cultivos y su alimento diario.`,
     leccion:
-      "El miedo puede destruir una alianza si actuamos antes de comprender las señales y relaciones del territorio.",
-    similitudes: `Relatos de osos que protegen personas existen en regiones andinas y de montaña, pero este se sitúa en Bakokuira y gira alrededor de una huella mal leída. No presenta matrimonio con un oso, transformación humana ni origen de una especie, motivos comunes en otras tradiciones.
+      "El miedo lee las señales del territorio más rápido de lo que la memoria alcanza a corregirlas.",
+    similitudes: `El motivo del protector confundido con una amenaza tiene dos paralelos documentados dentro de la propia tradición u’wa, y los dos giran sobre lo mismo: la vista falla y el parentesco se equivoca.
 
-La estructura se acerca a fábulas sobre amistad traicionada: un aliado discreto es confundido con enemigo y el reconocimiento llega cuando ya no hay reparación. La semejanza narrativa permite hablar de confianza, aunque el marco U’wa añade seres de la naturaleza, armonización y territorio vivo.
+El primero es el caso del oso que Osborn recogió en Cobaría. Allí el animal ve una criatura humana y ve maíz. La explicación kubaruwa es que el chamán, cuando viaja, se ve a sí mismo como jaguar, oso o pájaro según baje al mundo de abajo o suba al de arriba, y que esos animales a su vez se ven a sí mismos como gente en sus respectivos mundos. En Bakokuira el error corre en la otra dirección: el hombre ve unas huellas y ve un peligro.
 
-Dentro de la colección, la muerte del niño Monoa también sigue a un intento de proteger familias. Allí el daño proviene de un ser peligroso; aquí lo produce la defensa humana equivocada. Ambas historias muestran que proteger no elimina la vulnerabilidad del protector.
+El segundo está en el mito cantado del aya. Osborn señala que los términos de parentesco funcionan como metáforas de clasificación en toda la tradición oral u’wa, y que de ahí derivan rúwa raba, hermanos de carne, que designa a los mamíferos que comen el mismo alimento que la gente, y shara, los carnívoros que comen gente. Las huellas del rastrojo obligan al padre a decidir en cuál de esas dos categorías cae el animal, y decide mal.
 
-El relato puede dialogar con debates actuales sobre coexistencia con fauna, especialmente cuando las personas interpretan cualquier cercanía como amenaza. Aun así, la página no lo convierte en campaña ambiental ni sustituye la ley natural U’wa por lenguaje técnico de conservación.`,
+Roberto Lleras describió para los Andes Orientales el funcionamiento general de las estructuras de pensamiento dual, donde los pares de opuestos son la regla. Lo que la comparación deja ver aquí es que la oposición no se resuelve eliminando un término: el oso muere, el hombre queda con el error encima y el bosque queda marcado por las dos lloradas.`,
     excerpt:
       "Un oso protege Bakokuira, pero una huella mal interpretada lleva a un hombre a herir a su aliado.",
     seoTitle: "El oso y el hombre: historia ancestral U’wa",
@@ -190,7 +295,58 @@ El relato puede dialogar con debates actuales sobre coexistencia con fauna, espe
       "territorio U’wa",
     ],
     tags: ["oso", "protección", "consecuencias", "montaña"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro con su atribución exacta: «El oso y el hombre / Manoji Ujia», Sede Bako Kuira, y aporta los detalles que dan textura a la escena —la chinchorrada de plátano, la bagala, el juego de escondidas de los padres— y el desenlace, en el que el oso queda malherido y va a morir.",
+        limitation:
+          "Es una selección pedagógica de nueve narraciones entre las muchas recopiladas desde 2017, revisada y adaptada para lectura escolar; no registra el nombre del narrador individual, la fecha de la sesión ni la variante original de la que se partió.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta el caso real que le fue narrado en Cobaría: un oso mató a una criatura dejada al borde de un cultivo, no se le culpó porque tenía hambre y vio a la niña como maíz, se le mató para que no repitiera el error y se le dio entierro como gente, porque en el mundo de abajo iba a volverse humano. También aporta la doctrina de que el chamán se ve como jaguar, oso o pájaro según hacia dónde viaje.",
+        limitation:
+          "Es un suceso puntual registrado en el clan kubaruwa del Cocuy y no una variante de esta narración: sirve para explicar la lógica de la identidad equivocada, no para reconstruir el relato de Bakokuira.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta la clasificación que explica el error del padre: los animales que no son rikuma son raba, hermanos y primos paralelos, mientras que los rikuma —entre ellos los que comen gente, como el jaguar y el oso— quedan «más allá del límite» y se clasifican como shara, primos cruzados, junto con la gente de otras tribus.",
+        limitation:
+          "Trabaja el sistema de parentesco de un solo clan, el kubaruwa, y no recoge ningún relato de oso; la clasificación se aplica a esta narración por analogía y no porque la fuente la vincule.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Aporta el marco institucional del territorio y de los clanes, y la formulación de que el pueblo no ve el territorio como fuente de riqueza sino como un ser vivo con espíritu propio, que es el supuesto bajo el que un animal puede ser protector.",
+        limitation:
+          "Resume bibliografía de terceros y planes de salvaguarda; no contiene relato alguno de oso ni de animales protectores de una casa.",
+      },
+      {
+        key: "perezestructuras1996",
+        summary:
+          "Permite leer la oposición amigo-amenaza dentro del repertorio de estructuras duales documentado para los Andes Orientales, donde el par de opuestos suele resolverse por combinación y no por eliminación.",
+        limitation:
+          "No trabaja material u’wa de campo y no menciona este relato; se usa como marco comparativo general.",
+      },
+      {
+        key: "laverdeLinajes1995",
+        summary:
+          "Aporta la lógica de los circuitos de parentesco chibchas que sustenta la distinción entre raba y shara, es decir, entre los parientes con los que hay intercambio y los que quedan del otro lado del límite.",
+        limitation:
+          "Se ocupa de alianzas matrimoniales humanas y no de la extensión de esas categorías a los animales, que es lo que hace falta aquí.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Sitúa el territorio de las comunidades U’wa en el norte de la Cordillera Oriental, incluido Norte de Santander, que es de donde procede esta narración.",
+        limitation:
+          "Es una ficha de contexto sin contenido narrativo ni referencia al bosque de Bakokuira.",
+      },
+      "torresResena1991",
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: oso andino estilizado observa con calma desde el bosque alto de Bakokuira a una familia U’wa que regresa con mochila y alimento; huellas conectan montaña y casa, sin trampa visible ni violencia, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -204,40 +360,60 @@ ${visualRule}`,
   {
     slug: "la-competencia-de-los-tigres-uwa",
     title: "Bistoa y la competencia de los tigres",
-    mito: `Bistoa nació en el cerro Tina, dentro del territorio ancestral U’wa, mientras tomaba yopo. Desde allí llamó con su pensamiento a los tigres de Kuiunbara, Tinshoikuba y Sheonkuba. También convocó a los tigres de los Llanos Orientales. Repitió el llamado hasta que todos entendieron que debían encontrarse con él.
+    mito: `Bistoa nació en el cerro Tina, en territorio ancestral U’wa, tomando yopo. Un buen día llamó una, dos, tres, cuatro veces a los tigres de los territorios ancestrales de Kuiunbara, Tinshoikuba y Sheonkuba, y también a los de los Llanos Orientales. Los llamó para tomar yopo juntos.
 
-Los tigres llegaron y preguntaron para qué habían sido convocados. Bistoa los invitó a sentarse y compartir yopo. Les dio cuatro tomas y los armonizó para una prueba que no medía solo fuerza física. Tendrían que saltar los cerros más altos de cuatro dimensiones. Los animales del territorio ancestral pasarían primero; después lo intentarían los de los Llanos.
+Los tigres se dieron cuenta de que Bistoa los necesitaba, así que llegaron hasta donde estaba él.
 
-Los primeros cruzaron las alturas con facilidad. Sabían cómo relacionarse con esos cerros y sus límites. Los tigres orientales probaron una y otra vez, pero resbalaron y terminaron en el mismo lugar. Cuando regresaron, Bistoa preguntó por el resultado. Los vencedores respondieron que habían cumplido. Los otros reconocieron su fracaso y quisieron saber la causa.
+—¿Cómo está? —saludaron.
 
-Bistoa explicó que su comportamiento era el problema. Atacaban a la gente y entraban sin respetar la relación entre territorios. Si continuaban, serían perseguidos por los seres humanos y enfrentados por los tigres que protegían la zona U’wa. La dificultad para cruzar no era simple torpeza: mostraba que no podían obtener poder sin aceptar límites.
+—¡Muy bien! —contestó Bistoa.
 
-Los tigres de los Llanos se entristecieron. Bistoa no ordenó exterminarlos. Les ofreció una condición para vivir: dejar de causar daño y respetar las fronteras del territorio ancestral. Solo así podrían evitar una confrontación permanente.
+—¿Para qué nos necesita?
 
-Desde entonces, la historia dice que los tigres orientales no llegan a ese territorio, controlado por sus propios tigres fuertes. Los cerros, las dimensiones y los animales forman una red de regulación. Bistoa aparece como autoridad capaz de convocar, armonizar y enseñar que la fuerza sin conducta justa no permite atravesar todos los mundos.`,
-    historia: `“La competencia de los tigres” fue recopilada por la sede Bako Kuira y publicada en Historias ancestrales U’wa. El libro conserva los nombres Bistoa, Tina, Kuiunbara, Tinshoikuba y Sheonkuba y presenta el relato en castellano y u’wajka. Esta página respeta esos nombres y parafrasea la acción sin agregar una batalla espectacular.
+—Para que vengan a tomar yopo —dijo Bistoa.
 
-El contexto final del libro identifica a Bistoa como creador de la Madre Tierra y transmisor de enseñanzas que orientan el territorio. Otras fuentes usan nombres y funciones que pueden variar por clan o región. Por eso Bistoa no se homologa automáticamente con Sira, Rukwa o Canwará.
+Los tigres respondieron que estaban listos. Bistoa los invitó a sentarse y sacó el yopo. Luego les dio una, dos, tres y cuatro tomas. A todos les dio borrachera, y Bistoa los armonizó para que pudieran competir.
 
-La escena del yopo se narra sin convertir la sustancia sagrada en un recurso fantástico. En la tradición U’wa, las autoridades emplean yopo, coca y tabaco dentro de prácticas de conocimiento y armonización. Ann Osborn también documenta el uso ritual de akwa y los cantos asociados, pero no se mezclan esas ceremonias específicas con esta competencia.
+—Ahora —les dijo— deben cruzar saltando cuatro veces los cerros más altos de las cuatro dimensiones. Primero saltarán los tigres del territorio ancestral y después los de los Llanos Orientales. Si logran hacer esto serán fuertes y poderosos.
 
-“Tigre” es la palabra del texto castellano y puede referir al jaguar en usos regionales. La imagen adopta un gran felino de selva y piedemonte sin afirmar una clasificación zoológica exacta. Los lugares pertenecen al territorio narrado; la coordenada no localiza los cuatro cerros o dimensiones.`,
-    versiones: `La versión comunitaria publicada contrapone tigres del territorio ancestral y tigres de los Llanos Orientales. Los primeros superan los cerros; los segundos fallan y reciben una explicación sobre conducta, futuros ataques y respeto de límites. Bistoa condiciona la supervivencia a un compromiso, no a una derrota definitiva.
+Los tigres del territorio ancestral lograron cruzar los cerros fácilmente. Los de los Llanos Orientales lo intentaron una, dos, tres, cuatro veces, pero se resbalaron y terminaron en el mismo lugar. Después de la competencia todos regresaron con Bistoa.
 
-No se encontraron variantes públicas que cambien el resultado. Las fuentes académicas sí muestran que figuras felinas pueden ser manifestaciones de deidades y que los seres de los mitos no coinciden con animales ordinarios. Ese dato se conserva como contexto, sin declarar que cada tigre de esta historia sea la misma deidad.
+—Sobrinos, ¿sí lograron pasar? —preguntó él.
 
-La repetición de cuatro llamados, tomas, intentos y dimensiones responde a una estructura visible en el relato. No se interpreta como número decorativo ni se añade una simbología universal. El libro sobre cultura U’wa explica cuatro cielos o rutas, lo que permite reconocer una relación interna.
+—Nosotros pasamos sin ninguna dificultad —respondieron los del territorio ancestral.
 
-El límite entre territorio ancestral y Llanos no se presenta como frontera administrativa moderna. Es una diferencia cosmológica y territorial expresada mediante animales protectores, cerros y capacidad de tránsito. Tampoco se usa para describir a comunidades humanas vecinas como “salvajes”.`,
+—Nosotros no fuimos capaces —dijeron los de los Llanos, pensativos, frustrados y tristes. Y preguntaron—: ¿Por qué nos caímos?
+
+—Porque ustedes son salvajes, atacan a la gente y, en el futuro, serán atacados por el hombre y por los tigres del territorio ancestral —respondió Bistoa.
+
+Los tigres se echaron a llorar. Entonces Bistoa añadió:
+
+—Si se comprometen a no hacerle daño a la gente y a respetar los límites del territorio U’wa, podrán sobrevivir.
+
+Desde entonces los tigres de los Llanos Orientales no llegan al territorio ancestral U’wa, porque está controlado y protegido por sus propios tigres fuertes y poderosos. El salto que unos dieron y otros no dio a cada grupo su lugar, y el yopo que Bistoa repartió antes de la prueba fue lo que permitió que hubiera prueba y no pelea.`,
+    historia: `La narración la aportó la Sede Bako Kuira de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, y su título en u’wajka es Kuaro Wakujeka. Se publicó en 2020 en Historias ancestrales U’wa — Kajkin Luin Karita, número 32 de la serie Territorios Narrados del Ministerio de Educación Nacional y el Cerlalc, con textos y traducción de Senén Airima Ríos Santos y Camilo Andrés Delgado Rodríguez y revisión del wejen Situa Kamara.
+
+El escenario está identificado en el glosario del mismo libro. Tina es un cerro ubicado dentro del Resguardo Unido U’wa, en los departamentos de Santander y Norte de Santander, y es el origen del territorio ancestral U’wa. Los tigres poderosos son tigres de otras dimensiones con poderes supremos, guardianes de la Madre Tierra. Y el yopo es la planta sagrada que se encuentra en Tame y Casanare en lugares estratégicos, que fortalece el saber de los mayores y el equilibrio de la Madre Tierra, y que no puede consumirse sin que antes la armonice la autoridad tradicional.
+
+Bistoa tiene en ese libro un rango que la narración no explicita. En el capítulo sobre la cultura U’wa, escrito por la propia institución, la orientación del pueblo son la Ley de Origen como mandato de Sira y las enseñanzas de Bistoa, a quien nombran creador de la Madre Tierra. Quien convoca a los tigres no es entonces un personaje más, sino la figura que en ese texto comparte con Sira la tarea de orientar la visión del territorio.
+
+La palabra con la que Bistoa se dirige a los tigres es la pieza que conecta el relato con la etnografía. Los llama «sobrinos». Ann Osborn documentó que en toda la tradición oral u’wa los términos de parentesco funcionan como metáforas de clasificación, y que los hermanos de la madre suelen ordenar a los hijos de sus hermanas: en los grupos sociales y en los mitos, el hermano de la madre es la figura central alrededor de la cual giran las relaciones. Aya, el nombre de uno de los dos tipos de mito cantado, significa a la vez ordenar y hermano de la madre.`,
+    versiones: `Bistoa no está documentado fuera del libro de 2020, y las fuentes que sí registran la creación nombran a otros.
+
+En el canto a la creación que Sergio Daza recogió en 1962 entre los tunebos del grupo Cobaría, quien hace el mundo es Sira y quien hace los cerros y los montes es Kanuará. En la caracterización del Ministerio de Cultura el creador es Sirateta y organiza el mundo sobre ocho bases. En la lista alfabética de deidades que Ann Osborn levantó entre los kubaruwa no figura Bistoa. El propio libro de 2020, en cambio, lo llama creador de la Madre Tierra. Las cuatro afirmaciones no se pueden sumar.
+
+El jaguar tampoco recibe el mismo tratamiento en todas partes. La caracterización del Ministerio de Cultura registra kotokwa como la palabra u’wa para jaguar. Osborn, por su lado, describe a Teca como el nombre del Sol en la esfera roja, donde se manifiesta como jaguar, y a Yagshowa como deidad chamánica que se transforma en jaguar y en pavo en el mundo del medio. En la narración de Bako Kuira los tigres no son manifestaciones solares: son animales de territorios concretos —Kuiunbara, Tinshoikuba, Sheonkuba y los Llanos Orientales— que compiten por su lugar.
+
+Hay un punto en el que la narración y Osborn coinciden sin ambigüedad. Para los kubaruwa, los animales que comen gente están «más allá del límite», son rikuma, y quedan clasificados como shara, primos cruzados, junto con la gente de otras tribus. Los tigres de los Llanos que atacan a la gente ocupan exactamente esa casilla, y el compromiso que Bistoa les ofrece es una regla de frontera, no una absolución.`,
     leccion:
-      "La verdadera fuerza depende de respetar límites, relaciones y responsabilidades dentro de un territorio compartido.",
-    similitudes: `Las pruebas de salto o paso entre montañas aparecen en relatos heroicos de muchas culturas. En la historia U’wa, la habilidad no concede un premio individual ni un reino: demuestra si los tigres pueden respetar el orden territorial y atravesar dimensiones armonizadas.
+      "La fuerza sin conducta ajustada no alcanza para cruzar los límites que un territorio ya tiene puestos.",
+    similitudes: `La competencia que reparte territorios tiene dos paralelos exactos dentro del mismo corpus, y los dos están en el mito cantado del aya que Ann Osborn transcribió entre los kubaruwa.
 
-Los felinos guardianes recuerdan figuras protectoras americanas asociadas con especialistas rituales. La comparación es amplia; aquí importan Bistoa, el cerro Tina, el yopo y la diferencia entre tigres locales y orientales. No se los convierte en “nahuales” ni en jaguares amazónicos genéricos.
+El primero es el canto 16c. Venado, liebre y pecarí conversan a un lado de la entrada de la cueva y deciden que deben correr, bajo la lluvia y el viento, para poner a punto sus fuerzas. Corren por el borde de los lagos de tierra alta. La liebre y uno de los dos venados corren más rápido y ganan; los ganadores se preguntan entre sí si se quedan o no, y deciden quedarse; los perdedores se dicen «vámonos a otro lago» y bajan por la montaña hasta asentarse en las tierras medias.
 
-Dentro de Historias ancestrales, Kubashoa también puede transformarse en tigres poderosos para enfrentar seres dañinos. Ambas narraciones vinculan fuerza felina y protección, pero no son versiones del mismo personaje. Bistoa regula un pacto colectivo; Kubashoa cumple una misión familiar y después pasa a otra dimensión.
+El segundo es el canto 16e. Los peces nadan corriente arriba desde el mar, creciendo y ganando fuerza; los más grandes y fuertes ganan la carrera y se quedan en los ríos grandes, mientras los pequeños, que perdieron, van a los ríos pequeños y a las quebradas. Osborn señala explícitamente que los cantos 16c y 16e tienen un patrón similar, en el que se relata la competencia por hembras y territorio.
 
-La historia puede leerse junto a normas de convivencia entre comunidades, especies y espacios. Su resolución por compromiso, en vez de destrucción, evita una moraleja de dominio. La autoridad no elimina al infractor: define las condiciones para que la vida continúe.`,
+El relato de Bako Kuira repite ese patrón con un cambio decisivo: la prueba no la pasa el más fuerte sino el que sabe relacionarse con esos cerros, y los perdedores no se van a otro lago por su cuenta sino que reciben una condición para seguir viviendo. Osborn añade un dato que explica por qué la prueba es posible: Kanwara da el alucinógeno a los pájaros para que puedan volar, y los pájaros se designan como aya, ordenamiento.`,
     excerpt:
       "Bistoa convoca a los tigres a cruzar cerros de cuatro dimensiones y enseña que la fuerza exige respetar el territorio.",
     seoTitle: "Bistoa y la competencia de los tigres U’wa",
@@ -251,7 +427,64 @@ La historia puede leerse junto a normas de convivencia entre comunidades, especi
       "cuatro dimensiones U’wa",
     ],
     tags: ["jaguar", "pruebas", "tierra", "equilibrio"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «La competencia de los tigres / Kuaro Wakujeka», Sede Bako Kuira, con el diálogo completo, las cuatro tomas de yopo y el trato de «sobrinos»; el glosario define el cerro Tina como origen del territorio ancestral y a los tigres poderosos como guardianes de otras dimensiones, y el capítulo cultural nombra a Bistoa creador de la Madre Tierra.",
+        limitation:
+          "El rango que el capítulo cultural le da a Bistoa no reaparece en el glosario ni dentro de la narración, y los cerros Kuiunbara, Tinshoikuba y Sheonkuba no se describen en ninguna parte del libro. Es una selección pedagógica sin fecha de registro ni narrador identificado.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta el sistema de parentesco que explica el «sobrinos» de Bistoa: los hermanos de la madre ordenan a los hijos de sus hermanas y son la figura central de las relaciones entre primos cruzados; aya significa a la vez ordenar y hermano de la madre. También la frontera rikuma, que sitúa a los animales que comen gente como shara.",
+        limitation:
+          "No registra a Bistoa ni el cerro Tina, y su material procede del clan kubaruwa del Cocuy, no de Norte de Santander. La aplicación del parentesco a esta narración es analítica.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta los dos paralelos exactos de la competencia: el canto 16c, donde venado, liebre y pecarí corren por el borde de los lagos de tierra alta y los ganadores se quedan mientras los perdedores bajan a otro lago, y el canto 16e, donde los peces compiten río arriba y los grandes se quedan en los ríos grandes. La autora señala expresamente que ambos cantos relatan competencia por hembras y territorio.",
+        limitation:
+          "Son cantos sobre herbívoros y peces, no sobre tigres, y forman parte de un mito cantado del Cocuy; la correspondencia es de patrón narrativo y no de contenido.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta la versión Cobaría de quién hizo los cerros —Sira hizo el mundo plano y Kanuará los cerros y los montes—, que es el punto sobre el que este relato y su Bistoa no coinciden con las demás fuentes.",
+        limitation:
+          "El canto no menciona a Bistoa ni ningún episodio de tigres; solo se accede a la transcripción de 2022 del registro de 1962.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Registra kotokwa como palabra u’wa para jaguar y atribuye la organización del mundo sobre ocho bases a Sirateta, con lo que ofrece un tercer nombre para la figura creadora.",
+        limitation:
+          "Es un resumen de bibliografía ajena, sin relato ni referencia a Bistoa ni a los tigres.",
+      },
+      {
+        key: "laverdeLinajes1995",
+        summary:
+          "Aporta la lógica de los circuitos de alianza chibchas que sostiene la distinción entre los que están dentro del límite y los que están fuera, que es lo que la prueba de los cerros decide.",
+        limitation:
+          "Trata alianzas matrimoniales humanas entre u’wa, kogui y muisca; la extensión a los animales no está en la fuente.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Sitúa el territorio y la continuidad de la resistencia u’wa en el norte de la Cordillera Oriental, donde están los cerros que el relato nombra.",
+        limitation:
+          "Ficha breve de contexto, sin narrativa ni toponimia detallada.",
+      },
+      {
+        key: "perezestructuras1996",
+        summary:
+          "Sitúa la oposición entre tigres del territorio y tigres de los Llanos dentro del repertorio de pares opuestos de los Andes Orientales.",
+        limitation:
+          "No trabaja material u’wa de campo ni menciona este relato; su uso es comparativo.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: Bistoa en el cerro Tina armoniza dos grupos de felinos americanos de pelaje moteado ante cuatro cordilleras cromáticas del territorio U’wa; algunos cruzan y otros se detienen, nunca tigres asiáticos rayados, sin caracola, carrera deportiva, violencia, tocados genéricos ni texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -265,40 +498,50 @@ ${visualRule}`,
   {
     slug: "monoa-el-hijo-de-la-montana",
     title: "Monoa, el hijo de la montaña",
-    mito: `En tiempos antiguos, los U’wa recorrían largas rutas hacia Wikana y Siskaa para intercambiar productos y obtener elementos sagrados. Antes de salir preparaban tabaco, yopo, ayo, cal y flechas. Llevaban otoba, cera de abejas, tejidos y alimento purificado para el camino. El viaje podía durar meses y atravesaba cerros, ríos, pantanos y lagunas donde habitaban animales y seres peligrosos.
+    mito: `En una época los ancestros U’wa viajaban a lugares lejanos, como Wikana y Siskaa, para obtener por medio del trueque elementos sagrados y otros productos.
 
-En las montañas altas vivía la familia Monoa. Eran hijos de la montaña y protegían a quienes transitaban. Un Monoa invitó a un hombre U’wa a cazar en el bosque. Durante el recorrido aparecieron Urkoa, Kakasoa, Shinkuata y Konara, seres visibles e invisibles que querían atacar al viajero. Monoa los enfrentó con lanza y soga y los llevó como alimento para su propia familia.
+Cuando salían de viaje, las familias de Siba alistaban también sus elementos sagrados de protección y defensa: el tabaco, el yopo, el ayo, la cal y la flecha. Llevaban los productos para el trueque, como la otoba, la cera de abejas y algunos tejidos. Además cargaban alimentos para el camino de ida y de vuelta, porque no debían consumir aquellos que no estuvieran purificados ni recibir los alimentos de los hermanos menores.
 
-El hombre comprendió entonces que muchos peligros alcanzaban también su territorio. Pidió a Monoa que dejara un hijo para cuidar su casa. El protector aceptó. Entregó al niño herramientas de caza y lo dejó con la familia U’wa.
+Durante meses tenían que cruzar cerros, montañas, quebradas, ríos, pantanos y lagunas encantadas. Y en el camino enfrentaban animales salvajes y espíritus que los atacaban o que se los comían. Eran pocos los que regresaban a su territorio y a sus familias.
 
-El pequeño Monoa aprendió a perseguir a los seres que amenazaban a la gente. Un día encontró junto a una quebrada a un Urkoa enorme. Lo sujetó por el cuello, pero el animal golpeó su cabeza con las patas traseras. El niño quedó gravemente herido. Su sangre se mezcló con el agua y, aunque consiguió volver a la casa, murió pocos días después y pasó a otra dimensión.
+En las altas montañas y el páramo vivía la familia de Monoa. Ellos eran hijos de la montaña y protegían a los U’wa de los animales y los espíritus malignos.
 
-La quebrada recibió el nombre de Monoa Lia, memoria del lugar donde se dispersó su sangre. El camino dejó de recorrerse. La muerte del niño no volvió inútil su misión: gracias a su presencia y su paso a otra dimensión, los seres peligrosos no pudieron acabar con las familias.
+Un día un Monoa invitó a un hombre U’wa a la montaña a cazar. Internados en el bosque encontraron seres visibles e invisibles: Urkoa, Kakasoa, Shinkuata y Konara. Todos querían comerse al U’wa, pero el Monoa los cazaba con su lanza, los amarraba con su soga y se los llevaba como alimento para su familia.
 
-Los ancestros transmiten esta historia como ley natural. Proteger implica relación entre montaña, agua, familias y seres que no siempre son visibles. El niño Monoa permanece en el nombre del curso de agua y en el conocimiento de los caminos que pueden o no transitarse.`,
-    historia: `“Monoa” fue recopilado por la sede Anteta y forma parte del libro bilingüe Historias ancestrales U’wa. La publicación sitúa la historia en antiguas rutas de intercambio y nombra elementos que no deben separarse de ese contexto: productos, sustancias sagradas, alimentos purificados, montañas, lagunas encantadas y seres peligrosos.
+En el territorio del hombre U’wa había muchos seres de la naturaleza que atacaban a su familia. Por eso, al ver que el Monoa cazaba a esos seres, le pidió que le dejara un hijo para que protegiera a los suyos. Entonces el Monoa dejó en territorio U’wa un hijo pequeño, con herramientas de caza.
 
-La edición conserva los nombres Urkoa, Kakasoa, Shinkuata, Konara y Monoa Lia sin traducirlos como monstruos universales. El glosario del libro identifica a Kakasoa como un ser invisible de las altas montañas peligroso para los U’wa, pero no ofrece definiciones completas de todos. Inventar apariencia o genealogía produciría una falsa enciclopedia.
+El niño Monoa se dedicó a cazar y a comerse a esos seres que atacaban a la familia U’wa. Un día encontró un Urkoa muy grande a la orilla de una quebrada y lo amarró con su soga por el pescuezo. El Urkoa le pegó con las patas traseras en la cabeza y, como el chico aún era pequeño, quedó muy malherido.
 
-Ann Osborn documenta que el territorio de los mitos cantados contiene cadenas montañosas, lagos, ríos y rutas nombradas, y que el intercambio entre clanes tuvo funciones sociales y cosmológicas. Ese marco permite entender el viaje sin convertirlo en comercio mercantil moderno.
+La sangre del niño Monoa se esparció por el agua de la quebrada y el Urkoa escapó. El pequeño logró llegar a la casa del U’wa, pero a los pocos días empeoró y murió, pasando a otra dimensión.
 
-La narración incluye la muerte de un niño. Se cuenta con sobriedad, sin imagen de la herida ni dramatización corporal. La función editorial es preservar el vínculo entre protección, quebrada y memoria, no explotar el sufrimiento. La coordenada es representativa y no expone la localización exacta de un sitio espiritual.`,
-    versiones: `La versión pública explica que el niño Monoa muere después del ataque de Urkoa y pasa a otra dimensión. Su sangre nombra la quebrada y el peligro asociado al camino disminuye. No se presenta resurrección, castigo contra Urkoa ni reemplazo por otro protector.
+Desde entonces nadie volvió a recorrer ese camino, y la quebrada donde se esparció la sangre del niño recibió el nombre de Monoa Lia.
 
-El relato distingue al padre Monoa, que guía al viajero, y al hijo que queda con la familia. El título editorial aclara “hijo de la montaña” para evitar tratarlos como una sola figura, pero no les asigna nombres individuales que la fuente no proporciona.
+De no haber pasado el niño Monoa a otra dimensión, todavía llegarían animales y espíritus a acabar con las familias en territorio U’wa. Así es como los ancestros han transmitido la ley natural: la que explica el paso de la vida del niño Monoa a otra dimensión y la que le permite al territorio U’wa estar en equilibrio con la naturaleza.`,
+    historia: `La narración la aportó la Sede Anteta de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, Norte de Santander, y se publicó en 2020 en Historias ancestrales U’wa — Kajkin Luin Karita, número 32 de la serie Territorios Narrados del Ministerio de Educación Nacional y el Cerlalc, con revisión del lingüista Camilo Andrés Delgado Rodríguez y del wejen Situa Kamara.
 
-Otros relatos del libro muestran protectores animales o seres poderosos: el oso cuida Bakokuira y Kubashoa combate amenazas familiares. Comparten una responsabilidad protectora, aunque las causas del daño y el paso a otra dimensión son distintos. No se unifican.
+Los dos destinos del viaje están identificados en el glosario del propio libro, y eso convierte el relato en un documento de geografía histórica. Wikana es el lugar donde ancestralmente se iba a realizar el trueque de elementos sagrados y de la sal en bloque, y hoy se conoce como Güicán, municipio de Boyacá. Siskaa es el lugar donde ancestralmente se iba a hacer el trueque de elementos sagrados, y en el mundo de los Riowa se conoce como Chiscas, también en Boyacá. Los hermanos menores son, según el mismo glosario, los Riowa o gente blanca, llamados así porque nacieron después que los U’wa.
 
-Las referencias académicas describen viajes estacionales e intercambios entre pisos térmicos y clanes. No son variantes narrativas de Monoa. Sirven para validar que la ruta, la cera, los tejidos y los elementos rituales pertenecen a una práctica territorial más amplia, no a un decorado de aventura.`,
+Ese circuito está documentado en los archivos coloniales. Carl Henrik Langebaek estudió tres formas de acceso a recursos en el territorio de la Confederación del Cocuy en el siglo XVI y describió una red que incluía a Chita, Panqueba, El Pueblo de la Sal, Sacamá, Ura y Ogamora, con la sal como uno de los bienes centrales: los indígenas de Chita daban mantas, carne y panes de sal, los de Panqueba mantas, venados y pájaros, y El Pueblo de la Sal contribuía con sal. Langebaek registra además que en 1772 todavía se acusaba a los tunebos de Güicán de persistir en sus prácticas.
+
+Ann Osborn añade un detalle que da al camino un rango cosmológico. Los kubaruwa representan a Racha, el Sol, como un hombre U’wa que camina desde la montaña nevada de Güicán hasta la llanura y regresa de nuevo. La ruta que recorrían los cargueros del trueque es la misma que recorre el Sol en el año.
+
+Los seres del bosque también tienen ficha. Kakasoa es un ser invisible de las altas montañas, peligroso para los U’wa; Konara es un espíritu que permanece debajo de la tierra, con apariencia de niño y cabello amarillo; Shinkuata vive en las partes altas del territorio; y Urkoa es un animal de la parte alta de las montañas, especialmente en los páramos.`,
+    versiones: `La narración de Anteta no explica quiénes son los Monoa más allá de que son hijos de la montaña y protegen a los U’wa, y ese nombre no aparece en ninguna de las otras fuentes consultadas: ni en la lista alfabética de deidades que Ann Osborn levantó entre los kubaruwa, ni en el canto a la creación que Sergio Daza recogió en 1962 entre los tunebos Cobaría, ni en la caracterización del Ministerio de Cultura.
+
+Lo que sí varía entre fuentes es el nombre de los vecinos. El glosario del libro de 2020 usa Riowa para la gente blanca, los hermanos menores. Osborn usa reowa para algo distinto: uno de los dos géneros de mito cantado, el ritual de soplada, frente al aya o mito de ordenamiento. La caracterización del Ministerio de Cultura recoge esa misma pareja, reowa y aya, como los dos tipos de mito cantado, citando a Osborn. Son dos palabras próximas en la transcripción y no deben confundirse.
+
+La relación con los hermanos menores tampoco se cuenta igual en todas partes. En Anteta la regla es negativa y práctica: no recibir sus alimentos, cargar comida purificada para la ida y la vuelta. En el canto Cobaría de 1962 la relación se explica por un reparto original: Sira les había dado a los tunebos la ciencia, la ropa y la plata, y a los blancos los había hecho de barro y desnudos; como los blancos sintieron envidia, Sira les quitó a los tunebos esas tres cosas y se las dio a ellos para que de envidia no acabaran con los tunebos.
+
+Sobre la quebrada, el relato es explícito en una cosa que suele pasarse por alto: el Urkoa escapó. El camino no se cerró porque el peligro se hubiera acabado, sino porque el que lo protegía ya no estaba.`,
     leccion:
-      "El cuidado del territorio deja memoria incluso cuando quien protege no puede regresar de su misión.",
-    similitudes: `La figura de un guardián nacido de la montaña puede recordar dueños de cerros en otros pueblos andinos. En Monoa, la relación se concreta mediante rutas U’wa, una familia protectora y una quebrada nombrada; no corresponde identificarlo con mohán, duende o espíritu de páramo.
+      "El cuidado de un camino deja memoria en el nombre del lugar donde ese cuidado terminó.",
+    similitudes: `Tres paralelos documentados sostienen este relato, y el primero no es mitológico sino archivístico.
 
-La sangre que da nombre a un curso de agua aparece en etiologías de muchos lugares. Aquí no crea toda el agua —esa función pertenece a Lisha en otro relato— sino que marca Monoa Lia y conserva el recuerdo de la muerte del niño.
+Carl Henrik Langebaek reconstruyó, con visitas y pleitos coloniales del siglo XVI, la red de acceso a recursos del territorio de la Confederación del Cocuy: comunidades de clima templado que producían coca, algodón y maíz, un Pueblo de la Sal que aportaba sal a los caciques, y desplazamientos estacionales para pescar que los tunebos de entonces y los actuales comparten. El viaje de meses hacia Wikana y Siskaa que describe la Sede Anteta no es un escenario legendario: es el mismo circuito, con los nombres u’wa de Güicán y Chiscas.
 
-El viaje de intercambio tiene afinidad con narraciones donde héroes atraviesan pruebas y obtienen bienes. Los U’wa ya llevan objetos para trueque y protección; Monoa no busca un tesoro, sino que permite sobrevivir a seres de los caminos. La economía del relato es relacional y ritual.
+El segundo paralelo está en Osborn. Los kubaruwa representan a Racha, el Sol, como un hombre U’wa que camina desde la nieve de Güicán hasta la llanura y vuelve, cruzando el amarillo en el equinoccio de marzo y el azul en el de septiembre. El recorrido del carguero y el del Sol son la misma línea.
 
-Dentro del corpus, Uktara también viaja a otra dimensión y regresa con semillas. Monoa, en cambio, muere y permanece vinculado al territorio. Compararlos muestra diferentes formas de conocimiento entre mundos sin convertir ambas historias en una sola aventura iniciática.`,
+El tercero es la regla del alimento, que este corpus repite en tres lugares distintos. Los viajeros no pueden consumir comida sin purificar ni aceptar la de los hermanos menores; Uktara no puede probar nada de lo que le ofrecen las almas si quiere regresar; y la reseña que William Torres hizo de la autobiografía de Berichá cuenta que ella nació sin piernas porque su madre transgredió la norma de comer pescado del río Cobaría sin purificarlo antes. Comer algo ajeno es, en los tres casos, quedarse del lado de donde vino la comida.`,
     excerpt:
       "Un hijo de la montaña protege a una familia U’wa, enfrenta a Urkoa y deja su memoria en la quebrada Monoa Lia.",
     seoTitle: "Monoa, el hijo de la montaña: relato U’wa",
@@ -312,7 +555,58 @@ Dentro del corpus, Uktara también viaja a otra dimensión y regresa con semilla
       "historias ancestrales U’wa",
     ],
     tags: ["montaña", "protección", "exploración", "río"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «Monoa», Sede Anteta, con las familias de Siba, la prohibición de recibir alimentos de los hermanos menores, la lista de los seres del bosque y la quebrada Monoa Lia; y su glosario identifica Wikana con Güicán y Siskaa con Chiscas, ambos en Boyacá, además de definir Urkoa, Kakasoa, Shinkuata, Konara y otoba.",
+        limitation:
+          "No fecha el viaje ni sitúa la quebrada Monoa Lia, y no explica quiénes son los Monoa más allá de llamarlos hijos de la montaña. Es una selección pedagógica sin narrador identificado.",
+      },
+      "ruedaTres1987",
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta la dimensión cosmológica del mismo camino: los kubaruwa representan a Racha, el Sol, como un hombre U’wa que camina desde la montaña nevada de Güicán hasta la llanura y regresa, cruzando el amarillo en el equinoccio de marzo y el azul en el de septiembre.",
+        limitation:
+          "No registra a los Monoa ni a los seres que el relato nombra, y su material corresponde al clan kubaruwa; la coincidencia es de ruta, no de narración.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta la explicación Cobaría de la relación con los hermanos menores: Sira había dado a los tunebos la ciencia, la ropa y la plata, y se las quitó para dárselas a los blancos y evitar que por envidia acabaran con ellos; también menciona la otoba entre los árboles que Sira hizo.",
+        limitation:
+          "Es otro clan y otro registro, sin viaje de trueque ni familia protectora; solo se accede a la transcripción de 2022 del canto recogido en 1962.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta el contexto económico estacional: pasado el solsticio de diciembre pequeños grupos de hombres kubaruwa suben a las tierras altas a cambiar cera de abejas por sal mineral, que es exactamente el tipo de viaje que el relato describe.",
+        limitation:
+          "Son dos líneas dentro de una síntesis sobre animales y ciclo agrícola; no describe rutas, ni peligros del camino, ni protectores de montaña.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Clasifica salados, lagunas, quebradas y caminos entre los lugares prohibidos y encantados, en los que no se puede entrar sin el debido permiso de los seres espirituales mediante rituales de limpieza y purificación, que es la condición bajo la que se emprendía este viaje.",
+        limitation:
+          "Es una tipología institucional tomada de un atlas jurisdiccional; no contiene relato ni toponimia del recorrido.",
+      },
+      {
+        key: "torresResena1991",
+        summary:
+          "Aporta el caso documentado de una transgresión alimentaria con consecuencias irreversibles —el pescado del río Cobaría comido sin purificar—, que es la misma regla que obliga a los viajeros a cargar su propia comida.",
+        limitation:
+          "Solo se pudo consultar la reseña de dos páginas y no el libro de Berichá de 1992; el episodio no tiene relación con el viaje de trueque.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Sitúa el territorio u’wa entre Boyacá, Santander, Norte de Santander, Casanare y Arauca, que es la extensión que el viaje de Anteta atraviesa.",
+        limitation:
+          "Ficha breve de contexto, sin narrativa ni descripción de rutas de intercambio.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: una antigua ruta U’wa cruza montañas, río y bosque; Monoa guía a un viajero con mochila, lanza y soga mientras seres invisibles se sugieren únicamente como sombras de papel entre árboles, sin oso, fauna inventada, monstruos genéricos, violencia ni texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -326,42 +620,52 @@ ${visualRule}`,
   {
     slug: "el-pajaro-carpintero-y-el-poder-de-curar",
     title: "El pájaro carpintero y el poder de curar",
-    mito: `Hace mucho tiempo, el pájaro carpintero poseía un poder que los seres humanos todavía no tenían. Un día voló hasta la casa de un amigo U’wa. Como el hombre no estaba, decidió esperarlo. Sabía que había salido de cacería por la montaña y que regresaría antes de terminar el día.
+    mito: `Hace mucho tiempo el pájaro carpintero tenía poderes. Un día se fue a visitar a su amigo el hombre, pero al llegar a la casa no lo encontró, así que se quedó esperándolo.
 
-En el camino, el hombre pisó sin verla una culebra escondida debajo de una hoja. El animal lo mordió. El dolor le atravesó la pierna y tuvo que alejarse antes de recibir un segundo ataque. Llegó a la casa triste, asustado y cada vez más débil.
+El hombre estaba cazando animales en la montaña y ya venía de vuelta. En el camino, debajo de la hoja de un rascador, había una culebra. El hombre la pisó sin verla y la culebra lo mordió. Adolorido, gritó y saltó lejos. Luego miró y vio que el animal estaba a punto de morderlo de nuevo, así que salió corriendo.
 
-El pájaro carpintero preguntó qué había sucedido. Al conocer la mordedura, no huyó ni buscó castigar a la culebra. Sacó tabaco, lo masticó y comenzó a secretear palabras de poder. Sopló la herida con cuidado. El dolor cedió y el hombre recuperó la salud.
+Llegó a la casa triste, asustado y cada vez más débil.
 
-Su amigo se sorprendió. No sabía que el pájaro podía curar de esa manera. Agradeció la ayuda y guardó la experiencia como un conocimiento que no debía usarse con ligereza.
+—¿Qué sucede? —preguntó el pájaro al verlo llegar así.
 
-Tiempo después, el hombre fue a visitar al pájaro carpintero. Lo encontró cambiado. El ave explicó que ya no conservaba su antiguo poder. Al soplarlo, la capacidad había pasado a los U’wa. No se trataba de una posesión tomada por la fuerza: el acto de curar había realizado una transferencia y, con ella, una obligación.
+—La culebra me mordió —respondió el hombre.
 
-Desde entonces, quienes reciben ese saber deben emplearlo para sanar el cuerpo y el espíritu de los seres de la naturaleza. El poder no autoriza a separarse de los animales ni a proclamarse superior. Viene de un amigo no humano, se activa mediante tabaco, palabra y soplo y solo conserva sentido cuando restablece relaciones.
+—Tranquilo, no se preocupe —dijo su amigo.
 
-La culebra permanece dentro del territorio; el pájaro no deja de ser consejero porque haya entregado una capacidad. La historia explica el origen de un deber: curar es responder por la vida que circula entre personas, plantas, animales y dimensiones.`,
-    historia: `La narración fue recopilada por la sede Ihurima de la Institución Etnoeducativa U’wa Izketa Segovia. El libro de 2020 la publica como “El pájaro carpintero / Kejeta” en u’wajka y castellano. Esta página mantiene la secuencia y el nombre Kejeta en las notas, aunque usa el título castellano para facilitar la búsqueda.
+En ese momento el pájaro sacó el tabaco y lo masticó. Luego comenzó a secretear y sopló la herida. Al instante el hombre quedó sanado.
 
-La transferencia de poder ocurre después de una mordedura y un ritual de curación con tabaco, secreta y soplo. La edición no convierte la secreta en hechizo fantástico ni inventa sus palabras. El contenido de fórmulas medicinales o rituales no está en la fuente pública y no corresponde recrearlo.
+—Nunca pensé que usted tuviera poderes, amigo pájaro —dijo contento.
 
-Ann Osborn describe la ceremonia de soplar como una práctica realizada sobre personas, alimentos y objetos para devolver causas de enfermedad o mortalidad a su lugar. La caracterización del Ministerio de Cultura reconoce al Werjaya como conocedor de plantas y rituales que restablecen equilibrio. Esos datos contextualizan, pero no identifican al hombre de la historia como Werjaya ni reconstruyen una ceremonia completa.
+Pasó un tiempo y el hombre fue a visitar al pájaro carpintero. Cuando llegó, su amigo había cambiado.
 
-La imagen evita representar un procedimiento médico reproducible. Muestra amistad, tabaco y soplo de forma simbólica. La coordenada sitúa el territorio U’wa, no la casa, el camino o una fuente de plantas medicinales.`,
-    versiones: `La versión de Ihurima es breve y directa: el pájaro cura al hombre, después declara haber perdido el poder y explica que ahora pertenece a los U’wa. El cierre establece el mandato de sanar cuerpo y espíritu de todos los seres de la naturaleza.
+—He perdido mi poder —dijo el pájaro—. Cuando lo soplé, ustedes los U’wa se quedaron con el poder que yo tenía.
 
-No se halló otra versión publicada donde el poder regrese al ave, se reparta entre varias especies o dependa de un pacto posterior. Esa ausencia se conserva. Los registros generales sobre sopladas no se presentan como variantes del cuento.
+Esa fue la ley natural, la que dictó que el poder pasara del pájaro carpintero a los U’wa. No hubo disputa ni robo: el traspaso ocurrió dentro del acto mismo de curar, y dentro de ese acto quedó también lo que lo acompaña. Desde entonces los U’wa deben usar ese poder para sanar el cuerpo y el espíritu de todos los seres de la naturaleza. Ese es su mandato.
 
-La palabra castellana “poder” puede sugerir fuerza o dominio. En la narración se manifiesta como capacidad de curar y responsabilidad. Por eso la reescritura evita efectos luminosos, jerarquías de mago o un ave humanizada con instrumentos occidentales.
+La culebra siguió donde estaba, en el territorio, bajo las hojas del camino. El pájaro carpintero siguió siendo amigo y consejero aunque ya no tuviera aquello que entregó. Y el poder quedó atado a tres cosas concretas que se hacen con el cuerpo: el tabaco que se masca, la palabra que se secretea y el aliento que sopla la herida. Fuera de esas tres cosas, y fuera de la relación que las pone en movimiento, no hay poder que valga.`,
+    historia: `Kejeta es el título en u’wajka de esta narración, y su procedencia es concreta: la aportó la Sede Ihurima de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, Norte de Santander. Se publicó en 2020 en Historias ancestrales U’wa — Kajkin Luin Karita, número 32 de la serie Territorios Narrados del Ministerio de Educación Nacional y el Cerlalc, con textos y traducción de Senén Airima Ríos Santos y Camilo Andrés Delgado Rodríguez, ilustraciones de Elizabeth Builes y revisión del wejen Situa Kamara.
 
-La culebra causa la herida, pero no recibe una condena. El relato no explica su origen ni ordena destruirla. Esa decisión editorial importa: añadir una lucha entre bien y mal modificaría una historia centrada en curación, transferencia y deber.`,
+El episodio tiene un antecedente registrado décadas antes en otro clan. En el mito cantado de la soplada del alucinógeno, que Ann Osborn transcribió entre los kubaruwa, Kanwara mete el brazo en distintos huecos de la tierra en territorio U’wa y hace que en el cuarto hueco lo muerda una serpiente. Entonces llama a Kwira, el Trueno, hijo de su hermana, para que lo cure con akwa mezclado con jugo de jengibre y tostado en fuego hecho con palo de palma. Kwira hace una ceremonia de soplar y Kanwara se cura.
+
+En su exégesis, Osborn explica por qué la cura la hace precisamente el hijo de la hermana. Entre los U’wa el conocimiento se intercambia con gente de grupos diferentes: un hombre no puede enseñar ni curar a su propio hijo, y un grupo de chamanes asociados requiere de otro para funcionar. La curación viene siempre de afuera. Eso ilumina el relato de Ihurima, donde quien sana no es un pariente sino un amigo no humano, y donde el traspaso del poder no es una pérdida sino la forma normal en que ese saber circula.
+
+El procedimiento está documentado pieza por pieza. El glosario del libro de 2020 define secretear como el acto de regulación de energías que pueden atentar contra la salud física o espiritual del ser U’wa, y soplar como la transmisión de energías a otro ser para su purificación. Osborn clasifica el tabaco de tierra baja, junto con la coca, como droga femenina, usada antes por mujeres chamanes. La caracterización del Ministerio de Cultura nombra Werjaya al médico tradicional, y el Documento Madre de Leyes de Origen añade a los Karecas, hombres o mujeres médicos tradicionales especializados en distintos rituales.`,
+    versiones: `Las dos versiones documentadas del mismo episodio reparten los papeles al revés, y juntarlas borraría lo que cada una dice.
+
+En la narración de Ihurima el mordido es un hombre U’wa, quien cura es un pájaro y el resultado es que el poder de curar pasa definitivamente de los animales a las personas. En el mito cantado que registró Osborn el mordido es una deidad, Kanwara, que provoca la mordedura a propósito para poner a prueba la mezcla curativa; quien cura es Kwira, el Trueno, hijo de su hermana; y el poder no cambia de dueño, porque lo que allí se demuestra es la potencia del remedio.
+
+La sustancia tampoco es la misma. En Ihurima el pájaro saca tabaco, lo masca, secretea y sopla. En el canto kubaruwa el remedio es akwa —el yopo— mezclado con jugo de jengibre y tostado con fuego de palo de palma. El glosario del libro de 2020 recuerda que el yopo no puede consumirse sin que antes lo armonice la autoridad tradicional y que se toma en marzo, en una ceremonia de ayuno.
+
+Sobre quién ejerce hoy ese poder las fuentes tampoco usan el mismo nombre. El libro etnoeducativo llama wejen y wejena a las autoridades tradicionales; la caracterización del Ministerio de Cultura escribe Werjaya; la reseña que William Torres hizo de la autobiografía de Berichá emplea uejes para el chamán y mancena para la chamana, y describe el ritual Bita-Benkará en el que la mujer chamán asciende a la morada de los dioses. El Documento Madre de Leyes de Origen distingue entre Werjayas, los ancianos sabedores, y Karecas, los médicos tradicionales especializados que se jerarquizan según su efectividad.`,
     leccion:
-      "Un saber de curación solo permanece vivo cuando se usa como responsabilidad hacia todos los seres.",
-    similitudes: `Aves que entregan conocimientos medicinales aparecen en distintas tradiciones americanas, y el pájaro carpintero suele asociarse con golpes, árboles y acceso a lo oculto. Esta versión U’wa no explica la elección del ave mediante una teoría zoológica y debe leerse desde Kejeta, tabaco y soplo.
+      "El poder de curar cambia de dueño dentro del acto mismo en que se ejerce sobre otro.",
+    similitudes: `El motivo del poder que cambia de manos al ejercerse tiene aquí dos paralelos internos bien documentados.
 
-La transmisión de un don después de sanar recuerda relatos de origen de especialistas rituales. A diferencia de historias donde un héroe roba secretos, el hombre recibe la capacidad como consecuencia de una ayuda amistosa. No hay prueba para apropiarse del poder.
+El primero es el de Kanwara y Kwira. Osborn subraya que en la ceremonia de soplar la eficacia depende de que quien cura venga de otro lado: un hombre no puede curar a su propio hijo, y por eso la cura recae en el hijo de la hermana. El pájaro carpintero ocupa exactamente esa posición de exterioridad, y por eso puede curar y por eso el poder se transfiere. La amistad entre dos especies cumple la función que en la sociedad humana cumple la alianza entre chamanes de grupos diferentes.
 
-Dentro de la colección, los animales mensajeros comparten advertencias y el oso ofrece protección. Kejeta entrega una capacidad que luego debe ejercerse. Los tres vínculos muestran reciprocidad, pero no son versiones intercambiables de un “animal guardián”.
+El segundo paralelo está en el reparto original de los alucinógenos. Osborn describe cómo, en los mitos cantados, deidades chamánicas asociadas a una esfera resultan benefactoras de seres que pertenecen a otra y que están a cargo de otras deidades, y cómo así se equilibran propiedades excesivas; esas intervenciones se dan a veces mediante astucia y engaño. Aquí no hay engaño alguno: el traspaso ocurre a la vista y sin resistencia, y esa es la diferencia que el relato marca.
 
-La escena también puede compararse con aprendizaje médico por observación de animales. Esa lectura naturalista es posible como diálogo contemporáneo, pero no reemplaza la dimensión espiritual que la fuente expresa ni convierte la narración en evidencia clínica.`,
+Un tercer punto de contacto cruza hacia la vida cotidiana. Los U’wa no hacen una distinción tajante entre ellos y los animales, porque unos y otros están conformados por las mismas propiedades originales y ambos obtienen sustancias alucinógenas en los mitos; las diferencias vienen de las mezclas específicas que a cada grupo le tocaron. Que un ave posea un saber que las personas todavía no tienen no es, en ese marco, una inversión del orden, sino un reparto que aún no había terminado.`,
     excerpt:
       "Kejeta cura a un hombre mordido por una culebra y transmite a los U’wa la responsabilidad de sanar.",
     seoTitle: "El pájaro carpintero y la curación U’wa",
@@ -375,7 +679,64 @@ La escena también puede compararse con aprendizaje médico por observación de 
       "historias ancestrales U’wa",
     ],
     tags: ["curación", "ave", "ritual", "conocimiento"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «El pájaro carpintero / Kejeta», Sede Ihurima, con la culebra bajo la hoja de un rascador y el diálogo completo, y su glosario define secretear como acto de regulación de energías y soplar como transmisión de energías a otro ser para su purificación.",
+        limitation:
+          "Es una selección pedagógica revisada para lectura escolar; no identifica la especie del ave ni la de la culebra, ni registra narrador, fecha ni comunidad del registro original más allá de la sede.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta el episodio paralelo del mito cantado de la soplada del alucinógeno: Kanwara se hace morder por una serpiente en el cuarto hueco y llama a Kwira, el Trueno, hijo de su hermana, para que lo cure con akwa y jengibre; y la exégesis de por qué la cura la hace un hijo de la hermana, porque un hombre no puede curar a su propio hijo.",
+        limitation:
+          "Es una curación entre deidades y no un relato de pájaro carpintero, del que Osborn no registra nada; el paralelo es estructural. El material procede del clan kubaruwa del Cocuy, a varios días de camino de Ihurima.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta el marco que hace posible la transferencia: los u’wa no distinguen tajantemente entre ellos y los animales porque ambos están hechos de las mismas propiedades originales y ambos reciben alucinógenos en los mitos, y las deidades chamánicas de una esfera benefician a seres de otra.",
+        limitation:
+          "Es una síntesis centrada en los animales comestibles y los carnívoros; no trata la curación por soplo como tema propio ni menciona aves curanderas.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Nombra al Werjaya como el médico tradicional que cura las enfermedades y describe los mitos cantados reowa como rituales de soplar orientados a la purificación, que es la categoría a la que pertenece el acto del pájaro.",
+        limitation:
+          "Es un resumen institucional de bibliografía ajena, con grafías propias que no coinciden con las del libro etnoeducativo ni con las de Osborn.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "El apartado que lo reproduce añade la distinción entre Werjayas, ancianos sabedores, y Karecas, hombres o mujeres médicos tradicionales especializados en distintos métodos y rituales, que se jerarquizan según su efectividad.",
+        limitation:
+          "Esa distinción no viene del canto de 1962 sino del texto editorial que lo enmarca, apoyado en U’wchita (1996), obra que no se pudo consultar directamente.",
+      },
+      {
+        key: "torresResena1991",
+        summary:
+          "Describe el ritual Bita-Benkará y el papel de la mancena, la mujer chamán que establece comunicación directa con los seres divinos con asistencia de los uejes y uso de yopo, tabaco y coca.",
+        limitation:
+          "Solo se pudo consultar la reseña de dos páginas, no el libro de Berichá de 1992; la descripción del ritual llega resumida por el reseñista.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Consigna que antiguamente los chamanes tenían el poder político y territorial y que hoy los cabildos asumen la organización política de al menos diecisiete comunidades.",
+        limitation:
+          "Es una ficha breve de contexto, sin material narrativo ni descripción de prácticas curativas.",
+      },
+      {
+        key: "perezestructuras1996",
+        summary:
+          "Permite situar el traspaso animal-humano dentro del repertorio de inversiones y transformaciones que caracteriza el pensamiento dual de los Andes Orientales.",
+        limitation:
+          "No trabaja material u’wa de campo ni menciona este relato; su aporte es solo comparativo.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: Kejeta, pájaro carpintero, acompaña a un hombre U’wa sentado junto a su casa y dirige un soplo simbólico de hojas de tabaco hacia su pierna; culebra distante bajo hojas, sin procedimiento médico, herida, texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -389,40 +750,44 @@ ${visualRule}`,
   {
     slug: "kubashoa-el-hijo-del-tabaco",
     title: "Kubashoa, el hijo del tabaco",
-    mito: `En territorio U’wa vivía una anciana llamada Iurusa. Todos los días masticaba hoja de tabaco. De esa relación nació Kubashoa, conocido como el hijo del tabaco. Su crecimiento fue extraordinario: a los cuatro días caminaba y en poco tiempo alcanzó la fuerza y el conocimiento de un adulto.
+    mito: `Hace mucho tiempo había una abuelita en el territorio U’wa que se llamaba Iurusa. Ella masticaba todos los días la hoja del tabaco y, de tanto masticarla, tuvo un hijo a quien llamó Kubashoa, el hijo del tabaco.
 
-Kubashoa aprendió a transformarse en tigres poderosos y en otros animales. Durante las noches viajaba por espacios invisibles para adquirir saber y cumplir una misión: impedir que espíritus dañinos o seres peligrosos destruyeran a su familia. Durante el día acompañaba a Kaeta, su hermano mayor, en la huerta, la caza y la pesca. También le enseñaba lugares donde podía conseguir alimento.
+Kubashoa creció muy rápido. A los cuatro días ya caminaba y al año parecía como si tuviera tres. Su desarrollo fue tan acelerado que en poco tiempo se convirtió en un hombre sabio, capaz de transformarse en tigres poderosos y en otros animales.
 
-En Taurete vivía una numerosa familia Tiga. La narración la recuerda como una amenaza capaz de causar gran daño. Kubashoa entró en su territorio y encontró pichones de cigüeña dentro de una cueva. Los secreteó. Cuando los Tiga comieron las aves, enfermaron y murieron. La acción completó la tarea que Kubashoa había asumido para proteger a los suyos.
+En las noches Kubashoa no se quedaba en la casa: iba a otros espacios invisibles a adquirir conocimiento para ser más fuerte. Su misión era destruir espíritus malos y seres monstruosos que pudieran hacerle daño a la familia U’wa. En el día llevaba a Kaeta, su hermano mayor, a trabajar en la huerta, a cazar o a pescar, y le enseñaba las cuevas donde podía cazar cigüeñas.
 
-Después de cumplirla, ya no podía permanecer en esta dimensión. Debía ir donde Sira. Antes de partir, explicó a Iurusa y a Kaeta qué hacer con su cuerpo: debían retirar el último alimento que hubiera consumido, porque de otro modo no podría nacer al otro lado. No debían enterrarlo, sino dejarlo en la cueva de la peña Toiroa.
+En Taurete, dentro del territorio U’wa, había una familia Tiga bastante numerosa. Era una familia que podía causar mucho daño.
 
-Kubashoa sintió dolor y murió. Su madre y su hermano siguieron las instrucciones. Cuatro días después regresaron a la cueva y no encontraron el cuerpo. Había trascendido.
+Un día Kubashoa fue a territorio Tiga y en una cueva encontró unos pichones de cigüeña. Los secreteó. Al instante llegaron los Tiga y se comieron los pichones. Entonces sintieron un fuerte dolor en el estómago y murieron.
 
-Su presencia no terminó. Durante la época de lluvia, el canto de la perdiz anuncia a Kubashoa, el tigre poderoso. El sonido enlaza la dimensión visible con el lugar de Sira y recuerda que el protector fue hijo del tabaco, hermano, viajero y ser capaz de cambiar de forma.`,
-    historia: `“Kubashoa” procede de la sede Minsaka y fue publicado en Historias ancestrales U’wa. La narración conserva a Iurusa, Kaeta, los Tiga, Taurete y Toiroa, además de la relación entre tabaco, transformaciones, protección familiar y tránsito a otra dimensión.
+Al cumplir con su misión, a Kubashoa ya no le fue permitido vivir en territorio U’wa: tenía que irse adonde su padre Sira, en la otra dimensión. Pero antes de partir les dijo a su madre y a Kaeta que, cuando él muriera, le sacaran lo último que hubiera comido, porque esa comida le impediría nacer al otro lado y trascender hasta donde Sira. Tampoco debían enterrar su cuerpo, sino dejarlo en la cueva de la peña Toiroa.
 
-El relato incluye muerte mediante alimento secreteado. La revisión no reproduce violencia gráfica ni presenta la acción como técnica. Tampoco transforma a los Tiga en una etnia histórica, demonios genéricos o simples enemigos humanos. La fuente los describe como una familia capaz de hacer daño dentro del territorio narrado; no ofrece base para identificarlos fuera de él.
+De un momento a otro Kubashoa empezó a sentir dolor de estómago y se murió. Su hermano y su madre lo abrieron, le sacaron la comida que había ingerido por última vez y dejaron su cuerpo tal como él les había indicado. Pasaron cuatro días y, cuando revisaron la cueva, no vieron rastros del cuerpo.
 
-Ann Osborn documenta deidades y especialistas capaces de cambiar apariencia, viajar y actuar entre mundos. El libro comunitario explica que Sira orienta la ley de origen y que los cantos conectan dimensiones. Esos marcos permiten leer a Kubashoa sin reducirlo a “hombre jaguar”, héroe de fantasía o curandero ordinario.
+Kubashoa, el tigre poderoso, hoy en día manifiesta su presencia en época de lluvia por medio del canto de la perdiz. El sonido atraviesa las dos dimensiones: recuerda que hubo un hijo del tabaco, un hermano que enseñaba cuevas y caminos, y un ser capaz de cambiar de forma que terminó de hacer lo que vino a hacer.`,
+    historia: `La narración la aportó la Sede Minsaka de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, Norte de Santander, y se publicó en 2020 en Historias ancestrales U’wa — Kajkin Luin Karita, la selección de nueve narraciones que el Ministerio de Educación Nacional y el Cerlalc editaron como número 32 de Territorios Narrados. La revisión y adaptación al castellano y al u’wajka estuvo a cargo del lingüista Camilo Andrés Delgado Rodríguez y del wejen Situa Kamara, y el proceso lo venía conduciendo desde 2017 el equipo de Material Pedagógico Propio dirigido por Mireya Suárez Santafé y Senén Airima Ríos Santos, con las orientaciones del wejen Kuanima Runía.
 
-La muerte y tratamiento del cuerpo se cuentan porque sostienen la lógica del paso. No se presentan como práctica funeraria general de todos los U’wa. La cueva de Toiroa y los sitios nombrados no se geolocalizan; la coordenada es solo un punto editorial del territorio.`,
-    versiones: `La versión de Minsaka presenta una secuencia completa: nacimiento desde el tabaco, crecimiento acelerado, viajes nocturnos, derrota de los Tiga, instrucciones funerarias, desaparición del cuerpo y manifestación en el canto de la perdiz durante las lluvias.
+Que Kubashoa nazca del tabaco que masca una abuela encaja con lo que Ann Osborn registró entre los kubaruwa. El tabaco y la coca de tierra baja están clasificados como drogas femeninas, que antes usaban las mujeres chamanes; y entre los Seres Solares, Baukara —hermana clasificatoria de Ruruna— es la que representa los lagos y la que en el mundo azul aparece precisamente como tabaco.
 
-No se hallaron versiones públicas que expliquen un origen diferente para Kubashoa o cambien su destino. La semejanza con otros transformadores felinos U’wa no autoriza a fusionarlos. En “La competencia de los tigres”, Bistoa es una autoridad que convoca animales; Kubashoa adopta formas animales en una misión familiar.
+Las transformaciones de Kubashoa tampoco son un adorno. Osborn describe que el chamán se ve a sí mismo como jaguar, oso o pájaro según viaje al mundo de abajo o al de arriba, y que esos animales a su vez se ven a sí mismos como gente en sus respectivos mundos; los intérpretes u’wa insisten en el poder visionario del alucinógeno, que hace cambiar la visión según el lugar y la transformación. Añade que los carnívoros se consideran iguales a los humanos, porque en los mitos ellos también adquieren el alucinógeno, y que por eso no se cazan: hacerlo equivaldría a matar gente.
 
-Las grafías Kubashoa y Kusbasha son cercanas y aparecen en relatos distintos del mismo libro. Kusbasha es quien enfrenta a Lisha; Kubashoa es hijo de Iurusa. La edición mantiene la distinción y no supone que sean el mismo personaje sin evidencia.
+Tres piezas del relato las define el glosario del propio libro. El corpus define a los tigres poderosos como guardianes de la Madre Tierra que vienen de otras dimensiones. Los Tiga eran, en la antigüedad, familias que convivían con los U’wa, hijos de los árboles y las montañas. Y Toiroa es el cerro que representa una de las puntas de los cuatro pilares de la dimensión de la Tierra, de modo que el cuerpo de Kubashoa no queda en cualquier peña sino en un pilar del mundo.`,
+    versiones: `El propio libro que publica el relato guarda una tensión interna sobre quiénes son los Tiga. La narración de Minsaka los presenta como una familia numerosa que podía causar mucho daño y a la que Kubashoa elimina. El glosario del mismo libro los define de otro modo: familias que en la antigüedad convivían con los U’wa, hijos de los árboles y las montañas. No son entonces invasores ni monstruos, sino vecinos antiguos, y la narración no explica cuándo ni por qué esa convivencia se volvió peligrosa.
 
-El canto de perdiz no se interpreta como prueba de que toda perdiz sea Kubashoa. La narración habla de una manifestación estacional. Se conserva el vínculo sin construir una zoología sagrada que la fuente no desarrolla.`,
+Kubashoa no aparece en la obra de Ann Osborn. Su lista alfabética de deidades u’wa, levantada entre los kubaruwa, no lo registra, como tampoco registra a Sira. Eso no lo desmiente: Osborn advierte que su trabajo se concentra en un clan y que todas las deidades cambian de nombre y de forma según el lugar. Pero significa que el nombre está documentado en Norte de Santander y no en el Cocuy.
+
+Sobre quién es Sira las fuentes varían. En el relato de Minsaka es el padre de Kubashoa y el destino al que debe trascender. En el canto a la creación que Sergio Daza recogió en 1962 entre los tunebos Cobaría, Sira es el creador que hace el mundo, las aguas, las colmenas y los primeros seres humanos. En la caracterización del Ministerio de Cultura el creador se llama Sirateta y organizó el mundo sobre ocho bases. Y en el capítulo sobre cultura del libro de 2020, la Ley de Origen es mandato de Sira y quienes orientan la visión del territorio son ese mandato y las enseñanzas de Bistoa.
+
+El número cuatro recorre el relato y no es casual: cuatro días para caminar, cuatro días hasta que el cuerpo desaparece. Osborn documenta que todos los mitos cantados u’wa están divididos en cuatro partes.`,
     leccion:
-      "Cumplir una misión de cuidado puede exigir transformarse, despedirse y continuar desde otra dimensión.",
-    similitudes: `Héroes nacidos de plantas sagradas y capaces de adoptar forma felina aparecen en numerosas tradiciones americanas. Kubashoa se distingue por nacer del tabaco masticado por Iurusa, trabajar junto a su hermano y manifestarse después mediante la perdiz en época de lluvia.
+      "Una misión de cuidado cumplida del todo deja a quien la cumple fuera del mundo visible.",
+    similitudes: `El relato reúne tres motivos que la etnografía u’wa documenta por separado, y verlos juntos es lo que le da su forma.
 
-La desaparición del cuerpo al cuarto día recuerda relatos de tránsito religioso muy extendidos. La página no usa esa similitud para cristianizar la historia ni identificar a Kubashoa con una figura bíblica. La fuente lo ubica donde Sira y dentro de una ley natural U’wa.
+El primero es la transformación en carnívoro. Osborn describe cómo, en el mito cantado de la soplada, Kanwara da yopo mezclado con sangre a los animales del mundo de abajo, jaguares y osos, y así estos aprenden a comer carnes y adquieren un exceso de masculinidad que llaman kubina. En paralelo, los mamíferos del mundo de abajo pueden volverse machos carnívoros en el mundo del medio, los del medio pueden volverse pájaros carnívoros arriba y los pájaros pueden volverse chamanes en el mundo de arriba. Kubashoa recorre esa escalera entera: nace de una planta, se vuelve tigre poderoso y termina siendo canto de perdiz.
 
-Monoa y Kubashoa protegen familias y pasan a otra dimensión después de enfrentar seres peligrosos. Monoa permanece asociado a una quebrada y una ruta; Kubashoa, al tabaco, la cueva y un canto estacional. Las diferencias justifican páginas separadas.
+El segundo es la abstención de comida antes de cruzar. Que le saquen del cuerpo lo último que comió, porque si no no podrá nacer al otro lado, es la misma regla que Uktara aplica cuando se niega a probar lo que le ofrecen las almas, y la misma que llevaban los viajeros al trueque, que no podían recibir alimentos de los hermanos menores. La comida ata al lugar donde se come.
 
-La transformación en tigre se puede comparar con el jaguarismo chamánico, pero esa etiqueta académica no reemplaza el nombre, parentesco y misión del relato. La edición privilegia la secuencia comunitaria y usa la comparación solo como orientación general.`,
+El tercero es el destino del cuerpo. Osborn recogió que un oso que mató a una criatura fue enterrado como gente, porque en el mundo de abajo iba a volverse un ser humano. Aquí ocurre lo contrario y por eso no hay entierro: a Kubashoa lo dejan en la cueva de la peña Toiroa, uno de los cuatro pilares de la dimensión de la Tierra, y a los cuatro días el cuerpo ya no está.`,
     excerpt:
       "Kubashoa nace del tabaco, se transforma para proteger a su familia y continúa presente en el canto de la perdiz.",
     seoTitle: "Kubashoa, hijo del tabaco: relato U’wa",
@@ -436,7 +801,64 @@ La transformación en tigre se puede comparar con el jaguarismo chamánico, pero
       "canto de la perdiz",
     ],
     tags: ["ritual", "transformación", "protección", "agua"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «Kubashoa», Sede Minsaka, con los nombres de Iurusa, Kaeta y Taurete, el destino donde «su padre Sira» y la peña Toiroa; el glosario define a los Tiga, a los tigres poderosos y a Toiroa como una de las puntas de los cuatro pilares de la dimensión de la Tierra.",
+        limitation:
+          "Su propio glosario contradice a la narración sobre quiénes son los Tiga, y el libro no fecha el registro ni nombra al narrador. Es una selección pedagógica adaptada para lectura escolar.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta el estatuto del tabaco y de las transformaciones: el tabaco de tierra baja es droga femenina usada antes por mujeres chamanes, y Baukara, Ser Solar hermana clasificatoria de Ruruna, aparece en el mundo azul precisamente como tabaco. También documenta que los carnívoros no se cazan porque equivaldría a matar gente.",
+        limitation:
+          "No registra a Kubashoa, ni a Iurusa, ni a Kaeta, ni a Sira: nada del elenco de esta narración figura en su lista de deidades. El material es del clan kubaruwa y la conexión con el relato es de sistema, no de contenido.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta la escalera de transformaciones: Kanwara da yopo mezclado con sangre a jaguares y osos del mundo de abajo y así aprenden a comer carne; los mamíferos de abajo pueden volverse carnívoros en el medio, los del medio pájaros arriba y los pájaros chamanes. También la noción de que el chamán se ve a sí mismo como jaguar u oso según el viaje.",
+        limitation:
+          "Es una síntesis de veintiocho páginas basada en versiones parcialmente corregidas por la autora antes de su muerte, centrada en el ciclo estacional del Cocuy y sin ninguna mención de este relato.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta un Sira creador que hace el mundo, las aguas, las colmenas y los primeros seres humanos, lo que permite medir qué significa en otro clan el nombre al que Kubashoa debe trascender.",
+        limitation:
+          "El canto no menciona a Kubashoa ni presenta a Sira como padre de nadie; solo se accede a la transcripción de 2022, sin facsímil del registro de 1962.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Registra el vocabulario recogido de Osborn donde kotokwa es jaguar y kurala es chamán, y sitúa a Sirateta como creador que organizó el mundo sobre ocho bases.",
+        limitation:
+          "Es un resumen de bibliografía ajena con grafías propias; no contiene relato alguno y su Sirateta no coincide con el Sira del texto de Minsaka.",
+      },
+      {
+        key: "torresResena1991",
+        summary:
+          "Documenta que en la familia de una autora U’wa el padre era uejes y la madre mancena, es decir, que el oficio chamánico se hereda y se ejerce por hombres y mujeres, marco en el que una abuela que masca tabaco puede engendrar a un ser poderoso.",
+        limitation:
+          "Solo se pudo consultar la reseña de dos páginas, no el libro de 1992; nada en ella se refiere a este relato.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Confirma que antiguamente los chamanes tenían el poder político y territorial entre los U’wa.",
+        limitation:
+          "Ficha breve de contexto, sin narrativa ni referencia al personaje.",
+      },
+      {
+        key: "perezestructuras1996",
+        summary:
+          "Permite situar la transformación humano-animal-canto dentro del repertorio de inversiones del pensamiento dual de los Andes Orientales.",
+        limitation:
+          "No trabaja material u’wa de campo; su uso es exclusivamente comparativo.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: Iurusa con hojas de tabaco y Kubashoa creciendo entre casa, huerta y bosque; detrás, su silueta cambia de manera sobria entre persona, gran felino y otros animales, sin bebé fantástico, combate, texto, objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -450,40 +872,50 @@ ${visualRule}`,
   {
     slug: "lisha-la-madre-del-agua",
     title: "Lisha, la madre del agua",
-    mito: `Lisha vivía en una laguna entre las peñas, donde nace el río Keroa. Era la madre del agua. Cuando se levantaba, se convertía en olas y podía arrastrar o comerse todo lo que pasara cerca. Las personas evitaban el lugar porque después de su movimiento no quedaban rastros.
+    mito: `Los ancestros hablaron de Lisha, la madre del agua. Vivía donde hoy nace el río Keroa, en una laguna entre las peñas. Allí Lisha se transformaba en olas y se comía todo lo que pasara. Por eso los U’wa tenían miedo de caminar cerca de ese lugar: cuando ella se levantaba, después no se encontraba nada.
 
-Los U’wa pidieron ayuda a Kusbasha, un hombre poderoso. Antes de acercarse, él escuchó a una familia mientras compartía chicha de maíz. Después fue con su hermano mayor a observar el camino de Lisha. Cuatro veces avanzó y regresó; a la quinta, la madre del agua abrió la boca y se lo tragó.
+Un día llegó un hombre poderoso llamado Kusbasha, al que los U’wa le pidieron ayuda para calmarla. Kusbasha tomó chicha de maíz en la casa de una familia y escuchó todas sus quejas. Luego se fue con su hermano mayor a mirar el lugar donde se levantaba Lisha.
 
-Dentro de ella había luz. Kusbasha vio cuatro espinas donde morían personas y animales. Logró pasar sin tocarlas y llegó a un espacio parecido a una casa, lleno de los huesos de quienes habían desaparecido. Llevaba cuchillo, yopo y ebará. Tomó yopo, encendió fuego y buscó el centro vital de Lisha.
+El hermano lo esperó de lejitos y le advirtió que no se acercara mucho, porque Lisha se lo podía comer. Cuatro veces fue Kusbasha hasta la punta del camino y cuatro veces regresó. La quinta vez, Lisha se lo comió.
 
-Permaneció cuatro días en su interior. Descubrió cuatro corazones, cuatro riñones y cuatro hígados. Los cortó uno a uno. El agua de la laguna empezó a bajar. Antes de que se agotara, Kusbasha enterró una vena y repartió otras partes para impedir que la sangre se reuniera y devolviera a Lisha su antigua forma devoradora.
+Cuando ella abrió la boca, su interior se iluminó. Kusbasha pudo ver que la madre del agua tenía dentro de su cuerpo cuatro espinas en las que morían personas y animales. Pasó deslizándose y evitó las espinas. Cayó directo al estómago y vio que era como una casa en la que ella guardaba los huesos de los que se había comido.
 
-De la vena enterrada surgió primero una gota, después una totumada y finalmente un caudal. El hermano rescató a Kusbasha. Había perdido sangre y fuerza; en la casa recibió chicha, vestido y descanso.
+En su mochila llevaba un cuchillo, yopo y ebará. Inhaló yopo cuatro veces y prendió candela para buscar el corazón de Lisha. Después de cuatro días adentro se dio cuenta de que ella tenía cuatro corazones, cuatro riñones y cuatro hígados, y uno a uno los fue cortando.
 
-Al despertar explicó que Lisha ya no volvería a comerse a nadie y que el agua no faltaría. Su sangre fluye desde entonces por los ríos del territorio ancestral U’wa. La madre del agua no es eliminada: su fuerza cambia de una laguna peligrosa a una red de corrientes que sostiene la vida.`,
-    historia: `“Lisha” fue recopilado por la sede Tabut Ak Lia y publicado en el libro comunitario de 2020. La fuente llama a Lisha madre del agua, sitúa su morada en el nacimiento del río Keroa y conserva el papel de Kusbasha, su hermano y la familia que lo recibe.
+Cuando terminó, el agua de la laguna se fue secando, pero él alcanzó a enterrar una vena del cuerpo de Lisha. Esa vena la repartió por distintos lugares para que la sangre no se uniera, porque si llegaba a unirse el espíritu de la madre del agua reviviría y ella volvería a comerse a los U’wa y a todo lo que pasara por ahí.
 
-La historia contiene ingestión, huesos y corte de órganos. La reescritura mantiene esos hechos con lenguaje sobrio porque explican la transformación de la laguna y el origen del agua, pero la dirección visual excluye anatomía, cadáveres y violencia. No se convierte a Lisha en monstruo acuático europeo ni a Kusbasha en guerrero épico.
+Kusbasha vio que de la vena enterrada salía una gota de agua. Luego salió una totumada y después agua en gran cantidad. Así supo que el agua no se había acabado.
 
-El libro explica que el territorio U’wa se relaciona mediante ríos, lagunas, montañas y cuatro dimensiones. La caracterización cultural subraya la importancia de lagunas como lugares de origen. Ann Osborn documenta lagos y cursos de agua en los mundos de colores. Esos marcos amplían el contexto sin reemplazar la narración de Tabut Ak Lia.
+A los cuatro días, su hermano mayor fue a la laguna a rescatarlo. Lo encontró cansado, maltratado y débil. Al llegar a la casa, la familia se dio cuenta de que Lisha se había tomado la sangre de Kusbasha, porque estaba pálido y desnudo. Él pidió chicha y le dieron una totumada; también le dieron un guayuco viejo para que se tapara y una ruana para que se cobijara. Luego pidió una hamaca para descansar un rato y se quedó dormido.
 
-Kusbasha y Kubashoa tienen nombres semejantes, pero desempeñan historias distintas en sedes distintas. Esta revisión no los fusiona. Tampoco localiza públicamente la laguna o las peñas; la coordenada general protege un sitio que el relato presenta como significativo.`,
-    versiones: `La versión publicada cuenta una transformación precisa: al morir la forma peligrosa de Lisha, una vena preservada produce el agua que alimentará el territorio. La sangre se convierte en ríos. No se dice que Kusbasha cree agua desde la nada ni que la madre desaparezca por completo.
+Al despertar les contó que Lisha no volvería a comerse a nadie y que nunca faltaría el agua en el territorio U’wa. Ahora la sangre de Lisha es el agua que corre por los ríos del territorio ancestral.`,
+    historia: `La narración la aportó la Sede Tabut Ak Lia de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, Norte de Santander, y se publicó en 2020 en Historias ancestrales U’wa — Kajkin Luin Karita, número 32 de la serie Territorios Narrados del Ministerio de Educación Nacional y el Cerlalc. Los textos y la traducción al u’wajka son de Senén Airima Ríos Santos y Camilo Andrés Delgado Rodríguez, con la revisión del wejen Situa Kamara y las orientaciones previas del wejen Kuanima Runía.
 
-No se encontraron otras versiones públicas con distinto protagonista o ubicación. El nombre Lisha se conserva tal como aparece en u’wajka y castellano. “Madre del agua” es una traducción explicativa de la propia fuente, no una identificación con la Madremonte, la Madreagua mestiza o una sirena.
+Dos objetos de la mochila de Kusbasha los define el glosario del propio libro. El ebará es un bejuco sagrado que al secarse se usa para prender la candela, y el yopo es la planta sagrada de Tame y Casanare que fortalece el saber de los mayores y que no puede consumirse sin que antes la armonice la autoridad tradicional.
 
-La repetición de cuatro intentos, días, espinas y órganos se relaciona con las cuatro dimensiones descritas en el libro. La página reconoce la estructura, pero no asigna una correspondencia específica entre cada órgano y un color porque la narración no la explica.
+Que el agua tenga dueña no es exclusivo de esta narración. En la lista alfabética de deidades u’wa que Ann Osborn levantó entre los kubaruwa aparecen Thithiyara, Dueña-Señora del agua, y Rithbara, Dueña-Señora de los peces, ambas femeninas y ambas intermediarias en el mundo del medio; y aparece Riachiroa, que Osborn glosa como la época del solsticio de junio, la luna mojada y la madre del agua terrestre. El cargo existe en el sistema; lo que cambia es el nombre y el carácter.
 
-La edición evita leer la historia como victoria humana sobre una naturaleza hostil. Kusbasha redistribuye la fuerza de Lisha y garantiza que el agua continúe. El desenlace es una reorganización del vínculo, no una conquista de la laguna.`,
+El canto a la creación que Sergio Daza recogió en 1962 entre los tunebos del grupo Cobaría reparte el agua de otra manera. Allí Sira encarga las aguas a Iáchawa, que las hace y cría en ellas los peces para que los coman los tunebos y los blancos, y pone de cuidandero de los peces a Risbara, con el poder de crear más hasta que se acabe el mundo. Risbara y la Rithbara de Osborn son, con mucha probabilidad, el mismo cargo escrito por dos recopiladores distintos con cincuenta años de diferencia.
+
+El número cuatro estructura el relato entero: cuatro espinas, cuatro inhalaciones, cuatro días adentro, cuatro corazones, cuatro riñones, cuatro hígados y cuatro días hasta el rescate. Osborn documentó que todos los mitos cantados u’wa están divididos en cuatro partes.`,
+    versiones: `La madre del agua no aparece con el mismo signo en todas las fuentes, y las diferencias importan.
+
+En la narración de Tabut Ak Lia, Lisha es una fuerza devoradora a la que hay que desarmar, y el desenlace no la elimina sino que la reparte: la vena enterrada se distribuye por distintos lugares precisamente para que la sangre no vuelva a unirse, y esa sangre repartida es hoy el agua de los ríos. En la lista de deidades de Ann Osborn no hay ninguna Lisha; hay dos dueñas femeninas del agua y de los peces, Thithiyara y Rithbara, que no devoran a nadie, y una Riachiroa asociada al solsticio de junio y a la luna mojada, glosada como madre del agua terrestre.
+
+El canto Cobaría de 1962 tampoco conoce una laguna peligrosa. Allí el agua es obra de Iáchawa por encargo de Sira, y el único cargo asociado es el de Risbara, cuidandero de los peces. La caracterización del Ministerio de Cultura añade una tercera imagen: en los espacios de abajo se encuentra el agua, en forma de cuerpo de mujer, y es la base de todos los elementos que sostienen la tierra.
+
+Las cuatro fuentes coinciden en que el agua es femenina y en que tiene quien responda por ella. Discrepan en si esa figura es una amenaza que hubo que vencer o un cargo que siempre estuvo en su sitio.
+
+El lugar sí está nombrado con precisión en una sola de ellas: el nacimiento del río Keroa, en una laguna entre peñas, según Tabut Ak Lia. La caracterización del Ministerio de Cultura clasifica lagunas, chorros, remansos y sitios de origen como lugares prohibidos y encantados, donde no se entra sin permiso de los seres espirituales y mediante rituales de limpieza.`,
     leccion:
-      "El agua sostiene la vida cuando su fuerza se redistribuye con conocimiento y respeto, no cuando se destruye.",
-    similitudes: `Seres femeninos asociados con nacimientos de ríos aparecen en muchas tradiciones colombianas. Lisha se distingue por contener a Kusbasha, poseer una estructura cuádruple y convertirse mediante una vena preservada en el agua del territorio U’wa.
+      "Una fuerza devoradora deja de serlo cuando se reparte en muchos cauces en vez de concentrarse.",
+    similitudes: `Dos paralelos documentados explican por qué este relato no termina con la destrucción de Lisha sino con su reparto.
 
-El héroe tragado por un ser enorme y activo desde su interior recuerda relatos de ballenas, serpientes o monstruos en distintos continentes. La semejanza formal no convierte a Lisha en criatura marina ni a Kusbasha en equivalente de un héroe bíblico. Aquí intervienen yopo, ebará, chicha y el río Keroa.
+El primero está en el mito cantado del ordenamiento de las abejas, que Osborn transcribió entre los kubaruwa. Allí la misma materia original, la kenoba, se convierte en dos cosas opuestas según el lago por el que pase: miel pura por el amarillo, insectos con ponzoña por el rojo. El destino de una sustancia no depende de lo que es, sino de por dónde circula y en cuántas partes queda. Kusbasha aplica esa lógica con el cuerpo de Lisha: no la anula, la distribuye, y al distribuirla convierte una laguna que se tragaba todo en una red de ríos.
 
-Dentro del corpus U’wa, la cosmogonía también relaciona lagos con materiales y nacimientos. En Lisha, el agua no origina clanes; su sangre se distribuye como red fluvial. Ambas páginas comparten el valor de las lagunas sin ser versiones del mismo episodio.
+El segundo está en la manera u’wa de fijar propiedades en el territorio. Osborn documenta que el bita de los dones que las deidades envían suele ser enterrado o sembrado debajo de los menhires del mundo del medio, y que esos menhires, llamados kerkacha en el habla de los mitos cantados, son postes de casa que unen las dos mitades del azul. Enterrar la vena para que la sangre no se reúna es una operación del mismo tipo: se siembra en el suelo aquello que no debe volver a concentrarse.
 
-La sangre de una entidad que se vuelve paisaje tiene paralelos en mitos de creación corporal. Esta narración no fragmenta todo el mundo, sino que explica una continuidad concreta: mientras las partes no se reúnan, los ríos seguirán y la forma devoradora no regresará.`,
+Un tercer punto de contacto es el precio del viaje. Kusbasha vuelve pálido y desnudo porque Lisha se bebió su sangre, y necesita chicha, guayuco, ruana y hamaca para reponerse. Es el mismo balance de pérdida y reposición que Osborn describe para las ceremonias de soplar, donde quien oficia queda expuesto y debe ser purificado después.`,
     excerpt:
       "Kusbasha entra en Lisha, madre del agua, y transforma su fuerza en los ríos que recorren el territorio U’wa.",
     seoTitle: "Lisha, madre del agua: mito U’wa del río Keroa",
@@ -497,7 +929,64 @@ La sangre de una entidad que se vuelve paisaje tiene paralelos en mitos de creac
       "historias ancestrales U’wa",
     ],
     tags: ["agua", "laguna", "transformación", "ríos"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «Lisha», Sede Tabut Ak Lia, con el nacimiento del río Keroa, las cuatro espinas, los cuatro corazones, riñones e hígados, el reparto de la vena y la reposición de Kusbasha con chicha, guayuco, ruana y hamaca; el glosario define ebará y yopo.",
+        limitation:
+          "Es la única fuente localizada para este relato. El libro no fecha el registro, no nombra al narrador y adapta el texto para lectura escolar; tampoco sitúa el río Keroa en el mapa.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Su lista alfabética de deidades registra a Thithiyara, Dueña-Señora del agua, a Rithbara, Dueña-Señora de los peces, y a Riachiroa, glosada como la época del solsticio de junio, la luna mojada y la madre del agua terrestre: el cargo de dueña del agua existe en el sistema kubaruwa.",
+        limitation:
+          "Ninguna de esas tres deidades es devoradora ni protagoniza un relato como este, y el nombre Lisha no aparece en la obra. El registro corresponde al clan kubaruwa del Cocuy, no a Norte de Santander.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta el reparto Cobaría del agua: Sira encargó las aguas a Iáchawa, que las hizo y crió en ellas los peces, y puso de cuidandero de los peces a Risbara, con poder de crear más hasta que se acabe el mundo.",
+        limitation:
+          "Son tres líneas dentro de un canto de creación, sin laguna peligrosa ni episodio de lucha; la coincidencia entre Risbara y la Rithbara de Osborn es una hipótesis de transcripción y no un dato de la fuente.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Aporta dos elementos: que en los espacios de abajo se encuentra el agua en forma de cuerpo de mujer, base de todos los elementos que sostienen la tierra, y la clasificación de lagunas, chorros y remansos como lugares prohibidos y encantados en los que no se entra sin permiso de los seres espirituales.",
+        limitation:
+          "Es un resumen institucional de bibliografía ajena y de un atlas jurisdiccional; no contiene relato alguno sobre la madre del agua.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta la lógica de las dos vías de una misma sustancia: la kenoba de las abejas se convierte en miel pura o en insectos con ponzoña según el lago por el que pase, que es el mismo procedimiento con el que Kusbasha transforma a Lisha al repartirla.",
+        limitation:
+          "Trata abejas y animales comestibles, no cuerpos de agua; la analogía la establece esta ficha y no la fuente.",
+      },
+      {
+        key: "falchettiofrenda1997",
+        summary:
+          "Aporta el principio de que ciertos bienes se siembran o depositan en puntos del territorio para que queden fijados allí, que es la operación que Kusbasha realiza al enterrar la vena para que la sangre no se reúna.",
+        limitation:
+          "Su objeto es el simbolismo del oro; no menciona el agua ni este relato, y el texto digitalizado tiene errores de reconocimiento óptico.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Confirma el territorio u’wa en el norte de la Cordillera Oriental, donde nacen los ríos que el relato explica.",
+        limitation:
+          "Ficha breve de contexto, sin narrativa ni hidrografía detallada.",
+      },
+      {
+        key: "torresResena1991",
+        summary:
+          "Aporta el episodio del río Cobaría, cuyo pescado comido sin purificar tuvo consecuencias corporales irreversibles, y muestra que en esta tradición el agua no es un recurso neutro sino un cuerpo con reglas.",
+        limitation:
+          "Solo se pudo consultar la reseña de dos páginas y no el libro de Berichá de 1992; el episodio es de otro río y de otro orden de hechos.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: laguna entre peñas en el nacimiento del río Keroa, Lisha sugerida como gran ola protectora y Kusbasha avanzando con su hermano por un sendero; cuatro curvas de agua, sin boca monstruosa, órganos, huesos, violencia ni texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -511,42 +1000,56 @@ ${visualRule}`,
   {
     slug: "yanoa-y-sirbetuna",
     title: "Yanoa y Sirbetuna",
-    mito: `Dasa Duba llamó a Yanoa con el pensamiento desde otra dimensión. Cuando apareció, le asignó el cerro Urko Kerata y el cuidado del ganado. Yanoa construyó un corral, vigiló las reses y les dio sal. La tarea parecía otorgarle una riqueza nueva dentro del territorio.
+    mito: `El dios Dasa Duba llamó a Yanoa con su pensamiento. Y Yanoa, que estaba en la otra dimensión, al instante llegó.
 
-Después, Dasa Duba puso en su pensamiento el deseo de comer una vaca. Yanoa lanzó la soga, pero no logró sujetarla. Las demás reses escaparon del corral y pasaron por encima de él. Tuvo que reunirlas de nuevo.
+—De ahora en adelante —dijo Dasa Duba— usted se ubicará en el cerro Urko Kerata y será el dueño del ganado.
 
-Dasa Duba llamó entonces a Sirbetuna. Este dijo que el ganado también le pertenecía y propuso compartir una vaca. A diferencia de Yanoa, pudo amarrarla en el primer intento. Afirmó que tenía espada, lanza, olla y fuego para prepararla.
+Entonces Yanoa hizo un corral y todos los días revisaba el ganado y les echaba sal a las vacas.
 
-Yanoa se retiró a tejer con ituma, suskuara, kuibura y suara, elementos vinculados con poder y riqueza. Sirbetuna cocinó la vaca, pero se la comió sin compartir. Dasa Duba observó la conducta de ambos y pensó una lucha. Quería comprobar quién debía ser dueño del ganado.
+Dasa Duba, en su pensamiento, incitó a Yanoa para que se comiera una vaca. Yanoa agarró la soga e hizo la primera lanzada. Y cuando ya iba a agarrar la vaca para comérsela, con su pensamiento Dasa Duba hizo que no pudiera amarrarla y que las otras reses salieran del corral y pasaran por encima de él. Después del incidente, Yanoa volvió a encerrar las vacas en el corral.
 
-Sirbetuna venció y quitó a Yanoa sus elementos de poder. Los guardó lejos del alcance de los U’wa. Yanoa, decepcionado, se transformó en ave, voló hacia los Llanos Orientales y regresó a su lugar de origen en otra dimensión.
+Dasa Duba llamó entonces a Sirbetuna con su pensamiento. Y Sirbetuna, al instante, apareció.
 
-Los sabios explican que el resultado protegió una forma de vida. Si Yanoa hubiera conservado ganado y objetos de poder, los U’wa habrían seguido un camino semejante al de quienes extraen de la Madre Tierra para acumular riqueza propia. La identidad y el territorio habrían quedado sometidos a esa búsqueda.
+—Sobrino —le dijo Sirbetuna a Yanoa—, quiero que comamos una vaca juntos, porque también son mías. Yo se la ayudo a amarrar.
 
-La historia no celebra que Sirbetuna coma solo ni presenta la derrota como simple justicia. Dasa Duba usa el conflicto para retirar una posibilidad peligrosa: convertir seres y objetos en propiedad acumulable. Yanoa permanece como ave más allá del territorio, señal de un camino que pudo existir pero no debía ordenar la vida U’wa.`,
-    historia: `“Yanoa y Sirbetuna” fue recopilado por la sede Minsaka. Es una de las nueve narraciones que la Institución Izketa Segovia seleccionó para explicar convivencia, armonía y equilibrio con animales conforme a la Ley de Origen. Su trama incluye ganado, corral, espada, olla y objetos de poder, elementos que reflejan relaciones históricas sin volver la historia menos U’wa.
+Sirbetuna hizo la primera lanzada y pudo amarrar fácilmente a la vaca.
 
-La publicación sitúa explícitamente la conclusión en contraste con los “hermanos menores”, nombre usado en la traducción para quienes extraen recursos y acumulan riqueza. La reescritura expresa la crítica sin convertirla en ataque racial ni identificar a una población actual específica.
+—Sobrino —le dijo—, yo tengo mi espada, mi lanza, mi olla y fuego para prepararla.
 
-Ann Osborn mostró que el intercambio U’wa buscaba equilibrar propiedades entre clanes y que los mitos incorporan objetos o medidas llegados con transformaciones históricas. Ese marco ayuda a entender por qué una vaca y un corral pueden entrar en una narración ancestral: las tradiciones no son fósiles inmóviles.
+Entonces Yanoa se retiró de ahí y se puso a tejer con ituma, suskuara, kuibura y suara, que son elementos de poder y riqueza. Mientras tanto, Sirbetuna preparó la vaca y se la comió solo.
 
-No se asignan equivalencias a ituma, suskuara, kuibura y suara más allá de lo que dice la fuente. La imagen los representa como tejidos u objetos abstractos, sin inventar armas, amuletos o formas arqueológicas. Urko Kerata no se geolocaliza.`,
-    versiones: `La versión de Minsaka ofrece un único desenlace: Sirbetuna vence, aparta los elementos de poder y Yanoa se transforma en ave. El comentario final imagina qué habría sucedido si Yanoa hubiera permanecido como dueño de ganado y riqueza.
+Viendo esto, Dasa Duba pensó en una lucha entre Yanoa y Sirbetuna. Y quería que este último ganara, pues creía que Yanoa no era el indicado para ser el dueño del ganado. Y así fue: ganó Sirbetuna y le quitó a Yanoa sus elementos de poder, para guardarlos lejos del alcance de los U’wa.
 
-No se halló una versión donde Yanoa gane o donde Dasa Duba entregue definitivamente las reses a una familia humana. La pregunta contrafactual pertenece a la propia narración y no es una variante histórica.
+Yanoa, decepcionado y transformado en ave, voló hacia los Llanos Orientales, fuera del territorio U’wa. Trascendió a la otra dimensión y regresó a su lugar de origen.
 
-Los elementos de contacto —ganado, sal, espada— no se eliminan para fabricar una falsa antigüedad prehispánica. Tampoco se interpretan como evidencia de una fecha precisa. La memoria oral puede reorganizar cambios sociales dentro de la Ley de Origen y seguir orientando decisiones presentes.
+Dicen los sabios que si Yanoa se hubiese quedado con el ganado y con los elementos de poder, el pensamiento y la forma de vida de los U’wa serían distintos. Se parecerían a los de los hermanos menores, que extraen recursos de la Madre Tierra para generar riquezas propias. Si eso pasara, los U’wa perderían su identidad y su territorio, y se acabaría el equilibrio natural.`,
+    historia: `La narración la aportó la Sede Minsaka de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, Norte de Santander, y se publicó en 2020 en Historias ancestrales U’wa — Kajkin Luin Karita, número 32 de la serie Territorios Narrados del Ministerio de Educación Nacional y el Cerlalc, con textos y traducción de Senén Airima Ríos Santos y Camilo Andrés Delgado Rodríguez y revisión del wejen Situa Kamara.
 
-El ave en que se convierte Yanoa no recibe especie en la traducción pública. La edición no la identifica ni le atribuye un canto. Su viaje hacia los Llanos se conserva como regreso a otra dimensión, no como migración cartografiable.`,
+El glosario del propio libro define las piezas. Dasa Duba es el dios creador y dueño de los animales de este mundo. Urko Kerata es un cerro de otra dimensión donde se encuentra el ganado. La sal figura como práctica ganadera tradicional: se les da a las reses para complementar su dieta de minerales. Y los hermanos menores son los Riowa o gente blanca, llamados así porque nacieron después que los U’wa.
+
+La palabra con la que Sirbetuna se dirige a Yanoa, «sobrino», conecta el episodio con la estructura del parentesco. Ann Osborn documentó que en la tradición oral u’wa los términos de parentesco funcionan como metáforas de clasificación y que los hermanos de la madre suelen ordenar a los hijos de sus hermanas; el hermano de la madre es la figura central alrededor de la cual giran las relaciones entre primos cruzados, tanto en los grupos sociales como en los mitos.
+
+El argumento sobre la riqueza tiene un antecedente registrado cincuenta y ocho años antes y a varios días de camino. En el canto a la creación que Sergio Daza recogió en 1962 entre los tunebos del grupo Cobaría, Sira les había dado a los tunebos la ciencia, la ropa y la plata, y a los blancos los había hecho de barro y desnudos. Los blancos sintieron envidia, y su padre le pidió a Sira que les diera esas cosas; como Sira no tenía más, se las quitó a los tunebos y se las entregó a ellos, para que de envidia no acabaran con los tunebos. El canto cierra ese pasaje con una frase que podría ser el pie de esta narración: «Y por eso hemos venido pobres y desnudos, por eso no tenemos vacas ni caballos, solo marranos y gallinas».
+
+El mismo canto Cobaría guarda otra coincidencia. Allí yanoas es la palabra para las pavas, aves que Sira creó y mandó del cielo al oriente para que poblaran el mundo.`,
+    versiones: `La narración de Minsaka y el canto Cobaría de 1962 llegan a la misma conclusión por caminos incompatibles, y eso es lo que las hace comparables.
+
+En Minsaka la pérdida de la riqueza ocurre dentro del territorio: Dasa Duba organiza una lucha porque cree que Yanoa no es el indicado para ser dueño del ganado, quiere que gane Sirbetuna, y Sirbetuna guarda los elementos de poder lejos del alcance de los U’wa. En el canto Cobaría no hay lucha ni perdedor U’wa: es Sira quien retira la ciencia, la ropa y la plata y se las da a los blancos, y lo hace para proteger a los tunebos de la envidia. En un caso la riqueza se guarda; en el otro se traspasa.
+
+Los nombres tampoco coinciden. Dasa Duba no figura en la lista alfabética de deidades u’wa que Ann Osborn levantó entre los kubaruwa, donde el Dueño-Señor de los animales es Rúwahama y quien puede serlo desde el mundo de arriba es Yagshowa. Sirbetuna no aparece en ninguna otra fuente consultada.
+
+Sobre Yanoa hay una pista que las fuentes no resuelven. En el relato de Minsaka, Yanoa es el personaje que al final se transforma en ave y vuela hacia los Llanos Orientales. En el canto Cobaría de 1962, yanoas es directamente el nombre de las pavas que Sira mandó del cielo al oriente para poblar el mundo. Las dos fuentes coinciden en el ave y en la dirección, pero ninguna dice que sean la misma cosa, y esta página no lo decide.
+
+La caracterización del Ministerio de Cultura aporta el marco que ambas comparten: el pueblo no ve el territorio como una fuente de riqueza sino como un ser vivo con espíritu y armonía propia.`,
     leccion:
-      "La riqueza que rompe el equilibrio puede apartar a una comunidad de su identidad y de su territorio.",
-    similitudes: `Relatos donde una deidad prueba a posibles cuidadores aparecen en muchas culturas. Dasa Duba no evalúa generosidad mediante una recompensa final; provoca situaciones que revelan relaciones con ganado, alimento, poder y acumulación.
+      "Una riqueza que se acumula sin repartirse aparta a un pueblo del territorio que lo sostiene.",
+    similitudes: `El motivo de la riqueza retirada tiene aquí dos paralelos documentados, y el primero es interno y casi literal.
 
-La transformación de Yanoa en ave recuerda historias de derrota o salida convertidas en origen animal. La fuente no dice que todas las aves de una especie desciendan de él, de modo que no se clasifica como etiología zoológica completa.
+En el canto a la creación que Sergio Daza recogió en 1962 entre los tunebos Cobaría, Sira quita a los tunebos la ciencia, la ropa y la plata para dárselas a los blancos, y el canto concluye que por eso no tienen vacas ni caballos, solo marranos y gallinas. La narración de Minsaka, en Norte de Santander y cincuenta y ocho años después, llega al mismo punto con otro reparto de personajes: si Yanoa se hubiese quedado con el ganado, los U’wa se parecerían a los hermanos menores, que extraen recursos de la Madre Tierra para generar riquezas propias. Dos clanes distintos explican la misma ausencia de ganado como una decisión y no como una carencia.
 
-Dentro del corpus U’wa, el ordenamiento de las abejas presenta bienes que circulan entre mundos y clanes para sostener fertilidad e intercambio. Yanoa y Sirbetuna advierte sobre una forma de riqueza que se concentra. Leídas juntas, las historias distinguen intercambio equilibrador de acumulación destructiva.
+El segundo paralelo está en lo que los U’wa sí consideran riqueza. Ann Osborn registró la palabra raiya: la miel y la cera de las abejas son el epítome de la riqueza, y la noción incluye la fertilidad, los productos de intercambio y, hoy, el dinero. Ana María Falchetti documentó cómo esa riqueza circulaba: los U’wa dejaban cera de abejas en puntos ceremoniales y recogían después objetos de oro que, decían, dejaban las abejas. Es riqueza que sale y entra, no riqueza que se encierra en un corral.
 
-La presencia del ganado puede compararse con narraciones indígenas de contacto colonial que incorporan animales europeos. Esa comparación no resta autenticidad; muestra cómo una ley de origen interpreta cambios y decide qué relaciones pueden ser aceptadas sin perder autonomía.`,
+Entre los dos queda claro por qué el relato no celebra a Sirbetuna. Él amarra la vaca al primer intento, la cocina y se la come solo, y esa comida sin reparto es lo que Dasa Duba observa antes de decidir. Lo que se retira del territorio no es la abundancia: es la posibilidad de comer sin compartir.`,
     excerpt:
       "Dasa Duba enfrenta a Yanoa y Sirbetuna para decidir el destino del ganado y apartar una riqueza que rompería el equilibrio U’wa.",
     seoTitle: "Yanoa y Sirbetuna: relato U’wa sobre riqueza",
@@ -560,7 +1063,64 @@ La presencia del ganado puede compararse con narraciones indígenas de contacto 
       "historias ancestrales U’wa",
     ],
     tags: ["riqueza", "animales", "transformación", "tierra"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «Yanoa y Sirbetuna», Sede Minsaka, con el trato de «sobrino», la voluntad de Dasa Duba de que ganara Sirbetuna y la comparación final con los hermanos menores; el glosario define a Dasa Duba como dios creador y dueño de los animales de este mundo, Urko Kerata como cerro de otra dimensión donde se encuentra el ganado, y la sal como práctica ganadera.",
+        limitation:
+          "No identifica ituma, suskuara, kuibura ni suara más allá de llamarlos elementos de poder y riqueza, y no fecha el registro ni nombra al narrador. Es una selección pedagógica adaptada para lectura escolar.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta el paralelo casi literal: Sira había dado a los tunebos la ciencia, la ropa y la plata, y a los blancos los hizo de barro y desnudos; ante la envidia de estos, Sira se las quitó a los tunebos y se las dio a ellos, y el canto concluye «por eso no tenemos vacas ni caballos, solo marranos y gallinas». Registra además yanoas como nombre de las pavas que Sira mandó del cielo al oriente.",
+        limitation:
+          "Es un clan distinto, el Cobaría, y un registro de 1962 al que solo se accede por la transcripción de 2022; no menciona a Yanoa como personaje, ni a Sirbetuna, ni a Dasa Duba, y la coincidencia del término yanoa no está afirmada por la fuente.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta la noción de raiya, la riqueza u’wa, que incluye la fertilidad, los productos de intercambio y hoy el dinero, y el sistema de parentesco en que los hermanos de la madre ordenan a los hijos de sus hermanas, que explica el «sobrino» de Sirbetuna.",
+        limitation:
+          "No registra a Dasa Duba, Yanoa ni Sirbetuna en su lista de deidades, donde el Dueño-Señor de los animales es Rúwahama; el material es del clan kubaruwa del Cocuy.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Aporta la formulación de que el pueblo U’wa no ve el territorio como fuente de riqueza sino como un ser vivo con espíritu y armonía propia, y que la ley de origen les da el conocimiento para usarlo sin agotar los recursos.",
+        limitation:
+          "Es un resumen de bibliografía ajena y del plan de salvaguarda; no contiene relato alguno sobre ganado ni sobre Yanoa.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta la caracterización de miel y cera como epítome de la riqueza y el dato de que la cera es el producto tradicional de intercambio, con lo que muestra qué clase de riqueza sí circula legítimamente en este sistema.",
+        limitation:
+          "Trata abejas y animales, no ganado; la oposición entre riqueza que circula y riqueza que se acumula la establece esta ficha y no la fuente.",
+      },
+      {
+        key: "falchettiofrenda1997",
+        summary:
+          "Documenta el intercambio silencioso de cera de abejas por objetos de oro en puntos ceremoniales, un modelo de riqueza que entra y sale del territorio sin quedarse en manos de nadie.",
+        limitation:
+          "Su objeto es el simbolismo del oro y no la ganadería ni este relato; el texto digitalizado tiene errores de reconocimiento óptico en varios pasajes.",
+      },
+      {
+        key: "laverdeLinajes1995",
+        summary:
+          "Aporta la estructura de los circuitos de alianza chibchas en la que el hermano de la madre y el hijo de la hermana ocupan posiciones fijas, que es la relación que Sirbetuna invoca al llamar «sobrino» a Yanoa.",
+        limitation:
+          "Trata alianzas matrimoniales y no relaciones entre deidades; la aplicación al relato es analítica.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Confirma la continuidad de la defensa del territorio frente a proyectos extractivos, que es el término contemporáneo del argumento que el relato pone en boca de los sabios.",
+        limitation:
+          "Ficha breve de contexto, sin narrativa ni referencia al episodio del ganado.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: en el cerro Urko Kerata, Yanoa y Sirbetuna junto a un corral abierto y ganado vacuno que se dispersa; Dasa Duba se sugiere como pensamiento entre cuatro rutas, con una espada, una lanza y una olla a un lado, sin osos, cabras, ovejas, caracola, tambor, textiles enrollados, duelo, conquista ni texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -574,42 +1134,46 @@ ${visualRule}`,
   {
     slug: "el-recorrido-de-uktara",
     title: "El recorrido de Uktara",
-    mito: `Los sabios U’wa cuentan que existen caminos hacia la dimensión de los muertos. Sus entradas están dentro del territorio y algunas permanecen cubiertas por rocas. Quienes poseen conocimiento y alimento espiritual pueden acercarse a esos lugares sin confundirlos con un sendero ordinario.
+    mito: `Cuentan los sabios U’wa que dentro del territorio hay caminos por donde pasa el alma de la gente a la dimensión de los muertos. Cuentan también que, con el alimento espiritual, esos sabios son capaces de llegar hasta los lugares donde están esas entradas, que a veces quedan cubiertas con rocas.
 
-Uktara consiguió atravesar una entrada y regresar. En la otra dimensión no encontró angustia, preocupación ni dolor. Los árboles florecían y daban frutos sin trabajo. Las huertas permanecían limpias, los racimos de plátano crecían grandes y los animales pasaban junto a las personas sin atacarlas.
+Un día Uktara logró ir y volver de la dimensión de los muertos.
 
-Al entrar reconoció las voces de familiares muertos. Ellos conversaban como en la dimensión visible. También se oían, desde otros espacios, ruidos de personas no U’wa y de sus animales. Durante el día las almas parecían murciélagos. En la noche adoptaban sombras con forma humana y salían a trabajar la tierra y buscar alimento.
+Allí vio que no existía la angustia, ni la preocupación, ni el dolor. Todos eran felices. Los árboles florecían y daban frutos sin que nadie los trabajara. Las huertas permanecían limpias y daban grandes racimos de plátano. También había animales que pasaban cerca de las personas sin hacerles daño.
 
-Las almas preparaban comida en recipientes de barro. No la consumían como los vivos: volaban sobre el vapor y se alimentaban de su olor. Uktara recibió ofrecimientos, pero sabía que aceptar comida o bebida lo ataría para siempre. Permaneció atento y no probó nada.
+Al ingresar a esa dimensión, Uktara reconoció las voces y los gritos de sus familiares fallecidos. Dialogaban y se escuchaban tal como lo hacían en la dimensión visible. También escuchó, desde otra parte, las voces, los ruidos, la bulla y los gritos del hombre blanco y de sus animales.
 
-Antes de volver obtuvo semillas de batata roja y kabesha. El conocimiento del camino no fue lo único que trajo: las plantas mostraban que un viaje entre dimensiones podía renovar la alimentación en la Tierra.
+En el día las almas se veían como murciélagos. En la noche se transformaban en sombras con forma de personas y salían a trabajar la tierra y a buscar su alimento, tanto en su dimensión como en esta.
 
-Uktara regresó en cuerpo y alma para transmitir lo observado. Explicó cómo reconocer la entrada, qué formas podían adoptar las almas, por qué no debía comerse allí y cómo el mundo de los muertos se relacionaba con huertas, animales y parientes.
+Allá también elaboraban mollas de barro para preparar los alimentos. Cuando la comida estaba lista no la consumían: volaban por encima de las mollas y absorbían su vapor. Así se llenaban y calmaban su hambre, solo con el olor.
 
-Su recorrido no convierte la muerte en un lugar disponible para cualquier visitante. La historia afirma que fue llevado para conocer y volver con responsabilidad. Al compartir el saber, permitió a las autoridades mantener control y orientación sobre esa dimensión sin romper el límite que separa a vivos y muertos.`,
-    historia: `“El recorrido de Uktara / Uktar Bijega” procede de la sede Onkasa y cierra la selección narrativa de Historias ancestrales U’wa. Es un texto comunitario bilingüe, revisado con autoridades y educadores para circular públicamente. Esta página lo parafrasea y acredita su procedencia.
+Uktara se previno de recibir y consumir cualquier alimento o bebida que le ofrecieran las almas. Si lo hacía, no podría regresar a la dimensión visible: se habría quedado para siempre, en cuerpo y alma, entre los muertos. Estuvo atento y no probó nada.
 
-El glosario del libro define kabesha como planta silvestre comestible y “alimento espiritual” como yopo. La reescritura usa la expresión pública sin detallar una preparación o práctica ritual. Tampoco identifica científicamente la batata o kabesha.
+A su regreso trajo la semilla de la batata roja y la de la kabesha.
 
-La monografía de Osborn documenta que las almas de mujeres y hombres toman rutas hacia mundos distintos y que alimentos, semillas y movimiento tienen lugares específicos dentro del cosmos. Esos datos dan contexto, pero la página no sustituye el relato de Onkasa por un esquema etnográfico de funerales.
+Los sabios U’wa dicen que Uktara fue llevado a conocer la dimensión de los muertos y que regresó a la visible para transmitir sus conocimientos sobre ese camino y para tener control de esta dimensión, la de la Tierra. No fue un viaje que cualquiera pudiera emprender ni repetir a voluntad. Lo que quedó de él no es la entrada, que sigue donde estaba y cubierta, sino la descripción: por dónde se reconoce, qué forma toman las almas según la hora, por qué no se come allá y de qué manera ese lugar sigue tratando con las huertas, los animales y los parientes de este lado.`,
+    historia: `La narración viene de la Sede Onkasa de la Institución Etnoeducativa U’wa Izketa Segovia, en el Resguardo Unido U’wa, y su título en u’wajka es Uktar Bijega. Se publicó en 2020 en Historias ancestrales U’wa — Kajkin Luin Karita, la selección de nueve narraciones que el Ministerio de Educación Nacional y el Cerlalc editaron como número 32 de la serie Territorios Narrados, con revisión del lingüista Camilo Andrés Delgado Rodríguez y del wejen Situa Kamara.
 
-La presencia de voces no U’wa se conserva sin interpretarlas como condena. La otra dimensión contiene espacios y sonidos diferentes. La coordenada es deliberadamente general: no debe leerse como localización de una entrada cubierta por roca ni como invitación a buscarla.`,
-    versiones: `La versión de Onkasa afirma que Uktara visita y vuelve de la dimensión de los muertos. Allí las almas se ven como murciélagos durante el día, trabajan como sombras humanas en la noche y se alimentan del vapor de la comida. El viajero regresa con semillas.
+Que esta narración esté publicada tiene un peso particular. Ann Osborn dejó escrito en Las cuatro estaciones que se propuso grabar el mito cantado de la muerte y no lo hizo. Los kubaruwa acababan de pasar por una severa epidemia de malaria que había cobrado muchas vidas, entre ellas las de cinco connotados cantores, y se considera que celebrar ese mito sin el ritual apropiado y sin una persona muerta es llamar a la muerte hacia uno mismo o hacia la familia. Osborn había presenciado antes una epidemia de sarampión que mató al doce por ciento de la población kubaruwa menor de quince años. Reconoce que no tener el mito cantado de la muerte deja un vacío en el marco general de la mitología kubaruwa, y explica que fue un sacrificio ampliamente compensado por la tranquilidad de ellos.
 
-No se encontró una versión pública donde Uktara muera al volver o se quede después de comer. La prohibición funciona porque la respeta. A diferencia de “Caminar liviano” Barí, no infringe el límite ni regresa solo para morir; ambas historias deben mantenerse separadas por pueblo y desenlace.
+Lo que sí registró Osborn es la doctrina del alma. Para los kubaruwa no hay muerte como tal: el aka-kambra, el alma con sus características físicas y su fuerza vital, se va desvaneciendo hasta que en una persona vieja o muy enferma llega a ser como la de un embrión, y regresa gradualmente al lugar de donde vino. El alma de la mujer vuelve al mundo de abajo, donde están Kaba y Yaya; la del hombre sube al de arriba, donde está Rukwa. Allí permanece hasta que nace su nieto, y entretanto recobra fuerza. Los nombres de los hombres longevos y de los chamanes poderosos del pasado tienden a reaparecer más rápido que los otros.
 
-Las fuentes U’wa describen varios mundos y rutas, pero no ofrecen una cartografía única de la dimensión visitada. La página evita llamar paraíso al lugar sin dolor: allí continúan huertas, animales, sonidos y relaciones, no una eternidad abstracta.
+El glosario del libro de 2020 fija dos piezas del relato: molla es el objeto de barro que se utiliza para la cocción de alimentos, y kabesha es una planta silvestre comestible que abunda en el territorio U’wa.`,
+    versiones: `Las dos fuentes describen el destino de los muertos de manera incompatible, y la diferencia no es de matiz.
 
-La batata roja y kabesha aparecen como bienes traídos. No se afirma que Uktara haya creado ambas plantas o que antes fueran desconocidas en toda la Tierra. La narración pública dice que llevó sus semillas a su regreso, y ese es el alcance conservado.`,
+En la narración de Onkasa la dimensión de los muertos es un lugar feliz: no hay angustia ni dolor, los árboles dan fruto sin que nadie los trabaje, las huertas están limpias y los animales pasan junto a la gente sin atacarla. En lo que Osborn recogió entre los kubaruwa, el alma permanece en la otra esfera hasta que nace su nieto, y esa permanencia parece una especie de limbo que no es particularmente placentero ni desagradable; la vida en el mundo del medio resulta preferible, a juzgar por el esfuerzo que se hace para arreglar los matrimonios correctos y volver a reencarnar.
+
+Tampoco coincide el destino. Para Osborn el alma se separa por sexo: la de la mujer baja al rojo, la del hombre sube al blanco. En la narración de Onkasa la dimensión de los muertos es una sola, y en ella los parientes U’wa conversan entre sí mientras las voces del hombre blanco y de sus animales suenan desde otra parte.
+
+Hay un punto donde sí convergen, y es el de la comida. Uktara no puede probar nada de lo que le ofrecen. La misma regla aparece en otros dos lugares del corpus: los viajeros que iban al trueque llevaban alimento purificado y tenían prohibido recibir comida de los hermanos menores, y la reseña que William Torres hizo de la autobiografía de Berichá cuenta que ella nació sin piernas porque su madre transgredió la norma de comer pescado del río Cobaría sin haberlo purificado antes.`,
     leccion:
-      "Conocer otra dimensión exige respetar sus límites y regresar para compartir lo aprendido con responsabilidad.",
-    similitudes: `La prohibición de comer entre los muertos aparece en tradiciones de muchos lugares, desde relatos griegos hasta viajes chamánicos americanos. En Uktara, el alimento se consume como vapor y el viajero trae semillas; esos rasgos no deben borrarse bajo la comparación con Perséfone.
+      "Quien cruza a otra dimensión regresa solamente si no acepta nada de lo que allí le ofrecen.",
+    similitudes: `Dos paralelos documentados sostienen la lógica de este viaje, y ambos están dentro de la misma tradición.
 
-La apariencia diurna de murciélago y nocturna de sombra invierte asociaciones comunes entre día y noche. La inversión dialoga con la cosmología U’wa, donde seres y condiciones pueden tener contrapartes en mundos opuestos.
+El primero es la regla del alimento. En el relato de Monoa, que aportó la Sede Anteta, los U’wa que salían de viaje durante meses hacia Wikana y Siskaa cargaban alimento para la ida y la vuelta porque no debían consumir lo que no estuviera purificado ni recibir los alimentos de los hermanos menores. Uktara aplica la misma regla en otro territorio: aceptar la comida de las almas lo habría atado allí en cuerpo y alma. Comer, en este corpus, es pasar a formar parte del lugar donde se come, y por eso la abstención es lo que permite regresar.
 
-Monoa y Kubashoa pasan a otra dimensión después de morir; Uktara entra vivo y vuelve. Las tres historias muestran continuidad entre mundos, pero solo Uktara cumple un recorrido de ida y regreso con conocimiento y semillas.
+El segundo paralelo está en la relación entre las almas y el trabajo agrícola. Las almas que ve Uktara salen de noche a trabajar la tierra y a buscar alimento tanto en su dimensión como en esta. Osborn documenta el mismo supuesto en los mitos cantados, donde lo que en un mundo es cacería en otro es cosecha. El libro de 2020 lo enuncia con una lista de equivalencias: cada especie animal tiene un ser supremo en otra dimensión para el cual esos animales son sus cultivos y su alimento diario, de modo que batata es armadillo, ahuyama es chocora, yuca es pajuil y bore es piro.
 
-El viaje puede recordar descensos de héroes al inframundo. Aquí no busca rescatar a un pariente, conquistar la muerte ni obtener inmortalidad. Su función es aprender rutas, conservar límites y fortalecer la vida colectiva mediante memoria y alimento.`,
+Eso explica el regalo del regreso. Uktara no vuelve con un mensaje ni con un objeto: vuelve con semillas de batata roja y de kabesha, es decir, trae de allá justamente la materia con la que allá se nombra a los animales de aquí.`,
     excerpt:
       "Uktara visita la dimensión de los muertos, rechaza su comida y regresa con semillas y conocimiento para su pueblo.",
     seoTitle: "El recorrido de Uktara: viaje U’wa entre dimensiones",
@@ -623,7 +1187,64 @@ El viaje puede recordar descensos de héroes al inframundo. Aquí no busca resca
       "historias U’wa",
     ],
     tags: ["muerte", "exploración", "semillas", "cosmos"],
-    sourceKeys: communityStorySources,
+    sourceKeys: [
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Publica el relato íntegro como «El recorrido de Uktara / Uktar Bijega», Sede Onkasa, con las almas en forma de murciélago, las mollas de barro, la absorción del vapor y las semillas de batata roja y kabesha; el glosario define molla y kabesha.",
+        limitation:
+          "Es la única fuente localizada para este relato. Su formato etnoeducativo no incluye notas de campo, fecha de registro, nombre del narrador ni el texto previo del que se adaptó.",
+      },
+      {
+        key: "osborn1995",
+        summary:
+          "Aporta la doctrina kubaruwa del alma —el aka-kambra se desvanece hasta parecerse al de un embrión y regresa a donde vino, el de la mujer al mundo de abajo y el del hombre al de arriba, hasta que nace su nieto— y el dato de que la autora decidió no grabar el mito cantado de la muerte tras una epidemia de malaria que mató a cinco cantores.",
+        limitation:
+          "Precisamente por esa decisión, la monografía no contiene el mito cantado de la muerte: sobre el tema central de esta ficha su aporte es doctrinal y contextual, no narrativo, y la autora reconoce el vacío.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Aporta la lógica de las dimensiones invertidas que explica que las almas trabajen la tierra de noche: lo que en un mundo es cacería en otro es cosecha, y los seres se transforman al cambiar de zona y de alimento.",
+        limitation:
+          "No trata el viaje de los vivos al mundo de los muertos ni registra ningún relato equivalente.",
+      },
+      {
+        key: "torresResena1991",
+        summary:
+          "Aporta el caso de la transgresión alimentaria: Berichá nació sin piernas porque su madre comió pescado del río Cobaría sin haberlo purificado, lo que muestra que la regla sobre qué se puede comer y dónde tiene consecuencias irreversibles.",
+        limitation:
+          "Solo se pudo consultar la reseña de dos páginas, no el libro de 1992, y el episodio se refiere a comida de este mundo, no del de los muertos.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Clasifica cementerios, cuevas, lagunas y sitios de origen entre los lugares prohibidos y encantados, donde no se entra sin permiso de los seres espirituales mediante rituales de limpieza y armonización, categoría a la que pertenecen las entradas cubiertas con rocas del relato.",
+        limitation:
+          "Es una tipología institucional tomada del Atlas para la Jurisdicción Especial Indígena; no describe el mundo de los muertos ni cita relato alguno.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta, en el marco editorial que lo acompaña, la definición de los Werjayas como los encargados de cuidar todo lo que hicieron Sira y Yagshowa en la creación, que es la autoridad bajo la que se transmite un saber como el de Uktara.",
+        limitation:
+          "El canto de 1962 no menciona la dimensión de los muertos ni a Uktara; lo que aporta procede del texto editorial que lo enmarca.",
+      },
+      {
+        key: "icanhUwa",
+        summary:
+          "Confirma la continuidad de las autoridades tradicionales y de los cabildos en al menos diecisiete comunidades, que es el marco en el que hoy se transmite este conocimiento.",
+        limitation:
+          "Ficha breve de contexto, sin material narrativo ni referencia al tema.",
+      },
+      {
+        key: "perezestructuras1996",
+        summary:
+          "Permite leer la pareja vivos-muertos como una más de las oposiciones que estructuran el pensamiento de las sociedades indígenas de los Andes Orientales.",
+        limitation:
+          "No trabaja material u’wa de primera mano ni se ocupa de escatología; su uso es estrictamente comparativo.",
+      },
+    ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: Uktara cruza un sendero de roca hacia una dimensión fértil con árboles, huertas, animales tranquilos y sombras de familiares; recipientes de barro liberan vapor y él mantiene distancia, sin cadáveres, cementerio, terror ni texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",
     imagePromptVertical:
@@ -637,42 +1258,44 @@ ${visualRule}`,
   {
     slug: "las-hijas-del-sol-y-la-miel",
     title: "Las hijas del Sol y el ordenamiento de la miel",
-    mito: `En una estación seca, la selva del mundo intermedio estaba sin fuerza. Había hambre y sed porque aún no llegaban las abejas, la miel ni la cera. Faltaba aquello que permitiría germinar, intercambiar y renovar la vida.
+    mito: `Las selvas del mundo del medio, el de los U’wa, estaban secas. Había hambre y sed, porque todavía no habían llegado las abejas, ni su miel, ni su cera, y el mundo carecía de los medios de germinación.
 
-Rukwa, asociado con la luz y el Sol, envió un mensaje a Kanwara. Prepararon grandes vasijas y reunieron agua de distintos lugares. El calor produjo vapor y lluvia. Después ambos comenzaron a mascar y pensar. Su kanoba, saliva creadora y alimento, se transformó en abejas: hijos e hijas capaces de llevar propiedades del mundo de arriba al territorio U’wa.
+Entonces Rukwa, la deidad del mundo de arriba, y Kanwara, la del mundo de abajo, cooperaron para producir la kenoba de las abejas. Los dos mascaron y escupieron dentro de grandes vasijas. No hubo unión sexual: la kenoba se produjo mascando, igual que mascan las mujeres para hacer las bebidas fermentadas y que se masca el maíz que se pone en las trampas. También la lluvia de ciertas estaciones se llama así, porque se piensa que es el masticar de los inmortales.
 
-Rukwa les indicó que debían bajar atravesando las puertas de las esferas de colores. Las abejas sintieron tristeza y duda porque dejarían el lugar donde habían surgido. Una pareja permanecería como reserva para que su materia no se agotara y la creación pudiera renovarse.
+Rukwa les dijo a sus criaturas, las abejas, que debían bajar al mundo del medio. Yagshowa y Rúwahama, Dueños y Señores de los Animales, guiaron el kanoba de las abejas a través de las esferas de colores.
 
-Yagshowa condujo a las demás. En la esfera amarilla se bañaron en el lago Rayria. Allí recibieron cuerpos y nombres. La narración distingue parejas de machos y hembras que se relacionan como hermanos de sexo opuesto. Después volaron por encima de rojo y azul, recorrieron territorios de clanes y llegaron al mundo diurno de las personas.
+En los lagos de riqueza del amarillo, unas se bañaron y allí desarrollaron cuerpos. Volaron por encima del lago rojo de Kanwara sin detenerse. Recibieron una iniciación y les dieron de comer coca, ají, jengibre y tabaco. Como pago por habitar el mundo del medio recibieron coronas, semillas, cobertizo y protección, tierra amarilla e instrumentos musicales.
 
-Con ellas aparecieron miel, cera, cerumen y vida social. Las abejas construyen casas, trabajan juntas, transforman polen y tierra y producen sustancias que dan fuerza. Su organización permite a los U’wa pensar la comunidad, la fertilidad y el intercambio entre pisos y clanes.
+A otras las engañaron para que se bañaran en el lago rojo, y allí las tocó Rúwahama. Desarrollaron cuerpos con sangre y quedaron como hijas de las hermanas de Kanwara. Bajaron al mundo del medio y se asentaron como moscas, avispas y otros insectos voladores con ponzoña, que comen excrementos de animales. Después volaron hacia las tierras altas y frías, entraron por la puerta de la cueva y salieron convertidas en venado de tierra alta, venado de tierra baja, liebre y pecarí, conducidos por Rúwahama y cargando las enfermedades de Kanwara.
 
-El ordenamiento no termina cuando los insectos llegan. El mito se canta después de recolectar miel y dentro de una estación específica. Cantar y celebrar devuelve a las abejas a sus lugares, protege su continuidad y reactiva relaciones entre Sol, bosque, personas y alimento.
+Yagshowa tomó kanoba de las abejas del lago amarillo y la sembró por todo el mundo del medio, donde se transformó en plantas: coca, ají y jengibre. Las abejas se asentaron y mascaron el polen de las palmas, de los árboles y de las calabazas, y lo convirtieron en cera. Los machos les dieron a sus hermanas tierra amarilla y polen de un bejuco para que mascaran y procrearan.
 
-Por eso se las recuerda como hijas del Sol. No son recursos enviados para extraerse sin medida: portan una materia que debe circular y renovarse. Sin su trabajo, el mundo intermedio volvería a sentirse seco, hambriento y sin medios para comenzar otra vez.`,
-    historia: `Ann Osborn publica “El ordenamiento de las abejas o Anbaiya” dentro de la estación seca y advierte que la versión celebrada ya era incompleta cuando realizó su investigación. Explica la ceremonia, la estructura en cantos y la relación con “La soplada del alucinógeno”. Esta página ofrece una síntesis pública del núcleo narrativo y no pretende reconstruir ni reemplazar la celebración.
+Desde entonces la miel es pura, sin contaminación y sin mortalidad, y da fuerza y fertilidad a quien la toma; es además el antídoto de las enfermedades que vienen del amarillo. La cera es lo que se intercambia. Las dos juntas son lo que los U’wa llaman raiya: riqueza, que aquí quiere decir a la vez fertilidad y aquello con lo que se comercia.
 
-El artículo de Falchetti y Nates-Parra, citado por el estudio de SciELO, desarrolla a las abejas sin aguijón como hijas del Sol vinculadas con fertilidad, comienzos y continuidad. La caracterización del Ministerio de Cultura confirma el valor de la miel como sustancia de pureza, fuerza y vitalidad.
+Cuando el canto termina, al amanecer, todas las propiedades y las cosas han vuelto a su lugar.`,
+    historia: `El nombre del mito es anbaiya, que Ann Osborn traduce como el Ordenamiento de las Abejas: aiya es una declinación de aya, ordenar. Osborn lo registró entre los kubaruwa, el clan con el que trabajó catorce años en los alrededores de Cobaría, y lo publicó en 1995 en Las cuatro estaciones y, resumido, en 1990 en el Boletín Museo del Oro, en el artículo Comer y ser comido que tradujo Fabricio Cabrera.
 
-La fuente principal se concentra en el clan Kubaruwa, mientras otros registros describen versiones de Agua Blanca, Bókota y otros clanes. La página mantiene esa limitación. Los nombres de especies, parejas y rutas varían y no se convierten en una lista zoológica estable.
+La celebración tiene sitio y hora exactos. Se canta en la estación que abarca el solsticio de diciembre, cuando los kubaruwa residen en las tierras bajas y recogen la cosecha principal de coca. La recolección de miel y la preparación de cera se hacen antes del solsticio; pasado el solsticio, pequeños grupos de hombres bajan a recoger yopo o suben a cambiar cera de abejas por sal mineral. Los hombres cantan el mito después de recoger la miel. El canto empieza poco después del anochecer: se sientan con las piernas cruzadas sobre hojas puestas en el piso, en la mitad este de la casa, mirando al este; las mujeres permanecen atrás, donde está la bebida fermentada de miel o la chicha; canta todo el grupo siguiendo a un cantante principal; y cuando el mito menciona los vuelos de las abejas, los hombres van y vienen dentro de la casa desde la puerta este hasta el centro. Al amanecer, terminado el canto, hombres y mujeres toman chicha y pueden tener relaciones sexuales.
 
-El relato entra al sitio porque representa un núcleo U’wa bien documentado que no estaba en la base. Los complejos Reowa, Aya, la soplada del alucinógeno y el zorro con la zarigüeya permanecen como contexto; separarlos todos produciría páginas delgadas y rompería la unidad ceremonial que Osborn exige leer.`,
-    versiones: `La versión Kubaruwa registrada por Osborn empieza con una selva seca y sigue la cooperación de Rukwa y Kanwara, la producción de kanoba, el descenso de abejas por esferas de colores y su distribución territorial. La monografía conserva numerosos cantos y exégesis que esta página no reproduce.
+Los kubaruwa se comparan con las abejas más que con cualquier otra criatura de su entorno. Viven en sociedad, construyen casas, tienen reuniones, ceremonias y cantos —sobre todo al enjambrar—, fabrican recipientes ceremoniales llamados kumtas y consumen una bebida hecha, como la chicha, a partir de su kanoba. Las colmenas sin aguijón se arman en capas horizontales o en forma esférica, igual que ellos ven el universo.
 
-Falchetti y Nates-Parra comparan materiales de varios clanes. En Agua Blanca, Bisto tumba una colmena, entrega miel y enseña a procesar cera. En Bókota, las abejas llegan en un orden relacionado con la cantidad de cera de sus colmenas. Esas memorias muestran variación sobre don, transformación e intercambio.
+Hay una segunda mención documentada de estas colmenas fuera del clan kubaruwa. En el canto a la creación que Sergio Daza recogió en 1962 entre los tunebos del grupo Cobaría, es Sira quien hace las colmenas de miel del monte, «la cera para vender y la miel para comer», y añade una frase que coincide con lo que Osborn llama raiya: «la cera es nuestra plata». Allí quien cuida las colmenas se llama Rukcoa y tiene dos encargados, Busena y Casirá, que las envían del cielo a los montes.`,
+    versiones: `El mito cantado no cuenta una sola historia de abejas sino dos, que se separan en los lagos de colores, y suprimir una destruye el sentido del ordenamiento.
 
-La expresión “hijas del Sol” resume una relación cosmológica, pero los cantos incluyen machos y hembras y nombran a Rukwa, Kanwara y Yagshowa. La edición evita presentar una colonia occidental con reina, obreras y zánganos como si esa clasificación agotara el relato.
+La materia prima de ambos grupos es la misma kenoba, producida sin unión sexual por deidades inmortales. Lo que las diferencia es el lago donde desarrollan cuerpo. Las que pasaron por el amarillo evitaron el lago rojo de la menstruación, se reproducen asexualmente y su kanoba esencial, la miel, propicia salud, longevidad y pureza. Las que se bañaron en el rojo, engañadas, quedaron con sangre y dieron origen a los insectos que pican y pueden causar enfermedades, la antítesis de las abejas sin aguijón nativas.
 
-La celebración observada por Osborn vinculaba miel, movimiento, canto y procreación. Se menciona con lenguaje no sensacionalista y no se convierte en una descripción de prácticas actuales universales. Cada comunidad conserva autoridad sobre aquello que puede comunicar.`,
+Las fuentes tampoco reparten igual los papeles. En Osborn, Rukwa y Kanwara cooperan produciendo la kenoba, y quienes guían a las abejas por las esferas son Yagshowa y Rúwahama. En el canto Cobaría de 1962 no hay esferas ni lagos de colores: Sira hace directamente las colmenas y Rukcoa queda de cuidandero, con Busena y Casirá encargados de enviarlas del cielo a los montes.
+
+También difiere el estatuto de Rukwa. Osborn escribe que Thira, Racha, Teca y Rukwa son cuatro nombres de una misma luz, uno por esfera, y que Rukwa corresponde al azul; Rukwa no es un dios solar independiente sino el nombre que el Sol lleva en el mundo habitado. La caracterización del Ministerio de Cultura y el artículo de María Mercedes Arias-Valencia recogen en cambio el planteamiento de Ana María Falchetti y Guiomar Nates-Parra, para quienes las abejas son hijas del sol, seres que favorecen la fertilidad y los comienzos y la continuidad de la vida, sin entrar en la correspondencia de nombres por esfera.`,
     leccion:
-      "La continuidad de la vida depende de relaciones sociales y ecológicas que deben renovarse, no agotarse.",
-    similitudes: `Las abejas solares aparecen en otras mitologías por su relación con luz, trabajo y alimento. En el mundo U’wa, la conexión incluye esferas de colores, kanoba, clanes, cera, intercambio y ceremonias estacionales; no es una metáfora genérica de laboriosidad.
+      "Lo que sostiene la vida se produce mascando y circulando, no acumulándose en un solo lugar.",
+    similitudes: `Los dos paralelos más firmes están dentro del mismo corpus y se refieren a cómo la sociedad humana se piensa mirando a las abejas.
 
-La sociedad de la colmena se compara con la vida comunitaria porque ambas construyen casas, transforman sustancias y coordinan actividades. Esa analogía surge de las propias fuentes U’wa y de la observación de abejas sin aguijón, no de la fábula europea que ordena “trabajar como abeja”.
+El primero es el del incesto. Osborn documenta que los kubaruwa creen que las abejas se reproducen mediante el cruce de hermanos de distinto sexo, y que el polen del bejuco que consumen se llama kwika, término que designa a la vez la magia, la inversión del orden y el incesto. Esa reproducción, que en la sociedad humana sería la transgresión mayor, se lee aquí como prueba de pureza: al no intercambiar líquidos sexuales ajenos, las abejas conservan intacta su materia, y de ahí viene el poder curativo de su miel. Entre las personas la regla funciona al revés, con circuitos de matrimonio entre clanes que Eduardo Londoño comparó con los de koguis y muiscas.
 
-El descenso desde un mundo superior con bienes recuerda ciclos donde animales o héroes traen semillas, fuego o alimento. Aquí las abejas mismas son el don y participan activamente en su llegada, con tristeza, nombres y recorridos.
+El segundo es el del oro. Ana María Falchetti mostró que los U’wa obtenían objetos de oro mediante intercambio silencioso: dejaban cera de abejas y otros productos en puntos ceremoniales y recogían después las piezas, que ellos decían dejadas por las abejas. La tierra amarilla que las abejas reciben como pago en el mito se refiere indirectamente al oro, y la cera, que el canto Cobaría de 1962 describe como «nuestra plata», es el bien que sale del territorio.
 
-Dentro del corpus, Yanoa y Sirbetuna cuestiona la acumulación de riqueza. Las hijas del Sol muestran otra circulación: miel y cera equilibran fertilidad e intercambio. Leídas juntas, distinguen una riqueza que sostiene relaciones de otra que puede apartar a la comunidad de su territorio.`,
+Un tercer contraste ordena los dos anteriores. La miel y el yopo se consumen por las mismas razones y buscando efectos parecidos, pero de maneras opuestas: la miel se toma y recorre el tracto digestivo nutriendo y limpiando, como la leche del maíz tierno; el yopo se inhala, sube por la columna vertebral y llega a los genitales, y se cree que produce el material de los huesos y del alma.`,
     excerpt:
       "Rukwa y Kanwara envían a las abejas por los mundos de colores para llevar miel, cera y renovación al territorio U’wa.",
     seoTitle: "Las hijas del Sol: mito U’wa de las abejas",
@@ -687,13 +1310,56 @@ Dentro del corpus, Yanoa y Sirbetuna cuestiona la acumulación de riqueza. Las h
     ],
     tags: ["animales", "Sol", "intercambio", "fertilidad"],
     sourceKeys: [
-      "osborn1995",
-      "abejasScielo",
-      "caracterizacionMincultura",
-      "leyesOrigenOnic",
-      "historiasAncestrales",
-      "icanhUwa",
-      "mininteriorMitos",
+      {
+        key: "osborn1995",
+        summary:
+          "Contiene el mito cantado completo del ordenamiento de las abejas, anbaiya, con sus cuatro partes, los dos grupos de abejas separados en los lagos de colores, la kenoba producida por Rukwa y Kanwara mascando, los guías Yagshowa y Rúwahama, la lista de pagos que reciben las abejas y las condiciones exactas de la celebración en la casa ceremonial.",
+        limitation:
+          "Es un registro del clan kubaruwa hecho en los años setenta y ochenta, publicado póstumamente; la autora advierte que los comentarios de sus intérpretes sobre esta parte son a veces contradictorios y confusos. La grafía oscila entre kenoba y kanoba en el mismo pasaje.",
+      },
+      {
+        key: "cabreraComer1990",
+        summary:
+          "Resume el mismo mito cantado y añade los datos rituales precisos: los hombres lo cantan después de recoger la miel, sentados en la mitad este de la casa mirando al este, recorriendo la casa de la puerta al centro cuando el canto menciona los vuelos; y explica que aiya es declinación de aya, ordenar.",
+        limitation:
+          "Es una síntesis de veintiocho páginas basada en dos versiones corregidas parcialmente por la autora antes de morir, y da el texto del mito en paráfrasis, no en transcripción.",
+      },
+      {
+        key: "leyesOrigenOnic",
+        summary:
+          "Aporta la versión de otro clan sobre el mismo asunto: Sira hace las colmenas de miel del monte, «la cera para vender y la miel para comer», y precisa que «la cera es nuestra plata»; quien cuida las colmenas se llama Rukcoa y tiene por encargados a Busena y Casirá.",
+        limitation:
+          "Son cuatro líneas dentro de un canto de creación, sin esferas de colores, sin lagos y sin los dos grupos de abejas; solo se accede a la transcripción de 2022 del registro de 1962.",
+      },
+      "falchettiofrenda1997",
+      {
+        key: "abejasScielo",
+        summary:
+          "Reproduce y atribuye la formulación de Falchetti y Nates-Parra de que en la mitología u’wa las abejas son hijas del sol, seres que favorecen la fertilidad y los comienzos y la continuidad de la vida, y sitúa esa idea en los hábitos sociales y los patrones de vida en comunidad.",
+        limitation:
+          "Es un estudio de antropología demográfica sobre el calendario reproductivo, no sobre mitología; la cita es de segunda mano y ocupa un solo párrafo. Se usa porque el capítulo original de 2002 no tiene edición en acceso abierto verificable.",
+      },
+      {
+        key: "caracterizacionMincultura",
+        summary:
+          "Confirma la pareja reowa y aya como los dos tipos de mito cantado, con el aya definido como mito de ordenamiento que trata la aparición de los seres y el orden que ese proceso genera, categoría a la que pertenece el anbaiya.",
+        limitation:
+          "Resume a Osborn sin citar página y no menciona el mito de las abejas ni la miel.",
+      },
+      {
+        key: "laverdeLinajes1995",
+        summary:
+          "Aporta el contraste entre la reproducción de las abejas, que los kubaruwa piensan como cruce de hermanos, y los circuitos de matrimonio humanos que comparó entre u’wa, kogui y muisca.",
+        limitation:
+          "No trata el mito de las abejas; el contraste lo establece esta ficha y no la fuente.",
+      },
+      {
+        key: "historiasAncestrales",
+        summary:
+          "Su capítulo cultural aporta el principio de que cada especie animal tiene un ser supremo en otra dimensión para el cual esos animales son sus cultivos y su alimento diario, marco en el que se inscribe que las abejas sean criaturas de una deidad solar.",
+        limitation:
+          "No incluye ninguna narración sobre abejas ni miel entre sus nueve relatos; su aporte se limita a tres páginas de marco general.",
+      },
     ],
     imagePromptHorizontal:
       "Ilustración panorámica 2D full paper cut y paper quilling, acabado gráfico plano sin fotografía: dos presencias humanas estilizadas de Rukwa y Kanwara preparan vasijas mientras pequeñas abejas nativas sin aguijón, oscuras y sin franjas amarillas y negras, descienden por bandas blanca, amarilla, azul y roja hacia el bosque U’wa; miel, cera y lago Rayria como formas recortadas, sin rostro solar antropomorfo, osos, aves, personas adicionales, colmena industrial, halo ni texto, sin objeto físico, maqueta, diorama, CGI ni render 3D.",

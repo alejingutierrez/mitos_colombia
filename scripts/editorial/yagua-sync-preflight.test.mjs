@@ -27,7 +27,10 @@ test("la sincronización Yagua prevé cinco altas y la transferencia de Chimbila
   assert.deepEqual(output.universe.toTransfer, ["chimbilaco"]);
   assert.equal(output.dossiers, 7);
   assert.equal(output.imagePairs, 7);
-  assert.deepEqual(output.sourcesPerMyth, [9, 7]);
+  // El número exacto lo fija ahora cada ficha: se comprueba el mínimo y que no
+  // vuelva a haber un único reparto para toda la comunidad.
+  assert.ok(output.sourcesPerMyth.length >= 2, "un solo reparto para todas las fichas");
+  assert.ok(Math.min(...output.sourcesPerMyth) >= 5, `reparto por debajo del mínimo: ${output.sourcesPerMyth}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

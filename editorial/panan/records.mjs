@@ -4,51 +4,8 @@ import { canonicalPananSlugs } from "./universe.mjs";
 const visualRule =
   "IMÁGENES: se reutiliza la pareja existente salvo en Guamurran. Toda regeneración futura debe ser ilustración editorial 2D full paper cut y paper quilling; nunca fotografía de papel, objeto físico, maqueta, diorama, CGI ni render 3D.";
 
-const commonSourceKeys = [
-  "memoriaTerritorial2016",
-  "planVida2005",
-  "mujeresPastos2021",
-  "medicinaTradicional2006",
-  "turismoCumbal",
-  "planDesarrolloNarino2024",
-  "historiaResguardo",
-];
 
-function history(specific, editorialBoundary) {
-  return `${specific}
 
-La fuente narrativa principal es la investigación etnoliteraria de Ernesto Ramiro Estacio y Luis Ulpiano Tatamues García, presentada en 2016 a la Universidad de Nariño. El trabajo organiza la palabra de comuneros y mayores alrededor de lugares y espíritus del territorio, e identifica a sus narradores cuando se trata de un testimonio personal. El Plan de Vida y las memorias de mujeres Pastos aportan contexto territorial independiente; no se usan para fabricar una segunda versión cuando no la contienen.
-
-Panán es una comunidad y resguardo del pueblo Pastos en el municipio de Cumbal. La taxonomía histórica del sitio usa “Pananes” y se conserva para no romper la navegación, pero el texto público evita presentar a los Pananes como un pueblo indígena separado. También distingue memoria oral, interpretación de los investigadores, práctica vigente y referencia geográfica.
-
-${editorialBoundary}
-
-La coordenada señala aproximadamente el centro de Panán. No pretende ubicar una aparición, un entierro, un nacimiento de agua ni un sendero cuya posición exacta no publican las fuentes.`;
-}
-
-function versions(primary, related, limit) {
-  return `${primary}
-
-${related}
-
-Las fuentes complementarias confirman el marco territorial Pastos, los lugares sagrados, la medicina propia y la centralidad del agua, pero no siempre repiten el episodio. Se citan como contexto y se diferencia su función de la del corpus oral de 2016. Las expresiones de los comuneros se conservan con explicación cuando pueden resultar opacas fuera de Panán.
-
-Cuando una fuente guarda silencio sobre un detalle, la edición mantiene ese límite visible en vez de llenar el vacío con una escena plausible.
-
-${limit}`;
-}
-
-function similarities(specific, localRelation, boundary) {
-  return `${specific}
-
-${localRelation}
-
-${boundary}
-
-Las coincidencias se presentan por función, paisaje o estructura narrativa y no como equivalencias de identidad entre seres, lugares o prácticas.
-
-La comparación sirve para orientar la lectura, no para afirmar un origen común ni reducir la memoria de Panán a una versión regional de personajes más conocidos. Los nombres del lugar, las acciones atribuidas y las relaciones con agua, chagra, páramo y medicina propia conservan prioridad.`;
-}
 
 function horizontalPrompt(scene) {
   return `Ilustración panorámica editorial 2D full paper cut y paper quilling, sin fotografía de papel: ${scene}; composición en capas planas recortadas, sin texto, objeto físico, maqueta, diorama, CGI ni render 3D.`;
@@ -62,31 +19,40 @@ const recordList = [
   definePananMyth({
     slug: "al-duende",
     title: "El duende de Panán",
-    mito: `En Panán se habla del duende como un ser alegre, travieso y difícil de fijar en una sola apariencia. Puede vestir con los colores de las plantas y flores del lugar donde se deja ver: algunas personas lo recuerdan de rojo, otras de verde, amarillo o negro. Su presencia no se reconoce por un uniforme, sino por lo que altera a su alrededor.
+    mito: `El duende de Panán no baja de arriba: sube. Habita el mundo de abajo, que es el agua, y por eso se lo encuentra en las chorreras, en los remansos y en los rincones oscuros del monte, donde la luz no alcanza a secar la piedra.
 
-Le gusta la música, en especial la de instrumentos de cuerda. También se acerca a las quebradas y chorreras donde las mujeres lavan ropa. Los mayores dicen que puede enamorarse de una muchacha y perseguirla durante el día. Por la noche la inquieta con sueños y pesadillas hasta debilitarla. La persona afectada no queda reducida a una víctima de cuento: su familia busca a un médico tradicional para una limpia y una purga con guanto, albarrecín, marco y chapil.
+Nadie lo describe igual. Unos lo vieron de rojo, otros de verde, de amarillo, hasta de negro, porque toma el color de las flores y de las plantas del sitio donde se deja ver. Lo que no cambia es el oficio. Es músico y prefiere las cuerdas, y quienes lo han oído en la quebrada dicen que su tambor es el agua misma: con ese golpe llama a los curiosos y los va acercando al borde.
 
-Los caballos conocen otra forma de su travesura. El duende puede enredar o trenzar la crin y la cola, cambiar el ánimo del animal y hacer que se resista a pasar por ciertos lugares. Por eso una trenza inesperada no se mira solamente como desorden; puede ser la señal de que durante la noche alguien jugó con el caballo.
+Se enamora de las mujeres que bajan a lavar la ropa. A la que escoge la persigue todo el día haciéndose el niño bueno, y de noche le manda pesadillas hasta que no duerme y cae enferma.
 
-En relatos más recientes aparece cerca de alcantarillas y se convierte en un niño del sector. Busca a menores de cinco años, juega con ellos y deja la actividad dispuesta para continuar al día siguiente. No se muestra agresivo mientras juega y evita que los adultos lo vean. Cuando una persona mayor se acerca, ya no encuentra al visitante que el niño describe.
+Con los caballos la cosa es travesura. El animal se planta en mitad del camino, no quiere seguir, empieza a recular como asustándose, y al otro día amanece con la crin del cuello y la cola bien carnejadas y enredadas, como si alguien hubiera trabajado en ellas toda la noche.
 
-El duende reúne así varias relaciones: música y enamoramiento, juego y enfermedad, agua y caminos, infancia y animales. No actúa siempre del mismo modo ni en el mismo sitio. Se le reconoce por el cambio que deja: una pesadilla repetida, un caballo trenzado, un niño que conversa con alguien invisible o una melodía que parece venir de la quebrada.`,
-    historia: history(
-      `La página anterior convertía estas menciones en una aventura extensa con escenas y diálogos no atribuidos. La revisión vuelve al apartado “Al duende” del corpus de Panán: colores variables, música de cuerdas, cercanía con lavanderas, juego infantil, caballos y tratamiento del enduendado.`,
-      `No se presenta una fórmula medicinal como recomendación clínica ni se identifica el ser con el duende europeo. Se registra una categoría comunitaria de afectación y el papel documentado del médico tradicional, sin enseñar dosis, reemplazar atención sanitaria o romantizar el sufrimiento.`,
-    ),
-    versiones: versions(
-      `Una línea de la memoria destaca al duende músico y enamorado que frecuenta quebradas y chorreras. Cuando persigue a una joven, aparecen pesadillas y enfermedad. Otra línea se concentra en los caballos: el animal se asusta, se niega a avanzar y amanece con la crin o la cola trenzadas.`,
-      `El corpus registra además una actualización del motivo: el duende sale en alcantarillas, toma la forma de otro niño y juega con menores sin dejarse mirar por adultos. La Cangagua conserva una experiencia situada de José Tarapues y por eso tiene página propia, aunque allí se atribuya al duende el caballo trenzado.`,
-      `No se funden en una biografía única ni se afirma que toda trenza, pesadilla o juego infantil pruebe su presencia. Son señales interpretadas dentro de relatos distintos.`,
-    ),
+En lo que se cuenta ahora sale por las alcantarillas. Se vuelve otro niño del sector y juega con los menores de cinco años sin ofenderlos; deja la tarea programada para continuarla al día siguiente y no permite que lo miren los adultos, de modo que cuando el mayor se asoma, el compañero que el niño describe ya no está en ninguna parte.
+
+Al que cae así se le dice enduendado, y hay quien lo levante. La médica arma una escoba con tarta negra, pillo, anamú y marco, le suma ruda, lana de oveja negra y estiércol de animales negros, y con eso sahúma, sopla y azota. Mientras tanto llama hacia el mundo de arriba: «Asoma, asoma, asoma, Usata, Usata, Usata», y en el nombre del padre, del hijo y el Espíritu Santo. Son tres sopladas con aguardiente, tres barridos y tres bendiciones. Después le da a tomar un poquito de pólvora, lo baña con zumo de ruda y hierbabuena y cierra con agua de acero. Otras curaciones trabajan con flor de guanto, hojas de albarrecín, ramas de marco y chapil, para la limpia y para la purga.
+
+Al duende no se lo mata ni se lo vence. Se lo despega del cuerpo y se lo devuelve al agua de donde salió.`,
+    historia: `El apartado «Al duende» está en el capítulo cuarto de la investigación etnoliteraria que Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García presentaron en noviembre de 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, con asesoría de Dumer Mamián Guzmán. De ahí vienen los colores cambiantes, la música de cuerdas, las lavanderas, el juego con los niños en las alcantarillas y la limpia con guanto, albarrecín, marco y chapil.
+
+El caballo tiene dueño de voz. José Tarapues, comunero de Panán, se lo contó a esos investigadores en marzo de 2014, y el episodio ocurre en la Cangagua, el cucho de la vereda la Merced donde una cascada se pierde entre los matorrales.
+
+La curación es lo mejor documentado y lo más antiguo. Andrea Ojeda Guerrero la publicó en 2006, en su estudio de medicina tradicional del resguardo, hecho con los cinco médicos tradicionales y la partera de Panán: allí el duende «habita en el mundo de abajo en el agua, en chorreras y lugares oscuros de los montes», y el «Asoma, asoma, asoma, Usata» con las tres sopladas, los tres barridos y las tres bendiciones se atribuye a Eudocia Calpa, médica tradicional y partera del resguardo. Erica Susana Quiroz Malte volvió a registrar el mismo procedimiento casi una década más tarde, en su trabajo de 2015 sobre las mujeres y la medicina tradicional de Panán; allí el enduendamiento lo explica Martha Quiroz, médica tradicional del resguardo, entrevistada el 18 de septiembre de 2014.
+
+Panán es resguardo del pueblo de los Pastos, en el municipio de Cumbal, Nariño, sobre el filo fronterizo con el Ecuador. El duende que aquí se cuenta es el suyo: los que se citan de otros resguardos y del otro lado de la línea aparecen señalados como lo que son, vecindad.`,
+    versiones: `Las dos vertientes de Panán no se contradicen, se turnan. La del agua lo ata a chorreras y lugares oscuros y lo trata como causa de enfermedad; la del juego lo trae al pueblo, a las alcantarillas y a los niños de menos de cinco años, y lo vuelve compañero que los adultos no alcanzan a ver.
+
+Fuera del resguardo la figura se endurece. En un resguardo pasto vecino, Nelson Mejía Putacuar recogió en 2014 un duende que cuida el agua de la quebrada, que llama con un tambor hecho de agua y que castiga con la mirada a quienes tumban el monte y queman la paja. Ese oficio de guardián que sanciona no lo traen las narraciones de Panán, donde enamora, enreda caballos y juega, pero no vigila el monte. La misma investigación, con la narradora Magdalena Pinchao, lo describe con tamborcitos chiquitos y sombreros grandes, hasta el punto de que al comunero de sombrero ancho le dicen que lleva sombrero de duende.
+
+En el Carchi ecuatoriano, que es otro país, los narradores de Tufiño que reunió Édison Ávalos en 2020 distinguen dos: «el duende claro es trabajador, el duende negro que es mudo». Son dos seres, no uno cambiante.
+
+Hay además una costura visible en el propio corpus de 2016: al lado de la palabra de los mayores se intercala una cita de libro sobre duendes «perversos, impertinentes y traviesos» que no viene de Panán, y que el texto adjudica a un autor mientras la nota al pie acredita a otro.`,
     leccion:
-      "Escuchar las señales del territorio también exige cuidar a quienes resultan afectados.",
-    similitudes: similarities(
-      `Los duendes traviesos, músicos y escondedores aparecen en muchas tradiciones de Colombia y otros países. La propia fuente reconoce esa circulación amplia. La versión de Panán se distingue por los lugares y prácticas que la sostienen: chorreras, caballos, plantas de limpia, chapil y la actualización hacia alcantarillas.`,
-      `La Cangagua ofrece el paralelo interno más directo porque allí un caballo se resiste a cruzar y amanece trenzado. El Chutún también puede parecer un duendecillo, pero su ámbito es la chagra y reacciona ante la destrucción del checher. No deben convertirse en un mismo ser.`,
-      `El juego con niños recuerda relatos domésticos de duendes; el enamoramiento se aproxima a apariciones seductoras. Sin embargo, La Viuda conduce a hombres hacia el agua y El Cueche se relaciona con clima y enfermedad: las funciones no son intercambiables.`,
-    ),
+      "Lo que enferma en el agua también se devuelve al agua para sanar.",
+    similitudes: `El paralelo más cercano está a pocas horas de camino y en el mismo pueblo. La monografía que Escobar Morillo y Mejía Putacuar escribieron en 2009 sobre Yaramal, resguardo pasto de Ipiales, le dedica capítulos enteros: el duende como ser protector del agua, la magia de su música, sus dualismos y los remedios contra el entundamiento. Es el mismo músico de quebrada, con una función de guardián más marcada que en Panán.
+
+El segundo paralelo cruza la frontera. En el Carchi, Édison Ávalos documentó en 2020 que sólo pueden narrar a estos seres quienes los han visto, y que el duende figura junto a la viuda, el guagua auca y los cueches en ese repertorio compartido; sus informantes se apellidan Chiles, Tarapués, Paspuezán o Malte, los mismos linajes de este lado de la línea. Es vecindad binacional, no creencia de Panán.
+
+Dentro del resguardo, el chutún también es pequeño y también enferma, pero su terreno es la chagra y el barbecho, no la chorrera; y el cueche comparte el agua sin compartir la música. Ojeada de duende, ojeada de chutún y pisado de cueche son categorías separadas en la misma consulta.`,
     excerpt:
       "Músico, travieso y cambiante, el duende de Panán juega con niños, trenza caballos y ronda quebradas.",
     seoTitle: "El duende de Panán: memoria del pueblo Pastos",
@@ -100,7 +66,16 @@ El duende reúne así varias relaciones: música y enamoramiento, juego y enferm
       "medicina tradicional",
     ],
     tags: ["duende", "juego", "música", "tradición oral"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "medicinaTradicional2006",
+      "espiralAndino2014",
+      "yaramal2009",
+      "quiroz2015",
+      "avalos2020",
+      "mamian1996",
+      "puenayan2011",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "junto a una quebrada altoandina, un pequeño duende músico apenas sugerido entre hojas observa un caballo cuya crin empieza a trenzarse, sin sombrero europeo ni fantasía de bosque genérico",
     ),
@@ -116,35 +91,38 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-entundada-el-quedado-el-espanto",
     title: "La entundada, el quedado y el espanto",
-    mito: `Una persona sale por un camino conocido y, sin que el paisaje cambie, deja de encontrar la salida. Da varias vueltas por el mismo punto, pierde la dirección de la casa o se separa de quienes la acompañaban. En Panán esa experiencia puede llamarse entundada.
+    mito: `En Panán entundar es un verbo. Entundarse es perderse en un campo, dormirse en un monte, en una zanja, en un páramo. El borracho da varias vueltas en el mismo lugar y no encuentra la salida ni el camino de la casa; el que está cuerdo se pierde en un sitio determinado y se desvía, e igual da vueltas y no halla por dónde salir. Después vienen el dolor fuerte de cabeza, el malestar del cuerpo y la fiebre.
 
-La fuente menciona dos situaciones frecuentes. Alguien que ha bebido camina en círculos y no logra regresar. Otra persona, aun estando sobria, puede entundarse mientras destruye la naturaleza o atraviesa un sitio determinado sin el cuidado necesario. El extravío no siempre consiste en internarse muy lejos: el mismo lugar parece repetirse hasta impedir el paso.
+Quien entunda tiene cara de mujer. La Vieja se les presenta a los borrachos, los aturde —eso es entundar— y se los quiere llevar adonde ella vive: ríos, puentes, casas abandonadas, chorreras. No hay que internarse lejos para que ocurra; basta el callejón, el pozo, la quebrada, la orilla del cementerio, el matorral de espinas.
 
-Después aparecen dolor fuerte de cabeza, fiebre, cansancio y malestar del cuerpo. Cuando el médico tradicional revisa a la persona puede decir que está “quedada”: su espíritu permaneció en el lugar del susto mientras el cuerpo logró volver. También puede clasificar la afectación como espanto o entundamiento según los síntomas y lo ocurrido.
+Cuando el enfermo llega, el médico tradicional lo mira y dice que está quedado. El espíritu se le quedó en el otro lugar y hay que ir por él. Se conoce en el cuerpo: dolor de cabeza, sueño excesivo, diarrea, adelgazamiento, pérdida de apetito, la piel de color amarillento. Y se distingue del espanto, que viene de una impresión violenta, de un ruido escandaloso o de una caída, y que se diagnostica por el pulso, midiéndole los pies, mirándole la contextura de los ojos y tocándole la cabeza: si está quemando, es fuerte mal aire o fuerte espanto.
 
-Para buscar al quedado se llevan prendas de la persona afectada. El médico emplea elementos como ovillos de lana roja, negra y verde, esencias de plantas, chapil, cigarrillo y ruda. La fuente no fija una receta única; señala que el procedimiento depende de quien cura y de la comunidad.
+Ir por el quedado es un viaje. Cuando el quedado es un niño, se lleva la última prenda que tenía puesta, ruda, trago y peinilla, y se va con la madre hasta el sitio exacto donde se cayó o se asustó. Allí se echa el trago, se golpea duro el suelo y se llama: ¡vení, vení, vení, levanta, levanta, vamos, vamos, a tu casa, a tu casa! Se recoge lo que se halle, con yerbas, con tierra, se envuelve todo con la ruda y se abraza. Y de ahí se sale corriendo sin voltear a ver, porque si se voltea el espíritu se regresa y, como dicen las curanderas, «es más jodido volver a traerlo»; el acompañante viene atrás con la peinilla echando juete. En el camino no se habla, no se saluda a nadie, se pasa no más a la carrera. El saco pesa como si llevara el niño adentro, y uno va sudando, y parece que se lo quisieran quitar. Al llegar se le dice: ¡toma tu quedado!
 
-La recuperación supone volver hacia el lugar donde se produjo la ruptura. La ropa representa a la persona ausente y las plantas acompañan el llamado. El camino que antes no permitía avanzar se recorre ahora con conocimiento y compañía.
+Después se coge ruda y se le friegan las piernitas, y se dice: le voy a sentar el espíritu. Se le toman los nudos de las piernas hasta sentir el pulso normal, que es la seña de que ya se está sentando. Esa noche el niño duerme, y que duerma es buena señal, porque quiere decir que el espíritu llegó. La traída es una sola vez; las otras dos veces ya es sólo fregarle las piernitas y los bracitos, y así el niño se va mejorando.
 
-Entundada, quedado y espanto no son tres monstruos. Son nombres relacionados, pero no idénticos, para describir pérdida de orientación, separación espiritual y malestar. La clasificación corresponde a especialistas de la medicina propia.
+También se usan ovillos de lana roja, negra y verde, esencias de plantas, chapil, cigarrillo y ruda. Y quién lo llama entundado, quién quedado y quién espantado, lo decide el que cura.`,
+    historia: `El quedado no es una metáfora: tiene registro. Erica Susana Quiroz Malte publicó en 2015 el informe del puesto de salud del resguardo correspondiente a marzo de ese año, firmado por el auxiliar de medicina tradicional Franco Calpa. De cincuenta consultas, las más frecuentes fueron mal aire con veintiocho, espanto con doce, quedado con cinco y cueche con tres. En el mismo trabajo, con entrevistas fechadas, están las definiciones: el espanto por Rosario Ipial, médica tradicional, el 29 de septiembre de 2014, y el quedado, con toda la traída del espíritu, por Herminia Malte, médica tradicional, el 21 de julio de 2014.
 
-El relato advierte sobre borrachera y destrucción, pero también ofrece una forma de recomponer el vínculo. Quien vuelve no lo hace solo: familia, médico, prendas, plantas y territorio participan en la restauración.`,
-    historia: history(
-      `El apartado 4.2.7 explica los tres términos desde la pérdida de conocimiento y de camino. Define entundarse, describe síntomas, presenta la idea de que el espíritu “se quedó” y enumera objetos usados por médicos tradicionales para ir por él.`,
-      `La página heredada añadió una protagonista llamada Lina y una selva que no pertenecen al registro de Panán. Ambos elementos se retiran. Los procedimientos se documentan como práctica cultural; no se convierten en instrucciones médicas ni se presentan como sustituto de atención profesional.`,
-    ),
-    versiones: versions(
-      `La entundada se asocia tanto con personas ebrias como con quienes destruyen la naturaleza. El quedado describe al espíritu que permanece en otro lugar. El espanto nombra otra clasificación de síntomas. La fuente indica que el médico decide cómo entender cada caso.`,
-      `Las memorias de mujeres Pastos también emplean “entundarse” y hablan de lugares pesados, lo que confirma una categoría viva más amplia que una sola narración. No reproducen exactamente el procedimiento del corpus de Panán.`,
-      `No se unifican los tres términos como sinónimos perfectos y no se enseña una receta. La lista de lanas, prendas, plantas y chapil se conserva como registro etnográfico atribuido.`,
-    ),
+Que entundar sea verbo y no criatura lo dejó escrito Byron Danilo Ruiz Puetate en el glosario de su libro de 2015, hecho desde los montes de Panán: «Entundarse: perderse en un campo; dormirse en un monte, una zanja, un páramo». Y quién entunda lo dice Quiroz en su entrada sobre la Vieja: «los aturde (entunda) y les hace perder el conocimiento».
+
+El apartado 4.2.7 de la tesis de 2016 de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García aporta lo demás: el borracho que da vueltas, el que se pierde estando cuerdo, los síntomas, el momento en que el médico alude que está quedado, la lista de ovillos de lana roja, negra y verde, esencias de plantas, chapil, cigarrillo y ruda, y la advertencia de que cada comunidad tiene síntomas distintos y formas distintas de controlar el malestar.
+
+Andrea Ojeda Guerrero, en 2006, ya había clasificado en Panán «el espanto o quedado» como una sola entrada entre las enfermedades naturales y culturales, las que se contraen al entrar en lugares sagrados, solitarios, con encanto, en quebradas, puentes y bosques.`,
+    versiones: `Tres desacuerdos, y ninguno es menor.
+
+El primero es quién entunda. En Quiroz es la Vieja, con nombre y definición. En el corpus de 2016 la Vieja entunda a los borrachos, pero la Viuda produce el mismo efecto sin que se use la palabra: «a medida que avanza en el camino se va perdiendo el conocimiento hasta que se olvida todo». En un resguardo pasto vecino, Nelson Mejía Putacuar recogió en 2014 un tercer culpable: el duende, que «con el poder de sus ojos entunda a los que tumban el monte y queman la paja».
+
+El segundo es si hace falta que haya alguien. En Yaramal, resguardo pasto del municipio de Ipiales, Robinson Escobar Morillo y Nelson Mejía Putacuar glosaron en 2009 el entunde como «señal de desequilibrio y trastorno tanto físico como mental que presenta la victima que ha sido tocada por cualquier espíritu sobrenatural», y agregaron que «el entunde puede pegar en los sitios huacas o pesados». Allí no se necesita figura: basta el lugar.
+
+El tercero es si son tres nombres o uno. Ojeda, en 2006, escribe «el espanto o quedado» como una sola cosa. Quiroz, en 2015, los separa con síntomas y curaciones distintas, y en la tabla del puesto de salud son dos renglones. El corpus de 2016 se queda en el medio y deja la decisión donde está de hecho: depende del médico, y depende de la comunidad.`,
     leccion:
-      "Recuperar el rumbo requiere compañía, conocimiento y respeto por el lugar.",
-    similitudes: similarities(
-      `La pérdida repetida del camino aparece en relatos de encanto, niebla o monte de muchas regiones. En Panán, entundarse se enlaza con la noción de quedado y con una respuesta de medicina propia que busca el espíritu mediante prendas y plantas.`,
-      `La Vieja puede entundar a borrachos y dejarlos en pantanos; La Viuda los desvía hacia el agua. Esos personajes narran encuentros particulares. Esta página explica la categoría de pérdida y restauración sin atribuirla siempre a una aparición.`,
-      `El espanto posee equivalentes nominales en gran parte de América Latina, pero los objetos, especialistas y clasificaciones cambian. La comparación no debe universalizar un tratamiento.`,
-    ),
+      "Perder el rumbo es aquí un verbo, no una criatura, y tiene diagnóstico propio.",
+    similitudes: `El paralelo mejor documentado viene del resguardo de Yaramal, en el municipio de Ipiales. Robinson Escobar Morillo y Nelson Mejía Putacuar dedicaron allí, en 2009, secciones al entundamiento dentro del capítulo del duende y dentro del capítulo de la viuda, y su glosario define el entunde como el desequilibrio de quien fue tocado por cualquier espíritu, con una precisión que aquí hace falta: «el entunde puede pegar en los sitios huacas o pesados». Eso ata esta categoría con la de las huacas, y explica por qué en Panán la pérdida del camino ocurre en callejones, pozos, quebradas y orillas de cementerio, que son exactamente los sitios que se llaman pesados.
+
+El segundo paralelo es de consulta. En Túquerres, otro resguardo pasto, los diecinueve médicos tradicionales que entrevistaron Portilla, Madroñero y Getial en 2016 encabezan su lista de enfermedades espirituales con el espanto y el mal viento, los mismos dos que encabezan el informe del puesto de salud de Panán, y sostienen que la medicina occidental no puede sanarlas. Dos resguardos distintos, el mismo orden de frecuencia.
+
+Al otro lado de la frontera, en el Carchi, el verbo cambia de raíz: allí dicen enduendar. Es vecindad, no Panán.`,
     excerpt:
       "Entundarse es perder camino y orientación; el quedado y el espanto nombran afectaciones atendidas por medicina propia.",
     seoTitle: "Entundada, quedado y espanto en Panán",
@@ -158,7 +136,16 @@ El relato advierte sobre borrachera y destrucción, pero también ofrece una for
       "mitos de Panán",
     ],
     tags: ["pérdida espiritual", "restauración", "rituales", "sanación"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "quiroz2015",
+      "ruiz2015",
+      "espiralAndino2014",
+      "yaramal2009",
+      "medicinaTradicional2006",
+      "tuquerres2016",
+      "mamian1996",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "una persona desorientada repite el mismo sendero altoandino de Panán mientras su familia y un médico tradicional preparan el regreso con prendas y plantas, sin selva tropical",
     ),
@@ -174,35 +161,36 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-huacas",
     title: "Las huacas de Panán",
-    mito: `En Panán, las huacas se recuerdan como entierros realizados por los mayores durante tiempos difíciles. Pueden contener cerámica, objetos valiosos o riquezas guardadas en la tierra. Cerca de La Tuta existe un cementerio donde aparecen restos de cerámica y figuras atribuidas a antepasados.
+    mito: `Antes que tesoro, en Panán la huaca es un hueco. Enguacarse es caerse en uno, y del ganado que caía en una huaca se decía que se moría. Por eso la primera noticia de una huaca casi nunca la da el oro: la da el terreno que cede.
 
-Los mayores dicen que “la huaca es para el que le quiere dar”; no se entrega a cualquiera. El tres de mayo algunas personas salen a velarlas, porque a medianoche pueden brillar como llamaradas. Sin embargo, el sueño, una distracción o algún cambio del lugar suele impedir que la señal sea observada con claridad.
+Guillermo Tatamués estaba arando con la yunta en el Afilador, la finca de un terrateniente, preparando para sembrar papas. Iban a ser las tres de la tarde, hora de soltar, cuando uno de los bueyes se hundió la pata y, si no es por el otro que lo jaló, no sale del hueco. Tanteó con la puya y notó el terreno muy blando. Dejó señalando el sitio con unas ramas, soltó la yunta y se fue. Al otro día volvió con el patrón a cavar y la tierra estaba tan dura que fue imposible encontrar nada.
 
-Guillermo Tatamues contó que araba una finca llamada El Afilador con una yunta de bueyes. Una pata se hundió y al tantear descubrió tierra blanda. Marcó el punto y regresó al día siguiente con el patrón. Entonces el suelo estaba tan duro que no pudieron encontrar nada.
+La otra vez la huaca vino andando. Un comunero volvía de noche a la casa de sus padres después de unos hervidos y tenía que pasar por la puerta del cementerio. Frente a la casa de don Fernando Canacuán había una puerca recién parida con toda la manada de puerquitos. La miró y siguió; la puerca gruñía detrás. Apuró el paso, cogió un atajo de dos metros de alto pensando que por ahí no subía, y al voltear ahí estaba, con todas las crías. Corrió los últimos trescientos metros con el cuerpo que ya no le resistía y la borrachera pasada, abrió la puerta de la casa y cayó. La madre sólo alcanzó a oír aullar a los perros. Al otro día le dijeron que eso era la huaca y que era para él, y que por miedo y por desconocimiento la había perdido: la huaca es para el que le quiere dar, no es para todos.
 
-Luis Ulpiano Tatamues García narró otra experiencia. Al volver de noche después de beber, vio una cerda con crías cerca del cementerio. Los animales lo siguieron y subieron por donde él pensaba que no podrían pasar. Corrió hasta su casa y perdió el conocimiento. Después le dijeron que la aparición era una huaca destinada a él, pero el miedo le impidió recibirla.
+El tres de mayo se sale a velarlas. A la medianoche empiezan a brillar en forma de llamaradas, y quien sale tiene que estar muy atento, aunque los que han ido cuentan que a esa hora siempre les da sueño y no alcanzan a ver nada. El mes entero es así: el año termina en mayo, el mes de las revelaciones, los misterios y las huacas.
 
-Quienes buscan una huaca hablan de conjuros, oraciones ancestrales y pruebas. Se recomienda ir de a dos: una persona cava y otra vigila en silencio. Pueden aparecer animales, fantasmas o peligros. Si alguien habla, siente ambición o no resiste, la tierra se endurece y la huaca cambia de lugar.
+Los que las buscan tienen reglas. Se va de a dos, uno cava y el otro vigila. Hay que ir tomado unos aguardientes y fumado un chilca sin filtro, no tener ambición ni pensar en lo que se va a hacer con esa plata. El que cava tiene apenas unos minutos. El que está arriba no puede ser nervioso, no puede hablar ni hacer ruido, porque va a ver animales, fantasmas y peligros; si no resiste y pronuncia algo, la tierra se endura y ya no sale.
 
-Las huacas no son cofres disponibles para saqueo. En los testimonios el hallazgo depende de una relación que no controla el buscador. La tierra blanda se vuelve dura; el animal ofrece una señal que puede rechazarse; el tesoro se aparta de la ambición.
+Cerca, a trescientos metros del poblado, está el cementerio de la Tuta, donde aparecen cerámicas y figuras de los antepasados. Y en una loma hay un camino de piedra por el que el finado Eustorgio entró unos quince metros y vio una casa que brillaba; mientras más se acercaba, más ventarrón, y el cuerpo se le amortiguaba. Nadie pudo entrar nunca. Con el tiempo hubo un derrumbo y el túnel se tapó. Dicen que ahí está el cacique con todas sus prendas de oro, y que nadie las saca porque es encantado: él mismo se enterró.`,
+    historia: `Los dos testimonios tienen nombre y fecha en el apartado 4.2.5 de la tesis etnoliteraria de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García (Universidad de Nariño, 2016). El de la yunta lo firma Guillermo Tatamués, comunero de Panán, en entrevista de junio de 2013. El de la puerca con crías lo firma Ulpiano Tatamués García, exgobernador del cabildo de Panán, en agosto de 2015. De ese mismo apartado salen la velación del tres de mayo, la frase «la huaca es para el que le quiere dar» y las reglas de los buscadores.
 
-Cada experiencia mantiene su narrador y su incertidumbre. Juntas forman una memoria sobre objetos enterrados, miedo, antepasados y límites frente a la riqueza del territorio.`,
-    historia: history(
-      `El corpus conserva dos testimonios atribuidos: Guillermo Tatamues relata la yunta y el terreno cambiante; Luis Ulpiano Tatamues García, exgobernador, cuenta la cerda con crías. También describe la velación del tres de mayo y prácticas de buscadores.`,
-      `La edición no promueve excavación ni guaquería. Los entierros y restos pueden involucrar patrimonio arqueológico protegido. Se conserva la memoria oral y se diferencia de la Waka, apartado interpretativo sobre poder espiritual y relación con la Madre Tierra.`,
-    ),
-    versiones: versions(
-      `En El Afilador la huaca se anuncia mediante tierra blanda bajo la pata de un buey y se retira cuando el buscador vuelve. Cerca del cementerio aparece como una cerda con crías que persigue al narrador. En la velación del tres de mayo puede verse como una llamarada.`,
-      `Los buscadores describen otro conjunto de pruebas: cavar en pareja, guardar silencio, contener la ambición y resistir visiones. La huaca puede endurecer la tierra o cambiar de lugar. Son experiencias recogidas dentro del mismo apartado.`,
-      `La página no afirma que todas las huacas contengan oro ni que las figuras animales sean literalmente pieles con tesoros. Tampoco transforma los testimonios en instrucciones para localizar o extraer bienes.`,
-    ),
+Que la huaca sea antes que nada un accidente del terreno lo fija el glosario de Byron Danilo Ruiz Puetate, de 2015: «Enguacarse: caerse en un hueco; el ganado cuando se caía en una huaca se moría». En ese mismo libro está el relato del cacique de oro, con el finado Eustorgio, la casa que brillaba y el derrumbo que tapó el túnel.
+
+La fecha del tres de mayo no queda suelta en el calendario. Andrea Ojeda Guerrero publicó en 2006, con los médicos tradicionales del resguardo, el cómputo pasto de trece lunas de veintiocho días: el año nuevo empieza entre junio y julio y se cierra en mayo, «mes de las revelaciones, los misterios y las huacas». La velación no cae en cualquier día, cae en el mes en que el año se acaba.
+
+El cementerio de la Tuta, a trescientos metros del centro poblado y al suroccidente del resguardo, con restos de cerámica y figuras de los antepasados, está descrito en el mismo capítulo de 2016.`,
+    versiones: `La huaca se anuncia de tres maneras distintas y ninguna fuente las unifica: un hueco bajo la pata de un buey, un animal que persigue de noche, una llamarada a medianoche. La primera es un accidente del terreno, la segunda es una aparición y la tercera es una luz; en el mismo apartado conviven las tres.
+
+También se discrepa sobre por qué no se deja sacar. El corpus de 2016 lo explica por defensa: están protegidas con conjuros y oraciones en lengua de los antepasados por médicos tradicionales o chamanes, y la huaca es celosa, se cambia de lugar y endura el terreno. El cacique de oro de Ruiz lo explica de otro modo: ahí no hay conjuro ajeno, sino un muerto que se enterró a sí mismo, y lo que aparta al que se acerca es el ventarrón y el cuerpo que se amortigua.
+
+Fuera del resguardo la llamarada se lee distinto, y conviene marcarlo. En Catambuco, que es corregimiento del municipio de Pasto y no resguardo pasto, Jaqueline Benavides Vallejo y Édgar Daza Pardo reunieron en 2004 catorce testimonios de huaqueros sobre el arder de huacas, donde el fuego dice qué hay debajo: «Eso que arde cuando es oro y plata, la plata arde blanco, el oro amarillo». Allí se le suma el viernes santo al tres de mayo. En Panán la llamarada avisa que hay algo, pero no se le lee el color, y el que sale a velar casi nunca llega a verla.`,
     leccion:
-      "La riqueza ancestral no se entrega a la ambición ni al saqueo.",
-    similitudes: similarities(
-      `Tesoros encantados que arden en fechas señaladas, cambian de lugar o adoptan forma animal circulan por los Andes y otras regiones colombianas. En Panán, las voces atribuidas y la cercanía de La Tuta y el cementerio sostienen una memoria local concreta.`,
-      `La Waka es el paralelo más cercano, pero no una página duplicada. “Huacas” reúne experiencias de entierros, hallazgos y apariciones. “Waka” interpreta esas figuras como lenguaje de poder espiritual, protección territorial y relación entre mayores y Madre Tierra.`,
-      `Los tunjos muiscas o entierros coloniales pueden ofrecer comparaciones históricas, pero no prueban qué contiene cada huaca de Panán. El expediente evita una equivalencia arqueológica automática.`,
-    ),
+      "Lo enterrado se anuncia con un hueco, una llamarada o un animal, y rara vez se deja sacar.",
+    similitudes: `El paralelo más cercano es de fecha y no de lugar. En Catambuco, corregimiento del municipio de Pasto, los catorce huaqueros que entrevistaron Benavides Vallejo y Daza Pardo en 2004 salen también el tres de mayo, hablan también de huacas que alumbran y que se enduran, y añaden dos cosas que aquí no aparecen: la lectura del color de la llama y el par de varillas, una hembra y otra macho, que se mueven solas hacia el entierro. Ese corregimiento no es resguardo pasto, y por eso sirve para separar lo regional de lo propio.
+
+El segundo paralelo explica una rareza de la velación. Quien sale la noche del tres de mayo, en Panán, cuenta que siempre le da sueño y que no alcanza a ver nada. La monografía de 2009 sobre el vecino resguardo de Yaramal, en Ipiales, glosa el entunde como algo que pega en los lugares huacas y en los sitios pesados: allí la huaca no sólo esconde, también aturde a quien se le acerca. El sueño del velador no es descuido, es el mismo efecto que en Panán tiene un lugar pesado.
+
+Que la fecha sea de todo el pueblo, y no sólo de este resguardo, lo registra además el volumen sobre lugares sagrados del Instituto Colombiano de Antropología e Historia de 2018.`,
     excerpt:
       "Testimonios de Panán recuerdan huacas que brillan, toman forma animal y endurecen la tierra ante la ambición.",
     seoTitle: "Las huacas de Panán: testimonios y memoria",
@@ -216,7 +204,16 @@ Cada experiencia mantiene su narrador y su incertidumbre. Juntas forman una memo
       "memoria territorial",
     ],
     tags: ["guacas", "memoria", "tesoro oculto", "tradición oral"],
-    sourceKeys: [...commonSourceKeys, "origenPananes"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "ruiz2015",
+      "medicinaTradicional2006",
+      "lugaresSagradosIcanh",
+      "huacaCatambuco2004",
+      "mamian1996",
+      "planVida2005",
+      "capuliIles2023",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "una yunta se detiene cuando una pata toca tierra blanda cerca de La Tuta; una pequeña llama nocturna sugiere la huaca sin mostrar cofre ni saqueo",
     ),
@@ -232,37 +229,42 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-laguna-de-maria-panana",
     title: "Laguna de María Panana",
-    mito: `A unas tres horas de camino, en el páramo de Panán, se encuentra la laguna asociada con María Panana. Sus aguas son frías y cristalinas. La quietud del lugar invita a bajar la voz, descansar y ordenar el pensamiento después del ascenso.
+    mito: `A tres horas de camino, en la parte más alta del páramo de Panán, el suelo se abre en una laguna verde a casi cuatro mil metros. El agua es cristalina y fría, y está quieta de un modo que obliga a bajar la voz. Quien llega le pone nombres: sitio de encantos, laguna de neblinas, nido de cóndores de páramo, jardín botánico, aguas encantadas, aguas de páramo, lugar de purificación de bastones de mando.
 
-Quienes la conocen le dan varios nombres descriptivos: sitio de encantos, laguna de neblinas, nido de cóndores de páramo, jardín botánico, aguas encantadas y aguas de páramo. Cada expresión señala una experiencia del lugar; ninguna necesita reemplazar su nombre principal.
+Antes de la laguna hubo otra. Cuentan las abuelas que en el resguardo había una gran laguna donde la gente iba a coger agua, y que un día el agua se volvió de una sola tonalidad. Entre los desplazamientos de la tierra, entre los temblores, el agua subió un poco y de ella emergió una matriz que iba creciendo como un vientre, cubierta por una capa transparente, en medio de un remolino de piedras hermosas. Después el agua de la laguna se fue, desapareció, y ahí sólo quedó la matriz. De ella salieron dos espíritus, que se hicieron macho y hembra, y de esos dos nació María Panana. Desde entonces vienen los pananes.
 
-La laguna sirve para palabrear y armonizar el pensamiento. Allí se purifican bastones de mando y algunas personas entran al agua buscando limpiar cuerpo, alma y espíritu. La satisfacción que narran al salir no se presenta como una cura garantizada, sino como parte de una relación de serenidad, autoridad y medicina propia.
+A la laguna se sube cada año. En enero el cabildo sale temprano, con el avío y con ropa de abrigo, porque el camino es largo a pie y hay muchas quebradas que cruzar. Antes de entrar, el cabildo abre sesión en la orilla y pide permiso a los espíritus para entrar a su laguna. Si los taitas hacen bien el ritual, el día amanece bueno; si no, el cielo se nubla del todo y empieza a lloviznar. Allí se posesionan las nuevas autoridades y allí se purifican los bastones de mando.
 
-El mismo lugar puede ser peligroso. Se dice que quien “se queda” o se espanta corre riesgo de enfermar y hasta perder la vida. Llegar sin respeto, alterar la quietud o no reconocer la fuerza del páramo cambia la experiencia. La laguna no es un balneario abierto a cualquier comportamiento.
+El agua cura y el agua cobra. Quien se adentra en ella sale con el cuerpo, el alma y el espíritu limpios, curado de los males que lo aquejaban. Pero quien se queda o se espanta corre el riesgo de enfermarse y hasta de perder la vida, y el quedado no se cura con pastillas: hay que ir a recoger el espíritu donde se quedó y traerlo de vuelta.
 
-La memoria de María Panana también atraviesa la historia territorial del pueblo Pastos. Su nombre aparece ligado a títulos, tierras y luchas de recuperación. La laguna no debe convertirse en un retrato inventado de una reina solitaria; conserva una relación más amplia entre mujer, agua, gobierno y territorio.
+Por eso a la laguna no se llega de cualquier modo. Es un santuario y se entra con seriedad y con fe: a palabrear, a armonizar el pensamiento, a descansar. El agua, mientras tanto, baja cada año un poco: los mayores señalan hasta dónde llegaba antes y hasta dónde llega ahora.`,
+    historia: `El apartado 4.1.5 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, describe las tres horas de camino, el agua cristalina y fría, la lista de nombres, la purificación de los bastones de mando, el palabreo y el doble desenlace: la purificación para quien entra bien, la enfermedad para quien se queda o se espanta.
 
-Alrededor se mueven neblina, plantas y aves de altura. El agua permanece quieta, pero no vacía. Recibe bastones, palabras y visitantes; también marca cuándo detenerse.
+El relato del nacimiento lo recogió Alejandro Ruiz Puetate en Nostalgia de chutún, trabajo de grado de la Universidad de Nariño de 2015: según el relato que las abuelas le contaron a Priscila, de la matriz que emergió de la laguna salieron dos espíritus y de ellos nació María Panana.
 
-El regreso exige recorrer nuevamente el páramo y llevar consigo la serenidad aprendida en la orilla.
+La subida del cabildo está fechada. Zonia Patricia Puenayán Irua, comunera de Panán, escribe en 2011 que el único ritual del agua que se conserva se celebra en enero en la laguna verde del páramo de Panán, y transcribe a David Cuasquer, mayor curandero de la vereda La Poma, que cuenta la salida a las siete de la mañana, el permiso pedido en la orilla y la señal del clima. Ese año el ritual se hizo el 3 de enero de 2009.
 
-Quien llega a la Laguna de María Panana entra a un santuario. La armonización y el riesgo no son contradicciones: expresan que un lugar capaz de cuidar exige a su vez cuidado, preparación y respeto.`,
-    historia: history(
-      `El apartado 4.1.5 describe el recorrido, el agua, los nombres atribuidos, la purificación de bastones, la armonización y el riesgo de quedar o espantarse. Las memorias de mujeres Pastos permiten contextualizar a María Panana dentro de la defensa territorial.`,
-      `No se inventa una biografía de María Panana ni se afirma que viva físicamente dentro de la laguna. La purificación se registra como práctica cultural y espiritual, no como promesa terapéutica. El sitio exacto no se geolocaliza públicamente.`,
-    ),
-    versiones: versions(
-      `La fuente reúne denominaciones que resaltan aspectos distintos: neblinas, cóndores, plantas, encantos, aguas frías y purificación. También registra dos resultados posibles de la visita: armonización para quien entra con respeto y enfermedad para quien queda o se espanta.`,
-      `Las memorias de mujeres del pueblo Pastos presentan a María Panana como referente de título y recuperación de tierras. Esa dimensión histórica acompaña la página sin convertirse en una segunda leyenda sobre el origen de la laguna.`,
-      `No se atribuye a María Panana una aparición, diálogo o transformación que las fuentes consultadas no narran. Tampoco se ofrecen baños o inmersiones como práctica recomendable para visitantes.`,
-    ),
+La laguna está medida: el diagnóstico del páramo de Chiles publicado por Corponariño con el Instituto Humboldt y WWF en 2009 registra Laguna Verde a 3.982 metros sobre el nivel del mar, en la cuenca alta del río que aguas abajo es el Carchi.
+
+El quedado no es una figura literaria. El informe mensual del puesto de salud de Panán de marzo de 2015, recogido en el trabajo de Quiroz Malte sobre las médicas y parteras del resguardo, registra cincuenta consultas, y entre las más frecuentes están el mal aire, el espanto y el quedado.
+
+Mamián Guzmán, en 1996, anotó que en Panán la filiación de origen se hace sólo de María Panana, como en Cumbal sólo del cacique Cumbe.`,
+    versiones: `Aquí está el desacuerdo mayor del corpus, y no se alisa. Joanne Rappaport, en Cumbe renaciente, edición del ICANH de 2005, escribe en su nota 14: «María Panana fue la cacica mítica de Panán, aunque no aparece en el registro documental». En el cuerpo la llama la cacica más conocida en la tradición oral, y recuerda que en los papeles legales de la Colonia sí se cita a Juan Chiles, que también es figura mítica.
+
+La tesis de 2016 sostiene lo contrario. Reproduce una fotografía con el pie «Firma de Doña María Panám» y otra de un testimonio suyo firmado en los años 1775 y 1776, habla de los documentos escritos que dejó en defensa de su gente y de sus tierras, y los cita desde el archivo del cabildo de Panán. Benavides Játiva y Burbano Lucero, en 2004, citan un documento que María Panana dirigió a la Real Audiencia de San Francisco de Quito pidiendo «amparar las tierras que se llaman panalas… por ser heredadas de nuestros antepasados de panal», y de ahí derivan que Panán viene de «panal».
+
+Las dos posiciones se sostienen a la vez y conviene leerlas juntas: la etnohistoria coloca a María Panana entre las figuras míticas de los Pastos, al lado de Juan Chiles; el archivo del cabildo y los estudios hechos en el resguardo la colocan entre quienes firmaron papeles para defender tierras.
+
+Cambia también el origen de la laguna. La tesis de 2016 la presenta como lugar de armonización y de riesgo, sin relato fundacional; Ruiz 2015 cuenta que de una laguna anterior salió la matriz de la que nació la cacica. Y varía la grafía: María Panana en la tradición oral, María Panám en los documentos citados.`,
     leccion:
-      "Los lugares que armonizan también establecen límites para quien los visita.",
-    similitudes: similarities(
-      `Lagunas de páramo vinculadas con sanación, autoridad y peligro aparecen en muchos territorios andinos. La de María Panana se distingue por la purificación de bastones, el palabreo, sus nombres locales y la memoria política de una mujer Pastos.`,
-      `Cualchio y Guamurran son otros cuerpos de agua altos, pero funcionan como nacimientos y reguladores de caudal. La Tuta une agua y tierra en el origen. María Panana concentra armonización, gobierno y el riesgo de quedar.`,
-      `Compararla con una “diosa de la laguna” simplificaría fuentes que no usan ese título. La relación con María Panana debe leerse desde la memoria territorial y no desde un panteón reconstruido.`,
-    ),
+      "Un agua que armoniza puede enfermar también a quien llega sin pedir permiso.",
+    similitudes: `La cacica que deja huella en la piedra tiene un paralelo vecino documentado. En Muellamués, resguardo pasto vecino, se conserva «la piedra de la cacica», donde ella salía a peinarse, hoy convertida en mojón de límite con Guachucal, y la cacica quedó legitimada como Santa Rosa, entre otras cosas la santa de las parteras. En Panán la fundadora no dejó piedra sino laguna.
+
+El segundo paralelo es el del antepasado que vive en el adentro del agua o de la montaña. En Cumbal, resguardo vecino, el cacique Cumbe está en el centro interior del volcán. En el resguardo de Chiles se cuenta que Juan Chiles se convirtió en toro al sumergirse en la laguna verde, y que su espíritu, el ruani colorado, quedó suspendido en un bastón en el centro de esa laguna: la misma imagen del bastón y el agua que en Panán sostiene la purificación de las varas de mando.
+
+El tercero es de representación y tiene fecha. En el Carnaval de la Epifanía de Panán del 5 y 6 de enero de 1987, la comparsa ganadora, «Los Caciques y sus Descendientes», puso a un hombre representando al cacique Cumbe de Cumbal y a una mujer representando a María Panana, y con ellos dos niños; la escena decía que los comuneros de hoy son renacientes de esos dos.
+
+Lagunas andinas que curan y que cobran hay muchas; el rasgo propio aquí es que la laguna guarda a la fundadora y recibe cada enero los bastones del cabildo.`,
     excerpt:
       "Laguna fría de páramo donde se palabrea, se armonizan bastones y se entra con respeto para no quedar o espantarse.",
     seoTitle: "Laguna de María Panana: santuario Pastos",
@@ -276,7 +278,16 @@ Quien llega a la Laguna de María Panana entra a un santuario. La armonización 
       "laguna de páramo",
     ],
     tags: ["agua", "laguna", "purificación", "santuario"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "rappaport2005",
+      "memoriaTerritorial2016",
+      "mamian1996",
+      "benavidesBurbano2004",
+      "ruiz2015",
+      "paramoChiles2009",
+      "mujeresPastos2021",
+      "planVida2005",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "laguna fría y cristalina de páramo entre neblina, frailejones y cóndores distantes; autoridades armonizan bastones con sobriedad, sin chamán genérico",
     ),
@@ -292,35 +303,42 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-lechuza-y-el-cuichi-de-cuchicuelan",
     title: "La Lechuza y el Cuichi de Cuchicuelan",
-    mito: `Cuchicuelan es un lugar húmedo del territorio de Panán. Allí anidan y descansan lechuzas. También hay serpientes, sapos, ranas, lagartijas y mariposas alrededor de aguas profundas. La memoria lo describe como un rincón misterioso y de mucha energía positiva.
+    mito: `Cuchicuelan es un rincón húmedo del territorio de Panán, misterioso y de mucha energía, donde las lechuzas anidan y descansan sazonadamente. Es lugar de culebras, nacedero de aguas profundas, rinconcito de sapos, ranas, lagartijas y mariposas. La lechuza que cruza el aire y se posa en los pastizales apartados le avisa al leñador cuando vienen animales peligrosos o gente desconocida.
 
-La Lechuza fue además parte de una hacienda donde terratenientes explotaban a comuneros de Puscuelan y otras zonas de Panán. Habitantes cercanos trabajaban allí como peones. Por eso el nombre no remite únicamente a un ave: conserva una historia de trabajo, desigualdad y recuperación territorial.
+La Lechuza es también el nombre de una hacienda. Fue de los terratenientes que explotaban a los comuneros de la vereda Puscuelán y del resto de Panán, y los vecinos de la finca sirvieron allí de peones. El nombre del sitio guarda las dos cosas: el ave y el trabajo ajeno.
 
-En ese ambiente se asienta el Cuichi. Toma la forma de un arco perfecto de colores que aparece cuando llueve y sale el sol al mismo tiempo. Nace y termina en lugares húmedos, acompaña con su arco a quienes recorren el sector y conecta visualmente dos puntos del paisaje.
+En ese mismo rincón se asienta el cueche, que en Panán se escribe también cuichi. Se le ve como un arco perfecto, lleno de colores, que nace y termina en sitios húmedos y sale cuando llueve y hace sol al mismo tiempo. Acompaña a las personas en sus recorridos y se va posando de quebrada en quebrada. Los mayores lo cuentan también de otra manera: un espíritu de las montañas con cabeza de buey y el pelo como una cascada, que nace de un hoyo subterráneo y se pierde entre las plantas; donde se lo ve, aconsejan no tomar agua.
 
-Las mujeres de Panán se cubren la cabeza para evitar el “meado” del Cueche, al que se atribuye blanquear el cabello. Algunas sacan un machete y trazan una cruz en la tierra. Mientras lo hacen repiten tres veces una invocación a Dios para que el arco se quite de la vista y desaparezca. La fuente dice que entonces se desvanece.
+El cueche mea. Las mujeres se cubren la cabeza para que no las alcance su llovizna, porque el meado del cueche blanquea el cabello, saca granos en el cuerpo y deja fiebre y malestar. El ojeado cae sobre todo en las mujeres: se les inflama el estómago y parece un embarazo, y sólo los yerbateros y las parteras pueden curarlo.
 
-El gesto reúne elementos que no necesitan separarse: humedad, arco, machete, cruz y oración. Es una práctica transmitida dentro de una comunidad marcada por relaciones indígenas y católicas. El Cuichi no aparece como una figura humana ni exige inventar un sacerdote o ceremonia colectiva.
+Contra el arco hay un gesto que se hace rápido. La mujer saca el machete y corta el cueche en cruz, trazando la cruz en la tierra, y dice tres veces: «Santo Dios, santo fuerte, santo inmortal, quítate de mi vista y desaparécete de aquí». También se hace con la peinilla, frente a la casa, apenas el arco aparece. Y como por arte de magia el cueche se desaparece.
 
-Lechuzas y Cuichi comparten lugar, pero no se transforman uno en otro. Las aves descansan allí; el arco se asienta sobre aguas profundas y animales pequeños. La antigua hacienda añade otra capa: debajo del paisaje encantado permanece la memoria de quienes trabajaron como peones.
+Del lado de la lechuza queda el silencio y el aviso; del lado del arco, el color y el daño. Los dos ocupan el mismo nacedero de Cuchicuelan, y ninguno se convierte en el otro.`,
+    historia: `El apartado 4.1.7 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, reúne en una sola sección el sitio de la Lechuza —las aves, las culebras, el agua profunda, los sapos y las mariposas— y la memoria de la hacienda con los peones de Puscuelán, y luego describe el arco, el meado que blanquea el cabello y la cruz trazada con el machete, repetida tres veces.
 
-Cuchicuelan guarda así biodiversidad, experiencia climática, protección cotidiana e historia social. Mirar el arco supone también mirar el agua y la tierra sobre las que aparece.`,
-    historia: history(
-      `El corpus presenta Lechuza y Cuichi en un mismo apartado porque comparten Cuchicuelan. Describe fauna, agua, energía, hacienda y trabajo de peones, luego registra el arco, la cobertura de la cabeza y la cruz trazada por mujeres.`,
-      `La revisión retira una ceremonia colectiva y una figura espiritual inventadas. No confunde lechuza con mensajera sobrenatural ni representa al Cuichi como persona. La oración se documenta como práctica sin afirmar eficacia meteorológica.`,
-    ),
-    versiones: versions(
-      `La primera capa del apartado describe el sitio de la Lechuza: aves, agua profunda, serpientes, anfibios, mariposas y memoria de una hacienda. La segunda se concentra en el Cuichi y en la respuesta de las mujeres cuando aparece.`,
-      `La página general del Cueche amplía su relación con cosecha, colores bravos y ojeado. Cuchicuelan aporta un lugar, una acción y una memoria social específicas; por eso ambas páginas se enlazan sin fusionarse.`,
-      `No se afirma que todas las mujeres realicen hoy el mismo gesto ni que el arco desaparezca por una causa demostrable. Se conserva la repetición triple porque así la registra la fuente.`,
-    ),
+De esa tesis viene también la grafía «cuichi», que es local. La forma regional es «cueche»: así lo escriben Mamián, así lo escribe la comunera Puenayán Irua y así aparece en las investigaciones de Yaramal, Túquerres y Muellamués, y así se emparenta con el kichwa kuychi del otro lado de la frontera. Son el mismo ser, y aquí se los nombra juntos.
+
+La descripción del cueche como espíritu con cabeza de buey y cabello de varios colores está en el glosario y en las narraciones de mayores de Panán que Alejandro Ruiz Puetate publicó en Nostalgia de chutún en 2015, con la advertencia de no tomar agua donde se lo ve.
+
+Zonia Patricia Puenayán Irua, comunera de Panán, escribió en 2011 que el cueche se asienta de quebrada en quebrada, que tiene siete colores, que los mayores temen los daños que causa en la chagra y que la práctica para hacerlo desaparecer consiste en hacer una cruz en el suelo con la peinilla frente a la casa.
+
+El ojeado no es sólo relato. El informe del puesto de salud de Panán de marzo de 2015, recogido por Quiroz Malte, cuenta cincuenta consultas ese mes y registra tres por cueche, después del mal aire, el espanto y el quedado; el mismo trabajo define el pisado del cueche blanco o negro como espíritu del agua y del aire que inflama el vientre.`,
+    versiones: `El desacuerdo empieza en la letra. «Cuichi» aparece sólo en la tesis de 2016 y de ahí pasó al nombre del lugar; toda la literatura regional escribe «cueche». No son dos seres: es una grafía local frente a la forma extendida.
+
+Sobre cuántos cueches hay y cuál es peor, las fuentes no coinciden. La tesis de 2016 dice que los hay de varios colores, pero que el colorado, el negro y el blanco son los más comunes y a la vez los más bravos. En el territorio pasto de Túquerres, diecinueve médicos tradicionales afirman que el negro se pega siempre en quebradas y el blanco en ríos pequeños, y que este último es el más peligroso. En el trabajo sobre tiempo y clima del pueblo de los Pastos se distinguen tres clases con horario y efecto: el blanco, que sale nublado entre las ocho y media y las nueve de la mañana y deja un aro amarillo en los potreros; el negro, espíritu maligno de las ciénagas que puede tomar forma de toro; y el colorado, que vuela con llovizna ligera y produce granos y rasquiña.
+
+Ese mismo trabajo trae una versión narrada por Manuel Tepud Usamá, de sesenta y cinco años, de la vereda Guacuan, en 1990: su papá le prohibía bañarse cuando aparecía el cueche, porque persigue el agua, seca los cultivos y se enrosca en lo hondo de los pozos, y le enseñó a cortarlo con el machete. Es palabra pasto, pero recogida en Ipiales y no en Panán.
+
+En Muellamués, resguardo vecino, se dice en cambio que el cueche es el guardián de los lugares húmedos: allí cuida, aquí enferma.`,
     leccion:
-      "Un paisaje guarda al mismo tiempo naturaleza, protección e historia social.",
-    similitudes: similarities(
-      `Aves nocturnas y arcos de colores reciben sentidos espirituales en muchas tradiciones, pero esta memoria no convierte a la lechuza en oráculo. Su especificidad está en Cuchicuelan, la hacienda, los peones y la práctica de las mujeres.`,
-      `El Cueche general es el paralelo directo. La Laguna de María Panana también exige respeto en un sitio húmedo; Cualchio enlaza agua con clima. Ninguno comparte la memoria de explotación de La Lechuza.`,
-      `Trazar una cruz y pronunciar una oración muestra sincretismo, no una prueba de que el Cuichi pertenezca al folclor católico. El nombre y el paisaje permanecen Pastos.`,
-    ),
+      "Un arco de colores puede ser al mismo tiempo adorno del cielo y enfermedad del cuerpo.",
+    similitudes: `El paralelo más cercano está en Túquerres, territorio pasto vecino, donde los médicos tradicionales clasifican el cueche por colores y por el agua en que se pega, y coinciden con Panán en el nombre del mal: el miado del cueche, peligroso sobre todo para niños, ancianos y mujeres embarazadas. La diferencia vale la pena: en Túquerres el más temido es el blanco; en Panán se nombran bravos el colorado, el negro y el blanco por igual.
+
+El segundo paralelo es de oficio. En Muellamués, también resguardo pasto, el cueche es el guardián de los lugares húmedos. Cuchicuelan es exactamente eso, un nacedero de aguas profundas, y ahí el arco se asienta; lo que cambia es el papel que se le atribuye, protector allá y ojeador aquí.
+
+El tercero es el gesto del machete. Cortar el arco en cruz sobre la tierra y rezar está documentado dentro de Panán con la peinilla frente a la casa, y también, con oración distinta, en la versión de un mayor de la vereda Guacuan recogida en Ipiales en 1990. La herramienta de trabajo se vuelve la defensa contra el cielo en los dos casos.
+
+La lechuza, en cambio, no es aquí presagio de muerte como en tantas tradiciones: en las narraciones de mayores de Panán avisa al leñador que se acercan animales peligrosos o personas desconocidas.`,
     excerpt:
       "Cuchicuelan reúne lechuzas, agua profunda, memoria de peones y el Cuichi que las mujeres apartan con una cruz.",
     seoTitle: "La Lechuza y el Cuichi de Cuchicuelan",
@@ -334,7 +352,16 @@ Cuchicuelan guarda así biodiversidad, experiencia climática, protección cotid
       "mitos de Panán",
     ],
     tags: ["agua", "lechuzas", "naturaleza", "sincretismo"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "ruiz2015",
+      "tuquerres2016",
+      "mamian1996",
+      "historiaResguardo",
+      "planVida2005",
+      "puenayan2011",
+      "medicinaTradicional2006",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "Cuchicuelan húmedo con lechuzas, ranas, mariposas y agua profunda; un arco Cuichi aparece sobre el paisaje y una comunera se cubre la cabeza",
     ),
@@ -350,35 +377,42 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-tuta",
     title: "La Tuta y el origen de Panán",
-    mito: `Cerca del centro poblado de Panán, entre El Placer Alto y La Merced, se encuentra La Tuta. Dos senderos conducen al lugar. Al pie hubo una laguna que con el tiempo se secó, mientras en la parte alta nacen aguas que recorren el poblado y separan veredas.
+    mito: `A diez minutos del centro poblado de Panán, entre las veredas El Placer Alto y La Merced, dos senderos bajan hasta la boca de una gruta. Al pie hubo una laguna que con los años se fue secando, y el caserío quedó asentado sobre terreno cenagoso. En la parte alta brota un arroyo que atraviesa el poblado y separa El Placer Bajo del centro.
 
-La memoria recuerda tres familias y tres caciques. Sus nombres aparecen con grafías variables: Nazate o Nasate, Puenayán o Puednayán, y Tarapues o Juaspuezan. Se ubicaron allí por la tierra productiva y por la posibilidad de rendir culto a fuerzas que proveían trigo, cebada, habas y maíz.
+Allí viven tres caciques: Nasate, Juaspuezán y Puenayán. No se los recuerda con figura de hombre sino de dragón, tres dragones metidos en la cueva sagrada del centro del resguardo, y de ellos bajan los pananes, raíces, troncos y retoños de familias luchadoras. Las tres familias se asentaron en ese punto porque desde ahí se rendía culto a las fuerzas que daban el trigo, la cebada, las habas y el maíz.
 
-Una figura sorprendente reúne a los tres: un dragón de tres cabezas que vivía en La Tuta. La investigación lo presenta como imagen de los caciques y como origen de los Pananes, raíces, troncos y retoños de familias luchadoras. Cerca se encuentran fragmentos de cerámica y señales de un posible cementerio o asentamiento.
+A pocos pasos afloran fragmentos de cerámica, señal de un cementerio o de un primer asentamiento. Tuta es donde madruga el sol y donde el sol se despide: al lugar llegan los primeros rayos y sobre él cae la sombra antes que sobre el resto del territorio.
 
-Tuta es donde madruga el sol y también donde se despide. Al caer la noche, minacuros o luciérnagas forman caminos de luz que parecen una ciudad. La gruta se comunica con luna, estrellas y primeros rayos. Es oscuridad, profundidad y túnel, pero también chaquiñán, refugio y cercanía entre vida y muerte.
+Al caer la noche la gruta se llena de minacuros. Las luciérnagas avanzan en procesión y desde lejos aclaran tanto que parece gente de Panán caminando, una ciudad encendida dentro del monte. La cueva conversa con la luna llena, con las estrellas y con el amanecer.
 
-Los mayores dicen que La Tuta es ojo del mar, mar adentro y cordón umbilical que conecta con su centro. Agua y tierra se unen para producir la descendencia de Panán. Tres nacimientos forman una acequia que sostiene a la comunidad, como los tres primeros linajes se extendieron por las veredas.
+Tuta quiere decir noche, oscuridad, profundidad, túnel. Quiere decir también ojo del mar, mar adentro, cordón umbilical que llega hasta el centro del agua salada. Es la puerta y el inicio del camino: por ahí se entra al adentro, donde el agua y la tierra se encuentran y se engendra la vida. El agua da la existencia, la tierra es la mujer que produce hombres que saben luchar, y de esa pareja vienen los de Panán.
 
-La dualidad permanece: lugar de bien y de riesgo, luz y oscuridad, vida y muerte. Algunas horas son pesadas para transitar, pero la profundidad también guarda refugio y origen.
+Es un lugar pesado. Hay horas en que no se transita, porque donde está el bien puede estar el mal, y donde está la luz está la oscuridad. La misma boca que refugia acerca la vida y la muerte.
 
-“Somos de aquí mismo”, afirman las voces recogidas. La tierra que parió a los Pananes los recibe, los alimenta y conservará a sus mayores. La Tuta no es solamente una cueva: es una manera de decir que comunidad, agua, linajes y territorio nacieron juntos.`,
-    historia: history(
-      `La Tuta es el núcleo de origen más desarrollado del corpus. La investigación y el Plan de Vida coinciden en la gruta, tres caciques, dragón de tres cabezas, nacimientos de agua, cementerio, minacuros y unión de agua y tierra.`,
-      `Las grafías de los apellidos varían entre fuentes y se muestran sin escoger arbitrariamente una como antigua. El dragón se conserva porque está documentado, pero no se representa como criatura europea realista ni se usa para afirmar un culto prehispánico sin evidencia.`,
-    ),
-    versiones: versions(
-      `Una versión nombra a Nasate, Juaspuezan y Puednayán; otra memoria comunitaria destaca a Tarapues, Puenayán y Nazate. El número tres se mantiene en caciques, cabezas y nacimientos de agua, aunque los nombres cambien.`,
-      `La Tuta puede significar noche, oscuridad y profundidad; también camino, refugio, ojo del mar y cordón umbilical. Estas explicaciones no se reducen a una etimología única. Forman imágenes atribuidas a mayores.`,
-      `La versión digital comunitaria amplía la memoria de los linajes y María Panana. Se usa con atribución contemporánea, sin desplazar el corpus investigado ni convertir cada detalle en consenso.`,
-    ),
+Alrededor de la gruta hay tres nacimientos de agua que se juntan en una acequia y bajan por el centro del resguardo. Tres caciques, tres troncos, tres nacimientos: el agua se repartió por las veredas igual que se repartieron los linajes. Por eso los mayores repiten que son de aquí mismo, que nacieron en esta tierra y que será ella la que los albergue en sus últimos días.`,
+    historia: `El apartado 4.1.1 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en noviembre de 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño con asesoría de Dumer Mamián Guzmán, es la descripción más extensa de la gruta: los dos senderos, la laguna seca, los minacuros, el cementerio y la unión del agua y la tierra.
+
+El registro más antiguo que la nombra es de Mamián Guzmán, en «Los Pastos», dentro del tomo IV de la Geografía humana de Colombia, publicado en 1996. Allí se lee que en Panán uno u otro grupo familiar tiene su legitimidad en tres caciques, Nasate, Juaspuezan y Puenayán, que bajo la figura extraordinaria de tres dragones viven en la Tuta, una cueva sagrada en el centro del resguardo, caciques y troncos familiares luchadores desde 1500. Mamián enumera además los linajes de Panán —los Tupue, Puenayán, Tatamués o Cuasquer— y recuerda que los nasates fueron en tiempos prehispánicos un cacicazgo autónomo desalojado por encomenderos y hacendados.
+
+La palabra de la propia comunidad está publicada desde 2011. Zonia Patricia Puenayán Irua, comunera de Panán, escribió para el libro Perspectivas culturales del clima, editado por Astrid Ulloa para la Universidad Nacional y el ILSA, una sección titulada «Leyenda de la cueva de La Tuta»: sitúa el lugar a unos trescientos metros del poblado, en el camino a la vereda Placer Alto, recuerda los minacuros en procesión que aclaraban «que parecía la gente de Panán» y transcribe a Gilberto Puenayán Cuaical, exgobernador, entrevistado en julio de 2009: «Tuta es la puerta, ojo de mar, inicio del camino donde se puede llegar a la unión del agua y la tierra donde se engendra vida».
+
+El profesor José Chalparizán, de Panán, dejó otra versión escrita, recogida por Alejandro Ruiz Puetate en Nostalgia de chutún, trabajo de grado de la Universidad de Nariño de 2015. Y el taita Efrén Tarapués, del Gran Cumbal, al enumerar los sitios donde está la espiral o churo cósmico, dice que «está en la Tuta en Panan», y que a esos lugares hay que entrar con plantas; su testimonio lo reproduce Viveros en 2014.`,
+    versiones: `El desacuerdo está en la forma del ser. Mamián, en 1996, escribe tres dragones: uno por cada cacique, tres cuerpos en la misma cueva. La tesis de 2016 escribe un dragón con tres cabezas, y con ella lo repitió el sitio durante años. Las dos lecturas circulan en Panán y ninguna anula a la otra.
+
+La segunda versión tiene autor y fecha. El profesor José Chalparizán la ancla en el terremoto de Cumbal de 1923: en tiempos de glaciaciones y temblores los habitantes quedaron atrapados dentro de un túnel por el hielo, sobrevivieron de los efluvios de sus propios cuerpos y de la madre tierra, se volvieron gente de pequeña estatura que no comía ni defecaba, y al descongelarse el bloque salieron del adentro al afuera. De esa salida nace el dualismo —lo oscuro y lo claro, lo negro y lo blanco, el frío y lo caliente— y se estructura por ley natural el dragón de tres cabezas, entendido no como animal maligno sino como fuerzas energéticas que dan origen a las tres primeras familias.
+
+También cambian los nombres. Mamián lista Nasate, Juaspuezán y Puenayán; Chalparizán lista Tarapués, Puenayán y Nazate; la tesis de 2016 recoge las dos series y añade que algunos hablan de caciques y otros de dueños o líderes de vereda. El tres, en cambio, no se mueve: tres troncos, tres cabezas o cuerpos, tres nacimientos de agua.
+
+El apellido se corrige: es Puenayán. «Puednayán» es una grafía de la tesis de 2016 que el sitio heredó y que ni Mamián ni el archivo de linajes de Panán sostienen.`,
     leccion:
-      "Agua, tierra y linajes sostienen juntos la continuidad de una comunidad.",
-    similitudes: similarities(
-      `Grutas de origen, ancestros múltiples y animales de varias cabezas aparecen en distintas mitologías. La Tuta se distingue por sus tres linajes, tres nacimientos, minacuros, ojo del mar y relación directa con veredas de Panán.`,
-      `Chuchún también enlaza agua y nacimiento; María Panana vincula laguna y territorio; las Huacas sitúan cerámica y cementerio cerca de La Tuta. Son páginas relacionadas, no episodios que deban incorporarse todos al origen.`,
-      `El dragón puede recordar iconografía europea o asiática, pero la fuente no explica su procedencia histórica. La comparación visual no autoriza a vestirlo con castillos, caballeros o fuego.`,
-    ),
+      "Una comunidad puede contar su origen como el encuentro del agua con la tierra.",
+    similitudes: `El molde es regional y está documentado. Mamián describe para los Pastos un patrón de comunidades que se identifican con un fundador o una fundadora: Cumbal con el cacique Cumbe, Panán con María Panana, Ipiales con el cacique Ipial, Mayasquer con el cacique Maiker. Panán es el caso en que ese tronco vive dentro de una cueva y se multiplica por tres.
+
+El paralelo más cercano es Cumbal, resguardo vecino: allí el cacique Cumbe está en el centro interior del volcán, y se atribuye prestigio a quienes tuvieron la capacidad de entrar hasta ese centro y hablarle. En Chiles, también vecino, la filiación se hace indistintamente de Graciana Yaquarana, Micaela Chiles o Juan Chiles. Cueva, volcán y laguna cumplen la misma función: guardan al antepasado vivo y en el adentro.
+
+La segunda coincidencia es la espiral. El taita Efrén Tarapués enumera los lugares donde está el churo cósmico y pone juntos Nazate, Chiles y la Tuta de Panán, y los describe como sitios a los que cuesta entrar. La gruta no es entonces un accidente aislado sino un punto de una serie de sitios sagrados que atraviesa varios resguardos del Nudo de los Pastos.
+
+Grutas de origen y animales de varias cabezas existen en muchas mitologías, y el parecido de forma es sólo eso, una coincidencia de imagen: lo que aquí se cuenta es un dragón que sostiene apellidos vivos y reparte veredas.`,
     excerpt:
       "La gruta de La Tuta, sus tres caciques, aguas y minacuros reúnen el origen territorial de Panán.",
     seoTitle: "La Tuta y el origen de Panán",
@@ -392,7 +426,16 @@ La dualidad permanece: lugar de bien y de riesgo, luz y oscuridad, vida y muerte
       "memoria territorial",
     ],
     tags: ["agua", "dualidad", "origen", "tradición oral"],
-    sourceKeys: [...commonSourceKeys, "origenPananes", "lugaresSagradosIcanh"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "mamian1996",
+      "puenayan2011",
+      "rappaport2005",
+      "ruiz2015",
+      "medicinaTradicional2006",
+      "planVida2005",
+      "historiaResguardo",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "La Tuta como gruta altoandina con tres nacimientos de agua, tres linajes y minacuros luminosos; un dragón simbólico de tres cabezas se integra a la montaña, sin castillo ni fuego",
     ),
@@ -408,35 +451,36 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-vieja-la-viuda-y-el-anima",
     title: "La Vieja, la Viuda y el Ánima",
-    mito: `Tres figuras femeninas recorren caminos y noches de Panán, pero no actúan de la misma manera.
+    mito: `En Panán salen de noche tres, y los nombres se cambian de boca en boca.
 
-La Vieja aparece pobre, muy delgada, jorobada, vestida con follones oscuros y pañolón. Lleva el cabello enredado, un sombrero bajo y los pechos echados al hombro. No conviene hacerla llorar: su estruendo despierta perros y provoca aullidos. Sale a quienes regresan borrachos, los entunda y los deja en pantanos, doloridos y con fiebre. La memoria recomienda un novenario y una promesa de no volver a embriagarse.
+A una la llaman la Vieja. Camina jorobada y hasta cotuda, flaca y cadavérica, con follones de bayetilla de colores oscuros, pañolón de riata, los pies descalzos, el cabello enredado y sucio bajo un sombrero que casi le tapa la cara, y los pechos tan grandes que los lleva echados al hombro. No conviene hacerla llorar: el estruendo despierta a los perros y empiezan a aullar. Sale a los borrachos, los entunda y los deja sin norte; cuando despiertan están en el pantano, revolcados como si hubieran trabajado, con fiebre y con dolor de cuerpo, de cabeza y de huesos. Al que le salió se le manda rezar un novenario y pagar la promesa de no volver a emborracharse, y si no la paga, dicen, se lo come y le vacía los intestinos.
 
-La Viuda adopta el aspecto de una joven hermosa. Se presenta con la ropa de la novia, amante o mujer en quien un hombre piensa. Pasa junto a cantinas, se deja ver solo por la persona elegida y la atrae hacia una chorrera, un río o un lago. Parece jugar y nunca se deja alcanzar. Mientras avanza, el seguidor pierde conocimiento. Si logra reconocer el peligro puede resistirse; si no, cae y despierta después sin comprender el recorrido. La Viuda nunca muestra el rostro. Sus ojos se recuerdan como carbones o rayos.
+A otra la llaman la Viuda. Esa es joven, hermosa, sonriente, elegante, y se presenta con la ropa de la novia o de la mujer en la que el hombre está pensando. Pasa junto a las cantinas y sólo se deja ver del que trae malos pensamientos. Lo saca, lo invita a jugar y a correr, y nunca se deja alcanzar. Mientras avanza, el que la sigue va perdiendo el conocimiento hasta olvidarlo todo, y ella lo lleva hacia una chorrera, un río o un lago para derrumbarlo. El que no está muy borracho se da cuenta y forcejea; el que sí, se desmaya, y si entra al agua muere o despierta sin memoria. Nunca muestra la cara: los ojos son como rayos de luz o carbones encendidos.
 
-El Ánima es alta, delgada y vestida de blanco. Se mueve lentamente por el aire y puede aparecer en sueños o caminos. Su rostro es una calavera o queda cubierto por cabellos largos y blancos. Ante ella, algunas personas se tienden boca abajo en forma de cruz y dejan que continúe. Si llega a una tumba, se recomienda ofrecer una misa de honras.
+Y hay una tercera que no persigue a nadie. El ánima es altísima y completamente delgada, vestida de seda blanca, y anda en el aire muy despacio. Es preferible no mirarle la cara, porque es una calavera, o cabellos largos y blancos. Al encontrarla hay que recostarse en cruz, boca abajo, y dejarla pasar. Después conviene seguirla: es presagio de buena suerte, y a la tumba donde llega se le manda una misa de honras.
 
-Las tres figuras enlazan miedo, noche y lenguaje católico. La Vieja confronta la borrachera, la Viuda convierte el deseo en extravío y el Ánima pide reconocer a una persona muerta.
+Y hay un punto, cerca del monte del Rosario, que se llama la Moledora. Allí había una vieja que se llevaba a los niños y los metía en una piedra plancha gigante, y se los iba comiendo. Con una trampa la atraparon y la quemaron.`,
+    historia: `Las tres figuras están en el apartado 4.2.3 de la tesis etnoliteraria de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García (Universidad de Nariño, 2016), que las agrupa bajo un solo título y les dedica la descripción más larga de todo su capítulo de espíritus.
 
-Los perros, el agua y los caminos ayudan a distinguir cuál presencia atraviesa cada experiencia.
+La segunda fuente es de un año antes y de otro oficio. Erica Susana Quiroz Malte publicó en 2015 su trabajo sobre las mujeres y la medicina tradicional del resguardo, con entrevistas fechadas a Rosario Ipial el 29 de septiembre de 2014, a Herminia Malte el 21 de julio de 2014 y a Martha Quiroz el 18 de septiembre de 2014. Allí la Vieja y la Viuda no son cuentos sino diagnósticos: están clasificadas como enfermedades del monte, junto a la mala hora, y la manera de prevenirlas es no caminar a las doce de la noche por sitios solitarios, por el monte o por casas abandonadas. Doña Esperanza le contó a Quiroz lo de don Luis, que en el sitio que llaman el hueco vio de lejos a una señorita muy bonita y de cerca le alcanzó a mirar la cara horrible, y se salvó gritando y llorando.
 
-Reunirlas en una sola página conserva la decisión del corpus, pero no las convierte en fases de una misma mujer. Cada aparición tiene aspecto, camino y respuesta propios.`,
-    historia: history(
-      `El corpus reúne las tres entradas bajo un mismo título y dedica una descripción extensa a cada figura. La edición respeta esa agrupación porque comparten estructura de aparición femenina nocturna, pero separa claramente sus rasgos y acciones.`,
-      `El lenguaje sobre cuerpos femeninos, alcohol y castigo refleja contextos de transmisión y puede reproducir estereotipos. Se registra sin presentarlo como norma sobre mujeres reales. Las oraciones y misas pertenecen a versiones cristianizadas y no prueban antigüedad prehispánica.`,
-    ),
-    versiones: versions(
-      `La Vieja cambia según el sitio donde aparece: monte, cañaveral, piedra o cangagua. La Viuda toma la ropa de la mujer que ocupa el pensamiento del hombre y lo conduce hacia agua. El Ánima puede aparecer como sueño, silueta blanca o calavera.`,
-      `Las respuestas también varían: novenario y promesa frente a La Vieja; resistirse antes de entrar al agua frente a La Viuda; tenderse en cruz y ofrecer misa frente al Ánima. La fuente no propone una solución común.`,
-      `No se afirma que las figuras existan como una sola entidad ni que toda mujer solitaria, viuda, anciana o fallecida corresponda al relato. La edición evita convertir sus descripciones en burla o sexualización.`,
-    ),
+El ánima tiene también registro médico y registro ritual. Andrea Ojeda Guerrero describió en 2006 el mal del ánima como el espíritu de un muerto que penetra en el cuerpo de un vivo, con asco, decaimiento y piel amarilla, y la curación con cuero de borrego negro. Byron Danilo Ruiz Puetate recogió en 2015 el mal de cementerio, y también, de boca del taita Carlos Chalparizán, médico tradicional de Panán, los rituales de noviembre en que las familias reunían comida, cuyes y gallinas y ponían la ofrenda al familiar muerto ese año, porque al año vienen las ánimas.
+
+La Moledora es de Panán y está en ese mismo libro de Ruiz: un punto cerca del monte del Rosario.`,
+    versiones: `Aquí está el desacuerdo más grande del corpus, y no se resuelve: los dos nombres tienen los atributos cruzados.
+
+Para Quiroz, en 2015, la hermosa es la Vieja. Escribe que esos malos espíritus se encuentran en callejones, pozos, ríos, cementerios y quebradas, que atacan a los borrachos y se les presentan «en forma de una mujer hermosa, vestida toda de negro», que los entunda hasta dejarlos sin conocimiento y que trata de llevárselos a ríos, puentes, casas abandonadas o chorreras. Y la fea es la Viuda: de faldas largas y anchas, chal ancho, sombrero grande, «las uñas largas, su cara alargada, fruncida y sus dientes sobresalidos», que sale a los hombres con malos pensamientos y a los borrachos y los hace aparecer sin ropa, en lugares misteriosos, con mordeduras, chupados y quemaduras.
+
+El corpus de 2016 reparte exactamente al revés: la Vieja es la cadavérica y jorobada, la Viuda es la joven hermosa. El mismo testimonio de doña Esperanza, en Quiroz, no cabe en ninguna de las dos casillas: la mujer era bonita de lejos y horrible de cerca.
+
+La Moledora tiene su propio doble filo. Ruiz la sitúa en Panán, cerca del monte del Rosario. En el resguardo vecino de Chiles, el estudio de Corponariño, el Instituto Humboldt y WWF de 2009 registra una microcuenca del río Moledora que recibe aguas de la quebrada el Rosario y anota que el sector «tiene gran significancia mítica en la región». Y existe un libro entero sobre ella, La Moledora. El último mito de los Pastos, de Édison Ávalos y Ana Vásquez, publicado por Abya-Yala en 2017 y recogido en la comuna La Esperanza del Carchi y en el resguardo de Chiles, que limita con Panán; no es de acceso abierto y aquí se cita por su existencia y su procedencia.`,
     leccion:
-      "El deseo, el miedo y el duelo pueden desviar un camino conocido.",
-    similitudes: similarities(
-      `Viejas que castigan, viudas seductoras y ánimas blancas circulan ampliamente en Colombia y América Latina. La propia fuente reconoce variantes internacionales. La memoria de Panán las sitúa en cantinas, chorreras, cangaguas, pantanos y prácticas católicas locales.`,
-      `La Entundada explica la pérdida de camino sin exigir una figura. La Cangagua contiene una experiencia de duende con caballo. Estas páginas comparten extravío nocturno, pero conservan causas y respuestas distintas.`,
-      `La Viuda puede recordar a la Sayona o la Llorona, aunque no busca hijos ni denuncia infidelidad en la versión publicada. La Vieja tampoco debe confundirse con Madremonte por el solo hecho de aparecer en montes.`,
-    ),
+      "Dos nombres pueden intercambiar rostro sin que la aparición deje de reconocerse por lo que hace.",
+    similitudes: `El paralelo mejor documentado viene otra vez de Yaramal, resguardo pasto del municipio de Ipiales, donde la monografía de 2009 de Escobar Morillo y Mejía Putacuar dedica un capítulo a la vieja del monte y otro, el sexto, a la viuda; ese capítulo se organiza en historia, entundamiento en el territorio y visiones y transformaciones de la viuda, de modo que allí también la aparición seductora y la pérdida del conocimiento van juntas, y allí también son dos figuras y no una.
+
+El segundo paralelo cruza la frontera y conviene leerlo como tal. En Tufiño, provincia del Carchi, los narradores que reunió Édison Ávalos en 2020 dicen que «la viuda se distingue por vestir una follera negra» y que «les sale a los hombres mujeriegos»: el vestido negro coincide con la mujer de Quiroz y el motivo con el de Panán, pero el nombre está puesto en la otra de las dos. El cruce, entonces, no es un error de una tesis: es cómo circula la pareja en toda la frontera.
+
+Dentro del resguardo, la Vieja es quien entunda, y la palabra tiene página propia. El ánima, en cambio, no entunda a nadie: pide ser reconocida, y su respuesta no es la limpia sino la misa.`,
     excerpt:
       "La Vieja entunda, la Viuda conduce hacia el agua y el Ánima recorre el aire: tres apariciones distintas de Panán.",
     seoTitle: "La Vieja, la Viuda y el Ánima de Panán",
@@ -450,7 +494,16 @@ Reunirlas en una sola página conserva la decisión del corpus, pero no las conv
       "mitos de Panán",
     ],
     tags: ["ánimas", "espectro", "miedo", "tradición oral"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "quiroz2015",
+      "ruiz2015",
+      "yaramal2009",
+      "medicinaTradicional2006",
+      "paramoChiles2009",
+      "mamian1996",
+      "espiralAndino2014",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "tres senderos nocturnos de Panán muestran a distancia una anciana oscura, una joven sin rostro junto al agua y una silueta blanca aérea, sin sexualización ni terror gráfico",
     ),
@@ -466,35 +519,34 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-waka",
     title: "La Waka: poder espiritual de la tierra",
-    mito: `Waka es una palabra para pensar la riqueza enterrada más allá del cofre o el metal. En el corpus de Panán aparece como lenguaje simbólico cargado de aromas, colores y formas. Expresa fe y esperanza, pero también poder económico, social y espiritual.
+    mito: `Waka es una palabra, y la palabra pesa más que el metal que nombra. En Panán sirve para decir a la vez la riqueza enterrada y la relación con ella: fe y esperanza de los pueblos aborígenes, riqueza cultural, poder económico y social, y el modo en que los espíritus de la madre tierra y la gente siguen tratándose.
 
-La Waka relaciona a los seres humanos con los espíritus de la Madre Tierra. Los mayores recorren el territorio y protegen una riqueza que podría ser usurpada. Lo enterrado no está separado del suelo que alimenta: forma parte de sitios mitológicos, memorias ancestrales y responsabilidades de cuidado.
+Las guacas no se imaginan como cajas. Se dice que son cofres llenos de poder espiritual, y que están figurados en pieles de animales: el buey, la gallina con sus pollos, el cerdo, el perro, la culebra. Por eso, cuando una de esas figuras se le atraviesa a alguien en el camino, lo que se le atravesó no es un animal perdido. Es la forma que tomó lo enterrado para dejarse ver. Cada una trae su oficio encima: el buey el trabajo, la gallina con los pollos la cría, el cerdo la comida guardada, el perro el umbral de la casa, la culebra lo que corre por debajo. Están reservadas para un reencuentro, y mientras ese reencuentro no llega, siguen ahí.
 
-Las guacas pueden figurarse como animales. Buey, gallina con pollos, cerdo, perro y culebra aparecen entre sus formas. No son un catálogo para identificar tesoros, sino imágenes mediante las cuales el territorio se comunica. Cada animal une vida doméstica, trabajo, peligro o fecundidad con aquello que permanece oculto.
+A los enterrados se les dice también los infieles: son la gente antigua, la de antes. Y tienen su día. En la madrugada del tres de mayo se manifiestan con más fuerza que nunca, y salir a buscarlos no es profanar: es la forma que tiene el año de cerrar.
 
-La fuente habla de cofres llenos de poder espiritual y de pieles animales. Esa expresión no obliga a imaginar cajas europeas cubiertas por cuerpos reales. Puede leerse como una manera de decir que la riqueza adopta formas vivas y se reserva para un reencuentro entre seres naturales, espirituales y humanos.
+Los mayores recorren el territorio por eso. No van a sacar nada: van a proteger de la usurpación la riqueza que está hecha tierra. Porque una guaca abierta por manos ajenas ya no es guaca. En el antiguo cementerio, donde abundaron tumbas de familias antiguas, se ve lo que queda cuando pasan los saqueadores: un lugar despojado, y la memoria de que ahí había gente.
 
-La Waka también ayuda a cuidar la Madre Tierra para que continúe brindando alimentos. Su valor no termina cuando alguien extrae lo enterrado. Al contrario, la ambición y la usurpación rompen la relación que le da sentido.
+Así, la waka no termina donde alguien extrae. Al contrario: la waka es lo que sostiene el trato entre los que están debajo y los que siembran encima, para que la madre tierra siga brindando los alimentos de los que vive la gente. El poder no está en lo que se saca. Está en lo que se deja quieto, y en saber que sigue ahí, bajo el pie, cargado de colores, de aromas y de nombres que todavía se reconocen.`,
+    historia: `En su apartado 4.2.6, la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, sustentada en Pasto en 2016, separa deliberadamente la waka de las huacas: una recoge las experiencias, la otra las interpreta. De ese apartado vienen el lenguaje simbólico «cargado de aromas, colores y variedades», la fe y la esperanza, la riqueza cultural y el poder económico y social, los cofres llenos de poder espiritual figurados en pieles de animales, los mayores que recorren el territorio para proteger de la usurpación la riqueza «enterrada echa tierra», y la lista de figuras: el buey, la gallina y los pollos, los cerdos, los perros, las culebras.
 
-Por eso esta página no cuenta una excavación particular. Los testimonios de la yunta, la cerda y los buscadores están en “Las huacas de Panán”. Aquí permanece la reflexión que el corpus separa: qué representan esas apariciones y por qué riqueza, mayores y territorio no pueden tratarse como objetos independientes.
+El cementerio despojado está en el libro de Byron Danilo Ruiz Puetate de 2015, que al recorrer las huellas del territorio de Panán anota, cerca del antiguo cementerio, un «lugar despojado por saqueadores de huacas, donde abundaron tumbas de familias antiguas».
 
-La Waka nombra un poder que sigue dentro de la tierra. Reconocerlo no significa apropiárselo, sino entender que la memoria ancestral también protege la subsistencia de quienes viven en el presente.`,
-    historia: history(
-      `El apartado 4.2.6 es interpretativo y no contiene una trama autónoma. Define la Waka como lenguaje simbólico, vínculo espiritual, riqueza cultural, poder social y protección de la Madre Tierra. La edición mantiene esa forma ensayística.`,
-      `La página heredada había convertido el concepto en una aventura con personajes genéricos y un cofre visible. Esa literalización se retira. Huacas y Waka no se fusionan: la primera página conserva testimonios; esta explica el marco simbólico que la fuente publica por separado.`,
-    ),
-    versiones: versions(
-      `La fuente alterna Waka, guaca y huaca. En el apartado testimonial predominan entierros, señales y búsquedas. En el apartado simbólico aparecen poder espiritual, colores, aromas, animales, mayores y defensa frente a la usurpación.`,
-      `Buey, gallina, cerdo, perro y culebra no forman cinco cuentos independientes. Son representaciones enumeradas dentro de una interpretación. La página no les asigna acciones que no estén documentadas.`,
-      `No se afirma una etimología lingüística definitiva ni se equipara toda waka andina con la definición de Panán. La grafía del título conserva la elección del corpus y los otros términos aparecen como variantes.`,
-    ),
+La palabra «infieles» y la fecha vienen del Instituto Colombiano de Antropología e Historia. En el volumen sobre lugares sagrados que editaron Marta Saade Granados y Carlos Páramo Bonilla en 2018 se lee que el pueblo pasto tiene fechas, «como la madrugada del 3 de mayo, en la que la procura de la sacralidad justamente se sanciona mediante la búsqueda y extracción de "infieles", o sea, de "guacas" (entierros de la gente antigua), ya que estos se manifiestan con particular vehemencia en esa jornada». Es el mismo volumen que discute cuándo la guaquería tiene lugar cultural legítimo y cuándo es despojo.
+
+El título conserva la grafía del corpus. Las tres formas —waka, guaca, huaca— aparecen mezcladas en las fuentes de Panán y no se uniforman aquí.`,
+    versiones: `Las tres grafías no son un descuido: son tres alcances de la misma palabra. Huaca es el hueco y el entierro, guaca es lo que arde y se busca, waka es lo que la comunidad decide que esas cosas significan. El corpus de 2016 usa las tres en dos apartados seguidos y no las jerarquiza.
+
+Hay también dos lecturas opuestas de la extracción. Para el apartado de la waka, la riqueza está para ser protegida de la usurpación y los mayores caminan el territorio con ese oficio. Para el volumen del Instituto Colombiano de Antropología e Historia de 2018, en cambio, la búsqueda del tres de mayo es ella misma un acto de sacralidad sancionado por el pueblo pasto: no la profanación de la fecha sino su cumplimiento. Sacar y cuidar no se oponen tan limpiamente como parece.
+
+Y debajo de la palabra hay un piso material que ninguna de las dos lecturas menciona. Óscar Mendoza Acosta y Henry Marín publicaron en 2023 la excavación de cuarenta y siete contextos funerarios inalterados en la vereda El Porvenir del municipio de Iles, con cerámica del complejo Capulí fechada en los siglos IV y V de nuestra era, hallados porque el terreno los había protegido de la guaquería. Iles no es Cumbal ni es Panán: es la misma región, y es lo que hay literalmente debajo de esta palabra.`,
     leccion:
-      "La riqueza de la tierra vale por las relaciones que protege.",
-    similitudes: similarities(
-      `Waka o huaca posee sentidos amplios en los Andes: lugar, entidad, objeto o potencia sagrada según lengua y territorio. La página de Panán comparte esa amplitud, pero se basa en una interpretación local que destaca animales, mayores y protección ante usurpación.`,
-      `“Las huacas de Panán” ofrece el complemento narrativo. Allí una yunta encuentra tierra blanda y una cerda persigue a un caminante. Aquí esos animales se leen como formas de un poder que vincula riqueza, territorio y seres espirituales.`,
-      `Los tesoros encantados de tradición colonial pueden parecerse en cofres y pruebas. Reducir la Waka a oro oculto eliminaría precisamente la dimensión que justifica conservar esta segunda página.`,
-    ),
+      "La riqueza enterrada se nombra distinto según se la busque, se la cuide o se la excave.",
+    similitudes: `El primer paralelo es la grieta que abre el volumen del Instituto Colombiano de Antropología e Historia de 2018. Allí el capítulo de Luis Alberto Suárez Guava describe cerros del centro del país que la gente tiene por guacas: «la han visto alumbrar… la saben hueca por dentro y la han oído bramar». Es otra región, y sin embargo coincide en lo esencial con lo que dice el corpus de Panán: la guaca no es un contenido sino una potencia con voluntad, que se manifiesta, se mueve y escoge. El mismo volumen documenta la madrugada del tres de mayo como práctica del pueblo pasto.
+
+El segundo paralelo es arqueológico y regional. Las cuarenta y siete tumbas Capulí de El Porvenir, en Iles, excavadas por Mendoza Acosta y Marín en 2023, muestran qué contienen de hecho estos entierros: ajuares cerámicos, cámaras con lajas, más de un entierro por tumba, y vínculos con los grupos prehispánicos del norte del Ecuador. Iles es del mismo departamento y del mismo complejo cultural; no es Cumbal ni es resguardo de Panán.
+
+Dentro del resguardo, esta página nombra lo que la página de las huacas cuenta. Allí un buey se hunde y una puerca persigue; aquí el buey y el cerdo vuelven convertidos en las figuras que toma lo enterrado.`,
     excerpt:
       "La Waka expresa la riqueza espiritual que une mayores, animales, seres humanos y Madre Tierra en Panán.",
     seoTitle: "La Waka de Panán: poder espiritual de la tierra",
@@ -508,7 +560,16 @@ La Waka nombra un poder que sigue dentro de la tierra. Reconocerlo no significa 
       "memoria territorial",
     ],
     tags: ["espiritualidad", "guacas", "protección", "tierra"],
-    sourceKeys: [...commonSourceKeys, "lugaresSagradosIcanh"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "lugaresSagradosIcanh",
+      "capuliIles2023",
+      "ruiz2015",
+      "mamian1996",
+      "huacaCatambuco2004",
+      "rappaport2005",
+      "medicinaTradicional2006",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "capas de tierra de Panán enlazan siluetas de buey, gallina, cerdo, perro y culebra con semillas y mayores caminando el territorio, sin cofre europeo abierto",
     ),
@@ -524,35 +585,38 @@ ${visualRule}`,
   definePananMyth({
     slug: "guamurran-madre-de-agua",
     title: "Guamurran, Madre de Agua",
-    mito: `En la parte alta del territorio de Panán se encuentra Guamurran, una ciénaga de páramo donde nace agua para más de una comunidad. El corpus la llama Madre de Agua porque sus corrientes no permanecen encerradas en el humedal: salen, alimentan y conectan territorios.
+    mito: `En lo alto del páramo de Panán, en el sector que llaman Ciénaga Larga, el terreno se hunde en un vaso poco profundo y el agua se queda. El talud que lo cierra no lo levantó nadie: fue la morrena lateral de una lengua de hielo, y el hueco que dejó aquella lengua al retirarse es hoy la ciénaga. Guamurrán es, literalmente, la huella de un glaciar llena de agua.
 
-El agua llega primero a Panán y también al resguardo de Chiles. Más abajo se incorpora al río Carchi y continúa hacia otros municipios de la zona. Una misma ciénaga sostiene así veredas, cultivos y poblaciones que no siempre se ven entre sí desde el nacimiento.
+Arriba no hay árboles. Hay pajonal, cortadera, turba, y un nivel freático tan alto que lo que parece pasto firme cede bajo el pie. La neblina entra por la mañana y se queda; la lluvia no corre, se guarda en el suelo esponjoso y sale despacio.
 
-Guamurran no aparece en la fuente como una mujer sobrenatural ni como una criatura que emerge del agua. “Madre” expresa la capacidad de dar origen y sustento. El páramo retiene lluvia y neblina; los suelos húmedos liberan el caudal poco a poco; las corrientes llevan esa vida hacia abajo.
+Por eso a Guamurrán le dicen madre de agua: no porque una mujer viva dentro, sino porque de allí sale lo que beben otros. El agua no se queda en la ciénaga. Alimenta a Panán y sigue bajando hasta el resguardo de Chiles, y más abajo se junta con el río Carchi, que recoge las aguas de todo el resguardo y sigue hacia los municipios de la zona. La quebrada que sale de la ciénaga se llama Guamurrán, y también Tambillo, y termina en el río Nazate.
 
-En el lugar se construyó una represa para un sistema de riego. La obra buscaba llevar agua a predios de diferentes veredas, pero obtuvo pocos resultados según la investigación. El dato introduce una tensión importante: reconocer a Guamurran como Madre de Agua no garantiza que cualquier intervención técnica comprenda su funcionamiento.
+El reparto tiene una vuelta que los mayores conocen bien. La bocatoma que surte a la vereda Nazate, que es de Chiles, está parada en territorio de Panán. El agua nace de este lado y se bebe del otro: cientos de familias vecinas toman de un nacimiento que no queda en su resguardo.
 
-Quienes recorren la ciénaga encuentran vegetación baja, suelo saturado, espejos de agua y neblina. El paso debe ser cuidadoso porque lo que parece tierra firme puede ser parte del humedal. Cada salida de agua participa en una red mayor.
+También se intentó guardar el agua. En la ciénaga se levantó un embalse para un distrito de riego que iba a inundar doce hectáreas y repartir el caudal a las veredas del resguardo. La obra se hizo, el agua se represó, y los resultados fueron muy pocos: los predios que iban a reverdecer siguieron esperando la lluvia.
 
-La memoria no inventa una ceremonia específica para visitar Guamurran. Su fuerza está en la relación comprobable y narrada: un nacimiento sostiene a Panán, Chiles, el Carchi y otros municipios. Protegerlo exige pensar más allá de un límite administrativo o de una sola parcela.
+El páramo, en cambio, no dejó de trabajar. Cada enero el cabildo sube a estos lugares altos a pedir permiso y a tomar posesión, y del agua que nace aquí dicen que es agua bendita, que se puede beber sin tratarla porque sale limpia. La ciénaga sigue soltando, gota a gota, lo que el hielo le dejó guardado.`,
+    historia: `El apartado 4.1.3 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, describe Guamurran en pocas líneas: el lugar donde nace el agua que alimenta a Panán y al resguardo de Chiles, que más abajo se hace afluente del río Carchi, y una represa de riego con muy pocos resultados.
 
-Madre de Agua es entonces un nombre territorial. No personifica para volver fantástico el páramo; recuerda que todo caudal tiene un origen vivo y que muchas comunidades dependen de cómo sea tratado.`,
-    historia: history(
-      `Guamurran era el único apartado del corpus principal ausente del sitio. La sección 4.1.3 la describe como ciénaga donde nace agua para Panán, Chiles y el río Carchi, y registra una represa de riego con resultados limitados.`,
-      `La nueva página no inventa una aparición para compensar la brevedad de la fuente. El nombre Madre de Agua se explica desde su función territorial y no como prueba de una deidad antropomorfa. Recibe una pareja visual nueva, horizontal y vertical, ambas full paper cut.`,
-    ),
-    versiones: versions(
-      `El corpus de 2016 usa la grafía Guamorran en el título de la sección y la identifica con Madre de Agua. La memoria digital del resguardo registra Guamorran dentro de la hidrografía local. La URL pública usa Guamurran, forma adoptada en la edición para facilitar lectura, y conserva las grafías en el expediente.`,
-      `La versión documental se limita al nacimiento, los territorios abastecidos y la represa. No se encontraron relatos atribuidos sobre una mujer, guardiana, animal o ceremonia vinculada específicamente con la ciénaga.`,
-      `Las fuentes institucionales confirman el paisaje de páramo y la posición de Panán dentro de Gran Cumbal, pero no publican coordenadas exactas del nacimiento. Por esa razón el mapa señala solo el centro aproximado de la comunidad.`,
-    ),
+La explicación de por qué ahí nace el agua está en un trabajo de ingeniería. William Martín Calpa Tupue presentó en 2010 a la Universidad de Nariño el apoyo técnico a la construcción del distrito de riego de Guamorran, y allí escribe que el embalse se encuentra en un área de vaso natural donde, por su alto nivel freático, se presume que hubo un embalse natural formado por acción glaciar, y que el terraplén existente «fue una morrena lateral de una lengua glaciar». El mismo informe registra las doce hectáreas a inundar, los 376.259 metros cúbicos de capacidad, las once veredas del resguardo que se iban a beneficiar y la constancia del gobernador del cabildo de que el sector Ciénaga Larga pertenece al resguardo.
+
+El dato del reparto sale de una fuente institucional. El estudio del estado del páramo de Chiles que Corponariño publicó con el Instituto Humboldt y WWF en 2009 describe la quebrada Guamurrán o Tambillo como afluente del río Nazate y anota que la bocatoma del acueducto de la vereda Nazate, que beneficia a 435 familias, se encuentra, según el reconocimiento de campo, «en territorio de Panán, aspecto que se debe verificar en próximos estudios».
+
+Zonia Patricia Puenayán Irua, comunera de Panán, escribió en 2011 que las fuentes del páramo, la ciénaga larga y la laguna verde son las mayores del resguardo, que su agua se llama agua bendita y se bebe sin tratamiento, y que el cabildo sube cada enero a posesionarse en la laguna.`,
+    versiones: `El nombre no está fijo. La tesis de 2016 titula el apartado «Guamurran: madre de agua»; el informe de riego de 2010 escribe Guamorran en la portada y en el cuerpo; el estudio de páramos de 2009 escribe Guamurrán y añade que la misma quebrada se conoce también como Tambillo; el listado de planadas del páramo de Panán de 2004 registra Guamorrán. La dirección pública usa Guamurran.
+
+Tampoco coinciden los límites. La tesis de 2016 cuenta el agua desde Panán hacia Chiles y el Carchi, sin discutir de quién es el nacimiento. El estudio de 2009, que es un diagnóstico del resguardo de Chiles, ubica la bocatoma del acueducto de una de sus veredas dentro de Panán y deja el asunto por verificar. No es un desacuerdo mitológico sino de linderos, y la etnografía regional muestra que es viejo: entre los enfrentamientos intercomunales de los Pastos figura el de Chiles y Panán por Nasate, justamente ese sector.
+
+Sobre la represa las cifras son de un solo trabajo, el de 2010, y el juicio sobre sus resultados es de otro, el de 2016. Lo que las fuentes sostienen del lugar es el nombre —madre de agua— y el reparto: la ciénaga guarda lo que cae y lo suelta despacio hacia abajo, y de ese oficio le viene el nombre.`,
     leccion:
-      "Un nacimiento de agua obliga a cuidar también a quienes viven río abajo.",
-    similitudes: similarities(
-      `Llamar “madre” a un nacimiento de agua aparece en múltiples territorios porque el caudal alimenta y da continuidad. Guamurran se distingue por una red nombrada: Panán, Chiles, río Carchi y municipios aguas abajo.`,
-      `Cualchio y Cuaichala son otros nacimientos de la colección. Cualchio se relaciona con granizo y recuperación de caudal; Cuaichala con Guacales, acueducto y devoción. Guamurran destaca por su alcance intercomunitario y por la intervención de una represa.`,
-      `La Laguna de María Panana se asocia con armonización y bastones de mando. Aunque ambos son lugares altos de agua, no hay base para convertir a María Panana en la Madre de Agua de Guamurran ni fusionar las páginas.`,
-    ),
+      "El agua que nace en un territorio muchas veces se bebe en otro.",
+    similitudes: `Llamar madre a un nacimiento es un uso registrado dentro del propio resguardo. En el relato de la fuente de agua cristalina, los mayores de Panán decían que aquella fuente era «la mamá de las fuentes de agua» y que, si desaparecía, existía la posibilidad de que las otras fuentes del resguardo también se secaran. Guamurrán hereda esa manera de nombrar: la maternidad está en la dependencia, no en una figura.
+
+El segundo paralelo es de linderos y está documentado en la etnohistoria de los Pastos. Entre las confrontaciones intercomunales por límites que todavía laten, la que se nombra para este sector es la de Chiles y Panán por Nasate. La bocatoma que un resguardo tiene en el páramo del otro es la forma cotidiana de ese mismo pleito, y es también lo que obliga a los dos cabildos a cuidar el mismo pajonal.
+
+Dentro de Panán hay otros nacimientos con oficios distintos: el Cucho de Cuaichala surte el acueducto y la devoción, el Cualchio se asocia con el granizo y con recuperar caudal, el Chuchun con el baño y la unión de tres quebradas. Guamurrán es el único que se mide en hectáreas inundadas y en familias de otro resguardo.
+
+Ciénagas de páramo convertidas en embalses hay en toda la cordillera; aquí lo específico es que el vaso ya existía y lo dejó el hielo.`,
     excerpt:
       "La ciénaga de Guamurran da origen al agua que conecta Panán, Chiles, el río Carchi y otros municipios.",
     seoTitle: "Guamurran, Madre de Agua de Panán",
@@ -566,7 +630,16 @@ Madre de Agua es entonces un nombre territorial. No personifica para volver fant
       "agua del pueblo Pastos",
     ],
     tags: ["agua", "naturaleza", "protección", "tierra"],
-    sourceKeys: [...commonSourceKeys, "lugaresSagradosIcanh"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "calpaTupue2010",
+      "paramoChiles2009",
+      "puenayan2011",
+      "planVida2005",
+      "historiaResguardo",
+      "planDesarrolloNarino2024",
+      "mamian1996",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "ciénaga altoandina de Guamurran con frailejones, neblina y varios nacimientos que fluyen hacia Panán, Chiles y el Carchi; comuneros observan sin personificar el agua",
     ),
@@ -581,31 +654,38 @@ ${visualRule}`,
   definePananMyth({
     slug: "el-chuchun-y-las-tres-quebradas",
     title: "Chuchún y las tres quebradas",
-    mito: `Chuchún es un lugar de agua templada en el territorio de Panán. Su nombre se explica desde el quichua como “seno”, una palabra que relaciona el nacimiento de agua con abrigo y alimento. Entre pequeños chaparros brotaban varios manantiales, de modo que las personas podían escoger dónde bañarse al aire libre. No había una sola poza monumental: el agua aparecía en distintos puntos y formaba un espacio compartido.
+    mito: `Chuchun quiere decir seno en quichua, y el nombre le viene del nacedero. Allí el agua brota templada, propicia para el baño, y no sale por un solo sitio: brota entre los terrenos cubiertos de chaparros pequeños, en distintos puntos, de modo que cada persona escogía el suyo. Mucha gente de la comunidad subía a bañarse a campo abierto, y el lugar no tenía una poza sino muchas.
 
-Allí se encuentran tres quebradas que recorren buena parte del resguardo: Aucué, Lájaro y Guacales. Cada una llega con su propio trayecto y en Chuchún sus aguas se reconocen juntas. La unión no borra sus nombres; hace visible la red que atraviesa veredas, cultivos, pasos y casas.
+Lo grande de Chuchun, sin embargo, es lo que se junta debajo. Ahí se unen las tres quebradas que recorren buena parte del territorio: Aucué, Lájaro y Guacales. Vienen cada una por su lado y se encuentran en el mismo punto, y en esa unión está guardada la memoria histórica de los pananes.
 
-Los valles de esas quebradas guardan una memoria de trabajo. Por ellos caminaban diariamente mujeres y hombres que cruzaban hacia Ecuador como peones. Iban al otro lado del río para conseguir el sustento de sus familias y volvían con lo necesario para alimentar a sus hijos. La investigación vincula a esos hijos con nuevas generaciones de liderazgo comunitario. El agua acompaña entonces una historia de movilidad fronteriza, esfuerzo y continuidad.
+Por los valles de esas quebradas se caminaba a diario. Hombres y mujeres bajaban de peones a trabajar al otro lado del río, en Ecuador, y volvían con lo que se podía llevar a la casa para alimentar a los hijos. Esos hijos son hoy parte del nuevo liderazgo de la comunidad. Las mismas aguas que servían para el baño marcaban el camino del jornal.
 
-Chuchún conserva también un saber relacionado con el nacimiento. Las familias enterraban allí las placentas después del parto. El gesto unía el cuerpo recién nacido con la tierra y quedaba bajo el cuidado de parteras y médicos tradicionales, quienes conocían cuándo, dónde y cómo hacerlo. La fuente lo nombra como un sincretismo que reúne varios saberes, no como una ceremonia idéntica para todas las familias.
+Chuchun es además el lugar donde se enterraban las placentas de las madres que acababan de dar a luz. Ese saber lo guardan las parteras y los médicos tradicionales de la comunidad, y en él se juntan varios conocimientos a la vez.
 
-El lugar puede leerse desde esos tres movimientos: el agua sale de la tierra, tres quebradas se unen y la placenta regresa al suelo. Baño, trabajo y nacimiento no son episodios separados por completo. En Chuchún, la memoria de Panán fluye por los mismos caminos que sostuvieron a familias, trabajadores y nuevas generaciones.`,
-    historia: history(
-      `La fuente de 2016 dedica a Chuchún un apartado territorial, no un cuento con protagonista. Describe los nacimientos templados, la confluencia de Aucué, Lájaro y Guacales, los desplazamientos de peones hacia Ecuador y el entierro de placentas.`,
-      `La edición conserva esa forma. No inventa un guardián de las quebradas, una primera madre ni un acontecimiento sobrenatural para darle “trama”. La referencia al entierro de placentas se presenta como memoria registrada y saber de parteras, sin afirmar que todas las familias lo practiquen hoy.`,
-    ),
-    versiones: versions(
-      `El corpus principal explica Chuchún desde el agua y ofrece cuatro capas de memoria: el sentido de su nombre, los baños en nacimientos templados, la unión de tres quebradas y el entierro de placentas. Es una descripción compuesta del lugar, no cuatro versiones rivales.`,
-      `La memoria digital del resguardo confirma la hidrografía y los nombres asociados al territorio. Los trabajos de medicina y mujeres aportan contexto sobre parteras, cuerpo y tierra, pero no narran un episodio distinto ocurrido en Chuchún.`,
-      `No se atribuye una etimología lingüística definitiva más allá de la explicación publicada, ni se convierte el entierro de placenta en prueba de una práctica prehispánica intacta. Tampoco se fija un punto GPS exacto.`,
-    ),
+El sitio tiene su hora. Los mayores de Panán advierten que a malas horas no hay que andar cerca del chuchun, porque a ciertos momentos de la noche la malhora flota sobre esas aguas. El baño es de día; la quebrada de noche es otra cosa.
+
+Todo lo que pasa por Chuchun termina yéndose junto. Las tres quebradas siguen bajando de occidente a oriente y desembocan, como el resto de las aguas del resguardo, en el río Carchi, que es el límite con el otro país y el mismo que cruzaban los peones. El agua que se usó para nacer, para bañarse y para trabajar sale del territorio por una sola puerta.`,
+    historia: `El apartado 4.1.8 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, es la fuente del conjunto: la etimología quichua de chuchun como seno, el nacedero de aguas templadas y los baños a campo abierto entre chaparros, la unión de las tres quebradas Aucué, Lájaro y Guacales, el paso diario de los peones al otro lado del río y el entierro de las placentas bajo el cuidado de parteras y médicos tradicionales.
+
+Los topónimos están confirmados fuera de la tesis. El estudio de dinámica poblacional del resguardo que Benavides Játiva y Burbano Lucero presentaron a la Universidad de Nariño en 2004 registra entre las quebradas que bañan la población a Puscuelán y Aucué, describe los valles que forman las quebradas del resguardo y anota que todas las aguas de Panán corren de occidente a oriente y desembocan en el río Carchi, que es el límite con Ecuador.
+
+El aviso sobre la hora está en Nostalgia de chutún, el trabajo que Alejandro Ruiz Puetate presentó en 2015 a la misma universidad con narraciones de mayores de Panán: allí se escribe que la malhora flota en el chuchun a ciertas horas de la noche y que por eso no se debe andar a malhoras cerca del chuchun.
+
+Sobre el nacimiento y el cuidado del cuerpo, el trabajo de Quiroz Malte de 2015 sobre las médicas y parteras de Panán, con entrevistas fechadas entre septiembre y octubre de 2014 a Rosario Ipial, Herminia Malte, Martha Quiroz y Carlos Chalparizán, documenta el embarazo, el parto, el posparto y el cuidado del ombligo del recién nacido en el resguardo.`,
+    versiones: `La tesis de 2016 arma el lugar con cuatro capas y no con dos relatos rivales: el nombre, el baño, la confluencia de las quebradas y el entierro de las placentas. Están puestas una junto a otra, como rasgos simultáneos del sitio, y cada una podría leerse sola.
+
+La lista de las tres quebradas varía según quién escriba. La tesis nombra Aucué, Lájaro y Guacales, y las junta en un punto. El estudio de dinámica poblacional de 2004 registra Aucué y Puscuelán entre las quebradas que bañan la población y sitúa Guacales dentro de la hidrografía del resguardo, repartidas por el territorio en vez de reunidas. La tríada pertenece al relato; los cauces, al mapa.
+
+La etimología queda como la da la fuente. Chuchun se traduce del quichua como seno, y el propio texto explica que el nombre honra el nacedero de aguas templadas: la traducción va unida al agua que brota, no a una figura materna.
+
+Del entierro de las placentas queda la formulación de la tesis, que es breve y conviene conservar tal cual: allí se enterraban las de las madres que acababan de dar a luz, y es un sincretismo que guarda un cúmulo de saberes en las parteras y los médicos tradicionales de la comunidad.`,
     leccion:
-      "El agua enlaza nacimiento, trabajo familiar y continuidad comunitaria.",
-    similitudes: similarities(
-      `Los manantiales entendidos como lugares de nacimiento y cuidado aparecen en muchas sociedades andinas. El entierro de la placenta también posee paralelos amplios, pero aquí la comparación debe permanecer anclada en Chuchún y en los saberes atribuidos a parteras de Panán.`,
-      `Guamurran, Cualchio y Cuaichala son otros núcleos de agua de la colección. Guamurran alimenta varias comunidades; Cualchio se relaciona con granizo y caudal; Cuaichala abastece el acueducto y la religiosidad popular. Chuchún se distingue por las tres quebradas, los baños y la memoria de parto y trabajo transfronterizo.`,
-      `La unión de corrientes podría compararse con relatos de ríos hermanos, pero la fuente no personifica Aucué, Lájaro y Guacales. La edición mantiene su dimensión territorial e histórica.`,
-    ),
+      "Tres corrientes que se juntan pueden guardar el baño, el jornal y el nacimiento de un pueblo.",
+    similitudes: `Dentro del propio resguardo hay otro lugar de tres nacederos con relato propio. En un bosque nativo de la vereda La Esperanza salían tres nacimientos de agua muy limpia; a don Félix, que daba de beber a las vacas, se le apareció un anciano muerto que había cuidado ese lugar en vida y le contó que todo aquello había sido monte y que debían preservarlo. Cuando don Félix lo contó al gobernador, el cabildo y la comunidad empezaron a cuidar esos nacederos, y desde entonces se cuidan otros. El tres, el agua y el mandato de cuidado se repiten; Chuchun añade el baño y el trabajo.
+
+El segundo paralelo es la frontera. El río que recoge todas las aguas del resguardo es el mismo que cruzaban los peones para ir a jornalear al Ecuador: el límite internacional y el desagüe del territorio son la misma línea. Esa coincidencia está registrada en la hidrografía del resguardo y explica por qué el camino del trabajo iba pegado al camino del agua.
+
+Frente a los otros lugares de agua de Panán, Chuchun es el único templado. Guamurrán guarda el agua de dos resguardos, el Cualchio la reparte desde el frío, el Cucho de Cuaichala surte el acueducto. Aquí el agua no se recoge: se entra en ella.`,
     excerpt:
       "En Chuchún se unen Aucué, Lájaro y Guacales, junto a memorias de baño, trabajo y nacimiento.",
     seoTitle: "Chuchún y las tres quebradas de Panán",
@@ -619,7 +699,16 @@ El lugar puede leerse desde esos tres movimientos: el agua sale de la tierra, tr
       "memoria territorial",
     ],
     tags: ["agua", "comunidad", "memoria", "tradición"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "puenayan2011",
+      "benavidesBurbano2004",
+      "quiroz2015",
+      "historiaResguardo",
+      "planVida2005",
+      "mamian1996",
+      "paramoChiles2009",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "tres quebradas altoandinas llamadas Aucué, Lájaro y Guacales confluyen entre chaparros, caminos de familias y cultivos de Panán, sin personificar las corrientes",
     ),
@@ -634,33 +723,36 @@ ${visualRule}`,
   definePananMyth({
     slug: "el-chutun",
     title: "El Chutún, cuidador de la chagra",
-    mito: `En las chagras de Panán crece el checher, una planta cuyo fruto se parece al capulí. Sus ramas pueden formar hileras o cercos naturales, y en ellas habita el Chutún. Los mayores lo describen como un espíritu cuidador de la chagra y, a veces, como un duendecillo que no necesita mostrarse mientras el equilibrio del lugar se mantiene.
+    mito: `El chutún no llegó solo al monte de Panán: lo sembraron. La gente de adelante lo puso ahí para cuidar la casa y para tener buena comida, y desde entonces vive donde crían las moras y sobre todo los chercheres, esa fruta que se parece al capulí y que crece en las hileras y en los cercos naturales de la chagra.
 
-Una persona puede acercarse al checher y comer sus frutos. Si toma solo lo necesario y deja viva la planta, el Chutún no causa inconveniente. La fruta es alimento y puede compartirse. El problema empieza cuando alguien arranca ramas, pisa los brotes o destruye la planta después de recoger.
+Nadie sabe bien qué forma tiene. Se lo ha visto como un ovillo de lana roja, como un montón de ramas, como un animal de no muy buena apariencia. De él se dice que es un espíritu grande de los alimentos, que no se sabe dónde tiene la boca ni por dónde desfoga plantas y quindes, y que camina con pies de gallo. Lo que sí se reconoce es el aviso: por donde pasa deja una fragancia muy rica. Donde huele así, está.
 
-Entonces el cuidador defiende su comida preferida. No aparece con una forma única ni con rasgos humanos definidos. Puede dejarse ver como un animal de aspecto desagradable, suficiente para asustar al visitante y hacerlo abandonar la chagra. La aparición no entrega un tesoro ni persigue a quien se marcha: interrumpe la destrucción.
+Al chutún se lo respeta. Se puede comer del checher todo lo que se quiera mientras la mata quede viva; ahí no hay inconveniente, porque para eso lo sembraron, para que hubiera comida. El trato se rompe cuando alguien arranca las ramas, pisa los brotes o acaba con la planta después de recoger: entonces el cuidador sale en defensa de su comida preferida, se deja ver en la figura desagradable y hace que la persona se retire.
 
-El contacto con el Chutún también se relaciona con el espanto y el ojeado. La fuente señala especialmente a los niños, quienes pueden enfermar después de encontrarse con su presencia. La familia reconoce malestar y miedo, y acude a un médico tradicional para restablecer a la persona. El relato no describe una receta universal; pone el cuidado dentro de una relación comunitaria.
+Y cobra. A los papás se les oyó siempre la misma advertencia: no te vayas tarde a los chercheres y a las moras, porque te sale el shutún. Hace chandas. Levanta granos en la cara de aquel a quien se aparece, y esos granos no se le quitan nunca. A los niños los deja con síntomas de espanto, y hay que llevarlos donde el médico tradicional para que les cure el ojeado. Y si llega a morder a quien robó comida o lo maltrató, le puede podrir la mano.
 
-Así, el Chutún no prohíbe entrar a la chagra ni comer un fruto. La diferencia está en la manera de hacerlo. Tomar sin destruir conserva la convivencia. Dañar por descuido o exceso activa la defensa del lugar.
+Por eso, cuando la tierra se deja descansar y el barbecho se llena de matorral, nadie dice que el lote esté abandonado. Ese es el espacio del chutún, y de los tiesos, y de los lagartijos verdes, y de todo lo que está del lado de los muertos. Ahí ellos cargan el suelo de energía germinal para la siembra que vendrá. El cerco vivo no es un límite entre lo cultivado y lo silvestre: es el sitio donde vive el que fue puesto a cuidar.`,
+    historia: `La corrección de fondo la trae Byron Danilo Ruiz Puetate en el libro que lleva el nombre de este ser, Nostalgia de chutún, presentado en 2015 a la Universidad de Nariño y escrito desde los montes del resguardo. Allí quien habla es doña Herminia Malte, médica tradicional de Panán: «Espíritu que habita en las montañas cerca de donde crían muchas moras y sobre todo chercheres; la gente de adelante lo sembró para cuidar la casa y para tener buena comida; al Chutún se lo respeta, no se lo maltrata si se lo llega a ver; el bota una fragancia muy rica; puede ser un ovillo de lana o un montón de ramas, protege los cultivos y, si lo llega a morder por robar comida o maltratarlo, le puede podrir la mano». En el mismo pasaje está la advertencia de los papás, las chandas y los granos en la cara que no se quitan nunca.
 
-Entre cercos vivos, frutos oscuros y cultivos altoandinos, el pequeño cuidador recuerda que la chagra no es un depósito inerte. Tiene alimentos, límites y relaciones. Quien cosecha participa de ellas; quien destruye encuentra una presencia que lo obliga a retirarse. El cerco vivo conserva esa regla incluso cuando nadie observa.`,
-    historia: history(
-      `El apartado “El Chutun” del corpus principal es breve y preciso: lo identifica como espíritu cuidador de la chagra, lo sitúa en plantas de checher, permite comer sin destruir y describe su defensa mediante una apariencia animal que aparta al agresor.`,
-      `La revisión elimina diálogos, nombres de niños y pruebas dramáticas que no aparecen en la fuente. La referencia al ojeado se documenta como categoría cultural y no como diagnóstico biomédico. La página no sustituye atención de salud ni ofrece una receta.`,
-    ),
-    versiones: versions(
-      `La versión registrada alterna dos maneras de nombrarlo: espíritu cuidador y duendecillo. También admite distintas apariencias, pues puede manifestarse como un animal poco agradable. Esa variabilidad forma parte de un mismo núcleo ligado al checher.`,
-      `El duende general de Panán comparte el tamaño pequeño y la capacidad de inquietar, pero se relaciona con música, caballos, quebradas y niños. El Chutún tiene una función más delimitada: protege la chagra y responde a la destrucción de una planta.`,
-      `No se añade una especie zoológica concreta, no se afirma que cada planta tenga un Chutún individual y no se presenta la enfermedad infantil como castigo comprobable. La fuente permite hablar de una presencia protectora, no reconstruir una cosmología total.`,
-    ),
+El resto sale del apartado 4.2.4 de la tesis que firmaron en 2016 Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García: el checher, los cercos naturales, el permiso de comer sin destruir, la figura animal que aparta al agresor y el ojeado que enferma a los niños.
+
+Que el chutún sea dueño del barbecho lo escribió Dumer Mamián Guzmán en 1996, en su estudio de los Pastos para la Geografía humana de Colombia: en el sistema de rotación, el período de descanso «es el espacio del Chutún, los Tiesos, los lagartijos verdes y otras entidades ligadas a los muertos y el más allá que llenan de su energía germinal para la vida posterior».
+
+Andrea Ojeda Guerrero ya lo había registrado en 2006 dentro de Panán, en la lista corta de espíritus con capacidad de enfermar del resguardo: el cueche, el chutún, el llorón o chuzo y la mala hora.`,
+    versiones: `La diferencia grande es si es silvestre o sembrado. El corpus de 2016 lo presenta como espíritu cuidador que estaba ahí y que reacciona; la palabra de Herminia Malte, en Ruiz, lo vuelve un guardián puesto por los antiguos con un encargo doble, cuidar la casa y asegurar la comida. Eso cambia la figura: no es un dueño del monte que tolera la cosecha, es un trabajador contratado hace generaciones que cobra cuando lo maltratan.
+
+Tampoco coinciden en cómo castiga. En 2016 asusta y hace retirarse; en Ruiz muerde y pudre la mano, hace chandas y deja granos permanentes; en los dos enferma a los niños con espanto.
+
+La forma es lo más suelto de todo: duendecillo, animal feo, ovillo de lana roja, montón de ramas, espíritu grande sin boca reconocible y con pies de gallo. La escritura también baila entre chutún y shutún.
+
+Y hay una lectura que no es de Panán y que conviene marcar. Entre los chagreros del resguardo de Yaramal, en el municipio de Ipiales, la monografía de Escobar Morillo y Mejía Putacuar anotó en 2009 esto: «El chutún es como abono, como el humus que devuelve la misma planta, da la humedad y nutre el suelo, por eso no se debe hacer correr al chutún porque donde está él hay bastante producto y en las partes que se ha ido todo se pierde ya no se da nada». Allí no es un guardián que castiga: es una fuerza fertilizadora que se pierde si la espantan.`,
     leccion:
-      "Tomar alimento sin destruir mantiene la relación justa con la chagra.",
-    similitudes: similarities(
-      `Los guardianes de cultivos y plantas aparecen en muchas tradiciones rurales e indígenas. El Chutún comparte con ellos la defensa de un recurso vivo, pero su rasgo documentado es específico: habita cerca del checher y tolera la cosecha cuidadosa.`,
-      `La colección lo acerca al duende por la palabra “duendecillo” y al Cueche por la posibilidad de causar una afectación que atiende medicina tradicional. Sin embargo, el primero ronda varios espacios y el segundo se manifiesta como arco y clima. Solo el Chutún cuida de manera explícita la chagra.`,
-      `Puede recordar fábulas sobre castigo a la codicia, aunque el relato no opone pobreza y riqueza ni exige renunciar a la fruta. Su límite es más concreto: no destruir aquello de lo que se come.`,
-    ),
+      "Un guardián sembrado por los antiguos sigue cobrando lo que se le arranca al cultivo.",
+    similitudes: `El paralelo más útil es una inversión, no una copia. Al otro lado de la cordillera, en un resguardo del municipio de Ipiales, los chagreros leen al chutún como abono y humedad y sostienen que hacerlo correr empobrece el lote; en Panán el mismo ser muerde, pudre la mano y deja granos que no se quitan. Guardián que cobra y fuerza que fertiliza son dos maneras pasto de explicar por qué el cultivo rinde donde rinde. Yaramal no es Panán, y la diferencia entre las dos lecturas es justamente lo que vale mirar.
+
+El segundo paralelo es de escala regional y lo firma Dumer Mamián en 1996 para todo el pueblo de los Pastos: el chutún pertenece al tiempo de descanso de la tierra, junto a los tiesos, los lagartijos verdes y las entidades ligadas a los muertos. El barbecho no es tierra vacía sino tierra en manos de otros; eso explica por qué el cerco natural y la orilla del cultivo son su sitio en las dos versiones.
+
+Dentro del resguardo, el duende también es pequeño y también ojea, pero se lo cura con agua y su mundo es el de abajo; el chutún es de arriba de la tierra, del surco y de la mata. En la consulta del resguardo son dos entradas distintas.`,
     excerpt:
       "El Chutún habita junto al checher y protege la chagra de quien toma sus frutos destruyendo la planta.",
     seoTitle: "El Chutún: cuidador de la chagra de Panán",
@@ -674,7 +766,16 @@ Entre cercos vivos, frutos oscuros y cultivos altoandinos, el pequeño cuidador 
       "espíritu protector",
     ],
     tags: ["agricultura", "naturaleza", "protección", "espíritu"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "ruiz2015",
+      "mamian1996",
+      "yaramal2009",
+      "medicinaTradicional2006",
+      "tuquerres2016",
+      "medicinaMujerTerritorio2020",
+      "quiroz2015",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "una chagra de Panán con cercos de checher cargados de frutos; una figura pequeña y discreta protege la planta mientras una persona cosecha sin quebrar ramas",
     ),
@@ -689,34 +790,42 @@ ${visualRule}`,
 
   definePananMyth({
     slug: "el-cualchio-y-la-olla-del-granizo",
+    fuentesAgotadas: "la única narración de la Olla del Granizo es el apartado 4.1.4 de Estacio y Tatamués 2016 (ya citado). Se buscó «Cualchio», «olla del granizo», «Guamorrán», «Chatanalpí»… en la web abierta, en el buscador de SIRED (Universidad de Nariño: 'Panán', 'Panan resguardo', 'Cualchio') y en los blogs del resguardo y del propio Estacio. Abiertos y descartados: «Territorios bioculturales. Complejos de páramo Chiles-Cumbal» (SIRED 6080, 2019: sólo una frase sobre granizo en la Cuchilla de Pupiales, sin Panán); «Análisis del cambio de cobertura vegetal en el corredor volcánico Chiles–Cerro Negro–Cerro Granizo» (SIRED 1033: cartografía del Cerro y la quebrada El Granizo, nada del sitio ni del relato); SIRED 7936, 2462 y 8471 (sin Cualchio ni granizo); resguardoindigenapanan.blogspot.com (geografía general) y ramiroestacio.blogspot.com (el autor reseña su misma tesis); «Cumbal tiene memoria» (2020, coordinado por Estacio; según el extracto del buscador nombra la Olla del Granizo como lugar donde anidan curiquingas, no se pudo leer) sólo circula en Scribd, vetado. Tupaz Pastás y Guzmán 2011, que la ficha nombra en Versiones, es un capítulo del libro de Ulloa que ya está en el pool como puenayan2011 con la misma URL: no es obra nueva.",
     title: "El Cualchio y la Olla del Granizo",
-    mito: `El Cualchio nace en una olla, también descrita como ojo de agua, rodeada por alturas cubiertas de arbustos. Las laderas forman un recinto húmedo y difícil de atravesar. Desde allí sale el río que lleva el mismo nombre y se incorpora a la red de aguas de Panán.
+    mito: `Arriba, donde el páramo se quiebra en alturas cubiertas de arbustos, el terreno se hunde en una olla. También le dicen ojo de agua, porque de ese fondo sale el río Cualchio, que baja al río Blanco y con él al Carchi. La olla no es una vasija enterrada ni el caldero de nadie: es la forma del suelo, un hueco entre laderas donde el agua se junta antes de irse.
 
-Los mayores relacionan ese punto con la precipitación. Dicen que allí nace o aparece el granizo. Durante las temporadas de invierno, la olla recoge niebla, lluvia y frío; el granizo golpea la vegetación y el agua aumenta. No se trata de una vasija enterrada ni de un personaje que arroja hielo: “olla” nombra la forma del terreno y “ojo” su condición de nacimiento.
+Los mayores dicen que ahí nace la precipitación. Que el granizo aparece en ese punto y de ahí sale a caer sobre el resto del territorio. En invierno la olla graniza casi siempre, y de granizar se hacen las grandes fuentes de agua: el hielo golpea la vegetación, se derrite entre la paja y engruesa los arroyos.
 
-Los montes conservan plantas nativas. La fuente enumera arrayán, cerote, león, encino, cuaza, amarillo y caspimote, entre otras. El suelo pantanoso y la cobertura espesa dificultan el acceso. Esa dificultad protege parcialmente el nacimiento, aunque no lo vuelve un lugar ajeno a la comunidad.
+El monte que la rodea todavía tiene lo suyo. Arrayán, cerote, león, encino, cuaza, amarillo, caspimote. El suelo es pantanoso y no hay entrada fácil; los montes están cerrados y la gente no sube por gusto.
 
-Cuando los arroyos que recorren el territorio pierden caudal, personas de Panán visitan el Cualchio. El texto no ofrece una ceremonia detallada ni palabras secretas. Registra que se va al lugar cuando se necesita aumentar el agua. La visita reconoce una relación entre la olla alta y las corrientes que llegan a veredas y cultivos.
+Sube cuando hace falta. Cuando los arroyos que recorren el territorio bajan de caudal, se va a la olla del granizo, que es el sitio que se visita cada vez que se requiere aumentar el agua que corre por Panán. No se sube a mirar: se sube a que vuelva a bajar.
 
-El granizo puede dañar una cosecha, pero la fuente también lo sitúa dentro del ciclo que produce fuentes de agua. El Cualchio no queda reducido a amenaza ni a reserva utilitaria. Es monte, pantano, vegetación, precipitación y nacimiento.
+El granizo que nace ahí también hace daño. Los mayores se acuerdan de granizadas que duraban hasta seis horas, con piedras grandes que destruían los cultivos y los objetos, cubrían varios centímetros del suelo y demoraban cerca de quince días en derretirse. Contra eso hay un oficio corto: cuando la tormenta con granizo apenas empieza, se echa ceniza de leña. Y cuando llueve demasiado, se riega ceniza afuera de la casa y se le pide a la madre naturaleza que pare.
 
-La memoria del lugar enseña a mirar el clima desde su recorrido territorial. El agua no empieza en la llave o en la acequia: viene de una altura húmeda, de arbustos que la retienen y de una olla donde lluvia y granizo adquieren caudal. Visitar el Cualchio es volver hacia ese origen.`,
-    historia: history(
-      `“El Cualchio y la Olla del Granizo” es otro apartado descriptivo del corpus de 2016. Sus datos comprobables son el ojo de agua entre alturas, el origen del río Cualchio, la asociación oral con granizo, el monte nativo y las visitas cuando disminuye el caudal.`,
-      `La versión heredada añadía una expedición ceremonial y acciones que la fuente no detalla. La nueva página no convierte el topónimo en un recipiente literal ni atribuye frases a mayores sin nombre. Mantiene la brevedad documental y explica el lugar sin rellenarlo con fantasía.`,
-    ),
-    versiones: versions(
-      `La fuente usa de forma paralela “olla” y “ojo de agua”. También formula con cautela la relación con el granizo: según la oralidad de los mayores, es el sitio donde nace la precipitación o donde aparece el granizo. La edición conserva ambas expresiones.`,
-      `La memoria territorial enumera especies vegetales y señala que se visita el lugar para aumentar el caudal. La memoria digital del resguardo confirma al Cualchio dentro de su hidrografía, pero no aporta un segundo relato de origen.`,
-      `No se publica un ritual reconstruido, no se promete que una visita produzca lluvia y no se atribuye una localización exacta. El núcleo es una relación oral y territorial con agua y clima, no una explicación meteorológica.`,
-    ),
+El nombre está sembrado en todo el páramo alrededor. Hay una quebrada Granizo, hay una planada Granizo entre Ciénaga Larga, Guamorrán y Mundo Nuevo, y hay una loma que también se llama El Granizo, junto al Tambillo, en la zona pantanosa de donde salen varias corrientes. El río que baja de la olla se nombra de las dos maneras a la vez: Cualchio–Granizo.
+
+Así que el mismo lugar da el agua y el hielo. Lo que arruina la cosecha en marzo es lo que llena la acequia en junio, y ambas cosas empiezan en el mismo hueco del páramo.`,
+    historia: `El apartado 4.1.4 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, describe el sitio: la olla u ojo de agua entre alturas con arbustos exuberantes, el nacimiento del río Cualchio, la afirmación —atribuida a la oralidad de los mayores— de que ahí nace la precipitación o aparece el granizo, la lista de plantas nativas y la costumbre de visitarlo cuando se requiere aumentar el caudal de los arroyos.
+
+Los topónimos están confirmados fuera de ella. El estudio de dinámica poblacional del resguardo que Benavides Játiva y Burbano Lucero presentaron a la Universidad de Nariño en 2004 registra el río Cualchio–Granizo, que desemboca en el río Blanco y este en el Carchi, y enumera entre las planadas más sobresalientes de la zona de páramo a Ciénaga Larga, Guamorrán, Granizo y Mundo Nuevo. El diagnóstico del páramo de Chiles publicado por Corponariño con el Instituto Humboldt y WWF en 2009 nombra la extensa zona pantanosa situada entre las lomas El Granizo y El Tambillo.
+
+Lo que la gente hace con el granizo lo escribió una comunera. Zonia Patricia Puenayán Irua, en el capítulo sobre Panán del libro Perspectivas culturales del clima editado por Astrid Ulloa en 2011, recoge a Carlos Puenayán, indígena agricultor del resguardo, que recuerda granizadas de unas seis horas, con granizos grandes que destruían objetos y cultivos, cubrían varios centímetros de la superficie y tardaban cerca de quince días en derretirse. La misma autora registra las estrategias del resguardo frente al granizo: echar ceniza de leña cuando la tormenta apenas comienza, y regar ceniza afuera de la casa cuando llueve demasiado.`,
+    versiones: `La fuente principal duda de su propia formulación y conviene conservar esa duda. La tesis de 2016 dice que, según la oralidad de los mayores, es el sitio por donde nace la precipitación, «o el punto donde aparece el granizo». Nacer y aparecer no son lo mismo: una versión hace del hueco el origen del fenómeno, la otra apenas el lugar donde se deja ver primero.
+
+Las dos palabras del topónimo también compiten. Olla nombra la forma del terreno; ojo de agua nombra lo que sale de ella. La tesis las usa como equivalentes en la misma frase, y el nombre oficial del río arrastra las dos cosas a la vez: Cualchio–Granizo.
+
+Sobre el granizo hay una explicación paralela que circula en el pueblo de los Pastos y que no coincide exactamente con la de Panán. En el trabajo de Tupaz Pastás y Guzmán sobre tiempo y clima en la visión andina, publicado en 2011, se predice el granizo por la forma irregular de las nubes y se advierte que no se deben perturbar los lugares míticos, cerros o lagunas, porque puede ocasionarse una granizada; allí algunos cerros sagrados son portadores del granizo, es decir, lo cargan, no lo paren. En Panán la olla lo hace nacer.
+
+Sobre la visita para aumentar el caudal, lo que queda escrito es el hecho desnudo: se sube a la olla cada vez que se requiere que crezcan los arroyos que recorren el territorio.`,
     leccion:
-      "Cuidar el nacimiento del agua es cuidar también los ciclos del clima.",
-    similitudes: similarities(
-      `Los ojos de agua vinculados con lluvia, granizo o regulación del clima forman parte de diversas territorialidades andinas. El Cualchio comparte esa asociación, pero la lista de plantas, el suelo pantanoso y su relación con los arroyos de Panán lo vuelven un lugar concreto.`,
-      `Guamurran también es una ciénaga de origen y Cuaichala abastece el acueducto. A diferencia de ellos, Cualchio se identifica específicamente con la Olla del Granizo y con visitas orientadas a recuperar caudal. María Panana es una laguna de armonización, no el mismo sitio.`,
-      `La palabra “olla” puede recordar calderas mágicas de cuentos, pero aquí designa una forma altoandina del terreno. Representarla como vasija o atribuirle un dueño fantástico alteraría el registro.`,
-    ),
+      "Un mismo hueco de altura puede dar a la vez el agua y el hielo.",
+    similitudes: `El paralelo más cercano es de escala regional y está documentado para el pueblo de los Pastos a ambos lados de la frontera: perturbar cerros o lagunas puede ocasionar una granizada, y algunos cerros sagrados son tenidos por portadores del granizo. La Olla del Granizo pertenece a esa familia de lugares que regulan el tiempo, con una diferencia que conviene no borrar: allá los cerros llevan el granizo, aquí el hueco lo produce.
+
+El segundo paralelo está dentro de Panán y es práctico. La ceniza de leña que se echa cuando arranca la tormenta y la ceniza que se riega afuera de la casa cuando llueve demasiado son gestos del mismo repertorio que la subida a la olla cuando bajan los arroyos: en los tres casos la comunidad interviene sobre el clima con un acto corto y doméstico, no con una ceremonia mayor.
+
+Dentro del territorio, la olla se distingue de los otros nacimientos por su oficio. Guamurrán guarda agua para dos resguardos, el Cucho de Cuaichala surte el acueducto y la devoción, el Chuchun junta tres quebradas y sirve para bañarse. El Cualchio es el único al que se sube a pedir caudal y el único emparentado con el hielo.
+
+Ollas, calderas y ojos de agua asociados con la lluvia hay en muchos páramos andinos; lo que aquí está escrito con nombre propio es la lista de plantas del monte y la ruta del agua hasta el río fronterizo.`,
     excerpt:
       "En la Olla del Granizo nace el Cualchio, entre monte nativo, pantano, lluvia y memoria de los mayores.",
     seoTitle: "El Cualchio y la Olla del Granizo de Panán",
@@ -730,7 +839,15 @@ La memoria del lugar enseña a mirar el clima desde su recorrido territorial. El
       "lugares sagrados",
     ],
     tags: ["agua", "naturaleza", "rituales", "tradición oral"],
-    sourceKeys: [...commonSourceKeys, "lugaresSagradosIcanh"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "puenayan2011",
+      "paramoChiles2009",
+      "planVida2005",
+      "historiaResguardo",
+      "planDesarrolloNarino2024",
+      "mamian1996",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "una olla natural altoandina cubierta por arrayán, encino y arbustos recibe lluvia y granizo; de su ojo de agua nace el Cualchio hacia Panán, sin vasija literal",
     ),
@@ -746,33 +863,40 @@ ${visualRule}`,
   definePananMyth({
     slug: "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
     title: "Cucho de Cuaichala y el palo santo",
-    mito: `Al pie del páramo, entre El Colorado y El Vicundo, se encuentra el Cucho de Cuaichala. El lugar se conecta con Agua Blanca y reúne nacimientos que han alimentado al poblado de Panán. “Cucho”, explica la fuente desde el uso local del quichua, nombra un rincón, un espacio apartado o una cima; la palabra sigue viva en el habla cotidiana.
+    mito: `Al pie del páramo, entre los sitios El Colorado y El Vicundo y conectado con Agua Blanca, está el Cucho de Cuaichala. Cucho viene del quichua cuchu: rincón, apartado, cima, el fondo de algo; en Panán la palabra sigue viva en el habla de todos los días, cuando se le dice a alguien que se acueste al cucho de la cama. Cuaichala nombra el monte oscuro, el lugar donde nacen las fuentes de agua.
 
-Hace varias décadas Cuaichala era un monte espeso. Allí nacía la quebrada Guacales, que recorre el resguardo de occidente a oriente. Del mismo sector se tomaron aguas para el acueducto que abastece cinco veredas. El ojo de agua ha permanecido incluso después de que gran parte del monte fuera convertida en potreros y cultivos.
+Hace cuatro décadas era un monte entero y hermoso. De ahí nacía la quebrada Guacales, que recorre el resguardo de occidente a oriente, y de ahí se recogieron las aguas que hoy abastecen el acueducto de cinco veredas.
 
-La memoria religiosa de Panán sitúa allí una aparición de la Virgen de las Mercedes. En el lugar se encontró el madero llamado palo santo. La comunidad bajó la madera del Cucho y la envió a San Antonio de Ibarra para que fuera tallada. De ella habría surgido la imagen que hoy se reconoce como patrona del resguardo y de sus habitantes católicos.
+En uno de esos bosques trabajaba un leñador. Vio un árbol perfecto para el fuego y le dio un hachazo, y en la corteza abierta le apareció sangre. Soltó el hacha y salió a buscar paisanos para que vinieran a ver el árbol. De ese madero se sacó la madera que se bajó del cucho y se mandó a tallar a San Antonio de Ibarra, del otro lado de la frontera, y de allá volvió hecha imagen: la Virgen de las Mercedes, hoy patrona del resguardo.
 
-Alrededor de esa memoria se formó una “tradición santificada”. Música, danza, sanjuanes, danzantes, el personaje del Negro, la mula, sacrificios y pagamentos se encuentran en la religiosidad popular. El catolicismo y las prácticas territoriales no aparecen como dos bloques sin contacto; la fuente nombra expresamente su sincretismo.
+En Panán ese árbol tiene otro nombre en la memoria. Se cuenta que en los bosques de Cuaichala renació María Panana, la cacica, la Cuaichaleña, la mujer de los páramos, la dueña del agua, y que es ella la que quedó mitificada en la patrona. La madera que sangró y la mujer que gobernó son la misma historia contada dos veces.
 
-La bajada del palo santo une monte, agua, trabajo comunitario y devoción. La madera pasa de un nacimiento del territorio a manos de talladores en Ibarra y regresa como imagen. La quebrada sigue otro trayecto: baja hacia las veredas y sostiene la vida diaria.
+Alrededor de la bajada del palo santo creció lo que en Panán llaman «tradición santificada»: la música, la danza, los sanjuanes, los danzantes, el negro, la mula, los sacrificios, los pagamentos. El monte quedó atado a la fiesta, y la fiesta al agua.
 
-El relato no oculta el cambio ambiental. El monte que dio el madero fue deforestado y hoy predominan potreros. El ojo de agua que todavía abastece a la comunidad recuerda que la tradición religiosa depende también de conservar el lugar material del que nació.`,
-    historia: history(
-      `El corpus principal documenta Cuaichala como referente de religiosidad popular y abastecimiento. Registra la visión de la Virgen, el hallazgo y traslado del madero, la talla en San Antonio de Ibarra, la quebrada Guacales, el acueducto y la deforestación posterior.`,
-      `La página no afirma que la talla sea un hecho arqueológicamente probado ni presenta el sincretismo como mezcla incompleta. Conserva la formulación comunitaria y diferencia la leyenda del palo, la infraestructura de agua observada y la interpretación académica sobre religiosidad.`,
-    ),
-    versiones: versions(
-      `Una formulación del corpus pone el énfasis en la aparición de la Virgen de las Mercedes y en el madero enviado a Ibarra. Otra descripción del mismo apartado resalta que allí nace Guacales y que las aguas abastecen cinco veredas. Son dimensiones religiosas y territoriales de un núcleo, no relatos incompatibles.`,
-      `La investigación llama “tradición santificada” al conjunto de música, danza, sanjuanes, danzantes, Negro, mula, sacrificios y pagamentos. La edición conserva esa lista como interpretación del trabajo, sin convertir cada práctica en episodio de la bajada.`,
-      `No se atribuye una fecha exacta a la aparición o la talla. Tampoco se reconstruye el aspecto del árbol ni de la primera imagen. El cambio del monte a potreros se incluye porque la fuente lo documenta.`,
-    ),
+Del monte de entonces no queda casi nada. Los habitantes lo fueron tumbando y hoy son potreros para los animales y para sembrar. El ojo de agua, en cambio, se mantiene y sigue surtiendo el acueducto de la comunidad. Por el mismo cucho por donde bajó el madero sigue bajando el agua.`,
+    historia: `El apartado 4.1.2 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, fija la geografía del lugar —El Colorado, El Vicundo, Agua Blanca, la quebrada Guacales, el acueducto de cinco veredas—, la etimología quichua de «cucho», el envío del madero a San Antonio de Ibarra y la deforestación posterior. Lo que no da es la causa: dice que ahí encontraron el madero, sin explicar por qué ese árbol y no otro.
+
+La causa está en Nostalgia de chutún, el trabajo de grado que Alejandro Ruiz Puetate presentó en 2015 a la Universidad de Nariño con narraciones de mayores de Panán, entre ellos Herminia Malte y los Chalparizán. Su glosario define Cuaichala como «monte oscuro, lugar donde nacen las fuentes de agua», y en el cuerpo aparece el leñador que al hachar el árbol percibe sangre en la corteza y sale a buscar paisanos; de ese árbol, escribe Ruiz, se extrajo la madera para tallar la Virgen de Mercedes. Ruiz enmarca el episodio como el renacimiento de María Panana en los bosques de Cuaichala.
+
+Ese enlace no es suyo solo. La misma tesis de 2016 escribe que María Panám es «la Cuaichaleña, la mujer de los páramos, dueña del agua», y que la cacica principal se mitificó entre las últimas generaciones como la Virgen de las Mercedes, patrona del territorio.
+
+San Antonio de Ibarra queda en la provincia de Imbabura, en Ecuador: la talla se encargó al otro lado de la frontera, y la imagen volvió al resguardo. Ruiz enumera además el «árbol sagrado en cuaichala» entre los sitios donde se aparece el ruani colorado, junto con su puntal en la Laguna Verde.`,
+    versiones: `Sobre el hallazgo del madero hay dos relatos. El de la tesis de 2016 es devocional y sin causa: en el sector se comenta la visión de la Virgen de las Mercedes y ahí encontraron el palo santo que después fue tallado. El de Ruiz 2015 es un relato de trabajo: un leñador buscaba leña, escogió el mejor árbol, lo hachó y vio sangre. El primero empieza por la aparición; el segundo, por el hacha.
+
+Cambia también quién queda en el centro. En la tesis de 2016 el episodio pertenece a la religiosidad popular y a la patrona. En Ruiz, el mismo bosque es el lugar donde renace María Panana, y la Virgen es la forma en que esa cacica siguió existiendo. Las dos lecturas conviven en las mismas páginas: la tesis, que cuenta la versión devocional, es también la que llama a María Panám «la Cuaichaleña».
+
+La glosa del topónimo varía de una línea a otra dentro de la propia obra de Ruiz: en el glosario, Cuaichala es «monte oscuro, lugar donde nacen las fuentes de agua»; en el cuerpo, «origen del agua, monte oscuro, origen de la vida».
+
+Del mismo monte salen dos aguas y la tesis las nombra casi seguidas: la quebrada Guacales, que recorre el resguardo de occidente a oriente, y el ojo de agua que todavía abastece el acueducto de cinco veredas. Una atraviesa el territorio; la otra entra en la tubería.`,
     leccion:
-      "La devoción permanece ligada al agua, al monte y al cuidado del lugar.",
-    similitudes: similarities(
-      `Las imágenes católicas halladas en árboles, piedras o aguas aparecen en muchas leyendas latinoamericanas. Cuaichala comparte ese patrón, pero su memoria se sitúa en el palo bajado del páramo, la talla en Ibarra y la patrona de Panán.`,
-      `Chuchún, Cualchio y Guamurran también describen nacimientos de agua; ninguno reúne del mismo modo acueducto y Virgen de las Mercedes. La Basílica encantada contiene una construcción que parece capilla, pero su función es desconocida y no debe integrarse a esta leyenda.`,
-      `El término sincretismo permite reconocer contactos históricos, aunque no autoriza a dividir la historia entre una capa “pura” indígena y otra externa. La memoria actual pertenece a la comunidad que la transmite.`,
-    ),
+      "Lo que abastece de agua a un pueblo puede sostener también su devoción.",
+    similitudes: `La operación que convierte a una cacica en santa está descrita para los Pastos. Mamián registra en Muellamués, resguardo vecino, que el poder de los caciques fue legitimado según los códigos de la dominación: el cacique Diego Muellamués sigue siendo legítimo como San Diego Muellamués, antes San Sebastián, y la cacica como Santa Rosa, entre otras cosas la santa de las parteras. Que en Panán la dueña del agua se recuerde en la Virgen de las Mercedes es el mismo procedimiento en otro resguardo.
+
+El segundo paralelo es el de los nombres. Ruiz enumera los ayllus de los que toman nombre los pueblos del Nudo de la Huaca: el cacique Tulcanaza en Tulcán, que es Ecuador; Juan Chiles en el resguardo de Chiles; el cacique Cumbe en Cumbal; y María Panana en Panán. Cuaichala es el punto donde ese nombre se vuelve madera y después imagen.
+
+Dentro del propio territorio, Cuaichala se parece a Guamurrán, al Cualchio y al Chuchun en que todos son nacimientos de agua, pero es el único que reparte acueducto y fiesta al mismo tiempo. El árbol sagrado de Cuaichala aparece además emparejado con el puntal de la Laguna Verde entre los sitios donde se deja ver el ruani colorado.
+
+Imágenes halladas en árboles o en piedras hay en muchas devociones americanas; aquí lo que se documenta es la sangre en la corteza y el nombre de la mujer que renace.`,
     excerpt:
       "Del Cucho de Cuaichala bajaron el palo santo asociado con la Virgen de las Mercedes y las aguas de Panán.",
     seoTitle: "Cuaichala y el palo santo de Panán",
@@ -786,7 +910,16 @@ El relato no oculta el cambio ambiental. El monte que dio el madero fue deforest
       "religiosidad Pastos",
     ],
     tags: ["agua", "fe", "sincretismo", "tradición"],
-    sourceKeys: [...commonSourceKeys, "lugaresSagradosIcanh"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "ruiz2015",
+      "quiroz2015",
+      "mamian1996",
+      "planVida2005",
+      "turismoCumbal",
+      "historiaResguardo",
+      "benavidesBurbano2004",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "comuneros bajan un madero sobrio desde el monte húmedo de Cuaichala junto al nacimiento de Guacales; al fondo Panán, sin aparición europea espectacular",
     ),
@@ -802,33 +935,34 @@ ${visualRule}`,
   definePananMyth({
     slug: "el-cueche",
     title: "El Cueche, hijo del agua y el sol",
-    mito: `Después de una llovizna, cuando el sol vuelve a iluminar el territorio, aparece el Cueche. Los mayores de Panán lo nombran como espíritu hijo del agua y del sol. Su arco engalana el paisaje y anuncia un cambio: puede indicar la llegada del invierno y un “páramo cosechero”, tiempo asociado con abundancia y buena cosecha.
+    mito: `El cueche es hijo del agua y del sol. Sale cuando los dos coinciden, después de un rocío en pleno verano, y engalana el filo del páramo con un arco perfecto que acompaña a quien lo mira mientras camina. Los mayores lo leen como anuncio: viene invierno, y con el invierno un páramo cosechero, tiempo de abundancia y de buena cosecha.
 
-No todos los Cueches se recuerdan iguales. Además del arco de muchos colores, se habla de Cueche colorado, negro y blanco. Esas formas son consideradas especialmente bravas. El ser reúne belleza y riesgo; mirar sus colores no significa que sea inofensivo ni que pueda cruzarse sin precaución.
+Pero el arco es sólo una de sus caras. En sueños se lo ha visto con cabeza de buey y el pelo como una cascada. Nace de un hoyo subterráneo, se pierde entre las plantas y arma una neblina que lo envuelve y en la que alcanzan a verse luces, una amarilla, otra blanca. En las ciénagas y en los nacederos donde se junta con sus iguales se reúnen los siete cueches, y en esos sitios los mayores aconsejan no tomar agua.
 
-La memoria habla del “ojeado” o “meado” del Cueche. Se le atribuyen cabello blanqueado, granos, fiebre y malestar. En mujeres puede relacionarse con inflamación del vientre que parece embarazo y se prolonga durante años. Dentro de la medicina propia, yerbateros y parteras son quienes reconocen y atienden esa afectación.
+Los hay de varios colores. El colorado, el negro y el blanco son los más comunes y al mismo tiempo los más bravos. Del cueche no se recibe un golpe sino un ojeado o un meado: blanquea el cabello, levanta granos en el cuerpo, deja fiebre y malestar. A las mujeres las busca de otro modo. Si una se baña en el río con el periodo, o sale mientras llueve y escampa a la vez, el cueche la preña, pero de agua: el vientre se inflama, duele la cadera y el estómago se llena hasta parecer un embarazo que dura años.
 
-En ciertos lugares húmedos, las mujeres cubren su cabeza cuando aparece el arco. Algunas trazan una cruz en la tierra con el machete y repiten una invocación católica para apartarlo de la vista. El gesto revela una transmisión donde el espíritu del agua y el sol convive con palabras cristianas. La fuente no los separa en dos relatos.
+Por eso, cuando el arco se abre sobre la quebrada, las mujeres se cubren la cabeza para no ser meadas. Y las que no alcanzan a cubrirse sacan el machete, cortan una cruz en la tierra y dicen: «santo dios, santo fuerte, santo inmortal, quítate de mi vista y desaparécete de aquí». Lo repiten tres veces y el arco, como arte de magia, se desaparece.
 
-El Cueche tampoco es solamente una enfermedad. Antes de la amenaza aparece como señal climática y promesa de cosecha. Su presencia recuerda que agua y sol actúan juntos: hacen visible el arco, alimentan cultivos y también exigen cuidado.
+Al pisado del cueche lo atienden los yerbateros y las parteras. Se hacen fahumentos —compresas calientes— de ruda, marco, romero y ramas de laurel con aguardiente, y del mismo cocido se aparta una toma a la que se agrega una pizca mínima de pólvora para que el vientre vaya desinflamando; algunos añaden cacho de borrego. Y hay todavía otro cueche, el que crece: siete variedades de una planta que sólo el médico tradicional sabe encontrar y que guarda para estas curaciones, como si el espíritu del agua se repitiera siete veces en el cielo, siete en la ciénaga y siete en el monte.`,
+    historia: `La caracterización general viene del apartado 4.2.2 de la tesis que Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García entregaron en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño: hijo del agua y del sol, anuncio de invierno, páramo cosechero, colorado, negro y blanco como los más bravos, y el ojeado que se presenta sobre todo en mujeres. El gesto del machete está en otro apartado del mismo capítulo, el de la Lechuza y Cuchicuelan, que fue tierra de hacienda donde sirvieron de peones los comuneros de la vereda Puscuelán.
 
-Cuando la lluvia y la luz coinciden sobre Panán, el paisaje abre un límite de colores. Quien lo observa puede leer temporada, abundancia, humedad o peligro. El Cueche mantiene todas esas posibilidades sin quedar reducido a un fenómeno físico ni a un monstruo. Su arco enlaza cielo, suelo húmedo y expectativa de cosecha.`,
-    historia: history(
-      `El corpus de 2016 dedica un apartado al Cueche y otro al sitio de la Lechuza y el Cuichi de Cuchicuelan. Esta página reúne la caracterización general: hijo del agua y el sol, anuncio de invierno, colores bravos, ojeado y atención por yerbateros y parteras.`,
-      `Las dolencias se presentan como categorías de medicina tradicional, no como explicación médica validada ni diagnóstico. La edición tampoco sustituye al Cueche por la palabra “arcoíris”: registra la relación sin afirmar que sean conceptos equivalentes en todos sus sentidos.`,
-    ),
-    versiones: versions(
-      `Una versión enfatiza al Cueche como señal favorable de invierno, abundancia y cosecha. Otra se concentra en el peligro del colorado, negro o blanco y en síntomas atribuidos al ojeado. La belleza climática y la afectación coexisten en el mismo apartado.`,
-      `En Cuchicuelan aparece como Cuichi asentado en un lugar de agua profunda, serpientes, ranas, lagartijas y mariposas. Allí se documenta además cubrir la cabeza, cortar una cruz con machete y repetir una oración. Esa memoria situada conserva su propia página.`,
-      `No se afirma que toda inflamación, fiebre o cambio de cabello provenga del Cueche. Tampoco se enseña el gesto ritual como tratamiento. Se atribuyen las afirmaciones a la memoria publicada y se remite la atención de salud al ámbito correspondiente.`,
-    ),
+La cabeza de buey, el pelo de cascada, el hoyo subterráneo, la neblina con luces y los siete cueches reunidos los recogió Byron Danilo Ruiz Puetate en Panán en 2015, en el mismo libro donde su glosario define el cueche como «un arco en las nubes, de muchos colores» y también como «un espíritu de las montañas con cabeza de buey y cabello de varios colores».
+
+La curación es anterior. Andrea Ojeda Guerrero la publicó en 2006 con los médicos tradicionales del resguardo, bajo el nombre de «pisado del Cueche Blanco o Negro», con los fahumentos de ruda, marco, romero y laurel y la pizca de pólvora; en su inventario de plantas del resguardo aparecen además «los cueches», siete variedades de una especie que no logró identificar, reservadas al médico. Erica Susana Quiroz Malte repitió la definición en 2015 y añadió el dato administrativo: en el informe de marzo de 2015 del puesto de salud de Panán, de cincuenta consultas de medicina tradicional, tres fueron por cueche, detrás del mal aire, el espanto y el quedado.
+
+Sobre la escritura del nombre: en la literatura de la región —Cumbal, Yaramal, Túquerres, Muellamués— se escribe cueche, y así se publica aquí.`,
+    versiones: `Las fuentes no se ponen de acuerdo en cuál es el peor. El corpus de Panán de 2016 nombra tres —colorado, negro y blanco— y los da por igual de bravos. En Túquerres, resguardo pasto vecino, Juan Portilla, Mario Madroñero y Carlos Getial recogieron en 2016 de diecinueve médicos tradicionales una jerarquía distinta: «hay varios tipos de Cueche, el negro que siempre se pega en quebradas, el blanco en ríos pequeños, este último es el más peligroso y maligno». Andrea Ojeda, dentro de Panán, sólo registra dos, blanco y negro, y los trata como un solo diagnóstico.
+
+Tampoco coinciden en a quién busca. En Panán se dice que se presenta especialmente en las mujeres y que el vientre inflamado se confunde con embarazo; en Túquerres se le teme sobre todo por los niños, los ancianos y las embarazadas, y los síntomas que allí se cuentan son fiebre alta, llagas, comezón y sueños de animales enfurecidos.
+
+Y cambia según lo que se esté nombrando. Para Ruiz es un espíritu de las montañas con cuerpo, cabeza y madriguera; para el corpus de 2016 es a la vez arco, presagio y enfermedad. En Muellamués, otro resguardo pasto, Diana Moreno Quenán lo resume en 2016 de una sola manera: «el cueche es el guardián de los lugares húmedos». En cada versión el arco cambia de oficio sin cambiar de sitio: siempre donde el agua se queda.`,
     leccion:
-      "La abundancia también pide respeto por las fuerzas que la hacen posible.",
-    similitudes: similarities(
-      `Arcos de colores asociados con lluvia, sol, puentes o seres poderosos aparecen en numerosas tradiciones. El Cueche de Panán se distingue por anunciar un páramo cosechero y por las categorías de ojeado atendidas por yerbateros y parteras.`,
-      `El Cuichi de Cuchicuelan es su manifestación territorial más cercana. Cualchio también relaciona clima y agua, pero mediante granizo y un ojo de agua. La Laguna de María Panana comparte la doble condición de sanación y peligro sin ser una forma del Cueche.`,
-      `La oración católica y la cruz trazada en tierra muestran una historia de contacto religioso. Compararlas con exorcismos genéricos borraría el lugar y la agencia de las mujeres que la fuente registra.`,
-    ),
+      "Lo que embellece el cielo después de la lluvia también deja huella en los cuerpos.",
+    similitudes: `El primer paralelo es de vecindad pasto y está bien fechado. En Túquerres, los diecinueve médicos tradicionales entrevistados por Portilla, Madroñero y Getial en 2016 llaman «miado del cueche» a lo mismo que en Panán se llama pisado, lo ponen entre las enfermedades espirituales junto al espanto y al mal viento, y afirman que la medicina occidental no las cura. En Muellamués, Moreno Quenán lo vuelve guardián de los lugares húmedos. Son tres resguardos del mismo pueblo con tres acentos.
+
+El segundo paralelo no sale del resguardo. Los siete cueches que Ruiz oyó reunirse en el hoyo subterráneo y las siete variedades de planta llamada cueche que Ojeda inventarió con los médicos de Panán comparten número y nombre, y sostienen el mismo tránsito: el espíritu está en el cielo, en la ciénaga y en la mata con la que se cura lo que él causó.
+
+Más allá, el nombre viaja. Al otro lado de la línea, en kichwa, el arco se dice kuychi, y los narradores del Carchi que reunió Ávalos en 2020 cuentan cueches junto a duendes y viudas. Esa es frontera compartida, no creencia de Panán.`,
     excerpt:
       "Hijo del agua y el sol, el Cueche anuncia cosecha y también una afectación atendida por medicina propia.",
     seoTitle: "El Cueche de Panán: agua, sol y cosecha",
@@ -842,7 +976,16 @@ Cuando la lluvia y la luz coinciden sobre Panán, el paisaje abre un límite de 
       "mitos de Panán",
     ],
     tags: ["agua", "espíritu", "naturaleza", "tradición oral"],
-    sourceKeys: [...commonSourceKeys, "medicinaMujerTerritorio2020"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "medicinaTradicional2006",
+      "tuquerres2016",
+      "ruiz2015",
+      "muellamues2016",
+      "mamian1996",
+      "puenayan2011",
+      "quiroz2015",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "un arco Cueche nace donde coinciden lluvia y sol sobre páramo, chagras y agua de Panán; comuneras se cubren la cabeza con sobriedad, sin figura ceremonial inventada",
     ),
@@ -858,37 +1001,38 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-basilica-encantada",
     title: "La Basílica encantada",
-    mito: `En la vereda El Espino, sector El Paraíso, hay una formación de piedra conocida como la Basílica encantada. Se encuentra dentro de una finca recuperada por habitantes de Panán. El nombre sugiere un gran templo, pero el lugar no corresponde a una basílica construida y documentada con torres, altar o campanas.
+    mito: `El Espino queda hacia el oriente del resguardo, en la franja de valles y llanuras donde está asentada la gente de Panán. Dentro de esa vereda hay un sector llamado El Paraíso, y en El Paraíso, en una de las fincas que la comunidad recuperó, está lo que en Panán llaman la Basílica encantada.
 
-Quienes han podido entrar hablan de oscuridad. Numerosos murciélagos ocupan el interior y el paso exige acostumbrar la vista. Las piedras forman espacios que se asemejan a una capilla. Hay particiones pequeñas, algunas con capacidad apenas para dos o tres personas.
+No es una iglesia. Son construcciones hechas en piedra, y al que entra le parecen una capilla: la forma se reconoce antes de que nadie la explique. Adentro está muy oscuro. Lo que hay en cantidad son murciélagos, y hay que esperar a que la vista se acostumbre para separar la piedra del hueco.
 
-La semejanza no resuelve su origen. La fuente no identifica quién organizó las piedras, cuándo lo hizo ni para qué se usaron los compartimentos. Tampoco registra una ceremonia, un tesoro o una aparición dentro. Su carácter “encantado” está en la combinación de forma, oscuridad, animales y preguntas aún abiertas.
+Lo que más llama la atención son las particiones. La piedra está dividida en espacios pequeños, del tamaño justo para encerrar a dos o tres personas. No hay altar, ni torre, ni campana. Hay compartimentos, uno al lado del otro, y una oscuridad que los iguala.
 
-El predio hace parte de la historia de recuperación territorial. Después quedó en usufructo de un comunero. La investigación lamenta el desinterés de autoridades indígenas por estudiar el lugar, una valoración de sus autores que debe distinguirse de una conclusión comunitaria definitiva.
+Han entrado pocos, y son esos pocos los que cuentan. Nadie ha establecido para qué se hizo, ni quién la levantó, ni cuándo, y el predio en el que está terminó dado en usufructo a un comunero, que es quien hoy lo trabaja.
 
-Al acercarse, la vegetación y el relieve ocultan las entradas. Dentro, el aire cambia y el vuelo de los murciélagos amplifica cualquier sonido. Las pequeñas divisiones permiten imaginar usos, pero la memoria responsable se detiene antes de escoger uno sin pruebas.
+Aun así el nombre camina. Cuando en Panán se enumeran las huellas del territorio, los lugares a los que hay que ir para conocerlos, se dicen cuatro seguidos: la Baciica, la Tuta, la piedra de los siete aljueros y la huaca. La Basílica va en esa lista, al lado de la gruta de origen y de los entierros de los antiguos. Conforme se camina, se conoce, y con ella lo único que se puede hacer es caminarla.
 
-La Basílica conserva así un misterio concreto. No necesita una procesión fantasma ni un sacerdote desaparecido para resultar significativa. Está ligada a una finca recuperada, a una arquitectura o formación pétrea no explicada y a la decisión pendiente de investigar sin dañar.
+El encanto está justamente en eso. La piedra sigue en su sitio, oscura, dividida y llena de murciélagos, dentro de una finca recuperada, y lleva el nombre de una basílica que nunca fue basílica.`,
+    historia: `El apartado 4.1.9 de la tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en noviembre de 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, describe el sitio. Lo ubica en la vereda El Espino, sector El Paraíso, en una de las fincas recuperadas por los habitantes de Panán, y recoge lo que dicen quienes han podido ingresar: que es un lugar muy oscuro donde habita cantidad de murciélagos, que son construcciones hechas en piedra que se asemejan a una capilla y que tiene particiones pequeñas como para encerrar a dos o tres personas. Añade que no se ha podido encontrar su finalidad, atribuyéndolo al desinterés de las autoridades indígenas de la comunidad —un juicio de los autores, no una posición del cabildo—, y que en ese momento el predio había sido dado en usufructo a un comunero.
 
-Los murciélagos continúan ocupando el espacio mientras la comunidad decide cómo conocerlo sin alterar sus condiciones.
+La segunda mención existe y es de Panán. En Nostalgia de chutún, trabajo de grado que Alejandro Ruiz Puetate presentó en 2015 a la misma universidad, hecho con narraciones de mayores del resguardo, el sitio aparece escrito «La Baciica» dentro de una lista de las huellas del territorio, junto con la Tuta, la piedra de los siete aljueros y la huaca, en un pasaje dedicado a los recorridos: nutrirse el pensamiento con los páramos y las montañas, y conocer conforme se camina.
 
-El encanto no ofrece una respuesta cerrada. Obliga a mirar, proteger y reconocer cuánto se ignora sobre un lugar que forma parte del territorio de Panán.`,
-    historia: history(
-      `El apartado de 2016 aporta pocos datos y declara expresamente que no se conoce la finalidad del sitio. La versión anterior rellenaba ese vacío con una iglesia completa y una leyenda dramática. La revisión conserva oscuridad, murciélagos, piedra, particiones y finca recuperada.`,
-      `No se llama “ruina prehispánica”, iglesia colonial ni cueva natural porque ninguna de esas clasificaciones está demostrada en las fuentes consultadas. La palabra basílica se mantiene como nombre local y la apreciación sobre desinterés se atribuye a la investigación.`,
-    ),
-    versiones: versions(
-      `La memoria publicada coincide en que el lugar es oscuro, contiene murciélagos, está hecho o conformado por piedra y se parece a una capilla con divisiones pequeñas. No incluye versiones narrativas sobre su construcción o encantamiento.`,
-      `La historia territorial de Panán permite situar la finca dentro de procesos de recuperación, pero no aclara la función de la estructura. Las fuentes institucionales ubican el resguardo y su paisaje; tampoco resuelven la pregunta.`,
-      `La edición no presenta hipótesis como hechos. No añade túneles, altares, prisioneros, misas o tesoros. La ausencia de una explicación queda visible como parte esencial del expediente.`,
-    ),
+La ubicación del sector concuerda con la geografía del resguardo: el estudio de dinámica poblacional de Benavides Játiva y Burbano Lucero, de 2004, sitúa El Espino entre los valles y llanuras de la zona oriental de Panán donde se ubican los asentamientos humanos.`,
+    versiones: `Son dos registros y cada uno mira el lugar desde un sitio distinto. El de 2016 describe la estructura desde adentro, con la voz de quienes entraron, y el de 2015 la nombra desde afuera, en una lista de lugares que se recorren.
+
+Esa diferencia importa porque cambia lo que el sitio es. En la tesis de 2016 la Basílica es una construcción de piedra en pie, con su forma de capilla y sus divisiones pequeñas, y su finalidad sigue abierta. En las narraciones de mayores recogidas por Ruiz, en cambio, la Baciica ya es otra cosa, una huella, un punto del territorio que se camina junto con la Tuta, la piedra de los siete aljueros y la huaca. Nombrarla al lado de la gruta de origen y de los entierros la coloca en una serie de lugares con carga, no en un inventario de curiosidades.
+
+También difiere la grafía. El nombre corriente es la Basílica encantada; la forma escrita por los mayores es «La Baciica», que es como suena.
+
+De los compartimentos se transmite lo que se ve al entrar: la oscuridad, la piedra partida en espacios para dos o tres personas y los murciélagos. Ni tesoro, ni procesión, ni aparición viajan con el nombre.`,
     leccion:
-      "Proteger un lugar también significa admitir lo que aún no conocemos.",
-    similitudes: similarities(
-      `Cuevas y formaciones pétreas llamadas iglesias, capillas o basílicas aparecen en distintos paisajes colombianos. La semejanza formal suele producir relatos de encantamiento, pero en Panán la fuente solo documenta el nombre, la estructura y el misterio.`,
-      `La Tuta también es un espacio oscuro de profundidad y conexión, aunque posee una memoria de origen mucho más desarrollada. Las Huacas involucran entierros y apariciones; no hay base para trasladar sus tesoros a la Basílica.`,
-      `Compararla con arquitectura europea puede ayudar a entender el nombre, no a dibujar una catedral completa. La imagen futura debe representar una formación baja de piedra integrada al territorio.`,
-    ),
+      "Un lugar puede entrar en la memoria de un pueblo sin que nadie sepa para qué sirvió.",
+    similitudes: `La compañía que la propia comunidad le da es el mejor paralelo disponible. Los mayores de Panán la nombran junto con la Tuta, la piedra de los siete aljueros y la huaca: son lugares de piedra, oscuridad y adentro, a los que se llega caminando y de los que se aprende recorriéndolos. La Basílica comparte con la Tuta la cueva y la sombra, y con la huaca el hueco y los antiguos.
+
+El segundo paralelo es de forma y viene del centro del país. En la reflexión sobre lugares sagrados publicada por el ICANH en 2018 se describe cómo cerros enteros se tienen por guacas: la gente los ha visto alumbrar, los sabe «hueca por dentro» y los ha oído bramar. Allí, como en El Paraíso, la certeza de que un sitio guarda algo no depende de que alguien haya entrado a comprobarlo; depende de su forma, su oscuridad y su fama.
+
+Lo que sí está excavado queda cerca y no es lo mismo. En El Porvenir, municipio de Iles, en el mismo departamento, una investigación de 2023 documentó cuarenta y siete tumbas prehispánicas de tradición Capulí. Iles no es Panán, y lo que allá se excavó son tumbas bajo tierra, no compartimentos de piedra al nivel del suelo.
+
+Formaciones y construcciones de piedra llamadas capillas o basílicas hay en muchos paisajes; aquí lo propio es la finca recuperada y las divisiones pequeñas.`,
     excerpt:
       "Una estructura oscura de piedra y murciélagos, parecida a una capilla, guarda una función todavía desconocida.",
     seoTitle: "La Basílica encantada de Panán",
@@ -902,7 +1046,16 @@ El encanto no ofrece una respuesta cerrada. Obliga a mirar, proteger y reconocer
       "memoria territorial Pastos",
     ],
     tags: ["misterio", "piedra", "memoria", "murciélagos"],
-    sourceKeys: [...commonSourceKeys, "lugaresSagradosIcanh"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "ruiz2015",
+      "capuliIles2023",
+      "lugaresSagradosIcanh",
+      "planVida2005",
+      "mujeresPastos2021",
+      "turismoCumbal",
+      "mamian1996",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "una formación baja de piedra integrada a una finca recuperada de Panán, con entrada oscura y murciélagos; parece capilla sin ser iglesia europea completa",
     ),
@@ -918,35 +1071,40 @@ ${visualRule}`,
   definePananMyth({
     slug: "la-cangagua-o-la-chorrera-del-duende",
     title: "La Cangagua y la Chorrera del Duende",
-    mito: `En la vereda La Merced, por el camino hacia Romerillo, El Vicundo, La Montañuela y El Tambillo, hay un rincón conocido como la Cangagua o la Chorrera del Duende. La cascada se pierde entre matorrales y el paso era considerado pesado, sobre todo a ciertas horas de la noche.
+    mito: `En la vereda La Merced, por el camino que sigue hacia El Romerillo, El Vicundo, La Montañuela y El Tambillo, hay un sitio llamado la Cangagua. Cangagua es la roca blanda del lugar, y ahí el camino se mete en un cucho con una chorrera que se pierde entre los matorrales. Antes la cascada era muy grande y estaba cubierta de ramas; hoy está más despejada. Por ese punto era imposible pasar a ciertas horas de la noche: ahí salía el duende y no dejaba seguir.
 
-José Tarapues, comunero de Panán, contó una experiencia ocurrida cuando cuidaba ganado con su padre en Monte Oscuro. Su padre ya se encontraba arriba. Él se quedó tomando un hervido con amigos y, cuando miró la hora, eran cerca de las once de la noche.
+José Tarapues, comunero de Panán, contó lo que le pasó. Tenía el ganado en el Monte Oscuro y lo cuidaba con su papá. El papá ya había subido; él se quedó con unos amigos tomándose un hervido y se le hizo tarde. Cuando se dio cuenta eran las once de la noche. Se despidió, cogió el caballo, que ya lo tenía listico, y se fue.
 
-Tenía listo el caballo y emprendió el camino. Al acercarse a la Cangagua, el animal se negó a avanzar. Tarapues pensó primero que le había dado chaqué. Bajó de la montura, pero el caballo empezó a retroceder como si algo lo asustara. El miedo del jinete creció mientras el lugar permanecía oscuro.
+Al ir llegando a la cangagua el caballo no quiso andar más. Pensó que le había dado la chaqué. Se bajó, y el animal empezó a correr para atrás, como asustándose. Entonces le empezó a dar miedo, y con la chuma encima no sabía para dónde iría a parar. Lo amarró en unas matas y se devolvió.
 
-Decidió no forzarlo. Lo amarró a unas plantas y regresó por donde había venido. A la mañana siguiente volvió preocupado por el caballo y por la montura. Temía que alguien se los hubiera llevado.
+Al otro día madrugó a ver si el caballo seguía ahí. Le preocupaba la montura; pensaba que no se la fueran a haber robado. Cuando llegó, el caballo estaba amarrado donde lo había dejado. Pero la crin del cuello y la cola, todita, estaba bien carnejada y enredada. Subió a conversarle a su papá, y su papá le dijo que era el duende el que le había salido.
 
-El animal seguía exactamente donde lo había dejado. Sin embargo, la crin del cuello y toda la cola estaban cuidadosamente trenzadas y enredadas. Tarapues subió a contarle a su padre. Él interpretó lo ocurrido: el duende había salido en la Cangagua.
+El duende habita en el mundo de abajo, en el agua, en chorreras y lugares oscuros de los montes. Nadie lo vio esa noche; se supo por el caballo que no pasó y por las trenzas que aparecieron. Al que sí queda enduendado hay que curarlo: el médico tradicional hace la limpia con estiércol de animales negros, ruda, lana, tarta negra con pillo, anamú y marco, sahúma, sopla y azota al enfermo con una escoba de esas plantas mientras reza «Asoma, asoma, asoma, Usata, Usata, Usata, Usata», y remata con tres sopladas de aguardiente, tres barridos y tres bendiciones.
 
-La experiencia no describe al ser ni afirma que el jinete lo viera. La presencia se reconoce por la conducta del caballo, el límite del camino y las trenzas aparecidas durante la noche. El relato conserva también el cambio del lugar: antes la chorrera era grande y estaba cubierta por muchas ramas; después quedó más despejada.
+La Cangagua sigue ahí, en el mismo camino, y sigue siendo sitio de historias, de conversas y de reflexiones.`,
+    historia: `El testimonio tiene nombre y fecha, y es de los pocos del corpus que los tiene. La tesis de Ernesto Ramiro Estacio y Luis Ulpiano Tatamués García, presentada en 2016 a la Maestría en Etnoliteratura de la Universidad de Nariño, transcribe el relato en su apartado 4.1.6 y lo acredita en nota al pie a José Tarapues, comunero de Panán, entrevistado en marzo de 2014. De él son el hervido, las once de la noche, la chaqué, la chuma, el caballo que retrocede y la crin carnejada.
 
-La Cangagua sigue siendo sitio de historias, conversaciones y reflexiones. El camino cotidiano, la cascada y el caballo convierten una noche de regreso en memoria compartida del territorio.`,
-    historia: history(
-      `A diferencia de otras entradas breves, esta página se apoya en un testimonio atribuido: José Tarapues fue entrevistado en marzo de 2014. La edición mantiene la secuencia del hervido, las once de la noche, el caballo que retrocede, el regreso matutino y las crines trenzadas.`,
-      `No se afirma que el duende fuera visto ni se inventa su voz. La conclusión pertenece al padre del narrador. También se conserva la transformación ambiental de la chorrera, antes más cubierta, porque muestra que la memoria se vincula con un paisaje cambiante.`,
-    ),
-    versiones: versions(
-      `El testimonio de Tarapues constituye la versión principal y situada. El caballo se niega a pasar, queda amarrado y al amanecer aparece con crin y cola trenzadas. La atribución al duende llega después, en la conversación con su padre.`,
-      `El apartado general del duende confirma que las travesuras con caballos y las trenzas forman parte de su memoria en Panán. Aporta un patrón comunitario, pero no debe reemplazar los detalles personales de Cangagua.`,
-      `La expresión chaqué se conserva como la primera explicación del narrador, sin definirla como diagnóstico. No se añaden luces, risas, música, persecución ni un encuentro cara a cara que el testimonio no contiene.`,
-    ),
+El mismo apartado ubica el sitio en la vereda La Merced, vía al Romerillo, El Vicundo, La Montañuela y El Tambillo, y lo describe como un lugar pesado, un cucho con una cascada que se pierde entre matorrales. La palabra cangagua aparece en la misma tesis, unas páginas después, como nombre de las rocas blandas del territorio.
+
+Lo que el duende es y cómo se cura viene de la etnobotánica médica del resguardo. Ojeda Guerrero presentó en 2006 a la Universidad de Nariño un trabajo sobre la medicina tradicional de Panán, hecho con los cinco médicos tradicionales y la partera del resguardo, entre ellas Eudocia Calpa: allí se define el enduendamiento como enfermedad producida por el duende, «que habita en el mundo de abajo en el agua, en chorreras y lugares oscuros de los montes», y se transcriben las plantas de la limpia y la fórmula «Asoma, asoma, asoma, Usata, Usata, Usata, Usata».
+
+En el mismo resguardo, Zonia Patricia Puenayán Irua escribió en 2011 que las fuentes de agua están protegidas por los espíritus —entre ellos el duende, el cueche y la vieja—, que viven en las orillas de las quebradas y en los nacederos, y que los lugares pesados son conocidos, de modo que hay que ir a determinadas horas del día para no encontrárselos.`,
+    versiones: `El relato de 2014 es una versión y se reconoce como tal: el duende no se ve, se deduce. Quien nombra al causante no es el jinete sino su padre, al día siguiente y arriba, después de oír el cuento. La prueba son el caballo que no pasa y la crin enredada; la primera explicación que el propio narrador se dio fue veterinaria, la chaqué.
+
+El apartado general del duende en la misma tesis lo pinta de otro modo: alegre, enamorado de las mujeres que lavan en las quebradas, travieso con los animales y sobre todo con los caballos, músico de profesión y aficionado a los instrumentos de cuerda. Ahí las trenzas son un hábito del ser; en la Cangagua son un hecho de una noche concreta.
+
+En los resguardos pastos vecinos la figura cambia de oficio. En Yaramal, en Ipiales, se cuenta que el duende es un hombrecillo que cuida el agua de la quebrada, que sale en las chorreras y los remansos, que su tambor es el agua y que con él llama a los curiosos, y que con el poder de sus ojos entunda a los que tumban el monte y queman la paja. Allí el duende castiga con criterio ecológico; en Panán, el testimonio de la Cangagua no le atribuye motivo alguno.
+
+También varía el remedio. El trabajo de medicina tradicional de Panán describe la limpia con plantas y la fórmula rezada; la tesis de 2016, en su apartado del duende, menciona flores de guanto, hojas de albarrecín y ramas de marco con chapil.`,
     leccion:
-      "Detenerse ante una señal puede ser más sabio que forzar el camino.",
-    similitudes: similarities(
-      `Caballos que se detienen ante un lugar y amanecen trenzados aparecen en relatos de duendes de varias regiones. En Cangagua, el valor documental está en la voz de José Tarapues, el camino preciso y la interpretación transmitida por su padre.`,
-      `La página del duende reúne otras apariciones en quebradas, alcantarillas y juegos infantiles. Cangagua no es un ser diferente, sino un lugar y un testimonio específico que merece conservar su atribución.`,
-      `La Entundada también hace perder el camino y La Viuda conduce hacia chorreras, pero aquí nadie gira en círculos ni sigue una figura femenina. El caballo marca el límite antes de que el jinete se pierda.`,
-    ),
+      "Cuando un animal se niega a seguir, el camino ya dijo algo antes que el jinete.",
+    similitudes: `El paralelo más desarrollado está en Yaramal, resguardo pasto del municipio de Ipiales, donde una investigación de maestría dedicó capítulos enteros al duende, al entundamiento y al territorio como espacio sagrado del duende. Allí el duende es protector del agua, su tambor es el agua, forma bailes en círculo en los remansos y entunda con la mirada a quien tumba el monte. Es la misma familia de relatos, en otro resguardo y con más detalle: Yaramal no es Panán y conviene leerlo como vecindad, no como creencia local.
+
+El segundo paralelo está dentro del propio resguardo. Puenayán Irua registra en Panán que el duende, la vieja y el cueche protegen las fuentes de agua, que viven en las orillas de las quebradas y los nacederos, y que causan problemas a quien entra sin pedir permiso. La Cangagua es un caso puntual de esa regla general: un punto de agua que no se cruza a cualquier hora.
+
+El tercero es lingüístico y está en el glosario de mayores de Panán, donde entundarse se define como perderse en un campo, dormirse en un monte, una zanja o un páramo. El jinete de la Cangagua no llegó a entundarse porque el caballo se detuvo antes.
+
+Caballos que amanecen con la crin trenzada aparecen en relatos de duendes de varias regiones; lo que aquí está fechado y firmado es una noche de marzo contada por su protagonista.`,
     excerpt:
       "Un caballo se negó a cruzar la Cangagua y amaneció con crin y cola trenzadas: señal atribuida al duende.",
     seoTitle: "La Cangagua y la Chorrera del Duende",
@@ -960,7 +1118,16 @@ La Cangagua sigue siendo sitio de historias, conversaciones y reflexiones. El ca
       "mitos del pueblo Pastos",
     ],
     tags: ["duende", "agua", "misterio", "tradición oral"],
-    sourceKeys: [...commonSourceKeys, "origenPananes"],
+    sourceKeys: [
+      "memoriaTerritorial2016",
+      "medicinaTradicional2006",
+      "espiralAndino2014",
+      "yaramal2009",
+      "quiroz2015",
+      "avalos2020",
+      "planVida2005",
+      "ruiz2015",
+    ],
     imagePromptHorizontal: horizontalPrompt(
       "de noche un caballo se detiene y retrocede ante una cascada cubierta de matorral en La Merced; el jinete baja sin ver al duende",
     ),

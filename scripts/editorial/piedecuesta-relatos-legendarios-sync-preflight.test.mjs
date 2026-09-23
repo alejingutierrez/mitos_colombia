@@ -25,7 +25,11 @@ test("la sincronización prepara cuatro correcciones sin altas ni bajas", { skip
   assert.deepEqual(output.universe.toDelete, []);
   assert.equal(output.dossiers, 4);
   assert.equal(output.imagePairs, 4);
-  assert.equal(output.sourcesPerMyth, 7);
+  // Era 7 para todas, el reparto en bloque. Ahora es un abanico: las rehechas
+  // con piso de 8 y las bloqueadas con su reparto heredado.
+  const porMito = [output.sourcesPerMyth].flat();
+  assert.ok(porMito.length > 1, "todas con el mismo número de fuentes: huele a reparto en bloque");
+  assert.ok(Math.min(...porMito) >= 5, `alguna ficha baja del piso: ${Math.min(...porMito)}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

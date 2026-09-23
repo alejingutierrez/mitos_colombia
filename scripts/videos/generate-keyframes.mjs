@@ -77,7 +77,9 @@ function buildPrompt(item, spec) {
   }[item.kind];
 
   return [
-    "Dirección de arte para la biblia visual en video de mitos colombianos (pueblo muisca, altiplano cundiboyacense).",
+    // El pueblo y su territorio los pone la spec: el generador ya no es sólo
+    // muisca. Sin CONTEXTO se conserva el encabezado histórico.
+    `Dirección de arte para la biblia visual en video de mitos colombianos (${spec.CONTEXTO || "pueblo muisca, altiplano cundiboyacense"}).`,
     "",
     "Técnica central:",
     "- Fotografía frontal de una maqueta física real de papel artesanal, no ilustración digital.",
@@ -87,6 +89,13 @@ function buildPrompt(item, spec) {
     "",
     "Escena:",
     `- ${item.scene}`,
+    "",
+    // Nota de dirección común a toda la spec. Existe para que las reglas que
+    // valen para TODOS los cuadros (p. ej. «esto es el primer fotograma de un
+    // clip de 5 s») se digan una sola vez aquí y no como coletilla repetida al
+    // final de cada escena: repetirlas por escena dispara el aviso de «escena
+    // muy larga» del linter, y las escenas largas diluyen las instrucciones.
+    ...(spec.DIRECCION ? ["", `Dirección para todos los cuadros: ${spec.DIRECCION}`] : []),
     "",
     `Paleta: ${spec.PALETTE}.`,
     `Evitar SIEMPRE: ${spec.SHARED_AVOID}${item.avoid ? `; ademas evitar: ${item.avoid}` : ""}.`,

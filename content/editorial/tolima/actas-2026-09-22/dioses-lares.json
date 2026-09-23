@@ -1,0 +1,176 @@
+{
+  "slug": "dioses-lares",
+  "titulo_en_la_fuente": "2.5. Dioses lares (Izquierdo Gallo 1956, en Villa Posse III, sección 30 «Mitos Chibcha», pp. 53-54)",
+  "desbloqueada": "2026-09-22: tipo A. El texto usable es descriptivo, no narrativo: el apartado 2.5 de Izquierdo Gallo (1956, en Villa Posse III, pp. 53-54) y la crónica de la que sale, Lucas Fernández de Piedrahita, Historia general de las conquistas del Nuevo Reino de Granada (1688), Libro I, cap. II, pp. 9-10 de la edición de Bogotá, 1881 (Banrepcultural, id 3164), extraída a primarias/piedrahita-1881-lib1-cap2-pijaos-laches-pp9-10.txt. El «mito» describe las dos creencias tal como las dan esos textos, sin guerrero, víctima ni escena inventados; la historia declara que es una descripción colonial y no un relato oral.",
+  "antes_bloqueada": "No hay historia que contar. El único texto que lleva este título es el apartado 2.5 «Dioses lares» de Mariano Izquierdo Gallo, Mitología americana. Selección de mitos aborígenes de América (Madrid, Guadarrama, 1956), reproducido por Villa Posse en Mitos y leyendas de Colombia III (IADAP, 1993), sección 30, pp. 53-54, dentro del ciclo chibcha. Villa Posse advierte en la nota de procedencia (pp. 12-13 de la sección) que es una «presentación elaborada literariamente» a partir de cronistas. Leído entero (primarias/villa-posse-1993-iii-s30-izquierdo-gallo-1956-dioses-lares.txt): son cinco párrafos de glosa comparativa sin personaje, sin acontecimiento, sin narrador ni lugar concreto. (1) Abre con una tesis apologética: la creencia en la inmortalidad fue «exagerada» por los pueblos «no favorecidos con la divina Revelación». (2) Define los Lares romanos y dice que le «parecen» Lares los que veneraban algunos pueblos de Colombia. (3) Atribuye a «tribus» pijao, coyaima y natagaima la creencia de que el inocente muerto se hace dios protector de su matador y de la familia de éste, por un plazo de lunas, y que los guerreros buscaban una víctima inocente; lo presenta como «aberración» y no da fuente para ese párrafo. (4) Atribuye a los laches (provincia de Tunja, no Tolima) la adoración de piedras que fueron hombres y de su propia sombra como dádiva del Sol, con nota a Bozo M. Darío, «Mitología y escritura de los chibchas», Registro Municipal, Bogotá, 1938. (5) Cierra con una broma sobre la «mala sombra». Es la descripción, desde fuera y con lenguaje colonial, de dos prácticas atribuidas a dos pueblos distintos, unidas por una analogía romana del autor. Convertir eso en «mito» obliga a inventar exactamente lo que falta: un guerrero, una víctima, una escena, una voz. Es lo que hacía la ficha publicada. Cruce con grep -ril «dioses lares», «lares» y «dios protector» en todos los content/editorial/*/primarias/: sólo aparece este extracto; el módulo muisca ya lo había sacado de su corpus (editorial/muisca/universe.mjs). Devia (1962/2013) y Rocha Castilla (VP II pp. 167-182), las dos obras tolimenses abiertas, no traen nada parecido, y Oliveros («Coyaimas y Natagaimas», Geografía Humana de Colombia t. IV) tampoco registra un culto al muerto protector.",
+  "registro": {
+    "obra": "Mitología americana. Selección de mitos aborígenes de América (reproducido en Villa Posse, Mitos y leyendas de Colombia III, IADAP, 1993), sobre Fernández de Piedrahita, Historia general de las conquistas del Nuevo Reino de Granada (1688; ed. Bogotá, Medardo Rivas, 1881)",
+    "autor": "Mariano Izquierdo Gallo (reproducido por Villa Posse, IADAP 1993); crónica de base: Lucas Fernández de Piedrahita",
+    "anio": 1956,
+    "paginas": "Villa Posse III, sección 30, pp. 53-54 (apartado 2.5); Piedrahita, ed. 1881, Libro I, cap. II, pp. 9-10",
+    "url": "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    "narrador": null,
+    "lugar": "Tolima y Huila (pijaos, coyaimas, natagaimas; llanos de Neiva) y provincia de Tunja (laches)",
+    "fecha_de_recoleccion": null
+  },
+  "nudos": [
+    {
+      "hecho": "Pijaos en las sierras; coyaimas y natagaimas en los llanos de Neiva.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "sin más diferencia de los Coyaimas y Na"
+    },
+    {
+      "hecho": "Coyaimas y natagaimas en los llanos de Neiva, pijaos en las sierras.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "habitar éstos en los llanos de Neiva y aquéllos en las sierras"
+    },
+    {
+      "hecho": "Algunas naciones no adoran Sol, Luna ni ídolo: su dios es el hombre que matan.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "ni adoran Sol ni Luna ni otro ídolo alguno como los demas"
+    },
+    {
+      "hecho": "Territorio del Tolima y del Huila; pijaos, coyaimas y natagaimas.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "El territorio del Tolima y del Huila estuvo habitado por los pueblos más bravos"
+    },
+    {
+      "hecho": "No lo matan para comer sino para que sea dios.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "matan para comer sino para que sean"
+    },
+    {
+      "hecho": "Sale inocente de este mundo y se hace dios en el otro.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "porque dicen que aquél sale inocente de este"
+    },
+    {
+      "hecho": "Cuida al que lo mató y a toda su familia, pero no a otros.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "tarlo para. hacerle bien á él Y á toda su familia"
+    },
+    {
+      "hecho": "El dios dura cierto número de lunas o meses; luego quedan sin dios hasta hallar a quién matar.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "y en pasando se quedan sin Dios hasta que hallan á quien matar"
+    },
+    {
+      "hecho": "La víctima no puede ser del propio pueblo, ni enemigo, ni de pueblo contrario: su sangre no es inocente.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "pueblo ni ene:nigo suyo ni de pueblo contrario, cuya sangre no tienen por inocente"
+    },
+    {
+      "hecho": "Sirven hombres buscados por los caminos, mujeres o niños.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 9",
+      "literal": "buscados por los caminos, ó la de mujeres ó niños"
+    },
+    {
+      "hecho": "Los guerreros ponían gran diligencia en escogerse un dios protector.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "los guerreros tolimenses ponían gran diligencia en escogerse un dios protector"
+    },
+    {
+      "hecho": "Izquierdo Gallo pone entre las víctimas a un amigo y a un desconocido caminante.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "debían poner una celada a algún amigo, a algún hombre inofensivo"
+    },
+    {
+      "hecho": "Laches de la provincia de Tunja.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), pp. 53-54",
+      "literal": "En la antigua provincia de Tunja habitaba el pueblo salvaje de los laches"
+    },
+    {
+      "hecho": "Los laches adoran las piedras: todas fueron hombres, los hombres al morir se vuelven piedras, y llegará el día en que resuciten hechas hombres.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 10",
+      "literal": "que todos los hombres en muriendo se convertian"
+    },
+    {
+      "hecho": "Llegará el día en que todas las piedras resuciten hechas hombres.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 10",
+      "literal": "y habia de llegar el dia en que todas las piedras resucitasen"
+    },
+    {
+      "hecho": "Adoran su propia sombra: llevan siempre a su dios consigo y lo ven cuando el día es claro.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 10",
+      "literal": "de suerte que siempre llevaban á su Dios consigo y"
+    },
+    {
+      "hecho": "Saben que la sombra la causan la luz y el cuerpo interpuesto, pero dicen que lo hace el Sol para darles dioses.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 10",
+      "literal": "respondian que aquello lo hacia el Sol para darles Dioses"
+    },
+    {
+      "hecho": "Ante la sombra de árboles y piedras: dioses de los árboles, y dioses de sus dioses.",
+      "fuente": "Piedrahita, Historia general (ed. 1881), Libro I, cap. II, p. 10",
+      "literal": "porque á las primeras tenian por"
+    },
+    {
+      "hecho": "La sombra como dádiva del Sol, el más grande de los dioses.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 54",
+      "literal": "También adoraban su propia sombra, por considerarla una dádiva del más grande de los dioses"
+    },
+    {
+      "hecho": "El nombre «dioses lares» es una analogía romana del autor de 1956.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "Dioses Lares nos parecen los que veneraban algunos pueblos indígenas"
+    }
+  ],
+  "lo_que_dice_el_texto": [
+    {
+      "hecho": "Tesis de partida: la creencia en la inmortalidad fue exagerada por los pueblos sin revelación cristiana.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "la exagerasen casi todos los pueblos no favorecidos con la divina Revelación"
+    },
+    {
+      "hecho": "La analogía es del autor: le parecen Lares.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "Dioses Lares nos parecen los que veneraban algunos pueblos indígenas de la actual Colombia"
+    },
+    {
+      "hecho": "Atribución a pijaos, coyaimas y natagaimas del muerto inocente divinizado que protege a su matador.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "Creían que el hombre que moría inocente, se hacía dios en la vida y que protegía al que había hecho el bien de matarle y a la familia del matador"
+    },
+    {
+      "hecho": "Plazo de lunas del dios protector.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), p. 53",
+      "literal": "señalarle a su dios protector un plazo fijo de determinadas Lunas o meses"
+    },
+    {
+      "hecho": "Los laches de la provincia de Tunja: piedras que fueron hombres y la sombra como dádiva del Sol.",
+      "fuente": "Villa Posse III (Izquierdo Gallo 1956), pp. 53-54; nota a Bozo M. Darío, Registro Municipal, 1938",
+      "literal": "piedras fueron en otro tiempo hombres y de que los hombres, al morir, se volvían piedras"
+    }
+  ],
+  "fuera": [
+    {
+      "elemento": "Todo el «mito» publicado: el guerrero que «buscaba una protección», que «elegía a una persona inocente, la mataba y esperaba»; el «caminante» que una mañana mira su sombra y levanta una piedra del sendero; el «alguien los llamó dioses lares».",
+      "por_que": "Ninguna de esas escenas está en el texto: son dramatización de una glosa. El caminante y la piedra del sendero son invención; el guerrero individual es una personificación de una frase genérica («los guerreros tolimenses ponían gran diligencia en escogerse un dios protector»)."
+    },
+    {
+      "elemento": "«Villa Posse reproduce el pasaje en el volumen III» presentado como parte de un mito del Tolima, y el cajón «Tolima mixto».",
+      "por_que": "El apartado está en la sección chibcha de Villa Posse III y la mitad del texto (laches) es de Boyacá; la otra mitad no tiene narrador ni lugar tolimense concreto."
+    },
+    {
+      "elemento": "Las fuentes britishMuseumLares (403), izquierdoCatalog (Google Books, vetada), Ministerio de Cultura, ONIC, CRIT y Museo del Oro como respaldo de la ficha.",
+      "por_que": "Ninguna contiene el pasaje; British Museum no abre; Google Books está vetada; las caracterizaciones del pueblo pijao no mencionan un culto al muerto protector."
+    },
+    {
+      "elemento": "La lista de víctimas de Izquierdo Gallo («algún amigo»), fundida con la de Piedrahita",
+      "por_que": "Se contradicen: Piedrahita excluye a los del propio pueblo; Izquierdo pone a un amigo. El relato sigue a Piedrahita, que es la fuente anterior, y la diferencia va a Versiones."
+    },
+    {
+      "elemento": "Los calificativos coloniales («aberración», «barbaridad nunca oída», «estolidez», «pueblo salvaje») y la broma de la «mala sombra»",
+      "por_que": "Son juicio del cronista y del compilador, no parte de la creencia; se citan en Historia como lo que son."
+    }
+  ],
+  "pendiente": "Cotejar si fray Pedro Simón (Noticias historiales) trae el mismo pasaje pijao antes que Piedrahita; y decidir el cajón: los pijaos y los laches son dos pueblos distintos, reunidos sólo por la analogía de 1956.",
+  "clasificacion": {
+    "por_que_mixto": "sin sostener: el texto no es un relato de ninguna comunidad; mezcla dos pueblos (pijaos del Tolima-Huila y laches de Boyacá) sólo por la analogía romana del autor, y eso no es una tradición mixta.",
+    "propuesta": "sin decidir"
+  },
+  "dudas": [
+    "El texto no es un relato oral sino una descripción de cronista (1688) reelaborada en 1956: se publica como descripción de dos creencias, no como mito narrado. Decisión editorial abierta: mantenerla en el catálogo de mitos o convertirla en nota.",
+    "Cajón: mezcla pijaos del Tolima-Huila y laches de Boyacá; «mixto» sigue sin sostener."
+  ]
+}

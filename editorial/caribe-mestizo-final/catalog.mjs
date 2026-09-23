@@ -112,3 +112,31 @@ export const caribeMestizoFinalCatalog = [
 export const caribeMestizoFinalCatalogBySlug = Object.fromEntries(
   caribeMestizoFinalCatalog.map((entry) => [entry.slug, entry]),
 );
+
+/**
+ * Corpus conocido sin ficha.
+ *
+ * Al abrir el primario de este ciclo —Manuel Zapata Olivella, «Tradición oral y
+ * conducta en Córdoba», Incora 1972; 3.ª ed. Univalle 2021, «Género: cuento y
+ * leyenda», pp. 237-267— apareció que el bloque imprime 44 piezas y el sitio
+ * publica 32. Estas once son las que faltan.
+ *
+ * No se publican: el encargo de 2026-09-19 era reescribir lo publicado, no
+ * ampliarlo (DECISIONES.md, decisión G). Quedan aquí con su página porque el
+ * primario ya está abierto y extraído en
+ * `content/editorial/caribe-mestizo-final/primarias/`, y encontrarlas otra vez
+ * costaría lo que costó la primera.
+ */
+export const caribeMestizoFinalCorpusSinFicha = [
+  { titulo: "El montuno y el radio", pagina: 247 },
+  { titulo: "La muerte de Tía Zorra (Tercera versión)", pagina: 255 },
+  { titulo: "Un día estaba un caimán asoleándose", pagina: 257 },
+  { titulo: "El diablo haciendo palomitas", pagina: 257 },
+  { titulo: "La receta", pagina: 257 },
+  { titulo: "El burro y el puerco", pagina: 264 },
+  { titulo: "El panadero y el perro", pagina: 264 },
+  { titulo: "El indio y el negro", pagina: 265 },
+  { titulo: "Los ladrones", pagina: 265 },
+  { titulo: "Tío Conejo y Tío Gallo (Segunda versión)", pagina: 265 },
+  { titulo: "La misa del testamento", pagina: 266 },
+];

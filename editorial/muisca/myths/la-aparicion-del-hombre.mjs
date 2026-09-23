@@ -81,6 +81,8 @@ Fuera de América, el hombre de barro animado por aliento aparece en el Génesis
     "planBosa",
     "popolVuh",
     "viracocha",
+    "rubioSociedad2005",
+    "hoyosTextiles1993",
   ],
   researchNotes: `ESTADO: reescritura editorial completa (relato, historia, versiones, lección, similitudes y SEO).
 

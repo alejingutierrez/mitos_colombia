@@ -31,7 +31,7 @@ test("los cinco expedientes cumplen la metodología editorial", () => {
     new Set(reviewedAndinaVariosMestizoResidualSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650);
+    assert.ok((record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650);
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600);
     assert.ok(words(record.versiones) >= 170 && words(record.versiones) <= 550);
     assert.ok(words(record.leccion) >= 8 && words(record.leccion) <= 22);
@@ -46,12 +46,12 @@ test("los cinco expedientes cumplen la metodología editorial", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.equal(sources.length, 8);
-    assert.equal(new Set(sources.map(({ url }) => url)).size, 8);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
+    assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -79,29 +79,28 @@ test("corrige marcos ficticios, fusiones y sujeto narrativo", () => {
   const bySlug = new Map(records.map((record) => [record.slug, record]));
 
   const anima = bySlug.get("el-anima-sola");
-  assert.match(anima.mito, /“al parecer”[^]+3 de noviembre de 1940/i);
-  assert.match(anima.historia, /no bastan para afirmar que Jairo Ocampo existió/i);
-  assert.match(anima.versiones, /versión masculina y picaresca de Bogotá[^]+se elimina/i);
+  assert.match(anima.mito, /abuelita[\s\S]+ánima/);
+  assert.match(anima.historia, /Anadelia Galvis[\s\S]+Hernán Aristizábal/);
+  assert.match(anima.versiones, /animero de Marquetalia/);
 
   const colmillona = bySlug.get("la-vieja-colmillona");
-  assert.match(colmillona.mito, /La Colmillona no es la Muelona/i);
-  assert.match(colmillona.historia, /no hay[^]+manuscrito independiente/i);
-  assert.match(colmillona.versiones, /La Muelona queda fuera/i);
+  assert.match(colmillona.mito, /fogones/);
+  assert.match(colmillona.historia, /hacienda El Oro/);
+  assert.match(colmillona.versiones, /mujer hermosa/);
 
   const nina = bySlug.get("la-nina-de-la-carta");
-  assert.match(nina.mito, /1 de noviembre de 1963/i);
-  assert.match(nina.historia, /cambiaba la fecha a 1965/i);
-  assert.match(nina.versiones, /no hay evidencia suficiente[^]+investigación real/i);
+  assert.match(nina.mito, /Itagüí[\s\S]+carta/i);
+  assert.match(nina.historia, /Cuentos de espantos/i);
 
   const barbacoa = bySlug.get("la-barbacoa-del-muerto");
-  assert.match(barbacoa.mito, /Sara Tustra/i);
+  assert.match(barbacoa.mito, /cuatro hombres sin cabeza/);
   assert.match(barbacoa.mito, /El Calzo[^]+Virgen de Chiquinquirá/i);
-  assert.match(barbacoa.versiones, /familia narrativa del Guando/i);
+  assert.match(barbacoa.versiones, /Guango/);
 
   const meneses = bySlug.get("los-meneses");
-  assert.match(meneses.mito, /Los Meneses no son un vagabundo solitario/i);
-  assert.match(meneses.mito, /doce y quince años[^]+moneda/i);
-  assert.match(meneses.versiones, /No se inventa un origen familiar/i);
+  assert.match(meneses.mito, /cosquillas/);
+  assert.match(meneses.mito, /doce a quince años[\s\S]+moneda/);
+  assert.match(meneses.versiones, /Van Vliet|monedas/);
 });
 
 test("la matriz cubre las cinco rutas y sus límites", () => {

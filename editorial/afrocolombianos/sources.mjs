@@ -355,6 +355,294 @@ export const afrocolombianSources = {
     limitation:
       "No prueba que toda fiesta de un relato use marimba ni que prácticas del sur describan el Medio Atrato.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-19 ———
+  mejiaOralidad2007: source({
+    title: "Oralidad y escritura en la isla de San Andrés",
+    author: "Juliana Botero Mejía",
+    year: 2007,
+    type: "artículo de revista arbitrada",
+    url: "http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-48072007000200014",
+    summary:
+      "Fija los nombres con que la araña circula en el archipiélago —Anancy, Nansi, Anansi, Old Anancy, Bredda Anancy, Hemano Nansi— y registra que las Historias de Anancy se hicieron para ser contadas, cantadas y actuadas por los abuelos, y que en ellas se narran África, la esclavitud y el presente de las islas.",
+    limitation:
+      "Es un estudio sobre oralidad y alfabetización, no una recopilación: los datos sobre Anancy están en una nota al pie y no incluye ninguna versión narrativa. Remite a los trabajos de Carol O'Flynn de Chávez, Marcia Dittmann y Oakley Forbes sin reproducirlos.",
+  }),
+  rodriguezdiaspora2011: source({
+    title: "La diáspora akán: los cuentos de Anancy en Limón y el Caribe colombiano insular",
+    author: "Lina Pochet Rodríguez",
+    year: 2011,
+    type: "artículo de revista arbitrada",
+    url: "https://dialnet.unirioja.es/descarga/articulo/5689730.pdf",
+    summary:
+      "Traza la ruta por la que el personaje llegó a Colombia: los akán del sur de Ghana y las zonas vecinas de Costa de Marfil y Togo, la lengua twi, la atribución de los cuentos de la araña a los asante, las compañías navieras inglesas, Jamaica como plataforma de distribución y el desembarco en el archipiélago de San Andrés, Vieja Providencia y Santa Catalina.",
+    limitation:
+      "Es una reseña histórica de la diasporización, no un corpus de relatos; no documenta ninguna versión chocoana ni menciona el episodio del campanario. Su otro caso es Limón, en Costa Rica, y no Colombia continental.",
+  }),
+  mejiacuentistas2007: source({
+    title: "Las cuentistas de hoy en La Guajira, San Andrés y Providencia y El Chocó",
+    author: "Ana Mercedes Patiño Mejía",
+    year: 2007,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/pdf/4983/498357113007.pdf",
+    summary:
+      "Describe el corpus isleño: los veintidós relatos de Lolia Pomare Myles publicados en «Anancy Stories. Cuentos de Anancy» (Fabio Eusse, ed., Fondo Mixto para la Promoción de la Cultura y las Artes del Archipiélago, 2001), en los que Anancy aparece siempre con el hermano Tigre y no siempre sale bien librado, y las compilaciones que Bill y Cathy Washabaugh hicieron en Vieja Providencia en los años setenta.",
+    limitation:
+      "Es una reseña de literatura escrita por mujeres: describe el volumen de 2001 pero no lo transcribe, y el libro de Eusse no está digitalizado, de modo que el contenido de los veintidós relatos se conoce aquí sólo por esta descripción.",
+  }),
+  velasquezCriollo2023: source({
+    title: "Criollo sanandresano (ficha de lengua)",
+    author: "Astrid Lorena Bernal Velásquez, Instituto Caro y Cuervo",
+    year: 2023,
+    type: "ficha institucional de lengua",
+    url: "https://lenguasyliteraturasnativas.caroycuervo.gov.co/criollo-sanandresano/",
+    summary:
+      "Documenta la lengua en la que se cuentan los Anancy stories: población raizal del archipiélago, base lexical inglesa del criollo, y la sectorización lingüística de San Andrés descrita por Marcia Dittmann tras la declaratoria de puerto libre de 1953.",
+    limitation:
+      "No menciona a Anancy ni recoge relato alguno; sirve únicamente para situar la lengua y el desplazamiento del criollo, y sus cifras de población provienen del censo piloto de 1999.",
+  }),
+  rEDescuela: source({
+    title: "La escuela en la tradición oral",
+    author: "Programa RED, Universidad Nacional de Colombia; narración de Rosalba Cossio García",
+    type: "recopilación escolar de tradición oral",
+    url: "https://books.google.com.co/books?id=P5WYUJAbAr8C&pg=PA44&q=Kijimba",
+    summary:
+      "Es la fuente del relato completo. En las páginas 44 y 45, bajo el título «KIJIMBA» y la línea «Narración de la señora Rosalba Cossio García», está todo lo que la ficha cuenta: los bailes de Tanguí, Guayabal, Tutunendo, Condoto, Tanando y Quito; la tambora escuchada desde la cama; las advertencias de los familiares; la palanca, el canalete y la champa achicada; la casa río arriba con todos vestidos de blanco; el grito «llegó Kijimba»; el trago que era hiel; el coro que ordena tomárselo porque a todo baile no se va; y la muerte al día siguiente en una fiesta de las ánimas. La página 45 trae además «La viudita», narrada por María de Jesús Ampudia Perea, nacida en Tadó en 1924, que la ficha usa como paralelo.",
+    limitation:
+      "Sólo se pudo leer en la vista previa parcial de Google Libros: las páginas 7, 44 y 45 se leyeron completas y el resto del volumen no. No se pudo confirmar el año, el pie de imprenta ni el compilador desde el propio libro, ni se sabe dónde, cuándo ni a qué edad narró Rosalba Cossio García. Es material recogido en trabajo escolar, sin aparato etnográfico.",
+  }),
+  rianoAlcalaCantando2020: source({
+    title: "Cantando el sufrimiento del río. Memoria, poética y acción política de las cantadoras del Medio Atrato chocoano",
+    author: "Pilar Riaño-Alcalá y Ricardo Chaparro Pacheco",
+    year: 2020,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/journal/1050/105064118004/html/",
+    summary:
+      "Da el marco en el que las ánimas del Medio Atrato son agentes y no decorado: documenta que la fuerza para invocar alabaos viene de personas de entendimiento fuerte con conexión especial con las ánimas, y que la alabaora mayor Petrona aportó tres alabaos que, según ella, se los enseñaron en sueños las ánimas. Sitúa además el eje geográfico del relato y distingue alabaos de gualís, que se cantan en el duelo por niños.",
+    limitation:
+      "No conoce a Kijimba ni recoge relato alguno de aparecidos: su objeto son el canto, el duelo y la acción política de las cantadoras de Pogue tras la masacre de Bojayá. El paralelo de las ánimas que enseñan en sueños es temático, no genealógico.",
+  }),
+  aristizabalChoco2022: source({
+    title: "El Chocó y las mitologías de oro",
+    author: "Juanita C. Aristizábal",
+    year: 2022,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/journal/396/39672447013/html/",
+    summary:
+      "Muestra cómo la narración oral chocoana llega a la letra impresa y quién la ha mediado, incluidas las transcripciones que Alfredo Vanín hizo de narradores mayores como Manuel María Moreno, de Opogodó; ayuda a leer «La escuela en la tradición oral» como un eslabón más de esa cadena de mediaciones.",
+    limitation:
+      "Su tema es el oro y la economía extractiva, no las ánimas; no menciona a Kijimba y trata sobre todo producción literaria, periodística y cinematográfica sobre el Chocó, con el riesgo de mirada externa que la propia autora discute.",
+  }),
+  netoModo2024: source({
+    title: "Modo de vida afrocolombiano y territorialidades pesqueras en el Chocó (Colombia)",
+    author: "Dorival Bonfá Neto y Luis Carlos Jiménez Reyes",
+    year: 2024,
+    type: "artículo de revista arbitrada",
+    url: "https://www.redalyc.org/journal/268/26878603005/html/",
+    summary:
+      "Sostiene lo que la ficha dice de los pescadores: que en las comunidades negras del Chocó la pesca artesanal es la base de un modo de vida y que el agua es un espacio vivido, concebido y percibido, donde se concentra un saber complejo construido en interacción continua con el ambiente. Es lo que explica por qué el miedo de un pescador ante la Sierpe es una noticia y no una anécdota.",
+    limitation:
+      "Su trabajo de campo es en Bahía Solano, en la costa pacífica del Chocó, y su elemento es el mar, no el Atrato ni el Medio Atrato; no menciona la Sierpe ni recoge narrativa oral. Se usa para el oficio, no para el relato.",
+  }),
+  frazerBiblioteca: source({
+    title: "Biblioteca, libro 2, capítulo 5, sección 2",
+    author: "Apolodoro; edición de James George Frazer, Perseus Digital Library",
+    type: "fuente clásica en edición crítica",
+    url: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0022%3Atext%3DLibrary%3Abook%3D2%3Achapter%3D5%3Asection%3D2",
+    summary:
+      "Da el paralelo formal que la ficha usa y sus medidas exactas: la hidra criada en el pantano de Lerna, con cuerpo enorme y nueve cabezas, ocho mortales y la del medio inmortal, que salía a arrasar el ganado y los campos y a la que Heracles sólo venció con la ayuda de Yolao quemando los cuellos.",
+    limitation:
+      "Es griega y pertenece al ciclo de los trabajos de Heracles: su estructura es de combate y muerte, mientras la Sierpe sólo pasa. La coincidencia de cabezas múltiples no prueba transmisión alguna y no debe convertir a la Sierpe en monstruo clásico.",
+  }),
+  ontanedaTeratologia2026: source({
+    title: "Teratología afropacífica: la Tunda y el vocablo de la violencia en la frontera entre Ecuador y Colombia",
+    author: "Juan Suárez Ontaneda",
+    year: 2026,
+    type: "artículo de revista arbitrada",
+    url: "https://lalrp.net/articles/10.26824/lalr.660",
+    summary:
+      "Sostiene que la Tunda es una sola a ambos lados de la frontera y que su nombre es también un verbo: entundar, el estado de ensueño y abandono en que queda la víctima, para el que no hay otro vocabulario. Rastrea los registros desde el periodo colonial en Ecuador hasta las etnografías, cuentos y canciones del siglo XX, con Adalberto Ortiz entre ellos, y lee a la criatura como figura de la frontera y del ciclo largo de violencias sobre los niños del Pacífico.",
+    limitation:
+      "Es crítica literaria y cultural: no recoge versiones nuevas ni aporta narradores colombianos. Su centro de gravedad es Esmeraldas y la lectura fronteriza, y no menciona en ningún momento a la Tulavieja.",
+  }),
+  archivesTulivieja2018: source({
+    title: "La Tulivieja, Panama",
+    author: "USC Digital Folklore Archives, Universidad del Sur de California",
+    year: 2018,
+    type: "archivo universitario de tradición oral",
+    url: "https://folklore.usc.edu/la-tulivieja-panama/",
+    summary:
+      "Es la pieza que permite separar los dos nombres que el sitio venía fundiendo: registra la Tulivieja como leyenda panameña, contada por una joven nacida y criada en Ciudad de Panamá, con su trama propia —la mujer que ahoga a su hijo, el castigo divino, la cara llena de agujeros, las alas de murciélago, las patas de gallina, el sombrero de tule y los pechos llenos de leche—, sin pata de molinillo, sin entunde y sin suplantación de la madre.",
+    limitation:
+      "Es panameña y describe a la Tulivieja, no a la Tunda. Además es una entrada de archivo estudiantil: la narradora tenía veinte años, contaba desde Los Ángeles el 24 de abril de 2018 y ella misma especula con un parentesco con La Llorona mexicana, especulación que no se recoge.",
+  }),
+  bolivarFondo: source({
+    title: "Fondo Documental Afro-Andino",
+    author: "Universidad Andina Simón Bolívar y Proceso de Comunidades Negras; archivo reunido por Juan García Salazar",
+    type: "archivo de tradición oral",
+    url: "https://www.uasb.edu.ec/vinculacion/fondo-documental-afro%E2%88%92andino/",
+    summary:
+      "Es el depósito donde está grabada la Tunda del lado ecuatoriano: más de tres mil horas de audio y 1.333 archivos de tradición oral de Esmeraldas y el valle del Chota, recogidos durante más de treinta años entre decimeros, curanderos de culebra, arrulladoras y cuenteros.",
+    limitation:
+      "La página institucional describe el acervo pero no publica los relatos: ninguna versión de la Tunda se consultó aquí de primera mano. Es material afroecuatoriano, no colombiano, y el cotejo con las versiones de Tumaco está pendiente.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  duncanAnancy2015: source({
+    title: "Anancy y el tigre en la literatura oral afrodescendiente",
+    author: "Quince Duncan",
+    year: 2015,
+    type: "artículo de revista arbitrada (Cuadernos de Literatura, vol. XIX, n.º 38, pp. 65-78)",
+    url: "https://revistas.javeriana.edu.co/index.php/cualit/article/view/12949",
+    summary:
+      "Rastrea a Anansi desde la cultura akan —donde Kuaku Anansi es la persona de Nyame que teje el universo— hasta el Gran Caribe, y dice expresamente que su presencia llega hasta el Pacífico colombiano. Registra la variedad de nombres (Hermano Araña, Breda Nansi, Anancy, Ananse, Aunt Nancy, Ti Malice, Nansi), el par araña débil y astuta frente al Hermano Tigre fuerte y torpe, la fórmula jamaicana de Jack Mandora con que el narrador se descarga de la historia, y transcribe como «Ejemplo 1. Pacífico colombiano» el cuento «Hermano tigre, hermano Anancy y el pescado frito», en el que Anancy salva a su familia subiéndola a un árbol de calabaza y hiere al Tigre.",
+    limitation:
+      "Es un ensayo de síntesis de un autor costarricense, no trabajo de campo, y no menciona el Anansi chocoano del campanario. El cuento que presenta como «Ejemplo 1. Pacífico colombiano» lo toma del portal Colombia Aprende sin narrador ni lugar; Pochet (2012) lo registra en cambio como relato escrito de Lolia Pomare, de San Andrés, así que su procedencia real es isleña. La fórmula de Jack Mandora y buena parte del marco son jamaicanos y centroamericanos.",
+  }),
+  rodriguezcuentos2012: source({
+    title: "Los cuentos de Anancy: huella indeleble de una tradición akán",
+    author: "Lina Pochet Rodríguez",
+    year: 2012,
+    type: "artículo de revista arbitrada (Revista de Lenguas Modernas, n.º 17, pp. 189-207, Universidad de Costa Rica)",
+    url: "https://archivo.revistas.ucr.ac.cr/index.php/rlm/article/view/12667",
+    summary:
+      "Compara la estructura —personajes, escenarios, tono, conflictos y temas— de un corpus de ciento cincuenta cuentos de Anancy reunidos en 2001 en San Andrés, Providencia y Santa Catalina y en Limón, con cuentos jamaiquinos y tres relatos akán de referencia. Su tabla enumera los relatos isleños escritos por Lolia Pomare («El muñeco de brea», «Anancy le hace una jugarreta a Tigre», «Hermano Tigre, Hermano Anancy y el pescado frito», «Anancy y Tigre utilizan los servicios de Mico como juez», entre otros) y muestra cómo el narrador sitúa la acción en Jamaica, San Andrés, Providencia o aldeas ghanesas.",
+    limitation:
+      "Es un trabajo distinto del artículo de 2011 de la misma autora que la ficha ya cita (Cuadernos de Antropología), aunque sale del mismo corpus. Trata el ciclo isleño y costarricense, no el episodio chocoano del campanario; buena parte de la comparación es con Jamaica y Limón, fuera de Colombia, y los relatos de San Andrés se citan por título, sin transcribirlos.",
+  }),
+  corredorFormaciones2021: source({
+    title: "Formaciones de alteridades e identidades desde el Caribe insular: memorias y huellas de africanía en San Andrés Islas",
+    author: "Laura García Corredor",
+    year: 2021,
+    type: "artículo de revista arbitrada con trabajo de campo (Fronteiras: Revista de História, vol. 23, n.º 42, pp. 87-108)",
+    url: "https://ojs.ufgd.edu.br/index.php/FRONTEIRAS/article/view/15808",
+    summary:
+      "Recoge en entrevistas con raizales de San Andrés cómo se nombra a Anansi en la memoria isleña: personaje vinculado a las huellas de africanía tanto en el Caribe como en el Pacífico afrodescendiente, héroe de la Costa de Oro que con su inteligencia vence la fuerza del Tigre, y figura «contraelite» de estilo criollo, rebelde frente a la respetabilidad de cuño británico; sigue en esto a Nina S. de Friedemann, «Religión y tradición oral en San Andrés y Providencia» (1989).",
+    limitation:
+      "Anansi ocupa un párrafo y una nota en un artículo sobre identidad raizal; no transcribe ningún cuento ni dice nada del Anansi chocoano. La caracterización es de Friedemann 1989, cuyo texto no está digitalizado y no se leyó de primera mano. La revista es brasileña.",
+  }),
+  mRitos1961: source({
+    title: "Ritos de la muerte en el Alto y Bajo Chocó",
+    author: "Rogerio Velásquez M.",
+    year: 1961,
+    type: "etnografía (Revista Colombiana de Folclor 2 (6): 9-76), reeditada en «Antropología hecha en Colombia», tomo 1, Universidad del Cauca, ICANH y ALA, 2017, pp. 359-",
+    url: "https://asociacionlatinoamericanadeantropologia.net/portal/wp-content/uploads/2018/09/Antropologia_hecha_en_Colombia_T1_-_2017.pdf",
+    summary:
+      "Es la descripción chocoana de primera mano de cómo se trata a las ánimas, dedicada a informantes del Atrato, Buenaventura y el Patía. Registra que las ánimas que no han llegado a puerto seguro se aparecen en sueños, como estrellas errantes o ramas que tiemblan en la corriente, y exigen oraciones; que las ánimas condenadas causan tormentas, dañan siembras y «asisten a sitios en que no se les llama»; que los muertos se muestran de frente, con vestido talar y la cara borrosa, sobre todo en Semana Santa; que durante la gravedad de un enfermo se cambian los vestidos de color por pálidos o blancos y hacer bailes crea enemistades; que el luto se cierra con un baile en que se come y se bebe para olvidar; y transcribe los cantos del velorio, prohibidos en gualíes y velatorios de niños.",
+    limitation:
+      "No menciona a Kijimba ni ningún baile de ánimas que invite a un vivo: sostiene el marco de creencias sobre los difuntos en el Chocó y la separación entre velorio, gualí y relato que hace la ficha, no el relato mismo. Es un texto de 1961 con juicios de su época sobre la población («ignorancia», «ridícula fiesta») que no deben trasladarse a la ficha. La paginación citada es la de la reedición de 2017; el URL es el PDF completo del tomo en la Asociación Latinoamericana de Antropología, coeditora.",
+  }),
+  solanoTras2006: source({
+    title: "Tras las huellas de la Candelaria en los litorales colombianos",
+    author: "Laura De la Rosa Solano y Lina del Mar Moreno Tovar",
+    year: 2006,
+    type: "artículo de revista con trabajo de campo (Memorias: revista digital de historia y arqueología desde el Caribe, n.º 5, Universidad del Norte)",
+    url: "https://rcientificas.uninorte.edu.co/memorias/es/article/view/287",
+    summary:
+      "Documenta que Beté celebra como fiesta patronal la de la Virgen de la Candelaria, igual que Bagadó, Cértegui, Tadó y Paimadó, y recoge de la maestra e historiadora quibdoseña Ezequiela Urrutia un relato del propio pueblo: la imagen original de Beté era una aparición, un cuadro milagroso, que alguien venido de Cartagena cambió y se llevó, de modo que «la famosa» del cerro de la Popa «es de Beté»; el historiador Sergio Mosquera confirma la historia pero atribuye el cambio a viajeros y no a un cura. Es la única fuente hallada que dice cuáles son las patronales de Beté.",
+    limitation:
+      "El trabajo de campo es sobre todo de Paimadó (2002-2004) y Beté aparece en dos pasajes; no menciona la Sierpe ni a los pescadores. El relato de la imagen es de una informante de Quibdó, no de un vecino de Beté. Hay copia en Redalyc; se prefiere la del editor.",
+  }),
+  lemosTamarasistemas2012: source({
+    title: "Los sistemas productivos tradicionales de comunidades negras del Medio Atrato chocoano, su relación con el clima y su vulnerabilidad frente a eventos climáticos extremos",
+    author: "Liliana L. Lemos-Támara, William Murillo-López y José Daniel Pabón-Caicedo",
+    year: 2012,
+    type: "artículo de revista arbitrada (Bioetnia, vol. 9, n.º 1, Instituto de Investigaciones Ambientales del Pacífico)",
+    url: "https://bioetnia.iiap.org.co/index.php/bioetnia/article/view/82",
+    summary:
+      "Sitúa el lugar con precisión: Beté es la cabecera del municipio de Medio Atrato, el río Beté es una de las subcuencas de la margen occidental del Atrato y la comunidad de Beté pertenece a la zona 4 de la ACIA, donde se vive del corte de madera y de la pesca. Describe esa pesca con los datos de las entrevistas en las comunidades: se pesca todo el año, sobre todo en las subiendas de enero a marzo; con el río crecido los pescadores no salen y con el río bajo escasea el pescado; se usan atarraya, copón, anzuelo, chinchorro y trasmallo, y se capturan bocachico, dentón, sabaleta, mojarra y barbudo. Registra además avalanchas en Beté.",
+    limitation:
+      "Es un estudio de clima y sistemas productivos: no trata relatos, fiestas ni seres del agua, y no menciona la Sierpe. Sirve para el lugar y el oficio de los pescadores que la ficha describe, no para el relato.",
+  }),
+  bernalCosmograma2024: source({
+    title: "Cosmograma de la gente negra de Guapi, Colombia: cosmovisión y conocimiento ancestral",
+    author: "Ernesto Hernández Bernal y Anairamiz Aranguren Becerra",
+    year: 2024,
+    type: "artículo de revista arbitrada con testimonios de campo (Boletín Antropológico, año 42, n.º 107, pp. 8-35, Universidad de Los Andes, Mérida)",
+    url: "https://doi.org/10.53766/BA/2024.01.107.01",
+    summary:
+      "Dedica un apartado a la Tunda en Guapi: mujer que toma la apariencia de un familiar o conocido, desvía a la persona de su camino y se la lleva al monte, donde vive; se la reconoce porque una pierna es de niño y la otra un molinillo de madera. Registra que se la invoca contra los niños que se meten al monte o desobedecen y contra los hombres infieles, trasnochadores o borrachos; que para rescatar al entundado van al monte los padrinos llamándolo por su nombre mientras otros rezan, dicen groserías o tocan instrumentos, a veces con el cura; y trae dos testimonios de 2017: el del que camina todo el día y vuelve a pasar por el mismo sitio sin darse cuenta, y el de una niña hallada sujeta en una mesa comiendo camarón, «porque la Tunda los pone a comer camarón», que quedó muda unos diez días. Cita además la quebrada de la Tunda del barrio San Pablo, donde una mujer bonita y mal peinada con pata de palo cantaba «tundu, tundu, tundu» y echaba camarones en un canasto, y la definición de Yacup (1990).",
+    limitation:
+      "Es de Guapi, en la costa del Cauca, no de Tumaco: sirve como variante vecina del mismo ser. El artículo trata sobre todo de las azoteas y la cosmovisión agrícola y la Tunda ocupa un apartado; los testimonios son anónimos. La revista es venezolana y su repositorio sólo publica por http: el DOI resuelve a http://www.saber.ula.ve/handle/123456789/50560.",
+  }),
+  guayaquildare2019: source({
+    title: "«Te daré una Tunda», Editorial UArtes presenta libro de Ibsen Hernández",
+    author: "Universidad de las Artes (Guayaquil), sobre el libro de Ibsen Hernández Valencia",
+    year: 2019,
+    type: "nota editorial de presentación de libro",
+    url: "https://www.uartes.edu.ec/sitio/blog/2019/02/21/te-dare-una-tunda-editorial-uartes-presenta-libro-de-ibsen-hernandez/",
+    summary:
+      "Presenta el libro con que el educador afroecuatoriano Ibsen Hernández Valencia relee a la Tunda como «Tunda libertaria»: una cimarrona que se hizo montaraz, invitaba a sus hermanos a meterse a la montaña a construir palenques y fue satanizada por la sociedad dominante y la Iglesia; lee la pata de molinillo como la mutilación que le hizo el opresor. Es la lectura emancipadora de la figura que la ficha resume al hablar de la cadena de violencias que va de la esclavización al reclutamiento.",
+    limitation:
+      "Es la nota de la editorial, no el libro, que no está en abierto; recoge palabras del autor en una presentación. Es una interpretación de autor desde Esmeraldas, del lado ecuatoriano, no un registro de tradición oral, y no aporta ninguna versión del relato de Tumaco.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  charcoVisiones2016: source({
+    title: "Visiones y seres maravillosos del Pacífico (Río de Letras. Territorios Narrados, 21)",
+    author: "Comunidad Educativa de El Charco y La Tola (Nariño); ilustr. Nelly Zoraida Cuero",
+    year: 2016,
+    type: "cartilla de tradición oral (Ministerio de Educación Nacional y Save the Children)",
+    url: "https://colombiaaprende.edu.co/sites/default/files/files_public/plan-lectura-2021/territorios-narrados-parte-1/Visiones_y_seres_maravillosos_del_pacifico.pdf",
+    summary:
+      "El registro que da el título: el Riviel es un sacerdote que quemó un rosario y fue convertido en visión; flota sobre una mochila o una tabla en noches de menguante, embruja y vuelve sonámbula a la gente; trae el caso de don Casimiro y la copla «tu rosario te condena» (pp. 19-21).",
+    limitation:
+      "Texto colectivo escolar, sin narradores identificados salvo don Casimiro; redacción adaptada para niños.",
+  }),
+  rodriguezescuela2013: source({
+    title: "La escuela de tradición oral, una estrategia pedagógica ... del municipio de Magüí Payán",
+    author: "Luz Ángela Pazos Rodríguez",
+    year: 2013,
+    type: "trabajo de grado (Especialización en Pedagogía de la Creatividad, Universidad de Nariño)",
+    url: "https://sired.udenar.edu.co/2701/1/89852.pdf",
+    summary:
+      "En el río Patía el riviel es una lucecita azul o verde que persigue a los pescadores nocturnos hacia la muerte y se espanta con la palabra atarraya (p. 47).",
+    limitation:
+      "Cuatro líneas dentro de una propuesta pedagógica; no identifica al narrador de este relato.",
+  }),
+  penaPinzonPatrimonios: source({
+    title: "Patrimonios emergidos. Herencia inmaterial y su vínculo con el patrimonio sumergido en San Andrés de Tumaco y Buenaventura (Boletín OPCA n.º 13)",
+    author: "Víctor Andrés Pérez Bermúdez; Wilson Peña-Pinzón",
+    type: "artículo de divulgación académica (Observatorio de Patrimonio Cultural y Arqueológico, Universidad de los Andes)",
+    url: "https://cienciassociales.uniandes.edu.co/opca/articulo/patrimonios-emergidos-herencia-inmaterial-y-su-vinculo-con-el-patrimonio-sumergido-en-san-andres-de-tumaco-y-buenaventura/",
+    summary:
+      "La versión de Tumaco: un pirata que abandonó a su tripulación por un tesoro y vaga maldito en una canoa partida en dos con una linterna; le atribuyen naufragios y lo vinculan con la tradición afroecuatoriana.",
+    limitation:
+      "No transcribe testimonios ni da narradores; la página no indica año.",
+  }),
+  rTVCMitos2024: source({
+    title: "Mitos y leyendas de Buenaventura, el puerto del Pacífico",
+    author: "Señal Colombia (RTVC)",
+    year: 2024,
+    type: "nota de medio público",
+    url: "https://www.senalcolombia.tv/cultura/mitos-leyendas-Buenaventura",
+    summary:
+      "La variante del pescador: el Riviel en canoa sin proa pregunta «amigo, ¿cómo está la pesca?» y vuelve pesado el potro; si no le contestan, confunde el rumbo hasta el amanecer.",
+    limitation:
+      "Divulgación sin autor ni fuentes; repite formulaciones que circulan en la red.",
+  }),
+  comejenriviel2020: source({
+    title: "El riviel se los sigue llevando",
+    author: "Harrinson Cuero (El Comején)",
+    year: 2020,
+    type: "columna de prensa regional (Pacífico)",
+    url: "https://elcomejen.com/2020/09/18/el-riviel-se-los-sigue-llevando/",
+    summary:
+      "Usa al riviel, espíritu que boga en un ataúd y sale en la menguante entre el Mira y el Guapi, como figura de los grupos armados que desaparecen líderes del litoral.",
+    limitation:
+      "Columna de opinión: toma la leyenda como metáfora; no es un registro del relato.",
+  }),
+  espanolRiviel2026: source({
+    title: "El Riviel",
+    author: "Wikipedia en español",
+    year: 2026,
+    type: "enciclopedia colaborativa",
+    url: "https://es.wikipedia.org/wiki/El_Riviel",
+    summary:
+      "Resume la variante esmeraldeña (ataúd, cruz por remo, lámpara en la proa, ser sin rostro) y los remedios de gritar nombres de aparejos de pesca o rezar la Magnífica.",
+    limitation:
+      "Wikipedia, apoyada en la tesis de la UASB que no se pudo leer; sólo para el paralelo ecuatoriano.",
+  }),
 };
 
 export const afroSourceKeysBySlug = {
@@ -415,12 +703,35 @@ export const afroSourceKeysBySlug = {
   ],
 };
 
-export function pickAfroSources(slug) {
-  const keys = afroSourceKeysBySlug[slug];
-  if (!keys) throw new Error(`No hay dossier Afrocolombiano para ${slug}.`);
-  return keys.map((key) => {
+/**
+ * El reparto ya era por mito: `afroSourceKeysBySlug` le da a cada slug su lista.
+ * Lo que faltaba era que una entrada pudiera decir, además de qué obra, qué dice
+ * esa obra sobre ese relato: `{ key, summary, limitation }`. La ficha
+ * bibliográfica la sigue fijando el pool.
+ */
+export function pickAfroSources(slug, declaradas) {
+  const entradas = declaradas?.length ? declaradas : afroSourceKeysBySlug[slug];
+  if (!entradas) throw new Error(`No hay dossier Afrocolombiano para ${slug}.`);
+  const vistas = new Set();
+  const salida = [];
+  for (const entrada of entradas) {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
     const selected = afrocolombianSources[key];
-    if (!selected) throw new Error(`${slug}: fuente desconocida ${key}.`);
-    return selected;
-  });
+    if (!selected) {
+      const visto = typeof entrada === "string" ? entrada : JSON.stringify(entrada);
+      throw new Error(`${slug}: fuente desconocida ${visto}.`);
+    }
+    if (vistas.has(key)) continue;
+    vistas.add(key);
+    salida.push(
+      typeof entrada === "string"
+        ? selected
+        : {
+            ...selected,
+            ...(entrada.summary ? { summary: entrada.summary } : {}),
+            ...(entrada.limitation ? { limitation: entrada.limitation } : {}),
+          },
+    );
+  }
+  return salida;
 }

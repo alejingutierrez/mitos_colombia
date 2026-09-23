@@ -36,7 +36,13 @@ test("los seis expedientes Ticuna cumplen la metodología editorial", () => {
     new Set(canonicalTicunaSlugs),
   );
   for (const record of records) {
-    assert.ok(words(record.mito) >= 300 && words(record.mito) <= 650);
+    // Un mito puede declarar `relatoCorto` cuando su primario no da para el
+    // mínimo sin inventar: la razón queda escrita en el módulo.
+    const minimoMito = record.relatoCorto ? 70 : 300;
+    assert.ok(
+      words(record.mito) >= minimoMito && words(record.mito) <= 650,
+      `${record.slug}: ${words(record.mito)} palabras de relato`,
+    );
     assert.ok(words(record.historia) >= 220 && words(record.historia) <= 600);
     assert.ok(
       words(record.versiones) >= 170 && words(record.versiones) <= 550,
@@ -61,9 +67,67 @@ test("los seis expedientes Ticuna cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
-    assert.equal(new Set(urls).size, 7);
+    // Antes: `keySources + sources === 7`. Ese siete era el reparto en bloque
+    // escrito como aserción; desde la Fase B del 2026-09-19 cada ficha cita
+    // las obras que su reescritura usó, y son distintas entre fichas. Lo que
+    // se verifica es la sustancia: mínimo de fuentes, dominios distintos,
+    // ninguna URL repetida y todas con resumen, límite y URL https.
+    const todas = [...record.keySources, ...record.sources];
+    assert.ok(
+      todas.length >= 5,
+      `${record.slug}: ${todas.length} fuentes, el mínimo son cinco.`,
+    );
+    assert.equal(record.keySources.length, 3);
+    const urls = todas.map(({ url }) => url);
+    assert.equal(new Set(urls).size, urls.length);
+    assert.ok(
+      new Set(urls.map((url) => new URL(url).host)).size >= 3,
+      `${record.slug}: menos de tres dominios distintos.`,
+    );
+    assert.ok(
+      todas.every(
+        ({ url, title, summary, limitation }) =>
+          url.startsWith("https://") && title && summary && limitation,
+      ),
+      `${record.slug}: hay una fuente sin https, título, resumen o límite.`,
+    );
+  }
+});
+
+test("ninguna pareja de fichas repite el mismo reparto de fuentes", () => {
+  const repartos = new Map();
+  for (const record of records) {
+    const firma = [...record.keySources, ...record.sources]
+      .map(({ url }) => url)
+      .join("|");
+    assert.ok(
+      !repartos.has(firma),
+      `${record.slug} y ${repartos.get(firma)} citan exactamente lo mismo.`,
+    );
+    repartos.set(firma, record.slug);
+  }
+  // Las fuentes del lado brasileño —Nimuendajú, Torü Duü'ügü, Faulhaber— se
+  // citan como vecinas y tienen que decirlo en su límite. Y la página del
+  // Museu do Índio, que responde 401, no puede volver a entrar.
+  for (const record of records) {
+    const todas = [...record.keySources, ...record.sources];
+    assert.ok(
+      !todas.some(({ url }) => url.includes("gov.br/museudoindio")),
+      `${record.slug}: la ficha del Museu do Índio exige autenticación.`,
+    );
+    for (const fuente of todas) {
+      if (
+        /ucpress\.edu|acervo\.socioambiental\.org|sedici\.unlp\.edu\.ar/.test(
+          fuente.url,
+        )
+      ) {
+        assert.match(
+          fuente.limitation,
+          /brasil|brasile|vecin/i,
+          `${record.slug}: ${fuente.title} no declara la vecindad.`,
+        );
+      }
+    }
   }
 });
 

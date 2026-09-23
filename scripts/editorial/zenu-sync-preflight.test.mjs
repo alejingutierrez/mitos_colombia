@@ -30,7 +30,12 @@ test("la sincronización Zenú previsualiza seis rutas y una transferencia", { s
   assert.deepEqual(output.universe.toDelete, []);
   assert.equal(output.dossiers, 7);
   assert.equal(output.imagePairs, 7);
-  assert.deepEqual(output.sourcesPerMyth, [12, 6]);
+  // Antes eran doce para seis fichas y seis para Juan Lara: el reparto en
+  // bloque escrito como aserción. Ahora cada ficha cita lo que usó, así que lo
+  // que se comprueba es que haya varios repartos distintos y que ninguno baje
+  // del mínimo.
+  assert.ok(output.sourcesPerMyth.length >= 2, "un solo reparto para las siete fichas");
+  assert.ok(Math.min(...output.sourcesPerMyth) >= 5, `reparto por debajo del mínimo: ${output.sourcesPerMyth}`);
   assert.deepEqual(output.tags.toCreate, []);
   assert.equal(output.imageProvenance.status, "pending");
 });

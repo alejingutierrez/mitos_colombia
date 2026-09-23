@@ -24,12 +24,15 @@ const baqueroVersionsFrame = `La versión controlable es la del libro de 1988. L
 
 El propio preámbulo propone que una figura cambia al desplazarse del campo al pueblo o del camino antiguo a la carretera. La revisión conserva esa idea de transición, separando tres niveles: motivo folclórico, explicación que Pascual le atribuye y escena escrita por el autor. No hay base para declarar una fecha histórica exacta, una víctima real o un método eficaz de defensa. Las versiones se presentan como variaciones narrativas y no como instrucciones sobre salud, sexualidad, seguridad o justicia.`;
 
+// Las fichas reescritas traen `mito`, `historia` y `versiones` enteros; sin
+// ellos se componen como antes, con los párrafos de marco del libro, que eran
+// idénticos para las once de Vargas Barón y las seis de Baquero Nariño.
 export function defineVargasLiteraryMyth(input) {
   return defineOrinoquiaMestizoFinalMyth({
     ...input,
-    mito: `${input.plot}\n\n${vargasMitoFrame}`,
-    historia: `${vargasHistoryFrame}\n\n${input.context}`,
-    versiones: `${vargasVersionsFrame}\n\n${input.variants}`,
+    mito: input.mito ?? `${input.plot}\n\n${vargasMitoFrame}`,
+    historia: input.historia ?? `${vargasHistoryFrame}\n\n${input.context}`,
+    versiones: input.versiones ?? `${vargasVersionsFrame}\n\n${input.variants}`,
     researchNotes: `LITERATURA FIRMADA: Getulio Vargas Barón, 1996. ${input.boundary}`,
   });
 }
@@ -37,9 +40,9 @@ export function defineVargasLiteraryMyth(input) {
 export function defineBaqueroLiteraryMyth(input) {
   return defineOrinoquiaMestizoFinalMyth({
     ...input,
-    mito: `${input.plot}\n\n${baqueroMitoFrame}`,
-    historia: `${baqueroHistoryFrame}\n\n${input.context}`,
-    versiones: `${baqueroVersionsFrame}\n\n${input.variants}`,
+    mito: input.mito ?? `${input.plot}\n\n${baqueroMitoFrame}`,
+    historia: input.historia ?? `${baqueroHistoryFrame}\n\n${input.context}`,
+    versiones: input.versiones ?? `${baqueroVersionsFrame}\n\n${input.variants}`,
     researchNotes: `LITERATURA FIRMADA: Alberto Baquero Nariño, 1988. ${input.boundary}`,
   });
 }

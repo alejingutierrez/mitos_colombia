@@ -283,6 +283,219 @@ export const antioquiaMestizoSources = {
     limitation:
       "Es una transcripción y estudio posterior, no el repositorio archivístico original; no menciona el pacto legendario.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (1.ª ed. Imprenta Departamental de Caldas, 1997; se lee la edición ampliada, posterior a 2007, en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «La Dama Verde» de los mitos menores, con la cita de Iván Salazar Duque (Mitos y mensajes, 1990, p. 104) y la versión de Molina Uribe (1967) en que se destapa y es calavera; en el mismo libro, María la Larga y la Madrelagua de Similitudes.",
+    limitation:
+      "Se lee la edición ampliada de El Libro Total (cita prensa de 2005-2007), no la de 1997; el visor no da folios del impreso y se cita por capítulo.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Trae la Dama Verde en sus pp. 11-12.",
+    limitation:
+      "El libro se declara «recopilación de documentos imaginarios»; su entrada es composición de autor y sólo sirve como testigo de circulación en 2004.",
+  }),
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Useche Toledo, González González, Guzmán Ruiz y Tunarrosa Echeverría (SENA)",
+    year: 2022,
+    type: "libro de memoria oral (SENA, La Dorada)",
+    url: "https://repositorio.sena.edu.co/bitstream/handle/11404/8024/Remembranzas_de_mis_abuelos.pdf?sequence=4&isAllowed=y",
+    summary:
+      "Recoge en Marquetalia, en voz de Jorge Echeverry, a María la Parda, que enterró sus mulas cargadas de oro junto al camino a Samaná (p. 58), el paralelo que nombra Similitudes.",
+    limitation:
+      "No trae la Dama Verde; sirve para la comparación.",
+  }),
+  antioquiaAndes2019: source({
+    title: "Andes: identidad y memoria / sostenibilidad y resiliencia",
+    author: "Alcaldía de Andes (Antioquia)",
+    year: 2019,
+    type: "publicación municipal",
+    url: "https://www.andes-antioquia.gov.co/MiMunicipio/HistoriaVeredas/Andes%2C%20identidad%20y%20memoria%20%20sostenibilidad%20y%20resiliencia.pdf",
+    summary:
+      "Cita textualmente a Escobar Uribe (Mitos de Antioquia, 1950) sobre María la Larga (p. 58), el espanto que Similitudes pone junto a la Dama Verde.",
+    limitation:
+      "No menciona a la Dama Verde.",
+  }),
+  duranDesarrollo2007: source({
+    title: "Desarrollo de competencias lectoras a partir de un programa de acompañamiento en estudiantes de educación básica del municipio de Galapa, Atlántico",
+    author: "José Gregorio Durán, Emiluz Jaraba de Naissir y Liliana Garrido (Universidad del Norte)",
+    year: 2007,
+    type: "trabajo de grado (Maestría en Educación)",
+    url: "https://manglar.uninorte.edu.co/bitstream/handle/10584/695/1/9143154.pdf",
+    summary:
+      "Usa un texto de la Rodillona como lectura en su programa escolar y lo reproduce en el anexo.",
+    limitation:
+      "Es una tesis de pedagogía de la lectura en el Atlántico: el texto no trae procedencia ni narrador y sólo prueba que circula como material escolar.",
+  }),
+  tiempoMedellin1990: source({
+    title: "En Medellín: desfile de danzas, mitos y leyendas. Una noche a la colombiana",
+    author: "El Tiempo",
+    year: 1990,
+    type: "prensa (6 de diciembre de 1990)",
+    url: "https://www.eltiempo.com/archivo/documento/MAM-30929",
+    summary:
+      "Nombra al Patetarro, que Similitudes compara con la Rodillona, entre las comparsas de un desfile de mitos en Medellín en 1990.",
+    limitation:
+      "Prensa de época; sólo fecha la circulación pública de los espantos.",
+  }),
+  carrasquillamarquesa1928: source({
+    title: "La marquesa de Yolombó",
+    author: "Tomás Carrasquilla",
+    year: 1928,
+    type: "novela (edición digital de la Biblioteca Básica de Cultura Colombiana, Biblioteca Nacional)",
+    url: "https://siise.bibliotecanacional.gov.co/BBCC/Documents/View/208",
+    summary:
+      "En el catálogo de «la corte infernal y selvática» de la novela describe a «los ilusiones», duendecillos incorpóreos que se van a las orejas de los inocentes, junto al Bracamonte que nombra Similitudes.",
+    limitation:
+      "Es novela; testimonio literario temprano, en masculino, de lo que Escobar recogerá después.",
+  }),
+  contartesoros2024: source({
+    title: "Los tesoros de María Centeno, en Con los pelos de punta",
+    author: "Fundación Secretos para Contar",
+    year: 2024,
+    type: "libro de divulgación",
+    url: "https://secretosparacontar.org/wp-content/uploads/2024/01/CON-LOS-PELOS-DE-PUNTA_18-a51-1.pdf",
+    summary:
+      "Adaptación contemporánea de «Los tesoros de María Centeno», nacida en Santa Fe de Antioquia hace 450 años.",
+    limitation:
+      "Recreación para lectores campesinos, no registro.",
+  }),
+  polarMitossf: source({
+    title: "Mitos y leyendas del estado Portuguesa, cap. 28: La Sayona",
+    author: "Fundación Empresas Polar",
+    year: "s. f.",
+    type: "recopilación regional venezolana",
+    url: "https://bibliofep.fundacionempresaspolar.org/media/1377961/mitos_portuguesa_c_28_la-sayona.pdf",
+    summary:
+      "Recoge a la Sayona del estado Portuguesa, la mujer que se deja seguir por los hombres de noche y se revela muerta, el paralelo venezolano de Similitudes.",
+    limitation:
+      "Es la tradición llanera venezolana; comparación de estructura.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  mejiaDiseno2012: source({
+    title: "Diseño de pruebas objetivas para evaluar competencias en el área de castellano para el grado tercero de la educación básica primaria",
+    author: "Luis Arturo Aguilar Mejía y Silvia Rosa Sierra Calvo (Universidad del Norte)",
+    year: 2012,
+    type: "trabajo de grado (Maestría en Educación)",
+    url: "https://manglar.uninorte.edu.co/bitstream/handle/10584/7607/luis%20arturo.pdf",
+    summary:
+      "Reproduce el texto escolar «Patón», firmado «Leyenda popular»: el ser que tumba árboles en las montañas, la trampa del lazo, los campesinos que esperan tres horas y el hombre de pies enormes que parece una ele.",
+    limitation:
+      "Tesis de evaluación escolar (Barranquilla, 2012): el texto no tiene procedencia ni narrador.",
+  }),
+  grilloteGuia2021: source({
+    title: "Guía de Lengua Castellana, grado tercero, «Tema: la leyenda»",
+    author: "Centro Educativo El Grillote",
+    year: 2021,
+    type: "material escolar",
+    url: "https://www.webcolegios.com/file/2360bb.pdf",
+    summary:
+      "Guía de grado tercero de 2021 con la misma leyenda, situada en Antioquia, con patas de un metro y el cierre «no es un monstruo, pero hace mucho daño».",
+    limitation:
+      "Material de aula sin procedencia; variante del mismo texto escolar.",
+  }),
+  compiladoraInforme1997: source({
+    title: "Informe Fulbright-Hays 1997 con «Niños de las regiones de Colombia» (Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro (compiladora), ERIC ED430849",
+    year: 1997,
+    type: "informe educativo",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "Incluye la página infantil «Niños de las regiones de Colombia» de Esmeralda Van Vliet (ICAN), donde Mauricio, un niño de la región cafetera, cuenta que el Patón son «unos pies muy grandes que pasan por los caminos, solos, sin el cuerpo», junto a los Meneses que nombra Similitudes.",
+    limitation:
+      "Es una página infantil de divulgación impresa en un informe de 1997; no da narrador ni lugar exacto.",
+  }),
+  lopezpueblo1977: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López",
+    year: 1977,
+    type: "libro (cap. 8, pp. 120-126)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "Recoge en Tunja el espanto del perro de San Francisco, con aullidos, arrastre de cadenas y ojos con luces fuertes, el paralelo de Similitudes.",
+    limitation:
+      "Es un espanto urbano de Boyacá.",
+  }),
+  noticiasAntioquenidad2023: source({
+    title: "(Antioqueñidad III) Mitos y leyendas de Antioquia",
+    author: "IFM Noticias, con información del SINIC",
+    year: 2023,
+    type: "prensa regional",
+    url: "https://ifmnoticias.com/antioquenidad-iii-mitos-y-leyendas-de-antioquia/",
+    summary:
+      "Reproduce la ficha del Sistema Nacional de Información Cultural: la Cabellona es un espanto rural vespertino y de tiempos lluviosos, de Liborina a Pavarandocito.",
+    limitation:
+      "Nota de prensa regional que reproduce una ficha institucional hoy caída; una línea.",
+  }),
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Texto del cuento de Otero D'Costa (Leyendas, 1936) en la sección 17, pp. 53-56: el perulero Damián Vásquez Montiel en la Villa de Arma, el pacto contado por doña Mónica y el jinete de la mula de fuego del viernes santo.",
+    limitation:
+      "Villa Posse lo presenta como leyenda oída y reelaborada; es un cuento firmado.",
+  }),
+  hernandezAnimas2012: source({
+    title: "Ánimas y pactos diabólicos: un regaño platónico a los borrachos e idólatras de Santander desde la mitología en prosa",
+    author: "Farouk Caballero Hernández",
+    year: 2012,
+    type: "artículo (Rastros Rostros 14 (27), pp. 69-74, Universidad Cooperativa de Colombia)",
+    url: "https://revistas.ucc.edu.co/index.php/ra/article/download/445/450",
+    summary:
+      "Recuerda el pacto diabólico de don David Puyana en Bucaramanga, que nunca perdía en el juego, recreado por Gómez Valderrama, el paralelo de Similitudes, y analiza «Cuento de ánimas» del mismo libro de Otero.",
+    limitation:
+      "No trata este cuento.",
+  }),
+  camargoHacia2015: source({
+    title: "Hacia una nueva comprensión de la historiografía colombiana: breve historia intelectual de Enrique Otero D'Costa (1883-1964)",
+    author: "Daniel Mauricio Preciado Camargo",
+    year: 2015,
+    type: "trabajo de grado (Universidad del Rosario)",
+    url: "https://repository.urosario.edu.co/handle/10336/10607",
+    summary:
+      "Estudio de la obra de Otero D'Costa que lee sus leyendas como historiografía de la vida cotidiana colonial.",
+    limitation:
+      "No analiza este cuento.",
+  }),
+  republicacoleccionsf: source({
+    title: "La colección de Enrique Otero D'Costa",
+    author: "Credencial Historia n.º 375 (Banco de la República)",
+    year: "s. f.",
+    type: "artículo de divulgación histórica",
+    url: "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-375/la-coleccion-de-enrique-otero-dcosta",
+    summary:
+      "Presenta al autor como historiador y coleccionista de documentos coloniales, de donde vienen el maese de campo, el licenciado vicario y la dueña del cuento.",
+    limitation:
+      "No menciona este cuento.",
+  }),
+  caldasconquistasf: source({
+    title: "La conquista o encuentro de dos culturas",
+    author: "Gobernación de Caldas",
+    year: "s. f.",
+    type: "síntesis histórica institucional",
+    url: "https://www.caldas.gov.co/index.php/historia-caldas/10044-la-conquista-o-encuentro-de-dos-culturas",
+    summary:
+      "Síntesis de la conquista del antiguo Caldas, con la fundación de las primeras poblaciones, entre ellas Arma, escenario del cuento.",
+    limitation:
+      "Síntesis institucional; no trata el cuento.",
+  }),
 };
 
 export const antioquiaMestizoSourceKeysBySlug = {
@@ -371,7 +584,29 @@ export const antioquiaMestizoSourceKeysBySlug = {
   ],
 };
 
-export function pickAntioquiaMestizoSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickAntioquiaMestizoSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickAntioquiaMestizoSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = antioquiaMestizoSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickAntioquiaMestizoSourcesHeredadas(slug) {
   const keys = antioquiaMestizoSourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

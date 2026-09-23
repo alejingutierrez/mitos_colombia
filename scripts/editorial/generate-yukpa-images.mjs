@@ -8,7 +8,14 @@ runCommunityImageGeneration({
   communityName: "Yukpa",
   regionName: "Serranía del Perijá, Cesar",
   confirmationPhrase: "generate-ten-yukpa-openai-images",
-  expectedSourceCount: 9,
+  // El número de fuentes lo fija cada ficha desde que el reparto dejó de ser
+  // uno solo para toda la comunidad.
+  expectedSourceCountsBySlug: Object.fromEntries(
+    yukpaRecords.map((record) => [
+      record.slug,
+      record.keySources.length + record.sources.length,
+    ]),
+  ),
   records: yukpaRecords,
 }).catch((error) => {
   console.error(error);

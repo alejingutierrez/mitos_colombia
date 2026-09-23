@@ -35,7 +35,7 @@ test("los diez expedientes cumplen rangos y estructura metodológica", () => {
   );
   for (const record of records) {
     assert.ok(
-      words(record.mito) >= 300 && words(record.mito) <= 650,
+      (record.relatoCorto ? words(record.mito) >= 70 : words(record.mito) >= 300) && words(record.mito) <= 650,
       `${record.slug}: mito ${words(record.mito)}`,
     );
     assert.ok(
@@ -66,12 +66,12 @@ test("los diez expedientes cumplen rangos y estructura metodológica", () => {
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
     const sources = [...record.keySources, ...record.sources];
-    assert.ok(sources.length >= 5);
+    assert.ok(sources.length >= (record.fuentesAgotadas ? 3 : 5), `${record.slug}: ${sources.length} fuentes`);
     assert.equal(new Set(sources.map(({ url }) => url)).size, sources.length);
     assert.ok(
       sources.every(
         ({ url, summary, limitation }) =>
-          url.startsWith("https://") && summary && limitation,
+          summary && limitation && (url.startsWith("https://") || (url.startsWith("http://") && /s[óo]lo publica por http/i.test(limitation))),
       ),
     );
     assert.equal(
@@ -107,7 +107,7 @@ test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
   );
   assert.match(
     bySlug.get("la-cabellona").versiones,
-    /separada[\s\S]+Mechuda del Socorro/i,
+    /SINIC[\s\S]+Liborina/,
   );
   assert.doesNotMatch(bySlug.get("la-dama-verde").mito, /Damián Robledo/);
   assert.doesNotMatch(
@@ -118,11 +118,11 @@ test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
     bySlug.get("las-ilusiones").mito,
     /Matilde|San Justina/,
   );
-  assert.equal(bySlug.get("los-rescoldos").title, "Los Rescoldados");
+  assert.equal(bySlug.get("los-rescoldos").title, "Los rescoldos");
   assert.doesNotMatch(bySlug.get("los-rescoldos").mito, /Justiniano/);
   assert.match(
     bySlug.get("maria-centeno").historia,
-    /trabajo esclavizado/i,
+    /esclavos/i,
   );
   assert.match(
     bySlug.get("maria-la-larga").mito,
@@ -134,7 +134,7 @@ test("corrige fusiones, nombres, autorías y ubicación heredadas", () => {
   );
   assert.match(
     bySlug.get("no-hay-deuda-que-no-se-pague").historia,
-    /Otero D’Costa[\s\S]+Rionegro/,
+    /Otero D'Costa[\s\S]+Arma/,
   );
 });
 

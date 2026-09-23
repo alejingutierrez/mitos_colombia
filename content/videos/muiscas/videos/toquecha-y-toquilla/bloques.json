@@ -122,18 +122,10 @@
       "desc": "PLANO GENERAL de la niebla cerrándose sobre el claro, con un venado pequeño quieto en el borde mirando hacia el centro."
     }
   ],
-  "reusadas": [
-    {
-      "tag": "b2a",
-      "reusa": "mitos/toquecha-y-toquilla/entrada"
-    },
-    {
-      "tag": "b3b",
-      "reusa": "mitos/toquecha-y-toquilla/huella"
-    },
-    {
-      "tag": "b7a",
-      "reusa": "mitos/toquecha-y-toquilla/acto"
-    }
-  ]
+  "reusadas": [],
+  "generacion_actual": {
+    "provider": "openai",
+    "model": "gpt-image-2",
+    "spec": "scripts/videos/specs/muisca-toquecha-escenas.mjs"
+  }
 }

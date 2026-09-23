@@ -272,6 +272,153 @@ export const andinaLegacyEditorialResidualSources = {
     limitation:
       "Usa lenguaje racial y épico hoy inaceptable y depende de cronistas coloniales; se consulta como historia de la recepción, no como voz indígena.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  calleCatalina2013: source({
+    title: "Catalina, La Ñapanga",
+    author: "Marco Antonio Valencia Calle",
+    year: 2013,
+    type: "columna de prensa (relato literario)",
+    url: "https://www.lanacion.com.co/catalina-la-napanga-por-marco-antonio-valencia/",
+    summary:
+      "Texto completo del relato: la sobrina del conquistador vestida de ñapanga un Martes Santo, el poeta Francisco García, la boda forzada de 1576 con Alonso de Paz, la criada Bárbula, los quince años de amores, el doble crimen y la apelación que dejó impune al marido.",
+    limitation:
+      "Ficción de autor sobre un caso real; mezcla nombres (Alonso/Lorenzo) y da por probado un adulterio que los autos no prueban.",
+  }),
+  llorenteCausa1591: source({
+    title: "Causa criminal seguida contra el capitán Lorenzo de Paz Maldonado por la muerte de doña Catalina de Belalcázar y de Francisco García de Tobar (Archivo Central del Cauca, signatura 01200, Col. J I-2 cr)",
+    author: "Centro de Investigaciones Históricas José María Arboleda Llorente, catálogo en Zasqua",
+    year: 1591,
+    type: "descripción archivística de expediente judicial",
+    url: "https://zasqua.org/co-cihjml-acc-01200-judicial-i-cr/",
+    summary:
+      "Resume el proceso real que el relato novela: demandantes, sentencia del gobernador Cueva de Montesdoca (degüello, pérdida de encomienda y de la mitad de los bienes), apelación a Quito y los testimonios contrarios sobre la visita de García de Tobar.",
+    limitation:
+      "Es una ficha de catálogo, no el expediente; faltan los primeros 106 folios del original.",
+  }),
+  mendozaLeyendas2015: source({
+    title: "Leyendas extraordinarias de Popayán, de Marco Antonio Valencia Calle (Editorial SIC, febrero 2015)",
+    author: "Donaldo Mendoza",
+    year: 2015,
+    type: "reseña de prensa regional (Proclama del Pacífico)",
+    url: "https://proclamadelpacifico.com/leyendas-extraordinarias-de-popayan/",
+    summary:
+      "Fecha y describe el libro donde el relato de Catalina quedó recogido: 125 páginas, veintiséis dibujos de Rodrigo Valencia Quijano, trece leyendas escritas entre periodismo, poesía y narración.",
+    limitation:
+      "Reseña elogiosa de un colega; no resume el relato de Catalina.",
+  }),
+  henaoCatalina2020: source({
+    title: "Catalina una ñapanga hechizada de amor (episodio del pódcast Leyendas extraordinarias de Popayán)",
+    author: "Marco Antonio Valencia Calle; lectura de Alejandra Henao",
+    year: 2020,
+    type: "audio (iVoox)",
+    url: "https://www.ivoox.com/catalina-una-napanga-hechizada-de-amor-audios-mp3_rf_63092301_1.html",
+    summary:
+      "Versión leída del capítulo del libro de 2015, con su título definitivo; acredita autor, obra y lectora.",
+    limitation:
+      "Audio sin transcripción; no se cotejó palabra por palabra con la columna de 2013.",
+  }),
+  santanderescritor2021: source({
+    title: "El escritor Marco Antonio Valencia presentó su obra «Leyendas Extraordinarias de Popayán» en la UDES",
+    author: "Universidad de Santander, Vicerrectoría de Extensión",
+    year: 2021,
+    type: "nota institucional",
+    url: "https://bucaramanga.udes.edu.co/extension/noticias/el-escritor-marco-antonio-valencia-presento-su-obra-leyendas-extraordinarias-de-popayan-en-la-udes",
+    summary:
+      "Presenta a Valencia Calle como poeta, narrador y periodista y a su libro como obra literaria, lo que sitúa el relato de Catalina como literatura de autor.",
+    limitation:
+      "Nota de evento; no entra en el contenido de ningún relato.",
+  }),
+  herreraPayanceta2010: source({
+    title: "Payanceta: música y danza. Estudio y aprendizaje de la danza Payanceta con los grupos culturales Aires de Pubenza y Yanaconas de Popayán",
+    author: "Luz Adriana Morales Herrera",
+    year: 2010,
+    type: "trabajo de grado (Universidad del Cauca)",
+    url: "https://repositorio.unicauca.edu.co/bitstream/handle/123456789/8095/Payanceta_musica%20y%20danza.pdf?isAllowed=y&sequence=1",
+    summary:
+      "Explica quién es la ñapanga de Popayán —mujer del pueblo, servicial y devota, que lucía su traje en los actos religiosos— y su pervivencia en las sahumadoras de las procesiones: el traje que Catalina se pone en el relato.",
+    limitation:
+      "Trabajo de licenciatura sobre danza; su etimología («doña Panga») es tradición local sin aparato filológico.",
+  }),
+  robledoInes2010: source({
+    title: "Inés de Hinojosa, doncella huérfana y pecadora",
+    author: "Ángela Inés Robledo",
+    year: 2010,
+    type: "artículo académico (Revista de Estudios Colombianos, núm. 35)",
+    url: "https://colombianistas.org/wordpress/wp-content/themes/pleasant/REC/REC%2035/Art%C3%ADculos/9.REC_35_AngelaIRobledo.pdf",
+    summary:
+      "Paralelo: sigue cómo el caso de Inés de Hinojosa, contado por Rodríguez Freyle en El Carnero, se reescribe como romance en 1864 (Avella Mendoza) y en 1986 (Morales Pradilla), el mismo tránsito de proceso colonial a historia de pasión que hace Valencia Calle.",
+    limitation:
+      "No menciona a Catalina de Belalcázar; el paralelo es de procedimiento literario, no de tradición.",
+  }),
+  pelayoDramas1881: source({
+    title: "Dramas de Guillermo Shakspeare, vol. 1 (incluye Otelo), traducción de Marcelino Menéndez Pelayo",
+    author: "William Shakespeare; trad. Marcelino Menéndez Pelayo",
+    year: 1881,
+    type: "texto dramático (Proyecto Gutenberg)",
+    url: "https://www.gutenberg.org/ebooks/53207",
+    summary:
+      "Paralelo que el propio relato invoca al comparar al marido con «el celoso Otelo»: el crimen de celos contra una esposa sin prueba de infidelidad.",
+    limitation:
+      "Paralelo literario universal traído por el autor, no por la tradición payanesa.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  leonCronica1553: source({
+    title: "Crónica del Perú, primera parte, capítulo XI: «Del cacique Nutibara y de su señorío, y de otros caciques sujetos a la ciudad de Antiocha»",
+    author: "Pedro Cieza de León",
+    year: 1553,
+    type: "crónica (edición digital)",
+    url: "https://pruebatcdn.aprende.org/libros/pdf/Cronica_del_Peru.pdf",
+    summary:
+      "Nutibara, hijo de Anunaybe, señor del valle de Guacá; su hermano Quinuchu, lugarteniente entre los indios de las sierras de Abibe, que lo proveía de puercos, pescado, aves, mantas y joyas de oro; el valle de casas grandes, frutales y grandes sepulturas.",
+    limitation:
+      "Testimonio de un conquistador; no trae ningún relato oral ni sobrenatural de Quinunchú y describe a los indígenas con categorías españolas.",
+  }),
+  cESAProcesos: source({
+    title: "Procesos de territorialización en la Antioquia colonial, siglos XVI-XVII",
+    author: "Juan Santiago Correa R. (CESA)",
+    type: "artículo académico",
+    url: "https://repository.cesa.edu.co/bitstream/handle/10726/268/21.PROCESOS%20DE.pdf",
+    summary:
+      "El cogobierno Guaca de Nutibara y Quinunchú, el «general maestro» de Castellanos, los siete a nueve meses de la hueste de César en tierra Guaca, la muerte de Quinunchú en combate, el botín y las noticias de Buriticá.",
+    limitation:
+      "Estudio histórico de la conquista; no trata leyendas ni la memoria folclórica del personaje.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  ibagueFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales (Universidad de Ibagué)",
+    year: 2013,
+    type: "libro (reedición)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "«La Madre de Agua» (p. 63) y «La Madremonte» (p. 64): las dos guardianas femeninas de aguas y montes del llano tolimense, la niña de pies al revés y la señora de verde que castiga con tempestades y pierde a los culpables.",
+    limitation:
+      "Trata la Madremonte y la Madre de Agua del Tolima, no el Hada de los Cañaverales, que no tiene registro tradicional.",
+  }),
+  vlietColombia1997: source({
+    title: "Colombia, Many Countries in One (incluye «Niños de las regiones de Colombia», de Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro; Esmeralda Van Vliet",
+    year: 1997,
+    type: "material educativo (ERIC)",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La Madremonte de la región cafetera: cabellos de helechos y lianas, piel de musgo, brazos de bejucos; llora rocío cuando talan un árbol. Es la imagen más cercana a la figura de hojas del cañaveral.",
+    limitation:
+      "Trata la Madremonte cafetera, no esta fábula; texto divulgativo para niños.",
+  }),
+  eSAPInventario: source({
+    title: "Inventario turístico de Viterbo (Caldas): mitos, leyendas y tradición oral",
+    author: "Municipio de Viterbo (repositorio ESAP)",
+    type: "inventario municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/e2157446-5cb0-4e99-afa6-f31ad7ee56b6/download",
+    summary:
+      "§1.4.1: la Madremonte musgosa enraizada en los pantanos y los nacimientos de los riachuelos, o vestida de ramajes; enturbia el agua al bañarse en el nacimiento de las quebradas.",
+    limitation:
+      "Trata la Madremonte caldense, no el hada; inventario sin informantes nombrados.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -307,7 +454,29 @@ const sourceKeysBySlug = {
   ],
 };
 
-export function pickAndinaLegacyEditorialResidualSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickAndinaLegacyEditorialResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickAndinaLegacyEditorialResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = andinaLegacyEditorialResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickAndinaLegacyEditorialResidualSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

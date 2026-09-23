@@ -36,12 +36,12 @@ function defineWithSources(
 }
 
 export function defineYaguaMyth(input) {
-  return defineWithSources(input, pickYaguaSources());
+  return defineWithSources(input, pickYaguaSources(...(input.sourceKeys ?? [])));
 }
 
 export function defineChimbilacoMyth(input) {
   return defineWithSources(
     { ...input, scope: "contemporary" },
-    pickChimbilacoSources(),
+    pickChimbilacoSources(...(input.sourceKeys ?? [])),
   );
 }

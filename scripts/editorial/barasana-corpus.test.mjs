@@ -47,10 +47,77 @@ test("los seis expedientes Barasana cumplen la metodología editorial", () => {
     assert.ok(record.seo_description.length <= 165);
     assert.equal(record.tags.length, 4);
     assert.equal(record.focus_keywords.length, 5);
-    assert.equal(record.keySources.length + record.sources.length, 7);
-    const urls = [...record.keySources, ...record.sources].map(({ url }) => url);
+    // Antes: `keySources + sources === 7`. Ese siete era el reparto en bloque
+    // escrito como aserción; desde la Fase B del 2026-09-19 cada ficha cita
+    // las obras que su reescritura usó, y son distintas entre fichas. Lo que
+    // se verifica es la sustancia: mínimo de fuentes, dominios distintos,
+    // ninguna URL repetida y todas con resumen, límite y URL https.
+    const todas = [...record.keySources, ...record.sources];
+    assert.ok(
+      todas.length >= 5,
+      `${record.slug}: ${todas.length} fuentes, el mínimo son cinco.`,
+    );
+    assert.equal(record.keySources.length, 3);
+    const urls = todas.map(({ url }) => url);
     assert.equal(new Set(urls).size, urls.length);
+    assert.ok(
+      new Set(urls.map((url) => new URL(url).host)).size >= 3,
+      `${record.slug}: menos de tres dominios distintos.`,
+    );
+    assert.ok(
+      todas.every(
+        ({ url, title, summary, limitation }) =>
+          url.startsWith("https://") && title && summary && limitation,
+      ),
+      `${record.slug}: hay una fuente sin https, título, resumen o límite.`,
+    );
   }
+});
+
+test("ninguna pareja de fichas repite el mismo reparto de fuentes", () => {
+  const repartos = new Map();
+  for (const record of records) {
+    const firma = [...record.keySources, ...record.sources]
+      .map(({ url }) => url)
+      .join("|");
+    assert.ok(
+      !repartos.has(firma),
+      `${record.slug} y ${repartos.get(firma)} citan exactamente lo mismo.`,
+    );
+    repartos.set(firma, record.slug);
+  }
+  // La obra de cabecera la firman los propios barasana y tiene que estar en
+  // las seis; Torres Laborde 1969 sólo puede aparecer en Luna, que es la
+  // única ficha que se la atribuyó, y nunca como fuente clave: su enlace es
+  // una ficha de catálogo sin texto.
+  const bySlug = new Map(records.map((record) => [record.slug, record]));
+  for (const record of records) {
+    assert.ok(
+      [...record.keySources, ...record.sources].some(({ url }) =>
+        url.includes("gaiaamazonas.org"),
+      ),
+      `${record.slug}: no cita el libro de la ACAIPI.`,
+    );
+  }
+  for (const record of records) {
+    const torres = [...record.keySources, ...record.sources].filter(({ url }) =>
+      url.includes("repository.icesi.edu.co"),
+    );
+    assert.equal(torres.length, record.slug === "la-luna" ? 1 : 0);
+  }
+  assert.ok(
+    bySlug
+      .get("la-luna")
+      .keySources.every(({ url }) => !url.includes("repository.icesi.edu.co")),
+    "Torres Laborde no puede ser fuente clave: es una ficha de catálogo.",
+  );
+  assert.match(
+    bySlug
+      .get("la-luna")
+      .sources.find(({ url }) => url.includes("repository.icesi.edu.co"))
+      .limitation,
+    /no está corroborada/i,
+  );
 });
 
 test("corrige Luna e incorpora cinco ciclos documentados", () => {

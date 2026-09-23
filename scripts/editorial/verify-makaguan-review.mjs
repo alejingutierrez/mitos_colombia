@@ -150,10 +150,41 @@ async function run() {
           Number(row.longitude) === dossier.longitude,
         `${row.slug}: coordenadas desincronizadas.`,
       );
+      // Antes: `sourceCount === 7`. Ese siete era el reparto en bloque escrito
+      // como aserción. Desde la Fase B del 2026-09-19 cada ficha cita las
+      // obras que su reescritura usó, así que lo que hay que verificar es que
+      // lo publicado coincida con el módulo, no con un número.
       const sourceCount =
         jsonArray(row.sources_json).length +
         jsonArray(row.key_sources_json).length;
-      assert(sourceCount === 7, `${row.slug}: ${sourceCount} fuentes.`);
+      const esperadas = dossier.keySources.length + dossier.sources.length;
+      assert(
+        sourceCount === esperadas,
+        `${row.slug}: ${sourceCount} fuentes publicadas y ${esperadas} en el módulo.`,
+      );
+      assert(sourceCount >= 5, `${row.slug}: ${sourceCount} fuentes (<5).`);
+      const publicadas = [
+        ...jsonArray(row.key_sources_json),
+        ...jsonArray(row.sources_json),
+      ];
+      assert(
+        new Set(publicadas.map(({ url }) => url)).size === sourceCount,
+        `${row.slug}: fuentes publicadas con URL repetida.`,
+      );
+      assert(
+        new Set(publicadas.map(({ url }) => new URL(url).host)).size >= 3,
+        `${row.slug}: menos de tres dominios distintos publicados.`,
+      );
+      assert(
+        publicadas.every(
+          ({ url, summary, limitation }) =>
+            typeof url === "string" &&
+            url.startsWith("https://") &&
+            summary &&
+            limitation,
+        ),
+        `${row.slug}: hay una fuente publicada sin URL https, resumen o límite.`,
+      );
       sourceCounts.push(sourceCount);
     }
     const bySlug = new Map(result.rows.map((row) => [row.slug, row]));

@@ -311,6 +311,87 @@ export const boyacaMixtoResidualSources = {
     limitation:
       "No contiene a Are, Zarbi, río de sangre, mariposas ni esmeraldas y no demuestra relación histórica con los muzo.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  eSAPEsquemasf: source({
+    title: "Esquema de Ordenamiento Territorial de San Eduardo (Boyacá)",
+    author: "Municipio de San Eduardo (repositorio ESAP)",
+    year: "s. f.",
+    type: "documento de planeación municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/0950249b-4ba1-4f98-b924-cc090cb49209/download",
+    summary:
+      "El esquema municipal recoge el Cucacuy, parafraseando a Ocampo, como guarda del dinero enterrado en luna llena en Lengupá, y en la misma página el Biato que compara Similitudes (p. 31).",
+    limitation:
+      "Documento de planeación; su texto deriva de Ocampo.",
+  }),
+  corpoboyacaPOMCA2017: source({
+    title: "POMCA del río Alto Suárez (2401-01), vol. III: caracterización socioeconómica y cultural",
+    author: "Corpoboyacá",
+    year: 2017,
+    type: "plan de ordenamiento de cuenca",
+    url: "https://www.corpoboyaca.gov.co/cms/wp-content/uploads/2017/12/8-Volumen-III-caracterizacion-socioeconomica-cultural.pdf",
+    summary:
+      "La caracterización cultural de la cuenca del Alto Suárez registra el Cucacuy con bordón y calavera (§4.1.5.7).",
+    limitation:
+      "Informe técnico; no da narradores.",
+  }),
+  gallegoInfluencia2014: source({
+    title: "Influencia léxica del muisca en el español actual clasificada en campos semánticos",
+    author: "D. Giraldo Gallego",
+    year: 2014,
+    type: "artículo (Cuadernos de Lingüística Hispánica 24, pp. 145-162)",
+    url: "http://www.scielo.org.co/pdf/clin/n24/n24a09.pdf",
+    summary:
+      "Registra «cocacuy» entre los préstamos del muisca en el español del Valle de Tenza y del oriente de Cundinamarca.",
+    limitation:
+      "Estudio léxico: documenta la palabra, no el relato. SciELO Colombia sólo publica por http.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Trae el Cucacuy en sus pp. 35-36, con ficha técnica y un fragmento de una novela ficticia.",
+    limitation:
+      "El libro se declara «documentos imaginarios»; la entrada es composición de autor.",
+  }),
+  compiladoraMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo III",
+    author: "Eugenia Villa Posse (compiladora)",
+    year: 1993,
+    type: "antología (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Texto del relato de Javier Ocampo López, Mitos colombianos (1988), en la sección 33, pp. 153-155: Are crea a Fura y Tena, Zarbi, la muerte de los tres, las lágrimas que se vuelven esmeraldas y mariposas, y en las páginas previas la cacica de Guatavita que compara Similitudes.",
+    limitation:
+      "Ocampo elabora literariamente; no da narrador.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II (sección 20, Mitos del Tolima: Misael Devia, «Folclor tolimense», 1962)",
+    author: "Eugenia Villa Posse (investigación y compilación); Misael Devia",
+    year: 1993,
+    type: "antología con texto reproducido de folclorólogo",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "Texto del relato de Lilia Montaña de Silva Celis (1970) en la sección 23, pp. 231-243: Mongatá, la esposa abandonada, Mayavita y las aves de hojas de grao que se vuelven guacamayas mensajeras del Sol, con el vocabulario de la autora.",
+    limitation:
+      "Villa Posse advierte una «elaboración excesivamente literaria» de la tradición campesina de Tota.",
+  }),
+  caroConversas2022: source({
+    title: "Conversas del lago de Tota y el valle de Sogamoso",
+    author: "Huérfano Huérfano (Instituto Caro y Cuervo)",
+    year: 2022,
+    type: "tesis de maestría",
+    url: "https://bibliotecadigital.caroycuervo.gov.co/1862/1/2022-80768352.pdf",
+    summary:
+      "Describe el libro de Montaña (nueve mitos y 786 coplas) y su contexto en las excavaciones de Eliécer Silva Celis en el Templo del Sol.",
+    limitation:
+      "Estudio de las conversas de Tota; no reproduce el relato.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -356,7 +437,29 @@ const sourceKeysBySlug = {
   ],
 };
 
-export function pickBoyacaMixtoResidualSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickBoyacaMixtoResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickBoyacaMixtoResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = boyacaMixtoResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickBoyacaMixtoResidualSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

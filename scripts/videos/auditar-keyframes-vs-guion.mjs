@@ -1,6 +1,8 @@
 // ¿Qué keyframes dejaron de corresponder a su guion?
-// Un guion de N bloques necesita N*2 cuadros. Si el guion se reescribió y los
-// cuadros son del plan viejo, el conteo no cuadra y el mito sale como REHACER.
+// Desde la doctrina v3 (pares A→B) un guion de N bloques necesita N*4 imágenes:
+// 2 escenas por bloque y 2 imágenes por escena (fotograma inicial y final). Si
+// el guion se reescribió o los cuadros son del plan viejo, el conteo no cuadra
+// y el mito sale como REHACER.
 //
 //   node scripts/videos/auditar-keyframes-vs-guion.mjs [comunidad]
 import fs from "node:fs";
@@ -23,7 +25,7 @@ for (const f of actas.sort()) {
     .sort((a, b) => Number(a.match(/v(\d+)/)[1]) - Number(b.match(/v(\d+)/)[1]));
   if (!guiones.length) { filas.push({ mito, N: 0, necesita: 0, tiene: 0, estado: "SIN GUION" }); continue; }
   const g = JSON.parse(fs.readFileSync(`docs/videos/${dirCom}/mvp-guiones/${guiones.at(-1)}`, "utf8"));
-  const necesita = g.lines.length * 2;
+  const necesita = g.lines.length * 4;
 
   const kdir = `content/videos/${dirCom}/videos/${mito}/keyframes`;
   const tags = new Set();

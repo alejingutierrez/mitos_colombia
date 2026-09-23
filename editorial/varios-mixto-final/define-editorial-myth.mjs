@@ -2,11 +2,19 @@ import { buildVariosMixtoFinalMyth } from "./build-editorial-myth.mjs";
 import { pickVariosMixtoFinalSources } from "./sources.mjs";
 
 export function defineVariosMixtoFinalMyth(input) {
-  const selectedSources = pickVariosMixtoFinalSources(input.slug);
-  if (
-    selectedSources.length !== 8 ||
-    new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length
-  ) {
+  // Las fuentes son las que la ficha declara en `sourceKeys`; sin ellas cae
+  // en el reparto heredado por slug, con la comprobación de siempre.
+  const selectedSources = pickVariosMixtoFinalSources(input.sourceKeys || input.slug);
+  if (input.sourceKeys) {
+    // Piso del bloque mestizo y mixto: 8, salvo `fuentesAgotadas` declarado.
+    const minimo = input.fuentesAgotadas ? 1 : 8;
+    if (selectedSources.length < minimo && !process.env.ENRIQUECER_CONSOLIDANDO) {
+      throw new Error(`${input.slug}: ${selectedSources.length} fuentes, y el piso es ${minimo}.`);
+    }
+    if (new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length) {
+      throw new Error(`${input.slug}: hay URLs repetidas entre sus fuentes.`);
+    }
+  } else if ((input.fuentesAgotadas ? selectedSources.length < 1 : selectedSources.length !== 8) || new Set(selectedSources.map(({ url }) => url)).size !== selectedSources.length) {
     throw new Error(`${input.slug}: se esperaban ocho fuentes únicas.`);
   }
   return buildVariosMixtoFinalMyth({

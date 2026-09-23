@@ -191,6 +191,130 @@ export const santanderMixtoResidualSources = {
     limitation:
       "Comparte crítica de la superioridad religiosa, pero no la trama fantástica ni la procedencia de Ocaña.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, vol. II, sección 17 «Varias regiones. Leyendas»: «Talabalí», de Enrique Otero D'Costa",
+    author: "Eugenia Villa Posse (investigación y compilación)",
+    year: 1993,
+    type: "antología institucional que reproduce un libro de leyendas de autor",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620#page=34",
+    summary:
+      "Texto íntegro en los folios 36 a 41, con la cabecera impresa «T ALABAD» y el nombre Talabalí en todo el cuerpo. Es la única fuente del relato completo: la ruina de Juan de Velasco y su traslado de Pamplona a Bucarica; los yariguíes y la parcialidad suamacá de las vegas del Cáchira; la captura de Talabalí, guane de Bucarica y antiguo paje, en la entrada contra el cacique Suamacá; la jaula del tigre y la comida secreta de doña María; el vizcaíno Juan de Arteaga Gamboa y la condición del duelo de espada y macana; el consejo del minero Beltrán de Luzuriaga; el palenque de la doctrina de Bucarica con sus tres tablados y los nombres de doctrinero, teniente-alcalde de minas, escribano y alguacil; el primer golpe que rompe la rodela, el grito de María y la muerte buscada.",
+    limitation:
+      "Reproducción de 1993 del libro de 1936, con erratas de composición, empezando por el título. El PDF va dos páginas por detrás de los folios. No declara narrador ni lugar de escucha, y la pieza tiene voz de escritor, sin marcas de oralidad.",
+  }),
+  perezPinzonBucaramanga2022: source({
+    title: "Bucaramanga 400 años. Indios pobladores antes (1622) y después (1657) de su «fundación»",
+    author: "Luis-Rubén Pérez-Pinzón",
+    year: 2022,
+    type: "artículo de historia colonial en revista universitaria",
+    url: "https://revistas.unal.edu.co/index.php/hisysoc/article/view/102127",
+    summary:
+      "Da el suelo documental de los nombres del relato. Con los expedientes de la visita de Juan de Villabona Zubiaurre (1622) muestra que el oidor mandó congregar a los indios lavadores de Guaca y Bucarica para frenar los abusos del encomendero y gobernador de Pamplona Juan de Velasco, de su familia y, en especial, de su yerno Juan de Arteaga; que el auto lo ejecutó Andrés Páez de Sotomayor, teniente del alcalde de minas, el mismo que en el palenque de Otero ocupa el tablado de los blancos; y que fue Otero D'Costa quien halló en 1914 la copia del auto y la publicó en el Boletín de Historia y Antigüedades n.º 100.",
+    limitation:
+      "No menciona a Talabalí, la jaula, doña María ni el duelo. Su Arteaga es yerno y administrador en 1622, no el pretendiente pobre del relato; la relación entre ambos no está demostrada.",
+  }),
+  camargoHacia2015: source({
+    title: "Hacia una nueva comprensión de la historiografía colombiana: breve historia intelectual de Enrique Otero D'Costa (1883-1964)",
+    author: "Daniel Mauricio Preciado Camargo",
+    year: 2015,
+    type: "trabajo de grado en historia",
+    url: "https://repository.urosario.edu.co/server/api/core/bitstreams/4fc7392a-c2aa-4a84-92ff-4a2402f57200/content",
+    summary:
+      "En su página 58 cita «Talabalí» por la edición de «Historietas. Leyendas y tradiciones colombianas» (Manizales, Arturo Zapata, 1934), p. 150, lo que fija una impresión anterior a la de 1936. Resume el duelo de espada y macana por la mano de doña María y transcribe la negativa del hidalgo a batirse con indios, que usa para mostrar el interés de Otero por la mentalidad de la élite colonial. Describe además el «Cronicón solariego» de 1922 como un libro de historia regional, con capítulos sobre guanes, yariguíes y los placeres de oro del Río del Oro.",
+    limitation:
+      "Trabajo de pregrado; resume la pieza en un párrafo y no la coteja entre ediciones. La cita que da trae una variante mínima («indios o personas») frente a la de 1993 («indios y personas»).",
+  }),
+  gonzalezHistoria2023: source({
+    title: "Historia de la provincia de Guane: origen, poblamiento y configuraciones sociales (1540-1795)",
+    author: "María Consuelo Moreno González",
+    year: 2023,
+    type: "tesis doctoral en historia",
+    url: "https://noesis.uis.edu.co/server/api/core/bitstreams/19c96599-1be0-4c77-a9d7-faf78fa4f1b5/content",
+    summary:
+      "En sus páginas 187 y 188 sitúa a Ortún Velasco como uno de los primeros pobladores de la margen del Río del Oro, con estancia de ganado y cultivos de caña y maíz en el sitio de Bucarica, donde sus indios de encomienda lavaban oro y tributaban; y explica que los de Juan Velasco siguieron viviendo en esa estancia aunque se los congregara en Bucaramanga en 1602 y 1622. Es el fondo de la «casona de Bucarica» del relato. En la página 341 registra además uniones entre guanes encomendados e indias yariguíes, el cruce de mundos que la biografía de Talabalí dramatiza.",
+    limitation:
+      "No menciona el relato ni a ninguno de sus personajes inventados. Se apoya en parte en el propio Otero («Fundación de Bucaramanga», 1914), de modo que no es del todo independiente de él.",
+  }),
+  ercillaAraucana1569: source({
+    title: "La Araucana, parte I, canto III",
+    author: "Alonso de Ercilla y Zúñiga",
+    year: 1569,
+    type: "poema épico, edición de 1776 digitalizada",
+    url: "https://archive.org/details/laaraucanapartei01erci",
+    summary:
+      "Trae el paralelo más preciso de la figura: Lautaro, «un hijo de un cacique conocido / que a Valdivia de paje le servía», criado en casa del conquistador, que en la batalla se pasa a los suyos y acaba como su capitán. Como Talabalí, sale del servicio doméstico español y convierte lo aprendido de los blancos en arma contra ellos.",
+    limitation:
+      "Poema épico del siglo XVI sobre Chile, citado en una edición madrileña de 1776. Lautaro vence y Talabalí renuncia; la comparación es de trayectoria, no de desenlace, y no hay indicio de que Otero lo tomara de Ercilla.",
+  }),
+  meraCumanda1879: source({
+    title: "Cumandá o un drama entre salvajes",
+    author: "Juan León Mera",
+    year: 1879,
+    type: "novela indianista, edición de 1891 digitalizada",
+    url: "https://archive.org/details/cumandundram00merauoft",
+    summary:
+      "Es el paralelo andino del desenlace: la protagonista, criada entre los pueblos de la selva oriental del Ecuador, acepta ir a la muerte para salvar al joven blanco al que ama, y declara que prefiere sacrificar su vida por la de su adorado. Como en Bucarica, el amor que cruza la frontera colonial se resuelve con la muerte voluntaria del personaje indígena, contada por un escritor criollo.",
+    limitation:
+      "Novela ecuatoriana de autor; la imposibilidad de su amor se debe a un parentesco revelado, no a la jerarquía de castas. Comparación de género, no de fuente.",
+  }),
+  cupaedicion2019: source({
+    title: "La edición de la Selección Samper Ortega de Literatura Colombiana. Bibliotecas, editoriales e imprentas en la década de 1930",
+    author: "Miguel Ángel Pineda Cupa",
+    year: 2019,
+    type: "artículo de historia del libro",
+    url: "https://www.redalyc.org/journal/2630/263058277003/html/",
+    summary:
+      "Sitúa la edición de 1936 en que Villa Posse lee «Talabalí»: la Biblioteca Aldeana de Colombia era la edición oficial en cartilla de la Selección Samper Ortega, contratada por el Ministerio de Educación Nacional en 1935 para bibliotecas. Menciona también que la Biblioteca Santander, lanzada en Bucaramanga en 1932 por Gustavo Otero Muñoz, contó entre sus autores a Enrique Otero D'Costa.",
+    limitation:
+      "Historia editorial; no trata el contenido del volumen de Otero ni menciona esta pieza.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  cuelloDiseno2014: source({
+    title: "Diseño y producción del libro: Leyendas de tradición rural y urbana de Ocaña, Norte de Santander",
+    author: "Arlyd Marisol Monterrosa Cuello y Keyla Melissa Guillin Acosta (Universidad Francisco de Paula Santander Ocaña)",
+    year: 2014,
+    type: "trabajo de grado",
+    url: "https://repositorioinstitucional.ufpso.edu.co/handle/20.500.14167/2785",
+    summary:
+      "Proyecto de libro para preservar las leyendas rurales y urbanas de Ocaña, la ciudad donde el libro de 2004 sitúa al ermitaño.",
+    limitation:
+      "Consultado sólo por su ficha institucional; no se pudo comprobar si nombra al ermitaño, y no prueba una versión oral anterior a 2004.",
+  }),
+  claroDesarrollo2018: source({
+    title: "Desarrollo de un software educativo de mitos y leyendas para los estudiantes de tercero primaria del Instituto Técnico Industrial Lucio Pabón Núñez, sede Marabel, en Ocaña",
+    author: "Erika Alexandra Rojas Claro y Angela Viviana Verano Yañez (Universidad Francisco de Paula Santander Ocaña)",
+    year: 2018,
+    type: "trabajo de grado",
+    url: "https://repositorioinstitucional.ufpso.edu.co/handle/20.500.14167/1529",
+    summary:
+      "Uso escolar de los mitos y leyendas de Ocaña en un programa multimedia para tercero de primaria: contexto local del relato.",
+    limitation:
+      "Consultado sólo por su ficha institucional; trata la enseñanza de leyendas ocañeras en general, no este ermitaño.",
+  }),
+  atribuidocondenado1635: source({
+    title: "El condenado por desconfiado",
+    author: "Tirso de Molina (atribuido), ed. digital de Francisco García (Duke University)",
+    year: 1635,
+    type: "comedia teológica del Siglo de Oro",
+    url: "https://people.duke.edu/~garci/garcitextos/MOLINA-TD/Condenado-desconfiado/Condenado-desconfiado.html.bak",
+    summary:
+      "El ermitaño Paulo, que se condena por no aceptar que el rufián Enrico se salve arrepintiéndose al final: el paralelo más cercano del origen del ermitaño en Similitudes.",
+    limitation:
+      "Trata el motivo del ermitaño resentido contra la salvación ajena, no este relato; texto literario español.",
+  }),
+  sedelibro: source({
+    title: "El libro del Pueblo de Dios: Evangelio según san Mateo, capítulo 20",
+    author: "Libreria Editrice Vaticana (Santa Sede)",
+    type: "texto bíblico",
+    url: "https://www.vatican.va/archive/ESL0506/__PUU.HTM",
+    summary:
+      "La parábola de los obreros de la viña y la queja de los que trabajaron toda la jornada contra los de la última hora, citada en Similitudes.",
+    limitation:
+      "Trata el motivo, no este relato; se cita como paralelo.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -216,7 +340,29 @@ const sourceKeysBySlug = {
   ],
 };
 
-export function pickSantanderMixtoResidualSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickSantanderMixtoResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickSantanderMixtoResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = santanderMixtoResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickSantanderMixtoResidualSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
   return keys.map((key) => {

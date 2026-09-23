@@ -7,7 +7,6 @@ const sharedContextKeys = [
   "arcandArchive",
   "minculturaKuiva",
   "icbfWamonae",
-  "onicWamonae",
 ];
 
 export function defineKuivaMyth({

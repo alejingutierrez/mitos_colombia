@@ -1,32 +1,169 @@
 {
-  "schema": "acta-de-reduccion-v1", "mito": "la-mala-mujer", "comunidad": "ette-ennaka",
+  "schema": "acta-de-reduccion-v1",
+  "mito": "la-mala-mujer",
+  "comunidad": "ette-ennaka",
   "canon_slug": "la-mala-mujer",
-  "canon_sha256": "b28711f7a91db18f932e9205ce0bbbce4585057b426d9533433cc923d01cb9fc",
+  "canon_sha256": "8fabdbbcf7295bb6ffa752c32082bf7f38e951245271ff27dfb5ecabf474e734",
   "nudos": [
-    { "id": "n01", "nudo": "Un anciano enfermo vivía con su esposa y dos hijos", "evidencia": "Un hombre anciano y enfermo vivía con su esposa y dos hijos" },
-    { "id": "n02", "nudo": "Los hijos salieron al monte a cazar danta", "evidencia": "los hijos salieron al monte para cazar danta" },
-    { "id": "n03", "nudo": "La mujer exigió que el anciano fuera a trabajar, y él dijo que no podía", "evidencia": "la mujer exigió que el anciano fuera a trabajar. Él respondió que no podía porque la edad y la enfermedad le habían quitado las fuerzas" },
-    { "id": "n04", "nudo": "Ella insistió y él llegó a la roza a trabajar bajo un Sol muy fuerte", "evidencia": "El hombre llegó a la roza y comenzó la labor bajo un Sol muy fuerte" },
-    { "id": "n05", "nudo": "Se cansó, buscó la sombra de un árbol y murió allí", "evidencia": "Se cansó, buscó la sombra de un árbol y murió allí" },
-    { "id": "n06", "nudo": "Los hijos, sin saberlo, encontraron un claro limpio con un hombre de pie en el centro", "evidencia": "encontraron un claro limpio, sin maleza, y vieron a un hombre de pie en el centro" },
-    { "id": "n07", "nudo": "Al acercarse reconocieron a su padre, ya no como el enfermo que dejaron", "evidencia": "Al acercarse reconocieron a su padre. Ya no aparecía como el enfermo que habían dejado en casa" },
-    { "id": "n08", "nudo": "Estaba pintado con achiote, con hilos, falda nueva, cinta y corona de plumas", "evidencia": "Tenía el cuerpo pintado con achiote, hilos en tobillos, rodillas y brazos, una falda nueva, una cinta sobre el pecho y una corona de plumas amarillas y rojas" },
-    { "id": "n09", "nudo": "Llevaba cola de guacamaya, arco, flechas y macana, como para una fiesta", "evidencia": "cola de guacamaya, arco, flechas y macana, como alguien preparado para una fiesta" },
-    { "id": "n10", "nudo": "Los hijos le preguntaron si iba a celebrar; un viento lo ocultó y lo mostró", "evidencia": "Un viento fuerte lo ocultó y volvió a mostrarlo" },
-    { "id": "n11", "nudo": "El padre confirmó que se marchaba a una fiesta", "evidencia": "El padre confirmó que se marchaba a una fiesta" },
-    { "id": "n12", "nudo": "Les entregó la macana y ordenó golpear a la madre en la cabeza", "evidencia": "Les entregó la macana y ordenó que fueran a la casa y golpearan a su madre en la cabeza" },
-    { "id": "n13", "nudo": "Otro viento se llevó su figura definitivamente", "evidencia": "Otro viento se llevó definitivamente su figura" },
-    { "id": "n14", "nudo": "Los hijos volvieron, anunciaron la muerte del padre y cumplieron la orden", "evidencia": "Los hijos regresaron, anunciaron que el padre había muerto y cumplieron la orden" },
-    { "id": "n15", "nudo": "El texto termina llamándola «mala mujer»", "evidencia": "El texto termina llamándola" }
+    {
+      "id": "n01",
+      "nudo": "Un hombre tenía su mujer y dos hijos",
+      "evidencia": "Un hombre tenía su mujer y dos hijos."
+    },
+    {
+      "id": "n02",
+      "nudo": "Cuando ya estaba muy viejo y enfermo, los hijos se fueron al monte para cazar danta y dejaron al padre en la casa",
+      "evidencia": "los hijos se fueron al monte para cazar danta y dejaron al padre en la casa"
+    },
+    {
+      "id": "n03",
+      "nudo": "La mujer le dijo que se fuera a trabajar",
+      "evidencia": "Véte a trabajar!"
+    },
+    {
+      "id": "n04",
+      "nudo": "Él dijo que no podía trabajar porque estaba ya muy viejo y enfermo",
+      "evidencia": "No puedo trabajar porque estoy ya muy viejo y enfermo!"
+    },
+    {
+      "id": "n05",
+      "nudo": "La mujer le dijo que tenía que trabajar",
+      "evidencia": "Tienes que trabajar!"
+    },
+    {
+      "id": "n06",
+      "nudo": "Así el padre se fue y empezó a trabajar en la roza",
+      "evidencia": "Así el padre se fue y empezó a trabajar en la roza."
+    },
+    {
+      "id": "n07",
+      "nudo": "Pero el sol estaba muy bravo y el viejo se cansó mucho",
+      "evidencia": "Pero el sol estaba muy bravo y el viejo se cansó mucho."
+    },
+    {
+      "id": "n08",
+      "nudo": "Se sentó bajo un árbol y pronto se murió",
+      "evidencia": "Se sentó bajo un árbol y pronto se murió."
+    },
+    {
+      "id": "n09",
+      "nudo": "Los hijos no sabían nada de eso e iban por el monte buscando danta",
+      "evidencia": "Iban por el monte buscando danta."
+    },
+    {
+      "id": "n10",
+      "nudo": "Encontraron un deshecho muy bonito y planito, sin ninguna hierba ni maleza",
+      "evidencia": "Encontraron un deshecho muy bonito y planito, sin ninguna hierba ni maleza."
+    },
+    {
+      "id": "n11",
+      "nudo": "En medio del plano estaba parado un hombre",
+      "evidencia": "En medio del plano estaba parado un hombre."
+    },
+    {
+      "id": "n12",
+      "nudo": "Uno de los hijos preguntó quién era ese hombre y dijo que lo conocía",
+      "evidencia": "Quién es este hombre? Lo conozco!"
+    },
+    {
+      "id": "n13",
+      "nudo": "El otro hijo dijo que él también lo conocía y que sería su padre",
+      "evidencia": "Yo también lo conozco; será nuestro padre!"
+    },
+    {
+      "id": "n14",
+      "nudo": "Cuando se acercaban, veían que el padre tenía la cara y todo el cuerpo pintados de achiote",
+      "evidencia": "el padre tenía la cara y todo el cuerpo pintados de achiote"
+    },
+    {
+      "id": "n15",
+      "nudo": "Tenía muchos hilos enrollados en los tobillos y en las rodillas, también en los brazos",
+      "evidencia": "Tenía muchos hilos enrollados en los tobillos y en las rodillas, también en los brazos."
+    },
+    {
+      "id": "n16",
+      "nudo": "Tenía falda nueva y cinta sobre el pecho, y en la cabeza una corona de plumas amarillas y rojas",
+      "evidencia": "en la cabeza tenía una corona de plumas amarillas y rojas"
+    },
+    {
+      "id": "n17",
+      "nudo": "En la espalda le colgaba la cola de una guacamaya",
+      "evidencia": "En la espalda le colgaba la cola de una guacamaya."
+    },
+    {
+      "id": "n18",
+      "nudo": "En los brazos tenía además pegadas muchas plumas pequeñas",
+      "evidencia": "En los brazos tenía además pegadas muchas plumas pequeñas."
+    },
+    {
+      "id": "n19",
+      "nudo": "Así estaba el hombre, parado como para ir a fiesta, con arco y flechas y macana",
+      "evidencia": "parado como para ir a fiesta, con arco y flechas y macana"
+    },
+    {
+      "id": "n20",
+      "nudo": "Los hijos preguntaron si se iba a fiesta",
+      "evidencia": "Te vas a fiesta, padre?"
+    },
+    {
+      "id": "n21",
+      "nudo": "Pero hubo un gran viento y no veían más al padre",
+      "evidencia": "Pero hubo un gran viento y no veían más al padre."
+    },
+    {
+      "id": "n22",
+      "nudo": "Después de un rato lo vieron otra vez y preguntaron de nuevo",
+      "evidencia": "Después de un rato lo vieron otra vez y preguntaron de nuevo"
+    },
+    {
+      "id": "n23",
+      "nudo": "El padre dijo que se iba a fiesta, que ellos se fueran a la casa, tomaran su macana y le dieran dos golpes en la cabeza a su madre",
+      "evidencia": "Dénle dos golpes de macana en la cabeza!"
+    },
+    {
+      "id": "n24",
+      "nudo": "Entonces hubo un gran viento y los hijos no vieron más al padre",
+      "evidencia": "Entonces hubo un gran viento y los hijos no vieron más al padre."
+    },
+    {
+      "id": "n25",
+      "nudo": "Tomaron la macana y se fueron a la casa y dijeron que su padre había muerto",
+      "evidencia": "Nuestro padre ha muerto"
+    },
+    {
+      "id": "n26",
+      "nudo": "Cuando llegaron buscaron a la mujer, y cuando la encontraron, la mataron con macana",
+      "evidencia": "cuando la encontraron, la mataron con macana"
+    },
+    {
+      "id": "n27",
+      "nudo": "Era una mala mujer",
+      "evidencia": "Era una mala mujer."
+    }
   ],
   "deslindes": [
-    "PROHIBIDO presentar el desenlace como justicia o como enseñanza. Es una narración histórica que naturaliza una orden de matricidio y que aquí se conserva contextualizada, no avalada.",
-    "La violencia es indispensable para explicar el final pero NO se celebra NI se representa gráficamente: el golpe queda fuera de campo, sin cuerpo ni sangre en ningún cuadro.",
-    "El título del proyecto —«La llamada mala mujer»— pone distancia frente al juicio heredado sin ocultar cómo fue nombrado el cuento. El guion mantiene esa distancia: dice cómo lo llamaron, no lo suscribe."
+    "La muerte del anciano NO es un asesinato directo: muere de trabajo, bajo un sol muy bravo, sentado bajo un árbol. La exigencia es la causa, no la mano.",
+    "El padre aparece TRANSFORMADO y vestido de fiesta, no como fantasma doliente. La imagen es de fiesta: achiote, hilos, falda nueva, corona de plumas, cola de guacamaya.",
+    "El claro donde aparece está descrito y es raro: un deshecho bonito y planito, sin ninguna hierba ni maleza. No es un lugar cualquiera del monte.",
+    "Los hijos lo reconocen ANTES de acercarse, y lo dicen los dos. No hay duda sobre quién es.",
+    "La orden llega con un OBJETO y con una cifra: tomen mi macana, denle dos golpes en la cabeza. No es una maldición al aire.",
+    "El viento aparece dos veces y estructura la aparición: el primero lo borra y lo devuelve, el segundo se lo lleva para siempre.",
+    "El canon cierra con cuatro palabras y sin explicación: «Era una mala mujer». El guion las cita en lugar de afirmarlas, y no representa la violencia."
   ],
   "descartes": [
-    { "que": "La explicación editorial sobre por qué la página conserva el relato y cómo lo contextualiza", "razon": "Aparato del expediente; el guion aplica esa decisión en vez de narrarla." }
+    {
+      "que": "Los otros siete parlamentos del canon",
+      "razon": "Una sola cita por guion. Se reserva para la orden del padre; los demás pasan a voz sin comillas, sin cambiar palabra."
+    },
+    {
+      "que": "Que el padre confirmó que se iba a fiesta antes de dar la orden",
+      "razon": "Espacio. El bloque ya lo muestra vestido para fiesta y los hijos lo preguntan dos veces; la confirmación se sigue de ahí."
+    },
+    {
+      "que": "Que tenía falda nueva y cinta sobre el pecho",
+      "razon": "Espacio en el bloque; queda declarado aquí para la dirección de arte, que sí debe montar el atuendo completo."
+    }
   ],
-  "N_propuesto": 11,
-  "razon_N": "Quince nudos y una aparición que es todo el centro: el padre vestido de fiesta necesita sus bloques o el relato se vuelve sólo el crimen. Once permiten dar aire a la aparición y dejar el desenlace contenido en uno. 22 cuadros, ≈110 s."
+  "N_propuesto": 14,
+  "razon_N": "Veintisiete nudos. El canon reescrito dedica seis nudos al atuendo del padre, uno por prenda, y ese inventario es lo que convierte la aparición en fiesta y no en duelo. N = techo(27/2) = 14 bloques, 28 cuadros, ≈140 s."
 }

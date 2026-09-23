@@ -3,42 +3,53 @@ import { defineBoyacaMestizoResidualMyth } from "./define-editorial-myth.mjs";
 const records = [
   defineBoyacaMestizoResidualMyth({
     slug: "el-tesoro-de-buzaga",
-    title: "El tesoro de Buzagá: la burla del mohán",
+    fuentesAgotadas: "Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001), Escobar Uribe (1950), Galindo (1965), López Guevara y Sarmiento de Quiñones (1939) no tienen texto abierto. Fuera de Villa Posse, Vélez Correa, SENA 2022, Ocampo (El pueblo boyacense) y la ficción de 2004, la cantera abierta del ciclo no trae otro registro.",
+    sourceKeys: [
+      "investigacionMitos1993",
+      "noesisMitos2018",
+      "camargoHacia2015",
+      "republicacoleccionsf",
+      "lopezpueblo1977",
+      "republicaofrendasf",
+    ],
+    title: "El tesoro de Buzaga",
     excerpt:
       "Lope Badillo y el padre Laserna buscaron el tesoro de Buzagá; el mohán alargó el camino y convirtió la ambición en una pesada burla.",
     tags: ["tesoro", "mohán", "engaño", "ambición"],
-    mito: `En la versión literaria de Enrique Otero D’Costa, Lope Badillo era empedrador en Tunja. Su oficio apenas sostenía a una familia numerosa y el narrador exagera su pobreza con tono picaresco: cuando lavaban su única ropa, debía esperar en cama hasta que el sol la secara. La estrechez no apagaba su deseo de enriquecerse.
+    mito: `En Tunja vivía un vecino honrado llamado Lope Badillo, empedrador de oficio, tan pobre que cuando su mujer le lavaba la única camisa y el único vestido tenía que quedarse en la cama hasta que el sol los secara. La pobreza no le quitaba la ambición, y lo único que interrumpía sus cavilaciones era el hijo comelón que cada año le daba su mujer.
 
-Lope contó sus preocupaciones a una mujer indígena que conocía secretos de la región. Ella le habló de un mohán guardián de un tesoro oculto y se ofreció a mostrarle el camino. Antes de partir, Lope confió el plan al padre Benito de Laserna, clérigo de la iglesia de Tunja. El sacerdote aceptó acompañarlo a cambio de la mitad de lo hallado.
+Una india vieja, sabedora de secretos antiguos, se compadeció de él y le ofreció remediar sus necesidades poniéndolo en contacto con un mohán que guardaba un tesoro escondido en un paraje apartado. Lope le contó el secreto a don Benito de Laserna, clérigo de misa en la iglesia de Tunja y muy aficionado a las onzas de oro, que aceptó ir con él a cambio de la mitad de lo que la fortuna les diera.
 
-Los tres salieron de madrugada. Después de recorrer caminos y encrucijadas llegaron a las cumbres que rodean el valle de Iza. Desde allí la mujer señaló el paraje donde vivía el mohán, pero se negó a acercarse más. Lope y Laserna continuaron solos hasta encontrar un bohío entre la vegetación.
+Salieron de madrugada, a escondidas, guiados por la india, y llegaron a unas cumbres verdes sobre el valle de Iza. Allí la vieja les señaló el lugar del bohío del mohán y se devolvió, porque temía morir si se acercaba. En la cima encontraron el bohío, y adentro, sentado en un duho, a un indio viejo, seco y apergaminado, de carrillos chupados y cabello ceniciento.
 
-Dentro los esperaba un anciano de aspecto frágil y mirada burlona. El texto de Otero lo presenta mediante el imaginario cristiano y colonial del hechicero convertido en demonio. El mohán adivinó que buscaban el santuario de Buzagá y prometió guiarlos: la luna era nueva y el alcaraván cantaba en el valle.
+—Pretendéis el santuario de Buzagá —les dijo antes de que hablaran—. Os llevaré, porque tenemos luna nueva y en el valle canta el alcaraván.
 
-Caminaron durante horas por montes y llanuras. Al comenzar una cuesta, el anciano declaró que no podía seguir. Lope propuso que lo cargaran por turnos, pero el guía exigió que una sola persona completara el trayecto. Echaron la decisión a la suerte y le correspondió al padre Laserna.
+Tomó un bastón nudoso de cañaguate, se ciñó el chumbe y abrió la marcha. Al pie de una cuesta muy empinada se detuvo y dijo que no podía seguir. El empedrador propuso cargarlo por turnos, pero el mohán exigió que lo echaran a la suerte. Tiraron una moneda a sello y cruz, le tocó al clérigo, y el padre Benito se echó al viejo a horcajadas, como san Cristóbal al niño Jesús.
 
-El clérigo subió al mohán sobre sus hombros. El cuerpo seco resultó tan pesado como una roca y aumentaba con cada paso. La cima, que antes parecía cercana, se alejaba. Mientras Laserna se agotaba, el mohán le clavaba los talones y enumeraba chagualas, tunjos, gargantillas, esmeraldas y mantos que supuestamente los aguardaban.
+Aquel viejo escuálido pesaba más que un peñón. Cuando Lope quiso relevar al cura, el mohán lo prohibió: el encanto sólo se vencía si el que lo cargaba llegaba al santuario sin descanso ni relevo. Y la cima, a medida que avanzaban, parecía alejarse. El mohán espoleaba al cura con los talones y le prometía el oro en chagualas, tunjos, gargantillas y diademas, las esmeraldas y los mantos de plumería. Pero el camino se había estirado como por encanto.
 
-Laserna comprendió que el camino era una trampa y ordenó al anciano bajar. El jinete se aferró. Lope lanzó una piedra para derribarlo, pero el proyectil rebotó y lo golpeó a él. Entonces el sacerdote roció al mohán con agua bendita. La figura cayó por la pendiente y quedó convertida en un cuerpo reseco que el relato interpreta como envoltura de un espíritu maligno.
+El padre Benito sospechó y le ordenó bajarse. El viejo se afianzó y siguió arreándolo. Lope le tiró un guijarro a la cabeza, y la piedra rebotó como si fuera de caucho, le pegó a él, lo tumbó y sacó chispas. Entonces el cura sacó un frasquito de agua bendita que por casualidad llevaba en la faltriquera y se lo echó encima invocando al Santísimo Sacramento. El mohán cayó con un golpe de leño seco y rodó a un abismo con estruendo de trueno.
 
-Los buscadores regresaron a Tunja sin ver el tesoro. Lope volvió a empedrar calles y Laserna a celebrar misa. La leyenda no recompensa la perseverancia ni revela una ubicación secreta: convierte la búsqueda de riqueza rápida en una broma cruel cuyo camino se alarga mientras los viajeros siguen creyendo la promesa.`,
-    historia: `El tesoro de Buzagá aparece en Leyendas, volumen de Enrique Otero D’Costa publicado por Minerva en 1936 dentro de la Biblioteca Aldeana de Colombia. Eugenia Villa Posse reprodujo el texto en Mitos y leyendas de Colombia, volumen II, de 1993. Su introducción explica que Otero escuchó narraciones campesinas, las recordó y las elaboró para darles una presentación literaria.
+Cuando bajaron a ver el cadáver, descubrieron que aquel cuerpo llevaba muchísimos años muerto, seco y amojamado, y que el espíritu maligno lo usaba como vivienda. Volvieron a Tunja. El cura decía que sólo Enoc y Elías habían subido al cielo en cuerpo y alma, y que a ellos el diablo se los quería llevar al infierno de la misma manera. Lope volvió a empedrar calles, y el padre Benito, curado de buscar lo que no se le había perdido, a decir su misa temprana.`,
+    historia: `El texto es un cuento de Enrique Otero D'Costa, de su libro Leyendas (Biblioteca Aldeana de Colombia, Selección Samper Ortega, Minerva, Bogotá, 1936). Se lee en el segundo tomo de Mitos y leyendas de Colombia de Eugenia Villa Posse (IADAP, Quito, 1993), sección 17, «Varias regiones», pp. 12-18, donde abre la selección de Otero. Villa Posse advierte que son relatos oídos por el autor a campesinos, que él «recuerda y elabora» para darles forma literaria.
 
-Esa indicación permite reconocer una base folclórica sin fingir una transcripción pura. El narrador usa arcaísmos, chistes, diálogo y comparaciones religiosas como recursos de autor. Un catálogo de la Academia Colombiana de Historia registra además Historietas: leyendas y tradiciones colombianas, colección de Otero publicada en 1934; la ficha demuestra continuidad en su trabajo, pero no permite afirmar que Buzagá tuviera allí el mismo texto.
+La acción transcurre en la Tunja colonial y en las cumbres sobre el valle de Iza, en el Boyacá muisca. Otero, historiador que coleccionó documentos coloniales y dirigió en su juventud el Archivo Historial de Manizales, escribe con el castellano arcaizante y el tono picaresco de las crónicas que estudió como historiador, y hace del mohán un ser a medias hechicero y demonio, guardián de un santuario indígena lleno de oro. El nombre Buzagá designa ese santuario, adonde el mohán promete llevarlos en la hora propicia de la luna nueva.
 
-La leyenda sigue circulando en un portal sobre tesoros de Tunja y fue utilizada en una investigación educativa de la Universidad Industrial de Santander. En la clase observada, estudiantes identificaron Tunja e Iza y separaron componentes reales y fantásticos. Una docente llamó reales a Lope y Laserna, pero esa afirmación pedagógica no es un registro parroquial, notarial o biográfico. Las fuentes seleccionadas no corroboran fuera del relato a los dos personajes ni localizan el santuario.
+El relato sigue circulando en la escuela. Un material didáctico de la Universidad Industrial de Santander (2018) lo propone como lectura, «de Javier Ocampo López, adaptado por Rosmira Ardila Ortiz», en una versión escolar que resume la búsqueda y el castigo del codicioso.
 
-El contexto editorial también importa. La Biblioteca Aldeana fue un proyecto estatal de difusión cultural durante la República Liberal; su alcance ayudó a convertir las versiones literarias seleccionadas en lecturas nacionales. El Excel del proyecto volvió a segmentar Buzagá en cinco filas, 288–292. Son el inicio, el encuentro, la carga, el desencanto y el regreso de una sola pieza. La revisión las reúne y elimina la falsa “segunda versión” sobre sabiduría y perseverancia.`,
-    versiones: `La versión de Otero reproducida por Villa Posse es la única narración completa e identificable del expediente. Comienza con la pobreza de Lope, incorpora al clérigo por su interés en el oro y termina cuando ambos abandonan la búsqueda. El mohán no actúa como maestro benévolo: finge cansancio, obliga a Laserna a cargarlo, vuelve infinita la cuesta y promete riquezas para prolongar la trampa.
+El cuento lleva la marca de la selección entera: personajes con nombre y oficio, un castellano de época y un final que se ríe de la codicia de los vecinos.`,
+    versiones: `El texto de 1936 es el que se lee completo, en la reproducción de Villa Posse. La Revista UPB, que en 1964 reimprimió seis leyendas del libro como homenaje póstumo al autor, dejó ésta fuera.
 
-El portal Tunja Ciudad de Tesoros Escondidos resume el inicio y conserva la misma cadena de personajes. Su redacción prueba circulación local contemporánea, no una versión oral independiente. La clase registrada por la UIS trabaja el texto como leyenda regional y muestra cómo nuevos lectores negocian la diferencia entre territorio real y personaje fantástico.
+La versión escolar de la Universidad Industrial de Santander, basada en Javier Ocampo López y adaptada por Rosmira Ardila Ortiz, conserva el esquema —el pobre que busca el tesoro, el clérigo que se suma, el mohán que se hace cargar y el agua bendita que lo derriba— y lo cuenta en lengua actual, para enseñar el género de la leyenda en el aula.
 
-Las cinco filas del Excel tampoco son cinco mitos. La primera presenta a Lope, la segunda al mohán, la tercera la carga, la cuarta el agua bendita y la quinta el regreso. Sus interpretaciones automáticas introdujeron una contradicción: una fila convirtió al guía en sabio que enseña perseverancia, aunque el desenlace impreso lo muestra como engañador. Esa lectura se descarta.
-
-El lenguaje de 1936 llama al mohán hechicero, demonio y vivienda del maligno. La revisión conserva esa demonización como parte de la voz cristiana y colonial del relato, sin definir así a especialistas indígenas reales. Buzagá permanece con tilde en el título visible y sin coordenada propia: Otero lo llama santuario, pero no aporta evidencia para guiar visitantes hacia un sitio físico.`,
+Dentro del cuento, Otero mezcla dos tradiciones. Una es la del mohán indígena, sacerdote y guardián de los santuarios y del oro de los muiscas, que los cronistas coloniales ya presentaban como hechicero. La otra es la del diablo de la tradición cristiana, que se deja vencer con agua bendita y el nombre del Santísimo. El remate lo confirma: el cuerpo del mohán llevaba siglos muerto y el espíritu maligno sólo lo habitaba.`,
     leccion:
-      "Una promesa de riqueza pierde credibilidad cuando cada paso vuelve más distante la meta.",
-    similitudes: `Otero compara directamente al padre Laserna con san Cristóbal. En la leyenda cristiana, Cristóbal carga a un niño cuyo peso llega a ser el del mundo y completa el cruce del río; en Buzagá, el mohán aumenta de peso para dominar al clérigo y la marcha se interrumpe. La imagen corporal es semejante, pero la función moral se invierte. El Dorado también hizo que buscadores europeos persiguieran una riqueza que transformaron en lugar fantástico. Comparte oro prometido, desplazamiento y una meta que se aleja; su historia surge de la reinterpretación colonial de una ceremonia muisca, mientras Buzagá es una pieza picaresca de Otero situada entre Tunja e Iza. Ninguna comparación demuestra que el santuario existiera.`,
+      "La codicia que se deja cargar por un guía desconocido termina pesando más de lo que puede llevarse.",
+    similitudes: `El viejo que se hace cargar y se vuelve cada vez más pesado es un motivo muy extendido. En el mismo cuento, Otero lo compara con san Cristóbal, el gigante que cruzó un río con un niño que pesaba como el mundo entero porque era Cristo. Aquí la figura se invierte: el que pesa no es Dios sino un espíritu maligno, y el que carga no es un santo sino un clérigo codicioso.
+
+El mohán guardián de riquezas es una figura muy viva en la tradición boyacense. Javier Ocampo López, en El pueblo boyacense y su folclor, recuerda que en Onzaga los campesinos veneraban un hueso de mohán bajo un crucifijo, y registra el Cucacuy del Valle de Tenza, otro hombre con pacto que guarda el dinero enterrado. En el Tolima, Misael Devia llama Mohán al dueño de los tesoros del río.
+
+El oro que promete el mohán —chagualas, tunjos, diademas— es el de las ofrendas muiscas que el Museo del Oro del Banco de la República conserva y explica como piezas depositadas en santuarios, lagunas y cuevas. El cuento de Otero toma ese oro real y lo convierte en cebo para la codicia de los vecinos de la Tunja colonial.`,
     sceneHorizontal:
       "camino montañoso sobre el valle de Iza al amanecer, Lope Badillo y el padre Laserna siguen a una mujer indígena que señala desde lejos un bohío entre las cumbres, sin convertirla en figura mística ni mostrar un tesoro real",
     sceneVertical:

@@ -219,6 +219,141 @@ export const andinaVariosMestizoResidualSources = {
     limitation:
       "Proviene del Valle y Chocó y describe otro repertorio; la semejanza infantil no prueba identidad con Los Meneses.",
   }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  toledoRemembranzas2022: source({
+    title: "Remembranzas de mis abuelos: memoria oral y ambiental del alto oriente caldense",
+    author: "Useche Toledo, González González, Guzmán Ruiz y Tunarrosa Echeverría (SENA)",
+    year: 2022,
+    type: "libro de memoria oral (SENA, La Dorada)",
+    url: "https://repositorio.sena.edu.co/bitstream/handle/11404/8024/Remembranzas_de_mis_abuelos.pdf?sequence=4&isAllowed=y",
+    summary:
+      "Capítulo «El Ánima Sola» (pp. 21-25): los testimonios de Anadelia Galvis (la abuelita que invocaba a las ánimas) y Hernán Aristizábal (la mujer de blanco de los caminos), de Manzanares.",
+    limitation:
+      "Recopilación comunitaria de 2022.",
+  }),
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo II (sección 20, Mitos del Tolima: Misael Devia, «Folclor tolimense», 1962)",
+    author: "Eugenia Villa Posse (investigación y compilación); Misael Devia",
+    year: 1993,
+    type: "antología con texto reproducido de folclorólogo",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44620",
+    summary:
+      "En el «Cuento de ánimas» de Otero D'Costa (1936), sección 17, p. 56, el Ánima Sola figura entre las «tenebrosas historias» de Caldas, y las ánimas santandereanas visitan a los vivos para corregirlos.",
+    limitation:
+      "Es otro cuento; sólo nombra al Ánima Sola.",
+  }),
+  lopezpueblo1977: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López",
+    year: 1977,
+    type: "libro (cap. 8, pp. 120-126)",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "Nombra al ánima sola entre los mitos estudiados en Boyacá (cap. 8).",
+    limitation:
+      "Sólo el nombre.",
+  }),
+  ariasFolclor1954: source({
+    title: "Folclor santandereano",
+    author: "Juan de Dios Arias",
+    year: 1954,
+    type: "libro (Biblioteca Santander, vol. XXIV)",
+    url: "https://www.ellibrototal.com/ltotal/?t=1&d=298",
+    summary:
+      "Edición digital de Folclor santandereano de Juan de Dios Arias, la obra de donde sale el relato.",
+    limitation:
+      "El visor es dinámico; se lee por secciones.",
+  }),
+  moralesFolclor2013: source({
+    title: "Folclor tolimense",
+    author: "Misael Devia Morales",
+    year: 2013,
+    type: "libro (reedición del artículo de 1962)",
+    url: "https://repositorio.unibague.edu.co/server/api/core/bitstreams/7ecf7fde-a143-4744-a6bd-6f8618d50e2a/content",
+    summary:
+      "Registra el Guango o guando del Tolima (pp. 75-77), el cortejo fúnebre que castiga a quien no carga a sus muertos, el paralelo de Similitudes.",
+    limitation:
+      "Es otro relato, del Tolima.",
+  }),
+  narinocuentos1988: source({
+    title: "Los cuentos de Pascual: mitos y leyendas del piedemonte llanero",
+    author: "Alberto Baquero Nariño",
+    year: 1988,
+    type: "libro",
+    url: "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2818/",
+    summary:
+      "Nombra al Fraile sin cabeza entre los mitos andinos llevados al piedemonte llanero, el espanto acéfalo que compara Similitudes.",
+    limitation:
+      "Es una enumeración.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (edición ampliada en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «La Vieja Colmillona»: los peones de la hacienda El Oro en Aguadas, el fogón, las brasas sin quemarse, el chocolate y el costal, y la descripción de la bata de esparto y las botas amarillas; en el mismo libro, la Rodillona y los Rescoldaos de Similitudes.",
+    limitation:
+      "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+  }),
+  compiladoraInforme1997: source({
+    title: "Informe Fulbright-Hays 1997 con «Niños de las regiones de Colombia» (Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro (compiladora), ERIC ED430849",
+    year: 1997,
+    type: "informe educativo",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La página infantil de Van Vliet (1997), región andina, trae a los Meneses: chiquillos que piden dulces o monedas en los caminos y hacen cosquillas hasta dejar a uno rendido de la risa, contados por chapoleras y peones.",
+    limitation:
+      "Divulgación infantil impresa en un informe educativo; dos frases.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  samperleyendas2007: source({
+    title: "Las leyendas modernas y la transmisión de valores",
+    author: "José Manuel de Prada Samper",
+    year: 2007,
+    type: "artículo de revista (Signa, UNED, n.º 16, pp. 57-72)",
+    url: "https://dialnet.unirioja.es/descarga/articulo/2216738.pdf",
+    summary:
+      "Estudia la autoestopista fantasma como leyenda moderna: la muchacha que advierte de un punto negro de la carretera, y la versión que García Márquez publicó en «Fantasmas de carreteras» (El País, 1981), con la mujer de blanco recogida por cuatro jóvenes y los conductores profesionales como difusores del cuento. Es el marco del motivo que el libro de 2004 lleva a Itagüí.",
+    limitation:
+      "Trabaja leyendas españolas y europeas; no menciona Antioquia ni a la niña de la carta. La semejanza es de motivo.",
+  }),
+  playTransportar2021: source({
+    title: "Transportar a una monja que estaban velando en una funeraria, la historia de un taxista",
+    author: "RTVC Play, Radio Nacional de Colombia",
+    year: 2021,
+    type: "nota de medio público (21 de octubre de 2021)",
+    url: "https://www.radionacional.co/actualidad/historias-de-taxistas-transportar-una-monja-que-estaban-velando",
+    summary:
+      "Recoge en Tuluá la versión colombiana del pasajero muerto: la monja que pide al taxista que la espere para pagarle y aparece luego en el ataúd de la funeraria; también el pasajero que desaparece del taxi camino de Chía. Sirve de paralelo colombiano para el viaje con una muerta que acaba en un lugar de entierro.",
+    limitation:
+      "Nota de divulgación para promocionar un pódcast; no nombra a la niña de la carta ni a Itagüí.",
+  }),
+  brunvandVanishing1981: source({
+    title: "The Vanishing Hitchhiker: American Urban Legends and Their Meanings",
+    author: "Jan Harold Brunvand",
+    year: 1981,
+    type: "libro de folclorística (W. W. Norton), copia digital en préstamo",
+    url: "https://archive.org/details/vanishinghitchhi00brun",
+    summary:
+      "El estudio que fijó el nombre y la forma de la autoestopista que desaparece del vehículo y resulta estar muerta. Es la referencia del paralelo que la niña de Itagüí sigue en sus rasgos: aventón, desaparición en el trayecto, muerte violenta como explicación.",
+    limitation:
+      "Sólo en préstamo controlado en Internet Archive; trata versiones estadounidenses y no conoce el libro colombiano de 2004.",
+  }),
+  colaborativaAutoestopista: source({
+    title: "Autoestopista fantasma",
+    author: "Wikipedia en español (colaborativa)",
+    type: "enciclopedia colaborativa, sólo como paralelo",
+    url: "https://es.wikipedia.org/wiki/Autoestopista_fantasma",
+    summary:
+      "Resume la forma básica del motivo —la joven de vestido blanco o de luto que pide que la lleven cerca de una curva y desaparece— y sus variantes hispanoamericanas, útil para situar el vestido blanco y la curva mortal de la niña de Itagüí.",
+    limitation:
+      "Wikipedia, sin autoría responsable; se cita sólo como paralelo y nunca como fuente clave.",
+  }),
 };
 
 const sourceKeysBySlug = {
@@ -274,7 +409,29 @@ const sourceKeysBySlug = {
   ],
 };
 
-export function pickAndinaVariosMestizoResidualSources(slug) {
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickAndinaVariosMestizoResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickAndinaVariosMestizoResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = andinaVariosMestizoResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickAndinaVariosMestizoResidualSourcesHeredadas(slug) {
   const keys = sourceKeysBySlug[slug];
   if (!keys) throw new Error(`${slug}: no tiene dossier de fuentes.`);
   return keys.map((key) => andinaVariosMestizoResidualSources[key]);

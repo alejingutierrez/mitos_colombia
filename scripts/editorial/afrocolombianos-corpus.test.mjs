@@ -76,7 +76,17 @@ test("los seis expedientes Afrocolombianos cumplen la metodología", () => {
       new Set(sources.map(({ url }) => url)).size,
       sources.length,
     );
-    assert.ok(sources.every(({ url }) => url.startsWith("https://")));
+    // Se exige https salvo cuando la propia fuente declara por qué no puede:
+    // SciELO Colombia sirve el artículo de Anansi sólo por http y su versión
+    // cifrada no responde. Es preferible el enlace que funciona, dicho.
+    for (const { url, limitation } of sources) {
+      if (url.startsWith("https://")) continue;
+      assert.match(
+        String(limitation || ""),
+        /s[óo]lo (publica )?por http/i,
+        `${record.slug}: ${url} no es https y no declara por qué`,
+      );
+    }
     assert.equal(
       record.content,
       [
@@ -104,10 +114,7 @@ test("reemplaza expansiones heredadas y preserva variantes separadas", () => {
     bySlug.get("la-sierpe-de-bete").mito,
     /fiebre|mentira|arrullo|promesa|curó/i,
   );
-  assert.doesNotMatch(
-    bySlug.get("el-riviel-del-rosario").mito,
-    /rosario|castigo religioso|anciano/i,
-  );
+  assert.match(bySlug.get("el-riviel-del-rosario").mito, /sacerdote[\s\S]+rosario[\s\S]+mochita/i);
   assert.match(
     bySlug.get("como-aparecio-la-muerte-en-el-choco").mito,
     /En Tutunendo[\s\S]+En Munguidó/,

@@ -1,29 +1,27 @@
 import { buildSikuaniEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickSikuaniSources } from "./sources.mjs";
 
-const defaultContextKeys = [
-  "icbfEnsani",
-  "cnmh",
-  "ucla",
-  "onic",
-  "icbfBibliography",
-  "baquero",
-];
-
 export function defineSikuaniMyth({
-  narrativeSource,
-  contextSources = defaultContextKeys,
+  // Cada mito declara las obras que su reescritura usó, en orden de peso: las
+  // tres primeras salen como fuentes clave. Ya no hay reparto por defecto —el
+  // par narrativeSource + contextSources era justamente el reparto en bloque
+  // que hacía que las diez fichas citaran lo mismo.
+  sourceKeys,
   seoTitle,
   seoDescription,
   focusKeywords,
   ...input
 }) {
-  const selectedSources = pickSikuaniSources(
-    narrativeSource,
-    ...contextSources,
-  );
-  if (selectedSources.length !== 7) {
-    throw new Error(`${input.slug}: se esperaban siete fuentes únicas.`);
+  if (!Array.isArray(sourceKeys) || sourceKeys.length === 0) {
+    throw new Error(`${input.slug}: falta declarar sourceKeys.`);
+  }
+  const selectedSources = pickSikuaniSources(...sourceKeys);
+  // Antes exigía exactamente 7: el reparto en bloque escrito como
+  // aserción. Lo que importa es que haya fuentes suficientes.
+  if (selectedSources.length < 5) {
+    throw new Error(
+      `${input.slug}: ${selectedSources.length} fuentes únicas, el mínimo son cinco.`,
+    );
   }
   return buildSikuaniEditorialMyth({
     ...input,

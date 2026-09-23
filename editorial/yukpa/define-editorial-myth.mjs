@@ -2,7 +2,7 @@ import { buildYukpaEditorialMyth } from "./build-editorial-myth.mjs";
 import { pickYukpaSources } from "./sources.mjs";
 
 export function defineYukpaMyth(input) {
-  const selectedSources = pickYukpaSources();
+  const selectedSources = pickYukpaSources(...(input.sourceKeys ?? []));
   if (
     selectedSources.length < 5 ||
     new Set(selectedSources.map(({ url }) => url)).size !==

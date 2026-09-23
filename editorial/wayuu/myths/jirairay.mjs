@@ -1,61 +1,51 @@
 import { defineWayuuMyth } from "../define-editorial-myth.mjs";
 
-const mito = `Una persona enfermó durante una temporada de fiebre. La familia llamó a una piache y preparó el espacio alrededor del chinchorro. La especialista tomó su maraca, mascó tabaco según la práctica registrada y empezó a cantar.
+const mito = `La fiebre llegó a la ranchería con el viento. Uno de la casa dejó de comer, dejó de hablar y quedó tendido en el chinchorro, sudando, con los ojos abiertos hacia el techo. La familia mandó llamar a la piache.
 
-En el canto se repetía una palabra: Jirairay.
+Ella llegó al caer la tarde, con su maraca y su tabaco. Se sentó junto al chinchorro, pidió silencio y mascó el tabaco hasta que la boca se le llenó de jugo. Le pasó las manos por el cuerpo al enfermo, lo sobó, escupió sobre él. Luego empezó a cantar.
 
-Quienes escuchaban desde afuera pensaron que era el nombre de un espíritu que había llegado a disputar el cuerpo. Años después, una ficha escrita lo convirtió en “dios de la enfermedad y la muerte”.
+Tenía varios espíritus, y a cada uno lo llamaba con un canto distinto. Cantó primero a los suyos, los que la habían escogido. Cantó a Mareiwa bajo el nombre de fumayule, como lo nombran los que curan. Y cuando la noche estuvo cerrada cantó el canto que llama a wanurü, el que enferma y el que mata: jirairay.
 
-Pero Jirairay no designaba necesariamente a otro ser. Pineda Giraldo explicó que era el canto o el nombre bajo el cual se invocaba a Wanurü durante la ceremonia. La voz de la piache llamaba a la entidad vinculada con la dolencia para preguntar, negociar o hacerla retirarse.
+Wanurü acudió. No se lo veía; se lo oía en la voz de la piache, que ahora discutía consigo misma. El que tenía apresada el alma del enfermo no quería soltarla. Exigía su ofrenda: un regalo de tales condiciones, y sin pérdida de tiempo. Los espíritus de la piache le respondían, y ella con ellos, y la discusión iba y venía por la garganta de la mujer mientras la maraca no paraba.
 
-La maraca marcaba el tiempo. La especialista escuchaba a sus auxiliares y respondía con frases que la familia no siempre podía interpretar. El enfermo sudaba y permanecía entre sueño y vigilia.
+La familia salió al patio. Reunió lo que se pedía y lo trajo. La piache siguió cantando.
 
-La piache pidió alimentos y objetos para cumplir obligaciones de la ceremonia. No eran pago a un “demonio” en el sentido cristiano. Formaban parte de una relación entre familia, especialista y presencias cuya traducción quedó incompleta en las fuentes.
+Hacia la madrugada el canto cambió. Wanurü discutía todavía, pero ya por el precio, no por el alma. Cuando la primera luz entró por las rendijas de la enramada, el enfermo cerró los ojos y durmió. La piache soltó la maraca.
 
-Durante la noche, el canto cambió. Jirairay dejó de oírse con tanta frecuencia. La piache anunció que Wanurü aflojaba su dominio.
+Antes de irse, con los ojos todavía lejos, repitió lo que sus espíritus le decían: piacha mucho, piacha todos los días, porque tienes enemigos y peligros; hazlo muchas veces para que el mal se aleje, como se alejan las lluvias en verano.
 
-Al amanecer, la persona enferma seguía viva. La familia continuó cuidándola. El registro etnográfico no permite atribuir una recuperación clínica a una sola acción ni convertir la ceremonia en tratamiento reproducible.
+Esa misma noche una mariposa nocturna, blanca, entró al dormitorio y revoloteó junto al chinchorro. Nadie la tocó. La sacaron despacio, con las dos manos, porque podía ser uno de los muertos de la casa que venía de visita, y quien mata a un visitante así lo ve después en sueños preguntando: ¿por qué me mataste, si vine a verte porque te estimo?
 
-Lo que permaneció fue el nombre. Separado de su música, pasó a glosarios, páginas y comparaciones. Allí empezó a parecer un personaje autónomo.
+El regalo prometido se entregó completo. Un espíritu al que se le falta huye y no vuelve, y contentarlo de nuevo es muy difícil. Wanurü, en cambio, había soltado el alma, y jirairay quedó guardado en la voz de la piache para la próxima vez que hubiera que llamarlo.`;
 
-Esta reconstrucción devuelve Jirairay al acto de cantar. No inventa rostro, genealogía ni voluntad propia. La palabra tiene fuerza porque es pronunciada dentro de una relación ritual, no porque nombre a un villano fijo.
+const historia = `Esta página no descansa sobre un cuento autónomo, sino sobre una observación etnográfica. Roberto Pineda Giraldo, en Aspectos de la magia en la Guajira (1950), fruto de la expedición de 1947, escribe que algunos piaches tienen hasta siete espíritus auxiliares y que a cada uno lo llaman con un cántico especial: a Mareiwa, con un canto singular, bajo el nombre de fumayule; a wanurú, espíritu de la enfermedad y de la muerte, con el de jirairay. Ese espíritu exige las ofrendas, no quiere desprenderse del alma que ha aprisionado y discute su devolución con los espíritus protectores del piache y con el piache mismo. Aclara que todos los espíritus de los muertos se llaman wanurú y que los protectores del piache son piaches muertos que siguen ejerciendo a través de otros. Jirairay es, pues, el nombre con que se canta a wanurú, no una entidad aparte.
 
-Cuando la historia de Umaralá menciona que su tía canta frente a la enfermedad, Jirairay puede entenderse de este modo: una invocación dirigida a Wanurü. La corrección no elimina el misterio del rito. Evita crear una entidad que la fuente principal distingue del nombre cantado.
+La palabra aparece una segunda vez en el mismo libro, cuando Pineda resume el cuento de Umaralá que Milcíades Chaves había publicado en 1946: la tía piache sostiene en sus cánticos discusiones “con el espíritu de allá que era nada menos que Jirairai”, quien le dice “o bien mueres tú, o muere tu hijo”. Chaves, desde la antropología nacional de su tiempo y sin conservar el wayuunaiki, presentó ese pasaje como diálogo con un interlocutor; leído junto a la definición de Pineda, es la voz de wanurú dentro del canto. La reedición de Villa Posse (1993) repite a Chaves y no añade testimonio.
 
-La página sigue publicada porque también los errores de transmisión necesitan una explicación visible.`;
+Pineda interpreta desde teorías de magia y religión de mediados del siglo XX: compara al piache con los hombres-medicina campa y amahuaca a través de Métraux y Tessmann, y ordena a los seres en “espíritus del bien” y “del mal”. Pero en el capítulo sobre Mareiwa y Wanurú denuncia la confusión sembrada por misioneros y viajeros (Carcagente, Barranquilla, Isaacs, Hernández de Alba) al traducir Mareiwa por Dios y yorujá o wanurú por diablo. Esta ficha conserva esa cautela: wanurú no es un demonio y jirairay no es su nombre secreto.
 
-const historia = `La ficha anterior afirmaba que Jirairay era un espíritu de enfermedad y muerte que negociaba con piaches. Esa identificación procede de una lectura imprecisa de “Aspectos de la magia en la Guajira”. Pineda distingue a Wanurü de Jirairay: el primero es una entidad relacionada con enfermedad y muerte; el segundo es el canto o nombre empleado para invocarlo.
+La etnografía posterior matiza. Michel Perrin, desde sus misiones de 1969 a 1973, describió la cura con canto, maraca y tabaco; Andras Zempléni, al reseñar Les praticiens du rêve (1993), resume que para Perrin el wanülüü es el auxiliar que va a recuperar el alma del enfermo en el mundo del sueño: un matiz que lo desplaza del daño a la ayuda. Rafael Balza-García (2010) sostiene que Wanülüü es un símbolo ambivalente: causa de enfermedad y muerte y, a la vez, mediador que informa al piache sobre el mal y su cura. Silvia Rubiela Serrano López (2020), antropóloga wayuu, describe en la Media Guajira a la outsü que masca tabaco, agita la maraca y canta palabras ininteligibles para llamar a su auxiliar, y anota que cada enfermedad wanülüü se nombra por el espíritu que la causa. Paz Reverol y otros (2010) documentan al oütshi que entra en trance con cantos guturales, maraca, alcohol y pasta de tabaco, y que sólo él atiende las enfermedades wanülüü. Otros trabajos (García Gavidia y García, 2004; Segovia, 2000; Angola y Mejía, 2006) ven en los wanülü emisarios de Pulowi, origen del mal o raptores que se metamorfosean.
 
-Esta corrección cambia el género de la página. No existe un “mito de Jirairay” autónomo en las fuentes consultadas. El Relato es una reconstrucción editorial de una ceremonia documentada y explica cómo el nombre pudo convertirse en personaje al salir de su contexto sonoro.
+Lectura editorial: la ceremonia del Relato reúne lo que Pineda describe (cantos por espíritu, ofrenda exigida, discusión por el alma, mariposa blanca) en una sola noche, sin lugar ni nombres, y sin sostener que una cura así sea un tratamiento. La Caracterización del Ministerio de Cultura y el Plan Especial de Salvaguardia de los palabreros (2009) dan el marco de territorio y clanes matrilineales.`;
 
-Pineda escribió desde la antropología de 1950, comparó a los piaches con médiums y oráculos, y usó categorías de histeria, magia y demonio hoy problemáticas. Su observación terminológica sigue siendo importante, pero sus interpretaciones no se adoptan completas.
+const versiones = `No hay versiones de un mito de Jirairay porque no hay tal mito: hay una sola cadena documental, y en ella la palabra aparece tres veces. Primero en Chaves (1946), dentro de “El piache Umaralá”, como el “espíritu de allá” con quien la tía discute en sus cánticos y que amenaza: “o bien mueres tú, o muere tu hijo”. Luego, dos veces en Pineda (1950): en el capítulo sobre el piache, como el cántico con que se llama a wanurú, y en su resumen del cuento de Chaves, donde escribe “Jirairai”. La grafía oscila entre jirairay y Jirairai en el mismo libro; esta ficha usa la primera, que es la de la definición.
 
-Los piaches pueden ser mujeres u hombres y su vocación se relaciona en las fuentes con sueños, enfermedad, auxiliares, canto, tabaco y maraca. La página no instruye prácticas de salud ni reemplaza atención clínica.
+La reedición de Villa Posse (1993) reproduce el texto de Chaves y no es un testimonio independiente. Perrin no usa la palabra: sus trabajos describen la cura con canto, maraca y tabaco y llaman wanülüü al espíritu que interviene, con clasificaciones propias; por eso no pueden citarse como una versión de Jirairay ni tampoco como desmentido.
 
-Según la decisión del usuario, no se despublica por carecer de cinco fuentes narrativas directas. Se publica con fuentes de contexto, una nota de evidencia explícita y enlace al ciclo de Umaralá.
+Lo que sí varía entre los textos es la naturaleza de wanurú. En Pineda es el que apresa el alma y exige ofrendas, es decir, el adversario en la discusión; en la síntesis de Zempléni sobre Perrin, el wanülüü es el auxiliar que va a buscar el alma; en Balza-García, ambas cosas a la vez. Serrano López y Paz Reverol describen la misma escena (tabaco, maraca, canto, trance) sin la palabra Jirairay. El Relato sigue a Pineda porque es el único que da la palabra y su función, y toma de él, y no de los autores posteriores, cada elemento de la ceremonia.
 
-Mantener la URL corregida tiene valor pedagógico: evita que buscadores y lectores sigan encontrando una identidad falsa sin explicación de cómo surgió la confusión.`;
+Una página anterior de este sitio trató a Jirairay como “dios de la enfermedad y la muerte”, con iniciación de piaches, regalos de oro y visiones; nada de eso está en Pineda ni en Chaves y se retiró. La URL se conserva para que la corrección quede visible.
 
-const versiones = `Pineda ofrece la evidencia terminológica más clara. En el relato de Umaralá publicado por Chaves, el nombre aparece dentro de una confrontación de canto y fue fácil leerlo como interlocutor independiente. La revisión interpreta ese pasaje a la luz de la distinción posterior de Pineda.
-
-Perrin usa ortografías y clasificaciones propias para Wanurü, yolujaa y seres peligrosos. Sus trabajos confirman que no existe una equivalencia simple con “demonio”, pero no convierten Jirairay en otra deidad.
-
-La página anterior añadía una iniciación completa de piaches, regalos de oro, visiones de paraíso y restricciones de género como si fueran aventuras de Jirairay. Esos materiales pertenecen a una descripción general de prácticas y se retiran del Relato.
-
-No se fusiona técnicamente con “Umaralá” para preservar la URL y porque esta corrección merece una ficha explicativa. Editorialmente, ambas páginas forman una sola unidad de lectura: Umaralá ofrece la biografía; Jirairay aclara el canto.
-
-Tampoco se fusiona con Guanurú, un nombre distinto asociado en Pineda con un intermediario dañino y otra historia documental claramente separada.`;
+Esta ficha no se confunde con “Umaralá”, que cuenta la biografía del piache y la muerte de su tía; ni con “Guanurú”, donde el nombre designa, en las traducciones misioneras que Pineda discute, a un ser dañino menor; ni con “Las Wanurü y el valle de la muerte”, que sigue a los muertos en su propio territorio. Aquí sólo se trata del canto.`;
 
 const leccion =
-  "Una palabra separada de su canto puede fabricar identidades que una lectura cuidadosa debe volver a distinguir.";
+  "Nombrar lo que enferma es la primera manera de negociar con ello sin entregarle el alma.";
 
-const similitudes = `En muchas tradiciones, un epíteto, una fórmula o el inicio de un canto termina tratado por compiladores como nombre propio. La comparación es un problema de archivo y traducción, no una prueba de que Jirairay corresponda a otra figura religiosa.
+const similitudes = `“Umaralá” es el paralelo interno inevitable: allí una tía piache canta ante una peste y discute en sus cánticos con Jirairai, hasta morir para que viva su sobrino, que hereda el capote y la maraca. La escena de esta ficha es esa misma discusión, contada sin nombres y con el desenlace abierto que la definición de Pineda permite. “Guanurú” trata un problema hermano: nombres tomados de entrevistas y traducciones misioneras (yorujá, wanurú, guanurú) que se convirtieron en un falso panteón de “diablos”; las dos páginas muestran por qué no conviene ordenar esos términos como si fueran personajes. “Las Wanurü y el valle de la muerte” muestra a los mismos muertos desde su lado, con territorio y costumbres, y “Mareiwa” documenta al otro espíritu que el piache llama con un canto propio, bajo el nombre de fumayule.
 
-“Umaralá” es el vínculo interno principal. Allí una tía piache canta ante una epidemia y entrega sus instrumentos al sobrino. Leer Jirairay como invocación de Wanurü corrige el episodio sin vaciar su tensión.
+El propio Pineda ofrece la comparación externa: apoyado en Métraux y en Tessmann, sostiene que, como entre los campa y los amahuaca de la Amazonía, el piache recibe su saber de un chamán vivo o muerto que lo visita en sueños. La resonancia está en el auxiliar que fue persona y en el sueño como vía; la diferencia, en que Pineda usa esa analogía para clasificar a los espíritus guajiros en buenos y malos, un esquema que la etnografía posterior (Balza-García, Zempléni sobre Perrin) reemplaza por la ambivalencia de un solo wanülüü que enferma y ayuda.
 
-“Guanurú” enfrenta una confusión semejante entre muertos, enfermedad y espíritus. Las dos páginas muestran por qué no conviene construir un panteón coherente con términos tomados de entrevistas, cantos y traducciones distintas.
-
-Los oráculos griegos fueron una comparación frecuente en la antropología antigua. Puede ayudar a reconocer trance y mediación, pero también desplaza los conceptos Wayuu hacia un modelo ajeno. Esta revisión prefiere describir maraca, canto, sueño y auxiliares antes que llamar a la piache “sacerdotisa” de Jirairay.`;
+Más lejos, el motivo del nombre cantado que un lector convierte en personaje es un problema de archivo frecuente: una fórmula de invocación, separada de su música, parece designar a alguien. Esta ficha lo anota como fenómeno de transmisión, no como parentesco entre mitologías, y no afirma copia ni influencia en ninguna dirección.`;
 
 export default defineWayuuMyth({
   slug: "jirairay",
@@ -86,7 +76,33 @@ export default defineWayuuMyth({
     "perrin1980",
     "perrin1979",
     "minculturaWayuu",
-    "onicWayuu",
+    "pesPalabreros",
+    "simbolismoSerpiente2006",
+    "cuandoCambian2004",
+    "crimenDeber2000",
+    {
+      key: "balzaGarciaMal2010",
+      summary:
+        "Analiza a Wanülüü como símbolo ambivalente: causa de enfermedad y muerte y, a la vez, mediador entre el outsü y el mundo pülasü que como aseyüu auxiliar informa al piache sobre el mal y su cura; respalda leer Jirairay como invocación de Wanurü dentro del canto y no como deidad aparte.",
+      limitation:
+        "Enfoque simbólico-cognitivo venezolano; no menciona la palabra Jirairay ni a Pineda.",
+    },
+    {
+      key: "serranoOutsu",
+      summary:
+        "Etnografía de una antropóloga wayuu: la outsü mastica tabaco, agita la maraca y pronuncia cantos y palabras ininteligibles para llamar a su espíritu auxiliar, y el nombre de cada enfermedad wanülüü depende del espíritu que la causa; la descripción contemporánea de la ceremonia que reconstruye el Relato.",
+      limitation:
+        "Comunidad de Wararalain, siglo XXI; no comenta las fuentes de 1946-1950 ni el término Jirairay.",
+    },
+    "reverolcurador2010",
+    "zempleniResena1993",
+    {
+      key: "perrinMythes1975",
+      summary:
+        "Primer informe de Perrin sobre ritual y chamanismo guajiro (misiones de 1969, 1970 y 1973), antecedente directo de su descripción de la cura chamánica con canto, maraca y tabaco que sirve de contraste a la lectura de Pineda.",
+      limitation:
+        "Sólo la primera página es de libre acceso; no contiene el término Jirairay.",
+    },
   ],
   researchNotes: `CORRECCIÓN CENTRAL: Jirairay es canto/nombre de invocación de Wanurü según Pineda, no entidad independiente.
 
