@@ -192,6 +192,14 @@ async function main() {
 
   for (const r of resumen) console.log(String(r.corpus).padEnd(28), String(r.laminas).padStart(4), " ", r.nota);
   console.log(`\n${todas.length} laminas en total`);
+  // image_gen.py exige --out-dir y de `out` solo conserva el nombre de
+  // archivo: una tanda de varios corpus se lanza un corpus por vez.
+  console.log("\nlanzar (un corpus por proceso, cada uno con su --out-dir):");
+  for (const r of resumen.filter((x) => x.laminas)) {
+    console.log(`  /usr/bin/python3 ~/.codex/skills/.system/imagegen/scripts/image_gen.py generate-batch --no-augment --concurrency 3 --max-attempts 2 \\
+    --input content/mitos-visuales/_openai/${r.corpus}/biblia-v3/${tanda}/requests.jsonl \\
+    --out-dir output/imagegen/${r.corpus}/biblia-v3/${tanda}`);
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) main().catch((e) => { console.error(e.message); process.exit(1); });
