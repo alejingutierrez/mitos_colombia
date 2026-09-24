@@ -1,0 +1,106 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "piloto-01-personas",
+  "capa": "personas",
+  "categorias": [
+    "personaje",
+    "deidad_fuerza",
+    "colectivo"
+  ],
+  "piloto": true,
+  "fecha": "2026-09-24",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "b83a72a1f4255cf2809f22e3dde694d87f9e374172f6946e6420e9d3572a9466"
+  },
+  "canon": {
+    "actas_verificadas": 19,
+    "relatos_reescritos": 0,
+    "verificado_en": "2026-09-24T22:49:45.787Z"
+  },
+  "fichas_en_capa": 44,
+  "fichas": [
+    {
+      "job": "jaibana__identity_sheet--canon",
+      "modelo": "jaibana__identity_sheet",
+      "entidad": "El jaibaná (rol sin nombre)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "aribamias",
+        "baha",
+        "antomia",
+        "herupotoarra",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5760,
+      "prompt_sha256": "bc3c99bd50402e725551e68c6956e896ea2333660c3e771c7ec95803b1fbb89e"
+    },
+    {
+      "job": "caragabi__identity_sheet--canon",
+      "modelo": "caragabi__identity_sheet",
+      "entidad": "Caragabí",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "antomia",
+        "baha",
+        "cobaima",
+        "creacion-katios",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-domicoes",
+        "sever"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5818,
+      "prompt_sha256": "e4426f299b2a07dbcd945ab534760b0e47ad119f1d68ffbb2726230577f7ff77"
+    },
+    {
+      "job": "gente-embera-katio__group_grammar--canon",
+      "modelo": "gente-embera-katio__group_grammar",
+      "entidad": "La gente emberá katío",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "antomia",
+        "aribamias",
+        "baha",
+        "coste",
+        "creacion-katios",
+        "dabeiba",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-bibidigomias",
+        "los-domicoes",
+        "sever",
+        "tradicion-del-cerro",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7816,
+      "prompt_sha256": "7abc0be58ed5006d3b427b2e04c398062d12862b0680cda71588607a5382088d"
+    }
+  ]
+}

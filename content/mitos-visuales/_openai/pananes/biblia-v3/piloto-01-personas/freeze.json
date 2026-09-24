@@ -1,0 +1,112 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pananes",
+  "comunidad": "Panán",
+  "tanda": "piloto-01-personas",
+  "capa": "personas",
+  "categorias": [
+    "personaje",
+    "deidad_fuerza",
+    "colectivo"
+  ],
+  "piloto": true,
+  "fecha": "2026-09-24",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pananes.v3.json",
+    "sha256": "85c9ea90b337f0576ff6d1ef8b1b6ddab0bd09a76acb3187fe4f77a90316063d"
+  },
+  "canon": {
+    "actas_verificadas": 16,
+    "relatos_reescritos": 0,
+    "verificado_en": "2026-09-24T22:49:48.334Z"
+  },
+  "fichas_en_capa": 6,
+  "fichas": [
+    {
+      "job": "colectivo_comuneros_de_panan__group_grammar--canon",
+      "modelo": "colectivo_comuneros_de_panan__group_grammar",
+      "entidad": "Comuneras y comuneros de Panán",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "el-cueche",
+        "la-basilica-encantada",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-laguna-de-maria-panana",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-vieja-la-viuda-y-el-anima",
+        "la-waka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7083,
+      "prompt_sha256": "ce61ab6eafdd6bb4c38bc04851f8aec2c82ea2513ffda204d79bbd27307a80d5"
+    },
+    {
+      "job": "colectivo_comuneros_de_panan__state_sheet--estado_epoca_de_hacienda_y_frontera",
+      "modelo": "colectivo_comuneros_de_panan__state_sheet",
+      "entidad": "Comuneras y comuneros de Panán",
+      "categoria": "colectivo",
+      "vista": "estado_epoca_de_hacienda_y_frontera",
+      "estados": [
+        "epoca_de_hacienda_y_frontera"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "el-cueche",
+        "la-basilica-encantada",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-laguna-de-maria-panana",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-vieja-la-viuda-y-el-anima",
+        "la-waka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7239,
+      "prompt_sha256": "04fe473a4f606c543cb89c523e506f0575c1d96ba93b0a51b754d4c486669f53"
+    },
+    {
+      "job": "medicos_tradicionales_yerbateros_y_parteras__group_grammar--canon",
+      "modelo": "medicos_tradicionales_yerbateros_y_parteras__group_grammar",
+      "entidad": "Médicos tradicionales, yerbateros y parteras",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cueche",
+        "la-entundada-el-quedado-el-espanto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6730,
+      "prompt_sha256": "bc711888ff7ee1d65da0be4ea7faaf42ce1d82be14f5586ff622456ebdc0fa6e"
+    }
+  ]
+}

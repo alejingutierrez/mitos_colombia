@@ -1,0 +1,87 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "piloto-01-personas",
+  "capa": "personas",
+  "categorias": [
+    "personaje",
+    "deidad_fuerza",
+    "colectivo"
+  ],
+  "piloto": true,
+  "fecha": "2026-09-24",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "c2ae3adbc3f60aac127331876649aa1df9e8b31ee48a46b0d8222de7f58d25c1"
+  },
+  "canon": {
+    "actas_verificadas": 14,
+    "relatos_reescritos": 0,
+    "verificado_en": "2026-09-24T22:49:46.989Z"
+  },
+  "fichas_en_capa": 29,
+  "fichas": [
+    {
+      "job": "nenefi__identity_sheet--canon",
+      "modelo": "nenefi__identity_sheet",
+      "entidad": "Nenefi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6749,
+      "prompt_sha256": "c63d9c870d85b5c1b0993068cd3ab6be4f99d277b92eab8c24a030f0b2f200f8"
+    },
+    {
+      "job": "dona_cucarron_de_vida__identity_sheet--canon",
+      "modelo": "dona_cucarron_de_vida__identity_sheet",
+      "entidad": "Doña Cucarrón-de-vida",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6702,
+      "prompt_sha256": "85c65204aa531f5956757d249a142c7122b0be08f26df856347b953b381e6bdf"
+    },
+    {
+      "job": "colectivo_gente_andoque_tiempo_de_origen__group_grammar--canon",
+      "modelo": "colectivo_gente_andoque_tiempo_de_origen__group_grammar",
+      "entidad": "Gente Andoque del tiempo de origen",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6892,
+      "prompt_sha256": "f45b72a48868b207b85504a76e1ca94790a33b83fe8f729fc2dd35176cb6c1d8"
+    }
+  ]
+}
