@@ -1,0 +1,1317 @@
+{
+  "id": "guahibo-sikuani",
+  "label": "Sikuani (Guahíbo)",
+  "pages": 10,
+  "canon_pages": 10,
+  "read_note": "Leí los cuatro campos editoriales de los 10 mitos de canon/guahibo-sikuani.canon.md (sha 5e1a2dea…, 10 mitos), más editorial/sikuani/universe.mjs, community.mjs y definitions.mjs, y docs/biblia-visual-v3.md §«Qué construye la Biblia». No consulté base ni web. TRAMPA MAYOR DEL CORPUS: los campos «historia» y «versiones» están compuestos con plantilla — cinco párrafos idénticos sobre Ortiz, Villa Posse, Pedro Martínez y Rita Gaitán se repiten en los diez mitos. Solo el primer párrafo de cada uno es específico. Todo el inventario sale del campo «mito» y de la primera línea de research_notes; conté las plantillas como cero entidades. SORPRESA 1: el corpus es de cuentos orales breves con elencos humanos sin nombre, no de deidades — solo dos relatos (Kuwei/Kuemi y Tsamani) tienen figuras cosmogónicas. SORPRESA 2: picure, lapa y jaguar sí se repiten entre relatos y son el único ahorro real de fauna; además las «hormigas cortadoras de hojas» del mito 1 y los «bachacos» del mito 7 son el mismo animal y quedan en una ficha. SENSIBILIDAD, verificada término a término contra el texto: «dopa» NO aparece nunca en el canon (0 ocurrencias) — la sustancia se nombra como yopo (6) y kapi (3); «rezo del pescado» NO aparece en absoluto (0 ocurrencias de «rezo» y de «pescado»); «iniciación» aparece una sola vez y es una prohibición del propio canon («no añade iniciaciones, espíritus tutelares o discursos que la transcripción no ofrece»). Así que excluí yopo/kapi como equivalente documentado del dopa y NO inventé entidades para el rezo del pescado ni para la iniciación: no hay nada que excluir porque no hay nada en el corpus. Nótese la asimetría deliberada con U’wa, donde el yopo sí tiene ficha porque no está en su lista sensible y su canon autoriza la escena. DUDOSO 1: unifiqué el águila enorme del mito 1 (dos águilas que suben a Kuemi) con la del mito 3 (el águila que ataca al brujo); las fuentes no las identifican pero tampoco las distinguen, y una sola ficha de cuerpo evita dos diseños divergentes de lo mismo. DUDOSO 2: el brujo cambia cinco veces de forma (picure, lapa, lombriz, paja, gusano); en vez de cinco estados le puse identidad + una ficha de cadena de transformaciones, porque picure y lapa ya tienen ficha propia por el mito 6 y las tres formas menores no cambian el encuadre. Si el editor quiere continuidad estricta son hasta +3 fichas. DUDOSO 3: dejé sin ficha el estado enfermo de la mujer del áinawi y lo marqué como propuesta editorial, no como regla: el canon cambia el título público por despectivo, pero no prohíbe la imagen. AVISO AL EDITOR: tres relatos (el jaguar y los dos hermanos, la danta y el terecay, los hermanos y la mujer del monte) contienen muertes explícitas y, a diferencia del canon U’wa, NO traen ninguna instrucción de «no mostrar»; esa decisión visual queda abierta.",
+  "entities": [
+    {
+      "id": "kuwei",
+      "name": "Kuwei",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Piensa el mundo, prepara la trampa de hormigas contra Kuemi y modela a la primera persona en tres materiales. Conduce todo el relato cosmogónico. Cubre las grafías Kuwai, Phurnaminali y Furnaminali, que el canon registra sin declararlas idénticas en cada variante."
+    },
+    {
+      "id": "kuemi",
+      "name": "Kuemi",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "franja_luminosa_de_la_via_lactea"
+      ],
+      "note": "Señor de la oscuridad que ocupa el universo antes del orden; la fuente lo relaciona con una anaconda gigantesca. Las águilas lo suben al cielo y queda asociado con la franja luminosa: transformación mostrada y de silueta radicalmente distinta. El canon subraya que no es destrucción de la oscuridad sino reorganización de su lugar."
+    },
+    {
+      "id": "primeras_figuras_humanas_de_kuwei",
+      "name": "Las primeras figuras humanas de Kuwei",
+      "kind": "personaje",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "required",
+      "sheets": 3,
+      "states": [
+        "figura_de_barro_deshecha_por_la_lluvia",
+        "figura_de_cera_derretida_por_el_sol"
+      ],
+      "note": "Tres intentos sucesivos y mostrados: barro que se deshace con la lluvia, cera de abejas que derrite el Sol y, como base, la mujer de madera dura que permanece entera. Cada destrucción cambia la silueta y es un beat completo del relato — la secuencia es el argumento del mito."
+    },
+    {
+      "id": "kinkaju",
+      "name": "El kinkajú",
+      "kind": "animal",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Después de que otros animales fracasan, consigue abrir el camino para la unión sexual y con eso puede continuar la humanidad. Conduce el desenlace. ADVERTENCIA: la ficha es del animal; el acto se narra con sobriedad en el canon y no se ilustra."
+    },
+    {
+      "id": "hormigas_cortadoras_bachacos",
+      "name": "Las hormigas cortadoras de hojas (bachacos)",
+      "kind": "animal",
+      "myths": [
+        "el-creador-del-cosmos",
+        "kawiri-monae"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cebo con el que Kuwei atrae a Kuemi y alimento de la mujer en el territorio de los Kawiri Monae. Dos relatos: el canon usa «hormigas cortadoras de hojas» en uno y «bachacos» en el otro, mismo animal."
+    },
+    {
+      "id": "aguila_enorme",
+      "name": "El águila enorme",
+      "kind": "criatura",
+      "myths": [
+        "el-creador-del-cosmos",
+        "historia-de-un-brujo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Águilas enormes levantan a Kuemi hacia el cielo; un águila de tamaño extraordinario, «tan grande que la versión la compara con un avión», se lanza sobre el brujo y cae con la tercera flecha. Cubre también el viento feroz que se levanta con su caída. ADVERTENCIA: las fuentes no las identifican como el mismo ser — la ficha unifica el cuerpo para que ambos relatos lean consistentes, en pareja en el mito 1 y como antagonista único en el mito 3."
+    },
+    {
+      "id": "jaguar",
+      "name": "El jaguar",
+      "kind": "animal",
+      "myths": [
+        "el-tigre",
+        "historia-de-un-tigre"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "En la casa Tsorueto brillan sus ojos en la oscuridad, lame a la mujer, mata al esposo y muere en el incendio; en el camino mata a la mujer, habla al niño y es rastreado y muerto por el esposo. El canon dice expresamente que los dos relatos «comparten animal, no argumento»: una ficha de cuerpo, dos relatos que no se fusionan. «Tigre» es la palabra de la edición; se muestra como jaguar."
+    },
+    {
+      "id": "mujer_de_tsorueto",
+      "name": "La mujer de la casa Tsorueto",
+      "kind": "personaje",
+      "myths": [
+        "el-tigre"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reconoce lo que su esposo rechazó, saca a los niños por la parte alta del techo cerca del caballete y pide ayuda desde afuera. Protagonista y detalle decisivo del relato."
+    },
+    {
+      "id": "hombre_de_tsorueto",
+      "name": "El hombre de la casa Tsorueto",
+      "kind": "personaje",
+      "myths": [
+        "el-tigre"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Viaja con su familia, no acepta la advertencia de los ojos en la oscuridad, resta importancia y permanece en la casa: su decisión abre el relato y lo cuesta la vida."
+    },
+    {
+      "id": "casa_tsorueto",
+      "name": "La casa Tsorueto",
+      "kind": "arquitectura",
+      "myths": [
+        "el-tigre"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "ardiendo_con_las_entradas_cerradas"
+      ],
+      "note": "«Casa de sueño» en la traducción, cerrada para impedir que entraran insectos, con una parte alta y un caballete por donde salen los niños. Los hermanos cierran sus entradas y le prenden fuego: la casa ardiendo es el clímax mostrado y cambia por completo la silueta. ADVERTENCIA: el canon dice que la fuente «no ofrece información suficiente para convertirla en modelo general de vivienda o ceremonia»."
+    },
+    {
+      "id": "brujo",
+      "name": "El brujo",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-brujo"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "cadena_de_transformaciones"
+      ],
+      "note": "Enviado a pescar a una laguna desconocida por dos hombres que quieren librarse de él; cambia de forma cinco veces, derriba al águila con la tercera flecha y vuelve. Cubre sus flechas. La segunda ficha fija el marcador de continuidad que lo identifica a través de picure, lapa, lombriz, paja y gusano; los cuerpos animales salen de las fichas de picure y lapa. ADVERTENCIA: el canon dice que «brujo» es el término del título publicado, que no se reemplaza por un nombre Sikuani ausente ni sirve para definir a todos los especialistas rituales, y que no se le añaden iniciaciones ni espíritus tutelares."
+    },
+    {
+      "id": "serpientes_kueima",
+      "name": "Las cuatro serpientes Kueima",
+      "kind": "criatura",
+      "myths": [
+        "historia-de-un-brujo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Aparecen cerca del agua y el brujo no se deja sorprender: son la primera amenaza vista de la prueba y están nombradas en lengua."
+    },
+    {
+      "id": "maraca",
+      "name": "La maraca",
+      "kind": "objeto",
+      "myths": [
+        "historia-de-un-brujo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La que el brujo había dejado «comenzó a bailar y anunció su retorno»: es un objeto que actúa por sí mismo y provoca que la gente vaya a comprobar lo ocurrido. Objeto por el que gira el desenlace."
+    },
+    {
+      "id": "picure",
+      "name": "El picure",
+      "kind": "animal",
+      "myths": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "marcas_de_quemadura"
+      ],
+      "note": "Primera forma de fuga del brujo; en Kaliwirnae percibe el aroma a piña, no logra seguir el camino y se enfrenta al mono con tizones encendidos. Las quemaduras «dejaron marcas en sus cuerpos, explicación narrativa de rasgos que aún pueden observarse»: estado permanente, mostrado, que cambia la lectura del animal."
+    },
+    {
+      "id": "lapa",
+      "name": "La lapa",
+      "kind": "animal",
+      "myths": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "sin_cola"
+      ],
+      "note": "Segunda forma de fuga del brujo; en Kaliwirnae sigue al mono, cruza con él el Orinoco y vuelve con la noticia. El mono le quita la cola y la arroja al río, donde se transforma en anguila: pérdida mostrada y cambio de silueta. Cubre la anguila como forma transformada de esa cola."
+    },
+    {
+      "id": "hermano_menor_de_historia_de_un_tigre",
+      "name": "El hermano menor",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-tigre"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se ausenta a intercambiar, escucha el llanto al volver, da agua al niño, sigue las huellas, mata al jaguar, sepulta juntos a su esposa y su hijo y cierra la historia con otra violencia. Conduce la segunda mitad del relato."
+    },
+    {
+      "id": "esposa_del_hermano_menor",
+      "name": "La esposa del hermano menor",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-tigre"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Queda con el hijo pequeño en casa de la suegra, recibe el reproche, toma al niño y sale sola al camino donde el jaguar la mata. Su decisión articula el relato."
+    },
+    {
+      "id": "cunada",
+      "name": "La cuñada",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-tigre"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La esposa del hermano mayor: su reproche provoca la partida, después lo reconoce y muere por ello. El canon insiste en que el desenlace «no se presenta como justicia recomendada ni como norma Sikuani»."
+    },
+    {
+      "id": "viudo_padre",
+      "name": "El viudo",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Vuelve a casarse, cede a la presión de la nueva esposa, abandona a los niños dos veces y les quita los ojos para que no puedan volver. Motor del primer tercio. Es el «viejo» del título de archivo, aunque los protagonistas narrativos son sus hijos."
+    },
+    {
+      "id": "madrastra",
+      "name": "La nueva esposa",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Rechaza a los niños y presiona al padre para que los abandone: causa de todo el relato."
+    },
+    {
+      "id": "nino_de_historia_de_un_viejo",
+      "name": "El hermano",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Prepara con su hermana el engaño de la anciana, se queda con los cuatro perros cuando se llevan a la hermana, sigue su camino y cruza el mar. Cierra el relato. La ceguera temporal no cambia la silueta y se resuelve dentro de esta ficha."
+    },
+    {
+      "id": "nina_de_historia_de_un_viejo",
+      "name": "La hermana",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Deja los granos de maíz que permiten volver la primera vez y es llevada por seres del monte al final: destino distinto del hermano, por eso ficha aparte."
+    },
+    {
+      "id": "anciana_canibal",
+      "name": "La anciana caníbal",
+      "kind": "criatura",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los captura y los alimenta para engordarlos; cae en su propia vasija hirviendo y al abrir o partir su cabeza salen cuatro perros. ADVERTENCIA: el canon dice expresamente que la ficha «no la presenta como versión Sikuani de Hansel y Gretel» — nada de iconografía de bruja europea."
+    },
+    {
+      "id": "cuatro_perros",
+      "name": "Los cuatro perros",
+      "kind": "colectivo",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Salen de la cabeza de la anciana, quedan con el muchacho y cruzan el mar con él; la versión los nombra pantera, tigre, león y onca y afirma que de allí proceden los tigres actuales. ADVERTENCIA: el canon dice que esos nombres «reflejan la traducción publicada» y «no se convierten en taxonomía zoológica Sikuani ni se corrigen a especies modernas». No se fusionan con la ficha del jaguar."
+    },
+    {
+      "id": "pajuil",
+      "name": "El pajuil",
+      "kind": "animal",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La voz de la madre muerta orienta a los niños hacia él y el ave les indica dónde encontrar la savia que devuelve la vista. Conduce el giro del relato."
+    },
+    {
+      "id": "gran_vasija_hirviendo",
+      "name": "La gran vasija hirviendo",
+      "kind": "objeto",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La anciana la prepara para ellos y los hermanos invierten la trampa haciéndola caer dentro: es el objeto en el que ocurre el clímax y debe tener escala para contener a una persona."
+    },
+    {
+      "id": "kaliwirnae",
+      "name": "Kaliwirnae, el árbol de los alimentos",
+      "kind": "planta",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nacido de una planta de yuca, reúne todos los alimentos: piña, ají, caña y muchas frutas en sus ramas. Es el objeto por el que se cuenta el relato. ADVERTENCIA CRÍTICA: la narradora Carmen Rojas Amaya corta explícitamente antes del derribo del árbol y el canon respeta ese final abierto — la ficha muestra el árbol cargado, nunca su caída ni la dispersión de los alimentos."
+    },
+    {
+      "id": "kutsikutsi",
+      "name": "Kutsikutsi, el mono nocturno",
+      "kind": "animal",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "marcas_de_quemadura"
+      ],
+      "note": "Llega con olor a piña, cruza el Orinoco hasta el árbol, deja caer una piña, le quita la cola a la lapa y termina delatado cuando vomita bajo el efecto del yopo. Se enfrenta al picure con tizones y queda con las marcas que explican rasgos observables: estado mostrado y permanente."
+    },
+    {
+      "id": "kawiri_monae",
+      "name": "Los Kawiri Monae",
+      "kind": "criatura",
+      "myths": [
+        "kawiri-monae"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se llevan a la mujer recién parida y a su niño; uno de ellos vive con ella y años después decide devolverla, indicándole que cierre los ojos durante el trayecto. ADVERTENCIA CRÍTICA: la glosa los relaciona con «caribes» y con duende, pero el canon dice expresamente que esa glosa «no resuelve si deben entenderse como un grupo humano, seres de otro ámbito o ambas cosas» y que no se convierta «una palabra traducida en una descripción etnográfica de personas contemporáneas». La ficha debe conservar la ambigüedad y nunca retratar a un pueblo real."
+    },
+    {
+      "id": "mujer_ausente",
+      "name": "La mujer ausente",
+      "kind": "personaje",
+      "myths": [
+        "kawiri-monae"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Recién parida y apartada, es llevada, ve a sus parientes buscarla sin poder hablarles, come bachacos, cría a su hijo y regresa años después a explicar lo que vio. Protagonista."
+    },
+    {
+      "id": "hijo_de_la_mujer_ausente",
+      "name": "El hijo de la mujer ausente",
+      "kind": "personaje",
+      "myths": [
+        "kawiri-monae"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "muchacho_crecido"
+      ],
+      "note": "Desaparece como bebé y vuelve como muchacho crecido: el salto de edad es el hallazgo del relato («el niño ya no era el bebé desaparecido»), se muestra y cambia la silueta. Dos edades, dos fichas."
+    },
+    {
+      "id": "familia_tsamani",
+      "name": "La familia Tsamani",
+      "kind": "colectivo",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "cuerpos_livianos_y_ascenso_entre_las_estrellas"
+      ],
+      "note": "Tsamani y sus cinco hermanos danzan durante años cuidando estrictamente lo que comen, se vuelven livianos, se elevan y quedan visibles en el firmamento. Cubre a Tsamani como líder nombrado, a los cinco hermanos y a la danza. El ascenso se muestra y cambia la silueta del grupo."
+    },
+    {
+      "id": "danta",
+      "name": "La danta",
+      "kind": "animal",
+      "myths": [
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escucha el comentario sobre su hígado, tiende la trampa, mata a la anciana y se la lleva; años después el terecay la muerde y muere ahogada con la cabeza en una horqueta sumergida. Cubre el excremento que la delata y la orina que pide el terecay."
+    },
+    {
+      "id": "terecay",
+      "name": "El terecay",
+      "kind": "animal",
+      "myths": [
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Tortuga pequeña que llama abuela a la anciana, la busca durante años, sigue indicios, se acerca pidiendo orina, muerde y no suelta, y vuelve a contárselo a los nietos humanos. ADVERTENCIA: el canon no explica si el parentesco es filiación literal, trato afectivo o relación entre especies — la ficha no puede resolverlo."
+    },
+    {
+      "id": "anciana_que_cuidaba_animales",
+      "name": "La anciana que cuidaba animales",
+      "kind": "personaje",
+      "myths": [
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Su comentario sobre el hígado de danta desencadena el relato; introduce el brazo en el engaño y muere. Abuela del terecay y de los nietos humanos."
+    },
+    {
+      "id": "mujer_del_ainawi",
+      "name": "La mujer del áinawi",
+      "kind": "personaje",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Abandonada en la cabecera de un caño, se limpia y se cura con lo que le lleva el visitante, rechaza al primer esposo y elige quedarse. Da a luz en seis días. La ficha la fija sana, que es el encuadre que escoge el propio canon al cambiar el título público."
+    },
+    {
+      "id": "ainawi",
+      "name": "El áinawi",
+      "kind": "criatura",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Llega del bosque con jabón, vestido, perfume y peine, se queda como compañero y más tarde lleva al hijo debajo de la tierra. ADVERTENCIA: la glosa lo define como «ser invisible», pero en el relato se presenta y actúa con cuerpo de hombre — la ficha se construye solo sobre esa forma vista y no inventa una «forma verdadera». El canon prohíbe además describirlo como dios, chamán o espíritu protector universal."
+    },
+    {
+      "id": "primer_esposo",
+      "name": "El primer esposo",
+      "kind": "personaje",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La abandona enferma en la cabecera del caño, vuelve cuando la encuentra sana y quiere que regrese con él; ella se niega. Antagonista del relato."
+    },
+    {
+      "id": "hijo_del_ainawi",
+      "name": "El hijo del áinawi",
+      "kind": "personaje",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nace a los seis días, crece y su padre lo lleva consigo debajo de la tierra: es quien cruza el límite que la madre rechaza y sostiene el cierre explicativo del relato."
+    },
+    {
+      "id": "colectivo_gente_sikuani",
+      "name": "Elenco Sikuani",
+      "kind": "colectivo",
+      "myths": [
+        "el-tigre",
+        "historia-de-un-brujo",
+        "historia-de-un-tigre",
+        "historia-de-un-viejo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "kawiri-monae",
+        "la-danta-y-el-terecay",
+        "la-mujer-sarnosa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de grupo de la gente de los relatos: adultos, mujeres, niños. Cubre los hijos y los hermanos del muerto de Tsorueto, los dos hombres que envían al brujo y la gente que va a comprobar el águila, la suegra y el niño pequeño del jaguar, «la gente» que invita al mono, los parientes que buscan a la mujer y los nietos humanos de la anciana. Ocho relatos: el mayor ahorro del corpus. ADVERTENCIA: el encargo prohíbe fijar un diseño real de pintura corporal o de tejido — la gramática define silueta y vestuario sobrio, nunca un ejemplar."
+    },
+    {
+      "id": "paisaje_sabana_llanera",
+      "name": "Sabana inundable de los Llanos Orientales",
+      "kind": "paisaje",
+      "myths": [
+        "historia-de-un-tigre",
+        "kawiri-monae",
+        "la-comida-para-los-muertos",
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Llanura abierta con el horizonte bajo, por donde pasa el camino en que el jaguar mata, por donde buscan a la mujer y por donde el terecay rastrea durante años. Cuatro relatos; cubre los caminos del llano. El nombre viene del imagePrompt aprobado de editorial/sikuani/community.mjs («sabana inundable… de los Llanos Orientales»), porque el canon solo dice «Llanos Orientales»."
+    },
+    {
+      "id": "paisaje_morichal_y_bosque_de_galeria",
+      "name": "Morichal y bosque de galería",
+      "kind": "paisaje",
+      "myths": [
+        "el-creador-del-cosmos",
+        "historia-de-un-viejo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "la-mujer-sarnosa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El monte donde abandonan a los hermanos y donde los toman los seres, el bosque del que sale el áinawi, los árboles que adquieren forma en la creación y el entorno del árbol de los alimentos. Cuatro relatos. Banda distinta de la sabana abierta; el nombre viene del imagePrompt aprobado de community.mjs («bosque de galería»)."
+    },
+    {
+      "id": "aguas_del_llano",
+      "name": "Ríos, caños y lagunas del llano",
+      "kind": "paisaje",
+      "myths": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "la-danta-y-el-terecay",
+        "la-mujer-sarnosa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La laguna desconocida con peces donde el brujo es enviado, el Orinoco ancho que cruzan el mono y la lapa, el agua donde la danta se ahoga con la cabeza en una horqueta sumergida y la cabecera del caño donde abandonan a la mujer. Cuatro relatos en una sola ficha de entorno con sub-escenarios declarados."
+    },
+    {
+      "id": "cielo_estrellado_del_llano",
+      "name": "El cielo estrellado del llano",
+      "kind": "paisaje",
+      "myths": [
+        "el-creador-del-cosmos",
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La franja luminosa que atraviesa la noche y el lugar entre las estrellas donde queda la familia Tsamani. Dos relatos; la ficha es el cielo, mientras que Kuemi-como-franja es su propio estado."
+    },
+    {
+      "id": "el_mar",
+      "name": "El mar",
+      "kind": "paisaje",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Última imagen del relato: el niño llega hasta el mar y lo cruza con los cuatro perros, y la transcripción termina ahí. No es intercambiable con las aguas del llano y sostiene el plano de cierre."
+    },
+    {
+      "id": "casa_sikuani",
+      "name": "La casa Sikuani",
+      "kind": "arquitectura",
+      "myths": [
+        "historia-de-un-tigre",
+        "historia-de-un-viejo",
+        "kawiri-monae"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Casa de la suegra donde estalla la disputa, casa de la que salen y a la que vuelven los hermanos, y la casa separada donde está la mujer recién parida. Tres relatos. ADVERTENCIA: el canon no describe la construcción ni práctica ritual alguna asociada a la casa separada; la ficha no puede inventarlas. Distinta de la casa Tsorueto, que tiene ficha propia."
+    },
+    {
+      "id": "kuwai_phurnaminali_furnaminali",
+      "name": "Kuwai, Phurnaminali, Furnaminali",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "embedded",
+      "covered_by": "kuwei",
+      "sheets": 0,
+      "note": "Grafías y nombres alternos que la bibliografía asocia con la figura creadora; variante del mismo ser ya fichado. El canon registra la asociación sin decidir que todos sean idénticos en cada variante."
+    },
+    {
+      "id": "anaconda_gigantesca",
+      "name": "La anaconda gigantesca",
+      "kind": "criatura",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "embedded",
+      "covered_by": "kuemi",
+      "sheets": 0,
+      "note": "Forma con la que la fuente relaciona a Kuemi; parte de su ficha de identidad, no un animal aparte."
+    },
+    {
+      "id": "figura_de_barro",
+      "name": "La figura de barro",
+      "kind": "objeto",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "embedded",
+      "covered_by": "primeras_figuras_humanas_de_kuwei",
+      "sheets": 0,
+      "note": "Primer intento, deshecho por la lluvia; es uno de los estados ya contados en esa ficha."
+    },
+    {
+      "id": "figura_de_cera_de_abejas",
+      "name": "La figura de cera de abejas",
+      "kind": "objeto",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "embedded",
+      "covered_by": "primeras_figuras_humanas_de_kuwei",
+      "sheets": 0,
+      "note": "Segundo intento, derretido por el Sol; estado ya contado."
+    },
+    {
+      "id": "mujer_de_madera_dura",
+      "name": "La mujer de madera dura",
+      "kind": "personaje",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "embedded",
+      "covered_by": "primeras_figuras_humanas_de_kuwei",
+      "sheets": 0,
+      "note": "Tercer intento y base de esa ficha: permanece entera y desde ella continúa la humanidad."
+    },
+    {
+      "id": "via_lactea",
+      "name": "La Vía Láctea",
+      "kind": "fenomeno",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "embedded",
+      "covered_by": "cielo_estrellado_del_llano",
+      "sheets": 0,
+      "note": "Franja luminosa que atraviesa la noche; parte del cielo ya fichado. Su lectura como Kuemi vive en el estado de Kuemi."
+    },
+    {
+      "id": "techo_y_caballete_de_tsorueto",
+      "name": "El techo y el caballete de la casa Tsorueto",
+      "kind": "arquitectura",
+      "myths": [
+        "el-tigre"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_tsorueto",
+      "sheets": 0,
+      "note": "Por la parte alta, cerca del caballete, salen la mujer y los niños; parte de la ficha de la casa."
+    },
+    {
+      "id": "hijos_de_tsorueto",
+      "name": "Los hijos de la casa Tsorueto",
+      "kind": "colectivo",
+      "myths": [
+        "el-tigre"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "Evacuados por la madre; miembros genéricos del elenco."
+    },
+    {
+      "id": "hermanos_del_muerto",
+      "name": "Los hermanos del muerto",
+      "kind": "colectivo",
+      "myths": [
+        "el-tigre"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "Oyen los gritos, cierran las entradas y prenden fuego a la casa: actúan como grupo y la gramática del elenco los provee."
+    },
+    {
+      "id": "dos_hombres_que_envian_al_brujo",
+      "name": "Los dos hombres que envían al brujo",
+      "kind": "colectivo",
+      "myths": [
+        "historia-de-un-brujo"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "Le hablan de la laguna desconocida y al final quedan expuestos ante los demás; adultos sin nombre ni rasgo propio."
+    },
+    {
+      "id": "la_gente_que_comprueba_el_aguila",
+      "name": "La gente que duda y va a comprobar",
+      "kind": "colectivo",
+      "myths": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "Duda de lo ocurrido y encuentra el águila enorme; en Kaliwirnae es «la gente» que invita al mono nocturno. Miembros genéricos del elenco."
+    },
+    {
+      "id": "flechas_del_brujo",
+      "name": "Las flechas del brujo",
+      "kind": "objeto",
+      "myths": [
+        "historia-de-un-brujo"
+      ],
+      "decision": "embedded",
+      "covered_by": "brujo",
+      "sheets": 0,
+      "note": "Tres disparos, el tercero derriba al águila; arma propia del personaje, parte de su ficha."
+    },
+    {
+      "id": "lombriz_paja_y_gusano",
+      "name": "Lombriz, paja y gusano",
+      "kind": "criatura",
+      "myths": [
+        "historia-de-un-brujo"
+      ],
+      "decision": "embedded",
+      "covered_by": "brujo",
+      "sheets": 0,
+      "note": "Tres formas menores con que el brujo resiste el viento; se resuelven en su ficha de cadena de transformaciones porque ninguna cambia el encuadre más allá de una forma pequeña sobre el suelo."
+    },
+    {
+      "id": "laguna_desconocida",
+      "name": "La laguna desconocida",
+      "kind": "lugar",
+      "myths": [
+        "historia-de-un-brujo"
+      ],
+      "decision": "embedded",
+      "covered_by": "aguas_del_llano",
+      "sheets": 0,
+      "note": "Escenario de la prueba, con peces y serpientes cerca del agua; sub-escenario de la ficha de aguas del llano."
+    },
+    {
+      "id": "orinoco",
+      "name": "El Orinoco",
+      "kind": "paisaje",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "embedded",
+      "covered_by": "aguas_del_llano",
+      "sheets": 0,
+      "note": "Río ancho que cruzan el mono y la lapa y donde la cola se convierte en anguila; sub-escenario de la misma ficha."
+    },
+    {
+      "id": "cabecera_del_cano",
+      "name": "La cabecera del caño",
+      "kind": "lugar",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "embedded",
+      "covered_by": "aguas_del_llano",
+      "sheets": 0,
+      "note": "Lugar donde el primer esposo abandona a la mujer; sub-escenario de la misma ficha."
+    },
+    {
+      "id": "horqueta_sumergida",
+      "name": "La horqueta sumergida",
+      "kind": "planta",
+      "myths": [
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "embedded",
+      "covered_by": "aguas_del_llano",
+      "sheets": 0,
+      "note": "La danta mete la cabeza entre ella y queda atrapada; elemento del fondo del agua, parte de esa ficha de entorno."
+    },
+    {
+      "id": "anguila",
+      "name": "La anguila",
+      "kind": "animal",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "embedded",
+      "covered_by": "lapa",
+      "sheets": 0,
+      "note": "En que se transforma la cola arrojada al río; forma derivada de la lapa y parte de su ficha."
+    },
+    {
+      "id": "nino_pequeno_de_historia_de_un_tigre",
+      "name": "El hijo pequeño",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-tigre"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "Sobrevive un momento, recibe agua y muere; bebé sin rasgo propio, cubierto por la gramática del elenco."
+    },
+    {
+      "id": "suegra",
+      "name": "La suegra",
+      "kind": "personaje",
+      "myths": [
+        "historia-de-un-tigre"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "En su casa quedan la esposa y el niño y estalla la disputa; no actúa ni recibe descripción."
+    },
+    {
+      "id": "nietos_humanos_de_la_anciana",
+      "name": "Los nietos humanos de la anciana",
+      "kind": "colectivo",
+      "myths": [
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "El terecay vuelve a contarles que la vengó; reconocen la misma obligación de parentesco. Miembros genéricos del elenco."
+    },
+    {
+      "id": "parientes_que_buscan_a_la_mujer",
+      "name": "Los parientes que buscan a la mujer",
+      "kind": "colectivo",
+      "myths": [
+        "kawiri-monae"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_sikuani",
+      "sheets": 0,
+      "note": "Recorren lugares cercanos y llaman sin obtener respuesta, mientras ella los ve; miembros genéricos del elenco."
+    },
+    {
+      "id": "casa_separada_de_la_recien_parida",
+      "name": "La casa separada de la recién parida",
+      "kind": "arquitectura",
+      "myths": [
+        "kawiri-monae"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_sikuani",
+      "sheets": 0,
+      "note": "Situación inicial del relato: la mujer permanece apartada tras el parto. ADVERTENCIA: el canon la enuncia como situación narrativa y no aporta ningún detalle ritual; la ficha de casa la resuelve sin inventarlo."
+    },
+    {
+      "id": "tsamani",
+      "name": "Tsamani",
+      "kind": "personaje",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "embedded",
+      "covered_by": "familia_tsamani",
+      "sheets": 0,
+      "note": "Líder nombrado del grupo; el canto lo trata siempre como parte de la familia que danza y asciende, así que su marcador vive en la gramática del colectivo."
+    },
+    {
+      "id": "cinco_hermanos_de_tsamani",
+      "name": "Los cinco hermanos de Tsamani",
+      "kind": "colectivo",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "embedded",
+      "covered_by": "familia_tsamani",
+      "sheets": 0,
+      "note": "Danzan y ascienden con él; miembros del colectivo ya fichado."
+    },
+    {
+      "id": "danza_de_la_familia_tsamani",
+      "name": "La danza de años de la familia Tsamani",
+      "kind": "fenomeno",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "embedded",
+      "covered_by": "familia_tsamani",
+      "sheets": 0,
+      "note": "El movimiento sostenido durante años que, junto con la dieta, vuelve livianos los cuerpos; es lo que muestra la ficha del colectivo. NO es la danza Jalekuma, que el canon deja fuera del canto."
+    },
+    {
+      "id": "excremento_revelador",
+      "name": "El excremento que revela",
+      "kind": "objeto",
+      "myths": [
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "embedded",
+      "covered_by": "danta",
+      "sheets": 0,
+      "note": "Indicio que le dice al terecay que la danta mató a la abuela; rastro del animal, parte de su ficha."
+    },
+    {
+      "id": "orina_de_la_danta",
+      "name": "La orina de la danta",
+      "kind": "objeto",
+      "myths": [
+        "la-danta-y-el-terecay"
+      ],
+      "decision": "embedded",
+      "covered_by": "danta",
+      "sheets": 0,
+      "note": "El terecay la pide para beber y calentar su caparazón, y así reduce la distancia antes de morder; parte de la escena de la danta."
+    },
+    {
+      "id": "frutos_de_kaliwirnae",
+      "name": "Los frutos de Kaliwirnae",
+      "kind": "planta",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "embedded",
+      "covered_by": "kaliwirnae",
+      "sheets": 0,
+      "note": "Piña, ají, caña y muchas frutas en sus ramas, y la piña que el mono deja caer; parte de la ficha del árbol."
+    },
+    {
+      "id": "planta_de_yuca",
+      "name": "La planta de yuca",
+      "kind": "planta",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "embedded",
+      "covered_by": "kaliwirnae",
+      "sheets": 0,
+      "note": "De ella crece el árbol; estado previo del mismo ser, parte de su ficha."
+    },
+    {
+      "id": "pantera_tigre_leon_y_onca",
+      "name": "Pantera, tigre, león y onca",
+      "kind": "animal",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "embedded",
+      "covered_by": "cuatro_perros",
+      "sheets": 0,
+      "note": "Los nombres que la versión da a los cuatro perros; miembros del colectivo ya fichado y traducción publicada que no se corrige a especies modernas."
+    },
+    {
+      "id": "granos_de_maiz",
+      "name": "Los granos de maíz",
+      "kind": "objeto",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_camino_y_engano",
+      "sheets": 0,
+      "note": "La niña los deja a lo largo del camino y permiten volver la primera vez."
+    },
+    {
+      "id": "platano_frito",
+      "name": "El plátano frito",
+      "kind": "objeto",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_camino_y_engano",
+      "sheets": 0,
+      "note": "Preparado por los hermanos para engañar a la anciana caníbal."
+    },
+    {
+      "id": "palo_de_los_hermanos",
+      "name": "El palo de los hermanos",
+      "kind": "objeto",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_camino_y_engano",
+      "sheets": 0,
+      "note": "La otra mitad de su precaución contra la anciana."
+    },
+    {
+      "id": "tizones_encendidos",
+      "name": "Los tizones encendidos",
+      "kind": "objeto",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_camino_y_engano",
+      "sheets": 0,
+      "note": "Con ellos se enfrentan el picure y el mono nocturno; las quemaduras resultantes sí son estados de esos dos animales."
+    },
+    {
+      "id": "lancetas_de_intercambio",
+      "name": "Las lancetas",
+      "kind": "objeto",
+      "myths": [
+        "historia-de-un-tigre"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_camino_y_engano",
+      "sheets": 0,
+      "note": "El hermano menor se ausenta para intercambiarlas; el canon no las describe más."
+    },
+    {
+      "id": "jabon",
+      "name": "El jabón",
+      "kind": "objeto",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_cuidado_y_curacion",
+      "sheets": 0,
+      "note": "Uno de los cuatro objetos con que el áinawi permite que la mujer se limpie y se cure."
+    },
+    {
+      "id": "vestido_de_la_mujer",
+      "name": "El vestido",
+      "kind": "objeto",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_cuidado_y_curacion",
+      "sheets": 0,
+      "note": "Segundo de los cuatro objetos del áinawi."
+    },
+    {
+      "id": "perfume",
+      "name": "El perfume",
+      "kind": "objeto",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_cuidado_y_curacion",
+      "sheets": 0,
+      "note": "Tercero de los cuatro objetos del áinawi."
+    },
+    {
+      "id": "peine",
+      "name": "El peine",
+      "kind": "objeto",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_cuidado_y_curacion",
+      "sheets": 0,
+      "note": "Cuarto de los cuatro objetos del áinawi."
+    },
+    {
+      "id": "savia_que_devuelve_la_vista",
+      "name": "La savia que devuelve la vista",
+      "kind": "planta",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_cuidado_y_curacion",
+      "sheets": 0,
+      "note": "El pajuil indica dónde encontrarla y con ella los hermanos vuelven a ver. ADVERTENCIA: el canon no identifica la planta; la hoja la fija como savia recogida, sin especie."
+    },
+    {
+      "id": "dopa_yopo_y_kapi",
+      "name": "El yopo y el kapi (dopa)",
+      "kind": "planta",
+      "myths": [
+        "el-creador-del-cosmos",
+        "historia-de-un-brujo",
+        "historia-de-un-tigre",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required — el encargo marca el dopa como materia sensible Sikuani. El canon lo nombra como yopo y kapi en cinco relatos (el brujo lo consume antes de la prueba y hay una reunión con yopo y kapi; la gente invita al mono a consumirlo; se intercambia yopo y lancetas; Baquero lo cita en el contexto de Tsamani) pero nunca describe preparación, instrumento ni ceremonia. Una hoja de utilería lo convertiría en modelo reproducible.",
+      "sheets": 0,
+      "note": "Verificado por conteo: «dopa» aparece 0 veces en el canon, «yopo» 6 y «kapi» 3. Las escenas se montan como reunión y como efecto, sin parafernalia. ASIMETRÍA DELIBERADA con U’wa, donde el yopo sí tiene ficha porque no está en su lista sensible y su canon autoriza expresamente la escena."
+    },
+    {
+      "id": "danza_jalekuma",
+      "name": "La danza Jalekuma",
+      "kind": "fenomeno",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "excluded",
+      "reason": "El canon dice que pertenece a «otra mediación del ciclo de Tsamani» descrita por Baquero y que «la presente narración no incorpora esos detalles dentro del canto de Jairo Chipiaje Cavares: los registra como variante y contexto». No se narra en la página.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito y en versiones del relato 8. La danza que sí se ilustra es la de la familia Tsamani, dentro de su ficha."
+    },
+    {
+      "id": "itomo_segundo_entierro",
+      "name": "El Itomo",
+      "kind": "fenomeno",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required — es el segundo entierro, materia funeraria, y el canon lo menciona solo como información de Baquero que «no permite afirmar que el canto sea una explicación completa del rito ni que todas las comunidades lo practiquen igual».",
+      "sheets": 0,
+      "note": "Verificado literalmente en el campo mito del relato 8."
+    },
+    {
+      "id": "danana_y_mana",
+      "name": "Danana y mana",
+      "kind": "planta",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "excluded",
+      "reason": "Son «los términos conservados por la versión bilingüe» para lo que comió la familia durante los años de danza; el canon no los traduce, no los describe y no los identifica. Dibujarlos sería inventar dos alimentos.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 8. Están además dentro de una disciplina alimentaria que el canto no explica."
+    },
+    {
+      "id": "nino_del_que_nace_la_yuca",
+      "name": "El niño del que nace la planta de yuca",
+      "kind": "personaje",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "excluded",
+      "reason": "La primera frase dice «Una planta de yuca nacida de un niño creció hasta convertirse en Kaliwirnae» y el relato no vuelve a mencionarlo, no lo nombra ni lo describe.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 6."
+    },
+    {
+      "id": "derribo_del_arbol_kaliwirnae",
+      "name": "El derribo del árbol y la dispersión de los alimentos",
+      "kind": "fenomeno",
+      "myths": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "decision": "excluded",
+      "reason": "La narradora Carmen Rojas Amaya «advierte que la historia es larga y que solo cuenta hasta allí», y el canon dice que «otras fuentes describen el derribo del árbol, la dispersión de alimentos y consecuencias territoriales, pero esas escenas no se insertan como si hubieran sido pronunciadas en este registro».",
+      "sheets": 0,
+      "note": "Verificado literalmente en mito y versiones del relato 6. Es la exclusión más fácil de violar: la escena del árbol cayendo es la imagen más atractiva del ciclo y NO existe en esta página."
+    },
+    {
+      "id": "seres_del_monte",
+      "name": "Los seres del monte",
+      "kind": "criatura",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "excluded",
+      "reason": "Se llevan a la hermana en una sola frase; el relato no les da cuerpo, número ni nombre y dibujarlos sería inventarlos.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 5."
+    },
+    {
+      "id": "voz_de_la_madre_muerta",
+      "name": "La voz de la madre muerta",
+      "kind": "fenomeno",
+      "myths": [
+        "historia-de-un-viejo"
+      ],
+      "decision": "excluded",
+      "reason": "Los niños «escucharon la voz de su madre muerta, que los orientó hacia un pajuil»: es únicamente una voz y el relato no le da cuerpo, aparición ni forma.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 5."
+    },
+    {
+      "id": "animales_que_intentaron_la_union",
+      "name": "Los animales que lo intentaron antes del kinkajú",
+      "kind": "colectivo",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "excluded",
+      "reason": "«Diferentes animales intentaron relacionarse con ella y no lo lograron»: el relato no los nombra, no los cuenta y no los describe.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 1."
+    },
+    {
+      "id": "territorio_de_los_kawiri_monae",
+      "name": "El territorio de los Kawiri Monae",
+      "kind": "lugar",
+      "myths": [
+        "kawiri-monae"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra como el lugar donde la mujer «vivió en su territorio» comiendo bachacos, pero el relato no lo describe en ningún rasgo.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 7. Dibujarlo obligaría además a decidir la ontología de los Kawiri Monae, que el canon deja expresamente abierta."
+    },
+    {
+      "id": "mundo_de_abajo",
+      "name": "El mundo debajo de la tierra",
+      "kind": "lugar",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "excluded",
+      "reason": "El relato dice que el padre lleva al hijo «consigo debajo de la tierra» y que, si la mujer lo hubiera acompañado, «las personas vivirían debajo», pero no describe ese ámbito en absoluto.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 10. Es el cierre explicativo del cuento y aun así no tiene una sola línea visual."
+    },
+    {
+      "id": "estado_enfermo_de_la_mujer_del_ainawi",
+      "name": "La mujer con sarna",
+      "kind": "personaje",
+      "myths": [
+        "la-mujer-sarnosa"
+      ],
+      "decision": "excluded",
+      "reason": "PROPUESTA EDITORIAL, NO REGLA DOCUMENTADA: el canon no prohíbe la imagen; lo que sí declara es que el título histórico «describe una enfermedad y puede sonar despectivo fuera del relato» y por eso cambia el título público a «La mujer y el áinawi». Se propone no fijar el estado enfermo como ficha de identidad, porque la convertiría en su rasgo permanente. La decisión es del editor.",
+      "sheets": 0,
+      "note": "Declarado como propuesta para que nadie lo lea como una cita del canon. Si el editor la aprueba como estado, es +1 ficha."
+    },
+    {
+      "id": "canoa_kanoa_y_la_comida_para_los_ninos_muertos",
+      "name": "La canoa, Kanoá y la comida para los niños muertos",
+      "kind": "objeto",
+      "myths": [
+        "la-comida-para-los-muertos"
+      ],
+      "decision": "excluded",
+      "reason": "El canon dice que «el registro no describe una canoa que recorre un río para llevar comida a niños muertos. Tampoco presenta a un personaje llamado Kanoá ni una receta funeraria. Esos elementos formaban la página heredada, pero no tenían respaldo entre las fuentes localizadas».",
+      "sheets": 0,
+      "note": "Verificado literalmente. Se deja en el censo para impedir que vuelva a entrar por el título del slug, que sigue siendo «la-comida-para-los-muertos»."
+    },
+    {
+      "id": "diluvio_arca_yoe_y_yuca_heredados",
+      "name": "El diluvio, el arca, Yoe y la yuca entregada",
+      "kind": "objeto",
+      "myths": [
+        "el-creador-del-cosmos"
+      ],
+      "decision": "excluded",
+      "reason": "El canon dice que «la página heredada mezclaba a Furnaminali con un diluvio, un arca, un personaje llamado Yoe y una yuca entregada después de la inundación. Esa secuencia no aparece en la fuente revisada y se retira».",
+      "sheets": 0,
+      "note": "Verificado literalmente en el campo mito del relato 1 y en universe.mjs («mezcla bíblica sin respaldo»)."
+    },
+    {
+      "id": "expansiones_heredadas_de_kawiri_monae_y_la_mujer_sarnosa",
+      "name": "La guerra entre pueblos, las almas que comen emociones y las ceremonias de sanación heredadas",
+      "kind": "fenomeno",
+      "myths": [
+        "kawiri-monae",
+        "la-mujer-sarnosa"
+      ],
+      "decision": "excluded",
+      "reason": "El canon retira expresamente ambas expansiones: «La fuente no desarrolla una guerra entre pueblos ni describe a los Kawiri Monae como almas que comen emociones» y «La versión heredada había añadido ceremonias de sanación, consejos comunitarios y un romance idealizado. Aquí se retiran».",
+      "sheets": 0,
+      "note": "Verificado literalmente en los campos mito de los relatos 7 y 10. Son las imágenes que un ilustrador reconstruiría por inercia si solo leyera los títulos."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_camino_y_engano",
+      "kind": "objeto",
+      "covers": [
+        "granos_de_maiz",
+        "platano_frito",
+        "palo_de_los_hermanos",
+        "tizones_encendidos",
+        "lancetas_de_intercambio"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores de camino, engaño e intercambio de los relatos 4, 5 y 6."
+    },
+    {
+      "id": "hoja_utileria_cuidado_y_curacion",
+      "kind": "objeto",
+      "covers": [
+        "jabon",
+        "vestido_de_la_mujer",
+        "perfume",
+        "peine",
+        "savia_que_devuelve_la_vista"
+      ],
+      "sheets": 1,
+      "note": "Los cuatro objetos con que el áinawi permite que la mujer se cure, más la savia que devuelve la vista a los hermanos. ADVERTENCIA: ninguno se describe en detalle en el canon; la hoja los fija como objetos genéricos y nunca como un ejemplar real de vestido o tejido Sikuani."
+    }
+  ],
+  "totals": {
+    "entities": 102,
+    "required": 46,
+    "embedded": 41,
+    "excluded": 15,
+    "sheets": 58
+  }
+}

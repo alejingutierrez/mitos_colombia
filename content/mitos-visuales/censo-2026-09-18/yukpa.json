@@ -1,0 +1,237 @@
+{
+  "id": "yukpa",
+  "label": "Yukpa",
+  "pages": 2,
+  "canon_pages": 2,
+  "read_note": "Leí los dos mitos del canon congelado (La Piedra que Flota / Los Dos Caminos del Cielo) con sus cuatro campos, y después editorial/yukpa/{universe,definitions,sources}.mjs. La sorpresa es grave y condiciona todo el censo: el canon congelado y el módulo NO cuentan el mismo relato. El módulo (commit «prepara corpus editorial Yukpa», aún sin aplicar a la base) reescribe por completo los dos slugs y declara inventadas la piedra flotante, la pareja encerrada, el venado guía, los animales que empujan la piedra y el abuelo/tomaira narrador; en su lugar publica el diluvio comparado (lluvia y oscuridad prolongadas, cumbres Shkhimo y Tütarhi, armadillos que retiran el agua) y unos dos Soles sin fogón ni danza. Censé el texto del módulo, porque es el que se va a publicar e ilustrar, y dejé las entidades retiradas como excluded para que quede constancia: censar el canon habría producido nueve fichas para una ficción ya retirada. Segundo hallazgo: el módulo declara cinco slugs canónicos (los dos heredados más Aponto y el árbol Manurhacha, los gemelos Yirhwach y Mé el dueño del maíz). Yukpa no es un corpus de dos relatos sino de cinco; este censo cubre sólo los dos congelados y la biblia crecerá bastante (Aponto, Sakurharhsh, Manurhacha, Note, Motorsh, Sakucha, jaguares, Mé, Mésh, Atántocha, la ardilla, el maíz cariaco). Quedó dudoso el estatuto del pozo de brasas: el módulo lo reduce a «un lugar lleno de brasas» y la escena aprobada a «un círculo de brasas estilizadas»; lo ficho como lugar, pero podría absorberse en la lámina del Perijá si el guion no lo usa como escenario propio. También quedó dudoso si Shkhimo y Tütarhi necesitan lámina aparte del paisaje del Perijá; las conservo porque la composición aprobada del diluvio es exactamente esas dos cumbres sobre el agua. Ninguna hoja de utilería: la corrección dejó el corpus sin objetos (la totuma con brasa y la semilla envuelta en hoja eran del texto inventado).",
+  "entities": [
+    {
+      "id": "soles_hermanos",
+      "name": "Los dos Soles hermanos (uno se vuelve Luna)",
+      "kind": "deidad_fuerza",
+      "myths": ["los-dos-caminos-del-cielo"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["luna"],
+      "note": "Conducen la acción y son el sujeto del relato. Dos hermanos idénticos resueltos en una identidad; el paso a Luna está mostrado («salió de las brasas», «ascendió convertido en Luna») y cambia silueta y temperatura de luz, así que cuesta una hoja de estado."
+    },
+    {
+      "id": "kopeco",
+      "name": "Kopeco",
+      "kind": "personaje",
+      "myths": ["los-dos-caminos-del-cielo"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["rana"],
+      "note": "Prepara el engaño y desencadena todo. La transformación en rana está mostrada («la arroja al agua… allí queda convertida en rana») y cambia la silueta por completo."
+    },
+    {
+      "id": "pozo_de_brasas",
+      "name": "El lugar de brasas",
+      "kind": "lugar",
+      "myths": ["los-dos-caminos-del-cielo"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto decisivo: el Sol cae ahí y sale cambiado. No es intercambiable con el paisaje del Perijá ni con una fogata genérica."
+    },
+    {
+      "id": "serrania_del_perija",
+      "name": "Serranía del Perijá (nacederos, quebradas, monte del Cesar)",
+      "kind": "paisaje",
+      "myths": ["los-dos-caminos-del-cielo", "la-piedra-que-flota"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Modelo de entorno único de los dos relatos: las montañas recalentadas del primero y los valles anegados del segundo son el mismo mundo."
+    },
+    {
+      "id": "cumbres_shkhimo_y_tutarhi",
+      "name": "Cumbres Shkhimo y Tütarhi",
+      "kind": "lugar",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Refugio nombrado del diluvio y escenario del acto de sobrevivir. El modelo de entorno del Perijá no entrega dos cumbres verdes emergiendo sobre un mar de agua."
+    },
+    {
+      "id": "nacimiento_de_la_noche",
+      "name": "Nacimiento de la noche y alternancia día/noche",
+      "kind": "fenomeno",
+      "myths": ["los-dos-caminos-del-cielo"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es aquello por lo que se cuenta el relato. La regla fija cómo lee el cielo antes (claridad continua, sin sombra) y después (dos astros separados, pausa), y evita que el ilustrador dibuje una noche cualquiera."
+    },
+    {
+      "id": "diluvio_y_oscuridad_prolongada",
+      "name": "Diluvio: lluvia y oscuridad prolongadas",
+      "kind": "fenomeno",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Objeto del relato. La regla debe fijar semanas o meses de lluvia con oscuridad, no una tormenta; el texto insiste en que es una de-creación parcial, no un borrón total."
+    },
+    {
+      "id": "armadillos",
+      "name": "Armadillos que retiran las aguas",
+      "kind": "animal",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conducen la acción del desenlace: cavan, beben o conducen el exceso hacia abajo hasta que reaparece la tierra habitable. Una identidad de especie repetida basta; no necesita gramática de grupo."
+    },
+    {
+      "id": "gente_yukpa",
+      "name": "Gente Yukpa (sobrevivientes y comunidad del Perijá)",
+      "kind": "colectivo",
+      "myths": ["los-dos-caminos-del-cielo", "la-piedra-que-flota"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los que atienden la advertencia, suben, esperan y reconstruyen. Es la gramática de grupo que fija cuerpos y vestuario para toda masa humana del corpus; sin ella cada keyframe inventa un traje."
+    },
+    {
+      "id": "vivienda_yukpa",
+      "name": "Vivienda y parcela Yukpa",
+      "kind": "arquitectura",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El agua «cubrió lugares habitados» y borra «las separaciones entre monte, cultivo y vivienda»: lo que se destruye y se rehace tiene que existir como modelo o el diluvio se ilustra sobre un paisaje vacío."
+    },
+    {
+      "id": "luna",
+      "name": "Luna",
+      "kind": "deidad_fuerza",
+      "myths": ["los-dos-caminos-del-cielo"],
+      "decision": "embedded",
+      "covered_by": "soles_hermanos",
+      "sheets": 0,
+      "note": "No es otro ser: es el estado del hermano solar que pasó por las brasas. Se resuelve en la hoja de estado de esa ficha."
+    },
+    {
+      "id": "rana_de_kopeco",
+      "name": "Rana",
+      "kind": "animal",
+      "myths": ["los-dos-caminos-del-cielo"],
+      "decision": "embedded",
+      "covered_by": "kopeco",
+      "sheets": 0,
+      "note": "Es la forma final de Kopeco, no una especie aparte del relato."
+    },
+    {
+      "id": "agua_donde_cae_kopeco",
+      "name": "Agua donde cae Kopeco (laguna o río de montaña)",
+      "kind": "lugar",
+      "myths": ["los-dos-caminos-del-cielo"],
+      "decision": "embedded",
+      "covered_by": "serrania_del_perija",
+      "sheets": 0,
+      "note": "El texto corregido sólo dice «la arroja al agua»; la escena aprobada la sitúa en una laguna. Es una variante del mismo modelo de entorno."
+    },
+    {
+      "id": "canales_excavados",
+      "name": "Canales por donde desciende el agua",
+      "kind": "lugar",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "embedded",
+      "covered_by": "armadillos",
+      "sheets": 0,
+      "note": "Los canales sólo existen como huella del trabajo de los armadillos; van en su ficha, no en una lámina de lugar."
+    },
+    {
+      "id": "parcelas_y_senderos_reaparecidos",
+      "name": "Parcelas, senderos y árboles que reaparecen",
+      "kind": "paisaje",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "embedded",
+      "covered_by": "serrania_del_perija",
+      "sheets": 0,
+      "note": "Es el estado «después del agua» del mismo modelo de entorno, no otro paisaje."
+    },
+    {
+      "id": "figura_que_advierte_el_diluvio",
+      "name": "Quien advierte el diluvio (montaña personificada, tuwancha o figura creadora)",
+      "kind": "deidad_fuerza",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "excluded",
+      "reason": "variante no resuelta y sin descripción visual: el texto ofrece tres posibilidades excluyentes y no describe ninguna; elegir una fijaría una variante como doctrina e inventaría su cuerpo",
+      "sheets": 0,
+      "note": "Detectada en la séptima pasada. Si el guion necesita la advertencia, debe resolverse sin cuerpo (señal, sueño, montaña sin rostro)."
+    },
+    {
+      "id": "piedra_flotante",
+      "name": "La piedra-nido que flota",
+      "kind": "objeto",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "excluded",
+      "reason": "invención editorial retirada: el propio expediente anterior la declaró creación nueva y el módulo la sustituye por el refugio en las cumbres",
+      "sheets": 0,
+      "note": "Está en el canon congelado, no en el corpus corregido. Ficharla sería producir arte para una ficción ya retirada."
+    },
+    {
+      "id": "venado_guia",
+      "name": "El venado que guía y golpea la piedra",
+      "kind": "animal",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "excluded",
+      "reason": "invención editorial retirada junto con la piedra flotante",
+      "sheets": 0,
+      "note": "Aparece dos veces en el texto congelado (mensajero y guía) y en ninguna de las fuentes Yukpa consultadas por el módulo."
+    },
+    {
+      "id": "pareja_sobreviviente_encerrada",
+      "name": "La pareja que se salva dentro de la piedra",
+      "kind": "personaje",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "excluded",
+      "reason": "invención editorial retirada: el corpus corregido salva grupos anónimos en las cumbres, no una pareja fundadora",
+      "sheets": 0,
+      "note": "Su función pasa a la ficha de colectivo «gente Yukpa»."
+    },
+    {
+      "id": "animales_que_empujan_la_piedra",
+      "name": "Armadillo, mico y pájaro carpintero empujando la piedra",
+      "kind": "colectivo",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "excluded",
+      "reason": "invención editorial retirada",
+      "sheets": 0,
+      "note": "Ojo con el armadillo: sobrevive en el corpus corregido, pero con otra función (retira el agua, no empuja una piedra). El mico y el pájaro carpintero desaparecen; el carpintero reaparece, documentado, en el ciclo de Aponto que el módulo añade."
+    },
+    {
+      "id": "tomaira_abuelo_narrador",
+      "name": "El tomaira que sueña el canto y el abuelo narrador junto al fogón",
+      "kind": "personaje",
+      "myths": ["la-piedra-que-flota", "los-dos-caminos-del-cielo"],
+      "decision": "excluded",
+      "reason": "invención editorial retirada: el módulo elimina el marco del abuelo narrador en los dos relatos y el canto amarrador del tomaira",
+      "sheets": 0,
+      "note": "El tomaira existe en la etnografía Yukpa, pero no en la secuencia documentada de estos dos relatos; fichar su cuerpo sería inventar un especialista ritual para ilustrar una escena retirada."
+    },
+    {
+      "id": "senales_y_utileria_heredadas",
+      "name": "Señales y utilería del texto heredado (piedra que suda, árbol de hojas al revés, totuma con brasa, semilla de maíz en hoja seca)",
+      "kind": "objeto",
+      "myths": ["la-piedra-que-flota"],
+      "decision": "excluded",
+      "reason": "invención editorial retirada: ninguno de estos objetos aparece en el corpus corregido",
+      "sheets": 0,
+      "note": "Agrupados en una sola entrada porque son la utilería completa del relato inventado. Con ellos fuera, el corpus Yukpa corregido se queda sin objetos y por eso no lleva hoja de utilería."
+    }
+  ],
+  "sheet_groups": [],
+  "totals": {
+    "entities": 22,
+    "required": 10,
+    "embedded": 5,
+    "excluded": 7,
+    "sheets": 12
+  }
+}

@@ -1,0 +1,1662 @@
+{
+  "id": "bogota-sabana-mestizo",
+  "label": "Bogotá y la sabana",
+  "era": "colonial y republicana, ciudad de La Candelaria",
+  "pages": 16,
+  "canon_pages": 0,
+  "read_note": "Leí los 16 cuerpos completos de editorial/bogota-mestizo-memoria/definitions.mjs (8) y editorial/bogota-mestizo-nocturno/definitions.mjs (8): secciones Mito, Historia, Versiones, Lección, Similitudes y las dos escenas de imagen de cada página. Ninguna de las 16 páginas tiene campo `mito` publicado: el relato vive en el cuerpo, así que ninguna habilita guion ni video, pero las 16 aportan entidades. Tres sorpresas. (1) El corpus no es una época sino cinco siglos: 1592 no aparece aquí pero sí 1828, 1851, 1884-1951 (tranvía), 1924, 1948 ficticio, 1985 y los años noventa; por eso la calle y la multitud necesitan dos estados (empedrada colonial / traza con rieles y automóviles) y no uno. (2) La iconografía que se esperaba del expediente bogotano casi no aparece: no hay chircales, ni río San Francisco, ni sereno, y —pese a las dos monjas— ningún relato entra a un convento ni a una iglesia; el único edificio religioso es el santuario de Monserrate. La ruana y el sombrero sólo se deducen del colectivo. (3) Seis de las dieciséis páginas son ficción firmada moderna (2004 y 2008) que la revisión declara imaginaria: la Bruja del Tranvía, la Monja de las Rosas, los Esqueletos Caminantes y parte de la Mula Herrada; eso no les quita entidades, pero sí explica por qué varias figuras carecen de descripción física. Material muisca explícito: dos relatos lo traen y los dos lo retiran —Monserrate («dioses muiscas caminando en silencio») y el Venado de Oro (Zipa, chamán y venado vivo)—; quedan como excluded y no se le presta nada a la biblia muisca existente, que es de esta misma sabana. Quedó dudoso: si la hermana de Antonín, Inés Domínguez y la guía de La Candelaria deberían tener ficha propia (conducen acción pero el relato no les da un solo rasgo físico ni las pone en los keyframes); las embebí en colectivos y lo declaro. También quedó dudoso el camión de ganado, que embebí en la calle del siglo XX. Las menciones que sólo viven en «Similitudes» (Chorro de Quevedo, Divino Niño, Dama de Blanco, Fausto, Minotauro) se tratan como excluded por comparación.",
+  "entities": [
+    {
+      "id": "antonin",
+      "name": "Antonín, el comandante de circulación",
+      "kind": "personaje",
+      "myths": [
+        "el-bobo-del-tranvia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Protagonista con el vestuario más descrito del corpus (gorra roja, camisa verde, cinturón negro, pantalón amarillo, botas azules) y acción propia: detiene el tránsito y corre junto al vagón."
+    },
+    {
+      "id": "eduardo_arias",
+      "name": "Eduardo Arias Jiménez, el orador de calle",
+      "kind": "personaje",
+      "myths": [
+        "el-loco-arias"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "orador de calle con libro cerrado",
+        "representación de Merlín con manto y sombrero"
+      ],
+      "panregional": false,
+      "note": "El relato escenifica el cambio de traje (cambia el sombrero y el manto junto a la totuma de chicha) y la silueta cambia con él: es el único caso del corpus donde el disfraz es la acción."
+    },
+    {
+      "id": "margarita_villaquira",
+      "name": "Margarita Villaquirá",
+      "kind": "personaje",
+      "myths": [
+        "la-loca-margarita"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "vestido rojo en la calle",
+        "hábito gris en el patio del asilo"
+      ],
+      "panregional": false,
+      "note": "Las dos escenas de la página montan los dos estados y el cambio de prenda es el eje del relato: en la calle deja el vestido rojo y adentro recibe el hábito gris."
+    },
+    {
+      "id": "jose_raimundo_russi",
+      "name": "José Raimundo Russi",
+      "kind": "personaje",
+      "myths": [
+        "el-enigmatico-abogado",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "abogado que se defiende ante el tribunal",
+        "aparición nocturna en La Candelaria"
+      ],
+      "panregional": false,
+      "note": "Reaparece en dos relatos. El estado espectral no cuesta ficha: la propia página pide «silueta sobria, sin cadenas ni horror», es decir el mismo cuerpo."
+    },
+    {
+      "id": "florentino",
+      "name": "Florentino, el constructor del puente",
+      "kind": "personaje",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce todo: firma el pacto, esconde al sacerdote y pide la absolución en el último minuto."
+    },
+    {
+      "id": "manuelito_llanos",
+      "name": "Manuelito Llanos",
+      "kind": "personaje",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Descrito con precisión (joven, vestido de blanco, pañuelo rojo al cuello) y su ropa es la prueba que lo incrimina: la ficha es el relato."
+    },
+    {
+      "id": "juan_miguel_acevedo",
+      "name": "Juan Miguel Acevedo",
+      "kind": "personaje",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La revisión lo declara el Hombre del Farol del título; porta el farol en la portada y su declaración libera a Manuelito. No se funde con él: el relato existe porque son dos."
+    },
+    {
+      "id": "diego_barreto",
+      "name": "Diego Barreto",
+      "kind": "personaje",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Protagonista de las dos escenas: descubre la pieza y marca la entrada con la espada."
+    },
+    {
+      "id": "ezequiel",
+      "name": "Ezequiel, el autor de la carta",
+      "kind": "personaje",
+      "myths": [
+        "la-bruja-del-tranvia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Sube al tranvía y desaparece con él; está en las dos escenas. Es personaje ficticio declarado, no testigo."
+    },
+    {
+      "id": "nina_de_la_quinta",
+      "name": "La niña de la Quinta",
+      "kind": "personaje",
+      "myths": [
+        "la-monja-de-las-rosas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Es quien ve, persigue y encuentra el ramo; ocupa las dos escenas. El relato no le da nombre pero sí toda la acción."
+    },
+    {
+      "id": "el_taxista",
+      "name": "El taxista",
+      "kind": "personaje",
+      "myths": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce, espera, entra a la funeraria y reconoce el rostro: sin él no hay relato, y está en las dos escenas."
+    },
+    {
+      "id": "alvaro_sanchez",
+      "name": "Don Álvaro Sánchez",
+      "kind": "personaje",
+      "myths": [
+        "la-mula-herrada"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Jugador nombrado de Las Nieves; desmonta en la portada y su ausencia es lo que la mula sigue buscando."
+    },
+    {
+      "id": "el_diablo",
+      "name": "El Diablo (Satanás)",
+      "kind": "criatura",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "PANREGIONAL: el pacto diabólico recorre varios corpus del censo. Lo sabanero de esta versión: no negocia en una encrucijada ni con un arriero, sino con un contratista de obra pública; organiza una cuadrilla de obreros infernales sobre el río Bogotá, recita una copla y al perder lanza una coz que deja huella de pata en un sillar. Es diablo de ingeniería, no de monte."
+    },
+    {
+      "id": "la_casaca_verde",
+      "name": "La Casaca Verde",
+      "kind": "criatura",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Única aparición del barrio con cuerpo descrito: peluca, chaqueta verde y pantalón hasta las rodillas. El color es lo que permite reconocerla al pasar de una casa a otra; la identificación con un virrey se declara anacrónica y no se dibuja."
+    },
+    {
+      "id": "mujer_de_negro_quinta",
+      "name": "La mujer de negro de la Quinta («la Monja de las Rosas»)",
+      "kind": "criatura",
+      "myths": [
+        "la-monja-de-las-rosas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Aparición con cuerpo declarado: vestido negro de otro tiempo. La revisión prohíbe el hábito blanco y la biografía conventual, así que la ficha es una mujer de negro, no una monja."
+    },
+    {
+      "id": "monja_pasajera",
+      "name": "La monja pasajera",
+      "kind": "criatura",
+      "myths": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "pasajera en el asiento trasero"
+      ],
+      "panregional": false,
+      "note": "Cuerpo distinto de la anterior: hábito religioso completo, años noventa. No se ficha el cadáver: la escena vertical elige el retrato junto al ataúd y no el cuerpo, así que no hay cambio de silueta que cobrar."
+    },
+    {
+      "id": "bruja_del_tranvia",
+      "name": "La Bruja del Tranvía",
+      "kind": "criatura",
+      "myths": [
+        "la-bruja-del-tranvia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El relato le niega escoba, caldero y transformación animal: es una mujer sentada bajo una lámpara cuyo poder es atraer. No la marco panregional aunque «bruja» reaparezca en otros corpus (Clementina, en Caldas): comparten la palabra, no el cuerpo, y la propia página separa a la Bruja del Cortijo."
+    },
+    {
+      "id": "esqueletos_caminantes",
+      "name": "Los dos esqueletos caminantes",
+      "kind": "criatura",
+      "myths": [
+        "los-esqueletos-caminantes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Una sola ficha para los dos: el cuento insiste en que «a simple vista parecen iguales» y esa igualdad es su tesis. Sin ropa, sin dinero, sin señales de oficio."
+    },
+    {
+      "id": "senor_caido",
+      "name": "El Señor Caído de Monserrate",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "talla bajo el peso de la cruz"
+      ],
+      "panregional": false,
+      "note": "Talla devocional con voluntad atribuida: se hace pesada para no bajar del cerro. El cabello que crece no cambia la silueta y no cuesta ficha extra."
+    },
+    {
+      "id": "diablillos",
+      "name": "Cuadrilla de diablos y diablillos",
+      "kind": "colectivo",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Actúan como cuerpo propio: forman la fila que pasa las piedras y caen al río con la bendición. No son variantes de Satanás, son obreros de otra escala."
+    },
+    {
+      "id": "colectivo_vecinos_artesanos_santafe",
+      "name": "Vecinos, artesanos y transeúntes de Santafé (siglos XVIII y XIX)",
+      "kind": "colectivo",
+      "myths": [
+        "el-loco-arias",
+        "el-mono-de-la-pila",
+        "el-enigmatico-abogado",
+        "los-fantasmas-de-la-candelaria",
+        "la-leyenda-del-santuario-de-monserrate",
+        "el-venado-de-oro",
+        "el-hombre-del-farol",
+        "la-mula-herrada"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "AQUÍ ESTÁ EL AHORRO GRANDE: ocho relatos pedían gente de época y es una sola hoja (ruana, sombrero, faldas largas, delantal de taller). Cubre público, artesanos, peregrinos con vela, cargadores del anda, conjurados de 1828, aguadores y padres de familia."
+    },
+    {
+      "id": "colectivo_transeuntes_siglo_xx",
+      "name": "Transeúntes bogotanos del siglo XX",
+      "kind": "colectivo",
+      "myths": [
+        "el-bobo-del-tranvia",
+        "la-bruja-del-tranvia",
+        "el-toro-en-el-ascensor",
+        "la-monja-de-las-rosas",
+        "la-monja-vidente-y-el-taxista",
+        "los-fantasmas-de-la-candelaria",
+        "la-loca-margarita"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Segunda hoja de multitud, inevitable: entre 1884 y los noventa la ropa no es la misma que la de Santafé. Cubre pasajeros, oficinistas, estudiantes, visitantes de museo, familia de velorio y la guía del recorrido nocturno."
+    },
+    {
+      "id": "colectivo_autoridades_funcionarios_clero",
+      "name": "Autoridades, funcionarios y clero de la ciudad",
+      "kind": "colectivo",
+      "myths": [
+        "la-loca-margarita",
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Una hoja para cuatro relatos: policías que ejecutan la orden de reclusión, funcionarios del tribunal, el que lee el decreto de libertad y el sacerdote que bendice el puente. Ninguno tiene rasgo individual descrito."
+    },
+    {
+      "id": "el_gallo",
+      "name": "El gallo del amanecer",
+      "kind": "animal",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Pequeño pero decisivo: su canto rompe el pacto antes de la última piedra. Es el que cobra, así que tiene ficha."
+    },
+    {
+      "id": "la_res_toro",
+      "name": "La res suelta (el toro)",
+      "kind": "animal",
+      "myths": [
+        "el-toro-en-el-ascensor"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce la acción: corre, entra al edificio y embiste. La revisión retira casta exacta y Minotauro, así que es una res asustada, no un monstruo."
+    },
+    {
+      "id": "mula_parda_herrada",
+      "name": "La Mula Herrada de Las Nieves",
+      "kind": "animal",
+      "myths": [
+        "la-mula-herrada"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "ensillada con jinete",
+        "ensillada y sin jinete"
+      ],
+      "panregional": false,
+      "note": "Mula parda ensillada y bien herrada; la montura vacía es la imagen final. NO la marco panregional: la página separa expresamente los homónimos de Honduras y México (hija castigada, fraile) y no los funde, así que aquí no hay figura nacional compartida sino una mula de barrio con jinete propio."
+    },
+    {
+      "id": "tranvia_bogotano",
+      "name": "El tranvía de Bogotá",
+      "kind": "objeto",
+      "myths": [
+        "el-bobo-del-tranvia",
+        "la-bruja-del-tranvia",
+        "el-toro-en-el-ascensor"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "tranvía de mulas y eléctrico",
+        "tranvía blanco nocturno"
+      ],
+      "panregional": false,
+      "note": "Tres relatos y una sola ficha. El tranvía blanco de Ezequiel es un cambio de color, no de silueta: no cuesta hoja."
+    },
+    {
+      "id": "el_farol",
+      "name": "El farol",
+      "kind": "objeto",
+      "myths": [
+        "el-hombre-del-farol",
+        "el-venado-de-oro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "encendido",
+        "apagado sobre la mesa"
+      ],
+      "panregional": false,
+      "note": "Objeto por el que se cuenta el relato del 25 de septiembre de 1828: la luz que identifica mal. Cubre también la lámpara pequeña con que Diego alumbra la gruta."
+    },
+    {
+      "id": "mono_de_la_pila",
+      "name": "El Mono de la Pila y su fuente",
+      "kind": "objeto",
+      "myths": [
+        "el-mono-de-la-pila"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "figura sobre la fuente ornamentada"
+      ],
+      "panregional": false,
+      "note": "Es el objeto por el que se cuenta el relato. Una sola ficha para figura y pila: son la misma pieza en el uso popular. Original y réplica de San Diego comparten silueta."
+    },
+    {
+      "id": "venado_de_oro",
+      "name": "El venado de oro",
+      "kind": "objeto",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "entero en la gruta",
+        "sin los cuernos"
+      ],
+      "panregional": false,
+      "note": "Pieza de tamaño natural, inmóvil. El relato insiste en que no corre, no habla y no guía: es tesoro, no animal. Los cuernos retirados son un estado del mismo objeto."
+    },
+    {
+      "id": "ramo_rosas_amarillas",
+      "name": "El ramo de rosas amarillas",
+      "kind": "objeto",
+      "myths": [
+        "la-monja-de-las-rosas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Es el objeto por el que se cuenta el relato y lo único que queda en el lugar de la desaparición; da el título a la página."
+    },
+    {
+      "id": "taxi_amarillo",
+      "name": "El taxi amarillo de los años noventa",
+      "kind": "objeto",
+      "myths": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario móvil del primer acto y motivo de la deuda que empuja al taxista adentro de la funeraria."
+    },
+    {
+      "id": "calle_bogotana",
+      "name": "La calle bogotana",
+      "kind": "arquitectura",
+      "myths": [
+        "el-bobo-del-tranvia",
+        "el-loco-arias",
+        "los-fantasmas-de-la-candelaria",
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "el-toro-en-el-ascensor",
+        "la-bruja-del-tranvia",
+        "la-mula-herrada",
+        "la-monja-vidente-y-el-taxista",
+        "la-loca-margarita"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "empedrada colonial y republicana, con balcones, faroles y placas antiguas",
+        "misma traza con rieles, automóviles, buses y camiones"
+      ],
+      "panregional": false,
+      "note": "Diez relatos, una entidad. Cobro dos hojas y no diez porque entre 1828 y 1994 cambia todo lo que se dibuja en la calzada, no porque cambie la calle. Cubre la Calle del Fantasma, Las Nieves, la calle comercial de Arias y la fachada del Palacio de San Carlos."
+    },
+    {
+      "id": "casa_colonial_zaguan_patio",
+      "name": "Casa colonial de zaguán, patio y balcón",
+      "kind": "arquitectura",
+      "myths": [
+        "los-fantasmas-de-la-candelaria",
+        "el-enigmatico-abogado",
+        "la-mula-herrada",
+        "la-loca-margarita"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Segunda gran deduplicación: el patio por donde cruza la Casaca Verde, el interior de la casa de juego de Las Nieves, el estrado del tribunal y el patio del asilo son el mismo tipo de interior; lo que cambia es el mobiliario, no la arquitectura."
+    },
+    {
+      "id": "plaza_mayor_santafe",
+      "name": "La Plaza Mayor (Plaza de Bolívar)",
+      "kind": "arquitectura",
+      "myths": [
+        "el-mono-de-la-pila",
+        "la-loca-margarita",
+        "el-enigmatico-abogado"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario de tres actos distintos —la fila del agua, la bandera de Margarita y la ejecución— y no es intercambiable con la calle: es plano abierto con fachadas de fondo."
+    },
+    {
+      "id": "cerro_y_santuario_monserrate",
+      "name": "Cerro y santuario de Monserrate",
+      "kind": "paisaje",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate",
+        "el-venado-de-oro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Pendiente, niebla, sendero y la ermita en la cima en una sola hoja. Cubre también la ladera de Guadalupe, que es el mismo cerro oriental visto desde el otro lado."
+    },
+    {
+      "id": "gruta_de_guadalupe",
+      "name": "La gruta del cerro de Guadalupe",
+      "kind": "lugar",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Interior de cueva con entrada marcada: escenario del hallazgo y de la muerte, y no se resuelve con el exterior del cerro."
+    },
+    {
+      "id": "puente_del_comun",
+      "name": "El Puente del Común",
+      "kind": "arquitectura",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "en obra, con un hueco por cerrar",
+        "terminado, con la huella marcada en un sillar"
+      ],
+      "panregional": false,
+      "note": "Cinco arcos de piedra sobre el río, en Chía: único escenario rural del bucket y el objeto de la apuesta. La piedra con la huella de pata es un detalle del mismo modelo, no otra ficha."
+    },
+    {
+      "id": "vestibulo_y_ascensor",
+      "name": "Vestíbulo de oficinas con ascensor antiguo",
+      "kind": "arquitectura",
+      "myths": [
+        "el-toro-en-el-ascensor"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Superficies lisas, pasillos y hojas metálicas que se abren: la frontera mecánica es el relato. Nada en el corpus colonial lo cubre."
+    },
+    {
+      "id": "quinta_de_bolivar",
+      "name": "La Quinta de Bolívar, casa y jardín",
+      "kind": "arquitectura",
+      "myths": [
+        "la-monja-de-las-rosas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Casa republicana de campo con jardín de árboles y senderos: el acto ocurre en el jardín, que ningún patio de La Candelaria reemplaza."
+    },
+    {
+      "id": "sala_funeraria_y_morgue",
+      "name": "Interior funerario moderno (sala de velación y morgue)",
+      "kind": "arquitectura",
+      "myths": [
+        "la-monja-vidente-y-el-taxista",
+        "los-esqueletos-caminantes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [
+        "sala de velación con ataúd y retrato",
+        "corredor y puertas de morgue"
+      ],
+      "panregional": false,
+      "note": "Dos relatos comparten el mismo interior institucional de la muerte; el cambio es de mobiliario. Las puertas sobrias que pide la escena de los esqueletos salen de aquí."
+    },
+    {
+      "id": "hermana_de_antonin",
+      "name": "La hermana de Antonín",
+      "kind": "personaje",
+      "myths": [
+        "el-bobo-del-tranvia"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_transeuntes_siglo_xx",
+      "sheets": 0,
+      "note": "Decisión difícil: dispara el desenlace al marcharse, pero el relato no le da un solo rasgo y en la escena aparece saludada «desde lejos». Joven pasajera genérica del colectivo."
+    },
+    {
+      "id": "pito_y_senales_pare_siga",
+      "name": "El pito y las señales de Pare y Siga",
+      "kind": "objeto",
+      "myths": [
+        "el-bobo-del-tranvia"
+      ],
+      "decision": "embedded",
+      "covered_by": "antonin",
+      "sheets": 0,
+      "note": "Atributos que Antonín lleva en las manos; son parte de su ficha como la ruana del arriero."
+    },
+    {
+      "id": "uniforme_multicolor_antonin",
+      "name": "El uniforme multicolor",
+      "kind": "objeto",
+      "myths": [
+        "el-bobo-del-tranvia"
+      ],
+      "decision": "embedded",
+      "covered_by": "antonin",
+      "sheets": 0,
+      "note": "Gorra roja, camisa verde, cinturón negro, pantalón amarillo, botas azules: es la ficha de Antonín, no una hoja aparte."
+    },
+    {
+      "id": "rieles_del_tranvia",
+      "name": "Los rieles",
+      "kind": "objeto",
+      "myths": [
+        "el-bobo-del-tranvia",
+        "la-bruja-del-tranvia"
+      ],
+      "decision": "embedded",
+      "covered_by": "calle_bogotana",
+      "sheets": 0,
+      "note": "Parte de la calzada en su estado del siglo XX."
+    },
+    {
+      "id": "estudiantes_que_lo_nombran",
+      "name": "Los estudiantes que lo nombran comandante",
+      "kind": "colectivo",
+      "myths": [
+        "el-bobo-del-tranvia"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_transeuntes_siglo_xx",
+      "sheets": 0,
+      "note": "Actúan una vez y sin descripción; miembros genéricos del colectivo ya fichado."
+    },
+    {
+      "id": "publico_oyentes_arias",
+      "name": "El público que se detiene a oír a Arias",
+      "kind": "colectivo",
+      "myths": [
+        "el-loco-arias"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Curiosos de esquina; ningún rasgo propio."
+    },
+    {
+      "id": "tienda_y_esquina_comercial",
+      "name": "La tienda y la esquina comercial",
+      "kind": "arquitectura",
+      "myths": [
+        "el-loco-arias"
+      ],
+      "decision": "embedded",
+      "covered_by": "calle_bogotana",
+      "sheets": 0,
+      "note": "La página dice «una esquina, una tienda o una plaza bastaban»: es la calle ya fichada."
+    },
+    {
+      "id": "fuente_pila_publica",
+      "name": "La pila pública",
+      "kind": "arquitectura",
+      "myths": [
+        "el-mono-de-la-pila"
+      ],
+      "decision": "embedded",
+      "covered_by": "mono_de_la_pila",
+      "sheets": 0,
+      "note": "La figura y su taza son una sola pieza; separarlas duplicaría el mismo modelo."
+    },
+    {
+      "id": "replica_de_san_diego",
+      "name": "La réplica de San Diego",
+      "kind": "objeto",
+      "myths": [
+        "el-mono-de-la-pila"
+      ],
+      "decision": "embedded",
+      "covered_by": "mono_de_la_pila",
+      "sheets": 0,
+      "note": "Variante material del mismo objeto: devuelve la silueta conocida, no otra."
+    },
+    {
+      "id": "joven_aguador",
+      "name": "El joven que carga el cántaro",
+      "kind": "personaje",
+      "myths": [
+        "el-mono-de-la-pila"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Rol sin nombre ni rasgos: uno de los hijos enviados por agua."
+    },
+    {
+      "id": "petalo_de_rosa",
+      "name": "El pétalo de rosa guardado en la manga",
+      "kind": "objeto",
+      "myths": [
+        "la-loca-margarita"
+      ],
+      "decision": "embedded",
+      "covered_by": "margarita_villaquira",
+      "sheets": 0,
+      "note": "Va en la mano dentro del estado de hábito gris; sacarlo a hoja propia sería fichar un gesto."
+    },
+    {
+      "id": "patio_del_asilo_de_locas",
+      "name": "El patio del Asilo de Locas",
+      "kind": "arquitectura",
+      "myths": [
+        "la-loca-margarita"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_colonial_zaguan_patio",
+      "sheets": 0,
+      "note": "Escenario del segundo acto, pero la propia escena pide un patio «sin barrotes ni caricatura»: es el patio colonial ya fichado con otro mobiliario."
+    },
+    {
+      "id": "periodista_de_1924",
+      "name": "El periodista que va a verla",
+      "kind": "personaje",
+      "myths": [
+        "la-loca-margarita"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_transeuntes_siglo_xx",
+      "sheets": 0,
+      "note": "Provoca la escena central pero no aparece en ninguna imagen ni recibe descripción."
+    },
+    {
+      "id": "manuel_ferro_herrero",
+      "name": "Manuel Ferro, el herrero",
+      "kind": "personaje",
+      "myths": [
+        "el-enigmatico-abogado"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Su acusación al morir arma el caso, pero el relato no lo pone en escena ni lo describe: herrero del colectivo artesano."
+    },
+    {
+      "id": "sala_del_tribunal",
+      "name": "La sala del tribunal",
+      "kind": "arquitectura",
+      "myths": [
+        "el-enigmatico-abogado"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_colonial_zaguan_patio",
+      "sheets": 0,
+      "note": "El estrado se resuelve con mobiliario dentro del interior colonial ya fichado."
+    },
+    {
+      "id": "artesanos_del_proceso",
+      "name": "Los artesanos que observan el juicio",
+      "kind": "colectivo",
+      "myths": [
+        "el-enigmatico-abogado"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Miembros del colectivo; la hoja debe incluir delantal y herramienta para que funcionen aquí."
+    },
+    {
+      "id": "calle_del_fantasma",
+      "name": "La Calle del Fantasma",
+      "kind": "lugar",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "embedded",
+      "covered_by": "calle_bogotana",
+      "sheets": 0,
+      "note": "Es una vía del mismo barrio: puertas cerradas, fachadas y una placa. La placa va en la hoja de utilería."
+    },
+    {
+      "id": "escultura_del_balcon",
+      "name": "La figura asomada al balcón",
+      "kind": "objeto",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_colonial_zaguan_patio",
+      "sheets": 0,
+      "note": "«La figura que un artista dejó asomada»: es un detalle del balcón de la casa fichada."
+    },
+    {
+      "id": "guia_del_recorrido_nocturno",
+      "name": "La guía del recorrido nocturno",
+      "kind": "personaje",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_transeuntes_siglo_xx",
+      "sheets": 0,
+      "note": "Decisión difícil: es la única humana viva del relato y hace todo el trabajo (camina, pregunta, reúne), pero no tiene un rasgo descrito y la escena la resuelve como «varias siluetas separadas»."
+    },
+    {
+      "id": "colectivo_peregrinos",
+      "name": "Los peregrinos que suben al cerro",
+      "kind": "colectivo",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Son los mismos vecinos con ruana y sombrero subiendo una pendiente; las velas y flores salen de la hoja de utilería."
+    },
+    {
+      "id": "cargadores_de_la_imagen",
+      "name": "Los cargadores de la imagen",
+      "kind": "colectivo",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Mismo colectivo en la acción de cargar; el anda y la talla vienen del Señor Caído."
+    },
+    {
+      "id": "novios_que_suben_juntos",
+      "name": "Los novios que suben juntos",
+      "kind": "colectivo",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Pertenecen a una creencia, no a una escena: pareja genérica del colectivo."
+    },
+    {
+      "id": "sacerdote_del_puente",
+      "name": "El sacerdote escondido",
+      "kind": "personaje",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_autoridades_funcionarios_clero",
+      "sheets": 0,
+      "note": "Ejecuta el acto decisivo (absuelve y bendice) pero no tiene identidad: una sotana del colectivo basta."
+    },
+    {
+      "id": "piedra_con_la_huella",
+      "name": "La piedra con la huella de pata",
+      "kind": "objeto",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "embedded",
+      "covered_by": "puente_del_comun",
+      "sheets": 0,
+      "note": "Es un sillar del puente, declarado como estado del mismo modelo: primer plano, no pieza nueva."
+    },
+    {
+      "id": "rio_bogota_y_sabana",
+      "name": "El río Bogotá y la sabana",
+      "kind": "paisaje",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "embedded",
+      "covered_by": "puente_del_comun",
+      "sheets": 0,
+      "note": "El único paisaje de sabana del bucket sólo aparece bajo los arcos; va dentro de esa hoja."
+    },
+    {
+      "id": "palacio_de_san_carlos",
+      "name": "El Palacio de San Carlos",
+      "kind": "arquitectura",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "embedded",
+      "covered_by": "calle_bogotana",
+      "sheets": 0,
+      "note": "Aparece sólo como destino al fondo de la calle («avanzando hacia el Palacio»); se resuelve como fachada de la calle colonial."
+    },
+    {
+      "id": "conjurados_septembrinos",
+      "name": "Los conjurados del 25 de septiembre",
+      "kind": "colectivo",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Siluetas nocturnas sin descripción individual; el colectivo decimonónico más el farol resuelve la portada."
+    },
+    {
+      "id": "funcionario_del_decreto",
+      "name": "El funcionario que sostiene el decreto",
+      "kind": "personaje",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_autoridades_funcionarios_clero",
+      "sheets": 0,
+      "note": "Rol de una sola acción, sin rasgos."
+    },
+    {
+      "id": "hombre_del_ascensor",
+      "name": "El hombre que baja en el ascensor",
+      "kind": "personaje",
+      "myths": [
+        "el-toro-en-el-ascensor"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_transeuntes_siglo_xx",
+      "sheets": 0,
+      "note": "Es la víctima, pero la escena lo deja fuera a propósito («un vestíbulo vacío», «sin mostrar violencia») y no tiene un solo rasgo."
+    },
+    {
+      "id": "camion_de_ganado",
+      "name": "El camión de ganado",
+      "kind": "objeto",
+      "myths": [
+        "el-toro-en-el-ascensor"
+      ],
+      "decision": "embedded",
+      "covered_by": "calle_bogotana",
+      "sheets": 0,
+      "note": "Decisión dudosa: origina el suceso y está en la portada, pero funciona como tráfico detenido del estado siglo XX de la calle. Si el editor quiere el vuelco en primer plano, esto sube a ficha."
+    },
+    {
+      "id": "edificios_rivales",
+      "name": "Bachué, Lara, Tequendama y Colpatria",
+      "kind": "arquitectura",
+      "myths": [
+        "el-toro-en-el-ascensor"
+      ],
+      "decision": "embedded",
+      "covered_by": "vestibulo_y_ascensor",
+      "sheets": 0,
+      "note": "Ubicaciones rivales del mismo suceso; la página mantiene el mapa inestable a propósito, así que es un solo vestíbulo sin dirección."
+    },
+    {
+      "id": "ines_dominguez",
+      "name": "Inés Domínguez",
+      "kind": "personaje",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Decisión difícil: es la mitad del relato y su espera lo cierra, pero no tiene ni un rasgo descrito y no está en ninguna de las dos escenas."
+    },
+    {
+      "id": "pedro_dominguez",
+      "name": "Pedro Domínguez, el padre",
+      "kind": "personaje",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Niega y luego acepta la unión; sin descripción ni escena."
+    },
+    {
+      "id": "cuernos_de_oro",
+      "name": "Los cuernos de oro",
+      "kind": "objeto",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "embedded",
+      "covered_by": "venado_de_oro",
+      "sheets": 0,
+      "note": "Piezas desprendidas de la misma escultura; van como estado del venado."
+    },
+    {
+      "id": "tranvia_blanco",
+      "name": "El tranvía blanco",
+      "kind": "objeto",
+      "myths": [
+        "la-bruja-del-tranvia"
+      ],
+      "decision": "embedded",
+      "covered_by": "tranvia_bogotano",
+      "sheets": 0,
+      "note": "Variante de color del mismo vehículo: el relato dice que «el color lo distinguía», no la forma."
+    },
+    {
+      "id": "padre_de_la_nina",
+      "name": "El padre que acompaña a la niña",
+      "kind": "personaje",
+      "myths": [
+        "la-monja-de-las-rosas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_transeuntes_siglo_xx",
+      "sheets": 0,
+      "note": "Visitante adulto genérico: mira, no alcanza a ver y duda."
+    },
+    {
+      "id": "jardin_de_la_quinta",
+      "name": "El jardín de la Quinta",
+      "kind": "paisaje",
+      "myths": [
+        "la-monja-de-las-rosas"
+      ],
+      "decision": "embedded",
+      "covered_by": "quinta_de_bolivar",
+      "sheets": 0,
+      "note": "Es el escenario del acto y por eso la ficha de la Quinta debe resolverse desde el jardín, no desde la fachada."
+    },
+    {
+      "id": "ataud_y_retrato",
+      "name": "El ataúd y el retrato del velorio",
+      "kind": "objeto",
+      "myths": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "decision": "embedded",
+      "covered_by": "sala_funeraria_y_morgue",
+      "sheets": 0,
+      "note": "Mobiliario de la sala de velación ya fichada."
+    },
+    {
+      "id": "familia_del_velorio",
+      "name": "La familia que acompaña el velorio",
+      "kind": "colectivo",
+      "myths": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_transeuntes_siglo_xx",
+      "sheets": 0,
+      "note": "Dolientes sin rasgos; colectivo moderno."
+    },
+    {
+      "id": "juan_de_guevara",
+      "name": "Don Juan de Guevara",
+      "kind": "personaje",
+      "myths": [
+        "la-mula-herrada"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_vecinos_artesanos_santafe",
+      "sheets": 0,
+      "note": "Dueño de la casa de juego; nombrado, sin acción ni descripción."
+    },
+    {
+      "id": "casa_de_juego_las_nieves",
+      "name": "La casa de juego de Las Nieves",
+      "kind": "arquitectura",
+      "myths": [
+        "la-mula-herrada"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_colonial_zaguan_patio",
+      "sheets": 0,
+      "note": "Puerta y salón iluminado dentro del mismo tipo de casa; la mesa de apuestas es mobiliario."
+    },
+    {
+      "id": "barrio_las_nieves",
+      "name": "El barrio Las Nieves",
+      "kind": "lugar",
+      "myths": [
+        "la-mula-herrada"
+      ],
+      "decision": "embedded",
+      "covered_by": "calle_bogotana",
+      "sheets": 0,
+      "note": "Recorrido nocturno de cascos sobre piedra: la calle ya fichada."
+    },
+    {
+      "id": "herrajes_y_cascos",
+      "name": "Los herrajes y el sonido de los cascos",
+      "kind": "objeto",
+      "myths": [
+        "la-mula-herrada"
+      ],
+      "decision": "embedded",
+      "covered_by": "mula_parda_herrada",
+      "sheets": 0,
+      "note": "Rasgo del animal, y además la mitad es sonido."
+    },
+    {
+      "id": "morgue_de_bogota",
+      "name": "La morgue",
+      "kind": "arquitectura",
+      "myths": [
+        "los-esqueletos-caminantes"
+      ],
+      "decision": "embedded",
+      "covered_by": "sala_funeraria_y_morgue",
+      "sheets": 0,
+      "note": "Corredor y puertas sobrias: estado declarado del interior funerario."
+    },
+    {
+      "id": "cantaro_de_agua",
+      "name": "El cántaro de agua",
+      "kind": "objeto",
+      "myths": [
+        "el-mono-de-la-pila"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_calle_y_oficio",
+      "sheets": 0,
+      "note": "Objeto menor de uso repetido."
+    },
+    {
+      "id": "totuma_de_chicha",
+      "name": "La totuma de chicha",
+      "kind": "objeto",
+      "myths": [
+        "el-loco-arias"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_calle_y_oficio",
+      "sheets": 0,
+      "note": "Objeto menor; interrumpe el discurso y vuelve."
+    },
+    {
+      "id": "libro_cerrado_de_arias",
+      "name": "El libro cerrado",
+      "kind": "objeto",
+      "myths": [
+        "el-loco-arias"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_calle_y_oficio",
+      "sheets": 0,
+      "note": "Objeto menor que sostiene en la portada."
+    },
+    {
+      "id": "bandera_liberal",
+      "name": "La pequeña bandera liberal",
+      "kind": "objeto",
+      "myths": [
+        "la-loca-margarita"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_calle_y_oficio",
+      "sheets": 0,
+      "note": "Objeto menor de la escena de plaza."
+    },
+    {
+      "id": "placa_de_calle_antigua",
+      "name": "La placa de calle antigua",
+      "kind": "objeto",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_calle_y_oficio",
+      "sheets": 0,
+      "note": "Objeto menor: los nombres antiguos de las calles son el motor del relato, pero se dibujan como placa."
+    },
+    {
+      "id": "hojas_de_la_defensa",
+      "name": "Las hojas de la defensa",
+      "kind": "objeto",
+      "myths": [
+        "el-enigmatico-abogado"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_papeles_y_pruebas",
+      "sheets": 0,
+      "note": "Objeto menor que acompaña a la aparición."
+    },
+    {
+      "id": "decreto_de_libertad",
+      "name": "El decreto del 3 de noviembre",
+      "kind": "objeto",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_papeles_y_pruebas",
+      "sheets": 0,
+      "note": "Objeto menor sostenido por el funcionario."
+    },
+    {
+      "id": "carta_mecanografiada_y_expediente",
+      "name": "La carta mecanografiada y el expediente de 1948",
+      "kind": "objeto",
+      "myths": [
+        "la-bruja-del-tranvia"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_papeles_y_pruebas",
+      "sheets": 0,
+      "note": "Objetos menores y además ficticios declarados: el libro advierte que son documentos imaginarios."
+    },
+    {
+      "id": "craneo_en_vitrina",
+      "name": "El cráneo conservado como pieza de museo",
+      "kind": "objeto",
+      "myths": [
+        "el-enigmatico-abogado"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_papeles_y_pruebas",
+      "sheets": 0,
+      "note": "Objeto menor mencionado en el cierre del proceso."
+    },
+    {
+      "id": "velas_flores_y_exvotos",
+      "name": "Velas, flores y exvotos",
+      "kind": "objeto",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_devocion_y_tesoro",
+      "sheets": 0,
+      "note": "Objetos menores que los peregrinos llevan."
+    },
+    {
+      "id": "espada_de_diego",
+      "name": "La espada que marca la entrada",
+      "kind": "objeto",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_devocion_y_tesoro",
+      "sheets": 0,
+      "note": "Objeto menor con función de memoria: la marca que después no basta."
+    },
+    {
+      "id": "objetos_de_riqueza_y_trabajo",
+      "name": "Objetos de riqueza y de trabajo sin dueño",
+      "kind": "objeto",
+      "myths": [
+        "los-esqueletos-caminantes"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_devocion_y_tesoro",
+      "sheets": 0,
+      "note": "La escena los pide «a ambos lados y sin dueño»: utilería simbólica, no piezas identificables."
+    },
+    {
+      "id": "pretendiente_de_la_hermana",
+      "name": "El pretendiente",
+      "kind": "personaje",
+      "myths": [
+        "el-bobo-del-tranvia"
+      ],
+      "decision": "excluded",
+      "reason": "Se menciona en una frase («se marchó de la casa con un pretendiente») y nunca se ve; dibujarlo sería inventarlo.",
+      "sheets": 0,
+      "note": "Verificado en el cuerpo del relato: no vuelve a aparecer."
+    },
+    {
+      "id": "sibate",
+      "name": "Sibaté",
+      "kind": "lugar",
+      "myths": [
+        "el-bobo-del-tranvia"
+      ],
+      "decision": "excluded",
+      "reason": "Topónimo de destino sin una sola descripción de lugar.",
+      "sheets": 0,
+      "note": "«Lo llevaron a Sibaté. Allí siguió preguntando»: no hay edificio, paisaje ni interior."
+    },
+    {
+      "id": "museo_colonial",
+      "name": "El Museo Colonial",
+      "kind": "arquitectura",
+      "myths": [
+        "el-mono-de-la-pila"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra como destino final del original; ninguna escena ocurre dentro.",
+      "sheets": 0,
+      "note": "La transformación que el relato narra es de lenguaje, no de sala."
+    },
+    {
+      "id": "banda_del_molino_del_cubo",
+      "name": "La banda del Molino del Cubo",
+      "kind": "colectivo",
+      "myths": [
+        "el-enigmatico-abogado"
+      ],
+      "decision": "excluded",
+      "reason": "Existe como rumor («la ciudad hablaba de la banda»); ningún asalto se describe y ningún miembro se ve.",
+      "sheets": 0,
+      "note": "Ficharla obligaría a inventar una cuadrilla que el relato deja en la conversación pública."
+    },
+    {
+      "id": "baltazar",
+      "name": "Baltazar",
+      "kind": "criatura",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra en una lista de presencias; el relato dice que tiene escenas propias pero no cuenta ninguna.",
+      "sheets": 0,
+      "note": "Verificado: «También circulan Baltazar, la Lavandera y otras presencias» es toda la evidencia."
+    },
+    {
+      "id": "la_lavandera",
+      "name": "La Lavandera",
+      "kind": "criatura",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "excluded",
+      "reason": "Igual que Baltazar: nombre sin cuerpo, sin escena y con la advertencia expresa de no completarla con otras.",
+      "sheets": 0,
+      "note": "El oficio insinúa una imagen, pero el relato prohíbe usar unas presencias para completar otras."
+    },
+    {
+      "id": "aljibe",
+      "name": "El aljibe",
+      "kind": "arquitectura",
+      "myths": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "decision": "excluded",
+      "reason": "Aparece en una enumeración de lo que un fantasma ayuda a recordar; no hay escena ni ubicación.",
+      "sheets": 0,
+      "note": "«Recordar un aljibe, una injusticia, un vestido o una calle»."
+    },
+    {
+      "id": "harry_warner_equilibrista",
+      "name": "El equilibrista Harry Warner",
+      "kind": "personaje",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "excluded",
+      "reason": "La página lo retira del núcleo: pertenece a una narración institucional fabulosa sin corroboración.",
+      "sheets": 0,
+      "note": "Retirado explícitamente por la revisión."
+    },
+    {
+      "id": "volcan_bajo_monserrate",
+      "name": "El volcán oculto",
+      "kind": "fenomeno",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "excluded",
+      "reason": "Motivo moderno sin respaldo, retirado del núcleo por la propia página.",
+      "sheets": 0,
+      "note": "«La leyenda central no necesita un volcán oculto»."
+    },
+    {
+      "id": "presencias_muiscas_en_monserrate",
+      "name": "Los dioses muiscas que caminan en silencio",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "decision": "excluded",
+      "reason": "La página los retira por falta de corroboración; además pertenecen a otra biblia (muisca), que es de esta misma sabana.",
+      "sheets": 0,
+      "note": "MATERIAL MUISCA EXPLÍCITO en un relato urbano colonial: se declara y no se le presta iconografía. Éste es uno de los dos casos del bucket."
+    },
+    {
+      "id": "zipa_y_chaman_del_venado",
+      "name": "El Zipa y el chamán que transforman al venado",
+      "kind": "personaje",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "excluded",
+      "reason": "Añadido sin respaldo en la cadena consultada; la página lo retira expresamente.",
+      "sheets": 0,
+      "note": "MATERIAL MUISCA EXPLÍCITO, segundo caso: «no necesita que un Zipa ordene a un chamán transformar a un venado vivo». Queda fuera de esta biblia y no se toma de la muisca."
+    },
+    {
+      "id": "venado_vivo_que_guia_almas",
+      "name": "El venado vivo que guía almas",
+      "kind": "animal",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "excluded",
+      "reason": "Añadido retirado: el relato insiste en que la pieza es inmóvil y no corre, habla ni guía.",
+      "sheets": 0,
+      "note": "Es la diferencia que la página defiende frente a El Dorado."
+    },
+    {
+      "id": "casanare",
+      "name": "Casanare",
+      "kind": "lugar",
+      "myths": [
+        "el-venado-de-oro"
+      ],
+      "decision": "excluded",
+      "reason": "Destino nombrado de un viaje que el relato no narra ni describe.",
+      "sheets": 0,
+      "note": "Sólo marca el tiempo que pasa entre el hallazgo y el regreso."
+    },
+    {
+      "id": "agapito_labarces",
+      "name": "Agapito Labarcés",
+      "kind": "personaje",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "excluded",
+      "reason": "Nombrado como patrón dentro de la capa literaria no triangulada; no actúa en escena ni recibe descripción.",
+      "sheets": 0,
+      "note": "La propia página marca este nivel como elaboración literaria."
+    },
+    {
+      "id": "francisca",
+      "name": "Francisca",
+      "kind": "personaje",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "excluded",
+      "reason": "Sólo existe como afecto mencionado; ni escena, ni rasgo, ni acción.",
+      "sheets": 0,
+      "note": "Asimetría declarada frente a Inés Domínguez, que sí tiene acción (espera y matrimonio) aunque también quede embebida."
+    },
+    {
+      "id": "simon_bolivar",
+      "name": "Simón Bolívar",
+      "kind": "personaje",
+      "myths": [
+        "el-hombre-del-farol"
+      ],
+      "decision": "excluded",
+      "reason": "Es el objetivo del ataque pero ocurre fuera de cuadro; el relato no lo pone en escena.",
+      "sheets": 0,
+      "note": "La noche entra al Palacio; el relato se queda en la calle y en la cárcel."
+    },
+    {
+      "id": "domingo_esquiaqui",
+      "name": "Domingo Esquiaqui",
+      "kind": "personaje",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "excluded",
+      "reason": "Pertenece al expediente histórico citado dentro del relato; no tiene escena ni descripción física.",
+      "sheets": 0,
+      "note": "La desfusión editorial lo mantiene separado de Florentino justamente para no mezclar leyenda e ingeniería."
+    },
+    {
+      "id": "virrey_ezpeleta",
+      "name": "El virrey Ezpeleta",
+      "kind": "personaje",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "excluded",
+      "reason": "Mención de gobierno dentro del apunte histórico; nunca aparece.",
+      "sheets": 0,
+      "note": "Igual que Esquiaqui."
+    },
+    {
+      "id": "centinela_del_infierno",
+      "name": "El centinela que queda en el infierno",
+      "kind": "criatura",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "excluded",
+      "reason": "Se menciona que queda uno solo y jamás se ve ni se describe.",
+      "sheets": 0,
+      "note": "Su función es medir cuántos diablos bajaron, no ocupar el cuadro."
+    },
+    {
+      "id": "copla_del_diablo",
+      "name": "La copla del diablo",
+      "kind": "fenomeno",
+      "myths": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "decision": "excluded",
+      "reason": "Es habla; no tiene forma visual.",
+      "sheets": 0,
+      "note": "Pertenece a la narración, no al inventario."
+    },
+    {
+      "id": "minotauro_tigres_torero_cardenal",
+      "name": "Minotauro, tigres disfrazados, torero, cardenal y fotografías destruidas",
+      "kind": "criatura",
+      "myths": [
+        "el-toro-en-el-ascensor"
+      ],
+      "decision": "excluded",
+      "reason": "Expansiones sin respaldo que la revisión retira expresamente del relato.",
+      "sheets": 0,
+      "note": "La página conserva el núcleo periodístico y nada más."
+    },
+    {
+      "id": "bruja_del_cortijo",
+      "name": "La Bruja del Cortijo",
+      "kind": "criatura",
+      "myths": [
+        "la-bruja-del-tranvia"
+      ],
+      "decision": "excluded",
+      "reason": "Relato distinto, de otro territorio (Engativá), separado explícitamente por la página.",
+      "sheets": 0,
+      "note": "«Compartir la palabra bruja no convierte las dos historias en una sola mujer»."
+    },
+    {
+      "id": "tulua_variante",
+      "name": "La variante de Tuluá",
+      "kind": "lugar",
+      "myths": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "decision": "excluded",
+      "reason": "Es una circulación territorial de la misma escena; no aporta escenario propio descrito.",
+      "sheets": 0,
+      "note": "Conserva taxi, deuda, funeraria y reconocimiento: lo mismo que ya está fichado."
+    },
+    {
+      "id": "lote_retirado_monja_taxista",
+      "name": "Lotería, placas premiadas, escándalos y el taxista muerto",
+      "kind": "objeto",
+      "myths": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "decision": "excluded",
+      "reason": "Expansiones retiradas por la revisión para no superponer varias historias.",
+      "sheets": 0,
+      "note": "Verificado en «Versiones»."
+    },
+    {
+      "id": "raul_romero_y_homonimos",
+      "name": "Raúl Romero, la hija hondureña y el fraile mexicano",
+      "kind": "personaje",
+      "myths": [
+        "la-mula-herrada"
+      ],
+      "decision": "excluded",
+      "reason": "Testimonio ficticio de 2004 y homónimos extranjeros que la página se niega a fundir con Las Nieves.",
+      "sheets": 0,
+      "note": "Es la razón por la que esta mula no se marca panregional."
+    },
+    {
+      "id": "empleados_de_la_morgue",
+      "name": "Quienes trabajan en la morgue",
+      "kind": "colectivo",
+      "myths": [
+        "los-esqueletos-caminantes"
+      ],
+      "decision": "excluded",
+      "reason": "Sólo existen como voces que cesan; el cuento dice expresamente que ningún empleado presencia el recorrido.",
+      "sheets": 0,
+      "note": "Verificado: «ningún empleado presencia el recorrido»."
+    },
+    {
+      "id": "comparaciones_externas_bogota",
+      "name": "Menciones comparativas (Chorro de Quevedo, Divino Niño, Dama de Blanco, Fausto, danzas de la muerte, otros puentes del diablo)",
+      "kind": "fenomeno",
+      "myths": [
+        "el-mono-de-la-pila",
+        "la-leyenda-del-santuario-de-monserrate",
+        "la-monja-vidente-y-el-taxista",
+        "el-diablo-del-puente-del-comun",
+        "los-esqueletos-caminantes"
+      ],
+      "decision": "excluded",
+      "reason": "Aparecen sólo en la sección «Similitudes» como comparación explícita, nunca como escena del relato.",
+      "sheets": 0,
+      "note": "Criterio uniforme del censo: la comparación no entra al inventario."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_calle_y_oficio",
+      "kind": "objeto",
+      "covers": [
+        "cantaro_de_agua",
+        "totuma_de_chicha",
+        "libro_cerrado_de_arias",
+        "bandera_liberal",
+        "placa_de_calle_antigua"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores de la vida de calle: se producen en una lámina y se reutilizan en cinco relatos."
+    },
+    {
+      "id": "hoja_utileria_papeles_y_pruebas",
+      "kind": "objeto",
+      "covers": [
+        "hojas_de_la_defensa",
+        "decreto_de_libertad",
+        "carta_mecanografiada_y_expediente",
+        "craneo_en_vitrina"
+      ],
+      "sheets": 1,
+      "note": "El bucket es de expedientes: defensa, decreto, carta ficticia y la pieza de museo. Cuatro piezas en una lámina."
+    },
+    {
+      "id": "hoja_utileria_devocion_y_tesoro",
+      "kind": "objeto",
+      "covers": [
+        "velas_flores_y_exvotos",
+        "espada_de_diego",
+        "objetos_de_riqueza_y_trabajo"
+      ],
+      "sheets": 1,
+      "note": "Tercera lámina: lo que se lleva al cerro, lo que marca la gruta y la utilería simbólica de los esqueletos."
+    }
+  ],
+  "totals": {
+    "entities": 124,
+    "required": 41,
+    "embedded": 56,
+    "excluded": 27,
+    "sheets": 47,
+    "panregional_required": 1
+  }
+}

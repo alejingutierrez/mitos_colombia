@@ -1,0 +1,1245 @@
+{
+  "id": "pananes",
+  "label": "Panán",
+  "pages": 16,
+  "canon_pages": 16,
+  "read_note": "Leí los dieciséis mitos completos del corpus congelado pananes (sha256 141f190b..., 2026-09-18) en sus cuatro campos, más editorial/panan/universe.mjs, community.mjs y media.mjs. Sorpresas: (1) no es un corpus de personajes sino de lugares —nueve de las dieciséis fichas son memoria de sitio sin protagonista (Chuchún, Cualchio, Cuaichala, Guamurran, Basílica, Cangagua, Laguna, Cuchicuelan, La Tuta) y una décima, la Waka, es un ensayo sin trama—, así que el denominador es bajo por naturaleza y casi todo el gasto se va en modelos espaciales, no en hojas de identidad. (2) La palabra «volcán» no aparece ni una vez: la sensibilidad del encargo sobre sitios sagrados se traduce aquí en páramo, laguna-santuario y gruta, y lo que el canon protege de verdad no es la imagen del sitio sino su coordenada exacta, que repite cuatro veces que no publica. (3) El dedupe grande fue el Cuichi de Cuchicuelan, que es el mismo Cueche con nombre local, y los cinco animales de la Waka —buey, gallina con pollos, cerdo, perro y culebra—, que absorben la cerda con crías de las huacas, la yunta y los perros de La Vieja. (4) El canon panán es inusualmente explícito prohibiendo: prohíbe personificar a Guamurran, reconstruir la imagen de la Virgen, inventarle biografía a María Panana y volver a dibujar el cofre de la Waka; cuatro exclusiones salieron citadas literalmente. Quedó dudoso: si una sola gramática de comuneros aguanta un siglo y dos clases sociales —le puse dos hojas, cotidiano y época de hacienda, y puede quedarse corta—; y el Chutún, que la fuente describe explícitamente sin forma fija, queda required con la advertencia de no asignarle especie zoológica, que es lo más cerca que este censo está de autorizar una invención.",
+  "entities": [
+    {
+      "id": "duende_de_panan",
+      "name": "El duende de Panán",
+      "kind": "criatura",
+      "myths": [
+        "al-duende",
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "forma_de_nino_del_sector"
+      ],
+      "note": "Alegre y travieso, viste los colores de las plantas del lugar —rojo, verde, amarillo o negro—, toca cuerdas, ronda quebradas y chorreras, enamora, trenza crines y aparece en la Cangagua. Dos hojas porque el corpus registra además una forma distinta y documentada: se convierte en un niño del sector junto a las alcantarillas, y eso es otro cuerpo, no otro ánimo."
+    },
+    {
+      "id": "chutun",
+      "name": "El Chutún",
+      "kind": "criatura",
+      "myths": [
+        "el-chutun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Espíritu cuidador de la chagra que habita el checher, permite comer sin destruir y se deja ver como un animal de aspecto desagradable para apartar al agresor. Conduce la única acción del relato. Una sola hoja, que debe fijar una silueta pequeña de guardián y la variante de animal desagradable SIN asignar especie zoológica: la fuente advierte expresamente que no se añade una."
+    },
+    {
+      "id": "la_vieja",
+      "name": "La Vieja",
+      "kind": "criatura",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Pobre, muy delgada, jorobada, con follones oscuros y pañolón, cabello enredado, sombrero bajo y los pechos echados al hombro. Sale a quienes vuelven borrachos, los entunda y los deja en pantanos. Es la figura mejor descrita del corpus."
+    },
+    {
+      "id": "la_viuda",
+      "name": "La Viuda",
+      "kind": "criatura",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Joven hermosa que toma la ropa de la mujer en quien el hombre piensa, se deja ver sólo por él, lo atrae hacia una chorrera o un río, nunca muestra el rostro y tiene ojos como carbones o rayos. Cuerpo y regla de aparición propios."
+    },
+    {
+      "id": "el_anima",
+      "name": "El Ánima",
+      "kind": "criatura",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Alta, delgada, vestida de blanco, se mueve lentamente por el aire y su rostro es una calavera o queda cubierto por cabellos largos y blancos. El corpus insiste en que las tres figuras no son fases de una misma mujer: tres hojas, no una."
+    },
+    {
+      "id": "dragon_de_tres_cabezas_de_la_tuta",
+      "name": "El dragón de tres cabezas de La Tuta",
+      "kind": "criatura",
+      "myths": [
+        "la-tuta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Vive en La Tuta y reúne a los tres caciques; la investigación lo presenta como imagen de los tres y como origen de los Pananes. Es la entidad fundacional del corpus. Guardarraíl declarado en el canon: no se representa como criatura europea realista."
+    },
+    {
+      "id": "colectivo_comuneros_de_panan",
+      "name": "Comuneras y comuneros de Panán",
+      "kind": "colectivo",
+      "myths": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "el-cueche",
+        "la-basilica-encantada",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-laguna-de-maria-panana",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-vieja-la-viuda-y-el-anima",
+        "la-waka"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "epoca_de_hacienda_y_frontera"
+      ],
+      "note": "Gramática de grupo que sostiene todas las figuras humanas sin nombre: lavanderas en quebradas y chorreras, jinetes, niños, mayores que recorren el territorio, buscadores de huaca que cavan de a dos, mujeres que se cubren la cabeza y trazan la cruz, quien se tiende boca abajo en forma de cruz ante el Ánima, los que velan el tres de mayo. Dos hojas porque el corpus cubre un siglo y dos registros sociales distintos: el comunero cotidiano y la época de hacienda y frontera, con peones que cruzan a Ecuador y terratenientes."
+    },
+    {
+      "id": "medicos_tradicionales_yerbateros_y_parteras",
+      "name": "Médicos tradicionales, yerbateros y parteras",
+      "kind": "colectivo",
+      "myths": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cueche",
+        "la-entundada-el-quedado-el-espanto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reconocen y atienden el enduendado, el ojeado, el espanto y el quedado, y acompañan el nacimiento. Recurren en cinco relatos y deciden qué le pasa a la persona: es la figura que más veces conduce acción en este corpus. La hoja fija la figura —el lenguaje—, nunca un procedimiento, un kit ni una persona real; el procedimiento va excluido aparte."
+    },
+    {
+      "id": "tres_caciques_fundadores",
+      "name": "Los tres caciques fundadores",
+      "kind": "colectivo",
+      "myths": [
+        "la-tuta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nazate o Nasate, Puenayán o Puednayán, y Tarapues o Juaspuezan: tres familias que se ubican en La Tuta por la tierra productiva y son raíces, troncos y retoños de los Pananes. La hoja debe conservar las tres grafías variables y no escoger una como la antigua."
+    },
+    {
+      "id": "animales_de_la_waka",
+      "name": "Los animales de la Waka",
+      "kind": "colectivo",
+      "myths": [
+        "la-huacas",
+        "la-waka"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Buey, gallina con pollos, cerdo, perro y culebra: las formas con que la riqueza enterrada se comunica. Cubre también la cerda con crías que persigue al narrador cerca del cementerio, la yunta que ara El Afilador y los perros que aúllan ante La Vieja. Cinco animales y tres relatos en una sola gramática: el mayor ahorro del censo panán."
+    },
+    {
+      "id": "fauna_menor_de_cuchicuelan_y_paramo",
+      "name": "Fauna menor de Cuchicuelan y del páramo",
+      "kind": "colectivo",
+      "myths": [
+        "la-laguna-de-maria-panana",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Serpientes, sapos, ranas, lagartijas y mariposas alrededor de las aguas profundas; cóndores de páramo en los nombres de la laguna; minacuros o luciérnagas que forman caminos de luz en La Tuta. Ninguno conduce acción, todos aparecen en cuadro."
+    },
+    {
+      "id": "caballo",
+      "name": "El caballo",
+      "kind": "animal",
+      "myths": [
+        "al-duende",
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se asusta, se niega a avanzar, retrocede y amanece con la crin del cuello y toda la cola trenzadas. Es el testigo del duende en dos relatos y la prueba misma del testimonio de la Cangagua. Una sola hoja: las trenzas se fijan como marcador de continuidad porque son derivables del mismo cuerpo."
+    },
+    {
+      "id": "lechuza",
+      "name": "La lechuza",
+      "kind": "animal",
+      "myths": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Anida y descansa en Cuchicuelan y da nombre al sitio, a la hacienda y a la ficha. El corpus corrige expresamente que no es mensajera sobrenatural: es el ave, y por eso necesita anatomía verificable y no una silueta de agüero."
+    },
+    {
+      "id": "cueche",
+      "name": "El Cueche",
+      "kind": "fenomeno",
+      "myths": [
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Espíritu hijo del agua y del sol que aparece tras la llovizna: arco que engalana el paisaje, anuncia invierno y páramo cosechero, y también Cueche colorado, negro y blanco, considerados especialmente bravos. Una sola hoja de regla, que debe fijar las cuatro paletas —multicolor, colorado, negro y blanco— porque el color no cambia la forma del arco. El Cuichi de Cuchicuelan es el mismo ser con nombre local y se resuelve aquí."
+    },
+    {
+      "id": "entundada_quedado_y_espanto",
+      "name": "La entundada, el quedado y el espanto",
+      "kind": "fenomeno",
+      "myths": [
+        "al-duende",
+        "el-chutun",
+        "la-entundada-el-quedado-el-espanto",
+        "la-laguna-de-maria-panana",
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Regla visible de la pérdida: el camino conocido deja de tener salida, el mismo punto se repite, la persona da vueltas y el espíritu se queda donde ocurrió el susto mientras el cuerpo vuelve. Atraviesa cinco relatos —el duende, el Chutún, la ficha propia, la laguna y La Vieja—: es la entidad más transversal de Panán. Se ficha el fenómeno, no los síntomas en un cuerpo."
+    },
+    {
+      "id": "granizo_del_cualchio",
+      "name": "El granizo del Cualchio",
+      "kind": "fenomeno",
+      "myths": [
+        "el-cualchio-y-la-olla-del-granizo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Según la oralidad de los mayores, en la olla nace o aparece el granizo: la niebla y el frío se recogen, el hielo golpea la vegetación y el agua aumenta. Es el objeto por el que se cuenta la ficha y da el segundo nombre al lugar."
+    },
+    {
+      "id": "huaca_como_aparicion",
+      "name": "La huaca como aparición",
+      "kind": "fenomeno",
+      "myths": [
+        "la-huacas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Regla de cómo se manifiesta y se niega: la llamarada de medianoche del tres de mayo, la tierra blanda bajo la pata del buey que al día siguiente está dura, el animal que ofrece la señal y la huaca que cambia de lugar si alguien habla o siente ambición. Es lo que el relato cuenta; no hay tesoro que fichar."
+    },
+    {
+      "id": "palo_santo",
+      "name": "El palo santo",
+      "kind": "objeto",
+      "myths": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El madero hallado en el Cucho de Cuaichala que la comunidad bajó y envió a San Antonio de Ibarra. Es el objeto por el que se cuenta la ficha y el que da el título editorial. La hoja cubre el madero, no la imagen tallada, que queda excluida."
+    },
+    {
+      "id": "baston_de_mando",
+      "name": "El bastón de mando",
+      "kind": "objeto",
+      "myths": [
+        "la-laguna-de-maria-panana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se purifica en la Laguna de María Panana y el agua «recibe bastones, palabras y visitantes». Objeto de autoridad del pueblo Pastos cuya materialidad no puede improvisarse. La hoja fija una gramática genérica y nunca reproduce un bastón real identificable; el rito de purificación queda excluido aparte."
+    },
+    {
+      "id": "ceramica_y_figuras_de_los_antepasados",
+      "name": "Cerámica y figuras de los antepasados",
+      "kind": "objeto",
+      "myths": [
+        "la-huacas",
+        "la-tuta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Restos de cerámica y figuras atribuidas a antepasados cerca de La Tuta y en los entierros. Aparecen en dos relatos y son el contenido material de la huaca. La hoja fija una gramática de tiestos y formas y NUNCA una pieza arqueológica documentada real."
+    },
+    {
+      "id": "checher",
+      "name": "El checher",
+      "kind": "planta",
+      "myths": [
+        "el-chutun"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Planta de la chagra cuyo fruto se parece al capulí y cuyas ramas forman hileras o cercos naturales; es donde habita el Chutún y por cuya destrucción el relato existe. Objeto por el que se cuenta la ficha."
+    },
+    {
+      "id": "monte_nativo_altoandino",
+      "name": "El monte nativo altoandino",
+      "kind": "planta",
+      "myths": [
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Arrayán, cerote, león, encino, cuaza, amarillo y caspimote: la fuente los enumera por nombre en el Cualchio y el monte espeso de Cuaichala es el mismo antes de volverse potrero. Siete especies nombradas en una sola hoja botánica, para que el monte no se dibuje como follaje genérico."
+    },
+    {
+      "id": "paisaje_de_paramo_de_panan",
+      "name": "Páramo alto de Panán",
+      "kind": "paisaje",
+      "myths": [
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "guamurran-madre-de-agua",
+        "la-laguna-de-maria-panana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Alturas cubiertas de arbustos, suelo pantanoso, neblina, espejos de agua, frío y vegetación baja; el pie de páramo entre El Colorado y El Vicundo y la posición dentro de Gran Cumbal. Entorno compartido por cuatro fichas y distinto del territorio habitado."
+    },
+    {
+      "id": "paisaje_de_veredas_y_caminos_de_panan",
+      "name": "Veredas, caminos y aguas de Panán",
+      "kind": "paisaje",
+      "myths": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "el-cueche",
+        "la-basilica-encantada",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "nocturno"
+      ],
+      "note": "Territorio habitado: veredas, potreros y cercas donde estuvo la hacienda La Lechuza, chaparros, acequias, quebradas y chorreras, caminos y chaquiñanes, alcantarillas, pantanos y tumbas, el río Carchi. Dos hojas porque media docena de relatos —la Cangagua, La Vieja, La Viuda, el Ánima, la velación del tres de mayo, La Tuta con sus minacuros— sólo ocurren de noche y exigen otro modelo de luz."
+    },
+    {
+      "id": "chagra_de_panan",
+      "name": "La chagra de Panán",
+      "kind": "lugar",
+      "myths": [
+        "el-chutun",
+        "la-entundada-el-quedado-el-espanto",
+        "la-tuta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cultivos altoandinos con cercos vivos de checher y la tierra productiva que atrajo a los tres linajes: trigo, cebada, habas y maíz. Escenario del Chutún, de la entundada por destruir la naturaleza y del asentamiento de La Tuta."
+    },
+    {
+      "id": "chuchun_y_las_tres_quebradas",
+      "name": "Chuchún y las tres quebradas",
+      "kind": "lugar",
+      "myths": [
+        "el-chuchun-y-las-tres-quebradas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Agua templada que brota entre pequeños chaparros en varios manantiales y confluencia de Aucué, Lájaro y Guacales. No es un paisaje intercambiable: la ficha existe porque ese sitio concreto reúne baño, trabajo y nacimiento."
+    },
+    {
+      "id": "olla_del_granizo_del_cualchio",
+      "name": "La Olla del Granizo del Cualchio",
+      "kind": "lugar",
+      "myths": [
+        "el-cualchio-y-la-olla-del-granizo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ojo de agua rodeado por alturas cubiertas de arbustos que forman un recinto húmedo y difícil de atravesar, de donde sale el río del mismo nombre. «Olla» nombra la forma del terreno, no una vasija: eso debe leerse en la hoja."
+    },
+    {
+      "id": "cucho_de_cuaichala",
+      "name": "El Cucho de Cuaichala",
+      "kind": "lugar",
+      "myths": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Rincón al pie del páramo entre El Colorado y El Vicundo, conectado con Agua Blanca, donde nace la quebrada Guacales y de donde se tomaron las aguas del acueducto de cinco veredas. Una sola hoja, que debe poder mostrar las dos épocas: el monte espeso de antes y el potrero de hoy."
+    },
+    {
+      "id": "guamurran_cienaga_de_paramo",
+      "name": "Guamurran, la ciénaga de páramo",
+      "kind": "paisaje",
+      "myths": [
+        "guamurran-madre-de-agua"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ciénaga alta donde nace el agua de Panán, Chiles y el río Carchi: vegetación baja, suelo saturado, espejos de agua y neblina, con una represa de riego de resultados limitados. Sitio nombrado y no intercambiable con el páramo genérico. «Madre» es función territorial, no una mujer: la hoja no personifica nada."
+    },
+    {
+      "id": "basilica_encantada",
+      "name": "La Basílica encantada",
+      "kind": "arquitectura",
+      "myths": [
+        "la-basilica-encantada"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Formación de piedra en la vereda El Espino, sector El Paraíso: oscuridad, murciélagos, espacios que se asemejan a una capilla y particiones para dos o tres personas. Es el objeto por el que se cuenta la ficha. La hoja conserva la pregunta abierta: ni ruina prehispánica, ni iglesia colonial, ni cueva natural."
+    },
+    {
+      "id": "cangagua_chorrera_del_duende",
+      "name": "La Cangagua o Chorrera del Duende",
+      "kind": "lugar",
+      "myths": [
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Rincón de la vereda La Merced por el camino hacia Romerillo, El Vicundo, La Montañuela y El Tambillo; la cascada se pierde entre matorrales y el paso era pesado de noche. Antes estaba cubierta por muchas ramas y después quedó más despejada: una sola hoja con las dos coberturas, porque es el mismo agua y la misma roca."
+    },
+    {
+      "id": "laguna_de_maria_panana",
+      "name": "La Laguna de María Panana",
+      "kind": "lugar",
+      "myths": [
+        "la-laguna-de-maria-panana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "A unas tres horas de camino en el páramo: aguas frías y cristalinas, neblina, quietud, plantas y aves de altura. Escenario de la armonización y del riesgo de quedarse. Restricción del canon: no se publica el punto exacto, así que la hoja no puede fijar un lugar geolocalizable."
+    },
+    {
+      "id": "cuchicuelan",
+      "name": "Cuchicuelan",
+      "kind": "lugar",
+      "myths": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Lugar húmedo con aguas profundas donde anidan lechuzas y se asienta el Cuichi, descrito como rincón misterioso y de mucha energía positiva, y bajo el cual permanece la memoria de la hacienda y sus peones. Sitio nombrado con función propia."
+    },
+    {
+      "id": "la_tuta",
+      "name": "La Tuta",
+      "kind": "lugar",
+      "myths": [
+        "la-tuta",
+        "la-huacas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gruta entre El Placer Alto y La Merced con dos senderos, una laguna secada al pie y tres nacimientos arriba que forman una acequia; oscuridad, profundidad y túnel, pero también chaquiñán y refugio, y cerca un cementerio con restos de cerámica. Es el núcleo de origen más desarrollado del corpus y aparece también en las huacas."
+    },
+    {
+      "id": "cuichi_de_cuchicuelan",
+      "name": "El Cuichi",
+      "kind": "fenomeno",
+      "myths": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "cueche",
+      "sheets": 0,
+      "note": "Mismo ser con nombre local: arco perfecto de colores que nace y termina en lugares húmedos. Las dos páginas se enlazan sin fusionarse, pero la ficha visual es una sola. Aquí está el ahorro más evidente del corpus."
+    },
+    {
+      "id": "instrumentos_de_cuerda",
+      "name": "Los instrumentos de cuerda",
+      "kind": "objeto",
+      "myths": [
+        "al-duende"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_panan",
+      "sheets": 0,
+      "note": "Le gusta la música, en especial la de cuerdas; el instrumento aparece como atributo, nunca como objeto que el relato cuente."
+    },
+    {
+      "id": "mujeres_lavanderas",
+      "name": "Las mujeres que lavan en quebradas y chorreras",
+      "kind": "colectivo",
+      "myths": [
+        "al-duende"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Presencia recurrente sin nombre ni acción propia: el duende se acerca a donde ellas están."
+    },
+    {
+      "id": "ninos_del_sector_y_alcantarillas",
+      "name": "Los niños del sector y las alcantarillas",
+      "kind": "colectivo",
+      "myths": [
+        "al-duende"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Menores de cinco años con quienes el duende juega junto a las alcantarillas; el registro infantil pertenece a la gramática de grupo y la alcantarilla al paisaje de veredas."
+    },
+    {
+      "id": "caballo_trenzado_como_senal",
+      "name": "La crin y la cola trenzadas",
+      "kind": "objeto",
+      "myths": [
+        "al-duende",
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "decision": "embedded",
+      "covered_by": "caballo",
+      "sheets": 0,
+      "note": "La trenza es la prueba del relato, pero es un estado derivable del mismo cuerpo: se fija como marcador de continuidad en la hoja del caballo, no como ficha aparte."
+    },
+    {
+      "id": "quebradas_aucue_lajaro_y_guacales",
+      "name": "Aucué, Lájaro y Guacales",
+      "kind": "lugar",
+      "myths": [
+        "el-chuchun-y-las-tres-quebradas",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "embedded",
+      "covered_by": "chuchun_y_las_tres_quebradas",
+      "sheets": 0,
+      "note": "Tres quebradas que recorren el resguardo y se reconocen juntas en Chuchún; Guacales nace además en Cuaichala. Se resuelven dentro del modelo espacial de la confluencia."
+    },
+    {
+      "id": "manantiales_templados_y_chaparros",
+      "name": "Los manantiales templados entre chaparros",
+      "kind": "lugar",
+      "myths": [
+        "el-chuchun-y-las-tres-quebradas"
+      ],
+      "decision": "embedded",
+      "covered_by": "chuchun_y_las_tres_quebradas",
+      "sheets": 0,
+      "note": "Varios nacimientos donde la gente escogía dónde bañarse; parte del mismo sitio, no una segunda ficha."
+    },
+    {
+      "id": "peones_que_cruzan_a_ecuador",
+      "name": "Los peones que cruzaban a Ecuador",
+      "kind": "colectivo",
+      "myths": [
+        "el-chuchun-y-las-tres-quebradas",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Mujeres y hombres que caminaban por los valles hacia el otro lado del río y peones de la hacienda La Lechuza: mismo registro social, cubierto por la segunda hoja de la gramática de grupo."
+    },
+    {
+      "id": "frutos_del_checher",
+      "name": "Los frutos parecidos al capulí",
+      "kind": "planta",
+      "myths": [
+        "el-chutun"
+      ],
+      "decision": "embedded",
+      "covered_by": "checher",
+      "sheets": 0,
+      "note": "Fruto de la planta ya fichada; alimento que puede compartirse."
+    },
+    {
+      "id": "cercos_vivos_y_cultivos",
+      "name": "Cercos vivos, trigo, cebada, habas y maíz",
+      "kind": "planta",
+      "myths": [
+        "el-chutun",
+        "la-tuta"
+      ],
+      "decision": "embedded",
+      "covered_by": "chagra_de_panan",
+      "sheets": 0,
+      "note": "Cultivos y cercas que definen la chagra; el modelo espacial de la chagra los fija."
+    },
+    {
+      "id": "rio_cualchio",
+      "name": "El río Cualchio",
+      "kind": "lugar",
+      "myths": [
+        "el-cualchio-y-la-olla-del-granizo"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_de_veredas_y_caminos_de_panan",
+      "sheets": 0,
+      "note": "Sale de la olla y se incorpora a la red de aguas de Panán; no se describe por sí mismo."
+    },
+    {
+      "id": "acueducto_de_cinco_veredas",
+      "name": "El acueducto de cinco veredas",
+      "kind": "arquitectura",
+      "myths": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "embedded",
+      "covered_by": "cucho_de_cuaichala",
+      "sheets": 0,
+      "note": "Infraestructura tomada del mismo sector; parte del modelo espacial del Cucho."
+    },
+    {
+      "id": "potreros_y_deforestacion",
+      "name": "Los potreros y la deforestación",
+      "kind": "paisaje",
+      "myths": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_de_veredas_y_caminos_de_panan",
+      "sheets": 0,
+      "note": "El monte convertido en potreros y cultivos es un dato que la fuente documenta y que el modelo de entorno debe poder mostrar."
+    },
+    {
+      "id": "hacienda_la_lechuza",
+      "name": "La hacienda La Lechuza",
+      "kind": "arquitectura",
+      "myths": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_de_veredas_y_caminos_de_panan",
+      "sheets": 0,
+      "note": "El corpus la nombra como capa de trabajo y desigualdad pero no describe edificio, época ni disposición. Se conserva como potreros y cercas dentro del paisaje; dibujar una casa de hacienda sería inventarla."
+    },
+    {
+      "id": "represa_de_riego_de_guamurran",
+      "name": "La represa de riego",
+      "kind": "arquitectura",
+      "myths": [
+        "guamurran-madre-de-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "guamurran_cienaga_de_paramo",
+      "sheets": 0,
+      "note": "Obra construida en la ciénaga con pocos resultados; elemento del mismo modelo de entorno y parte de la tensión que la ficha registra."
+    },
+    {
+      "id": "rio_carchi_y_resguardo_de_chiles",
+      "name": "El río Carchi y el resguardo de Chiles",
+      "kind": "lugar",
+      "myths": [
+        "guamurran-madre-de-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_de_paramo_de_panan",
+      "sheets": 0,
+      "note": "Territorios que el agua de Guamurran alimenta; se nombran sin describirse."
+    },
+    {
+      "id": "murcielagos_de_la_basilica",
+      "name": "Los murciélagos de la Basílica",
+      "kind": "animal",
+      "myths": [
+        "la-basilica-encantada"
+      ],
+      "decision": "embedded",
+      "covered_by": "basilica_encantada",
+      "sheets": 0,
+      "note": "Numerosos y determinantes de la experiencia del interior, pero no conducen acción y no aparecen en ningún otro relato: el modelo espacial debe especificarlos."
+    },
+    {
+      "id": "particiones_de_piedra",
+      "name": "Las particiones de piedra",
+      "kind": "arquitectura",
+      "myths": [
+        "la-basilica-encantada"
+      ],
+      "decision": "embedded",
+      "covered_by": "basilica_encantada",
+      "sheets": 0,
+      "note": "Compartimentos con capacidad para dos o tres personas; son la forma interior de la misma estructura."
+    },
+    {
+      "id": "finca_recuperada_de_el_espino",
+      "name": "La finca recuperada de El Espino",
+      "kind": "lugar",
+      "myths": [
+        "la-basilica-encantada"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_de_veredas_y_caminos_de_panan",
+      "sheets": 0,
+      "note": "Predio en usufructo dentro de la historia de recuperación territorial; no se describe más allá del relieve y la vegetación que ocultan las entradas."
+    },
+    {
+      "id": "montura_y_aperos",
+      "name": "La montura y los aperos",
+      "kind": "objeto",
+      "myths": [
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_panan",
+      "sheets": 0,
+      "note": "Lo que Tarapues teme perder junto con el caballo; objeto menor de cultura material."
+    },
+    {
+      "id": "hervido_y_vasija",
+      "name": "El hervido",
+      "kind": "objeto",
+      "myths": [
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_panan",
+      "sheets": 0,
+      "note": "La bebida con amigos que explica la hora del regreso; objeto menor."
+    },
+    {
+      "id": "camino_que_se_repite",
+      "name": "El camino que deja de tener salida",
+      "kind": "lugar",
+      "myths": [
+        "la-entundada-el-quedado-el-espanto"
+      ],
+      "decision": "embedded",
+      "covered_by": "entundada_quedado_y_espanto",
+      "sheets": 0,
+      "note": "Dar vueltas por el mismo punto es la forma visible del fenómeno, no un lugar aparte."
+    },
+    {
+      "id": "yunta_de_bueyes",
+      "name": "La yunta de bueyes",
+      "kind": "animal",
+      "myths": [
+        "la-huacas"
+      ],
+      "decision": "embedded",
+      "covered_by": "animales_de_la_waka",
+      "sheets": 0,
+      "note": "El buey que ara El Afilador y bajo cuya pata se hunde la tierra blanda ya está en la gramática de animales de la Waka; sólo cambia la función narrativa."
+    },
+    {
+      "id": "arado_y_yugo",
+      "name": "El arado y el yugo",
+      "kind": "objeto",
+      "myths": [
+        "la-huacas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_panan",
+      "sheets": 0,
+      "note": "Apero de la yunta; objeto menor de cultura material agraria."
+    },
+    {
+      "id": "cerda_con_crias",
+      "name": "La cerda con crías",
+      "kind": "animal",
+      "myths": [
+        "la-huacas"
+      ],
+      "decision": "embedded",
+      "covered_by": "animales_de_la_waka",
+      "sheets": 0,
+      "note": "Aparición que sigue al narrador cerca del cementerio; es una de las cinco formas ya fichadas del conjunto."
+    },
+    {
+      "id": "perros_que_aullan",
+      "name": "Los perros que despiertan y aúllan",
+      "kind": "animal",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "embedded",
+      "covered_by": "animales_de_la_waka",
+      "sheets": 0,
+      "note": "El perro es una de las cinco formas del conjunto ya fichado; aquí sólo cambia la función narrativa."
+    },
+    {
+      "id": "velacion_del_tres_de_mayo",
+      "name": "La velación del tres de mayo",
+      "kind": "colectivo",
+      "myths": [
+        "la-huacas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Personas que salen a velar las huacas a medianoche; escena de grupo, cubierta por la gramática de comuneros y por la regla de aparición."
+    },
+    {
+      "id": "tierra_blanda_y_llamarada",
+      "name": "La tierra blanda y la llamarada de medianoche",
+      "kind": "fenomeno",
+      "myths": [
+        "la-huacas"
+      ],
+      "decision": "embedded",
+      "covered_by": "huaca_como_aparicion",
+      "sheets": 0,
+      "note": "Señales de la huaca; fases de la misma regla."
+    },
+    {
+      "id": "cementerio_cercano_a_la_tuta",
+      "name": "El cementerio cercano a La Tuta",
+      "kind": "lugar",
+      "myths": [
+        "la-huacas",
+        "la-tuta"
+      ],
+      "decision": "embedded",
+      "covered_by": "la_tuta",
+      "sheets": 0,
+      "note": "Aparecen allí restos de cerámica y figuras atribuidas a antepasados; el corpus lo sitúa como parte del mismo sitio."
+    },
+    {
+      "id": "condores_de_paramo",
+      "name": "Los cóndores de páramo",
+      "kind": "animal",
+      "myths": [
+        "la-laguna-de-maria-panana"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna_menor_de_cuchicuelan_y_paramo",
+      "sheets": 0,
+      "note": "«Nido de cóndores de páramo» es uno de los nombres descriptivos de la laguna; el ave no actúa en el relato."
+    },
+    {
+      "id": "neblina_y_aguas_frias",
+      "name": "La neblina y las aguas frías",
+      "kind": "fenomeno",
+      "myths": [
+        "la-laguna-de-maria-panana",
+        "guamurran-madre-de-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_de_paramo_de_panan",
+      "sheets": 0,
+      "note": "Condición atmosférica del páramo; pertenece al modelo de entorno, no a una regla propia."
+    },
+    {
+      "id": "aguas_profundas_de_cuchicuelan",
+      "name": "Las aguas profundas",
+      "kind": "lugar",
+      "myths": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "cuchicuelan",
+      "sheets": 0,
+      "note": "Donde el Cuichi se asienta y vive la fauna menor; parte del mismo sitio."
+    },
+    {
+      "id": "serpientes_sapos_ranas_lagartijas_y_mariposas",
+      "name": "Serpientes, sapos, ranas, lagartijas y mariposas",
+      "kind": "animal",
+      "myths": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna_menor_de_cuchicuelan_y_paramo",
+      "sheets": 0,
+      "note": "Fauna que rodea las aguas profundas; miembros genéricos del conjunto ya fichado."
+    },
+    {
+      "id": "machete",
+      "name": "El machete",
+      "kind": "objeto",
+      "myths": [
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_panan",
+      "sheets": 0,
+      "note": "Con él se traza la cruz en la tierra ante el arco; herramienta corriente y objeto menor."
+    },
+    {
+      "id": "cruz_trazada_en_la_tierra",
+      "name": "La cruz trazada en la tierra y la cabeza cubierta",
+      "kind": "colectivo",
+      "myths": [
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Gesto público y atribuido que el corpus publica: mujeres que se cubren la cabeza y cortan una cruz. Va como pose dentro de la gramática de grupo; la hoja no lo presenta como tratamiento."
+    },
+    {
+      "id": "minacuros_o_luciernagas",
+      "name": "Los minacuros o luciérnagas",
+      "kind": "animal",
+      "myths": [
+        "la-tuta"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna_menor_de_cuchicuelan_y_paramo",
+      "sheets": 0,
+      "note": "Forman caminos de luz que parecen una ciudad al caer la noche; imagen firme de La Tuta pero sin acción propia."
+    },
+    {
+      "id": "dos_senderos_laguna_seca_y_tres_nacimientos",
+      "name": "Los dos senderos, la laguna secada y los tres nacimientos",
+      "kind": "lugar",
+      "myths": [
+        "la-tuta"
+      ],
+      "decision": "embedded",
+      "covered_by": "la_tuta",
+      "sheets": 0,
+      "note": "Elementos internos del mismo sitio: por ellos se llega, al pie estuvo la laguna y arriba nacen las aguas que forman la acequia."
+    },
+    {
+      "id": "follones_panolon_y_sombrero",
+      "name": "Follones oscuros, pañolón y sombrero bajo",
+      "kind": "objeto",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "embedded",
+      "covered_by": "la_vieja",
+      "sheets": 0,
+      "note": "Vestuario descrito que pertenece al cuerpo de La Vieja."
+    },
+    {
+      "id": "ropa_de_la_novia_o_amante",
+      "name": "La ropa de la novia, amante o mujer pensada",
+      "kind": "objeto",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "embedded",
+      "covered_by": "la_viuda",
+      "sheets": 0,
+      "note": "El disfraz es el mecanismo de La Viuda y pertenece a su hoja: la prenda cambia, la figura no."
+    },
+    {
+      "id": "calavera_y_cabellos_blancos",
+      "name": "La calavera y los cabellos largos y blancos",
+      "kind": "objeto",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "embedded",
+      "covered_by": "el_anima",
+      "sheets": 0,
+      "note": "Las dos formas en que el rostro del Ánima queda resuelto; variantes dentro de su hoja."
+    },
+    {
+      "id": "pantanos_y_tumbas",
+      "name": "Los pantanos y la tumba",
+      "kind": "lugar",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_de_veredas_y_caminos_de_panan",
+      "sheets": 0,
+      "note": "Donde La Vieja deja a los borrachos y adonde llega el Ánima; elementos del territorio habitado."
+    },
+    {
+      "id": "gesto_de_tenderse_en_cruz",
+      "name": "Tenderse boca abajo en forma de cruz",
+      "kind": "colectivo",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Respuesta corporal descrita ante el Ánima; pose dentro de la gramática de grupo."
+    },
+    {
+      "id": "mayores_que_protegen_la_riqueza",
+      "name": "Los mayores que recorren el territorio",
+      "kind": "colectivo",
+      "myths": [
+        "la-waka"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Protegen una riqueza que podría ser usurpada; el corpus no les da rasgo distinto del comunero mayor."
+    },
+    {
+      "id": "terratenientes",
+      "name": "Los terratenientes de la hacienda",
+      "kind": "colectivo",
+      "myths": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_comuneros_de_panan",
+      "sheets": 0,
+      "note": "Explotaban a comuneros de Puscuelan y otras zonas; sin descripción física, quedan en la segunda hoja de la gramática de grupo."
+    },
+    {
+      "id": "insumos_y_procedimiento_de_la_medicina_propia",
+      "name": "La limpia, la purga, la búsqueda del quedado y sus insumos",
+      "kind": "objeto",
+      "myths": [
+        "al-duende",
+        "el-chutun",
+        "el-cueche",
+        "la-entundada-el-quedado-el-espanto"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Sensible: prácticas de curación. Cubre guanto, albarrecín, marco, chapil, ruda, esencias de plantas, ovillos de lana roja, negra y verde, prendas de la persona afectada y cigarrillo, y el procedimiento completo. Verificado: la ficha del duende dice que no se presenta una fórmula medicinal como recomendación clínica; la de la entundada dice que no se enseña una receta y que el procedimiento depende de quien cura. Fichar el kit o la secuencia sería publicar la preparación. La figura del médico tradicional sí tiene ficha: el lenguaje sí, el ejemplar no."
+    },
+    {
+      "id": "entierro_de_placentas_en_chuchun",
+      "name": "El entierro de placentas",
+      "kind": "fenomeno",
+      "myths": [
+        "el-chuchun-y-las-tres-quebradas"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Sensible: práctica íntima de nacimiento bajo cuidado de parteras y médicos tradicionales, que conocían cuándo, dónde y cómo hacerlo. La propia ficha advierte que no se afirma que todas las familias lo practiquen hoy. El sitio de Chuchún sí se ficha; el acto no."
+    },
+    {
+      "id": "purificacion_de_bastones_y_armonizacion",
+      "name": "La purificación de bastones y la armonización en la laguna",
+      "kind": "fenomeno",
+      "myths": [
+        "la-laguna-de-maria-panana"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Sensible: rito en un santuario. El corpus registra que allí se palabrea, se armoniza el pensamiento, se purifican bastones y algunas personas entran al agua, pero no describe la escena y declara que no se ofrecen baños ni inmersiones como práctica recomendable. La laguna y el bastón tienen ficha; el rito no."
+    },
+    {
+      "id": "tradicion_santificada",
+      "name": "Sanjuanes, danzantes, el personaje del Negro, la mula, sacrificios y pagamentos",
+      "kind": "colectivo",
+      "myths": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "excluded",
+      "reason": "se enumera pero nunca se describe",
+      "sheets": 0,
+      "note": "La investigación llama «tradición santificada» a ese conjunto y la ficha declara que conserva la lista como interpretación del trabajo, sin convertir cada práctica en episodio de la bajada. No hay vestuario, coreografía ni escena: fichar danzantes, el Negro o la mula obligaría a inventarlos, y varios son además prácticas rituales vivas."
+    },
+    {
+      "id": "imagen_y_aparicion_de_la_virgen_de_las_mercedes",
+      "name": "La imagen y la aparición de la Virgen de las Mercedes",
+      "kind": "personaje",
+      "myths": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "excluded",
+      "reason": "el canon prohíbe reconstruir su aspecto",
+      "sheets": 0,
+      "note": "Verificado en el campo versiones: «Tampoco se reconstruye el aspecto del árbol ni de la primera imagen». Además es una imagen devocional real y existente, patrona del resguardo. El palo santo sí se ficha porque es el madero, no la talla."
+    },
+    {
+      "id": "talladores_de_san_antonio_de_ibarra",
+      "name": "El taller y los talladores de San Antonio de Ibarra",
+      "kind": "colectivo",
+      "myths": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "decision": "excluded",
+      "reason": "se menciona pero nunca se ve",
+      "sheets": 0,
+      "note": "El corpus registra que la comunidad envió la madera a Ibarra para que fuera tallada y nada más: no hay taller, oficio ni figura descrita."
+    },
+    {
+      "id": "maria_panana_como_figura",
+      "name": "María Panana como figura",
+      "kind": "personaje",
+      "myths": [
+        "la-laguna-de-maria-panana",
+        "la-tuta"
+      ],
+      "decision": "excluded",
+      "reason": "el canon prohíbe inventarle biografía o retrato",
+      "sheets": 0,
+      "note": "Verificado: «La laguna no debe convertirse en un retrato inventado de una reina solitaria» y «No se inventa una biografía de María Panana ni se afirma que viva físicamente dentro de la laguna». Es referente de títulos, tierras y luchas de recuperación, sin una sola línea de descripción física."
+    },
+    {
+      "id": "madre_de_agua_antropomorfa",
+      "name": "La Madre de Agua como mujer",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "guamurran-madre-de-agua"
+      ],
+      "decision": "excluded",
+      "reason": "el canon prohíbe expresamente personificarla",
+      "sheets": 0,
+      "note": "Verificado en dos lugares de la ficha: «Guamurran no aparece en la fuente como una mujer sobrenatural ni como una criatura que emerge del agua» y «no se inventa una entidad antropomorfa». «Madre» nombra la capacidad de dar origen y sustento."
+    },
+    {
+      "id": "espiritus_de_la_madre_tierra",
+      "name": "Los espíritus de la Madre Tierra",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-waka"
+      ],
+      "decision": "excluded",
+      "reason": "se nombran sin cuerpo ni escena",
+      "sheets": 0,
+      "note": "El apartado es interpretativo: dice que la Waka relaciona a los seres humanos con esos espíritus y nada más. Personificarlos sería inventar una deidad que la fuente no describe, exactamente lo que el canon rechaza en Guamurran."
+    },
+    {
+      "id": "cofre_de_tesoro_y_pieles_animales",
+      "name": "El cofre lleno de poder espiritual y las pieles animales",
+      "kind": "objeto",
+      "myths": [
+        "la-waka",
+        "la-huacas"
+      ],
+      "decision": "excluded",
+      "reason": "el canon retira expresamente el cofre literal",
+      "sheets": 0,
+      "note": "Verificado en los research_notes de la Waka: «CORRECCIÓN: se retira cofre literal y aventura inventada», y en el mito: la expresión «no obliga a imaginar cajas europeas cubiertas por cuerpos reales». Dibujarlo reintroduciría la literalización corregida y bordearía la promoción de guaquería."
+    },
+    {
+      "id": "conjuros_oraciones_y_pruebas_de_guaqueros",
+      "name": "Conjuros, oraciones ancestrales y pruebas de los buscadores",
+      "kind": "fenomeno",
+      "myths": [
+        "la-huacas"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Los buscadores hablan de conjuros, oraciones ancestrales y pruebas, pero el corpus no transcribe ninguna y declara expresamente que no se ofrecen instrucciones de excavación y que los entierros pueden involucrar patrimonio arqueológico protegido. La regla de aparición de la huaca sí se ficha; el procedimiento del guaquero no."
+    },
+    {
+      "id": "ojeado_y_meado_del_cueche",
+      "name": "El ojeado o meado del Cueche",
+      "kind": "fenomeno",
+      "myths": [
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Se le atribuyen cabello blanqueado, granos, fiebre, malestar y, en mujeres, inflamación del vientre que parece embarazo y dura años. La ficha advierte que son categorías culturales y no diagnóstico, y que no toda inflamación o cambio de cabello proviene del Cueche. Poner esos síntomas en un cuerpo identificable estigmatiza y excede la evidencia. El arco sí se ficha."
+    },
+    {
+      "id": "testimoniantes_reales_identificados",
+      "name": "José Tarapues, Guillermo Tatamues y Luis Ulpiano Tatamues García",
+      "kind": "personaje",
+      "myths": [
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-huacas"
+      ],
+      "decision": "excluded",
+      "reason": "personas reales identificadas sin descripción corporal",
+      "sheets": 0,
+      "note": "Son comuneros vivos o identificables, uno de ellos exgobernador, entrevistados en marzo de 2014. El corpus recoge su experiencia, no su cuerpo. Retratarlos requiere consentimiento y no hay evidencia visual; sus escenas se resuelven con la gramática de comuneros."
+    },
+    {
+      "id": "novenario_promesa_y_misa_de_honras",
+      "name": "El novenario, la promesa y la misa de honras",
+      "kind": "fenomeno",
+      "myths": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "decision": "excluded",
+      "reason": "se mencionan pero nunca se ven",
+      "sheets": 0,
+      "note": "La memoria recomienda un novenario y una promesa frente a La Vieja y una misa de honras frente al Ánima, sin describir una sola escena. La ficha además declara que las oraciones y misas pertenecen a versiones cristianizadas: montarlas sería escribir el rito."
+    },
+    {
+      "id": "waka_como_concepto_simbolico",
+      "name": "La Waka como lenguaje simbólico",
+      "kind": "fenomeno",
+      "myths": [
+        "la-waka"
+      ],
+      "decision": "excluded",
+      "reason": "apartado interpretativo sin trama ni cuerpo",
+      "sheets": 0,
+      "note": "El propio canon dice que el apartado 4.2.6 es interpretativo y no contiene una trama autónoma, y que la página anterior lo había convertido en aventura con cofre visible. Lo visualizable de la Waka son sus formas animales, que sí tienen ficha; el concepto no se dibuja."
+    },
+    {
+      "id": "chaque",
+      "name": "El chaqué",
+      "kind": "fenomeno",
+      "myths": [
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "decision": "excluded",
+      "reason": "categoría sin definición ni evidencia visual",
+      "sheets": 0,
+      "note": "Es la primera explicación que el propio narrador se da cuando el caballo no avanza, y la ficha declara que se conserva «sin definirla como diagnóstico». No hay nada que ver."
+    },
+    {
+      "id": "elementos_inventados_retirados",
+      "name": "Elementos inventados retirados por la revisión",
+      "kind": "criatura",
+      "myths": [
+        "al-duende",
+        "el-cualchio-y-la-olla-del-granizo",
+        "la-basilica-encantada",
+        "la-entundada-el-quedado-el-espanto",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "el-chuchun-y-las-tres-quebradas"
+      ],
+      "decision": "excluded",
+      "reason": "elemento inventado retirado del canon",
+      "sheets": 0,
+      "note": "Guardarraíl para que no reentren por la puerta visual: la protagonista Lina y la selva de la entundada, la ceremonia colectiva y la figura espiritual de Cuchicuelan, la iglesia monumental con torres y altar de la Basílica, la expedición ceremonial del Cualchio, el guardián de las quebradas de Chuchún y la aventura extensa con diálogos del duende. Ninguno pertenece al corpus congelado."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_panan",
+      "kind": "objeto",
+      "covers": [
+        "instrumentos_de_cuerda",
+        "machete",
+        "montura_y_aperos",
+        "hervido_y_vasija",
+        "arado_y_yugo"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores de la vida cotidiana altoandina que aparecen en cuadro sin que ningún relato se cuente por ellos: el instrumento de cuerda del duende, el machete con que se traza la cruz, la montura y los aperos del caballo de la Cangagua, la vasija del hervido y el arado con su yugo. El arado y el yugo entran aquí aunque la yunta misma se resuelva con los animales de la Waka."
+    }
+  ],
+  "totals": {
+    "entities": 95,
+    "required": 34,
+    "embedded": 44,
+    "excluded": 17,
+    "sheets": 38
+  }
+}

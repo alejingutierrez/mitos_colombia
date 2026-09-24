@@ -1,0 +1,899 @@
+{
+  "id": "wounaan",
+  "label": "Wounaan",
+  "pages": 5,
+  "canon_pages": 5,
+  "read_note": "Leí los 5 mitos del canon congelado (sha256 dc8d9b61…) con los cuatro campos, más editorial/wounaan/universe.mjs, community.mjs y records.mjs (con imagePromptHorizontal/Vertical y similitudes). Sorpresas: (1) dos de las cinco páginas —«El sueño que convoca la rogativa» y «La barca de los espíritus»— son, según el propio universe.mjs, un ciclo editorial relacionado y no dos mitos independientes: comparten vivienda ceremonial, lideresa, flautistas y percutores, así que el denominador por mito baja legítimamente; (2) aun así el canon prohíbe fundir las dos barcas (la de iniciación tallada en balso con pasajeros y la de Curiche suspendida y percutida), de modo que hay dos fichas de barca y eso es obediencia al canon, no duplicación; (3) el corpus tiene poquísimo elenco humano nombrado y muchísima cultura material, que es lo contrario de Ticuna. Wounaan NO es Emberá: el propio canon corrige el uso de «jaibaná» y fija benkhuun en woun meu, y lo registro como exclusión explícita para que ninguna ficha herede iconografía emberá ni de la biblia chamí. Sensibilidad: el diseño de la cestería werregue queda excluido y el canasto queda fichado sólo como forma documentada, sin un solo patrón real, porque esos diseños son identidad y sustento; el saber del benkhuun y los espíritus con que trata quedan fuera; Mariano Membache queda fuera por ser persona real identificada. Quedó dudoso el barco con que Dosat transporta la sal: es un objeto de mediación colonial evidente y ninguna fuente dice qué embarcación es, así que lo puse en utilería con la advertencia de época en lugar de darle ficha.",
+  "entities": [
+    {
+      "id": "maach-aai",
+      "name": "Maach Aai",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce la creación: forma la tierra, levanta las montañas, abre el mar, pone el sol y la luna, hace la playa del Sábalo y crea a su hijo Ewandam; a petición de este forma la gente. Está en el prompt horizontal. La memoria comunitaria le asigna función distinta a la de Ewandam y la ficha debe sostener esa diferencia."
+    },
+    {
+      "id": "ewandam",
+      "name": "Ewandam",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "las-manos-de-barro",
+        "la-sal-del-weguer",
+        "madre-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en tres relatos conduciendo la acción: pide la creación de la gente, promete alimento sin trabajo, crea las plantas de la competencia y sala el mar con una cucharada. Es el padre que los Wounaan reconocen. Está en los prompts de dos mitos."
+    },
+    {
+      "id": "dosat",
+      "name": "Dosat",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el segundo motor del relato: lleva machete y hacha, enseña a preparar la tierra y a sembrar, responde a cada planta con otra parecida y fracasa al salar el mar. El prompt existente exige resolverlo «sin demonio europeo»: los nombres Dosat y Satanás son mediación cristiana visible y la ficha no puede convertirlo en diablo de iconografía occidental."
+    },
+    {
+      "id": "gente-de-barro",
+      "name": "Gente de barro de la playa del Baudó",
+      "kind": "colectivo",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "levantadas, ya con vida"
+      ],
+      "note": "Es el objeto por el que se cuenta el relato. El estado paga hoja porque la fuente muestra las dos formas y la silueta cambia: primero muñecos quietos sobre la arena, cercanos al color de la tierra, y después figuras que se levantan y habitan el mundo. Los dos prompts existentes trabajan justo ese tránsito."
+    },
+    {
+      "id": "barro-humedo",
+      "name": "Barro húmedo de la playa",
+      "kind": "objeto",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-de-barro",
+      "sheets": 0,
+      "note": "Materia de la que salen las figuras; es parte de esa ficha y de la del lugar, no un objeto con acto propio."
+    },
+    {
+      "id": "playa-del-rio-baudo",
+      "name": "Playa del río Sábalo, en el Baudó",
+      "kind": "lugar",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto del relato y nombrado con precisión por la memoria comunitaria: allí el agua encuentra la tierra y allí se forman los primeros cuerpos. El canon advierte que pertenece al tiempo cosmogónico y no es Santa Marta de Curiche, así que no puede resolverse con una orilla genérica ni con una localidad actual."
+    },
+    {
+      "id": "mar",
+      "name": "Mar abierto por Maach Aai",
+      "kind": "paisaje",
+      "myths": [
+        "las-manos-de-barro",
+        "la-sal-del-weguer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos: lo abre Maach Aai en la creación y es el objeto de la prueba de la sal. El encuentro del río con el mar está en el prompt horizontal del weguer. Es un entorno distinto del río y la selva y necesita su propio modelo."
+    },
+    {
+      "id": "montanas",
+      "name": "Montañas levantadas en la creación",
+      "kind": "paisaje",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio-y-selva-del-pacifico",
+      "sheets": 0,
+      "note": "Se nombran en la secuencia de creación y aparecen en los dos prompts como capas de fondo; son relieve del modelo de entorno, sin acto propio."
+    },
+    {
+      "id": "sol-y-luna",
+      "name": "Sol y luna puestos en el cielo",
+      "kind": "fenomeno",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio-y-selva-del-pacifico",
+      "sheets": 0,
+      "note": "Puestos una vez y nunca vuelven a intervenir; están en los dos prompts como formas recortadas del cielo. Son parte del modelo de entorno, no dos reglas de fenómeno."
+    },
+    {
+      "id": "los-mundos-creados-por-maach-aai",
+      "name": "Los mundos creados por Maach Aai",
+      "kind": "paisaje",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual",
+      "sheets": 0,
+      "note": "Verificado: la memoria de Curiche dice que los humanos quedaron en el tercero de los mundos, el estudio del Ministerio de Ambiente habla de cuatro, y el canon declara expresamente que conserva esa formulación «sin completar los niveles restantes con información tomada de otro expediente». Dibujar la escalera de mundos sería completarla."
+    },
+    {
+      "id": "ensayos-con-chonta-y-balso",
+      "name": "Ensayos de creación con chonta y balso",
+      "kind": "objeto",
+      "myths": [
+        "las-manos-de-barro"
+      ],
+      "decision": "excluded",
+      "reason": "retirado por la edición: elaboración no acreditada",
+      "sheets": 0,
+      "note": "Verificado en versiones y research_notes: la ficha anterior proponía que Ewandam probó primero la chonta y el balso, con una oposición moral entre dureza y fragilidad. La revisión no lo encontró en la voz comunitaria ni en las fuentes comparativas y lo retiró. El prompt existente dice literalmente «sin pruebas con chonta o balso»."
+    },
+    {
+      "id": "benkhuun",
+      "name": "Benkhuun",
+      "kind": "personaje",
+      "myths": [
+        "la-barca-de-dos-tintas",
+        "el-baston-de-sueno"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en dos relatos conduciendo acción: busca el balso, vacía la madera, talla los pasajeros, se forma esperando los sueños y sana con plantas y espíritus. La hoja es del oficio, no el retrato de una persona real, y debe fijar que en woun meu es benkhuun y no jaibaná."
+    },
+    {
+      "id": "aprendiz-del-benkhuun",
+      "name": "Aprendiz que espera los sueños",
+      "kind": "personaje",
+      "myths": [
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "embedded",
+      "covered_by": "benkhuun",
+      "sheets": 0,
+      "note": "Es el mismo oficio en su etapa de formación: observa las figuras, la fibra del balso y el lugar de cada pasajero, y de noche recorre el camino que su guía le enseñó. Variante del ser ya fichado, no otra identidad."
+    },
+    {
+      "id": "guia-mayor-del-aprendiz",
+      "name": "Persona mayor que orienta al iniciado",
+      "kind": "personaje",
+      "myths": [
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "embedded",
+      "covered_by": "benkhuun",
+      "sheets": 0,
+      "note": "Nombrada sólo por su función de orientar; sin descripción. Es el mismo oficio en otra etapa."
+    },
+    {
+      "id": "mariano-membache",
+      "name": "Mariano Membache",
+      "kind": "personaje",
+      "myths": [
+        "el-baston-de-sueno"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado: el relato lo nombra como benkhuun y líder espiritual de Curiche, con conocimientos heredados de su abuelo y su padre, y dice que la comunidad volvió a reunirse en su vivienda. Es una persona real identificada; su retrato requiere consentimiento de su familia y de la comunidad, no una decisión editorial. La hoja del oficio cubre la función sin ponerle su cara."
+    },
+    {
+      "id": "saber-del-benkhuun",
+      "name": "Saber del benkhuun: plantas, espíritus, palabras y límites",
+      "kind": "objeto",
+      "myths": [
+        "la-barca-de-dos-tintas",
+        "el-baston-de-sueno"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado: el relato dice que debía aprender las palabras, los cuidados y los límites de una práctica destinada a sanar y proteger, y la historia declara que la revisión evita describir fórmulas, cantos o secretos rituales no publicados. No tiene forma visible y dársela sería fabricar liturgia."
+    },
+    {
+      "id": "espiritus-del-benkhuun",
+      "name": "Espíritus con que se relaciona el benkhuun",
+      "kind": "criatura",
+      "myths": [
+        "la-barca-de-dos-tintas",
+        "el-baston-de-sueno"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado: en los sueños podía encontrarse con ellos, reconocerlos y escuchar cómo dirigirse a ellos, y el relato advierte que no podía tratarlos como obedientes por naturaleza. Ninguna fuente les da forma. Los pasajeros tallados son figuras de madera, no retratos de espíritus, y así debe decirlo su ficha."
+    },
+    {
+      "id": "jaibana-y-la-iconografia-embera",
+      "name": "Jaibaná, término homónimo emberá",
+      "kind": "personaje",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required: pertenece a otra comunidad",
+      "sheets": 0,
+      "note": "Verificado: la cartilla de Curiche define benkhuun en woun meu y aclara que «jaibaná» es el término homónimo usado entre comunidades emberá; el canon corrige expresamente el uso indiscriminado que traía la ficha heredada. Queda registrado como exclusión para que ninguna hoja Wounaan tome prestada iconografía emberá ni de la biblia chamí existente, aunque compartan territorio en el San Juan."
+    },
+    {
+      "id": "barca-de-los-espiritus",
+      "name": "Barca ritual tallada en balso",
+      "kind": "objeto",
+      "myths": [
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato: vaciada de una pieza ligera de balso, con pasajeros tallados dentro, instrumento ritual y no canoa de transporte ni recuerdo de viaje. Su tamaño pequeño no disminuye su función y eso es lo que la hoja debe resolver."
+    },
+    {
+      "id": "arbol-de-balso",
+      "name": "Árbol de balso",
+      "kind": "planta",
+      "myths": [
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "embedded",
+      "covered_by": "barca-de-los-espiritus",
+      "sheets": 0,
+      "note": "El benkhuun lo busca y elige una pieza ligera; la fibra del balso es lo que el aprendiz observa. Es la materia de la ficha de la barca, no un árbol con acto propio."
+    },
+    {
+      "id": "herramientas-del-benkhuun",
+      "name": "Herramientas con que vacía la madera",
+      "kind": "objeto",
+      "myths": [
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "embedded",
+      "covered_by": "barca-de-los-espiritus",
+      "sheets": 0,
+      "note": "El relato dice «con sus herramientas» y nada más. Se resuelven dentro de la hoja de la barca para que no se inventen instrumentos ajenos al oficio."
+    },
+    {
+      "id": "pasajeros-protectores",
+      "name": "Pasajeros tallados: figuras humanas y animales",
+      "kind": "colectivo",
+      "myths": [
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cada pasajero acompaña y protege al dueño de la barca y su selección expresa relaciones que el benkhuun conoce: no son adorno. Gramática de conjunto de figuras talladas. El canon prohíbe llamarlas ídolos, juguetes o equivalentes de objetos ajenos, y prohíbe leerlas como retratos de espíritus."
+    },
+    {
+      "id": "barca-o-chingo-suspendida",
+      "name": "Barca pequeña o chingo suspendida en la rogativa",
+      "kind": "objeto",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ficha aparte por mandato explícito del canon, que conserva la diferencia y prohíbe declararla el mismo objeto que la barca de iniciación: esta cuelga en el centro de la vivienda ceremonial, se percute con dos percutores y su golpe sirvió para comunicar a distancia la presencia de un animal peligroso. Aparece en los dos relatos del ciclo."
+    },
+    {
+      "id": "lideresa-de-la-rogativa",
+      "name": "Mujer que lidera el ruego",
+      "kind": "personaje",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce la ceremonia en los dos relatos del ciclo: ocupa el centro y golpea la barca con dos percutores mientras las demás mujeres se reúnen alrededor. Está en los prompts de ambas páginas. El liderazgo femenino es el dato que la fuente comunitaria subraya y la hoja tiene que sostenerlo."
+    },
+    {
+      "id": "mujeres-de-la-rogativa",
+      "name": "Mujeres que rodean el centro",
+      "kind": "colectivo",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "Ocupan el centro de la acción, pero lo que hay que fijar es su disposición en el espacio, y eso pertenece al modelo de la vivienda ceremonial. Sus cuerpos salen de la gramática de la comunidad."
+    },
+    {
+      "id": "hombres-que-se-ubican-afuera",
+      "name": "Hombres ubicados más afuera del círculo",
+      "kind": "colectivo",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "La fuente sólo registra su posición relativa; la disposición la resuelve la vivienda ceremonial y los cuerpos, la comunidad."
+    },
+    {
+      "id": "cuatro-flautistas",
+      "name": "Cuatro hombres que acompañan con flautas",
+      "kind": "colectivo",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparecen en los dos relatos del ciclo con un dato preciso y repetido: son cuatro y tocan flautas o carrizos de diferentes tamaños. Están en los prompts de ambas páginas. Gramática de conjunto, no cuatro retratos."
+    },
+    {
+      "id": "flautas-y-carrizos",
+      "name": "Flautas o carrizos de diferentes tamaños",
+      "kind": "objeto",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparecen en los dos relatos y tienen organología documentada: cuatro tamaños distintos. No son utilería porque el relato hace de su pérdida un hecho narrado: el desplazamiento se llevó los instrumentos y los materiales para fabricar los carrizos."
+    },
+    {
+      "id": "materiales-para-fabricar-carrizos",
+      "name": "Materiales para fabricar los carrizos",
+      "kind": "planta",
+      "myths": [
+        "el-baston-de-sueno"
+      ],
+      "decision": "embedded",
+      "covered_by": "flautas-y-carrizos",
+      "sheets": 0,
+      "note": "El relato los nombra sólo como lo que se perdió con el desplazamiento, sin identificar la planta. Se resuelven dentro de la ficha del instrumento."
+    },
+    {
+      "id": "vivienda-ceremonial",
+      "name": "Vivienda ceremonial de la rogativa",
+      "kind": "arquitectura",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto en los dos relatos del ciclo y no intercambiable con la casa común: es el lugar propio que la comunidad necesitaba, con la barca colgada en el centro, las mujeres alrededor y los hombres más afuera. El relato registra además que se perdió y que la rogativa continuó en una casa que no había sido construida para ella; el modelo espacial debe poder mostrar las dos situaciones."
+    },
+    {
+      "id": "sueno-de-los-antepasados",
+      "name": "Sueño que comunica los motivos",
+      "kind": "fenomeno",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato y reaparece en el otro: por él los antepasados hacen saber que hay que reunirse, y por él se forma el benkhuun. Los dos prompts lo resuelven como ondas abstractas sobre un río nocturno, no como visión figurativa, y la regla del fenómeno existe para mantener esa abstracción."
+    },
+    {
+      "id": "antepasados",
+      "name": "Antepasados que comunican por sueños",
+      "kind": "colectivo",
+      "myths": [
+        "el-baston-de-sueno"
+      ],
+      "decision": "embedded",
+      "covered_by": "sueno-de-los-antepasados",
+      "sheets": 0,
+      "note": "Nunca aparecen con cuerpo: lo que el relato muestra es el mensaje al despertar. Los prompts los resuelven como ondas abstractas y no como figuras, así que se cubren dentro de la regla del sueño."
+    },
+    {
+      "id": "desplazamiento-forzado",
+      "name": "Desplazamiento forzado y el regreso",
+      "kind": "fenomeno",
+      "myths": [
+        "el-baston-de-sueno"
+      ],
+      "decision": "excluded",
+      "reason": "no se visualiza: causa histórica, no escena",
+      "sheets": 0,
+      "note": "Verificado: el relato lo narra como lo que interrumpió la permanencia, se llevó la vivienda ceremonial, los instrumentos y los materiales, y redujo la frecuencia de la rogativa. Es contexto histórico y ninguno de los dos prompts lo representa. Su huella se produce como estado de la vivienda ceremonial, no como escena de violencia."
+    },
+    {
+      "id": "baston-espiritu-pez-y-nina-enferma",
+      "name": "Bastón luminoso, espíritu con forma de pez y niña enferma",
+      "kind": "objeto",
+      "myths": [
+        "el-baston-de-sueno"
+      ],
+      "decision": "excluded",
+      "reason": "retirado por la edición: invención no acreditada",
+      "sheets": 0,
+      "note": "Verificado en historia y research_notes: la página anterior era un mito original sobre un joven, una niña enferma, un bastón luminoso y un espíritu con forma de pez, y ninguna fuente lo acredita como relato Wounaan. Los prompts existentes dicen «sin bastón mágico literal». No entra al inventario por ninguna vía."
+    },
+    {
+      "id": "oposicion-de-dos-tintas",
+      "name": "Oposición de jagua negra y achiote rojo y la prueba iniciática",
+      "kind": "objeto",
+      "myths": [
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "excluded",
+      "reason": "retirado por la edición: invención no acreditada",
+      "sheets": 0,
+      "note": "Verificado en versiones: la antigua «barca de dos tintas» añadía un maestro, un aprendiz y una prueba de poder entre jagua y achiote. El canon reconoce que la jagua tiene usos Wounaan documentados pero que esa combinación argumental no está en las fuentes directas de la barca. No se conserva como tradición."
+    },
+    {
+      "id": "weguer-werregue",
+      "name": "Weguer o wérregue, palma espinosa",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato: la palma que Dosat hace frente al chontaduro de Ewandam, espinosa, con un cogollo que guarda fibras largas y resistentes. Está en los dos prompts. Las grafías weguer, wérregue, werregue y güérregue son de documentos distintos y no son plantas diferentes."
+    },
+    {
+      "id": "cogollo-del-weguer",
+      "name": "Cogollo del que se extraen las fibras",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "weguer-werregue",
+      "sheets": 0,
+      "note": "Hay que entrar entre las espinas para extraerlo; es parte de la misma ficha botánica, en su fase de aprovechamiento."
+    },
+    {
+      "id": "canasto-de-werregue",
+      "name": "Canasto tejido en rollo de wérregue",
+      "kind": "objeto",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ficha con una restricción dura, y esa restricción es su razón de ser: se usa la forma documentada de la pieza —silueta, proporción, tejido en rollo, espiral— y jamás un patrón real, porque los diseños de la cestería werregue son identidad y son sustento de las artesanas. La hoja debe llevar escrita esa prohibición para que ningún prompt posterior la pierda."
+    },
+    {
+      "id": "fibras-de-werregue",
+      "name": "Fibras secadas, teñidas y enrolladas",
+      "kind": "objeto",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "canasto-de-werregue",
+      "sheets": 0,
+      "note": "Las familias las secan, las tiñen y las enrollan hasta formar canastos; es la fase previa del mismo objeto y el prompt vertical la muestra ascendiendo hacia la pieza tejida."
+    },
+    {
+      "id": "patron-de-la-cesteria-werregue",
+      "name": "Diseños y patrones de la cestería werregue",
+      "kind": "objeto",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado contra el relato y el referencial de cestería citado: el expediente habla del oficio, la preparación de las fibras y el tejido en rollo, nunca de un diseño concreto. Reproducir un patrón real sería tomar la identidad y el sustento de las artesanas. El lenguaje del oficio sí entra; el ejemplar no."
+    },
+    {
+      "id": "chontaduro",
+      "name": "Chontaduro",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el término de comparación sin el cual el weguer no se entiende: Ewandam lo crea y Dosat responde con la palma espinosa; el chontaduro sigue dando fruto y el weguer da fibra. Está en el prompt horizontal. Sin las dos palmas juntas la competencia se vuelve genérica."
+    },
+    {
+      "id": "plantas-contrastantes-platano-y-cana",
+      "name": "Plátano de Dios y platanillo, caña de azúcar y caña brava",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una sola lámina comparativa para los dos primeros pares. El canon insiste en conservar las parejas nombradas para que el episodio no se vuelva una competencia creadora genérica, pero el relato nunca las escenifica por separado: lo que hace falta es poder distinguir la planta de Ewandam de la respuesta de Dosat en un mismo plano."
+    },
+    {
+      "id": "platano-de-dios",
+      "name": "Plátano de Dios",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "plantas-contrastantes-platano-y-cana",
+      "sheets": 0,
+      "note": "Primer regalo de Ewandam, que crecía sin que tuvieran que cultivarlo. Miembro de la lámina comparativa ya fichada."
+    },
+    {
+      "id": "platanillo",
+      "name": "Platanillo",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "plantas-contrastantes-platano-y-cana",
+      "sheets": 0,
+      "note": "Respuesta de Dosat al plátano; parecida y distinta. Miembro de la lámina comparativa."
+    },
+    {
+      "id": "cana-de-azucar",
+      "name": "Caña de azúcar",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "plantas-contrastantes-platano-y-cana",
+      "sheets": 0,
+      "note": "Segunda planta de Ewandam en la competencia. Miembro de la lámina comparativa."
+    },
+    {
+      "id": "cana-brava",
+      "name": "Caña brava",
+      "kind": "planta",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "plantas-contrastantes-platano-y-cana",
+      "sheets": 0,
+      "note": "Respuesta de Dosat a la caña de azúcar. Miembro de la lámina comparativa."
+    },
+    {
+      "id": "prueba-de-salar-el-mar",
+      "name": "Prueba de salar el mar",
+      "kind": "fenomeno",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el desenlace de la competencia y no se reduce a sus objetos: Dosat arroja una carga entera transportada en barco y no consigue nada, y Ewandam da sal a toda el agua marina con una sola cucharada. El prompt horizontal pide exactamente esa desproporción, con la pequeña cuchara volviéndose ondas blancas. Regla de fenómeno, no bodegón."
+    },
+    {
+      "id": "hijos-de-ewandam",
+      "name": "Hijos de Ewandam que aprenden a cultivar",
+      "kind": "colectivo",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "Son los Wounaan a quienes Dosat pregunta por qué no trabajan y a quienes enseña a preparar la tierra y sembrar. Mismo colectivo ya fichado."
+    },
+    {
+      "id": "familias-que-tejen",
+      "name": "Familias y artesanas que preparan la fibra",
+      "kind": "colectivo",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "Aprenden a entrar entre las espinas, extraer el cogollo y tejer; el prompt horizontal pide manos Wounaan tejiendo al fondo. Mismo colectivo, con el oficio como acción."
+    },
+    {
+      "id": "tierra-preparada-para-sembrar",
+      "name": "Tierra preparada y sembrada",
+      "kind": "lugar",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio-y-selva-del-pacifico",
+      "sheets": 0,
+      "note": "El relato escenifica la enseñanza del cultivo, no la parcela; no hay descripción del terreno. Se resuelve dentro del modelo de entorno."
+    },
+    {
+      "id": "anciana-madre-name",
+      "name": "Anciana que lleva los ñames",
+      "kind": "personaje",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el relato que lleva su nombre: llega con los ñames, obliga a comer, es enfrentada y de su cuerpo enterrado brota el cultivo. Se ficha viva y llegando con los ñames, que es exactamente lo que pide el prompt horizontal. El canon advierte que no es una diosa ni una doctrina sobre la maternidad: alimenta y amenaza a la vez."
+    },
+    {
+      "id": "name",
+      "name": "Ñame: enredadera y raíces blancas y rojas",
+      "kind": "planta",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ficha botánica completa del cultivo que el relato explica: la enredadera que brota sobre la sepultura y extiende sus hojas, y las raíces grandes, unas blancas y otras rojas, que las familias reparten y siembran. Los dos colores son el detalle documentado y la hoja no puede perderlos. Es el sujeto del prompt vertical."
+    },
+    {
+      "id": "enredadera-sobre-la-sepultura",
+      "name": "Enredadera brotada sobre la sepultura",
+      "kind": "planta",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "name",
+      "sheets": 0,
+      "note": "Fase de la misma ficha botánica; el prompt exige mostrarla sin tumba explícita, así que la planta se dibuja sobre tierra húmeda junto al río."
+    },
+    {
+      "id": "raices-blancas-y-rojas",
+      "name": "Raíces blancas y rojas",
+      "kind": "planta",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "name",
+      "sheets": 0,
+      "note": "Lo que las mujeres encuentran al remover la tierra y lo que cada familia se lleva a sembrar. Parte de la misma ficha botánica."
+    },
+    {
+      "id": "names-que-trae-la-anciana",
+      "name": "Ñames que la anciana lleva a la casa",
+      "kind": "planta",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "name",
+      "sheets": 0,
+      "note": "Los tubérculos con que llega y ordena cocinar, antes de que el cultivo exista en las tierras de la gente. Misma ficha botánica, otro momento."
+    },
+    {
+      "id": "ninos-obligados-a-comer",
+      "name": "Niños obligados a comer hasta morir",
+      "kind": "colectivo",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Verificado contra el relato, que narra la muerte sin detalle gráfico, y contra los dos prompts, que dicen literalmente «sin representar muerte, arma o daño infantil». Pertenece al núcleo narrado y no al inventario visual."
+    },
+    {
+      "id": "lanza-del-joven",
+      "name": "Lanza con que el joven la hiere",
+      "kind": "objeto",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Verificado: el relato dice que sale del escondite y la enfrenta con una lanza. Los dos prompts prohíben expresamente el arma. No se ficha ni siquiera como utilería."
+    },
+    {
+      "id": "sepultura-rio-abajo",
+      "name": "Sepultura río abajo",
+      "kind": "lugar",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Verificado: llevan el cuerpo río abajo, lo entierran y cubren la tierra. El prompt vertical exige «sin tumba explícita». El lugar sí se dibuja —tierra húmeda junto al río donde brota la enredadera— pero se produce desde el modelo de entorno, no como una ficha de tumba."
+    },
+    {
+      "id": "joven-que-enfrenta-a-la-anciana",
+      "name": "Joven que la espera y la enfrenta",
+      "kind": "personaje",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "Conduce el giro del relato pero no tiene un solo rasgo en la fuente, y la escena en que actúa está excluida de la producción visual. Se resuelve desde la gramática de la comunidad."
+    },
+    {
+      "id": "hijo-que-escapa",
+      "name": "Hijo que logró escapar y contar lo ocurrido",
+      "kind": "personaje",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "Su función es narrativa —trae la noticia— y no tiene descripción. Gramática de la comunidad."
+    },
+    {
+      "id": "padre-y-madre-de-los-ninos",
+      "name": "Padre y madre que salen de la casa",
+      "kind": "colectivo",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "Salen dos veces y vuelven; identificados sólo por parentesco. Gramática de la comunidad."
+    },
+    {
+      "id": "mujeres-que-remueven-la-tierra",
+      "name": "Mujeres que van a mirar y remueven la tierra",
+      "kind": "colectivo",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad-wounaan",
+      "sheets": 0,
+      "note": "Encuentran las raíces grandes y abren el reparto; sin rasgos propios. Gramática de la comunidad, que el prompt vertical muestra recogiendo y compartiendo."
+    },
+    {
+      "id": "comunidad-wounaan",
+      "name": "Comunidad Wounaan",
+      "kind": "colectivo",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas",
+        "la-sal-del-weguer",
+        "las-manos-de-barro",
+        "madre-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Está en los cinco relatos y absorbe a casi todo el elenco sin cuerpo propio: mujeres de la rogativa, hombres afuera, hijos de Ewandam, artesanas, padres, el joven de la lanza. Su gramática debe cerrar la puerta a la iconografía emberá y a tocados panindígenas, que es el riesgo específico de esta comunidad."
+    },
+    {
+      "id": "casa-wounaan-sobre-pilotes",
+      "name": "Casa Wounaan sobre pilotes",
+      "kind": "arquitectura",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas",
+        "madre-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reaparece en tres relatos con cuerpo reconocible: la vivienda del río donde cuelga la barca en el prompt horizontal de la barca, la casa a la que la comunidad vuelve a reunirse tras el regreso, y la casa de Puerto Pizario donde esperan los niños. Es la arquitectura que identifica a esta comunidad y no es la vivienda ceremonial, que tiene ficha aparte."
+    },
+    {
+      "id": "rio-y-selva-del-pacifico",
+      "name": "Ríos y selva húmeda del Pacífico",
+      "kind": "paisaje",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas",
+        "la-sal-del-weguer",
+        "las-manos-de-barro",
+        "madre-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Modelo de entorno de los cinco relatos: el Baudó, el Bajo San Juan y Puerto Pizario, con río nocturno, selva húmeda, orillas y relieve. Recoge también el sol y la luna, las montañas, la tierra sembrada y el sitio río abajo donde brota la enredadera, para que ninguno de esos elementos se resuelva por separado."
+    },
+    {
+      "id": "percutores",
+      "name": "Dos percutores",
+      "kind": "objeto",
+      "myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_wounaan",
+      "sheets": 0,
+      "note": "Con ellos la lideresa golpea la barca suspendida en los dos relatos del ciclo. Objeto menor pero constante: la hoja de utilería debe fijar su forma para que la ceremonia sea consistente entre páginas."
+    },
+    {
+      "id": "fogon",
+      "name": "Fogón de la casa",
+      "kind": "objeto",
+      "myths": [
+        "madre-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_wounaan",
+      "sheets": 0,
+      "note": "Los niños lo encienden para cocinar los ñames y está en el prompt horizontal. Objeto menor."
+    },
+    {
+      "id": "machete-y-hacha",
+      "name": "Machete y hacha que lleva Dosat",
+      "kind": "objeto",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_wounaan",
+      "sheets": 0,
+      "note": "Son lo que cambia la vida de los hijos de Ewandam, así que importan; pero son dos herramientas y no una entidad con acto propio. Ojo de época: son herramientas de metal dentro de un relato con mediación colonial declarada, y la hoja debe resolverlas sin convertirlas en utillaje europeo de catálogo."
+    },
+    {
+      "id": "cuchara-de-sal",
+      "name": "Cucharada con que Ewandam sala el mar",
+      "kind": "objeto",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_wounaan",
+      "sheets": 0,
+      "note": "Está en el prompt horizontal como el gesto mínimo que vence a la carga entera. La desproporción la resuelve la regla del fenómeno; la forma de la medida, la hoja de utilería."
+    },
+    {
+      "id": "barco-de-la-sal",
+      "name": "Barco con que Dosat transporta la sal",
+      "kind": "objeto",
+      "myths": [
+        "la-sal-del-weguer"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_wounaan",
+      "sheets": 0,
+      "note": "Ninguna fuente dice qué embarcación es y el objeto arrastra la mediación colonial que el canon pide hacer visible sin convertirla en esencia diabólica. Va a utilería con advertencia de época: la hoja debe declarar qué se dibuja y por qué, en vez de que cada prompt improvise un galeón."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_wounaan",
+      "kind": "objeto",
+      "covers": [
+        "percutores",
+        "fogon",
+        "machete-y-hacha",
+        "cuchara-de-sal",
+        "barco-de-la-sal"
+      ],
+      "sheets": 1,
+      "note": "Los cinco objetos menores del corpus: los percutores de la rogativa, el fogón de Puerto Pizario, las herramientas que trae Dosat, la cucharada de la sal y la embarcación de la carga. Una sola hoja fija forma, escala y —en los tres últimos— la lectura de época, que es donde este corpus se puede equivocar más caro."
+    }
+  ],
+  "totals": {
+    "entities": 70,
+    "required": 25,
+    "embedded": 32,
+    "excluded": 13,
+    "sheets": 27
+  }
+}

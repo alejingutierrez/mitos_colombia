@@ -1,0 +1,255 @@
+{
+  "id": "eperara-siapidara",
+  "label": "Eperara Siapidara",
+  "pages": 2,
+  "canon_pages": 2,
+  "read_note": "Leí los dos mitos congelados con sus cuatro campos y editorial/eperara/{universe,records,sources}.mjs. Los textos del módulo y del canon coinciden, así que aquí no hay la trampa que sí tiene Yukpa. Sorprende que los dos relatos, siendo de la misma Ley de Origen y del mismo narrador (Fabriciano Obispo, Plan de Vida ACIESNA 2005), casi no comparten entidades: sólo Tachi Akhore y la gente. Uno levanta personas de estacas de palma; el otro tumba un árbol que contiene toda el agua. Eso encarece la biblia respecto a lo que dos páginas sugieren. Segundo hallazgo: los dos relatos son recortes declarados de ciclos más largos (la inundación y la escalera de oro después del primero; las mareas y la competencia para salar el mar después del segundo), y el módulo dice expresamente que esos episodios no se trasladan a estas páginas: los dejé excluded para que nadie ilustre una escalera de oro que no está en el relato. Tercero: la versión de Lina Quiroz publicada por Carrasco usa otros materiales (figuras de barro, chonta, caña brava) y otra explicación de la diversidad; la edición no la sigue, así que esos materiales quedan excluded y no se mezclan con las estacas de werre. Quedó dudoso el tratamiento de «en aquel tiempo los animales todavía eran personas»: es una regla del mundo que gobierna cómo se dibuja Hesaa, pero con un solo caso en el relato no justifica lámina propia y la embebo en su ficha. También quedó dudoso si la casa de Tachi Nawe merece ficha: se vuelve a ella dos veces pero nunca se describe y el acto no ocurre ahí, así que la excluyo antes que inventar una arquitectura Eperara.",
+  "entities": [
+    {
+      "id": "tachi_nawe",
+      "name": "Tachi Nawe",
+      "kind": "deidad_fuerza",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Habita sola el firmamento, concibe sin hombre, ordena sembrar y cortar la palma y entrega el rejo a medianoche. Conduce todas las decisiones del relato."
+    },
+    {
+      "id": "tachi_akhore",
+      "name": "Tachi Akhore",
+      "kind": "deidad_fuerza",
+      "myths": ["origen-del-pueblo-eperara", "tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Único personaje compartido por los dos relatos: prepara las estacas y llama a la gente en uno, crea el árbol del agua y convoca la minga en el otro. El relato narra su nacimiento como niño pero su forma actuante es siempre la de joven adulto; no le doy hoja de estado por eso."
+    },
+    {
+      "id": "palma_werre_chontaduro",
+      "name": "Palma de werre o chontaduro",
+      "kind": "planta",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se siembra, se observa crecer y se corta: es el objeto por el que se cuenta el relato. Especie concreta con espinas y porte propios; sin ficha botánica se dibuja una palmera genérica."
+    },
+    {
+      "id": "estacas_de_palma",
+      "name": "Estacas puntiagudas con fibras, clavadas en hileras",
+      "kind": "objeto",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "No es utilería menor: son la gente antes de ser gente. El relato detalla su forma (delgadas, puntiagudas, con fibras amarradas) y su disposición en hileras sobre la playa; el clímax es verlas levantarse."
+    },
+    {
+      "id": "gente_eperara",
+      "name": "Gente Eperara (los que se levantan de las estacas y los que sostienen la minga)",
+      "kind": "colectivo",
+      "myths": ["origen-del-pueblo-eperara", "tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una sola gramática de grupo para los dos relatos: son el mismo pueblo en dos momentos (la playa llena de voces y la minga que golpea el tronco sin descanso). Fija cuerpos, edades y vestuario sobrio, sin tocados panindígenas."
+    },
+    {
+      "id": "playa_pizarro",
+      "name": "Playa Pizarro, en la desembocadura del Baudó",
+      "kind": "lugar",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario nombrado y no intercambiable: playa larga en boca de río, donde caben las hileras de estacas. El relato la identifica explícitamente y el canon advierte que la categoría del sitio dice Nariño pero la Ley de Origen dice Pizarro, Chocó."
+    },
+    {
+      "id": "pania_pakuru",
+      "name": "Pania Pak'uru, el árbol del agua",
+      "kind": "planta",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["caido_convertido_en_aguas"],
+      "note": "Objeto del relato: contiene toda el agua, se cierra cada noche y al caer reparte tronco, ramas, hojas y raíz en río, quebradas, lagunas y mar. El estado caído está mostrado y cambia por completo la silueta, así que cuesta hoja aparte."
+    },
+    {
+      "id": "hesaa_la_conga",
+      "name": "Hesaa, la Conga",
+      "kind": "personaje",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["hormiga_conga"],
+      "note": "Guardiana mezquina del árbol y motor del conflicto. La transformación está mostrada (Tachi Akhore le aprieta la cintura y queda negra, de cintura delgada, cargando agua en la boca): cambia la silueta y cuesta hoja de estado."
+    },
+    {
+      "id": "pericos_perezosos",
+      "name": "Los dos pericos perezosos",
+      "kind": "animal",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reciben un encargo y su fracaso mueve la trama (quedan tendidos de espaldas y el árbol amanece entero); ese fracaso es lo que obliga a trabajar sin descanso. Estar patas arriba es una pose, no un estado: una sola hoja."
+    },
+    {
+      "id": "aguas_del_pacifico",
+      "name": "Mundo de aguas del Pacífico (río mayor, quebradas, lagunas, mar y manglar)",
+      "kind": "paisaje",
+      "myths": ["origen-del-pueblo-eperara", "tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Modelo de entorno de los dos relatos y resultado del segundo. Debe llevar declarado el estado previo, la tierra seca, como variante del mismo modelo."
+    },
+    {
+      "id": "firmamento_oscuro_inicial",
+      "name": "Firmamento oscuro y vacío del comienzo",
+      "kind": "fenomeno",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "embedded",
+      "covered_by": "playa_pizarro",
+      "sheets": 0,
+      "note": "El relato no lo describe más allá de «oscuro y vacío»; es la iluminación nocturna de la misma playa, que además es la escena vertical aprobada."
+    },
+    {
+      "id": "tierra_seca_inicial",
+      "name": "La tierra seca antes del agua",
+      "kind": "paisaje",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "embedded",
+      "covered_by": "aguas_del_pacifico",
+      "sheets": 0,
+      "note": "Es el mismo modelo de entorno sin agua, no otro paisaje. El relato no lo describe como desierto sino como un mundo con sed."
+    },
+    {
+      "id": "cinco_grupos_eperara",
+      "name": "Los cinco grupos (Eperara Siapidara, Sitarapidara, Nukhipidaara, Nonamapidaara, Werrepidara)",
+      "kind": "colectivo",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "embedded",
+      "covered_by": "gente_eperara",
+      "sheets": 0,
+      "note": "El relato los nombra pero no les da rasgos distintos, y el canon advierte que las grafías varían y que no se usan para decidir identidades actuales. Inventar cinco diseños diferenciados sería inventar marcas étnicas."
+    },
+    {
+      "id": "animales_que_eran_personas",
+      "name": "El tiempo en que los animales todavía eran personas",
+      "kind": "fenomeno",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "embedded",
+      "covered_by": "hesaa_la_conga",
+      "sheets": 0,
+      "note": "Regla del mundo enunciada en una línea y demostrada por un solo caso. La hoja de dos estados de Hesaa la prueba; una lámina de regla aparte no agregaría nada dibujable."
+    },
+    {
+      "id": "rejo_de_yare",
+      "name": "Rejo de yaré",
+      "kind": "objeto",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_eperara",
+      "sheets": 0,
+      "note": "Objeto menor entregado a medianoche; acompaña los cuatro golpes y el llamado."
+    },
+    {
+      "id": "fibras_de_palma",
+      "name": "Fibras de palma amarradas a las estacas",
+      "kind": "objeto",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_eperara",
+      "sheets": 0,
+      "note": "Material menor, pero nombrado dos veces y decisivo para la textura de las estacas."
+    },
+    {
+      "id": "hachas_de_la_minga",
+      "name": "Hachas de la minga",
+      "kind": "objeto",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_eperara",
+      "sheets": 0,
+      "note": "«Todos llevaron sus hachas»: herramienta repetida y presente en las dos ilustraciones conservadas."
+    },
+    {
+      "id": "jugo_de_granadilla",
+      "name": "Jugo de granadilla y su recipiente",
+      "kind": "objeto",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_eperara",
+      "sheets": 0,
+      "note": "Único alimento nombrado del relato; el recipiente no se describe y debe resolverse como utilería sobria, no como objeto ceremonial."
+    },
+    {
+      "id": "casa_de_tachi_nawe",
+      "name": "La casa a la que regresa Tachi Akhore",
+      "kind": "arquitectura",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: el relato la nombra dos veces sin describirla y ningún acto del relato ocurre allí; dibujarla sería inventar una arquitectura Eperara",
+      "sheets": 0,
+      "note": "Si un keyframe la necesita, debe salir de investigación de cultura material declarada, no de este relato."
+    },
+    {
+      "id": "figuras_de_barro_chonta_y_cana_brava",
+      "name": "Figuras de barro, chonta y caña brava (versión de Lina Quiroz)",
+      "kind": "objeto",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "excluded",
+      "reason": "variante documentada que esta edición no sigue: la página sigue al Plan de Vida (estacas de werre con fibras) y mezclar materiales fundiría dos versiones",
+      "sheets": 0,
+      "note": "Detectada en la séptima pasada. En esa versión de la chonta salen personas negras y de la caña brava los Épera; ilustrarlo aquí impondría una explicación de la diversidad que esta página no adopta."
+    },
+    {
+      "id": "escalera_de_oro_y_la_inundacion",
+      "name": "La inundación y la escalera de oro",
+      "kind": "objeto",
+      "myths": ["origen-del-pueblo-eperara"],
+      "decision": "excluded",
+      "reason": "se mencionan pero nunca se ven: el relato declara que son la continuación del ciclo y esta página se detiene antes",
+      "sheets": 0,
+      "note": "El oro es además un imán de estereotipo; el módulo prohíbe oro en las ilustraciones de este frente."
+    },
+    {
+      "id": "mareas_y_competencia_para_salar_el_mar",
+      "name": "El curso de los ríos, la marea y la competencia para salar el mar",
+      "kind": "fenomeno",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "excluded",
+      "reason": "se mencionan pero nunca se ven: episodios posteriores del ciclo que la página registra sin narrar",
+      "sheets": 0,
+      "note": "El canon advierte expresamente que no se trasladan al desenlace «para fabricar una sola moraleja»."
+    },
+    {
+      "id": "joven_ambicioso_y_el_estero_de_mangle",
+      "name": "El joven ambicioso, el machete y el estero de mangle («la palabra de mangle»)",
+      "kind": "personaje",
+      "myths": ["tachi-akhore-y-la-palabra-de-mangle"],
+      "decision": "excluded",
+      "reason": "invención editorial retirada: la trama anterior de esa URL era una construcción nueva reconocida en su propio expediente y fue reemplazada por el núcleo tradicional",
+      "sheets": 0,
+      "note": "Sobrevive sólo en el slug. Ojo al producir: el título de la URL sigue diciendo «palabra de mangle» y puede arrastrar al ilustrador hacia el manglar y el machete en vez del árbol del agua y la minga."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_eperara",
+      "kind": "objeto",
+      "covers": ["rejo_de_yare", "fibras_de_palma", "hachas_de_la_minga", "jugo_de_granadilla"],
+      "sheets": 1,
+      "note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas."
+    }
+  ],
+  "totals": {
+    "entities": 23,
+    "required": 10,
+    "embedded": 8,
+    "excluded": 5,
+    "sheets": 13
+  }
+}

@@ -1,0 +1,1631 @@
+{
+  "id": "andoque",
+  "label": "Andoque, Gente del Hacha",
+  "pages": 14,
+  "canon_pages": 14,
+  "read_note": "Leí los catorce mitos completos del corpus congelado andoque (sha256 28cbc084..., 2026-09-18) en sus cuatro campos, más editorial/andoque/universe.mjs y las veintiocho escenas horizontal/vertical de definitions.mjs. Sorpresas: (1) el corpus NO contiene coca, tabaco, yuruparí ni pinturas faciales —cero ocurrencias verificadas—, así que la lista de sensibilidades del encargo sólo aplica al interior de la maloca y al baile, y esos nunca se describen; el único baile es el de niños en una playa. (2) El «árbol de la abundancia» tampoco está como tal: lo que atraviesa el corpus son cuatro troncos distintos —el hueco del higuerón, el Palo Hablador, el árbol tona y el madi— que no se pueden fusionar en una ficha sin mentir; el hacha en cambio sí es transversal como emblema. (3) El mayor ahorro real vino de la fauna: treinta y pico de bichos caben en dos gramáticas de grupo, y de los cuatro relatos de memoria histórica (Casa Arana y los dos retornos, más Los grupos de mi juventud), que comparten una sola gramática de época cauchera. Quedó dudoso: Doña Sueño y Canoa-de-opái están en el límite —la primera la dejé required porque el sueño sale de ella, el segundo lo embebí porque no vuelve a intervenir—; y Plumón-amarillo y Plumón-de-fiebre quedan required por decisión editorial declarada aunque su evidencia corporal sea nula, lo que el contrato de modelo tendrá que declarar.",
+  "entities": [
+    {
+      "id": "nenefi",
+      "name": "Nenefi",
+      "kind": "personaje",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Prepara la trampa del águila, lleva al hijo a la maloca y talla la flauta; en la guerra del Palo Hablador sus dos hijos abren el episodio y él pide la espada a Trueno. Dos relatos, cuerpo reconocible."
+    },
+    {
+      "id": "dona_cucarron_de_vida",
+      "name": "Doña Cucarrón-de-vida",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Madre de los Andoque y primera antes de la gente: construye la casa que llega al cielo, sube alimentos sobre la creciente, trae tierra dos veces y moldea plantas, animales y gente. Conduce toda la segunda mitad del ciclo."
+    },
+    {
+      "id": "canoa_de_piedra",
+      "name": "Canoa-de-Piedra",
+      "kind": "personaje",
+      "myths": [
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Protagonista que toma caldo de yuca, se interna en el monte, habla con la gente de abajo, recibe hierbas y vuelve a avisar a sus hermanos. Es el primero que nombra ese ámbito."
+    },
+    {
+      "id": "plumon_amarillo",
+      "name": "Plumón-amarillo",
+      "kind": "personaje",
+      "myths": [
+        "el-retorno-de-plumon-amarillo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Autoridad que junta a los sobrevivientes dispersos tras el sistema cauchero. Es el sujeto del título y de la única acción del relato. Evidencia corporal nula: el contrato tendrá que declararlo."
+    },
+    {
+      "id": "plumon_de_fiebre",
+      "name": "Plumón-de-fiebre",
+      "kind": "personaje",
+      "myths": [
+        "el-retorno-de-plumon-de-fiebre"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Figura del segundo retorno, mantenida distinta de Plumón-amarillo por decisión editorial explícita (universe.mjs, plumonStories.keep-distinct). Reúne y permite volver a ser gente. Evidencia corporal nula."
+    },
+    {
+      "id": "sol",
+      "name": "Sol",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nace del huevo de la torcaza, ordena marcar al visitante nocturno, arma la trampa del tronco, pesca con barbasco y se retira al oriente. Conduce el relato entero."
+    },
+    {
+      "id": "luna",
+      "name": "Luna",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Queda marcado por el tinte, es encerrado en el tronco, forma la mujer de balso y parte tras su hermano. Una sola hoja: la marca negra del rostro se fija como marcador de continuidad obligatorio del contrato, no como estado con hoja aparte, porque no cambia la silueta."
+    },
+    {
+      "id": "cortador",
+      "name": "Cortador",
+      "kind": "personaje",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Llega con su hacha, abre el tronco y ayuda a terminar la mujer de balso. Resuelve dos actos decisivos."
+    },
+    {
+      "id": "mujer_de_balso",
+      "name": "La mujer de balso",
+      "kind": "personaje",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Primera mujer formada en escena con madera de balso; sus astillas y sobrantes se transforman en aves, piedras y peces. Una sola hoja: el desbaste y la figura terminada son derivables del mismo cuerpo y del mismo material."
+    },
+    {
+      "id": "huevo_de_chupaflor",
+      "name": "Huevo-de-chupaflor",
+      "kind": "personaje",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nace de un huevo de colibrí y queda tuerto, interroga a las aves, mata a sabudui y roba el fuego escapando por la atarraya quemada. Una sola hoja: el ojo herido es marcador de continuidad obligatorio del contrato, no un estado aparte."
+    },
+    {
+      "id": "trueno_de_piedra",
+      "name": "Trueno-de-piedra",
+      "kind": "personaje",
+      "myths": [
+        "la-brujeria-de-la-danta",
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se enfrenta al especialista huitoto y le quita el guayuco; en la guerra cambia la espada falsa por la verdadera y parte el tronco con el relámpago. Hijo de Trueno y sobrino de Garza-de-centro. Dos relatos."
+    },
+    {
+      "id": "especialista_huitoto",
+      "name": "El especialista huitoto",
+      "kind": "personaje",
+      "myths": [
+        "la-brujeria-de-la-danta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se presenta como jaguar, persigue, pierde el guayuco, negocia su devolución y enseña el uso y la contra de una hierba. Habla, persigue y otorga."
+    },
+    {
+      "id": "garza_de_centro",
+      "name": "Garza-de-centro",
+      "kind": "personaje",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Recibe al visitante, lo hace respirar de nuevo y envía a los murciélagos por el sueño. Tío de Trueno-de-piedra."
+    },
+    {
+      "id": "garza_de_bocana",
+      "name": "Garza-de-bocana",
+      "kind": "personaje",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Visitante que cae al agua, muere, es revivido, oculta lo ocurrido y prepara la venganza que desata la guerra. Cuerpo distinto del de Garza-de-centro."
+    },
+    {
+      "id": "trueno",
+      "name": "Trueno",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dueño de la espada y de una maloca propia; entrega deliberadamente un arma falsa de balso y luego recibe el sueño en la nuca. Decide y engaña."
+    },
+    {
+      "id": "dona_sueno",
+      "name": "Doña Sueño",
+      "kind": "personaje",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Depositaria del sueño: los murciélagos y después Mochilero-de-candela viajan hasta ella y de ella sale el paquete. Otorga el recurso que decide la guerra; la escena editorial la nombra «la abuela»."
+    },
+    {
+      "id": "mochilero_de_candela",
+      "name": "Mochilero-de-candela",
+      "kind": "criatura",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Hace el segundo viaje, obedece la instrucción que los murciélagos desobedecieron y sopla el sueño sobre la nuca de Trueno. Acción decisiva y nombre propio."
+    },
+    {
+      "id": "cuero_negro",
+      "name": "Cuero-negro",
+      "kind": "criatura",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El gusano que habla desde el tronco y lanza flechas de astilla. La fuente corrige expresamente que no habla el palo sino él: sin su ficha el relato se malinterpreta."
+    },
+    {
+      "id": "seres_del_agua_de_sitakara",
+      "name": "Los seres del agua de Sitakara",
+      "kind": "criatura",
+      "myths": [
+        "las-sirenas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Pareja que sale del agua y se mezcla con los niños en el baile: figuras sin taparrabo y con cabello hasta la cintura. Una sola hoja cubre la forma masculina y la femenina, que la fuente no diferencia salvo por el sexo; el contrato prohíbe la cola de pez europea."
+    },
+    {
+      "id": "flor_de_guacamayo",
+      "name": "Flor-de-guacamayo",
+      "kind": "personaje",
+      "myths": [
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Capitán que recibe al peruano y avisa a otros grupos para que vayan a recoger mercancías. Es quien abre la cadena de coerción del relato."
+    },
+    {
+      "id": "el_visitante_desafiante",
+      "name": "El visitante que desafió al fantasma",
+      "kind": "personaje",
+      "myths": [
+        "los-fantasmas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Desoye las advertencias, desafía en voz alta y sostiene el encuentro nocturno. Es el sujeto del título y el punto de vista del arco verificable."
+    },
+    {
+      "id": "el_fantasma",
+      "name": "El fantasma",
+      "kind": "criatura",
+      "myths": [
+        "los-fantasmas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "No es sombra silenciosa: actúa, habla, convoca ayuda y pide un machete. Conduce la segunda mitad del relato."
+    },
+    {
+      "id": "mariposa_cara_de_fantasma",
+      "name": "Mariposa-cara-de-fantasma",
+      "kind": "criatura",
+      "myths": [
+        "los-fantasmas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Aliada nombrada a la que el fantasma pide el machete. Nombre propio y función en el pasaje consultable; la escena editorial ya la pone en cuadro."
+    },
+    {
+      "id": "gavilan_de_piriri",
+      "name": "Gavilán-de-piriri",
+      "kind": "personaje",
+      "myths": [
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Padre del narrador y capitán: reúne, reconoce y organiza a huérfanos y trabajadores. Es la entidad primaria de una ficha que por lo demás es geografía humana."
+    },
+    {
+      "id": "colectivo_gente_andoque_tiempo_de_origen",
+      "name": "Gente Andoque del tiempo de origen",
+      "kind": "colectivo",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de grupo para todos los cuerpos sin nombre del ciclo fundacional: adultos, mayores, niños, huérfanos que no son la pareja, la gente que amarra la pata del águila. Fija proporción, cabello y guayuco cotidiano SIN pintura corporal ni facial, que el corpus no documenta."
+    },
+    {
+      "id": "colectivo_gente_andoque_epoca_cauchera",
+      "name": "Gente Andoque de la época cauchera",
+      "kind": "colectivo",
+      "myths": [
+        "el-retorno-de-plumon-amarillo",
+        "el-retorno-de-plumon-de-fiebre",
+        "los-caucheros-de-la-casa-arana",
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Segunda gramática de grupo, obligada porque la cultura material del siglo XX no es la del tiempo de origen: sobrevivientes reagrupados, recolectores, capitanes de los grupos del Duché, gente deportada."
+    },
+    {
+      "id": "los_dos_huerfanos",
+      "name": "Los dos huérfanos",
+      "kind": "colectivo",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Pareja que desobedece la orden sobre los huesos, provoca el agua sin fin, pisa la semilla de tona y sube con el árbol diciendo que volverán a ser hombres. Dos relatos y acción decisiva."
+    },
+    {
+      "id": "gente_de_abajo",
+      "name": "La gente de abajo",
+      "kind": "colectivo",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Habitantes bajo tierra que preguntan, acusan a la gente del río Quinché y entregan hierbas. Hablan y otorgan; no son figurantes del paisaje subterráneo."
+    },
+    {
+      "id": "los_gigantes",
+      "name": "Los gigantes",
+      "kind": "colectivo",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "los-gigantes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gente anterior con grupos propios: recorren, nombran las corrientes y dibujan sobre la piedra. El gigante viajero se resuelve dentro de esta gramática."
+    },
+    {
+      "id": "los_quemadores",
+      "name": "Los Quemadores y los agentes de la Casa Arana",
+      "kind": "colectivo",
+      "myths": [
+        "la-guerra-del-palo-hablador",
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los blancos señalados como responsables de las matanzas; en el epílogo de Yiñefoque destruyen la gente de su padre. Dos relatos."
+    },
+    {
+      "id": "colectivo_asedio_del_palo_hablador",
+      "name": "El asedio del Palo Hablador",
+      "kind": "colectivo",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de grupo del sitio: la masa de gusanos que cubre el tronco, las avispas y hormigas que protegen la cepa, y los armadillos, aves y combatientes que intentan acercarse. Una sola hoja fija los dos bandos del enjambre."
+    },
+    {
+      "id": "colectivo_fauna_menor_del_monte",
+      "name": "Fauna menor del monte andoque",
+      "kind": "colectivo",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de grupo para la fauna pequeña que aparece sin conducir el relato: torcaza y su huevo, carpinteros, guacamayas del tronco, panguanas, tente, pava y pajuiles interrogados, colibríes, mico volador, sapo de la raíz, ranas comestibles. Aquí está el mayor ahorro del censo."
+    },
+    {
+      "id": "peces_y_pesca_del_rio",
+      "name": "Peces y pesca del río",
+      "kind": "colectivo",
+      "myths": [
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de los peces del corpus y de la pesca: el pez disputado en la pesca con barbasco, el pejedulce que traga el fuego, el caloche que rompe el cerco del Águila y las sardinas del amanecer. El caloche es el decisivo y la hoja debe individualizarlo."
+    },
+    {
+      "id": "los_dos_transformadores",
+      "name": "Los dos transformadores",
+      "kind": "colectivo",
+      "myths": [
+        "la-venganza-de-los-brujos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Pareja de especialistas que atacan comunidades, comen personas y se burlan uno del otro. La fuente no los distingue físicamente, así que una sola gramática fija los dos cuerpos humanos; sus formas animales van por separado."
+    },
+    {
+      "id": "aguila_canibal",
+      "name": "El Águila Caníbal",
+      "kind": "animal",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nace del almidón, empieza a llevar gente, mete la pata por la cumbrera, vuela herida dejando gotas que se vuelven piedra y agua y represa la bocana en el diluvio. Dos relatos y acción decisiva. Una sola hoja: la pata arrancada se fija como marcador de continuidad porque es derivable del mismo cuerpo."
+    },
+    {
+      "id": "sabudui_pajuil_real",
+      "name": "Sabudui, el pajuil real",
+      "kind": "animal",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Canta la burla que desata la cacería, es cocinado en la casa del centro y de su hueso sale el agua sin fin; otro pajuil traga y expulsa el fuego. Es el objeto por el que se cuenta el ciclo."
+    },
+    {
+      "id": "jaguar",
+      "name": "Jaguar",
+      "kind": "animal",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-brujeria-de-la-danta",
+        "la-venganza-de-los-brujos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dominio de Sindi, forma del especialista huitoto y primera forma de los dos transformadores. Tres relatos con cuerpo reconocible."
+    },
+    {
+      "id": "boa",
+      "name": "Boa",
+      "kind": "animal",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-brujeria-de-la-danta",
+        "la-venganza-de-los-brujos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dominio de Pepai junto con los peces y forma de transformación en los dos relatos de especialistas. Tres relatos."
+    },
+    {
+      "id": "danta",
+      "name": "Danta",
+      "kind": "animal",
+      "myths": [
+        "la-brujeria-de-la-danta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Forma presente en la secuencia transmitida y en el título heredado de la ficha; la escena editorial aprobada la pone en cuadro junto a jaguar y boa. Animal grande cuya anatomía no puede quedar al azar."
+    },
+    {
+      "id": "murcielago",
+      "name": "Murciélago",
+      "kind": "animal",
+      "myths": [
+        "el-sol-que-nace-en-araracuara",
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Lleva frutas a Luna encerrado en el tronco y, en la guerra, dos murciélagos viajan por el sueño, abren el paquete en el camino y quedan dormidos. Dos relatos, acción decisiva en uno."
+    },
+    {
+      "id": "tortuga_redonda",
+      "name": "Tortuga-redonda",
+      "kind": "animal",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Esposa de Sol: guarda el tinte negro y marca el rostro del visitante nocturno. Es la decisión que permite reconocer a Luna."
+    },
+    {
+      "id": "hacha_andoque",
+      "name": "El hacha",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El hacha de Cortador abre el tronco y talla la mujer de balso. Es además el emblema del corpus entero —«Tradiciones de la gente del hacha»—: su materialidad no puede improvisarse."
+    },
+    {
+      "id": "guayuco_de_transformacion",
+      "name": "El guayuco de transformación",
+      "kind": "objeto",
+      "myths": [
+        "la-brujeria-de-la-danta"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La prenda necesaria para ejercer la capacidad de cambiar de forma; quitarla obliga al rival a negociar. Es el objeto por el que se cuenta el relato y da nombre al título editorial."
+    },
+    {
+      "id": "espada_de_trueno",
+      "name": "La espada de Trueno",
+      "kind": "objeto",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Con ella y el espejo Trueno-de-piedra produce el relámpago, derriba los gusanos y parte el tronco. La espada falsa de balso y el espejo se resuelven dentro de esta misma hoja."
+    },
+    {
+      "id": "arco_y_flechas",
+      "name": "Arco y flechas",
+      "kind": "objeto",
+      "myths": [
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Arma de los padres que disparan en Sitakara, de los combatientes del Palo Hablador y de los perseguidores de los transformadores. Cultura material recurrente en tres relatos: no puede quedar como utilería genérica."
+    },
+    {
+      "id": "mercancias_y_fardos_de_caucho",
+      "name": "Mercancías de la Casa Arana y fardos de caucho",
+      "kind": "objeto",
+      "myths": [
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La mercancía que no fue regalo y el caucho que la paga son el objeto por el que se cuenta el testimonio: sin ellos la secuencia de cuota, amarre y muerte no se lee. Las ataduras se resuelven aquí."
+    },
+    {
+      "id": "palo_hablador",
+      "name": "El Palo Hablador",
+      "kind": "planta",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "partido_y_petrificado"
+      ],
+      "note": "El gran tronco cubierto de gusanos desde el que Cuero-negro habla y dispara, partido por el relámpago; el epílogo lo sitúa vuelto piedra arenosa en el Duché y de su raíz sale el sapo del ciclo siguiente. Dos hojas porque el cambio de madera viva a arenisca no es derivable de la primera."
+    },
+    {
+      "id": "tronco_hueco_y_higueron",
+      "name": "El tronco hueco y el higuerón",
+      "kind": "planta",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del encierro de Luna: el hueco donde salen las guacamayas, la madera que golpean los carpinteros y el higuerón crecido de los residuos. No es intercambiable con el Palo Hablador."
+    },
+    {
+      "id": "arbol_tona",
+      "name": "El árbol tona",
+      "kind": "planta",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La semilla pisada entre los dedos en Sitio-del-llanto y el árbol que crece llevando a los huérfanos por encima del diluvio. Es el objeto del que depende la supervivencia del ciclo."
+    },
+    {
+      "id": "maloca_andoque",
+      "name": "La maloca andoque (exterior)",
+      "kind": "arquitectura",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-retorno-de-plumon-amarillo",
+        "el-retorno-de-plumon-de-fiebre",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador",
+        "los-caucheros-de-la-casa-arana",
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "revestida_de_piedra_arenosa_o_barro"
+      ],
+      "note": "Casa del centro donde se come al hijo del águila, se cocina el pajuil y se reagrupa la gente; también la maloca de Trueno. Dos hojas: el volumen de techo vegetal y el revestimiento de piedra arenosa o barro, que es un cambio de material, no de iluminación. La casa del fuego se resuelve aquí."
+    },
+    {
+      "id": "casa_que_llegaba_al_cielo",
+      "name": "La casa que llegaba al cielo",
+      "kind": "arquitectura",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Construcción de Doña Cucarrón-de-vida por cuyo interior sube alimentos, tubérculos y frutas sobre la creciente. Escenario propio de un acto y no intercambiable con la maloca; la Loma de los Andoque se resuelve aquí."
+    },
+    {
+      "id": "mundo_de_abajo",
+      "name": "El mundo de abajo",
+      "kind": "lugar",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ámbito bajo tierra con abundancia y familiares muertos al que se entra por una piedra señalada; también por donde Doña Cucarrón-de-vida es conducida y donde Tomirepa queda de vigilante. Dos relatos; el título evita cielo, infierno o reino europeo de los muertos."
+    },
+    {
+      "id": "chagra_y_yucal",
+      "name": "La chagra y el yucal",
+      "kind": "lugar",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba",
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "De donde sale la yuca dulce del almidón y la yuca que arranca la hija de Canoa-de-Piedra, y donde Sol siembra las dos piñas en el hueco del tronco. Tres relatos; cubre yuca, piñas, caimos, tubérculos y frutas."
+    },
+    {
+      "id": "sitio_del_llanto",
+      "name": "Sitio-del-llanto",
+      "kind": "lugar",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Donde llegan los huérfanos y pisan la semilla de tona, y debajo del cual se ubican los jóvenes del padre del narrador. Topónimo nombrado en dos relatos."
+    },
+    {
+      "id": "sitakara",
+      "name": "Sitakara",
+      "kind": "lugar",
+      "myths": [
+        "las-sirenas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Playa de la quebrada Huevo-de-pescado, debajo de un chorro y cerca de una cerca, donde ocurre el baile y el encuentro. Escenario nombrado y no intercambiable con una orilla cualquiera."
+    },
+    {
+      "id": "rio_duche",
+      "name": "El río Duché: remanso y bocana",
+      "kind": "lugar",
+      "myths": [
+        "la-guerra-del-palo-hablador",
+        "las-sirenas",
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Remanso-de-trueno donde queda el tronco petrificado, bocana donde permanece la figura femenina y eje a lo largo del cual viven los grupos. Tres relatos; absorbe los ríos nombrados por los gigantes."
+    },
+    {
+      "id": "piedras_con_petroglifos",
+      "name": "Las piedras con dibujos",
+      "kind": "lugar",
+      "myths": [
+        "los-gigantes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los grabados junto a los ríos son la pregunta que origina el relato y lo que queda de los gigantes. La hoja fija una gramática de marcas grabadas y NO reproduce ningún petroglifo documentado real."
+    },
+    {
+      "id": "selva_amazonica_de_aduche",
+      "name": "Selva y bocanas de Aduche",
+      "kind": "paisaje",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba",
+        "el-retorno-de-plumon-amarillo",
+        "el-retorno-de-plumon-de-fiebre",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-brujeria-de-la-danta",
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas",
+        "los-caucheros-de-la-casa-arana",
+        "los-fantasmas",
+        "los-gigantes",
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "nocturno"
+      ],
+      "note": "Entorno base de los catorce relatos: selva, bocanas, riberas del Caquetá, palmas de milpeso, cananguchos y el árbol madi. Dos hojas porque el relato del fantasma y los caminos nocturnos exigen un modelo de luz distinto del diurno."
+    },
+    {
+      "id": "diluvio",
+      "name": "El diluvio",
+      "kind": "fenomeno",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El agua sin fin que sale del hueso, la lluvia, la bocana represada por el Águila y la maloca sumergida; termina cuando el caloche rompe el cerco. Regla visible en dos relatos y ligada al ciclo entero."
+    },
+    {
+      "id": "fuego_robado",
+      "name": "El fuego robado",
+      "kind": "fenomeno",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Regla de cómo se muestra el fuego: la candela de la casa, el tizón que quema la atarraya, el pajuil que lo traga y lo expulsa y el pejedulce que lo vuelve piedra tetee. Es la mitad del ciclo y no se resuelve con una llama genérica."
+    },
+    {
+      "id": "transformacion_de_especialistas",
+      "name": "La transformación de los especialistas",
+      "kind": "fenomeno",
+      "myths": [
+        "la-brujeria-de-la-danta",
+        "la-venganza-de-los-brujos"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Regla del paso de cuerpo humano a jaguar, boa, culebra verrugosa, águila, gavilán o danta, y del aguacero con que los transformadores responden a la persecución. Una sola regla para los dos relatos; sin aura, runas ni fantasía intercambiable."
+    },
+    {
+      "id": "esposa_de_nenefi",
+      "name": "La esposa de Nenefi",
+      "kind": "personaje",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Forma las dos bolas de almidón que se vuelven águilas, pero el relato no le da nombre, cuerpo ni segunda aparición. La gramática de grupo debe poder ponerla en cuadro."
+    },
+    {
+      "id": "aguila_hembra_y_su_hijo",
+      "name": "El águila hembra y el hijo de las águilas",
+      "kind": "animal",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "aguila_canibal",
+      "sheets": 0,
+      "note": "Misma especie y mismo diseño que el macho: hembra y juvenil son variantes de la ficha del Águila. El hijo sólo es el cuerpo comido y el hueso de la flauta."
+    },
+    {
+      "id": "sindi_pepai_y_tomirepa_dominios",
+      "name": "Los dominios de jaguares, boas y peces",
+      "kind": "colectivo",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "jaguar",
+      "sheets": 0,
+      "note": "Los dominios repartidos se dibujan con las fichas de jaguar, boa y peces ya existentes; lo que falta es el cuerpo de los vigilantes, que queda excluido aparte."
+    },
+    {
+      "id": "mico_volador",
+      "name": "El mico volador",
+      "kind": "animal",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_fauna_menor_del_monte",
+      "sheets": 0,
+      "note": "Aparece sólo como cebo amarrado en el chinchorro; no habla, no decide y no reaparece."
+    },
+    {
+      "id": "flauta_de_hueso",
+      "name": "La flauta de hueso",
+      "kind": "objeto",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_oficio",
+      "sheets": 0,
+      "note": "Objeto menor pero de mecanismo: al oírla el padre pide que le devuelvan a su hijo. Una hoja de utilería basta para su materialidad."
+    },
+    {
+      "id": "chinchorro_trampa",
+      "name": "El chinchorro de la trampa",
+      "kind": "objeto",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_caza_y_trampa",
+      "sheets": 0,
+      "note": "Hamaca usada para amarrar el cebo; objeto menor de cultura material."
+    },
+    {
+      "id": "almidon_tuberculos_y_frutas",
+      "name": "Almidón de yuca dulce, tubérculos y frutas",
+      "kind": "planta",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "chagra_y_yucal",
+      "sheets": 0,
+      "note": "Materiales y cosecha que salen del yucal y que Doña Cucarrón-de-vida sube por la casa; la hoja de la chagra fija su aspecto."
+    },
+    {
+      "id": "loma_de_los_andoque",
+      "name": "La Loma de los Andoque",
+      "kind": "lugar",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_que_llegaba_al_cielo",
+      "sheets": 0,
+      "note": "Sitio nombrado sólo como base de la casa que llega al cielo; la hoja de esa construcción lo contiene."
+    },
+    {
+      "id": "gavilan_del_diablo",
+      "name": "Gavilán-del-diablo",
+      "kind": "personaje",
+      "myths": [
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Nombrado como el único hermano que aprendió, pero no habla, no decide y no reaparece: no cumple ninguno de los tres criterios de ficha propia."
+    },
+    {
+      "id": "hija_e_hijo_de_canoa_de_piedra",
+      "name": "La hija y el hijo de Canoa-de-Piedra",
+      "kind": "personaje",
+      "myths": [
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "La hija arranca yuca, enferma y muere; el hijo sólo se enuncia. Sin descripción física ni acción sostenida."
+    },
+    {
+      "id": "piedra_umbral_del_mundo_de_abajo",
+      "name": "La piedra que señala el sitio",
+      "kind": "objeto",
+      "myths": [
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "embedded",
+      "covered_by": "mundo_de_abajo",
+      "sheets": 0,
+      "note": "Umbral del ámbito subterráneo; la escena editorial aprobada la muestra abierta en capas. Es parte del modelo espacial, no una ficha aparte."
+    },
+    {
+      "id": "hojas_medicinales_genericas",
+      "name": "Las hierbas que entrega la gente de abajo",
+      "kind": "planta",
+      "myths": [
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_oficio",
+      "sheets": 0,
+      "note": "Se dibujan como hojas sin especie identificable, tal como ya lo hace la escena editorial aprobada. La hierba que causa y cura enfermedad es otra entidad y queda excluida."
+    },
+    {
+      "id": "rio_quinche",
+      "name": "El río Quinché",
+      "kind": "lugar",
+      "myths": [
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva_amazonica_de_aduche",
+      "sheets": 0,
+      "note": "Se nombra sólo como procedencia de quienes causaron el daño; nunca se visita ni se describe."
+    },
+    {
+      "id": "miguel_zumaeta_y_agentes",
+      "name": "Miguel Zumaeta y los agentes de la Casa Arana",
+      "kind": "personaje",
+      "myths": [
+        "el-retorno-de-plumon-amarillo",
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "embedded",
+      "covered_by": "los_quemadores",
+      "sheets": 0,
+      "note": "Nombres del aparato cauchero sin descripción física; la gramática de grupo de los Quemadores los cubre."
+    },
+    {
+      "id": "sobrevivientes_reagrupados",
+      "name": "Los cerca de doscientos sobrevivientes",
+      "kind": "colectivo",
+      "myths": [
+        "el-retorno-de-plumon-amarillo",
+        "el-retorno-de-plumon-de-fiebre"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_epoca_cauchera",
+      "sheets": 0,
+      "note": "Cifra y situación, no un cuerpo aparte: la gramática de la época cauchera fija cómo se dibuja el grupo reunido y el disperso."
+    },
+    {
+      "id": "torcaza_y_huevo_primordial",
+      "name": "La torcaza y el huevo que se parte",
+      "kind": "animal",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_fauna_menor_del_monte",
+      "sheets": 0,
+      "note": "Pone el huevo del que salen Sol y Luna y desaparece del relato. La gramática de fauna menor debe individualizarla porque abre la cosmogonía, pero no sostiene una hoja propia."
+    },
+    {
+      "id": "guacamayas_del_tronco",
+      "name": "Las dos guacamayas",
+      "kind": "animal",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_fauna_menor_del_monte",
+      "sheets": 0,
+      "note": "Señuelo salido de las piñas; atraen a Luna pero no conducen la acción."
+    },
+    {
+      "id": "pinas_macho_y_hembra",
+      "name": "Las dos piñas, macho y hembra",
+      "kind": "planta",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "chagra_y_yucal",
+      "sheets": 0,
+      "note": "Sembradas en la chagra como parte de la trampa; cultivo cubierto por la hoja del yucal."
+    },
+    {
+      "id": "tinte_negro",
+      "name": "El tinte negro",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_oficio",
+      "sheets": 0,
+      "note": "Material que Tortuga-redonda guarda y aplica; objeto menor."
+    },
+    {
+      "id": "carpinteros_y_visitantes_del_tronco",
+      "name": "Carpinteros y demás visitantes del tronco",
+      "kind": "animal",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_fauna_menor_del_monte",
+      "sheets": 0,
+      "note": "Golpean la madera y llevan frutas, pero son miembros genéricos de un conjunto ya fichado. El murciélago sale aparte porque además decide en la guerra."
+    },
+    {
+      "id": "barbasco",
+      "name": "El barbasco",
+      "kind": "planta",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_caza_y_trampa",
+      "sheets": 0,
+      "note": "Insumo de la pesca; objeto menor de cultura material, sin uso ritual documentado en el corpus."
+    },
+    {
+      "id": "oriente_donde_se_retira_sol",
+      "name": "El oriente",
+      "kind": "lugar",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva_amazonica_de_aduche",
+      "sheets": 0,
+      "note": "Dirección, no escenario descrito."
+    },
+    {
+      "id": "sapo_de_la_raiz",
+      "name": "El sapo que sale de la raíz",
+      "kind": "animal",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "palo_hablador",
+      "sheets": 0,
+      "note": "Aparece una vez para enlazar el ciclo del Palo Hablador con el del diluvio; se resuelve dentro de la ficha del tronco."
+    },
+    {
+      "id": "colibries_y_huevos",
+      "name": "Los colibríes y los huevos de las hijas",
+      "kind": "animal",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_fauna_menor_del_monte",
+      "sheets": 0,
+      "note": "Los huevos que se vuelven colibríes y el que la hermana menor incuba; fauna menor con función de origen."
+    },
+    {
+      "id": "algodon_de_hormiga",
+      "name": "El algodón de hormiga",
+      "kind": "objeto",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_oficio",
+      "sheets": 0,
+      "note": "Material donde se mantiene caliente el huevo; objeto menor."
+    },
+    {
+      "id": "aves_de_monte_interrogadas",
+      "name": "Panguanas, tente, pava y pajuiles",
+      "kind": "animal",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_fauna_menor_del_monte",
+      "sheets": 0,
+      "note": "Aves interrogadas hasta escuchar la burla completa; miembros genéricos del conjunto. Sabudui sale aparte porque es el objeto de la cacería."
+    },
+    {
+      "id": "atarraya",
+      "name": "La atarraya",
+      "kind": "objeto",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_caza_y_trampa",
+      "sheets": 0,
+      "note": "Red con que los adultos cierran la salida y que el tizón quema; objeto menor."
+    },
+    {
+      "id": "piedra_tetee",
+      "name": "La piedra tetee",
+      "kind": "objeto",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "fuego_robado",
+      "sheets": 0,
+      "note": "Resultado del fuego expulsado por el pejedulce; es una fase de la regla del fuego, no una ficha aparte."
+    },
+    {
+      "id": "casa_del_fuego",
+      "name": "La casa del fuego",
+      "kind": "arquitectura",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "maloca_andoque",
+      "sheets": 0,
+      "note": "Vivienda junto a la bocana donde se guarda la candela; el corpus no la distingue tipológicamente de la maloca."
+    },
+    {
+      "id": "nina_que_protege_a_huevo_de_chupaflor",
+      "name": "La niña que lo protege junto a la candela",
+      "kind": "personaje",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Acción breve y sin descripción; la gramática de grupo debe incluir niñas."
+    },
+    {
+      "id": "canoa_de_opai",
+      "name": "Canoa-de-opái",
+      "kind": "personaje",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Nombrado una sola vez como compañero de viaje hacia la bocana; no vuelve a intervenir."
+    },
+    {
+      "id": "hijas_del_principe_y_hermana_menor",
+      "name": "Las hijas del Príncipe-de-la-Ilusión y la hermana menor",
+      "kind": "colectivo",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "La hermana menor hiere el ojo al pinchar el huevo, pero el corpus no le da nombre, cuerpo ni segunda escena."
+    },
+    {
+      "id": "espada_falsa_de_balso",
+      "name": "La espada falsa de balso",
+      "kind": "objeto",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "espada_de_trueno",
+      "sheets": 0,
+      "note": "Copia deliberada de la espada verdadera: misma forma, otro material. Variante dentro de la misma hoja."
+    },
+    {
+      "id": "espejo_del_relampago",
+      "name": "El espejo",
+      "kind": "objeto",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "espada_de_trueno",
+      "sheets": 0,
+      "note": "Se usa junto con la espada para producir el relámpago; instrumento pareado de la misma hoja."
+    },
+    {
+      "id": "paquete_de_sueno",
+      "name": "El paquete de sueño",
+      "kind": "objeto",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_oficio",
+      "sheets": 0,
+      "note": "Envoltorio en hoja que los murciélagos abren en el camino y que Mochilero-de-candela lleva hasta la nuca de Trueno. Objeto menor de mecanismo."
+    },
+    {
+      "id": "dos_caimos",
+      "name": "Los dos caimos",
+      "kind": "planta",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "chagra_y_yucal",
+      "sheets": 0,
+      "note": "Fruta con que se paga el cambio de espada; cultivo cubierto por la hoja de la chagra."
+    },
+    {
+      "id": "flechas_de_astilla",
+      "name": "Las flechas de astilla",
+      "kind": "objeto",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "arco_y_flechas",
+      "sheets": 0,
+      "note": "Munición que Cuero-negro dispara desde el tronco; variante dentro de la hoja de arco y flechas."
+    },
+    {
+      "id": "ranas_comestibles",
+      "name": "Las ranas comestibles",
+      "kind": "animal",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_fauna_menor_del_monte",
+      "sheets": 0,
+      "note": "Las hojas del tronco se convierten en ranas al final; transformación cubierta por la gramática de fauna menor."
+    },
+    {
+      "id": "remanso_de_trueno",
+      "name": "El Remanso-de-trueno",
+      "kind": "lugar",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio_duche",
+      "sheets": 0,
+      "note": "Punto concreto dentro del Duché identificado en el epílogo; parte del mismo modelo espacial."
+    },
+    {
+      "id": "esposa_de_garza_de_centro",
+      "name": "La esposa de Garza-de-centro",
+      "kind": "personaje",
+      "myths": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Su baño desencadena la caída del visitante y la venganza, pero no habla ni actúa y no se la describe."
+    },
+    {
+      "id": "madre_de_sol_y_luna",
+      "name": "La madre que reprende a Luna",
+      "kind": "personaje",
+      "myths": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Una sola intervención verbal sin descripción física."
+    },
+    {
+      "id": "culebra_verrugosa_y_gavilan",
+      "name": "La culebra verrugosa y el gavilán",
+      "kind": "animal",
+      "myths": [
+        "la-venganza-de-los-brujos"
+      ],
+      "decision": "embedded",
+      "covered_by": "transformacion_de_especialistas",
+      "sheets": 0,
+      "note": "Formas del repertorio de cambio que sólo aparecen enumeradas; la regla de transformación fija su morfología junto a jaguar, boa y danta, ya fichados."
+    },
+    {
+      "id": "aguacero_de_los_transformadores",
+      "name": "El aguacero con que responden",
+      "kind": "fenomeno",
+      "myths": [
+        "la-venganza-de-los-brujos"
+      ],
+      "decision": "embedded",
+      "covered_by": "transformacion_de_especialistas",
+      "sheets": 0,
+      "note": "Alterar el tiempo es parte de la disputa entre conocimientos: es una fase de la regla, no un fenómeno aparte."
+    },
+    {
+      "id": "humo_y_armas_de_los_perseguidores",
+      "name": "El humo y las armas de la persecución",
+      "kind": "objeto",
+      "myths": [
+        "la-venganza-de-los-brujos"
+      ],
+      "decision": "embedded",
+      "covered_by": "arco_y_flechas",
+      "sheets": 0,
+      "note": "Recursos del cerco; las armas son las ya fichadas y el humo se resuelve en la misma escena."
+    },
+    {
+      "id": "quebrada_huevo_de_pescado",
+      "name": "La quebrada Huevo-de-pescado",
+      "kind": "lugar",
+      "myths": [
+        "las-sirenas"
+      ],
+      "decision": "embedded",
+      "covered_by": "sitakara",
+      "sheets": 0,
+      "note": "El chorro y la cerca son parte del sitio nombrado Sitakara."
+    },
+    {
+      "id": "ninos_que_bailan_en_sitakara",
+      "name": "Los niños que van a bailar",
+      "kind": "colectivo",
+      "myths": [
+        "las-sirenas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Grupo de niños en la playa; la gramática de grupo debe incluir el registro infantil y el baile de playa, que NO es el baile ceremonial de maloca."
+    },
+    {
+      "id": "la_cancion_de_sitakara",
+      "name": "La canción del encuentro",
+      "kind": "objeto",
+      "myths": [
+        "las-sirenas"
+      ],
+      "decision": "embedded",
+      "covered_by": "sitakara",
+      "sheets": 0,
+      "note": "La narración conserva una canción asociada al lugar: es sonido y sólo puede quedar como atributo del sitio, no como activo visual."
+    },
+    {
+      "id": "capitanes_nombrados_de_la_casa_arana",
+      "name": "Plumón-de-guacamayo, Plato y Cría-de-peine",
+      "kind": "personaje",
+      "myths": [
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_epoca_cauchera",
+      "sheets": 0,
+      "note": "Capitanes que acuden a recoger mercancías; nombrados sin descripción física ni acción individual."
+    },
+    {
+      "id": "gente_de_fantasma",
+      "name": "La gente de Fantasma",
+      "kind": "colectivo",
+      "myths": [
+        "los-caucheros-de-la-casa-arana",
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_epoca_cauchera",
+      "sheets": 0,
+      "note": "Grupo nombrado en el testimonio y en la geografía del Duché; sin rasgos propios documentados."
+    },
+    {
+      "id": "ataduras_de_la_casa_arana",
+      "name": "Las ataduras",
+      "kind": "objeto",
+      "myths": [
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "embedded",
+      "covered_by": "mercancias_y_fardos_de_caucho",
+      "sheets": 0,
+      "note": "Los hombres atados son la consecuencia de la cuota; la escena editorial habla de ataduras rotas. Parte de la misma ficha de coerción."
+    },
+    {
+      "id": "tierra_muinane",
+      "name": "La tierra muinane",
+      "kind": "lugar",
+      "myths": [
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva_amazonica_de_aduche",
+      "sheets": 0,
+      "note": "Punto de llegada del peruano, sin descripción propia."
+    },
+    {
+      "id": "machete_del_fantasma",
+      "name": "El machete que pide el fantasma",
+      "kind": "objeto",
+      "myths": [
+        "los-fantasmas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_andoque_caza_y_trampa",
+      "sheets": 0,
+      "note": "Objeto menor; la escena editorial lo resuelve como silueta y sin violencia explícita."
+    },
+    {
+      "id": "arbol_madi_y_palma_de_milpeso",
+      "name": "El árbol madi, la palma de milpeso y los cananguchos",
+      "kind": "planta",
+      "myths": [
+        "los-gigantes"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva_amazonica_de_aduche",
+      "sheets": 0,
+      "note": "Hitos de partida y nombres de corrientes; el modelo de entorno debe especificar las palmas, pero ninguno sostiene una ficha botánica propia."
+    },
+    {
+      "id": "rios_nombrados_por_los_gigantes",
+      "name": "Río de Trueno, de Dedo, Azul, Dibujo y de Lobo",
+      "kind": "lugar",
+      "myths": [
+        "los-gigantes"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio_duche",
+      "sheets": 0,
+      "note": "Nombres de corrientes dentro del mismo sistema fluvial; no se describen individualmente."
+    },
+    {
+      "id": "colectivo_grupos_del_duche",
+      "name": "La gente de Hormiga arriera, Guacamayo rojo, Borugo y Fantasma",
+      "kind": "colectivo",
+      "myths": [
+        "los-grupos-de-mi-juventud"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_epoca_cauchera",
+      "sheets": 0,
+      "note": "Grupos con capitán y lugar, pero el corpus no les atribuye emblema, vestuario ni rasgo visual distinto: inventarlos sería inventar. La geografía la aporta el río Duché."
+    },
+    {
+      "id": "guayuco_cotidiano",
+      "name": "El guayuco como prenda cotidiana",
+      "kind": "objeto",
+      "myths": [
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador",
+        "las-sirenas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_andoque_tiempo_de_origen",
+      "sheets": 0,
+      "note": "Vestuario base de las figuras; distinto del guayuco de transformación, que sí tiene ficha porque el relato gira sobre él."
+    },
+    {
+      "id": "bocana_represada",
+      "name": "La bocana represada",
+      "kind": "lugar",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "diluvio",
+      "sheets": 0,
+      "note": "El cierre y la apertura de la desembocadura son fases de la regla del diluvio."
+    },
+    {
+      "id": "sindi_pepai_y_tomirepa",
+      "name": "Sindi, Pepai y Tomirepa",
+      "kind": "personaje",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "decision": "excluded",
+      "reason": "mencionados sin cuerpo ni escena",
+      "sheets": 0,
+      "note": "El relato sólo enuncia su reparto —príncipe de jaguares, de boas y peces, vigilante de abajo— en una sola frase final. No hablan, no aparecen y no se describen: darles cuerpo sería inventarlos. Verificado en el párrafo final del mito."
+    },
+    {
+      "id": "principe_de_la_ilusion",
+      "name": "El Príncipe-de-la-Ilusión",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "decision": "excluded",
+      "reason": "se menciona pero nunca se ve",
+      "sheets": 0,
+      "note": "Aparece exclusivamente como filiación de las hijas que ponen los huevos. El corpus no lo pone en escena ni describe su cuerpo; el título de «Príncipe» no autoriza una figura."
+    },
+    {
+      "id": "interior_ceremonial_de_la_maloca_y_baile",
+      "name": "El interior ceremonial de la maloca y el baile",
+      "kind": "arquitectura",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador",
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Doble razón verificada: es material sensible y, además, el corpus congelado nunca describe el interior. Las tres menciones de maloca son de exterior o de suceso («lo llevó a la maloca», «la maloca revestida de barro quedó sumergida»). El único baile del corpus es el de los niños en la playa de Sitakara, que no es el baile ceremonial. Se ficha el exterior; el interior y la danza ritual requieren consulta."
+    },
+    {
+      "id": "hierba_que_causa_y_cura_la_enfermedad",
+      "name": "La hierba que causa y contrarresta la enfermedad",
+      "kind": "planta",
+      "myths": [
+        "la-brujeria-de-la-danta"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Los research_notes de la ficha dicen literalmente que no se describe una práctica medicinal contemporánea ni se ofrece instrucción de uso de plantas. Una hoja botánica identificable equivaldría a publicar la receta. Las hojas genéricas de la gente de abajo son otra entidad y sí se dibujan."
+    },
+    {
+      "id": "yinefoque_y_yineko",
+      "name": "Yiñefoque y Yiñeko, relatores",
+      "kind": "personaje",
+      "myths": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador",
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "decision": "excluded",
+      "reason": "personas reales identificadas sin descripción corporal",
+      "sheets": 0,
+      "note": "El corpus los nombra como narradores —capitán Yiñeko del linaje de las Águilas y Yiñefoque, testigo de la vida anterior a los caucheros— y atribuye a Yiñefoque el epílogo del Palo Hablador. No describe sus cuerpos y retratar a personas reales identificadas excede el encargo y requiere consulta."
+    },
+    {
+      "id": "descuartizamiento_del_visitante",
+      "name": "El despedazamiento amenazado del visitante",
+      "kind": "fenomeno",
+      "myths": [
+        "los-fantasmas"
+      ],
+      "decision": "excluded",
+      "reason": "violencia explícita",
+      "sheets": 0,
+      "note": "El texto representa la amenaza «como si el cuerpo del visitante fuera trozado». La escena editorial ya aprobada la resuelve «sin violencia explícita» y la compuerta 8 de la V3 evalúa contra violencia explícita. Se excluye el acto; el machete y el fantasma sí tienen cobertura."
+    },
+    {
+      "id": "donekoi",
+      "name": "Doñekoi",
+      "kind": "personaje",
+      "myths": [
+        "el-retorno-de-plumon-amarillo"
+      ],
+      "decision": "excluded",
+      "reason": "nombre de aparato crítico, no del relato",
+      "sheets": 0,
+      "note": "Aparece sólo en el campo versiones como nombre que la introducción de 1981 da a una autoridad del reagrupamiento, y la ficha declara expresamente que no establece equivalencias onomásticas sin evidencia. Ficharlo sería fijar una identidad que la fuente no sostiene."
+    },
+    {
+      "id": "cola_de_pez_y_demas_inventos_retirados",
+      "name": "Iconografía y expansiones retiradas por la revisión",
+      "kind": "criatura",
+      "myths": [
+        "las-sirenas",
+        "el-retorno-de-plumon-de-fiebre",
+        "los-fantasmas",
+        "el-mundo-de-ultratumba"
+      ],
+      "decision": "excluded",
+      "reason": "elemento inventado retirado del canon",
+      "sheets": 0,
+      "note": "Guardarraíl explícito para que no reentren por la puerta visual: la cola de pez de la sirena europea (los research_notes la prohíben), la revivificación cósmica de Plumón-de-fiebre, el desenlace inventado de los fantasmas y la escatología de «ultratumba». Ninguno pertenece al corpus congelado."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_andoque_oficio",
+      "kind": "objeto",
+      "covers": [
+        "flauta_de_hueso",
+        "tinte_negro",
+        "paquete_de_sueno",
+        "algodon_de_hormiga",
+        "hojas_medicinales_genericas"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores de oficio y mecanismo que ningún relato cuenta por sí mismos pero que aparecen en cuadro: la flauta de hueso, el tinte negro de Tortuga-redonda, el paquete de sueño envuelto en hoja, el algodón de hormiga y las hojas medicinales sin especie identificable."
+    },
+    {
+      "id": "hoja_utileria_andoque_caza_y_trampa",
+      "kind": "objeto",
+      "covers": [
+        "chinchorro_trampa",
+        "atarraya",
+        "machete_del_fantasma",
+        "barbasco"
+      ],
+      "sheets": 1,
+      "note": "Utilería de caza, pesca y filo: el chinchorro de la trampa del mico, la atarraya que cierra la casa del fuego, el machete que pide el fantasma y el barbasco de la pesca. El arco y las flechas salen aparte porque recurren en tres relatos."
+    }
+  ],
+  "totals": {
+    "entities": 126,
+    "required": 61,
+    "embedded": 57,
+    "excluded": 8,
+    "sheets": 66
+  }
+}

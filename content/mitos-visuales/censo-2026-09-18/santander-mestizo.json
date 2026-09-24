@@ -1,0 +1,2567 @@
+{
+  "id": "santander-mestizo",
+  "label": "Santander mestizo",
+  "era": "campesino y pueblerino, siglos XIX y XX",
+  "pages": 36,
+  "canon_pages": 0,
+  "read_note": "Leí las 36 páginas completas (Mito, Historia, Versiones, Lección, Similitudes) y los universe/definitions/sources de los siete frentes editoriales: santander-folclor-clasico, los cinco de Piedecuesta y santander-mixto-residual. CONFIRMADO: ninguna de las 36 tiene campo `mito` propio — el relato viene volcado en el cuerpo de la página, y el encabezado del censo lo declara (0 con canon narrable). Sobre estas páginas no se escribe guion ni se hace video; sólo aportan entidades. ESTO NO ES UNA COMUNIDAD: el propio build-editorial declara que «mestizo» es una agrupación editorial de leyendas compiladas en español y que no permite atribuir los relatos a los pueblos indígenas de Santander sin una cadena específica. Por eso los caciques coloniales quedan excluidos y sólo Talabalí —el único con descripción física— tiene ficha. LO QUE ME SORPRENDIÓ: (1) el mundo es de verdad uno solo, y ahí está el ahorro — nueve campesinos con nombre son una silueta, ocho cuevas nombradas son un modelo espacial, siete curas son un pliego; (2) el volcado trae fusiones que el universo editorial ya desmontó (la Máncara metida en la-hilandera y en el-trapiche-ardiendo), así que la Mancarita cuenta UN relato, no tres, y no se funde con la Mechuda ni con la Patasola: las definiciones las separan expresamente; (3) hay una contracultura material del miedo muy rica y poco obvia —tijeras cruzadas bajo el colchón, herraduras detrás de la puerta, vaso de agua bajo la cama— que permite ilustrar el terror sin dibujar violencia, y le hice hoja propia; (4) la palabra «alpargata» no aparece ni una vez en el material editorial, así que la dejé fuera del vestuario pese a ser el tópico santandereano por excelencia; lo documentado es ruana, zamarros y sombrero gris de ala ancha. QUEDÓ DUDOSO: (a) el Biato conduce una acción pero el corpus no le da ni un rasgo — lo excluí y es la decisión que menos me convence; (b) tres páginas se salen del denominador declarado y hay que decidir qué hacer con ellas: el-ermitano-iracundo transcurre en Ocaña (Norte de Santander) con correos electrónicos de 2004, cuento-fantastico lleva tenis de marca y guiños ochentosos, y un-libertador-piedecuestano es biografía documentada, no mito; (c) la mula maneada y la Mula del Diablo dan casi la misma imagen y estuve a punto de fundirlas — las dejé separadas porque una va herrada y la otra maneada, y porque el universo las trata como entradas distintas; (d) las «once pollonas» siguen sin resolver: el texto no aclara si son mujeres o aves.",
+  "entities": [
+    {
+      "id": "anima_coy",
+      "name": "El Ánima Coy (Benedicta Rovira)",
+      "kind": "criatura",
+      "myths": [
+        "el-anima-coy"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce el acto entero: sale a medianoche los miércoles y sábados por San Antonio pidiendo oraciones por Rosario. Silueta irrepetible en el corpus — bulto blanco con túnica de llamas que arde sin consumirla, antorcha y una canilla en la mano, pasos que suenan a cascos de mula. Fuente: Arenas Mantilla, Crónicas y romances 1960, pp. 404-406."
+    },
+    {
+      "id": "mancarita",
+      "name": "La Máncara de San Francisco (La Mancarita)",
+      "kind": "criatura",
+      "myths": [
+        "la-mancarita"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Cuerpo reconocible: cabellera desmesurada que la cubre, uno o tres ojos, un seno en mitad del pecho, pies al revés; se lleva niños tras una puerta en la peña. El propio relato la extiende a Boyacá, Venezuela, Santo Domingo, Cuba y Brasil. Lo santandereano: es Rita la chismosa expulsada de un caserío del Río Frío, ronda las veredas de Piedecuesta del siglo XVIII y deja pasar al niño que ensucia el pañal. OJO: el volcado de censo la trae fusionada en la-hilandera y en el-trapiche-ardiendo; el universo editorial ya desmontó las dos fusiones, así que cuenta un solo relato. El cóndor no cuesta ficha —el texto dice «en su cóndor-cabalgada» y no aclara si lo monta o lo es—. No fusionable con la Patasola ni con la Mechuda: las definiciones las separan expresamente."
+    },
+    {
+      "id": "mechuda",
+      "name": "La Mechuda",
+      "kind": "criatura",
+      "myths": [
+        "la-mechuda"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Ficha aparte de la Máncara por decisión editorial expresa (se retiró «la criatura de cabellera y anatomía monumental inventada»): lo que el relato da es un bulto oscuro perfilado contra una palma junto a la quebradita del Puente de Plata y dos alaridos. El contrato tiene que sostener esa ambigüedad —silueta legible, rostro no—. Figura con nombre propio en varias regiones; lo santandereano es el escenario: las fiqueras de Villanueva, el baile, y la cruz alta que el pueblo levantó con el letrero «Aquí, escapitas nos matan»."
+    },
+    {
+      "id": "sayona",
+      "name": "La Sayona",
+      "kind": "criatura",
+      "myths": [
+        "la-sayona-del-cementerio"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "El relato la declara compartida con Venezuela (Casilda) y México (La Sallana, La Matlacihua), pero el universo editorial desfusiona expresamente la Sayona genérica que castiga infieles: aquí NO castiga. Lo santandereano: mujer de negro que entra a la tienda «La Gran Luz» en noviembre de 1896, reconocida por Carlos Vicente Gómez como Elvira, su novia muerta; él le levanta mármoles en el cementerio. El sayal oscuro es el único rasgo físico documentado."
+    },
+    {
+      "id": "duende_del_salto",
+      "name": "El Duende del Salto (Muki)",
+      "kind": "criatura",
+      "myths": [
+        "duende-del-salto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Conduce el relato: hechiza con el tiple, provoca avalanchas, sabotea construcciones. Lo santandereano: enano ensombrerado con tiple en la caverna tras el Salto del Duende, en la quebrada La Honda, y el desenlace es una escuela rural que lleva su nombre. AVISO: la composición es un híbrido moderno de 2016 y el universo ya podó de ella las atribuciones guanes, los suicidios y los sucesos coloniales inventados — el contrato no puede apoyarse en la piedra de sacrificios ni en el cacique."
+    },
+    {
+      "id": "mula_del_diablo",
+      "name": "La Mula del Diablo (Eumelia)",
+      "kind": "criatura",
+      "myths": [
+        "la-mula-del-diablo"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "mula espectral herrada"
+      ],
+      "panregional": true,
+      "note": "El segundo pliego se gana porque el paso de mujer a mula es lo que el relato existe para mostrar, y porque la mula lleva las cuatro herraduras nuevas como marca de continuidad. Lo santandereano: nace en la fragua junto a la antigua bocatoma, sale en septiembre antes del alba por el empedrado y muere cuando llega el alumbrado eléctrico y el herrero se vuelve montallantas. El cuerpo de Eumelia con los clavos queda fuera por violencia explícita — la ficha la muestra viva. Fuente: Estampas de mi tierra 1941, pp. 90-93."
+    },
+    {
+      "id": "mula_maneada",
+      "name": "La mula maneada (doña Petra Agudelo)",
+      "kind": "criatura",
+      "myths": [
+        "la-mula-maneada"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "No se funde con la Mula del Diablo aunque comparta el empedrado a medianoche: aquí la silueta es otra —mula de paso trabado, maneada, no herrada— y el relato es de brujería y exorcismo, no de herrería. La forma de cuervo que le atribuyen se cubre en la ficha de brujas-pájaro. Fuente: Crónicas y romances 1960, pp. 278-280."
+    },
+    {
+      "id": "carriazo",
+      "name": "El Carriazo (Conde del Carriazo)",
+      "kind": "criatura",
+      "myths": [
+        "el-carriazo-de-vereda-san-isidro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Es a la vez el guardián y el objeto del relato: hay que vencerlo para desenterrar las tres cargas de oro bajo el roble de la vereda San Isidro. Golpea —«caricias de lana que después se convertían en rocas»—. La forma de chivo con cachos queda embebida: es variante del mismo ser, no un segundo cuerpo. El desenterrar no se representa: el marco editorial prohíbe guaquería y excavación."
+    },
+    {
+      "id": "diablo_del_camino",
+      "name": "El Diablo del camino (Mandingas)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-cueva-del-diablo",
+        "la-campana-del-diablo",
+        "el-doctor-galeacer",
+        "el-carriazo-de-vereda-san-isidro",
+        "los-tunjos-de-la-cantera",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Seis relatos y una sola ficha: el que ríe y baja la ladera derribando árboles ante el arriero Mateo, el que se lleva la campana del caracolí, el que pacta con Galeacer y con el padre de Silvestre. Lo santandereano: se le llama Mandingas, huele a azufre e incienso mezclados, el bosque amanece intacto y su dominio es el borde del cañón del Chicamocha. El contrato debe dejarlo sin cuerpo fijo: ninguno de los seis relatos lo describe, y ahí está su gracia."
+    },
+    {
+      "id": "hombre_enlutado",
+      "name": "El hombre muy alto vestido de negro",
+      "kind": "criatura",
+      "myths": [
+        "el-reventon-de-jacobo",
+        "la-mula-del-diablo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Dos relatos, mismo cuerpo y misma función: figura alta y enlutada que llega de noche a una ventana o a una puerta y hace una oferta —pasar los huesos, herrar la mula—. Se ficha aparte del Diablo del camino precisamente porque este sí tiene estatura, ropa y voz."
+    },
+    {
+      "id": "luz_del_limonal",
+      "name": "La Luz del Limonal (Luz)",
+      "kind": "criatura",
+      "myths": [
+        "nueva-version-de-la-luz-del-limonal"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "remolino de fuego"
+      ],
+      "panregional": true,
+      "note": "El segundo pliego se gana limpio: el relato muestra largamente a Luz viva en la hacienda El Limonal y después el remolino de fuego que recorre el camino en cuaresma, y la silueta cambia entera. Familia de las luces errantes. Lo santandereano: hacienda del río Hato, se conjura con estola y latín por el padre Esteban García en 1888, y hay que gritarle «¡allá va!», nunca «¡allá viene!». Cadena: Isabel Lizcano Durán. El infanticidio queda fuera de imagen."
+    },
+    {
+      "id": "barbacoa",
+      "name": "La barbacoa (cuatro hombres sin cabeza con un difunto)",
+      "kind": "colectivo",
+      "myths": [
+        "el-trapiche-ardiendo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Silueta única en el corpus y no intercambiable con ningún otro espanto: una parihuela cargada por cuatro descabezados que sale cuando los caminos se pueblan de romeros, por una promesa incumplida a la Virgen de Chiquinquirá. El universo la desfusiona del relato de Nazario, así que es figura autónoma dentro de la misma página."
+    },
+    {
+      "id": "tunjo",
+      "name": "El tunjo (muñeco de oro macizo viviente)",
+      "kind": "criatura",
+      "myths": [
+        "los-tunjos-de-la-cantera",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Conduce el acto: se deja atrapar con la mano mojada, se alimenta de oro y bronce, suelta escamas doradas y acaba dando dos lágrimas convertidas en diamantes. Figura compartida con Boyacá y Cundinamarca. Lo santandereano: sale el Viernes Santo al amanecer sobre la Loma de la Cantera y la abuela campesina enseña la fórmula. CRÍTICO: el universo separa esta criatura literaria del tunjo arqueológico —la ficha es el muñeco vivo, nunca una pieza de museo ni una excavación—. Cubre a Miguel Seco «enchapado» en oro, que es la misma materia a escala humana."
+    },
+    {
+      "id": "pisca_de_oro",
+      "name": "La pisca y sus pisquitos amarillos",
+      "kind": "criatura",
+      "myths": [
+        "la-cueva-de-la-pisca"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Es la forma visible del entierro y el objeto por el que se cuenta el relato: una pava con su camada de polluelos amarillos que sale de la cueva a pastar en luna llena y desaparece el día en que alguien saca el tesoro. Pisca es la hembra del pisco o pavo, no otra cosa."
+    },
+    {
+      "id": "mohan_de_la_laguna",
+      "name": "El mohán del Peñón de la Luchata",
+      "kind": "criatura",
+      "myths": [
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Figura de media Colombia, aquí en minúscula y una sola vez. Lo santandereano: no es el seductor de río sino un guardián celoso de laguna en Galán que custodia un totumo cargado de frutos dorados con una gallina y sus polluelos del mismo color, y amenaza con desbordar el lago sobre quien se acerque."
+    },
+    {
+      "id": "serpiente_cabellera_de_ternero",
+      "name": "La serpiente con cresta y cabeza de ternero",
+      "kind": "criatura",
+      "myths": [
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce una acción —mata reses en la laguna de Girón hasta que un sacerdote rompe el encanto con cáliz y cristo bendito— y la descripción (cresta, crin, cabeza semejante a la de un ternero) es lo bastante precisa y lo bastante rara para no salir de ninguna otra ficha."
+    },
+    {
+      "id": "colmenero",
+      "name": "El Colmenero (Alejandro pegado a la peña)",
+      "kind": "criatura",
+      "myths": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Figura visible desde lejos sobre la peña del Fonce: la piedra que remeda su espalda petrificada, anclada a la roca desde un Viernes Santo. La peña y el enjambre que lo atacó entran en esta misma ficha porque la roca, las abejas y el muchacho son una sola imagen."
+    },
+    {
+      "id": "ermitano_nicolas",
+      "name": "El ermitaño Nicolás",
+      "kind": "criatura",
+      "myths": [
+        "el-ermitano-iracundo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Tiene la descripción física más completa de todo el corpus: cabello largo y sucio, barba gris, ojos rojos, manos huesudas y un hábito ceniciento. Asceta de cueva. AVISO doble: transcurre en Ocaña —Norte de Santander, no Santander— y su capa narrativa es de 2004, con correos electrónicos; el contrato debe fichar al ermitaño, que es intemporal, y dejar fuera el marco moderno."
+    },
+    {
+      "id": "animas_en_pena",
+      "name": "Las ánimas en pena",
+      "kind": "colectivo",
+      "myths": [
+        "el-pollo-de-las-animas",
+        "el-anima-coy",
+        "la-monedita-en-la-alcancia",
+        "el-fantasma-de-el-horizonte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Coro recurrente de cuatro relatos: las que golpean puertas, lloran de noche y piden limosnas y rezos. Una gramática de grupo basta y ahorra fichar cada aparición suelta. En El pollo de las ánimas son imitadas por una persona viva, y el contrato debe poder sostener las dos lecturas."
+    },
+    {
+      "id": "brujas_pajaro_negro",
+      "name": "Brujas en forma de pájaro negro",
+      "kind": "colectivo",
+      "myths": [
+        "la-mula-maneada",
+        "la-monedita-en-la-alcancia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Dos relatos y un solo cuerpo: los «pajarracos que no eran aves sino brujas» de 1960 y el cuervo que atribuían a doña Petra sobre los tejados, más las sombras emplumadas que la defienden del cura. Absorbe el estado-cuervo de la mula maneada."
+    },
+    {
+      "id": "fantasma_de_el_horizonte",
+      "name": "El fantasma de El Horizonte (y el burro bajo la manta)",
+      "kind": "criatura",
+      "myths": [
+        "el-fantasma-de-el-horizonte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Una sola ficha para las dos lecturas, porque el relato existe por el par: el bulto de manto penitencial en la esquina de la carrera 13 con el golpe de rosario y matraca, que resulta ser un burro cojo cubierto con una manta oscura. El contrato tiene que dejar el bulto legible de las dos maneras; separar las fichas rompería el chiste y costaría el doble."
+    },
+    {
+      "id": "caballo_negro_de_galeacer",
+      "name": "El caballo negro del doctor Galeacer",
+      "kind": "criatura",
+      "myths": [
+        "el-doctor-galeacer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "No es un caballo sino un hombre dentro de un caballo: piel que brilla como cielo estrellado, corre las veredas Planadas, Sevilla, Miraflores y Las Amarillas y embiste una cerca de arrayanes que amanece intacta. Silueta distinta del caballo de silla."
+    },
+    {
+      "id": "san_antonio_de_la_cueva",
+      "name": "San Antonio custodio del oro",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Aparición con descripción propia —pies cubiertos de polvo, manto brillante como la luna— que custodia el oro de la Cueva de la Calentana. Es la única figura santa del corpus que se deja ver en vez de ser sólo invocada, y por eso no cae en la hoja de utilería de devoción."
+    },
+    {
+      "id": "arriero",
+      "name": "El arriero y su recua",
+      "kind": "personaje",
+      "myths": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "los-tunjos-de-la-cantera",
+        "el-trapiche-ardiendo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El oficio que sostiene cuatro relatos: Mateo entre San Rafael y Piedecuesta hacia 1850, los arrieros de Blanquiscal, Silvestre vuelto arriero entre el Socorro y Puerto Santos. Ruana, sombrero, recua aparejada. Absorbe a los contrabandistas de mataburro, que son la misma figura con otra carga."
+    },
+    {
+      "id": "campesino_labriego",
+      "name": "El campesino labriego",
+      "kind": "personaje",
+      "myths": [
+        "el-reventon-de-jacobo",
+        "el-doctor-galeacer",
+        "los-tunjos-de-la-cantera",
+        "la-campana-del-diablo",
+        "el-carriazo-de-vereda-san-isidro",
+        "la-cueva-de-la-pisca",
+        "el-trapiche-ardiendo",
+        "la-lampara-de-petroleo",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El ahorro más grande del censo: nueve relatos y un solo hombre. Jacobo, José de la Cruz, Silvestre, Lázaro, Reyes Suárez, Silvio, Carmelo, don Crisanto, don Telmo y el campesino de la cueva son la misma silueta de ruana y sombrero con las manos curtidas. Los que buscan entierros no cambian de cuerpo, sólo de herramienta, y la herramienta va en hoja de utilería."
+    },
+    {
+      "id": "cura_de_pueblo",
+      "name": "El cura de pueblo",
+      "kind": "personaje",
+      "myths": [
+        "nueva-version-de-la-luz-del-limonal",
+        "la-mula-maneada",
+        "lagunas-encantadas",
+        "lo-que-ensenan-las-cuevas",
+        "la-vista-del-libertador",
+        "tal-para-cual",
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Siete relatos, un solo pliego: el padre Esteban García con estola sobre su bestia, el cura que exorciza a Petra, el sacerdote del cáliz y el cristo en la laguna de Girón, el párroco de Cachalú, el Padre Valenzuela, el de los santos óleos. Absorbe al sacristán —don Plácido y maese Cirilo— porque el contrato puede llevar la sotana corta y el roquete como variante de la misma ficha."
+    },
+    {
+      "id": "curandera_del_fogon",
+      "name": "La curandera del fogón",
+      "kind": "personaje",
+      "myths": [
+        "la-mechuda",
+        "el-pollo-de-las-animas",
+        "el-trapiche-ardiendo",
+        "los-tunjos-de-la-cantera",
+        "la-hilandera"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cinco relatos y una sola anciana: Eulogia Plata con sus fricciones de tuétano con albahaca y sus fomentos, la abuela que cuenta junto al fogón, la abuela que saca con azadón, la madre que enseña la fórmula del tunjo, la madrastra que imita las voces. El corpus nunca dice «rezandera» —no uso la palabra— y lo que sí documenta es el oficio de curar con hierbas y el de narrar."
+    },
+    {
+      "id": "herrero",
+      "name": "El herrero y su fragua",
+      "kind": "personaje",
+      "myths": [
+        "la-mula-del-diablo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Un solo relato, pero conduce el acto y trae oficio, taller y escena propios que no salen de ninguna otra ficha: Pacho Villamizar, la fragua junto a la bocatoma, el fuelle, el yunque, el martillo y las herraduras a media noche."
+    },
+    {
+      "id": "don_vicente_arenas",
+      "name": "Don Vicente Arenas Mantilla",
+      "kind": "personaje",
+      "myths": [
+        "la-mula-del-diablo",
+        "el-fantasma-de-el-horizonte",
+        "la-puerta-del-perdon",
+        "los-tunjos-de-la-cantera",
+        "el-trapiche-ardiendo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El narrador del corpus, persona real y documentada (1901-1992), autor de Estampas de mi tierra (1941) y Crónicas y romances (1960). Aparece dentro de cinco relatos como cronista que recorre el pueblo y que se apuesta de noche en la esquina a desenmascarar al fantasma. Sin su ficha no hay hilo entre las páginas."
+    },
+    {
+      "id": "felix_el_diablo",
+      "name": "Félix María Rueda, «El Diablo» de Umpalá",
+      "kind": "personaje",
+      "myths": [
+        "el-diablo-de-umpala"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Hombre real, no criatura: el universo editorial elimina expresamente al demonio literal y deja que las chispas sean de las herraduras. Vestuario documentado: zamarros y sombrero gris de ala ancha, bigote rasposo. Comerciante de cabros, ovejas y camuros y jinete nocturno por el empedrado de Umpalá."
+    },
+    {
+      "id": "simon_bolivar",
+      "name": "Simón Bolívar",
+      "kind": "personaje",
+      "myths": [
+        "la-vista-del-libertador",
+        "un-libertador-piedecuestano"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Figura histórica de iconografía fijada, protagonista de la visita por la Pedregosa vieja y referencia en la biografía de Mantilla. Su séquito —Férguson, Lacroix, O'Leary, Soublette, Wilson— cabalga sólo como comitiva y entra en este mismo contrato."
+    },
+    {
+      "id": "general_jose_maria_mantilla",
+      "name": "General José María Mantilla",
+      "kind": "personaje",
+      "myths": [
+        "un-libertador-piedecuestano"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Única entidad primaria de una página que no es mito sino memoria biográfica documentada (Baraya, Biografías militares, 1874). Uniforme de general republicano; el relato cubre de 1810 a 1860. Si el editor decide que una biografía no entra en la Biblia, esta ficha es la primera que cae."
+    },
+    {
+      "id": "talabali",
+      "name": "Talabalí",
+      "kind": "personaje",
+      "myths": [
+        "talabad",
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El único indígena que este corpus mestizo describe: joven guane cautivo en una jaula de tigre en Bucarica, que pelea con macana contra espada y rodela frente al palenque de la plaza de doctrina. Su contrato se apoya sólo en lo documentado —macana, adarga, jaula, palenque— y en la investigación de cultura material guane; nunca en la biblia de otra comunidad. Absorbe a don Juan de Guarguatí, de Macaregua, que trae actos y trebejos (cadenas, collar de colmillos, lanza, capa) pero ni un rasgo de cuerpo o de traje; el universo pide expresamente reencuadrar esa sátira colonial sin inventar tradición guane."
+    },
+    {
+      "id": "hidalgo_criollo_colonial",
+      "name": "El hidalgo criollo de la colonia",
+      "kind": "personaje",
+      "myths": [
+        "talabad",
+        "el-quijote-piedecuestano",
+        "el-cacique-salomon",
+        "tal-para-cual",
+        "la-piedra-del-muerto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cinco caballeros de cinco relatos en un solo pliego: don Juan de Velasco, don Celedonio, don Juan Bautista de Olarte, don Juan de Arteaga Gamboa y don Anselmo Landínez de Chinchánchez. Todos visten el mismo registro colonial y ninguno trae un rasgo que lo separe de los otros. El coto de don Anselmo NO se ficha: el universo retira expresamente la ecuación entre bocio, apariencia corporal y falta de inteligencia."
+    },
+    {
+      "id": "mendigo_del_camino",
+      "name": "El mendigo del camino",
+      "kind": "personaje",
+      "myths": [
+        "la-piedra-del-muerto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce el acto del relato: pide pan y posada, se le sueltan los perros y su maldición desata la tormenta que petrifica al rico. Silueta propia —peregrino harapiento y descalzo— que no sale del campesino ni del arriero. La escena se ficha antes del daño: sin heridas ni ataque visible."
+    },
+    {
+      "id": "hacendado_impio",
+      "name": "El hacendado impío",
+      "kind": "personaje",
+      "myths": [
+        "la-piedra-del-muerto",
+        "el-trapiche-ardiendo",
+        "el-cerro-encantado"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Tres relatos, un solo tipo: el rico de Mogotes que cierra la puerta, don Nazario que hizo de sus tierras un imperio de caña y maltrató a sus peones, y Arnefo que quema el rancho de Ardila. Del último el universo retira la historia racializada —nada de «el indio lascivo»—, de modo que la ficha es el mandón y su abuso, no una raza."
+    },
+    {
+      "id": "mozo_del_pueblo",
+      "name": "El mozo del pueblo",
+      "kind": "personaje",
+      "myths": [
+        "la-mechuda",
+        "el-fantasma-de-el-horizonte",
+        "la-campana-del-diablo",
+        "la-diabla-castigadora",
+        "la-sayona-del-cementerio",
+        "cuento-fantastico",
+        "el-pollo-de-las-animas",
+        "los-tunjos-de-la-cantera"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Ocho relatos y un solo muchacho: Nepito, Antoninito, Balbino, Remigio, Tenorio, Carlos Vicente Gómez, el parroquiano de la Calle Diez, Ritornelio. Es el que sale de noche y se topa con el espanto. Ritornelio entra aquí con una salvaguarda expresa: el corpus lo llama «el bobito» y el contrato debe tratarlo con dignidad, sin caricatura de discapacidad."
+    },
+    {
+      "id": "mujer_del_pueblo",
+      "name": "La mujer del pueblo",
+      "kind": "personaje",
+      "myths": [
+        "la-diabla-castigadora",
+        "la-mula-del-diablo",
+        "el-cerro-encantado",
+        "talabad",
+        "la-mechuda",
+        "la-monedita-en-la-alcancia",
+        "la-puerta-del-perdon",
+        "tal-para-cual",
+        "duende-del-salto",
+        "la-hilandera"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Diez relatos y un solo pliego: Rebeca, Maribella, Eumelia viva, Cantera con su yegua Pinta, doña María de Velasco, Ramona la cocinera, la mujer de Tona, la esposa de Cirilo, las doncellas del salto, las muchachas del baile. Ninguna trae un rasgo que la separe visualmente de las otras; lo que cambia es el acto."
+    },
+    {
+      "id": "diabla_castigadora",
+      "name": "La diabla castigadora (Rebeca vestida de Tenorio)",
+      "kind": "personaje",
+      "myths": [
+        "la-diabla-castigadora"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Ficha aparte de la mujer del pueblo porque el disfraz es el mito y cambia la silueta entera: botas, sombrero, saco y correa ancha del marido, esperando en la esquina del barrio Villanueva. Es persona, no criatura — el universo expone el disfraz humano y rechaza leer la violencia como honor, así que la ficha muestra la espera, nunca la agresión."
+    },
+    {
+      "id": "nino_campesino",
+      "name": "El niño del pueblo",
+      "kind": "personaje",
+      "myths": [
+        "la-monedita-en-la-alcancia",
+        "nueva-version-de-la-luz-del-limonal",
+        "lo-que-ensenan-las-cuevas",
+        "la-puerta-del-perdon",
+        "el-carriazo-de-vereda-san-isidro",
+        "la-campana-del-diablo",
+        "el-trapiche-ardiendo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Siete relatos y una sola figura de escala: Alberto Díaz a los siete años, el paje del padre Esteban, el niño indígena que guía al párroco de Cachalú, los que se descubren la cabeza ante la Puerta del Perdón, los que oyen los cuentos junto al fogón. Una biblia necesita una referencia de escala infantil y este corpus la pide en siete páginas."
+    },
+    {
+      "id": "gente_del_pueblo",
+      "name": "La gente del pueblo",
+      "kind": "colectivo",
+      "myths": [
+        "el-anima-coy",
+        "la-hilandera",
+        "la-sayona-del-cementerio",
+        "la-cueva-de-la-pisca",
+        "el-trapiche-ardiendo",
+        "la-mula-maneada",
+        "la-vista-del-libertador",
+        "el-quijote-piedecuestano",
+        "el-fantasma-de-el-horizonte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Una sola gramática de grupo para todos los modos de multitud del corpus: el vecindario que reza tras la puerta y mira por las rendijas, los serenos con bastón, las patrullas nocturnas armadas, la romería a Chiquinquirá, el gentío de la plaza, los revolucionarios de la tienda en 1896. Nueve relatos ahorrados en un pliego."
+    },
+    {
+      "id": "hilanderas_fiqueras",
+      "name": "Las hilanderas y torcedoras de fique",
+      "kind": "colectivo",
+      "myths": [
+        "la-hilandera",
+        "la-mechuda",
+        "la-monedita-en-la-alcancia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La cultura material que define a Piedecuesta y que ninguna otra ficha cubre: escarmenadoras, hilanderas y torcedoras en los tornos y telares convirtiendo el fique en chuyas, con el radio puesto. Absorbe a Oliva, que es una de ellas y cuyo único rasgo propio —la cobija blanca— va en hoja de utilería."
+    },
+    {
+      "id": "conquistadores",
+      "name": "Los conquistadores",
+      "kind": "colectivo",
+      "myths": [
+        "lagunas-encantadas",
+        "el-quijote-piedecuestano",
+        "talabad",
+        "el-cacique-salomon"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cuatro relatos: los de las armaduras relucientes que echan sal a la laguna, los arcabuces de la Villa de San Carlos, los hombres armados de Velasco en Bucarica. Grupo, no individuos: ninguno tiene nombre ni rostro en el corpus."
+    },
+    {
+      "id": "aves_nocturnas_del_monte",
+      "name": "Las aves de la noche santandereana",
+      "kind": "colectivo",
+      "myths": [
+        "la-mancarita",
+        "un-libertador-piedecuestano",
+        "el-anima-coy",
+        "la-mula-del-diablo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Un pliego para las cuatro aves que el corpus nombra y que no conducen acto por sí solas: el surrucú o mochuelo cuyo canto se confunde con el grito de la Máncara, el cóndor montañés, el chulo y la guala del callejón. Fichar cada una por separado costaría cuatro pliegos por cuatro menciones."
+    },
+    {
+      "id": "mula_de_carga",
+      "name": "La mula de carga aparejada",
+      "kind": "animal",
+      "myths": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "el-anima-coy",
+        "la-mula-del-diablo",
+        "los-tunjos-de-la-cantera"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El animal que mueve este mundo: La Ojigacha, La Chenga y el resto de la recua de Mateo, la mula que llevan a herrar, la mula cuyos cascos anuncian al Ánima Coy. Viva y aparejada, distinta de las dos mulas espectrales."
+    },
+    {
+      "id": "caballo_de_silla",
+      "name": "El caballo de silla",
+      "kind": "animal",
+      "myths": [
+        "el-diablo-de-umpala",
+        "la-vista-del-libertador",
+        "nueva-version-de-la-luz-del-limonal",
+        "el-cerro-encantado",
+        "la-piedra-del-muerto",
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Seis relatos en un pliego: el alazán negro de Félix con su marca blanca en la frente, la bestia de Bolívar, la del padre Esteban con el paje en el anca, la yegua Pinta de Cantera, los caballos del rico de Mogotes. La chispa de la herradura contra el empedrado —el mecanismo entero de El diablo de Umpalá— es una regla de este mismo contrato, no otra ficha."
+    },
+    {
+      "id": "perros_de_vereda",
+      "name": "Los perros de la vereda",
+      "kind": "animal",
+      "myths": [
+        "la-lampara-de-petroleo",
+        "el-trapiche-ardiendo",
+        "la-piedra-del-muerto",
+        "la-monedita-en-la-alcancia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cuatro relatos: los que aúllan cuando baja la luz del Cáscaro, los que salvan a don Telmo de la Máncara, los que se esconden bajo las camas, los gatos y perros negros de 1960. Los mastines del rico entran aquí, pero la escena del ataque no se produce."
+    },
+    {
+      "id": "chivo_y_cabro",
+      "name": "El chivo y el hato de cabros",
+      "kind": "animal",
+      "myths": [
+        "el-diablo-de-umpala",
+        "el-carriazo-de-vereda-san-isidro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Dos relatos: los cabros, ovejas y camuros que comercia Félix y el chivo con cachos en que aparece el Carriazo. Una sola ficha de cabra da las dos lecturas y ahorra la ficha aparte del estado-chivo."
+    },
+    {
+      "id": "gallinas_y_pollo_saraviado",
+      "name": "Las gallinas del patio y el pollo saraviado",
+      "kind": "animal",
+      "myths": [
+        "el-pollo-de-las-animas",
+        "la-monedita-en-la-alcancia",
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El pollo saraviado —gallina pintada o moteada— es el objeto por el que se cuenta un relato entero, y las mismas aves ponen el nido donde Alberto encuentra los huesos y acompañan al totumo dorado. Tres relatos, una ficha."
+    },
+    {
+      "id": "guardianes_del_roble",
+      "name": "La cascabel y el toro de cuernos agudos",
+      "kind": "animal",
+      "myths": [
+        "el-carriazo-de-vereda-san-isidro",
+        "la-piedra-del-muerto",
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los dos animales que hay que vencer para llegar al entierro del Carriazo van en un pliego de grupo: la serpiente cascabel y el toro viejo de cuernos agudos. El mismo contrato sirve para el ganado que sestea en el valle de Mogotes y para las reses de la laguna de Girón."
+    },
+    {
+      "id": "arbol_centenario",
+      "name": "El árbol centenario del camino",
+      "kind": "planta",
+      "myths": [
+        "la-campana-del-diablo",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-reventon-de-jacobo",
+        "la-hilandera",
+        "el-doctor-galeacer"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cinco relatos y un solo árbol grande junto al camino: el caracolí de doscientos años de Tres Esquinas que sostiene la campana, el roble bajo cuyas raíces está el entierro, los caracolíes y arrayanes de El Reventón, los robles bajo los que se cuenta a la Máncara. La especie cambia; la silueta y la función son la misma."
+    },
+    {
+      "id": "fique_y_tabaco",
+      "name": "El fique y el tabaco",
+      "kind": "planta",
+      "myths": [
+        "la-hilandera",
+        "la-cueva-del-diablo",
+        "tal-para-cual",
+        "la-monedita-en-la-alcancia",
+        "la-mechuda"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Las dos plantas del oficio santandereano, documentadas fuera del corpus por el AMB para Piedecuesta junto con la panela. La penca y la hebra, la mata y la hoja: sin este pliego la biblia no puede vestir ni la saquería ni la carga de la mula ni la casona de Girón."
+    },
+    {
+      "id": "casa_de_bahareque",
+      "name": "La casa campesina de bahareque",
+      "kind": "arquitectura",
+      "myths": [
+        "la-lampara-de-petroleo",
+        "la-diabla-castigadora",
+        "los-tunjos-de-la-cantera",
+        "el-cerro-encantado",
+        "el-reventon-de-jacobo",
+        "el-pollo-de-las-animas",
+        "el-anima-coy",
+        "la-mula-del-diablo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El techo bajo el que pasa medio corpus, y por eso un solo pliego, con la ruina resuelta dentro del contrato y no en un pliego aparte: barro, bahareque, zinc y paja en La Urgua, barro y cañabrava con techo de zinc en Villanueva, la choza de Silvestre, el rancho de Reyes, y la casa abandonada de tapia de El Reventón con la ventana rota. El patio con su pozo, la corraleja, el gallinero, el baño comunal y la cerca de arrayanes son partes de esta ficha, no fichas."
+    },
+    {
+      "id": "casona_de_tapia_pisada",
+      "name": "La casona de pueblo de tapia pisada",
+      "kind": "arquitectura",
+      "myths": [
+        "la-monedita-en-la-alcancia",
+        "tal-para-cual",
+        "la-vista-del-libertador",
+        "la-mula-maneada",
+        "nueva-version-de-la-luz-del-limonal",
+        "la-piedra-del-muerto",
+        "la-hilandera"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Siete relatos en un pliego: paredes gruesas de tapia y techo de teja y madera en la saquería de la carrera 8, la casona girones de don Anselmo con su turpial y su gato, la casa que alojó al Libertador con muebles de la Colonia, las casonas blancas de tejados, la casa principal de El Limonal y la mansión del rico de Mogotes. El interior de la saquería, con sus tornos y sus sacas, va en este mismo contrato."
+    },
+    {
+      "id": "iglesia_de_pueblo",
+      "name": "La iglesia y su atrio",
+      "kind": "arquitectura",
+      "myths": [
+        "el-anima-coy",
+        "la-mechuda",
+        "la-vista-del-libertador",
+        "la-sayona-del-cementerio",
+        "nueva-version-de-la-luz-del-limonal",
+        "cuento-fantastico",
+        "tal-para-cual",
+        "la-puerta-del-perdon",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Nueve relatos y un solo modelo espacial: San Antonio y sus campanas, la iglesia vieja con reloj de torre, la parroquia de San Juan, la Capilla de los Dolores, la capilla de El Limonal, el monasterio de las Clarisas, el convento de monjas, el atrio y sus gradas. Lo que cambia es la advocación, no la fábrica."
+    },
+    {
+      "id": "puerta_del_perdon",
+      "name": "La Puerta del Perdón",
+      "kind": "arquitectura",
+      "myths": [
+        "la-puerta-del-perdon"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Es el objeto por el que se cuenta el relato y una pieza de patrimonio real: la puerta lateral de madera azul cielo con arco de piedra tallada de la parroquia San Francisco Javier. Se ficha aparte de la iglesia porque el relato no mira el templo sino el umbral. El contrato no representa el raspar la piedra ni el masticar la astilla: el universo separa el patrimonio material de los milagros."
+    },
+    {
+      "id": "trapiche_ardiendo",
+      "name": "El trapiche ardiendo de Nazario",
+      "kind": "arquitectura",
+      "myths": [
+        "el-trapiche-ardiendo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El relato sólo enseña el molino en llamas sobre el horizonte, una vez al año, visto desde El Volcán, así que un pliego basta y el trapiche apagado no se ficha. El contrato lleva el caney, la hornilla, las prensas y las ruedas."
+    },
+    {
+      "id": "tienda_de_pueblo",
+      "name": "La tienda y el local de oficio",
+      "kind": "arquitectura",
+      "myths": [
+        "la-sayona-del-cementerio",
+        "la-campana-del-diablo",
+        "el-diablo-de-umpala",
+        "la-mula-del-diablo",
+        "el-carriazo-de-vereda-san-isidro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cinco relatos y un solo local que da a la calle: la tienda «La Gran Luz», el hotel Bochinche, el negocio de golosinas y aspirinas de Félix con su letrero, la tienda de la Piquituerta, las cantinas donde Reyes Suárez contaba. La fragua del herrero comparte esta gramática de fachada; lo suyo de dentro va en la ficha del herrero."
+    },
+    {
+      "id": "plaza_del_pueblo",
+      "name": "La plaza",
+      "kind": "lugar",
+      "myths": [
+        "el-cerro-encantado",
+        "la-mula-maneada",
+        "talabad",
+        "el-quijote-piedecuestano",
+        "la-vista-del-libertador",
+        "la-puerta-del-perdon",
+        "el-diablo-de-umpala"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Siete relatos: la plaza desde la que se ve el cerro de la Cantera, la de Bucarica con su palenque de doctrina, la de Monguí, aquella donde amanece Petra. La Casa Consistorial, el Palacio Municipal y los arcos, gallardetes y banderas de la recepción al Libertador son gramática de esta ficha, no fichas propias."
+    },
+    {
+      "id": "calle_empedrada",
+      "name": "La calle empedrada de noche",
+      "kind": "lugar",
+      "myths": [
+        "cuento-fantastico",
+        "el-anima-coy",
+        "el-diablo-de-umpala",
+        "la-mula-del-diablo",
+        "la-mula-maneada",
+        "el-fantasma-de-el-horizonte",
+        "la-mechuda",
+        "la-diabla-castigadora",
+        "la-vista-del-libertador"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El escenario de nueve relatos y, con el camino de herradura, el verdadero protagonista del corpus: adoquín y piedra, esquinas, zaguanes, el empedrado de Umpalá, el camino de la Pedregosa vieja. Los puentes —el de Plata, el Maldito, el vehicular de Tres Esquinas— entran aquí; no cambian de materia ni de luz."
+    },
+    {
+      "id": "cueva_de_tesoro",
+      "name": "La cueva de tesoro",
+      "kind": "lugar",
+      "myths": [
+        "la-cueva-de-la-pisca",
+        "lo-que-ensenan-las-cuevas",
+        "el-ermitano-iracundo",
+        "duende-del-salto",
+        "el-quijote-piedecuestano",
+        "la-hilandera",
+        "la-cueva-del-diablo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El mayor ahorro de lugar del censo: ocho cuevas nombradas —la de la Pisca, el Cenicero, la Calentana, la del Indio, Cachalú, la del ermitaño en Ocaña, la caverna tras el salto, el túnel de El Clarinete— y la peña que la Máncara abre con un lamento, todas en un solo modelo espacial. El contrato prohíbe expresamente mostrar excavación, guaquería, restos humanos o tesoro espectacular."
+    },
+    {
+      "id": "cementerio",
+      "name": "El cementerio",
+      "kind": "lugar",
+      "myths": [
+        "la-sayona-del-cementerio"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Es el escenario del acto —allí Elvira se vuelve Sayona noche tras noche— y no es intercambiable con ningún otro espacio ya fichado: monumentos de mármol labrados por el propio doliente."
+    },
+    {
+      "id": "piedra_del_muerto",
+      "name": "La piedra del muerto",
+      "kind": "lugar",
+      "myths": [
+        "la-piedra-del-muerto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El objeto por el que se cuenta el relato: una roca antropomorfa en mitad del río Mogoticos que remeda un cuerpo amortajado, con las demás piedras de la loma leídas como ganado petrificado. Formación real y localizable, no paisaje genérico."
+    },
+    {
+      "id": "canon_del_chicamocha",
+      "name": "El cañón del Chicamocha y la Mesa de Los Santos",
+      "kind": "paisaje",
+      "myths": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El paisaje que ninguna otra ficha da: el corredor seco y vertical que baja a Pescadero, las Peñas de Salvavidas, las lomas del Ventorrillo, Punta de la Mesa y Blanquiscal. Es la contraparte árida del monte verde y el corpus la usa como umbral de lo sobrenatural."
+    },
+    {
+      "id": "camino_de_herradura",
+      "name": "El camino de herradura",
+      "kind": "paisaje",
+      "myths": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-trapiche-ardiendo",
+        "nueva-version-de-la-luz-del-limonal",
+        "los-tunjos-de-la-cantera",
+        "el-reventon-de-jacobo",
+        "la-piedra-del-muerto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Ocho relatos ocurren encima de él: el camino real de San Isidro, el ramal viejo de la vía Curos, la ruta de San Rafael a Piedecuesta, el camino a Chiquinquirá. Su gramática lleva la luna llena, que el corpus usa como reloj, y la cruz alta de camino con letrero que los vecinos levantan donde alguien cayó."
+    },
+    {
+      "id": "monte_y_vereda",
+      "name": "El monte y la vereda",
+      "kind": "paisaje",
+      "myths": [
+        "la-mancarita",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-cerro-encantado",
+        "el-trapiche-ardiendo",
+        "talabad",
+        "tal-para-cual",
+        "la-diabla-castigadora",
+        "los-tunjos-de-la-cantera",
+        "el-cacique-salomon",
+        "la-piedra-del-muerto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El lomerío verde donde vive todo lo que no está en el pueblo: cerros, potreros, cañaduzales, cacaotales, labrantíos de maíz, guarumos, matarratones, palmas de cera, arrayanes y el ganado que sestea. El cerro y la Loma de la Cantera —nombrados en tres relatos— entran aquí: son el mismo lomerío y su ficha aparte no añadiría silueta."
+    },
+    {
+      "id": "paramo_y_cordillera",
+      "name": "El páramo y la Cordillera Oriental",
+      "kind": "paisaje",
+      "myths": [
+        "el-doctor-galeacer",
+        "lagunas-encantadas",
+        "la-mancarita",
+        "el-ermitano-iracundo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cuatro relatos piden altura, frío y niebla permanente, que el monte bajo no da: las cumbres que cruza el caballo de Galeacer, las tierras altas de las lagunas bravas, las montañas de bruma de la Máncara. Clima y luz distintos bastan para separar el pliego."
+    },
+    {
+      "id": "laguna_brava",
+      "name": "La laguna brava",
+      "kind": "paisaje",
+      "myths": [
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Un ciclo entero de ocho lagunas cabe en un pliego: agua quieta sin origen ni destino, juncos en la orilla, remolinos que se tragan patos y personas, y las flores del lago que sirven de augurio. El totumo de frutos dorados y las calabazas blancas vueltas serpientes amarillas viven dentro de este contrato."
+    },
+    {
+      "id": "rio_y_quebradas",
+      "name": "El río y la quebrada",
+      "kind": "paisaje",
+      "myths": [
+        "cuento-fantastico",
+        "el-carriazo-de-vereda-san-isidro",
+        "nueva-version-de-la-luz-del-limonal",
+        "la-cueva-del-diablo",
+        "la-mechuda",
+        "la-lampara-de-petroleo",
+        "duende-del-salto",
+        "la-piedra-del-muerto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Ocho relatos: el río de Oro que ni es río ni es oro, el Manco, el Hato, el Umpalá, la quebrada Salvavidas, la quebradita del Puente de Plata, el Mogoticos. El salto y su velo de agua son un estado de este mismo sistema —la caverna de detrás la lleva la ficha de cueva—, y la piedra con la mancha del río también."
+    },
+    {
+      "id": "entierro_y_guaca",
+      "name": "El entierro",
+      "kind": "objeto",
+      "myths": [
+        "el-reventon-de-jacobo",
+        "la-monedita-en-la-alcancia",
+        "el-carriazo-de-vereda-san-isidro",
+        "la-cueva-de-la-pisca",
+        "lo-que-ensenan-las-cuevas",
+        "los-tunjos-de-la-cantera",
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El objeto por el que se cuenta un tercio del corpus: los dos baúles con plata, monedas de oro y billetes de El Reventón, las tres cargas bajo el roble, la guaca de monedas y ceniza, las dos vigas de oro del Socorro. Un pliego para todos. RESTRICCIÓN DURA del universo: nada de excavación, guaquería, restos humanos ni tesoro espectacular — el contrato muestra el baúl cerrado o la moneda suelta, no el hoyo abierto."
+    },
+    {
+      "id": "campana_de_plata",
+      "name": "La campana de plata del caracolí",
+      "kind": "objeto",
+      "myths": [
+        "la-campana-del-diablo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El objeto por el que existe el relato entero: la campana colgada a media altura del tronco, que los caminantes hacían sonar a pedradas hasta que empezó a repicar sola y un día desapareció."
+    },
+    {
+      "id": "lampara_de_petroleo",
+      "name": "La lámpara de petróleo",
+      "kind": "objeto",
+      "myths": [
+        "la-lampara-de-petroleo",
+        "el-trapiche-ardiendo",
+        "el-pollo-de-las-animas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Da nombre a un relato y es el faro de la sala en otro, pero sobre todo es el patrón de la aparición: la luz errante se reconoce porque se parece exactamente a esta llamita. Sin su pliego la ficha del fenómeno no tiene contra qué medirse."
+    },
+    {
+      "id": "luz_errante_nocturna",
+      "name": "La luz errante",
+      "kind": "fenomeno",
+      "myths": [
+        "la-lampara-de-petroleo",
+        "la-monedita-en-la-alcancia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Regla de fenómeno, no criatura: una luz amarillenta sin portador que baja del Cáscaro a La Urgua bajo el aguacero sin que las gotas la apaguen y hace aullar a los perros, y la luz blanca que sube y baja sobre el entierro de la saquería. Familia de las luces errantes de media Colombia; lo santandereano es el aguacero de junio, el río Umpalá y la violencia bipartidista del fondo. Se ficha aparte de la Luz del Limonal, que sí tiene cuerpo y nombre."
+    },
+    {
+      "id": "tormenta_de_montana",
+      "name": "La tormenta de montaña",
+      "kind": "fenomeno",
+      "myths": [
+        "la-piedra-del-muerto",
+        "la-mancarita",
+        "la-lampara-de-petroleo",
+        "el-cerro-encantado",
+        "lagunas-encantadas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cinco relatos usan el mismo castigo del cielo: el rayo convertido en látigo y el diluvio que petrifica al rico, la tormenta en que se manifiesta la Máncara, el aguacero de La Urgua, los aguaceros que los de Mogotes achacan a las lagunas bravas. El temblor y la lluvia de ceniza del cerro encantado entran como variante de este mismo contrato."
+    },
+    {
+      "id": "espanto_de_cabello_blanco",
+      "name": "El espanto de cabello blanco con latas y tapas",
+      "kind": "criatura",
+      "myths": [
+        "la-mula-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "mula_del_diablo",
+      "sheets": 0,
+      "note": "Nunca aparece solo: viene siempre detrás de ella arrastrando gritos metálicos. La ficha de la aparición lo lleva como su arriero de sombras."
+    },
+    {
+      "id": "chivo_del_carriazo",
+      "name": "El Carriazo en forma de chivo",
+      "kind": "animal",
+      "myths": [
+        "el-carriazo-de-vereda-san-isidro"
+      ],
+      "decision": "embedded",
+      "covered_by": "chivo_y_cabro",
+      "sheets": 0,
+      "note": "Variante del mismo ser ya fichado; el cuerpo de cabra lo da la ficha de chivo."
+    },
+    {
+      "id": "cuervo_de_petra",
+      "name": "El cuervo en que se convertía doña Petra",
+      "kind": "animal",
+      "myths": [
+        "la-mula-maneada"
+      ],
+      "decision": "embedded",
+      "covered_by": "brujas_pajaro_negro",
+      "sheets": 0,
+      "note": "Estado de un ser ya fichado y, además, miembro del colectivo de brujas-pájaro que el mismo relato despliega."
+    },
+    {
+      "id": "miguel_seco_dorado",
+      "name": "Miguel Seco enchapado en oro",
+      "kind": "criatura",
+      "myths": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "embedded",
+      "covered_by": "tunjo",
+      "sheets": 0,
+      "note": "Misma materia y mismo tratamiento que el tunjo, a escala humana: un cuerpo vuelto oro macizo. No necesita pliego propio."
+    },
+    {
+      "id": "burro_con_manta",
+      "name": "El burro cojo bajo la manta oscura",
+      "kind": "animal",
+      "myths": [
+        "el-fantasma-de-el-horizonte"
+      ],
+      "decision": "embedded",
+      "covered_by": "fantasma_de_el_horizonte",
+      "sheets": 0,
+      "note": "Es el mismo bulto visto de cerca. Separarlos costaría dos pliegos y rompería el chiste del relato, que consiste en que sean uno."
+    },
+    {
+      "id": "enjambre_de_abejas",
+      "name": "El enjambre de abejas",
+      "kind": "colectivo",
+      "myths": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "embedded",
+      "covered_by": "colmenero",
+      "sheets": 0,
+      "note": "Las abejas que lo atacan son parte de su nombre y de su escena; la ficha del Colmenero las lleva."
+    },
+    {
+      "id": "condor_montanes",
+      "name": "El cóndor montañés",
+      "kind": "animal",
+      "myths": [
+        "la-mancarita",
+        "un-libertador-piedecuestano"
+      ],
+      "decision": "embedded",
+      "covered_by": "aves_nocturnas_del_monte",
+      "sheets": 0,
+      "note": "Dos menciones y ningún acto propio; el pliego de aves lo cubre."
+    },
+    {
+      "id": "surrucu_mochuelo",
+      "name": "El surrucú o mochuelo",
+      "kind": "animal",
+      "myths": [
+        "la-mancarita"
+      ],
+      "decision": "embedded",
+      "covered_by": "aves_nocturnas_del_monte",
+      "sheets": 0,
+      "note": "Es la explicación natural del grito de la Máncara; se dibuja dentro del pliego de aves nocturnas."
+    },
+    {
+      "id": "chulo_y_guala",
+      "name": "El chulo y la guala",
+      "kind": "animal",
+      "myths": [
+        "el-anima-coy",
+        "la-mula-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "aves_nocturnas_del_monte",
+      "sheets": 0,
+      "note": "Aparecen como comparación («brincando como un chulo») y como topónimo (el Callejón de la Guala); ningún acto propio."
+    },
+    {
+      "id": "mastines_del_rico",
+      "name": "Los mastines del rico",
+      "kind": "animal",
+      "myths": [
+        "la-piedra-del-muerto"
+      ],
+      "decision": "embedded",
+      "covered_by": "perros_de_vereda",
+      "sheets": 0,
+      "note": "Variante de porte del mismo animal ya fichado. La escena en que despedazan al mendigo no se produce: el marco editorial pide representar antes del daño."
+    },
+    {
+      "id": "yegua_pinta",
+      "name": "La yegua Pinta",
+      "kind": "animal",
+      "myths": [
+        "el-cerro-encantado"
+      ],
+      "decision": "embedded",
+      "covered_by": "caballo_de_silla",
+      "sheets": 0,
+      "note": "Montura nombrada sin rasgo que la separe salvo la capa pinta, que va en el contrato del caballo de silla."
+    },
+    {
+      "id": "alazan_de_felix",
+      "name": "El alazán negro con marca blanca en la frente",
+      "kind": "animal",
+      "myths": [
+        "el-diablo-de-umpala"
+      ],
+      "decision": "embedded",
+      "covered_by": "caballo_de_silla",
+      "sheets": 0,
+      "note": "Caballo real, no espectro; la marca blanca en la frente y las herraduras que sacan chispas son marcadores de continuidad dentro del pliego del caballo de silla."
+    },
+    {
+      "id": "chispas_de_herradura",
+      "name": "Las chispas de la herradura contra el empedrado",
+      "kind": "fenomeno",
+      "myths": [
+        "el-diablo-de-umpala",
+        "la-mula-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "caballo_de_silla",
+      "sheets": 0,
+      "note": "Es el mecanismo entero de un relato, pero es una regla del caballo herrado sobre piedra y vive en su contrato, no en un pliego aparte."
+    },
+    {
+      "id": "ganado_y_reses",
+      "name": "El ganado del valle",
+      "kind": "animal",
+      "myths": [
+        "la-piedra-del-muerto",
+        "lagunas-encantadas"
+      ],
+      "decision": "embedded",
+      "covered_by": "guardianes_del_roble",
+      "sheets": 0,
+      "note": "Mismo animal que el toro ya fichado, en reposo; el pliego lo lleva como variante."
+    },
+    {
+      "id": "turpial_y_gato",
+      "name": "El turpial y el gato de la casona",
+      "kind": "animal",
+      "myths": [
+        "tal-para-cual"
+      ],
+      "decision": "embedded",
+      "covered_by": "casona_de_tapia_pisada",
+      "sheets": 0,
+      "note": "Acompañantes del patio girones; no conducen ningún acto."
+    },
+    {
+      "id": "totumo_de_frutos_dorados",
+      "name": "El totumo cargado de frutos dorados",
+      "kind": "planta",
+      "myths": [
+        "lagunas-encantadas"
+      ],
+      "decision": "embedded",
+      "covered_by": "mohan_de_la_laguna",
+      "sheets": 0,
+      "note": "Es el objeto que el mohán custodia y no se ve nunca sin él; su ficha lo lleva junto con la gallina y los polluelos dorados."
+    },
+    {
+      "id": "vegetacion_de_vereda",
+      "name": "Palma de cera, guarumo, matarratón, arrayán, cañaduzal, cacaotal y labrantío de maíz",
+      "kind": "planta",
+      "myths": [
+        "el-carriazo-de-vereda-san-isidro",
+        "la-diabla-castigadora",
+        "el-doctor-galeacer",
+        "talabad",
+        "tal-para-cual",
+        "el-cacique-salomon",
+        "el-trapiche-ardiendo",
+        "la-mechuda"
+      ],
+      "decision": "embedded",
+      "covered_by": "monte_y_vereda",
+      "sheets": 0,
+      "note": "Siete especies de fondo repartidas en ocho relatos; ninguna conduce un acto. La gramática del paisaje las cubre a todas."
+    },
+    {
+      "id": "cerro_de_la_cantera",
+      "name": "El cerro y la Loma de la Cantera",
+      "kind": "paisaje",
+      "myths": [
+        "el-cerro-encantado",
+        "la-puerta-del-perdon",
+        "los-tunjos-de-la-cantera"
+      ],
+      "decision": "embedded",
+      "covered_by": "monte_y_vereda",
+      "sheets": 0,
+      "note": "Nombrado en tres relatos y visible desde la plaza, pero visualmente es el mismo lomerío verde del resto de la vereda: una ficha propia no añadiría silueta."
+    },
+    {
+      "id": "salto_y_cascada",
+      "name": "El Salto del Duende y la quebrada La Honda",
+      "kind": "paisaje",
+      "myths": [
+        "duende-del-salto"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio_y_quebradas",
+      "sheets": 0,
+      "note": "Estado del mismo sistema fluvial ya fichado —caída y velo de agua—; la caverna de detrás la lleva la ficha de cueva."
+    },
+    {
+      "id": "pena_de_la_mancara",
+      "name": "La peña que la Máncara abre con un lamento",
+      "kind": "lugar",
+      "myths": [
+        "la-hilandera"
+      ],
+      "decision": "embedded",
+      "covered_by": "cueva_de_tesoro",
+      "sheets": 0,
+      "note": "Es una boca de cueva más, con la misma materia y la misma función de umbral."
+    },
+    {
+      "id": "cuevas_nombradas",
+      "name": "Cenicero, Calentana, Cueva del Indio, Cachalú, El Clarinete, caverna del salto, cueva del ermitaño",
+      "kind": "lugar",
+      "myths": [
+        "lo-que-ensenan-las-cuevas",
+        "el-quijote-piedecuestano",
+        "duende-del-salto",
+        "el-ermitano-iracundo"
+      ],
+      "decision": "embedded",
+      "covered_by": "cueva_de_tesoro",
+      "sheets": 0,
+      "note": "Siete topónimos para un mismo modelo espacial. Aquí está el mayor ahorro del censo: siete pliegos evitados sin perder ninguna escena."
+    },
+    {
+      "id": "casa_abandonada_del_reventon",
+      "name": "La casa abandonada de El Reventón",
+      "kind": "arquitectura",
+      "myths": [
+        "el-reventon-de-jacobo"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_bahareque",
+      "sheets": 0,
+      "note": "Misma construcción de tapia y bahareque en estado de ruina; el estado «abandonada» ya está declarado en la ficha de la casa campesina."
+    },
+    {
+      "id": "dependencias_de_la_casa",
+      "name": "El pozo del patio, la corraleja, el gallinero, el baño comunal y la cerca de arrayanes",
+      "kind": "arquitectura",
+      "myths": [
+        "el-anima-coy",
+        "el-pollo-de-las-animas",
+        "la-hilandera",
+        "el-doctor-galeacer",
+        "la-monedita-en-la-alcancia"
+      ],
+      "decision": "embedded",
+      "covered_by": "casa_de_bahareque",
+      "sheets": 0,
+      "note": "Partes de la casa campesina, no edificios: van en su contrato."
+    },
+    {
+      "id": "saqueria_de_fique",
+      "name": "La saquería",
+      "kind": "arquitectura",
+      "myths": [
+        "la-monedita-en-la-alcancia",
+        "la-hilandera"
+      ],
+      "decision": "embedded",
+      "covered_by": "casona_de_tapia_pisada",
+      "sheets": 0,
+      "note": "Es una casona de tapia pisada con tornos adentro; el mobiliario del oficio va en la hoja de utilería del fique y las trabajadoras tienen ficha propia."
+    },
+    {
+      "id": "hacienda_y_mansion",
+      "name": "La hacienda El Limonal y la mansión del rico de Mogotes",
+      "kind": "arquitectura",
+      "myths": [
+        "nueva-version-de-la-luz-del-limonal",
+        "la-piedra-del-muerto"
+      ],
+      "decision": "embedded",
+      "covered_by": "casona_de_tapia_pisada",
+      "sheets": 0,
+      "note": "Casonas rurales de la misma fábrica y escala; lo que cambia es el tamaño del patio. La capilla del Limonal la cubre la ficha de iglesia y los establos la de casona."
+    },
+    {
+      "id": "fragua_del_herrero",
+      "name": "La fragua",
+      "kind": "arquitectura",
+      "myths": [
+        "la-mula-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "herrero",
+      "sheets": 0,
+      "note": "Taller de una sola escena; su fuelle, yunque y fuego son inseparables del oficio y van en la ficha del herrero. La fachada la da la ficha del local de oficio."
+    },
+    {
+      "id": "templos_nombrados",
+      "name": "Las Clarisas, el convento, la Capilla de los Dolores, la capilla de El Limonal, el reloj de torre y el atrio",
+      "kind": "arquitectura",
+      "myths": [
+        "cuento-fantastico",
+        "el-fantasma-de-el-horizonte",
+        "la-vista-del-libertador",
+        "nueva-version-de-la-luz-del-limonal",
+        "la-mechuda",
+        "la-sayona-del-cementerio"
+      ],
+      "decision": "embedded",
+      "covered_by": "iglesia_de_pueblo",
+      "sheets": 0,
+      "note": "Seis advocaciones y anexos de una misma fábrica; ninguna cambia de materia ni de planta."
+    },
+    {
+      "id": "casa_consistorial_y_arcos",
+      "name": "La Casa Consistorial, el Palacio Municipal, el palenque de Bucarica y los arcos de bienvenida",
+      "kind": "arquitectura",
+      "myths": [
+        "el-diablo-de-umpala",
+        "talabad",
+        "la-vista-del-libertador"
+      ],
+      "decision": "embedded",
+      "covered_by": "plaza_del_pueblo",
+      "sheets": 0,
+      "note": "Todo lo que rodea o se monta en la plaza: los edificios de gobierno, la valla del duelo y las estructuras efímeras de fiesta con sus gallardetes y banderas."
+    },
+    {
+      "id": "puentes",
+      "name": "El Puente de Plata, El Puente Maldito y el puente vehicular",
+      "kind": "arquitectura",
+      "myths": [
+        "la-mechuda",
+        "la-mula-del-diablo",
+        "la-campana-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "calle_empedrada",
+      "sheets": 0,
+      "note": "Tres pasos de la misma piedra y la misma luz nocturna; el pliego de calle empedrada los lleva."
+    },
+    {
+      "id": "cruz_de_camino",
+      "name": "La cruz alta de camino con letrero",
+      "kind": "arquitectura",
+      "myths": [
+        "la-mechuda"
+      ],
+      "decision": "embedded",
+      "covered_by": "camino_de_herradura",
+      "sheets": 0,
+      "note": "Mobiliario propio del camino santandereano: la cruz que se levanta donde alguien cayó. Va en la gramática del camino."
+    },
+    {
+      "id": "luna_llena",
+      "name": "La luna llena",
+      "kind": "fenomeno",
+      "myths": [
+        "el-carriazo-de-vereda-san-isidro",
+        "la-cueva-de-la-pisca",
+        "la-diabla-castigadora",
+        "la-hilandera"
+      ],
+      "decision": "embedded",
+      "covered_by": "camino_de_herradura",
+      "sheets": 0,
+      "note": "El corpus la usa como reloj —sólo en luna llena salen la pisca y los tesoros—; es iluminación del camino, no entidad."
+    },
+    {
+      "id": "temblor_y_lluvia_de_ceniza",
+      "name": "El temblor y la lluvia de ceniza",
+      "kind": "fenomeno",
+      "myths": [
+        "el-cerro-encantado"
+      ],
+      "decision": "embedded",
+      "covered_by": "tormenta_de_montana",
+      "sheets": 0,
+      "note": "Variante del mismo castigo del cielo ya fichado; entra como fase del contrato de tormenta."
+    },
+    {
+      "id": "remolino_y_flores_de_laguna",
+      "name": "Los remolinos y las flores del lago",
+      "kind": "fenomeno",
+      "myths": [
+        "lagunas-encantadas"
+      ],
+      "decision": "embedded",
+      "covered_by": "laguna_brava",
+      "sheets": 0,
+      "note": "Comportamientos del agua ya fichada; van en el contrato de la laguna, junto con las calabazas blancas vueltas serpientes amarillas."
+    },
+    {
+      "id": "niebla_de_paramo",
+      "name": "La niebla perpetua",
+      "kind": "fenomeno",
+      "myths": [
+        "el-doctor-galeacer",
+        "la-mancarita",
+        "duende-del-salto"
+      ],
+      "decision": "embedded",
+      "covered_by": "paramo_y_cordillera",
+      "sheets": 0,
+      "note": "Es el clima del pliego de páramo, no un fenómeno aparte."
+    },
+    {
+      "id": "luz_blanca_del_entierro",
+      "name": "La luz blanca que sube y baja",
+      "kind": "fenomeno",
+      "myths": [
+        "la-monedita-en-la-alcancia"
+      ],
+      "decision": "embedded",
+      "covered_by": "luz_errante_nocturna",
+      "sheets": 0,
+      "note": "Misma regla de fenómeno con otro color; entra como fase del contrato de la luz errante."
+    },
+    {
+      "id": "campesinos_nombrados",
+      "name": "Jacobo, José de la Cruz, Silvestre, Lázaro, Reyes Suárez, Silvio, Carmelo, don Crisanto, don Telmo, el guaquero",
+      "kind": "personaje",
+      "myths": [
+        "el-reventon-de-jacobo",
+        "el-doctor-galeacer",
+        "los-tunjos-de-la-cantera",
+        "la-campana-del-diablo",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-trapiche-ardiendo",
+        "la-cueva-de-la-pisca"
+      ],
+      "decision": "embedded",
+      "covered_by": "campesino_labriego",
+      "sheets": 0,
+      "note": "Diez nombres para una sola silueta. Ninguno trae un rasgo físico que lo separe de los demás y el que busca entierros sólo cambia de herramienta."
+    },
+    {
+      "id": "mozos_nombrados",
+      "name": "Nepito, Antoninito, Balbino, Remigio, Tenorio, Carlos Vicente Gómez, el parroquiano, Ritornelio",
+      "kind": "personaje",
+      "myths": [
+        "el-fantasma-de-el-horizonte",
+        "la-mechuda",
+        "la-campana-del-diablo",
+        "la-diabla-castigadora",
+        "la-sayona-del-cementerio",
+        "cuento-fantastico",
+        "el-pollo-de-las-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "mozo_del_pueblo",
+      "sheets": 0,
+      "note": "Ocho nombres, un cuerpo. Los tres perseguidores adolescentes del río de Oro y el escultor de mármoles entran aquí. Ritornelio lleva salvaguarda de dignidad explícita en la ficha que lo cubre."
+    },
+    {
+      "id": "mujeres_nombradas",
+      "name": "Rebeca, Maribella, Eumelia viva, Cantera, doña María, Ramona, Oliva, Elvira, la mujer de Tona, las muchachas del baile, las mamasantas, las doncellas del salto",
+      "kind": "personaje",
+      "myths": [
+        "la-diabla-castigadora",
+        "la-mula-del-diablo",
+        "el-cerro-encantado",
+        "talabad",
+        "la-monedita-en-la-alcancia",
+        "la-hilandera",
+        "la-mechuda",
+        "la-puerta-del-perdon",
+        "el-diablo-de-umpala",
+        "duende-del-salto"
+      ],
+      "decision": "embedded",
+      "covered_by": "mujer_del_pueblo",
+      "sheets": 0,
+      "note": "Doce mujeres nombradas y ni un rasgo que las separe visualmente. Oliva se cubre además por la ficha de las fiqueras, que es donde trabaja."
+    },
+    {
+      "id": "ninos_nombrados",
+      "name": "Alberto Díaz, Rosario, el paje del padre Esteban, el niño indígena de Cachalú",
+      "kind": "personaje",
+      "myths": [
+        "la-monedita-en-la-alcancia",
+        "el-anima-coy",
+        "nueva-version-de-la-luz-del-limonal",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "embedded",
+      "covered_by": "nino_campesino",
+      "sheets": 0,
+      "note": "Cuatro niños sin rasgo distintivo. Del niño indígena de Cachalú el corpus no da traje ni rasgo, así que su contrato no puede ir más allá de la figura infantil genérica."
+    },
+    {
+      "id": "clero_nombrado",
+      "name": "El padre Esteban García, el Padre Valenzuela, maese Cirilo y don Plácido",
+      "kind": "personaje",
+      "myths": [
+        "nueva-version-de-la-luz-del-limonal",
+        "la-vista-del-libertador",
+        "tal-para-cual",
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "embedded",
+      "covered_by": "cura_de_pueblo",
+      "sheets": 0,
+      "note": "Cuatro clérigos en un pliego. La sotana corta y el roquete del sacristán son variante del mismo contrato; su coto no se representa."
+    },
+    {
+      "id": "ancianas_nombradas",
+      "name": "Eulogia Plata, la abuela narradora, la abuela del azadón y la madrastra de Ritornelio",
+      "kind": "personaje",
+      "myths": [
+        "la-mechuda",
+        "el-trapiche-ardiendo",
+        "la-hilandera",
+        "el-pollo-de-las-animas",
+        "los-tunjos-de-la-cantera"
+      ],
+      "decision": "embedded",
+      "covered_by": "curandera_del_fogon",
+      "sheets": 0,
+      "note": "Cuatro ancianas campesinas de idéntica silueta; lo que cambia es el acto —curar, contar, desenterrar, engañar—, no el cuerpo."
+    },
+    {
+      "id": "hidalgos_nombrados",
+      "name": "Don Celedonio, don Juan de Velasco, don Juan Bautista de Olarte, don Juan de Arteaga y don Anselmo Landínez",
+      "kind": "personaje",
+      "myths": [
+        "el-quijote-piedecuestano",
+        "talabad",
+        "el-cacique-salomon",
+        "tal-para-cual"
+      ],
+      "decision": "embedded",
+      "covered_by": "hidalgo_criollo_colonial",
+      "sheets": 0,
+      "note": "Cinco caballeros del mismo registro colonial y ni un rasgo propio. El mestizo tramposo que no le paga a Pirinoche entra también aquí, un peldaño más abajo en la escala social pero con el mismo traje."
+    },
+    {
+      "id": "juan_de_guarguati",
+      "name": "Don Juan de Guarguatí",
+      "kind": "personaje",
+      "myths": [
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "embedded",
+      "covered_by": "talabali",
+      "sheets": 0,
+      "note": "Protagonista con muchos actos y varios trebejos —cadenas, collar de colmillos, lanza, capa— pero sin un solo rasgo de cuerpo ni de traje. Se cubre con la ficha de Talabalí, el único indígena que el corpus sí describe, y su contrato añade los trebejos. Fichar su vestuario aparte sería inventar iconografía guane, que es justo lo que el universo prohíbe."
+    },
+    {
+      "id": "sequito_de_bolivar",
+      "name": "Férguson, Lacroix, O'Leary, Soublette y Wilson",
+      "kind": "colectivo",
+      "myths": [
+        "la-vista-del-libertador"
+      ],
+      "decision": "embedded",
+      "covered_by": "simon_bolivar",
+      "sheets": 0,
+      "note": "Cabalgan sólo como comitiva y el relato no les da un rasgo individual."
+    },
+    {
+      "id": "serenos_y_vecindario",
+      "name": "Los serenos, las damas devotas, las patrullas nocturnas, los romeros y los revolucionarios de 1896",
+      "kind": "colectivo",
+      "myths": [
+        "el-anima-coy",
+        "la-hilandera",
+        "la-cueva-de-la-pisca",
+        "el-trapiche-ardiendo",
+        "la-sayona-del-cementerio"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente_del_pueblo",
+      "sheets": 0,
+      "note": "Cinco modos de multitud que una sola gramática de grupo cubre. El bastón del sereno va en hoja de utilería."
+    },
+    {
+      "id": "contrabandistas_de_mataburro",
+      "name": "Los contrabandistas de aguardiente mataburro o chirrinche",
+      "kind": "colectivo",
+      "myths": [
+        "la-cueva-de-la-pisca",
+        "el-doctor-galeacer"
+      ],
+      "decision": "embedded",
+      "covered_by": "arriero",
+      "sheets": 0,
+      "note": "La misma figura del camino con otra carga; la damajuana va en la hoja de arriería."
+    },
+    {
+      "id": "mateo_arriero",
+      "name": "Mateo, el arriero de La Hacienda",
+      "kind": "personaje",
+      "myths": [
+        "la-cueva-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "arriero",
+      "sheets": 0,
+      "note": "Es el arriero del oficio ya fichado, con nombre y fecha (1850) pero sin rasgo físico propio."
+    },
+    {
+      "id": "rosario_y_matraca",
+      "name": "El rosario penitencial y la matraca",
+      "kind": "objeto",
+      "myths": [
+        "el-fantasma-de-el-horizonte"
+      ],
+      "decision": "embedded",
+      "covered_by": "fantasma_de_el_horizonte",
+      "sheets": 0,
+      "note": "El sonido y el objeto que construyen el espanto van en su propia ficha, porque sin ellos no hay aparición."
+    },
+    {
+      "id": "lagrimas_de_diamante",
+      "name": "Las dos lágrimas convertidas en diamantes y las escamas doradas",
+      "kind": "objeto",
+      "myths": [
+        "los-tunjos-de-la-cantera"
+      ],
+      "decision": "embedded",
+      "covered_by": "tunjo",
+      "sheets": 0,
+      "note": "Producto del cuerpo del tunjo; se dibujan dentro de su contrato."
+    },
+    {
+      "id": "tornos_y_chuyas",
+      "name": "El torno, el telar, el huso, las chuyas y la saca de fique",
+      "kind": "objeto",
+      "myths": [
+        "la-hilandera",
+        "la-monedita-en-la-alcancia",
+        "la-mechuda"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_fique",
+      "sheets": 0,
+      "note": "El mobiliario del oficio del fique, agrupado en una sola hoja."
+    },
+    {
+      "id": "lazos_y_crinejas",
+      "name": "Los lazos y crinejas de Tenorio",
+      "kind": "objeto",
+      "myths": [
+        "la-diabla-castigadora"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_fique",
+      "sheets": 0,
+      "note": "Producto menor del mismo oficio de la fibra."
+    },
+    {
+      "id": "cobija_blanca_de_lana",
+      "name": "La cobija blanca de lana",
+      "kind": "objeto",
+      "myths": [
+        "la-hilandera"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_vestuario",
+      "sheets": 0,
+      "note": "Único rasgo propio de Oliva y prenda documentada del corpus."
+    },
+    {
+      "id": "ruana_zamarros_y_sombrero",
+      "name": "La ruana, los zamarros, el sombrero gris de ala ancha, las botas, el saco y la correa ancha",
+      "kind": "objeto",
+      "myths": [
+        "lagunas-encantadas",
+        "el-diablo-de-umpala",
+        "la-diabla-castigadora",
+        "la-cueva-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_vestuario",
+      "sheets": 0,
+      "note": "El vestuario que las fuentes sí documentan. Nota de exactitud: la palabra «alpargata» no aparece ni una vez en el material editorial, así que no entra en la hoja sin una fuente que la respalde."
+    },
+    {
+      "id": "sayal_y_habito",
+      "name": "El sayal oscuro de la Sayona, el hábito ceniciento del ermitaño y el manto penitencial",
+      "kind": "objeto",
+      "myths": [
+        "la-sayona-del-cementerio",
+        "el-ermitano-iracundo",
+        "el-fantasma-de-el-horizonte"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_vestuario",
+      "sheets": 0,
+      "note": "Tres prendas oscuras de corte y caída emparentados; una sola hoja las resuelve."
+    },
+    {
+      "id": "mirinaque_y_crinolina",
+      "name": "El miriñaque y la crinolina del baile",
+      "kind": "objeto",
+      "myths": [
+        "la-vista-del-libertador"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_vestuario",
+      "sheets": 0,
+      "note": "Prenda de una sola escena, documentada literalmente en la fuente."
+    },
+    {
+      "id": "estola_y_caliz",
+      "name": "La estola, el cáliz, el cristo bendito, el agua bendita y los santos óleos",
+      "kind": "objeto",
+      "myths": [
+        "nueva-version-de-la-luz-del-limonal",
+        "lagunas-encantadas",
+        "la-mula-maneada",
+        "tal-para-cual"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_devocion",
+      "sheets": 0,
+      "note": "El instrumental con que el cura desactiva lo sobrenatural en cuatro relatos."
+    },
+    {
+      "id": "imagenes_de_bulto",
+      "name": "La imagen de la Virgen de Chiquinquirá, la de San Mateo y el Cristo crucificado",
+      "kind": "objeto",
+      "myths": [
+        "el-trapiche-ardiendo",
+        "la-cueva-de-la-pisca",
+        "lagunas-encantadas",
+        "tal-para-cual"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_devocion",
+      "sheets": 0,
+      "note": "Imágenes devocionales que se invocan, se cargan o se arrojan a la laguna, pero que nunca se animan: son objeto, no deidad."
+    },
+    {
+      "id": "velas_y_camandula",
+      "name": "La vela de sebo, el crucifijo y la camándula",
+      "kind": "objeto",
+      "myths": [
+        "el-pollo-de-las-animas",
+        "la-monedita-en-la-alcancia",
+        "el-anima-coy"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_devocion",
+      "sheets": 0,
+      "note": "Lo que se enciende y se agarra cuando se oye el ruido en la puerta."
+    },
+    {
+      "id": "tijeras_y_mostaza",
+      "name": "Las tijeras cruzadas y la mostaza bendita",
+      "kind": "objeto",
+      "myths": [
+        "la-mula-maneada"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_contra_el_espanto",
+      "sheets": 0,
+      "note": "Arma de don Juan Barbas contra la bruja y, a la vez, remedio doméstico documentado."
+    },
+    {
+      "id": "defensas_de_umbral",
+      "name": "Las cruces y herraduras detrás de la puerta, los ramos bendecidos y el vaso de agua bajo la cama",
+      "kind": "objeto",
+      "myths": [
+        "la-mula-maneada",
+        "la-monedita-en-la-alcancia",
+        "el-pollo-de-las-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_contra_el_espanto",
+      "sheets": 0,
+      "note": "La contracultura material del espanto: lo que la casa pone en los umbrales. Está en las fuentes y es lo que hace legible el miedo sin dibujar violencia."
+    },
+    {
+      "id": "escobas_y_garrotes",
+      "name": "Las escobas y garrotes con símbolos cabalísticos",
+      "kind": "objeto",
+      "myths": [
+        "la-mula-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_contra_el_espanto",
+      "sheets": 0,
+      "note": "Oficio del Llano de Garras nombrado de paso; objeto, no personaje."
+    },
+    {
+      "id": "azadon_y_alcancia",
+      "name": "El azadón, la olleta de ceniza, la alcancía de barro, las morrocotas y los billetes viejos",
+      "kind": "objeto",
+      "myths": [
+        "la-monedita-en-la-alcancia",
+        "la-hilandera",
+        "el-reventon-de-jacobo",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_entierro",
+      "sheets": 0,
+      "note": "Los trebejos con que el entierro se busca y se encuentra. El azadón se dibuja en reposo: el universo prohíbe representar excavación."
+    },
+    {
+      "id": "moneda_conjurada",
+      "name": "La moneda marcada que vuelve al bolsillo",
+      "kind": "objeto",
+      "myths": [
+        "los-tunjos-de-la-cantera",
+        "la-mula-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_entierro",
+      "sheets": 0,
+      "note": "Objeto con regla propia pero sin forma distinta de una moneda corriente; la hoja lo resuelve."
+    },
+    {
+      "id": "baul_y_arcon",
+      "name": "El baúl, el arcón y el zurrón",
+      "kind": "objeto",
+      "myths": [
+        "el-reventon-de-jacobo",
+        "la-piedra-del-muerto",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_entierro",
+      "sheets": 0,
+      "note": "Los continentes del entierro; la ficha del entierro los muestra cerrados y la hoja de utilería da su carpintería."
+    },
+    {
+      "id": "aparejo_y_zurriago",
+      "name": "La enjalma, el aparejo, el zurriago, la damajuana y la carga de yuca, millo y tártago",
+      "kind": "objeto",
+      "myths": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_arrieria",
+      "sheets": 0,
+      "note": "Todo lo que va encima de la mula y en la mano del arriero, en una hoja."
+    },
+    {
+      "id": "herradura_y_clavo",
+      "name": "La herradura y el clavo",
+      "kind": "objeto",
+      "myths": [
+        "la-mula-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_arrieria",
+      "sheets": 0,
+      "note": "Objeto bisagra del relato. Se dibuja el herraje, nunca su efecto sobre el cuerpo de Eumelia."
+    },
+    {
+      "id": "macana_espada_y_jaula",
+      "name": "La macana, la espada, la rodela o adarga, la lanza, el arcabuz, el escudo y la jaula de tigre",
+      "kind": "objeto",
+      "myths": [
+        "talabad",
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas_coloniales",
+      "sheets": 0,
+      "note": "El armamento de los dos relatos coloniales y la jaula del cautiverio, en una hoja."
+    },
+    {
+      "id": "contrato_del_escribano",
+      "name": "La escritura pública sellada por el escribano",
+      "kind": "objeto",
+      "myths": [
+        "tal-para-cual"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas_coloniales",
+      "sheets": 0,
+      "note": "Objeto colonial de papel y sello que comparte época y tratamiento con el resto de la hoja; es la pieza sobre la que gira la sátira del contrato."
+    },
+    {
+      "id": "fogon_chocolate_y_tabaco",
+      "name": "El fogón de leña, la olleta de chocolate espumado, el jarro de plata, los amasijos, el lechón, la arepa y el tabaco veguero",
+      "kind": "objeto",
+      "myths": [
+        "tal-para-cual",
+        "la-vista-del-libertador",
+        "el-trapiche-ardiendo",
+        "la-cueva-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_fiesta",
+      "sheets": 0,
+      "note": "La mesa y el fogón santandereanos en una hoja; el chocolate de Girón y el tabaco veguero están literalmente en las fuentes."
+    },
+    {
+      "id": "tiple_violin_y_cohetes",
+      "name": "El tiple, el violín, la guitarra, los cohetes, los gallardetes y las banderas",
+      "kind": "objeto",
+      "myths": [
+        "duende-del-salto",
+        "la-vista-del-libertador",
+        "nueva-version-de-la-luz-del-limonal",
+        "la-campana-del-diablo"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_fiesta",
+      "sheets": 0,
+      "note": "El tiple del duende es el único con función narrativa; el resto es aparejo de fiesta y cabe en la misma hoja."
+    },
+    {
+      "id": "radio_y_letrero",
+      "name": "El radio de rancheras y radionovelas y el letrero pintado de la tienda",
+      "kind": "objeto",
+      "myths": [
+        "la-hilandera",
+        "el-diablo-de-umpala"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_fiesta",
+      "sheets": 0,
+      "note": "Dos objetos de ambiente del siglo XX rural que sitúan la época sin costar pliego."
+    },
+    {
+      "id": "hacha_navaja_y_baston",
+      "name": "El hacha, la navaja de marca campana y el bastón del sereno",
+      "kind": "objeto",
+      "myths": [
+        "nueva-version-de-la-luz-del-limonal",
+        "cuento-fantastico",
+        "el-anima-coy"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_fiesta",
+      "sheets": 0,
+      "note": "Herramientas de mano de tres relatos. El hacha se dibuja como herramienta, nunca en uso: el infanticidio no se representa."
+    },
+    {
+      "id": "pedro_rimalas",
+      "name": "Pedro Rimalas",
+      "kind": "criatura",
+      "myths": [
+        "los-tunjos-de-la-cantera"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra como fama y memoria —«espíritu errante», «el terror de las muchachas»— pero el relato no le da cuerpo, ni acto en escena, ni una sola línea de aspecto. Verificado releyendo el párrafo de apertura y el bloque de Versiones: sólo hay sombra y renombre.",
+      "sheets": 0,
+      "note": "Si el editor la quiere, hay que investigarla fuera del corpus; con este material sólo se podría inventar."
+    },
+    {
+      "id": "biato",
+      "name": "El Biato",
+      "kind": "criatura",
+      "myths": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "excluded",
+      "reason": "Conduce una acción —ofrece riquezas, pelea, esclaviza al que se rinde— pero el relato no dice de qué tiene forma: ni tamaño, ni rostro, ni ropa, ni si es humano. Verificado en el párrafo de la cima de Buena Vista, que es su única mención.",
+      "sheets": 0,
+      "note": "Es el caso más incómodo del censo: cumple el criterio de acción y falla entero el de evidencia visual. Lo dejo fuera porque dibujarlo sería inventarlo, y lo señalo para que el editor decida."
+    },
+    {
+      "id": "nor_ceferino_rios",
+      "name": "Ñor Ceferino Ríos, el brujo del Alto de Vacas",
+      "kind": "personaje",
+      "myths": [
+        "la-mechuda"
+      ],
+      "decision": "excluded",
+      "reason": "Aparece en una subordinada —se casa con una de las fiqueras y es «el famoso brujo»— y nunca actúa ni se describe. Verificado: su nombre sale una sola vez en todo el relato.",
+      "sheets": 0,
+      "note": "Su fama impregna el aire del baile, pero no hay con qué dibujarlo."
+    },
+    {
+      "id": "sugamuxi_don_alonso",
+      "name": "Sugamuxi / don Alonso",
+      "kind": "personaje",
+      "myths": [
+        "el-cacique-salomon"
+      ],
+      "decision": "excluded",
+      "reason": "El relato le da voz, cargo (sacerdote, cacique) y una frase memorable, pero de cuerpo sólo «ojos profundos» y el manto cristiano como metáfora. Verificado en los tres párrafos que lo tratan: no hay traje, ni insignia, ni rasgo. Fichar su vestuario sería inventar iconografía muisca o guane que este corpus mestizo no documenta y que no puede tomarse prestada de otra comunidad.",
+      "sheets": 0,
+      "note": "El universo pide expresamente reencuadrar esta sátira colonial sin inventar tradición guane. La exclusión es esa instrucción cumplida."
+    },
+    {
+      "id": "cacique_andres_guatesique",
+      "name": "El cacique Andrés Guatesique",
+      "kind": "personaje",
+      "myths": [
+        "el-cacique-salomon"
+      ],
+      "decision": "excluded",
+      "reason": "Mismo caso verificado: «hábil y astuto», «de mirada firme y palabra sabia» — carácter, no cuerpo. Ni una prenda, ni un objeto propio en todo el relato.",
+      "sheets": 0,
+      "note": "Con Pirinoche, el indio de Dubigara al que no le pagan, ocurre lo mismo y queda cubierto por esta misma exclusión."
+    },
+    {
+      "id": "cacique_caricachi_masuca",
+      "name": "El cacique Caricachí o Masuca",
+      "kind": "personaje",
+      "myths": [
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "excluded",
+      "reason": "Una sola mención: «gobernada por el formidable cacique Caricachí, o Masuca». No hay acto en escena ni un rasgo. Verificado.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "pueblos_indigenas_nombrados",
+      "name": "Guanes, yariguíes, suamacaes y cachimbos",
+      "kind": "colectivo",
+      "myths": [
+        "duende-del-salto",
+        "la-cueva-de-la-pisca",
+        "talabad",
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "excluded",
+      "reason": "Los cuatro pueblos se nombran como telón de fondo y ninguno recibe descripción: ni vivienda, ni tejido, ni adorno, ni herramienta. Verificado relato por relato. Dibujarlos exigiría iconografía que este corpus no aporta, y el universo prohíbe expresamente atribuir estos relatos a los pueblos indígenas de Santander sin una cadena específica.",
+      "sheets": 0,
+      "note": "Además, en duende-del-salto la atribución guane está declarada como fabricación moderna y ya fue podada. Talabalí queda fichado aparte por ser el único con descripción."
+    },
+    {
+      "id": "indios_espectrales_de_la_cueva",
+      "name": "Los indios espectrales del Cenicero",
+      "kind": "colectivo",
+      "myths": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "excluded",
+      "reason": "«Los indios, en sus formas casi espectrales, lo dejaron entrar»: eso es todo. Verificado. No hay rasgo que no haya que inventar, y el universo señala además que estas cuevas son contexto arqueológico protegido.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "pichy_el_sol",
+      "name": "Pichy, el sol",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "excluded",
+      "reason": "«El sol, al que llamaban Pichy, era su única esperanza». Una sola línea, sin forma ni figura. Verificado. Fichar una deidad solar indígena a partir de un relato mestizo sería inventar cosmología.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "once_pollonas",
+      "name": "Las once pollonas",
+      "kind": "colectivo",
+      "myths": [
+        "el-quijote-piedecuestano"
+      ],
+      "decision": "excluded",
+      "reason": "Mención sin resolver: «dejando solo a don Juan, sus once pollonas y treinta y tres camaradas». El relato nunca aclara si son mujeres jóvenes o aves de corral, y las dos lecturas son gramaticalmente posibles. Verificado en el párrafo del túnel.",
+      "sheets": 0,
+      "note": "La registro precisamente porque una mención sin resolver no puede desaparecer en silencio."
+    },
+    {
+      "id": "varita_de_la_virtud",
+      "name": "La varita de la virtud",
+      "kind": "objeto",
+      "myths": [
+        "los-tunjos-de-la-cantera"
+      ],
+      "decision": "excluded",
+      "reason": "El relato dice qué hace —«al ser lanzado, transformaba el mundo»— y que hay una fórmula, pero no de qué está hecha, ni qué tamaño tiene, ni qué forma. Verificado en el párrafo de la abuela: es puro efecto.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "llorona",
+      "name": "La Llorona",
+      "kind": "criatura",
+      "myths": [
+        "el-fantasma-de-el-horizonte"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra sólo como miedo de infancia de don Vicente —«las lloronas y otros fantasmas que asociaba con su infancia»— y nunca aparece en ninguna de las 36 páginas. Verificado.",
+      "sheets": 0,
+      "note": "Figura panregional que tiene página propia en otro corpus del proyecto (la-llorona-del-molino), fuera de este censo. Que no se le cuente ficha aquí."
+    },
+    {
+      "id": "santos_invocados",
+      "name": "San Silvestre, San Ciríaco y Santiago",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-mula-maneada",
+        "talabad"
+      ],
+      "decision": "excluded",
+      "reason": "Los tres se invocan en voz alta y ninguno se presenta. Verificado: «rezaban a San Silvestre», «en nombre de San Ciríaco», «el eco de Santiago resonaba en el aire».",
+      "sheets": 0,
+      "note": "San Antonio sí se ficha, porque es el único que el corpus deja ver."
+    },
+    {
+      "id": "olor_a_azufre_e_incienso",
+      "name": "El olor a azufre e incienso",
+      "kind": "fenomeno",
+      "myths": [
+        "la-cueva-del-diablo",
+        "el-anima-coy"
+      ],
+      "decision": "excluded",
+      "reason": "Indicio puramente olfativo. No tiene forma y no se dibuja sin convertirlo en humo, que es otra cosa y que el corpus no dice. Verificado en los dos relatos.",
+      "sheets": 0,
+      "note": "Entra en el contrato del Diablo del camino como marcador narrativo, no como imagen."
+    },
+    {
+      "id": "sonidos_del_espanto",
+      "name": "Los aullidos, cantos de gallo y maullidos de Galeacer, y el grito de la Máncara",
+      "kind": "fenomeno",
+      "myths": [
+        "el-doctor-galeacer",
+        "la-mancarita",
+        "la-mechuda"
+      ],
+      "decision": "excluded",
+      "reason": "Son sonido y nada más: el corpus los describe como oídos, nunca como vistos. Verificado. Dibujarlos obligaría a inventar una manifestación visual que no existe en el texto.",
+      "sheets": 0,
+      "note": "El surrucú, que es la explicación natural del grito, sí queda fichado dentro de las aves nocturnas."
+    },
+    {
+      "id": "eumelia_clavada",
+      "name": "El cuerpo de Eumelia con los clavos",
+      "kind": "personaje",
+      "myths": [
+        "la-mula-del-diablo"
+      ],
+      "decision": "excluded",
+      "reason": "Sensible: es violencia explícita sobre el cuerpo de una mujer. El marco editorial prohíbe la violencia gráfica y pide representar la escena antes del daño, sin heridas ni cuerpos visibles.",
+      "sheets": 0,
+      "note": "La ficha de la Mula del Diablo la muestra viva; el horror lo carga la mula herrada."
+    },
+    {
+      "id": "recien_nacidos_victimas",
+      "name": "Los recién nacidos muertos",
+      "kind": "personaje",
+      "myths": [
+        "nueva-version-de-la-luz-del-limonal",
+        "la-hilandera",
+        "la-mancarita"
+      ],
+      "decision": "excluded",
+      "reason": "Sensible: el hijo de Luz muerto con un hacha, el recién nacido de Oliva en el hoyo con las extremidades a la vista, y los bebés que la Máncara envuelve en su manto. El universo prohíbe expresamente cuerpos visibles y violencia gráfica.",
+      "sheets": 0,
+      "note": "Los tres relatos se pueden ilustrar enteros sin esta imagen: la llamarada, la cobija blanca y la puerta en la peña bastan."
+    },
+    {
+      "id": "escenas_de_agresion",
+      "name": "Los azotes al mestizo, el mendigo despedazado y la paliza a Maribella",
+      "kind": "fenomeno",
+      "myths": [
+        "el-cacique-salomon",
+        "la-piedra-del-muerto",
+        "la-diabla-castigadora"
+      ],
+      "decision": "excluded",
+      "reason": "Sensibles: tres escenas de violencia física explícita. El universo rechaza además leer la violencia como defensa del honor en el caso de la Diabla, y pide en todos los casos representar el momento anterior al daño.",
+      "sheets": 0,
+      "note": "Cada uno de los tres relatos conserva su escena: el juicio del cacique, el mendigo en la puerta, la mujer esperando en la esquina."
+    },
+    {
+      "id": "restos_humanos_y_guaqueria",
+      "name": "Los huesos del entierro, la calavera, la canilla suelta y el acto de guaquear",
+      "kind": "objeto",
+      "myths": [
+        "el-reventon-de-jacobo",
+        "la-monedita-en-la-alcancia",
+        "el-carriazo-de-vereda-san-isidro",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "decision": "excluded",
+      "reason": "Sensible y expresamente prohibido: el universo editorial no permite convertir restos humanos en tesoro, ni mostrar excavación, guaquería o contexto arqueológico violado, con el ICANH y el Museo del Oro como guardarraíl declarado.",
+      "sheets": 0,
+      "note": "Salvedad verificada: la canilla que carga el Ánima Coy sí se ficha, porque es parte del cuerpo del espanto y no un resto exhumado. La distinción tiene que quedar en los dos contratos."
+    },
+    {
+      "id": "coto_o_bocio",
+      "name": "El coto (bocio) de don Anselmo y de maese Cirilo",
+      "kind": "objeto",
+      "myths": [
+        "tal-para-cual"
+      ],
+      "decision": "excluded",
+      "reason": "Sensible: el relato entero apoya su chiste en la ecuación entre bocio, apariencia corporal y falta de inteligencia, y el universo retira esa ecuación de forma explícita. Fichar el coto como silueta sería reinstalarla.",
+      "sheets": 0,
+      "note": "La sátira del contrato de pecados se puede producir entera sin él: lo que hay que ver es la escritura pública, el cacaotal y los dos compadres."
+    },
+    {
+      "id": "cuevas_de_oz",
+      "name": "Las «Cuevas de Oz»",
+      "kind": "lugar",
+      "myths": [
+        "el-ermitano-iracundo"
+      ],
+      "decision": "excluded",
+      "reason": "No existe tal topónimo: el universo editorial deja constancia de que Mago de Oz es la banda mencionada en el texto, no el nombre de las cuevas. Fichar el lugar sería consagrar un error de lectura.",
+      "sheets": 0,
+      "note": "La cueva real del ermitaño queda cubierta por la ficha de cueva de tesoro, y su ubicación es Ocaña."
+    },
+    {
+      "id": "modernidad_del_siglo_xx",
+      "name": "El automóvil, el hospital, el alumbrado eléctrico, los montallantas y las bolsas plásticas",
+      "kind": "objeto",
+      "myths": [
+        "la-campana-del-diablo",
+        "la-mula-del-diablo",
+        "la-monedita-en-la-alcancia"
+      ],
+      "decision": "excluded",
+      "reason": "Fuera del denominador declarado. Verificado: los tres relatos los usan como marca del final del mito —el carro que atropella a Remigio, la luz eléctrica que borra a la mula, el plástico que acaba con la saquería—, es decir, como el momento en que el mundo de la Biblia deja de existir.",
+      "sheets": 0,
+      "note": "Son bisagras narrativas reales y por eso los registro en vez de ignorarlos; pero no se producen como activos."
+    },
+    {
+      "id": "marco_digital_de_2004",
+      "name": "Los correos electrónicos y el teclado de Ana Guevara",
+      "kind": "objeto",
+      "myths": [
+        "el-ermitano-iracundo"
+      ],
+      "decision": "excluded",
+      "reason": "Fuera de época por dos siglos. Verificado: el relato está fechado en marzo de 2004 y su forma es una cadena de correos. El universo conserva esa capa literaria de 2004, pero no pertenece al denominador campesino y pueblerino de los siglos XIX y XX.",
+      "sheets": 0,
+      "note": "El ermitaño sí se ficha; su marco, no. Esta página es la más desalineada del corpus."
+    },
+    {
+      "id": "tenis_marca_tiburon",
+      "name": "Los tenis marca Tiburón",
+      "kind": "objeto",
+      "myths": [
+        "cuento-fantastico"
+      ],
+      "decision": "excluded",
+      "reason": "Fuera de época. Verificado literalmente: «sus pies envueltos en tenis marca Tiburón» y «destellos ochentosos». El relato es una pieza literaria moderna disfrazada de leyenda.",
+      "sheets": 0,
+      "note": "El resto de la página —la Calle Diez, el río de Oro, la navaja— sí cabe en el denominador."
+    },
+    {
+      "id": "ciudad_de_paga",
+      "name": "La ciudad de Paga",
+      "kind": "lugar",
+      "myths": [
+        "el-cacique-salomon"
+      ],
+      "decision": "excluded",
+      "reason": "Lugar inexistente y chiste verbal: «falsas promesas de viajes a la imaginaria ciudad de Paga, donde los paganos aún soñaban». Verificado; el propio texto la llama imaginaria.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "escuela_de_el_duende",
+      "name": "La Escuela de El Duende",
+      "kind": "arquitectura",
+      "myths": [
+        "duende-del-salto"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra como desenlace institucional —«no fue convento ni hospicio, sino una ruina florecida»— y ningún momento del relato la pone en escena. Verificado en el penúltimo párrafo.",
+      "sheets": 0,
+      "note": "Además pertenece a la capa moderna de 2016 de esa composición híbrida."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_devocion",
+      "kind": "objeto",
+      "covers": [
+        "estola_y_caliz",
+        "imagenes_de_bulto",
+        "velas_y_camandula"
+      ],
+      "sheets": 1,
+      "note": "Estola, cáliz, cristo bendito, agua bendita e hisopo, santos óleos, imagen de bulto de la Virgen de Chiquinquirá y de San Mateo, Cristo crucificado, vela de sebo, crucifijo y camándula. Nueve piezas con que el cura y la casa tratan con lo sobrenatural, en cuatro relatos."
+    },
+    {
+      "id": "hoja_utileria_contra_el_espanto",
+      "kind": "objeto",
+      "covers": [
+        "tijeras_y_mostaza",
+        "defensas_de_umbral",
+        "escobas_y_garrotes"
+      ],
+      "sheets": 1,
+      "note": "Tijeras cruzadas bajo el colchón, mostaza bendita, cruces y herraduras detrás de la puerta, ramos bendecidos, vaso de agua bajo la cama, escobas y garrotes con símbolos cabalísticos. La contracultura material del miedo, documentada en las fuentes: es lo que permite ilustrar el terror sin dibujar violencia."
+    },
+    {
+      "id": "hoja_utileria_entierro",
+      "kind": "objeto",
+      "covers": [
+        "azadon_y_alcancia",
+        "moneda_conjurada",
+        "baul_y_arcon"
+      ],
+      "sheets": 1,
+      "note": "Azadón en reposo, olleta de ceniza, alcancía de barro, morrocotas, billetes viejos, moneda marcada, baúl, arcón y zurrón. Los trebejos de los siete relatos de entierros, sin un solo hoyo abierto."
+    },
+    {
+      "id": "hoja_utileria_fique",
+      "kind": "objeto",
+      "covers": [
+        "tornos_y_chuyas",
+        "lazos_y_crinejas"
+      ],
+      "sheets": 1,
+      "note": "Torno, telar, huso, hebras y chuyas de fique, saca, lazos y crinejas. El oficio que define a Piedecuesta, en una hoja."
+    },
+    {
+      "id": "hoja_utileria_arrieria",
+      "kind": "objeto",
+      "covers": [
+        "aparejo_y_zurriago",
+        "herradura_y_clavo"
+      ],
+      "sheets": 1,
+      "note": "Enjalma, aparejo, zurriago, damajuana de mataburro, carga de yuca, millo y tártago, herradura y clavo. Todo lo que va encima de la mula y en la mano del arriero."
+    },
+    {
+      "id": "hoja_utileria_vestuario",
+      "kind": "objeto",
+      "covers": [
+        "cobija_blanca_de_lana",
+        "ruana_zamarros_y_sombrero",
+        "sayal_y_habito",
+        "mirinaque_y_crinolina"
+      ],
+      "sheets": 1,
+      "note": "Ruana, zamarros, sombrero gris de ala ancha, botas, saco, correa ancha, cobija blanca de lana, sayal oscuro, hábito ceniciento, manto penitencial, miriñaque y crinolina. Sólo prendas que las fuentes nombran: la alpargata no aparece ni una vez en el material editorial y por eso no entra."
+    },
+    {
+      "id": "hoja_utileria_armas_coloniales",
+      "kind": "objeto",
+      "covers": [
+        "macana_espada_y_jaula",
+        "contrato_del_escribano"
+      ],
+      "sheets": 1,
+      "note": "Macana, espada, rodela o adarga, lanza, arcabuz, escudo, jaula de tigre y escritura pública sellada. Los objetos de los tres relatos coloniales, incluida la pieza de papel sobre la que gira la sátira del contrato."
+    },
+    {
+      "id": "hoja_utileria_casa_y_fiesta",
+      "kind": "objeto",
+      "covers": [
+        "fogon_chocolate_y_tabaco",
+        "tiple_violin_y_cohetes",
+        "radio_y_letrero",
+        "hacha_navaja_y_baston"
+      ],
+      "sheets": 1,
+      "note": "Fogón de leña, olleta de chocolate espumado, jarro de plata, amasijos, lechón, arepa, tabaco veguero, tiple, violín, guitarra, cohetes, gallardetes, banderas, radio, letrero pintado, hacha, navaja de marca campana y bastón de sereno. La mesa, la música y la mano de obra del pueblo."
+    }
+  ],
+  "totals": {
+    "entities": 172,
+    "required": 74,
+    "embedded": 72,
+    "excluded": 26,
+    "sheets": 84,
+    "panregional_required": 10
+  }
+}

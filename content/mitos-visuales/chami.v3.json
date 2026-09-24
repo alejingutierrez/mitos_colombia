@@ -1,0 +1,4071 @@
+{
+  "schema": "mitos-colombia-biblia-visual/v3",
+  "status": "research",
+  "generation_locked": true,
+  "community": "Chamí",
+  "community_slug": "chami",
+  "region": "Andina",
+  "corpus": {
+    "frozen": true,
+    "frozen_at": "2026-09-19",
+    "source": "Neon, comunidad exacta Chamí (communities.slug = chami)",
+    "grouping": "comunidad",
+    "myth_slugs": [
+      "creacion-embera",
+      "el-guatin-astuto",
+      "el-gusano-gigante",
+      "el-hijo-de-karagabi-encerrado-en-el-arbol",
+      "el-hijo-de-karagabi-y-la-gente-subterranea",
+      "el-hijo-de-la-nutria",
+      "el-hombre-que-atrapo-al-sol-y-a-la-luna",
+      "el-origen-de-los-animales",
+      "el-origen-del-agua",
+      "el-universo",
+      "hentsera-y-el-agua",
+      "himo-la-iguana-y-la-candela",
+      "horchibari",
+      "jinopotabar",
+      "la-culebra-de-las-siete-cabezas",
+      "la-historia-de-erubida-y-siebida",
+      "la-mujer-de-karagabi",
+      "la-mujer-hormiga",
+      "la-mujer-y-el-oso",
+      "la-oscuridad",
+      "las-transformaciones",
+      "los-guardianes-vengadores-de-la-naturaleza"
+    ]
+  },
+  "source_snapshot": {
+    "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+    "retrieved_at": "2026-09-19",
+    "record_count": 22,
+    "fields": [
+      "mito",
+      "historia",
+      "versiones",
+      "research_notes"
+    ],
+    "sha256": "5e1d6d4e3ea43ab410c66a5171b5d78d65eb81deb0159d6a173a9b18a82a4e72",
+    "max_source_updated_at": "2026-09-18T14:52:54.403Z"
+  },
+  "research": {
+    "sources": [],
+    "dossier": null,
+    "evidence_matrix": null,
+    "cultural_review": null
+  },
+  "inventory": {
+    "status": "heredado",
+    "frozen": true,
+    "method": "Traduccion de la biblia cerrada antes del carril V3. Las decisiones son las que esa biblia tomo; no se reabren aqui.",
+    "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
+    "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
+    "heredado_de": "/private/tmp/claude-501/-Users-alegut-MyApps-Personal-mitos-colombia--claude-worktrees-biblias-research-generation-fc19c2/434ed976-2adb-42ca-91e1-7031c3dbca0b/scratchpad/chami-biblia-v1/inventario.json"
+  },
+  "myths": {
+    "creacion-embera": {
+      "title": "La creación de la gente",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "karagabi",
+          "role": "secondary",
+          "note": "héroe cultural; 4 mitos"
+        },
+        {
+          "entity_id": "los_hino_pota_uara",
+          "role": "primary",
+          "note": "primera humanidad; gestación en la pantorrilla",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "hormiga_arriera_conga",
+          "role": "secondary",
+          "note": "mata a la primera humanidad; es la gente de Arrumía"
+        },
+        {
+          "entity_id": "hacha",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "palma_barrigona",
+          "role": "secondary",
+          "note": "de sus cortes sale la gente"
+        },
+        {
+          "entity_id": "hojas_de_rascadera",
+          "role": "secondary",
+          "note": "tapan los cortes"
+        }
+      ]
+    },
+    "el-guatin-astuto": {
+      "title": "El guatín astuto",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "guatin",
+          "role": "primary",
+          "note": "DECIDIR: guagua/paca con manchas (glosa de los recopiladores) o ñeque",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "jaguar",
+          "role": "secondary",
+          "note": "jaguar americano, no leopardo"
+        },
+        {
+          "entity_id": "oso",
+          "role": "secondary",
+          "note": "2 mitos"
+        },
+        {
+          "entity_id": "puma",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "ardilla",
+          "role": "secondary",
+          "note": "las ocho del jenené llevan nariguera"
+        },
+        {
+          "entity_id": "zorro",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "venado",
+          "role": "secondary",
+          "note": "prometido como cebo; y el que lo guía de vuelta"
+        },
+        {
+          "entity_id": "burro",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "tambor",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "chicha",
+          "role": "secondary",
+          "note": "lo más nombrado del corpus"
+        },
+        {
+          "entity_id": "piedra_de_golpear",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "disfraz_de_miel_y_hojas",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "corozo",
+          "role": "secondary",
+          "note": "Corozo oleifera"
+        },
+        {
+          "entity_id": "maiz",
+          "role": "secondary",
+          "note": "maíz chiquito; 3 mitos"
+        },
+        {
+          "entity_id": "cueva",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_roza",
+          "role": "secondary",
+          "note": "el maíz se riega, no se siembra"
+        },
+        {
+          "entity_id": "la_ladera",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        }
+      ]
+    },
+    "el-gusano-gigante": {
+      "title": "Surranabe, el gusano gigante",
+      "category_path": "Andina > Caldas > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "el-hijo-de-karagabi-encerrado-en-el-arbol": {
+      "title": "El hijo de Karagabí encerrado en el árbol",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "el_hijo_de_karagabi",
+          "role": "secondary",
+          "note": "sabio; 2 mitos"
+        },
+        {
+          "entity_id": "el_hombre_que_cava_el_arbol",
+          "role": "primary",
+          "note": "luego pájaro carpintero",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "pajaro_carpintero",
+          "role": "secondary",
+          "note": "corta la escalera de guaduas"
+        },
+        {
+          "entity_id": "el_arbol_cavado_ataud",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "el_temblor",
+          "role": "secondary",
+          "note": "cuando mueve el dedo"
+        }
+      ]
+    },
+    "el-hijo-de-karagabi-y-la-gente-subterranea": {
+      "title": "El hijo de Karagabí y la gente subterránea",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "el_hijo_de_karagabi",
+          "role": "primary",
+          "note": "sabio; 2 mitos",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "los_aramuko_dohura",
+          "role": "secondary",
+          "note": "comen jugo o vapor, sin ano"
+        },
+        {
+          "entity_id": "cuchillo",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "el_mundo_de_abajo",
+          "role": "secondary",
+          "note": "plano, sólo chontaduro, piedras azules"
+        }
+      ]
+    },
+    "el-hijo-de-la-nutria": {
+      "title": "El hijo de la nutria",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "el_hijo_de_la_nutria_jinu_poto",
+          "role": "primary",
+          "note": "sin nombre en Río Frío",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "el_pescador_su_padre",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_mujer_que_lo_crio",
+          "role": "secondary",
+          "note": "dentro de mujer chamí adulta"
+        },
+        {
+          "entity_id": "los_aramuko_dohura",
+          "role": "secondary",
+          "note": "comen jugo o vapor, sin ano"
+        },
+        {
+          "entity_id": "venado",
+          "role": "secondary",
+          "note": "prometido como cebo; y el que lo guía de vuelta"
+        },
+        {
+          "entity_id": "nutria",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "ballena_que_come_gente",
+          "role": "secondary",
+          "note": "con ríos y gente viva dentro"
+        },
+        {
+          "entity_id": "otro_ser_acuatico",
+          "role": "secondary",
+          "note": "sin nombre; la gente lo tenía por dios"
+        },
+        {
+          "entity_id": "la_avispa_grande",
+          "role": "secondary",
+          "note": "lo mata al final"
+        },
+        {
+          "entity_id": "pajaro_carpintero",
+          "role": "secondary",
+          "note": "corta la escalera de guaduas"
+        },
+        {
+          "entity_id": "la_reunion_de_animales",
+          "role": "secondary",
+          "note": "la matriz de las especies; deja algunos vivos"
+        },
+        {
+          "entity_id": "lanza_miesu",
+          "role": "secondary",
+          "note": "3 mitos"
+        },
+        {
+          "entity_id": "asientos_de_balso",
+          "role": "secondary",
+          "note": "uno por casa contra la tempestad"
+        },
+        {
+          "entity_id": "balsa",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "muneco_de_balso",
+          "role": "secondary",
+          "note": "señuelo"
+        },
+        {
+          "entity_id": "palo_de_chontaduro",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "escalera_de_guaduas",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "arbol_de_balso",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "guadua",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "ahuyama",
+          "role": "secondary",
+          "note": "forma del corazón de la ballena"
+        },
+        {
+          "entity_id": "el_charco",
+          "role": "secondary",
+          "note": "puerta al mundo de abajo"
+        },
+        {
+          "entity_id": "el_mundo_de_abajo",
+          "role": "secondary",
+          "note": "plano, sólo chontaduro, piedras azules"
+        },
+        {
+          "entity_id": "el_camino_de_la_luna",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "el_interior_de_la_ballena",
+          "role": "secondary",
+          "note": "con ríos, gente y animales vivos"
+        },
+        {
+          "entity_id": "la_tempestad_tras_la_ballena",
+          "role": "secondary",
+          "note": "un asiento se pierde por relámpago"
+        },
+        {
+          "entity_id": "el_rio_rojo_de_sangre",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_luna_llena",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_caida_lenta",
+          "role": "secondary",
+          "note": "al decir una palabra"
+        },
+        {
+          "entity_id": "la_desaparicion_del_cuerpo_al_tercer_dia",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        }
+      ]
+    },
+    "el-hombre-que-atrapo-al-sol-y-a-la-luna": {
+      "title": "El hombre que atrapó al Sol y a la Luna",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "el_hombre_que_atrapo_al_sol_y_a_la_luna",
+          "role": "primary",
+          "note": "Heredado de la biblia V1.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "el_jefe_que_se_mata",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_gente_del_sol",
+          "role": "secondary",
+          "note": "mucho oro"
+        },
+        {
+          "entity_id": "la_gente_de_la_luna",
+          "role": "secondary",
+          "note": "mucho oro"
+        },
+        {
+          "entity_id": "talego_rojo_y_talego_azul",
+          "role": "secondary",
+          "note": "el único azul del corpus"
+        },
+        {
+          "entity_id": "maiz_caliente_y_hojaldres",
+          "role": "secondary",
+          "note": "cebo de los talegos"
+        },
+        {
+          "entity_id": "la_oscuridad",
+          "role": "secondary",
+          "note": "acontecimiento, no ambiente; ocurre dos veces"
+        },
+        {
+          "entity_id": "el_mediodia",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        }
+      ]
+    },
+    "el-origen-de-los-animales": {
+      "title": "El origen de los animales en relatos Chamí",
+      "category_path": "Andina > Risaralda > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "el-origen-del-agua": {
+      "title": "La Jepá de Jeguada y el origen del agua",
+      "category_path": "Andina > Risaralda > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "el-universo": {
+      "title": "Los mundos del universo Chamí",
+      "category_path": "Andina > Risaralda > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "hentsera-y-el-agua": {
+      "title": "Héntserá y el agua",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "karagabi",
+          "role": "secondary",
+          "note": "héroe cultural; 4 mitos"
+        },
+        {
+          "entity_id": "hentsera",
+          "role": "primary",
+          "note": "dueño del agua; la raíz je- lo identifica como hormiga conga",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "el_muchacho_sirviente",
+          "role": "secondary",
+          "note": "el que espía y descubre el jenené"
+        },
+        {
+          "entity_id": "ardilla",
+          "role": "secondary",
+          "note": "las ocho del jenené llevan nariguera"
+        },
+        {
+          "entity_id": "hacha",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "narigueras_monsima",
+          "role": "secondary",
+          "note": "único adorno con término emberá"
+        },
+        {
+          "entity_id": "jenene",
+          "role": "secondary",
+          "note": "el árbol que contenía el agua"
+        },
+        {
+          "entity_id": "la_montana",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "el_mar",
+          "role": "secondary",
+          "note": "nacido de la raíz del jenené"
+        }
+      ]
+    },
+    "himo-la-iguana-y-la-candela": {
+      "title": "Hímo, la iguana y la candela",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "karagabi",
+          "role": "secondary",
+          "note": "héroe cultural; 4 mitos"
+        },
+        {
+          "entity_id": "karagabi_vuelto_pescado_grande",
+          "role": "secondary",
+          "note": "dentro de la ficha del pescado grande"
+        },
+        {
+          "entity_id": "himo_la_iguana",
+          "role": "primary",
+          "note": "dueña de la candela",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "el_hijo_de_himo",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "pescado_grande",
+          "role": "secondary",
+          "note": "Karagabí transformado"
+        },
+        {
+          "entity_id": "pescados_chiquitos",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "hormiga_chiquita",
+          "role": "secondary",
+          "note": "Hímo castigado"
+        },
+        {
+          "entity_id": "serrucho",
+          "role": "secondary",
+          "note": "no sirve para hacer fuego"
+        },
+        {
+          "entity_id": "machete",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "el_charco",
+          "role": "secondary",
+          "note": "puerta al mundo de abajo"
+        },
+        {
+          "entity_id": "el_mediodia",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        }
+      ]
+    },
+    "horchibari": {
+      "title": "Horchíbarí",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "horchibari",
+          "role": "primary",
+          "note": "caníbal humanoide de brea; NO reptil",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "dumio",
+          "role": "secondary",
+          "note": "«un ser mítico» en la fuente"
+        },
+        {
+          "entity_id": "kokoro",
+          "role": "secondary",
+          "note": "«un ser mítico» en la fuente"
+        },
+        {
+          "entity_id": "los_dos_hermanos_capturados",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "el_padre_que_los_esconde",
+          "role": "secondary",
+          "note": "dentro de hombre chamí adulto"
+        },
+        {
+          "entity_id": "la_hija_de_dumio",
+          "role": "secondary",
+          "note": "dentro de mujer chamí joven"
+        },
+        {
+          "entity_id": "un_hombre_negro_y_enorme",
+          "role": "secondary",
+          "note": "seis palabras sin más datos; ilustrarlo produce estereotipo racial"
+        },
+        {
+          "entity_id": "tatabro",
+          "role": "secondary",
+          "note": "Dycotiles torquatus"
+        },
+        {
+          "entity_id": "colibri",
+          "role": "secondary",
+          "note": "se vuelve zahíno"
+        },
+        {
+          "entity_id": "zahino",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "bodoquera",
+          "role": "secondary",
+          "note": "chonta, 2,5-3,5 m, espiral de bejuco"
+        },
+        {
+          "entity_id": "dardos_y_carcaj",
+          "role": "secondary",
+          "note": "carcaj de guadua, dardos punta arriba"
+        },
+        {
+          "entity_id": "lanza_miesu",
+          "role": "secondary",
+          "note": "3 mitos"
+        },
+        {
+          "entity_id": "arco_y_flechas",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "maza",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "asiento_pequeno",
+          "role": "secondary",
+          "note": "con él muere Horchíbarí"
+        },
+        {
+          "entity_id": "red_de_fibras",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "harina_con_agua",
+          "role": "secondary",
+          "note": "único alimento tras la oscuridad"
+        },
+        {
+          "entity_id": "brea",
+          "role": "secondary",
+          "note": "comida y materia del cuerpo"
+        },
+        {
+          "entity_id": "hierba_que_transforma",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "arbol_de_balso",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "platano",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "casa_de_horchibari",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "casa_de_dumio",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "boveda_del_escondite",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "el_derrumbe",
+          "role": "secondary",
+          "note": "y el juego de rodar por él"
+        }
+      ]
+    },
+    "jinopotabar": {
+      "title": "Jinu Potó, el Hijo de la Pantorrilla",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "la-culebra-de-las-siete-cabezas": {
+      "title": "La culebra de siete cabezas de El Salado",
+      "category_path": "Andina > Caldas > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "la-historia-de-erubida-y-siebida": {
+      "title": "Erubidá y Siebidá",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "el_vigilante_disfrazado_brujo",
+          "role": "primary",
+          "note": "lleva el disfraz erubidá",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "el_jefe_siebida",
+          "role": "secondary",
+          "note": "sabe por sueño"
+        },
+        {
+          "entity_id": "el_jefe_erubida",
+          "role": "secondary",
+          "note": "ofrece amistad"
+        },
+        {
+          "entity_id": "el_hijo_muerto_del_brujo",
+          "role": "secondary",
+          "note": "se resuelve por el hueco y el sonido, no por el cuerpo"
+        },
+        {
+          "entity_id": "erubida_la_gente_del_valle",
+          "role": "secondary",
+          "note": "chaquira blanca en cabeza y manos; pinta de jagua propia"
+        },
+        {
+          "entity_id": "siebida_la_gente_de_la_montana",
+          "role": "secondary",
+          "note": "majagua blanca y andea"
+        },
+        {
+          "entity_id": "los_diez_cazadores_siebida",
+          "role": "secondary",
+          "note": "dentro de Siebidá"
+        },
+        {
+          "entity_id": "bodoquera",
+          "role": "secondary",
+          "note": "chonta, 2,5-3,5 m, espiral de bejuco"
+        },
+        {
+          "entity_id": "lanza_miesu",
+          "role": "secondary",
+          "note": "3 mitos"
+        },
+        {
+          "entity_id": "disfraz_erubida",
+          "role": "secondary",
+          "note": "chaquira blanca, majagua, pinta de jagua"
+        },
+        {
+          "entity_id": "el_hueco_bajo_la_casa",
+          "role": "secondary",
+          "note": "el muerto sin enterrar; se oyen ruidos"
+        },
+        {
+          "entity_id": "campamento_de_monte",
+          "role": "secondary",
+          "note": "ranchos levantados para cazar"
+        },
+        {
+          "entity_id": "pueblo_erubida",
+          "role": "secondary",
+          "note": "casas quemadas"
+        }
+      ]
+    },
+    "la-mujer-de-karagabi": {
+      "title": "La mujer de Karagabí",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "karagabi",
+          "role": "secondary",
+          "note": "héroe cultural; 4 mitos"
+        },
+        {
+          "entity_id": "karagabi_rejuvenecido_el_forastero",
+          "role": "primary",
+          "note": "estado distinto, cuerpo distinto: ficha propia",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "la_mujer_de_karagabi",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "lorita",
+          "role": "secondary",
+          "note": "grita con luna llena"
+        },
+        {
+          "entity_id": "tambor",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "chicha",
+          "role": "secondary",
+          "note": "lo más nombrado del corpus"
+        },
+        {
+          "entity_id": "la_luna_llena",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        }
+      ]
+    },
+    "la-mujer-hormiga": {
+      "title": "La mujer hormiga",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "la_viuda_del_monte",
+          "role": "primary",
+          "note": "Heredado de la biblia V1.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "el_hijo_pescador",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_mujer_embijada",
+          "role": "secondary",
+          "note": "cubierta de bija roja; ser del mundo de abajo"
+        },
+        {
+          "entity_id": "la_segunda_esposa",
+          "role": "secondary",
+          "note": "dentro de mujer chamí adulta"
+        },
+        {
+          "entity_id": "las_hormigas_familia_de_la_mujer",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "hormiga_arriera_conga",
+          "role": "secondary",
+          "note": "mata a la primera humanidad; es la gente de Arrumía"
+        },
+        {
+          "entity_id": "puerco_de_agua",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_senal_bajo_la_casa",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "flores_del_monte",
+          "role": "secondary",
+          "note": "sin el baño no se ve ni se pasa"
+        },
+        {
+          "entity_id": "los_tambos_invisibles",
+          "role": "secondary",
+          "note": "sólo se ven tras el baño de flores"
+        },
+        {
+          "entity_id": "la_roza",
+          "role": "secondary",
+          "note": "el maíz se riega, no se siembra"
+        },
+        {
+          "entity_id": "la_orilla_del_rio",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        }
+      ]
+    },
+    "la-mujer-y-el-oso": {
+      "title": "La mujer y el oso",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "la_mujer_raptada",
+          "role": "primary",
+          "note": "Heredado de la biblia V1.",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "el_hijo_del_oso",
+          "role": "secondary",
+          "note": "de la cintura abajo con pelo de oso"
+        },
+        {
+          "entity_id": "el_marido_ausente",
+          "role": "secondary",
+          "note": "no aparece en escena"
+        },
+        {
+          "entity_id": "oso",
+          "role": "secondary",
+          "note": "2 mitos"
+        },
+        {
+          "entity_id": "pajaros_muertos_y_el_pajaro_vivo",
+          "role": "secondary",
+          "note": "traídos muertos para que no canten"
+        },
+        {
+          "entity_id": "garrote",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "cama_de_bejucos",
+          "role": "secondary",
+          "note": "en árbol alto"
+        },
+        {
+          "entity_id": "maiz",
+          "role": "secondary",
+          "note": "maíz chiquito; 3 mitos"
+        },
+        {
+          "entity_id": "arbol_alto_del_oso",
+          "role": "secondary",
+          "note": "dentro de cama de bejucos"
+        },
+        {
+          "entity_id": "refugio_en_el_arbol",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        },
+        {
+          "entity_id": "la_montana",
+          "role": "secondary",
+          "note": "Heredado de la biblia V1."
+        }
+      ]
+    },
+    "la-oscuridad": {
+      "title": "La oscuridad",
+      "category_path": "Andina > Valle del Cauca > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": [
+        {
+          "entity_id": "el_primer_hombre",
+          "role": "primary",
+          "note": "no se identifica con Karagabí",
+          "role_derivada": "candidata, confirmar"
+        },
+        {
+          "entity_id": "las_piedras_que_se_rompen",
+          "role": "secondary",
+          "note": "se rompen dentro de la casa"
+        },
+        {
+          "entity_id": "harina_con_agua",
+          "role": "secondary",
+          "note": "único alimento tras la oscuridad"
+        },
+        {
+          "entity_id": "maiz",
+          "role": "secondary",
+          "note": "maíz chiquito; 3 mitos"
+        },
+        {
+          "entity_id": "la_oscuridad",
+          "role": "secondary",
+          "note": "acontecimiento, no ambiente; ocurre dos veces"
+        }
+      ]
+    },
+    "las-transformaciones": {
+      "title": "Las transformaciones en los relatos Chamí",
+      "category_path": "Andina > Risaralda > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    },
+    "los-guardianes-vengadores-de-la-naturaleza": {
+      "title": "Los espíritus de las gotas de Lomaprieta",
+      "category_path": "Andina > Caldas > Chamí",
+      "canon": true,
+      "extraction": null,
+      "entity_refs": []
+    }
+  },
+  "entities": {
+    "karagabi": {
+      "name": "Karagabí",
+      "kind": "deidad_fuerza",
+      "description": "héroe cultural; 4 mitos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-embera",
+        "hentsera-y-el-agua",
+        "himo-la-iguana-y-la-candela",
+        "la-mujer-de-karagabi"
+      ],
+      "evidence": []
+    },
+    "karagabi_rejuvenecido_el_forastero": {
+      "name": "Karagabí rejuvenecido (el forastero)",
+      "kind": "deidad_fuerza",
+      "description": "estado distinto, cuerpo distinto: ficha propia",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-de-karagabi"
+      ],
+      "evidence": []
+    },
+    "karagabi_vuelto_pescado_grande": {
+      "name": "Karagabí vuelto pescado grande",
+      "kind": "deidad_fuerza",
+      "description": "dentro de la ficha del pescado grande",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "dentro de la ficha del pescado grande",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "el_hijo_de_karagabi": {
+      "name": "el hijo de Karagabí",
+      "kind": "personaje",
+      "description": "sabio; 2 mitos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-karagabi-y-la-gente-subterranea",
+        "el-hijo-de-karagabi-encerrado-en-el-arbol"
+      ],
+      "evidence": []
+    },
+    "la_mujer_de_karagabi": {
+      "name": "la mujer de Karagabí",
+      "kind": "personaje",
+      "description": "la mujer de Karagabí",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-de-karagabi"
+      ],
+      "evidence": []
+    },
+    "hentsera": {
+      "name": "Héntserá",
+      "kind": "deidad_fuerza",
+      "description": "dueño del agua; la raíz je- lo identifica como hormiga conga",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "himo_la_iguana": {
+      "name": "Hímo la iguana",
+      "kind": "criatura",
+      "description": "dueña de la candela",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "horchibari": {
+      "name": "Horchíbarí",
+      "kind": "criatura",
+      "description": "caníbal humanoide de brea; NO reptil",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "dumio": {
+      "name": "Dumío",
+      "kind": "deidad_fuerza",
+      "description": "«un ser mítico» en la fuente",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "kokoro": {
+      "name": "Kokoró",
+      "kind": "deidad_fuerza",
+      "description": "«un ser mítico» en la fuente",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "el_hijo_de_la_nutria_jinu_poto": {
+      "name": "el hijo de la nutria (Jinu Potó)",
+      "kind": "personaje",
+      "description": "sin nombre en Río Frío",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "el_pescador_su_padre": {
+      "name": "el pescador (su padre)",
+      "kind": "personaje",
+      "description": "el pescador (su padre)",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "la_mujer_que_lo_crio": {
+      "name": "la mujer que lo crió",
+      "kind": "personaje",
+      "description": "dentro de mujer chamí adulta",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "dentro de mujer chamí adulta",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "el_primer_hombre": {
+      "name": "el primer hombre",
+      "kind": "personaje",
+      "description": "no se identifica con Karagabí",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-oscuridad"
+      ],
+      "evidence": []
+    },
+    "el_hombre_que_atrapo_al_sol_y_a_la_luna": {
+      "name": "el hombre que atrapó al Sol y a la Luna",
+      "kind": "personaje",
+      "description": "el hombre que atrapó al Sol y a la Luna",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna"
+      ],
+      "evidence": []
+    },
+    "el_jefe_que_se_mata": {
+      "name": "el jefe que se mata",
+      "kind": "personaje",
+      "description": "el jefe que se mata",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna"
+      ],
+      "evidence": []
+    },
+    "el_muchacho_sirviente": {
+      "name": "el muchacho sirviente",
+      "kind": "personaje",
+      "description": "el que espía y descubre el jenené",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "la_viuda_del_monte": {
+      "name": "la viuda del monte",
+      "kind": "personaje",
+      "description": "la viuda del monte",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "el_hijo_pescador": {
+      "name": "el hijo pescador",
+      "kind": "personaje",
+      "description": "el hijo pescador",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "la_mujer_embijada": {
+      "name": "la mujer embijada",
+      "kind": "personaje",
+      "description": "cubierta de bija roja; ser del mundo de abajo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "la_segunda_esposa": {
+      "name": "la segunda esposa",
+      "kind": "personaje",
+      "description": "dentro de mujer chamí adulta",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "dentro de mujer chamí adulta",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "la_mujer_raptada": {
+      "name": "la mujer raptada",
+      "kind": "personaje",
+      "description": "la mujer raptada",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "el_hijo_del_oso": {
+      "name": "el hijo del oso",
+      "kind": "personaje",
+      "description": "de la cintura abajo con pelo de oso",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "el_marido_ausente": {
+      "name": "el marido ausente",
+      "kind": "personaje",
+      "description": "no aparece en escena",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "excluded",
+      "capa_heredada": "persona",
+      "exclusion_reason": "no aparece en escena",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "los_dos_hermanos_capturados": {
+      "name": "los dos hermanos capturados",
+      "kind": "personaje",
+      "description": "los dos hermanos capturados",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "el_padre_que_los_esconde": {
+      "name": "el padre que los esconde",
+      "kind": "personaje",
+      "description": "dentro de hombre chamí adulto",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "dentro de hombre chamí adulto",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "la_hija_de_dumio": {
+      "name": "la hija de Dumío",
+      "kind": "personaje",
+      "description": "dentro de mujer chamí joven",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "dentro de mujer chamí joven",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "el_vigilante_disfrazado_brujo": {
+      "name": "el vigilante disfrazado (brujo)",
+      "kind": "personaje",
+      "description": "lleva el disfraz erubidá",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "el_jefe_siebida": {
+      "name": "el jefe siebidá",
+      "kind": "personaje",
+      "description": "sabe por sueño",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "el_jefe_erubida": {
+      "name": "el jefe erubidá",
+      "kind": "personaje",
+      "description": "ofrece amistad",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "el_hijo_muerto_del_brujo": {
+      "name": "el hijo muerto del brujo",
+      "kind": "personaje",
+      "description": "se resuelve por el hueco y el sonido, no por el cuerpo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "se resuelve por el hueco y el sonido, no por el cuerpo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "el_hombre_que_cava_el_arbol": {
+      "name": "el hombre que cava el árbol",
+      "kind": "personaje",
+      "description": "luego pájaro carpintero",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-karagabi-encerrado-en-el-arbol"
+      ],
+      "evidence": []
+    },
+    "el_hijo_de_himo": {
+      "name": "el hijo de Hímo",
+      "kind": "personaje",
+      "description": "el hijo de Hímo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "hombre_chami_adulto_tipo": {
+      "name": "hombre chamí adulto (tipo)",
+      "kind": "personaje",
+      "description": "ficha de tipo para poblar escenas",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "mujer_chami_adulta_tipo": {
+      "name": "mujer chamí adulta (tipo)",
+      "kind": "personaje",
+      "description": "ficha de tipo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "mujer_chami_joven_tipo": {
+      "name": "mujer chamí joven (tipo)",
+      "kind": "personaje",
+      "description": "ficha de tipo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "nino_y_nina_chami_tipo": {
+      "name": "niño y niña chamí (tipo)",
+      "kind": "personaje",
+      "description": "ficha de tipo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "anciano_y_anciana_chami_tipo": {
+      "name": "anciano y anciana chamí (tipo)",
+      "kind": "personaje",
+      "description": "ficha de tipo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "un_hombre_negro_y_enorme": {
+      "name": "«un hombre negro y enorme»",
+      "kind": "personaje",
+      "description": "seis palabras sin más datos; ilustrarlo produce estereotipo racial",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "excluded",
+      "capa_heredada": "persona",
+      "exclusion_reason": "seis palabras sin más datos; ilustrarlo produce estereotipo racial",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "erubida_la_gente_del_valle": {
+      "name": "Erubidá, la gente del valle",
+      "kind": "colectivo",
+      "description": "chaquira blanca en cabeza y manos; pinta de jagua propia",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "siebida_la_gente_de_la_montana": {
+      "name": "Siebidá, la gente de la montaña",
+      "kind": "colectivo",
+      "description": "majagua blanca y andea",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "la_gente_del_sol": {
+      "name": "la Gente del Sol",
+      "kind": "colectivo",
+      "description": "mucho oro",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna"
+      ],
+      "evidence": []
+    },
+    "la_gente_de_la_luna": {
+      "name": "la Gente de la Luna",
+      "kind": "colectivo",
+      "description": "mucho oro",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna"
+      ],
+      "evidence": []
+    },
+    "los_aramuko_dohura": {
+      "name": "los aramúko dohurá",
+      "kind": "colectivo",
+      "description": "comen jugo o vapor, sin ano",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-karagabi-y-la-gente-subterranea",
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "los_hino_pota_uara": {
+      "name": "los híno-pota uára",
+      "kind": "colectivo",
+      "description": "primera humanidad; gestación en la pantorrilla",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-embera"
+      ],
+      "evidence": []
+    },
+    "los_diez_cazadores_siebida": {
+      "name": "los diez cazadores siebidá",
+      "kind": "colectivo",
+      "description": "dentro de Siebidá",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "persona",
+      "covered_by": null,
+      "coverage_note": "dentro de Siebidá",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "las_hormigas_familia_de_la_mujer": {
+      "name": "las hormigas, familia de la mujer",
+      "kind": "colectivo",
+      "description": "las hormigas, familia de la mujer",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "guatin": {
+      "name": "guatín",
+      "kind": "animal",
+      "description": "DECIDIR: guagua/paca con manchas (glosa de los recopiladores) o ñeque",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "jaguar": {
+      "name": "jaguar",
+      "kind": "animal",
+      "description": "jaguar americano, no leopardo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "oso": {
+      "name": "oso",
+      "kind": "animal",
+      "description": "2 mitos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto",
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "puma": {
+      "name": "puma",
+      "kind": "animal",
+      "description": "puma",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "ardilla": {
+      "name": "ardilla",
+      "kind": "animal",
+      "description": "las ocho del jenené llevan nariguera",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto",
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "zorro": {
+      "name": "zorro",
+      "kind": "animal",
+      "description": "zorro",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "venado": {
+      "name": "venado",
+      "kind": "animal",
+      "description": "prometido como cebo; y el que lo guía de vuelta",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto",
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "burro": {
+      "name": "burro",
+      "kind": "animal",
+      "description": "burro",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "nutria": {
+      "name": "nutria",
+      "kind": "animal",
+      "description": "nutria",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "ballena_que_come_gente": {
+      "name": "ballena que come gente",
+      "kind": "criatura",
+      "description": "con ríos y gente viva dentro",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "otro_ser_acuatico": {
+      "name": "otro ser acuático",
+      "kind": "criatura",
+      "description": "sin nombre; la gente lo tenía por dios",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "la_avispa_grande": {
+      "name": "la avispa grande",
+      "kind": "animal",
+      "description": "lo mata al final",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "pescado_grande": {
+      "name": "pescado grande",
+      "kind": "animal",
+      "description": "Karagabí transformado",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "pescados_chiquitos": {
+      "name": "pescados chiquitos",
+      "kind": "animal",
+      "description": "pescados chiquitos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "animal",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "hormiga_chiquita": {
+      "name": "hormiga chiquita",
+      "kind": "animal",
+      "description": "Hímo castigado",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "hormiga_arriera_conga": {
+      "name": "hormiga arriera / conga",
+      "kind": "animal",
+      "description": "mata a la primera humanidad; es la gente de Arrumía",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga",
+        "creacion-embera"
+      ],
+      "evidence": []
+    },
+    "lorita": {
+      "name": "lorita",
+      "kind": "animal",
+      "description": "grita con luna llena",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-de-karagabi"
+      ],
+      "evidence": []
+    },
+    "pajaro_carpintero": {
+      "name": "pájaro carpintero",
+      "kind": "animal",
+      "description": "corta la escalera de guaduas",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-karagabi-encerrado-en-el-arbol",
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "pajaros_muertos_y_el_pajaro_vivo": {
+      "name": "pájaros muertos y el pájaro vivo",
+      "kind": "animal",
+      "description": "traídos muertos para que no canten",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "puerco_de_agua": {
+      "name": "puerco de agua",
+      "kind": "animal",
+      "description": "puerco de agua",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "tatabro": {
+      "name": "tatabro",
+      "kind": "animal",
+      "description": "Dycotiles torquatus",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "colibri": {
+      "name": "colibrí",
+      "kind": "animal",
+      "description": "se vuelve zahíno",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "zahino": {
+      "name": "zahíno",
+      "kind": "animal",
+      "description": "zahíno",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "animal",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "la_reunion_de_animales": {
+      "name": "la reunión de animales",
+      "kind": "colectivo",
+      "description": "la matriz de las especies; deja algunos vivos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "persona",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "hacha": {
+      "name": "hacha",
+      "kind": "objeto",
+      "description": "hacha",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-embera",
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "bodoquera": {
+      "name": "bodoquera",
+      "kind": "objeto",
+      "description": "chonta, 2,5-3,5 m, espiral de bejuco",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida",
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "dardos_y_carcaj": {
+      "name": "dardos y carcaj",
+      "kind": "objeto",
+      "description": "carcaj de guadua, dardos punta arriba",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "lanza_miesu": {
+      "name": "lanza (miesú)",
+      "kind": "objeto",
+      "description": "3 mitos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida",
+        "horchibari",
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "arco_y_flechas": {
+      "name": "arco y flechas",
+      "kind": "objeto",
+      "description": "arco y flechas",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "maza": {
+      "name": "maza",
+      "kind": "objeto",
+      "description": "maza",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "asiento_pequeno": {
+      "name": "asiento pequeño",
+      "kind": "objeto",
+      "description": "con él muere Horchíbarí",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "asientos_de_balso": {
+      "name": "asientos de balso",
+      "kind": "objeto",
+      "description": "uno por casa contra la tempestad",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "balsa": {
+      "name": "balsa",
+      "kind": "objeto",
+      "description": "balsa",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "muneco_de_balso": {
+      "name": "muñeco de balso",
+      "kind": "objeto",
+      "description": "señuelo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "red_de_fibras": {
+      "name": "red de fibras",
+      "kind": "objeto",
+      "description": "red de fibras",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "cuchillo": {
+      "name": "cuchillo",
+      "kind": "objeto",
+      "description": "cuchillo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-karagabi-y-la-gente-subterranea"
+      ],
+      "evidence": []
+    },
+    "palo_de_chontaduro": {
+      "name": "palo de chontaduro",
+      "kind": "objeto",
+      "description": "palo de chontaduro",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "talego_rojo_y_talego_azul": {
+      "name": "talego rojo y talego azul",
+      "kind": "objeto",
+      "description": "el único azul del corpus",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna"
+      ],
+      "evidence": []
+    },
+    "serrucho": {
+      "name": "serrucho",
+      "kind": "objeto",
+      "description": "no sirve para hacer fuego",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "machete": {
+      "name": "machete",
+      "kind": "objeto",
+      "description": "machete",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "tambor": {
+      "name": "tambor",
+      "kind": "objeto",
+      "description": "tambor",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-de-karagabi",
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "chicha": {
+      "name": "chicha",
+      "kind": "objeto",
+      "description": "lo más nombrado del corpus",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto",
+        "la-mujer-de-karagabi"
+      ],
+      "evidence": []
+    },
+    "narigueras_monsima": {
+      "name": "narigueras monsimá",
+      "kind": "objeto",
+      "description": "único adorno con término emberá",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "escalera_de_guaduas": {
+      "name": "escalera de guaduas",
+      "kind": "objeto",
+      "description": "escalera de guaduas",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "garrote": {
+      "name": "garrote",
+      "kind": "objeto",
+      "description": "garrote",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "piedra_de_golpear": {
+      "name": "piedra de golpear",
+      "kind": "objeto",
+      "description": "piedra de golpear",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "las_piedras_que_se_rompen": {
+      "name": "las piedras que se rompen",
+      "kind": "objeto",
+      "description": "se rompen dentro de la casa",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-oscuridad"
+      ],
+      "evidence": []
+    },
+    "harina_con_agua": {
+      "name": "harina con agua",
+      "kind": "objeto",
+      "description": "único alimento tras la oscuridad",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-oscuridad",
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "maiz_caliente_y_hojaldres": {
+      "name": "maíz caliente y hojaldres",
+      "kind": "objeto",
+      "description": "cebo de los talegos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "cebo de los talegos",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna"
+      ],
+      "evidence": []
+    },
+    "la_senal_bajo_la_casa": {
+      "name": "la señal bajo la casa",
+      "kind": "objeto",
+      "description": "la señal bajo la casa",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "cama_de_bejucos": {
+      "name": "cama de bejucos",
+      "kind": "objeto",
+      "description": "en árbol alto",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "disfraz_de_miel_y_hojas": {
+      "name": "disfraz de miel y hojas",
+      "kind": "objeto",
+      "description": "disfraz de miel y hojas",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "disfraz_erubida": {
+      "name": "disfraz erubidá",
+      "kind": "objeto",
+      "description": "chaquira blanca, majagua, pinta de jagua",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "brea": {
+      "name": "brea",
+      "kind": "objeto",
+      "description": "comida y materia del cuerpo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "hierba_que_transforma": {
+      "name": "hierba que transforma",
+      "kind": "objeto",
+      "description": "hierba que transforma",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "choko_cantaro_ancestro": {
+      "name": "chokó (cántaro-ancestro)",
+      "kind": "objeto",
+      "description": "documentado en Corozal 1945; no está en los 14 relatos pero es central",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "pipa_colectiva_de_cuatro_boquillas": {
+      "name": "pipa colectiva de cuatro boquillas",
+      "kind": "objeto",
+      "description": "ceremonial; Reichel 1945",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "palma_barrigona": {
+      "name": "palma barrigona",
+      "kind": "planta",
+      "description": "de sus cortes sale la gente",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-embera"
+      ],
+      "evidence": []
+    },
+    "hojas_de_rascadera": {
+      "name": "hojas de rascadera",
+      "kind": "planta",
+      "description": "tapan los cortes",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-embera"
+      ],
+      "evidence": []
+    },
+    "jenene": {
+      "name": "jenené",
+      "kind": "planta",
+      "description": "el árbol que contenía el agua",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "arbol_de_balso": {
+      "name": "árbol de balso",
+      "kind": "planta",
+      "description": "árbol de balso",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari",
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "corozo": {
+      "name": "corozo",
+      "kind": "planta",
+      "description": "Corozo oleifera",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "chontaduro": {
+      "name": "chontaduro",
+      "kind": "planta",
+      "description": "planta del mundo de abajo; base de la chicha",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "guadua": {
+      "name": "guadua",
+      "kind": "planta",
+      "description": "guadua",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "maiz": {
+      "name": "maíz",
+      "kind": "planta",
+      "description": "maíz chiquito; 3 mitos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-oscuridad",
+        "el-guatin-astuto",
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "flores_del_monte": {
+      "name": "flores del monte",
+      "kind": "planta",
+      "description": "sin el baño no se ve ni se pasa",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "atrezo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "ahuyama": {
+      "name": "ahuyama",
+      "kind": "planta",
+      "description": "forma del corazón de la ballena",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "forma del corazón de la ballena",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "platano": {
+      "name": "plátano",
+      "kind": "planta",
+      "description": "plátano",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "arbol_alto_del_oso": {
+      "name": "árbol alto del oso",
+      "kind": "planta",
+      "description": "dentro de cama de bejucos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "atrezo",
+      "covered_by": null,
+      "coverage_note": "dentro de cama de bejucos",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "el_arbol_cavado_ataud": {
+      "name": "el árbol cavado (ataúd)",
+      "kind": "arquitectura",
+      "description": "el árbol cavado (ataúd)",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-karagabi-encerrado-en-el-arbol"
+      ],
+      "evidence": []
+    },
+    "tambo_chami": {
+      "name": "tambo chamí",
+      "kind": "arquitectura",
+      "description": "casa sobre pilotes; escalera de tronco con muescas",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "los_tambos_invisibles": {
+      "name": "los tambos invisibles",
+      "kind": "arquitectura",
+      "description": "sólo se ven tras el baño de flores",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "el_hueco_bajo_la_casa": {
+      "name": "el hueco bajo la casa",
+      "kind": "arquitectura",
+      "description": "el muerto sin enterrar; se oyen ruidos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "campamento_de_monte": {
+      "name": "campamento de monte",
+      "kind": "arquitectura",
+      "description": "ranchos levantados para cazar",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "refugio_en_el_arbol": {
+      "name": "refugio en el árbol",
+      "kind": "arquitectura",
+      "description": "refugio en el árbol",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso"
+      ],
+      "evidence": []
+    },
+    "casa_de_horchibari": {
+      "name": "casa de Horchíbarí",
+      "kind": "arquitectura",
+      "description": "casa de Horchíbarí",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "casa_de_dumio": {
+      "name": "casa de Dumío",
+      "kind": "arquitectura",
+      "description": "casa de Dumío",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "mundo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "pueblo_erubida": {
+      "name": "pueblo erubidá",
+      "kind": "arquitectura",
+      "description": "casas quemadas",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-historia-de-erubida-y-siebida"
+      ],
+      "evidence": []
+    },
+    "cueva": {
+      "name": "cueva",
+      "kind": "arquitectura",
+      "description": "cueva",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "mundo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "boveda_del_escondite": {
+      "name": "bóveda del escondite",
+      "kind": "arquitectura",
+      "description": "bóveda del escondite",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "mundo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "el_rio": {
+      "name": "el río",
+      "kind": "paisaje",
+      "description": "eje del corpus; río arriba / río abajo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "el_charco": {
+      "name": "el charco",
+      "kind": "paisaje",
+      "description": "puerta al mundo de abajo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria",
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "la_montana": {
+      "name": "la montaña",
+      "kind": "paisaje",
+      "description": "la montaña",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-y-el-oso",
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "el_monte": {
+      "name": "el monte",
+      "kind": "paisaje",
+      "description": "adonde se sale a cazar y rozar",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": []
+    },
+    "la_roza": {
+      "name": "la roza",
+      "kind": "paisaje",
+      "description": "el maíz se riega, no se siembra",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga",
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "el_mar": {
+      "name": "el mar",
+      "kind": "paisaje",
+      "description": "nacido de la raíz del jenené",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "hentsera-y-el-agua"
+      ],
+      "evidence": []
+    },
+    "el_mundo_de_abajo": {
+      "name": "el mundo de abajo",
+      "kind": "paisaje",
+      "description": "plano, sólo chontaduro, piedras azules",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria",
+        "el-hijo-de-karagabi-y-la-gente-subterranea"
+      ],
+      "evidence": []
+    },
+    "el_camino_de_la_luna": {
+      "name": "el camino de la luna",
+      "kind": "paisaje",
+      "description": "el camino de la luna",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "el_interior_de_la_ballena": {
+      "name": "el interior de la ballena",
+      "kind": "paisaje",
+      "description": "con ríos, gente y animales vivos",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "el_derrumbe": {
+      "name": "el derrumbe",
+      "kind": "paisaje",
+      "description": "y el juego de rodar por él",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "horchibari"
+      ],
+      "evidence": []
+    },
+    "la_ladera": {
+      "name": "la ladera",
+      "kind": "paisaje",
+      "description": "la ladera",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "mundo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-guatin-astuto"
+      ],
+      "evidence": []
+    },
+    "la_orilla_del_rio": {
+      "name": "la orilla del río",
+      "kind": "paisaje",
+      "description": "la orilla del río",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "mundo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-mujer-hormiga"
+      ],
+      "evidence": []
+    },
+    "la_oscuridad": {
+      "name": "la oscuridad",
+      "kind": "fenomeno",
+      "description": "acontecimiento, no ambiente; ocurre dos veces",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-oscuridad",
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna"
+      ],
+      "evidence": []
+    },
+    "la_tempestad_tras_la_ballena": {
+      "name": "la tempestad tras la ballena",
+      "kind": "fenomeno",
+      "description": "un asiento se pierde por relámpago",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "el_rio_rojo_de_sangre": {
+      "name": "el río rojo de sangre",
+      "kind": "fenomeno",
+      "description": "el río rojo de sangre",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "el_temblor": {
+      "name": "el temblor",
+      "kind": "fenomeno",
+      "description": "cuando mueve el dedo",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-karagabi-encerrado-en-el-arbol"
+      ],
+      "evidence": []
+    },
+    "la_luna_llena": {
+      "name": "la luna llena",
+      "kind": "fenomeno",
+      "description": "la luna llena",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria",
+        "la-mujer-de-karagabi"
+      ],
+      "evidence": []
+    },
+    "el_mediodia": {
+      "name": "el mediodía",
+      "kind": "fenomeno",
+      "description": "el mediodía",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "mundo",
+      "covered_by": null,
+      "coverage_note": "Heredado de la biblia V1.",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hombre-que-atrapo-al-sol-y-a-la-luna",
+        "himo-la-iguana-y-la-candela"
+      ],
+      "evidence": []
+    },
+    "la_caida_lenta": {
+      "name": "la caída lenta",
+      "kind": "fenomeno",
+      "description": "al decir una palabra",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "capa_heredada": "mundo",
+      "covered_by": null,
+      "coverage_note": "al decir una palabra",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    },
+    "la_desaparicion_del_cuerpo_al_tercer_dia": {
+      "name": "la desaparición del cuerpo al tercer día",
+      "kind": "fenomeno",
+      "description": "la desaparición del cuerpo al tercer día",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "capa_heredada": "mundo",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-hijo-de-la-nutria"
+      ],
+      "evidence": []
+    }
+  },
+  "models": {},
+  "pilot": null,
+  "generation_batch": null,
+  "completion": null
+}

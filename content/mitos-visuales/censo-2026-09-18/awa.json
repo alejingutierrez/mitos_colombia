@@ -1,0 +1,455 @@
+{
+  "id": "awa",
+  "label": "Awa (Ɨnkal Awá)",
+  "pages": 2,
+  "canon_pages": 2,
+  "read_note": "Leí los dos relatos completos (barbachas-del-arbol-grande, guagaja) con sus cuatro campos, editorial/awa/universe.mjs y records.mjs con sus cuatro imagePrompt, y §«Qué construye la Biblia». Es el corpus más rico en transformaciones de los seis y el que más fácil se infla, porque las dos páginas traen variantes documentadas en abundancia: Attɨm Awá y China Attim, la mujer que se forma primero la cabeza, el cangrejo que hace llover o la quebrada que queda seca, Tɨtenkua y los niños Wisha, Kuesmasú, el armadillo con sombrero y la perdiz que aconseja. El canon insiste en registrarlas por separado y en no fundirlas, así que casi todas quedaron embebidas como variante o excluidas por pertenecer a otra narración. Dos decisiones cuestan explicación. Una: hice una sola ficha de hormiga que cubre la forma-hormiga de la gente que come humo y al kuguin que cobra el quintal de maíz, en vez de tres hojas; la revelación «aquellas personas también eran hormigas» se sostiene con el par de fichas persona/hormiga. Dos: los árboles que hablan awapit quedan excluidos, no porque no importen —importan mucho, el relato dice que todavía hablan— sino porque no se describe boca ni rostro y ponerles cara sería inventarlos; la regla de no antropomorfizar tiene que viajar dentro de la ficha del paisaje. También quedó fuera, con nombre y apellido, toda la fabricación anterior de Guagaja: Nampí, la serpiente gigante, las ofrendas y las cuatro líneas en barro.",
+  "entities": [
+    {
+      "id": "barbacha",
+      "name": "La barbacha (negra y blanca)",
+      "kind": "planta",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es la materia de la que nace la gente y el objeto por el que se cuenta el relato: la fibra oscura crece hacia abajo hasta tocar la tierra y toma forma humana, y después baja una más clara que se transforma en mujer. Una hoja con las dos fibras —negra y blanca—, su textura colgante y su humedad, que es lo primero que bebe la mujer."
+    },
+    {
+      "id": "arbol_grande",
+      "name": "El árbol grande",
+      "kind": "planta",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Entre árboles viejos cubiertos de barbacha, «uno de aquellos árboles sobresalía por su tamaño». Es el eje del origen y el centro de las dos escenas planeadas; en la formulación del Plan de Vida del Putumayo está en la cabecera y a la orilla de un río. No se funde con el paisaje: es un individuo con identidad."
+    },
+    {
+      "id": "attim_awa",
+      "name": "Attɨm Awá, el primer hombre",
+      "kind": "personaje",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["anciano_encanecido"],
+      "note": "Hombre grande y de piel oscura que camina solo por la selva, come los frutos del akal kih y cuida la montaña y sus animales. El estado extra lo exige el relato y cambia el cuerpo: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía», y es ya viejo cuando aparece la mujer. El tríptico necesita las dos edades."
+    },
+    {
+      "id": "primera_mujer",
+      "name": "La primera mujer",
+      "kind": "personaje",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Mujer joven formada por la barbacha clara al tocar el suelo. Conduce el segundo movimiento: acepta acompañarse, tiene sed, toma la humedad de la barbacha y encuentra al cangrejo. La formación gradual que registra Sinsajoa —primero la cabeza, luego el cuerpo— se declara como variante dentro de su hoja."
+    },
+    {
+      "id": "kippu",
+      "name": "Kippu, el cangrejo",
+      "kind": "animal",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Único animal con acción del primer relato y la bisagra del agua: está asociado con el agua guardada bajo la tierra y con el río Chatanalpí. Las versiones difieren —ofrece agua y hace llegar la lluvia, o la mujer lo saca de su cueva y la quebrada queda seca—, así que la ficha fija el cuerpo y deja las dos salidas abiertas."
+    },
+    {
+      "id": "familia_inkal_awa",
+      "name": "Los hijos y la continuidad de la gente Awá",
+      "kind": "colectivo",
+      "myths": ["barbachas-del-arbol-grande", "guagaja"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cierra el primer relato: los hijos crecen, comparten los trabajos y dan continuidad a la gente Awá en la montaña. Es la gramática de cuerpos Awá corrientes y presta figuras a la familia de la que las hormigas traen noticias en el segundo relato."
+    },
+    {
+      "id": "montana_selva_awa",
+      "name": "La montaña Awá: selva, ríos y cueva",
+      "kind": "paisaje",
+      "myths": ["barbachas-del-arbol-grande", "guagaja"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El mundo de arriba en los dos relatos: árboles viejos cubiertos de barbacha, animales y aves, el río Chatanalpí, la quebrada, la cueva del cangrejo y la cueva del armadillo por donde se desfonda la tierra. La regla de no poner rostro a los árboles viaja dentro de esta hoja, porque el relato dice que hablan pero no los describe."
+    },
+    {
+      "id": "los_dos_hermanos",
+      "name": "Los dos hermanos cazadores",
+      "kind": "colectivo",
+      "myths": ["guagaja"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conducen el segundo relato entero: siguen al armadillo, uno entra a la cueva mientras el otro lo sostiene por los pies, caen juntos, trabajan en el mundo de abajo, y después uno muere en la peña y el otro regresa. La fuente no los describe por separado, así que una sola hoja fija dos figuras distinguibles —mayor y menor— en vez de dos fichas de identidad inventadas."
+    },
+    {
+      "id": "armadillo",
+      "name": "El armadillo",
+      "kind": "animal",
+      "myths": ["guagaja"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el animal por el que se cuenta el relato: lo siguen, se mete en la cueva, arrastra al cazador hacia el fondo y provoca la caída; abajo lo llaman zapallo y lo preparan como alimento. La variante en que aparece sentado en una casa con sombrero bien tejido se declara dentro de su hoja, sin fundirla con el texto principal."
+    },
+    {
+      "id": "ishkum_awa",
+      "name": "Los Ishkum Awá, la gente que come humo",
+      "kind": "colectivo",
+      "myths": ["guagaja"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Habitantes de Maza Su: personas diminutas, de nariz grande, que hablan awapit y que no comen como los hermanos —acercan la nariz, aspiran el vapor y quedan satisfechas. Esa forma de alimentarse es su rasgo y va en su hoja. Su segunda forma no se resuelve aquí sino en la ficha de las hormigas, y el par de hojas es lo que sostiene la revelación."
+    },
+    {
+      "id": "hormigas",
+      "name": "Las hormigas (y el kuguin)",
+      "kind": "animal",
+      "myths": ["guagaja"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Vieron a la gente entrar con la carga en una peña. Comprendieron que aquellas personas también eran hormigas». Una sola hoja de hormiga cubre esa segunda forma, a las hormigas que vienen del mundo de arriba con noticias de la familia y al kuguin que ofrece el regreso por un quintal de maíz. La escena vertical ya pide un sendero de hormigas y granos."
+    },
+    {
+      "id": "maza_su",
+      "name": "Maza Su, el mundo de abajo",
+      "kind": "paisaje",
+      "myths": ["guagaja"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto y el hallazgo visual del corpus: también allí hay montaña y ríos, pero las casas, el chiro y el maíz son muy pequeños, un puente es apenas una raíz de rascadera y la gente entra con la carga en una peña. Esta hoja fija la regla de escala completa, incluidas las casas diminutas y la peña; sin ella todo el relato se desarma."
+    },
+    {
+      "id": "china_attim",
+      "name": "China Attim",
+      "kind": "personaje",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "attim_awa",
+      "sheets": 0,
+      "note": "«Una versión lo llama Attɨm Awá; otra, China Attim». Mismo primer hombre con dos grafías de fuentes distintas (Arcos 2018 y Mora 2012): variante de nombre declarada en su ficha, no otra identidad."
+    },
+    {
+      "id": "barbacha_negra",
+      "name": "La barbacha negra",
+      "kind": "planta",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "barbacha",
+      "sheets": 0,
+      "note": "La fibra oscura y abundante que cuelga del árbol grande y de la que nace el primer hombre. Es un color de la misma hoja, no una planta aparte."
+    },
+    {
+      "id": "barbacha_blanca",
+      "name": "La barbacha blanca",
+      "kind": "planta",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "barbacha",
+      "sheets": 0,
+      "note": "La fibra más clara que baja después y origina a la primera mujer. Mismo material, otro color: el Plan de Vida del Putumayo insiste justamente en la unión de ambas."
+    },
+    {
+      "id": "humedad_de_la_barbacha",
+      "name": "La humedad de la barbacha",
+      "kind": "objeto",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "barbacha",
+      "sheets": 0,
+      "note": "Lo primero que bebe la mujer cuando tiene sed, y lo que el hombre le ofrece en la versión de Sinsajoa. Es una propiedad de la fibra: se resuelve en su hoja."
+    },
+    {
+      "id": "formacion_gradual_de_la_mujer",
+      "name": "La aparición gradual de la mujer",
+      "kind": "fenomeno",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "primera_mujer",
+      "sheets": 0,
+      "note": "Sinsajoa documenta que primero se forma la cabeza y luego el cuerpo. Es una variante del mismo nacimiento y no una segunda mujer: se declara como fase dentro de su ficha."
+    },
+    {
+      "id": "akal_kih",
+      "name": "El árbol akal kih",
+      "kind": "planta",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "montana_selva_awa",
+      "sheets": 0,
+      "note": "De sus frutos come el primer hombre. Se nombra en awapit pero no se describe: entra como especie del bosque dentro del modelo de ambiente, con el nombre declarado y sin inventarle porte ni fruto reconocible."
+    },
+    {
+      "id": "animales_y_aves_de_la_montana",
+      "name": "Los animales y las aves de la montaña",
+      "kind": "colectivo",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "montana_selva_awa",
+      "sheets": 0,
+      "note": "«En la montaña vivían animales y aves entre árboles viejos cubiertos de barbacha», y el primer hombre los cuida. No se nombra ninguno: fauna del paisaje."
+    },
+    {
+      "id": "rio_chatanalpi",
+      "name": "El río Chatanalpí",
+      "kind": "paisaje",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "montana_selva_awa",
+      "sheets": 0,
+      "note": "Nombrado en relación con el cangrejo y el agua guardada bajo la tierra, sin escena ni descripción propia: cauce del mismo modelo de ambiente."
+    },
+    {
+      "id": "quebrada_seca",
+      "name": "La quebrada que quedó seca",
+      "kind": "paisaje",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "montana_selva_awa",
+      "sheets": 0,
+      "note": "Resultado de una de las dos variantes del episodio del cangrejo. Es un estado del agua dentro del paisaje, no un lugar nuevo; la otra variante termina en lluvia."
+    },
+    {
+      "id": "cueva_del_kippu",
+      "name": "La cueva del cangrejo",
+      "kind": "lugar",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "embedded",
+      "covered_by": "montana_selva_awa",
+      "sheets": 0,
+      "note": "De allí lo saca la mujer en una de las versiones, y con él el agua guardada bajo la tierra. Sin descripción: parte del modelo de ambiente."
+    },
+    {
+      "id": "cueva_del_armadillo",
+      "name": "La cueva y la abertura reducida",
+      "kind": "lugar",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "montana_selva_awa",
+      "sheets": 0,
+      "note": "El armadillo se mete en ella, la tierra cede y los hermanos caen; después les explican que la abertura por donde cayeron «se había reducido a una cueva», y allí mismo queda el maíz del pago. Es el paso entre los dos mundos y se produce dentro del paisaje de arriba, que debe declararlo en sus dos momentos."
+    },
+    {
+      "id": "vapor_que_aspiran",
+      "name": "El vapor de la comida",
+      "kind": "fenomeno",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "ishkum_awa",
+      "sheets": 0,
+      "note": "«Acercaban la nariz, aspiraban el vapor y con eso quedaban satisfechos». Es el rasgo que les da nombre —gente que come humo— y se resuelve como gesto dentro de su hoja."
+    },
+    {
+      "id": "mujer_del_mundo_de_abajo",
+      "name": "La mujer del mundo de abajo",
+      "kind": "personaje",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "ishkum_awa",
+      "sheets": 0,
+      "note": "El hermano menor quiere vivir con ella y ella le advierte que sus cuerpos y su casa no son compatibles con los de él. Conduce esa advertencia, pero no se le da ningún rasgo distinto del colectivo: figura de esa hoja."
+    },
+    {
+      "id": "casas_diminutas",
+      "name": "Las casas diminutas",
+      "kind": "arquitectura",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "maza_su",
+      "sheets": 0,
+      "note": "Lo primero que distinguen a lo lejos y lo que revela la escala del mundo de abajo. Parte del modelo espacial de Maza Su."
+    },
+    {
+      "id": "la_pena",
+      "name": "La peña donde entran con la carga",
+      "kind": "arquitectura",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "maza_su",
+      "sheets": 0,
+      "note": "Allí entran los habitantes con el maíz y allí muere el hermano menor porque no puede respirar. Es decisiva en la trama, pero su interior no se describe en una sola línea: se resuelve como elemento del modelo espacial y no como escenario construido aparte."
+    },
+    {
+      "id": "zapallo",
+      "name": "Zapallo (el armadillo en el mundo de abajo)",
+      "kind": "animal",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "armadillo",
+      "sheets": 0,
+      "note": "«Allí llamaban zapallo al armadillo y lo preparaban como alimento». Mismo animal con otro nombre según el mundo: variante declarada en su ficha."
+    },
+    {
+      "id": "armadillo_con_sombrero",
+      "name": "El armadillo sentado con sombrero",
+      "kind": "animal",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "armadillo",
+      "sheets": 0,
+      "note": "Otra narración recogida por Sinsajoa lo presenta sentado en una casa con un sombrero bien tejido. Variante del mismo animal, registrada dentro de su hoja y no fundida con el texto de Arcos."
+    },
+    {
+      "id": "kuguin",
+      "name": "El kuguin",
+      "kind": "animal",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "hormigas",
+      "sheets": 0,
+      "note": "«Un kuguin, una hormiga, le ofreció llevarlo a cambio de un quintal de maíz» y le indica acostarse sobre la hoja de bijao y no despertar. Es un individuo nombrado de la misma especie: se produce desde la hoja de hormiga."
+    },
+    {
+      "id": "hormigas_del_mundo_de_arriba",
+      "name": "Las hormigas que traen noticias",
+      "kind": "animal",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "hormigas",
+      "sheets": 0,
+      "note": "Vienen del mundo de arriba y le dan noticias de su familia. Mismo cuerpo, otra procedencia; la hoja lo declara sin afirmar que sean las mismas que habitan Maza Su."
+    },
+    {
+      "id": "chiro_y_maiz_diminutos",
+      "name": "El chiro y el maíz del mundo de abajo",
+      "kind": "planta",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_awa",
+      "sheets": 0,
+      "note": "Los encuentran cerca de las viviendas y «todo era muy pequeño»; después los cosechan con los habitantes. Alimento de escena: utilería, con la escala tomada de la hoja de Maza Su."
+    },
+    {
+      "id": "raiz_de_rascadera",
+      "name": "La raíz de rascadera que hace de puente",
+      "kind": "planta",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_awa",
+      "sheets": 0,
+      "note": "«Debían atravesar lo que parecía un puente, pero para ellos era apenas una raíz de rascadera». Es el mejor chiste de escala del relato y un objeto de paso: utilería."
+    },
+    {
+      "id": "hoja_de_bijao",
+      "name": "La hoja de bijao",
+      "kind": "planta",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_awa",
+      "sheets": 0,
+      "note": "Sobre ella debe acostarse y permanecer dormido durante el regreso. Objeto de una sola escena, ya presente en el prompt vertical: utilería."
+    },
+    {
+      "id": "quintal_de_maiz",
+      "name": "El quintal de maíz desgranado",
+      "kind": "objeto",
+      "myths": ["guagaja"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_awa",
+      "sheets": 0,
+      "note": "El pago prometido, dejado en la cueva y desaparecido al día siguiente. Cierra el relato; es un montón de grano, no una entidad con identidad: utilería."
+    },
+    {
+      "id": "arboles_que_hablan_awapit",
+      "name": "Los árboles que hablan awapit",
+      "kind": "fenomeno",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "excluded",
+      "reason": "Sin evidencia visual: el relato dice que los árboles hablaban en awapit, veían lo que hacía la primera familia y se comunicaban entre sí, y que todavía hablan aunque la gente no siempre pueda escucharlos, pero no describe boca, rostro ni gesto. Dibujarles cara sería inventarlos y convertiría la selva en caricatura.",
+      "sheets": 0,
+      "note": "Verificado en el quinto párrafo del mito. Es una exclusión incómoda porque el contenido es central: por eso la regla de no antropomorfizar queda declarada dentro de las fichas del árbol grande y del paisaje, y la escucha se resolverá por composición."
+    },
+    {
+      "id": "titenkua_y_los_ninos_wisha",
+      "name": "Tɨtenkua, la madre de la barbacha, y los niños Wisha",
+      "kind": "deidad_fuerza",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "excluded",
+      "reason": "No pertenece a este relato: Sinsajoa presenta otro origen en el que dos niños Wisha juegan junto a un árbol, ella los eleva y los alimenta con savia y barbacha. El canon es explícito —«esta variante no se inserta dentro de la primera como un episodio faltante: se registra por separado»—.",
+      "sheets": 0,
+      "note": "Verificado en el cuarto párrafo de versiones. Si algún día se abre página propia para esa variante, será otro expediente y otra ficha."
+    },
+    {
+      "id": "dios_o_el_creador",
+      "name": "La figura de Dios o del creador",
+      "kind": "deidad_fuerza",
+      "myths": ["barbachas-del-arbol-grande"],
+      "decision": "excluded",
+      "reason": "Redacción cristianizada que el canon conserva como diferencia pero no adopta: «Algunas versiones incluyen la figura de Dios o del creador. La edición conserva esas diferencias sin convertir una redacción cristianizada o una ortografía particular en forma única del relato». Ficharlo impondría esa capa a todo el corpus.",
+      "sheets": 0,
+      "note": "Verificado en el último párrafo de versiones. En la narración adoptada nadie crea a la pareja: la barbacha desciende y toma forma."
+    },
+    {
+      "id": "kuesmasu",
+      "name": "Kuesmasú, dueño de los armadillos",
+      "kind": "deidad_fuerza",
+      "myths": ["guagaja"],
+      "decision": "excluded",
+      "reason": "No pertenece a esta trama: Botero Villegas documenta un ciclo relacionado con un cazador atendido por el dueño de los armadillos del mundo de abajo y una hormiga arriera que ayuda a salir, pero el canon advierte que «el parentesco temático no convierte las dos tramas en una sola versión».",
+      "sheets": 0,
+      "note": "Verificado en el cuarto párrafo de versiones."
+    },
+    {
+      "id": "perdiz_consejera",
+      "name": "La perdiz que aconseja",
+      "kind": "animal",
+      "myths": ["guagaja"],
+      "decision": "excluded",
+      "reason": "No pertenece al relato publicado: aparece sólo en otra narración recogida por Sinsajoa, que «continúa con otros episodios y no se funde aquí con cada detalle del texto de Arcos». El texto adoptado no la menciona.",
+      "sheets": 0,
+      "note": "Verificado en el tercer párrafo de versiones. Se registra para dejar constancia de que fue vista y descartada."
+    },
+    {
+      "id": "guagaja_nampi_y_la_serpiente",
+      "name": "Guagaja, Nampí, la serpiente gigante y las cuatro líneas en barro",
+      "kind": "criatura",
+      "myths": ["guagaja"],
+      "decision": "excluded",
+      "reason": "Fabricación editorial retirada por el canon: el expediente anterior inventó una mujer llamada Nampí, una serpiente gigante, ofrendas y cuatro líneas trazadas en barro, y hasta el slug guagaja carece de fuente primaria. «Esta revisión retira íntegramente esa creación» y las imágenes antiguas que las mostraban quedaron inutilizables.",
+      "sheets": 0,
+      "note": "Verificado en historia y en las notas de investigación. Es la exclusión que protege a esta página de repetir su propio error; los prompts ya prohíben por nombre la serpiente y las ofrendas."
+    },
+    {
+      "id": "los_cuatro_mundos",
+      "name": "La estructura de los cuatro mundos",
+      "kind": "fenomeno",
+      "myths": ["guagaja"],
+      "decision": "excluded",
+      "reason": "Sin escena en el relato: el Plan de Vida de Pialapí Pueblo Viejo y el informativo Gualti sitúan Maza Su debajo del mundo donde vive la gente Awá dentro de una cosmología de cuatro mundos, pero el viaje de los hermanos sólo recorre dos y no describe los otros.",
+      "sheets": 0,
+      "note": "Verificado en historia. Dibujar un diagrama de cuatro mundos añadiría al relato una arquitectura cosmológica que él no muestra."
+    },
+    {
+      "id": "muerte_del_hermano_menor",
+      "name": "La muerte del hermano menor dentro de la peña",
+      "kind": "fenomeno",
+      "myths": ["guagaja"],
+      "decision": "excluded",
+      "reason": "Se narra pero nunca se ve: ocurre dentro de la peña, donde el relato no entra —«El hombre insistió y entró en la peña. Allí no pudo respirar y murió»—. No hay una sola línea de descripción del interior ni del cuerpo.",
+      "sheets": 0,
+      "note": "Verificado en el sexto párrafo del mito. La consecuencia visible es el hermano que queda solo, y eso sí se produce desde la ficha de los dos hermanos."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_awa",
+      "kind": "objeto",
+      "covers": ["chiro_y_maiz_diminutos", "raiz_de_rascadera", "hoja_de_bijao", "quintal_de_maiz"],
+      "sheets": 1,
+      "note": "Cuatro piezas menores, todas del segundo relato: el alimento pequeño, el puente que es una raíz, la hoja del regreso y el grano del pago. El primer relato no aporta ningún objeto de mano, así que no hay más que agrupar. La hoja depende de la regla de escala de Maza Su y debe mostrar cada pieza en los dos tamaños."
+    }
+  ],
+  "totals": {
+    "entities": 43,
+    "required": 12,
+    "embedded": 23,
+    "excluded": 8,
+    "sheets": 14
+  }
+}
