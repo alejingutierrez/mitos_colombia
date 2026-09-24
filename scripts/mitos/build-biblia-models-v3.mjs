@@ -49,6 +49,21 @@ export const PURPOSE_BY_KIND = {
 /** Las fichas de cuerpo de personaje, criatura y animal exigen esta vista. */
 const IDENTITY_KINDS = new Set(["personaje", "criatura", "animal"]);
 
+/**
+ * Un cuerpo humano de pie va en 9:16, como las fichas de persona de wayuu V4 y
+ * chami V1 (`FICHAS.personaje`, 1024x1536). En 1:1 la figura entera queda a un
+ * tercio del alto y el modelo rellena el resto con paisaje.
+ */
+const VERTICAL_KINDS = new Set(["personaje", "deidad_fuerza"]);
+
+export function viewFor(purpose, kind) {
+  const base = VIEW_BY_PURPOSE[purpose];
+  if (VERTICAL_KINDS.has(kind) && (purpose === "identity_sheet" || purpose === "state_sheet")) {
+    return { ...base, aspect: "9:16" };
+  }
+  return base;
+}
+
 const VIEW_BY_PURPOSE = {
   identity_sheet: { view_type: "canonical_full_body", aspect: "1:1", purpose: "identidad corporal completa y legible" },
   state_sheet: { view_type: "state_variation", aspect: "1:1", purpose: "el cambio de estado sin perder la identidad" },
@@ -178,7 +193,7 @@ function buildPromptSpec({ plan, entity, purpose, view }) {
 }
 
 function buildViews({ entity, purpose }) {
-  const base = VIEW_BY_PURPOSE[purpose];
+  const base = viewFor(purpose, entity.kind);
   if (purpose !== "state_sheet") {
     return [
       {
@@ -243,7 +258,7 @@ export function buildModels(plan) {
         design_status: "ready_for_pilot_review",
         evidence_refs: entity.evidence || [],
         design_contract,
-        prompt_spec: buildPromptSpec({ plan, entity, purpose, view: VIEW_BY_PURPOSE[purpose] }),
+        prompt_spec: buildPromptSpec({ plan, entity, purpose, view: viewFor(purpose, entity.kind) }),
         views,
       };
     }

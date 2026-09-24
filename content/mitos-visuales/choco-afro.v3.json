@@ -7,7 +7,7 @@
   "region": "Pacífico",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento choco-afro",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -25,7 +25,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 6,
     "fields": [
       "content",
@@ -34,8 +34,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "cc6ebd9074a27ccb444a0a7dd4ddcf29a410ed4ac21b495cd81d1c50bf310e23",
-    "max_source_updated_at": "2026-07-28T03:57:34.464Z"
+    "sha256": "0188296e71d30b1ac2f9e6a28efd8ede61858969899d9c739dda74cec673e3d2",
+    "max_source_updated_at": "2026-09-23T01:14:03.103Z"
   },
   "research": {
     "sources": [
@@ -1058,8 +1058,8 @@
     "dossier": "docs/investigacion/choco-afro.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1078,7 +1078,21 @@
       }
     ],
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "anansi",
+        "chimbilaco",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete",
+        "la-yesca",
+        "tulavieja-tunda"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "anansi": {
@@ -1103,9 +1117,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó esta lectura no fue una entidad sino una atribución: la araña de Istmina parecía un injerto editorial con nombre africano prestado y resultó ser la expansión casi frase por frase de un relato recogido de boca de don Pío Perea por Friedemann y Vanín, con el sacristanazgo, las hostias, la torre, las campanas, la profecía y el cura confundido ya dentro —sólo el vino del cáliz, la escalera de seda torcida y el desfile de guaguas son de la página—; y como el narrador era él mismo sacristán, quedó fijado el punto de vista de la lámina, desde dentro de la sacristía y a la escala de quien la barre, no desde la nave y a escala de fiel. De ahí salió lo demás: que «Istmina» no existe antes de 1903 y fecha la página entera en el siglo XX, y que su iglesia es parroquia de ciudad con torre y cuerdas, no capilla de caserío de palma."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó esta lectura no fue una entidad sino una atribución: la araña de Istmina parecía un injerto editorial con nombre africano prestado y resultó ser la expansión casi frase por frase de un relato recogido de boca de don Pío Perea por Friedemann y Vanín, con el sacristanazgo, las hostias, la torre, las campanas, la profecía y el cura confundido ya dentro —sólo el vino del cáliz, la escalera de seda torcida y el desfile de guaguas son de la página—; y como el narrador era él mismo sacristán, quedó fijado el punto de vista de la lámina, desde dentro de la sacristía y a la escala de quien la barre, no desde la nave y a escala de fiel. De ahí salió lo demás: que «Istmina» no existe antes de 1903 y fecha la página entera en el siglo XX, y que su iglesia es parroquia de ciudad con torre y cuerdas, no capilla de caserío de palma.",
+        "previous_note": "Lo que separó esta lectura no fue una entidad sino una atribución: la araña de Istmina parecía un injerto editorial con nombre africano prestado y resultó ser la expansión casi frase por frase de un relato recogido de boca de don Pío Perea por Friedemann y Vanín, con el sacristanazgo, las hostias, la torre, las campanas, la profecía y el cura confundido ya dentro —sólo el vino del cáliz, la escalera de seda torcida y el desfile de guaguas son de la página—; y como el narrador era él mismo sacristán, quedó fijado el punto de vista de la lámina, desde dentro de la sacristía y a la escala de quien la barre, no desde la nave y a escala de fiel. De ahí salió lo demás: que «Istmina» no existe antes de 1903 y fecha la página entera en el siglo XX, y que su iglesia es parroquia de ciudad con torre y cuerdas, no capilla de caserío de palma."
       },
       "entity_refs": [
         {
@@ -1162,9 +1177,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la criatura de su escenario y encontró el problema en el segundo: el Chimbilaco no tiene ningún registro como ser de tradición oral —la única mención localizable de la palabra lo pone en una lista de calamidades chocoanas, es decir un murciélago molesto—, mientras que su relato está escrito con la selva que amasa sombras y el barro que agarra los tobillos como manos, que es palabra por palabra el imaginario del litoral malsano. La consecuencia fue invertir el reparto: la figura se dibuja a partir del murciélago real y no del demonio, y es el monte que la rodea el que tiene que llevar trocha, roza o casa a la vista. Y separó dos techos que el censo quería fundir en uno: el texto pone zinc donde suena la lluvia y palma donde vuela el Chimbilaco, y en 1961 los dos convivían en el mismo caserío."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la criatura de su escenario y encontró el problema en el segundo: el Chimbilaco no tiene ningún registro como ser de tradición oral —la única mención localizable de la palabra lo pone en una lista de calamidades chocoanas, es decir un murciélago molesto—, mientras que su relato está escrito con la selva que amasa sombras y el barro que agarra los tobillos como manos, que es palabra por palabra el imaginario del litoral malsano. La consecuencia fue invertir el reparto: la figura se dibuja a partir del murciélago real y no del demonio, y es el monte que la rodea el que tiene que llevar trocha, roza o casa a la vista. Y separó dos techos que el censo quería fundir en uno: el texto pone zinc donde suena la lluvia y palma donde vuela el Chimbilaco, y en 1961 los dos convivían en el mismo caserío.",
+        "previous_note": "La lectura separó la criatura de su escenario y encontró el problema en el segundo: el Chimbilaco no tiene ningún registro como ser de tradición oral —la única mención localizable de la palabra lo pone en una lista de calamidades chocoanas, es decir un murciélago molesto—, mientras que su relato está escrito con la selva que amasa sombras y el barro que agarra los tobillos como manos, que es palabra por palabra el imaginario del litoral malsano. La consecuencia fue invertir el reparto: la figura se dibuja a partir del murciélago real y no del demonio, y es el monte que la rodea el que tiene que llevar trocha, roza o casa a la vista. Y separó dos techos que el censo quería fundir en uno: el texto pone zinc donde suena la lluvia y palma donde vuela el Chimbilaco, y en 1961 los dos convivían en el mismo caserío."
       },
       "entity_refs": [
         {
@@ -1236,9 +1252,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que este relato inventa de lo que sólo describe mal: el Kijimba —la llave de una hebra de tambor, una gota del Atrato y una palabra bien dicha— no tiene una sola corroboración en ninguna fuente ni en búsqueda abierta y es invención editorial íntegra, mientras que el «altar sencillo» sí tiene corrección documentada y es la tumba, medida en siete pies del propio pie del muerto y representada con los escalones del altar, con sábana blanca de telón y moño negro cosido. Y separó la entidad que el script había puesto mal: la primaria no es el muchacho atrevido sino las ánimas que llegan caminando en fila con zapatos limpios y la cantadora que guarda la llave, porque el nudo del relato es un reclamo de nombre —«la habían llamado sola cuando no era sola»— que es, literalmente, la refutación del Ánima Sola."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que este relato inventa de lo que sólo describe mal: el Kijimba —la llave de una hebra de tambor, una gota del Atrato y una palabra bien dicha— no tiene una sola corroboración en ninguna fuente ni en búsqueda abierta y es invención editorial íntegra, mientras que el «altar sencillo» sí tiene corrección documentada y es la tumba, medida en siete pies del propio pie del muerto y representada con los escalones del altar, con sábana blanca de telón y moño negro cosido. Y separó la entidad que el script había puesto mal: la primaria no es el muchacho atrevido sino las ánimas que llegan caminando en fila con zapatos limpios y la cantadora que guarda la llave, porque el nudo del relato es un reclamo de nombre —«la habían llamado sola cuando no era sola»— que es, literalmente, la refutación del Ánima Sola.",
+        "previous_note": "La lectura separó lo que este relato inventa de lo que sólo describe mal: el Kijimba —la llave de una hebra de tambor, una gota del Atrato y una palabra bien dicha— no tiene una sola corroboración en ninguna fuente ni en búsqueda abierta y es invención editorial íntegra, mientras que el «altar sencillo» sí tiene corrección documentada y es la tumba, medida en siete pies del propio pie del muerto y representada con los escalones del altar, con sábana blanca de telón y moño negro cosido. Y separó la entidad que el script había puesto mal: la primaria no es el muchacho atrevido sino las ánimas que llegan caminando en fila con zapatos limpios y la cantadora que guarda la llave, porque el nudo del relato es un reclamo de nombre —«la habían llamado sola cuando no era sola»— que es, literalmente, la refutación del Ánima Sola."
       },
       "entity_refs": [
         {
@@ -1315,9 +1332,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó, dentro de una misma criatura, tres rasgos registrados de tres inventados: que la Sierpe pasa por los pueblos durante las festividades patronales, que tiene tres cabezas y que asusta a los pescadores está en la única fuente localizable; que cada cabeza tiene oficio propio —cantar, reír, mirar—, que las escamas son «pedacitos de luna» y que aprieta el río «como si fuera cintura» es expansión del texto y se declara. Y confirmó la decisión más importante del censo, que las tres cabezas son un cuerpo y no tres estados: separarlas habría triplicado la lámina y partido la figura. Queda dicho lo incómodo: el relato propio de un caserío de 540 personas entra a esta biblia citado por una guía de promoción turística, que es el género que este mismo dossier señala como el segundo estereotipo del Chocó."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó, dentro de una misma criatura, tres rasgos registrados de tres inventados: que la Sierpe pasa por los pueblos durante las festividades patronales, que tiene tres cabezas y que asusta a los pescadores está en la única fuente localizable; que cada cabeza tiene oficio propio —cantar, reír, mirar—, que las escamas son «pedacitos de luna» y que aprieta el río «como si fuera cintura» es expansión del texto y se declara. Y confirmó la decisión más importante del censo, que las tres cabezas son un cuerpo y no tres estados: separarlas habría triplicado la lámina y partido la figura. Queda dicho lo incómodo: el relato propio de un caserío de 540 personas entra a esta biblia citado por una guía de promoción turística, que es el género que este mismo dossier señala como el segundo estereotipo del Chocó.",
+        "previous_note": "La lectura separó, dentro de una misma criatura, tres rasgos registrados de tres inventados: que la Sierpe pasa por los pueblos durante las festividades patronales, que tiene tres cabezas y que asusta a los pescadores está en la única fuente localizable; que cada cabeza tiene oficio propio —cantar, reír, mirar—, que las escamas son «pedacitos de luna» y que aprieta el río «como si fuera cintura» es expansión del texto y se declara. Y confirmó la decisión más importante del censo, que las tres cabezas son un cuerpo y no tres estados: separarlas habría triplicado la lámina y partido la figura. Queda dicho lo incómodo: el relato propio de un caserío de 540 personas entra a esta biblia citado por una guía de promoción turística, que es el género que este mismo dossier señala como el segundo estereotipo del Chocó."
       },
       "entity_refs": [
         {
@@ -1379,9 +1397,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó una homonimia que ninguna ficha veía: «yesca» es a la vez el daño que un brujo pone y el material de prender fuego que el hombre del río lleva en el yesquero al hombro, junto con el eslabón, la pipa, el tabaco y la piedra, de modo que los dos no pueden aparecer en la misma lámina sin convertirla en un chiste que el relato no hace. Y separó lo documentado de lo que el texto añade: el bejuco no es decorado sino la forma en que la figura se representa —«con bejucos y ramas con los cuales abraza a la víctima y la ahoga»—, mientras que el abrazo invisible, el aire vuelto soga, es de esta página y cuesta lámina. De paso corrigió al propio relato: el chinango documentado es un curador interétnico, de botánica emberá y de los pueblos negros, que cura y no «pone» daños, y por eso sigue sin dibujarse."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó una homonimia que ninguna ficha veía: «yesca» es a la vez el daño que un brujo pone y el material de prender fuego que el hombre del río lleva en el yesquero al hombro, junto con el eslabón, la pipa, el tabaco y la piedra, de modo que los dos no pueden aparecer en la misma lámina sin convertirla en un chiste que el relato no hace. Y separó lo documentado de lo que el texto añade: el bejuco no es decorado sino la forma en que la figura se representa —«con bejucos y ramas con los cuales abraza a la víctima y la ahoga»—, mientras que el abrazo invisible, el aire vuelto soga, es de esta página y cuesta lámina. De paso corrigió al propio relato: el chinango documentado es un curador interétnico, de botánica emberá y de los pueblos negros, que cura y no «pone» daños, y por eso sigue sin dibujarse.",
+        "previous_note": "La lectura separó una homonimia que ninguna ficha veía: «yesca» es a la vez el daño que un brujo pone y el material de prender fuego que el hombre del río lleva en el yesquero al hombro, junto con el eslabón, la pipa, el tabaco y la piedra, de modo que los dos no pueden aparecer en la misma lámina sin convertirla en un chiste que el relato no hace. Y separó lo documentado de lo que el texto añade: el bejuco no es decorado sino la forma en que la figura se representa —«con bejucos y ramas con los cuales abraza a la víctima y la ahoga»—, mientras que el abrazo invisible, el aire vuelto soga, es de esta página y cuesta lámina. De paso corrigió al propio relato: el chinango documentado es un curador interétnico, de botánica emberá y de los pueblos negros, que cura y no «pone» daños, y por eso sigue sin dibujarse."
       },
       "entity_refs": [
         {
@@ -1448,9 +1467,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos cosas importadas y una propia. La figura es importada: la Tunda es del Pacífico sur, con estudio monográfico de Tumaco, y de los catorce volcados sólo aparece aquí, de modo que la ficha se limita a los siete rasgos que esta página escribe —encorvada, andrajosa, pata de molinillo, «¡icoz!», resiste el balazo, se lleva la presa y no al hombre, se retira en columna de humo— sin nada de la nariñense, que tiene otra silueta y otra trama. El agua también es otra: el Mecana es corregimiento costero de Bahía Solano, con manglar y playa, y no el Atrato ancho de las otras cuatro páginas. Lo propio es Adriano Lemos, la única figura del corpus descrita por su color, cuya hoja se construyó deliberadamente por oficio y aparejo —escopeta al hombro, perros que olfatean, una pava abatida al crepúsculo y perdida— para no organizarla por la piel."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos cosas importadas y una propia. La figura es importada: la Tunda es del Pacífico sur, con estudio monográfico de Tumaco, y de los catorce volcados sólo aparece aquí, de modo que la ficha se limita a los siete rasgos que esta página escribe —encorvada, andrajosa, pata de molinillo, «¡icoz!», resiste el balazo, se lleva la presa y no al hombre, se retira en columna de humo— sin nada de la nariñense, que tiene otra silueta y otra trama. El agua también es otra: el Mecana es corregimiento costero de Bahía Solano, con manglar y playa, y no el Atrato ancho de las otras cuatro páginas. Lo propio es Adriano Lemos, la única figura del corpus descrita por su color, cuya hoja se construyó deliberadamente por oficio y aparejo —escopeta al hombro, perros que olfatean, una pava abatida al crepúsculo y perdida— para no organizarla por la piel.",
+        "previous_note": "La lectura separó dos cosas importadas y una propia. La figura es importada: la Tunda es del Pacífico sur, con estudio monográfico de Tumaco, y de los catorce volcados sólo aparece aquí, de modo que la ficha se limita a los siete rasgos que esta página escribe —encorvada, andrajosa, pata de molinillo, «¡icoz!», resiste el balazo, se lleva la presa y no al hombre, se retira en columna de humo— sin nada de la nariñense, que tiene otra silueta y otra trama. El agua también es otra: el Mecana es corregimiento costero de Bahía Solano, con manglar y playa, y no el Atrato ancho de las otras cuatro páginas. Lo propio es Adriano Lemos, la única figura del corpus descrita por su color, cuya hoja se construyó deliberadamente por oficio y aparejo —escopeta al hombro, perros que olfatean, una pava abatida al crepúsculo y perdida— para no organizarla por la piel."
       },
       "entity_refs": [
         {
@@ -5636,5 +5656,21 @@
       "ninguna luz eléctrica, bombilla, poste, motor fuera de borda, carretera ni edificación de cemento",
       "ningún velorio, ataúd, cuerpo presente ni novenario, y ninguna ánima con llamas, cadenas ni desnudo al modo del Ánima Sola"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 6,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "cc6ebd9074a27ccb444a0a7dd4ddcf29a410ed4ac21b495cd81d1c50bf310e23",
+      "max_source_updated_at": "2026-07-28T03:57:34.464Z"
+    }
+  ]
 }

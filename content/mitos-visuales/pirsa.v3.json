@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Pirsa (communities.slug = pirsa)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -16,7 +16,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 1,
     "fields": [
       "mito",
@@ -24,8 +24,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "7d52ed7b7aa5048ecfd8c47a78313f56f116cc85a6cbdea440d78d1ba66b5660",
-    "max_source_updated_at": "2026-07-28T17:33:53.107Z"
+    "sha256": "e592ee7612a8063860ff3bdcd32c65cad12593fde05f0903e23abafe87f94019",
+    "max_source_updated_at": "2026-09-20T00:19:52.160Z"
   },
   "research": {
     "sources": [
@@ -544,8 +544,8 @@
     "dossier": "docs/investigacion/pirsa.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -555,7 +555,16 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-exorcismo-de-tamaracunga": {
@@ -578,9 +587,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura hizo dos cortes y los dos vinieron del texto: el primero separa lo que sólo Tamaracunga ve de lo que ve todo el mundo —la fuente lo repite tres veces—, y de ahí sale el reparto entero del inventario, con el aura adentro porque tiene nombre de especie, las figuras invertidas fuera porque no tienen ni una línea de forma, y los cinco efectos que sí ven los demás reunidos en una sola regla de fenómeno sin agente; el segundo corte no es de personas sino de mundos, y es el que corrige al censo: la casa donde lo alojan resultó ser la de Juan Pacheco, vecino español, de modo que se cayó la única pieza indígena que el censo tenía puesta en la mitad colonial del relato, mientras que la gente de Pirsa, que el censo daba por indescrita, apareció con cuerpo entero treinta páginas antes, en el capítulo XVI del mismo libro del mismo autor."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura hizo dos cortes y los dos vinieron del texto: el primero separa lo que sólo Tamaracunga ve de lo que ve todo el mundo —la fuente lo repite tres veces—, y de ahí sale el reparto entero del inventario, con el aura adentro porque tiene nombre de especie, las figuras invertidas fuera porque no tienen ni una línea de forma, y los cinco efectos que sí ven los demás reunidos en una sola regla de fenómeno sin agente; el segundo corte no es de personas sino de mundos, y es el que corrige al censo: la casa donde lo alojan resultó ser la de Juan Pacheco, vecino español, de modo que se cayó la única pieza indígena que el censo tenía puesta en la mitad colonial del relato, mientras que la gente de Pirsa, que el censo daba por indescrita, apareció con cuerpo entero treinta páginas antes, en el capítulo XVI del mismo libro del mismo autor.",
+        "previous_note": "La lectura hizo dos cortes y los dos vinieron del texto: el primero separa lo que sólo Tamaracunga ve de lo que ve todo el mundo —la fuente lo repite tres veces—, y de ahí sale el reparto entero del inventario, con el aura adentro porque tiene nombre de especie, las figuras invertidas fuera porque no tienen ni una línea de forma, y los cinco efectos que sí ven los demás reunidos en una sola regla de fenómeno sin agente; el segundo corte no es de personas sino de mundos, y es el que corrige al censo: la casa donde lo alojan resultó ser la de Juan Pacheco, vecino español, de modo que se cayó la única pieza indígena que el censo tenía puesta en la mitad colonial del relato, mientras que la gente de Pirsa, que el censo daba por indescrita, apareció con cuerpo entero treinta páginas antes, en el capítulo XVI del mismo libro del mismo autor."
       },
       "entity_refs": [
         {
@@ -3250,5 +3260,20 @@
       "Ninguna deformación craneal, ningún tocado inventado y ningún patrón textil o pieza de orfebrería copiada de un ejemplar real.",
       "Ninguna arquitectura colonial tardía: ni cal y canto, ni teja, ni retablo, ni sagrario, ni campana, ni imaginería barroca."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 1,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "7d52ed7b7aa5048ecfd8c47a78313f56f116cc85a6cbdea440d78d1ba66b5660",
+      "max_source_updated_at": "2026-07-28T17:33:53.107Z"
+    }
+  ]
 }

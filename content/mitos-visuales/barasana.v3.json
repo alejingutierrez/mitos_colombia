@@ -7,7 +7,7 @@
   "region": "Amazonía",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Barasana (communities.slug = barasana)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -21,7 +21,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 6,
     "fields": [
       "mito",
@@ -29,8 +29,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "99da709a107ed0be5b0844feb598147775891cd84017c97ea895cf21267fc8c7",
-    "max_source_updated_at": "2026-07-28T23:21:04.773Z"
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "max_source_updated_at": "2026-09-22T19:54:06.092Z"
   },
   "research": {
     "sources": [
@@ -774,8 +774,8 @@
     "dossier": "docs/investigacion/barasana.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -829,7 +829,21 @@
       }
     ],
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "la-luna",
+        "los-cerros-estantillos-y-la-cera-de-abejas",
+        "sol-luna-dia-y-noche"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-origen-de-la-gente-de-los-frutales-silvestres": {
@@ -852,9 +866,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura conto cuatro agentes con cuerpo propio donde el script vio uno, y el propio relato dio la razon para no jerarquizarlos: «esta historia no afirma que una sola figura planto la selva. Presenta una labor colectiva», asi que la primaria queda repartida entre los Jaguares, la Pava, el Torcedor de Cumare y el Diablo de Breo; y las seis especies se quedan en una sola lamina ordenada por destino y no por taxonomia."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura conto cuatro agentes con cuerpo propio donde el script vio uno, y el propio relato dio la razon para no jerarquizarlos: «esta historia no afirma que una sola figura planto la selva. Presenta una labor colectiva», asi que la primaria queda repartida entre los Jaguares, la Pava, el Torcedor de Cumare y el Diablo de Breo; y las seis especies se quedan en una sola lamina ordenada por destino y no por taxonomia.",
+        "previous_note": "La lectura conto cuatro agentes con cuerpo propio donde el script vio uno, y el propio relato dio la razon para no jerarquizarlos: «esta historia no afirma que una sola figura planto la selva. Presenta una labor colectiva», asi que la primaria queda repartida entre los Jaguares, la Pava, el Torcedor de Cumare y el Diablo de Breo; y las seis especies se quedan en una sola lamina ordenada por destino y no por taxonomia."
       },
       "entity_refs": [
         {
@@ -979,9 +994,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura conto tres siluetas distintas en un solo cuerpo —hombre, copo de algodon y arana— y decidio que la gran quema no es una cuarta: ninguna fuente accesible dice que arde ni como, y su antes y su despues ya viven en la ficha de Kahe Sawari, de quien la quema es acto y consecuencia."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura conto tres siluetas distintas en un solo cuerpo —hombre, copo de algodon y arana— y decidio que la gran quema no es una cuarta: ninguna fuente accesible dice que arde ni como, y su antes y su despues ya viven en la ficha de Kahe Sawari, de quien la quema es acto y consecuencia.",
+        "previous_note": "La lectura conto tres siluetas distintas en un solo cuerpo —hombre, copo de algodon y arana— y decidio que la gran quema no es una cuarta: ninguna fuente accesible dice que arde ni como, y su antes y su despues ya viven en la ficha de Kahe Sawari, de quien la quema es acto y consecuencia."
       },
       "entity_refs": [
         {
@@ -1111,9 +1127,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "No es un cuento con accion sino una explicacion territorial, y lo que separo la lectura fue el linaje del viaje: Anaconda Yeba da nombre a la pagina pero quien recorre es el colectivo, y el relato prohibe presentarla «como mascota, monstruo ni creadora solitaria», asi que la primaria se conserva con esa guarda escrita en su propio ref."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "No es un cuento con accion sino una explicacion territorial, y lo que separo la lectura fue el linaje del viaje: Anaconda Yeba da nombre a la pagina pero quien recorre es el colectivo, y el relato prohibe presentarla «como mascota, monstruo ni creadora solitaria», asi que la primaria se conserva con esa guarda escrita en su propio ref.",
+        "previous_note": "No es un cuento con accion sino una explicacion territorial, y lo que separo la lectura fue el linaje del viaje: Anaconda Yeba da nombre a la pagina pero quien recorre es el colectivo, y el relato prohibe presentarla «como mascota, monstruo ni creadora solitaria», asi que la primaria se conserva con esa guarda escrita en su propio ref."
       },
       "entity_refs": [
         {
@@ -1228,9 +1245,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Tres actos y tres cuerpos que la lectura mantuvo separados sin fundir el Luna de esta pagina con el de la otra —son el mismo y llevan una sola ficha con dos estados—; lo que mas costo fue Umu, un ave sin especie, sin talla y sin color que conduce el rescate entero y que se sostiene por la accion y por la silueta en vuelo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Tres actos y tres cuerpos que la lectura mantuvo separados sin fundir el Luna de esta pagina con el de la otra —son el mismo y llevan una sola ficha con dos estados—; lo que mas costo fue Umu, un ave sin especie, sin talla y sin color que conduce el rescate entero y que se sostiene por la accion y por la silueta en vuelo.",
+        "previous_note": "Tres actos y tres cuerpos que la lectura mantuvo separados sin fundir el Luna de esta pagina con el de la otra —son el mismo y llevan una sola ficha con dos estados—; lo que mas costo fue Umu, un ave sin especie, sin talla y sin color que conduce el rescate entero y que se sostiene por la accion y por la silueta en vuelo."
       },
       "entity_refs": [
         {
@@ -1390,9 +1408,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aqui la lectura encontro el error mas caro del lote: el script habia propuesto como entidad primaria al sabedor ~kubu, que esta excluido precisamente porque los narradores acreditados del corpus lo son; la pagina no tiene protagonista y su asunto son los postes y la cera, asi que la primaria pasa a los Cerros-Estantillos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aqui la lectura encontro el error mas caro del lote: el script habia propuesto como entidad primaria al sabedor ~kubu, que esta excluido precisamente porque los narradores acreditados del corpus lo son; la pagina no tiene protagonista y su asunto son los postes y la cera, asi que la primaria pasa a los Cerros-Estantillos.",
+        "previous_note": "Aqui la lectura encontro el error mas caro del lote: el script habia propuesto como entidad primaria al sabedor ~kubu, que esta excluido precisamente porque los narradores acreditados del corpus lo son; la pagina no tiene protagonista y su asunto son los postes y la cera, asi que la primaria pasa a los Cerros-Estantillos."
       },
       "entity_refs": [
         {
@@ -1502,9 +1521,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura movio la primaria del hombre escondido a Luna: el conduce un solo compas y el cuerpo, el objeto y el desenlace son de ella; y dejo el eclipse como regla de fenomeno y no como cuarta ficha de Luna, porque lo que cambia es el color de un cuerpo entero y no su silueta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura movio la primaria del hombre escondido a Luna: el conduce un solo compas y el cuerpo, el objeto y el desenlace son de ella; y dejo el eclipse como regla de fenomeno y no como cuarta ficha de Luna, porque lo que cambia es el color de un cuerpo entero y no su silueta.",
+        "previous_note": "La lectura movio la primaria del hombre escondido a Luna: el conduce un solo compas y el cuerpo, el objeto y el desenlace son de ella; y dejo el eclipse como regla de fenomeno y no como cuarta ficha de Luna, porque lo que cambia es el color de un cuerpo entero y no su silueta."
       },
       "entity_refs": [
         {
@@ -11369,5 +11389,20 @@
       "Ninguna iconografía traída de Desana ni de Tucano, y ninguna fusión entre los Jaguares de Yuruparí y los Jaguares del Trueno.",
       "Ningún volumen esculpido ni acabado fotorrealista: sin modelado del rostro, sin piel renderizada, sin pelaje mechón a mechón."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 6,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "99da709a107ed0be5b0844feb598147775891cd84017c97ea895cf21267fc8c7",
+      "max_source_updated_at": "2026-07-28T23:21:04.773Z"
+    }
+  ]
 }

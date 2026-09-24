@@ -7,7 +7,7 @@
   "region": "Pacífico / Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento pacifico-sur-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -34,7 +34,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 15,
     "fields": [
       "content",
@@ -43,8 +43,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "51fd2ac529d1ac7d8a750e10a1d7201a6c8e75a64235421f88c3d67e9eacbfd1",
-    "max_source_updated_at": "2026-07-23T01:01:08.351Z"
+    "sha256": "117b563146a75b81fe76e90c1f490f8070a5a0a92111267442e052bf553d1334",
+    "max_source_updated_at": "2026-09-23T01:31:08.655Z"
   },
   "research": {
     "sources": [
@@ -1277,8 +1277,8 @@
     "dossier": "docs/investigacion/pacifico-sur-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1311,7 +1311,30 @@
       }
     ],
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "buziraco",
+        "catalina-la-napanga",
+        "chiles-y-cumbal",
+        "el-caballo-del-morro",
+        "el-diablo-chivo-de-rumichaca",
+        "el-duende-peluquero",
+        "el-hada-de-los-canaverales",
+        "el-padre-mera",
+        "el-riviel-del-rosario",
+        "el-roble-del-caballero",
+        "guagua-rayo",
+        "la-casa-de-la-tradicion",
+        "la-piramide-del-chontaduro",
+        "la-totuma-de-la-cocha",
+        "taita-galeras"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "buziraco": {
@@ -1336,9 +1359,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que el cerro guarda de lo que la ciudad le puso encima, y encontró que el relato no tiene criatura con cuerpo sino una materia —«no se fue: se recogió. Se hizo raíz. Se hizo grieta»— que sólo se deja dibujar en dos formas nombradas, la sombra pegada a la esquina y el murciélago; lo que la lectura tuvo que declarar es que el nombre no es de Cali sino de la tradición del cerro de La Popa en Cartagena, y que la capa antigua del relato demoniza prácticas afrodescendientes, de modo que el inventario prohíbe prestarle iconografía caribeña y prohíbe reproducir esa demonización como verdad."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que el cerro guarda de lo que la ciudad le puso encima, y encontró que el relato no tiene criatura con cuerpo sino una materia —«no se fue: se recogió. Se hizo raíz. Se hizo grieta»— que sólo se deja dibujar en dos formas nombradas, la sombra pegada a la esquina y el murciélago; lo que la lectura tuvo que declarar es que el nombre no es de Cali sino de la tradición del cerro de La Popa en Cartagena, y que la capa antigua del relato demoniza prácticas afrodescendientes, de modo que el inventario prohíbe prestarle iconografía caribeña y prohíbe reproducir esa demonización como verdad.",
+        "previous_note": "La lectura separó lo que el cerro guarda de lo que la ciudad le puso encima, y encontró que el relato no tiene criatura con cuerpo sino una materia —«no se fue: se recogió. Se hizo raíz. Se hizo grieta»— que sólo se deja dibujar en dos formas nombradas, la sombra pegada a la esquina y el murciélago; lo que la lectura tuvo que declarar es que el nombre no es de Cali sino de la tradición del cerro de La Popa en Cartagena, y que la capa antigua del relato demoniza prácticas afrodescendientes, de modo que el inventario prohíbe prestarle iconografía caribeña y prohíbe reproducir esa demonización como verdad."
       },
       "entity_refs": [
         {
@@ -1405,9 +1429,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que hacerse contra la fuente y no a favor de ella: la única fuente del personaje es un cuento de autor de abril de 2013 cuya descripción de Catalina es un inventario erotizado del cuerpo de una mujer, así que la extracción consistió en decidir qué NO entra —nada de esa descripción— y quedarse con lo que el texto sí le da, que es oficio, canasto, hierbas nombradas, brasa, humo y un hilo rojo que se ata a una piedra y nunca a una persona; y la lectura dejó abierta, porque no puede cerrarla, la decisión de raza: el único expediente de archivo localizable sobre una Catalina acusada de brujería es de 1566, en Cartagena, y su protagonista es una mujer afrodescendiente esclavizada, mientras la leyenda payanesa la hace ñapanga mestiza."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que hacerse contra la fuente y no a favor de ella: la única fuente del personaje es un cuento de autor de abril de 2013 cuya descripción de Catalina es un inventario erotizado del cuerpo de una mujer, así que la extracción consistió en decidir qué NO entra —nada de esa descripción— y quedarse con lo que el texto sí le da, que es oficio, canasto, hierbas nombradas, brasa, humo y un hilo rojo que se ata a una piedra y nunca a una persona; y la lectura dejó abierta, porque no puede cerrarla, la decisión de raza: el único expediente de archivo localizable sobre una Catalina acusada de brujería es de 1566, en Cartagena, y su protagonista es una mujer afrodescendiente esclavizada, mientras la leyenda payanesa la hace ñapanga mestiza.",
+        "previous_note": "La lectura tuvo que hacerse contra la fuente y no a favor de ella: la única fuente del personaje es un cuento de autor de abril de 2013 cuya descripción de Catalina es un inventario erotizado del cuerpo de una mujer, así que la extracción consistió en decidir qué NO entra —nada de esa descripción— y quedarse con lo que el texto sí le da, que es oficio, canasto, hierbas nombradas, brasa, humo y un hilo rojo que se ata a una piedra y nunca a una persona; y la lectura dejó abierta, porque no puede cerrarla, la decisión de raza: el único expediente de archivo localizable sobre una Catalina acusada de brujería es de 1566, en Cartagena, y su protagonista es una mujer afrodescendiente esclavizada, mientras la leyenda payanesa la hace ñapanga mestiza."
       },
       "entity_refs": [
         {
@@ -1469,9 +1494,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la geología de la cosmovisión y encontró que en esta página coinciden: los dos volcanes son vecinos reales del Nudo de los Pastos y las fuentes tibias del «abrazo» tienen sustrato geotérmico, de modo que el acercamiento «por dentro, por las venas de la montaña» no es una metáfora que haya que traducir sino una descripción que se puede dibujar bajo la línea del suelo; lo que la lectura encontró y no puede resolver es que el módulo retira esta creación por no tener expediente y conserva la URL para el ciclo Pasto de Embilpud y Embilquer, que no se leyó, de modo que la única ficha de la página queda escrita y bloqueada."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la geología de la cosmovisión y encontró que en esta página coinciden: los dos volcanes son vecinos reales del Nudo de los Pastos y las fuentes tibias del «abrazo» tienen sustrato geotérmico, de modo que el acercamiento «por dentro, por las venas de la montaña» no es una metáfora que haya que traducir sino una descripción que se puede dibujar bajo la línea del suelo; lo que la lectura encontró y no puede resolver es que el módulo retira esta creación por no tener expediente y conserva la URL para el ciclo Pasto de Embilpud y Embilquer, que no se leyó, de modo que la única ficha de la página queda escrita y bloqueada.",
+        "previous_note": "La lectura separó la geología de la cosmovisión y encontró que en esta página coinciden: los dos volcanes son vecinos reales del Nudo de los Pastos y las fuentes tibias del «abrazo» tienen sustrato geotérmico, de modo que el acercamiento «por dentro, por las venas de la montaña» no es una metáfora que haya que traducir sino una descripción que se puede dibujar bajo la línea del suelo; lo que la lectura encontró y no puede resolver es que el módulo retira esta creación por no tener expediente y conserva la URL para el ciclo Pasto de Embilpud y Embilquer, que no se leyó, de modo que la única ficha de la página queda escrita y bloqueada."
       },
       "entity_refs": [
         {
@@ -1533,9 +1559,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó el monumento del animal y descubrió que los dos estados que el censo pedía no son dos versiones de un cuento sino dos momentos fechados: el conjunto ecuestre de bronce es histórico hasta 2021, cuando el pueblo Misak lo derribó, y el pedestal vacío es el presente, con la decisión pública de que no regrese; y la lectura confirmó la exclusión más incómoda del corpus, porque lo que el Morro guarda —caminos de piedra, entierros, conchas traídas de lejos— son sepulturas, e ilustrarlas desde el punto de vista del monumento que las ocupa repetiría el despojo que el propio relato pone en duda."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó el monumento del animal y descubrió que los dos estados que el censo pedía no son dos versiones de un cuento sino dos momentos fechados: el conjunto ecuestre de bronce es histórico hasta 2021, cuando el pueblo Misak lo derribó, y el pedestal vacío es el presente, con la decisión pública de que no regrese; y la lectura confirmó la exclusión más incómoda del corpus, porque lo que el Morro guarda —caminos de piedra, entierros, conchas traídas de lejos— son sepulturas, e ilustrarlas desde el punto de vista del monumento que las ocupa repetiría el despojo que el propio relato pone en duda.",
+        "previous_note": "La lectura separó el monumento del animal y descubrió que los dos estados que el censo pedía no son dos versiones de un cuento sino dos momentos fechados: el conjunto ecuestre de bronce es histórico hasta 2021, cuando el pueblo Misak lo derribó, y el pedestal vacío es el presente, con la decisión pública de que no regrese; y la lectura confirmó la exclusión más incómoda del corpus, porque lo que el Morro guarda —caminos de piedra, entierros, conchas traídas de lejos— son sepulturas, e ilustrarlas desde el punto de vista del monumento que las ocupa repetiría el despojo que el propio relato pone en duda."
       },
       "entity_refs": [
         {
@@ -1587,9 +1614,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que lo propio de este diablo no está en la anatomía sino en la función, y que ésa es la única defensa contra el diablo genérico que aparece en once de los catorce volcados del proyecto: es diablo de frontera y de trámite, no compra con plata sino con palabra, ofrece paso sin papeles y cobra la sombra, es decir el regreso; y la lectura sacó de ahí la regla de la ficha, que sólo asome la cabeza en las fosas de agua tibia «como si el puente lo tuviera amarrado», porque un diablo amarrado a un paso es exactamente lo que el relato inventó y un cuerpo entero lo devolvería al catecismo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que lo propio de este diablo no está en la anatomía sino en la función, y que ésa es la única defensa contra el diablo genérico que aparece en once de los catorce volcados del proyecto: es diablo de frontera y de trámite, no compra con plata sino con palabra, ofrece paso sin papeles y cobra la sombra, es decir el regreso; y la lectura sacó de ahí la regla de la ficha, que sólo asome la cabeza en las fosas de agua tibia «como si el puente lo tuviera amarrado», porque un diablo amarrado a un paso es exactamente lo que el relato inventó y un cuerpo entero lo devolvería al catecismo.",
+        "previous_note": "La lectura encontró que lo propio de este diablo no está en la anatomía sino en la función, y que ésa es la única defensa contra el diablo genérico que aparece en once de los catorce volcados del proyecto: es diablo de frontera y de trámite, no compra con plata sino con palabra, ofrece paso sin papeles y cobra la sombra, es decir el regreso; y la lectura sacó de ahí la regla de la ficha, que sólo asome la cabeza en las fosas de agua tibia «como si el puente lo tuviera amarrado», porque un diablo amarrado a un paso es exactamente lo que el relato inventó y un cuerpo entero lo devolvería al catecismo."
       },
       "entity_refs": [
         {
@@ -1661,9 +1689,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó al duende de su oficio y encontró que el oficio es lo único propio: el duende aparece en siete de los catorce volcados del proyecto y ninguno de esos rasgos lo distingue, mientras que oler el cabello «como quien huele panela recién hecha», trenzar de madrugada con un nudo que parece mordisco y dejar el peine clavado en la arena sólo pasan aquí; y la lectura corrigió la fecha, porque el único caso reportado es de Dagua y de 2019 y el módulo declara ficticia la biografía de Buga y Yotoco, de modo que la página no se dibuja en un pasado rural indefinido sino en el presente, y el oficio se dibuja como rastro y no como escena de rapto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó al duende de su oficio y encontró que el oficio es lo único propio: el duende aparece en siete de los catorce volcados del proyecto y ninguno de esos rasgos lo distingue, mientras que oler el cabello «como quien huele panela recién hecha», trenzar de madrugada con un nudo que parece mordisco y dejar el peine clavado en la arena sólo pasan aquí; y la lectura corrigió la fecha, porque el único caso reportado es de Dagua y de 2019 y el módulo declara ficticia la biografía de Buga y Yotoco, de modo que la página no se dibuja en un pasado rural indefinido sino en el presente, y el oficio se dibuja como rastro y no como escena de rapto.",
+        "previous_note": "La lectura separó al duende de su oficio y encontró que el oficio es lo único propio: el duende aparece en siete de los catorce volcados del proyecto y ninguno de esos rasgos lo distingue, mientras que oler el cabello «como quien huele panela recién hecha», trenzar de madrugada con un nudo que parece mordisco y dejar el peine clavado en la arena sólo pasan aquí; y la lectura corrigió la fecha, porque el único caso reportado es de Dagua y de 2019 y el módulo declara ficticia la biografía de Buga y Yotoco, de modo que la página no se dibuja en un pasado rural indefinido sino en el presente, y el oficio se dibuja como rastro y no como escena de rapto."
       },
       "entity_refs": [
         {
@@ -1730,9 +1759,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que aquí hay que separar la figura del suelo que pisa, porque no tienen el mismo estatuto: el Hada no tiene tradición independiente con ese nombre y se produce como invención declarada, mientras que todo lo que la rodea —la caña, la quema masiva, la ceniza, la acequia, la madrevieja y el patrón que manda prender el lote sin mirar el viento— está documentado hasta la fecha y la tonelada; y la lectura tuvo que deshacer un embebido del censo, porque el trapiche de bueyes y el ingenio a vapor estaban en la misma ficha de cañaduzal y los separan cuatro siglos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que aquí hay que separar la figura del suelo que pisa, porque no tienen el mismo estatuto: el Hada no tiene tradición independiente con ese nombre y se produce como invención declarada, mientras que todo lo que la rodea —la caña, la quema masiva, la ceniza, la acequia, la madrevieja y el patrón que manda prender el lote sin mirar el viento— está documentado hasta la fecha y la tonelada; y la lectura tuvo que deshacer un embebido del censo, porque el trapiche de bueyes y el ingenio a vapor estaban en la misma ficha de cañaduzal y los separan cuatro siglos.",
+        "previous_note": "La lectura encontró que aquí hay que separar la figura del suelo que pisa, porque no tienen el mismo estatuto: el Hada no tiene tradición independiente con ese nombre y se produce como invención declarada, mientras que todo lo que la rodea —la caña, la quema masiva, la ceniza, la acequia, la madrevieja y el patrón que manda prender el lote sin mirar el viento— está documentado hasta la fecha y la tonelada; y la lectura tuvo que deshacer un embebido del censo, porque el trapiche de bueyes y el ingenio a vapor estaban en la misma ficha de cañaduzal y los separan cuatro siglos."
       },
       "entity_refs": [
         {
@@ -1814,9 +1844,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura de la única página del corpus sin canon narrable encontró que la entidad se sostiene igual, porque lo que hay es una silueta completa —hombre pequeño y enjuto, de negro perpetuo con chaleco mortecino, que sale por las tardes llamando a la oración con un látigo, duerme sobre una balsa y del que se dice que no tenía pies— y una memoria doble que el expediente afropacífico conserva sin resolver, el sacerdote milagroso y el perseguidor; y la lectura decidió que ninguna lámina la resuelva a favor de uno de los dos, y que los pies ausentes se resuelvan por encuadre y no fabricando una anatomía."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura de la única página del corpus sin canon narrable encontró que la entidad se sostiene igual, porque lo que hay es una silueta completa —hombre pequeño y enjuto, de negro perpetuo con chaleco mortecino, que sale por las tardes llamando a la oración con un látigo, duerme sobre una balsa y del que se dice que no tenía pies— y una memoria doble que el expediente afropacífico conserva sin resolver, el sacerdote milagroso y el perseguidor; y la lectura decidió que ninguna lámina la resuelva a favor de uno de los dos, y que los pies ausentes se resuelvan por encuadre y no fabricando una anatomía.",
+        "previous_note": "La lectura de la única página del corpus sin canon narrable encontró que la entidad se sostiene igual, porque lo que hay es una silueta completa —hombre pequeño y enjuto, de negro perpetuo con chaleco mortecino, que sale por las tardes llamando a la oración con un látigo, duerme sobre una balsa y del que se dice que no tenía pies— y una memoria doble que el expediente afropacífico conserva sin resolver, el sacerdote milagroso y el perseguidor; y la lectura decidió que ninguna lámina la resuelva a favor de uno de los dos, y que los pies ausentes se resuelvan por encuadre y no fabricando una anatomía."
       },
       "entity_refs": [
         {
@@ -1873,9 +1904,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura desmontó la página entera contra la mejor evidencia de todo el expediente: el testimonio que Corponariño publica con tres informantes nacidos entre 1913 y 1925 y fecha de abril de 1981 describe un Riviel que no es un hombrecito de pie en una mochita pegada a la ola del mar, sino un esqueleto y una luz que se enciende y se apaga bajando por el río Telembí con las crecientes, del que se dice expresamente que «no ha sido posible distinguir una persona o un cuerpo»; y en ese Riviel no hay rosario —las contras son los tizones, la magnífica, los canaletes y sobre todo la red—, de modo que la ficha del rosario se queda sin texto y se retira."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura desmontó la página entera contra la mejor evidencia de todo el expediente: el testimonio que Corponariño publica con tres informantes nacidos entre 1913 y 1925 y fecha de abril de 1981 describe un Riviel que no es un hombrecito de pie en una mochita pegada a la ola del mar, sino un esqueleto y una luz que se enciende y se apaga bajando por el río Telembí con las crecientes, del que se dice expresamente que «no ha sido posible distinguir una persona o un cuerpo»; y en ese Riviel no hay rosario —las contras son los tizones, la magnífica, los canaletes y sobre todo la red—, de modo que la ficha del rosario se queda sin texto y se retira.",
+        "previous_note": "La lectura desmontó la página entera contra la mejor evidencia de todo el expediente: el testimonio que Corponariño publica con tres informantes nacidos entre 1913 y 1925 y fecha de abril de 1981 describe un Riviel que no es un hombrecito de pie en una mochita pegada a la ola del mar, sino un esqueleto y una luz que se enciende y se apaga bajando por el río Telembí con las crecientes, del que se dice expresamente que «no ha sido posible distinguir una persona o un cuerpo»; y en ese Riviel no hay rosario —las contras son los tizones, la magnífica, los canaletes y sobre todo la red—, de modo que la ficha del rosario se queda sin texto y se retira."
       },
       "entity_refs": [
         {
@@ -1937,9 +1969,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que lo que esta página de ficción de autor aporta de verdad no es la figura literaria prestada sino quiénes cargan el ataúd: «no eran soldados ni frailes; eran lustrabotas, aguateros», gente con oficio y con la herramienta encima, y eso fija de una vez la gramática del vecindario colonial payanés; y la lectura tuvo que separar a las dos mujeres de negro con la cara oculta que el corpus produce —la mujer de mantilla, que es doliente y habla por el muerto en movimiento dentro del cortejo, y la Deuda, que es cobradora y está quieta, frontal y cerrada—, porque comparten color y saldrían iguales."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que lo que esta página de ficción de autor aporta de verdad no es la figura literaria prestada sino quiénes cargan el ataúd: «no eran soldados ni frailes; eran lustrabotas, aguateros», gente con oficio y con la herramienta encima, y eso fija de una vez la gramática del vecindario colonial payanés; y la lectura tuvo que separar a las dos mujeres de negro con la cara oculta que el corpus produce —la mujer de mantilla, que es doliente y habla por el muerto en movimiento dentro del cortejo, y la Deuda, que es cobradora y está quieta, frontal y cerrada—, porque comparten color y saldrían iguales.",
+        "previous_note": "La lectura encontró que lo que esta página de ficción de autor aporta de verdad no es la figura literaria prestada sino quiénes cargan el ataúd: «no eran soldados ni frailes; eran lustrabotas, aguateros», gente con oficio y con la herramienta encima, y eso fija de una vez la gramática del vecindario colonial payanés; y la lectura tuvo que separar a las dos mujeres de negro con la cara oculta que el corpus produce —la mujer de mantilla, que es doliente y habla por el muerto en movimiento dentro del cortejo, y la Deuda, que es cobradora y está quieta, frontal y cerrada—, porque comparten color y saldrían iguales."
       },
       "entity_refs": [
         {
@@ -2006,9 +2039,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que el cambio de estado no es un efecto sino la escena entera: el relato hace que el bulto crezca de peso sin crecer de tamaño, «como si le metieran piedras calientes en la manta», hasta que la manta se abre sola, y todo lo que la página tiene ocurre en ese instante; y la lectura fijó la restricción que la acompaña, porque la figura es un niño y la segunda hoja se resuelve con luz, dientes y velocidad —nunca con un cuerpo infantil dañado y nunca con gore—, con la manta ocupando la mitad de la imagen en las dos hojas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que el cambio de estado no es un efecto sino la escena entera: el relato hace que el bulto crezca de peso sin crecer de tamaño, «como si le metieran piedras calientes en la manta», hasta que la manta se abre sola, y todo lo que la página tiene ocurre en ese instante; y la lectura fijó la restricción que la acompaña, porque la figura es un niño y la segunda hoja se resuelve con luz, dientes y velocidad —nunca con un cuerpo infantil dañado y nunca con gore—, con la manta ocupando la mitad de la imagen en las dos hojas.",
+        "previous_note": "La lectura encontró que el cambio de estado no es un efecto sino la escena entera: el relato hace que el bulto crezca de peso sin crecer de tamaño, «como si le metieran piedras calientes en la manta», hasta que la manta se abre sola, y todo lo que la página tiene ocurre en ese instante; y la lectura fijó la restricción que la acompaña, porque la figura es un niño y la segunda hoja se resuelve con luz, dientes y velocidad —nunca con un cuerpo infantil dañado y nunca con gore—, con la manta ocupando la mitad de la imagen en las dos hojas."
       },
       "entity_refs": [
         {
@@ -2065,9 +2099,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que esta página no tiene protagonista y que la casa lo es, porque la única fuente narrativa directa menciona pasos y voces de antiguos moradores y no da dirección, protagonistas, promesas ni rituales; y encontró además la advertencia que decide la otra ficha, porque el procedimiento que la voz sin cuerpo dicta —«no lo deje quemar», «revuelva», «amárrelo bien»— es literalmente la técnica que la historia oral atribuye a Dorotea Sánchez, una mujer negra y pobre del barrio San Antonio, de modo que dibujar allí una sombra sin nombre y sin cara haciendo su trabajo sería borrarla, y el inventario la reduce a dos manos y al oficio."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que esta página no tiene protagonista y que la casa lo es, porque la única fuente narrativa directa menciona pasos y voces de antiguos moradores y no da dirección, protagonistas, promesas ni rituales; y encontró además la advertencia que decide la otra ficha, porque el procedimiento que la voz sin cuerpo dicta —«no lo deje quemar», «revuelva», «amárrelo bien»— es literalmente la técnica que la historia oral atribuye a Dorotea Sánchez, una mujer negra y pobre del barrio San Antonio, de modo que dibujar allí una sombra sin nombre y sin cara haciendo su trabajo sería borrarla, y el inventario la reduce a dos manos y al oficio.",
+        "previous_note": "La lectura encontró que esta página no tiene protagonista y que la casa lo es, porque la única fuente narrativa directa menciona pasos y voces de antiguos moradores y no da dirección, protagonistas, promesas ni rituales; y encontró además la advertencia que decide la otra ficha, porque el procedimiento que la voz sin cuerpo dicta —«no lo deje quemar», «revuelva», «amárrelo bien»— es literalmente la técnica que la historia oral atribuye a Dorotea Sánchez, una mujer negra y pobre del barrio San Antonio, de modo que dibujar allí una sombra sin nombre y sin cara haciendo su trabajo sería borrarla, y el inventario la reduce a dos manos y al oficio."
       },
       "entity_refs": [
         {
@@ -2119,9 +2154,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura corrigió aquí la primaria que proponía el script, porque el script propuso al que va a probar —una figura de dedupe que sirve a seis páginas— y el relato es de la piedra: es ella la que mira al valle con una media luna en la frente, la que respira despacio y la que llama si uno la mira fijo; y la lectura fijó la prohibición que sostiene la ficha, que la pirámide es contemporánea y de origen disputado entre un sueño religioso y un premio de lotería, de modo que no se dibuja con pátina arqueológica y lo único documentado y dibujable de la página es la palma de chontaduro con su racimo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura corrigió aquí la primaria que proponía el script, porque el script propuso al que va a probar —una figura de dedupe que sirve a seis páginas— y el relato es de la piedra: es ella la que mira al valle con una media luna en la frente, la que respira despacio y la que llama si uno la mira fijo; y la lectura fijó la prohibición que sostiene la ficha, que la pirámide es contemporánea y de origen disputado entre un sueño religioso y un premio de lotería, de modo que no se dibuja con pátina arqueológica y lo único documentado y dibujable de la página es la palma de chontaduro con su racimo.",
+        "previous_note": "La lectura corrigió aquí la primaria que proponía el script, porque el script propuso al que va a probar —una figura de dedupe que sirve a seis páginas— y el relato es de la piedra: es ella la que mira al valle con una media luna en la frente, la que respira despacio y la que llama si uno la mira fijo; y la lectura fijó la prohibición que sostiene la ficha, que la pirámide es contemporánea y de origen disputado entre un sueño religioso y un premio de lotería, de modo que no se dibuja con pátina arqueológica y lo único documentado y dibujable de la página es la palma de chontaduro con su racimo."
       },
       "entity_refs": [
         {
@@ -2188,9 +2224,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura dejó esta página sin protagonista y lo declara: el taita quillacinga y Mama Luna quedaron excluidos por sensibilidad —son autoridad espiritual y cosmología de un pueblo con biblia propia, y dibujarlos de espaldas o en sombra es dibujarlos igual—, de modo que lo que queda son el forastero de ojos de espejo, la mujer de linaje, el tábano que pica la lengua y la totuma, y la lectura encontró que la totuma puede sostener el relato sola porque es el título y es el agente: se presta con una condición, se inclina por burla y el chorro no cae al suelo sino al aire."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura dejó esta página sin protagonista y lo declara: el taita quillacinga y Mama Luna quedaron excluidos por sensibilidad —son autoridad espiritual y cosmología de un pueblo con biblia propia, y dibujarlos de espaldas o en sombra es dibujarlos igual—, de modo que lo que queda son el forastero de ojos de espejo, la mujer de linaje, el tábano que pica la lengua y la totuma, y la lectura encontró que la totuma puede sostener el relato sola porque es el título y es el agente: se presta con una condición, se inclina por burla y el chorro no cae al suelo sino al aire.",
+        "previous_note": "La lectura dejó esta página sin protagonista y lo declara: el taita quillacinga y Mama Luna quedaron excluidos por sensibilidad —son autoridad espiritual y cosmología de un pueblo con biblia propia, y dibujarlos de espaldas o en sombra es dibujarlos igual—, de modo que lo que queda son el forastero de ojos de espejo, la mujer de linaje, el tábano que pica la lengua y la totuma, y la lectura encontró que la totuma puede sostener el relato sola porque es el título y es el agente: se presta con una condición, se inclina por burla y el chorro no cae al suelo sino al aire."
       },
       "entity_refs": [
         {
@@ -2277,9 +2314,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que la página dice del abuelo de lo que le añadió el editor, y encontró que los cuatro ojos de agua del pecho —Telpis, la Negra, la Verde y Mejía— están declarados inventados por el módulo, así que las cuatro lagunas se dibujan en el páramo y nunca en un cuerpo; y corrigió además una escena planificada, porque la recolectora de colores no puede recolectar la resina en el páramo del Galeras: el barniz de Pasto mopa-mopa encadena tres actividades separadas en el espacio y la recolección de los brotes ocurre en el bosque del Putumayo, de modo que la lámina de los artesanos muestra el taller y el barnizado, que sí son nariñenses."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que la página dice del abuelo de lo que le añadió el editor, y encontró que los cuatro ojos de agua del pecho —Telpis, la Negra, la Verde y Mejía— están declarados inventados por el módulo, así que las cuatro lagunas se dibujan en el páramo y nunca en un cuerpo; y corrigió además una escena planificada, porque la recolectora de colores no puede recolectar la resina en el páramo del Galeras: el barniz de Pasto mopa-mopa encadena tres actividades separadas en el espacio y la recolección de los brotes ocurre en el bosque del Putumayo, de modo que la lámina de los artesanos muestra el taller y el barnizado, que sí son nariñenses.",
+        "previous_note": "La lectura separó lo que la página dice del abuelo de lo que le añadió el editor, y encontró que los cuatro ojos de agua del pecho —Telpis, la Negra, la Verde y Mejía— están declarados inventados por el módulo, así que las cuatro lagunas se dibujan en el páramo y nunca en un cuerpo; y corrigió además una escena planificada, porque la recolectora de colores no puede recolectar la resina en el páramo del Galeras: el barniz de Pasto mopa-mopa encadena tres actividades separadas en el espacio y la recolección de los brotes ocurre en el bosque del Putumayo, de modo que la lámina de los artesanos muestra el taller y el barnizado, que sí son nariñenses."
       },
       "entity_refs": [
         {
@@ -13110,5 +13148,21 @@
       "ninguna mezcla de territorio en un mismo cuadro: ni guadua vallecaucana en el bahareque nariñense, ni cal payanesa en el litoral, ni manglar en el cañón",
       "ninguna mezcla de reloj: trapiche de bueyes con ingenio a vapor, cruz de guadua con cruz de ferroconcreto, o pátina arqueológica sobre la Pirámide del Chontaduro"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 15,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "51fd2ac529d1ac7d8a750e10a1d7201a6c8e75a64235421f88c3d67e9eacbfd1",
+      "max_source_updated_at": "2026-07-23T01:01:08.351Z"
+    }
+  ]
 }

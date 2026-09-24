@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta U’wa (communities.slug = u-wa)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -26,7 +26,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 11,
     "fields": [
       "mito",
@@ -34,8 +34,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "e229c07d256adf3cf5772ee1bd1d756727b1b9cf9754221e9e209637236baadb",
-    "max_source_updated_at": "2026-07-28T15:36:01.062Z"
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "max_source_updated_at": "2026-09-20T00:19:15.936Z"
   },
   "research": {
     "sources": [
@@ -755,8 +755,8 @@
     "dossier": "docs/investigacion/u-wa.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -766,7 +766,26 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "creacion-u-wa",
+        "el-oso-y-el-hombre-uwa",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "el-recorrido-de-uktara",
+        "kubashoa-el-hijo-del-tabaco",
+        "la-competencia-de-los-tigres-uwa",
+        "las-hijas-del-sol-y-la-miel",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana",
+        "yanoa-y-sirbetuna"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "creacion-u-wa": {
@@ -789,9 +808,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó el acto de pensar del acto de fabricar: aquí nadie modela nada con las manos —Rurcocá piensa a Sira, Sira piensa al siguiente, Canwará piensa enfermo y Rukwa mezcla calor con agua—, así que las cinco deidades salen del inventario como posturas y emplazamientos y no como artesanos, y el único objeto del relato entero es el banco en que Rurcocá está sentada."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó el acto de pensar del acto de fabricar: aquí nadie modela nada con las manos —Rurcocá piensa a Sira, Sira piensa al siguiente, Canwará piensa enfermo y Rukwa mezcla calor con agua—, así que las cinco deidades salen del inventario como posturas y emplazamientos y no como artesanos, y el único objeto del relato entero es el banco en que Rurcocá está sentada.",
+        "previous_note": "La lectura separó el acto de pensar del acto de fabricar: aquí nadie modela nada con las manos —Rurcocá piensa a Sira, Sira piensa al siguiente, Canwará piensa enfermo y Rukwa mezcla calor con agua—, así que las cinco deidades salen del inventario como posturas y emplazamientos y no como artesanos, y el único objeto del relato entero es el banco en que Rurcocá está sentada."
       },
       "entity_refs": [
         {
@@ -941,9 +961,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Todo el relato gira sobre un objeto que el censo habría tratado como atrezo y que aquí conduce la acción: la huella en el barro, que el padre lee mal; por eso la huella queda dentro de la ficha del oso en vez de ser entidad propia, y la trampa de palos —que el canon prohíbe mostrar con el animal dentro— se separó a la hoja de utilería para poder dibujarla vacía."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Todo el relato gira sobre un objeto que el censo habría tratado como atrezo y que aquí conduce la acción: la huella en el barro, que el padre lee mal; por eso la huella queda dentro de la ficha del oso en vez de ser entidad propia, y la trampa de palos —que el canon prohíbe mostrar con el animal dentro— se separó a la hoja de utilería para poder dibujarla vacía.",
+        "previous_note": "Todo el relato gira sobre un objeto que el censo habría tratado como atrezo y que aquí conduce la acción: la huella en el barro, que el padre lee mal; por eso la huella queda dentro de la ficha del oso en vez de ser entidad propia, y la trampa de palos —que el canon prohíbe mostrar con el animal dentro— se separó a la hoja de utilería para poder dibujarla vacía."
       },
       "entity_refs": [
         {
@@ -1043,9 +1064,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de estados y transformaciones no encontró ninguno: el ave «cambiada» del final no se describe y el poder cambia de dueño sin cambiar ningún cuerpo, así que el relato no cuesta ni una lámina de estado; en cambio obligó a fichar el gesto —tabaco, secreta y soplo— como fenómeno aparte del contenido de las fórmulas, que queda excluido."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de estados y transformaciones no encontró ninguno: el ave «cambiada» del final no se describe y el poder cambia de dueño sin cambiar ningún cuerpo, así que el relato no cuesta ni una lámina de estado; en cambio obligó a fichar el gesto —tabaco, secreta y soplo— como fenómeno aparte del contenido de las fórmulas, que queda excluido.",
+        "previous_note": "La pasada de estados y transformaciones no encontró ninguno: el ave «cambiada» del final no se describe y el poder cambia de dueño sin cambiar ningún cuerpo, así que el relato no cuesta ni una lámina de estado; en cambio obligó a fichar el gesto —tabaco, secreta y soplo— como fenómeno aparte del contenido de las fórmulas, que queda excluido."
       },
       "entity_refs": [
         {
@@ -1125,9 +1147,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el único relato del corpus con dos formas del mismo colectivo en un mismo lugar —murciélagos de día, sombras humanas de noche—, y la lectura decidió que eso sí cuesta lámina de estado mientras que la comida de vapor no, porque el vapor es materia de la vasija y no cambia la silueta de nadie; la negativa de Uktara a comer se registró como postura permanente, no como escena."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el único relato del corpus con dos formas del mismo colectivo en un mismo lugar —murciélagos de día, sombras humanas de noche—, y la lectura decidió que eso sí cuesta lámina de estado mientras que la comida de vapor no, porque el vapor es materia de la vasija y no cambia la silueta de nadie; la negativa de Uktara a comer se registró como postura permanente, no como escena.",
+        "previous_note": "Es el único relato del corpus con dos formas del mismo colectivo en un mismo lugar —murciélagos de día, sombras humanas de noche—, y la lectura decidió que eso sí cuesta lámina de estado mientras que la comida de vapor no, porque el vapor es materia de la vasija y no cambia la silueta de nadie; la negativa de Uktara a comer se registró como postura permanente, no como escena."
       },
       "entity_refs": [
         {
@@ -1237,9 +1260,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que sostener dos distinciones que el corpus impone y que se pierden si se leen rápido: Kubashoa no es Kusbasha, y la perdiz del cierre no es Kubashoa aunque lo anuncie; la primera obligó a dos fichas de persona sin un atributo compartido, y la segunda a que la ficha del ave no herede ni un rasgo del estado de tigre."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que sostener dos distinciones que el corpus impone y que se pierden si se leen rápido: Kubashoa no es Kusbasha, y la perdiz del cierre no es Kubashoa aunque lo anuncie; la primera obligó a dos fichas de persona sin un atributo compartido, y la segunda a que la ficha del ave no herede ni un rasgo del estado de tigre.",
+        "previous_note": "La lectura tuvo que sostener dos distinciones que el corpus impone y que se pierden si se leen rápido: Kubashoa no es Kusbasha, y la perdiz del cierre no es Kubashoa aunque lo anuncie; la primera obligó a dos fichas de persona sin un atributo compartido, y la segunda a que la ficha del ave no herede ni un rasgo del estado de tigre."
       },
       "entity_refs": [
         {
@@ -1344,9 +1368,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Los dos grupos de felinos son la misma especie y el relato los separa sólo por lo que pueden hacer, así que la extracción los dejó como dos colectivos y prohibió resolverlos con dos anatomías: la diferencia se paga en postura y en la cota del encuadre, y con ello el paisaje de los Llanos pasó de fondo a entidad con función narrativa."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Los dos grupos de felinos son la misma especie y el relato los separa sólo por lo que pueden hacer, así que la extracción los dejó como dos colectivos y prohibió resolverlos con dos anatomías: la diferencia se paga en postura y en la cota del encuadre, y con ello el paisaje de los Llanos pasó de fondo a entidad con función narrativa.",
+        "previous_note": "Los dos grupos de felinos son la misma especie y el relato los separa sólo por lo que pueden hacer, así que la extracción los dejó como dos colectivos y prohibió resolverlos con dos anatomías: la diferencia se paga en postura y en la cota del encuadre, y con ello el paisaje de los Llanos pasó de fondo a entidad con función narrativa."
       },
       "entity_refs": [
         {
@@ -1421,9 +1446,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de objetos separó tres materias que suenan a una sola —miel, cera y cerumen— y encontró que el relato nombra además el kanoba, que es materia de origen y no producto; por eso el kanoba quedó dentro de la ficha del colectivo de abejas y las tres materias finales salieron juntas en una lámina que se lee por opacidad, no por color."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de objetos separó tres materias que suenan a una sola —miel, cera y cerumen— y encontró que el relato nombra además el kanoba, que es materia de origen y no producto; por eso el kanoba quedó dentro de la ficha del colectivo de abejas y las tres materias finales salieron juntas en una lámina que se lee por opacidad, no por color.",
+        "previous_note": "La pasada de objetos separó tres materias que suenan a una sola —miel, cera y cerumen— y encontró que el relato nombra además el kanoba, que es materia de origen y no producto; por eso el kanoba quedó dentro de la ficha del colectivo de abejas y las tres materias finales salieron juntas en una lámina que se lee por opacidad, no por color."
       },
       "entity_refs": [
         {
@@ -1543,9 +1569,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato entero pasa dentro de un cuerpo cuyo interior el canon prohíbe representar, así que la extracción tuvo que convertir cuatro días de acción en dos entidades de lugar que sí se pueden ver —la laguna llena y la laguna agotada— y dejar fuera espinas, huesos, corazones, riñones, hígados y la vena enterrada, que son el argumento y no la imagen."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato entero pasa dentro de un cuerpo cuyo interior el canon prohíbe representar, así que la extracción tuvo que convertir cuatro días de acción en dos entidades de lugar que sí se pueden ver —la laguna llena y la laguna agotada— y dejar fuera espinas, huesos, corazones, riñones, hígados y la vena enterrada, que son el argumento y no la imagen.",
+        "previous_note": "El relato entero pasa dentro de un cuerpo cuyo interior el canon prohíbe representar, así que la extracción tuvo que convertir cuatro días de acción en dos entidades de lugar que sí se pueden ver —la laguna llena y la laguna agotada— y dejar fuera espinas, huesos, corazones, riñones, hígados y la vena enterrada, que son el argumento y no la imagen."
       },
       "entity_refs": [
         {
@@ -1665,9 +1692,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Tres estrategias distintas de aviso reparten el relato —canto que acompaña, voz que espera junto al sendero y consejo dentro del sueño— y la lectura las mantuvo en tres fichas separadas porque cada una tiene un cuerpo y una distancia distintas respecto de la persona; el sueño del tigrillo se resolvió sin escena onírica, que era el riesgo de la pasada de estados."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Tres estrategias distintas de aviso reparten el relato —canto que acompaña, voz que espera junto al sendero y consejo dentro del sueño— y la lectura las mantuvo en tres fichas separadas porque cada una tiene un cuerpo y una distancia distintas respecto de la persona; el sueño del tigrillo se resolvió sin escena onírica, que era el riesgo de la pasada de estados.",
+        "previous_note": "Tres estrategias distintas de aviso reparten el relato —canto que acompaña, voz que espera junto al sendero y consejo dentro del sueño— y la lectura las mantuvo en tres fichas separadas porque cada una tiene un cuerpo y una distancia distintas respecto de la persona; el sueño del tigrillo se resolvió sin escena onírica, que era el riesgo de la pasada de estados."
       },
       "entity_refs": [
         {
@@ -1762,9 +1790,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el relato con más entidades del corpus porque la ruta de intercambio arrastra un inventario entero de carga, y al leerlo contra el glosario apareció que el yopo no crece en la sierra: eso convirtió el camino en prueba territorial y ató yopo, caminos y Llanos en una sola lógica; además obligó a reabrir a Konara, que el censo había excluido por falta de cuerpo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el relato con más entidades del corpus porque la ruta de intercambio arrastra un inventario entero de carga, y al leerlo contra el glosario apareció que el yopo no crece en la sierra: eso convirtió el camino en prueba territorial y ató yopo, caminos y Llanos en una sola lógica; además obligó a reabrir a Konara, que el censo había excluido por falta de cuerpo.",
+        "previous_note": "Es el relato con más entidades del corpus porque la ruta de intercambio arrastra un inventario entero de carga, y al leerlo contra el glosario apareció que el yopo no crece en la sierra: eso convirtió el camino en prueba territorial y ató yopo, caminos y Llanos en una sola lógica; además obligó a reabrir a Konara, que el censo había excluido por falta de cuerpo."
       },
       "entity_refs": [
         {
@@ -1929,9 +1958,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el único relato con época histórica cerrada —ganado, corral, sal en bloque, espada, lanza y olla— y la lectura decidió conservarla entera, así que la extracción produjo la mayor cosecha de objetos de contacto del corpus; el estado de ave se cobró porque cambia la silueta, pero la lucha no, porque el canon la resuelve por sus consecuencias y no por el combate."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el único relato con época histórica cerrada —ganado, corral, sal en bloque, espada, lanza y olla— y la lectura decidió conservarla entera, así que la extracción produjo la mayor cosecha de objetos de contacto del corpus; el estado de ave se cobró porque cambia la silueta, pero la lucha no, porque el canon la resuelve por sus consecuencias y no por el combate.",
+        "previous_note": "Es el único relato con época histórica cerrada —ganado, corral, sal en bloque, espada, lanza y olla— y la lectura decidió conservarla entera, así que la extracción produjo la mayor cosecha de objetos de contacto del corpus; el estado de ave se cobró porque cambia la silueta, pero la lucha no, porque el canon la resuelve por sus consecuencias y no por el combate."
       },
       "entity_refs": [
         {
@@ -14091,5 +14121,20 @@
       "retired_at": "2026-09-19",
       "reason": "Es la tecnica del SITIO, no la de la biblia. Las imagenes de las paginas de mito son papel recortado 2D; la biblia, los tripticos y los keyframes son maqueta 3D fotografiada. La misma cadena aparecia identica en siete corpus y contradecia el `technique` de cada uno, que si es de maqueta. Se retira en vez de plegarse porque poner «tridimensional inmersiva» y «2D de acabado plano» en frases contiguas dentro del bloque que abre y manda es peor que no decir nada."
     }
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 11,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "e229c07d256adf3cf5772ee1bd1d756727b1b9cf9754221e9e209637236baadb",
+      "max_source_updated_at": "2026-07-28T15:36:01.062Z"
+    }
+  ]
 }

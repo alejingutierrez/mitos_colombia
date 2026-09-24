@@ -7,7 +7,7 @@
   "region": "Andina / Pacífico / Varios / Caribe",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento varios-sin-territorio",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -44,7 +44,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 25,
     "fields": [
       "content",
@@ -53,8 +53,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "ef401aa3247aa0b4b51e41f648c7316ae9c7f1c1c5df43483db604c69bf35d42",
-    "max_source_updated_at": "2026-07-26T22:18:33.114Z"
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "max_source_updated_at": "2026-09-23T01:27:19.091Z"
   },
   "research": {
     "sources": [
@@ -1507,8 +1507,8 @@
     "dossier": "docs/investigacion/varios-sin-territorio.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1518,7 +1518,40 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-anima-sola",
+        "el-barco-fantasma",
+        "el-bus-fantasma",
+        "el-cura-sin-cabeza",
+        "el-griton",
+        "el-hojarasquin-del-monte",
+        "el-hombre-caiman",
+        "el-jinete-negro",
+        "el-judio-errante",
+        "el-mandingas",
+        "el-mohan",
+        "el-silbo-de-quinunchu",
+        "el-silbon",
+        "esperanza-en-el-oriente",
+        "francisco-el-hombre",
+        "la-barbacoa-del-muerto",
+        "la-llorona",
+        "la-madremonte",
+        "la-mano-peluda",
+        "la-nina-de-la-carta",
+        "la-sirena-del-arco",
+        "la-vieja-colmillona",
+        "la-viudita",
+        "los-duendes",
+        "los-meneses"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-anima-sola": {
@@ -1543,9 +1576,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina monta tres cosas distintas bajo un mismo titulo y la lectura tuvo que separarlas: el oficio del animero de Marquetalia con capa, farol y campana; la leyenda jerosolimitana de Celestina Abdegano condenada a la sed; y un espiritu picaresco bogotano que el modulo elimina por falta de fuente. Solo producen lamina el oficio y el atrezo del culto de cementerio; la nota de 1940 de Jairo Ocampo es dispositivo literario del bestiario de 2004 y no autentica a la persona."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina monta tres cosas distintas bajo un mismo titulo y la lectura tuvo que separarlas: el oficio del animero de Marquetalia con capa, farol y campana; la leyenda jerosolimitana de Celestina Abdegano condenada a la sed; y un espiritu picaresco bogotano que el modulo elimina por falta de fuente. Solo producen lamina el oficio y el atrezo del culto de cementerio; la nota de 1940 de Jairo Ocampo es dispositivo literario del bestiario de 2004 y no autentica a la persona.",
+        "previous_note": "La pagina monta tres cosas distintas bajo un mismo titulo y la lectura tuvo que separarlas: el oficio del animero de Marquetalia con capa, farol y campana; la leyenda jerosolimitana de Celestina Abdegano condenada a la sed; y un espiritu picaresco bogotano que el modulo elimina por falta de fuente. Solo producen lamina el oficio y el atrezo del culto de cementerio; la nota de 1940 de Jairo Ocampo es dispositivo literario del bestiario de 2004 y no autentica a la persona."
       },
       "entity_refs": [
         {
@@ -1642,9 +1676,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato no tiene protagonista humano con nombre —un pescador «solitario y sin nombre»— y la aparicion ocupa cuatro parrafos seguidos: por eso lo que conduce es el barco y no una persona. La lectura dejo declarada una contradiccion de la propia pagina: el texto situa la escena en un puerto amazonico mientras el modulo la fija en el Pacifico, y el inventario se resuelve con el paisaje pacifico. Las dos luces que rebotan sobre el maderamen quedan embebidas en la ficha del barco."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato no tiene protagonista humano con nombre —un pescador «solitario y sin nombre»— y la aparicion ocupa cuatro parrafos seguidos: por eso lo que conduce es el barco y no una persona. La lectura dejo declarada una contradiccion de la propia pagina: el texto situa la escena en un puerto amazonico mientras el modulo la fija en el Pacifico, y el inventario se resuelve con el paisaje pacifico. Las dos luces que rebotan sobre el maderamen quedan embebidas en la ficha del barco.",
+        "previous_note": "El relato no tiene protagonista humano con nombre —un pescador «solitario y sin nombre»— y la aparicion ocupa cuatro parrafos seguidos: por eso lo que conduce es el barco y no una persona. La lectura dejo declarada una contradiccion de la propia pagina: el texto situa la escena en un puerto amazonico mientras el modulo la fija en el Pacifico, y el inventario se resuelve con el paisaje pacifico. Las dos luces que rebotan sobre el maderamen quedan embebidas en la ficha del barco."
       },
       "entity_refs": [
         {
@@ -1721,9 +1756,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina no es una aparicion presenciada sino una carta hallada, y quien la halla es un demonologo que el modulo retira. Lo que conduce es el vehiculo, y dentro de el un solo dato: «no habia un conductor, solamente un timon esperando». La lectura separo los dos vehiculos que la pagina mezcla —el bus antiguo de carretera y el articulado urbano de la G66— porque pertenecen a dos siglos y a dos luces incompatibles y cuestan dos laminas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina no es una aparicion presenciada sino una carta hallada, y quien la halla es un demonologo que el modulo retira. Lo que conduce es el vehiculo, y dentro de el un solo dato: «no habia un conductor, solamente un timon esperando». La lectura separo los dos vehiculos que la pagina mezcla —el bus antiguo de carretera y el articulado urbano de la G66— porque pertenecen a dos siglos y a dos luces incompatibles y cuestan dos laminas.",
+        "previous_note": "La pagina no es una aparicion presenciada sino una carta hallada, y quien la halla es un demonologo que el modulo retira. Lo que conduce es el vehiculo, y dentro de el un solo dato: «no habia un conductor, solamente un timon esperando». La lectura separo los dos vehiculos que la pagina mezcla —el bus antiguo de carretera y el articulado urbano de la G66— porque pertenecen a dos siglos y a dos luces incompatibles y cuestan dos laminas."
       },
       "entity_refs": [
         {
@@ -1795,9 +1831,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina recorre siete paises y la extraccion se quedo solo con lo que tiene cuerpo colombiano: la sotana que camina sin cabeza, la misa espectral con monaguillo, monja y sacristan, y el gesto de volverse sosteniendo la propia cabeza. Mariano Narvaez y su espejo son utileria del informe medico de 1935 y quedan excluidos. La lectura confirmo que entre Pasto, Bogota y Cartagena lo que cambia es la fachada de la iglesia —fichada aparte— y no la figura."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina recorre siete paises y la extraccion se quedo solo con lo que tiene cuerpo colombiano: la sotana que camina sin cabeza, la misa espectral con monaguillo, monja y sacristan, y el gesto de volverse sosteniendo la propia cabeza. Mariano Narvaez y su espejo son utileria del informe medico de 1935 y quedan excluidos. La lectura confirmo que entre Pasto, Bogota y Cartagena lo que cambia es la fachada de la iglesia —fichada aparte— y no la figura.",
+        "previous_note": "La pagina recorre siete paises y la extraccion se quedo solo con lo que tiene cuerpo colombiano: la sotana que camina sin cabeza, la misa espectral con monaguillo, monja y sacristan, y el gesto de volverse sosteniendo la propia cabeza. Mariano Narvaez y su espejo son utileria del informe medico de 1935 y quedan excluidos. La lectura confirmo que entre Pasto, Bogota y Cartagena lo que cambia es la fachada de la iglesia —fichada aparte— y no la figura."
       },
       "entity_refs": [
         {
@@ -1889,9 +1926,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos versiones conviven en la pagina y solo una da lamina: la boda de Aquileo y Virgelina con los seis expedicionarios es marco narrativo, y el Griton documentado es «la sombra de un hombre alto y delgado […] persiguiendo a su recua invisible». La extraccion cargo el peso en la silueta del oficio y en la senal sonora, porque el modulo prohibe expresamente inventarle cuerpo. Los silbatos de cana quedan como utileria embebida y la tormenta como agente y no como ambiente."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos versiones conviven en la pagina y solo una da lamina: la boda de Aquileo y Virgelina con los seis expedicionarios es marco narrativo, y el Griton documentado es «la sombra de un hombre alto y delgado […] persiguiendo a su recua invisible». La extraccion cargo el peso en la silueta del oficio y en la senal sonora, porque el modulo prohibe expresamente inventarle cuerpo. Los silbatos de cana quedan como utileria embebida y la tormenta como agente y no como ambiente.",
+        "previous_note": "Dos versiones conviven en la pagina y solo una da lamina: la boda de Aquileo y Virgelina con los seis expedicionarios es marco narrativo, y el Griton documentado es «la sombra de un hombre alto y delgado […] persiguiendo a su recua invisible». La extraccion cargo el peso en la silueta del oficio y en la senal sonora, porque el modulo prohibe expresamente inventarle cuerpo. Los silbatos de cana quedan como utileria embebida y la tormenta como agente y no como ambiente."
       },
       "entity_refs": [
         {
@@ -1998,9 +2036,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina enumera cuatro formas del mismo ser —golem de vegetacion, gorila musgoso, centauro invertido y hombrecillo con helechos— y la lectura las trato como inventario de formas y no como una figura con variantes: lo estable es el material del cuerpo y lo variante es el animal. La pasada de estados levanto ademas la huella invertida de pezuna, que es el mecanismo del extravio y vale tanto como la criatura. El botanico Joaquin Romero y su diario de 1928 se excluyen como dispositivo de 2004."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina enumera cuatro formas del mismo ser —golem de vegetacion, gorila musgoso, centauro invertido y hombrecillo con helechos— y la lectura las trato como inventario de formas y no como una figura con variantes: lo estable es el material del cuerpo y lo variante es el animal. La pasada de estados levanto ademas la huella invertida de pezuna, que es el mecanismo del extravio y vale tanto como la criatura. El botanico Joaquin Romero y su diario de 1928 se excluyen como dispositivo de 2004.",
+        "previous_note": "La pagina enumera cuatro formas del mismo ser —golem de vegetacion, gorila musgoso, centauro invertido y hombrecillo con helechos— y la lectura las trato como inventario de formas y no como una figura con variantes: lo estable es el material del cuerpo y lo variante es el animal. La pasada de estados levanto ademas la huella invertida de pezuna, que es el mecanismo del extravio y vale tanto como la criatura. El botanico Joaquin Romero y su diario de 1928 se excluyen como dispositivo de 2004."
       },
       "entity_refs": [
         {
@@ -2102,9 +2141,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato es una cadena de objetos: dos pocimas, un amigo que falla y unas gotas mal echadas, asi que el objeto por el que se cuenta el mito son los dos frascos. La lectura confirmo que la madre —la unica que siguio atendiendolo— conduce accion propia y cierra el relato, y que la pagina esta construida enteramente sobre el espionaje a las banistas, lo que obligo a fijar el encuadre del colectivo antes que su vestuario. El brujo de la Alta Guajira aparece sin nombre y sin voz propia y queda marcado para consulta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato es una cadena de objetos: dos pocimas, un amigo que falla y unas gotas mal echadas, asi que el objeto por el que se cuenta el mito son los dos frascos. La lectura confirmo que la madre —la unica que siguio atendiendolo— conduce accion propia y cierra el relato, y que la pagina esta construida enteramente sobre el espionaje a las banistas, lo que obligo a fijar el encuadre del colectivo antes que su vestuario. El brujo de la Alta Guajira aparece sin nombre y sin voz propia y queda marcado para consulta.",
+        "previous_note": "El relato es una cadena de objetos: dos pocimas, un amigo que falla y unas gotas mal echadas, asi que el objeto por el que se cuenta el mito son los dos frascos. La lectura confirmo que la madre —la unica que siguio atendiendolo— conduce accion propia y cierra el relato, y que la pagina esta construida enteramente sobre el espionaje a las banistas, lo que obligo a fijar el encuadre del colectivo antes que su vestuario. El brujo de la Alta Guajira aparece sin nombre y sin voz propia y queda marcado para consulta."
       },
       "entity_refs": [
         {
@@ -2211,9 +2251,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Toda la pagina es un encuentro repetido alrededor de un solo gesto: pedir lumbre. La extraccion fijo que la figura se define por la medida del sombrero y por la cara que no se ve bajo el ala, y que el fosforo del testigo es la unica fuente de luz posible, lo que fecha la escena antes del alumbrado electrico. Don Roque Versalles, la hacienda Las Minas del Silencio y los munequitos de hueso quedan excluidos junto con el trasfondo de esclavitud que la pagina insinua y no documenta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Toda la pagina es un encuentro repetido alrededor de un solo gesto: pedir lumbre. La extraccion fijo que la figura se define por la medida del sombrero y por la cara que no se ve bajo el ala, y que el fosforo del testigo es la unica fuente de luz posible, lo que fecha la escena antes del alumbrado electrico. Don Roque Versalles, la hacienda Las Minas del Silencio y los munequitos de hueso quedan excluidos junto con el trasfondo de esclavitud que la pagina insinua y no documenta.",
+        "previous_note": "Toda la pagina es un encuentro repetido alrededor de un solo gesto: pedir lumbre. La extraccion fijo que la figura se define por la medida del sombrero y por la cara que no se ve bajo el ala, y que el fosforo del testigo es la unica fuente de luz posible, lo que fecha la escena antes del alumbrado electrico. Don Roque Versalles, la hacienda Las Minas del Silencio y los munequitos de hueso quedan excluidos junto con el trasfondo de esclavitud que la pagina insinua y no documenta."
       },
       "entity_refs": [
         {
@@ -2315,9 +2356,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina es una enumeracion de nombres y siglos —Cartafilo, Demetrios, Ragnar el Sabio— y casi no trae descripcion fisica: lo unico visualizable es un hombre de espaldas con capa y bordon. La lectura registro la identificacion explicita con el Sombreron de Caldas y Antioquia y decidio no fundir las dos fichas, sino tratarla como variante nominal dentro de la pagina. La talla de Santo Domingo no esta en el texto pero es el ancla documental de la recepcion tunjana, y entra como objeto con su sensibilidad declarada."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina es una enumeracion de nombres y siglos —Cartafilo, Demetrios, Ragnar el Sabio— y casi no trae descripcion fisica: lo unico visualizable es un hombre de espaldas con capa y bordon. La lectura registro la identificacion explicita con el Sombreron de Caldas y Antioquia y decidio no fundir las dos fichas, sino tratarla como variante nominal dentro de la pagina. La talla de Santo Domingo no esta en el texto pero es el ancla documental de la recepcion tunjana, y entra como objeto con su sensibilidad declarada.",
+        "previous_note": "La pagina es una enumeracion de nombres y siglos —Cartafilo, Demetrios, Ragnar el Sabio— y casi no trae descripcion fisica: lo unico visualizable es un hombre de espaldas con capa y bordon. La lectura registro la identificacion explicita con el Sombreron de Caldas y Antioquia y decidio no fundir las dos fichas, sino tratarla como variante nominal dentro de la pagina. La talla de Santo Domingo no esta en el texto pero es el ancla documental de la recepcion tunjana, y entra como objeto con su sensibilidad declarada."
       },
       "entity_refs": [
         {
@@ -2399,9 +2441,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina encadena dos materiales sin relacion: el duelo de tamboras del carnaval de Barranquilla y las brujas de Marulanda. La extraccion se quedo con el primero y solo con lo que el modulo permite dibujar, que es un forastero que reta con un instrumento y desaparece. Las pezunas de cabra, que son la revelacion del relato, quedan excluidas expresamente porque el modulo prohibe darle cuerpo fijo; la tambora quemada se resuelve como redress de la hoja de instrumentos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina encadena dos materiales sin relacion: el duelo de tamboras del carnaval de Barranquilla y las brujas de Marulanda. La extraccion se quedo con el primero y solo con lo que el modulo permite dibujar, que es un forastero que reta con un instrumento y desaparece. Las pezunas de cabra, que son la revelacion del relato, quedan excluidas expresamente porque el modulo prohibe darle cuerpo fijo; la tambora quemada se resuelve como redress de la hoja de instrumentos.",
+        "previous_note": "La pagina encadena dos materiales sin relacion: el duelo de tamboras del carnaval de Barranquilla y las brujas de Marulanda. La extraccion se quedo con el primero y solo con lo que el modulo permite dibujar, que es un forastero que reta con un instrumento y desaparece. Las pezunas de cabra, que son la revelacion del relato, quedan excluidas expresamente porque el modulo prohibe darle cuerpo fijo; la tambora quemada se resuelve como redress de la hoja de instrumentos."
       },
       "entity_refs": [
         {
@@ -2473,9 +2516,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina trae en parrafos contiguos las dos escalas incompatibles del personaje —hombrecillo que se mete al mercado y gigante musgoso tenido de luces rojizas— y la lectura las tomo como los dos estados de una ficha y no como dos seres. La Mohana aparece declarada «ajena al mundo del Mohan» y por eso conserva ficha propia. Las metamorfosis en jaguar, serpiente y rafaga de viento se excluyen, y las contras de los pescadores —plomada de cobre y pescar contra la corriente— entran como atrezo documentado."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina trae en parrafos contiguos las dos escalas incompatibles del personaje —hombrecillo que se mete al mercado y gigante musgoso tenido de luces rojizas— y la lectura las tomo como los dos estados de una ficha y no como dos seres. La Mohana aparece declarada «ajena al mundo del Mohan» y por eso conserva ficha propia. Las metamorfosis en jaguar, serpiente y rafaga de viento se excluyen, y las contras de los pescadores —plomada de cobre y pescar contra la corriente— entran como atrezo documentado.",
+        "previous_note": "La pagina trae en parrafos contiguos las dos escalas incompatibles del personaje —hombrecillo que se mete al mercado y gigante musgoso tenido de luces rojizas— y la lectura las tomo como los dos estados de una ficha y no como dos seres. La Mohana aparece declarada «ajena al mundo del Mohan» y por eso conserva ficha propia. Las metamorfosis en jaguar, serpiente y rafaga de viento se excluyen, y las contras de los pescadores —plomada de cobre y pescar contra la corriente— entran como atrezo documentado."
       },
       "entity_refs": [
         {
@@ -2592,9 +2636,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Unica pagina con los cuatro campos y unica que llega a guion: leer «versiones» dejo cuatro narradores distintos —arriero, barequero, partera y rezandero— que se resuelven en una sola lamina de oficios en vez de cuatro fichas. La duena del monte es la Madremonte bajo nombre local del Occidente antioqueno y no cuesta ficha. Las research_notes declaran el mito creacion original de 2026, asi que el reparto se ficha como invencion declarada y sin etnografia prestada, y las lomas que son tumbas viejas quedan cerradas por condicion del propio relato."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Unica pagina con los cuatro campos y unica que llega a guion: leer «versiones» dejo cuatro narradores distintos —arriero, barequero, partera y rezandero— que se resuelven en una sola lamina de oficios en vez de cuatro fichas. La duena del monte es la Madremonte bajo nombre local del Occidente antioqueno y no cuesta ficha. Las research_notes declaran el mito creacion original de 2026, asi que el reparto se ficha como invencion declarada y sin etnografia prestada, y las lomas que son tumbas viejas quedan cerradas por condicion del propio relato.",
+        "previous_note": "Unica pagina con los cuatro campos y unica que llega a guion: leer «versiones» dejo cuatro narradores distintos —arriero, barequero, partera y rezandero— que se resuelven en una sola lamina de oficios en vez de cuatro fichas. La duena del monte es la Madremonte bajo nombre local del Occidente antioqueno y no cuesta ficha. Las research_notes declaran el mito creacion original de 2026, asi que el reparto se ficha como invencion declarada y sin etnografia prestada, y las lomas que son tumbas viejas quedan cerradas por condicion del propio relato."
       },
       "entity_refs": [
         {
@@ -2711,9 +2756,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina reune cinco silbadores de cuatro regiones y ninguno tiene cuerpo: el modulo de Piedecuesta fija la version donde «nadie alcanzo a ver un cuerpo». La extraccion concluyo que lo que conduce el relato es la senal sonora y no una criatura, y por eso la entidad primaria es el fenomeno y no una figura. La Bruja Silbona se conserva aparte porque el propio modulo la declara ser distinto y ave; el costal se lee como bulto que cruje y no se abre en ninguna lamina."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina reune cinco silbadores de cuatro regiones y ninguno tiene cuerpo: el modulo de Piedecuesta fija la version donde «nadie alcanzo a ver un cuerpo». La extraccion concluyo que lo que conduce el relato es la senal sonora y no una criatura, y por eso la entidad primaria es el fenomeno y no una figura. La Bruja Silbona se conserva aparte porque el propio modulo la declara ser distinto y ave; el costal se lee como bulto que cruje y no se abre en ninguna lamina.",
+        "previous_note": "La pagina reune cinco silbadores de cuatro regiones y ninguno tiene cuerpo: el modulo de Piedecuesta fija la version donde «nadie alcanzo a ver un cuerpo». La extraccion concluyo que lo que conduce el relato es la senal sonora y no una criatura, y por eso la entidad primaria es el fenomeno y no una figura. La Bruja Silbona se conserva aparte porque el propio modulo la declara ser distinto y ave; el costal se lee como bulto que cruje y no se abre en ninguna lamina."
       },
       "entity_refs": [
         {
@@ -2815,9 +2861,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura confirmo que esta pagina no es un mito sino una hipotesis comparativa de mediados del siglo XX sobre orientacion funeraria y figuras civilizadoras, y que sus entidades —Quetzalcoatl, Votan, Kukulcan, Nemterequeteba, Bochica— pertenecen a tradiciones propias que ficharlas aqui borraria. Las siete pasadas no produjeron ni una entidad con lamina: es la unica pagina del corpus que no aporta ninguna ficha, y su entidad primaria queda confirmada como excluida y sin produccion."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura confirmo que esta pagina no es un mito sino una hipotesis comparativa de mediados del siglo XX sobre orientacion funeraria y figuras civilizadoras, y que sus entidades —Quetzalcoatl, Votan, Kukulcan, Nemterequeteba, Bochica— pertenecen a tradiciones propias que ficharlas aqui borraria. Las siete pasadas no produjeron ni una entidad con lamina: es la unica pagina del corpus que no aporta ninguna ficha, y su entidad primaria queda confirmada como excluida y sin produccion.",
+        "previous_note": "La lectura confirmo que esta pagina no es un mito sino una hipotesis comparativa de mediados del siglo XX sobre orientacion funeraria y figuras civilizadoras, y que sus entidades —Quetzalcoatl, Votan, Kukulcan, Nemterequeteba, Bochica— pertenecen a tradiciones propias que ficharlas aqui borraria. Las siete pasadas no produjeron ni una entidad con lamina: es la unica pagina del corpus que no aporta ninguna ficha, y su entidad primaria queda confirmada como excluida y sin produccion."
       },
       "entity_refs": [
         {
@@ -2870,9 +2917,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato tiene dos capas y solo una es dibujable: el juglar con el acordeon al hombro a caballo por el camino guajiro, y un duelo con el diablo que el modulo resuelve sin darle cuerpo. La extraccion registro que el diablo de esta pagina es exactamente el forastero de negro de la ficha nacional y no exige lamina propia. El carruaje flamigero de Satanas, el Credo al reves, Machobayo y el acordeon regalado por Sir Walter Raleigh quedan excluidos como anadidos de la expansion."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato tiene dos capas y solo una es dibujable: el juglar con el acordeon al hombro a caballo por el camino guajiro, y un duelo con el diablo que el modulo resuelve sin darle cuerpo. La extraccion registro que el diablo de esta pagina es exactamente el forastero de negro de la ficha nacional y no exige lamina propia. El carruaje flamigero de Satanas, el Credo al reves, Machobayo y el acordeon regalado por Sir Walter Raleigh quedan excluidos como anadidos de la expansion.",
+        "previous_note": "El relato tiene dos capas y solo una es dibujable: el juglar con el acordeon al hombro a caballo por el camino guajiro, y un duelo con el diablo que el modulo resuelve sin darle cuerpo. La extraccion registro que el diablo de esta pagina es exactamente el forastero de negro de la ficha nacional y no exige lamina propia. El carruaje flamigero de Satanas, el Credo al reves, Machobayo y el acordeon regalado por Sir Walter Raleigh quedan excluidos como anadidos de la expansion."
       },
       "entity_refs": [
         {
@@ -2949,9 +2997,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato esta contado desde dentro del cortejo, por el muerto que va en la camilla, y esa perspectiva decidio el inventario: el objeto por el que se cuenta el mito es el guando, y el hacendado solo aparece en escena como el cuerpo cubierto. La lectura fijo las cuatro velas y la cera que se chorrea encima como atrezo documentado del velorio campesino, y separo los dos estados del cortejo —rostros de calavera y cuerpos sin cabeza— porque son dos siluetas y no dos explicaciones morales. La sesion mediumnica se excluye."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato esta contado desde dentro del cortejo, por el muerto que va en la camilla, y esa perspectiva decidio el inventario: el objeto por el que se cuenta el mito es el guando, y el hacendado solo aparece en escena como el cuerpo cubierto. La lectura fijo las cuatro velas y la cera que se chorrea encima como atrezo documentado del velorio campesino, y separo los dos estados del cortejo —rostros de calavera y cuerpos sin cabeza— porque son dos siluetas y no dos explicaciones morales. La sesion mediumnica se excluye.",
+        "previous_note": "El relato esta contado desde dentro del cortejo, por el muerto que va en la camilla, y esa perspectiva decidio el inventario: el objeto por el que se cuenta el mito es el guando, y el hacendado solo aparece en escena como el cuerpo cubierto. La lectura fijo las cuatro velas y la cera que se chorrea encima como atrezo documentado del velorio campesino, y separo los dos estados del cortejo —rostros de calavera y cuerpos sin cabeza— porque son dos siluetas y no dos explicaciones morales. La sesion mediumnica se excluye."
       },
       "entity_refs": [
         {
@@ -3053,9 +3102,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina encadena tres mujeres distintas —la doncella del pozo, la quinceanera del rio y Barbara la filicida— y el modulo obliga a mantenerlas separadas en el texto aunque la silueta sea una sola. La lectura registro la correccion de culpa que el propio modulo ya habia hecho y la uso como criterio de diseno: lo que cambia entre versiones es el crimen imputado, y eso no toca la lamina. Cihuacoatl y Mictlancihuatl quedan excluidas porque la propia pagina advierte que no se puede reducir la Llorona a una figura prehispanica."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina encadena tres mujeres distintas —la doncella del pozo, la quinceanera del rio y Barbara la filicida— y el modulo obliga a mantenerlas separadas en el texto aunque la silueta sea una sola. La lectura registro la correccion de culpa que el propio modulo ya habia hecho y la uso como criterio de diseno: lo que cambia entre versiones es el crimen imputado, y eso no toca la lamina. Cihuacoatl y Mictlancihuatl quedan excluidas porque la propia pagina advierte que no se puede reducir la Llorona a una figura prehispanica.",
+        "previous_note": "La pagina encadena tres mujeres distintas —la doncella del pozo, la quinceanera del rio y Barbara la filicida— y el modulo obliga a mantenerlas separadas en el texto aunque la silueta sea una sola. La lectura registro la correccion de culpa que el propio modulo ya habia hecho y la uso como criterio de diseno: lo que cambia entre versiones es el crimen imputado, y eso no toca la lamina. Cihuacoatl y Mictlancihuatl quedan excluidas porque la propia pagina advierte que no se puede reducir la Llorona a una figura prehispanica."
       },
       "entity_refs": [
         {
@@ -3137,9 +3187,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina describe dos criaturas incompatibles bajo un mismo nombre —la dama vegetal elegante y la anciana canibal de manos descarnadas— y la extraccion tomo la primera como canonica y descarto la segunda por ser el dispositivo que escribe la culpa sobre el cuerpo de la mujer. Lo que si quedo fue su mecanismo: caminos que se confunden «hasta que cada arbol parece identico al siguiente». Dabeiba, la creacion con desechos vegetales, San Isidro Labrador y la cueva de ninos se excluyen por pertenecer a tradiciones ajenas o a la expansion."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina describe dos criaturas incompatibles bajo un mismo nombre —la dama vegetal elegante y la anciana canibal de manos descarnadas— y la extraccion tomo la primera como canonica y descarto la segunda por ser el dispositivo que escribe la culpa sobre el cuerpo de la mujer. Lo que si quedo fue su mecanismo: caminos que se confunden «hasta que cada arbol parece identico al siguiente». Dabeiba, la creacion con desechos vegetales, San Isidro Labrador y la cueva de ninos se excluyen por pertenecer a tradiciones ajenas o a la expansion.",
+        "previous_note": "La pagina describe dos criaturas incompatibles bajo un mismo nombre —la dama vegetal elegante y la anciana canibal de manos descarnadas— y la extraccion tomo la primera como canonica y descarto la segunda por ser el dispositivo que escribe la culpa sobre el cuerpo de la mujer. Lo que si quedo fue su mecanismo: caminos que se confunden «hasta que cada arbol parece identico al siguiente». Dabeiba, la creacion con desechos vegetales, San Isidro Labrador y la cueva de ninos se excluyen por pertenecer a tradiciones ajenas o a la expansion."
       },
       "entity_refs": [
         {
@@ -3251,9 +3302,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Tres relatos sin relacion comparten pagina —la mano del cuarto infantil, el Viejo del Costal y la mano suelta del desierto de la Candelaria— y la lectura mantuvo separadas la mano y el viejo, como hace la propia pagina, pese a que en la version caldense la mano es un rasgo del viejo. La pasada de objetos confirmo que el costal del viejo y el saco del Silbon son la misma pieza. La pistola de acido, las dimensiones celestes y los habitantes de calle de Bogota se excluyen como capa urbana posterior."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Tres relatos sin relacion comparten pagina —la mano del cuarto infantil, el Viejo del Costal y la mano suelta del desierto de la Candelaria— y la lectura mantuvo separadas la mano y el viejo, como hace la propia pagina, pese a que en la version caldense la mano es un rasgo del viejo. La pasada de objetos confirmo que el costal del viejo y el saco del Silbon son la misma pieza. La pistola de acido, las dimensiones celestes y los habitantes de calle de Bogota se excluyen como capa urbana posterior.",
+        "previous_note": "Tres relatos sin relacion comparten pagina —la mano del cuarto infantil, el Viejo del Costal y la mano suelta del desierto de la Candelaria— y la lectura mantuvo separadas la mano y el viejo, como hace la propia pagina, pese a que en la version caldense la mano es un rasgo del viejo. La pasada de objetos confirmo que el costal del viejo y el saco del Silbon son la misma pieza. La pistola de acido, las dimensiones celestes y los habitantes de calle de Bogota se excluyen como capa urbana posterior."
       },
       "entity_refs": [
         {
@@ -3345,9 +3397,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina es el acta de una sesion mediumnica de 1963 en Itagui, con medium, sindicato de transportadores y un catedratico como testigo, y la extraccion se quedo solo con la aparicion y con el papel. Lo decisivo fue lo que el relato dice del objeto: la escritura «tenia la condena de desvanecerse apenas fue entregado», asi que la carta se dibuja cerrada e ilegible. La herida del cuello esta descrita con detalle tactil, y por eso la bitacora dejo escrito como NO se dibuja antes de decidir nada mas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina es el acta de una sesion mediumnica de 1963 en Itagui, con medium, sindicato de transportadores y un catedratico como testigo, y la extraccion se quedo solo con la aparicion y con el papel. Lo decisivo fue lo que el relato dice del objeto: la escritura «tenia la condena de desvanecerse apenas fue entregado», asi que la carta se dibuja cerrada e ilegible. La herida del cuello esta descrita con detalle tactil, y por eso la bitacora dejo escrito como NO se dibuja antes de decidir nada mas.",
+        "previous_note": "La pagina es el acta de una sesion mediumnica de 1963 en Itagui, con medium, sindicato de transportadores y un catedratico como testigo, y la extraccion se quedo solo con la aparicion y con el papel. Lo decisivo fue lo que el relato dice del objeto: la escritura «tenia la condena de desvanecerse apenas fue entregado», asi que la carta se dibuja cerrada e ilegible. La herida del cuello esta descrita con detalle tactil, y por eso la bitacora dejo escrito como NO se dibuja antes de decidir nada mas."
       },
       "entity_refs": [
         {
@@ -3419,9 +3472,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato es un viaje de investigacion con embarcacion, capitan y grabadora, y lo que conduce es la aparicion: cuerpo compuesto, mascara, punal y cetro. La lectura registro que los delfines no acompanan sino que abren paso, y por eso conservan ficha pese a ser el required mas debil del censo. La metamorfosis del psicobiologo y la sociedad de delfines con tecnologia quedan excluidas: son capa de ciencia ficcion de la propia pagina y no del repertorio de Tumaco."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato es un viaje de investigacion con embarcacion, capitan y grabadora, y lo que conduce es la aparicion: cuerpo compuesto, mascara, punal y cetro. La lectura registro que los delfines no acompanan sino que abren paso, y por eso conservan ficha pese a ser el required mas debil del censo. La metamorfosis del psicobiologo y la sociedad de delfines con tecnologia quedan excluidas: son capa de ciencia ficcion de la propia pagina y no del repertorio de Tumaco.",
+        "previous_note": "El relato es un viaje de investigacion con embarcacion, capitan y grabadora, y lo que conduce es la aparicion: cuerpo compuesto, mascara, punal y cetro. La lectura registro que los delfines no acompanan sino que abren paso, y por eso conservan ficha pese a ser el required mas debil del censo. La metamorfosis del psicobiologo y la sociedad de delfines con tecnologia quedan excluidas: son capa de ciencia ficcion de la propia pagina y no del repertorio de Tumaco."
       },
       "entity_refs": [
         {
@@ -3498,9 +3552,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina enfrenta a dos mujeres que los lectores confunden y que el relato separa: la Colmillona que roba comida del fogon sin hacer dano, y la Muelona colonial que devora. La extraccion las mantuvo como dos entidades por orden expresa del modulo. El gesto documentado —«se paro en el fuego y sin quemarse, cogio con sus manos peludas varios de los platanos»— resulto ser la lamina entera, y el escritor Agustin Moreno y su diario quedan excluidos como marco de 2004."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina enfrenta a dos mujeres que los lectores confunden y que el relato separa: la Colmillona que roba comida del fogon sin hacer dano, y la Muelona colonial que devora. La extraccion las mantuvo como dos entidades por orden expresa del modulo. El gesto documentado —«se paro en el fuego y sin quemarse, cogio con sus manos peludas varios de los platanos»— resulto ser la lamina entera, y el escritor Agustin Moreno y su diario quedan excluidos como marco de 2004.",
+        "previous_note": "La pagina enfrenta a dos mujeres que los lectores confunden y que el relato separa: la Colmillona que roba comida del fogon sin hacer dano, y la Muelona colonial que devora. La extraccion las mantuvo como dos entidades por orden expresa del modulo. El gesto documentado —«se paro en el fuego y sin quemarse, cogio con sus manos peludas varios de los platanos»— resulto ser la lamina entera, y el escritor Agustin Moreno y su diario quedan excluidos como marco de 2004."
       },
       "entity_refs": [
         {
@@ -3592,9 +3647,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la unica pagina del corpus sin encabezados de campo y hubo que leerla de corrido para separar el relato del analisis. La extraccion fijo como rasgo lo que nadie esperaria: la mantilla —de crespon negro en el relato de Pasto, verde en la ficha de 2004— sobre luto cerrado, y el motivo de pedir fuego, que fecha la escena antes de la luz electrica. La lectura registro ademas que el relato existe para castigar a los hombres que salen a buscar mujeres, y eso obligo a decidir el encuadre antes que el vestuario. El Bar Cosmos y el Club Boyaca se excluyen."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la unica pagina del corpus sin encabezados de campo y hubo que leerla de corrido para separar el relato del analisis. La extraccion fijo como rasgo lo que nadie esperaria: la mantilla —de crespon negro en el relato de Pasto, verde en la ficha de 2004— sobre luto cerrado, y el motivo de pedir fuego, que fecha la escena antes de la luz electrica. La lectura registro ademas que el relato existe para castigar a los hombres que salen a buscar mujeres, y eso obligo a decidir el encuadre antes que el vestuario. El Bar Cosmos y el Club Boyaca se excluyen.",
+        "previous_note": "Es la unica pagina del corpus sin encabezados de campo y hubo que leerla de corrido para separar el relato del analisis. La extraccion fijo como rasgo lo que nadie esperaria: la mantilla —de crespon negro en el relato de Pasto, verde en la ficha de 2004— sobre luto cerrado, y el motivo de pedir fuego, que fecha la escena antes de la luz electrica. La lectura registro ademas que el relato existe para castigar a los hombres que salen a buscar mujeres, y eso obligo a decidir el encuadre antes que el vestuario. El Bar Cosmos y el Club Boyaca se excluyen."
       },
       "entity_refs": [
         {
@@ -3701,9 +3757,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina es un reportaje clinico de los anos setenta sobre una joven de Ibague, y la extraccion tuvo que retirar a la persona y quedarse con el ser: el modulo prohibe fijarle al duende cabello dorado, ojos azules y pies invertidos porque son capa de angel caido posterior. Lo que quedo son sus efectos materiales —el tiple desafinado en la puerta, los objetos que desaparecen y vuelven, los muebles corridos—, que es lo unico que se dibuja. Luzbel y los angeles caidos quedan excluidos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina es un reportaje clinico de los anos setenta sobre una joven de Ibague, y la extraccion tuvo que retirar a la persona y quedarse con el ser: el modulo prohibe fijarle al duende cabello dorado, ojos azules y pies invertidos porque son capa de angel caido posterior. Lo que quedo son sus efectos materiales —el tiple desafinado en la puerta, los objetos que desaparecen y vuelven, los muebles corridos—, que es lo unico que se dibuja. Luzbel y los angeles caidos quedan excluidos.",
+        "previous_note": "La pagina es un reportaje clinico de los anos setenta sobre una joven de Ibague, y la extraccion tuvo que retirar a la persona y quedarse con el ser: el modulo prohibe fijarle al duende cabello dorado, ojos azules y pies invertidos porque son capa de angel caido posterior. Lo que quedo son sus efectos materiales —el tiple desafinado en la puerta, los objetos que desaparecen y vuelven, los muebles corridos—, que es lo unico que se dibuja. Luzbel y los angeles caidos quedan excluidos."
       },
       "entity_refs": [
         {
@@ -3785,9 +3842,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pagina esta escrita en primera persona por un vagabundo de Anserma que esconde la nota tras un afiche de circo, y la lectura decidio que el narrador no es el ser mitico sino el caminante ya fichado. Lo que conduce es el corro de muchachos que le exige una moneda, y el gesto de morderla para probarla resulto el rasgo entero del grupo. La moneda desgastada que queda en el suelo es el unico objeto con prueba dentro del relato."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pagina esta escrita en primera persona por un vagabundo de Anserma que esconde la nota tras un afiche de circo, y la lectura decidio que el narrador no es el ser mitico sino el caminante ya fichado. Lo que conduce es el corro de muchachos que le exige una moneda, y el gesto de morderla para probarla resulto el rasgo entero del grupo. La moneda desgastada que queda en el suelo es el unico objeto con prueba dentro del relato.",
+        "previous_note": "La pagina esta escrita en primera persona por un vagabundo de Anserma que esconde la nota tras un afiche de circo, y la lectura decidio que el narrador no es el ser mitico sino el caminante ya fichado. Lo que conduce es el corro de muchachos que le exige una moneda, y el gesto de morderla para probarla resulto el rasgo entero del grupo. La moneda desgastada que queda en el suelo es el unico objeto con prueba dentro del relato."
       },
       "entity_refs": [
         {
@@ -20786,5 +20844,21 @@
       "ninguna caricatura ni rasgo identitario exagerado en la talla tunjana ni en el viajero de la capa y el bordón",
       "ninguna luz eléctrica, linterna, cable ni vehículo de motor en las láminas del siglo XIX"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 25,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "ef401aa3247aa0b4b51e41f648c7316ae9c7f1c1c5df43483db604c69bf35d42",
+      "max_source_updated_at": "2026-07-26T22:18:33.114Z"
+    }
+  ]
 }

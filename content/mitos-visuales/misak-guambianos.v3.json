@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Misak (communities.slug = misak-guambianos)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -22,7 +22,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 7,
     "fields": [
       "mito",
@@ -30,8 +30,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "159bf6f4ecdbe0429d3f98486b4294f0f8d7c568818313c2663be83082991f65",
-    "max_source_updated_at": "2026-07-28T12:06:25.474Z"
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "max_source_updated_at": "2026-09-20T00:19:20.577Z"
   },
   "research": {
     "sources": [
@@ -945,8 +945,8 @@
     "dossier": "docs/investigacion/misak-guambianos.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -956,7 +956,22 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "creacion-misak-guambianos",
+        "el-nino-serpiente",
+        "el-pajaro-que-se-come-las-almas",
+        "el-viejo-tempestad",
+        "el-viento-y-sus-hijos",
+        "la-mama-grande",
+        "pedro-el-mago-travieso"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "creacion-misak-guambianos": {
@@ -979,9 +994,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos páramos que la postal confunde y que este corpus no puede confundir: el del relato estaba **cubierto de monte cerrado** —el propio libro del Cabildo fotografía «monte cerrado en proximidad de la laguna Palopisu… cuando Srekollimisak vivía allí»— y el pajonal abierto con frailejones y pasto corto que todo el mundo dibuja es el resultado de un siglo de quema, potrero y ganado. Dibujarlo dentro del relato de creación sería meter la deforestación en la Ley de Origen, y es el error de época más caro que este corpus permitía. Dentro de eso separó el orden exacto del derrumbe, que es lo contrario de lo intuitivo y es todo lo que la fuente especifica —primero piedras enormes, encima barro, después agua turbia, y la palizada con los niños flotando arriba—, y separó la lana: Mama Manuela enseña a hilar, pero la oveja es europea y el propio libro del Cabildo habla de «lana o merino», de modo que **ninguna figura de este estrato hila**."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos páramos que la postal confunde y que este corpus no puede confundir: el del relato estaba **cubierto de monte cerrado** —el propio libro del Cabildo fotografía «monte cerrado en proximidad de la laguna Palopisu… cuando Srekollimisak vivía allí»— y el pajonal abierto con frailejones y pasto corto que todo el mundo dibuja es el resultado de un siglo de quema, potrero y ganado. Dibujarlo dentro del relato de creación sería meter la deforestación en la Ley de Origen, y es el error de época más caro que este corpus permitía. Dentro de eso separó el orden exacto del derrumbe, que es lo contrario de lo intuitivo y es todo lo que la fuente especifica —primero piedras enormes, encima barro, después agua turbia, y la palizada con los niños flotando arriba—, y separó la lana: Mama Manuela enseña a hilar, pero la oveja es europea y el propio libro del Cabildo habla de «lana o merino», de modo que **ninguna figura de este estrato hila**.",
+        "previous_note": "La lectura separó dos páramos que la postal confunde y que este corpus no puede confundir: el del relato estaba **cubierto de monte cerrado** —el propio libro del Cabildo fotografía «monte cerrado en proximidad de la laguna Palopisu… cuando Srekollimisak vivía allí»— y el pajonal abierto con frailejones y pasto corto que todo el mundo dibuja es el resultado de un siglo de quema, potrero y ganado. Dibujarlo dentro del relato de creación sería meter la deforestación en la Ley de Origen, y es el error de época más caro que este corpus permitía. Dentro de eso separó el orden exacto del derrumbe, que es lo contrario de lo intuitivo y es todo lo que la fuente especifica —primero piedras enormes, encima barro, después agua turbia, y la palizada con los niños flotando arriba—, y separó la lana: Mama Manuela enseña a hilar, pero la oveja es europea y el propio libro del Cabildo habla de «lana o merino», de modo que **ninguna figura de este estrato hila**."
       },
       "entity_refs": [
         {
@@ -1116,9 +1132,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la primaria del título, y eso fue lo que decidió la ficha: el relato se llama «El niño serpiente y la laguna», pero el niño se transforma en tres líneas y se va al pasto, mientras la joven es la encerrada, la visitada, la que se deja caer de espaldas en el centro del patio y se convierte en el agua, y la que permanece en el helecho del fondo. Confirmo la candidata del script. También separó tres cosas que cambian lámina: que **no es una mujer que se disuelve** sino un cuerpo tendido del que brotan chorros, con la silueta todavía legible; que la serpiente **cabe en la mano de una abuela** y no es una boa; y que el helecho se muestra con **una sola gota roja** y no con la herida repetida, porque la última frase del relato es que dejaron de herirlo. Y dejó dicho lo que el corpus no da: ninguno de los cuatro personajes tiene una línea de cuerpo en ninguna fuente, y el relato entero llega por la reelaboración de Solarte de 1980, con narrador ficticio y sin fuente oral identificada."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la primaria del título, y eso fue lo que decidió la ficha: el relato se llama «El niño serpiente y la laguna», pero el niño se transforma en tres líneas y se va al pasto, mientras la joven es la encerrada, la visitada, la que se deja caer de espaldas en el centro del patio y se convierte en el agua, y la que permanece en el helecho del fondo. Confirmo la candidata del script. También separó tres cosas que cambian lámina: que **no es una mujer que se disuelve** sino un cuerpo tendido del que brotan chorros, con la silueta todavía legible; que la serpiente **cabe en la mano de una abuela** y no es una boa; y que el helecho se muestra con **una sola gota roja** y no con la herida repetida, porque la última frase del relato es que dejaron de herirlo. Y dejó dicho lo que el corpus no da: ninguno de los cuatro personajes tiene una línea de cuerpo en ninguna fuente, y el relato entero llega por la reelaboración de Solarte de 1980, con narrador ficticio y sin fuente oral identificada.",
+        "previous_note": "La lectura separó la primaria del título, y eso fue lo que decidió la ficha: el relato se llama «El niño serpiente y la laguna», pero el niño se transforma en tres líneas y se va al pasto, mientras la joven es la encerrada, la visitada, la que se deja caer de espaldas en el centro del patio y se convierte en el agua, y la que permanece en el helecho del fondo. Confirmo la candidata del script. También separó tres cosas que cambian lámina: que **no es una mujer que se disuelve** sino un cuerpo tendido del que brotan chorros, con la silueta todavía legible; que la serpiente **cabe en la mano de una abuela** y no es una boa; y que el helecho se muestra con **una sola gota roja** y no con la herida repetida, porque la última frase del relato es que dejaron de herirlo. Y dejó dicho lo que el corpus no da: ninguno de los cuatro personajes tiene una línea de cuerpo en ninguna fuente, y el relato entero llega por la reelaboración de Solarte de 1980, con narrador ficticio y sin fuente oral identificada."
       },
       "entity_refs": [
         {
@@ -1238,9 +1255,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que del pájaro es antiguo de lo que es de 1980: el título temprano «Espíritu de persona y ave mágica (Kcrey)» prueba que el ser existe antes, pero el pico con dos filas de dientes, las garras largas y el ladrido de perro sólo los da Solarte, y *Namuy misag* no se pudo leer en directo. Se dibujan como el corpus los dice, con la mediación escrita. Y separó lo que es sonido de lo que es imagen: el ladrido y el lamento quedan excluidos porque traducirlos a ondas inventaría un lenguaje gráfico que el texto no tiene, y lo único que la lámina puede mostrar de ellos es la boca abierta. La otra mitad de la imagen son las almas, y su regla es de restricción: redondas, leves, translúcidas, **que no iluminan y no proyectan sombra**, porque en esta biblia la luz saturada está racionada y le pertenece al rayo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que del pájaro es antiguo de lo que es de 1980: el título temprano «Espíritu de persona y ave mágica (Kcrey)» prueba que el ser existe antes, pero el pico con dos filas de dientes, las garras largas y el ladrido de perro sólo los da Solarte, y *Namuy misag* no se pudo leer en directo. Se dibujan como el corpus los dice, con la mediación escrita. Y separó lo que es sonido de lo que es imagen: el ladrido y el lamento quedan excluidos porque traducirlos a ondas inventaría un lenguaje gráfico que el texto no tiene, y lo único que la lámina puede mostrar de ellos es la boca abierta. La otra mitad de la imagen son las almas, y su regla es de restricción: redondas, leves, translúcidas, **que no iluminan y no proyectan sombra**, porque en esta biblia la luz saturada está racionada y le pertenece al rayo.",
+        "previous_note": "La lectura separó lo que del pájaro es antiguo de lo que es de 1980: el título temprano «Espíritu de persona y ave mágica (Kcrey)» prueba que el ser existe antes, pero el pico con dos filas de dientes, las garras largas y el ladrido de perro sólo los da Solarte, y *Namuy misag* no se pudo leer en directo. Se dibujan como el corpus los dice, con la mediación escrita. Y separó lo que es sonido de lo que es imagen: el ladrido y el lamento quedan excluidos porque traducirlos a ondas inventaría un lenguaje gráfico que el texto no tiene, y lo único que la lámina puede mostrar de ellos es la boca abierta. La otra mitad de la imagen son las almas, y su regla es de restricción: redondas, leves, translúcidas, **que no iluminan y no proyectan sombra**, porque en esta biblia la luz saturada está racionada y le pertenece al rayo."
       },
       "entity_refs": [
         {
@@ -1310,9 +1328,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura corrigió el cuerpo del personaje central contra la letra del canon, y hay que decirlo: el canon escribe que Srekollimisak «tiene las manos llenas de llagas», y la fuente principal del corpus —el libro del propio Cabildo, con la versión de Jacinta y Bárbara Muelas— lo describe como «un hombre anciano, alto, con **los pies rajados** y con el cuerpo también **como reventado y con costras y sangre**». Y le encontró prenda al otro, que era el problema que parecía irresoluble: Kosrokollimisak va **agachado bajo su *tsitse*, capa de paja de tierra fría**, que es una prenda documentada y **no es tejido restringido**, de modo que el rayo del páramo puede llevar algo puesto sin tocar el anaco ni la ruana; está ronco porque le arrancaron la lengua de un tirón, y por eso los truenos de páramo suenan más débiles. También separó dos cosas que se confunden solas: el **mejicano** es una **calabaza** y el libro lo dice tres veces, no un chayote; y los **torbellinos** del choque de vientos son los dos rayos peleando y no el remolino estacionario de la esposa de Tumpe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura corrigió el cuerpo del personaje central contra la letra del canon, y hay que decirlo: el canon escribe que Srekollimisak «tiene las manos llenas de llagas», y la fuente principal del corpus —el libro del propio Cabildo, con la versión de Jacinta y Bárbara Muelas— lo describe como «un hombre anciano, alto, con **los pies rajados** y con el cuerpo también **como reventado y con costras y sangre**». Y le encontró prenda al otro, que era el problema que parecía irresoluble: Kosrokollimisak va **agachado bajo su *tsitse*, capa de paja de tierra fría**, que es una prenda documentada y **no es tejido restringido**, de modo que el rayo del páramo puede llevar algo puesto sin tocar el anaco ni la ruana; está ronco porque le arrancaron la lengua de un tirón, y por eso los truenos de páramo suenan más débiles. También separó dos cosas que se confunden solas: el **mejicano** es una **calabaza** y el libro lo dice tres veces, no un chayote; y los **torbellinos** del choque de vientos son los dos rayos peleando y no el remolino estacionario de la esposa de Tumpe.",
+        "previous_note": "La lectura corrigió el cuerpo del personaje central contra la letra del canon, y hay que decirlo: el canon escribe que Srekollimisak «tiene las manos llenas de llagas», y la fuente principal del corpus —el libro del propio Cabildo, con la versión de Jacinta y Bárbara Muelas— lo describe como «un hombre anciano, alto, con **los pies rajados** y con el cuerpo también **como reventado y con costras y sangre**». Y le encontró prenda al otro, que era el problema que parecía irresoluble: Kosrokollimisak va **agachado bajo su *tsitse*, capa de paja de tierra fría**, que es una prenda documentada y **no es tejido restringido**, de modo que el rayo del páramo puede llevar algo puesto sin tocar el anaco ni la ruana; está ronco porque le arrancaron la lengua de un tirón, y por eso los truenos de páramo suenan más débiles. También separó dos cosas que se confunden solas: el **mejicano** es una **calabaza** y el libro lo dice tres veces, no un chayote; y los **torbellinos** del choque de vientos son los dos rayos peleando y no el remolino estacionario de la esposa de Tumpe."
       },
       "entity_refs": [
         {
@@ -1407,9 +1426,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos prendas con cuatrocientos años entre ellas dentro de la misma frase de la fuente: «el papá anda por las lomas vestido con **zamarros** —ahora dicen zamarros, antes decían que era **purosreik**, vestido o ruana hecha de nube—», y la nota al pie del propio libro fecha los zamarros como prenda de cuero de jinete **introducida por los españoles**. Purosreik sí; zamarros no, y con ellos se va también el caballo. Y separó tres traducciones documentadas del viento, ninguna de las cuales es una raya de velocidad: la **mata tumpe**, de «hojas anchas y gruesotas que, cuando se mueven, producen como el viento»; la ruana de nube sacudida por el ruedo; y el árbol vencido que el libro fotografía en Peñas Negras —siempre de oriente a occidente, porque «de ahí nace la orientación de todo»—. La tercera separación es la que más fácil se pierde: el remolino de la esposa es **estacionario**, bajo y levanta la ceniza del rastrojo que ella acaba de quemar, y no tiene nada que ver con los torbellinos altos del choque, que son los rayos. Y la categoría de «suciedad» que explica por qué el padre no baja se respeta como separación de rutas y **nunca como figura**."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos prendas con cuatrocientos años entre ellas dentro de la misma frase de la fuente: «el papá anda por las lomas vestido con **zamarros** —ahora dicen zamarros, antes decían que era **purosreik**, vestido o ruana hecha de nube—», y la nota al pie del propio libro fecha los zamarros como prenda de cuero de jinete **introducida por los españoles**. Purosreik sí; zamarros no, y con ellos se va también el caballo. Y separó tres traducciones documentadas del viento, ninguna de las cuales es una raya de velocidad: la **mata tumpe**, de «hojas anchas y gruesotas que, cuando se mueven, producen como el viento»; la ruana de nube sacudida por el ruedo; y el árbol vencido que el libro fotografía en Peñas Negras —siempre de oriente a occidente, porque «de ahí nace la orientación de todo»—. La tercera separación es la que más fácil se pierde: el remolino de la esposa es **estacionario**, bajo y levanta la ceniza del rastrojo que ella acaba de quemar, y no tiene nada que ver con los torbellinos altos del choque, que son los rayos. Y la categoría de «suciedad» que explica por qué el padre no baja se respeta como separación de rutas y **nunca como figura**.",
+        "previous_note": "La lectura separó dos prendas con cuatrocientos años entre ellas dentro de la misma frase de la fuente: «el papá anda por las lomas vestido con **zamarros** —ahora dicen zamarros, antes decían que era **purosreik**, vestido o ruana hecha de nube—», y la nota al pie del propio libro fecha los zamarros como prenda de cuero de jinete **introducida por los españoles**. Purosreik sí; zamarros no, y con ellos se va también el caballo. Y separó tres traducciones documentadas del viento, ninguna de las cuales es una raya de velocidad: la **mata tumpe**, de «hojas anchas y gruesotas que, cuando se mueven, producen como el viento»; la ruana de nube sacudida por el ruedo; y el árbol vencido que el libro fotografía en Peñas Negras —siempre de oriente a occidente, porque «de ahí nace la orientación de todo»—. La tercera separación es la que más fácil se pierde: el remolino de la esposa es **estacionario**, bajo y levanta la ceniza del rastrojo que ella acaba de quemar, y no tiene nada que ver con los torbellinos altos del choque, que son los rayos. Y la categoría de «suciedad» que explica por qué el padre no baja se respeta como separación de rutas y **nunca como figura**."
       },
       "entity_refs": [
         {
@@ -1499,9 +1519,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura recuperó la única iconografía misak del corpus y con ella seis fichas que estaban sin cuerpo: los dos dibujos a tinta china de **Francisco Tumiñá Pillimué, de 1947-49**, describen a Mama Manuela «desnuda, con pelo largo, un ramo de lechero agarrado en la mano, parada sobre una piedra» con el rebaño de animales pequeños, la choza y la enorme peña, y a «un enorme pijao, desnudo, de pelo largo, lanza en mano… por detrás brotan dos frailejones». Eso resuelve el atuendo sin tocarlo —el dibujante misak los pintó desnudos— y resuelve la transformación como un **relevo** y no como un cuerpo que se cubre de hojas. Con dos advertencias escritas: la escala enorme y la desnudez de los pijaos son rasgos de un dibujo que marca una diferencia moral entre «barbarie» y «civilización», y van declaradas como lectura de 1949 y no como retrato etnográfico; y **no se vio ninguno de los dos dibujos**, sólo la descripción de Rappaport, de modo que la dimensión de personajes entera de este corpus descansa en écfrasis. La tercera separación es territorial y pesa: Nuyapalo es hoy la vereda San Fernando, que fue la casa de la hacienda, y es un punto de recuperación de tierras, no un paisaje neutro."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura recuperó la única iconografía misak del corpus y con ella seis fichas que estaban sin cuerpo: los dos dibujos a tinta china de **Francisco Tumiñá Pillimué, de 1947-49**, describen a Mama Manuela «desnuda, con pelo largo, un ramo de lechero agarrado en la mano, parada sobre una piedra» con el rebaño de animales pequeños, la choza y la enorme peña, y a «un enorme pijao, desnudo, de pelo largo, lanza en mano… por detrás brotan dos frailejones». Eso resuelve el atuendo sin tocarlo —el dibujante misak los pintó desnudos— y resuelve la transformación como un **relevo** y no como un cuerpo que se cubre de hojas. Con dos advertencias escritas: la escala enorme y la desnudez de los pijaos son rasgos de un dibujo que marca una diferencia moral entre «barbarie» y «civilización», y van declaradas como lectura de 1949 y no como retrato etnográfico; y **no se vio ninguno de los dos dibujos**, sólo la descripción de Rappaport, de modo que la dimensión de personajes entera de este corpus descansa en écfrasis. La tercera separación es territorial y pesa: Nuyapalo es hoy la vereda San Fernando, que fue la casa de la hacienda, y es un punto de recuperación de tierras, no un paisaje neutro.",
+        "previous_note": "La lectura recuperó la única iconografía misak del corpus y con ella seis fichas que estaban sin cuerpo: los dos dibujos a tinta china de **Francisco Tumiñá Pillimué, de 1947-49**, describen a Mama Manuela «desnuda, con pelo largo, un ramo de lechero agarrado en la mano, parada sobre una piedra» con el rebaño de animales pequeños, la choza y la enorme peña, y a «un enorme pijao, desnudo, de pelo largo, lanza en mano… por detrás brotan dos frailejones». Eso resuelve el atuendo sin tocarlo —el dibujante misak los pintó desnudos— y resuelve la transformación como un **relevo** y no como un cuerpo que se cubre de hojas. Con dos advertencias escritas: la escala enorme y la desnudez de los pijaos son rasgos de un dibujo que marca una diferencia moral entre «barbarie» y «civilización», y van declaradas como lectura de 1949 y no como retrato etnográfico; y **no se vio ninguno de los dos dibujos**, sólo la descripción de Rappaport, de modo que la dimensión de personajes entera de este corpus descansa en écfrasis. La tercera separación es territorial y pesa: Nuyapalo es hoy la vereda San Fernando, que fue la casa de la hacienda, y es un punto de recuperación de tierras, no un paisaje neutro."
       },
       "entity_refs": [
         {
@@ -1626,9 +1647,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó el objeto del relato de lo que un ilustrador dibujaría en su lugar: el texto se esfuerza en definirlo **por negación** —«no era una canoa ni una casa construida para navegar. Era un pedazo del territorio desprendido»— y una definición negativa no da lámina, así que la ficha tuvo que encontrar la marca positiva que ninguna embarcación tiene, y es **la raíz de tierra colgando por debajo**, con las raíces rotas a la vista. También separó tres aguas que este corpus tiene y que se confunden: la de esta página sube sin ola y sin frente, sólo nivel; la del derrumbe baja con piedra y barro en un orden fijo; la de la tormenta trae granizo. Y separó la travesura de su consecuencia geológica, que es el séptimo movimiento del corpus: el relieve nuevo se define **por el hueco** que dejó la loma, de modo que la lámina del terreno arrancado y la del terreno de hoy sólo funcionan si pueden leerse juntas. Queda fuera, y no vuelve, toda la ampliación de Solarte de 1980: el arca, el tambor salvador y la pareja ordenada de animales."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó el objeto del relato de lo que un ilustrador dibujaría en su lugar: el texto se esfuerza en definirlo **por negación** —«no era una canoa ni una casa construida para navegar. Era un pedazo del territorio desprendido»— y una definición negativa no da lámina, así que la ficha tuvo que encontrar la marca positiva que ninguna embarcación tiene, y es **la raíz de tierra colgando por debajo**, con las raíces rotas a la vista. También separó tres aguas que este corpus tiene y que se confunden: la de esta página sube sin ola y sin frente, sólo nivel; la del derrumbe baja con piedra y barro en un orden fijo; la de la tormenta trae granizo. Y separó la travesura de su consecuencia geológica, que es el séptimo movimiento del corpus: el relieve nuevo se define **por el hueco** que dejó la loma, de modo que la lámina del terreno arrancado y la del terreno de hoy sólo funcionan si pueden leerse juntas. Queda fuera, y no vuelve, toda la ampliación de Solarte de 1980: el arca, el tambor salvador y la pareja ordenada de animales.",
+        "previous_note": "La lectura separó el objeto del relato de lo que un ilustrador dibujaría en su lugar: el texto se esfuerza en definirlo **por negación** —«no era una canoa ni una casa construida para navegar. Era un pedazo del territorio desprendido»— y una definición negativa no da lámina, así que la ficha tuvo que encontrar la marca positiva que ninguna embarcación tiene, y es **la raíz de tierra colgando por debajo**, con las raíces rotas a la vista. También separó tres aguas que este corpus tiene y que se confunden: la de esta página sube sin ola y sin frente, sólo nivel; la del derrumbe baja con piedra y barro en un orden fijo; la de la tormenta trae granizo. Y separó la travesura de su consecuencia geológica, que es el séptimo movimiento del corpus: el relieve nuevo se define **por el hueco** que dejó la loma, de modo que la lámina del terreno arrancado y la del terreno de hoy sólo funcionan si pueden leerse juntas. Queda fuera, y no vuelve, toda la ampliación de Solarte de 1980: el arca, el tambor salvador y la pareja ordenada de animales."
       },
       "entity_refs": [
         {
@@ -10998,5 +11020,20 @@
       "ningún pelo, pluma, escama ni hoja lanuda pieza por pieza: pocas piezas planas grandes con el borde en dientes",
       "ninguna arca, tambor salvador, pareja ordenada de animales ni tumba con cuerda sísmica: eso es la ampliación de 1980 y no existe"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 7,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "159bf6f4ecdbe0429d3f98486b4294f0f8d7c568818313c2663be83082991f65",
+      "max_source_updated_at": "2026-07-28T12:06:25.474Z"
+    }
+  ]
 }

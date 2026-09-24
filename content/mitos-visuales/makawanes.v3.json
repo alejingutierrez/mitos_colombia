@@ -7,7 +7,7 @@
   "region": "Orinoquía",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Makaguán (communities.slug = makawanes)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -18,7 +18,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 3,
     "fields": [
       "mito",
@@ -26,8 +26,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "a1a0f69990eb5ea7b51c468c279148f0d74989611e90af527911063f222c371b",
-    "max_source_updated_at": "2026-07-28T21:30:18.676Z"
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "max_source_updated_at": "2026-09-22T21:31:44.289Z"
   },
   "research": {
     "sources": [
@@ -851,8 +851,8 @@
     "dossier": "docs/investigacion/makawanes.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -862,7 +862,18 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "creacion-makawanes",
+        "el-alma",
+        "la-gran-inundacion"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "creacion-makawanes": {
@@ -885,9 +896,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de estados y transformaciones fue la que decidió esta lectura, y por lo que no encontró: el relato tiene dos pruebas idénticas y ninguna cambia el cuerpo de quien las pasa, así que ni el venado ni el araguato cuestan hoja de estado y todo el peso cayó en una sola vista con la boca abierta; en cambio la pasada de roles sin nombre devolvió el hallazgo que reorganiza la ficha, porque quien saca los dientes no tiene manos —«con su fuerza, que no se mira», empezando por la carraca de abajo— y eso obligó a resolver al creador como disco sin cuerpo, dejando que la única diferencia entre los dos animales rojizos del mismo relato la lleven la altura y el color."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de estados y transformaciones fue la que decidió esta lectura, y por lo que no encontró: el relato tiene dos pruebas idénticas y ninguna cambia el cuerpo de quien las pasa, así que ni el venado ni el araguato cuestan hoja de estado y todo el peso cayó en una sola vista con la boca abierta; en cambio la pasada de roles sin nombre devolvió el hallazgo que reorganiza la ficha, porque quien saca los dientes no tiene manos —«con su fuerza, que no se mira», empezando por la carraca de abajo— y eso obligó a resolver al creador como disco sin cuerpo, dejando que la única diferencia entre los dos animales rojizos del mismo relato la lleven la altura y el color.",
+        "previous_note": "La pasada de estados y transformaciones fue la que decidió esta lectura, y por lo que no encontró: el relato tiene dos pruebas idénticas y ninguna cambia el cuerpo de quien las pasa, así que ni el venado ni el araguato cuestan hoja de estado y todo el peso cayó en una sola vista con la boca abierta; en cambio la pasada de roles sin nombre devolvió el hallazgo que reorganiza la ficha, porque quien saca los dientes no tiene manos —«con su fuerza, que no se mira», empezando por la carraca de abajo— y eso obligó a resolver al creador como disco sin cuerpo, dejando que la única diferencia entre los dos animales rojizos del mismo relato la lleven la altura y el color."
       },
       "entity_refs": [
         {
@@ -997,9 +1009,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la única ficha del corpus que no es mito sino leyenda fechada, y la extracción tuvo que separar dos cosas que la ortografía junta: los Wachirajua-espíritus del relato de fundación y Wuachirajua, la presencia de 1948 en adelante, que comparten nombre y ninguna otra cosa; y la pasada de lugares y arquitectura, que en los otros dos relatos devolvió monte y claro, aquí devolvió un internado concreto con piezas, archivadores, cancha y una maloca que resultó ser obra pública de 2004-2007, de modo que el peligro de esta lámina no es inventar un monstruo sino dibujar como ancestral una escuela de hace veinte años."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la única ficha del corpus que no es mito sino leyenda fechada, y la extracción tuvo que separar dos cosas que la ortografía junta: los Wachirajua-espíritus del relato de fundación y Wuachirajua, la presencia de 1948 en adelante, que comparten nombre y ninguna otra cosa; y la pasada de lugares y arquitectura, que en los otros dos relatos devolvió monte y claro, aquí devolvió un internado concreto con piezas, archivadores, cancha y una maloca que resultó ser obra pública de 2004-2007, de modo que el peligro de esta lámina no es inventar un monstruo sino dibujar como ancestral una escuela de hace veinte años.",
+        "previous_note": "Es la única ficha del corpus que no es mito sino leyenda fechada, y la extracción tuvo que separar dos cosas que la ortografía junta: los Wachirajua-espíritus del relato de fundación y Wuachirajua, la presencia de 1948 en adelante, que comparten nombre y ninguna otra cosa; y la pasada de lugares y arquitectura, que en los otros dos relatos devolvió monte y claro, aquí devolvió un internado concreto con piezas, archivadores, cancha y una maloca que resultó ser obra pública de 2004-2007, de modo que el peligro de esta lámina no es inventar un monstruo sino dibujar como ancestral una escuela de hace veinte años."
       },
       "entity_refs": [
         {
@@ -1109,9 +1122,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó esta lectura fue la pasada de variantes, porque aquí el propio corpus conserva dos registros enfrentados y fechados —la paloma de la transcripción del 15 de agosto de 2010 y el samuro de la corrección de Manuel Sánchez en 2023— y la decisión fue producir el ave corregida y guardar la anterior dentro de su misma hoja, con su fecha, en vez de suprimirla; y la pasada de objetos y plantas mostró que el giro entero del relato es una faena doméstica y no un acto —tumbar la palma y esperar la fermentación es el primer paso del vinete—, lo que obligó a que la ficha de la palma sirviera en pie y caída sin que la escena se lea nunca como sacrificio."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó esta lectura fue la pasada de variantes, porque aquí el propio corpus conserva dos registros enfrentados y fechados —la paloma de la transcripción del 15 de agosto de 2010 y el samuro de la corrección de Manuel Sánchez en 2023— y la decisión fue producir el ave corregida y guardar la anterior dentro de su misma hoja, con su fecha, en vez de suprimirla; y la pasada de objetos y plantas mostró que el giro entero del relato es una faena doméstica y no un acto —tumbar la palma y esperar la fermentación es el primer paso del vinete—, lo que obligó a que la ficha de la palma sirviera en pie y caída sin que la escena se lea nunca como sacrificio.",
+        "previous_note": "Lo que separó esta lectura fue la pasada de variantes, porque aquí el propio corpus conserva dos registros enfrentados y fechados —la paloma de la transcripción del 15 de agosto de 2010 y el samuro de la corrección de Manuel Sánchez en 2023— y la decisión fue producir el ave corregida y guardar la anterior dentro de su misma hoja, con su fecha, en vez de suprimirla; y la pasada de objetos y plantas mostró que el giro entero del relato es una faena doméstica y no un acto —tumbar la palma y esperar la fermentación es el primer paso del vinete—, lo que obligó a que la ficha de la palma sirviera en pie y caída sin que la escena se lea nunca como sacrificio."
       },
       "entity_refs": [
         {
@@ -5789,5 +5803,20 @@
       "retired_at": "2026-09-19",
       "reason": "Es la tecnica del SITIO, no la de la biblia. Las imagenes de las paginas de mito son papel recortado 2D; la biblia, los tripticos y los keyframes son maqueta 3D fotografiada. La misma cadena aparecia identica en siete corpus y contradecia el `technique` de cada uno, que si es de maqueta. Se retira en vez de plegarse porque poner «tridimensional inmersiva» y «2D de acabado plano» en frases contiguas dentro del bloque que abre y manda es peor que no decir nada."
     }
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 3,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "a1a0f69990eb5ea7b51c468c279148f0d74989611e90af527911063f222c371b",
+      "max_source_updated_at": "2026-07-28T21:30:18.676Z"
+    }
+  ]
 }

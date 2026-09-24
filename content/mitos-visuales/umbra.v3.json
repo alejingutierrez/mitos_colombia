@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Umbra (communities.slug = umbra)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -17,7 +17,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 2,
     "fields": [
       "mito",
@@ -25,8 +25,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "b3e21256b35851c9c5b20f252d58cb79e7059e83a3b5723ff63ee23bc684afc5",
-    "max_source_updated_at": "2026-07-28T19:17:35.239Z"
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "max_source_updated_at": "2026-09-20T00:19:42.205Z"
   },
   "research": {
     "sources": [
@@ -791,8 +791,8 @@
     "dossier": "docs/investigacion/umbra.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -802,7 +802,17 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "los-jeques-que-desaparecieron-en-batero",
+        "tasime-el-incesto"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "los-jeques-que-desaparecieron-en-batero": {
@@ -825,9 +835,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó el rumor del prodigio, que es lo único que este relato pide y lo que todo ilustrador le quita: no hay portal, ni desvanecimiento, ni luz, porque la fuente dice que los jeques difundieron una versión destinada a ser vista desde afuera mientras bajaban por otro lado, de modo que el inventario tuvo que producir dos recorridos simultáneos y una regla negativa —la niebla tapa y jamás revela— en lugar de una entidad sobrenatural; y separó también dos geografías que el censo tenía pegadas, porque el «valle de Umbra» por donde se acerca Belalcázar es, en palabras del propio testimonio, «hoy Belén de Umbría» y no Quinchía, lo que cambia la composición entera de la lámina del cerro: la amenaza entra por el horizonte y no por el pie."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó el rumor del prodigio, que es lo único que este relato pide y lo que todo ilustrador le quita: no hay portal, ni desvanecimiento, ni luz, porque la fuente dice que los jeques difundieron una versión destinada a ser vista desde afuera mientras bajaban por otro lado, de modo que el inventario tuvo que producir dos recorridos simultáneos y una regla negativa —la niebla tapa y jamás revela— en lugar de una entidad sobrenatural; y separó también dos geografías que el censo tenía pegadas, porque el «valle de Umbra» por donde se acerca Belalcázar es, en palabras del propio testimonio, «hoy Belén de Umbría» y no Quinchía, lo que cambia la composición entera de la lámina del cerro: la amenaza entra por el horizonte y no por el pie.",
+        "previous_note": "La lectura separó el rumor del prodigio, que es lo único que este relato pide y lo que todo ilustrador le quita: no hay portal, ni desvanecimiento, ni luz, porque la fuente dice que los jeques difundieron una versión destinada a ser vista desde afuera mientras bajaban por otro lado, de modo que el inventario tuvo que producir dos recorridos simultáneos y una regla negativa —la niebla tapa y jamás revela— en lugar de una entidad sobrenatural; y separó también dos geografías que el censo tenía pegadas, porque el «valle de Umbra» por donde se acerca Belalcázar es, en palabras del propio testimonio, «hoy Belén de Umbría» y no Quinchía, lo que cambia la composición entera de la lámina del cerro: la amenaza entra por el horizonte y no por el pie."
       },
       "entity_refs": [
         {
@@ -927,9 +938,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que la pintura hace de aquello en lo que la tradición la ha convertido: el beé resultó ser dos gestos y no uno —las manos primero, la espalda después, y la mancha descubierta «por la mañana cuando todos salían para el trabajo»—, y sobre esa distinción se repartió el inventario, con el objeto en su propia hoja, la marca como superficie dentro de la hoja del hermano y el disco lunar como tercer soporte de la misma pintura; el segundo corte fue de especies y lo hizo el texto y no el editor, porque la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» y rayas descarta la roseta del jaguar desde la fuente primaria, mientras que el cierre —«se transformó en lobo»— apunta al único cánido silvestre con registro publicado en Risaralda y no al lobo gris del hemisferio norte, que aquí no existe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que la pintura hace de aquello en lo que la tradición la ha convertido: el beé resultó ser dos gestos y no uno —las manos primero, la espalda después, y la mancha descubierta «por la mañana cuando todos salían para el trabajo»—, y sobre esa distinción se repartió el inventario, con el objeto en su propia hoja, la marca como superficie dentro de la hoja del hermano y el disco lunar como tercer soporte de la misma pintura; el segundo corte fue de especies y lo hizo el texto y no el editor, porque la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» y rayas descarta la roseta del jaguar desde la fuente primaria, mientras que el cierre —«se transformó en lobo»— apunta al único cánido silvestre con registro publicado en Risaralda y no al lobo gris del hemisferio norte, que aquí no existe.",
+        "previous_note": "La lectura separó lo que la pintura hace de aquello en lo que la tradición la ha convertido: el beé resultó ser dos gestos y no uno —las manos primero, la espalda después, y la mancha descubierta «por la mañana cuando todos salían para el trabajo»—, y sobre esa distinción se repartió el inventario, con el objeto en su propia hoja, la marca como superficie dentro de la hoja del hermano y el disco lunar como tercer soporte de la misma pintura; el segundo corte fue de especies y lo hizo el texto y no el editor, porque la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» y rayas descarta la roseta del jaguar desde la fuente primaria, mientras que el cierre —«se transformó en lobo»— apunta al único cánido silvestre con registro publicado en Risaralda y no al lobo gris del hemisferio norte, que aquí no existe."
       },
       "entity_refs": [
         {
@@ -4109,5 +4121,20 @@
       "Sin regalia inventada, tocados panindígenas, coronas, insignias de jeque ni símbolos aztecas, mayas o muiscas; ninguna fuente documenta vestuario umbra y este sistema no lo suple.",
       "Sin rasgos que permitan ubicar o seguir un sitio: ni ruta de acceso al sendero de La Güaira, ni confluencia legible como mapa, ni perfil que sirva de guía."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 2,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "b3e21256b35851c9c5b20f252d58cb79e7059e83a3b5723ff63ee23bc684afc5",
+      "max_source_updated_at": "2026-07-28T19:17:35.239Z"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "region": "Pacífico",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Wounaan (communities.slug = wounaan)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -20,7 +20,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 5,
     "fields": [
       "mito",
@@ -28,8 +28,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "dc8d9b614c17e86f4c57e0c778b8b167afcab0fd3d1e0c050675cc40be7e2fc6",
-    "max_source_updated_at": "2026-07-28T08:25:16.161Z"
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "max_source_updated_at": "2026-09-20T00:12:50.065Z"
   },
   "research": {
     "sources": [
@@ -1053,8 +1053,8 @@
     "dossier": "docs/investigacion/wounaan.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1064,7 +1064,20 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas",
+        "la-sal-del-weguer",
+        "las-manos-de-barro",
+        "madre-name"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-baston-de-sueno": {
@@ -1087,9 +1100,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la página heredada —un joven, una niña enferma, un bastón luminoso y un espíritu con forma de pez, que ninguna fuente acredita— de lo que de verdad hay debajo, que no es un mito antiguo sino memoria comunitaria reciente de Santa Marta de Curiche, con personas nombradas, un desplazamiento que destruyó la vivienda ceremonial y los instrumentos, y un retorno: componerla con estética de tiempo ancestral falsificaría la fuente. Dentro de eso separó tres cosas que deciden lámina: la geometría invertida del ruego —mujeres en el círculo interior, hombres en el anillo exterior, cuatro flautistas—, que es lo contrario del reflejo habitual y se dibuja tal cual; el golpe de la barca como señal de larga distancia, que existe porque el poblamiento era disperso y las casas estaban lejos unas de otras; y el término benkhuun frente a jaibaná, que es el cortafuegos de todo el corpus. Y corrigió la primaria que traía el script: era Mariano Membache, que es una persona real identificada y está excluida de toda lámina."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la página heredada —un joven, una niña enferma, un bastón luminoso y un espíritu con forma de pez, que ninguna fuente acredita— de lo que de verdad hay debajo, que no es un mito antiguo sino memoria comunitaria reciente de Santa Marta de Curiche, con personas nombradas, un desplazamiento que destruyó la vivienda ceremonial y los instrumentos, y un retorno: componerla con estética de tiempo ancestral falsificaría la fuente. Dentro de eso separó tres cosas que deciden lámina: la geometría invertida del ruego —mujeres en el círculo interior, hombres en el anillo exterior, cuatro flautistas—, que es lo contrario del reflejo habitual y se dibuja tal cual; el golpe de la barca como señal de larga distancia, que existe porque el poblamiento era disperso y las casas estaban lejos unas de otras; y el término benkhuun frente a jaibaná, que es el cortafuegos de todo el corpus. Y corrigió la primaria que traía el script: era Mariano Membache, que es una persona real identificada y está excluida de toda lámina.",
+        "previous_note": "La lectura separó la página heredada —un joven, una niña enferma, un bastón luminoso y un espíritu con forma de pez, que ninguna fuente acredita— de lo que de verdad hay debajo, que no es un mito antiguo sino memoria comunitaria reciente de Santa Marta de Curiche, con personas nombradas, un desplazamiento que destruyó la vivienda ceremonial y los instrumentos, y un retorno: componerla con estética de tiempo ancestral falsificaría la fuente. Dentro de eso separó tres cosas que deciden lámina: la geometría invertida del ruego —mujeres en el círculo interior, hombres en el anillo exterior, cuatro flautistas—, que es lo contrario del reflejo habitual y se dibuja tal cual; el golpe de la barca como señal de larga distancia, que existe porque el poblamiento era disperso y las casas estaban lejos unas de otras; y el término benkhuun frente a jaibaná, que es el cortafuegos de todo el corpus. Y corrigió la primaria que traía el script: era Mariano Membache, que es una persona real identificada y está excluida de toda lámina."
       },
       "entity_refs": [
         {
@@ -1224,9 +1238,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos barcas que el título heredado y la proximidad invitaban a fundir, y el canon prohíbe expresamente fundir: la de iniciación se sostiene en las manos, lleva dentro los pasajeros tallados —los páchaidáma, elegidos a lo largo de toda la formación, de modo que cada barca es irrepetible— y acompaña un aprendizaje; la de la rogativa cuelga vacía en el centro, tiene la proa hacia donde nace el sol y suena. También separó el color de la trama: «La barca de dos tintas» queda retirada como argumento, pero las pintas negras de jagua y rojas de achiote sobre el blanco del balso están documentadas como hecho material, y la lectura bien/mal es glosa institucional y no voz wounaan. Y encontró el vínculo léxico que sostiene media biblia: la misma raíz woun meu, pachaain, nombra a los muñecos de barro del origen y a los pasajeros tallados. La primaria que traía el script era el aprendiz, que es el mismo oficio en otra etapa y está embebido en la ficha del benkhuun."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos barcas que el título heredado y la proximidad invitaban a fundir, y el canon prohíbe expresamente fundir: la de iniciación se sostiene en las manos, lleva dentro los pasajeros tallados —los páchaidáma, elegidos a lo largo de toda la formación, de modo que cada barca es irrepetible— y acompaña un aprendizaje; la de la rogativa cuelga vacía en el centro, tiene la proa hacia donde nace el sol y suena. También separó el color de la trama: «La barca de dos tintas» queda retirada como argumento, pero las pintas negras de jagua y rojas de achiote sobre el blanco del balso están documentadas como hecho material, y la lectura bien/mal es glosa institucional y no voz wounaan. Y encontró el vínculo léxico que sostiene media biblia: la misma raíz woun meu, pachaain, nombra a los muñecos de barro del origen y a los pasajeros tallados. La primaria que traía el script era el aprendiz, que es el mismo oficio en otra etapa y está embebido en la ficha del benkhuun.",
+        "previous_note": "La lectura separó dos barcas que el título heredado y la proximidad invitaban a fundir, y el canon prohíbe expresamente fundir: la de iniciación se sostiene en las manos, lleva dentro los pasajeros tallados —los páchaidáma, elegidos a lo largo de toda la formación, de modo que cada barca es irrepetible— y acompaña un aprendizaje; la de la rogativa cuelga vacía en el centro, tiene la proa hacia donde nace el sol y suena. También separó el color de la trama: «La barca de dos tintas» queda retirada como argumento, pero las pintas negras de jagua y rojas de achiote sobre el blanco del balso están documentadas como hecho material, y la lectura bien/mal es glosa institucional y no voz wounaan. Y encontró el vínculo léxico que sostiene media biblia: la misma raíz woun meu, pachaain, nombra a los muñecos de barro del origen y a los pasajeros tallados. La primaria que traía el script era el aprendiz, que es el mismo oficio en otra etapa y está embebido en la ficha del benkhuun."
       },
       "entity_refs": [
         {
@@ -1371,9 +1386,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos relojes dentro de un mismo relato de creación y descubrió que la costura va al revés de lo que parece: la sal no es colonial —los engaños de Dösãt hicieron que Hẽwandam volviera salados los océanos, que antes eran de agua dulce— y Dösãt no es un demonio sino un embaucador que enseñó las artes del benkhuun, las plantas contra la mordedura de serpiente y a curar con palabras que se cantan; lo colonial son cuatro objetos que el propio texto nombra, la ropa que Ewandam va a buscar, el machete y el hacha que Dosat trae y el barco de la sal, y la imagen tiene que dejar ver esa costura en vez de alisarla. Lo que convierte a Dösãt en Satán es una traducción bíblica de la segunda mitad del siglo XX que produjo la expulsión de chamanes, de modo que cualquier marca visual que lo señale como el malo la reintroduce. Y separó la competencia de la cestería: las parejas se conservan nombradas —plátano/platanillo, caña de azúcar/caña brava, chontaduro/weguer— porque sin ellas el episodio se vuelve genérico, y el canasto lleva escrita dentro la prohibición de su patrón, que es identidad y es el sustento de las tejedoras."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos relojes dentro de un mismo relato de creación y descubrió que la costura va al revés de lo que parece: la sal no es colonial —los engaños de Dösãt hicieron que Hẽwandam volviera salados los océanos, que antes eran de agua dulce— y Dösãt no es un demonio sino un embaucador que enseñó las artes del benkhuun, las plantas contra la mordedura de serpiente y a curar con palabras que se cantan; lo colonial son cuatro objetos que el propio texto nombra, la ropa que Ewandam va a buscar, el machete y el hacha que Dosat trae y el barco de la sal, y la imagen tiene que dejar ver esa costura en vez de alisarla. Lo que convierte a Dösãt en Satán es una traducción bíblica de la segunda mitad del siglo XX que produjo la expulsión de chamanes, de modo que cualquier marca visual que lo señale como el malo la reintroduce. Y separó la competencia de la cestería: las parejas se conservan nombradas —plátano/platanillo, caña de azúcar/caña brava, chontaduro/weguer— porque sin ellas el episodio se vuelve genérico, y el canasto lleva escrita dentro la prohibición de su patrón, que es identidad y es el sustento de las tejedoras.",
+        "previous_note": "La lectura separó dos relojes dentro de un mismo relato de creación y descubrió que la costura va al revés de lo que parece: la sal no es colonial —los engaños de Dösãt hicieron que Hẽwandam volviera salados los océanos, que antes eran de agua dulce— y Dösãt no es un demonio sino un embaucador que enseñó las artes del benkhuun, las plantas contra la mordedura de serpiente y a curar con palabras que se cantan; lo colonial son cuatro objetos que el propio texto nombra, la ropa que Ewandam va a buscar, el machete y el hacha que Dosat trae y el barco de la sal, y la imagen tiene que dejar ver esa costura en vez de alisarla. Lo que convierte a Dösãt en Satán es una traducción bíblica de la segunda mitad del siglo XX que produjo la expulsión de chamanes, de modo que cualquier marca visual que lo señale como el malo la reintroduce. Y separó la competencia de la cestería: las parejas se conservan nombradas —plátano/platanillo, caña de azúcar/caña brava, chontaduro/weguer— porque sin ellas el episodio se vuelve genérico, y el canasto lleva escrita dentro la prohibición de su patrón, que es identidad y es el sustento de las tejedoras."
       },
       "entity_refs": [
         {
@@ -1518,9 +1534,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó a Maach Aai de Ewandam, que la síntesis institucional comprime y la memoria comunitaria distingue con funciones distintas: el padre forma la tierra, las montañas, el mar, el sol, la luna y la playa del río Sábalo, y el hijo es quien pide que exista la gente. De ahí salió la decisión visual más fuerte del corpus: Maach Aai se ve sólo por las manos, porque la firma de esta biblia es la mano que forma y porque darle cuerpo lo volvería un anciano genérico de creación. También separó el lugar del tiempo —la playa del Baudó pertenece al tiempo cosmogónico y Santa Marta de Curiche es la comunidad que publicó la versión, no el escenario— y el tercer mundo del cuarto, que otra síntesis cuenta distinto y que la lámina no numera. Y confirmó que la gente llega después del río, las montañas y el cielo, de modo que su lámina no puede componerse como un comienzo vacío."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó a Maach Aai de Ewandam, que la síntesis institucional comprime y la memoria comunitaria distingue con funciones distintas: el padre forma la tierra, las montañas, el mar, el sol, la luna y la playa del río Sábalo, y el hijo es quien pide que exista la gente. De ahí salió la decisión visual más fuerte del corpus: Maach Aai se ve sólo por las manos, porque la firma de esta biblia es la mano que forma y porque darle cuerpo lo volvería un anciano genérico de creación. También separó el lugar del tiempo —la playa del Baudó pertenece al tiempo cosmogónico y Santa Marta de Curiche es la comunidad que publicó la versión, no el escenario— y el tercer mundo del cuarto, que otra síntesis cuenta distinto y que la lámina no numera. Y confirmó que la gente llega después del río, las montañas y el cielo, de modo que su lámina no puede componerse como un comienzo vacío.",
+        "previous_note": "La lectura separó a Maach Aai de Ewandam, que la síntesis institucional comprime y la memoria comunitaria distingue con funciones distintas: el padre forma la tierra, las montañas, el mar, el sol, la luna y la playa del río Sábalo, y el hijo es quien pide que exista la gente. De ahí salió la decisión visual más fuerte del corpus: Maach Aai se ve sólo por las manos, porque la firma de esta biblia es la mano que forma y porque darle cuerpo lo volvería un anciano genérico de creación. También separó el lugar del tiempo —la playa del Baudó pertenece al tiempo cosmogónico y Santa Marta de Curiche es la comunidad que publicó la versión, no el escenario— y el tercer mundo del cuarto, que otra síntesis cuenta distinto y que la lámina no numera. Y confirmó que la gente llega después del río, las montañas y el cielo, de modo que su lámina no puede componerse como un comienzo vacío."
       },
       "entity_refs": [
         {
@@ -1605,9 +1622,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que puede dibujarse de lo que el módulo excluye, y en este relato eso es casi todo el centro: la escena de los niños obligados a comer, la lanza y la sepultura están fuera de la producción visual, de modo que la ficha de la anciana se resuelve viva y en el umbral, con los ñames por delante, y la del cultivo se resuelve sin tumba, sin cruz y sin montículo. También separó una procedencia que el resto del corpus no comparte: el relato lo narró Juan Perdiz en woun meu en Puerto Pizario, comunidad Wounaan Nonam del Pacífico vallecaucano, y pasó al español y después al portugués antes de volver, de modo que no es chocoano y su lámina no se funde con las del Baudó ni las del bajo San Juan. Y fijó el detalle documentado que la hoja botánica no puede perder: las raíces son grandes y de dos colores, unas blancas y otras rojas, aunque la especie de Dioscorea y el aspecto del tubérculo no estén documentados en ninguna parte."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que puede dibujarse de lo que el módulo excluye, y en este relato eso es casi todo el centro: la escena de los niños obligados a comer, la lanza y la sepultura están fuera de la producción visual, de modo que la ficha de la anciana se resuelve viva y en el umbral, con los ñames por delante, y la del cultivo se resuelve sin tumba, sin cruz y sin montículo. También separó una procedencia que el resto del corpus no comparte: el relato lo narró Juan Perdiz en woun meu en Puerto Pizario, comunidad Wounaan Nonam del Pacífico vallecaucano, y pasó al español y después al portugués antes de volver, de modo que no es chocoano y su lámina no se funde con las del Baudó ni las del bajo San Juan. Y fijó el detalle documentado que la hoja botánica no puede perder: las raíces son grandes y de dos colores, unas blancas y otras rojas, aunque la especie de Dioscorea y el aspecto del tubérculo no estén documentados en ninguna parte.",
+        "previous_note": "La lectura separó lo que puede dibujarse de lo que el módulo excluye, y en este relato eso es casi todo el centro: la escena de los niños obligados a comer, la lanza y la sepultura están fuera de la producción visual, de modo que la ficha de la anciana se resuelve viva y en el umbral, con los ñames por delante, y la del cultivo se resuelve sin tumba, sin cruz y sin montículo. También separó una procedencia que el resto del corpus no comparte: el relato lo narró Juan Perdiz en woun meu en Puerto Pizario, comunidad Wounaan Nonam del Pacífico vallecaucano, y pasó al español y después al portugués antes de volver, de modo que no es chocoano y su lámina no se funde con las del Baudó ni las del bajo San Juan. Y fijó el detalle documentado que la hoja botánica no puede perder: las raíces son grandes y de dos colores, unas blancas y otras rojas, aunque la especie de Dioscorea y el aspecto del tubérculo no estén documentados en ninguna parte."
       },
       "entity_refs": [
         {
@@ -8312,5 +8330,20 @@
       "Ningún sombrero de wérregue ni tinte morado: no están documentados.",
       "Cuerpo y rostro se resuelven en pasos distintos: rostro de óvalo plano de un solo tono con rasgos como piezas recortadas aparte, y pocas piezas planas grandes con el borde en dientes en vez de pluma o pelo individual."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 5,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "dc8d9b614c17e86f4c57e0c778b8b167afcab0fd3d1e0c050675cc40be7e2fc6",
+      "max_source_updated_at": "2026-07-28T08:25:16.161Z"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "region": "Amazonía",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Ufaina / Tanimuka (communities.slug = ufaina)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -16,7 +16,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 1,
     "fields": [
       "mito",
@@ -24,8 +24,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "60211d4ba8e8435cec3e3648dd41c06978cb2e21620a0f341b6088b26bb2eea3",
-    "max_source_updated_at": "2026-07-29T19:57:29.197Z"
+    "sha256": "1aaa30b3d70bf5aafd9d3828039d6e628c8a39470a236d76f2cfa906cd8e6361",
+    "max_source_updated_at": "2026-09-20T00:19:53.598Z"
   },
   "research": {
     "sources": [
@@ -701,8 +701,8 @@
     "dossier": "docs/investigacion/ufaina.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -712,7 +712,16 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "creacion-ufaina"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "creacion-ufaina": {
@@ -735,9 +744,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó esta lectura es que la «una página» son cuatro episodios con escenario, antagonista y objeto propios, y que la palabra que los cose es «estantillo»: los cuatro postes que el abuelo mide en su pecho para sostener la primera maloca y los cuatro postes con llave de agua y ventanilla en que la tía guarda el agua y los peces son la misma pieza, de modo que la extracción tuvo que fichar el edificio y el depósito por separado sin romper la rima; y como la fuente declara que el ciclo le fue contado saltando episodios y cambiando el orden, la pasada de variantes no buscó reconstruir la secuencia sino marcar lo que falta —el Yuruparí retirado a petición de los narradores, el interior de la maloca y las dos procedencias distintas del río, el poste-boa del tercer episodio y el árbol del cuarto, que conviven en el ciclo y no se pueden dibujar como el mismo suceso."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó esta lectura es que la «una página» son cuatro episodios con escenario, antagonista y objeto propios, y que la palabra que los cose es «estantillo»: los cuatro postes que el abuelo mide en su pecho para sostener la primera maloca y los cuatro postes con llave de agua y ventanilla en que la tía guarda el agua y los peces son la misma pieza, de modo que la extracción tuvo que fichar el edificio y el depósito por separado sin romper la rima; y como la fuente declara que el ciclo le fue contado saltando episodios y cambiando el orden, la pasada de variantes no buscó reconstruir la secuencia sino marcar lo que falta —el Yuruparí retirado a petición de los narradores, el interior de la maloca y las dos procedencias distintas del río, el poste-boa del tercer episodio y el árbol del cuarto, que conviven en el ciclo y no se pueden dibujar como el mismo suceso.",
+        "previous_note": "Lo que separó esta lectura es que la «una página» son cuatro episodios con escenario, antagonista y objeto propios, y que la palabra que los cose es «estantillo»: los cuatro postes que el abuelo mide en su pecho para sostener la primera maloca y los cuatro postes con llave de agua y ventanilla en que la tía guarda el agua y los peces son la misma pieza, de modo que la extracción tuvo que fichar el edificio y el depósito por separado sin romper la rima; y como la fuente declara que el ciclo le fue contado saltando episodios y cambiando el orden, la pasada de variantes no buscó reconstruir la secuencia sino marcar lo que falta —el Yuruparí retirado a petición de los narradores, el interior de la maloca y las dos procedencias distintas del río, el poste-boa del tercer episodio y el árbol del cuarto, que conviven en el ciclo y no se pueden dibujar como el mismo suceso."
       },
       "entity_refs": [
         {
@@ -4425,5 +4435,20 @@
       "Ningún sitio del Apaporis o del Mirití con perfil reconocible, ni mapa, ni coordenada, ni sitio sagrado.",
       "Ningún metal identificable, arma de fuego, tela industrial, objeto de mercado ni figura europea."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 1,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "60211d4ba8e8435cec3e3648dd41c06978cb2e21620a0f341b6088b26bb2eea3",
+      "max_source_updated_at": "2026-07-29T19:57:29.197Z"
+    }
+  ]
 }

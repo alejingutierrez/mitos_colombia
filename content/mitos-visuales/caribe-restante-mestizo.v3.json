@@ -7,7 +7,7 @@
   "region": "Caribe",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento caribe-restante-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -30,7 +30,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 11,
     "fields": [
       "content",
@@ -39,8 +39,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "dbf107a9756355c956c5799ba63e2e1de7595ac45e1ac997792ff86cee3e28bf",
-    "max_source_updated_at": "2026-07-23T01:04:21.971Z"
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "max_source_updated_at": "2026-09-22T21:08:19.676Z"
   },
   "research": {
     "sources": [
@@ -1183,8 +1183,8 @@
     "dossier": "docs/investigacion/caribe-restante-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1194,7 +1194,26 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "el-castellano-de-san-juan",
+        "el-tesoro-de-morgan",
+        "genus-irritable-vatum",
+        "la-bruja-del-trinche",
+        "la-sirena-de-hurtado",
+        "las-clavelinas",
+        "mico-y-nansi",
+        "tiger-y-el-baile-de-perros",
+        "tigre-y-nansi",
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "beda-nansi-beda-monkey-y-el-molino": {
@@ -1219,9 +1238,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó al agente vivo del agente que no lo es: el molino atrapa, contesta «Yo molinero» y mata, y no tiene molinero ni dueño, así que se ficha el objeto solo y sin figura al lado; y confirmó que el escenario escrito —monte, follaje denso, bosque— no existe en una emergencia coralina de trece por tres kilómetros, de modo que la trampa queda en claro de cocotal."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó al agente vivo del agente que no lo es: el molino atrapa, contesta «Yo molinero» y mata, y no tiene molinero ni dueño, así que se ficha el objeto solo y sin figura al lado; y confirmó que el escenario escrito —monte, follaje denso, bosque— no existe en una emergencia coralina de trece por tres kilómetros, de modo que la trampa queda en claro de cocotal.",
+        "previous_note": "La lectura separó al agente vivo del agente que no lo es: el molino atrapa, contesta «Yo molinero» y mata, y no tiene molinero ni dueño, así que se ficha el objeto solo y sin figura al lado; y confirmó que el escenario escrito —monte, follaje denso, bosque— no existe en una emergencia coralina de trece por tres kilómetros, de modo que la trampa queda en claro de cocotal."
       },
       "entity_refs": [
         {
@@ -1278,9 +1298,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura corrigió el edificio central de la página: lo que el texto llama castillo es el Fuerte San Juan de las Matas de 1602, de playa y en estrella de cuatro rayos, con artillería exigua, y Santa Marta no tenía muralla; también separó el trozo de carne —que es la bisagra de todo el relato y aun así es un prop de mano— de la figura que lo arroja."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura corrigió el edificio central de la página: lo que el texto llama castillo es el Fuerte San Juan de las Matas de 1602, de playa y en estrella de cuatro rayos, con artillería exigua, y Santa Marta no tenía muralla; también separó el trozo de carne —que es la bisagra de todo el relato y aun así es un prop de mano— de la figura que lo arroja.",
+        "previous_note": "La lectura corrigió el edificio central de la página: lo que el texto llama castillo es el Fuerte San Juan de las Matas de 1602, de playa y en estrella de cuatro rayos, con artillería exigua, y Santa Marta no tenía muralla; también separó el trozo de carne —que es la bisagra de todo el relato y aun así es un prop de mano— de la figura que lo arroja."
       },
       "entity_refs": [
         {
@@ -1357,9 +1378,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La decisión más pesada del corpus se tomó en esta lectura: las ánimas son el centro moral de la página y se dibujan como jóvenes de cuerpo entero, con rostro y ropa, de pie y hablando; y el osario con sus cuatro cráneos y el fémur queda excluido y no se repone, porque ilustrarlo convertiría a esas personas en atrezo de terror justo donde el relato les devuelve voz."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La decisión más pesada del corpus se tomó en esta lectura: las ánimas son el centro moral de la página y se dibujan como jóvenes de cuerpo entero, con rostro y ropa, de pie y hablando; y el osario con sus cuatro cráneos y el fémur queda excluido y no se repone, porque ilustrarlo convertiría a esas personas en atrezo de terror justo donde el relato les devuelve voz.",
+        "previous_note": "La decisión más pesada del corpus se tomó en esta lectura: las ánimas son el centro moral de la página y se dibujan como jóvenes de cuerpo entero, con rostro y ropa, de pie y hablando; y el osario con sus cuatro cráneos y el fémur queda excluido y no se repone, porque ilustrarlo convertiría a esas personas en atrezo de terror justo donde el relato les devuelve voz."
       },
       "entity_refs": [
         {
@@ -1436,9 +1458,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una página que se juega entera en palabras: la lectura dejó fuera las coplas, la oda y el duelo poético, que no reciben cuerpo, y se quedó con lo que sí lo tiene —la columna de marcha con su vanguardia, su centro y su retaguardia, y el soldado coplero—; los indios de El Carbón quedan excluidos porque ilustrarlos desde este texto sería ilustrar la burla."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una página que se juega entera en palabras: la lectura dejó fuera las coplas, la oda y el duelo poético, que no reciben cuerpo, y se quedó con lo que sí lo tiene —la columna de marcha con su vanguardia, su centro y su retaguardia, y el soldado coplero—; los indios de El Carbón quedan excluidos porque ilustrarlos desde este texto sería ilustrar la burla.",
+        "previous_note": "Una página que se juega entera en palabras: la lectura dejó fuera las coplas, la oda y el duelo poético, que no reciben cuerpo, y se quedó con lo que sí lo tiene —la columna de marcha con su vanguardia, su centro y su retaguardia, y el soldado coplero—; los indios de El Carbón quedan excluidos porque ilustrarlos desde este texto sería ilustrar la burla."
       },
       "entity_refs": [
         {
@@ -1505,9 +1528,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura resolvió qué es el objeto del título y descubrió que eso mismo la bloquea: el trinche es el peine de alambre duro con mango de madera de la guacharaca y por eso «brilla como aguja», pero su atribución está sin resolver y arrastra a la ficha central de la página; el búho y la culebra se fichan juntos porque la culebra cae del búho y la escena es una."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura resolvió qué es el objeto del título y descubrió que eso mismo la bloquea: el trinche es el peine de alambre duro con mango de madera de la guacharaca y por eso «brilla como aguja», pero su atribución está sin resolver y arrastra a la ficha central de la página; el búho y la culebra se fichan juntos porque la culebra cae del búho y la escena es una.",
+        "previous_note": "La lectura resolvió qué es el objeto del título y descubrió que eso mismo la bloquea: el trinche es el peine de alambre duro con mango de madera de la guacharaca y por eso «brilla como aguja», pero su atribución está sin resolver y arrastra a la ficha central de la página; el búho y la culebra se fichan juntos porque la culebra cae del búho y la escena es una."
       },
       "entity_refs": [
         {
@@ -1589,9 +1613,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos estados que cambian la silueta entera —la muchacha de cabello suelto en la piedra alta y la cola que late donde tenía pies— y fijó el tono del segundo: el pozo «no roba, sino que cobra», de modo que la sirena se dibuja serena y no doliente; la Semana Santa entra como silencio y no como procesión, callando el conjunto vallenato ya fichado."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos estados que cambian la silueta entera —la muchacha de cabello suelto en la piedra alta y la cola que late donde tenía pies— y fijó el tono del segundo: el pozo «no roba, sino que cobra», de modo que la sirena se dibuja serena y no doliente; la Semana Santa entra como silencio y no como procesión, callando el conjunto vallenato ya fichado.",
+        "previous_note": "La lectura separó dos estados que cambian la silueta entera —la muchacha de cabello suelto en la piedra alta y la cola que late donde tenía pies— y fijó el tono del segundo: el pozo «no roba, sino que cobra», de modo que la sirena se dibuja serena y no doliente; la Semana Santa entra como silencio y no como procesión, callando el conjunto vallenato ya fichado."
       },
       "entity_refs": [
         {
@@ -1653,9 +1678,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La única página del corpus que transcurre fuera de sus tres bloques obligó a un reparto entre biblias: la arquitectura cartagenera se excluye porque el corpus vecino la cubre, y de Claver se produce aquí la única ficha del proyecto, fechada entre 1651 y 1654 por su parálisis y su muleta; Yariva se dibuja despierta y de pie, y sin ningún rasgo que le atribuya un origen que no se pudo verificar."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La única página del corpus que transcurre fuera de sus tres bloques obligó a un reparto entre biblias: la arquitectura cartagenera se excluye porque el corpus vecino la cubre, y de Claver se produce aquí la única ficha del proyecto, fechada entre 1651 y 1654 por su parálisis y su muleta; Yariva se dibuja despierta y de pie, y sin ningún rasgo que le atribuya un origen que no se pudo verificar.",
+        "previous_note": "La única página del corpus que transcurre fuera de sus tres bloques obligó a un reparto entre biblias: la arquitectura cartagenera se excluye porque el corpus vecino la cubre, y de Claver se produce aquí la única ficha del proyecto, fechada entre 1651 y 1654 por su parálisis y su muleta; Yariva se dibuja despierta y de pie, y sin ningún rasgo que le atribuya un origen que no se pudo verificar."
       },
       "entity_refs": [
         {
@@ -1712,9 +1738,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "En esta página el ingenio cambia de dueño y la lectura lo respetó: Mico no es el observador del molino sino el cazador que teje un rejo y recupera su presa, y Nansi es quien huye; lo que la página aporta al inventario son dos props —la cabeza seca de perro tallada y el rejo— que ninguna ficha mayor absorbe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "En esta página el ingenio cambia de dueño y la lectura lo respetó: Mico no es el observador del molino sino el cazador que teje un rejo y recupera su presa, y Nansi es quien huye; lo que la página aporta al inventario son dos props —la cabeza seca de perro tallada y el rejo— que ninguna ficha mayor absorbe.",
+        "previous_note": "En esta página el ingenio cambia de dueño y la lectura lo respetó: Mico no es el observador del molino sino el cazador que teje un rejo y recupera su presa, y Nansi es quien huye; lo que la página aporta al inventario son dos props —la cabeza seca de perro tallada y el rejo— que ninguna ficha mayor absorbe."
       },
       "entity_refs": [
         {
@@ -1766,9 +1793,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página entera es una imagen y la lectura la fichó como tal: perros de etiqueta bajo la luna y, en la entrada, la hilera de bundas colgadas de un clavo. Nansi aquí sólo se invoca en la rima de las mujeres de Sound Bay y no actúa; y «bunda» no se resolvió, de modo que los objetos colgados se dibujan como silueta sin detalle identificable."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página entera es una imagen y la lectura la fichó como tal: perros de etiqueta bajo la luna y, en la entrada, la hilera de bundas colgadas de un clavo. Nansi aquí sólo se invoca en la rima de las mujeres de Sound Bay y no actúa; y «bunda» no se resolvió, de modo que los objetos colgados se dibujan como silueta sin detalle identificable.",
+        "previous_note": "La página entera es una imagen y la lectura la fichó como tal: perros de etiqueta bajo la luna y, en la entrada, la hilera de bundas colgadas de un clavo. Nansi aquí sólo se invoca en la rima de las mujeres de Sound Bay y no actúa; y «bunda» no se resolvió, de modo que los objetos colgados se dibujan como silueta sin detalle identificable."
       },
       "entity_refs": [
         {
@@ -1830,9 +1858,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura fijó la imagen del ciclo entero: Tiger ensillado y humillado entrando al patio delante de todo el pueblo, con Nansi encima aplicando fusta y espuelas. El público humano no es fondo sino el instrumento de la humillación, y la hija del rey es premio y no agente; la selva y el río de aguas negras del texto se sustituyen por cocotal y orilla de arrecife."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura fijó la imagen del ciclo entero: Tiger ensillado y humillado entrando al patio delante de todo el pueblo, con Nansi encima aplicando fusta y espuelas. El público humano no es fondo sino el instrumento de la humillación, y la hija del rey es premio y no agente; la selva y el río de aguas negras del texto se sustituyen por cocotal y orilla de arrecife.",
+        "previous_note": "La lectura fijó la imagen del ciclo entero: Tiger ensillado y humillado entrando al patio delante de todo el pueblo, con Nansi encima aplicando fusta y espuelas. El público humano no es fondo sino el instrumento de la humillación, y la hija del rey es premio y no agente; la selva y el río de aguas negras del texto se sustituyen por cocotal y orilla de arrecife."
       },
       "entity_refs": [
         {
@@ -1894,9 +1923,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que el perro y la cabra no se separan nunca y los fichó como pareja: uno responde al violín con el tambor y monta la guardia, la otra baila y se esconde bajo la olla. Y confirmó el segundo estado del tigre, que aquí no es bestia sino anfitrión con toallas, batas y té, que es la inversión exacta de su otra página."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que el perro y la cabra no se separan nunca y los fichó como pareja: uno responde al violín con el tambor y monta la guardia, la otra baila y se esconde bajo la olla. Y confirmó el segundo estado del tigre, que aquí no es bestia sino anfitrión con toallas, batas y té, que es la inversión exacta de su otra página.",
+        "previous_note": "La lectura comprobó que el perro y la cabra no se separan nunca y los fichó como pareja: uno responde al violín con el tambor y monta la guardia, la otra baila y se esconde bajo la olla. Y confirmó el segundo estado del tigre, que aquí no es bestia sino anfitrión con toallas, batas y té, que es la inversión exacta de su otra página."
       },
       "entity_refs": [
         {
@@ -10153,5 +10183,21 @@
       "ninguna mutilación, deformación ni desnudo en Yariva ni en la Sirena, y ningún cuerpo yacente para Yariva",
       "ninguna mezcla de bloques en un mismo cuadro: ni castillo samario en escena isleña, ni acordeón en escena colonial, ni cota de malla en el Cesar"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 11,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "dbf107a9756355c956c5799ba63e2e1de7595ac45e1ac997792ff86cee3e28bf",
+      "max_source_updated_at": "2026-07-23T01:04:21.971Z"
+    }
+  ]
 }

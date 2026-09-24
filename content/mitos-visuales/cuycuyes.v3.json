@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Cuycuyes (communities.slug = cuycuyes)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -17,7 +17,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 2,
     "fields": [
       "mito",
@@ -25,8 +25,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "86a44bd6d9fa31f7a6287d639933be90c2474442b59e74768b77ed030efad563",
-    "max_source_updated_at": "2026-07-28T16:56:20.821Z"
+    "sha256": "565ecebefc0ba4d3e8232b92b40be1ab8340f033f3c2b786ee1cb0eb93a1283e",
+    "max_source_updated_at": "2026-09-20T00:19:44.161Z"
   },
   "research": {
     "sources": [
@@ -993,8 +993,8 @@
     "dossier": "docs/investigacion/cuycuyes.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1004,7 +1004,17 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-diablo": {
@@ -1027,9 +1037,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que el cronista vio de lo que la divulgación le añadió, y de ese corte salieron cinco correcciones seguidas dentro de un solo párrafo: no son vasijas sino encensarios de barro, en plural y como tipo que existe en el registro excavado; no son flores cortadas sino hierbas rastreras que «casi no salían de la tierra», cada una con una sola flor, una blanca y otra tan oscura que sólo puede ser púrpura casi negro porque no hay pigmentos negros verdaderos en flores; el humo en capas no está en la fuente y pasa a ser decisión editorial declarada en vez de dato; la figura no es genérica sino «en figura de indio» y responde a los sacerdotes y no a cualquiera; y el recinto tiene tres capas —aposento, espacio esterado, y en lo secreto un retrete— y el oratorio que el cronista dice haber visto estaba en Paucora y no en Arma. Toda la escena existe en un solo párrafo de toda la obra, y por eso la ambigüedad se decide una vez y no se aclara después."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que el cronista vio de lo que la divulgación le añadió, y de ese corte salieron cinco correcciones seguidas dentro de un solo párrafo: no son vasijas sino encensarios de barro, en plural y como tipo que existe en el registro excavado; no son flores cortadas sino hierbas rastreras que «casi no salían de la tierra», cada una con una sola flor, una blanca y otra tan oscura que sólo puede ser púrpura casi negro porque no hay pigmentos negros verdaderos en flores; el humo en capas no está en la fuente y pasa a ser decisión editorial declarada en vez de dato; la figura no es genérica sino «en figura de indio» y responde a los sacerdotes y no a cualquiera; y el recinto tiene tres capas —aposento, espacio esterado, y en lo secreto un retrete— y el oratorio que el cronista dice haber visto estaba en Paucora y no en Arma. Toda la escena existe en un solo párrafo de toda la obra, y por eso la ambigüedad se decide una vez y no se aclara después.",
+        "previous_note": "La lectura separó lo que el cronista vio de lo que la divulgación le añadió, y de ese corte salieron cinco correcciones seguidas dentro de un solo párrafo: no son vasijas sino encensarios de barro, en plural y como tipo que existe en el registro excavado; no son flores cortadas sino hierbas rastreras que «casi no salían de la tierra», cada una con una sola flor, una blanca y otra tan oscura que sólo puede ser púrpura casi negro porque no hay pigmentos negros verdaderos en flores; el humo en capas no está en la fuente y pasa a ser decisión editorial declarada en vez de dato; la figura no es genérica sino «en figura de indio» y responde a los sacerdotes y no a cualquiera; y el recinto tiene tres capas —aposento, espacio esterado, y en lo secreto un retrete— y el oratorio que el cronista dice haber visto estaba en Paucora y no en Arma. Toda la escena existe en un solo párrafo de toda la obra, y por eso la ambigüedad se decide una vez y no se aclara después."
       },
       "entity_refs": [
         {
@@ -1159,9 +1170,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la cámara de la geología que se le supone, y la separación se hizo contando: sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren estos tres municipios hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía», y lo que hay es un manto de roca podrida de decenas de metros sobre esquistos y serpentinitas cuya forma característica no es la dolina sino el deslizamiento — de modo que la cámara no es kárstica pero sí tiene correlato, y es arqueológico: un abrigo con escalas labradas por mano humana y una piedra grabada al frente, que dos municipios se disputan, razón por la cual la prohibición de localización va reforzada y no relajada; la segunda separación fue de siglos y la hacen dos objetos, porque unas mantas plegadas de seis hilos por cuarto de pulgada y unos sombreros de cañabrava fechan el interior de la cueva en el siglo XIX, y un escondite prehispánico no tendría ni lo uno ni lo otro."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la cámara de la geología que se le supone, y la separación se hizo contando: sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren estos tres municipios hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía», y lo que hay es un manto de roca podrida de decenas de metros sobre esquistos y serpentinitas cuya forma característica no es la dolina sino el deslizamiento — de modo que la cámara no es kárstica pero sí tiene correlato, y es arqueológico: un abrigo con escalas labradas por mano humana y una piedra grabada al frente, que dos municipios se disputan, razón por la cual la prohibición de localización va reforzada y no relajada; la segunda separación fue de siglos y la hacen dos objetos, porque unas mantas plegadas de seis hilos por cuarto de pulgada y unos sombreros de cañabrava fechan el interior de la cueva en el siglo XIX, y un escondite prehispánico no tendría ni lo uno ni lo otro.",
+        "previous_note": "La lectura separó la cámara de la geología que se le supone, y la separación se hizo contando: sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren estos tres municipios hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía», y lo que hay es un manto de roca podrida de decenas de metros sobre esquistos y serpentinitas cuya forma característica no es la dolina sino el deslizamiento — de modo que la cámara no es kárstica pero sí tiene correlato, y es arqueológico: un abrigo con escalas labradas por mano humana y una piedra grabada al frente, que dos municipios se disputan, razón por la cual la prohibición de localización va reforzada y no relajada; la segunda separación fue de siglos y la hacen dos objetos, porque unas mantas plegadas de seis hilos por cuarto de pulgada y unos sombreros de cañabrava fechan el interior de la cueva en el siglo XIX, y un escondite prehispánico no tendría ni lo uno ni lo otro."
       },
       "entity_refs": [
         {
@@ -5369,5 +5381,20 @@
       "Sin mezclar épocas: ni adorno de contacto sobre un arriero, ni carriel, sombrero de iraca o manta tejida ancha dentro del oratorio o en un escondite prehispánico.",
       "Sin karst: nada de estalactitas, columnas ni galerías calcáreas, que no existen en este territorio; y sin cactus ni desierto espinoso en el cañón, que es bosque seco con guaduales."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 2,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "86a44bd6d9fa31f7a6287d639933be90c2474442b59e74768b77ed030efad563",
+      "max_source_updated_at": "2026-07-28T16:56:20.821Z"
+    }
+  ]
 }

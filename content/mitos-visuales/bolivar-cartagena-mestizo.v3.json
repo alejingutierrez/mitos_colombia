@@ -7,7 +7,7 @@
   "region": "Caribe",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento bolivar-cartagena-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -52,7 +52,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 33,
     "fields": [
       "content",
@@ -61,8 +61,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "d631cdea4f4e8d8780b77ff4b0551aba83595d04dd445c0eda7e10230bf49e51",
-    "max_source_updated_at": "2026-07-23T00:26:19.874Z"
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "max_source_updated_at": "2026-09-21T20:53:45.849Z"
   },
   "research": {
     "sources": [
@@ -1617,8 +1617,8 @@
     "dossier": "docs/investigacion/bolivar-cartagena-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1628,7 +1628,48 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "a-dios-rogando-y-con-el-mazo-dando",
+        "al-convento",
+        "castellano-viejo",
+        "celos-de-esclavo",
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa",
+        "despues-del-sitio",
+        "doce-en-punto-de-la-noche",
+        "el-auriga-a-quien-mato-el-pasado",
+        "el-fantasma-del-teatro-azul",
+        "el-heroe",
+        "el-mal-del-mar",
+        "el-milagro-de-la-candelaria",
+        "el-talisman-funebre",
+        "en-el-once",
+        "en-el-sitio-de-morillo",
+        "folklore-macabro",
+        "la-abadesa-arrodillada",
+        "la-casa-de-don-benito",
+        "la-clave-de-la-felicidad",
+        "la-imagen-de-san-antonio",
+        "la-muerte-de-los-ojos-verdes",
+        "la-sombra",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "maldito-sea-napoleon",
+        "marineritis-sentimental",
+        "mona-mona",
+        "por-la-boca-muere-el-pez",
+        "templo-de-santo-domingo-y-el-cristo-de-la-expiracion",
+        "un-anonimo",
+        "un-quejido-una-luz",
+        "una-reunion-clandestina",
+        "viva-la-libertad",
+        "zequiel"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "a-dios-rogando-y-con-el-mazo-dando": {
@@ -1653,9 +1694,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que separar al muerto de su mortaja y a las dos hermanas de su disputa: los hábitos de San Francisco y de Santo Domingo se nombran sólo para descartarlos —son exclusión y no ficha—, de modo que lo único que viste al resucitado es un lienzo de Castilla, y el objeto que lo devuelve a la vida es un hisopo de mano."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que separar al muerto de su mortaja y a las dos hermanas de su disputa: los hábitos de San Francisco y de Santo Domingo se nombran sólo para descartarlos —son exclusión y no ficha—, de modo que lo único que viste al resucitado es un lienzo de Castilla, y el objeto que lo devuelve a la vida es un hisopo de mano.",
+        "previous_note": "La lectura tuvo que separar al muerto de su mortaja y a las dos hermanas de su disputa: los hábitos de San Francisco y de Santo Domingo se nombran sólo para descartarlos —son exclusión y no ficha—, de modo que lo único que viste al resucitado es un lienzo de Castilla, y el objeto que lo devuelve a la vida es un hisopo de mano."
       },
       "entity_refs": [
         {
@@ -1752,9 +1794,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El reparto se decidió por quién actúa y no por quién habla: el padre entrega a la hija en el zaguán y desaparece del relato, y son Sor Fernanda y el entierro fingido —cirios, almendro, una monja que dirige la escena— los que mueven la página; el convento aporta el jardincillo de granadas y cerezos y la Iglesia de la Trinidad se nombra sin describirse."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El reparto se decidió por quién actúa y no por quién habla: el padre entrega a la hija en el zaguán y desaparece del relato, y son Sor Fernanda y el entierro fingido —cirios, almendro, una monja que dirige la escena— los que mueven la página; el convento aporta el jardincillo de granadas y cerezos y la Iglesia de la Trinidad se nombra sin describirse.",
+        "previous_note": "El reparto se decidió por quién actúa y no por quién habla: el padre entrega a la hija en el zaguán y desaparece del relato, y son Sor Fernanda y el entierro fingido —cirios, almendro, una monja que dirige la escena— los que mueven la página; el convento aporta el jardincillo de granadas y cerezos y la Iglesia de la Trinidad se nombra sin describirse."
       },
       "entity_refs": [
         {
@@ -1901,9 +1944,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos siluetas coloniales que el corpus tiende a fundir se separaron aquí por el cuerpo: el marqués tiene rigidez de pavo real, hábito de Calatrava y palacio con escudo, y Benavides no tiene más que un bigote negro y una daga; entre los dos, la litera con sus porteadores mandingas obligó a fichar personas y no un mueble con pies."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos siluetas coloniales que el corpus tiende a fundir se separaron aquí por el cuerpo: el marqués tiene rigidez de pavo real, hábito de Calatrava y palacio con escudo, y Benavides no tiene más que un bigote negro y una daga; entre los dos, la litera con sus porteadores mandingas obligó a fichar personas y no un mueble con pies.",
+        "previous_note": "Dos siluetas coloniales que el corpus tiende a fundir se separaron aquí por el cuerpo: el marqués tiene rigidez de pavo real, hábito de Calatrava y palacio con escudo, y Benavides no tiene más que un bigote negro y una daga; entre los dos, la litera con sus porteadores mandingas obligó a fichar personas y no un mueble con pies."
       },
       "entity_refs": [
         {
@@ -2060,9 +2104,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada más lenta del corpus: había que decidir dónde termina la persona y dónde empieza el decorado, y la lectura separó a Simón Casiano, a la hija de cimarrones y al cabildo con sus caciques, cacicas, tamboriles y flautas de las joyas prestadas que se les ponen encima; lo que queda regado por la cuesta es el juego de piezas, y va en ficha aparte."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada más lenta del corpus: había que decidir dónde termina la persona y dónde empieza el decorado, y la lectura separó a Simón Casiano, a la hija de cimarrones y al cabildo con sus caciques, cacicas, tamboriles y flautas de las joyas prestadas que se les ponen encima; lo que queda regado por la cuesta es el juego de piezas, y va en ficha aparte.",
+        "previous_note": "La pasada más lenta del corpus: había que decidir dónde termina la persona y dónde empieza el decorado, y la lectura separó a Simón Casiano, a la hija de cimarrones y al cabildo con sus caciques, cacicas, tamboriles y flautas de las joyas prestadas que se les ponen encima; lo que queda regado por la cuesta es el juego de piezas, y va en ficha aparte."
       },
       "entity_refs": [
         {
@@ -2149,9 +2194,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La única página del corpus sin un solo cuerpo descrito: la lectura separó el castillo del cerro que lo sostiene, el título de propiedad del expediente y el diario del archivo amarillento, y al no quedar figura con rasgos, el peso narrativo se fue entero al monumento y a los papeles."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La única página del corpus sin un solo cuerpo descrito: la lectura separó el castillo del cerro que lo sostiene, el título de propiedad del expediente y el diario del archivo amarillento, y al no quedar figura con rasgos, el peso narrativo se fue entero al monumento y a los papeles.",
+        "previous_note": "La única página del corpus sin un solo cuerpo descrito: la lectura separó el castillo del cerro que lo sostiene, el título de propiedad del expediente y el diario del archivo amarillento, y al no quedar figura con rasgos, el peso narrativo se fue entero al monumento y a los papeles."
       },
       "entity_refs": [
         {
@@ -2238,9 +2284,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que el texto describe de lo que sólo celebra: Blas de Lezo tiene cuerpo —cojo, mutilado, de mirada única y abarcadora— y el Virrey, Vernon, la flota inglesa y las monedas acuñadas no tienen ninguno; por eso el sarao se puebla con las hojas de élite y el sitio se cuenta por el bastión de Santa Catalina y no por una batalla."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que el texto describe de lo que sólo celebra: Blas de Lezo tiene cuerpo —cojo, mutilado, de mirada única y abarcadora— y el Virrey, Vernon, la flota inglesa y las monedas acuñadas no tienen ninguno; por eso el sarao se puebla con las hojas de élite y el sitio se cuenta por el bastión de Santa Catalina y no por una batalla.",
+        "previous_note": "La lectura separó lo que el texto describe de lo que sólo celebra: Blas de Lezo tiene cuerpo —cojo, mutilado, de mirada única y abarcadora— y el Virrey, Vernon, la flota inglesa y las monedas acuñadas no tienen ninguno; por eso el sarao se puebla con las hojas de élite y el sitio se cuenta por el bastión de Santa Catalina y no por una batalla."
       },
       "entity_refs": [
         {
@@ -2362,9 +2409,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una página con dos sustos y sólo uno visible: la lectura separó al aparecido que cuenta los cubiertos —que nunca entra en escena y sólo se cuenta en un velorio— del brazo dormido de Roberto, que es la causa material del miedo; lo que queda para dibujar es el corredor de columnas, la hilera de plata y la lámpara de kerosene que desmonta el susto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una página con dos sustos y sólo uno visible: la lectura separó al aparecido que cuenta los cubiertos —que nunca entra en escena y sólo se cuenta en un velorio— del brazo dormido de Roberto, que es la causa material del miedo; lo que queda para dibujar es el corredor de columnas, la hilera de plata y la lámpara de kerosene que desmonta el susto.",
+        "previous_note": "Una página con dos sustos y sólo uno visible: la lectura separó al aparecido que cuenta los cubiertos —que nunca entra en escena y sólo se cuenta en un velorio— del brazo dormido de Roberto, que es la causa material del miedo; lo que queda para dibujar es el corredor de columnas, la hilera de plata y la lámpara de kerosene que desmonta el susto."
       },
       "entity_refs": [
         {
@@ -2481,9 +2529,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "En esta lectura apareció el marcador de época más limpio de las 33 páginas: el automóvil. Separarlo del coche de alquiler no fue un detalle de atrezo sino la decisión que fecha la página en el primer tercio del siglo XX y que impide que ese objeto entre en ninguna otra lámina del corpus."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "En esta lectura apareció el marcador de época más limpio de las 33 páginas: el automóvil. Separarlo del coche de alquiler no fue un detalle de atrezo sino la decisión que fecha la página en el primer tercio del siglo XX y que impide que ese objeto entre en ninguna otra lámina del corpus.",
+        "previous_note": "En esta lectura apareció el marcador de época más limpio de las 33 páginas: el automóvil. Separarlo del coche de alquiler no fue un detalle de atrezo sino la decisión que fecha la página en el primer tercio del siglo XX y que impide que ese objeto entre en ninguna otra lámina del corpus."
       },
       "entity_refs": [
         {
@@ -2565,9 +2614,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Un título que promete un fantasma y entrega una biografía: la lectura separó los dos cuerpos de Estrellita —la muchacha trigueña en escena y la anciana de negro con el relicario en el asilo—, que son el relato entero, del Teatro Azul, que es un edificio imaginario, y del fantasma, que no aparece nunca."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Un título que promete un fantasma y entrega una biografía: la lectura separó los dos cuerpos de Estrellita —la muchacha trigueña en escena y la anciana de negro con el relicario en el asilo—, que son el relato entero, del Teatro Azul, que es un edificio imaginario, y del fantasma, que no aparece nunca.",
+        "previous_note": "Un título que promete un fantasma y entrega una biografía: la lectura separó los dos cuerpos de Estrellita —la muchacha trigueña en escena y la anciana de negro con el relicario en el asilo—, que son el relato entero, del Teatro Azul, que es un edificio imaginario, y del fantasma, que no aparece nunca."
       },
       "entity_refs": [
         {
@@ -2664,9 +2714,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La única criatura del corpus con anatomía descrita obligó a leer dos veces: la cojnúa tiene coletazo, costillas expuestas y corazón, y además un efecto económico —las redes vacías de La Boquilla— que hay que dibujar con ella; Sabino y su bote de remo se separaron de la ficha colectiva de pescadores porque el cuerpo herido y el arpón son suyos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La única criatura del corpus con anatomía descrita obligó a leer dos veces: la cojnúa tiene coletazo, costillas expuestas y corazón, y además un efecto económico —las redes vacías de La Boquilla— que hay que dibujar con ella; Sabino y su bote de remo se separaron de la ficha colectiva de pescadores porque el cuerpo herido y el arpón son suyos.",
+        "previous_note": "La única criatura del corpus con anatomía descrita obligó a leer dos veces: la cojnúa tiene coletazo, costillas expuestas y corazón, y además un efecto económico —las redes vacías de La Boquilla— que hay que dibujar con ella; Sabino y su bote de remo se separaron de la ficha colectiva de pescadores porque el cuerpo herido y el arpón son suyos."
       },
       "entity_refs": [
         {
@@ -2738,9 +2789,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El cuerpo mejor descrito de las 33 páginas se leyó contra lo que el relato enumera y no muestra: el marinero balear tiene piel quemada, pelo requemado, uniforme con dos anclas, tatuajes y ojos verdes descoloridos, y las mujeres de cada puerto que va nombrando son una lista sin cuerpo que queda fuera de toda lámina."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El cuerpo mejor descrito de las 33 páginas se leyó contra lo que el relato enumera y no muestra: el marinero balear tiene piel quemada, pelo requemado, uniforme con dos anclas, tatuajes y ojos verdes descoloridos, y las mujeres de cada puerto que va nombrando son una lista sin cuerpo que queda fuera de toda lámina.",
+        "previous_note": "El cuerpo mejor descrito de las 33 páginas se leyó contra lo que el relato enumera y no muestra: el marinero balear tiene piel quemada, pelo requemado, uniforme con dos anclas, tatuajes y ojos verdes descoloridos, y las mujeres de cada puerto que va nombrando son una lista sin cuerpo que queda fuera de toda lámina."
       },
       "entity_refs": [
         {
@@ -2827,9 +2879,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó tres cosas que el relato mantiene juntas: la mujer que carga el escrúpulo del nombre, la imagen que lo resuelve y la barca que lo transporta cargada de arena; y dejó la tormenta eléctrica como variante de luz y cielo dentro de la ficha de bahía, porque cambia la atmósfera y no la silueta del paisaje."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó tres cosas que el relato mantiene juntas: la mujer que carga el escrúpulo del nombre, la imagen que lo resuelve y la barca que lo transporta cargada de arena; y dejó la tormenta eléctrica como variante de luz y cielo dentro de la ficha de bahía, porque cambia la atmósfera y no la silueta del paisaje.",
+        "previous_note": "La lectura separó tres cosas que el relato mantiene juntas: la mujer que carga el escrúpulo del nombre, la imagen que lo resuelve y la barca que lo transporta cargada de arena; y dejó la tormenta eléctrica como variante de luz y cielo dentro de la ficha de bahía, porque cambia la atmósfera y no la silueta del paisaje."
       },
       "entity_refs": [
         {
@@ -2941,9 +2994,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí el objeto es el protagonista y el propio relato lo dice: el ataúd del zarzo es «tan usual y desprovisto de misterio como un banco o una mesa», y la lectura tuvo que separarlo de todo lo funerario para que la lámina no lo dramatice; enfrente, la fiesta del extinto barrio de Pekín aportó el cerco de cocoteros y una muchacha que sí actúa."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí el objeto es el protagonista y el propio relato lo dice: el ataúd del zarzo es «tan usual y desprovisto de misterio como un banco o una mesa», y la lectura tuvo que separarlo de todo lo funerario para que la lámina no lo dramatice; enfrente, la fiesta del extinto barrio de Pekín aportó el cerco de cocoteros y una muchacha que sí actúa.",
+        "previous_note": "Aquí el objeto es el protagonista y el propio relato lo dice: el ataúd del zarzo es «tan usual y desprovisto de misterio como un banco o una mesa», y la lectura tuvo que separarlo de todo lo funerario para que la lámina no lo dramatice; enfrente, la fiesta del extinto barrio de Pekín aportó el cerco de cocoteros y una muchacha que sí actúa."
       },
       "entity_refs": [
         {
@@ -3035,9 +3089,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una página con dos independencias: la lectura separó la de la ciudad —plaza, Acta, multitud, tambores y gaitas— de la del alma, que es la que el texto declara al final, y comprobó que ni José María, ni Alonso Ramírez, ni Ana María tienen una sola prenda descrita, de modo que todo se resuelve con las hojas de élite colonial."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una página con dos independencias: la lectura separó la de la ciudad —plaza, Acta, multitud, tambores y gaitas— de la del alma, que es la que el texto declara al final, y comprobó que ni José María, ni Alonso Ramírez, ni Ana María tienen una sola prenda descrita, de modo que todo se resuelve con las hojas de élite colonial.",
+        "previous_note": "Una página con dos independencias: la lectura separó la de la ciudad —plaza, Acta, multitud, tambores y gaitas— de la del alma, que es la que el texto declara al final, y comprobó que ni José María, ni Alonso Ramírez, ni Ana María tienen una sola prenda descrita, de modo que todo se resuelve con las hojas de élite colonial."
       },
       "entity_refs": [
         {
@@ -3114,9 +3169,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El sitio se leyó por el hambre y no por la batalla: los «espectros macilentos» de las calles y las monjas muriendo de sed en el vientre del monasterio cambian la silueta de un colectivo entero, y el engaño del caño de Juan Angola puso a los pescadores de La Boquilla en la misma ficha que a los contrabandistas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El sitio se leyó por el hambre y no por la batalla: los «espectros macilentos» de las calles y las monjas muriendo de sed en el vientre del monasterio cambian la silueta de un colectivo entero, y el engaño del caño de Juan Angola puso a los pescadores de La Boquilla en la misma ficha que a los contrabandistas.",
+        "previous_note": "El sitio se leyó por el hambre y no por la batalla: los «espectros macilentos» de las calles y las monjas muriendo de sed en el vientre del monasterio cambian la silueta de un colectivo entero, y el engaño del caño de Juan Angola puso a los pescadores de La Boquilla en la misma ficha que a los contrabandistas."
       },
       "entity_refs": [
         {
@@ -3253,9 +3309,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La desmitificación más limpia del corpus: la lectura separó el sonido de la figura y comprobó que el caballo sin cabeza no se ve nunca, sólo se oye —cascada de sonidos metálicos y cadenas a las tres de la mañana—, de modo que su lámina es calle vacía; su causa material, el lechero que reparte por varias entradas, quedó fichada aparte y las dos valen lo mismo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La desmitificación más limpia del corpus: la lectura separó el sonido de la figura y comprobó que el caballo sin cabeza no se ve nunca, sólo se oye —cascada de sonidos metálicos y cadenas a las tres de la mañana—, de modo que su lámina es calle vacía; su causa material, el lechero que reparte por varias entradas, quedó fichada aparte y las dos valen lo mismo.",
+        "previous_note": "La desmitificación más limpia del corpus: la lectura separó el sonido de la figura y comprobó que el caballo sin cabeza no se ve nunca, sólo se oye —cascada de sonidos metálicos y cadenas a las tres de la mañana—, de modo que su lámina es calle vacía; su causa material, el lechero que reparte por varias entradas, quedó fichada aparte y las dos valen lo mismo."
       },
       "entity_refs": [
         {
@@ -3357,9 +3414,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una monja que no es una monja en una postura: la lectura separó a Sor Ana de la hoja de clausura porque su penitencia es una altura permanente y cambia el encuadre entero, y dejó fuera a las ánimas del antiguo teatro, que en esta página sólo se oyen y a las que no se les fabrica anatomía."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una monja que no es una monja en una postura: la lectura separó a Sor Ana de la hoja de clausura porque su penitencia es una altura permanente y cambia el encuadre entero, y dejó fuera a las ánimas del antiguo teatro, que en esta página sólo se oyen y a las que no se les fabrica anatomía.",
+        "previous_note": "Una monja que no es una monja en una postura: la lectura separó a Sor Ana de la hoja de clausura porque su penitencia es una altura permanente y cambia el encuadre entero, y dejó fuera a las ánimas del antiguo teatro, que en esta página sólo se oyen y a las que no se les fabrica anatomía."
       },
       "entity_refs": [
         {
@@ -3461,9 +3519,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página que más cuidado exigió en el reparto de cuerpos: don Blas vivo y el aparecido de corredor son dos fichas y no una; Basilio es criado libre del norte de España y no persona esclavizada, y confundirlo cambia ropa, gesto y lugar en la escena; y Pedro Claver aparece nombrado sin descripción, que es lo que abrió la corrección de sacarlo de la hoja de clero secular."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página que más cuidado exigió en el reparto de cuerpos: don Blas vivo y el aparecido de corredor son dos fichas y no una; Basilio es criado libre del norte de España y no persona esclavizada, y confundirlo cambia ropa, gesto y lugar en la escena; y Pedro Claver aparece nombrado sin descripción, que es lo que abrió la corrección de sacarlo de la hoja de clero secular.",
+        "previous_note": "La página que más cuidado exigió en el reparto de cuerpos: don Blas vivo y el aparecido de corredor son dos fichas y no una; Basilio es criado libre del norte de España y no persona esclavizada, y confundirlo cambia ropa, gesto y lugar en la escena; y Pedro Claver aparece nombrado sin descripción, que es lo que abrió la corrección de sacarlo de la hoja de clero secular."
       },
       "entity_refs": [
         {
@@ -3585,9 +3644,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Un fantasma sin cuerpo y dos objetos que sí lo tienen: la lectura dejó fuera al espectro y fichó el piano desafinado y el papel escrito en tinta que ardía como sangre, que es todo lo que el relato llega a materializar; y la penitencia de los siete Padre Nuestros ancló la escena en las Bóvedas, que no existen antes de 1789."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Un fantasma sin cuerpo y dos objetos que sí lo tienen: la lectura dejó fuera al espectro y fichó el piano desafinado y el papel escrito en tinta que ardía como sangre, que es todo lo que el relato llega a materializar; y la penitencia de los siete Padre Nuestros ancló la escena en las Bóvedas, que no existen antes de 1789.",
+        "previous_note": "Un fantasma sin cuerpo y dos objetos que sí lo tienen: la lectura dejó fuera al espectro y fichó el piano desafinado y el papel escrito en tinta que ardía como sangre, que es todo lo que el relato llega a materializar; y la penitencia de los siete Padre Nuestros ancló la escena en las Bóvedas, que no existen antes de 1789."
       },
       "entity_refs": [
         {
@@ -3704,9 +3764,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí la talla es el sujeto y no el atrezo: la lectura la separó de las cuatro hermanas de Luna y del militar que recibe el golpe, y fijó su lugar en el entresuelo de costura, que es la pieza de la casa alta cartagenera donde se trabaja y no donde se recibe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí la talla es el sujeto y no el atrezo: la lectura la separó de las cuatro hermanas de Luna y del militar que recibe el golpe, y fijó su lugar en el entresuelo de costura, que es la pieza de la casa alta cartagenera donde se trabaja y no donde se recibe.",
+        "previous_note": "Aquí la talla es el sujeto y no el atrezo: la lectura la separó de las cuatro hermanas de Luna y del militar que recibe el golpe, y fijó su lugar en el entresuelo de costura, que es la pieza de la casa alta cartagenera donde se trabaja y no donde se recibe."
       },
       "entity_refs": [
         {
@@ -3798,9 +3859,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura excluyó por sensibilidad las dos figuras que el relato mata —la esposa estrangulada y la recién nacida de ojos verdes— y se quedó con lo que sostiene la tragedia sin mostrarla: la celda gris del reo, la carta amarillenta que revela la paternidad y los dos hombres de ojos distintos frente a frente en el muelle."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura excluyó por sensibilidad las dos figuras que el relato mata —la esposa estrangulada y la recién nacida de ojos verdes— y se quedó con lo que sostiene la tragedia sin mostrarla: la celda gris del reo, la carta amarillenta que revela la paternidad y los dos hombres de ojos distintos frente a frente en el muelle.",
+        "previous_note": "La lectura excluyó por sensibilidad las dos figuras que el relato mata —la esposa estrangulada y la recién nacida de ojos verdes— y se quedó con lo que sostiene la tragedia sin mostrarla: la celda gris del reo, la carta amarillenta que revela la paternidad y los dos hombres de ojos distintos frente a frente en el muelle."
       },
       "entity_refs": [
         {
@@ -3892,9 +3954,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La ficha más difícil de fijar del corpus, porque el relato la resuelve tres veces: ánima que señala el entierro, montaje de la vieja Rosa y el heredero, y desdoblamiento de la propia Ximena. La lectura decidió no elegir —la Sombra queda con cuerpo ambiguo y sin rostro— y sacó el entierro bajo la tapia a ficha aparte."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La ficha más difícil de fijar del corpus, porque el relato la resuelve tres veces: ánima que señala el entierro, montaje de la vieja Rosa y el heredero, y desdoblamiento de la propia Ximena. La lectura decidió no elegir —la Sombra queda con cuerpo ambiguo y sin rostro— y sacó el entierro bajo la tapia a ficha aparte.",
+        "previous_note": "La ficha más difícil de fijar del corpus, porque el relato la resuelve tres veces: ánima que señala el entierro, montaje de la vieja Rosa y el heredero, y desdoblamiento de la propia Ximena. La lectura decidió no elegir —la Sombra queda con cuerpo ambiguo y sin rostro— y sacó el entierro bajo la tapia a ficha aparte."
       },
       "entity_refs": [
         {
@@ -4021,9 +4084,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página con más objetos del corpus obligó a decidir qué se muestra y qué no: el collar y el cráneo se fichan, pero el cráneo como objeto sobre una mesa y nunca como exhumación, y el camposanto se resuelve con la garita y la pala; la rivalidad entre la Candelaria y las Mercedes se conservó en dos fichas porque fundirlas borraría la trama."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página con más objetos del corpus obligó a decidir qué se muestra y qué no: el collar y el cráneo se fichan, pero el cráneo como objeto sobre una mesa y nunca como exhumación, y el camposanto se resuelve con la garita y la pala; la rivalidad entre la Candelaria y las Mercedes se conservó en dos fichas porque fundirlas borraría la trama.",
+        "previous_note": "La página con más objetos del corpus obligó a decidir qué se muestra y qué no: el collar y el cráneo se fichan, pero el cráneo como objeto sobre una mesa y nunca como exhumación, y el camposanto se resuelve con la garita y la pala; la rivalidad entre la Candelaria y las Mercedes se conservó en dos fichas porque fundirlas borraría la trama."
       },
       "entity_refs": [
         {
@@ -4170,9 +4234,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una boda que se rompe por una noticia política: la lectura separó a la marquesa —que mueve la página entera y al final la deshace en la capilla— de la hija y del alférez, que no tienen más que un velo negro y una fama, y fechó todo el día en el 14 de julio de 1810, cuando el Cabildo destituye al gobernador."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una boda que se rompe por una noticia política: la lectura separó a la marquesa —que mueve la página entera y al final la deshace en la capilla— de la hija y del alférez, que no tienen más que un velo negro y una fama, y fechó todo el día en el 14 de julio de 1810, cuando el Cabildo destituye al gobernador.",
+        "previous_note": "Una boda que se rompe por una noticia política: la lectura separó a la marquesa —que mueve la página entera y al final la deshace en la capilla— de la hija y del alférez, que no tienen más que un velo negro y una fama, y fechó todo el día en el 14 de julio de 1810, cuando el Cabildo destituye al gobernador."
       },
       "entity_refs": [
         {
@@ -4264,9 +4329,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que el uniforme blanco de esta página ya estaba fichado en otra y que lo nuevo son las dos muchachas de balcones enfrentados y el ritual del espejo y el rouge cuando entra el «Cúcuta»; los muchachos del barrio, celosos y en traje de domingo, entran sin ficha propia en el gentío del puerto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que el uniforme blanco de esta página ya estaba fichado en otra y que lo nuevo son las dos muchachas de balcones enfrentados y el ritual del espejo y el rouge cuando entra el «Cúcuta»; los muchachos del barrio, celosos y en traje de domingo, entran sin ficha propia en el gentío del puerto.",
+        "previous_note": "La lectura comprobó que el uniforme blanco de esta página ya estaba fichado en otra y que lo nuevo son las dos muchachas de balcones enfrentados y el ritual del espejo y el rouge cuando entra el «Cúcuta»; los muchachos del barrio, celosos y en traje de domingo, entran sin ficha propia en el gentío del puerto."
       },
       "entity_refs": [
         {
@@ -4348,9 +4414,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página que obligó a la exclusión más deliberada del corpus: se ficha a Mona, un hombre en su muelle, y se excluye la comunidad palenquera como entidad visual, porque el propio módulo editorial prohíbe leer esta pieza como etnografía de Palenque; en cambio el anciano congo sí se ficha, como testigo herido que habla y resuelve el crimen."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página que obligó a la exclusión más deliberada del corpus: se ficha a Mona, un hombre en su muelle, y se excluye la comunidad palenquera como entidad visual, porque el propio módulo editorial prohíbe leer esta pieza como etnografía de Palenque; en cambio el anciano congo sí se ficha, como testigo herido que habla y resuelve el crimen.",
+        "previous_note": "La página que obligó a la exclusión más deliberada del corpus: se ficha a Mona, un hombre en su muelle, y se excluye la comunidad palenquera como entidad visual, porque el propio módulo editorial prohíbe leer esta pieza como etnografía de Palenque; en cambio el anciano congo sí se ficha, como testigo herido que habla y resuelve el crimen."
       },
       "entity_refs": [
         {
@@ -4457,9 +4524,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos decisiones finas salieron de esta lectura: no abrir un estado de penitente para Domingo, porque el relato no describe la ropa del auto de fe y dibujarla sería inventarla; y excluir la sala del tribunal, porque el texto la deja en sombra y amueblarla sería amueblar un vacío. Lo que queda es el taller abierto a la calle y la vara negra entrando por el vano."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos decisiones finas salieron de esta lectura: no abrir un estado de penitente para Domingo, porque el relato no describe la ropa del auto de fe y dibujarla sería inventarla; y excluir la sala del tribunal, porque el texto la deja en sombra y amueblarla sería amueblar un vacío. Lo que queda es el taller abierto a la calle y la vara negra entrando por el vano.",
+        "previous_note": "Dos decisiones finas salieron de esta lectura: no abrir un estado de penitente para Domingo, porque el relato no describe la ropa del auto de fe y dibujarla sería inventarla; y excluir la sala del tribunal, porque el texto la deja en sombra y amueblarla sería amueblar un vacío. Lo que queda es el taller abierto a la calle y la vara negra entrando por el vano."
       },
       "entity_refs": [
         {
@@ -4576,9 +4644,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Nave y claustro se separaron aquí: éste es el único interior de iglesia que el corpus describe, y el estatuario que se esfuma sin dejar un solo ruido de gubia no recibe cuerpo; lo que se ficha es la talla y el tronco que crece semana a semana en la playa, que son la misma madera en dos estados."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Nave y claustro se separaron aquí: éste es el único interior de iglesia que el corpus describe, y el estatuario que se esfuma sin dejar un solo ruido de gubia no recibe cuerpo; lo que se ficha es la talla y el tronco que crece semana a semana en la playa, que son la misma madera en dos estados.",
+        "previous_note": "Nave y claustro se separaron aquí: éste es el único interior de iglesia que el corpus describe, y el estatuario que se esfuma sin dejar un solo ruido de gubia no recibe cuerpo; lo que se ficha es la talla y el tronco que crece semana a semana en la playa, que son la misma madera en dos estados."
       },
       "entity_refs": [
         {
@@ -4660,9 +4729,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una página que se mueve por un papel: la lectura separó el anónimo, que convoca, del heliotropo del escote, que sella el pacto, y de la romanza, que es sonido y no se ilustra; y comprobó que Antonio y Carlota no tienen más descripción que una mirada melancólica y una flor."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una página que se mueve por un papel: la lectura separó el anónimo, que convoca, del heliotropo del escote, que sella el pacto, y de la romanza, que es sonido y no se ilustra; y comprobó que Antonio y Carlota no tienen más descripción que una mirada melancólica y una flor.",
+        "previous_note": "Una página que se mueve por un papel: la lectura separó el anónimo, que convoca, del heliotropo del escote, que sella el pacto, y de la romanza, que es sonido y no se ilustra; y comprobó que Antonio y Carlota no tienen más descripción que una mirada melancólica y una flor."
       },
       "entity_refs": [
         {
@@ -4769,9 +4839,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos prodigios y dos causas materiales, y la lectura se negó a producir sólo la mitad espectacular: el par de luces fijas sobre la pared del cuarto de las niñas y el mono con el candil son un par indivisible, y el quejido, que es sonido, quedó excluido a favor del guayabo cuyas ramas rozan el muro."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos prodigios y dos causas materiales, y la lectura se negó a producir sólo la mitad espectacular: el par de luces fijas sobre la pared del cuarto de las niñas y el mono con el candil son un par indivisible, y el quejido, que es sonido, quedó excluido a favor del guayabo cuyas ramas rozan el muro.",
+        "previous_note": "Dos prodigios y dos causas materiales, y la lectura se negó a producir sólo la mitad espectacular: el par de luces fijas sobre la pared del cuarto de las niñas y el mono con el candil son un par indivisible, y el quejido, que es sonido, quedó excluido a favor del guayabo cuyas ramas rozan el muro."
       },
       "entity_refs": [
         {
@@ -4888,9 +4959,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó el trayecto del destino: Miguel cruza media ciudad —la Soledad, San Agustín Chiquita, la Moneda— y todo ese recorrido cabe entero en la ficha de calle colonial de noche; lo que no cabe en ninguna otra es la casucha deshabitada pegada a la mansión de doña Dolores y la boca de su túnel."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó el trayecto del destino: Miguel cruza media ciudad —la Soledad, San Agustín Chiquita, la Moneda— y todo ese recorrido cabe entero en la ficha de calle colonial de noche; lo que no cabe en ninguna otra es la casucha deshabitada pegada a la mansión de doña Dolores y la boca de su túnel.",
+        "previous_note": "La lectura separó el trayecto del destino: Miguel cruza media ciudad —la Soledad, San Agustín Chiquita, la Moneda— y todo ese recorrido cabe entero en la ficha de calle colonial de noche; lo que no cabe en ninguna otra es la casucha deshabitada pegada a la mansión de doña Dolores y la boca de su túnel."
       },
       "entity_refs": [
         {
@@ -4982,9 +5054,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que los nombres históricos de esta página —Pedro Romero, Gutiérrez de Piñeres, García de Toledo, Díaz Granados— aparecen encabezando y leyendo el Acta y ninguno recibe un solo rasgo físico; por eso el 11 de noviembre se dibuja por la plaza, el balcón del Cabildo y la milicia parda de lanza y pañuelo, y no por retratos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que los nombres históricos de esta página —Pedro Romero, Gutiérrez de Piñeres, García de Toledo, Díaz Granados— aparecen encabezando y leyendo el Acta y ninguno recibe un solo rasgo físico; por eso el 11 de noviembre se dibuja por la plaza, el balcón del Cabildo y la milicia parda de lanza y pañuelo, y no por retratos.",
+        "previous_note": "La lectura comprobó que los nombres históricos de esta página —Pedro Romero, Gutiérrez de Piñeres, García de Toledo, Díaz Granados— aparecen encabezando y leyendo el Acta y ninguno recibe un solo rasgo físico; por eso el 11 de noviembre se dibuja por la plaza, el balcón del Cabildo y la milicia parda de lanza y pañuelo, y no por retratos."
       },
       "entity_refs": [
         {
@@ -5076,9 +5149,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura devolvió el relato a su título: el lechero de cántaros es el mismo cuerpo que en otra página explica el caballo sin cabeza, y aquí es quien paga una condena por leche aguada; el estanco de ventanilla, el río Matute y la olla de sancocho son lo que el poblado de Caimán aporta al corpus y no se repite en ninguna otra ficha."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura devolvió el relato a su título: el lechero de cántaros es el mismo cuerpo que en otra página explica el caballo sin cabeza, y aquí es quien paga una condena por leche aguada; el estanco de ventanilla, el río Matute y la olla de sancocho son lo que el poblado de Caimán aporta al corpus y no se repite en ninguna otra ficha.",
+        "previous_note": "La lectura devolvió el relato a su título: el lechero de cántaros es el mismo cuerpo que en otra página explica el caballo sin cabeza, y aquí es quien paga una condena por leche aguada; el estanco de ventanilla, el río Matute y la olla de sancocho son lo que el poblado de Caimán aporta al corpus y no se repite en ninguna otra ficha."
       },
       "entity_refs": [
         {
@@ -24831,5 +24905,21 @@
       "ninguna mutilación, deformación ni desnudo en las figuras femeninas, y ninguna figura esclavizada en el borde del cuadro como decorado de fiesta, litera o joyero",
       "ninguna lámpara de kerosene, bombilla, reloj de pared, automóvil, tranvía, prensa, levita ni muralla rota en una lámina del tiempo colonial; ninguna litera, vara negra de alguacil ni muralla en obra en una republicana"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 33,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "d631cdea4f4e8d8780b77ff4b0551aba83595d04dd445c0eda7e10230bf49e51",
+      "max_source_updated_at": "2026-07-23T00:26:19.874Z"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "region": "Amazonas / Amazonía",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento amazonia-mestizo-mixto",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -47,7 +47,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 28,
     "fields": [
       "content",
@@ -56,8 +56,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "9c84fb950a05cc34507e03286702194e25d67eb862fab0ad9fbb28162f042036",
-    "max_source_updated_at": "2026-09-14T20:27:27.768Z"
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "max_source_updated_at": "2026-09-23T01:14:47.461Z"
   },
   "research": {
     "sources": [
@@ -1532,8 +1532,8 @@
     "dossier": "docs/investigacion/amazonia-mestizo-mixto.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1543,7 +1543,43 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "chuya-chaqui",
+        "el-bufeo",
+        "el-chuy-achaque",
+        "el-cotomachaco",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "el-diluvio-guinadoma",
+        "el-hijo-de-tuhixana",
+        "el-nacimiento-de-los-matapi",
+        "el-origen-de-las-frutas",
+        "kanuma",
+        "la-cobra-grande",
+        "la-curupira",
+        "madre-de-playa",
+        "moe-e-ipi",
+        "ngutapa-y-chimuiyae",
+        "nonuetoma",
+        "origen-de-la-luna",
+        "origen-de-los-micos-boquiblancos",
+        "origen-de-los-vegetales-cultivaldos",
+        "origen-del-agua",
+        "origen-del-gavilan",
+        "origen-del-sol",
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+        "petapeta",
+        "taife",
+        "taik",
+        "yacuruna",
+        "yagua"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "chuya-chaqui": {
@@ -1568,9 +1604,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó esta lectura es que el relato entrega un cuerpo completo —poco más de un metro, sombrero de paja grande, harapos, un pie humano y otro animal— en un corpus donde casi nadie tiene descripción, y que la criatura no ataca sino que extravía: la trampa es el eco del maguaré y el aguacero que borra el camino, de modo que la extracción cargó el peso en el pie desigual y en la huella, y no en una escena de acecho; y quedó anotado que ésta es una de las tres páginas que descienden del libro de Hugo Niño, lo que la hace literatura de autor sobre material oral y no transcripción."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó esta lectura es que el relato entrega un cuerpo completo —poco más de un metro, sombrero de paja grande, harapos, un pie humano y otro animal— en un corpus donde casi nadie tiene descripción, y que la criatura no ataca sino que extravía: la trampa es el eco del maguaré y el aguacero que borra el camino, de modo que la extracción cargó el peso en el pie desigual y en la huella, y no en una escena de acecho; y quedó anotado que ésta es una de las tres páginas que descienden del libro de Hugo Niño, lo que la hace literatura de autor sobre material oral y no transcripción.",
+        "previous_note": "Lo que separó esta lectura es que el relato entrega un cuerpo completo —poco más de un metro, sombrero de paja grande, harapos, un pie humano y otro animal— en un corpus donde casi nadie tiene descripción, y que la criatura no ataca sino que extravía: la trampa es el eco del maguaré y el aguacero que borra el camino, de modo que la extracción cargó el peso en el pie desigual y en la huella, y no en una escena de acecho; y quedó anotado que ésta es una de las tres páginas que descienden del libro de Hugo Niño, lo que la hace literatura de autor sobre material oral y no transcripción."
       },
       "entity_refs": [
         {
@@ -1687,9 +1724,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página trae en su propio campo de versiones el ancla material de todo el estrato ribereño —«llega como forastero alto, bien vestido de blanco y con sombrero», en una fiesta de orilla donde lo emborrachan para descubrirlo—, y eso fecha la escena en el siglo XX y la sitúa en la cantina y no en la maloca; la lectura fijó además que la bisagra entre las dos siluetas es un dato anatómico real, el espiráculo en lo alto de la cabeza de Inia geoffrensis, y por eso la ficha se compone en el instante de la revelación y nunca en el del rapto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página trae en su propio campo de versiones el ancla material de todo el estrato ribereño —«llega como forastero alto, bien vestido de blanco y con sombrero», en una fiesta de orilla donde lo emborrachan para descubrirlo—, y eso fecha la escena en el siglo XX y la sitúa en la cantina y no en la maloca; la lectura fijó además que la bisagra entre las dos siluetas es un dato anatómico real, el espiráculo en lo alto de la cabeza de Inia geoffrensis, y por eso la ficha se compone en el instante de la revelación y nunca en el del rapto.",
+        "previous_note": "La página trae en su propio campo de versiones el ancla material de todo el estrato ribereño —«llega como forastero alto, bien vestido de blanco y con sombrero», en una fiesta de orilla donde lo emborrachan para descubrirlo—, y eso fecha la escena en el siglo XX y la sitúa en la cantina y no en la maloca; la lectura fijó además que la bisagra entre las dos siluetas es un dato anatómico real, el espiráculo en lo alto de la cabeza de Inia geoffrensis, y por eso la ficha se compone en el instante de la revelación y nunca en el del rapto."
       },
       "entity_refs": [
         {
@@ -1771,9 +1809,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la segunda página de la misma criatura y aporta una sola cosa nueva: un rostro de doble cara que no alcanza para un modelo aparte, de modo que la extracción la resolvió como variante de cabeza dentro de la hoja del Chullachaqui y trasladó la primaria a esa ficha, porque la candidata que el script propuso era una entidad embebida. Lo que sí aporta son los niños que siguen el silbido, que entran en la hoja de niños de la aldea y no en una ficha propia."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la segunda página de la misma criatura y aporta una sola cosa nueva: un rostro de doble cara que no alcanza para un modelo aparte, de modo que la extracción la resolvió como variante de cabeza dentro de la hoja del Chullachaqui y trasladó la primaria a esa ficha, porque la candidata que el script propuso era una entidad embebida. Lo que sí aporta son los niños que siguen el silbido, que entran en la hoja de niños de la aldea y no en una ficha propia.",
+        "previous_note": "Es la segunda página de la misma criatura y aporta una sola cosa nueva: un rostro de doble cara que no alcanza para un modelo aparte, de modo que la extracción la resolvió como variante de cabeza dentro de la hoja del Chullachaqui y trasladó la primaria a esa ficha, porque la candidata que el script propuso era una entidad embebida. Lo que sí aporta son los niños que siguen el silbido, que entran en la hoja de niños de la aldea y no en una ficha propia."
       },
       "entity_refs": [
         {
@@ -1825,9 +1864,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró una criatura cuya escala es literalmente el argumento: una cabeza en copa de árbol de más de cincuenta metros y otra a ras de tierra con la barriga hinchada, unidas por un solo cuerpo, lo que la saca de la hoja de boa y obliga a un encuadre vertical incluso para una ficha de identidad; y la escopeta que deja tirada al cazador fecha la página en el siglo XX, cuando el arma corriente de la zona todavía era la cerbatana."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró una criatura cuya escala es literalmente el argumento: una cabeza en copa de árbol de más de cincuenta metros y otra a ras de tierra con la barriga hinchada, unidas por un solo cuerpo, lo que la saca de la hoja de boa y obliga a un encuadre vertical incluso para una ficha de identidad; y la escopeta que deja tirada al cazador fecha la página en el siglo XX, cuando el arma corriente de la zona todavía era la cerbatana.",
+        "previous_note": "La lectura encontró una criatura cuya escala es literalmente el argumento: una cabeza en copa de árbol de más de cincuenta metros y otra a ras de tierra con la barriga hinchada, unidas por un solo cuerpo, lo que la saca de la hoja de boa y obliga a un encuadre vertical incluso para una ficha de identidad; y la escopeta que deja tirada al cazador fecha la página en el siglo XX, cuando el arma corriente de la zona todavía era la cerbatana."
       },
       "entity_refs": [
         {
@@ -1904,9 +1944,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Ésta es la página que más cambió al leerla contra la fuente: lo que el censo fichó como cuatro tinajas escondidas en un santuario del bosque son, en el registro tanimuka de 1972, cuatro estantillos con llave de agua y ventanita tapada —es decir, los cuatro postes de la maloca convertidos en depósito—, de modo que lo que se rompe a hacha es la estructura de una vivienda y no una vasija; la extracción movió allí la primaria, porque la candidata del script era el joven del disfraz de plumas, que es una entidad embebida y que la fuente identifica además como Imárika Kayafikí, el menor de los Imarikakana, que descubre el escondite por un huesito de pescado en la ceniza."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Ésta es la página que más cambió al leerla contra la fuente: lo que el censo fichó como cuatro tinajas escondidas en un santuario del bosque son, en el registro tanimuka de 1972, cuatro estantillos con llave de agua y ventanita tapada —es decir, los cuatro postes de la maloca convertidos en depósito—, de modo que lo que se rompe a hacha es la estructura de una vivienda y no una vasija; la extracción movió allí la primaria, porque la candidata del script era el joven del disfraz de plumas, que es una entidad embebida y que la fuente identifica además como Imárika Kayafikí, el menor de los Imarikakana, que descubre el escondite por un huesito de pescado en la ceniza.",
+        "previous_note": "Ésta es la página que más cambió al leerla contra la fuente: lo que el censo fichó como cuatro tinajas escondidas en un santuario del bosque son, en el registro tanimuka de 1972, cuatro estantillos con llave de agua y ventanita tapada —es decir, los cuatro postes de la maloca convertidos en depósito—, de modo que lo que se rompe a hacha es la estructura de una vivienda y no una vasija; la extracción movió allí la primaria, porque la candidata del script era el joven del disfraz de plumas, que es una entidad embebida y que la fuente identifica además como Imárika Kayafikí, el menor de los Imarikakana, que descubre el escondite por un huesito de pescado en la ceniza."
       },
       "entity_refs": [
         {
@@ -2008,9 +2049,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato reparte el peso entre un fracaso y una llegada: el sacrificio no sirve y el agua sólo se detiene cuando Juzíñamui la toca con su bastón, así que la lectura fichó al anciano —que es de los pocos con cuerpo descrito, piel como corteza de árbol viejo— y dejó fuera de cuadro el hijo ofrecido al abismo; y advirtió que sus rasgos de deidad pueden ser sedimento misional del siglo XX y no sincretismo antiguo, por lo que la ficha renuncia expresamente a cualquier atributo católico."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato reparte el peso entre un fracaso y una llegada: el sacrificio no sirve y el agua sólo se detiene cuando Juzíñamui la toca con su bastón, así que la lectura fichó al anciano —que es de los pocos con cuerpo descrito, piel como corteza de árbol viejo— y dejó fuera de cuadro el hijo ofrecido al abismo; y advirtió que sus rasgos de deidad pueden ser sedimento misional del siglo XX y no sincretismo antiguo, por lo que la ficha renuncia expresamente a cualquier atributo católico.",
+        "previous_note": "El relato reparte el peso entre un fracaso y una llegada: el sacrificio no sirve y el agua sólo se detiene cuando Juzíñamui la toca con su bastón, así que la lectura fichó al anciano —que es de los pocos con cuerpo descrito, piel como corteza de árbol viejo— y dejó fuera de cuadro el hijo ofrecido al abismo; y advirtió que sus rasgos de deidad pueden ser sedimento misional del siglo XX y no sincretismo antiguo, por lo que la ficha renuncia expresamente a cualquier atributo católico."
       },
       "entity_refs": [
         {
@@ -2097,9 +2139,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El protagonista no tiene un solo rasgo que lo distinga de cualquier otro hombre de la aldea, pero lo que inventa sí: una balsa de troncos de palmera amarrados con bejucos, que es el objeto por el que se cuenta la página y lo único suyo que llega al mar. Por eso la extracción movió la primaria del personaje —embebido en la hoja del pueblo ribereño— al modelo de canoa y balsa, y dejó el resto de la página en las hojas de río y de aves."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El protagonista no tiene un solo rasgo que lo distinga de cualquier otro hombre de la aldea, pero lo que inventa sí: una balsa de troncos de palmera amarrados con bejucos, que es el objeto por el que se cuenta la página y lo único suyo que llega al mar. Por eso la extracción movió la primaria del personaje —embebido en la hoja del pueblo ribereño— al modelo de canoa y balsa, y dejó el resto de la página en las hojas de río y de aves.",
+        "previous_note": "El protagonista no tiene un solo rasgo que lo distinga de cualquier otro hombre de la aldea, pero lo que inventa sí: una balsa de troncos de palmera amarrados con bejucos, que es el objeto por el que se cuenta la página y lo único suyo que llega al mar. Por eso la extracción movió la primaria del personaje —embebido en la hoja del pueblo ribereño— al modelo de canoa y balsa, y dejó el resto de la página en las hojas de río y de aves."
       },
       "entity_refs": [
         {
@@ -2171,9 +2214,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Veintiún refs para una sola página, y dieciocho de ellos son nombres masculinos de un linaje guerrero sin un solo rasgo que los distinga entre sí: la lectura los resolvió como variantes de la misma hoja colectiva —ficharlos por separado habría sido el error más caro del censo— y dejó ficha propia sólo a Ka'mari, que nace con rabo en el regazo de un árbol wiri y desaparece envuelto en su camisa entre el humo. La ofensa que desata la guerra es el yuruparí y no se dibuja: la escena se resuelve en los rostros y en la ruptura del baile."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Veintiún refs para una sola página, y dieciocho de ellos son nombres masculinos de un linaje guerrero sin un solo rasgo que los distinga entre sí: la lectura los resolvió como variantes de la misma hoja colectiva —ficharlos por separado habría sido el error más caro del censo— y dejó ficha propia sólo a Ka'mari, que nace con rabo en el regazo de un árbol wiri y desaparece envuelto en su camisa entre el humo. La ofensa que desata la guerra es el yuruparí y no se dibuja: la escena se resuelve en los rostros y en la ruptura del baile.",
+        "previous_note": "Veintiún refs para una sola página, y dieciocho de ellos son nombres masculinos de un linaje guerrero sin un solo rasgo que los distinga entre sí: la lectura los resolvió como variantes de la misma hoja colectiva —ficharlos por separado habría sido el error más caro del censo— y dejó ficha propia sólo a Ka'mari, que nace con rabo en el regazo de un árbol wiri y desaparece envuelto en su camisa entre el humo. La ofensa que desata la guerra es el yuruparí y no se dibuja: la escena se resuelve en los rostros y en la ruptura del baile."
       },
       "entity_refs": [
         {
@@ -2310,9 +2354,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos figuras se disputaban la página y la lectura se quedó con la que la conduce entera: Monalla Tirisa ama en secreto a un dios en forma de lombriz, recibe la instrucción de la espuma en sueños, cría el árbol a escondidas y decide cuándo alimentar a los suyos, mientras Jurama —la candidata del script— sólo arma la trampa y pierde el ojo que queda de estrella. Se corrigieron además dos grafías que vuelven inservible una lámina mal rotulada: el árbol es Moniya Amena, y el dios lombriz, Cullo Buinayma, que por ser su única corporeidad documentada va dentro de la hoja de bestiario aunque sea un dios."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos figuras se disputaban la página y la lectura se quedó con la que la conduce entera: Monalla Tirisa ama en secreto a un dios en forma de lombriz, recibe la instrucción de la espuma en sueños, cría el árbol a escondidas y decide cuándo alimentar a los suyos, mientras Jurama —la candidata del script— sólo arma la trampa y pierde el ojo que queda de estrella. Se corrigieron además dos grafías que vuelven inservible una lámina mal rotulada: el árbol es Moniya Amena, y el dios lombriz, Cullo Buinayma, que por ser su única corporeidad documentada va dentro de la hoja de bestiario aunque sea un dios.",
+        "previous_note": "Dos figuras se disputaban la página y la lectura se quedó con la que la conduce entera: Monalla Tirisa ama en secreto a un dios en forma de lombriz, recibe la instrucción de la espuma en sueños, cría el árbol a escondidas y decide cuándo alimentar a los suyos, mientras Jurama —la candidata del script— sólo arma la trampa y pierde el ojo que queda de estrella. Se corrigieron además dos grafías que vuelven inservible una lámina mal rotulada: el árbol es Moniya Amena, y el dios lombriz, Cullo Buinayma, que por ser su única corporeidad documentada va dentro de la hoja de bestiario aunque sea un dios."
       },
       "entity_refs": [
         {
@@ -2429,9 +2474,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el ciclo más largo del corpus y la lectura tuvo que decidir de quién es: el script propuso a He'echúmeru, que conduce el segundo tramo, pero quien sostiene la página de punta a punta es el forastero que llega sin lugar donde vivir, roba el objeto prohibido y luego aprende a golpes de humillación, así que la primaria se corrigió. El objeto que roba es el yuruparí y no entra a lámina ni de fondo, y el sacrificio de Kapiyú con el nacimiento y el manejo de la coca es procedimiento completo y tampoco: la página se ilustra por lo que pasa alrededor de lo que no se muestra."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el ciclo más largo del corpus y la lectura tuvo que decidir de quién es: el script propuso a He'echúmeru, que conduce el segundo tramo, pero quien sostiene la página de punta a punta es el forastero que llega sin lugar donde vivir, roba el objeto prohibido y luego aprende a golpes de humillación, así que la primaria se corrigió. El objeto que roba es el yuruparí y no entra a lámina ni de fondo, y el sacrificio de Kapiyú con el nacimiento y el manejo de la coca es procedimiento completo y tampoco: la página se ilustra por lo que pasa alrededor de lo que no se muestra.",
+        "previous_note": "Es el ciclo más largo del corpus y la lectura tuvo que decidir de quién es: el script propuso a He'echúmeru, que conduce el segundo tramo, pero quien sostiene la página de punta a punta es el forastero que llega sin lugar donde vivir, roba el objeto prohibido y luego aprende a golpes de humillación, así que la primaria se corrigió. El objeto que roba es el yuruparí y no entra a lámina ni de fondo, y el sacrificio de Kapiyú con el nacimiento y el manejo de la coca es procedimiento completo y tampoco: la página se ilustra por lo que pasa alrededor de lo que no se muestra."
       },
       "entity_refs": [
         {
@@ -2578,9 +2624,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos cuerpos que el censo podía haber fundido: la culebra, cuya escala y cuyo vientre habitable son el escenario, y Honorato, que decide romper el lazo con el río y queda marcado en un ojo. Y encontró que la forma luminosa en que Honorato emerge a medianoche no es un segundo cuerpo humano sino una embarcación que brilla, de modo que se modela en la hoja de canoa y balsa; el vientre abierto se resuelve como sección en corte de un animal, con eco y sombra, y nunca como escena de devoración."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos cuerpos que el censo podía haber fundido: la culebra, cuya escala y cuyo vientre habitable son el escenario, y Honorato, que decide romper el lazo con el río y queda marcado en un ojo. Y encontró que la forma luminosa en que Honorato emerge a medianoche no es un segundo cuerpo humano sino una embarcación que brilla, de modo que se modela en la hoja de canoa y balsa; el vientre abierto se resuelve como sección en corte de un animal, con eco y sombra, y nunca como escena de devoración.",
+        "previous_note": "La lectura separó dos cuerpos que el censo podía haber fundido: la culebra, cuya escala y cuyo vientre habitable son el escenario, y Honorato, que decide romper el lazo con el río y queda marcado en un ojo. Y encontró que la forma luminosa en que Honorato emerge a medianoche no es un segundo cuerpo humano sino una embarcación que brilla, de modo que se modela en la hoja de canoa y balsa; el vientre abierto se resuelve como sección en corte de un animal, con eco y sombra, y nunca como escena de devoración."
       },
       "entity_refs": [
         {
@@ -2687,9 +2734,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Cuatro refs y una decisión: la Curupira no es el Chullachaqui aunque comparta función, porque tiene los pies volteados hacia atrás y aquél un pie desigual, y fundirlas destruiría el único rasgo que cada una tiene. La lectura registró además que es figura tupí-guaraní recibida y no del repertorio nacional colombiano, y que su tercer rasgo documentado —una risa que desorienta— no es dibujable y se traduce en la contradicción entre el cuerpo y las huellas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Cuatro refs y una decisión: la Curupira no es el Chullachaqui aunque comparta función, porque tiene los pies volteados hacia atrás y aquél un pie desigual, y fundirlas destruiría el único rasgo que cada una tiene. La lectura registró además que es figura tupí-guaraní recibida y no del repertorio nacional colombiano, y que su tercer rasgo documentado —una risa que desorienta— no es dibujable y se traduce en la contradicción entre el cuerpo y las huellas.",
+        "previous_note": "Cuatro refs y una decisión: la Curupira no es el Chullachaqui aunque comparta función, porque tiene los pies volteados hacia atrás y aquél un pie desigual, y fundirlas destruiría el único rasgo que cada una tiene. La lectura registró además que es figura tupí-guaraní recibida y no del repertorio nacional colombiano, y que su tercer rasgo documentado —una risa que desorienta— no es dibujable y se traduce en la contradicción entre el cuerpo y las huellas."
       },
       "entity_refs": [
         {
@@ -2736,9 +2784,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato es corto y da una anatomía partida por la cintura y un instrumento —una guitarra, no el canto puro—, y la lectura fijó que la playa donde aparece es fluvial y estacional: sólo existe cuando el agua baja, de modo que dibujarla como orilla permanente convertiría un pulso de río en un paisaje falso. Se descartaron las runas grabadas que aparecían en el texto, porque las propias research_notes de la página dicen que se retiraron por falta de respaldo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato es corto y da una anatomía partida por la cintura y un instrumento —una guitarra, no el canto puro—, y la lectura fijó que la playa donde aparece es fluvial y estacional: sólo existe cuando el agua baja, de modo que dibujarla como orilla permanente convertiría un pulso de río en un paisaje falso. Se descartaron las runas grabadas que aparecían en el texto, porque las propias research_notes de la página dicen que se retiraron por falta de respaldo.",
+        "previous_note": "El relato es corto y da una anatomía partida por la cintura y un instrumento —una guitarra, no el canto puro—, y la lectura fijó que la playa donde aparece es fluvial y estacional: sólo existe cuando el agua baja, de modo que dibujarla como orilla permanente convertiría un pulso de río en un paisaje falso. Se descartaron las runas grabadas que aparecían en el texto, porque las propias research_notes de la página dicen que se retiraron por falta de respaldo."
       },
       "entity_refs": [
         {
@@ -2790,9 +2839,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó esta lectura es que el pigmento no es maquillaje sino el agente del argumento: Ipi se raya con huito hasta borrarse, y como el zumo fresco no es negro sino que oscurece con las horas, la lámina tiene que mostrar el estado oscuro como un plano de un solo tono y jamás como patrón. La página exigió además tres fichas de figura donde otras tienen una —Moé con su flauta, Ipi que se borra y la mujer que nace de la pepa del umarí—, y una advertencia de dirección: sin pueblo asignado, la flauta se dibuja personal y nunca como instrumento ceremonial de conjunto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó esta lectura es que el pigmento no es maquillaje sino el agente del argumento: Ipi se raya con huito hasta borrarse, y como el zumo fresco no es negro sino que oscurece con las horas, la lámina tiene que mostrar el estado oscuro como un plano de un solo tono y jamás como patrón. La página exigió además tres fichas de figura donde otras tienen una —Moé con su flauta, Ipi que se borra y la mujer que nace de la pepa del umarí—, y una advertencia de dirección: sin pueblo asignado, la flauta se dibuja personal y nunca como instrumento ceremonial de conjunto.",
+        "previous_note": "Lo que separó esta lectura es que el pigmento no es maquillaje sino el agente del argumento: Ipi se raya con huito hasta borrarse, y como el zumo fresco no es negro sino que oscurece con las horas, la lámina tiene que mostrar el estado oscuro como un plano de un solo tono y jamás como patrón. La página exigió además tres fichas de figura donde otras tienen una —Moé con su flauta, Ipi que se borra y la mujer que nace de la pepa del umarí—, y una advertencia de dirección: sin pueblo asignado, la flauta se dibuja personal y nunca como instrumento ceremonial de conjunto."
       },
       "entity_refs": [
         {
@@ -2899,9 +2949,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Veintitrés refs, los más de la página más larga del corpus, y la lectura tuvo que decidir cuál de las dos mitades manda: la odisea de Chimuiyaé —atada al tangarana, liberada por el canto, peinada, aconsejada por el morrocoy, llevada por la mariposa y devuelta ya cambiada— ocupa seis escenas seguidas y exige continuidad, mientras que Gútapa, la candidata del script, aporta el acto del origen en un solo momento; la primaria se corrigió a ella. Se anotó la grafía documentada del nombre, Gútapa o Nutapa, y se decidió que el avispero de la rodilla es un añadido sobre el mismo cuerpo y no una silueta nueva, así que no cuesta lámina."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Veintitrés refs, los más de la página más larga del corpus, y la lectura tuvo que decidir cuál de las dos mitades manda: la odisea de Chimuiyaé —atada al tangarana, liberada por el canto, peinada, aconsejada por el morrocoy, llevada por la mariposa y devuelta ya cambiada— ocupa seis escenas seguidas y exige continuidad, mientras que Gútapa, la candidata del script, aporta el acto del origen en un solo momento; la primaria se corrigió a ella. Se anotó la grafía documentada del nombre, Gútapa o Nutapa, y se decidió que el avispero de la rodilla es un añadido sobre el mismo cuerpo y no una silueta nueva, así que no cuesta lámina.",
+        "previous_note": "Veintitrés refs, los más de la página más larga del corpus, y la lectura tuvo que decidir cuál de las dos mitades manda: la odisea de Chimuiyaé —atada al tangarana, liberada por el canto, peinada, aconsejada por el morrocoy, llevada por la mariposa y devuelta ya cambiada— ocupa seis escenas seguidas y exige continuidad, mientras que Gútapa, la candidata del script, aporta el acto del origen en un solo momento; la primaria se corrigió a ella. Se anotó la grafía documentada del nombre, Gútapa o Nutapa, y se decidió que el avispero de la rodilla es un añadido sobre el mismo cuerpo y no una silueta nueva, así que no cuesta lámina."
       },
       "entity_refs": [
         {
@@ -3058,9 +3109,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El script propuso a la hija que mata a los pretendientes y la lectura devolvió la primaria al que da nombre a la página y sobrevive todas las pruebas del suegro; y encontró el ahorro que define esta ficha: sus dos transformaciones —tigre bajo el agua y picaflor con las alas quemadas— ya están pagadas por hojas existentes, de modo que no cuesta ninguna hoja de estado. Toda la violencia del relato, que es mucha, queda en el expediente: la composición se detiene siempre en el instante anterior a la prueba."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El script propuso a la hija que mata a los pretendientes y la lectura devolvió la primaria al que da nombre a la página y sobrevive todas las pruebas del suegro; y encontró el ahorro que define esta ficha: sus dos transformaciones —tigre bajo el agua y picaflor con las alas quemadas— ya están pagadas por hojas existentes, de modo que no cuesta ninguna hoja de estado. Toda la violencia del relato, que es mucha, queda en el expediente: la composición se detiene siempre en el instante anterior a la prueba.",
+        "previous_note": "El script propuso a la hija que mata a los pretendientes y la lectura devolvió la primaria al que da nombre a la página y sobrevive todas las pruebas del suegro; y encontró el ahorro que define esta ficha: sus dos transformaciones —tigre bajo el agua y picaflor con las alas quemadas— ya están pagadas por hojas existentes, de modo que no cuesta ninguna hoja de estado. Toda la violencia del relato, que es mucha, queda en el expediente: la composición se detiene siempre en el instante anterior a la prueba."
       },
       "entity_refs": [
         {
@@ -3162,9 +3214,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una sola marca sostiene la página entera: la tinta negra que Ayara unta en el rostro dormido y que el río no le quita, y como la Luna en que Mayari se convierte es un astro y no un cuerpo de personaje, la lectura le contó una sola hoja y mandó el astro a la hoja de cuatro páginas etiológicas. La mancha se resuelve como plano de un solo tono y nunca como diseño, porque un patrón sería marca de pueblo y esta página no tiene ninguno asignado."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una sola marca sostiene la página entera: la tinta negra que Ayara unta en el rostro dormido y que el río no le quita, y como la Luna en que Mayari se convierte es un astro y no un cuerpo de personaje, la lectura le contó una sola hoja y mandó el astro a la hoja de cuatro páginas etiológicas. La mancha se resuelve como plano de un solo tono y nunca como diseño, porque un patrón sería marca de pueblo y esta página no tiene ninguno asignado.",
+        "previous_note": "Una sola marca sostiene la página entera: la tinta negra que Ayara unta en el rostro dormido y que el río no le quita, y como la Luna en que Mayari se convierte es un astro y no un cuerpo de personaje, la lectura le contó una sola hoja y mandó el astro a la hoja de cuatro páginas etiológicas. La mancha se resuelve como plano de un solo tono y nunca como diseño, porque un patrón sería marca de pueblo y esta página no tiene ninguno asignado."
       },
       "entity_refs": [
         {
@@ -3231,9 +3284,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página existe para explicar un animal, y la lectura movió la primaria a ese animal: la candidata del script eran los tres huérfanos, que es una entidad embebida en la hoja de niños, mientras que la variante boquiblanca del mico es lo único que esta página aporta al corpus y la razón por la que esa variante es obligatoria en su hoja. La cuñada que les unta harina en la boca se resuelve con la variante de mujer adulta del pueblo ribereño y no recibe ficha."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página existe para explicar un animal, y la lectura movió la primaria a ese animal: la candidata del script eran los tres huérfanos, que es una entidad embebida en la hoja de niños, mientras que la variante boquiblanca del mico es lo único que esta página aporta al corpus y la razón por la que esa variante es obligatoria en su hoja. La cuñada que les unta harina en la boca se resuelve con la variante de mujer adulta del pueblo ribereño y no recibe ficha.",
+        "previous_note": "La página existe para explicar un animal, y la lectura movió la primaria a ese animal: la candidata del script eran los tres huérfanos, que es una entidad embebida en la hoja de niños, mientras que la variante boquiblanca del mico es lo único que esta página aporta al corpus y la razón por la que esa variante es obligatoria en su hoja. La cuñada que les unta harina en la boca se resuelve con la variante de mujer adulta del pueblo ribereño y no recibe ficha."
       },
       "entity_refs": [
         {
@@ -3305,9 +3359,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró aquí la advertencia de dirección más concreta del corpus y la verificó contra el módulo Ticuna: la palabra «santa» es vocabulario de la transmisión castellana y no identidad divina comprobada, de modo que la ficha no puede llevar aureola, hábito ni cruz y el halo se resuelve como luz. Y detectó el hallazgo de deduplicación que ahorra una lámina: la canastica gastada de esta página y la de Petapeta son el mismo objeto, con la misma regla —se la roban y el poder no pasa con ella—, así que van en una sola hoja con dos variantes de contenido."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró aquí la advertencia de dirección más concreta del corpus y la verificó contra el módulo Ticuna: la palabra «santa» es vocabulario de la transmisión castellana y no identidad divina comprobada, de modo que la ficha no puede llevar aureola, hábito ni cruz y el halo se resuelve como luz. Y detectó el hallazgo de deduplicación que ahorra una lámina: la canastica gastada de esta página y la de Petapeta son el mismo objeto, con la misma regla —se la roban y el poder no pasa con ella—, así que van en una sola hoja con dos variantes de contenido.",
+        "previous_note": "La lectura encontró aquí la advertencia de dirección más concreta del corpus y la verificó contra el módulo Ticuna: la palabra «santa» es vocabulario de la transmisión castellana y no identidad divina comprobada, de modo que la ficha no puede llevar aureola, hábito ni cruz y el halo se resuelve como luz. Y detectó el hallazgo de deduplicación que ahorra una lámina: la canastica gastada de esta página y la de Petapeta son el mismo objeto, con la misma regla —se la roban y el poder no pasa con ella—, así que van en una sola hoja con dos variantes de contenido."
       },
       "entity_refs": [
         {
@@ -3369,9 +3424,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato reparte la acción entre tres cuerpos y sólo uno la resuelve: el sapo cierra la herida del árbol cada noche, el guardián lo sostiene y la ardilla gana la carrera y le vierte el ají en los ojos para que lo suelte, de modo que la primaria pasó a la ardilla —la candidata del script era el guardián, que es una entidad embebida en la hoja del mico—. La lectura anotó además la carencia que más pesa en el corpus: el pasaje del árbol del mundo en la fuente tanimuka no se localizó, porque el artículo es un escaneo sin capa de texto del que sólo se leyeron tres de treinta y dos pliegos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato reparte la acción entre tres cuerpos y sólo uno la resuelve: el sapo cierra la herida del árbol cada noche, el guardián lo sostiene y la ardilla gana la carrera y le vierte el ají en los ojos para que lo suelte, de modo que la primaria pasó a la ardilla —la candidata del script era el guardián, que es una entidad embebida en la hoja del mico—. La lectura anotó además la carencia que más pesa en el corpus: el pasaje del árbol del mundo en la fuente tanimuka no se localizó, porque el artículo es un escaneo sin capa de texto del que sólo se leyeron tres de treinta y dos pliegos.",
+        "previous_note": "El relato reparte la acción entre tres cuerpos y sólo uno la resuelve: el sapo cierra la herida del árbol cada noche, el guardián lo sostiene y la ardilla gana la carrera y le vierte el ají en los ojos para que lo suelte, de modo que la primaria pasó a la ardilla —la candidata del script era el guardián, que es una entidad embebida en la hoja del mico—. La lectura anotó además la carencia que más pesa en el corpus: el pasaje del árbol del mundo en la fuente tanimuka no se localizó, porque el artículo es un escaneo sin capa de texto del que sólo se leyeron tres de treinta y dos pliegos."
       },
       "entity_refs": [
         {
@@ -3453,9 +3509,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos siluetas encadenadas por un mismo cuerpo —el hombre al que le arrancaron una pierna y el gavilán en que se transforma cuando el círculo se rompe— y la única rapaz de todo el corpus, que por eso no cabe en la hoja de aves menores. La lectura dejó fuera la pelazón que enmarca la página: es rito de iniciación femenina con protocolo propio, nunca llega a ocurrir en el relato, y los cantos que sí se publicaron lo hicieron con un aval declarado que aquí no existe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos siluetas encadenadas por un mismo cuerpo —el hombre al que le arrancaron una pierna y el gavilán en que se transforma cuando el círculo se rompe— y la única rapaz de todo el corpus, que por eso no cabe en la hoja de aves menores. La lectura dejó fuera la pelazón que enmarca la página: es rito de iniciación femenina con protocolo propio, nunca llega a ocurrir en el relato, y los cantos que sí se publicaron lo hicieron con un aval declarado que aquí no existe.",
+        "previous_note": "Dos siluetas encadenadas por un mismo cuerpo —el hombre al que le arrancaron una pierna y el gavilán en que se transforma cuando el círculo se rompe— y la única rapaz de todo el corpus, que por eso no cabe en la hoja de aves menores. La lectura dejó fuera la pelazón que enmarca la página: es rito de iniciación femenina con protocolo propio, nunca llega a ocurrir en el relato, y los cantos que sí se publicaron lo hicieron con un aval declarado que aquí no existe."
       },
       "entity_refs": [
         {
@@ -3542,9 +3599,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página da una materia y una escala: el hombre pide que le hiervan achiote, llena un totumo con el líquido escarlata y se lo bebe, y esa secuencia doméstica —semilla roja, agua hirviendo, vasija— es lo que hay que modelar, no el ascenso. Por eso la lectura le contó una sola hoja al hombre y mandó el Sol resultante a la hoja de astros, junto con la madre convertida en bruma blanca de ceniza, que se resuelve como estado de la materia y no como figura."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página da una materia y una escala: el hombre pide que le hiervan achiote, llena un totumo con el líquido escarlata y se lo bebe, y esa secuencia doméstica —semilla roja, agua hirviendo, vasija— es lo que hay que modelar, no el ascenso. Por eso la lectura le contó una sola hoja al hombre y mandó el Sol resultante a la hoja de astros, junto con la madre convertida en bruma blanca de ceniza, que se resuelve como estado de la materia y no como figura.",
+        "previous_note": "La página da una materia y una escala: el hombre pide que le hiervan achiote, llena un totumo con el líquido escarlata y se lo bebe, y esa secuencia doméstica —semilla roja, agua hirviendo, vasija— es lo que hay que modelar, no el ascenso. Por eso la lectura le contó una sola hoja al hombre y mandó el Sol resultante a la hoja de astros, junto con la madre convertida en bruma blanca de ceniza, que se resuelve como estado de la materia y no como figura."
       },
       "entity_refs": [
         {
@@ -3626,9 +3684,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la única página narrable del corpus —la única con campo mito— y por eso la lectura la tratou como la que no admite recorte: su Conejo, su Tigre, su muñeco pegajoso y su cueva van a guion y a video. Lo amazónico de esta versión está en tres datos concretos que la separan de sus primas llanera y caribe: la huerta que saquea es de sandías, el escape es hacia monte de selva húmeda, y el segundo episodio se gana dentro de una cueva y sólo con la voz, fingiendo ser un comedor de tigres."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la única página narrable del corpus —la única con campo mito— y por eso la lectura la tratou como la que no admite recorte: su Conejo, su Tigre, su muñeco pegajoso y su cueva van a guion y a video. Lo amazónico de esta versión está en tres datos concretos que la separan de sus primas llanera y caribe: la huerta que saquea es de sandías, el escape es hacia monte de selva húmeda, y el segundo episodio se gana dentro de una cueva y sólo con la voz, fingiendo ser un comedor de tigres.",
+        "previous_note": "Es la única página narrable del corpus —la única con campo mito— y por eso la lectura la tratou como la que no admite recorte: su Conejo, su Tigre, su muñeco pegajoso y su cueva van a guion y a video. Lo amazónico de esta versión está en tres datos concretos que la separan de sus primas llanera y caribe: la huerta que saquea es de sandías, el escape es hacia monte de selva húmeda, y el segundo episodio se gana dentro de una cueva y sólo con la voz, fingiendo ser un comedor de tigres."
       },
       "entity_refs": [
         {
@@ -3690,9 +3749,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Cuatro refs y toda la página es una desproporción: un hombrecillo confundible con un niño que deja el monte tumbado y llano como la palma de la mano en una sola noche, frente a un hombre desnudo tendido en el camino y cubierto de pigmentos silvestres. La lectura fijó aquí la regla explícita del corpus sobre la pintura —manchas improvisadas y nunca diseño corporal de un pueblo, porque la página no tiene atribución— y registró que Petapeta es figura viva del resguardo Ticoya, lo que obliga a que la canasta no reproduzca ninguna pieza real."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Cuatro refs y toda la página es una desproporción: un hombrecillo confundible con un niño que deja el monte tumbado y llano como la palma de la mano en una sola noche, frente a un hombre desnudo tendido en el camino y cubierto de pigmentos silvestres. La lectura fijó aquí la regla explícita del corpus sobre la pintura —manchas improvisadas y nunca diseño corporal de un pueblo, porque la página no tiene atribución— y registró que Petapeta es figura viva del resguardo Ticoya, lo que obliga a que la canasta no reproduzca ninguna pieza real.",
+        "previous_note": "Cuatro refs y toda la página es una desproporción: un hombrecillo confundible con un niño que deja el monte tumbado y llano como la palma de la mano en una sola noche, frente a un hombre desnudo tendido en el camino y cubierto de pigmentos silvestres. La lectura fijó aquí la regla explícita del corpus sobre la pintura —manchas improvisadas y nunca diseño corporal de un pueblo, porque la página no tiene atribución— y registró que Petapeta es figura viva del resguardo Ticoya, lo que obliga a que la canasta no reproduzca ninguna pieza real."
       },
       "entity_refs": [
         {
@@ -3739,9 +3799,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura confirmó un dictamen ya tomado en otro censo y le dio cuerpo: esta Taife no es la Madremonte andina sino su opuesta doméstica —una anciana cubierta de montículos de niguas que entra a la aldea cuando los adultos están en la chacra, cambia ñame por que los niños le saquen las larvas, y se venga con una red y una ortiga cuando le parten el bastón—, de modo que ni una hoja ni un bejuco de la guardiana vegetal entra a su lámina. Y encontró el detalle que la cierra: se la expulsa con humo de ají y no con tabaco."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura confirmó un dictamen ya tomado en otro censo y le dio cuerpo: esta Taife no es la Madremonte andina sino su opuesta doméstica —una anciana cubierta de montículos de niguas que entra a la aldea cuando los adultos están en la chacra, cambia ñame por que los niños le saquen las larvas, y se venga con una red y una ortiga cuando le parten el bastón—, de modo que ni una hoja ni un bejuco de la guardiana vegetal entra a su lámina. Y encontró el detalle que la cierra: se la expulsa con humo de ají y no con tabaco.",
+        "previous_note": "La lectura confirmó un dictamen ya tomado en otro censo y le dio cuerpo: esta Taife no es la Madremonte andina sino su opuesta doméstica —una anciana cubierta de montículos de niguas que entra a la aldea cuando los adultos están en la chacra, cambia ñame por que los niños le saquen las larvas, y se venga con una red y una ortiga cuando le parten el bastón—, de modo que ni una hoja ni un bejuco de la guardiana vegetal entra a su lámina. Y encontró el detalle que la cierra: se la expulsa con humo de ají y no con tabaco."
       },
       "entity_refs": [
         {
@@ -3858,9 +3919,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Una sola página encadena cuatro encuentros monstruosos y la lectura tuvo que decidir qué es mostrable: sólo dos siluetas están realmente descritas —el suplantador de ojos como tizones y manos con luz extraña, y el cabezón del milpeso—, mientras que el ciempiés que retumba y el hombre cuyo cazabe brota de su propia podredumbre se insinúan y no se explicitan. La primaria se movió a las dos hermanas, que atraviesan las cinco escenas y exigen continuidad, porque las criaturas son los encuentros y ellas son la página."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Una sola página encadena cuatro encuentros monstruosos y la lectura tuvo que decidir qué es mostrable: sólo dos siluetas están realmente descritas —el suplantador de ojos como tizones y manos con luz extraña, y el cabezón del milpeso—, mientras que el ciempiés que retumba y el hombre cuyo cazabe brota de su propia podredumbre se insinúan y no se explicitan. La primaria se movió a las dos hermanas, que atraviesan las cinco escenas y exigen continuidad, porque las criaturas son los encuentros y ellas son la página.",
+        "previous_note": "Una sola página encadena cuatro encuentros monstruosos y la lectura tuvo que decidir qué es mostrable: sólo dos siluetas están realmente descritas —el suplantador de ojos como tizones y manos con luz extraña, y el cabezón del milpeso—, mientras que el ciempiés que retumba y el hombre cuyo cazabe brota de su propia podredumbre se insinúan y no se explicitan. La primaria se movió a las dos hermanas, que atraviesan las cinco escenas y exigen continuidad, porque las criaturas son los encuentros y ellas son la página."
       },
       "entity_refs": [
         {
@@ -3992,9 +4054,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró aquí una duplicación y la deshizo: la forma de delfín y la de joven de rostro noble que corteja son exactamente el cuerpo del bufeo y ya están pagadas en esa hoja, así que a esta página le queda una sola imagen propia y es la que la vale —el señor del agua avanzando de noche montado en un cocodrilo negro con una serpiente enroscada al cuello—. Es además la segunda de las tres páginas que descienden del libro de Hugo Niño, y el editorial del repositorio ya la declaró repertorio mixto o transfronterizo con límites de atribución explícitos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró aquí una duplicación y la deshizo: la forma de delfín y la de joven de rostro noble que corteja son exactamente el cuerpo del bufeo y ya están pagadas en esa hoja, así que a esta página le queda una sola imagen propia y es la que la vale —el señor del agua avanzando de noche montado en un cocodrilo negro con una serpiente enroscada al cuello—. Es además la segunda de las tres páginas que descienden del libro de Hugo Niño, y el editorial del repositorio ya la declaró repertorio mixto o transfronterizo con límites de atribución explícitos.",
+        "previous_note": "La lectura encontró aquí una duplicación y la deshizo: la forma de delfín y la de joven de rostro noble que corteja son exactamente el cuerpo del bufeo y ya están pagadas en esa hoja, así que a esta página le queda una sola imagen propia y es la que la vale —el señor del agua avanzando de noche montado en un cocodrilo negro con una serpiente enroscada al cuello—. Es además la segunda de las tres páginas que descienden del libro de Hugo Niño, y el editorial del repositorio ya la declaró repertorio mixto o transfronterizo con límites de atribución explícitos."
       },
       "entity_refs": [
         {
@@ -4076,9 +4139,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Esta lectura terminó en una recomendación de no producir: la página no aporta ni una sola ficha exclusiva —toca el hombre sol y los astros, y las dos están ya pagadas por origen-del-sol y por otras tres páginas—, de modo que retirarla del cubo cuesta cero láminas. Hay dos razones independientes para hacerlo: el cuerpo de la página habla de «los caníbales boras» y su campo Lección dice que «la unidad y pureza del clan son esenciales para la supervivencia», lenguaje verificado en la página y en el módulo, que ya lo retiró; y la imagen pública de los yagua en el Trapecio está construida por el turismo cultural, de modo que cualquier lámina hecha desde aquí ilustraría el estereotipo y lo fijaría. La primaria se corrigió porque la candidata del script era una entidad excluida, y quedó en la hoja de astros: lo único suyo que sobrevive, y no es suyo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Esta lectura terminó en una recomendación de no producir: la página no aporta ni una sola ficha exclusiva —toca el hombre sol y los astros, y las dos están ya pagadas por origen-del-sol y por otras tres páginas—, de modo que retirarla del cubo cuesta cero láminas. Hay dos razones independientes para hacerlo: el cuerpo de la página habla de «los caníbales boras» y su campo Lección dice que «la unidad y pureza del clan son esenciales para la supervivencia», lenguaje verificado en la página y en el módulo, que ya lo retiró; y la imagen pública de los yagua en el Trapecio está construida por el turismo cultural, de modo que cualquier lámina hecha desde aquí ilustraría el estereotipo y lo fijaría. La primaria se corrigió porque la candidata del script era una entidad excluida, y quedó en la hoja de astros: lo único suyo que sobrevive, y no es suyo.",
+        "previous_note": "Esta lectura terminó en una recomendación de no producir: la página no aporta ni una sola ficha exclusiva —toca el hombre sol y los astros, y las dos están ya pagadas por origen-del-sol y por otras tres páginas—, de modo que retirarla del cubo cuesta cero láminas. Hay dos razones independientes para hacerlo: el cuerpo de la página habla de «los caníbales boras» y su campo Lección dice que «la unidad y pureza del clan son esenciales para la supervivencia», lenguaje verificado en la página y en el módulo, que ya lo retiró; y la imagen pública de los yagua en el Trapecio está construida por el turismo cultural, de modo que cualquier lámina hecha desde aquí ilustraría el estereotipo y lo fijaría. La primaria se corrigió porque la candidata del script era una entidad excluida, y quedó en la hoja de astros: lo único suyo que sobrevive, y no es suyo."
       },
       "entity_refs": [
         {
@@ -19327,5 +19391,21 @@
       "ninguna pieza de metal, tela de forastero, escopeta ni sombrero en las láminas del estrato etnográfico",
       "ninguna luz eléctrica, linterna, cable ni motor en ninguna lámina del corpus"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 28,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "9c84fb950a05cc34507e03286702194e25d67eb862fab0ad9fbb28162f042036",
+      "max_source_updated_at": "2026-09-14T20:27:27.768Z"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento santander-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -55,7 +55,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 36,
     "fields": [
       "content",
@@ -64,8 +64,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "d394d67625e1319b709c1955bdefe9c1831b4338d2b2fdab519d194465828cbf",
-    "max_source_updated_at": "2026-07-23T00:09:03.864Z"
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "max_source_updated_at": "2026-09-23T01:28:28.792Z"
   },
   "research": {
     "sources": [
@@ -1221,8 +1221,8 @@
     "dossier": "docs/investigacion/santander-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1232,7 +1232,51 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "cuento-fantastico",
+        "duende-del-salto",
+        "el-anima-coy",
+        "el-cacique-salomon",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-cerro-encantado",
+        "el-diablo-de-umpala",
+        "el-doctor-galeacer",
+        "el-ermitano-iracundo",
+        "el-fantasma-de-el-horizonte",
+        "el-pollo-de-las-animas",
+        "el-quijote-piedecuestano",
+        "el-reventon-de-jacobo",
+        "el-trapiche-ardiendo",
+        "la-campana-del-diablo",
+        "la-cueva-de-la-pisca",
+        "la-cueva-del-diablo",
+        "la-diabla-castigadora",
+        "la-hilandera",
+        "la-lampara-de-petroleo",
+        "la-mancarita",
+        "la-mechuda",
+        "la-monedita-en-la-alcancia",
+        "la-mula-del-diablo",
+        "la-mula-maneada",
+        "la-piedra-del-muerto",
+        "la-puerta-del-perdon",
+        "la-sayona-del-cementerio",
+        "la-vista-del-libertador",
+        "lagunas-encantadas",
+        "lo-que-ensenan-las-cuevas",
+        "los-tunjos-de-la-cantera",
+        "nueva-version-de-la-luz-del-limonal",
+        "tal-para-cual",
+        "talabad",
+        "un-libertador-piedecuestano"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "cuento-fantastico": {
@@ -1257,9 +1301,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura terminó sin una sola entidad propia: el mozo, la calle empedrada, el río de Oro y el monasterio de las Clarisas ya venían de relatos más antiguos y mejor fechados, y lo único exclusivo de esta página —los tenis marca Tiburón y los «destellos ochentosos»— está fuera de época por un siglo. Es una pieza literaria moderna disfrazada de leyenda y se produce entera desde el estrato del XIX, sin abrir ninguna hoja nueva."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura terminó sin una sola entidad propia: el mozo, la calle empedrada, el río de Oro y el monasterio de las Clarisas ya venían de relatos más antiguos y mejor fechados, y lo único exclusivo de esta página —los tenis marca Tiburón y los «destellos ochentosos»— está fuera de época por un siglo. Es una pieza literaria moderna disfrazada de leyenda y se produce entera desde el estrato del XIX, sin abrir ninguna hoja nueva.",
+        "previous_note": "La lectura terminó sin una sola entidad propia: el mozo, la calle empedrada, el río de Oro y el monasterio de las Clarisas ya venían de relatos más antiguos y mejor fechados, y lo único exclusivo de esta página —los tenis marca Tiburón y los «destellos ochentosos»— está fuera de época por un siglo. Es una pieza literaria moderna disfrazada de leyenda y se produce entera desde el estrato del XIX, sin abrir ninguna hoja nueva."
       },
       "entity_refs": [
         {
@@ -1331,9 +1376,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó esta lectura fue la poda: la página es una composición híbrida de 2016 y hubo que quitarle la piedra de sacrificios, el cacique y los sucesos coloniales inventados antes de contar nada. Lo que queda es un enano ensombrerado con tiple en la caverna de detrás del salto, en la quebrada La Honda, y un llanto por la tala de árboles y la merma del caudal que es memoria contemporánea: la lámina puede sostenerlo, pero no puede fecharlo en el XIX."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó esta lectura fue la poda: la página es una composición híbrida de 2016 y hubo que quitarle la piedra de sacrificios, el cacique y los sucesos coloniales inventados antes de contar nada. Lo que queda es un enano ensombrerado con tiple en la caverna de detrás del salto, en la quebrada La Honda, y un llanto por la tala de árboles y la merma del caudal que es memoria contemporánea: la lámina puede sostenerlo, pero no puede fecharlo en el XIX.",
+        "previous_note": "Lo que separó esta lectura fue la poda: la página es una composición híbrida de 2016 y hubo que quitarle la piedra de sacrificios, el cacique y los sucesos coloniales inventados antes de contar nada. Lo que queda es un enano ensombrerado con tiple en la caverna de detrás del salto, en la quebrada La Honda, y un llanto por la tala de árboles y la merma del caudal que es memoria contemporánea: la lámina puede sostenerlo, pero no puede fecharlo en el XIX."
       },
       "entity_refs": [
         {
@@ -1420,9 +1466,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó el cuerpo del espanto de la maquinaria de barrio que lo sostiene: la túnica de llamas que arde sin consumirla, la antorcha y la canilla son de la aparición, pero las campanas de San Antonio a medianoche los miércoles y sábados, los serenos con bastón y el vecindario rezando tras las puertas son el reloj y el escenario, y son ellos los que fechan la escena antes del alumbrado eléctrico. La página cita a Arenas Mantilla con página exacta y ninguna se pudo verificar contra el impreso."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó el cuerpo del espanto de la maquinaria de barrio que lo sostiene: la túnica de llamas que arde sin consumirla, la antorcha y la canilla son de la aparición, pero las campanas de San Antonio a medianoche los miércoles y sábados, los serenos con bastón y el vecindario rezando tras las puertas son el reloj y el escenario, y son ellos los que fechan la escena antes del alumbrado eléctrico. La página cita a Arenas Mantilla con página exacta y ninguna se pudo verificar contra el impreso.",
+        "previous_note": "La lectura separó el cuerpo del espanto de la maquinaria de barrio que lo sostiene: la túnica de llamas que arde sin consumirla, la antorcha y la canilla son de la aparición, pero las campanas de San Antonio a medianoche los miércoles y sábados, los serenos con bastón y el vecindario rezando tras las puertas son el reloj y el escenario, y son ellos los que fechan la escena antes del alumbrado eléctrico. La página cita a Arenas Mantilla con página exacta y ninguna se pudo verificar contra el impreso."
       },
       "entity_refs": [
         {
@@ -1534,9 +1581,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el relato donde la extracción dio el resultado más incómodo: la figura del título —Sugamuxi o don Alonso— tiene voz, cargo y una frase memorable, pero de cuerpo sólo «ojos profundos», y lo mismo ocurre con el cacique Andrés Guatesique, que es carácter y no cuerpo. Fichar su vestuario sería inventar iconografía muisca o guane que este corpus mestizo no documenta y que no puede tomarse prestada de otra comunidad, así que la protagonía producible se queda en los caballeros criollos y en los conquistadores, y el cacique existe en la página como voz y no como lámina."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el relato donde la extracción dio el resultado más incómodo: la figura del título —Sugamuxi o don Alonso— tiene voz, cargo y una frase memorable, pero de cuerpo sólo «ojos profundos», y lo mismo ocurre con el cacique Andrés Guatesique, que es carácter y no cuerpo. Fichar su vestuario sería inventar iconografía muisca o guane que este corpus mestizo no documenta y que no puede tomarse prestada de otra comunidad, así que la protagonía producible se queda en los caballeros criollos y en los conquistadores, y el cacique existe en la página como voz y no como lámina.",
+        "previous_note": "Es el relato donde la extracción dio el resultado más incómodo: la figura del título —Sugamuxi o don Alonso— tiene voz, cargo y una frase memorable, pero de cuerpo sólo «ojos profundos», y lo mismo ocurre con el cacique Andrés Guatesique, que es carácter y no cuerpo. Fichar su vestuario sería inventar iconografía muisca o guane que este corpus mestizo no documenta y que no puede tomarse prestada de otra comunidad, así que la protagonía producible se queda en los caballeros criollos y en los conquistadores, y el cacique existe en la página como voz y no como lámina."
       },
       "entity_refs": [
         {
@@ -1608,9 +1656,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que esta lectura separó es que el Carriazo es a la vez el guardián y el objeto: hay que vencerlo para desenterrar las tres cargas de oro bajo el roble de la vereda San Isidro, de modo que no puede tener cuerpo estable —golpea con «caricias de lana que después se convertían en rocas»— y el desenterrar, que es el final, no se representa. Su forma de chivo con cachos es variante del mismo ser y no un segundo cuerpo, y lo que castiga es la codicia y el lindero traspasado, no la tala."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que esta lectura separó es que el Carriazo es a la vez el guardián y el objeto: hay que vencerlo para desenterrar las tres cargas de oro bajo el roble de la vereda San Isidro, de modo que no puede tener cuerpo estable —golpea con «caricias de lana que después se convertían en rocas»— y el desenterrar, que es el final, no se representa. Su forma de chivo con cachos es variante del mismo ser y no un segundo cuerpo, y lo que castiga es la codicia y el lindero traspasado, no la tala.",
+        "previous_note": "Lo que esta lectura separó es que el Carriazo es a la vez el guardián y el objeto: hay que vencerlo para desenterrar las tres cargas de oro bajo el roble de la vereda San Isidro, de modo que no puede tener cuerpo estable —golpea con «caricias de lana que después se convertían en rocas»— y el desenterrar, que es el final, no se representa. Su forma de chivo con cachos es variante del mismo ser y no un segundo cuerpo, y lo que castiga es la codicia y el lindero traspasado, no la tala."
       },
       "entity_refs": [
         {
@@ -1722,9 +1771,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que retirar la capa racializada con que la página explica al abusador —nada de «el indio lascivo»— y quedarse con el mandón y su abuso: Arnefo quema el rancho de Ardila y el cerro responde con temblor y lluvia de ceniza, que se leen como variante del mismo castigo del cielo que aparece en otros cuatro relatos y no como fenómeno aparte."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que retirar la capa racializada con que la página explica al abusador —nada de «el indio lascivo»— y quedarse con el mandón y su abuso: Arnefo quema el rancho de Ardila y el cerro responde con temblor y lluvia de ceniza, que se leen como variante del mismo castigo del cielo que aparece en otros cuatro relatos y no como fenómeno aparte.",
+        "previous_note": "La lectura tuvo que retirar la capa racializada con que la página explica al abusador —nada de «el indio lascivo»— y quedarse con el mandón y su abuso: Arnefo quema el rancho de Ardila y el cerro responde con temblor y lluvia de ceniza, que se leen como variante del mismo castigo del cielo que aparece en otros cuatro relatos y no como fenómeno aparte."
       },
       "entity_refs": [
         {
@@ -1806,9 +1856,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el único relato del corpus que se explica a sí mismo sin sobrenatural y la lectura lo respetó: el caballo de Félix María Rueda, bien herrado, sacaba chispas al chocar las herraduras contra las piedras, de modo que la chispa es una regla del contrato del caballo de silla y no una criatura. Sobre asfalto la lámina se apaga, y por eso el empedrado de Umpalá es aquí escenario obligatorio y no decorado; los zamarros y el sombrero gris de ala ancha son correctos porque él es jinete nocturno, no porque sean el uniforme del corpus."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el único relato del corpus que se explica a sí mismo sin sobrenatural y la lectura lo respetó: el caballo de Félix María Rueda, bien herrado, sacaba chispas al chocar las herraduras contra las piedras, de modo que la chispa es una regla del contrato del caballo de silla y no una criatura. Sobre asfalto la lámina se apaga, y por eso el empedrado de Umpalá es aquí escenario obligatorio y no decorado; los zamarros y el sombrero gris de ala ancha son correctos porque él es jinete nocturno, no porque sean el uniforme del corpus.",
+        "previous_note": "Es el único relato del corpus que se explica a sí mismo sin sobrenatural y la lectura lo respetó: el caballo de Félix María Rueda, bien herrado, sacaba chispas al chocar las herraduras contra las piedras, de modo que la chispa es una regla del contrato del caballo de silla y no una criatura. Sobre asfalto la lámina se apaga, y por eso el empedrado de Umpalá es aquí escenario obligatorio y no decorado; los zamarros y el sombrero gris de ala ancha son correctos porque él es jinete nocturno, no porque sean el uniforme del corpus."
       },
       "entity_refs": [
         {
@@ -1905,9 +1956,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que esta lectura separó es que el caballo no es un animal sino un hombre dentro de un animal, con la piel brillando como cielo estrellado, y que su prueba es siempre negativa: embiste una cerca de arrayanes que amanece intacta, igual que el bosque que el Diablo derriba y que también amanece entero. Los aullidos, los cantos de gallo y los maullidos quedaron fuera porque el relato los da como oídos y nunca como vistos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que esta lectura separó es que el caballo no es un animal sino un hombre dentro de un animal, con la piel brillando como cielo estrellado, y que su prueba es siempre negativa: embiste una cerca de arrayanes que amanece intacta, igual que el bosque que el Diablo derriba y que también amanece entero. Los aullidos, los cantos de gallo y los maullidos quedaron fuera porque el relato los da como oídos y nunca como vistos.",
+        "previous_note": "Lo que esta lectura separó es que el caballo no es un animal sino un hombre dentro de un animal, con la piel brillando como cielo estrellado, y que su prueba es siempre negativa: embiste una cerca de arrayanes que amanece intacta, igual que el bosque que el Diablo derriba y que también amanece entero. Los aullidos, los cantos de gallo y los maullidos quedaron fuera porque el relato los da como oídos y nunca como vistos."
       },
       "entity_refs": [
         {
@@ -1989,9 +2041,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Doble aviso que la lectura dejó por escrito: transcurre en Ocaña, en la vertiente del Catatumbo y no en la del Chicamocha, y su marco es una cadena de correos electrónicos de marzo de 2004. Se ficha al asceta, que es intemporal y que tiene la descripción física más completa del corpus —cabello largo y sucio, barba gris, ojos rojos, manos huesudas y hábito ceniciento—, con una cueva neutra y sin un solo accidente reconocible de Santander: su cueva no puede convertirse en el modelo espacial del corpus."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Doble aviso que la lectura dejó por escrito: transcurre en Ocaña, en la vertiente del Catatumbo y no en la del Chicamocha, y su marco es una cadena de correos electrónicos de marzo de 2004. Se ficha al asceta, que es intemporal y que tiene la descripción física más completa del corpus —cabello largo y sucio, barba gris, ojos rojos, manos huesudas y hábito ceniciento—, con una cueva neutra y sin un solo accidente reconocible de Santander: su cueva no puede convertirse en el modelo espacial del corpus.",
+        "previous_note": "Doble aviso que la lectura dejó por escrito: transcurre en Ocaña, en la vertiente del Catatumbo y no en la del Chicamocha, y su marco es una cadena de correos electrónicos de marzo de 2004. Se ficha al asceta, que es intemporal y que tiene la descripción física más completa del corpus —cabello largo y sucio, barba gris, ojos rojos, manos huesudas y hábito ceniciento—, con una cueva neutra y sin un solo accidente reconocible de Santander: su cueva no puede convertirse en el modelo espacial del corpus."
       },
       "entity_refs": [
         {
@@ -2058,9 +2111,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura decidió no separar las dos lecturas del bulto: el manto penitencial con el golpe de rosario y matraca en la esquina de la carrera 13 y el burro cojo cubierto con una manta oscura son el mismo objeto de papel, y partirlo en dos fichas rompería el chiste y costaría el doble. Es además el relato donde el cronista entra en su propia página, apostado de noche en la esquina a desenmascarar al fantasma."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura decidió no separar las dos lecturas del bulto: el manto penitencial con el golpe de rosario y matraca en la esquina de la carrera 13 y el burro cojo cubierto con una manta oscura son el mismo objeto de papel, y partirlo en dos fichas rompería el chiste y costaría el doble. Es además el relato donde el cronista entra en su propia página, apostado de noche en la esquina a desenmascarar al fantasma.",
+        "previous_note": "La lectura decidió no separar las dos lecturas del bulto: el manto penitencial con el golpe de rosario y matraca en la esquina de la carrera 13 y el burro cojo cubierto con una manta oscura son el mismo objeto de papel, y partirlo en dos fichas rompería el chiste y costaría el doble. Es además el relato donde el cronista entra en su propia página, apostado de noche en la esquina a desenmascarar al fantasma."
       },
       "entity_refs": [
         {
@@ -2152,9 +2206,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El espanto se desmiente dentro del relato —las ánimas que golpean puertas y lloran de noche son una madrastra imitando voces— y la lectura tuvo que dejar la ficha de las ánimas capaz de sostener las dos lecturas a la vez, la creída y la descubierta. Lo que el relato pone en escena y aquello por lo que se cuenta entero es el pollo saraviado, gallina pintada del patio, que no es figura de espanto sino el objeto de la disputa."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El espanto se desmiente dentro del relato —las ánimas que golpean puertas y lloran de noche son una madrastra imitando voces— y la lectura tuvo que dejar la ficha de las ánimas capaz de sostener las dos lecturas a la vez, la creída y la descubierta. Lo que el relato pone en escena y aquello por lo que se cuenta entero es el pollo saraviado, gallina pintada del patio, que no es figura de espanto sino el objeto de la disputa.",
+        "previous_note": "El espanto se desmiente dentro del relato —las ánimas que golpean puertas y lloran de noche son una madrastra imitando voces— y la lectura tuvo que dejar la ficha de las ánimas capaz de sostener las dos lecturas a la vez, la creída y la descubierta. Lo que el relato pone en escena y aquello por lo que se cuenta entero es el pollo saraviado, gallina pintada del patio, que no es figura de espanto sino el objeto de la disputa."
       },
       "entity_refs": [
         {
@@ -2246,9 +2301,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Sátira colonial cuyo protagonista —don Juan de Guarguatí, de Macaregua— trae actos y trebejos (cadenas, collar de colmillos, lanza, capa) y ni un rasgo de cuerpo ni de traje, de modo que la lectura lo dejó dentro de la única ficha que puede sostenerlo sin inventarle tradición guane. Y dejó dos menciones sin resolver que no entran en ninguna lámina: las «once pollonas», que gramaticalmente pueden ser mujeres jóvenes o aves de corral, y Pichy, el sol, que es una sola línea y cuya ficha sería inventar cosmología."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Sátira colonial cuyo protagonista —don Juan de Guarguatí, de Macaregua— trae actos y trebejos (cadenas, collar de colmillos, lanza, capa) y ni un rasgo de cuerpo ni de traje, de modo que la lectura lo dejó dentro de la única ficha que puede sostenerlo sin inventarle tradición guane. Y dejó dos menciones sin resolver que no entran en ninguna lámina: las «once pollonas», que gramaticalmente pueden ser mujeres jóvenes o aves de corral, y Pichy, el sol, que es una sola línea y cuya ficha sería inventar cosmología.",
+        "previous_note": "Sátira colonial cuyo protagonista —don Juan de Guarguatí, de Macaregua— trae actos y trebejos (cadenas, collar de colmillos, lanza, capa) y ni un rasgo de cuerpo ni de traje, de modo que la lectura lo dejó dentro de la única ficha que puede sostenerlo sin inventarle tradición guane. Y dejó dos menciones sin resolver que no entran en ninguna lámina: las «once pollonas», que gramaticalmente pueden ser mujeres jóvenes o aves de corral, y Pichy, el sol, que es una sola línea y cuya ficha sería inventar cosmología."
       },
       "entity_refs": [
         {
@@ -2365,9 +2421,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que esta lectura separó es la oferta: un hombre muy alto y enlutado llega de noche a una ventana y propone pasar los huesos, y esa figura —que vuelve en La mula del diablo con otra oferta, herrar la mula— sí tiene estatura, ropa y voz, a diferencia del Diablo del camino, que no tiene ninguna de las tres. El hallazgo del entierro se queda en el baúl cerrado: ni hoyo, ni hueso, ni acto de guaquear, aunque el relato se cuente por ellos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que esta lectura separó es la oferta: un hombre muy alto y enlutado llega de noche a una ventana y propone pasar los huesos, y esa figura —que vuelve en La mula del diablo con otra oferta, herrar la mula— sí tiene estatura, ropa y voz, a diferencia del Diablo del camino, que no tiene ninguna de las tres. El hallazgo del entierro se queda en el baúl cerrado: ni hoyo, ni hueso, ni acto de guaquear, aunque el relato se cuente por ellos.",
+        "previous_note": "Lo que esta lectura separó es la oferta: un hombre muy alto y enlutado llega de noche a una ventana y propone pasar los huesos, y esa figura —que vuelve en La mula del diablo con otra oferta, herrar la mula— sí tiene estatura, ropa y voz, a diferencia del Diablo del camino, que no tiene ninguna de las tres. El hallazgo del entierro se queda en el baúl cerrado: ni hoyo, ni hueso, ni acto de guaquear, aunque el relato se cuente por ellos."
       },
       "entity_refs": [
         {
@@ -2454,9 +2511,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos cosas que la lectura tuvo que desfusionar: la barbacoa —cuatro hombres sin cabeza cargando un difunto por una promesa incumplida a la Virgen de Chiquinquirá— es figura autónoma y no un episodio de Nazario, y el trapiche sólo se enseña ardiendo sobre el horizonte, una vez al año y visto desde El Volcán, de modo que el trapiche apagado no se ficha. El correctivo documental va con él: hacia 1941 Piedecuesta tenía cincuenta y ocho trapiches, cuarenta y cinco hidráulicos y nueve de motor, y ninguno es la estampa de yunta que uno esperaría."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos cosas que la lectura tuvo que desfusionar: la barbacoa —cuatro hombres sin cabeza cargando un difunto por una promesa incumplida a la Virgen de Chiquinquirá— es figura autónoma y no un episodio de Nazario, y el trapiche sólo se enseña ardiendo sobre el horizonte, una vez al año y visto desde El Volcán, de modo que el trapiche apagado no se ficha. El correctivo documental va con él: hacia 1941 Piedecuesta tenía cincuenta y ocho trapiches, cuarenta y cinco hidráulicos y nueve de motor, y ninguno es la estampa de yunta que uno esperaría.",
+        "previous_note": "Dos cosas que la lectura tuvo que desfusionar: la barbacoa —cuatro hombres sin cabeza cargando un difunto por una promesa incumplida a la Virgen de Chiquinquirá— es figura autónoma y no un episodio de Nazario, y el trapiche sólo se enseña ardiendo sobre el horizonte, una vez al año y visto desde El Volcán, de modo que el trapiche apagado no se ficha. El correctivo documental va con él: hacia 1941 Piedecuesta tenía cincuenta y ocho trapiches, cuarenta y cinco hidráulicos y nueve de motor, y ninguno es la estampa de yunta que uno esperaría."
       },
       "entity_refs": [
         {
@@ -2588,9 +2646,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato existe por un objeto y la lectura lo puso en el centro: una campana de plata colgada a media altura del tronco del caracolí de doscientos años de Tres Esquinas, que los caminantes hacían sonar a pedradas hasta que empezó a repicar sola y un día desapareció. El Diablo se la lleva, pero aquí sólo conduce el final, y de él —como en los otros cinco relatos que encabeza— no hay una sola línea de cuerpo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato existe por un objeto y la lectura lo puso en el centro: una campana de plata colgada a media altura del tronco del caracolí de doscientos años de Tres Esquinas, que los caminantes hacían sonar a pedradas hasta que empezó a repicar sola y un día desapareció. El Diablo se la lleva, pero aquí sólo conduce el final, y de él —como en los otros cinco relatos que encabeza— no hay una sola línea de cuerpo.",
+        "previous_note": "El relato existe por un objeto y la lectura lo puso en el centro: una campana de plata colgada a media altura del tronco del caracolí de doscientos años de Tres Esquinas, que los caminantes hacían sonar a pedradas hasta que empezó a repicar sola y un día desapareció. El Diablo se la lleva, pero aquí sólo conduce el final, y de él —como en los otros cinco relatos que encabeza— no hay una sola línea de cuerpo."
       },
       "entity_refs": [
         {
@@ -2682,9 +2741,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que esta lectura separó es que la pisca no es un espanto sino la forma visible de un entierro: una pava con su camada de polluelos amarillos que sale de la cueva a pastar en luna llena y que desaparece el día en que alguien saca el tesoro. Pisca es la hembra del pisco o pavo y no otra cosa, y el relato se cierra cuando la aparición se acaba, no cuando alguien se enriquece."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que esta lectura separó es que la pisca no es un espanto sino la forma visible de un entierro: una pava con su camada de polluelos amarillos que sale de la cueva a pastar en luna llena y que desaparece el día en que alguien saca el tesoro. Pisca es la hembra del pisco o pavo y no otra cosa, y el relato se cierra cuando la aparición se acaba, no cuando alguien se enriquece.",
+        "previous_note": "Lo que esta lectura separó es que la pisca no es un espanto sino la forma visible de un entierro: una pava con su camada de polluelos amarillos que sale de la cueva a pastar en luna llena y que desaparece el día en que alguien saca el tesoro. Pisca es la hembra del pisco o pavo y no otra cosa, y el relato se cierra cuando la aparición se acaba, no cuando alguien se enriquece."
       },
       "entity_refs": [
         {
@@ -2801,9 +2861,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura fechó el relato por el oficio: Mateo mueve su recua entre San Rafael y Piedecuesta hacia 1850, y el arriero, la recua, la posada y el empedrado son un solo sistema, el de los caminos que Geo von Lengerke empezó a empedrar desde 1852 con la primera concesión de construcción de caminos otorgada en Colombia. Del Diablo no queda cuerpo: una risa que baja la ladera derribando árboles, un bosque que amanece intacto y un olor a azufre e incienso que es indicio olfativo y no se dibuja."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura fechó el relato por el oficio: Mateo mueve su recua entre San Rafael y Piedecuesta hacia 1850, y el arriero, la recua, la posada y el empedrado son un solo sistema, el de los caminos que Geo von Lengerke empezó a empedrar desde 1852 con la primera concesión de construcción de caminos otorgada en Colombia. Del Diablo no queda cuerpo: una risa que baja la ladera derribando árboles, un bosque que amanece intacto y un olor a azufre e incienso que es indicio olfativo y no se dibuja.",
+        "previous_note": "La lectura fechó el relato por el oficio: Mateo mueve su recua entre San Rafael y Piedecuesta hacia 1850, y el arriero, la recua, la posada y el empedrado son un solo sistema, el de los caminos que Geo von Lengerke empezó a empedrar desde 1852 con la primera concesión de construcción de caminos otorgada en Colombia. Del Diablo no queda cuerpo: una risa que baja la ladera derribando árboles, un bosque que amanece intacto y un olor a azufre e incienso que es indicio olfativo y no se dibuja."
       },
       "entity_refs": [
         {
@@ -2910,9 +2971,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí el mito es el disfraz y la lectura lo tomó al pie de la letra: Rebeca se pone las botas, el sombrero, el saco y la correa ancha del marido y espera en la esquina del barrio Villanueva, de modo que la silueta cambia entera y merece ficha propia frente a la mujer del pueblo. Es persona y no criatura, y la hoja muestra la espera y nunca la agresión, porque el relato lee la violencia como defensa del honor y esa lectura queda retirada."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí el mito es el disfraz y la lectura lo tomó al pie de la letra: Rebeca se pone las botas, el sombrero, el saco y la correa ancha del marido y espera en la esquina del barrio Villanueva, de modo que la silueta cambia entera y merece ficha propia frente a la mujer del pueblo. Es persona y no criatura, y la hoja muestra la espera y nunca la agresión, porque el relato lee la violencia como defensa del honor y esa lectura queda retirada.",
+        "previous_note": "Aquí el mito es el disfraz y la lectura lo tomó al pie de la letra: Rebeca se pone las botas, el sombrero, el saco y la correa ancha del marido y espera en la esquina del barrio Villanueva, de modo que la silueta cambia entera y merece ficha propia frente a la mujer del pueblo. Es persona y no criatura, y la hoja muestra la espera y nunca la agresión, porque el relato lee la violencia como defensa del honor y esa lectura queda retirada."
       },
       "entity_refs": [
         {
@@ -3014,9 +3076,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos cosas que la lectura tuvo que deshacer: el volcado traía a la Máncara fusionada en esta página y la fusión ya estaba desmontada, y la única entidad que el script proponía como primaria eran los recién nacidos muertos, que están expresamente prohibidos. Lo que queda en pie es el oficio —escarmenadoras, hilanderas y torcedoras en los tornos convirtiendo el fique en chuyas, con el radio puesto—, que es la misma gramática de trabajo femenino nocturno de las tejedoras de sombreros de nacuma de 1820, un siglo después."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos cosas que la lectura tuvo que deshacer: el volcado traía a la Máncara fusionada en esta página y la fusión ya estaba desmontada, y la única entidad que el script proponía como primaria eran los recién nacidos muertos, que están expresamente prohibidos. Lo que queda en pie es el oficio —escarmenadoras, hilanderas y torcedoras en los tornos convirtiendo el fique en chuyas, con el radio puesto—, que es la misma gramática de trabajo femenino nocturno de las tejedoras de sombreros de nacuma de 1820, un siglo después.",
+        "previous_note": "Dos cosas que la lectura tuvo que deshacer: el volcado traía a la Máncara fusionada en esta página y la fusión ya estaba desmontada, y la única entidad que el script proponía como primaria eran los recién nacidos muertos, que están expresamente prohibidos. Lo que queda en pie es el oficio —escarmenadoras, hilanderas y torcedoras en los tornos convirtiendo el fique en chuyas, con el radio puesto—, que es la misma gramática de trabajo femenino nocturno de las tejedoras de sombreros de nacuma de 1820, un siglo después."
       },
       "entity_refs": [
         {
@@ -3163,9 +3226,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la lámpara de la luz: la lámpara de petróleo es el patrón con que el relato reconoce la aparición —una luz amarillenta sin portador que baja del Cáscaro a La Urgua bajo el aguacero de junio sin que las gotas la apaguen y que hace aullar a los perros—, y sin la lámpara fichada el fenómeno no tiene contra qué medirse. El fondo es la violencia bipartidista de los años cincuenta a setenta, y el techo de zinc que canta con la lluvia fecha la casa en el siglo XX."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la lámpara de la luz: la lámpara de petróleo es el patrón con que el relato reconoce la aparición —una luz amarillenta sin portador que baja del Cáscaro a La Urgua bajo el aguacero de junio sin que las gotas la apaguen y que hace aullar a los perros—, y sin la lámpara fichada el fenómeno no tiene contra qué medirse. El fondo es la violencia bipartidista de los años cincuenta a setenta, y el techo de zinc que canta con la lluvia fecha la casa en el siglo XX.",
+        "previous_note": "La lectura separó la lámpara de la luz: la lámpara de petróleo es el patrón con que el relato reconoce la aparición —una luz amarillenta sin portador que baja del Cáscaro a La Urgua bajo el aguacero de junio sin que las gotas la apaguen y que hace aullar a los perros—, y sin la lámpara fichada el fenómeno no tiene contra qué medirse. El fondo es la violencia bipartidista de los años cincuenta a setenta, y el techo de zinc que canta con la lluvia fecha la casa en el siglo XX."
       },
       "entity_refs": [
         {
@@ -3227,9 +3291,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí la lectura chocó de frente con el corpus: la página atribuye a Manuel Ancízar una primera versión con un único seno en el pecho y los pies al revés, y la página impresa de 1853 no dice nada de eso. Lo que Ancízar recoge, en boca del Viejo de la montaña junto a la laguna Encantada, es «un salvaje que imita la voz del hombre, los gritos de la mujer i el llanto de los niños para engañar i atraer a la jente», sin cuerpo. El seno único, las uñas larguísimas y los pies vueltos hacia atrás son capa posterior, y la ficha tiene que sostener las dos lecturas: el cuerpo y la sola voz."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí la lectura chocó de frente con el corpus: la página atribuye a Manuel Ancízar una primera versión con un único seno en el pecho y los pies al revés, y la página impresa de 1853 no dice nada de eso. Lo que Ancízar recoge, en boca del Viejo de la montaña junto a la laguna Encantada, es «un salvaje que imita la voz del hombre, los gritos de la mujer i el llanto de los niños para engañar i atraer a la jente», sin cuerpo. El seno único, las uñas larguísimas y los pies vueltos hacia atrás son capa posterior, y la ficha tiene que sostener las dos lecturas: el cuerpo y la sola voz.",
+        "previous_note": "Aquí la lectura chocó de frente con el corpus: la página atribuye a Manuel Ancízar una primera versión con un único seno en el pecho y los pies al revés, y la página impresa de 1853 no dice nada de eso. Lo que Ancízar recoge, en boca del Viejo de la montaña junto a la laguna Encantada, es «un salvaje que imita la voz del hombre, los gritos de la mujer i el llanto de los niños para engañar i atraer a la jente», sin cuerpo. El seno único, las uñas larguísimas y los pies vueltos hacia atrás son capa posterior, y la ficha tiene que sostener las dos lecturas: el cuerpo y la sola voz."
       },
       "entity_refs": [
         {
@@ -3306,9 +3371,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato da exactamente dos cosas y la lectura no añadió una tercera: un bulto oscuro perfilado contra una palma junto a la quebradita del Puente de Plata, con los cabellos alborotados por un viento invisible, y dos alaridos. Lo material documentado es el remate: la cruz alta con el letrero «Aquí, escapitas nos matan», pieza de camino real repetida en todo el corredor. La criatura de cabellera y anatomía monumental que el volcado arrastraba ya había sido retirada y no vuelve."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato da exactamente dos cosas y la lectura no añadió una tercera: un bulto oscuro perfilado contra una palma junto a la quebradita del Puente de Plata, con los cabellos alborotados por un viento invisible, y dos alaridos. Lo material documentado es el remate: la cruz alta con el letrero «Aquí, escapitas nos matan», pieza de camino real repetida en todo el corredor. La criatura de cabellera y anatomía monumental que el volcado arrastraba ya había sido retirada y no vuelve.",
+        "previous_note": "El relato da exactamente dos cosas y la lectura no añadió una tercera: un bulto oscuro perfilado contra una palma junto a la quebradita del Puente de Plata, con los cabellos alborotados por un viento invisible, y dos alaridos. Lo material documentado es el remate: la cruz alta con el letrero «Aquí, escapitas nos matan», pieza de camino real repetida en todo el corredor. La criatura de cabellera y anatomía monumental que el volcado arrastraba ya había sido retirada y no vuelve."
       },
       "entity_refs": [
         {
@@ -3435,9 +3501,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura siguió a un niño de siete años por una casa de trabajo: la saquería de la carrera 8, con «paredes de tapia pisada y techos de teja y madera», que es la única descripción constructiva literal que da el corpus entero. De ahí salen las tres cosas que esta página aporta y que no vienen de ningún otro relato: la moneda marcada que vuelve al bolsillo, la luz blanca que sube y baja sobre el entierro, y los «pajarracos que no eran aves sino brujas» de 1960."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura siguió a un niño de siete años por una casa de trabajo: la saquería de la carrera 8, con «paredes de tapia pisada y techos de teja y madera», que es la única descripción constructiva literal que da el corpus entero. De ahí salen las tres cosas que esta página aporta y que no vienen de ningún otro relato: la moneda marcada que vuelve al bolsillo, la luz blanca que sube y baja sobre el entierro, y los «pajarracos que no eran aves sino brujas» de 1960.",
+        "previous_note": "La lectura siguió a un niño de siete años por una casa de trabajo: la saquería de la carrera 8, con «paredes de tapia pisada y techos de teja y madera», que es la única descripción constructiva literal que da el corpus entero. De ahí salen las tres cosas que esta página aporta y que no vienen de ningún otro relato: la moneda marcada que vuelve al bolsillo, la luz blanca que sube y baja sobre el entierro, y los «pajarracos que no eran aves sino brujas» de 1960."
       },
       "entity_refs": [
         {
@@ -3594,9 +3661,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura fijó aquí la marca de continuidad más concreta del corpus —las cuatro herraduras nuevas que la mula lleva puestas y que el herrero le clavó la noche anterior—, que es lo que ata la transformación a la fragua y al empedrado y lo que la separa de la otra mula. Y fijó su final: «cuando la noche fue ahogada de luz eléctrica», que tiene piso en 1891 pero en Bucaramanga, porque la fecha de electrificación de Piedecuesta no está documentada y se declara como inferencia. El cuerpo de Eumelia con los clavos queda fuera y la ficha la muestra viva."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura fijó aquí la marca de continuidad más concreta del corpus —las cuatro herraduras nuevas que la mula lleva puestas y que el herrero le clavó la noche anterior—, que es lo que ata la transformación a la fragua y al empedrado y lo que la separa de la otra mula. Y fijó su final: «cuando la noche fue ahogada de luz eléctrica», que tiene piso en 1891 pero en Bucaramanga, porque la fecha de electrificación de Piedecuesta no está documentada y se declara como inferencia. El cuerpo de Eumelia con los clavos queda fuera y la ficha la muestra viva.",
+        "previous_note": "La lectura fijó aquí la marca de continuidad más concreta del corpus —las cuatro herraduras nuevas que la mula lleva puestas y que el herrero le clavó la noche anterior—, que es lo que ata la transformación a la fragua y al empedrado y lo que la separa de la otra mula. Y fijó su final: «cuando la noche fue ahogada de luz eléctrica», que tiene piso en 1891 pero en Bucaramanga, porque la fecha de electrificación de Piedecuesta no está documentada y se declara como inferencia. El cuerpo de Eumelia con los clavos queda fuera y la ficha la muestra viva."
       },
       "entity_refs": [
         {
@@ -3743,9 +3811,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que esta lectura separó, contra la intuición, es que las dos mulas del corpus no se distinguen por la herradura y la manea sino por la base de evidencia: ésta es una bruja en forma animal, doña Petra Agudelo, cuya otra forma es el cuervo y cuyo desenlace es un exorcismo con agua bendita en la plaza, es decir, repertorio de brujería colonial; la otra es una transformación documentada por un mecanismo físico. Y la manea, que es un amarre de patas, cambia además el paso y la silueta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que esta lectura separó, contra la intuición, es que las dos mulas del corpus no se distinguen por la herradura y la manea sino por la base de evidencia: ésta es una bruja en forma animal, doña Petra Agudelo, cuya otra forma es el cuervo y cuyo desenlace es un exorcismo con agua bendita en la plaza, es decir, repertorio de brujería colonial; la otra es una transformación documentada por un mecanismo físico. Y la manea, que es un amarre de patas, cambia además el paso y la silueta.",
+        "previous_note": "Lo que esta lectura separó, contra la intuición, es que las dos mulas del corpus no se distinguen por la herradura y la manea sino por la base de evidencia: ésta es una bruja en forma animal, doña Petra Agudelo, cuya otra forma es el cuervo y cuyo desenlace es un exorcismo con agua bendita en la plaza, es decir, repertorio de brujería colonial; la otra es una transformación documentada por un mecanismo físico. Y la manea, que es un amarre de patas, cambia además el paso y la silueta."
       },
       "entity_refs": [
         {
@@ -3842,9 +3911,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró aquí una formación real y localizable y no un paisaje genérico: una roca antropomorfa en mitad del río Mogoticos que remeda un cuerpo amortajado, con las demás piedras de la loma leídas como ganado petrificado. La escena se ficha antes del daño —el mendigo pidiendo pan y posada, los mastines todavía sujetos—, porque el despedazamiento está expresamente fuera, y lo que el relato castiga es la puerta cerrada y no otra cosa."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró aquí una formación real y localizable y no un paisaje genérico: una roca antropomorfa en mitad del río Mogoticos que remeda un cuerpo amortajado, con las demás piedras de la loma leídas como ganado petrificado. La escena se ficha antes del daño —el mendigo pidiendo pan y posada, los mastines todavía sujetos—, porque el despedazamiento está expresamente fuera, y lo que el relato castiga es la puerta cerrada y no otra cosa.",
+        "previous_note": "La lectura encontró aquí una formación real y localizable y no un paisaje genérico: una roca antropomorfa en mitad del río Mogoticos que remeda un cuerpo amortajado, con las demás piedras de la loma leídas como ganado petrificado. La escena se ficha antes del daño —el mendigo pidiendo pan y posada, los mastines todavía sujetos—, porque el despedazamiento está expresamente fuera, y lo que el relato castiga es la puerta cerrada y no otra cosa."
       },
       "entity_refs": [
         {
@@ -3961,9 +4031,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura descubrió que el relato no mira el templo sino el umbral: la puerta lateral de madera azul cielo con arco de piedra tallada de la parroquia San Francisco Javier es pieza de patrimonio real y el objeto por el que se cuenta todo, así que se ficha aparte de la iglesia. Lo que no entra es el raspar la piedra y masticar la astilla: el patrimonio material se separa del milagro."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura descubrió que el relato no mira el templo sino el umbral: la puerta lateral de madera azul cielo con arco de piedra tallada de la parroquia San Francisco Javier es pieza de patrimonio real y el objeto por el que se cuenta todo, así que se ficha aparte de la iglesia. Lo que no entra es el raspar la piedra y masticar la astilla: el patrimonio material se separa del milagro.",
+        "previous_note": "La lectura descubrió que el relato no mira el templo sino el umbral: la puerta lateral de madera azul cielo con arco de piedra tallada de la parroquia San Francisco Javier es pieza de patrimonio real y el objeto por el que se cuenta todo, así que se ficha aparte de la iglesia. Lo que no entra es el raspar la piedra y masticar la astilla: el patrimonio material se separa del milagro."
       },
       "entity_refs": [
         {
@@ -4030,9 +4101,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura desfusionó la Sayona genérica que castiga infieles: aquí no castiga a nadie. Lo que hay es una mujer de negro que entra a la tienda «La Gran Luz» en noviembre de 1896, en plena guerra civil y con el local lleno de revolucionarios, y un doliente que le labra mármoles en el cementerio con sus propias manos. El sayal oscuro es su único rasgo físico documentado y la ficha no le añade otro."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura desfusionó la Sayona genérica que castiga infieles: aquí no castiga a nadie. Lo que hay es una mujer de negro que entra a la tienda «La Gran Luz» en noviembre de 1896, en plena guerra civil y con el local lleno de revolucionarios, y un doliente que le labra mármoles en el cementerio con sus propias manos. El sayal oscuro es su único rasgo físico documentado y la ficha no le añade otro.",
+        "previous_note": "La lectura desfusionó la Sayona genérica que castiga infieles: aquí no castiga a nadie. Lo que hay es una mujer de negro que entra a la tienda «La Gran Luz» en noviembre de 1896, en plena guerra civil y con el local lleno de revolucionarios, y un doliente que le labra mármoles en el cementerio con sus propias manos. El sayal oscuro es su único rasgo físico documentado y la ficha no le añade otro."
       },
       "entity_refs": [
         {
@@ -4114,9 +4186,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la escena mejor fechada del corpus —Perú de Lacroix escribió el Diario de Bucaramanga durante la estadía del Libertador, del 1 de abril al 26 de junio de 1828— y por eso la lectura pudo retirar un anacronismo de treinta años: los miriñaques de moda y los estampados de crinolina del baile, porque la primera crinolina metálica la patentó W. S. Thompson en 1856 y su forma extravagante se usó entre 1856 y 1866. El séquito cabalga como comitiva dentro del mismo contrato."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la escena mejor fechada del corpus —Perú de Lacroix escribió el Diario de Bucaramanga durante la estadía del Libertador, del 1 de abril al 26 de junio de 1828— y por eso la lectura pudo retirar un anacronismo de treinta años: los miriñaques de moda y los estampados de crinolina del baile, porque la primera crinolina metálica la patentó W. S. Thompson en 1856 y su forma extravagante se usó entre 1856 y 1866. El séquito cabalga como comitiva dentro del mismo contrato.",
+        "previous_note": "Es la escena mejor fechada del corpus —Perú de Lacroix escribió el Diario de Bucaramanga durante la estadía del Libertador, del 1 de abril al 26 de junio de 1828— y por eso la lectura pudo retirar un anacronismo de treinta años: los miriñaques de moda y los estampados de crinolina del baile, porque la primera crinolina metálica la patentó W. S. Thompson en 1856 y su forma extravagante se usó entre 1856 y 1866. El séquito cabalga como comitiva dentro del mismo contrato."
       },
       "entity_refs": [
         {
@@ -4228,9 +4301,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Ocho lagunas en una sola lectura, y dos figuras que no salen de ninguna otra: un mohán que no es el seductor de río sino un guardián celoso que custodia en Galán un totumo cargado de frutos dorados con una gallina y sus polluelos del mismo color, y una serpiente con cresta, crin y cabeza semejante a la de un ternero que mata reses en la laguna de Girón hasta que un sacerdote rompe el encanto con cáliz y cristo bendito. Lo que estas lagunas castigan es la codicia y la promesa incumplida, no la tala ni la contaminación."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Ocho lagunas en una sola lectura, y dos figuras que no salen de ninguna otra: un mohán que no es el seductor de río sino un guardián celoso que custodia en Galán un totumo cargado de frutos dorados con una gallina y sus polluelos del mismo color, y una serpiente con cresta, crin y cabeza semejante a la de un ternero que mata reses en la laguna de Girón hasta que un sacerdote rompe el encanto con cáliz y cristo bendito. Lo que estas lagunas castigan es la codicia y la promesa incumplida, no la tala ni la contaminación.",
+        "previous_note": "Ocho lagunas en una sola lectura, y dos figuras que no salen de ninguna otra: un mohán que no es el seductor de río sino un guardián celoso que custodia en Galán un totumo cargado de frutos dorados con una gallina y sus polluelos del mismo color, y una serpiente con cresta, crin y cabeza semejante a la de un ternero que mata reses en la laguna de Girón hasta que un sacerdote rompe el encanto con cáliz y cristo bendito. Lo que estas lagunas castigan es la codicia y la promesa incumplida, no la tala ni la contaminación."
       },
       "entity_refs": [
         {
@@ -4352,9 +4426,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el relato con más cuevas y el que obligó a la decisión más discutida del censo: el Biato conduce una acción —ofrece riquezas, pelea y esclaviza al que se rinde— y fue excluido por no tener ni un rasgo, razón que no se sostiene, porque es igual de cierta del Diablo del camino, que sí está fichado; su función es idéntica a la del Carriazo y por eso pasa a embebido bajo él. Lo que sí queda fuera son los indios espectrales del Cenicero: estas cuevas son osarios indígenas saqueados, documentados con reproche en 1853, y el corpus no dibuja ni un hueso."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el relato con más cuevas y el que obligó a la decisión más discutida del censo: el Biato conduce una acción —ofrece riquezas, pelea y esclaviza al que se rinde— y fue excluido por no tener ni un rasgo, razón que no se sostiene, porque es igual de cierta del Diablo del camino, que sí está fichado; su función es idéntica a la del Carriazo y por eso pasa a embebido bajo él. Lo que sí queda fuera son los indios espectrales del Cenicero: estas cuevas son osarios indígenas saqueados, documentados con reproche en 1853, y el corpus no dibuja ni un hueso.",
+        "previous_note": "Es el relato con más cuevas y el que obligó a la decisión más discutida del censo: el Biato conduce una acción —ofrece riquezas, pelea y esclaviza al que se rinde— y fue excluido por no tener ni un rasgo, razón que no se sostiene, porque es igual de cierta del Diablo del camino, que sí está fichado; su función es idéntica a la del Carriazo y por eso pasa a embebido bajo él. Lo que sí queda fuera son los indios espectrales del Cenicero: estas cuevas son osarios indígenas saqueados, documentados con reproche en 1853, y el corpus no dibuja ni un hueso."
       },
       "entity_refs": [
         {
@@ -4481,9 +4556,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que separar dos tunjos que comparten palabra y no identidad: el de esta página es un muñeco de oro macizo viviente que sale el Viernes Santo al amanecer sobre la Loma de la Cantera, se atrapa con la mano mojada, come oro y bronce y suelta escamas doradas, y no una pieza arqueológica. Se comprobó además que la biblia muisca existente, del territorio de donde viene la palabra, no tiene ninguna lámina de tunjo: no hay nada que cotejar y todo que inventar con cuidado. Pedro Rimalas, que el script proponía como primario, es sólo fama y renombre."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que separar dos tunjos que comparten palabra y no identidad: el de esta página es un muñeco de oro macizo viviente que sale el Viernes Santo al amanecer sobre la Loma de la Cantera, se atrapa con la mano mojada, come oro y bronce y suelta escamas doradas, y no una pieza arqueológica. Se comprobó además que la biblia muisca existente, del territorio de donde viene la palabra, no tiene ninguna lámina de tunjo: no hay nada que cotejar y todo que inventar con cuidado. Pedro Rimalas, que el script proponía como primario, es sólo fama y renombre.",
+        "previous_note": "La lectura tuvo que separar dos tunjos que comparten palabra y no identidad: el de esta página es un muñeco de oro macizo viviente que sale el Viernes Santo al amanecer sobre la Loma de la Cantera, se atrapa con la mano mojada, come oro y bronce y suelta escamas doradas, y no una pieza arqueológica. Se comprobó además que la biblia muisca existente, del territorio de donde viene la palabra, no tiene ninguna lámina de tunjo: no hay nada que cotejar y todo que inventar con cuidado. Pedro Rimalas, que el script proponía como primario, es sólo fama y renombre."
       },
       "entity_refs": [
         {
@@ -4610,9 +4686,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró aquí la regla verbal más precisa del corpus —hay que gritarle «¡allá va!» y nunca «¡allá viene!»— y una fecha con nombre: el padre Esteban García la conjura con estola y latín en 1888, en la hacienda del río Hato. Y separó los dos cuerpos que la página encadena: Luz viva y largamente mostrada en la hacienda El Limonal, y después el remolino de fuego que recorre el camino en cuaresma. El infanticidio queda fuera de imagen."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró aquí la regla verbal más precisa del corpus —hay que gritarle «¡allá va!» y nunca «¡allá viene!»— y una fecha con nombre: el padre Esteban García la conjura con estola y latín en 1888, en la hacienda del río Hato. Y separó los dos cuerpos que la página encadena: Luz viva y largamente mostrada en la hacienda El Limonal, y después el remolino de fuego que recorre el camino en cuaresma. El infanticidio queda fuera de imagen.",
+        "previous_note": "La lectura encontró aquí la regla verbal más precisa del corpus —hay que gritarle «¡allá va!» y nunca «¡allá viene!»— y una fecha con nombre: el padre Esteban García la conjura con estola y latín en 1888, en la hacienda del río Hato. Y separó los dos cuerpos que la página encadena: Luz viva y largamente mostrada en la hacienda El Limonal, y después el remolino de fuego que recorre el camino en cuaresma. El infanticidio queda fuera de imagen."
       },
       "entity_refs": [
         {
@@ -4729,9 +4806,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura retiró el chiste sobre el que se apoya la página entera —la ecuación entre el coto, la apariencia del cuerpo y la falta de inteligencia—, y con él el único rasgo físico que el relato daba a sus dos protagonistas, el hidalgo y el sacristán. Lo que queda es material y es bueno: la casona gironesa con su turpial y su gato, la escritura pública sellada por el escribano sobre la que gira la sátira, y el tabaco veguero de don Anselmo, que es producto de estanco de la vega tabacalera legal del virreinato."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura retiró el chiste sobre el que se apoya la página entera —la ecuación entre el coto, la apariencia del cuerpo y la falta de inteligencia—, y con él el único rasgo físico que el relato daba a sus dos protagonistas, el hidalgo y el sacristán. Lo que queda es material y es bueno: la casona gironesa con su turpial y su gato, la escritura pública sellada por el escribano sobre la que gira la sátira, y el tabaco veguero de don Anselmo, que es producto de estanco de la vega tabacalera legal del virreinato.",
+        "previous_note": "La lectura retiró el chiste sobre el que se apoya la página entera —la ecuación entre el coto, la apariencia del cuerpo y la falta de inteligencia—, y con él el único rasgo físico que el relato daba a sus dos protagonistas, el hidalgo y el sacristán. Lo que queda es material y es bueno: la casona gironesa con su turpial y su gato, la escritura pública sellada por el escribano sobre la que gira la sátira, y el tabaco veguero de don Anselmo, que es producto de estanco de la vega tabacalera legal del virreinato."
       },
       "entity_refs": [
         {
@@ -4853,9 +4931,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El punto más delicado del corpus, y la lectura lo dejó dicho: es un corpus mestizo representando a una persona de un pueblo indígena, en una escena de cautiverio y combate. Lo documentado de los guanes se agota en dos frases —agricultores «con vestiduras de telas finas de algodon, a usanza de los Chibchas», «de aventajada estatura, pazíficos e industriosos»— y en la constancia del propio Ancízar de que los conquistadores «ni describieron las costumbres, ni hablaron del gobierno i lejislacion de los Guanes». No hay tocado, no hay pintura corporal, no hay marca clanil, no hay macana ni adarga documentadas, y por eso la ficha queda marcada como pendiente de consulta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El punto más delicado del corpus, y la lectura lo dejó dicho: es un corpus mestizo representando a una persona de un pueblo indígena, en una escena de cautiverio y combate. Lo documentado de los guanes se agota en dos frases —agricultores «con vestiduras de telas finas de algodon, a usanza de los Chibchas», «de aventajada estatura, pazíficos e industriosos»— y en la constancia del propio Ancízar de que los conquistadores «ni describieron las costumbres, ni hablaron del gobierno i lejislacion de los Guanes». No hay tocado, no hay pintura corporal, no hay marca clanil, no hay macana ni adarga documentadas, y por eso la ficha queda marcada como pendiente de consulta.",
+        "previous_note": "El punto más delicado del corpus, y la lectura lo dejó dicho: es un corpus mestizo representando a una persona de un pueblo indígena, en una escena de cautiverio y combate. Lo documentado de los guanes se agota en dos frases —agricultores «con vestiduras de telas finas de algodon, a usanza de los Chibchas», «de aventajada estatura, pazíficos e industriosos»— y en la constancia del propio Ancízar de que los conquistadores «ni describieron las costumbres, ni hablaron del gobierno i lejislacion de los Guanes». No hay tocado, no hay pintura corporal, no hay marca clanil, no hay macana ni adarga documentadas, y por eso la ficha queda marcada como pendiente de consulta."
       },
       "entity_refs": [
         {
@@ -4952,9 +5031,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "No es un mito sino memoria biográfica documentada (Baraya, Biografías militares, 1874), y la lectura resolvió qué hacer con ella sin tirarla: la única aportación visual del general Mantilla es el uniforme de general republicano entre 1810 y 1860, que es exactamente lo que necesita el séquito del Libertador que ya vive dentro del contrato de Bolívar. De modo que no es la primera ficha que cae sino la primera que se funde, y la página queda fuera del denominador sin perder lo que aportaba."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "No es un mito sino memoria biográfica documentada (Baraya, Biografías militares, 1874), y la lectura resolvió qué hacer con ella sin tirarla: la única aportación visual del general Mantilla es el uniforme de general republicano entre 1810 y 1860, que es exactamente lo que necesita el séquito del Libertador que ya vive dentro del contrato de Bolívar. De modo que no es la primera ficha que cae sino la primera que se funde, y la página queda fuera del denominador sin perder lo que aportaba.",
+        "previous_note": "No es un mito sino memoria biográfica documentada (Baraya, Biografías militares, 1874), y la lectura resolvió qué hacer con ella sin tirarla: la única aportación visual del general Mantilla es el uniforme de general republicano entre 1810 y 1860, que es exactamente lo que necesita el séquito del Libertador que ya vive dentro del contrato de Bolívar. De modo que no es la primera ficha que cae sino la primera que se funde, y la página queda fuera del denominador sin perder lo que aportaba."
       },
       "entity_refs": [
         {
@@ -21699,5 +21779,21 @@
       "ninguna ruana como prenda por defecto dentro del pueblo, ninguna crinolina de aros en 1828 y ningún techo de zinc en una lámina del siglo XIX",
       "ninguna luz eléctrica, linterna, cable, automóvil ni bus en las láminas del XIX, y ninguna lámina que mezcle dos de las tres luces"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 36,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "d394d67625e1319b709c1955bdefe9c1831b4338d2b2fdab519d194465828cbf",
+      "max_source_updated_at": "2026-07-23T00:09:03.864Z"
+    }
+  ]
 }

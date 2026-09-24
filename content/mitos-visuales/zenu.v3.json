@@ -7,7 +7,7 @@
   "region": "Caribe",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Zenú (communities.slug = zenu)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -22,7 +22,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 7,
     "fields": [
       "mito",
@@ -30,8 +30,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "d1ee908616607f4bd18aa9027b2bb8899cd2e0d8c678dcef80b599ad46a807a8",
-    "max_source_updated_at": "2026-07-23T01:03:50.627Z"
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "max_source_updated_at": "2026-09-20T00:27:41.746Z"
   },
   "research": {
     "sources": [
@@ -837,8 +837,8 @@
     "dossier": "docs/investigacion/zenu.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -848,7 +848,22 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-caiman-de-oro",
+        "el-ojo-de-la-canoa",
+        "el-totumo-de-oro",
+        "juan-lara-y-la-trenza-del-aire",
+        "la-noche-mas-larga",
+        "mexion-y-manexca",
+        "trono-corcovao"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-caiman-de-oro": {
@@ -871,9 +886,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que sostener dos orientaciones que no coinciden —la escolar pone el pecho en San Andrés y la cola en Tofeme, Drexler pone cabeza y corazón bajo la iglesia— y comprobó que la diferencia cambia dónde cae cada parte y no la silueta del animal, de modo que la página cuesta una sola lámina de criatura; y separó el cuerpo del corte que lo contiene, porque lo que el relato dice del mundo de abajo —agua viva y no estratos de suelo— es una decisión del escenario y no del animal."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que sostener dos orientaciones que no coinciden —la escolar pone el pecho en San Andrés y la cola en Tofeme, Drexler pone cabeza y corazón bajo la iglesia— y comprobó que la diferencia cambia dónde cae cada parte y no la silueta del animal, de modo que la página cuesta una sola lámina de criatura; y separó el cuerpo del corte que lo contiene, porque lo que el relato dice del mundo de abajo —agua viva y no estratos de suelo— es una decisión del escenario y no del animal.",
+        "previous_note": "La lectura tuvo que sostener dos orientaciones que no coinciden —la escolar pone el pecho en San Andrés y la cola en Tofeme, Drexler pone cabeza y corazón bajo la iglesia— y comprobó que la diferencia cambia dónde cae cada parte y no la silueta del animal, de modo que la página cuesta una sola lámina de criatura; y separó el cuerpo del corte que lo contiene, porque lo que el relato dice del mundo de abajo —agua viva y no estratos de suelo— es una decisión del escenario y no del animal."
       },
       "entity_refs": [
         {
@@ -948,9 +964,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó a la guardiana de su propia fuente: el módulo la pone en escena como serpiente, pero la única descripción de cuerpo que existe dice que «tiene patas y plumas en las orejas», y la extracción decidió conservar los dos rasgos sobre la forma serpentina en vez de dibujar menos; y separó el sello de la embarcación, porque el limón de acero es el único objeto del corpus sin materia orgánica y su anacronismo es justamente lo que lo identifica."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó a la guardiana de su propia fuente: el módulo la pone en escena como serpiente, pero la única descripción de cuerpo que existe dice que «tiene patas y plumas en las orejas», y la extracción decidió conservar los dos rasgos sobre la forma serpentina en vez de dibujar menos; y separó el sello de la embarcación, porque el limón de acero es el único objeto del corpus sin materia orgánica y su anacronismo es justamente lo que lo identifica.",
+        "previous_note": "La lectura separó a la guardiana de su propia fuente: el módulo la pone en escena como serpiente, pero la única descripción de cuerpo que existe dice que «tiene patas y plumas en las orejas», y la extracción decidió conservar los dos rasgos sobre la forma serpentina en vez de dibujar menos; y separó el sello de la embarcación, porque el limón de acero es el único objeto del corpus sin materia orgánica y su anacronismo es justamente lo que lo identifica."
       },
       "entity_refs": [
         {
@@ -1015,9 +1032,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que el mecanismo, y no el personaje, es lo que esta página aporta: el relato dice que «el monte no lo atacó: simplemente negó la salida», y eso es una regla geométrica —el sendero que se pliega y devuelve al mismo tronco— que se puede dibujar sin nadie dentro y reusar en las dos versiones; la variante escolar cambia el oficio del visitante, el número de objetos y el cierre, pero no su cuerpo ni su función, así que quedó declarada variante y no ficha."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que el mecanismo, y no el personaje, es lo que esta página aporta: el relato dice que «el monte no lo atacó: simplemente negó la salida», y eso es una regla geométrica —el sendero que se pliega y devuelve al mismo tronco— que se puede dibujar sin nadie dentro y reusar en las dos versiones; la variante escolar cambia el oficio del visitante, el número de objetos y el cierre, pero no su cuerpo ni su función, así que quedó declarada variante y no ficha.",
+        "previous_note": "La lectura encontró que el mecanismo, y no el personaje, es lo que esta página aporta: el relato dice que «el monte no lo atacó: simplemente negó la salida», y eso es una regla geométrica —el sendero que se pliega y devuelve al mismo tronco— que se puede dibujar sin nadie dentro y reusar en las dos versiones; la variante escolar cambia el oficio del visitante, el número de objetos y el cierre, pero no su cuerpo ni su función, así que quedó declarada variante y no ficha."
       },
       "entity_refs": [
         {
@@ -1107,9 +1125,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que resolver una página cuyo protagonista no se puede dibujar: el módulo ordena las dos escenas sin mostrar un agresor y ninguna fuente le da rostro, de modo que su cuerpo visible son las piedras y la risa, que pasan a tener regla propia; y la extracción fijó aquí el deslinde que manda sobre todo lo demás, porque universe.mjs transfirió esta página a Caribe Mestizo y ninguna de sus cinco fichas admite un solo elemento zenú."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que resolver una página cuyo protagonista no se puede dibujar: el módulo ordena las dos escenas sin mostrar un agresor y ninguna fuente le da rostro, de modo que su cuerpo visible son las piedras y la risa, que pasan a tener regla propia; y la extracción fijó aquí el deslinde que manda sobre todo lo demás, porque universe.mjs transfirió esta página a Caribe Mestizo y ninguna de sus cinco fichas admite un solo elemento zenú.",
+        "previous_note": "La lectura tuvo que resolver una página cuyo protagonista no se puede dibujar: el módulo ordena las dos escenas sin mostrar un agresor y ninguna fuente le da rostro, de modo que su cuerpo visible son las piedras y la risa, que pasan a tener regla propia; y la extracción fijó aquí el deslinde que manda sobre todo lo demás, porque universe.mjs transfirió esta página a Caribe Mestizo y ninguna de sus cinco fichas admite un solo elemento zenú."
       },
       "entity_refs": [
         {
@@ -1184,9 +1203,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó el objeto de sus dos dueños: Tarra encarga y desaparece en el primer párrafo, Mexión toma la capa y la levanta en cono, y los cinco párrafos restantes son de la capa —el peso, la corona, las vueltas, el ala—, así que la entidad primaria de esta página es una pieza tejida y no una figura; y la extracción chocó aquí con el límite más duro del corpus, porque el nivel intermedio del universo son literalmente las pintas y las pintas no se pueden dibujar."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó el objeto de sus dos dueños: Tarra encarga y desaparece en el primer párrafo, Mexión toma la capa y la levanta en cono, y los cinco párrafos restantes son de la capa —el peso, la corona, las vueltas, el ala—, así que la entidad primaria de esta página es una pieza tejida y no una figura; y la extracción chocó aquí con el límite más duro del corpus, porque el nivel intermedio del universo son literalmente las pintas y las pintas no se pueden dibujar.",
+        "previous_note": "La lectura separó el objeto de sus dos dueños: Tarra encarga y desaparece en el primer párrafo, Mexión toma la capa y la levanta en cono, y los cinco párrafos restantes son de la capa —el peso, la corona, las vueltas, el ala—, así que la entidad primaria de esta página es una pieza tejida y no una figura; y la extracción chocó aquí con el límite más duro del corpus, porque el nivel intermedio del universo son literalmente las pintas y las pintas no se pueden dibujar."
       },
       "entity_refs": [
         {
@@ -1276,9 +1296,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que el relato describe de lo que el relato hace: Mexión es quien reparte a los descendientes, quien manda subir a un hijo, quien manda a Ninha a dormir y quien al final sube y se vuelve Thi, mientras que de Manexca sólo queda un rasgo de cuerpo —«una mujer de un solo seno»— y ninguna acción, de modo que esta página aporta dos fichas de fundación con reparto contrario, una que se reconoce por lo que hace y otra por cómo es; los once descendientes nombrados y los cinco oficios se quedaron en el colectivo porque ninguno recibe cuerpo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que el relato describe de lo que el relato hace: Mexión es quien reparte a los descendientes, quien manda subir a un hijo, quien manda a Ninha a dormir y quien al final sube y se vuelve Thi, mientras que de Manexca sólo queda un rasgo de cuerpo —«una mujer de un solo seno»— y ninguna acción, de modo que esta página aporta dos fichas de fundación con reparto contrario, una que se reconoce por lo que hace y otra por cómo es; los once descendientes nombrados y los cinco oficios se quedaron en el colectivo porque ninguno recibe cuerpo.",
+        "previous_note": "La lectura separó lo que el relato describe de lo que el relato hace: Mexión es quien reparte a los descendientes, quien manda subir a un hijo, quien manda a Ninha a dormir y quien al final sube y se vuelve Thi, mientras que de Manexca sólo queda un rasgo de cuerpo —«una mujer de un solo seno»— y ninguna acción, de modo que esta página aporta dos fichas de fundación con reparto contrario, una que se reconoce por lo que hace y otra por cómo es; los once descendientes nombrados y los cinco oficios se quedaron en el colectivo porque ninguno recibe cuerpo."
       },
       "entity_refs": [
         {
@@ -1393,9 +1414,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó cuatro cosas que las publicaciones reúnen de modos distintos —el guerrero, el árbol, el trueno y la isla— y comprobó que sólo el trueno tiene dos fases que se ven distinto: relámpago seco sobre cielo despejado y agua subiendo en la llanura; el vigía se quedó con una sola lámina porque las versiones le cambian la edad y no el cuerpo, y la isla flotante quedó marcada como la ficha más débil de la biblia, con una sola frase en todo el expediente y ninguna descripción."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó cuatro cosas que las publicaciones reúnen de modos distintos —el guerrero, el árbol, el trueno y la isla— y comprobó que sólo el trueno tiene dos fases que se ven distinto: relámpago seco sobre cielo despejado y agua subiendo en la llanura; el vigía se quedó con una sola lámina porque las versiones le cambian la edad y no el cuerpo, y la isla flotante quedó marcada como la ficha más débil de la biblia, con una sola frase en todo el expediente y ninguna descripción.",
+        "previous_note": "La lectura separó cuatro cosas que las publicaciones reúnen de modos distintos —el guerrero, el árbol, el trueno y la isla— y comprobó que sólo el trueno tiene dos fases que se ven distinto: relámpago seco sobre cielo despejado y agua subiendo en la llanura; el vigía se quedó con una sola lámina porque las versiones le cambian la edad y no el cuerpo, y la isla flotante quedó marcada como la ficha más débil de la biblia, con una sola frase en todo el expediente y ninguna descripción."
       },
       "entity_refs": [
         {
@@ -8058,5 +8080,20 @@
       "ninguna ofrenda de niños, ninguna danza de la pelazón, ningún mogote funerario ni tumba",
       "ningún ángel con alas, ninguna cruz ni santo: la capa católica de las fuentes se declara en la ficha y no se dibuja"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 7,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "d1ee908616607f4bd18aa9027b2bb8899cd2e0d8c678dcef80b599ad46a807a8",
+      "max_source_updated_at": "2026-07-23T01:03:50.627Z"
+    }
+  ]
 }

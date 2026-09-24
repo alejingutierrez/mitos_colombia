@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento antioquia-occidente-mixto",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -33,7 +33,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 14,
     "fields": [
       "content",
@@ -42,8 +42,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "6c8f2281aafc044aa598d5507d4cd49795a66c91fe58ff3e7d924b4b52d8f140",
-    "max_source_updated_at": "2026-07-28T06:56:20.824Z"
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "max_source_updated_at": "2026-09-22T23:50:43.776Z"
   },
   "research": {
     "sources": [
@@ -1095,8 +1095,8 @@
     "dossier": "docs/investigacion/antioquia-occidente-mixto.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1122,7 +1122,29 @@
       }
     ],
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "dobaida",
+        "el-mareco",
+        "el-patetarro",
+        "el-paton",
+        "el-perro-negro",
+        "el-tesoro-de-dabeiba",
+        "la-cabellona",
+        "la-dama-verde",
+        "la-rodillona",
+        "las-ilusiones",
+        "los-rescoldos",
+        "maria-centeno",
+        "maria-la-larga",
+        "no-hay-deuda-que-no-se-pague"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "dobaida": {
@@ -1147,9 +1169,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura de esta página no encontró un relato sino un expediente: la pasada de nombres propios devolvió un nombre que las fuentes coloniales escriben de tres maneras y aplican a una figura, a un poblado y a un territorio a la vez, y la pasada de criaturas no devolvió un solo rasgo de cuerpo, rostro, vestido ni atributo, porque el archivo conserva la voz de quienes la perseguían y no la de quienes la nombraban; lo único que la tradición asocia con ella —lluvia, viento y trueno— sí tiene lámina, y por eso la primaria tuvo que corregirse hacia los únicos que conducen acción en el texto, que son los expedicionarios que escriben."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura de esta página no encontró un relato sino un expediente: la pasada de nombres propios devolvió un nombre que las fuentes coloniales escriben de tres maneras y aplican a una figura, a un poblado y a un territorio a la vez, y la pasada de criaturas no devolvió un solo rasgo de cuerpo, rostro, vestido ni atributo, porque el archivo conserva la voz de quienes la perseguían y no la de quienes la nombraban; lo único que la tradición asocia con ella —lluvia, viento y trueno— sí tiene lámina, y por eso la primaria tuvo que corregirse hacia los únicos que conducen acción en el texto, que son los expedicionarios que escriben.",
+        "previous_note": "La lectura de esta página no encontró un relato sino un expediente: la pasada de nombres propios devolvió un nombre que las fuentes coloniales escriben de tres maneras y aplican a una figura, a un poblado y a un territorio a la vez, y la pasada de criaturas no devolvió un solo rasgo de cuerpo, rostro, vestido ni atributo, porque el archivo conserva la voz de quienes la perseguían y no la de quienes la nombraban; lo único que la tradición asocia con ella —lluvia, viento y trueno— sí tiene lámina, y por eso la primaria tuvo que corregirse hacia los únicos que conducen acción en el texto, que son los expedicionarios que escriben."
       },
       "entity_refs": [
         {
@@ -1241,9 +1264,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de estados encontró aquí dos formas que no comparten un solo plano de papel —un diablillo rojo del tamaño de un antebrazo y un torbellino de polvo y chispas—, y la de variantes obligó a marcar una capa que el censo ya había visto: el cuerpo escamoso de lagartija pertenece a la adaptación de 2004 y no al núcleo, que sólo sostiene el diablillo, los dulces, la desobediencia y el ventarrón, así que la ficha declara la capa en vez de borrarla y el ventarrón se resuelve como fenómeno y nunca como criatura con cara dentro del remolino."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de estados encontró aquí dos formas que no comparten un solo plano de papel —un diablillo rojo del tamaño de un antebrazo y un torbellino de polvo y chispas—, y la de variantes obligó a marcar una capa que el censo ya había visto: el cuerpo escamoso de lagartija pertenece a la adaptación de 2004 y no al núcleo, que sólo sostiene el diablillo, los dulces, la desobediencia y el ventarrón, así que la ficha declara la capa en vez de borrarla y el ventarrón se resuelve como fenómeno y nunca como criatura con cara dentro del remolino.",
+        "previous_note": "La pasada de estados encontró aquí dos formas que no comparten un solo plano de papel —un diablillo rojo del tamaño de un antebrazo y un torbellino de polvo y chispas—, y la de variantes obligó a marcar una capa que el censo ya había visto: el cuerpo escamoso de lagartija pertenece a la adaptación de 2004 y no al núcleo, que sólo sostiene el diablillo, los dulces, la desobediencia y el ventarrón, así que la ficha declara la capa en vez de borrarla y el ventarrón se resuelve como fenómeno y nunca como criatura con cara dentro del remolino."
       },
       "entity_refs": [
         {
@@ -1315,9 +1339,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la ficha con más rasgos documentados del cubo y la que más fácilmente se desborda: la lectura fijó cuatro —cuerpo grande y peludo, la pierna sustituida por un tarro de guadua, el derrame que produce la gusanera y el robo nocturno de gallinas— y dejó fuera todo lo demás, porque el volcado convierte al personaje en alma en pena, deidad guardiana y símbolo ecológico en el mismo párrafo; y la pasada de objetos rescató la segunda imagen del mito, la calavera de vaca elevada en un poste frente al cultivo, que es la única defensa documentada del relato y que por dibujarse a escala de escena y no de mano se lleva ficha propia."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la ficha con más rasgos documentados del cubo y la que más fácilmente se desborda: la lectura fijó cuatro —cuerpo grande y peludo, la pierna sustituida por un tarro de guadua, el derrame que produce la gusanera y el robo nocturno de gallinas— y dejó fuera todo lo demás, porque el volcado convierte al personaje en alma en pena, deidad guardiana y símbolo ecológico en el mismo párrafo; y la pasada de objetos rescató la segunda imagen del mito, la calavera de vaca elevada en un poste frente al cultivo, que es la única defensa documentada del relato y que por dibujarse a escala de escena y no de mano se lleva ficha propia.",
+        "previous_note": "Es la ficha con más rasgos documentados del cubo y la que más fácilmente se desborda: la lectura fijó cuatro —cuerpo grande y peludo, la pierna sustituida por un tarro de guadua, el derrame que produce la gusanera y el robo nocturno de gallinas— y dejó fuera todo lo demás, porque el volcado convierte al personaje en alma en pena, deidad guardiana y símbolo ecológico en el mismo párrafo; y la pasada de objetos rescató la segunda imagen del mito, la calavera de vaca elevada en un poste frente al cultivo, que es la única defensa documentada del relato y que por dibujarse a escala de escena y no de mano se lleva ficha propia."
       },
       "entity_refs": [
         {
@@ -1429,9 +1454,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura entera de este relato consistió en impedir una deriva: el volcado lo cruza con el Sasquatch, con tres ecologistas desmembrados y con un profesor que quiere capturar un homínido, y el canon restaurado deja un hombre de proporciones normales con los pies fuera de escala que se apoya en ramas para girar y que juega con los lazos que le tienden; la pasada de objetos confirmó que la prueba de su paso es la huella y no el cadáver, y la de colectivos separó a los campesinos que vigilan la trampa de la hoja general, porque lo que hacen —esperar con garrotes y después guardarlos— es una acción y no un tipo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura entera de este relato consistió en impedir una deriva: el volcado lo cruza con el Sasquatch, con tres ecologistas desmembrados y con un profesor que quiere capturar un homínido, y el canon restaurado deja un hombre de proporciones normales con los pies fuera de escala que se apoya en ramas para girar y que juega con los lazos que le tienden; la pasada de objetos confirmó que la prueba de su paso es la huella y no el cadáver, y la de colectivos separó a los campesinos que vigilan la trampa de la hoja general, porque lo que hacen —esperar con garrotes y después guardarlos— es una acción y no un tipo.",
+        "previous_note": "La lectura entera de este relato consistió en impedir una deriva: el volcado lo cruza con el Sasquatch, con tres ecologistas desmembrados y con un profesor que quiere capturar un homínido, y el canon restaurado deja un hombre de proporciones normales con los pies fuera de escala que se apoya en ramas para girar y que juega con los lazos que le tienden; la pasada de objetos confirmó que la prueba de su paso es la huella y no el cadáver, y la de colectivos separó a los campesinos que vigilan la trampa de la hoja general, porque lo que hacen —esperar con garrotes y después guardarlos— es una acción y no un tipo."
       },
       "entity_refs": [
         {
@@ -1523,9 +1549,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de animales encontró aquí una figura que se define por lo que no hace: acompaña sin ladrar, camina al paso de alguien y no ataca, de modo que la lámina se resuelve por la distancia y no por la fiereza; los ojos de fuego y la cadena, que son lo primero que la imaginación pide, quedaron dentro y sugeridos porque dibujarlos literalmente convertiría en monstruo a un animal que el relato mantiene ambiguo, y la comprobación panregional confirmó que este perro no se consolida con el perro criollo nacional, que es otro animal y otra ruta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de animales encontró aquí una figura que se define por lo que no hace: acompaña sin ladrar, camina al paso de alguien y no ataca, de modo que la lámina se resuelve por la distancia y no por la fiereza; los ojos de fuego y la cadena, que son lo primero que la imaginación pide, quedaron dentro y sugeridos porque dibujarlos literalmente convertiría en monstruo a un animal que el relato mantiene ambiguo, y la comprobación panregional confirmó que este perro no se consolida con el perro criollo nacional, que es otro animal y otra ruta.",
+        "previous_note": "La pasada de animales encontró aquí una figura que se define por lo que no hace: acompaña sin ladrar, camina al paso de alguien y no ataca, de modo que la lámina se resuelve por la distancia y no por la fiereza; los ojos de fuego y la cadena, que son lo primero que la imaginación pide, quedaron dentro y sugeridos porque dibujarlos literalmente convertiría en monstruo a un animal que el relato mantiene ambiguo, y la comprobación panregional confirmó que este perro no se consolida con el perro criollo nacional, que es otro animal y otra ruta."
       },
       "entity_refs": [
         {
@@ -1617,9 +1644,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí la pasada de objetos dio el hallazgo que ordena las dos páginas canon: lo que se puede dibujar no es el tesoro sino el mapa, porque el mecanismo del relato es que un nombre se convierte en punto, el punto en expedición y el fracaso en la sospecha de que el punto está más lejos; el script propuso como primaria la leyenda paisa del arriero Roque y la guaca de Semana Santa, que es justamente el material que la revisión declaró inventado y retiró, de modo que la corrección era obligada, y la ficha del oro queda en una sola moneda y en una cámara que se lee como cuento y no como hallazgo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí la pasada de objetos dio el hallazgo que ordena las dos páginas canon: lo que se puede dibujar no es el tesoro sino el mapa, porque el mecanismo del relato es que un nombre se convierte en punto, el punto en expedición y el fracaso en la sospecha de que el punto está más lejos; el script propuso como primaria la leyenda paisa del arriero Roque y la guaca de Semana Santa, que es justamente el material que la revisión declaró inventado y retiró, de modo que la corrección era obligada, y la ficha del oro queda en una sola moneda y en una cámara que se lee como cuento y no como hallazgo.",
+        "previous_note": "Aquí la pasada de objetos dio el hallazgo que ordena las dos páginas canon: lo que se puede dibujar no es el tesoro sino el mapa, porque el mecanismo del relato es que un nombre se convierte en punto, el punto en expedición y el fracaso en la sospecha de que el punto está más lejos; el script propuso como primaria la leyenda paisa del arriero Roque y la guaca de Semana Santa, que es justamente el material que la revisión declaró inventado y retiró, de modo que la corrección era obligada, y la ficha del oro queda en una sola moneda y en una cámara que se lee como cuento y no como hallazgo."
       },
       "entity_refs": [
         {
@@ -1716,9 +1744,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato heredado trae dos capas que la lectura tuvo que separar: una moral de vanidad castigada por un ángel, con espejo y rostro revelado, y una carta pseudocientífica con un doctor y un proyector Kirlian, y ninguna de las dos entra a la lámina; lo que queda es una figura de tardes de invierno junto al barranco cuyo cabello cubre rostro, vestido y pies, y la decisión central de la pasada de criaturas fue que nunca se muestre lo que el cabello tapa, porque tanto la versión que promete belleza debajo como la que promete horror hacen exactamente lo que el dossier nacional prohíbe con las mujeres castigadas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato heredado trae dos capas que la lectura tuvo que separar: una moral de vanidad castigada por un ángel, con espejo y rostro revelado, y una carta pseudocientífica con un doctor y un proyector Kirlian, y ninguna de las dos entra a la lámina; lo que queda es una figura de tardes de invierno junto al barranco cuyo cabello cubre rostro, vestido y pies, y la decisión central de la pasada de criaturas fue que nunca se muestre lo que el cabello tapa, porque tanto la versión que promete belleza debajo como la que promete horror hacen exactamente lo que el dossier nacional prohíbe con las mujeres castigadas.",
+        "previous_note": "El relato heredado trae dos capas que la lectura tuvo que separar: una moral de vanidad castigada por un ángel, con espejo y rostro revelado, y una carta pseudocientífica con un doctor y un proyector Kirlian, y ninguna de las dos entra a la lámina; lo que queda es una figura de tardes de invierno junto al barranco cuyo cabello cubre rostro, vestido y pies, y la decisión central de la pasada de criaturas fue que nunca se muestre lo que el cabello tapa, porque tanto la versión que promete belleza debajo como la que promete horror hacen exactamente lo que el dossier nacional prohíbe con las mujeres castigadas."
       },
       "entity_refs": [
         {
@@ -1820,9 +1849,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí la pasada de objetos produjo una resta y no una suma: la guaca que la versión heredada ponía en el centro —el zapatero, la pala y el tesoro desenterrado— desaparece con la revisión, y con ella el único entierro abierto que el corpus habría tenido, de modo que la ficha se sostiene sobre un color y una silueta; la pasada de estados, en cambio, encontró un bulto contra el cuerpo cuya explicación local es un infanticidio no probado, y la decisión fue dibujarlo ambiguo, porque resolverlo en un sentido o en otro convierte la lámina en veredicto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí la pasada de objetos produjo una resta y no una suma: la guaca que la versión heredada ponía en el centro —el zapatero, la pala y el tesoro desenterrado— desaparece con la revisión, y con ella el único entierro abierto que el corpus habría tenido, de modo que la ficha se sostiene sobre un color y una silueta; la pasada de estados, en cambio, encontró un bulto contra el cuerpo cuya explicación local es un infanticidio no probado, y la decisión fue dibujarlo ambiguo, porque resolverlo en un sentido o en otro convierte la lámina en veredicto.",
+        "previous_note": "Aquí la pasada de objetos produjo una resta y no una suma: la guaca que la versión heredada ponía en el centro —el zapatero, la pala y el tesoro desenterrado— desaparece con la revisión, y con ella el único entierro abierto que el corpus habría tenido, de modo que la ficha se sostiene sobre un color y una silueta; la pasada de estados, en cambio, encontró un bulto contra el cuerpo cuya explicación local es un infanticidio no probado, y la decisión fue dibujarlo ambiguo, porque resolverlo en un sentido o en otro convierte la lámina en veredicto."
       },
       "entity_refs": [
         {
@@ -1894,9 +1924,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de criaturas devolvió aquí el retrato más preciso del cubo —vieja encorvada en lo alto del barranco, cara metida entre las piernas, rodillas desmesuradas, pelo gris, nariz ganchuda y un solo diente largo— y por eso la canónica sale de este corpus y no del repertorio paisa general; lo que la lectura tuvo que quitar fue todo lo que la rodeaba, porque el volcado la mete en la boda de Aquileo y Virgelina con un vendaval y dos jóvenes rodando cuesta abajo, y su postura plegada basta: no hace falta ningún gesto de agresión para que la lámina funcione."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de criaturas devolvió aquí el retrato más preciso del cubo —vieja encorvada en lo alto del barranco, cara metida entre las piernas, rodillas desmesuradas, pelo gris, nariz ganchuda y un solo diente largo— y por eso la canónica sale de este corpus y no del repertorio paisa general; lo que la lectura tuvo que quitar fue todo lo que la rodeaba, porque el volcado la mete en la boda de Aquileo y Virgelina con un vendaval y dos jóvenes rodando cuesta abajo, y su postura plegada basta: no hace falta ningún gesto de agresión para que la lámina funcione.",
+        "previous_note": "La pasada de criaturas devolvió aquí el retrato más preciso del cubo —vieja encorvada en lo alto del barranco, cara metida entre las piernas, rodillas desmesuradas, pelo gris, nariz ganchuda y un solo diente largo— y por eso la canónica sale de este corpus y no del repertorio paisa general; lo que la lectura tuvo que quitar fue todo lo que la rodeaba, porque el volcado la mete en la boda de Aquileo y Virgelina con un vendaval y dos jóvenes rodando cuesta abajo, y su postura plegada basta: no hace falta ningún gesto de agresión para que la lámina funcione."
       },
       "entity_refs": [
         {
@@ -1983,9 +2014,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la ficha más difícil del corpus porque la pasada de criaturas no encontró ninguna criatura: lo que hay es una gramática —una sombra que crece hasta ocupar la ladera y se reduce a matorral, una rama que gana brazos— y ficharla como figura sería fabricar exactamente el monstruo fijo que el relato evita; el script propuso como primaria a Matilde y la casona de San Justina, que la revisión ya había excluido, así que la corrección era obligada, y la lámina se compone con hojarasca, ramas y silbidos, con la sombra siempre en la capa de atrás y el objeto que la produce siempre en cuadro."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la ficha más difícil del corpus porque la pasada de criaturas no encontró ninguna criatura: lo que hay es una gramática —una sombra que crece hasta ocupar la ladera y se reduce a matorral, una rama que gana brazos— y ficharla como figura sería fabricar exactamente el monstruo fijo que el relato evita; el script propuso como primaria a Matilde y la casona de San Justina, que la revisión ya había excluido, así que la corrección era obligada, y la lámina se compone con hojarasca, ramas y silbidos, con la sombra siempre en la capa de atrás y el objeto que la produce siempre en cuadro.",
+        "previous_note": "Es la ficha más difícil del corpus porque la pasada de criaturas no encontró ninguna criatura: lo que hay es una gramática —una sombra que crece hasta ocupar la ladera y se reduce a matorral, una rama que gana brazos— y ficharla como figura sería fabricar exactamente el monstruo fijo que el relato evita; el script propuso como primaria a Matilde y la casona de San Justina, que la revisión ya había excluido, así que la corrección era obligada, y la lámina se compone con hojarasca, ramas y silbidos, con la sombra siempre en la capa de atrás y el objeto que la produce siempre en cuadro."
       },
       "entity_refs": [
         {
@@ -2067,9 +2099,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La fuente de este relato es escuetísima y la lectura decidió conservar esa modestia como criterio de diseño: no hay batalla, no hay tesoro y no hay conversación, y el módulo eliminó al arriero protagonista que la versión heredada inventó, de modo que lo que queda son diablillos del tamaño de un dedo hechos de las propias brasas, donde «cada brasa puede volverse cabeza, brazo o pie»; y la pasada de lugares aportó lo que la lámina necesitaba para no flotar, porque el fogón de los arrieros se monta en el contadero con las cargas en dos hileras formando muros, y eso convierte el campamento en un recinto hecho con la carga misma."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La fuente de este relato es escuetísima y la lectura decidió conservar esa modestia como criterio de diseño: no hay batalla, no hay tesoro y no hay conversación, y el módulo eliminó al arriero protagonista que la versión heredada inventó, de modo que lo que queda son diablillos del tamaño de un dedo hechos de las propias brasas, donde «cada brasa puede volverse cabeza, brazo o pie»; y la pasada de lugares aportó lo que la lámina necesitaba para no flotar, porque el fogón de los arrieros se monta en el contadero con las cargas en dos hileras formando muros, y eso convierte el campamento en un recinto hecho con la carga misma.",
+        "previous_note": "La fuente de este relato es escuetísima y la lectura decidió conservar esa modestia como criterio de diseño: no hay batalla, no hay tesoro y no hay conversación, y el módulo eliminó al arriero protagonista que la versión heredada inventó, de modo que lo que queda son diablillos del tamaño de un dedo hechos de las propias brasas, donde «cada brasa puede volverse cabeza, brazo o pie»; y la pasada de lugares aportó lo que la lámina necesitaba para no flotar, porque el fogón de los arrieros se monta en el contadero con las cargas en dos hileras formando muros, y eso convierte el campamento en un recinto hecho con la carga misma."
       },
       "entity_refs": [
         {
@@ -2156,9 +2189,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Este es el caso raro del cubo: la mujer que da nombre a la página y a un ciclo oral entero no aparece en las dos escenas planificadas, que son de la joven que sigue al becerro y de la madre que envejece esperando, y la lectura decidió ficharla igual, precisamente para que ninguna escena futura la invente como bruja, como estatua dorada o como madre celebrada del emprendimiento minero; la pasada de objetos dejó además la resta más grave del corpus, porque las personas esclavizadas que su biografía nombra no reciben ficha y la lámina de mineros no las cubre —las fuentes las nombran y no describen a nadie—, y resolverlas dentro de un inventario de espantos sería lo contrario de tratarlas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Este es el caso raro del cubo: la mujer que da nombre a la página y a un ciclo oral entero no aparece en las dos escenas planificadas, que son de la joven que sigue al becerro y de la madre que envejece esperando, y la lectura decidió ficharla igual, precisamente para que ninguna escena futura la invente como bruja, como estatua dorada o como madre celebrada del emprendimiento minero; la pasada de objetos dejó además la resta más grave del corpus, porque las personas esclavizadas que su biografía nombra no reciben ficha y la lámina de mineros no las cubre —las fuentes las nombran y no describen a nadie—, y resolverlas dentro de un inventario de espantos sería lo contrario de tratarlas.",
+        "previous_note": "Este es el caso raro del cubo: la mujer que da nombre a la página y a un ciclo oral entero no aparece en las dos escenas planificadas, que son de la joven que sigue al becerro y de la madre que envejece esperando, y la lectura decidió ficharla igual, precisamente para que ninguna escena futura la invente como bruja, como estatua dorada o como madre celebrada del emprendimiento minero; la pasada de objetos dejó además la resta más grave del corpus, porque las personas esclavizadas que su biografía nombra no reciben ficha y la lámina de mineros no las cubre —las fuentes las nombran y no describen a nadie—, y resolverlas dentro de un inventario de espantos sería lo contrario de tratarlas."
       },
       "entity_refs": [
         {
@@ -2265,9 +2299,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que sostener una decisión del módulo contra la fuerza del relato heredado: la violencia sexual que la versión anterior le había añadido como explicación se retira, y lo que queda —brazos y piernas que se alargan mientras se la sigue, balanceo exagerado y zapatos claveteados que sacan chispa de la piedra— resulta ser suficiente y además más específico; la pasada de objetos convirtió por eso al empedrado en parte de la ficha, porque la chispa sólo existe si hay piedra debajo, y la de personajes dejó al sacerdote que la persigue sin alcanzarla como la misma silueta de sotana que fracasa en la otra página."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que sostener una decisión del módulo contra la fuerza del relato heredado: la violencia sexual que la versión anterior le había añadido como explicación se retira, y lo que queda —brazos y piernas que se alargan mientras se la sigue, balanceo exagerado y zapatos claveteados que sacan chispa de la piedra— resulta ser suficiente y además más específico; la pasada de objetos convirtió por eso al empedrado en parte de la ficha, porque la chispa sólo existe si hay piedra debajo, y la de personajes dejó al sacerdote que la persigue sin alcanzarla como la misma silueta de sotana que fracasa en la otra página.",
+        "previous_note": "La lectura tuvo que sostener una decisión del módulo contra la fuerza del relato heredado: la violencia sexual que la versión anterior le había añadido como explicación se retira, y lo que queda —brazos y piernas que se alargan mientras se la sigue, balanceo exagerado y zapatos claveteados que sacan chispa de la piedra— resulta ser suficiente y además más específico; la pasada de objetos convirtió por eso al empedrado en parte de la ficha, porque la chispa sólo existe si hay piedra debajo, y la de personajes dejó al sacerdote que la persigue sin alcanzarla como la misma silueta de sotana que fracasa en la otra página."
       },
       "entity_refs": [
         {
@@ -2349,9 +2384,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de lugares dio aquí el deslinde que el censo no había declarado: la Villa de Arma se funda en 1542 en territorio de los Cuy-cuyes, pueblo que tiene censo propio en este mismo proyecto, de modo que la plaza se dibuja como lo que el relato muestra —españoles mirando desde las puertas en Viernes Santo— sin una sola figura, prenda ni pieza indígena, y esa ausencia en cuadro es un dato histórico y no una omisión; y la pasada de estados encontró el único cambio de silueta que el corpus paga entero, porque la mula negra que se vuelve bola de fuego no comparte un solo plano de papel con el jinete oscuro, y se contiene como luz y nunca como combustión."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de lugares dio aquí el deslinde que el censo no había declarado: la Villa de Arma se funda en 1542 en territorio de los Cuy-cuyes, pueblo que tiene censo propio en este mismo proyecto, de modo que la plaza se dibuja como lo que el relato muestra —españoles mirando desde las puertas en Viernes Santo— sin una sola figura, prenda ni pieza indígena, y esa ausencia en cuadro es un dato histórico y no una omisión; y la pasada de estados encontró el único cambio de silueta que el corpus paga entero, porque la mula negra que se vuelve bola de fuego no comparte un solo plano de papel con el jinete oscuro, y se contiene como luz y nunca como combustión.",
+        "previous_note": "La pasada de lugares dio aquí el deslinde que el censo no había declarado: la Villa de Arma se funda en 1542 en territorio de los Cuy-cuyes, pueblo que tiene censo propio en este mismo proyecto, de modo que la plaza se dibuja como lo que el relato muestra —españoles mirando desde las puertas en Viernes Santo— sin una sola figura, prenda ni pieza indígena, y esa ausencia en cuadro es un dato histórico y no una omisión; y la pasada de estados encontró el único cambio de silueta que el corpus paga entero, porque la mula negra que se vuelve bola de fuego no comparte un solo plano de papel con el jinete oscuro, y se contiene como luz y nunca como combustión."
       },
       "entity_refs": [
         {
@@ -11980,5 +12016,21 @@
       "ningún monstruo fijo para las Ilusiones Malas, ninguna fiera peluda para el Patón, ningún ojo con llama literal ni eslabón dibujado en el Perro Negro, y ninguna combustión ni humo en la mula de fuego",
       "ninguna neblina en la ladera seca del cañón, ningún fondo andino en el bajo Atrato y ningún balcón tallado ni fachada de color en la villa de 1542"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 14,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "6c8f2281aafc044aa598d5507d4cd49795a66c91fe58ff3e7d924b4b52d8f140",
+      "max_source_updated_at": "2026-07-28T06:56:20.824Z"
+    }
+  ]
 }

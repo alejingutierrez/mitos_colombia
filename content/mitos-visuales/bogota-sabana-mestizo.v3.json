@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento bogota-sabana-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -35,7 +35,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 16,
     "fields": [
       "content",
@@ -44,8 +44,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "9e54d138d91c90fa121ca81ca51854e0a478666619fd2f683e063f78561f692f",
-    "max_source_updated_at": "2026-07-22T23:59:25.896Z"
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "max_source_updated_at": "2026-09-23T01:14:14.278Z"
   },
   "research": {
     "sources": [
@@ -1321,8 +1321,8 @@
     "dossier": "docs/investigacion/bogota-sabana-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1332,7 +1332,31 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-bobo-del-tranvia",
+        "el-diablo-del-puente-del-comun",
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "el-loco-arias",
+        "el-mono-de-la-pila",
+        "el-toro-en-el-ascensor",
+        "el-venado-de-oro",
+        "la-bruja-del-tranvia",
+        "la-leyenda-del-santuario-de-monserrate",
+        "la-loca-margarita",
+        "la-monja-de-las-rosas",
+        "la-monja-vidente-y-el-taxista",
+        "la-mula-herrada",
+        "los-esqueletos-caminantes",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-bobo-del-tranvia": {
@@ -1357,9 +1381,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó al hombre de su apodo: la pasada de nombres propios devolvió un solo nombre y una lista de cinco prendas de color —el vestuario más descrito de las dieciséis páginas—, y la pasada de estados no encontró ninguno, porque el accidente que cierra el relato ocurre fuera de cuadro; lo que quedó por decidir no fue qué se dibuja sino qué NO, y la decisión fue retirar el tranvía celestial y la causalidad clínica que la ficha heredada añadía, de modo que la lámina se sostiene entera sobre gorra, camisa, cinturón, pantalón, botas y las dos señales opuestas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó al hombre de su apodo: la pasada de nombres propios devolvió un solo nombre y una lista de cinco prendas de color —el vestuario más descrito de las dieciséis páginas—, y la pasada de estados no encontró ninguno, porque el accidente que cierra el relato ocurre fuera de cuadro; lo que quedó por decidir no fue qué se dibuja sino qué NO, y la decisión fue retirar el tranvía celestial y la causalidad clínica que la ficha heredada añadía, de modo que la lámina se sostiene entera sobre gorra, camisa, cinturón, pantalón, botas y las dos señales opuestas.",
+        "previous_note": "La lectura separó al hombre de su apodo: la pasada de nombres propios devolvió un solo nombre y una lista de cinco prendas de color —el vestuario más descrito de las dieciséis páginas—, y la pasada de estados no encontró ninguno, porque el accidente que cierra el relato ocurre fuera de cuadro; lo que quedó por decidir no fue qué se dibuja sino qué NO, y la decisión fue retirar el tranvía celestial y la causalidad clínica que la ficha heredada añadía, de modo que la lámina se sostiene entera sobre gorra, camisa, cinturón, pantalón, botas y las dos señales opuestas."
       },
       "entity_refs": [
         {
@@ -1441,9 +1466,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos constructores que la leyenda superpone: Florentino, que firma el pacto y esconde al sacerdote, y Domingo Esquiaqui, que dirigió la obra real bajo el virrey Ezpeleta, y la ficha los deja como dos personas distintas porque la lámina del puente pertenece al expediente y la del pacto al relato; la pasada de animales dio además el hallazgo más barato del cubo, un gallo de corral que cobra el trato, y la de paisajes impuso la prohibición más inesperada, porque el eucalipto que hoy define la sabana es de finales del XIX y en 1790 esa ribera es humedal de alisos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos constructores que la leyenda superpone: Florentino, que firma el pacto y esconde al sacerdote, y Domingo Esquiaqui, que dirigió la obra real bajo el virrey Ezpeleta, y la ficha los deja como dos personas distintas porque la lámina del puente pertenece al expediente y la del pacto al relato; la pasada de animales dio además el hallazgo más barato del cubo, un gallo de corral que cobra el trato, y la de paisajes impuso la prohibición más inesperada, porque el eucalipto que hoy define la sabana es de finales del XIX y en 1790 esa ribera es humedal de alisos.",
+        "previous_note": "La lectura separó dos constructores que la leyenda superpone: Florentino, que firma el pacto y esconde al sacerdote, y Domingo Esquiaqui, que dirigió la obra real bajo el virrey Ezpeleta, y la ficha los deja como dos personas distintas porque la lámina del puente pertenece al expediente y la del pacto al relato; la pasada de animales dio además el hallazgo más barato del cubo, un gallo de corral que cobra el trato, y la de paisajes impuso la prohibición más inesperada, porque el eucalipto que hoy define la sabana es de finales del XIX y en 1790 esa ribera es humedal de alisos."
       },
       "entity_refs": [
         {
@@ -1540,9 +1566,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de nombres propios encontró aquí dos hombres y el script eligió al que menos aparece —Manuel Ferro, el herrero que muere acusando—, cuando el relato entero es el juicio de Russi: la primaria se corrigió contra el cuerpo del texto, que dedica cinco de sus siete párrafos al abogado que asume su propia defensa; y la pasada de objetos obligó a la única resta de todo el inventario, porque el cráneo conservado en vitrina es la pieza más citada del caso y es un resto humano identificado que no entra a ninguna lámina."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de nombres propios encontró aquí dos hombres y el script eligió al que menos aparece —Manuel Ferro, el herrero que muere acusando—, cuando el relato entero es el juicio de Russi: la primaria se corrigió contra el cuerpo del texto, que dedica cinco de sus siete párrafos al abogado que asume su propia defensa; y la pasada de objetos obligó a la única resta de todo el inventario, porque el cráneo conservado en vitrina es la pieza más citada del caso y es un resto humano identificado que no entra a ninguna lámina.",
+        "previous_note": "La pasada de nombres propios encontró aquí dos hombres y el script eligió al que menos aparece —Manuel Ferro, el herrero que muere acusando—, cuando el relato entero es el juicio de Russi: la primaria se corrigió contra el cuerpo del texto, que dedica cinco de sus siete párrafos al abogado que asume su propia defensa; y la pasada de objetos obligó a la única resta de todo el inventario, porque el cráneo conservado en vitrina es la pieza más citada del caso y es un resto humano identificado que no entra a ninguna lámina."
       },
       "entity_refs": [
         {
@@ -1634,9 +1661,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato existe porque son dos y la lectura tuvo que impedir que se fundieran: Manuelito Llanos lleva el arco entero —lo detienen por la ropa clara, responde con evasivas y sale libre— mientras Juan Miguel Acevedo es quien porta el farol y quien declara, y confundirlos borraría el mecanismo del cuento, que es el de una identificación hecha con una mancha blanca en una ciudad de seis faroles; la pasada de objetos convirtió por eso al farol en la pieza del relato y no en atrezo, porque su alcance de un paso es la medida exacta de lo poco que un testigo pudo ver."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato existe porque son dos y la lectura tuvo que impedir que se fundieran: Manuelito Llanos lleva el arco entero —lo detienen por la ropa clara, responde con evasivas y sale libre— mientras Juan Miguel Acevedo es quien porta el farol y quien declara, y confundirlos borraría el mecanismo del cuento, que es el de una identificación hecha con una mancha blanca en una ciudad de seis faroles; la pasada de objetos convirtió por eso al farol en la pieza del relato y no en atrezo, porque su alcance de un paso es la medida exacta de lo poco que un testigo pudo ver.",
+        "previous_note": "El relato existe porque son dos y la lectura tuvo que impedir que se fundieran: Manuelito Llanos lleva el arco entero —lo detienen por la ropa clara, responde con evasivas y sale libre— mientras Juan Miguel Acevedo es quien porta el farol y quien declara, y confundirlos borraría el mecanismo del cuento, que es el de una identificación hecha con una mancha blanca en una ciudad de seis faroles; la pasada de objetos convirtió por eso al farol en la pieza del relato y no en atrezo, porque su alcance de un paso es la medida exacta de lo poco que un testigo pudo ver."
       },
       "entity_refs": [
         {
@@ -1733,9 +1761,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es el único relato del cubo donde el disfraz es la acción, y por eso la pasada de estados dio aquí su resultado más limpio: Arias cambia de traje sin moverse de la esquina, así que el estado cuesta lámina pero no cuerpo —el manto y el sombrero cónico se superponen a la misma ropa de pueblo—; en cambio Buda, Confucio y Jesucristo se nombran como repertorio y no como apariciones, y ficharlos habría obligado a inventar tres vestuarios que ninguna fuente describe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es el único relato del cubo donde el disfraz es la acción, y por eso la pasada de estados dio aquí su resultado más limpio: Arias cambia de traje sin moverse de la esquina, así que el estado cuesta lámina pero no cuerpo —el manto y el sombrero cónico se superponen a la misma ropa de pueblo—; en cambio Buda, Confucio y Jesucristo se nombran como repertorio y no como apariciones, y ficharlos habría obligado a inventar tres vestuarios que ninguna fuente describe.",
+        "previous_note": "Es el único relato del cubo donde el disfraz es la acción, y por eso la pasada de estados dio aquí su resultado más limpio: Arias cambia de traje sin moverse de la esquina, así que el estado cuesta lámina pero no cuerpo —el manto y el sombrero cónico se superponen a la misma ropa de pueblo—; en cambio Buda, Confucio y Jesucristo se nombran como repertorio y no como apariciones, y ficharlos habría obligado a inventar tres vestuarios que ninguna fuente describe."
       },
       "entity_refs": [
         {
@@ -1802,9 +1831,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura descubrió que este relato no tiene protagonista humano: lo que conduce la acción es una obra hidráulica convertida en oyente imposible, y por eso la primaria que el script propuso —un aguador genérico que ya está embebido en la hoja de colectivo— tuvo que cederle el sitio al objeto; la pasada de variantes dejó además una contradicción sin resolver que la ficha lleva dentro, porque las dos fuentes disponibles describen dos esculturas distintas y ninguna dice cuál está sobre la taza."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura descubrió que este relato no tiene protagonista humano: lo que conduce la acción es una obra hidráulica convertida en oyente imposible, y por eso la primaria que el script propuso —un aguador genérico que ya está embebido en la hoja de colectivo— tuvo que cederle el sitio al objeto; la pasada de variantes dejó además una contradicción sin resolver que la ficha lleva dentro, porque las dos fuentes disponibles describen dos esculturas distintas y ninguna dice cuál está sobre la taza.",
+        "previous_note": "La lectura descubrió que este relato no tiene protagonista humano: lo que conduce la acción es una obra hidráulica convertida en oyente imposible, y por eso la primaria que el script propuso —un aguador genérico que ya está embebido en la hoja de colectivo— tuvo que cederle el sitio al objeto; la pasada de variantes dejó además una contradicción sin resolver que la ficha lleva dentro, porque las dos fuentes disponibles describen dos esculturas distintas y ninguna dice cuál está sobre la taza."
       },
       "entity_refs": [
         {
@@ -1881,9 +1911,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura conservó a propósito una incertidumbre que otras fichas habrían resuelto: fecha, dirección, número de animales y edificio son incompatibles entre sí en las fuentes y la página los deja así, de modo que la pasada de lugares produjo un vestíbulo deliberadamente no identificado; y la pasada de animales tuvo que corregir la primaria que el script propuso —el hombre del ascensor, que es un rol sin nombre ya embebido en la hoja del siglo XX— porque lo que este relato aporta al inventario es una res de transporte asustada, sin casta, sin Minotauro y sin torero."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura conservó a propósito una incertidumbre que otras fichas habrían resuelto: fecha, dirección, número de animales y edificio son incompatibles entre sí en las fuentes y la página los deja así, de modo que la pasada de lugares produjo un vestíbulo deliberadamente no identificado; y la pasada de animales tuvo que corregir la primaria que el script propuso —el hombre del ascensor, que es un rol sin nombre ya embebido en la hoja del siglo XX— porque lo que este relato aporta al inventario es una res de transporte asustada, sin casta, sin Minotauro y sin torero.",
+        "previous_note": "La lectura conservó a propósito una incertidumbre que otras fichas habrían resuelto: fecha, dirección, número de animales y edificio son incompatibles entre sí en las fuentes y la página los deja así, de modo que la pasada de lugares produjo un vestíbulo deliberadamente no identificado; y la pasada de animales tuvo que corregir la primaria que el script propuso —el hombre del ascensor, que es un rol sin nombre ya embebido en la hoja del siglo XX— porque lo que este relato aporta al inventario es una res de transporte asustada, sin casta, sin Minotauro y sin torero."
       },
       "entity_refs": [
         {
@@ -1955,9 +1986,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de estados encontró aquí el único cambio de masa de un objeto en todo el cubo: el venado entero y el venado sin cuernos son dos siluetas y el relato ocurre entre las dos, porque lo que Diego se lleva la primera vez es exactamente lo que falta cuando vuelve; y la pasada de lugares separó dos escalas de luz que la costumbre junta, el exterior del cerro con niebla y la gruta con una sola lámpara en el suelo, mientras la de variantes retiraba al Zipa, al chamán y al venado vivo, con lo que la pieza queda como tesoro inmóvil y no como animal psicopompo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de estados encontró aquí el único cambio de masa de un objeto en todo el cubo: el venado entero y el venado sin cuernos son dos siluetas y el relato ocurre entre las dos, porque lo que Diego se lleva la primera vez es exactamente lo que falta cuando vuelve; y la pasada de lugares separó dos escalas de luz que la costumbre junta, el exterior del cerro con niebla y la gruta con una sola lámpara en el suelo, mientras la de variantes retiraba al Zipa, al chamán y al venado vivo, con lo que la pieza queda como tesoro inmóvil y no como animal psicopompo.",
+        "previous_note": "La pasada de estados encontró aquí el único cambio de masa de un objeto en todo el cubo: el venado entero y el venado sin cuernos son dos siluetas y el relato ocurre entre las dos, porque lo que Diego se lleva la primera vez es exactamente lo que falta cuando vuelve; y la pasada de lugares separó dos escalas de luz que la costumbre junta, el exterior del cerro con niebla y la gruta con una sola lámpara en el suelo, mientras la de variantes retiraba al Zipa, al chamán y al venado vivo, con lo que la pieza queda como tesoro inmóvil y no como animal psicopompo."
       },
       "entity_refs": [
         {
@@ -2054,9 +2086,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Este relato se lee mejor por lo que niega que por lo que describe: la pasada de criaturas no encontró escoba, caldero ni transformación animal porque el propio texto se los quita, de modo que la ficha se construye sobre una mujer sentada bajo una lámpara cuyo único poder es atraer; y la pasada de objetos dejó el dato que gobierna el cubo entero, porque el tranvía blanco sólo funciona como anomalía si se acepta que el color real del tranvía bogotano no está documentado en ninguna fuente y que inventarle una librea destruiría el efecto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Este relato se lee mejor por lo que niega que por lo que describe: la pasada de criaturas no encontró escoba, caldero ni transformación animal porque el propio texto se los quita, de modo que la ficha se construye sobre una mujer sentada bajo una lámpara cuyo único poder es atraer; y la pasada de objetos dejó el dato que gobierna el cubo entero, porque el tranvía blanco sólo funciona como anomalía si se acepta que el color real del tranvía bogotano no está documentado en ninguna fuente y que inventarle una librea destruiría el efecto.",
+        "previous_note": "Este relato se lee mejor por lo que niega que por lo que describe: la pasada de criaturas no encontró escoba, caldero ni transformación animal porque el propio texto se los quita, de modo que la ficha se construye sobre una mujer sentada bajo una lámpara cuyo único poder es atraer; y la pasada de objetos dejó el dato que gobierna el cubo entero, porque el tranvía blanco sólo funciona como anomalía si se acepta que el color real del tranvía bogotano no está documentado en ninguna fuente y que inventarle una librea destruiría el efecto."
       },
       "entity_refs": [
         {
@@ -2133,9 +2166,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí la pasada de estados encontró dos prodigios y descartó los dos como láminas: el cabello que crece y el peso que cambia son creencias sobre la misma talla y no alteran su silueta, de modo que lo que la imagen tiene que sostener no es el milagro sino el cuerpo de quien sube —de rodillas, descalzo, con un ladrillo en la mano—; y la pasada de variantes retiró el volcán oculto, el equilibrista y las presencias muiscas que la página misma declara innecesarias, con lo que este relato queda excluido de cualquier préstamo a la biblia muisca de esta misma sabana."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí la pasada de estados encontró dos prodigios y descartó los dos como láminas: el cabello que crece y el peso que cambia son creencias sobre la misma talla y no alteran su silueta, de modo que lo que la imagen tiene que sostener no es el milagro sino el cuerpo de quien sube —de rodillas, descalzo, con un ladrillo en la mano—; y la pasada de variantes retiró el volcán oculto, el equilibrista y las presencias muiscas que la página misma declara innecesarias, con lo que este relato queda excluido de cualquier préstamo a la biblia muisca de esta misma sabana.",
+        "previous_note": "Aquí la pasada de estados encontró dos prodigios y descartó los dos como láminas: el cabello que crece y el peso que cambia son creencias sobre la misma talla y no alteran su silueta, de modo que lo que la imagen tiene que sostener no es el milagro sino el cuerpo de quien sube —de rodillas, descalzo, con un ladrillo en la mano—; y la pasada de variantes retiró el volcán oculto, el equilibrista y las presencias muiscas que la página misma declara innecesarias, con lo que este relato queda excluido de cualquier préstamo a la biblia muisca de esta misma sabana."
       },
       "entity_refs": [
         {
@@ -2222,9 +2256,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La corrección de época fue aquí la lectura entera: Margarita llega a Bogotá en 1902 y después de 1914 anda descalza y de zaraza roja, de modo que su calle es la del tranvía eléctrico y la bombilla y no la del farol de sebo con que la imaginación la viste, y eso la separa por una generación de Arias, que es la otra figura de calle del cubo; la pasada de estados cobró el único cambio de prenda del corpus —vestido rojo fuera, hábito gris dentro— y la de variantes dejó fuera maestra, viuda, madre y desplazada, que son biografía tardía sin confirmar."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La corrección de época fue aquí la lectura entera: Margarita llega a Bogotá en 1902 y después de 1914 anda descalza y de zaraza roja, de modo que su calle es la del tranvía eléctrico y la bombilla y no la del farol de sebo con que la imaginación la viste, y eso la separa por una generación de Arias, que es la otra figura de calle del cubo; la pasada de estados cobró el único cambio de prenda del corpus —vestido rojo fuera, hábito gris dentro— y la de variantes dejó fuera maestra, viuda, madre y desplazada, que son biografía tardía sin confirmar.",
+        "previous_note": "La corrección de época fue aquí la lectura entera: Margarita llega a Bogotá en 1902 y después de 1914 anda descalza y de zaraza roja, de modo que su calle es la del tranvía eléctrico y la bombilla y no la del farol de sebo con que la imaginación la viste, y eso la separa por una generación de Arias, que es la otra figura de calle del cubo; la pasada de estados cobró el único cambio de prenda del corpus —vestido rojo fuera, hábito gris dentro— y la de variantes dejó fuera maestra, viuda, madre y desplazada, que son biografía tardía sin confirmar."
       },
       "entity_refs": [
         {
@@ -2306,9 +2341,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos enlutadas que el título invita a confundir: aquí hay una mujer de vestido negro de otro tiempo y no una monja, y el guion lo dice por omisión —no hay hábito, no hay biografía conventual y no hay serie de avistamientos—, de modo que la otra religiosa del cubo, la del taxi, queda con hábito completo y en los años noventa; y la pasada de objetos dio la regla de imagen más contraintuitiva del corpus, porque el ramo se dibuja intacto y en el suelo, sin mano que lo sostenga, y la inquietud nace de que algo delicado permanezca donde una persona ya no está."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos enlutadas que el título invita a confundir: aquí hay una mujer de vestido negro de otro tiempo y no una monja, y el guion lo dice por omisión —no hay hábito, no hay biografía conventual y no hay serie de avistamientos—, de modo que la otra religiosa del cubo, la del taxi, queda con hábito completo y en los años noventa; y la pasada de objetos dio la regla de imagen más contraintuitiva del corpus, porque el ramo se dibuja intacto y en el suelo, sin mano que lo sostenga, y la inquietud nace de que algo delicado permanezca donde una persona ya no está.",
+        "previous_note": "La lectura separó dos enlutadas que el título invita a confundir: aquí hay una mujer de vestido negro de otro tiempo y no una monja, y el guion lo dice por omisión —no hay hábito, no hay biografía conventual y no hay serie de avistamientos—, de modo que la otra religiosa del cubo, la del taxi, queda con hábito completo y en los años noventa; y la pasada de objetos dio la regla de imagen más contraintuitiva del corpus, porque el ramo se dibuja intacto y en el suelo, sin mano que lo sostenga, y la inquietud nace de que algo delicado permanezca donde una persona ya no está."
       },
       "entity_refs": [
         {
@@ -2370,9 +2406,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de estados encontró aquí un cambio que el corpus decide no mostrar: la pasajera pasa de asiento trasero a cuerpo en el ataúd, y la escena elige el retrato junto a la caja cerrada en vez del cadáver, con lo que el relato entero se resuelve sin un solo resto humano; y la pasada de objetos obligó a fechar el taxi, porque el amarillo uniforme es de 1999 y la escena es de 1994, así que lo correcto es el amarillo desigual de una flota vieja y no el color normalizado que hoy parece obvio."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de estados encontró aquí un cambio que el corpus decide no mostrar: la pasajera pasa de asiento trasero a cuerpo en el ataúd, y la escena elige el retrato junto a la caja cerrada en vez del cadáver, con lo que el relato entero se resuelve sin un solo resto humano; y la pasada de objetos obligó a fechar el taxi, porque el amarillo uniforme es de 1999 y la escena es de 1994, así que lo correcto es el amarillo desigual de una flota vieja y no el color normalizado que hoy parece obvio.",
+        "previous_note": "La pasada de estados encontró aquí un cambio que el corpus decide no mostrar: la pasajera pasa de asiento trasero a cuerpo en el ataúd, y la escena elige el retrato junto a la caja cerrada en vez del cadáver, con lo que el relato entero se resuelve sin un solo resto humano; y la pasada de objetos obligó a fechar el taxi, porque el amarillo uniforme es de 1999 y la escena es de 1994, así que lo correcto es el amarillo desigual de una flota vieja y no el color normalizado que hoy parece obvio."
       },
       "entity_refs": [
         {
@@ -2454,9 +2491,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura invirtió la jerarquía que el script propuso: don Álvaro Sánchez desaparece en el segundo párrafo y lo que el relato aporta al inventario es el animal que sigue yendo —ensillado, bien herrado y con la montura vacía— hasta la puerta de una casa de juego que ya no recibe a nadie, de modo que la primaria es la mula y el jugador queda como la ausencia que ella busca; y la pasada de variantes separó expresamente los homónimos de Honduras y de México, con hija castigada y fraile, porque aquí no hay castigo sino costumbre aprendida."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura invirtió la jerarquía que el script propuso: don Álvaro Sánchez desaparece en el segundo párrafo y lo que el relato aporta al inventario es el animal que sigue yendo —ensillado, bien herrado y con la montura vacía— hasta la puerta de una casa de juego que ya no recibe a nadie, de modo que la primaria es la mula y el jugador queda como la ausencia que ella busca; y la pasada de variantes separó expresamente los homónimos de Honduras y de México, con hija castigada y fraile, porque aquí no hay castigo sino costumbre aprendida.",
+        "previous_note": "La lectura invirtió la jerarquía que el script propuso: don Álvaro Sánchez desaparece en el segundo párrafo y lo que el relato aporta al inventario es el animal que sigue yendo —ensillado, bien herrado y con la montura vacía— hasta la puerta de una casa de juego que ya no recibe a nadie, de modo que la primaria es la mula y el jugador queda como la ausencia que ella busca; y la pasada de variantes separó expresamente los homónimos de Honduras y de México, con hija castigada y fraile, porque aquí no hay castigo sino costumbre aprendida."
       },
       "entity_refs": [
         {
@@ -2533,9 +2571,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El único relato del cubo cuya tesis es que no hay nada que distinguir: la pasada de criaturas devolvió dos cuerpos deliberadamente idénticos, sin ropa, sin dinero y sin señal de oficio, y la lectura decidió por eso una sola ficha con una sola plantilla repetida, porque dibujar una diferencia entre ellos contradiría el cuento; y la pasada de variantes dejó claro que las dos biografías opuestas pertenecen a la imaginación de los personajes y no a los cuerpos, de modo que la riqueza y la pobreza van a la hoja de utilería y nunca sobre los huesos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El único relato del cubo cuya tesis es que no hay nada que distinguir: la pasada de criaturas devolvió dos cuerpos deliberadamente idénticos, sin ropa, sin dinero y sin señal de oficio, y la lectura decidió por eso una sola ficha con una sola plantilla repetida, porque dibujar una diferencia entre ellos contradiría el cuento; y la pasada de variantes dejó claro que las dos biografías opuestas pertenecen a la imaginación de los personajes y no a los cuerpos, de modo que la riqueza y la pobreza van a la hoja de utilería y nunca sobre los huesos.",
+        "previous_note": "El único relato del cubo cuya tesis es que no hay nada que distinguir: la pasada de criaturas devolvió dos cuerpos deliberadamente idénticos, sin ropa, sin dinero y sin señal de oficio, y la lectura decidió por eso una sola ficha con una sola plantilla repetida, porque dibujar una diferencia entre ellos contradiría el cuento; y la pasada de variantes dejó claro que las dos biografías opuestas pertenecen a la imaginación de los personajes y no a los cuerpos, de modo que la riqueza y la pobreza van a la hoja de utilería y nunca sobre los huesos."
       },
       "entity_refs": [
         {
@@ -2597,9 +2636,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato es plural por diseño y la lectura tuvo que resistir la tentación de fundirlo: Calle del Fantasma, Casaca Verde, Russi, Baltazar y la Lavandera son relatos vecinos por territorio y no variantes de una entidad, así que la pasada de nombres propios dejó dos nombres sin cuerpo tal como están; lo que sí resolvió fue la fecha de la única aparición descrita, porque peluca, chaqueta verde y calzón hasta la rodilla son exactamente el traje que el siglo XIX abandona en sus primeros años, y eso convierte a la Casaca Verde en una figura del XVIII asomada a una calle posterior."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato es plural por diseño y la lectura tuvo que resistir la tentación de fundirlo: Calle del Fantasma, Casaca Verde, Russi, Baltazar y la Lavandera son relatos vecinos por territorio y no variantes de una entidad, así que la pasada de nombres propios dejó dos nombres sin cuerpo tal como están; lo que sí resolvió fue la fecha de la única aparición descrita, porque peluca, chaqueta verde y calzón hasta la rodilla son exactamente el traje que el siglo XIX abandona en sus primeros años, y eso convierte a la Casaca Verde en una figura del XVIII asomada a una calle posterior.",
+        "previous_note": "El relato es plural por diseño y la lectura tuvo que resistir la tentación de fundirlo: Calle del Fantasma, Casaca Verde, Russi, Baltazar y la Lavandera son relatos vecinos por territorio y no variantes de una entidad, así que la pasada de nombres propios dejó dos nombres sin cuerpo tal como están; lo que sí resolvió fue la fecha de la única aparición descrita, porque peluca, chaqueta verde y calzón hasta la rodilla son exactamente el traje que el siglo XIX abandona en sus primeros años, y eso convierte a la Casaca Verde en una figura del XVIII asomada a una calle posterior."
       },
       "entity_refs": [
         {
@@ -14146,5 +14186,21 @@
       "ningún pelaje, follaje ni niebla pieza por pieza: pocas piezas planas grandes con el borde en dientes",
       "ninguna mutilación, deformación sexualizada ni desnudo en las figuras femeninas, y ninguna escoba, caldero ni transformación animal para la Bruja del Tranvía"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 16,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "9e54d138d91c90fa121ca81ca51854e0a478666619fd2f683e063f78561f692f",
+      "max_source_updated_at": "2026-07-22T23:59:25.896Z"
+    }
+  ]
 }

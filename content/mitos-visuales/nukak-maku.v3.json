@@ -7,7 +7,7 @@
   "region": "Amazonas",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Nɨkak (communities.slug = nukak-maku)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -16,7 +16,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 1,
     "fields": [
       "mito",
@@ -24,8 +24,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "662e11b9ff967ca7cfabf809a2a1abff7160a6e1bdf9f4dd34b9a2a71d854f5e",
-    "max_source_updated_at": "2026-07-29T01:23:02.962Z"
+    "sha256": "ad8318bbd3861726280aba3914f17446c3f6b3cb32895a703a1e2698caf8d476",
+    "max_source_updated_at": "2026-09-20T00:19:50.262Z"
   },
   "research": {
     "sources": [
@@ -592,8 +592,8 @@
     "dossier": "docs/investigacion/nukak-maku.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -603,7 +603,16 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "creacion-nukak-maku"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "creacion-nukak-maku": {
@@ -626,9 +635,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó esta lectura fue que el relato casi no describe cuerpos y en cambio describe una obra: la fuente de Embe da el emplazamiento del hueco —una playa junto a la laguna Kein inbe', antes de la confluencia— su profundidad de tres o cuatro metros y la resina resbalosa de la boca, mientras que de Machoroko sólo dice que es una mujer y que escarba con uñas de oso hormiguero; por eso la extracción cargó las fichas de lugar y de fenómeno y dejó las de figura apoyadas en dos datos, y por eso la pasada de estados sólo cobró los dos de Aukurɨbo, que son las únicas siluetas que el texto cambia."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó esta lectura fue que el relato casi no describe cuerpos y en cambio describe una obra: la fuente de Embe da el emplazamiento del hueco —una playa junto a la laguna Kein inbe', antes de la confluencia— su profundidad de tres o cuatro metros y la resina resbalosa de la boca, mientras que de Machoroko sólo dice que es una mujer y que escarba con uñas de oso hormiguero; por eso la extracción cargó las fichas de lugar y de fenómeno y dejó las de figura apoyadas en dos datos, y por eso la pasada de estados sólo cobró los dos de Aukurɨbo, que son las únicas siluetas que el texto cambia.",
+        "previous_note": "Lo que separó esta lectura fue que el relato casi no describe cuerpos y en cambio describe una obra: la fuente de Embe da el emplazamiento del hueco —una playa junto a la laguna Kein inbe', antes de la confluencia— su profundidad de tres o cuatro metros y la resina resbalosa de la boca, mientras que de Machoroko sólo dice que es una mujer y que escarba con uñas de oso hormiguero; por eso la extracción cargó las fichas de lugar y de fenómeno y dejó las de figura apoyadas en dos datos, y por eso la pasada de estados sólo cobró los dos de Aukurɨbo, que son las únicas siluetas que el texto cambia."
       },
       "entity_refs": [
         {
@@ -3354,5 +3364,20 @@
       "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
       "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 1,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "662e11b9ff967ca7cfabf809a2a1abff7160a6e1bdf9f4dd34b9a2a71d854f5e",
+      "max_source_updated_at": "2026-07-29T01:23:02.962Z"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Quimbaya (communities.slug = quimbaya)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -18,7 +18,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 3,
     "fields": [
       "mito",
@@ -26,8 +26,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "fa527bd22bf14459a1a0363f7f375a41e99beabfb0183313652f605542c4e403",
-    "max_source_updated_at": "2026-07-28T18:26:56.032Z"
+    "sha256": "f3d06bb1d1580d062cde491b91523719658943e00e9b8d7758863a7405e21b1e",
+    "max_source_updated_at": "2026-09-20T00:19:38.553Z"
   },
   "research": {
     "sources": [
@@ -932,8 +932,8 @@
     "dossier": "docs/investigacion/quimbaya.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -943,7 +943,18 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "batatabati",
+        "ipiare-ebachi",
+        "nabsacadas-la-estrella-caida"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "batatabati": {
@@ -966,9 +977,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la fiesta de la princesa que nunca existió, y la separación deja el relato en manos de un colectivo: no hay una Batatabatí hija de Tacurumbí, ni un secuestro, ni unos ojos arrancados, ni un río nacido de lágrimas — la palabra es un estribillo que el cronista traduce como «ea, juguemos» y el sujeto del relato son los tres bloques de mujeres, hombres y muchachos que avanzan al oír el son; y hubo una segunda separación, la de las dos escenas seguidas que la crónica pone y que nadie lee juntas, porque tras el choque vienen los dos tambores, la rueda, la vasija en la mano y unos cantares que «recitan a su uso los trabajos presentes y recuentan los sucesos pasados de sus mayores», de modo que la plaza no es un campo de juego sino un archivo cantado, y ésa es la escena que el inventario tuvo que producir."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la fiesta de la princesa que nunca existió, y la separación deja el relato en manos de un colectivo: no hay una Batatabatí hija de Tacurumbí, ni un secuestro, ni unos ojos arrancados, ni un río nacido de lágrimas — la palabra es un estribillo que el cronista traduce como «ea, juguemos» y el sujeto del relato son los tres bloques de mujeres, hombres y muchachos que avanzan al oír el son; y hubo una segunda separación, la de las dos escenas seguidas que la crónica pone y que nadie lee juntas, porque tras el choque vienen los dos tambores, la rueda, la vasija en la mano y unos cantares que «recitan a su uso los trabajos presentes y recuentan los sucesos pasados de sus mayores», de modo que la plaza no es un campo de juego sino un archivo cantado, y ésa es la escena que el inventario tuvo que producir.",
+        "previous_note": "La lectura separó la fiesta de la princesa que nunca existió, y la separación deja el relato en manos de un colectivo: no hay una Batatabatí hija de Tacurumbí, ni un secuestro, ni unos ojos arrancados, ni un río nacido de lágrimas — la palabra es un estribillo que el cronista traduce como «ea, juguemos» y el sujeto del relato son los tres bloques de mujeres, hombres y muchachos que avanzan al oír el son; y hubo una segunda separación, la de las dos escenas seguidas que la crónica pone y que nadie lee juntas, porque tras el choque vienen los dos tambores, la rueda, la vasija en la mano y unos cantares que «recitan a su uso los trabajos presentes y recuentan los sucesos pasados de sus mayores», de modo que la plaza no es un campo de juego sino un archivo cantado, y ésa es la escena que el inventario tuvo que producir."
       },
       "entity_refs": [
         {
@@ -1078,9 +1090,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la trama de su procedencia y la procedencia no resistió: la página de El Liberal del 5 de abril de 1932 que el canon señala como origen contiene cinco piezas de Gonzalo Uribe Mejía sobre los embera chamí y el Mojana —ni Ipiaré, ni Ebachí, ni quimbayas, ni Cumanday, ni sandalia—, y fuera de una crónica de 2023 que cita el texto sin nombrar periódico ni fecha, la expresión sólo aparece indexada en el propio sitio que publica esta biblia, de modo que la referencia es circular y el relato pasa a ser texto de 1932 de localización pendiente transmitido en tercera mano; lo que sobrevive intacto de esa lectura es el objeto, porque la sandalia se ciñe «con cadenas y sortijas» y no con una correa, y porque no hay ninguna base arqueológica para calzado prehispánico en esta región, así que la única pieza dorada del corpus es también la única declaradamente inventada."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la trama de su procedencia y la procedencia no resistió: la página de El Liberal del 5 de abril de 1932 que el canon señala como origen contiene cinco piezas de Gonzalo Uribe Mejía sobre los embera chamí y el Mojana —ni Ipiaré, ni Ebachí, ni quimbayas, ni Cumanday, ni sandalia—, y fuera de una crónica de 2023 que cita el texto sin nombrar periódico ni fecha, la expresión sólo aparece indexada en el propio sitio que publica esta biblia, de modo que la referencia es circular y el relato pasa a ser texto de 1932 de localización pendiente transmitido en tercera mano; lo que sobrevive intacto de esa lectura es el objeto, porque la sandalia se ciñe «con cadenas y sortijas» y no con una correa, y porque no hay ninguna base arqueológica para calzado prehispánico en esta región, así que la única pieza dorada del corpus es también la única declaradamente inventada.",
+        "previous_note": "La lectura separó la trama de su procedencia y la procedencia no resistió: la página de El Liberal del 5 de abril de 1932 que el canon señala como origen contiene cinco piezas de Gonzalo Uribe Mejía sobre los embera chamí y el Mojana —ni Ipiaré, ni Ebachí, ni quimbayas, ni Cumanday, ni sandalia—, y fuera de una crónica de 2023 que cita el texto sin nombrar periódico ni fecha, la expresión sólo aparece indexada en el propio sitio que publica esta biblia, de modo que la referencia es circular y el relato pasa a ser texto de 1932 de localización pendiente transmitido en tercera mano; lo que sobrevive intacto de esa lectura es el objeto, porque la sandalia se ciñe «con cadenas y sortijas» y no con una correa, y porque no hay ninguna base arqueológica para calzado prehispánico en esta región, así que la única pieza dorada del corpus es también la única declaradamente inventada."
       },
       "entity_refs": [
         {
@@ -1145,9 +1158,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó al hombre del dios y del demonio, que son las dos etiquetas que el archivo le puso: el cronista franciscano lo llama demonio pero escribe que se apareció «en figura humana», y el manual de 1948 lo comprimió en «dios quimbaya», que borra la trama entera; leído el expediente, lo que hay es una figura que vuelve del páramo de Tataquí y de ese regreso saca su autoridad, de modo que el páramo dejó de ser fondo y pasó a ser una ficha —el origen del derecho a hablar—, y la estrella caída dejó de ser un prodigio celeste para ser lo que es, la traducción de un nombre; y la segunda separación fue de mundos materiales, porque la gente que llega de noche al bohío con masato y bollos no puede llevar los cuerpos de la fiesta de 1553: reusar esa gramática mentiría sobre el siglo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó al hombre del dios y del demonio, que son las dos etiquetas que el archivo le puso: el cronista franciscano lo llama demonio pero escribe que se apareció «en figura humana», y el manual de 1948 lo comprimió en «dios quimbaya», que borra la trama entera; leído el expediente, lo que hay es una figura que vuelve del páramo de Tataquí y de ese regreso saca su autoridad, de modo que el páramo dejó de ser fondo y pasó a ser una ficha —el origen del derecho a hablar—, y la estrella caída dejó de ser un prodigio celeste para ser lo que es, la traducción de un nombre; y la segunda separación fue de mundos materiales, porque la gente que llega de noche al bohío con masato y bollos no puede llevar los cuerpos de la fiesta de 1553: reusar esa gramática mentiría sobre el siglo.",
+        "previous_note": "La lectura separó al hombre del dios y del demonio, que son las dos etiquetas que el archivo le puso: el cronista franciscano lo llama demonio pero escribe que se apareció «en figura humana», y el manual de 1948 lo comprimió en «dios quimbaya», que borra la trama entera; leído el expediente, lo que hay es una figura que vuelve del páramo de Tataquí y de ese regreso saca su autoridad, de modo que el páramo dejó de ser fondo y pasó a ser una ficha —el origen del derecho a hablar—, y la estrella caída dejó de ser un prodigio celeste para ser lo que es, la traducción de un nombre; y la segunda separación fue de mundos materiales, porque la gente que llega de noche al bohío con masato y bollos no puede llevar los cuerpos de la fiesta de 1553: reusar esa gramática mentiría sobre el siglo."
       },
       "entity_refs": [
         {
@@ -4748,5 +4762,20 @@
       "Sin mezclar épocas en una lámina: nada de hierro, cruz, caballo o teja en la escena del siglo XVI, y nada de geometría precolombina en el bohío de 1603.",
       "Sin que la imagen funcione como mapa de un sitio ni como catálogo: ni perfil localizable, ni ruta, ni pieza identificable, en un territorio cuyo saqueo está documentado."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 3,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "fa527bd22bf14459a1a0363f7f375a41e99beabfb0183313652f605542c4e403",
+      "max_source_updated_at": "2026-07-28T18:26:56.032Z"
+    }
+  ]
 }

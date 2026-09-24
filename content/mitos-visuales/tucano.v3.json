@@ -7,7 +7,7 @@
   "region": "Amazonía",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Tucano (communities.slug = tucano)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -22,7 +22,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 7,
     "fields": [
       "mito",
@@ -30,8 +30,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "ec4c158b2e902177ee225a4e3ee3a7e2d4577abf2dbad7a31c87f00a5d977327",
-    "max_source_updated_at": "2026-07-29T19:26:12.583Z"
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "max_source_updated_at": "2026-09-22T19:54:00.978Z"
   },
   "research": {
     "sources": [
@@ -587,8 +587,8 @@
     "dossier": "docs/investigacion/tucano.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -614,7 +614,22 @@
       }
     ],
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "la-semilla-de-la-yuca-tucano",
+        "los-blancos-dominan-a-los-indios",
+        "yepa-abandona-la-tierra",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "cuando-la-danta-perdio-su-hegemonia": {
@@ -637,9 +652,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La extracción encontró aquí el riesgo mayor del corpus y lo resolvió por sustracción: el relato nombra a Boraró y a Boraró Numió, los distingue como pareja y no describe ni un solo rasgo de su cuerpo, de modo que se extrajeron dos fichas con el cangrejo como único rasgo autorizado y con la prohibición nombrada de prestarles el cuerpo desana —pies invertidos, piernas sin rodilla, piel pálida— que un modelo rellenaría por defecto; la víctima y la imagen violenta se extrajeron sólo para excluirlas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La extracción encontró aquí el riesgo mayor del corpus y lo resolvió por sustracción: el relato nombra a Boraró y a Boraró Numió, los distingue como pareja y no describe ni un solo rasgo de su cuerpo, de modo que se extrajeron dos fichas con el cangrejo como único rasgo autorizado y con la prohibición nombrada de prestarles el cuerpo desana —pies invertidos, piernas sin rodilla, piel pálida— que un modelo rellenaría por defecto; la víctima y la imagen violenta se extrajeron sólo para excluirlas.",
+        "previous_note": "La extracción encontró aquí el riesgo mayor del corpus y lo resolvió por sustracción: el relato nombra a Boraró y a Boraró Numió, los distingue como pareja y no describe ni un solo rasgo de su cuerpo, de modo que se extrajeron dos fichas con el cangrejo como único rasgo autorizado y con la prohibición nombrada de prestarles el cuerpo desana —pies invertidos, piernas sin rodilla, piel pálida— que un modelo rellenaría por defecto; la víctima y la imagen violenta se extrajeron sólo para excluirlas."
       },
       "entity_refs": [
         {
@@ -724,9 +740,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que ordenó la lectura fue distinguir el núcleo del envoltorio histórico: la canoa-güío, las casas de surgimiento y la búsqueda del territorio son del relato, mientras que los países europeos, los ejércitos, las ciudades y la torre semejante a Babel son capas del narrador de 1953 que se extrajeron como una sola entidad y se excluyeron; los bienes que se reparten en cada casa quedaron embebidos porque el corpus los enumera y no los describe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que ordenó la lectura fue distinguir el núcleo del envoltorio histórico: la canoa-güío, las casas de surgimiento y la búsqueda del territorio son del relato, mientras que los países europeos, los ejércitos, las ciudades y la torre semejante a Babel son capas del narrador de 1953 que se extrajeron como una sola entidad y se excluyeron; los bienes que se reparten en cada casa quedaron embebidos porque el corpus los enumera y no los describe.",
+        "previous_note": "Lo que ordenó la lectura fue distinguir el núcleo del envoltorio histórico: la canoa-güío, las casas de surgimiento y la búsqueda del territorio son del relato, mientras que los países europeos, los ejércitos, las ciudades y la torre semejante a Babel son capas del narrador de 1953 que se extrajeron como una sola entidad y se excluyeron; los bienes que se reparten en cada casa quedaron embebidos porque el corpus los enumera y no los describe."
       },
       "entity_refs": [
         {
@@ -836,9 +853,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato obligó a extraer una cadena y no cuatro sucesos —Sol, viento, tierra y mares—, porque la propia fuente advierte que separarlos produciría una explicación que no ofrece; y obligó a un deslinde de rol: la frase «la claridad no entra como un personaje que combate la oscuridad ni como un astro robado» impide dibujar al Sol con cara, corona o rayos, así que se extrajo como disco que orienta y no como figura."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato obligó a extraer una cadena y no cuatro sucesos —Sol, viento, tierra y mares—, porque la propia fuente advierte que separarlos produciría una explicación que no ofrece; y obligó a un deslinde de rol: la frase «la claridad no entra como un personaje que combate la oscuridad ni como un astro robado» impide dibujar al Sol con cara, corona o rayos, así que se extrajo como disco que orienta y no como figura.",
+        "previous_note": "El relato obligó a extraer una cadena y no cuatro sucesos —Sol, viento, tierra y mares—, porque la propia fuente advierte que separarlos produciría una explicación que no ofrece; y obligó a un deslinde de rol: la frase «la claridad no entra como un personaje que combate la oscuridad ni como un astro robado» impide dibujar al Sol con cara, corona o rayos, así que se extrajo como disco que orienta y no como figura."
       },
       "entity_refs": [
         {
@@ -928,9 +946,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura se organizó alrededor de un umbral y una prohibición de mirar: el puerto, donde la mujer de Yúpuri Baúro recibe mientras los demás permanecen dentro de la casa, es el único lugar del corpus donde se declara un dentro y un fuera, y la mirada anticipada de Yúpuri Baúro es lo que separa la huerta plantada de la huerta enmalezada; las restricciones de entrada y las semillas de coca y tabaco se extrajeron para excluirlas, no para ilustrarlas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura se organizó alrededor de un umbral y una prohibición de mirar: el puerto, donde la mujer de Yúpuri Baúro recibe mientras los demás permanecen dentro de la casa, es el único lugar del corpus donde se declara un dentro y un fuera, y la mirada anticipada de Yúpuri Baúro es lo que separa la huerta plantada de la huerta enmalezada; las restricciones de entrada y las semillas de coca y tabaco se extrajeron para excluirlas, no para ilustrarlas.",
+        "previous_note": "La lectura se organizó alrededor de un umbral y una prohibición de mirar: el puerto, donde la mujer de Yúpuri Baúro recibe mientras los demás permanecen dentro de la casa, es el único lugar del corpus donde se declara un dentro y un fuera, y la mirada anticipada de Yúpuri Baúro es lo que separa la huerta plantada de la huerta enmalezada; las restricciones de entrada y las semillas de coca y tabaco se extrajeron para excluirlas, no para ilustrarlas."
       },
       "entity_refs": [
         {
@@ -1035,9 +1054,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La extracción tuvo que deshacer la tesis del título heredado antes de poder inventariar: el pasaje reparte dos soportes de conocimiento y no dos destinos, así que se extrajeron el papel —siempre en blanco y sin una palabra legible— y la memoria sin papel como dos entidades con forma propia y peso igual, y la figura del extranjero se fichó con cuerpo idéntico en materia, tono y altura al de las figuras tucano, que es lo que impide que la lámina reintroduzca la jerarquía que la edición corrigió."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La extracción tuvo que deshacer la tesis del título heredado antes de poder inventariar: el pasaje reparte dos soportes de conocimiento y no dos destinos, así que se extrajeron el papel —siempre en blanco y sin una palabra legible— y la memoria sin papel como dos entidades con forma propia y peso igual, y la figura del extranjero se fichó con cuerpo idéntico en materia, tono y altura al de las figuras tucano, que es lo que impide que la lámina reintroduzca la jerarquía que la edición corrigió.",
+        "previous_note": "La extracción tuvo que deshacer la tesis del título heredado antes de poder inventariar: el pasaje reparte dos soportes de conocimiento y no dos destinos, así que se extrajeron el papel —siempre en blanco y sin una palabra legible— y la memoria sin papel como dos entidades con forma propia y peso igual, y la figura del extranjero se fichó con cuerpo idéntico en materia, tono y altura al de las figuras tucano, que es lo que impide que la lámina reintroduzca la jerarquía que la edición corrigió."
       },
       "entity_refs": [
         {
@@ -1097,9 +1117,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó la lectura fue la instrucción y su incumplimiento: la caja entregada cerrada, el peso, la apertura antes de tiempo y el recuento parcial son una sola pieza en cuatro momentos y no cuatro objetos, y las semillas del sueño se extrajeron con su función documentada —«debían relacionarse con el corazón»— y sin forma, porque ninguna fuente les da especie ni tamaño; la secuencia ceremonial de dormir, despertar y bañarse y los objetos de uso restringido se extrajeron sólo para excluirlos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó la lectura fue la instrucción y su incumplimiento: la caja entregada cerrada, el peso, la apertura antes de tiempo y el recuento parcial son una sola pieza en cuatro momentos y no cuatro objetos, y las semillas del sueño se extrajeron con su función documentada —«debían relacionarse con el corazón»— y sin forma, porque ninguna fuente les da especie ni tamaño; la secuencia ceremonial de dormir, despertar y bañarse y los objetos de uso restringido se extrajeron sólo para excluirlos.",
+        "previous_note": "Lo que separó la lectura fue la instrucción y su incumplimiento: la caja entregada cerrada, el peso, la apertura antes de tiempo y el recuento parcial son una sola pieza en cuatro momentos y no cuatro objetos, y las semillas del sueño se extrajeron con su función documentada —«debían relacionarse con el corazón»— y sin forma, porque ninguna fuente les da especie ni tamaño; la secuencia ceremonial de dormir, despertar y bañarse y los objetos de uso restringido se extrajeron sólo para excluirlos."
       },
       "entity_refs": [
         {
@@ -1204,9 +1225,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de estados y transformaciones dio aquí el único estado del relato —«se parecían a la gente y todos tenían cola»— y la de objetos dio el problema: el silbato se extrajo con una restricción de forma y no de objeto, inequívocamente no tubular, para que ninguna lámina del corpus pueda leerse como un instrumento de yuruparí; y la corte animal, la danta reina y el mono que recibe el silbato se extrajeron para excluirlos, porque eran invención de una ficha heredada y el propio relato los niega."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de estados y transformaciones dio aquí el único estado del relato —«se parecían a la gente y todos tenían cola»— y la de objetos dio el problema: el silbato se extrajo con una restricción de forma y no de objeto, inequívocamente no tubular, para que ninguna lámina del corpus pueda leerse como un instrumento de yuruparí; y la corte animal, la danta reina y el mono que recibe el silbato se extrajeron para excluirlos, porque eran invención de una ficha heredada y el propio relato los niega.",
+        "previous_note": "La pasada de estados y transformaciones dio aquí el único estado del relato —«se parecían a la gente y todos tenían cola»— y la de objetos dio el problema: el silbato se extrajo con una restricción de forma y no de objeto, inequívocamente no tubular, para que ninguna lámina del corpus pueda leerse como un instrumento de yuruparí; y la corte animal, la danta reina y el mono que recibe el silbato se extrajeron para excluirlos, porque eran invención de una ficha heredada y el propio relato los niega."
       },
       "entity_refs": [
         {
@@ -8603,5 +8625,20 @@
       "Ninguna víctima, violencia gráfica ni contacto sexual.",
       "Ningún volumen esculpido ni acabado fotorrealista: sin modelado del rostro, sin piel renderizada, sin pelaje mechón a mechón."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 7,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "ec4c158b2e902177ee225a4e3ee3a7e2d4577abf2dbad7a31c87f00a5d977327",
+      "max_source_updated_at": "2026-07-29T19:26:12.583Z"
+    }
+  ]
 }

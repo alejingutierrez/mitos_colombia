@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento tolima-huila-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -34,7 +34,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 15,
     "fields": [
       "content",
@@ -43,8 +43,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "71d4fe28ef7dc7ba8fc9e61d9fc8156fa4d4e6bfa58cc66fecc988a449fabc20",
-    "max_source_updated_at": "2026-07-26T22:18:33.114Z"
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "max_source_updated_at": "2026-09-23T01:13:53.392Z"
   },
   "research": {
     "sources": [
@@ -1109,8 +1109,8 @@
     "dossier": "docs/investigacion/tolima-huila-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1129,7 +1129,30 @@
     ],
     "approved_by": "Propietario editorial del proyecto",
     "approved_at": "2026-09-19",
-    "authoring_note": "Etapa 1. Se escribieron a mano los 31 bloques `design` —28 fichas del censo más las tres hojas de agrupación de utilería—, las 15 notas de bitácora y la confirmación de primarias. Tres reconciliaciones con el dossier quedan declaradas: (1) el Sombrerón cede el jinete al corpus nacional y baja de 2 hojas a 1, con el caballo negro y los perros encadenados saliendo con él; el jinete sale de `states` y queda en `states_declared` como traza del censo, y el total del corpus pasa de 42 a 41 láminas (dossier §8.2 y §8.9); (2) `desierto_de_la_tatacoa` se retira del inventario de entidades porque no aparece en ninguna de las quince páginas y el contrato exige `myth_refs` y `evidence` no vacíos: la ausencia queda declarada en `inventory.declared_absences`; (3) el tiple se dibuja de doce cuerdas y no de ocho, porque ocho fecharían la escena hacia 1880 y contradirían el marco de recolección de los años sesenta; la cronología queda `uncertain` (dossier §0.2 y §11, alcance 9). El recuento cierra en 41 láminas sobre 31 fichas, que es exactamente el total que el dossier §8.9 fija tras el reparto."
+    "authoring_note": "Etapa 1. Se escribieron a mano los 31 bloques `design` —28 fichas del censo más las tres hojas de agrupación de utilería—, las 15 notas de bitácora y la confirmación de primarias. Tres reconciliaciones con el dossier quedan declaradas: (1) el Sombrerón cede el jinete al corpus nacional y baja de 2 hojas a 1, con el caballo negro y los perros encadenados saliendo con él; el jinete sale de `states` y queda en `states_declared` como traza del censo, y el total del corpus pasa de 42 a 41 láminas (dossier §8.2 y §8.9); (2) `desierto_de_la_tatacoa` se retira del inventario de entidades porque no aparece en ninguna de las quince páginas y el contrato exige `myth_refs` y `evidence` no vacíos: la ausencia queda declarada en `inventory.declared_absences`; (3) el tiple se dibuja de doce cuerdas y no de ocho, porque ocho fecharían la escena hacia 1880 y contradirían el marco de recolección de los años sesenta; la cronología queda `uncertain` (dossier §0.2 y §11, alcance 9). El recuento cierra en 41 láminas sobre 31 fichas, que es exactamente el total que el dossier §8.9 fija tras el reparto.",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "brujas-y-duendes",
+        "dioses-lares",
+        "el-cazador",
+        "el-chenche",
+        "el-guango",
+        "el-poira",
+        "el-silbador",
+        "el-sombreron",
+        "el-tunjo",
+        "la-candileja",
+        "la-madre-agua",
+        "la-muelona",
+        "la-patasola",
+        "la-patasola-mixto",
+        "la-tarasca"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "brujas-y-duendes": {
@@ -1154,9 +1177,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que se ve de lo que sólo se mueve: la bruja recibe ficha únicamente como pisca —ave enorme cuyas alas ocupan el caballete del techo—, porque al amanecer no quedan plumas ni huellas y la familia no señala a ninguna vecina, y dibujar la forma humana sería poner el rostro de una mujer joven identificable bajo una acusación de brujería; el duende no recibe cuerpo y se queda en el costurero volcado y la cuchara caída, que es todo lo que el canon le da."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que se ve de lo que sólo se mueve: la bruja recibe ficha únicamente como pisca —ave enorme cuyas alas ocupan el caballete del techo—, porque al amanecer no quedan plumas ni huellas y la familia no señala a ninguna vecina, y dibujar la forma humana sería poner el rostro de una mujer joven identificable bajo una acusación de brujería; el duende no recibe cuerpo y se queda en el costurero volcado y la cuchara caída, que es todo lo que el canon le da.",
+        "previous_note": "La lectura separó lo que se ve de lo que sólo se mueve: la bruja recibe ficha únicamente como pisca —ave enorme cuyas alas ocupan el caballete del techo—, porque al amanecer no quedan plumas ni huellas y la familia no señala a ninguna vecina, y dibujar la forma humana sería poner el rostro de una mujer joven identificable bajo una acusación de brujería; el duende no recibe cuerpo y se queda en el costurero volcado y la cuchara caída, que es todo lo que el canon le da."
       },
       "entity_refs": [
         {
@@ -1238,9 +1262,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la única página del corpus que compara dos mundos en vez de contar uno, y la lectura la separó así: el altiplano frío de la antigua provincia de Tunja con sus piedras entendidas como personas a la espera, y la figurita del lar romano, juntas sobre la mesa editorial y sin fundirse, porque la comparación católica de 1956 mezcla Pijao, Coyaima, Natagaima y Lache sin conservar la voz de ninguno; la única entidad dibujable que queda es una presencia protectora sin cuerpo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la única página del corpus que compara dos mundos en vez de contar uno, y la lectura la separó así: el altiplano frío de la antigua provincia de Tunja con sus piedras entendidas como personas a la espera, y la figurita del lar romano, juntas sobre la mesa editorial y sin fundirse, porque la comparación católica de 1956 mezcla Pijao, Coyaima, Natagaima y Lache sin conservar la voz de ninguno; la única entidad dibujable que queda es una presencia protectora sin cuerpo.",
+        "previous_note": "Es la única página del corpus que compara dos mundos en vez de contar uno, y la lectura la separó así: el altiplano frío de la antigua provincia de Tunja con sus piedras entendidas como personas a la espera, y la figurita del lar romano, juntas sobre la mesa editorial y sin fundirse, porque la comparación católica de 1956 mezcla Pijao, Coyaima, Natagaima y Lache sin conservar la voz de ninguno; la única entidad dibujable que queda es una presencia protectora sin cuerpo."
       },
       "entity_refs": [
         {
@@ -1297,9 +1322,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que fichar una desaparición: el acto que funda la página es la salida de misa en Viernes Santo a las tres de la tarde —y eso fija hora, luz y ropa, y separa esta lámina de todas las nocturnas del corpus—, mientras que lo que queda después no es un cuerpo sino grito que azuza, ladrido triste y viento repentino; el venado que lo arrastra está siempre quieto y siempre lejos, y vuelve a cruzar al final para cerrar la lección."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que fichar una desaparición: el acto que funda la página es la salida de misa en Viernes Santo a las tres de la tarde —y eso fija hora, luz y ropa, y separa esta lámina de todas las nocturnas del corpus—, mientras que lo que queda después no es un cuerpo sino grito que azuza, ladrido triste y viento repentino; el venado que lo arrastra está siempre quieto y siempre lejos, y vuelve a cruzar al final para cerrar la lección.",
+        "previous_note": "La lectura tuvo que fichar una desaparición: el acto que funda la página es la salida de misa en Viernes Santo a las tres de la tarde —y eso fija hora, luz y ropa, y separa esta lámina de todas las nocturnas del corpus—, mientras que lo que queda después no es un cuerpo sino grito que azuza, ladrido triste y viento repentino; el venado que lo arrastra está siempre quieto y siempre lejos, y vuelve a cruzar al final para cerrar la lección."
       },
       "entity_refs": [
         {
@@ -1391,9 +1417,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Esta página se leyó contra el Mohán y no consigo misma: comparte con él río, estatura y barba, pero no toca, no pesca y no guarda pozos, sólo muestra una promesa y espera, y esa diferencia de conducta es la única razón de su ficha; el oro y las esmeraldas que enseña existen como destello y reflejo, nunca como tesoro sólido, y toda la figura viene del volumen impreso de 2004 y no de la recolección regional."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Esta página se leyó contra el Mohán y no consigo misma: comparte con él río, estatura y barba, pero no toca, no pesca y no guarda pozos, sólo muestra una promesa y espera, y esa diferencia de conducta es la única razón de su ficha; el oro y las esmeraldas que enseña existen como destello y reflejo, nunca como tesoro sólido, y toda la figura viene del volumen impreso de 2004 y no de la recolección regional.",
+        "previous_note": "Esta página se leyó contra el Mohán y no consigo misma: comparte con él río, estatura y barba, pero no toca, no pesca y no guarda pozos, sólo muestra una promesa y espera, y esa diferencia de conducta es la única razón de su ficha; el oro y las esmeraldas que enseña existen como destello y reflejo, nunca como tesoro sólido, y toda la figura viene del volumen impreso de 2004 y no de la recolección regional."
       },
       "entity_refs": [
         {
@@ -1475,9 +1502,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que la lectura separó es un peso y no un muerto: el cortejo es un acto de solidaridad funeraria de la vereda, la cera de las velas se chorrea sobre la camilla hasta cubrirla con una capa blanca, y el relato se cierra cuando la tabla de un viejo puente de madera cede bajo una carga que no se ve; el castigo recae sobre quien no cumplió la obligación comunitaria, y el cuerpo no aparece en ninguna de las láminas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que la lectura separó es un peso y no un muerto: el cortejo es un acto de solidaridad funeraria de la vereda, la cera de las velas se chorrea sobre la camilla hasta cubrirla con una capa blanca, y el relato se cierra cuando la tabla de un viejo puente de madera cede bajo una carga que no se ve; el castigo recae sobre quien no cumplió la obligación comunitaria, y el cuerpo no aparece en ninguna de las láminas.",
+        "previous_note": "Lo que la lectura separó es un peso y no un muerto: el cortejo es un acto de solidaridad funeraria de la vereda, la cera de las velas se chorrea sobre la camilla hasta cubrirla con una capa blanca, y el relato se cierra cuando la tabla de un viejo puente de madera cede bajo una carga que no se ve; el castigo recae sobre quien no cumplió la obligación comunitaria, y el cuerpo no aparece en ninguna de las láminas."
       },
       "entity_refs": [
         {
@@ -1564,9 +1592,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró cuatro perfiles regionales donde se esperaba una figura y tuvo que decidir cuáles son de aquí: el hombrecillo pelirrojo de Ambalema y el espíritu sin forma de la Vega de los Padres sólo los documenta la recolección tolimense, la forma oscura de las moyas del Saldaña también, y el gigante musgoso pertenece a la cadena impresa de 2004; además comprobó que la memoria reciente del territorio lo conoce menos por el terror que por el juego —enreda redes, esconde anzuelos, se lleva la carnada—, y eso decide la actitud de la lámina."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró cuatro perfiles regionales donde se esperaba una figura y tuvo que decidir cuáles son de aquí: el hombrecillo pelirrojo de Ambalema y el espíritu sin forma de la Vega de los Padres sólo los documenta la recolección tolimense, la forma oscura de las moyas del Saldaña también, y el gigante musgoso pertenece a la cadena impresa de 2004; además comprobó que la memoria reciente del territorio lo conoce menos por el terror que por el juego —enreda redes, esconde anzuelos, se lleva la carnada—, y eso decide la actitud de la lámina.",
+        "previous_note": "La lectura encontró cuatro perfiles regionales donde se esperaba una figura y tuvo que decidir cuáles son de aquí: el hombrecillo pelirrojo de Ambalema y el espíritu sin forma de la Vega de los Padres sólo los documenta la recolección tolimense, la forma oscura de las moyas del Saldaña también, y el gigante musgoso pertenece a la cadena impresa de 2004; además comprobó que la memoria reciente del territorio lo conoce menos por el terror que por el juego —enreda redes, esconde anzuelos, se lleva la carnada—, y eso decide la actitud de la lámina."
       },
       "entity_refs": [
         {
@@ -1673,9 +1702,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Esta página pide dibujar un ave que el relato define por no verse, y lo que la lectura separó fue el reparto de peso dentro del cuadro: el pájaro va pequeño y desplazado al borde de la rama, y el silbido largo cruza la lámina entera; el pájaro Tres Pies con que lo comparan quienes creen haberlo visto es comparación y no criatura, y no entra."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Esta página pide dibujar un ave que el relato define por no verse, y lo que la lectura separó fue el reparto de peso dentro del cuadro: el pájaro va pequeño y desplazado al borde de la rama, y el silbido largo cruza la lámina entera; el pájaro Tres Pies con que lo comparan quienes creen haberlo visto es comparación y no criatura, y no entra.",
+        "previous_note": "Esta página pide dibujar un ave que el relato define por no verse, y lo que la lectura separó fue el reparto de peso dentro del cuadro: el pájaro va pequeño y desplazado al borde de la rama, y el silbido largo cruza la lámina entera; el pájaro Tres Pies con que lo comparan quienes creen haberlo visto es comparación y no criatura, y no entra."
       },
       "entity_refs": [
         {
@@ -1767,9 +1797,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó dos figuras que el censo traía juntas y comprobó que sólo una es de aquí: la fuente territorial de Lérida fija al caminante con la medida que es el rasgo —«un sombrero gigante que abarca desde la cabeza hasta las pantorrillas»— y con la regla que decide la composición, «no habla, ni contesta preguntas; solamente camina, pasa y sigue», mientras el jinete de ruana negra con cadenas gruesas y dos perros enormes es un tipo hispanoamericano que se produce una vez y no aquí."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó dos figuras que el censo traía juntas y comprobó que sólo una es de aquí: la fuente territorial de Lérida fija al caminante con la medida que es el rasgo —«un sombrero gigante que abarca desde la cabeza hasta las pantorrillas»— y con la regla que decide la composición, «no habla, ni contesta preguntas; solamente camina, pasa y sigue», mientras el jinete de ruana negra con cadenas gruesas y dos perros enormes es un tipo hispanoamericano que se produce una vez y no aquí.",
+        "previous_note": "La lectura separó dos figuras que el censo traía juntas y comprobó que sólo una es de aquí: la fuente territorial de Lérida fija al caminante con la medida que es el rasgo —«un sombrero gigante que abarca desde la cabeza hasta las pantorrillas»— y con la regla que decide la composición, «no habla, ni contesta preguntas; solamente camina, pasa y sigue», mientras el jinete de ruana negra con cadenas gruesas y dos perros enormes es un tipo hispanoamericano que se produce una vez y no aquí."
       },
       "entity_refs": [
         {
@@ -1836,9 +1867,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Dos formas que no comparten silueta salieron de la misma página y la lectura las separó: el niño que llora en la orilla de la acequia con dientes y llamarada en la boca, y la figurita que deja pedacitos de oro. La segunda es la que obliga a una prohibición, porque la descripción que hoy circula la define como «muñeco de oro que era enterrado junto a los cadáveres de los indígenas» y empuja a dibujarla como tunjo votivo muisca, que es exactamente lo que el módulo prohíbe."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Dos formas que no comparten silueta salieron de la misma página y la lectura las separó: el niño que llora en la orilla de la acequia con dientes y llamarada en la boca, y la figurita que deja pedacitos de oro. La segunda es la que obliga a una prohibición, porque la descripción que hoy circula la define como «muñeco de oro que era enterrado junto a los cadáveres de los indígenas» y empuja a dibujarla como tunjo votivo muisca, que es exactamente lo que el módulo prohíbe.",
+        "previous_note": "Dos formas que no comparten silueta salieron de la misma página y la lectura las separó: el niño que llora en la orilla de la acequia con dientes y llamarada en la boca, y la figurita que deja pedacitos de oro. La segunda es la que obliga a una prohibición, porque la descripción que hoy circula la define como «muñeco de oro que era enterrado junto a los cadáveres de los indígenas» y empuja a dibujarla como tunjo votivo muisca, que es exactamente lo que el módulo prohíbe."
       },
       "entity_refs": [
         {
@@ -1935,9 +1967,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Cuando la página empieza, la abuela y los nietos ya son llamas: no hay estado humano que dibujar, y eso es lo que la lectura separó. Quedan tres hachones en fila, uno adelante y dos detrás, que alcanzan al que cabalga solo; y el resplandor que el texto dice que «podía confundirse con el resplandor de un tesoro enterrado» no se ilustra con ningún tesoro, porque en los quince relatos ninguna guaca se abre."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Cuando la página empieza, la abuela y los nietos ya son llamas: no hay estado humano que dibujar, y eso es lo que la lectura separó. Quedan tres hachones en fila, uno adelante y dos detrás, que alcanzan al que cabalga solo; y el resplandor que el texto dice que «podía confundirse con el resplandor de un tesoro enterrado» no se ilustra con ningún tesoro, porque en los quince relatos ninguna guaca se abre.",
+        "previous_note": "Cuando la página empieza, la abuela y los nietos ya son llamas: no hay estado humano que dibujar, y eso es lo que la lectura separó. Quedan tres hachones en fila, uno adelante y dos detrás, que alcanzan al que cabalga solo; y el resplandor que el texto dice que «podía confundirse con el resplandor de un tesoro enterrado» no se ilustra con ningún tesoro, porque en los quince relatos ninguna guaca se abre."
       },
       "entity_refs": [
         {
@@ -2024,9 +2057,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura fijó los tres rasgos que sólo esta versión sostiene —cabellos casi blancos, ojos grises y pies vueltos hacia atrás— y comprobó que su agua es la quieta de laguna, quebrada y manantial y no el río grande, de modo que su paisaje es otro; las huellas invertidas quedan escritas como firma gráfica precisamente porque la clasificación académica de 2024 la está absorbiendo dentro de la Madremonte, con musgo y con una historia de madre vengativa que no es la de Devia."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura fijó los tres rasgos que sólo esta versión sostiene —cabellos casi blancos, ojos grises y pies vueltos hacia atrás— y comprobó que su agua es la quieta de laguna, quebrada y manantial y no el río grande, de modo que su paisaje es otro; las huellas invertidas quedan escritas como firma gráfica precisamente porque la clasificación académica de 2024 la está absorbiendo dentro de la Madremonte, con musgo y con una historia de madre vengativa que no es la de Devia.",
+        "previous_note": "La lectura fijó los tres rasgos que sólo esta versión sostiene —cabellos casi blancos, ojos grises y pies vueltos hacia atrás— y comprobó que su agua es la quieta de laguna, quebrada y manantial y no el río grande, de modo que su paisaje es otro; las huellas invertidas quedan escritas como firma gráfica precisamente porque la clasificación académica de 2024 la está absorbiendo dentro de la Madremonte, con musgo y con una historia de madre vengativa que no es la de Devia."
       },
       "entity_refs": [
         {
@@ -2133,9 +2167,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Es la página más breve del corpus y la lectura confirmó que su rasgo no cuesta lámina aparte: la dentadura cambia la cara pero no la silueta, así que se dibuja la risa y no la destrucción, y el censo acertó al darle una sola hoja; lo que sí hubo que declarar es que el origen no es tolimense, porque la clasificación de 2024 la data en toda la zona andina colombiana desde la época colonial."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Es la página más breve del corpus y la lectura confirmó que su rasgo no cuesta lámina aparte: la dentadura cambia la cara pero no la silueta, así que se dibuja la risa y no la destrucción, y el censo acertó al darle una sola hoja; lo que sí hubo que declarar es que el origen no es tolimense, porque la clasificación de 2024 la data en toda la zona andina colombiana desde la época colonial.",
+        "previous_note": "Es la página más breve del corpus y la lectura confirmó que su rasgo no cuesta lámina aparte: la dentadura cambia la cara pero no la silueta, así que se dibuja la risa y no la destrucción, y el censo acertó al darle una sola hoja; lo que sí hubo que declarar es que el origen no es tolimense, porque la clasificación de 2024 la data en toda la zona andina colombiana desde la época colonial."
       },
       "entity_refs": [
         {
@@ -2182,9 +2217,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la defensa material de la oración: hacha, tusas de maíz y candela se dibujan porque son objetos y el relato los nombra, y la oración del monte no, porque es un texto recitado y darle objeto sería inventar cultura material; y comprobó que las dos formas animales —perra negra de grandes orejas y vaca negra— caben en una sola lámina porque comparten materia y escala, mientras la mujer de una pierna necesita la suya y se resuelve por encuadre."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la defensa material de la oración: hacha, tusas de maíz y candela se dibujan porque son objetos y el relato los nombra, y la oración del monte no, porque es un texto recitado y darle objeto sería inventar cultura material; y comprobó que las dos formas animales —perra negra de grandes orejas y vaca negra— caben en una sola lámina porque comparten materia y escala, mientras la mujer de una pierna necesita la suya y se resuelve por encuadre.",
+        "previous_note": "La lectura separó la defensa material de la oración: hacha, tusas de maíz y candela se dibujan porque son objetos y el relato los nombra, y la oración del monte no, porque es un texto recitado y darle objeto sería inventar cultura material; y comprobó que las dos formas animales —perra negra de grandes orejas y vaca negra— caben en una sola lámina porque comparten materia y escala, mientras la mujer de una pierna necesita la suya y se resuelve por encuadre."
       },
       "entity_refs": [
         {
@@ -2261,9 +2297,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Ésta es la única página del corpus que individualiza a alguien y la lectura la separó por ahí: Ñor Mica, labrador de parcela pequeña y tiplero de San Juan y San Pedro, llega descrito con una prosa paternalista y racial que la lámina no reproduce y con dos mediaciones entre el texto y nosotros; y el tiple de su fiesta obliga a la decisión de cuerdas más fina del corpus, porque ocho fecharían la escena hacia 1880 y contradirían el marco de recolección de los años sesenta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Ésta es la única página del corpus que individualiza a alguien y la lectura la separó por ahí: Ñor Mica, labrador de parcela pequeña y tiplero de San Juan y San Pedro, llega descrito con una prosa paternalista y racial que la lámina no reproduce y con dos mediaciones entre el texto y nosotros; y el tiple de su fiesta obliga a la decisión de cuerdas más fina del corpus, porque ocho fecharían la escena hacia 1880 y contradirían el marco de recolección de los años sesenta.",
+        "previous_note": "Ésta es la única página del corpus que individualiza a alguien y la lectura la separó por ahí: Ñor Mica, labrador de parcela pequeña y tiplero de San Juan y San Pedro, llega descrito con una prosa paternalista y racial que la lámina no reproduce y con dos mediaciones entre el texto y nosotros; y el tiple de su fiesta obliga a la decisión de cuerdas más fina del corpus, porque ocho fecharían la escena hacia 1880 y contradirían el marco de recolección de los años sesenta."
       },
       "entity_refs": [
         {
@@ -2365,9 +2402,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que separar lo que documenta el estudio académico —circulación y conducta: una criatura que acecha campos y fincas en zonas rurales del Tolima y de Antioquia— de lo que aporta el volumen literario de 2004, que es toda la anatomía: la rata gigantesca, la cabeza monstruosa, las patas delanteras cortas y la boca que se abre más que su propio rostro; lo único de esta página con ancla histórica propia es el mineralogista, fechable entre 1825 y los años treinta en el Real de Minas de Santa Ana."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que separar lo que documenta el estudio académico —circulación y conducta: una criatura que acecha campos y fincas en zonas rurales del Tolima y de Antioquia— de lo que aporta el volumen literario de 2004, que es toda la anatomía: la rata gigantesca, la cabeza monstruosa, las patas delanteras cortas y la boca que se abre más que su propio rostro; lo único de esta página con ancla histórica propia es el mineralogista, fechable entre 1825 y los años treinta en el Real de Minas de Santa Ana.",
+        "previous_note": "La lectura tuvo que separar lo que documenta el estudio académico —circulación y conducta: una criatura que acecha campos y fincas en zonas rurales del Tolima y de Antioquia— de lo que aporta el volumen literario de 2004, que es toda la anatomía: la rata gigantesca, la cabeza monstruosa, las patas delanteras cortas y la boca que se abre más que su propio rostro; lo único de esta página con ancla histórica propia es el mineralogista, fechable entre 1825 y los años treinta en el Real de Minas de Santa Ana."
       },
       "entity_refs": [
         {
@@ -10887,5 +10925,21 @@
       "ningún traje de sanjuanero ni elemento del vestuario de escena codificado entre 1938 y 1959, y ninguna ruana ni montera de lana de altiplano",
       "ninguna luz eléctrica, motor, carretera, motosierra ni desierto: el daño de este corpus es hacha, escopeta y lindero corrido"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 15,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "71d4fe28ef7dc7ba8fc9e61d9fc8156fa4d4e6bfa58cc66fecc988a449fabc20",
+      "max_source_updated_at": "2026-07-26T22:18:33.114Z"
+    }
+  ]
 }

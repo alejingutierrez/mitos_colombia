@@ -7,7 +7,7 @@
   "region": "Caribe",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento cordoba-sinu-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -51,7 +51,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 32,
     "fields": [
       "content",
@@ -60,8 +60,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "e79509dc59c58d3abee0f8ed08c1cb682e6f5c414117dcd4a924f84190e09734",
-    "max_source_updated_at": "2026-07-23T00:31:18.740Z"
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "max_source_updated_at": "2026-09-21T20:53:45.849Z"
   },
   "research": {
     "sources": [
@@ -1382,8 +1382,8 @@
     "dossier": "docs/investigacion/cordoba-sinu-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1393,7 +1393,47 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "conejo-y-caiman",
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-la-mona-de-cera",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-burro-y-la-policia",
+        "el-costeno-y-los-cachacos",
+        "el-desayuno-del-indio",
+        "el-hijo-desobediente",
+        "el-mocho-y-el-tigre",
+        "el-paisa-y-el-gringo",
+        "el-viaje-al-cielo",
+        "este-era-un-joven-que-estaba-estudiando",
+        "este-era-un-rey-que-tenia-dos-hijas-bonitas",
+        "este-era-un-tipo-que-tenia-una-novia",
+        "juan-bobo-y-la-vieja",
+        "juan-bobo-y-sus-hermanos",
+        "la-confesion",
+        "la-mina-de-oro-en-el-infierno",
+        "la-muerte-de-tio-conejo",
+        "la-vieja-el-burro-y-los-huevos",
+        "las-orejas-del-tio-conejo",
+        "lo-justo-y-lo-legal",
+        "los-tres-cachacos-y-la-cantara-de-ron-neque",
+        "los-tres-curas-enamorados",
+        "quien-manda-mas-en-casa",
+        "rambao",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-y-morrocoy",
+        "tio-conejo-zapatero",
+        "tio-sapo-y-cangrejo",
+        "veinte-para-el-bollo"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "conejo-y-caiman": {
@@ -1418,9 +1458,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó la única entidad de agua con cuerpo de todo el corpus del paisaje que la contiene: el caimán tiene cueva en la barranca y nido de huevos, y eso obliga a un río de monte con la orilla cortada a pico y no a la ciénaga que el encargo esperaba; y comprobó que los arpones con que Conejo amenaza desde el lomo existen sólo dentro de su mentira, así que quedaron fuera para no darle cuerpo a algo que el relato deja en el aire a propósito."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó la única entidad de agua con cuerpo de todo el corpus del paisaje que la contiene: el caimán tiene cueva en la barranca y nido de huevos, y eso obliga a un río de monte con la orilla cortada a pico y no a la ciénaga que el encargo esperaba; y comprobó que los arpones con que Conejo amenaza desde el lomo existen sólo dentro de su mentira, así que quedaron fuera para no darle cuerpo a algo que el relato deja en el aire a propósito.",
+        "previous_note": "La lectura separó la única entidad de agua con cuerpo de todo el corpus del paisaje que la contiene: el caimán tiene cueva en la barranca y nido de huevos, y eso obliga a un río de monte con la orilla cortada a pico y no a la ciénaga que el encargo esperaba; y comprobó que los arpones con que Conejo amenaza desde el lomo existen sólo dentro de su mentira, así que quedaron fuera para no darle cuerpo a algo que el relato deja en el aire a propósito."
       },
       "entity_refs": [
         {
@@ -1497,9 +1538,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró aquí las dos únicas láminas saturadas de la biblia y la única con fecha mínima además del bus: la corraleja no puede dibujarse antes de 1906 en Córdoba y es el único resto de la iconografía ganadera que el corpus conserva; y confirmó el enjaezado del tigre como estado real, porque bridas, silla y garrocha le cambian la silueta por completo y los aperos tienen que ser los mismos de la hoja de la gurupera y no un arnés inventado."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró aquí las dos únicas láminas saturadas de la biblia y la única con fecha mínima además del bus: la corraleja no puede dibujarse antes de 1906 en Córdoba y es el único resto de la iconografía ganadera que el corpus conserva; y confirmó el enjaezado del tigre como estado real, porque bridas, silla y garrocha le cambian la silueta por completo y los aperos tienen que ser los mismos de la hoja de la gurupera y no un arnés inventado.",
+        "previous_note": "La lectura encontró aquí las dos únicas láminas saturadas de la biblia y la única con fecha mínima además del bus: la corraleja no puede dibujarse antes de 1906 en Córdoba y es el único resto de la iconografía ganadera que el corpus conserva; y confirmó el enjaezado del tigre como estado real, porque bridas, silla y garrocha le cambian la silueta por completo y los aperos tienen que ser los mismos de la hoja de la gurupera y no un arnés inventado."
       },
       "entity_refs": [
         {
@@ -1586,9 +1628,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que declarar una ausencia: el duendecillo que el reescrito insinúa es un símil —«como si se tratara de un travieso duendecillo»— y es la única vez que la palabra aparece en las treinta y dos páginas, de modo que se fichó como lo que es, un espanto que este corpus no tiene; y verificó que la muñeca pegajosa de aquí no es de brea sino de cera y con forma de mujer, y está puesta en una cantina, rasgo sin paralelo en las quince variantes comparadas del tipo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que declarar una ausencia: el duendecillo que el reescrito insinúa es un símil —«como si se tratara de un travieso duendecillo»— y es la única vez que la palabra aparece en las treinta y dos páginas, de modo que se fichó como lo que es, un espanto que este corpus no tiene; y verificó que la muñeca pegajosa de aquí no es de brea sino de cera y con forma de mujer, y está puesta en una cantina, rasgo sin paralelo en las quince variantes comparadas del tipo.",
+        "previous_note": "La lectura tuvo que declarar una ausencia: el duendecillo que el reescrito insinúa es un símil —«como si se tratara de un travieso duendecillo»— y es la única vez que la palabra aparece en las treinta y dos páginas, de modo que se fichó como lo que es, un espanto que este corpus no tiene; y verificó que la muñeca pegajosa de aquí no es de brea sino de cera y con forma de mujer, y está puesta en una cantina, rasgo sin paralelo en las quince variantes comparadas del tipo."
       },
       "entity_refs": [
         {
@@ -1690,9 +1733,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que Tía Tigra es el mismo cuerpo que Tío Tigre —lo que cambia es la composición, madre con cachorros y llanto— y que los cachorros nunca actúan: son cuidados, mostrados y comidos, así que se resuelven como variante de escala del mismo molde; lo que esta página aporta no es una criatura nueva sino la crueldad sin castigo que gobierna todo el ciclo, y la lámina no la corrige con el encuadre."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que Tía Tigra es el mismo cuerpo que Tío Tigre —lo que cambia es la composición, madre con cachorros y llanto— y que los cachorros nunca actúan: son cuidados, mostrados y comidos, así que se resuelven como variante de escala del mismo molde; lo que esta página aporta no es una criatura nueva sino la crueldad sin castigo que gobierna todo el ciclo, y la lámina no la corrige con el encuadre.",
+        "previous_note": "La lectura comprobó que Tía Tigra es el mismo cuerpo que Tío Tigre —lo que cambia es la composición, madre con cachorros y llanto— y que los cachorros nunca actúan: son cuidados, mostrados y comidos, así que se resuelven como variante de escala del mismo molde; lo que esta página aporta no es una criatura nueva sino la crueldad sin castigo que gobierna todo el ciclo, y la lámina no la corrige con el encuadre."
       },
       "entity_refs": [
         {
@@ -1754,9 +1798,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura resolvió el primero de los cuatro remates excluidos y encontró que no cuesta el chiste, porque el remate es una frase hablada: la causa está fuera del cuadro y el sujeto de la lámina es la reacción —los bancos traseros riéndose, el brazo del cura interrumpido en el altar, el muchacho inclinado hacia la oreja del animal y el burro entrando sólo por la cabeza, cortado por la jamba de la puerta mayor—; y de paso obligó a corregir la iglesia, que el censo había fichado de piedra y con vitrales."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura resolvió el primero de los cuatro remates excluidos y encontró que no cuesta el chiste, porque el remate es una frase hablada: la causa está fuera del cuadro y el sujeto de la lámina es la reacción —los bancos traseros riéndose, el brazo del cura interrumpido en el altar, el muchacho inclinado hacia la oreja del animal y el burro entrando sólo por la cabeza, cortado por la jamba de la puerta mayor—; y de paso obligó a corregir la iglesia, que el censo había fichado de piedra y con vitrales.",
+        "previous_note": "La lectura resolvió el primero de los cuatro remates excluidos y encontró que no cuesta el chiste, porque el remate es una frase hablada: la causa está fuera del cuadro y el sujeto de la lámina es la reacción —los bancos traseros riéndose, el brazo del cura interrumpido en el altar, el muchacho inclinado hacia la oreja del animal y el burro entrando sólo por la cabeza, cortado por la jamba de la puerta mayor—; y de paso obligó a corregir la iglesia, que el censo había fichado de piedra y con vitrales."
       },
       "entity_refs": [
         {
@@ -1838,9 +1883,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura fijó aquí el dato de producción más terco del corpus: el único pescador pesca con anzuelo y caña desde la orilla, y la palabra atarraya no aparece ni una vez en las treinta y dos páginas, lo que contradice la práctica documentada de la región y por eso mismo se respeta; la diferencia entre el anzuelo con carnada y el anzuelo desnudo es lo único que sostiene el relato, y obligó a duplicar una pieza dentro de una hoja de utilería."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura fijó aquí el dato de producción más terco del corpus: el único pescador pesca con anzuelo y caña desde la orilla, y la palabra atarraya no aparece ni una vez en las treinta y dos páginas, lo que contradice la práctica documentada de la región y por eso mismo se respeta; la diferencia entre el anzuelo con carnada y el anzuelo desnudo es lo único que sostiene el relato, y obligó a duplicar una pieza dentro de una hoja de utilería.",
+        "previous_note": "La lectura fijó aquí el dato de producción más terco del corpus: el único pescador pesca con anzuelo y caña desde la orilla, y la palabra atarraya no aparece ni una vez en las treinta y dos páginas, lo que contradice la práctica documentada de la región y por eso mismo se respeta; la diferencia entre el anzuelo con carnada y el anzuelo desnudo es lo único que sostiene el relato, y obligó a duplicar una pieza dentro de una hoja de utilería."
       },
       "entity_refs": [
         {
@@ -1912,9 +1958,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura se detuvo en la ficha más delicada del corpus: el relato llama a su protagonista sólo «el indio», sin ninguna adscripción étnica, le da pies descalzos y entrada en silencio, y el remate —«el cura lo escoronolo, usted salorolo y yo comerolo»— subvierte el estereotipo de ingenuidad en vez de reforzarlo, porque gana él; de ahí salió la regla de dibujarlo como hombre de camino que entra a misa, sin una sola pieza de iconografía zenú, que además tiene biblia aparte."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura se detuvo en la ficha más delicada del corpus: el relato llama a su protagonista sólo «el indio», sin ninguna adscripción étnica, le da pies descalzos y entrada en silencio, y el remate —«el cura lo escoronolo, usted salorolo y yo comerolo»— subvierte el estereotipo de ingenuidad en vez de reforzarlo, porque gana él; de ahí salió la regla de dibujarlo como hombre de camino que entra a misa, sin una sola pieza de iconografía zenú, que además tiene biblia aparte.",
+        "previous_note": "La lectura se detuvo en la ficha más delicada del corpus: el relato llama a su protagonista sólo «el indio», sin ninguna adscripción étnica, le da pies descalzos y entrada en silencio, y el remate —«el cura lo escoronolo, usted salorolo y yo comerolo»— subvierte el estereotipo de ingenuidad en vez de reforzarlo, porque gana él; de ahí salió la regla de dibujarlo como hombre de camino que entra a misa, sin una sola pieza de iconografía zenú, que además tiene biblia aparte."
       },
       "entity_refs": [
         {
@@ -1986,9 +2033,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separó lo que el relato hace de lo que el reescrito le añade: la madre convertida en estrella no está en el campo Historia, que resume el cuento como una discusión de refranes, así que quedó fuera; y lo que la página aporta no es un personaje sino un objeto de trama, la hamaca de la que el hijo no se levanta, porque ni la madre ni el hijo reciben un solo rasgo físico propio."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separó lo que el relato hace de lo que el reescrito le añade: la madre convertida en estrella no está en el campo Historia, que resume el cuento como una discusión de refranes, así que quedó fuera; y lo que la página aporta no es un personaje sino un objeto de trama, la hamaca de la que el hijo no se levanta, porque ni la madre ni el hijo reciben un solo rasgo físico propio.",
+        "previous_note": "La lectura separó lo que el relato hace de lo que el reescrito le añade: la madre convertida en estrella no está en el campo Historia, que resume el cuento como una discusión de refranes, así que quedó fuera; y lo que la página aporta no es un personaje sino un objeto de trama, la hamaca de la que el hijo no se levanta, porque ni la madre ni el hijo reciben un solo rasgo físico propio."
       },
       "entity_refs": [
         {
@@ -2050,9 +2098,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró la única silueta doble del corpus y comprobó que su cuerpo es el relato: cojo de la pierna izquierda, cargado sobre los hombros del compañero con la escopeta al hombro, y después corriendo por delante del que lo abandonó; y en la misma página el tigre cambia de registro sin cambiar de anatomía —aquí es jaguar real y mudo al que se caza—, lo que fijó que la diferencia se resuelve por pose y mirada y nunca por dos cuerpos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró la única silueta doble del corpus y comprobó que su cuerpo es el relato: cojo de la pierna izquierda, cargado sobre los hombros del compañero con la escopeta al hombro, y después corriendo por delante del que lo abandonó; y en la misma página el tigre cambia de registro sin cambiar de anatomía —aquí es jaguar real y mudo al que se caza—, lo que fijó que la diferencia se resuelve por pose y mirada y nunca por dos cuerpos.",
+        "previous_note": "La lectura encontró la única silueta doble del corpus y comprobó que su cuerpo es el relato: cojo de la pierna izquierda, cargado sobre los hombros del compañero con la escopeta al hombro, y después corriendo por delante del que lo abandonó; y en la misma página el tigre cambia de registro sin cambiar de anatomía —aquí es jaguar real y mudo al que se caza—, lo que fijó que la diferencia se resuelve por pose y mirada y nunca por dos cuerpos."
       },
       "entity_refs": [
         {
@@ -2139,9 +2188,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que devolver el chiste a su territorio: el reescrito lo abre «en un rincón escondido de las tierras fértiles de Antioquia, donde los cafetales se extienden», y dibujarlo así dejaría a la biblia de Córdoba con una lámina de la cordillera antioqueña dentro; y verificó que el objeto del chiste es la montura despiezada, porque el equívoco es entre los nombres de dos piezas y no una escena de fiesta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que devolver el chiste a su territorio: el reescrito lo abre «en un rincón escondido de las tierras fértiles de Antioquia, donde los cafetales se extienden», y dibujarlo así dejaría a la biblia de Córdoba con una lámina de la cordillera antioqueña dentro; y verificó que el objeto del chiste es la montura despiezada, porque el equívoco es entre los nombres de dos piezas y no una escena de fiesta.",
+        "previous_note": "La lectura tuvo que devolver el chiste a su territorio: el reescrito lo abre «en un rincón escondido de las tierras fértiles de Antioquia, donde los cafetales se extienden», y dibujarlo así dejaría a la biblia de Córdoba con una lámina de la cordillera antioqueña dentro; y verificó que el objeto del chiste es la montura despiezada, porque el equívoco es entre los nombres de dos piezas y no una escena de fiesta."
       },
       "entity_refs": [
         {
@@ -2203,9 +2253,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura descubrió que el único vehículo del corpus tiene fecha y color documentados —no antes de 1908, con parrilla portaequipaje, escalerilla trasera y el amarillo, azul y rojo que junto con la corraleja son la única saturación de toda la biblia— y que el bus es objeto y escenario a la vez; el Armadillo va nombrado en la lista de pasajeros y no hace ni dice nada en todo el relato, así que se quedó dentro de la hoja del bus y no como ficha."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura descubrió que el único vehículo del corpus tiene fecha y color documentados —no antes de 1908, con parrilla portaequipaje, escalerilla trasera y el amarillo, azul y rojo que junto con la corraleja son la única saturación de toda la biblia— y que el bus es objeto y escenario a la vez; el Armadillo va nombrado en la lista de pasajeros y no hace ni dice nada en todo el relato, así que se quedó dentro de la hoja del bus y no como ficha.",
+        "previous_note": "La lectura descubrió que el único vehículo del corpus tiene fecha y color documentados —no antes de 1908, con parrilla portaequipaje, escalerilla trasera y el amarillo, azul y rojo que junto con la corraleja son la única saturación de toda la biblia— y que el bus es objeto y escenario a la vez; el Armadillo va nombrado en la lista de pasajeros y no hace ni dice nada en todo el relato, así que se quedó dentro de la hoja del bus y no como ficha."
       },
       "entity_refs": [
         {
@@ -2292,9 +2343,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que la única mujer del corpus con nombre propio, Clara, no tiene un solo rasgo que la separe de las otras seis jóvenes —«ojos negros» y nada más—, y que el internado que parecía escenario se despacha en una cláusula, «un internado de muros altos y secretos aún más altos», sin nada más que una ventana a la calle: dos fichas que parecían propias se disolvieron en las que ya existían."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que la única mujer del corpus con nombre propio, Clara, no tiene un solo rasgo que la separe de las otras seis jóvenes —«ojos negros» y nada más—, y que el internado que parecía escenario se despacha en una cláusula, «un internado de muros altos y secretos aún más altos», sin nada más que una ventana a la calle: dos fichas que parecían propias se disolvieron en las que ya existían.",
+        "previous_note": "La lectura encontró que la única mujer del corpus con nombre propio, Clara, no tiene un solo rasgo que la separe de las otras seis jóvenes —«ojos negros» y nada más—, y que el internado que parecía escenario se despacha en una cláusula, «un internado de muros altos y secretos aún más altos», sin nada más que una ventana a la calle: dos fichas que parecían propias se disolvieron en las que ya existían."
       },
       "entity_refs": [
         {
@@ -2391,9 +2443,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura aisló el único cuerpo extraño del corpus: es el único escenario con materia propia descrita —mármol blanco, torres, jardín de rosas— y pertenece a otro libro, de modo que se decidió no traducirlo al Sinú y no dejarlo compartir cuadro con nada sinuano, porque que se note que viene de fuera es preferible a disimularlo; y separó la cojera de la hija como silueta y no como padecimiento, porque el relato existe para que alguien se la nombre."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura aisló el único cuerpo extraño del corpus: es el único escenario con materia propia descrita —mármol blanco, torres, jardín de rosas— y pertenece a otro libro, de modo que se decidió no traducirlo al Sinú y no dejarlo compartir cuadro con nada sinuano, porque que se note que viene de fuera es preferible a disimularlo; y separó la cojera de la hija como silueta y no como padecimiento, porque el relato existe para que alguien se la nombre.",
+        "previous_note": "La lectura aisló el único cuerpo extraño del corpus: es el único escenario con materia propia descrita —mármol blanco, torres, jardín de rosas— y pertenece a otro libro, de modo que se decidió no traducirlo al Sinú y no dejarlo compartir cuadro con nada sinuano, porque que se note que viene de fuera es preferible a disimularlo; y separó la cojera de la hija como silueta y no como padecimiento, porque el relato existe para que alguien se la nombre."
       },
       "entity_refs": [
         {
@@ -2470,9 +2523,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que el aguacero no es decorado sino premisa: es lo que impide al joven volver a su casa y lo que obliga al trueque de camas, de modo que el único fenómeno atmosférico del corpus conduce un relato entero; y resolvió el cuarto de los remates excluidos, que es un olor y por tanto nunca habría tenido lámina ni siquiera sin la exclusión, con la luz de amanecer, las dos camas y su cara."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que el aguacero no es decorado sino premisa: es lo que impide al joven volver a su casa y lo que obliga al trueque de camas, de modo que el único fenómeno atmosférico del corpus conduce un relato entero; y resolvió el cuarto de los remates excluidos, que es un olor y por tanto nunca habría tenido lámina ni siquiera sin la exclusión, con la luz de amanecer, las dos camas y su cara.",
+        "previous_note": "La lectura comprobó que el aguacero no es decorado sino premisa: es lo que impide al joven volver a su casa y lo que obliga al trueque de camas, de modo que el único fenómeno atmosférico del corpus conduce un relato entero; y resolvió el cuarto de los remates excluidos, que es un olor y por tanto nunca habría tenido lámina ni siquiera sin la exclusión, con la luz de amanecer, las dos camas y su cara."
       },
       "entity_refs": [
         {
@@ -2539,9 +2593,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que decidir cómo se dibuja el humor más áspero del corpus sin ablandarlo y sin convertirlo en ultraje: la anciana muerta, sentada y amarrada al caballo con la garrocha en la mano es la imagen entera de la página y se resolvió con figura vestida, postura rígida, rostro en sombra o de perfil alto y el amarre visible como cuerda de trabajo; y de paso se retiró el caballo de piel azul, que sólo está en el texto florido."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que decidir cómo se dibuja el humor más áspero del corpus sin ablandarlo y sin convertirlo en ultraje: la anciana muerta, sentada y amarrada al caballo con la garrocha en la mano es la imagen entera de la página y se resolvió con figura vestida, postura rígida, rostro en sombra o de perfil alto y el amarre visible como cuerda de trabajo; y de paso se retiró el caballo de piel azul, que sólo está en el texto florido.",
+        "previous_note": "La lectura tuvo que decidir cómo se dibuja el humor más áspero del corpus sin ablandarlo y sin convertirlo en ultraje: la anciana muerta, sentada y amarrada al caballo con la garrocha en la mano es la imagen entera de la página y se resolvió con figura vestida, postura rígida, rostro en sombra o de perfil alto y el amarre visible como cuerda de trabajo; y de paso se retiró el caballo de piel azul, que sólo está en el texto florido."
       },
       "entity_refs": [
         {
@@ -2643,9 +2698,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que el objeto por el que se cuenta la página es una puerta arrancada de sus goznes y que el clímax del episodio no es el remate escatológico sino la puerta cayendo sobre los ladrones: por eso la lámina son las caras vueltas hacia arriba y las totumas levantadas bajo la copa, y el remate queda fuera de cuadro sin que el chiste pierda nada; el pozo que se abre con «¡Ábrete perejil!» quedó como lugar mágico propio y no intercambiable."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que el objeto por el que se cuenta la página es una puerta arrancada de sus goznes y que el clímax del episodio no es el remate escatológico sino la puerta cayendo sobre los ladrones: por eso la lámina son las caras vueltas hacia arriba y las totumas levantadas bajo la copa, y el remate queda fuera de cuadro sin que el chiste pierda nada; el pozo que se abre con «¡Ábrete perejil!» quedó como lugar mágico propio y no intercambiable.",
+        "previous_note": "La lectura encontró que el objeto por el que se cuenta la página es una puerta arrancada de sus goznes y que el clímax del episodio no es el remate escatológico sino la puerta cayendo sobre los ladrones: por eso la lámina son las caras vueltas hacia arriba y las totumas levantadas bajo la copa, y el remate queda fuera de cuadro sin que el chiste pierda nada; el pozo que se abre con «¡Ábrete perejil!» quedó como lugar mágico propio y no intercambiable."
       },
       "entity_refs": [
         {
@@ -2767,9 +2823,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que resolver una escena de abuso de autoridad sin ilustrarla y encontró que el propio relato da el dispositivo: la celosía del confesionario es literalmente lo que oculta el cuerpo, así que la lámina son los dos perfiles a un lado y a otro del enrejado y la anciana de noventa y cinco años mirando desde el rincón, que además es quien dice el remate; los eufemismos quedan fuera y la muchacha no se dibuja como víctima expuesta."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que resolver una escena de abuso de autoridad sin ilustrarla y encontró que el propio relato da el dispositivo: la celosía del confesionario es literalmente lo que oculta el cuerpo, así que la lámina son los dos perfiles a un lado y a otro del enrejado y la anciana de noventa y cinco años mirando desde el rincón, que además es quien dice el remate; los eufemismos quedan fuera y la muchacha no se dibuja como víctima expuesta.",
+        "previous_note": "La lectura tuvo que resolver una escena de abuso de autoridad sin ilustrarla y encontró que el propio relato da el dispositivo: la celosía del confesionario es literalmente lo que oculta el cuerpo, así que la lámina son los dos perfiles a un lado y a otro del enrejado y la anciana de noventa y cinco años mirando desde el rincón, que además es quien dice el remate; los eufemismos quedan fuera y la muchacha no se dibuja como víctima expuesta."
       },
       "entity_refs": [
         {
@@ -2856,9 +2913,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que el infierno se nombra seis veces y que ningún relato entra en él ni lo describe —el paisa sale del cielo hacia allá y el cuento termina—, de modo que la única ficha de lugar sobrenatural de esta página es el cielo, que sí tiene umbral, nubes y pared en cuatro relatos; y que el letrero de tiza es lo que mueve todo y se escribe sobre esa pared, no sobre un cartel aparte."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que el infierno se nombra seis veces y que ningún relato entra en él ni lo describe —el paisa sale del cielo hacia allá y el cuento termina—, de modo que la única ficha de lugar sobrenatural de esta página es el cielo, que sí tiene umbral, nubes y pared en cuatro relatos; y que el letrero de tiza es lo que mueve todo y se escribe sobre esa pared, no sobre un cartel aparte.",
+        "previous_note": "La lectura comprobó que el infierno se nombra seis veces y que ningún relato entra en él ni lo describe —el paisa sale del cielo hacia allá y el cuento termina—, de modo que la única ficha de lugar sobrenatural de esta página es el cielo, que sí tiene umbral, nubes y pared en cuatro relatos; y que el letrero de tiza es lo que mueve todo y se escribe sobre esa pared, no sobre un cartel aparte."
       },
       "entity_refs": [
         {
@@ -2925,9 +2983,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura se quedó con la página más áspera del ciclo y decidió no ablandarla: Conejo copia a Gallo sin entender sus condiciones y termina decapitado y sin una pata, y ese estado cuesta lámina porque es la imagen titular del relato, resuelto con figura completa, corte limpio y sin sangre ni víscera; Tía Coneja se disolvió al comprobar que en la otra versión del mismo relato el corpus la sustituye por Tía Zorra, lo que confirma que no es un cuerpo propio."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura se quedó con la página más áspera del ciclo y decidió no ablandarla: Conejo copia a Gallo sin entender sus condiciones y termina decapitado y sin una pata, y ese estado cuesta lámina porque es la imagen titular del relato, resuelto con figura completa, corte limpio y sin sangre ni víscera; Tía Coneja se disolvió al comprobar que en la otra versión del mismo relato el corpus la sustituye por Tía Zorra, lo que confirma que no es un cuerpo propio.",
+        "previous_note": "La lectura se quedó con la página más áspera del ciclo y decidió no ablandarla: Conejo copia a Gallo sin entender sus condiciones y termina decapitado y sin una pata, y ese estado cuesta lámina porque es la imagen titular del relato, resuelto con figura completa, corte limpio y sin sangre ni víscera; Tía Coneja se disolvió al comprobar que en la otra versión del mismo relato el corpus la sustituye por Tía Zorra, lo que confirma que no es un cuerpo propio."
       },
       "entity_refs": [
         {
@@ -3014,9 +3073,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura resolvió el segundo remate sensible y encontró que tampoco cuesta la escena: lo que la vieja mira se queda fuera de cuadro y el sujeto es su reacción y los dos huevos rompiéndosele en las manos; y retiró las aves nacidas de los huevos rotos, que son relleno del reescrito, porque la Historia y el campo Versiones dicen únicamente que la vieja aplaudió y los huevos se le cayeron."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura resolvió el segundo remate sensible y encontró que tampoco cuesta la escena: lo que la vieja mira se queda fuera de cuadro y el sujeto es su reacción y los dos huevos rompiéndosele en las manos; y retiró las aves nacidas de los huevos rotos, que son relleno del reescrito, porque la Historia y el campo Versiones dicen únicamente que la vieja aplaudió y los huevos se le cayeron.",
+        "previous_note": "La lectura resolvió el segundo remate sensible y encontró que tampoco cuesta la escena: lo que la vieja mira se queda fuera de cuadro y el sujeto es su reacción y los dos huevos rompiéndosele en las manos; y retiró las aves nacidas de los huevos rotos, que son relleno del reescrito, porque la Historia y el campo Versiones dicen únicamente que la vieja aplaudió y los huevos se le cayeron."
       },
       "entity_refs": [
         {
@@ -3093,9 +3153,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura se detuvo en la única página del corpus con narrador, día y lugar —la narró Manuel Gerónimo Pérez Petro y se grabó el 21 de marzo de 1965—, y por eso es la que debe llevar el estrato de época más estricto de la biblia; y encontró que los cuatro encargos funcionan como un juego de objetos dentro de un mismo relato, con la avispa apareciendo sólo como pieza atrapada dentro del calabozo y sellada con una hoja, nunca como personaje con modelo propio."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura se detuvo en la única página del corpus con narrador, día y lugar —la narró Manuel Gerónimo Pérez Petro y se grabó el 21 de marzo de 1965—, y por eso es la que debe llevar el estrato de época más estricto de la biblia; y encontró que los cuatro encargos funcionan como un juego de objetos dentro de un mismo relato, con la avispa apareciendo sólo como pieza atrapada dentro del calabozo y sellada con una hoja, nunca como personaje con modelo propio.",
+        "previous_note": "La lectura se detuvo en la única página del corpus con narrador, día y lugar —la narró Manuel Gerónimo Pérez Petro y se grabó el 21 de marzo de 1965—, y por eso es la que debe llevar el estrato de época más estricto de la biblia; y encontró que los cuatro encargos funcionan como un juego de objetos dentro de un mismo relato, con la avispa apareciendo sólo como pieza atrapada dentro del calabozo y sellada con una hoja, nunca como personaje con modelo propio."
       },
       "entity_refs": [
         {
@@ -3212,9 +3273,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que la página entera se juega en un objeto de mano: un plátano que el compadre Matías parte para demostrar la diferencia entre lo justo y lo legal, y que los dos discutidores no reciben un solo rasgo que los separe del campesino ya fichado; lo que aporta es el viejo del camino, cuerpo distinto por edad y por andar, y que en su otra aparición hace milagros sin un solo signo encima, de modo que la ficha no lleva iconografía de mago."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que la página entera se juega en un objeto de mano: un plátano que el compadre Matías parte para demostrar la diferencia entre lo justo y lo legal, y que los dos discutidores no reciben un solo rasgo que los separe del campesino ya fichado; lo que aporta es el viejo del camino, cuerpo distinto por edad y por andar, y que en su otra aparición hace milagros sin un solo signo encima, de modo que la ficha no lleva iconografía de mago.",
+        "previous_note": "La lectura comprobó que la página entera se juega en un objeto de mano: un plátano que el compadre Matías parte para demostrar la diferencia entre lo justo y lo legal, y que los dos discutidores no reciben un solo rasgo que los separe del campesino ya fichado; lo que aporta es el viejo del camino, cuerpo distinto por edad y por andar, y que en su otra aparición hace milagros sin un solo signo encima, de modo que la ficha no lleva iconografía de mago."
       },
       "entity_refs": [
         {
@@ -3271,9 +3333,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que la finca y su amo, que parecían dos fichas, son una línea cada uno y sin ninguna descripción —«llegaron a una finca que apareció entre el denso verde», «el amo de la finca les obsequió un cántaro»—, y que dibujar una hacienda ganadera sería traer el encargo al texto en vez de leerlo; lo que la página aporta es la gramática de los tres cachacos, tres siluetas verticales e idénticas rotas cada una por un malestar distinto."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que la finca y su amo, que parecían dos fichas, son una línea cada uno y sin ninguna descripción —«llegaron a una finca que apareció entre el denso verde», «el amo de la finca les obsequió un cántaro»—, y que dibujar una hacienda ganadera sería traer el encargo al texto en vez de leerlo; lo que la página aporta es la gramática de los tres cachacos, tres siluetas verticales e idénticas rotas cada una por un malestar distinto.",
+        "previous_note": "La lectura encontró que la finca y su amo, que parecían dos fichas, son una línea cada uno y sin ninguna descripción —«llegaron a una finca que apareció entre el denso verde», «el amo de la finca les obsequió un cántaro»—, y que dibujar una hacienda ganadera sería traer el encargo al texto en vez de leerlo; lo que la página aporta es la gramática de los tres cachacos, tres siluetas verticales e idénticas rotas cada una por un malestar distinto."
       },
       "entity_refs": [
         {
@@ -3355,9 +3418,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que los tres curas se distinguen por mote y por edad y no por cuerpo —Barba Raspa el barbado, el joven, el veterano—, de modo que una sola hoja con variantes de barba los cubre, y que el palo de mamón al que se trepan es el mismo árbol grande que aparece en otras cinco páginas con otro nombre; lo que aporta es el registro del cuento anticlerical peninsular, con el cura siempre en falta o en burla."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que los tres curas se distinguen por mote y por edad y no por cuerpo —Barba Raspa el barbado, el joven, el veterano—, de modo que una sola hoja con variantes de barba los cubre, y que el palo de mamón al que se trepan es el mismo árbol grande que aparece en otras cinco páginas con otro nombre; lo que aporta es el registro del cuento anticlerical peninsular, con el cura siempre en falta o en burla.",
+        "previous_note": "La lectura comprobó que los tres curas se distinguen por mote y por edad y no por cuerpo —Barba Raspa el barbado, el joven, el veterano—, de modo que una sola hoja con variantes de barba los cubre, y que el palo de mamón al que se trepan es el mismo árbol grande que aparece en otras cinco páginas con otro nombre; lo que aporta es el registro del cuento anticlerical peninsular, con el cura siempre en falta o en burla."
       },
       "entity_refs": [
         {
@@ -3444,9 +3508,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura corrigió aquí la candidata que proponía el script: los gallos y las gallinas son la moneda del experimento y no sus protagonistas, y quienes conducen son el hombre que va de puerta en puerta y las esposas que deciden; y comprobó que la página es sátira de roles y no regla sobre los hogares costeños, así que la composición no se resuelve con un solo hogar sino con una calle de puertas iguales."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura corrigió aquí la candidata que proponía el script: los gallos y las gallinas son la moneda del experimento y no sus protagonistas, y quienes conducen son el hombre que va de puerta en puerta y las esposas que deciden; y comprobó que la página es sátira de roles y no regla sobre los hogares costeños, así que la composición no se resuelve con un solo hogar sino con una calle de puertas iguales.",
+        "previous_note": "La lectura corrigió aquí la candidata que proponía el script: los gallos y las gallinas son la moneda del experimento y no sus protagonistas, y quienes conducen son el hombre que va de puerta en puerta y las esposas que deciden; y comprobó que la página es sátira de roles y no regla sobre los hogares costeños, así que la composición no se resuelve con un solo hogar sino con una calle de puertas iguales."
       },
       "entity_refs": [
         {
@@ -3548,9 +3613,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura tuvo que cortar el relato por la mitad: la primera parte es ATU 332 con los candidatos ibéricos —rechaza a María y a Jesús en el camino y convida a la Muerte al último muslo de gallina—, y la segunda es relleno ilegible con una ciudad de ancianos y un niño adulto que su propio campo Historia no sostiene, porque dice literalmente que no está clara; por eso Rambao no lleva ningún estado y la Muerte se dibuja sentada a la mesa, como comadre de visita, sin esqueleto y sin guadaña."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura tuvo que cortar el relato por la mitad: la primera parte es ATU 332 con los candidatos ibéricos —rechaza a María y a Jesús en el camino y convida a la Muerte al último muslo de gallina—, y la segunda es relleno ilegible con una ciudad de ancianos y un niño adulto que su propio campo Historia no sostiene, porque dice literalmente que no está clara; por eso Rambao no lleva ningún estado y la Muerte se dibuja sentada a la mesa, como comadre de visita, sin esqueleto y sin guadaña.",
+        "previous_note": "La lectura tuvo que cortar el relato por la mitad: la primera parte es ATU 332 con los candidatos ibéricos —rechaza a María y a Jesús en el camino y convida a la Muerte al último muslo de gallina—, y la segunda es relleno ilegible con una ciudad de ancianos y un niño adulto que su propio campo Historia no sostiene, porque dice literalmente que no está clara; por eso Rambao no lleva ningún estado y la Muerte se dibuja sentada a la mesa, como comadre de visita, sin esqueleto y sin guadaña."
       },
       "entity_refs": [
         {
@@ -3677,9 +3743,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura comprobó que la pollerita no es adorno sino la prenda que define a la única criatura vestida del corpus, y que perderla huyendo de los perros es variante de vestuario y no estado: la cojera de esa huida es momentánea y no cambia la silueta; lo que la página aporta es que el engaño redistribuye el castigo sobre quien no lo merece, y la lámina no lo corrige con el encuadre ni con un gesto de reproche."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura comprobó que la pollerita no es adorno sino la prenda que define a la única criatura vestida del corpus, y que perderla huyendo de los perros es variante de vestuario y no estado: la cojera de esa huida es momentánea y no cambia la silueta; lo que la página aporta es que el engaño redistribuye el castigo sobre quien no lo merece, y la lámina no lo corrige con el encuadre ni con un gesto de reproche.",
+        "previous_note": "La lectura comprobó que la pollerita no es adorno sino la prenda que define a la única criatura vestida del corpus, y que perderla huyendo de los perros es variante de vestuario y no estado: la cojera de esa huida es momentánea y no cambia la silueta; lo que la página aporta es que el engaño redistribuye el castigo sobre quien no lo merece, y la lámina no lo corrige con el encuadre ni con un gesto de reproche."
       },
       "entity_refs": [
         {
@@ -3771,9 +3838,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró la página más económica del corpus —cuatro entidades y ninguna nueva— y el segundo de los dos sitios donde Conejo se hace el muerto, de modo que ese estado se cobra una sola vez para las dos páginas; y fijó que el gajo de plátano es objeto de trama y no atrezo, con dieciséis menciones en el corpus y dos relatos que existen por él."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró la página más económica del corpus —cuatro entidades y ninguna nueva— y el segundo de los dos sitios donde Conejo se hace el muerto, de modo que ese estado se cobra una sola vez para las dos páginas; y fijó que el gajo de plátano es objeto de trama y no atrezo, con dieciséis menciones en el corpus y dos relatos que existen por él.",
+        "previous_note": "La lectura encontró la página más económica del corpus —cuatro entidades y ninguna nueva— y el segundo de los dos sitios donde Conejo se hace el muerto, de modo que ese estado se cobra una sola vez para las dos páginas; y fijó que el gajo de plátano es objeto de trama y no atrezo, con dieciséis menciones en el corpus y dos relatos que existen por él."
       },
       "entity_refs": [
         {
@@ -3820,9 +3888,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura demostró que esta carrera no es la de Esopo: es ATU 275C, motivo K11.1, ganada por fraude con hermanos idénticos apostados a lo largo del camino contestando «¡Alante voy!», y no por constancia ni con un rival dormido; la consecuencia de dibujo fue inmediata y cambió la lámina, porque en esta rama del tipo la clave visual es el terreno —el borde de monte, la zanja, el tronco— y no el conejo durmiendo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura demostró que esta carrera no es la de Esopo: es ATU 275C, motivo K11.1, ganada por fraude con hermanos idénticos apostados a lo largo del camino contestando «¡Alante voy!», y no por constancia ni con un rival dormido; la consecuencia de dibujo fue inmediata y cambió la lámina, porque en esta rama del tipo la clave visual es el terreno —el borde de monte, la zanja, el tronco— y no el conejo durmiendo.",
+        "previous_note": "La lectura demostró que esta carrera no es la de Esopo: es ATU 275C, motivo K11.1, ganada por fraude con hermanos idénticos apostados a lo largo del camino contestando «¡Alante voy!», y no por constancia ni con un rival dormido; la consecuencia de dibujo fue inmediata y cambió la lámina, porque en esta rama del tipo la clave visual es el terreno —el borde de monte, la zanja, el tronco— y no el conejo durmiendo."
       },
       "entity_refs": [
         {
@@ -3884,9 +3953,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura siguió una cadena de depredación que empieza en una cucaracha y acaba en un perro, toda ella bajo una batea volcada, y decidió contarla por sucesión de escondites y no por cuerpos: la ficha de la batea es el hueco entre el borde de la madera y el suelo; y comprobó que la tienda, la cantina y el taller del zapatero son un solo local de caserío al que sólo le cambia el atrezo del mostrador."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura siguió una cadena de depredación que empieza en una cucaracha y acaba en un perro, toda ella bajo una batea volcada, y decidió contarla por sucesión de escondites y no por cuerpos: la ficha de la batea es el hueco entre el borde de la madera y el suelo; y comprobó que la tienda, la cantina y el taller del zapatero son un solo local de caserío al que sólo le cambia el atrezo del mostrador.",
+        "previous_note": "La lectura siguió una cadena de depredación que empieza en una cucaracha y acaba en un perro, toda ella bajo una batea volcada, y decidió contarla por sucesión de escondites y no por cuerpos: la ficha de la batea es el hueco entre el borde de la madera y el suelo; y comprobó que la tienda, la cantina y el taller del zapatero son un solo local de caserío al que sólo le cambia el atrezo del mostrador."
       },
       "entity_refs": [
         {
@@ -4003,9 +4073,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró que el remate de la página es una parte de un cuerpo —«¡Quítenmelo que es cachaco y tiene navaja!»— y que por tanto la tenaza no es un objeto sino anatomía, lo que obligó a que el cangrejo tuviera su propia silueta zoológica y no saliera del sapo; y retiró a los vecinos invisibles del bosque, que el propio relato declara no visibles cuando dice que asomaron sus cabezas «invisibles pero presentes»."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró que el remate de la página es una parte de un cuerpo —«¡Quítenmelo que es cachaco y tiene navaja!»— y que por tanto la tenaza no es un objeto sino anatomía, lo que obligó a que el cangrejo tuviera su propia silueta zoológica y no saliera del sapo; y retiró a los vecinos invisibles del bosque, que el propio relato declara no visibles cuando dice que asomaron sus cabezas «invisibles pero presentes».",
+        "previous_note": "La lectura encontró que el remate de la página es una parte de un cuerpo —«¡Quítenmelo que es cachaco y tiene navaja!»— y que por tanto la tenaza no es un objeto sino anatomía, lo que obligó a que el cangrejo tuviera su propia silueta zoológica y no saliera del sapo; y retiró a los vecinos invisibles del bosque, que el propio relato declara no visibles cuando dice que asomaron sus cabezas «invisibles pero presentes»."
       },
       "entity_refs": [
         {
@@ -4067,9 +4138,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura encontró la página más pobre en cuerpos y la más precisa en objetos: un hombre de mercado sin un solo rasgo propio, veinte centavos, un reloj de bolsillo y un bollo con su queso, y el relato entero se sostiene en que la moneda pasa de una necesidad a la otra; lo que aporta no es una figura sino la escala del dinero en este corpus, donde el único bien de un hombre cabe en un bolsillo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura encontró la página más pobre en cuerpos y la más precisa en objetos: un hombre de mercado sin un solo rasgo propio, veinte centavos, un reloj de bolsillo y un bollo con su queso, y el relato entero se sostiene en que la moneda pasa de una necesidad a la otra; lo que aporta no es una figura sino la escala del dinero en este corpus, donde el único bien de un hombre cabe en un bolsillo.",
+        "previous_note": "La lectura encontró la página más pobre en cuerpos y la más precisa en objetos: un hombre de mercado sin un solo rasgo propio, veinte centavos, un reloj de bolsillo y un bollo con su queso, y el relato entero se sostiene en que la moneda pasa de una necesidad a la otra; lo que aporta no es una figura sino la escala del dinero en este corpus, donde el único bien de un hombre cabe en un bolsillo."
       },
       "entity_refs": [
         {
@@ -20250,5 +20322,21 @@
       "ningún remate escatológico ni anatómico en cuadro: el encuadre corta donde empezaría y el sujeto es la reacción",
       "ningún espanto: ni Llorona, Mohán, Patasola, Madremonte, Sombrerón, Duende, ánima ni entierro; y ningún rostro frontal para papá Dios, ninguna guadaña para la Muerte"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 32,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "e79509dc59c58d3abee0f8ed08c1cb682e6f5c414117dcd4a924f84190e09734",
+      "max_source_updated_at": "2026-07-23T00:31:18.740Z"
+    }
+  ]
 }

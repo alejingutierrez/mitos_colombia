@@ -7,7 +7,7 @@
   "region": "Amazonía",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Desana (communities.slug = desana)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -23,7 +23,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 8,
     "fields": [
       "mito",
@@ -31,8 +31,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "1d5f7dee9f89d535ebd9075d7c472ccdaa386c484bd50a48a6945e5e6c9d7459",
-    "max_source_updated_at": "2026-07-28T23:48:40.174Z"
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "max_source_updated_at": "2026-09-22T19:28:04.278Z"
   },
   "research": {
     "sources": [
@@ -730,8 +730,8 @@
     "dossier": "docs/investigacion/desana.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -750,7 +750,23 @@
       }
     ],
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "agamahsapu-y-el-tiempo-del-umari",
+        "creacion-desana",
+        "el-origen-de-la-mandioca-desana",
+        "el-origen-de-la-noche-desana",
+        "gainpaya-y-el-origen-del-chontaduro",
+        "guelamun-ye-el-nieto-del-trueno",
+        "nuguye-y-sepiro-fuego-y-creciente",
+        "yurupari"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "agamahsapu-y-el-tiempo-del-umari": {
@@ -773,9 +789,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Esta es la pagina donde la lectura le devolvio especie a dos fichas que el censo habia dejado indeterminadas: Agamahsapu «era o primeiro inambu» y sus hijas son cuatro clases de zancuda nombradas, no una bandada; y obligo a separar el fruto, que es publico y se reparte en mano, cesto y arbol, del rito de distribucion, que tiene nombre y no se representa."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Esta es la pagina donde la lectura le devolvio especie a dos fichas que el censo habia dejado indeterminadas: Agamahsapu «era o primeiro inambu» y sus hijas son cuatro clases de zancuda nombradas, no una bandada; y obligo a separar el fruto, que es publico y se reparte en mano, cesto y arbol, del rito de distribucion, que tiene nombre y no se representa.",
+        "previous_note": "Esta es la pagina donde la lectura le devolvio especie a dos fichas que el censo habia dejado indeterminadas: Agamahsapu «era o primeiro inambu» y sus hijas son cuatro clases de zancuda nombradas, no una bandada; y obligo a separar el fruto, que es publico y se reparte en mano, cesto y arbol, del rito de distribucion, que tiene nombre y no se representa."
       },
       "entity_refs": [
         {
@@ -870,9 +887,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separo tres cosas que el relato tiende a fundir: la Abuela que se crea a si misma y el ser sin cuerpo que ella forma, el tercer Hombre Trueno y la serpiente con cabeza de proa que el mismo es al descender, y la humanidad que entra igual en la canoa de la que sale diferenciada en lenguas; por eso hay un colectivo de cinco, una criatura y dos gramaticas de grupo distintas, y no seis personajes."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separo tres cosas que el relato tiende a fundir: la Abuela que se crea a si misma y el ser sin cuerpo que ella forma, el tercer Hombre Trueno y la serpiente con cabeza de proa que el mismo es al descender, y la humanidad que entra igual en la canoa de la que sale diferenciada en lenguas; por eso hay un colectivo de cinco, una criatura y dos gramaticas de grupo distintas, y no seis personajes.",
+        "previous_note": "La lectura separo tres cosas que el relato tiende a fundir: la Abuela que se crea a si misma y el ser sin cuerpo que ella forma, el tercer Hombre Trueno y la serpiente con cabeza de proa que el mismo es al descender, y la humanidad que entra igual en la canoa de la que sale diferenciada en lenguas; por eso hay un colectivo de cinco, una criatura y dos gramaticas de grupo distintas, y no seis personajes."
       },
       "entity_refs": [
         {
@@ -997,9 +1015,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separo el cuerpo que contiene la comida de la planta que sale de el, que son dos fichas y no una imagen, y dejo fuera todo el material intimo del ciclo; lo que el relato si da con precision es la tecnica de la chagra —circulo marcado y quemado desde el interior hacia afuera—, que es lo que impide dibujar un claro rectangular."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separo el cuerpo que contiene la comida de la planta que sale de el, que son dos fichas y no una imagen, y dejo fuera todo el material intimo del ciclo; lo que el relato si da con precision es la tecnica de la chagra —circulo marcado y quemado desde el interior hacia afuera—, que es lo que impide dibujar un claro rectangular.",
+        "previous_note": "La lectura separo el cuerpo que contiene la comida de la planta que sale de el, que son dos fichas y no una imagen, y dejo fuera todo el material intimo del ciclo; lo que el relato si da con precision es la tecnica de la chagra —circulo marcado y quemado desde el interior hacia afuera—, que es lo que impide dibujar un claro rectangular."
       },
       "entity_refs": [
         {
@@ -1074,9 +1093,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separo la lectura fue la vigilia: el hermano menor en su hamaca de rincon no es un miembro mas del grupo que carga, y lo que sale del baul no es un enjambre sino dos clases con nombre propio en desana —el japu de la noche y los grillos de la noche—, que es la correccion que el dossier le hizo al censo y que aqui cuesta una gramatica de dos bandas en vez de una nube."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separo la lectura fue la vigilia: el hermano menor en su hamaca de rincon no es un miembro mas del grupo que carga, y lo que sale del baul no es un enjambre sino dos clases con nombre propio en desana —el japu de la noche y los grillos de la noche—, que es la correccion que el dossier le hizo al censo y que aqui cuesta una gramatica de dos bandas en vez de una nube.",
+        "previous_note": "Lo que separo la lectura fue la vigilia: el hermano menor en su hamaca de rincon no es un miembro mas del grupo que carga, y lo que sale del baul no es un enjambre sino dos clases con nombre propio en desana —el japu de la noche y los grillos de la noche—, que es la correccion que el dossier le hizo al censo y que aqui cuesta una gramatica de dos bandas en vez de una nube."
       },
       "entity_refs": [
         {
@@ -1171,9 +1191,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El relato afirma dos veces mas de lo que describe, y la lectura tuvo que quedarse con lo descrito: los dos escondites del cuerpo —bajo el pie y bajo el brazo— son rasgo y entran, y las transformaciones y las pruebas de la casa de Piro se quedan fuera porque la propia fuente declara que no las detalla; lo que si aporta es un solo tronco con cuatro variedades de fruto nombradas y coloreadas."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El relato afirma dos veces mas de lo que describe, y la lectura tuvo que quedarse con lo descrito: los dos escondites del cuerpo —bajo el pie y bajo el brazo— son rasgo y entran, y las transformaciones y las pruebas de la casa de Piro se quedan fuera porque la propia fuente declara que no las detalla; lo que si aporta es un solo tronco con cuatro variedades de fruto nombradas y coloreadas.",
+        "previous_note": "El relato afirma dos veces mas de lo que describe, y la lectura tuvo que quedarse con lo descrito: los dos escondites del cuerpo —bajo el pie y bajo el brazo— son rasgo y entran, y las transformaciones y las pruebas de la casa de Piro se quedan fuera porque la propia fuente declara que no las detalla; lo que si aporta es un solo tronco con cuatro variedades de fruto nombradas y coloreadas."
       },
       "entity_refs": [
         {
@@ -1248,9 +1269,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura separo el cuerpo que no arde de los adornos que si, que es la unica materia de partida que el incendio tiene, y corrigio la primaria que propuso el script: la madre de Guramuye es una sola frase y un cuerpo generico, y quien conduce el cataclismo es el nieto del trueno."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura separo el cuerpo que no arde de los adornos que si, que es la unica materia de partida que el incendio tiene, y corrigio la primaria que propuso el script: la madre de Guramuye es una sola frase y un cuerpo generico, y quien conduce el cataclismo es el nieto del trueno.",
+        "previous_note": "La lectura separo el cuerpo que no arde de los adornos que si, que es la unica materia de partida que el incendio tiene, y corrigio la primaria que propuso el script: la madre de Guramuye es una sola frase y un cuerpo generico, y quien conduce el cataclismo es el nieto del trueno."
       },
       "entity_refs": [
         {
@@ -1350,9 +1372,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Tres cataclismos en una sola pagina obligaron a decidir que se repite y que no: el incendio es el mismo fenomeno que el del relato anterior y va en una sola regla con fases, mientras que Sepiro exigio lo contrario —conservar la composicion de gavilan y cobra grande en una sola pieza continua, porque el canon prohibe reducirla a un animal zoologico unico—."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Tres cataclismos en una sola pagina obligaron a decidir que se repite y que no: el incendio es el mismo fenomeno que el del relato anterior y va en una sola regla con fases, mientras que Sepiro exigio lo contrario —conservar la composicion de gavilan y cobra grande en una sola pieza continua, porque el canon prohibe reducirla a un animal zoologico unico—.",
+        "previous_note": "Tres cataclismos en una sola pagina obligaron a decidir que se repite y que no: el incendio es el mismo fenomeno que el del relato anterior y va en una sola regla con fases, mientras que Sepiro exigio lo contrario —conservar la composicion de gavilan y cobra grande en una sola pieza continua, porque el canon prohibe reducirla a un animal zoologico unico—."
       },
       "entity_refs": [
         {
@@ -1467,9 +1490,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Esta bitacora se hizo sobre todo por sustraccion: tres entidades del nucleo del relato —las flautas halladas, la que fabrican los hombres y el sonido— quedan fuera por restriccion, asi que la lectura tuvo que encontrar quien conduce sin ellas, y son las hijas y los hijos de Abe como un solo grupo domestico; el script habia coronado primario al hijo que se duerme, que es una variante de ese mismo grupo."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Esta bitacora se hizo sobre todo por sustraccion: tres entidades del nucleo del relato —las flautas halladas, la que fabrican los hombres y el sonido— quedan fuera por restriccion, asi que la lectura tuvo que encontrar quien conduce sin ellas, y son las hijas y los hijos de Abe como un solo grupo domestico; el script habia coronado primario al hijo que se duerme, que es una variante de ese mismo grupo.",
+        "previous_note": "Esta bitacora se hizo sobre todo por sustraccion: tres entidades del nucleo del relato —las flautas halladas, la que fabrican los hombres y el sonido— quedan fuera por restriccion, asi que la lectura tuvo que encontrar quien conduce sin ellas, y son las hijas y los hijos de Abe como un solo grupo domestico; el script habia coronado primario al hijo que se duerme, que es una variante de ese mismo grupo."
       },
       "entity_refs": [
         {
@@ -11684,5 +11708,20 @@
       "Ninguna danta ni iconografía traída de Tucano o Barasana.",
       "Ningún volumen esculpido ni acabado fotorrealista: sin modelado del rostro, sin piel renderizada, sin pelaje mechón a mechón."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 8,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "1d5f7dee9f89d535ebd9075d7c472ccdaa386c484bd50a48a6945e5e6c9d7459",
+      "max_source_updated_at": "2026-07-28T23:48:40.174Z"
+    }
+  ]
 }

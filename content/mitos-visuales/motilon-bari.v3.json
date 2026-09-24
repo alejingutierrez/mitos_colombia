@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-18",
+    "frozen_at": "2026-09-24",
     "source": "Neon, comunidad exacta Barí (communities.slug = motilon-bari)",
     "grouping": "comunidad",
     "myth_slugs": [
@@ -21,7 +21,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-18",
+    "retrieved_at": "2026-09-24",
     "record_count": 6,
     "fields": [
       "mito",
@@ -29,8 +29,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "cdef826bbb04a42a5b9ac731edb4128509f880ca52c968baea3e2e1f52302cd3",
-    "max_source_updated_at": "2026-07-28T13:24:31.541Z"
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "max_source_updated_at": "2026-09-22T19:54:25.494Z"
   },
   "research": {
     "sources": [
@@ -1152,8 +1152,8 @@
     "dossier": "docs/investigacion/motilon-bari.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1163,7 +1163,21 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "el-gran-arbol-que-hizo-los-rios",
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "caminar-liviano-hacia-el-mas-alla": {
@@ -1186,9 +1200,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura se organizó alrededor de cuatro prohibiciones y una infracción —mirar sin hablar, no comer el topocho, no quedarse con las dos mujeres, no tocar nada—, de modo que lo que se extrajo no fueron obstáculos sino las tres cosas que atan a otro mundo; y el yácura quedó excluido porque el relato lo nombra como peligro sin darle una sola línea de cuerpo, mientras que los muertos sí la tienen y por eso se fichan cargando cañabrava y canastos, no como cadáveres."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura se organizó alrededor de cuatro prohibiciones y una infracción —mirar sin hablar, no comer el topocho, no quedarse con las dos mujeres, no tocar nada—, de modo que lo que se extrajo no fueron obstáculos sino las tres cosas que atan a otro mundo; y el yácura quedó excluido porque el relato lo nombra como peligro sin darle una sola línea de cuerpo, mientras que los muertos sí la tienen y por eso se fichan cargando cañabrava y canastos, no como cadáveres.",
+        "previous_note": "La lectura se organizó alrededor de cuatro prohibiciones y una infracción —mirar sin hablar, no comer el topocho, no quedarse con las dos mujeres, no tocar nada—, de modo que lo que se extrajo no fueron obstáculos sino las tres cosas que atan a otro mundo; y el yácura quedó excluido porque el relato lo nombra como peligro sin darle una sola línea de cuerpo, mientras que los muertos sí la tienen y por eso se fichan cargando cañabrava y canastos, no como cadáveres."
       },
       "entity_refs": [
         {
@@ -1358,9 +1373,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Esta página unifica dos variantes que el canon prohíbe promediar, y la extracción tuvo que respetarlo: la Señora de la Luna y el gallinazo son agentes de versiones distintas y se fichan por separado, mientras que el bejuco es lo único presente en las dos —crecido en una y fabricado en la otra, cortado en ambas—; y el «cóndor» se extrajo con una corrección dura, porque el cóndor andino no llega al Catatumbo bajo y el ave documentada equivalente es el rey de los gallinazos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Esta página unifica dos variantes que el canon prohíbe promediar, y la extracción tuvo que respetarlo: la Señora de la Luna y el gallinazo son agentes de versiones distintas y se fichan por separado, mientras que el bejuco es lo único presente en las dos —crecido en una y fabricado en la otra, cortado en ambas—; y el «cóndor» se extrajo con una corrección dura, porque el cóndor andino no llega al Catatumbo bajo y el ave documentada equivalente es el rey de los gallinazos.",
+        "previous_note": "Esta página unifica dos variantes que el canon prohíbe promediar, y la extracción tuvo que respetarlo: la Señora de la Luna y el gallinazo son agentes de versiones distintas y se fichan por separado, mientras que el bejuco es lo único presente en las dos —crecido en una y fabricado en la otra, cortado en ambas—; y el «cóndor» se extrajo con una corrección dura, porque el cóndor andino no llega al Catatumbo bajo y el ave documentada equivalente es el rey de los gallinazos."
       },
       "entity_refs": [
         {
@@ -1465,9 +1481,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que separó la lectura fue que el agente cambia de nombre entre versiones —muchacho, anciano y Kokebadou— mientras el objeto no cambia nunca, así que el árbol se extrajo como la entidad estable del relato y los tres agentes se conservan como variantes sin fusionarlos; y el producto se extrajo doble, porque las dos cuencas tienen nombre barí y color propio —el Dabogyi oscuro y turbio, el Iquibocyi claro— y nunca pueden dibujarse como un solo río."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que separó la lectura fue que el agente cambia de nombre entre versiones —muchacho, anciano y Kokebadou— mientras el objeto no cambia nunca, así que el árbol se extrajo como la entidad estable del relato y los tres agentes se conservan como variantes sin fusionarlos; y el producto se extrajo doble, porque las dos cuencas tienen nombre barí y color propio —el Dabogyi oscuro y turbio, el Iquibocyi claro— y nunca pueden dibujarse como un solo río.",
+        "previous_note": "Lo que separó la lectura fue que el agente cambia de nombre entre versiones —muchacho, anciano y Kokebadou— mientras el objeto no cambia nunca, así que el árbol se extrajo como la entidad estable del relato y los tres agentes se conservan como variantes sin fusionarlos; y el producto se extrajo doble, porque las dos cuencas tienen nombre barí y color propio —el Dabogyi oscuro y turbio, el Iquibocyi claro— y nunca pueden dibujarse como un solo río."
       },
       "entity_refs": [
         {
@@ -1587,9 +1604,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La pasada de objetos dio el argumento entero en una sola pieza: el collar de dos plumas maltratadas, cuya pobreza frente a los collares vistosos es lo que el relato explica; y la de personajes obligó a mantener tres figuras separadas que la tentación es fundir —el vidente anónimo, Ñandóu y Chibáig—, porque el propio canon dice que identificar al vidente con Ñandóu es variante y no certeza, y porque Chibáig resultó ser la única figura celeste barí con cuerpo documentado, hasta sus dos sombreros."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La pasada de objetos dio el argumento entero en una sola pieza: el collar de dos plumas maltratadas, cuya pobreza frente a los collares vistosos es lo que el relato explica; y la de personajes obligó a mantener tres figuras separadas que la tentación es fundir —el vidente anónimo, Ñandóu y Chibáig—, porque el propio canon dice que identificar al vidente con Ñandóu es variante y no certeza, y porque Chibáig resultó ser la única figura celeste barí con cuerpo documentado, hasta sus dos sombreros.",
+        "previous_note": "La pasada de objetos dio el argumento entero en una sola pieza: el collar de dos plumas maltratadas, cuya pobreza frente a los collares vistosos es lo que el relato explica; y la de personajes obligó a mantener tres figuras separadas que la tentación es fundir —el vidente anónimo, Ñandóu y Chibáig—, porque el propio canon dice que identificar al vidente con Ñandóu es variante y no certeza, y porque Chibáig resultó ser la única figura celeste barí con cuerpo documentado, hasta sus dos sombreros."
       },
       "entity_refs": [
         {
@@ -1709,9 +1727,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura se detuvo en un anacronismo dentro del propio relato: todas las versiones, incluida la barí, dicen que Sabaseba partió la piña «con su machete», palabra poscontacto dentro de una historia precontacto, así que se extrajo la piña sin herramienta y la decisión quedó declarada; y los nombres de los primeros salidos —Barira, Basurita o Bakurita— se extrajeron como variantes embebidas porque cada publicación da un número distinto y la memoria comunitaria no fija ninguno."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura se detuvo en un anacronismo dentro del propio relato: todas las versiones, incluida la barí, dicen que Sabaseba partió la piña «con su machete», palabra poscontacto dentro de una historia precontacto, así que se extrajo la piña sin herramienta y la decisión quedó declarada; y los nombres de los primeros salidos —Barira, Basurita o Bakurita— se extrajeron como variantes embebidas porque cada publicación da un número distinto y la memoria comunitaria no fija ninguno.",
+        "previous_note": "La lectura se detuvo en un anacronismo dentro del propio relato: todas las versiones, incluida la barí, dicen que Sabaseba partió la piña «con su machete», palabra poscontacto dentro de una historia precontacto, así que se extrajo la piña sin herramienta y la decisión quedó declarada; y los nombres de los primeros salidos —Barira, Basurita o Bakurita— se extrajeron como variantes embebidas porque cada publicación da un número distinto y la memoria comunitaria no fija ninguno."
       },
       "entity_refs": [
         {
@@ -1871,9 +1890,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Aquí la extracción trabajó sobre todo para sacar cosas: el bebé y el cuerpo quemado se extrajeron únicamente para excluirlos, y Yuko-Yukpa y Wayuu también, porque son pueblos vivos con biblia propia o en curso y porque el episodio de las cenizas es precisamente el lugar donde una ilustración produciría una jerarquía racial; lo que queda fichado es Sibabió viva junto al fogón y una corriente de cenizas cuyos ramales caen en lugares del territorio y jamás sobre cuerpos."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Aquí la extracción trabajó sobre todo para sacar cosas: el bebé y el cuerpo quemado se extrajeron únicamente para excluirlos, y Yuko-Yukpa y Wayuu también, porque son pueblos vivos con biblia propia o en curso y porque el episodio de las cenizas es precisamente el lugar donde una ilustración produciría una jerarquía racial; lo que queda fichado es Sibabió viva junto al fogón y una corriente de cenizas cuyos ramales caen en lugares del territorio y jamás sobre cuerpos.",
+        "previous_note": "Aquí la extracción trabajó sobre todo para sacar cosas: el bebé y el cuerpo quemado se extrajeron únicamente para excluirlos, y Yuko-Yukpa y Wayuu también, porque son pueblos vivos con biblia propia o en curso y porque el episodio de las cenizas es precisamente el lugar donde una ilustración produciría una jerarquía racial; lo que queda fichado es Sibabió viva junto al fogón y una corriente de cenizas cuyos ramales caen en lugares del territorio y jamás sobre cuerpos."
       },
       "entity_refs": [
         {
@@ -10824,5 +10844,20 @@
       "Ningún cóndor andino ni tucán de pico iris: no llegan al Catatumbo bajo. Tampoco chamán con parafernalia: no había especialistas religiosos.",
       "En animales, ninguna pluma, escama ni mechón uno por uno: pocas piezas planas grandes con el borde recortado en dientes."
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-18",
+      "record_count": 6,
+      "fields": [
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "cdef826bbb04a42a5b9ac731edb4128509f880ca52c968baea3e2e1f52302cd3",
+      "max_source_updated_at": "2026-07-28T13:24:31.541Z"
+    }
+  ]
 }

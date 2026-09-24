@@ -7,7 +7,7 @@
   "region": "Andina",
   "corpus": {
     "frozen": true,
-    "frozen_at": "2026-09-19",
+    "frozen_at": "2026-09-24",
     "source": "Neon, seleccion explicita de slugs para el agrupamiento boyaca-mestizo",
     "grouping": "epoca_y_territorio",
     "myth_slugs": [
@@ -24,7 +24,7 @@
   },
   "source_snapshot": {
     "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
-    "retrieved_at": "2026-09-19",
+    "retrieved_at": "2026-09-24",
     "record_count": 5,
     "fields": [
       "content",
@@ -33,8 +33,8 @@
       "versiones",
       "research_notes"
     ],
-    "sha256": "4a979f178f6f3f95455fe2fb3f5002b10fbe0a3a6e25058c08453add796311f3",
-    "max_source_updated_at": "2026-07-26T22:18:33.114Z"
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "max_source_updated_at": "2026-09-22T22:46:05.723Z"
   },
   "research": {
     "sources": [
@@ -758,8 +758,8 @@
     "dossier": "docs/investigacion/boyaca-mestizo.md"
   },
   "inventory": {
-    "status": "approved_frozen",
-    "frozen": true,
+    "status": "reconciling",
+    "frozen": false,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -769,7 +769,20 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-19",
+    "reconciliation": {
+      "opened_at": "2026-09-24",
+      "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
+      "rewritten_myths": [
+        "el-cucacuy",
+        "el-tesoro-de-buzaga",
+        "furatena",
+        "la-sombra-creadora",
+        "los-mensajeros-de-los-dioses"
+      ],
+      "new_myths": [],
+      "unchanged_myths": []
+    }
   },
   "myths": {
     "el-cucacuy": {
@@ -794,9 +807,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "El cuerpo de la página es el testimonio de un hombre —Bustamante dice haberle tirado miel caliente—, de modo que el espanto sólo se ve a través de quien lo cuenta: la lectura tuvo que separar lo que el Cucacuy es (desnudez, bordón, calabazo y uña de pulgar, que Ocampo fija palabra por palabra) de lo que el narrador le atribuye (la lujuria y el rapto), y descartar la variante del cerdo dorado con duende, que sólo vive en el módulo editorial sin aplicar y no en la página real."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "El cuerpo de la página es el testimonio de un hombre —Bustamante dice haberle tirado miel caliente—, de modo que el espanto sólo se ve a través de quien lo cuenta: la lectura tuvo que separar lo que el Cucacuy es (desnudez, bordón, calabazo y uña de pulgar, que Ocampo fija palabra por palabra) de lo que el narrador le atribuye (la lujuria y el rapto), y descartar la variante del cerdo dorado con duende, que sólo vive en el módulo editorial sin aplicar y no en la página real.",
+        "previous_note": "El cuerpo de la página es el testimonio de un hombre —Bustamante dice haberle tirado miel caliente—, de modo que el espanto sólo se ve a través de quien lo cuenta: la lectura tuvo que separar lo que el Cucacuy es (desnudez, bordón, calabazo y uña de pulgar, que Ocampo fija palabra por palabra) de lo que el narrador le atribuye (la lujuria y el rapto), y descartar la variante del cerdo dorado con duende, que sólo vive en el módulo editorial sin aplicar y no en la página real."
       },
       "entity_refs": [
         {
@@ -918,9 +932,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Picaresca colonial con tres cuerpos humanos y un espectro cuya arma no es la seducción sino el peso; la lectura separó el escenario tunjano documentado —damero, escudos, empedrado— del valle de Iza, que es santuario muisca real, y verificó que los únicos objetos prehispánicos de la página —el duho, los tunjos y las gargantillas— los nombra el propio texto y no se importaron de ninguna biblia."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Picaresca colonial con tres cuerpos humanos y un espectro cuya arma no es la seducción sino el peso; la lectura separó el escenario tunjano documentado —damero, escudos, empedrado— del valle de Iza, que es santuario muisca real, y verificó que los únicos objetos prehispánicos de la página —el duho, los tunjos y las gargantillas— los nombra el propio texto y no se importaron de ninguna biblia.",
+        "previous_note": "Picaresca colonial con tres cuerpos humanos y un espectro cuya arma no es la seducción sino el peso; la lectura separó el escenario tunjano documentado —damero, escudos, empedrado— del valle de Iza, que es santuario muisca real, y verificó que los únicos objetos prehispánicos de la página —el duho, los tunjos y las gargantillas— los nombra el propio texto y no se importaron de ninguna biblia."
       },
       "entity_refs": [
         {
@@ -1047,9 +1062,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "Lo que la lectura tuvo que separar aquí es la filiación: los muzos son caribes y los muiscas sólo entran a esta página como peregrinos clandestinos, de modo que un solo grupo puede llevar manta y el otro no; y las tres petrificaciones del desenlace —Fura, Tena, Zarbi e Itoco— se leyeron como geografía y no como estados, porque el relato las deja convertidas en los peñones que Ancízar midió desde el terreno."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "Lo que la lectura tuvo que separar aquí es la filiación: los muzos son caribes y los muiscas sólo entran a esta página como peregrinos clandestinos, de modo que un solo grupo puede llevar manta y el otro no; y las tres petrificaciones del desenlace —Fura, Tena, Zarbi e Itoco— se leyeron como geografía y no como estados, porque el relato las deja convertidas en los peñones que Ancízar midió desde el terreno.",
+        "previous_note": "Lo que la lectura tuvo que separar aquí es la filiación: los muzos son caribes y los muiscas sólo entran a esta página como peregrinos clandestinos, de modo que un solo grupo puede llevar manta y el otro no; y las tres petrificaciones del desenlace —Fura, Tena, Zarbi e Itoco— se leyeron como geografía y no como estados, porque el relato las deja convertidas en los peñones que Ancízar midió desde el terreno."
       },
       "entity_refs": [
         {
@@ -1166,9 +1182,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La página gasta dos párrafos enteros en Tales de Mileto, Cicerón y Anaximandro, y la lectura los dejó fuera por completo: lo que queda es río, madera y sombra. La única distinción que costó trabajo es la de las figuras talladas y los nacidos del agua, que el texto pone en escena como dos siluetas simultáneas —el montón inerte en la orilla y los que se sacuden los reflejos— y no como una transición."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La página gasta dos párrafos enteros en Tales de Mileto, Cicerón y Anaximandro, y la lectura los dejó fuera por completo: lo que queda es río, madera y sombra. La única distinción que costó trabajo es la de las figuras talladas y los nacidos del agua, que el texto pone en escena como dos siluetas simultáneas —el montón inerte en la orilla y los que se sacuden los reflejos— y no como una transición.",
+        "previous_note": "La página gasta dos párrafos enteros en Tales de Mileto, Cicerón y Anaximandro, y la lectura los dejó fuera por completo: lo que queda es río, madera y sombra. La única distinción que costó trabajo es la de las figuras talladas y los nacidos del agua, que el texto pone en escena como dos siluetas simultáneas —el montón inerte en la orilla y los que se sacuden los reflejos— y no como una transición."
       },
       "entity_refs": [
         {
@@ -1245,9 +1262,10 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "editorial_approved",
-        "reviewed_at": "2026-09-19",
-        "note": "La lectura acabó en un hallazgo incómodo: Turubiuta, Mongatá, Mayavita, Boquicha y las quinzitas no existen en ninguna fuente consultada, de modo que la página es composición editorial situada en tierras chibchas y sus fichas no son citables por ningún otro corpus; lo único con respaldo es el oficio del alfarero, el vestido chibcha que Ocampo nombra pieza por pieza y la capa del siglo XVII en que el canto matinal de la guacamaya anunciaba desgracia, que es lo contrario de la mensajera del sol."
+        "review_status": "pending_reconciliation",
+        "reviewed_at": null,
+        "note": "La lectura acabó en un hallazgo incómodo: Turubiuta, Mongatá, Mayavita, Boquicha y las quinzitas no existen en ninguna fuente consultada, de modo que la página es composición editorial situada en tierras chibchas y sus fichas no son citables por ningún otro corpus; lo único con respaldo es el oficio del alfarero, el vestido chibcha que Ocampo nombra pieza por pieza y la capa del siglo XVII en que el canto matinal de la guacamaya anunciaba desgracia, que es lo contrario de la mensajera del sol.",
+        "previous_note": "La lectura acabó en un hallazgo incómodo: Turubiuta, Mongatá, Mayavita, Boquicha y las quinzitas no existen en ninguna fuente consultada, de modo que la página es composición editorial situada en tierras chibchas y sus fichas no son citables por ningún otro corpus; lo único con respaldo es el oficio del alfarero, el vestido chibcha que Ocampo nombra pieza por pieza y la capa del siglo XVII en que el canto matinal de la guacamaya anunciaba desgracia, que es lo contrario de la mensajera del sol."
       },
       "entity_refs": [
         {
@@ -8377,5 +8395,21 @@
       "ningún duho ni tunjo presentado como pieza arqueológica boyacense: van como cita del relato y nunca como referencia de museo",
       "ninguna lámina de Sua ni del plumaje encendido antes de que se resuelva su identidad contra la biblia muisca existente"
     ]
-  }
+  },
+  "source_snapshot_history": [
+    {
+      "source": "Neon myths.mito/content + editorial_myths.historia/versiones/research_notes",
+      "retrieved_at": "2026-09-19",
+      "record_count": 5,
+      "fields": [
+        "content",
+        "mito",
+        "historia",
+        "versiones",
+        "research_notes"
+      ],
+      "sha256": "4a979f178f6f3f95455fe2fb3f5002b10fbe0a3a6e25058c08453add796311f3",
+      "max_source_updated_at": "2026-07-26T22:18:33.114Z"
+    }
+  ]
 }
