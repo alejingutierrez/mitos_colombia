@@ -7,6 +7,13 @@ const nextConfig = {
     cpus: 1,
     staticGenerationMaxConcurrency: 1,
   },
+  // El estudio de carruseles lee el archivo visual con fs y sólo responde en
+  // local: en producción devuelve 404. Sin esto el trazado mete content/ entero
+  // en la función y Vercel la rechaza por pasar de 250 MB.
+  outputFileTracingExcludes: {
+    "/api/instagram/**": ["./content/**/*", "./docs/**/*", "./output/**/*", "./public/**/*"],
+    "/design-system/instagram*": ["./content/**/*", "./docs/**/*", "./output/**/*", "./public/**/*"],
+  },
   async headers() {
     return [
       {
