@@ -6,7 +6,7 @@ cierto, corrígelo aquí primero.
 
 ## Qué es esto
 
-Catálogo web de mitos de Colombia (Next.js 15, en producción en
+Catálogo web de mitos de Colombia (Next.js 16, en producción en
 www.mitosdecolombia.com) **y** el taller de producción del material visual y
 audiovisual que lo alimenta: biblias visuales, trípticos por mito, keyframes,
 guiones y narración.
@@ -181,6 +181,62 @@ inundación de Chibchacum con la vara de oro (v6, N=10). Nunca buscar uno por el
 otro.
 
 ## Dónde vive cada cosa
+
+### Taller de carruseles · proceso vigente desde 2026-09-22
+
+**Proceso adoptado por el usuario el 22 de septiembre de 2026.** El manual
+vigente es [`docs/instagram-story.md`](docs/instagram-story.md); los flujos
+anteriores quedan para reproducir ediciones históricas.
+
+El generador de **relatos ilustrados** reúne el archivo de los **41 muiscas**
+y conecta las escenas con su acta. Se edita y exporta desde
+`/design-system/instagram-story` en local.
+
+**Todo carrusel nuevo tiene exactamente 10 láminas:** portada, siete momentos
+narrativos, cierre e invitación a leer. Hay **25 composiciones: cinco portadas,
+cinco Slide 1 (escena), cinco Slide 2 (detalle), cinco cierres y cinco invitaciones**.
+El catálogo visual (`?variants=1`) muestra cinco carruseles completos de diez
+láminas (50 vistas), ampliables. `&view=families` conserva las 25 plantillas
+agrupadas por tipo.
+Bachué conserva 15/15 nudos en 10 láminas y 7 imágenes diferentes de biblia,
+keyframes y tríptico. Asimovian y Noto Sans Display son las fuentes aprobadas.
+Las 25 plantillas usan la paleta adjunta del usuario (dos verdes, azul, cielo,
+coral, amarillo y oliva), documentada en `content/instagram/design/paleta-20260919/`.
+Se retiraron velos, placas detrás de texto y curvas superpuestas; la escala
+común de tipografía se redujo a 0,8 sin cambiar palabras. Las fotos llenan el
+lienzo y llevan únicamente sombras difusas en las letras. Se revisó la posición
+de textos respecto a rostros y personajes. El atlas está en `atlas-prepared-120`;
+la entrega anterior de Bachué permanece en `prepared-115`. Las nuevas versiones
+completas están en `prepared-119` a `prepared-123` (50 láminas verificadas).
+Las 50 capturas de variantes pasan geometría y contraste sobre los trazos; las
+siete paletas superan 4,5:1 para texto normal. El taller, las 25 opciones, los
+siete colores, los borradores y la descarga pasan en escritorio y móvil.
+Los interiores conservan la sombra atmosférica, sin contorno: capas centradas
+de 8–72 px en títulos y de 8–48 px en lectura pequeña. El cuerpo sobre foto
+tiene mínimo 32 px; las etiquetas, marca y folio 24 px nativos.
+Las portadas muestran exclusivamente el nombre del mito: sin marca, ubicación,
+subtítulo, párrafo, folio ni adorno. En Bachué, dos portadas sobre imagen usan
+tinta oscura sin sombra sobre el cielo; una usa blanco sobre agua con una sola
+sombra de 16 px al 50 %. Contraste medido de las tres: 4,97, 5,39 y 5,71:1.
+El resto de las láminas mantiene la sombra atmosférica, pendiente de más trabajo
+de composición para reducir esa dependencia. El editor adapta sus controles
+a la portada. El comparador `?shadows=1` conserva las pruebas.
+La revisión visual corresponde a Bachué; otras imágenes necesitan revisar el foco.
+
+Los **50 PNG abstractos** de GPT Image 2.5 Sunburst están en
+`public/motifs/carousel/abstract-v4/`; prompts y hashes en
+`content/instagram/iconography/abstract-v4/`. Se usan a color o como tinta de la
+paleta. Las imágenes y adornos se fijan por hash en cada edición.
+Los otros 40 mitos están inventariados, **no producidos ni aprobados como carruseles**.
+
+Fuente: `content/instagram/stories/` y `content/instagram/asset-reviews/`.
+Preparaciones inmutables: `content/instagram/editions/`. Salida regenerable:
+`output/instagram/`. Operación y límites en [`docs/instagram-story.md`](docs/instagram-story.md).
+La conexión del nuevo prompt con Bedrock tiene pruebas de contrato locales;
+su ensayo externo está pendiente de autorización específica para enviar acta y
+catálogo editorial. Los carriles anteriores se conservan para sus ediciones.
+
+### Archivo visual y audiovisual
 
 El repo tiene un **espejo fuente ↔ binario** y conviene entenderlo antes de
 tocar nada:

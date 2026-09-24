@@ -72,7 +72,13 @@
     "mitos:enriquecer:acta": "node scripts/editorial/enriquecimiento/validar-acta.mjs",
     "mitos:enriquecer:cotejar": "node scripts/editorial/enriquecimiento/cotejar.mjs",
     "mitos:enriquecer:tablero": "node scripts/editorial/enriquecimiento/tablero.mjs",
-    "mitos:enriquecer:agotadas": "node scripts/editorial/enriquecimiento/declarar-agotadas.mjs"
+    "mitos:enriquecer:agotadas": "node scripts/editorial/enriquecimiento/declarar-agotadas.mjs",
+    "instagram:studio": "next dev --hostname 127.0.0.1 --port 3111",
+    "instagram:story": "node scripts/instagram/story.mjs",
+    "instagram:story:inventory": "node scripts/instagram/story.mjs inventory",
+    "instagram:story:plan": "node scripts/instagram/story.mjs plan",
+    "instagram:story:render": "node scripts/instagram/story.mjs render",
+    "instagram:variants": "node scripts/instagram/variants.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1095.0",
@@ -97,6 +103,7 @@
     "eslint": "^9.14.0",
     "eslint-config-next": "^16.2.10",
     "pg": "^8.13.1",
+    "playwright": "1.60.0",
     "postcss": "^8.5.16",
     "read-excel-file": "^9.2.0",
     "sharp": "^0.35.3",

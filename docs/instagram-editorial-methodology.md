@@ -1,5 +1,12 @@
 # Metodología canónica de producción de carruseles
 
+**Proceso vigente desde 2026-09-22:** los nuevos relatos ilustrados se rigen por
+[`instagram-story.md`](./instagram-story.md). Allí se documentan las sustituciones
+de las restricciones de imágenes y plantillas de este documento. La tipografía
+autorizada sigue siendo Asimovian y Noto Sans Display.
+Las reglas siguientes siguen describiendo la producción legacy; no deben
+aplicarse al nuevo compositor para volver a limitarlo a dos imágenes.
+
 ## Propósito y autoridad
 
 Este documento es el manual operativo del sistema de carruseles de **Mitos de
