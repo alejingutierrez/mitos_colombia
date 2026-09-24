@@ -1,24 +1,27 @@
 #!/usr/bin/env node
 /**
- * Prepara una tanda de biblia V3 para los 42 corpus, una capa a la vez.
+ * Prepara una tanda de biblia V3, una capa a la vez y en el orden del taller.
  *
- * El orden lo fijo el editor el 2026-09-17: personas -> animales -> atrezo ->
- * mundo, con revision entre capas. La cara es lo que todo lo demas respeta; si
- * el paisaje sale antes, la figura se acomoda a un mundo decidido sin ella.
- * Por eso aqui no existe una tanda "de todo": --capa es obligatoria.
+ * El orden lo fijo el editor (wayuu V4, 2026-09-17; chami V1) y aqui no se
+ * negocia: primero la GENTE de la comunidad —los seis tipos base, que fijan la
+ * cara, el cuerpo y el vestido—, despues los mortales con nombre, despues los
+ * miticos y al final los colectivos. Luego animales, atrezo y mundo. Si el
+ * paisaje o el dios salen antes, la persona se acomoda a un mundo decidido sin
+ * ella. El piloto 01 del 2026-09-24 mezclo deidades y colectivos sin tipos y se
+ * rechazo por eso.
  *
- * Tampoco existe una tanda sobre un canon que ya no es el que se inventario.
- * Antes de escribir nada se relee `mito` en Neon y se compara con la huella
- * que cada acta guardo al congelarse. Un corpus con relatos reescritos queda
- * fuera de la tanda hasta que su inventario se reconcilie: dibujar las
- * entidades de un texto que ya no existe es el error de la biblia wayuu V3.
+ * Tres compuertas antes de escribir nada, por corpus:
+ *   1. la capa anterior esta aprobada por el editor en
+ *      content/mitos-visuales/_openai/<corpus>/biblia-v3/APROBACIONES.json
+ *   2. el canon de Neon es el que el plan congelo (misma huella)
+ *   3. el inventario esta congelado y `--stage design` da PASS
  *
- *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus koguis,katios \
- *     --capa personas --tanda piloto-personas --por-corpus 3
- *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus koguis \
- *     --capa personas --tanda tanda-01-personas
+ *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus koguis,katios --capa tipos
+ *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus koguis --capa mortales --maximo 14
+ *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --aprobar koguis --capa tipos --tanda tanda-01-tipos
  *
- * Emite, por corpus y sin sobrescribir nunca:
+ * Una capa grande se parte con --maximo: cada llamada toma las fichas de la
+ * capa que ninguna tanda anterior preparo. Emite, sin sobrescribir nunca:
  *   content/mitos-visuales/_openai/<corpus>/biblia-v3/<tanda>/
  *     freeze.json  requests.jsonl  prompts/<modelo>--<vista>.prompt.txt
  * y la salida de imagen en output/imagegen/<corpus>/biblia-v3/<tanda>/.
@@ -27,25 +30,29 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import pg from "pg";
+import { validateBibleV3 } from "./biblia-v3.mjs";
 import { ensamblar } from "./prepare-biblia-probe-v3.mjs";
 
 const PLANES = "content/mitos-visuales";
-const ACTAS = "content/mitos-visuales/actas";
 const SIZE = { "1:1": "1024x1024", "16:9": "1536x1024", "9:16": "1024x1536", "2:3": "1024x1536", "3:2": "1536x1024" };
 const MODELO = "gpt-image-2.5-sunburst";
+const FIELD_SEPARATOR = "\n@@campo@@\n";
+const RECORD_SEPARATOR = "\n@@mito@@\n";
 
-/**
- * Las once categorias en las cuatro capas. `criatura` va con los animales:
- * es donde el cuerpo no humano tira del volumen, y ahi se aplica la regla
- * invertida del pelaje. Un ser humanoide que el corpus llama criatura se
- * mueve de capa en el plan, no aqui.
- */
-export const CAPAS = {
-  personas: ["personaje", "deidad_fuerza", "colectivo"],
-  animales: ["animal", "criatura"],
-  atrezo: ["objeto", "planta"],
-  mundo: ["arquitectura", "lugar", "paisaje", "fenomeno"],
-};
+const esTipo = (id) => id.startsWith("tipo_");
+
+/** Las capas, en su orden. Cada una decide que fichas le tocan. */
+export const CAPAS = [
+  { id: "tipos", titulo: "personas · la gente de la comunidad", toma: (e, id) => e.kind === "personaje" && esTipo(id) },
+  { id: "mortales", titulo: "personas · mortales con nombre", toma: (e, id) => e.kind === "personaje" && !esTipo(id) },
+  { id: "miticos", titulo: "personas · miticos y fuerzas", toma: (e) => e.kind === "deidad_fuerza" },
+  { id: "colectivos", titulo: "personas · colectivos", toma: (e) => e.kind === "colectivo" },
+  // `criatura` va con los animales: el cuerpo no humano es donde el pelaje y
+  // la anatomia tiran del volumen, y ahi se aplica la regla invertida.
+  { id: "animales", titulo: "animales y criaturas", toma: (e) => e.kind === "animal" || e.kind === "criatura" },
+  { id: "atrezo", titulo: "atrezo, objetos y plantas", toma: (e) => e.kind === "objeto" || e.kind === "planta" },
+  { id: "mundo", titulo: "arquitectura, lugares, paisajes y fenomenos", toma: (e) => ["arquitectura", "lugar", "paisaje", "fenomeno"].includes(e.kind) },
+];
 
 function parseArgs(argv) {
   const out = {};
@@ -67,26 +74,64 @@ function loadEnv() {
   }
 }
 
-/** Mitos del corpus cuyo canon ya no es el que el acta congelo. */
-async function derivaDelCanon(client, corpus) {
-  const dir = join(ACTAS, corpus);
-  if (!existsSync(dir)) return { actas: 0, cambiados: ["(sin actas)"] };
-  const cambiados = [];
-  const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
-  for (const f of files) {
-    const acta = JSON.parse(readFileSync(join(dir, f), "utf8"));
-    const field = acta.canon_field === "content" ? "content" : "mito";
-    const { rows } = await client.query(`SELECT ${field} AS t FROM myths WHERE slug = $1`, [acta.canon_slug || acta.mito]);
-    const sha = createHash("sha256").update(String(rows[0]?.t ?? ""), "utf8").digest("hex");
-    if (sha !== acta.canon_sha256) cambiados.push(acta.mito);
+const baseDir = (corpus) => resolve(PLANES, "_openai", corpus, "biblia-v3");
+const aprobacionesPath = (corpus) => join(baseDir(corpus), "APROBACIONES.json");
+
+function aprobaciones(corpus) {
+  return existsSync(aprobacionesPath(corpus)) ? JSON.parse(readFileSync(aprobacionesPath(corpus), "utf8")) : {};
+}
+
+/** Los tipos solo se saltan si el inventario declara por que no existen. */
+const tiposDeclaradosAusentes = (plan) =>
+  JSON.stringify(plan.inventory?.declared_absences || "").toLowerCase().includes("tipo");
+
+/**
+ * Una capa sin fichas en el corpus no bloquea la siguiente, salvo los tipos:
+ * sin la gente de la comunidad no hay capa de personas.
+ */
+function capaAnteriorPendiente(plan, corpus, capaId) {
+  const aprobadas = aprobaciones(corpus);
+  const indice = CAPAS.findIndex((c) => c.id === capaId);
+  for (const capa of CAPAS.slice(0, indice)) {
+    const tiene = (capa.id === "tipos" && !tiposDeclaradosAusentes(plan)) || Object.entries(plan.models || {}).some(([, m]) => {
+      const id = m.entity_refs[0];
+      return capa.toma(plan.entities[id] || {}, id);
+    });
+    if (tiene && !aprobadas[capa.id]) return capa.id;
   }
-  return { actas: files.length, cambiados };
+  return null;
+}
+
+async function huellaVigente(client, plan) {
+  const fields = plan.source_snapshot.fields;
+  const { rows } = await client.query(
+    `SELECT m.slug, m.mito, m.content, em.historia, em.versiones, em.research_notes
+       FROM myths m LEFT JOIN editorial_myths em ON em.source_myth_id = m.id
+      WHERE m.slug = ANY($1) ORDER BY m.slug`,
+    [plan.corpus.myth_slugs],
+  );
+  const canonical = rows
+    .map((row) => [row.slug, ...fields.map((field) => String(row[field] ?? ""))].join(FIELD_SEPARATOR))
+    .join(RECORD_SEPARATOR);
+  return createHash("sha256").update(canonical, "utf8").digest("hex");
+}
+
+/** Los modelos que alguna tanda anterior de este corpus ya preparo. */
+function yaPreparados(corpus) {
+  const dir = baseDir(corpus);
+  if (!existsSync(dir)) return new Set();
+  const hechos = new Set();
+  for (const tanda of readdirSync(dir)) {
+    const freeze = join(dir, tanda, "freeze.json");
+    if (!existsSync(freeze) || existsSync(join(dir, tanda, "RECHAZADO.md"))) continue;
+    for (const f of JSON.parse(readFileSync(freeze, "utf8")).fichas || []) hechos.add(f.modelo);
+  }
+  return hechos;
 }
 
 /** Lo central primero: la entidad que mas relatos sostiene. */
 function peso(plan, model) {
-  const entity = plan.entities[model.entity_refs[0]] || {};
-  return (entity.myth_refs || []).length;
+  return (plan.entities[model.entity_refs[0]]?.myth_refs || []).length;
 }
 
 /** Una vista de estado nombra su estado; la ficha canonica no dice nada mas. */
@@ -97,16 +142,41 @@ function promptDeVista(model, view) {
   return base.replace(/\nPrimary request: /, `\n${linea}\nPrimary request: `);
 }
 
-async function main() {
-  const args = parseArgs(process.argv.slice(2));
-  const corpora = String(args.corpus || "").split(",").map((s) => s.trim()).filter(Boolean);
+function siguienteNumero(corpus) {
+  const dir = baseDir(corpus);
+  if (!existsSync(dir)) return 1;
+  const nums = readdirSync(dir).map((n) => n.match(/^tanda-(\d+)-/)?.[1]).filter(Boolean).map(Number);
+  return nums.length ? Math.max(...nums) + 1 : 1;
+}
+
+function aprobar(args) {
+  const corpus = String(args.aprobar);
   const capa = String(args.capa || "");
   const tanda = String(args.tanda || "");
-  const porCorpus = args["por-corpus"] ? Number(args["por-corpus"]) : Infinity;
+  if (!CAPAS.some((c) => c.id === capa)) throw new Error(`--capa debe ser una de: ${CAPAS.map((c) => c.id).join(", ")}`);
+  if (!existsSync(join(baseDir(corpus), tanda, "freeze.json"))) throw new Error(`no existe la tanda ${tanda} de ${corpus}`);
+  const todas = aprobaciones(corpus);
+  todas[capa] = {
+    tandas: [...new Set([...(todas[capa]?.tandas || []), tanda])],
+    aprobada_por: String(args.por || "Propietario editorial del proyecto"),
+    fecha: new Date().toISOString().slice(0, 10),
+    ...(args.nota ? { nota: String(args.nota) } : {}),
+  };
+  mkdirSync(baseDir(corpus), { recursive: true });
+  writeFileSync(aprobacionesPath(corpus), `${JSON.stringify(todas, null, 2)}\n`);
+  console.log(`${corpus}: capa ${capa} aprobada (${todas[capa].tandas.join(", ")})`);
+}
+
+async function main() {
+  const args = parseArgs(process.argv.slice(2));
+  if (args.aprobar) return aprobar(args);
+
+  const corpora = String(args.corpus || "").split(",").map((s) => s.trim()).filter(Boolean);
+  const capa = CAPAS.find((c) => c.id === String(args.capa || ""));
+  const maximo = args.maximo ? Number(args.maximo) : Infinity;
   const calidad = String(args.calidad || "high");
   if (!corpora.length) throw new Error("usa --corpus a,b,c");
-  if (!CAPAS[capa]) throw new Error(`--capa debe ser una de: ${Object.keys(CAPAS).join(", ")}`);
-  if (!/^[a-z0-9-]+$/.test(tanda)) throw new Error("--tanda <nombre-en-kebab> es obligatoria");
+  if (!capa) throw new Error(`--capa debe ser una de, en este orden: ${CAPAS.map((c) => c.id).join(" -> ")}`);
 
   loadEnv();
   const client = new pg.Client({
@@ -116,43 +186,37 @@ async function main() {
   await client.connect();
 
   const resumen = [];
-  const todas = [];
   for (const corpus of corpora) {
     const planPath = join(PLANES, `${corpus}.v3.json`);
     if (!existsSync(planPath)) throw new Error(`no existe ${planPath}`);
     const plan = JSON.parse(readFileSync(planPath, "utf8"));
+    const fuera = (nota) => resumen.push({ corpus, laminas: 0, nota: `FUERA: ${nota}` });
 
-    const deriva = await derivaDelCanon(client, corpus);
-    if (deriva.cambiados.length) {
-      resumen.push({ corpus, laminas: 0, nota: `FUERA: ${deriva.cambiados.length}/${deriva.actas} relatos reescritos desde el inventario` });
+    const pendiente = capaAnteriorPendiente(plan, corpus, capa.id);
+    if (pendiente) { fuera(`la capa «${pendiente}» no esta aprobada; va antes que «${capa.id}»`); continue; }
+    if (plan.inventory?.status !== "approved_frozen" || !plan.inventory?.frozen) { fuera(`inventario en «${plan.inventory?.status}», no congelado`); continue; }
+    if ((await huellaVigente(client, plan)) !== plan.source_snapshot.sha256) { fuera("el canon de Neon ya no es el congelado: descongelar y releer"); continue; }
+    const design = validateBibleV3(plan, { stage: "design" });
+    if (!design.ok) { fuera(`--stage design BLOCKED (${design.errors[0]?.path || "?"})`); continue; }
+
+    const hechos = yaPreparados(corpus);
+    const modelos = Object.entries(plan.models || {})
+      .filter(([, m]) => m.prompt_spec)
+      .filter(([, m]) => capa.toma(plan.entities[m.entity_refs[0]] || {}, m.entity_refs[0]))
+      .sort(([ia, a], [ib, b]) => peso(plan, b) - peso(plan, a) || ia.localeCompare(ib));
+    const elegidos = modelos.filter(([id]) => !hechos.has(id)).slice(0, maximo);
+    if (!elegidos.length) {
+      resumen.push({ corpus, laminas: 0, nota: modelos.length ? `capa ${capa.id} ya preparada entera` : `sin fichas de la capa ${capa.id}` });
       continue;
     }
 
-    const dir = resolve(PLANES, "_openai", corpus, "biblia-v3", tanda);
+    const tanda = String(args.tanda || `tanda-${String(siguienteNumero(corpus)).padStart(2, "0")}-${capa.id}`);
+    const dir = join(baseDir(corpus), tanda);
     if (existsSync(dir)) throw new Error(`ya existe ${dir}: cada preparacion va a una carpeta nueva`);
     const salida = resolve("output/imagegen", corpus, "biblia-v3", tanda);
-
-    const modelos = Object.entries(plan.models || {})
-      .filter(([, m]) => m.prompt_spec && CAPAS[capa].includes(plan.entities[m.entity_refs[0]]?.kind))
-      .filter(([, m]) => plan.entities[m.entity_refs[0]]?.sensitivity !== "consult_required")
-      .sort(([ia, a], [ib, b]) => peso(plan, b) - peso(plan, a) || ia.localeCompare(ib));
-
-    // En un piloto se reparte entre categorias antes de repetir ninguna.
-    let elegidos = modelos;
-    if (Number.isFinite(porCorpus)) {
-      elegidos = [];
-      const colas = CAPAS[capa].map((k) => modelos.filter(([, m]) => plan.entities[m.entity_refs[0]].kind === k));
-      while (elegidos.length < porCorpus && colas.some((c) => c.length)) {
-        for (const c of colas) if (c.length && elegidos.length < porCorpus) elegidos.push(c.shift());
-      }
-    }
-    if (!elegidos.length) {
-      resumen.push({ corpus, laminas: 0, nota: `sin fichas de la capa ${capa}` });
-      continue;
-    }
-
     mkdirSync(join(dir, "prompts"), { recursive: true });
     mkdirSync(salida, { recursive: true });
+
     const requests = [];
     const fichas = [];
     for (const [id, m] of elegidos) {
@@ -161,10 +225,9 @@ async function main() {
         const job = `${id}--${view.id}`;
         const prompt = promptDeVista(m, view);
         writeFileSync(join(dir, "prompts", `${job}.prompt.txt`), `${prompt}\n`);
-        // Sin `out` los lotes paralelos se pisan: se pagan y no quedan en disco.
         requests.push({
           prompt, model: MODELO, size: SIZE[view.aspect] || "1024x1024",
-          quality: calidad, output_format: "jpeg", out: join(salida, `${job}.jpeg`),
+          quality: calidad, output_format: "jpeg", out: `${job}.jpeg`,
         });
         fichas.push({
           job, modelo: id, entidad: entity.name, categoria: entity.kind, vista: view.id,
@@ -176,29 +239,31 @@ async function main() {
     }
     const freeze = {
       schema: "biblia-tanda-freeze/v3",
-      corpus, comunidad: plan.community, tanda, capa, categorias: CAPAS[capa],
-      piloto: Number.isFinite(porCorpus), fecha: new Date().toISOString().slice(0, 10),
+      corpus, comunidad: plan.community, tanda, capa: capa.id, capa_titulo: capa.titulo,
+      fecha: new Date().toISOString().slice(0, 10),
       modelo: MODELO, calidad, generador: "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
       plan: { ruta: planPath, sha256: createHash("sha256").update(readFileSync(planPath)).digest("hex") },
-      canon: { actas_verificadas: deriva.actas, relatos_reescritos: 0, verificado_en: new Date().toISOString() },
-      fichas_en_capa: modelos.length, fichas,
+      canon: { sha256: plan.source_snapshot.sha256, verificado_en: new Date().toISOString() },
+      capas_aprobadas_antes: Object.keys(aprobaciones(corpus)),
+      fichas_en_capa: modelos.length, fichas_ya_preparadas: modelos.length - modelos.filter(([id]) => !hechos.has(id)).length,
+      fichas,
     };
     writeFileSync(join(dir, "freeze.json"), `${JSON.stringify(freeze, null, 2)}\n`);
     writeFileSync(join(dir, "requests.jsonl"), `${requests.map((r) => JSON.stringify(r)).join("\n")}\n`);
-    todas.push(...requests);
-    resumen.push({ corpus, laminas: requests.length, nota: `${elegidos.length} de ${modelos.length} fichas de la capa · ${dir}` });
+    resumen.push({ corpus, tanda, laminas: requests.length, nota: `${elegidos.length} de ${modelos.length} fichas de la capa ${capa.id}` });
   }
   await client.end();
 
   for (const r of resumen) console.log(String(r.corpus).padEnd(28), String(r.laminas).padStart(4), " ", r.nota);
-  console.log(`\n${todas.length} laminas en total`);
+  const listos = resumen.filter((r) => r.laminas);
+  console.log(`\n${listos.reduce((a, r) => a + r.laminas, 0)} laminas en total`);
   // image_gen.py exige --out-dir y de `out` solo conserva el nombre de
-  // archivo: una tanda de varios corpus se lanza un corpus por vez.
-  console.log("\nlanzar (un corpus por proceso, cada uno con su --out-dir):");
-  for (const r of resumen.filter((x) => x.laminas)) {
+  // archivo: se lanza un corpus por proceso, cada uno con su carpeta.
+  if (listos.length) console.log("\nlanzar (un corpus por proceso):");
+  for (const r of listos) {
     console.log(`  /usr/bin/python3 ~/.codex/skills/.system/imagegen/scripts/image_gen.py generate-batch --no-augment --concurrency 3 --max-attempts 2 \\
-    --input content/mitos-visuales/_openai/${r.corpus}/biblia-v3/${tanda}/requests.jsonl \\
-    --out-dir output/imagegen/${r.corpus}/biblia-v3/${tanda}`);
+    --input content/mitos-visuales/_openai/${r.corpus}/biblia-v3/${r.tanda}/requests.jsonl \\
+    --out-dir output/imagegen/${r.corpus}/biblia-v3/${r.tanda}`);
   }
 }
 
